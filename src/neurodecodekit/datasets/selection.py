@@ -7,7 +7,7 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Iterable
 
-from neurodecodekit.datasets.manifest import FileRecord, read_jsonl
+from neurodecodekit.datasets.manifest import FileRecord, candidate_logs_for_raw, read_jsonl
 
 
 @dataclass(frozen=True)
@@ -115,20 +115,15 @@ def select_tiny_records(
 
     selected = list(selected_raw)
     if include_logs:
-        logs = sorted(
-            [
-                r
-                for r in records
-                if (r.modality or "").upper() == modality
-                and r.subject == subject
-                and r.kind == "log"
-            ],
-            key=_sort_key,
-        )
-        # Prefer block-matched logs; otherwise include all logs for that subject.
-        selected_blocks = {r.block for r in selected_raw if r.block}
-        matched_logs = [r for r in logs if not selected_blocks or r.block in selected_blocks]
-        selected.extend(matched_logs or logs)
+        selected_logs: list[FileRecord] = []
+        seen_log_paths: set[str] = set()
+        for raw in selected_raw:
+            for log in candidate_logs_for_raw(raw, records):
+                if log.path in seen_log_paths:
+                    continue
+                selected_logs.append(log)
+                seen_log_paths.add(log.path)
+        selected.extend(sorted(selected_logs, key=_sort_key))
 
     repo_ids = sorted({r.repo_id for r in selected if r.repo_id})
     repo_id = repo_ids[0] if repo_ids else "bcbl190626/SpanishBCBL"

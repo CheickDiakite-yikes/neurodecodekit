@@ -11,8 +11,9 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
 ## Current status
 
 - Loop 1: Done for the synthetic smoke path. See `docs/LOOP_01_PR1_CLOSEOUT_SMOKE.md`.
-- Current blocker: no real SpanishBCBL `.fif` / `.mat` pair is present locally.
-- Next loop: Loop 2 - SpanishBCBL Manifest v1.
+- Loop 2: Done for local manifest parsing and summary logic. See `docs/LOOP_02_SPANISHBCBL_MANIFEST_V1.md`.
+- Current blocker: no real SpanishBCBL `.fif` / `.mat` pair or full remote file list is present locally.
+- Next loop: Loop 3 - Safe Tiny-Shard Selector.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |

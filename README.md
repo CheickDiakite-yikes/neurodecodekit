@@ -79,6 +79,11 @@ neurodecode select-tiny --manifest /tmp/manifest.jsonl --out /tmp/tiny_selection
 neurodecode download-selection --selection /tmp/tiny_selection.json --local-dir data/spanishbcbl_tiny
 ```
 
+Manifest v1 accepts plain paths, JSONL rows with `path` and optional
+`size_bytes`, or tab-separated `path<TAB>size_bytes` rows. `inspect-manifest`
+prints file-family counts, explicit parser warnings for unknown rows, and
+raw-to-log candidate pairing summaries before any download is attempted.
+
 Optional real Hugging Face listing, when online and authenticated if needed:
 
 ```bash

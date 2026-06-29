@@ -28,9 +28,41 @@ Each manifest row should be JSONL with fields like:
   "session": null,
   "block": "block1",
   "kind": "raw",
-  "extension": ".fif"
+  "extension": ".fif",
+  "family": "meg_fif_raw",
+  "warnings": []
 }
 ```
+
+Manifest v1 intentionally keeps unknowns explicit instead of guessing. Each row
+gets a coarse `family` such as:
+
+```text
+meg_fif_raw
+meg_log_mat
+eeg_brainvision_vhdr
+eeg_brainvision_eeg
+eeg_brainvision_vmrk
+eeg_log_mat
+localizer_or_tapping
+unknown
+```
+
+Rows with incomplete classification carry warnings such as
+`unknown_modality`, `unknown_kind`, `unknown_file_family`, `missing_subject`,
+or `missing_block`. `inspect-manifest` also reports raw-to-log candidate
+pairing statuses:
+
+```text
+exact              one block/session-compatible log found
+fallback_subject   no block match, but one subject/session log found
+ambiguous          multiple candidate logs found
+missing_log        no candidate log found
+```
+
+Input path lists may be plain paths, JSONL rows with `path` and optional
+`size_bytes`, or tab-separated `path<TAB>size_bytes` rows. Size metadata is
+used only for planning/reporting; it never triggers a download.
 
 ## Selection policy for B2Q-mini v0
 

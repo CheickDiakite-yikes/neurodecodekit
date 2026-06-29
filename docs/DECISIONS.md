@@ -37,3 +37,11 @@ Decision: mark Loop 1 as complete for the synthetic smoke path and proceed to Lo
 Why: PR1's `extract-windows` command, optional dependency handling, CLI help, and synthetic cache path are in place. Real extraction remains blocked until one explicit SpanishBCBL `.fif` / `.mat` pair is intentionally selected and downloaded.
 
 Evidence: `docs/LOOP_01_PR1_CLOSEOUT_SMOKE.md`.
+
+## 0007 - Make manifest uncertainty explicit before selection
+
+Decision: add manifest v1 row families, parser warnings, optional size parsing, and raw/log candidate pairing summaries before improving download selection.
+
+Why: safe tiny-shard selection depends on knowing which files are raw, logs, EEG sidecars, localizer/tapping files, or unknowns. Ambiguity should be visible in `inspect-manifest` rather than hidden in selector heuristics.
+
+Evidence: `docs/LOOP_02_SPANISHBCBL_MANIFEST_V1.md`.
