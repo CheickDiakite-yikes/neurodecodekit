@@ -1,0 +1,11 @@
+synthetic:
+  samples: 128
+  channels: 8
+  times: 25
+  classes: 8
+  seed: 7
+
+metrics:
+  - cer
+  - wer
+  - keyboard_distance

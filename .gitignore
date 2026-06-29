@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.pytest_cache/
+.ruff_cache/
+
+# Local data/cache. Do not commit neural data.
+data/*
+cache/*
+!data/.gitkeep
+!cache/.gitkeep
+
+# Outputs
+outputs/
+*.npz
+*.zarr/
+*.parquet

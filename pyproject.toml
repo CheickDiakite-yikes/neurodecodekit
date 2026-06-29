@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neurodecodekit"
+version = "0.1.0"
+description = "Starter toolkit for small, reproducible neural language decoding research loops."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "NeuroDecodeKit contributors" }]
+license = { text = "Research scaffold; check upstream dataset/code licenses before reuse." }
+dependencies = []
+
+[project.optional-dependencies]
+hf = ["huggingface_hub>=0.24"]
+neuro = ["mne>=1.7", "scipy>=1.11", "numpy>=1.26"]
+cache = ["zarr>=3.0", "numcodecs>=0.13", "numpy>=1.26"]
+ml = ["numpy>=1.26", "scikit-learn>=1.4", "torch>=2.2"]
+demo = ["gradio>=4.0"]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+all = [
+  "huggingface_hub>=0.24",
+  "mne>=1.7",
+  "scipy>=1.11",
+  "numpy>=1.26",
+  "zarr>=3.0",
+  "numcodecs>=0.13",
+  "scikit-learn>=1.4",
+  "torch>=2.2",
+  "gradio>=4.0",
+  "pytest>=8.0",
+  "ruff>=0.5",
+]
+
+[project.scripts]
+neurodecode = "neurodecodekit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

@@ -1,0 +1,23 @@
+# Starter config for the first real tiny Brain2Qwerty v1 loop.
+dataset:
+  repo_id: bcbl190626/SpanishBCBL
+  modality: MEG
+  subject: S1
+  blocks: 1
+  include_logs: true
+
+preprocessing:
+  sfreq: 50
+  tmin: -0.2
+  tmax: 0.3
+  baseline: [-0.2, 0.0]
+  channels: all
+
+cache:
+  format: npz_first_then_zarr
+  dtype: float32
+
+metrics:
+  - cer
+  - wer
+  - keyboard_distance
