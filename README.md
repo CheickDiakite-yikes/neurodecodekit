@@ -75,7 +75,7 @@ EOF
 
 neurodecode manifest-from-paths --paths /tmp/spanishbcbl_files.txt --out /tmp/manifest.jsonl
 neurodecode inspect-manifest --manifest /tmp/manifest.jsonl
-neurodecode select-tiny --manifest /tmp/manifest.jsonl --out /tmp/tiny_selection.json
+neurodecode select-tiny --manifest /tmp/manifest.jsonl --out /tmp/tiny_selection.json --max-files 4 --max-total-gb 2
 neurodecode download-selection --selection /tmp/tiny_selection.json --local-dir data/spanishbcbl_tiny
 ```
 
@@ -83,6 +83,9 @@ Manifest v1 accepts plain paths, JSONL rows with `path` and optional
 `size_bytes`, or tab-separated `path<TAB>size_bytes` rows. `inspect-manifest`
 prints file-family counts, explicit parser warnings for unknown rows, and
 raw-to-log candidate pairing summaries before any download is attempted.
+`select-tiny` is safety-capped by default and writes a planned download file
+with exact paths, file-count limits, known-byte totals, and unknown-size
+warnings.
 
 Optional real Hugging Face listing, when online and authenticated if needed:
 
@@ -90,9 +93,19 @@ Optional real Hugging Face listing, when online and authenticated if needed:
 pip install -e '.[hf]'
 neurodecode list-hf-files --repo-id bcbl190626/SpanishBCBL --out data/spanishbcbl_files.txt
 neurodecode manifest-from-paths --paths data/spanishbcbl_files.txt --out data/spanishbcbl_manifest.jsonl
-neurodecode select-tiny --manifest data/spanishbcbl_manifest.jsonl --out data/tiny_selection.json
+neurodecode select-tiny --manifest data/spanishbcbl_manifest.jsonl --out data/tiny_selection.json --max-files 4 --max-total-gb 2
 neurodecode download-selection --selection data/tiny_selection.json --local-dir data/spanishbcbl_tiny  # dry-run by default
 ```
+
+To actually download the selected files, first read the dry-run plan. Then run:
+
+```bash
+neurodecode download-selection --selection data/tiny_selection.json --local-dir data/spanishbcbl_tiny --execute
+```
+
+If the manifest did not contain file sizes, `--execute` fails safely until you
+either rebuild the manifest with sizes or add `--allow-unknown-size` after
+reviewing the exact file list and file-count cap.
 
 ## Real window extraction from one downloaded block
 

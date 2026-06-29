@@ -5,7 +5,9 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from dataclasses import replace
 from pathlib import Path
+from typing import Any
 
 from neurodecodekit.datasets.manifest import (
     build_manifest_from_paths,
@@ -113,9 +115,12 @@ def _format_bytes(n_bytes: int) -> str:
         size /= 1024
 
 
-
 def _cmd_select_tiny(args: argparse.Namespace) -> int:
-    from neurodecodekit.datasets.selection import select_tiny_from_manifest, write_selection
+    from neurodecodekit.datasets.selection import (
+        gb_to_bytes,
+        select_tiny_from_manifest,
+        write_selection,
+    )
 
     selection = select_tiny_from_manifest(
         args.manifest,
@@ -123,18 +128,50 @@ def _cmd_select_tiny(args: argparse.Namespace) -> int:
         subject=args.subject,
         blocks=args.blocks,
         include_logs=not args.no_logs,
+        max_files=args.max_files,
+        max_total_bytes=gb_to_bytes(args.max_total_gb),
     )
     write_selection(selection, args.out)
     print(f"Wrote tiny selection with {len(selection.records)} files to {args.out}")
+    _print_selection_plan(selection, heading="Tiny selection plan")
     print(json.dumps(selection.to_dict(), indent=2, sort_keys=True))
     return 0
 
 
 def _cmd_download_selection(args: argparse.Namespace) -> int:
     from neurodecodekit.datasets.hf_access import selective_snapshot_download
-    from neurodecodekit.datasets.selection import read_selection
+    from neurodecodekit.datasets.selection import (
+        DEFAULT_MAX_FILES,
+        DEFAULT_MAX_TOTAL_BYTES,
+        gb_to_bytes,
+        read_selection,
+        validate_selection_limits,
+    )
 
     selection = read_selection(args.selection)
+    max_files = args.max_files if args.max_files is not None else selection.max_files
+    if max_files is None:
+        max_files = DEFAULT_MAX_FILES
+    if args.max_total_gb is not None:
+        max_total_bytes = gb_to_bytes(args.max_total_gb)
+    else:
+        max_total_bytes = selection.max_total_bytes
+    if max_total_bytes is None:
+        max_total_bytes = DEFAULT_MAX_TOTAL_BYTES
+
+    safety_warnings = validate_selection_limits(
+        selection.records,
+        max_files=max_files,
+        max_total_bytes=max_total_bytes,
+        require_known_sizes=args.execute and not args.allow_unknown_size,
+    )
+    selection = replace(
+        selection,
+        max_files=max_files,
+        max_total_bytes=max_total_bytes,
+        safety_warnings=safety_warnings,
+    )
+    _print_selection_plan(selection, heading="Download plan")
     dry_run = not args.execute
     if dry_run:
         print("Safety default: dry-run. Pass --execute to download selected files.")
@@ -149,7 +186,33 @@ def _cmd_download_selection(args: argparse.Namespace) -> int:
     return 0
 
 
+def _print_selection_plan(selection: Any, *, heading: str) -> None:
+    from neurodecodekit.datasets.selection import format_bytes
+
+    print(heading)
+    print(f"  repo: {selection.repo_id}")
+    print(f"  files: {selection.n_files}")
+    print(f"  estimated size: {format_bytes(selection.estimated_bytes)}")
+    if selection.missing_size_count:
+        print(
+            f"  known size: {format_bytes(selection.known_bytes)} "
+            f"({selection.missing_size_count} file(s) missing size metadata)"
+        )
+    print(f"  max files: {selection.max_files if selection.max_files is not None else 'unlimited'}")
+    print(f"  max total size: {format_bytes(selection.max_total_bytes)}")
+    if selection.safety_warnings:
+        print("  safety warnings:")
+        for warning in selection.safety_warnings:
+            print(f"    - {warning}")
+    print("  files:")
+    for idx, record in enumerate(selection.records, start=1):
+        family = record.family or record.kind or "unknown"
+        print(f"    {idx}. {record.path} ({format_bytes(record.size_bytes)}; {family})")
+
+
 def build_parser() -> argparse.ArgumentParser:
+    from neurodecodekit.datasets.selection import DEFAULT_MAX_FILES, DEFAULT_MAX_TOTAL_GB
+
     parser = argparse.ArgumentParser(
         prog="neurodecode",
         description="Small, reproducible research loops for neural language decoding.",
@@ -215,7 +278,6 @@ def build_parser() -> argparse.ArgumentParser:
     )
     p.set_defaults(func=_cmd_extract_windows)
 
-
     p = sub.add_parser("select-tiny", help="Create a tiny safe selection from a manifest.")
     p.add_argument("--manifest", required=True)
     p.add_argument("--out", required=True)
@@ -223,12 +285,38 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--subject", default=None, help="Optional subject ID like S1. Defaults to first detected subject.")
     p.add_argument("--blocks", type=int, default=1, help="Number of raw blocks to select. Default: 1.")
     p.add_argument("--no-logs", action="store_true", help="Do not include behavioral logs.")
+    p.add_argument(
+        "--max-files",
+        type=int,
+        default=DEFAULT_MAX_FILES,
+        help=f"Safety cap on selected files. Default: {DEFAULT_MAX_FILES}.",
+    )
+    p.add_argument(
+        "--max-total-gb",
+        type=float,
+        default=DEFAULT_MAX_TOTAL_GB,
+        help=f"Safety cap on known selected bytes in GB. Default: {DEFAULT_MAX_TOTAL_GB:g}.",
+    )
     p.set_defaults(func=_cmd_select_tiny)
 
     p = sub.add_parser("download-selection", help="Dry-run or execute selective HF download from a selection JSON.")
     p.add_argument("--selection", required=True)
     p.add_argument("--local-dir", required=True)
-    p.add_argument("--execute", action="store_true", help="Actually download. Default is dry-run only.")
+    mode = p.add_mutually_exclusive_group()
+    mode.add_argument("--execute", action="store_true", help="Actually download. Default is dry-run only.")
+    mode.add_argument("--dry-run", action="store_true", help="Explicitly keep dry-run mode. This is the default.")
+    p.add_argument("--max-files", type=int, default=None, help="Override the selection file-count safety cap.")
+    p.add_argument(
+        "--max-total-gb",
+        type=float,
+        default=None,
+        help="Override the selection total-size safety cap in GB.",
+    )
+    p.add_argument(
+        "--allow-unknown-size",
+        action="store_true",
+        help="Permit --execute when selected files are missing size metadata after reviewing the plan.",
+    )
     p.set_defaults(func=_cmd_download_selection)
 
     return parser

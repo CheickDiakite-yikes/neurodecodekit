@@ -45,3 +45,14 @@ Decision: add manifest v1 row families, parser warnings, optional size parsing, 
 Why: safe tiny-shard selection depends on knowing which files are raw, logs, EEG sidecars, localizer/tapping files, or unknowns. Ambiguity should be visible in `inspect-manifest` rather than hidden in selector heuristics.
 
 Evidence: `docs/LOOP_02_SPANISHBCBL_MANIFEST_V1.md`.
+
+## 0008 - Treat tiny downloads as explicit capped plans
+
+Decision: make `select-tiny` write a capped, size-aware selection plan and make
+`download-selection` print that plan before any dry-run or execution path.
+
+Why: a tiny-shard workflow is only safe if the exact files, known bytes,
+missing-size warnings, and cap overrides are visible before the user can start a
+real download.
+
+Evidence: `docs/LOOP_03_SAFE_TINY_SHARD_SELECTOR.md`.

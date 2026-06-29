@@ -12,6 +12,7 @@ This repo is a starter scaffold with working pure-Python components:
 - optional Hugging Face access helpers
 - synthetic shard generator
 - real `.fif` + `.mat` event-window extraction scaffold
+- size-aware capped tiny-selection and dry-run download planning
 - CLI smoke commands
 - unit tests
 
@@ -150,3 +151,28 @@ Recommended next validation:
 4. Inspect the `.npz` metadata warnings and confirm which `.mat` fields are the true keystroke timestamps/labels.
 
 Next PR recommendation: build the PR 2 baseline/report loop on top of both `cache/synthetic_tiny.npz` and a real extracted `.npz` when available.
+
+## Loop 3 status update
+
+The safe tiny-shard selector is now closed for local planning:
+
+```bash
+neurodecode select-tiny \
+  --manifest data/spanishbcbl_manifest.jsonl \
+  --out data/tiny_selection.json \
+  --max-files 4 \
+  --max-total-gb 2
+
+neurodecode download-selection \
+  --selection data/tiny_selection.json \
+  --local-dir data/spanishbcbl_tiny
+```
+
+Implementation notes:
+
+- `select-tiny` persists safety limits, known bytes, missing-size counts, and warnings.
+- Known-size selections prefer the smallest exact raw+log candidate.
+- `download-selection` prints exact files and size estimates before dry-run or execution.
+- `download-selection --execute` refuses unknown-size selections unless the user also passes `--allow-unknown-size`.
+
+Next 20-loop recommendation: Loop 4, B2Q-mini Cache v0. Stabilize a tiny cache loader and metadata schema before adding baseline/report complexity.

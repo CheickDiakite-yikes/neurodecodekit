@@ -44,15 +44,22 @@ Purpose: create a safe tiny selection.
 Command:
 
 ```bash
-neurodecode select-tiny --manifest data/spanishbcbl_manifest.jsonl --modality MEG --out data/tiny_selection.json
-neurodecode download-selection --selection data/tiny_selection.json --local-dir data/spanishbcbl_tiny --dry-run
+neurodecode select-tiny \
+  --manifest data/spanishbcbl_manifest.jsonl \
+  --modality MEG \
+  --out data/tiny_selection.json \
+  --max-files 4 \
+  --max-total-gb 2
+neurodecode download-selection --selection data/tiny_selection.json --local-dir data/spanishbcbl_tiny
 ```
 
 Acceptance:
 
 - selection includes only one raw block and relevant logs
 - total planned files are printed
-- no data is downloaded unless the user passes an explicit execute flag
+- exact planned paths and size metadata are printed
+- no data is downloaded unless the user passes `--execute`
+- real execution fails safely if selected sizes are unknown and `--allow-unknown-size` is not passed
 
 ## Experiment 3 — one real block to windows
 

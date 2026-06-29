@@ -70,10 +70,12 @@ Default tiny selection:
 
 ```text
 modality: MEG
-subject: first subject with both raw block and logs
+subject: subject attached to the smallest complete raw+log candidate when sizes are known
 blocks: 1
 include logs: yes
 include localizer/tapping: no, unless needed later
+max files: 8 by default, lower for first smoke runs when possible
+max total size: 5 GB by default, lower for first smoke runs when sizes are known
 ```
 
 Download behavior:
@@ -81,7 +83,14 @@ Download behavior:
 - default is dry-run
 - print all matching paths
 - print estimated total size when sizes are known
+- warn when selected file sizes are unknown
+- fail before download when file count or known bytes exceed the cap
 - require `--execute` or equivalent for real download
+- require `--allow-unknown-size` with `--execute` if the selection lacks size metadata
+
+The selector should treat byte caps as planning guardrails, not as permission
+to fetch data. A valid selection file is still only a download plan until the
+user runs `download-selection --execute`.
 
 ## Why `.npz` before Zarr
 
