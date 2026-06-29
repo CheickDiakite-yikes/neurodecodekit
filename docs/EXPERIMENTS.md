@@ -9,6 +9,7 @@ Command:
 ```bash
 neurodecode make-synthetic-shard --out cache/synthetic_tiny.npz --samples 128 --channels 8 --times 25
 neurodecode load-cache --cache cache/synthetic_tiny.npz --metadata-out cache/synthetic_tiny.metadata.json
+neurodecode report --cache cache/synthetic_tiny.npz --identity-smoke --out-json cache/synthetic_report.json --out-md cache/synthetic_report.md
 ```
 
 Acceptance:
@@ -17,6 +18,7 @@ Acceptance:
 - shape is printed
 - cache loads through the schema v0 loader
 - metadata sidecar contains schema, dimensions, warnings, and transformations
+- report command writes JSON and Markdown
 - metrics module works on sample text
 - no heavy dependencies required except NumPy for shard creation
 
@@ -110,6 +112,23 @@ example predictions
 storage footprint
 runtime
 ```
+
+Before real baselines exist, use `neurodecode report` with explicit target and
+prediction files:
+
+```bash
+neurodecode report \
+  --targets outputs/run_001/targets.txt \
+  --predictions outputs/run_001/predictions.txt \
+  --cache cache/b2qmini_s1_block1.npz \
+  --out-json outputs/run_001/metrics.json \
+  --out-md outputs/run_001/report.md \
+  --run-name run_001 \
+  --split subject-or-session
+```
+
+`--identity-smoke` is allowed only as a plumbing check. It copies targets into
+predictions and is not a decoder baseline.
 
 ## Anti-goals
 

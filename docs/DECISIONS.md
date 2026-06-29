@@ -68,3 +68,15 @@ cache contract that works for both synthetic smoke data and real extracted
 FIF/MAT windows.
 
 Evidence: `docs/LOOP_04_B2Q_MINI_CACHE_V0.md`.
+
+## 0010 - Draft: make report cards the standard experiment artifact
+
+Draft decision: add `neurodecode report` as the standard JSON/Markdown artifact
+for target/prediction comparisons, with optional cache metadata attached.
+Formal adoption is pending Loop 5 closeout.
+
+Why: future no-brain, template, neural, compression, and demo loops need a
+common way to compare CER, WER, keyboard-distance errors, examples, runtime, and
+storage context without requiring a notebook.
+
+Evidence: `docs/LOOP_05_METRICS_ERROR_REPORT_V1.md` (pending handoff).

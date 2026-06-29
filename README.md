@@ -59,11 +59,18 @@ Run the tiny local smoke loop without downloading any brain data:
 neurodecode eval-text --target "HOLA MUNDO" --prediction "HOLA MUNCO"
 neurodecode make-synthetic-shard --out cache/synthetic_tiny.npz --samples 64 --channels 8 --times 25
 neurodecode load-cache --cache cache/synthetic_tiny.npz --metadata-out cache/synthetic_tiny.metadata.json
+neurodecode report \
+  --cache cache/synthetic_tiny.npz \
+  --identity-smoke \
+  --out-json cache/synthetic_report.json \
+  --out-md cache/synthetic_report.md
 ```
 
 The synthetic shard is the current CI-friendly smoke loop. It verifies cache
-writing and metric plumbing without requiring MNE, SciPy, Hugging Face access,
-or any Brain2Qwerty/SpanishBCBL files.
+writing, cache loading, report writing, and metric plumbing without requiring
+MNE, SciPy, Hugging Face access, or any Brain2Qwerty/SpanishBCBL files.
+`--identity-smoke` uses cache labels as predictions and is explicitly a
+plumbing check, not a model result.
 
 Inspect SpanishBCBL-style paths using a local file list:
 
@@ -153,6 +160,57 @@ neurodecode load-cache --cache cache/b2qmini_s1_block1.npz --metadata-out cache/
 prints shape, dtype, label coverage, source files, warnings, and the
 transformation trail. The optional JSON sidecar is intended for quick review and
 experiment reports; the `.npz` remains the source of truth.
+
+## Metrics and reports
+
+Loop 5 is currently a pending handoff. The `neurodecode report` implementation
+and tests are present in this branch, but the loop is not formally closed yet
+because the local workbook/tracker update was interrupted by an admin/tooling
+block on this machine. The next agent should rerun the verification commands
+below, update the Excel tracker if available, and then mark Loop 5 done.
+
+Write a report from one-target-per-line text files:
+
+```bash
+neurodecode report \
+  --targets cache/targets.txt \
+  --predictions cache/predictions.txt \
+  --cache cache/b2qmini_s1_block1.npz \
+  --out-json outputs/run_001/metrics.json \
+  --out-md outputs/run_001/report.md \
+  --run-name run_001 \
+  --split synthetic-smoke
+```
+
+The report includes CER, WER, exact-match rate, keyboard-distance diagnostics,
+example rows, cache/storage metadata when provided, runtime, and warnings. A
+real neural result should always be compared against a no-brain baseline in a
+later report.
+
+Synthetic report smoke path:
+
+```bash
+neurodecode make-synthetic-shard --out cache/synthetic_tiny.npz --samples 32 --channels 4 --times 12
+neurodecode report \
+  --cache cache/synthetic_tiny.npz \
+  --identity-smoke \
+  --out-json cache/synthetic_report.json \
+  --out-md cache/synthetic_report.md \
+  --run-name synthetic_identity_smoke \
+  --split synthetic-smoke
+```
+
+`--identity-smoke` copies cache labels into predictions and emits an explicit
+warning. It is useful for proving report plumbing, but it is not a decoder or a
+baseline result.
+
+Loop 5 handoff checks for the next agent:
+
+```bash
+python -m unittest tests.test_report tests.test_cli_report
+python -m unittest discover -s tests
+neurodecode report --help
+```
 
 Current limitations:
 

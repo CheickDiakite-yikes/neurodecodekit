@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+import time
 from dataclasses import replace
 from pathlib import Path
 from typing import Any
@@ -23,6 +24,65 @@ def _cmd_eval_text(args: argparse.Namespace) -> int:
     metrics = summarize_text_metrics(args.target, args.prediction)
     metrics["keyboard_distance"] = aligned_keyboard_distance(args.target, args.prediction)
     print(json.dumps(metrics, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_report(args: argparse.Namespace) -> int:
+    from neurodecodekit.evaluation.report import (
+        build_text_report,
+        labels_to_text_rows,
+        read_text_rows,
+        write_report_json,
+        write_report_markdown,
+    )
+
+    start = time.perf_counter()
+    cache_summary = None
+    cache_labels = None
+    warnings: list[str] = []
+    if args.cache:
+        from neurodecodekit.cache.npz_cache import load_npz_cache
+
+        cache = load_npz_cache(args.cache)
+        cache_summary = cache.summary.to_dict()
+        cache_labels = labels_to_text_rows(cache.labels)
+
+    if args.targets:
+        targets = read_text_rows(args.targets)
+    elif cache_labels is not None:
+        targets = cache_labels
+        warnings.append("targets_loaded_from_cache_labels")
+    else:
+        raise ValueError("--targets is required unless --cache supplies labels.")
+
+    if args.predictions:
+        predictions = read_text_rows(args.predictions)
+    elif args.identity_smoke:
+        predictions = list(targets)
+        warnings.append("identity_smoke_predictions_equal_targets_not_model_result")
+    else:
+        raise ValueError("--predictions is required unless --identity-smoke is used.")
+
+    report = build_text_report(
+        targets=targets,
+        predictions=predictions,
+        cache_summary=cache_summary,
+        run_name=args.run_name,
+        split=args.split,
+        max_examples=args.max_examples,
+        warnings=warnings,
+    )
+    report["run"]["runtime_sec"] = round(time.perf_counter() - start, 6)
+
+    if args.out_json:
+        write_report_json(report, args.out_json)
+    if args.out_md:
+        write_report_markdown(report, args.out_md)
+    print(json.dumps(report, indent=2, sort_keys=True))
+    if args.out_json:
+        print(f"Wrote report JSON to {args.out_json}")
+    if args.out_md:
+        print(f"Wrote report Markdown to {args.out_md}")
     return 0
 
 
@@ -234,6 +294,22 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--target", required=True)
     p.add_argument("--prediction", required=True)
     p.set_defaults(func=_cmd_eval_text)
+
+    p = sub.add_parser("report", help="Write a JSON/Markdown text decoding report.")
+    p.add_argument("--targets", default=None, help="Text file with one target per line.")
+    p.add_argument("--predictions", default=None, help="Text file with one prediction per line.")
+    p.add_argument("--cache", default=None, help="Optional B2Q-mini NPZ cache for labels/storage metadata.")
+    p.add_argument("--out-json", default=None, help="Optional output JSON report path.")
+    p.add_argument("--out-md", default=None, help="Optional output Markdown report path.")
+    p.add_argument("--run-name", default=None, help="Human-readable run name.")
+    p.add_argument("--split", default=None, help="Split/protocol label, e.g. synthetic-smoke or subject.")
+    p.add_argument("--max-examples", type=int, default=10, help="Maximum examples to include. Default: 10.")
+    p.add_argument(
+        "--identity-smoke",
+        action="store_true",
+        help="Use targets as predictions for plumbing tests. This is not a model result.",
+    )
+    p.set_defaults(func=_cmd_report)
 
     p = sub.add_parser("manifest-from-paths", help="Build JSONL manifest from a newline path list.")
     p.add_argument("--paths", required=True, help="Text file containing one repo path per line.")

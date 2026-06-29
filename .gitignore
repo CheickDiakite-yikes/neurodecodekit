@@ -5,6 +5,7 @@ __pycache__/
 .env
 .pytest_cache/
 .ruff_cache/
+.codex_work/
 
 # Local data/cache. Do not commit neural data.
 data/*

@@ -14,6 +14,7 @@ This repo is a starter scaffold with working pure-Python components:
 - real `.fif` + `.mat` event-window extraction scaffold
 - size-aware capped tiny-selection and dry-run download planning
 - B2Q-mini NPZ cache schema v0 loader and metadata sidecar writer
+- JSON/Markdown metrics report command
 - CLI smoke commands
 - unit tests
 
@@ -194,4 +195,71 @@ Implementation notes:
 - Real extracted caches record source files, extraction params, parser warnings, and preprocessing transformations.
 - `load-cache` prints a compact summary and can write a JSON sidecar for reports.
 
-Next 20-loop recommendation: Loop 5, Metrics + Error Report v1. Build the report command on top of `load_npz_cache` so every baseline/report reads the same cache contract.
+## Loop 5 status update - pending handoff
+
+The metrics and error report path is implemented, but Loop 5 is not formally
+closed yet. The local attempt to update the Excel tracker was interrupted by an
+admin/tooling block on this machine. Another agent should rerun verification,
+update the tracker workbook, and only then mark Loop 5 done.
+
+Implemented command:
+
+```bash
+neurodecode report \
+  --targets outputs/run_001/targets.txt \
+  --predictions outputs/run_001/predictions.txt \
+  --cache cache/synthetic_tiny.npz \
+  --out-json outputs/run_001/metrics.json \
+  --out-md outputs/run_001/report.md \
+  --run-name run_001 \
+  --split synthetic-smoke
+```
+
+Synthetic plumbing smoke is explicit:
+
+```bash
+neurodecode report \
+  --cache cache/synthetic_tiny.npz \
+  --identity-smoke \
+  --out-json cache/synthetic_report.json \
+  --out-md cache/synthetic_report.md
+```
+
+Implementation notes:
+
+- Reports include CER, WER, exact-match rate, keyboard distance, example rows,
+  runtime, warnings, and optional cache/storage metadata.
+- `--identity-smoke` copies targets into predictions and warns that the result is not a model output.
+- Real predictions should be supplied as one prediction per line and compared with explicit target rows.
+- Report JSON and Markdown are both written from the same report dictionary.
+
+Local verification completed before interruption:
+
+```bash
+python -m unittest tests.test_report tests.test_cli_report
+python -m unittest discover -s tests
+```
+
+Observed result:
+
+```text
+Ran 8 tests
+OK
+
+Ran 45 tests
+OK
+```
+
+Required next-agent closeout:
+
+1. Pull latest `main`.
+2. Rerun the two test commands above.
+3. Run `neurodecode report --help`.
+4. Run a synthetic report smoke and inspect the JSON/Markdown outputs.
+5. Update `docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx` and the root tracker copy if available.
+6. Change Loop 5 from pending to done in `docs/LOOP_05_METRICS_ERROR_REPORT_V1.md` and `docs/NEXT_20_LOOPS_TRACKER.md`.
+7. Commit the final closeout, then proceed to Loop 6.
+
+Next 20-loop recommendation after closeout: Loop 6, LM-only / Prior-only
+Baseline. Build a deliberately no-brain baseline and make its report artifact
+comparable to future neural baselines.
