@@ -29,3 +29,11 @@ Why: `.npz` is easy for smoke tests; Zarr is better once cache dimensions and me
 Decision: every neural model must be compared to random/frequency/keyboard/LM-only baselines.
 
 Why: text decoding can look impressive when the language prior is doing most of the work.
+
+## 0006 - Close Loop 1 with synthetic smoke before real data
+
+Decision: mark Loop 1 as complete for the synthetic smoke path and proceed to Loop 2.
+
+Why: PR1's `extract-windows` command, optional dependency handling, CLI help, and synthetic cache path are in place. Real extraction remains blocked until one explicit SpanishBCBL `.fif` / `.mat` pair is intentionally selected and downloaded.
+
+Evidence: `docs/LOOP_01_PR1_CLOSEOUT_SMOKE.md`.
