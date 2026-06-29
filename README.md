@@ -58,6 +58,7 @@ Run the tiny local smoke loop without downloading any brain data:
 ```bash
 neurodecode eval-text --target "HOLA MUNDO" --prediction "HOLA MUNCO"
 neurodecode make-synthetic-shard --out cache/synthetic_tiny.npz --samples 64 --channels 8 --times 25
+neurodecode load-cache --cache cache/synthetic_tiny.npz --metadata-out cache/synthetic_tiny.metadata.json
 ```
 
 The synthetic shard is the current CI-friendly smoke loop. It verifies cache
@@ -142,6 +143,16 @@ event_source_index source row/index from the parsed log
 channel_names      channel names after picking/resampling
 metadata           JSON with source paths, extraction params, parser notes
 ```
+
+All current caches are written as B2Q-mini cache schema v0. The stable loader:
+
+```bash
+neurodecode load-cache --cache cache/b2qmini_s1_block1.npz --metadata-out cache/b2qmini_s1_block1.metadata.json
+```
+
+prints shape, dtype, label coverage, source files, warnings, and the
+transformation trail. The optional JSON sidecar is intended for quick review and
+experiment reports; the `.npz` remains the source of truth.
 
 Current limitations:
 

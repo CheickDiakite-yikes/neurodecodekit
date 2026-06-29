@@ -99,14 +99,29 @@ For the very first end-to-end loop, `.npz` is easier to inspect and test. Zarr s
 ## Cache schema v0
 
 ```text
+schema.name: b2q-mini-cache
+schema.version: 0
 windows: float32 or float16 array [n_events, n_channels, n_times]
 labels: unicode/string array [n_events]
 event_start_sec: float array [n_events]
+event_source_index: int array [n_events]
+channel_names: string array [n_channels]
 subject: metadata
 modality: metadata
 sfreq: metadata
 tmin/tmax: metadata
 source_files: metadata
+transformations: ordered metadata list explaining generation/preprocessing
+warnings: metadata list of parser/schema/data caveats
+```
+
+Schema v0 is enforced by `neurodecodekit.cache.npz_cache.load_npz_cache`.
+Required arrays are `windows`, `labels`, and JSON `metadata`; event timestamps,
+source indices, and channel names are optional but validated when present.
+`neurodecode load-cache` prints a compact summary and can write a JSON sidecar:
+
+```bash
+neurodecode load-cache --cache cache/synthetic_tiny.npz --metadata-out cache/synthetic_tiny.metadata.json
 ```
 
 ## Cache schema v1

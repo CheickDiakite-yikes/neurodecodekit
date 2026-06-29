@@ -66,6 +66,17 @@ def _cmd_make_synthetic_shard(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_load_cache(args: argparse.Namespace) -> int:
+    from neurodecodekit.cache.npz_cache import load_npz_cache, write_cache_metadata_sidecar
+
+    loaded = load_npz_cache(args.cache)
+    print(json.dumps(loaded.summary.to_dict(), indent=2, sort_keys=True))
+    if args.metadata_out:
+        write_cache_metadata_sidecar(args.cache, args.metadata_out)
+        print(f"Wrote cache metadata sidecar to {args.metadata_out}")
+    return 0
+
+
 def _cmd_extract_windows(args: argparse.Namespace) -> int:
     from neurodecodekit.preprocess.fif_mat_extraction import extract_fif_mat_windows
 
@@ -248,6 +259,15 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--classes", type=int, default=8)
     p.add_argument("--seed", type=int, default=7)
     p.set_defaults(func=_cmd_make_synthetic_shard)
+
+    p = sub.add_parser("load-cache", help="Load and summarize a B2Q-mini NPZ cache.")
+    p.add_argument("--cache", required=True, help="Path to a .npz cache.")
+    p.add_argument(
+        "--metadata-out",
+        default=None,
+        help="Optional JSON sidecar path containing cache summary and metadata.",
+    )
+    p.set_defaults(func=_cmd_load_cache)
 
     p = sub.add_parser(
         "extract-windows",

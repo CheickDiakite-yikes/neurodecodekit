@@ -13,8 +13,9 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
 - Loop 1: Done for the synthetic smoke path. See `docs/LOOP_01_PR1_CLOSEOUT_SMOKE.md`.
 - Loop 2: Done for local manifest parsing and summary logic. See `docs/LOOP_02_SPANISHBCBL_MANIFEST_V1.md`.
 - Loop 3: Done for capped tiny-shard selection and dry-run download planning. See `docs/LOOP_03_SAFE_TINY_SHARD_SELECTOR.md`.
+- Loop 4: Done for NPZ cache schema v0 loading, validation, and metadata sidecars. See `docs/LOOP_04_B2Q_MINI_CACHE_V0.md`.
 - Current blocker: no real SpanishBCBL `.fif` / `.mat` pair or full remote file list is present locally.
-- Next loop: Loop 4 - B2Q-mini Cache v0.
+- Next loop: Loop 5 - Metrics + Error Report v1.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |

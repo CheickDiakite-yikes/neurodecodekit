@@ -13,6 +13,7 @@ This repo is a starter scaffold with working pure-Python components:
 - synthetic shard generator
 - real `.fif` + `.mat` event-window extraction scaffold
 - size-aware capped tiny-selection and dry-run download planning
+- B2Q-mini NPZ cache schema v0 loader and metadata sidecar writer
 - CLI smoke commands
 - unit tests
 
@@ -175,4 +176,22 @@ Implementation notes:
 - `download-selection` prints exact files and size estimates before dry-run or execution.
 - `download-selection --execute` refuses unknown-size selections unless the user also passes `--allow-unknown-size`.
 
-Next 20-loop recommendation: Loop 4, B2Q-mini Cache v0. Stabilize a tiny cache loader and metadata schema before adding baseline/report complexity.
+## Loop 4 status update
+
+The B2Q-mini cache schema v0 path is now present:
+
+```bash
+neurodecode make-synthetic-shard --out cache/synthetic_tiny.npz --samples 64 --channels 8 --times 25
+neurodecode load-cache --cache cache/synthetic_tiny.npz --metadata-out cache/synthetic_tiny.metadata.json
+```
+
+Implementation notes:
+
+- `save_npz_cache` validates `windows`, `labels`, and optional event/channel arrays.
+- `load_npz_cache` is the stable one-function loader for B2Q-mini `.npz` caches.
+- Cache metadata is normalized with schema name/version, dimensions, array descriptors, warnings, and transformations.
+- Synthetic caches are explicitly marked as not-real-neural data.
+- Real extracted caches record source files, extraction params, parser warnings, and preprocessing transformations.
+- `load-cache` prints a compact summary and can write a JSON sidecar for reports.
+
+Next 20-loop recommendation: Loop 5, Metrics + Error Report v1. Build the report command on top of `load_npz_cache` so every baseline/report reads the same cache contract.

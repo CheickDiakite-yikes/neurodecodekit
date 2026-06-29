@@ -56,3 +56,15 @@ missing-size warnings, and cap overrides are visible before the user can start a
 real download.
 
 Evidence: `docs/LOOP_03_SAFE_TINY_SHARD_SELECTOR.md`.
+
+## 0009 - Make NPZ cache schema v0 the first stable interface
+
+Decision: treat `load_npz_cache` as the stable B2Q-mini cache loader and stamp
+every `.npz` with schema, dimensions, array descriptors, warnings, and
+transformations.
+
+Why: baselines, reports, demos, and later compression sweeps need one small
+cache contract that works for both synthetic smoke data and real extracted
+FIF/MAT windows.
+
+Evidence: `docs/LOOP_04_B2Q_MINI_CACHE_V0.md`.

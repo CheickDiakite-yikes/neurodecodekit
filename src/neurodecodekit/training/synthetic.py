@@ -50,6 +50,21 @@ def make_synthetic_windows(
         "classes": classes,
         "seed": seed,
         "note": "Toy smoke-test data, not real neural data.",
+        "source_files": {},
+        "transformations": [
+            {
+                "name": "synthetic_window_generation",
+                "description": "Generated Gaussian toy windows with a weak class bump pattern.",
+                "params": {
+                    "samples": samples,
+                    "channels": channels,
+                    "times": times,
+                    "classes": classes,
+                    "seed": seed,
+                },
+            }
+        ],
+        "warnings": ["synthetic_cache_not_real_neural_data"],
     }
     return windows, labels, metadata
 
@@ -74,7 +89,15 @@ def save_synthetic_npz(
         classes=classes,
         seed=seed,
     )
-    save_npz_cache(out, windows=windows, labels=labels, metadata=metadata)
+    np = _require_numpy()
+    channel_names = np.array([f"synthetic_ch_{idx}" for idx in range(channels)], dtype="U")
+    save_npz_cache(
+        out,
+        windows=windows,
+        labels=labels,
+        metadata=metadata,
+        extra_arrays={"channel_names": channel_names},
+    )
     path = Path(out)
     return {
         "path": str(path),

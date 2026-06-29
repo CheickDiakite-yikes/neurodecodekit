@@ -8,12 +8,15 @@ Command:
 
 ```bash
 neurodecode make-synthetic-shard --out cache/synthetic_tiny.npz --samples 128 --channels 8 --times 25
+neurodecode load-cache --cache cache/synthetic_tiny.npz --metadata-out cache/synthetic_tiny.metadata.json
 ```
 
 Acceptance:
 
 - file is created
 - shape is printed
+- cache loads through the schema v0 loader
+- metadata sidecar contains schema, dimensions, warnings, and transformations
 - metrics module works on sample text
 - no heavy dependencies required except NumPy for shard creation
 
@@ -83,6 +86,8 @@ Acceptance:
 - event parser finds keystrokes
 - output shape is [events, channels, times]
 - report includes bytes before/after preprocessing
+- cache loads through `neurodecode load-cache`
+- metadata records source files, extraction params, warnings, and transformations
 
 ## Experiment 4 — first real baseline
 

@@ -325,6 +325,37 @@ def extract_fif_mat_windows(
             "raw": str(raw_file),
             "events": str(events_file),
         },
+        "transformations": [
+            {
+                "name": "mne_read_raw_fif",
+                "description": "Loaded one explicit FIF block with preload=True.",
+                "params": {"raw_path": str(raw_file)},
+            },
+            {
+                "name": "channel_picking",
+                "description": "Applied optional MNE channel picks and max-channel cap.",
+                "params": {"picks": picks, "max_channels": max_channels},
+            },
+            {
+                "name": "resample",
+                "description": "Resampled raw signal when requested sfreq differed from source sfreq.",
+                "params": {
+                    "original_sfreq": original_sfreq,
+                    "target_sfreq": float(raw.info["sfreq"]),
+                    "requested_sfreq": float(sfreq),
+                },
+            },
+            {
+                "name": "scipy_loadmat_event_parse",
+                "description": "Loaded one explicit MAT log and parsed event rows with transparent heuristics.",
+                "params": {"events_path": str(events_file)},
+            },
+            {
+                "name": "event_window_extraction",
+                "description": "Extracted fixed windows around parsed event timestamps.",
+                "params": {"tmin": tmin, "tmax": tmax, "sfreq": float(raw.info["sfreq"])},
+            },
+        ],
         "extraction_params": {
             "tmin": tmin,
             "tmax": tmax,
