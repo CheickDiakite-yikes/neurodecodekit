@@ -6,6 +6,9 @@ Status: Pending handoff. Code and tests are present, but the loop is not
 formally closed because the local Excel tracker/final closeout step was
 interrupted by an admin/tooling block on this machine.
 
+See also: `docs/BUILD_NOTES.md` for the build journal, environment constraints,
+and next-agent handoff notes.
+
 ## Question
 
 Can every run produce an honest report without needing a notebook?
@@ -96,3 +99,13 @@ The next agent should complete Loop 5 closeout first:
 3. Run a synthetic report smoke and inspect the JSON/Markdown outputs.
 4. Update the Excel tracker and Markdown tracker.
 5. If all checks pass, mark Loop 5 done and then proceed to Loop 6.
+
+## Managed-environment note
+
+On 2026-07-01, the local GitHub push/export path was blocked by the
+admin/reviewer layer, and the prior workbook update path had already been
+interrupted by workstation tooling controls. This is why Loop 5 remains a local
+WIP handoff instead of a pushed, formally closed loop.
+
+The next agent should avoid retrying blocked export/workbook paths unless the
+user explicitly re-approves the action and the environment is known to allow it.

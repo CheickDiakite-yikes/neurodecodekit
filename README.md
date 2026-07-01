@@ -72,6 +72,23 @@ MNE, SciPy, Hugging Face access, or any Brain2Qwerty/SpanishBCBL files.
 `--identity-smoke` uses cache labels as predictions and is explicitly a
 plumbing check, not a model result.
 
+## Build notes and handoff trail
+
+This project is being built as a sequence of small loops, with each loop leaving
+behind a runnable artifact and a plain-English handoff. The current build
+journal is `docs/BUILD_NOTES.md`.
+
+That journal captures:
+
+- loop status and local commits
+- commands that were verified
+- managed-workstation blockers, including blocked external push/workbook paths
+- data-access guardrails
+- case-study notes and next-agent closeout steps
+
+If work is interrupted, prefer updating the journal and marking the loop
+pending over implying that a loop is complete.
+
 Inspect SpanishBCBL-style paths using a local file list:
 
 ```bash

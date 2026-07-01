@@ -121,6 +121,22 @@ demo/           Gradio visualization
 - MEG is not consumer hardware. Treat hardware realism as a separate research track.
 - The license is noncommercial.
 
+## Build notes and managed-environment constraints
+
+Use `docs/BUILD_NOTES.md` as the durable working journal for future agents. It
+records the loop timeline, local verification commands, environment blockers,
+and case-study notes.
+
+Current workstation constraints to preserve:
+
+- Do not retry GitHub push/export from this Bain-managed workstation unless the
+  user explicitly re-approves and the repository privacy/trust status is clear.
+- The Loop 5 workbook/tracker closeout path was interrupted by an admin/tooling
+  block, so Markdown trackers are the safest current handoff source.
+- Keep tests and synthetic smoke paths independent of real SpanishBCBL data.
+- Keep all real downloads explicit, capped, and dry-run first.
+- Keep `.codex_work/` and any local helper artifacts out of commits.
+
 ## PR 1 status update
 
 The real extraction path is now scaffolded as:
