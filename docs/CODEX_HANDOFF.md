@@ -382,5 +382,65 @@ corpus_wer=0.0
 The perfect synthetic score is expected because the synthetic cache has clear
 class bump patterns. It validates plumbing, not real Brain2Qwerty performance.
 
-Next 20-loop recommendation: Loop 8, Tiny Conv / EEGNet-style Baseline. Keep it
-optional and CPU-safe; do not add heavy ML dependencies to the base install.
+Historical next recommendation from Loop 7: Loop 8, Tiny Conv / EEGNet-style
+Baseline. Loop 8 has since been completed; see the status update below.
+
+## Loop 8 status update - done
+
+The optional tiny Conv / EEGNet-style baseline is implemented and Loop 8 is
+closed as of 2026-07-01.
+
+Implemented command:
+
+```bash
+neurodecode tiny-conv-baseline \
+  --cache cache/synthetic_tiny.npz \
+  --train-fraction 0.75 \
+  --epochs 30 \
+  --batch-size 16 \
+  --learning-rate 0.02 \
+  --out-predictions cache/tiny_conv_predictions.txt \
+  --out-json cache/tiny_conv_report.json \
+  --out-md cache/tiny_conv_report.md \
+  --run-name synthetic_tiny_conv \
+  --split synthetic-holdout
+```
+
+Implementation notes:
+
+- PyTorch is imported only inside the real training path.
+- The base install remains lightweight.
+- The command defaults to CPU and one Torch thread.
+- It shares the same single-cache holdout and train/eval-cache modes as
+  `template-baseline`.
+- Reports include model name, deep-learning flag, train/eval accuracy, loss
+  history, and warnings.
+- Missing Torch produces: `pip install -e '.[ml]'`.
+
+Closeout verification:
+
+```bash
+python -m unittest tests.test_tiny_conv_baseline tests.test_cli_tiny_conv_baseline tests.test_report
+python -m unittest discover -s tests
+neurodecode --help
+neurodecode tiny-conv-baseline --help
+neurodecode make-synthetic-shard --out cache/loop8_synthetic_tiny.npz --samples 64 --channels 4 --times 12 --classes 4
+neurodecode tiny-conv-baseline --cache cache/loop8_synthetic_tiny.npz --epochs 2
+```
+
+Observed local result:
+
+```text
+Focused tests: Ran 15 tests, OK (skipped=2)
+Full tests: Ran 71 tests, OK (skipped=2)
+CLI help: OK
+Tiny-conv command on base venv: helpful missing optional dependency error
+```
+
+The skipped focused tests are the Torch training smoke tests. Torch is not
+installed in the current Bain-managed venv, and no heavy ML dependency download
+was attempted locally.
+
+Next 20-loop recommendation: Loop 9, CTC Character Decoder Scaffold. Prove the
+sequence-decoding interface on synthetic sequence data before making real timing
+or alignment claims.

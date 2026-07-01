@@ -227,18 +227,32 @@ def render_report_markdown(report: dict[str, Any]) -> str:
         lines.extend(["", "## Baseline", ""])
         lines.append(f"- Kind: `{_md_inline(str(baseline.get('kind', 'unknown')))}`")
         lines.append(f"- Strategy: `{_md_inline(str(baseline.get('strategy', 'unknown')))}`")
+        if baseline.get("model_name") is not None:
+            lines.append(f"- Model: `{_md_inline(str(baseline.get('model_name')))}`")
         if "uses_neural_windows" in baseline:
             lines.append(f"- Uses neural windows: `{_format_bool_or_unknown(baseline.get('uses_neural_windows'))}`")
         if baseline.get("kind") == "prior-only":
             lines.append("- No neural signal: `yes`")
         if "no_deep_learning" in baseline:
             lines.append(f"- No deep learning: `{_format_bool_or_unknown(baseline.get('no_deep_learning'))}`")
+        if "uses_deep_learning" in baseline:
+            lines.append(f"- Uses deep learning: `{_format_bool_or_unknown(baseline.get('uses_deep_learning'))}`")
         if baseline.get("split_mode") is not None:
             lines.append(f"- Split mode: `{_md_inline(str(baseline.get('split_mode')))}`")
         lines.append(f"- Train rows: `{_format_metric(baseline.get('n_train_rows'))}`")
         lines.append(f"- Eval rows: `{_format_metric(baseline.get('n_eval_rows'))}`")
         vocab_size = baseline.get("vocab_size", baseline.get("n_classes"))
         lines.append(f"- Vocabulary size: `{_format_metric(vocab_size)}`")
+        if baseline.get("epochs") is not None:
+            lines.append(f"- Epochs: `{_format_metric(baseline.get('epochs'))}`")
+        if baseline.get("learning_rate") is not None:
+            lines.append(f"- Learning rate: `{_format_metric(baseline.get('learning_rate'))}`")
+        if baseline.get("device") is not None:
+            lines.append(f"- Device: `{_md_inline(str(baseline.get('device')))}`")
+        if baseline.get("train_accuracy") is not None:
+            lines.append(f"- Train accuracy: `{_format_metric(baseline.get('train_accuracy'))}`")
+        if baseline.get("eval_accuracy") is not None:
+            lines.append(f"- Eval accuracy: `{_format_metric(baseline.get('eval_accuracy'))}`")
         if baseline.get("top_target") not in (None, ""):
             lines.append(f"- Top target: `{_md_inline(str(baseline.get('top_target')))}`")
         if baseline.get("top_count") is not None:

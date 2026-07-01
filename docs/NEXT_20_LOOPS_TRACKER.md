@@ -17,8 +17,9 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
 - Loop 5: Done for metrics/error report v1. See `docs/LOOP_05_METRICS_ERROR_REPORT_V1.md`.
 - Loop 6: Done for no-brain prior-only baseline. See `docs/LOOP_06_LM_PRIOR_BASELINE.md`.
 - Loop 7: Done for template / nearest-centroid window baseline. See `docs/LOOP_07_TEMPLATE_BASELINE.md`.
+- Loop 8: Done for optional tiny ConvNet baseline scaffold. See `docs/LOOP_08_TINY_CONV_BASELINE.md`.
 - Current blocker: no real SpanishBCBL `.fif` / `.mat` pair or full remote file list is present locally.
-- Next loop: Loop 8 - Tiny Conv / EEGNet-style Baseline.
+- Next loop: Loop 9 - CTC Character Decoder Scaffold.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |

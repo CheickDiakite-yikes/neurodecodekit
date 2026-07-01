@@ -88,6 +88,31 @@ class ReportTests(unittest.TestCase):
         self.assertIn("most-frequent", markdown)
         self.assertIn("No neural signal", markdown)
 
+    def test_render_report_markdown_includes_neural_baseline_metadata(self):
+        report = build_text_report(targets=["A", "B"], predictions=["A", "A"])
+        report["baseline"] = {
+            "kind": "tiny-conv-window",
+            "strategy": "tiny-conv",
+            "model_name": "TinyConvNet",
+            "uses_neural_windows": True,
+            "uses_deep_learning": True,
+            "split_mode": "single-cache-stratified-holdout",
+            "n_train_rows": 10,
+            "n_eval_rows": 2,
+            "n_classes": 2,
+            "epochs": 3,
+            "learning_rate": 0.01,
+            "device": "cpu",
+            "train_accuracy": 0.8,
+            "eval_accuracy": 0.5,
+        }
+
+        markdown = render_report_markdown(report)
+
+        self.assertIn("TinyConvNet", markdown)
+        self.assertIn("Uses deep learning: `yes`", markdown)
+        self.assertIn("Eval accuracy: `0.5`", markdown)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -173,6 +173,39 @@ neurodecode template-baseline \
   --out-md outputs/run_001/template_report.md
 ```
 
+The first optional neural-window baseline is the tiny ConvNet:
+
+```bash
+pip install -e ".[ml]"
+
+neurodecode tiny-conv-baseline \
+  --cache cache/b2qmini_s1_block1.npz \
+  --train-fraction 0.75 \
+  --epochs 30 \
+  --batch-size 16 \
+  --learning-rate 0.02 \
+  --out-predictions outputs/run_001/tiny_conv_predictions.txt \
+  --out-json outputs/run_001/tiny_conv_report.json \
+  --out-md outputs/run_001/tiny_conv_report.md \
+  --run-name run_001_tiny_conv \
+  --split subject-or-session-holdout
+```
+
+For real comparisons, prefer explicit train/eval caches:
+
+```bash
+neurodecode tiny-conv-baseline \
+  --train-cache cache/train_block.npz \
+  --eval-cache cache/eval_block.npz \
+  --epochs 30 \
+  --out-json outputs/run_001/tiny_conv_report.json \
+  --out-md outputs/run_001/tiny_conv_report.md
+```
+
+This command uses PyTorch and is intentionally optional. It should be reported
+beside the no-brain prior and template baselines. A tiny synthetic win is only a
+plumbing signal, not evidence of real Brain2Qwerty performance.
+
 ## Anti-goals
 
 Do not do these until the earlier experiments pass:

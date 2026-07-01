@@ -101,3 +101,16 @@ enough to run in smoke tests. It can reveal whether labels and windows contain
 separable signal before adding PyTorch or more complex sequence models.
 
 Evidence: `docs/LOOP_07_TEMPLATE_BASELINE.md`.
+
+## 0013 - Keep the first neural baseline optional and comparator-first
+
+Decision: add `neurodecode tiny-conv-baseline` as an optional PyTorch-backed
+baseline, guarded by the `ml` extra and reported beside the prior-only and
+template baselines.
+
+Why: a tiny ConvNet is useful only after the no-brain and transparent window
+floors exist. Keeping PyTorch optional preserves the lightweight developer loop
+while still allowing an ML-enabled environment to train a CPU-safe synthetic
+smoke baseline.
+
+Evidence: `docs/LOOP_08_TINY_CONV_BASELINE.md`.

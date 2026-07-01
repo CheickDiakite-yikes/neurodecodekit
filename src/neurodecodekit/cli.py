@@ -229,6 +229,88 @@ def _cmd_template_baseline(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_tiny_conv_baseline(args: argparse.Namespace) -> int:
+    from neurodecodekit.cache.npz_cache import load_npz_cache
+    from neurodecodekit.evaluation.report import (
+        build_text_report,
+        labels_to_text_rows,
+        write_report_json,
+        write_report_markdown,
+    )
+    from neurodecodekit.models.tiny_conv_baseline import (
+        run_tiny_conv_baseline,
+        run_tiny_conv_baseline_from_single_cache,
+    )
+
+    start = time.perf_counter()
+    if args.cache and (args.train_cache or args.eval_cache):
+        raise ValueError("use --cache for a single-cache holdout, or --train-cache with --eval-cache.")
+    if not args.cache and not (args.train_cache and args.eval_cache):
+        raise ValueError("--cache is required unless both --train-cache and --eval-cache are provided.")
+
+    if args.cache:
+        cache = load_npz_cache(args.cache)
+        cache_summary = cache.summary.to_dict()
+        baseline = run_tiny_conv_baseline_from_single_cache(
+            windows=cache.windows,
+            labels=labels_to_text_rows(cache.labels),
+            train_fraction=args.train_fraction,
+            seed=args.seed,
+            epochs=args.epochs,
+            batch_size=args.batch_size,
+            learning_rate=args.learning_rate,
+            hidden_channels=args.hidden_channels,
+            device=args.device,
+            num_threads=args.num_threads,
+        )
+    else:
+        train_cache = load_npz_cache(args.train_cache)
+        eval_cache = load_npz_cache(args.eval_cache)
+        cache_summary = eval_cache.summary.to_dict()
+        baseline = run_tiny_conv_baseline(
+            train_windows=train_cache.windows,
+            train_labels=labels_to_text_rows(train_cache.labels),
+            eval_windows=eval_cache.windows,
+            eval_labels=labels_to_text_rows(eval_cache.labels),
+            split_mode="separate-cache",
+            seed=args.seed,
+            epochs=args.epochs,
+            batch_size=args.batch_size,
+            learning_rate=args.learning_rate,
+            hidden_channels=args.hidden_channels,
+            device=args.device,
+            num_threads=args.num_threads,
+        )
+
+    if args.out_predictions:
+        _write_text_rows(args.out_predictions, baseline.predictions)
+
+    report = build_text_report(
+        targets=baseline.targets,
+        predictions=baseline.predictions,
+        cache_summary=cache_summary,
+        run_name=args.run_name or "tiny_conv_baseline",
+        split=args.split,
+        max_examples=args.max_examples,
+        warnings=baseline.warnings,
+    )
+    report["run"]["runtime_sec"] = round(time.perf_counter() - start, 6)
+    report["baseline"] = baseline.metadata()
+
+    if args.out_json:
+        write_report_json(report, args.out_json)
+    if args.out_md:
+        write_report_markdown(report, args.out_md)
+    print(json.dumps(report, indent=2, sort_keys=True))
+    if args.out_predictions:
+        print(f"Wrote tiny-conv predictions to {args.out_predictions}")
+    if args.out_json:
+        print(f"Wrote report JSON to {args.out_json}")
+    if args.out_md:
+        print(f"Wrote report Markdown to {args.out_md}")
+    return 0
+
+
 def _cmd_manifest_from_paths(args: argparse.Namespace) -> int:
     paths = Path(args.paths).read_text(encoding="utf-8").splitlines()
     records = build_manifest_from_paths(paths, repo_id=args.repo_id)
@@ -498,6 +580,34 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--split", default=None, help="Split/protocol label, e.g. synthetic-holdout or session.")
     p.add_argument("--max-examples", type=int, default=10, help="Maximum examples to include. Default: 10.")
     p.set_defaults(func=_cmd_template_baseline)
+
+    p = sub.add_parser(
+        "tiny-conv-baseline",
+        help="Run an optional CPU-safe tiny ConvNet baseline over cache windows. Requires [ml].",
+    )
+    p.add_argument("--cache", default=None, help="Single B2Q-mini cache to split into train/eval rows.")
+    p.add_argument("--train-cache", default=None, help="Optional train cache for separate-cache evaluation.")
+    p.add_argument("--eval-cache", default=None, help="Optional eval cache for separate-cache evaluation.")
+    p.add_argument(
+        "--train-fraction",
+        type=float,
+        default=0.5,
+        help="Single-cache stratified train fraction. Default: 0.5.",
+    )
+    p.add_argument("--seed", type=int, default=7, help="Seed for deterministic holdout/training. Default: 7.")
+    p.add_argument("--epochs", type=int, default=20, help="Training epochs. Default: 20.")
+    p.add_argument("--batch-size", type=int, default=16, help="Mini-batch size. Default: 16.")
+    p.add_argument("--learning-rate", type=float, default=0.01, help="Adam learning rate. Default: 0.01.")
+    p.add_argument("--hidden-channels", type=int, default=8, help="Conv hidden channels. Default: 8.")
+    p.add_argument("--device", default="cpu", choices=["cpu", "cuda"], help="Torch device. Default: cpu.")
+    p.add_argument("--num-threads", type=int, default=1, help="Torch CPU threads. Default: 1.")
+    p.add_argument("--out-predictions", default=None, help="Optional one-prediction-per-line output path.")
+    p.add_argument("--out-json", default=None, help="Optional output JSON report path.")
+    p.add_argument("--out-md", default=None, help="Optional output Markdown report path.")
+    p.add_argument("--run-name", default=None, help="Human-readable run name.")
+    p.add_argument("--split", default=None, help="Split/protocol label, e.g. synthetic-holdout or session.")
+    p.add_argument("--max-examples", type=int, default=10, help="Maximum examples to include. Default: 10.")
+    p.set_defaults(func=_cmd_tiny_conv_baseline)
 
     p = sub.add_parser("manifest-from-paths", help="Build JSONL manifest from a newline path list.")
     p.add_argument("--paths", required=True, help="Text file containing one repo path per line.")

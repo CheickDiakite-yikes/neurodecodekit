@@ -186,12 +186,63 @@ The useful story is not "we built a decoder in one leap." The useful story is:
   separate train labels for real experiments.
 - Template baselines are valuable because they test window separability before
   hiding mistakes inside a neural network.
+- Optional neural baselines need two smoke paths: a real training path when
+  `.[ml]` is installed, and a clear install-hint failure path on lightweight or
+  managed machines.
 - Managed enterprise environments can block network, workbook, or export paths;
   the project should keep progressing through local commits and explicit
   handoffs rather than pretending those constraints do not exist.
 
+## Loop 8 closeout - Tiny Conv / EEGNet-style Baseline
+
+Loop 8 adds `neurodecode tiny-conv-baseline`, an optional PyTorch-backed tiny
+ConvNet over cache windows.
+
+What exists:
+
+- `src/neurodecodekit/models/tiny_conv_baseline.py`
+- `neurodecode tiny-conv-baseline`
+- single-cache stratified holdout mode
+- explicit `--train-cache` / `--eval-cache` mode
+- CPU defaults: `--device cpu`, `--num-threads 1`
+- training knobs: epochs, batch size, learning rate, hidden channels
+- report metadata for model name, deep-learning usage, train/eval rows,
+  classes, train/eval accuracy, loss history, and warnings
+- tests for pure helpers, CLI validation, missing optional dependencies, report
+  rendering, and Torch-enabled synthetic training smoke
+
+Local closeout verification on 2026-07-01:
+
+```text
+python -m unittest tests.test_tiny_conv_baseline tests.test_cli_tiny_conv_baseline tests.test_report
+Ran 15 tests
+OK (skipped=2)
+
+neurodecode --help
+OK
+
+neurodecode tiny-conv-baseline --help
+OK
+```
+
+The two skipped tests are the actual Torch training smoke tests. Torch is not
+installed in the current Bain-managed venv, and no heavy ML dependency download
+was attempted during this loop. The local command failure was verified:
+
+```text
+neurodecode tiny-conv-baseline --cache cache/loop8_synthetic_tiny.npz --epochs 2
+error: Tiny Conv baseline requires optional ML dependencies: `pip install -e '.[ml]'`.
+```
+
+In an ML-enabled environment, run:
+
+```bash
+pip install -e ".[ml]"
+neurodecode tiny-conv-baseline --cache cache/loop8_synthetic_tiny.npz --train-fraction 0.75 --epochs 30
+```
+
 ## Next recommended action
 
-Proceed to Loop 8. Loop 8 should add an optional tiny Conv / EEGNet-style
-baseline with CPU-safe synthetic tests and no new heavy dependencies in the base
-install.
+Proceed to Loop 9. Loop 9 should add the minimal CTC character-decoder scaffold
+against synthetic sequence data first, without claiming real sequence decoding
+until timing/label assumptions are explicit.

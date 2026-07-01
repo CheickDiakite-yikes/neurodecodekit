@@ -252,6 +252,29 @@ neurodecode template-baseline \
 creates a deterministic stratified holdout split; for cleaner real experiments,
 use `--train-cache` and `--eval-cache`.
 
+Run the optional tiny ConvNet neural-window baseline:
+
+```bash
+pip install -e ".[ml]"
+
+neurodecode tiny-conv-baseline \
+  --cache cache/synthetic_tiny.npz \
+  --train-fraction 0.75 \
+  --epochs 30 \
+  --batch-size 16 \
+  --learning-rate 0.02 \
+  --out-predictions cache/tiny_conv_predictions.txt \
+  --out-json cache/tiny_conv_report.json \
+  --out-md cache/tiny_conv_report.md \
+  --run-name synthetic_tiny_conv \
+  --split synthetic-holdout
+```
+
+`tiny-conv-baseline` is behind the optional `ml` extra because it uses PyTorch.
+It defaults to CPU and one Torch thread. The command is a smoke baseline for
+tiny caches, not a production decoder. On a base install it should fail with a
+clear `pip install -e '.[ml]'` message.
+
 Loop 5 closeout checks:
 
 ```bash
@@ -282,6 +305,9 @@ Current limitations:
 - No filtering, artifact rejection, or subject normalization is applied yet.
 - The first neural-window classifier is a nearest-centroid template baseline;
   it is transparent and intentionally small.
+- The tiny ConvNet baseline is optional and requires `pip install -e ".[ml]"`.
+  It should be compared against the prior-only and template baselines before any
+  performance claim.
 - `.npz` is the first cache format; Zarr is still a later step for larger runs.
 
 ## Why this wedge matters
