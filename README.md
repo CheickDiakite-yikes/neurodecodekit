@@ -235,6 +235,23 @@ priors only and writes the same report format, with explicit warnings that no
 neural signal was used. For real experiments, pass `--train-targets` or
 `--train-cache` so the prior is fit on training labels rather than eval labels.
 
+Run the tiny neural-window template baseline:
+
+```bash
+neurodecode template-baseline \
+  --cache cache/synthetic_tiny.npz \
+  --train-fraction 0.5 \
+  --out-predictions cache/template_predictions.txt \
+  --out-json cache/template_report.json \
+  --out-md cache/template_report.md \
+  --run-name synthetic_template_nearest_centroid \
+  --split synthetic-holdout
+```
+
+`template-baseline` uses cache windows, but no deep learning. With one cache it
+creates a deterministic stratified holdout split; for cleaner real experiments,
+use `--train-cache` and `--eval-cache`.
+
 Loop 5 closeout checks:
 
 ```bash
@@ -263,8 +280,8 @@ Current limitations:
 - Labels may be blank if the log file does not expose a clear per-event target
   field.
 - No filtering, artifact rejection, or subject normalization is applied yet.
-- The first baseline is prior-only; the first neural-window classifier begins in
-  Loop 7.
+- The first neural-window classifier is a nearest-centroid template baseline;
+  it is transparent and intentionally small.
 - `.npz` is the first cache format; Zarr is still a later step for larger runs.
 
 ## Why this wedge matters

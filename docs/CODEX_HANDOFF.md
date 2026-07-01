@@ -324,6 +324,63 @@ corpus_cer=0.8125
 corpus_wer=0.8125
 ```
 
-Next 20-loop recommendation: Loop 7, Template / Nearest-Centroid Baseline.
-Train a tiny transparent classifier on cache windows and write the same report
-format so neural-window scores can be compared against the prior-only floor.
+Historical next recommendation from Loop 6: Loop 7, Template /
+Nearest-Centroid Baseline. Loop 7 has since been completed; see the status
+update below.
+
+## Loop 7 status update - done
+
+The template / nearest-centroid baseline is implemented and Loop 7 is closed as
+of 2026-07-01.
+
+Implemented command:
+
+```bash
+neurodecode template-baseline \
+  --cache cache/synthetic_tiny.npz \
+  --train-fraction 0.5 \
+  --out-predictions cache/template_predictions.txt \
+  --out-json cache/template_report.json \
+  --out-md cache/template_report.md \
+  --run-name synthetic_template_nearest_centroid \
+  --split synthetic-holdout
+```
+
+Implementation notes:
+
+- The command uses cache windows and warns with `template_baseline_uses_neural_windows`.
+- It uses nearest-centroid templates, not deep learning.
+- The one-cache path uses deterministic stratified holdout by label.
+- Real comparisons can use `--train-cache` and `--eval-cache`.
+- Reports include baseline metadata in JSON and Markdown.
+
+Closeout verification:
+
+```bash
+python -m unittest tests.test_template_baseline tests.test_cli_template_baseline tests.test_report
+python -m unittest discover -s tests
+neurodecode template-baseline --help
+neurodecode make-synthetic-shard --out cache/loop7_synthetic_tiny.npz --samples 64 --channels 4 --times 12 --classes 4
+neurodecode template-baseline --cache cache/loop7_synthetic_tiny.npz --train-fraction 0.5 --out-predictions cache/loop7_template_predictions.txt --out-json cache/loop7_template_report.json --out-md cache/loop7_template_report.md --run-name loop7_template_nearest_centroid --split synthetic-holdout
+```
+
+Observed result:
+
+```text
+Ran 13 tests
+OK
+
+Ran 62 tests
+OK
+
+Template smoke report wrote predictions, JSON, and Markdown.
+exact_match_rate=1.0
+corpus_cer=0.0
+corpus_wer=0.0
+```
+
+The perfect synthetic score is expected because the synthetic cache has clear
+class bump patterns. It validates plumbing, not real Brain2Qwerty performance.
+
+Next 20-loop recommendation: Loop 8, Tiny Conv / EEGNet-style Baseline. Keep it
+optional and CPU-safe; do not add heavy ML dependencies to the base install.

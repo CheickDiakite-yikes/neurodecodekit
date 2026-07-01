@@ -149,6 +149,30 @@ If `--train-targets` or `--train-cache` is omitted, the command emits
 `prior_fit_on_eval_targets_for_smoke_only`. That is acceptable for plumbing
 smoke tests, not for real baseline claims.
 
+The first neural-window comparator is the template baseline:
+
+```bash
+neurodecode template-baseline \
+  --cache cache/b2qmini_s1_block1.npz \
+  --train-fraction 0.5 \
+  --out-predictions outputs/run_001/template_predictions.txt \
+  --out-json outputs/run_001/template_report.json \
+  --out-md outputs/run_001/template_report.md \
+  --run-name run_001_template_nearest_centroid \
+  --split subject-or-session-holdout
+```
+
+For real comparisons, prefer explicit train/eval caches when split metadata is
+available:
+
+```bash
+neurodecode template-baseline \
+  --train-cache cache/train_block.npz \
+  --eval-cache cache/eval_block.npz \
+  --out-json outputs/run_001/template_report.json \
+  --out-md outputs/run_001/template_report.md
+```
+
 ## Anti-goals
 
 Do not do these until the earlier experiments pass:

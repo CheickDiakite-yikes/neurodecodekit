@@ -111,6 +111,7 @@ if (Test-Path $lockPath) {
 | 4 | Done | `docs/LOOP_04_B2Q_MINI_CACHE_V0.md` | Made `.npz` cache schema v0 the stable tiny-cache interface. |
 | 5 | Done | `docs/LOOP_05_METRICS_ERROR_REPORT_V1.md` | Closed on 2026-07-01 with report command verification, synthetic JSON/Markdown smoke output, Markdown tracker updates, workbook tracker updates, and closeout docs. |
 | 6 | Done | `docs/LOOP_06_LM_PRIOR_BASELINE.md` | Closed on 2026-07-01 with a no-brain prior baseline, report integration, tests, synthetic smoke output, and tracker updates. |
+| 7 | Done | `docs/LOOP_07_TEMPLATE_BASELINE.md` | Closed on 2026-07-01 with nearest-centroid window baseline, deterministic holdout, reports, tests, synthetic smoke output, and tracker updates. |
 
 ## Loop 5 closeout state
 
@@ -183,12 +184,14 @@ The useful story is not "we built a decoder in one leap." The useful story is:
 - Identity smoke tests are valuable when they are named honestly.
 - Prior-only baselines are valuable when they are visibly no-brain and fit on
   separate train labels for real experiments.
+- Template baselines are valuable because they test window separability before
+  hiding mistakes inside a neural network.
 - Managed enterprise environments can block network, workbook, or export paths;
   the project should keep progressing through local commits and explicit
   handoffs rather than pretending those constraints do not exist.
 
 ## Next recommended action
 
-Proceed to Loop 7. Loop 7 should add a tiny transparent template or
-nearest-centroid classifier over cache windows and make its report directly
-comparable to the prior-only baseline.
+Proceed to Loop 8. Loop 8 should add an optional tiny Conv / EEGNet-style
+baseline with CPU-safe synthetic tests and no new heavy dependencies in the base
+install.

@@ -23,6 +23,8 @@ class TemplateClassifier:
             raise ValueError(f"Expected windows [samples, channels, times], got {x.shape}")
         if len(x) != len(y):
             raise ValueError("windows and labels must have the same length")
+        if len(y) == 0:
+            raise ValueError("TemplateClassifier requires at least one training row.")
         labels_unique = sorted(set(y.tolist()))
         templates = []
         for label in labels_unique:
@@ -36,6 +38,13 @@ class TemplateClassifier:
         if self.labels_ is None or self.templates_ is None:
             raise RuntimeError("TemplateClassifier must be fitted before predict().")
         x = np.asarray(windows)
+        if x.ndim != 3:
+            raise ValueError(f"Expected windows [samples, channels, times], got {x.shape}")
+        if x.shape[1:] != self.templates_.shape[1:]:
+            raise ValueError(
+                "Prediction windows must match template [channels, times] shape: "
+                f"{x.shape[1:]} vs {self.templates_.shape[1:]}"
+            )
         flat_x = x.reshape((x.shape[0], -1))
         flat_templates = self.templates_.reshape((self.templates_.shape[0], -1))
         # Squared Euclidean distance: [samples, classes]

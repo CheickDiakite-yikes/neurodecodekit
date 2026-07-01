@@ -90,3 +90,14 @@ future neural-window model should be compared against a baseline that uses no
 brain signal at all.
 
 Evidence: `docs/LOOP_06_LM_PRIOR_BASELINE.md`.
+
+## 0012 - Add a transparent window baseline before neural nets
+
+Decision: add `neurodecode template-baseline` as the first neural-window
+comparator before any deep model.
+
+Why: a nearest-centroid template classifier is simple enough to audit and fast
+enough to run in smoke tests. It can reveal whether labels and windows contain
+separable signal before adding PyTorch or more complex sequence models.
+
+Evidence: `docs/LOOP_07_TEMPLATE_BASELINE.md`.

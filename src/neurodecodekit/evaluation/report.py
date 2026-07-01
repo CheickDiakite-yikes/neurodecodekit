@@ -224,21 +224,25 @@ def render_report_markdown(report: dict[str, Any]) -> str:
 
     baseline = report.get("baseline")
     if baseline:
-        lines.extend(
-            [
-                "",
-                "## Baseline",
-                "",
-                f"- Kind: `{_md_inline(str(baseline.get('kind', 'unknown')))}`",
-                f"- Strategy: `{_md_inline(str(baseline.get('strategy', 'unknown')))}`",
-                f"- No neural signal: `{'yes' if baseline.get('kind') == 'prior-only' else 'unknown'}`",
-                f"- Train rows: `{_format_metric(baseline.get('n_train_rows'))}`",
-                f"- Eval rows: `{_format_metric(baseline.get('n_eval_rows'))}`",
-                f"- Vocabulary size: `{_format_metric(baseline.get('vocab_size'))}`",
-                f"- Top target: `{_md_inline(str(baseline.get('top_target', '')))}`",
-                f"- Top count: `{_format_metric(baseline.get('top_count'))}`",
-            ]
-        )
+        lines.extend(["", "## Baseline", ""])
+        lines.append(f"- Kind: `{_md_inline(str(baseline.get('kind', 'unknown')))}`")
+        lines.append(f"- Strategy: `{_md_inline(str(baseline.get('strategy', 'unknown')))}`")
+        if "uses_neural_windows" in baseline:
+            lines.append(f"- Uses neural windows: `{_format_bool_or_unknown(baseline.get('uses_neural_windows'))}`")
+        if baseline.get("kind") == "prior-only":
+            lines.append("- No neural signal: `yes`")
+        if "no_deep_learning" in baseline:
+            lines.append(f"- No deep learning: `{_format_bool_or_unknown(baseline.get('no_deep_learning'))}`")
+        if baseline.get("split_mode") is not None:
+            lines.append(f"- Split mode: `{_md_inline(str(baseline.get('split_mode')))}`")
+        lines.append(f"- Train rows: `{_format_metric(baseline.get('n_train_rows'))}`")
+        lines.append(f"- Eval rows: `{_format_metric(baseline.get('n_eval_rows'))}`")
+        vocab_size = baseline.get("vocab_size", baseline.get("n_classes"))
+        lines.append(f"- Vocabulary size: `{_format_metric(vocab_size)}`")
+        if baseline.get("top_target") not in (None, ""):
+            lines.append(f"- Top target: `{_md_inline(str(baseline.get('top_target')))}`")
+        if baseline.get("top_count") is not None:
+            lines.append(f"- Top count: `{_format_metric(baseline.get('top_count'))}`")
 
     warnings = report.get("warnings") or []
     if warnings:
@@ -303,6 +307,14 @@ def _format_metric(value: object) -> str:
     if isinstance(value, float):
         return f"{value:.6g}"
     return str(value)
+
+
+def _format_bool_or_unknown(value: object) -> str:
+    if value is True:
+        return "yes"
+    if value is False:
+        return "no"
+    return "unknown"
 
 
 def _md_cell(value: object) -> str:
