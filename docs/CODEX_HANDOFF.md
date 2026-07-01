@@ -270,6 +270,60 @@ OK
 Report JSON and Markdown were written with explicit identity-smoke warnings.
 ```
 
-Next 20-loop recommendation: Loop 6, LM-only / Prior-only Baseline. Build a
-deliberately no-brain baseline and make its report artifact comparable to
-future neural baselines.
+Loop 6 has since been completed; see the Loop 6 status update below.
+
+## Loop 6 status update - done
+
+The no-brain prior-only baseline is implemented and Loop 6 is closed as of
+2026-07-01.
+
+Implemented command:
+
+```bash
+neurodecode prior-baseline \
+  --cache cache/synthetic_tiny.npz \
+  --out-predictions cache/prior_predictions.txt \
+  --out-json cache/prior_report.json \
+  --out-md cache/prior_report.md \
+  --run-name synthetic_prior_most_frequent \
+  --split synthetic-smoke
+```
+
+Implementation notes:
+
+- The command uses no neural signal and warns with `prior_baseline_no_neural_signal`.
+- It supports `most-frequent`, `frequency-sample`, and `uniform-random` strategies.
+- It reads eval targets from text rows or cache labels.
+- It can fit priors from separate train targets or train-cache labels.
+- If no train source is provided, it fits on eval labels and warns with
+  `prior_fit_on_eval_targets_for_smoke_only`.
+- Reports include a `baseline` metadata block in JSON and Markdown.
+
+Closeout verification:
+
+```bash
+python -m unittest tests.test_prior_baseline tests.test_cli_prior_baseline tests.test_report
+python -m unittest discover -s tests
+neurodecode prior-baseline --help
+neurodecode make-synthetic-shard --out cache/loop6_synthetic_tiny.npz --samples 32 --channels 4 --times 12 --classes 8
+neurodecode prior-baseline --cache cache/loop6_synthetic_tiny.npz --out-predictions cache/loop6_prior_predictions.txt --out-json cache/loop6_prior_report.json --out-md cache/loop6_prior_report.md --run-name loop6_prior_most_frequent --split synthetic-smoke
+```
+
+Observed result:
+
+```text
+Ran 15 tests
+OK
+
+Ran 55 tests
+OK
+
+Prior-only smoke report wrote predictions, JSON, and Markdown.
+exact_match_rate=0.1875
+corpus_cer=0.8125
+corpus_wer=0.8125
+```
+
+Next 20-loop recommendation: Loop 7, Template / Nearest-Centroid Baseline.
+Train a tiny transparent classifier on cache windows and write the same report
+format so neural-window scores can be compared against the prior-only floor.

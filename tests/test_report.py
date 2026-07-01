@@ -70,6 +70,24 @@ class ReportTests(unittest.TestCase):
 
         self.assertIn("A\\|B", markdown)
 
+    def test_render_report_markdown_includes_baseline_metadata(self):
+        report = build_text_report(targets=["A", "B"], predictions=["A", "A"])
+        report["baseline"] = {
+            "kind": "prior-only",
+            "strategy": "most-frequent",
+            "n_train_rows": 3,
+            "n_eval_rows": 2,
+            "vocab_size": 2,
+            "top_target": "A",
+            "top_count": 2,
+        }
+
+        markdown = render_report_markdown(report)
+
+        self.assertIn("## Baseline", markdown)
+        self.assertIn("most-frequent", markdown)
+        self.assertIn("No neural signal", markdown)
+
 
 if __name__ == "__main__":
     unittest.main()

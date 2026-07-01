@@ -110,6 +110,7 @@ if (Test-Path $lockPath) {
 | 3 | Done | `docs/LOOP_03_SAFE_TINY_SHARD_SELECTOR.md` | Added capped selection and dry-run download planning so the user sees exact files before execution. |
 | 4 | Done | `docs/LOOP_04_B2Q_MINI_CACHE_V0.md` | Made `.npz` cache schema v0 the stable tiny-cache interface. |
 | 5 | Done | `docs/LOOP_05_METRICS_ERROR_REPORT_V1.md` | Closed on 2026-07-01 with report command verification, synthetic JSON/Markdown smoke output, Markdown tracker updates, workbook tracker updates, and closeout docs. |
+| 6 | Done | `docs/LOOP_06_LM_PRIOR_BASELINE.md` | Closed on 2026-07-01 with a no-brain prior baseline, report integration, tests, synthetic smoke output, and tracker updates. |
 
 ## Loop 5 closeout state
 
@@ -180,11 +181,14 @@ The useful story is not "we built a decoder in one leap." The useful story is:
 - A report artifact is the bridge between research code and engineering
   repeatability.
 - Identity smoke tests are valuable when they are named honestly.
+- Prior-only baselines are valuable when they are visibly no-brain and fit on
+  separate train labels for real experiments.
 - Managed enterprise environments can block network, workbook, or export paths;
   the project should keep progressing through local commits and explicit
   handoffs rather than pretending those constraints do not exist.
 
 ## Next recommended action
 
-Proceed to Loop 6. Loop 6 should add an intentionally no-brain LM-only/prior-only
-baseline so every future neural score has a fair comparator.
+Proceed to Loop 7. Loop 7 should add a tiny transparent template or
+nearest-centroid classifier over cache windows and make its report directly
+comparable to the prior-only baseline.

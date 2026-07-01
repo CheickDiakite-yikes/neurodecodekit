@@ -222,6 +222,24 @@ def render_report_markdown(report: dict[str, Any]) -> str:
             ]
         )
 
+    baseline = report.get("baseline")
+    if baseline:
+        lines.extend(
+            [
+                "",
+                "## Baseline",
+                "",
+                f"- Kind: `{_md_inline(str(baseline.get('kind', 'unknown')))}`",
+                f"- Strategy: `{_md_inline(str(baseline.get('strategy', 'unknown')))}`",
+                f"- No neural signal: `{'yes' if baseline.get('kind') == 'prior-only' else 'unknown'}`",
+                f"- Train rows: `{_format_metric(baseline.get('n_train_rows'))}`",
+                f"- Eval rows: `{_format_metric(baseline.get('n_eval_rows'))}`",
+                f"- Vocabulary size: `{_format_metric(baseline.get('vocab_size'))}`",
+                f"- Top target: `{_md_inline(str(baseline.get('top_target', '')))}`",
+                f"- Top count: `{_format_metric(baseline.get('top_count'))}`",
+            ]
+        )
+
     warnings = report.get("warnings") or []
     if warnings:
         lines.extend(["", "## Warnings", ""])

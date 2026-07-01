@@ -79,3 +79,14 @@ common way to compare CER, WER, keyboard-distance errors, examples, runtime, and
 storage context without requiring a notebook.
 
 Evidence: `docs/LOOP_05_METRICS_ERROR_REPORT_V1.md`.
+
+## 0011 - Require a no-brain prior comparator before neural models
+
+Decision: add `neurodecode prior-baseline` as the first real comparator before
+template classifiers or neural networks.
+
+Why: label/text priors can create deceptively good decoding results. Every
+future neural-window model should be compared against a baseline that uses no
+brain signal at all.
+
+Evidence: `docs/LOOP_06_LM_PRIOR_BASELINE.md`.

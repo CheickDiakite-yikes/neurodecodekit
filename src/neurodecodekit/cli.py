@@ -86,6 +86,79 @@ def _cmd_report(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_prior_baseline(args: argparse.Namespace) -> int:
+    from neurodecodekit.evaluation.report import (
+        build_text_report,
+        labels_to_text_rows,
+        read_text_rows,
+        write_report_json,
+        write_report_markdown,
+    )
+    from neurodecodekit.models.prior_baseline import run_prior_baseline
+
+    start = time.perf_counter()
+    if args.train_targets and args.train_cache:
+        raise ValueError("use only one of --train-targets or --train-cache.")
+
+    cache_summary = None
+    eval_targets: list[str] | None = None
+    if args.cache:
+        from neurodecodekit.cache.npz_cache import load_npz_cache
+
+        cache = load_npz_cache(args.cache)
+        cache_summary = cache.summary.to_dict()
+        if not args.targets:
+            eval_targets = labels_to_text_rows(cache.labels)
+
+    if args.targets:
+        eval_targets = read_text_rows(args.targets)
+    if eval_targets is None:
+        raise ValueError("--targets is required unless --cache supplies labels.")
+
+    train_targets = None
+    if args.train_targets:
+        train_targets = read_text_rows(args.train_targets)
+    elif args.train_cache:
+        from neurodecodekit.cache.npz_cache import load_npz_cache
+
+        train_targets = labels_to_text_rows(load_npz_cache(args.train_cache).labels)
+
+    baseline = run_prior_baseline(
+        eval_targets=eval_targets,
+        train_targets=train_targets,
+        strategy=args.strategy,
+        seed=args.seed,
+    )
+
+    if args.out_predictions:
+        _write_text_rows(args.out_predictions, baseline.predictions)
+
+    report = build_text_report(
+        targets=eval_targets,
+        predictions=baseline.predictions,
+        cache_summary=cache_summary,
+        run_name=args.run_name or f"prior_baseline_{args.strategy}",
+        split=args.split,
+        max_examples=args.max_examples,
+        warnings=baseline.warnings,
+    )
+    report["run"]["runtime_sec"] = round(time.perf_counter() - start, 6)
+    report["baseline"] = baseline.metadata()
+
+    if args.out_json:
+        write_report_json(report, args.out_json)
+    if args.out_md:
+        write_report_markdown(report, args.out_md)
+    print(json.dumps(report, indent=2, sort_keys=True))
+    if args.out_predictions:
+        print(f"Wrote prior predictions to {args.out_predictions}")
+    if args.out_json:
+        print(f"Wrote report JSON to {args.out_json}")
+    if args.out_md:
+        print(f"Wrote report Markdown to {args.out_md}")
+    return 0
+
+
 def _cmd_manifest_from_paths(args: argparse.Namespace) -> int:
     paths = Path(args.paths).read_text(encoding="utf-8").splitlines()
     records = build_manifest_from_paths(paths, repo_id=args.repo_id)
@@ -184,6 +257,12 @@ def _format_bytes(n_bytes: int) -> str:
                 return f"{int(size)} {unit}"
             return f"{size:.1f} {unit}"
         size /= 1024
+
+
+def _write_text_rows(path: str | Path, rows: list[str]) -> None:
+    output = Path(path)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text("\n".join(str(row) for row in rows) + "\n", encoding="utf-8")
 
 
 def _cmd_select_tiny(args: argparse.Namespace) -> int:
@@ -310,6 +389,26 @@ def build_parser() -> argparse.ArgumentParser:
         help="Use targets as predictions for plumbing tests. This is not a model result.",
     )
     p.set_defaults(func=_cmd_report)
+
+    p = sub.add_parser("prior-baseline", help="Run a no-brain label/text prior baseline.")
+    p.add_argument("--targets", default=None, help="Eval targets, one row per example.")
+    p.add_argument("--cache", default=None, help="Optional B2Q-mini NPZ cache; labels become targets if --targets is absent.")
+    p.add_argument("--train-targets", default=None, help="Optional train targets used to fit the prior.")
+    p.add_argument("--train-cache", default=None, help="Optional train cache whose labels fit the prior.")
+    p.add_argument(
+        "--strategy",
+        default="most-frequent",
+        choices=["most-frequent", "frequency-sample", "uniform-random"],
+        help="No-brain prediction strategy. Default: most-frequent.",
+    )
+    p.add_argument("--seed", type=int, default=7, help="Seed for sampling strategies. Default: 7.")
+    p.add_argument("--out-predictions", default=None, help="Optional one-prediction-per-line output path.")
+    p.add_argument("--out-json", default=None, help="Optional output JSON report path.")
+    p.add_argument("--out-md", default=None, help="Optional output Markdown report path.")
+    p.add_argument("--run-name", default=None, help="Human-readable run name.")
+    p.add_argument("--split", default=None, help="Split/protocol label, e.g. synthetic-smoke or subject.")
+    p.add_argument("--max-examples", type=int, default=10, help="Maximum examples to include. Default: 10.")
+    p.set_defaults(func=_cmd_prior_baseline)
 
     p = sub.add_parser("manifest-from-paths", help="Build JSONL manifest from a newline path list.")
     p.add_argument("--paths", required=True, help="Text file containing one repo path per line.")

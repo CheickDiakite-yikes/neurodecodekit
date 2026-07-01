@@ -218,6 +218,23 @@ neurodecode report \
 warning. It is useful for proving report plumbing, but it is not a decoder or a
 baseline result.
 
+Run the no-brain prior-only baseline:
+
+```bash
+neurodecode prior-baseline \
+  --cache cache/synthetic_tiny.npz \
+  --out-predictions cache/prior_predictions.txt \
+  --out-json cache/prior_report.json \
+  --out-md cache/prior_report.md \
+  --run-name synthetic_prior_most_frequent \
+  --split synthetic-smoke
+```
+
+`prior-baseline` deliberately ignores neural windows. It predicts from target
+priors only and writes the same report format, with explicit warnings that no
+neural signal was used. For real experiments, pass `--train-targets` or
+`--train-cache` so the prior is fit on training labels rather than eval labels.
+
 Loop 5 closeout checks:
 
 ```bash
@@ -245,8 +262,9 @@ Current limitations:
   log schema is inspected from a real selected shard.
 - Labels may be blank if the log file does not expose a clear per-event target
   field.
-- No filtering, artifact rejection, subject normalization, or baseline model is
-  applied yet.
+- No filtering, artifact rejection, or subject normalization is applied yet.
+- The first baseline is prior-only; the first neural-window classifier begins in
+  Loop 7.
 - `.npz` is the first cache format; Zarr is still a later step for larger runs.
 
 ## Why this wedge matters
