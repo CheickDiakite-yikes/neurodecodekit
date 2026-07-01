@@ -180,11 +180,8 @@ experiment reports; the `.npz` remains the source of truth.
 
 ## Metrics and reports
 
-Loop 5 is currently a pending handoff. The `neurodecode report` implementation
-and tests are present in this branch, but the loop is not formally closed yet
-because the local workbook/tracker update was interrupted by an admin/tooling
-block on this machine. The next agent should rerun the verification commands
-below, update the Excel tracker if available, and then mark Loop 5 done.
+Loop 5 is closed. The `neurodecode report` implementation and tests are present,
+and the closeout verification passed on 2026-07-01.
 
 Write a report from one-target-per-line text files:
 
@@ -221,12 +218,25 @@ neurodecode report \
 warning. It is useful for proving report plumbing, but it is not a decoder or a
 baseline result.
 
-Loop 5 handoff checks for the next agent:
+Loop 5 closeout checks:
 
 ```bash
 python -m unittest tests.test_report tests.test_cli_report
 python -m unittest discover -s tests
 neurodecode report --help
+```
+
+Closeout smoke artifact:
+
+```bash
+neurodecode make-synthetic-shard --out cache/loop5_synthetic_tiny.npz --samples 32 --channels 4 --times 12
+neurodecode report \
+  --cache cache/loop5_synthetic_tiny.npz \
+  --identity-smoke \
+  --out-json cache/loop5_synthetic_report.json \
+  --out-md cache/loop5_synthetic_report.md \
+  --run-name loop5_synthetic_identity_smoke \
+  --split synthetic-smoke
 ```
 
 Current limitations:

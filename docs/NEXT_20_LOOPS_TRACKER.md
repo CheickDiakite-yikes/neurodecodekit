@@ -14,9 +14,9 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
 - Loop 2: Done for local manifest parsing and summary logic. See `docs/LOOP_02_SPANISHBCBL_MANIFEST_V1.md`.
 - Loop 3: Done for capped tiny-shard selection and dry-run download planning. See `docs/LOOP_03_SAFE_TINY_SHARD_SELECTOR.md`.
 - Loop 4: Done for NPZ cache schema v0 loading, validation, and metadata sidecars. See `docs/LOOP_04_B2Q_MINI_CACHE_V0.md`.
-- Loop 5: Pending handoff. Report code/tests are present, but Excel tracker/final closeout were interrupted. See `docs/LOOP_05_METRICS_ERROR_REPORT_V1.md`.
+- Loop 5: Done for metrics/error report v1. See `docs/LOOP_05_METRICS_ERROR_REPORT_V1.md`.
 - Current blocker: no real SpanishBCBL `.fif` / `.mat` pair or full remote file list is present locally.
-- Next loop: Loop 5 - Metrics + Error Report v1 closeout.
+- Next loop: Loop 6 - LM-only / Prior-only Baseline.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |

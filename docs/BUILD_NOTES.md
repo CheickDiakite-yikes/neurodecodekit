@@ -55,16 +55,16 @@ Implication:
 ### Workbook/tracker tooling
 
 The attempt to close Loop 5 by updating the Excel tracker was interrupted by an
-admin/tooling block. The safest current path is to keep Markdown tracker files
-authoritative for the handoff and update the workbook from a machine/tool path
-that is approved.
+admin/tooling block during the earlier WIP handoff. On 2026-07-01, the tracker
+workbook was successfully updated through the bundled spreadsheet runtime in an
+ignored `.codex_work/loop5_tracker_closeout/` work area.
 
 Implication:
 
-- `docs/NEXT_20_LOOPS_TRACKER.md` and the root tracker copy should show the
-  current state plainly.
-- `NEURODECODEKIT_20_LOOP_TRACKER.xlsx` remains a closeout item for the next
-  approved environment.
+- `docs/NEXT_20_LOOPS_TRACKER.md`, the root tracker copy, and both
+  `NEURODECODEKIT_20_LOOP_TRACKER.xlsx` copies should show Loop 5 as done.
+- Prefer the bundled spreadsheet runtime for future workbook edits when it is
+  available and keep helper scripts inside `.codex_work/`.
 - `.codex_work/` is ignored so transient local helper artifacts do not enter
   commits.
 
@@ -109,11 +109,11 @@ if (Test-Path $lockPath) {
 | 2 | Done | `docs/LOOP_02_SPANISHBCBL_MANIFEST_V1.md` | Added manifest parsing and uncertainty reporting before any large download planning. |
 | 3 | Done | `docs/LOOP_03_SAFE_TINY_SHARD_SELECTOR.md` | Added capped selection and dry-run download planning so the user sees exact files before execution. |
 | 4 | Done | `docs/LOOP_04_B2Q_MINI_CACHE_V0.md` | Made `.npz` cache schema v0 the stable tiny-cache interface. |
-| 5 | Pending handoff | `docs/LOOP_05_METRICS_ERROR_REPORT_V1.md` | Report command, JSON/Markdown artifacts, and tests are implemented. Final tracker/workbook closeout was interrupted by workstation controls. |
+| 5 | Done | `docs/LOOP_05_METRICS_ERROR_REPORT_V1.md` | Closed on 2026-07-01 with report command verification, synthetic JSON/Markdown smoke output, Markdown tracker updates, workbook tracker updates, and closeout docs. |
 
-## Current Loop 5 WIP state
+## Loop 5 closeout state
 
-Local commit:
+Original WIP commit:
 
 ```text
 fb3ec1a Add Loop 5 report WIP handoff
@@ -128,9 +128,9 @@ What exists:
 - CER, WER, exact-match, keyboard-distance, corpus edit counts, examples,
   worst examples, runtime, warnings, and optional cache metadata
 - focused report tests and CLI report tests
-- docs marking Loop 5 as pending rather than done
+- docs marking Loop 5 as done
 
-Verification already observed before interruption:
+Final closeout verification on 2026-07-01:
 
 ```text
 python -m unittest tests.test_report tests.test_cli_report
@@ -142,15 +142,31 @@ Ran 45 tests
 OK
 ```
 
-What remains before closing Loop 5:
+```text
+neurodecode report --help
+OK
+```
 
-1. Rerun focused report tests.
-2. Rerun the full test suite.
-3. Run `neurodecode report --help`.
-4. Run a synthetic report smoke and inspect JSON/Markdown outputs.
-5. Update the Excel tracker from an approved environment if required.
-6. Change Loop 5 from pending to done in the Markdown trackers and decision log.
-7. Commit the closeout.
+Synthetic smoke output:
+
+```text
+cache/loop5_synthetic_tiny.npz
+cache/loop5_synthetic_report.json
+cache/loop5_synthetic_report.md
+```
+
+The cache/report files remain ignored local artifacts, not committed data.
+
+Tracker closeout:
+
+- `docs/NEXT_20_LOOPS_TRACKER.md` updated to Loop 5 done and Loop 6 next.
+- Root `NEXT_20_LOOPS_TRACKER.md` updated to the same state.
+- `docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx` updated:
+  - Dashboard Done = 5.
+  - Foundation Done = 5.
+  - Loop 5 status = Done.
+  - Decision Log includes the Loop 5 proceed row.
+- Root `NEURODECODEKIT_20_LOOP_TRACKER.xlsx` updated with the same workbook.
 
 ## Case-study notes
 
@@ -170,6 +186,5 @@ The useful story is not "we built a decoder in one leap." The useful story is:
 
 ## Next recommended action
 
-Complete Loop 5 closeout before starting Loop 6. Loop 6 should add an
-intentionally no-brain LM-only/prior-only baseline so every future neural score
-has a fair comparator.
+Proceed to Loop 6. Loop 6 should add an intentionally no-brain LM-only/prior-only
+baseline so every future neural score has a fair comparator.

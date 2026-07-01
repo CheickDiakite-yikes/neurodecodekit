@@ -131,8 +131,9 @@ Current workstation constraints to preserve:
 
 - Do not retry GitHub push/export from this Bain-managed workstation unless the
   user explicitly re-approves and the repository privacy/trust status is clear.
-- The Loop 5 workbook/tracker closeout path was interrupted by an admin/tooling
-  block, so Markdown trackers are the safest current handoff source.
+- An earlier Loop 5 workbook/tracker closeout path was interrupted by an
+  admin/tooling block. The final closeout succeeded with the bundled
+  spreadsheet runtime in `.codex_work/loop5_tracker_closeout/`.
 - Keep tests and synthetic smoke paths independent of real SpanishBCBL data.
 - Keep all real downloads explicit, capped, and dry-run first.
 - Keep `.codex_work/` and any local helper artifacts out of commits.
@@ -211,12 +212,10 @@ Implementation notes:
 - Real extracted caches record source files, extraction params, parser warnings, and preprocessing transformations.
 - `load-cache` prints a compact summary and can write a JSON sidecar for reports.
 
-## Loop 5 status update - pending handoff
+## Loop 5 status update - done
 
-The metrics and error report path is implemented, but Loop 5 is not formally
-closed yet. The local attempt to update the Excel tracker was interrupted by an
-admin/tooling block on this machine. Another agent should rerun verification,
-update the tracker workbook, and only then mark Loop 5 done.
+The metrics and error report path is implemented and Loop 5 is closed as of
+2026-07-01.
 
 Implemented command:
 
@@ -249,11 +248,14 @@ Implementation notes:
 - Real predictions should be supplied as one prediction per line and compared with explicit target rows.
 - Report JSON and Markdown are both written from the same report dictionary.
 
-Local verification completed before interruption:
+Closeout verification:
 
 ```bash
 python -m unittest tests.test_report tests.test_cli_report
 python -m unittest discover -s tests
+neurodecode report --help
+neurodecode make-synthetic-shard --out cache/loop5_synthetic_tiny.npz --samples 32 --channels 4 --times 12
+neurodecode report --cache cache/loop5_synthetic_tiny.npz --identity-smoke --out-json cache/loop5_synthetic_report.json --out-md cache/loop5_synthetic_report.md --run-name loop5_synthetic_identity_smoke --split synthetic-smoke
 ```
 
 Observed result:
@@ -264,18 +266,10 @@ OK
 
 Ran 45 tests
 OK
+
+Report JSON and Markdown were written with explicit identity-smoke warnings.
 ```
 
-Required next-agent closeout:
-
-1. Pull latest `main`.
-2. Rerun the two test commands above.
-3. Run `neurodecode report --help`.
-4. Run a synthetic report smoke and inspect the JSON/Markdown outputs.
-5. Update `docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx` and the root tracker copy if available.
-6. Change Loop 5 from pending to done in `docs/LOOP_05_METRICS_ERROR_REPORT_V1.md` and `docs/NEXT_20_LOOPS_TRACKER.md`.
-7. Commit the final closeout, then proceed to Loop 6.
-
-Next 20-loop recommendation after closeout: Loop 6, LM-only / Prior-only
-Baseline. Build a deliberately no-brain baseline and make its report artifact
-comparable to future neural baselines.
+Next 20-loop recommendation: Loop 6, LM-only / Prior-only Baseline. Build a
+deliberately no-brain baseline and make its report artifact comparable to
+future neural baselines.
