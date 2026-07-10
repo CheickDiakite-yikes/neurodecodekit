@@ -13,7 +13,10 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 The parallel Real-World Practice Track starts at
 `docs/REAL_WORLD_PRACTICE_TRACK_RESEARCH.md`. RW0 is a completed research gate;
 RW1 is now closed as a synthetic-fixture metadata-only interface gate. RW2 is
-available for preregistration only; no signal reader or quality metric is yet
+preregistered at commit `eacb231`. Its next authorized work order is a
+synthetic-fixture-only bounded signal-read and descriptive quality-report
+implementation under `registries/signal_quality_contract.v0.json`. No real
+recording, consumed cache, download, learned model, or automatic cleaning is
 authorized. The proposed fresh S20 EEG block is **not authorized** for download
 or signal access. Its exact four-file, 96,090,264-byte dry run is in
 `docs/FRESH_EEG_BENCHMARK_S20_APPROVAL_PACKET.md`.
@@ -87,6 +90,14 @@ metadata. The 532-byte synthetic roundtrip produced 11,545 bytes of validated
 JSON/Markdown/audit output in 0.001659 seconds with 21,643,264-byte peak RSS
 and zero binary/raw/cache/target/model/training/network reads. This is file and
 report interface proof only. See `docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md`.
+
+RW2's frozen protocol covers explicit optional MNE adapters for synthetic
+BrainVision, EDF/EDF+, BDF, EEGLAB external-FDT, FIF, and BIDS fixtures;
+three-window/32-MiB signal materialization, one-thread, 30-second, 1-GiB RSS,
+4-MiB per-run output, and 16-MiB fixture-set caps; strict privacy redaction;
+descriptive time-domain and Welch PSD summaries; and no source mutation or
+automatic bad-channel action. It has not yet been implemented. See
+`docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md`.
 
 The current registries keep prompted typing, imagined speech, natural reading,
 P300, SSVEP, and motor imagery as separate evidence cohorts. They also keep

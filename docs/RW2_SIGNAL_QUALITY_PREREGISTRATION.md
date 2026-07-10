@@ -6,7 +6,13 @@ Status: **Frozen before implementation**
 
 Contract: `registries/signal_quality_contract.v0.json`
 
+Registration commit: `eacb231`
+
 Proof posture: primary-source-informed protocol; no signal result exists yet
+
+Implementation became authorized only after commit `eacb231` was pushed. That
+authorization is limited to deterministic synthetic fixtures and the exact
+contract below; it does not authorize a real recording, S20, or consumed data.
 
 ## Objective
 

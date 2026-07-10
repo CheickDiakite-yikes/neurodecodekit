@@ -1432,3 +1432,52 @@ pytest passes with the same skips/subtests.
 Decision: close RW1. RW2 may be preregistered but no signal reader or quality
 metric is authorized. S20 remains blocked and no scientific decoding claim is
 added.
+
+## 2026-07-10 - RW2 primary-source research and preregistration
+
+Researched the active optional stack and upstream behavior before writing any
+RW2 reader. The local environment has MNE 1.12.1, NumPy 2.5.0, and SciPy
+1.18.0; MNE-BIDS and PyEDFlib are not installed, and the package base dependency
+list remains empty. Primary MNE/MNE-BIDS/BIDS documentation, maintained reader
+source, COBIDAS, PREP, Autoreject, and the public Brain2Qwerty v2 paper were
+reviewed. The resulting source ledger is in
+`docs/RW2_PRIMARY_SOURCE_RESEARCH.md`.
+
+The review changed the protocol in four important ways. BIDS dispatch uses the
+RW1 resolver and direct format readers because `read_raw_bids` can import
+events and bad-channel sidecars. EEGLAB is restricted to continuous external
+`.fdt` fixtures because an embedded `.set` matrix can be materialized despite
+`preload=False`. EDF/BDF reaches level 2 only when one source sampling rate is
+proven because mixed-rate lazy slices can involve upsampling. All readers use
+explicit arguments so channel-role inference, exclusions, split handling, and
+MaxShield behavior are not hidden defaults.
+
+Commit `eacb231` freezes `registries/signal_quality_contract.v0.json` and
+`docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md` before implementation. The
+contract limits work to six generated format families, at most 512 channels,
+three deterministic windows, 4,194,304 channel-sample values, 32 MiB of
+materialized float64 signal, one thread, 30 seconds, 1 GiB peak RSS, 4 MiB per
+run, and 16 MiB for the full fixture/report set. It requires deterministic
+descriptive amplitude/structure/median-Welch summaries, privacy redaction,
+source no-mutation checks, exact unavailable states, strict replay/tamper/cap
+tests, and no automatic cleaning.
+
+Access accounting for this preregistration: zero raw or signal-array reads,
+zero real-cache reads, zero target/label reads, zero model or training runs,
+zero downloads, zero network acquisition calls, and zero generated signal
+artifacts. The machine-contract invariant check and `git diff --check` passed
+before the registration commit was pushed. This is protocol evidence only; no
+format has yet passed a synthetic RW2 read and no real signal-quality or
+decoding claim was added.
+
+Closeout verification retained the 249-test unittest baseline with 3 skips
+(11.714 seconds; 491,683,840-byte maximum RSS) and the 246-test pytest baseline
+with 3 skips plus 25 passing subtests (12.51 seconds; 489,914,368-byte maximum
+RSS). Seven focused NeuroToken tests and all 11 RW1 tests passed. Ruff,
+compileall, root/RW1 CLI help, the corrected machine-contract invariant query,
+workbook formula inspection, all-eight-sheet visual inspection, exact
+tracked/delivered workbook hashing, and `git diff --check` passed. The updated
+workbook is 54,836 bytes with SHA-256
+`c27d80d4831acc91795b2cbf10d7e00400ff393f58bfd029a7653e0e328dc669`.
+Generated inspection output remains ignored, and the pre-existing untracked
+tracker inspection NDJSON was not modified or staged.

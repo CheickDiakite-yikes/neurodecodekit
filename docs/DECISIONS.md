@@ -914,3 +914,46 @@ real-time, hardware, arbitrary-thought, or clinical claim.
 
 Evidence: `docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md`, implementation commit
 `77dcea5`, and ignored local artifacts under `outputs/rw1-metadata-intake/`.
+
+## 0041 - Freeze RW2 bounded signal-quality contract before implementation
+
+Decision: freeze RW2 as a versioned, machine-readable synthetic-fixture
+protocol at commit `eacb231`, then authorize only its exact implementation.
+The first implementation may use optional MNE readers for generated
+BrainVision, EDF/EDF+, BDF, EEGLAB external-FDT, FIF, and BIDS fixtures. It may
+not open a real recording, consumed cache, S20, or MNE-BIDS, and it may not
+filter, resample, rereference, clean, interpolate, delete channels, or persist
+waveforms.
+
+Why: primary-source review exposed format-specific behavior that a generic
+reader contract would hide. MNE-BIDS imports event and channel sidecars into
+annotations and bad-channel state; EEGLAB embedded `.set` arrays can defeat
+lazy-read expectations; EDF/BDF mixed source rates can trigger upsampling; and
+reader defaults can infer channel roles. RW2 therefore binds named readers and
+arguments, routes BIDS through the RW1 resolver plus a direct format reader,
+refuses embedded or epoched EEGLAB, and limits EDF/BDF level 2 to a proven
+single source rate.
+
+Frozen measurement boundary: at most 512 channels and three deterministic
+windows may be read, with 4,194,304 channel-sample values and 32 MiB of
+materialized float64 signal. Execution uses one worker/thread, a 30-second
+runtime cap, 1-GiB peak-RSS cap, 4-MiB per-run output cap, and 16-MiB complete
+synthetic fixture/report cap. Quality output is descriptive: robust amplitude,
+finite/flat/duplicate structure, and median Welch PSD summaries with declared
+settings. Generic clipping, excessive-amplitude, and line-noise pass/fail
+thresholds remain unavailable without a modality/device profile. Warnings do
+not mutate the source or trigger automatic cleaning.
+
+Privacy and claim boundary: artifacts omit absolute paths, participant data,
+dates, device serials, annotation/event descriptions and exact timestamps,
+exact geometry, and waveform values. Preregistration accessed zero raw arrays,
+real caches, targets, models, training runs, or downloads and generated no
+signal artifact. A future passing synthetic gate would establish bounded
+reader/report mechanics only, not real signal quality, task compatibility,
+decoding, neural advantage, end-to-end latency, live hardware, arbitrary
+thought reading, or clinical utility.
+
+Evidence: `docs/RW2_PRIMARY_SOURCE_RESEARCH.md`,
+`docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md`,
+`registries/signal_quality_contract.v0.json`, and registration commit
+`eacb231`.

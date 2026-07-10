@@ -44,6 +44,11 @@ decision.
   532-byte synthetic roundtrip writes 11,545 bytes with zero binary, raw,
   cache, target, model, training, or network access. See
   `docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md`.
+- Real-World Practice Track RW2: Preregistered before implementation at commit
+  `eacb231`. The strict machine contract freezes six synthetic format adapters,
+  bounded sample/array/runtime/RSS/output rules, descriptive metrics, privacy,
+  no-mutation behavior, exact refusals, and kill/park/proceed gates. No signal
+  result exists yet. See `docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md`.
 
 ## Loops 21-30
 
@@ -71,7 +76,7 @@ contracts, but each predictive task remains in its own evidence cohort.
 |---|---|---|---|---|
 | RW0 | Dataset/device research | Which public cohorts, devices, formats, and transports are credible, and which claims do they support? | Primary-source research, versioned registries, BYO spec, exact fresh-data approval packet. | Closed: 8 datasets, 13 devices, and one no-download S20 proposal; zero signal/consumed/model/target access. |
 | RW1 | Local metadata intake | Can a user safely identify a local recording or BIDS root without importing MNE or reading binary signal samples? | Level-0 scanner, companion/path/cap validation, JSON/Markdown report, CLI. | Closed: 11 focused tests; 532-byte fixture; 11,545 output bytes; deterministic core; zero signal/target/network access. |
-| RW2 | Signal-quality contract | Can optional MNE adapters read bounded samples and report units, reference, channels, geometry, events, PSD, and quality warnings reproducibly? | Lazy readers and frozen quality metrics for BrainVision, EDF/BDF, EEGLAB, FIF, and BIDS. | No automatic channel deletion; one-thread/cap enforcement; every unavailable field remains visible. |
+| RW2 | Signal-quality contract | Can optional MNE adapters read bounded samples and report units, reference, channels, geometry, events, PSD, and quality warnings reproducibly? | Lazy readers and frozen quality metrics for BrainVision, EDF/BDF, EEGLAB, FIF, and BIDS. | Protocol frozen at `eacb231`; implementation is synthetic-only, with no automatic cleaning, one-thread/cap enforcement, strict redaction, and every unavailable field visible. |
 | RW3 | Offline replay/live-source equivalence | Can a recording replay through the exact chunk contract intended for a live board? | Versioned source chunks, BrainFlow playback/synthetic adapters, LSL timestamp audit. | Payload, ordering, dropped-packet, clock, state, and chunk-schedule tolerances frozen before hardware. |
 | RW4 | First fresh public EEG benchmark | Does one independently approved task-matched EEG block show event-label signal above prior and shuffle controls? | One-time S20 packet or a formally revised alternate, extraction, strict split, aggregate report. | Blocked on explicit approval; exactly four files/96,090,264 bytes; no CER/WER or test reuse. |
 | RW5 | Board-neutral acquisition | Can one BrainFlow or LSL EEG board pass replay equivalence and privacy checks? | Device descriptor, consent/locality audit, recorded/live comparison. | One board only; raw API and timing measured; no portable decoding claim from connectivity alone. |
@@ -80,8 +85,9 @@ contracts, but each predictive task remains in its own evidence cohort.
 | RW8 | Local BYO Neurodata workbench | Can users inspect, replay, qualify, and report recordings without cloud upload? | Operational local UI with five entry actions and compatibility levels 0-6. | Unknown files remain inspectable but non-decodable; every result carries proof posture. |
 | RW9 | Phone/wearable deployment | Which validated local capabilities fit a phone or wearable envelope? | Measured packaging, privacy, battery, latency, and offline inference gate. | Requires a qualified device/task/model first; no deployment theater or clinical claim. |
 
-`RW1` is closed. `RW2` is available for a separate quality-metric
-preregistration only; implementation remains unauthorized. `RW4` remains
+`RW1` is closed. `RW2` preregistration is frozen and its synthetic-only
+implementation is the next practice-track work order. A passing synthetic gate
+would still require separate approval before any real read. `RW4` remains
 blocked until the user explicitly approves the exact acquisition packet. Loop
 24 can proceed independently after its own preregistration; neither track may
 use consumed evidence from the other.

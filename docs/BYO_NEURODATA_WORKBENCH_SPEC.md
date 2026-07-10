@@ -225,3 +225,9 @@ RW1 is closed with deterministic JSON/Markdown, a measured audit sidecar, 11
 focused tests, and one 532-byte synthetic roundtrip. See
 `docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md`. Every compatibility level above 0
 still requires a separate preregistration and implementation gate.
+
+RW2's level-1/2 signal-quality protocol is now frozen at commit `eacb231`; see
+`docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md` and
+`registries/signal_quality_contract.v0.json`. The next gate is implementation
+against generated fixtures only. It does not authorize any real signal read,
+automatic cleaning, task compatibility, benchmark, or live-source claim.

@@ -26,7 +26,10 @@
 > dependency-free level-0 metadata gate for BrainVision, EDF/EDF+, BDF,
 > EEGLAB, FIF, and BIDS synthetic fixtures. Its 532-byte roundtrip writes
 > 11,545 bytes with zero binary/raw/cache/target/model/training/network reads.
-> No download or signal read is authorized; RW2 is preregistration-only.
+> RW2 is now preregistered at `eacb231`; its next authorized gate is the exact
+> synthetic-fixture-only implementation. No real recording, consumed cache,
+> S20 download/read, MNE-BIDS execution, automatic cleaning, model, or training
+> is authorized.
 > There is no demonstrated neural advantage, unseen-person, useful EEG,
 > real-neural sequence decoder, end-to-end real-time, portable-hardware,
 > arbitrary-thought, or clinical claim. See
@@ -112,6 +115,10 @@ This repo is a starter scaffold with working pure-Python components:
 - deterministic local-intake JSON/Markdown, measured runtime/RSS audit
   sidecar, source/config/registry/artifact hashes, strict reload/tamper checks,
   and zeroed binary/raw/cache/target/model/training/network counters
+- frozen RW2 signal-quality contract for six synthetic format adapters with
+  explicit reader arguments, bounded windows/arrays/resources, descriptive
+  time-domain and Welch PSD metrics, privacy redaction, source no-mutation, and
+  exact kill/park/proceed gates
 - JSON/Markdown metrics report command
 - CLI smoke commands
 - unit tests
@@ -124,14 +131,17 @@ negative within-session event comparison. None is a decoder success. Do not
 turn these results, a variance ranking, or a geometry proxy into unseen-person
 or population generalization.
 
-Current verification on 2026-07-10: 249 unittest tests passed with 3 skipped;
-pytest reported 246 passed, 3 skipped, and 25 subtests passed. The 11 focused
-RW1 tests, full Ruff lint, compileall, root/create/inspect CLI help, strict
-synthetic roundtrip inspection, artifact-contract checks, workbook formulas
-and all-sheet visual checks, and `git diff --check` passed. The pre-RW1
-baseline was 238 unittest and 235 pytest passes with the same skips/subtests.
+Current verification after the RW2 preregistration closeout on 2026-07-10:
+249 unittest tests passed with 3 skipped in 11.714 seconds and 491,683,840-byte
+maximum RSS; pytest reported 246 passed, 3 skipped, and 25 subtests passed in
+12.51 seconds with 489,914,368-byte maximum RSS. Seven focused NeuroToken tests
+and all 11 RW1 tests passed. Full Ruff lint, compileall, root/create/inspect CLI
+help, the RW2 machine-contract invariant, workbook formulas and all-sheet visual
+checks, and `git diff --check` passed. The pre-RW1 baseline was 238 unittest and
+235 pytest passes with the same skips/subtests; no test count regressed during
+preregistration.
 The tracked and delivered workbook hashes match at
-`4103254159df47c5dfd029df4c2ced8507c998d5b4abc494590e930fa7f64994`.
+`c27d80d4831acc91795b2cbf10d7e00400ff393f58bfd029a7653e0e328dc669`.
 
 ## The north star
 
@@ -145,10 +155,11 @@ This is not primarily a model repo. It is a **research loop repo**.
 
 ## Current Next Work
 
-1. **RW2 - preregister bounded signal-quality adapters only.** Freeze optional
-   reader behavior, sample/channel/time/byte caps, units, reference, geometry,
-   events, PSD, warnings, privacy, resources, and no-auto-deletion rules. Do
-   not implement or open a recording in the preregistration work order.
+1. **RW2 - implement the frozen synthetic signal-quality gate.** Follow
+   `registries/signal_quality_contract.v0.json` exactly: use optional imports,
+   six generated format families, strict bounded reads, privacy/no-mutation
+   validation, deterministic reports, and one-thread resource caps. Do not open
+   a real recording or expand the protocol.
 2. **Loop 24 - preregister local precision/runtime independently.** Freeze
    candidates, reference arithmetic, tolerances, fresh selection data, and
    resource rules before code. Seed 2353 cannot select anything.
@@ -167,7 +178,9 @@ are in `docs/LOOP_23_5_PREREGISTRATION.md` and
 `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`. Loop 22 evidence is in
 `docs/LOOP_22_TINY_CAUSAL_ENCODER.md`; the post-20 sequence is in
 `docs/POST_20_ROADMAP.md`; RW1 evidence is in
-`docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md`.
+`docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md`; RW2's frozen design and source review
+are in `docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md` and
+`docs/RW2_PRIMARY_SOURCE_RESEARCH.md`.
 
 ## Historical original PR plan
 
