@@ -1,38 +1,24 @@
 # Codex Handoff — NeuroDecodeKit Starter
 
-> Current handoff, 2026-07-10: Loops 1-12 and 14-20 are complete; Loop 13 is
-> parked after its measured NPZ gate. Two S21 MEG sessions support strict
+> Current handoff, 2026-07-10: Loops 1-12 and 14-22 are complete; Loops 13 and
+> 23 are parked after measured gates. Two S21 MEG sessions support strict
 > sentence-text and same-subject session protocols, but the fixed tiny CTC has
-> no reliable neural advantage and fails the cross-session comparison against
-> its prior. Synthetic adapter work proves only a stationary diagonal mechanism
-> and fails channel-mixing and temporal-drift stress. The local demo and
-> versioned leaderboard expose those limits without reopening real holdouts.
-> Loop 19 now adds one bounded real EEG bridge: a metadata-only gate pins and
-> selects a 94,842,381-byte S7 BrainVision-plus-MAT bundle; lazy extraction
-> matches all 2,534 MAT trigger codes and writes a 12,428,800-byte
-> `2197 x 61 x 25` cache. The first nearest-centroid EEG event result is clearly
-> negative at 0.91% exact key-label accuracy versus 12.27% for the train-only
-> no-signal prior. MOABB was not installed, no full EEG subtree was downloaded,
-> and EEG/MEG remain separate cohorts. Loop 20 adds a 76,646-byte synthetic
-> continuous NeuroTokenCache v0 with exact payload replay, but no learned
-> representation, decoder, or real-data result. Its post-closeout access audit
-> now verifies that only signal/provenance NPZ members are opened and all five
-> source target members remain unopened. Post-roadmap Loop 21 now proves
-> a synthetic causal frame producer across five transport schedules with zero
-> right context, exact frame/timestamp identity, bitwise schedule-invariant
-> output, and 300-byte mutable state. It runs no decoder, so text emission and
-> end-to-end latency remain unmeasured. Loop 22 now adds one preregistered
-> 1,130-parameter synthetic causal encoder. Epoch 34 was selected on validation,
-> its eight-item test was opened once, and both frozen metrics and all five
-> replay schedules passed under one-thread/resource caps. The motif task is
-> intentionally easy, its test is consumed, and it is not text or brain
-> decoding. Loop 23 is preregistered before target generation with a fresh
-> physical split, fixed no-language-model CTC semantics, partial-stability
-> metrics, and one test open; implementation has not started. There is no
-> unseen-person,
-> useful EEG, integer-only inference, real-time, portable-hardware,
-> arbitrary-thought, or clinical claim. See
-> `docs/LOOP_22_TINY_CAUSAL_ENCODER.md`.
+> no reliable neural advantage and loses its cross-session comparison to the
+> no-signal prior. One bounded S7 EEG bridge is trigger/cache validated, but its
+> nearest-centroid result is also worse than its train-only prior. Loop 20 adds
+> a target-isolated NeuroTokenCache interface; Loop 21 proves schedule-invariant
+> causal frame production; Loop 22 trains one 1,130-parameter synthetic causal
+> producer and consumes seed 2203. Loop 23 implements a language-model-free
+> greedy and width-8 prefix CTC decoder under a fresh physical split. Registered
+> validation passes at CER 0.0182 and 7/8 exact, opening seed 2303 once. Frozen
+> test CER is 0.0545 with all repeated pairs recovered, but exact accuracy is
+> only 5/8 against a 6/8 threshold. Every failure is the correct target plus one
+> false tail symbol; prefix and greedy agree. The test is consumed, the branch
+> is parked, and no post-test trimming or tuning is allowed. Next action is
+> preregistration only for a fresh target-independent blank/boundary calibration
+> gate. There is no demonstrated neural advantage, unseen-person, useful EEG,
+> passed sequence decoder, real-time, portable-hardware, arbitrary-thought, or
+> clinical claim. See `docs/LOOP_23_STREAMING_CTC_DECODER.md`.
 
 ## State of the repo
 
@@ -93,6 +79,11 @@ This repo is a starter scaffold with working pure-Python components:
   probe, train-only normalization, validation checkpointing, and safe NPZ state
 - one-time synthetic test access audit, mandatory prior/zero-signal controls,
   paired item bootstrap, and five-schedule learned-embedding replay
+- dependency-free incremental greedy and log-space prefix-beam CTC decoding,
+  exhaustive tiny-path oracles, blank/repeat tests, and bounded decoder state
+- strict synthetic symbol-stream partitions, target-only train access,
+  validation-before-test gating, partial timing/stability metrics, and
+  five-schedule frame-indexed decoder replay
 - JSON/Markdown metrics report command
 - CLI smoke commands
 - unit tests
@@ -105,11 +96,11 @@ negative within-session event comparison. None is a decoder success. Do not
 turn these results, a variance ranking, or a geometry proxy into unseen-person
 or population generalization.
 
-Current verification on 2026-07-10: 209 unittest tests passed with 3 skipped;
-pytest reported 206 passed, 3 skipped, and 25 subtests passed. Full Ruff lint,
-compileall, CLI help, artifact-contract checks, workbook formulas and all-sheet
-visual checks, and `git diff --check` passed. The tracked and delivered workbook
-hashes match at
+Current verification on 2026-07-10: 225 unittest tests passed with 3 skipped;
+pytest reported 222 passed, 3 skipped, and 25 subtests passed. Full Ruff lint,
+compileall, root and Loop 23 CLI help, artifact-contract checks, workbook
+formulas and all-sheet visual checks, and `git diff --check` passed. The tracked
+and delivered workbook hashes match at
 `bd7ba4895e3afaf54b279ff240cf3377d49693dfdaeb11527c7ef7600874836c`.
 A repository-wide formatter check was not applied as unrelated mechanical
 churn.
@@ -126,20 +117,19 @@ This is not primarily a model repo. It is a **research loop repo**.
 
 ## Current next 3 loops
 
-1. **Loop 23 - streaming CTC prefix decoder.** Implement the frozen protocol
-   with alternate seeds first: greedy/prefix blank-repeat oracle tests,
-   frame-indexed partial traces, and five-schedule replay. Only after that
-   rehearsal may the fresh registered fixture/test be generated once.
-2. **Loop 24 - local precision/runtime gate.** Compare fixed float and dynamic
-   integer candidates on the frozen synthetic model, separating storage,
-   actual execution, state, RSS, RTF, and energy proxy before any real-cache
-   conversion.
+1. **Loop 23.5 - blank/boundary calibration preregistration.** Freeze one
+   target-independent train/validation-selected blank-score rule, fresh physical
+   splits, controls, caps, and one-time access before writing code or targets.
+2. **Loop 24 - local precision/runtime gate.** Keep this blocked until a fresh
+   decoder correctness gate passes; then compare actual float/integer execution
+   without changing outputs beyond a preregistered tolerance.
 3. **Loop 25 - causal preprocessing audit.** Open source-session train rows only
    and prove that filtering, normalization, framing, and padding can replay
    without future leakage before any real validation score.
 
-Loop 23's frozen protocol and exact next gate:
-`docs/LOOP_23_PREREGISTRATION.md`. Loop 22 evidence is in
+Loop 23's preregistration and parked result are in
+`docs/LOOP_23_PREREGISTRATION.md` and
+`docs/LOOP_23_STREAMING_CTC_DECODER.md`. Loop 22 evidence is in
 `docs/LOOP_22_TINY_CAUSAL_ENCODER.md`; the post-20 sequence is in
 `docs/POST_20_ROADMAP.md`.
 

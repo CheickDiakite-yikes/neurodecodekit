@@ -1183,3 +1183,70 @@ Frozen design:
 Implementation must begin with alternate seeds. The registered target/test
 cannot be created until decoder semantics, access tests, full-suite checks, and
 a full-size nonregistered rehearsal pass.
+
+## Post-roadmap Loop 23 - streaming CTC decoder parked
+
+Completed on 2026-07-10 from the preregistered `24ef1a9` protocol. Decoder,
+fixture, metrics, access-gate, CLI, and tests were committed as `08b23d7` and
+pushed before the registered seed-2303 partition existed.
+
+Implemented:
+
+- pure-Python greedy and width-8 log-space prefix CTC with separate
+  blank/nonblank probabilities and deterministic ties
+- exhaustive tiny-path oracle plus blank-separated repeat and chunk tests
+- strict 48/8/8 physical synthetic symbol partitions with target-only train
+  access, manifest/hash binding, collision refusal, and byte caps
+- train-only complete-sequence prior and zero-signal frozen-pipeline controls
+- final CER/exact/repeat metrics, paired bootstrap, partial timing, revision,
+  edit-overhead, and finalization reports
+- five-schedule frame-indexed replay with bounded encoder/decoder state
+- create, metadata-only inspect, and strict one-time gate CLI commands
+
+Observed registered result:
+
+```text
+fixture items / frames:                 64 / 1,472
+fixture bytes:                          141,412 of 1 MiB
+validation prefix CER / exact:          0.018182 / 0.875000 (pass)
+frozen test prefix CER / exact:         0.054545 / 0.625000 (FAIL)
+required frozen exact:                  0.750000
+test repeated-pair recovery:            10/10
+test prior / zero-signal CER:           0.800000 / 0.890909
+test CER-reduction intervals:           [0.638374,0.870536] / [0.766369,0.897321]
+prefix minus greedy CER:                0.0
+wrong test rows:                        3, each target plus one tail symbol
+stream schedules / pushes:              5/5 / 1,327 validation pushes
+right context / encoder / prefix state: 0 samples / 300 / 290 bytes
+internal / external runtime:            0.713611 / 0.91 sec
+internal / external peak RSS:           214,319,104 / 226,410,496 bytes
+JSON / Markdown / total report:         363,578 / 1,334 / 364,912 bytes
+train / validation / test opens:        1 / 1 / 1
+training / parameter updates:           0 / 0
+raw / real / natural text / network:    0 / 0 / 0 / 0
+```
+
+Interpretation: CTC mechanics, repeated labels, access order, replay, controls,
+and resources are validated, but the sequence gate fails. Stability metrics
+show zero revisions even on stable wrong tails, demonstrating that stable output
+is not necessarily correct output. Seed 2303 is consumed and must not be
+reopened for tuning or treated as a fresh test.
+
+Decision: park Loop 23 and block Loop 24 precision work. The next action is
+preregistration only for a fresh Loop 23.5 target-independent blank/boundary
+calibration gate; no target-length trim, language model, larger encoder, real
+holdout, or seed-2303 reuse is authorized.
+
+Closeout verification:
+
+- focused Loop 23 decoder/fixture/metrics/gate tests: 16 passed
+- full unittest discovery: 225 tests passed, 3 skipped; 13.18 sec external wall
+  and 470,319,104-byte maximum RSS
+- full pytest: 222 passed, 3 skipped, 25 subtests passed; 13.38 sec external
+  wall and 481,918,976-byte maximum RSS
+- full Ruff, compileall, dependency-light imports, root and three Loop 23 CLI
+  helps, and `git diff --check`: passed
+- pre-Loop-23 baseline was 209 unittest tests with 3 skipped; all 16 added
+  Loop 23 tests pass and no prior test regressed
+- registered seed 2303 was opened only by the single gate run; final suites use
+  temporary alternate seeds and do not reopen registered artifacts

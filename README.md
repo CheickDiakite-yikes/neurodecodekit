@@ -683,11 +683,14 @@ seconds and 313,982,976 bytes. This intentionally easy synthetic classification
 task is not CTC, text, MEG/EEG decoding, or end-to-end real-time evidence. See
 `docs/LOOP_22_TINY_CAUSAL_ENCODER.md`.
 
-Loop 23 is preregistered before any new target or decoder artifact exists. It
-freezes a fresh physical 48/8/8 synthetic split, correct CTC blank/repeat
-semantics, a language-model-free width-8 prefix beam, partial-hypothesis
-revision and first/stable/final timing metrics, two signal-free controls, and
-one test open. See `docs/LOOP_23_PREREGISTRATION.md`.
+Loop 23 implements that preregistered fresh 48/8/8 synthetic gate with correct
+CTC blank/repeat semantics, greedy and language-model-free width-8 prefix
+decoders, partial timing/stability metrics, two signal-free controls, and
+one-time test access. Validation passes, but the frozen test reaches only 5/8
+exact sequences against the required 6/8 despite CER 0.0545 and 10/10 repeated
+pairs. Every error is the complete target plus one false tail symbol. Loop 23
+is parked and seed 2303 is consumed. See
+`docs/LOOP_23_STREAMING_CTC_DECODER.md`.
 
 Loop 5 closeout checks:
 
@@ -747,6 +750,10 @@ Current limitations:
   while preserving that stream contract. Its perfect synthetic score does not
   measure neural representation quality, character decoding, or user latency;
   the registered test is consumed and cannot become a tuning set.
+- Loop 23 proves incremental CTC mechanics, bounded state, controls, and exact
+  five-schedule replay on synthetic symbols, but fails its frozen
+  exact-sequence gate because of stable false tail emissions. Seed 2303 is
+  consumed; no trimming, calibration, or endpoint rule may be selected from it.
 - The local demo displays synthetic example text and aggregate-only real
   metrics. It is an evidence console, not a live real-MEG decoder; predictive
   confidence remains unavailable.

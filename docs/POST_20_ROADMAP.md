@@ -21,10 +21,14 @@ decision.
   validation, opened its frozen test once, beat both signal-free controls, and
   preserved all five replay schedules with 300-byte state. See
   `docs/LOOP_22_TINY_CAUSAL_ENCODER.md`.
-- Loop 23: Preregistered. The language-model-free decoder, fresh 48/8/8 fixture,
-  blank/repeat rules, partial-stability metrics, one-time access, and caps are
-  frozen before implementation or target generation. See
-  `docs/LOOP_23_PREREGISTRATION.md`.
+- Loop 23: Parked after one preregistered frozen test. Decoder semantics,
+  controls, 5/5 replay schedules, repeated-pair recovery, and resource gates
+  pass, but exact test accuracy is 5/8 against a 6/8 threshold. All three test
+  errors are correct targets plus one false tail symbol. Seed 2303 is consumed.
+  See `docs/LOOP_23_STREAMING_CTC_DECODER.md`.
+- Loop 23.5: Next action is preregistration only for a fresh
+  target-independent blank/boundary calibration gate. Do not create another
+  fixture or calibration implementation before that protocol is committed.
 
 ## Loops 21-30
 
@@ -32,8 +36,9 @@ decision.
 |---:|---|---|---|---|
 | 21 | Causal chunk/replay | Can a frame producer consume incremental signals without future context or chunk-boundary drift? | Versioned stream state, five schedule audit, latency/resource report. | Closed: 5/5 schedules pass; 0 right context; 300-byte state; exact schedule bits; no decoder or real data. |
 | 22 | Tiny learned causal encoder | Can a small train-only causal model learn the synthetic motif task while preserving the Loop 21 stream contract? | Optional-Torch encoder, offline/stream replay, parameter/state/RSS/runtime report, prior comparator. | Closed: 1,130 parameters; validation and one frozen test pass; 5/5 replay schedules; 300-byte state; one-thread CPU; no real cache or text claim. |
-| 23 | Streaming CTC prefix decoder | Can causal encoder frames produce stable incremental characters rather than only final strings? | Greedy/prefix state, partial-hypothesis trace, revision and emission-delay metrics. | Preregistered: fresh physical test, width-8 no-LM beam, blank/repeat oracle tests, first/stable/final timing, two signal-free controls, and one test open. Implementation pending. |
-| 24 | Local precision and runtime | Can the fixed causal encoder/decoder fit a realistic local CPU envelope without changing outputs beyond a registered tolerance? | float32/float16/dynamic-int8 candidates, state/parameter/RSS/RTF/energy proxy report. | Select on synthetic validation; preserve float32 reference and label integer storage versus true integer execution honestly. |
+| 23 | Streaming CTC prefix decoder | Can causal encoder frames produce stable incremental characters rather than only final strings? | Greedy/prefix state, partial-hypothesis trace, revision and emission-delay metrics. | Parked: mechanics and validation pass, but frozen exact test accuracy is 5/8 below 6/8; test consumed; no tuning or rerun. |
+| 23.5 | Blank/boundary calibration | Can one target-independent train/validation-fitted blank-score rule suppress tail false positives on fresh splits without harming repeated symbols? | Preregistered fresh fixture, one tiny calibration rule, unchanged no-calibration comparator, one new test. | Preregister before implementation; forbid target-length trimming, language models, larger encoders, seed-2303 reuse, and real data. |
+| 24 | Local precision and runtime | Can a decoder that first passes its correctness gate fit a realistic local CPU envelope without changing outputs beyond a registered tolerance? | float32/float16/dynamic-int8 candidates, state/parameter/RSS/RTF/energy proxy report. | Blocked on a passed fresh decoder gate; preserve float32 reference and distinguish label storage from true integer execution. |
 | 25 | Causal preprocessing audit | Can existing real MEG train rows be replayed incrementally without future-aware filters, normalization, or padding leakage? | Train-only causal preprocessing contract and offline/stream audit; no score. | Open source-train rows only; keep five source-test and all consumed session-2 rows frozen. |
 | 26 | Real validation-only encoder gate | Does the fixed small causal model learn anything above a no-signal prior on source validation without touching test? | Preregistered architecture, train-only fit, six-row validation report with uncertainty. | Proceed only on a registered margin and failure analysis; validation is consumed for model selection. |
 | 27 | Fresh holdout preregistration | What new independent recording or participant slice can answer the next claim without recycling observed data? | Metadata-only candidate table, license/bytes/protocol, preregistered one-time analysis. | No download before exact cap and approval; no test until architecture and decision rule are frozen. |
@@ -45,6 +50,8 @@ decision.
 
 - Do not reopen the five observed S21 source-test rows or tune on the consumed
   63-row session-2 evaluation.
+- Do not reopen Loop 22 seed 2203 or Loop 23 seed 2303 for selection, tuning,
+  thresholding, calibration, endpoint design, or fresh evaluation.
 - Do not download another real recording without a pinned metadata plan,
   explicit file/byte cap, dry run, and approval.
 - “Causal,” “streaming,” “online,” “real-time,” and “low latency” are distinct

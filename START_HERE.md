@@ -13,8 +13,8 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 Current verified state: two complete S21 SpanishBCBL MEG recordings plus one
 94,842,381-byte S7 SpanishBCBL EEG BrainVision bundle and their matching MAT
 logs have been selectively downloaded under exact caps; the full dataset and
-12.79-GB EEG subtree have not been downloaded. Loops 9-12 and 14-20 are
-complete; Loop 13 is parked.
+12.79-GB EEG subtree have not been downloaded. Loops 9-12, 14-22 are complete;
+Loops 13 and 23 are parked after measured gates.
 Session 1 provides a strict 55/6/5 split with
 train-only robust scaling. Session 2 is a complete two-part FIFF recording with
 63 performed trials; MAT slots 54, 58, and 60 are explicitly empty and are
@@ -58,9 +58,12 @@ one preregistered 1,130-parameter model on synthetic motif frames, selects
 epoch 34 on validation, opens its eight-item test once, and passes both the
 signal-free comparison and all five streaming schedules with 300-byte state.
 That perfect synthetic motif result is a mechanism check, not text or brain
-decoding; its test is consumed. Loop 23's new synthetic streaming-decoder
-protocol is now frozen before any new target generation: fresh physical
-splits, blank/repeat rules, a width-8
-language-model-free prefix beam, partial-revision/emission metrics, two
-signal-free controls, and one test open. Implement it first with alternate
-seeds. See `docs/LOOP_23_PREREGISTRATION.md` and `docs/POST_20_ROADMAP.md`.
+decoding; its test is consumed. Loop 23 then implements the preregistered
+language-model-free greedy and width-8 prefix CTC decoders. Registered
+validation passes at CER 0.0182 and 7/8 exact, so seed 2303 opens once. Frozen
+test CER is 0.0545 and all repeated pairs are correct, but exact sequence
+accuracy is only 5/8 versus the required 6/8. Every error is a complete target
+plus one false tail symbol; prefix and greedy agree. Loop 23 is parked and its
+test is consumed. Next, preregister a fresh target-independent blank/boundary
+calibration gate before creating any new fixture. See
+`docs/LOOP_23_STREAMING_CTC_DECODER.md` and `docs/POST_20_ROADMAP.md`.

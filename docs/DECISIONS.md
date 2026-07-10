@@ -735,3 +735,37 @@ language model, real data, observed holdout, WER, endpoint, or end-to-end
 latency claim is allowed.
 
 Evidence: `docs/LOOP_23_PREREGISTRATION.md`.
+
+## 0036 - Park Loop 23 after the frozen exact-sequence gate fails
+
+Decision: retain the dependency-free CTC decoder and synthetic access gate as
+an engineering mechanism, but park Loop 23 because its one registered frozen
+test reaches only 5/8 exact sequences against the preregistered 6/8 threshold.
+Do not rerun seed 2303 or tune a tail rule, threshold, blank bias, endpoint, or
+model against its outputs.
+
+Why: validation passed at CER 0.018182 and 7/8 exact, so the test was correctly
+opened once. Test CER is 0.054545, all 10 repeated pairs are reconstructed,
+both signal-free CER margins and their paired bootstrap lower bounds pass, and
+all five stream schedules reproduce exact frame-indexed traces. Exact accuracy
+still fails at 0.625. Every incorrect row contains the complete target followed
+by one nonblank tail symbol, and greedy and width-8 prefix beam are identical.
+The failure is therefore upstream score/boundary behavior, not a blank/repeat
+collapse defect or beam-search improvement.
+
+Access and resource boundary: implementation commit `08b23d7` was pushed before
+seed 2303 existed. Registered train/validation/test partitions opened exactly
+once in the required order; seed 2303 is now consumed. The 141,412-byte fixture,
+364,912-byte report, 0.713611-second internal runtime, 226,410,496-byte external
+peak RSS, 300-byte encoder state, and 290-byte prefix state all remain under
+their caps with one CPU thread and zero real/raw/text/network access.
+
+Next boundary: preregister a fresh Loop 23.5 target-independent blank/boundary
+calibration gate before implementing or generating anything. Keep the
+unmodified Loop 23 decoder as comparator. Forbid target-length trimming,
+language models, larger encoders, precision work, seed-2303 reuse, and real
+holdout access.
+
+Evidence: `docs/LOOP_23_STREAMING_CTC_DECODER.md`,
+`cache/loop23_streaming_ctc/gate.json`, and
+`cache/loop23_streaming_ctc/gate.md`.

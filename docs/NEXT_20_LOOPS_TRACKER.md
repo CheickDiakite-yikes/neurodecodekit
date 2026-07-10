@@ -131,6 +131,14 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   against 0.166667 for both signal-free controls, and preserved 5/5 streaming
   schedules with 300-byte state. The test is consumed; this is not text or
   brain decoding. See `docs/LOOP_22_TINY_CAUSAL_ENCODER.md`.
+- Post-roadmap Loop 23: Parked after completing the preregistered synthetic
+  streaming CTC gate. Validation passes at CER 0.018182 and 7/8 exact, opening
+  seed 2303 once. Frozen test CER is 0.054545 and repeated-pair recovery is
+  10/10, but exact sequence accuracy is 5/8 below the required 6/8. Every wrong
+  row is the complete target plus one false tail symbol; greedy and prefix beam
+  agree. Five schedules and all resource/access gates pass. The test is
+  consumed and no tuning or rerun is allowed. See
+  `docs/LOOP_23_STREAMING_CTC_DECODER.md`.
 - Current proof boundary: two real S21 MEG sessions are alignment, sentence-cache,
   rate-resource, channel-proxy, representation-fidelity, and current NPZ-access
   verified at the applicable stages. Sentence-text membership and robust
@@ -138,13 +146,15 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   clear negative result. One S7 EEG file is trigger/cache validated, and its
   nearest-centroid event result is also negative. There is no reliable neural
   advantage, unseen-person performance, retained-accuracy,
-  optimal-sensor/precision, integer-only inference, OPM-equivalence, or
-  low-latency streaming claim.
-- Next action: implement the already-preregistered Loop 23 decoder using
-  alternate fixture seeds first. Prove blank/repeat semantics against exhaustive
-  tiny-path oracles, then rehearse all five schedules without creating the
-  registered seed-2303 test. Keep Loop 22's consumed test and all observed
-  MEG/EEG results frozen. See `docs/LOOP_23_PREREGISTRATION.md`.
+  optimal-sensor/precision, integer-only inference, OPM-equivalence, passed
+  sequence-decoder, or low-latency streaming claim.
+- Next action: preregister Loop 23.5 before writing code or generating targets.
+  The narrow question is whether one train/validation-fitted,
+  target-independent blank/boundary calibration rule can suppress tail false
+  positives on fresh physical splits. Keep seed 2303, Loop 22's seed 2203, and
+  all observed MEG/EEG holdouts frozen. Do not add target-length trimming, a
+  language model, a larger encoder, or precision work first. See
+  `docs/LOOP_23_STREAMING_CTC_DECODER.md`.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |

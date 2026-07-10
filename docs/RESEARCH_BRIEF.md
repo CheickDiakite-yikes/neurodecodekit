@@ -297,6 +297,30 @@ EEGNet supports compact convolutional feature extraction for EEG, but neither
 source proves this synthetic architecture will transfer to MEG, EEG, or a
 portable device. See `docs/LOOP_22_PREREGISTRATION.md`.
 
+## Loop 23 streaming-decoder finding
+
+The original CTC formulation requires blank-separated repeats and separate
+prefix probabilities for paths ending in blank and nonblank. Loop 23 validates
+those mechanics against exhaustive tiny-path sums and recovers every registered
+adjacent repeated pair. Prefix beam and greedy nevertheless make identical
+sequence errors on the frozen test: each emits the complete correct target and
+then one extra nonblank tail symbol.
+
+This result sharpens the distinction in incremental-ASR research between
+stability and correctness. Loop 23 records zero revisions and zero edit
+overhead relative to each final hypothesis, including the wrong ones. Stable
+output therefore cannot be treated as correct output, and low CER cannot
+replace an exact-sequence gate when a single extra emission invalidates the
+whole command. See the original CTC paper
+(https://www.cs.toronto.edu/~graves/icml_2006.pdf), incremental correctness
+metrics (https://aclanthology.org/N09-1043/), and the measured closeout in
+`docs/LOOP_23_STREAMING_CTC_DECODER.md`.
+
+The next scientifically clean intervention is not target-length trimming or a
+post-test endpoint heuristic. It is a separately preregistered, fresh-split,
+target-independent blank-score calibration gate with the unmodified decoder as
+comparator. That gate must establish its rule before a new test exists.
+
 ## Loop 19 EEG ecosystem decision
 
 MOABB remains useful for standardized EEG benchmark paradigms, but its stock
