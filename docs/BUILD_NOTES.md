@@ -1250,3 +1250,40 @@ Closeout verification:
   Loop 23 tests pass and no prior test regressed
 - registered seed 2303 was opened only by the single gate run; final suites use
   temporary alternate seeds and do not reopen registered artifacts
+
+## Loop 23.5 preregistration - blank intercept calibration
+
+Preregistered on 2026-07-10 before implementation, fresh targets, any fitted
+intercept, or seed 2353 existed.
+
+Frozen design:
+
+- exact Loop 22 checkpoint and unchanged Loop 23 greedy/prefix decoders
+- fresh physical 64/16/16 splits at seeds 2351/2352/2353; protocol hash
+  `ac8b0dfa1ee512dd55645356546a068bc6b7e145f945a2e947d63dcf87185cc9`
+- one float64 additive blank-logit intercept; symbol logits and slope unchanged
+- one convex train-frame binary-log-loss fit by exactly 80 bisection iterations
+  in `[-8,8]`; no candidate, restart, temperature, or regularization
+- calibration train access opens signals/frame labels but not target arrays;
+  prior access separately opens targets but not signals
+- unmodified decoder, calibrated/unmodified greedy, train-only prior, and both
+  zero-signal variants remain visible
+- validation requires 14/16 exact, CER at most 0.03, at least two corrected
+  items and tail tokens, zero new errors or per-item CER regressions, blank
+  NLL/Brier improvement, repeated-label preservation, controls, and 5/5 replay
+- one conditional canonical seed-2353 test open; no test replay or later fit
+- one CPU thread; 1 MiB fixture/report, 2 MiB total generated artifacts,
+  16 MiB working arrays, 20-second runtime, and 768 MiB RSS caps
+
+Research basis: original CTC makes blank probability part of the alignment
+distribution; post-hoc calibration and logit-adjustment literature support
+testing low-parameter score corrections; blank-regularized CTC shows blank
+occupancy is a real lever but changes training and is not this method. The
+class-weighted Loop 22 logits motivate the hypothesis but do not prove it.
+
+Implementation order: analytic fit/oracle tests, strict disjoint access, decoder
+comparators, metrics, replay, and CLI; then a full-size alternate rehearsal at
+9351/9352/9353; then full verification and an implementation commit/push. Only
+after that may the registered fixture or seed 2353 exist.
+
+Evidence: `docs/LOOP_23_5_PREREGISTRATION.md`.

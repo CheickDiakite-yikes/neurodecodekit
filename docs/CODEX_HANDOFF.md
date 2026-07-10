@@ -14,9 +14,11 @@
 > test CER is 0.0545 with all repeated pairs recovered, but exact accuracy is
 > only 5/8 against a 6/8 threshold. Every failure is the correct target plus one
 > false tail symbol; prefix and greedy agree. The test is consumed, the branch
-> is parked, and no post-test trimming or tuning is allowed. Next action is
-> preregistration only for a fresh target-independent blank/boundary calibration
-> gate. There is no demonstrated neural advantage, unseen-person, useful EEG,
+> is parked, and no post-test trimming or tuning is allowed. Loop 23.5 now
+> preregisters one fresh intercept-only blank calibration gate before code or
+> targets. Implementation must start on alternate seeds 9351/9352/9353; seed
+> 2353 must remain absent until mechanics are committed and pushed. There is no
+> demonstrated neural advantage, unseen-person, useful EEG,
 > passed sequence decoder, real-time, portable-hardware, arbitrary-thought, or
 > clinical claim. See `docs/LOOP_23_STREAMING_CTC_DECODER.md`.
 
@@ -117,9 +119,9 @@ This is not primarily a model repo. It is a **research loop repo**.
 
 ## Current next 3 loops
 
-1. **Loop 23.5 - blank/boundary calibration preregistration.** Freeze one
-   target-independent train/validation-selected blank-score rule, fresh physical
-   splits, controls, caps, and one-time access before writing code or targets.
+1. **Loop 23.5 - blank-intercept calibration implementation.** Implement the
+   frozen one-scalar train-frame fit, disjoint access modes, unchanged decoder
+   comparator, no-harm metrics, and five-schedule replay on alternate seeds.
 2. **Loop 24 - local precision/runtime gate.** Keep this blocked until a fresh
    decoder correctness gate passes; then compare actual float/integer execution
    without changing outputs beyond a preregistered tolerance.
@@ -129,7 +131,8 @@ This is not primarily a model repo. It is a **research loop repo**.
 
 Loop 23's preregistration and parked result are in
 `docs/LOOP_23_PREREGISTRATION.md` and
-`docs/LOOP_23_STREAMING_CTC_DECODER.md`. Loop 22 evidence is in
+`docs/LOOP_23_STREAMING_CTC_DECODER.md`. Loop 23.5 is frozen in
+`docs/LOOP_23_5_PREREGISTRATION.md`. Loop 22 evidence is in
 `docs/LOOP_22_TINY_CAUSAL_ENCODER.md`; the post-20 sequence is in
 `docs/POST_20_ROADMAP.md`.
 

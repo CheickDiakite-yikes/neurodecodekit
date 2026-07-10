@@ -34,14 +34,17 @@ exact sequences against the preregistered 6/8 threshold. It is parked:
 cat docs/LOOP_22_TINY_CAUSAL_ENCODER.md
 cat docs/LOOP_23_PREREGISTRATION.md
 cat docs/LOOP_23_STREAMING_CTC_DECODER.md
+cat docs/LOOP_23_5_PREREGISTRATION.md
 cat docs/POST_20_ROADMAP.md
 ```
 
 Freeze the Loop 22 checkpoint/test and the complete Loop 23 fixture/report/test.
-Do not rerun or tune on seeds 2203 or 2303. The next action is preregistration
-only for a fresh Loop 23.5 target-independent blank/boundary calibration gate.
-It must retain the unmodified no-calibration greedy/prefix comparator and must
-forbid target-length trimming, a language model, a larger encoder, precision
+Do not rerun or tune on seeds 2203 or 2303. Loop 23.5 is preregistered in
+`docs/LOOP_23_5_PREREGISTRATION.md`; implement it with alternate seeds
+9351/9352/9353 before registered seed 2353 exists. Fit exactly one additive
+blank-logit intercept from fresh train signals/frame labels, physically exclude
+target arrays from that fit, and retain the unmodified greedy/prefix comparator.
+Forbid target-length trimming, a language model, a larger encoder, precision
 work, and real-data access. Keep both observed S21 MEG holdouts plus the S7 EEG
 result frozen. Any future real-data acquisition remains dry-run by default and
 requires explicit byte caps plus `--execute`.
@@ -52,18 +55,18 @@ requires explicit byte caps plus `--execute`.
 - CLI has useful `--help` text.
 - New numerical or model dependencies remain optional.
 - No full-dataset download can happen accidentally.
-- The Loop 23.5 protocol is researched and committed before any implementation,
-  target generation, or new test partition exists.
-- The calibration rule is target-independent, has one declared parameterization,
-  and is selected only on fresh train/validation data.
+- The Loop 23.5 protocol remains unchanged and registered seed 2353 stays absent
+  until full-size alternate mechanics and all checks are committed and pushed.
+- The calibration rule has one declared parameterization, is fitted only on
+  fresh train frame labels, and is target-length independent at inference.
 - The unmodified Loop 23 decoder remains the comparator, and blank/repeat state
   still covers multiple chunk boundaries and final partial chunks.
 - Reports separate score calibration, encoder availability,
   first/stable/final symbol emission, endpointing, rendering, and measured
   end-to-end latency.
 - Runtime, peak memory, state bytes, and artifact bytes stay under explicit caps.
-- Fresh training/selection/test partitions, a new one-time test, the unmodified
-  decoder, and both no-signal controls are explicit.
+- Fresh training/validation/test partitions, one calibration fit, a new
+  one-time test, the unmodified decoder, and both no-signal controls are explicit.
 - Docs explain exactly what was verified and what remains synthetic or untested.
 
 ## Style

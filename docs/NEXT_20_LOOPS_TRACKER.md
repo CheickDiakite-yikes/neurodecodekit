@@ -148,13 +148,16 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   advantage, unseen-person performance, retained-accuracy,
   optimal-sensor/precision, integer-only inference, OPM-equivalence, passed
   sequence-decoder, or low-latency streaming claim.
-- Next action: preregister Loop 23.5 before writing code or generating targets.
-  The narrow question is whether one train/validation-fitted,
-  target-independent blank/boundary calibration rule can suppress tail false
-  positives on fresh physical splits. Keep seed 2303, Loop 22's seed 2203, and
-  all observed MEG/EEG holdouts frozen. Do not add target-length trimming, a
-  language model, a larger encoder, or precision work first. See
-  `docs/LOOP_23_STREAMING_CTC_DECODER.md`.
+- Post-roadmap Loop 23.5: Preregistered before implementation or target
+  generation. Fit one additive blank-logit intercept by convex train-frame
+  binary log loss on fresh 64/16/16 splits; validation only opens or parks the
+  one-time test. Require at least two corrections, no per-item CER regressions,
+  14/16 exact, repeated-pair preservation, calibration improvement, controls,
+  and 5/5 replay. See `docs/LOOP_23_5_PREREGISTRATION.md`.
+- Next action: implement Loop 23.5 using alternate seeds 9351/9352/9353 first.
+  Keep registered seed 2353 absent until alternate mechanics, the full suite,
+  and one full-size rehearsal are committed and pushed. Seed 2203, seed 2303,
+  and all observed MEG/EEG holdouts remain frozen.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |

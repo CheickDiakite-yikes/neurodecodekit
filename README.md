@@ -692,6 +692,13 @@ pairs. Every error is the complete target plus one false tail symbol. Loop 23
 is parked and seed 2303 is consumed. See
 `docs/LOOP_23_STREAMING_CTC_DECODER.md`.
 
+Loop 23.5 is preregistered before implementation or fresh targets. It freezes
+one additive blank-logit intercept fitted by convex binary log loss on fresh
+train frames, new 64/16/16 physical splits, the unmodified Loop 23 comparator,
+strict no-harm sequence gates, and one new test open. It does not add an
+endpoint, target-length trim, language model, or model update. See
+`docs/LOOP_23_5_PREREGISTRATION.md`.
+
 Loop 5 closeout checks:
 
 ```bash

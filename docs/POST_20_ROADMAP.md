@@ -26,9 +26,10 @@ decision.
   pass, but exact test accuracy is 5/8 against a 6/8 threshold. All three test
   errors are correct targets plus one false tail symbol. Seed 2303 is consumed.
   See `docs/LOOP_23_STREAMING_CTC_DECODER.md`.
-- Loop 23.5: Next action is preregistration only for a fresh
-  target-independent blank/boundary calibration gate. Do not create another
-  fixture or calibration implementation before that protocol is committed.
+- Loop 23.5: Preregistered before implementation or targets. One additive
+  blank-logit intercept is fit on fresh train frames only, with new 64/16/16
+  physical splits, an unchanged decoder comparator, no-harm gates, and one
+  test open. See `docs/LOOP_23_5_PREREGISTRATION.md`.
 
 ## Loops 21-30
 
@@ -37,7 +38,7 @@ decision.
 | 21 | Causal chunk/replay | Can a frame producer consume incremental signals without future context or chunk-boundary drift? | Versioned stream state, five schedule audit, latency/resource report. | Closed: 5/5 schedules pass; 0 right context; 300-byte state; exact schedule bits; no decoder or real data. |
 | 22 | Tiny learned causal encoder | Can a small train-only causal model learn the synthetic motif task while preserving the Loop 21 stream contract? | Optional-Torch encoder, offline/stream replay, parameter/state/RSS/runtime report, prior comparator. | Closed: 1,130 parameters; validation and one frozen test pass; 5/5 replay schedules; 300-byte state; one-thread CPU; no real cache or text claim. |
 | 23 | Streaming CTC prefix decoder | Can causal encoder frames produce stable incremental characters rather than only final strings? | Greedy/prefix state, partial-hypothesis trace, revision and emission-delay metrics. | Parked: mechanics and validation pass, but frozen exact test accuracy is 5/8 below 6/8; test consumed; no tuning or rerun. |
-| 23.5 | Blank/boundary calibration | Can one target-independent train/validation-fitted blank-score rule suppress tail false positives on fresh splits without harming repeated symbols? | Preregistered fresh fixture, one tiny calibration rule, unchanged no-calibration comparator, one new test. | Preregister before implementation; forbid target-length trimming, language models, larger encoders, seed-2303 reuse, and real data. |
+| 23.5 | Blank/boundary calibration | Can one train-frame-fitted, target-length-independent blank intercept suppress tail false positives on fresh splits without harming any item? | Fresh 64/16/16 fixture, one convex scalar fit, unchanged comparator, calibration metrics, and one new test. | Preregistered: implement on alternate seeds first; require 14/16 exact, at least two corrections, zero per-item regressions, 5/5 replay, and no target trim, LM, larger encoder, seed-2303 reuse, or real data. |
 | 24 | Local precision and runtime | Can a decoder that first passes its correctness gate fit a realistic local CPU envelope without changing outputs beyond a registered tolerance? | float32/float16/dynamic-int8 candidates, state/parameter/RSS/RTF/energy proxy report. | Blocked on a passed fresh decoder gate; preserve float32 reference and distinguish label storage from true integer execution. |
 | 25 | Causal preprocessing audit | Can existing real MEG train rows be replayed incrementally without future-aware filters, normalization, or padding leakage? | Train-only causal preprocessing contract and offline/stream audit; no score. | Open source-train rows only; keep five source-test and all consumed session-2 rows frozen. |
 | 26 | Real validation-only encoder gate | Does the fixed small causal model learn anything above a no-signal prior on source validation without touching test? | Preregistered architecture, train-only fit, six-row validation report with uncertainty. | Proceed only on a registered margin and failure analysis; validation is consumed for model selection. |

@@ -769,3 +769,34 @@ holdout access.
 Evidence: `docs/LOOP_23_STREAMING_CTC_DECODER.md`,
 `cache/loop23_streaming_ctc/gate.json`, and
 `cache/loop23_streaming_ctc/gate.md`.
+
+## 0037 - Freeze one intercept-only blank calibration before fresh targets
+
+Decision: preregister Loop 23.5 as one supervised synthetic frame-calibration
+experiment. Fit exactly one additive blank-logit intercept by 80 iterations of
+float64 bisection on fresh train-frame binary log loss. Keep the slope, encoder,
+symbol logits, CTC state, beam, and flush unchanged. Validation may only open a
+fresh test or park.
+
+Why: Loop 23's errors are stable nonblank tail insertions shared by greedy and
+prefix decoding. The frozen Loop 22 probe was trained with inverse-frequency
+frame weights for balanced classification, but its raw blank probability was
+never calibrated for natural frame prevalence. Primary calibration and logit
+adjustment work support testing a low-parameter score correction; they do not
+prove it will solve this generated task or transfer to neural data.
+
+Fresh-data boundary: use new physical 64/16/16 splits with seeds
+2351/2352/2353. Seed 2353 cannot exist until this preregistration and later
+alternate-seed mechanics are separately committed and pushed. Fit may open
+train signals/frame labels but no target IDs. The prior may separately open
+train targets but no signals. Seed 2303 and every observed real holdout remain
+forbidden.
+
+Gate boundary: require at least two corrected validation/test items, no new
+exact errors, no per-item CER regressions, at least two removed tail tokens,
+14/16 exact accuracy, CER at most 0.03, calibration improvement, repeated-pair
+preservation, signal-free margins, and exact 5/5 validation replay. No
+target-length trim, endpoint, language model, temperature, per-symbol bias,
+larger model, or precision candidate is allowed.
+
+Evidence: `docs/LOOP_23_5_PREREGISTRATION.md`.

@@ -64,6 +64,8 @@ validation passes at CER 0.0182 and 7/8 exact, so seed 2303 opens once. Frozen
 test CER is 0.0545 and all repeated pairs are correct, but exact sequence
 accuracy is only 5/8 versus the required 6/8. Every error is a complete target
 plus one false tail symbol; prefix and greedy agree. Loop 23 is parked and its
-test is consumed. Next, preregister a fresh target-independent blank/boundary
-calibration gate before creating any new fixture. See
-`docs/LOOP_23_STREAMING_CTC_DECODER.md` and `docs/POST_20_ROADMAP.md`.
+test is consumed. Loop 23.5 now preregisters one fresh, target-length-independent
+blank-intercept calibration gate before implementation or target generation.
+Implement and rehearse with alternate seeds only; seed 2353 must remain absent
+until mechanics are committed and pushed. See
+`docs/LOOP_23_5_PREREGISTRATION.md` and `docs/POST_20_ROADMAP.md`.
