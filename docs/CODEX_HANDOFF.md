@@ -21,10 +21,15 @@
 > a synthetic causal frame producer across five transport schedules with zero
 > right context, exact frame/timestamp identity, bitwise schedule-invariant
 > output, and 300-byte mutable state. It runs no decoder, so text emission and
-> end-to-end latency remain unmeasured. There is no unseen-person,
+> end-to-end latency remain unmeasured. Loop 22 now adds one preregistered
+> 1,130-parameter synthetic causal encoder. Epoch 34 was selected on validation,
+> its eight-item test was opened once, and both frozen metrics and all five
+> replay schedules passed under one-thread/resource caps. The motif task is
+> intentionally easy, its test is consumed, and it is not text or brain
+> decoding. There is no unseen-person,
 > useful EEG, integer-only inference, real-time, portable-hardware,
 > arbitrary-thought, or clinical claim. See
-> `docs/LOOP_21_CAUSAL_CHUNK_REPLAY.md`.
+> `docs/LOOP_22_TINY_CAUSAL_ENCODER.md`.
 
 ## State of the repo
 
@@ -80,6 +85,11 @@ This repo is a starter scaffold with working pure-Python components:
 - five-schedule causal replay gate with bitwise stream invariance, declared
   Loop 20 floating compatibility tolerance, scheduling-delay/compute-RTF
   separation, selective signal-only NPZ access, and no decoder
+- physically separate hash-bound synthetic motif train/validation/test fixtures
+- optional-Torch 1,130-parameter causal window encoder plus diagnostic motif
+  probe, train-only normalization, validation checkpointing, and safe NPZ state
+- one-time synthetic test access audit, mandatory prior/zero-signal controls,
+  paired item bootstrap, and five-schedule learned-embedding replay
 - JSON/Markdown metrics report command
 - CLI smoke commands
 - unit tests
@@ -92,8 +102,8 @@ negative within-session event comparison. None is a decoder success. Do not
 turn these results, a variance ranking, or a geometry proxy into unseen-person
 or population generalization.
 
-Current verification on 2026-07-10: 199 unittest tests passed with 3 skipped;
-pytest reported 196 passed, 3 skipped, and 25 subtests passed. Full Ruff lint,
+Current verification on 2026-07-10: 209 unittest tests passed with 3 skipped;
+pytest reported 206 passed, 3 skipped, and 25 subtests passed. Full Ruff lint,
 compileall, CLI help, artifact-contract checks, workbook formulas and all-sheet
 visual checks, and `git diff --check` passed. The tracked and delivered workbook
 hashes match at
@@ -113,20 +123,20 @@ This is not primarily a model repo. It is a **research loop repo**.
 
 ## Current next 3 loops
 
-1. **Loop 22 - tiny learned causal encoder.** Train one optional-Torch model on
-   synthetic train rows only. Preserve Loop 21's exact state/chunk contract,
-   compare against the no-signal prior, select on validation, and open the
-   frozen synthetic test only once under strict parameter/CPU/RAM/byte caps.
-2. **Loop 23 - streaming CTC prefix decoder.** Only after Loop 22 passes, add
-   incremental greedy/prefix state and measure first/stable/final character
-   emission plus hypothesis revisions. Keep the language model absent first.
-3. **Loop 24 - local precision/runtime gate.** Compare fixed float and dynamic
+1. **Loop 23 - streaming CTC prefix decoder.** First preregister a new synthetic
+   protocol and physically separate test. Then add incremental greedy/prefix
+   state and measure first/stable/final character emission plus hypothesis
+   revisions. Keep the language model absent.
+2. **Loop 24 - local precision/runtime gate.** Compare fixed float and dynamic
    integer candidates on the frozen synthetic model, separating storage,
    actual execution, state, RSS, RTF, and energy proxy before any real-cache
    conversion.
+3. **Loop 25 - causal preprocessing audit.** Open source-session train rows only
+   and prove that filtering, normalization, framing, and padding can replay
+   without future leakage before any real validation score.
 
-Loop 21 evidence and exact next gate:
-`docs/LOOP_21_CAUSAL_CHUNK_REPLAY.md`. The post-20 sequence is in
+Loop 22 evidence and exact next gate:
+`docs/LOOP_22_TINY_CAUSAL_ENCODER.md`. The post-20 sequence is in
 `docs/POST_20_ROADMAP.md`.
 
 ## Historical original PR plan

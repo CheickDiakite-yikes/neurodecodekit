@@ -687,3 +687,28 @@ claim.
 
 Evidence: `docs/LOOP_20_NEUROTOKEN_CACHE_V0.md` and
 `tests/test_neurotoken.py`.
+
+## 0034 - Proceed from learned synthetic frames to a separately preregistered decoder
+
+Decision: close Loop 22 as a passed synthetic mechanism gate and authorize only
+a new preregistered Loop 23 streaming CTC/prefix-decoder protocol. Freeze the
+Loop 22 checkpoint, report, and consumed seed-2203 test; do not reuse that test
+to select decoder state, thresholds, architecture, or timing rules.
+
+Why: the single registered model selected epoch 34 on validation, opened test
+once after checkpoint freeze, and reached 1.0 motif balanced accuracy versus
+0.166667 for both signal-free controls. Its paired item-bootstrap lower bound
+for accuracy gain over the prior was 0.630906. Five transport schedules
+reproduced one 161-frame embedding payload bitwise with zero right context and
+300-byte state.
+
+Scope boundary: the generated task deliberately injects strong channel-local
+motifs, so perfect classification is a plumbing and mechanism result. The
+diagnostic probe is not CTC or text; no real MEG/EEG data, observed holdout,
+language model, CER/WER, endpoint, or end-to-end latency was used or measured.
+Loop 23 must use a new physical test and keep the no-language-model comparator
+visible before any precision or real-cache gate.
+
+Evidence: `docs/LOOP_22_TINY_CAUSAL_ENCODER.md`,
+`cache/loop22_tiny_causal_encoder/gate.json`, and
+`cache/loop22_tiny_causal_encoder/gate.md`.

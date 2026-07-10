@@ -2,29 +2,30 @@
 
 You are continuing the NeuroDecodeKit starter repo. Read `AGENTS.md`, `docs/CODEX_HANDOFF.md`, and `README.md` first.
 
-Goal for this session: implement post-roadmap Loop 22's tiny learned causal
-encoder gate described in `docs/CODEX_HANDOFF.md`, preserving the completed
-Loop 21 stream contract without reopening observed real holdouts.
+Goal for this session: preregister post-roadmap Loop 23's synthetic streaming
+CTC/prefix-decoder gate, preserving the completed Loop 22 encoder evidence
+without reopening its consumed test or any observed real holdout.
 
 Concretely:
 
 1. Run `python -m unittest discover -s tests` and inspect current state.
-2. Read `docs/LOOP_21_CAUSAL_CHUNK_REPLAY.md` and preserve its state, timing, chunk, and claim contracts.
-3. Add one optional-Torch causal encoder with a deliberately small parameter and mutable-state budget.
-4. Fit on synthetic train rows only, choose stopping/configuration on validation, and run the frozen synthetic test once.
-5. Compare against a no-signal prior and report parameters, state, runtime, peak RSS, RTF, and artifacts under explicit caps.
-6. Prove learned offline-versus-streaming equivalence across registered chunk schedules before any decoder work.
-7. Keep CTC/prefix decoding, language models, adapters, real-cache conversion, and all observed MEG/EEG holdouts out of this gate.
-8. Do not download data; preserve dry-run and explicit-execution acquisition defaults.
+2. Read `docs/LOOP_22_TINY_CAUSAL_ENCODER.md`; treat seed-2203 test metrics and checkpoint selection as frozen.
+3. Research streaming CTC greedy/prefix decoding, blank/repeat state, hypothesis revisions, and emission-latency definitions from primary sources.
+4. Write and commit the full Loop 23 fixture, split, decoder, comparator, access, metric, and resource protocol before generating its test targets.
+5. Use a new physically separate synthetic test; never use Loop 22 test rows to select decoder behavior.
+6. Require partial-hypothesis traces and separate first, stable, and final emission times plus revision counts.
+7. Keep the first decoder language-model-free and compare it with a no-signal prior.
+8. Keep real-cache conversion and all observed MEG/EEG holdouts out of this gate.
+9. Do not download data; preserve dry-run and explicit-execution acquisition defaults.
 
 Acceptance:
 
 - Tests pass.
 - CLI help works.
-- The learned synthetic validation gate and one frozen test pass are explicit.
-- Learned offline/stream replay passes across multiple chunk schedules.
-- The audit distinguishes producer causality from decoder causality and does
-  not claim measured end-to-end latency.
-- No real-data, observed-holdout, decoder, language-model, or network access occurs.
+- Preregistration is committed before any new test target is created or opened.
+- CTC blank/repeat semantics and incremental state are explicit and tested on
+  nonregistered fixtures only.
+- First/stable/final emission and revision metrics are mathematically defined.
+- No language model, real data, observed holdout, or network access occurs.
 
 The product principle is: `manifest → selective download → tiny shard → event windows → baseline → CER/WER report → demo`.

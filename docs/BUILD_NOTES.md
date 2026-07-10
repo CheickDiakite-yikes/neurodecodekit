@@ -1090,3 +1090,66 @@ Closeout verification:
   tracked and deliverable SHA-256 are both
   `bd7ba4895e3afaf54b279ff240cf3377d49693dfdaeb11527c7ef7600874836c`
 - final Loop 21 gate artifacts: 14,526 bytes; about 15 GiB free
+
+## Post-roadmap Loop 22 - tiny learned causal encoder gate
+
+Completed on 2026-07-10 from the preregistered `9a40c7e` protocol. Alternate
+seed mechanics, access-failure behavior, all tests, and resource caps passed
+before implementation commit `57d3ad8`; only then was the registered
+2201/2202/2203 fixture generated and its test opened once.
+
+Implemented:
+
+- strict versioned synthetic motif partitions and compact manifest with one
+  physical train/validation/test NPZ each
+- one-read partition loading, strict member rejection, complete content/hash/
+  shape/label/frame rebinding, and path safety
+- optional-Torch 80-12-8-6 causal window encoder/probe with 1,130 parameters
+- train-only channel normalization and class weights, validation epoch
+  selection, deterministic CPU training, and safe numeric NPZ checkpoint
+- train-only prior and train-mean zero-signal controls, balanced accuracy,
+  macro-F1, confusion, per-item accuracy, and paired item bootstrap
+- producer-neutral Loop 21 stream interface and five-schedule learned replay
+- ordered access audit that opens test only after validation and checkpoint
+  freeze, plus tests proving one successful read and zero failed-gate reads
+- fixture create, metadata-only inspect, and fixed gate CLI commands
+
+Observed:
+
+```text
+fixture items / frames: 80 / 1,598
+fixture bytes: 152,783 of 1 MiB
+train / validation / test frames: 1,273 / 161 / 164
+parameters / parameter bytes: 1,130 / 4,520
+selected epoch / epochs run: 34 / 42
+validation learned / prior balanced accuracy: 1.0 / 0.166667
+test learned / prior / zero balanced accuracy: 1.0 / 0.166667 / 0.166667
+test accuracy gain interval: [0.630906, 0.635766]
+stream schedules / pushes: 5 of 5 / 1,194
+right context / mutable state: 0 samples / 300 bytes
+embedding schedule bits: identical
+training / internal gate / external wall: 4.354204 / 5.105284 / 5.50 sec
+internal / external peak RSS: 307,724,288 / 313,982,976 bytes
+checkpoint / JSON / Markdown: 7,894 / 34,849 / 1,458 bytes
+raw / real / text / network access: all zero
+train / validation / test opens: 1 / 1 / 1
+```
+
+Interpretation: the project now has a working small learned causal producer and
+frozen synthetic evaluation path. The task is intentionally obvious and its
+perfect score is not neural or text decoding. The seed-2203 test is consumed.
+Next, preregister Loop 23 with new synthetic decoder targets before writing or
+evaluating a prefix decoder.
+
+Closeout verification:
+
+- focused Loop 22 fixture/model/gate tests: 10 passed
+- full unittest discovery: 209 passed, 3 skipped; 14.61 sec external wall and
+  475,725,824-byte maximum RSS under one-thread numeric caps
+- full pytest: 206 passed, 3 skipped, 25 subtests passed; 15.02 sec external
+  wall and 499,466,240-byte maximum RSS
+- full Ruff, compileall, dependency-light import, root and three Loop 22 CLI
+  helps, registered fixture create/inspect, and `git diff --check`: passed
+- dependency-light import loaded no NumPy, Torch, or MNE
+- registered gate was run once only; later verification uses alternate seeds
+  and does not open the registered fixture

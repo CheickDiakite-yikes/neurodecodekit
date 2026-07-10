@@ -125,6 +125,12 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   end-to-end latency was measured. Continue in
   `docs/POST_20_ROADMAP.md` and see
   `docs/LOOP_21_CAUSAL_CHUNK_REPLAY.md`.
+- Post-roadmap Loop 22: Done as a preregistered synthetic learned-encoder gate.
+  One 1,130-parameter model selected epoch 34 on validation, opened the frozen
+  eight-item test exactly once, reached 1.0 synthetic motif balanced accuracy
+  against 0.166667 for both signal-free controls, and preserved 5/5 streaming
+  schedules with 300-byte state. The test is consumed; this is not text or
+  brain decoding. See `docs/LOOP_22_TINY_CAUSAL_ENCODER.md`.
 - Current proof boundary: two real S21 MEG sessions are alignment, sentence-cache,
   rate-resource, channel-proxy, representation-fidelity, and current NPZ-access
   verified at the applicable stages. Sentence-text membership and robust
@@ -134,11 +140,11 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   advantage, unseen-person performance, retained-accuracy,
   optimal-sensor/precision, integer-only inference, OPM-equivalence, or
   low-latency streaming claim.
-- Next action: Loop 22 may train one tiny causal encoder on synthetic train
-  rows only. Require the Loop 21 streaming contract, a no-signal comparator,
-  validation-only selection, one frozen synthetic test pass, and explicit
-  parameter/state/runtime/RSS/artifact caps. Keep all observed MEG/EEG results
-  frozen; real-cache conversion and decoder work remain later gates.
+- Next action: preregister Loop 23's synthetic streaming CTC/prefix-decoder
+  protocol before generating any new test target. Require a new physically
+  separate test, partial-hypothesis traces, revision and first/stable/final
+  emission timing, a no-signal prior, and no language model. Keep Loop 22's
+  consumed test and all observed MEG/EEG results frozen.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |

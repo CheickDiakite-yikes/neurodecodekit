@@ -53,6 +53,11 @@ end-to-end streaming claim. Loop 21 then passes a five-schedule synthetic
 causal replay gate: zero right context, exact frame/timestamp identity, bitwise
 stream-schedule identity, 300-byte mutable state, and no target/model/decoder/
 real-data access. Transport delay still ranges from 0 to 610 ms depending on
-chunking, and end-to-end text latency remains unmeasured. Continue with Loop
-22's tiny learned causal encoder gate on synthetic train rows only. See
-`docs/LOOP_21_CAUSAL_CHUNK_REPLAY.md` and `docs/POST_20_ROADMAP.md`.
+chunking, and end-to-end text latency remains unmeasured. Loop 22 then trains
+one preregistered 1,130-parameter model on synthetic motif frames, selects
+epoch 34 on validation, opens its eight-item test once, and passes both the
+signal-free comparison and all five streaming schedules with 300-byte state.
+That perfect synthetic motif result is a mechanism check, not text or brain
+decoding; its test is consumed. Continue by preregistering Loop 23 on a new
+synthetic streaming-decoder protocol. See
+`docs/LOOP_22_TINY_CAUSAL_ENCODER.md` and `docs/POST_20_ROADMAP.md`.

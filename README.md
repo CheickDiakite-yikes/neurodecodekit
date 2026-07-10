@@ -653,6 +653,36 @@ up to 140 ms and whole-item delivery up to 610 ms. No decoder ran, so text
 emission and end-to-end latency remain unmeasured. See
 `docs/LOOP_21_CAUSAL_CHUNK_REPLAY.md` and `docs/POST_20_ROADMAP.md`.
 
+Loop 22 adds the first learned causal producer, but only on a preregistered
+synthetic motif task. It creates physically separate hash-bound partitions,
+fits train-only normalization and one 1,130-parameter window encoder, selects
+one checkpoint on validation, and opens the frozen test exactly once:
+
+```bash
+neurodecode make-causal-motif-fixture \
+  --out-dir cache/loop22_tiny_causal_encoder/fixture --max-total-mb 1
+
+neurodecode inspect-causal-motif-fixture \
+  --manifest cache/loop22_tiny_causal_encoder/fixture/manifest.json
+
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+VECLIB_MAXIMUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+neurodecode tiny-causal-encoder-gate \
+  --fixture-manifest cache/loop22_tiny_causal_encoder/fixture/manifest.json \
+  --checkpoint-out cache/loop22_tiny_causal_encoder/checkpoint.npz \
+  --out-json cache/loop22_tiny_causal_encoder/gate.json \
+  --out-md cache/loop22_tiny_causal_encoder/gate.md
+```
+
+The registered validation and one-time test both reach 1.0 motif balanced
+accuracy versus 0.166667 for the signal-free controls. All five transport
+schedules reproduce the 161 validation embeddings bitwise with zero right
+context and 300-byte mutable state. The complete fixture is 152,783 bytes; the
+checkpoint and reports total 44,201 bytes; external gate time/RSS are 5.50
+seconds and 313,982,976 bytes. This intentionally easy synthetic classification
+task is not CTC, text, MEG/EEG decoding, or end-to-end real-time evidence. See
+`docs/LOOP_22_TINY_CAUSAL_ENCODER.md`.
+
 Loop 5 closeout checks:
 
 ```bash
@@ -707,6 +737,10 @@ Current limitations:
   sensor capture, preprocessing, learned encoding, text decoding, hypothesis
   stabilization, rendering, and device scheduling; it is not an end-to-end
   real-time benchmark.
+- Loop 22 proves that one tiny model can learn an obvious generated motif task
+  while preserving that stream contract. Its perfect synthetic score does not
+  measure neural representation quality, character decoding, or user latency;
+  the registered test is consumed and cannot become a tuning set.
 - The local demo displays synthetic example text and aggregate-only real
   metrics. It is an evidence console, not a live real-MEG decoder; predictive
   confidence remains unavailable.
