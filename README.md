@@ -622,7 +622,9 @@ neurodecode make-neurotoken-cache \
 ```
 
 The result is a 76,646-byte `48 x 16 x 32` cache with exact numerical-payload
-replay and zero model, training, real-data, or holdout reads. These are mock
+replay and zero model, training, real-data, or holdout reads. A post-closeout
+access audit now records the seven signal/provenance NPZ members opened and
+proves that all five source target members remain unopened. These are mock
 continuous embeddings, not learned neurotokens, a decoder score, or a measured
 streaming system. See `docs/LOOP_20_NEUROTOKEN_CACHE_V0.md`.
 

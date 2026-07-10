@@ -113,7 +113,10 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   streaming/resource/claim metadata. A target-free deterministic mock producer
   writes a 76,646-byte `48 x 16 x 32` cache under a 4-MiB cap with zero model,
   training, real-data, or holdout reads. Its payload replays exactly; it is not
-  a learned representation or decoding result. See
+  a learned representation or decoding result. A post-closeout access audit
+  now proves the producer opens only seven signal/provenance members and does
+  not open any of the five target members; the exact payload hash is unchanged.
+  See
   `docs/LOOP_20_NEUROTOKEN_CACHE_V0.md`.
 - Post-roadmap Loop 21: Done as a synthetic causal chunk/replay gate. Five
   registered schedules preserve one canonical 553-frame payload bitwise,

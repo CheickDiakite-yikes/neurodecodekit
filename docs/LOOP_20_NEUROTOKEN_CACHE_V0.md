@@ -162,6 +162,89 @@ the numerical payload and semantic membership are stable.
 The NPZ contains 17 typed arrays plus metadata. It contains no `target_texts`
 or `target_token_ids` member.
 
+## Post-Closeout Selective-Access Audit
+
+A later access-level audit found that the original synthetic producer used the
+general sentence-cache loader. The projection never consumed target values,
+but that loader still opened the source target arrays in memory. Commit
+`389efe3` replaces it with a projection-only reader that opens exactly these
+seven NPZ members:
+
+```text
+metadata
+signals
+input_lengths
+trial_indices
+sentence_start_sec
+sentence_end_sec
+channel_names
+```
+
+The reader verifies that the five required target members exist in the source
+contract without indexing or loading them: `target_token_ids`,
+`target_lengths`, `target_texts`, `reference_texts`, and
+`mat_response_texts`. A regression test wraps `numpy.load`, records every
+source-member access across two deterministic projections, and fails if any
+target member is opened. The saved metadata now records both member lists and
+sets `target_text_array_opened` and `target_token_array_opened` to `false`.
+
+An independent bounded replay was written to the ignored local audit directory
+without replacing the primary Loop 20 artifact:
+
+```text
+input cache bytes:                 59,357
+token cache / metadata bytes:      76,825 / 11,992
+token shape / valid frames:        48 x 16 x 32 / 553
+padding fraction:                  0.279948
+runtime / internal peak RSS:       0.069754 sec / 43,401,216 bytes
+external maximum RSS:              43,548,672 bytes
+raw / real-cache reads:            0 / 0
+synthetic source-cache reads:      1
+model / training runs:             0 / 0
+producer causal:                   true
+end-to-end latency measured:       false
+payload replay:                    exact
+```
+
+The source, split-report, and payload hashes remain exactly the values above.
+The remaining configuration/provenance hashes are:
+
+```text
+semantic configuration SHA-256:
+df21cf660e07d24720e152585220b0eb4f8e1a3134aac110da1302f2d786fd7c
+
+projection weights SHA-256:
+662294774579675dcb838f41bdc998a103aa79bd68d4686daf4f1d9c7c20ba8d
+
+split protocol config SHA-256:
+503ec4e77c64dea4b30b435e48fa0ec21279b61630dde5081a2a1e917388002d
+
+split semantic membership SHA-256:
+23841cce0cb31057788385f039c91f797c5f169fc9a17b37ba24e3e597704fe1
+```
+
+All validate on load. The cache-plus-sidecar increase is 802 bytes and the
+total remains far below the declared 32 MiB cap.
+
+The complete replay warning set is:
+
+- `continuous_neurotokens_are_not_discrete_codes`
+- `mock_random_projection_is_not_a_learned_neural_representation`
+- `mock_projection_uses_no_target_text_or_target_labels`
+- `source_target_members_verified_present_but_not_opened`
+- `cache_contract_does_not_establish_decoding_accuracy`
+- `official_v2_reference_encoder_is_noncausal_whole_sentence`
+- `real_time_requires_a_causal_decoder_and_measured_end_to_end_latency`
+- `not_arbitrary_thought_decoding`
+- `some_or_all_source_channel_geometry_unavailable`
+- `synthetic_source_only_no_real_neural_representation_claim`
+
+Clean-commit verification at `389efe3` preserved the pre-change totals: 199
+unittest tests passed with 3 skipped; pytest reported 196 passed, 3 skipped,
+and 25 subtests passed. Full Ruff, compileall, root and Loop 20 CLI help, the
+bounded create/inspect round trip, and `git diff --check` also passed under
+one-thread numeric limits.
+
 ## Acceptance Result
 
 - stable continuous embedding, timing, mask, identity, split, geometry, and

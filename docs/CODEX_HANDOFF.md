@@ -15,7 +15,9 @@
 > no-signal prior. MOABB was not installed, no full EEG subtree was downloaded,
 > and EEG/MEG remain separate cohorts. Loop 20 adds a 76,646-byte synthetic
 > continuous NeuroTokenCache v0 with exact payload replay, but no learned
-> representation, decoder, or real-data result. Post-roadmap Loop 21 now proves
+> representation, decoder, or real-data result. Its post-closeout access audit
+> now verifies that only signal/provenance NPZ members are opened and all five
+> source target members remain unopened. Post-roadmap Loop 21 now proves
 > a synthetic causal frame producer across five transport schedules with zero
 > right context, exact frame/timestamp identity, bitwise schedule-invariant
 > output, and 300-byte mutable state. It runs no decoder, so text emission and
@@ -71,7 +73,8 @@ This repo is a starter scaffold with working pure-Python components:
   masks/timestamps, source geometry availability, strict split/source hashes,
   and explicit asynchronous/causal/latency distinctions
 - deterministic target-free synthetic embedding producer with item/token/byte
-  caps, collision refusal, create/inspect CLI, and exact payload replay
+  caps, collision refusal, create/inspect CLI, exact payload replay, and
+  access-tracked exclusion of every source target member
 - bounded causal mock frame stream with zero look-ahead, explicit
   drop-incomplete flush, global sample timestamps, and cap refusal
 - five-schedule causal replay gate with bitwise stream invariance, declared

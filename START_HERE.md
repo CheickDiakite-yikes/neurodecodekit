@@ -47,7 +47,8 @@ not useful EEG decoding or a portable-hardware claim. Loop 20 adds a
 76,646-byte synthetic `NeuroTokenCache v0` shaped `48 x 16 x 32`, with timing,
 masks, modality, geometry availability, strict split/source hashes, and
 explicit causality/resource boundaries. The deterministic target-free payload
-replays exactly, but it is not learned, not a decoding result, and not an
+replays exactly, and an access-tracked audit now confirms that no source target
+array is opened. It is not learned, not a decoding result, and not an
 end-to-end streaming claim. Loop 21 then passes a five-schedule synthetic
 causal replay gate: zero right context, exact frame/timestamp identity, bitwise
 stream-schedule identity, 300-byte mutable state, and no target/model/decoder/

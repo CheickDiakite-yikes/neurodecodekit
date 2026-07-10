@@ -997,6 +997,30 @@ Closeout verification:
   `dce9e92f02e5937d5e822f9facd6f659d2f840182c05be6e1dd912c79fa3bd59`
 - final Loop 20 cache artifacts: 204 KiB; about 17 GiB free
 
+### Loop 20 post-closeout selective-access hardening
+
+Audited and pushed on 2026-07-10 as commit `389efe3`. The original projection
+did not use target values, but its general sentence-cache loader still opened
+target arrays. The producer now uses a projection-only reader that opens
+exactly metadata, signals, lengths, row/trial timing, and channel names; it
+verifies five target members are present without indexing them. An access-
+tracking test covers two deterministic replays and fails on any target-member
+read.
+
+The independent ignored replay preserved the exact payload SHA-256 while
+writing a 76,825-byte cache and 11,992-byte sidecar from the 59,357-byte source.
+It produced `48 x 16 x 32` tokens, 553 valid frames, and 0.279948 padding in
+0.069754 seconds at 43,401,216-byte internal peak RSS. Raw-data reads,
+real-cache reads, model runs, and training runs remained zero; the producer is
+causal at frame availability and end-to-end latency remains unmeasured. One
+synthetic source cache was read. The primary historical artifact was not
+overwritten.
+
+Clean-commit verification preserved the existing baseline: 199 unittest tests
+passed with 3 skipped; pytest reported 196 passed, 3 skipped, and 25 subtests
+passed. Full Ruff, compileall, dependency-light import, CLI help, bounded
+create/inspect, and `git diff --check` passed under one-thread numeric caps.
+
 ## Post-roadmap Loop 21 - causal NeuroToken chunk/replay gate
 
 Completed on 2026-07-10 using the fixed 59,357-byte Loop 20 synthetic source,

@@ -663,3 +663,27 @@ only a separately preregistered synthetic streaming-decoder gate. Failing parks
 the branch without widening or reseeding against the same test partition.
 
 Evidence: `docs/LOOP_22_PREREGISTRATION.md`.
+
+## 0033 - Make target-free production an observable access boundary
+
+Decision: a producer described as target-free must not merely ignore target
+values after a general cache load. Its source reader must physically avoid
+opening target-text and target-token members, record the exact members opened,
+and carry explicit false access flags in output provenance.
+
+Why: Loop 20's deterministic projection never used labels, but the original
+general sentence-cache loader still materialized target arrays. That was not
+numerical leakage, yet it left the access claim weaker than the split and
+provenance contracts. The dedicated reader now opens only seven signal-side
+members while verifying five target members exist without indexing them. A
+wrapped-`numpy.load` regression test makes this boundary observable.
+
+Validation boundary: the hardened replay keeps the exact prior payload SHA-256
+and all source/split bindings. It adds 802 bytes across the cache and metadata
+sidecar, remains far below 32 MiB, and performs zero raw-data, real-cache,
+model, or training runs. This strengthens interface provenance only; it does
+not improve or validate a representation, classifier, decoder, or latency
+claim.
+
+Evidence: `docs/LOOP_20_NEUROTOKEN_CACHE_V0.md` and
+`tests/test_neurotoken.py`.
