@@ -274,6 +274,29 @@ train/validation/test partitions, not direct deployment of the v2 architecture
 or a real-time label. See `docs/LOOP_21_CAUSAL_CHUNK_REPLAY.md` and
 `docs/POST_20_ROADMAP.md`.
 
+## Loop 22 learned-encoder preregistration
+
+The public v2 repository HEAD was independently checked on 2026-07-10 at
+`3bf5a4099ca0d23bbe994b2287905760236e56e0`. Its model configuration combines
+a 1,500-hidden-channel convolutional stack, kernel-16/stride-4 downsampling,
+and a four-layer 1,024-dimensional Conformer. That is a useful interface map,
+not a viable local baseline: the paper reports eight A100 80 GB GPUs for its
+full training path and explicitly says the encoder is noncausal whole-sentence.
+
+The paper's methodology strengthens two Loop 22 controls. It assigns unique
+texts to deterministic 80/10/10 train/validation/test partitions, and its
+automated optimization path is hardcoded to validation data before a later
+test evaluation. Loop 22 translates those ideas into three physically separate
+tiny synthetic fixture files so the training gate can prove that test arrays
+remain unopened until one checkpoint is frozen.
+
+The registered model is intentionally only a shared causal window MLP with an
+8-dimensional embedding and a training-only motif probe. Generic temporal
+convolution research supports causal finite-history convolutions as a baseline;
+EEGNet supports compact convolutional feature extraction for EEG, but neither
+source proves this synthetic architecture will transfer to MEG, EEG, or a
+portable device. See `docs/LOOP_22_PREREGISTRATION.md`.
+
 ## Loop 19 EEG ecosystem decision
 
 MOABB remains useful for standardized EEG benchmark paradigms, but its stock

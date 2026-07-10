@@ -634,3 +634,32 @@ prefix decoding or real-cache conversion first.
 
 Evidence: `docs/LOOP_21_CAUSAL_CHUNK_REPLAY.md`,
 `docs/POST_20_ROADMAP.md`, and `cache/loop21_causal_replay/gate.json`.
+
+## 0032 - Freeze the tiny causal encoder protocol before creating its test fixture
+
+Decision: preregister Loop 22 before generating its dedicated synthetic test
+partition. Use physically separate 64/8/8 train/validation/test motif files,
+one 1,130-parameter kernel-16/stride-4 causal encoder and probe, train-only
+normalization/class weights, validation-selected early stopping, one test open,
+two signal-free controls, five-schedule replay, and explicit byte/runtime/RSS
+caps. Do not permit architecture candidates or initialization restarts.
+
+Why: the single Loop 20 NPZ contains every row in one compressed signal member,
+so selecting row indices after loading it cannot prove that test signals stayed
+unopened. Separate hash-bound files make the access boundary observable. The
+public v2 methods likewise separate deterministic membership, validation model
+selection, and later test evaluation, while its noncausal GPU-scale Conformer
+is far beyond this local mechanism gate.
+
+Validation decision: require balanced accuracy of at least 0.70, at least 0.35
+above the train-only prior, and raw accuracy at least 0.20 above that prior.
+Only then may the gate open test once. Test proceeds only if learned balanced
+and raw accuracy exceed both prior and zero-signal controls by 0.35 and 0.20,
+respectively, and the 2,000-resample paired item bootstrap lower bound over the
+prior is positive.
+
+Claim boundary: the motif probe is not CTC or text decoding. Passing authorizes
+only a separately preregistered synthetic streaming-decoder gate. Failing parks
+the branch without widening or reseeding against the same test partition.
+
+Evidence: `docs/LOOP_22_PREREGISTRATION.md`.
