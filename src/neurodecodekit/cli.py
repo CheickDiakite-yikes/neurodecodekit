@@ -400,6 +400,48 @@ def _cmd_inspect_manifest(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_inspect_recording(args: argparse.Namespace) -> int:
+    from neurodecodekit.datasets.local_intake import (
+        IntakeLimits,
+        inspect_local_recording,
+        write_intake_artifacts,
+    )
+
+    mib = 1024 * 1024
+    limits = IntakeLimits(
+        max_files=args.max_files,
+        max_depth=args.max_depth,
+        max_declared_input_bytes=int(args.max_input_mb * mib),
+        max_text_file_bytes=int(args.max_text_file_mb * mib),
+        max_text_total_bytes=int(args.max_text_total_mb * mib),
+        max_output_bytes=int(args.max_output_mb * mib),
+    )
+    result = inspect_local_recording(
+        args.path,
+        root_path=args.root,
+        modality=args.modality,
+        device_type=args.device_type,
+        registry_path=args.registry,
+        hash_text_metadata=args.hash_text_metadata,
+        limits=limits,
+    )
+    summary = write_intake_artifacts(result, args.out_dir, overwrite=args.overwrite)
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_inspect_intake_report(args: argparse.Namespace) -> int:
+    from neurodecodekit.datasets.local_intake import load_intake_report
+
+    summary = load_intake_report(
+        args.report,
+        audit_path=args.audit,
+        max_report_bytes=int(args.max_report_mb * 1024 * 1024),
+    )
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0
+
+
 def _cmd_list_hf_files(args: argparse.Namespace) -> int:
     from neurodecodekit.datasets.hf_access import (
         list_repo_file_records,
@@ -2443,6 +2485,87 @@ def build_parser() -> argparse.ArgumentParser:
     p = sub.add_parser("inspect-manifest", help="Summarize a manifest JSONL file.")
     p.add_argument("--manifest", required=True)
     p.set_defaults(func=_cmd_inspect_manifest)
+
+    p = sub.add_parser(
+        "inspect-recording",
+        help=(
+            "Create a bounded level-0 local recording report without opening "
+            "binary signal, event, label, or target content."
+        ),
+    )
+    p.add_argument(
+        "--path",
+        required=True,
+        help="Local .vhdr/.edf/.bdf/.set/.fif file or BIDS root directory.",
+    )
+    p.add_argument(
+        "--root",
+        default=None,
+        help="Optional security root; the resolved source and companions must stay inside it.",
+    )
+    p.add_argument("--out-dir", required=True, help="Directory for intake.json/.md/audit.json.")
+    p.add_argument(
+        "--registry",
+        default=None,
+        help="Optional local dataset-registry JSON to bind by schema/version/SHA-256.",
+    )
+    p.add_argument("--modality", default=None, help="Optional explicit modality label.")
+    p.add_argument("--device-type", default=None, help="Optional explicit device description.")
+    p.add_argument(
+        "--hash-text-metadata",
+        action="store_true",
+        help="Hash text metadata that the scanner already reads; binary files remain unopened.",
+    )
+    p.add_argument("--max-files", type=int, default=256, help="File cap. Default: 256.")
+    p.add_argument("--max-depth", type=int, default=8, help="Directory-depth cap. Default: 8.")
+    p.add_argument(
+        "--max-input-mb",
+        type=float,
+        default=4096.0,
+        help="Declared source-byte cap in MiB. Default: 4096.",
+    )
+    p.add_argument(
+        "--max-text-file-mb",
+        type=float,
+        default=1.0,
+        help="Per-text-metadata read cap in MiB. Default: 1.",
+    )
+    p.add_argument(
+        "--max-text-total-mb",
+        type=float,
+        default=8.0,
+        help="Total text-metadata read cap in MiB. Default: 8.",
+    )
+    p.add_argument(
+        "--max-output-mb",
+        type=float,
+        default=4.0,
+        help="Combined JSON/Markdown/audit cap in MiB. Default: 4.",
+    )
+    p.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Replace only the three registered artifacts in a nonempty output directory.",
+    )
+    p.set_defaults(func=_cmd_inspect_recording)
+
+    p = sub.add_parser(
+        "inspect-intake-report",
+        help="Strictly validate a saved local-intake report and measured audit sidecar.",
+    )
+    p.add_argument("--report", required=True, help="Path to deterministic intake.json.")
+    p.add_argument(
+        "--audit",
+        default=None,
+        help="Optional intake.audit.json; defaults to the report directory when present.",
+    )
+    p.add_argument(
+        "--max-report-mb",
+        type=float,
+        default=4.0,
+        help="Per-report inspection cap in MiB. Default: 4.",
+    )
+    p.set_defaults(func=_cmd_inspect_intake_report)
 
     p = sub.add_parser("list-hf-files", help="List files in a Hugging Face repo. Requires [hf].")
     p.add_argument("--repo-id", required=True)
