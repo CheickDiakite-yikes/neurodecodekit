@@ -407,7 +407,7 @@ def _run_schedule(
     total_tokens = 0
     for item_index, length_value in enumerate(input_lengths.tolist()):
         length = int(length_value)
-        sizes = _chunk_sizes(
+        sizes = registered_chunk_sizes(
             length,
             name=name,
             kernel_size=producer.kernel_size,
@@ -532,13 +532,15 @@ def _run_schedule(
     }
 
 
-def _chunk_sizes(
+def registered_chunk_sizes(
     total_samples: int,
     *,
     name: str,
     kernel_size: int,
     stride: int,
 ) -> list[int]:
+    """Return the fixed transport chunks for one registered replay schedule."""
+
     if name == "single-sample":
         pattern = [1]
     elif name == "stride-aligned":

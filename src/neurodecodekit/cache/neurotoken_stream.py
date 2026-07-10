@@ -5,7 +5,7 @@ from __future__ import annotations
 import hashlib
 import math
 from dataclasses import asdict, dataclass
-from typing import Any
+from typing import Any, Protocol
 
 from neurodecodekit.cache.neurotoken import (
     SUPPORTED_TOKEN_DTYPES,
@@ -14,6 +14,21 @@ from neurodecodekit.cache.neurotoken import (
 
 
 DROP_INCOMPLETE_FLUSH = "drop-incomplete"
+
+
+class CausalFrameProducer(Protocol):
+    """Minimal producer interface consumed by the shared causal window stream."""
+
+    n_channels: int
+    source_sampling_rate_hz: float
+    embedding_dim: int
+    kernel_size: int
+    stride: int
+    token_dtype: str
+    mutable_state_bound_bytes: int
+
+    def project_frame(self, frame) -> Any:
+        """Project one flattened complete frame to shape `[1, embedding]`."""
 
 
 @dataclass(frozen=True)
@@ -122,13 +137,23 @@ class CausalMockNeuroTokenProducer:
             max_total_tokens=max_total_tokens,
         )
 
+    def project_frame(self, frame):
+        """Project one complete frame with canonical one-row arithmetic."""
+
+        np = _require_numpy()
+        value = np.asarray(frame, dtype="float32")
+        expected = self.n_channels * self.kernel_size
+        if value.shape != (expected,):
+            raise ValueError(f"frame must be flattened with {expected} values")
+        return (value[None, :] @ self.weights).astype(self.token_dtype)
+
 
 class CausalMockNeuroTokenStream:
-    """One incremental stream with overlap state smaller than one kernel."""
+    """Producer-neutral incremental stream with sub-kernel overlap state."""
 
     def __init__(
         self,
-        producer: CausalMockNeuroTokenProducer,
+        producer: CausalFrameProducer,
         *,
         source_start_sec: float,
         max_chunk_samples: int,
@@ -240,15 +265,21 @@ class CausalMockNeuroTokenStream:
             ).astype("float32", copy=False)
             # Canonical per-frame arithmetic keeps output bits independent of
             # how many ready frames happen to share a transport chunk.
-            tokens = np.concatenate(
-                [
-                    (frame[None, :] @ self.producer.weights).astype(
-                        self.producer.token_dtype
+            projected = [
+                np.asarray(self.producer.project_frame(frame)) for frame in frames
+            ]
+            for value in projected:
+                if value.shape != (1, self.producer.embedding_dim):
+                    raise RuntimeError(
+                        "producer project_frame must return [1, embedding_dim]"
                     )
-                    for frame in frames
-                ],
-                axis=0,
-            )
+                if not np.issubdtype(value.dtype, np.floating) or not np.isfinite(
+                    value
+                ).all():
+                    raise RuntimeError("producer project_frame returned invalid values")
+            tokens = np.concatenate(projected, axis=0)
+            if str(tokens.dtype) != self.producer.token_dtype:
+                raise RuntimeError("producer project_frame returned the wrong dtype")
         else:
             tokens = np.zeros(
                 (0, self.producer.embedding_dim), dtype=self.producer.token_dtype
@@ -329,6 +360,9 @@ class CausalMockNeuroTokenStream:
             * self.producer.stride,
             "closed": self._closed,
         }
+
+
+CausalWindowTokenStream = CausalMockNeuroTokenStream
 
 
 def _require_numpy():

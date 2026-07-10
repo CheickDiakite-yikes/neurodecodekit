@@ -823,6 +823,90 @@ def _cmd_causal_replay_gate(args: argparse.Namespace) -> int:
     return 0 if report["gate_passed"] else 1
 
 
+def _cmd_make_causal_motif_fixture(args: argparse.Namespace) -> int:
+    from neurodecodekit.training.causal_motifs import prepare_causal_motif_fixture
+
+    manifest = prepare_causal_motif_fixture(
+        args.out_dir,
+        max_total_mb=args.max_total_mb,
+    )
+    print(json.dumps(manifest, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_inspect_causal_motif_fixture(args: argparse.Namespace) -> int:
+    from neurodecodekit.training.causal_motifs import (
+        PARTITION_NAMES,
+        load_causal_motif_manifest,
+    )
+
+    manifest = load_causal_motif_manifest(args.manifest)
+    summary = {
+        "schema": manifest["schema"],
+        "proof_posture": manifest["proof_posture"],
+        "registered_protocol_match": manifest["registered_protocol_match"],
+        "protocol_sha256": manifest["protocol_sha256"],
+        "metadata_only_no_partition_arrays_opened": True,
+        "artifacts": manifest["artifacts"],
+        "partitions": {
+            split: {
+                key: manifest["partitions"][split][key]
+                for key in (
+                    "path",
+                    "sha256",
+                    "bytes",
+                    "items",
+                    "signals_shape",
+                    "valid_samples",
+                    "valid_frames",
+                    "n_classes",
+                    "class_support",
+                    "seed",
+                )
+            }
+            for split in PARTITION_NAMES
+        },
+        "warnings": manifest["warnings"],
+        "claim_boundaries": manifest["claim_boundaries"],
+    }
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_tiny_causal_encoder_gate(args: argparse.Namespace) -> int:
+    from neurodecodekit.experiments.tiny_causal_encoder_gate import (
+        run_tiny_causal_encoder_gate,
+    )
+
+    report = run_tiny_causal_encoder_gate(
+        fixture_manifest_path=args.fixture_manifest,
+        checkpoint_out_path=args.checkpoint_out,
+        out_json_path=args.out_json,
+        out_markdown_path=args.out_md,
+    )
+    summary = {
+        "proof_posture": report["proof_posture"],
+        "gate_passed": report["gate_passed"],
+        "decision": report["decision"],
+        "registered_protocol_match": report["registered_protocol_match"],
+        "validation_gate": report["selection"]["validation_gate"],
+        "frozen_test": {
+            "opened": report["frozen_test"]["opened"],
+            "semantic_open_count": report["frozen_test"]["semantic_open_count"],
+            "gate": report["frozen_test"]["gate"],
+        },
+        "streaming_replay_passed": (
+            report["streaming_replay"]["passed"]
+            if report["streaming_replay"]
+            else False
+        ),
+        "resources": report["resources"],
+        "artifacts": report["artifacts"],
+    }
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0 if report["gate_passed"] else 1
+
+
 def _cmd_extract_sentence_cache(args: argparse.Namespace) -> int:
     from neurodecodekit.preprocess.sentence_extraction import extract_fif_mat_sentence_cache
 
@@ -2405,6 +2489,62 @@ def build_parser() -> argparse.ArgumentParser:
     )
     p.add_argument("--overwrite", action="store_true", help="Replace planned reports.")
     p.set_defaults(func=_cmd_causal_replay_gate)
+
+    p = sub.add_parser(
+        "make-causal-motif-fixture",
+        help=(
+            "Create the fixed three-partition Loop 22 synthetic motif fixture. "
+            "Requires NumPy; creates no text or neural data."
+        ),
+    )
+    p.add_argument(
+        "--out-dir",
+        required=True,
+        help="New output directory for manifest plus train/validation/test NPZ files.",
+    )
+    p.add_argument(
+        "--max-total-mb",
+        type=float,
+        default=1.0,
+        help="Hard complete-fixture cap in MiB. Default: 1.",
+    )
+    p.set_defaults(func=_cmd_make_causal_motif_fixture)
+
+    p = sub.add_parser(
+        "inspect-causal-motif-fixture",
+        help=(
+            "Validate the registered Loop 22 manifest without opening partition arrays."
+        ),
+    )
+    p.add_argument("--manifest", required=True, help="Registered fixture manifest JSON.")
+    p.set_defaults(func=_cmd_inspect_causal_motif_fixture)
+
+    p = sub.add_parser(
+        "tiny-causal-encoder-gate",
+        help=(
+            "Run the preregistered one-thread synthetic learned-encoder gate. "
+            "Requires [ml] and opens test only after validation passes."
+        ),
+        description=(
+            "Run the fixed Loop 22 synthetic gate. Set OMP_NUM_THREADS, "
+            "OPENBLAS_NUM_THREADS, MKL_NUM_THREADS, VECLIB_MAXIMUM_THREADS, "
+            "and NUMEXPR_NUM_THREADS to 1 before launch. The test partition is "
+            "opened only after validation selection and checkpoint freeze."
+        ),
+    )
+    p.add_argument(
+        "--fixture-manifest",
+        required=True,
+        help="Registered causal-motif manifest JSON.",
+    )
+    p.add_argument(
+        "--checkpoint-out",
+        required=True,
+        help="New safe numeric NPZ checkpoint path.",
+    )
+    p.add_argument("--out-json", required=True, help="New machine-readable gate report.")
+    p.add_argument("--out-md", required=True, help="New human-readable gate report.")
+    p.set_defaults(func=_cmd_tiny_causal_encoder_gate)
 
     p = sub.add_parser(
         "extract-windows",
