@@ -124,6 +124,94 @@ class CTCSymbolStreamFixtureTests(unittest.TestCase):
         self.assertIsNone(loaded.signals)
         self.assertIsNone(loaded.frame_labels)
 
+    def test_frame_only_access_never_indexes_target_members(self):
+        import numpy as np
+
+        from neurodecodekit.training.ctc_symbol_stream import (
+            FRAME_ONLY_MEMBERS,
+            load_ctc_symbol_stream_manifest,
+            load_ctc_symbol_stream_partition,
+            prepare_ctc_symbol_stream_fixture,
+            resolve_ctc_symbol_partition_path,
+        )
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            prepare_ctc_symbol_stream_fixture(root, protocol=self._protocol())
+            manifest_path = root / "manifest.json"
+            manifest = load_ctc_symbol_stream_manifest(
+                manifest_path, require_registered_protocol=False
+            )
+            train_path = resolve_ctc_symbol_partition_path(
+                manifest_path, manifest, "train"
+            )
+            real_load = np.load
+            accessed = []
+
+            class TrackingNpz:
+                def __init__(self, wrapped):
+                    self.wrapped = wrapped
+                    self.files = wrapped.files
+
+                def __enter__(self):
+                    return self
+
+                def __exit__(self, exc_type, exc, traceback):
+                    self.wrapped.close()
+
+                def __getitem__(self, name):
+                    accessed.append(name)
+                    return self.wrapped[name]
+
+            def tracking_load(*args, **kwargs):
+                return TrackingNpz(real_load(*args, **kwargs))
+
+            with patch("numpy.load", side_effect=tracking_load):
+                loaded = load_ctc_symbol_stream_partition(
+                    train_path,
+                    expected=manifest["partitions"]["train"],
+                    access_mode="frames-only",
+                )
+
+        self.assertEqual(tuple(accessed), FRAME_ONLY_MEMBERS)
+        self.assertEqual(loaded.opened_members, FRAME_ONLY_MEMBERS)
+        self.assertIsNone(loaded.target_token_ids)
+        self.assertIsNone(loaded.target_lengths)
+        self.assertIsNotNone(loaded.signals)
+        self.assertIsNotNone(loaded.frame_labels)
+
+    def test_custom_registered_protocol_and_access_contract_bind_manifest(self):
+        from neurodecodekit.training.ctc_symbol_stream import (
+            blank_calibration_access_contract,
+            load_ctc_symbol_stream_manifest,
+            prepare_ctc_symbol_stream_fixture,
+            registered_blank_calibration_protocol,
+        )
+
+        protocol = self._protocol()
+        access_contract = blank_calibration_access_contract()
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            created = prepare_ctc_symbol_stream_fixture(
+                root,
+                protocol=protocol,
+                registered_protocol=protocol,
+                access_contract=access_contract,
+            )
+            loaded = load_ctc_symbol_stream_manifest(
+                root / "manifest.json",
+                registered_protocol=protocol,
+                expected_access_contract=access_contract,
+            )
+
+        self.assertTrue(created["registered_protocol_match"])
+        self.assertTrue(loaded["registered_protocol_match"])
+        self.assertEqual(loaded["access_contract"], access_contract)
+        self.assertEqual(
+            registered_blank_calibration_protocol().protocol_sha256,
+            "ac8b0dfa1ee512dd55645356546a068bc6b7e145f945a2e947d63dcf87185cc9",
+        )
+
     def test_manifest_and_partition_reject_tampering_and_extra_members(self):
         import numpy as np
 

@@ -570,9 +570,15 @@ def _open_partition(
     return partition
 
 
-def _canonical_partition_decode(producer, partition) -> dict[str, Any]:
+def _canonical_partition_decode(
+    producer,
+    partition,
+    *,
+    blank_logit_bias: float = 0.0,
+    outputs: Mapping[str, Any] | None = None,
+) -> dict[str, Any]:
     started_at = time.perf_counter()
-    outputs = canonical_partition_outputs(producer, partition)
+    selected_outputs = outputs or canonical_partition_outputs(producer, partition)
     targets = _partition_targets(partition)
     prefix_predictions = []
     greedy_predictions = []
@@ -582,8 +588,8 @@ def _canonical_partition_decode(producer, partition) -> dict[str, Any]:
     max_greedy_state = 0
     for item_index, frame_count_value in enumerate(partition.frame_lengths.tolist()):
         frame_count = int(frame_count_value)
-        item_logits = outputs["logits"][offset : offset + frame_count]
-        frame_ends = outputs["frame_end_samples"][offset : offset + frame_count]
+        item_logits = selected_outputs["logits"][offset : offset + frame_count]
+        frame_ends = selected_outputs["frame_end_samples"][offset : offset + frame_count]
         item_report = _decode_item_logits(
             item_logits,
             frame_end_samples=frame_ends,
@@ -593,6 +599,7 @@ def _canonical_partition_decode(producer, partition) -> dict[str, Any]:
                 item_index, : int(partition.target_lengths[item_index])
             ],
             sampling_rate_hz=producer.source_sampling_rate_hz,
+            blank_logit_bias=blank_logit_bias,
         )
         item_report["item_id"] = str(partition.item_ids[item_index])
         prefix_predictions.append(tuple(item_report["prefix_final"]))
@@ -601,7 +608,7 @@ def _canonical_partition_decode(producer, partition) -> dict[str, Any]:
         max_greedy_state = max(max_greedy_state, item_report["max_greedy_state_bytes"])
         item_reports.append(item_report)
         offset += frame_count
-    if offset != len(outputs["logits"]):
+    if offset != len(selected_outputs["logits"]):
         raise RuntimeError("Loop 23 canonical frame offsets drifted")
     runtime = time.perf_counter() - started_at
     duration = float(partition.input_lengths.sum() / producer.source_sampling_rate_hz)
@@ -616,8 +623,8 @@ def _canonical_partition_decode(producer, partition) -> dict[str, Any]:
         "duration_sec": duration,
         "runtime_sec": round(runtime, 6),
         "real_time_factor": runtime / duration if duration else None,
-        "embedding_payload_sha256": outputs["embedding_payload_sha256"],
-        "logit_payload_sha256": _array_sha256(outputs["logits"]),
+        "embedding_payload_sha256": selected_outputs["embedding_payload_sha256"],
+        "logit_payload_sha256": _array_sha256(selected_outputs["logits"]),
         "max_prefix_state_bytes": max_prefix_state,
         "max_greedy_state_bytes": max_greedy_state,
     }
@@ -631,9 +638,14 @@ def _decode_item_logits(
     target,
     motif_end_samples,
     sampling_rate_hz: float,
+    blank_logit_bias: float = 0.0,
 ) -> dict[str, Any]:
     np = _require_numpy()
-    log_probabilities = _log_softmax(np.asarray(logits, dtype="float64"))
+    adjusted_logits = np.asarray(logits, dtype="float64").copy()
+    if not math.isfinite(blank_logit_bias):
+        raise ValueError("blank logit bias must be finite")
+    adjusted_logits[:, BLANK_ID] += blank_logit_bias
+    log_probabilities = _log_softmax(adjusted_logits)
     greedy = GreedyCTCDecoder(
         blank_id=BLANK_ID, max_output_length=MAX_PREFIX_LENGTH
     )
@@ -694,14 +706,20 @@ def _decode_item_logits(
     }
 
 
-def _zero_signal_predictions(producer, partition) -> list[tuple[int, ...]]:
+def _zero_signal_predictions(
+    producer, partition, *, blank_logit_bias: float = 0.0
+) -> list[tuple[int, ...]]:
     np = _require_numpy()
     raw_mean_frame = np.repeat(
         producer.normalization_mean[:, None], producer.kernel_size, axis=1
     ).reshape(-1)
     embedding = producer.project_frame(raw_mean_frame)[0]
     logits = producer.probe_embedding(embedding)[0]
-    log_probability = _log_softmax(logits.astype("float64", copy=False)[None, :])[0]
+    adjusted_logits = logits.astype("float64", copy=True)
+    if not math.isfinite(blank_logit_bias):
+        raise ValueError("blank logit bias must be finite")
+    adjusted_logits[BLANK_ID] += blank_logit_bias
+    log_probability = _log_softmax(adjusted_logits[None, :])[0]
     predictions = []
     for frame_count_value in partition.frame_lengths.tolist():
         decoder = PrefixBeamCTCDecoder(
@@ -722,6 +740,7 @@ def _run_validation_replay(
     *,
     max_total_pushes: int,
     max_chunk_samples: int,
+    blank_logit_bias: float = 0.0,
 ) -> dict[str, Any]:
     schedule_reports = []
     remaining_pushes = int(max_total_pushes)
@@ -776,8 +795,12 @@ def _run_validation_replay(
                     batch.availability_samples,
                 ):
                     logits = producer.probe_embedding(token)[0]
+                    logits = logits.astype("float64", copy=True)
+                    if not math.isfinite(blank_logit_bias):
+                        raise ValueError("blank logit bias must be finite")
+                    logits[BLANK_ID] += blank_logit_bias
                     log_probability = _log_softmax(
-                        logits.astype("float64", copy=False)[None, :]
+                        logits[None, :]
                     )[0]
                     greedy_trace.append(greedy.push(log_probability.tolist()).hypothesis)
                     prefix_trace.append(prefix.push(log_probability.tolist()).top_prefix)

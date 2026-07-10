@@ -991,6 +991,100 @@ def _cmd_streaming_ctc_gate(args: argparse.Namespace) -> int:
     return 0 if report["gate_passed"] else 1
 
 
+def _cmd_make_blank_calibration_fixture(args: argparse.Namespace) -> int:
+    from neurodecodekit.training.ctc_symbol_stream import (
+        prepare_blank_calibration_fixture,
+    )
+
+    manifest = prepare_blank_calibration_fixture(
+        args.out_dir,
+        max_total_mb=args.max_total_mb,
+    )
+    print(json.dumps(manifest, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_inspect_blank_calibration_fixture(args: argparse.Namespace) -> int:
+    from neurodecodekit.training.ctc_symbol_stream import (
+        PARTITION_NAMES,
+        load_blank_calibration_manifest,
+    )
+
+    manifest = load_blank_calibration_manifest(args.manifest)
+    summary = {
+        "schema": manifest["schema"],
+        "proof_posture": manifest["proof_posture"],
+        "registered_protocol_match": manifest["registered_protocol_match"],
+        "protocol_sha256": manifest["protocol_sha256"],
+        "metadata_only_no_partition_arrays_opened": True,
+        "access_contract": manifest["access_contract"],
+        "artifacts": manifest["artifacts"],
+        "partitions": {
+            split: {
+                key: manifest["partitions"][split][key]
+                for key in (
+                    "path",
+                    "sha256",
+                    "bytes",
+                    "items",
+                    "signals_shape",
+                    "valid_samples",
+                    "valid_frames",
+                    "target_tokens",
+                    "repeated_pair_count",
+                    "seed",
+                )
+            }
+            for split in PARTITION_NAMES
+        },
+        "warnings": manifest["warnings"],
+        "claim_boundaries": manifest["claim_boundaries"],
+    }
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_blank_intercept_gate(args: argparse.Namespace) -> int:
+    from neurodecodekit.experiments.blank_intercept_gate import (
+        run_blank_intercept_gate,
+    )
+
+    report = run_blank_intercept_gate(
+        fixture_manifest_path=args.fixture_manifest,
+        checkpoint_path=args.checkpoint,
+        out_json_path=args.out_json,
+        out_markdown_path=args.out_md,
+    )
+    summary = {
+        "proof_posture": report["proof_posture"],
+        "gate_passed": report["gate_passed"],
+        "decision": report["decision"],
+        "registered_protocol_match": report["registered_protocol_match"],
+        "registered_checkpoint_match": report["registered_checkpoint_match"],
+        "calibration": {
+            "intercept": report["calibration"]["intercept"],
+            "config_sha256": report["calibration"]["config_sha256"],
+            "parameter_payload_sha256": report["calibration"][
+                "parameter_payload_sha256"
+            ],
+            "train_metrics_before": report["calibration"]["train_metrics_before"],
+            "train_metrics_after": report["calibration"]["train_metrics_after"],
+        },
+        "validation_gate": report["validation"]["gate"],
+        "frozen_test": {
+            "opened": report["frozen_test"]["opened"],
+            "semantic_open_count": report["frozen_test"]["semantic_open_count"],
+            "gate": report["frozen_test"]["gate"],
+        },
+        "streaming_replay_passed": report["streaming_replay"]["passed"],
+        "resources": report["resources"],
+        "artifacts": report["artifacts"],
+        "warnings": report["warnings"],
+    }
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0 if report["gate_passed"] else 1
+
+
 def _cmd_extract_sentence_cache(args: argparse.Namespace) -> int:
     from neurodecodekit.preprocess.sentence_extraction import extract_fif_mat_sentence_cache
 
@@ -2685,6 +2779,63 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--out-json", required=True, help="New machine-readable gate report.")
     p.add_argument("--out-md", required=True, help="New human-readable gate report.")
     p.set_defaults(func=_cmd_streaming_ctc_gate)
+
+    p = sub.add_parser(
+        "make-blank-calibration-fixture",
+        help=(
+            "Create the fixed Loop 23.5 synthetic blank-calibration fixture. "
+            "Requires NumPy; creates no natural text or neural data."
+        ),
+    )
+    p.add_argument(
+        "--out-dir",
+        required=True,
+        help="New output directory for manifest plus train/validation/test NPZ files.",
+    )
+    p.add_argument(
+        "--max-total-mb",
+        type=float,
+        default=1.0,
+        help="Hard complete-fixture cap in MiB. Default: 1.",
+    )
+    p.set_defaults(func=_cmd_make_blank_calibration_fixture)
+
+    p = sub.add_parser(
+        "inspect-blank-calibration-fixture",
+        help=(
+            "Validate the registered Loop 23.5 manifest without opening partition arrays."
+        ),
+    )
+    p.add_argument("--manifest", required=True, help="Registered fixture manifest JSON.")
+    p.set_defaults(func=_cmd_inspect_blank_calibration_fixture)
+
+    p = sub.add_parser(
+        "blank-intercept-gate",
+        help=(
+            "Run the preregistered one-scalar synthetic blank-calibration gate. "
+            "Requires [ml] and opens test only after validation passes."
+        ),
+        description=(
+            "Fit one additive blank-logit intercept from fresh train frames, "
+            "then compare calibrated and unmodified CTC decoders. Set "
+            "OMP_NUM_THREADS, OPENBLAS_NUM_THREADS, MKL_NUM_THREADS, "
+            "VECLIB_MAXIMUM_THREADS, and NUMEXPR_NUM_THREADS to 1. No target "
+            "length, endpoint, language model, or model update is used."
+        ),
+    )
+    p.add_argument(
+        "--fixture-manifest",
+        required=True,
+        help="Registered Loop 23.5 fixture manifest JSON.",
+    )
+    p.add_argument(
+        "--checkpoint",
+        required=True,
+        help="Exact frozen Loop 22 tiny causal encoder checkpoint.",
+    )
+    p.add_argument("--out-json", required=True, help="New machine-readable gate report.")
+    p.add_argument("--out-md", required=True, help="New human-readable gate report.")
+    p.set_defaults(func=_cmd_blank_intercept_gate)
 
     p = sub.add_parser(
         "extract-windows",

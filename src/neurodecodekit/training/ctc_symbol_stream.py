@@ -24,6 +24,14 @@ TARGET_ONLY_MEMBERS = (
     "target_lengths",
     "item_ids",
 )
+FRAME_ONLY_MEMBERS = (
+    "metadata",
+    "signals",
+    "input_lengths",
+    "frame_labels",
+    "frame_lengths",
+    "item_ids",
+)
 FULL_ARRAY_MEMBERS = (
     "signals",
     "input_lengths",
@@ -101,8 +109,8 @@ class LoadedCTCSymbolPartition:
 
     path: str
     split: str
-    target_token_ids: Any
-    target_lengths: Any
+    target_token_ids: Any | None
+    target_lengths: Any | None
     item_ids: Any
     metadata: dict[str, Any]
     opened_members: tuple[str, ...]
@@ -119,10 +127,38 @@ def registered_ctc_symbol_stream_protocol() -> CTCSymbolStreamProtocol:
     return CTCSymbolStreamProtocol()
 
 
+def registered_blank_calibration_protocol() -> CTCSymbolStreamProtocol:
+    protocol = CTCSymbolStreamProtocol(
+        train_items=64,
+        validation_items=16,
+        test_items=16,
+        train_seed=2351,
+        validation_seed=2352,
+        test_seed=2353,
+    )
+    if protocol.protocol_sha256 != (
+        "ac8b0dfa1ee512dd55645356546a068bc6b7e145f945a2e947d63dcf87185cc9"
+    ):
+        raise RuntimeError("registered Loop 23.5 fixture protocol hash drifted")
+    return protocol
+
+
+def blank_calibration_access_contract() -> dict[str, object]:
+    return {
+        "train_calibration_open_mode": "frames_only_once",
+        "train_prior_open_mode": "targets_only_once",
+        "validation_open_mode": "full_once",
+        "test_open_after_validation_only": True,
+        "test_semantic_open_count_allowed": 1,
+    }
+
+
 def prepare_ctc_symbol_stream_fixture(
     out_dir: str | Path,
     *,
     protocol: CTCSymbolStreamProtocol | None = None,
+    registered_protocol: CTCSymbolStreamProtocol | None = None,
+    access_contract: Mapping[str, object] | None = None,
     max_total_mb: float = 1.0,
     overwrite: bool = False,
 ) -> dict[str, Any]:
@@ -168,7 +204,17 @@ def prepare_ctc_symbol_stream_fixture(
         )
 
     partition_bytes = sum(int(summary["bytes"]) for summary in summaries.values())
-    registered = registered_ctc_symbol_stream_protocol()
+    registered = registered_protocol or registered_ctc_symbol_stream_protocol()
+    _validate_protocol(registered)
+    selected_access_contract = dict(
+        access_contract
+        or {
+            "train_open_mode": "targets_only",
+            "validation_open_mode": "full_once",
+            "test_open_after_validation_only": True,
+            "test_semantic_open_count_allowed": 1,
+        }
+    )
     manifest: dict[str, Any] = {
         "schema": {
             "name": CTC_SYMBOL_MANIFEST_SCHEMA_NAME,
@@ -181,12 +227,7 @@ def prepare_ctc_symbol_stream_fixture(
         "symbols": {str(index + 1): value for index, value in enumerate(CTC_SYMBOL_NAMES)},
         "blank_id": 0,
         "partitions": summaries,
-        "access_contract": {
-            "train_open_mode": "targets_only",
-            "validation_open_mode": "full_once",
-            "test_open_after_validation_only": True,
-            "test_semantic_open_count_allowed": 1,
-        },
+        "access_contract": selected_access_contract,
         "warnings": [
             "synthetic_symbols_are_not_natural_text",
             "frozen_probe_was_not_trained_with_ctc_loss",
@@ -210,6 +251,41 @@ def prepare_ctc_symbol_stream_fixture(
         raise ValueError("Loop 23 fixture exceeds the declared byte cap")
     manifest_path.write_text(manifest_text, encoding="utf-8")
     return manifest
+
+
+def prepare_blank_calibration_fixture(
+    out_dir: str | Path,
+    *,
+    protocol: CTCSymbolStreamProtocol | None = None,
+    max_total_mb: float = 1.0,
+    overwrite: bool = False,
+) -> dict[str, Any]:
+    """Create a Loop 23.5 fixture bound to its separately registered protocol."""
+
+    selected = protocol or registered_blank_calibration_protocol()
+    return prepare_ctc_symbol_stream_fixture(
+        out_dir,
+        protocol=selected,
+        registered_protocol=registered_blank_calibration_protocol(),
+        access_contract=blank_calibration_access_contract(),
+        max_total_mb=max_total_mb,
+        overwrite=overwrite,
+    )
+
+
+def load_blank_calibration_manifest(
+    path: str | Path,
+    *,
+    require_registered_protocol: bool = True,
+) -> dict[str, Any]:
+    """Validate a Loop 23.5 compact manifest without partition access."""
+
+    return load_ctc_symbol_stream_manifest(
+        path,
+        require_registered_protocol=require_registered_protocol,
+        registered_protocol=registered_blank_calibration_protocol(),
+        expected_access_contract=blank_calibration_access_contract(),
+    )
 
 
 def make_ctc_symbol_stream_partition(
@@ -378,10 +454,10 @@ def load_ctc_symbol_stream_partition(
     expected: Mapping[str, Any] | None = None,
     access_mode: str = "full",
 ) -> LoadedCTCSymbolPartition:
-    """Read one file once and open either target-only or all array members."""
+    """Read one file once and materialize one declared member view."""
 
-    if access_mode not in {"targets-only", "full"}:
-        raise ValueError("access_mode must be targets-only or full")
+    if access_mode not in {"targets-only", "frames-only", "full"}:
+        raise ValueError("access_mode must be targets-only, frames-only, or full")
     np = _require_numpy()
     partition_path = Path(path)
     payload = partition_path.read_bytes()
@@ -391,10 +467,12 @@ def load_ctc_symbol_stream_partition(
         if str(expected.get("sha256")) != _sha256_bytes(payload):
             raise ValueError("Loop 23 partition hash does not match manifest")
     required_members = set(FULL_ARRAY_MEMBERS) | {"metadata"}
-    opened_names = TARGET_ONLY_MEMBERS if access_mode == "targets-only" else (
-        "metadata",
-        *FULL_ARRAY_MEMBERS,
-    )
+    if access_mode == "targets-only":
+        opened_names = TARGET_ONLY_MEMBERS
+    elif access_mode == "frames-only":
+        opened_names = FRAME_ONLY_MEMBERS
+    else:
+        opened_names = ("metadata", *FULL_ARRAY_MEMBERS)
     with np.load(io.BytesIO(payload), allow_pickle=False) as data:
         members = set(data.files)
         missing = sorted(required_members - members)
@@ -411,26 +489,30 @@ def load_ctc_symbol_stream_partition(
     target_arrays = {
         name: opened[name]
         for name in ("target_token_ids", "target_lengths", "item_ids")
+        if name in opened
     }
-    _validate_target_arrays(target_arrays, metadata)
-    if access_mode == "full":
+    if access_mode in {"targets-only", "full"}:
+        _validate_target_arrays(target_arrays, metadata)
+    if access_mode == "frames-only":
+        _validate_frame_arrays(opened, metadata)
+    elif access_mode == "full":
         _validate_full_arrays(opened, metadata)
-    actual = _partition_content_summary(opened, metadata, full=access_mode == "full")
+    actual = (
+        _frame_content_summary(opened, metadata)
+        if access_mode == "frames-only"
+        else _partition_content_summary(opened, metadata, full=access_mode == "full")
+    )
     if expected is not None:
-        fields = (
-            "schema",
-            "split",
-            "items",
-            "target_tokens",
-            "target_length_range",
-            "repeated_pair_count",
-            "target_symbol_support",
-            "item_ids_sha256",
-            "target_ids_sha256",
-            "seed",
-            "protocol_sha256",
-        )
-        if access_mode == "full":
+        fields = ("schema", "split", "items", "item_ids_sha256", "seed", "protocol_sha256")
+        if access_mode in {"targets-only", "full"}:
+            fields += (
+                "target_tokens",
+                "target_length_range",
+                "repeated_pair_count",
+                "target_symbol_support",
+                "target_ids_sha256",
+            )
+        if access_mode in {"frames-only", "full"}:
             fields += (
                 "signals_shape",
                 "signals_dtype",
@@ -446,9 +528,9 @@ def load_ctc_symbol_stream_partition(
     return LoadedCTCSymbolPartition(
         path=str(partition_path),
         split=str(metadata["split"]),
-        target_token_ids=target_arrays["target_token_ids"],
-        target_lengths=target_arrays["target_lengths"],
-        item_ids=target_arrays["item_ids"],
+        target_token_ids=target_arrays.get("target_token_ids"),
+        target_lengths=target_arrays.get("target_lengths"),
+        item_ids=opened["item_ids"],
         metadata=metadata,
         opened_members=tuple(opened_names),
         signals=opened.get("signals"),
@@ -465,6 +547,8 @@ def load_ctc_symbol_stream_manifest(
     path: str | Path,
     *,
     require_registered_protocol: bool = True,
+    registered_protocol: CTCSymbolStreamProtocol | None = None,
+    expected_access_contract: Mapping[str, object] | None = None,
 ) -> dict[str, Any]:
     """Validate only the compact manifest; do not touch partition files."""
 
@@ -493,7 +577,9 @@ def load_ctc_symbol_stream_manifest(
     _validate_protocol(protocol)
     if manifest.get("protocol_sha256") != protocol.protocol_sha256:
         raise ValueError("Loop 23 manifest protocol hash mismatch")
-    registered_match = protocol == registered_ctc_symbol_stream_protocol()
+    registered = registered_protocol or registered_ctc_symbol_stream_protocol()
+    _validate_protocol(registered)
+    registered_match = protocol == registered
     if manifest.get("registered_protocol_match") is not registered_match:
         raise ValueError("Loop 23 registered-protocol flag is inconsistent")
     if require_registered_protocol and not registered_match:
@@ -570,12 +656,15 @@ def load_ctc_symbol_stream_manifest(
         for name in ("sha256", "item_ids_sha256", "target_ids_sha256"):
             if not _is_sha256(summary.get(name)):
                 raise ValueError(f"Loop 23 manifest {split} {name} is invalid")
-    expected_access = {
-        "train_open_mode": "targets_only",
-        "validation_open_mode": "full_once",
-        "test_open_after_validation_only": True,
-        "test_semantic_open_count_allowed": 1,
-    }
+    expected_access = dict(
+        expected_access_contract
+        or {
+            "train_open_mode": "targets_only",
+            "validation_open_mode": "full_once",
+            "test_open_after_validation_only": True,
+            "test_semantic_open_count_allowed": 1,
+        }
+    )
     if manifest.get("access_contract") != expected_access:
         raise ValueError("Loop 23 manifest access contract is invalid")
     artifacts = manifest.get("artifacts")
@@ -677,6 +766,101 @@ def _partition_content_summary(
             }
         )
     return summary
+
+
+def _frame_content_summary(
+    arrays: Mapping[str, Any], metadata: Mapping[str, Any]
+) -> dict[str, Any]:
+    np = _require_numpy()
+    frame_labels = arrays["frame_labels"]
+    frame_lengths = arrays["frame_lengths"]
+    valid_frames = np.concatenate(
+        [
+            frame_labels[index, : int(length)]
+            for index, length in enumerate(frame_lengths.tolist())
+        ]
+    )
+    frame_support = np.bincount(
+        valid_frames.astype("int64"),
+        minlength=int(metadata["protocol"]["n_symbols"]) + 1,
+    )
+    return {
+        "schema": dict(metadata["schema"]),
+        "split": str(metadata["split"]),
+        "items": int(len(arrays["item_ids"])),
+        "item_ids_sha256": _sha256_json(arrays["item_ids"].tolist()),
+        "seed": int(metadata["seed"]),
+        "protocol_sha256": str(metadata["protocol_sha256"]),
+        "signals_shape": [int(value) for value in arrays["signals"].shape],
+        "signals_dtype": str(arrays["signals"].dtype),
+        "valid_samples": int(arrays["input_lengths"].sum()),
+        "valid_frames": int(frame_lengths.sum()),
+        "frame_class_support": [int(value) for value in frame_support.tolist()],
+    }
+
+
+def _validate_frame_arrays(
+    arrays: Mapping[str, Any], metadata: Mapping[str, Any]
+) -> None:
+    np = _require_numpy()
+    required = {name for name in FRAME_ONLY_MEMBERS if name != "metadata"}
+    missing = sorted(required - set(arrays))
+    if missing:
+        raise ValueError(f"Loop 23 frame arrays are missing: {missing}")
+    protocol = _protocol_from_metadata(metadata)
+    split = str(metadata["split"])
+    n_items = int(getattr(protocol, f"{split}_items"))
+    item_ids = np.asarray(arrays["item_ids"])
+    if (
+        item_ids.shape != (n_items,)
+        or item_ids.dtype.kind != "U"
+        or item_ids.tolist()
+        != [f"{split}-{metadata['seed']}-{index:04d}" for index in range(n_items)]
+    ):
+        raise ValueError("Loop 23 frame item IDs do not match split, seed, and row order")
+    signals = np.asarray(arrays["signals"])
+    if (
+        signals.shape != (n_items, protocol.n_channels, protocol.max_timepoints)
+        or signals.dtype != np.dtype("float32")
+        or not np.isfinite(signals).all()
+    ):
+        raise ValueError("Loop 23 frame signals violate shape, dtype, or finite contract")
+    input_lengths = np.asarray(arrays["input_lengths"])
+    frame_lengths = np.asarray(arrays["frame_lengths"])
+    frame_labels = np.asarray(arrays["frame_labels"])
+    for name, values in (
+        ("input_lengths", input_lengths),
+        ("frame_lengths", frame_lengths),
+    ):
+        if values.shape != (n_items,) or not np.issubdtype(values.dtype, np.integer):
+            raise ValueError(f"Loop 23 frame {name} must be an integer item vector")
+    if frame_labels.shape != (n_items, protocol.max_frames):
+        raise ValueError("Loop 23 frame labels do not match protocol geometry")
+    base_length = protocol.lead_width + protocol.tail_width - protocol.gap_width
+    symbol_step = protocol.motif_width + protocol.gap_width
+    for index, length_value in enumerate(input_lengths.tolist()):
+        length = int(length_value)
+        numerator = length - base_length
+        if numerator % symbol_step:
+            raise ValueError("Loop 23 frame input length is outside target geometry")
+        target_length = numerator // symbol_step
+        if target_length < protocol.min_target_length or target_length > protocol.max_target_length:
+            raise ValueError("Loop 23 frame input length is outside target bounds")
+        expected_frames = 1 + (length - protocol.kernel_size) // protocol.stride
+        if int(frame_lengths[index]) != expected_frames:
+            raise ValueError("Loop 23 frame length does not match kernel/stride")
+        valid_labels = frame_labels[index, :expected_frames]
+        if (
+            not np.issubdtype(frame_labels.dtype, np.integer)
+            or (valid_labels < 0).any()
+            or (valid_labels > protocol.n_symbols).any()
+            or not (frame_labels[index, expected_frames:] == -1).all()
+        ):
+            raise ValueError("Loop 23 frame labels violate class or padding contract")
+        if not np.array_equal(
+            signals[index, :, length:], np.zeros_like(signals[index, :, length:])
+        ):
+            raise ValueError("Loop 23 frame signal padding must be exactly zero")
 
 
 def _validate_target_arrays(
