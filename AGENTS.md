@@ -24,28 +24,32 @@ Do not optimize for impressiveness before reproducibility. A boring baseline tha
 
 ## Immediate next task
 
-The safe discovery/selection loop is scaffolded. Next, implement the first real downloaded-block-to-window-cache loop:
+The first 20-loop roadmap is complete except for the deliberately parked Loop
+13 backend. Next, define a synthetic causal chunk/replay contract over
+`NeuroTokenCache v0` before adding a learned encoder or causal decoder:
 
 ```bash
-neurodecode extract-windows \
-  --raw data/spanishbcbl_tiny/.../block1.fif \
-  --events data/spanishbcbl_tiny/.../logs.mat \
-  --out cache/b2qmini_s1_block1.npz \
-  --sfreq 50 \
-  --tmin -0.2 \
-  --tmax 0.3
+neurodecode inspect-neurotoken-cache \
+  --cache cache/loop20_neurotoken/neurotokens_v0.npz
 ```
 
-Keep the real-data download step explicit: `download-selection` is dry-run by default and requires `--execute` to fetch files.
+Specify chunk boundaries, bounded state, right context, flush behavior,
+offline-versus-streaming equivalence, and measured producer latency using only
+synthetic fixtures. Keep both observed S21 MEG holdouts and the S7 EEG result
+frozen. Any future real-data acquisition remains dry-run by default and
+requires explicit byte caps plus `--execute`.
 
 ## Acceptance criteria for next PR
 
 - `python -m unittest discover -s tests` passes.
 - CLI has useful `--help` text.
-- Real-data extraction uses optional MNE imports only.
+- New numerical or model dependencies remain optional.
 - No full-dataset download can happen accidentally.
-- The extraction command reports shape, sampling rate, source files, and output bytes.
-- Docs explain exactly what was verified and what remains a stub.
+- Streaming tests cover multiple chunk boundaries and final partial chunks.
+- Reports separate producer causality, decoder causality, right context, and
+  measured end-to-end latency.
+- Runtime, peak memory, state bytes, and artifact bytes stay under explicit caps.
+- Docs explain exactly what was verified and what remains synthetic or untested.
 
 ## Style
 

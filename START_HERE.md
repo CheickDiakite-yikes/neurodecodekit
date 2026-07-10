@@ -13,7 +13,7 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 Current verified state: two complete S21 SpanishBCBL MEG recordings plus one
 94,842,381-byte S7 SpanishBCBL EEG BrainVision bundle and their matching MAT
 logs have been selectively downloaded under exact caps; the full dataset and
-12.79-GB EEG subtree have not been downloaded. Loops 9-12 and 14-19 are
+12.79-GB EEG subtree have not been downloaded. Loops 9-12 and 14-20 are
 complete; Loop 13 is parked.
 Session 1 provides a strict 55/6/5 split with
 train-only robust scaling. Session 2 is a complete two-part FIFF recording with
@@ -43,6 +43,10 @@ dependency gate, lazily aligns all 2,534 MAT triggers to one real S7 EEG file,
 and writes a 12,428,800-byte `2197 x 61 x 25` cache. Its first transparent
 within-session classifier is a negative result: 0.91% exact key-label accuracy
 versus 12.27% for the train-only no-signal prior. This is bridge validation,
-not useful EEG decoding or a portable-hardware claim. Continue with Loop 20's
-small modality-aware neurotoken/cache interface. See
-`docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md`.
+not useful EEG decoding or a portable-hardware claim. Loop 20 adds a
+76,646-byte synthetic `NeuroTokenCache v0` shaped `48 x 16 x 32`, with timing,
+masks, modality, geometry availability, strict split/source hashes, and
+explicit causality/resource boundaries. The deterministic target-free payload
+replays exactly, but it is not learned, not a decoding result, and not an
+end-to-end streaming claim. Continue with a synthetic causal chunk/replay gate.
+See `docs/LOOP_20_NEUROTOKEN_CACHE_V0.md`.

@@ -1,6 +1,6 @@
 # Codex Handoff — NeuroDecodeKit Starter
 
-> Current handoff, 2026-07-10: Loops 1-12 and 14-19 are complete; Loop 13 is
+> Current handoff, 2026-07-10: Loops 1-12 and 14-20 are complete; Loop 13 is
 > parked after its measured NPZ gate. Two S21 MEG sessions support strict
 > sentence-text and same-subject session protocols, but the fixed tiny CTC has
 > no reliable neural advantage and fails the cross-session comparison against
@@ -13,9 +13,12 @@
 > `2197 x 61 x 25` cache. The first nearest-centroid EEG event result is clearly
 > negative at 0.91% exact key-label accuracy versus 12.27% for the train-only
 > no-signal prior. MOABB was not installed, no full EEG subtree was downloaded,
-> and EEG/MEG remain separate cohorts. There is no unseen-person, useful EEG,
-> integer-only inference, real-time, portable-hardware, arbitrary-thought, or
-> clinical claim. See `docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md`.
+> and EEG/MEG remain separate cohorts. Loop 20 adds a 76,646-byte synthetic
+> continuous NeuroTokenCache v0 with exact payload replay, but no learned
+> representation, decoder, or real-data result. There is no unseen-person,
+> useful EEG, integer-only inference, real-time, portable-hardware,
+> arbitrary-thought, or clinical claim. See
+> `docs/LOOP_20_NEUROTOKEN_CACHE_V0.md`.
 
 ## State of the repo
 
@@ -60,6 +63,11 @@ This repo is a starter scaffold with working pure-Python components:
 - pinned metadata-only EEG bridge gate with complete-triplet/log validation
 - lazy BrainVision plus MAT-trigger extraction into B2Q-mini cache v0
 - exact key-label paired comparison against a same-split train-only prior
+- modality-aware NeuroTokenCache v0 with continuous time-major embeddings,
+  masks/timestamps, source geometry availability, strict split/source hashes,
+  and explicit asynchronous/causal/latency distinctions
+- deterministic target-free synthetic embedding producer with item/token/byte
+  caps, collision refusal, create/inspect CLI, and exact payload replay
 - JSON/Markdown metrics report command
 - CLI smoke commands
 - unit tests
@@ -72,12 +80,12 @@ negative within-session event comparison. None is a decoder success. Do not
 turn these results, a variance ranking, or a geometry proxy into unseen-person
 or population generalization.
 
-Current verification on 2026-07-10: 185 unittest tests passed with 3 skipped;
-pytest reported 182 passed, 3 skipped, and 21 subtests passed. Full Ruff lint,
+Current verification on 2026-07-10: 191 unittest tests passed with 3 skipped;
+pytest reported 188 passed, 3 skipped, and 21 subtests passed. Full Ruff lint,
 compileall, CLI help, artifact-contract checks, workbook formulas and all-sheet
 visual checks, and `git diff --check` passed. The tracked and delivered workbook
 hashes match at
-`fe07c8b2cdc8b944e57bd6b2b9518f1ee0aecc91778106b40664d315e41d47b8`.
+`dce9e92f02e5937d5e822f9facd6f659d2f840182c05be6e1dd912c79fa3bd59`.
 A repository-wide formatter check was not applied as unrelated mechanical
 churn.
 
@@ -93,18 +101,20 @@ This is not primarily a model repo. It is a **research loop repo**.
 
 ## Current next 3 loops
 
-1. **Loop 20 - neurotokens / v2-ready interface.** Define a small
-   modality-aware cache/embedding contract over existing arrays and synthetic
-   fixtures. Preserve timebase, geometry, masks, split IDs, and provenance;
-   assume no unreleased v2 data and train no larger model.
-2. **Adapter research gate.** Compare regularized covariance alignment for
-   stationary mixing with causal rolling statistics for temporal drift on
-   synthetic validation before considering another real session.
-3. **Freeze observed real evaluation data.** Do not tune on the five source test
-   rows or 63 consumed session-2 rows. Pre-register any future real holdout.
+1. **Causal chunk/replay contract.** On synthetic streams, define chunk
+   boundaries, bounded state, right context, flush behavior, offline-versus-
+   streaming equivalence, and measured producer latency before adding a causal
+   decoder.
+2. **Learned local encoder gate.** Only after the streaming contract passes,
+   evaluate whether a small train-only encoder can write NeuroTokenCache v0
+   under explicit CPU/RAM/storage budgets and no observed-holdout tuning.
+3. **Adapter and future real-holdout preregistration.** Compare covariance and
+   rolling-statistic mechanisms on synthetic validation, then preregister a new
+   real cohort before any one-time evaluation. Keep the five source test rows
+   and 63 consumed session-2 rows frozen.
 
-Loop 19 evidence and exact next gate:
-`docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md`.
+Loop 20 evidence and exact next gate:
+`docs/LOOP_20_NEUROTOKEN_CACHE_V0.md`.
 
 ## Historical original PR plan
 

@@ -106,6 +106,15 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   versus 12.27% for a train-only no-signal prior. MOABB is not installed; EEG
   and MEG remain separate cohorts. See
   `docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md`.
+- Loop 20: Done as a synthetic NeuroTokenCache v0 interface proof. The schema
+  stores continuous `[items,time,embedding]` vectors with lengths, masks,
+  timestamps, source rows/trials, subject/session IDs, modality, timebase,
+  geometry plus availability, strict split hashes, source hashes, and explicit
+  streaming/resource/claim metadata. A target-free deterministic mock producer
+  writes a 76,646-byte `48 x 16 x 32` cache under a 4-MiB cap with zero model,
+  training, real-data, or holdout reads. Its payload replays exactly; it is not
+  a learned representation or decoding result. See
+  `docs/LOOP_20_NEUROTOKEN_CACHE_V0.md`.
 - Current proof boundary: two real S21 MEG sessions are alignment, sentence-cache,
   rate-resource, channel-proxy, representation-fidelity, and current NPZ-access
   verified at the applicable stages. Sentence-text membership and robust
@@ -115,12 +124,11 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   advantage, unseen-person performance, retained-accuracy,
   optimal-sensor/precision, integer-only inference, OPM-equivalence, or
   low-latency streaming claim.
-- Next action: begin Loop 20 with a small modality-aware neurotoken/cache
-  interface over existing arrays and synthetic embeddings. Preserve modality,
-  timebase, channel geometry, masks, split IDs, and provenance. Assume no
-  unreleased v2 data, train no larger model, and keep observed MEG/EEG results
-  frozen. Any covariance-aware or causal rolling adapter remains a separate
-  synthetic validation gate.
+- Next action: open the post-roadmap causal chunk/replay gate on synthetic
+  streams. Specify chunk boundaries, state, right context, offline-versus-
+  streaming equivalence, and measured producer latency before implementing a
+  causal decoder. Keep observed MEG/EEG results frozen; learned encoders,
+  real-cache conversion, and adapter research remain separate gates.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |
@@ -144,7 +152,7 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
 | 17 | UX & Reproducibility | Gradio Demo v1 | Can a smart outsider understand the loop in 60 seconds? | Load compact artifacts; show synthetic signal/target/prediction/error views plus aggregate real evidence and provenance. | One local command; 19 examples; 8/8 audit; desktop/mobile interaction QA; unavailable confidence and noncausal scope visible. | P1 | M | Closed: artifact-backed console passes resource, proof, interaction, and responsive-layout gates without opening real holdouts. |
 | 18 | UX & Reproducibility | Leaderboard + Report Cards | Can every experiment be compared without spreadsheet archaeology? | Versioned cards with metrics, config, cache metadata, source hashes, Markdown, CSV, and a CLI table. | 11 saved runs in 6 exact cohorts; deterministic replay; malformed/mixed schemas rejected; no global rank or holdout reopening. | P1 | M | Closed: artifact-only report cards make missing metadata and proof boundaries visible in 103,789 bytes. |
 | 19 | Expansion | EEG / MOABB Bridge | Can the same tooling support easier-to-access EEG without pretending it will match MEG? | Native SpanishBCBL BrainVision gate, complete-triplet selection, lazy trigger-aligned cache, and same-split prior comparison. | One pinned 94,842,381-byte bundle produces a valid `2197 x 61 x 25` cache; exact key-label accuracy is reported as a negative 0.91% versus 12.27% prior without cross-modality claims. | P3 | L | Closed: native task-matched EEG bridge validated under caps; MOABB parked and no useful decoder advantage claimed. |
-| 20 | Expansion | Neurotokens / v2-ready Interface | Can we design a future interface for neural embeddings without depending on unreleased data? | Add placeholder `NeuroTokenCache` interface and synthetic embedding demo. | No v2-data assumptions; interface can ingest embeddings later. | P2 | M | Design the neurotoken interface as a small abstraction, not a grand architecture rewrite. |
+| 20 | Expansion | Neurotokens / v2-ready Interface | Can we design a future interface for neural embeddings without depending on unreleased data? | Versioned continuous `NeuroTokenCache` schema, create/inspect CLI, and deterministic target-free synthetic projection. | `48 x 16 x 32` smoke preserves timing, masks, modality, geometry availability, strict split/source hashes, and resource/causality boundaries in 76,646 bytes; payload replay is exact; no model, training, real holdout, learned-token, decoding, or real-time claim. | P2 | M | Closed: small official-v2-shaped interface is validated; next gate is causal chunk/replay behavior, not a larger model. |
 
 ## Anti-patterns
 - Do not download a large dataset slice without an explicit dry-run report and `--execute` confirmation.

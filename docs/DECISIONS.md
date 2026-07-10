@@ -565,3 +565,35 @@ Evidence: `docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md`,
 `cache/loop19_eeg_bridge/gate/report.json`,
 `cache/loop19_eeg_bridge/extraction.json`, and
 `cache/loop19_eeg_bridge/template_report.json`.
+
+## 0030 - Make neurotokens a continuous interface before making them a model claim
+
+Decision: close Loop 20 with a versioned `NeuroTokenCache v0` contract and a
+target-free synthetic producer. Store continuous `[items,time,embedding]`
+vectors plus timing, masks, source identity, modality, geometry availability,
+strict split/source hashes, resources, and explicit causality fields. Do not
+call the mock vectors discrete, learned, semantic, or decoder-ready evidence.
+
+Why: the public Brain2Qwerty v2 encoder exposes a time-major per-frame
+`z_final` representation, but its English data is not public and its reference
+encoder is noncausal whole-sentence. A small schema can preserve that future
+boundary without importing its unavailable data or GPU-scale training recipe.
+The Loop 20 producer uses fixed overlapping frames and seeded Gaussian weights
+only to prove serialization and downstream interface shape.
+
+Validation boundary: one 48-item synthetic source with a strict 37/4/7 split
+produces a 76,646-byte `48 x 16 x 32` float32 cache. An independent replay has
+the same token payload SHA-256
+`82b478948bdcfd5b2d12643f9f912c192a8977c8f0554b9f073171cf6dfe2709`.
+The NPZ contains no target-text or target-token array. Model runs, training
+runs, real-data reads, and observed-holdout reads are all zero.
+
+Streaming boundary: at 100 Hz, kernel 16 and stride 4 yield 160-ms mock frame
+availability and 40-ms steps. The producer is causal at the frame boundary,
+but downstream causality is unspecified and end-to-end latency is unmeasured.
+The next gate is synthetic causal chunk/replay equivalence, not a larger model
+or a real-data score.
+
+Evidence: `docs/LOOP_20_NEUROTOKEN_CACHE_V0.md`,
+`cache/loop20_neurotoken/neurotokens_v0.metadata.json`, and
+`cache/loop20_neurotoken/neurotokens_v0.summary.json`.

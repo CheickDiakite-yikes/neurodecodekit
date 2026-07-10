@@ -600,6 +600,32 @@ no-signal prior. Text CER is explicitly non-primary for key tokens such as
 `SPACE`. EEG and MEG remain separate evidence cohorts. See
 `docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md`.
 
+Loop 20 adds `NeuroTokenCache v0`, a modality-aware continuous embedding
+contract shaped `[items,time,embedding]`. It preserves lengths, masks, frame
+timestamps, source rows/trials, subject/session IDs, modality, sampling rate,
+channel geometry plus availability, strict split/source hashes, resource caps,
+and separate asynchronous/producer-causal/end-to-end-latency fields. The
+bounded smoke uses only synthetic signals and a deterministic target-free
+projection:
+
+```bash
+neurodecode make-neurotoken-cache \
+  --source-cache cache/loop20_neurotoken/source_sentences.npz \
+  --split-report cache/loop20_neurotoken/split/split.json \
+  --out cache/loop20_neurotoken/neurotokens_v0.npz \
+  --metadata-out cache/loop20_neurotoken/neurotokens_v0.metadata.json \
+  --summary-json cache/loop20_neurotoken/neurotokens_v0.summary.json \
+  --modality synthetic --device-type synthetic-array \
+  --subject-id SYN-1 --session-id SESSION-1 \
+  --embedding-dim 32 --kernel-size 16 --stride 4 \
+  --max-items 64 --max-tokens-per-item 128 --max-output-mb 4
+```
+
+The result is a 76,646-byte `48 x 16 x 32` cache with exact numerical-payload
+replay and zero model, training, real-data, or holdout reads. These are mock
+continuous embeddings, not learned neurotokens, a decoder score, or a measured
+streaming system. See `docs/LOOP_20_NEUROTOKEN_CACHE_V0.md`.
+
 Loop 5 closeout checks:
 
 ```bash
@@ -646,6 +672,10 @@ Current limitations:
 - The tiny CTC is non-causal and not a real-time decoder. Its first strict real
   five-row test is near-null, and its independent-session result is materially
   worse than the prior.
+- NeuroTokenCache v0 validates an embedding interface, not representation
+  quality. Its Loop 20 vectors are deterministic random projections from
+  synthetic signals; producer causality and 160-ms frame availability do not
+  establish downstream-decoder causality or end-to-end latency.
 - The local demo displays synthetic example text and aggregate-only real
   metrics. It is an evidence console, not a live real-MEG decoder; predictive
   confidence remains unavailable.

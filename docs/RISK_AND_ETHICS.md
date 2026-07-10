@@ -16,6 +16,12 @@ NeuroDecodeKit is a research/developer tool for making non-invasive neural decod
   evidence, or session/subject generalization.
 - The released v2 architecture is whole-sentence and non-causal; asynchronous
   decoding is not the same as low-latency streaming.
+- A continuous embedding cache is not evidence of learned neural semantics.
+  Loop 20 uses target-free random projections from synthetic signals only.
+  Calling those vectors learned or discrete neurotokens, or converting their
+  160-ms frame-availability time into end-to-end latency, would overstate the
+  result. Producer causality, downstream-decoder causality, and measured device
+  latency must remain separate fields.
 - The public studies record people physically typing memorized or prompted
   sentences. They do not demonstrate arbitrary thought decoding.
 - Wearable OPM-MEG removes cryogenic sensor cooling, but current systems still

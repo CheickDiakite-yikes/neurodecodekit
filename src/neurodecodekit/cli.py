@@ -742,6 +742,56 @@ def _cmd_inspect_representation_cache(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_make_neurotoken_cache(args: argparse.Namespace) -> int:
+    from neurodecodekit.cache.neurotoken import project_sentence_cache_to_neurotokens
+
+    if args.summary_json:
+        summary_path = Path(args.summary_json)
+        if summary_path.exists() and not args.overwrite:
+            raise FileExistsError(f"Refusing to replace summary JSON: {summary_path}")
+    result = project_sentence_cache_to_neurotokens(
+        source_cache_path=args.source_cache,
+        split_report_path=args.split_report,
+        out_path=args.out,
+        metadata_sidecar=args.metadata_out,
+        modality=args.modality,
+        device_type=args.device_type,
+        subject_id=args.subject_id,
+        session_id=args.session_id,
+        source_sampling_rate_hz=args.source_sfreq,
+        embedding_dim=args.embedding_dim,
+        kernel_size=args.kernel_size,
+        stride=args.stride,
+        seed=args.seed,
+        token_dtype=args.token_dtype,
+        max_items=args.max_items,
+        max_tokens_per_item=args.max_tokens_per_item,
+        max_output_mb=args.max_output_mb,
+        overwrite=args.overwrite,
+    )
+    if args.summary_json:
+        summary_path.parent.mkdir(parents=True, exist_ok=True)
+        summary_path.write_text(
+            json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+        )
+    print(json.dumps(result, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_inspect_neurotoken_cache(args: argparse.Namespace) -> int:
+    from neurodecodekit.cache.neurotoken import (
+        load_neurotoken_cache,
+        write_neurotoken_metadata_sidecar,
+    )
+
+    loaded = load_neurotoken_cache(args.cache)
+    print(json.dumps(loaded.summary.to_dict(), indent=2, sort_keys=True))
+    if args.metadata_out:
+        write_neurotoken_metadata_sidecar(args.cache, args.metadata_out)
+        print(f"Wrote neurotoken metadata sidecar to {args.metadata_out}")
+    return 0
+
+
 def _cmd_extract_sentence_cache(args: argparse.Namespace) -> int:
     from neurodecodekit.preprocess.sentence_extraction import extract_fif_mat_sentence_cache
 
@@ -2168,6 +2218,66 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--cache", required=True)
     p.add_argument("--metadata-out", default=None, help="Optional JSON metadata sidecar path.")
     p.set_defaults(func=_cmd_inspect_representation_cache)
+
+    p = sub.add_parser(
+        "make-neurotoken-cache",
+        help=(
+            "Create a bounded target-free continuous embedding cache for interface "
+            "validation. Requires NumPy."
+        ),
+    )
+    p.add_argument("--source-cache", required=True, help="Validated sentence-cache NPZ path.")
+    p.add_argument(
+        "--split-report",
+        required=True,
+        help="Strict-ready Split Protocol v1 JSON bound to the source cache.",
+    )
+    p.add_argument("--out", required=True, help="Output NeuroTokenCache v0 NPZ path.")
+    p.add_argument("--metadata-out", default=None, help="Optional full metadata sidecar path.")
+    p.add_argument("--summary-json", default=None, help="Optional compact run-summary JSON path.")
+    p.add_argument("--modality", required=True, help="Source modality, for example MEG or EEG.")
+    p.add_argument("--device-type", required=True, help="Source sensor/device description.")
+    p.add_argument("--subject-id", required=True, help="Subject identifier stored per item.")
+    p.add_argument("--session-id", required=True, help="Session identifier stored per item.")
+    p.add_argument(
+        "--source-sfreq",
+        type=float,
+        default=None,
+        help="Source sampling rate override when cache metadata does not provide it.",
+    )
+    p.add_argument("--embedding-dim", type=int, default=32, help="Embedding width. Default: 32.")
+    p.add_argument("--kernel-size", type=int, default=16, help="Frame width. Default: 16 samples.")
+    p.add_argument("--stride", type=int, default=4, help="Frame stride. Default: 4 samples.")
+    p.add_argument("--seed", type=int, default=23, help="Projection seed. Default: 23.")
+    p.add_argument(
+        "--token-dtype",
+        choices=["float32", "float16"],
+        default="float32",
+        help="Stored embedding dtype. Default: float32.",
+    )
+    p.add_argument("--max-items", type=int, default=128, help="Hard source-item cap. Default: 128.")
+    p.add_argument(
+        "--max-tokens-per-item",
+        type=int,
+        default=4096,
+        help="Hard per-item token cap. Default: 4096.",
+    )
+    p.add_argument(
+        "--max-output-mb",
+        type=float,
+        default=32.0,
+        help="Hard projected and written output cap in MiB. Default: 32.",
+    )
+    p.add_argument("--overwrite", action="store_true", help="Replace planned outputs.")
+    p.set_defaults(func=_cmd_make_neurotoken_cache)
+
+    p = sub.add_parser(
+        "inspect-neurotoken-cache",
+        help="Validate and summarize a continuous NeuroTokenCache v0 NPZ.",
+    )
+    p.add_argument("--cache", required=True)
+    p.add_argument("--metadata-out", default=None, help="Optional JSON metadata sidecar path.")
+    p.set_defaults(func=_cmd_inspect_neurotoken_cache)
 
     p = sub.add_parser(
         "extract-windows",

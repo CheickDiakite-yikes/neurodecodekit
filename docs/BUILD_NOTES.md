@@ -907,7 +907,7 @@ processed session, so it is a plumbing/negative-baseline result rather than a
 sentence, session, subject, or hardware-generalization claim. EEG and MEG stay
 in separate evidence cohorts.
 
-Workbook closeout target:
+Workbook closeout:
 
 - Done: 18; average progress: 90.5%; Expansion: 1/2, 50%
 - Loop 20 prompt requires a modality-aware cache/embedding interface using
@@ -929,3 +929,70 @@ Closeout verification:
   `fe07c8b2cdc8b944e57bd6b2b9518f1ee0aecc91778106b40664d315e41d47b8`
 - final Loop 19 cache-directory artifacts: 12,774,604 bytes; local selected EEG
   tree including Hub metadata: 95,031,468 bytes; about 17 GiB free
+
+## Loop 20 - NeuroTokenCache v0 synthetic interface
+
+Completed on 2026-07-10 without opening a real neural cache, observed holdout,
+or unreleased v2 data, and without running a model, training, downloading data,
+or adding a dependency.
+
+Implemented:
+
+- optional-NumPy `NeuroTokenCache v0` with continuous
+  `[items,time,embedding]` vectors, lengths, masks, frame timestamps, item and
+  source identities, subject/session IDs, split labels, and source geometry
+- normalized metadata for modality/device, timebase, geometry availability,
+  official-v2 mapping, exact source/split hashes, transformations, resources,
+  warnings, and claim boundaries
+- separate asynchronous-input, producer-causality, decoder-causality,
+  right-context, and measured end-to-end-latency fields
+- deterministic target-free Gaussian frame projection with item/token/byte caps
+- `make-neurotoken-cache` and `inspect-neurotoken-cache` CLI commands with
+  collision refusal, metadata sidecar, and compact run summary
+- tests for round trip, hash stability, mask/timestamp/vector padding failures,
+  output caps, strict split binding, target-array absence, CLI behavior, and
+  existing-output refusal
+
+Observed:
+
+```text
+source: 48 x 5 x 77 / 59,357 bytes
+strict split: 37 train / 4 validation / 7 test
+tokens: 48 x 16 x 32 float32 / 553 valid frames
+token cache / metadata: 76,646 / 11,369 bytes
+primary Loop 20 directory: 204 KiB
+runtime / maximum RSS: 0.09 sec / 44,564,480 bytes
+payload SHA-256: 82b478948bdcfd5b2d12643f9f912c192a8977c8f0554b9f073171cf6dfe2709
+independent payload replay: exact
+model / training / real-data reads: 0 / 0 / 0
+end-to-end latency measured: false
+free disk after run: about 17 GiB
+```
+
+Interpretation: the interface is ready to receive a future learned encoder
+output, but the current vectors are synthetic continuous mock embeddings. At
+100 Hz the producer's kernel-16/stride-4 frames become available after 160 ms
+and step every 40 ms; that is not a causal decoder or measured end-to-end
+latency result.
+
+Workbook closeout target:
+
+- Done: 19; average progress: 95.5%; Expansion: 2/2, 100%
+- next prompt requires a synthetic causal chunk/replay contract before a
+  learned encoder or causal decoder
+
+Closeout verification:
+
+- full unittest discovery: 191 tests passed, 3 skipped, 6.794 sec; external
+  maximum RSS 487,784,448 bytes under one-thread numeric caps
+- full pytest: 188 passed, 3 skipped, 21 subtests passed, 6.45 sec; external
+  maximum RSS 496,402,432 bytes under one-thread numeric caps
+- full Ruff check, compileall, dependency-light module import, root CLI help,
+  both Loop 20 command helps, and `git diff --check`: passed
+- artifact reconciliation: exact source/split binding, `48 x 16 x 32` shape,
+  553 valid frames, target-array absence, zero model/training/real reads, and
+  independent token-payload replay all pass
+- workbook: all seven sheets rendered and inspected; formula-error scan found
+  zero matches; tracked and deliverable SHA-256 are both
+  `dce9e92f02e5937d5e822f9facd6f659d2f840182c05be6e1dd912c79fa3bd59`
+- final Loop 20 cache artifacts: 204 KiB; about 17 GiB free

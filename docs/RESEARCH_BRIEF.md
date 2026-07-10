@@ -234,11 +234,16 @@ is sound for that file, but the minimally processed nearest-centroid result is
 negative: 0.91% exact key-label accuracy versus 12.27% for a train-only prior.
 This is not an EEG decoding-quality or hardware-portability result.
 
-Next, keep every observed MEG and EEG result frozen and define the Loop 20
-modality-aware neurotoken/cache interface over existing arrays and synthetic
-embeddings. Causal MEG/EEG preprocessing and adapter research remain separate
-future gates. Treat OPM-MEG as a hardware research partnership rather than a
-consumer-product assumption.
+Loop 20 now defines that modality-aware interface as continuous
+`[items,time,embedding]` vectors with masks, timestamps, source identity,
+timebase, geometry availability, strict split hashes, and explicit causality
+and resource metadata. Its only producer is a deterministic target-free
+synthetic projection; the exact payload replays, but no learned representation
+or decoding value is established. The next gate is causal chunk/replay behavior
+on synthetic streams, including state, right context, flush semantics, and
+offline-versus-streaming equivalence. Causal MEG/EEG preprocessing, learned
+encoders, and adapter research remain separate future gates. Treat OPM-MEG as
+a hardware research partnership rather than a consumer-product assumption.
 
 ## Loop 19 EEG ecosystem decision
 
@@ -259,7 +264,9 @@ The durable abstraction may be:
 raw neural stream → calibrated neurotokens → text/action model
 ```
 
-For now, “neurotokens” should be treated as a research interface, not a solved standard. The v0 version can simply be cached event-window embeddings with metadata.
+For now, “neurotokens” are a research interface, not a solved standard. Loop
+20's v0 artifact stores continuous frame embeddings rather than discrete
+codes, and its synthetic mock producer is deliberately not learned.
 
 ## Useful ecosystem
 

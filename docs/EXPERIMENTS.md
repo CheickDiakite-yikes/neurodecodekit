@@ -817,6 +817,57 @@ decision: bridge validated; transparent decoder result negative
 Full method and interpretation:
 `docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md`.
 
+## Experiment 18 - NeuroTokenCache v0 synthetic interface proof
+
+Purpose: define and exercise a future encoder-output contract without opening
+real neural caches, observed holdouts, or unreleased Brain2Qwerty v2 data, and
+without training or evaluating a model.
+
+```bash
+neurodecode make-neurotoken-cache \
+  --source-cache cache/loop20_neurotoken/source_sentences.npz \
+  --split-report cache/loop20_neurotoken/split/split.json \
+  --out cache/loop20_neurotoken/neurotokens_v0.npz \
+  --metadata-out cache/loop20_neurotoken/neurotokens_v0.metadata.json \
+  --summary-json cache/loop20_neurotoken/neurotokens_v0.summary.json \
+  --modality synthetic --device-type synthetic-array \
+  --subject-id SYN-1 --session-id SESSION-1 \
+  --embedding-dim 32 --kernel-size 16 --stride 4 --seed 23 \
+  --max-items 64 --max-tokens-per-item 128 --max-output-mb 4
+```
+
+Acceptance:
+
+- continuous time-major embedding schema compatible with the public v2
+  `z_final` boundary
+- explicit lengths, masks, frame timestamps, source rows/trials, modality,
+  timebase, subject/session, geometry availability, and transformations
+- strict split/source hash binding and deterministic semantic identity
+- target-free synthetic producer with item, token, and byte caps
+- collision refusal plus create/inspect CLI round trip
+- asynchronous input, producer causality, decoder causality, and measured
+  end-to-end latency represented separately
+- no learned-token, decoding, real-time, unseen-person, hardware, or clinical
+  claim
+
+Observed:
+
+```text
+source / token shapes: 48 x 5 x 77 / 48 x 16 x 32
+strict split: 37 train / 4 validation / 7 test
+valid frames / padding fraction: 553 / 0.279948
+source / token / metadata bytes: 59,357 / 76,646 / 11,369
+primary artifact directory: 204 KiB
+wall time / peak RSS: 0.09 sec / 44,564,480 bytes
+model / training / real reads: 0 / 0 / 0
+payload replay: exact
+end-to-end latency measured: false
+decision: interface validated; representation and decoding value untested
+```
+
+Full method and interpretation:
+`docs/LOOP_20_NEUROTOKEN_CACHE_V0.md`.
+
 ## Anti-goals
 
 Do not do these until the earlier experiments pass:
