@@ -1,0 +1,553 @@
+{
+  "schema_name": "neurodecodekit.signal_quality_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "rw2-synthetic-signal-quality-v0",
+  "prepared_at": "2026-07-10",
+  "status": "preregistered_no_reader_implementation",
+  "proof_posture": "primary_source_research_and_frozen_protocol_only",
+  "current_compatibility_level": 0,
+  "target_compatibility": {
+    "scope": "exact_synthetic_item_and_exact_reader_configuration_only",
+    "level_1": "bounded_signal_readable",
+    "level_2": "channels_timing_events_and_geometry_status_validated",
+    "levels_3_through_6": "unavailable_in_rw2"
+  },
+  "authorization": {
+    "implementation_authorized_after_contract_commit": true,
+    "synthetic_files_only": true,
+    "real_signal_read_authorized": false,
+    "consumed_s7_or_s21_access_authorized": false,
+    "s20_access_authorized": false,
+    "download_authorized": false,
+    "mne_bids_install_or_use_authorized": false,
+    "model_or_training_authorized": false,
+    "target_label_or_prediction_output_authorized": false,
+    "signal_cache_authorized": false
+  },
+  "dependencies": {
+    "base_dependencies_added": [],
+    "optional_extra": "neuro",
+    "local_versions_observed": {
+      "mne": "1.12.1",
+      "numpy": "2.5.0",
+      "scipy": "1.18.0",
+      "mne_bids": null,
+      "pyedflib": null
+    },
+    "implementation_rule": "imports_must_remain_inside_optional_functions",
+    "version_rule": "validate_the_supported_range_or_tighten_the_optional_extra_in_the_implementation_commit"
+  },
+  "format_adapters": [
+    {
+      "family": "brainvision",
+      "reader": "mne.io.read_raw_brainvision",
+      "arguments": {
+        "eog": [],
+        "misc": [],
+        "scale": 1.0,
+        "ignore_marker_types": false,
+        "preload": false,
+        "verbose": "ERROR"
+      },
+      "synthetic_target_level": 2,
+      "annotation_policy": "aggregate_onset_duration_counts_only_descriptions_redacted",
+      "hard_refusals": [
+        "missing_or_unsafe_companion",
+        "unexpected_preload",
+        "noncontinuous_source"
+      ]
+    },
+    {
+      "family": "edf_or_edf_plus",
+      "reader": "mne.io.read_raw_edf",
+      "arguments": {
+        "eog": null,
+        "misc": null,
+        "stim_channel": null,
+        "exclude": [],
+        "infer_types": false,
+        "include": null,
+        "preload": false,
+        "units": null,
+        "encoding": "utf8",
+        "exclude_after_unique": false,
+        "verbose": "ERROR"
+      },
+      "synthetic_target_level": 2,
+      "level_2_precondition": "one_source_sampling_rate_proven",
+      "hard_refusals": [
+        "unexpected_preload",
+        "implicit_channel_exclusion",
+        "mixed_or_unknown_source_rates_for_level_2"
+      ]
+    },
+    {
+      "family": "bdf",
+      "reader": "mne.io.read_raw_bdf",
+      "arguments": {
+        "eog": null,
+        "misc": null,
+        "stim_channel": null,
+        "exclude": [],
+        "infer_types": false,
+        "include": null,
+        "preload": false,
+        "units": null,
+        "encoding": "utf8",
+        "exclude_after_unique": false,
+        "verbose": "ERROR"
+      },
+      "synthetic_target_level": 2,
+      "level_2_precondition": "one_source_sampling_rate_proven",
+      "hard_refusals": [
+        "unexpected_preload",
+        "implicit_channel_exclusion",
+        "mixed_or_unknown_source_rates_for_level_2"
+      ]
+    },
+    {
+      "family": "eeglab",
+      "reader": "mne.io.read_raw_eeglab",
+      "arguments": {
+        "eog": [],
+        "preload": false,
+        "uint16_codec": null,
+        "montage_units": "auto",
+        "verbose": "ERROR"
+      },
+      "synthetic_target_level": 2,
+      "required_layout": "continuous_single_trial_set_plus_external_fdt",
+      "hard_refusals": [
+        "embedded_signal_matrix",
+        "epoched_set",
+        "alleeg",
+        "old_dat_payload",
+        "missing_fdt",
+        "unexpected_preload"
+      ]
+    },
+    {
+      "family": "fif",
+      "reader": "mne.io.read_raw_fif",
+      "arguments": {
+        "allow_maxshield": false,
+        "preload": false,
+        "on_split_missing": "raise",
+        "verbose": "ERROR"
+      },
+      "synthetic_target_level": 2,
+      "hard_refusals": [
+        "missing_split",
+        "maxshield_required",
+        "unexpected_preload"
+      ]
+    },
+    {
+      "family": "bids",
+      "reader": "rw1_safe_resolver_then_explicit_direct_mne_reader",
+      "mne_bids_read_raw_bids_used": false,
+      "synthetic_target_level": 2,
+      "level_2_event_states": [
+        "present_aggregate_only",
+        "absent_by_fixture_contract"
+      ],
+      "hard_refusals": [
+        "ambiguous_raw_item",
+        "event_sidecar_requires_content_access",
+        "inherited_sidecar_ambiguity",
+        "symlink",
+        "direct_reader_refusal"
+      ]
+    }
+  ],
+  "bounded_read": {
+    "channel_policy": {
+      "maximum_channels": 512,
+      "include_source_declared_bads": true,
+      "separate_channel_types": true,
+      "brain_or_physiology_types": [
+        "eeg",
+        "mag",
+        "grad",
+        "eog",
+        "ecg",
+        "emg",
+        "seeg",
+        "ecog",
+        "dbs",
+        "bio"
+      ],
+      "never_credit_as_brain_signal": [
+        "stim",
+        "misc",
+        "syst",
+        "eyegaze",
+        "pupil",
+        "ref_meg"
+      ]
+    },
+    "window_policy": {
+      "maximum_windows": 3,
+      "target_window_seconds": 4.0,
+      "anchor_fractions": [
+        0.05,
+        0.5,
+        0.95
+      ],
+      "clip_to_valid_samples": true,
+      "deduplicate_overlaps": true,
+      "preserve_chronological_order": true,
+      "minimum_samples_per_window": 128,
+      "shorten_equally_to_fit_global_cap": true
+    },
+    "maximum_channel_sample_values": 4194304,
+    "expected_materialized_dtype": "float64",
+    "maximum_materialized_signal_array_bytes": 33554432,
+    "get_data_arguments": {
+      "return_times": true,
+      "units": null,
+      "reject_by_annotation": null
+    },
+    "payload_hash": "sha256_of_channel_order_window_indices_little_endian_float64_values_and_timestamps",
+    "persist_signal_values": false,
+    "physical_storage_bytes_read": "unavailable_without_validated_io_instrumentation"
+  },
+  "metadata_contract": {
+    "required": [
+      "schema_contract_and_source_hashes",
+      "complete_reader_name_arguments_and_dependency_versions",
+      "relative_source_identity",
+      "channel_count_order_names_types_and_source_bads",
+      "sampling_rate_sample_count_duration_and_first_sample",
+      "selected_window_indices_and_timestamps",
+      "mne_si_unit_by_channel_type_and_source_unit_availability",
+      "source_highpass_lowpass_line_frequency_projectors_compensation_and_reference",
+      "finite_geometry_count_coordinate_frame_availability_and_hash",
+      "aggregate_annotation_count_timing_and_original_time_presence",
+      "quality_metrics_warnings_caps_resources_and_access_counters",
+      "offline_noncausal_status_and_unmeasured_end_to_end_latency"
+    ],
+    "causal_status": "offline_noncausal_descriptive_audit",
+    "end_to_end_latency_measured": false
+  },
+  "privacy": {
+    "local_only": true,
+    "network_calls": 0,
+    "omit": [
+      "absolute_paths",
+      "participant_rows_and_demographics",
+      "measurement_and_acquisition_timestamps",
+      "subject_info_payload",
+      "experimenter_project_and_free_text_descriptions",
+      "device_serial_numbers",
+      "event_and_annotation_descriptions_and_extras",
+      "bids_trial_columns",
+      "free_text_channel_status_descriptions",
+      "exact_sensor_and_head_shape_coordinates",
+      "waveform_samples"
+    ],
+    "allow": [
+      "presence_booleans",
+      "aggregate_counts",
+      "coordinate_frame_names",
+      "channel_names_types_and_units",
+      "hashes"
+    ]
+  },
+  "no_mutation": {
+    "required_before_after_identity": [
+      "selected_window_payload",
+      "channel_names_types_and_order",
+      "info_bads",
+      "annotations_onsets_durations_and_in_memory_description_hash",
+      "projector_activation_and_state",
+      "custom_reference_and_compensation_state",
+      "sampling_rate_and_sample_count",
+      "geometry_payload"
+    ],
+    "forbidden_operations": [
+      "filter",
+      "notch_filter",
+      "resample",
+      "rereference",
+      "apply_projection",
+      "change_compensation",
+      "maxwell_filter_or_sss_tsss",
+      "interpolate_bads",
+      "ica",
+      "clip",
+      "scale_or_normalize",
+      "set_annotations",
+      "mutate_info_bads"
+    ]
+  },
+  "time_domain_metrics": {
+    "scope": "per_channel_per_selected_window_in_si_units",
+    "metrics": [
+      "sample_count",
+      "finite_fraction",
+      "exact_zero_fraction",
+      "adjacent_equal_fraction",
+      "minimum",
+      "percentile_01",
+      "median",
+      "percentile_99",
+      "maximum",
+      "median_absolute_deviation",
+      "centered_rms",
+      "peak_to_peak",
+      "maximum_absolute_first_difference"
+    ],
+    "aggregate_by_channel_type": [
+      "count",
+      "minimum",
+      "median",
+      "maximum",
+      "unavailable_count"
+    ],
+    "raw_arrays_emitted": false
+  },
+  "welch_psd": {
+    "function": "mne.time_frequency.psd_array_welch",
+    "fmin_hz": 0.5,
+    "fmax_hz": "min(100.0,sfreq/2.0)",
+    "segment_seconds": 2.0,
+    "n_per_seg": "min(round(2.0*sfreq),n_window_samples)",
+    "n_fft": "n_per_seg",
+    "n_overlap": "floor(n_per_seg/2)",
+    "window": "hann",
+    "average": "median",
+    "remove_dc": true,
+    "n_jobs": 1,
+    "output": "power",
+    "minimum_samples": 128,
+    "bands_hz": {
+      "delta": [
+        0.5,
+        4.0
+      ],
+      "theta": [
+        4.0,
+        8.0
+      ],
+      "alpha": [
+        8.0,
+        13.0
+      ],
+      "beta": [
+        13.0,
+        30.0
+      ],
+      "low_gamma": [
+        30.0,
+        45.0
+      ]
+    },
+    "line_noise_centers_hz": [
+      50.0,
+      60.0
+    ],
+    "line_center_half_width_hz": 1.0,
+    "line_sidebands_relative_hz": [
+      [
+        -5.0,
+        -2.0
+      ],
+      [
+        2.0,
+        5.0
+      ]
+    ],
+    "generic_pass_fail_threshold": null
+  },
+  "warnings": {
+    "structural": [
+      "nonfinite_samples_present",
+      "exact_constant_channel_window",
+      "duplicate_channel_names",
+      "nonmonotonic_or_wrong_length_timestamps",
+      "unsupported_or_unknown_units",
+      "reference_unknown",
+      "geometry_unavailable_or_partially_finite",
+      "source_bad_channel_declarations_present",
+      "source_filters_or_projectors_present",
+      "mixed_rate_edf_bdf_unresolved",
+      "reader_unexpectedly_preloaded",
+      "sample_resource_or_output_cap_reached",
+      "before_after_mutation_mismatch"
+    ],
+    "advisory": {
+      "relative_rms_outlier_candidate": {
+        "minimum_same_type_channels": 8,
+        "metric": "robust_z_of_log_centered_rms",
+        "absolute_threshold": 6.0,
+        "declares_bad_channel": false
+      }
+    },
+    "generic_profile_unavailable": [
+      "amplitude_threshold",
+      "clipping_threshold",
+      "flat_difference_threshold",
+      "line_noise_ratio_threshold"
+    ],
+    "mne_annotate_amplitude_used": false,
+    "warnings_mutate_or_delete_data": false
+  },
+  "synthetic_fixtures": [
+    {
+      "id": "clean_multitype_continuous",
+      "purpose": "exact_channels_units_timing_values_geometry_and_no_structural_warning"
+    },
+    {
+      "id": "exact_flat_channel",
+      "purpose": "one_exact_constant_warning_without_mutation"
+    },
+    {
+      "id": "nonfinite_samples",
+      "purpose": "finite_fraction_warning_and_deterministic_unavailable_metrics"
+    },
+    {
+      "id": "relative_rms_outlier",
+      "purpose": "one_advisory_candidate_among_at_least_eight_same_type_channels"
+    },
+    {
+      "id": "line_components_50_60_hz",
+      "purpose": "psd_peak_and_ratio_recovery_without_generic_bad_declaration"
+    },
+    {
+      "id": "missing_geometry_and_reference",
+      "purpose": "explicit_unavailable_warnings_without_reader_failure"
+    },
+    {
+      "id": "safe_nonsemantic_annotations",
+      "purpose": "aggregate_timing_only_and_no_description_in_artifacts"
+    },
+    {
+      "id": "malformed_and_cap_refusals",
+      "purpose": "path_companion_split_embedded_eeglab_preload_sample_and_output_refusals"
+    }
+  ],
+  "access_counters": [
+    "metadata_header_files_read",
+    "annotation_metadata_files_read",
+    "raw_reader_opens",
+    "bounded_signal_read_calls",
+    "requested_sample_values",
+    "returned_sample_values",
+    "materialized_signal_array_bytes",
+    "physical_storage_bytes_read_or_unavailable",
+    "real_data_reads",
+    "consumed_cache_reads",
+    "target_label_values_emitted_or_used",
+    "model_runs",
+    "training_runs",
+    "network_calls",
+    "output_bytes"
+  ],
+  "resource_caps": {
+    "workers": 1,
+    "numerical_threads": 1,
+    "max_source_files": 256,
+    "max_directory_depth": 8,
+    "max_declared_source_bytes": 4294967296,
+    "max_channels": 512,
+    "max_windows": 3,
+    "max_channel_sample_values": 4194304,
+    "max_materialized_signal_array_bytes": 33554432,
+    "max_runtime_seconds": 30,
+    "max_peak_rss_bytes": 1073741824,
+    "max_generated_artifact_bytes_per_run": 4194304,
+    "max_total_synthetic_fixture_and_report_bytes": 16777216,
+    "new_signal_cache_bytes": 0,
+    "network_calls": 0
+  },
+  "numeric_tolerances": {
+    "canonical_float64_max_abs_error": 1e-12,
+    "timestamp_max_abs_error_seconds": 1e-12,
+    "psd_injected_peak_max_error": "one_realized_frequency_bin"
+  },
+  "acceptance_gates": [
+    "base_install_imports_and_tests_pass_without_heavy_dependencies",
+    "optional_imports_lazy_and_missing_extra_error_actionable",
+    "six_format_families_match_registered_synthetic_result_or_refusal",
+    "no_unexpected_preload_and_embedded_eeglab_refused_before_signal_access",
+    "canonical_values_match_fixture_truth_within_tolerance",
+    "channel_timing_unit_event_geometry_reference_filter_and_source_bad_state_match_truth",
+    "psd_peaks_and_formulas_replay_deterministically",
+    "injected_structural_warnings_exact_and_generic_thresholds_remain_unavailable",
+    "source_payload_and_metadata_unchanged_before_after",
+    "privacy_forbidden_fields_and_waveforms_absent_from_artifacts",
+    "deterministic_core_and_measured_audit_hash_byte_collision_and_tamper_gates_pass",
+    "resource_caps_and_zero_forbidden_access_counters_pass_with_one_thread",
+    "focused_full_pytest_ruff_compileall_cli_diff_and_roundtrip_gates_pass",
+    "generated_artifacts_ignored_and_bounded",
+    "documentation_preserves_claim_boundary"
+  ],
+  "decision_rules": {
+    "kill": [
+      "artifact_exposes_annotation_or_target_descriptions",
+      "artifact_exposes_participant_data_exact_timestamps_serials_exact_geometry_or_waveforms"
+    ],
+    "park_format": [
+      "bounded_lazy_access_cannot_be_enforced",
+      "hidden_resampling_or_type_mutation_cannot_be_audited",
+      "reader_requires_full_preload"
+    ],
+    "park_all": [
+      "deterministic_values_fail",
+      "no_mutation_identity_fails",
+      "resource_cap_fails",
+      "base_install_isolation_fails"
+    ],
+    "proceed": "after_all_synthetic_gates_pass_to_a_separately_approved_real_read_packet_only"
+  },
+  "brain2qwerty_v2_comparison_profile": {
+    "applied_in_rw2": false,
+    "official_offline_operations": [
+      "bandpass_0.5_to_45_hz",
+      "notch_50_hz",
+      "downsample_100_hz",
+      "per_recording_robust_scaler",
+      "clamp_at_5_robust_standard_deviations"
+    ],
+    "causal_or_real_time_status": "not_established_by_offline_preprocessing"
+  },
+  "claim_boundary": {
+    "would_prove_after_passing_implementation": [
+      "bounded_reader_mechanics_on_synthetic_files",
+      "synthetic_channel_timing_unit_geometry_and_event_status_identity",
+      "descriptive_quality_metric_calculation",
+      "privacy_redaction_and_no_mutation_behavior",
+      "measured_local_resource_behavior"
+    ],
+    "does_not_prove": [
+      "real_recording_quality",
+      "artifact_warning_correctness_on_people_or_devices",
+      "preprocessing_benefit",
+      "neural_advantage",
+      "decoding",
+      "unseen_person_generalization",
+      "end_to_end_latency",
+      "real_time_operation",
+      "portable_or_at_home_hardware_performance",
+      "arbitrary_thought_or_clinical_use"
+    ]
+  },
+  "primary_sources": [
+    "https://mne.tools/stable/generated/mne.io.read_raw_brainvision.html",
+    "https://mne.tools/stable/generated/mne.io.read_raw_edf.html",
+    "https://mne.tools/stable/generated/mne.io.read_raw_eeglab.html",
+    "https://mne.tools/stable/generated/mne.io.Raw.html",
+    "https://mne.tools/stable/generated/mne.preprocessing.annotate_amplitude.html",
+    "https://mne.tools/mne-bids/stable/generated/mne_bids.read_raw_bids.html",
+    "https://github.com/mne-tools/mne-python/blob/maint/1.12/mne/io/eeglab/eeglab.py",
+    "https://github.com/mne-tools/mne-python/blob/maint/1.12/mne/io/edf/edf.py",
+    "https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html",
+    "https://bids-specification.readthedocs.io/en/stable/modality-specific-files/magnetoencephalography.html",
+    "https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/events.html",
+    "https://www.nature.com/articles/s41593-020-00709-0",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC4471356/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC7243972/",
+    "https://facebookresearch.github.io/brain2qwerty/assets/brain2qwerty_v2.pdf"
+  ]
+}
