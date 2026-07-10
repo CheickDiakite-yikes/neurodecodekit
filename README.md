@@ -683,6 +683,12 @@ seconds and 313,982,976 bytes. This intentionally easy synthetic classification
 task is not CTC, text, MEG/EEG decoding, or end-to-end real-time evidence. See
 `docs/LOOP_22_TINY_CAUSAL_ENCODER.md`.
 
+Loop 23 is preregistered before any new target or decoder artifact exists. It
+freezes a fresh physical 48/8/8 synthetic split, correct CTC blank/repeat
+semantics, a language-model-free width-8 prefix beam, partial-hypothesis
+revision and first/stable/final timing metrics, two signal-free controls, and
+one test open. See `docs/LOOP_23_PREREGISTRATION.md`.
+
 Loop 5 closeout checks:
 
 ```bash

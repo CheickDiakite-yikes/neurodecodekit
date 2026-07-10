@@ -712,3 +712,26 @@ visible before any precision or real-cache gate.
 Evidence: `docs/LOOP_22_TINY_CAUSAL_ENCODER.md`,
 `cache/loop22_tiny_causal_encoder/gate.json`, and
 `cache/loop22_tiny_causal_encoder/gate.md`.
+
+## 0035 - Freeze streaming CTC semantics and stability metrics before targets
+
+Decision: preregister Loop 23 before writing decoder code or generating its
+fresh test. Reuse only the frozen Loop 22 checkpoint, map background to CTC
+blank and motifs to five synthetic symbols, fix greedy and width-8 prefix-beam
+rules without a language model, and require a new physical 48/8/8 fixture whose
+targets include adjacent repeated symbols.
+
+Why: CTC blank/repeat collapse and prefix probabilities are easy to implement
+incorrectly, especially across chunk boundaries. Final CER alone would also
+hide partial flicker and delayed stabilization. The protocol therefore requires
+hand-built and exhaustive tiny-path oracles, frame-indexed partial traces,
+edit overhead, revision events, first-correct/stable-correct/finalization time,
+and transport-adjusted availability.
+
+Access and claim boundary: alternate seeds must prove mechanics before the
+registered seed-2303 test exists. Validation schedule replay happens before
+test access; test gets one canonical pass only. No CTC loss, parameter update,
+language model, real data, observed holdout, WER, endpoint, or end-to-end
+latency claim is allowed.
+
+Evidence: `docs/LOOP_23_PREREGISTRATION.md`.

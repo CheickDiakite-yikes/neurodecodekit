@@ -26,22 +26,23 @@ Do not optimize for impressiveness before reproducibility. A boring baseline tha
 
 The first 20-loop roadmap is complete except for the deliberately parked Loop
 13 backend. Post-roadmap Loops 21 and 22 have validated bounded synthetic
-causal replay and one tiny learned motif encoder. Next, preregister Loop 23's
-streaming CTC/prefix-decoder gate before creating any new test target:
+causal replay and one tiny learned motif encoder. Loop 23 is preregistered;
+implement it with alternate seeds before creating its registered test:
 
 ```bash
 cat docs/LOOP_22_TINY_CAUSAL_ENCODER.md
+cat docs/LOOP_23_PREREGISTRATION.md
 cat docs/POST_20_ROADMAP.md
 ```
 
-Freeze the Loop 22 checkpoint, report, and consumed seed-2203 test. Define CTC
-blank/repeat handling, incremental greedy/prefix state, partial hypotheses,
-revision counts, and first/stable/final emission timing before implementation.
-Use a new physically separate synthetic test, keep the first decoder free of a
-language model, and preserve strict state/runtime/RSS/artifact caps. Keep both
-observed S21 MEG holdouts and the S7 EEG result frozen. Any future real-data
-acquisition remains dry-run by default and requires explicit byte caps plus
-`--execute`.
+Freeze the Loop 22 checkpoint, report, and consumed seed-2203 test. Preserve
+the registered CTC blank/repeat handling, incremental greedy/prefix state,
+partial hypotheses, revision counts, first/stable/final timing, controls, and
+caps exactly. Implement and rehearse with alternate seeds, then commit before
+creating the fresh seed-2303 test. Keep the decoder language-model-free and
+both observed S21 MEG holdouts plus the S7 EEG result frozen. Any future
+real-data acquisition remains dry-run by default and requires explicit byte
+caps plus `--execute`.
 
 ## Acceptance criteria for next PR
 
@@ -49,7 +50,8 @@ acquisition remains dry-run by default and requires explicit byte caps plus
 - CLI has useful `--help` text.
 - New numerical or model dependencies remain optional.
 - No full-dataset download can happen accidentally.
-- The complete decoder protocol is committed before generating test targets.
+- The committed decoder protocol remains unchanged and the registered test is
+  not generated before alternate-seed mechanics pass.
 - Blank/repeat state and partial hypotheses cover multiple chunk boundaries
   and final partial chunks.
 - Reports separate encoder availability, first/stable/final symbol emission,

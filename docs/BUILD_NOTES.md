@@ -1138,8 +1138,8 @@ train / validation / test opens: 1 / 1 / 1
 Interpretation: the project now has a working small learned causal producer and
 frozen synthetic evaluation path. The task is intentionally obvious and its
 perfect score is not neural or text decoding. The seed-2203 test is consumed.
-Next, preregister Loop 23 with new synthetic decoder targets before writing or
-evaluating a prefix decoder.
+The next gate was to preregister Loop 23 before writing a prefix decoder or
+generating new targets; that preregistration is recorded below.
 
 Closeout verification:
 
@@ -1153,3 +1153,33 @@ Closeout verification:
 - dependency-light import loaded no NumPy, Torch, or MNE
 - registered gate was run once only; later verification uses alternate seeds
   and does not open the registered fixture
+
+## Loop 23 preregistration - streaming CTC prefix decoder
+
+Preregistered on 2026-07-10 before any Loop 23 fixture, target array, decoder
+source, or test partition existed. Primary-source review covered the original
+CTC blank/repeat and prefix-search formulation, incremental edit overhead and
+correction time, streaming partial-hypothesis stability, emission latency, and
+Brain2Qwerty v2's noncausal limitation.
+
+Frozen design:
+
+- exact Loop 22 checkpoint/hash, with no new parameter update or training run
+- fresh physical 48/8/8 fixture using seeds 2301/2302/2303
+- every six-to-eight-symbol target contains all five symbols and an adjacent
+  repeated pair separated by a generated blank interval
+- class 0 blank; synthetic `A-E` symbols; no natural text or word metric
+- fixed greedy CTC comparator and width-8 float64 log-space prefix beam
+- no language model, lexicon, insertion bonus, threshold, or decoder sweep
+- exhaustive tiny-path probability oracle plus hand-built blank/repeat tests
+- frame-indexed partial trace, edit overhead, revisions, first emission,
+  first-correct, stable-correct, correction delay, and flush finalization
+- model-frame timing separated from transport availability and endpointing
+- train-target-only sequence prior plus zero-signal frozen-pipeline control
+- validation schedule replay before one canonical test open
+- 1 MiB fixture/report caps, 4 KiB decoder state, 20-second runtime, 768 MiB
+  RSS, and one CPU thread
+
+Implementation must begin with alternate seeds. The registered target/test
+cannot be created until decoder semantics, access tests, full-suite checks, and
+a full-size nonregistered rehearsal pass.

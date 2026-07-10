@@ -140,11 +140,11 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   advantage, unseen-person performance, retained-accuracy,
   optimal-sensor/precision, integer-only inference, OPM-equivalence, or
   low-latency streaming claim.
-- Next action: preregister Loop 23's synthetic streaming CTC/prefix-decoder
-  protocol before generating any new test target. Require a new physically
-  separate test, partial-hypothesis traces, revision and first/stable/final
-  emission timing, a no-signal prior, and no language model. Keep Loop 22's
-  consumed test and all observed MEG/EEG results frozen.
+- Next action: implement the already-preregistered Loop 23 decoder using
+  alternate fixture seeds first. Prove blank/repeat semantics against exhaustive
+  tiny-path oracles, then rehearse all five schedules without creating the
+  registered seed-2303 test. Keep Loop 22's consumed test and all observed
+  MEG/EEG results frozen. See `docs/LOOP_23_PREREGISTRATION.md`.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |

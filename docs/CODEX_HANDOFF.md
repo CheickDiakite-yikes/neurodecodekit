@@ -26,7 +26,10 @@
 > its eight-item test was opened once, and both frozen metrics and all five
 > replay schedules passed under one-thread/resource caps. The motif task is
 > intentionally easy, its test is consumed, and it is not text or brain
-> decoding. There is no unseen-person,
+> decoding. Loop 23 is preregistered before target generation with a fresh
+> physical split, fixed no-language-model CTC semantics, partial-stability
+> metrics, and one test open; implementation has not started. There is no
+> unseen-person,
 > useful EEG, integer-only inference, real-time, portable-hardware,
 > arbitrary-thought, or clinical claim. See
 > `docs/LOOP_22_TINY_CAUSAL_ENCODER.md`.
@@ -123,10 +126,10 @@ This is not primarily a model repo. It is a **research loop repo**.
 
 ## Current next 3 loops
 
-1. **Loop 23 - streaming CTC prefix decoder.** First preregister a new synthetic
-   protocol and physically separate test. Then add incremental greedy/prefix
-   state and measure first/stable/final character emission plus hypothesis
-   revisions. Keep the language model absent.
+1. **Loop 23 - streaming CTC prefix decoder.** Implement the frozen protocol
+   with alternate seeds first: greedy/prefix blank-repeat oracle tests,
+   frame-indexed partial traces, and five-schedule replay. Only after that
+   rehearsal may the fresh registered fixture/test be generated once.
 2. **Loop 24 - local precision/runtime gate.** Compare fixed float and dynamic
    integer candidates on the frozen synthetic model, separating storage,
    actual execution, state, RSS, RTF, and energy proxy before any real-cache
@@ -135,8 +138,9 @@ This is not primarily a model repo. It is a **research loop repo**.
    and prove that filtering, normalization, framing, and padding can replay
    without future leakage before any real validation score.
 
-Loop 22 evidence and exact next gate:
-`docs/LOOP_22_TINY_CAUSAL_ENCODER.md`. The post-20 sequence is in
+Loop 23's frozen protocol and exact next gate:
+`docs/LOOP_23_PREREGISTRATION.md`. Loop 22 evidence is in
+`docs/LOOP_22_TINY_CAUSAL_ENCODER.md`; the post-20 sequence is in
 `docs/POST_20_ROADMAP.md`.
 
 ## Historical original PR plan

@@ -58,6 +58,9 @@ one preregistered 1,130-parameter model on synthetic motif frames, selects
 epoch 34 on validation, opens its eight-item test once, and passes both the
 signal-free comparison and all five streaming schedules with 300-byte state.
 That perfect synthetic motif result is a mechanism check, not text or brain
-decoding; its test is consumed. Continue by preregistering Loop 23 on a new
-synthetic streaming-decoder protocol. See
-`docs/LOOP_22_TINY_CAUSAL_ENCODER.md` and `docs/POST_20_ROADMAP.md`.
+decoding; its test is consumed. Loop 23's new synthetic streaming-decoder
+protocol is now frozen before any new target generation: fresh physical
+splits, blank/repeat rules, a width-8
+language-model-free prefix beam, partial-revision/emission metrics, two
+signal-free controls, and one test open. Implement it first with alternate
+seeds. See `docs/LOOP_23_PREREGISTRATION.md` and `docs/POST_20_ROADMAP.md`.
