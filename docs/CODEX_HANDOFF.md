@@ -20,6 +20,11 @@
 > and the once-opened seed-2353 test from 7/16 to 16/16 exact, with zero CER,
 > nine test corrections, no regressions, and all replay/resource/access gates
 > passing. Seed 2353 is consumed. Loop 24 is unblocked for preregistration only.
+> In parallel, RW0 now closes a primary-source Real-World Practice research
+> gate with eight dataset records, 13 device records, a local BYO Neurodata
+> contract, and one exact S20 EEG dry-run packet. No download is authorized;
+> RW1 level-0 metadata intake on synthetic fixtures is the only approved
+> implementation.
 > There is no demonstrated neural advantage, unseen-person, useful EEG,
 > real-neural sequence decoder, end-to-end real-time, portable-hardware,
 > arbitrary-thought, or clinical claim. See
@@ -92,6 +97,13 @@ This repo is a starter scaffold with working pure-Python components:
 - dependency-free one-scalar blank-logit calibration with frame-only fit
   access, separate target-only prior access, paired no-harm/bootstrap metrics,
   exact calibrated/unmodified replay, and one-time frozen-test gating
+- versioned primary-source dataset and device compatibility registries with
+  separate task/evidence cohorts and explicit unavailable fields
+- local-first BYO Neurodata workbench contract with compatibility levels 0-6,
+  safe file-family rules, privacy caps, refusal behavior, and replay/live source
+  boundaries
+- exact unapproved S20 EEG acquisition packet with four files, byte/resource
+  caps, target-free split, prior/shuffle controls, and one-time test rules
 - JSON/Markdown metrics report command
 - CLI smoke commands
 - unit tests
@@ -123,18 +135,22 @@ huge raw neurodata → tiny selected shard → reproducible cache → baseline d
 
 This is not primarily a model repo. It is a **research loop repo**.
 
-## Current next 3 loops
+## Current Next Work
 
-1. **Loop 24 - preregister local precision/runtime.** Freeze candidates,
-   reference arithmetic, tolerances, selection data, resource caps, and a
-   no-rerun rule before implementing or benchmarking. Seed 2353 is forbidden
-   for candidate selection or tolerance setting.
-2. **Loop 25 - causal preprocessing audit.** Open source-session train rows only
-   and prove that filtering, normalization, framing, and padding can replay
-   without future leakage before any real validation score.
-3. **Loop 26 - real validation-only encoder gate.** Preregister the fixed tiny
-   model and no-signal comparison before opening source validation; keep every
-   observed source test and session-2 row frozen.
+1. **RW1 - implement metadata-only local intake.** Recognize BrainVision,
+   EDF/EDF+, BDF, EEGLAB, FIF, and BIDS fixtures; validate companions, safe
+   paths, caps, warnings, and deterministic JSON/Markdown reports without
+   reading binary signal arrays or importing MNE.
+2. **Loop 24 - preregister local precision/runtime independently.** Freeze
+   candidates, reference arithmetic, tolerances, fresh selection data, and
+   resource rules before code. Seed 2353 cannot select anything.
+3. **RW2 - preregister signal-quality adapters only after RW1.** Freeze bounded
+   MNE reads, units, reference, geometry, event, PSD, warning, and resource
+   contracts before opening any real recording.
+
+RW4 is not next: S20 acquisition remains blocked until explicit approval names
+revision `88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684`, exactly four files, the
+128-MiB download cap, 16-MiB output cap, and one-time 44/10/10 protocol.
 
 Loop 23's preregistration and parked result are in
 `docs/LOOP_23_PREREGISTRATION.md` and

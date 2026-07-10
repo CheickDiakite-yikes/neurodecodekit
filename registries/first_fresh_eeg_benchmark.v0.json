@@ -1,0 +1,104 @@
+{
+  "schema_name": "neurodecodekit.acquisition_approval_packet",
+  "schema_version": "0.1.0",
+  "packet_id": "spanishbcbl-s20-session2-block2-v0",
+  "prepared_at": "2026-07-10",
+  "authorization_status": "not_authorized",
+  "dry_run_only": true,
+  "dataset": {
+    "repo_id": "bcbl190626/SpanishBCBL",
+    "revision": "88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684",
+    "license": "CC-BY-NC-4.0",
+    "cohort": "prompted_typing",
+    "modality": "EEG",
+    "subject": "S20",
+    "session": "2",
+    "block": "block2"
+  },
+  "files": [
+    {
+      "path": "EEG/EEG/020_DECOMEG_S2_11966_task2.vhdr",
+      "role": "brainvision_header",
+      "size_bytes": 11705,
+      "already_local": false
+    },
+    {
+      "path": "EEG/EEG/020_DECOMEG_S2_11966_task2.eeg",
+      "role": "brainvision_signal",
+      "size_bytes": 95782400,
+      "already_local": false
+    },
+    {
+      "path": "EEG/EEG/020_DECOMEG_S2_11966_task2.vmrk",
+      "role": "brainvision_markers",
+      "size_bytes": 91219,
+      "already_local": false
+    },
+    {
+      "path": "EEG/logs/S20_session2_block2_list1.mat",
+      "role": "behavior_log",
+      "size_bytes": 204940,
+      "already_local": true,
+      "content_opened_during_research": false
+    }
+  ],
+  "total_bundle_bytes": 96090264,
+  "maximum_network_transfer_bytes": 96090264,
+  "expected_new_allocation_bytes_if_local_log_reused": 95885324,
+  "caps": {
+    "max_files": 4,
+    "max_download_bytes": 134217728,
+    "max_generated_bytes": 16777216,
+    "min_free_disk_bytes": 2147483648,
+    "max_peak_rss_bytes": 2147483648,
+    "max_runtime_seconds": 1200,
+    "workers": 1,
+    "cpu_threads": 1
+  },
+  "frozen_split": {
+    "required_usable_trials": 64,
+    "key_material": "revision|S20|session2|block2|source_trial_id",
+    "ordering": "ascending_sha256",
+    "counts": {
+      "train": 44,
+      "validation": 10,
+      "test": 10
+    },
+    "uses_target_text": false,
+    "strict_group": "source_trial_id"
+  },
+  "predictors": [
+    "train_only_most_frequent_key_prior",
+    "deterministic_train_signal_shuffle_nearest_centroid",
+    "deterministic_nearest_centroid_key_classifier"
+  ],
+  "forbidden": [
+    "consumed_S7_EEG_arrays",
+    "consumed_S21_session2_arrays",
+    "seeds_2203_2303_2353",
+    "target_text_as_feature",
+    "test_tuning",
+    "hyperparameter_search",
+    "language_model",
+    "larger_model",
+    "sequence_CER_WER_claim",
+    "additional_files_or_subjects"
+  ],
+  "metrics": [
+    "exact_key_accuracy",
+    "macro_recall",
+    "paired_trial_group_bootstrap_2000",
+    "alignment_and_timing",
+    "runtime_peak_rss_and_bytes",
+    "access_and_run_counters"
+  ],
+  "expected_unavailable_fields": [
+    "CER",
+    "WER",
+    "end_to_end_latency",
+    "unseen_person_generalization",
+    "portable_hardware_result"
+  ],
+  "approval_required": true,
+  "approval_text": "Approve exactly this packet and its four files before any download or signal read."
+}

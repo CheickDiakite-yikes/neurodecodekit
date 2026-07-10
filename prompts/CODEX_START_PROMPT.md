@@ -1,35 +1,39 @@
 # Prompt to continue NeuroDecodeKit in Codex
 
-You are continuing the NeuroDecodeKit starter repo. Read `AGENTS.md`, `docs/CODEX_HANDOFF.md`, and `README.md` first.
+Continue NeuroDecodeKit from the current branch. Read `AGENTS.md`,
+`START_HERE.md`, `docs/CODEX_HANDOFF.md`,
+`docs/REAL_WORLD_PRACTICE_TRACK_RESEARCH.md`, and
+`docs/BYO_NEURODATA_WORKBENCH_SPEC.md` before editing.
 
-Goal for this session: preregister post-roadmap Loop 24 as a bounded local
-precision/runtime comparison against the frozen Loop 23.5 synthetic reference.
-Do not implement or benchmark a precision candidate before the protocol is
-committed and pushed.
+Primary task: complete Real-World Practice Track RW1 as the smallest strict
+metadata-only local intake slice.
 
-Concretely:
+Requirements:
 
-1. Run `python -m unittest discover -s tests` and inspect current state.
-2. Read `docs/LOOP_23_STREAMING_CTC_DECODER.md`; treat seed 2303 as consumed.
-3. Read `docs/LOOP_23_5_PREREGISTRATION.md` and `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`; treat seed 2353 as consumed.
-4. Define what numeric paths are actually executable on this CPU; distinguish float storage, float arithmetic, dynamic quantization, and true integer execution.
-5. Freeze reference outputs, candidates, tolerances, comparison splits, failure rules, measurements, thread settings, and artifact caps.
-6. Keep precision selection on a fresh synthetic calibration/validation split; do not use seeds 2203, 2303, or 2353.
-7. Preserve calibrated/unmodified decoders, signal-free controls, exact sequence metrics, and five-schedule replay where applicable.
-8. Require correctness preservation before any speed or size comparison can proceed.
-9. Commit and push the preregistration before writing candidate code or creating fresh evaluation targets.
-10. Do not download data; preserve dry-run and explicit-execution acquisition defaults.
+1. Preserve all existing work and the unrelated tracker inspection NDJSON.
+2. Do not open consumed S7/S21 raw arrays or caches, and do not use seeds 2203,
+   2303, or 2353.
+3. Do not download anything. The S20 packet remains unapproved.
+4. Add a dependency-free level-0 scanner for BrainVision, EDF/EDF+, BDF,
+   EEGLAB, FIF, and BIDS synthetic fixtures.
+5. Validate resolved paths, symlink escape, duplicate roles, required
+   companions, archive/pickle refusal, file/depth/input/text/output caps, and
+   collision behavior.
+6. Read only bounded text headers/sidecars. Do not read binary signal samples,
+   labels, or target text, and do not import MNE in the metadata path.
+7. Emit deterministic versioned JSON and Markdown with compatibility level,
+   known/unavailable metadata, warnings/refusals, source and registry hashes,
+   runtime, RSS, declared/read/output bytes, and raw/cache/model/training/network
+   counters.
+8. Add useful create/inspect CLI help and tests for every refusal boundary.
+9. Keep one CPU thread and generated artifacts below 4 MiB for the roundtrip.
+10. Run focused tests, the complete unit and pytest suites, Ruff, compileall,
+    CLI help, `git diff --check`, and one synthetic roundtrip.
+11. Compare against the recorded pre-change baseline of 238 unittest tests
+    with 3 skips.
+12. Commit and push only after all gates pass. Never commit generated reports,
+    raw data, caches, secrets, or inspection debris.
 
-Acceptance:
-
-- Tests pass.
-- CLI help works.
-- The preregistration is complete enough that no tolerance, candidate, split,
-  or winner rule can be chosen after seeing evaluation output.
-- Seeds 2203, 2303, and 2353 remain unopened and unreferenced by executable
-  selection.
-- Calibration, correctness, stability, and endpointing remain separate metrics.
-- No language model, larger model, candidate benchmark, real data, observed
-  holdout, or network access occurs during preregistration.
-
-The product principle is: `manifest → selective download → tiny shard → event windows → baseline → CER/WER report → demo`.
+RW1 adds no waveform, PSD, signal-quality, MNE read, live-device, GUI,
+predictive, CER/WER, or decoding capability. Unknown or incompatible input must
+produce an inspection/refusal report, never fake text.

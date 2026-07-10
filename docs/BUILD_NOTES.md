@@ -1370,3 +1370,30 @@ performance from this result.
 
 Evidence: `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md` and ignored local
 artifacts under `cache/loop235_blank_intercept/`.
+
+## 2026-07-10 - Real-World Practice Track RW0 research gate
+
+Added a parallel, non-renumbering practice track after a current primary-source
+review. The machine-readable result covers eight dataset records across six
+separate task cohorts and 13 device records with explicit EEG, EMG, EOG, eye,
+PPG, IMU, microphone, and hand-tracking distinctions.
+
+The local metadata inventory found only consumed S21 MEG and S7 EEG raw
+signals. It did not open their arrays. The smallest fresh task-matched EEG
+candidate is S20 session 2 block 2 at exactly 96,090,264 bytes. Its 204,940-byte
+MAT log already exists locally but was not parsed. No acquisition is
+authorized. The packet requires four exact files at revision
+`88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684`, a 128-MiB download cap, 16-MiB
+generated cap, one worker/thread, and a target-free 44/10/10 trial split.
+
+Research access counters: zero raw reads, consumed-cache reads, model runs,
+training runs, target-log parses, and downloads. An isolated research
+runtime/RSS measurement was unavailable and is recorded as such. The pre-edit
+project baseline in `.venv` was 238 unittest tests with 3 skips in 12.27 seconds
+and 479,182,848-byte peak RSS. A system-Python invocation first failed with
+five missing-optional-dependency errors; it is retained as environment evidence
+and is not a repository regression.
+
+Decision: RW0 authorizes RW1 synthetic-fixture metadata intake only. S20 stays
+blocked, Loop 24 keeps its independent preregistration path, and no live device
+or scientific decoding claim was added.

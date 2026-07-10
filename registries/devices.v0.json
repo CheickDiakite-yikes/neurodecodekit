@@ -1,0 +1,600 @@
+{
+  "schema_name": "neurodecodekit.device_compatibility_registry",
+  "schema_version": "0.1.0",
+  "reviewed_at": "2026-07-10",
+  "proof_posture": "official_specification_and_adapter_review_only",
+  "claim_boundary": "Listing a device does not qualify its signal quality, timing, privacy, or decoding performance in NeuroDecodeKit.",
+  "modality_rules": {
+    "EEG": "Electrical potential measured from scalp electrodes; this is brain activity but remains artifact-prone.",
+    "EMG": "Electrical muscle activity; wrist or facial EMG is not brain activity.",
+    "EOG": "Eye-related electrical activity; it is a peripheral physiological signal.",
+    "eye_tracking": "Camera-derived gaze or fixation behavior; it is not EEG.",
+    "PPG": "Optical blood-volume pulse used for heart-rate measures; it is not EEG.",
+    "IMU": "Motion and orientation from accelerometers/gyroscopes; it is behavior/context, not EEG.",
+    "microphone": "Airborne audio; it can leak speech labels and is not neural data."
+  },
+  "records": [
+    {
+      "id": "openbci_cyton",
+      "vendor": "OpenBCI",
+      "device": "Cyton",
+      "status": "available_product",
+      "signals": [
+        "EEG_or_other_ExG",
+        "IMU"
+      ],
+      "measurement_class": "brain_activity_when_configured_with_scalp_EEG_electrodes",
+      "channels": {
+        "ExG": 8,
+        "ExG_with_Daisy": 16
+      },
+      "sampling_rate_hz": {
+        "ExG": 250,
+        "ExG_with_Daisy": 125,
+        "accelerometer": 25
+      },
+      "connection": "OpenBCI USB radio dongle; optional Wi-Fi Shield variants",
+      "raw_data_api": "OpenBCI protocol, OpenBCI GUI, and BrainFlow direct adapter",
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Raspberry Pi"
+      ],
+      "brainflow": {
+        "supported": true,
+        "board_ids": [
+          "CYTON_BOARD",
+          "CYTON_DAISY_BOARD",
+          "CYTON_WIFI_BOARD",
+          "CYTON_DAISY_WIFI_BOARD"
+        ]
+      },
+      "privacy_constraints": [
+        "Prefer local serial/radio capture and explicit recording paths.",
+        "Electrode placement determines whether an ExG channel is EEG, EMG, ECG, or EOG; software labels alone are insufficient."
+      ],
+      "qualification": "Candidate for a board-neutral EEG replay/live-source gate after measured timing, packet-loss, electrode, and reference validation.",
+      "source_urls": [
+        "https://docs.openbci.com/FAQ/HardFAQ/",
+        "https://docs.openbci.com/Cyton/CytonDataFormat/",
+        "https://brainflow.readthedocs.io/en/stable/SupportedBoards.html"
+      ]
+    },
+    {
+      "id": "openbci_ganglion",
+      "vendor": "OpenBCI",
+      "device": "Ganglion",
+      "status": "available_product",
+      "signals": [
+        "EEG_or_other_ExG",
+        "IMU_optional"
+      ],
+      "measurement_class": "brain_activity_when_configured_with_scalp_EEG_electrodes",
+      "channels": {
+        "ExG": 4
+      },
+      "sampling_rate_hz": {
+        "ExG": 200
+      },
+      "connection": "Bluetooth Low Energy; native BrainFlow adapter",
+      "raw_data_api": "OpenBCI binary protocol and BrainFlow direct adapter",
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Raspberry Pi"
+      ],
+      "brainflow": {
+        "supported": true,
+        "board_ids": [
+          "GANGLION_NATIVE_BOARD",
+          "GANGLION_WIFI_BOARD"
+        ]
+      },
+      "privacy_constraints": [
+        "BLE permissions and device identity must be explicit.",
+        "The compressed BLE transport and optional accelerometer mode require packet-loss and resolution audits."
+      ],
+      "qualification": "Low-channel board for acquisition mechanics and simple evoked tasks; not presumed adequate for sentence decoding.",
+      "source_urls": [
+        "https://docs.openbci.com/FAQ/HardFAQ/",
+        "https://docs.openbci.com/Ganglion/GanglionDataFormat/",
+        "https://brainflow.readthedocs.io/en/stable/SupportedBoards.html"
+      ]
+    },
+    {
+      "id": "openbci_galea",
+      "vendor": "OpenBCI",
+      "device": "Galea",
+      "status": "research_product",
+      "signals": [
+        "EEG",
+        "EMG",
+        "EOG",
+        "EDA",
+        "PPG",
+        "IMU",
+        "eye_tracking_optional"
+      ],
+      "measurement_class": "mixed_brain_muscle_eye_autonomic_and_behavioral_sensing",
+      "channels": {
+        "EEG": 10,
+        "EMG": 4,
+        "ExG": 2,
+        "EOG": 2,
+        "EDA": 1,
+        "PPG": 2
+      },
+      "sampling_rate_hz": null,
+      "sampling_rate_unavailable_reason": "The reviewed brochure points to separate sampling-rate specifications but does not state one stable rate for every sensor.",
+      "connection": "Wi-Fi; serial, LSL, UDP, and OSC streaming are advertised",
+      "raw_data_api": "Galea SDK/GUI and BrainFlow presets; optional Pupil Labs eye-tracking integration",
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Android",
+        "Raspberry Pi"
+      ],
+      "brainflow": {
+        "supported": true,
+        "board_ids": [
+          "GALEA_BOARD"
+        ]
+      },
+      "privacy_constraints": [
+        "Every sensor stream needs separate consent, retention, and ablation metadata.",
+        "Eye, EMG, EOG, audio, and motion can reveal task labels without EEG.",
+        "Optional Pupil Cloud must not be used by a local-only workflow without explicit user authorization."
+      ],
+      "qualification": "Future multimodal research lane only; require EEG-only, device-only, and combined ablations.",
+      "source_urls": [
+        "https://openbci.com/content/galea-brochure.pdf",
+        "https://brainflow.readthedocs.io/en/stable/SupportedBoards.html",
+        "https://shop.openbci.com/products/galea-beta-standalone-eye-tracking-add-on"
+      ]
+    },
+    {
+      "id": "muse_2",
+      "vendor": "Interaxon",
+      "device": "Muse 2",
+      "status": "available_product",
+      "signals": [
+        "EEG",
+        "PPG",
+        "IMU"
+      ],
+      "measurement_class": "brain_activity_plus_heart_and_motion",
+      "channels": {
+        "EEG_default": 4,
+        "EEG_optional_aux": 1,
+        "electrode_positions": [
+          "TP9",
+          "AF7",
+          "AF8",
+          "TP10"
+        ]
+      },
+      "sampling_rate_hz": {
+        "EEG": 256
+      },
+      "connection": "Bluetooth Low Energy",
+      "raw_data_api": "BrainFlow direct adapter; Muse SDK exposes sensor signals on iOS and Android under separate terms",
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Raspberry Pi",
+        "iOS",
+        "Android"
+      ],
+      "brainflow": {
+        "supported": true,
+        "board_ids": [
+          "MUSE_2_BOARD"
+        ]
+      },
+      "privacy_constraints": [
+        "The vendor SDK has separate noncommercial/commercial terms and must not be assumed open.",
+        "PPG and IMU must remain separate from EEG evidence.",
+        "Four frontal/temporal EEG channels do not establish compatibility with a 64-channel model."
+      ],
+      "qualification": "Candidate for consumer-device signal-quality and simple-task qualification, not direct transfer of the SpanishBCBL model.",
+      "source_urls": [
+        "https://brainflow.readthedocs.io/en/stable/SupportedBoards.html",
+        "https://choosemuse.com/pages/science",
+        "https://choosemuse.com/pages/sdk-partners",
+        "https://choosemuse.com/pages/legal"
+      ]
+    },
+    {
+      "id": "gtec_unicorn_hybrid_black",
+      "vendor": "g.tec",
+      "device": "Unicorn Hybrid Black",
+      "status": "available_product",
+      "signals": [
+        "EEG",
+        "IMU"
+      ],
+      "measurement_class": "brain_activity_plus_motion",
+      "channels": {
+        "EEG": 8,
+        "accelerometer": 3,
+        "gyroscope": 3
+      },
+      "sampling_rate_hz": {
+        "EEG": 250
+      },
+      "connection": "Bluetooth using the vendor dongle",
+      "raw_data_api": "Unicorn Suite/g.Pype and BrainFlow direct adapter",
+      "platforms": [
+        "Windows",
+        "Linux_vendor_library_dependent",
+        "Raspberry Pi_vendor_library_dependent"
+      ],
+      "brainflow": {
+        "supported": true,
+        "board_ids": [
+          "UNICORN_BOARD"
+        ]
+      },
+      "privacy_constraints": [
+        "Use the vendor dongle and local capture path; record firmware and library versions.",
+        "Motion channels must be separately identified and ablated."
+      ],
+      "qualification": "Strong candidate for first board-neutral P300/SSVEP/motor-imagery live-source qualification.",
+      "source_urls": [
+        "https://www.gtec.at/product/unicorn-hybrid-black-bci-platform/",
+        "https://gpype.gtec.at/content/7_sdk_reference/backend_sources/hybrid_black.html",
+        "https://brainflow.readthedocs.io/en/stable/SupportedBoards.html"
+      ]
+    },
+    {
+      "id": "gtec_gnautilus",
+      "vendor": "g.tec",
+      "device": "g.Nautilus Research / Multi-Purpose",
+      "status": "research_product",
+      "signals": [
+        "EEG",
+        "optional_biosignals",
+        "optional_fNIRS"
+      ],
+      "measurement_class": "brain_activity_with_optional_other_physiology",
+      "channels": {
+        "EEG_options": [
+          8,
+          16,
+          32,
+          64
+        ],
+        "additional_biosignal": 4
+      },
+      "sampling_rate_hz": {
+        "EEG_8_16_32": 500,
+        "EEG_64": 250,
+        "fNIRS": 10
+      },
+      "connection": "Vendor 2.4 GHz wireless base station; LSL supported",
+      "raw_data_api": "g.tec software, Python/MATLAB/Simulink, and LSL; no direct BrainFlow board was verified",
+      "platforms": [
+        "vendor_supported_desktop",
+        "LSL_consumers"
+      ],
+      "brainflow": {
+        "supported": false,
+        "board_ids": []
+      },
+      "privacy_constraints": [
+        "Record the exact amplifier, electrode, base-station, and LSL timing configuration.",
+        "Optional fNIRS or physiological channels require distinct modality labels and ablations."
+      ],
+      "qualification": "Research-grade future partner-device candidate through LSL, not a current local adapter.",
+      "source_urls": [
+        "https://www.gtec.at/product/gnautilus-research-wireless-eeg-system/",
+        "https://www.gtec.at/product/gnautilus-multi-purpose-brain-body-monitoring/"
+      ]
+    },
+    {
+      "id": "neurosity_crown",
+      "vendor": "Neurosity",
+      "device": "Crown",
+      "status": "available_product",
+      "signals": [
+        "EEG",
+        "IMU"
+      ],
+      "measurement_class": "brain_activity_plus_motion",
+      "channels": {
+        "EEG": 8,
+        "electrode_positions": [
+          "CP3",
+          "C3",
+          "F5",
+          "PO3",
+          "PO4",
+          "F6",
+          "C4",
+          "CP4"
+        ],
+        "reference_bias": [
+          "T7",
+          "T8"
+        ]
+      },
+      "sampling_rate_hz": {
+        "EEG": 256
+      },
+      "connection": "Bluetooth 4.2/BLE and vendor Wi-Fi/cloud architecture",
+      "raw_data_api": "Vendor JavaScript/Python SDK and BrainFlow direct adapter",
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Raspberry Pi"
+      ],
+      "brainflow": {
+        "supported": true,
+        "board_ids": [
+          "CROWN_BOARD"
+        ]
+      },
+      "privacy_constraints": [
+        "The product advertises native cloud connectivity; local-only behavior must be measured and enforced rather than assumed.",
+        "Broadcast discovery may fail or expose device identity on shared networks.",
+        "On-device derived focus/calm scores are not substitutes for raw-signal controls."
+      ],
+      "qualification": "Candidate after a network/privacy audit and raw local replay comparison.",
+      "source_urls": [
+        "https://neurosity.co/tech-specs",
+        "https://brainflow.readthedocs.io/en/stable/SupportedBoards.html"
+      ]
+    },
+    {
+      "id": "apple_airpods_pro_3",
+      "vendor": "Apple",
+      "device": "AirPods Pro 3",
+      "status": "available_product",
+      "signals": [
+        "microphone",
+        "heart_rate",
+        "IMU"
+      ],
+      "measurement_class": "behavioral_audio_heart_and_motion_not_brain_activity",
+      "channels": null,
+      "sampling_rate_hz": null,
+      "sampling_rate_unavailable_reason": "Apple does not publish a raw biosignal sampling contract for third-party apps on the reviewed product page.",
+      "connection": "Bluetooth to Apple devices",
+      "raw_data_api": "Core Motion exposes supported headphone attitude, acceleration, and rotation-rate updates; no EEG API exists",
+      "platforms": [
+        "iOS",
+        "iPadOS",
+        "macOS_for_supported_headphone_motion"
+      ],
+      "brainflow": {
+        "supported": false,
+        "board_ids": []
+      },
+      "privacy_constraints": [
+        "Motion access requires user authorization.",
+        "Microphone audio can reveal intended text and must never be credited to neural input.",
+        "Heart-rate sensor access is not documented as a general raw waveform API."
+      ],
+      "qualification": "Accessibility or context input only; reject EEG and brain-decoding claims.",
+      "source_urls": [
+        "https://www.apple.com/airpods-pro/specs/",
+        "https://developer.apple.com/documentation/coremotion/cmheadphonemotionmanager",
+        "https://developer.apple.com/videos/play/wwdc2023/10179/"
+      ]
+    },
+    {
+      "id": "apple_vision_pro",
+      "vendor": "Apple",
+      "device": "Apple Vision Pro",
+      "status": "available_product",
+      "signals": [
+        "eye_tracking",
+        "hand_tracking",
+        "cameras",
+        "IMU",
+        "microphone"
+      ],
+      "measurement_class": "behavioral_and_environmental_tracking_not_brain_activity",
+      "channels": {
+        "eye_tracking_cameras": 4,
+        "IMU": 4
+      },
+      "sampling_rate_hz": null,
+      "sampling_rate_unavailable_reason": "Apple does not publish a raw per-sensor stream contract for third-party apps on the reviewed specifications page.",
+      "connection": "On-device visionOS frameworks",
+      "raw_data_api": "High-level spatial interaction and tracking frameworks; no EEG interface",
+      "platforms": [
+        "visionOS"
+      ],
+      "brainflow": {
+        "supported": false,
+        "board_ids": []
+      },
+      "privacy_constraints": [
+        "Eye, hand, camera, microphone, and environment data are highly sensitive behavioral context.",
+        "Use framework-provided permissions and minimize retained gaze or scene data.",
+        "High-level gaze selection is not a raw EEG or brain-signal stream."
+      ],
+      "qualification": "Future eye/hand accessibility lane only, with behavior-only and combined ablations.",
+      "source_urls": [
+        "https://www.apple.com/apple-vision-pro/specs/",
+        "https://developer.apple.com/visionos/"
+      ]
+    },
+    {
+      "id": "apple_watch_series_11",
+      "vendor": "Apple",
+      "device": "Apple Watch Series 11",
+      "status": "available_product",
+      "signals": [
+        "ECG",
+        "PPG_heart_rate",
+        "IMU",
+        "temperature",
+        "microphone"
+      ],
+      "measurement_class": "cardiac_motion_and_context_not_brain_activity",
+      "channels": {
+        "ECG": 1
+      },
+      "sampling_rate_hz": null,
+      "sampling_rate_unavailable_reason": "The reviewed product page does not publish general raw stream rates; Core Motion documents high-frequency heart rate as 1 Hz and HealthKit exposes saved ECG samples.",
+      "connection": "On-device watchOS with HealthKit/Core Motion synchronization to an authorized app",
+      "raw_data_api": "HealthKit provides permissioned read-only saved ECG and heart-rate samples; Core Motion exposes selected motion/heart-rate data",
+      "platforms": [
+        "watchOS",
+        "iOS"
+      ],
+      "brainflow": {
+        "supported": false,
+        "board_ids": []
+      },
+      "privacy_constraints": [
+        "HealthKit requires purpose-specific user authorization and data minimization.",
+        "ECG and PPG are cardiac signals, not EEG.",
+        "Health data must not be silently exported or merged with neural records."
+      ],
+      "qualification": "Optional heart/motion context lane only; never a brain-decoding input.",
+      "source_urls": [
+        "https://www.apple.com/apple-watch-series-11/specs/",
+        "https://developer.apple.com/documentation/healthkit",
+        "https://developer.apple.com/documentation/healthkit/hkelectrocardiogram"
+      ]
+    },
+    {
+      "id": "meta_quest_3_family",
+      "vendor": "Meta",
+      "device": "Meta Quest 3 / 3S",
+      "status": "available_product",
+      "signals": [
+        "hand_tracking",
+        "head_tracking",
+        "passthrough_cameras",
+        "microphone"
+      ],
+      "measurement_class": "behavioral_and_environmental_tracking_not_brain_activity",
+      "channels": null,
+      "sampling_rate_hz": {
+        "passthrough_camera_API": 60
+      },
+      "connection": "On-device Horizon OS APIs; PC link where supported",
+      "raw_data_api": "Hand pose and camera APIs under Meta permissions; no EEG interface and no Quest 3 eye tracker",
+      "platforms": [
+        "Horizon OS",
+        "Unity",
+        "Unreal",
+        "Android_camera_API_for_passthrough"
+      ],
+      "brainflow": {
+        "supported": false,
+        "board_ids": []
+      },
+      "privacy_constraints": [
+        "Passthrough camera access requires permission and is Device User Data.",
+        "Hand/head pose and scene video are behavioral data, not neural signals.",
+        "Camera and microphone streams can directly reveal task intent."
+      ],
+      "qualification": "Future hand/scene accessibility input with device-only and combined ablations.",
+      "source_urls": [
+        "https://developers.meta.com/horizon/documentation/unity/unity-pca-overview/",
+        "https://about.fb.com/news/2023/06/meta-quest-3-coming-this-fall/"
+      ]
+    },
+    {
+      "id": "meta_quest_pro",
+      "vendor": "Meta",
+      "device": "Meta Quest Pro",
+      "status": "discontinued_hardware_with_existing_installed_base",
+      "signals": [
+        "eye_tracking",
+        "face_tracking",
+        "hand_tracking",
+        "head_tracking",
+        "cameras",
+        "microphone"
+      ],
+      "measurement_class": "behavioral_and_environmental_tracking_not_brain_activity",
+      "channels": null,
+      "sampling_rate_hz": null,
+      "sampling_rate_unavailable_reason": "Meta's reviewed official product announcements do not publish a stable raw eye/face stream rate.",
+      "connection": "On-device Horizon OS/OpenXR and supported PC workflows",
+      "raw_data_api": "High-level eye, face, hand, and pose interfaces; no EEG interface",
+      "platforms": [
+        "Horizon OS",
+        "OpenXR",
+        "Unity",
+        "Unreal"
+      ],
+      "brainflow": {
+        "supported": false,
+        "board_ids": []
+      },
+      "privacy_constraints": [
+        "Eye and face tracking are sensitive biometric and behavioral data.",
+        "Permission, retention, and on-device processing must be explicit.",
+        "Eye tracking is not a neural signal and cannot be credited to EEG."
+      ],
+      "qualification": "Optional research replay source for gaze/hand ablations only; not a purchase target or EEG device.",
+      "source_urls": [
+        "https://about.fb.com/news/2022/10/meta-quest-pro-is-now-available/",
+        "https://about.fb.com/news/2022/10/meta-quest-pro-social-vr-connect-2022/"
+      ]
+    },
+    {
+      "id": "meta_neural_band",
+      "vendor": "Meta",
+      "device": "Meta Neural Band",
+      "status": "bundled_with_meta_ray_ban_display",
+      "signals": [
+        "surface_EMG"
+      ],
+      "measurement_class": "muscle_activity_not_brain_activity",
+      "channels": null,
+      "sampling_rate_hz": null,
+      "sampling_rate_unavailable_reason": "Meta has not published a raw developer stream, channel count, or sample rate in the reviewed product announcement.",
+      "connection": "Bundled wristband control path for Meta Ray-Ban Display",
+      "raw_data_api": "No public raw-sEMG developer API was verified",
+      "platforms": [
+        "Meta_Ray_Ban_Display_product_path"
+      ],
+      "brainflow": {
+        "supported": false,
+        "board_ids": []
+      },
+      "privacy_constraints": [
+        "Wrist sEMG can reveal intended hand actions and text-entry gestures.",
+        "No raw-data API should be inferred from product-control availability.",
+        "The word neural in the product name does not make wrist EMG a brain signal."
+      ],
+      "qualification": "Future muscle-intent accessibility lane only; require EMG-only and EEG-plus-EMG ablations.",
+      "source_urls": [
+        "https://about.fb.com/news/2025/09/meta-ray-ban-display-ai-glasses-emg-wristband/",
+        "https://ai.meta.com/blog/open-sourcing-surface-electromyography-datasets-neurips-2024/"
+      ]
+    }
+  ],
+  "transport_adapters": [
+    {
+      "id": "brainflow",
+      "role": "Board-neutral acquisition and playback API with board-specific descriptors and explicit synthetic/playback boards.",
+      "source_urls": [
+        "https://brainflow.readthedocs.io/en/stable/index.html",
+        "https://brainflow.readthedocs.io/en/stable/SupportedBoards.html",
+        "https://brainflow.readthedocs.io/en/stable/DataFormatDesc.html"
+      ]
+    },
+    {
+      "id": "lsl",
+      "role": "Local-network multimodal stream discovery, timestamp transport, synchronization metadata, and XDF recording; synchronization must be validated rather than assumed.",
+      "source_urls": [
+        "https://github.com/sccn/labstreaminglayer",
+        "https://labstreaminglayer.readthedocs.io/info/time_synchronization.html"
+      ]
+    }
+  ]
+}

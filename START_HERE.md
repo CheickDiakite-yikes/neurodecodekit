@@ -10,6 +10,13 @@
 PYTHONPATH=src python -m unittest discover -s tests -v
 ```
 
+The parallel Real-World Practice Track starts at
+`docs/REAL_WORLD_PRACTICE_TRACK_RESEARCH.md`. RW0 is a completed research gate;
+RW1 metadata intake is the only authorized implementation. The proposed fresh
+S20 EEG block is **not authorized** for download or signal access. Its exact
+four-file, 96,090,264-byte dry run is in
+`docs/FRESH_EEG_BENCHMARK_S20_APPROVAL_PACKET.md`.
+
 Current verified state: two complete S21 SpanishBCBL MEG recordings plus one
 94,842,381-byte S7 SpanishBCBL EEG BrainVision bundle and their matching MAT
 logs have been selectively downloaded under exact caps; the full dataset and
@@ -72,3 +79,8 @@ access, control, bootstrap, and replay gates pass. This is supervised synthetic
 calibration only, seed 2353 is now consumed, and Loop 24 requires a separate
 preregistration. See `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md` and
 `docs/POST_20_ROADMAP.md`.
+
+The current registries keep prompted typing, imagined speech, natural reading,
+P300, SSVEP, and motor imagery as separate evidence cohorts. They also keep
+EEG separate from eye tracking, wrist EMG, heart/PPG, IMU, microphone, and hand
+tracking. No live or portable device is qualified.

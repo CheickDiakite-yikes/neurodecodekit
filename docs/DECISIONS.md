@@ -841,3 +841,43 @@ caps, and kill rules before writing precision code.
 Evidence: `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`,
 `cache/loop235_blank_intercept/gate.json`, and
 `cache/loop235_blank_intercept/gate.md`.
+
+## 0039 - Add a parallel practice track and keep fresh EEG approval-gated
+
+Decision: add a Real-World Practice Track identified as RW0-RW9 without
+renumbering Loop 24. Close RW0 as a primary-source metadata research gate and
+authorize only RW1 level-0 metadata intake on synthetic fixtures. Keep the
+first fresh S20 EEG benchmark at RW4 and blocked until the user explicitly
+approves the exact packet.
+
+Why: the existing pipeline has strong cache, alignment, causality, and report
+contracts but no demonstrated neural advantage or portable-device result. A
+practical local workbench needs to separate file readability, task
+compatibility, benchmark authorization, and live-source qualification. It also
+needs explicit evidence cohorts so reading, P300, SSVEP, motor imagery, eye
+tracking, and wrist EMG are not mistaken for prompted brain-to-text.
+
+Data decision: no unconsumed task-compatible raw EEG exists locally. The
+smallest complete fresh candidate in the pinned SpanishBCBL manifest is S20
+session 2 block 2: one 95,782,400-byte EEG file, an 11,705-byte VHDR, a
+91,219-byte VMRK, and a 204,940-byte MAT log, totaling 96,090,264 bytes. The log
+already exists locally but was not parsed in this gate. The packet freezes a
+128-MiB acquisition cap, 16-MiB generated cap, one worker/thread, target-free
+44/10/10 trial split, prior and shuffle controls, and event-level metrics only.
+
+Access boundary: the research gate used filenames, sizes, official metadata,
+and saved aggregate proof only. It performed zero raw reads, consumed-cache
+reads, model runs, training runs, target-log parses, or downloads. Current disk
+headroom is about 11 GiB but the volume is 98% full, so no speculative data or
+duplicate cache is authorized.
+
+Claim boundary: dataset/device compatibility metadata is not a benchmark.
+AirPods, Vision Pro, Quest, Apple Watch, and Meta Neural Band provide
+behavioral, cardiac, motion, audio, gaze, hand, or muscle signals, not EEG.
+Every future multimodal result requires brain-only, peripheral-only, and
+combined ablations.
+
+Evidence: `docs/REAL_WORLD_PRACTICE_TRACK_RESEARCH.md`,
+`docs/BYO_NEURODATA_WORKBENCH_SPEC.md`,
+`docs/FRESH_EEG_BENCHMARK_S20_APPROVAL_PACKET.md`,
+`registries/datasets.v0.json`, and `registries/devices.v0.json`.

@@ -154,10 +154,15 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   corrections, zero regressions, positive paired-bootstrap lower bounds, and
   5/5 calibrated/unmodified replay. See
   `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`.
-- Next action: preregister Loop 24 before implementing any precision candidate
-  or running a comparison. Seed 2353 is consumed and cannot set tolerances or
-  select candidates. Seeds 2203 and 2303 and all observed MEG/EEG holdouts also
-  remain frozen.
+- Parallel Real-World Practice Track RW0: Done as a primary-source metadata
+  research gate. Eight dataset records, 13 device records, a local workbench
+  contract, and one exact S20 EEG dry-run packet are frozen. No download or
+  signal access is authorized. See
+  `docs/REAL_WORLD_PRACTICE_TRACK_RESEARCH.md`.
+- Next action in the practice track: implement RW1 level-0 local metadata
+  intake on synthetic fixtures only. Loop 24 remains independently available
+  for preregistration. Seeds 2203, 2303, and 2353 and all observed MEG/EEG
+  holdouts remain frozen.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |
@@ -183,6 +188,12 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
 | 19 | Expansion | EEG / MOABB Bridge | Can the same tooling support easier-to-access EEG without pretending it will match MEG? | Native SpanishBCBL BrainVision gate, complete-triplet selection, lazy trigger-aligned cache, and same-split prior comparison. | One pinned 94,842,381-byte bundle produces a valid `2197 x 61 x 25` cache; exact key-label accuracy is reported as a negative 0.91% versus 12.27% prior without cross-modality claims. | P3 | L | Closed: native task-matched EEG bridge validated under caps; MOABB parked and no useful decoder advantage claimed. |
 | 20 | Expansion | Neurotokens / v2-ready Interface | Can we design a future interface for neural embeddings without depending on unreleased data? | Versioned continuous `NeuroTokenCache` schema, create/inspect CLI, and deterministic target-free synthetic projection. | `48 x 16 x 32` smoke preserves timing, masks, modality, geometry availability, strict split/source hashes, and resource/causality boundaries in 76,646 bytes; payload replay is exact; no model, training, real holdout, learned-token, decoding, or real-time claim. | P2 | M | Closed: small official-v2-shaped interface is validated; next gate is causal chunk/replay behavior, not a larger model. |
 
+## Parallel Practice Track
+
+Use `RW0` through `RW9` from `docs/POST_20_ROADMAP.md`; do not insert them into
+or renumber the original 20 rows. RW0 is closed. RW1 metadata intake is active.
+The S20 fresh EEG benchmark is RW4 and remains blocked on explicit approval.
+
 ## Anti-patterns
 - Do not download a large dataset slice without an explicit dry-run report and `--execute` confirmation.
 - Do not report neural model performance without a no-brain / prior-only baseline.
@@ -191,3 +202,6 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
 - Do not treat a random split score as real generalization.
 - Do not call whole-sentence non-causal decoding low-latency streaming or
   thought-only text generation.
+- Do not merge typing, inner speech, reading, P300, SSVEP, and motor imagery
+  into one evidence cohort.
+- Do not call eye, hand, heart, motion, microphone, or wrist-EMG data EEG.
