@@ -2,6 +2,7 @@ import importlib.util
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 
 @unittest.skipUnless(importlib.util.find_spec("numpy"), "NumPy not installed")
@@ -152,6 +153,8 @@ class NeuroTokenCacheTests(unittest.TestCase):
         import numpy as np
 
         from neurodecodekit.cache.neurotoken import (
+            SENTENCE_SIGNAL_MEMBERS_OPENED,
+            SENTENCE_TARGET_MEMBERS_NOT_OPENED,
             load_neurotoken_cache,
             project_sentence_cache_to_neurotokens,
         )
@@ -193,12 +196,40 @@ class NeuroTokenCacheTests(unittest.TestCase):
                 "max_items": 64,
                 "max_output_mb": 4.0,
             }
-            result_a = project_sentence_cache_to_neurotokens(
-                out_path=output_a,
-                metadata_sidecar=sidecar,
-                **kwargs,
-            )
-            project_sentence_cache_to_neurotokens(out_path=output_b, **kwargs)
+            accessed = []
+            real_load = np.load
+
+            class TrackingNpz:
+                def __init__(self, wrapped, *, track):
+                    self.wrapped = wrapped
+                    self.files = wrapped.files
+                    self.track = track
+
+                def __enter__(self):
+                    return self
+
+                def __exit__(self, exc_type, exc, traceback):
+                    self.wrapped.close()
+
+                def __getitem__(self, name):
+                    if self.track:
+                        accessed.append(name)
+                    return self.wrapped[name]
+
+            def tracking_load(*args, **load_kwargs):
+                loaded_path = Path(args[0]) if args else Path(load_kwargs["file"])
+                return TrackingNpz(
+                    real_load(*args, **load_kwargs),
+                    track=loaded_path.resolve() == source.resolve(),
+                )
+
+            with patch("numpy.load", side_effect=tracking_load):
+                result_a = project_sentence_cache_to_neurotokens(
+                    out_path=output_a,
+                    metadata_sidecar=sidecar,
+                    **kwargs,
+                )
+                project_sentence_cache_to_neurotokens(out_path=output_b, **kwargs)
             loaded_a = load_neurotoken_cache(output_a)
             loaded_b = load_neurotoken_cache(output_b)
             with np.load(output_a, allow_pickle=False) as data:
@@ -218,6 +249,17 @@ class NeuroTokenCacheTests(unittest.TestCase):
         self.assertEqual(loaded_a.metadata["source"]["cache_sha256"], split["sources"][0]["sha256"])
         self.assertEqual(loaded_a.metadata["source_geometry"]["position_source"], "unavailable")
         self.assertEqual(int(loaded_a.source_channel_position_mask.sum()), 0)
+        self.assertEqual(set(accessed), set(SENTENCE_SIGNAL_MEMBERS_OPENED))
+        self.assertTrue(set(SENTENCE_TARGET_MEMBERS_NOT_OPENED).isdisjoint(accessed))
+        self.assertTrue(
+            all(accessed.count(name) == 2 for name in SENTENCE_SIGNAL_MEMBERS_OPENED)
+        )
+        self.assertFalse(loaded_a.metadata["source"]["target_text_array_opened"])
+        self.assertFalse(loaded_a.metadata["source"]["target_token_array_opened"])
+        self.assertEqual(
+            set(loaded_a.metadata["source"]["target_members_present_but_not_opened"]),
+            set(SENTENCE_TARGET_MEMBERS_NOT_OPENED),
+        )
         self.assertNotIn("target_texts", members)
         self.assertNotIn("target_token_ids", members)
         self.assertTrue(sidecar_exists)

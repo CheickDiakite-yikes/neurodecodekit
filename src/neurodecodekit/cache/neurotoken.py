@@ -28,6 +28,22 @@ OFFICIAL_V2_PAPER = (
     "https://facebookresearch.github.io/brain2qwerty/assets/brain2qwerty_v2.pdf"
 )
 SUPPORTED_TOKEN_DTYPES = ("float32", "float16")
+SENTENCE_SIGNAL_MEMBERS_OPENED = (
+    "metadata",
+    "signals",
+    "input_lengths",
+    "trial_indices",
+    "sentence_start_sec",
+    "sentence_end_sec",
+    "channel_names",
+)
+SENTENCE_TARGET_MEMBERS_NOT_OPENED = (
+    "target_token_ids",
+    "target_lengths",
+    "target_texts",
+    "reference_texts",
+    "mat_response_texts",
+)
 
 
 class NeuroTokenCacheSchemaError(ValueError):
@@ -92,6 +108,19 @@ class LoadedNeuroTokenCache:
     source_channel_position_mask: Any
     metadata: dict[str, Any]
     summary: NeuroTokenCacheSummary
+
+
+@dataclass(frozen=True)
+class _SentenceSignalView:
+    """Projection-only sentence members with no target arrays opened."""
+
+    signals: Any
+    input_lengths: Any
+    trial_indices: Any
+    sentence_start_sec: Any
+    sentence_end_sec: Any
+    channel_names: Any
+    metadata: dict[str, Any]
 
 
 def save_neurotoken_cache(
@@ -274,7 +303,6 @@ def project_sentence_cache_to_neurotokens(
 ) -> dict[str, Any]:
     """Create a target-free mock embedding cache from one sentence cache."""
 
-    from neurodecodekit.cache.sentence_npz import load_sentence_npz_cache
     from neurodecodekit.evaluation.split_protocol import load_training_partitions
 
     started_at = time.perf_counter()
@@ -294,7 +322,7 @@ def project_sentence_cache_to_neurotokens(
         max_tokens_per_item=max_tokens_per_item,
         max_output_mb=max_output_mb,
     )
-    source = load_sentence_npz_cache(source_path)
+    source = _load_sentence_signal_view(source_path)
     n_items = int(source.signals.shape[0])
     if n_items > max_items:
         raise ValueError(f"Source has {n_items} items, exceeding --max-items {max_items}.")
@@ -329,6 +357,7 @@ def project_sentence_cache_to_neurotokens(
         "continuous_neurotokens_are_not_discrete_codes",
         "mock_random_projection_is_not_a_learned_neural_representation",
         "mock_projection_uses_no_target_text_or_target_labels",
+        "source_target_members_verified_present_but_not_opened",
         "cache_contract_does_not_establish_decoding_accuracy",
         "official_v2_reference_encoder_is_noncausal_whole_sentence",
         "real_time_requires_a_causal_decoder_and_measured_end_to_end_latency",
@@ -364,6 +393,12 @@ def project_sentence_cache_to_neurotokens(
             "split_report_path": str(split_path),
             "split_report_sha256": split_sha256,
             "source_signal_array_loaded": True,
+            "npz_members_opened": list(SENTENCE_SIGNAL_MEMBERS_OPENED),
+            "target_members_present_but_not_opened": list(
+                SENTENCE_TARGET_MEMBERS_NOT_OPENED
+            ),
+            "target_text_array_opened": False,
+            "target_token_array_opened": False,
             "target_text_array_used_by_projection": False,
             "target_token_array_used_by_projection": False,
         },
@@ -808,6 +843,92 @@ def _validate_metadata(metadata: Mapping[str, Any]) -> None:
         raise NeuroTokenCacheSchemaError("claim_boundaries must be a nonempty list")
     if not isinstance(metadata.get("warnings"), list):
         raise NeuroTokenCacheSchemaError("warnings must be a list")
+
+
+def _load_sentence_signal_view(path: Path) -> _SentenceSignalView:
+    """Open only projection-relevant sentence members and validate their contract."""
+
+    from neurodecodekit.cache.sentence_npz import validate_sentence_cache_metadata
+
+    np = _require_numpy()
+    with np.load(path, allow_pickle=False) as data:
+        present = set(data.files)
+        missing = sorted(set(SENTENCE_SIGNAL_MEMBERS_OPENED) - present)
+        if missing:
+            raise ValueError(f"Sentence cache is missing signal-view members: {missing}")
+        missing_targets = sorted(set(SENTENCE_TARGET_MEMBERS_NOT_OPENED) - present)
+        if missing_targets:
+            raise ValueError(
+                "Sentence cache is missing expected unopened target members: "
+                f"{missing_targets}"
+            )
+        metadata = _decode_sentence_metadata(data["metadata"])
+        signals = data["signals"].copy()
+        input_lengths = data["input_lengths"].copy()
+        trial_indices = data["trial_indices"].copy()
+        sentence_start_sec = data["sentence_start_sec"].copy()
+        sentence_end_sec = data["sentence_end_sec"].copy()
+        channel_names = data["channel_names"].copy()
+    validate_sentence_cache_metadata(metadata)
+    if (
+        signals.ndim != 3
+        or min(signals.shape) < 1
+        or not np.issubdtype(signals.dtype, np.floating)
+        or not np.isfinite(signals).all()
+    ):
+        raise ValueError("Sentence signals must be finite floating [items,channels,time]")
+    n_items, n_channels, max_timepoints = signals.shape
+    for name, value in (
+        ("input_lengths", input_lengths),
+        ("trial_indices", trial_indices),
+    ):
+        if value.shape != (n_items,) or not np.issubdtype(value.dtype, np.integer):
+            raise ValueError(f"Sentence {name} must be an integer item vector")
+    for name, value in (
+        ("sentence_start_sec", sentence_start_sec),
+        ("sentence_end_sec", sentence_end_sec),
+    ):
+        if value.shape != (n_items,) or not np.isfinite(value).all():
+            raise ValueError(f"Sentence {name} must be a finite item vector")
+    if (input_lengths < 1).any() or (input_lengths > max_timepoints).any():
+        raise ValueError("Sentence input lengths fall outside the signal array")
+    if (sentence_end_sec < sentence_start_sec).any():
+        raise ValueError("Sentence end times must not precede start times")
+    if channel_names.shape != (n_channels,):
+        raise ValueError("Sentence channel names must match the signal channel count")
+    names = [str(value).strip() for value in channel_names.tolist()]
+    if any(not name for name in names) or len(set(names)) != len(names):
+        raise ValueError("Sentence channel names must be nonempty and unique")
+    if len(set(int(value) for value in trial_indices.tolist())) != n_items:
+        raise ValueError("Sentence trial indices must be unique")
+    for index, length_value in enumerate(input_lengths.tolist()):
+        length = int(length_value)
+        if not np.array_equal(
+            signals[index, :, length:], np.zeros_like(signals[index, :, length:])
+        ):
+            raise ValueError("Sentence signal padding must be exactly zero")
+    return _SentenceSignalView(
+        signals=signals,
+        input_lengths=input_lengths.astype("int32", copy=False),
+        trial_indices=trial_indices.astype("int32", copy=False),
+        sentence_start_sec=sentence_start_sec.astype("float64", copy=False),
+        sentence_end_sec=sentence_end_sec.astype("float64", copy=False),
+        channel_names=channel_names,
+        metadata=metadata,
+    )
+
+
+def _decode_sentence_metadata(value: Any) -> dict[str, Any]:
+    try:
+        raw = value.item() if getattr(value, "shape", None) == () else value.tolist()
+        if isinstance(raw, bytes):
+            raw = raw.decode("utf-8")
+        metadata = json.loads(str(raw))
+    except (AttributeError, TypeError, ValueError, json.JSONDecodeError) as exc:
+        raise ValueError("Sentence cache metadata is not valid JSON") from exc
+    if not isinstance(metadata, dict):
+        raise ValueError("Sentence cache metadata must decode to an object")
+    return metadata
 
 
 def _source_channel_geometry(source) -> tuple[Any, Any, dict[str, Any]]:
