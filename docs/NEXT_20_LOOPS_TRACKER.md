@@ -146,18 +146,18 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   clear negative result. One S7 EEG file is trigger/cache validated, and its
   nearest-centroid event result is also negative. There is no reliable neural
   advantage, unseen-person performance, retained-accuracy,
-  optimal-sensor/precision, integer-only inference, OPM-equivalence, passed
+  optimal-sensor/precision, integer-only inference, OPM-equivalence, real-neural
   sequence-decoder, or low-latency streaming claim.
-- Post-roadmap Loop 23.5: Preregistered before implementation or target
-  generation. Fit one additive blank-logit intercept by convex train-frame
-  binary log loss on fresh 64/16/16 splits; validation only opens or parks the
-  one-time test. Require at least two corrections, no per-item CER regressions,
-  14/16 exact, repeated-pair preservation, calibration improvement, controls,
-  and 5/5 replay. See `docs/LOOP_23_5_PREREGISTRATION.md`.
-- Next action: implement Loop 23.5 using alternate seeds 9351/9352/9353 first.
-  Keep registered seed 2353 absent until alternate mechanics, the full suite,
-  and one full-size rehearsal are committed and pushed. Seed 2203, seed 2303,
-  and all observed MEG/EEG holdouts remain frozen.
+- Post-roadmap Loop 23.5: Done as a supervised synthetic calibration gate. One
+  train-frame-fitted blank intercept takes validation from 6/16 to 16/16 exact
+  and the once-opened seed-2353 test from 7/16 to 16/16, with CER 0, nine test
+  corrections, zero regressions, positive paired-bootstrap lower bounds, and
+  5/5 calibrated/unmodified replay. See
+  `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`.
+- Next action: preregister Loop 24 before implementing any precision candidate
+  or running a comparison. Seed 2353 is consumed and cannot set tolerances or
+  select candidates. Seeds 2203 and 2303 and all observed MEG/EEG holdouts also
+  remain frozen.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |

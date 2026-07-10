@@ -1,7 +1,7 @@
 # Codex Handoff — NeuroDecodeKit Starter
 
-> Current handoff, 2026-07-10: Loops 1-12 and 14-22 are complete; Loops 13 and
-> 23 are parked after measured gates. Two S21 MEG sessions support strict
+> Current handoff, 2026-07-10: Loops 1-12, 14-22, and 23.5 are complete; Loops
+> 13 and 23 are parked after measured gates. Two S21 MEG sessions support strict
 > sentence-text and same-subject session protocols, but the fixed tiny CTC has
 > no reliable neural advantage and loses its cross-session comparison to the
 > no-signal prior. One bounded S7 EEG bridge is trigger/cache validated, but its
@@ -14,13 +14,16 @@
 > test CER is 0.0545 with all repeated pairs recovered, but exact accuracy is
 > only 5/8 against a 6/8 threshold. Every failure is the correct target plus one
 > false tail symbol; prefix and greedy agree. The test is consumed, the branch
-> is parked, and no post-test trimming or tuning is allowed. Loop 23.5 now
-> preregisters one fresh intercept-only blank calibration gate before code or
-> targets. Implementation must start on alternate seeds 9351/9352/9353; seed
-> 2353 must remain absent until mechanics are committed and pushed. There is no
-> demonstrated neural advantage, unseen-person, useful EEG,
-> passed sequence decoder, real-time, portable-hardware, arbitrary-thought, or
-> clinical claim. See `docs/LOOP_23_STREAMING_CTC_DECODER.md`.
+> is parked, and no post-test trimming or tuning is allowed. Loop 23.5 then
+> passes a separately preregistered fresh synthetic calibration gate: one
+> train-frame-fitted blank intercept takes validation from 6/16 to 16/16 exact
+> and the once-opened seed-2353 test from 7/16 to 16/16 exact, with zero CER,
+> nine test corrections, no regressions, and all replay/resource/access gates
+> passing. Seed 2353 is consumed. Loop 24 is unblocked for preregistration only.
+> There is no demonstrated neural advantage, unseen-person, useful EEG,
+> real-neural sequence decoder, end-to-end real-time, portable-hardware,
+> arbitrary-thought, or clinical claim. See
+> `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`.
 
 ## State of the repo
 
@@ -86,6 +89,9 @@ This repo is a starter scaffold with working pure-Python components:
 - strict synthetic symbol-stream partitions, target-only train access,
   validation-before-test gating, partial timing/stability metrics, and
   five-schedule frame-indexed decoder replay
+- dependency-free one-scalar blank-logit calibration with frame-only fit
+  access, separate target-only prior access, paired no-harm/bootstrap metrics,
+  exact calibrated/unmodified replay, and one-time frozen-test gating
 - JSON/Markdown metrics report command
 - CLI smoke commands
 - unit tests
@@ -98,9 +104,9 @@ negative within-session event comparison. None is a decoder success. Do not
 turn these results, a variance ranking, or a geometry proxy into unseen-person
 or population generalization.
 
-Current verification on 2026-07-10: 225 unittest tests passed with 3 skipped;
-pytest reported 222 passed, 3 skipped, and 25 subtests passed. Full Ruff lint,
-compileall, root and Loop 23 CLI help, artifact-contract checks, workbook
+Current verification on 2026-07-10: 238 unittest tests passed with 3 skipped;
+pytest reported 235 passed, 3 skipped, and 25 subtests passed. Full Ruff lint,
+compileall, root and Loop 23/23.5 CLI help, artifact-contract checks, workbook
 formulas and all-sheet visual checks, and `git diff --check` passed. The tracked
 and delivered workbook hashes match at
 `bd7ba4895e3afaf54b279ff240cf3377d49693dfdaeb11527c7ef7600874836c`.
@@ -119,20 +125,22 @@ This is not primarily a model repo. It is a **research loop repo**.
 
 ## Current next 3 loops
 
-1. **Loop 23.5 - blank-intercept calibration implementation.** Implement the
-   frozen one-scalar train-frame fit, disjoint access modes, unchanged decoder
-   comparator, no-harm metrics, and five-schedule replay on alternate seeds.
-2. **Loop 24 - local precision/runtime gate.** Keep this blocked until a fresh
-   decoder correctness gate passes; then compare actual float/integer execution
-   without changing outputs beyond a preregistered tolerance.
-3. **Loop 25 - causal preprocessing audit.** Open source-session train rows only
+1. **Loop 24 - preregister local precision/runtime.** Freeze candidates,
+   reference arithmetic, tolerances, selection data, resource caps, and a
+   no-rerun rule before implementing or benchmarking. Seed 2353 is forbidden
+   for candidate selection or tolerance setting.
+2. **Loop 25 - causal preprocessing audit.** Open source-session train rows only
    and prove that filtering, normalization, framing, and padding can replay
    without future leakage before any real validation score.
+3. **Loop 26 - real validation-only encoder gate.** Preregister the fixed tiny
+   model and no-signal comparison before opening source validation; keep every
+   observed source test and session-2 row frozen.
 
 Loop 23's preregistration and parked result are in
 `docs/LOOP_23_PREREGISTRATION.md` and
-`docs/LOOP_23_STREAMING_CTC_DECODER.md`. Loop 23.5 is frozen in
-`docs/LOOP_23_5_PREREGISTRATION.md`. Loop 22 evidence is in
+`docs/LOOP_23_STREAMING_CTC_DECODER.md`. Loop 23.5's frozen design and closeout
+are in `docs/LOOP_23_5_PREREGISTRATION.md` and
+`docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`. Loop 22 evidence is in
 `docs/LOOP_22_TINY_CAUSAL_ENCODER.md`; the post-20 sequence is in
 `docs/POST_20_ROADMAP.md`.
 

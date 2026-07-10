@@ -316,14 +316,16 @@ whole command. See the original CTC paper
 metrics (https://aclanthology.org/N09-1043/), and the measured closeout in
 `docs/LOOP_23_STREAMING_CTC_DECODER.md`.
 
-The next scientifically clean intervention is not target-length trimming or a
-post-test endpoint heuristic. Loop 23.5 therefore preregisters one fresh-split,
+The next scientifically clean intervention was not target-length trimming or a
+post-test endpoint heuristic. Loop 23.5 therefore preregistered one fresh-split,
 target-length-independent blank intercept with the unmodified decoder as
-comparator. The intercept is fitted by convex binary log loss on train-frame
-blank labels only; its slope remains one, and validation cannot change it. This
-is supervised synthetic calibration, not label-free learning or evidence that
-the same correction will transfer to neural signals. See
-`docs/LOOP_23_5_PREREGISTRATION.md`.
+comparator. The train-frame fit changes the once-opened seed-2353 test from
+7/16 to 16/16 exact and removes all nine observed strict tail insertions without
+making any item worse. This isolates blank-score calibration as a sufficient
+mechanism on this generated task. It remains supervised synthetic calibration,
+not label-free learning, endpoint detection, or evidence that the same scalar
+will transfer to MEG, EEG, or natural text. See
+`docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`.
 
 ## Loop 19 EEG ecosystem decision
 

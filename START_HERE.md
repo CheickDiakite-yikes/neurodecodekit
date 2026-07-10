@@ -13,8 +13,8 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 Current verified state: two complete S21 SpanishBCBL MEG recordings plus one
 94,842,381-byte S7 SpanishBCBL EEG BrainVision bundle and their matching MAT
 logs have been selectively downloaded under exact caps; the full dataset and
-12.79-GB EEG subtree have not been downloaded. Loops 9-12, 14-22 are complete;
-Loops 13 and 23 are parked after measured gates.
+12.79-GB EEG subtree have not been downloaded. Loops 9-12, 14-22, and 23.5 are
+complete; Loops 13 and 23 are parked after measured gates.
 Session 1 provides a strict 55/6/5 split with
 train-only robust scaling. Session 2 is a complete two-part FIFF recording with
 63 performed trials; MAT slots 54, 58, and 60 are explicitly empty and are
@@ -64,8 +64,11 @@ validation passes at CER 0.0182 and 7/8 exact, so seed 2303 opens once. Frozen
 test CER is 0.0545 and all repeated pairs are correct, but exact sequence
 accuracy is only 5/8 versus the required 6/8. Every error is a complete target
 plus one false tail symbol; prefix and greedy agree. Loop 23 is parked and its
-test is consumed. Loop 23.5 now preregisters one fresh, target-length-independent
-blank-intercept calibration gate before implementation or target generation.
-Implement and rehearse with alternate seeds only; seed 2353 must remain absent
-until mechanics are committed and pushed. See
-`docs/LOOP_23_5_PREREGISTRATION.md` and `docs/POST_20_ROADMAP.md`.
+test is consumed. Loop 23.5 then fits one preregistered blank-logit intercept on
+fresh train-frame labels. Validation reaches 16/16 exact, opening seed 2353
+once; the frozen test also reaches 16/16 and CER 0 versus 7/16 and CER 0.0818
+without calibration. Nine items are corrected, none worsens, and all resource,
+access, control, bootstrap, and replay gates pass. This is supervised synthetic
+calibration only, seed 2353 is now consumed, and Loop 24 requires a separate
+preregistration. See `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md` and
+`docs/POST_20_ROADMAP.md`.

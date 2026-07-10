@@ -692,12 +692,14 @@ pairs. Every error is the complete target plus one false tail symbol. Loop 23
 is parked and seed 2303 is consumed. See
 `docs/LOOP_23_STREAMING_CTC_DECODER.md`.
 
-Loop 23.5 is preregistered before implementation or fresh targets. It freezes
-one additive blank-logit intercept fitted by convex binary log loss on fresh
-train frames, new 64/16/16 physical splits, the unmodified Loop 23 comparator,
-strict no-harm sequence gates, and one new test open. It does not add an
-endpoint, target-length trim, language model, or model update. See
-`docs/LOOP_23_5_PREREGISTRATION.md`.
+Loop 23.5 completes that preregistered fresh-split test. One scalar blank-logit
+intercept fitted on train-frame labels changes validation from 6/16 to 16/16
+exact and the once-opened seed-2353 test from 7/16 to 16/16 exact, with test CER
+falling from 0.0818 to 0. Nine test items are corrected, no item worsens, and
+all calibration, control, bootstrap, access, resource, and 5/5 replay gates
+pass. Seed 2353 is consumed. This supervised synthetic correction is not a
+learned representation, endpoint, natural-text result, or neural-decoding
+result. See `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`.
 
 Loop 5 closeout checks:
 
@@ -761,6 +763,10 @@ Current limitations:
   five-schedule replay on synthetic symbols, but fails its frozen
   exact-sequence gate because of stable false tail emissions. Seed 2303 is
   consumed; no trimming, calibration, or endpoint rule may be selected from it.
+- Loop 23.5 passes a fresh synthetic correctness gate with one supervised
+  train-frame blank intercept. The result does not rehabilitate seed 2303,
+  establish a real-neural decoder, or measure endpointing or end-to-end
+  latency. Seed 2353 is consumed and may not select Loop 24 candidates.
 - The local demo displays synthetic example text and aggregate-only real
   metrics. It is an evidence console, not a live real-MEG decoder; predictive
   confidence remains unavailable.

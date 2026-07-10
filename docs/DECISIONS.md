@@ -800,3 +800,44 @@ target-length trim, endpoint, language model, temperature, per-symbol bias,
 larger model, or precision candidate is allowed.
 
 Evidence: `docs/LOOP_23_5_PREREGISTRATION.md`.
+
+## 0038 - Close Loop 23.5 and consume seed 2353
+
+Decision: close Loop 23.5 as a passed supervised synthetic calibration
+mechanism gate. Preserve the fitted scalar, protocol, decoder, controls,
+thresholds, and report as frozen evidence. Authorize Loop 24 preregistration,
+but no precision implementation or comparison until that new protocol is
+committed and pushed.
+
+Why: the registered train-frame fit produces one blank-logit intercept of
+`5.130175197684084`. Validation passes at 16/16 exact and CER 0, so seed 2353
+opens once. Its frozen test also reaches 16/16 exact and CER 0 versus 7/16 and
+CER 0.081818 for the unmodified decoder. Nine test items are corrected, no new
+error or per-item CER regression appears, all 19 repeated pairs survive, and
+the paired-bootstrap lower bounds for exact gain and CER reduction are
+positive. Both calibrated and unmodified validation decoders replay 5/5
+schedules exactly.
+
+Access and resource boundary: implementation commit `baeea77` was pushed
+before seed 2353 existed. Calibration opens train frame labels but no target
+IDs; the prior uses a separate target-only view; validation precedes one test
+open; no test replay or post-open fit occurs. Fixture plus reports total
+969,177 bytes, internal runtime is 1.266573 seconds, peak RSS is 213,958,656
+bytes, and state, working-memory, thread, and output caps all pass. There are
+zero training runs, model updates, raw/real/network reads, or language-model
+runs.
+
+Claim boundary: this result identifies a sufficient score-calibration
+mechanism for one generated motif/symbol task. It does not establish a learned
+representation, endpoint detector, natural-text decoder, MEG/EEG transfer,
+neural advantage, unseen-person performance, real-time latency, portable
+hardware, arbitrary-thought decoding, or clinical utility.
+
+Next boundary: seed 2353 is consumed. Loop 24 may not use it to choose a
+candidate, set a tolerance, or claim fresh evidence. Preregister candidates,
+reference arithmetic, fresh selection data, correctness tolerances, resource
+caps, and kill rules before writing precision code.
+
+Evidence: `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`,
+`cache/loop235_blank_intercept/gate.json`, and
+`cache/loop235_blank_intercept/gate.md`.
