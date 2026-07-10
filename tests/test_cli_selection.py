@@ -36,6 +36,8 @@ class SelectionCliTests(unittest.TestCase):
         self.assertIn("estimated size: 1.2 KB", output)
         self.assertIn("pinet2024_public/MEG/FIF/S1/block1.fif", output)
         self.assertIn("Safety default: dry-run", output)
+        self.assertIn("revision: unpinned", output)
+        self.assertIn("max_workers=1", output)
 
     def test_execute_requires_explicit_unknown_size_acknowledgement(self):
         records = build_manifest_from_paths([

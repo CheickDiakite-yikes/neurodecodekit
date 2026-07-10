@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import math
+import random
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -177,6 +178,146 @@ def aggregate_text_scores(examples: list[TextExampleScore]) -> dict[str, object]
     }
 
 
+def compare_paired_predictions(
+    *,
+    targets: Iterable[str],
+    predictions_a: Iterable[str],
+    predictions_b: Iterable[str],
+    label_a: str,
+    label_b: str,
+    bootstrap_iterations: int = 5000,
+    seed: int = 17,
+) -> dict[str, object]:
+    """Compare two prediction sets with a paired sentence bootstrap over CER."""
+
+    target_rows = [normalize_text(str(value)) for value in targets]
+    rows_a = [normalize_text(str(value)) for value in predictions_a]
+    rows_b = [normalize_text(str(value)) for value in predictions_b]
+    if not target_rows or not (len(target_rows) == len(rows_a) == len(rows_b)):
+        raise ValueError("paired comparison requires equal non-empty row counts")
+    if bootstrap_iterations < 100:
+        raise ValueError("bootstrap_iterations must be >= 100")
+    target_chars = [len(value) for value in target_rows]
+    if sum(target_chars) == 0:
+        raise ValueError("paired CER comparison requires at least one target character")
+    edits_a = [
+        levenshtein_distance(target, prediction)
+        for target, prediction in zip(target_rows, rows_a, strict=True)
+    ]
+    edits_b = [
+        levenshtein_distance(target, prediction)
+        for target, prediction in zip(target_rows, rows_b, strict=True)
+    ]
+    observed_a = sum(edits_a) / sum(target_chars)
+    observed_b = sum(edits_b) / sum(target_chars)
+    rng = random.Random(seed)
+    bootstrap_deltas = []
+    for _ in range(bootstrap_iterations):
+        sampled = [rng.randrange(len(target_rows)) for _ in target_rows]
+        sampled_chars = sum(target_chars[index] for index in sampled)
+        sampled_a = sum(edits_a[index] for index in sampled) / sampled_chars
+        sampled_b = sum(edits_b[index] for index in sampled) / sampled_chars
+        bootstrap_deltas.append(sampled_a - sampled_b)
+    bootstrap_deltas.sort()
+    lower_index = int(0.025 * (bootstrap_iterations - 1))
+    upper_index = int(0.975 * (bootstrap_iterations - 1))
+    wins = sum(a < b for a, b in zip(edits_a, edits_b, strict=True))
+    ties = sum(a == b for a, b in zip(edits_a, edits_b, strict=True))
+    losses = sum(a > b for a, b in zip(edits_a, edits_b, strict=True))
+    return {
+        "label_a": label_a,
+        "label_b": label_b,
+        "n_paired_sentences": len(target_rows),
+        "corpus_cer_a": observed_a,
+        "corpus_cer_b": observed_b,
+        "corpus_cer_delta_a_minus_b": observed_a - observed_b,
+        "char_edits_a": sum(edits_a),
+        "char_edits_b": sum(edits_b),
+        "char_edit_delta_a_minus_b": sum(edits_a) - sum(edits_b),
+        "sentence_wins_a": wins,
+        "sentence_ties": ties,
+        "sentence_losses_a": losses,
+        "paired_bootstrap_iterations": bootstrap_iterations,
+        "paired_bootstrap_seed": seed,
+        "paired_bootstrap_delta_ci95": [
+            bootstrap_deltas[lower_index],
+            bootstrap_deltas[upper_index],
+        ],
+        "bootstrap_probability_a_better": (
+            sum(value < 0 for value in bootstrap_deltas) / bootstrap_iterations
+        ),
+        "interpretation_boundary": (
+            "Sentence-level paired bootstrap; small partitions remain highly uncertain."
+        ),
+    }
+
+
+def compare_paired_label_predictions(
+    *,
+    targets: Iterable[str],
+    predictions_a: Iterable[str],
+    predictions_b: Iterable[str],
+    label_a: str,
+    label_b: str,
+    bootstrap_iterations: int = 5000,
+    seed: int = 17,
+) -> dict[str, object]:
+    """Compare exact label correctness with a paired row bootstrap."""
+
+    target_rows = [str(value) for value in targets]
+    rows_a = [str(value) for value in predictions_a]
+    rows_b = [str(value) for value in predictions_b]
+    if not target_rows or not (len(target_rows) == len(rows_a) == len(rows_b)):
+        raise ValueError("paired label comparison requires equal non-empty row counts")
+    if bootstrap_iterations < 100:
+        raise ValueError("bootstrap_iterations must be >= 100")
+
+    correct_a = [target == prediction for target, prediction in zip(target_rows, rows_a)]
+    correct_b = [target == prediction for target, prediction in zip(target_rows, rows_b)]
+    accuracy_a = sum(correct_a) / len(correct_a)
+    accuracy_b = sum(correct_b) / len(correct_b)
+    rng = random.Random(seed)
+    bootstrap_deltas = []
+    for _ in range(bootstrap_iterations):
+        sampled = [rng.randrange(len(target_rows)) for _ in target_rows]
+        sampled_a = sum(correct_a[index] for index in sampled) / len(sampled)
+        sampled_b = sum(correct_b[index] for index in sampled) / len(sampled)
+        bootstrap_deltas.append(sampled_a - sampled_b)
+    bootstrap_deltas.sort()
+    lower_index = int(0.025 * (bootstrap_iterations - 1))
+    upper_index = int(0.975 * (bootstrap_iterations - 1))
+    wins = sum(a and not b for a, b in zip(correct_a, correct_b, strict=True))
+    ties = sum(a == b for a, b in zip(correct_a, correct_b, strict=True))
+    losses = sum(not a and b for a, b in zip(correct_a, correct_b, strict=True))
+    return {
+        "metric_kind": "label_accuracy",
+        "label_a": label_a,
+        "label_b": label_b,
+        "n_paired_labels": len(target_rows),
+        "label_accuracy_a": accuracy_a,
+        "label_accuracy_b": accuracy_b,
+        "label_accuracy_delta_a_minus_b": accuracy_a - accuracy_b,
+        "label_errors_a": len(target_rows) - sum(correct_a),
+        "label_errors_b": len(target_rows) - sum(correct_b),
+        "paired_label_wins_a": wins,
+        "paired_label_ties": ties,
+        "paired_label_losses_a": losses,
+        "paired_bootstrap_iterations": bootstrap_iterations,
+        "paired_bootstrap_seed": seed,
+        "paired_bootstrap_delta_ci95": [
+            bootstrap_deltas[lower_index],
+            bootstrap_deltas[upper_index],
+        ],
+        "bootstrap_probability_a_better": (
+            sum(value > 0 for value in bootstrap_deltas) / bootstrap_iterations
+        ),
+        "interpretation_boundary": (
+            "Paired event-label bootstrap within one session; this does not establish "
+            "cross-session or cross-subject generalization."
+        ),
+    }
+
+
 def render_report_markdown(report: dict[str, Any]) -> str:
     """Render a report dictionary as lightweight Markdown."""
 
@@ -196,6 +337,9 @@ def render_report_markdown(report: dict[str, Any]) -> str:
         "|---|---:|",
     ]
     for key in (
+        "primary_metric",
+        "label_accuracy",
+        "label_error_count",
         "n_examples",
         "exact_match_rate",
         "corpus_cer",
@@ -210,6 +354,7 @@ def render_report_markdown(report: dict[str, Any]) -> str:
 
     cache = report.get("cache")
     if cache:
+        cache_shape = cache.get("windows_shape", cache.get("signals_shape"))
         lines.extend(
             [
                 "",
@@ -217,7 +362,7 @@ def render_report_markdown(report: dict[str, Any]) -> str:
                 "",
                 f"- Path: `{_md_inline(cache.get('path', ''))}`",
                 f"- Kind: `{_md_inline(cache.get('kind', 'unknown'))}`",
-                f"- Shape: `{_md_inline(str(cache.get('windows_shape')))}`",
+                f"- Shape: `{_md_inline(str(cache_shape))}`",
                 f"- Bytes: `{_format_metric(cache.get('bytes'))}`",
             ]
         )
@@ -253,10 +398,99 @@ def render_report_markdown(report: dict[str, Any]) -> str:
             lines.append(f"- Train accuracy: `{_format_metric(baseline.get('train_accuracy'))}`")
         if baseline.get("eval_accuracy") is not None:
             lines.append(f"- Eval accuracy: `{_format_metric(baseline.get('eval_accuracy'))}`")
+        if baseline.get("parameter_count") is not None:
+            lines.append(f"- Parameters: `{_format_metric(baseline.get('parameter_count'))}`")
+        if baseline.get("train_cer") is not None:
+            lines.append(f"- Train CER: `{_format_metric(baseline.get('train_cer'))}`")
+        if baseline.get("eval_cer") is not None:
+            lines.append(f"- Eval CER: `{_format_metric(baseline.get('eval_cer'))}`")
+        if baseline.get("eval_blank_fraction") is not None:
+            lines.append(
+                f"- Eval blank fraction: `{_format_metric(baseline.get('eval_blank_fraction'))}`"
+            )
+        if baseline.get("causal") is not None:
+            lines.append(f"- Causal: `{_format_bool_or_unknown(baseline.get('causal'))}`")
         if baseline.get("top_target") not in (None, ""):
             lines.append(f"- Top target: `{_md_inline(str(baseline.get('top_target')))}`")
         if baseline.get("top_count") is not None:
             lines.append(f"- Top count: `{_format_metric(baseline.get('top_count'))}`")
+
+    split_protocol = report.get("split_protocol")
+    if split_protocol:
+        lines.extend(
+            [
+                "",
+                "## Split Protocol",
+                "",
+                f"- Evaluation partition: `{_md_inline(str(split_protocol.get('eval_partition')))}`",
+                f"- Train rows: `{len(split_protocol.get('train_indices') or [])}`",
+                f"- Validation rows: `{len(split_protocol.get('validation_indices') or [])}`",
+                f"- Test rows: `{len(split_protocol.get('test_indices') or [])}`",
+                "- Signal arrays loaded by membership reader: "
+                f"`{_format_bool_or_unknown(split_protocol.get('signal_array_members_loaded'))}`",
+                "- Protocol config SHA-256: "
+                f"`{_md_inline(str(split_protocol.get('protocol_config_sha256')))}`",
+                "- Semantic membership SHA-256: "
+                f"`{_md_inline(str(split_protocol.get('semantic_membership_sha256')))}`",
+            ]
+        )
+
+    comparators = report.get("comparators") or {}
+    if comparators:
+        lines.extend(["", "## Comparators", ""])
+        for name, comparator in comparators.items():
+            comparator_summary = comparator.get("summary") or {}
+            if comparator_summary.get("primary_metric") == "label_accuracy":
+                lines.append(
+                    f"- `{_md_inline(str(name))}` label accuracy: "
+                    f"`{_format_metric(comparator_summary.get('label_accuracy'))}`"
+                )
+            else:
+                lines.append(
+                    f"- `{_md_inline(str(name))}` corpus CER: "
+                    f"`{_format_metric(comparator_summary.get('corpus_cer'))}`"
+                )
+
+    comparisons = report.get("comparisons") or {}
+    if comparisons:
+        lines.extend(["", "## Paired Comparisons", ""])
+        for name, comparison in comparisons.items():
+            interval = comparison.get("paired_bootstrap_delta_ci95") or [None, None]
+            if comparison.get("metric_kind") == "label_accuracy":
+                lines.extend(
+                    [
+                        f"### {_md_inline(str(name))}",
+                        "",
+                        "- Label accuracy delta (A minus B): "
+                        f"`{_format_metric(comparison.get('label_accuracy_delta_a_minus_b'))}`",
+                        "- Label accuracy A/B: "
+                        f"`{_format_metric(comparison.get('label_accuracy_a'))}/"
+                        f"{_format_metric(comparison.get('label_accuracy_b'))}`",
+                        "- Paired label wins/ties/losses for A: "
+                        f"`{comparison.get('paired_label_wins_a')}/"
+                        f"{comparison.get('paired_label_ties')}/"
+                        f"{comparison.get('paired_label_losses_a')}`",
+                        "- Paired bootstrap 95% interval: "
+                        f"`[{_format_metric(interval[0])}, {_format_metric(interval[1])}]`",
+                    ]
+                )
+                continue
+            lines.extend(
+                [
+                    f"### {_md_inline(str(name))}",
+                    "",
+                    "- Corpus CER delta (A minus B): "
+                    f"`{_format_metric(comparison.get('corpus_cer_delta_a_minus_b'))}`",
+                    "- Character-edit delta (A minus B): "
+                    f"`{_format_metric(comparison.get('char_edit_delta_a_minus_b'))}`",
+                    "- Sentence wins/ties/losses for A: "
+                    f"`{comparison.get('sentence_wins_a')}/"
+                    f"{comparison.get('sentence_ties')}/"
+                    f"{comparison.get('sentence_losses_a')}`",
+                    "- Paired bootstrap 95% interval: "
+                    f"`[{_format_metric(interval[0])}, {_format_metric(interval[1])}]`",
+                ]
+            )
 
     warnings = report.get("warnings") or []
     if warnings:

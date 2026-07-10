@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import importlib
 import math
+import time
 from collections import Counter
 from dataclasses import asdict, dataclass
 from pathlib import Path
@@ -103,12 +104,23 @@ class ExtractionSummary:
     sfreq: float
     raw_bytes: int | None
     output_bytes: int
+    runtime_sec: float
     channel_names: list[str]
     warnings: list[str]
 
     @property
     def n_events_dropped(self) -> int:
         return sum(self.dropped_by_reason.values())
+
+
+@dataclass(frozen=True)
+class StimKeyEvents:
+    """Typed key events parsed from a raw stim channel."""
+
+    rows: list[EventRow]
+    warnings: list[str]
+    n_candidate_events: int
+    n_dropped_initial_ascii_sweep: int
 
 
 @dataclass
@@ -202,7 +214,7 @@ def parse_mat_event_payload(
 
     candidates.sort(key=lambda item: (item.score, len(item.rows)), reverse=True)
     selected = candidates[0]
-    warnings = list(selected.warnings)
+    warnings = _dedupe_strings(selected.warnings)
     if selected.score < 60:
         warnings.append(
             "Event timestamp parsing used a low-confidence heuristic; inspect the .mat "
@@ -261,6 +273,8 @@ def extract_fif_mat_windows(
     picks: str | None = None,
     max_events: int | None = None,
     max_channels: int | None = None,
+    event_source: str = "mat",
+    stim_channel: str = "STI101",
 ) -> ExtractionSummary:
     """Extract event-aligned windows from one FIF block and one MAT log."""
 
@@ -277,13 +291,64 @@ def extract_fif_mat_windows(
         raise ValueError("max_events must be >= 1 when provided")
     if max_channels is not None and max_channels < 1:
         raise ValueError("max_channels must be >= 1 when provided")
+    if event_source not in {"mat", "stim-letter", "stim-key"}:
+        raise ValueError("event_source must be one of: mat, stim-letter, stim-key")
 
-    raw = mne.io.read_raw_fif(str(raw_file), preload=True, verbose="ERROR")
+    started_at = time.perf_counter()
+    raw = mne.io.read_raw_fif(str(raw_file), preload=False, verbose="ERROR")
     original_sfreq = float(raw.info["sfreq"])
     original_n_times = int(raw.n_times)
+    first_samp = int(raw.first_samp)
     raw_duration_sec = original_n_times / original_sfreq if original_sfreq else None
 
-    _apply_channel_picks(raw, picks=picks, max_channels=max_channels)
+    stim_rows: list[EventRow] = []
+    stim_key = StimKeyEvents(
+        rows=[],
+        warnings=[],
+        n_candidate_events=0,
+        n_dropped_initial_ascii_sweep=0,
+    )
+    stim_warnings: list[str] = []
+    if event_source in {"stim-letter", "stim-key"}:
+        stim_events = mne.find_events(
+            raw,
+            stim_channel=stim_channel,
+            shortest_event=1,
+            verbose="ERROR",
+        )
+        if event_source == "stim-letter":
+            stim_rows = stim_letter_event_rows(
+                stim_events,
+                sfreq=original_sfreq,
+                stim_channel=stim_channel,
+                source_path=str(raw_file),
+                first_samp=first_samp,
+            )
+            stim_warnings.extend(
+                [
+                    "event_source_raw_stim_letter_triggers",
+                    "mat_log_loaded_for_provenance_but_not_used_for_event_times",
+                    "low_integer_space_enter_trial_codes_excluded_from_stim_letter_mode",
+                ]
+            )
+        else:
+            stim_key = stim_key_event_rows(
+                stim_events,
+                sfreq=original_sfreq,
+                stim_channel=stim_channel,
+                source_path=str(raw_file),
+                first_samp=first_samp,
+            )
+            stim_warnings.extend(
+                [
+                    "event_source_raw_stim_key_triggers",
+                    "mat_log_loaded_for_provenance_but_not_used_for_event_times",
+                    "stim_key_labels_include_letters_space_enter",
+                    *stim_key.warnings,
+                ]
+            )
+
+    _pick_and_load_raw(raw, picks=picks, max_channels=max_channels)
     if float(sfreq) != float(raw.info["sfreq"]):
         raw.resample(float(sfreq), npad="auto", verbose="ERROR")
 
@@ -300,8 +365,19 @@ def extract_fif_mat_windows(
         raw_n_times=original_n_times,
     )
 
-    rows_for_window = parsed.rows
+    if event_source == "mat":
+        source_event_count = parsed.n_events_found
+        rows_for_window = parsed.rows
+    elif event_source == "stim-letter":
+        source_event_count = len(stim_rows)
+        rows_for_window = stim_rows
+    else:
+        source_event_count = stim_key.n_candidate_events
+        rows_for_window = stim_key.rows
+
     dropped_by_reason = Counter()
+    if stim_key.n_dropped_initial_ascii_sweep:
+        dropped_by_reason["initial_ascii_sweep"] = stim_key.n_dropped_initial_ascii_sweep
     if max_events is not None and len(rows_for_window) > max_events:
         dropped_by_reason["max_events"] = len(rows_for_window) - max_events
         rows_for_window = rows_for_window[:max_events]
@@ -328,12 +404,15 @@ def extract_fif_mat_windows(
         "transformations": [
             {
                 "name": "mne_read_raw_fif",
-                "description": "Loaded one explicit FIF block with preload=True.",
+                "description": "Opened one explicit FIF block without preloading signal samples.",
                 "params": {"raw_path": str(raw_file)},
             },
             {
                 "name": "channel_picking",
-                "description": "Applied optional MNE channel picks and max-channel cap.",
+                "description": (
+                    "Applied optional MNE channel picks and max-channel cap before loading "
+                    "the selected signal samples into memory."
+                ),
                 "params": {"picks": picks, "max_channels": max_channels},
             },
             {
@@ -348,7 +427,16 @@ def extract_fif_mat_windows(
             {
                 "name": "scipy_loadmat_event_parse",
                 "description": "Loaded one explicit MAT log and parsed event rows with transparent heuristics.",
-                "params": {"events_path": str(events_file)},
+                "params": {"events_path": str(events_file), "used_for_event_times": event_source == "mat"},
+            },
+            {
+                "name": "event_source_selection",
+                "description": "Selected MAT-derived event rows or raw stim-channel key triggers.",
+                "params": {
+                    "event_source": event_source,
+                    "stim_channel": stim_channel,
+                    "raw_first_samp": first_samp,
+                },
             },
             {
                 "name": "event_window_extraction",
@@ -364,15 +452,24 @@ def extract_fif_mat_windows(
             "picks": picks,
             "max_events": max_events,
             "max_channels": max_channels,
+            "event_source": event_source,
+            "stim_channel": stim_channel,
+            "raw_first_samp": first_samp,
         },
         "raw": {
             "original_sfreq": original_sfreq,
             "original_n_times": original_n_times,
+            "first_samp": first_samp,
             "duration_sec": raw_duration_sec,
             "bytes": _safe_stat_size(raw_file),
         },
         "events": {
-            "found": parsed.n_events_found,
+            "found": source_event_count,
+            "mat_found": parsed.n_events_found,
+            "stim_letter_found": len(stim_rows),
+            "stim_key_found": stim_key.n_candidate_events,
+            "stim_key_after_initial_sweep_drop": len(stim_key.rows),
+            "event_source": event_source,
             "used_for_windowing": len(rows_for_window),
             "kept": len(kept_rows),
             "dropped_by_reason": dict(dropped_by_reason),
@@ -383,7 +480,7 @@ def extract_fif_mat_windows(
             "n_channels": len(channel_names),
             "names": channel_names,
         },
-        "warnings": parsed.warnings,
+        "warnings": [*parsed.warnings, *stim_warnings],
     }
 
     save_npz_cache(
@@ -402,15 +499,16 @@ def extract_fif_mat_windows(
         raw_path=str(raw_file),
         events_path=str(events_file),
         out_path=str(output_file),
-        n_events_found=parsed.n_events_found,
+        n_events_found=source_event_count,
         n_events_kept=len(kept_rows),
         dropped_by_reason=dict(dropped_by_reason),
         output_shape=tuple(int(dim) for dim in windows.shape),
         sfreq=float(raw.info["sfreq"]),
         raw_bytes=_safe_stat_size(raw_file),
         output_bytes=int(output_file.stat().st_size),
+        runtime_sec=round(time.perf_counter() - started_at, 6),
         channel_names=channel_names,
-        warnings=parsed.warnings,
+        warnings=[*parsed.warnings, *stim_warnings],
     )
 
 
@@ -420,6 +518,13 @@ def _apply_channel_picks(raw: Any, *, picks: str | None, max_channels: int | Non
         raw.pick(parsed)
     if max_channels is not None and len(raw.ch_names) > max_channels:
         raw.pick(raw.ch_names[:max_channels])
+
+
+def _pick_and_load_raw(raw: Any, *, picks: str | None, max_channels: int | None) -> None:
+    """Apply channel limits before loading signal samples into memory."""
+
+    _apply_channel_picks(raw, picks=picks, max_channels=max_channels)
+    raw.load_data()
 
 
 def _parse_picks_arg(picks: str) -> str | list[str]:
@@ -434,6 +539,137 @@ def _parse_picks_arg(picks: str) -> str | list[str]:
     }:
         return parts[0].lower()
     return parts
+
+
+def stim_letter_event_rows(
+    events: Any,
+    *,
+    sfreq: float,
+    stim_channel: str,
+    source_path: str,
+    first_samp: int = 0,
+) -> list[EventRow]:
+    """Convert raw stim events with uppercase ASCII values into event rows."""
+
+    rows: list[EventRow] = []
+    for source_index, event in enumerate(events):
+        sample = int(event[0])
+        value = int(event[2])
+        if not 65 <= value <= 90:
+            continue
+        rows.append(
+            EventRow(
+                time_sec=(sample - int(first_samp)) / float(sfreq),
+                label=chr(value),
+                source_index=source_index,
+                source_path=f"{source_path}:{stim_channel}",
+                confidence="raw_stim_letter",
+            )
+        )
+    return rows
+
+
+def stim_key_event_rows(
+    events: Any,
+    *,
+    sfreq: float,
+    stim_channel: str,
+    source_path: str,
+    first_samp: int = 0,
+    drop_initial_ascii_sweep: bool = True,
+    segment_gap_sec: float = 5.0,
+) -> StimKeyEvents:
+    """Convert raw stim events into printable typed-key rows.
+
+    SpanishBCBL FIF blocks can start with a short ASCII trigger sweep before
+    the actual typing stream. This helper keeps only keyboard-like trigger
+    values and drops that first sweep when it has the expected compact shape.
+    """
+
+    rows: list[EventRow] = []
+    for source_index, event in enumerate(events):
+        sample = int(event[0])
+        value = int(event[2])
+        label = _stim_key_label(value)
+        if label is None:
+            continue
+        rows.append(
+            EventRow(
+                time_sec=(sample - int(first_samp)) / float(sfreq),
+                label=label,
+                source_index=source_index,
+                source_path=f"{source_path}:{stim_channel}",
+                confidence="raw_stim_key",
+            )
+        )
+
+    warnings: list[str] = []
+    filtered_rows = rows
+    dropped = 0
+    if drop_initial_ascii_sweep:
+        filtered_rows, dropped = _drop_initial_ascii_sweep(rows, segment_gap_sec=segment_gap_sec)
+        if dropped:
+            warnings.append(f"initial_ascii_sweep_dropped:{dropped}")
+
+    return StimKeyEvents(
+        rows=filtered_rows,
+        warnings=warnings,
+        n_candidate_events=len(rows),
+        n_dropped_initial_ascii_sweep=dropped,
+    )
+
+
+def _stim_key_label(value: int) -> str | None:
+    if 65 <= value <= 90:
+        return chr(value)
+    if value == 32:
+        return "SPACE"
+    if value == 13:
+        return "ENTER"
+    return None
+
+
+def _drop_initial_ascii_sweep(
+    rows: list[EventRow],
+    *,
+    segment_gap_sec: float,
+) -> tuple[list[EventRow], int]:
+    if not rows:
+        return rows, 0
+    segments = _segment_rows_by_time_gap(rows, segment_gap_sec=segment_gap_sec)
+    first_segment = segments[0]
+    if _looks_like_initial_ascii_sweep(first_segment):
+        return rows[len(first_segment) :], len(first_segment)
+    return rows, 0
+
+
+def _segment_rows_by_time_gap(
+    rows: list[EventRow],
+    *,
+    segment_gap_sec: float,
+) -> list[list[EventRow]]:
+    segments: list[list[EventRow]] = []
+    current: list[EventRow] = []
+    previous_time: float | None = None
+    for row in rows:
+        if previous_time is not None and row.time_sec - previous_time > segment_gap_sec:
+            segments.append(current)
+            current = []
+        current.append(row)
+        previous_time = row.time_sec
+    if current:
+        segments.append(current)
+    return segments
+
+
+def _looks_like_initial_ascii_sweep(rows: list[EventRow]) -> bool:
+    if len(rows) < 20 or len(rows) > 40:
+        return False
+    duration = rows[-1].time_sec - rows[0].time_sec
+    if duration > 3.0:
+        return False
+    letters = [row.label for row in rows if len(row.label) == 1 and "A" <= row.label <= "Z"]
+    return len(set(letters)) >= 20
 
 
 def _record_sequence_candidates(
@@ -758,6 +994,10 @@ def _coerce_times_sec(
     else:
         times = finite
     return times, warnings
+
+
+def _dedupe_strings(values: Iterable[str]) -> list[str]:
+    return list(dict.fromkeys(str(value) for value in values))
 
 
 def _field_score(path: str, hints: tuple[str, ...]) -> int:

@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 import re
 from collections import Counter
-from dataclasses import asdict, dataclass, fields
+from dataclasses import asdict, dataclass, fields, replace
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -89,23 +89,27 @@ def infer_spanishbcbl_record(
     elif ext in {".fif", ".vhdr", ".eeg", ".vmrk"}:
         kind = "raw"
 
-    subject = None
-    subject_match = re.search(r"(?:^|[/_\-])(S\d{1,3})(?=[/_\-.]|$)", normalized, flags=re.I)
-    if subject_match:
-        subject = subject_match.group(1).upper()
-    else:
-        subject_match = re.search(r"(?:^|[/_\-])(?:sub|subject)[_\-]?0*(\d{1,3})(?=[/_\-.]|$)", normalized, flags=re.I)
+    eeg_identity = _spanishbcbl_eeg_recording_identity(normalized)
+    subject = eeg_identity[0] if eeg_identity else None
+    if subject is None:
+        subject_match = re.search(r"(?:^|[/_\-])(S\d{1,3})(?=[/_\-.]|$)", normalized, flags=re.I)
         if subject_match:
-            subject = f"S{int(subject_match.group(1))}"
+            subject = subject_match.group(1).upper()
+        else:
+            subject_match = re.search(r"(?:^|[/_\-])(?:sub|subject)[_\-]?0*(\d{1,3})(?=[/_\-.]|$)", normalized, flags=re.I)
+            if subject_match:
+                subject = f"S{int(subject_match.group(1))}"
+    if subject is None and modality == "MEG":
+        subject = _meg_fif_recording_dir_subject(parts)
 
-    block = None
+    block = eeg_identity[2] if eeg_identity else None
     block_match = re.search(r"block[_\-]?0*(\d+)", normalized, flags=re.I)
-    if block_match:
+    if block is None and block_match:
         block = f"block{int(block_match.group(1))}"
 
-    session = None
+    session = eeg_identity[1] if eeg_identity else None
     session_match = re.search(r"(?:^|[/_\-])(?:session|sess|ses)[_\-]?([A-Za-z0-9]+)", normalized, flags=re.I)
-    if session_match:
+    if session is None and session_match:
         session = session_match.group(1)
 
     family = infer_file_family(modality=modality, kind=kind, extension=ext, path=normalized)
@@ -242,7 +246,7 @@ def build_manifest_from_paths(
         record = parse_manifest_input_line(raw_path, repo_id=repo_id)
         if record is not None:
             records.append(record)
-    return records
+    return _assign_meg_fif_sessions(records)
 
 
 def write_jsonl(records: Iterable[FileRecord], path: str | Path) -> None:
@@ -405,3 +409,100 @@ def _record_sort_key(record: FileRecord) -> tuple[str, str, str, str]:
 
 def _session_compatible(a: str | None, b: str | None) -> bool:
     return a is None or b is None or a == b
+
+
+def _meg_fif_recording_dir_subject(parts: list[str]) -> str | None:
+    """Infer S-prefixed subject IDs from current HF MEG/FIF recording folders."""
+
+    upper_parts = [part.upper() for part in parts]
+    try:
+        meg_index = upper_parts.index("MEG")
+        fif_index = upper_parts.index("FIF", meg_index + 1)
+    except ValueError:
+        return None
+    if len(parts) <= fif_index + 1:
+        return None
+    recording_dir = parts[fif_index + 1]
+    match = re.match(r"0*(\d{1,3})(?:_+|$)", recording_dir)
+    if not match:
+        return None
+    return f"S{int(match.group(1))}"
+
+
+def _spanishbcbl_eeg_recording_identity(
+    path: str,
+) -> tuple[str, str, str | None] | None:
+    """Parse the official ``002_DECOMEG_S1_*_task1.vhdr`` naming contract.
+
+    The leading number is the participant. The ``S1``/``S2`` token is the
+    session, not the subject. Keeping those roles separate is required for
+    exact BrainVision-to-MAT pairing.
+    """
+
+    name = Path(path).name
+    match = re.fullmatch(
+        r"0*(?P<subject>\d{1,3})_DECOMEG_S(?P<session>\d+)(?:bis)?_"
+        r"[^_./]+_(?P<task>task1|task2|tapping)(?:bis)?(?:_\d+)?"
+        r"\.(?:eeg|vhdr|vmrk)",
+        name,
+        flags=re.I,
+    )
+    if match is None:
+        match = re.fullmatch(
+            r"0*(?P<subject>\d{1,3})_DECOMEG_S(?P<session>\d+)(?:bis)?_"
+            r"[^_./]+\.(?:eeg|vhdr|vmrk)",
+            name,
+            flags=re.I,
+        )
+    if match is None:
+        return None
+    task = (match.groupdict().get("task") or "").lower()
+    block = {"task1": "block1", "task2": "block2"}.get(task)
+    return (
+        f"S{int(match.group('subject'))}",
+        str(int(match.group("session"))),
+        block,
+    )
+
+
+def _assign_meg_fif_sessions(records: list[FileRecord]) -> list[FileRecord]:
+    """Assign session numbers from MEG/FIF recording-date order when absent."""
+
+    dates_by_subject: dict[str, set[str]] = {}
+    for record in records:
+        if record.session is not None or record.subject is None:
+            continue
+        date = _meg_fif_recording_date(record.path)
+        if date is None:
+            continue
+        dates_by_subject.setdefault(record.subject, set()).add(date)
+
+    session_by_subject_date = {
+        subject: {date: str(index + 1) for index, date in enumerate(sorted(dates))}
+        for subject, dates in dates_by_subject.items()
+    }
+    updated: list[FileRecord] = []
+    for record in records:
+        if record.session is not None or record.subject is None:
+            updated.append(record)
+            continue
+        date = _meg_fif_recording_date(record.path)
+        session = session_by_subject_date.get(record.subject, {}).get(date)
+        updated.append(replace(record, session=session) if session else record)
+    return updated
+
+
+def _meg_fif_recording_date(path: str) -> str | None:
+    parts = path.split("/")
+    upper_parts = [part.upper() for part in parts]
+    try:
+        meg_index = upper_parts.index("MEG")
+        fif_index = upper_parts.index("FIF", meg_index + 1)
+    except ValueError:
+        return None
+    if len(parts) <= fif_index + 2:
+        return None
+    date = parts[fif_index + 2]
+    if re.fullmatch(r"\d{6}", date):
+        return date
+    return None

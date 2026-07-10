@@ -1,5 +1,22 @@
 # Codex Handoff — NeuroDecodeKit Starter
 
+> Current handoff, 2026-07-10: Loops 1-12 and 14-19 are complete; Loop 13 is
+> parked after its measured NPZ gate. Two S21 MEG sessions support strict
+> sentence-text and same-subject session protocols, but the fixed tiny CTC has
+> no reliable neural advantage and fails the cross-session comparison against
+> its prior. Synthetic adapter work proves only a stationary diagonal mechanism
+> and fails channel-mixing and temporal-drift stress. The local demo and
+> versioned leaderboard expose those limits without reopening real holdouts.
+> Loop 19 now adds one bounded real EEG bridge: a metadata-only gate pins and
+> selects a 94,842,381-byte S7 BrainVision-plus-MAT bundle; lazy extraction
+> matches all 2,534 MAT trigger codes and writes a 12,428,800-byte
+> `2197 x 61 x 25` cache. The first nearest-centroid EEG event result is clearly
+> negative at 0.91% exact key-label accuracy versus 12.27% for the train-only
+> no-signal prior. MOABB was not installed, no full EEG subtree was downloaded,
+> and EEG/MEG remain separate cohorts. There is no unseen-person, useful EEG,
+> integer-only inference, real-time, portable-hardware, arbitrary-thought, or
+> clinical claim. See `docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md`.
+
 ## State of the repo
 
 This repo is a starter scaffold with working pure-Python components:
@@ -14,13 +31,55 @@ This repo is a starter scaffold with working pure-Python components:
 - real `.fif` + `.mat` event-window extraction scaffold
 - size-aware capped tiny-selection and dry-run download planning
 - B2Q-mini NPZ cache schema v0 loader and metadata sidecar writer
+- continuous sentence-cache schema v0 and real S21 extraction
+- optional tiny CTC with synthetic proof, strict real sentence-text evaluation,
+  and mandatory no-brain comparator
+- isolated 100/50/25 Hz sampling-rate resource sweep
+- geometry-aware 102-magnetometer extraction metadata
+- bounded spatial/variance/random/file-order channel-subset sweep
+- versioned packed signal-representation cache and standard/packed auto-loader
+- bounded float32/float16/BF16/qint16/qint8 storage-fidelity sweep
+- isolated standard/packed NPZ full/partial access gate with exact hashes and
+  explicit lazy-backend revisit thresholds
+- signal-free deterministic split membership, duplicate-row, capability, and
+  preprocessing fit-scope audit
+- train-row-only robust scaling with protocol/membership hash binding
+- signal-free strict-split sentence prior and paired uncertainty comparison
+- session-aware split-FIFF selection with pinned Hub revision and one-worker download
+- nonempty-MAT-trial mapping with preserved skipped trial IDs and timing audit
+- frozen source-train scaler application with cache/statistic hash validation
+- same-subject cross-session tiny CTC with source holdouts explicitly reserved
+- synthetic-only robust channel-affine adapter gate with frozen selection/holdout
+- multi-view tiny CTC evaluation with one frozen model across target views
+- six-size, three-seed synthetic calibration curve with independent calibration,
+  channel-mixing, and within-row drift stress families
+- artifact-backed local Gradio evidence console with audit-only startup gate,
+  aggregate-only real results, provenance hashes, and responsive browser QA
+- versioned artifact-only report cards with source/config hashes, completeness
+  flags, cohort-local ranking, deterministic JSON/Markdown/CSV, and CLI table
+- pinned metadata-only EEG bridge gate with complete-triplet/log validation
+- lazy BrainVision plus MAT-trigger extraction into B2Q-mini cache v0
+- exact key-label paired comparison against a same-split train-only prior
 - JSON/Markdown metrics report command
 - CLI smoke commands
 - unit tests
 
-The real extraction path is now present, but it is still a first-shard scaffold:
-it must be validated against one explicitly selected SpanishBCBL `.fif` block
-and matching `.mat` log before treating parser labels as authoritative.
+Two real S21 MEG sessions and MAT logs are alignment, timing, and
+sentence-cache validated. Session 1 supports strict unseen-sentence-text
+membership; session 2 supports one independent same-subject evaluation. One
+real S7 EEG BrainVision recording is trigger/cache validated and has one
+negative within-session event comparison. None is a decoder success. Do not
+turn these results, a variance ranking, or a geometry proxy into unseen-person
+or population generalization.
+
+Current verification on 2026-07-10: 185 unittest tests passed with 3 skipped;
+pytest reported 182 passed, 3 skipped, and 21 subtests passed. Full Ruff lint,
+compileall, CLI help, artifact-contract checks, workbook formulas and all-sheet
+visual checks, and `git diff --check` passed. The tracked and delivered workbook
+hashes match at
+`fe07c8b2cdc8b944e57bd6b2b9518f1ee0aecc91778106b40664d315e41d47b8`.
+A repository-wide formatter check was not applied as unrelated mechanical
+churn.
 
 ## The north star
 
@@ -32,7 +91,25 @@ huge raw neurodata → tiny selected shard → reproducible cache → baseline d
 
 This is not primarily a model repo. It is a **research loop repo**.
 
-## Next 3 PRs
+## Current next 3 loops
+
+1. **Loop 20 - neurotokens / v2-ready interface.** Define a small
+   modality-aware cache/embedding contract over existing arrays and synthetic
+   fixtures. Preserve timebase, geometry, masks, split IDs, and provenance;
+   assume no unreleased v2 data and train no larger model.
+2. **Adapter research gate.** Compare regularized covariance alignment for
+   stationary mixing with causal rolling statistics for temporal drift on
+   synthetic validation before considering another real session.
+3. **Freeze observed real evaluation data.** Do not tune on the five source test
+   rows or 63 consumed session-2 rows. Pre-register any future real holdout.
+
+Loop 19 evidence and exact next gate:
+`docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md`.
+
+## Historical original PR plan
+
+The sections below preserve the starter's original first-three-PR plan. Those
+scaffold milestones have been superseded by the numbered loop tracker above.
 
 ### PR 1 — Real event/window extraction for one downloaded block
 
@@ -437,10 +514,13 @@ CLI help: OK
 Tiny-conv command on base venv: helpful missing optional dependency error
 ```
 
-The skipped focused tests are the Torch training smoke tests. Torch is not
-installed in the current Bain-managed venv, and no heavy ML dependency download
-was attempted locally.
+That historical Bain-managed environment did not have Torch. The current macOS
+workspace already has Torch available and ran the bounded Loop 14 CPU baseline;
+no new heavy dependency was installed for it.
 
-Next 20-loop recommendation: Loop 9, CTC Character Decoder Scaffold. Prove the
-sequence-decoding interface on synthetic sequence data before making real timing
-or alignment claims.
+Historical recommendation from Loop 8: Loop 9, CTC Character Decoder Scaffold.
+Loops 9-12 are complete and Loop 13 is parked after a passing measured gate.
+NPZ remains the default until a recorded revisit trigger is reached. Loop 14
+is complete with strict train-only preprocessing and a near-null first real
+test. Qint16/qint8 remain representation candidates, not retained-accuracy
+results.

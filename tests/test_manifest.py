@@ -23,6 +23,23 @@ class ManifestTests(unittest.TestCase):
         self.assertEqual(record.kind, "raw")
         self.assertEqual(record.extension, ".fif")
 
+    def test_current_hf_meg_fif_recording_dir_infers_subject_and_session(self):
+        records = build_manifest_from_paths([
+            "MEG/FIF/21_3660/231204/block2.fif",
+            "MEG/FIF/21_3660/231213/block1.fif",
+        ])
+
+        by_path = {record.path: record for record in records}
+        first_session = by_path["MEG/FIF/21_3660/231204/block2.fif"]
+        second_session = by_path["MEG/FIF/21_3660/231213/block1.fif"]
+
+        self.assertEqual(first_session.subject, "S21")
+        self.assertEqual(first_session.session, "1")
+        self.assertEqual(first_session.block, "block2")
+        self.assertEqual(second_session.subject, "S21")
+        self.assertEqual(second_session.session, "2")
+        self.assertEqual(second_session.block, "block1")
+
     def test_infer_log_mat(self):
         record = infer_spanishbcbl_record("pinet2024_public/MEG/logs/S18_block2.mat")
         self.assertEqual(record.modality, "MEG")
@@ -37,6 +54,32 @@ class ManifestTests(unittest.TestCase):
         self.assertEqual(record.subject, "S2")
         self.assertEqual(record.kind, "raw")
         self.assertEqual(record.family, "eeg_brainvision_vhdr")
+
+    def test_current_eeg_filename_separates_subject_from_session_and_task(self):
+        record = infer_spanishbcbl_record(
+            "EEG/EEG/002_DECOMEG_S1_9696_task2.vhdr"
+        )
+
+        self.assertEqual(record.subject, "S2")
+        self.assertEqual(record.session, "1")
+        self.assertEqual(record.block, "block2")
+        self.assertEqual(record.kind, "raw")
+        self.assertEqual(record.family, "eeg_brainvision_vhdr")
+
+    def test_current_eeg_raw_pairs_to_exact_session_log(self):
+        records = build_manifest_from_paths([
+            "EEG/EEG/002_DECOMEG_S1_9696_task1.vhdr",
+            "EEG/logs/S2_session1_block1_list1.mat",
+            "EEG/logs/S2_session2_block1_list2.mat",
+        ])
+
+        pairs = {pair.raw_path: pair for pair in pair_raw_records_to_logs(records)}
+        pair = pairs["EEG/EEG/002_DECOMEG_S1_9696_task1.vhdr"]
+        self.assertEqual(pair.status, "exact")
+        self.assertEqual(
+            pair.candidate_log_paths,
+            ("EEG/logs/S2_session1_block1_list1.mat",),
+        )
 
     def test_unknown_rows_are_explicit(self):
         record = infer_spanishbcbl_record("pinet2024_public/misc/readme.txt")
@@ -86,6 +129,26 @@ class ManifestTests(unittest.TestCase):
         self.assertEqual(pairs["pinet2024_public/MEG/FIF/S1/block1.fif"].status, "exact")
         self.assertEqual(pairs["pinet2024_public/MEG/FIF/S2/block1.fif"].status, "missing_log")
         self.assertEqual(pairs["pinet2024_public/MEG/FIF/S3/block1.fif"].status, "ambiguous")
+
+    def test_current_hf_meg_fif_pairs_to_session_specific_log(self):
+        records = build_manifest_from_paths([
+            "MEG/FIF/21_3660/231204/block2.fif",
+            "MEG/FIF/21_3660/231213/block2.fif",
+            "MEG/logs/S21-session1_block2_list2.mat",
+            "MEG/logs/S21-session2_block2_list1.mat",
+        ])
+
+        pairs = {pair.raw_path: pair for pair in pair_raw_records_to_logs(records)}
+
+        self.assertEqual(
+            pairs["MEG/FIF/21_3660/231204/block2.fif"].candidate_log_paths,
+            ("MEG/logs/S21-session1_block2_list2.mat",),
+        )
+        self.assertEqual(pairs["MEG/FIF/21_3660/231204/block2.fif"].status, "exact")
+        self.assertEqual(
+            pairs["MEG/FIF/21_3660/231213/block2.fif"].candidate_log_paths,
+            ("MEG/logs/S21-session2_block2_list1.mat",),
+        )
 
     def test_build_and_roundtrip(self):
         paths = [

@@ -67,9 +67,25 @@ class TemplateBaselineCliTests(unittest.TestCase):
         self.assertEqual(report["baseline"]["split_mode"], "single-cache-stratified-holdout")
         self.assertTrue(report["baseline"]["uses_neural_windows"])
         self.assertTrue(report["baseline"]["no_deep_learning"])
+        self.assertEqual(report["comparators"]["prior_only"]["baseline"]["kind"], "prior-only")
+        self.assertFalse(
+            report["comparators"]["prior_only"]["baseline"]["fit_on_eval_targets"]
+        )
+        self.assertEqual(
+            report["comparators"]["prior_only"]["baseline"]["n_train_rows"],
+            report["baseline"]["n_train_rows"],
+        )
+        self.assertEqual(
+            report["comparisons"]["template_vs_prior_only"]["n_paired_labels"],
+            report["baseline"]["n_eval_rows"],
+        )
+        self.assertEqual(report["summary"]["primary_metric"], "label_accuracy")
+        self.assertEqual(report["summary"]["label_accuracy"], report["baseline"]["eval_accuracy"])
         self.assertIn("template_baseline_uses_neural_windows", report["warnings"])
         self.assertIn("cache:synthetic_cache_not_real_neural_data", report["warnings"])
         self.assertIn("Uses neural windows: `yes`", markdown)
+        self.assertIn("## Comparators", markdown)
+        self.assertIn("## Paired Comparisons", markdown)
 
     def test_template_baseline_requires_cache_source(self):
         stderr = io.StringIO()

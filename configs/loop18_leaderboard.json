@@ -1,0 +1,321 @@
+{
+  "schema": {
+    "name": "neurodecodekit-leaderboard-spec",
+    "version": 1
+  },
+  "leaderboard_id": "loop18-saved-baselines",
+  "research_sources": [
+    {
+      "title": "Model Cards for Model Reporting",
+      "url": "https://research.google/pubs/model-cards-for-model-reporting/",
+      "role": "intended-use, evaluation-context, and limitation disclosure"
+    },
+    {
+      "title": "MLflow Tracking",
+      "url": "https://mlflow.org/docs/latest/tracking/",
+      "role": "run metadata, parameters, metrics, datasets, and artifact provenance"
+    },
+    {
+      "title": "Brain2Qwerty v2",
+      "url": "https://facebookresearch.github.io/brain2qwerty/assets/brain2qwerty_v2.pdf",
+      "role": "CER, WER, SemER, baseline, and ablation comparison context"
+    }
+  ],
+  "cohorts": [
+    {
+      "cohort_id": "synthetic-sentence-holdout",
+      "task": "continuous sentence character decoding",
+      "unit": "sentence",
+      "domain": "synthetic token-pulse fixture",
+      "modality": "synthetic multichannel signal",
+      "dataset": "Loop 9 generated sentence cache",
+      "subject_scope": "none",
+      "split": "deterministic text-hash holdout",
+      "comparison_authorized": true,
+      "proof_posture": "fixture_backed",
+      "allowed_claims": [
+        "CTC pipeline and report plumbing behavior on the generated fixture"
+      ],
+      "prohibited_claims": [
+        "real neural decoding performance",
+        "subject or session generalization",
+        "real-time decoding"
+      ]
+    },
+    {
+      "cohort_id": "s21-session1-strict-sentence-test",
+      "task": "continuous typed-sentence character decoding",
+      "unit": "sentence",
+      "domain": "real SpanishBCBL typed MEG",
+      "modality": "102 magnetometers at 100 Hz",
+      "dataset": "SpanishBCBL S21 session 1 block 1",
+      "subject_scope": "one observed subject and session",
+      "split": "Split Protocol v1 exact-sentence held-out test, 55/6/5 train/validation/test",
+      "comparison_authorized": true,
+      "proof_posture": "local_artifact_only_observed_real_holdout",
+      "allowed_claims": [
+        "saved within-session test metrics for this exact cache and split",
+        "paired tiny-CTC versus prior uncertainty for five held-out sentences"
+      ],
+      "prohibited_claims": [
+        "unseen-subject generalization",
+        "cross-session generalization",
+        "arbitrary thought decoding",
+        "state-of-the-art performance",
+        "real-time decoding"
+      ]
+    },
+    {
+      "cohort_id": "s21-session2-cross-session",
+      "task": "continuous typed-sentence character decoding",
+      "unit": "sentence",
+      "domain": "real SpanishBCBL typed MEG",
+      "modality": "102 magnetometers at 100 Hz",
+      "dataset": "SpanishBCBL S21 session 1 train to session 2 evaluation",
+      "subject_scope": "same subject, independent observed session",
+      "split": "source-session strict train rows to independent-session evaluation",
+      "comparison_authorized": true,
+      "proof_posture": "local_artifact_only_consumed_cross_session_holdout",
+      "allowed_claims": [
+        "saved same-subject cross-session result for this exact source and target cache pair",
+        "paired tiny-CTC versus source-trained prior comparison"
+      ],
+      "prohibited_claims": [
+        "unseen-subject generalization",
+        "future reuse of session 2 as an untouched holdout",
+        "arbitrary thought decoding",
+        "state-of-the-art performance",
+        "real-time decoding"
+      ]
+    },
+    {
+      "cohort_id": "synthetic-adapter-holdout",
+      "task": "session-shift adaptation before continuous sentence decoding",
+      "unit": "sentence",
+      "domain": "synthetic affine-shift fixture",
+      "modality": "synthetic multichannel signal",
+      "dataset": "Loop 15 Stage B generated source and shifted target sessions",
+      "subject_scope": "none",
+      "split": "synthetic target-session holdout",
+      "comparison_authorized": true,
+      "proof_posture": "fixture_backed_best_case_adapter_gate",
+      "allowed_claims": [
+        "robust channel-affine adapter behavior under the generated affine shift"
+      ],
+      "prohibited_claims": [
+        "real-session adapter benefit",
+        "physiological session-shift realism",
+        "unseen-subject generalization",
+        "real-time decoding"
+      ]
+    },
+    {
+      "cohort_id": "s21-event-key-holdout",
+      "task": "stim-trigger key classification",
+      "unit": "key event",
+      "domain": "real SpanishBCBL typed MEG",
+      "modality": "306 MEG channels at 50 Hz",
+      "dataset": "SpanishBCBL S21 session 1 block 2",
+      "subject_scope": "one observed subject and session",
+      "split": "single-cache stratified event holdout",
+      "comparison_authorized": false,
+      "proof_posture": "local_artifact_only_event_smoke",
+      "allowed_claims": [
+        "saved nearest-centroid event-classification smoke metric"
+      ],
+      "prohibited_claims": [
+        "comparison with sentence-level cohorts",
+        "continuous language decoding",
+        "unseen-subject generalization",
+        "state-of-the-art performance"
+      ]
+    },
+    {
+      "cohort_id": "s21-event-key-fit-eval-smoke",
+      "task": "stim-trigger key prior smoke test",
+      "unit": "key event",
+      "domain": "real SpanishBCBL typed MEG labels",
+      "modality": "no neural signal used by method",
+      "dataset": "SpanishBCBL S21 session 1 block 2 labels",
+      "subject_scope": "one observed subject and session",
+      "split": "fit and evaluate on the same label rows",
+      "comparison_authorized": false,
+      "proof_posture": "local_artifact_only_fit_on_eval_smoke",
+      "allowed_claims": [
+        "report and prior-baseline plumbing only"
+      ],
+      "prohibited_claims": [
+        "held-out performance",
+        "comparison with the event holdout or sentence cohorts",
+        "neural signal decoding",
+        "generalization"
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "run_id": "loop9-tiny-ctc",
+      "cohort_id": "synthetic-sentence-holdout",
+      "display_name": "Loop 9 tiny CTC",
+      "method_family": "tiny-ctc",
+      "method_name": "tiny_ctc_sentence",
+      "description": "Small noncausal temporal ConvNet trained with CTC on generated sentence signals.",
+      "source_report": "cache/loop9_synthetic_ctc_report.json",
+      "selector": {
+        "kind": "report-primary"
+      },
+      "uses_neural_signal": true,
+      "uses_deep_learning": true
+    },
+    {
+      "run_id": "loop9-prior-only",
+      "cohort_id": "synthetic-sentence-holdout",
+      "display_name": "Loop 9 prior only",
+      "method_family": "prior",
+      "method_name": "most_frequent_prior",
+      "source_report": "cache/loop9_synthetic_ctc_report.json",
+      "selector": {
+        "kind": "report-comparator",
+        "name": "prior_only"
+      },
+      "uses_neural_signal": false,
+      "uses_deep_learning": false
+    },
+    {
+      "run_id": "loop14-s21-tiny-ctc",
+      "cohort_id": "s21-session1-strict-sentence-test",
+      "display_name": "Loop 14 S21 tiny CTC",
+      "method_family": "tiny-ctc",
+      "method_name": "tiny_ctc_sentence",
+      "source_report": "cache/loop14_s21_split_aware/tiny_ctc/report.json",
+      "selector": {
+        "kind": "report-primary"
+      },
+      "uses_neural_signal": true,
+      "uses_deep_learning": true,
+      "comparison": {
+        "source_key": "tiny_ctc_vs_prior_only",
+        "comparator_run_id": "loop14-s21-prior-only"
+      }
+    },
+    {
+      "run_id": "loop14-s21-prior-only",
+      "cohort_id": "s21-session1-strict-sentence-test",
+      "display_name": "Loop 14 S21 prior only",
+      "method_family": "prior",
+      "method_name": "most_frequent_prior",
+      "source_report": "cache/loop14_s21_split_aware/tiny_ctc/report.json",
+      "selector": {
+        "kind": "report-comparator",
+        "name": "prior_only"
+      },
+      "uses_neural_signal": false,
+      "uses_deep_learning": false
+    },
+    {
+      "run_id": "loop15-s21-cross-session-tiny-ctc",
+      "cohort_id": "s21-session2-cross-session",
+      "display_name": "Loop 15 S21 cross-session tiny CTC",
+      "method_family": "tiny-ctc",
+      "method_name": "tiny_ctc_cross_session",
+      "source_report": "cache/loop15_s21_cross_session/tiny_ctc/report.json",
+      "selector": {
+        "kind": "report-primary"
+      },
+      "uses_neural_signal": true,
+      "uses_deep_learning": true,
+      "comparison": {
+        "source_key": "tiny_ctc_vs_prior_only",
+        "comparator_run_id": "loop15-s21-cross-session-prior"
+      }
+    },
+    {
+      "run_id": "loop15-s21-cross-session-prior",
+      "cohort_id": "s21-session2-cross-session",
+      "display_name": "Loop 15 source-trained prior",
+      "method_family": "prior",
+      "method_name": "source_train_most_frequent_prior",
+      "source_report": "cache/loop15_s21_cross_session/tiny_ctc/report.json",
+      "selector": {
+        "kind": "report-comparator",
+        "name": "prior_only"
+      },
+      "uses_neural_signal": false,
+      "uses_deep_learning": false
+    },
+    {
+      "run_id": "loop15-synthetic-robust-affine",
+      "cohort_id": "synthetic-adapter-holdout",
+      "display_name": "Loop 15 robust channel-affine adapter",
+      "method_family": "session-adapter-plus-tiny-ctc",
+      "method_name": "robust_channel_affine",
+      "source_report": "cache/loop15_synthetic_adapter_gate/report.json",
+      "selector": {
+        "kind": "adapter-holdout",
+        "name": "robust_channel_affine"
+      },
+      "uses_neural_signal": true,
+      "uses_deep_learning": true,
+      "comparison": {
+        "source_key": "adapted_vs_identity",
+        "comparator_run_id": "loop15-synthetic-identity"
+      }
+    },
+    {
+      "run_id": "loop15-synthetic-identity",
+      "cohort_id": "synthetic-adapter-holdout",
+      "display_name": "Loop 15 identity adapter",
+      "method_family": "tiny-ctc",
+      "method_name": "identity_adapter",
+      "source_report": "cache/loop15_synthetic_adapter_gate/report.json",
+      "selector": {
+        "kind": "adapter-holdout",
+        "name": "identity"
+      },
+      "uses_neural_signal": true,
+      "uses_deep_learning": true
+    },
+    {
+      "run_id": "loop15-synthetic-prior-only",
+      "cohort_id": "synthetic-adapter-holdout",
+      "display_name": "Loop 15 synthetic prior only",
+      "method_family": "prior",
+      "method_name": "source_train_most_frequent_prior",
+      "source_report": "cache/loop15_synthetic_adapter_gate/report.json",
+      "selector": {
+        "kind": "adapter-holdout",
+        "name": "prior_only"
+      },
+      "uses_neural_signal": false,
+      "uses_deep_learning": false
+    },
+    {
+      "run_id": "s21-event-template",
+      "cohort_id": "s21-event-key-holdout",
+      "display_name": "S21 event nearest centroid",
+      "method_family": "template",
+      "method_name": "nearest_centroid",
+      "source_report": "cache/s21_stim_key_template_report.json",
+      "selector": {
+        "kind": "report-primary"
+      },
+      "uses_neural_signal": true,
+      "uses_deep_learning": false,
+      "causal": false
+    },
+    {
+      "run_id": "s21-event-prior-fit-eval-smoke",
+      "cohort_id": "s21-event-key-fit-eval-smoke",
+      "display_name": "S21 event prior fit-on-eval smoke",
+      "method_family": "prior",
+      "method_name": "most_frequent_fit_on_eval",
+      "source_report": "cache/s21_stim_key_prior_report.json",
+      "selector": {
+        "kind": "report-primary"
+      },
+      "uses_neural_signal": false,
+      "uses_deep_learning": false,
+      "fit_on_eval_targets": true
+    }
+  ]
+}

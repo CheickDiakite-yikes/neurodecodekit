@@ -163,10 +163,12 @@ def _cmd_template_baseline(args: argparse.Namespace) -> int:
     from neurodecodekit.cache.npz_cache import load_npz_cache
     from neurodecodekit.evaluation.report import (
         build_text_report,
+        compare_paired_label_predictions,
         labels_to_text_rows,
         write_report_json,
         write_report_markdown,
     )
+    from neurodecodekit.models.prior_baseline import run_prior_baseline
     from neurodecodekit.models.template_baseline import (
         run_template_baseline,
         run_template_baseline_from_single_cache,
@@ -174,26 +176,35 @@ def _cmd_template_baseline(args: argparse.Namespace) -> int:
 
     start = time.perf_counter()
     if args.cache and (args.train_cache or args.eval_cache):
-        raise ValueError("use --cache for a single-cache holdout, or --train-cache with --eval-cache.")
+        raise ValueError(
+            "use --cache for a single-cache holdout, or --train-cache with --eval-cache."
+        )
     if not args.cache and not (args.train_cache and args.eval_cache):
-        raise ValueError("--cache is required unless both --train-cache and --eval-cache are provided.")
+        raise ValueError(
+            "--cache is required unless both --train-cache and --eval-cache are provided."
+        )
 
     if args.cache:
         cache = load_npz_cache(args.cache)
         cache_summary = cache.summary.to_dict()
+        cache_labels = labels_to_text_rows(cache.labels)
         baseline = run_template_baseline_from_single_cache(
             windows=cache.windows,
-            labels=labels_to_text_rows(cache.labels),
+            labels=cache_labels,
             train_fraction=args.train_fraction,
             seed=args.seed,
         )
+        if baseline.train_indices is None:
+            raise RuntimeError("single-cache template split did not preserve train indices")
+        train_targets = [cache_labels[index] for index in baseline.train_indices]
     else:
         train_cache = load_npz_cache(args.train_cache)
         eval_cache = load_npz_cache(args.eval_cache)
         cache_summary = eval_cache.summary.to_dict()
+        train_targets = labels_to_text_rows(train_cache.labels)
         baseline = run_template_baseline(
             train_windows=train_cache.windows,
-            train_labels=labels_to_text_rows(train_cache.labels),
+            train_labels=train_targets,
             eval_windows=eval_cache.windows,
             eval_labels=labels_to_text_rows(eval_cache.labels),
             split_mode="separate-cache",
@@ -212,8 +223,67 @@ def _cmd_template_baseline(args: argparse.Namespace) -> int:
         max_examples=args.max_examples,
         warnings=baseline.warnings,
     )
-    report["run"]["runtime_sec"] = round(time.perf_counter() - start, 6)
     report["baseline"] = baseline.metadata()
+    label_accuracy = sum(
+        target == prediction
+        for target, prediction in zip(baseline.targets, baseline.predictions, strict=True)
+    ) / len(baseline.targets)
+    report["summary"].update(
+        {
+            "primary_metric": "label_accuracy",
+            "label_accuracy": label_accuracy,
+            "label_error_count": len(baseline.targets) - round(label_accuracy * len(baseline.targets)),
+        }
+    )
+    report["baseline"]["eval_accuracy"] = label_accuracy
+    report["warnings"].extend(
+        [
+            "primary_metric_is_exact_key_label_accuracy",
+            "text_cer_is_non_primary_for_multi_character_key_tokens",
+        ]
+    )
+    prior = run_prior_baseline(
+        eval_targets=baseline.targets,
+        train_targets=train_targets,
+        strategy="most-frequent",
+        seed=args.seed,
+    )
+    prior_report = build_text_report(
+        targets=baseline.targets,
+        predictions=prior.predictions,
+        max_examples=1,
+        warnings=prior.warnings,
+    )
+    prior_accuracy = sum(
+        target == prediction
+        for target, prediction in zip(baseline.targets, prior.predictions, strict=True)
+    ) / len(baseline.targets)
+    prior_report["summary"].update(
+        {
+            "primary_metric": "label_accuracy",
+            "label_accuracy": prior_accuracy,
+            "label_error_count": len(baseline.targets)
+            - round(prior_accuracy * len(baseline.targets)),
+        }
+    )
+    report["comparators"] = {
+        "prior_only": {
+            "baseline": prior.metadata(),
+            "summary": prior_report["summary"],
+        }
+    }
+    report["comparisons"] = {
+        "template_vs_prior_only": compare_paired_label_predictions(
+            targets=baseline.targets,
+            predictions_a=baseline.predictions,
+            predictions_b=prior.predictions,
+            label_a="template",
+            label_b="prior_only",
+            bootstrap_iterations=args.bootstrap_iterations,
+            seed=args.seed,
+        )
+    }
+    report["run"]["runtime_sec"] = round(time.perf_counter() - start, 6)
 
     if args.out_json:
         write_report_json(report, args.out_json)
@@ -244,9 +314,13 @@ def _cmd_tiny_conv_baseline(args: argparse.Namespace) -> int:
 
     start = time.perf_counter()
     if args.cache and (args.train_cache or args.eval_cache):
-        raise ValueError("use --cache for a single-cache holdout, or --train-cache with --eval-cache.")
+        raise ValueError(
+            "use --cache for a single-cache holdout, or --train-cache with --eval-cache."
+        )
     if not args.cache and not (args.train_cache and args.eval_cache):
-        raise ValueError("--cache is required unless both --train-cache and --eval-cache are provided.")
+        raise ValueError(
+            "--cache is required unless both --train-cache and --eval-cache are provided."
+        )
 
     if args.cache:
         cache = load_npz_cache(args.cache)
@@ -327,11 +401,26 @@ def _cmd_inspect_manifest(args: argparse.Namespace) -> int:
 
 
 def _cmd_list_hf_files(args: argparse.Namespace) -> int:
-    from neurodecodekit.datasets.hf_access import list_repo_files, write_file_list
+    from neurodecodekit.datasets.hf_access import (
+        list_repo_file_records,
+        list_repo_files,
+        write_file_list,
+        write_file_record_list,
+    )
 
-    paths = list_repo_files(args.repo_id, repo_type=args.repo_type)
-    write_file_list(paths, args.out)
-    print(f"Wrote {len(paths)} HF paths to {args.out}")
+    if args.with_sizes:
+        revision, records = list_repo_file_records(
+            args.repo_id,
+            repo_type=args.repo_type,
+            revision=args.revision,
+        )
+        write_file_record_list(records, args.out)
+        print(f"Wrote {len(records)} HF file metadata rows to {args.out}")
+        print(f"Resolved revision: {revision}")
+    else:
+        paths = list_repo_files(args.repo_id, repo_type=args.repo_type)
+        write_file_list(paths, args.out)
+        print(f"Wrote {len(paths)} HF paths to {args.out}")
     print("Next: neurodecode manifest-from-paths --paths", args.out, "--out data/manifest.jsonl")
     return 0
 
@@ -375,6 +464,8 @@ def _cmd_extract_windows(args: argparse.Namespace) -> int:
         picks=args.picks,
         max_events=args.max_events,
         max_channels=args.max_channels,
+        event_source=args.event_source,
+        stim_channel=args.stim_channel,
     )
     print("Extracted event windows")
     print(f"  raw: {summary.raw_path}")
@@ -393,11 +484,1049 @@ def _cmd_extract_windows(args: argparse.Namespace) -> int:
     if summary.raw_bytes is not None:
         print(f"  raw file size: {_format_bytes(summary.raw_bytes)}")
     print(f"  output file size: {_format_bytes(summary.output_bytes)}")
+    print(f"  runtime: {summary.runtime_sec:.3f} sec")
     if summary.warnings:
         print("  warnings:")
         for warning in summary.warnings:
             print(f"    - {warning}")
     return 0
+
+
+def _cmd_extract_eeg_windows(args: argparse.Namespace) -> int:
+    from neurodecodekit.preprocess.brainvision_extraction import (
+        extract_brainvision_mat_windows,
+    )
+
+    summary = extract_brainvision_mat_windows(
+        raw_path=args.raw,
+        events_path=args.events,
+        out_path=args.out,
+        sfreq=args.sfreq,
+        tmin=args.tmin,
+        tmax=args.tmax,
+        max_events=args.max_events,
+        max_channels=args.max_channels,
+        max_alignment_residual_sec=args.max_alignment_residual_ms / 1000.0,
+        max_output_mb=args.max_output_mb,
+        overwrite=args.overwrite,
+    )
+    payload = summary.to_dict()
+    if args.out_json:
+        output = Path(args.out_json)
+        output.parent.mkdir(parents=True, exist_ok=True)
+        output.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(payload, indent=2, sort_keys=True))
+    if args.out_json:
+        print(f"Wrote extraction JSON to {args.out_json}")
+    return 0
+
+
+def _cmd_align_sequences(args: argparse.Namespace) -> int:
+    from neurodecodekit.preprocess.sequence_alignment import (
+        align_key_sequences_by_trial_map,
+        align_key_sequences_to_targets,
+        build_mat_trial_index_map,
+        build_sequence_alignment_report,
+        load_key_event_time_sequences_from_npz_cache,
+        load_key_sequences_from_npz_cache,
+        load_mat_key_trigger_time_sequences,
+        load_mat_sequence_sources,
+        summarize_key_trigger_timing,
+        TrialMappingUnavailableError,
+        write_sequence_alignment_json,
+        write_sequence_alignment_markdown,
+    )
+
+    started_at = time.perf_counter()
+    key_sequences, cache_summary = load_key_sequences_from_npz_cache(args.cache)
+    cache_time_sequences = load_key_event_time_sequences_from_npz_cache(args.cache)
+    target_sequences, response_sequences, warnings = load_mat_sequence_sources(args.events)
+    mat_time_sequences, timing_warnings = load_mat_key_trigger_time_sequences(args.events)
+    trial_index_map = None
+    try:
+        trial_index_map = build_mat_trial_index_map(
+            key_sequences,
+            target_sequences,
+            response_sequences,
+            mat_time_sequences,
+        )
+    except TrialMappingUnavailableError as exc:
+        warnings.append(f"strict_mat_trial_mapping_unavailable:{exc}")
+
+    if trial_index_map is not None:
+        mapped_indices = trial_index_map.raw_to_mat_trial_indices
+        alignments = align_key_sequences_by_trial_map(
+            key_sequences,
+            target_sequences,
+            mapped_indices,
+            high_confidence_cer=args.high_confidence_cer,
+            moderate_confidence_cer=args.moderate_confidence_cer,
+        )
+        response_alignments = (
+            align_key_sequences_by_trial_map(
+                key_sequences,
+                response_sequences,
+                mapped_indices,
+                high_confidence_cer=args.high_confidence_cer,
+                moderate_confidence_cer=args.moderate_confidence_cer,
+            )
+            if response_sequences
+            else []
+        )
+        mapped_mat_time_sequences = [mat_time_sequences[index] for index in mapped_indices]
+        key_trigger_timing_audit = summarize_key_trigger_timing(
+            cache_time_sequences,
+            mapped_mat_time_sequences,
+        )
+    else:
+        alignments = align_key_sequences_to_targets(
+            key_sequences,
+            target_sequences,
+            high_confidence_cer=args.high_confidence_cer,
+            moderate_confidence_cer=args.moderate_confidence_cer,
+        )
+        response_alignments = align_key_sequences_to_targets(
+            key_sequences,
+            response_sequences,
+            high_confidence_cer=args.high_confidence_cer,
+            moderate_confidence_cer=args.moderate_confidence_cer,
+        )
+        key_trigger_timing_audit = None
+    processing_runtime_sec = time.perf_counter() - started_at
+    report = build_sequence_alignment_report(
+        cache_path=args.cache,
+        events_path=args.events,
+        key_sequences=key_sequences,
+        target_sequences=target_sequences,
+        alignments=alignments,
+        response_sequences=response_sequences,
+        response_alignments=response_alignments,
+        trial_index_map=trial_index_map,
+        key_trigger_timing_audit=key_trigger_timing_audit,
+        cache_summary=cache_summary,
+        warnings=[*warnings, *timing_warnings],
+        run_name=args.run_name,
+        runtime_sec=processing_runtime_sec,
+        high_confidence_cer=args.high_confidence_cer,
+        moderate_confidence_cer=args.moderate_confidence_cer,
+    )
+    if args.out_json:
+        write_sequence_alignment_json(report, args.out_json)
+    if args.out_md:
+        write_sequence_alignment_markdown(report, args.out_md)
+
+    summary = report["summary"]
+    print("Aligned typed key sequences")
+    print(f"  cache: {args.cache}")
+    print(f"  events: {args.events}")
+    print(f"  key sequences: {summary['n_key_sequences']}")
+    print(f"  target sequences: {summary['n_target_sequences']}")
+    print(f"  exact matches: {summary['exact_match_count']}")
+    print(f"  usable high/moderate matches: {summary['usable_high_or_moderate_count']}")
+    print(f"  mean CER: {summary['mean_cer']}")
+    print(f"  confidence counts: {summary['confidence_counts']}")
+    print(f"  low-confidence indices: {summary['low_confidence_key_indices']}")
+    print(f"  target index order monotonic: {summary['target_index_order_is_monotonic']}")
+    print(f"  target index mapping identity: {summary['target_index_mapping_is_identity']}")
+    print(f"  target index duplicates: {summary['target_index_duplicate_count']}")
+    print(f"  target index backtracks: {summary['target_index_backtrack_count']}")
+    print(f"  assignment strategy: {report['assignment']['strategy']}")
+    print(f"  processing runtime: {report['resources']['runtime_sec']:.3f} sec")
+    if report["trial_index_map"]:
+        print(
+            "  skipped MAT trial indices: "
+            f"{report['trial_index_map']['skipped_mat_trial_indices']}"
+        )
+    if key_trigger_timing_audit:
+        print(
+            "  keyTrig exact-length trials: "
+            f"{key_trigger_timing_audit['n_exact_length_trials']}/"
+            f"{key_trigger_timing_audit['n_trials_compared']}"
+        )
+        print(f"  keyTrig paired keypresses: {key_trigger_timing_audit['n_keypress_pairs']}")
+        if key_trigger_timing_audit["median_abs_residual_ms"] is not None:
+            print(
+                "  keyTrig median absolute residual: "
+                f"{key_trigger_timing_audit['median_abs_residual_ms']:.3f} ms"
+            )
+            print(
+                "  keyTrig p95 absolute residual: "
+                f"{key_trigger_timing_audit['p95_abs_residual_ms']:.3f} ms"
+            )
+    else:
+        print("  keyTrig timing audit: unavailable without a strict MAT trial map")
+    if report.get("response_summary"):
+        response_summary = report["response_summary"]
+        print(f"  response exact matches: {response_summary['exact_match_count']}")
+        print(
+            f"  response usable high/moderate matches: {response_summary['usable_high_or_moderate_count']}"
+        )
+        print(f"  response mean CER: {response_summary['mean_cer']}")
+        print(f"  response confidence counts: {response_summary['confidence_counts']}")
+        print(
+            f"  response low-confidence indices: {response_summary['low_confidence_key_indices']}"
+        )
+        print(
+            f"  response target index order monotonic: {response_summary['target_index_order_is_monotonic']}"
+        )
+        print(
+            f"  response target index mapping identity: {response_summary['target_index_mapping_is_identity']}"
+        )
+        print(
+            f"  response target index duplicates: {response_summary['target_index_duplicate_count']}"
+        )
+        print(
+            f"  response target index backtracks: {response_summary['target_index_backtrack_count']}"
+        )
+    if args.out_json:
+        print(f"  wrote JSON: {args.out_json}")
+        print(f"  JSON bytes: {Path(args.out_json).stat().st_size}")
+    if args.out_md:
+        print(f"  wrote Markdown: {args.out_md}")
+        print(f"  Markdown bytes: {Path(args.out_md).stat().st_size}")
+    if report["warnings"]:
+        print("  warnings:")
+        for warning in report["warnings"]:
+            print(f"    - {warning}")
+    return 0
+
+
+def _cmd_make_synthetic_sentence_cache(args: argparse.Namespace) -> int:
+    from neurodecodekit.training.synthetic_sentences import save_synthetic_sentence_npz
+
+    summary = save_synthetic_sentence_npz(
+        args.out,
+        sentences=args.sentences,
+        channels=args.channels,
+        letter_classes=args.letter_classes,
+        min_word_length=args.min_word_length,
+        max_word_length=args.max_word_length,
+        token_width=args.token_width,
+        gap_width=args.gap_width,
+        sfreq=args.sfreq,
+        seed=args.seed,
+    )
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_inspect_sentence_cache(args: argparse.Namespace) -> int:
+    from neurodecodekit.cache.sentence_npz import (
+        load_sentence_npz_cache,
+        write_sentence_cache_metadata_sidecar,
+    )
+
+    loaded = load_sentence_npz_cache(args.cache)
+    print(json.dumps(loaded.summary.to_dict(), indent=2, sort_keys=True))
+    if args.metadata_out:
+        write_sentence_cache_metadata_sidecar(args.cache, args.metadata_out)
+        print(f"Wrote sentence-cache metadata sidecar to {args.metadata_out}")
+    return 0
+
+
+def _cmd_inspect_representation_cache(args: argparse.Namespace) -> int:
+    from neurodecodekit.cache.signal_representation import (
+        load_signal_representation_cache,
+        write_signal_representation_metadata_sidecar,
+    )
+
+    loaded = load_signal_representation_cache(args.cache)
+    payload = {
+        "representation": loaded.representation_summary.to_dict(),
+        "semantic_sentence_cache": loaded.summary.to_dict(),
+    }
+    print(json.dumps(payload, indent=2, sort_keys=True))
+    if args.metadata_out:
+        write_signal_representation_metadata_sidecar(args.cache, args.metadata_out)
+        print(f"Wrote representation metadata sidecar to {args.metadata_out}")
+    return 0
+
+
+def _cmd_extract_sentence_cache(args: argparse.Namespace) -> int:
+    from neurodecodekit.preprocess.sentence_extraction import extract_fif_mat_sentence_cache
+
+    summary = extract_fif_mat_sentence_cache(
+        raw_path=args.raw,
+        events_path=args.events,
+        out_path=args.out,
+        sfreq=args.sfreq,
+        pre_context_sec=args.pre_context,
+        post_context_sec=args.post_context,
+        picks=args.picks,
+        max_channels=args.max_channels,
+        stim_channel=args.stim_channel,
+        l_freq=args.l_freq,
+        h_freq=args.h_freq,
+        notch_freq=args.notch_freq,
+        robust_scale=not args.no_robust_scale,
+        clamp=args.clamp,
+        scaler_fit_scope=args.scaler_fit_scope,
+        split_text_normalization=args.split_text_normalization,
+        max_sentences=args.max_sentences,
+    )
+    print("Extracted continuous sentence cache")
+    print(f"  raw: {summary.raw_path}")
+    print(f"  events: {summary.events_path}")
+    print(f"  out: {summary.out_path}")
+    print(f"  key events after sweep: {summary.n_key_events_after_sweep}")
+    print(f"  sentences: {summary.n_sentences}")
+    print(
+        "  signal shape: "
+        f"({summary.n_sentences}, {summary.n_channels}, {summary.max_timepoints}) "
+        "[sentences, channels, padded timepoints]"
+    )
+    print(f"  valid input lengths: {summary.min_input_length}..{summary.max_input_length}")
+    print(f"  target lengths: {summary.min_target_length}..{summary.max_target_length}")
+    print(f"  sampling rate: {summary.sfreq:g} Hz")
+    print(f"  scaler fit scope: {summary.scaler_fit_scope}")
+    print(f"  trial mapping: {summary.trial_index_mapping_strategy}")
+    if summary.skipped_mat_trial_indices:
+        print(f"  skipped empty MAT trials: {summary.skipped_mat_trial_indices}")
+    if summary.split_partition_counts is not None:
+        print(f"  split partitions: {summary.split_partition_counts}")
+    print(f"  output file size: {_format_bytes(summary.output_bytes)}")
+    print(f"  runtime: {summary.runtime_sec:.3f} sec")
+    if summary.peak_rss_bytes is not None:
+        print(f"  process peak RSS: {_format_bytes(summary.peak_rss_bytes)}")
+    if summary.warnings:
+        print("  warnings:")
+        for warning in summary.warnings:
+            print(f"    - {warning}")
+    if args.summary_json:
+        summary_path = Path(args.summary_json)
+        summary_path.parent.mkdir(parents=True, exist_ok=True)
+        summary_path.write_text(
+            json.dumps(summary.to_dict(), indent=2, sort_keys=True) + "\n",
+            encoding="utf-8",
+        )
+        print(f"  wrote extraction summary: {summary_path}")
+    return 0
+
+
+def _cmd_apply_frozen_scaler(args: argparse.Namespace) -> int:
+    from neurodecodekit.preprocess.frozen_scaler import (
+        apply_frozen_train_scaler_to_cache,
+    )
+
+    summary = apply_frozen_train_scaler_to_cache(
+        source_cache_path=args.source_cache,
+        fit_cache_path=args.fit_cache,
+        output_path=args.out,
+        overwrite=args.overwrite,
+    )
+    print("Applied frozen train scaler")
+    print(f"  source cache: {summary.source_cache}")
+    print(f"  fit cache: {summary.fit_cache}")
+    print(f"  output cache: {summary.output_cache}")
+    print(f"  signal shape: {summary.signals_shape}")
+    print(f"  output file size: {_format_bytes(summary.output_bytes)}")
+    print(f"  runtime: {summary.runtime_sec:.3f} sec")
+    print(f"  center SHA-256: {summary.center_sha256}")
+    print(f"  scale SHA-256: {summary.scale_sha256}")
+    if args.summary_json:
+        summary_path = Path(args.summary_json)
+        summary_path.parent.mkdir(parents=True, exist_ok=True)
+        summary_path.write_text(
+            json.dumps(summary.to_dict(), indent=2, sort_keys=True) + "\n",
+            encoding="utf-8",
+        )
+        print(f"  wrote scaler summary: {summary_path}")
+    return 0
+
+
+def _cmd_sampling_rate_sweep(args: argparse.Namespace) -> int:
+    from neurodecodekit.experiments.sampling_rate_sweep import run_sampling_rate_sweep
+
+    report = run_sampling_rate_sweep(
+        raw_path=args.raw,
+        events_path=args.events,
+        out_dir=args.out_dir,
+        rates_hz=args.rates,
+        pre_context_sec=args.pre_context,
+        post_context_sec=args.post_context,
+        picks=args.picks,
+        max_channels=args.max_channels,
+        stim_channel=args.stim_channel,
+        l_freq=args.l_freq,
+        h_freq=args.h_freq,
+        notch_freq=args.notch_freq,
+        robust_scale=not args.no_robust_scale,
+        clamp=args.clamp,
+        max_sentences=args.max_sentences,
+        report_json_path=args.out_json,
+        report_markdown_path=args.out_md,
+        overwrite=args.overwrite,
+    )
+    print("Completed sampling-rate sweep")
+    print(f"  proof posture: {report['proof_posture']}")
+    for row in report["rates"]:
+        print(
+            f"  {row['rate_hz']:g} Hz: {_format_bytes(row['cache_bytes'])}, "
+            f"{row['extraction_runtime_sec']:.3f} sec, "
+            f"CTC feasible {row['ctc_feasible_rows_stride_1']}/{row['n_sentences']}"
+        )
+    print(f"  report JSON: {report['artifact_paths']['report_json']}")
+    print(f"  report Markdown: {report['artifact_paths']['report_markdown']}")
+    print(f"  decision: {report['decision']['status']}")
+    return 0
+
+
+def _cmd_channel_subset_sweep(args: argparse.Namespace) -> int:
+    from neurodecodekit.experiments.channel_subset_sweep import run_channel_subset_sweep
+
+    report = run_channel_subset_sweep(
+        cache_path=args.cache,
+        out_dir=args.out_dir,
+        channel_counts=args.counts,
+        strategies=args.strategies,
+        seed=args.seed,
+        max_output_mb=args.max_output_mb,
+        report_json_path=args.out_json,
+        report_markdown_path=args.out_md,
+        overwrite=args.overwrite,
+    )
+    print("Completed channel-subset sweep")
+    print(f"  proof posture: {report['proof_posture']}")
+    print(f"  base channels: {report['base_cache']['n_channels']}")
+    print(f"  subset caches: {len(report['rows'])}")
+    print(
+        "  subset caches + sidecars: "
+        f"{_format_bytes(report['resources']['subset_cache_and_sidecar_bytes'])}"
+    )
+    print(f"  report JSON: {report['artifact_paths']['report_json']}")
+    print(f"  report Markdown: {report['artifact_paths']['report_markdown']}")
+    print(f"  decision: {report['decision']['status']}")
+    return 0
+
+
+def _cmd_precision_storage_sweep(args: argparse.Namespace) -> int:
+    from neurodecodekit.experiments.precision_storage_sweep import (
+        run_precision_storage_sweep,
+    )
+
+    report = run_precision_storage_sweep(
+        cache_paths=args.cache,
+        out_dir=args.out_dir,
+        variants=args.variants,
+        clip_abs=args.clip_abs,
+        repetitions=args.repetitions,
+        max_output_mb=args.max_output_mb,
+        allow_clipping=args.allow_clipping,
+        report_json_path=args.out_json,
+        report_markdown_path=args.out_md,
+        overwrite=args.overwrite,
+    )
+    print("Completed precision/storage sweep")
+    print(f"  proof posture: {report['proof_posture']}")
+    print(f"  source caches: {report['run']['source_cache_count']}")
+    print(f"  representation artifacts: {report['run']['artifact_count']}")
+    print(
+        "  representation caches + sidecars: "
+        f"{_format_bytes(report['resources']['representation_cache_and_sidecar_bytes'])}"
+    )
+    print(f"  report JSON: {report['artifact_paths']['report_json']}")
+    print(f"  report Markdown: {report['artifact_paths']['report_markdown']}")
+    print(f"  decision: {report['decision']['status']}")
+    return 0
+
+
+def _cmd_lazy_backend_gate(args: argparse.Namespace) -> int:
+    from neurodecodekit.experiments.lazy_backend_gate import run_lazy_backend_gate
+
+    report = run_lazy_backend_gate(
+        cache_paths=args.cache,
+        out_dir=args.out_dir,
+        row_counts=args.row_counts,
+        repetitions=args.repetitions,
+        max_full_load_ms=args.max_full_load_ms,
+        max_partial_load_ms=args.max_partial_load_ms,
+        max_peak_rss_mb=args.max_peak_rss_mb,
+        revisit_cache_mb=args.revisit_cache_mb,
+        report_json_path=args.out_json,
+        report_markdown_path=args.out_md,
+        overwrite=args.overwrite,
+    )
+    consistency = report["consistency"]
+    print("Completed lazy-backend gate")
+    print(f"  proof posture: {report['proof_posture']}")
+    print(f"  caches: {report['run']['cache_count']}")
+    print(f"  slowest full load: {consistency['slowest_full_load_median_ms']:.3f} ms")
+    print(
+        f"  highest worker peak RSS: {_format_bytes(consistency['highest_worker_peak_rss_bytes'])}"
+    )
+    print(f"  report JSON: {report['artifact_paths']['report_json']}")
+    print(f"  report Markdown: {report['artifact_paths']['report_markdown']}")
+    print(f"  decision: {report['decision']['status']}")
+    return 0
+
+
+def _cmd_split_protocol(args: argparse.Namespace) -> int:
+    from neurodecodekit.evaluation.split_protocol import run_split_protocol
+
+    report = run_split_protocol(
+        cache_paths=args.cache,
+        out_dir=args.out_dir,
+        split_type=args.split_type,
+        text_source=args.text_source,
+        text_normalization=args.text_normalization,
+        ratios={
+            "train": args.train_ratio,
+            "val": args.val_ratio,
+            "test": args.test_ratio,
+        },
+        seed=args.seed,
+        report_json_path=args.out_json,
+        report_markdown_path=args.out_md,
+        overwrite=args.overwrite,
+    )
+    membership = report["membership"]
+    print("Completed split-protocol audit")
+    print(f"  proof posture: {report['proof_posture']}")
+    print(f"  source caches: {report['run']['source_cache_count']}")
+    print(f"  rows: {report['run']['row_count']}")
+    print(f"  partitions: {membership['partition_row_counts']}")
+    print(f"  requested split usable: {membership['requested_split_usable']}")
+    print(f"  strict training ready: {membership['strict_training_ready']}")
+    print(f"  report JSON: {report['artifact_paths']['report_json']}")
+    print(f"  report Markdown: {report['artifact_paths']['report_markdown']}")
+    print(f"  decision: {report['decision']['status']}")
+    return 0
+
+
+def _cmd_sentence_prior_baseline(args: argparse.Namespace) -> int:
+    from neurodecodekit.evaluation.report import (
+        build_text_report,
+        write_report_json,
+        write_report_markdown,
+    )
+    from neurodecodekit.evaluation.split_protocol import (
+        load_sentence_text_columns,
+        load_training_partitions,
+    )
+    from neurodecodekit.models.prior_baseline import run_prior_baseline
+
+    started_at = time.perf_counter()
+    partitions = load_training_partitions(
+        args.split_report,
+        args.cache,
+        eval_partition=args.eval_partition,
+    )
+    text_columns = load_sentence_text_columns(args.cache)
+    if text_columns["source_cache_sha256"] != partitions.source_cache_sha256:
+        raise ValueError("Text-only cache read does not match the split-report source hash.")
+    targets = text_columns["target_texts"]
+    train_targets = [targets[index] for index in partitions.train_indices]
+    eval_targets = [targets[index] for index in partitions.eval_indices]
+    baseline = run_prior_baseline(
+        eval_targets=eval_targets,
+        train_targets=train_targets,
+        strategy=args.strategy,
+        seed=args.seed,
+    )
+    baseline_metadata = baseline.metadata()
+    baseline_metadata.update(
+        {
+            "split_mode": "split-protocol-v1-explicit-membership",
+            "uses_neural_windows": False,
+            "signal_array_members_loaded": False,
+        }
+    )
+    report = build_text_report(
+        targets=eval_targets,
+        predictions=baseline.predictions,
+        cache_summary={
+            "path": str(args.cache),
+            "bytes": Path(args.cache).stat().st_size,
+            "kind": "sentence-cache-text-members-only",
+            "signals_shape": None,
+            "warnings": [],
+        },
+        run_name=args.run_name or "sentence_prior_split_protocol_v1",
+        split=f"split-protocol-v1-{args.eval_partition}",
+        max_examples=args.max_examples,
+        warnings=[
+            *baseline.warnings,
+            "sentence_prior_reader_loaded_no_signal_array",
+            "one_session_one_person_sentence_text_evaluation_only",
+            "real_cache_records_physical_typing_not_arbitrary_thoughts",
+        ],
+        runtime_sec=round(time.perf_counter() - started_at, 6),
+    )
+    report["baseline"] = baseline_metadata
+    report["split_protocol"] = partitions.metadata()
+    report["text_reader"] = {
+        "signal_member_names": text_columns["signal_member_names"],
+        "signal_array_members_loaded": text_columns["signal_array_members_loaded"],
+    }
+    if args.out_predictions:
+        _write_text_rows(args.out_predictions, baseline.predictions)
+    if args.out_json:
+        write_report_json(report, args.out_json)
+    if args.out_md:
+        write_report_markdown(report, args.out_md)
+    print(json.dumps(report, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_tiny_ctc_baseline(args: argparse.Namespace) -> int:
+    from neurodecodekit.cache.signal_representation import load_sentence_cache_auto
+    from neurodecodekit.evaluation.report import (
+        build_text_report,
+        compare_paired_predictions,
+        write_report_json,
+        write_report_markdown,
+    )
+    from neurodecodekit.evaluation.split_protocol import load_training_partitions
+    from neurodecodekit.models.prior_baseline import run_prior_baseline
+    from neurodecodekit.models.tiny_ctc import run_tiny_ctc_baseline_from_cache
+
+    started_at = time.perf_counter()
+    partitions = (
+        load_training_partitions(
+            args.split_report,
+            args.cache,
+            eval_partition=args.eval_partition,
+        )
+        if args.split_report
+        else None
+    )
+    cache = load_sentence_cache_auto(args.cache)
+    baseline = run_tiny_ctc_baseline_from_cache(
+        cache,
+        train_fraction=args.train_fraction,
+        seed=args.seed,
+        epochs=args.epochs,
+        batch_size=args.batch_size,
+        learning_rate=args.learning_rate,
+        hidden_channels=args.hidden_channels,
+        device=args.device,
+        num_threads=args.num_threads,
+        max_restarts=args.max_restarts,
+        partition_indices=(
+            {
+                "train": partitions.train_indices,
+                "val": partitions.validation_indices,
+                "test": partitions.test_indices,
+            }
+            if partitions is not None
+            else None
+        ),
+        eval_partition=args.eval_partition,
+        split_metadata=(partitions.metadata() if partitions is not None else None),
+    )
+    warnings = list(baseline.warnings)
+    if cache.summary.kind.startswith("synthetic"):
+        warnings.append("ctc_trained_on_synthetic_cache_only")
+    else:
+        warnings.extend(
+            [
+                "single_session_sentence_text_result_not_session_or_subject_generalization",
+            ]
+        )
+        if baseline.n_eval_rows < 20:
+            warnings.append("small_eval_partition_too_uncertain_for_a_performance_claim")
+    report = build_text_report(
+        targets=baseline.targets,
+        predictions=baseline.predictions,
+        cache_summary=cache.summary.to_dict(),
+        run_name=args.run_name or "tiny_ctc_sentence_baseline",
+        split=(
+            args.split
+            or (
+                f"split-protocol-v1-{args.eval_partition}"
+                if partitions is not None
+                else "deterministic-text-hash-holdout"
+            )
+        ),
+        max_examples=args.max_examples,
+        warnings=warnings,
+    )
+    report["run"]["runtime_sec"] = round(time.perf_counter() - started_at, 6)
+    report["baseline"] = baseline.metadata()
+    if partitions is not None:
+        report["split_protocol"] = partitions.metadata()
+
+    train_targets = [cache.target_texts[index] for index in baseline.train_indices]
+    prior = run_prior_baseline(
+        eval_targets=baseline.targets,
+        train_targets=[str(value) for value in train_targets],
+        strategy="most-frequent",
+        seed=args.seed,
+    )
+    prior_report = build_text_report(
+        targets=baseline.targets,
+        predictions=prior.predictions,
+        max_examples=1,
+        warnings=prior.warnings,
+    )
+    report["comparators"] = {
+        "prior_only": {
+            "baseline": prior.metadata(),
+            "summary": prior_report["summary"],
+        }
+    }
+    report["comparisons"] = {
+        "tiny_ctc_vs_prior_only": compare_paired_predictions(
+            targets=baseline.targets,
+            predictions_a=baseline.predictions,
+            predictions_b=prior.predictions,
+            label_a="tiny_ctc",
+            label_b="prior_only",
+            bootstrap_iterations=5000,
+            seed=17,
+        )
+    }
+
+    if args.out_predictions:
+        _write_text_rows(args.out_predictions, baseline.predictions)
+    if args.out_json:
+        write_report_json(report, args.out_json)
+    if args.out_md:
+        write_report_markdown(report, args.out_md)
+    print(json.dumps(report, indent=2, sort_keys=True))
+    if args.out_predictions:
+        print(f"Wrote tiny-CTC predictions to {args.out_predictions}")
+    if args.out_json:
+        print(f"Wrote report JSON to {args.out_json}")
+    if args.out_md:
+        print(f"Wrote report Markdown to {args.out_md}")
+    return 0
+
+
+def _cmd_cross_session_ctc(args: argparse.Namespace) -> int:
+    from neurodecodekit.cache.sentence_npz import load_sentence_npz_cache
+    from neurodecodekit.evaluation.cross_session import (
+        summarize_text_overlap,
+        validate_cross_session_contract,
+    )
+    from neurodecodekit.evaluation.report import (
+        build_text_report,
+        compare_paired_predictions,
+        write_report_json,
+        write_report_markdown,
+    )
+    from neurodecodekit.evaluation.split_protocol import load_training_partitions
+    from neurodecodekit.models.prior_baseline import run_prior_baseline
+    from neurodecodekit.models.tiny_ctc import run_tiny_ctc_cross_session
+
+    started_at = time.perf_counter()
+    partitions = load_training_partitions(
+        args.train_split_report,
+        args.train_cache,
+        eval_partition="test",
+    )
+    train_cache = load_sentence_npz_cache(args.train_cache)
+    eval_cache = load_sentence_npz_cache(args.eval_cache)
+    contract = validate_cross_session_contract(
+        train_cache=train_cache,
+        eval_cache=eval_cache,
+        partitions=partitions,
+    )
+    source_partitions = {
+        "train": partitions.train_indices,
+        "val": partitions.validation_indices,
+        "test": partitions.test_indices,
+    }
+    baseline = run_tiny_ctc_cross_session(
+        train_signals=train_cache.signals,
+        train_input_lengths=train_cache.input_lengths,
+        train_target_token_ids=train_cache.target_token_ids,
+        train_target_lengths=train_cache.target_lengths,
+        train_target_texts=train_cache.target_texts.tolist(),
+        eval_signals=eval_cache.signals,
+        eval_input_lengths=eval_cache.input_lengths,
+        eval_target_token_ids=eval_cache.target_token_ids,
+        eval_target_lengths=eval_cache.target_lengths,
+        eval_target_texts=eval_cache.target_texts.tolist(),
+        source_partitions=source_partitions,
+        split_metadata=partitions.metadata(),
+        seed=args.seed,
+        epochs=args.epochs,
+        batch_size=args.batch_size,
+        learning_rate=args.learning_rate,
+        hidden_channels=args.hidden_channels,
+        device=args.device,
+        num_threads=args.num_threads,
+        max_restarts=args.max_restarts,
+    )
+    train_targets = [str(train_cache.target_texts[index]) for index in partitions.train_indices]
+    prior = run_prior_baseline(
+        eval_targets=baseline.targets,
+        train_targets=train_targets,
+        strategy="most-frequent",
+        seed=args.seed,
+    )
+    warnings = [
+        *baseline.warnings,
+        "one_subject_two_sessions_result_not_population_generalization",
+        "eval_cache_scaled_with_source_train_statistics_only",
+        "source_sentence_validation_and_test_rows_never_used_by_cross_session_model",
+        "empty_mat_trials_excluded_by_nonempty_keyTrig_trial_mapping",
+        "cross_session_result_does_not_establish_real_time_decoding",
+        "real_cache_records_physical_typing_not_arbitrary_thoughts",
+    ]
+    report = build_text_report(
+        targets=baseline.targets,
+        predictions=baseline.predictions,
+        cache_summary=eval_cache.summary.to_dict(),
+        run_name=args.run_name or "s21_session1_train_to_session2_eval_tiny_ctc",
+        split="same-subject-independent-session-holdout",
+        max_examples=args.max_examples,
+        warnings=warnings,
+    )
+    report["run"]["runtime_sec"] = round(time.perf_counter() - started_at, 6)
+    report["baseline"] = baseline.metadata()
+    report["cross_session_protocol"] = contract
+    report["text_overlap"] = {
+        "typed_targets": summarize_text_overlap(
+            train_texts=train_targets,
+            eval_texts=baseline.targets,
+        ),
+        "reference_prompts": summarize_text_overlap(
+            train_texts=[
+                str(train_cache.reference_texts[index]) for index in partitions.train_indices
+            ],
+            eval_texts=[str(value) for value in eval_cache.reference_texts.tolist()],
+        ),
+    }
+    prior_report = build_text_report(
+        targets=baseline.targets,
+        predictions=prior.predictions,
+        max_examples=1,
+        warnings=prior.warnings,
+    )
+    report["comparators"] = {
+        "prior_only": {
+            "baseline": prior.metadata(),
+            "summary": prior_report["summary"],
+        }
+    }
+    report["comparisons"] = {
+        "tiny_ctc_vs_prior_only": compare_paired_predictions(
+            targets=baseline.targets,
+            predictions_a=baseline.predictions,
+            predictions_b=prior.predictions,
+            label_a="tiny_ctc_cross_session",
+            label_b="prior_only_source_train",
+            bootstrap_iterations=5000,
+            seed=17,
+        )
+    }
+    if args.out_predictions:
+        _write_text_rows(args.out_predictions, baseline.predictions)
+    if args.out_json:
+        write_report_json(report, args.out_json)
+    if args.out_md:
+        write_report_markdown(report, args.out_md)
+
+    comparison = report["comparisons"]["tiny_ctc_vs_prior_only"]
+    print("Completed same-subject cross-session CTC evaluation")
+    print(f"  source train rows: {baseline.n_train_rows}")
+    print(f"  reserved source validation rows: {baseline.n_reserved_validation_rows}")
+    print(f"  reserved source test rows: {baseline.n_reserved_test_rows}")
+    print(f"  independent session eval rows: {baseline.n_eval_rows}")
+    print(f"  train CER: {baseline.train_cer:.6f}")
+    print(f"  eval corpus CER: {report['summary']['corpus_cer']:.6f}")
+    print(f"  prior corpus CER: {prior_report['summary']['corpus_cer']:.6f}")
+    print(f"  tiny minus prior CER: {comparison['corpus_cer_delta_a_minus_b']:.6f}")
+    print(f"  runtime: {report['run']['runtime_sec']:.3f} sec")
+    if args.out_json:
+        print(f"  wrote JSON: {args.out_json}")
+    if args.out_md:
+        print(f"  wrote Markdown: {args.out_md}")
+    return 0
+
+
+def _cmd_synthetic_adapter_gate(args: argparse.Namespace) -> int:
+    from neurodecodekit.experiments.synthetic_adapter_gate import (
+        run_synthetic_adapter_gate,
+    )
+
+    report = run_synthetic_adapter_gate(
+        out_dir=args.out_dir,
+        sentences=args.sentences,
+        channels=args.channels,
+        letter_classes=args.letter_classes,
+        seed=args.seed,
+        epochs=args.epochs,
+        batch_size=args.batch_size,
+        learning_rate=args.learning_rate,
+        hidden_channels=args.hidden_channels,
+        num_threads=args.num_threads,
+        min_validation_cer_gain=args.min_validation_cer_gain,
+        bootstrap_iterations=args.bootstrap_iterations,
+        max_output_mb=args.max_output_mb,
+        overwrite=args.overwrite,
+    )
+    print("Completed synthetic session-adapter gate")
+    print(f"  proof posture: {report['proof_posture']}")
+    print(f"  partition rows: {report['protocol']['partition_counts']}")
+    print(f"  selected adapter: {report['validation']['selected_adapter']}")
+    print(
+        "  validation identity/adapted CER: "
+        f"{report['validation']['identity']['corpus_cer']:.6f}/"
+        f"{report['validation']['robust_channel_affine']['corpus_cer']:.6f}"
+    )
+    print(
+        "  holdout identity/adapted/prior CER: "
+        f"{report['holdout']['identity']['corpus_cer']:.6f}/"
+        f"{report['holdout']['robust_channel_affine']['corpus_cer']:.6f}/"
+        f"{report['holdout']['prior_only']['corpus_cer']:.6f}"
+    )
+    print(f"  runtime: {report['run']['runtime_sec']:.3f} sec")
+    print(f"  artifact bytes: {report['resources']['total_artifact_bytes']}")
+    print(f"  decision: {report['decision']['status']}")
+    print(f"  report JSON: {report['artifact_paths']['report_json']}")
+    print(f"  report Markdown: {report['artifact_paths']['report_markdown']}")
+    return 0
+
+
+def _cmd_synthetic_calibration_curve(args: argparse.Namespace) -> int:
+    from neurodecodekit.experiments.synthetic_calibration_curve import (
+        run_synthetic_calibration_curve,
+    )
+
+    report = run_synthetic_calibration_curve(
+        out_dir=args.out_dir,
+        sentences=args.sentences,
+        calibration_sentences=args.calibration_sentences,
+        channels=args.channels,
+        letter_classes=args.letter_classes,
+        seed=args.seed,
+        calibration_sizes=args.calibration_sizes,
+        shift_seeds=args.shift_seeds,
+        epochs=args.epochs,
+        batch_size=args.batch_size,
+        learning_rate=args.learning_rate,
+        hidden_channels=args.hidden_channels,
+        num_threads=args.num_threads,
+        min_stationary_validation_cer_gain=(
+            args.min_stationary_validation_cer_gain
+        ),
+        bootstrap_iterations=args.bootstrap_iterations,
+        max_output_mb=args.max_output_mb,
+        overwrite=args.overwrite,
+    )
+    selected = report["decision"]["selected_calibration_rows"]
+    print("Completed synthetic calibration-size and shift-stress study")
+    print(f"  proof posture: {report['proof_posture']}")
+    print(f"  calibration sizes: {report['run']['calibration_sizes']}")
+    print(f"  shift seeds: {report['run']['shift_seeds']}")
+    print(f"  shift families: {report['run']['shift_families']}")
+    print(f"  selected stationary calibration rows: {selected}")
+    for row in report["holdout"]["aggregate"]:
+        print(
+            f"  {row['shift_family']} holdout identity/adapted CER: "
+            f"{row['median_identity_cer']:.6f}/{row['median_adapted_cer']:.6f}"
+        )
+    print(f"  runtime: {report['run']['runtime_sec']:.3f} sec")
+    print(f"  artifact bytes: {report['resources']['total_artifact_bytes']}")
+    print(f"  decision: {report['decision']['status']}")
+    print(f"  report JSON: {report['artifact_paths']['report_json']}")
+    print(f"  report Markdown: {report['artifact_paths']['report_markdown']}")
+    return 0
+
+
+def _cmd_eeg_bridge_gate(args: argparse.Namespace) -> int:
+    from neurodecodekit.experiments.eeg_bridge_gate import run_eeg_bridge_gate
+
+    result = run_eeg_bridge_gate(
+        manifest_path=args.manifest,
+        out_dir=args.out_dir,
+        revision=args.revision,
+        max_download_mb=args.max_download_mb,
+        max_output_mb=args.max_output_mb,
+        overwrite=args.overwrite,
+    )
+    report = result["report"]
+    audit = result["audit"]
+    bundle = report["selected_bundle"]
+    print("Completed metadata-only EEG bridge gate")
+    print(f"  proof posture: {report['proof_posture']}")
+    print(f"  selected: {bundle['subject']} session {bundle['session']} {bundle['block']}")
+    print(f"  files/bytes: {bundle['n_files']}/{bundle['estimated_bytes']}")
+    print(f"  gate passed: {report['gate_passed']}")
+    print(f"  decision: {report['decision']['status']}")
+    print(f"  data downloads: {audit['data_downloads']}")
+    print(f"  raw signal reads: {audit['raw_signal_reads']}")
+    print(f"  runtime: {audit['runtime_sec']:.3f} sec")
+    print(f"  peak RSS: {audit['peak_rss_bytes']} bytes")
+    print(f"  artifact bytes: {audit['total_artifact_bytes']}")
+    print(f"  output: {result['output_dir']}")
+    return 0
+
+
+def _cmd_build_leaderboard(args: argparse.Namespace) -> int:
+    from neurodecodekit.evaluation.report_card import (
+        build_leaderboard,
+        format_leaderboard_table,
+    )
+
+    result = build_leaderboard(
+        spec_path=args.spec,
+        out_dir=args.out_dir,
+        project_root=args.project_root,
+        max_cards=args.max_cards,
+        max_output_mb=args.max_output_mb,
+        overwrite=args.overwrite,
+    )
+    leaderboard = result["leaderboard"]
+    audit = result["audit"]
+    print(format_leaderboard_table(leaderboard))
+    print("Completed artifact-only report-card build")
+    print(f"  cards/cohorts: {leaderboard['summary']['card_count']}/{leaderboard['summary']['cohort_count']}")
+    print(f"  cross-cohort ranking: {leaderboard['summary']['cross_cohort_ranking_performed']}")
+    print(f"  raw data reads: {audit['raw_data_reads']}")
+    print(f"  signal arrays loaded: {audit['signal_array_members_loaded']}")
+    print(f"  model runs: {audit['model_runs_triggered']}")
+    print(f"  runtime: {audit['runtime_sec']:.3f} sec")
+    print(f"  peak RSS: {audit['peak_rss_bytes']} bytes")
+    print(f"  artifact bytes: {audit['total_artifact_bytes']}")
+    print(f"  output: {result['output_dir']}")
+    return 0
+
+
+def _cmd_demo(args: argparse.Namespace) -> int:
+    from neurodecodekit.demo.app import audit_demo, launch_demo
+
+    if args.audit_only:
+        report = audit_demo(args.project_root)
+        if args.out_json:
+            output = Path(args.out_json)
+            output.parent.mkdir(parents=True, exist_ok=True)
+            output.write_text(
+                json.dumps(report, indent=2, sort_keys=True) + "\n",
+                encoding="utf-8",
+            )
+        print("Completed local demo startup audit")
+        print(f"  proof posture: {report['proof_posture']}")
+        print(f"  Gradio: {report['gradio_version']}")
+        print(f"  examples: {report['display_examples']}")
+        print(f"  evidence load: {report['load_evidence_sec']:.3f} sec")
+        print(f"  total build: {report['build_total_sec']:.3f} sec")
+        print(f"  peak RSS: {report['peak_rss_bytes']} bytes")
+        print(f"  gate passed: {report['gate_passed']}")
+        if args.out_json:
+            print(f"  wrote JSON: {args.out_json}")
+        return 0 if report["gate_passed"] else 1
+
+    launch_demo(
+        args.project_root,
+        server_name=args.host,
+        server_port=args.port,
+        inbrowser=args.inbrowser,
+    )
+    return 0
+
+
+def _comma_separated_ints(value: str) -> tuple[int, ...]:
+    try:
+        values = tuple(int(item.strip()) for item in value.split(",") if item.strip())
+    except ValueError as exc:
+        raise argparse.ArgumentTypeError("expected comma-separated integers") from exc
+    if not values:
+        raise argparse.ArgumentTypeError("expected at least one integer")
+    return values
 
 
 def _format_bytes(n_bytes: int) -> str:
@@ -428,6 +1557,8 @@ def _cmd_select_tiny(args: argparse.Namespace) -> int:
         args.manifest,
         modality=args.modality,
         subject=args.subject,
+        session=args.session,
+        revision=args.revision,
         blocks=args.blocks,
         include_logs=not args.no_logs,
         max_files=args.max_files,
@@ -483,6 +1614,8 @@ def _cmd_download_selection(args: argparse.Namespace) -> int:
         repo_id=selection.repo_id,
         allow_patterns=selection.allow_patterns,
         local_dir=args.local_dir,
+        revision=selection.revision,
+        max_workers=args.max_workers,
         dry_run=dry_run,
     )
     return 0
@@ -493,6 +1626,7 @@ def _print_selection_plan(selection: Any, *, heading: str) -> None:
 
     print(heading)
     print(f"  repo: {selection.repo_id}")
+    print(f"  revision: {selection.revision or 'unpinned'}")
     print(f"  files: {selection.n_files}")
     print(f"  estimated size: {format_bytes(selection.estimated_bytes)}")
     if selection.missing_size_count:
@@ -529,12 +1663,18 @@ def build_parser() -> argparse.ArgumentParser:
     p = sub.add_parser("report", help="Write a JSON/Markdown text decoding report.")
     p.add_argument("--targets", default=None, help="Text file with one target per line.")
     p.add_argument("--predictions", default=None, help="Text file with one prediction per line.")
-    p.add_argument("--cache", default=None, help="Optional B2Q-mini NPZ cache for labels/storage metadata.")
+    p.add_argument(
+        "--cache", default=None, help="Optional B2Q-mini NPZ cache for labels/storage metadata."
+    )
     p.add_argument("--out-json", default=None, help="Optional output JSON report path.")
     p.add_argument("--out-md", default=None, help="Optional output Markdown report path.")
     p.add_argument("--run-name", default=None, help="Human-readable run name.")
-    p.add_argument("--split", default=None, help="Split/protocol label, e.g. synthetic-smoke or subject.")
-    p.add_argument("--max-examples", type=int, default=10, help="Maximum examples to include. Default: 10.")
+    p.add_argument(
+        "--split", default=None, help="Split/protocol label, e.g. synthetic-smoke or subject."
+    )
+    p.add_argument(
+        "--max-examples", type=int, default=10, help="Maximum examples to include. Default: 10."
+    )
     p.add_argument(
         "--identity-smoke",
         action="store_true",
@@ -544,9 +1684,17 @@ def build_parser() -> argparse.ArgumentParser:
 
     p = sub.add_parser("prior-baseline", help="Run a no-brain label/text prior baseline.")
     p.add_argument("--targets", default=None, help="Eval targets, one row per example.")
-    p.add_argument("--cache", default=None, help="Optional B2Q-mini NPZ cache; labels become targets if --targets is absent.")
-    p.add_argument("--train-targets", default=None, help="Optional train targets used to fit the prior.")
-    p.add_argument("--train-cache", default=None, help="Optional train cache whose labels fit the prior.")
+    p.add_argument(
+        "--cache",
+        default=None,
+        help="Optional B2Q-mini NPZ cache; labels become targets if --targets is absent.",
+    )
+    p.add_argument(
+        "--train-targets", default=None, help="Optional train targets used to fit the prior."
+    )
+    p.add_argument(
+        "--train-cache", default=None, help="Optional train cache whose labels fit the prior."
+    )
     p.add_argument(
         "--strategy",
         default="most-frequent",
@@ -554,60 +1702,394 @@ def build_parser() -> argparse.ArgumentParser:
         help="No-brain prediction strategy. Default: most-frequent.",
     )
     p.add_argument("--seed", type=int, default=7, help="Seed for sampling strategies. Default: 7.")
-    p.add_argument("--out-predictions", default=None, help="Optional one-prediction-per-line output path.")
+    p.add_argument(
+        "--out-predictions", default=None, help="Optional one-prediction-per-line output path."
+    )
     p.add_argument("--out-json", default=None, help="Optional output JSON report path.")
     p.add_argument("--out-md", default=None, help="Optional output Markdown report path.")
     p.add_argument("--run-name", default=None, help="Human-readable run name.")
-    p.add_argument("--split", default=None, help="Split/protocol label, e.g. synthetic-smoke or subject.")
-    p.add_argument("--max-examples", type=int, default=10, help="Maximum examples to include. Default: 10.")
+    p.add_argument(
+        "--split", default=None, help="Split/protocol label, e.g. synthetic-smoke or subject."
+    )
+    p.add_argument(
+        "--max-examples", type=int, default=10, help="Maximum examples to include. Default: 10."
+    )
     p.set_defaults(func=_cmd_prior_baseline)
 
-    p = sub.add_parser("template-baseline", help="Run a tiny nearest-centroid baseline over cache windows.")
-    p.add_argument("--cache", default=None, help="Single B2Q-mini cache to split into train/eval rows.")
-    p.add_argument("--train-cache", default=None, help="Optional train cache for separate-cache evaluation.")
-    p.add_argument("--eval-cache", default=None, help="Optional eval cache for separate-cache evaluation.")
+    p = sub.add_parser(
+        "template-baseline", help="Run a tiny nearest-centroid baseline over cache windows."
+    )
+    p.add_argument(
+        "--cache", default=None, help="Single B2Q-mini cache to split into train/eval rows."
+    )
+    p.add_argument(
+        "--train-cache", default=None, help="Optional train cache for separate-cache evaluation."
+    )
+    p.add_argument(
+        "--eval-cache", default=None, help="Optional eval cache for separate-cache evaluation."
+    )
     p.add_argument(
         "--train-fraction",
         type=float,
         default=0.5,
         help="Single-cache stratified train fraction. Default: 0.5.",
     )
-    p.add_argument("--seed", type=int, default=7, help="Seed for deterministic holdout split. Default: 7.")
-    p.add_argument("--out-predictions", default=None, help="Optional one-prediction-per-line output path.")
+    p.add_argument(
+        "--seed", type=int, default=7, help="Seed for deterministic holdout split. Default: 7."
+    )
+    p.add_argument(
+        "--out-predictions", default=None, help="Optional one-prediction-per-line output path."
+    )
     p.add_argument("--out-json", default=None, help="Optional output JSON report path.")
     p.add_argument("--out-md", default=None, help="Optional output Markdown report path.")
     p.add_argument("--run-name", default=None, help="Human-readable run name.")
-    p.add_argument("--split", default=None, help="Split/protocol label, e.g. synthetic-holdout or session.")
-    p.add_argument("--max-examples", type=int, default=10, help="Maximum examples to include. Default: 10.")
+    p.add_argument(
+        "--split", default=None, help="Split/protocol label, e.g. synthetic-holdout or session."
+    )
+    p.add_argument(
+        "--max-examples", type=int, default=10, help="Maximum examples to include. Default: 10."
+    )
+    p.add_argument(
+        "--bootstrap-iterations",
+        type=int,
+        default=2000,
+        help="Paired holdout bootstrap samples. Default: 2000.",
+    )
     p.set_defaults(func=_cmd_template_baseline)
 
     p = sub.add_parser(
         "tiny-conv-baseline",
         help="Run an optional CPU-safe tiny ConvNet baseline over cache windows. Requires [ml].",
     )
-    p.add_argument("--cache", default=None, help="Single B2Q-mini cache to split into train/eval rows.")
-    p.add_argument("--train-cache", default=None, help="Optional train cache for separate-cache evaluation.")
-    p.add_argument("--eval-cache", default=None, help="Optional eval cache for separate-cache evaluation.")
+    p.add_argument(
+        "--cache", default=None, help="Single B2Q-mini cache to split into train/eval rows."
+    )
+    p.add_argument(
+        "--train-cache", default=None, help="Optional train cache for separate-cache evaluation."
+    )
+    p.add_argument(
+        "--eval-cache", default=None, help="Optional eval cache for separate-cache evaluation."
+    )
     p.add_argument(
         "--train-fraction",
         type=float,
         default=0.5,
         help="Single-cache stratified train fraction. Default: 0.5.",
     )
-    p.add_argument("--seed", type=int, default=7, help="Seed for deterministic holdout/training. Default: 7.")
+    p.add_argument(
+        "--seed", type=int, default=7, help="Seed for deterministic holdout/training. Default: 7."
+    )
     p.add_argument("--epochs", type=int, default=20, help="Training epochs. Default: 20.")
     p.add_argument("--batch-size", type=int, default=16, help="Mini-batch size. Default: 16.")
-    p.add_argument("--learning-rate", type=float, default=0.01, help="Adam learning rate. Default: 0.01.")
-    p.add_argument("--hidden-channels", type=int, default=8, help="Conv hidden channels. Default: 8.")
-    p.add_argument("--device", default="cpu", choices=["cpu", "cuda"], help="Torch device. Default: cpu.")
+    p.add_argument(
+        "--learning-rate", type=float, default=0.01, help="Adam learning rate. Default: 0.01."
+    )
+    p.add_argument(
+        "--hidden-channels", type=int, default=8, help="Conv hidden channels. Default: 8."
+    )
+    p.add_argument(
+        "--device", default="cpu", choices=["cpu", "cuda"], help="Torch device. Default: cpu."
+    )
     p.add_argument("--num-threads", type=int, default=1, help="Torch CPU threads. Default: 1.")
-    p.add_argument("--out-predictions", default=None, help="Optional one-prediction-per-line output path.")
+    p.add_argument(
+        "--out-predictions", default=None, help="Optional one-prediction-per-line output path."
+    )
     p.add_argument("--out-json", default=None, help="Optional output JSON report path.")
     p.add_argument("--out-md", default=None, help="Optional output Markdown report path.")
     p.add_argument("--run-name", default=None, help="Human-readable run name.")
-    p.add_argument("--split", default=None, help="Split/protocol label, e.g. synthetic-holdout or session.")
-    p.add_argument("--max-examples", type=int, default=10, help="Maximum examples to include. Default: 10.")
+    p.add_argument(
+        "--split", default=None, help="Split/protocol label, e.g. synthetic-holdout or session."
+    )
+    p.add_argument(
+        "--max-examples", type=int, default=10, help="Maximum examples to include. Default: 10."
+    )
     p.set_defaults(func=_cmd_tiny_conv_baseline)
+
+    p = sub.add_parser(
+        "tiny-ctc-baseline",
+        help="Train an optional CPU-safe CTC model over continuous sentence signals. Requires [ml].",
+    )
+    p.add_argument("--cache", required=True, help="Validated B2Q sentence-cache NPZ path.")
+    p.add_argument(
+        "--split-report",
+        default=None,
+        help=(
+            "Strict-ready Split Protocol v1 JSON bound to this cache. When set, "
+            "its train/eval indices replace the legacy holdout."
+        ),
+    )
+    p.add_argument(
+        "--eval-partition",
+        choices=["val", "test"],
+        default="test",
+        help="Explicit split-report partition to evaluate. Default: test.",
+    )
+    p.add_argument(
+        "--train-fraction",
+        type=float,
+        default=0.8,
+        help="Fraction of unique sentence texts assigned to train. Default: 0.8.",
+    )
+    p.add_argument("--seed", type=int, default=7, help="Deterministic split/training seed.")
+    p.add_argument("--epochs", type=int, default=60, help="Training epochs. Default: 60.")
+    p.add_argument("--batch-size", type=int, default=16, help="Mini-batch size. Default: 16.")
+    p.add_argument(
+        "--learning-rate",
+        type=float,
+        default=0.02,
+        help="Adam learning rate. Default: 0.02.",
+    )
+    p.add_argument("--hidden-channels", type=int, default=16, help="Temporal ConvNet width.")
+    p.add_argument(
+        "--device",
+        default="cpu",
+        choices=["cpu", "mps", "cuda"],
+        help="Torch device. Default: cpu.",
+    )
+    p.add_argument("--num-threads", type=int, default=1, help="Torch CPU threads. Default: 1.")
+    p.add_argument(
+        "--max-restarts",
+        type=int,
+        default=3,
+        help="Maximum deterministic restarts after a degenerate training fit. Default: 3.",
+    )
+    p.add_argument("--out-predictions", default=None, help="Optional text predictions path.")
+    p.add_argument("--out-json", default=None, help="Optional JSON report path.")
+    p.add_argument("--out-md", default=None, help="Optional Markdown report path.")
+    p.add_argument("--run-name", default=None, help="Human-readable run name.")
+    p.add_argument("--split", default=None, help="Protocol label for the report.")
+    p.add_argument("--max-examples", type=int, default=10, help="Maximum report examples.")
+    p.set_defaults(func=_cmd_tiny_ctc_baseline)
+
+    p = sub.add_parser(
+        "cross-session-ctc",
+        help=(
+            "Train tiny CTC on strict source-session train rows and evaluate an "
+            "independent frozen-scaled session. Requires [ml]."
+        ),
+    )
+    p.add_argument("--train-cache", required=True, help="Strict split-bound source cache.")
+    p.add_argument(
+        "--train-split-report",
+        required=True,
+        help="Strict-ready Split Protocol v1 JSON bound to the source cache.",
+    )
+    p.add_argument(
+        "--eval-cache",
+        required=True,
+        help="Independent session cache scaled with the source train statistics.",
+    )
+    p.add_argument("--seed", type=int, default=7, help="Training seed. Default: 7.")
+    p.add_argument("--epochs", type=int, default=60, help="Training epochs. Default: 60.")
+    p.add_argument("--batch-size", type=int, default=16, help="Mini-batch size. Default: 16.")
+    p.add_argument(
+        "--learning-rate",
+        type=float,
+        default=0.02,
+        help="Adam learning rate. Default: 0.02.",
+    )
+    p.add_argument("--hidden-channels", type=int, default=16, help="Temporal ConvNet width.")
+    p.add_argument(
+        "--device",
+        default="cpu",
+        choices=["cpu", "mps", "cuda"],
+        help="Torch device. Default: cpu.",
+    )
+    p.add_argument("--num-threads", type=int, default=1, help="Torch CPU threads. Default: 1.")
+    p.add_argument(
+        "--max-restarts",
+        type=int,
+        default=1,
+        help="Maximum training-fit-selected initializations. Default: 1.",
+    )
+    p.add_argument("--out-predictions", default=None, help="Optional text predictions path.")
+    p.add_argument("--out-json", default=None, help="Optional JSON report path.")
+    p.add_argument("--out-md", default=None, help="Optional Markdown report path.")
+    p.add_argument("--run-name", default=None, help="Human-readable run name.")
+    p.add_argument("--max-examples", type=int, default=10, help="Maximum report examples.")
+    p.set_defaults(func=_cmd_cross_session_ctc)
+
+    p = sub.add_parser(
+        "synthetic-adapter-gate",
+        help=(
+            "Test unlabeled robust channel-affine session alignment on a bounded "
+            "synthetic shift. Never loads real caches. Requires [ml]."
+        ),
+    )
+    p.add_argument("--out-dir", required=True, help="Directory for compact gate artifacts.")
+    p.add_argument("--sentences", type=int, default=96, help="Synthetic rows. Default: 96.")
+    p.add_argument("--channels", type=int, default=6, help="Synthetic channels. Default: 6.")
+    p.add_argument(
+        "--letter-classes", type=int, default=4, help="Synthetic letters. Default: 4."
+    )
+    p.add_argument("--seed", type=int, default=23, help="Protocol/training seed. Default: 23.")
+    p.add_argument("--epochs", type=int, default=50, help="Tiny CTC epochs. Default: 50.")
+    p.add_argument("--batch-size", type=int, default=16, help="Batch size. Default: 16.")
+    p.add_argument(
+        "--learning-rate", type=float, default=0.02, help="Adam rate. Default: 0.02."
+    )
+    p.add_argument(
+        "--hidden-channels", type=int, default=16, help="Tiny CTC width. Default: 16."
+    )
+    p.add_argument(
+        "--num-threads",
+        type=int,
+        default=1,
+        choices=[1],
+        help="Torch CPU threads. Fixed at 1.",
+    )
+    p.add_argument(
+        "--min-validation-cer-gain",
+        type=float,
+        default=0.10,
+        help="Absolute validation CER gain required to select adaptation. Default: 0.10.",
+    )
+    p.add_argument(
+        "--bootstrap-iterations",
+        type=int,
+        default=2000,
+        help="Paired holdout bootstrap samples. Default: 2000.",
+    )
+    p.add_argument(
+        "--max-output-mb",
+        type=float,
+        default=2.0,
+        help="Hard cap for reports and predictions. Default: 2 MiB.",
+    )
+    p.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Replace existing gate report and prediction artifacts.",
+    )
+    p.set_defaults(func=_cmd_synthetic_adapter_gate)
+
+    p = sub.add_parser(
+        "synthetic-calibration-curve",
+        help=(
+            "Measure an unlabeled robust-affine calibration curve across stationary, "
+            "channel-mixing, and time-varying synthetic shifts. Never loads real caches."
+        ),
+    )
+    p.add_argument("--out-dir", required=True, help="Directory for compact study artifacts.")
+    p.add_argument("--sentences", type=int, default=96, help="Source rows. Default: 96.")
+    p.add_argument(
+        "--calibration-sentences",
+        type=int,
+        default=48,
+        help="Independent unlabeled calibration-pool rows. Default: 48.",
+    )
+    p.add_argument("--channels", type=int, default=6, help="Synthetic channels. Default: 6.")
+    p.add_argument(
+        "--letter-classes", type=int, default=4, help="Synthetic letters. Default: 4."
+    )
+    p.add_argument("--seed", type=int, default=23, help="Source/model seed. Default: 23.")
+    p.add_argument(
+        "--calibration-sizes",
+        type=_comma_separated_ints,
+        default=(1, 2, 4, 8, 16, 32),
+        help="Five or more nested row counts. Default: 1,2,4,8,16,32.",
+    )
+    p.add_argument(
+        "--shift-seeds",
+        type=_comma_separated_ints,
+        default=(101, 211, 307),
+        help="Two or more shift seeds. Default: 101,211,307.",
+    )
+    p.add_argument("--epochs", type=int, default=50, help="Tiny CTC epochs. Default: 50.")
+    p.add_argument("--batch-size", type=int, default=16, help="Batch size. Default: 16.")
+    p.add_argument(
+        "--learning-rate", type=float, default=0.02, help="Adam rate. Default: 0.02."
+    )
+    p.add_argument(
+        "--hidden-channels", type=int, default=16, help="Tiny CTC width. Default: 16."
+    )
+    p.add_argument(
+        "--num-threads",
+        type=int,
+        default=1,
+        choices=[1],
+        help="Torch CPU threads. Fixed at 1.",
+    )
+    p.add_argument(
+        "--min-stationary-validation-cer-gain",
+        type=float,
+        default=0.10,
+        help="Median validation CER gain needed for a row-count recommendation. Default: 0.10.",
+    )
+    p.add_argument(
+        "--bootstrap-iterations",
+        type=int,
+        default=1000,
+        help="Paired holdout bootstrap samples per shift seed. Default: 1000.",
+    )
+    p.add_argument(
+        "--max-output-mb",
+        type=float,
+        default=4.0,
+        help="Hard cap for JSON/Markdown/CSV artifacts. Default: 4 MiB.",
+    )
+    p.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Replace existing study artifacts.",
+    )
+    p.set_defaults(func=_cmd_synthetic_calibration_curve)
+
+    p = sub.add_parser(
+        "eeg-bridge-gate",
+        help=(
+            "Select one complete task-compatible SpanishBCBL EEG bundle from local "
+            "metadata. Downloads no data and opens no signal."
+        ),
+    )
+    p.add_argument("--manifest", required=True, help="Sized SpanishBCBL manifest JSONL.")
+    p.add_argument("--out-dir", required=True, help="Output directory for gate artifacts.")
+    p.add_argument("--revision", required=True, help="Pinned 40-character dataset commit SHA.")
+    p.add_argument(
+        "--max-download-mb",
+        type=float,
+        default=128.0,
+        help="Maximum planned four-file EEG bundle size in MiB. Default: 128.",
+    )
+    p.add_argument(
+        "--max-output-mb",
+        type=float,
+        default=1.0,
+        help="Maximum gate artifact size in MiB. Default: 1.",
+    )
+    p.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Replace the gate's named files in an existing output directory.",
+    )
+    p.set_defaults(func=_cmd_eeg_bridge_gate)
+
+    p = sub.add_parser(
+        "demo",
+        help=(
+            "Launch the local artifact-backed evidence console or audit its startup. "
+            "Requires [demo]; never trains a model or fetches data."
+        ),
+    )
+    p.add_argument(
+        "--project-root",
+        default=".",
+        help="Repository root containing compact cache/report artifacts. Default: current directory.",
+    )
+    p.add_argument("--host", default="127.0.0.1", help="Local bind host. Default: 127.0.0.1.")
+    p.add_argument("--port", type=int, default=7860, help="Local port. Default: 7860.")
+    p.add_argument("--inbrowser", action="store_true", help="Open the local URL in a browser.")
+    p.add_argument(
+        "--audit-only",
+        action="store_true",
+        help="Load evidence and build the UI without starting a server.",
+    )
+    p.add_argument(
+        "--out-json",
+        default=None,
+        help="Optional audit JSON path; used only with --audit-only.",
+    )
+    p.set_defaults(func=_cmd_demo)
 
     p = sub.add_parser("manifest-from-paths", help="Build JSONL manifest from a newline path list.")
     p.add_argument("--paths", required=True, help="Text file containing one repo path per line.")
@@ -623,9 +2105,21 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--repo-id", required=True)
     p.add_argument("--repo-type", default="dataset")
     p.add_argument("--out", required=True)
+    p.add_argument(
+        "--revision",
+        default=None,
+        help="Optional branch, tag, or commit for metadata listing.",
+    )
+    p.add_argument(
+        "--with-sizes",
+        action="store_true",
+        help="Write JSONL with path and size_bytes and print the resolved immutable revision.",
+    )
     p.set_defaults(func=_cmd_list_hf_files)
 
-    p = sub.add_parser("make-synthetic-shard", help="Create a tiny synthetic NPZ shard for smoke tests.")
+    p = sub.add_parser(
+        "make-synthetic-shard", help="Create a tiny synthetic NPZ shard for smoke tests."
+    )
     p.add_argument("--out", required=True)
     p.add_argument("--samples", type=int, default=128)
     p.add_argument("--channels", type=int, default=8)
@@ -633,6 +2127,22 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--classes", type=int, default=8)
     p.add_argument("--seed", type=int, default=7)
     p.set_defaults(func=_cmd_make_synthetic_shard)
+
+    p = sub.add_parser(
+        "make-synthetic-sentence-cache",
+        help="Create variable-length continuous synthetic signals for CTC plumbing.",
+    )
+    p.add_argument("--out", required=True)
+    p.add_argument("--sentences", type=int, default=96)
+    p.add_argument("--channels", type=int, default=6)
+    p.add_argument("--letter-classes", type=int, default=4)
+    p.add_argument("--min-word-length", type=int, default=2)
+    p.add_argument("--max-word-length", type=int, default=4)
+    p.add_argument("--token-width", type=int, default=5)
+    p.add_argument("--gap-width", type=int, default=3)
+    p.add_argument("--sfreq", type=float, default=50.0)
+    p.add_argument("--seed", type=int, default=7)
+    p.set_defaults(func=_cmd_make_synthetic_sentence_cache)
 
     p = sub.add_parser("load-cache", help="Load and summarize a B2Q-mini NPZ cache.")
     p.add_argument("--cache", required=True, help="Path to a .npz cache.")
@@ -644,14 +2154,34 @@ def build_parser() -> argparse.ArgumentParser:
     p.set_defaults(func=_cmd_load_cache)
 
     p = sub.add_parser(
+        "inspect-sentence-cache",
+        help="Validate and summarize a B2Q continuous sentence-cache NPZ.",
+    )
+    p.add_argument("--cache", required=True)
+    p.add_argument("--metadata-out", default=None, help="Optional JSON metadata sidecar path.")
+    p.set_defaults(func=_cmd_inspect_sentence_cache)
+
+    p = sub.add_parser(
+        "inspect-representation-cache",
+        help="Decode, validate, and summarize a packed sentence-signal representation.",
+    )
+    p.add_argument("--cache", required=True)
+    p.add_argument("--metadata-out", default=None, help="Optional JSON metadata sidecar path.")
+    p.set_defaults(func=_cmd_inspect_representation_cache)
+
+    p = sub.add_parser(
         "extract-windows",
         help="Extract event-aligned windows from one FIF block and one MAT log. Requires [neuro].",
     )
     p.add_argument("--raw", required=True, help="Path to one downloaded .fif MEG block.")
     p.add_argument("--events", required=True, help="Path to one matching .mat behavioral/log file.")
     p.add_argument("--out", required=True, help="Output .npz cache path.")
-    p.add_argument("--tmin", type=float, required=True, help="Window start in seconds relative to event.")
-    p.add_argument("--tmax", type=float, required=True, help="Window end in seconds relative to event.")
+    p.add_argument(
+        "--tmin", type=float, required=True, help="Window start in seconds relative to event."
+    )
+    p.add_argument(
+        "--tmax", type=float, required=True, help="Window end in seconds relative to event."
+    )
     p.add_argument("--sfreq", type=float, required=True, help="Target sampling rate in Hz.")
     p.add_argument(
         "--picks",
@@ -670,14 +2200,495 @@ def build_parser() -> argparse.ArgumentParser:
         default=None,
         help="Optional cap using the first N channels after channel picking.",
     )
+    p.add_argument(
+        "--event-source",
+        default="mat",
+        choices=["mat", "stim-letter", "stim-key"],
+        help=(
+            "Use MAT-parsed events, uppercase letter triggers, or typed key triggers "
+            "from a raw stim channel. Default: mat."
+        ),
+    )
+    p.add_argument(
+        "--stim-channel",
+        default="STI101",
+        help="Stim channel for raw stim event sources. Default: STI101.",
+    )
     p.set_defaults(func=_cmd_extract_windows)
+
+    p = sub.add_parser(
+        "extract-eeg-windows",
+        help=(
+            "Stream key-aligned windows from one BrainVision EEG triplet and matching MAT "
+            "log. Requires [neuro]."
+        ),
+    )
+    p.add_argument("--raw", required=True, help="BrainVision .vhdr path.")
+    p.add_argument("--events", required=True, help="Matching SpanishBCBL MAT log.")
+    p.add_argument("--out", required=True, help="Output B2Q-mini NPZ cache path.")
+    p.add_argument("--out-json", default=None, help="Optional extraction summary JSON.")
+    p.add_argument("--sfreq", type=float, default=50.0, help="Output Hz. Default: 50.")
+    p.add_argument("--tmin", type=float, default=-0.2, help="Window start sec. Default: -0.2.")
+    p.add_argument("--tmax", type=float, default=0.3, help="Window end sec. Default: 0.3.")
+    p.add_argument("--max-events", type=int, default=None, help="Optional event cap.")
+    p.add_argument("--max-channels", type=int, default=None, help="Optional channel cap.")
+    p.add_argument(
+        "--max-alignment-residual-ms",
+        type=float,
+        default=50.0,
+        help="Fail when aligned clock residual exceeds this value. Default: 50 ms.",
+    )
+    p.add_argument(
+        "--max-output-mb",
+        type=float,
+        default=64.0,
+        help="Uncompressed float32 window cap in MiB. Default: 64.",
+    )
+    p.add_argument("--overwrite", action="store_true", help="Replace the output cache.")
+    p.set_defaults(func=_cmd_extract_eeg_windows)
+
+    p = sub.add_parser(
+        "extract-sentence-cache",
+        help="Extract continuous first-key-through-ENTER sentence signals. Requires [neuro].",
+    )
+    p.add_argument("--raw", required=True, help="One validated downloaded FIF block.")
+    p.add_argument("--events", required=True, help="Matching MAT behavioral log.")
+    p.add_argument("--out", required=True, help="Output sentence-cache NPZ path.")
+    p.add_argument("--sfreq", type=float, default=100.0, help="Target rate. Default: 100 Hz.")
+    p.add_argument("--pre-context", type=float, default=0.4, help="Seconds before first key.")
+    p.add_argument("--post-context", type=float, default=0.45, help="Seconds after ENTER.")
+    p.add_argument("--picks", default="meg", help="MNE channel pick. Default: meg.")
+    p.add_argument("--max-channels", type=int, default=16, help="Channel cap. Default: 16.")
+    p.add_argument("--stim-channel", default="STI101", help="Key trigger channel.")
+    p.add_argument("--l-freq", type=float, default=0.5, help="High-pass Hz. Default: 0.5.")
+    p.add_argument("--h-freq", type=float, default=45.0, help="Low-pass Hz. Default: 45.")
+    p.add_argument("--notch-freq", type=float, default=50.0, help="Notch Hz. Default: 50.")
+    p.add_argument("--clamp", type=float, default=5.0, help="Robust units clamp. Default: 5.")
+    p.add_argument("--no-robust-scale", action="store_true", help="Disable median/IQR scaling.")
+    p.add_argument(
+        "--scaler-fit-scope",
+        choices=["recording", "train"],
+        default="recording",
+        help=(
+            "Fit robust statistics on the complete recording or deterministic "
+            "train sentence rows. Default: recording for backward compatibility."
+        ),
+    )
+    p.add_argument(
+        "--split-text-normalization",
+        choices=["official-exact", "canonical-v1"],
+        default="official-exact",
+        help="Text grouping used by train-fit scaling. Default: official-exact.",
+    )
+    p.add_argument("--max-sentences", type=int, default=None, help="Optional leading-trial cap.")
+    p.add_argument(
+        "--summary-json",
+        default=None,
+        help="Optional machine-readable extraction summary path.",
+    )
+    p.set_defaults(func=_cmd_extract_sentence_cache)
+
+    p = sub.add_parser(
+        "apply-frozen-scaler",
+        help="Apply train-only scaler statistics to an independent unscaled sentence cache.",
+    )
+    p.add_argument(
+        "--source-cache",
+        required=True,
+        help="Independent sentence cache with robust scaling explicitly disabled.",
+    )
+    p.add_argument(
+        "--fit-cache",
+        required=True,
+        help="Sentence cache containing verified train-only robust scaler statistics.",
+    )
+    p.add_argument("--out", required=True, help="Output scaled sentence-cache NPZ path.")
+    p.add_argument(
+        "--summary-json",
+        default=None,
+        help="Optional machine-readable frozen-scaler summary path.",
+    )
+    p.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Replace an existing output cache.",
+    )
+    p.set_defaults(func=_cmd_apply_frozen_scaler)
+
+    p = sub.add_parser(
+        "sampling-rate-sweep",
+        help=(
+            "Compare isolated sentence-cache extractions across sampling rates. Requires [neuro]."
+        ),
+    )
+    p.add_argument("--raw", required=True, help="One validated downloaded FIF block.")
+    p.add_argument("--events", required=True, help="Matching MAT behavioral log.")
+    p.add_argument("--out-dir", required=True, help="Directory for caches and reports.")
+    p.add_argument(
+        "--rates",
+        type=float,
+        nargs="+",
+        default=[100.0, 50.0, 25.0],
+        help="Unique target rates. Default: 100 50 25.",
+    )
+    p.add_argument("--pre-context", type=float, default=0.4, help="Seconds before first key.")
+    p.add_argument("--post-context", type=float, default=0.45, help="Seconds after ENTER.")
+    p.add_argument("--picks", default="meg", help="MNE channel pick. Default: meg.")
+    p.add_argument("--max-channels", type=int, default=16, help="Channel cap. Default: 16.")
+    p.add_argument("--stim-channel", default="STI101", help="Key trigger channel.")
+    p.add_argument("--l-freq", type=float, default=0.5, help="High-pass Hz. Default: 0.5.")
+    p.add_argument("--h-freq", type=float, default=45.0, help="Low-pass Hz. Default: 45.")
+    p.add_argument("--notch-freq", type=float, default=50.0, help="Notch Hz. Default: 50.")
+    p.add_argument("--clamp", type=float, default=5.0, help="Robust units clamp. Default: 5.")
+    p.add_argument("--no-robust-scale", action="store_true", help="Disable median/IQR scaling.")
+    p.add_argument("--max-sentences", type=int, default=None, help="Optional leading-trial cap.")
+    p.add_argument("--out-json", default=None, help="Optional JSON report path.")
+    p.add_argument("--out-md", default=None, help="Optional Markdown report path.")
+    p.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Replace existing planned sweep artifacts.",
+    )
+    p.set_defaults(func=_cmd_sampling_rate_sweep)
+
+    p = sub.add_parser(
+        "channel-subset-sweep",
+        help=(
+            "Compare deterministic channel subsets from one geometry-aware sentence cache. "
+            "Requires [neuro]."
+        ),
+    )
+    p.add_argument("--cache", required=True, help="Geometry-aware base sentence-cache NPZ.")
+    p.add_argument("--out-dir", required=True, help="Directory for subset caches and reports.")
+    p.add_argument(
+        "--counts",
+        type=int,
+        nargs="+",
+        default=[76, 51, 25, 16, 8],
+        help="Unique subset sizes below the base count. Default: 76 51 25 16 8.",
+    )
+    p.add_argument(
+        "--strategies",
+        nargs="+",
+        choices=["spatial-fps", "variance", "random", "first"],
+        default=["spatial-fps", "variance", "random", "first"],
+        help="Nested selection strategies. Default: all four.",
+    )
+    p.add_argument("--seed", type=int, default=17, help="Random-control seed. Default: 17.")
+    p.add_argument(
+        "--max-output-mb",
+        type=float,
+        default=128.0,
+        help="Refuse projected subset artifacts above this cap. Default: 128 MiB.",
+    )
+    p.add_argument("--out-json", default=None, help="Optional JSON report path.")
+    p.add_argument("--out-md", default=None, help="Optional Markdown report path.")
+    p.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Replace existing planned subset artifacts.",
+    )
+    p.set_defaults(func=_cmd_channel_subset_sweep)
+
+    p = sub.add_parser(
+        "precision-storage-sweep",
+        help=(
+            "Compare bounded packed signal representations without training a decoder. "
+            "Requires NumPy."
+        ),
+    )
+    p.add_argument(
+        "--cache",
+        nargs="+",
+        required=True,
+        help="One or more validated sentence-cache NPZ inputs.",
+    )
+    p.add_argument("--out-dir", required=True, help="Directory for representations and reports.")
+    p.add_argument(
+        "--variants",
+        nargs="+",
+        choices=["float32", "float16", "bfloat16", "qint16", "qint8"],
+        default=["float32", "float16", "bfloat16", "qint16", "qint8"],
+        help="Unique representations. Default: all five.",
+    )
+    p.add_argument(
+        "--clip-abs",
+        type=float,
+        default=5.0,
+        help="Fixed symmetric integer range inherited from preprocessing. Default: 5.",
+    )
+    p.add_argument(
+        "--repetitions",
+        type=int,
+        default=3,
+        help="Warm load/decode timing repetitions. Default: 3.",
+    )
+    p.add_argument(
+        "--max-output-mb",
+        type=float,
+        default=96.0,
+        help="Refuse projected artifacts above this cap. Default: 96 MiB.",
+    )
+    p.add_argument(
+        "--allow-clipping",
+        action="store_true",
+        help="Allow and count source values outside the fixed integer range.",
+    )
+    p.add_argument("--out-json", default=None, help="Optional JSON report path.")
+    p.add_argument("--out-md", default=None, help="Optional Markdown report path.")
+    p.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Replace existing planned representation artifacts.",
+    )
+    p.set_defaults(func=_cmd_precision_storage_sweep)
+
+    p = sub.add_parser(
+        "lazy-backend-gate",
+        help=(
+            "Measure isolated NPZ full/partial access and decide whether a Zarr "
+            "comparison is justified."
+        ),
+    )
+    p.add_argument(
+        "--cache",
+        nargs="+",
+        required=True,
+        help="Standard or packed sentence-cache NPZ paths.",
+    )
+    p.add_argument("--out-dir", required=True, help="Directory for JSON/Markdown reports.")
+    p.add_argument(
+        "--row-counts",
+        type=int,
+        nargs="+",
+        default=[1, 8],
+        help="Unique leading-row access sizes including 1. Default: 1 8.",
+    )
+    p.add_argument(
+        "--repetitions",
+        type=int,
+        default=5,
+        help="Per-worker access repetitions. Default: 5.",
+    )
+    p.add_argument(
+        "--max-full-load-ms",
+        type=float,
+        default=250.0,
+        help="Median full-load revisit budget. Default: 250 ms.",
+    )
+    p.add_argument(
+        "--max-partial-load-ms",
+        type=float,
+        default=100.0,
+        help="Median partial-read revisit budget. Default: 100 ms.",
+    )
+    p.add_argument(
+        "--max-peak-rss-mb",
+        type=float,
+        default=512.0,
+        help="Per-worker peak-RSS revisit budget. Default: 512 MiB.",
+    )
+    p.add_argument(
+        "--revisit-cache-mb",
+        type=float,
+        default=128.0,
+        help="Per-cache compressed-size revisit threshold. Default: 128 MiB.",
+    )
+    p.add_argument("--out-json", default=None, help="Optional JSON report path.")
+    p.add_argument("--out-md", default=None, help="Optional Markdown report path.")
+    p.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Replace existing planned gate reports.",
+    )
+    p.set_defaults(func=_cmd_lazy_backend_gate)
+
+    p = sub.add_parser(
+        "split-protocol",
+        help=(
+            "Audit deterministic train/validation/test membership and preprocessing "
+            "fit scope without loading signal arrays."
+        ),
+    )
+    p.add_argument(
+        "--cache",
+        nargs="+",
+        required=True,
+        help="Standard or packed sentence-cache NPZ paths.",
+    )
+    p.add_argument("--out-dir", required=True, help="Directory for JSON/Markdown reports.")
+    p.add_argument(
+        "--split-type",
+        choices=["event", "sentence-text", "session", "subject"],
+        default="sentence-text",
+        help="Grouping unit assigned to partitions. Default: sentence-text.",
+    )
+    p.add_argument(
+        "--text-source",
+        choices=["reference", "target", "mat-response"],
+        default="reference",
+        help="Text field used for sentence-text groups. Default: reference.",
+    )
+    p.add_argument(
+        "--text-normalization",
+        choices=["canonical-v1", "official-exact"],
+        default="canonical-v1",
+        help=(
+            "Text grouping semantics: safer canonical grouping or exact official-v2 "
+            "strings. Default: canonical-v1."
+        ),
+    )
+    p.add_argument(
+        "--train-ratio",
+        type=float,
+        default=0.8,
+        help="Train partition ratio. Default: 0.8.",
+    )
+    p.add_argument(
+        "--val-ratio",
+        type=float,
+        default=0.1,
+        help="Validation partition ratio. Default: 0.1.",
+    )
+    p.add_argument(
+        "--test-ratio",
+        type=float,
+        default=0.1,
+        help="Test partition ratio. Default: 0.1.",
+    )
+    p.add_argument(
+        "--seed",
+        type=float,
+        default=0.0,
+        help="Float seed matching NeuralSet 0.2.2 behavior. Default: 0.0.",
+    )
+    p.add_argument("--out-json", default=None, help="Optional JSON report path.")
+    p.add_argument("--out-md", default=None, help="Optional Markdown report path.")
+    p.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Replace existing planned split reports.",
+    )
+    p.set_defaults(func=_cmd_split_protocol)
+
+    p = sub.add_parser(
+        "sentence-prior-baseline",
+        help=(
+            "Run a signal-free no-brain sentence prior on a strict-ready split "
+            "report. Requires NumPy but never loads signal arrays."
+        ),
+    )
+    p.add_argument("--cache", required=True, help="Validated sentence-cache NPZ path.")
+    p.add_argument(
+        "--split-report",
+        required=True,
+        help="Strict-ready Split Protocol v1 JSON bound to the cache.",
+    )
+    p.add_argument(
+        "--eval-partition",
+        choices=["val", "test"],
+        default="test",
+        help="Partition to evaluate. Default: test.",
+    )
+    p.add_argument(
+        "--strategy",
+        choices=["most-frequent", "frequency-sample", "uniform-random"],
+        default="most-frequent",
+        help="No-brain prediction strategy. Default: most-frequent.",
+    )
+    p.add_argument("--seed", type=int, default=7, help="Prediction seed. Default: 7.")
+    p.add_argument("--out-predictions", default=None, help="Optional predictions path.")
+    p.add_argument("--out-json", default=None, help="Optional JSON report path.")
+    p.add_argument("--out-md", default=None, help="Optional Markdown report path.")
+    p.add_argument("--run-name", default=None, help="Human-readable run name.")
+    p.add_argument(
+        "--max-examples",
+        type=int,
+        default=10,
+        help="Maximum report examples. Default: 10.",
+    )
+    p.set_defaults(func=_cmd_sentence_prior_baseline)
+
+    p = sub.add_parser(
+        "align-sequences",
+        help="Group typed key labels from a cache and align them to MAT target sequences. Requires [neuro].",
+    )
+    p.add_argument("--cache", required=True, help="Typed-key NPZ cache path.")
+    p.add_argument("--events", required=True, help="Matching .mat behavioral/log file.")
+    p.add_argument("--out-json", default=None, help="Optional sequence alignment JSON report path.")
+    p.add_argument(
+        "--out-md", default=None, help="Optional sequence alignment Markdown report path."
+    )
+    p.add_argument("--run-name", default=None, help="Human-readable run name.")
+    p.add_argument(
+        "--high-confidence-cer",
+        type=float,
+        default=0.15,
+        help="CER threshold for high-confidence target matches. Default: 0.15.",
+    )
+    p.add_argument(
+        "--moderate-confidence-cer",
+        type=float,
+        default=0.35,
+        help="CER threshold for moderate target matches. Default: 0.35.",
+    )
+    p.set_defaults(func=_cmd_align_sequences)
+
+    p = sub.add_parser(
+        "build-leaderboard",
+        help=(
+            "Build versioned report cards and cohort-local rankings from compact saved reports. "
+            "Does not load cache arrays or run models."
+        ),
+    )
+    p.add_argument("--spec", required=True, help="Versioned leaderboard spec JSON path.")
+    p.add_argument("--out-dir", required=True, help="Output directory for cards and tables.")
+    p.add_argument(
+        "--project-root",
+        default=".",
+        help="Root used to resolve bounded source-report paths. Default: current directory.",
+    )
+    p.add_argument(
+        "--max-cards",
+        type=int,
+        default=32,
+        help="Safety cap on report cards. Default: 32.",
+    )
+    p.add_argument(
+        "--max-output-mb",
+        type=float,
+        default=2.0,
+        help="Safety cap on all generated artifacts in MiB. Default: 2.",
+    )
+    p.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Replace only the requested output directory when it already exists.",
+    )
+    p.set_defaults(func=_cmd_build_leaderboard)
 
     p = sub.add_parser("select-tiny", help="Create a tiny safe selection from a manifest.")
     p.add_argument("--manifest", required=True)
     p.add_argument("--out", required=True)
     p.add_argument("--modality", default="MEG", choices=["MEG", "EEG", "meg", "eeg"])
-    p.add_argument("--subject", default=None, help="Optional subject ID like S1. Defaults to first detected subject.")
-    p.add_argument("--blocks", type=int, default=1, help="Number of raw blocks to select. Default: 1.")
+    p.add_argument(
+        "--subject",
+        default=None,
+        help="Optional subject ID like S1. Defaults to first detected subject.",
+    )
+    p.add_argument(
+        "--session",
+        default=None,
+        help="Optional inferred session ID such as 2. Requires session metadata.",
+    )
+    p.add_argument(
+        "--revision",
+        default=None,
+        help="Optional immutable Hub commit SHA recorded in the selection.",
+    )
+    p.add_argument(
+        "--blocks", type=int, default=1, help="Number of raw blocks to select. Default: 1."
+    )
     p.add_argument("--no-logs", action="store_true", help="Do not include behavioral logs.")
     p.add_argument(
         "--max-files",
@@ -693,13 +2704,21 @@ def build_parser() -> argparse.ArgumentParser:
     )
     p.set_defaults(func=_cmd_select_tiny)
 
-    p = sub.add_parser("download-selection", help="Dry-run or execute selective HF download from a selection JSON.")
+    p = sub.add_parser(
+        "download-selection", help="Dry-run or execute selective HF download from a selection JSON."
+    )
     p.add_argument("--selection", required=True)
     p.add_argument("--local-dir", required=True)
     mode = p.add_mutually_exclusive_group()
-    mode.add_argument("--execute", action="store_true", help="Actually download. Default is dry-run only.")
-    mode.add_argument("--dry-run", action="store_true", help="Explicitly keep dry-run mode. This is the default.")
-    p.add_argument("--max-files", type=int, default=None, help="Override the selection file-count safety cap.")
+    mode.add_argument(
+        "--execute", action="store_true", help="Actually download. Default is dry-run only."
+    )
+    mode.add_argument(
+        "--dry-run", action="store_true", help="Explicitly keep dry-run mode. This is the default."
+    )
+    p.add_argument(
+        "--max-files", type=int, default=None, help="Override the selection file-count safety cap."
+    )
     p.add_argument(
         "--max-total-gb",
         type=float,
@@ -710,6 +2729,12 @@ def build_parser() -> argparse.ArgumentParser:
         "--allow-unknown-size",
         action="store_true",
         help="Permit --execute when selected files are missing size metadata after reviewing the plan.",
+    )
+    p.add_argument(
+        "--max-workers",
+        type=int,
+        default=1,
+        help="Maximum concurrent Hub download workers. Default: 1.",
     )
     p.set_defaults(func=_cmd_download_selection)
 
