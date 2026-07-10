@@ -245,6 +245,35 @@ offline-versus-streaming equivalence. Causal MEG/EEG preprocessing, learned
 encoders, and adapter research remain separate future gates. Treat OPM-MEG as
 a hardware research partnership rather than a consumer-product assumption.
 
+## Loop 21 causal streaming decision
+
+The first post-roadmap gate now distinguishes five layers that are often
+collapsed in “real-time” claims:
+
+1. **Frame causality:** a token depends only on samples through its frame end.
+2. **Right context:** additional future samples explicitly required by the
+   producer; Loop 21 uses zero.
+3. **Transport scheduling:** when a complete frame is actually delivered to
+   the producer; fixed chunks can add delay even with a causal model.
+4. **Decoder emission:** when a stable character/word hypothesis appears; not
+   measured because no decoder ran.
+5. **End-to-end latency:** capture through UI, including preprocessing,
+   scheduling, model, decoding, endpointing, and rendering; not measured.
+
+On 28.7 seconds of synthetic signals, five chunk schedules emit the same 553
+canonical frames bitwise with exact timestamps and at most 300 bytes of mutable
+state. Aligned chunks add zero scheduling delay, jittered chunks up to 140 ms,
+and whole-item delivery up to 610 ms. The public Brain2Qwerty v2 model remains
+noncausal whole-sentence, while Emformer and FastEmit respectively motivate
+bounded/right-context encoder contracts and separate symbol-emission metrics.
+Those speech results structure the audit; they do not prove brain-decoding
+quality.
+
+The next legitimate step is a tiny learned causal encoder on synthetic
+train/validation/test partitions, not direct deployment of the v2 architecture
+or a real-time label. See `docs/LOOP_21_CAUSAL_CHUNK_REPLAY.md` and
+`docs/POST_20_ROADMAP.md`.
+
 ## Loop 19 EEG ecosystem decision
 
 MOABB remains useful for standardized EEG benchmark paradigms, but its stock

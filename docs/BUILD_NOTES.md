@@ -996,3 +996,73 @@ Closeout verification:
   zero matches; tracked and deliverable SHA-256 are both
   `dce9e92f02e5937d5e822f9facd6f659d2f840182c05be6e1dd912c79fa3bd59`
 - final Loop 20 cache artifacts: 204 KiB; about 17 GiB free
+
+## Post-roadmap Loop 21 - causal NeuroToken chunk/replay gate
+
+Completed on 2026-07-10 using the fixed 59,357-byte Loop 20 synthetic source,
+without creating another signal cache or opening target arrays, real neural
+data, observed holdouts, models, training, decoders, or network services.
+
+Implemented:
+
+- reusable fixed-weight causal mock producer plus one independent bounded
+  stream state per item
+- global frame sample/timestamp metadata, availability samples, and
+  scheduler-delay accounting on every emitted token
+- explicit zero-right-context and `drop-incomplete` flush contract
+- fixed single-sample, stride-aligned, kernel-then-stride, jittered, and
+  whole-item replay schedules
+- canonical one-frame arithmetic for bitwise schedule identity, with declared
+  `1e-6` compatibility against Loop 20's frozen batched arithmetic
+- signal-only selective NPZ access and tests that track every opened member
+- `neurodecode causal-replay-gate` with source/item/chunk/token/push/working/
+  state/runtime/RSS/report caps and collision refusal
+- JSON/Markdown reports with frame, state, latency, access, resource, source,
+  research, warning, and claim-boundary records
+
+Observed:
+
+```text
+source: 48 items / 5 channels / 2,870 valid samples / 28.7 sec
+frames / schedules: 553 / 5 of 5 passed
+right context / first frame: 0 samples / 160 ms
+stream schedule bits: invariant
+canonical hash: 78dc8b5298064216caa854c884a69834c0959566d9ede903d44ae1cd28562389
+max Loop 20 difference: 9.5367431640625e-7 under 1e-6 tolerance
+max scheduler delay: aligned 0 ms / jittered 140 ms / whole-item 610 ms
+fixed weights / mutable state: 10,240 / 300 bytes
+bounded working core: 195,520 bytes
+total pushes / runtime / peak RSS: 4,652 / 0.135024 sec / 46,301,184 bytes
+JSON / Markdown / total artifacts: 12,734 / 1,792 / 14,526 bytes
+target/raw/real/model/training/decoder/network: all zero
+independent stable-field replay: exact
+free disk after run: about 15 GiB
+```
+
+Interpretation: causal frame production is now a tested local interface, but
+there is still no learned neural representation, character decoder, partial
+hypothesis, endpoint, or end-to-end latency measurement. A whole-item schedule
+has the best compute RTF and worst transport latency, confirming that throughput
+cannot stand in for responsiveness.
+
+Next gate:
+
+- Loop 22: one tiny optional-Torch causal encoder on synthetic train rows only
+- validation-only configuration/stopping and one frozen synthetic test pass
+- mandatory no-signal comparator plus parameter/state/RSS/RTF/artifact caps
+- no CTC prefix decoder, language model, real cache, or observed holdout yet
+
+Closeout verification:
+
+- full unittest discovery: 199 tests passed, 3 skipped, 7.831 sec; external
+  maximum RSS 475,774,976 bytes under one-thread numeric caps
+- full pytest: 196 passed, 3 skipped, 25 subtests passed, 7.77 sec; external
+  maximum RSS 501,366,784 bytes under one-thread numeric caps
+- full Ruff check, compileall, root CLI help, Loop 21 command help, and
+  `git diff --check`: passed
+- focused Loop 20/21 producer, replay, and CLI tests: 12 passed
+- independent stable-field artifact replay: exact; all five schedules passed
+- all seven workbook sheets rendered; formula-error scan found zero matches;
+  tracked and deliverable SHA-256 are both
+  `bd7ba4895e3afaf54b279ff240cf3377d49693dfdaeb11527c7ef7600874836c`
+- final Loop 21 gate artifacts: 14,526 bytes; about 15 GiB free

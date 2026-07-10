@@ -15,10 +15,14 @@
 > no-signal prior. MOABB was not installed, no full EEG subtree was downloaded,
 > and EEG/MEG remain separate cohorts. Loop 20 adds a 76,646-byte synthetic
 > continuous NeuroTokenCache v0 with exact payload replay, but no learned
-> representation, decoder, or real-data result. There is no unseen-person,
+> representation, decoder, or real-data result. Post-roadmap Loop 21 now proves
+> a synthetic causal frame producer across five transport schedules with zero
+> right context, exact frame/timestamp identity, bitwise schedule-invariant
+> output, and 300-byte mutable state. It runs no decoder, so text emission and
+> end-to-end latency remain unmeasured. There is no unseen-person,
 > useful EEG, integer-only inference, real-time, portable-hardware,
 > arbitrary-thought, or clinical claim. See
-> `docs/LOOP_20_NEUROTOKEN_CACHE_V0.md`.
+> `docs/LOOP_21_CAUSAL_CHUNK_REPLAY.md`.
 
 ## State of the repo
 
@@ -68,6 +72,11 @@ This repo is a starter scaffold with working pure-Python components:
   and explicit asynchronous/causal/latency distinctions
 - deterministic target-free synthetic embedding producer with item/token/byte
   caps, collision refusal, create/inspect CLI, and exact payload replay
+- bounded causal mock frame stream with zero look-ahead, explicit
+  drop-incomplete flush, global sample timestamps, and cap refusal
+- five-schedule causal replay gate with bitwise stream invariance, declared
+  Loop 20 floating compatibility tolerance, scheduling-delay/compute-RTF
+  separation, selective signal-only NPZ access, and no decoder
 - JSON/Markdown metrics report command
 - CLI smoke commands
 - unit tests
@@ -80,12 +89,12 @@ negative within-session event comparison. None is a decoder success. Do not
 turn these results, a variance ranking, or a geometry proxy into unseen-person
 or population generalization.
 
-Current verification on 2026-07-10: 191 unittest tests passed with 3 skipped;
-pytest reported 188 passed, 3 skipped, and 21 subtests passed. Full Ruff lint,
+Current verification on 2026-07-10: 199 unittest tests passed with 3 skipped;
+pytest reported 196 passed, 3 skipped, and 25 subtests passed. Full Ruff lint,
 compileall, CLI help, artifact-contract checks, workbook formulas and all-sheet
 visual checks, and `git diff --check` passed. The tracked and delivered workbook
 hashes match at
-`dce9e92f02e5937d5e822f9facd6f659d2f840182c05be6e1dd912c79fa3bd59`.
+`bd7ba4895e3afaf54b279ff240cf3377d49693dfdaeb11527c7ef7600874836c`.
 A repository-wide formatter check was not applied as unrelated mechanical
 churn.
 
@@ -101,20 +110,21 @@ This is not primarily a model repo. It is a **research loop repo**.
 
 ## Current next 3 loops
 
-1. **Causal chunk/replay contract.** On synthetic streams, define chunk
-   boundaries, bounded state, right context, flush behavior, offline-versus-
-   streaming equivalence, and measured producer latency before adding a causal
-   decoder.
-2. **Learned local encoder gate.** Only after the streaming contract passes,
-   evaluate whether a small train-only encoder can write NeuroTokenCache v0
-   under explicit CPU/RAM/storage budgets and no observed-holdout tuning.
-3. **Adapter and future real-holdout preregistration.** Compare covariance and
-   rolling-statistic mechanisms on synthetic validation, then preregister a new
-   real cohort before any one-time evaluation. Keep the five source test rows
-   and 63 consumed session-2 rows frozen.
+1. **Loop 22 - tiny learned causal encoder.** Train one optional-Torch model on
+   synthetic train rows only. Preserve Loop 21's exact state/chunk contract,
+   compare against the no-signal prior, select on validation, and open the
+   frozen synthetic test only once under strict parameter/CPU/RAM/byte caps.
+2. **Loop 23 - streaming CTC prefix decoder.** Only after Loop 22 passes, add
+   incremental greedy/prefix state and measure first/stable/final character
+   emission plus hypothesis revisions. Keep the language model absent first.
+3. **Loop 24 - local precision/runtime gate.** Compare fixed float and dynamic
+   integer candidates on the frozen synthetic model, separating storage,
+   actual execution, state, RSS, RTF, and energy proxy before any real-cache
+   conversion.
 
-Loop 20 evidence and exact next gate:
-`docs/LOOP_20_NEUROTOKEN_CACHE_V0.md`.
+Loop 21 evidence and exact next gate:
+`docs/LOOP_21_CAUSAL_CHUNK_REPLAY.md`. The post-20 sequence is in
+`docs/POST_20_ROADMAP.md`.
 
 ## Historical original PR plan
 

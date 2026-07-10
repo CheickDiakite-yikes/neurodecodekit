@@ -626,6 +626,31 @@ replay and zero model, training, real-data, or holdout reads. These are mock
 continuous embeddings, not learned neurotokens, a decoder score, or a measured
 streaming system. See `docs/LOOP_20_NEUROTOKEN_CACHE_V0.md`.
 
+Loop 21 adds the first actual incremental producer contract. One fixed
+target-free projector consumes `[channels,new_samples]` chunks, emits only
+complete causal frames, keeps fewer than one kernel of overlap, and flushes
+without inventing a padded token. The audit runs single-sample,
+stride-aligned, kernel-then-stride, jittered, and whole-item schedules:
+
+```bash
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+VECLIB_MAXIMUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+neurodecode causal-replay-gate \
+  --source-cache cache/loop20_neurotoken/source_sentences.npz \
+  --out-json cache/loop21_causal_replay/gate.json \
+  --out-md cache/loop21_causal_replay/gate.md \
+  --max-source-mb 1 --max-state-kib 1 --max-working-mb 4
+```
+
+All five schedules reproduce the same 553-frame canonical payload bitwise with
+zero right context and at most 300 bytes of mutable state. The established
+Loop 20 batched arithmetic differs by at most `9.536743e-7`, inside the
+declared `1e-6` compatibility tolerance, while timestamps and frame indices
+are exact. Stride-aligned chunks add no scheduling delay; jittered chunks add
+up to 140 ms and whole-item delivery up to 610 ms. No decoder ran, so text
+emission and end-to-end latency remain unmeasured. See
+`docs/LOOP_21_CAUSAL_CHUNK_REPLAY.md` and `docs/POST_20_ROADMAP.md`.
+
 Loop 5 closeout checks:
 
 ```bash
@@ -676,6 +701,10 @@ Current limitations:
   quality. Its Loop 20 vectors are deterministic random projections from
   synthetic signals; producer causality and 160-ms frame availability do not
   establish downstream-decoder causality or end-to-end latency.
+- Loop 21 proves bounded causal frame production only. Its compute RTF excludes
+  sensor capture, preprocessing, learned encoding, text decoding, hypothesis
+  stabilization, rendering, and device scheduling; it is not an end-to-end
+  real-time benchmark.
 - The local demo displays synthetic example text and aggregate-only real
   metrics. It is an evidence console, not a live real-MEG decoder; predictive
   confidence remains unavailable.

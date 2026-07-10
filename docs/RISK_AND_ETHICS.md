@@ -22,6 +22,13 @@ NeuroDecodeKit is a research/developer tool for making non-invasive neural decod
   160-ms frame-availability time into end-to-end latency, would overstate the
   result. Producer causality, downstream-decoder causality, and measured device
   latency must remain separate fields.
+- A causal frame producer is not a causal text decoder. Chunk delivery can add
+  delay even with zero model look-ahead, CTC/LM emissions can lag available
+  frames, and capture/preprocessing/rendering add stages not measured by a
+  compute benchmark. Report intrinsic frame availability, right context,
+  scheduler delay, compute RTF, symbol stability, and end-to-end latency as
+  separate quantities. Loop 21 measures only the first four producer/transport
+  quantities and runs no decoder.
 - The public studies record people physically typing memorized or prompted
   sentences. They do not demonstrate arbitrary thought decoding.
 - Wearable OPM-MEG removes cryogenic sensor cooling, but current systems still

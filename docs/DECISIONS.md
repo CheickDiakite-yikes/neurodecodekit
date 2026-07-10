@@ -597,3 +597,40 @@ or a real-data score.
 Evidence: `docs/LOOP_20_NEUROTOKEN_CACHE_V0.md`,
 `cache/loop20_neurotoken/neurotokens_v0.metadata.json`, and
 `cache/loop20_neurotoken/neurotokens_v0.summary.json`.
+
+## 0031 - Separate causal frame production from transport and text latency
+
+Decision: close post-roadmap Loop 21 only after one target-free streaming
+producer passes five registered synthetic chunk schedules with bounded mutable
+state, zero right context, explicit drop-incomplete flush, exact frame/timing
+identity, and bitwise schedule-invariant output. Keep decoder causality, symbol
+emission, endpointing, capture, rendering, and end-to-end latency unavailable.
+
+Why: Brain2Qwerty v2 removes keypress-timing dependence but its public encoder
+remains a whole-sentence noncausal Conformer, and its paper identifies fully
+low-latency operation as future work. Streaming-ASR references likewise
+separate bounded encoder memory/right context from symbol emission delay. The
+Loop 21 schedules demonstrate the practical distinction: stride-aligned chunks
+add zero scheduler delay, jittered chunks add up to 140 ms, and whole-item
+delivery adds up to 610 ms despite having the lowest compute RTF.
+
+Floating-point boundary: canonical one-frame streaming is bitwise identical
+across all schedules. The already-frozen Loop 20 batched matrix multiplication
+differs by at most `9.5367431640625e-7`, so compatibility is declared at
+absolute tolerance `1e-6` instead of silently changing the prior artifact.
+Frame indices and timestamps remain bitwise exact.
+
+Resource and access boundary: 28.7 seconds of synthetic source yields 553
+frames across 4,652 pushes in 0.135024 seconds at 46,301,184-byte peak RSS.
+Fixed weights use 10,240 bytes, bounded working core arrays use 195,520 bytes,
+and mutable state peaks at exactly 300 bytes.
+Only signal/timing/metadata NPZ members are opened. Target arrays, raw/real
+data, models, training, decoders, and network access remain at zero.
+
+Next gate: train one tiny causal encoder on synthetic train rows only, select
+on validation, compare with a no-signal prior, and open one frozen synthetic
+test pass under strict parameter/state/CPU/RSS/artifact caps. Do not begin CTC
+prefix decoding or real-cache conversion first.
+
+Evidence: `docs/LOOP_21_CAUSAL_CHUNK_REPLAY.md`,
+`docs/POST_20_ROADMAP.md`, and `cache/loop21_causal_replay/gate.json`.

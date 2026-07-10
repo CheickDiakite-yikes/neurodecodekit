@@ -543,11 +543,12 @@ def project_mock_temporal_embeddings(
             f"Projected core arrays need {projected_core_bytes} bytes, exceeding cap "
             f"{max_output_bytes}."
         )
-    rng = np.random.Generator(np.random.PCG64(int(seed)))
-    weights = rng.standard_normal(
-        size=(int(x.shape[1]) * kernel_size, embedding_dim)
-    ).astype("float32")
-    weights /= math.sqrt(int(x.shape[1]) * kernel_size)
+    weights = make_mock_projection_weights(
+        n_channels=int(x.shape[1]),
+        kernel_size=kernel_size,
+        embedding_dim=embedding_dim,
+        seed=seed,
+    )
     tokens = np.zeros((x.shape[0], max_tokens, embedding_dim), dtype=dtype)
     mask = np.zeros((x.shape[0], max_tokens), dtype="bool")
     token_start = np.full((x.shape[0], max_tokens), -1.0, dtype="float64")
@@ -576,6 +577,30 @@ def project_mock_temporal_embeddings(
         "weights_sha256": hashlib.sha256(weights.tobytes(order="C")).hexdigest(),
         "projected_core_bytes": projected_core_bytes,
     }
+
+
+def make_mock_projection_weights(
+    *,
+    n_channels: int,
+    kernel_size: int,
+    embedding_dim: int,
+    seed: int,
+):
+    """Build the fixed target-free weights shared by offline and stream paths."""
+
+    if n_channels < 1 or n_channels > 4096:
+        raise ValueError("n_channels must be between 1 and 4096")
+    if kernel_size < 1 or kernel_size > 65536:
+        raise ValueError("kernel_size must be between 1 and 65536")
+    if embedding_dim < 1 or embedding_dim > 4096:
+        raise ValueError("embedding_dim must be between 1 and 4096")
+    np = _require_numpy()
+    rng = np.random.Generator(np.random.PCG64(int(seed)))
+    weights = rng.standard_normal(
+        size=(n_channels * kernel_size, embedding_dim)
+    ).astype("float32")
+    weights /= math.sqrt(n_channels * kernel_size)
+    return weights
 
 
 def _validate_arrays(arrays: Mapping[str, Any]) -> None:

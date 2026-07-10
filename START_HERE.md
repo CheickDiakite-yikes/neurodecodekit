@@ -48,5 +48,10 @@ not useful EEG decoding or a portable-hardware claim. Loop 20 adds a
 masks, modality, geometry availability, strict split/source hashes, and
 explicit causality/resource boundaries. The deterministic target-free payload
 replays exactly, but it is not learned, not a decoding result, and not an
-end-to-end streaming claim. Continue with a synthetic causal chunk/replay gate.
-See `docs/LOOP_20_NEUROTOKEN_CACHE_V0.md`.
+end-to-end streaming claim. Loop 21 then passes a five-schedule synthetic
+causal replay gate: zero right context, exact frame/timestamp identity, bitwise
+stream-schedule identity, 300-byte mutable state, and no target/model/decoder/
+real-data access. Transport delay still ranges from 0 to 610 ms depending on
+chunking, and end-to-end text latency remains unmeasured. Continue with Loop
+22's tiny learned causal encoder gate on synthetic train rows only. See
+`docs/LOOP_21_CAUSAL_CHUNK_REPLAY.md` and `docs/POST_20_ROADMAP.md`.

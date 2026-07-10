@@ -115,6 +115,13 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   training, real-data, or holdout reads. Its payload replays exactly; it is not
   a learned representation or decoding result. See
   `docs/LOOP_20_NEUROTOKEN_CACHE_V0.md`.
+- Post-roadmap Loop 21: Done as a synthetic causal chunk/replay gate. Five
+  registered schedules preserve one canonical 553-frame payload bitwise,
+  exact frame indices/timestamps, zero right context, and a 300-byte mutable
+  state bound. Scheduling delay ranges from 0 to 610 ms; no decoder or
+  end-to-end latency was measured. Continue in
+  `docs/POST_20_ROADMAP.md` and see
+  `docs/LOOP_21_CAUSAL_CHUNK_REPLAY.md`.
 - Current proof boundary: two real S21 MEG sessions are alignment, sentence-cache,
   rate-resource, channel-proxy, representation-fidelity, and current NPZ-access
   verified at the applicable stages. Sentence-text membership and robust
@@ -124,11 +131,11 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   advantage, unseen-person performance, retained-accuracy,
   optimal-sensor/precision, integer-only inference, OPM-equivalence, or
   low-latency streaming claim.
-- Next action: open the post-roadmap causal chunk/replay gate on synthetic
-  streams. Specify chunk boundaries, state, right context, offline-versus-
-  streaming equivalence, and measured producer latency before implementing a
-  causal decoder. Keep observed MEG/EEG results frozen; learned encoders,
-  real-cache conversion, and adapter research remain separate gates.
+- Next action: Loop 22 may train one tiny causal encoder on synthetic train
+  rows only. Require the Loop 21 streaming contract, a no-signal comparator,
+  validation-only selection, one frozen synthetic test pass, and explicit
+  parameter/state/runtime/RSS/artifact caps. Keep all observed MEG/EEG results
+  frozen; real-cache conversion and decoder work remain later gates.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |

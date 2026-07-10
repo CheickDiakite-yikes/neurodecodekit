@@ -25,19 +25,22 @@ Do not optimize for impressiveness before reproducibility. A boring baseline tha
 ## Immediate next task
 
 The first 20-loop roadmap is complete except for the deliberately parked Loop
-13 backend. Next, define a synthetic causal chunk/replay contract over
-`NeuroTokenCache v0` before adding a learned encoder or causal decoder:
+13 backend, and post-roadmap Loop 21 has validated the synthetic causal
+chunk/replay contract. Next, run Loop 22's tiny learned causal encoder gate:
 
 ```bash
-neurodecode inspect-neurotoken-cache \
-  --cache cache/loop20_neurotoken/neurotokens_v0.npz
+neurodecode causal-replay-gate \
+  --source-cache cache/loop20_neurotoken/source_sentences.npz \
+  --out-json cache/loop21_causal_replay/gate.json
 ```
 
-Specify chunk boundaries, bounded state, right context, flush behavior,
-offline-versus-streaming equivalence, and measured producer latency using only
-synthetic fixtures. Keep both observed S21 MEG holdouts and the S7 EEG result
-frozen. Any future real-data acquisition remains dry-run by default and
-requires explicit byte caps plus `--execute`.
+Use optional Torch only inside the learned path. Fit one small causal model on
+synthetic train rows, choose stopping/configuration on validation, compare it
+to a no-signal prior, and open a frozen synthetic test once. Preserve Loop 21's
+chunk/state/timestamp contract and strict parameter/runtime/RSS/artifact caps.
+Keep both observed S21 MEG holdouts and the S7 EEG result frozen. Any future
+real-data acquisition remains dry-run by default and requires explicit byte
+caps plus `--execute`.
 
 ## Acceptance criteria for next PR
 
@@ -45,10 +48,12 @@ requires explicit byte caps plus `--execute`.
 - CLI has useful `--help` text.
 - New numerical or model dependencies remain optional.
 - No full-dataset download can happen accidentally.
-- Streaming tests cover multiple chunk boundaries and final partial chunks.
+- Learned offline and streaming outputs cover multiple chunk boundaries and
+  final partial chunks.
 - Reports separate producer causality, decoder causality, right context, and
   measured end-to-end latency.
 - Runtime, peak memory, state bytes, and artifact bytes stay under explicit caps.
+- Training/selection/test partitions and the no-signal comparator are explicit.
 - Docs explain exactly what was verified and what remains synthetic or untested.
 
 ## Style

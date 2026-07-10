@@ -868,6 +868,59 @@ decision: interface validated; representation and decoding value untested
 Full method and interpretation:
 `docs/LOOP_20_NEUROTOKEN_CACHE_V0.md`.
 
+## Experiment 19 - causal NeuroToken chunk/replay gate
+
+Purpose: prove a bounded zero-lookahead frame-producer contract across
+transport boundaries before training a causal encoder or implementing a text
+decoder.
+
+```bash
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+VECLIB_MAXIMUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+neurodecode causal-replay-gate \
+  --source-cache cache/loop20_neurotoken/source_sentences.npz \
+  --out-json cache/loop21_causal_replay/gate.json \
+  --out-md cache/loop21_causal_replay/gate.md \
+  --embedding-dim 32 --kernel-size 16 --stride 4 --seed 23 \
+  --max-items 64 --max-source-mb 1 \
+  --max-samples-per-item 128 --max-chunk-samples 128 \
+  --max-tokens-per-item 128 --max-total-pushes 10000 \
+  --max-working-mb 4 --max-state-kib 1 \
+  --max-runtime-sec 5 --max-peak-rss-mb 128 --max-report-mb 1
+```
+
+Acceptance:
+
+- five registered single-sample/aligned/jittered/whole-item schedules
+- zero future context, global sample timestamps, and drop-incomplete flush
+- mutable overlap state smaller than one kernel and under explicit byte cap
+- bitwise stream-schedule output identity and exact frame/timestamp identity
+- explicit tolerance against the established batched Loop 20 arithmetic
+- algorithmic frame availability, scheduler delay, compute time, and RTF
+  reported separately
+- signal-only selective NPZ access; no targets, real data, model, decoder,
+  training, or network access
+- no text-emission, end-to-end-latency, hardware, or clinical claim
+
+Observed:
+
+```text
+schedules passed: 5 / 5
+source duration / samples / frames: 28.7 sec / 2,870 / 553
+right context / mutable state: 0 samples / 300 bytes
+canonical stream hash: 78dc8b5298064216caa854c884a69834c0959566d9ede903d44ae1cd28562389
+max Loop 20 offline difference / tolerance: 9.536743e-7 / 1e-6
+aligned / jittered / whole-item max scheduling delay: 0 / 140 / 610 ms
+internal runtime / peak RSS: 0.135024 sec / 46,301,184 bytes
+fixed weights / bounded working core: 10,240 / 195,520 bytes
+JSON / Markdown artifacts: 12,734 / 1,792 bytes
+target / model / training / decoder / real reads: 0 / 0 / 0 / 0 / 0
+decision: causal frame replay passed; learned encoder gate next
+```
+
+Full method and interpretation:
+`docs/LOOP_21_CAUSAL_CHUNK_REPLAY.md`.
+
 ## Anti-goals
 
 Do not do these until the earlier experiments pass:

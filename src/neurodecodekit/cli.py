@@ -792,6 +792,37 @@ def _cmd_inspect_neurotoken_cache(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_causal_replay_gate(args: argparse.Namespace) -> int:
+    from neurodecodekit.experiments.causal_replay_gate import run_causal_replay_gate
+
+    report = run_causal_replay_gate(
+        source_cache_path=args.source_cache,
+        out_json_path=args.out_json,
+        out_markdown_path=args.out_md,
+        source_sampling_rate_hz=args.source_sfreq,
+        embedding_dim=args.embedding_dim,
+        kernel_size=args.kernel_size,
+        stride=args.stride,
+        seed=args.seed,
+        token_dtype=args.token_dtype,
+        compatibility_atol=args.compatibility_atol,
+        max_items=args.max_items,
+        max_source_mb=args.max_source_mb,
+        max_samples_per_item=args.max_samples_per_item,
+        max_chunk_samples=args.max_chunk_samples,
+        max_tokens_per_item=args.max_tokens_per_item,
+        max_total_pushes=args.max_total_pushes,
+        max_working_mb=args.max_working_mb,
+        max_state_kib=args.max_state_kib,
+        max_runtime_sec=args.max_runtime_sec,
+        max_peak_rss_mb=args.max_peak_rss_mb,
+        max_report_mb=args.max_report_mb,
+        overwrite=args.overwrite,
+    )
+    print(json.dumps(report, indent=2, sort_keys=True))
+    return 0 if report["gate_passed"] else 1
+
+
 def _cmd_extract_sentence_cache(args: argparse.Namespace) -> int:
     from neurodecodekit.preprocess.sentence_extraction import extract_fif_mat_sentence_cache
 
@@ -2278,6 +2309,102 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--cache", required=True)
     p.add_argument("--metadata-out", default=None, help="Optional JSON metadata sidecar path.")
     p.set_defaults(func=_cmd_inspect_neurotoken_cache)
+
+    p = sub.add_parser(
+        "causal-replay-gate",
+        help=(
+            "Audit bounded synthetic NeuroToken replay across registered chunk "
+            "schedules without a decoder."
+        ),
+    )
+    p.add_argument("--source-cache", required=True, help="Synthetic sentence-cache NPZ path.")
+    p.add_argument("--out-json", required=True, help="Machine-readable gate report path.")
+    p.add_argument("--out-md", default=None, help="Optional Markdown gate report path.")
+    p.add_argument(
+        "--source-sfreq",
+        type=float,
+        default=None,
+        help="Sampling-rate override when source metadata does not provide it.",
+    )
+    p.add_argument("--embedding-dim", type=int, default=32, help="Embedding width. Default: 32.")
+    p.add_argument("--kernel-size", type=int, default=16, help="Frame width. Default: 16 samples.")
+    p.add_argument("--stride", type=int, default=4, help="Frame stride. Default: 4 samples.")
+    p.add_argument("--seed", type=int, default=23, help="Projection seed. Default: 23.")
+    p.add_argument(
+        "--token-dtype",
+        choices=["float32", "float16"],
+        default="float32",
+        help="Streaming token dtype. Default: float32.",
+    )
+    p.add_argument(
+        "--compatibility-atol",
+        type=float,
+        default=1e-6,
+        help="Absolute tolerance against Loop 20 batched arithmetic. Default: 1e-6.",
+    )
+    p.add_argument("--max-items", type=int, default=64, help="Source-item cap. Default: 64.")
+    p.add_argument(
+        "--max-source-mb",
+        type=float,
+        default=4.0,
+        help="Source-cache cap in MiB. Default: 4.",
+    )
+    p.add_argument(
+        "--max-samples-per-item",
+        type=int,
+        default=128,
+        help="Per-item source-sample cap. Default: 128.",
+    )
+    p.add_argument(
+        "--max-chunk-samples",
+        type=int,
+        default=128,
+        help="Transport-chunk cap. Default: 128 samples.",
+    )
+    p.add_argument(
+        "--max-tokens-per-item",
+        type=int,
+        default=128,
+        help="Per-item output-token cap. Default: 128.",
+    )
+    p.add_argument(
+        "--max-total-pushes",
+        type=int,
+        default=100_000,
+        help="Complete audit push-call cap. Default: 100000.",
+    )
+    p.add_argument(
+        "--max-working-mb",
+        type=float,
+        default=16.0,
+        help="Signal/fixed/output working-array cap in MiB. Default: 16.",
+    )
+    p.add_argument(
+        "--max-state-kib",
+        type=float,
+        default=8.0,
+        help="Per-stream mutable-state cap in KiB. Default: 8.",
+    )
+    p.add_argument(
+        "--max-runtime-sec",
+        type=float,
+        default=10.0,
+        help="Complete audit runtime gate. Default: 10 seconds.",
+    )
+    p.add_argument(
+        "--max-peak-rss-mb",
+        type=float,
+        default=256.0,
+        help="Process peak-RSS gate in MiB. Default: 256.",
+    )
+    p.add_argument(
+        "--max-report-mb",
+        type=float,
+        default=1.0,
+        help="Per-report output cap in MiB. Default: 1.",
+    )
+    p.add_argument("--overwrite", action="store_true", help="Replace planned reports.")
+    p.set_defaults(func=_cmd_causal_replay_gate)
 
     p = sub.add_parser(
         "extract-windows",

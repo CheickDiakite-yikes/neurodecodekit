@@ -193,3 +193,7 @@ synthetic streams: fixed chunk boundaries, exact offline-versus-streaming
 equivalence where promised, declared right context, bounded state, and measured
 producer latency. A learned encoder, real-cache conversion, or decoder score
 should remain separate until that interface gate passes.
+
+That gate subsequently passed in post-roadmap Loop 21 with five schedules,
+zero right context, 300-byte mutable state, and explicit transport-delay versus
+compute accounting. See `docs/LOOP_21_CAUSAL_CHUNK_REPLAY.md`.
