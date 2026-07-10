@@ -20,11 +20,13 @@
 > and the once-opened seed-2353 test from 7/16 to 16/16 exact, with zero CER,
 > nine test corrections, no regressions, and all replay/resource/access gates
 > passing. Seed 2353 is consumed. Loop 24 is unblocked for preregistration only.
-> In parallel, RW0 now closes a primary-source Real-World Practice research
-> gate with eight dataset records, 13 device records, a local BYO Neurodata
-> contract, and one exact S20 EEG dry-run packet. No download is authorized;
-> RW1 level-0 metadata intake on synthetic fixtures is the only approved
-> implementation.
+> In parallel, RW0 closes a primary-source Real-World Practice research gate
+> with eight dataset records, 13 device records, a local BYO Neurodata
+> contract, and one exact S20 EEG dry-run packet. RW1 now closes a
+> dependency-free level-0 metadata gate for BrainVision, EDF/EDF+, BDF,
+> EEGLAB, FIF, and BIDS synthetic fixtures. Its 532-byte roundtrip writes
+> 11,545 bytes with zero binary/raw/cache/target/model/training/network reads.
+> No download or signal read is authorized; RW2 is preregistration-only.
 > There is no demonstrated neural advantage, unseen-person, useful EEG,
 > real-neural sequence decoder, end-to-end real-time, portable-hardware,
 > arbitrary-thought, or clinical claim. See
@@ -104,6 +106,12 @@ This repo is a starter scaffold with working pure-Python components:
   boundaries
 - exact unapproved S20 EEG acquisition packet with four files, byte/resource
   caps, target-free split, prior/shuffle controls, and one-time test rules
+- dependency-free local recording metadata scanner for BrainVision, EDF/EDF+,
+  BDF, EEGLAB, FIF, and BIDS with safe roots, companion validation, hard caps,
+  explicit compatibility levels, warnings, and inspectable refusal reports
+- deterministic local-intake JSON/Markdown, measured runtime/RSS audit
+  sidecar, source/config/registry/artifact hashes, strict reload/tamper checks,
+  and zeroed binary/raw/cache/target/model/training/network counters
 - JSON/Markdown metrics report command
 - CLI smoke commands
 - unit tests
@@ -116,14 +124,14 @@ negative within-session event comparison. None is a decoder success. Do not
 turn these results, a variance ranking, or a geometry proxy into unseen-person
 or population generalization.
 
-Current verification on 2026-07-10: 238 unittest tests passed with 3 skipped;
-pytest reported 235 passed, 3 skipped, and 25 subtests passed. Full Ruff lint,
-compileall, root and Loop 23/23.5 CLI help, artifact-contract checks, workbook
-formulas and all-sheet visual checks, and `git diff --check` passed. The tracked
-and delivered workbook hashes match at
-`bd7ba4895e3afaf54b279ff240cf3377d49693dfdaeb11527c7ef7600874836c`.
-A repository-wide formatter check was not applied as unrelated mechanical
-churn.
+Current verification on 2026-07-10: 249 unittest tests passed with 3 skipped;
+pytest reported 246 passed, 3 skipped, and 25 subtests passed. The 11 focused
+RW1 tests, full Ruff lint, compileall, root/create/inspect CLI help, strict
+synthetic roundtrip inspection, artifact-contract checks, workbook formulas
+and all-sheet visual checks, and `git diff --check` passed. The pre-RW1
+baseline was 238 unittest and 235 pytest passes with the same skips/subtests.
+The tracked and delivered workbook hashes match at
+`4103254159df47c5dfd029df4c2ced8507c998d5b4abc494590e930fa7f64994`.
 
 ## The north star
 
@@ -137,16 +145,16 @@ This is not primarily a model repo. It is a **research loop repo**.
 
 ## Current Next Work
 
-1. **RW1 - implement metadata-only local intake.** Recognize BrainVision,
-   EDF/EDF+, BDF, EEGLAB, FIF, and BIDS fixtures; validate companions, safe
-   paths, caps, warnings, and deterministic JSON/Markdown reports without
-   reading binary signal arrays or importing MNE.
+1. **RW2 - preregister bounded signal-quality adapters only.** Freeze optional
+   reader behavior, sample/channel/time/byte caps, units, reference, geometry,
+   events, PSD, warnings, privacy, resources, and no-auto-deletion rules. Do
+   not implement or open a recording in the preregistration work order.
 2. **Loop 24 - preregister local precision/runtime independently.** Freeze
    candidates, reference arithmetic, tolerances, fresh selection data, and
    resource rules before code. Seed 2353 cannot select anything.
-3. **RW2 - preregister signal-quality adapters only after RW1.** Freeze bounded
-   MNE reads, units, reference, geometry, event, PSD, warning, and resource
-   contracts before opening any real recording.
+3. **RW3 and later remain blocked by their predecessors.** Do not begin live
+   replay, hardware, collection, multimodal, workbench UI, or deployment work
+   from metadata compatibility alone.
 
 RW4 is not next: S20 acquisition remains blocked until explicit approval names
 revision `88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684`, exactly four files, the
@@ -158,7 +166,8 @@ Loop 23's preregistration and parked result are in
 are in `docs/LOOP_23_5_PREREGISTRATION.md` and
 `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`. Loop 22 evidence is in
 `docs/LOOP_22_TINY_CAUSAL_ENCODER.md`; the post-20 sequence is in
-`docs/POST_20_ROADMAP.md`.
+`docs/POST_20_ROADMAP.md`; RW1 evidence is in
+`docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md`.
 
 ## Historical original PR plan
 

@@ -881,3 +881,36 @@ Evidence: `docs/REAL_WORLD_PRACTICE_TRACK_RESEARCH.md`,
 `docs/BYO_NEURODATA_WORKBENCH_SPEC.md`,
 `docs/FRESH_EEG_BENCHMARK_S20_APPROVAL_PACKET.md`,
 `registries/datasets.v0.json`, and `registries/devices.v0.json`.
+
+## 0040 - Close RW1 at compatibility level 0
+
+Decision: close RW1 as a passed dependency-free metadata-only interface gate.
+Authorize RW2 preregistration only. Do not implement an optional MNE/MNE-BIDS
+reader, open a real signal, or define a quality threshold until the bounded
+read, units, reference, geometry, event, PSD, warning, privacy, resource, and
+no-auto-deletion contract is committed and pushed.
+
+Why: the scanner recognizes or safely refuses BrainVision, EDF/EDF+, BDF,
+EEGLAB, FIF, BIDS, unknown files, and non-BIDS directories without opening
+binary signal, event, label, or target content. It enforces resolved roots,
+symlink and traversal refusal, companion roles, FIF filename continuity,
+file/depth/input/text/output caps, and collision behavior. Deterministic JSON
+and Markdown keep process measurements in a separate hash-validated audit
+sidecar.
+
+Measured gate: the ignored 532-byte synthetic BrainVision fixture writes
+11,545 bytes under a 4-MiB cap. Scanner/report-build runtime is 0.001659
+seconds and peak RSS is 21,643,264 bytes. Access counters are zero for binary
+signal files/bytes, raw data, real caches, targets/labels, models, training, and
+network. Eleven focused tests pass; the complete suite rises from 238 to 249
+unittest tests with the same three skips and from 235 to 246 pytest tests with
+the same three skips and 25 subtests.
+
+Data and claim boundary: RW1 uses synthetic fixtures and local registry
+metadata only. It does not open S7, either S21 session, S20, any real cache, or
+seeds 2203/2303/2353. It establishes no signal readability, signal quality,
+task compatibility, decoding, neural advantage, unseen-person, latency,
+real-time, hardware, arbitrary-thought, or clinical claim.
+
+Evidence: `docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md`, implementation commit
+`77dcea5`, and ignored local artifacts under `outputs/rw1-metadata-intake/`.

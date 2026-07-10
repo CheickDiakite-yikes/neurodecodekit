@@ -12,9 +12,10 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 
 The parallel Real-World Practice Track starts at
 `docs/REAL_WORLD_PRACTICE_TRACK_RESEARCH.md`. RW0 is a completed research gate;
-RW1 metadata intake is the only authorized implementation. The proposed fresh
-S20 EEG block is **not authorized** for download or signal access. Its exact
-four-file, 96,090,264-byte dry run is in
+RW1 is now closed as a synthetic-fixture metadata-only interface gate. RW2 is
+available for preregistration only; no signal reader or quality metric is yet
+authorized. The proposed fresh S20 EEG block is **not authorized** for download
+or signal access. Its exact four-file, 96,090,264-byte dry run is in
 `docs/FRESH_EEG_BENCHMARK_S20_APPROVAL_PACKET.md`.
 
 Current verified state: two complete S21 SpanishBCBL MEG recordings plus one
@@ -79,6 +80,13 @@ access, control, bootstrap, and replay gates pass. This is supervised synthetic
 calibration only, seed 2353 is now consumed, and Loop 24 requires a separate
 preregistration. See `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md` and
 `docs/POST_20_ROADMAP.md`.
+
+RW1 adds dependency-free `inspect-recording` and `inspect-intake-report`
+commands for BrainVision, EDF/EDF+, BDF, EEGLAB, FIF, and BIDS level-0
+metadata. The 532-byte synthetic roundtrip produced 11,545 bytes of validated
+JSON/Markdown/audit output in 0.001659 seconds with 21,643,264-byte peak RSS
+and zero binary/raw/cache/target/model/training/network reads. This is file and
+report interface proof only. See `docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md`.
 
 The current registries keep prompted typing, imagined speech, natural reading,
 P300, SSVEP, and motor imagery as separate evidence cohorts. They also keep

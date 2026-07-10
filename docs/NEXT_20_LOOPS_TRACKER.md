@@ -159,10 +159,16 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   contract, and one exact S20 EEG dry-run packet are frozen. No download or
   signal access is authorized. See
   `docs/REAL_WORLD_PRACTICE_TRACK_RESEARCH.md`.
-- Next action in the practice track: implement RW1 level-0 local metadata
-  intake on synthetic fixtures only. Loop 24 remains independently available
-  for preregistration. Seeds 2203, 2303, and 2353 and all observed MEG/EEG
-  holdouts remain frozen.
+- Parallel Real-World Practice Track RW1: Done as a dependency-free level-0
+  metadata gate. BrainVision, EDF/EDF+, BDF, EEGLAB, FIF, and BIDS synthetic
+  fixtures produce strict deterministic core reports plus measured audit
+  sidecars without signal/target/model/network reads. The 532-byte roundtrip
+  produced 11,545 bytes under a 4-MiB cap. See
+  `docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md`.
+- Next action in the practice track: preregister RW2 signal-quality adapters
+  without opening a recording or implementing a reader. Loop 24 remains
+  independently available for preregistration. Seeds 2203, 2303, and 2353 and
+  all observed MEG/EEG holdouts remain frozen.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |
@@ -191,7 +197,8 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
 ## Parallel Practice Track
 
 Use `RW0` through `RW9` from `docs/POST_20_ROADMAP.md`; do not insert them into
-or renumber the original 20 rows. RW0 is closed. RW1 metadata intake is active.
+or renumber the original 20 rows. RW0 and RW1 are closed. RW2 quality-contract
+preregistration is next; no signal-reader implementation is authorized.
 The S20 fresh EEG benchmark is RW4 and remains blocked on explicit approval.
 
 ## Anti-patterns

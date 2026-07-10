@@ -1397,3 +1397,38 @@ and is not a repository regression.
 Decision: RW0 authorizes RW1 synthetic-fixture metadata intake only. S20 stays
 blocked, Loop 24 keeps its independent preregistration path, and no live device
 or scientific decoding claim was added.
+
+## 2026-07-10 - RW1 metadata-only local intake
+
+Added a dependency-free level-0 scanner in
+`src/neurodecodekit/datasets/local_intake.py` plus create/inspect CLI commands.
+The scanner recognizes BrainVision, EDF/EDF+, BDF, EEGLAB, FIF, and BIDS,
+emits deterministic JSON/Markdown plus a measured audit sidecar, validates
+source/config/registry/artifact hashes, and records every unavailable field,
+warning, refusal, cap, and forbidden-access counter.
+
+Safety coverage includes resolved root binding, symlink/traversal refusal,
+BrainVision companion roles, EEGLAB sibling discovery, FIF filename
+continuity, bounded BIDS traversal, archive/pickle/executable refusal reports,
+unknown-input reports, text allowlists, NUL rejection, input/text/output caps,
+collision refusal, and exact output tamper detection. No MNE, NumPy, SciPy,
+Torch, BrainFlow, LSL, or Gradio import occurs in this path.
+
+The ignored synthetic BrainVision roundtrip declares 532 source bytes and
+reads 26,365 text bytes from one VHDR plus the tracked dataset registry. It
+writes 7,795 bytes of deterministic JSON, 2,181 bytes of deterministic
+Markdown, and a 1,569-byte measured audit, totaling 11,545 bytes. Internal
+runtime is 0.001659 seconds and process peak RSS is 21,643,264 bytes. Binary,
+raw, cache, target/label, model, training, and network counters are all zero;
+end-to-end latency and producer causality are unavailable.
+
+Verification: 11/11 focused tests; 249 unittest tests with 3 skips in 11.317
+seconds and 496,943,104-byte maximum RSS; 246 pytest tests with 3 skips and 25
+subtests in 11.13 seconds and 507,559,936-byte maximum RSS. Ruff, compileall,
+root/create/inspect CLI help, strict roundtrip inspection, and
+`git diff --check` pass. The pre-change baseline was 238 unittest and 235
+pytest passes with the same skips/subtests.
+
+Decision: close RW1. RW2 may be preregistered but no signal reader or quality
+metric is authorized. S20 remains blocked and no scientific decoding claim is
+added.

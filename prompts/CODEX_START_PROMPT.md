@@ -2,11 +2,14 @@
 
 Continue NeuroDecodeKit from the current branch. Read `AGENTS.md`,
 `START_HERE.md`, `docs/CODEX_HANDOFF.md`,
-`docs/REAL_WORLD_PRACTICE_TRACK_RESEARCH.md`, and
-`docs/BYO_NEURODATA_WORKBENCH_SPEC.md` before editing.
+`docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md`,
+`docs/BYO_NEURODATA_WORKBENCH_SPEC.md`, and
+`docs/POST_20_ROADMAP.md` before editing.
 
-Primary task: complete Real-World Practice Track RW1 as the smallest strict
-metadata-only local intake slice.
+Primary task: preregister Real-World Practice Track RW2 as a bounded optional
+signal-read and quality-report contract. Do not implement a reader, open a
+recording, install a dependency, or generate signal artifacts in this work
+order.
 
 Requirements:
 
@@ -14,26 +17,29 @@ Requirements:
 2. Do not open consumed S7/S21 raw arrays or caches, and do not use seeds 2203,
    2303, or 2353.
 3. Do not download anything. The S20 packet remains unapproved.
-4. Add a dependency-free level-0 scanner for BrainVision, EDF/EDF+, BDF,
-   EEGLAB, FIF, and BIDS synthetic fixtures.
-5. Validate resolved paths, symlink escape, duplicate roles, required
-   companions, archive/pickle refusal, file/depth/input/text/output caps, and
-   collision behavior.
-6. Read only bounded text headers/sidecars. Do not read binary signal samples,
-   labels, or target text, and do not import MNE in the metadata path.
-7. Emit deterministic versioned JSON and Markdown with compatibility level,
-   known/unavailable metadata, warnings/refusals, source and registry hashes,
-   runtime, RSS, declared/read/output bytes, and raw/cache/model/training/network
-   counters.
-8. Add useful create/inspect CLI help and tests for every refusal boundary.
-9. Keep one CPU thread and generated artifacts below 4 MiB for the roundtrip.
-10. Run focused tests, the complete unit and pytest suites, Ruff, compileall,
-    CLI help, `git diff --check`, and one synthetic roundtrip.
-11. Compare against the recorded pre-change baseline of 238 unittest tests
-    with 3 skips.
-12. Commit and push only after all gates pass. Never commit generated reports,
-    raw data, caches, secrets, or inspection debris.
+4. Research current primary MNE, MNE-BIDS, EDF/BDF, BrainVision, EEGLAB, and
+   FIFF reader behavior before freezing any adapter assumption.
+5. Define exact bounded-header/sample access, channels, duration, units,
+   reference, source filters, geometry, events, annotation, and clock fields
+   for each format family.
+6. Preregister PSD and signal-quality methods, thresholds, unavailable states,
+   synthetic controls, and warning semantics. A warning must not automatically
+   delete or interpolate a channel.
+7. Freeze path/privacy behavior for participants, measurement dates,
+   annotations, device serials, and report redaction.
+8. Freeze one-thread limits for files, channels, samples, seconds, text/binary
+   bytes, runtime, peak RSS, and generated output before implementation.
+9. Define optional-dependency errors and prove that the base install remains
+   dependency-free.
+10. Keep format readability, task compatibility, model compatibility, and
+    benchmark authorization as separate levels. Do not create labels, target
+    text, predictions, CER/WER, or decoding output.
+11. Specify synthetic fixtures and malformed/refusal tests before any real
+    source is considered.
+12. Close the preregistration with docs, tracker/decision/handoff updates, a
+    coherent commit, and a push. Implementation needs a later explicit gate.
 
-RW1 adds no waveform, PSD, signal-quality, MNE read, live-device, GUI,
-predictive, CER/WER, or decoding capability. Unknown or incompatible input must
-produce an inspection/refusal report, never fake text.
+RW1 is complete at compatibility level 0 only. RW2 preregistration may define
+how to test bounded signal readability and quality reporting, but it adds no
+signal result, neural advantage, decoding, latency, live-device, or hardware
+claim.

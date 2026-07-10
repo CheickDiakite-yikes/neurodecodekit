@@ -208,7 +208,7 @@ artifacts.
 
 ## Initial Implementation Slice
 
-`RW1` may implement only level-0 metadata recognition on local synthetic
+`RW1` implements only level-0 metadata recognition on local synthetic
 fixtures:
 
 - recognize the six initial file families;
@@ -220,3 +220,8 @@ fixtures:
 
 Waveforms, PSD, signal-quality thresholds, MNE reads, live devices, a GUI, and
 predictive output are explicitly out of scope for `RW1`.
+
+RW1 is closed with deterministic JSON/Markdown, a measured audit sidecar, 11
+focused tests, and one 532-byte synthetic roundtrip. See
+`docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md`. Every compatibility level above 0
+still requires a separate preregistration and implementation gate.
