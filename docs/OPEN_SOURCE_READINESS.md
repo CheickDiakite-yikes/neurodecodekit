@@ -2,37 +2,41 @@
 
 Date: 2026-07-10
 
-Status: **Prepared on a review branch; public visibility observed while default
-`main` remains stale**
+Status: **Open-source collaboration surface merged to public `main`; latest RW2
+evidence closeout remains in green draft PR #2**
 
 ## Purpose
 
-This record separates public-release preparation from the act of changing
-GitHub visibility. Documentation, community workflows, licensing, privacy
-checks, and metadata can be reviewed safely while the repository remains
-private.
+This record separates public-release preparation from GitHub visibility,
+default-branch publication, and scientific proof claims. Documentation,
+community workflows, licensing, privacy checks, and metadata each require an
+explicit review trail even after the repository is visible publicly.
 
 ## Current GitHub State
 
-| Field | State before this milestone |
+| Field | Current state after PR #1 and before PR #2 merge |
 |---|---|
 | Repository | `CheickDiakite-yikes/neurodecodekit` |
-| Visibility | Public when rechecked after safe metadata updates |
-| Default branch | `main` |
-| Active preparation branch | `codex/loops-8-19-validated` |
+| Visibility | Public; no visibility-changing command was issued in this work |
+| Default branch | `main` at merge commit `18a705e` |
+| Open-source surface on `main` | Through commit `e5d89ed` via merged PR #1 |
+| Active evidence closeout | Draft PR #2 from `codex/loops-8-19-validated` |
 | Issues | Enabled |
 | Discussions | Disabled |
 | Wiki | Disabled |
-| Description | Empty |
+| Description | Proof-accurate local-first EEG/MEG research description set |
 | Homepage | Empty |
-| Topics | Empty |
-| Detected license | None |
+| Topics | 16 research, modality, reproducibility, and local-first topics set |
+| Detected license | Default-branch API currently null; canonical Apache-2.0 text is corrected in PR #2 |
+| Draft PR CI | 4/4 base and optional-neuro push/PR checks pass |
 
-The active branch is materially ahead of `main`. The repository was private at
-the start of this milestone and later reported public; no visibility-changing
-command was issued in this work. Do not assume the public default is release
-ready. Until the branch is reviewed and merged, the default surface presents
-stale proof boundaries and omits the new safety/community files.
+The repository was private at the start of this milestone and later reported
+public; no visibility-changing command was issued in this work. PR #1 has now
+merged the safety/community files, description, and contribution surface to
+`main`. Draft PR #2 contains the latest RW2 closeout, README results dashboard,
+current handoff, canonical license-text correction, and CI portability record.
+Do not describe those latest results as default-branch content until PR #2 is
+reviewed and merged.
 
 ## Added Public Surface
 
@@ -198,13 +202,14 @@ Also run one bounded synthetic RW2 create/inspect/report roundtrip and record:
 
 ## Visibility Decision
 
-Public visibility is already active as of the closeout check. The maintainer
-must explicitly decide whether to keep it public or restore private visibility.
-If it remains public, the public-default release should happen only after:
+Public visibility is active and PR #1 has merged the community surface. The
+maintainer must still explicitly decide whether public visibility should
+remain. The latest evidence closeout should be called current on the public
+default only after:
 
-1. this branch is reviewed and merged or made the deliberate default;
-2. CI passes on the merged commit;
-3. the license choice is approved;
+1. draft PR #2 is reviewed and merged;
+2. CI passes on the merge result;
+3. Apache-2.0 for original NeuroDecodeKit work is approved and detected;
 4. the tracked-content and Gitleaks scans pass;
 5. issue forms and security reporting are verified;
 6. the README proof boundary matches the current closeout;

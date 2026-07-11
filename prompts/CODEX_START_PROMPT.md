@@ -34,9 +34,10 @@ Do not reset, revert, delete, or overwrite work already present.
 - No real recording quality, neural advantage, unseen-person generalization,
   useful EEG decoder, real-time decoding, portable-hardware, arbitrary-thought,
   or clinical result has been demonstrated.
-- The repository currently reports public while default `main` is stale.
-  Review the current branch and draft PR; do not merge or alter visibility
-  without explicit user approval.
+- The repository reports public. PR #1 merged the open-source community surface
+  through `e5d89ed`; green draft PR #2 carries the latest evidence closeout and
+  canonical license-text repair. Do not merge or alter visibility without
+  explicit user approval.
 
 ## Primary task: preregister RW3 only
 

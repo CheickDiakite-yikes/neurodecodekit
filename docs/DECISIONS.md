@@ -1023,10 +1023,12 @@ only that reviewed finding, and the complete default scan then passes.
 GitHub boundary: description, 16 topics, and eight issue labels were updated.
 The repository reported private at the start and public when rechecked after
 those metadata-only commands, even though no visibility flag was issued.
-Default `main` remains stale. Do not call the public default release ready;
-review and merge the active branch or deliberately update the default, verify
-CI and security settings, and explicitly decide whether public visibility
-should remain.
+At decision time, default `main` remained stale. PR #1 later merged the
+open-source surface through `e5d89ed` at `18a705e`. Draft PR #2 now carries the
+latest RW2/results closeout and the canonical Apache license-text correction;
+its four base/optional-neuro push/PR checks pass. Public visibility still
+requires an explicit maintainer decision, and PR #2 must not merge without
+license, security, history, and proof-boundary review.
 
 Evidence: `README.md`, `CONTRIBUTING.md`, `SECURITY.md`, `GOVERNANCE.md`,
 `CODE_OF_CONDUCT.md`, `THIRD_PARTY_NOTICES.md`,

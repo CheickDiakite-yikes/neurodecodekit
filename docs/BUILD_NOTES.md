@@ -1555,10 +1555,10 @@ metadata, Ruff, compileall, and whitespace checks pass.
 
 GitHub received a proof-accurate description, 16 topics, and eight issue
 labels. The repository was private at the first check and reported public at
-the later check although no visibility command was issued. `main` remains
-stale. The branch must be reviewed and merged, and the maintainer must decide
-whether public visibility should remain, before calling the default surface
-release ready.
+the later check although no visibility command was issued. PR #1 subsequently
+merged this open-source surface through `e5d89ed` at main commit `18a705e`.
+Draft PR #2 carries the latest evidence closeout; the maintainer must still
+decide whether public visibility should remain before release signoff.
 
 Evidence: open-source milestone commit `e5d89ed` and
 `docs/OPEN_SOURCE_READINESS.md`.
@@ -1580,3 +1580,10 @@ The same Python 3.12/NumPy 2.5.1 combination on macOS reproduced the historical
 cross-BLAS compatibility default to `2e-6`. Canonical stream payloads must
 still be bitwise identical across all five schedules. No real/target/model/
 training/holdout access occurred, and no scientific result changed.
+
+The amended commit passed all four GitHub Actions checks: base and
+optional-neuro on both push and pull-request events. A final default-branch
+refresh showed PR #1 already merged. GitHub's license endpoint still returned
+`spdx_id: null` because the Apache appendix in `LICENSE` contained a project
+copyright instead of the canonical placeholder. PR #2 restores the exact
+Apache 2.0 text; the project copyright remains in `NOTICE`.

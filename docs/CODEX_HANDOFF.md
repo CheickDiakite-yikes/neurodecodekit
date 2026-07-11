@@ -179,10 +179,12 @@ This is not primarily a model repo. It is a **research loop repo**.
 2. **Loop 24 - preregister local precision/runtime independently.** Freeze
    candidates, reference arithmetic, tolerances, fresh selection data, and
    resource rules before code. Seed 2353 cannot select anything.
-3. **Review the open-source branch before public-default release.** The GitHub
-   repository currently reports public while default `main` is stale. Review
-   and merge the draft branch or intentionally update the default only after CI,
-   license, issue-form, security, history, and proof-boundary checks pass.
+3. **Review draft PR #2 before publishing the latest evidence on `main`.** PR #1
+   has merged the open-source community surface through `e5d89ed`; PR #2 carries
+   the RW2 closeout, README results dashboard, canonical Apache license text,
+   and Linux float32 portability record. Its four CI checks pass. Do not merge
+   until license, issue-form, security, history, visibility, and proof-boundary
+   review is complete.
 
 RW4 is not next: S20 acquisition remains blocked until explicit approval names
 revision `88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684`, exactly four files, the
