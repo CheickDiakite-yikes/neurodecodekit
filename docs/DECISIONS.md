@@ -1031,3 +1031,27 @@ should remain.
 Evidence: `README.md`, `CONTRIBUTING.md`, `SECURITY.md`, `GOVERNANCE.md`,
 `CODE_OF_CONDUCT.md`, `THIRD_PARTY_NOTICES.md`,
 `docs/OPEN_SOURCE_READINESS.md`, and commit `e5d89ed`.
+
+## 0044 - Amend only the cross-kernel Loop 21 float tolerance for Linux
+
+Decision: change the default absolute compatibility tolerance between Loop
+20's historical batched float32 projection and Loop 21's canonical one-frame
+projection from `1e-6` to `2e-6`. Keep canonical stream payloads bitwise
+identical across all five schedules and keep timestamp, frame-grid, causal,
+state, resource, and access gates unchanged.
+
+Why: public GitHub Actions on Linux with Python 3.12, NumPy 2.5.1, and
+one-thread OpenBLAS measured a maximum cross-kernel difference of exactly
+`1.430511474609375e-6`. The same Python/NumPy versions on macOS remain at the
+historical `9.5367431640625e-7`. Explicit gate diagnostics prove that no other
+condition failed. This is BLAS arithmetic portability, not schedule drift.
+
+Integrity boundary: the first CI failure was retained and diagnosed before the
+tolerance changed. This amendment uses no targets, labels, model, training,
+real data, consumed cache, or holdout. It does not rewrite the historical Loop
+20 artifact, change its hash, relax schedule-to-schedule identity, or create a
+decoding claim. A future difference above `2e-6` still fails closed and
+requires another explicit review rather than automatic widening.
+
+Evidence: failed Actions runs `29133225088`, `29133248840`, and `29133423319`;
+diagnostic commit `5c212c8`; `docs/LOOP_21_CAUSAL_CHUNK_REPLAY.md`.

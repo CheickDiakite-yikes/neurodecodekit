@@ -1562,3 +1562,21 @@ release ready.
 
 Evidence: open-source milestone commit `e5d89ed` and
 `docs/OPEN_SOURCE_READINESS.md`.
+
+## 2026-07-10 - Public CI float32 portability finding
+
+The first public optional-neuro CI run passed the focused nine-test RW2 suite
+but failed two Loop 21 causal-replay assertions. Commit `5c212c8` added
+per-condition gate diagnostics without changing any threshold. The next Linux
+run isolated the sole failure as
+`all_schedules_offline_compatible`: NumPy 2.5.1/OpenBLAS produced a
+`1.430511474609375e-6` maximum difference between Loop 20's historical batched
+float32 matrix multiply and Loop 21's canonical one-frame multiply. Runtime was
+0.060795 seconds and peak RSS was 59,772,928 bytes; schedule identity,
+timestamps, frame grid, causality, state, and resources passed.
+
+The same Python 3.12/NumPy 2.5.1 combination on macOS reproduced the historical
+`9.5367431640625e-7` maximum. Decision 0044 therefore amends only this
+cross-BLAS compatibility default to `2e-6`. Canonical stream payloads must
+still be bitwise identical across all five schedules. No real/target/model/
+training/holdout access occurred, and no scientific result changed.

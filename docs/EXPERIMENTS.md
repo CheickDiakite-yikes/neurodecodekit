@@ -910,6 +910,7 @@ source duration / samples / frames: 28.7 sec / 2,870 / 553
 right context / mutable state: 0 samples / 300 bytes
 canonical stream hash: 78dc8b5298064216caa854c884a69834c0959566d9ede903d44ae1cd28562389
 max Loop 20 offline difference / tolerance: 9.536743e-7 / 1e-6
+public Linux CI difference / amended tolerance: 1.430511e-6 / 2e-6
 aligned / jittered / whole-item max scheduling delay: 0 / 140 / 610 ms
 internal runtime / peak RSS: 0.135024 sec / 46,301,184 bytes
 fixed weights / bounded working core: 10,240 / 195,520 bytes

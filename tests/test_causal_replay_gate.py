@@ -88,7 +88,7 @@ class CausalReplayGateTests(unittest.TestCase):
         self.assertEqual(report["failed_gate_checks"], [])
         self.assertEqual(report["summary"]["schedules_passed"], len(REGISTERED_SCHEDULES))
         self.assertTrue(report["summary"]["stream_schedule_bits_invariant"])
-        self.assertLessEqual(report["summary"]["max_offline_absolute_error"], 1e-6)
+        self.assertLessEqual(report["summary"]["max_offline_absolute_error"], 2e-6)
         self.assertTrue(report["summary"]["timestamps_bitwise_equal"])
         self.assertTrue(report["summary"]["frame_grid_exact"])
         self.assertEqual(report["summary"]["producer_right_context_samples"], 0)
