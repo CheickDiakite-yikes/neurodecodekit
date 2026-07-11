@@ -33,6 +33,7 @@ and explain exactly what the result does not prove.
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
 | Real predictive evidence | Both the same-person cross-session MEG model and the bounded S7 EEG classifier lose to no-signal controls | The current scientific result is negative, explicit, and frozen against post-hoc tuning |
+| Local execution gate | Three exact CPU paths, two fresh target-free fixture partitions, 12 balanced timing rounds, and 30 refusals are frozen before candidate code | Loop 24 is ready for an explicit implementation decision; no precision candidate or runtime has been executed |
 | Next transport layer | Stage A is specified as 90 future schedule-by-fixture cases with 30 exact refusals under a 32 MiB cap | The decision packet is review-ready; no replay runtime, socket, board, or hardware path is authorized yet |
 
 ### Detailed Engineering Scorecard
@@ -48,10 +49,11 @@ and explain exactly what the result does not prove.
 | Causal frame replay | 553 canonical frames; 5/5 schedules exact; zero right context; 300-byte mutable state | synthetic mechanism only | Separates true producer causality from transport scheduling and decoder latency |
 | Tiny learned causal producer | 1,130 parameters; validation and one-time test balanced accuracy 1.0 versus 0.166667 signal-free prior; 5/5 replay | synthetic mechanism only | Proves the bounded stream can carry a learned signal on an intentionally easy generated task |
 | Blank calibration mechanism | validation and one-time test both 16/16 exact at CER 0; 9 test corrections; 0 regressions | synthetic mechanism only | Shows one preregistered scalar can solve a specific tail-error mechanism without post-test trimming |
+| Local precision/runtime registration | 3 exact candidates; fresh seeds 2401/2402; 12 balanced selection rounds; 30 refusal IDs; 9 dependency-free invariants | preregistered, no runtime | Freezes correctness, timing, storage, memory, access, and claim gates before a candidate can be favored |
 | Metadata-only local intake | 6 format families; 532 source bytes; 11,545 report bytes; 0 binary/raw/target/model/network reads | fixture-backed | Lets EEG owners start with safe structure and provenance instead of uploading a recording |
 | Bounded signal-quality interface | 40 fixtures; 38 readable and 2 exact refusals across 6 format families; 3.839 sec; 76,592 output bytes | fixture-backed | Validates readers, metrics, privacy, caps, and no-mutation identity before any real quality claim |
 | Replay/live-source authorization gate | 5 schedules x 18 fixture families = 90 future cases; 30 refusal IDs; 4 separately gated stages; 10 invariants | review-ready, not authorized | Binds the exact Stage A scope and caps before any source-chunk, socket, board, fixture, or hardware implementation |
-| Test and release surface | 268 unittests with 3 skips; 265 pytest passes, 3 skips, and 25 subtests; 256-test zero-dependency suite also green | local shell verified | Makes the research contracts executable for contributors on ordinary hardware |
+| Test and release surface | 277 unittests with 3 skips; 274 pytest passes, 3 skips, and 25 subtests; 265-test zero-dependency suite also green | local shell verified | Makes the research contracts executable for contributors on ordinary hardware |
 
 ### Real-Data Scientific Scorecard
 
@@ -69,11 +71,12 @@ engineering wins, not hidden behind synthetic accuracy.
 
 | Gate | Runtime | Peak RSS | Persistent output |
 |---|---:|---:|---:|
-| Zero-dependency full unittest run | 0.320 sec | 39,141,376 bytes | temporary test output only |
+| Zero-dependency full unittest run | 1.440 sec | 64,290,816 bytes | temporary test output only |
 | RW1 metadata intake roundtrip | 0.001659 sec | 21,643,264 bytes | 11,545 bytes |
 | RW2 bounded FIF quality roundtrip | 3.839168 sec | 150,749,184 bytes | 76,592 bytes |
 | RW3 contract/request invariant suite | 0.040 sec | 20,529,152 bytes | no generated payload |
-| Complete optional-neuro/ML test runners | 15.390 sec max | 577,814,528 bytes max | temporary test output only |
+| Loop 24 preregistration invariant suite | 0.110 sec | 20,742,144 bytes | no generated payload |
+| Complete optional-neuro/ML test runners | 15.460 sec max | 580,567,040 bytes max | temporary test output only |
 
 Proof labels are deliberately narrow:
 
@@ -84,6 +87,9 @@ Proof labels are deliberately narrow:
   data, people, or devices;
 - **review-ready, not authorized** means the bounded protocol and decision packet
   exist, but their planned runtime does not;
+- **preregistered, no runtime** means candidates, data independence, metrics,
+  thresholds, and refusals are frozen before any candidate implementation or
+  benchmark execution;
 - **parked** means a registered primary gate failed and the project did not tune
   past it.
 
@@ -129,6 +135,12 @@ Read this before interpreting any number in the repository.
   schedule-by-fixture cases, all 30 deterministic refusals, one-thread resource
   caps, and the exact authorization sequence. The request says
   `authorized_now: false`; preparing it did not authorize implementation.
+- **Loop 24 precision/runtime registration:** a versioned contract freezes the
+  float32 eager reference, explicit CPU float16, and dynamic-qint8 QNNPACK
+  candidates; fresh target-free seeds 2401 and 2402; 12 balanced timing rounds;
+  exact behavior, resource, and claim gates; and 30 refusal IDs. Commit
+  `186bb6f` contains protocol evidence only: no fixture, checkpoint read,
+  candidate conversion, inference, timing, energy, or qualification run exists.
 
 ### What The Results Actually Say
 
@@ -142,6 +154,8 @@ Read this before interpreting any number in the repository.
   exact-sequence threshold, even though several secondary metrics passed.
 - Loop 23.5 shows that one supervised blank-logit intercept fixes one fresh
   synthetic motif/symbol task. That is a mechanism result, not brain decoding.
+- Loop 24 freezes how local CPU precision and runtime would be compared, but it
+  has not yet produced a float16, qint8, speed, memory, storage, or energy result.
 
 ### What Is Not Established
 
@@ -622,6 +636,11 @@ channel-sample values, 32 MiB of materialized float64 arrays, 30 seconds, 1 GiB
 peak RSS, 4 MiB of report output per run, and 16 MiB for the complete synthetic
 fixture/report set.
 
+Loop 24, if separately authorized, freezes one thread and worker, at most 48
+fresh target-free items per partition, 32 MiB of materialized arrays, 4 MiB of
+total generated artifacts, 60 seconds of internal runtime, and 1 GiB peak RSS
+per worker. Its registration authorizes none of those operations yet.
+
 Generated artifacts belong in ignored `cache/` or `outputs/`, not in Git.
 
 ## Project Status And Roadmap
@@ -634,7 +653,10 @@ The original numbered development sequence has reached:
 - Loop 23: parked after the frozen synthetic decoder test missed its primary
   threshold;
 - Loop 23.5: completed as a supervised synthetic calibration mechanism;
-- Loop 24: preregistration only; consumed seed 2353 cannot select candidates.
+- Loop 24: preregistered at `186bb6f` with contract SHA-256
+  `58e9d5407fef9419bc3bb0dc8cd3fa68d36dd238cb636d2f833dd9c5c6c3ae5d`;
+  implementation and execution remain unauthorized, and consumed seed 2353
+  cannot select candidates.
 
 The parallel Real-World Practice track has reached:
 
@@ -667,6 +689,9 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/REAL_DATA_VALIDATION_2026-07-10.md](docs/REAL_DATA_VALIDATION_2026-07-10.md) | S21 alignment, session, and upstream audit |
 | [docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md](docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md) | real EEG bridge and negative classifier result |
 | [docs/LOOP_20_NEUROTOKEN_CACHE_V0.md](docs/LOOP_20_NEUROTOKEN_CACHE_V0.md) | NeuroTokenCache schema and synthetic interface proof |
+| [docs/LOOP_24_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_24_PRIMARY_SOURCE_RESEARCH.md) | PyTorch precision, timing, memory, and energy primary-source review |
+| [docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md](docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md) | frozen Loop 24 candidates, fresh fixtures, measurements, thresholds, caps, and decision language |
+| [registries/local_precision_runtime_contract.v0.json](registries/local_precision_runtime_contract.v0.json) | machine-readable Loop 24 identities, schedules, refusals, access rules, and false authorization flags |
 | [docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md](docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md) | metadata-only file intake closeout |
 | [docs/RW2_PRIMARY_SOURCE_RESEARCH.md](docs/RW2_PRIMARY_SOURCE_RESEARCH.md) | reader/quality primary-source review |
 | [docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md](docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md) | frozen RW2 protocol |
@@ -705,6 +730,11 @@ for people with EEG recordings and people with EEG headsets or boards.
 | An EEG recording | Run metadata-only intake locally and share a redacted compatibility summary | Waveforms, event text, participant paths, demographics, and unreviewed derived caches |
 | An EEG headset or board | Document channels, reference, clocks, transport, packet counters, export formats, and SDK license | Live connection details, private endpoints, credentials, and unapproved recordings |
 | No EEG hardware | Add deterministic fixtures, malformed cases, refusal tests, docs, or no-signal controls | No real data is needed for these high-value paths |
+
+Precision or local-runtime contributions must begin with the frozen Loop 24
+protocol. A benchmark pull request is not execution authorization, smaller
+weights are not proof of faster inference, and neither result is evidence of
+brain decoding or end-to-end text latency.
 
 The project deliberately treats an exact refusal, a privacy-preserving metadata
 report, or a reproducible negative result as a meaningful contribution. See

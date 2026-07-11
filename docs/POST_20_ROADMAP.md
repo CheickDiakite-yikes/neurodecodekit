@@ -32,6 +32,13 @@ decision.
   calibrated and unmodified replay schedules, controls, bootstrap, access, and
   resource gates pass. Seed 2353 is consumed. See
   `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`.
+- Loop 24: Preregistered at `186bb6f`; implementation is not authorized. The
+  contract freezes the float32 eager reference, explicit CPU float16, and
+  dynamic-qint8 QNNPACK candidates; fresh target-free seeds 2401/2402; 12
+  balanced selection timing rounds; exact behavior and resource gates; and 30
+  refusal IDs. No fixture, candidate, checkpoint read, inference, timing,
+  energy, or qualification run exists. See
+  `docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md`.
 - Real-World Practice Track RW0: Done as a primary-source research and planning
   gate. Versioned dataset/device registries, a local BYO Neurodata contract,
   and an exact 96,090,264-byte S20 EEG approval packet are frozen. No raw data,
@@ -66,7 +73,7 @@ decision.
 | 22 | Tiny learned causal encoder | Can a small train-only causal model learn the synthetic motif task while preserving the Loop 21 stream contract? | Optional-Torch encoder, offline/stream replay, parameter/state/RSS/runtime report, prior comparator. | Closed: 1,130 parameters; validation and one frozen test pass; 5/5 replay schedules; 300-byte state; one-thread CPU; no real cache or text claim. |
 | 23 | Streaming CTC prefix decoder | Can causal encoder frames produce stable incremental characters rather than only final strings? | Greedy/prefix state, partial-hypothesis trace, revision and emission-delay metrics. | Parked: mechanics and validation pass, but frozen exact test accuracy is 5/8 below 6/8; test consumed; no tuning or rerun. |
 | 23.5 | Blank/boundary calibration | Can one train-frame-fitted, target-length-independent blank intercept suppress tail false positives on fresh splits without harming any item? | Fresh 64/16/16 fixture, one convex scalar fit, unchanged comparator, calibration metrics, and one new test. | Closed: validation and frozen test are 16/16 exact at CER 0; zero regressions; 5/5 replay; seed 2353 consumed; supervised synthetic calibration only. |
-| 24 | Local precision and runtime | Can a decoder that first passes its correctness gate fit a realistic local CPU envelope without changing outputs beyond a registered tolerance? | float32/float16/dynamic-int8 candidates, state/parameter/RSS/RTF/energy proxy report. | Unblocked for preregistration only; preserve the frozen reference, keep seed 2353 out of candidate selection, and distinguish label storage from true integer execution. |
+| 24 | Local precision and runtime | Can a decoder that first passes its correctness gate fit a realistic local CPU envelope without changing outputs beyond a registered tolerance? | float32/float16/dynamic-int8 candidates, state/parameter/RSS/RTF/energy proxy report. | Preregistered at `186bb6f`, not authorized: 3 candidates, seeds 2401/2402, 12 balanced rounds, 30 refusals, one-thread/4-MiB artifact caps; preserve every observable behavior and keep seed 2353 closed. |
 | 25 | Causal preprocessing audit | Can existing real MEG train rows be replayed incrementally without future-aware filters, normalization, or padding leakage? | Train-only causal preprocessing contract and offline/stream audit; no score. | Open source-train rows only; keep five source-test and all consumed session-2 rows frozen. |
 | 26 | Real validation-only encoder gate | Does the fixed small causal model learn anything above a no-signal prior on source validation without touching test? | Preregistered architecture, train-only fit, six-row validation report with uncertainty. | Proceed only on a registered margin and failure analysis; validation is consumed for model selection. |
 | 27 | Fresh holdout preregistration | What new independent recording or participant slice can answer the next claim without recycling observed data? | Metadata-only candidate table, license/bytes/protocol, preregistered one-time analysis. | No download before exact cap and approval; no test until architecture and decision rule are frozen. |
@@ -100,9 +107,11 @@ whether to authorize Stage A pure-Python synthetic replay only, using the
 packet prepared at `163ff2f`, or hold it. Packet preparation is not
 authorization. BrainFlow, LSL, PyXDF, sockets, live sources, hardware, and
 Stages B-D remain independently gated. `RW4` remains blocked until the user
-explicitly approves the exact acquisition packet. Loop 24 can proceed
-independently after its own preregistration; neither track may use consumed
-evidence from the other.
+explicitly approves the exact acquisition packet. Loop 24 is now independently
+preregistered at `186bb6f`, with every execution flag false. Its exact
+authorization cannot authorize RW3, data access, or training; RW3 authorization
+cannot authorize Loop 24. Neither track may use consumed evidence from the
+other.
 
 ## Persistent Constraints
 
@@ -112,6 +121,12 @@ evidence from the other.
   thresholding, calibration, endpoint design, or fresh evaluation.
 - Do not reopen Loop 23.5 seed 2353 for precision selection, tolerance setting,
   tuning, endpoint design, or fresh evaluation.
+- Do not generate Loop 24 fixtures, load or convert the frozen checkpoint, run
+  any precision candidate, benchmark, profile, or energy measurement before an
+  explicit Loop 24 authorization-only decision is recorded and pushed.
+- If Loop 24 is authorized, seeds 2401 and 2402 remain physically separate
+  selection and qualification partitions; candidate outputs, targets, labels,
+  text, and consumed evidence may not create or select fixture rows.
 - Do not download another real recording without a pinned metadata plan,
   explicit file/byte cap, dry run, and approval.
 - “Causal,” “streaming,” “online,” “real-time,” and “low latency” are distinct

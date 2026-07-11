@@ -30,6 +30,21 @@ replay and one tiny learned motif encoder. Loop 23 implemented the frozen
 language-model-free streaming CTC gate, but its consumed test reached only 5/8
 exact sequences against the preregistered 6/8 threshold. It is parked, while
 Loop 23.5 is complete as a separate supervised synthetic calibration gate.
+Loop 24 is now preregistered at commit `186bb6f`, before any candidate,
+fixture, checkpoint read, inference, timing, or qualification run:
+
+```bash
+cat docs/LOOP_24_PRIMARY_SOURCE_RESEARCH.md
+cat docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md
+python -m json.tool registries/local_precision_runtime_contract.v0.json >/dev/null
+```
+
+Its machine contract freezes three exact CPU candidates, fresh target-free
+seeds 2401 and 2402, 12 balanced selection timing rounds, 30 refusal IDs, and
+strict behavior/resource/claim gates. Every Loop 24 execution authorization
+flag is false. The next Loop 24 decision is explicit authorization using the
+exact sentence in the preregistration, an amendment, or a hold. General
+continuation is not authorization.
 
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
@@ -46,12 +61,12 @@ python -m json.tool registries/rw3_stage_a_authorization_request.v0.json >/dev/n
 
 Commit `163ff2f` prepares a hash-bound Stage A authorization packet and machine
 request. Both explicitly say `authorized_now: false`; preparing or reviewing
-them is not authorization. The next decision is review and explicit
-authorization of **RW3 Stage A only**, or an explicit hold. Do not implement
-Stage A from this instruction. BrainFlow, LSL, PyXDF, sockets, live sources,
-device discovery, hardware, real recordings, consumed caches, targets, models,
-and training remain unauthorized. Keep S7/S21 evidence and seeds 2203, 2303,
-and 2353 frozen. Any future real-data acquisition remains dry-run by default and
+them is not authorization. RW3 Stage A and Loop 24 are two independent
+decisions: authorizing one cannot authorize the other. Do not implement either
+from this instruction. BrainFlow, LSL, PyXDF, sockets, live sources, device
+discovery, hardware, real recordings, consumed caches, targets, models, and
+training remain unauthorized. Keep S7/S21 evidence and seeds 2203, 2303, and
+2353 frozen. Any future real-data acquisition remains dry-run by default and
 requires explicit byte caps plus `--execute`.
 
 ## Acceptance criteria for next PR
@@ -62,13 +77,22 @@ requires explicit byte caps plus `--execute`.
 - No full-dataset download can happen accidentally.
 - The RW3 JSON contract, authorization request, and ten dependency-free
   invariant tests remain exact.
+- The Loop 24 JSON contract and nine dependency-free invariants remain exact;
+  all execution flags stay false unless the exact authorization decision is
+  separately recorded, tested, committed, and pushed.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
+- No Loop 24 runtime module, fixture, CLI, checkpoint read, candidate
+  conversion, inference, benchmark, profiler, energy measurement, target
+  access, model training, or generated payload exists before authorization.
 - All public docs agree that the registration freezes five schedules, 18 future
   fixture families, 30 refusal IDs, and four separately authorized stages, and
   that the Stage A packet proposes 90 future cases without authorizing them.
 - Stage A remains a separate authorization decision and cannot imply Stage B-D,
   physical-device qualification, useful signal, decoding, or real-time behavior.
+- Loop 24 remains a separate authorization decision and cannot establish a
+  speedup, integer-only execution, retained neural accuracy, end-to-end text
+  latency, cross-device energy efficiency, or portable-hardware behavior.
 - Resource, privacy, access, timestamp, anomaly, hash, and claim boundaries stay
   explicit and machine-checkable.
 

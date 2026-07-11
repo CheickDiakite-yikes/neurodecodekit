@@ -3,8 +3,8 @@
 Date: 2026-07-11
 
 Status: **Open-source collaboration surface merged to public `main`; latest
-RW2 evidence, RW3 preregistration, and the Stage A decision packet remain in
-draft PR #2**
+RW2 evidence, RW3 preregistration/decision packet, and Loop 24 preregistration
+remain in draft PR #2**
 
 ## Purpose
 
@@ -29,7 +29,7 @@ explicit review trail even after the repository is visible publicly.
 | Homepage | Empty |
 | Topics | 20 research, modality, reproducibility, open-source, and local-first topics set |
 | Detected license | GitHub API reports Apache-2.0 on `main` at `18a705e`; PR #2 still restores the canonical appendix text and keeps project copyright in `NOTICE` |
-| Draft PR CI | 4/4 at the last check; every later push must be rechecked before merge |
+| Draft PR CI | 4/4 at the last checked commit; every later push must be rechecked before merge |
 
 The repository was private at the start of this milestone and later reported
 public; no visibility-changing command was issued in this work. PR #1 has now
@@ -38,8 +38,10 @@ merged the safety/community files, description, and contribution surface to
 current handoff, canonical license-text correction, CI portability record, and
 RW3's registration-only replay/live-source contract. It also contains the
 hash-bound Stage A decision packet prepared at `163ff2f`; the request remains
-unauthorized. Do not describe those latest results, the RW3 protocol, or the
-packet as default-branch content until PR #2 is reviewed and merged.
+unauthorized. Commit `186bb6f` adds the separate Loop 24 local precision/runtime
+preregistration with all execution flags false; no candidate or runtime exists.
+Do not describe those latest results, either protocol, or either decision
+surface as default-branch content until PR #2 is reviewed and merged.
 
 ## Added Public Surface
 
@@ -57,6 +59,9 @@ packet as default-branch content until PR #2 is reviewed and merged.
 - an explicit EEG-contributor launch table in the README;
 - a machine-bound RW3 Stage A decision packet that cannot silently authorize
   implementation, later stages, sockets, devices, or real data.
+- a machine-bound Loop 24 precision/runtime contract that freezes candidates,
+  fresh target-free partitions, balanced timing, correctness/resource gates,
+  and refusals before any implementation or benchmark can be authorized.
 
 ## License Boundary
 
@@ -192,6 +197,7 @@ The release candidate must pass:
 PYTHONPATH=src python -m unittest discover -s tests -v
 PYTHONPATH=src python -m unittest discover -s tests -p 'test_signal_quality.py' -v
 PYTHONPATH=src python -m unittest discover -s tests -p 'test_replay_equivalence_contract.py' -v
+PYTHONPATH=src python -m unittest discover -s tests -p 'test_local_precision_runtime_contract.py' -v
 ruff check .
 python -m compileall -q src tests
 git diff --check
@@ -211,6 +217,12 @@ Also run one bounded synthetic RW2 create/inspect/report roundtrip and record:
 - raw/real/cache/target/model/training/network access;
 - causality and end-to-end latency status;
 - warnings and unavailable fields.
+
+Loop 24 remains a documentation/contract gate until explicit authorization.
+Release verification must therefore confirm that no Loop 24 runtime module,
+fixture, candidate, CLI, checkpoint read, conversion, inference, benchmark,
+profiler, energy measurement, or generated payload has appeared, and that all
+nine dependency-free contract invariants still pass.
 
 ## Visibility Decision
 

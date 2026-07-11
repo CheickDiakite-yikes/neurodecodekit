@@ -1129,3 +1129,50 @@ committed, and pushed without implementation. Only then may Stage A work begin.
 Evidence: `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md`,
 `registries/rw3_stage_a_authorization_request.v0.json`, tests in
 `tests/test_replay_equivalence_contract.py`, and commit `163ff2f`.
+
+## 0047 - Freeze Loop 24 local precision/runtime before candidate execution
+
+Decision: preregister Loop 24 at commit `186bb6f` as primary-source research,
+one versioned machine contract, and nine dependency-free invariants only. Keep
+every execution flag false. Require a separate exact authorization, amendment,
+or hold before creating a fixture, implementing a candidate, loading or
+converting the checkpoint, running inference, timing, profiling, energy
+measurement, or qualification.
+
+Why: the frozen synthetic producer has only 1,130 parameters, so import cost,
+warmup, Python decoder work, backend choice, thread pools, and timer noise can
+dominate arithmetic. Float16 tensor storage does not prove a faster CPU kernel;
+dynamic qint8 packed weights still accept and return floating-point tensors;
+smaller serialization does not prove lower runtime; and unchanged final text
+can conceal unstable incremental decoder traces. Candidate code or measurements
+before thresholds would allow the protocol to favor whichever path looked best.
+
+Frozen contract: `neurodecodekit.local_precision_runtime_contract` v0.1.0
+binds the exact Loop 23.5 reference hashes and permits only float32 eager,
+explicit CPU float16, and dynamic-qint8 QNNPACK candidates. It registers fresh
+target-free selection and qualification partitions at seeds 2401 and 2402,
+six waveform families with eight items each, 12 balanced selection timing
+rounds, exact frame/timestamp/greedy/prefix/flush behavior, numerical
+tolerances, separate storage and runtime rules, one-thread resource caps, and
+30 refusal IDs. Targets, labels, text, consumed evidence, real data, training,
+and RW3 operations must remain at zero.
+
+Measured registration boundary: the contract SHA-256 is
+`58e9d5407fef9419bc3bb0dc8cd3fa68d36dd238cb636d2f833dd9c5c6c3ae5d`.
+Nine focused invariants pass in 0.070 seconds wall with 20,791,296-byte peak
+RSS. The complete optional environment reaches 277 unittest and 274 pytest
+passes, with three optional skips and 25 pytest subtests; the true zero-
+dependency run reaches 265 tests with 118 expected optional skips. Candidate
+implementations, fixtures, checkpoint reads, inference/model/training runs, and
+generated payload artifacts are zero.
+
+Next boundary: the user may use the exact authorization sentence in
+`docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md`, request an amendment, or
+hold. Loop 24 authorization cannot authorize RW3 Stage A, data access, model
+training, or any neural, decoding, end-to-end-latency, cross-device energy, or
+portable-hardware claim.
+
+Evidence: `docs/LOOP_24_PRIMARY_SOURCE_RESEARCH.md`,
+`docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md`,
+`registries/local_precision_runtime_contract.v0.json`,
+`tests/test_local_precision_runtime_contract.py`, and commit `186bb6f`.

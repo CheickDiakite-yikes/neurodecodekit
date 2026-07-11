@@ -35,6 +35,8 @@ Before opening a pull request, read:
 5. `THIRD_PARTY_NOTICES.md` before using Brain2Qwerty or SpanishBCBL material.
 6. `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` before proposing replay,
    streaming, or hardware work.
+7. `docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md` before proposing model
+   precision, quantization, local-runtime, memory, or energy benchmarks.
 
 ## Ways To Contribute
 
@@ -48,7 +50,7 @@ Good contribution lanes include:
 | EEG compatibility | metadata reports, reference/geometry documentation, bounded local validation | Not for the first gate |
 | EEG hardware | offline replay adapters, timestamp audits, packet-loss reports, device descriptors | Usually not at first |
 | Evaluation | no-signal controls, leakage tests, split protocols, uncertainty | No for interfaces; approved data for results |
-| Models | small CPU-bounded baselines, causal replay, explicit state and latency accounting | Synthetic first |
+| Models | small CPU-bounded baselines, causal replay, frozen precision/runtime gates, explicit state and latency accounting | Synthetic first |
 | Documentation | setup, diagrams, examples, terminology, accessibility, translations | No |
 | Research registry | primary-source dataset/device facts with explicit unknowns | No |
 
@@ -186,6 +188,25 @@ registered schedule, anomaly, refusal, and cap you cover.
 Opening an issue or pull request does not authorize Stage A. Maintainers must
 record a separate authorization-only commit before any Stage A implementation,
 and that decision cannot authorize Stages B-D, sockets, devices, or real data.
+
+Precision, quantization, and local-runtime work follows the same decision
+discipline through a separate gate. Loop 24 is preregistered at commit
+`186bb6f`; `registries/local_precision_runtime_contract.v0.json` freezes three
+exact CPU candidates, fresh target-free seeds 2401 and 2402, 12 balanced
+selection timing rounds, 30 refusal IDs, behavior tolerances, resource caps,
+and separate storage/runtime claims. Every execution flag is false. Do not add
+a candidate, generate its fixture, load or convert the checkpoint, run
+inference, profile, time, or measure energy until Loop 24 is explicitly
+authorized. A benchmark issue or pull request is not authorization, and RW3
+authorization cannot authorize Loop 24.
+
+When that work is authorized, reports must distinguish tensor dtype, packed
+weight dtype, input/output dtype, actual backend, serialized bytes, live state,
+working memory, process RSS, producer time, fixed-decoder time, and full-pipeline
+time. Smaller storage is not automatically faster execution; qint8 weights are
+not automatically integer-only end to end; and a local synthetic speed result
+is not neural accuracy, text latency, device qualification, or energy evidence
+for another machine.
 
 ### Step 4: Request A Bounded Real-Read Protocol
 

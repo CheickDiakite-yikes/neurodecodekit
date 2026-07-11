@@ -1693,3 +1693,92 @@ all 43 local Markdown links, root and selected command help, `git diff --check`,
 268 unittests, 265 pytest tests plus 25 subtests, the 256-test dependency-free
 run, and the 10-test focused RW3 contract/request gate. Staged Gitleaks and all
 four GitHub Actions jobs are checked around the final commit and push.
+
+## 2026-07-11 - Loop 24 local precision/runtime preregistration
+
+Researched the full Brain2Qwerty v2 architecture and PyTorch numerical,
+threading, benchmark, inference-mode, automatic-mixed-precision, eager dynamic-
+quantization, and torchao migration behavior from primary sources. The review
+found that the full published architecture is too different from the local
+1,130-parameter synthetic MLP to support transfer claims; PyTorch does not
+promise bitwise floating-point identity across platforms or execution paths;
+CPU autocast defaults to bfloat16 rather than float16; dynamic quantized Linear
+uses qint8 packed weights with float inputs and outputs; and tiny timings require
+warmup, replicated measurements, fixed threads, and balanced execution order.
+Mac `powermetrics` is retained only as an optional within-device proxy because
+its own manual warns against accurate or cross-device power interpretation.
+
+Commit `186bb6f` freezes `neurodecodekit.local_precision_runtime_contract`
+v0.1.0 before implementation. The exact candidates are float32 eager,
+explicit float16 CPU, and dynamic qint8 under QNNPACK. Bfloat16, autocast,
+static quantization, QAT, torchao, compile, TorchScript, ONNX, CoreML,
+ExecuTorch, MPS, pruning, batching, and architecture changes are excluded from
+this gate. The contract binds the existing producer, probe, checkpoint,
+blank-intercept, and decoder hashes without opening any of them.
+
+A future target-free fixture is physically split into seed-2401 selection and
+seed-2402 qualification partitions, each with 48 items across six waveform
+families. It contains signals, input lengths, item IDs, and metadata only; model
+outputs, targets, labels, text, participants, and source paths may not create or
+select rows. The selection schedule contains 12 exact candidate permutations,
+placing each candidate in every order position four times. Qualification opens
+only if a nonreference replacement passes selection, using six alternating
+reference/candidate rounds.
+
+Behavioral gates cover frame grids, timestamps, valid lengths, padding, greedy
+paths and traces, width-8 prefix traces/finals, flush behavior, and causal
+status. Measurements keep producer, fixed decoder, and complete pipeline time
+separate. A replacement needs a producer median ratio at most 0.80, full-
+pipeline median at most 0.90, p95 at most 0.95, upper paired 95% ratio at most
+0.98, no payload growth, at most 32 MiB RSS increase, and both partitions.
+Storage-only status instead requires at least 50% payload reduction and 2,048
+bytes saved while pipeline median/p95 remain within 1.05; it cannot replace the
+default or open qualification. Thirty refusal IDs and explicit proceed, park,
+and kill rules freeze unsupported backends, leakage, nonfinite outputs,
+behavior drift, fallback, collisions, caps, and unauthorized access.
+
+Resource caps are one numerical thread, one concurrent worker, 48 workers,
+512 KiB per fixture, 64 KiB per candidate payload, 32 MiB materialized arrays,
+1 MiB report output, 4 MiB total generated artifacts, 60 seconds internal
+runtime, and 1 GiB peak RSS per worker. All network, real/consumed/cache/target/
+label/text/training and RW3 counters must remain zero. Energy measurement is
+outside the primary cap, optional, and forbidden from prompting for sudo.
+
+The contract SHA-256 is
+`58e9d5407fef9419bc3bb0dc8cd3fa68d36dd238cb636d2f833dd9c5c6c3ae5d`.
+Nine focused dependency-free invariants pass in 0.070 seconds wall with
+20,791,296-byte peak RSS. The full unittest run reaches 277 passes with three
+skips in 14.220 seconds wall and 569,884,672-byte peak RSS; pytest reaches 274
+passes, three skips, and 25 subtests in 13.200 seconds wall and 576,421,888-byte
+peak RSS. The true zero-dependency run reaches 265 tests with 118 expected
+optional skips in 0.350 seconds wall and 40,861,696-byte peak RSS. The previous
+268/265 unittest/pytest baseline therefore gains exactly nine invariants without
+regression. Ruff, compileall, JSON/TOML parsing, local links, CLI help, diff
+checks, and staged Gitleaks pass.
+
+No fixture, candidate module, CLI command, checkpoint read or conversion,
+inference, benchmark, profiler, energy, qualification, real/consumed data,
+target, model-training, or RW3 operation was added or run. This milestone
+registers a future local execution experiment; it does not establish a speedup,
+integer-only execution, retained neural accuracy, end-to-end text latency,
+portable hardware, or decoding.
+
+Evidence: `docs/LOOP_24_PRIMARY_SOURCE_RESEARCH.md`,
+`docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md`,
+`registries/local_precision_runtime_contract.v0.json`, and commit `186bb6f`.
+
+The tracker was imported and edited through the bundled artifact-tool runtime,
+rendered before and after across all eight sheets, reloaded from the exported
+XLSX, and scanned with zero formula errors. Dashboard, Practice Track, Decision
+Log, and Prompt Bank now present Loop 24 and RW3 Stage A as separate explicit
+decisions. The prompt-bank repair also wraps the final RW3/Loop 24 decision rows
+instead of allowing long text to spill horizontally. The tracked and delivered
+workbooks are both 57,413 bytes with SHA-256
+`d0b1959fab1201eb8391733a1723ee803bf167441ecd48788f4f8179d16c78c4`.
+
+The final documentation-inclusive verification preserves all counts: 277
+unittest passes with three skips, 274 pytest passes with three skips and 25
+subtests, 265 true zero-dependency tests with 118 expected optional skips, and
+9/9 focused Loop 24 invariants. Final wall/RSS maxima are 15.460 seconds and
+580,567,040 bytes. No Loop 24 or RW3 runtime, fixture, data, target, model, or
+training operation was introduced by the documentation/workbook sync.

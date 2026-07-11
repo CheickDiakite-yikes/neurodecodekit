@@ -154,6 +154,15 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   corrections, zero regressions, positive paired-bootstrap lower bounds, and
   5/5 calibrated/unmodified replay. See
   `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`.
+- Post-roadmap Loop 24: Preregistered at commit `186bb6f`, with implementation
+  and execution unauthorized. The machine contract freezes three exact CPU
+  candidates, fresh target-free selection/qualification seeds 2401/2402, 12
+  balanced selection timing rounds, 30 refusal IDs, strict behavior and
+  resource gates, and a 4-MiB total generated-artifact cap. Nine dependency-
+  free invariants pass. No fixture, candidate, checkpoint read, inference,
+  benchmark, profiler, energy, or qualification operation occurred. See
+  `docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md` and
+  `registries/local_precision_runtime_contract.v0.json`.
 - Parallel Real-World Practice Track RW0: Done as a primary-source metadata
   research gate. Eight dataset records, 13 device records, a local workbench
   contract, and one exact S20 EEG dry-run packet are frozen. No download or
@@ -182,8 +191,10 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
 - Next practice-track decision: review
   `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` and explicitly authorize Stage A
   pure-Python synthetic replay, or hold. Registration and packet preparation
-  authorize no code. Loop 24 local precision/runtime remains independently
-  available for preregistration. Seeds 2203, 2303, and 2353 stay consumed.
+  authorize no code. The separate Loop 24 decision is to authorize its exact
+  preregistered implementation, amend it, or hold; all execution flags remain
+  false. Neither authorization can authorize the other. Seeds 2203, 2303, and
+  2353 stay consumed.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |
