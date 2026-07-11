@@ -1,0 +1,123 @@
+name: EEG data compatibility
+description: Propose a public or private EEG source through metadata-first, synthetic-first validation.
+title: "[EEG data] "
+labels:
+  - eeg
+  - data-compatibility
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please do not upload or link raw EEG, event/target files, participant tables, consent forms, private cloud folders, derived embeddings, or subject-level predictions. Unknown is an acceptable answer.
+  - type: dropdown
+    id: sharing
+    attributes:
+      label: Data sharing status
+      options:
+        - Public dataset with canonical landing page
+        - Private/local data that will not be shared
+        - Institutional data with controlled access
+        - Synthetic data only
+        - Unknown
+    validations:
+      required: true
+  - type: input
+    id: canonical_source
+    attributes:
+      label: Canonical source and exact version
+      description: Public landing page and revision only. Do not paste a private download URL.
+      placeholder: "Dataset DOI/URL and version, or private-local"
+  - type: input
+    id: license
+    attributes:
+      label: License, consent, or sharing boundary
+      placeholder: "CC-BY-4.0, controlled access, private local only, or unknown"
+    validations:
+      required: true
+  - type: dropdown
+    id: task
+    attributes:
+      label: Task cohort
+      options:
+        - Prompted typing
+        - Imagined or inner speech
+        - Overt speech
+        - Natural reading
+        - P300
+        - SSVEP
+        - Motor imagery
+        - Resting state
+        - Other or unknown
+    validations:
+      required: true
+  - type: input
+    id: format
+    attributes:
+      label: File format and companion layout
+      placeholder: "BrainVision VHDR/VMRK/EEG, EDF, BDF, EEGLAB SET/FDT, FIF, or BIDS"
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device or amplifier family
+      placeholder: "Brain Products actiCHamp, BioSemi ActiveTwo, OpenBCI Cyton, unknown"
+  - type: input
+    id: acquisition
+    attributes:
+      label: Nominal channels, sampling rate, reference, and geometry availability
+      placeholder: "64 EEG at 1000 Hz; FCz reference; standard montage available"
+  - type: input
+    id: events
+    attributes:
+      label: Aggregate event and label availability
+      description: Describe presence and structure, not actual event descriptions or target text.
+      placeholder: "Markers present; one event table; sentence targets stored separately"
+  - type: input
+    id: scope
+    attributes:
+      label: Aggregate scope and exact or capped bytes
+      placeholder: "20 participants, 2 sessions each, approximately 40 GiB; proposed slice under 128 MiB"
+  - type: textarea
+    id: metadata_result
+    attributes:
+      label: Metadata-only intake result
+      description: Paste only the compact summary and warning names after local review. Do not attach the report if its sharing boundary is unclear.
+      render: text
+  - type: dropdown
+    id: desired_level
+    attributes:
+      label: Desired first compatibility level
+      options:
+        - Level 0 - file and companion recognition
+        - Level 1 - bounded synthetic sample readability
+        - Level 2 - channels, timing, units, geometry status, aggregate events
+        - Later level - requires a separate frozen protocol
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Exact engineering question
+      placeholder: "Can the metadata scanner recognize this continuous external-FDT EEGLAB layout without opening samples?"
+    validations:
+      required: true
+  - type: textarea
+    id: proof_boundary
+    attributes:
+      label: What this contribution will not claim
+      placeholder: "No signal-quality, decoding, unseen-person, real-time, hardware, or clinical claim."
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Required confirmations
+      options:
+        - label: I will not upload raw/derived neural data, event targets, participant information, credentials, or private links.
+          required: true
+        - label: I understand that file recognition and signal readability are not decoding performance.
+          required: true
+        - label: I will verify rights before sharing any fixture, screenshot, report, or artifact.
+          required: true

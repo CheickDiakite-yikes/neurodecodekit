@@ -1,3 +1,4 @@
+import importlib.util
 import json
 import tempfile
 import unittest
@@ -8,8 +9,12 @@ from neurodecodekit.experiments.eeg_bridge_gate import run_eeg_bridge_gate
 
 
 REVISION = "a" * 40
+NEURO_AVAILABLE = all(
+    importlib.util.find_spec(name) is not None for name in ("mne", "numpy", "scipy")
+)
 
 
+@unittest.skipUnless(NEURO_AVAILABLE, "MNE/NumPy/SciPy not installed")
 class EEGBridgeGateTests(unittest.TestCase):
     def _write_manifest(self, root: Path) -> Path:
         records = build_manifest_from_paths([

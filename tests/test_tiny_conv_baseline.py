@@ -29,6 +29,7 @@ class TinyConvBaselineHelperTests(unittest.TestCase):
             )
 
 
+@unittest.skipUnless(importlib.util.find_spec("numpy"), "NumPy not installed")
 @unittest.skipIf(importlib.util.find_spec("torch"), "Torch installed; missing-dependency path not active")
 class TinyConvMissingDependencyTests(unittest.TestCase):
     def test_missing_torch_error_points_to_ml_extra(self):

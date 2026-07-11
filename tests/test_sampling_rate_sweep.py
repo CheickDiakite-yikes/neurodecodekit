@@ -1,7 +1,11 @@
+import importlib.util
 import json
 import tempfile
 import unittest
 from pathlib import Path
+
+if importlib.util.find_spec("numpy") is None:
+    raise unittest.SkipTest("NumPy not installed")
 
 import numpy as np
 

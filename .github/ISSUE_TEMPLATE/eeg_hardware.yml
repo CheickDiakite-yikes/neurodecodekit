@@ -1,0 +1,98 @@
+name: EEG hardware qualification
+description: Propose a headset, board, SDK, transport, or replay adapter without claiming decoding support.
+title: "[EEG hardware] "
+labels:
+  - eeg
+  - hardware
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Start with technical metadata and deterministic offline replay. Do not post serial numbers, pairing keys, Wi-Fi credentials, SDK secrets, private recordings, or participant data.
+  - type: input
+    id: device
+    attributes:
+      label: Manufacturer, model, and hardware revision
+      placeholder: "OpenBCI Cyton v3"
+    validations:
+      required: true
+  - type: input
+    id: firmware
+    attributes:
+      label: Firmware, SDK, driver, and operating-system versions
+  - type: textarea
+    id: channels
+    attributes:
+      label: Channel roles, placement, reference, and ground
+      description: Distinguish EEG, generic ExG, EOG, EMG, reference, ground, and auxiliary channels.
+    validations:
+      required: true
+  - type: input
+    id: rate
+    attributes:
+      label: Nominal and measured sampling rate
+    validations:
+      required: true
+  - type: input
+    id: transport
+    attributes:
+      label: Raw API, file export, and transport
+      placeholder: "BrainFlow over USB radio; CSV and BrainVision export"
+    validations:
+      required: true
+  - type: textarea
+    id: timing
+    attributes:
+      label: Timestamp, clock, packet counter, correction, and packet-loss behavior
+      description: Use unavailable where not measured.
+    validations:
+      required: true
+  - type: textarea
+    id: peripherals
+    attributes:
+      label: Peripheral streams
+      description: List EOG, EMG, PPG, IMU, gaze, audio, or other streams separately from EEG.
+  - type: input
+    id: licensing
+    attributes:
+      label: SDK, firmware, and sample-data license
+      placeholder: "Open source URL, vendor terms URL, noncommercial, proprietary, or unknown"
+    validations:
+      required: true
+  - type: dropdown
+    id: local
+    attributes:
+      label: Can acquisition and replay remain local and offline?
+      options:
+        - Yes, verified
+        - Partly; cloud or account is optional
+        - No; cloud is required
+        - Unknown
+    validations:
+      required: true
+  - type: textarea
+    id: replay
+    attributes:
+      label: Smallest deterministic replay proposal
+      placeholder: "Replay a 4-channel 256 Hz synthetic ramp/sinusoid through file and device adapters and compare values, order, timestamps, gaps, and hashes."
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: Claim boundary
+      placeholder: "This would validate transport/replay mechanics only, not signal quality or language decoding."
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Required confirmations
+      options:
+        - label: I removed device identifiers, credentials, private recordings, participant data, and proprietary SDK files.
+          required: true
+        - label: I will not describe connectivity or a live waveform as evidence of neural language decoding.
+          required: true
+        - label: I will keep EEG and every peripheral stream separate in metadata and evaluation.
+          required: true

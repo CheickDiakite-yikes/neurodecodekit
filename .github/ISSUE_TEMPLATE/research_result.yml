@@ -1,0 +1,87 @@
+name: Research result
+description: Report a bounded positive, negative, or parked result with controls and exact proof boundaries.
+title: "[Result] "
+labels:
+  - research-result
+  - needs-triage
+body:
+  - type: input
+    id: code
+    attributes:
+      label: Code commit and frozen protocol
+      placeholder: "Commit SHA and preregistration/decision document"
+    validations:
+      required: true
+  - type: textarea
+    id: cohort
+    attributes:
+      label: Dataset, revision, modality, task, and subject/session scope
+    validations:
+      required: true
+  - type: textarea
+    id: split
+    attributes:
+      label: Split, fit scope, and holdout state
+      description: Identify train/validation/test/calibration membership and whether test was previously viewed.
+    validations:
+      required: true
+  - type: textarea
+    id: methods
+    attributes:
+      label: Method and signal-free controls
+      description: Include no-signal prior and any zero-signal or shuffle controls.
+    validations:
+      required: true
+  - type: textarea
+    id: metrics
+    attributes:
+      label: Primary and secondary metrics
+      description: Include uncertainty and evaluation unit where appropriate.
+    validations:
+      required: true
+  - type: textarea
+    id: resources
+    attributes:
+      label: Resources and access counts
+      description: Input/output bytes, runtime, peak RSS, threads, real/raw/cache/target reads, model runs, training runs, and network calls.
+    validations:
+      required: true
+  - type: textarea
+    id: artifacts
+    attributes:
+      label: Inspectable artifact names and hashes
+      description: Do not attach private or participant-level artifacts.
+  - type: textarea
+    id: result
+    attributes:
+      label: Result and gate decision
+      placeholder: "Proceed, park, or kill, with the registered threshold."
+    validations:
+      required: true
+  - type: textarea
+    id: capability
+    attributes:
+      label: Engineering capability established
+      placeholder: "One sentence."
+    validations:
+      required: true
+  - type: textarea
+    id: no_claim
+    attributes:
+      label: Scientific or decoding claim not established
+      placeholder: "A separate sentence."
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Required confirmations
+      options:
+        - label: No participant data, target text, private recording, credential, or signed URL is included.
+          required: true
+        - label: A predictive neural result is compared with a no-signal baseline.
+          required: true
+        - label: Consumed holdouts and post-test changes are disclosed.
+          required: true
+        - label: EEG, MEG, and peripheral modalities are not merged into one claim.
+          required: true

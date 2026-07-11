@@ -5,15 +5,44 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "neurodecodekit"
 version = "0.1.0"
-description = "Starter toolkit for small, reproducible neural language decoding research loops."
+description = "Local-first, reproducible EEG and MEG language-decoding research tools with explicit proof boundaries."
 readme = "README.md"
 requires-python = ">=3.10"
-authors = [{ name = "NeuroDecodeKit contributors" }]
-license = { text = "Research scaffold; check upstream dataset/code licenses before reuse." }
+authors = [{ name = "Cheick Diakite" }]
+maintainers = [{ name = "Cheick Diakite" }]
+license = { file = "LICENSE" }
+keywords = [
+  "brain-computer-interface",
+  "eeg",
+  "meg",
+  "neural-decoding",
+  "neurotechnology",
+  "reproducible-research",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+]
 dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/CheickDiakite-yikes/neurodecodekit"
+Repository = "https://github.com/CheickDiakite-yikes/neurodecodekit"
+Documentation = "https://github.com/CheickDiakite-yikes/neurodecodekit#readme"
+Issues = "https://github.com/CheickDiakite-yikes/neurodecodekit/issues"
 
 [project.optional-dependencies]
 hf = ["huggingface_hub>=0.24"]
+array = ["numpy>=1.26"]
 neuro = ["mne>=1.12,<1.13", "scipy>=1.11", "numpy>=1.26"]
 cache = ["zarr>=3.0", "numcodecs>=0.13", "numpy>=1.26"]
 ml = ["numpy>=1.26", "scikit-learn>=1.4", "torch>=2.2"]

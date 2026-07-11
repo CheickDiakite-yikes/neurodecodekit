@@ -1,160 +1,363 @@
-# NeuroDecodeKit Starter
+# NeuroDecodeKit
 
-**Mission:** make non-invasive neural language decoding research easier to start, reproduce, compress, and explain.
+Local-first, reproducible tools for turning EEG and MEG recordings into small,
+inspectable neural language-decoding experiments without hiding data access,
+split leakage, resource cost, or negative results.
 
-This starter repo is intentionally not a state-of-the-art Brain2Qwerty replication. It is a clean first loop for turning a huge neuroimaging release into a small, inspectable, benchmark-ready developer experience.
-
-The first principle is simple:
-
-```text
-list files → choose tiny slice → cache small windows → run honest baselines → report CER/WER → demo errors
-```
-
-The thesis: the fastest path to value is not a giant model first. It is the access layer that lets smart builders avoid downloading hundreds of gigabytes before they can think.
-
-## What is included
+NeuroDecodeKit is an independent research toolkit inspired by the access and
+reproducibility problems around Brain2Qwerty-style decoding. It is not an
+official Brain2Qwerty project, a medical device, or a demonstrated mind-reading
+system.
 
 ```text
-neurodecodekit_starter/
-  AGENTS.md                         # instructions for Codex / coding agents
-  README.md                         # repo overview and quickstart
-  pyproject.toml                    # package metadata and optional dependency groups
-  docs/
-    CODEX_HANDOFF.md                # exact next loop for Codex
-    RESEARCH_BRIEF.md               # current research map and source notes
-    DATA_ACCESS_PLAN.md             # selective download + manifest strategy
-    EXPERIMENTS.md                  # first experiments and acceptance criteria
-    RISK_AND_ETHICS.md              # non-clinical scope, privacy, licensing guardrails
-    DECISIONS.md                    # architectural decisions log
-  prompts/
-    CODEX_START_PROMPT.md           # copy/paste prompt to continue this repo in Codex
-  src/neurodecodekit/
-    cli.py                          # lightweight CLI, works without heavy neuro deps
-    datasets/manifest.py            # SpanishBCBL path parser + manifest schema
-    datasets/hf_access.py           # optional Hugging Face listing/download helpers
-    preprocess/windowing.py         # event-aligned window extraction utility
-    evaluation/metrics.py           # CER/WER and Levenshtein utilities
-    evaluation/keyboard.py          # simple QWERTY keyboard-distance metric
-    training/synthetic.py           # synthetic shard generator for CI/dev loop
-    models/template_classifier.py   # tiny no-LLM baseline for sanity checks
-    demo/app.py                     # artifact-backed local Gradio evidence console
-  tests/                            # pure-Python unit tests
-  configs/                          # starter experiment configs
+manifest -> selective download -> tiny shard -> event/sentence cache
+         -> no-signal baseline -> neural baseline -> CER/WER report
 ```
+
+The core thesis is practical: before another large model matters, a researcher
+should be able to identify one legal dataset slice, inspect it locally, build a
+bounded cache, preserve provenance, compare against a language-only control,
+and explain exactly what the result does not prove.
+
+## Current Proof Boundary
+
+Read this before interpreting any number in the repository.
+
+### What Is Established
+
+- **Base package:** dependency-free CLI, metrics, schemas, manifests, split
+  audits, and report validation run without MNE, Torch, Zarr, or Hugging Face.
+- **Real S21 MEG alignment:** all 66 performed session-1 trials are reconciled
+  to target/response/timing provenance under the validated S21 parser.
+- **Strict split mechanics:** session 1 has a deterministic 55/6/5
+  train/validation/test protocol with train-only preprocessing.
+- **Independent same-person session mechanics:** session 2 has 63 performed
+  trials, preserves three empty MAT slots, and is bound to frozen session-1
+  train statistics.
+- **Real EEG bridge mechanics:** one S7 BrainVision recording and matching MAT
+  log produce 2,197 lazily read key-event windows shaped `61 x 25`.
+- **NeuroTokenCache v0:** a strict modality-aware continuous embedding cache
+  preserves masks, lengths, timestamps, source identities, geometry status,
+  splits, configuration, hashes, causality, context, resources, and warnings.
+- **Causal producer mechanics:** synthetic replay proves schedule-invariant
+  causal frame production with zero right context and bounded state.
+- **Metadata-only neurodata intake:** BrainVision, EDF/EDF+, BDF, continuous
+  EEGLAB external-FDT, FIF, and BIDS bundles can be recognized and reported at
+  compatibility level 0 without reading binary samples or event content.
+- **Synthetic signal-quality adapters:** RW2 exercises 38 readable fixtures and
+  two frozen refusal fixtures across those six format families using bounded
+  optional MNE readers, strict source binding, descriptive metrics, privacy
+  redaction, and before/after no-mutation checks.
+
+### What The Results Actually Say
+
+- The fixed real same-person cross-session MEG CTC is **worse** than the
+  no-signal prior: corpus CER `0.9179` versus `0.7755`.
+- The real S7 EEG nearest-centroid classifier is **worse** than its train-only
+  no-signal prior: `0.91%` versus `12.27%` exact key-label accuracy.
+- Loop 13 parks a lazy-backend migration because measured NPZ access did not
+  justify building a second storage backend.
+- Loop 23 parks a synthetic streaming CTC gate after missing its registered
+  exact-sequence threshold, even though several secondary metrics passed.
+- Loop 23.5 shows that one supervised blank-logit intercept fixes one fresh
+  synthetic motif/symbol task. That is a mechanism result, not brain decoding.
+
+### What Is Not Established
+
+There is no demonstrated:
+
+- neural advantage on the real evaluated MEG or EEG cohorts;
+- unseen-person generalization;
+- useful open-vocabulary EEG sentence decoder;
+- result on unreleased Brain2Qwerty v2 data or embeddings;
+- end-to-end real-time text latency;
+- portable, consumer, or at-home hardware result;
+- arbitrary-thought decoding;
+- clinical, diagnostic, or assistive efficacy.
+
+S21 session 2, the S7 EEG evaluation, and synthetic test seeds 2203, 2303, and
+2353 are consumed for the decisions they informed. They must not be reopened
+for tuning and then described as fresh evidence.
+
+The detailed risk language lives in
+[docs/RISK_AND_ETHICS.md](docs/RISK_AND_ETHICS.md).
+
+## Why This Project Exists
+
+The practical barrier to neural language-decoding research is often not the
+last model layer. It is everything before and around it:
+
+- public neuroimaging releases can be hundreds of gigabytes;
+- event and behavioral logs can use undocumented timing domains;
+- participant aliases can invalidate nominal subject splits;
+- preprocessing fit on evaluation rows can leak information;
+- language priors can be credited to neural signal;
+- a cache can silently lose channel, timing, geometry, or split identity;
+- “causal,” “streaming,” “online,” and “real-time” are often collapsed;
+- a successful file read can be overstated as device or decoding support.
+
+NeuroDecodeKit turns those risks into explicit interfaces, counters, hashes,
+caps, tests, and report fields.
 
 ## Quickstart
 
-From the repo root:
+### 1. Base Install
+
+Python 3.10 or newer is required.
 
 ```bash
+git clone https://github.com/CheickDiakite-yikes/neurodecodekit.git
+cd neurodecodekit
 python -m venv .venv
 source .venv/bin/activate
-pip install -e .
-python -m unittest discover -s tests
+python -m pip install --upgrade pip
+python -m pip install -e .
 ```
 
-Run the tiny local smoke loop without downloading any brain data:
+The base install has zero runtime dependencies. Exercise pure-Python metrics:
 
 ```bash
-neurodecode eval-text --target "HOLA MUNDO" --prediction "HOLA MUNCO"
-neurodecode make-synthetic-shard --out cache/synthetic_tiny.npz --samples 64 --channels 8 --times 25
-neurodecode load-cache --cache cache/synthetic_tiny.npz --metadata-out cache/synthetic_tiny.metadata.json
+neurodecode eval-text \
+  --target "HOLA MUNDO" \
+  --prediction "HOLA MUNCO"
+```
+
+Run the base-aware test suite:
+
+```bash
+PYTHONPATH=src python -m unittest discover -s tests -v
+```
+
+Tests for unavailable optional dependencies skip cleanly. A skipped optional
+test is not evidence that its MNE or Torch path passed.
+
+### 2. Tiny Array Smoke
+
+Install only NumPy for synthetic shards and NPZ interfaces:
+
+```bash
+python -m pip install -e '.[array]'
+
+neurodecode make-synthetic-shard \
+  --out cache/synthetic_tiny.npz \
+  --samples 64 \
+  --channels 8 \
+  --times 25
+
+neurodecode load-cache \
+  --cache cache/synthetic_tiny.npz \
+  --metadata-out cache/synthetic_tiny.metadata.json
+
 neurodecode report \
   --cache cache/synthetic_tiny.npz \
   --identity-smoke \
   --out-json cache/synthetic_report.json \
-  --out-md cache/synthetic_report.md
+  --out-md cache/synthetic_report.md \
+  --run-name synthetic_identity_plumbing \
+  --split synthetic-smoke
 ```
 
-The synthetic shard is the current CI-friendly smoke loop. It verifies cache
-writing, cache loading, report writing, and metric plumbing without requiring
-MNE, SciPy, Hugging Face access, or any Brain2Qwerty/SpanishBCBL files.
-`--identity-smoke` uses cache labels as predictions and is explicitly a
-plumbing check, not a model result.
+`--identity-smoke` copies targets to predictions to prove report plumbing. It
+is deliberately labeled as **not a model result**.
 
-Run the optional local evidence console from compact existing artifacts:
+### 3. Choose Optional Capabilities
+
+Install only what the task needs:
+
+| Extra | Adds | Typical use |
+|---|---|---|
+| `array` | NumPy | synthetic shards, NPZ caches, NeuroToken interfaces |
+| `neuro` | MNE 1.12.x, NumPy, SciPy | format readers, bounded signal inspection, extraction |
+| `ml` | NumPy, scikit-learn, Torch | optional small baselines and synthetic learned gates |
+| `hf` | Hugging Face Hub | metadata listing and explicit selective download |
+| `cache` | Zarr, numcodecs, NumPy | measured storage-backend experiments |
+| `demo` | Gradio | local artifact-backed evidence console |
+| `dev` | Ruff, pytest | contributor checks |
+| `all` | all optional groups | full local development; large |
+
+Examples:
 
 ```bash
-pip install -e '.[demo]'
-neurodecode demo --host 127.0.0.1 --port 7860
+python -m pip install -e '.[neuro,dev]'
+python -m pip install -e '.[array,demo]'
 ```
 
-The demo shows held-out synthetic examples and aggregate-only real metrics. It
-does not train or run a model, display real sentence text, fetch data, or claim
-calibrated confidence. See `docs/LOOP_17_HONEST_LOCAL_DEMO.md`.
+Heavy imports remain inside the commands that need them. Adding an optional
+feature should not make `import neurodecodekit` import MNE, NumPy, or Torch.
 
-## Build notes and handoff trail
+## I Have EEG Data
 
-This project is being built as a sequence of small loops, with each loop leaving
-behind a runnable artifact and a plain-English handoff. The current build
-journal is `docs/BUILD_NOTES.md`.
+You can contribute without uploading the recording.
 
-That journal captures:
+1. Read [CONTRIBUTING.md](CONTRIBUTING.md), especially **I Have EEG Data**.
+2. Open the **EEG data compatibility** issue form.
+3. Share only non-sensitive aggregate facts: format, device family, nominal
+   channels/rate, reference availability, task cohort, license, and byte cap.
+4. Run metadata-only intake locally.
+5. Reproduce the relevant format condition with a deterministic synthetic
+   fixture.
+6. Request a separately frozen bounded real-read protocol only if the synthetic
+   gate passes and the data terms permit it.
 
-- loop status and local commits
-- commands that were verified
-- managed-workstation blockers, including blocked external push/workbook paths
-- data-access guardrails
-- case-study notes and next-agent closeout steps
+Do not attach raw EEG, event files, target text, participant tables, private
+cloud links, derived embeddings, or subject-level predictions to an issue.
 
-If work is interrupted, prefer updating the journal and marking the loop
-pending over implying that a loop is complete.
+### Metadata-Only Local Intake
 
-Inspect SpanishBCBL-style paths using a local file list:
+The base command inspects structure without opening binary signal samples or
+event/target content:
 
 ```bash
-cat > /tmp/spanishbcbl_files.txt <<'EOF'
-pinet2024_public/MEG/FIF/S1/block1.fif
-pinet2024_public/MEG/logs/S1_block1.mat
-pinet2024_public/EEG/EEG/S2/eeg.vhdr
-EOF
+neurodecode inspect-recording \
+  --path /absolute/path/to/recording-or-bids-root \
+  --root /absolute/path/to/allowed-root \
+  --out-dir /absolute/path/to/private/intake-report \
+  --modality EEG \
+  --device-type "your device or amplifier"
 
-neurodecode manifest-from-paths --paths /tmp/spanishbcbl_files.txt --out /tmp/manifest.jsonl
-neurodecode inspect-manifest --manifest /tmp/manifest.jsonl
-neurodecode select-tiny --manifest /tmp/manifest.jsonl --out /tmp/tiny_selection.json --max-files 4 --max-total-gb 2
-neurodecode download-selection --selection /tmp/tiny_selection.json --local-dir data/spanishbcbl_tiny
+neurodecode inspect-intake-report \
+  --report /absolute/path/to/private/intake-report/intake.json
 ```
 
-Manifest v1 accepts plain paths, JSONL rows with `path` and optional
-`size_bytes`, or tab-separated `path<TAB>size_bytes` rows. `inspect-manifest`
-prints file-family counts, explicit parser warnings for unknown rows, and
-raw-to-log candidate pairing summaries before any download is attempted.
-`select-tiny` is safety-capped by default and writes a planned download file
-with exact paths, file-count limits, known-byte totals, and unknown-size
-warnings.
+The output includes deterministic JSON/Markdown plus a measured audit sidecar,
+relative source identity, companion validation, known/unavailable fields,
+warnings, access counters, hashes, runtime, RSS, and output bytes.
 
-Optional real Hugging Face listing, when online and authenticated if needed:
+Review it locally before sharing. Metadata can still be sensitive.
+
+### Compatibility Is Staged
+
+| Level | Evidence |
+|---:|---|
+| 0 | File family and companions recognized |
+| 1 | Bounded samples readable |
+| 2 | Channels, timing, units, geometry status, and aggregate events validated |
+| 3 | Deterministic preprocessing/replay validated |
+| 4 | Leakage-resistant classification beats registered controls |
+| 5 | Sequence metrics beat no-signal controls on a fresh split |
+| 6 | Live/replay timing and end-to-end behavior measured |
+
+A level applies only to the exact format, adapter, configuration, and evidence
+cohort tested. It does not transfer automatically to another headset, dataset,
+task, subject, or session.
+
+## I Have An EEG Headset Or Board
+
+Use the **EEG hardware qualification** issue form. Include:
+
+- model, revision, firmware, SDK, and operating system;
+- EEG/ExG channel roles, electrode placement, reference, and ground;
+- nominal and measured sampling rate;
+- raw API or file export;
+- USB, serial, BLE, Wi-Fi, LSL, XDF, or cloud transport;
+- timestamp clock, correction, packet counter, and packet-loss behavior;
+- local/offline capability and SDK license;
+- separate peripheral streams such as EOG, EMG, PPG, IMU, gaze, or audio.
+
+The preferred first result is offline replay equivalence on deterministic
+samples. A connected device or live waveform plot is not a language decoder.
+Four-channel consumer EEG is not assumed equivalent to 64-channel research EEG
+or 306-channel MEG.
+
+The current metadata device registry is
+[registries/devices.v0.json](registries/devices.v0.json). Registry presence is
+not device qualification.
+
+## Safe Workflows
+
+### RW2 Synthetic Signal-Quality Roundtrip
+
+This workflow requires `.[neuro]`, reads no participant data, and creates less
+than the frozen 16 MiB fixture/report cap:
 
 ```bash
-pip install -e '.[hf]'
-neurodecode list-hf-files --repo-id bcbl190626/SpanishBCBL --out data/spanishbcbl_files.txt
-neurodecode manifest-from-paths --paths data/spanishbcbl_files.txt --out data/spanishbcbl_manifest.jsonl
-neurodecode select-tiny --manifest data/spanishbcbl_manifest.jsonl --out data/tiny_selection.json --max-files 4 --max-total-gb 2
-neurodecode download-selection --selection data/tiny_selection.json --local-dir data/spanishbcbl_tiny  # dry-run by default
+export OMP_NUM_THREADS=1
+export OPENBLAS_NUM_THREADS=1
+export MKL_NUM_THREADS=1
+export NUMEXPR_NUM_THREADS=1
+export VECLIB_MAXIMUM_THREADS=1
+
+neurodecode make-signal-quality-fixtures \
+  --out-dir cache/rw2-fixtures \
+  --contract registries/signal_quality_contract.v0.json
+
+neurodecode inspect-signal-quality-fixtures \
+  --manifest cache/rw2-fixtures/signal_quality_fixtures.json
+
+neurodecode inspect-signal-quality \
+  --path cache/rw2-fixtures/fixtures/clean_multitype_continuous__fif/source/recording_raw.fif \
+  --root cache/rw2-fixtures \
+  --intake-report cache/rw2-fixtures/fixtures/clean_multitype_continuous__fif/intake/intake.json \
+  --fixture-manifest cache/rw2-fixtures/signal_quality_fixtures.json \
+  --contract registries/signal_quality_contract.v0.json \
+  --out-dir cache/rw2-quality
+
+neurodecode inspect-signal-quality-report \
+  --report cache/rw2-quality/signal_quality.json
 ```
 
-To actually download the selected files, first read the dry-run plan. Then run:
+RW2 reports descriptive time-domain and Welch PSD summaries, units, geometry
+availability, reference status, aggregate annotation status, source filters and
+projectors, bounded windows, access counts, resource measurements, warnings,
+and no-mutation identity. It performs no filtering, rereferencing, bad-channel
+repair, interpolation, ICA, clipping, scaling, model run, or training.
+
+RW2 is a synthetic reader and report-interface proof. It says nothing about the
+quality of a person's recording.
+
+### Dataset Manifest Without Download
+
+Build and inspect a manifest from an existing path list:
 
 ```bash
-neurodecode download-selection --selection data/tiny_selection.json --local-dir data/spanishbcbl_tiny --execute
+neurodecode manifest-from-paths \
+  --paths data/file_list.txt \
+  --out data/manifest.jsonl
+
+neurodecode inspect-manifest \
+  --manifest data/manifest.jsonl
+
+neurodecode select-tiny \
+  --manifest data/manifest.jsonl \
+  --out data/tiny_selection.json \
+  --modality EEG \
+  --blocks 1 \
+  --max-files 4 \
+  --max-total-gb 1
 ```
 
-If the manifest did not contain file sizes, `--execute` fails safely until you
-either rebuild the manifest with sizes or add `--allow-unknown-size` after
-reviewing the exact file list and file-count cap.
+`select-tiny` records exact paths, known bytes, unknown-size warnings,
+revision, and caps.
 
-## Real window extraction from one downloaded block
+### Selective Download Is Dry-Run First
 
-Once you have explicitly downloaded one `.fif` block and one matching `.mat`
-behavior/log file, install the optional neuro dependencies and extract a tiny
-event-aligned cache:
+Hugging Face access is optional:
 
 ```bash
-pip install -e '.[neuro]'
+python -m pip install -e '.[hf]'
+
+neurodecode download-selection \
+  --selection data/tiny_selection.json \
+  --local-dir data/spanishbcbl_tiny
+```
+
+That command does not download by default. `--execute` is required, unknown
+sizes fail closed unless explicitly allowed after review, and the default worker
+count is one.
+
+Do not use this example as authorization to download SpanishBCBL. Check the
+dataset license, exact revision, local disk, protocol, and approval boundary.
+
+### Event-Window Extraction
+
+For an explicitly acquired, legally usable, validated FIF/MAT pair:
+
+```bash
+python -m pip install -e '.[neuro]'
 
 neurodecode extract-windows \
   --raw data/spanishbcbl_tiny/.../block1.fif \
-  --events data/spanishbcbl_tiny/.../S1_block1.mat \
+  --events data/spanishbcbl_tiny/.../logs.mat \
   --out cache/b2qmini_s1_block1.npz \
   --sfreq 50 \
   --tmin -0.2 \
@@ -163,73 +366,15 @@ neurodecode extract-windows \
   --max-events 200
 ```
 
-`extract-windows` does not download anything. It only reads the two paths you
-provide. The command reports events found, events kept, edge/max-event drops,
-output shape, sampling rate, channel count, raw file size, output cache size,
-and parser warnings.
+This command does not download data. It reports source bytes, events found,
+kept and dropped events, shape, rate, channels, parser warnings, runtime, and
+output bytes.
 
-The `.npz` cache contains:
+Generic MAT schemas do not inherit the validated S21 trial-ordering claim.
 
-```text
-windows            [events, channels, timepoints] float32
-labels             per-event labels when parsed, blank otherwise
-event_start_sec    event timestamps in seconds
-event_source_index source row/index from the parsed log
-channel_names      channel names after picking/resampling
-metadata           JSON with source paths, extraction params, parser notes
-```
+### Honest Baselines
 
-All current caches are written as B2Q-mini cache schema v0. The stable loader:
-
-```bash
-neurodecode load-cache --cache cache/b2qmini_s1_block1.npz --metadata-out cache/b2qmini_s1_block1.metadata.json
-```
-
-prints shape, dtype, label coverage, source files, warnings, and the
-transformation trail. The optional JSON sidecar is intended for quick review and
-experiment reports; the `.npz` remains the source of truth.
-
-## Metrics and reports
-
-Loop 5 is closed. The `neurodecode report` implementation and tests are present,
-and the closeout verification passed on 2026-07-01.
-
-Write a report from one-target-per-line text files:
-
-```bash
-neurodecode report \
-  --targets cache/targets.txt \
-  --predictions cache/predictions.txt \
-  --cache cache/b2qmini_s1_block1.npz \
-  --out-json outputs/run_001/metrics.json \
-  --out-md outputs/run_001/report.md \
-  --run-name run_001 \
-  --split synthetic-smoke
-```
-
-The report includes CER, WER, exact-match rate, keyboard-distance diagnostics,
-example rows, cache/storage metadata when provided, runtime, and warnings. A
-real neural result should always be compared against a no-brain baseline in a
-later report.
-
-Synthetic report smoke path:
-
-```bash
-neurodecode make-synthetic-shard --out cache/synthetic_tiny.npz --samples 32 --channels 4 --times 12
-neurodecode report \
-  --cache cache/synthetic_tiny.npz \
-  --identity-smoke \
-  --out-json cache/synthetic_report.json \
-  --out-md cache/synthetic_report.md \
-  --run-name synthetic_identity_smoke \
-  --split synthetic-smoke
-```
-
-`--identity-smoke` copies cache labels into predictions and emits an explicit
-warning. It is useful for proving report plumbing, but it is not a decoder or a
-baseline result.
-
-Run the no-brain prior-only baseline:
+Run the no-brain comparator before interpreting a neural model:
 
 ```bash
 neurodecode prior-baseline \
@@ -237,577 +382,261 @@ neurodecode prior-baseline \
   --out-predictions cache/prior_predictions.txt \
   --out-json cache/prior_report.json \
   --out-md cache/prior_report.md \
-  --run-name synthetic_prior_most_frequent \
+  --run-name synthetic_prior \
   --split synthetic-smoke
-```
 
-`prior-baseline` deliberately ignores neural windows. It predicts from target
-priors only and writes the same report format, with explicit warnings that no
-neural signal was used. For real experiments, pass `--train-targets` or
-`--train-cache` so the prior is fit on training labels rather than eval labels.
-
-Run the tiny neural-window template baseline:
-
-```bash
 neurodecode template-baseline \
   --cache cache/synthetic_tiny.npz \
   --train-fraction 0.5 \
   --out-predictions cache/template_predictions.txt \
   --out-json cache/template_report.json \
   --out-md cache/template_report.md \
-  --run-name synthetic_template_nearest_centroid \
+  --run-name synthetic_template \
   --split synthetic-holdout
 ```
 
-`template-baseline` uses cache windows, but no deep learning. With one cache it
-creates a deterministic stratified holdout split; for cleaner real experiments,
-use `--train-cache` and `--eval-cache`.
-
-Run the optional tiny ConvNet neural-window baseline:
-
-```bash
-pip install -e ".[ml]"
-
-neurodecode tiny-conv-baseline \
-  --cache cache/synthetic_tiny.npz \
-  --train-fraction 0.75 \
-  --epochs 30 \
-  --batch-size 16 \
-  --learning-rate 0.02 \
-  --out-predictions cache/tiny_conv_predictions.txt \
-  --out-json cache/tiny_conv_report.json \
-  --out-md cache/tiny_conv_report.md \
-  --run-name synthetic_tiny_conv \
-  --split synthetic-holdout
-```
-
-`tiny-conv-baseline` is behind the optional `ml` extra because it uses PyTorch.
-It defaults to CPU and one Torch thread. The command is a smoke baseline for
-tiny caches, not a production decoder. On a base install it should fail with a
-clear `pip install -e '.[ml]'` message.
-
-## Continuous sentence CTC
-
-Loop 9 adds a separate variable-length sentence cache and optional CTC model.
-The synthetic path requires no neuroimaging files:
-
-```bash
-neurodecode make-synthetic-sentence-cache \
-  --out cache/loop9_synthetic_sentences.npz \
-  --sentences 96 \
-  --channels 6
-
-neurodecode tiny-ctc-baseline \
-  --cache cache/loop9_synthetic_sentences.npz \
-  --epochs 60 \
-  --num-threads 1 \
-  --out-json cache/loop9_synthetic_ctc_report.json \
-  --out-md cache/loop9_synthetic_ctc_report.md
-```
-
-The CTC report always includes a no-brain prior comparator. Synthetic token
-pulses are intentionally easy and validate only sequence plumbing.
-
-For one already downloaded and alignment-validated FIF/MAT pair:
-
-```bash
-neurodecode extract-sentence-cache \
-  --raw data/spanishbcbl_tiny/.../block1.fif \
-  --events data/spanishbcbl_tiny/.../block1_list1.mat \
-  --out cache/b2qsentence_s1_block1_16ch_100hz.npz \
-  --sfreq 100 \
-  --picks meg \
-  --max-channels 16
-
-neurodecode inspect-sentence-cache \
-  --cache cache/b2qsentence_s1_block1_16ch_100hz.npz \
-  --metadata-out cache/b2qsentence_s1_block1_16ch_100hz.metadata.json
-```
-
-This extraction uses first key through ENTER with context, 0.5-45 Hz filtering,
-a 50 Hz notch, 100 Hz resampling, robust scaling, and explicit input/target
-lengths. It does not download data and it does not turn one block into an
-honest train/eval result. See `docs/LOOP_09_CONTINUOUS_SENTENCE_CTC.md`.
-
-## Sampling-rate sweep
-
-Loop 10 compares independent 100/50/25 Hz sentence-cache extractions without
-training on the single real block:
-
-```bash
-neurodecode sampling-rate-sweep \
-  --raw data/spanishbcbl_tiny/.../block1.fif \
-  --events data/spanishbcbl_tiny/.../block1_list1.mat \
-  --out-dir cache/loop10_s21_sampling_rate_sweep \
-  --rates 100 50 25 \
-  --picks meg \
-  --max-channels 16
-```
-
-Rates run sequentially in isolated one-thread processes. The JSON/Markdown
-report verifies exact trial/text/channel identity and compares bytes, runtime,
-peak RSS, effective bandwidth, timing quantization, signal summaries, and exact
-CTC length margins. The real S21 result reduces cache bytes to 50.9% at 50 Hz
-and 25.9% at 25 Hz, but it intentionally selects no rate without a second
-block/session accuracy protocol. The exact official v2 kernel-16, stride-4
-temporal reducer is CTC-length feasible for all 66 rows at 100 and 50 Hz, but
-none at 25 Hz; a 25 Hz branch needs an architecture change. See
-`docs/LOOP_10_SAMPLING_RATE_SWEEP.md`.
-
-## Channel/sensor subset sweep
-
-Loop 11 replaces the arbitrary first-channel smoke subset with a geometry-aware
-102-magnetometer base and cache-only nested subset comparisons:
-
-```bash
-neurodecode extract-sentence-cache \
-  --raw data/spanishbcbl_tiny/.../block1.fif \
-  --events data/spanishbcbl_tiny/.../block1_list1.mat \
-  --out cache/loop11_s21_channel_subset/base_102mag_100hz.npz \
-  --sfreq 100 \
-  --picks mag \
-  --max-channels 102
-
-neurodecode channel-subset-sweep \
-  --cache cache/loop11_s21_channel_subset/base_102mag_100hz.npz \
-  --out-dir cache/loop11_s21_channel_subset/subsets \
-  --counts 76 51 25 16 8 \
-  --strategies spatial-fps variance random first \
-  --seed 17 \
-  --max-output-mb 128
-```
-
-The real S21 run writes 20 validated subset caches plus metadata sidecars in
-70.3 MiB. Spatial farthest-point sampling has the best whole-array coverage at
-every count; same-block variance ranking retains the largest post-scaling
-marginal variance share. At 16 channels their overlap is only 2 channels, so
-both remain candidates for a future held-out decoder test. No channel count,
-CER/WER result, anatomical ROI, or OPM-equivalence claim is made. See
-`docs/LOOP_11_CHANNEL_SENSOR_SUBSET_SWEEP.md`.
-
-## Precision/storage sweep
-
-Loop 12 compares five physical signal representations on the fixed 102-
-magnetometer base plus the FPS-16 and variance-16 candidates. It does not
-download data or train a decoder:
-
-```bash
-neurodecode precision-storage-sweep \
-  --cache \
-    cache/loop11_s21_channel_subset/base_102mag_100hz.npz \
-    cache/loop11_s21_channel_subset/subsets/subset_spatial-fps_16ch.npz \
-    cache/loop11_s21_channel_subset/subsets/subset_variance_16ch.npz \
-  --out-dir cache/loop12_s21_precision_storage \
-  --variants float32 float16 bfloat16 qint16 qint8 \
-  --clip-abs 5 \
-  --repetitions 3 \
-  --max-output-mb 96
-```
-
-The real run writes 15 validated representation caches plus inspectable
-sidecars in 34.4 MiB. Qint16 is about 50% smaller than the float32
-representation with at most 0.0037% relative RMSE; qint8 is about 81% smaller
-with at most 0.9531% relative RMSE. All non-signal arrays, semantic metadata,
-shapes, and zero padding match exactly, and no source value falls outside the
-fixed integer range. Float32 remains the default because reconstruction
-fidelity is not retained CER/WER. Packed caches decode to float32 for the
-current model interface, so this is storage/load evidence, not integer-only
-inference. See `docs/LOOP_12_PRECISION_STORAGE_SWEEP.md`.
-
-## Lazy-backend gate
-
-Loop 13 measures whether current NPZ access justifies another cache backend.
-It reuses nine real standard/packed S21 caches and runs complete, 1-row, and
-8-row access in isolated one-thread workers:
-
-```bash
-neurodecode lazy-backend-gate \
-  --cache cache/loop11_s21_channel_subset/base_102mag_100hz.npz \
-          cache/loop12_s21_precision_storage/base_102mag_100hz__qint16.npz \
-          cache/loop12_s21_precision_storage/base_102mag_100hz__qint8.npz \
-  --out-dir cache/loop13_lazy_backend_gate
-```
-
-The largest tested cache is 10.1 MiB, the slowest full-load median is 60.386
-ms, the slowest partial median is 53.634 ms, and the highest worker peak RSS is
-140.6 MiB. Every decoded-signal hash matches exactly. NPZ partial access is
-relatively inefficient because the complete compressed signal member is
-materialized before slicing, but current absolute costs remain below the
-declared budgets. Zarr was not installed or benchmarked. Keep bounded per-block
-NPZ files and revisit a chunked backend only when a recorded threshold or
-repeated subarray workflow is reached. See
-`docs/LOOP_13_LAZY_BACKEND_GATE.md`.
-
-## Split protocol v1
-
-Loop 14 mirrors
-the released Brain2Qwerty v2 deterministic sentence-text assignment while
-recording the exact algorithm, ratios, float seed, text-normalization mode,
-and stable membership hashes. It now assigns membership before robust scaling
-and fits scaler statistics on train sentence rows only:
-
-```bash
-neurodecode extract-sentence-cache \
-  --raw data/spanishbcbl_tiny/MEG/FIF/21_3660/231204/block1.fif \
-  --events data/spanishbcbl_tiny/MEG/logs/S21-session1_block1_list1.mat \
-  --out cache/loop14_s21_split_aware/base_102mag_100hz_trainfit.npz \
-  --picks mag --max-channels 102 \
-  --scaler-fit-scope train \
-  --split-text-normalization official-exact
-```
-
-The current 66 unique reference texts partition into 55 train, 6 validation,
-and 5 test rows with zero requested-group or canonical-text crossings. The
-replacement cache passes strict fit-scope validation. A signal-free prior and
-one fixed 2,908-parameter CTC run use exactly the same membership. Test CER is
-0.9535 for the prior and 0.9477 for CTC, a one-character difference whose
-paired 95% interval spans -0.1973 to +0.1307. This near-null five-row result is
-not a neural advantage or generalization claim. See
-`docs/LOOP_14_SPLIT_PROTOCOL_V1.md`.
-
-## Same-subject cross-session gate
-
-Loop 15 Stage A safely acquires S21 session 2 as one complete split FIFF
-recording plus its MAT log. The pinned three-file plan is 2,516,384,765 bytes,
-uses one download worker, and remains far below a full-dataset snapshot. The
-selector now supports `--session`, includes required FIFF continuations, and
-records an immutable Hub revision.
-
-The MAT log has 66 planned slots but three explicitly empty `keyTrig`/response
-rows at trials 54, 58, and 60. The raw stream has 63 completed trials. The
-extractor now maps raw rows to nonempty MAT slots in order, preserves the
-gapped trial IDs, and records trigger-timing evidence instead of forcing equal
-counts or fuzzy text order.
-
-```bash
-neurodecode apply-frozen-scaler \
-  --source-cache cache/loop15_s21_cross_session/session2_unscaled_102mag_100hz.npz \
-  --fit-cache cache/loop14_s21_split_aware/base_102mag_100hz_trainfit.npz \
-  --out cache/loop15_s21_cross_session/session2_session1_train_scaled_102mag_100hz.npz
-
-neurodecode cross-session-ctc \
-  --train-cache cache/loop14_s21_split_aware/base_102mag_100hz_trainfit.npz \
-  --train-split-report cache/loop14_s21_split_aware/split/split.json \
-  --eval-cache cache/loop15_s21_cross_session/session2_session1_train_scaled_102mag_100hz.npz \
-  --num-threads 1 --max-restarts 1
-```
-
-The session-2 cache uses the exact 102 source channel names and preprocessing,
-but its robust scaling comes only from the 55 session-1 train rows. Six source
-validation and five source test rows remain unused. On all 63 performed
-session-2 trials, the fixed tiny CTC records corpus CER 0.9179 versus 0.7755 for
-the signal-free prior. The paired tiny-minus-prior interval is +0.1194 to
-+0.1661. This is a clear negative generalization result. Session 2 is now a
-consumed evaluation set and must not be used for adapter tuning. See
-`docs/LOOP_15_SAME_SUBJECT_CROSS_SESSION.md`.
-
-Loop 15 Stage B closes the synthetic adapter gate without opening either real
-holdout. The `synthetic-adapter-gate` command creates a deterministic diagonal
-gain/offset shift, fits an unlabeled per-channel median/IQR map on synthetic
-calibration signals, selects identity versus adaptation on validation, and
-evaluates the selected contract on a frozen synthetic holdout beside the
-no-signal prior.
-
-```bash
-neurodecode synthetic-adapter-gate \
-  --out-dir cache/loop15_synthetic_adapter_gate \
-  --sentences 96 --channels 6 --letter-classes 4 \
-  --seed 23 --epochs 50 --num-threads 1 \
-  --min-validation-cer-gain 0.10 --bootstrap-iterations 2000
-```
-
-The fixed gate selects robust channel-affine normalization: holdout CER moves
-from 0.3448 to 0.0000 while the no-signal prior is 0.5776. This is a best-case
-synthetic affine inversion, not real-MEG adapter evidence. See
-`docs/LOOP_15_STAGE_B_SYNTHETIC_ADAPTER.md`.
-
-Loop 16 measures that adapter across six nested calibration sizes, three shift
-seeds, an independent unlabeled calibration pool, and three shift families.
-The multi-view CTC path fits once for all validation views and replays once for
-the post-selection holdout rather than retraining for every point.
-
-```bash
-neurodecode synthetic-calibration-curve \
-  --out-dir cache/loop16_synthetic_calibration_curve \
-  --sentences 96 --calibration-sentences 48 \
-  --calibration-sizes 1,2,4,8,16,32 \
-  --shift-seeds 101,211,307 --epochs 50 --num-threads 1
-```
-
-The registered median rule selects one synthetic sentence (`1.26` seconds) for
-the stationary diagonal shift. On holdout, median identity/adapted CER is
-`0.4224/0.2328`, but only two seeds improve and one ties. The same adapter is
-harmful under channel mixing (`0.5690/0.8621`) and within-row drift
-(`0.4397/0.6034`). The one-row result is not a human calibration estimate and
-does not authorize real-session evaluation. See
-`docs/LOOP_16_SYNTHETIC_CALIBRATION_CURVE.md`.
-
-Loop 17 packages those compact artifacts into an honest local Gradio console.
-It validates cache/report/prediction agreement, shows 19 held-out synthetic
-examples with signal traces and editable CER/WER inspection, keeps real results
-aggregate-only, exposes all source hashes, and labels predictive confidence
-unavailable. The final startup audit passes 8/8 checks in 1.644 seconds at a
-224,837,632-byte peak RSS; desktop and mobile interaction QA pass with no
-browser-console errors. Launching the demo performs no raw-data read, network
-fetch, real model run, or cache write. See
-`docs/LOOP_17_HONEST_LOCAL_DEMO.md`.
-
-Loop 18 standardizes existing saved results as versioned, deterministic report
-cards and cohort-local leaderboard rows. It reads compact JSON reports only:
-no raw data, cache array, model, network, or observed holdout is opened.
-
-```bash
-neurodecode build-leaderboard \
-  --spec configs/loop18_leaderboard.json \
-  --project-root . \
-  --out-dir cache/loop18_leaderboard \
-  --max-cards 16 --max-output-mb 2
-```
-
-The build emits 11 cards across six exact cohorts and four method families.
-Only four internally comparable cohorts receive ranks; event-level holdout and
-fit-on-eval smoke results remain separate, and no global winner is calculated.
-SemER, cache hashes, method-specific resources, uncertainty, or code versions
-that historical reports did not record are explicitly flagged as missing.
-The deterministic core contains 58 files and reproduces byte-for-byte; the
-complete output is 103,789 bytes. See
-`docs/LOOP_18_VERSIONED_REPORT_CARDS.md`.
-
-Loop 19 adds a bounded native BrainVision EEG path without installing MOABB or
-downloading the 12.79-GB EEG subtree. A metadata-only gate pins the dataset
-revision, requires a complete `.vhdr/.eeg/.vmrk` triplet plus exact MAT log,
-and selects one 94,842,381-byte S7 bundle under a 128-MiB cap.
-
-```bash
-neurodecode eeg-bridge-gate \
-  --manifest cache/loop19_eeg_bridge/manifest.jsonl \
-  --out-dir cache/loop19_eeg_bridge/gate \
-  --revision 88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684 \
-  --max-download-mb 128
-
-neurodecode extract-eeg-windows \
-  --raw data/spanishbcbl_eeg_tiny/EEG/EEG/007_DECOMEG_S2_9910_task1.vhdr \
-  --events data/spanishbcbl_eeg_tiny/EEG/logs/S7_session2_block1_list1.mat \
-  --out cache/loop19_eeg_bridge/s7_session2_block1_61eeg_50hz.npz \
-  --sfreq 50 --tmin -0.2 --tmax 0.3 --max-output-mb 32
-```
-
-The lazy extractor aligns all 2,534 MAT trigger codes to raw annotations with a
-2.024-ms median absolute residual, then writes 2,197 key windows shaped
-`61 x 25` in 12,428,800 bytes. The first within-session nearest-centroid result
-is negative: exact label accuracy is 0.91% versus 12.27% for a train-only
-no-signal prior. Text CER is explicitly non-primary for key tokens such as
-`SPACE`. EEG and MEG remain separate evidence cohorts. See
-`docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md`.
-
-Loop 20 adds `NeuroTokenCache v0`, a modality-aware continuous embedding
-contract shaped `[items,time,embedding]`. It preserves lengths, masks, frame
-timestamps, source rows/trials, subject/session IDs, modality, sampling rate,
-channel geometry plus availability, strict split/source hashes, resource caps,
-and separate asynchronous/producer-causal/end-to-end-latency fields. The
-bounded smoke uses only synthetic signals and a deterministic target-free
-projection:
-
-```bash
-neurodecode make-neurotoken-cache \
-  --source-cache cache/loop20_neurotoken/source_sentences.npz \
-  --split-report cache/loop20_neurotoken/split/split.json \
-  --out cache/loop20_neurotoken/neurotokens_v0.npz \
-  --metadata-out cache/loop20_neurotoken/neurotokens_v0.metadata.json \
-  --summary-json cache/loop20_neurotoken/neurotokens_v0.summary.json \
-  --modality synthetic --device-type synthetic-array \
-  --subject-id SYN-1 --session-id SESSION-1 \
-  --embedding-dim 32 --kernel-size 16 --stride 4 \
-  --max-items 64 --max-tokens-per-item 128 --max-output-mb 4
-```
-
-The result is a 76,646-byte `48 x 16 x 32` cache with exact numerical-payload
-replay and zero model, training, real-data, or holdout reads. A post-closeout
-access audit now records the seven signal/provenance NPZ members opened and
-proves that all five source target members remain unopened. These are mock
-continuous embeddings, not learned neurotokens, a decoder score, or a measured
-streaming system. See `docs/LOOP_20_NEUROTOKEN_CACHE_V0.md`.
-
-Loop 21 adds the first actual incremental producer contract. One fixed
-target-free projector consumes `[channels,new_samples]` chunks, emits only
-complete causal frames, keeps fewer than one kernel of overlap, and flushes
-without inventing a padded token. The audit runs single-sample,
-stride-aligned, kernel-then-stride, jittered, and whole-item schedules:
-
-```bash
-OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
-VECLIB_MAXIMUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
-neurodecode causal-replay-gate \
-  --source-cache cache/loop20_neurotoken/source_sentences.npz \
-  --out-json cache/loop21_causal_replay/gate.json \
-  --out-md cache/loop21_causal_replay/gate.md \
-  --max-source-mb 1 --max-state-kib 1 --max-working-mb 4
-```
-
-All five schedules reproduce the same 553-frame canonical payload bitwise with
-zero right context and at most 300 bytes of mutable state. The established
-Loop 20 batched arithmetic differs by at most `9.536743e-7`, inside the
-declared `1e-6` compatibility tolerance, while timestamps and frame indices
-are exact. Stride-aligned chunks add no scheduling delay; jittered chunks add
-up to 140 ms and whole-item delivery up to 610 ms. No decoder ran, so text
-emission and end-to-end latency remain unmeasured. See
-`docs/LOOP_21_CAUSAL_CHUNK_REPLAY.md` and `docs/POST_20_ROADMAP.md`.
-
-Loop 22 adds the first learned causal producer, but only on a preregistered
-synthetic motif task. It creates physically separate hash-bound partitions,
-fits train-only normalization and one 1,130-parameter window encoder, selects
-one checkpoint on validation, and opens the frozen test exactly once:
-
-```bash
-neurodecode make-causal-motif-fixture \
-  --out-dir cache/loop22_tiny_causal_encoder/fixture --max-total-mb 1
-
-neurodecode inspect-causal-motif-fixture \
-  --manifest cache/loop22_tiny_causal_encoder/fixture/manifest.json
-
-OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
-VECLIB_MAXIMUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
-neurodecode tiny-causal-encoder-gate \
-  --fixture-manifest cache/loop22_tiny_causal_encoder/fixture/manifest.json \
-  --checkpoint-out cache/loop22_tiny_causal_encoder/checkpoint.npz \
-  --out-json cache/loop22_tiny_causal_encoder/gate.json \
-  --out-md cache/loop22_tiny_causal_encoder/gate.md
-```
-
-The registered validation and one-time test both reach 1.0 motif balanced
-accuracy versus 0.166667 for the signal-free controls. All five transport
-schedules reproduce the 161 validation embeddings bitwise with zero right
-context and 300-byte mutable state. The complete fixture is 152,783 bytes; the
-checkpoint and reports total 44,201 bytes; external gate time/RSS are 5.50
-seconds and 313,982,976 bytes. This intentionally easy synthetic classification
-task is not CTC, text, MEG/EEG decoding, or end-to-end real-time evidence. See
-`docs/LOOP_22_TINY_CAUSAL_ENCODER.md`.
-
-Loop 23 implements that preregistered fresh 48/8/8 synthetic gate with correct
-CTC blank/repeat semantics, greedy and language-model-free width-8 prefix
-decoders, partial timing/stability metrics, two signal-free controls, and
-one-time test access. Validation passes, but the frozen test reaches only 5/8
-exact sequences against the required 6/8 despite CER 0.0545 and 10/10 repeated
-pairs. Every error is the complete target plus one false tail symbol. Loop 23
-is parked and seed 2303 is consumed. See
-`docs/LOOP_23_STREAMING_CTC_DECODER.md`.
-
-Loop 23.5 completes that preregistered fresh-split test. One scalar blank-logit
-intercept fitted on train-frame labels changes validation from 6/16 to 16/16
-exact and the once-opened seed-2353 test from 7/16 to 16/16 exact, with test CER
-falling from 0.0818 to 0. Nine test items are corrected, no item worsens, and
-all calibration, control, bootstrap, access, resource, and 5/5 replay gates
-pass. Seed 2353 is consumed. This supervised synthetic correction is not a
-learned representation, endpoint, natural-text result, or neural-decoding
-result. See `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`.
-
-Loop 5 closeout checks:
-
-```bash
-python -m unittest tests.test_report tests.test_cli_report
-python -m unittest discover -s tests
-neurodecode report --help
-```
-
-Closeout smoke artifact:
-
-```bash
-neurodecode make-synthetic-shard --out cache/loop5_synthetic_tiny.npz --samples 32 --channels 4 --times 12
-neurodecode report \
-  --cache cache/loop5_synthetic_tiny.npz \
-  --identity-smoke \
-  --out-json cache/loop5_synthetic_report.json \
-  --out-md cache/loop5_synthetic_report.md \
-  --run-name loop5_synthetic_identity_smoke \
-  --split synthetic-smoke
-```
-
-Current limitations:
-
-- The inspected S21 sentence path maps raw rows to nonempty MAT `keyTrig` slots
-  and fails closed on unreconciled counts. Unknown MAT schemas still use the
-  generic heuristic parser and must not inherit S21's validation claim.
-- Generic event-window labels may remain blank when an unsupported log lacks a
-  clear target field; the two validated S21 sentence caches have explicit
-  target, response, trial-map, and timing provenance.
-- Event-window extraction remains minimally processed; sentence extraction has
-  filtering and robust scaling but no automated artifact rejection.
-- The first neural-window classifier is a nearest-centroid template baseline;
-  it is transparent and intentionally small. On the Loop 19 EEG event holdout,
-  its 0.91% key-label accuracy is worse than the 12.27% train-only prior.
-- The EEG cache is minimally processed: named EOG channels are excluded, but
-  filtering, rereferencing, bad-channel repair, ICA, and artifact rejection are
-  not implemented. Its within-session event split is not a generalization test.
-- The tiny ConvNet baseline is optional and requires `pip install -e ".[ml]"`.
-  It should be compared against the prior-only and template baselines before any
-  performance claim.
-- `.npz` remains the measured default for current bounded caches. Zarr is a
-  conditional option only when a recorded size, latency, memory, or repeated
-  subarray-access trigger is reached.
-- The tiny CTC is non-causal and not a real-time decoder. Its first strict real
-  five-row test is near-null, and its independent-session result is materially
-  worse than the prior.
-- NeuroTokenCache v0 validates an embedding interface, not representation
-  quality. Its Loop 20 vectors are deterministic random projections from
-  synthetic signals; producer causality and 160-ms frame availability do not
-  establish downstream-decoder causality or end-to-end latency.
-- Loop 21 proves bounded causal frame production only. Its compute RTF excludes
-  sensor capture, preprocessing, learned encoding, text decoding, hypothesis
-  stabilization, rendering, and device scheduling; it is not an end-to-end
-  real-time benchmark.
-- Loop 22 proves that one tiny model can learn an obvious generated motif task
-  while preserving that stream contract. Its perfect synthetic score does not
-  measure neural representation quality, character decoding, or user latency;
-  the registered test is consumed and cannot become a tuning set.
-- Loop 23 proves incremental CTC mechanics, bounded state, controls, and exact
-  five-schedule replay on synthetic symbols, but fails its frozen
-  exact-sequence gate because of stable false tail emissions. Seed 2303 is
-  consumed; no trimming, calibration, or endpoint rule may be selected from it.
-- Loop 23.5 passes a fresh synthetic correctness gate with one supervised
-  train-frame blank intercept. The result does not rehabilitate seed 2303,
-  establish a real-neural decoder, or measure endpointing or end-to-end
-  latency. Seed 2353 is consumed and may not select Loop 24 candidates.
-- The local demo displays synthetic example text and aggregate-only real
-  metrics. It is an evidence console, not a live real-MEG decoder; predictive
-  confidence remains unavailable.
-- Two S21 sessions are now validated for a same-subject session holdout. This
-  does not establish unseen-person or population generalization, and session 2
-  must not become a tuning set after its result was observed.
-- Train-only robust scaling now passes on the fixed 102-channel base. The older
-  recording-scaled and variance-selected caches remain unsuitable for strict
-  candidate scoring until their data-dependent steps are train-only.
-- Lower sampling rates are resource variants, not accuracy results; 25 Hz also
-  limits effective bandwidth to 12.5 Hz and coarsens boundaries to a 40 ms grid.
-- Channel subsets are resource/geometry proxies, not retained-accuracy
-  results. Variance selection is fit on the same S21 block, device-coordinate
-  coverage is not cortical localization, and magnetometer-only subsets are not
-  equivalent to an OPM helmet.
-
-## Why this wedge matters
-
-Brain2Qwerty v1/v2 are exciting, but the current practical barrier is large:
-the public v1 SpanishBCBL dataset is around 262GB, while the v2 code is public
-but the EnglishBCBL dataset remains under embargo. A developer-access layer can
-create real leverage by giving people tiny curated shards, event-aligned
-windows, reproducible baselines, and clear metrics before they ever touch the
-full data.
-
-## Non-goals for v0
-
-- No clinical claims.
-- No consumer EEG hype.
-- No attempt to identify people from neural data.
-- No full Brain2Qwerty v2 reproduction until v2 data is public.
-- No commercial use of CC BY-NC data unless rights are separately cleared.
-
-## First useful milestone
-
-**B2Q-mini v0:** one participant, one MEG block, downsampled/cacheable event windows, one tiny baseline, and one report with CER/WER + storage footprint.
-
-Success looks like this:
+Synthetic separability proves plumbing and model mechanics only. A real neural
+result must use train-only fitting, frozen split identity, a no-signal prior,
+and uncertainty appropriate to the evaluation unit.
+
+## CLI Map
+
+The CLI intentionally exposes small auditable stages:
+
+| Area | Commands |
+|---|---|
+| Text metrics/reports | `eval-text`, `report`, `build-leaderboard` |
+| No-signal/small baselines | `prior-baseline`, `sentence-prior-baseline`, `template-baseline`, `tiny-conv-baseline` |
+| Discovery/download | `manifest-from-paths`, `inspect-manifest`, `select-tiny`, `list-hf-files`, `download-selection` |
+| Local intake | `inspect-recording`, `inspect-intake-report` |
+| Synthetic quality | `make-signal-quality-fixtures`, `inspect-signal-quality-fixtures`, `inspect-signal-quality`, `inspect-signal-quality-report` |
+| Event/sentence extraction | `extract-windows`, `extract-eeg-windows`, `extract-sentence-cache`, `align-sequences` |
+| Cache interfaces | `make-synthetic-shard`, `load-cache`, `make-synthetic-sentence-cache`, `inspect-sentence-cache`, `make-neurotoken-cache`, `inspect-neurotoken-cache` |
+| Split/session controls | `split-protocol`, `apply-frozen-scaler`, `cross-session-ctc` |
+| Resource experiments | `sampling-rate-sweep`, `channel-subset-sweep`, `precision-storage-sweep`, `inspect-representation-cache`, `lazy-backend-gate` |
+| Synthetic causal gates | `causal-replay-gate`, `make-causal-motif-fixture`, `tiny-causal-encoder-gate`, `make-ctc-symbol-stream-fixture`, `streaming-ctc-gate`, `make-blank-calibration-fixture`, `blank-intercept-gate` |
+| Research/demo | `eeg-bridge-gate`, `synthetic-adapter-gate`, `synthetic-calibration-curve`, `demo` |
+
+Use `neurodecode COMMAND --help` for exact arguments and safety defaults.
+
+## Architecture
 
 ```text
-A new builder can run a real or synthetic end-to-end loop in minutes,
-see where errors come from,
-and know exactly what to try next.
+src/neurodecodekit/
+  datasets/       manifests, local intake, safe selection, optional Hub access
+  preprocess/     format readers, event alignment, window/sentence extraction
+  cache/          NPZ schemas, packed representations, NeuroToken interfaces
+  models/         prior, template, tiny Conv/CTC, causal encoder components
+  training/       deterministic synthetic fixtures and bounded runners
+  evaluation/     CER/WER, controls, reports, splits, uncertainty, report cards
+  experiments/    preregistered resource, session, causal, and EEG gates
+  demo/           artifact-backed local evidence console
 ```
+
+The CLI defers heavy imports into individual commands. Source modules use strict
+schemas and dataclasses where structured records cross boundaries.
+
+## Stable Interfaces
+
+### B2Q-Mini Event Cache v0
+
+An event cache stores:
+
+```text
+windows             [events, channels, timepoints]
+labels              per-event labels when validated
+event_start_sec     event timing
+event_source_index  source row or trigger identity
+channel_names       ordered selected channels
+metadata            schema, source, transforms, warnings, hashes
+```
+
+### Continuous Sentence Cache v0
+
+Sentence caches preserve variable true lengths, trial identity, target/response
+provenance, source sampling rate, channel order, geometry availability, split
+binding, fit scope, and transformation history.
+
+### NeuroTokenCache v0
+
+NeuroTokenCache is shaped `[items, time, embedding]` and preserves:
+
+- modality and device type;
+- item, subject, session, trial, and split identities;
+- source rate and token timestamps;
+- true lengths and padding masks;
+- channel names and available geometry;
+- causal/noncausal status and required context;
+- source-cache, split-protocol, configuration, and payload hashes;
+- warnings, unavailable fields, access counters, and claim boundaries.
+
+The current Loop 20 producer is a deterministic target-free projection from
+synthetic signals. It is not a learned representation or decoding result.
+
+## Evaluation Discipline
+
+NeuroDecodeKit separates:
+
+- language-only priors from neural models;
+- train/validation/test/calibration membership;
+- split membership from preprocessing fit scope;
+- event classification from sentence decoding;
+- within-recording, cross-session, and unseen-person evidence;
+- EEG from MEG and peripheral modalities;
+- producer causality from decoder causality;
+- intrinsic context, transport delay, compute time, and end-to-end latency;
+- synthetic mechanisms from real-data results;
+- fresh tests from consumed evaluations.
+
+Every report should name the dataset/revision, task, modality, subject/session
+scope, split, fit rows, metrics, controls, runtime, RSS, input/output bytes,
+access counts, warnings, and unavailable fields.
+
+CER and WER are not enough by themselves. Tiny test sets need paired examples
+and uncertainty; key-event tasks may need exact label accuracy; sequence tasks
+need blank/repeat diagnostics and exact-sequence counts.
+
+## Data And Privacy
+
+Neural recordings and derived features are sensitive, even when filenames are
+de-identified.
+
+- Raw data and caches are ignored by Git.
+- Reports should use relative identity and hashes, not absolute paths.
+- Participant rows, free-text annotations, target sentences, serial numbers,
+  exact acquisition timestamps, and exact head/sensor coordinates are omitted
+  from shareable intake/quality reports.
+- Prediction/error reports can reveal typed text and should remain local unless
+  dataset terms and disclosure have been reviewed.
+- Hashes are integrity tools, not anonymization.
+- Do not attempt participant identification.
+
+See [SECURITY.md](SECURITY.md) for private reporting and
+[docs/RISK_AND_ETHICS.md](docs/RISK_AND_ETHICS.md) for the complete scope.
+
+## Resource Discipline
+
+The repository is designed for bounded local work:
+
+- one worker/thread where applicable;
+- dry-run downloads by default;
+- explicit file and byte caps;
+- no full SpanishBCBL download;
+- optional dependencies;
+- small synthetic fixtures;
+- measured runtime, peak RSS, input bytes, output bytes, and access counts;
+- no new backend or larger model without a measured reason.
+
+RW2 freezes at most 512 selected channels, three windows, 4,194,304
+channel-sample values, 32 MiB of materialized float64 arrays, 30 seconds, 1 GiB
+peak RSS, 4 MiB of report output per run, and 16 MiB for the complete synthetic
+fixture/report set.
+
+Generated artifacts belong in ignored `cache/` or `outputs/`, not in Git.
+
+## Project Status And Roadmap
+
+The original numbered development sequence has reached:
+
+- Loops 1-12: completed;
+- Loop 13: parked after measured lazy-backend gate;
+- Loops 14-22: completed at their exact proof boundaries;
+- Loop 23: parked after the frozen synthetic decoder test missed its primary
+  threshold;
+- Loop 23.5: completed as a supervised synthetic calibration mechanism;
+- Loop 24: preregistration only; consumed seed 2353 cannot select candidates.
+
+The parallel Real-World Practice track has reached:
+
+- RW0: primary-source dataset/device research and bounded acquisition planning;
+- RW1: dependency-free metadata-only local intake, fixture-backed;
+- RW2: bounded synthetic signal-read and descriptive quality-report interface,
+  fixture-backed;
+- RW3+: not authorized by RW2 alone;
+- proposed S20 acquisition: dry-run only until exact approval.
+
+The roadmap is not a promise of positive decoding performance. Gates can close,
+park, or kill a direction.
+
+See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
+[docs/REAL_WORLD_PRACTICE_TRACK_RESEARCH.md](docs/REAL_WORLD_PRACTICE_TRACK_RESEARCH.md).
+
+## Documentation Map
+
+| Document | Purpose |
+|---|---|
+| [START_HERE.md](START_HERE.md) | shortest current orientation |
+| [docs/CODEX_HANDOFF.md](docs/CODEX_HANDOFF.md) | exact continuation boundary for coding agents |
+| [docs/BUILD_NOTES.md](docs/BUILD_NOTES.md) | chronological measured build journal |
+| [docs/DECISIONS.md](docs/DECISIONS.md) | consequential architecture and research decisions |
+| [docs/NEXT_20_LOOPS_TRACKER.md](docs/NEXT_20_LOOPS_TRACKER.md) | original loop tracker |
+| [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) | post-NeuroToken causal/evaluation roadmap |
+| [docs/REAL_DATA_VALIDATION_2026-07-10.md](docs/REAL_DATA_VALIDATION_2026-07-10.md) | S21 alignment, session, and upstream audit |
+| [docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md](docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md) | real EEG bridge and negative classifier result |
+| [docs/LOOP_20_NEUROTOKEN_CACHE_V0.md](docs/LOOP_20_NEUROTOKEN_CACHE_V0.md) | NeuroTokenCache schema and synthetic interface proof |
+| [docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md](docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md) | metadata-only file intake closeout |
+| [docs/RW2_PRIMARY_SOURCE_RESEARCH.md](docs/RW2_PRIMARY_SOURCE_RESEARCH.md) | reader/quality primary-source review |
+| [docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md](docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md) | frozen RW2 protocol |
+| [docs/BYO_NEURODATA_WORKBENCH_SPEC.md](docs/BYO_NEURODATA_WORKBENCH_SPEC.md) | staged local neurodata workbench contract |
+| [registries/datasets.v0.json](registries/datasets.v0.json) | task-separated dataset candidates |
+| [registries/devices.v0.json](registries/devices.v0.json) | device and modality metadata, not qualification |
+| [docs/RISK_AND_ETHICS.md](docs/RISK_AND_ETHICS.md) | privacy, licensing, ethics, and communication boundary |
+
+Loop-specific closeouts in `docs/LOOP_*.md` preserve exact commands, metrics,
+resources, failures, and claims.
+
+## Contributing
+
+Contributions are welcome, especially:
+
+- deterministic format fixtures and malformed cases;
+- metadata-only compatibility reports;
+- EEG reference, geometry, timing, and unit validation;
+- offline device replay and packet-loss audits;
+- no-signal controls and split-leakage tests;
+- accessibility, setup, and documentation improvements;
+- small CPU-bounded baselines with honest negative reporting.
+
+Start with [CONTRIBUTING.md](CONTRIBUTING.md). It contains dedicated safe paths
+for people with EEG recordings and people with EEG headsets or boards.
+
+Community files:
+
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Governance](GOVERNANCE.md)
+- [Support](SUPPORT.md)
+- [Security](SECURITY.md)
+
+## License And Third-Party Terms
+
+NeuroDecodeKit's original source code and documentation are licensed under the
+[Apache License 2.0](LICENSE).
+
+That license does not relicense Brain2Qwerty, SpanishBCBL, participant data,
+models, papers, device SDKs, or optional dependencies. Brain2Qwerty and the
+SpanishBCBL release are separately identified as `CC-BY-NC-4.0`; work using
+them must respect their noncommercial and attribution terms.
+
+Read [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) before using upstream code,
+data, or assets.
+
+## Citation And Acknowledgments
+
+Use [CITATION.cff](CITATION.cff) to cite NeuroDecodeKit. Cite every dataset,
+paper, and upstream implementation separately; a software citation does not
+replace participant-data attribution.
+
+NeuroDecodeKit builds on the public research ecosystem around Brain2Qwerty,
+SpanishBCBL/DECOMEG, MNE-Python, BIDS, and the broader EEG/MEG community. It is
+independent and is not endorsed by those projects or institutions.
+
+## Plain-English Bottom Line
+
+**Engineering capability:** NeuroDecodeKit provides a bounded, local,
+reproducible path from neurodata discovery and file qualification through
+caches, controls, small baselines, causal interface tests, and inspectable
+reports.
+
+**Scientific claim not established:** the repository has not shown that neural
+signal beats language-only controls for practical text decoding, generalizes to
+new people, runs end to end in real time, or works on portable EEG hardware.
