@@ -34,6 +34,9 @@ Do not reset, revert, delete, or overwrite work already present.
 - RW3's replay/live-source-equivalence protocol is frozen at commit `c3d1f01`.
   Five schedules, 18 future fixture families, 30 exact refusal IDs, and four
   sequential adapter stages are registered; no source chunk or adapter exists.
+- Commit `163ff2f` prepares a hash-bound Stage A packet covering 90 proposed
+  cases and all 30 refusals. Its machine request says `authorized_now: false`;
+  the packet is not authorization.
 - No real recording quality, neural advantage, unseen-person generalization,
   useful EEG decoder, real-time decoding, portable-hardware, arbitrary-thought,
   or clinical result has been demonstrated.
@@ -42,20 +45,25 @@ Do not reset, revert, delete, or overwrite work already present.
   canonical license-text repair. Do not merge or alter visibility without
   explicit user approval.
 
-## Primary task: review the frozen RW3 registration; do not implement it
+## Primary task: review the RW3 Stage A decision packet; do not implement it
 
 Inspect and validate:
 
 - `docs/RW3_PRIMARY_SOURCE_RESEARCH.md`;
 - `docs/RW3_REPLAY_LIVE_EQUIVALENCE_PREREGISTRATION.md`;
 - `registries/replay_equivalence_contract.v0.json`;
+- `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md`;
+- `registries/rw3_stage_a_authorization_request.v0.json`;
 - `tests/test_replay_equivalence_contract.py`.
 
 Confirm that the documents and machine contract agree on source identity,
 clock views, packet anomalies, state, five schedules, 18 fixture families, 30
 refusal IDs, four staged adapters, resource caps, access counters, and claim
-boundaries. The only permissible next decision is whether the user separately
-authorizes Stage A pure-Python synthetic replay. Registration alone does not.
+boundaries. Confirm that the request binds the exact contract hash, 90-case
+matrix, 30 refusals, caps, forbidden work, and authorization-only commit
+sequence while leaving `authorized_now` false. The only permissible next
+decision is whether the user separately authorizes Stage A pure-Python
+synthetic replay or holds it. Registration and packet preparation alone do not.
 
 ## Hard boundaries
 
@@ -65,7 +73,8 @@ authorizes Stage A pure-Python synthetic replay. Registration alone does not.
    connect to hardware, enumerate devices, open sockets, or execute a live
    source.
 3. Do not implement RW3 adapters, source chunks, fixtures, or CLI commands
-   unless the user explicitly authorizes Stage A after reviewing `c3d1f01`.
+   unless the user explicitly authorizes Stage A after reviewing the packet.
+   Authorization must first be recorded in its own tested and pushed commit.
 4. Do not train or run a model, create target text or labels, calculate
    CER/WER, or claim decoding performance.
 5. Keep heavy dependencies optional. Use one CPU thread and do not create
@@ -76,13 +85,14 @@ authorizes Stage A pure-Python synthetic replay. Registration alone does not.
 ## Required deliverables for this review milestone
 
 1. Keep README, tracker, decision log, build notes, handoff, start-here,
-   roadmap, workbook, and continuation prompt consistent with `c3d1f01`.
+   roadmap, workbook, and continuation prompt consistent with `c3d1f01` and the
+   still-unauthorized request prepared at `163ff2f`.
 2. Run documentation/contract validation, local-link checks, Ruff,
    `git diff --check`, Gitleaks, and the complete unit suites. Compare with the
-   pre-registration 258-unittest / 255-pytest baseline.
+   pre-packet 265-unittest / 262-pytest baseline.
 3. Commit and push the coherent documentation milestone and refresh draft PR
    #2. Preserve unrelated files and generated debris outside Git.
 
 Do not call RW3 implemented or runtime-validated. This milestone proves only
-that a future replay/live-source-equivalence experiment was frozen before code
-or hardware access.
+that a future replay/live-source-equivalence experiment and its Stage A
+decision boundary were frozen before code or hardware access.

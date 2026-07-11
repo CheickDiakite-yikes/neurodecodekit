@@ -1643,3 +1643,53 @@ The final GitHub metadata audit now reports `Apache-2.0` for `LICENSE` on
 default-branch commit `18a705e`; the earlier null result was a transient
 detection state. PR #2 still restores the exact canonical appendix wording and
 keeps project copyright in `NOTICE`.
+
+## 2026-07-11 - RW3 Stage A decision packet and public results refresh
+
+Prepared `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` and
+`registries/rw3_stage_a_authorization_request.v0.json` at commit `163ff2f`.
+The request is bound to the exact frozen contract SHA-256 and Git blob, proposes
+five schedules by 18 fixture families (90 future cases), carries all 30 refusal
+IDs and exact resource/access caps, and requires an authorization-only commit
+before implementation. `authorized_now` remains false. No source chunk,
+fixture, replay runtime, CLI command, optional dependency, socket, board,
+stream, XDF, device, real or consumed data, target, model, decoder, or training
+operation was added or run.
+
+Expanded the README into a public result ladder plus detailed engineering,
+real-data scientific, and resource scorecards. The strongest engineering
+results are visible beside the negative real MEG/EEG comparisons. A new EEG
+contribution launch table gives separate first steps for recording owners,
+headset/board owners, and contributors without hardware, while preserving local
+privacy and staged compatibility boundaries.
+
+Three new contract/request tests raise the measured suite from 265 to 268
+unittests and from 262 to 265 pytest passes, with the same three optional skips
+and 25 pytest subtests. The complete unittest run takes 15.390 seconds wall with
+566,394,880-byte maximum RSS; pytest takes 13.320 seconds wall with
+577,814,528-byte maximum RSS. The 10-test focused gate takes 0.040 seconds wall
+with 20,529,152-byte maximum RSS. The true zero-dependency Python 3.12 run passes
+256 tests with 118 expected optional skips in 0.320 seconds wall and
+39,141,376-byte maximum RSS.
+
+The tracker was updated through the bundled artifact-tool workflow, rendered
+before and after across all eight sheets, reloaded, and checked with zero formula
+errors. The tracked and delivered files are both 56,867 bytes with SHA-256
+`2e47b86dd66769135278faeb218494d4719b61e705820f80b5afa961f2c57901`.
+The dashboard, Practice Track, Decision Log, and Prompt Bank all record the
+packet as a review-stage decision surface, not a runtime result.
+
+The live GitHub About profile was refreshed without changing visibility or the
+default branch. The description now identifies NeuroDecodeKit as an open-source,
+local-first EEG/MEG research toolkit and names bounded access, honest baselines,
+reproducible caches, and proof boundaries. Four discoverability topics were
+added (`eeg-analysis`, `neuroinformatics`, `open-science`, and `open-source`),
+bringing the exact topic set to 20. The repository remains public with issues
+enabled, Discussions and Wiki disabled, `main` as default, and Apache-2.0
+detected.
+
+Final local checks pass: Ruff, compileall, every tracked JSON file, TOML,
+all 43 local Markdown links, root and selected command help, `git diff --check`,
+268 unittests, 265 pytest tests plus 25 subtests, the 256-test dependency-free
+run, and the 10-test focused RW3 contract/request gate. Staged Gitleaks and all
+four GitHub Actions jobs are checked around the final commit and push.

@@ -174,13 +174,16 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
 - RW3 registration: Done at commit `c3d1f01` as primary-source research plus a
   machine-readable protocol only. It freezes five schedules, 18 future
   target-free fixture families, 30 exact refusal IDs, and four separately
-  authorized adapter stages. Seven invariant tests pass; no source chunk,
-  fixture, CLI, BrainFlow/LSL/PyXDF import, socket, stream, board, XDF read,
-  real/consumed data access, model run, or training run occurred.
-- Next practice-track decision: review and explicitly authorize RW3 Stage A
-  pure-Python synthetic replay, or hold. Registration alone authorizes no code.
-  Loop 24 local precision/runtime remains independently available for
-  preregistration. Seeds 2203, 2303, and 2353 stay consumed.
+  authorized adapter stages. Seven contract tests pass. Commit `163ff2f` adds a
+  hash-bound Stage A request, three authorization-binding tests, and a proposed
+  90-case matrix; `authorized_now` remains false. No source chunk, fixture, CLI,
+  BrainFlow/LSL/PyXDF import, socket, stream, board, XDF read, real/consumed data
+  access, model run, or training run occurred.
+- Next practice-track decision: review
+  `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` and explicitly authorize Stage A
+  pure-Python synthetic replay, or hold. Registration and packet preparation
+  authorize no code. Loop 24 local precision/runtime remains independently
+  available for preregistration. Seeds 2203, 2303, and 2353 stay consumed.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |
@@ -210,9 +213,10 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
 
 Use `RW0` through `RW9` from `docs/POST_20_ROADMAP.md`; do not insert them into
 or renumber the original 20 rows. RW0, RW1, and RW2 are closed at their exact
-proof boundaries. RW3 is preregistered at `c3d1f01`, but Stage A and all
-BrainFlow/LSL/PyXDF/live/hardware work remain unauthorized. The S20 fresh EEG
-benchmark is RW4 and remains blocked on explicit approval.
+proof boundaries. RW3 is preregistered at `c3d1f01`, and its Stage A packet is
+prepared at `163ff2f`, but Stage A and all BrainFlow/LSL/PyXDF/live/hardware work
+remain unauthorized. The S20 fresh EEG benchmark is RW4 and remains blocked on
+explicit approval.
 
 ## Anti-patterns
 - Do not download a large dataset slice without an explicit dry-run report and `--execute` confirmation.

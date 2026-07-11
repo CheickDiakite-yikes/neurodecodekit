@@ -39,15 +39,20 @@ XDF operation:
 ```bash
 cat docs/RW3_PRIMARY_SOURCE_RESEARCH.md
 cat docs/RW3_REPLAY_LIVE_EQUIVALENCE_PREREGISTRATION.md
+cat docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md
 python -m json.tool registries/replay_equivalence_contract.v0.json >/dev/null
+python -m json.tool registries/rw3_stage_a_authorization_request.v0.json >/dev/null
 ```
 
-The next decision is review and explicit authorization of **RW3 Stage A only**.
-Do not implement Stage A from this instruction. BrainFlow, LSL, PyXDF, sockets,
-live sources, device discovery, hardware, real recordings, consumed caches,
-targets, models, and training remain unauthorized. Keep S7/S21 evidence and
-seeds 2203, 2303, and 2353 frozen. Any future real-data acquisition remains
-dry-run by default and requires explicit byte caps plus `--execute`.
+Commit `163ff2f` prepares a hash-bound Stage A authorization packet and machine
+request. Both explicitly say `authorized_now: false`; preparing or reviewing
+them is not authorization. The next decision is review and explicit
+authorization of **RW3 Stage A only**, or an explicit hold. Do not implement
+Stage A from this instruction. BrainFlow, LSL, PyXDF, sockets, live sources,
+device discovery, hardware, real recordings, consumed caches, targets, models,
+and training remain unauthorized. Keep S7/S21 evidence and seeds 2203, 2303,
+and 2353 frozen. Any future real-data acquisition remains dry-run by default and
+requires explicit byte caps plus `--execute`.
 
 ## Acceptance criteria for next PR
 
@@ -55,11 +60,13 @@ dry-run by default and requires explicit byte caps plus `--execute`.
 - CLI has useful `--help` text.
 - New numerical or model dependencies remain optional.
 - No full-dataset download can happen accidentally.
-- The RW3 JSON contract and its dependency-free invariant tests remain exact.
+- The RW3 JSON contract, authorization request, and ten dependency-free
+  invariant tests remain exact.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - All public docs agree that the registration freezes five schedules, 18 future
-  fixture families, 30 refusal IDs, and four separately authorized stages.
+  fixture families, 30 refusal IDs, and four separately authorized stages, and
+  that the Stage A packet proposes 90 future cases without authorizing them.
 - Stage A remains a separate authorization decision and cannot imply Stage B-D,
   physical-device qualification, useful signal, decoding, or real-time behavior.
 - Resource, privacy, access, timestamp, anomaly, hash, and claim boundaries stay

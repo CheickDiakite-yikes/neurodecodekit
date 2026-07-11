@@ -33,6 +33,8 @@ Before opening a pull request, read:
 3. `docs/DECISIONS.md` for frozen experimental decisions.
 4. `AGENTS.md` if an automated coding agent will touch the repository.
 5. `THIRD_PARTY_NOTICES.md` before using Brain2Qwerty or SpanishBCBL material.
+6. `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` before proposing replay,
+   streaming, or hardware work.
 
 ## Ways To Contribute
 
@@ -172,11 +174,18 @@ EEGLAB external-FDT, FIF, and BIDS direct-reader resolution.
 
 Replay, streaming, and hardware contributions must also follow
 `docs/RW3_REPLAY_LIVE_EQUIVALENCE_PREREGISTRATION.md` and
-`registries/replay_equivalence_contract.v0.json`. RW3 is registered but not
-implemented: do not attach or open a real recording, start an outlet/inlet,
-open a socket, enumerate a board, or add BrainFlow/LSL/PyXDF code without a
-separately approved stage. Start with target-free deterministic mechanics and
-state exactly which registered schedule, anomaly, refusal, and cap you cover.
+`registries/replay_equivalence_contract.v0.json`. The exact proposed Stage A
+scope is in `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md`, with a hash-bound
+machine request in `registries/rw3_stage_a_authorization_request.v0.json`.
+Those files are a request, not permission: `authorized_now` is still `false`.
+Do not attach or open a real recording, start an outlet/inlet, open a socket,
+enumerate a board, or add BrainFlow/LSL/PyXDF code without a separately approved
+stage. Start with target-free deterministic mechanics and state exactly which
+registered schedule, anomaly, refusal, and cap you cover.
+
+Opening an issue or pull request does not authorize Stage A. Maintainers must
+record a separate authorization-only commit before any Stage A implementation,
+and that decision cannot authorize Stages B-D, sockets, devices, or real data.
 
 ### Step 4: Request A Bounded Real-Read Protocol
 

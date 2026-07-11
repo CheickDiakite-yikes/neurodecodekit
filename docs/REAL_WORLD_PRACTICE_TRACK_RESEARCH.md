@@ -1,9 +1,9 @@
 # Real-World Practice Track Research Gate
 
-Date: 2026-07-10
+Date: 2026-07-11
 
-Status: RW0 research passed; RW1/RW2 closed; RW3 protocol frozen; acquisition
-remains unapproved
+Status: RW0 research passed; RW1/RW2 closed; RW3 protocol frozen and Stage A
+decision packet prepared; implementation and acquisition remain unapproved
 
 Evidence posture: primary-source metadata review plus local filesystem metadata
 
@@ -12,7 +12,10 @@ gate, RW2 closed synthetic compatibility level 2, and RW3's offline
 replay/live-source-equivalence protocol was frozen at commit `c3d1f01`. RW3 is
 registration-only evidence: no source chunk, replay fixture, optional adapter,
 socket, stream, XDF read, board, or hardware operation exists. A future Stage A
-pure-Python implementation requires separate explicit authorization.
+pure-Python implementation requires separate explicit authorization. Follow-up
+on 2026-07-11: commit `163ff2f` prepared a hash-bound Stage A packet covering 90
+future cases and all 30 refusals. Its machine request still says
+`authorized_now: false`; no implementation permission follows from the packet.
 
 ## Decision
 

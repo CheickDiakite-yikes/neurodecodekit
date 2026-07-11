@@ -34,7 +34,10 @@
 > real/cache/target/model/training/network access. RW3's replay/live-source
 > protocol is frozen at commit `c3d1f01`: five schedules, 18 future fixture
 > families, 30 exact refusal IDs, four separately gated adapter stages, and
-> seven dependency-free invariant tests. No source chunk, fixture, CLI,
+> seven dependency-free contract tests. Commit `163ff2f` adds a hash-bound
+> Stage A decision packet, three authorization-binding tests, and a proposed
+> 90-case matrix. Its machine request says `authorized_now: false`. No source
+> chunk, fixture, CLI,
 > BrainFlow/LSL/PyXDF import, socket, stream, board, or XDF operation occurred.
 > Stage A remains unapproved. No real recording, consumed cache, S20
 > download/read, live source, automatic cleaning, model, or training is
@@ -137,6 +140,10 @@ This repo is a starter scaffold with working pure-Python components:
   five schedules, 18 future target-free fixture families, 30 refusal IDs,
   four sequential adapter stages, resource/access caps, and invariant tests;
   no runtime source-chunk or adapter implementation
+- hash-bound RW3 Stage A authorization packet with 90 proposed
+  schedule-by-fixture cases, all 30 refusal IDs, exact resource/access caps,
+  and an explicit authorization-only commit sequence; authorization remains
+  false and no Stage A implementation exists
 - open-source collaboration surface with Apache-2.0 license, third-party/data
   boundaries, detailed README, EEG data/hardware contribution paths, security,
   governance, citation, issue forms, pull-request checks, and one-thread CI
@@ -152,21 +159,22 @@ negative within-session event comparison. None is a decoder success. Do not
 turn these results, a variance ranking, or a geometry proxy into unseen-person
 or population generalization.
 
-Current verification after the RW3 registration/documentation milestone on
-2026-07-10: 265 unittest tests pass with 3 skipped in 13.124 seconds
-(13.920 seconds wall, 569,720,832-byte maximum RSS); pytest reports 262 passed,
-3 skipped, and 25 subtests passed in 12.16 seconds (13.120 seconds wall,
-579,354,624-byte maximum RSS). All 7 focused RW3 invariant tests pass in 0.040
-seconds wall with 18,022,400-byte maximum RSS. A separate true zero-dependency
-run passes 253 tests with 118 explicit optional skips in 0.340 seconds wall and
-40,419,328-byte maximum RSS. The pre-RW3 baseline was 258 unittest and 255
-pytest passes with the same three optional-environment skips/subtests, so RW3
-adds seven tests without regression. Full Ruff lint, compileall, root CLI help,
-JSON/TOML parsing, 39 local Markdown links, workbook formulas/renders, and
-`git diff --check` pass; Gitleaks is rerun on the final commit before push.
+Current verification after the Stage A packet on 2026-07-11: 268 unittest tests
+pass with 3 skipped in 14.457 seconds (15.390 seconds wall and 566,394,880-byte
+maximum RSS); pytest reports 265 passed, 3 skipped, and 25 subtests passed in
+12.29 seconds (13.320 seconds wall and 577,814,528-byte maximum RSS). All 10
+focused RW3 contract/request tests pass in 0.040 seconds wall with
+20,529,152-byte maximum RSS. A separate true zero-dependency run passes 256
+tests with 118 explicit optional skips in 0.320 seconds wall and
+39,141,376-byte maximum RSS. The pre-packet baseline was 265 unittest and 262
+pytest passes with the same optional-environment skips/subtests, so the decision
+packet adds three tests without regression. Full Ruff lint, compileall, root CLI
+help, JSON/TOML parsing, 43 local Markdown links, workbook formulas/renders, and
+`git diff --check` pass. Staged Gitleaks and post-push GitHub Actions remain the
+final publication checks.
 The tracked and delivered workbook hashes match at
-`fdb6d38217682e29033eeb623ffe46f20debd12e82ade4866a6b58d06d80daa9`.
-The tracked workbook is 56,304 bytes and its eight-sheet visual/formula audit
+`2e47b86dd66769135278faeb218494d4719b61e705820f80b5afa961f2c57901`.
+The tracked workbook is 56,867 bytes and its eight-sheet visual/formula audit
 passes.
 
 ## The north star
@@ -181,20 +189,22 @@ This is not primarily a model repo. It is a **research loop repo**.
 
 ## Current Next Work
 
-1. **RW3 - review the frozen registration and decide on Stage A only.** Commit
-   `c3d1f01` already freezes the source-chunk, clock, anomaly, schedule, state,
-   privacy, resource, refusal, and stop rules. Do not implement Stage A without
-   explicit authorization; BrainFlow, LSL, PyXDF, sockets, live sources, and
-   hardware remain later independent gates.
+1. **RW3 - decide on the prepared Stage A packet only.** Review
+   `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` and
+   `registries/rw3_stage_a_authorization_request.v0.json`. The request is bound
+   to commit `c3d1f01` and its exact contract hash, but `authorized_now` remains
+   false. Do not implement Stage A without an explicit user decision followed
+   by a pushed authorization-only commit; BrainFlow, LSL, PyXDF, sockets, live
+   sources, hardware, and Stages B-D remain later independent gates.
 2. **Loop 24 - preregister local precision/runtime independently.** Freeze
    candidates, reference arithmetic, tolerances, fresh selection data, and
    resource rules before code. Seed 2353 cannot select anything.
 3. **Review draft PR #2 before publishing the latest evidence on `main`.** PR #1
    has merged the open-source community surface through `e5d89ed`; PR #2 carries
    the RW2 closeout, README results dashboard, canonical Apache license text,
-   Linux float32 portability record, and RW3 registration. Do not merge until
-   CI, license, issue-form, security, history, visibility, and proof-boundary
-   review is complete.
+   Linux float32 portability record, RW3 registration, and the Stage A decision
+   packet. Do not merge until CI, license, issue-form, security, history,
+   visibility, and proof-boundary review is complete.
 
 RW4 is not next: S20 acquisition remains blocked until explicit approval names
 revision `88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684`, exactly four files, the
@@ -213,8 +223,10 @@ are in `docs/LOOP_23_5_PREREGISTRATION.md` and
 `docs/RW2_SIGNAL_QUALITY_CLOSEOUT.md`. RW3 research and registration are in
 `docs/RW3_PRIMARY_SOURCE_RESEARCH.md`,
 `docs/RW3_REPLAY_LIVE_EQUIVALENCE_PREREGISTRATION.md`, and
-`registries/replay_equivalence_contract.v0.json`. Open-source release gates are
-in `docs/OPEN_SOURCE_READINESS.md`.
+`registries/replay_equivalence_contract.v0.json`. The separate Stage A decision
+surface is `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` plus
+`registries/rw3_stage_a_authorization_request.v0.json`. Open-source release
+gates are in `docs/OPEN_SOURCE_READINESS.md`.
 
 ## Historical original PR plan
 

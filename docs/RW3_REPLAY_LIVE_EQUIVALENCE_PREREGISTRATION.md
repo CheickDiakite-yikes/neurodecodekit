@@ -10,6 +10,12 @@ Research: `docs/RW3_PRIMARY_SOURCE_RESEARCH.md`
 
 Registration commit: `c3d1f01`
 
+Post-registration decision packet:
+`docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` at commit `163ff2f`
+
+Authorization request:
+`registries/rw3_stage_a_authorization_request.v0.json` (`authorized_now: false`)
+
 Proof posture: primary-source-informed protocol; no source adapter, replay, or
 live result exists yet
 

@@ -1096,3 +1096,36 @@ clinical claim.
 Evidence: `docs/RW3_PRIMARY_SOURCE_RESEARCH.md`,
 `docs/RW3_REPLAY_LIVE_EQUIVALENCE_PREREGISTRATION.md`,
 `registries/replay_equivalence_contract.v0.json`, and commit `c3d1f01`.
+
+## 0046 - Prepare a hash-bound RW3 Stage A decision without authorizing code
+
+Decision: issue one human-readable authorization packet and one machine-readable
+request for RW3 Stage A pure-Python synthetic replay. Keep `authorized_now`
+false, preserve every implementation flag in the frozen contract as false, and
+require a separate authorization-only commit before any implementation.
+
+Why: “continue,” issue activity, or general approval is too ambiguous for a
+stage that precedes sockets, boards, and acquisition adapters. The next decision
+must bind the exact `c3d1f01` contract hash, future files and commands, five
+schedules by 18 fixture families, all 30 refusal IDs, one-thread resource caps,
+forbidden work, measurements, and proceed/park/kill rules.
+
+Frozen request: Stage A proposes 90 target-free standard-library transport
+cases, strict source-chunk save/load/validate/summary/resume mechanics, and
+deterministic reports. It does not authorize BrainFlow, LSL, PyXDF, sockets,
+network access, device discovery, hardware, XDF, real or consumed recordings,
+targets, labels, text, models, decoders, training, filtering, cleaning,
+resampling, interpolation, or Stages B-D.
+
+Measured decision boundary: ten dependency-free contract/request invariants
+pass, including exact contract-hash binding and proof that the request remains
+unauthorized. Source chunks, fixtures, runtime CLI additions, optional imports,
+data reads, model runs, training runs, and generated payload artifacts are zero.
+
+Next boundary: the user may explicitly authorize Stage A exactly as scoped,
+request an amendment, or hold it. Authorization must first be recorded, tested,
+committed, and pushed without implementation. Only then may Stage A work begin.
+
+Evidence: `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md`,
+`registries/rw3_stage_a_authorization_request.v0.json`, tests in
+`tests/test_replay_equivalence_contract.py`, and commit `163ff2f`.

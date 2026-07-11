@@ -1,9 +1,10 @@
 # Open-Source Readiness
 
-Date: 2026-07-10
+Date: 2026-07-11
 
 Status: **Open-source collaboration surface merged to public `main`; latest
-RW2 evidence and RW3 preregistration remain in draft PR #2**
+RW2 evidence, RW3 preregistration, and the Stage A decision packet remain in
+draft PR #2**
 
 ## Purpose
 
@@ -24,20 +25,21 @@ explicit review trail even after the repository is visible publicly.
 | Issues | Enabled |
 | Discussions | Disabled |
 | Wiki | Disabled |
-| Description | Proof-accurate local-first EEG/MEG research description set |
+| Description | Open-source, local-first EEG/MEG toolkit description with bounded access, honest baselines, reproducible caches, and explicit proof boundaries |
 | Homepage | Empty |
-| Topics | 16 research, modality, reproducibility, and local-first topics set |
+| Topics | 20 research, modality, reproducibility, open-source, and local-first topics set |
 | Detected license | GitHub API reports Apache-2.0 on `main` at `18a705e`; PR #2 still restores the canonical appendix text and keeps project copyright in `NOTICE` |
-| Draft PR CI | 4/4 base/optional-neuro push/PR checks pass on RW3 documentation commit `ee5ce63`; recheck after any later commit |
+| Draft PR CI | 4/4 at the last check; every later push must be rechecked before merge |
 
 The repository was private at the start of this milestone and later reported
 public; no visibility-changing command was issued in this work. PR #1 has now
 merged the safety/community files, description, and contribution surface to
 `main`. Draft PR #2 contains the latest RW2 closeout, README results dashboard,
 current handoff, canonical license-text correction, CI portability record, and
-RW3's registration-only replay/live-source contract. Do not describe those
-latest results or the RW3 protocol as default-branch content until PR #2 is
-reviewed and merged.
+RW3's registration-only replay/live-source contract. It also contains the
+hash-bound Stage A decision packet prepared at `163ff2f`; the request remains
+unauthorized. Do not describe those latest results, the RW3 protocol, or the
+packet as default-branch content until PR #2 is reviewed and merged.
 
 ## Added Public Surface
 
@@ -51,7 +53,10 @@ reviewed and merged.
 - pull-request template and code ownership;
 - one-thread base and optional-neuro GitHub Actions jobs;
 - Gitleaks default configuration plus one exact documented-hash finding
-  fingerprint.
+  fingerprint;
+- an explicit EEG-contributor launch table in the README;
+- a machine-bound RW3 Stage A decision packet that cannot silently authorize
+  implementation, later stages, sockets, devices, or real data.
 
 ## License Boundary
 
@@ -151,7 +156,7 @@ a maintained project site exists.
 Recommended description:
 
 ```text
-Local-first, reproducible EEG and MEG language-decoding research tools with bounded data access, honest baselines, and explicit proof boundaries.
+Open-source, local-first EEG/MEG language-decoding research toolkit with bounded data access, honest baselines, reproducible caches, and explicit proof boundaries.
 ```
 
 Recommended topics:
@@ -169,9 +174,14 @@ bids
 python
 local-first
 reproducible-research
+research-software
 assistive-technology
 machine-learning
 brain2qwerty
+eeg-analysis
+neuroinformatics
+open-science
+open-source
 ```
 
 ## Verification Gate
@@ -181,6 +191,7 @@ The release candidate must pass:
 ```bash
 PYTHONPATH=src python -m unittest discover -s tests -v
 PYTHONPATH=src python -m unittest discover -s tests -p 'test_signal_quality.py' -v
+PYTHONPATH=src python -m unittest discover -s tests -p 'test_replay_equivalence_contract.py' -v
 ruff check .
 python -m compileall -q src tests
 git diff --check
