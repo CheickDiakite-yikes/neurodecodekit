@@ -1,3 +1,4 @@
+import hashlib
 import json
 import unittest
 from pathlib import Path
@@ -5,12 +6,18 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 CONTRACT_PATH = REPO_ROOT / "registries" / "replay_equivalence_contract.v0.json"
+AUTHORIZATION_REQUEST_PATH = (
+    REPO_ROOT / "registries" / "rw3_stage_a_authorization_request.v0.json"
+)
 
 
 class ReplayEquivalenceContractTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.contract = json.loads(CONTRACT_PATH.read_text(encoding="utf-8"))
+        cls.authorization_request = json.loads(
+            AUTHORIZATION_REQUEST_PATH.read_text(encoding="utf-8")
+        )
 
     def test_registration_identity_and_authorization_are_preregistration_only(self):
         contract = self.contract
@@ -222,6 +229,72 @@ class ReplayEquivalenceContractTests(unittest.TestCase):
         self.assertEqual(len({row["id"] for row in sources}), len(sources))
         self.assertEqual(len({row["url"] for row in sources}), len(sources))
         self.assertTrue(all(row["url"].startswith("https://") for row in sources))
+
+    def test_stage_a_request_is_bound_but_not_authorized(self):
+        request = self.authorization_request
+        self.assertEqual(
+            request["schema_name"], "neurodecodekit.stage_authorization_request"
+        )
+        self.assertEqual(request["schema_version"], "0.1.0")
+        self.assertEqual(request["status"], "awaiting_explicit_user_authorization")
+        self.assertFalse(request["authorized_now"])
+        self.assertIsNone(request["user_decision"])
+        self.assertIsNone(request["authorization_record_commit"])
+        self.assertFalse(request["decision"]["silence_or_general_continuation_is_authorization"])
+        self.assertFalse(request["decision"]["authorization_is_transitive_to_later_stages"])
+
+        contract_sha256 = hashlib.sha256(CONTRACT_PATH.read_bytes()).hexdigest()
+        self.assertEqual(request["target"]["contract_sha256"], contract_sha256)
+        self.assertEqual(request["target"]["contract_id"], self.contract["contract_id"])
+        self.assertEqual(request["target"]["stage"], "A")
+        self.assertEqual(request["target"]["adapter_id"], "pure_python_synthetic_replay")
+        self.assertEqual(request["target"]["registration_commit"], "c3d1f01")
+
+    def test_stage_a_request_matches_frozen_cases_refusals_and_caps(self):
+        request = self.authorization_request
+        matrix = request["case_matrix"]
+        self.assertEqual(matrix["registered_schedule_count"], 5)
+        self.assertEqual(matrix["registered_fixture_family_count"], 18)
+        self.assertEqual(matrix["schedule_by_fixture_case_count"], 90)
+        self.assertEqual(
+            matrix["schedule_by_fixture_case_count"],
+            len(self.contract["registered_schedules"])
+            * len(self.contract["synthetic_fixture_families"]),
+        )
+        self.assertEqual(
+            request["registered_refusal_ids"], self.contract["refusal_ids"]
+        )
+        self.assertEqual(request["resource_caps"], self.contract["resource_caps"])
+        self.assertEqual(
+            request["acceptance"]["registered_refusal_ids"],
+            "30_of_30_reachable_by_deterministic_negative_tests",
+        )
+
+    def test_stage_a_request_keeps_optional_data_model_and_later_stages_forbidden(self):
+        request = self.authorization_request
+        self.assertEqual(request["stage_a_scope"]["base_dependencies_added"], [])
+        self.assertEqual(
+            request["stage_a_scope"]["optional_dependencies_installed_or_imported"], []
+        )
+        self.assertEqual(len(request["stage_a_scope"]["cli_surface"]), 4)
+        forbidden = request["forbidden_even_if_stage_a_is_authorized"]
+        self.assertTrue(forbidden)
+        self.assertTrue(all(forbidden.values()))
+        self.assertTrue(forbidden["stage_B_C_or_D_implementation"])
+        self.assertTrue(forbidden["real_recording_or_cache_access"])
+        self.assertTrue(forbidden["target_label_prediction_or_text_access"])
+        self.assertTrue(forbidden["model_decoder_or_training_run"])
+
+        contract_authorization = self.contract["authorization"]
+        self.assertTrue(contract_authorization["preregistration_only"])
+        self.assertFalse(contract_authorization["source_chunk_implementation_authorized"])
+        self.assertFalse(contract_authorization["synthetic_fixture_generation_authorized"])
+        self.assertTrue(
+            all(
+                not stage["implementation_authorized_now"]
+                for stage in self.contract["adapter_stages"]
+            )
+        )
 
 
 if __name__ == "__main__":
