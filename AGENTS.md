@@ -28,25 +28,45 @@ The first 20-loop roadmap is complete except for the deliberately parked Loop
 13 backend. Post-roadmap Loops 21 and 22 validate bounded synthetic causal
 replay and one tiny learned motif encoder. Loop 23 implemented the frozen
 language-model-free streaming CTC gate, but its consumed test reached only 5/8
-exact sequences against the preregistered 6/8 threshold. It is parked:
+exact sequences against the preregistered 6/8 threshold. It is parked, while
+Loop 23.5 is complete as a separate supervised synthetic calibration gate.
+Loop 24 is now preregistered at commit `186bb6f`, before any candidate,
+fixture, checkpoint read, inference, timing, or qualification run:
 
 ```bash
-cat docs/LOOP_22_TINY_CAUSAL_ENCODER.md
-cat docs/LOOP_23_PREREGISTRATION.md
-cat docs/LOOP_23_STREAMING_CTC_DECODER.md
-cat docs/LOOP_23_5_PREREGISTRATION.md
-cat docs/POST_20_ROADMAP.md
+cat docs/LOOP_24_PRIMARY_SOURCE_RESEARCH.md
+cat docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md
+python -m json.tool registries/local_precision_runtime_contract.v0.json >/dev/null
 ```
 
-Freeze the Loop 22 checkpoint/test and the complete Loop 23 fixture/report/test.
-Do not rerun or tune on seeds 2203 or 2303. Loop 23.5 is preregistered in
-`docs/LOOP_23_5_PREREGISTRATION.md`; implement it with alternate seeds
-9351/9352/9353 before registered seed 2353 exists. Fit exactly one additive
-blank-logit intercept from fresh train signals/frame labels, physically exclude
-target arrays from that fit, and retain the unmodified greedy/prefix comparator.
-Forbid target-length trimming, a language model, a larger encoder, precision
-work, and real-data access. Keep both observed S21 MEG holdouts plus the S7 EEG
-result frozen. Any future real-data acquisition remains dry-run by default and
+Its machine contract freezes three exact CPU candidates, fresh target-free
+seeds 2401 and 2402, 12 balanced selection timing rounds, 30 refusal IDs, and
+strict behavior/resource/claim gates. Every Loop 24 execution authorization
+flag is false. The next Loop 24 decision is explicit authorization using the
+exact sentence in the preregistration, an amendment, or a hold. General
+continuation is not authorization.
+
+The parallel practice track has closed RW1 and RW2 at their exact synthetic
+proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
+commit `c3d1f01`, before any adapter, source chunk, fixture, socket, board, or
+XDF operation:
+
+```bash
+cat docs/RW3_PRIMARY_SOURCE_RESEARCH.md
+cat docs/RW3_REPLAY_LIVE_EQUIVALENCE_PREREGISTRATION.md
+cat docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md
+python -m json.tool registries/replay_equivalence_contract.v0.json >/dev/null
+python -m json.tool registries/rw3_stage_a_authorization_request.v0.json >/dev/null
+```
+
+Commit `163ff2f` prepares a hash-bound Stage A authorization packet and machine
+request. Both explicitly say `authorized_now: false`; preparing or reviewing
+them is not authorization. RW3 Stage A and Loop 24 are two independent
+decisions: authorizing one cannot authorize the other. Do not implement either
+from this instruction. BrainFlow, LSL, PyXDF, sockets, live sources, device
+discovery, hardware, real recordings, consumed caches, targets, models, and
+training remain unauthorized. Keep S7/S21 evidence and seeds 2203, 2303, and
+2353 frozen. Any future real-data acquisition remains dry-run by default and
 requires explicit byte caps plus `--execute`.
 
 ## Acceptance criteria for next PR
@@ -55,19 +75,26 @@ requires explicit byte caps plus `--execute`.
 - CLI has useful `--help` text.
 - New numerical or model dependencies remain optional.
 - No full-dataset download can happen accidentally.
-- The Loop 23.5 protocol remains unchanged and registered seed 2353 stays absent
-  until full-size alternate mechanics and all checks are committed and pushed.
-- The calibration rule has one declared parameterization, is fitted only on
-  fresh train frame labels, and is target-length independent at inference.
-- The unmodified Loop 23 decoder remains the comparator, and blank/repeat state
-  still covers multiple chunk boundaries and final partial chunks.
-- Reports separate score calibration, encoder availability,
-  first/stable/final symbol emission, endpointing, rendering, and measured
-  end-to-end latency.
-- Runtime, peak memory, state bytes, and artifact bytes stay under explicit caps.
-- Fresh training/validation/test partitions, one calibration fit, a new
-  one-time test, the unmodified decoder, and both no-signal controls are explicit.
-- Docs explain exactly what was verified and what remains synthetic or untested.
+- The RW3 JSON contract, authorization request, and ten dependency-free
+  invariant tests remain exact.
+- The Loop 24 JSON contract and nine dependency-free invariants remain exact;
+  all execution flags stay false unless the exact authorization decision is
+  separately recorded, tested, committed, and pushed.
+- No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
+  XDF operation, real-data read, target access, model run, or training run exists.
+- No Loop 24 runtime module, fixture, CLI, checkpoint read, candidate
+  conversion, inference, benchmark, profiler, energy measurement, target
+  access, model training, or generated payload exists before authorization.
+- All public docs agree that the registration freezes five schedules, 18 future
+  fixture families, 30 refusal IDs, and four separately authorized stages, and
+  that the Stage A packet proposes 90 future cases without authorizing them.
+- Stage A remains a separate authorization decision and cannot imply Stage B-D,
+  physical-device qualification, useful signal, decoding, or real-time behavior.
+- Loop 24 remains a separate authorization decision and cannot establish a
+  speedup, integer-only execution, retained neural accuracy, end-to-end text
+  latency, cross-device energy efficiency, or portable-hardware behavior.
+- Resource, privacy, access, timestamp, anomaly, hash, and claim boundaries stay
+  explicit and machine-checkable.
 
 ## Style
 

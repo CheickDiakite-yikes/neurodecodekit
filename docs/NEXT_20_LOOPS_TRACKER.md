@@ -1,4 +1,10 @@
-# NeuroDecodeKit Post-PR1 20-Loop Tracker
+# NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
+
+> **Scope:** the 20-row table and its KPI describe the original roadmap. Loop
+> numbers 21-24 and the Loop 23.5 calibration gate are post-roadmap extensions,
+> so “20 loops” and “currently at Loop 24” are both true but refer to different
+> things. The spreadsheet dashboard displays both explicitly.
+
 This tracker starts after PR1 lands. The core operating rule is simple: **do not add a more complex loop until the previous loop has produced a cache, report, demo, or explicit kill/park decision.**
 Each loop should be one PR or one experiment note whenever possible. Complexity is allowed, but only when a simpler loop proves why it is needed.
 ## How to use
@@ -154,6 +160,15 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   corrections, zero regressions, positive paired-bootstrap lower bounds, and
   5/5 calibrated/unmodified replay. See
   `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`.
+- Post-roadmap Loop 24: Preregistered at commit `186bb6f`, with implementation
+  and execution unauthorized. The machine contract freezes three exact CPU
+  candidates, fresh target-free selection/qualification seeds 2401/2402, 12
+  balanced selection timing rounds, 30 refusal IDs, strict behavior and
+  resource gates, and a 4-MiB total generated-artifact cap. Nine dependency-
+  free invariants pass. No fixture, candidate, checkpoint read, inference,
+  benchmark, profiler, energy, or qualification operation occurred. See
+  `docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md` and
+  `registries/local_precision_runtime_contract.v0.json`.
 - Parallel Real-World Practice Track RW0: Done as a primary-source metadata
   research gate. Eight dataset records, 13 device records, a local workbench
   contract, and one exact S20 EEG dry-run packet are frozen. No download or
@@ -165,15 +180,27 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   sidecars without signal/target/model/network reads. The 532-byte roundtrip
   produced 11,545 bytes under a 4-MiB cap. See
   `docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md`.
-- Parallel Real-World Practice Track RW2: Preregistered at `eacb231` with a
-  strict versioned machine contract for six synthetic format adapters, bounded
-  reads and arrays, descriptive quality metrics, privacy redaction,
-  no-mutation behavior, resources, and exact park/kill rules. No signal result
-  exists. See `docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md`.
-- Next action in the practice track: implement RW2 on synthetic fixtures only,
-  exactly within the frozen contract. Loop 24 remains independently available
-  for preregistration. Seeds 2203, 2303, and 2353 and all observed MEG/EEG
-  holdouts remain frozen.
+- Parallel Real-World Practice Track RW2: Done at exact synthetic compatibility
+  level 2. The six-family set contains 40 fixtures: 38 readable and two exact
+  refusals. Privacy, no-mutation, deterministic replay, malformed, cap, and CLI
+  gates pass; one measured FIF report writes 76,592 bytes in 3.839168 seconds
+  with zero real/cache/target/model/training/network access. See
+  `docs/RW2_SIGNAL_QUALITY_CLOSEOUT.md`.
+- RW3 registration: Done at commit `c3d1f01` as primary-source research plus a
+  machine-readable protocol only. It freezes five schedules, 18 future
+  target-free fixture families, 30 exact refusal IDs, and four separately
+  authorized adapter stages. Seven contract tests pass. Commit `163ff2f` adds a
+  hash-bound Stage A request, three authorization-binding tests, and a proposed
+  90-case matrix; `authorized_now` remains false. No source chunk, fixture, CLI,
+  BrainFlow/LSL/PyXDF import, socket, stream, board, XDF read, real/consumed data
+  access, model run, or training run occurred.
+- Next practice-track decision: review
+  `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` and explicitly authorize Stage A
+  pure-Python synthetic replay, or hold. Registration and packet preparation
+  authorize no code. The separate Loop 24 decision is to authorize its exact
+  preregistered implementation, amend it, or hold; all execution flags remain
+  false. Neither authorization can authorize the other. Seeds 2203, 2303, and
+  2353 stay consumed.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |
@@ -202,10 +229,11 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
 ## Parallel Practice Track
 
 Use `RW0` through `RW9` from `docs/POST_20_ROADMAP.md`; do not insert them into
-or renumber the original 20 rows. RW0 and RW1 are closed. RW2's quality
-contract is frozen at `eacb231`; its synthetic-only reader/report implementation
-is next. No real signal read is authorized. The S20 fresh EEG benchmark is RW4
-and remains blocked on explicit approval.
+or renumber the original 20 rows. RW0, RW1, and RW2 are closed at their exact
+proof boundaries. RW3 is preregistered at `c3d1f01`, and its Stage A packet is
+prepared at `163ff2f`, but Stage A and all BrainFlow/LSL/PyXDF/live/hardware work
+remain unauthorized. The S20 fresh EEG benchmark is RW4 and remains blocked on
+explicit approval.
 
 ## Anti-patterns
 - Do not download a large dataset slice without an explicit dry-run report and `--execute` confirmation.

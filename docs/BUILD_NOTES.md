@@ -1481,3 +1481,325 @@ workbook is 54,836 bytes with SHA-256
 `c27d80d4831acc91795b2cbf10d7e00400ff393f58bfd029a7653e0e328dc669`.
 Generated inspection output remains ignored, and the pre-existing untracked
 tracker inspection NDJSON was not modified or staged.
+
+## 2026-07-10 - RW2 synthetic signal-quality implementation and closeout
+
+Implemented the exact `eacb231` preregistration in
+`src/neurodecodekit/preprocess/signal_quality.py` and
+`src/neurodecodekit/training/synthetic_signal_quality.py`, with four CLI
+commands and nine focused tests. Optional `neuro` now pins MNE to `>=1.12,<1.13`
+so the reader signature/behavior line matches the frozen evidence.
+
+The deterministic fixture tree contains 40 rows across six format families:
+38 readable sources and two exact refusals. Four unsupported export
+combinations are documented rather than synthesized inaccurately. All readable
+fixtures preserve lazy open, expected channel/timing/value/geometry/reference/
+event identity, source no-mutation, privacy redaction, descriptive time/PSD
+metrics, and exact payload replay.
+
+The measured closeout reused the existing 3,937,717-byte fixture tree because
+the local volume had only 3.4 GiB free. One clean FIF report selected nine
+channels and windows of 384/512/384 samples, requested and returned 11,520
+values in six bounded calls, and materialized 92,160 bytes. It wrote 76,592
+bytes in 3.839168 seconds with 150,749,184-byte internal peak RSS. Raw-reader
+opens were one; real/cache/target/model/training/network access was zero. The
+producer is explicitly offline noncausal and end-to-end latency is unmeasured.
+
+An initial CLI attempt supplied a broader root than the RW1 binding and refused
+with `Selected source does not match the RW1 report.` before producing an
+artifact. The exact-bound rerun passed. This refusal is retained as provenance
+evidence.
+
+Verification: nine focused RW2 tests; 258 unittest tests with 3 skips in 21.283
+seconds and 492,044,288-byte external maximum RSS; 255 pytest passes with 3
+skips and 25 subtests in 23.77 seconds and 523,501,568-byte maximum RSS. The
+zero-dependency run passes 246 tests with 118 optional skips in 0.285 seconds
+and 40,845,312-byte maximum RSS. Ruff, compileall, all RW2 CLI help,
+deterministic replay, strict saved-report inspection, package metadata, and
+`git diff --check` pass.
+
+Decision: close RW2 at exact synthetic compatibility level 2. RW3
+preregistration is next; no BrainFlow, LSL, live source, real recording, S20,
+hardware, automatic cleaning, model, or training is authorized.
+
+Evidence: implementation commit `2796dee` and
+`docs/RW2_SIGNAL_QUALITY_CLOSEOUT.md`.
+
+The eight-sheet tracker was updated through the bundled artifact-tool workflow,
+rendered before and after, checked for formula errors, and promoted only after
+visual repair. The tracked/delivered workbook is 55,674 bytes with SHA-256
+`f1c08a2e6f8e0e9889a525af5d3cb04977e7dca87b0fdb6d6810854cdcd32d2e`.
+
+## 2026-07-10 - Open-source contribution and GitHub surface
+
+Replaced the chronological starter README with a proof-first guide and added a
+prominent results dashboard. Engineering wins, real-data scientific outcomes,
+resource measurements, and proof labels are separate so synthetic accuracy
+cannot conceal the negative real MEG/EEG comparisons.
+
+Added Apache-2.0 `LICENSE`, `NOTICE`, third-party/data terms, citation,
+contribution, code-of-conduct, governance, support, security, issue forms, PR
+template, CODEOWNERS, and one-thread base/neuro CI. The contributor guide has
+dedicated paths for EEG data owners and EEG headset/board owners, beginning
+with metadata and deterministic replay rather than recording upload.
+
+The base-CI rehearsal exposed five old optional-test guard failures. Collection
+and missing-dependency tests now skip cleanly without NumPy/MNE/SciPy, while the
+same paths run in the optional environment. A lightweight `array` extra allows
+NumPy-only synthetic/NPZ work without installing MNE or Torch.
+
+Tracked-history checks found no recording/cache files and no secret. Gitleaks
+passes with the default rules and one exact reviewed fingerprint for a
+documented NeuroToken SHA-256. TOML, YAML/CFF, local Markdown links, package
+metadata, Ruff, compileall, and whitespace checks pass.
+
+GitHub received a proof-accurate description, 16 topics, and eight issue
+labels. The repository was private at the first check and reported public at
+the later check although no visibility command was issued. PR #1 subsequently
+merged this open-source surface through `e5d89ed` at main commit `18a705e`.
+Draft PR #2 carries the latest evidence closeout; the maintainer must still
+decide whether public visibility should remain before release signoff.
+
+Evidence: open-source milestone commit `e5d89ed` and
+`docs/OPEN_SOURCE_READINESS.md`.
+
+## 2026-07-10 - Public CI float32 portability finding
+
+The first public optional-neuro CI run passed the focused nine-test RW2 suite
+but failed two Loop 21 causal-replay assertions. Commit `5c212c8` added
+per-condition gate diagnostics without changing any threshold. The next Linux
+run isolated the sole failure as
+`all_schedules_offline_compatible`: NumPy 2.5.1/OpenBLAS produced a
+`1.430511474609375e-6` maximum difference between Loop 20's historical batched
+float32 matrix multiply and Loop 21's canonical one-frame multiply. Runtime was
+0.060795 seconds and peak RSS was 59,772,928 bytes; schedule identity,
+timestamps, frame grid, causality, state, and resources passed.
+
+The same Python 3.12/NumPy 2.5.1 combination on macOS reproduced the historical
+`9.5367431640625e-7` maximum. Decision 0044 therefore amends only this
+cross-BLAS compatibility default to `2e-6`. Canonical stream payloads must
+still be bitwise identical across all five schedules. No real/target/model/
+training/holdout access occurred, and no scientific result changed.
+
+The amended commit passed all four GitHub Actions checks: base and
+optional-neuro on both push and pull-request events. A final default-branch
+refresh showed PR #1 already merged. GitHub's license endpoint still returned
+`spdx_id: null` because the Apache appendix in `LICENSE` contained a project
+copyright instead of the canonical placeholder. PR #2 restores the exact
+Apache 2.0 text; the project copyright remains in `NOTICE`.
+
+## 2026-07-10 - RW3 replay/live-source equivalence preregistration
+
+Researched BrainFlow 5.22.2, pylsl 1.18.2/liblsl 1.17.7, PyXDF 1.17.5, and
+Python monotonic-clock behavior from maintained primary sources. The review
+found that BrainFlow playback can regenerate timestamps unless configured to
+preserve old values, BrainFlow exposes both draining and nondraining reads, LSL
+is unsynchronized by default and separates source timestamps from clock
+correction, LSL automatic postprocessing destroys the original timestamp view,
+and PyXDF defaults to synchronized/dejittered timestamps. Device and transport
+latency remain distinct from clock synchronization.
+
+Commit `c3d1f01` freezes `neurodecodekit.replay_equivalence_contract` v0.1.0
+and the future `neurodecodekit.source_chunk` v0.1.0 before implementation. The
+contract separates source, corrected, and local monotonic arrival timestamps;
+represents gaps, duplicates, reordering, packet-counter wraps, reconnects, and
+clock resets explicitly; and forbids interpolation, silent sorting, and silent
+deduplication. It registers five chunk schedules, 18 future target-free fixture
+families, 30 exact refusal IDs, exact semantic and boundary-sensitive hashes,
+and four sequential adapter stages.
+
+Future resource caps are one thread/worker, 512 channels, 4,096 Hz, 4,194,304
+channel-sample values, 32 MiB materialized payload, 16 MiB source/fixture bytes,
+4 MiB output per run, 32 MiB total generated artifacts, 30 seconds, and 1 GiB
+peak RSS. Real/consumed/cache/target/model/training/decoder/network access must
+remain zero in Stage A.
+
+Seven focused dependency-free contract tests passed. The registration itself
+installed or imported no BrainFlow, pylsl, liblsl, or PyXDF; generated no
+fixture or waveform; opened no socket, board, stream, XDF, real recording,
+cache, target, or consumed evidence; and ran no model or training. Stage A is
+not automatically authorized. No signal-quality, neural-advantage, decoding,
+device-reliability, end-to-end-latency, portable-hardware, or clinical result
+was established.
+
+Evidence: `docs/RW3_PRIMARY_SOURCE_RESEARCH.md`,
+`docs/RW3_REPLAY_LIVE_EQUIVALENCE_PREREGISTRATION.md`,
+`registries/replay_equivalence_contract.v0.json`, and commit `c3d1f01`.
+
+The synchronized public-documentation gate then passes 265 unittest tests with
+3 skips and 262 pytest tests with 3 skips plus 25 subtests, exactly seven more
+than the pre-RW3 baseline. The true zero-dependency run passes 253 tests with
+118 expected optional skips. Focused contract runtime/peak RSS is 0.040 seconds
+wall/18,022,400 bytes; full-run maxima are 13.920 seconds wall and 579,354,624
+bytes. Ruff, compileall, root CLI help, JSON/TOML parsing, 39 local Markdown
+links, workbook formula checks, eight-sheet render review, and diff checks pass.
+
+The updated tracker is 56,304 bytes with SHA-256
+`fdb6d38217682e29033eeb623ffe46f20debd12e82ade4866a6b58d06d80daa9`.
+It records RW3 as review-stage protocol evidence, not a completed runtime gate.
+Draft PR #2 then passed all four GitHub Actions checks on commit `ee5ce63`:
+base and optional-neuro jobs for both push and pull-request events.
+The final GitHub metadata audit now reports `Apache-2.0` for `LICENSE` on
+default-branch commit `18a705e`; the earlier null result was a transient
+detection state. PR #2 still restores the exact canonical appendix wording and
+keeps project copyright in `NOTICE`.
+
+## 2026-07-11 - RW3 Stage A decision packet and public results refresh
+
+Prepared `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` and
+`registries/rw3_stage_a_authorization_request.v0.json` at commit `163ff2f`.
+The request is bound to the exact frozen contract SHA-256 and Git blob, proposes
+five schedules by 18 fixture families (90 future cases), carries all 30 refusal
+IDs and exact resource/access caps, and requires an authorization-only commit
+before implementation. `authorized_now` remains false. No source chunk,
+fixture, replay runtime, CLI command, optional dependency, socket, board,
+stream, XDF, device, real or consumed data, target, model, decoder, or training
+operation was added or run.
+
+Expanded the README into a public result ladder plus detailed engineering,
+real-data scientific, and resource scorecards. The strongest engineering
+results are visible beside the negative real MEG/EEG comparisons. A new EEG
+contribution launch table gives separate first steps for recording owners,
+headset/board owners, and contributors without hardware, while preserving local
+privacy and staged compatibility boundaries.
+
+Three new contract/request tests raise the measured suite from 265 to 268
+unittests and from 262 to 265 pytest passes, with the same three optional skips
+and 25 pytest subtests. The complete unittest run takes 15.390 seconds wall with
+566,394,880-byte maximum RSS; pytest takes 13.320 seconds wall with
+577,814,528-byte maximum RSS. The 10-test focused gate takes 0.040 seconds wall
+with 20,529,152-byte maximum RSS. The true zero-dependency Python 3.12 run passes
+256 tests with 118 expected optional skips in 0.320 seconds wall and
+39,141,376-byte maximum RSS.
+
+The tracker was updated through the bundled artifact-tool workflow, rendered
+before and after across all eight sheets, reloaded, and checked with zero formula
+errors. The tracked and delivered files are both 56,867 bytes with SHA-256
+`2e47b86dd66769135278faeb218494d4719b61e705820f80b5afa961f2c57901`.
+The dashboard, Practice Track, Decision Log, and Prompt Bank all record the
+packet as a review-stage decision surface, not a runtime result.
+
+The live GitHub About profile was refreshed without changing visibility or the
+default branch. The description now identifies NeuroDecodeKit as an open-source,
+local-first EEG/MEG research toolkit and names bounded access, honest baselines,
+reproducible caches, and proof boundaries. Four discoverability topics were
+added (`eeg-analysis`, `neuroinformatics`, `open-science`, and `open-source`),
+bringing the exact topic set to 20. The repository remains public with issues
+enabled, Discussions and Wiki disabled, `main` as default, and Apache-2.0
+detected.
+
+Final local checks pass: Ruff, compileall, every tracked JSON file, TOML,
+all 43 local Markdown links, root and selected command help, `git diff --check`,
+268 unittests, 265 pytest tests plus 25 subtests, the 256-test dependency-free
+run, and the 10-test focused RW3 contract/request gate. Staged Gitleaks and all
+four GitHub Actions jobs are checked around the final commit and push.
+
+## 2026-07-11 - Loop 24 local precision/runtime preregistration
+
+Researched the full Brain2Qwerty v2 architecture and PyTorch numerical,
+threading, benchmark, inference-mode, automatic-mixed-precision, eager dynamic-
+quantization, and torchao migration behavior from primary sources. The review
+found that the full published architecture is too different from the local
+1,130-parameter synthetic MLP to support transfer claims; PyTorch does not
+promise bitwise floating-point identity across platforms or execution paths;
+CPU autocast defaults to bfloat16 rather than float16; dynamic quantized Linear
+uses qint8 packed weights with float inputs and outputs; and tiny timings require
+warmup, replicated measurements, fixed threads, and balanced execution order.
+Mac `powermetrics` is retained only as an optional within-device proxy because
+its own manual warns against accurate or cross-device power interpretation.
+
+Commit `186bb6f` freezes `neurodecodekit.local_precision_runtime_contract`
+v0.1.0 before implementation. The exact candidates are float32 eager,
+explicit float16 CPU, and dynamic qint8 under QNNPACK. Bfloat16, autocast,
+static quantization, QAT, torchao, compile, TorchScript, ONNX, CoreML,
+ExecuTorch, MPS, pruning, batching, and architecture changes are excluded from
+this gate. The contract binds the existing producer, probe, checkpoint,
+blank-intercept, and decoder hashes without opening any of them.
+
+A future target-free fixture is physically split into seed-2401 selection and
+seed-2402 qualification partitions, each with 48 items across six waveform
+families. It contains signals, input lengths, item IDs, and metadata only; model
+outputs, targets, labels, text, participants, and source paths may not create or
+select rows. The selection schedule contains 12 exact candidate permutations,
+placing each candidate in every order position four times. Qualification opens
+only if a nonreference replacement passes selection, using six alternating
+reference/candidate rounds.
+
+Behavioral gates cover frame grids, timestamps, valid lengths, padding, greedy
+paths and traces, width-8 prefix traces/finals, flush behavior, and causal
+status. Measurements keep producer, fixed decoder, and complete pipeline time
+separate. A replacement needs a producer median ratio at most 0.80, full-
+pipeline median at most 0.90, p95 at most 0.95, upper paired 95% ratio at most
+0.98, no payload growth, at most 32 MiB RSS increase, and both partitions.
+Storage-only status instead requires at least 50% payload reduction and 2,048
+bytes saved while pipeline median/p95 remain within 1.05; it cannot replace the
+default or open qualification. Thirty refusal IDs and explicit proceed, park,
+and kill rules freeze unsupported backends, leakage, nonfinite outputs,
+behavior drift, fallback, collisions, caps, and unauthorized access.
+
+Resource caps are one numerical thread, one concurrent worker, 48 workers,
+512 KiB per fixture, 64 KiB per candidate payload, 32 MiB materialized arrays,
+1 MiB report output, 4 MiB total generated artifacts, 60 seconds internal
+runtime, and 1 GiB peak RSS per worker. All network, real/consumed/cache/target/
+label/text/training and RW3 counters must remain zero. Energy measurement is
+outside the primary cap, optional, and forbidden from prompting for sudo.
+
+The contract SHA-256 is
+`58e9d5407fef9419bc3bb0dc8cd3fa68d36dd238cb636d2f833dd9c5c6c3ae5d`.
+Nine focused dependency-free invariants pass in 0.070 seconds wall with
+20,791,296-byte peak RSS. The full unittest run reaches 277 passes with three
+skips in 14.220 seconds wall and 569,884,672-byte peak RSS; pytest reaches 274
+passes, three skips, and 25 subtests in 13.200 seconds wall and 576,421,888-byte
+peak RSS. The true zero-dependency run reaches 265 tests with 118 expected
+optional skips in 0.350 seconds wall and 40,861,696-byte peak RSS. The previous
+268/265 unittest/pytest baseline therefore gains exactly nine invariants without
+regression. Ruff, compileall, JSON/TOML parsing, local links, CLI help, diff
+checks, and staged Gitleaks pass.
+
+No fixture, candidate module, CLI command, checkpoint read or conversion,
+inference, benchmark, profiler, energy, qualification, real/consumed data,
+target, model-training, or RW3 operation was added or run. This milestone
+registers a future local execution experiment; it does not establish a speedup,
+integer-only execution, retained neural accuracy, end-to-end text latency,
+portable hardware, or decoding.
+
+Evidence: `docs/LOOP_24_PRIMARY_SOURCE_RESEARCH.md`,
+`docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md`,
+`registries/local_precision_runtime_contract.v0.json`, and commit `186bb6f`.
+
+The tracker was imported and edited through the bundled artifact-tool runtime,
+rendered before and after across all eight sheets, reloaded from the exported
+XLSX, and scanned with zero formula errors. Dashboard, Practice Track, Decision
+Log, and Prompt Bank now present Loop 24 and RW3 Stage A as separate explicit
+decisions. The prompt-bank repair also wraps the final RW3/Loop 24 decision rows
+instead of allowing long text to spill horizontally. The tracked and delivered
+workbooks are both 57,413 bytes with SHA-256
+`d0b1959fab1201eb8391733a1723ee803bf167441ecd48788f4f8179d16c78c4`.
+
+The final documentation-inclusive verification preserves all counts: 277
+unittest passes with three skips, 274 pytest passes with three skips and 25
+subtests, 265 true zero-dependency tests with 118 expected optional skips, and
+9/9 focused Loop 24 invariants. Final wall/RSS maxima are 15.460 seconds and
+580,567,040 bytes. No Loop 24 or RW3 runtime, fixture, data, target, model, or
+training operation was introduced by the documentation/workbook sync.
+
+## 2026-07-11 - Clarify original-roadmap count versus current gate
+
+The tracker dashboard previously displayed `Total loops: 20` while the current
+post-roadmap position was Loop 24. The value was formula-correct because it
+counts the original 20-row `Loop Tracker` table, but the label and title made
+the two scopes too easy to confuse.
+
+The dashboard now says `Original roadmap loops: 20`, `Original completed: 19`,
+`Original parked: 1`, and `Current numbered gate: Loop 24 preregistered`. Its
+scope note names Loops 21-22 as done, Loop 23 as parked, Loop 23.5 as done, Loop
+24 as preregistered but unauthorized, and RW3 Stage A as separately
+unauthorized. The phase table and chart now explicitly describe the original
+20 loops. The Markdown tracker and README documentation map carry the same
+distinction.
+
+The artifact-tool edit preserves the original-loop count formula and all phase
+formulas. All eight sheets render, the exported workbook reloads, and the
+formula-error scan finds zero matches. The tracked workbook is 57,473 bytes
+with SHA-256
+`3bb5b2ab03b4327912024bac401fb76ae682151df96140a379514e36caa22f82`.

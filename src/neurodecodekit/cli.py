@@ -2925,8 +2925,11 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument(
         "--compatibility-atol",
         type=float,
-        default=1e-6,
-        help="Absolute tolerance against Loop 20 batched arithmetic. Default: 1e-6.",
+        default=2e-6,
+        help=(
+            "Absolute tolerance against Loop 20 batched arithmetic. "
+            "Default: 2e-6 after the documented Linux float32 portability audit."
+        ),
     )
     p.add_argument("--max-items", type=int, default=64, help="Source-item cap. Default: 64.")
     p.add_argument(

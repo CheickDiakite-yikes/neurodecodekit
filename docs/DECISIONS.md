@@ -957,3 +957,222 @@ Evidence: `docs/RW2_PRIMARY_SOURCE_RESEARCH.md`,
 `docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md`,
 `registries/signal_quality_contract.v0.json`, and registration commit
 `eacb231`.
+
+## 0042 - Close RW2 at exact synthetic compatibility level 2
+
+Decision: close RW2 as a passed fixture-backed reader, report, privacy,
+no-mutation, and resource gate. Authorize RW3 preregistration only. Do not
+interpret the compatibility level outside the exact generated files, MNE 1.12
+minor line, reader arguments, and frozen contract.
+
+Why: the implementation generates 40 target-free fixtures across BrainVision,
+EDF/EDF+, BDF, continuous EEGLAB external-FDT, FIF, and BIDS. All 38 authorized
+sources pass and the two registered unsafe/malformed sources refuse exactly.
+Reader opens remain lazy, canonical selected-payload hashes match expected
+format quantization, descriptive amplitude/structure/median-Welch metrics
+replay, privacy fields stay absent, and before/after source and signal hashes
+match. No automatic cleaning or source mutation occurs.
+
+Measured boundary: one clean FIF roundtrip selects nine channels and three
+windows with 11,520 requested/returned values, 92,160 materialized array bytes,
+and six bounded signal reads. It writes 72,818 bytes of deterministic JSON,
+1,734 bytes of Markdown, and a 2,040-byte audit, totaling 76,592 bytes. Internal
+runtime is 3.839168 seconds and peak RSS is 150,749,184 bytes. Real data,
+consumed caches, targets/labels, models, training, and network calls are zero.
+Physical storage bytes read, generic warning thresholds, task/model
+compatibility, live qualification, real quality, and end-to-end latency remain
+unavailable.
+
+Verification: nine focused tests pass; the full optional environment reaches
+258 unittest tests with 3 skips and 255 pytest passes with 3 skips plus 25
+subtests. The true zero-dependency run passes 246 tests with 118 explicit
+optional skips. Ruff, compileall, CLI help, deterministic replay, malformed,
+tamper, collision, privacy, cap, package-metadata, and `git diff --check` gates
+pass.
+
+Next boundary: RW3 must freeze source chunks, offline playback/synthetic
+adapters, dependency policy, clock domains, timestamp correction, dropped
+packets, ordering, mutable state, schedules, tolerances, privacy, resources,
+and stop rules before BrainFlow, LSL, live sources, or hardware are touched.
+RW4/S20 remains blocked on separate explicit approval.
+
+Evidence: `docs/RW2_SIGNAL_QUALITY_CLOSEOUT.md`, implementation commit
+`2796dee`, and ignored local fixtures/reports under `.codex_work/`.
+
+## 0043 - Prepare a proof-first open-source collaboration surface
+
+Decision: publish a detailed contributor-ready surface on the active review
+branch while keeping repository visibility and default-branch release as
+separate maintainer decisions. Use Apache-2.0 provisionally for
+NeuroDecodeKit's original source and documentation, with explicit separate
+CC-BY-NC-4.0 terms for Brain2Qwerty and SpanishBCBL.
+
+Why: useful community contribution requires more than a public code dump. EEG
+owners need a metadata-first path that never asks them to post recordings;
+hardware owners need replay/timestamp/packet-loss criteria; predictive results
+need no-signal controls and consumed-holdout disclosure; maintainers need
+security, conduct, governance, citation, issue, review, and CI contracts.
+
+Public-history audit: Git tracks only `.gitkeep` under `data/` and `cache/`;
+no neural recording or cache extension was found in tracked history. The
+pre-documentation object store was 6.22 MiB with a 332.37 KiB pack and a
+321,169-byte largest blob. Gitleaks 8.30.0 found one documented NeuroToken
+SHA-256 false positive; an exact commit/path/rule/line fingerprint suppresses
+only that reviewed finding, and the complete default scan then passes.
+
+GitHub boundary: description, 16 topics, and eight issue labels were updated.
+The repository reported private at the start and public when rechecked after
+those metadata-only commands, even though no visibility flag was issued.
+At decision time, default `main` remained stale. PR #1 later merged the
+open-source surface through `e5d89ed` at `18a705e`. Draft PR #2 now carries the
+latest RW2/results closeout and the canonical Apache license-text correction;
+its four base/optional-neuro push/PR checks pass. Public visibility still
+requires an explicit maintainer decision, and PR #2 must not merge without
+license, security, history, and proof-boundary review.
+
+Evidence: `README.md`, `CONTRIBUTING.md`, `SECURITY.md`, `GOVERNANCE.md`,
+`CODE_OF_CONDUCT.md`, `THIRD_PARTY_NOTICES.md`,
+`docs/OPEN_SOURCE_READINESS.md`, and commit `e5d89ed`.
+
+## 0044 - Amend only the cross-kernel Loop 21 float tolerance for Linux
+
+Decision: change the default absolute compatibility tolerance between Loop
+20's historical batched float32 projection and Loop 21's canonical one-frame
+projection from `1e-6` to `2e-6`. Keep canonical stream payloads bitwise
+identical across all five schedules and keep timestamp, frame-grid, causal,
+state, resource, and access gates unchanged.
+
+Why: public GitHub Actions on Linux with Python 3.12, NumPy 2.5.1, and
+one-thread OpenBLAS measured a maximum cross-kernel difference of exactly
+`1.430511474609375e-6`. The same Python/NumPy versions on macOS remain at the
+historical `9.5367431640625e-7`. Explicit gate diagnostics prove that no other
+condition failed. This is BLAS arithmetic portability, not schedule drift.
+
+Integrity boundary: the first CI failure was retained and diagnosed before the
+tolerance changed. This amendment uses no targets, labels, model, training,
+real data, consumed cache, or holdout. It does not rewrite the historical Loop
+20 artifact, change its hash, relax schedule-to-schedule identity, or create a
+decoding claim. A future difference above `2e-6` still fails closed and
+requires another explicit review rather than automatic widening.
+
+Evidence: failed Actions runs `29133225088`, `29133248840`, and `29133423319`;
+diagnostic commit `5c212c8`; `docs/LOOP_21_CAUSAL_CHUNK_REPLAY.md`.
+
+## 0045 - Freeze RW3 source-chunk and replay-equivalence protocol before code
+
+Decision: preregister RW3 at commit `c3d1f01` as primary-source research, one
+versioned machine contract, and dependency-free invariant tests only. Do not
+authorize Stage A implementation from the registration. Require separate
+review for each later stage: pure-Python synthetic replay, BrainFlow
+synthetic/playback boards, local LSL loopback, and PyXDF raw/corrected views.
+
+Why: a plausible waveform plot can conceal regenerated timestamps, wrong clock
+correction, duplicate drains, dropped or reordered samples, ambiguous stream
+selection, silent interpolation, or transport-specific state. BrainFlow 5.22.2,
+pylsl 1.18.2/liblsl 1.17.7, PyXDF 1.17.5, and Python monotonic-clock primary
+sources expose different semantics that must be made explicit before one
+runtime abstraction can be trusted.
+
+Frozen contract: `neurodecodekit.replay_equivalence_contract` v0.1.0 defines a
+future `neurodecodekit.source_chunk` v0.1.0, separate source/corrected/arrival
+timestamps, gap/duplicate/reorder/wrap/reconnect/reset records, exact semantic
+and boundary-sensitive hashes, five schedules, 18 target-free fixture families,
+30 refusal IDs, and strict caps. The primary BrainFlow playback rule preserves
+old timestamps; primary LSL disables automatic postprocessing; PyXDF audits raw
+and corrected views separately. No interpolation, silent sorting, or
+deduplication is allowed.
+
+Measured registration boundary: seven focused invariant tests pass. Optional
+dependencies installed/imported, fixtures generated, source chunks emitted,
+socket/board/stream/XDF operations, real/consumed/cache/target/model/training/
+decoder/network accesses, and output artifacts are all zero. This is protocol
+evidence, not compatibility level 6 and not a runtime result.
+
+Next boundary: review may authorize Stage A pure-Python synthetic replay only.
+Registration cannot authorize BrainFlow, LSL, PyXDF, hardware, S20, live data,
+or any signal-quality, task, neural-advantage, decoding, latency, portable, or
+clinical claim.
+
+Evidence: `docs/RW3_PRIMARY_SOURCE_RESEARCH.md`,
+`docs/RW3_REPLAY_LIVE_EQUIVALENCE_PREREGISTRATION.md`,
+`registries/replay_equivalence_contract.v0.json`, and commit `c3d1f01`.
+
+## 0046 - Prepare a hash-bound RW3 Stage A decision without authorizing code
+
+Decision: issue one human-readable authorization packet and one machine-readable
+request for RW3 Stage A pure-Python synthetic replay. Keep `authorized_now`
+false, preserve every implementation flag in the frozen contract as false, and
+require a separate authorization-only commit before any implementation.
+
+Why: “continue,” issue activity, or general approval is too ambiguous for a
+stage that precedes sockets, boards, and acquisition adapters. The next decision
+must bind the exact `c3d1f01` contract hash, future files and commands, five
+schedules by 18 fixture families, all 30 refusal IDs, one-thread resource caps,
+forbidden work, measurements, and proceed/park/kill rules.
+
+Frozen request: Stage A proposes 90 target-free standard-library transport
+cases, strict source-chunk save/load/validate/summary/resume mechanics, and
+deterministic reports. It does not authorize BrainFlow, LSL, PyXDF, sockets,
+network access, device discovery, hardware, XDF, real or consumed recordings,
+targets, labels, text, models, decoders, training, filtering, cleaning,
+resampling, interpolation, or Stages B-D.
+
+Measured decision boundary: ten dependency-free contract/request invariants
+pass, including exact contract-hash binding and proof that the request remains
+unauthorized. Source chunks, fixtures, runtime CLI additions, optional imports,
+data reads, model runs, training runs, and generated payload artifacts are zero.
+
+Next boundary: the user may explicitly authorize Stage A exactly as scoped,
+request an amendment, or hold it. Authorization must first be recorded, tested,
+committed, and pushed without implementation. Only then may Stage A work begin.
+
+Evidence: `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md`,
+`registries/rw3_stage_a_authorization_request.v0.json`, tests in
+`tests/test_replay_equivalence_contract.py`, and commit `163ff2f`.
+
+## 0047 - Freeze Loop 24 local precision/runtime before candidate execution
+
+Decision: preregister Loop 24 at commit `186bb6f` as primary-source research,
+one versioned machine contract, and nine dependency-free invariants only. Keep
+every execution flag false. Require a separate exact authorization, amendment,
+or hold before creating a fixture, implementing a candidate, loading or
+converting the checkpoint, running inference, timing, profiling, energy
+measurement, or qualification.
+
+Why: the frozen synthetic producer has only 1,130 parameters, so import cost,
+warmup, Python decoder work, backend choice, thread pools, and timer noise can
+dominate arithmetic. Float16 tensor storage does not prove a faster CPU kernel;
+dynamic qint8 packed weights still accept and return floating-point tensors;
+smaller serialization does not prove lower runtime; and unchanged final text
+can conceal unstable incremental decoder traces. Candidate code or measurements
+before thresholds would allow the protocol to favor whichever path looked best.
+
+Frozen contract: `neurodecodekit.local_precision_runtime_contract` v0.1.0
+binds the exact Loop 23.5 reference hashes and permits only float32 eager,
+explicit CPU float16, and dynamic-qint8 QNNPACK candidates. It registers fresh
+target-free selection and qualification partitions at seeds 2401 and 2402,
+six waveform families with eight items each, 12 balanced selection timing
+rounds, exact frame/timestamp/greedy/prefix/flush behavior, numerical
+tolerances, separate storage and runtime rules, one-thread resource caps, and
+30 refusal IDs. Targets, labels, text, consumed evidence, real data, training,
+and RW3 operations must remain at zero.
+
+Measured registration boundary: the contract SHA-256 is
+`58e9d5407fef9419bc3bb0dc8cd3fa68d36dd238cb636d2f833dd9c5c6c3ae5d`.
+Nine focused invariants pass in 0.070 seconds wall with 20,791,296-byte peak
+RSS. The complete optional environment reaches 277 unittest and 274 pytest
+passes, with three optional skips and 25 pytest subtests; the true zero-
+dependency run reaches 265 tests with 118 expected optional skips. Candidate
+implementations, fixtures, checkpoint reads, inference/model/training runs, and
+generated payload artifacts are zero.
+
+Next boundary: the user may use the exact authorization sentence in
+`docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md`, request an amendment, or
+hold. Loop 24 authorization cannot authorize RW3 Stage A, data access, model
+training, or any neural, decoding, end-to-end-latency, cross-device energy, or
+portable-hardware claim.
+
+Evidence: `docs/LOOP_24_PRIMARY_SOURCE_RESEARCH.md`,
+`docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md`,
+`registries/local_precision_runtime_contract.v0.json`,
+`tests/test_local_precision_runtime_contract.py`, and commit `186bb6f`.

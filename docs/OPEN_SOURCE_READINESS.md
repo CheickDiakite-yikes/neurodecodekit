@@ -1,36 +1,47 @@
 # Open-Source Readiness
 
-Date: 2026-07-10
+Date: 2026-07-11
 
-Status: **Prepared on a review branch; repository visibility remains private**
+Status: **Open-source collaboration surface merged to public `main`; latest
+RW2 evidence, RW3 preregistration/decision packet, and Loop 24 preregistration
+remain in draft PR #2**
 
 ## Purpose
 
-This record separates public-release preparation from the act of changing
-GitHub visibility. Documentation, community workflows, licensing, privacy
-checks, and metadata can be reviewed safely while the repository remains
-private.
+This record separates public-release preparation from GitHub visibility,
+default-branch publication, and scientific proof claims. Documentation,
+community workflows, licensing, privacy checks, and metadata each require an
+explicit review trail even after the repository is visible publicly.
 
 ## Current GitHub State
 
-| Field | State before this milestone |
+| Field | Current state after PR #1 and before PR #2 merge |
 |---|---|
 | Repository | `CheickDiakite-yikes/neurodecodekit` |
-| Visibility | Private |
-| Default branch | `main` |
-| Active preparation branch | `codex/loops-8-19-validated` |
+| Visibility | Public; no visibility-changing command was issued in this work |
+| Default branch | `main` at merge commit `18a705e` |
+| Open-source surface on `main` | Through commit `e5d89ed` via merged PR #1 |
+| Active evidence closeout | Draft PR #2 from `codex/loops-8-19-validated` |
 | Issues | Enabled |
 | Discussions | Disabled |
 | Wiki | Disabled |
-| Description | Empty |
+| Description | Open-source, local-first EEG/MEG toolkit description with bounded access, honest baselines, reproducible caches, and explicit proof boundaries |
 | Homepage | Empty |
-| Topics | Empty |
-| Detected license | None |
+| Topics | 20 research, modality, reproducibility, open-source, and local-first topics set |
+| Detected license | GitHub API reports Apache-2.0 on `main` at `18a705e`; PR #2 still restores the canonical appendix text and keeps project copyright in `NOTICE` |
+| Draft PR CI | 4/4 at the last checked commit; every later push must be rechecked before merge |
 
-The active branch is materially ahead of `main`. Public visibility must not be
-changed until the open-source milestone is reviewed and merged, or the default
-branch is deliberately updated. Publishing the current default branch would
-present stale proof boundaries and omit the new safety/community files.
+The repository was private at the start of this milestone and later reported
+public; no visibility-changing command was issued in this work. PR #1 has now
+merged the safety/community files, description, and contribution surface to
+`main`. Draft PR #2 contains the latest RW2 closeout, README results dashboard,
+current handoff, canonical license-text correction, CI portability record, and
+RW3's registration-only replay/live-source contract. It also contains the
+hash-bound Stage A decision packet prepared at `163ff2f`; the request remains
+unauthorized. Commit `186bb6f` adds the separate Loop 24 local precision/runtime
+preregistration with all execution flags false; no candidate or runtime exists.
+Do not describe those latest results, either protocol, or either decision
+surface as default-branch content until PR #2 is reviewed and merged.
 
 ## Added Public Surface
 
@@ -44,7 +55,13 @@ present stale proof boundaries and omit the new safety/community files.
 - pull-request template and code ownership;
 - one-thread base and optional-neuro GitHub Actions jobs;
 - Gitleaks default configuration plus one exact documented-hash finding
-  fingerprint.
+  fingerprint;
+- an explicit EEG-contributor launch table in the README;
+- a machine-bound RW3 Stage A decision packet that cannot silently authorize
+  implementation, later stages, sockets, devices, or real data.
+- a machine-bound Loop 24 precision/runtime contract that freezes candidates,
+  fresh target-free partitions, balanced timing, correctness/resource gates,
+  and refusals before any implementation or benchmark can be authorized.
 
 ## License Boundary
 
@@ -144,7 +161,7 @@ a maintained project site exists.
 Recommended description:
 
 ```text
-Local-first, reproducible EEG and MEG language-decoding research tools with bounded data access, honest baselines, and explicit proof boundaries.
+Open-source, local-first EEG/MEG language-decoding research toolkit with bounded data access, honest baselines, reproducible caches, and explicit proof boundaries.
 ```
 
 Recommended topics:
@@ -162,9 +179,14 @@ bids
 python
 local-first
 reproducible-research
+research-software
 assistive-technology
 machine-learning
 brain2qwerty
+eeg-analysis
+neuroinformatics
+open-science
+open-source
 ```
 
 ## Verification Gate
@@ -174,6 +196,8 @@ The release candidate must pass:
 ```bash
 PYTHONPATH=src python -m unittest discover -s tests -v
 PYTHONPATH=src python -m unittest discover -s tests -p 'test_signal_quality.py' -v
+PYTHONPATH=src python -m unittest discover -s tests -p 'test_replay_equivalence_contract.py' -v
+PYTHONPATH=src python -m unittest discover -s tests -p 'test_local_precision_runtime_contract.py' -v
 ruff check .
 python -m compileall -q src tests
 git diff --check
@@ -194,20 +218,31 @@ Also run one bounded synthetic RW2 create/inspect/report roundtrip and record:
 - causality and end-to-end latency status;
 - warnings and unavailable fields.
 
+Loop 24 remains a documentation/contract gate until explicit authorization.
+Release verification must therefore confirm that no Loop 24 runtime module,
+fixture, candidate, CLI, checkpoint read, conversion, inference, benchmark,
+profiler, energy measurement, or generated payload has appeared, and that all
+nine dependency-free contract invariants still pass.
+
 ## Visibility Decision
 
-Changing from private to public is a separate, explicit maintainer action. It
-should happen only after:
+Public visibility is active and PR #1 has merged the community surface. The
+maintainer must still explicitly decide whether public visibility should
+remain. The latest evidence closeout should be called current on the public
+default only after:
 
-1. this branch is reviewed and merged or made the deliberate default;
-2. CI passes on the merged commit;
-3. the license choice is approved;
+1. draft PR #2 is reviewed and merged;
+2. CI passes on the merge result;
+3. Apache-2.0 for original NeuroDecodeKit work is approved and detected;
 4. the tracked-content and Gitleaks scans pass;
 5. issue forms and security reporting are verified;
 6. the README proof boundary matches the current closeout;
 7. the maintainer confirms that publishing repository history is intended.
 
-No command in this milestone changes repository visibility.
+No command in this milestone changed repository visibility. The description,
+topics, and labels were updated without a visibility flag. The current state
+should therefore be reviewed in GitHub's repository settings before release
+signoff.
 
 ## Closeout Language
 

@@ -1,8 +1,8 @@
 # NeuroDecodeKit
 
-Local-first, reproducible tools for turning EEG and MEG recordings into small,
-inspectable neural language-decoding experiments without hiding data access,
-split leakage, resource cost, or negative results.
+Open-source, local-first, reproducible tools for turning EEG and MEG recordings
+into small, inspectable neural language-decoding experiments without hiding
+data access, split leakage, resource cost, or negative results.
 
 NeuroDecodeKit is an independent research toolkit inspired by the access and
 reproducibility problems around Brain2Qwerty-style decoding. It is not an
@@ -18,6 +18,84 @@ The core thesis is practical: before another large model matters, a researcher
 should be able to identify one legal dataset slice, inspect it locally, build a
 bounded cache, preserve provenance, compare against a language-only control,
 and explain exactly what the result does not prove.
+
+## Results At A Glance
+
+> The standout result is not an inflated decoder score. It is a complete,
+> reproducible evidence chain that validates difficult engineering, preserves
+> negative scientific results, and knows when a gate should stop.
+
+### The Result Ladder
+
+| Evidence layer | Strongest result so far | What that means now |
+|---|---|---|
+| Trial identity | All 66 S21 session-1 trials and all 63 performed session-2 trials reconcile to MAT provenance; empty session-2 slots remain explicit | The real MEG evidence has exact trial identity instead of fuzzy sentence matching |
+| Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |
+| Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
+| Real predictive evidence | Both the same-person cross-session MEG model and the bounded S7 EEG classifier lose to no-signal controls | The current scientific result is negative, explicit, and frozen against post-hoc tuning |
+| Local execution gate | Three exact CPU paths, two fresh target-free fixture partitions, 12 balanced timing rounds, and 30 refusals are frozen before candidate code | Loop 24 is ready for an explicit implementation decision; no precision candidate or runtime has been executed |
+| Next transport layer | Stage A is specified as 90 future schedule-by-fixture cases with 30 exact refusals under a 32 MiB cap | The decision packet is review-ready; no replay runtime, socket, board, or hardware path is authorized yet |
+
+### Detailed Engineering Scorecard
+
+| Result | Measured evidence | Proof label | Why it matters |
+|---|---|---|---|
+| Complete S21 trial reconciliation | 66/66 session-1 trials; 63/63 performed session-2 trials; empty MAT slots 54, 58, and 60 preserved | real-data validated | Turns ambiguous trigger/log ordering into exact trial provenance instead of fuzzy text matching |
+| Task-matched EEG bridge | 2,534 MAT triggers aligned; 2,197 windows; `2197 x 61 x 25`; 12,428,800-byte cache | real-data validated | Proves bounded BrainVision plus MAT mechanics on EEG without pretending the classifier succeeded |
+| Sampling-rate characterization | identical 66-row caches at 100/50/25 Hz; 1,663,209 / 846,334 / 431,451 bytes | real-data validated | Quantifies storage and temporal feasibility without selecting a rate from unmeasured accuracy |
+| Geometry-aware channel subsets | one 102-magnetometer base plus 20 exact-identity subset caches under 128 MiB | real-data validated | Makes sensor-cost tradeoffs inspectable while keeping geometry proxies separate from decoding claims |
+| Precision/storage sweep | qint16 is 49.84% smaller; qint8 is 80.75% smaller with worst relative RMSE 0.9531%; no clipping | real-data cache mechanics | Measures representation distortion without calling it retained model accuracy |
+| NeuroTokenCache v0 | `48 x 16 x 32`; 76,646 bytes; exact payload replay; zero target-member reads | fixture-backed interface | Establishes a strict modality/timing/mask/split/hash contract without unreleased embeddings |
+| Causal frame replay | 553 canonical frames; 5/5 schedules exact; zero right context; 300-byte mutable state | synthetic mechanism only | Separates true producer causality from transport scheduling and decoder latency |
+| Tiny learned causal producer | 1,130 parameters; validation and one-time test balanced accuracy 1.0 versus 0.166667 signal-free prior; 5/5 replay | synthetic mechanism only | Proves the bounded stream can carry a learned signal on an intentionally easy generated task |
+| Blank calibration mechanism | validation and one-time test both 16/16 exact at CER 0; 9 test corrections; 0 regressions | synthetic mechanism only | Shows one preregistered scalar can solve a specific tail-error mechanism without post-test trimming |
+| Local precision/runtime registration | 3 exact candidates; fresh seeds 2401/2402; 12 balanced selection rounds; 30 refusal IDs; 9 dependency-free invariants | preregistered, no runtime | Freezes correctness, timing, storage, memory, access, and claim gates before a candidate can be favored |
+| Metadata-only local intake | 6 format families; 532 source bytes; 11,545 report bytes; 0 binary/raw/target/model/network reads | fixture-backed | Lets EEG owners start with safe structure and provenance instead of uploading a recording |
+| Bounded signal-quality interface | 40 fixtures; 38 readable and 2 exact refusals across 6 format families; 3.839 sec; 76,592 output bytes | fixture-backed | Validates readers, metrics, privacy, caps, and no-mutation identity before any real quality claim |
+| Replay/live-source authorization gate | 5 schedules x 18 fixture families = 90 future cases; 30 refusal IDs; 4 separately gated stages; 10 invariants | review-ready, not authorized | Binds the exact Stage A scope and caps before any source-chunk, socket, board, fixture, or hardware implementation |
+| Test and release surface | 277 unittests with 3 skips; 274 pytest passes, 3 skips, and 25 subtests; 265-test zero-dependency suite also green | local shell verified | Makes the research contracts executable for contributors on ordinary hardware |
+
+### Real-Data Scientific Scorecard
+
+| Evaluation | Neural result | No-signal result | Honest decision |
+|---|---:|---:|---|
+| S21 session-1 strict five-row sentence test | 163 character edits | 164 character edits | Near-null difference; paired interval spans benefit and harm |
+| S21 session-2 same-person transfer | CER `0.9179` | CER `0.7755` | Neural model is materially worse; session is consumed |
+| S7 EEG within-session key events | exact accuracy `0.91%` | exact accuracy `12.27%` | Neural template is materially worse; EEG bridge is mechanics only |
+
+**Scientific headline:** the real MEG and EEG evaluations run so far do not
+show a reliable neural advantage. That negative result is preserved beside the
+engineering wins, not hidden behind synthetic accuracy.
+
+### Resource Highlights
+
+| Gate | Runtime | Peak RSS | Persistent output |
+|---|---:|---:|---:|
+| Zero-dependency full unittest run | 1.440 sec | 64,290,816 bytes | temporary test output only |
+| RW1 metadata intake roundtrip | 0.001659 sec | 21,643,264 bytes | 11,545 bytes |
+| RW2 bounded FIF quality roundtrip | 3.839168 sec | 150,749,184 bytes | 76,592 bytes |
+| RW3 contract/request invariant suite | 0.040 sec | 20,529,152 bytes | no generated payload |
+| Loop 24 preregistration invariant suite | 0.110 sec | 20,742,144 bytes | no generated payload |
+| Complete optional-neuro/ML test runners | 15.460 sec max | 580,567,040 bytes max | temporary test output only |
+
+Proof labels are deliberately narrow:
+
+- **real-data validated** means the named interface or identity claim ran on the
+  exact local recording described;
+- **fixture-backed** means deterministic generated files exercised the contract;
+- **synthetic mechanism only** means the result cannot be transferred to brain
+  data, people, or devices;
+- **review-ready, not authorized** means the bounded protocol and decision packet
+  exist, but their planned runtime does not;
+- **preregistered, no runtime** means candidates, data independence, metrics,
+  thresholds, and refusals are frozen before any candidate implementation or
+  benchmark execution;
+- **parked** means a registered primary gate failed and the project did not tune
+  past it.
+
+Detailed evidence is linked from the
+[documentation map](#documentation-map), including
+[the RW2 closeout](docs/RW2_SIGNAL_QUALITY_CLOSEOUT.md).
 
 ## Current Proof Boundary
 
@@ -48,6 +126,21 @@ Read this before interpreting any number in the repository.
   two frozen refusal fixtures across those six format families using bounded
   optional MNE readers, strict source binding, descriptive metrics, privacy
   redaction, and before/after no-mutation checks.
+- **RW3 protocol registration:** a versioned, machine-checked contract freezes
+  source identity, raw/corrected/arrival timestamps, gaps, duplicates,
+  reordering, reconnects, state, five schedules, 18 future fixture families,
+  30 refusal IDs, and four separately gated adapter stages. No source-chunk or
+  adapter runtime exists yet.
+- **RW3 Stage A decision packet:** a hash-bound request now defines 90 future
+  schedule-by-fixture cases, all 30 deterministic refusals, one-thread resource
+  caps, and the exact authorization sequence. The request says
+  `authorized_now: false`; preparing it did not authorize implementation.
+- **Loop 24 precision/runtime registration:** a versioned contract freezes the
+  float32 eager reference, explicit CPU float16, and dynamic-qint8 QNNPACK
+  candidates; fresh target-free seeds 2401 and 2402; 12 balanced timing rounds;
+  exact behavior, resource, and claim gates; and 30 refusal IDs. Commit
+  `186bb6f` contains protocol evidence only: no fixture, checkpoint read,
+  candidate conversion, inference, timing, energy, or qualification run exists.
 
 ### What The Results Actually Say
 
@@ -61,6 +154,8 @@ Read this before interpreting any number in the repository.
   exact-sequence threshold, even though several secondary metrics passed.
 - Loop 23.5 shows that one supervised blank-logit intercept fixes one fresh
   synthetic motif/symbol task. That is a mechanism result, not brain decoding.
+- Loop 24 freezes how local CPU precision and runtime would be compared, but it
+  has not yet produced a float16, qint8, speed, memory, storage, or energy result.
 
 ### What Is Not Established
 
@@ -258,6 +353,15 @@ The preferred first result is offline replay equivalence on deterministic
 samples. A connected device or live waveform plot is not a language decoder.
 Four-channel consumer EEG is not assumed equivalent to 64-channel research EEG
 or 306-channel MEG.
+
+Replay and hardware contributions must begin from the frozen
+[RW3 preregistration](docs/RW3_REPLAY_LIVE_EQUIVALENCE_PREREGISTRATION.md) and
+[machine contract](registries/replay_equivalence_contract.v0.json). The
+[Stage A authorization packet](docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md) and its
+[machine request](registries/rw3_stage_a_authorization_request.v0.json) make the
+next permission exact, but both still say that Stage A is unauthorized. A
+hardware contribution, issue, or pull request cannot substitute for that
+decision; each runtime stage requires a separate review.
 
 The current metadata device registry is
 [registries/devices.v0.json](registries/devices.v0.json). Registry presence is
@@ -532,6 +636,11 @@ channel-sample values, 32 MiB of materialized float64 arrays, 30 seconds, 1 GiB
 peak RSS, 4 MiB of report output per run, and 16 MiB for the complete synthetic
 fixture/report set.
 
+Loop 24, if separately authorized, freezes one thread and worker, at most 48
+fresh target-free items per partition, 32 MiB of materialized arrays, 4 MiB of
+total generated artifacts, 60 seconds of internal runtime, and 1 GiB peak RSS
+per worker. Its registration authorizes none of those operations yet.
+
 Generated artifacts belong in ignored `cache/` or `outputs/`, not in Git.
 
 ## Project Status And Roadmap
@@ -544,7 +653,10 @@ The original numbered development sequence has reached:
 - Loop 23: parked after the frozen synthetic decoder test missed its primary
   threshold;
 - Loop 23.5: completed as a supervised synthetic calibration mechanism;
-- Loop 24: preregistration only; consumed seed 2353 cannot select candidates.
+- Loop 24: preregistered at `186bb6f` with contract SHA-256
+  `58e9d5407fef9419bc3bb0dc8cd3fa68d36dd238cb636d2f833dd9c5c6c3ae5d`;
+  implementation and execution remain unauthorized, and consumed seed 2353
+  cannot select candidates.
 
 The parallel Real-World Practice track has reached:
 
@@ -552,7 +664,10 @@ The parallel Real-World Practice track has reached:
 - RW1: dependency-free metadata-only local intake, fixture-backed;
 - RW2: bounded synthetic signal-read and descriptive quality-report interface,
   fixture-backed;
-- RW3+: not authorized by RW2 alone;
+- RW3: replay/live-source equivalence preregistered at `c3d1f01`; the Stage A
+  decision packet is ready for explicit review, while Stage A and all runtime
+  adapters remain unauthorized;
+- RW4+: not authorized by RW3 registration;
 - proposed S20 acquisition: dry-run only until exact approval.
 
 The roadmap is not a promise of positive decoding performance. Gates can close,
@@ -569,15 +684,25 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/CODEX_HANDOFF.md](docs/CODEX_HANDOFF.md) | exact continuation boundary for coding agents |
 | [docs/BUILD_NOTES.md](docs/BUILD_NOTES.md) | chronological measured build journal |
 | [docs/DECISIONS.md](docs/DECISIONS.md) | consequential architecture and research decisions |
-| [docs/NEXT_20_LOOPS_TRACKER.md](docs/NEXT_20_LOOPS_TRACKER.md) | original loop tracker |
+| [docs/NEXT_20_LOOPS_TRACKER.md](docs/NEXT_20_LOOPS_TRACKER.md) | original 20-loop tracker plus the current post-roadmap gate and decision status |
 | [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) | post-NeuroToken causal/evaluation roadmap |
 | [docs/REAL_DATA_VALIDATION_2026-07-10.md](docs/REAL_DATA_VALIDATION_2026-07-10.md) | S21 alignment, session, and upstream audit |
 | [docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md](docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md) | real EEG bridge and negative classifier result |
 | [docs/LOOP_20_NEUROTOKEN_CACHE_V0.md](docs/LOOP_20_NEUROTOKEN_CACHE_V0.md) | NeuroTokenCache schema and synthetic interface proof |
+| [docs/LOOP_24_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_24_PRIMARY_SOURCE_RESEARCH.md) | PyTorch precision, timing, memory, and energy primary-source review |
+| [docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md](docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md) | frozen Loop 24 candidates, fresh fixtures, measurements, thresholds, caps, and decision language |
+| [registries/local_precision_runtime_contract.v0.json](registries/local_precision_runtime_contract.v0.json) | machine-readable Loop 24 identities, schedules, refusals, access rules, and false authorization flags |
 | [docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md](docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md) | metadata-only file intake closeout |
 | [docs/RW2_PRIMARY_SOURCE_RESEARCH.md](docs/RW2_PRIMARY_SOURCE_RESEARCH.md) | reader/quality primary-source review |
 | [docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md](docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md) | frozen RW2 protocol |
+| [docs/RW2_SIGNAL_QUALITY_CLOSEOUT.md](docs/RW2_SIGNAL_QUALITY_CLOSEOUT.md) | measured six-format RW2 implementation result |
+| [docs/RW3_PRIMARY_SOURCE_RESEARCH.md](docs/RW3_PRIMARY_SOURCE_RESEARCH.md) | BrainFlow, LSL, PyXDF, and clock primary-source review |
+| [docs/RW3_REPLAY_LIVE_EQUIVALENCE_PREREGISTRATION.md](docs/RW3_REPLAY_LIVE_EQUIVALENCE_PREREGISTRATION.md) | frozen replay/live-source protocol; no implementation |
+| [registries/replay_equivalence_contract.v0.json](registries/replay_equivalence_contract.v0.json) | machine-readable RW3 schedules, fixtures, refusals, caps, and authorization flags |
+| [docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md](docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md) | exact Stage A scope, acceptance gates, caps, forbidden work, and decision language |
+| [registries/rw3_stage_a_authorization_request.v0.json](registries/rw3_stage_a_authorization_request.v0.json) | hash-bound machine request; currently `authorized_now: false` |
 | [docs/BYO_NEURODATA_WORKBENCH_SPEC.md](docs/BYO_NEURODATA_WORKBENCH_SPEC.md) | staged local neurodata workbench contract |
+| [docs/OPEN_SOURCE_READINESS.md](docs/OPEN_SOURCE_READINESS.md) | licensing, history, privacy, GitHub, and release gates |
 | [registries/datasets.v0.json](registries/datasets.v0.json) | task-separated dataset candidates |
 | [registries/devices.v0.json](registries/devices.v0.json) | device and modality metadata, not qualification |
 | [docs/RISK_AND_ETHICS.md](docs/RISK_AND_ETHICS.md) | privacy, licensing, ethics, and communication boundary |
@@ -599,6 +724,23 @@ Contributions are welcome, especially:
 
 Start with [CONTRIBUTING.md](CONTRIBUTING.md). It contains dedicated safe paths
 for people with EEG recordings and people with EEG headsets or boards.
+
+| You have | Best first contribution | Keep private or gated |
+|---|---|---|
+| An EEG recording | Run metadata-only intake locally and share a redacted compatibility summary | Waveforms, event text, participant paths, demographics, and unreviewed derived caches |
+| An EEG headset or board | Document channels, reference, clocks, transport, packet counters, export formats, and SDK license | Live connection details, private endpoints, credentials, and unapproved recordings |
+| No EEG hardware | Add deterministic fixtures, malformed cases, refusal tests, docs, or no-signal controls | No real data is needed for these high-value paths |
+
+Precision or local-runtime contributions must begin with the frozen Loop 24
+protocol. A benchmark pull request is not execution authorization, smaller
+weights are not proof of faster inference, and neither result is evidence of
+brain decoding or end-to-end text latency.
+
+The project deliberately treats an exact refusal, a privacy-preserving metadata
+report, or a reproducible negative result as a meaningful contribution. See
+[I Have EEG Data](#i-have-eeg-data) and
+[I Have An EEG Headset Or Board](#i-have-an-eeg-headset-or-board) for the
+step-by-step routes.
 
 Community files:
 

@@ -1,6 +1,6 @@
-# Codex Handoff — NeuroDecodeKit Starter
+# Codex Handoff - NeuroDecodeKit
 
-> Current handoff, 2026-07-10: Loops 1-12, 14-22, and 23.5 are complete; Loops
+> Current handoff, 2026-07-11: Loops 1-12, 14-22, and 23.5 are complete; Loops
 > 13 and 23 are parked after measured gates. Two S21 MEG sessions support strict
 > sentence-text and same-subject session protocols, but the fixed tiny CTC has
 > no reliable neural advantage and loses its cross-session comparison to the
@@ -19,17 +19,36 @@
 > train-frame-fitted blank intercept takes validation from 6/16 to 16/16 exact
 > and the once-opened seed-2353 test from 7/16 to 16/16 exact, with zero CER,
 > nine test corrections, no regressions, and all replay/resource/access gates
-> passing. Seed 2353 is consumed. Loop 24 is unblocked for preregistration only.
+> passing. Seed 2353 is consumed. Loop 24 is now preregistered at commit
+> `186bb6f`, before implementation or execution. Three exact CPU candidates,
+> fresh target-free seeds 2401/2402, 12 balanced timing rounds, exact behavior
+> and resource gates, and 30 refusal IDs are frozen. Nine dependency-free
+> invariants pass. No fixture, candidate, checkpoint read, inference, timing,
+> profiler, energy, or qualification run exists, and every execution flag is
+> false.
 > In parallel, RW0 closes a primary-source Real-World Practice research gate
 > with eight dataset records, 13 device records, a local BYO Neurodata
 > contract, and one exact S20 EEG dry-run packet. RW1 now closes a
 > dependency-free level-0 metadata gate for BrainVision, EDF/EDF+, BDF,
 > EEGLAB, FIF, and BIDS synthetic fixtures. Its 532-byte roundtrip writes
 > 11,545 bytes with zero binary/raw/cache/target/model/training/network reads.
-> RW2 is now preregistered at `eacb231`; its next authorized gate is the exact
-> synthetic-fixture-only implementation. No real recording, consumed cache,
-> S20 download/read, MNE-BIDS execution, automatic cleaning, model, or training
-> is authorized.
+> RW2 now closes at exact synthetic compatibility level 2. Forty generated
+> fixtures cover six format families: 38 readable sources pass and two
+> malformed/unsafe layouts refuse exactly. One measured FIF report selects nine
+> channels and three windows, returns 11,520 values, writes 76,592 bytes in
+> 3.839168 seconds, and records 150,749,184-byte peak RSS with zero
+> real/cache/target/model/training/network access. RW3's replay/live-source
+> protocol is frozen at commit `c3d1f01`: five schedules, 18 future fixture
+> families, 30 exact refusal IDs, four separately gated adapter stages, and
+> seven dependency-free contract tests. Commit `163ff2f` adds a hash-bound
+> Stage A decision packet, three authorization-binding tests, and a proposed
+> 90-case matrix. Its machine request says `authorized_now: false`. No source
+> chunk, fixture, CLI,
+> BrainFlow/LSL/PyXDF import, socket, stream, board, or XDF operation occurred.
+> Stage A remains unapproved. No real recording, consumed cache, S20
+> download/read, live source, automatic cleaning, model, or training is
+> authorized. Loop 24 and RW3 Stage A are independent decisions; authorizing
+> either cannot authorize the other.
 > There is no demonstrated neural advantage, unseen-person, useful EEG,
 > real-neural sequence decoder, end-to-end real-time, portable-hardware,
 > arbitrary-thought, or clinical claim. See
@@ -102,6 +121,11 @@ This repo is a starter scaffold with working pure-Python components:
 - dependency-free one-scalar blank-logit calibration with frame-only fit
   access, separate target-only prior access, paired no-harm/bootstrap metrics,
   exact calibrated/unmodified replay, and one-time frozen-test gating
+- frozen Loop 24 local precision/runtime registration with the exact float32
+  eager, explicit CPU float16, and dynamic-qint8 QNNPACK candidates; fresh
+  target-free selection/qualification partitions; balanced timing orders;
+  correctness, storage, RSS, runtime, access, refusal, and claim gates; and no
+  candidate implementation or execution
 - versioned primary-source dataset and device compatibility registries with
   separate task/evidence cohorts and explicit unavailable fields
 - local-first BYO Neurodata workbench contract with compatibility levels 0-6,
@@ -119,6 +143,22 @@ This repo is a starter scaffold with working pure-Python components:
   explicit reader arguments, bounded windows/arrays/resources, descriptive
   time-domain and Welch PSD metrics, privacy redaction, source no-mutation, and
   exact kill/park/proceed gates
+- fixture-backed RW2 implementation with 38 readable and two exact-refusal
+  sources, strict RW1/contract binding, six lazy direct-reader adapters,
+  deterministic JSON/Markdown/audit artifacts, load/validate/summary APIs,
+  malformed/privacy/tamper/collision/cap coverage, and four CLI commands
+- frozen RW3 source-chunk and replay-equivalence registration with separate
+  raw/corrected/arrival clocks, explicit packet anomalies and resume state,
+  five schedules, 18 future target-free fixture families, 30 refusal IDs,
+  four sequential adapter stages, resource/access caps, and invariant tests;
+  no runtime source-chunk or adapter implementation
+- hash-bound RW3 Stage A authorization packet with 90 proposed
+  schedule-by-fixture cases, all 30 refusal IDs, exact resource/access caps,
+  and an explicit authorization-only commit sequence; authorization remains
+  false and no Stage A implementation exists
+- open-source collaboration surface with Apache-2.0 license, third-party/data
+  boundaries, detailed README, EEG data/hardware contribution paths, security,
+  governance, citation, issue forms, pull-request checks, and one-thread CI
 - JSON/Markdown metrics report command
 - CLI smoke commands
 - unit tests
@@ -131,17 +171,23 @@ negative within-session event comparison. None is a decoder success. Do not
 turn these results, a variance ranking, or a geometry proxy into unseen-person
 or population generalization.
 
-Current verification after the RW2 preregistration closeout on 2026-07-10:
-249 unittest tests passed with 3 skipped in 11.714 seconds and 491,683,840-byte
-maximum RSS; pytest reported 246 passed, 3 skipped, and 25 subtests passed in
-12.51 seconds with 489,914,368-byte maximum RSS. Seven focused NeuroToken tests
-and all 11 RW1 tests passed. Full Ruff lint, compileall, root/create/inspect CLI
-help, the RW2 machine-contract invariant, workbook formulas and all-sheet visual
-checks, and `git diff --check` passed. The pre-RW1 baseline was 238 unittest and
-235 pytest passes with the same skips/subtests; no test count regressed during
-preregistration.
+Current verification after the Loop 24 preregistration at `186bb6f`: 277
+unittest tests pass with 3 skipped in 13.700 seconds (14.610 seconds wall and
+545,832,960-byte maximum RSS); pytest reports 274 passed, 3 skipped, and 25
+subtests passed in 14.31 seconds (15.460 seconds wall and 580,567,040-byte
+maximum RSS). All nine focused Loop 24 invariants pass in 0.110 seconds wall
+with 20,742,144-byte maximum RSS. A separate true zero-dependency run passes
+265 tests with 118 explicit optional skips in 1.440 seconds wall and
+64,290,816-byte maximum RSS. The pre-Loop-24 baseline was 268 unittest and 265
+pytest passes with the same optional-environment skips/subtests, so the frozen
+contract adds nine tests without regression. Full Ruff lint, compileall, root
+CLI help, JSON/TOML parsing, 43 local Markdown links, `git diff --check`, and
+staged Gitleaks pass. No data, fixture, checkpoint, candidate, inference,
+benchmark, model, or training operation was part of this registration gate.
 The tracked and delivered workbook hashes match at
-`c27d80d4831acc91795b2cbf10d7e00400ff393f58bfd029a7653e0e328dc669`.
+`3bb5b2ab03b4327912024bac401fb76ae682151df96140a379514e36caa22f82`.
+The tracked workbook is 57,473 bytes and its eight-sheet visual/formula audit
+passes.
 
 ## The north star
 
@@ -155,17 +201,27 @@ This is not primarily a model repo. It is a **research loop repo**.
 
 ## Current Next Work
 
-1. **RW2 - implement the frozen synthetic signal-quality gate.** Follow
-   `registries/signal_quality_contract.v0.json` exactly: use optional imports,
-   six generated format families, strict bounded reads, privacy/no-mutation
-   validation, deterministic reports, and one-thread resource caps. Do not open
-   a real recording or expand the protocol.
-2. **Loop 24 - preregister local precision/runtime independently.** Freeze
-   candidates, reference arithmetic, tolerances, fresh selection data, and
-   resource rules before code. Seed 2353 cannot select anything.
-3. **RW3 and later remain blocked by their predecessors.** Do not begin live
-   replay, hardware, collection, multimodal, workbench UI, or deployment work
-   from metadata compatibility alone.
+1. **Loop 24 - decide on the frozen local precision/runtime protocol only.**
+   Review `docs/LOOP_24_PRIMARY_SOURCE_RESEARCH.md`,
+   `docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md`, and
+   `registries/local_precision_runtime_contract.v0.json`. To authorize exactly
+   that implementation, use: `Authorize Loop 24 implementation exactly as
+   scoped in docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md. Do not authorize
+   RW3 Stage A, data access, or model training.` Otherwise amend or hold it.
+   General continuation does not authorize a candidate or execution.
+2. **RW3 - decide on the prepared Stage A packet only.** Review
+   `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` and
+   `registries/rw3_stage_a_authorization_request.v0.json`. The request is bound
+   to commit `c3d1f01` and its exact contract hash, but `authorized_now` remains
+   false. Do not implement Stage A without an explicit user decision followed
+   by a pushed authorization-only commit; BrainFlow, LSL, PyXDF, sockets, live
+   sources, hardware, and Stages B-D remain later independent gates.
+3. **Review draft PR #2 before publishing the latest evidence on `main`.** PR #1
+   has merged the open-source community surface through `e5d89ed`; PR #2 carries
+   the RW2 closeout, README results dashboard, canonical Apache license text,
+   Linux float32 portability record, RW3 registration, and the Stage A decision
+   packet. Do not merge until CI, license, issue-form, security, history,
+   visibility, and proof-boundary review is complete.
 
 RW4 is not next: S20 acquisition remains blocked until explicit approval names
 revision `88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684`, exactly four files, the
@@ -176,11 +232,21 @@ Loop 23's preregistration and parked result are in
 `docs/LOOP_23_STREAMING_CTC_DECODER.md`. Loop 23.5's frozen design and closeout
 are in `docs/LOOP_23_5_PREREGISTRATION.md` and
 `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`. Loop 22 evidence is in
-`docs/LOOP_22_TINY_CAUSAL_ENCODER.md`; the post-20 sequence is in
+`docs/LOOP_22_TINY_CAUSAL_ENCODER.md`; Loop 24 research, protocol, and machine
+contract are in `docs/LOOP_24_PRIMARY_SOURCE_RESEARCH.md`,
+`docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md`, and
+`registries/local_precision_runtime_contract.v0.json`; the post-20 sequence is in
 `docs/POST_20_ROADMAP.md`; RW1 evidence is in
-`docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md`; RW2's frozen design and source review
-are in `docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md` and
-`docs/RW2_PRIMARY_SOURCE_RESEARCH.md`.
+`docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md`; RW2 evidence is in
+`docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md`,
+`docs/RW2_PRIMARY_SOURCE_RESEARCH.md`, and
+`docs/RW2_SIGNAL_QUALITY_CLOSEOUT.md`. RW3 research and registration are in
+`docs/RW3_PRIMARY_SOURCE_RESEARCH.md`,
+`docs/RW3_REPLAY_LIVE_EQUIVALENCE_PREREGISTRATION.md`, and
+`registries/replay_equivalence_contract.v0.json`. The separate Stage A decision
+surface is `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` plus
+`registries/rw3_stage_a_authorization_request.v0.json`. Open-source release
+gates are in `docs/OPEN_SOURCE_READINESS.md`.
 
 ## Historical original PR plan
 

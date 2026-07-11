@@ -20,6 +20,11 @@ from neurodecodekit.cache.sentence_npz import validate_sentence_cache_metadata
 CAUSAL_REPLAY_SCHEMA_NAME = "b2q-causal-replay-gate"
 CAUSAL_REPLAY_SCHEMA_VERSION = 0
 PROOF_POSTURE = "synthetic_causal_frame_replay_only_no_decoder"
+# Linux NumPy 2.5.1/OpenBLAS produced 1.430511474609375e-6 between the
+# historical batched projection and canonical one-frame arithmetic. The
+# schedule-to-schedule contract remains bitwise; only this cross-kernel
+# compatibility comparison uses the documented portability amendment.
+DEFAULT_COMPATIBILITY_ATOL = 2e-6
 REGISTERED_SCHEDULES = (
     "single-sample",
     "stride-aligned",
@@ -77,7 +82,7 @@ def run_causal_replay_gate(
     stride: int = 4,
     seed: int = 23,
     token_dtype: str = "float32",
-    compatibility_atol: float = 1e-6,
+    compatibility_atol: float = DEFAULT_COMPATIBILITY_ATOL,
     max_items: int = 64,
     max_source_mb: float = 4.0,
     max_samples_per_item: int = 128,
@@ -213,30 +218,44 @@ def run_causal_replay_gate(
     )
     runtime_sec = time.perf_counter() - started_at
     peak_rss_bytes = _peak_rss_bytes()
-    resource_gate = (
-        runtime_sec <= caps["max_runtime_sec"]
-        and (peak_rss_bytes is None or peak_rss_bytes <= caps["max_peak_rss_bytes"])
-        and max_state_bytes <= caps["max_state_bytes"]
+    gate_checks = {
+        "all_schedules_offline_compatible": all(
+            bool(schedule["offline_value_compatibility_passed"])
+            for schedule in schedule_reports
+        ),
+        "all_timestamps_bitwise_equal": all(
+            bool(schedule["timestamps_bitwise_equal"])
+            for schedule in schedule_reports
+        ),
+        "all_frame_grids_exact": all(
+            bool(schedule["frame_grid_exact"]) for schedule in schedule_reports
+        ),
+        "all_causal_availability_checks_passed": all(
+            bool(schedule["causal_availability_passed"])
+            for schedule in schedule_reports
+        ),
+        "stream_schedule_bits_invariant": schedule_invariant_bits,
+        "runtime_within_cap": runtime_sec <= caps["max_runtime_sec"],
+        "peak_rss_within_cap_or_unavailable": (
+            peak_rss_bytes is None
+            or peak_rss_bytes <= caps["max_peak_rss_bytes"]
+        ),
+        "mutable_state_within_cap": max_state_bytes <= caps["max_state_bytes"],
+        "producer_has_zero_right_context": (
+            producer.producer_right_context_samples == 0
+        ),
+    }
+    failed_gate_checks = sorted(
+        name for name, passed in gate_checks.items() if not passed
     )
-    replay_gate = all(
-        bool(schedule["offline_value_compatibility_passed"])
-        and bool(schedule["timestamps_bitwise_equal"])
-        and bool(schedule["frame_grid_exact"])
-        and bool(schedule["causal_availability_passed"])
-        for schedule in schedule_reports
-    )
-    gate_passed = bool(
-        replay_gate
-        and schedule_invariant_bits
-        and resource_gate
-        and producer.producer_right_context_samples == 0
-    )
+    gate_passed = not failed_gate_checks
     thread_env = {name: os.environ.get(name) for name in THREAD_ENV_VARS}
     warnings = [
         "synthetic_signal_fixture_only",
         "mock_projection_is_target_free_and_not_learned",
         "canonical_stream_arithmetic_is_bitwise_schedule_invariant",
         "loop20_batched_offline_values_use_declared_float_tolerance",
+        "cross_kernel_float32_portability_tolerance_is_not_bitwise_equivalence",
         "producer_causality_does_not_establish_decoder_causality",
         "no_end_to_end_or_user_perceived_latency_was_measured",
         "whole_item_schedule_is_an_equivalence_stress_not_a_low_latency_mode",
@@ -251,6 +270,8 @@ def run_causal_replay_gate(
         },
         "proof_posture": PROOF_POSTURE,
         "gate_passed": gate_passed,
+        "gate_checks": gate_checks,
+        "failed_gate_checks": failed_gate_checks,
         "decision": (
             "causal_frame_replay_passed_ready_for_learned_encoder_gate"
             if gate_passed

@@ -1,0 +1,721 @@
+{
+  "schema_name": "neurodecodekit.local_precision_runtime_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "loop24-local-precision-runtime-v0",
+  "prepared_at": "2026-07-11",
+  "status": "preregistered_no_candidate_implementation_or_execution",
+  "proof_posture": "target_free_synthetic_local_runtime_preregistration_only",
+  "preregistration_parent_commit": "8190f86",
+  "authorization": {
+    "preregistration_only": true,
+    "implementation_requires_separate_user_authorization": true,
+    "implementation_authorized_now": false,
+    "fixture_generation_authorized_now": false,
+    "checkpoint_open_authorized_now": false,
+    "candidate_conversion_authorized_now": false,
+    "model_inference_authorized_now": false,
+    "registered_selection_authorized_now": false,
+    "registered_qualification_authorized_now": false,
+    "training_or_parameter_updates_authorized_now": false,
+    "rw3_stage_a_authorized_now": false,
+    "authorization_sentence_exact": "Authorize Loop 24 implementation exactly as scoped in docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md. Do not authorize RW3 Stage A, data access, or model training.",
+    "hold_sentence_exact": "Hold Loop 24 implementation. Keep every Loop 24 execution authorization flag false.",
+    "general_continuation_is_authorization": false
+  },
+  "reference_pipeline": {
+    "producer_name": "TinyCausalWindowEncoder",
+    "producer_device": "cpu",
+    "producer_geometry": {
+      "input_channels": 5,
+      "sampling_rate_hz": 100.0,
+      "kernel_size_samples": 16,
+      "stride_samples": 4,
+      "flattened_input_values": 80,
+      "hidden_dim": 12,
+      "embedding_dim": 8,
+      "output_classes": 6
+    },
+    "trainable_parameters": 1130,
+    "encoder_parameters": 1076,
+    "probe_parameters": 54,
+    "float32_parameter_bytes": 4520,
+    "float32_parameter_plus_normalization_bytes": 4560,
+    "checkpoint_file_sha256": "75fd5e3c549f28af819f358f3e12d4ee3e3b42a4d87f645fb8aa36b57c7bfab1",
+    "parameter_payload_sha256": "d7f4c1bdf7cb36ead01cc9571eb4167083f48537b5930b3dfc0fe7852a3f2d98",
+    "model_config_sha256": "8b331beeb236eaf54a938c5aca6b12c59d81fb87e28d2ff92e5edf66ef26dcc2",
+    "normalization_dtype": "float32",
+    "normalization_fit_split": "historical_train_frozen_before_loop24",
+    "blank_intercept_value": 5.130175197684084,
+    "blank_intercept_dtype": "float64",
+    "blank_intercept_parameter_payload_sha256": "10ed3f4fd2bf29841aebe31b81d7726910361df5ecc10a2c29ae7de4563d174f",
+    "blank_calibration_config_sha256": "43de56b1d275c0fd5b08a92d9dabc6893f7fe7ee49e02195623f6d61caa57e47",
+    "decoder_config_sha256": "3a70a3e7890487eb8a1d5c871eb8540e8265ea524a62a5d3be8c5ac55f760544",
+    "decoder": {
+      "blank_id": 0,
+      "beam_width": 8,
+      "max_prefix_length": 12,
+      "log_softmax_dtype": "float64",
+      "beam_score_dtype": "float64",
+      "frame_update": "one_at_a_time",
+      "tie_break": "score_desc_then_token_tuple_lexicographic",
+      "language_model": null,
+      "lexicon": null,
+      "endpoint_detector": null,
+      "target_length_rule": null
+    },
+    "producer_right_context_samples": 0,
+    "architecture_changes_allowed": false,
+    "retraining_allowed": false,
+    "recalibration_allowed": false
+  },
+  "source_bindings": [
+    {
+      "path": "src/neurodecodekit/models/tiny_causal_encoder.py",
+      "git_blob_sha1_at_parent": "2371ff1d2c51a664a54e7694b17ea36083171c82",
+      "file_sha256_at_parent": "6579d960af39409ca10cc22645349a459173c83528708cc2d8bd339cd06149e2"
+    },
+    {
+      "path": "src/neurodecodekit/experiments/streaming_ctc_gate.py",
+      "git_blob_sha1_at_parent": "041330033061f3e305e4942c36b4c208df467c0f",
+      "file_sha256_at_parent": "2570e69d059d1876a8c47cd89cadeb6974111f79ff963e3cb62dfe0f64a09344"
+    },
+    {
+      "path": "src/neurodecodekit/decoding/ctc_prefix.py",
+      "git_blob_sha1_at_parent": "43a177373c0ff2c0c4fc03224c9a3c4d902294b2",
+      "file_sha256_at_parent": "b2e57e147ff7667d3377422ce48ed48baaa1a2c7767b8a6960fd8102545a16c4"
+    },
+    {
+      "path": "src/neurodecodekit/evaluation/blank_calibration.py",
+      "git_blob_sha1_at_parent": "9946b31c8b0b716099bff394fec4b9f66b12f7d8",
+      "file_sha256_at_parent": "4302f759a10074d1aa8e3e3a467555b329e0cb092af8d677e43545a8e3408255"
+    },
+    {
+      "path": "src/neurodecodekit/cache/neurotoken_stream.py",
+      "git_blob_sha1_at_parent": "735ea4c1cf9468e52591921fc4f1dedac8a3ce22",
+      "file_sha256_at_parent": "d8c9cd1104c2fa21f0d74b2b25a1e6e6942fa180bc7a57204f2d9182d6b29be0"
+    }
+  ],
+  "preregistration_host_snapshot": {
+    "host_model": "Mac16,8",
+    "cpu_name": "Apple M4 Pro",
+    "architecture": "arm64",
+    "physical_cores": 12,
+    "logical_cores": 12,
+    "memory_bytes": 25769803776,
+    "operating_system": "macOS 26.6",
+    "operating_system_build": "25G5028f",
+    "python_version": "3.13.5",
+    "numpy_version": "2.5.0",
+    "torch_version": "2.13.0",
+    "torch_git_version": "cf30153c4c131c8164ee7798e5022d810682e2cb",
+    "torchao_installed": false,
+    "legacy_quantize_dynamic_available": true,
+    "supported_quantized_engines": [
+      "qnnpack"
+    ],
+    "quantized_engine_before_gate": "none",
+    "reported_cpu_capabilities": [
+      "bf16",
+      "dot",
+      "fp16_arith",
+      "i8mm",
+      "neon"
+    ],
+    "capabilities_are_kernel_execution_proof": false,
+    "free_disk_bytes_approximate": 5046586573
+  },
+  "candidate_set": [
+    {
+      "candidate_id": "float32_eager_reference",
+      "role": "reference_only",
+      "selectable_as_replacement": false,
+      "device": "cpu",
+      "framework": "torch_eager",
+      "linear_weight_dtype": "float32",
+      "linear_bias_dtype": "float32",
+      "linear_input_dtype": "float32",
+      "linear_output_dtype": "float32",
+      "gelu_dtype": "float32",
+      "normalization_dtype": "float32",
+      "decoder_input_cast": "float32_to_float64_once",
+      "autocast_allowed": false,
+      "compile_allowed": false,
+      "fallback_allowed": false
+    },
+    {
+      "candidate_id": "float16_eager_cpu",
+      "role": "selectable_candidate",
+      "selectable_as_replacement": true,
+      "device": "cpu",
+      "framework": "torch_eager",
+      "conversion": "clone_frozen_model_then_explicit_to_cpu_float16",
+      "linear_weight_dtype": "float16",
+      "linear_bias_dtype": "float16",
+      "linear_input_dtype": "float16_after_float32_normalization",
+      "linear_output_dtype": "float16",
+      "gelu_dtype": "float16",
+      "normalization_dtype": "float32",
+      "decoder_input_cast": "float16_to_float32_once_then_float64",
+      "autocast_allowed": false,
+      "compile_allowed": false,
+      "fallback_allowed": false,
+      "hardware_accumulation_dtype_if_not_proven": "unavailable"
+    },
+    {
+      "candidate_id": "dynamic_qint8_qnnpack",
+      "role": "selectable_candidate",
+      "selectable_as_replacement": true,
+      "device": "cpu",
+      "framework": "torch_ao_legacy_eager_dynamic_quantization",
+      "conversion_api": "torch.ao.quantization.quantize_dynamic",
+      "conversion_qconfig_spec": "all_and_only_three_torch_nn_Linear_modules",
+      "quantized_engine": "qnnpack",
+      "packed_weight_dtype": "qint8",
+      "activation_quantization": "dynamic_at_each_Linear_call",
+      "module_input_dtype": "float32",
+      "module_output_dtype": "float32",
+      "gelu_dtype": "float32",
+      "normalization_dtype": "float32",
+      "decoder_input_cast": "float32_to_float64_once",
+      "required_quantized_module_class": "torch.ao.nn.quantized.dynamic.Linear",
+      "required_profiler_operator_contains": "quantized::linear_dynamic",
+      "autocast_allowed": false,
+      "compile_allowed": false,
+      "torchao_substitution_allowed": false,
+      "fake_quantization_allowed": false,
+      "manual_int8_kernel_allowed": false,
+      "fallback_allowed": false,
+      "api_migration_warning_required": true
+    }
+  ],
+  "excluded_candidates": [
+    "bfloat16",
+    "cpu_autocast",
+    "static_activation_quantization",
+    "quantization_aware_training",
+    "torchao",
+    "torch_compile",
+    "torchscript",
+    "onnx_runtime",
+    "coreml",
+    "executorch",
+    "mps",
+    "weight_pruning",
+    "architecture_change",
+    "batched_offline_inference"
+  ],
+  "fixture_contract": {
+    "schema_name": "b2q-local-precision-runtime-fixture",
+    "schema_version": 0,
+    "target_free": true,
+    "members": [
+      "signals",
+      "input_lengths",
+      "item_ids",
+      "metadata"
+    ],
+    "forbidden_members": [
+      "targets",
+      "target_token_ids",
+      "target_lengths",
+      "labels",
+      "frame_labels",
+      "sample_labels",
+      "text",
+      "predictions",
+      "participant_id",
+      "recording_path"
+    ],
+    "signal_dtype": "float32",
+    "signal_layout": "items,channels,time",
+    "channels": 5,
+    "sampling_rate_hz": 100.0,
+    "maximum_samples_per_item": 128,
+    "minimum_samples_per_item": 64,
+    "length_multiple_samples": 4,
+    "selection": {
+      "seed": 2401,
+      "items": 48,
+      "semantic_role": "candidate_availability_correctness_and_selection"
+    },
+    "qualification": {
+      "seed": 2402,
+      "items": 48,
+      "semantic_role": "one_time_selected_candidate_confirmation",
+      "opened_only_after_selection_freeze": true,
+      "opened_if_no_replacement_candidate_selected": false
+    },
+    "waveform_families": [
+      "bounded_sinusoid_mixture",
+      "bounded_linear_chirp",
+      "bounded_impulse_train",
+      "bounded_piecewise_ramp",
+      "bounded_piecewise_constant",
+      "bounded_seeded_gaussian_mixture"
+    ],
+    "items_per_waveform_family_per_partition": 8,
+    "value_bounds_inclusive": [
+      -4.0,
+      4.0
+    ],
+    "generated_from_model_outputs": false,
+    "contains_brainlike_or_neural_claim": false,
+    "physical_partition_files_required": true,
+    "partition_item_ids_must_be_disjoint": true,
+    "manifest_inspection_opens_array_members": false
+  },
+  "partition_access_sequence": [
+    "validate_contract_and_environment_without_checkpoint_or_fixture_arrays",
+    "validate_fixture_manifest_without_opening_partition_arrays",
+    "validate_checkpoint_file_identity_and_load_frozen_checkpoint_once",
+    "open_selection_input_only_partition_once",
+    "construct_each_candidate_once_without_training_or_parameter_updates",
+    "run_untimed_reference_replay_and_candidate_correctness",
+    "run_untimed_profiler_provenance_checks",
+    "run_twelve_balanced_selection_timing_rounds_in_fresh_sequential_workers",
+    "freeze_selection_report_and_candidate_decision",
+    "open_qualification_input_only_partition_once_only_if_a_nonreference_replacement_candidate_was_selected",
+    "compare_only_reference_and_frozen_selected_candidate_on_qualification",
+    "write_reports_without_reopening_any_partition"
+  ],
+  "correctness_gates": {
+    "reference_replay_repeats": 3,
+    "reference_replay_payload_hash": "bitwise_exact_across_repeats_on_registered_host",
+    "exact_for_every_candidate": [
+      "item_ids",
+      "input_lengths",
+      "frame_counts",
+      "frame_start_samples",
+      "frame_end_samples",
+      "token_timestamps",
+      "embedding_shape",
+      "logit_shape",
+      "greedy_path_class_by_frame",
+      "greedy_partial_hypothesis_by_frame",
+      "prefix_top_hypothesis_by_frame",
+      "greedy_final_hypothesis_by_item",
+      "prefix_final_hypothesis_by_item",
+      "flush_behavior",
+      "right_context_zero",
+      "warning_and_access_ledger"
+    ],
+    "finite_required": [
+      "input",
+      "embedding",
+      "logit",
+      "blank_margin",
+      "log_probability",
+      "beam_score"
+    ],
+    "numeric_tolerances": {
+      "embedding_max_absolute_error": 0.1,
+      "embedding_relative_rmse_max": 0.02,
+      "embedding_cosine_similarity_min": 0.995,
+      "cosine_zero_norm_floor": 1e-12,
+      "cosine_both_zero_rule": "one_if_max_absolute_error_passes",
+      "cosine_one_zero_rule": "zero",
+      "logit_max_absolute_error": 0.1,
+      "logit_relative_rmse_max": 0.02,
+      "blank_margin_max_absolute_error": 0.15,
+      "log_probability_max_absolute_error": 0.15,
+      "relative_rmse_denominator_floor": 1e-12
+    },
+    "tolerances_may_not_change_after_selection_open": true,
+    "candidate_output_may_not_select_or_generate_fixture_rows": true,
+    "behavioral_exactness_is_primary_over_numeric_tolerance": true
+  },
+  "benchmark_protocol": {
+    "steady_state_timer": "torch.utils.benchmark.Timer.adaptive_autorange",
+    "timer_threshold_iqr_over_median": 0.1,
+    "timer_min_run_time_sec": 0.05,
+    "timer_max_run_time_sec": 0.25,
+    "timer_num_threads": 1,
+    "timed_paths": [
+      "producer_frame_normalize_encode_probe",
+      "fixed_float64_decoder_frame_update",
+      "full_incremental_frame_pipeline"
+    ],
+    "timed_path_includes_report_io": false,
+    "timed_path_includes_process_startup": false,
+    "timed_path_includes_candidate_construction": false,
+    "cold_measurements_separate": [
+      "checkpoint_validate_load_and_candidate_construct_sec",
+      "first_frame_sec"
+    ],
+    "selection_rounds": 12,
+    "selection_candidate_orders": [
+      [
+        "float32_eager_reference",
+        "float16_eager_cpu",
+        "dynamic_qint8_qnnpack"
+      ],
+      [
+        "float32_eager_reference",
+        "dynamic_qint8_qnnpack",
+        "float16_eager_cpu"
+      ],
+      [
+        "float16_eager_cpu",
+        "float32_eager_reference",
+        "dynamic_qint8_qnnpack"
+      ],
+      [
+        "float16_eager_cpu",
+        "dynamic_qint8_qnnpack",
+        "float32_eager_reference"
+      ],
+      [
+        "dynamic_qint8_qnnpack",
+        "float32_eager_reference",
+        "float16_eager_cpu"
+      ],
+      [
+        "dynamic_qint8_qnnpack",
+        "float16_eager_cpu",
+        "float32_eager_reference"
+      ],
+      [
+        "float32_eager_reference",
+        "float16_eager_cpu",
+        "dynamic_qint8_qnnpack"
+      ],
+      [
+        "float32_eager_reference",
+        "dynamic_qint8_qnnpack",
+        "float16_eager_cpu"
+      ],
+      [
+        "float16_eager_cpu",
+        "float32_eager_reference",
+        "dynamic_qint8_qnnpack"
+      ],
+      [
+        "float16_eager_cpu",
+        "dynamic_qint8_qnnpack",
+        "float32_eager_reference"
+      ],
+      [
+        "dynamic_qint8_qnnpack",
+        "float32_eager_reference",
+        "float16_eager_cpu"
+      ],
+      [
+        "dynamic_qint8_qnnpack",
+        "float16_eager_cpu",
+        "float32_eager_reference"
+      ]
+    ],
+    "fresh_worker_per_candidate_round": true,
+    "cold_and_empty_import_measurements_use_the_same_round_worker_before_warmup": true,
+    "maximum_concurrent_workers": 1,
+    "qualification_rounds": 6,
+    "qualification_orders": [
+      [
+        "float32_eager_reference",
+        "selected_candidate"
+      ],
+      [
+        "selected_candidate",
+        "float32_eager_reference"
+      ],
+      [
+        "float32_eager_reference",
+        "selected_candidate"
+      ],
+      [
+        "selected_candidate",
+        "float32_eager_reference"
+      ],
+      [
+        "float32_eager_reference",
+        "selected_candidate"
+      ],
+      [
+        "selected_candidate",
+        "float32_eager_reference"
+      ]
+    ],
+    "paired_bootstrap_resamples": 2000,
+    "paired_bootstrap_seed": 2404,
+    "report_statistics": [
+      "median_ns_per_frame",
+      "p25_ns_per_frame",
+      "p75_ns_per_frame",
+      "p95_ns_per_frame",
+      "iqr_over_median",
+      "paired_latency_ratio",
+      "paired_latency_ratio_bootstrap_95_interval",
+      "compute_real_time_factor"
+    ],
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    },
+    "torch_intraop_threads": 1,
+    "torch_interop_threads": 1,
+    "torch_inference_mode_required": true,
+    "model_eval_required": true,
+    "cpu_only": true,
+    "mps_cuda_xpu_allowed": false,
+    "thermal_state_required_if_available": true,
+    "cpu_frequency_required_if_available": false,
+    "unavailable_system_fields_must_be_reported": true
+  },
+  "storage_and_memory_accounting": {
+    "report_separately": [
+      "logical_parameter_count",
+      "raw_tensor_payload_bytes_by_dtype",
+      "deterministic_serialized_numeric_payload_bytes",
+      "checkpoint_source_bytes",
+      "candidate_construction_temporary_bytes",
+      "absolute_worker_peak_rss_bytes",
+      "imported_empty_worker_peak_rss_bytes",
+      "worker_peak_rss_delta_bytes",
+      "mutable_encoder_state_bytes",
+      "mutable_decoder_state_bytes",
+      "working_array_bytes",
+      "report_bytes",
+      "total_generated_bytes"
+    ],
+    "serialized_numeric_payload_is_deployable_package": false,
+    "rss_worker_isolated": true,
+    "rss_platform_unit_normalization_required": true,
+    "storage_reduction_may_not_be_called_runtime_reduction": true,
+    "tensor_dtype_may_not_be_called_kernel_accumulation_dtype": true
+  },
+  "energy_proxy": {
+    "required_for_gate": false,
+    "default_status": "unavailable_without_separate_noninteractive_permission",
+    "tool_on_preregistration_host": "powermetrics",
+    "sudo_prompt_allowed": false,
+    "minimum_balanced_workload_duration_sec_if_authorized": 10,
+    "within_device_comparison_only": true,
+    "cross_device_comparison_allowed": false,
+    "candidate_selection_from_energy_alone_allowed": false,
+    "estimated_and_may_be_inaccurate_warning_required": true,
+    "process_energy_impact_is_rough_platform_specific_proxy": true,
+    "measurement_is_outside_primary_60_second_runtime_cap": true
+  },
+  "selection_rules": {
+    "ineligible_if_correctness_or_provenance_fails": true,
+    "unsupported_candidate_is_failure_of_entire_gate": false,
+    "unsupported_candidate_status": "unavailable_no_fallback",
+    "default_before_gate": "float32_eager_reference",
+    "default_replacement_requires_all": {
+      "exact_behavioral_gates": "pass_all",
+      "numeric_tolerances": "pass_all",
+      "model_path_median_latency_ratio_max": 0.8,
+      "full_pipeline_median_latency_ratio_max": 0.9,
+      "full_pipeline_p95_latency_ratio_max": 0.95,
+      "full_pipeline_latency_ratio_bootstrap_upper_95_max": 0.98,
+      "serialized_numeric_payload_ratio_max": 1.0,
+      "worker_peak_rss_delta_vs_reference_max_bytes": 33554432,
+      "selection_and_qualification": "pass"
+    },
+    "storage_only_candidate_requires_all": {
+      "exact_behavioral_gates": "pass_all",
+      "numeric_tolerances": "pass_all",
+      "serialized_numeric_payload_ratio_max": 0.5,
+      "absolute_payload_savings_min_bytes": 2048,
+      "full_pipeline_median_latency_ratio_max": 1.05,
+      "full_pipeline_p95_latency_ratio_max": 1.05
+    },
+    "storage_only_candidate_replaces_default": false,
+    "replacement_tie_break": [
+      "lowest_full_pipeline_p95_latency_ratio",
+      "lowest_full_pipeline_median_latency_ratio",
+      "lowest_model_path_median_latency_ratio",
+      "lowest_serialized_numeric_payload_bytes",
+      "candidate_id_lexicographic"
+    ],
+    "qualification_compares": [
+      "float32_eager_reference",
+      "frozen_selected_candidate"
+    ],
+    "qualification_may_change_candidate": false,
+    "qualification_failure_decision": "retain_float32_and_reject_selected_candidate",
+    "no_material_candidate_decision": "retain_float32_no_material_gain",
+    "selection_data_may_not_change_thresholds_candidates_or_fixture": true
+  },
+  "resource_caps": {
+    "cpu_threads": 1,
+    "maximum_concurrent_workers": 1,
+    "maximum_worker_processes_spawned": 48,
+    "maximum_fixture_files": 3,
+    "maximum_fixture_bytes_total": 524288,
+    "maximum_checkpoint_bytes": 65536,
+    "maximum_candidate_serialized_bytes_each": 65536,
+    "maximum_working_array_bytes": 33554432,
+    "maximum_report_bytes_total": 1048576,
+    "maximum_generated_bytes_total": 4194304,
+    "maximum_internal_runtime_sec": 60,
+    "maximum_peak_rss_bytes_each_worker": 1073741824,
+    "maximum_external_network_calls": 0,
+    "maximum_real_data_reads": 0,
+    "maximum_consumed_evidence_reads": 0,
+    "maximum_target_label_text_reads": 0,
+    "maximum_training_runs": 0,
+    "maximum_parameter_updates": 0,
+    "maximum_rw3_operations": 0
+  },
+  "access_counters": [
+    "manifest_metadata_reads",
+    "checkpoint_file_reads",
+    "selection_partition_opens",
+    "qualification_partition_opens",
+    "candidate_conversions",
+    "candidate_inference_runs",
+    "reference_inference_runs",
+    "profiler_runs",
+    "timing_worker_processes",
+    "training_runs",
+    "parameter_updates",
+    "target_label_text_reads",
+    "consumed_seed_2203_reads",
+    "consumed_seed_2303_reads",
+    "consumed_seed_2353_reads",
+    "s7_s21_reads",
+    "real_data_reads",
+    "external_network_calls",
+    "rw3_source_chunk_operations",
+    "rw3_socket_stream_board_xdf_operations"
+  ],
+  "refusal_ids": [
+    "loop24_execution_not_authorized",
+    "contract_or_source_binding_mismatch",
+    "checkpoint_file_or_payload_hash_mismatch",
+    "model_config_or_parameter_count_mismatch",
+    "blank_intercept_value_config_or_hash_mismatch",
+    "decoder_config_or_semantics_mismatch",
+    "thread_or_device_contract_mismatch",
+    "fixture_schema_or_manifest_mismatch",
+    "fixture_contains_target_label_text_or_participant_member",
+    "fixture_partition_identity_overlap",
+    "selection_or_qualification_seed_mismatch",
+    "qualification_opened_before_selection_freeze",
+    "qualification_opened_without_replacement_candidate",
+    "consumed_seed_or_real_evidence_accessed",
+    "training_or_parameter_update_attempted",
+    "candidate_set_or_threshold_changed_after_selection_open",
+    "candidate_dtype_or_module_contract_mismatch",
+    "candidate_silent_float32_or_backend_fallback",
+    "dynamic_int8_qnnpack_unavailable",
+    "dynamic_int8_profiler_operator_unproven",
+    "candidate_output_nonfinite",
+    "frame_grid_timestamp_shape_or_causality_mismatch",
+    "greedy_or_prefix_behavior_mismatch",
+    "numeric_tolerance_exceeded",
+    "reference_replay_nondeterministic",
+    "timer_protocol_or_balanced_order_mismatch",
+    "resource_cap_exceeded",
+    "output_collision_or_unsafe_path",
+    "report_omits_warning_unavailable_field_or_access_counter",
+    "rw3_operation_not_authorized"
+  ],
+  "planned_implementation": {
+    "files": [
+      "src/neurodecodekit/training/precision_runtime_fixture.py",
+      "src/neurodecodekit/models/precision_candidates.py",
+      "src/neurodecodekit/experiments/local_precision_runtime_gate.py",
+      "tests/test_precision_runtime_fixture.py",
+      "tests/test_precision_candidates.py",
+      "tests/test_local_precision_runtime_gate.py",
+      "docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md"
+    ],
+    "cli_commands": [
+      "make-precision-runtime-fixture",
+      "inspect-precision-runtime-fixture",
+      "local-precision-runtime-gate",
+      "inspect-local-precision-runtime-report"
+    ],
+    "base_dependencies_added": [],
+    "optional_dependencies_added": [],
+    "generated_output_roots": [
+      "cache/loop24_precision_runtime/",
+      "outputs/loop24_precision_runtime/",
+      ".codex_work/loop24_precision_runtime/"
+    ],
+    "files_exist_now": false,
+    "cli_exists_now": false
+  },
+  "primary_sources": [
+    {
+      "id": "brain2qwerty_project",
+      "url": "https://facebookresearch.github.io/brain2qwerty/"
+    },
+    {
+      "id": "brain2qwerty_v2_paper",
+      "url": "https://facebookresearch.github.io/brain2qwerty/assets/brain2qwerty_v2.pdf"
+    },
+    {
+      "id": "brain2qwerty_v2_model_config",
+      "url": "https://github.com/facebookresearch/brain2qwerty/blob/3bf5a4099ca0d23bbe994b2287905760236e56e0/brain2qwerty_v2/config/model_config.py"
+    },
+    {
+      "id": "pytorch_numerical_accuracy",
+      "url": "https://docs.pytorch.org/docs/stable/notes/numerical_accuracy.html"
+    },
+    {
+      "id": "pytorch_type_info",
+      "url": "https://docs.pytorch.org/docs/stable/type_info.html"
+    },
+    {
+      "id": "pytorch_amp",
+      "url": "https://docs.pytorch.org/docs/stable/amp.html"
+    },
+    {
+      "id": "pytorch_inference_mode",
+      "url": "https://docs.pytorch.org/docs/stable/generated/torch.autograd.grad_mode.inference_mode.html"
+    },
+    {
+      "id": "pytorch_quantization_migration",
+      "url": "https://docs.pytorch.org/docs/stable/quantization.html"
+    },
+    {
+      "id": "pytorch_quantization_api",
+      "url": "https://docs.pytorch.org/docs/stable/quantization-support"
+    },
+    {
+      "id": "pytorch_dynamic_quantization_recipe",
+      "url": "https://docs.pytorch.org/tutorials/recipes/recipes/dynamic_quantization.html"
+    },
+    {
+      "id": "torchao_quantized_inference",
+      "url": "https://docs.pytorch.org/ao/stable/workflows/inference.html"
+    },
+    {
+      "id": "pytorch_benchmark_utils",
+      "url": "https://docs.pytorch.org/docs/stable/benchmark_utils.html"
+    },
+    {
+      "id": "pytorch_benchmark_recipe",
+      "url": "https://docs.pytorch.org/tutorials/recipes/recipes/benchmark.html"
+    },
+    {
+      "id": "pytorch_set_num_threads",
+      "url": "https://docs.pytorch.org/docs/stable/generated/torch.set_num_threads.html"
+    },
+    {
+      "id": "pytorch_set_num_interop_threads",
+      "url": "https://docs.pytorch.org/docs/stable/generated/torch.set_num_interop_threads.html"
+    },
+    {
+      "id": "python_perf_counter_ns",
+      "url": "https://docs.python.org/3/library/time.html#time.perf_counter_ns"
+    },
+    {
+      "id": "python_resource_getrusage",
+      "url": "https://docs.python.org/3/library/resource.html"
+    }
+  ],
+  "claim_boundary": [
+    "This contract creates no candidate runtime and authorizes no execution.",
+    "A future passing gate can establish only platform-bound equivalence and local resource behavior for one frozen synthetic pipeline.",
+    "A smaller payload is not proof of faster or integer-only execution.",
+    "A lower local runtime is not end-to-end text latency or a cross-device energy result.",
+    "No neural advantage, CER or WER improvement, unseen-person transfer, Brain2Qwerty v2 parity, real-time decoding, portable sensing, at-home usability, arbitrary-thought, assistive, diagnostic, or clinical claim follows."
+  ]
+}
