@@ -1,0 +1,655 @@
+{
+  "schema_name": "neurodecodekit.replay_equivalence_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "rw3-offline-replay-live-source-equivalence-v0",
+  "prepared_at": "2026-07-10",
+  "status": "preregistered_no_adapter_implementation",
+  "proof_posture": "primary_source_research_and_frozen_protocol_only",
+  "question": "Can bounded synthetic and recorded sources be represented by one source-chunk contract whose payload, identity, sample axis, timestamp views, anomalies, state, and resource accounting remain invariant across replay schedules before any hardware is connected?",
+  "current_compatibility_level": 2,
+  "target_compatibility": {
+    "rw3_target": "source_chunk_and_replay_equivalence_interface_rehearsal",
+    "level_6_live_source_qualified": false,
+    "level_6_requires_later_real_device_gate": true,
+    "task_model_and_benchmark_compatibility_added": false,
+    "strongest_possible_rw3_implementation_claim": "synthetic_and_local_loopback_transport_mechanics_only"
+  },
+  "authorization": {
+    "preregistration_only": true,
+    "source_chunk_implementation_authorized": false,
+    "synthetic_fixture_generation_authorized": false,
+    "brainflow_install_or_import_authorized": false,
+    "pylsl_or_liblsl_install_or_import_authorized": false,
+    "pyxdf_install_or_import_authorized": false,
+    "brainflow_synthetic_board_session_authorized": false,
+    "brainflow_playback_board_session_authorized": false,
+    "brainflow_streaming_board_authorized": false,
+    "lsl_resolve_outlet_or_inlet_authorized": false,
+    "xdf_file_read_authorized": false,
+    "loopback_socket_authorized": false,
+    "external_network_authorized": false,
+    "live_hardware_authorized": false,
+    "device_enumeration_or_discovery_authorized": false,
+    "real_recording_or_cache_access_authorized": false,
+    "s20_access_or_download_authorized": false,
+    "consumed_s7_or_s21_access_authorized": false,
+    "target_label_or_prediction_access_authorized": false,
+    "model_or_training_authorized": false,
+    "automatic_cleaning_or_resampling_authorized": false,
+    "implementation_requires_separate_review": true
+  },
+  "dependencies": {
+    "base_dependencies_added": [],
+    "installed_during_preregistration": [],
+    "future_optional_extra": "stream",
+    "future_exact_versions": {
+      "brainflow": "5.22.2",
+      "pylsl": "1.18.2",
+      "liblsl": "1.17.7",
+      "pyxdf": "1.17.5"
+    },
+    "future_import_rule": "imports_inside_explicit_optional_adapter_functions_only",
+    "missing_dependency_rule": "actionable_error_without_importing_another_optional_stack",
+    "version_change_rule": "amend_and_commit_contract_before_implementation_against_another_version",
+    "pylsl_native_library_rule": "record_pylsl_and_loaded_liblsl_versions_and_paths_without_persisting_absolute_paths"
+  },
+  "architecture_boundary": {
+    "upstream": "RW1_source_identity_and_RW2_channel_timing_unit_geometry_contracts",
+    "rw3_owns": "source_chunk_envelope_replay_clock_packet_anomaly_and_adapter_state_contract",
+    "downstream": "Loop_21_causal_frame_producer_and_later_encoder_decoder_stages",
+    "source_layout": "channels,samples",
+    "target_or_text_members_allowed": false,
+    "preprocessing_allowed": false,
+    "decoder_allowed": false
+  },
+  "source_chunk_schema": {
+    "schema_name": "neurodecodekit.source_chunk",
+    "schema_version": "0.1.0",
+    "record_kinds": [
+      "stream_start",
+      "data",
+      "gap",
+      "reconnect",
+      "stream_end",
+      "source_error"
+    ],
+    "required_top_level_fields": [
+      "schema",
+      "record_kind",
+      "identity",
+      "sequence",
+      "channels",
+      "payload",
+      "sample_axis",
+      "timestamps",
+      "packet_accounting",
+      "anomalies",
+      "causality",
+      "provenance",
+      "hashes",
+      "warnings",
+      "unavailable_fields"
+    ],
+    "identity_required_fields": [
+      "stream_id",
+      "source_id",
+      "source_item_id",
+      "evidence_cohort_id",
+      "modality",
+      "device_type",
+      "adapter_id",
+      "adapter_version",
+      "preset_or_stream_role"
+    ],
+    "sequence_required_fields": [
+      "chunk_sequence_index",
+      "correction_segment_index",
+      "reconnect_generation",
+      "first_record",
+      "final_record"
+    ],
+    "channels_required_fields": [
+      "names",
+      "types",
+      "units",
+      "source_row_indices",
+      "geometry_available_mask",
+      "geometry_payload_sha256"
+    ],
+    "payload_required_fields": [
+      "layout",
+      "dtype",
+      "shape",
+      "values",
+      "valid_sample_count",
+      "capacity_sample_count",
+      "padding_mask"
+    ],
+    "sample_axis_required_fields": [
+      "source_sample_indices",
+      "first_source_sample_index",
+      "stop_source_sample_index_exclusive",
+      "nominal_sampling_rate_hz",
+      "nominal_sample_period_sec"
+    ],
+    "timestamp_required_fields": [
+      "source_clock_domain",
+      "source_timestamps_sec",
+      "corrected_clock_domain",
+      "corrected_timestamps_sec",
+      "correction_applied",
+      "correction_method",
+      "correction_ledger_sha256",
+      "arrival_monotonic_start_ns",
+      "arrival_monotonic_end_ns",
+      "wall_clock_values_redacted"
+    ],
+    "packet_required_fields": [
+      "raw_counter_available",
+      "raw_counter_values",
+      "unwrapped_counter_values",
+      "counter_modulus",
+      "gap_before_samples",
+      "duplicate_sample_count",
+      "out_of_order_sample_count",
+      "counter_wrap_count"
+    ],
+    "anomaly_required_fields": [
+      "timestamp_regression_count",
+      "timestamp_duplicate_count",
+      "clock_reset_before",
+      "source_restarted_before",
+      "inferred_gap_count",
+      "proven_gap_count",
+      "interpolation_performed"
+    ],
+    "causality_required_fields": [
+      "emits_only_received_samples",
+      "producer_causal",
+      "producer_right_context_samples",
+      "internal_read_ahead_status",
+      "required_left_context_samples",
+      "required_right_context_samples",
+      "end_to_end_latency_measured"
+    ],
+    "provenance_required_fields": [
+      "source_manifest_sha256",
+      "source_config_sha256",
+      "contract_sha256",
+      "device_registry_sha256",
+      "split_protocol_sha256",
+      "adapter_config_sha256"
+    ],
+    "hash_required_fields": [
+      "chunk_envelope_sha256",
+      "valid_payload_sha256",
+      "semantic_prefix_sha256"
+    ],
+    "layout": "channels,samples",
+    "allowed_payload_dtypes": [
+      "float32",
+      "float64"
+    ],
+    "dtype_policy": "compare_against_the_exact_declared_cast_target_and_never_silently_downcast",
+    "padding_policy": "padding_mask_false_values_must_be_exact_zero_and_are_never_emitted_downstream",
+    "nonfinite_policy": "refuse_nonfinite_payload_values",
+    "unit_policy": "preserve_adapter_declared_physical_units_without_scaling",
+    "channel_order_policy": "exact_and_immutable_within_stream_id",
+    "geometry_policy": "availability_and_hash_only_no_exact_coordinates_in_reports"
+  },
+  "clock_contract": {
+    "clock_domains": [
+      "synthetic_relative_monotonic",
+      "recording_relative",
+      "brainflow_unix_source",
+      "lsl_outlet_steady_clock",
+      "lsl_inlet_steady_clock",
+      "python_monotonic_ns_arrival",
+      "device_clock_unmapped"
+    ],
+    "three_view_rule": [
+      "source_timestamp_preserved_bitwise",
+      "corrected_timestamp_separate_and_reversible_from_ledger",
+      "local_arrival_time_measured_with_monotonic_ns"
+    ],
+    "wall_clock_policy": "never_use_wall_clock_for_ordering_or_duration_and_redact_absolute_values_from_reports",
+    "source_timestamp_policy": "never_dejitter_monotonize_or_overwrite_primary_source_timestamps",
+    "corrected_timestamp_policy": "nullable_until_one_named_mapping_and_ledger_are_validated",
+    "clock_reset_policy": "start_new_correction_segment_and_emit_reconnect_or_source_error_record",
+    "unknown_clock_policy": "retain_source_values_but_mark_correction_and_cross_stream_alignment_unavailable",
+    "lsl_primary_processing_flags": "proc_none",
+    "lsl_automatic_postprocessing_primary_path": false,
+    "lsl_time_correction_policy": "capture_remote_time_offset_uncertainty_and_apply_explicitly_to_a_derived_view",
+    "xdf_raw_import_arguments": {
+      "synchronize_clocks": false,
+      "dejitter_timestamps": false
+    },
+    "xdf_derived_import_arguments": {
+      "synchronize_clocks": true,
+      "handle_clock_resets": true,
+      "dejitter_timestamps": true
+    },
+    "brainflow_playback_timestamp_mode_primary": "old_timestamps",
+    "brainflow_new_timestamps_role": "negative_control_only_not_payload_identity_path"
+  },
+  "packet_and_gap_contract": {
+    "no_interpolation": true,
+    "no_silent_sorting": true,
+    "no_silent_deduplication": true,
+    "gap_record_required_before_next_data": true,
+    "proven_gap_requires": "trusted_sample_index_or_unwrapped_packet_counter",
+    "timestamp_only_gap_status": "inferred_not_proven",
+    "counter_wrap_policy": "preserve_raw_counter_and_emit_deterministically_unwrapped_counter",
+    "duplicate_policy": "emit_anomaly_and_refuse_clean_equivalence_claim",
+    "reordering_policy": "preserve_arrival_ledger_and_refuse_clean_equivalence_claim",
+    "reconnect_policy": "increment_generation_never_join_across_clock_reset_without_new_mapping",
+    "missing_drop_evidence_policy": "packet_loss_measurement_unavailable_not_zero"
+  },
+  "adapter_stages": [
+    {
+      "stage": "A",
+      "adapter_id": "pure_python_synthetic_replay",
+      "future_role": "implement_schema_state_hashes_and_registered_anomalies_without_optional_dependencies",
+      "network_allowed": false,
+      "hardware_allowed": false,
+      "source_timestamp_mode": "synthetic_relative_monotonic",
+      "implementation_authorized_now": false
+    },
+    {
+      "stage": "B",
+      "adapter_id": "brainflow_synthetic_and_playback",
+      "future_role": "validate_BrainFlow_5_22_2_synthetic_and_playback_file_boards_only",
+      "required_board_ids": [
+        "SYNTHETIC_BOARD",
+        "PLAYBACK_FILE_BOARD"
+      ],
+      "forbidden_board_ids": [
+        "STREAMING_BOARD",
+        "every_physical_board"
+      ],
+      "required_rules": [
+        "master_board_controls_descriptor_sampling_rate_and_channel_indices",
+        "playback_uses_old_timestamps_for_primary_identity",
+        "new_timestamps_is_a_separate_negative_control",
+        "get_board_data_is_destructive_and_must_be_counted",
+        "get_current_board_data_is_nondestructive_and_cannot_advance_primary_state",
+        "presets_are_separate_stream_ids"
+      ],
+      "network_allowed": false,
+      "hardware_allowed": false,
+      "implementation_authorized_now": false
+    },
+    {
+      "stage": "C",
+      "adapter_id": "lsl_local_loopback",
+      "future_role": "validate_one_exact_numeric_outlet_inlet_pair_with_original_and_corrected_timestamp_views",
+      "required_rules": [
+        "one_exact_source_id",
+        "ambiguous_resolution_refused",
+        "proc_none_primary",
+        "pull_chunk_returns_one_timestamp_per_sample",
+        "time_correction_remote_time_and_uncertainty_recorded",
+        "clock_reset_polled_and_segmented",
+        "recovery_requires_stable_source_id",
+        "external_interfaces_and_multicast_refused_unless_loopback_confinement_is_proven"
+      ],
+      "network_allowed": "loopback_only_after_separate_approval",
+      "hardware_allowed": false,
+      "implementation_authorized_now": false
+    },
+    {
+      "stage": "D",
+      "adapter_id": "pyxdf_dual_view",
+      "future_role": "validate_raw_and_default_corrected_XDF_views_without_confusing_them",
+      "required_rules": [
+        "one_exact_stream_selection",
+        "raw_view_disables_synchronization_and_dejitter",
+        "derived_view_records_synchronization_reset_and_dejitter_arguments",
+        "raw_payload_and_timestamps_remain_available_for_audit",
+        "playback_lsl_current_timestamp_mode_is_not_source_timestamp_identity"
+      ],
+      "network_allowed": false,
+      "hardware_allowed": false,
+      "implementation_authorized_now": false
+    }
+  ],
+  "registered_schedules": [
+    {
+      "id": "single_sample",
+      "rule": "one_valid_sample_per_data_chunk",
+      "latency_role": "minimum_transport_batching_delay_stress"
+    },
+    {
+      "id": "fixed_20ms",
+      "rule": "max_1_round_half_up_nominal_rate_times_0_020_samples",
+      "latency_role": "primary_local_replay_schedule"
+    },
+    {
+      "id": "native_packet",
+      "rule": "preserve_registered_fixture_packet_boundaries",
+      "latency_role": "adapter_native_boundary_audit"
+    },
+    {
+      "id": "deterministic_jitter_5_to_30ms",
+      "rule": "seeded_pattern_clamped_to_5_through_30ms_of_nominal_samples",
+      "latency_role": "variable_poll_and_transport_schedule_stress"
+    },
+    {
+      "id": "whole_source",
+      "rule": "all_valid_samples_in_one_chunk_under_caps",
+      "latency_role": "equivalence_stress_not_a_realtime_mode"
+    }
+  ],
+  "synthetic_fixture_families": [
+    "clean_contiguous",
+    "final_partial_chunk",
+    "bounded_timestamp_jitter",
+    "linear_clock_drift",
+    "proven_sample_gap",
+    "timestamp_only_inferred_gap",
+    "duplicate_packet",
+    "out_of_order_packet",
+    "packet_counter_wrap",
+    "clock_reset_and_reconnect",
+    "source_timestamp_regression",
+    "unknown_clock_mapping",
+    "channel_order_or_unit_mismatch",
+    "nonfinite_payload",
+    "nonzero_padding",
+    "tampered_hash",
+    "ambiguous_stream_identity",
+    "resource_cap_violation"
+  ],
+  "numeric_tolerances": {
+    "payload_after_declared_dtype_conversion": "bitwise_exact",
+    "source_sample_indices": "exact",
+    "source_timestamps_primary_view": "bitwise_exact",
+    "corrected_timestamps_with_same_ledger": "bitwise_exact",
+    "padding_mask_and_values": "exact",
+    "channel_order_types_units_and_geometry_hash": "exact",
+    "semantic_stream_hash_across_schedules": "exact",
+    "clean_fixture_proven_gap_count": 0,
+    "clean_fixture_duplicate_count": 0,
+    "clean_fixture_out_of_order_count": 0,
+    "local_lsl_time_correction_uncertainty_max_sec": 0.005,
+    "synthetic_replay_schedule_delay_p95_max_sec": 0.02,
+    "synthetic_replay_schedule_delay_max_sec": 0.1,
+    "synthetic_replay_compute_real_time_factor_max": 1.0,
+    "generic_device_timestamp_jitter_pass_threshold": null,
+    "generic_wireless_transport_latency_pass_threshold": null,
+    "generic_capture_to_timestamp_latency_pass_threshold": null,
+    "end_to_end_text_latency_threshold": null
+  },
+  "semantic_hash_contract": {
+    "algorithm": "sha256",
+    "metadata_encoding": "sorted_compact_utf8_json",
+    "numeric_encoding": "canonical_little_endian_declared_dtype",
+    "includes": [
+      "stream_identity",
+      "channel_names_types_units_order_and_geometry_hash",
+      "valid_payload_values",
+      "source_sample_indices",
+      "source_timestamp_bits",
+      "corrected_timestamp_bits_or_explicit_unavailable",
+      "padding_masks",
+      "gap_duplicate_reorder_wrap_reset_and_reconnect_ledger",
+      "source_config_contract_registry_and_split_hashes"
+    ],
+    "excludes": [
+      "chunk_boundaries_from_semantic_stream_hash",
+      "wall_clock_values",
+      "absolute_paths",
+      "runtime_and_peak_rss",
+      "free_text"
+    ],
+    "chunk_hash_boundary_sensitive": true,
+    "semantic_stream_hash_boundary_invariant": true,
+    "prefix_hash_required_for_every_record": true
+  },
+  "state_contract": {
+    "required_fields": [
+      "next_chunk_sequence_index",
+      "next_expected_source_sample_index",
+      "last_source_timestamp_bits",
+      "last_corrected_timestamp_bits",
+      "last_raw_packet_counter",
+      "last_unwrapped_packet_counter",
+      "correction_segment_index",
+      "reconnect_generation",
+      "cumulative_valid_samples",
+      "cumulative_gap_samples",
+      "cumulative_duplicate_samples",
+      "cumulative_out_of_order_samples",
+      "semantic_prefix_sha256",
+      "source_ended"
+    ],
+    "serialization": "sorted_compact_utf8_json_no_payload_history",
+    "max_serialized_state_bytes": 4096,
+    "resume_rule": "resumed_semantic_stream_hash_and_ledger_must_equal_uninterrupted_run",
+    "collision_rule": "refuse_state_from_another_source_config_or_contract_hash"
+  },
+  "privacy": {
+    "local_only": true,
+    "report_forbidden_fields": [
+      "absolute_path",
+      "participant_or_demographic_payload",
+      "measurement_date",
+      "device_serial_number",
+      "hostname_or_ip_address",
+      "lsl_source_id_plaintext",
+      "stream_xml_free_text",
+      "event_or_marker_description",
+      "exact_wall_clock_timestamp",
+      "exact_geometry_coordinates",
+      "waveform_values",
+      "target_text",
+      "target_labels",
+      "predictions"
+    ],
+    "allowed_report_fields": [
+      "pseudonymous_stream_hash",
+      "modality_and_device_type",
+      "channel_names_types_units_and_geometry_status",
+      "relative_sample_and_timestamp_summaries",
+      "aggregate_anomaly_counts",
+      "dependency_versions",
+      "resource_and_access_counts",
+      "hashes_warnings_and_unavailable_fields"
+    ],
+    "payload_persistence": "generated_fixture_only_in_future_implementation_and_ignored",
+    "network_discovery_metadata_persistence": false
+  },
+  "resource_caps": {
+    "cpu_threads": 1,
+    "worker_processes": 1,
+    "max_channels": 512,
+    "max_nominal_sampling_rate_hz": 4096,
+    "max_valid_samples_per_stream": 262144,
+    "max_total_channel_sample_values": 4194304,
+    "max_samples_per_chunk": 4096,
+    "max_chunks_per_run": 100000,
+    "max_source_files": 64,
+    "max_source_bytes": 16777216,
+    "max_materialized_payload_bytes": 33554432,
+    "max_serialized_state_bytes": 4096,
+    "max_output_bytes_per_run": 4194304,
+    "max_complete_fixture_and_report_bytes": 16777216,
+    "hard_generated_artifact_cap_bytes": 33554432,
+    "max_runtime_sec": 30,
+    "max_peak_rss_bytes": 1073741824,
+    "max_external_network_calls": 0,
+    "max_real_data_reads": 0,
+    "max_consumed_cache_reads": 0,
+    "max_target_label_reads": 0,
+    "max_model_runs": 0,
+    "max_training_runs": 0
+  },
+  "access_counters": [
+    "metadata_files_opened",
+    "synthetic_source_files_opened",
+    "synthetic_source_bytes_read",
+    "generated_payload_values_read",
+    "brainflow_prepare_session_calls",
+    "brainflow_start_stream_calls",
+    "brainflow_destructive_get_board_data_calls",
+    "brainflow_nondestructive_get_current_board_data_calls",
+    "brainflow_synthetic_board_sessions",
+    "brainflow_playback_board_sessions",
+    "brainflow_streaming_board_sessions",
+    "brainflow_physical_board_sessions",
+    "lsl_resolve_calls",
+    "lsl_outlets_created",
+    "lsl_inlets_created",
+    "lsl_pull_chunk_calls",
+    "lsl_time_correction_calls",
+    "lsl_clock_reset_events",
+    "loopback_socket_calls",
+    "external_network_calls",
+    "xdf_files_opened",
+    "xdf_bytes_read",
+    "real_data_reads",
+    "consumed_cache_reads",
+    "target_label_reads",
+    "model_runs",
+    "training_runs",
+    "decoder_runs"
+  ],
+  "refusal_ids": [
+    "source_identity_mismatch",
+    "source_config_or_contract_hash_mismatch",
+    "stream_resolution_ambiguous",
+    "channel_contract_changed_midstream",
+    "payload_dtype_not_allowed",
+    "payload_shape_or_layout_invalid",
+    "payload_contains_nonfinite_values",
+    "padding_mask_or_value_invalid",
+    "sample_index_gap_unrepresented",
+    "sample_index_duplicate_unrepresented",
+    "sample_order_regression_unrepresented",
+    "source_timestamp_nonfinite",
+    "source_timestamp_overwritten_or_destroyed",
+    "clock_domain_unknown_for_required_correction",
+    "clock_correction_ledger_missing_or_tampered",
+    "clock_reset_unrepresented",
+    "packet_counter_wrap_unrepresented",
+    "packet_loss_measurement_unavailable_for_required_gate",
+    "reconnect_generation_or_state_invalid",
+    "semantic_stream_hash_mismatch",
+    "state_source_or_prefix_collision",
+    "dependency_missing_or_version_mismatch",
+    "external_network_not_authorized",
+    "loopback_confinement_unproven",
+    "live_hardware_not_authorized",
+    "brainflow_streaming_or_physical_board_refused",
+    "lsl_automatic_timestamp_postprocessing_refused_for_primary_path",
+    "xdf_raw_view_arguments_not_exact",
+    "resource_cap_exceeded",
+    "output_collision_or_unsafe_path"
+  ],
+  "future_implementation_acceptance_gates": [
+    "all_required_source_chunk_fields_validate_strictly",
+    "all_registered_schedules_have_identical_semantic_stream_hashes",
+    "clean_payload_indices_source_timestamps_channels_units_masks_and_ledgers_match_exactly",
+    "every_injected_anomaly_is_counted_at_the_exact_sample_boundary",
+    "no_interpolation_sorting_deduplication_resampling_scaling_or_cleaning_occurs",
+    "save_load_resume_matches_uninterrupted_semantic_output",
+    "tamper_collision_malformed_dependency_and_cap_inputs_refuse_exactly",
+    "raw_and_corrected_timestamp_views_never_alias_or_overwrite_each_other",
+    "brainflow_primary_playback_preserves_old_timestamps_and_uses_master_board_metadata",
+    "lsl_primary_path_uses_proc_none_and_records_time_correction_uncertainty_separately",
+    "xdf_raw_and_derived_views_use_the_exact_registered_argument_sets",
+    "loopback_or_external_network_access_remains_zero_until_separately_authorized",
+    "runtime_rss_state_payload_output_and_fixture_caps_pass",
+    "real_consumed_target_model_training_decoder_and_external_network_counts_are_zero",
+    "reports_state_producer_causality_and_end_to_end_latency_as_unmeasured",
+    "complete_unit_suites_lint_compile_links_secrets_and_diff_checks_pass"
+  ],
+  "decision_rules": {
+    "registration_pass": "contract_invariants_docs_and_tests_pass_with_zero_optional_transport_import_or_runtime_access",
+    "after_registration": "request_separate_authorization_for_stage_A_only",
+    "stage_A_proceed": "pure_python_synthetic_contract_passes_every_schedule_anomaly_state_hash_privacy_and_cap_gate",
+    "stage_B_proceed": "stage_A_passes_and_exact_BrainFlow_version_and_dummy_board_rules_are_reapproved",
+    "stage_C_proceed": "stage_B_passes_and_loopback_confinement_and_exact_LSL_dependency_loading_are_proven_before_sockets_open",
+    "stage_D_proceed": "stage_C_passes_and_exact_PyXDF_dual_view_arguments_are_reapproved",
+    "park": "an_optional_adapter_cannot_preserve_source_identity_or_remain_within_resource_privacy_or_network_boundaries",
+    "kill": "any_path_silently_changes_payload_time_order_channels_gaps_or_claims_live_or_decoding_equivalence_without_evidence",
+    "hardware_next": "never_from_RW3_alone_use_RW5_device_specific_preregistration_and_consent_gate"
+  },
+  "warnings": [
+    "preregistration_only_no_source_chunk_adapter_exists",
+    "BrainFlow_playback_generates_new_timestamps_by_default_unless_configured",
+    "BrainFlow_UNIX_timestamps_may_be_PC_receive_times_not_physical_capture_times",
+    "BrainFlow_presets_can_have_distinct_rates_timestamps_and_packet_ids",
+    "LSL_does_not_synchronize_by_default",
+    "LSL_automatic_postprocessing_makes_original_timestamps_unrecoverable",
+    "LSL_steady_clock_is_not_wall_clock",
+    "LSL_or_TCP_reliability_does_not_prove_no_device_sample_loss",
+    "PyXDF_defaults_to_clock_synchronization_and_dejittering",
+    "replay_pacing_is_not_capture_latency",
+    "source_chunk_causality_is_not_decoder_causality",
+    "synthetic_or_loopback_equivalence_is_not_device_qualification",
+    "no_end_to_end_or_user_perceived_latency_is_measured",
+    "not_arbitrary_thought_decoding"
+  ],
+  "claim_boundary": [
+    "RW3 preregistration freezes an interface experiment and has no runtime result.",
+    "A future passing Stage A would prove only pure-Python synthetic source-chunk mechanics.",
+    "A future passing BrainFlow or LSL dummy/loopback gate would not qualify a physical device.",
+    "No real recording quality, task compatibility, neural advantage, decoding accuracy, unseen-person transfer, or end-to-end latency follows.",
+    "No portable, at-home, arbitrary-thought, assistive-efficacy, diagnostic, or clinical claim follows."
+  ],
+  "primary_sources": [
+    {
+      "id": "brainflow_supported_boards",
+      "url": "https://brainflow.readthedocs.io/en/stable/SupportedBoards.html"
+    },
+    {
+      "id": "brainflow_data_format",
+      "url": "https://brainflow.readthedocs.io/en/stable/DataFormatDesc.html"
+    },
+    {
+      "id": "brainflow_user_api",
+      "url": "https://brainflow.readthedocs.io/en/stable/UserAPI.html"
+    },
+    {
+      "id": "brainflow_release_5_22_2",
+      "url": "https://github.com/brainflow-dev/brainflow/releases/tag/5.22.2"
+    },
+    {
+      "id": "lsl_time_synchronization",
+      "url": "https://labstreaminglayer.readthedocs.io/info/time_synchronization.html"
+    },
+    {
+      "id": "liblsl_inlet_api",
+      "url": "https://labstreaminglayer.readthedocs.io/projects/liblsl/ref/inlet.html"
+    },
+    {
+      "id": "liblsl_processing_flags",
+      "url": "https://labstreaminglayer.readthedocs.io/projects/liblsl/ref/enums.html"
+    },
+    {
+      "id": "lsl_faq",
+      "url": "https://labstreaminglayer.readthedocs.io/info/faqs.html"
+    },
+    {
+      "id": "pylsl_release_1_18_2",
+      "url": "https://github.com/labstreaminglayer/pylsl/releases/tag/v1.18.2"
+    },
+    {
+      "id": "liblsl_release_1_17_7",
+      "url": "https://github.com/sccn/liblsl/releases/tag/v1.17.7"
+    },
+    {
+      "id": "pyxdf_source_1_17_5",
+      "url": "https://github.com/xdf-modules/pyxdf/blob/v1.17.5/src/pyxdf/pyxdf.py"
+    },
+    {
+      "id": "pyxdf_release_1_17_5",
+      "url": "https://github.com/xdf-modules/pyxdf/releases/tag/v1.17.5"
+    },
+    {
+      "id": "python_monotonic_clock",
+      "url": "https://docs.python.org/3/library/time.html#time.monotonic_ns"
+    }
+  ]
+}
