@@ -442,6 +442,77 @@ def _cmd_inspect_intake_report(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_make_signal_quality_fixtures(args: argparse.Namespace) -> int:
+    from neurodecodekit.training.synthetic_signal_quality import (
+        make_signal_quality_fixtures,
+    )
+
+    summary = make_signal_quality_fixtures(
+        args.out_dir,
+        contract_path=args.contract,
+    )
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_inspect_signal_quality_fixtures(args: argparse.Namespace) -> int:
+    from neurodecodekit.training.synthetic_signal_quality import (
+        load_signal_quality_fixture_manifest,
+    )
+
+    summary = load_signal_quality_fixture_manifest(
+        args.manifest,
+        max_bytes=int(args.max_manifest_mb * 1024 * 1024),
+    )
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_inspect_signal_quality(args: argparse.Namespace) -> int:
+    from neurodecodekit.preprocess.signal_quality import (
+        SignalQualityLimits,
+        inspect_signal_quality,
+        write_signal_quality_artifacts,
+    )
+
+    mib = 1024 * 1024
+    limits = SignalQualityLimits(
+        max_channels=args.max_channels,
+        max_channel_sample_values=args.max_sample_values,
+        max_materialized_signal_array_bytes=int(args.max_array_mb * mib),
+        max_runtime_seconds=args.max_runtime_sec,
+        max_peak_rss_bytes=int(args.max_rss_mb * mib),
+        max_output_bytes=int(args.max_output_mb * mib),
+    )
+    result = inspect_signal_quality(
+        args.path,
+        root_path=args.root,
+        intake_report_path=args.intake_report,
+        fixture_manifest_path=args.fixture_manifest,
+        contract_path=args.contract,
+        limits=limits,
+    )
+    summary = write_signal_quality_artifacts(
+        result,
+        args.out_dir,
+        overwrite=args.overwrite,
+    )
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_inspect_signal_quality_report(args: argparse.Namespace) -> int:
+    from neurodecodekit.preprocess.signal_quality import load_signal_quality_report
+
+    summary = load_signal_quality_report(
+        args.report,
+        audit_path=args.audit,
+        max_report_bytes=int(args.max_report_mb * 1024 * 1024),
+    )
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0
+
+
 def _cmd_list_hf_files(args: argparse.Namespace) -> int:
     from neurodecodekit.datasets.hf_access import (
         list_repo_file_records,
@@ -2566,6 +2637,136 @@ def build_parser() -> argparse.ArgumentParser:
         help="Per-report inspection cap in MiB. Default: 4.",
     )
     p.set_defaults(func=_cmd_inspect_intake_report)
+
+    p = sub.add_parser(
+        "make-signal-quality-fixtures",
+        help=(
+            "Create the bounded target-free RW2 synthetic fixture set for six "
+            "optional MNE format adapters. Requires [neuro]."
+        ),
+    )
+    p.add_argument(
+        "--out-dir",
+        required=True,
+        help="New empty directory for generated sources, RW1 bindings, and manifest.",
+    )
+    p.add_argument(
+        "--contract",
+        required=True,
+        help="Frozen registries/signal_quality_contract.v0.json path.",
+    )
+    p.set_defaults(func=_cmd_make_signal_quality_fixtures)
+
+    p = sub.add_parser(
+        "inspect-signal-quality-fixtures",
+        help="Strictly validate an RW2 synthetic fixture manifest without reading signals.",
+    )
+    p.add_argument("--manifest", required=True, help="signal_quality_fixtures.json path.")
+    p.add_argument(
+        "--max-manifest-mb",
+        type=float,
+        default=4.0,
+        help="Manifest inspection cap in MiB. Default: 4.",
+    )
+    p.set_defaults(func=_cmd_inspect_signal_quality_fixtures)
+
+    p = sub.add_parser(
+        "inspect-signal-quality",
+        help=(
+            "Read bounded windows from one manifest-authorized synthetic recording "
+            "and write a redacted descriptive RW2 report. Requires [neuro]."
+        ),
+    )
+    p.add_argument(
+        "--path",
+        required=True,
+        help="Generated .vhdr/.edf/.bdf/.set/.fif file or generated BIDS root.",
+    )
+    p.add_argument(
+        "--root",
+        default=None,
+        help="Optional security root; all RW1-bound source files must remain inside it.",
+    )
+    p.add_argument(
+        "--intake-report",
+        required=True,
+        help="Exact generated fixture's validated RW1 intake.json.",
+    )
+    p.add_argument(
+        "--fixture-manifest",
+        required=True,
+        help="Generator-produced signal_quality_fixtures.json authorization manifest.",
+    )
+    p.add_argument(
+        "--contract",
+        required=True,
+        help="Frozen registries/signal_quality_contract.v0.json path.",
+    )
+    p.add_argument(
+        "--out-dir",
+        required=True,
+        help="Directory for signal_quality.json/.md/.audit.json.",
+    )
+    p.add_argument(
+        "--max-channels",
+        type=int,
+        default=512,
+        help="Selected-channel cap, no larger than frozen 512. Default: 512.",
+    )
+    p.add_argument(
+        "--max-sample-values",
+        type=int,
+        default=4_194_304,
+        help="Channel-sample value cap, no larger than frozen 4,194,304.",
+    )
+    p.add_argument(
+        "--max-array-mb",
+        type=float,
+        default=32.0,
+        help="Materialized float64-array cap in MiB, no larger than 32.",
+    )
+    p.add_argument(
+        "--max-runtime-sec",
+        type=float,
+        default=30.0,
+        help="Runtime cap in seconds, no larger than 30.",
+    )
+    p.add_argument(
+        "--max-rss-mb",
+        type=float,
+        default=1024.0,
+        help="Process peak-RSS cap in MiB, no larger than 1024.",
+    )
+    p.add_argument(
+        "--max-output-mb",
+        type=float,
+        default=4.0,
+        help="Combined report artifact cap in MiB, no larger than 4.",
+    )
+    p.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Replace only the three registered artifacts in a nonempty output directory.",
+    )
+    p.set_defaults(func=_cmd_inspect_signal_quality)
+
+    p = sub.add_parser(
+        "inspect-signal-quality-report",
+        help="Strictly validate a saved RW2 report and measured audit sidecar.",
+    )
+    p.add_argument("--report", required=True, help="Path to signal_quality.json.")
+    p.add_argument(
+        "--audit",
+        default=None,
+        help="Optional audit path; defaults to signal_quality.audit.json beside the report.",
+    )
+    p.add_argument(
+        "--max-report-mb",
+        type=float,
+        default=4.0,
+        help="Per-report inspection cap in MiB. Default: 4.",
+    )
+    p.set_defaults(func=_cmd_inspect_signal_quality_report)
 
     p = sub.add_parser("list-hf-files", help="List files in a Hugging Face repo. Requires [hf].")
     p.add_argument("--repo-id", required=True)

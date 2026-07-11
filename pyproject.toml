@@ -14,14 +14,14 @@ dependencies = []
 
 [project.optional-dependencies]
 hf = ["huggingface_hub>=0.24"]
-neuro = ["mne>=1.7", "scipy>=1.11", "numpy>=1.26"]
+neuro = ["mne>=1.12,<1.13", "scipy>=1.11", "numpy>=1.26"]
 cache = ["zarr>=3.0", "numcodecs>=0.13", "numpy>=1.26"]
 ml = ["numpy>=1.26", "scikit-learn>=1.4", "torch>=2.2"]
 demo = ["gradio>=6.20,<7"]
 dev = ["pytest>=8.0", "ruff>=0.5"]
 all = [
   "huggingface_hub>=0.24",
-  "mne>=1.7",
+  "mne>=1.12,<1.13",
   "scipy>=1.11",
   "numpy>=1.26",
   "zarr>=3.0",
