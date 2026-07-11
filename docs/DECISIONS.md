@@ -957,3 +957,77 @@ Evidence: `docs/RW2_PRIMARY_SOURCE_RESEARCH.md`,
 `docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md`,
 `registries/signal_quality_contract.v0.json`, and registration commit
 `eacb231`.
+
+## 0042 - Close RW2 at exact synthetic compatibility level 2
+
+Decision: close RW2 as a passed fixture-backed reader, report, privacy,
+no-mutation, and resource gate. Authorize RW3 preregistration only. Do not
+interpret the compatibility level outside the exact generated files, MNE 1.12
+minor line, reader arguments, and frozen contract.
+
+Why: the implementation generates 40 target-free fixtures across BrainVision,
+EDF/EDF+, BDF, continuous EEGLAB external-FDT, FIF, and BIDS. All 38 authorized
+sources pass and the two registered unsafe/malformed sources refuse exactly.
+Reader opens remain lazy, canonical selected-payload hashes match expected
+format quantization, descriptive amplitude/structure/median-Welch metrics
+replay, privacy fields stay absent, and before/after source and signal hashes
+match. No automatic cleaning or source mutation occurs.
+
+Measured boundary: one clean FIF roundtrip selects nine channels and three
+windows with 11,520 requested/returned values, 92,160 materialized array bytes,
+and six bounded signal reads. It writes 72,818 bytes of deterministic JSON,
+1,734 bytes of Markdown, and a 2,040-byte audit, totaling 76,592 bytes. Internal
+runtime is 3.839168 seconds and peak RSS is 150,749,184 bytes. Real data,
+consumed caches, targets/labels, models, training, and network calls are zero.
+Physical storage bytes read, generic warning thresholds, task/model
+compatibility, live qualification, real quality, and end-to-end latency remain
+unavailable.
+
+Verification: nine focused tests pass; the full optional environment reaches
+258 unittest tests with 3 skips and 255 pytest passes with 3 skips plus 25
+subtests. The true zero-dependency run passes 246 tests with 118 explicit
+optional skips. Ruff, compileall, CLI help, deterministic replay, malformed,
+tamper, collision, privacy, cap, package-metadata, and `git diff --check` gates
+pass.
+
+Next boundary: RW3 must freeze source chunks, offline playback/synthetic
+adapters, dependency policy, clock domains, timestamp correction, dropped
+packets, ordering, mutable state, schedules, tolerances, privacy, resources,
+and stop rules before BrainFlow, LSL, live sources, or hardware are touched.
+RW4/S20 remains blocked on separate explicit approval.
+
+Evidence: `docs/RW2_SIGNAL_QUALITY_CLOSEOUT.md`, implementation commit
+`2796dee`, and ignored local fixtures/reports under `.codex_work/`.
+
+## 0043 - Prepare a proof-first open-source collaboration surface
+
+Decision: publish a detailed contributor-ready surface on the active review
+branch while keeping repository visibility and default-branch release as
+separate maintainer decisions. Use Apache-2.0 provisionally for
+NeuroDecodeKit's original source and documentation, with explicit separate
+CC-BY-NC-4.0 terms for Brain2Qwerty and SpanishBCBL.
+
+Why: useful community contribution requires more than a public code dump. EEG
+owners need a metadata-first path that never asks them to post recordings;
+hardware owners need replay/timestamp/packet-loss criteria; predictive results
+need no-signal controls and consumed-holdout disclosure; maintainers need
+security, conduct, governance, citation, issue, review, and CI contracts.
+
+Public-history audit: Git tracks only `.gitkeep` under `data/` and `cache/`;
+no neural recording or cache extension was found in tracked history. The
+pre-documentation object store was 6.22 MiB with a 332.37 KiB pack and a
+321,169-byte largest blob. Gitleaks 8.30.0 found one documented NeuroToken
+SHA-256 false positive; an exact commit/path/rule/line fingerprint suppresses
+only that reviewed finding, and the complete default scan then passes.
+
+GitHub boundary: description, 16 topics, and eight issue labels were updated.
+The repository reported private at the start and public when rechecked after
+those metadata-only commands, even though no visibility flag was issued.
+Default `main` remains stale. Do not call the public default release ready;
+review and merge the active branch or deliberately update the default, verify
+CI and security settings, and explicitly decide whether public visibility
+should remain.
+
+Evidence: `README.md`, `CONTRIBUTING.md`, `SECURITY.md`, `GOVERNANCE.md`,
+`CODE_OF_CONDUCT.md`, `THIRD_PARTY_NOTICES.md`,
+`docs/OPEN_SOURCE_READINESS.md`, and commit `e5d89ed`.

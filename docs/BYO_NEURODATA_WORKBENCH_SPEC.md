@@ -226,8 +226,12 @@ focused tests, and one 532-byte synthetic roundtrip. See
 `docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md`. Every compatibility level above 0
 still requires a separate preregistration and implementation gate.
 
-RW2's level-1/2 signal-quality protocol is now frozen at commit `eacb231`; see
-`docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md` and
-`registries/signal_quality_contract.v0.json`. The next gate is implementation
-against generated fixtures only. It does not authorize any real signal read,
-automatic cleaning, task compatibility, benchmark, or live-source claim.
+RW2's level-1/2 signal-quality protocol was frozen at commit `eacb231` and the
+exact generated-fixture implementation is now closed at commit `2796dee`; see
+`docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md`,
+`docs/RW2_SIGNAL_QUALITY_CLOSEOUT.md`, and
+`registries/signal_quality_contract.v0.json`. It validates 38 readable fixtures
+and two exact refusals across six format families with bounded descriptive
+reports and no real/target/model access. It does not authorize a real signal
+read, automatic cleaning, task compatibility, benchmark, or live-source claim.
+RW3 requires a separate offline-replay/live-source-equivalence preregistration.

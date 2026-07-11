@@ -19,6 +19,64 @@ should be able to identify one legal dataset slice, inspect it locally, build a
 bounded cache, preserve provenance, compare against a language-only control,
 and explain exactly what the result does not prove.
 
+## Results At A Glance
+
+> The standout result is not an inflated decoder score. It is a complete,
+> reproducible evidence chain that validates difficult engineering, preserves
+> negative scientific results, and knows when a gate should stop.
+
+### Engineering Scorecard
+
+| Result | Measured evidence | Proof label | Why it matters |
+|---|---|---|---|
+| Complete S21 trial reconciliation | 66/66 session-1 trials; 63/63 performed session-2 trials; empty MAT slots 54, 58, and 60 preserved | real-data validated | Turns ambiguous trigger/log ordering into exact trial provenance instead of fuzzy text matching |
+| Task-matched EEG bridge | 2,534 MAT triggers aligned; 2,197 windows; `2197 x 61 x 25`; 12,428,800-byte cache | real-data validated | Proves bounded BrainVision plus MAT mechanics on EEG without pretending the classifier succeeded |
+| Sampling-rate characterization | identical 66-row caches at 100/50/25 Hz; 1,663,209 / 846,334 / 431,451 bytes | real-data validated | Quantifies storage and temporal feasibility without selecting a rate from unmeasured accuracy |
+| Geometry-aware channel subsets | one 102-magnetometer base plus 20 exact-identity subset caches under 128 MiB | real-data validated | Makes sensor-cost tradeoffs inspectable while keeping geometry proxies separate from decoding claims |
+| Precision/storage sweep | qint16 is 49.84% smaller; qint8 is 80.75% smaller with worst relative RMSE 0.9531%; no clipping | real-data cache mechanics | Measures representation distortion without calling it retained model accuracy |
+| NeuroTokenCache v0 | `48 x 16 x 32`; 76,646 bytes; exact payload replay; zero target-member reads | fixture-backed interface | Establishes a strict modality/timing/mask/split/hash contract without unreleased embeddings |
+| Causal frame replay | 553 canonical frames; 5/5 schedules exact; zero right context; 300-byte mutable state | synthetic mechanism only | Separates true producer causality from transport scheduling and decoder latency |
+| Tiny learned causal producer | 1,130 parameters; validation and one-time test balanced accuracy 1.0 versus 0.166667 signal-free prior; 5/5 replay | synthetic mechanism only | Proves the bounded stream can carry a learned signal on an intentionally easy generated task |
+| Blank calibration mechanism | validation and one-time test both 16/16 exact at CER 0; 9 test corrections; 0 regressions | synthetic mechanism only | Shows one preregistered scalar can solve a specific tail-error mechanism without post-test trimming |
+| Metadata-only local intake | 6 format families; 532 source bytes; 11,545 report bytes; 0 binary/raw/target/model/network reads | fixture-backed | Lets EEG owners start with safe structure and provenance instead of uploading a recording |
+| Bounded signal-quality interface | 40 fixtures; 38 readable and 2 exact refusals across 6 format families; 3.839 sec; 76,592 output bytes | fixture-backed | Validates readers, metrics, privacy, caps, and no-mutation identity before any real quality claim |
+| Test and release surface | 258 unittests with 3 skips; 255 pytest passes, 3 skips, and 25 subtests; zero-dependency suite also green | local shell verified | Makes the research contracts executable for contributors on ordinary hardware |
+
+### Real-Data Scientific Scorecard
+
+| Evaluation | Neural result | No-signal result | Honest decision |
+|---|---:|---:|---|
+| S21 session-1 strict five-row sentence test | 163 character edits | 164 character edits | Near-null difference; paired interval spans benefit and harm |
+| S21 session-2 same-person transfer | CER `0.9179` | CER `0.7755` | Neural model is materially worse; session is consumed |
+| S7 EEG within-session key events | exact accuracy `0.91%` | exact accuracy `12.27%` | Neural template is materially worse; EEG bridge is mechanics only |
+
+**Scientific headline:** the real MEG and EEG evaluations run so far do not
+show a reliable neural advantage. That negative result is preserved beside the
+engineering wins, not hidden behind synthetic accuracy.
+
+### Resource Highlights
+
+| Gate | Runtime | Peak RSS | Persistent output |
+|---|---:|---:|---:|
+| Zero-dependency full unittest run | 0.285 sec | 40,845,312 bytes | temporary test output only |
+| RW1 metadata intake roundtrip | 0.001659 sec | 21,643,264 bytes | 11,545 bytes |
+| RW2 bounded FIF quality roundtrip | 3.839168 sec | 150,749,184 bytes | 76,592 bytes |
+| Full optional-neuro/ML unittest run | 21.283 sec | 492,044,288 bytes | temporary test output only |
+
+Proof labels are deliberately narrow:
+
+- **real-data validated** means the named interface or identity claim ran on the
+  exact local recording described;
+- **fixture-backed** means deterministic generated files exercised the contract;
+- **synthetic mechanism only** means the result cannot be transferred to brain
+  data, people, or devices;
+- **parked** means a registered primary gate failed and the project did not tune
+  past it.
+
+Detailed evidence is linked from the
+[documentation map](#documentation-map), including
+[the RW2 closeout](docs/RW2_SIGNAL_QUALITY_CLOSEOUT.md).
+
 ## Current Proof Boundary
 
 Read this before interpreting any number in the repository.
@@ -577,7 +635,9 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md](docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md) | metadata-only file intake closeout |
 | [docs/RW2_PRIMARY_SOURCE_RESEARCH.md](docs/RW2_PRIMARY_SOURCE_RESEARCH.md) | reader/quality primary-source review |
 | [docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md](docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md) | frozen RW2 protocol |
+| [docs/RW2_SIGNAL_QUALITY_CLOSEOUT.md](docs/RW2_SIGNAL_QUALITY_CLOSEOUT.md) | measured six-format RW2 implementation result |
 | [docs/BYO_NEURODATA_WORKBENCH_SPEC.md](docs/BYO_NEURODATA_WORKBENCH_SPEC.md) | staged local neurodata workbench contract |
+| [docs/OPEN_SOURCE_READINESS.md](docs/OPEN_SOURCE_READINESS.md) | licensing, history, privacy, GitHub, and release gates |
 | [registries/datasets.v0.json](registries/datasets.v0.json) | task-separated dataset candidates |
 | [registries/devices.v0.json](registries/devices.v0.json) | device and modality metadata, not qualification |
 | [docs/RISK_AND_ETHICS.md](docs/RISK_AND_ETHICS.md) | privacy, licensing, ethics, and communication boundary |

@@ -1481,3 +1481,84 @@ workbook is 54,836 bytes with SHA-256
 `c27d80d4831acc91795b2cbf10d7e00400ff393f58bfd029a7653e0e328dc669`.
 Generated inspection output remains ignored, and the pre-existing untracked
 tracker inspection NDJSON was not modified or staged.
+
+## 2026-07-10 - RW2 synthetic signal-quality implementation and closeout
+
+Implemented the exact `eacb231` preregistration in
+`src/neurodecodekit/preprocess/signal_quality.py` and
+`src/neurodecodekit/training/synthetic_signal_quality.py`, with four CLI
+commands and nine focused tests. Optional `neuro` now pins MNE to `>=1.12,<1.13`
+so the reader signature/behavior line matches the frozen evidence.
+
+The deterministic fixture tree contains 40 rows across six format families:
+38 readable sources and two exact refusals. Four unsupported export
+combinations are documented rather than synthesized inaccurately. All readable
+fixtures preserve lazy open, expected channel/timing/value/geometry/reference/
+event identity, source no-mutation, privacy redaction, descriptive time/PSD
+metrics, and exact payload replay.
+
+The measured closeout reused the existing 3,937,717-byte fixture tree because
+the local volume had only 3.4 GiB free. One clean FIF report selected nine
+channels and windows of 384/512/384 samples, requested and returned 11,520
+values in six bounded calls, and materialized 92,160 bytes. It wrote 76,592
+bytes in 3.839168 seconds with 150,749,184-byte internal peak RSS. Raw-reader
+opens were one; real/cache/target/model/training/network access was zero. The
+producer is explicitly offline noncausal and end-to-end latency is unmeasured.
+
+An initial CLI attempt supplied a broader root than the RW1 binding and refused
+with `Selected source does not match the RW1 report.` before producing an
+artifact. The exact-bound rerun passed. This refusal is retained as provenance
+evidence.
+
+Verification: nine focused RW2 tests; 258 unittest tests with 3 skips in 21.283
+seconds and 492,044,288-byte external maximum RSS; 255 pytest passes with 3
+skips and 25 subtests in 23.77 seconds and 523,501,568-byte maximum RSS. The
+zero-dependency run passes 246 tests with 118 optional skips in 0.285 seconds
+and 40,845,312-byte maximum RSS. Ruff, compileall, all RW2 CLI help,
+deterministic replay, strict saved-report inspection, package metadata, and
+`git diff --check` pass.
+
+Decision: close RW2 at exact synthetic compatibility level 2. RW3
+preregistration is next; no BrainFlow, LSL, live source, real recording, S20,
+hardware, automatic cleaning, model, or training is authorized.
+
+Evidence: implementation commit `2796dee` and
+`docs/RW2_SIGNAL_QUALITY_CLOSEOUT.md`.
+
+The eight-sheet tracker was updated through the bundled artifact-tool workflow,
+rendered before and after, checked for formula errors, and promoted only after
+visual repair. The tracked/delivered workbook is 55,674 bytes with SHA-256
+`f1c08a2e6f8e0e9889a525af5d3cb04977e7dca87b0fdb6d6810854cdcd32d2e`.
+
+## 2026-07-10 - Open-source contribution and GitHub surface
+
+Replaced the chronological starter README with a proof-first guide and added a
+prominent results dashboard. Engineering wins, real-data scientific outcomes,
+resource measurements, and proof labels are separate so synthetic accuracy
+cannot conceal the negative real MEG/EEG comparisons.
+
+Added Apache-2.0 `LICENSE`, `NOTICE`, third-party/data terms, citation,
+contribution, code-of-conduct, governance, support, security, issue forms, PR
+template, CODEOWNERS, and one-thread base/neuro CI. The contributor guide has
+dedicated paths for EEG data owners and EEG headset/board owners, beginning
+with metadata and deterministic replay rather than recording upload.
+
+The base-CI rehearsal exposed five old optional-test guard failures. Collection
+and missing-dependency tests now skip cleanly without NumPy/MNE/SciPy, while the
+same paths run in the optional environment. A lightweight `array` extra allows
+NumPy-only synthetic/NPZ work without installing MNE or Torch.
+
+Tracked-history checks found no recording/cache files and no secret. Gitleaks
+passes with the default rules and one exact reviewed fingerprint for a
+documented NeuroToken SHA-256. TOML, YAML/CFF, local Markdown links, package
+metadata, Ruff, compileall, and whitespace checks pass.
+
+GitHub received a proof-accurate description, 16 topics, and eight issue
+labels. The repository was private at the first check and reported public at
+the later check although no visibility command was issued. `main` remains
+stale. The branch must be reviewed and merged, and the maintainer must decide
+whether public visibility should remain, before calling the default surface
+release ready.
+
+Evidence: open-source milestone commit `e5d89ed` and
+`docs/OPEN_SOURCE_READINESS.md`.

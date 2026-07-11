@@ -1,10 +1,11 @@
 # Start Here
 
-1. Read `README.md` for the mission and quickstart.
-2. Read `AGENTS.md` for coding-agent rules.
-3. Read `docs/CODEX_HANDOFF.md` for the next three PRs.
-4. Paste `prompts/CODEX_START_PROMPT.md` into Codex to continue.
-5. Run tests:
+1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
+2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.
+3. Read `AGENTS.md` for coding-agent rules.
+4. Read `docs/CODEX_HANDOFF.md` for the next three work orders.
+5. Paste `prompts/CODEX_START_PROMPT.md` into Codex to continue.
+6. Run tests:
 
 ```bash
 PYTHONPATH=src python -m unittest discover -s tests -v
@@ -12,14 +13,15 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 
 The parallel Real-World Practice Track starts at
 `docs/REAL_WORLD_PRACTICE_TRACK_RESEARCH.md`. RW0 is a completed research gate;
-RW1 is now closed as a synthetic-fixture metadata-only interface gate. RW2 is
-preregistered at commit `eacb231`. Its next authorized work order is a
-synthetic-fixture-only bounded signal-read and descriptive quality-report
-implementation under `registries/signal_quality_contract.v0.json`. No real
-recording, consumed cache, download, learned model, or automatic cleaning is
-authorized. The proposed fresh S20 EEG block is **not authorized** for download
-or signal access. Its exact four-file, 96,090,264-byte dry run is in
-`docs/FRESH_EEG_BENCHMARK_S20_APPROVAL_PACKET.md`.
+RW1 is closed as a synthetic-fixture metadata-only interface gate. RW2 is now
+closed at exact synthetic compatibility level 2: 38 generated recordings are
+readable and two malformed/unsafe layouts refuse exactly across BrainVision,
+EDF/EDF+, BDF, EEGLAB external-FDT, FIF, and BIDS. The next authorized
+practice-track action is **RW3 preregistration only**. No real recording,
+consumed cache, S20 download/read, live source, model, training, or automatic
+cleaning is authorized. The proposed fresh S20 EEG block is **not authorized**
+for download or signal access. Its exact four-file, 96,090,264-byte dry run is
+in `docs/FRESH_EEG_BENCHMARK_S20_APPROVAL_PACKET.md`.
 
 Current verified state: two complete S21 SpanishBCBL MEG recordings plus one
 94,842,381-byte S7 SpanishBCBL EEG BrainVision bundle and their matching MAT
@@ -96,8 +98,13 @@ BrainVision, EDF/EDF+, BDF, EEGLAB external-FDT, FIF, and BIDS fixtures;
 three-window/32-MiB signal materialization, one-thread, 30-second, 1-GiB RSS,
 4-MiB per-run output, and 16-MiB fixture-set caps; strict privacy redaction;
 descriptive time-domain and Welch PSD summaries; and no source mutation or
-automatic bad-channel action. It has not yet been implemented. See
-`docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md`.
+automatic bad-channel action. The 40-fixture implementation passes with 38
+readable fixtures and two exact refusals. One measured FIF roundtrip selects
+nine channels and three windows, returns 11,520 values, materializes 92,160
+bytes, and writes 76,592 report bytes in 3.839168 seconds with 150,749,184-byte
+peak RSS. Real/cache/target/model/training/network access is zero, source
+before/after hashes match, producer causality is false, and end-to-end latency
+is unmeasured. See `docs/RW2_SIGNAL_QUALITY_CLOSEOUT.md`.
 
 The current registries keep prompted typing, imagined speech, natural reading,
 P300, SSVEP, and motor imagery as separate evidence cohorts. They also keep

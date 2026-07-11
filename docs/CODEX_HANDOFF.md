@@ -1,4 +1,4 @@
-# Codex Handoff — NeuroDecodeKit Starter
+# Codex Handoff - NeuroDecodeKit
 
 > Current handoff, 2026-07-10: Loops 1-12, 14-22, and 23.5 are complete; Loops
 > 13 and 23 are parked after measured gates. Two S21 MEG sessions support strict
@@ -26,10 +26,15 @@
 > dependency-free level-0 metadata gate for BrainVision, EDF/EDF+, BDF,
 > EEGLAB, FIF, and BIDS synthetic fixtures. Its 532-byte roundtrip writes
 > 11,545 bytes with zero binary/raw/cache/target/model/training/network reads.
-> RW2 is now preregistered at `eacb231`; its next authorized gate is the exact
-> synthetic-fixture-only implementation. No real recording, consumed cache,
-> S20 download/read, MNE-BIDS execution, automatic cleaning, model, or training
-> is authorized.
+> RW2 now closes at exact synthetic compatibility level 2. Forty generated
+> fixtures cover six format families: 38 readable sources pass and two
+> malformed/unsafe layouts refuse exactly. One measured FIF report selects nine
+> channels and three windows, returns 11,520 values, writes 76,592 bytes in
+> 3.839168 seconds, and records 150,749,184-byte peak RSS with zero
+> real/cache/target/model/training/network access. RW3 preregistration is the
+> next practice-track action. No real recording, consumed cache, S20
+> download/read, MNE-BIDS execution, BrainFlow/LSL implementation, live source,
+> automatic cleaning, model, or training is authorized.
 > There is no demonstrated neural advantage, unseen-person, useful EEG,
 > real-neural sequence decoder, end-to-end real-time, portable-hardware,
 > arbitrary-thought, or clinical claim. See
@@ -119,6 +124,13 @@ This repo is a starter scaffold with working pure-Python components:
   explicit reader arguments, bounded windows/arrays/resources, descriptive
   time-domain and Welch PSD metrics, privacy redaction, source no-mutation, and
   exact kill/park/proceed gates
+- fixture-backed RW2 implementation with 38 readable and two exact-refusal
+  sources, strict RW1/contract binding, six lazy direct-reader adapters,
+  deterministic JSON/Markdown/audit artifacts, load/validate/summary APIs,
+  malformed/privacy/tamper/collision/cap coverage, and four CLI commands
+- open-source collaboration surface with Apache-2.0 license, third-party/data
+  boundaries, detailed README, EEG data/hardware contribution paths, security,
+  governance, citation, issue forms, pull-request checks, and one-thread CI
 - JSON/Markdown metrics report command
 - CLI smoke commands
 - unit tests
@@ -131,17 +143,21 @@ negative within-session event comparison. None is a decoder success. Do not
 turn these results, a variance ranking, or a geometry proxy into unseen-person
 or population generalization.
 
-Current verification after the RW2 preregistration closeout on 2026-07-10:
-249 unittest tests passed with 3 skipped in 11.714 seconds and 491,683,840-byte
-maximum RSS; pytest reported 246 passed, 3 skipped, and 25 subtests passed in
-12.51 seconds with 489,914,368-byte maximum RSS. Seven focused NeuroToken tests
-and all 11 RW1 tests passed. Full Ruff lint, compileall, root/create/inspect CLI
-help, the RW2 machine-contract invariant, workbook formulas and all-sheet visual
-checks, and `git diff --check` passed. The pre-RW1 baseline was 238 unittest and
-235 pytest passes with the same skips/subtests; no test count regressed during
-preregistration.
+Current verification after the RW2 implementation and open-source-surface
+milestones on 2026-07-10: 258 unittest tests passed with 3 skipped in 21.283
+seconds and 492,044,288-byte maximum RSS; pytest reported 255 passed, 3 skipped,
+and 25 subtests passed in 23.77 seconds with 523,501,568-byte maximum RSS. All
+9 focused RW2 tests pass. A separate true zero-dependency run passes 246 tests
+with 118 explicit optional skips in 0.285 seconds and 40,845,312-byte maximum
+RSS. The preregistration baseline was 249 unittest and 246 pytest passes with
+the same three optional-environment skips/subtests, so RW2 adds nine tests
+without regression. Full Ruff lint, compileall, root/RW1/RW2 CLI help,
+TOML/YAML parsing, local Markdown links, package metadata rebuild, Gitleaks
+history scan, bounded roundtrip, and `git diff --check` pass.
 The tracked and delivered workbook hashes match at
-`c27d80d4831acc91795b2cbf10d7e00400ff393f58bfd029a7653e0e328dc669`.
+`f1c08a2e6f8e0e9889a525af5d3cb04977e7dca87b0fdb6d6810854cdcd32d2e`.
+The tracked workbook is 55,674 bytes and its eight-sheet visual/formula audit
+passes.
 
 ## The north star
 
@@ -155,17 +171,18 @@ This is not primarily a model repo. It is a **research loop repo**.
 
 ## Current Next Work
 
-1. **RW2 - implement the frozen synthetic signal-quality gate.** Follow
-   `registries/signal_quality_contract.v0.json` exactly: use optional imports,
-   six generated format families, strict bounded reads, privacy/no-mutation
-   validation, deterministic reports, and one-thread resource caps. Do not open
-   a real recording or expand the protocol.
+1. **RW3 - preregister offline replay/live-source equivalence only.** Freeze
+   source chunks, playback/synthetic adapters, dependency boundaries, clock and
+   timestamp correction, packet-loss representation, ordering, state, schedule
+   tolerances, privacy, resources, and kill/park/proceed rules before code. Do
+   not install/use BrainFlow or LSL, open a live source, or touch hardware yet.
 2. **Loop 24 - preregister local precision/runtime independently.** Freeze
    candidates, reference arithmetic, tolerances, fresh selection data, and
    resource rules before code. Seed 2353 cannot select anything.
-3. **RW3 and later remain blocked by their predecessors.** Do not begin live
-   replay, hardware, collection, multimodal, workbench UI, or deployment work
-   from metadata compatibility alone.
+3. **Review the open-source branch before public-default release.** The GitHub
+   repository currently reports public while default `main` is stale. Review
+   and merge the draft branch or intentionally update the default only after CI,
+   license, issue-form, security, history, and proof-boundary checks pass.
 
 RW4 is not next: S20 acquisition remains blocked until explicit approval names
 revision `88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684`, exactly four files, the
@@ -178,9 +195,11 @@ are in `docs/LOOP_23_5_PREREGISTRATION.md` and
 `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`. Loop 22 evidence is in
 `docs/LOOP_22_TINY_CAUSAL_ENCODER.md`; the post-20 sequence is in
 `docs/POST_20_ROADMAP.md`; RW1 evidence is in
-`docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md`; RW2's frozen design and source review
-are in `docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md` and
-`docs/RW2_PRIMARY_SOURCE_RESEARCH.md`.
+`docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md`; RW2 evidence is in
+`docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md`,
+`docs/RW2_PRIMARY_SOURCE_RESEARCH.md`, and
+`docs/RW2_SIGNAL_QUALITY_CLOSEOUT.md`. Open-source release gates are in
+`docs/OPEN_SOURCE_READINESS.md`.
 
 ## Historical original PR plan
 

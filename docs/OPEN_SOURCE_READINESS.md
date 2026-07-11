@@ -2,7 +2,8 @@
 
 Date: 2026-07-10
 
-Status: **Prepared on a review branch; repository visibility remains private**
+Status: **Prepared on a review branch; public visibility observed while default
+`main` remains stale**
 
 ## Purpose
 
@@ -16,7 +17,7 @@ private.
 | Field | State before this milestone |
 |---|---|
 | Repository | `CheickDiakite-yikes/neurodecodekit` |
-| Visibility | Private |
+| Visibility | Public when rechecked after safe metadata updates |
 | Default branch | `main` |
 | Active preparation branch | `codex/loops-8-19-validated` |
 | Issues | Enabled |
@@ -27,10 +28,11 @@ private.
 | Topics | Empty |
 | Detected license | None |
 
-The active branch is materially ahead of `main`. Public visibility must not be
-changed until the open-source milestone is reviewed and merged, or the default
-branch is deliberately updated. Publishing the current default branch would
-present stale proof boundaries and omit the new safety/community files.
+The active branch is materially ahead of `main`. The repository was private at
+the start of this milestone and later reported public; no visibility-changing
+command was issued in this work. Do not assume the public default is release
+ready. Until the branch is reviewed and merged, the default surface presents
+stale proof boundaries and omits the new safety/community files.
 
 ## Added Public Surface
 
@@ -196,8 +198,9 @@ Also run one bounded synthetic RW2 create/inspect/report roundtrip and record:
 
 ## Visibility Decision
 
-Changing from private to public is a separate, explicit maintainer action. It
-should happen only after:
+Public visibility is already active as of the closeout check. The maintainer
+must explicitly decide whether to keep it public or restore private visibility.
+If it remains public, the public-default release should happen only after:
 
 1. this branch is reviewed and merged or made the deliberate default;
 2. CI passes on the merged commit;
@@ -207,7 +210,10 @@ should happen only after:
 6. the README proof boundary matches the current closeout;
 7. the maintainer confirms that publishing repository history is intended.
 
-No command in this milestone changes repository visibility.
+No command in this milestone changed repository visibility. The description,
+topics, and labels were updated without a visibility flag. The current state
+should therefore be reviewed in GitHub's repository settings before release
+signoff.
 
 ## Closeout Language
 

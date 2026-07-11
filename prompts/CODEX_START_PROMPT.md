@@ -1,107 +1,108 @@
 # Prompt to continue NeuroDecodeKit in Codex
 
 Continue NeuroDecodeKit from the current branch. Before editing, inspect the
-branch, git status, current tests, optional dependency versions, and these
-files:
+branch, git status, current tests, optional dependency versions, open pull
+requests, and these files:
 
 - `AGENTS.md`
+- `README.md`
 - `START_HERE.md`
+- `CONTRIBUTING.md`
 - `docs/CODEX_HANDOFF.md`
-- `docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md`
-- `docs/RW2_PRIMARY_SOURCE_RESEARCH.md`
-- `docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md`
-- `registries/signal_quality_contract.v0.json`
+- `docs/RW2_SIGNAL_QUALITY_CLOSEOUT.md`
 - `docs/BYO_NEURODATA_WORKBENCH_SPEC.md`
 - `docs/POST_20_ROADMAP.md`
+- `docs/OPEN_SOURCE_READINESS.md`
 
-Primary task: implement the preregistered Real-World Practice Track RW2 as the
-smallest optional-neuro, synthetic-fixture-only bounded signal-read and
-descriptive quality-report gate. The frozen registration is commit `eacb231`.
-Do not expand or reinterpret its contract.
+Preserve every existing change and the unrelated tracker inspection NDJSON.
+Do not reset, revert, delete, or overwrite work already present.
 
-Hard boundaries:
+## Current proof boundary
 
-1. Preserve all existing work and the unrelated tracker inspection NDJSON.
-2. Do not download data or open S20. Do not open consumed S7/S21 raw arrays,
+- Loops 1-12, 14-22, and 23.5 are complete. Loops 13 and 23 are deliberately
+  parked after measured gates.
+- Real S21 session-1 alignment is validated for all 66 trials. S21 session-2 is
+  a consumed evaluation set and must not be used for tuning.
+- The cross-session MEG model and the bounded S7 EEG classifier both performed
+  worse than their no-signal priors.
+- NeuroTokenCache v0, the causal mock stream, the tiny synthetic encoder, the
+  parked synthetic CTC decoder, and the synthetic blank-intercept calibration
+  are engineering results, not evidence of useful neural decoding.
+- RW1 closes metadata-only local intake. RW2 closes bounded, redacted signal
+  reading and descriptive reporting on generated fixtures only: 38 readable
+  sources pass and two malformed or unsafe layouts refuse exactly.
+- No real recording quality, neural advantage, unseen-person generalization,
+  useful EEG decoder, real-time decoding, portable-hardware, arbitrary-thought,
+  or clinical result has been demonstrated.
+- The repository currently reports public while default `main` is stale.
+  Review the current branch and draft PR; do not merge or alter visibility
+  without explicit user approval.
+
+## Primary task: preregister RW3 only
+
+Create the smallest reviewable preregistration for **RW3 offline replay and
+live-source equivalence**. This step freezes the future interface and test
+rules; it does not implement a source adapter or read a live stream.
+
+The preregistration must freeze:
+
+1. A strict, versioned source-chunk schema carrying source/modality/device,
+   channel order/types/units/geometry availability, source sampling rate,
+   sample indices, source timestamps, corrected monotonic timestamps, packet
+   sequence, true length, padding mask, and payload dtype/shape.
+2. Exact replay, synthetic-source, future BrainFlow playback, and future LSL
+   boundaries. BrainFlow and LSL remain optional and uninstalled in this step.
+3. Clock domains, timestamp correction, jitter, drift, reordering, duplicate
+   packets, gaps, dropped-packet representation, reconnects, and end-of-stream
+   behavior. Unknown behavior must remain unavailable rather than inferred.
+4. Chunk-schedule invariance, state serialization, causal status, required
+   context, flush behavior, and exact tolerances for payload, sample index,
+   timestamps, packet accounting, and replay summaries.
+5. Strict source/config/registry/payload hashes, collision refusal, split and
+   recording binding, privacy redaction, local-only operation, and explicit
+   warnings and claim boundaries.
+6. Resource caps for source bytes, emitted bytes, item/channel/sample counts,
+   runtime, peak RSS, one CPU thread, artifact totals, and zero unauthorized
+   network, target, model, training, consumed-cache, or real-data access.
+7. Deterministic synthetic fixture families for clean playback, uneven chunk
+   schedules, timestamp jitter/drift, packet loss, duplication, reordering,
+   reconnect, malformed metadata, cap violation, and tampering.
+8. Exact proceed, park, and kill rules. Passing fixtures can prove interface
+   and accounting equivalence only; it cannot authorize hardware or support a
+   decoding claim.
+
+## Hard boundaries
+
+1. Do not download data, open S20, or reopen consumed S7/S21 raw arrays,
    caches, target logs, or seeds 2203, 2303, and 2353.
-3. Use only deterministic generated fixtures. Do not create labels, target
-   text, predictions, CER/WER, a decoder, a model, or a training run.
-4. Keep MNE, NumPy, and SciPy optional and lazily imported. The base package
-   must remain dependency-free and missing extras must produce actionable
-   errors. Do not add MNE-BIDS or another heavy base dependency.
-5. Use one CPU worker/thread. Keep the complete generated fixture/report set
-   below 16 MiB and each run below its 4-MiB artifact cap.
+2. Do not install or import BrainFlow, LSL, MNE-BIDS, or hardware SDKs. Do not
+   connect to hardware, enumerate devices, open sockets, or execute a live
+   source.
+3. Do not implement RW3 adapters, source chunks, fixtures, or CLI commands in
+   this preregistration milestone. Freeze the contract first.
+4. Do not train or run a model, create target text or labels, calculate
+   CER/WER, or claim decoding performance.
+5. Keep heavy dependencies optional. Use one CPU thread and do not create
+   generated data artifacts beyond tiny documentation-validation debris.
+6. Keep RW3 independent from Loop 24 precision/runtime preregistration and the
+   blocked RW4 S20 acquisition packet.
 
-Implementation contract:
+## Required deliverables
 
-1. Extend the RW1 source binding instead of bypassing it. Bind every report to
-   the exact RW1 source manifest, registries, configuration, and hashes.
-2. Add explicit adapters for BrainVision, EDF/EDF+, BDF, EEGLAB continuous
-   external-FDT, FIF, and BIDS using the exact named readers and arguments in
-   `registries/signal_quality_contract.v0.json`.
-3. Do not call `mne_bids.read_raw_bids`. Resolve BIDS with RW1, then dispatch
-   to the direct MNE reader. Refuse ambiguous sidecars or unauthorized event
-   content exactly as registered.
-4. Refuse embedded/epoched/ALLEEG/old-DAT EEGLAB before signal materialization.
-   Refuse EDF/BDF level 2 unless one source sampling rate is proven.
-5. Keep `preload=False`; select at most three deterministic windows at 5%, 50%,
-   and 95%; enforce 512 channels, 4,194,304 channel-sample values, 32 MiB of
-   materialized float64 signal, and at least 128 samples per selected window.
-6. Report exact dimensions, channel order/type/unit, sampling rate, duration,
-   sample indices/times, declared reference/filter/projector/compensation/bads
-   state, geometry availability/hash, and aggregate-only annotation status.
-7. Implement the frozen descriptive robust amplitude, finite/flat/duplicate,
-   and median-Welch PSD formulas exactly. Use the registered frequency bounds,
-   bands, Hann window, two-second segment, half overlap, DC removal, median
-   aggregation, and `n_jobs=1`.
-8. Do not invent generic clipping, excessive-amplitude, or line-noise pass/fail
-   thresholds. Mark profile-dependent judgments unavailable. A warning must
-   never delete, interpolate, filter, rereference, resample, normalize, or mark
-   a channel bad.
-9. Hash the registered bounded selected payload and in-memory metadata states
-   before and after, then prove no mutation of signal values, annotations,
-   bads, projectors, reference, compensation, sampling rate, or geometry. Do
-   not hash or scan the full signal file to make this check.
-10. Never persist waveforms. Redact absolute paths, participant/demographic
-    data, measurement dates, serials, annotation/event descriptions and exact
-    timestamps, free text, exact geometry coordinates, and signal values.
-11. Add strict deterministic save/load/validate/summary APIs plus create and
-    inspect CLI commands. Refuse malformed reports, tampering, collisions,
-    unsafe paths, cap violations, and unexpected reader behavior.
-12. Measure input and bytes actually read, output bytes, runtime, peak RSS,
-    window/channel/sample counts, compatibility level, warnings/unavailable
-    fields, and raw/cache/target/model/training/network counters. State that the
-    producer is noncausal audit code and end-to-end latency is unmeasured.
+1. One detailed RW3 preregistration document with assumptions, schemas,
+   fixture matrix, metrics, caps, tolerances, refusal IDs, access counters,
+   acceptance gates, and exact claim boundary.
+2. A small machine-readable versioned contract or registry only if the repo's
+   existing preregistration pattern requires it. It must contain no waveform,
+   participant, target, secret, or device-credential data.
+3. Tracker, decision log, build notes, handoff, start-here, roadmap, workbook,
+   and this continuation prompt updated consistently.
+4. Documentation and contract validation, local-link checks, Ruff,
+   `git diff --check`, Gitleaks, and the complete unit suites. Compare results
+   with the current 258-unittest / 255-pytest baseline.
+5. A coherent commit pushed to the current `codex/` branch and an updated
+   draft PR. Preserve unrelated files and generated debris outside git.
 
-Required tests and artifacts:
-
-- Deterministic fixtures for all six format families plus every registered
-  malformed/refusal family.
-- Exact fixture-value, channel/timing/unit/geometry/event-state, PSD-peak,
-  no-mutation, redaction, replay, tamper, collision, missing-extra, cap, and
-  strict source-binding tests.
-- One tiny ignored synthetic roundtrip and inspectable measured audit sidecar.
-- A closeout document that distinguishes proven reader/report mechanics from
-  unavailable real signal, task, benchmark, decoding, latency, and hardware
-  claims.
-
-Acceptance gates:
-
-1. Run focused RW2 tests and the complete unittest and pytest suites with
-   one-thread environment variables.
-2. Run Ruff, compileall, `git diff --check`, root and RW2 CLI help, contract
-   invariant checks, and one bounded synthetic roundtrip.
-3. Measure and report runtime, peak RSS, every byte/counter/cap, and compare the
-   complete suites with the pre-change baseline of 249 unittest tests with 3
-   skips and 246 pytest tests with 3 skips plus 25 subtests.
-4. Keep generated fixtures, reports, caches, and inspection debris out of git.
-5. Commit and push coherent tested milestones. Do not call RW2 complete unless
-   every frozen acceptance gate passes; park a failing adapter or the entire
-   gate using the registered rule instead of expanding the architecture.
-
-A passing RW2 implementation would prove only bounded, redacted,
-source-preserving reader and descriptive-report mechanics on generated files.
-It would not prove real recording quality, artifact detection validity,
-preprocessing benefit, neural advantage, decoding, unseen-person transfer,
-end-to-end real-time behavior, at-home hardware, arbitrary-thought reading, or
-clinical utility.
+Do not call RW3 implemented or validated. A successful milestone proves only
+that a future replay/live-source equivalence experiment has been frozen before
+code or hardware access.

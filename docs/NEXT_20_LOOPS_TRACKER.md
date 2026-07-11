@@ -165,15 +165,16 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   sidecars without signal/target/model/network reads. The 532-byte roundtrip
   produced 11,545 bytes under a 4-MiB cap. See
   `docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md`.
-- Parallel Real-World Practice Track RW2: Preregistered at `eacb231` with a
-  strict versioned machine contract for six synthetic format adapters, bounded
-  reads and arrays, descriptive quality metrics, privacy redaction,
-  no-mutation behavior, resources, and exact park/kill rules. No signal result
-  exists. See `docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md`.
-- Next action in the practice track: implement RW2 on synthetic fixtures only,
-  exactly within the frozen contract. Loop 24 remains independently available
-  for preregistration. Seeds 2203, 2303, and 2353 and all observed MEG/EEG
-  holdouts remain frozen.
+- Parallel Real-World Practice Track RW2: Done at exact synthetic compatibility
+  level 2. The six-family set contains 40 fixtures: 38 readable and two exact
+  refusals. Privacy, no-mutation, deterministic replay, malformed, cap, and CLI
+  gates pass; one measured FIF report writes 76,592 bytes in 3.839168 seconds
+  with zero real/cache/target/model/training/network access. See
+  `docs/RW2_SIGNAL_QUALITY_CLOSEOUT.md`.
+- Next action in the practice track: preregister RW3 offline replay/live-source
+  equivalence without implementing BrainFlow, LSL, or hardware access. Loop 24
+  remains independently available for preregistration. Seeds 2203, 2303, and
+  2353 and all observed MEG/EEG holdouts remain frozen.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |
@@ -202,10 +203,10 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
 ## Parallel Practice Track
 
 Use `RW0` through `RW9` from `docs/POST_20_ROADMAP.md`; do not insert them into
-or renumber the original 20 rows. RW0 and RW1 are closed. RW2's quality
-contract is frozen at `eacb231`; its synthetic-only reader/report implementation
-is next. No real signal read is authorized. The S20 fresh EEG benchmark is RW4
-and remains blocked on explicit approval.
+or renumber the original 20 rows. RW0, RW1, and RW2 are closed at their exact
+proof boundaries. RW3 preregistration is next; no live/hardware implementation
+or real signal read is authorized. The S20 fresh EEG benchmark is RW4 and
+remains blocked on explicit approval.
 
 ## Anti-patterns
 - Do not download a large dataset slice without an explicit dry-run report and `--execute` confirmation.
