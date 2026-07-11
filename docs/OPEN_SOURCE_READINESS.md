@@ -28,7 +28,7 @@ explicit review trail even after the repository is visible publicly.
 | Homepage | Empty |
 | Topics | 16 research, modality, reproducibility, and local-first topics set |
 | Detected license | Default-branch API currently null; canonical Apache-2.0 text is corrected in PR #2 |
-| Draft PR CI | 4/4 checks passed before the RW3 registration push; recheck the final documentation commit before merge |
+| Draft PR CI | 4/4 base/optional-neuro push/PR checks pass on RW3 documentation commit `ee5ce63`; recheck after any later commit |
 
 The repository was private at the start of this milestone and later reported
 public; no visibility-changing command was issued in this work. PR #1 has now

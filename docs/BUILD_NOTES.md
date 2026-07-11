@@ -1637,3 +1637,5 @@ links, workbook formula checks, eight-sheet render review, and diff checks pass.
 The updated tracker is 56,304 bytes with SHA-256
 `fdb6d38217682e29033eeb623ffe46f20debd12e82ade4866a6b58d06d80daa9`.
 It records RW3 as review-stage protocol evidence, not a completed runtime gate.
+Draft PR #2 then passed all four GitHub Actions checks on commit `ee5ce63`:
+base and optional-neuro jobs for both push and pull-request events.
