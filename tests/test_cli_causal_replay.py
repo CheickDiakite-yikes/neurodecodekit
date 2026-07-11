@@ -57,7 +57,18 @@ class CausalReplayCliTests(unittest.TestCase):
             with redirect_stdout(io.StringIO()), redirect_stderr(stderr):
                 collision_code = main(args)
 
-        self.assertEqual(code, 0)
+        self.assertEqual(
+            code,
+            0,
+            {
+                "failed_gate_checks": report["failed_gate_checks"],
+                "max_offline_absolute_error": report["summary"][
+                    "max_offline_absolute_error"
+                ],
+                "runtime_sec": report["resources"]["runtime_sec"],
+                "peak_rss_bytes": report["resources"]["peak_rss_bytes"],
+            },
+        )
         self.assertEqual(collision_code, 2)
         self.assertTrue(report["gate_passed"])
         self.assertEqual(report["proof_posture"], "synthetic_causal_frame_replay_only_no_decoder")

@@ -73,7 +73,19 @@ class CausalReplayGateTests(unittest.TestCase):
             saved = json.loads(out_json.read_text(encoding="utf-8"))
             json_bytes = out_json.stat().st_size
 
-        self.assertTrue(report["gate_passed"])
+        self.assertTrue(
+            report["gate_passed"],
+            {
+                "failed_gate_checks": report["failed_gate_checks"],
+                "max_offline_absolute_error": report["summary"][
+                    "max_offline_absolute_error"
+                ],
+                "runtime_sec": report["resources"]["runtime_sec"],
+                "peak_rss_bytes": report["resources"]["peak_rss_bytes"],
+            },
+        )
+        self.assertTrue(all(report["gate_checks"].values()))
+        self.assertEqual(report["failed_gate_checks"], [])
         self.assertEqual(report["summary"]["schedules_passed"], len(REGISTERED_SCHEDULES))
         self.assertTrue(report["summary"]["stream_schedule_bits_invariant"])
         self.assertLessEqual(report["summary"]["max_offline_absolute_error"], 1e-6)
