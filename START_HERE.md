@@ -15,6 +15,10 @@
 PYTHONPATH=src python -m unittest discover -s tests -v
 ```
 
+Tracker scope: the spreadsheet's `20` KPI is the size of the original roadmap,
+not the current loop number. Its dashboard now separately reports the current
+post-roadmap position as **Loop 24 preregistered**.
+
 The parallel Real-World Practice Track starts at
 `docs/REAL_WORLD_PRACTICE_TRACK_RESEARCH.md`. RW0 is a completed research gate;
 RW1 is closed as a synthetic-fixture metadata-only interface gate. RW2 is now

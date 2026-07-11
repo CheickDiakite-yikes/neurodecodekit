@@ -185,8 +185,8 @@ CLI help, JSON/TOML parsing, 43 local Markdown links, `git diff --check`, and
 staged Gitleaks pass. No data, fixture, checkpoint, candidate, inference,
 benchmark, model, or training operation was part of this registration gate.
 The tracked and delivered workbook hashes match at
-`d0b1959fab1201eb8391733a1723ee803bf167441ecd48788f4f8179d16c78c4`.
-The tracked workbook is 57,413 bytes and its eight-sheet visual/formula audit
+`3bb5b2ab03b4327912024bac401fb76ae682151df96140a379514e36caa22f82`.
+The tracked workbook is 57,473 bytes and its eight-sheet visual/formula audit
 passes.
 
 ## The north star

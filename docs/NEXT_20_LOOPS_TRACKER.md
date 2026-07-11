@@ -1,4 +1,10 @@
-# NeuroDecodeKit Post-PR1 20-Loop Tracker
+# NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
+
+> **Scope:** the 20-row table and its KPI describe the original roadmap. Loop
+> numbers 21-24 and the Loop 23.5 calibration gate are post-roadmap extensions,
+> so “20 loops” and “currently at Loop 24” are both true but refer to different
+> things. The spreadsheet dashboard displays both explicitly.
+
 This tracker starts after PR1 lands. The core operating rule is simple: **do not add a more complex loop until the previous loop has produced a cache, report, demo, or explicit kill/park decision.**
 Each loop should be one PR or one experiment note whenever possible. Complexity is allowed, but only when a simpler loop proves why it is needed.
 ## How to use

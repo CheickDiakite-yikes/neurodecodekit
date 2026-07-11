@@ -684,7 +684,7 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/CODEX_HANDOFF.md](docs/CODEX_HANDOFF.md) | exact continuation boundary for coding agents |
 | [docs/BUILD_NOTES.md](docs/BUILD_NOTES.md) | chronological measured build journal |
 | [docs/DECISIONS.md](docs/DECISIONS.md) | consequential architecture and research decisions |
-| [docs/NEXT_20_LOOPS_TRACKER.md](docs/NEXT_20_LOOPS_TRACKER.md) | original loop tracker |
+| [docs/NEXT_20_LOOPS_TRACKER.md](docs/NEXT_20_LOOPS_TRACKER.md) | original 20-loop tracker plus the current post-roadmap gate and decision status |
 | [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) | post-NeuroToken causal/evaluation roadmap |
 | [docs/REAL_DATA_VALIDATION_2026-07-10.md](docs/REAL_DATA_VALIDATION_2026-07-10.md) | S21 alignment, session, and upstream audit |
 | [docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md](docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md) | real EEG bridge and negative classifier result |

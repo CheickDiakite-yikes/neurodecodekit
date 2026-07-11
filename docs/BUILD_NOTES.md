@@ -1782,3 +1782,24 @@ subtests, 265 true zero-dependency tests with 118 expected optional skips, and
 9/9 focused Loop 24 invariants. Final wall/RSS maxima are 15.460 seconds and
 580,567,040 bytes. No Loop 24 or RW3 runtime, fixture, data, target, model, or
 training operation was introduced by the documentation/workbook sync.
+
+## 2026-07-11 - Clarify original-roadmap count versus current gate
+
+The tracker dashboard previously displayed `Total loops: 20` while the current
+post-roadmap position was Loop 24. The value was formula-correct because it
+counts the original 20-row `Loop Tracker` table, but the label and title made
+the two scopes too easy to confuse.
+
+The dashboard now says `Original roadmap loops: 20`, `Original completed: 19`,
+`Original parked: 1`, and `Current numbered gate: Loop 24 preregistered`. Its
+scope note names Loops 21-22 as done, Loop 23 as parked, Loop 23.5 as done, Loop
+24 as preregistered but unauthorized, and RW3 Stage A as separately
+unauthorized. The phase table and chart now explicitly describe the original
+20 loops. The Markdown tracker and README documentation map carry the same
+distinction.
+
+The artifact-tool edit preserves the original-loop count formula and all phase
+formulas. All eight sheets render, the exported workbook reloads, and the
+formula-error scan finds zero matches. The tracked workbook is 57,473 bytes
+with SHA-256
+`3bb5b2ab03b4327912024bac401fb76ae682151df96140a379514e36caa22f82`.
