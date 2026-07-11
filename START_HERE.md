@@ -16,12 +16,15 @@ The parallel Real-World Practice Track starts at
 RW1 is closed as a synthetic-fixture metadata-only interface gate. RW2 is now
 closed at exact synthetic compatibility level 2: 38 generated recordings are
 readable and two malformed/unsafe layouts refuse exactly across BrainVision,
-EDF/EDF+, BDF, EEGLAB external-FDT, FIF, and BIDS. The next authorized
-practice-track action is **RW3 preregistration only**. No real recording,
-consumed cache, S20 download/read, live source, model, training, or automatic
-cleaning is authorized. The proposed fresh S20 EEG block is **not authorized**
-for download or signal access. Its exact four-file, 96,090,264-byte dry run is
-in `docs/FRESH_EEG_BENCHMARK_S20_APPROVAL_PACKET.md`.
+EDF/EDF+, BDF, EEGLAB external-FDT, FIF, and BIDS. RW3's offline
+replay/live-source protocol is now frozen at commit `c3d1f01`; it is a
+registration result, not a runtime result. The next possible practice-track
+decision is explicit authorization of **RW3 Stage A only**. No Stage A code,
+BrainFlow/LSL/PyXDF adapter, socket, stream, hardware, real recording, consumed
+cache, S20 download/read, model, training, or automatic cleaning is authorized.
+The proposed fresh S20 EEG block is **not authorized** for download or signal
+access. Its exact four-file, 96,090,264-byte dry run is in
+`docs/FRESH_EEG_BENCHMARK_S20_APPROVAL_PACKET.md`.
 
 Current verified state: two complete S21 SpanishBCBL MEG recordings plus one
 94,842,381-byte S7 SpanishBCBL EEG BrainVision bundle and their matching MAT
@@ -105,6 +108,15 @@ bytes, and writes 76,592 report bytes in 3.839168 seconds with 150,749,184-byte
 peak RSS. Real/cache/target/model/training/network access is zero, source
 before/after hashes match, producer causality is false, and end-to-end latency
 is unmeasured. See `docs/RW2_SIGNAL_QUALITY_CLOSEOUT.md`.
+
+RW3 freezes a future `neurodecodekit.source_chunk` envelope, separate raw,
+corrected, and arrival clocks, explicit packet anomalies and reconnect state,
+five chunk schedules, 18 target-free future fixture families, 30 exact refusal
+IDs, and four sequential stages. Seven dependency-free invariant tests protect
+that registration. No fixture, payload, source chunk, CLI, optional dependency,
+board, socket, stream, or XDF file was created or opened. See
+`docs/RW3_REPLAY_LIVE_EQUIVALENCE_PREREGISTRATION.md` and
+`registries/replay_equivalence_contract.v0.json`.
 
 The current registries keep prompted typing, imagined speech, natural reading,
 P300, SSVEP, and motor imagery as separate evidence cohorts. They also keep

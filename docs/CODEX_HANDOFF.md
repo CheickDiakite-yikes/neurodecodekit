@@ -31,10 +31,14 @@
 > malformed/unsafe layouts refuse exactly. One measured FIF report selects nine
 > channels and three windows, returns 11,520 values, writes 76,592 bytes in
 > 3.839168 seconds, and records 150,749,184-byte peak RSS with zero
-> real/cache/target/model/training/network access. RW3 preregistration is the
-> next practice-track action. No real recording, consumed cache, S20
-> download/read, MNE-BIDS execution, BrainFlow/LSL implementation, live source,
-> automatic cleaning, model, or training is authorized.
+> real/cache/target/model/training/network access. RW3's replay/live-source
+> protocol is frozen at commit `c3d1f01`: five schedules, 18 future fixture
+> families, 30 exact refusal IDs, four separately gated adapter stages, and
+> seven dependency-free invariant tests. No source chunk, fixture, CLI,
+> BrainFlow/LSL/PyXDF import, socket, stream, board, or XDF operation occurred.
+> Stage A remains unapproved. No real recording, consumed cache, S20
+> download/read, live source, automatic cleaning, model, or training is
+> authorized.
 > There is no demonstrated neural advantage, unseen-person, useful EEG,
 > real-neural sequence decoder, end-to-end real-time, portable-hardware,
 > arbitrary-thought, or clinical claim. See
@@ -128,6 +132,11 @@ This repo is a starter scaffold with working pure-Python components:
   sources, strict RW1/contract binding, six lazy direct-reader adapters,
   deterministic JSON/Markdown/audit artifacts, load/validate/summary APIs,
   malformed/privacy/tamper/collision/cap coverage, and four CLI commands
+- frozen RW3 source-chunk and replay-equivalence registration with separate
+  raw/corrected/arrival clocks, explicit packet anomalies and resume state,
+  five schedules, 18 future target-free fixture families, 30 refusal IDs,
+  four sequential adapter stages, resource/access caps, and invariant tests;
+  no runtime source-chunk or adapter implementation
 - open-source collaboration surface with Apache-2.0 license, third-party/data
   boundaries, detailed README, EEG data/hardware contribution paths, security,
   governance, citation, issue forms, pull-request checks, and one-thread CI
@@ -143,20 +152,21 @@ negative within-session event comparison. None is a decoder success. Do not
 turn these results, a variance ranking, or a geometry proxy into unseen-person
 or population generalization.
 
-Current verification after the RW2 implementation and open-source-surface
-milestones on 2026-07-10: 258 unittest tests passed with 3 skipped in 21.283
-seconds and 492,044,288-byte maximum RSS; pytest reported 255 passed, 3 skipped,
-and 25 subtests passed in 23.77 seconds with 523,501,568-byte maximum RSS. All
-9 focused RW2 tests pass. A separate true zero-dependency run passes 246 tests
-with 118 explicit optional skips in 0.285 seconds and 40,845,312-byte maximum
-RSS. The preregistration baseline was 249 unittest and 246 pytest passes with
-the same three optional-environment skips/subtests, so RW2 adds nine tests
-without regression. Full Ruff lint, compileall, root/RW1/RW2 CLI help,
-TOML/YAML parsing, local Markdown links, package metadata rebuild, Gitleaks
-history scan, bounded roundtrip, and `git diff --check` pass.
+Current verification after the RW3 registration/documentation milestone on
+2026-07-10: 265 unittest tests pass with 3 skipped in 13.124 seconds
+(13.920 seconds wall, 569,720,832-byte maximum RSS); pytest reports 262 passed,
+3 skipped, and 25 subtests passed in 12.16 seconds (13.120 seconds wall,
+579,354,624-byte maximum RSS). All 7 focused RW3 invariant tests pass in 0.040
+seconds wall with 18,022,400-byte maximum RSS. A separate true zero-dependency
+run passes 253 tests with 118 explicit optional skips in 0.340 seconds wall and
+40,419,328-byte maximum RSS. The pre-RW3 baseline was 258 unittest and 255
+pytest passes with the same three optional-environment skips/subtests, so RW3
+adds seven tests without regression. Full Ruff lint, compileall, root CLI help,
+JSON/TOML parsing, 39 local Markdown links, workbook formulas/renders, and
+`git diff --check` pass; Gitleaks is rerun on the final commit before push.
 The tracked and delivered workbook hashes match at
-`f1c08a2e6f8e0e9889a525af5d3cb04977e7dca87b0fdb6d6810854cdcd32d2e`.
-The tracked workbook is 55,674 bytes and its eight-sheet visual/formula audit
+`fdb6d38217682e29033eeb623ffe46f20debd12e82ade4866a6b58d06d80daa9`.
+The tracked workbook is 56,304 bytes and its eight-sheet visual/formula audit
 passes.
 
 ## The north star
@@ -171,19 +181,19 @@ This is not primarily a model repo. It is a **research loop repo**.
 
 ## Current Next Work
 
-1. **RW3 - preregister offline replay/live-source equivalence only.** Freeze
-   source chunks, playback/synthetic adapters, dependency boundaries, clock and
-   timestamp correction, packet-loss representation, ordering, state, schedule
-   tolerances, privacy, resources, and kill/park/proceed rules before code. Do
-   not install/use BrainFlow or LSL, open a live source, or touch hardware yet.
+1. **RW3 - review the frozen registration and decide on Stage A only.** Commit
+   `c3d1f01` already freezes the source-chunk, clock, anomaly, schedule, state,
+   privacy, resource, refusal, and stop rules. Do not implement Stage A without
+   explicit authorization; BrainFlow, LSL, PyXDF, sockets, live sources, and
+   hardware remain later independent gates.
 2. **Loop 24 - preregister local precision/runtime independently.** Freeze
    candidates, reference arithmetic, tolerances, fresh selection data, and
    resource rules before code. Seed 2353 cannot select anything.
 3. **Review draft PR #2 before publishing the latest evidence on `main`.** PR #1
    has merged the open-source community surface through `e5d89ed`; PR #2 carries
    the RW2 closeout, README results dashboard, canonical Apache license text,
-   and Linux float32 portability record. Its four CI checks pass. Do not merge
-   until license, issue-form, security, history, visibility, and proof-boundary
+   Linux float32 portability record, and RW3 registration. Do not merge until
+   CI, license, issue-form, security, history, visibility, and proof-boundary
    review is complete.
 
 RW4 is not next: S20 acquisition remains blocked until explicit approval names
@@ -200,8 +210,11 @@ are in `docs/LOOP_23_5_PREREGISTRATION.md` and
 `docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md`; RW2 evidence is in
 `docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md`,
 `docs/RW2_PRIMARY_SOURCE_RESEARCH.md`, and
-`docs/RW2_SIGNAL_QUALITY_CLOSEOUT.md`. Open-source release gates are in
-`docs/OPEN_SOURCE_READINESS.md`.
+`docs/RW2_SIGNAL_QUALITY_CLOSEOUT.md`. RW3 research and registration are in
+`docs/RW3_PRIMARY_SOURCE_RESEARCH.md`,
+`docs/RW3_REPLAY_LIVE_EQUIVALENCE_PREREGISTRATION.md`, and
+`registries/replay_equivalence_contract.v0.json`. Open-source release gates are
+in `docs/OPEN_SOURCE_READINESS.md`.
 
 ## Historical original PR plan
 

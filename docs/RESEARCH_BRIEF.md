@@ -327,6 +327,40 @@ not label-free learning, endpoint detection, or evidence that the same scalar
 will transfer to MEG, EEG, or natural text. See
 `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`.
 
+## RW3 replay/live-source research finding
+
+Reliable local acquisition requires preserving three different notions of
+time instead of calling all of them a timestamp: the source's own sample time,
+an optional corrected clock view, and local monotonic arrival time. BrainFlow
+documents playback that can regenerate timestamps unless `old_timestamps` is
+selected, drain-versus-peek buffer APIs, board-specific channel metadata, and
+host-receipt Unix timestamps for some boards. LSL is unsynchronized by default;
+its inlet API can provide per-sample timestamps and a separate clock-correction
+estimate, while automatic postprocessing destroys the original timestamp view.
+PyXDF defaults to clock synchronization and dejittering, so a raw audit must
+explicitly disable both before comparing the corrected view. Sources:
+https://brainflow.readthedocs.io/en/stable/SupportedBoards.html,
+https://brainflow.readthedocs.io/en/stable/DataFormatDesc.html,
+https://labstreaminglayer.readthedocs.io/info/time_synchronization.html,
+https://labstreaminglayer.readthedocs.io/projects/liblsl/ref/inlet.html, and
+https://github.com/xdf-modules/pyxdf/blob/v1.17.5/src/pyxdf/pyxdf.py.
+
+RW3 therefore freezes one target-free source-chunk contract before code. It
+separates raw, corrected, and arrival clocks; represents gaps, duplicates,
+reordering, packet-counter wraps, reconnects, and clock resets explicitly; and
+requires a semantic stream hash to remain exact across five chunk schedules.
+Eighteen future fixture families and 30 refusal IDs make silent interpolation,
+sorting, deduplication, ambiguous stream discovery, regenerated playback time,
+and cap violations fail closed. Four stages isolate pure-Python mechanics,
+BrainFlow dummy/playback boards, local LSL loopback, and PyXDF dual-view audits.
+Every stage requires separate authorization. The frozen protocol is in
+`docs/RW3_REPLAY_LIVE_EQUIVALENCE_PREREGISTRATION.md` and
+`registries/replay_equivalence_contract.v0.json`.
+
+This is a stronger foundation for a future local stream, but it is not a live
+result. It establishes no signal quality, task information, neural advantage,
+device reliability, end-to-end latency, decoded text, or at-home usability.
+
 ## Loop 19 EEG ecosystem decision
 
 MOABB remains useful for standardized EEG benchmark paradigms, but its stock

@@ -1587,3 +1587,53 @@ refresh showed PR #1 already merged. GitHub's license endpoint still returned
 `spdx_id: null` because the Apache appendix in `LICENSE` contained a project
 copyright instead of the canonical placeholder. PR #2 restores the exact
 Apache 2.0 text; the project copyright remains in `NOTICE`.
+
+## 2026-07-10 - RW3 replay/live-source equivalence preregistration
+
+Researched BrainFlow 5.22.2, pylsl 1.18.2/liblsl 1.17.7, PyXDF 1.17.5, and
+Python monotonic-clock behavior from maintained primary sources. The review
+found that BrainFlow playback can regenerate timestamps unless configured to
+preserve old values, BrainFlow exposes both draining and nondraining reads, LSL
+is unsynchronized by default and separates source timestamps from clock
+correction, LSL automatic postprocessing destroys the original timestamp view,
+and PyXDF defaults to synchronized/dejittered timestamps. Device and transport
+latency remain distinct from clock synchronization.
+
+Commit `c3d1f01` freezes `neurodecodekit.replay_equivalence_contract` v0.1.0
+and the future `neurodecodekit.source_chunk` v0.1.0 before implementation. The
+contract separates source, corrected, and local monotonic arrival timestamps;
+represents gaps, duplicates, reordering, packet-counter wraps, reconnects, and
+clock resets explicitly; and forbids interpolation, silent sorting, and silent
+deduplication. It registers five chunk schedules, 18 future target-free fixture
+families, 30 exact refusal IDs, exact semantic and boundary-sensitive hashes,
+and four sequential adapter stages.
+
+Future resource caps are one thread/worker, 512 channels, 4,096 Hz, 4,194,304
+channel-sample values, 32 MiB materialized payload, 16 MiB source/fixture bytes,
+4 MiB output per run, 32 MiB total generated artifacts, 30 seconds, and 1 GiB
+peak RSS. Real/consumed/cache/target/model/training/decoder/network access must
+remain zero in Stage A.
+
+Seven focused dependency-free contract tests passed. The registration itself
+installed or imported no BrainFlow, pylsl, liblsl, or PyXDF; generated no
+fixture or waveform; opened no socket, board, stream, XDF, real recording,
+cache, target, or consumed evidence; and ran no model or training. Stage A is
+not automatically authorized. No signal-quality, neural-advantage, decoding,
+device-reliability, end-to-end-latency, portable-hardware, or clinical result
+was established.
+
+Evidence: `docs/RW3_PRIMARY_SOURCE_RESEARCH.md`,
+`docs/RW3_REPLAY_LIVE_EQUIVALENCE_PREREGISTRATION.md`,
+`registries/replay_equivalence_contract.v0.json`, and commit `c3d1f01`.
+
+The synchronized public-documentation gate then passes 265 unittest tests with
+3 skips and 262 pytest tests with 3 skips plus 25 subtests, exactly seven more
+than the pre-RW3 baseline. The true zero-dependency run passes 253 tests with
+118 expected optional skips. Focused contract runtime/peak RSS is 0.040 seconds
+wall/18,022,400 bytes; full-run maxima are 13.920 seconds wall and 579,354,624
+bytes. Ruff, compileall, root CLI help, JSON/TOML parsing, 39 local Markdown
+links, workbook formula checks, eight-sheet render review, and diff checks pass.
+
+The updated tracker is 56,304 bytes with SHA-256
+`fdb6d38217682e29033eeb623ffe46f20debd12e82ade4866a6b58d06d80daa9`.
+It records RW3 as review-stage protocol evidence, not a completed runtime gate.

@@ -2,8 +2,8 @@
 
 Date: 2026-07-10
 
-Status: **Open-source collaboration surface merged to public `main`; latest RW2
-evidence closeout remains in green draft PR #2**
+Status: **Open-source collaboration surface merged to public `main`; latest
+RW2 evidence and RW3 preregistration remain in draft PR #2**
 
 ## Purpose
 
@@ -28,14 +28,15 @@ explicit review trail even after the repository is visible publicly.
 | Homepage | Empty |
 | Topics | 16 research, modality, reproducibility, and local-first topics set |
 | Detected license | Default-branch API currently null; canonical Apache-2.0 text is corrected in PR #2 |
-| Draft PR CI | 4/4 base and optional-neuro push/PR checks pass |
+| Draft PR CI | 4/4 checks passed before the RW3 registration push; recheck the final documentation commit before merge |
 
 The repository was private at the start of this milestone and later reported
 public; no visibility-changing command was issued in this work. PR #1 has now
 merged the safety/community files, description, and contribution surface to
 `main`. Draft PR #2 contains the latest RW2 closeout, README results dashboard,
-current handoff, canonical license-text correction, and CI portability record.
-Do not describe those latest results as default-branch content until PR #2 is
+current handoff, canonical license-text correction, CI portability record, and
+RW3's registration-only replay/live-source contract. Do not describe those
+latest results or the RW3 protocol as default-branch content until PR #2 is
 reviewed and merged.
 
 ## Added Public Surface

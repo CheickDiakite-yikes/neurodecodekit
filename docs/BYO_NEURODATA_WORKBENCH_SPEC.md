@@ -234,4 +234,10 @@ exact generated-fixture implementation is now closed at commit `2796dee`; see
 and two exact refusals across six format families with bounded descriptive
 reports and no real/target/model access. It does not authorize a real signal
 read, automatic cleaning, task compatibility, benchmark, or live-source claim.
-RW3 requires a separate offline-replay/live-source-equivalence preregistration.
+RW3's offline-replay/live-source-equivalence preregistration is frozen at
+commit `c3d1f01`; see
+`docs/RW3_REPLAY_LIVE_EQUIVALENCE_PREREGISTRATION.md` and
+`registries/replay_equivalence_contract.v0.json`. It authorizes no source-chunk
+implementation, optional adapter, socket, stream, XDF read, or hardware. A
+future Stage A requires separate explicit review and can prove only generated
+source-chunk mechanics.

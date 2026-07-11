@@ -1057,3 +1057,42 @@ requires another explicit review rather than automatic widening.
 
 Evidence: failed Actions runs `29133225088`, `29133248840`, and `29133423319`;
 diagnostic commit `5c212c8`; `docs/LOOP_21_CAUSAL_CHUNK_REPLAY.md`.
+
+## 0045 - Freeze RW3 source-chunk and replay-equivalence protocol before code
+
+Decision: preregister RW3 at commit `c3d1f01` as primary-source research, one
+versioned machine contract, and dependency-free invariant tests only. Do not
+authorize Stage A implementation from the registration. Require separate
+review for each later stage: pure-Python synthetic replay, BrainFlow
+synthetic/playback boards, local LSL loopback, and PyXDF raw/corrected views.
+
+Why: a plausible waveform plot can conceal regenerated timestamps, wrong clock
+correction, duplicate drains, dropped or reordered samples, ambiguous stream
+selection, silent interpolation, or transport-specific state. BrainFlow 5.22.2,
+pylsl 1.18.2/liblsl 1.17.7, PyXDF 1.17.5, and Python monotonic-clock primary
+sources expose different semantics that must be made explicit before one
+runtime abstraction can be trusted.
+
+Frozen contract: `neurodecodekit.replay_equivalence_contract` v0.1.0 defines a
+future `neurodecodekit.source_chunk` v0.1.0, separate source/corrected/arrival
+timestamps, gap/duplicate/reorder/wrap/reconnect/reset records, exact semantic
+and boundary-sensitive hashes, five schedules, 18 target-free fixture families,
+30 refusal IDs, and strict caps. The primary BrainFlow playback rule preserves
+old timestamps; primary LSL disables automatic postprocessing; PyXDF audits raw
+and corrected views separately. No interpolation, silent sorting, or
+deduplication is allowed.
+
+Measured registration boundary: seven focused invariant tests pass. Optional
+dependencies installed/imported, fixtures generated, source chunks emitted,
+socket/board/stream/XDF operations, real/consumed/cache/target/model/training/
+decoder/network accesses, and output artifacts are all zero. This is protocol
+evidence, not compatibility level 6 and not a runtime result.
+
+Next boundary: review may authorize Stage A pure-Python synthetic replay only.
+Registration cannot authorize BrainFlow, LSL, PyXDF, hardware, S20, live data,
+or any signal-quality, task, neural-advantage, decoding, latency, portable, or
+clinical claim.
+
+Evidence: `docs/RW3_PRIMARY_SOURCE_RESEARCH.md`,
+`docs/RW3_REPLAY_LIVE_EQUIVALENCE_PREREGISTRATION.md`,
+`registries/replay_equivalence_contract.v0.json`, and commit `c3d1f01`.

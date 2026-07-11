@@ -40,7 +40,8 @@ and explain exactly what the result does not prove.
 | Blank calibration mechanism | validation and one-time test both 16/16 exact at CER 0; 9 test corrections; 0 regressions | synthetic mechanism only | Shows one preregistered scalar can solve a specific tail-error mechanism without post-test trimming |
 | Metadata-only local intake | 6 format families; 532 source bytes; 11,545 report bytes; 0 binary/raw/target/model/network reads | fixture-backed | Lets EEG owners start with safe structure and provenance instead of uploading a recording |
 | Bounded signal-quality interface | 40 fixtures; 38 readable and 2 exact refusals across 6 format families; 3.839 sec; 76,592 output bytes | fixture-backed | Validates readers, metrics, privacy, caps, and no-mutation identity before any real quality claim |
-| Test and release surface | 258 unittests with 3 skips; 255 pytest passes, 3 skips, and 25 subtests; zero-dependency suite also green | local shell verified | Makes the research contracts executable for contributors on ordinary hardware |
+| Replay/live-source protocol | 5 chunk schedules; 18 future fixture families; 30 exact refusal IDs; 4 separately gated adapter stages; 7 invariant tests | preregistered, no runtime result | Freezes payload, clock, gap, ordering, state, privacy, and resource rules before any socket, board, or hardware access |
+| Test and release surface | 265 unittests with 3 skips; 262 pytest passes, 3 skips, and 25 subtests; 253-test zero-dependency suite also green | local shell verified | Makes the research contracts executable for contributors on ordinary hardware |
 
 ### Real-Data Scientific Scorecard
 
@@ -58,10 +59,11 @@ engineering wins, not hidden behind synthetic accuracy.
 
 | Gate | Runtime | Peak RSS | Persistent output |
 |---|---:|---:|---:|
-| Zero-dependency full unittest run | 0.285 sec | 40,845,312 bytes | temporary test output only |
+| Zero-dependency full unittest run | 0.340 sec | 40,419,328 bytes | temporary test output only |
 | RW1 metadata intake roundtrip | 0.001659 sec | 21,643,264 bytes | 11,545 bytes |
 | RW2 bounded FIF quality roundtrip | 3.839168 sec | 150,749,184 bytes | 76,592 bytes |
-| Full optional-neuro/ML unittest run | 21.283 sec | 492,044,288 bytes | temporary test output only |
+| RW3 contract invariant suite | 0.040 sec | 18,022,400 bytes | no generated payload |
+| Complete optional-neuro/ML test runners | 13.920 sec max | 579,354,624 bytes max | temporary test output only |
 
 Proof labels are deliberately narrow:
 
@@ -106,6 +108,11 @@ Read this before interpreting any number in the repository.
   two frozen refusal fixtures across those six format families using bounded
   optional MNE readers, strict source binding, descriptive metrics, privacy
   redaction, and before/after no-mutation checks.
+- **RW3 protocol registration:** a versioned, machine-checked contract freezes
+  source identity, raw/corrected/arrival timestamps, gaps, duplicates,
+  reordering, reconnects, state, five schedules, 18 future fixture families,
+  30 refusal IDs, and four separately gated adapter stages. No source-chunk or
+  adapter runtime exists yet.
 
 ### What The Results Actually Say
 
@@ -316,6 +323,13 @@ The preferred first result is offline replay equivalence on deterministic
 samples. A connected device or live waveform plot is not a language decoder.
 Four-channel consumer EEG is not assumed equivalent to 64-channel research EEG
 or 306-channel MEG.
+
+Replay and hardware contributions must begin from the frozen
+[RW3 preregistration](docs/RW3_REPLAY_LIVE_EQUIVALENCE_PREREGISTRATION.md) and
+[machine contract](registries/replay_equivalence_contract.v0.json). The current
+commit authorizes no Stage A implementation, optional adapter, socket, stream,
+device discovery, or hardware access; each future stage requires a separate
+review.
 
 The current metadata device registry is
 [registries/devices.v0.json](registries/devices.v0.json). Registry presence is
@@ -610,7 +624,9 @@ The parallel Real-World Practice track has reached:
 - RW1: dependency-free metadata-only local intake, fixture-backed;
 - RW2: bounded synthetic signal-read and descriptive quality-report interface,
   fixture-backed;
-- RW3+: not authorized by RW2 alone;
+- RW3: replay/live-source equivalence preregistered at `c3d1f01`; Stage A and
+  all runtime adapters remain unauthorized;
+- RW4+: not authorized by RW3 registration;
 - proposed S20 acquisition: dry-run only until exact approval.
 
 The roadmap is not a promise of positive decoding performance. Gates can close,
@@ -636,6 +652,9 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/RW2_PRIMARY_SOURCE_RESEARCH.md](docs/RW2_PRIMARY_SOURCE_RESEARCH.md) | reader/quality primary-source review |
 | [docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md](docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md) | frozen RW2 protocol |
 | [docs/RW2_SIGNAL_QUALITY_CLOSEOUT.md](docs/RW2_SIGNAL_QUALITY_CLOSEOUT.md) | measured six-format RW2 implementation result |
+| [docs/RW3_PRIMARY_SOURCE_RESEARCH.md](docs/RW3_PRIMARY_SOURCE_RESEARCH.md) | BrainFlow, LSL, PyXDF, and clock primary-source review |
+| [docs/RW3_REPLAY_LIVE_EQUIVALENCE_PREREGISTRATION.md](docs/RW3_REPLAY_LIVE_EQUIVALENCE_PREREGISTRATION.md) | frozen replay/live-source protocol; no implementation |
+| [registries/replay_equivalence_contract.v0.json](registries/replay_equivalence_contract.v0.json) | machine-readable RW3 schedules, fixtures, refusals, caps, and authorization flags |
 | [docs/BYO_NEURODATA_WORKBENCH_SPEC.md](docs/BYO_NEURODATA_WORKBENCH_SPEC.md) | staged local neurodata workbench contract |
 | [docs/OPEN_SOURCE_READINESS.md](docs/OPEN_SOURCE_READINESS.md) | licensing, history, privacy, GitHub, and release gates |
 | [registries/datasets.v0.json](registries/datasets.v0.json) | task-separated dataset candidates |

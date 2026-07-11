@@ -171,10 +171,16 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   gates pass; one measured FIF report writes 76,592 bytes in 3.839168 seconds
   with zero real/cache/target/model/training/network access. See
   `docs/RW2_SIGNAL_QUALITY_CLOSEOUT.md`.
-- Next action in the practice track: preregister RW3 offline replay/live-source
-  equivalence without implementing BrainFlow, LSL, or hardware access. Loop 24
-  remains independently available for preregistration. Seeds 2203, 2303, and
-  2353 and all observed MEG/EEG holdouts remain frozen.
+- RW3 registration: Done at commit `c3d1f01` as primary-source research plus a
+  machine-readable protocol only. It freezes five schedules, 18 future
+  target-free fixture families, 30 exact refusal IDs, and four separately
+  authorized adapter stages. Seven invariant tests pass; no source chunk,
+  fixture, CLI, BrainFlow/LSL/PyXDF import, socket, stream, board, XDF read,
+  real/consumed data access, model run, or training run occurred.
+- Next practice-track decision: review and explicitly authorize RW3 Stage A
+  pure-Python synthetic replay, or hold. Registration alone authorizes no code.
+  Loop 24 local precision/runtime remains independently available for
+  preregistration. Seeds 2203, 2303, and 2353 stay consumed.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |
@@ -204,9 +210,9 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
 
 Use `RW0` through `RW9` from `docs/POST_20_ROADMAP.md`; do not insert them into
 or renumber the original 20 rows. RW0, RW1, and RW2 are closed at their exact
-proof boundaries. RW3 preregistration is next; no live/hardware implementation
-or real signal read is authorized. The S20 fresh EEG benchmark is RW4 and
-remains blocked on explicit approval.
+proof boundaries. RW3 is preregistered at `c3d1f01`, but Stage A and all
+BrainFlow/LSL/PyXDF/live/hardware work remain unauthorized. The S20 fresh EEG
+benchmark is RW4 and remains blocked on explicit approval.
 
 ## Anti-patterns
 - Do not download a large dataset slice without an explicit dry-run report and `--execute` confirmation.

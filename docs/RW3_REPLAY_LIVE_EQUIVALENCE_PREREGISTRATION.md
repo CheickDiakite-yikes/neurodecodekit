@@ -8,7 +8,7 @@ Contract: `registries/replay_equivalence_contract.v0.json`
 
 Research: `docs/RW3_PRIMARY_SOURCE_RESEARCH.md`
 
-Registration commit: **pending this preregistration milestone**
+Registration commit: `c3d1f01`
 
 Proof posture: primary-source-informed protocol; no source adapter, replay, or
 live result exists yet

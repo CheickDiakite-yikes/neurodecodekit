@@ -31,6 +31,9 @@ Do not reset, revert, delete, or overwrite work already present.
 - RW1 closes metadata-only local intake. RW2 closes bounded, redacted signal
   reading and descriptive reporting on generated fixtures only: 38 readable
   sources pass and two malformed or unsafe layouts refuse exactly.
+- RW3's replay/live-source-equivalence protocol is frozen at commit `c3d1f01`.
+  Five schedules, 18 future fixture families, 30 exact refusal IDs, and four
+  sequential adapter stages are registered; no source chunk or adapter exists.
 - No real recording quality, neural advantage, unseen-person generalization,
   useful EEG decoder, real-time decoding, portable-hardware, arbitrary-thought,
   or clinical result has been demonstrated.
@@ -39,38 +42,20 @@ Do not reset, revert, delete, or overwrite work already present.
   canonical license-text repair. Do not merge or alter visibility without
   explicit user approval.
 
-## Primary task: preregister RW3 only
+## Primary task: review the frozen RW3 registration; do not implement it
 
-Create the smallest reviewable preregistration for **RW3 offline replay and
-live-source equivalence**. This step freezes the future interface and test
-rules; it does not implement a source adapter or read a live stream.
+Inspect and validate:
 
-The preregistration must freeze:
+- `docs/RW3_PRIMARY_SOURCE_RESEARCH.md`;
+- `docs/RW3_REPLAY_LIVE_EQUIVALENCE_PREREGISTRATION.md`;
+- `registries/replay_equivalence_contract.v0.json`;
+- `tests/test_replay_equivalence_contract.py`.
 
-1. A strict, versioned source-chunk schema carrying source/modality/device,
-   channel order/types/units/geometry availability, source sampling rate,
-   sample indices, source timestamps, corrected monotonic timestamps, packet
-   sequence, true length, padding mask, and payload dtype/shape.
-2. Exact replay, synthetic-source, future BrainFlow playback, and future LSL
-   boundaries. BrainFlow and LSL remain optional and uninstalled in this step.
-3. Clock domains, timestamp correction, jitter, drift, reordering, duplicate
-   packets, gaps, dropped-packet representation, reconnects, and end-of-stream
-   behavior. Unknown behavior must remain unavailable rather than inferred.
-4. Chunk-schedule invariance, state serialization, causal status, required
-   context, flush behavior, and exact tolerances for payload, sample index,
-   timestamps, packet accounting, and replay summaries.
-5. Strict source/config/registry/payload hashes, collision refusal, split and
-   recording binding, privacy redaction, local-only operation, and explicit
-   warnings and claim boundaries.
-6. Resource caps for source bytes, emitted bytes, item/channel/sample counts,
-   runtime, peak RSS, one CPU thread, artifact totals, and zero unauthorized
-   network, target, model, training, consumed-cache, or real-data access.
-7. Deterministic synthetic fixture families for clean playback, uneven chunk
-   schedules, timestamp jitter/drift, packet loss, duplication, reordering,
-   reconnect, malformed metadata, cap violation, and tampering.
-8. Exact proceed, park, and kill rules. Passing fixtures can prove interface
-   and accounting equivalence only; it cannot authorize hardware or support a
-   decoding claim.
+Confirm that the documents and machine contract agree on source identity,
+clock views, packet anomalies, state, five schedules, 18 fixture families, 30
+refusal IDs, four staged adapters, resource caps, access counters, and claim
+boundaries. The only permissible next decision is whether the user separately
+authorizes Stage A pure-Python synthetic replay. Registration alone does not.
 
 ## Hard boundaries
 
@@ -79,8 +64,8 @@ The preregistration must freeze:
 2. Do not install or import BrainFlow, LSL, MNE-BIDS, or hardware SDKs. Do not
    connect to hardware, enumerate devices, open sockets, or execute a live
    source.
-3. Do not implement RW3 adapters, source chunks, fixtures, or CLI commands in
-   this preregistration milestone. Freeze the contract first.
+3. Do not implement RW3 adapters, source chunks, fixtures, or CLI commands
+   unless the user explicitly authorizes Stage A after reviewing `c3d1f01`.
 4. Do not train or run a model, create target text or labels, calculate
    CER/WER, or claim decoding performance.
 5. Keep heavy dependencies optional. Use one CPU thread and do not create
@@ -88,22 +73,16 @@ The preregistration must freeze:
 6. Keep RW3 independent from Loop 24 precision/runtime preregistration and the
    blocked RW4 S20 acquisition packet.
 
-## Required deliverables
+## Required deliverables for this review milestone
 
-1. One detailed RW3 preregistration document with assumptions, schemas,
-   fixture matrix, metrics, caps, tolerances, refusal IDs, access counters,
-   acceptance gates, and exact claim boundary.
-2. A small machine-readable versioned contract or registry only if the repo's
-   existing preregistration pattern requires it. It must contain no waveform,
-   participant, target, secret, or device-credential data.
-3. Tracker, decision log, build notes, handoff, start-here, roadmap, workbook,
-   and this continuation prompt updated consistently.
-4. Documentation and contract validation, local-link checks, Ruff,
-   `git diff --check`, Gitleaks, and the complete unit suites. Compare results
-   with the current 258-unittest / 255-pytest baseline.
-5. A coherent commit pushed to the current `codex/` branch and an updated
-   draft PR. Preserve unrelated files and generated debris outside git.
+1. Keep README, tracker, decision log, build notes, handoff, start-here,
+   roadmap, workbook, and continuation prompt consistent with `c3d1f01`.
+2. Run documentation/contract validation, local-link checks, Ruff,
+   `git diff --check`, Gitleaks, and the complete unit suites. Compare with the
+   pre-registration 258-unittest / 255-pytest baseline.
+3. Commit and push the coherent documentation milestone and refresh draft PR
+   #2. Preserve unrelated files and generated debris outside Git.
 
-Do not call RW3 implemented or validated. A successful milestone proves only
-that a future replay/live-source equivalence experiment has been frozen before
-code or hardware access.
+Do not call RW3 implemented or runtime-validated. This milestone proves only
+that a future replay/live-source-equivalence experiment was frozen before code
+or hardware access.

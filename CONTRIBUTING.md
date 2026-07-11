@@ -170,6 +170,14 @@ metadata feature that matters. Synthetic fixtures should:
 RW2 currently provides target-free fixtures for BrainVision, EDF/EDF+, BDF,
 EEGLAB external-FDT, FIF, and BIDS direct-reader resolution.
 
+Replay, streaming, and hardware contributions must also follow
+`docs/RW3_REPLAY_LIVE_EQUIVALENCE_PREREGISTRATION.md` and
+`registries/replay_equivalence_contract.v0.json`. RW3 is registered but not
+implemented: do not attach or open a real recording, start an outlet/inlet,
+open a socket, enumerate a board, or add BrainFlow/LSL/PyXDF code without a
+separately approved stage. Start with target-free deterministic mechanics and
+state exactly which registered schedule, anomaly, refusal, and cap you cover.
+
 ### Step 4: Request A Bounded Real-Read Protocol
 
 Real signal access requires a separate, reviewable protocol. It must freeze:

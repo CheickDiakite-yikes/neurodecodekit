@@ -2,9 +2,17 @@
 
 Date: 2026-07-10
 
-Status: Research gate passed; acquisition remains unapproved
+Status: RW0 research passed; RW1/RW2 closed; RW3 protocol frozen; acquisition
+remains unapproved
 
 Evidence posture: primary-source metadata review plus local filesystem metadata
+
+Follow-up on 2026-07-10: RW1 closed the dependency-free metadata-only intake
+gate, RW2 closed synthetic compatibility level 2, and RW3's offline
+replay/live-source-equivalence protocol was frozen at commit `c3d1f01`. RW3 is
+registration-only evidence: no source chunk, replay fixture, optional adapter,
+socket, stream, XDF read, board, or hardware operation exists. A future Stage A
+pure-Python implementation requires separate explicit authorization.
 
 ## Decision
 
