@@ -27,7 +27,7 @@ explicit review trail even after the repository is visible publicly.
 | Description | Proof-accurate local-first EEG/MEG research description set |
 | Homepage | Empty |
 | Topics | 16 research, modality, reproducibility, and local-first topics set |
-| Detected license | Default-branch API currently null; canonical Apache-2.0 text is corrected in PR #2 |
+| Detected license | GitHub API reports Apache-2.0 on `main` at `18a705e`; PR #2 still restores the canonical appendix text and keeps project copyright in `NOTICE` |
 | Draft PR CI | 4/4 base/optional-neuro push/PR checks pass on RW3 documentation commit `ee5ce63`; recheck after any later commit |
 
 The repository was private at the start of this milestone and later reported

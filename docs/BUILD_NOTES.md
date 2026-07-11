@@ -1639,3 +1639,7 @@ The updated tracker is 56,304 bytes with SHA-256
 It records RW3 as review-stage protocol evidence, not a completed runtime gate.
 Draft PR #2 then passed all four GitHub Actions checks on commit `ee5ce63`:
 base and optional-neuro jobs for both push and pull-request events.
+The final GitHub metadata audit now reports `Apache-2.0` for `LICENSE` on
+default-branch commit `18a705e`; the earlier null result was a transient
+detection state. PR #2 still restores the exact canonical appendix wording and
+keeps project copyright in `NOTICE`.
