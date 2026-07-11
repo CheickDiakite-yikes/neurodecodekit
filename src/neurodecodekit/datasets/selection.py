@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Iterable
@@ -14,6 +15,31 @@ BYTES_PER_GB = 1024**3
 DEFAULT_MAX_FILES = 8
 DEFAULT_MAX_TOTAL_GB = 5.0
 DEFAULT_MAX_TOTAL_BYTES = int(DEFAULT_MAX_TOTAL_GB * BYTES_PER_GB)
+SPANISHBCBL_KNOWN_UNUSABLE_RAW_PATHS = frozenset(
+    {
+        "MEG/FIF/21_3660/231204/block2.fif",
+        "MEG/FIF/21_3660/231204/block2_1.fif",
+    }
+)
+SPANISHBCBL_KNOWN_UNUSABLE_EEG_STEMS = frozenset(
+    {
+        "003_DECOMEG_S1_9337_task1",
+        "003_DECOMEG_S1_9337_task2",
+        "004_DECOMEG_S2_NOID_task1",
+        "004_DECOMEG_S2_noid_task2",
+        "005_DECOMEG_S2_NOID_task1",
+        "008_DECOMEG_S1_9846_task1",
+        "008_DECOMEG_S1_9846_task2",
+        "008_DECOMEG_S2_9846_task1",
+        "008_DECOMEG_S2_9846_task2",
+        "009_DECOMEG_S1_9949",
+        "009_DECOMEG_S1_9949_task1",
+        "012_DECOMEG_S1_11481_task1",
+        "013_DECOMEG_S1_11478_task1",
+        "022_DECOMEG_S2_9948_task1",
+        "022_DECOMEG_S2_9948_task2",
+    }
+)
 
 
 @dataclass(frozen=True)
@@ -22,6 +48,7 @@ class TinySelection:
 
     repo_id: str
     records: list[FileRecord]
+    revision: str | None = None
     purpose: str = "b2q-mini-v0"
     dry_run_required_by_default: bool = True
     max_files: int | None = DEFAULT_MAX_FILES
@@ -56,6 +83,7 @@ class TinySelection:
     def to_dict(self) -> dict[str, object]:
         return {
             "repo_id": self.repo_id,
+            "revision": self.revision,
             "purpose": self.purpose,
             "dry_run_required_by_default": self.dry_run_required_by_default,
             "estimated_bytes": self.estimated_bytes,
@@ -84,8 +112,10 @@ class SelectionError(ValueError):
 @dataclass(frozen=True)
 class _RawCandidate:
     raw: FileRecord
+    companion_files: tuple[FileRecord, ...]
     logs: tuple[FileRecord, ...]
     pairing_status: str
+    file_structure_rank: int
     estimated_bytes: int | None
     missing_size_count: int
 
@@ -99,6 +129,8 @@ def select_tiny_records(
     *,
     modality: str = "MEG",
     subject: str | None = None,
+    session: str | None = None,
+    revision: str | None = None,
     blocks: int = 1,
     include_logs: bool = True,
     max_files: int | None = DEFAULT_MAX_FILES,
@@ -119,6 +151,7 @@ def select_tiny_records(
 
     modality = modality.upper()
     subject = subject.upper() if subject else None
+    session = str(session) if session is not None else None
 
     candidates = [
         r
@@ -126,20 +159,39 @@ def select_tiny_records(
         if (r.modality or "").upper() == modality
         and r.kind == "raw"
         and (subject is None or r.subject == subject)
+        and (session is None or r.session == session)
     ]
     if modality == "MEG":
-        candidates = [r for r in candidates if r.extension == ".fif"]
+        candidates = [
+            r
+            for r in candidates
+            if r.extension == ".fif" and _is_selectable_meg_fif(r)
+        ]
     elif modality == "EEG":
-        candidates = [r for r in candidates if r.extension in {".vhdr", ".eeg", ".vmrk"}]
+        candidates = [r for r in candidates if _is_selectable_eeg_vhdr(r)]
 
     if not candidates:
         subject_msg = f" for subject {subject}" if subject else ""
-        raise SelectionError(f"No raw {modality} candidates found{subject_msg}.")
+        session_msg = f" session {session}" if session else ""
+        raise SelectionError(
+            f"No raw {modality} candidates found{subject_msg}{session_msg}."
+        )
 
     raw_candidates = sorted(
         [_make_raw_candidate(raw, records, include_logs=include_logs) for raw in candidates],
         key=_candidate_sort_key,
     )
+    if modality == "EEG":
+        raw_candidates = [
+            candidate
+            for candidate in raw_candidates
+            if candidate.file_structure_rank == 0
+            and (not include_logs or candidate.pairing_status == "exact")
+        ]
+        if not raw_candidates:
+            raise SelectionError(
+                "No complete EEG BrainVision triplet with an exact matching log was found."
+            )
 
     # Prefer subjects with explicit IDs. If no subject was supplied, choose the
     # subject attached to the best safe candidate rather than blindly taking the
@@ -170,11 +222,16 @@ def select_tiny_records(
             if len(selected_candidates) >= blocks:
                 break
     else:
-        # EEG files are often triplets; for now keep the first files up to a
-        # small cap. Codex should improve this once exact layout is observed.
-        selected_candidates = subject_candidates[: max(blocks, 1) * 3]
+        selected_candidates = subject_candidates[:blocks]
 
-    selected = [candidate.raw for candidate in selected_candidates]
+    selected: list[FileRecord] = []
+    seen_selected_paths: set[str] = set()
+    for candidate in selected_candidates:
+        for record in (candidate.raw, *candidate.companion_files):
+            if record.path in seen_selected_paths:
+                continue
+            selected.append(record)
+            seen_selected_paths.add(record.path)
     if include_logs:
         selected_logs: list[FileRecord] = []
         seen_log_paths: set[str] = set()
@@ -196,6 +253,7 @@ def select_tiny_records(
     return TinySelection(
         repo_id=repo_id,
         records=selected,
+        revision=revision,
         max_files=max_files,
         max_total_bytes=max_total_bytes,
         safety_warnings=safety_warnings,
@@ -224,6 +282,7 @@ def read_selection(path: str | Path) -> TinySelection:
     return TinySelection(
         repo_id=payload["repo_id"],
         records=records,
+        revision=payload.get("revision"),
         purpose=payload.get("purpose", "b2q-mini-v0"),
         dry_run_required_by_default=payload.get("dry_run_required_by_default", True),
         max_files=max_files,
@@ -237,6 +296,8 @@ def select_tiny_from_manifest(
     *,
     modality: str = "MEG",
     subject: str | None = None,
+    session: str | None = None,
+    revision: str | None = None,
     blocks: int = 1,
     include_logs: bool = True,
     max_files: int | None = DEFAULT_MAX_FILES,
@@ -247,6 +308,8 @@ def select_tiny_from_manifest(
         records,
         modality=modality,
         subject=subject,
+        session=session,
+        revision=revision,
         blocks=blocks,
         include_logs=include_logs,
         max_files=max_files,
@@ -329,6 +392,12 @@ def _make_raw_candidate(
     *,
     include_logs: bool,
 ) -> _RawCandidate:
+    records = list(records)
+    companion_files = (
+        _find_fif_split_continuations(raw, records)
+        if raw.modality == "MEG"
+        else _find_brainvision_companions(raw, records)
+    )
     logs = [record for record in records if record.kind == "log"]
     pair = pair_raw_record_to_logs(raw, logs)
     log_by_path = {record.path: record for record in logs}
@@ -339,23 +408,74 @@ def _make_raw_candidate(
     )
     candidate_records: tuple[FileRecord, ...]
     if include_logs:
-        candidate_records = (raw, *selected_logs)
+        candidate_records = (raw, *companion_files, *selected_logs)
     else:
-        candidate_records = (raw,)
+        candidate_records = (raw, *companion_files)
     missing_size_count = sum(1 for record in candidate_records if record.size_bytes is None)
     estimated_bytes = None
     if missing_size_count == 0:
         estimated_bytes = sum(int(record.size_bytes or 0) for record in candidate_records)
     return _RawCandidate(
         raw=raw,
+        companion_files=companion_files,
         logs=selected_logs if include_logs else (),
         pairing_status=pair.status,
+        file_structure_rank=_raw_file_structure_rank(raw, companion_files, records),
         estimated_bytes=estimated_bytes,
         missing_size_count=missing_size_count,
     )
 
 
-def _candidate_sort_key(candidate: _RawCandidate) -> tuple[int, int, int, str, str, str]:
+def _find_fif_split_continuations(
+    raw: FileRecord,
+    records: Iterable[FileRecord],
+) -> tuple[FileRecord, ...]:
+    if raw.modality != "MEG" or raw.extension != ".fif":
+        return ()
+    path = Path(raw.path)
+    if _is_fif_split_continuation(raw):
+        return ()
+    continuation_pattern = re.compile(
+        rf"^{re.escape(path.stem)}-(\d+)\.fif$",
+        flags=re.I,
+    )
+    matches = []
+    for record in records:
+        other_path = Path(record.path)
+        match = continuation_pattern.match(other_path.name)
+        if (
+            record.modality == "MEG"
+            and record.extension == ".fif"
+            and other_path.parent == path.parent
+            and match is not None
+        ):
+            matches.append((int(match.group(1)), record.path, record))
+    return tuple(row[2] for row in sorted(matches))
+
+
+def _find_brainvision_companions(
+    raw: FileRecord,
+    records: Iterable[FileRecord],
+) -> tuple[FileRecord, ...]:
+    if raw.modality != "EEG" or raw.extension != ".vhdr":
+        return ()
+    path = Path(raw.path)
+    by_extension = {
+        record.extension: record
+        for record in records
+        if record.modality == "EEG"
+        and Path(record.path).parent == path.parent
+        and Path(record.path).stem == path.stem
+        and record.extension in {".eeg", ".vmrk"}
+    }
+    return tuple(
+        by_extension[extension]
+        for extension in (".eeg", ".vmrk")
+        if extension in by_extension
+    )
+
+
+def _candidate_sort_key(candidate: _RawCandidate) -> tuple[int, int, int, int, str, str, str]:
     status_rank = {
         "exact": 0,
         "fallback_subject": 1,
@@ -367,9 +487,62 @@ def _candidate_sort_key(candidate: _RawCandidate) -> tuple[int, int, int, str, s
     raw_sort = _sort_key(candidate.raw)
     return (
         status_rank,
+        candidate.file_structure_rank,
         size_unknown_rank,
         size_value,
         raw_sort[0],
         raw_sort[1],
         raw_sort[2],
+    )
+
+
+def _raw_file_structure_rank(
+    record: FileRecord,
+    companion_files: tuple[FileRecord, ...],
+    records: Iterable[FileRecord],
+) -> int:
+    if record.modality == "EEG":
+        return 0 if {item.extension for item in companion_files} == {".eeg", ".vmrk"} else 3
+    if _is_fif_split_continuation(record):
+        return 2
+    if _is_root_fif_with_underscore_segments(record, records):
+        return 1
+    return 0
+
+
+def _is_selectable_meg_fif(record: FileRecord) -> bool:
+    if record.path in SPANISHBCBL_KNOWN_UNUSABLE_RAW_PATHS:
+        return False
+    return not _is_fif_split_continuation(record)
+
+
+def _is_selectable_eeg_vhdr(record: FileRecord) -> bool:
+    if record.modality != "EEG" or record.extension != ".vhdr" or record.kind != "raw":
+        return False
+    if record.subject == "S1" or record.block is None:
+        return False
+    return Path(record.path).stem not in SPANISHBCBL_KNOWN_UNUSABLE_EEG_STEMS
+
+
+def _is_fif_split_continuation(record: FileRecord) -> bool:
+    if record.modality != "MEG" or record.extension != ".fif":
+        return False
+    return re.search(r"-\d+\.fif$", Path(record.path).name, flags=re.I) is not None
+
+
+def _is_root_fif_with_underscore_segments(record: FileRecord, records: Iterable[FileRecord]) -> bool:
+    if record.modality != "MEG" or record.extension != ".fif":
+        return False
+    path = Path(record.path)
+    if re.search(r"[_-]\d+$", path.stem):
+        return False
+    sibling_pattern = re.compile(rf"^{re.escape(path.stem)}_\d+(?:-\d+)?\.fif$", flags=re.I)
+    parent = path.parent.as_posix()
+    return any(
+        other.path != record.path
+        and other.modality == "MEG"
+        and other.extension == ".fif"
+        and Path(other.path).parent.as_posix() == parent
+        and sibling_pattern.match(Path(other.path).name)
+        for other in records
     )

@@ -1,0 +1,673 @@
+{
+  "schema_name": "neurodecodekit.dataset_compatibility_registry",
+  "schema_version": "0.1.0",
+  "reviewed_at": "2026-07-10",
+  "proof_posture": "primary_source_metadata_review_only",
+  "claim_boundary": "A registry entry is not a download authorization, benchmark result, or evidence that one task transfers to another.",
+  "cohort_definitions": {
+    "prompted_typing": "A participant types a prompted or memorized sentence; keystrokes and sentence targets may support event and sequence metrics.",
+    "inner_or_imagined_speech": "A participant internally rehearses or imagines a small prompted speech unit; this is not open-vocabulary text generation.",
+    "natural_reading": "A participant reads displayed text; the displayed text is stimulus context, not text produced from neural activity.",
+    "p300": "A stimulus-locked oddball response classification task.",
+    "ssvep": "A frequency-tagged visual-attention classification task.",
+    "motor_imagery": "A cued imagined-movement classification task."
+  },
+  "registry_gaps": [
+    "No second public EEG dataset with the same prompted-sentence typing and keystroke-label contract as SpanishBCBL was verified in this pass.",
+    "Unknown byte counts remain null until an official file manifest can be inspected without downloading signal payloads.",
+    "P300, SSVEP, motor imagery, reading, and imagined speech are qualification cohorts and must not be merged with prompted typing."
+  ],
+  "records": [
+    {
+      "id": "spanishbcbl_v1",
+      "dataset": "SpanishBCBL / DECOMEG v1",
+      "cohort": "prompted_typing",
+      "source_urls": [
+        {
+          "role": "canonical_dataset",
+          "url": "https://huggingface.co/datasets/bcbl190626/SpanishBCBL"
+        },
+        {
+          "role": "pinned_revision",
+          "url": "https://huggingface.co/datasets/bcbl190626/SpanishBCBL/tree/88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684"
+        },
+        {
+          "role": "official_loader",
+          "url": "https://github.com/facebookresearch/brain2qwerty/blob/3bf5a4099ca0d23bbe994b2287905760236e56e0/studies/spanishbcbl.py"
+        }
+      ],
+      "revision": "88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684",
+      "license": "CC-BY-NC-4.0",
+      "modality": [
+        "EEG",
+        "MEG"
+      ],
+      "task": "Read, wait, then type a briefly memorized Spanish sentence without on-screen feedback.",
+      "language": "Spanish",
+      "subjects": 35,
+      "sessions": {
+        "count": null,
+        "detail": "Session count varies; each session used 128 unique sentences. Five people participated in both EEG and MEG, and some MEG subject IDs map to the same person."
+      },
+      "splits": "No benchmark split is supplied as a safe default; bind a frozen subject/session/trial protocol before fitting.",
+      "acquisition": {
+        "channels": {
+          "EEG": 64,
+          "MEG": 306
+        },
+        "sampling_rate_hz": {
+          "EEG": 1000,
+          "MEG": 1000
+        },
+        "geometry": "MEG geometry is carried in FIF; EEG geometry availability must be validated per BrainVision bundle.",
+        "reference_scheme": null,
+        "reference_unavailable_reason": "The canonical dataset card does not publish the EEG reference scheme."
+      },
+      "formats": {
+        "raw": [
+          "FIF",
+          "BrainVision VHDR/VMRK/EEG"
+        ],
+        "events": [
+          "MATLAB MAT behavioral logs",
+          "BrainVision markers",
+          "MEG stimulus channel"
+        ],
+        "labels": "Sentence stimuli, performed keystrokes, and timing are available in behavioral logs after alignment validation."
+      },
+      "storage": {
+        "total_bytes": 280382552015,
+        "total_bytes_status": "exact_sum_of_pinned_official_file_metadata",
+        "full_eeg_subtree_bytes": 12790560040,
+        "smallest_meaningful_slice": {
+          "description": "Fresh complete S20 session-2 block-2 BrainVision triplet plus matching MAT log.",
+          "exact_bytes": 96090264,
+          "status": "metadata_only_candidate_not_downloaded"
+        }
+      },
+      "capabilities": {
+        "inspection": true,
+        "signal_quality": true,
+        "classification": true,
+        "sequence_decoding": true,
+        "cer_wer": true
+      },
+      "leakage_risks": [
+        "Repeated MEG subject IDs can put the same person in multiple nominal subject groups.",
+        "Event-level random splits leak sentence and recording context; split by trial or stricter group.",
+        "Preprocessing statistics must be fit on train rows only.",
+        "S21 session 2 and the local S7 EEG evaluation are consumed and forbidden for tuning or fresh evaluation."
+      ],
+      "known_limitations": [
+        "Healthy skilled typists performing prompted memorized typing do not establish arbitrary-thought decoding.",
+        "MEG and EEG are separate evidence cohorts.",
+        "The public release is noncommercial under CC-BY-NC-4.0."
+      ],
+      "proof_posture": "Task-compatible source with validated local adapters; existing neural comparisons are negative.",
+      "first_fresh_benchmark": {
+        "suitability": "preferred_after_explicit_approval",
+        "rationale": "It matches the existing typing and trigger-alignment contracts, and the exact 96,090,264-byte S20 bundle is the smallest fresh complete EEG block in the pinned manifest."
+      }
+    },
+    {
+      "id": "openneuro_ds003626_inner_speech",
+      "dataset": "Thinking Out Loud / Inner Speech",
+      "cohort": "inner_or_imagined_speech",
+      "source_urls": [
+        {
+          "role": "canonical_dataset",
+          "url": "https://openneuro.org/datasets/ds003626/versions/2.1.2"
+        },
+        {
+          "role": "data_descriptor",
+          "url": "https://www.nature.com/articles/s41597-022-01147-2"
+        },
+        {
+          "role": "official_nemar_mirror",
+          "url": "https://ww2.nemar.org/"
+        }
+      ],
+      "revision": "OpenNeuro ds003626 v2.1.2",
+      "license": "CC0-1.0 for the OpenNeuro data; article is CC-BY-4.0",
+      "modality": [
+        "EEG",
+        "EOG",
+        "EMG"
+      ],
+      "task": "Four prompted commands under inner-speech, pronounced-speech, and visualized conditions.",
+      "language": "Spanish commands",
+      "subjects": 10,
+      "sessions": {
+        "count": 3,
+        "detail": "Thirty BIDS recordings in the canonical dataset."
+      },
+      "splits": "No frozen NeuroDecodeKit split; participant and condition boundaries must be preserved.",
+      "acquisition": {
+        "channels": {
+          "EEG": 128,
+          "external_EOG_EMG": 8
+        },
+        "sampling_rate_hz": 1024,
+        "geometry": "BioSemi 128-channel cap layout; per-record geometry must be verified from BIDS sidecars.",
+        "reference_scheme": "BioSemi ActiveTwo CMS/DRL acquisition; analysis reference must be declared."
+      },
+      "formats": {
+        "raw": [
+          "BDF",
+          "BIDS directory"
+        ],
+        "events": [
+          "BDF tagged events",
+          "BIDS events.tsv"
+        ],
+        "labels": "Condition and one of four command classes are available."
+      },
+      "storage": {
+        "total_bytes": null,
+        "total_bytes_status": "not_published_as_exact_bytes_in_cited_primary_sources",
+        "smallest_meaningful_slice": {
+          "description": "One complete participant across all three conditions, subject to a metadata dry run.",
+          "exact_bytes": null,
+          "status": "official_file_manifest_required"
+        }
+      },
+      "capabilities": {
+        "inspection": true,
+        "signal_quality": true,
+        "classification": true,
+        "sequence_decoding": false,
+        "cer_wer": false
+      },
+      "leakage_risks": [
+        "Pronounced-speech EMG and EOG can dominate classification if channels or conditions are mixed.",
+        "Trial-wise random splits can leak participant and session signatures.",
+        "The four prompted classes do not support open-vocabulary sequence claims."
+      ],
+      "known_limitations": [
+        "Small command classification is not sentence decoding.",
+        "Inner, pronounced, and visualized conditions require separate reports and ablations."
+      ],
+      "proof_posture": "Credible imagined-speech classification cohort; not comparable to prompted typing CER/WER.",
+      "first_fresh_benchmark": {
+        "suitability": "secondary",
+        "rationale": "Useful for BIDS/BDF and multimodal leakage qualification, but less task-compatible than SpanishBCBL EEG."
+      }
+    },
+    {
+      "id": "zuco_1",
+      "dataset": "ZuCo 1.0",
+      "cohort": "natural_reading",
+      "source_urls": [
+        {
+          "role": "data_descriptor",
+          "url": "https://www.nature.com/articles/sdata2018291"
+        },
+        {
+          "role": "canonical_data",
+          "url": "https://osf.io/q3zws/"
+        }
+      ],
+      "revision": "ZuCo 1.0 / OSF q3zws",
+      "license": "CC-BY-4.0",
+      "modality": [
+        "EEG",
+        "eye_tracking"
+      ],
+      "task": "Natural English sentence reading in two normal-reading tasks and one relation-search task.",
+      "language": "English",
+      "subjects": 12,
+      "sessions": {
+        "count": 1,
+        "detail": "Three reading paradigms, 1,107 sentences, 21,629 words, and 154,173 fixations."
+      },
+      "splits": "No frozen NeuroDecodeKit split; subject and sentence identity must be grouped.",
+      "acquisition": {
+        "channels": {
+          "EEG": 128,
+          "eye_tracking": 1
+        },
+        "sampling_rate_hz": {
+          "EEG": 500,
+          "eye_tracking": 500
+        },
+        "geometry": "128-channel Geodesic HydroCel net; source eye coordinates and fixation assignments are available.",
+        "reference_scheme": "Cz during EEG acquisition"
+      },
+      "formats": {
+        "raw": [
+          "EGI raw",
+          "MATLAB combined files"
+        ],
+        "events": [
+          "EEG triggers",
+          "fixation and gaze timing"
+        ],
+        "labels": "Displayed sentence/word context, reading task, and eye-fixation features."
+      },
+      "storage": {
+        "total_bytes": null,
+        "total_bytes_status": "not_published_as_exact_bytes_in_cited_primary_sources",
+        "smallest_meaningful_slice": {
+          "description": "One subject and one complete reading task, subject to OSF metadata inspection.",
+          "exact_bytes": null,
+          "status": "official_file_manifest_required"
+        }
+      },
+      "capabilities": {
+        "inspection": true,
+        "signal_quality": true,
+        "classification": true,
+        "sequence_decoding": false,
+        "cer_wer": false
+      },
+      "leakage_risks": [
+        "Eye tracking identifies attended words and can dominate combined models.",
+        "Displayed text is stimulus input, not text produced by the participant.",
+        "Sentence overlap or task labels can leak across random splits."
+      ],
+      "known_limitations": [
+        "Reading evidence cannot be reported as language production or brain-to-text.",
+        "Brain-only, eye-only, and combined ablations are mandatory."
+      ],
+      "proof_posture": "Strong EEG-plus-eye reading and multimodal-ablation cohort; not a typing or generation benchmark.",
+      "first_fresh_benchmark": {
+        "suitability": "secondary",
+        "rationale": "Valuable for multimodal intake and leakage controls, but it cannot answer the prompted-typing question."
+      }
+    },
+    {
+      "id": "kara_one",
+      "dataset": "Kara One",
+      "cohort": "inner_or_imagined_speech",
+      "source_urls": [
+        {
+          "role": "canonical_dataset_and_protocol",
+          "url": "https://www.cs.toronto.edu/~complingweb/data/karaOne/karaOne.html"
+        }
+      ],
+      "revision": "Unversioned 14-participant public release",
+      "license": "Academic non-profit use only; citation required",
+      "modality": [
+        "EEG",
+        "EOG",
+        "audio",
+        "face_tracking"
+      ],
+      "task": "Imagine and then vocalize seven phonemic/syllabic prompts and four words.",
+      "language": "English prompts",
+      "subjects": 14,
+      "sessions": {
+        "count": 1,
+        "detail": "One 30-40 minute prompted session per participant."
+      },
+      "splits": "No frozen NeuroDecodeKit split; leave-participant-out is required for unseen-person claims.",
+      "acquisition": {
+        "channels": {
+          "EEG_cap": 64,
+          "EOG": 4
+        },
+        "sampling_rate_hz": 1000,
+        "geometry": "Neuroscan Quick-cap using the 10-20 system.",
+        "reference_scheme": null,
+        "reference_unavailable_reason": "The public dataset page does not state the acquisition reference."
+      },
+      "formats": {
+        "raw": [
+          "Neuroscan CNT",
+          "participant TAR.BZ2 archives"
+        ],
+        "events": [
+          "epoch_inds.mat",
+          "prompt-order text files"
+        ],
+        "labels": "Prompt identities and imagined/overt phases are available; audio and face features accompany overt speech."
+      },
+      "storage": {
+        "total_bytes": 24000000000,
+        "total_bytes_status": "approximate_total_reported_by_canonical_dataset_page",
+        "smallest_meaningful_slice": {
+          "description": "One complete participant archive.",
+          "exact_bytes": null,
+          "status": "canonical_page_lists_archives_without_sizes"
+        }
+      },
+      "capabilities": {
+        "inspection": true,
+        "signal_quality": true,
+        "classification": true,
+        "sequence_decoding": false,
+        "cer_wer": false
+      },
+      "leakage_risks": [
+        "Audio, facial motion, EOG, and muscle activity can reveal the prompt.",
+        "Imagined and overt phases must not be mixed without modality ablations.",
+        "Participant archives are compressed and must never be extracted without traversal and byte caps."
+      ],
+      "known_limitations": [
+        "Eleven prompted units do not support sentence or open-vocabulary claims.",
+        "License is narrower than a standard open-data license."
+      ],
+      "proof_posture": "Imagined-phonology classification and multimodal leakage cohort only.",
+      "first_fresh_benchmark": {
+        "suitability": "not_first",
+        "rationale": "Large archives, restrictive terms, CNT intake, and strong peripheral leakage make it a later qualification target."
+      }
+    },
+    {
+      "id": "moabb_bi2015a",
+      "dataset": "MOABB BI2015a Brain Invaders",
+      "cohort": "p300",
+      "source_urls": [
+        {
+          "role": "official_moabb_adapter",
+          "url": "https://moabb.neurotechx.com/docs/generated/moabb.datasets.BI2015a.html"
+        },
+        {
+          "role": "source_archive_doi",
+          "url": "https://doi.org/10.5281/zenodo.3266929"
+        }
+      ],
+      "revision": "Zenodo 3266929; MOABB adapter reviewed 2026-07-10",
+      "license": "CC-BY-4.0",
+      "modality": [
+        "EEG"
+      ],
+      "task": "Visual P300 oddball classification in a 36-symbol Brain Invaders grid.",
+      "language": "Not language-dependent",
+      "subjects": 43,
+      "sessions": {
+        "count": 3,
+        "detail": "One run per session with target and non-target flashes."
+      },
+      "splits": "MOABB within-session evaluation is available; freeze the exact MOABB paradigm and version before use.",
+      "acquisition": {
+        "channels": {
+          "EEG": 32
+        },
+        "sampling_rate_hz": 512,
+        "geometry": "10-10 wet-electrode montage",
+        "reference_scheme": "Right earlobe"
+      },
+      "formats": {
+        "raw": [
+          "MATLAB MAT",
+          "CSV metadata"
+        ],
+        "events": [
+          "Target",
+          "NonTarget"
+        ],
+        "labels": "Binary target/non-target labels are available."
+      },
+      "storage": {
+        "total_bytes": null,
+        "total_bytes_status": "exact_total_not_published_in_cited_adapter_page",
+        "smallest_meaningful_slice": {
+          "description": "One subject across all three sessions for session-aware P300 qualification.",
+          "exact_bytes": null,
+          "status": "metadata_dry_run_required"
+        }
+      },
+      "capabilities": {
+        "inspection": true,
+        "signal_quality": true,
+        "classification": true,
+        "sequence_decoding": false,
+        "cer_wer": false
+      },
+      "leakage_risks": [
+        "Flash-level random splits leak session and symbol context.",
+        "Class imbalance can make raw accuracy misleading.",
+        "A P300 symbol-selection task is not natural typing."
+      ],
+      "known_limitations": [
+        "Use balanced metrics and session-aware splits.",
+        "This cohort qualifies event timing and ERP classification only."
+      ],
+      "proof_posture": "Good P300 pipeline qualification task; separate from language decoding.",
+      "first_fresh_benchmark": {
+        "suitability": "qualification_alternative",
+        "rationale": "Lower conceptual risk and MOABB support, but it answers P300 classification rather than task-matched typing."
+      }
+    },
+    {
+      "id": "moabb_lee2019_ssvep",
+      "dataset": "MOABB Lee2019 SSVEP / OpenBMI",
+      "cohort": "ssvep",
+      "source_urls": [
+        {
+          "role": "official_moabb_adapter",
+          "url": "https://moabb.neurotechx.com/docs/generated/moabb.datasets.Lee2019_SSVEP.html"
+        },
+        {
+          "role": "source_data_doi",
+          "url": "https://doi.org/10.5524/100542"
+        }
+      ],
+      "revision": "GigaDB 100542; MOABB adapter reviewed 2026-07-10",
+      "license": "GPL-3.0 as reported by the MOABB adapter; verify source-data terms before acquisition",
+      "modality": [
+        "EEG",
+        "EMG"
+      ],
+      "task": "Attend to one of four visual flicker frequencies for directional SSVEP classification.",
+      "language": "Not language-dependent",
+      "subjects": 54,
+      "sessions": {
+        "count": 2,
+        "detail": "Each session has 100 labeled offline-training trials and 100 online-test trials; MOABB warns that SSVEP online-test labels are unavailable."
+      },
+      "splits": "Use labeled offline runs only unless source test labels and authorization are independently verified.",
+      "acquisition": {
+        "channels": {
+          "EEG": 62
+        },
+        "sampling_rate_hz": 1000,
+        "geometry": "Standard 10-05/1005 Ag/AgCl montage",
+        "reference_scheme": "Nasion reference; AFz ground"
+      },
+      "formats": {
+        "raw": [
+          "MATLAB MAT through the MOABB adapter"
+        ],
+        "events": [
+          "5.45 Hz",
+          "6.67 Hz",
+          "8.57 Hz",
+          "12 Hz"
+        ],
+        "labels": "Four frequency classes are available for offline-training trials."
+      },
+      "storage": {
+        "total_bytes": null,
+        "total_bytes_status": "exact_total_not_published_in_cited_adapter_page",
+        "smallest_meaningful_slice": {
+          "description": "One subject, both sessions, labeled offline runs only.",
+          "exact_bytes": null,
+          "status": "metadata_dry_run_required"
+        }
+      },
+      "capabilities": {
+        "inspection": true,
+        "signal_quality": true,
+        "classification": true,
+        "sequence_decoding": false,
+        "cer_wer": false
+      },
+      "leakage_risks": [
+        "Online-test runs in MOABB do not expose SSVEP labels.",
+        "Trial-wise splits can leak session and repeated stimulus structure.",
+        "EMG must be excluded or separately ablated."
+      ],
+      "known_limitations": [
+        "SSVEP is visually evoked frequency classification, not speech or typing.",
+        "The 1 kHz source should not be downsampled before a frozen preprocessing protocol."
+      ],
+      "proof_posture": "Good frequency-domain and replay qualification task; no language claim.",
+      "first_fresh_benchmark": {
+        "suitability": "qualification_alternative",
+        "rationale": "Useful to validate PSD and event timing, but not task-compatible with typed language."
+      }
+    },
+    {
+      "id": "moabb_bnci2014_001",
+      "dataset": "BNCI2014-001 / BCI Competition IV 2a",
+      "cohort": "motor_imagery",
+      "source_urls": [
+        {
+          "role": "official_moabb_adapter",
+          "url": "https://moabb.neurotechx.com/docs/generated/moabb.datasets.BNCI2014_001.html"
+        },
+        {
+          "role": "source_archive",
+          "url": "http://bnci-horizon-2020.eu/database/data-sets/"
+        }
+      ],
+      "revision": "BNCI2014-001; MOABB adapter reviewed 2026-07-10",
+      "license": "CC-BY-ND-4.0",
+      "modality": [
+        "EEG",
+        "EOG"
+      ],
+      "task": "Cue-based four-class motor imagery: left hand, right hand, both feet, or tongue.",
+      "language": "Not language-dependent",
+      "subjects": 9,
+      "sessions": {
+        "count": 2,
+        "detail": "Six runs and 288 trials per session."
+      },
+      "splits": "Official train/evaluation sessions exist; preserve subject/session boundaries and source artifact flags.",
+      "acquisition": {
+        "channels": {
+          "EEG": 22,
+          "total_including_EOG": 25
+        },
+        "sampling_rate_hz": 250,
+        "geometry": "Custom 22-electrode Ag/AgCl montage",
+        "reference_scheme": "Left mastoid reference; right mastoid ground"
+      },
+      "formats": {
+        "raw": [
+          "GDF source",
+          "MATLAB MAT through the MOABB adapter"
+        ],
+        "events": [
+          "left_hand",
+          "right_hand",
+          "feet",
+          "tongue",
+          "artifact flags"
+        ],
+        "labels": "Four motor-imagery classes and per-trial artifact information are available."
+      },
+      "storage": {
+        "total_bytes": null,
+        "total_bytes_status": "exact_total_not_published_in_cited_adapter_page",
+        "smallest_meaningful_slice": {
+          "description": "One subject across both sessions for a frozen cross-session qualification.",
+          "exact_bytes": null,
+          "status": "metadata_dry_run_required"
+        }
+      },
+      "capabilities": {
+        "inspection": true,
+        "signal_quality": true,
+        "classification": true,
+        "sequence_decoding": false,
+        "cer_wer": false
+      },
+      "leakage_risks": [
+        "Mixing runs or sessions before splitting overstates generalization.",
+        "Artifact flags must not be silently dropped.",
+        "Motor cues and timing cannot be compared with sentence targets."
+      ],
+      "known_limitations": [
+        "Source signals are already bandpass and notch filtered.",
+        "The no-derivatives license requires care when redistributing transformed artifacts."
+      ],
+      "proof_posture": "Standard motor-imagery classification cohort only.",
+      "first_fresh_benchmark": {
+        "suitability": "qualification_alternative",
+        "rationale": "Compact and well structured, but it does not exercise language or typing contracts."
+      }
+    },
+    {
+      "id": "physionet_eegmmidb_1_0_0",
+      "dataset": "PhysioNet EEG Motor Movement/Imagery Dataset",
+      "cohort": "motor_imagery",
+      "source_urls": [
+        {
+          "role": "canonical_dataset",
+          "url": "https://physionet.org/content/eegmmidb/1.0.0/"
+        },
+        {
+          "role": "bounded_subject_listing",
+          "url": "https://physionet.org/content/eegmmidb/1.0.0/S001/"
+        }
+      ],
+      "revision": "1.0.0",
+      "license": "Open Data Commons Attribution 1.0",
+      "modality": [
+        "EEG"
+      ],
+      "task": "Executed and imagined unilateral fist or bilateral fist/foot movement, plus eyes-open and eyes-closed baselines.",
+      "language": "Not language-dependent",
+      "subjects": 109,
+      "sessions": {
+        "count": 1,
+        "detail": "Fourteen runs per subject: two one-minute baselines and twelve two-minute task runs."
+      },
+      "splits": "No default split; map T1/T2 by run type and freeze subject/run groups before fitting.",
+      "acquisition": {
+        "channels": {
+          "EEG": 64
+        },
+        "sampling_rate_hz": 160,
+        "geometry": "International 10-10 montage",
+        "reference_scheme": null,
+        "reference_unavailable_reason": "The canonical PhysioNet description does not state the acquisition reference."
+      },
+      "formats": {
+        "raw": [
+          "EDF+"
+        ],
+        "events": [
+          "EDF+ annotation channel",
+          "PhysioNet .event sidecar"
+        ],
+        "labels": "T0 rest and context-dependent T1/T2 task onsets are available."
+      },
+      "storage": {
+        "total_bytes": 3400000000,
+        "total_bytes_status": "approximate_uncompressed_total_reported_by_physionet",
+        "smallest_meaningful_slice": {
+          "description": "One two-minute task run plus its tiny event sidecar.",
+          "exact_bytes": null,
+          "approximate_bytes": 2500638,
+          "status": "per_file_sizes_reported_to_one_decimal_megabyte"
+        }
+      },
+      "capabilities": {
+        "inspection": true,
+        "signal_quality": true,
+        "classification": true,
+        "sequence_decoding": false,
+        "cer_wer": false
+      },
+      "leakage_risks": [
+        "T1 and T2 meanings change by run type.",
+        "Baseline, execution, and imagery runs must remain distinct.",
+        "Random windows from the same subject/run leak recording context."
+      ],
+      "known_limitations": [
+        "The 160 Hz sampling rate and task labels qualify EDF/event handling, not language decoding.",
+        "Approximate web file sizes are not an acquisition authorization."
+      ],
+      "proof_posture": "Low-cost EDF+ and motor-imagery pipeline qualification cohort.",
+      "first_fresh_benchmark": {
+        "suitability": "smallest_qualification_alternative",
+        "rationale": "One run is only about 2.5 MB, but choosing it would answer a motor-imagery pipeline question rather than typed-language decoding."
+      }
+    }
+  ]
+}

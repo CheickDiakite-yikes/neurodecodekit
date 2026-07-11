@@ -1,0 +1,9 @@
+NeuroDecodeKit
+Copyright 2026 Cheick Diakite and NeuroDecodeKit contributors
+
+This product is an independent research toolkit. It is not endorsed by Meta,
+the Brain2Qwerty authors, BCBL, dataset participants, MNE, or any device vendor.
+
+See THIRD_PARTY_NOTICES.md for upstream software, dataset, model, and recording
+terms that are separate from the Apache-2.0 license for NeuroDecodeKit's
+original source code and documentation.

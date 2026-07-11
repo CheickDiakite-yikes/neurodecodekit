@@ -1,5 +1,40 @@
 # Codex Handoff — NeuroDecodeKit Starter
 
+> Current handoff, 2026-07-10: Loops 1-12, 14-22, and 23.5 are complete; Loops
+> 13 and 23 are parked after measured gates. Two S21 MEG sessions support strict
+> sentence-text and same-subject session protocols, but the fixed tiny CTC has
+> no reliable neural advantage and loses its cross-session comparison to the
+> no-signal prior. One bounded S7 EEG bridge is trigger/cache validated, but its
+> nearest-centroid result is also worse than its train-only prior. Loop 20 adds
+> a target-isolated NeuroTokenCache interface; Loop 21 proves schedule-invariant
+> causal frame production; Loop 22 trains one 1,130-parameter synthetic causal
+> producer and consumes seed 2203. Loop 23 implements a language-model-free
+> greedy and width-8 prefix CTC decoder under a fresh physical split. Registered
+> validation passes at CER 0.0182 and 7/8 exact, opening seed 2303 once. Frozen
+> test CER is 0.0545 with all repeated pairs recovered, but exact accuracy is
+> only 5/8 against a 6/8 threshold. Every failure is the correct target plus one
+> false tail symbol; prefix and greedy agree. The test is consumed, the branch
+> is parked, and no post-test trimming or tuning is allowed. Loop 23.5 then
+> passes a separately preregistered fresh synthetic calibration gate: one
+> train-frame-fitted blank intercept takes validation from 6/16 to 16/16 exact
+> and the once-opened seed-2353 test from 7/16 to 16/16 exact, with zero CER,
+> nine test corrections, no regressions, and all replay/resource/access gates
+> passing. Seed 2353 is consumed. Loop 24 is unblocked for preregistration only.
+> In parallel, RW0 closes a primary-source Real-World Practice research gate
+> with eight dataset records, 13 device records, a local BYO Neurodata
+> contract, and one exact S20 EEG dry-run packet. RW1 now closes a
+> dependency-free level-0 metadata gate for BrainVision, EDF/EDF+, BDF,
+> EEGLAB, FIF, and BIDS synthetic fixtures. Its 532-byte roundtrip writes
+> 11,545 bytes with zero binary/raw/cache/target/model/training/network reads.
+> RW2 is now preregistered at `eacb231`; its next authorized gate is the exact
+> synthetic-fixture-only implementation. No real recording, consumed cache,
+> S20 download/read, MNE-BIDS execution, automatic cleaning, model, or training
+> is authorized.
+> There is no demonstrated neural advantage, unseen-person, useful EEG,
+> real-neural sequence decoder, end-to-end real-time, portable-hardware,
+> arbitrary-thought, or clinical claim. See
+> `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`.
+
 ## State of the repo
 
 This repo is a starter scaffold with working pure-Python components:
@@ -14,13 +49,99 @@ This repo is a starter scaffold with working pure-Python components:
 - real `.fif` + `.mat` event-window extraction scaffold
 - size-aware capped tiny-selection and dry-run download planning
 - B2Q-mini NPZ cache schema v0 loader and metadata sidecar writer
+- continuous sentence-cache schema v0 and real S21 extraction
+- optional tiny CTC with synthetic proof, strict real sentence-text evaluation,
+  and mandatory no-brain comparator
+- isolated 100/50/25 Hz sampling-rate resource sweep
+- geometry-aware 102-magnetometer extraction metadata
+- bounded spatial/variance/random/file-order channel-subset sweep
+- versioned packed signal-representation cache and standard/packed auto-loader
+- bounded float32/float16/BF16/qint16/qint8 storage-fidelity sweep
+- isolated standard/packed NPZ full/partial access gate with exact hashes and
+  explicit lazy-backend revisit thresholds
+- signal-free deterministic split membership, duplicate-row, capability, and
+  preprocessing fit-scope audit
+- train-row-only robust scaling with protocol/membership hash binding
+- signal-free strict-split sentence prior and paired uncertainty comparison
+- session-aware split-FIFF selection with pinned Hub revision and one-worker download
+- nonempty-MAT-trial mapping with preserved skipped trial IDs and timing audit
+- frozen source-train scaler application with cache/statistic hash validation
+- same-subject cross-session tiny CTC with source holdouts explicitly reserved
+- synthetic-only robust channel-affine adapter gate with frozen selection/holdout
+- multi-view tiny CTC evaluation with one frozen model across target views
+- six-size, three-seed synthetic calibration curve with independent calibration,
+  channel-mixing, and within-row drift stress families
+- artifact-backed local Gradio evidence console with audit-only startup gate,
+  aggregate-only real results, provenance hashes, and responsive browser QA
+- versioned artifact-only report cards with source/config hashes, completeness
+  flags, cohort-local ranking, deterministic JSON/Markdown/CSV, and CLI table
+- pinned metadata-only EEG bridge gate with complete-triplet/log validation
+- lazy BrainVision plus MAT-trigger extraction into B2Q-mini cache v0
+- exact key-label paired comparison against a same-split train-only prior
+- modality-aware NeuroTokenCache v0 with continuous time-major embeddings,
+  masks/timestamps, source geometry availability, strict split/source hashes,
+  and explicit asynchronous/causal/latency distinctions
+- deterministic target-free synthetic embedding producer with item/token/byte
+  caps, collision refusal, create/inspect CLI, exact payload replay, and
+  access-tracked exclusion of every source target member
+- bounded causal mock frame stream with zero look-ahead, explicit
+  drop-incomplete flush, global sample timestamps, and cap refusal
+- five-schedule causal replay gate with bitwise stream invariance, declared
+  Loop 20 floating compatibility tolerance, scheduling-delay/compute-RTF
+  separation, selective signal-only NPZ access, and no decoder
+- physically separate hash-bound synthetic motif train/validation/test fixtures
+- optional-Torch 1,130-parameter causal window encoder plus diagnostic motif
+  probe, train-only normalization, validation checkpointing, and safe NPZ state
+- one-time synthetic test access audit, mandatory prior/zero-signal controls,
+  paired item bootstrap, and five-schedule learned-embedding replay
+- dependency-free incremental greedy and log-space prefix-beam CTC decoding,
+  exhaustive tiny-path oracles, blank/repeat tests, and bounded decoder state
+- strict synthetic symbol-stream partitions, target-only train access,
+  validation-before-test gating, partial timing/stability metrics, and
+  five-schedule frame-indexed decoder replay
+- dependency-free one-scalar blank-logit calibration with frame-only fit
+  access, separate target-only prior access, paired no-harm/bootstrap metrics,
+  exact calibrated/unmodified replay, and one-time frozen-test gating
+- versioned primary-source dataset and device compatibility registries with
+  separate task/evidence cohorts and explicit unavailable fields
+- local-first BYO Neurodata workbench contract with compatibility levels 0-6,
+  safe file-family rules, privacy caps, refusal behavior, and replay/live source
+  boundaries
+- exact unapproved S20 EEG acquisition packet with four files, byte/resource
+  caps, target-free split, prior/shuffle controls, and one-time test rules
+- dependency-free local recording metadata scanner for BrainVision, EDF/EDF+,
+  BDF, EEGLAB, FIF, and BIDS with safe roots, companion validation, hard caps,
+  explicit compatibility levels, warnings, and inspectable refusal reports
+- deterministic local-intake JSON/Markdown, measured runtime/RSS audit
+  sidecar, source/config/registry/artifact hashes, strict reload/tamper checks,
+  and zeroed binary/raw/cache/target/model/training/network counters
+- frozen RW2 signal-quality contract for six synthetic format adapters with
+  explicit reader arguments, bounded windows/arrays/resources, descriptive
+  time-domain and Welch PSD metrics, privacy redaction, source no-mutation, and
+  exact kill/park/proceed gates
 - JSON/Markdown metrics report command
 - CLI smoke commands
 - unit tests
 
-The real extraction path is now present, but it is still a first-shard scaffold:
-it must be validated against one explicitly selected SpanishBCBL `.fif` block
-and matching `.mat` log before treating parser labels as authoritative.
+Two real S21 MEG sessions and MAT logs are alignment, timing, and
+sentence-cache validated. Session 1 supports strict unseen-sentence-text
+membership; session 2 supports one independent same-subject evaluation. One
+real S7 EEG BrainVision recording is trigger/cache validated and has one
+negative within-session event comparison. None is a decoder success. Do not
+turn these results, a variance ranking, or a geometry proxy into unseen-person
+or population generalization.
+
+Current verification after the RW2 preregistration closeout on 2026-07-10:
+249 unittest tests passed with 3 skipped in 11.714 seconds and 491,683,840-byte
+maximum RSS; pytest reported 246 passed, 3 skipped, and 25 subtests passed in
+12.51 seconds with 489,914,368-byte maximum RSS. Seven focused NeuroToken tests
+and all 11 RW1 tests passed. Full Ruff lint, compileall, root/create/inspect CLI
+help, the RW2 machine-contract invariant, workbook formulas and all-sheet visual
+checks, and `git diff --check` passed. The pre-RW1 baseline was 238 unittest and
+235 pytest passes with the same skips/subtests; no test count regressed during
+preregistration.
+The tracked and delivered workbook hashes match at
+`c27d80d4831acc91795b2cbf10d7e00400ff393f58bfd029a7653e0e328dc669`.
 
 ## The north star
 
@@ -32,7 +153,39 @@ huge raw neurodata → tiny selected shard → reproducible cache → baseline d
 
 This is not primarily a model repo. It is a **research loop repo**.
 
-## Next 3 PRs
+## Current Next Work
+
+1. **RW2 - implement the frozen synthetic signal-quality gate.** Follow
+   `registries/signal_quality_contract.v0.json` exactly: use optional imports,
+   six generated format families, strict bounded reads, privacy/no-mutation
+   validation, deterministic reports, and one-thread resource caps. Do not open
+   a real recording or expand the protocol.
+2. **Loop 24 - preregister local precision/runtime independently.** Freeze
+   candidates, reference arithmetic, tolerances, fresh selection data, and
+   resource rules before code. Seed 2353 cannot select anything.
+3. **RW3 and later remain blocked by their predecessors.** Do not begin live
+   replay, hardware, collection, multimodal, workbench UI, or deployment work
+   from metadata compatibility alone.
+
+RW4 is not next: S20 acquisition remains blocked until explicit approval names
+revision `88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684`, exactly four files, the
+128-MiB download cap, 16-MiB output cap, and one-time 44/10/10 protocol.
+
+Loop 23's preregistration and parked result are in
+`docs/LOOP_23_PREREGISTRATION.md` and
+`docs/LOOP_23_STREAMING_CTC_DECODER.md`. Loop 23.5's frozen design and closeout
+are in `docs/LOOP_23_5_PREREGISTRATION.md` and
+`docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`. Loop 22 evidence is in
+`docs/LOOP_22_TINY_CAUSAL_ENCODER.md`; the post-20 sequence is in
+`docs/POST_20_ROADMAP.md`; RW1 evidence is in
+`docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md`; RW2's frozen design and source review
+are in `docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md` and
+`docs/RW2_PRIMARY_SOURCE_RESEARCH.md`.
+
+## Historical original PR plan
+
+The sections below preserve the starter's original first-three-PR plan. Those
+scaffold milestones have been superseded by the numbered loop tracker above.
 
 ### PR 1 — Real event/window extraction for one downloaded block
 
@@ -437,10 +590,13 @@ CLI help: OK
 Tiny-conv command on base venv: helpful missing optional dependency error
 ```
 
-The skipped focused tests are the Torch training smoke tests. Torch is not
-installed in the current Bain-managed venv, and no heavy ML dependency download
-was attempted locally.
+That historical Bain-managed environment did not have Torch. The current macOS
+workspace already has Torch available and ran the bounded Loop 14 CPU baseline;
+no new heavy dependency was installed for it.
 
-Next 20-loop recommendation: Loop 9, CTC Character Decoder Scaffold. Prove the
-sequence-decoding interface on synthetic sequence data before making real timing
-or alignment claims.
+Historical recommendation from Loop 8: Loop 9, CTC Character Decoder Scaffold.
+Loops 9-12 are complete and Loop 13 is parked after a passing measured gate.
+NPZ remains the default until a recorded revisit trigger is reached. Loop 14
+is complete with strict train-only preprocessing and a near-null first real
+test. Qint16/qint8 remain representation candidates, not retained-accuracy
+results.

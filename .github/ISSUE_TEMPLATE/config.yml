@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security or sensitive-data report
+    url: https://github.com/CheickDiakite-yikes/neurodecodekit/security/advisories/new
+    about: Report secrets, unsafe file access, or accidental neural-data exposure privately.
+  - name: Contribution guide
+    url: https://github.com/CheickDiakite-yikes/neurodecodekit/blob/main/CONTRIBUTING.md
+    about: Read the synthetic-first, privacy-preserving contribution process.
+  - name: Support guide
+    url: https://github.com/CheickDiakite-yikes/neurodecodekit/blob/main/SUPPORT.md
+    about: Choose the right support path and see what information to include.

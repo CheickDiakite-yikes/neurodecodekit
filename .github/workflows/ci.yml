@@ -1,0 +1,70 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - "codex/**"
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  OMP_NUM_THREADS: "1"
+  OPENBLAS_NUM_THREADS: "1"
+  MKL_NUM_THREADS: "1"
+  NUMEXPR_NUM_THREADS: "1"
+  VECLIB_MAXIMUM_THREADS: "1"
+  PYTHONHASHSEED: "0"
+
+jobs:
+  base:
+    name: Base Python
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install base and development tools
+        run: python -m pip install -e '.[dev]'
+      - name: Ruff
+        run: ruff check .
+      - name: Compile
+        run: python -m compileall -q src tests
+      - name: Unit tests
+        run: PYTHONPATH=src python -m unittest discover -s tests -v
+      - name: CLI help
+        run: |
+          neurodecode --help
+          neurodecode inspect-recording --help
+          neurodecode inspect-intake-report --help
+
+  neuro:
+    name: Optional Neuro Readers
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install neuro and development tools
+        run: python -m pip install -e '.[neuro,dev]'
+      - name: Focused RW2 suite
+        run: PYTHONPATH=src python -m unittest discover -s tests -p 'test_signal_quality.py' -v
+      - name: Complete neuro-enabled suite
+        run: PYTHONPATH=src python -m unittest discover -s tests -v
+      - name: RW2 CLI help
+        run: |
+          neurodecode make-signal-quality-fixtures --help
+          neurodecode inspect-signal-quality-fixtures --help
+          neurodecode inspect-signal-quality --help
+          neurodecode inspect-signal-quality-report --help

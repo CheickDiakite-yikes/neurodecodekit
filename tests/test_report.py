@@ -5,6 +5,8 @@ from pathlib import Path
 
 from neurodecodekit.evaluation.report import (
     build_text_report,
+    compare_paired_label_predictions,
+    compare_paired_predictions,
     read_text_rows,
     render_report_markdown,
     write_report_json,
@@ -112,6 +114,53 @@ class ReportTests(unittest.TestCase):
         self.assertIn("TinyConvNet", markdown)
         self.assertIn("Uses deep learning: `yes`", markdown)
         self.assertIn("Eval accuracy: `0.5`", markdown)
+
+    def test_paired_comparison_reports_edit_delta_and_uncertainty(self):
+        comparison = compare_paired_predictions(
+            targets=["AAAA", "BBBB", "CCCC"],
+            predictions_a=["AAAA", "BBBX", ""],
+            predictions_b=["AAAX", "BBBB", "CCCC"],
+            label_a="a",
+            label_b="b",
+            bootstrap_iterations=500,
+            seed=3,
+        )
+
+        self.assertEqual(comparison["char_edits_a"], 5)
+        self.assertEqual(comparison["char_edits_b"], 1)
+        self.assertEqual(comparison["char_edit_delta_a_minus_b"], 4)
+        self.assertEqual(comparison["sentence_wins_a"], 1)
+        self.assertEqual(comparison["sentence_losses_a"], 2)
+        self.assertEqual(len(comparison["paired_bootstrap_delta_ci95"]), 2)
+
+        report = build_text_report(targets=["A"], predictions=["A"])
+        report["comparisons"] = {"a_vs_b": comparison}
+        markdown = render_report_markdown(report)
+        self.assertIn("## Paired Comparisons", markdown)
+        self.assertIn("Character-edit delta", markdown)
+
+    def test_paired_label_comparison_uses_exact_class_correctness(self):
+        comparison = compare_paired_label_predictions(
+            targets=["SPACE", "A", "B", "ENTER"],
+            predictions_a=["A", "A", "B", "A"],
+            predictions_b=["SPACE", "SPACE", "SPACE", "SPACE"],
+            label_a="template",
+            label_b="prior",
+            bootstrap_iterations=500,
+            seed=3,
+        )
+
+        self.assertEqual(comparison["metric_kind"], "label_accuracy")
+        self.assertEqual(comparison["label_accuracy_a"], 0.5)
+        self.assertEqual(comparison["label_accuracy_b"], 0.25)
+        self.assertEqual(comparison["paired_label_wins_a"], 2)
+        self.assertEqual(comparison["paired_label_losses_a"], 1)
+
+        report = build_text_report(targets=["A"], predictions=["A"])
+        report["comparisons"] = {"template_vs_prior": comparison}
+        markdown = render_report_markdown(report)
+        self.assertIn("Label accuracy delta", markdown)
+        self.assertNotIn("Character-edit delta", markdown)
 
 
 if __name__ == "__main__":

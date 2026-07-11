@@ -1,7 +1,9 @@
 """Small NPZ cache helpers.
 
-NPZ is the v0 cache format because it is simple. Zarr should replace it for
-larger real caches once the schema stabilizes.
+NPZ remains the default bounded-block format because it is simple and current
+real-cache access is below the measured Loop 13 budgets. A chunked backend is a
+conditional option when recorded size, latency, memory, or subarray-workflow
+revisit triggers are reached; it is not an automatic schema migration.
 """
 
 from __future__ import annotations
@@ -346,7 +348,3 @@ def _safe_stat_size(path: Path) -> int | None:
         return int(path.stat().st_size)
     except OSError:
         return None
-        for key in data.files:
-            if key not in loaded:
-                loaded[key] = data[key]
-        return loaded

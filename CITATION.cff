@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: >-
+  If NeuroDecodeKit supports your research, please cite this software and the
+  underlying datasets and papers separately.
+title: NeuroDecodeKit
+type: software
+version: 0.1.0
+authors:
+  - family-names: Diakite
+    given-names: Cheick
+repository-code: https://github.com/CheickDiakite-yikes/neurodecodekit
+url: https://github.com/CheickDiakite-yikes/neurodecodekit
+license: Apache-2.0
+keywords:
+  - brain-computer interface
+  - EEG
+  - MEG
+  - neural decoding
+  - reproducible research
+abstract: >-
+  A local-first research toolkit for bounded neural-data intake, reproducible
+  EEG and MEG language-decoding experiments, honest no-signal baselines,
+  explicit split provenance, and inspectable resource and claim boundaries.
