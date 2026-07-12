@@ -17,6 +17,11 @@ requests, and these files:
 - `docs/LOOP_24_AUTHORIZATION_DECISION.md`
 - `registries/loop24_authorization_decision.v0.json`
 - `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md`
+- `docs/LOOP_25_PRIMARY_SOURCE_RESEARCH.md`
+- `docs/LOOP_25_CAUSAL_PREPROCESSING_PREREGISTRATION.md`
+- `registries/causal_preprocessing_contract.v0.json`
+- `docs/LOOP_25_AUTHORIZATION_PACKET.md`
+- `registries/loop25_authorization_request.v0.json`
 - `docs/POST_20_ROADMAP.md`
 - `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`
 - `docs/LOOPS_25_44_ROADMAP.md`
@@ -54,19 +59,25 @@ Do not reset, revert, delete, or overwrite work already present.
   is retained, and seed 2401 is consumed. No rerun or post-result tuning is
   authorized. Real/consumed data, targets, labels, text, training, energy, RW3,
   devices, hardware, and Loops 25-44 remain unauthorized.
+- Loop 25 causal preprocessing is preregistered at commit `a36d97b`, before any
+  filter design, fixture, numerical preprocessing, or partition open. Both
+  GitHub CI jobs passed. The contract freezes seeds 2501/2502, 7 schedules, 10
+  resume cuts, 3 future-mutation cuts, 40 refusals, 21 access counters, and
+  stricter 8-MiB/45-second caps. Its separate machine request says
+  `authorized_now: false`; no Loop 25 runtime or payload exists.
 - Loops 25-44 are now a detailed planning-only queue: exactly 20 contiguous
   rows across five phases, with source bindings, controls, metrics, acceptance
   gates, stop rules, dependencies, resource caps, and 20 false execution flags.
-  Loop 25 is the next numbered candidate, but the queue authorizes no operation.
+  Loop 25 is `Preregistered`; Loops 26-44 are `Not Started`; all 20 execution
+  flags remain false.
 - No real recording quality, neural advantage, unseen-person generalization,
   useful EEG decoder, real-time decoding, portable-hardware, arbitrary-thought,
   or clinical result has been demonstrated.
-- The repository reports public. PR #1 merged the open-source community surface
-  through `e5d89ed`; green draft PR #2 carries the latest evidence closeout and
-  canonical license-text repair. Do not merge or alter visibility without
-  explicit user approval.
+- The repository is public. PR #1 merged the open-source community surface;
+  current evidence work is carried by green PR #3 and the stacked Loop 25
+  branch. Do not merge or alter visibility without explicit user approval.
 
-## Primary task: preserve Loop 24 and prepare only the next authorized decision
+## Primary task: preserve Loop 24 and make only the Loop 25 decision
 
 For Loop 24, inspect and preserve:
 
@@ -83,12 +94,13 @@ failure, zero forbidden counters, ignored artifacts, and parked claim boundary.
 Do not rerun seed 2401, open seed 2402, change worker startup, or retune a
 threshold under the same claim.
 
-Loop 25 causal preprocessing is the next numbered planning candidate. Before
-any Loop 25 implementation or execution, require a dedicated preregistration
-that binds target-free fixtures, transform state, chunk schedules, timestamps,
-future-context tests, tolerances, resources, access counters, refusals, and an
-exact authorization sentence. Roadmap approval and this continuation prompt do
-not authorize that work.
+Loop 25 causal preprocessing has completed that dedicated preregistration at
+`a36d97b`. Review its primary-source note, immutable contract, and
+`docs/LOOP_25_AUTHORIZATION_PACKET.md`. The only permissible numbered decision
+is to authorize the exact target-free implementation, amend the packet before
+authorization, or hold. Packet preparation, roadmap approval, and this
+continuation prompt do not authorize implementation. Exact authorization must
+first become its own tested, pushed, remotely green authorization-only commit.
 
 Independently, inspect and validate the RW3 Stage A decision surface:
 
@@ -113,7 +125,8 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
 
 1. Do not download data, open S20, or reopen consumed S7/S21 raw arrays,
    caches, target logs, or seeds 2203, 2303, 2353, and 2401. Keep seed 2402
-   unopened.
+   unopened and do not repurpose it. Keep Loop 25 seeds 2501 and 2502 unopened
+   until a separate authorization-only commit is pushed and green.
 2. Do not install or import BrainFlow, LSL, MNE-BIDS, or hardware SDKs. Do not
    connect to hardware, enumerate devices, open sockets, or execute a live
    source.
@@ -128,23 +141,25 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
    generated data artifacts beyond tiny documentation-validation debris.
 7. Keep RW3 independent from Loop 24 precision/runtime and the
    blocked RW4 S20 acquisition packet.
-8. Do not implement or execute a Loop 25-44 item from roadmap approval or a
-   broad request to continue. Freeze and authorize the loop-specific packet
-   first; a failed gate parks its dependent claim branch.
+8. Do not implement or execute a Loop 25-44 item from roadmap approval, packet
+   preparation, or a broad request to continue. Loop 25 is frozen but still
+   awaits its exact decision; later loops still require their own packets. A
+   failed gate parks its dependent claim branch.
 
 ## Required deliverables for the next authorized milestone
 
 1. Keep README, tracker, decision log, build notes, handoff, start-here,
    roadmap, workbook, and continuation prompt consistent with Loop 24's parked
    closeout, RW3 commit `c3d1f01`, and the
-   still-unauthorized request prepared at `163ff2f`. Keep the Loops 25-44
-   planning-only contract and all 20 false execution flags consistent too.
+   still-unauthorized request prepared at `163ff2f`. Keep Loop 25's green
+   `a36d97b` registration, false authorization request, and all 20 Loops 25-44
+   execution flags consistent too.
 2. Run documentation/contract validation, local-link checks, Ruff,
    `git diff --check`, Gitleaks, and the complete unit suites. Compare with the
-   293-unittest / 290-pytest authorization-only baseline and the 313-unittest /
-   310-pytest Loop 24 implementation baseline.
-3. Commit and push any future authorization-only milestone and confirm draft PR
-   #2 CI before implementation. Preserve unrelated files and generated debris
+   313-unittest Loop 24 baseline and the 323-unittest Loop 25 preregistration
+   baseline.
+3. Commit and push any future authorization-only milestone and confirm its own
+   CI before implementation. Preserve unrelated files and generated debris
    outside Git.
 
 Do not call Loop 24 a speedup, retained-accuracy, integer-only, neural,

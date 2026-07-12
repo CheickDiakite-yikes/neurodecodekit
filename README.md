@@ -32,6 +32,7 @@ and explain exactly what the result does not prove.
 | Trial identity | All 66 S21 session-1 trials and all 63 performed session-2 trials reconcile to MAT provenance; empty session-2 slots remain explicit | The real MEG evidence has exact trial identity instead of fuzzy sentence matching |
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
+| Full-path causality gate | Loop 25 freezes one stateful filter/decimation/normalization path, 7 chunk schedules, 10 resume cuts, 3 future-mutation cuts, and 40 refusals | The audit is reproducibly specified and awaiting authorization; no coefficients, fixture, or preprocessing result exists yet |
 | Real predictive evidence | Both the same-person cross-session MEG model and the bounded S7 EEG classifier lose to no-signal controls | The current scientific result is negative, explicit, and frozen against post-hoc tuning |
 | Local execution gate | Float16 preserved exact behavior but ran `1.170x` slower on the producer; qint8 cut payload to `47.1%` but changed behavior and ran `2.785x` slower | Float32 is retained, qualification stayed unopened, and Loop 24 is parked after the full run exceeded its 60-second cap |
 | Next transport layer | Stage A is specified as 90 future schedule-by-fixture cases with 30 exact refusals under a 32 MiB cap | The decision packet is review-ready; no replay runtime, socket, board, or hardware path is authorized yet |
@@ -53,7 +54,8 @@ and explain exactly what the result does not prove.
 | Metadata-only local intake | 6 format families; 532 source bytes; 11,545 report bytes; 0 binary/raw/target/model/network reads | fixture-backed | Lets EEG owners start with safe structure and provenance instead of uploading a recording |
 | Bounded signal-quality interface | 40 fixtures; 38 readable and 2 exact refusals across 6 format families; 3.839 sec; 76,592 output bytes | fixture-backed | Validates readers, metrics, privacy, caps, and no-mutation identity before any real quality claim |
 | Replay/live-source authorization gate | 5 schedules x 18 fixture families = 90 future cases; 30 refusal IDs; 4 separately gated stages; 10 invariants | review-ready, not authorized | Binds the exact Stage A scope and caps before any source-chunk, socket, board, fixture, or hardware implementation |
-| Test and release surface | 313 unittests with 3 skips; 310 pytest passes, 3 skips, and 105 subtests; dependency-free suite also green | local shell verified | Makes the research contracts, access order, backend provenance, tamper checks, and authorization boundaries executable on ordinary hardware |
+| Causal preprocessing registration | 12 primary sources; 5 local source hashes; 24 future target-free items; 7 schedules; 10 resumes; 3 mutation cuts; 40 refusals; 21 counters | preregistered, no runtime | Makes upstream filtering, decimation, normalization, timestamps, state, and future-independence falsifiable before implementation |
+| Test and release surface | 331 unittests; 328 pytest tests plus 134 subtests; 3 expected skips; 299 dependency-light tests with 121 optional skips | local shell and CI verified | Makes the research contracts, access order, backend provenance, tamper checks, and authorization boundaries executable on ordinary hardware |
 
 ### Real-Data Scientific Scorecard
 
@@ -147,6 +149,13 @@ Read this before interpreting any number in the repository.
   physically unopened, and the final gate parked at `65.154951` seconds versus
   its 60-second cap. Real data, targets, training, energy measurement, RW3,
   devices, and hardware remained outside Loop 24.
+- **Loop 25 causal-preprocessing registration:** primary-source research and a
+  machine contract are frozen at `a36d97b`. The contract binds one stateful
+  SOS-filter/phase-locked-decimation/frozen-scale path, physical seeds 2501 and
+  2502, seven schedules, ten resume cuts, three future-mutation cuts, 40
+  refusal IDs, 21 access counters, and an 8 MiB generated-artifact cap. The
+  separate request says `authorized_now: false`; no filter coefficients,
+  fixture, numerical preprocessing, CLI, or runtime exists.
 
 ### What The Results Actually Say
 
@@ -163,6 +172,9 @@ Read this before interpreting any number in the repository.
 - Loop 24 retains float32. Float16 passes correctness but misses every runtime
   replacement threshold; qint8 is smaller but fails correctness and runtime;
   the complete target-free gate parks on its 60-second orchestration cap.
+- Loop 25 has a green preregistration and a review-ready authorization packet,
+  not a causal-preprocessing result. Its right-context, timing, frequency,
+  schedule, resume, and resource claims remain proposed acceptance gates.
 
 ### What Is Not Established
 
@@ -667,12 +679,12 @@ The original numbered development sequence has reached:
   commit `3a5dc0b`; float32 is retained, no replacement or storage-only candidate
   passed, seed 2401 is consumed, seed 2402 qualification stayed unopened, and
   runtime was 65.154951 seconds versus the 60-second cap;
-- Loops 25-44: a new primary-source-informed planning tranche spans causal
+- Loops 25-44: a primary-source-informed tranche spans causal
   evidence, translation/generalization, reliability/confounds,
-  reproducibility/local deployment, and live translation/release. All 20 rows
-  are `Not Started`, `execution_authorized: false`, and subordinate to their own
-  future preregistrations and authorizations. Loop 24's parked result does not
-  authorize Loop 25.
+  reproducibility/local deployment, and live translation/release. Loop 25 is
+  `Preregistered` at `a36d97b` with a hash-bound request awaiting explicit
+  authorization. Loops 26-44 remain `Not Started`; all 20 execution flags are
+  false. Loop 24's parked result does not authorize Loop 25.
 
 The parallel Real-World Practice track has reached:
 
@@ -719,6 +731,11 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/LOOP_24_AUTHORIZATION_DECISION.md](docs/LOOP_24_AUTHORIZATION_DECISION.md) | scope-narrowed Loop 24 authorization, execution order, zero-runtime boundary, and real-data/training routing |
 | [registries/loop24_authorization_decision.v0.json](registries/loop24_authorization_decision.v0.json) | hash-bound authorization record for the consumed target-free Loop 24 execution; every data/training/RW3/device flag remains false |
 | [docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md](docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md) | measured float32/float16/qint8 result, unopened qualification proof, resources, access ledger, and parked decision |
+| [docs/LOOP_25_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_25_PRIMARY_SOURCE_RESEARCH.md) | official Brain2Qwerty, MNE, SciPy, and local-pipeline audit separating offline preprocessing from causal proof |
+| [docs/LOOP_25_CAUSAL_PREPROCESSING_PREREGISTRATION.md](docs/LOOP_25_CAUSAL_PREPROCESSING_PREREGISTRATION.md) | frozen target-free pipeline, schedules, state, timing, resources, refusals, and acceptance rules |
+| [registries/causal_preprocessing_contract.v0.json](registries/causal_preprocessing_contract.v0.json) | machine-readable Loop 25 registration with every execution flag false |
+| [docs/LOOP_25_AUTHORIZATION_PACKET.md](docs/LOOP_25_AUTHORIZATION_PACKET.md) | exact bounded decision language and the work still forbidden even after authorization |
+| [registries/loop25_authorization_request.v0.json](registries/loop25_authorization_request.v0.json) | green-commit-bound Loop 25 request; currently `authorized_now: false` |
 | [docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md](docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md) | metadata-only file intake closeout |
 | [docs/RW2_PRIMARY_SOURCE_RESEARCH.md](docs/RW2_PRIMARY_SOURCE_RESEARCH.md) | reader/quality primary-source review |
 | [docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md](docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md) | frozen RW2 protocol |

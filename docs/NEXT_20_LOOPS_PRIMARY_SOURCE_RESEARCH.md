@@ -332,3 +332,14 @@ loops. Every loop starts `Not Started`, `execution_authorized: false`, and
 
 No result, runtime, data access, model execution, training, or device behavior
 is established by this research pass.
+
+## 2026-07-12 Status Addendum
+
+The roadmap's initial planning decision above is preserved as historical
+provenance. The current numbered gate has since advanced to Loop 25 planning:
+Loop 24 is parked, and Loop 25 research plus preregistration are frozen at
+`a36d97b` with green CI. The separate authorization request remains false, no
+Loop 25 runtime or fixture exists, and Loops 26-44 remain `Not Started`.
+
+This addendum changes tracker state only. It does not upgrade any primary-source
+finding or authorize execution.

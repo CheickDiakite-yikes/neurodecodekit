@@ -1,6 +1,6 @@
 {
   "schema_name": "neurodecodekit.next_twenty_loops_roadmap",
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "roadmap_id": "loops-25-44",
   "prepared_at": "2026-07-12",
   "status": "planning_only_not_execution_authorization",
@@ -11,9 +11,17 @@
     "loop_count": 20
   },
   "current_boundary": {
-    "current_numbered_gate": 24,
-    "loop24_status": "preregistered_unauthorized",
-    "loop24_execution_authorized": false,
+    "current_numbered_gate": 25,
+    "current_gate_status": "preregistered_awaiting_explicit_authorization",
+    "loop24_status": "parked_resource_cap_exceeded",
+    "loop24_execution_was_authorized": true,
+    "loop24_execution_authorized_now": false,
+    "loop25_preregistration_commit": "a36d97b8556e95637a21c86c44095b7e8d4c4863",
+    "loop25_preregistration_ci_green": true,
+    "loop25_authorization_request_prepared": true,
+    "loop25_execution_authorized": false,
+    "loop25_development_seed_opened": false,
+    "loop25_qualification_seed_opened": false,
     "rw3_status": "stage_a_packet_prepared_unauthorized",
     "rw3_stage_a_authorized": false,
     "general_continuation_is_authorization": false,
@@ -85,17 +93,25 @@
       "title": "Causal Preprocessing Audit",
       "priority": "P0",
       "effort": "M",
-      "status": "Not Started",
+      "status": "Preregistered",
       "execution_authorized": false,
-      "proof_posture": "planned_not_authorized",
+      "proof_posture": "preregistered_no_implementation_or_execution",
+      "registration": {
+        "commit": "a36d97b8556e95637a21c86c44095b7e8d4c4863",
+        "contract": "registries/causal_preprocessing_contract.v0.json",
+        "contract_sha256": "42781526225c556d0df54d1b6924fd5d9ecf95578a84c3e3922b6d5c7035050e",
+        "authorization_request": "registries/loop25_authorization_request.v0.json",
+        "authorization_request_status": "awaiting_explicit_user_authorization",
+        "authorized_now": false
+      },
       "core_question": "Can every transform before the causal encoder run incrementally without future samples, evaluation-fit statistics, timestamp drift, or chunk-boundary changes?",
       "why_high_value": "A causal model is not causal if filtering, resampling, padding, or normalization leaks future context; this gate protects every later streaming claim.",
       "build_deliverable": "Versioned stateful preprocessing contract, offline-versus-stream replay harness, transform provenance, and explicit refusal for noncausal settings.",
       "research_deliverable": "Primary-source note on filter delay, resampling event jitter, padding, and train-only normalization semantics.",
       "data_scope": "Target-free synthetic signals first; any later S21 use is restricted to separately authorized source-train rows and may not open source-test or session-2 evidence.",
       "controls": [
-        "Five or more adversarial chunk schedules including single-sample and boundary splits.",
-        "Impulse, step, chirp, drift, and end-padding fixtures with future-sample perturbation tests.",
+        "Seven frozen chunk schedules including whole-item, single-sample, decimation-boundary, frame-boundary, powers-of-two, and seeded-irregular splits.",
+        "Six target-free signal families, ten resume cuts, and three future-mutation cuts across physically separate seeds 2501 and 2502.",
         "Offline noncausal reference reported separately and never substituted for the causal path."
       ],
       "primary_metrics": [
@@ -108,9 +124,9 @@
       "acceptance_boundary": "Proceed only if declared right context is zero, every schedule preserves valid samples and timestamps within preregistered tolerances, evaluation-fit/read counters are zero, and resource caps pass.",
       "stop_rule": "Park any transform that needs future samples or cannot preserve timing; do not widen tolerances after observing a protected row.",
       "depends_on": [],
-      "external_gates": ["explicit_loop24_proceed_park_or_hold_decision"],
-      "authorization_boundary": "Planning only. Fixture generation, real-cache reads, preprocessing execution, and model access require a separate Loop 25 preregistration and authorization.",
-      "resource_cap": "One thread, one worker, 32 MiB generated artifacts, 60 seconds per isolated worker, and 1 GiB peak RSS."
+      "external_gates": ["explicit_loop25_authorization_decision"],
+      "authorization_boundary": "Preregistered at a36d97b and awaiting a separate exact decision through docs/LOOP_25_AUTHORIZATION_PACKET.md. The request is not authorization; fixture generation, preprocessing execution, data/cache/target/model/training access, RW3, streams, devices, and hardware remain unauthorized.",
+      "resource_cap": "One thread, one worker, 4 MiB fixtures, 16 MiB working arrays, 8 MiB total generated artifacts, 45 seconds internal runtime, 4 KiB mutable state, and 1 GiB peak RSS."
     },
     {
       "loop_id": 26,

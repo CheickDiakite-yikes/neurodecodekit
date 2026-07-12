@@ -6,12 +6,16 @@
 4. Read `docs/CODEX_HANDOFF.md` for the next three work orders.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
    result, then use its preregistration and authorization documents for audit.
-6. Review `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` only when deciding whether
-   to authorize RW3 Stage A.
-7. Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md` and
+6. Read `docs/LOOP_25_PRIMARY_SOURCE_RESEARCH.md`,
+   `docs/LOOP_25_CAUSAL_PREPROCESSING_PREREGISTRATION.md`, and
+   `docs/LOOP_25_AUTHORIZATION_PACKET.md` before making the next numbered
+   decision.
+7. Review `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` only when deciding whether
+   to authorize the independent RW3 Stage A.
+8. Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md` and
    `docs/LOOPS_25_44_ROADMAP.md` for the planning-only Loops 25-44 queue.
-8. Paste `prompts/CODEX_START_PROMPT.md` into Codex to continue.
-9. Run tests:
+9. Paste `prompts/CODEX_START_PROMPT.md` into Codex to continue.
+10. Run tests:
 
 ```bash
 PYTHONPATH=src python -m unittest discover -s tests -v
@@ -19,10 +23,10 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 
 Tracker scope: the spreadsheet's `20` KPI is the size of the original roadmap,
 not the current loop number. Its dashboard now separately reports the current
-post-roadmap position as **Loop 24 parked; float32 retained**, and its ninth sheet
-contains the separate **Loops 25-44 planning-only queue**. Every new row is
-`Not Started` and unauthorized; adding the queue does not expand Loop 24 or
-authorize RW3.
+post-roadmap position as **Loop 25 preregistered; authorization pending**, and
+its ninth sheet contains the separate **Loops 25-44 queue**. Loop 25 is in
+review with `execution_authorized: false`; Loops 26-44 remain `Not Started` and
+unauthorized. The queue does not reopen Loop 24 or authorize RW3.
 
 The parallel Real-World Practice Track starts at
 `docs/REAL_WORLD_PRACTICE_TRACK_RESEARCH.md`. RW0 is a completed research gate;
@@ -42,6 +46,15 @@ must not be used for tuning. Real data, targets, training, energy measurement,
 RW3 Stage A, BrainFlow/LSL/PyXDF, sockets, streams, hardware, consumed caches,
 S20, and automatic cleaning remain unauthorized. Loop 24 and RW3 remain
 independent.
+Loop 25 is frozen at commit `a36d97b`, whose base and optional-neuro GitHub CI
+jobs both passed. Its target-free protocol specifies seeds 2501/2502, seven
+chunk schedules, ten resume cuts, three future-mutation cuts, 40 refusal IDs,
+21 access counters, one thread, 8 MiB total generated output, and a 45-second
+internal cap. The separate machine request remains `authorized_now: false`.
+No coefficients, fixture, transform, partition open, cache read, target, model,
+training run, CLI, or experiment payload exists. The next numbered decision is
+to use the exact sentence in `docs/LOOP_25_AUTHORIZATION_PACKET.md`, amend that
+packet, or hold.
 The proposed fresh S20 EEG block is **not authorized** for download or signal
 access. Its exact four-file, 96,090,264-byte dry run is in
 `docs/FRESH_EEG_BENCHMARK_S20_APPROVAL_PACKET.md`.
@@ -52,7 +65,8 @@ logs have been selectively downloaded under exact caps; the full dataset and
 12.79-GB EEG subtree have not been downloaded. Loops 9-12, 14-22, and 23.5 are
 complete; Loops 13, 23, and 24 are parked after measured gates. Loop 24 retains
 float32, consumed selection seed 2401, and left qualification seed 2402
-physically unopened.
+physically unopened. Loop 25 is preregistered but not authorized; seeds 2501
+and 2502 remain unopened. Loops 26-44 remain planning-only.
 Session 1 provides a strict 55/6/5 split with
 train-only robust scaling. Session 2 is a complete two-part FIFF recording with
 63 performed trials; MAT slots 54, 58, and 60 are explicitly empty and are
@@ -115,7 +129,10 @@ qint8 was smaller but incorrect and slower; the total runtime cap failed; seed
 `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`,
 `docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md`,
 `docs/LOOP_24_AUTHORIZATION_DECISION.md`,
-`docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md`, and
+`docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md`,
+`docs/LOOP_25_PRIMARY_SOURCE_RESEARCH.md`,
+`docs/LOOP_25_CAUSAL_PREPROCESSING_PREREGISTRATION.md`,
+`docs/LOOP_25_AUTHORIZATION_PACKET.md`, and
 `docs/POST_20_ROADMAP.md`.
 
 RW1 adds dependency-free `inspect-recording` and `inspect-intake-report`

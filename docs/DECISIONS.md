@@ -1311,3 +1311,61 @@ Evidence: `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md`, implementation commit
 `3a5dc0b`, ignored audit-bound report SHA-256
 `f877b7d88b00ce93ee8dd5091a6a0ba973c28a5d33d0a6972ca4dc82405dc098`, and
 the tracker `24-RUN` row.
+
+## 0051 - Freeze Loop 25 causal preprocessing before any numerical work
+
+Decision: preregister one target-free stateful causal preprocessing path at
+commit `a36d97b`, then prepare a separate hash-bound authorization request while
+keeping every execution field false. The registration snapshot is immutable;
+any future authorization must be recorded in a new tested, pushed, remotely
+green decision commit before filter design, fixture generation, numerical
+preprocessing, partition access, CLI work, or runtime.
+
+Why: the current real sentence path is valid offline plumbing, but its default
+zero-phase filters, whole-recording resampling, whole-recording or train-fit
+normalization, sentence endpointing, and post-context behavior do not prove a
+causal upstream path. Loop 21's zero-lookahead frame producer therefore cannot
+carry the full streaming claim by itself. The smallest useful next gate is one
+explicit transform chain whose future independence, timestamps, state, and
+resource behavior are falsifiable without targets or protected evidence.
+
+Frozen registration: five float32 channels enter at 1000 Hz; one stateful 50 Hz
+Q30 notch SOS and one stateful fourth-order 0.5-45 Hz Butterworth SOS run in
+float64; absolute global source indices divisible by ten produce 100 Hz output;
+contract-fixed center/scale values and an inclusive +/-5 clamp precede one
+float32 output cast. Seeds 2501 and 2502 define physically separate 12-item
+development/qualification partitions over six signal families. Seven chunk
+schedules, ten resume cuts, three future-mutation cuts, 40 refusal IDs, 21
+access counters, exact timing/state gates, and one-time qualification order are
+frozen.
+
+Authorization boundary: the machine request is bound to green registration
+commit `a36d97b8556e95637a21c86c44095b7e8d4c4863` and contract SHA-256
+`42781526225c556d0df54d1b6924fd5d9ecf95578a84c3e3922b6d5c7035050e`.
+`authorized_now` and all 15 nested authorization fields are false. Even exact
+authorization excludes real or consumed data, targets, labels, text,
+predictions, checkpoints, model inference, training, network access, RW3,
+streams, devices, hardware, and Loop 26. Seeds 2501/2502 remain unopened; seed
+2402 cannot be repurposed.
+
+Resource and verification result: the registration added 76,196 tracked bytes.
+The decision packet, machine request, and request tests add 24,316 bytes; the
+tracker workbook grows by 918 bytes to 77,394 bytes. The combined Loop 25 and
+roadmap boundary passes 27 tests in 0.14 seconds wall with 22,216,704-byte
+maximum RSS. The preregistration commit passed both GitHub CI jobs. No fixture,
+filter coefficient, partition, numeric payload, cache read, target/model read,
+training run, network call, RW3 operation, or device operation occurred.
+
+Next boundary: explicitly authorize the exact packet, amend it before
+authorization, or hold. A future passing Loop 25 can establish only one
+target-free causal preprocessing mechanics result. It cannot establish official
+Brain2Qwerty v2 equivalence, neural information, decoding accuracy, CER/WER
+improvement, end-to-end latency, unseen-person transfer, EEG/MEG usefulness,
+portable hardware, assistive efficacy, or clinical utility.
+
+Evidence: `docs/LOOP_25_PRIMARY_SOURCE_RESEARCH.md`,
+`docs/LOOP_25_CAUSAL_PREPROCESSING_PREREGISTRATION.md`,
+`registries/causal_preprocessing_contract.v0.json`,
+`docs/LOOP_25_AUTHORIZATION_PACKET.md`,
+`registries/loop25_authorization_request.v0.json`, the tracker `25-REG` row,
+and GitHub CI run `29193935671`.
