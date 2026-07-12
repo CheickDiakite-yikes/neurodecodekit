@@ -1569,3 +1569,54 @@ end-to-end interactive research runtime are unavailable by tool contract.
 Evidence: `docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop28_research_boundary.v0.json`,
 `tests/test_loop28_research_boundary.py`, and tracker row `28-R1`.
+
+## 0056 - Choose local-first EEG and partner OPM-MEG lanes; hold execution
+
+Decision: close Loop 29 planning research while leaving the portable-sensing
+experiment `Not Started`, every one of its 24 `authorized_now` fields false,
+and no device selected. Use scalp EEG as the immediate local-first
+accessibility research lane, OPM-MEG as a same-modality partner/lab lane,
+cryogenic MEG as the scientific reference, and non-neural wearables as controls
+or separate accessibility inputs.
+
+Why: Brain2Qwerty v2's random 76/153/230-channel subsets come from the same
+306-channel cryogenic MEGIN system and preserve its room, electronics, clocks,
+geometry, and noise field. They are model sensitivity evidence, not OPM-MEG or
+EEG qualification. OPM-MEG has measured speech tracking and real-time evoked-
+response mechanics, but current human systems still require specialist
+shielding, field control, geometry, motion tracking, and interference
+suppression. Scalp EEG has practical local hardware and repeated at-home
+recording evidence, but task-matched Brain2Qwerty EEG remains substantially
+weaker than MEG and dry systems carry reference, placement, low-frequency,
+motion, muscle, and clock risks. Home recording is not home text decoding.
+
+Future evidence boundary: preserve a 15-field cross-modality matrix, four
+modality profiles, six noncollapsible qualification levels, and 12 minimum
+future device-packet gates. A named device may proceed only when task, units,
+filters, reference, geometry, clocks, packets, locality, privacy, repeated-
+session, peripheral-control, licensing, and resource requirements can be
+measured directly. Vendor specifications, SDK imports, waveform plots, and
+successful file reads cannot skip qualification levels.
+
+Storage and real-data boundary: record the user's additional capacity as
+5,000,000,000 preferred and 10,000,000,000 absolute incremental bytes. This is
+capacity permission, not download permission. The separately gated S20 EEG
+packet is 96,090,264 bytes and the selected S25 MEG pair is 1,009,939,983
+bytes, for exactly 1,106,030,247 bytes combined and 3,893,969,753 bytes of
+preferred-capacity margin. Existing authorized S21 source material should
+answer the first source question before any additional source block is
+selected; unused space is not a collection target.
+
+Access and resource result: this research used 14 high-level public-web
+operations, one CPU thread and worker, and zero remote code/data payload
+downloads. It performed zero S20/S25 or consumed-data path/hash/header/signal/
+target reads; checkpoint/model/training/calibration runs; SDK imports; sockets;
+streams; device purchases; participant/partner outreach; or hardware sessions.
+External interactive runtime and peak RSS are unavailable from the research
+tool contract and are reported as unavailable rather than estimated.
+
+Evidence: `docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop29_research_boundary.v0.json`,
+`tests/test_loop29_research_boundary.py`, roadmap row 29, tracker decision
+`29-R1`, risk `R34`, research commit `f5fc740`, push CI run `29204700023`, and
+draft PR #8 CI run `29204804483`.

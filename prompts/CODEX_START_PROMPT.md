@@ -29,6 +29,10 @@ requests, and these files:
 - `registries/loop26_research_boundary.v0.json`
 - `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md`
 - `registries/loop27_research_boundary.v0.json`
+- `docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md`
+- `registries/loop28_research_boundary.v0.json`
+- `docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md`
+- `registries/loop29_research_boundary.v0.json`
 - `docs/POST_20_ROADMAP.md`
 - `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`
 - `docs/LOOPS_25_44_ROADMAP.md`
@@ -100,6 +104,15 @@ Do not reset, revert, delete, or overwrite work already present.
   plus observed, and strict corruption-control wins. All 21 authorization
   fields are false; no preregistration, prediction, calibration, or final open
   exists.
+- Loop 29 planning research is complete while the portable-sensing experiment
+  remains `Not Started`. Scalp EEG is the immediate local-first research lane,
+  OPM-MEG is the same-modality partner/lab lane, and cryogenic MEG remains the
+  reference. The registry freezes 15 requirements, four modality profiles, six
+  qualification levels, 12 future packet gates, a preferred 5,000,000,000-byte
+  and absolute 10,000,000,000-byte capacity envelope, and 24 false
+  authorization fields. Exact future S20 plus S25 bundles total 1,106,030,247
+  bytes, but storage capacity is not download permission. No real-data read,
+  model, SDK, stream, device, partner, or hardware operation occurred.
 - No real recording quality, neural advantage, unseen-person generalization,
   useful EEG decoder, real-time decoding, portable-hardware, arbitrary-thought,
   or clinical result has been demonstrated.
@@ -201,6 +214,10 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
     Target-wide signal statistics, subject embeddings, adapters, labels,
     calibration, model/control predictions, and final targets remain sealed.
     A future calibrated result cannot be relabeled as zero-shot.
+12. Treat the Loop 29 modality map and 5-10 GB envelope as planning research,
+    not a device or acquisition authorization. Do not infer OPM-MEG or EEG
+    behavior from cryogenic channel ablation; do not select, purchase, connect,
+    import an SDK for, stream from, or qualify hardware from this prompt.
 
 ## Required deliverables for the next authorized milestone
 

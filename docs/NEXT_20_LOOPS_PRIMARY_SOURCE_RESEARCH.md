@@ -358,7 +358,9 @@ superseded before authorization by the source-audited anti-alias amendment at
 green commit `b6b92d8`. The current v1 request remains false, seeds 2501/2502
 are unopened, and no Loop 25 coefficient, runtime, or fixture exists. Loop 26
 planning research is complete while its experiment remains `Not Started`;
-Loops 27-44 remain `Not Started`.
+Loop 27 metadata research, Loop 28 transfer research, and Loop 29 portability
+planning research are also complete while their experiments remain `Not
+Started`; Loops 30-44 remain `Not Started`.
 
 The detailed source trace and design correction live in
 `docs/LOOP_25_ANTI_ALIAS_AUDIT.md`. This addendum does not authorize execution
@@ -434,3 +436,31 @@ request, download selection, authorization sentence, local MAT hash, FIF
 header, signal, target, model, training, final open, or backup substitution
 exists. Exact research and source links are in
 `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md`.
+
+## 2026-07-12 Loop 29 Research Addendum
+
+Loop 29 planning research is complete while the experiment remains `Not
+Started`. The primary-source review keeps cryogenic MEG, OPM-MEG, scalp EEG,
+and non-neural wearables in four separate profiles. It selects scalp EEG as the
+immediate local-first accessibility lane, OPM-MEG as a same-modality partner/
+lab lane, and cryogenic MEG as the scientific reference. Brain2Qwerty v2's
+random 76/153/230-channel cryogenic subsets are model sensitivity evidence,
+not OPM-MEG or EEG qualification.
+
+The machine boundary freezes 15 cross-modality requirements, six qualification
+levels, 12 future device-packet gates, 18 source bindings, and 24 false
+authorization fields. It distinguishes task evidence, units, filters,
+reference, geometry, field control, contact/fit, motion and peripheral
+artifacts, clocks, packets, local export, privacy, licensing, repeated sessions,
+compute, and claim scope. Home EEG recording mechanics do not establish home
+text decoding; OPM wearability does not establish ordinary-home operation.
+
+The user's additional 5-10 GB allowance is recorded as a preferred
+5,000,000,000-byte and absolute 10,000,000,000-byte incremental capacity
+envelope, not download permission. The exact future S20 EEG and S25 MEG bundles
+total 1,106,030,247 bytes, leaving 3,893,969,753 bytes below the preferred
+ceiling. This research downloaded zero payload bytes and opened no real header,
+signal, target, consumed evidence, model, training path, SDK, socket, stream,
+device, partner session, or hardware operation. Exact sources and boundaries
+are in `docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop29_research_boundary.v0.json`.

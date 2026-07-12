@@ -56,9 +56,17 @@
 > zero-shot S25 final-only recommendation: zero fit rows, at least 48 final
 > rows, at least 0.05 macro sentence-CER advantage, 65,535 paired assignments
 > plus observed, and strict corruption-control wins. All 21 authorization
-> fields are false and the experiment remains `Not Started`; Loops 29-44 remain
-> `Not Started`. This does not reopen Loop 24 or authorize RW3, data, targets,
-> models, validation, training, calibration, or hardware.
+> fields are false and the experiment remains `Not Started`. Loop 29 planning
+> research now selects scalp EEG as the immediate local-first lane and OPM-MEG
+> as a same-modality partner/lab lane while the experiment remains `Not
+> Started`. Its 15 requirements, four modality profiles, six qualification
+> levels, 12 future packet gates, and 24 false authorization fields are machine
+> checked. The preferred 5,000,000,000-byte and absolute 10,000,000,000-byte
+> capacity limits do not authorize the selected 1,106,030,247-byte S20 plus S25
+> future bundle. No download, real-data read, model, SDK, stream, device,
+> partner, or hardware operation occurred. Loops 30-44 remain `Not Started`.
+> This does not reopen Loop 24 or authorize RW3, data, targets, models,
+> validation, training, calibration, or hardware.
 > In parallel, RW0 closes a primary-source Real-World Practice research gate
 > with eight dataset records, 13 device records, a local BYO Neurodata
 > contract, and one exact S20 EEG dry-run packet. RW1 now closes a
@@ -213,6 +221,11 @@ This repo is a starter scaffold with working pure-Python components:
   fit rows, a 48-row/0.05-CER/65,535-assignment one-time rule, four frozen
   comparators, physically separate calibrated-transfer requirements, 21 false
   authorization fields, and zero protected access
+- machine-checked Loop 29 planning research with separate cryogenic MEG,
+  OPM-MEG, scalp EEG, and peripheral-control profiles; 15 requirements; six
+  qualification levels; 12 future packet gates; exact 5-10 GB capacity limits;
+  24 false authorization fields; and zero protected data, model, stream, device,
+  partner, or hardware access; the experiment remains `Not Started`
 - JSON/Markdown metrics report command
 - CLI smoke commands
 - unit tests
@@ -225,23 +238,25 @@ negative within-session event comparison. None is a decoder success. Do not
 turn these results, a variance ranking, or a geometry proxy into unseen-person
 or population generalization.
 
-Current Loop 28 local verification passes 394 unittests with 3 expected skips
-in 22.70 seconds wall and 566,378,496-byte maximum RSS; pytest reports 391
-passed, 3 skipped, and 184 subtests in 23.75 seconds wall with
-587,792,384-byte maximum RSS. The focused Loop 25-28/roadmap boundary has 69
-passing tests in 0.08 seconds wall and 27,639,808-byte maximum RSS.
-Dependency-light Python 3.12 discovery is green at 362 tests with 121 optional
-skips in 0.79 seconds wall and 46,891,008-byte maximum RSS. The three full
-counts are each 14 above the Loop 27 public closeout. No Loop 25-28 fixture,
-coefficient, preprocessing run, candidate download, local MAT payload hash,
-header/signal/target/validation/model read, training run, calibration run,
-network payload, RW3 operation, stream, board, device, or hardware operation
-occurred. The tracked workbook is 82,284 bytes with SHA-256
-`312a98d5d63d52ceb413383b7cd8a2424b0c1cb864665a485d3320f74d42ee7e`;
-all nine sheets render, reload with byte-identical key-range inspection, and
-pass two formula scans with zero matches. Loop 28 research commit `a55b7e6`
-passed both GitHub jobs in push run `29201270789` and draft PR #7 run
-`29201323258`.
+Current Loop 29 local verification passes 411 unittests with 3 expected skips
+in 25.60 seconds wall and 554,991,616-byte maximum RSS; pytest reports 408
+passed, 3 skipped, and 191 subtests in 24.31 seconds wall with
+583,204,864-byte maximum RSS. The focused Loop 25-29/roadmap boundary has 107
+passing tests in 0.19 seconds wall and 30,818,304-byte maximum RSS.
+Dependency-light Python 3.12 discovery is green at 379 tests with 121 optional
+skips in 1.97 seconds wall and 47,153,152-byte maximum RSS. Each full count is
+17 above the Loop 28 public closeout. No Loop 25-29 fixture, coefficient,
+preprocessing run, candidate download, local MAT payload hash, header/signal/
+target/validation/model read, training run, calibration run, network payload,
+RW3 operation, SDK import, stream, board, device, partner, or hardware
+operation occurred. The tracked workbook is 83,821 bytes with SHA-256
+`d80ce6940f65939c9ea8acca682cc416f988d56c0ceca42222e9e69eaa30ed6d`;
+all nine sheets render, the export reloads with exact key ranges, and two
+formula scans have zero matches. Ruff, compileall, 18 JSON and two TOML parses,
+70 local Markdown links, seven CLI help surfaces, unauthorized Loop 25-29
+command absence, and `git diff --check` pass. Loop 29 research commit
+`f5fc740` is green in push run `29204700023` and draft PR #8 run
+`29204804483`.
 
 ## The north star
 
@@ -284,8 +299,13 @@ This is not primarily a model repo. It is a **research loop repo**.
    `docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop28_research_boundary.v0.json`. Its planning research supplies
    the strict zero-shot final rule, but no preregistration, model prediction,
-   calibration, final open, or authorization exists. Each future loop still
-   requires its own packet before execution.
+   calibration, final open, or authorization exists. For Loop 29, read
+   `docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md` and
+   `registries/loop29_research_boundary.v0.json`. Its planning research supplies
+   a two-lane EEG/OPM-MEG pathway and a 5-10 GB capacity boundary, but no device
+   selection, preregistration, download, SDK, stream, hardware session, or
+   portable decoding result exists. Each future loop still requires its own
+   packet before execution.
 4. **Keep the GitHub history reviewable.** PR #3 carries the validated Loop
    8-24 evidence stack and is green. Draft PR #4 carries the separately stacked
    Loop 25 v0 history, v1 amendment, and still-false decision packet so
@@ -294,8 +314,10 @@ This is not primarily a model repo. It is a **research loop repo**.
    top. The `codex/loop-27-preregistration` branch then stacks only the
    metadata-only Loop 27 boundary. The `codex/loop-28-transfer-research` branch
    stacks the transfer decision research without S25 access or execution. Keep
-   each independently reviewable; do not merge until CI, license, privacy,
-   history, and proof-boundary review is complete.
+   `codex/loop-29-portable-sensing-research` stacks only the portability
+   research boundary without data, device, or hardware access. Keep each
+   independently reviewable; do not merge until CI, license, privacy, history,
+   and proof-boundary review is complete.
 
 RW4 is not next: S20 acquisition remains blocked until explicit approval names
 revision `88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684`, exactly four files, the
@@ -322,7 +344,9 @@ request remain immutable history. Its current evidence and decision surface are
 work orders, and machine
 contract are in `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`,
 `docs/LOOPS_25_44_ROADMAP.md`, and
-`registries/next_20_loops.v0.json`. RW1 evidence is in
+`registries/next_20_loops.v0.json`. Loop 29's research note and machine boundary
+are `docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop29_research_boundary.v0.json`. RW1 evidence is in
 `docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md`; RW2 evidence is in
 `docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md`,
 `docs/RW2_PRIMARY_SOURCE_RESEARCH.md`, and

@@ -2,7 +2,7 @@
 
 Date: 2026-07-12
 
-Status: **Loop 25 amended v1 and awaiting authorization; Loops 26-28 planning research complete; Loops 29-44 planning only; no execution is authorized**
+Status: **Loop 25 amended v1 and awaiting authorization; Loops 26-29 planning research complete; Loops 30-44 planning only; no execution is authorized**
 
 Machine source of truth: `registries/next_20_loops.v0.json`
 
@@ -269,36 +269,57 @@ dependencies. No such data or run is authorized by this document.
 
 ## Loop 29 - Portable Sensing Translation
 
+**Current status:** Planning research complete; experiment `Not Started`.
+`docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop29_research_boundary.v0.json` are the human and machine
+boundaries. All 24 `authorized_now` fields are false.
+
 **Core question:** Which validated requirements survive movement from
 cryogenic MEG toward OPM-MEG or EEG, and which assumptions break?
 
 **Why it moves the goal:** Users care about accessible sensing, but random
 channel reduction, a file reader, and a vendor data sheet are not portable
-device evidence.
+device evidence. The completed research selects scalp EEG as the immediate
+local-first accessibility lane, OPM-MEG as a same-modality partner/lab lane,
+cryogenic MEG as the scientific reference, and peripheral wearables as controls
+or separate accessibility inputs.
 
-**Build:** Create a versioned modality requirement matrix for geometry,
-reference, units, bandwidth, noise, shielding, motion, timing, compute,
-calibration, privacy, firmware, and data ownership.
+**Build:** Future work may implement the versioned 15-field modality matrix,
+six-level qualification ladder, and 12-gate device packet validator. No Loop
+29 implementation, device descriptor, acquisition packet, SDK, or runtime
+exists now.
 
-**Research:** Review primary OPM-MEG and EEG sources and record each field as
-measured, specified, inferred, or unavailable. Define the minimum future
-partner-data and device packet.
+**Research:** Completed primary-source OPM-MEG and EEG review records four
+separate modality profiles, measured-versus-specified evidence, task gaps,
+clock/transport risks, geometry/reference requirements, home-recording limits,
+and the minimum future partner/device packet. Brain2Qwerty v2's 76/153/230
+random cryogenic channel subsets remain model sensitivity evidence, not OPM-
+MEG or EEG device evidence.
 
 **Data and controls:** Public specifications and existing aggregate results
 only. Keep cryogenic MEG, OPM-MEG, scalp EEG, sEMG, eye, and motion evidence in
-separate rows. Exclude synthetic channel subsets as modality equivalence.
+separate rows. Exclude synthetic channel subsets as modality equivalence. The
+preferred incremental storage ceiling is 5,000,000,000 bytes and the absolute
+ceiling is 10,000,000,000 bytes. The selected future S20 plus S25 bundles total
+1,106,030,247 bytes, but capacity permission is not download permission and
+Loop 29 downloaded zero bytes.
 
 **Metrics:** requirement coverage; unavailable fields; sensor count/rate/units;
 geometry and clock provenance; measured-versus-specified count; future
 qualification requirements.
 
-**Gate:** Proceed to one device-specific packet only when task, timing,
-geometry, privacy, licensing, and resource requirements are directly
-measurable. Otherwise retain a research matrix without a hardware claim.
+**Gate:** Proceed to one device-specific packet only when task, raw locality,
+reference, geometry, timing, packets, privacy, licensing, repeated-session,
+peripheral-control, and resource requirements are directly measurable.
+Otherwise retain the research matrix without a hardware claim. Home EEG
+recording mechanics do not establish home text decoding, and OPM wearability
+does not establish ordinary-home operation.
 
 **Dependencies and authorization:** Depends on Loop 27's evidence taxonomy.
-Research does not authorize a device session, recording, download, or signal
-read.
+The planning dependency is satisfied, but preregistration and execution remain
+blocked. Research does not authorize S20, S25, a real header/signal/target read,
+a model or training run, a device session, recording, download, SDK import,
+socket, stream, purchase, partner session, or hardware operation.
 
 ## Loop 30 - Local Private Streaming Prototype
 

@@ -2328,3 +2328,65 @@ This milestone adds a machine-checkable one-time strict zero-shot transfer
 decision design. It does not establish S25 compatibility, unseen-person neural
 advantage, decoding accuracy, unseen-text or population generalization,
 causality, real-time decoding, or portable-hardware behavior.
+
+## 2026-07-12 - Define the Loop 29 portable-sensing translation boundary
+
+Loop 29 planning research now turns "portable" into two noninterchangeable
+evidence lanes without selecting hardware. Scalp EEG is the immediate local-
+first accessibility lane because practical acquisition, open formats, and
+repeated self-administered home recordings exist. OPM-MEG is the same-modality
+partner/lab lane because it preserves magnetic sensing but still depends on
+specialist shielding, active field control, geometry, motion tracking, and
+interference suppression. Cryogenic MEG remains the scientific reference;
+peripheral wearables remain controls or separate accessibility inputs.
+
+The primary-source research explicitly rejects two shortcuts. Brain2Qwerty
+v2's 76/153/230-channel random subsets remain cryogenic MEGIN measurements and
+do not qualify OPM-MEG or EEG. Evidence that dry EEG can be recorded repeatedly
+at home supports acquisition mechanics, not at-home thought typing or text
+decoding. The machine boundary freezes 15 cross-modality requirements, four
+modality profiles, six qualification levels, 12 future device-packet gates, 18
+source bindings, and 24 false `authorized_now` fields. The Loop 29 experiment
+remains `Not Started`; no device is selected or recommended.
+
+The user's additional 5-10 GB allowance is bound as 5,000,000,000 preferred
+and 10,000,000,000 absolute incremental bytes, not as download permission. The
+separately gated S20 EEG bundle is 96,090,264 bytes and S25 MEG pair is
+1,009,939,983 bytes, totaling exactly 1,106,030,247 bytes and leaving
+3,893,969,753 bytes below the preferred ceiling. Loop 29 downloaded zero
+payload bytes and opened no real path, payload hash, header, signal, target,
+consumed evidence, checkpoint, model, training, calibration, SDK, socket,
+stream, device, partner, or hardware operation.
+
+The nine-sheet tracker updates the dashboard and Loop 29 row, adds decision
+`29-R1`, risk `R34`, and prompt `Loop29-Research`, and preserves Loop 25 as the
+active numbered execution decision. The 83,821-byte workbook has SHA-256
+`d80ce6940f65939c9ea8acca682cc416f988d56c0ceca42222e9e69eaa30ed6d`;
+all nine sheets render, the exported workbook reloads with exact key ranges,
+and two formula scans match zero cells. The unrelated inspection sidecar
+remains byte-identical at SHA-256
+`5cd0ef08446c4e5feee5ce11f27eef41fae5eee8975cc77f6d401faca3b79f45`.
+
+Final local verification passes 107 focused Loop 25-29/roadmap tests in 0.19
+seconds wall with 30,818,304-byte maximum RSS; 411 optional unittests with
+three expected skips in 25.60 seconds wall and 554,991,616-byte maximum RSS;
+408 pytest tests with three skips and 191 subtests in 24.31 seconds wall and
+583,204,864-byte maximum RSS; and 379 dependency-light Python 3.12 tests with
+121 optional skips in 1.97 seconds wall and 47,153,152-byte maximum RSS. Each
+full count is 17 above the Loop 28 closeout.
+
+Repository-wide Ruff, compileall, 18 tracked/worktree JSON and two TOML parses,
+seven CLI help surfaces, 55 registered commands, unauthorized Loop 25-29
+command absence, `git diff --check`, 70 local Markdown links, and workbook
+render/reload/formula inspection pass. Research commit `f5fc740` passes both
+jobs in push run `29204700023` and draft PR #8 run `29204804483`. Public
+research used 14 high-level web operations and downloaded zero code/data
+payload bytes; external interactive runtime and peak RSS remain unavailable
+from the tool contract.
+
+This milestone adds a machine-checkable path from cryogenic MEG toward local
+EEG and partner OPM-MEG with a bounded data allocation. It does not establish
+portable-device signal quality, OPM sentence production, useful EEG text
+decoding, neural advantage, unseen-person generalization, at-home text input,
+end-to-end real-time behavior, assistive efficacy, diagnosis, or clinical
+utility.
