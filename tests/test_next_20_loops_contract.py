@@ -11,7 +11,7 @@ LOOP24_PATH = REPO_ROOT / "registries" / "local_precision_runtime_contract.v0.js
 RW3_PATH = REPO_ROOT / "registries" / "replay_equivalence_contract.v0.json"
 RW3_REQUEST_PATH = REPO_ROOT / "registries" / "rw3_stage_a_authorization_request.v0.json"
 LOOP25_REQUEST_PATH = (
-    REPO_ROOT / "registries" / "loop25_authorization_request.v0.json"
+    REPO_ROOT / "registries" / "loop25_authorization_request.v1.json"
 )
 
 
@@ -37,12 +37,16 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         self.assertEqual(boundary["current_numbered_gate"], 25)
         self.assertEqual(
             boundary["current_gate_status"],
-            "preregistered_awaiting_explicit_authorization",
+            "amended_preregistration_awaiting_explicit_authorization",
         )
         self.assertEqual(boundary["loop24_status"], "parked_resource_cap_exceeded")
         self.assertTrue(boundary["loop24_execution_was_authorized"])
         self.assertFalse(boundary["loop24_execution_authorized_now"])
         self.assertTrue(boundary["loop25_preregistration_ci_green"])
+        self.assertTrue(boundary["loop25_amendment_ci_green"])
+        self.assertTrue(
+            boundary["loop25_original_request_superseded_before_authorization"]
+        )
         self.assertTrue(boundary["loop25_authorization_request_prepared"])
         self.assertFalse(boundary["loop25_execution_authorized"])
         self.assertFalse(boundary["loop25_development_seed_opened"])
@@ -83,14 +87,15 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
             with self.subTest(loop=row["loop_id"]):
                 self.assertFalse(row["execution_authorized"])
                 if row["loop_id"] == 25:
-                    self.assertEqual(row["status"], "Preregistered")
+                    self.assertEqual(row["status"], "Amended Preregistration")
                     self.assertEqual(
                         row["proof_posture"],
-                        "preregistered_no_implementation_or_execution",
+                        "amended_preregistered_no_implementation_or_execution",
                     )
                     registration = row["registration"]
-                    self.assertEqual(registration["commit"][:7], "a36d97b")
+                    self.assertEqual(registration["commit"][:7], "b6b92d8")
                     self.assertFalse(registration["authorized_now"])
+                    self.assertFalse(registration["superseded_v0"]["was_authorized"])
                 else:
                     self.assertEqual(row["status"], "Not Started")
                     self.assertEqual(row["proof_posture"], "planned_not_authorized")
@@ -112,7 +117,10 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
 
     def test_protected_real_evidence_and_consumed_seeds_remain_explicit(self):
         protected = self.roadmap["protected_evidence"]
-        self.assertEqual(protected["synthetic_seeds"], [2203, 2303, 2353])
+        self.assertEqual(protected["synthetic_seeds"], [2203, 2303, 2353, 2401])
+        self.assertEqual(
+            protected["unopened_synthetic_seeds"], [2402, 2501, 2502]
+        )
         real_text = " ".join(protected["real_cohorts"])
         self.assertIn("S21 session-1", real_text)
         self.assertIn("S21 session-2", real_text)
@@ -147,6 +155,8 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                 "brain2qwerty_v2",
                 "brain2qwerty_v1",
                 "mne_resampling",
+                "neuralset_v0_2_2",
+                "scipy_iirdesign",
                 "bids_derivatives",
                 "moabb_benchmark",
                 "lsl_time_sync",

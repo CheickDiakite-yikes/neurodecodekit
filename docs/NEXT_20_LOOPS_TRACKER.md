@@ -3,7 +3,8 @@
 > **Scope:** the 20-row table and its KPI describe the original roadmap. Loop
 > numbers 21-24 and the Loop 23.5 calibration gate are post-roadmap extensions,
 > so “20 loops” and “Loop 24 parked” are both true but refer to different
-> things. A second tranche now defines Loops 25-44; Loop 25 is preregistered
+> things. A second tranche now defines Loops 25-44; Loop 25 is amended and
+> preregistered
 > while Loops 26-44 remain planning-only, so the
 > spreadsheet dashboard displays the original roadmap, current gate, and next
 > 20-loop queue separately.
@@ -175,15 +176,16 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md`,
   `registries/local_precision_runtime_contract.v0.json`, and
   `registries/loop24_authorization_decision.v0.json`.
-- Post-roadmap Loop 25: Preregistered at `a36d97b` with green base and optional-
-  neuro CI. One target-free causal SOS/decimation/frozen-scale path, seeds
-  2501/2502, seven schedules, ten resume cuts, three future-mutation cuts, 40
-  refusals, 21 counters, and lower-than-roadmap resource caps are frozen. The
-  hash-bound request remains `authorized_now: false`; no fixture, coefficients,
-  transform, partition open, CLI, or runtime exists. See
-  `docs/LOOP_25_PRIMARY_SOURCE_RESEARCH.md`,
-  `docs/LOOP_25_CAUSAL_PREPROCESSING_PREREGISTRATION.md`, and
-  `docs/LOOP_25_AUTHORIZATION_PACKET.md`.
+- Post-roadmap Loop 25: Amended preregistration at green commit `b6b92d8` after
+  the original `a36d97b` scope was superseded before authorization. V1 adds a
+  dedicated causal anti-alias SOS, 65,537 response points across 0-500 Hz, 23
+  alias probes, 45 refusals, and 23 counters while preserving seeds 2501/2502,
+  seven schedules, ten resume cuts, three future-mutation cuts, and the lower
+  resource caps. The replacement request remains `authorized_now: false`; both
+  seeds are unopened and no fixture, coefficient, transform, partition open,
+  CLI, or runtime exists. See `docs/LOOP_25_ANTI_ALIAS_AUDIT.md`,
+  `docs/LOOP_25_CAUSAL_PREPROCESSING_AMENDMENT_1.md`, and
+  `docs/LOOP_25_AUTHORIZATION_PACKET_V1.md`.
 - Parallel Real-World Practice Track RW0: Done as a primary-source metadata
   research gate. Eight dataset records, 13 device records, a local workbench
   contract, and one exact S20 EEG dry-run packet are frozen. No download or
@@ -215,20 +217,21 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   authorize no code. Loop 24 is now parked and cannot authorize RW3, data,
   training, or hardware. Seeds 2203, 2303, 2353, and 2401 stay consumed; seed
   2402 remains unopened. Loop 25's separate numbered decision is now to
-  authorize its frozen packet exactly, amend it, or hold; registration and
-  packet preparation do not authorize execution.
+  authorize only its v1 packet exactly, amend it again, or hold; registration
+  and packet preparation do not authorize execution.
 
 ## Next planned 20 loops: 25-44
 
 These rows are an **authorization-gated queue**, not approved experiments. The full
 acceptance boundaries, stop rules, controls, resource caps, dependencies, and
 authorization rules live in `docs/LOOPS_25_44_ROADMAP.md` and
-`registries/next_20_loops.v0.json`. Loop 25 is `Preregistered`; Loops 26-44 are
-`Not Started`. Every row retains `execution_authorized: false`.
+`registries/next_20_loops.v0.json`. Loop 25 is `Amended Preregistration`;
+Loops 26-44 are `Not Started`. Every row retains
+`execution_authorized: false`.
 
 | # | Phase | Gate | Core outcome | Priority | Effort | Status |
 |---:|---|---|---|---|---|---|
-| 25 | Causal Evidence | Causal Preprocessing Audit | Prove the complete preprocessing path has zero undeclared future context, stable timing, and schedule identity. | P0 | M | Preregistered; authorization pending |
+| 25 | Causal Evidence | Causal Preprocessing Audit | Prove the complete preprocessing path has zero undeclared future context, full folding-band anti-alias protection, stable timing, and schedule identity. | P0 | M | Amended v1; authorization pending |
 | 26 | Causal Evidence | Real Validation-Only Encoder Gate | Decide whether one fixed tiny causal encoder beats no-signal and shuffled controls on source validation only. | P0 | L | Not Started |
 | 27 | Causal Evidence | Fresh Holdout Preregistration | Identify one independent, licensed, byte-capped holdout without downloading or previewing it. | P0 | M | Not Started |
 | 28 | Causal Evidence | Session And Person Transfer | Make one claim-specific fresh same-person or unseen-person transfer decision under a frozen protocol. | P0 | L | Not Started |

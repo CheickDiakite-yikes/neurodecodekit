@@ -337,9 +337,13 @@ is established by this research pass.
 
 The roadmap's initial planning decision above is preserved as historical
 provenance. The current numbered gate has since advanced to Loop 25 planning:
-Loop 24 is parked, and Loop 25 research plus preregistration are frozen at
-`a36d97b` with green CI. The separate authorization request remains false, no
-Loop 25 runtime or fixture exists, and Loops 26-44 remain `Not Started`.
+Loop 24 is parked. Loop 25's original preregistration at `a36d97b` was
+superseded before authorization by the source-audited anti-alias amendment at
+green commit `b6b92d8`. The current v1 request remains false, seeds 2501/2502
+are unopened, no Loop 25 coefficient, runtime, or fixture exists, and Loops
+26-44 remain `Not Started`.
 
-This addendum changes tracker state only. It does not upgrade any primary-source
-finding or authorize execution.
+The detailed source trace and design correction live in
+`docs/LOOP_25_ANTI_ALIAS_AUDIT.md`. This addendum does not authorize execution
+or upgrade the amended protocol into a filter, neural, decoding, or latency
+result.

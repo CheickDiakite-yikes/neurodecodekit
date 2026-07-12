@@ -2042,3 +2042,90 @@ command absence, `git diff --check`, 61 local Markdown links, workbook reload/
 formula inspection, and the 51-commit Gitleaks scan all pass. The public GitHub
 repository description and 20 research/EEG/MEG/open-source topics remain current;
 no repository-setting churn was needed.
+
+## 2026-07-12 - Supersede Loop 25 v0 with a full anti-alias amendment
+
+An adversarial preauthorization review found one material gap in the original
+Loop 25 packet. V0 used the fourth-order 0.5-45 Hz task bandpass as its
+anti-alias filter for 10x decimation, checked only 60 Hz at -6 dB, and left
+almost the complete 50-500 Hz source folding band unbounded. No seed,
+coefficient, or runtime had opened, so the packet could be corrected without
+contaminating either protected partition.
+
+The source trace follows the actual public dependency chain. Brain2Qwerty's
+commit `3bf5a40` pins NeuralSet 0.2.2, MNE 1.11.0, and SciPy 1.14.1. NeuralSet
+tag `v0.2.2` applies notch, bandpass, a separate MNE `Raw.resample`, and then
+scaling. MNE's default resampler is a complete-signal FFT anti-alias path,
+which confirms that anti-aliasing is a separate responsibility but is not
+eligible for a zero-lookahead runtime. Exact upstream commit, blob, and
+SHA-256 identities are recorded in `docs/LOOP_25_ANTI_ALIAS_AUDIT.md` and the
+v1 machine contract.
+
+Commit `b6b92d8` preserves the v0 contract, request, preregistration, research,
+and tests byte-for-byte while adding
+`causal_preprocessing_contract.v1.json`. V1 freezes a dedicated elliptic SOS
+designed by `scipy.signal.iirdesign`: 45 Hz passband edge, at most 1 dB loss,
+50 Hz stopband edge, and at least 60 dB designed attenuation. It registers
+65,537 inclusive response points from 0-500 Hz, 23 exact alias source probes,
+a -59.5 dB dense folding-band gate on both the dedicated stage and complete
+chain, at most 17 total SOS sections, and a 1,360-byte filter-state array.
+Ripple, transition-band behavior, step ringing, pole margin, and frequency-
+dependent delay remain mandatory disclosures.
+
+The access order is tightened: after a future separate authorization-only
+commit is tested, pushed, and green, coefficients may be generated exactly
+once and hash-bound. Pole, dense response, alias-map, impulse, and step checks
+run before fixture metadata or arrays. Any static failure parks with both seeds
+2501 and 2502 unopened. The original six signal families, seven schedules, ten
+resume cuts, three future-mutation cuts, one-thread execution, 8 MiB total
+artifact cap, 45-second internal cap, and one-time qualification rule remain.
+The refusal surface grows from 40 to 45 and the access ledger from 21 to 23.
+
+The amendment commit passed 342 unittests with three expected skips in 22.02
+seconds wall with 569,737,216-byte maximum RSS. Eleven new dependency-free
+amendment invariants pass, and
+the focused amendment plus immutable-v0 request boundary passed 29 tests in
+0.12 seconds with 22,560,768-byte maximum RSS. Both GitHub CI jobs passed on
+push run `29195938038` before the replacement request was prepared.
+
+The second milestone adds `docs/LOOP_25_AUTHORIZATION_PACKET_V1.md`,
+`registries/loop25_authorization_request.v1.json`, and 11 request invariants.
+The request binds the green amendment commit, v1 contract/amendment/audit/test
+hashes, superseded v0 hashes, exact scope, resources, seeds, order, and claim
+boundary. All 16 request-level `authorized_now` fields remain false. The v0
+authorization sentence is explicitly non-actionable; the next decision is to
+authorize only v1 exactly, amend again, or hold.
+
+Public docs, AGENTS, Start Here, the handoff, both continuation prompts, the
+human and machine roadmaps, and the tracker now name `Amended
+Preregistration`. The tracker was edited with the bundled artifact-tool
+runtime after a nine-sheet pre-edit render. It adds decision `25-AA`, risk
+`R30`, updates the Loop 25 prompt and row, and preserves all other sheets. The
+78,492-byte workbook has SHA-256
+`483fde426c8212e7956814462b0aa11b0ca8426163b3dad95f6574eb7e10eb92`;
+all nine sheets rendered, the exported workbook reloaded, table ranges end at
+Decision Log row 39 and Risk Register row 31, and both in-memory and reloaded
+formula scans have zero matches. The unrelated inspection sidecar remains
+unmodified at SHA-256
+`5cd0ef08446c4e5feee5ce11f27eef41fae5eee8975cc77f6d401faca3b79f45`.
+
+Final local verification passes 353 unittests with three expected skips in
+20.28 seconds wall and 570,310,656-byte maximum RSS; 350 pytest tests with
+three skips and 163 subtests in 21.03 seconds wall and 583,467,008-byte maximum
+RSS; and 321 true dependency-light Python 3.12 tests with 121 expected optional
+skips in 1.39 seconds wall and 45,465,600-byte maximum RSS. The 49 focused v0,
+v1, request, and roadmap tests pass in 0.09 seconds wall with 23,216,128-byte
+maximum RSS.
+
+Repository-wide Ruff, compileall, tracked JSON and TOML parsing, seven CLI help
+surfaces, unauthorized Loop 25 command absence, `git diff --check`, 62 local
+Markdown links, workbook reload/formula inspection, and the 53-commit Gitleaks
+scan pass. No filter design, coefficient, fixture, seed open, numerical
+preprocessing, real/cache/consumed/target/model/training/network/RW3/stream/
+device/hardware operation, or generated experiment payload occurred.
+
+This milestone adds a stronger, cheaper-to-fail causal preprocessing protocol.
+It does not add a filter result or establish official Brain2Qwerty equivalence,
+acceptable phase/ringing for neural decoding, neural information, CER/WER
+improvement, end-to-end latency, transfer, portable hardware, assistive
+efficacy, diagnosis, or clinical utility.

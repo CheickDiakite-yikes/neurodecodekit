@@ -1369,3 +1369,72 @@ Evidence: `docs/LOOP_25_PRIMARY_SOURCE_RESEARCH.md`,
 `docs/LOOP_25_AUTHORIZATION_PACKET.md`,
 `registries/loop25_authorization_request.v0.json`, the tracker `25-REG` row,
 and GitHub CI run `29193935671`.
+
+## 0052 - Supersede Loop 25 anti-alias scope before authorization
+
+Decision: preserve every v0 registration and request byte as immutable history,
+but withdraw v0 as an actionable execution scope before authorization. Replace
+it with `causal_preprocessing_contract.v1.json`, whose dedicated causal
+anti-alias stage and complete folding-band gate must pass before development
+seed 2501 can open. Keep every v1 `authorized_now` field false and prepare a
+new request bound to green amendment commit `b6b92d8`.
+
+Why: the v0 path treated its fourth-order 0.5-45 Hz task bandpass as the
+anti-alias filter for 10x decimation and checked only 60 Hz at -6 dB above the
+new 50 Hz Nyquist. It left almost all of the 50-500 Hz source folding band
+unbounded. The official Brain2Qwerty dependency manifest pins NeuralSet 0.2.2,
+whose extractor applies notch, bandpass, a separate MNE `Raw.resample`, and
+then scaling. MNE 1.11's default is an offline complete-signal FFT resampler,
+so it proves a separate anti-alias responsibility but is not itself eligible
+for this zero-lookahead runtime.
+
+Amended design: add one stateful elliptic SOS created by
+`scipy.signal.iirdesign` with a 45 Hz passband edge, at most 1 dB passband loss,
+a 50 Hz stopband edge, and at least 60 dB designed stopband attenuation. Audit
+65,537 inclusive points from 0-500 Hz, 23 exact source-to-output alias probes,
+the dedicated stage, and the complete chain. Require no greater than -59.5 dB
+throughout 50-500 Hz, at most 17 total SOS sections, a 1,360-byte filter-state
+array, stable poles, finite impulse/step behavior, and explicit ripple,
+ringing, transition-band, and frequency-dependent-delay warnings. Preserve the
+seven schedules, ten resume cuts, three future-mutation cuts, seeds 2501/2502,
+one thread, 8 MiB artifact cap, and 45-second internal cap. The refusal surface
+grows from 40 to 45 and the access ledger from 21 to 23.
+
+Evidence order: after a future exact v1 authorization-only commit is tested,
+pushed, and green, coefficients may be designed once and hash-bound. The
+static pole/response/alias/impulse/step gate then runs before fixture metadata
+or arrays are opened. Any static failure parks with seeds 2501 and 2502 both
+unopened. Qualification remains conditional on one frozen complete development
+pass. No threshold can move after protected access.
+
+Provenance and verification: v0 contract SHA-256
+`42781526225c556d0df54d1b6924fd5d9ecf95578a84c3e3922b6d5c7035050e`
+and v0 request SHA-256
+`3d103a0a18bd1d9ea8b320cde9515f891e41646c51132ad9c7adea35838f04b4`
+remain exact. V1 contract SHA-256 is
+`ecec99a7cc505ec0256c01c3c1e8aeaa05323ab54a71528323fa6d32bd289141`.
+Commit `b6b92d8ea1cdeadfd6b7cd9f4704aee018516197` passed both GitHub CI jobs in
+run `29195938038`. Its local suite passed 342 tests with three expected skips;
+11 new amendment invariants and the immutable-v0 checks pass. The updated
+nine-sheet tracker is 78,492 bytes with SHA-256
+`483fde426c8212e7956814462b0aa11b0ca8426163b3dad95f6574eb7e10eb92`;
+it reloads with zero formula-error matches.
+
+Authorization and claim boundary: the replacement request remains an
+authorization request only. All 16 request-level authorization flags are
+false. No coefficient, fixture, seed, numerical preprocessing, raw/cache/data,
+target/label/text/prediction, checkpoint, model, training, network, RW3,
+stream, device, or hardware operation occurred. The next numbered decision is
+to authorize v1 with the exact sentence in
+`docs/LOOP_25_AUTHORIZATION_PACKET_V1.md`, amend again, or hold. Neither this
+amendment nor a future mechanics pass establishes official numeric equivalence,
+acceptable filter phase/ringing for neural decoding, neural information,
+CER/WER improvement, end-to-end latency, transfer, portable sensing,
+assistive efficacy, diagnosis, or clinical utility.
+
+Evidence: `docs/LOOP_25_ANTI_ALIAS_AUDIT.md`,
+`docs/LOOP_25_CAUSAL_PREPROCESSING_AMENDMENT_1.md`,
+`registries/causal_preprocessing_contract.v1.json`,
+`docs/LOOP_25_AUTHORIZATION_PACKET_V1.md`,
+`registries/loop25_authorization_request.v1.json`, tracker row `25-AA`, and
+GitHub CI run `29195938038`.

@@ -32,7 +32,7 @@ and explain exactly what the result does not prove.
 | Trial identity | All 66 S21 session-1 trials and all 63 performed session-2 trials reconcile to MAT provenance; empty session-2 slots remain explicit | The real MEG evidence has exact trial identity instead of fuzzy sentence matching |
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
-| Full-path causality gate | Loop 25 freezes one stateful filter/decimation/normalization path, 7 chunk schedules, 10 resume cuts, 3 future-mutation cuts, and 40 refusals | The audit is reproducibly specified and awaiting authorization; no coefficients, fixture, or preprocessing result exists yet |
+| Full-path causality gate | Loop 25 v1 freezes a dedicated causal anti-alias stage, a 65,537-point 0-500 Hz response audit, 23 alias probes, 7 chunk schedules, 10 resume cuts, 3 future-mutation cuts, and 45 refusals | The source-audited protocol is awaiting authorization; v0 was superseded safely, and no coefficient, fixture, seed open, or preprocessing result exists |
 | Real predictive evidence | Both the same-person cross-session MEG model and the bounded S7 EEG classifier lose to no-signal controls | The current scientific result is negative, explicit, and frozen against post-hoc tuning |
 | Local execution gate | Float16 preserved exact behavior but ran `1.170x` slower on the producer; qint8 cut payload to `47.1%` but changed behavior and ran `2.785x` slower | Float32 is retained, qualification stayed unopened, and Loop 24 is parked after the full run exceeded its 60-second cap |
 | Next transport layer | Stage A is specified as 90 future schedule-by-fixture cases with 30 exact refusals under a 32 MiB cap | The decision packet is review-ready; no replay runtime, socket, board, or hardware path is authorized yet |
@@ -54,8 +54,8 @@ and explain exactly what the result does not prove.
 | Metadata-only local intake | 6 format families; 532 source bytes; 11,545 report bytes; 0 binary/raw/target/model/network reads | fixture-backed | Lets EEG owners start with safe structure and provenance instead of uploading a recording |
 | Bounded signal-quality interface | 40 fixtures; 38 readable and 2 exact refusals across 6 format families; 3.839 sec; 76,592 output bytes | fixture-backed | Validates readers, metrics, privacy, caps, and no-mutation identity before any real quality claim |
 | Replay/live-source authorization gate | 5 schedules x 18 fixture families = 90 future cases; 30 refusal IDs; 4 separately gated stages; 10 invariants | review-ready, not authorized | Binds the exact Stage A scope and caps before any source-chunk, socket, board, fixture, or hardware implementation |
-| Causal preprocessing registration | 12 primary sources; 5 local source hashes; 24 future target-free items; 7 schedules; 10 resumes; 3 mutation cuts; 40 refusals; 21 counters | preregistered, no runtime | Makes upstream filtering, decimation, normalization, timestamps, state, and future-independence falsifiable before implementation |
-| Test and release surface | 331 unittests; 328 pytest tests plus 134 subtests; 3 expected skips; 299 dependency-light tests with 121 optional skips | local shell and CI verified | Makes the research contracts, access order, backend provenance, tamper checks, and authorization boundaries executable on ordinary hardware |
+| Causal preprocessing amendment | Pinned Brain2Qwerty -> NeuralSet 0.2.2 -> MNE 1.11 source trace; dedicated elliptic SOS; 65,537 response points; 23 alias probes; 24 future target-free items; 7 schedules; 10 resumes; 3 mutation cuts; 45 refusals; 23 counters | amended preregistration, no runtime | Corrects v0's incomplete anti-alias gate before authorization and makes the full 50-500 Hz folding band falsifiable before either seed opens |
+| Test and release surface | 342 unittests at amendment commit `b6b92d8`; 3 expected skips; both base and optional-neuro CI jobs green | local shell and CI verified | Makes the research contracts, source bindings, supersession, access order, tamper checks, and authorization boundaries executable on ordinary hardware |
 
 ### Real-Data Scientific Scorecard
 
@@ -78,6 +78,7 @@ engineering wins, not hidden behind synthetic accuracy.
 | RW2 bounded FIF quality roundtrip | 3.839168 sec | 150,749,184 bytes | 76,592 bytes |
 | RW3 contract/request invariant suite | 0.040 sec | 20,529,152 bytes | no generated payload |
 | Loop 24 authorization plus frozen-boundary suite | 0.210 sec | 21,397,504 bytes | no generated payload |
+| Loop 25 v1 amendment plus immutable-v0 request suite | 0.120 sec | 22,560,768 bytes | no generated payload |
 | Loop 24 registered selection | 65.154951 sec internal | 222,248,960 bytes max worker | 262,822 bytes fixture plus output |
 | Complete optional-neuro/ML test runners | 22.38 sec max | 583,499,776 bytes max | temporary test output only |
 
@@ -149,13 +150,14 @@ Read this before interpreting any number in the repository.
   physically unopened, and the final gate parked at `65.154951` seconds versus
   its 60-second cap. Real data, targets, training, energy measurement, RW3,
   devices, and hardware remained outside Loop 24.
-- **Loop 25 causal-preprocessing registration:** primary-source research and a
-  machine contract are frozen at `a36d97b`. The contract binds one stateful
-  SOS-filter/phase-locked-decimation/frozen-scale path, physical seeds 2501 and
-  2502, seven schedules, ten resume cuts, three future-mutation cuts, 40
-  refusal IDs, 21 access counters, and an 8 MiB generated-artifact cap. The
-  separate request says `authorized_now: false`; no filter coefficients,
-  fixture, numerical preprocessing, CLI, or runtime exists.
+- **Loop 25 causal-preprocessing amendment:** the original registration at
+  `a36d97b` remains immutable but was superseded before authorization by green
+  v1 commit `b6b92d8`. The current contract adds a dedicated causal elliptic
+  anti-alias stage, a 65,537-point 0-500 Hz response grid, 23 alias probes, 45
+  refusals, and 23 access counters while preserving physical seeds 2501/2502,
+  seven schedules, ten resumes, three future mutations, and the 8 MiB cap. The
+  replacement request says `authorized_now: false`; no coefficient, fixture,
+  seed open, numerical preprocessing, CLI, or runtime exists.
 
 ### What The Results Actually Say
 
@@ -172,9 +174,9 @@ Read this before interpreting any number in the repository.
 - Loop 24 retains float32. Float16 passes correctness but misses every runtime
   replacement threshold; qint8 is smaller but fails correctness and runtime;
   the complete target-free gate parks on its 60-second orchestration cap.
-- Loop 25 has a green preregistration and a review-ready authorization packet,
-  not a causal-preprocessing result. Its right-context, timing, frequency,
-  schedule, resume, and resource claims remain proposed acceptance gates.
+- Loop 25 has a green amended preregistration and a review-ready v1 packet, not
+  a causal-preprocessing result. Its anti-alias, phase/ringing, right-context,
+  timing, schedule, resume, and resource claims remain proposed gates.
 
 ### What Is Not Established
 
@@ -682,9 +684,10 @@ The original numbered development sequence has reached:
 - Loops 25-44: a primary-source-informed tranche spans causal
   evidence, translation/generalization, reliability/confounds,
   reproducibility/local deployment, and live translation/release. Loop 25 is
-  `Preregistered` at `a36d97b` with a hash-bound request awaiting explicit
-  authorization. Loops 26-44 remain `Not Started`; all 20 execution flags are
-  false. Loop 24's parked result does not authorize Loop 25.
+  `Amended Preregistration` at `b6b92d8` with a hash-bound v1 request awaiting
+  explicit authorization; v0 is historical and was never authorized. Loops
+  26-44 remain `Not Started`; all 20 execution flags are false. Loop 24's
+  parked result does not authorize Loop 25.
 
 The parallel Real-World Practice track has reached:
 
@@ -731,11 +734,14 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/LOOP_24_AUTHORIZATION_DECISION.md](docs/LOOP_24_AUTHORIZATION_DECISION.md) | scope-narrowed Loop 24 authorization, execution order, zero-runtime boundary, and real-data/training routing |
 | [registries/loop24_authorization_decision.v0.json](registries/loop24_authorization_decision.v0.json) | hash-bound authorization record for the consumed target-free Loop 24 execution; every data/training/RW3/device flag remains false |
 | [docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md](docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md) | measured float32/float16/qint8 result, unopened qualification proof, resources, access ledger, and parked decision |
-| [docs/LOOP_25_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_25_PRIMARY_SOURCE_RESEARCH.md) | official Brain2Qwerty, MNE, SciPy, and local-pipeline audit separating offline preprocessing from causal proof |
-| [docs/LOOP_25_CAUSAL_PREPROCESSING_PREREGISTRATION.md](docs/LOOP_25_CAUSAL_PREPROCESSING_PREREGISTRATION.md) | frozen target-free pipeline, schedules, state, timing, resources, refusals, and acceptance rules |
-| [registries/causal_preprocessing_contract.v0.json](registries/causal_preprocessing_contract.v0.json) | machine-readable Loop 25 registration with every execution flag false |
-| [docs/LOOP_25_AUTHORIZATION_PACKET.md](docs/LOOP_25_AUTHORIZATION_PACKET.md) | exact bounded decision language and the work still forbidden even after authorization |
-| [registries/loop25_authorization_request.v0.json](registries/loop25_authorization_request.v0.json) | green-commit-bound Loop 25 request; currently `authorized_now: false` |
+| [docs/LOOP_25_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_25_PRIMARY_SOURCE_RESEARCH.md) | original official Brain2Qwerty, MNE, SciPy, and local-pipeline audit separating offline preprocessing from causal proof |
+| [docs/LOOP_25_CAUSAL_PREPROCESSING_PREREGISTRATION.md](docs/LOOP_25_CAUSAL_PREPROCESSING_PREREGISTRATION.md) | immutable historical v0 registration, superseded before authorization |
+| [registries/causal_preprocessing_contract.v0.json](registries/causal_preprocessing_contract.v0.json) | immutable historical v0 machine contract; never authorized |
+| [docs/LOOP_25_ANTI_ALIAS_AUDIT.md](docs/LOOP_25_ANTI_ALIAS_AUDIT.md) | pinned Brain2Qwerty-to-NeuralSet-to-MNE execution trace and full folding-band defect analysis |
+| [docs/LOOP_25_CAUSAL_PREPROCESSING_AMENDMENT_1.md](docs/LOOP_25_CAUSAL_PREPROCESSING_AMENDMENT_1.md) | current v1 dedicated anti-alias design, static pre-seed gate, timing semantics, and supersession boundary |
+| [registries/causal_preprocessing_contract.v1.json](registries/causal_preprocessing_contract.v1.json) | current machine-readable Loop 25 amendment with every execution flag false |
+| [docs/LOOP_25_AUTHORIZATION_PACKET_V1.md](docs/LOOP_25_AUTHORIZATION_PACKET_V1.md) | current exact bounded decision language and the work still forbidden even after authorization |
+| [registries/loop25_authorization_request.v1.json](registries/loop25_authorization_request.v1.json) | green-amendment-bound replacement request; currently `authorized_now: false` |
 | [docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md](docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md) | metadata-only file intake closeout |
 | [docs/RW2_PRIMARY_SOURCE_RESEARCH.md](docs/RW2_PRIMARY_SOURCE_RESEARCH.md) | reader/quality primary-source review |
 | [docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md](docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md) | frozen RW2 protocol |
