@@ -63,7 +63,7 @@ and explain exactly what the result does not prove.
 | Loop 27 fresh-holdout boundary | 315 pinned MEG metadata entries; 23 strict single-FIF/log pairs; 16 eligible; S25 selected at 1,009,939,983 bytes; S23 excluded; 18 false authorization fields | metadata research only | Finds the smallest honest same-modality transfer candidate while keeping its local MAT payload, remote FIF, targets, and backups sealed |
 | Loop 28 transfer boundary | T0-T3 taxonomy; strict zero-shot/transductive split; 48-row floor; 0.05 macro-CER margin; 65,535 paired assignments plus observed; 4 comparators; 21 false authorization fields | planning research only | Makes the future one-time S25 decision falsifiable while reserving calibrated transfer for a physically separate design |
 | Loop 29 portability boundary | 15 modality requirements; 4 profiles; 6 qualification levels; 12 future packet gates; 24 false authorization fields; 5,000,000,000-byte preferred storage ceiling | planning research only | Chooses EEG as the immediate local-first lane and OPM-MEG as a partner/lab lane without treating channel ablation, vendor specifications, or home acquisition as text decoding |
-| Test and release surface | 411 local unittests with 3 expected skips; 408 pytest passes plus 191 subtests; 379 dependency-light Python 3.12 tests with 121 expected skips | local shell verified; Loop 29 remote CI pending | Makes research contracts, candidate selection, source bindings, access order, tamper checks, and authorization boundaries executable on ordinary hardware |
+| Test and release surface | 411 local unittests with 3 expected skips; 408 pytest passes plus 191 subtests; 379 dependency-light Python 3.12 tests with 121 expected skips | local shell verified; Loop 29 research commit `f5fc740` and draft PR #8 are green | Makes research contracts, candidate selection, source bindings, access order, tamper checks, and authorization boundaries executable on ordinary hardware |
 
 ### Real-Data Scientific Scorecard
 
@@ -741,8 +741,8 @@ The original numbered development sequence has reached:
   `Not Started`. Loop 27 planning research is green at `b3d61b6` and selects
   S25 metadata, while preregistration and acquisition remain blocked. Loop 28
   planning research defines the strict zero-shot final-only rule while its
-  experiment remains `Not Started`. Loop 29 planning research defines a
-  local-first EEG lane, a partner/lab OPM-MEG lane, and a bounded 5-10 GB
+  experiment remains `Not Started`. Loop 29 planning research at green commit
+  `f5fc740` defines a local-first EEG lane, a partner/lab OPM-MEG lane, and a bounded 5-10 GB
   capacity envelope while its experiment remains `Not Started`; Loops 30-44
   remain `Not Started`. All 20
   execution flags are false. Loop 24's parked result does not authorize Loop

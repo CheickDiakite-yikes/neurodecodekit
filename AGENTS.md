@@ -132,8 +132,9 @@ false. The rule is planning research, not a Loop 27 preregistration or Loop 28
 authorization. Calibrated transfer requires a different physically separated
 design and can never be relabeled as zero-shot.
 
-Loop 29 planning research is complete, but its portable-sensing experiment
-remains `Not Started` and every execution decision remains separate:
+Loop 29 planning research is complete at green commit `f5fc740`, but its
+portable-sensing experiment remains `Not Started` and every execution decision
+remains separate:
 
 ```bash
 cat docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md

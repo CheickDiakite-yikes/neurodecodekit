@@ -2378,10 +2378,11 @@ full count is 17 above the Loop 28 closeout.
 Repository-wide Ruff, compileall, 18 tracked/worktree JSON and two TOML parses,
 seven CLI help surfaces, 55 registered commands, unauthorized Loop 25-29
 command absence, `git diff --check`, 70 local Markdown links, and workbook
-render/reload/formula inspection pass. Remote CI is pending the research
-commit. Public research used 14 high-level web operations and downloaded zero
-code/data payload bytes; external interactive runtime and peak RSS remain
-unavailable from the tool contract.
+render/reload/formula inspection pass. Research commit `f5fc740` passes both
+jobs in push run `29204700023` and draft PR #8 run `29204804483`. Public
+research used 14 high-level web operations and downloaded zero code/data
+payload bytes; external interactive runtime and peak RSS remain unavailable
+from the tool contract.
 
 This milestone adds a machine-checkable path from cryogenic MEG toward local
 EEG and partner OPM-MEG with a bounded data allocation. It does not establish

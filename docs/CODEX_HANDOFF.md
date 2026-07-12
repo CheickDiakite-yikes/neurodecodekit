@@ -254,8 +254,9 @@ operation occurred. The tracked workbook is 83,821 bytes with SHA-256
 all nine sheets render, the export reloads with exact key ranges, and two
 formula scans have zero matches. Ruff, compileall, 18 JSON and two TOML parses,
 70 local Markdown links, seven CLI help surfaces, unauthorized Loop 25-29
-command absence, and `git diff --check` pass. Remote CI is pending the Loop 29
-research commit.
+command absence, and `git diff --check` pass. Loop 29 research commit
+`f5fc740` is green in push run `29204700023` and draft PR #8 run
+`29204804483`.
 
 ## The north star
 

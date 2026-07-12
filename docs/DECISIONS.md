@@ -1618,4 +1618,5 @@ tool contract and are reported as unavailable rather than estimated.
 Evidence: `docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop29_research_boundary.v0.json`,
 `tests/test_loop29_research_boundary.py`, roadmap row 29, tracker decision
-`29-R1`, and risk `R34`.
+`29-R1`, risk `R34`, research commit `f5fc740`, push CI run `29204700023`, and
+draft PR #8 CI run `29204804483`.
