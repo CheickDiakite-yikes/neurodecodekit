@@ -64,7 +64,13 @@
 > checked. The preferred 5,000,000,000-byte and absolute 10,000,000,000-byte
 > capacity limits do not authorize the selected 1,106,030,247-byte S20 plus S25
 > future bundle. No download, real-data read, model, SDK, stream, device,
-> partner, or hardware operation occurred. Loops 30-44 remain `Not Started`.
+> partner, or hardware operation occurred. Loop 30 planning research now
+> freezes a loopback-only target-free replay inspector while its experiment
+> remains `Not Started`: four source modes, a 30-field trace, nine clock
+> domains, six latency levels, 18 future requirements, 30 refusals, and 30
+> false authorization fields. No seed, trace, fixture, UI, server, browser run,
+> consumed artifact, model, stream, live source, or hardware operation exists.
+> Loops 31-44 remain `Not Started`.
 > This does not reopen Loop 24 or authorize RW3, data, targets, models,
 > validation, training, calibration, or hardware.
 > In parallel, RW0 closes a primary-source Real-World Practice research gate
@@ -226,6 +232,12 @@ This repo is a starter scaffold with working pure-Python components:
   qualification levels; 12 future packet gates; exact 5-10 GB capacity limits;
   24 false authorization fields; and zero protected data, model, stream, device,
   partner, or hardware access; the experiment remains `Not Started`
+- machine-checked Loop 30 planning research with four distinct source modes, a
+  30-field target-free trace contract, nine clocks, six latency claim levels,
+  18 future gates, 30 refusals, fixed loopback/file/network/browser controls,
+  accessible incremental status semantics, 30 false authorization fields, and
+  zero trace, UI, server, browser, protected-data, model, stream, live-source,
+  device, or hardware execution; the experiment remains `Not Started`
 - JSON/Markdown metrics report command
 - CLI smoke commands
 - unit tests
@@ -238,25 +250,25 @@ negative within-session event comparison. None is a decoder success. Do not
 turn these results, a variance ranking, or a geometry proxy into unseen-person
 or population generalization.
 
-Current Loop 29 local verification passes 411 unittests with 3 expected skips
-in 25.60 seconds wall and 554,991,616-byte maximum RSS; pytest reports 408
-passed, 3 skipped, and 191 subtests in 24.31 seconds wall with
-583,204,864-byte maximum RSS. The focused Loop 25-29/roadmap boundary has 107
-passing tests in 0.19 seconds wall and 30,818,304-byte maximum RSS.
-Dependency-light Python 3.12 discovery is green at 379 tests with 121 optional
-skips in 1.97 seconds wall and 47,153,152-byte maximum RSS. Each full count is
-17 above the Loop 28 public closeout. No Loop 25-29 fixture, coefficient,
+Current Loop 30 local verification passes 426 unittests with 3 expected skips
+in 22.27 seconds wall and 574,521,344-byte maximum RSS; pytest reports 423
+passed, 3 skipped, and 198 subtests in 22.06 seconds wall with
+591,413,248-byte maximum RSS. The focused Loop 25-30/roadmap boundary has 122
+passing tests in 0.11 seconds wall and 29,097,984-byte maximum RSS; the strict
+Loop 30 plus roadmap slice has 24 tests in 0.15 seconds wall and
+20,037,632-byte maximum RSS. Dependency-light discovery is green at 394 tests
+with 121 optional skips in 0.75 seconds wall and 48,594,944-byte maximum RSS.
+Each full count is 15 above the Loop 29 public closeout. No Loop 25-30 fixture, coefficient,
 preprocessing run, candidate download, local MAT payload hash, header/signal/
 target/validation/model read, training run, calibration run, network payload,
 RW3 operation, SDK import, stream, board, device, partner, or hardware
-operation occurred. The tracked workbook is 83,821 bytes with SHA-256
-`d80ce6940f65939c9ea8acca682cc416f988d56c0ceca42222e9e69eaa30ed6d`;
+operation occurred. The tracked workbook is 85,167 bytes with SHA-256
+`c92c4fe378532c2d22b0be24b60c5f6c85192a14eac239dd954508f6f1e01d69`;
 all nine sheets render, the export reloads with exact key ranges, and two
-formula scans have zero matches. Ruff, compileall, 18 JSON and two TOML parses,
-70 local Markdown links, seven CLI help surfaces, unauthorized Loop 25-29
-command absence, and `git diff --check` pass. Loop 29 research commit
-`f5fc740` is green in push run `29204700023` and draft PR #8 run
-`29204804483`.
+formula scans have zero matches. Ruff, compileall, 23 source JSON and two TOML
+parses, 72 local Markdown links, seven CLI help surfaces, 55 registered
+commands, unauthorized Loop 25-30 command absence, and `git diff --check` pass.
+Remote Loop 30 CI is pending.
 
 ## The north star
 
@@ -304,8 +316,12 @@ This is not primarily a model repo. It is a **research loop repo**.
    `registries/loop29_research_boundary.v0.json`. Its planning research supplies
    a two-lane EEG/OPM-MEG pathway and a 5-10 GB capacity boundary, but no device
    selection, preregistration, download, SDK, stream, hardware session, or
-   portable decoding result exists. Each future loop still requires its own
-   packet before execution.
+   portable decoding result exists. For Loop 30, read
+   `docs/LOOP_30_PRIMARY_SOURCE_RESEARCH.md` and
+   `registries/loop30_research_boundary.v0.json`. Its planning research defines
+   the target-free local replay interaction, but no seed, trace, fixture, UI,
+   server, browser run, model, stream, live source, or latency result exists.
+   Each future loop still requires its own packet before execution.
 4. **Keep the GitHub history reviewable.** PR #3 carries the validated Loop
    8-24 evidence stack and is green. Draft PR #4 carries the separately stacked
    Loop 25 v0 history, v1 amendment, and still-false decision packet so
@@ -315,7 +331,9 @@ This is not primarily a model repo. It is a **research loop repo**.
    metadata-only Loop 27 boundary. The `codex/loop-28-transfer-research` branch
    stacks the transfer decision research without S25 access or execution. Keep
    `codex/loop-29-portable-sensing-research` stacks only the portability
-   research boundary without data, device, or hardware access. Keep each
+   research boundary without data, device, or hardware access. The
+   `codex/loop-30-local-streaming-research` branch stacks only the target-free
+   replay interaction boundary without UI or runtime execution. Keep each
    independently reviewable; do not merge until CI, license, privacy, history,
    and proof-boundary review is complete.
 
@@ -346,7 +364,9 @@ contract are in `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`,
 `docs/LOOPS_25_44_ROADMAP.md`, and
 `registries/next_20_loops.v0.json`. Loop 29's research note and machine boundary
 are `docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md` and
-`registries/loop29_research_boundary.v0.json`. RW1 evidence is in
+`registries/loop29_research_boundary.v0.json`. Loop 30's research note and
+machine boundary are `docs/LOOP_30_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop30_research_boundary.v0.json`. RW1 evidence is in
 `docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md`; RW2 evidence is in
 `docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md`,
 `docs/RW2_PRIMARY_SOURCE_RESEARCH.md`, and

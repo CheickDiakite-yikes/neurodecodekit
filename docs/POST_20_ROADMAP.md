@@ -48,6 +48,13 @@ decision.
   false authorization flags. No download, real-data read, model, stream,
   device, partner, or hardware operation occurred. See
   `docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md`.
+- Loop 30: Planning research complete; target-free local replay experiment
+  `Not Started`. The future inspector separates four source modes, a 30-field
+  trace, nine clock domains, six latency levels, 18 requirements, and 30
+  refusals while fixing loopback privacy, browser-network, and accessibility
+  gates. All 30 authorization flags are false; no seed, trace, UI, server,
+  browser run, model, stream, live source, or hardware operation exists. See
+  `docs/LOOP_30_PRIMARY_SOURCE_RESEARCH.md`.
 - Real-World Practice Track RW0: Done as a primary-source research and planning
   gate. Versioned dataset/device registries, a local BYO Neurodata contract,
   and an exact 96,090,264-byte S20 EEG approval packet are frozen. No raw data,
@@ -88,6 +95,7 @@ decision.
 | 27 | Fresh holdout preregistration | Which independent recording can answer the next transfer claim without consumed evidence? | Planning-only official metadata selector, exact candidate identities, target-isolation design, and blockers. | Planning research complete at `b3d61b6`; S25 session 2 block 2 selected as two files/1,009,939,983 bytes; 18 false authorization fields; no preregistration, request, download, hash, header, signal, target, or model access. |
 | 28 | Session and person transfer | What claim can one unseen-person final-only recording answer without fitting anything to that person? | Planning-only T0-T3 taxonomy and strict zero-shot final decision rule. | Planning research complete; S25 reserved for T2 with zero fit rows, a 48-row floor, 0.05 macro-CER margin, 65,535 paired assignments plus observed, four comparators, and 21 false authorization fields; experiment remains `Not Started`. |
 | 29 | Portable sensing translation | Which requirements survive movement from cryogenic MEG to OPM-MEG or scalp EEG? | Planning-only modality matrix, qualification ladder, two-lane decision, and bounded data path. | Planning research complete; experiment `Not Started`; 15 requirements, 4 profiles, 6 qualification levels, 24 false authorization fields, and no data/device execution. |
+| 30 | Local private streaming prototype | Can a user inspect incremental replay without confusing it with live neural decoding? | Planning-only target-free trace, clock, latency, privacy, accessibility, and browser-QA boundary. | Planning research complete; experiment `Not Started`; 4 source modes, 30 event fields, 9 clocks, 6 latency levels, 18 gates, 30 refusals, 30 false authorization fields, and no trace/UI/server execution. |
 
 ## Next Planned Tranche: Loops 25-44
 
@@ -105,9 +113,11 @@ planning research is complete, but its experiment remains `Not Started` and
 S25, but its preregistration remains blocked. Loop 28 planning research defines
 the strict zero-shot rule while its experiment remains `Not Started`. Loop 29
 planning research defines separate scalp EEG and OPM-MEG lanes while its
-experiment remains `Not Started`; Loops 30-44 remain `Not Started`. All 20
+experiment remains `Not Started`. Loop 30 planning research defines the target-
+free local replay boundary while its experiment remains `Not Started`; Loops
+31-44 remain `Not Started`. All 20
 `execution_authorized` flags are false. Loop 25's exact decision packet is
-ready for review, while Loops 26-29 have no
+ready for review, while Loops 26-30 have no
 preregistration or authorization packet. Roadmap approval, general
 continuation, or documentation work cannot reopen Loop 24, authorize RW3 Stage
 A, or authorize any Loop 25-44 operation.

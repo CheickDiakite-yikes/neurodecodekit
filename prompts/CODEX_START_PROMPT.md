@@ -113,6 +113,14 @@ Do not reset, revert, delete, or overwrite work already present.
   authorization fields. Exact future S20 plus S25 bundles total 1,106,030,247
   bytes, but storage capacity is not download permission. No real-data read,
   model, SDK, stream, device, partner, or hardware operation occurred.
+- Loop 30 planning research is complete while the target-free local replay
+  experiment remains `Not Started`. The future inspector freezes four source
+  modes, a 30-field trace contract, nine clock domains, six latency levels, 18
+  requirements, 30 refusals, fixed loopback/browser/privacy/accessibility
+  settings, and 30 false authorization fields. No seed, trace, fixture, UI,
+  server, browser run, consumed artifact, model, stream, live source, or
+  hardware operation exists. Stability is not confidence or correctness, and
+  replay scheduling is not capture-to-user latency.
 - No real recording quality, neural advantage, unseen-person generalization,
   useful EEG decoder, real-time decoding, portable-hardware, arbitrary-thought,
   or clinical result has been demonstrated.
@@ -218,6 +226,10 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
     not a device or acquisition authorization. Do not infer OPM-MEG or EEG
     behavior from cryogenic channel ablation; do not select, purchase, connect,
     import an SDK for, stream from, or qualify hardware from this prompt.
+13. Treat the Loop 30 target-free replay contract as planning research, not UI
+    or server authorization. Do not generate its trace, reopen consumed Loop
+    23/24 artifacts, launch a browser/server, expose a file path, make a network
+    request, display confidence, or imply live neural decoding from this prompt.
 
 ## Required deliverables for the next authorized milestone
 

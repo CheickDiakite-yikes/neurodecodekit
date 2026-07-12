@@ -323,6 +323,11 @@ socket, stream, purchase, partner session, or hardware operation.
 
 ## Loop 30 - Local Private Streaming Prototype
 
+**Current state:** Planning research complete; experiment `Not Started`. See
+`docs/LOOP_30_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop30_research_boundary.v0.json`. Every one of 30 authorization
+flags is false; no trace seed, fixture, UI, server, or browser run exists.
+
 **Core question:** Can a user inspect incremental hypotheses, revisions,
 timing, provenance, and refusals locally without confusing replay with live
 decoding?
@@ -330,29 +335,42 @@ decoding?
 **Why it moves the goal:** A final sentence hides when output appeared, how
 often it changed, what source produced it, and whether confidence exists.
 
-**Build:** Implement a loopback-only replay UI with partial hypotheses,
-revision trace, source identity, stage clocks, resource telemetry, warnings,
-proof posture, and local artifact loading.
+**Build:** After separate authorization, implement a loopback-only target-free
+replay inspector with partial hypotheses, explicit revisions and finalization,
+source identity, nine clock domains, six latency claim levels, resource
+telemetry, warnings, hashes, proof posture, and inspectable local artifacts.
 
-**Research:** Define user-facing semantics for partial output, finalization,
-revision, abstention, confidence unavailable, privacy, and replay/live labels.
+**Research:** Completed. Four source modes, a 30-field target-free trace, nine
+clocks, six latency levels, fixed localhost/file/network controls, accessible
+status semantics, 18 future gates, and 30 refusal IDs are frozen before any
+implementation.
 
-**Data and controls:** Use authorized synthetic artifacts and aggregate-only
-real scorecards. Show the no-signal comparator. Separate cold start,
-scheduling, preprocessing, producer, decoder, and render delays. No cloud,
-socket, hardware, or raw real signal.
+**Data and controls:** A future run may generate one new target-free synthetic
+trace from a seed frozen before payload creation. Do not reopen consumed Loop
+23/24 arrays or S7/S21 evidence. Show source, proof posture, producer/decoder
+causality, confidence unavailable, and the no-signal comparator. Separate cold
+start, scheduling, queue, producer, decoder, transport, browser receive,
+render, and finalization. No cloud, target, model, socket, stream, hardware, or
+raw real signal.
 
-**Metrics:** first-token/finalization latency by stage; revision count; prefix
-stability; UI responsiveness; runtime/RSS/bytes; network/raw/cache/model/
-training counters; desktop/mobile QA.
+**Metrics:** first partial, first committed token, and finalization by available
+clock domain; revision count, edit overhead, prefix commitment, and stable
+duration; W3C long-task count and Event Timing availability; runtime/RSS/bytes;
+network/WebSocket/raw/cache/consumed/target/model/training/calibration/stream/
+hardware counters; desktop/mobile accessibility and render QA.
 
-**Gate:** Close only as a local replay interface when every source, causality,
-latency, confidence, and proof label stays visible. Park any UI that implies a
-live, neural, or real-time result its artifact does not prove.
+**Gate:** Close only as a local replay interface when all 18 requirements and
+30 refusals pass, every source/causality/latency/confidence/proof label stays
+visible, clocks retain their origins, browser QA sees zero non-loopback traffic
+and zero 50-ms long tasks, and resource/access caps pass. Park any UI that
+implies a live, neural, confidence, or end-to-end real-time result its artifact
+does not prove.
 
-**Dependencies and authorization:** Depends on Loop 25. Implementation and
-replay need a separate Loop 30 authorization; live sources remain outside this
-loop.
+**Dependencies and authorization:** Depends on Loop 25. Planning research only;
+the experiment remains `Not Started`. Trace generation, implementation, server
+launch, and replay need a separate Loop 30 authorization. That decision cannot
+authorize RW3, a recorded/live source, real data, targets, models, training,
+calibration, SDKs, devices, or hardware.
 
 ## Loop 31 - Neural Contribution Ablation
 

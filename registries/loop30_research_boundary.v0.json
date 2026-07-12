@@ -1,0 +1,689 @@
+{
+  "schema_name": "neurodecodekit.loop30_research_boundary",
+  "schema_version": "0.1.0",
+  "prepared_at": "2026-07-12",
+  "status": "planning_research_complete_local_replay_ui_execution_blocked",
+  "proof_posture": "primary_source_and_committed_evidence_research_no_ui_trace_replay_server_model_stream_or_data_execution",
+  "authorized_now": false,
+  "authorization": {
+    "loop30_preregistration_authorized_now": false,
+    "loop30_ui_implementation_authorized_now": false,
+    "loop30_replay_execution_authorized_now": false,
+    "loop30_trace_generation_authorized_now": false,
+    "loop25_execution_authorized_now": false,
+    "loop21_artifact_replay_authorized_now": false,
+    "loop23_consumed_trace_read_authorized_now": false,
+    "loop24_consumed_selection_read_authorized_now": false,
+    "existing_real_data_read_authorized_now": false,
+    "consumed_real_data_read_authorized_now": false,
+    "real_header_read_authorized_now": false,
+    "real_signal_read_authorized_now": false,
+    "target_label_or_text_read_authorized_now": false,
+    "model_or_checkpoint_run_authorized_now": false,
+    "training_or_parameter_update_authorized_now": false,
+    "calibration_or_confidence_run_authorized_now": false,
+    "server_launch_authorized_now": false,
+    "browser_qa_execution_authorized_now": false,
+    "external_network_authorized_now": false,
+    "non_loopback_bind_authorized_now": false,
+    "public_share_link_authorized_now": false,
+    "file_upload_authorized_now": false,
+    "arbitrary_local_file_access_authorized_now": false,
+    "socket_or_stream_authorized_now": false,
+    "live_source_authorized_now": false,
+    "device_sdk_import_authorized_now": false,
+    "physical_hardware_session_authorized_now": false,
+    "rw3_stage_a_authorized_now": false,
+    "generated_experiment_payload_authorized_now": false,
+    "authorization_sentence_exists": false,
+    "reason": "This registry freezes the future replay interaction and measurement boundary. It does not authorize a trace, fixture, UI, server, browser run, model, stream, real recording, network request, or hardware operation."
+  },
+  "research_question": "Can a user inspect incremental hypotheses, revisions, timing, provenance, refusals, and proof posture locally without confusing artifact replay with live neural decoding?",
+  "decision": {
+    "decision_id": "local_target_free_replay_inspector_v0",
+    "future_product_type": "loopback_only_target_free_artifact_replay_inspector",
+    "current_experiment_status": "Not Started",
+    "current_ui_exists": false,
+    "current_trace_exists": false,
+    "current_server_was_launched": false,
+    "future_source_mode": "synthetic_replay",
+    "future_trace_must_be_new": true,
+    "future_trace_must_be_target_free": true,
+    "future_trace_seed_selected": false,
+    "future_trace_payload_generated": false,
+    "maximum_current_latency_claim_level": 0,
+    "maximum_future_loop30_latency_claim_level": 3,
+    "live_source_in_scope": false,
+    "real_data_in_scope": false,
+    "model_training_in_scope": false,
+    "calibrated_confidence_in_scope": false,
+    "why": "The project has causal producer and synthetic streaming evidence but no live source, end-to-end causal text system, calibrated confidence, or capture-to-user latency result. A replay inspector must preserve those distinctions rather than conceal them."
+  },
+  "existing_evidence_inventory": [
+    {
+      "evidence_id": "loop17_honest_local_demo",
+      "status": "completed_artifact_backed_final_output_console",
+      "established": [
+        "nineteen_held_out_synthetic_examples_are_inspectable",
+        "real_results_remain_aggregate_only",
+        "predictive_confidence_is_unavailable",
+        "decoder_is_noncausal_and_not_real_time",
+        "default_bind_is_127_0_0_1_share_is_false_and_analytics_are_disabled"
+      ],
+      "missing_for_loop30": [
+        "incremental_trace",
+        "explicit_revision_ledger",
+        "explicit_finalization_events",
+        "nine_clock_domains",
+        "fixed_non_overridable_loopback_bind",
+        "one_thread_launch",
+        "monitoring_disabled",
+        "network_and_websocket_browser_audit"
+      ],
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "loop21_causal_chunk_replay",
+      "status": "completed_synthetic_causal_producer_contract",
+      "registered_schedules": 5,
+      "right_context_samples": 0,
+      "first_possible_frame_ms": 160,
+      "decoder_causality_established": false,
+      "end_to_end_latency_established": false,
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "loop23_streaming_ctc",
+      "status": "parked_after_consumed_registered_test",
+      "exact_sequences_observed": 5,
+      "exact_sequences_required": 6,
+      "test_sequences": 8,
+      "registered_revision_events": 0,
+      "registered_edit_overhead": 0,
+      "stable_output_was_always_correct": false,
+      "seed": 2303,
+      "seed_consumed": true,
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "loop24_precision_runtime",
+      "status": "parked_after_consumed_target_free_selection",
+      "seed": 2401,
+      "seed_consumed": true,
+      "eligible_as_loop30_trace": false,
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "rw3_replay_live_equivalence",
+      "status": "preregistered_all_execution_stages_unauthorized",
+      "relevant_boundary": "source_corrected_and_local_arrival_clocks_packet_and_transport_semantics",
+      "loop30_authorization_can_authorize_rw3": false,
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "brain2qwerty_v2",
+      "status": "published_continuous_whole_sentence_noncausal_reference",
+      "continuous_asynchronous": true,
+      "whole_sentence_noncausal": true,
+      "low_latency_fully_real_time_version_is_future_work": true,
+      "local_payload_downloaded_now": false
+    }
+  ],
+  "source_mode_taxonomy": [
+    {
+      "source_mode": "artifact_replay",
+      "definition": "Replay of an already generated immutable event artifact without model or source execution.",
+      "allowed_in_future_loop30": true,
+      "allowed_now": false,
+      "may_be_called_live": false
+    },
+    {
+      "source_mode": "synthetic_replay",
+      "definition": "Deterministic replay of a new target-free synthetic trace generated after a separate authorization.",
+      "allowed_in_future_loop30": true,
+      "allowed_now": false,
+      "may_be_called_live": false
+    },
+    {
+      "source_mode": "recorded_replay",
+      "definition": "Replay of a separately authorized recorded source through a transport adapter.",
+      "allowed_in_future_loop30": false,
+      "allowed_now": false,
+      "may_be_called_live": false
+    },
+    {
+      "source_mode": "live",
+      "definition": "Events received from a currently operating source or device stream.",
+      "allowed_in_future_loop30": false,
+      "allowed_now": false,
+      "may_be_called_live": true
+    }
+  ],
+  "future_target_free_trace": {
+    "status": "contract_only_no_seed_fixture_or_payload",
+    "seed": null,
+    "seed_must_be_frozen_before_generation": true,
+    "producer_must_be_deterministic": true,
+    "producer_inputs_allowed": [
+      "future_frozen_seed",
+      "future_frozen_character_vocabulary_without_target_semantics",
+      "future_frozen_schedule_contract",
+      "future_frozen_revision_pattern_contract"
+    ],
+    "producer_inputs_forbidden": [
+      "target_text",
+      "labels",
+      "prompt_text",
+      "real_sentence_text",
+      "consumed_predictions",
+      "evaluation_metrics",
+      "model_logits",
+      "checkpoint_values",
+      "real_signal",
+      "consumed_signal_or_cache"
+    ],
+    "required_event_fields": [
+      "schema_version",
+      "trace_id",
+      "trace_event_id",
+      "sequence_index",
+      "item_id",
+      "source_mode",
+      "proof_posture",
+      "source_artifact_id",
+      "source_frame_index",
+      "source_time_sec_or_null",
+      "replay_schedule_ns_or_null",
+      "backend_enqueue_ns_or_null",
+      "backend_dequeue_ns_or_null",
+      "producer_start_ns_or_null",
+      "producer_end_ns_or_null",
+      "decoder_start_ns_or_null",
+      "decoder_end_ns_or_null",
+      "hypothesis",
+      "committed_prefix_length",
+      "finalized",
+      "finalization_reason_or_null",
+      "previous_event_id_or_null",
+      "edit_distance_from_previous",
+      "cumulative_revision_count",
+      "cumulative_edit_overhead",
+      "stable_duration_ms_or_null",
+      "producer_causality",
+      "decoder_causality",
+      "source_config_trace_and_payload_hashes",
+      "warnings_and_unavailable_fields"
+    ],
+    "forbidden_event_fields": [
+      "target",
+      "label",
+      "prompt",
+      "correct",
+      "character_error_rate",
+      "word_error_rate",
+      "accuracy",
+      "confidence",
+      "probability",
+      "clinical_interpretation"
+    ],
+    "inspectable_without_server_launch": true,
+    "metadata_sidecar_required": true,
+    "generated_artifact_cap_bytes": 33554432,
+    "committable_now": false
+  },
+  "clock_domains": [
+    {
+      "clock_id": "artifact_source_time",
+      "origin": "artifact_or_source_defined",
+      "unit": "seconds_or_unavailable",
+      "monotonic_required": "source_contract_specific",
+      "cross_domain_subtraction_allowed": false
+    },
+    {
+      "clock_id": "replay_scheduler_monotonic",
+      "origin": "backend_process_perf_counter",
+      "unit": "integer_nanoseconds",
+      "monotonic_required": true,
+      "cross_domain_subtraction_allowed": false
+    },
+    {
+      "clock_id": "backend_queue_monotonic",
+      "origin": "backend_process_perf_counter",
+      "unit": "integer_nanoseconds",
+      "monotonic_required": true,
+      "cross_domain_subtraction_allowed": false
+    },
+    {
+      "clock_id": "producer_compute_monotonic",
+      "origin": "backend_process_perf_counter",
+      "unit": "integer_nanoseconds",
+      "monotonic_required": true,
+      "cross_domain_subtraction_allowed": false
+    },
+    {
+      "clock_id": "decoder_compute_monotonic",
+      "origin": "backend_process_perf_counter",
+      "unit": "integer_nanoseconds",
+      "monotonic_required": true,
+      "cross_domain_subtraction_allowed": false
+    },
+    {
+      "clock_id": "serialization_transport_monotonic",
+      "origin": "backend_process_perf_counter",
+      "unit": "integer_nanoseconds",
+      "monotonic_required": true,
+      "cross_domain_subtraction_allowed": false
+    },
+    {
+      "clock_id": "browser_receive_performance",
+      "origin": "browser_performance_time_origin",
+      "unit": "milliseconds",
+      "monotonic_required": true,
+      "cross_domain_subtraction_allowed": false
+    },
+    {
+      "clock_id": "browser_render_performance",
+      "origin": "browser_performance_time_origin",
+      "unit": "milliseconds",
+      "monotonic_required": true,
+      "cross_domain_subtraction_allowed": false
+    },
+    {
+      "clock_id": "user_observed_time",
+      "origin": "separate_human_or_perceptual_protocol",
+      "unit": "unavailable_until_measured",
+      "monotonic_required": null,
+      "cross_domain_subtraction_allowed": false
+    }
+  ],
+  "latency_claim_ladder": [
+    {
+      "level": 0,
+      "name": "artifact_chronology_only",
+      "required_evidence": "ordered_event_indices_and_declared_source_time_or_unavailable",
+      "maximum_claim": "ordered_replay_events"
+    },
+    {
+      "level": 1,
+      "name": "backend_compute_durations",
+      "required_evidence": "within_process_monotonic_producer_decoder_and_serialization_spans",
+      "maximum_claim": "local_compute_stage_durations"
+    },
+    {
+      "level": 2,
+      "name": "local_replay_schedule_and_backend",
+      "required_evidence": "scheduler_queue_and_compute_spans_in_one_backend_origin",
+      "maximum_claim": "local_replay_scheduling_and_compute_latency"
+    },
+    {
+      "level": 3,
+      "name": "browser_receive_and_render",
+      "required_evidence": "browser_receive_render_and_long_task_ledger_in_one_browser_origin",
+      "maximum_claim": "local_replay_presentation_latency"
+    },
+    {
+      "level": 4,
+      "name": "mapped_local_interaction",
+      "required_evidence": "explicit_backend_browser_origin_mapping_and_frozen_interaction_protocol",
+      "maximum_claim": "local_prototype_interaction_latency"
+    },
+    {
+      "level": 5,
+      "name": "capture_to_user_end_to_end",
+      "required_evidence": "authorized_device_capture_preprocess_model_transport_render_and_user_protocol",
+      "maximum_claim": "end_to_end_latency_for_the_exact_device_protocol"
+    }
+  ],
+  "future_latency_ledger": {
+    "required_stages": [
+      "cold_start",
+      "steady_state_replay_schedule_delay",
+      "backend_queue_delay",
+      "producer_compute",
+      "decoder_compute",
+      "serialization_and_local_transport",
+      "browser_receive_to_render_commit",
+      "first_partial",
+      "first_committed_token",
+      "explicit_finalization"
+    ],
+    "missing_stage_value": null,
+    "missing_stage_must_be_labeled_unavailable": true,
+    "zero_may_replace_unavailable": false,
+    "cross_origin_mapping_required": true,
+    "replay_schedule_may_be_called_capture_latency": false,
+    "compute_rtf_may_be_called_end_to_end_latency": false,
+    "end_to_end_latency_measured_now": false
+  },
+  "incremental_hypothesis_contract": {
+    "explicit_finalization_event_required": true,
+    "silence_or_no_change_may_imply_finalization": false,
+    "revision_history_required": true,
+    "committed_prefix_required": true,
+    "stability_is_correctness": false,
+    "stability_is_confidence": false,
+    "entropy_is_calibrated_confidence": false,
+    "predictive_confidence_status": "unavailable_pending_separate_Loop34_calibration",
+    "no_signal_comparator_visibility_required": true,
+    "quality_metrics_in_target_free_trace_allowed": false,
+    "current_incremental_quality_result_exists": false
+  },
+  "privacy_network_contract": {
+    "server_name": "127.0.0.1",
+    "server_name_user_override_allowed": false,
+    "server_port_policy": "single_ephemeral_or_user_selected_loopback_port_with_collision_refusal",
+    "share": false,
+    "analytics_enabled": false,
+    "enable_monitoring": false,
+    "strict_cors": true,
+    "max_threads": 1,
+    "workers": 1,
+    "state_session_capacity": 2,
+    "allowed_paths": [],
+    "blocked_path_classes": [
+      "resolved_project_root",
+      "resolved_real_data_roots",
+      "resolved_cache_roots",
+      "resolved_user_secret_and_credential_roots"
+    ],
+    "upload_components_allowed": false,
+    "arbitrary_file_browser_allowed": false,
+    "static_directory_serving_allowed": false,
+    "public_share_link_allowed": false,
+    "mcp_server_allowed": false,
+    "service_worker_allowed": false,
+    "popup_or_new_tab_allowed": false,
+    "external_network_dependency_allowed": false,
+    "non_loopback_request_or_websocket_tolerance": 0
+  },
+  "browser_qa_contract": {
+    "required_viewports": [
+      "desktop",
+      "mobile"
+    ],
+    "request_ledger_required": true,
+    "response_ledger_required": true,
+    "websocket_ledger_required": true,
+    "console_error_ledger_required": true,
+    "popup_and_new_page_ledger_required": true,
+    "service_workers": "block",
+    "non_loopback_requests_allowed": 0,
+    "non_loopback_websockets_allowed": 0,
+    "browser_long_task_threshold_ms": 50,
+    "browser_long_tasks_allowed_during_fixed_replay": 0,
+    "event_timing_api_status": "W3C_Working_Draft_support_detected_at_runtime",
+    "event_timing_unavailable_must_be_reported": true,
+    "screenshots_required": true,
+    "pixel_blankness_and_overlap_checks_required": true,
+    "browser_qa_executed_now": false
+  },
+  "accessibility_contract": {
+    "source_mode_text_required": true,
+    "proof_posture_text_required": true,
+    "color_only_status_allowed": false,
+    "concise_status_role": "status",
+    "sequential_trace_role": "log_or_equivalent_live_region",
+    "announcement_priority": "polite",
+    "focus_theft_allowed": false,
+    "forced_autoscroll_allowed": false,
+    "keyboard_navigation_required": true,
+    "reduced_motion_required": true,
+    "full_revision_history_access_required": true,
+    "warning_history_access_required": true,
+    "rapid_character_by_character_screen_reader_spam_allowed": false
+  },
+  "future_requirements": [
+    {
+      "requirement_id": "L30-G01_target_free_trace",
+      "gate": "One new deterministic trace is generated solely from a future frozen seed and contains no targets, labels, prompts, real text, consumed predictions, metrics, logits, or checkpoints."
+    },
+    {
+      "requirement_id": "L30-G02_trace_schema",
+      "gate": "Every event validates against the frozen identity, timing, revision, causality, hash, warning, and unavailable-field schema."
+    },
+    {
+      "requirement_id": "L30-G03_source_mode",
+      "gate": "Source mode is mutually exclusive, machine-readable, and visible throughout replay."
+    },
+    {
+      "requirement_id": "L30-G04_proof_posture",
+      "gate": "Proof posture and claim boundary remain visible in every predictive or trace view."
+    },
+    {
+      "requirement_id": "L30-G05_causality",
+      "gate": "Producer and decoder causality plus required left and right context are displayed separately."
+    },
+    {
+      "requirement_id": "L30-G06_revision_ledger",
+      "gate": "Each changed hypothesis records prior identity, edit distance, cumulative revisions, edit overhead, committed prefix, and stable duration."
+    },
+    {
+      "requirement_id": "L30-G07_finalization",
+      "gate": "Finalization is an explicit event with a frozen reason and is never inferred from silence or stability."
+    },
+    {
+      "requirement_id": "L30-G08_confidence",
+      "gate": "Predictive confidence remains unavailable and stability, entropy, color, or logits are not relabeled as calibration."
+    },
+    {
+      "requirement_id": "L30-G09_no_signal_comparator",
+      "gate": "The no-signal comparator and its exact evidence status remain visible beside any future predictive artifact."
+    },
+    {
+      "requirement_id": "L30-G10_clock_domains",
+      "gate": "All nine clock domains retain origin and units; cross-origin subtraction fails without an explicit mapping ledger."
+    },
+    {
+      "requirement_id": "L30-G11_latency_ladder",
+      "gate": "Every latency statement names one of six levels and Loop 30 never exceeds local replay presentation Level 3."
+    },
+    {
+      "requirement_id": "L30-G12_loopback_privacy",
+      "gate": "The launcher fixes 127.0.0.1, share false, analytics false, monitoring false, strict CORS true, one thread, one worker, and two sessions."
+    },
+    {
+      "requirement_id": "L30-G13_file_exposure",
+      "gate": "Uploads, arbitrary files, allowed directories, static directories, and project/data/cache/secret path serving are refused."
+    },
+    {
+      "requirement_id": "L30-G14_browser_network",
+      "gate": "Playwright records requests, responses, WebSockets, pages, and service workers; every non-loopback operation fails."
+    },
+    {
+      "requirement_id": "L30-G15_browser_responsiveness",
+      "gate": "The fixed replay has zero W3C-defined long tasks at or above 50 ms and reports Event Timing support or unavailability."
+    },
+    {
+      "requirement_id": "L30-G16_accessibility",
+      "gate": "Textual labels, status/log semantics, keyboard access, polite announcements, stable focus, no forced scroll, and reduced motion pass."
+    },
+    {
+      "requirement_id": "L30-G17_resources",
+      "gate": "Input/output bytes, runtime, peak RSS, one thread/worker, 32 MiB artifacts, and 1 GiB RSS all validate before closeout."
+    },
+    {
+      "requirement_id": "L30-G18_access_and_claim_closeout",
+      "gate": "All protected-access counters, warnings, unavailable fields, hashes, tests, screenshots, and engineering-versus-science closeout statements are complete."
+    }
+  ],
+  "future_refusal_ids": [
+    "L30-R01_non_loopback_bind",
+    "L30-R02_public_share_link",
+    "L30-R03_analytics_enabled",
+    "L30-R04_monitoring_enabled",
+    "L30-R05_allowed_directory_or_static_root",
+    "L30-R06_upload_component_or_endpoint",
+    "L30-R07_arbitrary_local_file_access",
+    "L30-R08_live_or_recorded_source_mode",
+    "L30-R09_socket_stream_SDK_or_hardware",
+    "L30-R10_missing_or_ambiguous_source_badge",
+    "L30-R11_missing_proof_posture",
+    "L30-R12_source_proof_or_causality_mismatch",
+    "L30-R13_missing_clock_origin_or_units",
+    "L30-R14_unmapped_cross_clock_subtraction",
+    "L30-R15_inferred_or_missing_finalization",
+    "L30-R16_fabricated_or_uncalibrated_confidence",
+    "L30-R17_stability_relabelled_as_correctness",
+    "L30-R18_consumed_artifact_or_seed_access",
+    "L30-R19_real_header_signal_cache_or_recording_access",
+    "L30-R20_target_label_prompt_or_real_text_leakage",
+    "L30-R21_model_checkpoint_or_logit_access",
+    "L30-R22_training_parameter_update_or_calibration",
+    "L30-R23_non_loopback_request_response_or_redirect",
+    "L30-R24_non_loopback_websocket",
+    "L30-R25_service_worker_popup_or_new_page",
+    "L30-R26_state_thread_worker_or_session_cap",
+    "L30-R27_artifact_runtime_or_RSS_cap",
+    "L30-R28_missing_access_counter_hash_warning_or_unavailable_field",
+    "L30-R29_accessibility_focus_status_keyboard_or_motion_failure",
+    "L30-R30_label_loss_overlap_blankness_or_browser_console_failure"
+  ],
+  "dependencies": {
+    "loop30_planning_research_complete": true,
+    "loop30_preregistration_prepared": false,
+    "loop30_authorization_request_prepared": false,
+    "loop30_runtime_or_UI_exists": false,
+    "loop30_trace_fixture_exists": false,
+    "loop25_dependency_satisfied_now": false,
+    "loop21_causal_producer_evidence_available_as_documentation": true,
+    "loop23_consumed_seed_must_remain_closed": true,
+    "loop24_consumed_seed_must_remain_closed": true,
+    "loop17_existing_demo_may_be_reused_without_review": false,
+    "loop34_calibration_dependency_satisfied_now": false,
+    "rw3_dependency_satisfied_now": false,
+    "live_source_dependency_in_scope": false
+  },
+  "resource_boundaries": {
+    "current_cpu_threads": 1,
+    "current_workers": 1,
+    "current_downloaded_payload_bytes": 0,
+    "current_generated_planning_artifact_cap_bytes": 8388608,
+    "current_server_launches": 0,
+    "current_browser_qa_runs": 0,
+    "external_browser_peak_rss_bytes": null,
+    "external_browser_peak_rss_unavailable_reason": "The browser research tool does not expose process-level RSS.",
+    "end_to_end_research_runtime_sec": null,
+    "end_to_end_research_runtime_unavailable_reason": "Interactive source review spans external tool calls and reasoning rather than one measurable local process.",
+    "future_default_cpu_threads": 1,
+    "future_default_workers": 1,
+    "future_generated_artifact_cap_bytes": 33554432,
+    "future_peak_rss_cap_bytes": 1073741824,
+    "future_external_network_operations_allowed": 0,
+    "future_raw_data_reads_allowed": 0,
+    "future_real_cache_reads_allowed": 0,
+    "future_model_runs_allowed": 0,
+    "future_training_runs_allowed": 0
+  },
+  "research_access_counters": {
+    "high_level_public_web_research_operations": 10,
+    "remote_code_payload_downloads": 0,
+    "remote_data_payload_downloads": 0,
+    "remote_payload_bytes": 0,
+    "local_real_data_path_checks": 0,
+    "local_real_data_hash_reads": 0,
+    "real_header_reads": 0,
+    "real_signal_reads": 0,
+    "real_cache_reads": 0,
+    "target_label_or_text_reads": 0,
+    "consumed_evidence_payload_reads": 0,
+    "model_or_checkpoint_runs": 0,
+    "training_or_parameter_updates": 0,
+    "calibration_runs": 0,
+    "server_launches": 0,
+    "browser_qa_runs": 0,
+    "device_sdk_imports": 0,
+    "socket_or_stream_operations": 0,
+    "physical_device_or_hardware_sessions": 0
+  },
+  "source_bindings": [
+    {
+      "source_id": "brain2qwerty_v2_paper",
+      "role": "continuous_asynchronous_but_whole_sentence_noncausal_and_low_latency_future_boundary",
+      "url": "https://facebookresearch.github.io/brain2qwerty/assets/brain2qwerty_v2.pdf"
+    },
+    {
+      "source_id": "loop17_local_demo",
+      "role": "existing_artifact_backed_aggregate_only_noncausal_local_console_boundary",
+      "url": "docs/LOOP_17_HONEST_LOCAL_DEMO.md"
+    },
+    {
+      "source_id": "loop21_causal_replay",
+      "role": "causal_producer_five_schedule_and_transport_compute_separation",
+      "url": "docs/LOOP_21_CAUSAL_CHUNK_REPLAY.md"
+    },
+    {
+      "source_id": "loop23_streaming_ctc",
+      "role": "consumed_stable_but_wrong_partial_trace_and_failed_exact_sequence_gate",
+      "url": "docs/LOOP_23_STREAMING_CTC_DECODER.md"
+    },
+    {
+      "source_id": "rw3_replay_live_equivalence",
+      "role": "future_source_corrected_arrival_clock_and_transport_boundary",
+      "url": "docs/RW3_REPLAY_LIVE_EQUIVALENCE_PREREGISTRATION.md"
+    },
+    {
+      "source_id": "gradio_blocks",
+      "role": "loopback_share_threads_analytics_monitoring_CORS_state_and_path_launch_settings",
+      "url": "https://www.gradio.app/main/docs/gradio/blocks"
+    },
+    {
+      "source_id": "gradio_file_access",
+      "role": "allowed_paths_static_files_cache_upload_and_blocked_path_exposure_boundary",
+      "url": "https://www.gradio.app/main/guides/file-access"
+    },
+    {
+      "source_id": "python_perf_counter_ns",
+      "role": "backend_monotonic_integer_nanosecond_duration_clock",
+      "url": "https://docs.python.org/3.12/library/time.html#time.perf_counter_ns"
+    },
+    {
+      "source_id": "w3c_high_resolution_time",
+      "role": "browser_monotonic_clock_and_time_origin_boundary",
+      "url": "https://www.w3.org/TR/2026/WD-hr-time-3-20260225/"
+    },
+    {
+      "source_id": "w3c_long_tasks",
+      "role": "fifty_millisecond_browser_long_task_definition",
+      "url": "https://www.w3.org/TR/longtasks-1/"
+    },
+    {
+      "source_id": "w3c_event_timing",
+      "role": "working_draft_input_processing_and_render_timing_with_runtime_support_detection",
+      "url": "https://www.w3.org/TR/2026/WD-event-timing-20260223/"
+    },
+    {
+      "source_id": "wcag_status_messages",
+      "role": "programmatically_determinable_status_updates_without_focus_change",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/status-messages"
+    },
+    {
+      "source_id": "playwright_network",
+      "role": "request_response_websocket_and_service_worker_browser_audit",
+      "url": "https://playwright.dev/docs/network"
+    },
+    {
+      "source_id": "lsl_time_sync",
+      "role": "raw_corrected_arrival_clock_and_online_vs_synchronized_timing_boundary",
+      "url": "https://labstreaminglayer.readthedocs.io/info/time_synchronization.html"
+    },
+    {
+      "source_id": "streaming_asr_stability",
+      "role": "partial_hypothesis_revision_and_stability_metrics",
+      "url": "https://arxiv.org/abs/2006.01416"
+    },
+    {
+      "source_id": "incremental_asr_evaluation",
+      "role": "separate_quality_latency_updates_and_revokes_metrics",
+      "url": "https://arxiv.org/abs/2302.12049"
+    }
+  ],
+  "claim_boundary": [
+    "A continuous or asynchronous decoder is not necessarily causal, low latency, live, or end to end.",
+    "Replay pacing is not device capture, source latency, or live-stream evidence.",
+    "A stable partial hypothesis can be wrong; stability is not correctness or calibrated confidence.",
+    "Within-origin backend and browser durations do not permit arbitrary subtraction across clock origins.",
+    "A loopback bind and zero external browser traffic are measured security properties, not decorative labels.",
+    "The existing Loop 17 console, Loop 21 producer proof, Loop 23 consumed result, Loop 24 consumed selection, and RW3 registration do not authorize a Loop 30 fixture or execution.",
+    "No running interface, live neural source, causal end-to-end decoder, confidence, neural advantage, decoding accuracy, unseen-person generalization, capture-to-user latency, portable hardware, arbitrary-thought, assistive, diagnostic, or clinical result is established."
+  ]
+}

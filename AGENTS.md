@@ -154,6 +154,25 @@ target, model, training, SDK, stream, partner session, or hardware operation
 occurred. Home EEG recording feasibility is not home text decoding, and the
 Brain2Qwerty v2 cryogenic channel ablation is not OPM-MEG or EEG evidence.
 
+Loop 30 planning research is complete on the current branch, but its local
+streaming experiment remains `Not Started` and no target-free trace, UI,
+server, or browser run exists:
+
+```bash
+cat docs/LOOP_30_PRIMARY_SOURCE_RESEARCH.md
+python -m json.tool registries/loop30_research_boundary.v0.json >/dev/null
+```
+
+The future surface is a loopback-only target-free replay inspector, not a live
+decoder. The boundary freezes four source modes, a 30-field trace contract,
+nine clock domains, six latency claim levels, 18 future requirements, 30
+refusals, and 30 false `authorized_now` fields. A future run must use one new
+target-free synthetic trace after separate authorization; consumed Loop 23/24
+artifacts, S7/S21, targets, models, streams, SDKs, devices, and hardware remain
+closed. Stability is not correctness or confidence, replay scheduling is not
+capture latency, and a future Loop 30 authorization cannot authorize RW3 or a
+live source.
+
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
 commit `c3d1f01`, before any adapter, source chunk, fixture, socket, board, or
@@ -188,7 +207,9 @@ its experiment remains `Not Started`; Loop 27 has selected S25 in metadata
 while preregistration remains blocked; Loop 28 planning research defines a T2
 strict zero-shot rule while its experiment remains `Not Started`; Loop 29
 planning research defines separate EEG and OPM-MEG pathways while its
-experiment remains `Not Started`; Loops 30-44 remain `Not Started`. All 20
+experiment remains `Not Started`; Loop 30 planning research defines the local
+target-free replay boundary while its experiment remains `Not Started`; Loops
+31-44 remain `Not Started`. All 20
 execution flags are false. This roadmap does not
 reopen Loop 24, authorize RW3, or permit a Loop 25-44 fixture, download, data
 read, model run, training run, stream, board, or hardware operation. A broad
@@ -237,6 +258,12 @@ authorization boundary.
   payload. Its 5,000,000,000-byte preferred and 10,000,000,000-byte absolute
   storage envelope is capacity only; the selected S20 plus S25 future bundles
   total exactly 1,106,030,247 bytes.
+- The Loop 30 planning registry remains exact with 30 false authorization
+  fields, four source modes, a 30-field target-free trace schema, nine clock
+  domains, six latency levels, 18 future requirements, 30 refusal IDs, fixed
+  loopback/privacy/accessibility/browser-QA settings, zero protected access,
+  and no preregistration, seed, fixture, UI, server, browser run, model,
+  stream, live source, or generated experiment payload.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed

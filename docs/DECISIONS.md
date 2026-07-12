@@ -1620,3 +1620,56 @@ Evidence: `docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md`,
 `tests/test_loop29_research_boundary.py`, roadmap row 29, tracker decision
 `29-R1`, risk `R34`, research commit `f5fc740`, push CI run `29204700023`, and
 draft PR #8 CI run `29204804483`.
+
+## 0057 - Define a target-free local replay inspector; hold execution
+
+Decision: close Loop 30 planning research while leaving its local streaming
+experiment `Not Started`, every one of its 30 `authorized_now` fields false,
+and no seed, trace, fixture, UI, server, or browser run created. Define the
+future product as a loopback-only target-free replay inspector. Artifact,
+synthetic, recorded, and live source modes remain distinct; only artifact and
+new synthetic replay may enter a future Loop 30 packet.
+
+Why: Brain2Qwerty v2 is continuous but still whole-sentence and noncausal, so
+asynchronous output is not a low-latency end-to-end result. Loop 21 proves a
+causal producer without a text or capture-latency claim. Loop 23 then shows
+that a zero-revision trace can remain wrong: the consumed registered test
+reached 5/8 exact against 6/8 while its partials recorded zero revisions.
+Stability therefore cannot stand in for correctness or confidence.
+
+Future interaction boundary: freeze a deterministic 30-field target-free
+trace, nine clock domains, six latency claim levels, 18 pass requirements, and
+30 exact refusals before implementation. Finalization is explicit rather than
+inferred from no change. Source, backend, browser, and user-observed clocks keep
+their origins and may not be subtracted without a measured mapping. Confidence
+remains unavailable pending separate Loop 34 calibration, and the no-signal
+comparator plus producer/decoder causality remain visible.
+
+Privacy, accessibility, and browser boundary: bind exactly to `127.0.0.1` with
+no host override, public share, analytics, monitoring, uploads, allowed
+directory, static root, service worker, popup, or external network dependency.
+Use one thread/worker and two sessions. Browser QA must record every request,
+response, WebSocket, page, console error, 50-ms W3C long task, Event Timing
+availability, screenshot, and overlap/blankness result. Incremental state uses
+textual source/proof labels, status/log semantics, polite announcements,
+keyboard access, stable focus, no forced autoscroll, and reduced motion.
+
+Access and resource result: this planning pass used ten high-level public-web
+research operations, one CPU thread and worker, and zero remote payload bytes,
+real path/hash/header/signal/cache/target/consumed-artifact reads, checkpoint/
+model/training/calibration runs, trace generations, server launches, browser
+QA runs, SDK imports, sockets, streams, or hardware sessions. External browser
+peak RSS and one end-to-end research runtime are unavailable by tool contract.
+The current planning cap is 8 MiB; a future separately authorized prototype
+remains under 32 MiB generated artifacts and 1 GiB peak RSS.
+
+Claim boundary: this decision adds no running interface, live neural source,
+causal end-to-end decoder, confidence, neural advantage, decoding accuracy,
+unseen-person generalization, capture-to-user latency, portable hardware,
+arbitrary-thought, assistive, diagnostic, or clinical result. A future Loop 30
+authorization cannot authorize RW3, real data, a model, training, a device, or
+hardware.
+
+Evidence: `docs/LOOP_30_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop30_research_boundary.v0.json`,
+`tests/test_loop30_research_boundary.py`, and roadmap row 30.

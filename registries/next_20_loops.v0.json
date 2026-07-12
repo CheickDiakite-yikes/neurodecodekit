@@ -1,6 +1,6 @@
 {
   "schema_name": "neurodecodekit.next_twenty_loops_roadmap",
-  "schema_version": "0.6.0",
+  "schema_version": "0.7.0",
   "roadmap_id": "loops-25-44",
   "prepared_at": "2026-07-12",
   "status": "planning_only_not_execution_authorization",
@@ -51,6 +51,15 @@
     "loop29_execution_authorized": false,
     "loop29_real_data_download_authorized": false,
     "loop29_device_or_hardware_authorized": false,
+    "loop30_research_packet_prepared": true,
+    "loop30_future_source_mode": "synthetic_replay",
+    "loop30_clock_domain_count": 9,
+    "loop30_future_requirement_count": 18,
+    "loop30_future_refusal_count": 30,
+    "loop30_preregistration_prepared": false,
+    "loop30_trace_fixture_exists": false,
+    "loop30_execution_authorized": false,
+    "loop30_server_or_browser_run_authorized": false,
     "user_preferred_incremental_storage_bytes": 5000000000,
     "user_absolute_incremental_storage_bytes": 10000000000,
     "selected_s20_plus_s25_future_bundle_bytes": 1106030247,
@@ -355,29 +364,44 @@
       "status": "Not Started",
       "execution_authorized": false,
       "proof_posture": "planned_not_authorized",
+      "research_status": "planning_research_complete",
+      "research_packet": "docs/LOOP_30_PRIMARY_SOURCE_RESEARCH.md",
+      "research_registry": "registries/loop30_research_boundary.v0.json",
+      "future_source_mode": "synthetic_replay",
+      "clock_domain_count": 9,
+      "latency_claim_level_count": 6,
+      "future_requirement_count": 18,
+      "future_refusal_count": 30,
+      "preregistration_prepared": false,
+      "authorization_request_prepared": false,
+      "trace_fixture_exists": false,
+      "server_or_browser_run_authorized": false,
       "core_question": "Can a user inspect incremental hypotheses, revisions, timing, provenance, and refusals locally without confusing replay with live decoding?",
       "why_high_value": "A trustworthy interaction surface exposes latency and uncertainty instead of hiding them behind a final sentence.",
-      "build_deliverable": "Loopback-only replay UI with partial hypotheses, revision trace, stage clocks, resource telemetry, warnings, and local artifact loading.",
-      "research_deliverable": "Interaction contract for partial output, abstention, revision, privacy, and replay/live labels.",
-      "data_scope": "Existing synthetic artifacts and aggregate-only real scorecards; no raw real signal, cloud call, socket, or hardware source.",
+      "build_deliverable": "Future loopback-only target-free replay inspector with explicit partial hypotheses, revisions, finalization, nine clock domains, six latency claim levels, resources, warnings, hashes, proof posture, and browser QA.",
+      "research_deliverable": "Completed primary-source interaction boundary with four source modes, a 30-field target-free trace schema, nine clock domains, six latency levels, 18 future gates, 30 refusals, fixed localhost security, and accessibility requirements.",
+      "data_scope": "Planning research used public primary sources and committed aggregate/mechanics documentation only. A future run may generate one new target-free synthetic trace after separate authorization; consumed Loop 23/24 artifacts, S7/S21, real signal, targets, models, sockets, streams, and hardware remain closed.",
       "controls": [
-        "Replay badge and source identity visible in every view.",
-        "No-signal comparator shown beside predictive outputs.",
-        "Cold start, steady state, scheduling delay, compute delay, and render delay separated."
+        "Replay mode, source identity, proof posture, producer/decoder causality, unavailable confidence, and no-signal comparator remain visible in every relevant view.",
+        "Explicit revision and finalization events; stability is never relabeled as correctness or confidence.",
+        "Nine clock domains retain origin and units; cold start, scheduling, queue, compute, transport, browser receive, render, and finalization remain separate.",
+        "Fixed 127.0.0.1 bind, no share/analytics/monitoring/upload/allowed directory, strict CORS, one thread/worker, and zero non-loopback browser requests or WebSockets.",
+        "Status/log semantics, keyboard access, stable focus, no forced scroll, reduced motion, and textual non-color-only labels."
       ],
       "primary_metrics": [
-        "first-token and finalization latency by stage",
-        "revision count and prefix stability",
-        "event-loop responsiveness",
+        "first partial, first committed token, and explicit finalization time by available clock domain",
+        "revision count, edit overhead, committed-prefix length, and stable duration",
+        "browser long-task count, Event Timing support, console errors, and desktop/mobile rendering",
         "runtime, peak RSS, input and output bytes",
-        "network, raw, cache, model, and training counters"
+        "network, WebSocket, raw, real-cache, consumed-artifact, target, model, training, calibration, stream, SDK, and hardware counters",
+        "source/configuration/trace/payload hashes plus warning and unavailable-field counts"
       ],
-      "acceptance_boundary": "Pass only as a local replay interface when all source, causality, latency, unavailable-confidence, and proof labels remain visible and browser QA passes.",
-      "stop_rule": "Park any interface that implies live hardware, real-time text, confidence, or neural success that the loaded artifact does not prove.",
+      "acceptance_boundary": "A future implementation may pass only as a local target-free replay inspector when all 18 interaction gates and 30 refusals pass, source/causality/proof/confidence labels remain visible, all clocks and unavailable stages stay honest, browser QA records zero non-loopback traffic and zero 50-ms long tasks, and resource/access caps pass.",
+      "stop_rule": "Park on any target or consumed-artifact contribution, inferred finalization, fabricated confidence, cross-clock subtraction, external bind/request/WebSocket, file exposure, accessibility failure, missing label/counter/hash/warning, cap failure, or implication of live neural or end-to-end real-time decoding.",
       "depends_on": [25],
       "external_gates": [],
-      "authorization_boundary": "Planning only. UI implementation and replay execution require a separate bounded Loop 30 authorization; live sources remain outside scope.",
-      "resource_cap": "Loopback only, one thread, one worker, 32 MiB temporary artifacts, 1 GiB peak RSS, and no network dependency."
+      "authorization_boundary": "Planning research only. No seed, trace, fixture, UI, server, browser run, model, real/consumed data read, socket, stream, SDK, device, or hardware operation is authorized. Future Loop 30 authorization can cover only the bounded synthetic replay inspector and cannot authorize RW3 or a live source.",
+      "resource_cap": "Current research used one thread/worker, zero payload downloads/server/browser runs, and an 8 MiB planning cap. Future execution remains loopback-only with one thread/worker, 32 MiB generated artifacts, 1 GiB peak RSS, and zero external network dependency."
     },
     {
       "loop_id": 31,
@@ -860,7 +884,7 @@
     "27": ["brain2qwerty_v1", "brain2qwerty_v2", "datasheets"],
     "28": ["brain2qwerty_v2", "brain2qwerty_v2_code", "meg_cross_subject_transfer", "moabb_benchmark", "brain_decoder_cv_guidelines", "classifier_permutation_tests"],
     "29": ["brain2qwerty_v1", "brain2qwerty_v2", "opm_speech_tracking", "opm_lightly_shielded", "opm_field_control", "opm_interference", "mne_opm_processing", "home_dry_eeg", "bids_eeg", "bids_meg", "openbci_cyton_format", "brainflow_data_format"],
-    "30": ["brain2qwerty_v2", "lsl_time_sync"],
+    "30": ["brain2qwerty_v2", "lsl_time_sync", "gradio_blocks", "gradio_file_access", "python_perf_counter_ns", "w3c_high_resolution_time", "w3c_long_tasks", "w3c_event_timing", "wcag_status_messages", "playwright_network", "streaming_asr_stability", "incremental_asr_evaluation"],
     "31": ["brain2qwerty_v1", "brain2qwerty_v2"],
     "32": ["brain2qwerty_v2", "moabb_benchmark"],
     "33": ["brain2qwerty_v2", "moabb_benchmark"],
@@ -1032,6 +1056,66 @@
       "title": "Lab Streaming Layer time synchronization",
       "url": "https://labstreaminglayer.readthedocs.io/info/time_synchronization.html",
       "roadmap_use": "Raw versus corrected timestamps, low-latency versus synchronized timing, and clock-domain boundaries."
+    },
+    {
+      "source_id": "gradio_blocks",
+      "title": "Gradio Blocks and launch parameters",
+      "url": "https://www.gradio.app/main/docs/gradio/blocks",
+      "roadmap_use": "Loopback binding, public-share tunnels, analytics, monitoring, CORS, thread, session, path, and worker settings for the future local inspector."
+    },
+    {
+      "source_id": "gradio_file_access",
+      "title": "Gradio security and file access",
+      "url": "https://www.gradio.app/main/guides/file-access",
+      "roadmap_use": "Static-path, allowed-path, cache, returned-file, upload, and blocked-path exposure boundaries."
+    },
+    {
+      "source_id": "python_perf_counter_ns",
+      "title": "Python perf_counter_ns documentation",
+      "url": "https://docs.python.org/3.12/library/time.html#time.perf_counter_ns",
+      "roadmap_use": "Integer monotonic nanosecond measurement for backend stage durations without wall-clock conversion."
+    },
+    {
+      "source_id": "w3c_high_resolution_time",
+      "title": "W3C High Resolution Time",
+      "url": "https://www.w3.org/TR/2026/WD-hr-time-3-20260225/",
+      "roadmap_use": "Browser monotonic timing, time-origin provenance, and cross-context mapping boundaries."
+    },
+    {
+      "source_id": "w3c_long_tasks",
+      "title": "W3C Long Tasks API",
+      "url": "https://www.w3.org/TR/longtasks-1/",
+      "roadmap_use": "The 50-millisecond browser long-task definition used only for responsiveness QA."
+    },
+    {
+      "source_id": "w3c_event_timing",
+      "title": "W3C Event Timing API Working Draft",
+      "url": "https://www.w3.org/TR/2026/WD-event-timing-20260223/",
+      "roadmap_use": "Input delay, event processing, presentation delay, browser support detection, and unavailable-field reporting."
+    },
+    {
+      "source_id": "wcag_status_messages",
+      "title": "WCAG 2.2 Understanding Status Messages",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/status-messages",
+      "roadmap_use": "Programmatically determinable incremental status and sequential updates without focus theft."
+    },
+    {
+      "source_id": "playwright_network",
+      "title": "Playwright network documentation",
+      "url": "https://playwright.dev/docs/network",
+      "roadmap_use": "Browser request, response, WebSocket, and service-worker inspection for zero-external-network proof."
+    },
+    {
+      "source_id": "streaming_asr_stability",
+      "title": "Analyzing the Quality and Stability of a Streaming End-to-End On-Device Speech Recognizer",
+      "url": "https://arxiv.org/abs/2006.01416",
+      "roadmap_use": "Partial-hypothesis revision and stability metrics without treating stability as correctness."
+    },
+    {
+      "source_id": "incremental_asr_evaluation",
+      "title": "Evaluating Automatic Speech Recognition in an Incremental Setting",
+      "url": "https://arxiv.org/abs/2302.12049",
+      "roadmap_use": "Separate quality, latency, updates, and revokes metrics for incremental interaction traces."
     },
     {
       "source_id": "executorch",

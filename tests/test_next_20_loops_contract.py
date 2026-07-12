@@ -10,9 +10,7 @@ ROADMAP_PATH = REPO_ROOT / "registries" / "next_20_loops.v0.json"
 LOOP24_PATH = REPO_ROOT / "registries" / "local_precision_runtime_contract.v0.json"
 RW3_PATH = REPO_ROOT / "registries" / "replay_equivalence_contract.v0.json"
 RW3_REQUEST_PATH = REPO_ROOT / "registries" / "rw3_stage_a_authorization_request.v0.json"
-LOOP25_REQUEST_PATH = (
-    REPO_ROOT / "registries" / "loop25_authorization_request.v1.json"
-)
+LOOP25_REQUEST_PATH = REPO_ROOT / "registries" / "loop25_authorization_request.v1.json"
 
 
 class NextTwentyLoopsContractTests(unittest.TestCase):
@@ -23,10 +21,8 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
 
     def test_identity_range_and_planning_boundary_are_exact(self):
         roadmap = self.roadmap
-        self.assertEqual(
-            roadmap["schema_name"], "neurodecodekit.next_twenty_loops_roadmap"
-        )
-        self.assertEqual(roadmap["schema_version"], "0.6.0")
+        self.assertEqual(roadmap["schema_name"], "neurodecodekit.next_twenty_loops_roadmap")
+        self.assertEqual(roadmap["schema_version"], "0.7.0")
         self.assertEqual(roadmap["roadmap_id"], "loops-25-44")
         self.assertEqual(roadmap["status"], "planning_only_not_execution_authorization")
         self.assertEqual(
@@ -44,9 +40,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         self.assertFalse(boundary["loop24_execution_authorized_now"])
         self.assertTrue(boundary["loop25_preregistration_ci_green"])
         self.assertTrue(boundary["loop25_amendment_ci_green"])
-        self.assertTrue(
-            boundary["loop25_original_request_superseded_before_authorization"]
-        )
+        self.assertTrue(boundary["loop25_original_request_superseded_before_authorization"])
         self.assertTrue(boundary["loop25_authorization_request_prepared"])
         self.assertFalse(boundary["loop25_execution_authorized"])
         self.assertFalse(boundary["loop25_development_seed_opened"])
@@ -79,23 +73,24 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
             boundary["loop29_selected_accessibility_lane"],
             "scalp_EEG_local_first",
         )
-        self.assertEqual(
-            boundary["loop29_selected_partner_lane"], "OPM_MEG_partner_lab"
-        )
+        self.assertEqual(boundary["loop29_selected_partner_lane"], "OPM_MEG_partner_lab")
         self.assertIsNone(boundary["loop29_selected_device"])
         self.assertFalse(boundary["loop29_preregistration_prepared"])
         self.assertFalse(boundary["loop29_execution_authorized"])
         self.assertFalse(boundary["loop29_real_data_download_authorized"])
         self.assertFalse(boundary["loop29_device_or_hardware_authorized"])
-        self.assertEqual(
-            boundary["user_preferred_incremental_storage_bytes"], 5_000_000_000
-        )
-        self.assertEqual(
-            boundary["user_absolute_incremental_storage_bytes"], 10_000_000_000
-        )
-        self.assertEqual(
-            boundary["selected_s20_plus_s25_future_bundle_bytes"], 1_106_030_247
-        )
+        self.assertTrue(boundary["loop30_research_packet_prepared"])
+        self.assertEqual(boundary["loop30_future_source_mode"], "synthetic_replay")
+        self.assertEqual(boundary["loop30_clock_domain_count"], 9)
+        self.assertEqual(boundary["loop30_future_requirement_count"], 18)
+        self.assertEqual(boundary["loop30_future_refusal_count"], 30)
+        self.assertFalse(boundary["loop30_preregistration_prepared"])
+        self.assertFalse(boundary["loop30_trace_fixture_exists"])
+        self.assertFalse(boundary["loop30_execution_authorized"])
+        self.assertFalse(boundary["loop30_server_or_browser_run_authorized"])
+        self.assertEqual(boundary["user_preferred_incremental_storage_bytes"], 5_000_000_000)
+        self.assertEqual(boundary["user_absolute_incremental_storage_bytes"], 10_000_000_000)
+        self.assertEqual(boundary["selected_s20_plus_s25_future_bundle_bytes"], 1_106_030_247)
         self.assertFalse(boundary["storage_envelope_is_download_authorization"])
         self.assertFalse(boundary["rw3_stage_a_authorized"])
         self.assertFalse(boundary["general_continuation_is_authorization"])
@@ -145,14 +140,14 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                 else:
                     self.assertEqual(row["status"], "Not Started")
                     self.assertEqual(row["proof_posture"], "planned_not_authorized")
-                    if row["loop_id"] in {26, 27, 28, 29}:
-                        self.assertEqual(
-                            row["research_status"], "planning_research_complete"
-                        )
+                    if row["loop_id"] in {26, 27, 28, 29, 30}:
+                        self.assertEqual(row["research_status"], "planning_research_complete")
                         self.assertFalse(row["preregistration_prepared"])
                     if row["loop_id"] == 27:
                         self.assertFalse(row["acquisition_request_prepared"])
-                self.assertTrue(all(isinstance(row[key], str) and row[key].strip() for key in required_text))
+                self.assertTrue(
+                    all(isinstance(row[key], str) and row[key].strip() for key in required_text)
+                )
                 self.assertGreaterEqual(len(row["controls"]), 3)
                 self.assertGreaterEqual(len(row["primary_metrics"]), 4)
                 self.assertIn(row["priority"], {"P0", "P1", "P2"})
@@ -171,9 +166,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
     def test_protected_real_evidence_and_consumed_seeds_remain_explicit(self):
         protected = self.roadmap["protected_evidence"]
         self.assertEqual(protected["synthetic_seeds"], [2203, 2303, 2353, 2401])
-        self.assertEqual(
-            protected["unopened_synthetic_seeds"], [2402, 2501, 2502]
-        )
+        self.assertEqual(protected["unopened_synthetic_seeds"], [2402, 2501, 2502])
         real_text = " ".join(protected["real_cohorts"])
         self.assertIn("S21 session-1", real_text)
         self.assertIn("S21 session-2", real_text)
@@ -194,7 +187,12 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         self.assertIn("sensitive", constraints["privacy"])
         for term in ["bytes", "runtime", "peak RSS", "access counters", "proceed, park, or kill"]:
             self.assertIn(term, constraints["closeout"])
-        self.assertTrue(all("thread" in row["resource_cap"].lower() or row["loop_id"] in {27, 29, 35, 38, 44} for row in self.loops))
+        self.assertTrue(
+            all(
+                "thread" in row["resource_cap"].lower() or row["loop_id"] in {27, 29, 35, 38, 44}
+                for row in self.loops
+            )
+        )
 
     def test_primary_sources_are_unique_secure_and_cover_core_workstreams(self):
         sources = self.roadmap["primary_sources"]
@@ -229,6 +227,16 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                 "bids_meg",
                 "openbci_cyton_format",
                 "brainflow_data_format",
+                "gradio_blocks",
+                "gradio_file_access",
+                "python_perf_counter_ns",
+                "w3c_high_resolution_time",
+                "w3c_long_tasks",
+                "w3c_event_timing",
+                "wcag_status_messages",
+                "playwright_network",
+                "streaming_asr_stability",
+                "incremental_asr_evaluation",
                 "moabb_benchmark",
                 "lsl_time_sync",
                 "executorch",
@@ -251,9 +259,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         loop24 = json.loads(LOOP24_PATH.read_text(encoding="utf-8"))
         rw3 = json.loads(RW3_PATH.read_text(encoding="utf-8"))
         rw3_request = json.loads(RW3_REQUEST_PATH.read_text(encoding="utf-8"))
-        loop25_request = json.loads(
-            LOOP25_REQUEST_PATH.read_text(encoding="utf-8")
-        )
+        loop25_request = json.loads(LOOP25_REQUEST_PATH.read_text(encoding="utf-8"))
         self.assertTrue(
             all(
                 value is False
@@ -275,9 +281,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         for section in rw3_request.values():
             if isinstance(section, dict):
                 request_flags.extend(
-                    value
-                    for key, value in section.items()
-                    if key.endswith("authorized_now")
+                    value for key, value in section.items() if key.endswith("authorized_now")
                 )
         self.assertTrue(request_flags)
         self.assertTrue(all(value is False for value in request_flags))
@@ -288,23 +292,17 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         for section in loop25_request.values():
             if isinstance(section, dict):
                 loop25_flags.extend(
-                    value
-                    for key, value in section.items()
-                    if key.endswith("authorized_now")
+                    value for key, value in section.items() if key.endswith("authorized_now")
                 )
         self.assertTrue(loop25_flags)
         self.assertTrue(all(value is False for value in loop25_flags))
 
     def test_human_roadmap_and_public_tracker_cover_all_twenty_loops(self):
-        roadmap_doc = (REPO_ROOT / "docs" / "LOOPS_25_44_ROADMAP.md").read_text(
+        roadmap_doc = (REPO_ROOT / "docs" / "LOOPS_25_44_ROADMAP.md").read_text(encoding="utf-8")
+        research_doc = (REPO_ROOT / "docs" / "NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md").read_text(
             encoding="utf-8"
         )
-        research_doc = (
-            REPO_ROOT / "docs" / "NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md"
-        ).read_text(encoding="utf-8")
-        tracker_doc = (REPO_ROOT / "docs" / "NEXT_20_LOOPS_TRACKER.md").read_text(
-            encoding="utf-8"
-        )
+        tracker_doc = (REPO_ROOT / "docs" / "NEXT_20_LOOPS_TRACKER.md").read_text(encoding="utf-8")
         for row in self.loops:
             heading = rf"^## Loop {row['loop_id']} - {re.escape(row['title'])}$"
             with self.subTest(loop=row["loop_id"]):

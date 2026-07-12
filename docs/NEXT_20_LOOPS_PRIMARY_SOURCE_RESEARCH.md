@@ -464,3 +464,34 @@ signal, target, consumed evidence, model, training path, SDK, socket, stream,
 device, partner session, or hardware operation. Exact sources and boundaries
 are in `docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop29_research_boundary.v0.json`.
+
+## 2026-07-12 Loop 30 Research Addendum
+
+Loop 30 planning research is complete while the target-free local replay
+experiment remains `Not Started`. Brain2Qwerty v2 provides continuous
+asynchronous decoding, but its published architecture still uses an entire
+sentence and explicitly leaves fully real-time low-latency operation to future
+work. Local Loop 21 evidence proves a causal producer only; Loop 23 shows that
+a zero-revision partial trace can still be wrong. The interaction must therefore
+keep asynchronous, causal producer, causal decoder, replay paced, live source,
+and end-to-end latency as separate properties.
+
+The machine boundary freezes four source modes, a 30-field deterministic
+target-free trace, nine clock domains, six latency claim levels, 18 future
+requirements, 30 refusals, 16 source bindings, and 30 false authorization
+fields. Stability remains descriptive rather than correctness or confidence;
+finalization is explicit; backend, source, browser, and user-observed clocks
+cannot be subtracted without an origin mapping.
+
+The future interface must bind exactly to `127.0.0.1`, disable sharing,
+analytics, monitoring, uploads, broad paths, service workers, and external
+traffic, and use one thread and worker. Browser QA must record requests,
+responses, WebSockets, pages, long tasks, Event Timing availability, console
+errors, screenshots, and overlap/blankness. Incremental status uses accessible
+status/log semantics without focus theft or forced autoscroll.
+
+No seed, trace, payload, UI, server, browser run, consumed artifact, real-data
+read, target, model, training, calibration, SDK, socket, stream, live source,
+device, or hardware operation occurred. Exact primary sources and boundaries
+are in `docs/LOOP_30_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop30_research_boundary.v0.json`.
