@@ -1198,6 +1198,69 @@ def _cmd_blank_intercept_gate(args: argparse.Namespace) -> int:
     return 0 if report["gate_passed"] else 1
 
 
+def _cmd_make_precision_runtime_fixture(args: argparse.Namespace) -> int:
+    _set_loop24_thread_environment()
+    from neurodecodekit.training.precision_runtime_fixture import (
+        prepare_precision_runtime_fixture,
+        summarize_precision_runtime_manifest,
+    )
+
+    manifest = prepare_precision_runtime_fixture(args.out_dir)
+    print(json.dumps(summarize_precision_runtime_manifest(manifest), indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_inspect_precision_runtime_fixture(args: argparse.Namespace) -> int:
+    from neurodecodekit.training.precision_runtime_fixture import (
+        load_precision_runtime_manifest,
+        summarize_precision_runtime_manifest,
+    )
+
+    manifest = load_precision_runtime_manifest(args.manifest)
+    print(json.dumps(summarize_precision_runtime_manifest(manifest), indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_local_precision_runtime_gate(args: argparse.Namespace) -> int:
+    _set_loop24_thread_environment()
+    from neurodecodekit.experiments.local_precision_runtime_gate import (
+        inspect_local_precision_runtime_report,
+        run_local_precision_runtime_gate,
+    )
+
+    report = run_local_precision_runtime_gate(
+        fixture_manifest_path=args.fixture_manifest,
+        checkpoint_path=args.checkpoint,
+        out_dir=args.out_dir,
+    )
+    summary = inspect_local_precision_runtime_report(Path(args.out_dir) / "gate.json")
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0 if report["gate_passed"] else 1
+
+
+def _cmd_inspect_local_precision_runtime_report(args: argparse.Namespace) -> int:
+    from neurodecodekit.experiments.local_precision_runtime_gate import (
+        inspect_local_precision_runtime_report,
+    )
+
+    summary = inspect_local_precision_runtime_report(args.report)
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0
+
+
+def _set_loop24_thread_environment() -> None:
+    import os
+
+    for name in (
+        "OMP_NUM_THREADS",
+        "OPENBLAS_NUM_THREADS",
+        "MKL_NUM_THREADS",
+        "NUMEXPR_NUM_THREADS",
+        "VECLIB_MAXIMUM_THREADS",
+    ):
+        os.environ[name] = "1"
+
+
 def _cmd_extract_sentence_cache(args: argparse.Namespace) -> int:
     from neurodecodekit.preprocess.sentence_extraction import extract_fif_mat_sentence_cache
 
@@ -3163,6 +3226,89 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--out-json", required=True, help="New machine-readable gate report.")
     p.add_argument("--out-md", required=True, help="New human-readable gate report.")
     p.set_defaults(func=_cmd_blank_intercept_gate)
+
+    p = sub.add_parser(
+        "make-precision-runtime-fixture",
+        help=(
+            "Create the registered target-free Loop 24 selection and qualification "
+            "fixture under an authorized ignored root. Requires NumPy."
+        ),
+        description=(
+            "Generate exact seeds 2401 and 2402 as separate input-only NPZ files. "
+            "The fixture contains no targets, labels, text, participant data, model "
+            "outputs, or neural recordings and is capped at 512 KiB."
+        ),
+    )
+    p.add_argument(
+        "--out-dir",
+        required=True,
+        help=(
+            "New nested directory under cache/loop24, outputs/loop24, or "
+            ".codex_work/loop24."
+        ),
+    )
+    p.set_defaults(func=_cmd_make_precision_runtime_fixture)
+
+    p = sub.add_parser(
+        "inspect-precision-runtime-fixture",
+        help=(
+            "Validate the registered Loop 24 manifest and hashes without opening "
+            "either partition array."
+        ),
+    )
+    p.add_argument(
+        "--manifest",
+        required=True,
+        help="Registered Loop 24 target-free fixture manifest JSON.",
+    )
+    p.set_defaults(func=_cmd_inspect_precision_runtime_fixture)
+
+    p = sub.add_parser(
+        "local-precision-runtime-gate",
+        help=(
+            "Run the authorized frozen target-free Loop 24 CPU precision/runtime gate. "
+            "Requires [ml]."
+        ),
+        description=(
+            "Compare the exact float32, CPU float16, and dynamic QNNPACK qint8 "
+            "candidates with one CPU thread, twelve balanced selection rounds, and "
+            "conditional one-time seed-2402 qualification. No real data, targets, "
+            "training, parameter update, energy measurement, network call, or RW3 "
+            "operation is permitted."
+        ),
+    )
+    p.add_argument(
+        "--fixture-manifest",
+        required=True,
+        help="Exact registered Loop 24 manifest produced by the fixture command.",
+    )
+    p.add_argument(
+        "--checkpoint",
+        default="cache/loop22_tiny_causal_encoder/checkpoint.npz",
+        help=(
+            "Exact frozen Loop 22 checkpoint. Default: "
+            "cache/loop22_tiny_causal_encoder/checkpoint.npz."
+        ),
+    )
+    p.add_argument(
+        "--out-dir",
+        required=True,
+        help=(
+            "New nested directory under cache/loop24, outputs/loop24, or "
+            ".codex_work/loop24."
+        ),
+    )
+    p.set_defaults(func=_cmd_local_precision_runtime_gate)
+
+    p = sub.add_parser(
+        "inspect-local-precision-runtime-report",
+        help=(
+            "Strictly validate a Loop 24 report, access ledger, artifacts, hashes, "
+            "caps, and measured audit sidecar."
+        ),
+    )
+    p.add_argument("--report", required=True, help="Path to a saved Loop 24 gate.json.")
+    p.set_defaults(func=_cmd_inspect_local_precision_runtime_report)
 
     p = sub.add_parser(
         "extract-windows",

@@ -8,6 +8,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 CONTRACT_PATH = REPO_ROOT / "registries" / "local_precision_runtime_contract.v0.json"
+AUTHORIZATION_PATH = REPO_ROOT / "registries" / "loop24_authorization_decision.v0.json"
 RW3_CONTRACT_PATH = REPO_ROOT / "registries" / "replay_equivalence_contract.v0.json"
 RW3_REQUEST_PATH = REPO_ROOT / "registries" / "rw3_stage_a_authorization_request.v0.json"
 
@@ -16,6 +17,7 @@ class LocalPrecisionRuntimeContractTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.contract = json.loads(CONTRACT_PATH.read_text(encoding="utf-8"))
+        cls.authorization = json.loads(AUTHORIZATION_PATH.read_text(encoding="utf-8"))
         cls.rw3_contract = json.loads(RW3_CONTRACT_PATH.read_text(encoding="utf-8"))
         cls.rw3_request = json.loads(RW3_REQUEST_PATH.read_text(encoding="utf-8"))
 
@@ -233,19 +235,35 @@ class LocalPrecisionRuntimeContractTests(unittest.TestCase):
         self.assertEqual(len({row["url"] for row in sources}), len(sources))
         self.assertTrue(all(row["url"].startswith("https://") for row in sources))
 
-    def test_no_loop24_runtime_exists_and_rw3_remains_unauthorized(self):
+    def test_authorized_loop24_runtime_exists_and_rw3_remains_unauthorized(self):
         planned = self.contract["planned_implementation"]
+        # These remain immutable preregistration-snapshot fields.
         self.assertFalse(planned["files_exist_now"])
         self.assertFalse(planned["cli_exists_now"])
         self.assertEqual(planned["base_dependencies_added"], [])
         self.assertEqual(planned["optional_dependencies_added"], [])
-        for relative in planned["files"]:
-            self.assertFalse((REPO_ROOT / relative).exists(), relative)
+        for relative in planned["files"][:-1]:
+            self.assertTrue((REPO_ROOT / relative).is_file(), relative)
         cli_text = (REPO_ROOT / "src" / "neurodecodekit" / "cli.py").read_text(
             encoding="utf-8"
         )
         for command in planned["cli_commands"]:
-            self.assertNotIn(command, cli_text)
+            self.assertIn(command, cli_text)
+        flags = self.authorization["authorization"]
+        allowed_true = {
+            "loop24_implementation_authorized_now",
+            "target_free_fixture_generation_authorized_now",
+            "frozen_checkpoint_validation_and_open_authorized_now",
+            "registered_candidate_conversion_authorized_now",
+            "registered_model_inference_authorized_now",
+            "registered_selection_authorized_now",
+            "conditional_one_time_qualification_authorized_now",
+            "report_and_cli_implementation_authorized_now",
+        }
+        self.assertTrue(all(flags[name] is True for name in allowed_true))
+        self.assertTrue(
+            all(value is False for name, value in flags.items() if name not in allowed_true)
+        )
         pyproject = (REPO_ROOT / "pyproject.toml").read_text(encoding="utf-8").lower()
         self.assertNotIn("torchao", pyproject)
         self.assertFalse(self.rw3_request["authorized_now"])
