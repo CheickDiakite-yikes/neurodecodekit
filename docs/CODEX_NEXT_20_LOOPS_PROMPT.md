@@ -34,6 +34,31 @@ final open, or backup substitution exists. Review
 `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop27_research_boundary.v0.json` as metadata research only.
 
+Loop 28 planning research is complete while the experiment remains `Not
+Started`. It separates T0-T3 transfer evidence and reserves S25 for strict T2
+zero-shot evaluation with zero target fit or calibration rows. The future
+recommendation requires at least 48 final rows, 0.05 macro sentence-CER
+improvement over the frozen prior, 65,535 deterministic paired assignments plus
+observed, and strict wins over zero-signal, channel-derangement, and time-
+displacement controls. All 21 authorization fields are false. Review
+`docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop28_research_boundary.v0.json` as planning evidence only; they
+do not authorize a Loop 27 packet, S25 operation, model prediction,
+calibration, or final open.
+
+Loop 29 planning research is complete while the experiment remains `Not
+Started`. It selects scalp EEG as the immediate local-first research lane,
+OPM-MEG as the same-modality partner/lab lane, and cryogenic MEG as the
+scientific reference. The machine boundary freezes 15 requirements, four
+modality profiles, six qualification levels, 12 future device-packet gates,
+and 24 false authorization fields. Its preferred 5,000,000,000-byte and
+absolute 10,000,000,000-byte incremental storage envelope is capacity only;
+the exact future S20 plus S25 bundles total 1,106,030,247 bytes, but zero bytes
+were downloaded. Review `docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop29_research_boundary.v0.json` as planning evidence only. They
+do not select a device or authorize real-data reads, SDKs, streams, purchases,
+partner sessions, hardware, models, or training.
+
 The next numbered decision is **authorize Loop 25 v1 exactly, amend it again,
 or hold**. Review `docs/LOOP_25_AUTHORIZATION_PACKET_V1.md` and
 `registries/loop25_authorization_request.v1.json`. General continuation is not
@@ -65,6 +90,9 @@ RW3 decision cannot authorize Loop 25. Neither decision authorizes Loop 26,
 which requires a compatible Loop 25 closeout plus its own preregistration and
 exact real-cache/target/model/training/validation authorization. None of those
 decisions authorizes Loop 27 acquisition or Loop 28 transfer.
+None authorizes Loop 29 acquisition or device work; storage permission is not
+download permission, and cryogenic channel ablation is not OPM-MEG or EEG
+qualification.
 
 Passing either future synthetic gate could establish only its registered
 interface, numerical, resource, or accounting behavior. It would not establish

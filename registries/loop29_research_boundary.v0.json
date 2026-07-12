@@ -1,0 +1,626 @@
+{
+  "schema_name": "neurodecodekit.loop29_research_boundary",
+  "schema_version": "0.1.0",
+  "prepared_at": "2026-07-12",
+  "status": "planning_research_complete_device_and_acquisition_execution_blocked",
+  "proof_posture": "primary_source_and_official_specification_research_no_data_model_stream_or_device_access",
+  "authorized_now": false,
+  "authorization": {
+    "loop29_preregistration_authorized_now": false,
+    "loop29_execution_authorized_now": false,
+    "loop25_execution_authorized_now": false,
+    "loop26_execution_authorized_now": false,
+    "loop27_acquisition_authorized_now": false,
+    "loop28_execution_authorized_now": false,
+    "real_data_download_authorized_now": false,
+    "existing_real_data_read_authorized_now": false,
+    "s25_candidate_access_authorized_now": false,
+    "s20_fresh_eeg_access_authorized_now": false,
+    "real_header_read_authorized_now": false,
+    "real_signal_read_authorized_now": false,
+    "target_label_or_text_read_authorized_now": false,
+    "model_or_checkpoint_run_authorized_now": false,
+    "training_or_parameter_update_authorized_now": false,
+    "calibration_authorized_now": false,
+    "device_purchase_authorized_now": false,
+    "device_sdk_import_authorized_now": false,
+    "socket_or_stream_authorized_now": false,
+    "physical_hardware_session_authorized_now": false,
+    "opm_partner_session_authorized_now": false,
+    "rw3_stage_a_authorized_now": false,
+    "external_participant_or_partner_outreach_authorized_now": false,
+    "authorization_sentence_exists": false,
+    "reason": "This registry translates portable-sensing requirements and storage intent into a research boundary. It does not select or purchase a device, open a real recording, execute an acquisition packet, or authorize a model operation."
+  },
+  "research_question": "Which Brain2Qwerty requirements survive translation from cryogenic MEG to OPM-MEG or scalp EEG, which assumptions break, and what is the smallest honest real-data path toward an at-home result?",
+  "storage_envelope": {
+    "user_permission_recorded_at": "2026-07-12",
+    "preferred_incremental_storage_bytes": 5000000000,
+    "absolute_incremental_storage_bytes": 10000000000,
+    "units": "decimal_bytes",
+    "preferred_incremental_storage_gib": 4.6566128731,
+    "absolute_incremental_storage_gib": 9.3132257462,
+    "permission_scope": "storage_capacity_envelope_only",
+    "storage_permission_is_download_authorization": false,
+    "current_loop29_download_budget_bytes": 0,
+    "current_loop29_generated_artifact_cap_bytes": 8388608,
+    "current_downloaded_payload_bytes": 0,
+    "selected_future_s20_eeg_bundle_bytes": 96090264,
+    "selected_future_s25_meg_bundle_bytes": 1009939983,
+    "combined_selected_future_bundle_bytes": 1106030247,
+    "preferred_margin_after_both_bundles_bytes": 3893969753,
+    "absolute_margin_after_both_bundles_bytes": 8893969753,
+    "allocation_order": [
+      "use_existing_S21_source_train_material_first_with_zero_new_download_bytes_after_separate_authorization",
+      "run_the_exact_96090264_byte_S20_fresh_task_matched_EEG_packet_only_after_its_separate_approval",
+      "reserve_the_exact_1009939983_byte_S25_pair_for_final_only_unseen_person_MEG_after_upstream_freeze",
+      "spend_no_remaining_capacity_until_Loop33_scaling_evidence_justifies_exact_additional_source_files"
+    ],
+    "unused_capacity_is_not_a_collection_target": true,
+    "full_spanishbcbl_download_allowed": false
+  },
+  "brain2qwerty_reference_boundary": {
+    "v1_eeg": {
+      "participants": 20,
+      "channels_total": 64,
+      "eeg_channels": 61,
+      "ocular_channels": 3,
+      "sampling_rate_hz": 1000,
+      "mean_character_error_rate": 0.65,
+      "meg_mean_character_error_rate": 0.29,
+      "task": "keypress_aligned_prompted_sentence_typing",
+      "portable_or_at_home_device_tested": false
+    },
+    "v2_meg": {
+      "channels_total": 306,
+      "magnetometers": 102,
+      "planar_gradiometers": 204,
+      "sampling_rate_hz": 1000,
+      "online_highpass_hz": 0.1,
+      "online_lowpass_hz": 330,
+      "random_sensor_ablation_counts": [76, 153, 230],
+      "sensor_selection_seeds_per_count": 4,
+      "opm_sentence_decoding_measured": false,
+      "portable_or_at_home_device_tested": false,
+      "random_cryogenic_sensor_ablation_counts_as_opm_evidence": false,
+      "random_cryogenic_sensor_ablation_counts_as_eeg_evidence": false
+    },
+    "local_evidence": {
+      "s7_eeg_bridge_validated": true,
+      "s7_eeg_classifier_beats_no_signal_prior": false,
+      "s7_eeg_evaluation_consumed": true,
+      "s20_fresh_eeg_packet_prepared": true,
+      "s20_fresh_eeg_packet_authorized": false,
+      "portable_hardware_result_exists": false
+    }
+  },
+  "portable_pathway_decision": {
+    "decision_id": "two_lane_portability_v0",
+    "immediate_accessibility_lane": "scalp_EEG_local_first_research_and_qualification",
+    "same_modality_partner_lane": "OPM_MEG_partner_lab_translation",
+    "scientific_reference_lane": "cryogenic_MEGIN_MEG",
+    "non_neural_lane": "peripheral_and_behavioral_controls_only",
+    "selected_device_id": null,
+    "selected_device_unavailable_reason": "No device has passed task, raw-locality, reference, geometry, clock, packet, privacy, repeated-session, and independent signal-quality gates.",
+    "device_purchase_recommended_now": false,
+    "device_purchase_recommendation_unavailable_reason": "Loop 29 compares requirements, not prices or unmeasured vendor promises. A named device belongs to a separately authorized Loop 42 packet.",
+    "selected_opm_partner": null,
+    "opm_at_home_ready": false,
+    "scalp_eeg_at_home_recording_mechanically_feasible": true,
+    "scalp_eeg_at_home_open_vocabulary_thought_typing_demonstrated": false,
+    "why": "Scalp EEG has practical local hardware, existing format support, and repeated self-administered home-recording evidence, but much weaker task-matched decoding and stronger reference, placement, motion, and timing risks. OPM-MEG preserves magnetic sensing and has speech-tracking evidence, but current systems still require specialized magnetic control."
+  },
+  "modality_profiles": [
+    {
+      "profile_id": "cryogenic_megin_meg_reference",
+      "modality": "MEG",
+      "device_class": "cryogenic_SQUID_whole_head",
+      "role": "scientific_reference_only",
+      "neural_measurement_units": ["T", "T_per_m"],
+      "reference_scheme_required": false,
+      "sensor_geometry_required": true,
+      "sensor_orientation_required": true,
+      "head_to_device_transform_required": true,
+      "magnetic_shielding_required": true,
+      "active_field_nulling_required": false,
+      "electrode_contact_or_impedance_required": false,
+      "motion_tracking_or_head_localization_required": true,
+      "at_home_ready": false,
+      "language_production_sentence_decoding_evidence": true,
+      "portable_sentence_decoding_evidence": false
+    },
+    {
+      "profile_id": "opm_meg_partner_lab",
+      "modality": "OPM-MEG",
+      "device_class": "room_temperature_optically_pumped_magnetometers",
+      "role": "same_modality_partner_translation",
+      "neural_measurement_units": ["T"],
+      "reference_scheme_required": false,
+      "sensor_geometry_required": true,
+      "sensor_orientation_required": true,
+      "head_to_device_transform_required": true,
+      "magnetic_shielding_required": true,
+      "active_field_nulling_required": true,
+      "electrode_contact_or_impedance_required": false,
+      "motion_tracking_or_head_localization_required": true,
+      "at_home_ready": false,
+      "language_production_sentence_decoding_evidence": false,
+      "speech_listening_tracking_evidence": true,
+      "portable_sentence_decoding_evidence": false,
+      "specialized_environment_reason": "Current human OPM-MEG studies use magnetically shielded rooms plus passive and active field control; lighter shielding is promising but remains specialized infrastructure."
+    },
+    {
+      "profile_id": "scalp_eeg_local_first",
+      "modality": "EEG",
+      "device_class": "wet_dry_or_hybrid_scalp_electrodes",
+      "role": "accessible_local_first_research",
+      "neural_measurement_units": ["V", "uV"],
+      "reference_scheme_required": true,
+      "ground_scheme_required": true,
+      "sensor_geometry_required": true,
+      "sensor_orientation_required": false,
+      "head_to_device_transform_required": false,
+      "magnetic_shielding_required": false,
+      "active_field_nulling_required": false,
+      "electrode_contact_or_impedance_required": true,
+      "motion_tracking_or_head_localization_required": true,
+      "at_home_ready": "mechanics_possible_device_and_task_specific",
+      "language_production_sentence_decoding_evidence": true,
+      "portable_sentence_decoding_evidence": false,
+      "open_vocabulary_thought_typing_evidence": false,
+      "known_limit": "Brain2Qwerty v1 reported substantially worse EEG than MEG CER, and the local S7 transparent classifier lost to its no-signal prior."
+    },
+    {
+      "profile_id": "non_neural_wearables_control_only",
+      "modality": "PERIPHERAL",
+      "device_class": "EOG_EMG_IMU_gaze_audio_hand_or_cardiac",
+      "role": "confound_and_accessibility_control",
+      "neural_measurement_units": [],
+      "reference_scheme_required": "modality_specific",
+      "sensor_geometry_required": "modality_specific",
+      "at_home_ready": "device_specific",
+      "language_production_sentence_decoding_evidence": false,
+      "may_be_called_brain_signal": false,
+      "may_replace_brain_only_control": false
+    }
+  ],
+  "requirement_matrix": [
+    {
+      "requirement_id": "modality_and_sensor_identity",
+      "cryogenic_meg": "required_known",
+      "opm_meg": "required_per_sensor_axis",
+      "scalp_eeg": "required_per_electrode_role",
+      "non_neural": "required_separate_modality",
+      "minimum_future_evidence": "Exact manufacturer, model, sensor/electrode type, channel role, serial redaction, and firmware/software version."
+    },
+    {
+      "requirement_id": "channel_count_order_and_names",
+      "cryogenic_meg": "required",
+      "opm_meg": "required_no_cryogenic_name_assumption",
+      "scalp_eeg": "required_no_layout_inference_from_count",
+      "non_neural": "required_separate_namespace",
+      "minimum_future_evidence": "Unique ordered names, physical roles, missing channels, and immutable source-to-cache mapping."
+    },
+    {
+      "requirement_id": "physical_units_gain_and_calibration",
+      "cryogenic_meg": "T_or_T_per_m_with_calibration",
+      "opm_meg": "T_with_axis_gain_crosstalk_and_calibration",
+      "scalp_eeg": "V_or_uV_with_gain_and_reference",
+      "non_neural": "modality_specific",
+      "minimum_future_evidence": "Raw-count conversion, gain, calibration date or unavailable reason, and no implicit unit conversion."
+    },
+    {
+      "requirement_id": "sampling_rate_and_hardware_filters",
+      "cryogenic_meg": "required",
+      "opm_meg": "required_per_stream",
+      "scalp_eeg": "required_per_stream",
+      "non_neural": "required_per_stream",
+      "minimum_future_evidence": "Actual rate, clock source, analog and digital filters, anti-alias response, and device-specific causal resampling contract."
+    },
+    {
+      "requirement_id": "geometry_coordinate_frame_and_orientation",
+      "cryogenic_meg": "required_device_and_head_frames",
+      "opm_meg": "required_per_session_position_and_axis",
+      "scalp_eeg": "required_or_explicitly_unavailable_electrode_coordinates",
+      "non_neural": "modality_specific",
+      "minimum_future_evidence": "Coordinates, units, frame, fiducials, orientation where applicable, transform provenance, and uncertainty."
+    },
+    {
+      "requirement_id": "electrical_reference_and_ground",
+      "cryogenic_meg": "not_applicable",
+      "opm_meg": "not_applicable",
+      "scalp_eeg": "required_raw_and_derived_reference",
+      "non_neural": "modality_specific",
+      "minimum_future_evidence": "EEG reference, ground, channel-specific exceptions, rereference transform, and source/derived separation."
+    },
+    {
+      "requirement_id": "shielding_field_control_and_environment",
+      "cryogenic_meg": "required_msr_and_reference_channels",
+      "opm_meg": "required_msr_passive_active_nulling_and_residual_field",
+      "scalp_eeg": "power_line_and_electrical_environment_required",
+      "non_neural": "environment_required",
+      "minimum_future_evidence": "Named environment, interference sensors, field or line-noise measurements, suppression configuration, and raw-versus-corrected provenance."
+    },
+    {
+      "requirement_id": "contact_impedance_fit_and_setup",
+      "cryogenic_meg": "not_applicable_sensor_to_head_distance_required",
+      "opm_meg": "helmet_fit_and_sensor_to_scalp_distance_required",
+      "scalp_eeg": "electrode_contact_impedance_fit_setup_time_required",
+      "non_neural": "modality_specific",
+      "minimum_future_evidence": "Per-session fit/contact quality, setup time, bad-channel rule, operator or self-application status, and warnings."
+    },
+    {
+      "requirement_id": "motion_and_peripheral_artifacts",
+      "cryogenic_meg": "head_position_and_EOG_ECG_EMG_controls_required",
+      "opm_meg": "position_orientation_field_motion_and_peripheral_controls_required",
+      "scalp_eeg": "EOG_EMG_IMU_contact_motion_controls_required_or_unavailable",
+      "non_neural": "retained_as_controls",
+      "minimum_future_evidence": "Brain-only, peripheral-only, timing-only, and combined availability plus explicit missing-control claim blockers."
+    },
+    {
+      "requirement_id": "timestamp_clock_and_latency_provenance",
+      "cryogenic_meg": "device_clock_and_trigger_required",
+      "opm_meg": "sensor_sync_device_clock_trigger_and_motion_clock_required",
+      "scalp_eeg": "board_or_host_timestamp_origin_and_trigger_required",
+      "non_neural": "separate_clock_domain_required",
+      "minimum_future_evidence": "Raw, corrected, arrival, event, preprocessing, token, decoder, and render clocks remain distinct."
+    },
+    {
+      "requirement_id": "packet_gap_duplicate_reorder_and_reconnect",
+      "cryogenic_meg": "acquisition_specific",
+      "opm_meg": "acquisition_specific",
+      "scalp_eeg": "required_for_wireless_or_streaming",
+      "non_neural": "required_for_streaming",
+      "minimum_future_evidence": "Packet or sample counter, gap policy, no silent interpolation, reconnect generation, and loss report."
+    },
+    {
+      "requirement_id": "local_raw_export_network_and_privacy",
+      "cryogenic_meg": "local_research_export_required",
+      "opm_meg": "partner_local_export_and_license_required",
+      "scalp_eeg": "local_raw_path_without_mandatory_cloud_required_for_primary_lane",
+      "non_neural": "local_or_separately_disclosed",
+      "minimum_future_evidence": "Network-off behavior, data destinations, SDK/license, retention, deletion, credential, and telemetry audit."
+    },
+    {
+      "requirement_id": "task_targets_and_split_independence",
+      "cryogenic_meg": "prompted_typing_reference",
+      "opm_meg": "task_matched_sentence_production_unavailable",
+      "scalp_eeg": "task_matched_SpanishBCBL_available_not_portable",
+      "non_neural": "cannot_define_neural_target",
+      "minimum_future_evidence": "Task, prompt, action, target, split, session/person identity, no-signal comparator, and one-time final boundary."
+    },
+    {
+      "requirement_id": "compute_format_and_dependency",
+      "cryogenic_meg": "FIF_optional_MNE",
+      "opm_meg": "FIL_FIF_or_partner_format_optional_MNE",
+      "scalp_eeg": "BrainVision_EDF_BDF_EEGLAB_BIDS_or_board_adapter",
+      "non_neural": "namespaced_adapter",
+      "minimum_future_evidence": "Inspectable raw/metadata format, optional imports, one-thread reference, bytes, runtime, RSS, and deterministic hashes."
+    },
+    {
+      "requirement_id": "repeatability_and_at_home_operation",
+      "cryogenic_meg": "lab_operator_only",
+      "opm_meg": "specialist_partner_only",
+      "scalp_eeg": "self_application_must_be_measured_across_sessions",
+      "non_neural": "device_specific",
+      "minimum_future_evidence": "Setup success, usable-channel fraction, repeated-session signal metric, user burden, failures, and no silent exclusion."
+    }
+  ],
+  "opm_evidence_boundary": {
+    "speech_tracking_study_participants": 4,
+    "speech_tracking_recording_minutes": 9,
+    "speech_tracking_sensor_count_range": [45, 46],
+    "speech_tracking_task": "continuous_speech_listening",
+    "speech_tracking_is_sentence_production_decoding": false,
+    "speech_tracking_is_brain_to_text": false,
+    "real_time_opm_interface_tasks": ["ERP", "SSVEP"],
+    "real_time_opm_interface_is_text_decoding": false,
+    "state_of_art_msr_height_greater_than_m": 3,
+    "state_of_art_msr_mass_greater_than_kg": 10000,
+    "lightly_shielded_room_result_exists": true,
+    "lightly_shielded_room_is_unshielded_home": false,
+    "passive_and_active_field_control_required": true,
+    "motion_changes_field_measurement": true,
+    "per_session_sensor_positions_and_axes_required": true,
+    "partner_data_gate_required": true
+  },
+  "eeg_evidence_boundary": {
+    "brain2qwerty_v1_task_matched_eeg_cer": 0.65,
+    "brain2qwerty_v1_task_matched_meg_cer": 0.29,
+    "perceived_speech_eeg_top10_accuracy_range": [0.177, 0.257],
+    "perceived_speech_meg_top10_accuracy_max_average": 0.707,
+    "dewave_task": "displayed_text_natural_reading_ZuCo",
+    "dewave_is_thought_typing": false,
+    "at_home_repeated_dry_eeg_cohorts": 2,
+    "at_home_repeated_dry_eeg_participants_total": 80,
+    "at_home_tasks": ["visual_oddball", "flanker"],
+    "at_home_task_is_language_decoding": false,
+    "multiple_sessions_improve_aggregate_erp_quality": true,
+    "dry_eeg_low_frequency_below_6_hz_reliability_warning": true,
+    "motion_and_jaw_artifact_warning": true,
+    "device_specific_task_validation_required": true
+  },
+  "representative_device_class_evidence": [
+    {
+      "record_id": "openbci_cyton_official_spec",
+      "eeg_channels": 8,
+      "sampling_rate_hz": 250,
+      "raw_bit_depth": 24,
+      "optional_board_timestamp_resolution_ms": 1,
+      "sample_counter_present": true,
+      "direct_local_protocol_documented": true,
+      "task_matched_sentence_decoding_measured": false,
+      "qualification_status": "official_spec_only"
+    },
+    {
+      "record_id": "openbci_cyton_daisy_official_spec",
+      "eeg_channels": 16,
+      "effective_per_channel_sampling_rate_hz": 125,
+      "radio_stream_uses_alternating_averaged_samples": true,
+      "documented_relative_delay_samples": 1,
+      "task_matched_sentence_decoding_measured": false,
+      "qualification_status": "official_spec_only"
+    },
+    {
+      "record_id": "gtec_gnautilus_official_spec",
+      "eeg_channel_options": [8, 16, 32, 64],
+      "sampling_rate_hz_8_16_32": 500,
+      "sampling_rate_hz_64": 250,
+      "raw_bit_depth": 24,
+      "digital_trigger_inputs": 8,
+      "task_matched_sentence_decoding_measured": false,
+      "qualification_status": "vendor_spec_only"
+    },
+    {
+      "record_id": "brainflow_transport_contract",
+      "exg_units_where_possible": "uV",
+      "timestamp_epoch": "Unix",
+      "timestamp_precision_claim": "microsecond_representation",
+      "some_board_timestamps_generated_on_host_receipt": true,
+      "presets_have_independent_rates_timestamps_and_packet_ids": true,
+      "qualification_status": "adapter_documentation_only"
+    }
+  ],
+  "fresh_real_data_path": {
+    "status": "two_exact_candidates_prepared_neither_authorized",
+    "first_result_candidate": {
+      "candidate_id": "spanishbcbl-eeg-s20-session2-block2-v0",
+      "packet": "docs/FRESH_EEG_BENCHMARK_S20_APPROVAL_PACKET.md",
+      "contract": "registries/first_fresh_eeg_benchmark.v0.json",
+      "bundle_bytes": 96090264,
+      "files": 4,
+      "acquisition_cap_bytes": 134217728,
+      "generated_artifact_cap_bytes": 16777216,
+      "analysis": "frozen_44_10_10_event_label_neural_prior_shuffle_comparison",
+      "portable_device_result": false,
+      "fresh_task_matched_eeg_result_if_authorized": true,
+      "authorized": false
+    },
+    "final_transfer_candidate": {
+      "candidate_id": "spanishbcbl-meg-s25-session2-block2-v0",
+      "packet_prepared": false,
+      "bundle_bytes": 1009939983,
+      "files": 2,
+      "role": "final_only_T2_unseen_person_MEG",
+      "portable_device_result": false,
+      "authorized": false
+    },
+    "combined_bundle_bytes": 1106030247,
+    "full_dataset_needed": false,
+    "additional_source_blocks_selected_now": 0,
+    "reason_no_additional_source_blocks": "Existing S21 source-train material should answer the first bounded source-model question before storage is spent on a scaling hypothesis."
+  },
+  "future_device_packet_minimum_gates": [
+    "name_exact_device_firmware_transport_host_and_electrode_or_sensor_configuration",
+    "bind_raw_units_gain_sampling_filters_reference_ground_geometry_and_channel_roles",
+    "prove_local_raw_export_and_network_off_behavior_or_disclose_and_reject_primary_lane",
+    "separate_device_source_corrected_arrival_event_preprocess_token_decoder_and_render_clocks",
+    "measure_packet_loss_duplicates_reorder_reconnect_and_no_silent_interpolation",
+    "measure_setup_time_contact_or_fit_bad_channels_and_repeated_session_usability",
+    "retain_EOG_EMG_IMU_or_other_peripheral_controls_or_mark_neural_specificity_unavailable",
+    "run_playback_or_recorded_replay_equivalence_before_any_live_session",
+    "set_exact_consent_task_files_bytes_retention_deletion_and_stop_rules",
+    "report_signal_quality_before_any_decoder_and_no_signal_controls_with_any_predictive result",
+    "keep_device_connectivity_signal_quality_task_information_and_decoding_as_separate_levels",
+    "obtain_a_separate_explicit_authorization_for_each_irreversible_stage"
+  ],
+  "qualification_levels": [
+    {
+      "level": 0,
+      "name": "official_specification_or_file_metadata",
+      "neural_signal_read": false,
+      "live_device": false,
+      "decoding_claim": false
+    },
+    {
+      "level": 1,
+      "name": "bounded_recorded_signal_quality",
+      "neural_signal_read": true,
+      "live_device": false,
+      "decoding_claim": false
+    },
+    {
+      "level": 2,
+      "name": "recorded_replay_transport_equivalence",
+      "neural_signal_read": "separately_authorized_fixture_or_recording",
+      "live_device": false,
+      "decoding_claim": false
+    },
+    {
+      "level": 3,
+      "name": "named_live_device_mechanics",
+      "neural_signal_read": true,
+      "live_device": true,
+      "decoding_claim": false
+    },
+    {
+      "level": 4,
+      "name": "task_signal_above_artifact_controls",
+      "neural_signal_read": true,
+      "live_device": true,
+      "decoding_claim": "task_specific_only"
+    },
+    {
+      "level": 5,
+      "name": "independent_text_decoding_above_no_signal_and_peripheral_controls",
+      "neural_signal_read": true,
+      "live_device": true,
+      "decoding_claim": "only_exact_person_session_task_device_and_split"
+    }
+  ],
+  "dependencies": {
+    "loop29_planning_research_complete": true,
+    "loop29_preregistration_prepared": false,
+    "loop29_authorization_request_prepared": false,
+    "loop27_metadata_dependency_satisfied": true,
+    "device_specific_packet_dependency_satisfied": false,
+    "s20_packet_exists": true,
+    "s20_packet_authorized": false,
+    "s25_packet_exists": false,
+    "loop25_dependency_satisfied_now": false,
+    "loop26_dependency_satisfied_now": false,
+    "loop28_dependency_satisfied_now": false,
+    "rw3_dependency_satisfied_now": false,
+    "loop36_geometry_research_can_use_this_matrix": true,
+    "loop42_device_selection_can_use_this_matrix": true
+  },
+  "resource_boundaries": {
+    "current_cpu_threads": 1,
+    "current_workers": 1,
+    "current_downloaded_payload_bytes": 0,
+    "current_generated_planning_artifact_cap_bytes": 8388608,
+    "external_browser_peak_rss_bytes": null,
+    "external_browser_peak_rss_unavailable_reason": "The browser research tool does not expose process-level RSS.",
+    "end_to_end_research_runtime_sec": null,
+    "end_to_end_research_runtime_unavailable_reason": "Interactive source review spans external tool calls and reasoning rather than one measurable local process.",
+    "future_default_cpu_threads": 1,
+    "future_default_workers": 1,
+    "future_default_generated_artifact_cap_bytes": 33554432,
+    "future_storage_preferred_incremental_bytes": 5000000000,
+    "future_storage_absolute_incremental_bytes": 10000000000,
+    "future_automatic_device_purchases": 0,
+    "future_automatic_partner_sessions": 0,
+    "future_automatic_backup_recordings": 0
+  },
+  "research_access_counters": {
+    "high_level_public_web_research_operations": 14,
+    "github_metadata_api_operations": 0,
+    "remote_code_payload_downloads": 0,
+    "remote_data_payload_downloads": 0,
+    "remote_payload_bytes": 0,
+    "local_real_data_path_checks": 0,
+    "local_real_data_hash_reads": 0,
+    "real_header_reads": 0,
+    "real_signal_reads": 0,
+    "target_label_or_text_reads": 0,
+    "consumed_evidence_reads": 0,
+    "model_or_checkpoint_runs": 0,
+    "training_or_parameter_updates": 0,
+    "calibration_runs": 0,
+    "device_sdk_imports": 0,
+    "socket_or_stream_operations": 0,
+    "physical_device_or_hardware_sessions": 0,
+    "device_purchases": 0,
+    "partner_or_participant_outreach_operations": 0
+  },
+  "source_bindings": [
+    {
+      "source_id": "brain2qwerty_v2_paper",
+      "role": "cryogenic_reference_random_sensor_ablation_and_unmeasured_opm_hypothesis",
+      "url": "https://facebookresearch.github.io/brain2qwerty/assets/brain2qwerty_v2.pdf"
+    },
+    {
+      "source_id": "brain2qwerty_v1_paper",
+      "role": "task_matched_64_channel_eeg_and_306_channel_meg_performance_gap",
+      "url": "https://www.nature.com/articles/s41593-026-02303-2"
+    },
+    {
+      "source_id": "opm_speech_tracking",
+      "role": "45_to_46_sensor_continuous_speech_listening_tracking_not_text_decoding",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1053811921002469"
+    },
+    {
+      "source_id": "opm_lightly_shielded_environment",
+      "role": "lighter_shielding_result_and_remaining_specialized_room_boundary",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39302788/"
+    },
+    {
+      "source_id": "opm_precision_field_control",
+      "role": "passive_shield_active_nulling_motion_and_residual_field_requirements",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34273527/"
+    },
+    {
+      "source_id": "opm_interference_suppression",
+      "role": "reference_sensors_environmental_interference_and_preprocessing_controls",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34933122/"
+    },
+    {
+      "source_id": "opm_real_time_interface",
+      "role": "real_time_ERP_and_SSVEP_mechanics_not_brain_to_text",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8356471/"
+    },
+    {
+      "source_id": "mne_opm_processing",
+      "role": "session_specific_layout_DC_field_motion_reference_sensor_and_format_requirements",
+      "url": "https://mne.tools/stable/auto_tutorials/preprocessing/80_opm_processing.html"
+    },
+    {
+      "source_id": "noninvasive_perceived_speech",
+      "role": "matched_channel_and_duration_MEG_over_EEG_gap_and_task_separation",
+      "url": "https://www.nature.com/articles/s42256-023-00714-5"
+    },
+    {
+      "source_id": "dewave",
+      "role": "EEG_to_text_on_displayed_natural_reading_with_language_model_not_thought_typing",
+      "url": "https://openreview.net/forum?id=WaLI8slhLw"
+    },
+    {
+      "source_id": "at_home_repeated_dry_eeg",
+      "role": "self_administered_repeated_home_EEG_feasibility_and_session_aggregation",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9372279/"
+    },
+    {
+      "source_id": "dry_eeg_benchmark",
+      "role": "low_frequency_reliability_and_motion_artifact_limit",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12480468/"
+    },
+    {
+      "source_id": "bids_eeg_1_11_1",
+      "role": "sampling_reference_ground_channels_electrodes_coordinates_and_filters",
+      "url": "https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html"
+    },
+    {
+      "source_id": "bids_meg_1_11_1",
+      "role": "sampling_units_filters_channel_types_coordinate_frames_and_head_localization",
+      "url": "https://bids-specification.readthedocs.io/en/stable/modality-specific-files/magnetoencephalography.html"
+    },
+    {
+      "source_id": "openbci_hardware_official",
+      "role": "representative_local_board_channel_rate_and_transport_specifications",
+      "url": "https://docs.openbci.com/FAQ/HardFAQ/"
+    },
+    {
+      "source_id": "openbci_cyton_format",
+      "role": "packet_counter_optional_board_timestamp_gain_units_and_daisy_delay",
+      "url": "https://docs.openbci.com/Cyton/CytonDataFormat/"
+    },
+    {
+      "source_id": "brainflow_data_contract",
+      "role": "adapter_units_host_timestamp_and_independent_preset_clock_boundaries",
+      "url": "https://brainflow.readthedocs.io/en/stable/DataFormatDesc.html"
+    },
+    {
+      "source_id": "gtec_gnautilus_official",
+      "role": "representative_research_wireless_EEG_vendor_specification_not_qualification",
+      "url": "https://www.gtec.at/product/gnautilus-research-wireless-eeg-system/"
+    }
+  ],
+  "claim_boundary": [
+    "Brain2Qwerty v2 random ablation of cryogenic MEG channels is a model sensitivity result, not OPM-MEG or EEG device evidence.",
+    "Wearable OPM-MEG is room temperature and motion-tolerant only under measured geometry, shielding, field-control, and interference conditions; it is not currently an at-home result.",
+    "Scalp EEG is the most accessible local-first lane, but home recording feasibility, file compatibility, and a device specification do not establish sentence decoding.",
+    "The S20 packet can produce one fresh task-matched research-grade EEG result if separately authorized, but it cannot establish portable hardware.",
+    "The 5-to-10-GB storage envelope is capacity permission, not download, target, model, training, device, or hardware authorization.",
+    "No OPM-MEG sentence production, portable EEG text decoding, arbitrary-thought typing, real-time end-to-end text, at-home device, assistive, diagnostic, or clinical result is established."
+  ]
+}

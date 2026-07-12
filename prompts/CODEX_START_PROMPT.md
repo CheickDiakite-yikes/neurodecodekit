@@ -29,6 +29,10 @@ requests, and these files:
 - `registries/loop26_research_boundary.v0.json`
 - `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md`
 - `registries/loop27_research_boundary.v0.json`
+- `docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md`
+- `registries/loop28_research_boundary.v0.json`
+- `docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md`
+- `registries/loop29_research_boundary.v0.json`
 - `docs/POST_20_ROADMAP.md`
 - `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`
 - `docs/LOOPS_25_44_ROADMAP.md`
@@ -78,8 +82,9 @@ Do not reset, revert, delete, or overwrite work already present.
   gates, stop rules, dependencies, resource caps, and 20 false execution flags.
   Loop 25 is `Amended Preregistration`; Loop 26 planning research is complete
   while its experiment remains `Not Started`; Loop 27 planning research has
-  selected S25 metadata while preregistration remains blocked; Loops 28-44 are
-  `Not Started`; all 20 execution flags remain false.
+  selected S25 metadata while preregistration remains blocked; Loop 28 planning
+  research defines a strict zero-shot rule while its experiment remains `Not
+  Started`; Loops 29-44 are `Not Started`; all 20 execution flags remain false.
 - Loop 26's planning boundary recommends a 2,908-parameter causal candidate, a
   2,884-parameter linear comparator, six controls, and exact enumeration of all
   64 paired sign assignments over six reserved source-validation sentences.
@@ -92,6 +97,22 @@ Do not reset, revert, delete, or overwrite work already present.
   EEG cohort. All 18 permissions are false; no preregistration, acquisition
   request, download, local MAT payload hash, header, signal, target, model,
   training, final open, or backup substitution exists.
+- Loop 28 planning research defines four noninterchangeable T0-T3 transfer
+  levels and reserves S25 for strict T2 zero-shot evaluation with zero fit or
+  calibration rows. Its future recommendation requires at least 48 final rows,
+  0.05 macro sentence-CER improvement, 65,535 deterministic paired assignments
+  plus observed, and strict corruption-control wins. All 21 authorization
+  fields are false; no preregistration, prediction, calibration, or final open
+  exists.
+- Loop 29 planning research is complete while the portable-sensing experiment
+  remains `Not Started`. Scalp EEG is the immediate local-first research lane,
+  OPM-MEG is the same-modality partner/lab lane, and cryogenic MEG remains the
+  reference. The registry freezes 15 requirements, four modality profiles, six
+  qualification levels, 12 future packet gates, a preferred 5,000,000,000-byte
+  and absolute 10,000,000,000-byte capacity envelope, and 24 false
+  authorization fields. Exact future S20 plus S25 bundles total 1,106,030,247
+  bytes, but storage capacity is not download permission. No real-data read,
+  model, SDK, stream, device, partner, or hardware operation occurred.
 - No real recording quality, neural advantage, unseen-person generalization,
   useful EEG decoder, real-time decoding, portable-hardware, arbitrary-thought,
   or clinical result has been demonstrated.
@@ -189,6 +210,14 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
 10. Keep S25 sealed. Do not hash or open its local MAT payload, download its
     FIF, inspect a header, read signal/targets, substitute S24/S22/S18, or
     prepare a transfer run from Loop 27 planning research.
+11. Treat the Loop 28 final-only rule as planning research, not permission.
+    Target-wide signal statistics, subject embeddings, adapters, labels,
+    calibration, model/control predictions, and final targets remain sealed.
+    A future calibrated result cannot be relabeled as zero-shot.
+12. Treat the Loop 29 modality map and 5-10 GB envelope as planning research,
+    not a device or acquisition authorization. Do not infer OPM-MEG or EEG
+    behavior from cryogenic channel ablation; do not select, purchase, connect,
+    import an SDK for, stream from, or qualify hardware from this prompt.
 
 ## Required deliverables for the next authorized milestone
 
@@ -199,7 +228,8 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
    `a36d97b` v0 registration, green `b6b92d8` v1 amendment, false replacement
    authorization request, the planning-only Loop 26 registry with 14 false
    authorization fields and zero protected access, the Loop 27 registry with
-   18 false permissions and zero payload access, and all 20 Loops 25-44
+   18 false permissions and zero payload access, the Loop 28 registry with 21
+   false permissions and zero protected access, and all 20 Loops 25-44
    execution flags consistent.
 2. Run documentation/contract validation, local-link checks, Ruff,
    `git diff --check`, Gitleaks, and the complete unit suites. Compare with the

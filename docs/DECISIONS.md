@@ -1517,3 +1517,106 @@ Evidence: `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop27_research_boundary.v0.json`,
 `tests/test_loop27_research_boundary.py`, roadmap commit `b3d61b6`, tracker row
 `27-R1`, and GitHub CI run `29199178320`.
+
+## 0055 - Reserve S25 for strict zero-shot and separate calibration
+
+Decision: close Loop 28 planning research while leaving its experiment `Not
+Started`, its Loops 25-27 dependencies unsatisfied, and all 21
+`authorized_now` fields false. Reserve the selected S25 block for a future T2
+strict unseen-person zero-shot test with zero target-person fit, validation,
+calibration, target-wide normalization, subject embedding, adapter, threshold,
+or unlabeled corpus-adaptation rows. A calibrated-transfer curve requires a
+different physically separated design and may never be relabeled as zero-shot.
+
+Why: Brain2Qwerty v2 is an important asynchronous continuous-sentence
+reference, but its paper explicitly says the current architecture is
+whole-sentence and noncausal. Its main joint model includes each target
+participant during training and uses a participant-index-conditioned affine
+layer. Its leave-one-out comparison excludes the target participant during
+pretraining and then finetunes on that participant. Those results support
+participant-aware and calibrated transfer research, not strict unseen-person
+zero-shot decoding. Public cross-subject MEG and BCI benchmarking work likewise
+shows that participant/session domain shift and evaluation context must be
+named rather than averaged away.
+
+Future T2 rule: require at least 48 eligible unique performed S25 rows. Freeze
+the source checkpoint, source-train-only no-signal prior, exact-zero signal,
+channel-name-hash derangement, nonwrapping zero-filled time displacement, all
+predictions, and the scorer before final target text opens. Pass only with at
+least 0.05 absolute macro sentence-CER improvement over the prior, one-sided
+paired `p <= 0.05` from 65,535 deterministic sign assignments plus observed,
+and strictly lower macro CER than every corruption control. Ties, missing
+fields, threshold misses, control failures, hash/access/resource violations,
+or fewer than 48 rows park T2. Failure permits no restart, calibration,
+threshold change, or backup substitution.
+
+Claim boundary: a future pass can support only T2 for this one S25 canonical
+person/session/task. It cannot establish population generalization. It can add
+an unseen-text label only if a separately authorized redacted hash audit finds
+zero source overlap. Unlabeled target-corpus adaptation is transductive, not
+strict zero-shot. Brain2Qwerty v2 equivalence, low-latency operation, portable
+sensing, at-home use, assistive efficacy, diagnosis, and clinical utility all
+remain unestablished.
+
+Access and resource result: this planning pass used ten high-level public-web
+research operations and one GitHub metadata call, downloaded zero code/data
+payload bytes, and performed zero S25 metadata/path/hash/header/signal/MAT/
+target, consumed-evidence, model, training, calibration, final, RW3, stream,
+board, device, or hardware operations. The 14 Loop 28 invariants pass in 0.08
+seconds wall with 19,513,344-byte maximum RSS. External browser peak RSS and
+end-to-end interactive research runtime are unavailable by tool contract.
+
+Evidence: `docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop28_research_boundary.v0.json`,
+`tests/test_loop28_research_boundary.py`, and tracker row `28-R1`.
+
+## 0056 - Choose local-first EEG and partner OPM-MEG lanes; hold execution
+
+Decision: close Loop 29 planning research while leaving the portable-sensing
+experiment `Not Started`, every one of its 24 `authorized_now` fields false,
+and no device selected. Use scalp EEG as the immediate local-first
+accessibility research lane, OPM-MEG as a same-modality partner/lab lane,
+cryogenic MEG as the scientific reference, and non-neural wearables as controls
+or separate accessibility inputs.
+
+Why: Brain2Qwerty v2's random 76/153/230-channel subsets come from the same
+306-channel cryogenic MEGIN system and preserve its room, electronics, clocks,
+geometry, and noise field. They are model sensitivity evidence, not OPM-MEG or
+EEG qualification. OPM-MEG has measured speech tracking and real-time evoked-
+response mechanics, but current human systems still require specialist
+shielding, field control, geometry, motion tracking, and interference
+suppression. Scalp EEG has practical local hardware and repeated at-home
+recording evidence, but task-matched Brain2Qwerty EEG remains substantially
+weaker than MEG and dry systems carry reference, placement, low-frequency,
+motion, muscle, and clock risks. Home recording is not home text decoding.
+
+Future evidence boundary: preserve a 15-field cross-modality matrix, four
+modality profiles, six noncollapsible qualification levels, and 12 minimum
+future device-packet gates. A named device may proceed only when task, units,
+filters, reference, geometry, clocks, packets, locality, privacy, repeated-
+session, peripheral-control, licensing, and resource requirements can be
+measured directly. Vendor specifications, SDK imports, waveform plots, and
+successful file reads cannot skip qualification levels.
+
+Storage and real-data boundary: record the user's additional capacity as
+5,000,000,000 preferred and 10,000,000,000 absolute incremental bytes. This is
+capacity permission, not download permission. The separately gated S20 EEG
+packet is 96,090,264 bytes and the selected S25 MEG pair is 1,009,939,983
+bytes, for exactly 1,106,030,247 bytes combined and 3,893,969,753 bytes of
+preferred-capacity margin. Existing authorized S21 source material should
+answer the first source question before any additional source block is
+selected; unused space is not a collection target.
+
+Access and resource result: this research used 14 high-level public-web
+operations, one CPU thread and worker, and zero remote code/data payload
+downloads. It performed zero S20/S25 or consumed-data path/hash/header/signal/
+target reads; checkpoint/model/training/calibration runs; SDK imports; sockets;
+streams; device purchases; participant/partner outreach; or hardware sessions.
+External interactive runtime and peak RSS are unavailable from the research
+tool contract and are reported as unavailable rather than estimated.
+
+Evidence: `docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop29_research_boundary.v0.json`,
+`tests/test_loop29_research_boundary.py`, roadmap row 29, tracker decision
+`29-R1`, risk `R34`, research commit `f5fc740`, push CI run `29204700023`, and
+draft PR #8 CI run `29204804483`.

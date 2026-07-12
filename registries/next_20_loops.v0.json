@@ -1,6 +1,6 @@
 {
   "schema_name": "neurodecodekit.next_twenty_loops_roadmap",
-  "schema_version": "0.4.0",
+  "schema_version": "0.6.0",
   "roadmap_id": "loops-25-44",
   "prepared_at": "2026-07-12",
   "status": "planning_only_not_execution_authorization",
@@ -35,6 +35,26 @@
     "loop27_preregistration_prepared": false,
     "loop27_acquisition_request_prepared": false,
     "loop27_download_authorized": false,
+    "loop28_research_packet_prepared": true,
+    "loop28_selected_claim_level": "T2_unseen_person_strict_zero_shot",
+    "loop28_final_only_rule_research_ready": true,
+    "loop28_preregistration_prepared": false,
+    "loop28_execution_authorized": false,
+    "loop28_dependency_loop25_satisfied": false,
+    "loop28_dependency_loop26_satisfied": false,
+    "loop28_dependency_loop27_satisfied": false,
+    "loop29_research_packet_prepared": true,
+    "loop29_selected_accessibility_lane": "scalp_EEG_local_first",
+    "loop29_selected_partner_lane": "OPM_MEG_partner_lab",
+    "loop29_selected_device": null,
+    "loop29_preregistration_prepared": false,
+    "loop29_execution_authorized": false,
+    "loop29_real_data_download_authorized": false,
+    "loop29_device_or_hardware_authorized": false,
+    "user_preferred_incremental_storage_bytes": 5000000000,
+    "user_absolute_incremental_storage_bytes": 10000000000,
+    "selected_s20_plus_s25_future_bundle_bytes": 1106030247,
+    "storage_envelope_is_download_authorization": false,
     "rw3_status": "stage_a_packet_prepared_unauthorized",
     "rw3_stage_a_authorized": false,
     "general_continuation_is_authorization": false,
@@ -248,30 +268,36 @@
       "status": "Not Started",
       "execution_authorized": false,
       "proof_posture": "planned_not_authorized",
+      "research_status": "planning_research_complete",
+      "research_packet": "docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md",
+      "research_registry": "registries/loop28_research_boundary.v0.json",
+      "selected_claim_level": "T2",
+      "selected_candidate": "spanishbcbl-meg-s25-session2-block2-v0",
+      "preregistration_prepared": false,
       "core_question": "Does the frozen causal system transfer to a genuinely fresh session or person, and how much predeclared calibration is required?",
       "why_high_value": "The existing same-person cross-session result is negative; a fresh one-time test is required before any generalization claim can move.",
-      "build_deliverable": "Frozen source model, identity-safe adapter protocol, one-time holdout runner, calibration curve, paired controls, and claim-specific report card.",
-      "research_deliverable": "Transfer taxonomy distinguishing same-session, same-person cross-session, unseen-person zero-shot, and unseen-person calibrated evidence.",
-      "data_scope": "Only a separately acquired and authorized Loop 27 holdout after architecture, preprocessing, adapter, thresholds, and reports are frozen.",
+      "build_deliverable": "Future frozen source-model one-time holdout runner with paired controls and a claim-specific report card; calibrated adaptation remains a separate physically partitioned design.",
+      "research_deliverable": "Completed T0-T3 transfer taxonomy, strict zero-shot versus transductive boundary, and a one-time S25 final-only rule with a 0.05 macro-CER margin, 65,535 paired random assignments, and conjunctive controls.",
+      "data_scope": "Planning research only. A future S25 test may use only a separately acquired and authorized Loop 27 final-only holdout after preprocessing, source model, controls, thresholds, and reports are frozen; S25 contributes zero fit or calibration rows.",
       "controls": [
         "Train-only no-signal prior evaluated on identical rows.",
-        "Zero-shot frozen model before any calibration.",
-        "Calibration-size curve with a physically separate final partition.",
-        "Identity and repeated-text leakage audit."
+        "Same checkpoint with exact-zero signal, frozen channel-name derangement, and frozen nonwrapping time displacement.",
+        "Zero target-person fit, target-wide normalization, subject embedding, adapter, threshold, or unlabeled corpus adaptation.",
+        "Identity and repeated-text leakage audit with claim relabeling but no post-preregistration row removal."
       ],
       "primary_metrics": [
-        "CER, WER where justified, and exact sequence accuracy",
-        "neural-minus-prior paired interval",
-        "zero-shot versus calibrated delta",
-        "calibration examples, seconds, and compute",
-        "session/person-specific failure rates"
+        "macro sentence-CER prior-minus-model effect with a 0.05 practical floor",
+        "one-sided paired randomization p-value from 65,535 frozen assignments plus observed",
+        "corpus CER, WER where justified, exact sequence accuracy, and wins-ties-losses",
+        "strict candidate-versus-zero-signal, channel-derangement, and time-displacement controls",
+        "identity, sentence-overlap, access, runtime, RSS, and artifact counters"
       ],
-      "acceptance_boundary": "Promote only the exact same-person or unseen-person claim whose preregistered interval and controls pass on the one-time fresh partition.",
-      "stop_rule": "A failed fresh gate closes that transfer claim; do not tune on the opened holdout or relabel calibrated performance as zero-shot.",
+      "acceptance_boundary": "Support T2 only for this one S25 person/session/task when at least 48 unique final rows remain, macro CER improves by at least 0.05 over the frozen prior, paired p is at most 0.05, every corruption control is strictly worse, and all identity, hash, access, and resource gates pass.",
+      "stop_rule": "Any missing field, tie, threshold miss, control failure, access violation, or cap failure parks T2; do not tune, calibrate, restart, substitute a backup, or relabel calibrated or transductive performance as zero-shot.",
       "depends_on": [25, 26, 27],
       "external_gates": ["approved_fresh_holdout_packet", "separate_one_time_test_authorization"],
-      "authorization_boundary": "Planning only. No fresh acquisition, model run, calibration, or holdout opening is authorized.",
-      "resource_cap": "One thread and worker, frozen small model, 32 MiB outputs, preregistered calibration budget, and 1 GiB peak RSS."
+      "authorization_boundary": "Planning research only. No preregistration or authorization sentence exists; acquisition, local MAT hashing, header/signal/target access, model/control prediction, calibration, final opening, language model, backup, and device work remain unauthorized.",
+      "resource_cap": "Current research used zero payload bytes. A future T2 packet is limited to one thread and worker, the frozen Loop 26 checkpoint, zero target-person updates and language-model runs, 32 MiB outputs, and 1 GiB peak RSS."
     },
     {
       "loop_id": 29,
@@ -282,28 +308,43 @@
       "status": "Not Started",
       "execution_authorized": false,
       "proof_posture": "planned_not_authorized",
+      "research_status": "planning_research_complete",
+      "research_packet": "docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md",
+      "research_registry": "registries/loop29_research_boundary.v0.json",
+      "selected_accessibility_lane": "scalp_EEG_local_first",
+      "selected_partner_lane": "OPM_MEG_partner_lab",
+      "selected_device": null,
+      "preregistration_prepared": false,
+      "authorization_request_prepared": false,
+      "real_data_download_authorized": false,
+      "device_or_hardware_authorized": false,
+      "preferred_incremental_storage_bytes": 5000000000,
+      "absolute_incremental_storage_bytes": 10000000000,
+      "selected_s20_plus_s25_future_bundle_bytes": 1106030247,
       "core_question": "Which validated requirements survive a move from cryogenic MEG toward OPM-MEG or EEG, and which assumptions break?",
       "why_high_value": "Portability is the product direction users care about, but channel-count ablation is not device qualification.",
-      "build_deliverable": "Versioned modality requirement matrix covering geometry, reference, units, bandwidth, noise, shielding, timing, compute, and calibration.",
-      "research_deliverable": "Primary-source OPM-MEG and EEG feasibility review with explicit unavailable fields and partner-data gates.",
-      "data_scope": "Public specifications and existing aggregate evidence only; no device session, new recording, or synthetic claim of modality equivalence.",
+      "build_deliverable": "Future device-specific implementation of the versioned 15-field modality requirement matrix, qualification ladder, and fail-closed packet validator defined by the completed research.",
+      "research_deliverable": "Completed primary-source OPM-MEG and EEG feasibility review, two-lane decision, 15-field requirement matrix, six qualification levels, storage envelope, and exact S20/S25 result-oriented data path.",
+      "data_scope": "Planning research used public specifications and aggregate evidence only. A future first real-data result may use only the separately approved 96,090,264-byte S20 packet; S25 remains final-only and no device session is selected.",
       "controls": [
         "Separate rows for cryogenic MEG, OPM-MEG, scalp EEG, and non-neural wearables.",
         "Measured device values distinguished from vendor specifications and unknowns.",
-        "Random channel ablation explicitly excluded as OPM or EEG evidence."
+        "Random channel ablation explicitly excluded as OPM or EEG evidence.",
+        "Fresh task-matched S20 EEG, final-only S25 MEG, and any future portable-device recording remain separate cohorts and decisions."
       ],
       "primary_metrics": [
         "requirement coverage and unavailable-field count",
         "sensor count, rate, units, geometry, and clock provenance",
         "known versus inferred versus measured status",
-        "minimum future qualification evidence"
+        "minimum future qualification evidence",
+        "preferred and absolute storage margin after exact selected bundles"
       ],
-      "acceptance_boundary": "Proceed to a device-specific packet only when one modality has task, timing, geometry, privacy, licensing, and resource requirements that can be measured directly.",
-      "stop_rule": "Do not call a simulated subset, vendor specification, or file-reader success portable decoding.",
+      "acceptance_boundary": "Proceed to a device-specific packet only when one named configuration has measurable task, units, filters, reference, geometry, clocks, packets, locality, privacy, repeated-session, peripheral-control, licensing, and resource requirements; keep S20 and S25 behind their independent exact packets.",
+      "stop_rule": "Do not call a simulated subset, vendor specification, file read, home-recording feasibility study, or S20 research-grade EEG result portable decoding; do not spend unused storage without a measured data question.",
       "depends_on": [27],
       "external_gates": [],
-      "authorization_boundary": "Research and registry planning only; hardware, acquisition, and signal reads require separate authorization.",
-      "resource_cap": "Zero hardware sessions, zero downloads, one thread, one worker, and 8 MiB documentation artifacts."
+      "authorization_boundary": "Planning research only. The 5-to-10-GB envelope is capacity permission, not download permission. S20, S25, real/header/signal/target/model/training access, SDKs, streams, purchases, partner sessions, devices, and hardware each require separate authorization.",
+      "resource_cap": "Current research: zero hardware sessions and downloads, one thread, one worker, and 8 MiB planning artifacts. Future storage: 5,000,000,000 preferred and 10,000,000,000 absolute incremental bytes, with no automatic allocation."
     },
     {
       "loop_id": 30,
@@ -817,8 +858,8 @@
     "25": ["brain2qwerty_v2", "neuralset_v0_2_2", "mne_resampling", "scipy_iirdesign"],
     "26": ["brain2qwerty_v1", "brain2qwerty_v2", "brain2qwerty_v2_code", "scipy_permutation_test", "scipy_bootstrap", "classifier_permutation_tests", "small_sample_cv_uncertainty", "time_series_permutation_dependence"],
     "27": ["brain2qwerty_v1", "brain2qwerty_v2", "datasheets"],
-    "28": ["brain2qwerty_v2", "moabb_benchmark"],
-    "29": ["brain2qwerty_v2", "moabb_benchmark"],
+    "28": ["brain2qwerty_v2", "brain2qwerty_v2_code", "meg_cross_subject_transfer", "moabb_benchmark", "brain_decoder_cv_guidelines", "classifier_permutation_tests"],
+    "29": ["brain2qwerty_v1", "brain2qwerty_v2", "opm_speech_tracking", "opm_lightly_shielded", "opm_field_control", "opm_interference", "mne_opm_processing", "home_dry_eeg", "bids_eeg", "bids_meg", "openbci_cyton_format", "brainflow_data_format"],
     "30": ["brain2qwerty_v2", "lsl_time_sync"],
     "31": ["brain2qwerty_v1", "brain2qwerty_v2"],
     "32": ["brain2qwerty_v2", "moabb_benchmark"],
@@ -851,8 +892,20 @@
     {
       "source_id": "brain2qwerty_v2_code",
       "title": "Official Brain2Qwerty v2 implementation",
-      "url": "https://github.com/facebookresearch/brain2qwerty/tree/main/brain2qwerty_v2",
+      "url": "https://github.com/facebookresearch/brain2qwerty/tree/3bf5a4099ca0d23bbe994b2287905760236e56e0/brain2qwerty_v2",
       "roadmap_use": "Released whole-sentence Conv-Conformer, CTC, alignment, LLM, data, and training configuration boundaries."
+    },
+    {
+      "source_id": "meg_cross_subject_transfer",
+      "title": "MEG Decoding Across Subjects",
+      "url": "https://arxiv.org/abs/1404.4175",
+      "roadmap_use": "Cross-person MEG domain shift and the distinction between strict zero-shot, transductive zero-label, and supervised calibrated transfer."
+    },
+    {
+      "source_id": "brain_decoder_cv_guidelines",
+      "title": "Assessing and tuning brain decoders: Cross-validation, caveats, and guidelines",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27989847/",
+      "roadmap_use": "Split, tuning, small-sample uncertainty, and claim limits for predictive neuroimaging evaluation."
     },
     {
       "source_id": "scipy_permutation_test",
@@ -907,6 +960,66 @@
       "title": "BIDS Derivatives specification",
       "url": "https://bids-specification.readthedocs.io/en/stable/derivatives/introduction.html",
       "roadmap_use": "SourceDatasets, GeneratedBy, filenames, sidecars, and provenance export."
+    },
+    {
+      "source_id": "opm_speech_tracking",
+      "title": "Measuring the cortical tracking of speech with optically-pumped magnetometers",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1053811921002469",
+      "roadmap_use": "Measured OPM speech-listening evidence and its participant, sensor, environment, preprocessing, and non-text-decoding boundary."
+    },
+    {
+      "source_id": "opm_lightly_shielded",
+      "title": "Wearable Magnetoencephalography in a Lightly Shielded Environment",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39302788/",
+      "roadmap_use": "Lighter shielding feasibility while preserving the distinction between specialized rooms and ordinary homes."
+    },
+    {
+      "source_id": "opm_field_control",
+      "title": "Precision magnetic field modelling and control for wearable magnetoencephalography",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34273527/",
+      "roadmap_use": "Residual-field, gradient, motion, passive-shield, active-nulling, and field-mapping requirements."
+    },
+    {
+      "source_id": "opm_interference",
+      "title": "Interference suppression techniques for OPM-based MEG",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34933122/",
+      "roadmap_use": "Environmental-reference, regression, filtering, spatial suppression, and raw-versus-corrected provenance requirements."
+    },
+    {
+      "source_id": "mne_opm_processing",
+      "title": "MNE preprocessing of optically pumped magnetometer MEG data",
+      "url": "https://mne.tools/stable/auto_tutorials/preprocessing/80_opm_processing.html",
+      "roadmap_use": "Session-specific OPM layouts, DC-field sensitivity, motion, reference-channel, coordinate, and format boundaries."
+    },
+    {
+      "source_id": "home_dry_eeg",
+      "title": "Repeated, self-administered wireless dry EEG measures brain function at home",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9372279/",
+      "roadmap_use": "Repeated self-application and home-recording feasibility without promoting oddball or Flanker evidence into text decoding."
+    },
+    {
+      "source_id": "bids_eeg",
+      "title": "BIDS electroencephalography specification",
+      "url": "https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html",
+      "roadmap_use": "EEG sampling, units, reference, ground, filters, channel roles, electrodes, coordinate frames, and quality metadata."
+    },
+    {
+      "source_id": "bids_meg",
+      "title": "BIDS magnetoencephalography specification",
+      "url": "https://bids-specification.readthedocs.io/en/stable/modality-specific-files/magnetoencephalography.html",
+      "roadmap_use": "MEG sampling, units, filters, sensor types, coordinate frames, landmarks, and head-localization metadata."
+    },
+    {
+      "source_id": "openbci_cyton_format",
+      "title": "OpenBCI Cyton data format",
+      "url": "https://docs.openbci.com/Cyton/CytonDataFormat/",
+      "roadmap_use": "Representative board packet, counter, timestamp, gain, units, source-rate, and Daisy delay requirements."
+    },
+    {
+      "source_id": "brainflow_data_format",
+      "title": "BrainFlow data format description",
+      "url": "https://brainflow.readthedocs.io/en/stable/DataFormatDesc.html",
+      "roadmap_use": "Adapter units, host-generated timestamp warning, independent preset clocks, packet IDs, and stream provenance."
     },
     {
       "source_id": "moabb_benchmark",

@@ -137,10 +137,14 @@ Roadmap response:
 ## Finding 4: Transfer And Calibration Are Different Claims
 
 Brain2Qwerty v2 reports substantial participant variability and identifies
-cross-subject transfer or self-supervised pretraining as priorities. It also
-states that its healthy-volunteer typing protocol does not answer the patient
-case in which physical keypresses may be unavailable during training or
-finetuning.
+cross-subject transfer or self-supervised pretraining as priorities. Its joint
+model trains on all nine participants and uses a participant-index-conditioned
+affine layer. Its leave-one-out comparison excludes the target participant
+during pretraining but then finetunes on that participant. This is valuable
+supervised calibrated transfer evidence, not strict unseen-person zero-shot
+evidence. The paper also states that its healthy-volunteer typing protocol does
+not answer the patient case in which physical keypresses may be unavailable
+during training or finetuning.
 
 This creates four distinct claims:
 
@@ -154,10 +158,22 @@ as no-keypress communication.
 
 Roadmap response:
 
-- Loop 28 reports each transfer level separately;
+- Loop 28 reports each transfer level separately and treats unlabeled target-
+  corpus adaptation as transductive rather than strict zero-shot;
 - Loop 32 measures calibration items, minutes, compute, and no-harm behavior;
 - Loop 35 keeps the no-keypress translation problem visible rather than
   assuming it away.
+
+The dedicated Loop 28 research pass now sharpens this into one final-only rule.
+S25 session 2 block 2 remains a zero-calibration T2 candidate: at least 48
+eligible unique rows, at least 0.05 absolute macro sentence-CER improvement
+over the frozen source-train-only prior, a one-sided paired randomization result
+at `p <= 0.05` using 65,535 frozen assignments plus the observed assignment,
+and a strict win over zero-signal, channel-derangement, and time-displacement
+controls. Any tie, missing field, access violation, or cap failure parks the
+claim. A calibrated curve requires a different physically separated design.
+See `docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop28_research_boundary.v0.json`.
 
 ## Finding 5: Sensor Reduction Is Not Portable-Hardware Qualification
 
@@ -342,7 +358,9 @@ superseded before authorization by the source-audited anti-alias amendment at
 green commit `b6b92d8`. The current v1 request remains false, seeds 2501/2502
 are unopened, and no Loop 25 coefficient, runtime, or fixture exists. Loop 26
 planning research is complete while its experiment remains `Not Started`;
-Loops 27-44 remain `Not Started`.
+Loop 27 metadata research, Loop 28 transfer research, and Loop 29 portability
+planning research are also complete while their experiments remain `Not
+Started`; Loops 30-44 remain `Not Started`.
 
 The detailed source trace and design correction live in
 `docs/LOOP_25_ANTI_ALIAS_AUDIT.md`. This addendum does not authorize execution
@@ -418,3 +436,31 @@ request, download selection, authorization sentence, local MAT hash, FIF
 header, signal, target, model, training, final open, or backup substitution
 exists. Exact research and source links are in
 `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md`.
+
+## 2026-07-12 Loop 29 Research Addendum
+
+Loop 29 planning research is complete while the experiment remains `Not
+Started`. The primary-source review keeps cryogenic MEG, OPM-MEG, scalp EEG,
+and non-neural wearables in four separate profiles. It selects scalp EEG as the
+immediate local-first accessibility lane, OPM-MEG as a same-modality partner/
+lab lane, and cryogenic MEG as the scientific reference. Brain2Qwerty v2's
+random 76/153/230-channel cryogenic subsets are model sensitivity evidence,
+not OPM-MEG or EEG qualification.
+
+The machine boundary freezes 15 cross-modality requirements, six qualification
+levels, 12 future device-packet gates, 18 source bindings, and 24 false
+authorization fields. It distinguishes task evidence, units, filters,
+reference, geometry, field control, contact/fit, motion and peripheral
+artifacts, clocks, packets, local export, privacy, licensing, repeated sessions,
+compute, and claim scope. Home EEG recording mechanics do not establish home
+text decoding; OPM wearability does not establish ordinary-home operation.
+
+The user's additional 5-10 GB allowance is recorded as a preferred
+5,000,000,000-byte and absolute 10,000,000,000-byte incremental capacity
+envelope, not download permission. The exact future S20 EEG and S25 MEG bundles
+total 1,106,030,247 bytes, leaving 3,893,969,753 bytes below the preferred
+ceiling. This research downloaded zero payload bytes and opened no real header,
+signal, target, consumed evidence, model, training path, SDK, socket, stream,
+device, partner session, or hardware operation. Exact sources and boundaries
+are in `docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop29_research_boundary.v0.json`.

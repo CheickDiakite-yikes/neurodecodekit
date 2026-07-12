@@ -2,7 +2,7 @@
 
 Date: 2026-07-12
 
-Status: **Loop 25 amended v1 and awaiting authorization; Loops 26-44 planning only; no execution is authorized**
+Status: **Loop 25 amended v1 and awaiting authorization; Loops 26-29 planning research complete; Loops 30-44 planning only; no execution is authorized**
 
 Machine source of truth: `registries/next_20_loops.v0.json`
 
@@ -208,12 +208,21 @@ Ambiguity produces `hold`, not a substitute consumed cohort.
 
 **Dependencies and authorization:** Metadata research is complete without a
 prior-loop dependency. Preregistration now waits for a compatible Loop 25
-result, a frozen Loop 26 source model/control package, header and target-
-isolation protocols, and a Loop 28 final-only decision rule. Any download,
-local MAT hash, header, signal, target, model, training, or final access requires
-its own later exact packet and authorization.
+result, a frozen Loop 26 source model/control package, and header and target-
+isolation protocols. Loop 28 planning research now supplies the recommended
+final-only T2 decision rule, but Loop 27 must still bind that rule and all
+upstream hashes in a later preregistration. Any download, local MAT hash,
+header, signal, target, model, training, or final access requires its own later
+exact packet and authorization.
 
 ## Loop 28 - Session And Person Transfer
+
+**Current status:** Planning research complete; experiment status remains `Not
+Started`. The selected future question is T2 strict unseen-person zero-shot on
+the final-only S25 candidate. No preregistration, authorization sentence,
+acquisition, payload operation, model/control prediction, calibration, or final
+open exists. See `docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop28_research_boundary.v0.json`.
 
 **Core question:** Does the frozen causal system transfer to a genuinely fresh
 session or person, and how much predeclared calibration is required?
@@ -221,63 +230,96 @@ session or person, and how much predeclared calibration is required?
 **Why it moves the goal:** The current same-person session-2 result is negative.
 A fresh, one-time test is required before promoting any transfer claim.
 
-**Build:** Freeze the source model, split membership, zero-shot path, adapter
-family, calibration schedule, thresholds, and report before opening the fresh
-holdout. Keep zero-shot and calibrated results in separate cards.
+**Build:** After Loops 25-27 close, freeze the source model, split membership,
+strict zero-shot path, no-signal prior, corruption controls, threshold,
+randomization schedule, and report before opening the fresh holdout. Calibrated
+adaptation remains a separate physically partitioned future design.
 
-**Research:** Define four levels: same-session held-out text, same-person
-cross-session, unseen-person zero-shot, and unseen-person calibrated. Specify
-which claim the selected holdout can answer.
+**Research:** Complete at the planning boundary. The T0-T3 taxonomy separates
+same-session held-out text, same-person cross-session, unseen-person strict
+zero-shot, and unseen-person supervised calibration. Unlabeled target-corpus
+adaptation is separately labeled transductive and cannot count as T2. The v2
+paper is asynchronous but noncausal; its joint model includes target-person
+data and its leave-one-out regime finetunes on the target, so it does not
+establish strict zero-shot person transfer.
 
-**Data and controls:** Use only an approved Loop 27 holdout with physically
-separate calibration/selection/final members. Compare the same-split prior,
-frozen zero-shot model, registered adapters, and sentence/identity leakage
-checks.
+**Data and controls:** A future T2 test may use only the approved Loop 27 S25
+holdout, with zero candidate training, validation, calibration, target-wide
+normalization, subject embedding, adapter, threshold, or unlabeled corpus-fit
+rows. Compare the same-split source-train-only prior, frozen zero-shot model,
+exact-zero signal, channel-name derangement, and nonwrapping time displacement
+on identical final rows. Keep identity and sentence-overlap claims separate.
 
-**Metrics:** CER/WER where justified; exact sequence accuracy; neural-minus-
-prior interval; zero-shot versus calibrated delta; calibration items/minutes;
-compute; person/session failure rates.
+**Metrics:** Primary macro sentence-CER difference, prior minus model; one-sided
+paired randomization p-value from 65,535 frozen sign assignments plus the
+observed assignment; corpus CER; WER where justified; exact sequence accuracy;
+wins/ties/losses; identity, overlap, runtime, RSS, bytes, and access counters.
 
-**Gate:** Promote only the exact transfer level whose preregistered primary
-interval and controls pass once. A failed fresh gate closes that claim; the
-opened holdout cannot become tuning data and then be called fresh.
+**Gate:** T2 support for this one S25 person/session/task requires at least 48
+eligible unique final rows, at least 0.05 absolute macro CER improvement over
+the frozen prior, paired `p <= 0.05`, a strict win over every corruption
+control, and zero identity/hash/access/resource failures. A tie or unavailable
+required field parks the claim. One passing person is not population
+generalization, and unseen text additionally requires a zero-overlap audit.
 
 **Dependencies and authorization:** Requires Loops 25-27 plus explicit
-acquisition and one-time test authorizations. No such data or run is authorized
-by this document.
+acquisition and one-time test authorizations. Planning research resolves the
+Loop 27 final-only-rule question but satisfies none of the measured upstream
+dependencies. No such data or run is authorized by this document.
 
 ## Loop 29 - Portable Sensing Translation
+
+**Current status:** Planning research complete; experiment `Not Started`.
+`docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop29_research_boundary.v0.json` are the human and machine
+boundaries. All 24 `authorized_now` fields are false.
 
 **Core question:** Which validated requirements survive movement from
 cryogenic MEG toward OPM-MEG or EEG, and which assumptions break?
 
 **Why it moves the goal:** Users care about accessible sensing, but random
 channel reduction, a file reader, and a vendor data sheet are not portable
-device evidence.
+device evidence. The completed research selects scalp EEG as the immediate
+local-first accessibility lane, OPM-MEG as a same-modality partner/lab lane,
+cryogenic MEG as the scientific reference, and peripheral wearables as controls
+or separate accessibility inputs.
 
-**Build:** Create a versioned modality requirement matrix for geometry,
-reference, units, bandwidth, noise, shielding, motion, timing, compute,
-calibration, privacy, firmware, and data ownership.
+**Build:** Future work may implement the versioned 15-field modality matrix,
+six-level qualification ladder, and 12-gate device packet validator. No Loop
+29 implementation, device descriptor, acquisition packet, SDK, or runtime
+exists now.
 
-**Research:** Review primary OPM-MEG and EEG sources and record each field as
-measured, specified, inferred, or unavailable. Define the minimum future
-partner-data and device packet.
+**Research:** Completed primary-source OPM-MEG and EEG review records four
+separate modality profiles, measured-versus-specified evidence, task gaps,
+clock/transport risks, geometry/reference requirements, home-recording limits,
+and the minimum future partner/device packet. Brain2Qwerty v2's 76/153/230
+random cryogenic channel subsets remain model sensitivity evidence, not OPM-
+MEG or EEG device evidence.
 
 **Data and controls:** Public specifications and existing aggregate results
 only. Keep cryogenic MEG, OPM-MEG, scalp EEG, sEMG, eye, and motion evidence in
-separate rows. Exclude synthetic channel subsets as modality equivalence.
+separate rows. Exclude synthetic channel subsets as modality equivalence. The
+preferred incremental storage ceiling is 5,000,000,000 bytes and the absolute
+ceiling is 10,000,000,000 bytes. The selected future S20 plus S25 bundles total
+1,106,030,247 bytes, but capacity permission is not download permission and
+Loop 29 downloaded zero bytes.
 
 **Metrics:** requirement coverage; unavailable fields; sensor count/rate/units;
 geometry and clock provenance; measured-versus-specified count; future
 qualification requirements.
 
-**Gate:** Proceed to one device-specific packet only when task, timing,
-geometry, privacy, licensing, and resource requirements are directly
-measurable. Otherwise retain a research matrix without a hardware claim.
+**Gate:** Proceed to one device-specific packet only when task, raw locality,
+reference, geometry, timing, packets, privacy, licensing, repeated-session,
+peripheral-control, and resource requirements are directly measurable.
+Otherwise retain the research matrix without a hardware claim. Home EEG
+recording mechanics do not establish home text decoding, and OPM wearability
+does not establish ordinary-home operation.
 
 **Dependencies and authorization:** Depends on Loop 27's evidence taxonomy.
-Research does not authorize a device session, recording, download, or signal
-read.
+The planning dependency is satisfied, but preregistration and execution remain
+blocked. Research does not authorize S20, S25, a real header/signal/target read,
+a model or training run, a device session, recording, download, SDK import,
+socket, stream, purchase, partner session, or hardware operation.
 
 ## Loop 30 - Local Private Streaming Prototype
 

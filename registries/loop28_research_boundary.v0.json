@@ -1,0 +1,374 @@
+{
+  "schema_name": "neurodecodekit.loop28_research_boundary",
+  "schema_version": "0.1.0",
+  "prepared_at": "2026-07-12",
+  "status": "planning_research_complete_preregistration_blocked",
+  "proof_posture": "primary_source_and_public_code_research_no_data_model_or_target_access",
+  "authorized_now": false,
+  "authorization": {
+    "loop28_preregistration_authorized_now": false,
+    "loop28_execution_authorized_now": false,
+    "loop27_acquisition_authorized_now": false,
+    "selected_candidate_download_authorized_now": false,
+    "local_log_payload_hash_authorized_now": false,
+    "fif_header_read_authorized_now": false,
+    "fif_signal_read_authorized_now": false,
+    "mat_content_read_authorized_now": false,
+    "target_label_or_text_read_authorized_now": false,
+    "source_or_candidate_model_run_authorized_now": false,
+    "training_or_parameter_update_authorized_now": false,
+    "candidate_calibration_authorized_now": false,
+    "candidate_final_open_authorized_now": false,
+    "candidate_unlabeled_transductive_fit_authorized_now": false,
+    "backup_substitution_authorized_now": false,
+    "consumed_source_evidence_reopen_authorized_now": false,
+    "language_model_run_authorized_now": false,
+    "stream_board_device_or_hardware_authorized_now": false,
+    "rw3_stage_a_authorized_now": false,
+    "authorization_sentence_exists": false,
+    "reason": "This registry resolves the transfer taxonomy and recommends a final-only decision rule. It does not freeze a source model, qualify S25, prepare an experiment, or authorize any protected operation."
+  },
+  "research_question": "What exact transfer claim can one final-only recording from an unseen canonical person test without fitting anything to that person?",
+  "brain2qwerty_v2_reference_boundary": {
+    "paper_title": "Accurate Decoding of Natural Sentences from Non-Invasive Brain Recordings",
+    "paper_date": "2026-06-29",
+    "reviewed_code_commit": "3bf5a4099ca0d23bbe994b2287905760236e56e0",
+    "code_public": true,
+    "code_license": "CC-BY-NC-4.0",
+    "englishbcbl_data_public": false,
+    "englishbcbl_data_status": "embargoed_until_review_completion",
+    "participants": 9,
+    "sessions_per_participant": 10,
+    "hours_per_participant": 10,
+    "aggregate_recording_hours": 90,
+    "reported_typed_sentences_approx": 22000,
+    "meg_channels": 306,
+    "sampling_rate_hz": 1000,
+    "model_input_is_continuous_sentence_recording": true,
+    "keypress_timing_required_at_inference": false,
+    "model_is_causal": false,
+    "model_consumes_entire_sentence": true,
+    "incremental_word_display_supported": false,
+    "end_to_end_low_latency_measured": false,
+    "participant_index_conditioned_affine_layer": true,
+    "joint_training_includes_target_participant_data": true,
+    "leave_one_out_regime_finetunes_on_target_participant": true,
+    "strict_unseen_person_zero_shot_result_reported": false,
+    "sentence_text_hash_split_prevents_cross_partition_text_leakage": true,
+    "cross_subject_mean_is_not_itself_a_heldout_person_result": true,
+    "public_quickstart_requires_cuda_capable_gpu": true,
+    "paper_training_hardware": "8_x_A100_80_GB",
+    "paper_training_wall_hours": 19.5,
+    "local_reproduction_eligible_now": false
+  },
+  "transfer_taxonomy": [
+    {
+      "level_id": "T0",
+      "name": "same_session_heldout_text",
+      "source_person_seen_during_training": true,
+      "target_session_seen_during_training": true,
+      "target_final_text_seen_during_training": false,
+      "target_person_fit_allowed": true,
+      "claim": "heldout_text_for_that_person_and_session_only",
+      "local_evidence": "S21 session 1 source-test evidence is consumed and cannot be reopened."
+    },
+    {
+      "level_id": "T1",
+      "name": "same_person_cross_session",
+      "source_person_seen_during_training": true,
+      "target_session_seen_during_training": false,
+      "target_final_text_seen_during_training": false,
+      "target_person_fit_allowed": true,
+      "claim": "cross_session_for_that_person_only",
+      "local_evidence": "S21 session 2 is consumed and the frozen MEG model performed worse than the no-signal prior."
+    },
+    {
+      "level_id": "T2",
+      "name": "unseen_person_strict_zero_shot",
+      "source_person_seen_during_training": false,
+      "target_session_seen_during_training": false,
+      "target_final_text_seen_during_training": false,
+      "target_person_fit_allowed": false,
+      "target_corpus_signal_statistics_allowed": false,
+      "deterministic_header_geometry_compatibility_allowed": true,
+      "claim": "zero_shot_transfer_to_one_unseen_canonical_person",
+      "local_evidence": "S25 session 2 block 2 is a metadata-only candidate and remains unopened."
+    },
+    {
+      "level_id": "T3",
+      "name": "unseen_person_supervised_calibrated",
+      "source_person_seen_during_training": false,
+      "target_session_seen_during_training": false,
+      "target_final_text_seen_during_training": false,
+      "target_person_fit_allowed": true,
+      "requires_physically_separate_calibration_and_final_partitions": true,
+      "claim": "calibrated_transfer_at_the_exact_reported_budget",
+      "local_evidence": "No eligible physically separated calibration/final design has been selected."
+    }
+  ],
+  "transductive_boundary": {
+    "name": "unseen_person_unlabeled_target_adaptation",
+    "uses_target_labels": false,
+    "uses_target_corpus_signal_distribution": true,
+    "counts_as_strict_zero_shot_T2": false,
+    "required_label": "transductive_zero_label_adaptation",
+    "authorized_now": false
+  },
+  "selected_future_question": {
+    "claim_level": "T2",
+    "claim_id": "unseen_person_strict_zero_shot_single_candidate",
+    "candidate_id": "spanishbcbl-meg-s25-session2-block2-v0",
+    "subject": "S25",
+    "session": 2,
+    "block": 2,
+    "same_nominal_meg_system_as_source": true,
+    "same_prompted_typing_task_as_source": true,
+    "published_alias_with_observed_s21_person": false,
+    "candidate_train_rows": 0,
+    "candidate_validation_rows": 0,
+    "candidate_calibration_rows": 0,
+    "candidate_target_wide_fit_rows": 0,
+    "candidate_final_rows": "all_eligible_performed_unique_rows",
+    "minimum_final_unique_rows": 48,
+    "minimum_row_reason": "Pragmatic 75-percent retention floor from the nominal 64-row block; not a power claim.",
+    "candidate_side_model_selection": false,
+    "candidate_side_threshold_selection": false,
+    "candidate_side_normalization_fit": false,
+    "candidate_side_subject_embedding_fit": false,
+    "candidate_side_adapter_fit": false,
+    "candidate_side_unlabeled_corpus_adaptation": false,
+    "header_geometry_use": "deterministic_compatibility_only",
+    "candidate_eligible_for_T3_calibrated_claim": false,
+    "candidate_T3_ineligibility_reason": "The selected block is final-only and has no physically separate calibration partition."
+  },
+  "future_final_only_decision_rule": {
+    "status": "research_recommendation_ready_not_preregistered_or_authorized",
+    "primary_estimand": "macro_mean_sentence_cer_prior_minus_frozen_zero_shot_model",
+    "positive_direction": "frozen_zero_shot_model_better",
+    "primary_comparator": "source_train_only_no_signal_sentence_prior",
+    "minimum_absolute_macro_cer_improvement": 0.05,
+    "minimum_final_unique_rows": 48,
+    "paired_unit": "unique_final_sentence",
+    "randomization_test": {
+      "method": "deterministic_monte_carlo_paired_label_swap",
+      "statistic": "mean_paired_sentence_cer_difference",
+      "alternative": "frozen_zero_shot_model_better_than_prior",
+      "random_sign_assignments": 65535,
+      "observed_assignment_included": true,
+      "total_reference_statistics": 65536,
+      "seed_source": "future_frozen_contract_sha256",
+      "maximum_p_value": 0.05,
+      "exchangeability_scope": "paired_final_sentences_for_this_fixed_candidate_only",
+      "population_inference_supported": false
+    },
+    "descriptive_interval": {
+      "method": "paired_sentence_index_bootstrap",
+      "confidence_level": 0.95,
+      "may_override_gate": false,
+      "population_inference_supported": false
+    },
+    "secondary_metrics": [
+      "corpus_CER",
+      "WER_where_target_tokenization_is_valid",
+      "exact_sequence_accuracy",
+      "per_sentence_edit_counts",
+      "candidate_prior_wins_ties_losses"
+    ],
+    "required_prediction_freeze_order": [
+      "freeze_source_model_preprocessing_vocabulary_and_decode_hashes",
+      "freeze_prior_and_all_corruption_control_hashes",
+      "produce_and_hash_model_prior_and_control_predictions_without_final_target_text",
+      "open_all_eligible_final_targets_once",
+      "score_every_prediction_in_one_append_only_pass",
+      "mark_candidate_consumed_regardless_of_outcome"
+    ],
+    "required_controls": [
+      {
+        "control_id": "source_train_only_no_signal_sentence_prior",
+        "pass_relation": "candidate_macro_cer_at_least_0_05_lower_and_randomization_p_at_most_0_05"
+      },
+      {
+        "control_id": "same_checkpoint_zero_candidate_signal",
+        "pass_relation": "candidate_macro_cer_strictly_lower"
+      },
+      {
+        "control_id": "channel_name_hash_derangement",
+        "pass_relation": "candidate_macro_cer_strictly_lower"
+      },
+      {
+        "control_id": "nonwrapping_zero_filled_time_displacement",
+        "pass_relation": "candidate_macro_cer_strictly_lower"
+      }
+    ],
+    "conjunctive_control_gate": true,
+    "control_tie_passes": false,
+    "effect_threshold_tie_passes": true,
+    "p_value_threshold_tie_passes": true,
+    "missing_required_field_decision": "park",
+    "hash_or_access_violation_decision": "park",
+    "resource_cap_violation_decision": "park",
+    "failure_allows_restart": false,
+    "failure_allows_threshold_change": false,
+    "failure_allows_calibration": false,
+    "failure_allows_automatic_backup": false,
+    "all_gates_pass_decision": "support_T2_for_this_one_S25_person_session_task_only",
+    "all_gates_pass_authorizes_next_loop_execution": false
+  },
+  "identity_and_text_claim_boundary": {
+    "unseen_canonical_person_candidate": true,
+    "unseen_text_currently_verified": false,
+    "future_redacted_overlap_outputs": [
+      "candidate_unique_sentence_hash_count",
+      "source_train_overlap_count",
+      "source_validation_overlap_count",
+      "consumed_source_test_overlap_count"
+    ],
+    "forbidden_overlap_outputs": [
+      "sentence_plaintext",
+      "typed_response_plaintext",
+      "per_item_target_preview"
+    ],
+    "zero_overlap_claim": "unseen_person_and_unseen_text_for_this_candidate",
+    "positive_overlap_claim": "unseen_person_with_familiar_text_exposure_disclosed",
+    "unavailable_overlap_claim": "unseen_person_only_text_novelty_unavailable",
+    "overlap_may_change_final_membership_after_preregistered_eligibility": false,
+    "single_person_population_generalization": false
+  },
+  "calibrated_transfer_boundary": {
+    "status": "separate_future_design_not_selected_or_authorized",
+    "s25_block2_may_be_repurposed_for_calibration": false,
+    "requires_new_metadata_selection": true,
+    "requires_physically_separate_calibration_and_final_recordings": true,
+    "requires_nested_predeclared_calibration_budgets": true,
+    "requires_fixed_adapter_and_optimizer_before_final_open": true,
+    "requires_zero_shot_prediction_from_same_source_checkpoint": true,
+    "requires_identical_final_rows_across_budgets": true,
+    "must_report_calibration_examples_seconds_runtime_rss_and_updates": true,
+    "calibrated_result_may_be_labeled_zero_shot": false,
+    "future_roadmap_loop": 32
+  },
+  "dependencies": {
+    "loop28_planning_research_complete": true,
+    "loop28_preregistration_prepared": false,
+    "loop28_authorization_request_prepared": false,
+    "loop25_compatible_mechanics_result_required": true,
+    "loop25_dependency_satisfied_now": false,
+    "loop26_frozen_successful_source_model_and_controls_required": true,
+    "loop26_dependency_satisfied_now": false,
+    "loop27_acquired_header_qualified_holdout_required": true,
+    "loop27_dependency_satisfied_now": false,
+    "loop27_final_only_decision_rule_research_dependency_satisfied": true,
+    "loop27_other_preregistration_blockers_remain": true,
+    "separate_loop28_preregistration_required": true,
+    "separate_loop28_authorization_required": true
+  },
+  "future_access_order": [
+    "close_loop25_with_a_compatible_measured_causal_preprocessing_result",
+    "preregister_authorize_and_close_loop26_with_one_frozen_source_model_and_control_package",
+    "bind_loop27_candidate_target_isolation_header_protocol_this_T2_rule_and_staged_permissions",
+    "authorize_acquisition_or_local_log_hash_in_a_separate_tested_pushed_green_commit",
+    "qualify_header_without_signal_samples",
+    "run_separately_authorized_redacted_eligibility_and_overlap_audits_without_plaintext",
+    "produce_and_hash_model_prior_and_control_predictions_without_final_target_text",
+    "open_all_final_targets_once_and_score_one_append_only_report",
+    "close_as_support_or_park_without_tuning_calibration_restart_or_backup"
+  ],
+  "remaining_preregistration_blockers": [
+    "Loop 25 has no compatible measured causal preprocessing result.",
+    "Loop 26 has no frozen successful source checkpoint or control package.",
+    "Loop 27 has no preregistration, acquisition, header, signal, target, or final-open authorization.",
+    "S25 exact sensor compatibility and performed-row eligibility remain unopened.",
+    "The redacted overlap and target-isolation implementations do not exist or have frozen hashes.",
+    "The future runtime cap cannot be frozen until the Loop 26 checkpoint is measured.",
+    "No Loop 28 preregistration or authorization sentence exists."
+  ],
+  "resource_boundaries": {
+    "current_cpu_threads": 1,
+    "current_workers": 1,
+    "current_downloaded_payload_bytes": 0,
+    "current_generated_planning_artifact_cap_bytes": 8388608,
+    "external_browser_peak_rss_bytes": null,
+    "external_browser_peak_rss_unavailable_reason": "The browser research tool does not expose process-level RSS.",
+    "end_to_end_research_runtime_sec": null,
+    "end_to_end_research_runtime_unavailable_reason": "Interactive source review spans external tool calls and human reasoning rather than one measurable local process.",
+    "future_cpu_threads": 1,
+    "future_workers": 1,
+    "future_model": "frozen_loop26_checkpoint_only",
+    "future_larger_model_runs": 0,
+    "future_language_model_runs": 0,
+    "future_candidate_parameter_updates": 0,
+    "future_generated_artifact_cap_bytes": 33554432,
+    "future_peak_rss_cap_bytes": 1073741824,
+    "future_runtime_cap_sec": null,
+    "future_runtime_cap_unavailable_reason": "Must be set from a measured Loop 26 checkpoint before S25 signal or target access.",
+    "future_automatic_backup_candidates": 0
+  },
+  "research_access_counters": {
+    "high_level_public_web_research_operations": 10,
+    "github_metadata_api_operations": 1,
+    "remote_code_payload_downloads": 0,
+    "remote_data_payload_downloads": 0,
+    "remote_payload_bytes": 0,
+    "local_s25_path_metadata_checks": 0,
+    "local_s25_log_payload_hash_reads": 0,
+    "candidate_fif_header_reads": 0,
+    "candidate_fif_signal_reads": 0,
+    "candidate_mat_content_reads": 0,
+    "candidate_target_label_or_text_reads": 0,
+    "source_consumed_evidence_reads": 0,
+    "model_or_checkpoint_runs": 0,
+    "training_or_parameter_updates": 0,
+    "calibration_runs": 0,
+    "final_evaluation_runs": 0,
+    "rw3_stream_board_device_or_hardware_operations": 0
+  },
+  "source_bindings": [
+    {
+      "source_id": "brain2qwerty_v2_paper",
+      "role": "continuous_input_noncausal_limit_subject_training_transfer_and_data_scale",
+      "url": "https://facebookresearch.github.io/brain2qwerty/assets/brain2qwerty_v2.pdf"
+    },
+    {
+      "source_id": "brain2qwerty_v2_project",
+      "role": "official_result_code_data_and_remaining_challenge_boundary",
+      "url": "https://facebookresearch.github.io/brain2qwerty/"
+    },
+    {
+      "source_id": "brain2qwerty_v2_code_pinned",
+      "role": "public_cuda_oriented_whole_sentence_implementation_and_embargo_statement",
+      "url": "https://github.com/facebookresearch/brain2qwerty/tree/3bf5a4099ca0d23bbe994b2287905760236e56e0/brain2qwerty_v2"
+    },
+    {
+      "source_id": "brain2qwerty_v1_paper",
+      "role": "spanishbcbl_prompted_typing_source_and_subject_specific_baseline_context",
+      "url": "https://www.nature.com/articles/s41593-026-02303-2"
+    },
+    {
+      "source_id": "meg_decoding_across_subjects",
+      "role": "cross_subject_domain_shift_and_zero_label_versus_calibrated_transfer_taxonomy",
+      "url": "https://arxiv.org/abs/1404.4175"
+    },
+    {
+      "source_id": "moabb_benchmark",
+      "role": "fixed_context_cross_session_cross_subject_and_multi_dataset_reproducibility_boundary",
+      "url": "https://arxiv.org/abs/1805.06427"
+    },
+    {
+      "source_id": "brain_decoder_cross_validation_guidelines",
+      "role": "small_sample_split_tuning_and_generalization_caveats",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27989847/"
+    },
+    {
+      "source_id": "classifier_permutation_tests",
+      "role": "paired_permutation_and_restricted_feature_control_context",
+      "url": "https://www.jmlr.org/papers/v11/ojala10a.html"
+    }
+  ],
+  "claim_boundary": [
+    "Brain2Qwerty v2 is a continuous-sentence asynchronous reference, but its paper explicitly says the current architecture is whole-sentence and noncausal.",
+    "The reported v2 joint and leave-one-out-plus-finetune results do not establish strict unseen-person zero-shot decoding.",
+    "S25 may become a one-person strict zero-shot candidate only after every upstream dependency and separate authorization passes.",
+    "A future S25 pass cannot establish population generalization, and it cannot establish unseen text without a zero-overlap audit.",
+    "No data acquisition, header compatibility, signal quality, target, model, transfer, calibration, real-time, portable-device, at-home, assistive, diagnostic, or clinical result is established."
+  ]
+}
