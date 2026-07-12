@@ -1893,4 +1893,5 @@ diagnosis, clinical result, or product-safety claim exists.
 
 Evidence: `docs/LOOP_34_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop34_research_boundary.v0.json`,
-`tests/test_loop34_research_boundary.py`, and roadmap row 34.
+`tests/test_loop34_research_boundary.py`, roadmap row 34, research commit
+`ad9d647`, push CI run `29213220777`, and draft PR #13 CI run `29213242970`.

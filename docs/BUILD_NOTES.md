@@ -2754,8 +2754,9 @@ dependency-light tests pass with 121 optional skips in 0.71 seconds wall and
 Repository-wide Ruff, touched-file formatting, compileall, 22 source JSON and
 two TOML parses, seven CLI help surfaces, 55 registered commands, unauthorized
 Loop 34 runtime absence, 74 checked local Markdown links with zero missing,
-workbook render/reload/formula inspection, and `git diff --check` pass. Remote
-branch and pull-request CI remain pending until the research commit is pushed.
+workbook render/reload/formula inspection, and `git diff --check` pass. Research
+commit `ad9d647` passes push CI run `29213220777` and draft PR #13 CI
+run `29213242970`.
 
 Engineering capability added: a machine-checkable confidence semantics ladder,
 three-way evidence firewall, selective-risk and revision-latency protocol,
