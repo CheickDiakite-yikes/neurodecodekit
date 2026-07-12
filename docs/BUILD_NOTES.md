@@ -2192,3 +2192,76 @@ This milestone adds a falsifiable, resource-bounded design for the next neural
 question. It does not establish a causal model, neural information, decoding
 advantage, validation performance, generalization, real-time text, or portable
 hardware behavior.
+
+## 2026-07-12 - Select an exact Loop 27 MEG holdout candidate without opening it
+
+Commit `b3d61b6` completes a metadata-only primary-source search for the first
+fresh same-modality transfer candidate. The one-thread selector used the pinned
+SpanishBCBL revision and Hugging Face metadata APIs, examined 315 MEG entries,
+found 23 clean single-FIF/log pairs and 16 eligible pairs, and ranked exact
+bundle bytes after canonical identity and cohort exclusions. It took 3.10
+seconds wall with 63,766,528-byte peak RSS and downloaded zero file payload
+bytes.
+
+The selected candidate is S25 session 2 block 2. Its raw FIF is
+1,009,713,753 bytes and protected MAT log is 226,230 bytes, for an exact
+1,009,939,983-byte bundle and 63,801,841-byte margin under a future 1 GiB cap.
+The machine registry freezes each official Git blob, LFS SHA-256, Xet hash, and
+last-file commit. The MAT path already exists locally at the expected size from
+earlier metadata work, but this pass did not hash or open its payload. The raw
+FIF is absent.
+
+The selection is scientific, not merely small. S21 block 2 is observed source
+evidence. S23 is smaller than S25 but the official dataset card excludes that
+participant because of a metallic implant. S20 is prompted-typing EEG and stays
+in the separate RW4 cohort. S25 has no published alias with the observed
+S5/S10/S21 person and uses the same nominal 306-channel, 1 kHz Megin/Elekta
+Neuromag task contract. Exact channels, geometry, performed trials, sentence
+overlap, and external target-viewing history remain unavailable.
+
+The future recommendation is final-only: zero S25 training, validation, or
+calibration rows; every eligible performed row opens once after the source
+model, controls, reports, target isolation, and Loop 28 decision rule are hash
+frozen. At least 48 performed unique rows are required as a pragmatic 75%
+retention floor from the nominal 64-row half-session, not a prospective power
+claim. An unseen-person claim must disclose sentence overlap; unseen text
+requires a future zero-overlap audit. Any S25 failure parks without automatic
+backup substitution.
+
+The research registry contains 18 false authorization fields. It explicitly
+blocks preregistration, acquisition requests, download selections, local MAT
+payload hashes, FIF headers/signals, MAT targets, models, training, final opens,
+backup candidates, RW4, and Loop 28. Public docs and one new invariant preserve
+the distinction between selecting S25 metadata and authorizing any content
+operation.
+
+The nine-sheet tracker adds decision `27-R1`, risk `R32`, prompt
+`Loop27-Research`, and the refreshed Loop 27 row while Loop 25 remains the
+active numbered decision. The 80,867-byte workbook has SHA-256
+`186eda194695b92b1c18422e1a0ccbcbd9ed63249eb7ba1f6c8d500926f9c685`;
+all nine sheets render, the exported workbook reloads with byte-identical key-
+range inspection, and formula scans match zero cells. The unrelated inspection
+sidecar remains byte-identical at SHA-256
+`5cd0ef08446c4e5feee5ce11f27eef41fae5eee8975cc77f6d401faca3b79f45`.
+
+Final local verification passes 55 focused Loop 25-27/roadmap tests in at most
+0.10 seconds wall with 23,592,960-byte maximum RSS; 380 optional unittests with three
+expected skips in 21.31 seconds wall and 577,060,864-byte maximum RSS; 377
+pytest tests with three skips and 177 subtests in 21.21 seconds wall and
+586,498,048-byte maximum RSS; and 348 true dependency-light Python 3.12 tests
+with 121 optional skips in 0.73 seconds wall and 46,383,104-byte maximum RSS.
+The three full counts are each 14 above the Loop 26 public closeout.
+
+Repository-wide Ruff, compileall, 16 tracked/worktree JSON and two TOML parses,
+seven CLI help surfaces, unauthorized Loop 25/26/27 command absence,
+`git diff --check`, 66 local Markdown links, workbook render/reload/formula
+inspection, and the full-history Gitleaks scan pass. GitHub CI run
+`29199178320` is green for the research milestone. No candidate payload,
+download, local MAT hash, header, signal, target, source consumed evidence,
+model, training, final holdout, backup, RW3, stream, board, device, hardware, or
+generated experiment payload was opened or created.
+
+This milestone adds an exact, storage-bounded candidate for a future
+unseen-person MEG transfer test. It does not establish an acquired or compatible
+holdout, target freshness, transfer, neural advantage, unseen text, population
+generalization, real-time behavior, or portable hardware.

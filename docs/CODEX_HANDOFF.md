@@ -45,9 +45,15 @@
 > narrows the future gate to a 2,908-parameter causal recommendation, a
 > 2,884-parameter linear comparator, six controls, and all 64 exact paired sign
 > assignments over the reserved six-row validation slice. All 14 authorization
-> fields remain false and every protected access counter is zero. Loops 27-44
-> remain `Not Started`. This does not reopen Loop 24 or authorize RW3, data,
-> targets, models, validation, training, or hardware.
+> fields remain false and every protected access counter is zero. Loop 27
+> planning research is green at `b3d61b6`: a 315-file pinned MEG metadata pass
+> found 23 strict pairs and 16 eligible pairs, then selected S25 session 2 block
+> 2 as the smallest eligible same-modality/task candidate. Its exact two files
+> total 1,009,939,983 bytes under a future 1 GiB cap. All 18 authorization fields
+> remain false; no preregistration, request, download, local MAT payload hash,
+> header, signal, target, model, training, final open, or backup substitution
+> exists. Loops 28-44 remain `Not Started`. This does not reopen Loop 24 or
+> authorize RW3, data, targets, models, validation, training, or hardware.
 > In parallel, RW0 closes a primary-source Real-World Practice research gate
 > with eight dataset records, 13 device records, a local BYO Neurodata
 > contract, and one exact S20 EEG dry-run packet. RW1 now closes a
@@ -193,6 +199,10 @@ This repo is a starter scaffold with working pure-Python components:
   six-item exact-inference ceiling, causal padding repair, 2,884-parameter
   linear comparator, six required controls, 14 false authorization fields, and
   zero protected access; no experiment or model implementation exists
+- machine-checked Loop 27 metadata research with 315 MEG entries, 23 strict
+  pairs, 16 eligible pairs, selected S25 identity plus exact official file
+  hashes/bytes, final-only and target-isolation recommendations, 18 false
+  authorization fields, and zero candidate payload access
 - JSON/Markdown metrics report command
 - CLI smoke commands
 - unit tests
@@ -205,23 +215,22 @@ negative within-session event comparison. None is a decoder success. Do not
 turn these results, a variance ranking, or a geometry proxy into unseen-person
 or population generalization.
 
-Current verification after the Loop 26 public closeout: 366 unittests pass with
-3 expected skips in 21.53 seconds wall and 575,389,696-byte maximum RSS; pytest
-reports 363 passed, 3 skipped, and 170 subtests in 21.44 seconds wall with
-584,957,952-byte maximum RSS. The focused Loop 25/26/roadmap boundary has 41
-passing tests in at most 0.14 seconds wall and 22,986,752-byte maximum RSS.
-Dependency-light Python 3.12 discovery is green at 334 tests with 121 optional
-skips in 0.75 seconds wall and 45,170,688-byte maximum RSS. The optional,
-pytest, and dependency-light counts are each 13 above the Loop 25 v1 baseline;
-the final public-status invariant is one test above the green `03605c5`
-research milestone. No Loop 25/26 fixture, coefficient, preprocessing run,
-cache/target/validation/model read, training run, network call, RW3 operation,
-stream, board, device, or hardware operation occurred. The tracked workbook is
-79,856 bytes with SHA-256
-`255b51b8d083db92030c389f8d40cf001b256dbe0345748c9120e35b993bdb15`;
-all nine sheets render, reload, and pass the formula scan with zero matches.
-Loop 26 research commit `03605c5` passed both GitHub CI jobs in run
-`29197895836`.
+Current verification after the Loop 27 public closeout: 380 unittests pass with
+3 expected skips in 21.31 seconds wall and 577,060,864-byte maximum RSS; pytest
+reports 377 passed, 3 skipped, and 177 subtests in 21.21 seconds wall with
+586,498,048-byte maximum RSS. The focused Loop 25-27/roadmap boundary has 55
+passing tests in at most 0.10 seconds wall and 23,592,960-byte maximum RSS.
+Dependency-light Python 3.12 discovery is green at 348 tests with 121 optional
+skips in 0.73 seconds wall and 46,383,104-byte maximum RSS. The three full
+counts are each 14 above the Loop 26 public closeout. No Loop 25-27 fixture,
+coefficient, preprocessing run, candidate download, local MAT payload hash,
+header/signal/target/validation/model read, training run, network payload,
+RW3 operation, stream, board, device, or hardware operation occurred. The
+tracked workbook is 80,867 bytes with SHA-256
+`186eda194695b92b1c18422e1a0ccbcbd9ed63249eb7ba1f6c8d500926f9c685`;
+all nine sheets render, reload with byte-identical key-range inspection, and
+pass the formula scan with zero matches. Loop 27 research commit `b3d61b6`
+passed both GitHub CI jobs in run `29199178320`.
 
 ## The north star
 
@@ -256,16 +265,21 @@ This is not primarily a model repo. It is a **research loop repo**.
    `docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop26_research_boundary.v0.json`. Its planning research is
    complete, but it has no preregistration, authorization sentence, runtime,
-   cache/target open, model, training run, or validation result. Each future
-   loop still requires its own preregistration or bounded implementation packet
-   before execution.
+   cache/target open, model, training run, or validation result. For Loop 27,
+   read `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` and
+   `registries/loop27_research_boundary.v0.json`: S25 is selected in metadata,
+   but the source model, controls, target isolation, and final decision rule are
+   absent, so preregistration and acquisition remain blocked. Each future loop
+   still requires its own packet before execution.
 4. **Keep the GitHub history reviewable.** PR #3 carries the validated Loop
    8-24 evidence stack and is green. Draft PR #4 carries the separately stacked
    Loop 25 v0 history, v1 amendment, and still-false decision packet so
    preregistration and authorization remain auditable. The
    `codex/loop-26-research` branch stacks the planning-only Loop 26 evidence on
-   top and must remain independently reviewable. Do not merge until CI, license,
-   privacy, history, and proof-boundary review is complete.
+   top. The `codex/loop-27-preregistration` branch then stacks only the
+   metadata-only Loop 27 boundary. Keep each independently reviewable; do not
+   merge until CI, license, privacy, history, and proof-boundary review is
+   complete.
 
 RW4 is not next: S20 acquisition remains blocked until explicit approval names
 revision `88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684`, exactly four files, the

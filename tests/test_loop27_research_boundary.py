@@ -7,6 +7,15 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 BOUNDARY_PATH = REPO_ROOT / "registries" / "loop27_research_boundary.v0.json"
 RESEARCH_PATH = REPO_ROOT / "docs" / "LOOP_27_PRIMARY_SOURCE_RESEARCH.md"
 ROADMAP_PATH = REPO_ROOT / "registries" / "next_20_loops.v0.json"
+PUBLIC_STATUS_PATHS = (
+    REPO_ROOT / "AGENTS.md",
+    REPO_ROOT / "README.md",
+    REPO_ROOT / "START_HERE.md",
+    REPO_ROOT / "docs" / "CODEX_HANDOFF.md",
+    REPO_ROOT / "docs" / "NEXT_20_LOOPS_TRACKER.md",
+    REPO_ROOT / "docs" / "POST_20_ROADMAP.md",
+    REPO_ROOT / "prompts" / "CODEX_START_PROMPT.md",
+)
 
 
 def authorization_flags(value):
@@ -28,6 +37,9 @@ class Loop27ResearchBoundaryTests(unittest.TestCase):
         cls.boundary = json.loads(BOUNDARY_PATH.read_text(encoding="utf-8"))
         cls.research = RESEARCH_PATH.read_text(encoding="utf-8")
         cls.roadmap = json.loads(ROADMAP_PATH.read_text(encoding="utf-8"))
+        cls.public_status = {
+            path: path.read_text(encoding="utf-8") for path in PUBLIC_STATUS_PATHS
+        }
 
     def test_identity_is_metadata_only_and_every_authorization_is_false(self):
         boundary = self.boundary
@@ -225,6 +237,19 @@ class Loop27ResearchBoundaryTests(unittest.TestCase):
             "src/neurodecodekit/experiments/fresh_holdout.py",
         )
         self.assertTrue(all(not (REPO_ROOT / path).exists() for path in forbidden))
+
+    def test_public_status_keeps_selection_separate_from_preregistration(self):
+        for path, contents in self.public_status.items():
+            with self.subTest(path=path.relative_to(REPO_ROOT)):
+                lowered = contents.lower()
+                self.assertIn("loop 27", lowered)
+                self.assertIn("planning research", lowered)
+                self.assertIn("s25", lowered)
+                self.assertIn("preregistration", lowered)
+        combined = "\n".join(self.public_status.values())
+        self.assertIn("1,009,939,983", combined)
+        self.assertIn("Not Started", combined)
+        self.assertNotIn("Loop 27 is complete", combined)
 
 
 if __name__ == "__main__":

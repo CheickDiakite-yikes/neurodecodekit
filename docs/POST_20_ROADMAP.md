@@ -77,6 +77,7 @@ decision.
 | 24 | Local precision and runtime | Can a decoder that first passes its correctness gate fit a realistic local CPU envelope without changing outputs beyond a registered tolerance? | float32/float16/dynamic-int8 candidates, state/parameter/RSS/RTF report. | Parked: float16 is exact but slower; qint8 is smaller but incorrect and slower; no qualification open; runtime 65.154951 sec exceeds 60 sec; retain float32 and do not rerun seed 2401. |
 | 25 | Causal preprocessing audit | Can every upstream transform run with zero future context, full folding-band anti-alias protection, exact timing, and chunk/resume identity? | Frozen stateful notch/bandpass/dedicated-antialias SOS, decimation, normalization, and target-free v1 packet. | Amended at green commit `b6b92d8`; 65,537 response points, 23 alias probes, 7 schedules, 10 resume cuts, 3 mutation cuts, 45 refusals, and 23 counters are frozen; request remains false, both seeds are unopened, and no runtime exists. |
 | 26 | Real validation-only encoder gate | Can one fixed tiny causal encoder beat honest controls on the six reserved source-validation sentences? | Planning-only identifiability note and machine boundary before any experiment contract. | Planning research complete at `03605c5`; 2,908/2,884-parameter recommendations, six controls, 64 exact paired assignments, and 14 false authorization fields; experiment remains `Not Started` with zero protected access. |
+| 27 | Fresh holdout preregistration | Which independent recording can answer the next transfer claim without consumed evidence? | Planning-only official metadata selector, exact candidate identities, target-isolation design, and blockers. | Planning research complete at `b3d61b6`; S25 session 2 block 2 selected as two files/1,009,939,983 bytes; 18 false authorization fields; no preregistration, request, download, hash, header, signal, target, or model access. |
 
 ## Next Planned Tranche: Loops 25-44
 
@@ -90,11 +91,13 @@ in `docs/LOOPS_25_44_ROADMAP.md`; the primary-source rationale is in
 Loop 25 is now `Amended Preregistration` with
 `proof_posture: amended_preregistered_no_implementation_or_execution`. Loop 26
 planning research is complete, but its experiment remains `Not Started` and
-`planned_not_authorized`; Loops 27-44 remain `Not Started`. All 20
-`execution_authorized` flags are false. Loop 25's exact decision packet is
-ready for review, while Loop 26 has no preregistration or authorization packet.
-Roadmap approval, general continuation, or documentation work cannot reopen
-Loop 24, authorize RW3 Stage A, or authorize any Loop 25-44 operation.
+`planned_not_authorized`. Loop 27 has completed metadata research and selected
+S25, but its preregistration remains blocked; Loops 28-44 remain `Not Started`.
+All 20 `execution_authorized` flags are false. Loop 25's exact decision packet
+is ready for review, while Loops 26 and 27 have no preregistration or
+authorization packet. Roadmap approval, general continuation, or documentation
+work cannot reopen Loop 24, authorize RW3 Stage A, or authorize any Loop 25-44
+operation.
 
 ## Parallel Real-World Practice Track
 

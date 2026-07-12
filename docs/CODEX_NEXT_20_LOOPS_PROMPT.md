@@ -24,6 +24,16 @@ source-test, or session-2 evidence was opened. Review
 `docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop26_research_boundary.v0.json` only as planning evidence.
 
+Loop 27 planning research is green at `b3d61b6`. Pinned official metadata
+selects S25 session 2 block 2 as the smallest eligible strict MEG pair: one FIF
+plus one protected MAT log, exactly 1,009,939,983 bytes under a future 1 GiB
+cap. S23 is officially excluded and S20 remains EEG-only practice evidence.
+All 18 permissions are false. No preregistration, acquisition request,
+download, local MAT payload hash, header, signal, target, model, training,
+final open, or backup substitution exists. Review
+`docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop27_research_boundary.v0.json` as metadata research only.
+
 The next numbered decision is **authorize Loop 25 v1 exactly, amend it again,
 or hold**. Review `docs/LOOP_25_AUTHORIZATION_PACKET_V1.md` and
 `registries/loop25_authorization_request.v1.json`. General continuation is not
@@ -53,7 +63,8 @@ run a model, or train anything without the separate stage authorization.
 Do not rerun or retune Loop 24. A Loop 25 decision cannot authorize RW3, and an
 RW3 decision cannot authorize Loop 25. Neither decision authorizes Loop 26,
 which requires a compatible Loop 25 closeout plus its own preregistration and
-exact real-cache/target/model/training/validation authorization.
+exact real-cache/target/model/training/validation authorization. None of those
+decisions authorizes Loop 27 acquisition or Loop 28 transfer.
 
 Passing either future synthetic gate could establish only its registered
 interface, numerical, resource, or accounting behavior. It would not establish

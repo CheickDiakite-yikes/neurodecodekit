@@ -27,6 +27,8 @@ requests, and these files:
 - `registries/loop25_authorization_request.v1.json`
 - `docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md`
 - `registries/loop26_research_boundary.v0.json`
+- `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md`
+- `registries/loop27_research_boundary.v0.json`
 - `docs/POST_20_ROADMAP.md`
 - `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`
 - `docs/LOOPS_25_44_ROADMAP.md`
@@ -75,14 +77,21 @@ Do not reset, revert, delete, or overwrite work already present.
   rows across five phases, with source bindings, controls, metrics, acceptance
   gates, stop rules, dependencies, resource caps, and 20 false execution flags.
   Loop 25 is `Amended Preregistration`; Loop 26 planning research is complete
-  while its experiment remains `Not Started`; Loops 27-44 are `Not Started`;
-  all 20 execution flags remain false.
+  while its experiment remains `Not Started`; Loop 27 planning research has
+  selected S25 metadata while preregistration remains blocked; Loops 28-44 are
+  `Not Started`; all 20 execution flags remain false.
 - Loop 26's planning boundary recommends a 2,908-parameter causal candidate, a
   2,884-parameter linear comparator, six controls, and exact enumeration of all
   64 paired sign assignments over six reserved source-validation sentences.
   All 14 authorization fields are false. No Loop 26 cache content, target,
   model, checkpoint, training, validation prediction, source-test row, or
   session-2 evidence was opened; no preregistration or authorization exists.
+- Loop 27 planning research at `b3d61b6` selects S25 session 2 block 2 as the
+  smallest eligible strict MEG metadata pair: two files totaling
+  1,009,939,983 bytes. S23 is officially excluded and S20 remains a separate
+  EEG cohort. All 18 permissions are false; no preregistration, acquisition
+  request, download, local MAT payload hash, header, signal, target, model,
+  training, final open, or backup substitution exists.
 - No real recording quality, neural advantage, unseen-person generalization,
   useful EEG decoder, real-time decoding, portable-hardware, arbitrary-thought,
   or clinical result has been demonstrated.
@@ -122,6 +131,12 @@ prompt into an experiment contract. A future Loop 26 preregistration must
 separately freeze architecture, controls, statistics, seeds, access order, and
 resources before any exact authorization can permit real-cache, target,
 training, model, or one-time validation access.
+
+Loop 27 is also review-only planning evidence. Do not turn the selected S25
+paths, official hashes, local MAT presence, 1 GiB cap, or roadmap status into a
+download or content-open instruction. Preregistration waits for compatible
+Loop 25 mechanics, a frozen Loop 26 model/control package, target isolation,
+and a Loop 28 final-only decision rule.
 
 Independently, inspect and validate the RW3 Stage A decision surface:
 
@@ -171,6 +186,9 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
 9. Keep Loop 26 source test and session 2 closed. Planning research does not
    authorize preregistration, implementation, real-cache or target reads,
    model/checkpoint operations, training, validation predictions, or metrics.
+10. Keep S25 sealed. Do not hash or open its local MAT payload, download its
+    FIF, inspect a header, read signal/targets, substitute S24/S22/S18, or
+    prepare a transfer run from Loop 27 planning research.
 
 ## Required deliverables for the next authorized milestone
 
@@ -180,13 +198,14 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
    still-unauthorized request prepared at `163ff2f`. Keep Loop 25's immutable
    `a36d97b` v0 registration, green `b6b92d8` v1 amendment, false replacement
    authorization request, the planning-only Loop 26 registry with 14 false
-   authorization fields and zero protected access, and all 20 Loops 25-44
+   authorization fields and zero protected access, the Loop 27 registry with
+   18 false permissions and zero payload access, and all 20 Loops 25-44
    execution flags consistent.
 2. Run documentation/contract validation, local-link checks, Ruff,
    `git diff --check`, Gitleaks, and the complete unit suites. Compare with the
    313-unittest Loop 24 baseline, the 323-unittest Loop 25 v0 preregistration
-   baseline, the 342-unittest Loop 25 v1 amendment baseline, and the current
-   366-unittest Loop 26 planning-research closeout.
+   baseline, the 342-unittest Loop 25 v1 amendment baseline, the 366-unittest
+   Loop 26 public closeout, and the 380-unittest Loop 27 public closeout.
 3. Commit and push any future authorization-only milestone and confirm its own
    CI before implementation. Preserve unrelated files and generated debris
    outside Git.

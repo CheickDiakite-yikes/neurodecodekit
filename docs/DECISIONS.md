@@ -1475,3 +1475,45 @@ Evidence: `docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop26_research_boundary.v0.json`,
 `tests/test_loop26_research_boundary.py`, roadmap commit `03605c5`, tracker row
 `26-R1`, and GitHub CI run `29197895836`.
+
+## 0054 - Select S25 metadata for Loop 27 and hold preregistration
+
+Decision: select SpanishBCBL MEG S25 session 2 block 2 as the smallest strict
+eligible same-modality/task holdout candidate, while leaving Loop 27
+`Not Started`, preregistration unprepared, and all 18 authorization fields
+false. Do not prepare an acquisition request until the source model, controls,
+target-isolation procedure, and Loop 28 final decision rule are hash frozen.
+
+Why: a one-thread pinned metadata selector examined 315 MEG entries, found 23
+clean single-FIF/log pairs and 16 eligible pairs, and ranked exact bytes after
+canonical identity and cohort exclusions. S21 block 2 is smaller but observed.
+S23 is also smaller but the official dataset card excludes that participant for
+a metallic implant. S20 is task-matched EEG, not a compatible transfer holdout
+for the 102-magnetometer source model. S25 is the first eligible pair and has no
+published alias with the observed S5/S10/S21 person.
+
+Selected identity: `MEG/FIF/25_12032/240530/block2.fif` is 1,009,713,753
+bytes and `MEG/logs/S25-session2_block2_list1.mat` is 226,230 bytes. Their
+exact total is 1,009,939,983 bytes, leaving 63,801,841 bytes under a future 1
+GiB cap. Official Git blob, LFS SHA-256, Xet, and last-file-commit identities
+are frozen in the research registry. The local MAT path is present at the
+expected size but was not hashed or opened; the raw FIF is absent.
+
+Future design boundary: use S25 final-only with zero candidate training,
+validation, or calibration rows. Require at least 48 performed unique rows as
+a pragmatic retention floor, not a prospective power claim. Freeze the source
+model and no-signal/corrupted-signal controls before candidate content. An
+unseen-person claim may disclose familiar sentence overlap; an unseen-text
+claim requires a future zero-overlap audit. Any S25 failure parks without
+automatic S18, S24, or S22 substitution.
+
+Resource and access result: the measured selector took 3.10 seconds wall and
+63,766,528-byte peak RSS using one thread/worker. Candidate payload downloads,
+local MAT payload hashes, FIF header/signal reads, MAT/target reads, source
+consumed-evidence reads, model/checkpoint runs, training updates, RW3, streams,
+boards, devices, and hardware operations are all zero.
+
+Evidence: `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop27_research_boundary.v0.json`,
+`tests/test_loop27_research_boundary.py`, roadmap commit `b3d61b6`, tracker row
+`27-R1`, and GitHub CI run `29199178320`.
