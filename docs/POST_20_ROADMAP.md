@@ -65,7 +65,7 @@ decision.
   device, recording, target, model, or training access is authorized. See
   `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md`.
 
-## Loops 21-30
+## Closed And Current Post-Roadmap Gates
 
 | # | Gate | Core question | Deliverable | Acceptance boundary |
 |---:|---|---|---|---|
@@ -74,12 +74,22 @@ decision.
 | 23 | Streaming CTC prefix decoder | Can causal encoder frames produce stable incremental characters rather than only final strings? | Greedy/prefix state, partial-hypothesis trace, revision and emission-delay metrics. | Parked: mechanics and validation pass, but frozen exact test accuracy is 5/8 below 6/8; test consumed; no tuning or rerun. |
 | 23.5 | Blank/boundary calibration | Can one train-frame-fitted, target-length-independent blank intercept suppress tail false positives on fresh splits without harming any item? | Fresh 64/16/16 fixture, one convex scalar fit, unchanged comparator, calibration metrics, and one new test. | Closed: validation and frozen test are 16/16 exact at CER 0; zero regressions; 5/5 replay; seed 2353 consumed; supervised synthetic calibration only. |
 | 24 | Local precision and runtime | Can a decoder that first passes its correctness gate fit a realistic local CPU envelope without changing outputs beyond a registered tolerance? | float32/float16/dynamic-int8 candidates, state/parameter/RSS/RTF/energy proxy report. | Preregistered at `186bb6f`, not authorized: 3 candidates, seeds 2401/2402, 12 balanced rounds, 30 refusals, one-thread/4-MiB artifact caps; preserve every observable behavior and keep seed 2353 closed. |
-| 25 | Causal preprocessing audit | Can existing real MEG train rows be replayed incrementally without future-aware filters, normalization, or padding leakage? | Train-only causal preprocessing contract and offline/stream audit; no score. | Open source-train rows only; keep five source-test and all consumed session-2 rows frozen. |
-| 26 | Real validation-only encoder gate | Does the fixed small causal model learn anything above a no-signal prior on source validation without touching test? | Preregistered architecture, train-only fit, six-row validation report with uncertainty. | Proceed only on a registered margin and failure analysis; validation is consumed for model selection. |
-| 27 | Fresh holdout preregistration | What new independent recording or participant slice can answer the next claim without recycling observed data? | Metadata-only candidate table, license/bytes/protocol, preregistered one-time analysis. | No download before exact cap and approval; no test until architecture and decision rule are frozen. |
-| 28 | Session/person transfer | Does the frozen causal system transfer, and what calibration is actually required? | One-time fresh holdout report, calibration curve, no-signal comparator, uncertainty. | Separate same-person session and unseen-person claims; negative results close or redirect the branch. |
-| 29 | Portable sensing translation | Which requirements survive movement from cryogenic MEG toward OPM-MEG or EEG? | Sensor geometry/bandwidth/noise/shielding/compute requirement matrix and partner-data gate. | No synthetic channel subset is called OPM-equivalent; hardware claims require measured device data. |
-| 30 | Local private streaming prototype | Can a user inspect incremental output, revisions, latency, and provenance entirely on-device? | Loopback-only replay/live-fixture UI with stage-level latency and resource telemetry. | Real text remains protected; no cloud dependency; user-visible latency includes capture, preprocessing, encoder, decoder, and rendering stages. |
+
+## Next Planned Tranche: Loops 25-44
+
+The next 20 loops are now defined in detail across five phases: causal evidence,
+translation/generalization, reliability/confounds, reproducibility/local
+deployment, and live translation/release. The machine source of truth is
+`registries/next_20_loops.v0.json`; the human work orders and kill branches are
+in `docs/LOOPS_25_44_ROADMAP.md`; the primary-source rationale is in
+`docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`.
+
+All 20 rows are `Not Started`, `execution_authorized: false`, and
+`proof_posture: planned_not_authorized`. They refine the earlier provisional
+25-30 concepts and extend them through Loop 44 without changing the current
+gate: Loop 24 remains the next numbered decision. Roadmap approval, general
+continuation, or work on documentation cannot authorize Loop 24, RW3 Stage A,
+or any Loop 25-44 operation.
 
 ## Parallel Real-World Practice Track
 

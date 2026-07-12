@@ -3,7 +3,9 @@
 > **Scope:** the 20-row table and its KPI describe the original roadmap. Loop
 > numbers 21-24 and the Loop 23.5 calibration gate are post-roadmap extensions,
 > so “20 loops” and “currently at Loop 24” are both true but refer to different
-> things. The spreadsheet dashboard displays both explicitly.
+> things. A second planning-only tranche now defines Loops 25-44, so the
+> spreadsheet dashboard displays the original roadmap, current gate, and next
+> 20-loop queue separately.
 
 This tracker starts after PR1 lands. The core operating rule is simple: **do not add a more complex loop until the previous loop has produced a cache, report, demo, or explicit kill/park decision.**
 Each loop should be one PR or one experiment note whenever possible. Complexity is allowed, but only when a simpler loop proves why it is needed.
@@ -201,6 +203,42 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   preregistered implementation, amend it, or hold; all execution flags remain
   false. Neither authorization can authorize the other. Seeds 2203, 2303, and
   2353 stay consumed.
+
+## Next planned 20 loops: 25-44
+
+These rows are a **planning-only queue**, not approved experiments. The full
+acceptance boundaries, stop rules, controls, resource caps, dependencies, and
+authorization rules live in `docs/LOOPS_25_44_ROADMAP.md` and
+`registries/next_20_loops.v0.json`. Every row starts `Not Started` with
+`execution_authorized: false`.
+
+| # | Phase | Gate | Core outcome | Priority | Effort | Status |
+|---:|---|---|---|---|---|---|
+| 25 | Causal Evidence | Causal Preprocessing Audit | Prove the complete preprocessing path has zero undeclared future context, stable timing, and schedule identity. | P0 | M | Not Started |
+| 26 | Causal Evidence | Real Validation-Only Encoder Gate | Decide whether one fixed tiny causal encoder beats no-signal and shuffled controls on source validation only. | P0 | L | Not Started |
+| 27 | Causal Evidence | Fresh Holdout Preregistration | Identify one independent, licensed, byte-capped holdout without downloading or previewing it. | P0 | M | Not Started |
+| 28 | Causal Evidence | Session And Person Transfer | Make one claim-specific fresh same-person or unseen-person transfer decision under a frozen protocol. | P0 | L | Not Started |
+| 29 | Translation And Generalization | Portable Sensing Translation | Separate cryogenic MEG, OPM-MEG, EEG, and non-neural device requirements before hardware work. | P1 | M | Not Started |
+| 30 | Translation And Generalization | Local Private Streaming Prototype | Expose incremental replay, revisions, stage latency, provenance, and warnings locally. | P1 | M | Not Started |
+| 31 | Translation And Generalization | Neural Contribution Ablation | Isolate neural signal from language priors, timing, sentence lists, and corrupted-signal controls. | P0 | L | Not Started |
+| 32 | Translation And Generalization | New-Subject Calibration And Adaptation | Measure the smallest honest calibration budget without using final rows for selection. | P1 | L | Not Started |
+| 33 | Reliability And Confounds | Data Scaling And Sample Efficiency | Separate gains from hours, trials, repetitions, and unique sentences under a fixed tiny model. | P1 | L | Not Started |
+| 34 | Reliability And Confounds | Confidence, Abstention, And Revision | Expose confidence only if validation-fit risk-coverage generalizes independently. | P1 | M | Not Started |
+| 35 | Reliability And Confounds | Peripheral Confound Firewall | Block neural claims explained by key timing, EMG, EOG, motion, audio, or prompt leakage. | P0 | L | Not Started |
+| 36 | Reliability And Confounds | Geometry And Reference Harmonization | Preserve channel geometry, units, reference, missingness, and transform provenance across sessions/devices. | P1 | M | Not Started |
+| 37 | Reproducibility And Local Deployment | BIDS Derivative And Provenance Export | Export tiny source-bound derivatives without copying raw recordings or inventing metadata. | P1 | M | Not Started |
+| 38 | Reproducibility And Local Deployment | Neural Data Privacy And Lifecycle | Verify inventory, redaction, retention, local storage, and narrow deletion behavior. | P0 | M | Not Started |
+| 39 | Reproducibility And Local Deployment | Cross-Machine Reproducibility Matrix | Define bitwise semantic identity versus explicit numerical compatibility across supported environments. | P0 | M | Not Started |
+| 40 | Reproducibility And Local Deployment | Edge Runtime Packaging Gate | Package one already qualified frozen path only if behavior and deployment benefit survive. | P2 | L | Not Started |
+| 41 | Live Translation And Release | RW3 Stream-To-NeuroToken Integration | Join separately authorized source-chunk replay to causal tokens without timestamp or state drift. | P1 | L | Not Started |
+| 42 | Live Translation And Release | One-Device Qualification | Qualify one exact device, firmware, transport, host, and compatibility level only. | P2 | L | Not Started |
+| 43 | Live Translation And Release | Independent Reproduction Challenge | Have an independent environment reproduce a bounded artifact without neural-data exchange. | P1 | M | Not Started |
+| 44 | Live Translation And Release | Claim Promotion And Release Decision | Promote only claims with complete evidence, privacy, license, reproduction, and control records. | P0 | M | Not Started |
+
+The execution order is evidence-driven, not automatic. A failed Loop 26 parks
+real-model scaling; a missing fresh holdout blocks transfer; a shortcut in Loop
+31 blocks neural attribution; a replay failure in Loop 41 blocks device work.
+Negative results stay in the tracker instead of being tuned around.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |

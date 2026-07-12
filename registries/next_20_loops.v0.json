@@ -1,0 +1,830 @@
+{
+  "schema_name": "neurodecodekit.next_twenty_loops_roadmap",
+  "schema_version": "0.1.0",
+  "roadmap_id": "loops-25-44",
+  "prepared_at": "2026-07-12",
+  "status": "planning_only_not_execution_authorization",
+  "proof_posture": "primary_source_informed_roadmap_only",
+  "range": {
+    "first_loop": 25,
+    "last_loop": 44,
+    "loop_count": 20
+  },
+  "current_boundary": {
+    "current_numbered_gate": 24,
+    "loop24_status": "preregistered_unauthorized",
+    "loop24_execution_authorized": false,
+    "rw3_status": "stage_a_packet_prepared_unauthorized",
+    "rw3_stage_a_authorized": false,
+    "general_continuation_is_authorization": false,
+    "roadmap_approval_is_loop_execution_authorization": false
+  },
+  "protected_evidence": {
+    "real_cohorts": [
+      "S21 session-1 source test rows are observed and may not be reused for selection or tuning.",
+      "S21 session-2 is a consumed same-person evaluation and may not be reopened for tuning.",
+      "S7 EEG evaluation evidence is consumed and may not be promoted into a fresh benchmark."
+    ],
+    "synthetic_seeds": [
+      2203,
+      2303,
+      2353
+    ],
+    "rules": [
+      "Protected real cohorts and consumed synthetic seeds may be cited but not reopened for selection, calibration, thresholding, or fresh evaluation.",
+      "Future real-data access requires a metadata plan, exact file and byte caps, dry-run output, license review, and separate explicit authorization.",
+      "No target, label, prompt text, or consumed prediction may create a target-free fixture or select a future evaluation row."
+    ]
+  },
+  "global_constraints": {
+    "base_dependencies": "No new heavy base dependency; numerical, neuroimaging, streaming, and edge runtimes remain optional.",
+    "cpu": "Use one numerical thread and one worker unless a preregistered amendment justifies otherwise.",
+    "storage": "Default generated-artifact cap is 32 MiB per loop; a lower loop-specific cap wins and any larger cap requires an amendment before execution.",
+    "data": "No download, real-data read, consumed-cache read, model run, training run, socket, stream, board, or hardware operation is authorized by this roadmap.",
+    "evaluation": "Prediction loops require a same-split no-signal prior and controls that isolate language, timing, peripheral, and neural contributions.",
+    "claims": "MEG, EEG, OPM-MEG, sEMG, eye, motion, imagined speech, prompted typing, and patient evidence remain separate cohorts and claims.",
+    "privacy": "Neural recordings and derived embeddings are sensitive, local by default, and excluded from Git.",
+    "closeout": "Every loop closes with measured bytes, runtime, peak RSS, access counters, warnings, proof posture, and proceed, park, or kill decision."
+  },
+  "phases": [
+    {
+      "phase_id": "P1",
+      "name": "Causal Evidence",
+      "loop_ids": [25, 26, 27, 28],
+      "outcome": "Establish whether a fixed causal path can earn one fresh neural and transfer claim without reusing consumed evidence."
+    },
+    {
+      "phase_id": "P2",
+      "name": "Translation And Generalization",
+      "loop_ids": [29, 30, 31, 32],
+      "outcome": "Separate portability, interaction, neural contribution, and calibration rather than bundling them into one demo."
+    },
+    {
+      "phase_id": "P3",
+      "name": "Reliability And Confounds",
+      "loop_ids": [33, 34, 35, 36],
+      "outcome": "Measure sample efficiency, uncertainty, peripheral shortcuts, and geometry failure modes."
+    },
+    {
+      "phase_id": "P4",
+      "name": "Reproducibility And Local Deployment",
+      "loop_ids": [37, 38, 39, 40],
+      "outcome": "Make artifacts portable, privacy-aware, cross-machine reproducible, and eligible for a bounded edge-runtime decision."
+    },
+    {
+      "phase_id": "P5",
+      "name": "Live Translation And Release",
+      "loop_ids": [41, 42, 43, 44],
+      "outcome": "Join authorized replay mechanics to the token interface, qualify one device only if earned, reproduce independently, and promote only supported claims."
+    }
+  ],
+  "loops": [
+    {
+      "loop_id": 25,
+      "phase_id": "P1",
+      "title": "Causal Preprocessing Audit",
+      "priority": "P0",
+      "effort": "M",
+      "status": "Not Started",
+      "execution_authorized": false,
+      "proof_posture": "planned_not_authorized",
+      "core_question": "Can every transform before the causal encoder run incrementally without future samples, evaluation-fit statistics, timestamp drift, or chunk-boundary changes?",
+      "why_high_value": "A causal model is not causal if filtering, resampling, padding, or normalization leaks future context; this gate protects every later streaming claim.",
+      "build_deliverable": "Versioned stateful preprocessing contract, offline-versus-stream replay harness, transform provenance, and explicit refusal for noncausal settings.",
+      "research_deliverable": "Primary-source note on filter delay, resampling event jitter, padding, and train-only normalization semantics.",
+      "data_scope": "Target-free synthetic signals first; any later S21 use is restricted to separately authorized source-train rows and may not open source-test or session-2 evidence.",
+      "controls": [
+        "Five or more adversarial chunk schedules including single-sample and boundary splits.",
+        "Impulse, step, chirp, drift, and end-padding fixtures with future-sample perturbation tests.",
+        "Offline noncausal reference reported separately and never substituted for the causal path."
+      ],
+      "primary_metrics": [
+        "right-context samples and milliseconds",
+        "valid-sample and timestamp identity",
+        "maximum offline-stream payload error",
+        "schedule hash agreement",
+        "runtime, peak RSS, input bytes, output bytes, and access counts"
+      ],
+      "acceptance_boundary": "Proceed only if declared right context is zero, every schedule preserves valid samples and timestamps within preregistered tolerances, evaluation-fit/read counters are zero, and resource caps pass.",
+      "stop_rule": "Park any transform that needs future samples or cannot preserve timing; do not widen tolerances after observing a protected row.",
+      "depends_on": [],
+      "external_gates": ["explicit_loop24_proceed_park_or_hold_decision"],
+      "authorization_boundary": "Planning only. Fixture generation, real-cache reads, preprocessing execution, and model access require a separate Loop 25 preregistration and authorization.",
+      "resource_cap": "One thread, one worker, 32 MiB generated artifacts, 60 seconds per isolated worker, and 1 GiB peak RSS."
+    },
+    {
+      "loop_id": 26,
+      "phase_id": "P1",
+      "title": "Real Validation-Only Encoder Gate",
+      "priority": "P0",
+      "effort": "L",
+      "status": "Not Started",
+      "execution_authorized": false,
+      "proof_posture": "planned_not_authorized",
+      "core_question": "Does one fixed, small causal encoder show neural information above no-signal and shuffled controls on source validation without touching any test set?",
+      "why_high_value": "The project has strong mechanics but no real neural advantage; this is the first gate that can justify continuing the predictive branch.",
+      "build_deliverable": "Preregistered tiny architecture, train-only fit path, six-row validation report, uncertainty, control parity, and immutable access ledger.",
+      "research_deliverable": "Power and identifiability note stating what six validation rows can and cannot establish.",
+      "data_scope": "Only separately authorized S21 source-train and source-validation members; five source-test rows and all session-2 rows stay closed.",
+      "controls": [
+        "Same-split no-signal prior.",
+        "Target permutation fitted on train only.",
+        "Time-shift and channel-permutation controls chosen before validation opens.",
+        "Frozen non-neural parameter-count and compute-matched comparator where feasible."
+      ],
+      "primary_metrics": [
+        "CER and exact-sequence accuracy",
+        "paired item differences and interval",
+        "control margins",
+        "parameter count, runtime, peak RSS, and artifact bytes",
+        "raw, cache, target, model, and training access counts"
+      ],
+      "acceptance_boundary": "Proceed only if the preregistered primary neural-versus-prior margin and all required controls pass on validation with no access violation; this does not authorize source-test opening.",
+      "stop_rule": "If the neural path does not beat the registered controls, park real-model scaling and move to failure analysis without touching test or increasing model size.",
+      "depends_on": [25],
+      "external_gates": ["separate_real_cache_and_training_authorization"],
+      "authorization_boundary": "Planning only. Real-cache reads, target access, training, validation opening, and model runs are all unauthorized now.",
+      "resource_cap": "One thread, one worker, existing tiny-model class only, 32 MiB generated artifacts, 20 minutes total authorized CPU time, and 1 GiB peak RSS."
+    },
+    {
+      "loop_id": 27,
+      "phase_id": "P1",
+      "title": "Fresh Holdout Preregistration",
+      "priority": "P0",
+      "effort": "M",
+      "status": "Not Started",
+      "execution_authorized": false,
+      "proof_posture": "planned_not_authorized",
+      "core_question": "Which independent participant, session, or task-matched recording can answer the next claim without recycling S21 session-2 or S7 evidence?",
+      "why_high_value": "A fresh, hash-bound test is more valuable than another tuned result on already observed data.",
+      "build_deliverable": "Metadata-only candidate registry, license and byte ledger, exact file plan, split protocol, target-isolation plan, and one-time analysis contract.",
+      "research_deliverable": "Primary-source dataset and license review separating same-person session, unseen-person, modality, and task claims.",
+      "data_scope": "Metadata and public documentation only; no download, signal read, target read, or remote row preview.",
+      "controls": [
+        "Independent identity and sentence-membership audit.",
+        "Exact no-signal and shuffle comparators frozen before acquisition.",
+        "One-time test access sequence with physical or cryptographic partition separation."
+      ],
+      "primary_metrics": [
+        "planned files and bytes",
+        "subjects, sessions, trials, and unique sentence groups",
+        "license and redistribution status",
+        "identity-overlap and task-match warnings",
+        "authorized and unavailable access counters"
+      ],
+      "acceptance_boundary": "Approve a future acquisition packet only if independence, task match, licensing, exact byte cap, split power, and one-time decision rule are explicit; otherwise record no eligible holdout.",
+      "stop_rule": "Hold acquisition if identity, license, task, timing, or byte provenance is ambiguous; never substitute a convenient consumed cohort.",
+      "depends_on": [],
+      "external_gates": [],
+      "authorization_boundary": "Metadata research is the only future candidate scope; download or signal access requires a separate exact packet and user authorization.",
+      "resource_cap": "Zero downloaded bytes, zero signal reads, one thread, one worker, 8 MiB planning artifacts, and 10 minutes local metadata processing."
+    },
+    {
+      "loop_id": 28,
+      "phase_id": "P1",
+      "title": "Session And Person Transfer",
+      "priority": "P0",
+      "effort": "L",
+      "status": "Not Started",
+      "execution_authorized": false,
+      "proof_posture": "planned_not_authorized",
+      "core_question": "Does the frozen causal system transfer to a genuinely fresh session or person, and how much predeclared calibration is required?",
+      "why_high_value": "The existing same-person cross-session result is negative; a fresh one-time test is required before any generalization claim can move.",
+      "build_deliverable": "Frozen source model, identity-safe adapter protocol, one-time holdout runner, calibration curve, paired controls, and claim-specific report card.",
+      "research_deliverable": "Transfer taxonomy distinguishing same-session, same-person cross-session, unseen-person zero-shot, and unseen-person calibrated evidence.",
+      "data_scope": "Only a separately acquired and authorized Loop 27 holdout after architecture, preprocessing, adapter, thresholds, and reports are frozen.",
+      "controls": [
+        "Train-only no-signal prior evaluated on identical rows.",
+        "Zero-shot frozen model before any calibration.",
+        "Calibration-size curve with a physically separate final partition.",
+        "Identity and repeated-text leakage audit."
+      ],
+      "primary_metrics": [
+        "CER, WER where justified, and exact sequence accuracy",
+        "neural-minus-prior paired interval",
+        "zero-shot versus calibrated delta",
+        "calibration examples, seconds, and compute",
+        "session/person-specific failure rates"
+      ],
+      "acceptance_boundary": "Promote only the exact same-person or unseen-person claim whose preregistered interval and controls pass on the one-time fresh partition.",
+      "stop_rule": "A failed fresh gate closes that transfer claim; do not tune on the opened holdout or relabel calibrated performance as zero-shot.",
+      "depends_on": [25, 26, 27],
+      "external_gates": ["approved_fresh_holdout_packet", "separate_one_time_test_authorization"],
+      "authorization_boundary": "Planning only. No fresh acquisition, model run, calibration, or holdout opening is authorized.",
+      "resource_cap": "One thread and worker, frozen small model, 32 MiB outputs, preregistered calibration budget, and 1 GiB peak RSS."
+    },
+    {
+      "loop_id": 29,
+      "phase_id": "P2",
+      "title": "Portable Sensing Translation",
+      "priority": "P1",
+      "effort": "M",
+      "status": "Not Started",
+      "execution_authorized": false,
+      "proof_posture": "planned_not_authorized",
+      "core_question": "Which validated requirements survive a move from cryogenic MEG toward OPM-MEG or EEG, and which assumptions break?",
+      "why_high_value": "Portability is the product direction users care about, but channel-count ablation is not device qualification.",
+      "build_deliverable": "Versioned modality requirement matrix covering geometry, reference, units, bandwidth, noise, shielding, timing, compute, and calibration.",
+      "research_deliverable": "Primary-source OPM-MEG and EEG feasibility review with explicit unavailable fields and partner-data gates.",
+      "data_scope": "Public specifications and existing aggregate evidence only; no device session, new recording, or synthetic claim of modality equivalence.",
+      "controls": [
+        "Separate rows for cryogenic MEG, OPM-MEG, scalp EEG, and non-neural wearables.",
+        "Measured device values distinguished from vendor specifications and unknowns.",
+        "Random channel ablation explicitly excluded as OPM or EEG evidence."
+      ],
+      "primary_metrics": [
+        "requirement coverage and unavailable-field count",
+        "sensor count, rate, units, geometry, and clock provenance",
+        "known versus inferred versus measured status",
+        "minimum future qualification evidence"
+      ],
+      "acceptance_boundary": "Proceed to a device-specific packet only when one modality has task, timing, geometry, privacy, licensing, and resource requirements that can be measured directly.",
+      "stop_rule": "Do not call a simulated subset, vendor specification, or file-reader success portable decoding.",
+      "depends_on": [27],
+      "external_gates": [],
+      "authorization_boundary": "Research and registry planning only; hardware, acquisition, and signal reads require separate authorization.",
+      "resource_cap": "Zero hardware sessions, zero downloads, one thread, one worker, and 8 MiB documentation artifacts."
+    },
+    {
+      "loop_id": 30,
+      "phase_id": "P2",
+      "title": "Local Private Streaming Prototype",
+      "priority": "P1",
+      "effort": "M",
+      "status": "Not Started",
+      "execution_authorized": false,
+      "proof_posture": "planned_not_authorized",
+      "core_question": "Can a user inspect incremental hypotheses, revisions, timing, provenance, and refusals locally without confusing replay with live decoding?",
+      "why_high_value": "A trustworthy interaction surface exposes latency and uncertainty instead of hiding them behind a final sentence.",
+      "build_deliverable": "Loopback-only replay UI with partial hypotheses, revision trace, stage clocks, resource telemetry, warnings, and local artifact loading.",
+      "research_deliverable": "Interaction contract for partial output, abstention, revision, privacy, and replay/live labels.",
+      "data_scope": "Existing synthetic artifacts and aggregate-only real scorecards; no raw real signal, cloud call, socket, or hardware source.",
+      "controls": [
+        "Replay badge and source identity visible in every view.",
+        "No-signal comparator shown beside predictive outputs.",
+        "Cold start, steady state, scheduling delay, compute delay, and render delay separated."
+      ],
+      "primary_metrics": [
+        "first-token and finalization latency by stage",
+        "revision count and prefix stability",
+        "event-loop responsiveness",
+        "runtime, peak RSS, input and output bytes",
+        "network, raw, cache, model, and training counters"
+      ],
+      "acceptance_boundary": "Pass only as a local replay interface when all source, causality, latency, unavailable-confidence, and proof labels remain visible and browser QA passes.",
+      "stop_rule": "Park any interface that implies live hardware, real-time text, confidence, or neural success that the loaded artifact does not prove.",
+      "depends_on": [25],
+      "external_gates": [],
+      "authorization_boundary": "Planning only. UI implementation and replay execution require a separate bounded Loop 30 authorization; live sources remain outside scope.",
+      "resource_cap": "Loopback only, one thread, one worker, 32 MiB temporary artifacts, 1 GiB peak RSS, and no network dependency."
+    },
+    {
+      "loop_id": 31,
+      "phase_id": "P2",
+      "title": "Neural Contribution Ablation",
+      "priority": "P0",
+      "effort": "L",
+      "status": "Not Started",
+      "execution_authorized": false,
+      "proof_posture": "planned_not_authorized",
+      "core_question": "When a predictive system improves, how much comes from neural signal rather than text priors, timing, sentence lists, or pipeline artifacts?",
+      "why_high_value": "This gate prevents autocomplete, prompt memorization, and event timing from being credited to brain activity.",
+      "build_deliverable": "Hash-bound ablation matrix with full signal, no-signal, shuffled-neural, timing-only, text-prior, and optional neurotoken-drop conditions.",
+      "research_deliverable": "Neural-contribution estimand and claim language for encoder-only and language-model-assisted systems.",
+      "data_scope": "Future authorized validation data only; no consumed test or target-informed fixture construction.",
+      "controls": [
+        "No-signal prior and prompt/sentence-list-only baseline.",
+        "Within-split temporal, channel, and item permutations fixed before evaluation.",
+        "Encoder-only and language-model-assisted outputs reported separately.",
+        "Matched access, preprocessing, parameter, and decoding budgets where feasible."
+      ],
+      "primary_metrics": [
+        "full-minus-ablation CER and WER deltas",
+        "paired intervals and effect consistency",
+        "neural-token drop degradation",
+        "language-prior gain",
+        "shortcut-control failure count"
+      ],
+      "acceptance_boundary": "Call a neural contribution only if the preregistered full-signal condition beats every required signal-free or corrupted-signal control with the expected direction and no leakage.",
+      "stop_rule": "If a signal-free or shortcut control matches the full path, withhold the neural claim and return to split, confound, or model diagnosis.",
+      "depends_on": [26],
+      "external_gates": ["separate_validation_and_model_authorization"],
+      "authorization_boundary": "Planning only. No target, model, validation, or language-model run is authorized.",
+      "resource_cap": "One thread, fixed small model, preregistered condition count, 32 MiB artifacts, and 1 GiB peak RSS."
+    },
+    {
+      "loop_id": 32,
+      "phase_id": "P2",
+      "title": "New-Subject Calibration And Adaptation",
+      "priority": "P1",
+      "effort": "L",
+      "status": "Not Started",
+      "execution_authorized": false,
+      "proof_posture": "planned_not_authorized",
+      "core_question": "What is the smallest honest calibration budget that improves a fresh person without training on their final evaluation rows?",
+      "why_high_value": "Subject variability is a central barrier, and zero-shot versus calibrated performance must be separated.",
+      "build_deliverable": "Frozen adapter family, calibration-size schedule, train-only normalization, independent selection and final partitions, and time/compute report.",
+      "research_deliverable": "Calibration protocol covering unlabeled, label-light, and supervised cases with distinct claims.",
+      "data_scope": "Only a future authorized fresh participant with physically separated calibration, selection, and final partitions.",
+      "controls": [
+        "Frozen zero-shot source model.",
+        "Identity or normalization-only adapter.",
+        "Same-size signal-free prior and label-permutation control.",
+        "Multiple registered calibration sizes without final-partition reuse."
+      ],
+      "primary_metrics": [
+        "zero-shot and calibrated CER",
+        "gain per calibration item and minute",
+        "calibration compute and wall time",
+        "no-harm item count",
+        "selection-to-final generalization"
+      ],
+      "acceptance_boundary": "Promote a calibrated-person claim only when a preselected adapter improves the one-time final partition against zero-shot and prior controls within the declared budget.",
+      "stop_rule": "Do not call calibration zero-shot, do not pick a budget on final data, and park adapters that help validation but harm the final partition.",
+      "depends_on": [28, 31],
+      "external_gates": ["approved_fresh_person_protocol"],
+      "authorization_boundary": "Planning only. Participant data, labels, calibration, training, and final evaluation remain unauthorized.",
+      "resource_cap": "One thread, one worker, fixed small adapter family, 32 MiB outputs, and preregistered maximum calibration minutes."
+    },
+    {
+      "loop_id": 33,
+      "phase_id": "P3",
+      "title": "Data Scaling And Sample Efficiency",
+      "priority": "P1",
+      "effort": "L",
+      "status": "Not Started",
+      "execution_authorized": false,
+      "proof_posture": "planned_not_authorized",
+      "core_question": "Do additional hours and additional unique sentences improve the fixed local encoder, and where does the small-data curve stop paying off?",
+      "why_high_value": "Scaling evidence guides acquisition better than guessing whether to collect more repetitions, more sentences, or more people.",
+      "build_deliverable": "Nested train-prefix runner with fixed validation, unique-sentence and repetition controls, multi-seed uncertainty, and compute ledger.",
+      "research_deliverable": "Local scaling design that avoids extrapolating Brain2Qwerty v2's 90-hour curve to the tiny SpanishBCBL setting.",
+      "data_scope": "Future authorized train and validation partitions only; no fresh test opening and no larger architecture.",
+      "controls": [
+        "Nested subsets preserve participant and sentence membership.",
+        "Matched total-trial comparison of repeated versus unique sentences.",
+        "No-signal baseline at every data size.",
+        "Fixed architecture, optimizer, stopping rule, and seed list."
+      ],
+      "primary_metrics": [
+        "CER versus hours, trials, and unique sentences",
+        "slope and uncertainty on registered scale",
+        "neural-minus-prior margin by size",
+        "training time and energy proxy if available",
+        "marginal gain per added MiB and minute"
+      ],
+      "acceptance_boundary": "Proceed only if a preregistered monotonic or model-based trend is stable across seeds and remains above the no-signal control; report non-saturation only within observed bounds.",
+      "stop_rule": "Stop the curve when gains disappear, controls fail, or the resource budget is reached; never infer a large-scale law from the bounded local range.",
+      "depends_on": [26, 31],
+      "external_gates": ["separate_bounded_training_authorization"],
+      "authorization_boundary": "Planning only. Training prefixes, validation runs, and energy measurements are unauthorized.",
+      "resource_cap": "One thread and worker, fixed tiny architecture, at most six train sizes and three seeds if authorized, 32 MiB outputs, and a preregistered CPU-hour cap."
+    },
+    {
+      "loop_id": 34,
+      "phase_id": "P3",
+      "title": "Confidence, Abstention, And Revision",
+      "priority": "P1",
+      "effort": "M",
+      "status": "Not Started",
+      "execution_authorized": false,
+      "proof_posture": "planned_not_authorized",
+      "core_question": "Can the system identify when to abstain or delay output without tuning confidence on the final test?",
+      "why_high_value": "A decoder that knows when it is unreliable is more useful and safer than one that always emits fluent text.",
+      "build_deliverable": "Validation-fit confidence contract, risk-coverage report, abstention and revision policy, calibration diagnostics, and user-visible unavailable state.",
+      "research_deliverable": "Selective-prediction and conformal-risk review mapped to tiny correlated sequence data.",
+      "data_scope": "Synthetic first; any real use requires separate calibration and final partitions and cannot reopen consumed evidence.",
+      "controls": [
+        "Confidence-free always-predict baseline.",
+        "Entropy, margin, stability, and prior-only confidence candidates selected on validation only.",
+        "Coverage levels fixed before final evaluation.",
+        "Sequence and item clustering respected in uncertainty estimates."
+      ],
+      "primary_metrics": [
+        "risk-coverage curve and area",
+        "error rate at registered coverage",
+        "abstention rate",
+        "expected calibration error where sample size permits",
+        "revision count and time-to-stability"
+      ],
+      "acceptance_boundary": "Expose confidence only if higher declared confidence reliably lowers error on an independent partition and the registered coverage-risk rule passes.",
+      "stop_rule": "If confidence does not rank errors or sample size is insufficient, publish confidence as unavailable rather than inventing a score.",
+      "depends_on": [30, 31],
+      "external_gates": ["separate_calibration_evaluation_authorization"],
+      "authorization_boundary": "Planning only. No confidence fitting, model inference, or final-partition opening is authorized.",
+      "resource_cap": "Dependency-free metrics where possible, one thread, 16 MiB artifacts, and no additional model training."
+    },
+    {
+      "loop_id": 35,
+      "phase_id": "P3",
+      "title": "Peripheral Confound Firewall",
+      "priority": "P0",
+      "effort": "L",
+      "status": "Not Started",
+      "execution_authorized": false,
+      "proof_posture": "planned_not_authorized",
+      "core_question": "Is apparent decoding driven by brain signal, or by keystroke timing, muscle, eye, motion, audio, or prompt leakage?",
+      "why_high_value": "Prompted typing strongly recruits motor systems, so a positive score is not enough to establish neural specificity.",
+      "build_deliverable": "Confound registry, synchronized brain-only/peripheral-only/combined protocol, shortcut audits, and claim-blocking report fields.",
+      "research_deliverable": "Primary-source confound taxonomy for prompted typing and future no-keypress translation.",
+      "data_scope": "Protocol and synthetic timing fixtures first; real multimodal collection requires separate consent, retention, device, and acquisition authorization.",
+      "controls": [
+        "Keystroke timing and key identity without neural samples.",
+        "Peripheral-only channels including EOG, EMG, motion, microphone, or hand tracking when actually recorded.",
+        "Brain-only channels with synchronized event structure.",
+        "Time-shift, channel-drop, and event-jitter controls."
+      ],
+      "primary_metrics": [
+        "brain-only, peripheral-only, combined, and timing-only performance",
+        "incremental neural contribution",
+        "shortcut detection rate",
+        "clock and event alignment residuals",
+        "unavailable modality count"
+      ],
+      "acceptance_boundary": "A brain-specific claim requires brain-only performance above all preregistered non-brain controls and a positive incremental contribution over the strongest peripheral condition.",
+      "stop_rule": "If peripheral or timing controls explain the result, relabel it as task/peripheral decoding and block a neural claim.",
+      "depends_on": [31],
+      "external_gates": ["separate_multimodal_ethics_and_acquisition_authorization"],
+      "authorization_boundary": "Planning only. No peripheral recording, device access, real signal read, or model run is authorized.",
+      "resource_cap": "Zero collection now; future packet must set exact files, bytes, retention, one-thread analysis, and 32 MiB derived-artifact cap."
+    },
+    {
+      "loop_id": 36,
+      "phase_id": "P3",
+      "title": "Geometry And Reference Harmonization",
+      "priority": "P1",
+      "effort": "M",
+      "status": "Not Started",
+      "execution_authorized": false,
+      "proof_posture": "planned_not_authorized",
+      "core_question": "Can channel geometry, names, units, reference, and missing sensors be normalized across sessions and devices without erasing provenance?",
+      "why_high_value": "Cross-session and cross-device failures can come from coordinate or reference mismatch rather than model capacity.",
+      "build_deliverable": "Versioned channel ontology, geometry transform ledger, reference/unit converter, missing-channel mask, and roundtrip validation.",
+      "research_deliverable": "Modality-specific coordinate-frame and referencing requirements with explicit non-equivalence rules.",
+      "data_scope": "Synthetic geometry fixtures and metadata sidecars first; real headers only after separate authorization and without opening signal arrays.",
+      "controls": [
+        "Permutation, missing-channel, mirrored-coordinate, wrong-unit, and wrong-reference fixtures.",
+        "Original and harmonized metadata retained side by side.",
+        "No accuracy-based channel mapping on evaluation data."
+      ],
+      "primary_metrics": [
+        "matched, missing, duplicate, and ambiguous channel counts",
+        "coordinate transform residual",
+        "unit and reference conversion identity",
+        "geometry availability fraction",
+        "roundtrip and provenance hashes"
+      ],
+      "acceptance_boundary": "Proceed only when transforms are deterministic, reversible where promised, hash-bound, and refuse ambiguous geometry or reference instead of guessing.",
+      "stop_rule": "Keep geometry unavailable if source coordinates or frames cannot be proven; do not infer device equivalence from channel names alone.",
+      "depends_on": [29],
+      "external_gates": [],
+      "authorization_boundary": "Planning only. Synthetic fixture work or real-header inspection requires a separately scoped Loop 36 authorization.",
+      "resource_cap": "Dependency-free core, optional MNE only inside adapters, one thread, 16 MiB artifacts, and zero signal-array reads for metadata mode."
+    },
+    {
+      "loop_id": 37,
+      "phase_id": "P4",
+      "title": "BIDS Derivative And Provenance Export",
+      "priority": "P1",
+      "effort": "M",
+      "status": "Not Started",
+      "execution_authorized": false,
+      "proof_posture": "planned_not_authorized",
+      "core_question": "Can caches, tokens, reports, and split metadata be exported as inspectable derivatives without copying raw data or losing source identity?",
+      "why_high_value": "A standards-aware derivative makes external reproduction easier while preserving the local-first raw-data boundary.",
+      "build_deliverable": "BIDS-derivative export plan, dataset description, GeneratedBy and SourceDatasets provenance, sidecars, path validator, and no-raw-copy audit.",
+      "research_deliverable": "BIDS derivative and electrophysiology mapping note identifying standard fields, extension fields, and unsupported claims.",
+      "data_scope": "Tiny synthetic caches and reports only for the interface proof; no real raw file is copied, packaged, or redistributed.",
+      "controls": [
+        "Source, configuration, split, payload, and code hashes retained.",
+        "Path traversal, subject collision, overwrite, and raw-copy refusals.",
+        "Roundtrip validation from derivative metadata back to source artifact identity."
+      ],
+      "primary_metrics": [
+        "required and unavailable field counts",
+        "source-to-derivative hash coverage",
+        "roundtrip identity",
+        "input, output, and duplicated bytes",
+        "raw-data copy count"
+      ],
+      "acceptance_boundary": "Pass as a synthetic derivative interface only when provenance is complete, extension fields are namespaced, no raw payload is copied, and all generated files remain under cap.",
+      "stop_rule": "Do not claim BIDS compliance for unsupported fields or invent source metadata; export an explicit warning or refuse.",
+      "depends_on": [36],
+      "external_gates": [],
+      "authorization_boundary": "Planning only. Export implementation and generated fixtures require a separate Loop 37 authorization.",
+      "resource_cap": "One thread, one worker, dependency-free metadata core, 16 MiB generated derivative tree, and zero real-data bytes."
+    },
+    {
+      "loop_id": 38,
+      "phase_id": "P4",
+      "title": "Neural Data Privacy And Lifecycle",
+      "priority": "P0",
+      "effort": "M",
+      "status": "Not Started",
+      "execution_authorized": false,
+      "proof_posture": "planned_not_authorized",
+      "core_question": "Can the project prove where sensitive recordings and embeddings live, who can access them, and how they are retained or deleted?",
+      "why_high_value": "Neural signals and embeddings can carry identity information; local-first behavior needs verifiable lifecycle controls, not just a promise.",
+      "build_deliverable": "Data inventory, sensitivity labels, local path policy, retention and deletion receipts, redaction scanner, and privacy threat model.",
+      "research_deliverable": "NIST-aligned privacy risk map plus EEG identity-risk review and contributor guidance.",
+      "data_scope": "Repository metadata and synthetic fixtures only; no identity attack, real embedding export, or participant re-identification experiment.",
+      "controls": [
+        "Tracked-history and staged-secret scans.",
+        "Raw, derived, report, log, temporary, and backup lifecycle paths tested separately.",
+        "Absolute paths, participant aliases, timestamps, and device serials redacted by default.",
+        "Deletion receipt verifies expected paths without destructive broad cleanup."
+      ],
+      "primary_metrics": [
+        "sensitive path and field coverage",
+        "redaction recall on generated fixtures",
+        "retention-policy violations",
+        "tracked neural payload bytes",
+        "verified deletion and unresolved copy counts"
+      ],
+      "acceptance_boundary": "Pass when every artifact class has an owner, location, retention rule, redaction behavior, and verifiable local deletion path, with zero tracked neural payloads.",
+      "stop_rule": "Block data-sharing or release claims when lifecycle ownership, consent, license, or deletion cannot be proven.",
+      "depends_on": [37],
+      "external_gates": [],
+      "authorization_boundary": "Planning only. No real identity analysis or destructive cleanup is authorized.",
+      "resource_cap": "Standard-library scanners where possible, one thread, one worker, 8 MiB reports, no real signal reads, and no network upload."
+    },
+    {
+      "loop_id": 39,
+      "phase_id": "P4",
+      "title": "Cross-Machine Reproducibility Matrix",
+      "priority": "P0",
+      "effort": "M",
+      "status": "Not Started",
+      "execution_authorized": false,
+      "proof_posture": "planned_not_authorized",
+      "core_question": "Which outputs are bitwise stable across supported Python and operating-system combinations, and which require explicit numerical tolerances?",
+      "why_high_value": "Open-source users need to know whether a mismatch is a bug, a backend difference, or an unsupported environment.",
+      "build_deliverable": "CI matrix, environment manifest, golden semantic hashes, tolerance registry, failure diagnostics, and artifact reproducibility report.",
+      "research_deliverable": "Reproducibility policy distinguishing semantic identity, numerical compatibility, timing comparison, and environment-specific evidence.",
+      "data_scope": "Dependency-free tests and authorized synthetic fixtures only; no real or consumed cache, target, or model training access.",
+      "controls": [
+        "At least macOS and Linux where CI capacity permits.",
+        "Base and optional-neuro environments kept separate.",
+        "Bitwise semantic fields tested separately from floating payload tolerances.",
+        "Tolerance changes require a recorded failing environment and explicit decision."
+      ],
+      "primary_metrics": [
+        "matrix pass rate",
+        "semantic hash agreement",
+        "maximum numerical drift",
+        "runtime and peak RSS by environment",
+        "artifact and dependency size"
+      ],
+      "acceptance_boundary": "Pass when every supported cell either reproduces the registered contract or fails with an explicit unsupported reason; no tolerance is widened after hidden evaluation access.",
+      "stop_rule": "Do not claim cross-machine reproducibility from one host; quarantine platform-specific drift until diagnosed and documented.",
+      "depends_on": [37],
+      "external_gates": ["ci_capacity_and_optional_environment_review"],
+      "authorization_boundary": "Planning only. New matrix jobs, fixtures, and optional installs require a separate bounded Loop 39 change.",
+      "resource_cap": "One thread per job, no large cache, 32 MiB job artifacts, and existing CI time limits."
+    },
+    {
+      "loop_id": 40,
+      "phase_id": "P4",
+      "title": "Edge Runtime Packaging Gate",
+      "priority": "P2",
+      "effort": "L",
+      "status": "Not Started",
+      "execution_authorized": false,
+      "proof_posture": "planned_not_authorized",
+      "core_question": "Can one already qualified frozen pipeline be packaged for an edge runtime while preserving outputs, state, timestamps, and measured resource behavior?",
+      "why_high_value": "Packaging is meaningful only after correctness and local runtime gates; it can then reveal startup, delegate, memory-planning, and operator support constraints.",
+      "build_deliverable": "Single-backend export contract, operator audit, packaged artifact validator, reference comparison, and startup/runtime/RSS report.",
+      "research_deliverable": "ExecuTorch or alternative edge-runtime decision note based on supported operators and target platform, not trend appeal.",
+      "data_scope": "Frozen target-free synthetic fixture only; no real data, consumed targets, retraining, or architecture changes.",
+      "controls": [
+        "Reference eager path retained.",
+        "Exact frame, timestamp, decoder trace, and state comparison.",
+        "Fallback and undelegated operator counts reported.",
+        "Package size, load time, steady-state time, and peak memory separated."
+      ],
+      "primary_metrics": [
+        "behavioral identity and numerical drift",
+        "package and tensor bytes",
+        "startup, producer, decoder, and full-pipeline latency",
+        "peak RSS and planned memory",
+        "delegated, fallback, and unsupported operator counts"
+      ],
+      "acceptance_boundary": "Adopt a package only if a previously qualified reference behavior is preserved, unsupported fallback is zero or explicitly accepted, and a preregistered deployment benefit passes.",
+      "stop_rule": "Park packaging if it requires retraining, architecture changes, hidden fallback, or more resources without a measured benefit; do not call desktop packaging portable hardware.",
+      "depends_on": [39],
+      "external_gates": ["explicit_loop24_result_or_hold", "separate_edge_runtime_authorization"],
+      "authorization_boundary": "Planning only. No export, conversion, optional edge dependency, inference, profiler, or package generation is authorized.",
+      "resource_cap": "One backend, one thread, one worker, 32 MiB generated package and reports, 60 seconds per measurement worker, and 1 GiB peak RSS."
+    },
+    {
+      "loop_id": 41,
+      "phase_id": "P5",
+      "title": "RW3 Stream-To-NeuroToken Integration",
+      "priority": "P1",
+      "effort": "L",
+      "status": "Not Started",
+      "execution_authorized": false,
+      "proof_posture": "planned_not_authorized",
+      "core_question": "Can an authorized source-chunk replay pass through causal preprocessing into NeuroTokenCache without timestamp, gap, state, or schedule drift?",
+      "why_high_value": "This joins the acquisition contract to the model interface while keeping replay mechanics separate from hardware and decoding claims.",
+      "build_deliverable": "Source-chunk to preprocessing to NeuroToken adapter, resume state, gap propagation, schedule matrix, and end-to-end provenance hashes.",
+      "research_deliverable": "Clock-domain and latency ledger mapping source, corrected, arrival, preprocessing, token, decoder, and render times.",
+      "data_scope": "Only future authorized target-free RW3 synthetic replay; no BrainFlow, LSL, PyXDF, socket, live source, hardware, or real recording unless separately staged later.",
+      "controls": [
+        "Canonical offline path and every authorized chunk schedule.",
+        "Gap, duplicate, reorder, reconnect, and reset fixtures.",
+        "Raw, corrected, and arrival clocks kept distinct.",
+        "Resume from serialized state compared with uninterrupted replay."
+      ],
+      "primary_metrics": [
+        "source, preprocessing, and token semantic hash agreement",
+        "timestamp and valid-length identity",
+        "gap and anomaly propagation",
+        "state bytes and resume identity",
+        "stage runtime, scheduling delay, peak RSS, and output bytes"
+      ],
+      "acceptance_boundary": "Pass only when every authorized schedule and resume path preserves canonical tokens and provenance, and anomalies remain explicit rather than repaired silently.",
+      "stop_rule": "Any timestamp collapse, silent interpolation, lost anomaly, schedule-dependent token, or state mismatch parks integration before live or device work.",
+      "depends_on": [25, 37, 39],
+      "external_gates": ["explicit_rw3_stage_a_authorization_and_closeout", "separate_loop41_authorization"],
+      "authorization_boundary": "Planning only. This roadmap does not authorize RW3 Stage A or any adapter, fixture, source-chunk, stream, or token runtime.",
+      "resource_cap": "One thread and worker, 32 MiB generated target-free artifacts, 60 seconds per worker, and 1 GiB peak RSS."
+    },
+    {
+      "loop_id": 42,
+      "phase_id": "P5",
+      "title": "One-Device Qualification",
+      "priority": "P2",
+      "effort": "L",
+      "status": "Not Started",
+      "execution_authorized": false,
+      "proof_posture": "planned_not_authorized",
+      "core_question": "Can one named device preserve declared channels, units, clocks, packets, and privacy from recorded replay through a bounded local session?",
+      "why_high_value": "One measured device is more credible than broad compatibility claims based on SDK imports or vendor tables.",
+      "build_deliverable": "Device descriptor, consent and locality checklist, recorded-versus-live equivalence packet, loss/reconnect stress report, and compatibility-level decision.",
+      "research_deliverable": "Device-specific timestamp, unit, reference, geometry, firmware, and data-retention review.",
+      "data_scope": "One separately approved board or headset, one local synthetic or consented non-sensitive qualification session, and no decoding target unless separately approved.",
+      "controls": [
+        "SDK synthetic or playback source before physical hardware.",
+        "Recorded and live paths compared under the same source-chunk contract.",
+        "Packet loss, reconnect, clock reset, and buffer-drain stress cases.",
+        "Network-off and local-storage audit."
+      ],
+      "primary_metrics": [
+        "channel, unit, rate, and packet identity",
+        "clock offset, jitter, gaps, duplicates, and reorder counts",
+        "capture-to-arrival timing boundary",
+        "runtime, peak RSS, bytes, and dropped samples",
+        "privacy and retention violations"
+      ],
+      "acceptance_boundary": "Qualify only the named device, firmware, transport, host, and tested compatibility level; connectivity alone cannot qualify signal quality or decoding.",
+      "stop_rule": "Park physical qualification on ambiguous consent, cloud dependence, hidden timestamps, unstable identity, unsafe retention, or failed replay equivalence.",
+      "depends_on": [29, 38, 41],
+      "external_gates": ["explicit_device_stage_authorization", "ethics_consent_and_retention_approval"],
+      "authorization_boundary": "Planning only. No SDK import, device discovery, socket, stream, board, hardware, or recording session is authorized.",
+      "resource_cap": "One device, one host, one thread for analysis, exact session and byte cap in a future packet, 32 MiB derived artifacts, and no cloud upload."
+    },
+    {
+      "loop_id": 43,
+      "phase_id": "P5",
+      "title": "Independent Reproduction Challenge",
+      "priority": "P1",
+      "effort": "M",
+      "status": "Not Started",
+      "execution_authorized": false,
+      "proof_posture": "planned_not_authorized",
+      "core_question": "Can an independent contributor reproduce a bounded claim from documented inputs without private guidance or sharing neural recordings?",
+      "why_high_value": "Independent reproduction tests the developer experience, evidence contracts, and contribution path more honestly than another maintainer-run demo.",
+      "build_deliverable": "Challenge packet, fixture manifest, expected semantic checks, environment capture, blinded result card, and discrepancy triage workflow.",
+      "research_deliverable": "Reproduction protocol distinguishing exact replication, computational reproduction, and extension on contributor-owned data.",
+      "data_scope": "Public code plus tiny synthetic fixtures by default; contributors keep any owned EEG local and submit metadata/aggregate reports only.",
+      "controls": [
+        "Maintainer and contributor environments recorded independently.",
+        "Expected results hidden where needed until submission hash freezes.",
+        "No private recording, secret, absolute path, or participant identifier in the submission.",
+        "Negative and failed reproductions retained."
+      ],
+      "primary_metrics": [
+        "semantic and numerical reproduction rate",
+        "setup time and command count",
+        "environment and warning completeness",
+        "discrepancy classes",
+        "contributor artifact bytes and privacy findings"
+      ],
+      "acceptance_boundary": "Pass when at least one independent environment reproduces the registered artifact contract and a discrepancy, if any, is resolved or documented without moving the claim boundary.",
+      "stop_rule": "Do not promote a result that depends on undocumented maintainer state, private hand edits, leaked data, or an unreviewed tolerance change.",
+      "depends_on": [37, 38, 39],
+      "external_gates": ["community_participant_and_challenge_review"],
+      "authorization_boundary": "Planning only. No outreach, external data exchange, or challenge execution is authorized by the roadmap file.",
+      "resource_cap": "Tiny public fixtures only, one-thread reference commands, 32 MiB submission cap, and no neural recording upload."
+    },
+    {
+      "loop_id": 44,
+      "phase_id": "P5",
+      "title": "Claim Promotion And Release Decision",
+      "priority": "P0",
+      "effort": "M",
+      "status": "Not Started",
+      "execution_authorized": false,
+      "proof_posture": "planned_not_authorized",
+      "core_question": "Which engineering and scientific claims have earned promotion into a release, and which remain fixture-backed, negative, unavailable, parked, or killed?",
+      "why_high_value": "The roadmap should end in an evidence decision, not an accumulation of features or optimistic wording.",
+      "build_deliverable": "Machine-readable evidence matrix, model and dataset cards, release checklist, claim diff, risk register, and signed proceed, park, or kill decision.",
+      "research_deliverable": "Release and reporting policy grounded in model cards, datasheets, privacy, licensing, and reproducibility evidence.",
+      "data_scope": "Artifact-only synthesis of closed loop reports; no raw, consumed, target, model, training, device, or network operation.",
+      "controls": [
+        "Every claim links to a cohort, split, comparator, uncertainty, resource, and access record.",
+        "Negative results and unavailable fields remain visible.",
+        "Engineering capability and scientific performance are stated separately.",
+        "Clinical, arbitrary-thought, portable-hardware, and real-time claims default to unavailable."
+      ],
+      "primary_metrics": [
+        "claims promoted, parked, killed, and unavailable",
+        "evidence-card completeness",
+        "unresolved privacy, license, security, and reproducibility blockers",
+        "artifact and documentation link integrity",
+        "release test and CI status"
+      ],
+      "acceptance_boundary": "Release only the subset whose exact evidence cards, licenses, privacy controls, independent reproduction, tests, and claim language pass; all other claims stay explicitly unestablished.",
+      "stop_rule": "Hold the release rather than soften a failed gate, omit a negative comparator, or convert an engineering interface proof into a decoding claim.",
+      "depends_on": [38, 39, 43],
+      "external_gates": ["maintainer_release_decision"],
+      "authorization_boundary": "Planning only. The future release decision cannot retroactively authorize or upgrade any earlier experiment.",
+      "resource_cap": "Artifact-only review, one thread, one worker, 16 MiB generated reports, zero data/model/training/device access, and complete link/test checks."
+    }
+  ],
+  "primary_sources": [
+    {
+      "source_id": "brain2qwerty_v2",
+      "title": "Accurate Decoding of Natural Sentences from Non-Invasive Brain Recordings",
+      "url": "https://facebookresearch.github.io/brain2qwerty/assets/brain2qwerty_v2.pdf",
+      "roadmap_use": "Causal latency, data scaling, neural-token ablation, subject transfer, sensor-count, and patient/no-keypress boundaries."
+    },
+    {
+      "source_id": "brain2qwerty_v1",
+      "title": "Noninvasive decoding of typed sentences from human brain activity",
+      "url": "https://www.nature.com/articles/s41593-026-02303-2.pdf",
+      "roadmap_use": "Motor and keystroke contribution, EEG/MEG separation, language-prior controls, and sentence-level latency boundaries."
+    },
+    {
+      "source_id": "mne_resampling",
+      "title": "MNE resampling documentation",
+      "url": "https://mne.tools/stable/generated/mne.filter.resample.html",
+      "roadmap_use": "Resampling, padding, event timing, and preprocessing provenance."
+    },
+    {
+      "source_id": "bids_derivatives",
+      "title": "BIDS Derivatives specification",
+      "url": "https://bids-specification.readthedocs.io/en/stable/derivatives/introduction.html",
+      "roadmap_use": "SourceDatasets, GeneratedBy, filenames, sidecars, and provenance export."
+    },
+    {
+      "source_id": "moabb_benchmark",
+      "title": "The largest EEG-based BCI reproducibility study for open science: the MOABB benchmark",
+      "url": "https://arxiv.org/abs/2404.15319",
+      "roadmap_use": "Cross-dataset reproducibility, subject variability, runtime reporting, and data-volume caution."
+    },
+    {
+      "source_id": "lsl_time_sync",
+      "title": "Lab Streaming Layer time synchronization",
+      "url": "https://labstreaminglayer.readthedocs.io/info/time_synchronization.html",
+      "roadmap_use": "Raw versus corrected timestamps, low-latency versus synchronized timing, and clock-domain boundaries."
+    },
+    {
+      "source_id": "executorch",
+      "title": "ExecuTorch documentation",
+      "url": "https://docs.pytorch.org/executorch/stable/index.html",
+      "roadmap_use": "Edge packaging, backend delegation, profiling, debugging, and memory-planning gates."
+    },
+    {
+      "source_id": "eeg_identity_privacy",
+      "title": "User Identity Protection in EEG-based Brain-Computer Interfaces",
+      "url": "https://arxiv.org/abs/2412.09854",
+      "roadmap_use": "Identity leakage and neural-derived-data privacy threat modeling."
+    },
+    {
+      "source_id": "nist_privacy_framework",
+      "title": "NIST Privacy Framework",
+      "url": "https://www.nist.gov/privacy-framework/privacy-framework",
+      "roadmap_use": "Privacy risk, governance, inventory, processing, retention, and accountability."
+    },
+    {
+      "source_id": "model_cards",
+      "title": "Model Cards for Model Reporting",
+      "url": "https://arxiv.org/abs/1810.03993",
+      "roadmap_use": "Intended use, evaluation conditions, limitations, and release claim cards."
+    },
+    {
+      "source_id": "datasheets",
+      "title": "Datasheets for Datasets",
+      "url": "https://arxiv.org/abs/1803.09010",
+      "roadmap_use": "Dataset motivation, composition, collection, use, maintenance, and release documentation."
+    },
+    {
+      "source_id": "selective_prediction",
+      "title": "Selective Classification for Deep Neural Networks",
+      "url": "https://arxiv.org/abs/1705.08500",
+      "roadmap_use": "Risk-coverage, abstention, and confidence evaluation."
+    }
+  ]
+}
