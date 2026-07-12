@@ -1,0 +1,738 @@
+{
+  "schema_name": "neurodecodekit.causal_preprocessing_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "loop25-causal-preprocessing-v0",
+  "prepared_at": "2026-07-12",
+  "status": "preregistered_no_implementation_or_execution",
+  "proof_posture": "target_free_synthetic_causal_preprocessing_preregistration_only",
+  "preregistration_parent_commit": "3ae7d97",
+  "authorization": {
+    "preregistration_only": true,
+    "implementation_requires_separate_user_authorization": true,
+    "implementation_authorized_now": false,
+    "synthetic_fixture_generation_authorized_now": false,
+    "filter_design_or_coefficient_generation_authorized_now": false,
+    "numeric_preprocessing_execution_authorized_now": false,
+    "development_partition_open_authorized_now": false,
+    "qualification_partition_open_authorized_now": false,
+    "report_or_cli_implementation_authorized_now": false,
+    "real_or_consumed_data_access_authorized_now": false,
+    "target_label_text_or_prediction_access_authorized_now": false,
+    "checkpoint_or_model_inference_authorized_now": false,
+    "training_or_parameter_updates_authorized_now": false,
+    "network_access_authorized_now": false,
+    "rw3_stage_a_or_source_chunk_authorized_now": false,
+    "stream_socket_board_device_hardware_authorized_now": false,
+    "authorization_sentence_exact": "Authorize Loop 25 implementation exactly as scoped in docs/LOOP_25_CAUSAL_PREPROCESSING_PREREGISTRATION.md. Do not authorize real or consumed data, targets, model inference, training, RW3 Stage A, streams, devices, or hardware.",
+    "hold_sentence_exact": "Hold Loop 25 implementation. Keep every Loop 25 execution authorization flag false.",
+    "general_continuation_is_authorization": false,
+    "roadmap_approval_is_authorization": false,
+    "loop24_authorization_carries_forward": false,
+    "rw3_authorization_can_authorize_loop25": false
+  },
+  "research_question": {
+    "question": "Can one stateful 1000-to-100 Hz preprocessing path preserve exact sample identity, timestamps, state, and outputs across adversarial chunk and resume schedules with zero future context?",
+    "primary_decision": "proceed_only_if_every_causality_equivalence_frequency_timing_state_resource_access_and_claim_gate_passes",
+    "failure_decision": "park_causal_preprocessing_and_do_not_authorize_loop26",
+    "official_offline_equivalence_required": false,
+    "decoder_or_model_performance_part_of_gate": false
+  },
+  "protected_evidence": {
+    "consumed_synthetic_seeds": [
+      2203,
+      2303,
+      2353,
+      2401
+    ],
+    "unopened_synthetic_seeds": [
+      2402
+    ],
+    "real_cohorts": [
+      "S21 session-1 source-test is observed and closed to selection",
+      "S21 session-2 is consumed same-person evaluation",
+      "S7 EEG is consumed within-session evaluation"
+    ],
+    "rules": [
+      "No protected seed may generate or select Loop 25 fixture rows.",
+      "No real recording, real cache, consumed cache, target, label, text, prediction, checkpoint, or model output may be opened.",
+      "Qualification seed 2502 is physically separate and opens only after development passes and the development report is frozen."
+    ]
+  },
+  "official_upstream_audit": {
+    "repository": "facebookresearch/brain2qwerty",
+    "commit": "3bf5a4099ca0d23bbe994b2287905760236e56e0",
+    "paper_preprocessing_declared_offline": true,
+    "paper_bandpass_hz": [
+      0.5,
+      45.0
+    ],
+    "paper_notch_hz": 50.0,
+    "paper_output_sampling_rate_hz": 100.0,
+    "paper_scaler": "per_recording_median_iqr",
+    "paper_clamp": 5.0,
+    "paper_sentence_post_completion_buffer_ms": [
+      400,
+      500
+    ],
+    "public_model_forward_accepts_complete_sentence_tensor": true,
+    "public_model_file_exposes_streaming_state": false,
+    "public_model_file_exposes_causal_attention_mask": false,
+    "asynchronous_is_not_treated_as_causal_proof": true,
+    "source_files": [
+      {
+        "path": "brain2qwerty_v2/README.md",
+        "git_blob_sha1": "4f9c7791db4e5d953e3e648047dae42f42715338",
+        "file_sha256": "aff1f76a16a32f2fb52ced27e1e55ab719f138615fb9cee91c9fb694f237bb9b"
+      },
+      {
+        "path": "brain2qwerty_v2/config/xp_config.py",
+        "git_blob_sha1": "88468a96f22c64336094b37ad282398abf12a751",
+        "file_sha256": "09011d05d7030a8f88015e7d1bbfa758959cd36d2970d3ba0febe0761dcdc317"
+      },
+      {
+        "path": "brain2qwerty_v2/config/model_config.py",
+        "git_blob_sha1": "1d3db3e1bb9c3b4c60efa63615fa0f7f4cfab3cf",
+        "file_sha256": "d28c29baea2038190affb8096ef83fadf7f024da0eb4402075ace7b281b87426"
+      },
+      {
+        "path": "brain2qwerty_v2/models.py",
+        "git_blob_sha1": "3e1f068676bf04517ab5e6cb65055364ad8fdb3c",
+        "file_sha256": "d4c15236ccb00467272ec5d71df50642ab830ee6b5d058cd0ba48332566d8306"
+      }
+    ]
+  },
+  "local_offline_pipeline_audit": {
+    "mne_version_audited": "1.12.1",
+    "sentence_notch": {
+      "method": "fir",
+      "phase": "zero",
+      "pad": "reflect_limited",
+      "causal": false
+    },
+    "sentence_bandpass": {
+      "method": "fir",
+      "phase": "zero",
+      "pad": "reflect_limited",
+      "causal": false
+    },
+    "sentence_resample": {
+      "method": "fft",
+      "npad": "auto",
+      "whole_recording": true,
+      "causal": false
+    },
+    "recording_robust_scaler_fit": {
+      "uses_complete_recording": true,
+      "future_dependent": true,
+      "allowed_in_loop25_runtime": false
+    },
+    "train_robust_scaler_application": {
+      "fit_is_offline": true,
+      "application_can_be_causal_if_statistics_are_frozen": true,
+      "fit_allowed_in_loop25_runtime": false
+    },
+    "sentence_endpoint_and_post_context": {
+      "enter_or_last_key_required": true,
+      "post_context_sec": 0.45,
+      "future_dependent": true,
+      "part_of_loop25": false
+    },
+    "sentence_zero_padding": {
+      "endpoint_required": true,
+      "allowed_in_loop25_stream": false
+    },
+    "fif_window_resample": {
+      "mne_raw_resample_whole_recording": true,
+      "causal": false
+    },
+    "brainvision_window_resample": {
+      "scipy_resample_poly_complete_event_window": true,
+      "centered_zero_phase_convenience_path": true,
+      "causal": false
+    },
+    "legacy_files_must_not_be_mutated_by_loop25": true
+  },
+  "source_bindings": [
+    {
+      "path": "src/neurodecodekit/preprocess/sentence_extraction.py",
+      "git_blob_sha1_at_parent": "8a2f64de3d24a462ef4e66b4894daac690091c62",
+      "file_sha256_at_parent": "da2b51853e1c0bc1c0d8e6263b268b346fe7711a471dc361b44897e6a5af639b"
+    },
+    {
+      "path": "src/neurodecodekit/preprocess/fif_mat_extraction.py",
+      "git_blob_sha1_at_parent": "63d361fe4ccb92b3650d3730a9f762917cefc1ea",
+      "file_sha256_at_parent": "ac97eca1192c0601ea1fbb2e732d18354322be477942d1ed27e6e1df4841f58d"
+    },
+    {
+      "path": "src/neurodecodekit/preprocess/brainvision_extraction.py",
+      "git_blob_sha1_at_parent": "ee19bb28c8cd499f7774fcd89b08be86e2937e0b",
+      "file_sha256_at_parent": "6aa8fcfff84a165cd88432bfd27ced3bab36af254261b28642ae12d9529ef7e9"
+    },
+    {
+      "path": "src/neurodecodekit/cache/neurotoken_stream.py",
+      "git_blob_sha1_at_parent": "735ea4c1cf9468e52591921fc4f1dedac8a3ce22",
+      "file_sha256_at_parent": "d8c9cd1104c2fa21f0d74b2b25a1e6e6942fa180bc7a57204f2d9182d6b29be0"
+    },
+    {
+      "path": "src/neurodecodekit/experiments/causal_replay_gate.py",
+      "git_blob_sha1_at_parent": "c96ecde60d2ca473e5c34f2fa7db84ff6278c5ed",
+      "file_sha256_at_parent": "a55156af95f7b6521d1e30e08ae2191efb68d4d4e208c1d277f85d7a613160fd"
+    }
+  ],
+  "preregistration_host_snapshot": {
+    "host_model": "Mac16,8",
+    "cpu_name": "Apple M4 Pro",
+    "architecture": "arm64",
+    "physical_cores": 12,
+    "logical_cores": 12,
+    "memory_bytes": 25769803776,
+    "operating_system": "macOS 26.6",
+    "operating_system_build": "25G5028f",
+    "python_version": "3.13.5",
+    "numpy_version": "2.5.0",
+    "scipy_version": "1.18.0",
+    "mne_version": "1.12.1",
+    "free_disk_bytes_not_bound_to_gate": true
+  },
+  "planned_pipeline": {
+    "pipeline_id": "causal_sos_filter_phase_locked_decimate_frozen_scale_v0",
+    "input_layout": "channels,time",
+    "input_dtype": "float32",
+    "channels": 5,
+    "source_sampling_rate_hz": 1000.0,
+    "output_sampling_rate_hz": 100.0,
+    "integer_decimation_factor": 10,
+    "stage_order": [
+      "validate_contiguous_source_indices_and_finite_float32_values",
+      "cast_chunk_to_float64_once",
+      "stateful_50_hz_notch_sos",
+      "stateful_0_5_to_45_hz_bandpass_sos",
+      "phase_locked_keep_global_source_indices_divisible_by_10",
+      "apply_frozen_center_and_scale",
+      "clamp_inclusive_to_minus_5_plus_5",
+      "cast_output_to_float32_once",
+      "emit_absolute_source_indices_and_timestamps"
+    ],
+    "notch": {
+      "design_api": "scipy.signal.iirnotch",
+      "frequency_hz": 50.0,
+      "quality_factor": 30.0,
+      "sample_rate_hz": 1000.0,
+      "conversion_to_sos": "scipy.signal.tf2sos",
+      "order": 2
+    },
+    "bandpass": {
+      "design_api": "scipy.signal.butter",
+      "order": 4,
+      "critical_frequencies_hz": [
+        0.5,
+        45.0
+      ],
+      "btype": "bandpass",
+      "sample_rate_hz": 1000.0,
+      "output": "sos"
+    },
+    "filter_application": {
+      "api": "scipy.signal.sosfilt",
+      "computation_dtype": "float64",
+      "stateful_across_chunks": true,
+      "initial_state_api": "scipy.signal.sosfilt_zi",
+      "initial_state_rule": "combined_sos_step_steady_state_scaled_by_first_sample_per_channel",
+      "zero_phase_or_backward_pass_allowed": false,
+      "future_samples_allowed": false,
+      "silent_state_reset_allowed": false
+    },
+    "decimation": {
+      "anti_alias_filter_is_registered_bandpass_lowpass_edge_hz": 45.0,
+      "output_nyquist_hz": 50.0,
+      "kept_global_source_indices": "0,10,20,...",
+      "phase_anchor_global_source_sample": 0,
+      "general_rational_resampling_allowed": false,
+      "interpolation_allowed": false,
+      "padding_allowed": false
+    },
+    "normalization": {
+      "fit_during_loop25_allowed": false,
+      "center_float64": [
+        -0.25,
+        -0.125,
+        0.0,
+        0.125,
+        0.25
+      ],
+      "scale_float64": [
+        0.75,
+        0.875,
+        1.0,
+        1.125,
+        1.25
+      ],
+      "clamp_inclusive": [
+        -5.0,
+        5.0
+      ],
+      "source": "contract_constants_independent_of_fixture_and_model_output"
+    },
+    "output": {
+      "layout": "channels,time",
+      "dtype": "float32",
+      "source_index_dtype": "int64",
+      "timestamp_dtype": "float64",
+      "timestamp_reference": "kept_filtered_source_sample",
+      "right_context_samples": 0,
+      "right_context_ms": 0.0,
+      "end_to_end_latency_measured": false
+    },
+    "official_offline_path_is_reference_for_numeric_identity": false,
+    "legacy_comparator_is_selectable": false
+  },
+  "state_contract": {
+    "schema_name": "neurodecodekit.causal_preprocessing_state",
+    "schema_version": "0.1.0",
+    "members": [
+      "contract_sha256",
+      "pipeline_config_sha256",
+      "source_start_sample",
+      "source_samples_seen",
+      "output_samples_emitted",
+      "filter_sos_sha256",
+      "filter_state_float64",
+      "initialized",
+      "closed"
+    ],
+    "filter_state_layout": "channels,sos_sections,2",
+    "deterministic_semantic_hash_required": true,
+    "configuration_mismatch_refused": true,
+    "source_start_change_refused": true,
+    "resume_must_match_uninterrupted": true,
+    "silent_reset_allowed": false,
+    "mutable_state_max_bytes": 4096
+  },
+  "fixture_contract": {
+    "schema_name": "b2q-causal-preprocessing-fixture",
+    "schema_version": 0,
+    "target_free": true,
+    "members": [
+      "signals",
+      "input_lengths",
+      "item_ids",
+      "source_start_samples",
+      "metadata"
+    ],
+    "forbidden_members": [
+      "targets",
+      "target_token_ids",
+      "target_lengths",
+      "labels",
+      "frame_labels",
+      "sample_labels",
+      "text",
+      "predictions",
+      "participant_id",
+      "subject_id",
+      "session_id",
+      "recording_path",
+      "model_output",
+      "checkpoint"
+    ],
+    "signal_dtype": "float32",
+    "signal_layout": "items,channels,time",
+    "channels": 5,
+    "sampling_rate_hz": 1000.0,
+    "minimum_samples_per_item": 1024,
+    "maximum_samples_per_item": 4096,
+    "item_lengths_exact": [
+      1024,
+      1280,
+      1536,
+      1792,
+      2048,
+      2304,
+      2560,
+      2816,
+      3072,
+      3328,
+      3584,
+      4096
+    ],
+    "development": {
+      "seed": 2501,
+      "items": 12,
+      "semantic_role": "implementation_and_gate_development"
+    },
+    "qualification": {
+      "seed": 2502,
+      "items": 12,
+      "semantic_role": "one_time_complete_gate_confirmation",
+      "opened_only_after_development_report_freeze": true,
+      "opened_if_development_gate_fails": false
+    },
+    "signal_families": [
+      "bounded_multisine_passband_and_stopband",
+      "bounded_linear_chirp",
+      "bounded_impulse_interior_and_boundary",
+      "bounded_step_and_plateau",
+      "bounded_drift_and_piecewise_ramp",
+      "bounded_seeded_noise_with_outlier"
+    ],
+    "items_per_family_per_partition": 2,
+    "value_bounds_inclusive": [
+      -4.0,
+      4.0
+    ],
+    "generated_from_model_outputs": false,
+    "generated_from_targets_labels_text_or_predictions": false,
+    "contains_brainlike_or_neural_claim": false,
+    "physical_partition_files_required": true,
+    "partition_item_ids_must_be_disjoint": true,
+    "manifest_inspection_opens_signal_arrays": false
+  },
+  "registered_chunk_schedules": [
+    {
+      "schedule_id": "whole_item",
+      "rule": "all_remaining_samples"
+    },
+    {
+      "schedule_id": "single_sample",
+      "rule": "repeat_1"
+    },
+    {
+      "schedule_id": "fixed_seven",
+      "rule": "repeat_7"
+    },
+    {
+      "schedule_id": "decimation_boundaries",
+      "rule": "cycle_9_1_10_11_19_20"
+    },
+    {
+      "schedule_id": "frame_boundaries",
+      "rule": "cycle_15_1_4_16_3_64"
+    },
+    {
+      "schedule_id": "powers_of_two",
+      "rule": "cycle_1_2_4_8_16_32_64_128"
+    },
+    {
+      "schedule_id": "seeded_irregular",
+      "rule": "uniform_integer_1_to_257_seed_2511"
+    }
+  ],
+  "registered_resume_cut_source_samples": [
+    1,
+    9,
+    10,
+    15,
+    16,
+    159,
+    160,
+    161,
+    511,
+    997
+  ],
+  "registered_future_mutation_cut_source_samples": [
+    160,
+    512,
+    1000
+  ],
+  "partition_access_sequence": [
+    "validate_contract_source_bindings_and_environment_without_scipy_filter_design_or_fixture_arrays",
+    "validate_fixture_manifest_without_opening_partition_arrays",
+    "open_development_target_free_partition_once",
+    "construct_registered_filter_coefficients_once_after_development_open",
+    "freeze_and_hash_filter_pipeline_and_state_configuration",
+    "run_development_canonical_chunk_resume_future_mutation_frequency_timing_and_resource_gates",
+    "freeze_and_hash_development_report_before_qualification",
+    "open_qualification_target_free_partition_once_only_if_every_development_gate_passed",
+    "run_the_unchanged_registered_pipeline_and_gate_on_qualification_once",
+    "freeze_final_proceed_or_park_decision",
+    "write_reports_without_reopening_a_partition",
+    "inspect_written_artifacts_without_model_data_target_or_network_access"
+  ],
+  "acceptance_gates": {
+    "causality": {
+      "declared_right_context_source_samples": 0,
+      "future_mutation_earlier_output_bitwise_identity_required": true,
+      "future_mutation_earlier_state_bitwise_identity_required": true,
+      "zero_phase_forward_backward_or_centered_filtering_forbidden": true,
+      "whole_recording_or_whole_item_statistics_forbidden": true,
+      "endpoint_or_target_length_dependency_forbidden": true
+    },
+    "schedule_equivalence": {
+      "same_host_output_float32_bitwise_identity": true,
+      "source_indices_exact": true,
+      "timestamps_bitwise_identity": true,
+      "final_state_semantic_hash_exact": true,
+      "flush_summary_exact": true,
+      "cross_environment_output_absolute_tolerance": 1e-06,
+      "cross_environment_output_relative_tolerance": 1e-06,
+      "tolerances_may_not_change_after_development_open": true
+    },
+    "resume": {
+      "all_registered_cut_points_required": true,
+      "output_after_resume_bitwise_identity": true,
+      "source_indices_after_resume_exact": true,
+      "timestamps_after_resume_bitwise_identity": true,
+      "final_state_semantic_hash_exact": true,
+      "configuration_hash_must_match": true
+    },
+    "frequency_response": {
+      "all_pole_magnitudes_strictly_below": 1.0,
+      "dc_gain_db_max": -20.0,
+      "passband_probe_frequencies_hz": [
+        5.0,
+        10.0,
+        20.0,
+        35.0
+      ],
+      "passband_gain_db_min": -3.0,
+      "passband_gain_db_max": 0.5,
+      "notch_probe_hz": 50.0,
+      "notch_gain_db_max": -20.0,
+      "stopband_probe_hz": 60.0,
+      "stopband_gain_db_max": -6.0,
+      "impulse_response_finite_required": true,
+      "frequency_dependent_phase_delay_report_required": true,
+      "frequency_delay_is_not_end_to_end_latency": true
+    },
+    "timing": {
+      "expected_output_source_indices": "0,10,20,... below each true input length",
+      "expected_output_count_formula": "floor((input_length-1)/10)+1",
+      "timestamp_formula": "source_start_sec+source_index/1000",
+      "timestamp_absolute_tolerance_sec": 1e-12,
+      "monotonic_source_indices_required": true,
+      "monotonic_timestamps_required": true,
+      "source_index_gap_overlap_or_reorder_refused": true
+    },
+    "normalization": {
+      "contract_center_and_scale_exact": true,
+      "statistics_fit_counter_required_zero": true,
+      "scale_must_be_finite_and_positive": true,
+      "padding_values_emitted": 0,
+      "output_values_finite_required": true,
+      "output_value_bounds_inclusive": [
+        -5.0,
+        5.0
+      ]
+    },
+    "flush": {
+      "policy": "close_without_padding_or_new_output",
+      "invented_source_samples": 0,
+      "invented_output_samples": 0,
+      "push_after_flush_refused": true,
+      "second_flush_refused": true
+    },
+    "decision": {
+      "development_must_pass_before_qualification": true,
+      "qualification_must_pass_before_proceed": true,
+      "failure_decision": "park_loop25_and_block_loop26_real_model_gate",
+      "success_decision": "loop25_causal_preprocessing_mechanics_passed_ready_for_separate_loop26_decision",
+      "post_result_tuning_or_rerun_allowed": false
+    }
+  },
+  "resource_caps": {
+    "cpu_threads": 1,
+    "maximum_concurrent_workers": 1,
+    "maximum_fixture_items_per_partition": 12,
+    "maximum_channels": 5,
+    "maximum_source_samples_per_item": 4096,
+    "maximum_source_values_per_partition": 245760,
+    "maximum_fixture_bytes_total": 4194304,
+    "maximum_materialized_working_array_bytes": 16777216,
+    "maximum_mutable_state_bytes": 4096,
+    "maximum_report_bytes": 1048576,
+    "maximum_generated_bytes_total": 8388608,
+    "maximum_internal_runtime_sec": 45,
+    "maximum_peak_rss_bytes": 1073741824,
+    "maximum_external_network_calls": 0,
+    "maximum_real_data_reads": 0,
+    "maximum_real_cache_reads": 0,
+    "maximum_consumed_evidence_reads": 0,
+    "maximum_target_label_text_prediction_reads": 0,
+    "maximum_checkpoint_reads": 0,
+    "maximum_model_runs": 0,
+    "maximum_training_runs": 0,
+    "maximum_parameter_updates": 0,
+    "maximum_rw3_operations": 0,
+    "maximum_stream_socket_board_device_hardware_operations": 0
+  },
+  "required_access_counters": [
+    "manifest_metadata_reads",
+    "development_partition_opens",
+    "qualification_partition_opens",
+    "filter_design_runs",
+    "canonical_preprocessing_runs",
+    "chunk_schedule_runs",
+    "resume_runs",
+    "future_mutation_control_runs",
+    "frequency_response_runs",
+    "normalization_fit_runs",
+    "real_data_reads",
+    "real_cache_reads",
+    "consumed_evidence_reads",
+    "target_label_text_prediction_reads",
+    "checkpoint_reads",
+    "model_runs",
+    "training_runs",
+    "parameter_updates",
+    "external_network_calls",
+    "rw3_operations",
+    "stream_socket_board_device_hardware_operations"
+  ],
+  "refusal_ids": [
+    "authorization_missing",
+    "contract_identity_mismatch",
+    "source_binding_mismatch",
+    "unsupported_scipy_version_or_api",
+    "fixture_manifest_schema_mismatch",
+    "fixture_path_outside_authorized_root",
+    "fixture_output_collision",
+    "fixture_partition_overlap",
+    "fixture_contains_forbidden_member",
+    "fixture_generated_from_target_label_text_prediction_or_model_output",
+    "partition_seed_or_item_count_mismatch",
+    "signal_shape_dtype_or_length_mismatch",
+    "signal_nonfinite_or_out_of_bounds",
+    "source_sampling_rate_not_exactly_1000_hz",
+    "channel_count_or_order_mismatch",
+    "chunk_empty_or_over_cap",
+    "chunk_nonfinite_or_wrong_dtype",
+    "source_index_gap_overlap_duplicate_or_reorder",
+    "source_start_changed_after_initialization",
+    "filter_configuration_or_coefficient_hash_mismatch",
+    "filter_pole_unstable",
+    "zero_phase_backward_or_centered_filter_requested",
+    "filter_state_shape_dtype_or_nonfinite_mismatch",
+    "state_contract_or_configuration_hash_mismatch",
+    "state_tampered_or_over_cap",
+    "silent_filter_or_decimator_reset",
+    "decimation_phase_or_output_count_mismatch",
+    "timestamp_drift_or_nonmonotonicity",
+    "normalization_statistics_fit_attempted",
+    "normalization_scale_nonfinite_or_nonpositive",
+    "output_nonfinite_or_out_of_bounds",
+    "schedule_output_or_state_mismatch",
+    "future_mutation_changed_earlier_output_or_state",
+    "resume_output_timestamp_or_state_mismatch",
+    "flush_padding_or_invented_sample",
+    "push_or_second_flush_after_close",
+    "development_failed_qualification_not_opened",
+    "qualification_opened_before_development_freeze",
+    "resource_or_output_cap_exceeded",
+    "real_consumed_target_model_training_network_rw3_or_hardware_access"
+  ],
+  "claim_boundaries": {
+    "may_claim_if_passed": [
+      "one registered target-free preprocessing path has zero declared right context",
+      "the path preserves outputs timestamps and state across seven chunk schedules and ten resume cuts",
+      "the registered filter and decimator pass frozen synthetic frequency timing and resource gates"
+    ],
+    "must_not_claim": [
+      "numeric equivalence to official Brain2Qwerty v2 offline preprocessing",
+      "retained or improved neural information",
+      "real-data quality or decoding accuracy",
+      "CER or WER improvement",
+      "downstream encoder decoder aligner or language-model causality",
+      "sentence endpointing or stable incremental text",
+      "end-to-end or user-perceived latency",
+      "general sampling-rate or portable-device compatibility",
+      "EEG MEG or OPM equivalence",
+      "unseen-person generalization",
+      "assistive diagnostic clinical or arbitrary-thought decoding"
+    ],
+    "warnings_required": [
+      "synthetic_signal_fixture_only",
+      "causal_iir_path_is_not_offline_brain2qwerty_v2_equivalence",
+      "frequency_dependent_filter_delay_is_not_end_to_end_latency",
+      "frozen_normalization_application_does_not_validate_normalization_fit",
+      "no_real_data_target_model_training_rw3_or_hardware_access",
+      "loop25_success_would_not_authorize_loop26"
+    ]
+  },
+  "primary_sources": [
+    {
+      "id": "brain2qwerty_v2_paper",
+      "url": "https://facebookresearch.github.io/brain2qwerty/assets/brain2qwerty_v2.pdf",
+      "use": "offline preprocessing and sentence-window boundary"
+    },
+    {
+      "id": "brain2qwerty_v2_config",
+      "url": "https://github.com/facebookresearch/brain2qwerty/blob/3bf5a4099ca0d23bbe994b2287905760236e56e0/brain2qwerty_v2/config/xp_config.py",
+      "use": "public preprocessing configuration"
+    },
+    {
+      "id": "brain2qwerty_v2_model_config",
+      "url": "https://github.com/facebookresearch/brain2qwerty/blob/3bf5a4099ca0d23bbe994b2287905760236e56e0/brain2qwerty_v2/config/model_config.py",
+      "use": "100 Hz temporal downsampling geometry"
+    },
+    {
+      "id": "brain2qwerty_v2_model_forward",
+      "url": "https://github.com/facebookresearch/brain2qwerty/blob/3bf5a4099ca0d23bbe994b2287905760236e56e0/brain2qwerty_v2/models.py",
+      "use": "whole-sentence public forward boundary"
+    },
+    {
+      "id": "mne_raw_filter",
+      "url": "https://mne.tools/stable/generated/mne.io.Raw.html#mne.io.Raw.filter",
+      "use": "zero-phase and forward-phase semantics"
+    },
+    {
+      "id": "mne_filter_background",
+      "url": "https://mne.tools/stable/auto_tutorials/preprocessing/25_background_filtering.html",
+      "use": "causal filter delay stability and ringing tradeoffs"
+    },
+    {
+      "id": "mne_filter_resample_tutorial",
+      "url": "https://mne.tools/stable/auto_tutorials/preprocessing/30_filtering_resampling.html",
+      "use": "anti-alias event timing and integer decimation guidance"
+    },
+    {
+      "id": "scipy_sosfilt",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.sosfilt.html",
+      "use": "stateful SOS filtering"
+    },
+    {
+      "id": "scipy_sosfilt_zi",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.sosfilt_zi.html",
+      "use": "registered initial-state semantics"
+    },
+    {
+      "id": "scipy_butter",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.butter.html",
+      "use": "bandpass SOS design"
+    },
+    {
+      "id": "scipy_iirnotch",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.iirnotch.html",
+      "use": "notch design"
+    },
+    {
+      "id": "scipy_resample_poly",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.resample_poly.html",
+      "use": "centered zero-phase comparator boundary"
+    }
+  ],
+  "planned_implementation": {
+    "files_exist_now": false,
+    "cli_exists_now": false,
+    "base_dependencies_added": [],
+    "optional_dependencies_added": [],
+    "files": [
+      "src/neurodecodekit/preprocess/causal_preprocessing.py",
+      "src/neurodecodekit/training/causal_preprocessing_fixture.py",
+      "src/neurodecodekit/experiments/causal_preprocessing_gate.py",
+      "tests/test_causal_preprocessing.py",
+      "tests/test_causal_preprocessing_fixture.py",
+      "tests/test_causal_preprocessing_gate.py"
+    ],
+    "cli_commands": [
+      "make-causal-preprocessing-fixture",
+      "inspect-causal-preprocessing-fixture",
+      "causal-preprocessing-gate",
+      "inspect-causal-preprocessing-report"
+    ],
+    "implementation_may_begin_only_after": [
+      "preregistration_commit_is_tested_committed_pushed_and_ci_green",
+      "exact_loop25_authorization_is_recorded_in_a_separate_tested_commit",
+      "authorization_commit_is_pushed_and_ci_green"
+    ]
+  }
+}
