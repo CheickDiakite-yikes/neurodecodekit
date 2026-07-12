@@ -1725,3 +1725,63 @@ Evidence: `docs/LOOP_31_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop31_research_boundary.v0.json`,
 `tests/test_loop31_research_boundary.py`, roadmap row 31, research commit
 `5455340`, push CI run `29208510571`, and draft PR #10 CI run `29208529886`.
+
+## 0059 - Count calibration information, not just adapter parameters
+
+Decision: close Loop 32 planning research while leaving its fresh-person
+calibration experiment `Not Started`, all 22 `authorized_now` fields false,
+and no candidate, participant payload, signal, label, checkpoint, adapter fit,
+training run, or final evaluation opened. Recommend one pointwise causal
+32-parameter hidden diagonal-affine adapter over the proposed frozen 16-wide
+Loop 26 source encoder.
+
+Why: participant adaptation is scientifically useful only when strict zero-
+shot, unlabeled, label-light, and supervised information are not mixed.
+Brain2Qwerty v2's leave-one-participant-out regime finetunes on the held-out
+participant, so it is calibrated transfer rather than strict zero-shot.
+CORAL and Euclidean Alignment use no target labels, but target signal still
+influences their transforms; this is unlabeled transductive calibration. Loop
+16 further shows that diagonal affine matching can repair an easy stationary
+shift while harming channel-mixing and time-varying shifts.
+
+Future mechanism boundary: use exactly 16 scales plus 16 biases before the
+28-class projection, identity initialized, with zero additional temporal
+context and all 2,908 base values frozen. The nested recommendation is `0, 2,
+4, 8, 16, 32` unique completed calibration sentences. Label-light is capped at
+eight labeled calibration sentences; supervised at 32. Any labeled selection
+row counts in the headline supervision burden. Unlabeled mode may not use
+target labels to select a budget, stopping rule, or threshold.
+
+Future evidence boundary: require physically distinct calibration, selection,
+and final recordings with at least 32, 16, and 48 unique completed sentences,
+respectively, plus disjoint performed-row IDs and semantic text hashes. S25
+session 2 block 2 stays final-only for Loop 28 and is ineligible. Hash-freeze
+strict zero-shot final predictions before target-person calibration access,
+then freeze one mode, adapter, and budget before one final-target open.
+
+Future decision boundary: compare the selected adapter with frozen zero-shot,
+an exact identity adapter, the source-train-only no-signal prior, robust
+normalization-only, and label derangement where applicable. Recommend at least
+`0.05` macro-CER gain versus both zero-shot and prior, a one-sided paired rule
+with 65,535 random sign assignments plus observed, and strict wins over every
+applicable control. The margins remain recommendations until preregistration.
+Any tie, final harm, split/hash/access/resource failure, or selection-to-final
+reversal parks the claim without restart.
+
+Access and resource result: this research used six public network operations,
+including two pinned GitHub source reads, one CPU thread/worker, and zero
+protected payload, signal, target, model, adapter, training, evaluation, stream,
+device, or hardware operations. Public transport bytes, end-to-end interactive
+research runtime, peak RSS, and candidate-specific calibration minutes remain
+unavailable. A future run stays under one thread/worker, 32 target-trainable
+values, 1,200 adapter-fit seconds, 1 GiB RSS, and 32 MiB outputs. The user's
+5-10 GB capacity envelope is not authorization.
+
+Claim boundary: this decision creates no zero-shot, calibrated-person, sensor-
+signal, brain-specific, population, real-time, portable-device, at-home,
+assistive, diagnostic, or clinical result. Even a future clean one-person pass
+must be labeled by its exact mode and burden.
+
+Evidence: `docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop32_research_boundary.v0.json`,
+`tests/test_loop32_research_boundary.py`, and roadmap row 32.

@@ -1,0 +1,480 @@
+{
+  "schema_name": "neurodecodekit.loop32_research_boundary",
+  "schema_version": "0.1.0",
+  "prepared_at": "2026-07-12",
+  "status": "planning_research_complete_experiment_blocked_on_dependencies_and_fresh_person_protocol",
+  "proof_posture": "planning_only_no_candidate_participant_cache_signal_target_checkpoint_adapter_training_or_evaluation",
+  "authorized_now": false,
+  "authorization": {
+    "loop32_preregistration_authorized_now": false,
+    "loop32_implementation_authorized_now": false,
+    "participant_or_candidate_selection_authorized_now": false,
+    "real_data_or_cache_read_authorized_now": false,
+    "calibration_signal_read_authorized_now": false,
+    "calibration_target_label_or_text_read_authorized_now": false,
+    "selection_signal_read_authorized_now": false,
+    "selection_target_label_or_text_read_authorized_now": false,
+    "final_signal_read_authorized_now": false,
+    "final_target_label_or_text_read_authorized_now": false,
+    "checkpoint_or_model_run_authorized_now": false,
+    "adapter_fit_or_parameter_update_authorized_now": false,
+    "no_signal_or_control_run_authorized_now": false,
+    "zero_shot_prediction_generation_authorized_now": false,
+    "final_evaluation_authorized_now": false,
+    "s25_or_s20_access_authorized_now": false,
+    "source_test_or_session2_reopen_authorized_now": false,
+    "new_real_data_download_authorized_now": false,
+    "network_payload_download_authorized_now": false,
+    "rw3_stream_device_or_hardware_authorized_now": false,
+    "loop33_or_later_authorized_now": false,
+    "authorization_sentence_exists": false,
+    "reason": "Loop 25 and Loop 26 have no authorized result, Loop 31 has no executed attribution gate, no physically separated fresh-person candidate is selected, and this research packet is not a preregistration or execution request."
+  },
+  "decision": {
+    "current_experiment_status": "Not Started",
+    "research_question": "What is the smallest honest calibration budget that improves one fresh person without using that person's final rows for fitting, selection, normalization, or thresholding?",
+    "maximum_current_claim_class": "L32-C0_no_new_result",
+    "recommended_adapter_family": "L32-hidden-diagonal-affine-16-v0",
+    "recommended_target_trainable_parameter_count": 32,
+    "adapter_family_frozen_now": false,
+    "calibration_mode_selected_now": null,
+    "fresh_person_candidate_selected_now": null,
+    "preregistration_prepared_now": false,
+    "authorization_request_prepared_now": false,
+    "experiment_matrix_frozen_now": false,
+    "s25_session2_block2_eligible_for_loop32": false,
+    "s25_ineligibility_reason": "The selected S25 block is reserved as the Loop 28 final-only zero-shot candidate and has no physically separate calibration and selection recordings."
+  },
+  "dependencies": {
+    "loop32_planning_research_complete": true,
+    "loop25_compatible_result_required": true,
+    "loop25_dependency_satisfied_now": false,
+    "loop26_frozen_source_model_result_required": true,
+    "loop26_dependency_satisfied_now": false,
+    "loop28_transfer_taxonomy_research_satisfied": true,
+    "loop28_experiment_result_required": false,
+    "loop31_sensor_attribution_result_required_for_neural_wording": true,
+    "loop31_dependency_satisfied_now": false,
+    "approved_fresh_person_protocol_required": true,
+    "approved_fresh_person_protocol_exists_now": false,
+    "physically_separated_candidate_required": true,
+    "physically_separated_candidate_exists_now": false,
+    "loop32_preregistration_prepared": false,
+    "loop32_authorization_request_prepared": false,
+    "loop32_runtime_or_fixture_exists": false
+  },
+  "existing_evidence_inventory": [
+    {
+      "evidence_id": "loop15_s21_same_subject_cross_session",
+      "proof_posture": "consumed_real_negative_result",
+      "finding": "The session-1-trained MEG model was worse than the no-signal prior on consumed session 2.",
+      "eligible_for_loop32_fit_or_selection": false,
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "loop16_synthetic_calibration_curve",
+      "proof_posture": "synthetic_mechanism_and_failure_boundary",
+      "finding": "Robust channel-affine matching helped a stationary diagonal shift but harmed channel-mixing and time-varying shifts.",
+      "eligible_for_human_calibration_claim": false,
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "loop28_transfer_taxonomy",
+      "proof_posture": "planning_only",
+      "finding": "Strict zero-shot and calibrated unseen-person transfer require different access rules and physical partitions.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "loop31_attribution_firewall",
+      "proof_posture": "planning_only",
+      "finding": "A calibration gain cannot be called sensor-signal dependence until the upstream attribution gate passes.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "brain2qwerty_v2_leave_one_out_finetune",
+      "proof_posture": "public_primary_source",
+      "finding": "The leave-one-participant-out regime finetunes on the held-out participant and therefore measures supervised calibrated transfer rather than strict zero-shot transfer.",
+      "local_dataset_or_embedding_available": false,
+      "payload_read_now": false
+    }
+  ],
+  "calibration_mode_taxonomy": [
+    {
+      "mode_id": "L32-M0_strict_zero_shot",
+      "target_calibration_signal_before_final_prediction": false,
+      "target_labels_before_final_target_open": 0,
+      "target_parameter_updates": 0,
+      "selection_rule": "No calibration selection; freeze source model, source-train transforms, and final predictions before any target-person calibration access.",
+      "allowed_claim": "strict_zero_shot_reference_for_one_person"
+    },
+    {
+      "mode_id": "L32-M1_unlabeled_transductive_calibration",
+      "target_calibration_signal_before_final_prediction": true,
+      "target_labels_before_final_target_open": 0,
+      "target_parameter_updates": 32,
+      "selection_rule": "Freeze one budget before target access or use a target-label-free criterion frozen in the preregistration; target selection labels are forbidden.",
+      "allowed_claim": "unlabeled_calibrated_transfer_for_one_person_not_zero_shot"
+    },
+    {
+      "mode_id": "L32-M2_label_light_calibration",
+      "target_calibration_signal_before_final_prediction": true,
+      "maximum_labeled_calibration_sentences": 8,
+      "target_parameter_updates": 32,
+      "selection_rule": "Selection labels may choose one budget only when every labeled calibration and selection item is counted in total burden.",
+      "allowed_claim": "label_light_calibrated_transfer_for_one_person_not_zero_shot"
+    },
+    {
+      "mode_id": "L32-M3_supervised_calibration",
+      "target_calibration_signal_before_final_prediction": true,
+      "maximum_labeled_calibration_sentences": 32,
+      "target_parameter_updates": 32,
+      "selection_rule": "Selection labels may choose one nested budget; the base encoder remains frozen and all label exposure is counted.",
+      "allowed_claim": "supervised_calibrated_transfer_for_one_person_not_zero_shot"
+    }
+  ],
+  "adapter_family_recommendation": {
+    "status": "research_recommendation_not_frozen_or_authorized",
+    "adapter_id": "L32-hidden-diagonal-affine-16-v0",
+    "base_model": "recommended_Loop26_TinyCausalSentenceCTC",
+    "base_model_parameter_count": 2908,
+    "base_model_parameters_frozen": true,
+    "insertion_point": "after_second_16_wide_hidden_activation_before_28_class_projection",
+    "formula": "adapted_hidden[t,j] = scale[j] * hidden[t,j] + bias[j]",
+    "hidden_width": 16,
+    "scale_parameter_count": 16,
+    "bias_parameter_count": 16,
+    "target_trainable_parameter_count": 32,
+    "total_parameter_count_with_adapter": 2940,
+    "identity_initialization": {
+      "scale": 1.0,
+      "bias": 0.0
+    },
+    "causal": true,
+    "extra_right_context_samples": 0,
+    "extra_history_samples": 0,
+    "unlabeled_fit": "source-train versus calibration-only robust hidden median and IQR matching with frozen clipping and zero-IQR behavior",
+    "labeled_fit": "CTC optimization of the same 32 parameters with the 2,908 base parameters frozen",
+    "forbidden": [
+      "base_encoder_or_output_head_updates",
+      "target_final_row_statistics",
+      "target_final_labels_or_text",
+      "adapter_architecture_search_after_target_access",
+      "subject_identity_embedding_table",
+      "language_model_or_prompt_input"
+    ],
+    "known_failure_boundary": "A diagonal affine map cannot in general undo channel rotation, sensor geometry mismatch, missing channels, or within-item nonstationary drift."
+  },
+  "calibration_budget_schedule": {
+    "status": "research_recommendation_not_frozen_until_preregistration",
+    "unit": "unique_completed_calibration_sentence",
+    "nested_budget_counts": [0, 2, 4, 8, 16, 32],
+    "zero_is_strict_zero_shot_reference": true,
+    "label_light_allowed_counts": [2, 4, 8],
+    "supervised_allowed_counts": [2, 4, 8, 16, 32],
+    "unlabeled_budget_must_be_fixed_without_target_labels": true,
+    "repeated_attempts_count_as_additional_human_burden": true,
+    "synthetic_seconds_may_be_translated_to_human_minutes": false,
+    "maximum_real_calibration_minutes": null,
+    "maximum_real_calibration_minutes_unavailable_reason": "No participant task, sentence set, acquisition protocol, or timing pilot is selected; a minute cap must be measured and frozen in a later candidate-specific packet."
+  },
+  "fresh_person_partition_contract": {
+    "status": "future_requirement_no_candidate_selected",
+    "fresh_relative_to": "every source-model training, validation, test, threshold, and preprocessing-fit person",
+    "same_person_device_and_prompted_typing_task_across_partitions": true,
+    "calibration_partition": {
+      "minimum_unique_completed_sentences_for_full_curve": 32,
+      "physical_block_or_session_identity_required": true,
+      "may_fit_adapter": true
+    },
+    "selection_partition": {
+      "minimum_unique_completed_sentences": 16,
+      "physical_block_or_session_identity_required": true,
+      "may_select_one_budget": "only_for_label_light_or_supervised_modes",
+      "labels_forbidden_for_unlabeled_mode": true
+    },
+    "final_partition": {
+      "minimum_unique_completed_sentences": 48,
+      "physical_block_or_session_identity_required": true,
+      "may_fit_or_select_any_value": false,
+      "target_open_count": 1
+    },
+    "all_three_partition_ids_must_be_distinct": true,
+    "semantic_text_hash_groups_must_be_disjoint": true,
+    "performed_row_ids_must_be_disjoint": true,
+    "normalization_statistics_may_cross_partitions": false,
+    "s25_session2_block2_may_be_repurposed": false,
+    "candidate_revision_bytes_license_consent_retention_and_split_hashes_required_before_access": true
+  },
+  "future_condition_matrix": [
+    {
+      "condition_id": "L32-A00_frozen_strict_zero_shot",
+      "role": "primary_uncalibrated_reference",
+      "required_modes": ["L32-M0_strict_zero_shot", "L32-M1_unlabeled_transductive_calibration", "L32-M2_label_light_calibration", "L32-M3_supervised_calibration"]
+    },
+    {
+      "condition_id": "L32-A01_identity_adapter",
+      "role": "adapter_plumbing_parity_control",
+      "required_modes": ["L32-M1_unlabeled_transductive_calibration", "L32-M2_label_light_calibration", "L32-M3_supervised_calibration"],
+      "must_match_zero_shot_predictions_exactly": true
+    },
+    {
+      "condition_id": "L32-A02_selected_mode_adapter",
+      "role": "primary_calibrated_candidate",
+      "required_modes": ["L32-M1_unlabeled_transductive_calibration", "L32-M2_label_light_calibration", "L32-M3_supervised_calibration"]
+    },
+    {
+      "condition_id": "L32-A03_source_train_only_no_signal_prior",
+      "role": "primary_signal_free_comparator",
+      "required_modes": ["L32-M0_strict_zero_shot", "L32-M1_unlabeled_transductive_calibration", "L32-M2_label_light_calibration", "L32-M3_supervised_calibration"]
+    },
+    {
+      "condition_id": "L32-A04_unlabeled_robust_normalization_only",
+      "role": "normalization_only_comparator_or_unlabeled_candidate",
+      "required_modes": ["L32-M1_unlabeled_transductive_calibration", "L32-M2_label_light_calibration", "L32-M3_supervised_calibration"]
+    },
+    {
+      "condition_id": "L32-A05_calibration_label_derangement",
+      "role": "supervised_correspondence_control",
+      "required_modes": ["L32-M2_label_light_calibration", "L32-M3_supervised_calibration"],
+      "same_32_parameters_budget_optimizer_and_updates_required": true
+    }
+  ],
+  "access_and_freeze_order": [
+    "satisfy_Loop25_Loop26_and_relevant_Loop31_dependencies_without_reopening_consumed_evidence",
+    "select_one_metadata_only_fresh_person_candidate_with_three_physical_partitions",
+    "freeze_source_model_adapter_family_calibration_mode_budgets_splits_controls_statistics_resources_and_claims",
+    "commit_and_push_a_hash_bound_preregistration_and_separate_exact_authorization_request",
+    "after_exact_authorization_generate_and_hash_freeze_zero_shot_final_predictions_before_any_target_person_calibration_access",
+    "open_only_the_authorized_calibration_partition_and_only_the_labels_allowed_by_the_selected_mode",
+    "fit_only_the_32_parameter_adapter_and_registered_controls_under_the_nested_budget_schedule",
+    "use_selection_labels_only_for_label_light_or_supervised_modes_and_freeze_one_budget",
+    "generate_and_hash_freeze_every_selected_adapter_prior_and_control_prediction_on_identical_final_rows_while_final_targets_remain_closed",
+    "open_final_targets_once_score_every_condition_in_one_pass_write_append_only_results_and_mark_the_final_partition_consumed",
+    "close_as_support_or_park_without_restart_budget_change_mode_change_adapter_search_or_candidate_substitution"
+  ],
+  "statistical_decision_recommendation": {
+    "status": "research_recommendation_not_frozen_until_preregistration",
+    "paired_unit": "same_unique_final_sentence",
+    "primary_adaptation_estimand": "mean_i(CER_zero_shot_i - CER_selected_adapter_i)",
+    "secondary_signal_free_estimand": "mean_i(CER_prior_i - CER_selected_adapter_i)",
+    "positive_direction": "selected_adapter_better",
+    "minimum_final_unique_sentences": 48,
+    "random_sign_assignments": 65535,
+    "observed_assignment_included": true,
+    "reference_statistics_total": 65536,
+    "one_sided_alpha": 0.05,
+    "minimum_practical_macro_cer_gain_vs_zero_shot_recommendation": 0.05,
+    "minimum_practical_macro_cer_gain_vs_prior_recommendation": 0.05,
+    "practical_margins_frozen_now": false,
+    "overall_decision": "intersection_union_all_applicable_required_comparisons",
+    "control_tie_passes": false,
+    "selection_improvement_can_override_final_harm": false,
+    "paired_bootstrap_role": "descriptive_only",
+    "population_inference_supported": false
+  },
+  "human_burden_ledger": [
+    "unique_calibration_sentences",
+    "repeated_calibration_attempts",
+    "active_signal_seconds",
+    "prompt_or_listening_seconds",
+    "typing_or_response_seconds",
+    "setup_practice_break_and_total_wall_minutes",
+    "sentence_character_and_key_labels_exposed",
+    "label_verification_and_correction_minutes",
+    "selection_sentences_and_labels_exposed",
+    "adapter_fit_runtime_peak_rss_artifact_and_working_bytes",
+    "time_from_calibration_to_final_evaluation",
+    "recalibration_or_maintenance_interval_or_explicitly_unavailable"
+  ],
+  "claim_taxonomy": [
+    {
+      "claim_id": "L32-C0_no_new_result",
+      "available_now": true,
+      "boundary": "Planning only; no candidate, adapter, or evaluation result exists."
+    },
+    {
+      "claim_id": "L32-C1_one_person_strict_zero_shot_reference",
+      "available_now": false,
+      "boundary": "Frozen source model scored before target-person calibration access; not a calibration gain or population result."
+    },
+    {
+      "claim_id": "L32-C2_one_person_unlabeled_calibrated_improvement",
+      "available_now": false,
+      "boundary": "Target calibration signals but zero target labels; transductive and not zero-shot."
+    },
+    {
+      "claim_id": "L32-C3_one_person_label_light_calibrated_improvement",
+      "available_now": false,
+      "boundary": "At most eight labeled calibration sentences plus every labeled selection item reported."
+    },
+    {
+      "claim_id": "L32-C4_one_person_supervised_calibrated_improvement",
+      "available_now": false,
+      "boundary": "At most 32 labeled calibration sentences plus selection burden; base model frozen."
+    },
+    {
+      "claim_id": "L32-C5_cross_session_calibration_maintenance",
+      "available_now": false,
+      "boundary": "Requires a later physically separate session and maintenance interval; same-session final rows cannot support it."
+    },
+    {
+      "claim_id": "L32-C6_population_device_or_brain_specific_generalization",
+      "available_now": false,
+      "boundary": "One calibrated participant cannot establish population, device, neural-origin, at-home, assistive, or clinical behavior."
+    }
+  ],
+  "future_promotion_requirements": [
+    {"requirement_id": "L32-G01", "gate": "Loop 25 and Loop 26 dependencies pass without reopening source test or session 2."},
+    {"requirement_id": "L32-G02", "gate": "Any sensor-signal or neural wording is limited by the completed Loop 31 and Loop 35 evidence available at execution time."},
+    {"requirement_id": "L32-G03", "gate": "One fresh-person metadata packet names license, consent, retention, device, task, revision, and exact bytes before payload access."},
+    {"requirement_id": "L32-G04", "gate": "Calibration, selection, and final physical identities and performed rows are disjoint."},
+    {"requirement_id": "L32-G05", "gate": "Semantic text hash groups are disjoint across all three partitions."},
+    {"requirement_id": "L32-G06", "gate": "One adapter family, insertion point, 32-parameter ceiling, initialization, and fit rule freeze before target access."},
+    {"requirement_id": "L32-G07", "gate": "Exactly one calibration mode and its nested budget schedule freeze before target access."},
+    {"requirement_id": "L32-G08", "gate": "Strict zero-shot final predictions hash-freeze before any target-person calibration access."},
+    {"requirement_id": "L32-G09", "gate": "Calibration access uses only the signals and labels permitted by the selected mode."},
+    {"requirement_id": "L32-G10", "gate": "Only the 32 adapter parameters may update; the 2,908 base parameters remain bitwise frozen."},
+    {"requirement_id": "L32-G11", "gate": "Unlabeled mode uses no target labels for fitting, budget selection, stopping, or thresholds."},
+    {"requirement_id": "L32-G12", "gate": "Label-light and supervised modes count calibration and selection labels in the total burden."},
+    {"requirement_id": "L32-G13", "gate": "Exactly one adapter and budget freeze before final adapted predictions are generated."},
+    {"requirement_id": "L32-G14", "gate": "Identity-adapter predictions match strict zero-shot predictions exactly."},
+    {"requirement_id": "L32-G15", "gate": "All applicable candidate, prior, normalization, and derangement predictions use identical final rows and metric code."},
+    {"requirement_id": "L32-G16", "gate": "All final predictions hash-freeze before one final-target open and one-pass scoring."},
+    {"requirement_id": "L32-G17", "gate": "The selected adapter passes the preregistered practical and paired randomization gates versus zero-shot and prior."},
+    {"requirement_id": "L32-G18", "gate": "The selected adapter strictly beats every applicable normalization and label-derangement control; ties fail."},
+    {"requirement_id": "L32-G19", "gate": "Human burden, access, runtime, peak RSS, bytes, update counts, warnings, unavailable fields, and hashes are complete."},
+    {"requirement_id": "L32-G20", "gate": "Any selection-to-final reversal, split drift, hash drift, missing field, or resource failure parks the claim without restart."}
+  ],
+  "refusal_matrix": [
+    "L32-R01_execute_from_general_continuation_or_storage_permission",
+    "L32-R02_select_or_open_a_participant_without_a_separate_packet",
+    "L32-R03_repurpose_the_final_only_S25_block_for_calibration",
+    "L32-R04_reopen_consumed_S7_or_S21_evidence",
+    "L32-R05_share_rows_or_physical_ids_across_calibration_selection_and_final",
+    "L32-R06_allow_semantic_text_hash_overlap_across_partitions",
+    "L32-R07_fit_normalization_or_statistics_on_final_rows",
+    "L32-R08_use_target_labels_in_unlabeled_mode",
+    "L32-R09_use_hidden_target_selection_labels_in_unlabeled_mode",
+    "L32-R10_exceed_eight_labeled_calibration_sentences_but_call_it_label_light",
+    "L32-R11_omit_selection_labels_from_reported_human_burden",
+    "L32-R12_choose_a_budget_or_threshold_on_final_targets",
+    "L32-R13_run_multiple_modes_and_promote_only_the_best",
+    "L32-R14_search_adapter_families_after_target_access",
+    "L32-R15_update_the_2908_parameter_base_encoder_or_output_head",
+    "L32-R16_exceed_the_32_target_trainable_parameter_ceiling",
+    "L32-R17_skip_the_precalibration_zero_shot_prediction_freeze",
+    "L32-R18_open_final_targets_before_every_prediction_hash_freezes",
+    "L32-R19_omit_the_train_only_no_signal_prior",
+    "L32-R20_accept_identity_adapter_prediction_drift",
+    "L32-R21_omit_label_derangement_for_a_labeled_mode",
+    "L32-R22_promote_statistical_significance_without_the_practical_margin",
+    "L32-R23_call_any_calibrated_mode_zero_shot",
+    "L32-R24_call_same_session_calibration_cross_session_maintenance",
+    "L32-R25_promote_one_person_to_population_device_brain_specific_assistive_or_clinical_claims",
+    "L32-R26_continue_after_access_split_hash_privacy_resource_or_final_harm_failure"
+  ],
+  "resource_boundaries": {
+    "current_research_cpu_threads": 1,
+    "current_research_workers": 1,
+    "current_research_generated_artifact_cap_bytes": 8388608,
+    "future_cpu_threads": 1,
+    "future_workers": 1,
+    "future_base_model_parameter_count": 2908,
+    "future_target_trainable_parameter_ceiling": 32,
+    "future_total_parameter_count_ceiling": 2940,
+    "future_total_adapter_fit_runtime_cap_sec": 1200,
+    "future_peak_rss_cap_bytes": 1073741824,
+    "future_generated_artifact_cap_bytes": 33554432,
+    "future_new_data_or_model_download_bytes_before_separate_authorization": 0,
+    "user_preferred_incremental_storage_bytes": 5000000000,
+    "user_absolute_incremental_storage_bytes": 10000000000,
+    "storage_envelope_is_data_access_or_execution_authorization": false
+  },
+  "protected_operation_ledger": {
+    "public_web_research_operations": 4,
+    "public_github_api_source_reads": 2,
+    "public_network_operations_total": 6,
+    "public_network_response_bytes": null,
+    "public_network_response_bytes_unavailable_reason": "The browser and GitHub API inspection tools did not expose a complete transport-byte ledger.",
+    "protected_dataset_or_model_download_bytes": 0,
+    "local_real_path_or_payload_hash_reads": 0,
+    "raw_signal_or_header_reads": 0,
+    "real_cache_content_reads": 0,
+    "calibration_signal_reads": 0,
+    "calibration_target_label_or_text_reads": 0,
+    "selection_signal_reads": 0,
+    "selection_target_label_or_text_reads": 0,
+    "final_signal_reads": 0,
+    "final_target_label_or_text_reads": 0,
+    "consumed_evidence_reads": 0,
+    "checkpoint_or_model_runs": 0,
+    "adapter_fit_runs": 0,
+    "training_runs": 0,
+    "parameter_updates": 0,
+    "control_prediction_runs": 0,
+    "final_evaluations": 0,
+    "rw3_stream_sdk_socket_device_or_hardware_operations": 0,
+    "end_to_end_research_runtime_sec": null,
+    "interactive_peak_rss_bytes": null,
+    "unavailable_fields": [
+      "public_network_response_bytes",
+      "end_to_end_research_runtime_sec",
+      "interactive_peak_rss_bytes",
+      "candidate_specific_calibration_minutes"
+    ]
+  },
+  "source_bindings": [
+    {
+      "source_id": "brain2qwerty_v2_paper",
+      "url": "https://facebookresearch.github.io/brain2qwerty/assets/brain2qwerty_v2.pdf",
+      "use": "per-participant layers, leave-one-out plus target finetuning, calibrated transfer, and continuous noncausal boundary"
+    },
+    {
+      "source_id": "brain2qwerty_v2_code_pinned",
+      "url": "https://github.com/facebookresearch/brain2qwerty/tree/3bf5a4099ca0d23bbe994b2287905760236e56e0/brain2qwerty_v2",
+      "use": "per-subject model configuration and frozen public implementation reference"
+    },
+    {
+      "source_id": "coral_domain_adaptation",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/10306",
+      "use": "unlabeled second-order source-target alignment without target labels"
+    },
+    {
+      "source_id": "euclidean_alignment",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31034407/",
+      "use": "computationally light unsupervised EEG trial alignment without target labels"
+    },
+    {
+      "source_id": "long_term_bci_calibration_reduction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10790953/",
+      "use": "few-current-session-trial adaptation and long-term calibration-burden motivation in a different motor-imagery population and task"
+    },
+    {
+      "source_id": "brain_decoder_cv_guidelines",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27989847/",
+      "use": "strict separation of fitting, model selection, and final evaluation in predictive neuroimaging"
+    },
+    {
+      "source_id": "loop16_local_synthetic_curve",
+      "url": "docs/LOOP_16_SYNTHETIC_CALIBRATION_CURVE.md",
+      "use": "local diagonal-shift mechanism and channel-mixing and drift failure boundary"
+    },
+    {
+      "source_id": "loop28_local_transfer_taxonomy",
+      "url": "docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md",
+      "use": "strict zero-shot versus transductive and supervised calibrated transfer access rules"
+    },
+    {
+      "source_id": "loop31_local_attribution_firewall",
+      "url": "docs/LOOP_31_PRIMARY_SOURCE_RESEARCH.md",
+      "use": "sensor dependence, neural origin, language gain, and context-control claim separation"
+    }
+  ],
+  "claim_boundary": [
+    "This registry closes Loop 32 planning research only; it is not a preregistration, authorization, candidate selection, implementation, or result.",
+    "No protected participant data, cache, signal, target, checkpoint, model, adapter, training, control, or final evaluation was opened or run.",
+    "The 32-parameter hidden affine adapter and six-point sentence schedule are recommendations until a candidate-specific hash-bound preregistration freezes them.",
+    "Synthetic diagonal-shift success cannot establish human calibration time or robustness to channel mixing, geometry mismatch, missing sensors, or drift.",
+    "No zero-shot, calibrated-person, sensor-signal, brain-specific, population, real-time, portable-device, at-home, assistive, diagnostic, or clinical claim is established."
+  ]
+}

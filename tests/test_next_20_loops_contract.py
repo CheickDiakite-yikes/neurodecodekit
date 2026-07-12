@@ -22,7 +22,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
     def test_identity_range_and_planning_boundary_are_exact(self):
         roadmap = self.roadmap
         self.assertEqual(roadmap["schema_name"], "neurodecodekit.next_twenty_loops_roadmap")
-        self.assertEqual(roadmap["schema_version"], "0.8.0")
+        self.assertEqual(roadmap["schema_version"], "0.9.0")
         self.assertEqual(roadmap["roadmap_id"], "loops-25-44")
         self.assertEqual(roadmap["status"], "planning_only_not_execution_authorization")
         self.assertEqual(
@@ -102,6 +102,19 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         self.assertFalse(boundary["loop31_authorization_request_prepared"])
         self.assertFalse(boundary["loop31_execution_authorized"])
         self.assertFalse(boundary["loop31_dependency_loop26_satisfied"])
+        self.assertTrue(boundary["loop32_research_packet_prepared"])
+        self.assertEqual(boundary["loop32_calibration_mode_count"], 4)
+        self.assertEqual(boundary["loop32_budget_counts"], [0, 2, 4, 8, 16, 32])
+        self.assertEqual(boundary["loop32_target_trainable_parameter_ceiling"], 32)
+        self.assertEqual(boundary["loop32_future_requirement_count"], 20)
+        self.assertEqual(boundary["loop32_future_refusal_count"], 26)
+        self.assertFalse(boundary["loop32_candidate_selected"])
+        self.assertFalse(boundary["loop32_preregistration_prepared"])
+        self.assertFalse(boundary["loop32_authorization_request_prepared"])
+        self.assertFalse(boundary["loop32_execution_authorized"])
+        self.assertFalse(boundary["loop32_dependency_loop25_satisfied"])
+        self.assertFalse(boundary["loop32_dependency_loop26_satisfied"])
+        self.assertFalse(boundary["loop32_dependency_loop31_satisfied"])
         self.assertEqual(boundary["user_preferred_incremental_storage_bytes"], 5_000_000_000)
         self.assertEqual(boundary["user_absolute_incremental_storage_bytes"], 10_000_000_000)
         self.assertEqual(boundary["selected_s20_plus_s25_future_bundle_bytes"], 1_106_030_247)
@@ -154,7 +167,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                 else:
                     self.assertEqual(row["status"], "Not Started")
                     self.assertEqual(row["proof_posture"], "planned_not_authorized")
-                    if row["loop_id"] in {26, 27, 28, 29, 30, 31}:
+                    if row["loop_id"] in {26, 27, 28, 29, 30, 31, 32}:
                         self.assertEqual(row["research_status"], "planning_research_complete")
                         self.assertFalse(row["preregistration_prepared"])
                     if row["loop_id"] == 27:
@@ -254,6 +267,9 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                 "same_analysis_approach",
                 "neuroimaging_confounds",
                 "intersection_union_tests",
+                "coral_domain_adaptation",
+                "euclidean_alignment",
+                "long_term_bci_calibration_reduction",
                 "moabb_benchmark",
                 "lsl_time_sync",
                 "executorch",

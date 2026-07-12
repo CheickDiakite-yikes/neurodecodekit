@@ -426,36 +426,63 @@ downloads.
 
 ## Loop 32 - New-Subject Calibration And Adaptation
 
+**Current state:** Planning research complete; experiment `Not Started`. See
+`docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop32_research_boundary.v0.json`. Every one of 22 authorization
+flags is false; no candidate, participant payload, calibration signal, label,
+checkpoint, adapter fit, training run, or final evaluation was opened.
+
 **Core question:** What is the smallest honest calibration budget that improves
 a fresh person without training on their final rows?
 
 **Why it moves the goal:** Participant variability is a central barrier, and a
 calibrated result must never be presented as zero-shot transfer.
 
-**Build:** Freeze one small adapter family, calibration-size schedule,
-train-only normalization, selection rule, independent final partition, and
-time/compute report. Keep unlabeled, label-light, and supervised modes
-separate.
+**Build:** After separate candidate-specific preregistration and authorization,
+test one pointwise causal 32-parameter hidden diagonal-affine adapter over the
+frozen 2,908-parameter Loop 26 source encoder. Keep strict zero-shot, unlabeled,
+label-light, and supervised modes separate. Use the nested `0, 2, 4, 8, 16,
+32` unique-sentence schedule and update only the adapter's 16 scales plus 16
+biases.
 
-**Research:** Define calibration claims and human burden: examples, seconds,
-task repetitions, labels, compute, privacy, and expected maintenance across
-sessions.
+**Research:** Completed. The claim ladder separates a pre-calibration strict
+zero-shot reference from unlabeled transductive calibration, at-most-eight-row
+label-light calibration, and at-most-32-row supervised calibration. The human
+burden ledger includes unique/repeated items, active/task/setup/break minutes,
+labels and corrections, selection labels, compute, and the measured or
+unavailable maintenance interval. Synthetic seconds cannot be reported as
+human calibration time.
 
-**Data and controls:** One approved fresh participant with physical
-calibration/selection/final partitions. Compare the frozen zero-shot model,
-identity/normalization-only adapter, same-size no-signal prior, and label
-permutation.
+**Data and controls:** One future approved fresh participant with three
+physically distinct, row-disjoint, and semantic-text-disjoint recordings:
+at least 32 calibration, 16 selection, and 48 final unique completed sentences.
+Compare frozen zero-shot, exact-identity adapter, selected mode adapter,
+source-train-only no-signal prior, robust normalization-only, and same-budget
+label derangement where labels are used. S25 block 2 remains Loop 28 final-only
+and is ineligible.
 
-**Metrics:** zero-shot/calibrated CER; gain per item/minute; wall and compute
-time; no-harm item count; validation-to-final generalization.
+**Metrics:** macro sentence CER gain versus zero-shot and prior; gain per item,
+active second, total minute, and label; 65,535 random sign assignments plus the
+observed assignment; practical margins; no-harm items and wins/ties/losses;
+selection-to-final generalization; human burden; runtime, RSS, bytes, updates,
+warnings, unavailable fields, and hashes.
 
-**Gate:** Promote calibrated-person performance only if a preselected adapter
-beats zero-shot and prior controls on the one-time final partition within its
-budget. Park adapters that help selection but harm final evidence.
+**Gate:** Hash-freeze strict zero-shot final predictions before any target-
+person calibration access. Freeze exactly one mode, adapter, and budget before
+adapted final predictions. Open final targets once. The future recommendation
+requires at least `0.05` macro-CER gain versus both zero-shot and prior, the
+paired one-sided `p <= 0.05` gates, and strict wins over every applicable
+control; the margins remain unfrozen until preregistration. Any tie, final harm,
+split/hash/access/resource failure, or selection-to-final reversal parks the
+claim without restart.
 
-**Dependencies and authorization:** Depends on Loops 28 and 31 plus an approved
-fresh-person protocol. No participant data, labels, training, or final test is
-authorized now.
+**Dependencies and authorization:** Depends on compatible Loop 25 and 26
+results, Loop 28's transfer taxonomy, Loop 31 for sensor-signal wording, and an
+approved fresh-person protocol. Planning research only; the experiment remains
+`Not Started`. No candidate or mode is selected, all protected operations are
+unauthorized, and the future cap is one thread/worker, 32 target-trainable
+values, 1,200 adapter-fit seconds, 1 GiB RSS, 32 MiB artifacts, and zero new
+data/model downloads before separate authorization.
 
 ## Loop 33 - Data Scaling And Sample Efficiency
 
