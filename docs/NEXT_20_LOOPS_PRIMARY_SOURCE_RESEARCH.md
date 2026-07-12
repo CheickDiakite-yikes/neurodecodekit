@@ -363,7 +363,8 @@ planning research are also complete while their experiments remain `Not
 Started`; Loop 30 interaction research, Loop 31 attribution research, and Loop
 32 calibration research are also complete while their experiments remain `Not
 Started`; Loop 33 planning research is complete while its experiment remains
-`Not Started`; Loops 34-44 remain
+`Not Started`; Loop 34 confidence research is complete while its experiment
+remains `Not Started` and confidence is unavailable; Loops 35-44 remain
 `Not Started`.
 
 The detailed source trace and design correction live in
@@ -628,3 +629,50 @@ zero protected cache/signal/target, model, training, scoring, S20/S25, stream,
 device, or hardware operations. No acquisition is recommended now. Exact
 sources and boundaries are in `docs/LOOP_33_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop33_research_boundary.v0.json`.
+
+## 2026-07-12 Loop 34 Research Addendum
+
+Loop 34 planning research is complete while its confidence, abstention, and
+revision experiment remains `Not Started`; confidence is unavailable. The
+primary-source review separates selective error ranking, correctness-
+probability calibration, fixed abstention operating points, conformal bounded-
+risk control, revision stability, and product-visible confidence. Passing one
+level does not imply another.
+
+Selective prediction motivates risk at coverage, but abstain-all is a trivial
+failure and therefore cannot pass. Conformal Risk Control motivates finite-
+sample bounded-loss guarantees, while work beyond exchangeability requires
+drift, grouping, and weighting assumptions to be explicit. Exact-sequence
+0/1 error is the primary bounded loss. Raw CER remains unclipped; an optional
+`min(raw_CER, 1)` loss must be separately named bounded CER.
+
+Calibration research makes a raw score/probability firewall necessary. Log
+score, entropy, margin, and prefix stability may rank outputs but are not
+correctness probabilities. Probability claims require a mapping fit only on
+calibration and independent Brier, log-loss, and reliability reporting. ECE is
+secondary because its conclusion depends on binning and other measurement
+choices. Legacy AURC is reported with limitations and cannot replace registered
+working points or generalized-risk area.
+
+The existing six source-validation sentences cannot provide independent
+calibration, selection, and final roles, and remain reserved for the shared
+Loop 26/31/33 event. Even six observed successes give an optimistic one-sided
+95% upper error bound of approximately `0.393` before accounting for their
+within-person dependence. No real confidence claim is available from current
+partitions.
+
+The future synthetic-interface recommendation uses fresh target-free
+`128/64/256` calibration/selection/final sequence counts, grouped by generation
+block and schedule. It compares eight score/control roles, selects exactly one
+score and policy on selection, freezes all mappings, thresholds, predictions,
+and hashes, then opens final targets once. A synthetic pass remains synthetic
+and cannot establish real confidence.
+
+The machine boundary freezes seven confidence semantics, eight score/control
+roles, eight outcomes, seven claim classes, 20 future requirements, 30
+refusals, and 26 false authorization fields. This research used five public web
+operations, one thread/worker, and zero fixture generation, protected data,
+target, checkpoint, model, confidence fit, scoring, product-confidence, S20,
+S25, stream, device, or hardware operation. Exact sources and boundaries are
+in `docs/LOOP_34_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop34_research_boundary.v0.json`.

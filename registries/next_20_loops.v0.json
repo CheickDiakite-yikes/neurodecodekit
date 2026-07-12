@@ -1,6 +1,6 @@
 {
   "schema_name": "neurodecodekit.next_twenty_loops_roadmap",
-  "schema_version": "0.10.0",
+  "schema_version": "0.11.0",
   "roadmap_id": "loops-25-44",
   "prepared_at": "2026-07-12",
   "status": "planning_only_not_execution_authorization",
@@ -99,6 +99,19 @@
     "loop33_dependency_loop25_satisfied": false,
     "loop33_dependency_loop26_satisfied": false,
     "loop33_dependency_loop31_satisfied": false,
+    "loop34_research_packet_prepared": true,
+    "loop34_confidence_semantics_count": 7,
+    "loop34_candidate_score_count": 8,
+    "loop34_recommended_partition_counts": [128, 64, 256],
+    "loop34_future_requirement_count": 20,
+    "loop34_future_refusal_count": 30,
+    "loop34_existing_real_confidence_partition_available": false,
+    "loop34_confidence_default": "unavailable",
+    "loop34_preregistration_prepared": false,
+    "loop34_authorization_request_prepared": false,
+    "loop34_execution_authorized": false,
+    "loop34_dependency_loop30_execution_satisfied": false,
+    "loop34_dependency_loop31_execution_satisfied": false,
     "user_preferred_incremental_storage_bytes": 5000000000,
     "user_absolute_incremental_storage_bytes": 10000000000,
     "selected_s20_plus_s25_future_bundle_bytes": 1106030247,
@@ -591,32 +604,42 @@
       "priority": "P1",
       "effort": "M",
       "status": "Not Started",
+      "research_status": "planning_research_complete",
+      "research_packet": "docs/LOOP_34_PRIMARY_SOURCE_RESEARCH.md",
+      "research_registry": "registries/loop34_research_boundary.v0.json",
+      "preregistration_prepared": false,
+      "authorization_request_prepared": false,
       "execution_authorized": false,
-      "proof_posture": "planned_not_authorized",
-      "core_question": "Can the system identify when to abstain or delay output without tuning confidence on the final test?",
+      "proof_posture": "planning_research_complete_no_confidence_fit_or_result_unauthorized",
+      "core_question": "Can a target-blind score rank sequence errors, support a preregistered abstention rule on an independent partition, and keep revision stability separate from calibrated correctness?",
       "why_high_value": "A decoder that knows when it is unreliable is more useful and safer than one that always emits fluent text.",
-      "build_deliverable": "Validation-fit confidence contract, risk-coverage report, abstention and revision policy, calibration diagnostics, and user-visible unavailable state.",
-      "research_deliverable": "Selective-prediction and conformal-risk review mapped to tiny correlated sequence data.",
-      "data_scope": "Synthetic first; any real use requires separate calibration and final partitions and cannot reopen consumed evidence.",
+      "build_deliverable": "Future three-way confidence contract, full risk-coverage and generalized-risk report, abstention and revision policy, probability diagnostics, and fail-closed unavailable state.",
+      "research_deliverable": "Completed primary-source selective-prediction, conformal-risk, probability-calibration, ECE, and generalized-risk review mapped to tiny correlated sequence data.",
+      "data_scope": "Fresh target-free synthetic calibration, selection, and final groups first. The six source-validation rows stay reserved for Loops 26, 31, and 33; any real confidence claim requires fresh physically separate evidence.",
       "controls": [
-        "Confidence-free always-predict baseline.",
-        "Entropy, margin, stability, and prior-only confidence candidates selected on validation only.",
-        "Coverage levels fixed before final evaluation.",
-        "Sequence and item clustering respected in uncertainty estimates."
+        "Confidence-free always-predict, train-only prior, fixed-random, and unreachable post-hoc oracle controls.",
+        "Length-normalized log score, entropy, margin, stability, and prior-only candidates; none is a probability without separate calibration.",
+        "Exactly one score and policy selected on selection only, then every mapping, threshold, coverage point, revision rule, prediction, and hash frozen before one final-target open.",
+        "Generation-block and schedule grouping preserved; consumed real rows, targets, prompts, labels, and predictions cannot seed or tune synthetic confidence."
       ],
       "primary_metrics": [
-        "risk-coverage curve and area",
-        "error rate at registered coverage",
-        "abstention rate",
-        "expected calibration error where sample size permits",
-        "revision count and time-to-stability"
+        "full risk-coverage table, accepted and generalized exact-sequence error, legacy AURC with limitations, and AUGRC-equivalent area",
+        "exact-sequence error and raw CER at every registered coverage plus abstention and item counts",
+        "Brier score, negative log likelihood, and reliability data only for separately calibrated probabilities; ECE remains secondary and bin-frozen",
+        "revision count, time to first output, stability, finalization, and abstention-added delay in Loop 30 clock domains",
+        "raw, cache, target, fit, scoring, warning, unavailable-field, resource, and hash ledgers"
       ],
-      "acceptance_boundary": "Expose confidence only if higher declared confidence reliably lowers error on an independent partition and the registered coverage-risk rule passes.",
-      "stop_rule": "If confidence does not rank errors or sample size is insufficient, publish confidence as unavailable rather than inventing a score.",
+      "recommended_partition_counts": [128, 64, 256],
+      "confidence_semantics_count": 7,
+      "candidate_score_count": 8,
+      "future_requirement_count": 20,
+      "future_refusal_count": 30,
+      "acceptance_boundary": "A future synthetic claim requires disjoint calibration, selection, and final groups, one selected score and policy frozen before one final open, error ranking above controls, registered useful coverage, bounded-loss and grouping assumptions, all 20 gates, and every resource and access ledger. It does not authorize real confidence.",
+      "stop_rule": "Publish confidence as unavailable on insufficient independent groups, no ranking over controls, calibration or target leakage, below-floor coverage, unbounded conformal loss, omitted dependence, post-final changes, resource failure, or synthetic-to-real claim transfer.",
       "depends_on": [30, 31],
-      "external_gates": ["separate_calibration_evaluation_authorization"],
-      "authorization_boundary": "Planning only. No confidence fitting, model inference, or final-partition opening is authorized.",
-      "resource_cap": "Dependency-free metrics where possible, one thread, 16 MiB artifacts, and no additional model training."
+      "external_gates": ["separate_synthetic_confidence_preregistration_and_exact_authorization", "fresh_physical_calibration_selection_and_final_evidence_for_any_real_claim"],
+      "authorization_boundary": "Planning research only. No fixture generation, confidence feature, mapping or threshold fit, model inference, target open, scoring, product confidence, real-data read, consumed-evidence access, or download is authorized.",
+      "resource_cap": "Current research used one thread/worker, five public web operations, zero protected bytes, and an 8 MiB planning cap. Future synthetic execution remains one thread/worker, zero decoder training, at most six scalar mapping fits, 120 seconds, 1 GiB RSS, 16 MiB artifacts, and zero downloads."
     },
     {
       "loop_id": 35,
@@ -967,7 +990,7 @@
     "31": ["brain2qwerty_v1", "brain2qwerty_v2", "brain2qwerty_v2_code", "classifier_permutation_tests", "same_analysis_approach", "neuroimaging_confounds", "intersection_union_tests", "scipy_permutation_test", "small_sample_cv_uncertainty"],
     "32": ["brain2qwerty_v2", "brain2qwerty_v2_code", "coral_domain_adaptation", "euclidean_alignment", "long_term_bci_calibration_reduction", "brain_decoder_cv_guidelines", "moabb_benchmark"],
     "33": ["brain2qwerty_v2", "brain_decoding_image_scaling", "eeg_speech_scaling_175h", "classification_learning_curve_sample_size", "small_sample_cv_uncertainty"],
-    "34": ["selective_prediction"],
+    "34": ["selective_prediction", "conformal_risk_control", "conformal_beyond_exchangeability", "neural_network_calibration", "calibration_measurement", "generalized_risk_coverage"],
     "35": ["brain2qwerty_v1", "brain2qwerty_v2"],
     "36": ["mne_resampling", "bids_derivatives"],
     "37": ["bids_derivatives", "datasheets"],
@@ -1283,8 +1306,38 @@
     {
       "source_id": "selective_prediction",
       "title": "Selective Classification for Deep Neural Networks",
-      "url": "https://arxiv.org/abs/1705.08500",
+      "url": "https://papers.neurips.cc/paper_files/paper/2017/hash/4a8423d5e91fda00bb7e46540e2b0cf1-Abstract.html",
       "roadmap_use": "Risk-coverage, abstention, and confidence evaluation."
+    },
+    {
+      "source_id": "conformal_risk_control",
+      "title": "Conformal Risk Control",
+      "url": "https://research.google/pubs/conformal-risk-control/",
+      "roadmap_use": "Finite-sample control for monotone bounded losses, explicit calibration tightness, and fail-closed risk semantics."
+    },
+    {
+      "source_id": "conformal_beyond_exchangeability",
+      "title": "Conformal Prediction Beyond Exchangeability",
+      "url": "https://arxiv.org/abs/2202.13415",
+      "roadmap_use": "Weighted conformal methods and explicit treatment of drift, grouping, and nonexchangeability."
+    },
+    {
+      "source_id": "neural_network_calibration",
+      "title": "On Calibration of Modern Neural Networks",
+      "url": "https://proceedings.mlr.press/v70/guo17a.html",
+      "roadmap_use": "Correctness-probability semantics and separately fit calibration mappings."
+    },
+    {
+      "source_id": "calibration_measurement",
+      "title": "Measuring Calibration in Deep Learning",
+      "url": "https://arxiv.org/abs/1904.01685",
+      "roadmap_use": "ECE sensitivity to bins and measurement choices and the need for fuller reliability reporting."
+    },
+    {
+      "source_id": "generalized_risk_coverage",
+      "title": "Overcoming Common Flaws in the Evaluation of Selective Classification Systems",
+      "url": "https://arxiv.org/abs/2407.01032",
+      "roadmap_use": "Limitations of aggregate AURC plus generalized-risk working points and multi-threshold evaluation."
     }
   ]
 }

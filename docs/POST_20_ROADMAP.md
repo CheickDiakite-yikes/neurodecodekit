@@ -128,8 +128,13 @@ research recommends nested `8, 16, 24, 32, 44, 55` unique-sentence prefixes,
 at most three seeds and 18 candidate fits, size-matched priors, and one shared
 validation event after every prediction is hash-frozen. Its experiment remains
 `Not Started`; no physical-repetition lane or acquisition recommendation
-exists, and all protected work is unauthorized. Loops 34-44 remain `Not
-Started`. All 20
+exists, and all protected work is unauthorized. Loop 34 planning research
+separates seven confidence semantics, eight score/control roles, and fresh
+synthetic `128/64/256` calibration/selection/final recommendations. Its
+experiment remains `Not Started`; confidence is unavailable, the six real
+validation rows are ineligible for Loop 34 fitting and independent
+qualification, and all fixture/fit/target/scoring work is unauthorized. Loops
+35-44 remain `Not Started`. All 20
 `execution_authorized` flags are false. Loop 25's exact decision packet is
 ready for review, while Loops 26-33 have no
 preregistration or authorization packet. Roadmap approval, general
@@ -209,3 +214,9 @@ from the other.
   recommendations, not permission to read protected data, train, score,
   duplicate rows as physical repetitions, acquire data, or extrapolate a
   universal scaling law. The experiment is `Not Started` and unauthorized.
+- Keep Loop 34 planning-only. Its seven semantics, eight score/control roles,
+  `128/64/256` partition recommendation, coverage grid, bounded-loss rules,
+  generalized-risk metrics, and revision-delay contract are not permission to
+  generate a fixture, fit confidence, open targets, score, expose confidence,
+  or access real data. The experiment is `Not Started`, confidence is
+  unavailable, and all 26 authorization fields are false.

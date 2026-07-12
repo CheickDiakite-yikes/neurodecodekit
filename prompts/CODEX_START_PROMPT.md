@@ -90,8 +90,9 @@ Do not reset, revert, delete, or overwrite work already present.
   while its experiment remains `Not Started`; Loop 27 planning research has
   selected S25 metadata while preregistration remains blocked; Loop 28 planning
   research defines a strict zero-shot rule while its experiment remains `Not
-  Started`; Loops 29-33 have completed planning research while their
-  experiments remain `Not Started`; Loops 34-44 remain `Not Started`; all 20
+  Started`; Loops 29-34 have completed planning research while their
+  experiments remain `Not Started`; confidence is unavailable and Loops 35-44
+  remain `Not Started`; all 20
   execution flags remain false.
 - Loop 26's planning boundary recommends a 2,908-parameter causal candidate, a
   2,884-parameter linear comparator, six controls, and exact enumeration of all
@@ -153,6 +154,14 @@ Do not reset, revert, delete, or overwrite work already present.
   shared Loop 26/31/33 validation event. All 23 authorization flags are false;
   no physical-repetition lane or acquisition recommendation exists, and every
   protected/model/training/scoring/device operation is unauthorized.
+- Loop 34 planning research is complete while the confidence, abstention, and
+  revision experiment remains `Not Started`. The future boundary separates
+  seven confidence semantics, eight score/control roles, recommended fresh
+  target-free synthetic `128/64/256` calibration/selection/final partitions,
+  bounded loss, generalized risk, and revision delay. All 26 authorization
+  flags are false; the six real validation rows are unavailable for Loop 34
+  fitting and independent qualification, confidence is unavailable, and every
+  fixture/fit/target/scoring/product-confidence operation is unauthorized.
 - No real recording quality, neural advantage, unseen-person generalization,
   useful EEG decoder, real-time decoding, portable-hardware, arbitrary-thought,
   or clinical result has been demonstrated.
@@ -276,6 +285,13 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
     duplicate rows as physical repetitions, or acquire more data. Freeze the
     `8, 16, 24, 32, 44, 55` schedule before the first shared validation-target
     open. The experiment is `Not Started`; all protected work is unauthorized.
+17. Treat the Loop 34 confidence boundary as planning research, not permission
+    to generate its fresh fixture, compute candidate scores, fit a probability
+    map or threshold, open final targets, score, or expose confidence. Do not
+    reuse the six source-validation rows, call stability correctness, report
+    raw scores as probabilities, transfer a synthetic pass to real data, or
+    hide abstention delay. The experiment is `Not Started`, confidence is
+    unavailable, and all work remains unauthorized.
 
 ## Required deliverables for the next authorized milestone
 
@@ -295,6 +311,11 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
    at most three seeds and 18 candidate fits, one prospective shared validation
    event, four conditions, 20 gates, 30 refusals, 23 false permissions, no
    physical-repetition lane, no acquisition recommendation, and zero execution.
+   Keep the Loop 34 registry at seven confidence semantics, eight score/control
+   roles, recommended `128/64/256` fresh synthetic partitions, 20 gates, 30
+   refusals, 26 false permissions, no eligible existing real confidence
+   partition, explicit unavailable confidence, and zero fixture/fit/target/
+   scoring/product-confidence execution.
 2. Run documentation/contract validation, local-link checks, Ruff,
    `git diff --check`, Gitleaks, and the complete unit suites. Compare with the
    313-unittest Loop 24 baseline, the 323-unittest Loop 25 v0 preregistration
