@@ -170,6 +170,13 @@ parameters, 20 total CPU minutes across candidate and controls, 1 GiB RSS, and
 
 ## Loop 27 - Fresh Holdout Preregistration
 
+**Current status:** Planning research complete; experiment status remains `Not
+Started`. S25 session 2 block 2 is the selected metadata-only MEG candidate at
+exactly 1,009,939,983 bytes, but no preregistration, acquisition request,
+download, local MAT hash, header/signal/target access, model run, or final open
+is authorized. See `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop27_research_boundary.v0.json`.
+
 **Core question:** Which independent participant, session, or task-matched
 recording can answer the next claim without recycling S21 session-2 or S7?
 
@@ -181,9 +188,11 @@ packet: files, bytes, hashes/revision, license, subject/session/task identity,
 split protocol, target isolation, no-signal controls, access sequence, and
 one-time decision rule.
 
-**Research:** Compare public candidates using primary dataset and license
-sources. Distinguish same-person session, unseen-person, modality, and task
-claims rather than treating all additional EEG/MEG data as equivalent.
+**Research:** Complete at the planning boundary. A pinned metadata pass examined
+315 MEG files, found 23 strict single-FIF/log pairs and 16 eligible pairs, and
+selected S25 session 2 block 2 as the smallest eligible same-modality/task
+candidate. S23 is smaller but officially excluded because of a metallic
+implant; S20 is task-matched EEG and remains a separate RW4 cohort.
 
 **Data and controls:** Public metadata and documentation only. Perform identity
 overlap, repeated-text, task-match, timing, license, and redistribution audits.
@@ -197,9 +206,12 @@ available/unavailable fields; all access counters.
 license, byte cap, split power, controls, and one-time analysis are explicit.
 Ambiguity produces `hold`, not a substitute consumed cohort.
 
-**Dependencies and authorization:** Metadata research can be separately scoped.
-Any download or signal access requires a second exact user authorization after
-the packet is reviewed.
+**Dependencies and authorization:** Metadata research is complete without a
+prior-loop dependency. Preregistration now waits for a compatible Loop 25
+result, a frozen Loop 26 source model/control package, header and target-
+isolation protocols, and a Loop 28 final-only decision rule. Any download,
+local MAT hash, header, signal, target, model, training, or final access requires
+its own later exact packet and authorization.
 
 ## Loop 28 - Session And Person Transfer
 
