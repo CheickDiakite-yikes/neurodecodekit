@@ -4,8 +4,9 @@
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.
 3. Read `AGENTS.md` for coding-agent rules.
 4. Read `docs/CODEX_HANDOFF.md` for the next three work orders.
-5. Review `docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md` only when deciding
-   whether to authorize Loop 24 implementation.
+5. Read `docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md` and
+   `docs/LOOP_24_AUTHORIZATION_DECISION.md` before implementing the authorized
+   target-free Loop 24 gate.
 6. Review `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` only when deciding whether
    to authorize RW3 Stage A.
 7. Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md` and
@@ -19,9 +20,10 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 
 Tracker scope: the spreadsheet's `20` KPI is the size of the original roadmap,
 not the current loop number. Its dashboard now separately reports the current
-post-roadmap position as **Loop 24 preregistered**, and its ninth sheet contains
-the separate **Loops 25-44 planning-only queue**. Every new row is `Not Started`
-and unauthorized; adding the queue does not skip Loop 24 or authorize RW3.
+post-roadmap position as **Loop 24 authorized, no runtime**, and its ninth sheet
+contains the separate **Loops 25-44 planning-only queue**. Every new row is
+`Not Started` and unauthorized; adding the queue does not expand Loop 24 or
+authorize RW3.
 
 The parallel Real-World Practice Track starts at
 `docs/REAL_WORLD_PRACTICE_TRACK_RESEARCH.md`. RW0 is a completed research gate;
@@ -35,13 +37,13 @@ Stage A decision packet whose machine request keeps `authorized_now` set to
 `false`. Loop 24 is independently preregistered at commit `186bb6f`: three CPU
 candidates, fresh target-free seeds 2401 and 2402, 12 balanced timing rounds,
 30 refusal IDs, and strict resource/claim gates are frozen before execution.
-Every Loop 24 execution flag is also false. The next decisions are therefore
-separate: explicitly authorize or hold Loop 24, and explicitly authorize or
-hold RW3 Stage A. Neither decision can authorize the other. No Loop 24
-candidate, fixture, checkpoint read, inference, benchmark, or energy run, and
-no Stage A code, BrainFlow/LSL/PyXDF adapter, socket, stream, hardware, real
-recording, consumed cache, S20 download/read, model training, or automatic
-cleaning is authorized.
+The immutable preregistration retains its false flags, while a separate
+hash-bound decision now authorizes only its exact target-free implementation
+after the authorization-only commit is pushed. No Loop 24 candidate, fixture,
+checkpoint read, inference, benchmark, or energy run exists yet. Real data,
+targets, training, energy measurement, RW3 Stage A, BrainFlow/LSL/PyXDF,
+sockets, streams, hardware, consumed caches, S20, and automatic cleaning remain
+unauthorized. Loop 24 and RW3 remain independent.
 The proposed fresh S20 EEG block is **not authorized** for download or signal
 access. Its exact four-file, 96,090,264-byte dry run is in
 `docs/FRESH_EEG_BENCHMARK_S20_APPROVAL_PACKET.md`.
@@ -50,8 +52,8 @@ Current verified state: two complete S21 SpanishBCBL MEG recordings plus one
 94,842,381-byte S7 SpanishBCBL EEG BrainVision bundle and their matching MAT
 logs have been selectively downloaded under exact caps; the full dataset and
 12.79-GB EEG subtree have not been downloaded. Loops 9-12, 14-22, and 23.5 are
-complete; Loops 13 and 23 are parked after measured gates; Loop 24 is frozen as
-a preregistration-only protocol with no runtime result.
+complete; Loops 13 and 23 are parked after measured gates; Loop 24 is frozen and
+separately authorized for target-free implementation, with no runtime result.
 Session 1 provides a strict 55/6/5 split with
 train-only robust scaling. Session 2 is a complete two-part FIFF recording with
 63 performed trials; MAT slots 54, 58, and 60 are explicitly empty and are
@@ -107,9 +109,11 @@ once; the frozen test also reaches 16/16 and CER 0 versus 7/16 and CER 0.0818
 without calibration. Nine items are corrected, none worsens, and all resource,
 access, control, bootstrap, and replay gates pass. This is supervised synthetic
 calibration only, seed 2353 is now consumed, and Loop 24 requires a separate
-fresh protocol. That protocol is now frozen at `186bb6f`, but implementation is
-not authorized. See `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`,
-`docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md`, and
+fresh protocol. That protocol is frozen at `186bb6f` and now has a separate
+scope-narrowed authorization record, but no implementation or runtime yet. See
+`docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`,
+`docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md`,
+`docs/LOOP_24_AUTHORIZATION_DECISION.md`, and
 `docs/POST_20_ROADMAP.md`.
 
 RW1 adds dependency-free `inspect-recording` and `inspect-intake-report`
@@ -149,12 +153,12 @@ qint8 QNNPACK candidates around the 1,130-parameter synthetic producer. The
 contract requires fresh target-free fixture partitions, exact frame/timestamp/
 decoder behavior, balanced replicated timing, separate storage and runtime
 claims, one-thread caps, and zero real/consumed/target/training/RW3 access. Nine
-dependency-free invariants pass, but no candidate code or result exists. The
-only exact implementation authorization sentence is:
-
-> Authorize Loop 24 implementation exactly as scoped in
-> `docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md`. Do not authorize RW3
-> Stage A, data access, or model training.
+dependency-free contract invariants pass, but no candidate code or result
+exists. The separate decision in
+`registries/loop24_authorization_decision.v0.json` authorizes the target-free
+fixture/candidate/inference path after its tested commit is pushed. Seven
+additional invariants prove that real data, consumed evidence, targets,
+training, energy measurement, RW3, devices, and hardware remain false.
 
 The current registries keep prompted typing, imagined speech, natural reading,
 P300, SSVEP, and motor imagery as separate evidence cohorts. They also keep

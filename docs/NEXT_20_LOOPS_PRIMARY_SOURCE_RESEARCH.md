@@ -41,9 +41,10 @@ Loop 24 execution operations:         0
 RW3 Stage A operations:               0
 ```
 
-Loop 24 remains preregistered and unauthorized. RW3 Stage A remains separately
-unauthorized. Preparing Loops 25-44 does not authorize either decision and does
-not authorize any future loop.
+At the time of this planning-only research pass, Loop 24 remained preregistered
+and unauthorized. Its later 2026-07-12 target-free authorization does not alter
+this pass's zero-operation measurements or authorize any Loop 25-44 row. RW3
+Stage A remains separately unauthorized.
 
 ## Local Evidence That Drives The Roadmap
 

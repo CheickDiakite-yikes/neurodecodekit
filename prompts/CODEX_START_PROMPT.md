@@ -14,6 +14,8 @@ requests, and these files:
 - `docs/LOOP_24_PRIMARY_SOURCE_RESEARCH.md`
 - `docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md`
 - `registries/local_precision_runtime_contract.v0.json`
+- `docs/LOOP_24_AUTHORIZATION_DECISION.md`
+- `registries/loop24_authorization_decision.v0.json`
 - `docs/POST_20_ROADMAP.md`
 - `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`
 - `docs/LOOPS_25_44_ROADMAP.md`
@@ -46,8 +48,12 @@ Do not reset, revert, delete, or overwrite work already present.
 - Loop 24 is preregistered at commit `186bb6f`. Three exact CPU candidates,
   fresh target-free seeds 2401/2402, 12 balanced timing rounds, 30 refusal IDs,
   correctness/resource/claim gates, and nine dependency-free invariants are
-  frozen. Every execution flag is false; no fixture, candidate, checkpoint
+  frozen. The immutable contract keeps every execution flag false. A separate
+  hash-bound 2026-07-12 decision authorizes only the exact target-free Loop 24
+  work after its own tested commit is pushed. No fixture, candidate, checkpoint
   read, inference, benchmark, profiler, energy, or qualification run exists.
+  Real/consumed data, targets, labels, text, training, energy, RW3, devices,
+  hardware, and Loops 25-44 remain unauthorized.
 - Loops 25-44 are now a detailed planning-only queue: exactly 20 contiguous
   rows across five phases, with source bindings, controls, metrics, acceptance
   gates, stop rules, dependencies, resource caps, and 20 false execution flags.
@@ -60,7 +66,7 @@ Do not reset, revert, delete, or overwrite work already present.
   canonical license-text repair. Do not merge or alter visibility without
   explicit user approval.
 
-## Primary task: review two independent decisions; do not implement either
+## Primary task: complete the Loop 24 authorization boundary, then execute only it
 
 For Loop 24, inspect and validate:
 
@@ -72,10 +78,12 @@ For Loop 24, inspect and validate:
 Confirm the exact float32 eager, explicit CPU float16, and dynamic-qint8 QNNPACK
 candidates; frozen reference hashes; fresh target-free seeds 2401/2402; 12
 balanced timing rounds; numerical, decoder, storage, RSS, timing, access, and
-claim gates; 30 refusal IDs; and false execution flags. The only permissible
-next Loop 24 decision is explicit authorization using the exact sentence in the
-preregistration, an amendment, or a hold. General continuation is not
-authorization.
+claim gates; 30 refusal IDs; immutable false preregistration flags; and the
+separate authorization record's narrow true/false field set. Push and confirm
+the authorization-only commit before adding implementation, generating seed
+2401, or opening the checkpoint. After that boundary is green, execute only the
+registered target-free Loop 24 files, commands, candidates, counters, caps, and
+selection-before-qualification sequence.
 
 Independently, inspect and validate the RW3 Stage A decision surface:
 
@@ -107,8 +115,9 @@ Authorizing either Loop 24 or RW3 Stage A cannot authorize the other.
    unless the user explicitly authorizes Stage A after reviewing the packet.
    Authorization must first be recorded in its own tested and pushed commit.
 4. Do not implement a Loop 24 candidate or CLI, generate its fixture, load or
-   convert its checkpoint, run inference, benchmark, profile, or measure energy
-   unless the user explicitly authorizes Loop 24 using the frozen scope.
+   convert its checkpoint, run inference, benchmark, or profile until the
+   tested authorization-only commit is pushed and confirmed. Energy remains
+   unauthorized for this execution.
 5. Do not train or run a predictive model, create target text or labels,
    calculate CER/WER, or claim decoding performance.
 6. Keep heavy dependencies optional. Use one CPU thread and do not create
@@ -119,22 +128,23 @@ Authorizing either Loop 24 or RW3 Stage A cannot authorize the other.
    broad request to continue. Freeze and authorize the loop-specific packet
    first; a failed gate parks its dependent claim branch.
 
-## Required deliverables for this review milestone
+## Required deliverables for the authorization milestone
 
 1. Keep README, tracker, decision log, build notes, handoff, start-here,
-   roadmap, workbook, and continuation prompt consistent with Loop 24 commit
-   `186bb6f`, RW3 commit `c3d1f01`, and the still-unauthorized request prepared
-   at `163ff2f`. Keep the Loops 25-44 planning-only contract and all 20 false
-   execution flags consistent too.
+   roadmap, workbook, and continuation prompt consistent with Loop 24's frozen
+   contract plus separate narrow authorization, RW3 commit `c3d1f01`, and the
+   still-unauthorized request prepared at `163ff2f`. Keep the Loops 25-44
+   planning-only contract and all 20 false execution flags consistent too.
 2. Run documentation/contract validation, local-link checks, Ruff,
    `git diff --check`, Gitleaks, and the complete unit suites. Compare with the
    pre-roadmap 277-unittest / 274-pytest / 265-zero-dependency baseline and the
-   current 286-unittest / 283-pytest / 274-zero-dependency counts.
-3. Commit and push the coherent documentation milestone and refresh draft PR
-   #2. Preserve unrelated files and generated debris outside Git.
+   pre-authorization 286-unittest / 283-pytest / 274-zero-dependency counts.
+3. Commit and push the coherent authorization-only milestone and confirm draft
+   PR #2 CI before implementation. Preserve unrelated files and generated
+   debris outside Git.
 
-Do not call Loop 24 or RW3 implemented or runtime-validated. The current
-milestone proves only that two future synthetic experiments and their separate
-decision boundaries were frozen before candidate, transport, data, or hardware
-access, and that the later Loops 25-44 evidence queue was researched and made
-machine-checkable without authorizing execution.
+Do not call Loop 24 or RW3 implemented or runtime-validated during the
+authorization-only milestone. It proves only that exact target-free Loop 24
+execution was authorized without broadening the frozen experiment; it creates
+no candidate, runtime, neural, decoding, data, training, energy, transport, or
+hardware result.

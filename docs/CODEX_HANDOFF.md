@@ -1,6 +1,6 @@
 # Codex Handoff - NeuroDecodeKit
 
-> Current handoff, 2026-07-11: Loops 1-12, 14-22, and 23.5 are complete; Loops
+> Current handoff, 2026-07-12: Loops 1-12, 14-22, and 23.5 are complete; Loops
 > 13 and 23 are parked after measured gates. Two S21 MEG sessions support strict
 > sentence-text and same-subject session protocols, but the fixed tiny CTC has
 > no reliable neural advantage and loses its cross-session comparison to the
@@ -19,17 +19,21 @@
 > train-frame-fitted blank intercept takes validation from 6/16 to 16/16 exact
 > and the once-opened seed-2353 test from 7/16 to 16/16 exact, with zero CER,
 > nine test corrections, no regressions, and all replay/resource/access gates
-> passing. Seed 2353 is consumed. Loop 24 is now preregistered at commit
-> `186bb6f`, before implementation or execution. Three exact CPU candidates,
+> passing. Seed 2353 is consumed. Loop 24 was preregistered at commit `186bb6f`
+> before implementation or execution. Three exact CPU candidates,
 > fresh target-free seeds 2401/2402, 12 balanced timing rounds, exact behavior
 > and resource gates, and 30 refusal IDs are frozen. Nine dependency-free
-> invariants pass. No fixture, candidate, checkpoint read, inference, timing,
-> profiler, energy, or qualification run exists, and every execution flag is
-> false.
+> contract invariants pass. A separate hash-bound 2026-07-12 decision records
+> the user's authorization as a conservative scope amendment: exact target-free
+> Loop 24 work becomes authorized only after that authorization-only commit is
+> tested and pushed. Seven authorization invariants pass. No fixture, candidate,
+> checkpoint read, inference, timing, profiler, energy, or qualification run
+> exists yet. Real/consumed data, targets, labels, text, training, new models,
+> energy measurement, RW3, devices, and hardware remain unauthorized.
 > A primary-source-informed Loops 25-44 roadmap is now frozen as planning only:
 > 20 contiguous rows, five phases, detailed controls/metrics/stop rules, one-
 > thread and byte caps, row-level sources, and 20 false execution flags. It does
-> not skip the current Loop 24 decision or authorize RW3, data, training, or
+> not expand the authorized Loop 24 scope or authorize RW3, data, training, or
 > hardware.
 > In parallel, RW0 closes a primary-source Real-World Practice research gate
 > with eight dataset records, 13 device records, a local BYO Neurodata
@@ -180,20 +184,22 @@ negative within-session event comparison. None is a decoder success. Do not
 turn these results, a variance ranking, or a geometry proxy into unseen-person
 or population generalization.
 
-Current verification after adding the planning-only Loops 25-44 contract: 286
-unittest tests pass with 3 skipped in 20.180 seconds (21.320 seconds wall and
-570,392,576-byte maximum RSS); pytest reports 283 passed, 3 skipped, and 105
-subtests passed in 18.78 seconds (20.010 seconds wall and 579,158,016-byte
-maximum RSS). The nine focused roadmap invariants pass in 0.070 seconds wall
-with 18,071,552-byte maximum RSS. A separate true zero-dependency run passes
-274 tests with 118 explicit optional skips. The pre-roadmap 277-unittest /
-274-pytest / 265-zero-dependency baseline therefore gains nine tests without
-regression. No data, fixture, checkpoint, candidate, inference, benchmark,
-model, training, stream, board, or hardware operation was part of the roadmap
-gate.
+Current verification after adding the authorization decision: 293 unittest
+tests pass with 3 skipped in 18.882 seconds (19.880 seconds wall and
+565,280,768-byte maximum RSS); pytest reports 290 passed, 3 skipped, and 105
+subtests passed in 18.80 seconds (20.120 seconds wall and 578,502,656-byte
+maximum RSS). The seven authorization invariants and the pre-existing nine
+Loop 24 contract invariants pass together with the ten RW3 invariants in 0.210
+seconds wall and 21,397,504-byte maximum RSS. The true zero-dependency run
+passes 281 tests with 118 explicit optional skips in 0.359 seconds (0.650
+seconds wall and 41,435,136-byte maximum RSS). The pre-authorization
+286-unittest / 283-pytest / 274-zero-dependency baseline therefore gains seven
+tests without changing runtime behavior. No data, fixture, checkpoint,
+candidate, inference, benchmark, model, training, stream, board, or hardware
+operation is part of the authorization gate.
 The tracked and delivered workbook hashes match at
-`775e907e63277fd42e536421715ce116adfb837b71bfdf270e70024dd39a13aa`.
-The tracked workbook is 75,181 bytes and its nine-sheet visual/formula audit
+`4be4012eea926b2b417fca3da1665e1f192718a50d5243aebf5d38f02841afb9`.
+The tracked workbook is 75,648 bytes and its nine-sheet visual/formula audit
 passes with zero formula-error matches.
 
 ## The north star
@@ -208,14 +214,15 @@ This is not primarily a model repo. It is a **research loop repo**.
 
 ## Current Next Work
 
-1. **Loop 24 - decide on the frozen local precision/runtime protocol only.**
-   Review `docs/LOOP_24_PRIMARY_SOURCE_RESEARCH.md`,
-   `docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md`, and
-   `registries/local_precision_runtime_contract.v0.json`. To authorize exactly
-   that implementation, use: `Authorize Loop 24 implementation exactly as
-   scoped in docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md. Do not authorize
-   RW3 Stage A, data access, or model training.` Otherwise amend or hold it.
-   General continuation does not authorize a candidate or execution.
+1. **Loop 24 - push and confirm the authorization-only milestone, then execute
+   only the frozen target-free protocol.** Review
+   `docs/LOOP_24_AUTHORIZATION_DECISION.md` and
+   `registries/loop24_authorization_decision.v0.json` beside the frozen
+   preregistration. Confirm the authorization commit and CI before adding a
+   fixture, opening the checkpoint, or implementing a candidate. Then preserve
+   seeds 2401/2402, the exact three candidates, all counters/caps, and the
+   selection-before-qualification order. Real data, training, energy, RW3, and
+   Loops 25-44 remain outside this authorization.
 2. **RW3 - decide on the prepared Stage A packet only.** Review
    `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` and
    `registries/rw3_stage_a_authorization_request.v0.json`. The request is bound
@@ -247,7 +254,9 @@ are in `docs/LOOP_23_5_PREREGISTRATION.md` and
 `docs/LOOP_22_TINY_CAUSAL_ENCODER.md`; Loop 24 research, protocol, and machine
 contract are in `docs/LOOP_24_PRIMARY_SOURCE_RESEARCH.md`,
 `docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md`, and
-`registries/local_precision_runtime_contract.v0.json`; the post-20 sequence is in
+`registries/local_precision_runtime_contract.v0.json`; the current execution
+authority is in `docs/LOOP_24_AUTHORIZATION_DECISION.md` and
+`registries/loop24_authorization_decision.v0.json`; the post-20 sequence is in
 `docs/POST_20_ROADMAP.md`. The next 20-loop research, work orders, and machine
 contract are in `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`,
 `docs/LOOPS_25_44_ROADMAP.md`, and

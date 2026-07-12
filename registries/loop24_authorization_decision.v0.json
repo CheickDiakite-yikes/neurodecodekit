@@ -1,0 +1,95 @@
+{
+  "schema_name": "neurodecodekit.loop24_authorization_decision",
+  "schema_version": "0.1.0",
+  "decision_id": "loop24-local-precision-runtime-authorization-2026-07-12-v0",
+  "recorded_at": "2026-07-12",
+  "status": "authorized_no_implementation_yet",
+  "proof_posture": "authorization_record_only_no_runtime",
+  "authorization_parent_commit": "4050b8590507e079eccb961668706eaa0ae6f228",
+  "effective_only_after_this_record_is_tested_committed_and_pushed": true,
+  "authorized_contract": {
+    "contract_id": "loop24-local-precision-runtime-v0",
+    "contract_path": "registries/local_precision_runtime_contract.v0.json",
+    "contract_schema_version": "0.1.0",
+    "contract_sha256": "58e9d5407fef9419bc3bb0dc8cd3fa68d36dd238cb636d2f833dd9c5c6c3ae5d",
+    "contract_git_blob_sha1": "7ac75c8191908b7ab439fd96098027c12ccf5152",
+    "preregistration_commit": "186bb6f",
+    "contract_remains_immutable_preregistration_snapshot": true
+  },
+  "user_authorization": {
+    "statement_verbatim": "lets conitune, you have autorization for loop 24 real data / training. we'll have to use good available dataor try to create some great ones, since we dont have eeg yet.",
+    "explicit_loop24_authorization_intent": true,
+    "matches_original_exact_sentence": false,
+    "treated_as_scope_amendment_request": true,
+    "conservative_scope_interpretation": "Authorize the already frozen Loop 24 target-free synthetic precision/runtime implementation. Do not add real data or training to Loop 24 because doing so would invalidate the preregistered gate.",
+    "fresh_real_data_and_training_intent_recorded_for_later_gates": true
+  },
+  "authorization": {
+    "loop24_implementation_authorized_now": true,
+    "target_free_fixture_generation_authorized_now": true,
+    "frozen_checkpoint_validation_and_open_authorized_now": true,
+    "registered_candidate_conversion_authorized_now": true,
+    "registered_model_inference_authorized_now": true,
+    "registered_selection_authorized_now": true,
+    "conditional_one_time_qualification_authorized_now": true,
+    "report_and_cli_implementation_authorized_now": true,
+    "real_data_access_authorized_now": false,
+    "consumed_evidence_access_authorized_now": false,
+    "target_label_or_text_access_authorized_now": false,
+    "training_or_parameter_updates_authorized_now": false,
+    "new_model_or_architecture_authorized_now": false,
+    "energy_measurement_authorized_now": false,
+    "rw3_stage_a_authorized_now": false,
+    "brainflow_lsl_pyxdf_or_socket_authorized_now": false,
+    "device_or_hardware_authorized_now": false,
+    "loop25_through_44_execution_authorized_now": false
+  },
+  "scope_routing": {
+    "loop24": "Execute only the frozen target-free synthetic precision/runtime contract with seeds 2401 and 2402, the existing checkpoint, no parameter updates, and all registered access/resource/claim gates.",
+    "real_data": "Route metadata-only fresh-cohort research to Loop 27. Any download or signal access still requires an exact file/revision/byte packet and separate authorization.",
+    "real_training": "Route a fixed small real validation-only encoder experiment to Loop 26 after Loop 25 causal preprocessing is preregistered and authorized. Do not reopen source-test, S21 session-2, or S7 consumed evidence.",
+    "eeg": "The repository already has one bounded S7 EEG recording and negative consumed evaluation, but no fresh EEG benchmark and no qualified at-home EEG device. Do not reuse S7 as fresh evidence."
+  },
+  "required_execution_order": [
+    "test_this_authorization_record_and_all_existing_contract_invariants",
+    "commit_and_push_authorization_only_changes_before_implementation",
+    "confirm_the_pushed_authorization_commit_and_ci",
+    "implement_only_the_planned_loop24_files_and_cli_surface",
+    "generate_seed_2401_selection_fixture_without_targets",
+    "freeze_selection_report_and_candidate_decision",
+    "open_seed_2402_qualification_once_only_if_a_nonreference_replacement_candidate_qualifies",
+    "close_loop24_with_proceed_storage_only_retain_float32_park_or_kill"
+  ],
+  "authorized_generated_roots": [
+    "cache/loop24/",
+    "outputs/loop24/",
+    ".codex_work/loop24/"
+  ],
+  "protected_evidence": {
+    "real_cohorts": [
+      "S21 session-1 source-test rows",
+      "S21 session-2 consumed evaluation",
+      "S7 EEG consumed evaluation"
+    ],
+    "consumed_synthetic_seeds": [2203, 2303, 2353],
+    "fresh_loop24_seeds": {
+      "selection": 2401,
+      "qualification": 2402
+    }
+  },
+  "resource_boundary": {
+    "cpu_threads": 1,
+    "worker_processes": 1,
+    "max_generated_artifact_bytes": 4194304,
+    "max_materialized_array_bytes": 33554432,
+    "max_internal_runtime_sec": 60,
+    "max_peak_rss_bytes_per_worker": 1073741824,
+    "energy_measurement": "not_authorized_for_this_execution",
+    "all_lower_frozen_contract_caps_still_apply": true
+  },
+  "claim_boundary": [
+    "This authorization creates no runtime result by itself.",
+    "A passing Loop 24 can establish only local target-free synthetic correctness, storage, memory, and CPU runtime behavior for the three frozen candidates.",
+    "It cannot establish neural information, real-data accuracy, CER/WER improvement, unseen-person transfer, end-to-end latency, EEG usefulness, portable hardware, at-home typing, arbitrary-thought decoding, assistive efficacy, or clinical utility."
+  ]
+}

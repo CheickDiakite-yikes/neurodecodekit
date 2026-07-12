@@ -1846,3 +1846,46 @@ BrainFlow/LSL/PyXDF operation, socket, stream, board, device, or hardware
 session occurred. This milestone makes the next evidence queue detailed and
 machine-checkable; it establishes no new decoding, neural, transfer, latency,
 or device result.
+
+## 2026-07-12 - Record narrow Loop 24 authorization before implementation
+
+Recorded the user's explicit Loop 24 authorization in
+`registries/loop24_authorization_decision.v0.json` and
+`docs/LOOP_24_AUTHORIZATION_DECISION.md`. The decision is bound to parent
+`4050b85`, preregistration commit `186bb6f`, the exact frozen contract SHA-256,
+and its Git blob. The preregistration remains unchanged with false flags; the
+separate current authority permits only target-free fixture generation, frozen
+checkpoint validation, the three registered candidates, inference, selection,
+conditional one-time qualification, reports, and CLI work after this
+authorization-only commit is pushed and CI is confirmed.
+
+Real or consumed data, targets, labels, text, training, parameter updates, new
+architectures, energy, RW3, optional streaming stacks, sockets, devices,
+hardware, and Loops 25-44 remain false. The user's real-data/training goal is
+routed to separately frozen Loops 25-27. S21 source-test/session-2, S7, and
+seeds 2203/2303/2353 remain closed. Authorization-only access counters are all
+zero: no fixture, checkpoint read, candidate conversion, inference, benchmark,
+model/training run, raw/cache/target read, network, stream, board, profiler,
+energy, or qualification operation occurred.
+
+Seven new dependency-free tests raise the full optional unittest count from 286
+to 293 and pytest from 283 to 290, with three skips and 105 pytest subtests
+unchanged. Unittest takes 18.882 seconds (19.880 seconds wall) with
+565,280,768-byte maximum RSS; pytest takes 18.80 seconds (20.120 seconds wall)
+with 578,502,656-byte maximum RSS. The true zero-dependency run passes 281 tests
+with 118 expected skips in 0.359 seconds (0.650 seconds wall) and
+41,435,136-byte maximum RSS. The combined 26-test authorization, Loop 24
+contract, and RW3 boundary takes 0.210 seconds wall with 21,397,504-byte maximum
+RSS.
+
+The tracker was edited with the bundled artifact-tool runtime. Dashboard,
+Practice Track, Decision Log, Prompt Bank, and the Loops 25-44 header now agree
+on `Loop 24 authorized, no runtime`; all nine sheets render, the exported file
+reloads, and the formula-error scan is empty. Tracked and delivered copies are
+75,648 bytes with SHA-256
+`4be4012eea926b2b417fca3da1665e1f192718a50d5243aebf5d38f02841afb9`.
+
+This milestone authorizes one exact synthetic engineering experiment. It does
+not establish a precision speedup, integer-only execution, neural information,
+real-data accuracy, decoding improvement, end-to-end latency, useful EEG,
+portable hardware, or any clinical result.

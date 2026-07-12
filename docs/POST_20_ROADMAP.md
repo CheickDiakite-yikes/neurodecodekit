@@ -32,13 +32,17 @@ decision.
   calibrated and unmodified replay schedules, controls, bootstrap, access, and
   resource gates pass. Seed 2353 is consumed. See
   `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`.
-- Loop 24: Preregistered at `186bb6f`; implementation is not authorized. The
+- Loop 24: Authorized for the exact target-free frozen scope after the separate
+  2026-07-12 authorization-only commit is tested and pushed; no runtime exists.
+  The immutable preregistration at `186bb6f` keeps its original false flags. The
   contract freezes the float32 eager reference, explicit CPU float16, and
   dynamic-qint8 QNNPACK candidates; fresh target-free seeds 2401/2402; 12
   balanced selection timing rounds; exact behavior and resource gates; and 30
   refusal IDs. No fixture, candidate, checkpoint read, inference, timing,
-  energy, or qualification run exists. See
-  `docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md`.
+  energy, or qualification run exists. Real data, targets, training, energy,
+  RW3, and hardware remain unauthorized. See
+  `docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md` and
+  `docs/LOOP_24_AUTHORIZATION_DECISION.md`.
 - Real-World Practice Track RW0: Done as a primary-source research and planning
   gate. Versioned dataset/device registries, a local BYO Neurodata contract,
   and an exact 96,090,264-byte S20 EEG approval packet are frozen. No raw data,
@@ -73,7 +77,7 @@ decision.
 | 22 | Tiny learned causal encoder | Can a small train-only causal model learn the synthetic motif task while preserving the Loop 21 stream contract? | Optional-Torch encoder, offline/stream replay, parameter/state/RSS/runtime report, prior comparator. | Closed: 1,130 parameters; validation and one frozen test pass; 5/5 replay schedules; 300-byte state; one-thread CPU; no real cache or text claim. |
 | 23 | Streaming CTC prefix decoder | Can causal encoder frames produce stable incremental characters rather than only final strings? | Greedy/prefix state, partial-hypothesis trace, revision and emission-delay metrics. | Parked: mechanics and validation pass, but frozen exact test accuracy is 5/8 below 6/8; test consumed; no tuning or rerun. |
 | 23.5 | Blank/boundary calibration | Can one train-frame-fitted, target-length-independent blank intercept suppress tail false positives on fresh splits without harming any item? | Fresh 64/16/16 fixture, one convex scalar fit, unchanged comparator, calibration metrics, and one new test. | Closed: validation and frozen test are 16/16 exact at CER 0; zero regressions; 5/5 replay; seed 2353 consumed; supervised synthetic calibration only. |
-| 24 | Local precision and runtime | Can a decoder that first passes its correctness gate fit a realistic local CPU envelope without changing outputs beyond a registered tolerance? | float32/float16/dynamic-int8 candidates, state/parameter/RSS/RTF/energy proxy report. | Preregistered at `186bb6f`, not authorized: 3 candidates, seeds 2401/2402, 12 balanced rounds, 30 refusals, one-thread/4-MiB artifact caps; preserve every observable behavior and keep seed 2353 closed. |
+| 24 | Local precision and runtime | Can a decoder that first passes its correctness gate fit a realistic local CPU envelope without changing outputs beyond a registered tolerance? | float32/float16/dynamic-int8 candidates, state/parameter/RSS/RTF report. | Scope-narrowed authorization recorded, no runtime: after its authorization-only commit is pushed, execute 3 candidates, seeds 2401/2402, 12 balanced rounds, 30 refusals, and one-thread/4-MiB caps; preserve every observable behavior and keep seed 2353 closed. |
 
 ## Next Planned Tranche: Loops 25-44
 
@@ -87,9 +91,10 @@ in `docs/LOOPS_25_44_ROADMAP.md`; the primary-source rationale is in
 All 20 rows are `Not Started`, `execution_authorized: false`, and
 `proof_posture: planned_not_authorized`. They refine the earlier provisional
 25-30 concepts and extend them through Loop 44 without changing the current
-gate: Loop 24 remains the next numbered decision. Roadmap approval, general
-continuation, or work on documentation cannot authorize Loop 24, RW3 Stage A,
-or any Loop 25-44 operation.
+gate: Loop 24 remains the next numbered execution gate under its separate
+scope-narrowed authorization. Roadmap approval, general continuation, or work
+on documentation cannot expand Loop 24, authorize RW3 Stage A, or authorize any
+Loop 25-44 operation.
 
 ## Parallel Real-World Practice Track
 
@@ -117,11 +122,12 @@ whether to authorize Stage A pure-Python synthetic replay only, using the
 packet prepared at `163ff2f`, or hold it. Packet preparation is not
 authorization. BrainFlow, LSL, PyXDF, sockets, live sources, hardware, and
 Stages B-D remain independently gated. `RW4` remains blocked until the user
-explicitly approves the exact acquisition packet. Loop 24 is now independently
-preregistered at `186bb6f`, with every execution flag false. Its exact
-authorization cannot authorize RW3, data access, or training; RW3 authorization
-cannot authorize Loop 24. Neither track may use consumed evidence from the
-other.
+explicitly approves the exact acquisition packet. Loop 24 is independently
+preregistered at `186bb6f`, with every immutable contract flag false, and has a
+separate narrow target-free authorization that takes effect only after its own
+tested commit is pushed. It cannot authorize RW3, data access, or training; RW3
+authorization cannot authorize Loop 24. Neither track may use consumed evidence
+from the other.
 
 ## Persistent Constraints
 
@@ -133,7 +139,8 @@ other.
   tuning, endpoint design, or fresh evaluation.
 - Do not generate Loop 24 fixtures, load or convert the frozen checkpoint, run
   any precision candidate, benchmark, profile, or energy measurement before an
-  explicit Loop 24 authorization-only decision is recorded and pushed.
+  explicit Loop 24 authorization-only decision is recorded, tested, pushed,
+  and confirmed green.
 - If Loop 24 is authorized, seeds 2401 and 2402 remain physically separate
   selection and qualification partitions; candidate outputs, targets, labels,
   text, and consumed evidence may not create or select fixture rows.

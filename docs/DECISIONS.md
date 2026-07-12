@@ -1225,3 +1225,52 @@ Evidence: `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`,
 `docs/LOOPS_25_44_ROADMAP.md`, `registries/next_20_loops.v0.json`,
 `tests/test_next_20_loops_contract.py`, the `Loops 25-44` workbook sheet, and
 commit `56a1c0a`.
+
+## 0049 - Authorize only the frozen target-free Loop 24 gate
+
+Decision: record the user's explicit Loop 24 authorization as a conservative
+scope amendment bound to parent commit `4050b85` and the unchanged contract
+SHA-256
+`58e9d5407fef9419bc3bb0dc8cd3fa68d36dd238cb636d2f833dd9c5c6c3ae5d`.
+After this authorization-only milestone is tested, committed, pushed, and its
+CI confirmed, authorize only the registered target-free fixture, frozen
+checkpoint validation, three precision candidates, inference, selection,
+conditional one-time qualification, reports, and CLI surface.
+
+Why: the user also named real data and training, but adding either to Loop 24
+would mutate a preregistered no-target/no-training precision experiment after
+its thresholds, seeds, access counters, and candidate set were frozen. Preserve
+that ambition by routing causal preprocessing to Loop 25, separately authorized
+real validation-only model work to Loop 26, and metadata-only fresh-holdout
+research to Loop 27. Do not reopen S21 source-test/session-2, S7, or consumed
+seeds 2203, 2303, and 2353.
+
+Authorization boundary: the immutable `186bb6f` contract retains every false
+authorization field and its original hash. The separate decision makes only
+eight target-free fields true. Real or consumed data, targets, labels, text,
+training or parameter updates, new architectures, energy measurement, RW3,
+BrainFlow/LSL/PyXDF/sockets, devices, hardware, and Loops 25-44 execution remain
+false. This authorization itself creates no fixture, checkpoint read,
+candidate, inference, timing, profiler, energy, or qualification result.
+
+Measured authorization-only result: seven new invariants raise the optional
+suite from 286 to 293 unittests and from 283 to 290 pytest passes, with three
+skips and 105 pytest subtests unchanged. The true zero-dependency suite rises
+from 274 to 281 tests with 118 expected skips. The combined 26-test Loop 24 and
+RW3 boundary takes 0.210 seconds wall with 21,397,504-byte maximum RSS. Full
+optional unittest/pytest wall maxima are 19.880/20.120 seconds and
+565,280,768/578,502,656 bytes; the zero-dependency run takes 0.650 seconds wall
+and 41,435,136 bytes. The nine-sheet tracker is 75,648 bytes with SHA-256
+`4be4012eea926b2b417fca3da1665e1f192718a50d5243aebf5d38f02841afb9`;
+render, reload, range, and formula-error checks pass.
+
+Next boundary: push this authorization-only commit and confirm CI before
+implementation or any registered fixture/checkpoint operation. Then execute
+only the frozen selection-before-qualification order. A Loop 24 result cannot
+establish neural information, real-data accuracy, retained neural accuracy,
+end-to-end latency, EEG usefulness, portable hardware, assistive benefit, or
+clinical utility.
+
+Evidence: `docs/LOOP_24_AUTHORIZATION_DECISION.md`,
+`registries/loop24_authorization_decision.v0.json`,
+`tests/test_loop24_authorization_decision.py`, and the tracker `24-AUTH` row.

@@ -2,7 +2,8 @@
 
 Date: 2026-07-11
 
-Status: **Frozen before implementation; execution is not authorized**
+Status: **Frozen preregistration snapshot; separately authorized by
+`docs/LOOP_24_AUTHORIZATION_DECISION.md`, with no implementation or runtime yet**
 
 Machine contract: `registries/local_precision_runtime_contract.v0.json`
 
@@ -547,16 +548,24 @@ home-device evidence.
 ```text
 research:                        complete for preregistration
 contract:                        written
-implementation authorized:      false
-fixture generation:             absent and unauthorized
+separate authorization record:  written; effective after tested commit is pushed
+implementation authorized:      true under exact frozen target-free scope
+fixture generation:             absent; authorized only after decision push
 checkpoint reads:               0
 candidate conversions:          0
 model inference runs:           0
 training / parameter updates:   0 / 0
 target / consumed / real reads: 0 / 0 / 0
 RW3 operations:                 0
-next action:                    explicit Loop 24 implementation decision
+next action:                    push authorization-only commit, confirm CI, then implement
 ```
+
+The immutable contract retains its original false authorization fields so its
+pre-result SHA-256 remains auditable. Current authority lives in
+`registries/loop24_authorization_decision.v0.json`. That decision authorizes
+only target-free synthetic fixture/candidate/inference work; real data,
+targets, training, energy measurement, RW3, devices, and hardware stay outside
+Loop 24.
 
 ## Claim Boundary
 

@@ -719,6 +719,7 @@ Every closeout must report:
 ## Current Decision
 
 Loops 25-44 are detailed and ready for review as a future work queue. They are
-not approved experiments. The next numbered decision remains Loop 24, and the
-next practice-track decision remains RW3 Stage A; both retain all false
-execution flags until separately authorized or held.
+not approved experiments. The current numbered execution gate is Loop 24 under
+its separate target-free authorization; that decision does not change any of
+the 20 false roadmap flags. The next practice-track decision remains the
+separately unauthorized RW3 Stage A.
