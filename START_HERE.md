@@ -28,12 +28,17 @@
    target-free replay inspector, nine-clock timing contract, six latency claim
    levels, 18 future gates, and 30 refusals. It is planning research only;
    Loop 30 remains `Not Started` with no trace, UI, server, or browser run.
-12. Review `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` only when deciding whether
+12. Read `docs/LOOP_31_PRIMARY_SOURCE_RESEARCH.md` for the future 10-condition
+   encoder attribution matrix, contingent 5-condition LLM/Neuro Token matrix,
+   exact six-row gate, and the sensor-signal claim ceiling that reserves
+   brain-specific attribution for Loop 35. It is planning research only; Loop
+   31 remains `Not Started`.
+13. Review `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` only when deciding whether
    to authorize the independent RW3 Stage A.
-13. Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md` and
+14. Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md` and
    `docs/LOOPS_25_44_ROADMAP.md` for the planning-only Loops 25-44 queue.
-14. Paste `prompts/CODEX_START_PROMPT.md` into Codex to continue.
-15. Run tests:
+15. Paste `prompts/CODEX_START_PROMPT.md` into Codex to continue.
+16. Run tests:
 
 ```bash
 PYTHONPATH=src python -m unittest discover -s tests -v
@@ -50,7 +55,11 @@ research defines a strict zero-shot final-only rule while its experiment
 remains `Not Started`; Loop 29 planning research defines separate scalp EEG
 and OPM-MEG paths while its experiment remains `Not Started`; Loop 30 planning
 research defines a target-free local replay boundary while its experiment
-remains `Not Started`; Loops 31-44 remain `Not Started`. All are unauthorized.
+remains `Not Started`; Loop 31 planning research defines a 10-condition encoder
+and contingent 5-condition LLM attribution firewall while its experiment
+remains `Not Started`; Loops 32-44 remain `Not Started`. The maximum future
+local Loop 31 claim is sensor-signal dependence, and brain-specific attribution
+remains blocked on Loop 35. All are unauthorized.
 The queue does not reopen Loop 24 or authorize RW3.
 
 The parallel Real-World Practice Track starts at
@@ -67,7 +76,7 @@ and implementation commits were pushed and remotely green. Float16 preserved
 behavior but was slower; QNNPACK qint8 reduced payload but failed behavior and
 runtime gates; no candidate qualified, seed 2402 stayed unopened, and the gate
 parked at 65.154951 seconds versus its 60-second cap. Seed 2401 is consumed and
-must not be used for tuning. Real data, targets, training, energy measurement,
+must not be used for tuning. No real data, targets, training, energy measurement,
 RW3 Stage A, BrainFlow/LSL/PyXDF, sockets, streams, hardware, consumed caches,
 S20, and automatic cleaning remain unauthorized. Loop 24 and RW3 remain
 independent.
@@ -105,6 +114,13 @@ exactly to `127.0.0.1`, show revision/finalization/proof labels accessibly, and
 fail on any non-loopback browser traffic. No trace seed, fixture, UI, server,
 browser run, consumed artifact, model, stream, live source, or hardware
 operation exists; the experiment remains `Not Started`.
+Loop 31 planning research freezes ten encoder conditions, five contingent
+language-model conditions, six distinct claim classes, 18 future requirements,
+24 refusal IDs, and 19 false authorization flags. Its experiment remains `Not
+Started`; no protected cache, target, checkpoint, model, training, validation,
+LLM, Neuro Token, S20, S25, stream, or device operation exists. Even a future
+clean local pass can establish only sensor-signal dependence until Loop 35
+excludes peripheral and task-locked shortcuts.
 The proposed fresh S20 EEG block is **not authorized** for download or signal
 access. Its exact four-file, 96,090,264-byte dry run is in
 `docs/FRESH_EEG_BENCHMARK_S20_APPROVAL_PACKET.md`.
@@ -129,7 +145,9 @@ plus observed, and strict corruption-control wins. All 21 authorization fields
 are false and the experiment remains `Not Started`. Loop 29 planning research
 is complete while its experiment remains `Not Started`. Loop 30 planning
 research is complete while its target-free replay experiment remains `Not
-Started`; Loops 31-44 have no loop-specific research closeout yet.
+Started`. Loop 31 planning research is complete while its neural-attribution
+experiment remains `Not Started`; Loops 32-44 have no loop-specific research
+closeout yet.
 Session 1 provides a strict 55/6/5 split with
 train-only robust scaling. Session 2 is a complete two-part FIFF recording with
 63 performed trials; MAT slots 54, 58, and 60 are explicitly empty and are

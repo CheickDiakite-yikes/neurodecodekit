@@ -121,6 +121,14 @@ Do not reset, revert, delete, or overwrite work already present.
   server, browser run, consumed artifact, model, stream, live source, or
   hardware operation exists. Stability is not confidence or correctness, and
   replay scheduling is not capture-to-user latency.
+- Loop 31 planning research is complete while the neural-attribution experiment
+  remains `Not Started`. The future boundary freezes a 10-condition encoder
+  matrix, a contingent 5-condition LLM/Neuro Token matrix, exact six-row
+  intersection-union inference, 18 gates, 24 refusals, and 19 false
+  authorization fields. The maximum future local claim is sensor-signal
+  dependence; brain-specific attribution remains blocked on Loop 35. No cache,
+  target, checkpoint, model, training, validation, LLM, Neuro Token, S20, S25,
+  stream, device, or hardware operation exists.
 - No real recording quality, neural advantage, unseen-person generalization,
   useful EEG decoder, real-time decoding, portable-hardware, arbitrary-thought,
   or clinical result has been demonstrated.
@@ -230,6 +238,11 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
     or server authorization. Do not generate its trace, reopen consumed Loop
     23/24 artifacts, launch a browser/server, expose a file path, make a network
     request, display confidence, or imply live neural decoding from this prompt.
+14. Treat the Loop 31 attribution firewall as planning research, not permission
+    to open source validation, targets, caches, checkpoints, models, or an LLM.
+    Do not generate a condition fixture, run an ablation, reopen consumed S7 or
+    S21 evidence, access S20/S25, or label sensor-signal dependence as
+    brain-specific before Loop 35.
 
 ## Required deliverables for the next authorized milestone
 

@@ -38,6 +38,7 @@ and explain exactly what the result does not prove.
 | Transfer decision rule | Loop 28 research separates T0-T3 evidence and recommends a strict S25 T2 zero-shot gate: zero target fit, at least 48 final rows, at least 0.05 macro-CER improvement, 65,535 paired swaps plus observed, and strict corruption-control wins | The experiment is `Not Started`; this resolves one planning dependency without authorizing S25, a model run, calibration, or final access |
 | Portable sensing decision | Loop 29 research separates cryogenic MEG, partner/lab OPM-MEG, local-first scalp EEG, and non-neural controls through 15 requirements and six qualification levels | Planning research is complete while the experiment is `Not Started`; no device, download, stream, hardware session, or portable decoding result exists |
 | Local replay interaction decision | Loop 30 research freezes four source modes, a 30-field target-free trace, nine clock domains, six latency levels, 18 gates, 30 refusals, and fixed loopback/browser/accessibility controls | Planning research is complete while the experiment is `Not Started`; no trace, UI, server, browser run, live source, confidence, or end-to-end latency result exists |
+| Neural-attribution decision | Loop 31 research freezes a 10-condition encoder matrix, a contingent 5-condition LLM/Neuro Token matrix, exact six-row intersection-union inference, 18 gates, and 24 refusals | Planning research is complete while the experiment is `Not Started`; a future local pass can establish at most sensor-signal dependence, with brain-specific attribution reserved for Loop 35 |
 | Real predictive evidence | Both the same-person cross-session MEG model and the bounded S7 EEG classifier lose to no-signal controls | The current scientific result is negative, explicit, and frozen against post-hoc tuning |
 | Local execution gate | Float16 preserved exact behavior but ran `1.170x` slower on the producer; qint8 cut payload to `47.1%` but changed behavior and ran `2.785x` slower | Float32 is retained, qualification stayed unopened, and Loop 24 is parked after the full run exceeded its 60-second cap |
 | Next transport layer | Stage A is specified as 90 future schedule-by-fixture cases with 30 exact refusals under a 32 MiB cap | The decision packet is review-ready; no replay runtime, socket, board, or hardware path is authorized yet |
@@ -65,7 +66,8 @@ and explain exactly what the result does not prove.
 | Loop 28 transfer boundary | T0-T3 taxonomy; strict zero-shot/transductive split; 48-row floor; 0.05 macro-CER margin; 65,535 paired assignments plus observed; 4 comparators; 21 false authorization fields | planning research only | Makes the future one-time S25 decision falsifiable while reserving calibrated transfer for a physically separate design |
 | Loop 29 portability boundary | 15 modality requirements; 4 profiles; 6 qualification levels; 12 future packet gates; 24 false authorization fields; 5,000,000,000-byte preferred storage ceiling | planning research only | Chooses EEG as the immediate local-first lane and OPM-MEG as a partner/lab lane without treating channel ablation, vendor specifications, or home acquisition as text decoding |
 | Loop 30 replay interaction boundary | 4 source modes; 30 event fields; 9 clock domains; 6 latency levels; 18 future gates; 30 refusals; 30 false authorization fields | planning research only | Defines how a future target-free local replay can show revisions, finalization, clocks, privacy, and proof posture without implying live or low-latency neural decoding |
-| Test and release surface | 426 local unittests with 3 expected skips; 423 pytest passes plus 198 subtests; 394 dependency-light Python tests with 121 expected skips | Loop 30 local shell and remote push/PR CI verified at `958ac4e` | Makes research contracts, candidate selection, source bindings, access order, tamper checks, and authorization boundaries executable on ordinary hardware |
+| Loop 31 neural-attribution boundary | 10 encoder conditions; 5 contingent LLM conditions; 6 claim classes; 18 future gates; 24 refusals; 19 false authorization fields | planning research only | Separates no-signal, timing, context, corrupted-signal, language-prior, and conditional Neuro Token effects while blocking brain-specific claims until Loop 35 |
+| Test and release surface | 443 local unittests with 3 expected skips; 440 pytest passes plus 205 subtests; 411 dependency-light Python tests with 121 expected skips | Loop 31 local shell verified; remote CI pending | Makes research contracts, candidate selection, source bindings, access order, tamper checks, and authorization boundaries executable on ordinary hardware |
 
 ### Real-Data Scientific Scorecard
 
@@ -91,11 +93,12 @@ engineering wins, not hidden behind synthetic accuracy.
 | Loop 25 v1 amendment plus immutable-v0 request suite | 0.120 sec | 22,560,768 bytes | no generated payload |
 | Loop 26 research plus roadmap/Loop 25 boundary suite | 0.140 sec wall max | 22,986,752 bytes max | no generated payload |
 | Loop 27 pinned metadata selector | 3.100 sec wall | 63,766,528 bytes | zero downloaded payload bytes |
-| Loop 25-30 focused boundary suite | 0.11 sec wall | 29,097,984 bytes | 122 tests; no generated payload |
-| Loop 30 plus roadmap invariants | 0.15 sec wall | 20,037,632 bytes | 24 tests; no trace, UI, server, or browser run |
+| Loop 24-31 focused boundary suite | 0.12 sec wall | 29,179,904 bytes | 125 tests; no generated experiment payload |
+| Loop 31 plus roadmap invariants | 0.07 sec wall | 20,447,232 bytes | 26 tests; no cache, target, model, training, validation, LLM, or Neuro Token run |
 | Loop 28 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 10 web operations, 1 GitHub metadata call, zero code/data payload bytes |
 | Loop 29 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 14 public web operations, zero protected data/model/device operations, zero downloaded payload bytes |
 | Loop 30 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 10 public web operations, zero trace/server/browser/protected-data/model/stream operations, zero downloaded payload bytes |
+| Loop 31 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 16 public network operations including 8 GitHub API requests; zero protected-data/model/training/validation/LLM operations and zero downloaded data/model bytes |
 | Loop 24 registered selection | 65.154951 sec internal | 222,248,960 bytes max worker | 262,822 bytes fixture plus output |
 | Complete optional-neuro/ML test runners | 25.60 sec unittest / 24.31 sec pytest wall | 583,204,864 bytes max | temporary test output only |
 
@@ -206,6 +209,13 @@ Read this before interpreting any number in the repository.
   browser traffic, explicit finalization, accessible status updates, and
   unavailable confidence. All 30 authorization flags remain false, no seed or
   payload exists, and the experiment is `Not Started`.
+- **Loop 31 planning research:** the attribution firewall separates a future
+  10-condition encoder matrix from a contingent 5-condition LLM/Neuro Token
+  matrix. Exact six-row intersection-union inference, target-blind prediction
+  freezing, timing/context controls, 18 gates, and 24 refusals are machine
+  checked. All 19 authorization flags remain false, the experiment is `Not
+  Started`, and brain-specific attribution remains blocked on Loop 35; the
+  maximum future local claim is sensor-signal dependence.
 
 ### What The Results Actually Say
 
@@ -243,6 +253,10 @@ Read this before interpreting any number in the repository.
   not a running streaming decoder. A stable partial can be wrong, replay time
   is not capture time, and a localhost label without network and file-exposure
   QA is not a measured privacy result.
+- Loop 31 defines the evidence needed for sensor-signal dependence, not a
+  neural advantage result. Language gain and conditional Neuro Token gain stay
+  separate, and brain-specific attribution remains blocked on Loop 35 even if
+  the future local matrix passes.
 
 ### What Is Not Established
 
@@ -760,8 +774,10 @@ The original numbered development sequence has reached:
   `f5fc740` defines a local-first EEG lane, a partner/lab OPM-MEG lane, and a bounded 5-10 GB
   capacity envelope while its experiment remains `Not Started`. Loop 30
   planning research now freezes the local target-
-  free replay interaction boundary while its experiment remains `Not Started`;
-  Loops 31-44 remain `Not Started`. All 20
+  free replay interaction boundary while its experiment remains `Not Started`.
+  Loop 31 planning research defines a 10-condition encoder and contingent
+  5-condition LLM attribution firewall while its experiment remains `Not
+  Started`; Loops 32-44 remain `Not Started`. All 20
   execution flags are false. Loop 24's parked result does not authorize Loop
   25, and later research cannot authorize an earlier or later experiment.
 

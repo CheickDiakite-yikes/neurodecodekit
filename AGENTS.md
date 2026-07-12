@@ -173,6 +173,23 @@ closed. Stability is not correctness or confidence, replay scheduling is not
 capture latency, and a future Loop 30 authorization cannot authorize RW3 or a
 live source.
 
+Loop 31 planning research is complete while its neural-contribution experiment
+remains `Not Started`:
+
+```bash
+cat docs/LOOP_31_PRIMARY_SOURCE_RESEARCH.md
+python -m json.tool registries/loop31_research_boundary.v0.json >/dev/null
+```
+
+The research freezes a future 10-condition local encoder attribution matrix, a
+separately gated 5-condition language-model and Neuro Token extension, 18
+future requirements, 24 refusals, and 19 false `authorized_now` fields. A
+future clean encoder result can establish at most sensor-signal dependence for
+the exact source slice. Brain-specific neural contribution remains unavailable
+until Loop 35 excludes peripheral and task-locked shortcuts. No cache, target,
+checkpoint, model, training, validation, language model, Neuro Token, S20,
+S25, stream, device, or hardware operation occurred or is authorized.
+
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
 commit `c3d1f01`, before any adapter, source chunk, fixture, socket, board, or
@@ -208,8 +225,9 @@ while preregistration remains blocked; Loop 28 planning research defines a T2
 strict zero-shot rule while its experiment remains `Not Started`; Loop 29
 planning research defines separate EEG and OPM-MEG pathways while its
 experiment remains `Not Started`; Loop 30 planning research defines the local
-target-free replay boundary while its experiment remains `Not Started`; Loops
-31-44 remain `Not Started`. All 20
+target-free replay boundary while its experiment remains `Not Started`; Loop
+31 planning research defines the sensor-signal attribution firewall while its
+experiment remains `Not Started`; Loops 32-44 remain `Not Started`. All 20
 execution flags are false. This roadmap does not
 reopen Loop 24, authorize RW3, or permit a Loop 25-44 fixture, download, data
 read, model run, training run, stream, board, or hardware operation. A broad
@@ -264,6 +282,11 @@ authorization boundary.
   loopback/privacy/accessibility/browser-QA settings, zero protected access,
   and no preregistration, seed, fixture, UI, server, browser run, model,
   stream, live source, or generated experiment payload.
+- The Loop 31 planning registry remains exact with 19 false authorization
+  fields, a 10-condition encoder matrix, a contingent 5-condition LLM matrix,
+  18 future requirements, 24 refusal IDs, and a Loop 35 ceiling on
+  brain-specific attribution; no protected input, model, training, validation,
+  LLM, Neuro Token, or experiment payload exists.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed
