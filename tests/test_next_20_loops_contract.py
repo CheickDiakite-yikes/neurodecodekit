@@ -26,7 +26,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         self.assertEqual(
             roadmap["schema_name"], "neurodecodekit.next_twenty_loops_roadmap"
         )
-        self.assertEqual(roadmap["schema_version"], "0.2.0")
+        self.assertEqual(roadmap["schema_version"], "0.3.0")
         self.assertEqual(roadmap["roadmap_id"], "loops-25-44")
         self.assertEqual(roadmap["status"], "planning_only_not_execution_authorization")
         self.assertEqual(
@@ -51,6 +51,10 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         self.assertFalse(boundary["loop25_execution_authorized"])
         self.assertFalse(boundary["loop25_development_seed_opened"])
         self.assertFalse(boundary["loop25_qualification_seed_opened"])
+        self.assertTrue(boundary["loop26_research_packet_prepared"])
+        self.assertFalse(boundary["loop26_preregistration_prepared"])
+        self.assertFalse(boundary["loop26_execution_authorized"])
+        self.assertFalse(boundary["loop26_dependency_loop25_satisfied"])
         self.assertFalse(boundary["rw3_stage_a_authorized"])
         self.assertFalse(boundary["general_continuation_is_authorization"])
         self.assertFalse(boundary["roadmap_approval_is_loop_execution_authorization"])
@@ -99,6 +103,11 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                 else:
                     self.assertEqual(row["status"], "Not Started")
                     self.assertEqual(row["proof_posture"], "planned_not_authorized")
+                    if row["loop_id"] == 26:
+                        self.assertEqual(
+                            row["research_status"], "planning_research_complete"
+                        )
+                        self.assertFalse(row["preregistration_prepared"])
                 self.assertTrue(all(isinstance(row[key], str) and row[key].strip() for key in required_text))
                 self.assertGreaterEqual(len(row["controls"]), 3)
                 self.assertGreaterEqual(len(row["primary_metrics"]), 4)
@@ -153,7 +162,13 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         self.assertTrue(
             {
                 "brain2qwerty_v2",
+                "brain2qwerty_v2_code",
                 "brain2qwerty_v1",
+                "scipy_permutation_test",
+                "scipy_bootstrap",
+                "classifier_permutation_tests",
+                "small_sample_cv_uncertainty",
+                "time_series_permutation_dependence",
                 "mne_resampling",
                 "neuralset_v0_2_2",
                 "scipy_iirdesign",

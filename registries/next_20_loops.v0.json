@@ -1,6 +1,6 @@
 {
   "schema_name": "neurodecodekit.next_twenty_loops_roadmap",
-  "schema_version": "0.2.0",
+  "schema_version": "0.3.0",
   "roadmap_id": "loops-25-44",
   "prepared_at": "2026-07-12",
   "status": "planning_only_not_execution_authorization",
@@ -26,6 +26,10 @@
     "loop25_execution_authorized": false,
     "loop25_development_seed_opened": false,
     "loop25_qualification_seed_opened": false,
+    "loop26_research_packet_prepared": true,
+    "loop26_preregistration_prepared": false,
+    "loop26_execution_authorized": false,
+    "loop26_dependency_loop25_satisfied": false,
     "rw3_status": "stage_a_packet_prepared_unauthorized",
     "rw3_stage_a_authorized": false,
     "general_continuation_is_authorization": false,
@@ -160,30 +164,36 @@
       "status": "Not Started",
       "execution_authorized": false,
       "proof_posture": "planned_not_authorized",
+      "research_status": "planning_research_complete",
+      "research_packet": "docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md",
+      "research_registry": "registries/loop26_research_boundary.v0.json",
+      "preregistration_prepared": false,
+      "architecture_recommendation_status": "not_frozen_or_authorized",
       "core_question": "Does one fixed, small causal encoder show neural information above no-signal and shuffled controls on source validation without touching any test set?",
       "why_high_value": "The project has strong mechanics but no real neural advantage; this is the first gate that can justify continuing the predictive branch.",
       "build_deliverable": "Preregistered tiny architecture, train-only fit path, six-row validation report, uncertainty, control parity, and immutable access ledger.",
-      "research_deliverable": "Power and identifiability note stating what six validation rows can and cannot establish.",
+      "research_deliverable": "Completed planning-only power and identifiability note: six paired rows yield 64 exact sign assignments, one-person inference only, and no source-test or transfer claim.",
       "data_scope": "Only separately authorized S21 source-train and source-validation members; five source-test rows and all session-2 rows stay closed.",
       "controls": [
-        "Same-split no-signal prior.",
-        "Target permutation fitted on train only.",
-        "Time-shift and channel-permutation controls chosen before validation opens.",
-        "Frozen non-neural parameter-count and compute-matched comparator where feasible."
+        "Same-split train-only no-signal sentence prior and zero-signal inference.",
+        "Semantic-ID-derived train-target derangement frozen before targets open.",
+        "Nonwrapping zero-filled time displacement and channel-name-hash derangements frozen before signal arrays open.",
+        "A 2,884-parameter linear signal CTC matched against the recommended 2,908-parameter causal candidate."
       ],
       "primary_metrics": [
-        "CER and exact-sequence accuracy",
-        "paired item differences and interval",
-        "control margins",
+        "macro per-sentence CER and corpus CER",
+        "all six paired item differences and complete 64-assignment exact null",
+        "exact-sequence accuracy, WER, blank fraction, and wins/ties/losses",
+        "margin over every signal-free and corrupted-signal control",
         "parameter count, runtime, peak RSS, and artifact bytes",
         "raw, cache, target, model, and training access counts"
       ],
-      "acceptance_boundary": "Proceed only if the preregistered primary neural-versus-prior margin and all required controls pass on validation with no access violation; this does not authorize source-test opening.",
+      "acceptance_boundary": "A future preregistration may proceed only after Loop 25 closes. A future experiment may proceed only if its frozen primary neural-versus-prior margin and every required control pass on exactly six validation rows with no access violation; this cannot authorize source-test opening.",
       "stop_rule": "If the neural path does not beat the registered controls, park real-model scaling and move to failure analysis without touching test or increasing model size.",
       "depends_on": [25],
       "external_gates": ["separate_real_cache_and_training_authorization"],
-      "authorization_boundary": "Planning only. Real-cache reads, target access, training, validation opening, and model runs are all unauthorized now.",
-      "resource_cap": "One thread, one worker, existing tiny-model class only, 32 MiB generated artifacts, 20 minutes total authorized CPU time, and 1 GiB peak RSS."
+      "authorization_boundary": "Planning research is complete, but no experiment preregistration or authorization sentence exists. Real-cache reads, target access, training, validation opening, model runs, test/session-2 access, and Loop 25 execution are unauthorized now.",
+      "resource_cap": "One thread, one worker, at most 2,908 trainable parameters, 32 MiB generated artifacts, 20 minutes total future CPU time across candidate and controls, and 1 GiB peak RSS."
     },
     {
       "loop_id": 27,
@@ -794,7 +804,7 @@
   ],
   "loop_source_map": {
     "25": ["brain2qwerty_v2", "neuralset_v0_2_2", "mne_resampling", "scipy_iirdesign"],
-    "26": ["brain2qwerty_v1", "brain2qwerty_v2"],
+    "26": ["brain2qwerty_v1", "brain2qwerty_v2", "brain2qwerty_v2_code", "scipy_permutation_test", "scipy_bootstrap", "classifier_permutation_tests", "small_sample_cv_uncertainty", "time_series_permutation_dependence"],
     "27": ["brain2qwerty_v1", "brain2qwerty_v2", "datasheets"],
     "28": ["brain2qwerty_v2", "moabb_benchmark"],
     "29": ["brain2qwerty_v2", "moabb_benchmark"],
@@ -826,6 +836,42 @@
       "title": "Noninvasive decoding of typed sentences from human brain activity",
       "url": "https://www.nature.com/articles/s41593-026-02303-2.pdf",
       "roadmap_use": "Motor and keystroke contribution, EEG/MEG separation, language-prior controls, and sentence-level latency boundaries."
+    },
+    {
+      "source_id": "brain2qwerty_v2_code",
+      "title": "Official Brain2Qwerty v2 implementation",
+      "url": "https://github.com/facebookresearch/brain2qwerty/tree/main/brain2qwerty_v2",
+      "roadmap_use": "Released whole-sentence Conv-Conformer, CTC, alignment, LLM, data, and training configuration boundaries."
+    },
+    {
+      "source_id": "scipy_permutation_test",
+      "title": "SciPy exact permutation test",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.permutation_test.html",
+      "roadmap_use": "Exact paired assignment counts, sign-change nulls, and exchangeability semantics for the six-row validation gate."
+    },
+    {
+      "source_id": "scipy_bootstrap",
+      "title": "SciPy paired bootstrap",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html",
+      "roadmap_use": "Paired index-resampling semantics and descriptive interval boundaries."
+    },
+    {
+      "source_id": "classifier_permutation_tests",
+      "title": "Permutation Tests for Studying Classifier Performance",
+      "url": "https://jmlr.org/beta/papers/v11/ojala10a.html",
+      "roadmap_use": "Label and restricted-feature permutation controls for distinguishing learned structure from chance associations."
+    },
+    {
+      "source_id": "small_sample_cv_uncertainty",
+      "title": "Cross-validation failure: Small sample sizes lead to large error bars",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28655633/",
+      "roadmap_use": "Small-sample predictive uncertainty and limits on generalization claims from a tiny validation set."
+    },
+    {
+      "source_id": "time_series_permutation_dependence",
+      "title": "Permutation testing for dependence in time series",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/jtsa.12638",
+      "roadmap_use": "Why naive sample permutations are not exact null tests for autocorrelated signals."
     },
     {
       "source_id": "mne_resampling",
