@@ -1438,3 +1438,40 @@ Evidence: `docs/LOOP_25_ANTI_ALIAS_AUDIT.md`,
 `docs/LOOP_25_AUTHORIZATION_PACKET_V1.md`,
 `registries/loop25_authorization_request.v1.json`, tracker row `25-AA`, and
 GitHub CI run `29195938038`.
+
+## 0053 - Close Loop 26 planning research without preregistering execution
+
+Decision: mark Loop 26 planning research complete while leaving the experiment
+status `Not Started`, its Loop 25 dependency unsatisfied, and every one of its
+14 `authorized_now` fields false. Do not create a Loop 26 experiment contract,
+authorization request, runtime module, model, fixture, or payload from this
+decision.
+
+Why: the existing source protocol has only six reserved validation sentence
+instances from one person and one session. It can support exactly 64 paired
+sign assignments, giving a minimum attainable two-sided p-value of 0.03125
+when all six differences are nonzero. It cannot support source-test,
+cross-session, unseen-person, population, modality, device, or clinical claims.
+The official Brain2Qwerty v2 reference is whole-sentence, noncausal, and
+GPU-scale; copying it would neither fit this repository's bounded local goal nor
+prove causality.
+
+Future design recommendation: preserve the existing 2,908-parameter real CTC
+size ceiling while replacing its symmetric kernel-3 padding with two left
+samples and zero right context. Compare it with a 2,884-parameter linear signal
+CTC plus the train-only no-signal prior, zero signal, target derangement,
+channel derangement, and nonwrapping zero-filled time displacement. These are
+recommendations, not frozen architecture, thresholds, seeds, or access order.
+
+Access and resource boundary: this pass performs zero raw-signal, real-cache,
+target, validation-prediction, source-test, session-2, checkpoint, model,
+training, network, RW3, stream, board, device, or hardware operations. A future
+preregistration may retain one thread, a 2,908-parameter ceiling, 20 total CPU
+minutes across all candidate/control training, 1 GiB RSS, 32 MiB generated
+bytes, and zero new downloads, but must freeze or amend those values before any
+protected content opens.
+
+Evidence: `docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop26_research_boundary.v0.json`,
+`tests/test_loop26_research_boundary.py`, roadmap commit `03605c5`, tracker row
+`26-R1`, and GitHub CI run `29197895836`.

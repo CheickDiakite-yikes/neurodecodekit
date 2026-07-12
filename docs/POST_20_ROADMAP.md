@@ -76,6 +76,7 @@ decision.
 | 23.5 | Blank/boundary calibration | Can one train-frame-fitted, target-length-independent blank intercept suppress tail false positives on fresh splits without harming any item? | Fresh 64/16/16 fixture, one convex scalar fit, unchanged comparator, calibration metrics, and one new test. | Closed: validation and frozen test are 16/16 exact at CER 0; zero regressions; 5/5 replay; seed 2353 consumed; supervised synthetic calibration only. |
 | 24 | Local precision and runtime | Can a decoder that first passes its correctness gate fit a realistic local CPU envelope without changing outputs beyond a registered tolerance? | float32/float16/dynamic-int8 candidates, state/parameter/RSS/RTF report. | Parked: float16 is exact but slower; qint8 is smaller but incorrect and slower; no qualification open; runtime 65.154951 sec exceeds 60 sec; retain float32 and do not rerun seed 2401. |
 | 25 | Causal preprocessing audit | Can every upstream transform run with zero future context, full folding-band anti-alias protection, exact timing, and chunk/resume identity? | Frozen stateful notch/bandpass/dedicated-antialias SOS, decimation, normalization, and target-free v1 packet. | Amended at green commit `b6b92d8`; 65,537 response points, 23 alias probes, 7 schedules, 10 resume cuts, 3 mutation cuts, 45 refusals, and 23 counters are frozen; request remains false, both seeds are unopened, and no runtime exists. |
+| 26 | Real validation-only encoder gate | Can one fixed tiny causal encoder beat honest controls on the six reserved source-validation sentences? | Planning-only identifiability note and machine boundary before any experiment contract. | Planning research complete at `03605c5`; 2,908/2,884-parameter recommendations, six controls, 64 exact paired assignments, and 14 false authorization fields; experiment remains `Not Started` with zero protected access. |
 
 ## Next Planned Tranche: Loops 25-44
 
@@ -87,13 +88,13 @@ in `docs/LOOPS_25_44_ROADMAP.md`; the primary-source rationale is in
 `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`.
 
 Loop 25 is now `Amended Preregistration` with
-`proof_posture: amended_preregistered_no_implementation_or_execution`; Loops
-26-44 remain `Not Started` and `planned_not_authorized`. All 20
-`execution_authorized` flags are false. Loop 25's research, machine contract,
-and exact decision packet are ready for review, but packet preparation does not
-authorize it. Roadmap approval, general continuation, or documentation work
-cannot reopen Loop 24, authorize RW3 Stage A, or authorize any Loop 25-44
-operation.
+`proof_posture: amended_preregistered_no_implementation_or_execution`. Loop 26
+planning research is complete, but its experiment remains `Not Started` and
+`planned_not_authorized`; Loops 27-44 remain `Not Started`. All 20
+`execution_authorized` flags are false. Loop 25's exact decision packet is
+ready for review, while Loop 26 has no preregistration or authorization packet.
+Roadmap approval, general continuation, or documentation work cannot reopen
+Loop 24, authorize RW3 Stage A, or authorize any Loop 25-44 operation.
 
 ## Parallel Real-World Practice Track
 

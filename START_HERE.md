@@ -10,12 +10,15 @@
    `docs/LOOP_25_CAUSAL_PREPROCESSING_AMENDMENT_1.md`, and
    `docs/LOOP_25_AUTHORIZATION_PACKET_V1.md` before making the next numbered
    decision. The original v0 registration remains historical provenance.
-7. Review `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` only when deciding whether
+7. Read `docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md` for the next predictive
+   design and its six-item identifiability ceiling. It is planning research
+   only; Loop 26 remains `Not Started` with no preregistration or authorization.
+8. Review `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` only when deciding whether
    to authorize the independent RW3 Stage A.
-8. Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md` and
+9. Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md` and
    `docs/LOOPS_25_44_ROADMAP.md` for the planning-only Loops 25-44 queue.
-9. Paste `prompts/CODEX_START_PROMPT.md` into Codex to continue.
-10. Run tests:
+10. Paste `prompts/CODEX_START_PROMPT.md` into Codex to continue.
+11. Run tests:
 
 ```bash
 PYTHONPATH=src python -m unittest discover -s tests -v
@@ -25,8 +28,10 @@ Tracker scope: the spreadsheet's `20` KPI is the size of the original roadmap,
 not the current loop number. Its dashboard now separately reports the current
 post-roadmap position as **Loop 25 amended v1; authorization pending**, and
 its ninth sheet contains the separate **Loops 25-44 queue**. Loop 25 is in
-review with `execution_authorized: false`; Loops 26-44 remain `Not Started` and
-unauthorized. The queue does not reopen Loop 24 or authorize RW3.
+review with `execution_authorized: false`; Loop 26 planning research is
+complete while its experiment remains `Not Started`; Loops 27-44 also remain
+`Not Started`. All are unauthorized. The queue does not reopen Loop 24 or
+authorize RW3.
 
 The parallel Real-World Practice Track starts at
 `docs/REAL_WORLD_PRACTICE_TRACK_RESEARCH.md`. RW0 is a completed research gate;
@@ -57,6 +62,13 @@ coefficients, fixture, transform, partition open, cache read, target, model,
 training run, CLI, or experiment payload exists. The next numbered decision is
 to use the exact sentence in `docs/LOOP_25_AUTHORIZATION_PACKET_V1.md`, amend
 again, or hold.
+Loop 26 planning research at `03605c5` identifies a 2,908-parameter causal
+candidate recommendation, a 2,884-parameter linear comparator, six required
+controls, and all 64 paired sign assignments available from six reserved
+validation sentences. Its machine registry keeps all 14 `authorized_now`
+fields false. No real-cache content, target, model, training, validation,
+source-test, or session-2 access occurred; the experiment remains `Not
+Started` and waits on Loop 25 plus its own preregistration and authorization.
 The proposed fresh S20 EEG block is **not authorized** for download or signal
 access. Its exact four-file, 96,090,264-byte dry run is in
 `docs/FRESH_EEG_BENCHMARK_S20_APPROVAL_PACKET.md`.
@@ -69,6 +81,8 @@ complete; Loops 13, 23, and 24 are parked after measured gates. Loop 24 retains
 float32, consumed selection seed 2401, and left qualification seed 2402
 physically unopened. Loop 25 is amended and preregistered but not authorized;
 seeds 2501 and 2502 remain unopened. Loops 26-44 remain planning-only.
+Loop 26's planning research is complete, but its experiment status remains
+`Not Started`; Loops 27-44 have no loop-specific research closeout yet.
 Session 1 provides a strict 55/6/5 split with
 train-only robust scaling. Session 2 is a complete two-part FIFF recording with
 63 performed trials; MAT slots 54, 58, and 60 are explicitly empty and are

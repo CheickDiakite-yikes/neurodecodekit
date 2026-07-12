@@ -81,6 +81,22 @@ consumed data, targets, labels, text, model inference, training, new
 architectures, energy measurement, RW3, streams, devices, hardware, and Loops
 26-44 execution remain unauthorized.
 
+Loop 26 planning research is complete at commit `03605c5`, but the experiment
+remains `Not Started` and has no preregistration or authorization sentence:
+
+```bash
+cat docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md
+python -m json.tool registries/loop26_research_boundary.v0.json >/dev/null
+```
+
+The note identifies a 2,908-parameter causal candidate recommendation, a
+2,884-parameter linear signal comparator, the strict 55/6/5 source split, and
+the 64 exact paired sign assignments available from six reserved validation
+sentences. All 14 `authorized_now` fields are false. No real-cache content,
+target, model, checkpoint, training, validation prediction, source test, or
+session-2 evidence was opened. Do not turn this planning result into a Loop 26
+implementation, validation run, neural result, or authorization shortcut.
+
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
 commit `c3d1f01`, before any adapter, source chunk, fixture, socket, board, or
@@ -110,11 +126,12 @@ A primary-source-informed next tranche defines Loops 25-44 in
 `registries/next_20_loops.v0.json`. It contains exactly 20 planning rows across
 five phases, with detailed controls, metrics, stop rules, resource caps,
 dependencies, and source bindings. Loop 25 is `Amended Preregistration` with
-`execution_authorized: false`; Loops 26-44 remain `Not Started` with false
-execution flags. This roadmap does not reopen Loop 24, authorize RW3, or permit
-a Loop 25-44 fixture, data read, model run, training run, stream, board, or
-hardware operation. A broad request to continue toward Loop 44 is a goal, not a
-substitute for each frozen authorization boundary.
+`execution_authorized: false`; Loop 26 has completed planning research while
+its experiment remains `Not Started`; Loops 27-44 also remain `Not Started`.
+All 20 execution flags are false. This roadmap does not reopen Loop 24,
+authorize RW3, or permit a Loop 25-44 fixture, data read, model run, training
+run, stream, board, or hardware operation. A broad request to continue toward
+Loop 44 is a goal, not a substitute for each frozen authorization boundary.
 
 ## Acceptance criteria for next PR
 
@@ -138,14 +155,17 @@ substitute for each frozen authorization boundary.
 - The current Loop 25 v1 authorization request remains hash-bound to the green
   amendment, every `authorized_now` field remains false, and the v0 request is
   visibly historical and unauthorized.
+- The Loop 26 planning registry remains exact with 14 false authorization
+  fields, a 55/6/5 split, six validation items, 64 exact paired assignments,
+  2,908/2,884-parameter recommendations, and no preregistration or runtime.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed
   2401 is not rerun or tuned, qualification seed 2402 remains unopened, and
   real/consumed data, targets, energy, training, and RW3 counters remain zero.
 - No Loop 25-44 runtime, fixture, filter-design run, numerical preprocessing,
-  data/cache read, model run, training run, or generated payload exists without
-  its own preregistration and authorization.
+  data/cache read, model run, training run, validation open, or generated
+  payload exists without its own preregistration and authorization.
 - All public docs agree that the registration freezes five schedules, 18 future
   fixture families, 30 refusal IDs, and four separately authorized stages, and
   that the Stage A packet proposes 90 future cases without authorizing them.
