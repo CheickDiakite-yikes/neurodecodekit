@@ -1274,3 +1274,40 @@ clinical utility.
 Evidence: `docs/LOOP_24_AUTHORIZATION_DECISION.md`,
 `registries/loop24_authorization_decision.v0.json`,
 `tests/test_loop24_authorization_decision.py`, and the tracker `24-AUTH` row.
+
+## 0050 - Park Loop 24, retain float32, and leave qualification unopened
+
+Decision: close Loop 24 as `park_resource_cap_exceeded` after its one
+preregistered target-free selection. Retain `float32_eager_reference`; consume
+selection seed 2401; do not open or repurpose qualification seed 2402; do not
+tune worker startup, thresholds, fixtures, candidates, or tolerances and rerun
+under the same evidence claim.
+
+Why: all 12 balanced rounds and 36 sequential workers completed over 990
+frames, and the timing protocol itself passed. Float16 preserved every exact
+decoder behavior and numerical tolerance, but its producer/full median latency
+ratios were `1.169950`/`1.087904`, so it was slower and also missed the
+storage-only rule. QNNPACK qint8 proved the required
+`quantized::linear_dynamic` operator and reduced deterministic numeric payload
+to `47.10%`, but it changed greedy/prefix behavior, exceeded four numerical
+tolerances, and had producer/full ratios of `2.784595`/`1.812123`. Neither
+candidate qualified. Complete internal runtime was 65.154951 seconds against
+the frozen 60-second cap.
+
+Resource and access boundary: the 136,888-byte fixture plus 125,934-byte gate
+output totals 262,822 bytes under 4 MiB; working arrays are 455,472 bytes;
+maximum worker RSS is 222,248,960 bytes under 1 GiB. Qualification opens,
+training, parameter updates, target/label/text reads, real/S7/S21 reads,
+consumed-seed reads, network calls, energy measurements, and RW3 operations are
+all zero.
+
+Next boundary: Loop 25 is the next numbered planning candidate because Loop 24
+now has an explicit park decision. The park does not authorize Loop 25. A
+separate causal-preprocessing preregistration and explicit authorization must be
+recorded, tested, committed, and pushed before any fixture, transform, cache
+read, model operation, runtime, or generated payload.
+
+Evidence: `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md`, implementation commit
+`3a5dc0b`, ignored audit-bound report SHA-256
+`f877b7d88b00ce93ee8dd5091a6a0ba973c28a5d33d0a6972ca4dc82405dc098`, and
+the tracker `24-RUN` row.

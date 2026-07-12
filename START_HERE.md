@@ -4,9 +4,8 @@
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.
 3. Read `AGENTS.md` for coding-agent rules.
 4. Read `docs/CODEX_HANDOFF.md` for the next three work orders.
-5. Read `docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md` and
-   `docs/LOOP_24_AUTHORIZATION_DECISION.md` before implementing the authorized
-   target-free Loop 24 gate.
+5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
+   result, then use its preregistration and authorization documents for audit.
 6. Review `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` only when deciding whether
    to authorize RW3 Stage A.
 7. Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md` and
@@ -20,7 +19,7 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 
 Tracker scope: the spreadsheet's `20` KPI is the size of the original roadmap,
 not the current loop number. Its dashboard now separately reports the current
-post-roadmap position as **Loop 24 authorized, no runtime**, and its ninth sheet
+post-roadmap position as **Loop 24 parked; float32 retained**, and its ninth sheet
 contains the separate **Loops 25-44 planning-only queue**. Every new row is
 `Not Started` and unauthorized; adding the queue does not expand Loop 24 or
 authorize RW3.
@@ -34,16 +33,15 @@ EDF/EDF+, BDF, EEGLAB external-FDT, FIF, and BIDS. RW3's offline
 replay/live-source protocol is now frozen at commit `c3d1f01`; it is a
 registration result, not a runtime result. Commit `163ff2f` adds a hash-bound
 Stage A decision packet whose machine request keeps `authorized_now` set to
-`false`. Loop 24 is independently preregistered at commit `186bb6f`: three CPU
-candidates, fresh target-free seeds 2401 and 2402, 12 balanced timing rounds,
-30 refusal IDs, and strict resource/claim gates are frozen before execution.
-The immutable preregistration retains its false flags, while a separate
-hash-bound decision now authorizes only its exact target-free implementation
-after the authorization-only commit is pushed. No Loop 24 candidate, fixture,
-checkpoint read, inference, benchmark, or energy run exists yet. Real data,
-targets, training, energy measurement, RW3 Stage A, BrainFlow/LSL/PyXDF,
-sockets, streams, hardware, consumed caches, S20, and automatic cleaning remain
-unauthorized. Loop 24 and RW3 remain independent.
+`false`. Loop 24 ran once under its frozen contract after separate authorization
+and implementation commits were pushed and remotely green. Float16 preserved
+behavior but was slower; QNNPACK qint8 reduced payload but failed behavior and
+runtime gates; no candidate qualified, seed 2402 stayed unopened, and the gate
+parked at 65.154951 seconds versus its 60-second cap. Seed 2401 is consumed and
+must not be used for tuning. Real data, targets, training, energy measurement,
+RW3 Stage A, BrainFlow/LSL/PyXDF, sockets, streams, hardware, consumed caches,
+S20, and automatic cleaning remain unauthorized. Loop 24 and RW3 remain
+independent.
 The proposed fresh S20 EEG block is **not authorized** for download or signal
 access. Its exact four-file, 96,090,264-byte dry run is in
 `docs/FRESH_EEG_BENCHMARK_S20_APPROVAL_PACKET.md`.
@@ -52,8 +50,9 @@ Current verified state: two complete S21 SpanishBCBL MEG recordings plus one
 94,842,381-byte S7 SpanishBCBL EEG BrainVision bundle and their matching MAT
 logs have been selectively downloaded under exact caps; the full dataset and
 12.79-GB EEG subtree have not been downloaded. Loops 9-12, 14-22, and 23.5 are
-complete; Loops 13 and 23 are parked after measured gates; Loop 24 is frozen and
-separately authorized for target-free implementation, with no runtime result.
+complete; Loops 13, 23, and 24 are parked after measured gates. Loop 24 retains
+float32, consumed selection seed 2401, and left qualification seed 2402
+physically unopened.
 Session 1 provides a strict 55/6/5 split with
 train-only robust scaling. Session 2 is a complete two-part FIFF recording with
 63 performed trials; MAT slots 54, 58, and 60 are explicitly empty and are
@@ -109,11 +108,14 @@ once; the frozen test also reaches 16/16 and CER 0 versus 7/16 and CER 0.0818
 without calibration. Nine items are corrected, none worsens, and all resource,
 access, control, bootstrap, and replay gates pass. This is supervised synthetic
 calibration only, seed 2353 is now consumed, and Loop 24 requires a separate
-fresh protocol. That protocol is frozen at `186bb6f` and now has a separate
-scope-narrowed authorization record, but no implementation or runtime yet. See
+fresh protocol. That protocol was frozen at `186bb6f`, authorized separately,
+implemented before data access, and executed once. Float16 was exact but slower;
+qint8 was smaller but incorrect and slower; the total runtime cap failed; seed
+2402 stayed unopened; and Loop 24 parked with float32 retained. See
 `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`,
 `docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md`,
-`docs/LOOP_24_AUTHORIZATION_DECISION.md`, and
+`docs/LOOP_24_AUTHORIZATION_DECISION.md`,
+`docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md`, and
 `docs/POST_20_ROADMAP.md`.
 
 RW1 adds dependency-free `inspect-recording` and `inspect-intake-report`
@@ -148,17 +150,15 @@ stream, or XDF file was created or opened. See
 `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md`, and
 `registries/rw3_stage_a_authorization_request.v0.json`.
 
-Loop 24 freezes the float32 eager reference, explicit CPU float16, and dynamic-
-qint8 QNNPACK candidates around the 1,130-parameter synthetic producer. The
-contract requires fresh target-free fixture partitions, exact frame/timestamp/
-decoder behavior, balanced replicated timing, separate storage and runtime
-claims, one-thread caps, and zero real/consumed/target/training/RW3 access. Nine
-dependency-free contract invariants pass, but no candidate code or result
-exists. The separate decision in
-`registries/loop24_authorization_decision.v0.json` authorizes the target-free
-fixture/candidate/inference path after its tested commit is pushed. Seven
-additional invariants prove that real data, consumed evidence, targets,
-training, energy measurement, RW3, devices, and hardware remain false.
+Loop 24 executed the float32 eager reference, explicit CPU float16, and dynamic-
+qint8 QNNPACK candidates around the 1,130-parameter synthetic producer. All 12
+balanced rounds and the timing protocol passed. Float16 passed correctness but
+was `1.170x` the producer latency and `1.088x` the full-pipeline latency. Qint8
+used `47.1%` of the float32 numeric payload but changed greedy/prefix behavior
+and was `2.785x`/`1.812x` the producer/full latency. The 65.154951-second
+orchestration exceeded the 60-second cap, so Loop 24 is parked with float32
+retained and qualification unopened. See
+`docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md`.
 
 The current registries keep prompted typing, imagined speech, natural reading,
 P300, SSVEP, and motor imagery as separate evidence cohorts. They also keep

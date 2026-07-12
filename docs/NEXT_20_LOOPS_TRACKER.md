@@ -2,7 +2,7 @@
 
 > **Scope:** the 20-row table and its KPI describe the original roadmap. Loop
 > numbers 21-24 and the Loop 23.5 calibration gate are post-roadmap extensions,
-> so “20 loops” and “currently at Loop 24” are both true but refer to different
+> so “20 loops” and “Loop 24 parked” are both true but refer to different
 > things. A second planning-only tranche now defines Loops 25-44, so the
 > spreadsheet dashboard displays the original roadmap, current gate, and next
 > 20-loop queue separately.
@@ -162,17 +162,16 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   corrections, zero regressions, positive paired-bootstrap lower bounds, and
   5/5 calibrated/unmodified replay. See
   `docs/LOOP_23_5_BLANK_INTERCEPT_CALIBRATION.md`.
-- Post-roadmap Loop 24: Preregistered at commit `186bb6f`, with a separate
-  scope-narrowed target-free authorization awaiting its own tested push before
-  implementation. The machine contract freezes three exact CPU
-  candidates, fresh target-free selection/qualification seeds 2401/2402, 12
-  balanced selection timing rounds, 30 refusal IDs, strict behavior and
-  resource gates, and a 4-MiB total generated-artifact cap. Nine dependency-
-  free contract invariants and seven authorization invariants pass. No fixture,
-  candidate, checkpoint read, inference,
-  benchmark, profiler, energy, or qualification operation occurred. See
+- Post-roadmap Loop 24: Parked after the registered target-free selection. All
+  12 balanced rounds complete over 990 frames. Float16 preserves exact
+  behavior but is `1.170x`/`1.088x` the float32 producer/full latency; QNNPACK
+  qint8 uses `47.1%` of the payload but changes behavior and is
+  `2.785x`/`1.812x` the producer/full latency. No candidate qualifies, seed
+  2402 remains unopened, and 65.154951 seconds exceeds the 60-second cap.
+  Float32 is retained; seed 2401 is consumed. See
   `docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md`,
   `docs/LOOP_24_AUTHORIZATION_DECISION.md`,
+  `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md`,
   `registries/local_precision_runtime_contract.v0.json`, and
   `registries/loop24_authorization_decision.v0.json`.
 - Parallel Real-World Practice Track RW0: Done as a primary-source metadata
@@ -203,11 +202,10 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
 - Next practice-track decision: review
   `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` and explicitly authorize Stage A
   pure-Python synthetic replay, or hold. Registration and packet preparation
-  authorize no code. Loop 24 has a separate target-free authorization that
-  becomes effective only after its authorization-only commit is tested and
-  pushed; the immutable preregistration flags remain false. It does not
-  authorize RW3, data, training, or hardware. Neither authorization can
-  authorize the other. Seeds 2203, 2303, and 2353 stay consumed.
+  authorize no code. Loop 24 is now parked and cannot authorize RW3, data,
+  training, or hardware. Seeds 2203, 2303, 2353, and 2401 stay consumed; seed
+  2402 remains unopened. Loop 25 is the next numbered planning row but still
+  requires its own preregistration and authorization.
 
 ## Next planned 20 loops: 25-44
 

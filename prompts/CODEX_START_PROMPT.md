@@ -16,6 +16,7 @@ requests, and these files:
 - `registries/local_precision_runtime_contract.v0.json`
 - `docs/LOOP_24_AUTHORIZATION_DECISION.md`
 - `registries/loop24_authorization_decision.v0.json`
+- `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md`
 - `docs/POST_20_ROADMAP.md`
 - `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`
 - `docs/LOOPS_25_44_ROADMAP.md`
@@ -27,7 +28,7 @@ Do not reset, revert, delete, or overwrite work already present.
 
 ## Current proof boundary
 
-- Loops 1-12, 14-22, and 23.5 are complete. Loops 13 and 23 are deliberately
+- Loops 1-12, 14-22, and 23.5 are complete. Loops 13, 23, and 24 are deliberately
   parked after measured gates.
 - Real S21 session-1 alignment is validated for all 66 trials. S21 session-2 is
   a consumed evaluation set and must not be used for tuning.
@@ -45,19 +46,18 @@ Do not reset, revert, delete, or overwrite work already present.
 - Commit `163ff2f` prepares a hash-bound Stage A packet covering 90 proposed
   cases and all 30 refusals. Its machine request says `authorized_now: false`;
   the packet is not authorization.
-- Loop 24 is preregistered at commit `186bb6f`. Three exact CPU candidates,
-  fresh target-free seeds 2401/2402, 12 balanced timing rounds, 30 refusal IDs,
-  correctness/resource/claim gates, and nine dependency-free invariants are
-  frozen. The immutable contract keeps every execution flag false. A separate
-  hash-bound 2026-07-12 decision authorizes only the exact target-free Loop 24
-  work after its own tested commit is pushed. No fixture, candidate, checkpoint
-  read, inference, benchmark, profiler, energy, or qualification run exists.
-  Real/consumed data, targets, labels, text, training, energy, RW3, devices,
-  hardware, and Loops 25-44 remain unauthorized.
+- Loop 24 completed one registered target-free selection after its
+  preregistration, authorization, implementation, and CI boundaries. Float16
+  preserved behavior but was slower; QNNPACK qint8 reduced payload but changed
+  behavior and was slower. No candidate qualified, seed 2402 stayed unopened,
+  and 65.154951 seconds exceeded the 60-second cap. Loop 24 is parked, float32
+  is retained, and seed 2401 is consumed. No rerun or post-result tuning is
+  authorized. Real/consumed data, targets, labels, text, training, energy, RW3,
+  devices, hardware, and Loops 25-44 remain unauthorized.
 - Loops 25-44 are now a detailed planning-only queue: exactly 20 contiguous
   rows across five phases, with source bindings, controls, metrics, acceptance
   gates, stop rules, dependencies, resource caps, and 20 false execution flags.
-  The queue does not skip Loop 24 or authorize any operation.
+  Loop 25 is the next numbered candidate, but the queue authorizes no operation.
 - No real recording quality, neural advantage, unseen-person generalization,
   useful EEG decoder, real-time decoding, portable-hardware, arbitrary-thought,
   or clinical result has been demonstrated.
@@ -66,24 +66,29 @@ Do not reset, revert, delete, or overwrite work already present.
   canonical license-text repair. Do not merge or alter visibility without
   explicit user approval.
 
-## Primary task: complete the Loop 24 authorization boundary, then execute only it
+## Primary task: preserve Loop 24 and prepare only the next authorized decision
 
-For Loop 24, inspect and validate:
+For Loop 24, inspect and preserve:
 
 - `docs/LOOP_24_PRIMARY_SOURCE_RESEARCH.md`;
 - `docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md`;
+- `docs/LOOP_24_AUTHORIZATION_DECISION.md`;
+- `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md`;
 - `registries/local_precision_runtime_contract.v0.json`;
 - `tests/test_local_precision_runtime_contract.py`.
 
-Confirm the exact float32 eager, explicit CPU float16, and dynamic-qint8 QNNPACK
-candidates; frozen reference hashes; fresh target-free seeds 2401/2402; 12
-balanced timing rounds; numerical, decoder, storage, RSS, timing, access, and
-claim gates; 30 refusal IDs; immutable false preregistration flags; and the
-separate authorization record's narrow true/false field set. Push and confirm
-the authorization-only commit before adding implementation, generating seed
-2401, or opening the checkpoint. After that boundary is green, execute only the
-registered target-free Loop 24 files, commands, candidates, counters, caps, and
-selection-before-qualification sequence.
+Confirm the exact float32/float16/qint8 result, 12 completed timing rounds,
+failed replacement/storage-only rules, unopened qualification, runtime-cap
+failure, zero forbidden counters, ignored artifacts, and parked claim boundary.
+Do not rerun seed 2401, open seed 2402, change worker startup, or retune a
+threshold under the same claim.
+
+Loop 25 causal preprocessing is the next numbered planning candidate. Before
+any Loop 25 implementation or execution, require a dedicated preregistration
+that binds target-free fixtures, transform state, chunk schedules, timestamps,
+future-context tests, tolerances, resources, access counters, refusals, and an
+exact authorization sentence. Roadmap approval and this continuation prompt do
+not authorize that work.
 
 Independently, inspect and validate the RW3 Stage A decision surface:
 
@@ -102,22 +107,21 @@ matrix, 30 refusals, caps, forbidden work, and authorization-only commit
 sequence while leaving `authorized_now` false. The only permissible next
 decision is whether the user separately authorizes Stage A pure-Python
 synthetic replay or holds it. Registration and packet preparation alone do not.
-Authorizing either Loop 24 or RW3 Stage A cannot authorize the other.
+The parked Loop 24 result cannot authorize RW3 Stage A.
 
 ## Hard boundaries
 
 1. Do not download data, open S20, or reopen consumed S7/S21 raw arrays,
-   caches, target logs, or seeds 2203, 2303, and 2353.
+   caches, target logs, or seeds 2203, 2303, 2353, and 2401. Keep seed 2402
+   unopened.
 2. Do not install or import BrainFlow, LSL, MNE-BIDS, or hardware SDKs. Do not
    connect to hardware, enumerate devices, open sockets, or execute a live
    source.
 3. Do not implement RW3 adapters, source chunks, fixtures, or CLI commands
    unless the user explicitly authorizes Stage A after reviewing the packet.
    Authorization must first be recorded in its own tested and pushed commit.
-4. Do not implement a Loop 24 candidate or CLI, generate its fixture, load or
-   convert its checkpoint, run inference, benchmark, or profile until the
-   tested authorization-only commit is pushed and confirmed. Energy remains
-   unauthorized for this execution.
+4. Do not rerun, retune, amend, or reopen Loop 24 under its consumed selection
+   claim. Its generated artifacts stay ignored and outside Git.
 5. Do not train or run a predictive model, create target text or labels,
    calculate CER/WER, or claim decoding performance.
 6. Keep heavy dependencies optional. Use one CPU thread and do not create
@@ -128,23 +132,21 @@ Authorizing either Loop 24 or RW3 Stage A cannot authorize the other.
    broad request to continue. Freeze and authorize the loop-specific packet
    first; a failed gate parks its dependent claim branch.
 
-## Required deliverables for the authorization milestone
+## Required deliverables for the next authorized milestone
 
 1. Keep README, tracker, decision log, build notes, handoff, start-here,
-   roadmap, workbook, and continuation prompt consistent with Loop 24's frozen
-   contract plus separate narrow authorization, RW3 commit `c3d1f01`, and the
+   roadmap, workbook, and continuation prompt consistent with Loop 24's parked
+   closeout, RW3 commit `c3d1f01`, and the
    still-unauthorized request prepared at `163ff2f`. Keep the Loops 25-44
    planning-only contract and all 20 false execution flags consistent too.
 2. Run documentation/contract validation, local-link checks, Ruff,
    `git diff --check`, Gitleaks, and the complete unit suites. Compare with the
-   pre-roadmap 277-unittest / 274-pytest / 265-zero-dependency baseline and the
-   pre-authorization 286-unittest / 283-pytest / 274-zero-dependency counts.
-3. Commit and push the coherent authorization-only milestone and confirm draft
-   PR #2 CI before implementation. Preserve unrelated files and generated
-   debris outside Git.
+   293-unittest / 290-pytest authorization-only baseline and the 313-unittest /
+   310-pytest Loop 24 implementation baseline.
+3. Commit and push any future authorization-only milestone and confirm draft PR
+   #2 CI before implementation. Preserve unrelated files and generated debris
+   outside Git.
 
-Do not call Loop 24 or RW3 implemented or runtime-validated during the
-authorization-only milestone. It proves only that exact target-free Loop 24
-execution was authorized without broadening the frozen experiment; it creates
-no candidate, runtime, neural, decoding, data, training, energy, transport, or
-hardware result.
+Do not call Loop 24 a speedup, retained-accuracy, integer-only, neural,
+decoding, energy, real-time, transport, or hardware result. Its engineering
+gate exists and ran; its primary decision is parked.

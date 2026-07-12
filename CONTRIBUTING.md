@@ -35,8 +35,9 @@ Before opening a pull request, read:
 5. `THIRD_PARTY_NOTICES.md` before using Brain2Qwerty or SpanishBCBL material.
 6. `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` before proposing replay,
    streaming, or hardware work.
-7. `docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md` before proposing model
-   precision, quantization, local-runtime, memory, or energy benchmarks.
+7. `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` plus its preregistration before
+   proposing model precision, quantization, local-runtime, memory, or energy
+   benchmarks.
 
 ## Ways To Contribute
 
@@ -190,15 +191,14 @@ record a separate authorization-only commit before any Stage A implementation,
 and that decision cannot authorize Stages B-D, sockets, devices, or real data.
 
 Precision, quantization, and local-runtime work follows the same decision
-discipline through a separate gate. Loop 24 is preregistered at commit
-`186bb6f`; `registries/local_precision_runtime_contract.v0.json` freezes three
-exact CPU candidates, fresh target-free seeds 2401 and 2402, 12 balanced
-selection timing rounds, 30 refusal IDs, behavior tolerances, resource caps,
-and separate storage/runtime claims. Every execution flag is false. Do not add
-a candidate, generate its fixture, load or convert the checkpoint, run
-inference, profile, time, or measure energy until Loop 24 is explicitly
-authorized. A benchmark issue or pull request is not authorization, and RW3
-authorization cannot authorize Loop 24.
+discipline through a separate gate. Loop 24 now has one measured target-free
+closeout: float16 preserved behavior but was slower; QNNPACK qint8 was smaller
+but incorrect and slower; no candidate qualified; the runtime cap failed;
+float32 was retained. Selection seed 2401 is consumed and qualification seed
+2402 remains unopened. Do not rerun, retune, or repurpose either under the same
+claim. A new benchmark issue or pull request must define a separately frozen
+question and is not execution authorization; RW3 authorization cannot reopen
+Loop 24.
 
 When that work is authorized, reports must distinguish tensor dtype, packed
 weight dtype, input/output dtype, actual backend, serialized bytes, live state,

@@ -1889,3 +1889,86 @@ This milestone authorizes one exact synthetic engineering experiment. It does
 not establish a precision speedup, integer-only execution, neural information,
 real-data accuracy, decoding improvement, end-to-end latency, useful EEG,
 portable hardware, or any clinical result.
+
+## 2026-07-12 - Implement and park Loop 24 after registered selection
+
+Commit `3a5dc0b` implements the exact authorized Loop 24 surface before any
+registered fixture or checkpoint read: deterministic physical target-free
+selection/qualification fixtures, three explicit CPU candidates, strict
+correctness and QNNPACK-profiler provenance, isolated balanced timing,
+conditional qualification, converged byte accounting, audit-bound JSON/
+Markdown/payload artifacts, strict inspection, and four deferred-import CLI
+commands. It adds no base or optional dependency.
+
+The implementation milestone passed 313 unittests with three skips, 310 pytest
+tests with three skips and 105 subtests, 36 focused Loop 24 tests, Ruff,
+compileall, CLI help, JSON/TOML parsing, diff checks, and staged Gitleaks. The
+complete unittest run took 19.963 seconds internal and 20.860 seconds wall with
+572,276,736-byte maximum RSS. The true dependency-free Python 3.12 discovery
+remained green in 1.49 seconds wall with 51,724,288-byte maximum RSS and 121
+optional skips. All four pushed GitHub checks passed before registered fixture
+generation.
+
+The registered fixture contains exact seeds 2401/2402, 48 items and six
+balanced waveform families per physical partition, 4,536 valid samples per
+partition, and no target, label, text, participant, prediction, model-output,
+real, or consumed evidence. Selection/qualification files are 64,438/64,216
+bytes; the 8,234-byte manifest brings the fixture to 136,888 bytes. Generation
+took 0.17 seconds wall with 45,154,304-byte peak RSS. Metadata-only inspection
+took 0.06 seconds and 22,183,936 bytes without hashing or opening either NPZ.
+
+The gate opened selection once, extracted 990 complete causal frames, loaded
+the exact 7,894-byte checkpoint once, built all three candidates, reproduced
+the float32 payload bitwise across three runs, and completed all 12 balanced
+rounds in 36 fresh sequential workers. Float16 passed every exact and numerical
+correctness gate but was `1.169950x` the float32 producer latency and
+`1.087904x` the full-pipeline latency. QNNPACK qint8 proved
+`quantized::linear_dynamic` and reduced the deterministic payload from 5,210 to
+2,454 bytes, but failed exact decoder behavior and numerical tolerances and was
+`2.784595x`/`1.812123x` the producer/full latency. No replacement or
+storage-only candidate passed, so qualification seed 2402 remained physically
+unopened.
+
+The timing protocol, 455,472-byte working-array cap, 222,248,960-byte maximum
+worker RSS, 110,073 report bytes, and 262,822 total fixture-plus-output bytes
+all passed. Internal orchestration took 65.154951 seconds against the frozen
+60-second cap, so the final decision is `park_resource_cap_exceeded` and
+float32 remains the default. External wall time was 65.62 seconds. Selection
+seed 2401 is consumed; changing worker startup or rerunning after this result
+would require a separately frozen amendment, not post-selection tuning.
+
+Access counters are explicit: one manifest metadata read, one checkpoint read,
+one selection open, zero qualification opens, three conversions, 15 reference
+and 26 candidate protocol-level inference runs, one profiler run, and 36 timing
+workers. Training, parameter updates, target/label/text, real/S7/S21, consumed
+seed 2203/2303/2353, network, energy, and RW3 counters are all zero. Generated
+fixture, payload, timing, and report artifacts remain ignored and untracked.
+
+This closeout adds a local target-free precision/runtime execution and audit
+capability. It establishes no speedup, integer-only execution, neural
+advantage, real-data accuracy, CER/WER improvement, unseen-person transfer,
+end-to-end latency, energy efficiency, useful EEG, portable hardware,
+arbitrary-thought, assistive, diagnostic, or clinical result.
+
+The tracker closeout was performed through the bundled artifact-tool runtime.
+It brings the existing `24-AUTH` row inside the Decision Log table, appends the
+measured `24-RUN` park, adds risk `R28`, marks the old execution prompt
+consumed, and adds the Loop 25 preregistration-decision prompt. All nine sheets
+were rendered and visually inspected; the exported workbook reloads with the
+Decision Log, Risk Register, and Prompt Bank tables extended to rows 37, 29,
+and 34; and the formula-error scan has zero matches. The tracked workbook is
+76,476 bytes with SHA-256
+`1f65236ac4cee76745f57f57aa137a3e4c0833f84a3c1719d8daffb17019372d`.
+The unrelated untracked inspection sidecar remained byte-identical at SHA-256
+`5cd0ef08446c4e5feee5ce11f27eef41fae5eee8975cc77f6d401faca3b79f45`.
+
+Final closeout verification passes 36 focused Loop 24 tests in 4.07 seconds
+wall with 308,510,720-byte maximum RSS; 313 unittests with three skips in
+21.32 seconds wall and 570,753,024-byte maximum RSS; 310 pytest tests with
+three skips and 105 subtests in 22.38 seconds wall and 583,499,776-byte maximum
+RSS; and 281 true zero-dependency Python 3.12 tests with 121 expected optional
+skips in 0.60 seconds wall and 42,450,944-byte maximum RSS. The optional suites
+are 20 tests above the 293-unittest/290-pytest authorization-only baseline.
+Ruff check, compileall, diff checks, all JSON/TOML parses, 54 local Markdown
+links, five CLI help surfaces, strict fixture/report inspection, workbook
+reload/formula inspection, and the 49-commit Gitleaks history scan all pass.

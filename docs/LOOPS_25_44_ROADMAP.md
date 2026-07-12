@@ -10,7 +10,7 @@ Research basis: `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`
 
 ## Purpose
 
-These 20 loops are the next claim-driven tranche after the current Loop 24
+These 20 loops are the next claim-driven tranche after the parked Loop 24
 decision. They are designed to move NeuroDecodeKit from validated interfaces
 and honest negative real-data results toward one defensible neural, transfer,
 streaming, or device result.
@@ -20,12 +20,16 @@ The roadmap does not assume that every branch succeeds. Each loop must end in
 
 ## Boundary Before Loop 25
 
-- Loop 24 is preregistered at `186bb6f`; every execution flag remains false.
+- Loop 24 is parked after its registered target-free selection: float32 is
+  retained, seed 2401 is consumed, seed 2402 qualification remains unopened,
+  and 65.154951 seconds exceeded the frozen 60-second cap.
 - RW3 Stage A has a prepared packet at `163ff2f`; `authorized_now` remains
   false.
 - S21 session-1 source-test rows are observed, S21 session-2 and S7 EEG
   evaluation evidence are consumed, and synthetic seeds 2203, 2303, and 2353
   remain closed to selection or tuning.
+- The Loop 24 park satisfies Loop 25's dependency on an explicit prior-loop
+  decision, but it does not authorize Loop 25.
 - This roadmap does not authorize a download, real-data read, consumed-cache
   read, target read, fixture, model run, training run, optional streaming
   import, socket, stream, board, device, or hardware session.

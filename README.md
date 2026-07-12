@@ -33,7 +33,7 @@ and explain exactly what the result does not prove.
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
 | Real predictive evidence | Both the same-person cross-session MEG model and the bounded S7 EEG classifier lose to no-signal controls | The current scientific result is negative, explicit, and frozen against post-hoc tuning |
-| Local execution gate | Three exact CPU paths, two fresh target-free fixture partitions, 12 balanced timing rounds, and 30 refusals are frozen before candidate code | Loop 24 has a scope-narrowed authorization record, but no fixture, precision candidate, checkpoint read, or runtime has executed |
+| Local execution gate | Float16 preserved exact behavior but ran `1.170x` slower on the producer; qint8 cut payload to `47.1%` but changed behavior and ran `2.785x` slower | Float32 is retained, qualification stayed unopened, and Loop 24 is parked after the full run exceeded its 60-second cap |
 | Next transport layer | Stage A is specified as 90 future schedule-by-fixture cases with 30 exact refusals under a 32 MiB cap | The decision packet is review-ready; no replay runtime, socket, board, or hardware path is authorized yet |
 
 ### Detailed Engineering Scorecard
@@ -49,11 +49,11 @@ and explain exactly what the result does not prove.
 | Causal frame replay | 553 canonical frames; 5/5 schedules exact; zero right context; 300-byte mutable state | synthetic mechanism only | Separates true producer causality from transport scheduling and decoder latency |
 | Tiny learned causal producer | 1,130 parameters; validation and one-time test balanced accuracy 1.0 versus 0.166667 signal-free prior; 5/5 replay | synthetic mechanism only | Proves the bounded stream can carry a learned signal on an intentionally easy generated task |
 | Blank calibration mechanism | validation and one-time test both 16/16 exact at CER 0; 9 test corrections; 0 regressions | synthetic mechanism only | Shows one preregistered scalar can solve a specific tail-error mechanism without post-test trimming |
-| Local precision/runtime registration | 3 exact candidates; fresh seeds 2401/2402; 12 balanced selection rounds; 30 refusal IDs; 9 contract plus 7 authorization invariants | authorized, no runtime | Preserves the frozen pre-result contract while separately authorizing only target-free implementation and execution |
+| Local precision/runtime gate | 3 exact candidates; 12/12 balanced rounds; 990 frames; float16 exact but full path `1.088x`; qint8 payload `47.1%` but full path `1.812x` and incorrect; qualification 0 opens | parked target-free synthetic result | Demonstrates why payload size, correctness, steady-state speed, and orchestration cost must be separate gates |
 | Metadata-only local intake | 6 format families; 532 source bytes; 11,545 report bytes; 0 binary/raw/target/model/network reads | fixture-backed | Lets EEG owners start with safe structure and provenance instead of uploading a recording |
 | Bounded signal-quality interface | 40 fixtures; 38 readable and 2 exact refusals across 6 format families; 3.839 sec; 76,592 output bytes | fixture-backed | Validates readers, metrics, privacy, caps, and no-mutation identity before any real quality claim |
 | Replay/live-source authorization gate | 5 schedules x 18 fixture families = 90 future cases; 30 refusal IDs; 4 separately gated stages; 10 invariants | review-ready, not authorized | Binds the exact Stage A scope and caps before any source-chunk, socket, board, fixture, or hardware implementation |
-| Test and release surface | 293 unittests with 3 skips; 290 pytest passes, 3 skips, and 105 subtests; dependency-free suite also green | local shell verified | Makes the research contracts and authorization boundaries executable for contributors on ordinary hardware |
+| Test and release surface | 313 unittests with 3 skips; 310 pytest passes, 3 skips, and 105 subtests; dependency-free suite also green | local shell verified | Makes the research contracts, access order, backend provenance, tamper checks, and authorization boundaries executable on ordinary hardware |
 
 ### Real-Data Scientific Scorecard
 
@@ -76,7 +76,8 @@ engineering wins, not hidden behind synthetic accuracy.
 | RW2 bounded FIF quality roundtrip | 3.839168 sec | 150,749,184 bytes | 76,592 bytes |
 | RW3 contract/request invariant suite | 0.040 sec | 20,529,152 bytes | no generated payload |
 | Loop 24 authorization plus frozen-boundary suite | 0.210 sec | 21,397,504 bytes | no generated payload |
-| Complete optional-neuro/ML test runners | 20.120 sec max | 578,502,656 bytes max | temporary test output only |
+| Loop 24 registered selection | 65.154951 sec internal | 222,248,960 bytes max worker | 262,822 bytes fixture plus output |
+| Complete optional-neuro/ML test runners | 22.38 sec max | 583,499,776 bytes max | temporary test output only |
 
 Proof labels are deliberately narrow:
 
@@ -138,18 +139,14 @@ Read this before interpreting any number in the repository.
   schedule-by-fixture cases, all 30 deterministic refusals, one-thread resource
   caps, and the exact authorization sequence. The request says
   `authorized_now: false`; preparing it did not authorize implementation.
-- **Loop 24 precision/runtime registration:** a versioned contract freezes the
-  float32 eager reference, explicit CPU float16, and dynamic-qint8 QNNPACK
-  candidates; fresh target-free seeds 2401 and 2402; 12 balanced timing rounds;
-  exact behavior, resource, and claim gates; and 30 refusal IDs. Commit
-  `186bb6f` contains protocol evidence only: no fixture, checkpoint read,
-  candidate conversion, inference, timing, energy, or qualification run exists.
-- **Loop 24 authorization:** a separate hash-bound decision records explicit
-  user intent and authorizes only the frozen target-free synthetic
-  fixture/candidate/inference path after the authorization-only commit is
-  pushed. The immutable preregistration keeps its original false flags and
-  hash. Real data, targets, training, energy measurement, RW3, devices, and
-  hardware remain outside Loop 24.
+- **Loop 24 precision/runtime execution:** the frozen target-free gate ran all
+  12 balanced selection rounds over 990 frames. Float16 preserved every exact
+  decoder behavior and tolerance but was slower; QNNPACK qint8 exposed the
+  required operator and halved payload but failed behavior/numerical gates and
+  was much slower. No candidate earned qualification, seed 2402 remained
+  physically unopened, and the final gate parked at `65.154951` seconds versus
+  its 60-second cap. Real data, targets, training, energy measurement, RW3,
+  devices, and hardware remained outside Loop 24.
 
 ### What The Results Actually Say
 
@@ -163,9 +160,9 @@ Read this before interpreting any number in the repository.
   exact-sequence threshold, even though several secondary metrics passed.
 - Loop 23.5 shows that one supervised blank-logit intercept fixes one fresh
   synthetic motif/symbol task. That is a mechanism result, not brain decoding.
-- Loop 24 is separately authorized for its frozen target-free implementation,
-  but it has not yet produced a float16, qint8, speed, memory, storage, or
-  energy result.
+- Loop 24 retains float32. Float16 passes correctness but misses every runtime
+  replacement threshold; qint8 is smaller but fails correctness and runtime;
+  the complete target-free gate parks on its 60-second orchestration cap.
 
 ### What Is Not Established
 
@@ -646,12 +643,13 @@ channel-sample values, 32 MiB of materialized float64 arrays, 30 seconds, 1 GiB
 peak RSS, 4 MiB of report output per run, and 16 MiB for the complete synthetic
 fixture/report set.
 
-Loop 24's separate scope-narrowed authorization preserves one thread and
-worker, at most 48 fresh target-free items per partition, 32 MiB of materialized
-arrays, 4 MiB of total generated artifacts, 60 seconds of internal runtime, and
-1 GiB peak RSS per worker. Those operations may begin only after the tested
-authorization-only commit is pushed and confirmed; real data, targets,
-training, energy, RW3, and hardware remain outside the gate.
+Loop 24 used one numerical thread and one sequential worker at a time, 48
+target-free items per partition, 455,472 working-array bytes, 262,822 total
+generated bytes, and at most 222,248,960 worker-RSS bytes. It stayed below every
+storage, memory, concurrency, and access cap but took 65.154951 seconds against
+the frozen 60-second runtime cap. Seed 2401 is consumed; seed 2402 remains
+unopened and closed. Real data, targets, training, energy, RW3, and hardware
+remain outside the gate.
 
 Generated artifacts belong in ignored `cache/` or `outputs/`, not in Git.
 
@@ -665,17 +663,16 @@ The original numbered development sequence has reached:
 - Loop 23: parked after the frozen synthetic decoder test missed its primary
   threshold;
 - Loop 23.5: completed as a supervised synthetic calibration mechanism;
-- Loop 24: preregistered at `186bb6f` with contract SHA-256
-  `58e9d5407fef9419bc3bb0dc8cd3fa68d36dd238cb636d2f833dd9c5c6c3ae5d`;
-  a separate scope-narrowed decision now authorizes the exact target-free
-  implementation after its authorization-only commit is pushed. No runtime
-  exists yet; real data, training, energy measurement, RW3, and consumed seed
-  2353 remain outside the gate;
+- Loop 24: parked after one registered target-free selection at implementation
+  commit `3a5dc0b`; float32 is retained, no replacement or storage-only candidate
+  passed, seed 2401 is consumed, seed 2402 qualification stayed unopened, and
+  runtime was 65.154951 seconds versus the 60-second cap;
 - Loops 25-44: a new primary-source-informed planning tranche spans causal
   evidence, translation/generalization, reliability/confounds,
   reproducibility/local deployment, and live translation/release. All 20 rows
-  are `Not Started`, `execution_authorized: false`, and subordinate to the
-  current Loop 24 execution gate and their own future authorizations.
+  are `Not Started`, `execution_authorized: false`, and subordinate to their own
+  future preregistrations and authorizations. Loop 24's parked result does not
+  authorize Loop 25.
 
 The parallel Real-World Practice track has reached:
 
@@ -720,7 +717,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md](docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md) | frozen Loop 24 candidates, fresh fixtures, measurements, thresholds, caps, and decision language |
 | [registries/local_precision_runtime_contract.v0.json](registries/local_precision_runtime_contract.v0.json) | machine-readable Loop 24 identities, schedules, refusals, access rules, and false authorization flags |
 | [docs/LOOP_24_AUTHORIZATION_DECISION.md](docs/LOOP_24_AUTHORIZATION_DECISION.md) | scope-narrowed Loop 24 authorization, execution order, zero-runtime boundary, and real-data/training routing |
-| [registries/loop24_authorization_decision.v0.json](registries/loop24_authorization_decision.v0.json) | hash-bound current authority for exact target-free Loop 24 implementation; every data/training/RW3/device flag remains false |
+| [registries/loop24_authorization_decision.v0.json](registries/loop24_authorization_decision.v0.json) | hash-bound authorization record for the consumed target-free Loop 24 execution; every data/training/RW3/device flag remains false |
+| [docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md](docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md) | measured float32/float16/qint8 result, unopened qualification proof, resources, access ledger, and parked decision |
 | [docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md](docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md) | metadata-only file intake closeout |
 | [docs/RW2_PRIMARY_SOURCE_RESEARCH.md](docs/RW2_PRIMARY_SOURCE_RESEARCH.md) | reader/quality primary-source review |
 | [docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md](docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md) | frozen RW2 protocol |
@@ -760,8 +758,9 @@ for people with EEG recordings and people with EEG headsets or boards.
 | An EEG headset or board | Document channels, reference, clocks, transport, packet counters, export formats, and SDK license | Live connection details, private endpoints, credentials, and unapproved recordings |
 | No EEG hardware | Add deterministic fixtures, malformed cases, refusal tests, docs, or no-signal controls | No real data is needed for these high-value paths |
 
-Precision or local-runtime contributions must begin with the frozen Loop 24
-protocol. A benchmark pull request is not execution authorization, smaller
+Precision or local-runtime contributions should begin by reviewing the parked
+Loop 24 closeout and proposing a fresh hash-bound protocol. A benchmark pull
+request is not authorization to retune seed 2401 or open seed 2402, smaller
 weights are not proof of faster inference, and neither result is evidence of
 brain decoding or end-to-end text latency.
 

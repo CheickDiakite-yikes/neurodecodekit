@@ -1,9 +1,9 @@
 # Open-Source Readiness
 
-Date: 2026-07-11
+Date: 2026-07-12
 
 Status: **Open-source collaboration surface merged to public `main`; latest
-RW2 evidence, RW3 preregistration/decision packet, and Loop 24 preregistration
+RW2 evidence, RW3 preregistration/decision packet, and parked Loop 24 closeout
 remain in draft PR #2**
 
 ## Purpose
@@ -38,8 +38,9 @@ merged the safety/community files, description, and contribution surface to
 current handoff, canonical license-text correction, CI portability record, and
 RW3's registration-only replay/live-source contract. It also contains the
 hash-bound Stage A decision packet prepared at `163ff2f`; the request remains
-unauthorized. Commit `186bb6f` adds the separate Loop 24 local precision/runtime
-preregistration with all execution flags false; no candidate or runtime exists.
+unauthorized. Loop 24 was preregistered at `186bb6f`, authorized separately,
+implemented at `3a5dc0b`, and then parked after one target-free selection. Its
+generated fixture/report remain ignored and untracked.
 Do not describe those latest results, either protocol, or either decision
 surface as default-branch content until PR #2 is reviewed and merged.
 
@@ -59,9 +60,9 @@ surface as default-branch content until PR #2 is reviewed and merged.
 - an explicit EEG-contributor launch table in the README;
 - a machine-bound RW3 Stage A decision packet that cannot silently authorize
   implementation, later stages, sockets, devices, or real data.
-- a machine-bound Loop 24 precision/runtime contract that freezes candidates,
-  fresh target-free partitions, balanced timing, correctness/resource gates,
-  and refusals before any implementation or benchmark can be authorized.
+- a machine-bound Loop 24 precision/runtime implementation and closeout that
+  preserves physical split order, exact backend provenance, balanced timing,
+  correctness/resource gates, strict artifact inspection, and a negative park.
 
 ## License Boundary
 
@@ -205,6 +206,9 @@ gitleaks git . --redact --no-banner
 neurodecode --help
 neurodecode inspect-recording --help
 neurodecode make-signal-quality-fixtures --help
+neurodecode make-precision-runtime-fixture --help
+neurodecode local-precision-runtime-gate --help
+neurodecode inspect-local-precision-runtime-report --help
 ```
 
 Also run one bounded synthetic RW2 create/inspect/report roundtrip and record:
@@ -218,11 +222,11 @@ Also run one bounded synthetic RW2 create/inspect/report roundtrip and record:
 - causality and end-to-end latency status;
 - warnings and unavailable fields.
 
-Loop 24 remains a documentation/contract gate until explicit authorization.
-Release verification must therefore confirm that no Loop 24 runtime module,
-fixture, candidate, CLI, checkpoint read, conversion, inference, benchmark,
-profiler, energy measurement, or generated payload has appeared, and that all
-nine dependency-free contract invariants still pass.
+Loop 24 is a parked target-free local result. Release verification must confirm
+that its fixture, numeric payloads, timing rows, and reports remain ignored;
+seed 2401 is not rerun; seed 2402 remains unopened; every real/consumed/target/
+training/energy/RW3 counter remains zero; and all contract, authorization,
+backend, tamper, resource, CLI, and dependency-free invariants pass.
 
 ## Visibility Decision
 
