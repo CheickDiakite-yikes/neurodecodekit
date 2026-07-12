@@ -1,0 +1,161 @@
+{
+  "schema_name": "neurodecodekit.loop25_authorization_request",
+  "schema_version": "0.1.0",
+  "request_id": "loop25-causal-preprocessing-authorization-request-2026-07-12-v0",
+  "prepared_at": "2026-07-12",
+  "status": "awaiting_explicit_user_authorization",
+  "authorized_now": false,
+  "user_decision": null,
+  "authorization_record_commit": null,
+  "proof_posture": "authorization_request_only_no_runtime",
+  "registration": {
+    "commit": "a36d97b8556e95637a21c86c44095b7e8d4c4863",
+    "commit_short": "a36d97b",
+    "ci_run_id": 29193935671,
+    "ci_url": "https://github.com/CheickDiakite-yikes/neurodecodekit/actions/runs/29193935671",
+    "ci_conclusion": "success",
+    "base_python_job_conclusion": "success",
+    "optional_neuro_readers_job_conclusion": "success",
+    "complete_local_suite_tests": 323,
+    "complete_local_suite_skips": 3,
+    "new_contract_tests": 10
+  },
+  "target": {
+    "loop_id": 25,
+    "gate": "Causal Preprocessing Audit",
+    "contract_id": "loop25-causal-preprocessing-v0",
+    "contract_path": "registries/causal_preprocessing_contract.v0.json",
+    "contract_schema_version": "0.1.0",
+    "contract_sha256": "42781526225c556d0df54d1b6924fd5d9ecf95578a84c3e3922b6d5c7035050e",
+    "contract_git_blob_sha1": "380cc8d6d8eca013ac2e8ee4cbcf5afd3b74f1f9",
+    "preregistration_path": "docs/LOOP_25_CAUSAL_PREPROCESSING_PREREGISTRATION.md",
+    "preregistration_sha256": "c681be25a633705f14ae5e2850908c4d911762d380ee2342fb7f2a587a3ebe7c",
+    "preregistration_git_blob_sha1": "56be25114d6f282837f4a45ed631d62ce4f0d1fb",
+    "research_path": "docs/LOOP_25_PRIMARY_SOURCE_RESEARCH.md",
+    "research_sha256": "6e2b6c1ff584fc186926e6c631b2e1397117f13564de13fd276d64497b874ed4",
+    "research_git_blob_sha1": "3b7221711ae1b6f6a26579de171d23340f0b5ce7",
+    "invariant_test_path": "tests/test_causal_preprocessing_contract.py",
+    "invariant_test_sha256": "e0e37d54f0d83103cddab5b7782b30722a52cb21ba8c9ae823421132684c2916",
+    "invariant_test_git_blob_sha1": "ca7ff25433bababa8f0d41b3f9c22b973dd3c0eb",
+    "registration_snapshot_remains_immutable": true
+  },
+  "decision": {
+    "authorization_sentence_exact": "Authorize Loop 25 implementation exactly as scoped in docs/LOOP_25_CAUSAL_PREPROCESSING_PREREGISTRATION.md. Do not authorize real or consumed data, targets, model inference, training, RW3 Stage A, streams, devices, or hardware.",
+    "hold_sentence_exact": "Hold Loop 25 implementation. Keep every Loop 25 execution authorization flag false.",
+    "amendment_sentence_prefix": "Amend the Loop 25 packet before authorization:",
+    "silence_or_general_continuation_is_authorization": false,
+    "roadmap_approval_is_authorization": false,
+    "loop24_or_rw3_decision_is_authorization": false,
+    "authorization_is_transitive_to_loop26_or_later": false,
+    "required_sequence_after_authorization": [
+      "create_a_separate_authorization_decision_record_without_implementation",
+      "test_the_decision_against_this_request_and_the_immutable_registration",
+      "commit_and_push_the_authorization_only_record",
+      "confirm_remote_ci_is_green_on_the_authorization_commit",
+      "implement_only_the_registered_loop25_files_and_cli_surface",
+      "open_seed_2501_development_once_and_freeze_its_report",
+      "open_seed_2502_qualification_once_only_if_development_passes",
+      "close_loop25_without_rerun_or_post_result_tuning"
+    ],
+    "future_authorization_decision_path": "registries/loop25_authorization_decision.v0.json",
+    "future_authorization_doc_path": "docs/LOOP_25_AUTHORIZATION_DECISION.md"
+  },
+  "authorization_if_exactly_approved": {
+    "loop25_implementation_authorized_now": false,
+    "target_free_fixture_generation_authorized_now": false,
+    "registered_filter_design_authorized_now": false,
+    "registered_numeric_preprocessing_authorized_now": false,
+    "development_partition_open_authorized_now": false,
+    "conditional_qualification_partition_open_authorized_now": false,
+    "report_and_cli_implementation_authorized_now": false,
+    "real_or_consumed_data_access_authorized_now": false,
+    "target_label_text_or_prediction_access_authorized_now": false,
+    "checkpoint_or_model_inference_authorized_now": false,
+    "training_or_parameter_updates_authorized_now": false,
+    "network_access_authorized_now": false,
+    "rw3_stage_a_or_source_chunk_authorized_now": false,
+    "stream_socket_board_device_hardware_authorized_now": false,
+    "loop26_or_later_authorized_now": false,
+    "note": "Every field remains false in this request. An exact user decision permits only a separate tested authorization record to turn the first seven fields true."
+  },
+  "registered_scope": {
+    "pipeline_id": "causal_sos_filter_phase_locked_decimate_frozen_scale_v0",
+    "source_sampling_rate_hz": 1000.0,
+    "output_sampling_rate_hz": 100.0,
+    "channels": 5,
+    "right_context_source_samples": 0,
+    "right_context_ms": 0.0,
+    "development_seed": 2501,
+    "qualification_seed": 2502,
+    "items_per_partition": 12,
+    "total_fixture_items": 24,
+    "signal_family_count": 6,
+    "registered_chunk_schedule_count": 7,
+    "registered_resume_cut_count": 10,
+    "registered_future_mutation_cut_count": 3,
+    "registered_refusal_count": 40,
+    "required_access_counter_count": 21,
+    "planned_files": [
+      "src/neurodecodekit/preprocess/causal_preprocessing.py",
+      "src/neurodecodekit/training/causal_preprocessing_fixture.py",
+      "src/neurodecodekit/experiments/causal_preprocessing_gate.py",
+      "tests/test_causal_preprocessing.py",
+      "tests/test_causal_preprocessing_fixture.py",
+      "tests/test_causal_preprocessing_gate.py"
+    ],
+    "planned_cli_commands": [
+      "make-causal-preprocessing-fixture",
+      "inspect-causal-preprocessing-fixture",
+      "causal-preprocessing-gate",
+      "inspect-causal-preprocessing-report"
+    ]
+  },
+  "resource_caps": {
+    "cpu_threads": 1,
+    "maximum_concurrent_workers": 1,
+    "maximum_fixture_bytes_total": 4194304,
+    "maximum_materialized_working_array_bytes": 16777216,
+    "maximum_mutable_state_bytes": 4096,
+    "maximum_report_bytes": 1048576,
+    "maximum_generated_bytes_total": 8388608,
+    "maximum_internal_runtime_sec": 45,
+    "maximum_peak_rss_bytes": 1073741824,
+    "maximum_external_network_calls": 0,
+    "maximum_real_data_reads": 0,
+    "maximum_real_cache_reads": 0,
+    "maximum_consumed_evidence_reads": 0,
+    "maximum_target_label_text_prediction_reads": 0,
+    "maximum_checkpoint_reads": 0,
+    "maximum_model_runs": 0,
+    "maximum_training_runs": 0,
+    "maximum_parameter_updates": 0,
+    "maximum_rw3_operations": 0,
+    "maximum_stream_socket_board_device_hardware_operations": 0
+  },
+  "protected_evidence": {
+    "real_cohorts": [
+      "S21 session-1 source-test rows",
+      "S21 session-2 consumed evaluation",
+      "S7 EEG consumed evaluation"
+    ],
+    "consumed_synthetic_seeds": [2203, 2303, 2353, 2401],
+    "unopened_synthetic_seeds": [2402, 2501, 2502],
+    "rules": [
+      "No protected or consumed evidence may be opened, transformed, selected, or used to create the fixture.",
+      "Loop 24 qualification seed 2402 may not be repurposed for Loop 25.",
+      "Loop 25 seeds 2501 and 2502 stay unopened until a separate authorization-only commit is pushed and green."
+    ]
+  },
+  "decision_rules": {
+    "proceed": "development_and_one_time_qualification_both_pass_every_registered_gate_then_close_loop25_and_request_loop26_separately",
+    "park": "any_causal_timing_schedule_resume_frequency_normalization_or_resource_gate_fails_without_forbidden_access",
+    "kill": "future_leakage_silent_timing_change_target_leakage_protected_evidence_access_or_other_forbidden_operation_occurs",
+    "post_result_tuning_or_rerun_allowed": false
+  },
+  "claim_boundary": [
+    "This request is not authorization and creates no fixture, transform, runtime, or scientific result.",
+    "A future passing Loop 25 could establish only one registered target-free causal preprocessing mechanics result.",
+    "It cannot establish Brain2Qwerty v2 equivalence, neural information, decoding accuracy, CER or WER improvement, end-to-end latency, unseen-person generalization, EEG or MEG usefulness, device portability, assistive efficacy, or clinical utility.",
+    "A Loop 25 pass cannot authorize Loop 26, RW3 Stage A, real data, model inference, training, streams, devices, or hardware."
+  ]
+}

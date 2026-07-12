@@ -10,6 +10,9 @@ ROADMAP_PATH = REPO_ROOT / "registries" / "next_20_loops.v0.json"
 LOOP24_PATH = REPO_ROOT / "registries" / "local_precision_runtime_contract.v0.json"
 RW3_PATH = REPO_ROOT / "registries" / "replay_equivalence_contract.v0.json"
 RW3_REQUEST_PATH = REPO_ROOT / "registries" / "rw3_stage_a_authorization_request.v0.json"
+LOOP25_REQUEST_PATH = (
+    REPO_ROOT / "registries" / "loop25_authorization_request.v1.json"
+)
 
 
 class NextTwentyLoopsContractTests(unittest.TestCase):
@@ -23,7 +26,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         self.assertEqual(
             roadmap["schema_name"], "neurodecodekit.next_twenty_loops_roadmap"
         )
-        self.assertEqual(roadmap["schema_version"], "0.1.0")
+        self.assertEqual(roadmap["schema_version"], "0.2.0")
         self.assertEqual(roadmap["roadmap_id"], "loops-25-44")
         self.assertEqual(roadmap["status"], "planning_only_not_execution_authorization")
         self.assertEqual(
@@ -31,8 +34,23 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
             {"first_loop": 25, "last_loop": 44, "loop_count": 20},
         )
         boundary = roadmap["current_boundary"]
-        self.assertEqual(boundary["current_numbered_gate"], 24)
-        self.assertFalse(boundary["loop24_execution_authorized"])
+        self.assertEqual(boundary["current_numbered_gate"], 25)
+        self.assertEqual(
+            boundary["current_gate_status"],
+            "amended_preregistration_awaiting_explicit_authorization",
+        )
+        self.assertEqual(boundary["loop24_status"], "parked_resource_cap_exceeded")
+        self.assertTrue(boundary["loop24_execution_was_authorized"])
+        self.assertFalse(boundary["loop24_execution_authorized_now"])
+        self.assertTrue(boundary["loop25_preregistration_ci_green"])
+        self.assertTrue(boundary["loop25_amendment_ci_green"])
+        self.assertTrue(
+            boundary["loop25_original_request_superseded_before_authorization"]
+        )
+        self.assertTrue(boundary["loop25_authorization_request_prepared"])
+        self.assertFalse(boundary["loop25_execution_authorized"])
+        self.assertFalse(boundary["loop25_development_seed_opened"])
+        self.assertFalse(boundary["loop25_qualification_seed_opened"])
         self.assertFalse(boundary["rw3_stage_a_authorized"])
         self.assertFalse(boundary["general_continuation_is_authorization"])
         self.assertFalse(boundary["roadmap_approval_is_loop_execution_authorization"])
@@ -49,7 +67,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         phase_counts = Counter(row["phase_id"] for row in self.loops)
         self.assertEqual(phase_counts, Counter({f"P{index}": 4 for index in range(1, 6)}))
 
-    def test_every_loop_is_detailed_not_started_and_unauthorized(self):
+    def test_loop25_is_preregistered_and_every_loop_is_unauthorized(self):
         required_text = {
             "title",
             "priority",
@@ -67,9 +85,20 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         }
         for row in self.loops:
             with self.subTest(loop=row["loop_id"]):
-                self.assertEqual(row["status"], "Not Started")
                 self.assertFalse(row["execution_authorized"])
-                self.assertEqual(row["proof_posture"], "planned_not_authorized")
+                if row["loop_id"] == 25:
+                    self.assertEqual(row["status"], "Amended Preregistration")
+                    self.assertEqual(
+                        row["proof_posture"],
+                        "amended_preregistered_no_implementation_or_execution",
+                    )
+                    registration = row["registration"]
+                    self.assertEqual(registration["commit"][:7], "b6b92d8")
+                    self.assertFalse(registration["authorized_now"])
+                    self.assertFalse(registration["superseded_v0"]["was_authorized"])
+                else:
+                    self.assertEqual(row["status"], "Not Started")
+                    self.assertEqual(row["proof_posture"], "planned_not_authorized")
                 self.assertTrue(all(isinstance(row[key], str) and row[key].strip() for key in required_text))
                 self.assertGreaterEqual(len(row["controls"]), 3)
                 self.assertGreaterEqual(len(row["primary_metrics"]), 4)
@@ -88,7 +117,10 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
 
     def test_protected_real_evidence_and_consumed_seeds_remain_explicit(self):
         protected = self.roadmap["protected_evidence"]
-        self.assertEqual(protected["synthetic_seeds"], [2203, 2303, 2353])
+        self.assertEqual(protected["synthetic_seeds"], [2203, 2303, 2353, 2401])
+        self.assertEqual(
+            protected["unopened_synthetic_seeds"], [2402, 2501, 2502]
+        )
         real_text = " ".join(protected["real_cohorts"])
         self.assertIn("S21 session-1", real_text)
         self.assertIn("S21 session-2", real_text)
@@ -123,6 +155,8 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                 "brain2qwerty_v2",
                 "brain2qwerty_v1",
                 "mne_resampling",
+                "neuralset_v0_2_2",
+                "scipy_iirdesign",
                 "bids_derivatives",
                 "moabb_benchmark",
                 "lsl_time_sync",
@@ -146,6 +180,9 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         loop24 = json.loads(LOOP24_PATH.read_text(encoding="utf-8"))
         rw3 = json.loads(RW3_PATH.read_text(encoding="utf-8"))
         rw3_request = json.loads(RW3_REQUEST_PATH.read_text(encoding="utf-8"))
+        loop25_request = json.loads(
+            LOOP25_REQUEST_PATH.read_text(encoding="utf-8")
+        )
         self.assertTrue(
             all(
                 value is False
@@ -173,6 +210,19 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                 )
         self.assertTrue(request_flags)
         self.assertTrue(all(value is False for value in request_flags))
+        loop25_flags = []
+        for key, value in loop25_request.items():
+            if key.endswith("authorized_now"):
+                loop25_flags.append(value)
+        for section in loop25_request.values():
+            if isinstance(section, dict):
+                loop25_flags.extend(
+                    value
+                    for key, value in section.items()
+                    if key.endswith("authorized_now")
+                )
+        self.assertTrue(loop25_flags)
+        self.assertTrue(all(value is False for value in loop25_flags))
 
     def test_human_roadmap_and_public_tracker_cover_all_twenty_loops(self):
         roadmap_doc = (REPO_ROOT / "docs" / "LOOPS_25_44_ROADMAP.md").read_text(

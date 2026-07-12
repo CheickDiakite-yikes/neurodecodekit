@@ -1,6 +1,6 @@
 {
   "schema_name": "neurodecodekit.next_twenty_loops_roadmap",
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "roadmap_id": "loops-25-44",
   "prepared_at": "2026-07-12",
   "status": "planning_only_not_execution_authorization",
@@ -11,9 +11,21 @@
     "loop_count": 20
   },
   "current_boundary": {
-    "current_numbered_gate": 24,
-    "loop24_status": "preregistered_unauthorized",
-    "loop24_execution_authorized": false,
+    "current_numbered_gate": 25,
+    "current_gate_status": "amended_preregistration_awaiting_explicit_authorization",
+    "loop24_status": "parked_resource_cap_exceeded",
+    "loop24_execution_was_authorized": true,
+    "loop24_execution_authorized_now": false,
+    "loop25_preregistration_commit": "a36d97b8556e95637a21c86c44095b7e8d4c4863",
+    "loop25_preregistration_ci_green": true,
+    "loop25_amendment_commit": "b6b92d8ea1cdeadfd6b7cd9f4704aee018516197",
+    "loop25_amendment_ci_green": true,
+    "loop25_latest_contract": "registries/causal_preprocessing_contract.v1.json",
+    "loop25_original_request_superseded_before_authorization": true,
+    "loop25_authorization_request_prepared": true,
+    "loop25_execution_authorized": false,
+    "loop25_development_seed_opened": false,
+    "loop25_qualification_seed_opened": false,
     "rw3_status": "stage_a_packet_prepared_unauthorized",
     "rw3_stage_a_authorized": false,
     "general_continuation_is_authorization": false,
@@ -28,12 +40,19 @@
     "synthetic_seeds": [
       2203,
       2303,
-      2353
+      2353,
+      2401
+    ],
+    "unopened_synthetic_seeds": [
+      2402,
+      2501,
+      2502
     ],
     "rules": [
       "Protected real cohorts and consumed synthetic seeds may be cited but not reopened for selection, calibration, thresholding, or fresh evaluation.",
       "Future real-data access requires a metadata plan, exact file and byte caps, dry-run output, license review, and separate explicit authorization.",
-      "No target, label, prompt text, or consumed prediction may create a target-free fixture or select a future evaluation row."
+      "No target, label, prompt text, or consumed prediction may create a target-free fixture or select a future evaluation row.",
+      "Loop 25 coefficient design and its full static anti-alias gate must pass before development seed 2501 opens; seed 2502 remains conditional on a frozen development pass."
     ]
   },
   "global_constraints": {
@@ -85,17 +104,36 @@
       "title": "Causal Preprocessing Audit",
       "priority": "P0",
       "effort": "M",
-      "status": "Not Started",
+      "status": "Amended Preregistration",
       "execution_authorized": false,
-      "proof_posture": "planned_not_authorized",
+      "proof_posture": "amended_preregistered_no_implementation_or_execution",
+      "registration": {
+        "commit": "b6b92d8ea1cdeadfd6b7cd9f4704aee018516197",
+        "contract": "registries/causal_preprocessing_contract.v1.json",
+        "contract_sha256": "ecec99a7cc505ec0256c01c3c1e8aeaa05323ab54a71528323fa6d32bd289141",
+        "amendment": "docs/LOOP_25_CAUSAL_PREPROCESSING_AMENDMENT_1.md",
+        "anti_alias_audit": "docs/LOOP_25_ANTI_ALIAS_AUDIT.md",
+        "authorization_request": "registries/loop25_authorization_request.v1.json",
+        "authorization_request_status": "awaiting_explicit_user_authorization",
+        "authorized_now": false,
+        "superseded_v0": {
+          "commit": "a36d97b8556e95637a21c86c44095b7e8d4c4863",
+          "contract": "registries/causal_preprocessing_contract.v0.json",
+          "request": "registries/loop25_authorization_request.v0.json",
+          "was_authorized": false,
+          "development_seed_opened": false,
+          "qualification_seed_opened": false
+        }
+      },
       "core_question": "Can every transform before the causal encoder run incrementally without future samples, evaluation-fit statistics, timestamp drift, or chunk-boundary changes?",
       "why_high_value": "A causal model is not causal if filtering, resampling, padding, or normalization leaks future context; this gate protects every later streaming claim.",
-      "build_deliverable": "Versioned stateful preprocessing contract, offline-versus-stream replay harness, transform provenance, and explicit refusal for noncausal settings.",
-      "research_deliverable": "Primary-source note on filter delay, resampling event jitter, padding, and train-only normalization semantics.",
+      "build_deliverable": "Versioned stateful preprocessing contract with a dedicated causal anti-alias SOS stage, phase-locked decimator, replay harness, transform provenance, and fail-closed refusals.",
+      "research_deliverable": "Pinned Brain2Qwerty-to-NeuralSet-to-MNE source trace plus filter delay, full folding-band, alias-map, resampling jitter, padding, and train-only normalization analysis.",
       "data_scope": "Target-free synthetic signals first; any later S21 use is restricted to separately authorized source-train rows and may not open source-test or session-2 evidence.",
       "controls": [
-        "Five or more adversarial chunk schedules including single-sample and boundary splits.",
-        "Impulse, step, chirp, drift, and end-padding fixtures with future-sample perturbation tests.",
+        "Seven frozen chunk schedules including whole-item, single-sample, decimation-boundary, frame-boundary, powers-of-two, and seeded-irregular splits.",
+        "Six target-free signal families, ten resume cuts, and three future-mutation cuts across physically separate seeds 2501 and 2502.",
+        "A 65,537-point 0-500 Hz response grid, 23 exact alias source probes, and complete 50-500 Hz folding-band attenuation before any fixture array opens.",
         "Offline noncausal reference reported separately and never substituted for the causal path."
       ],
       "primary_metrics": [
@@ -103,14 +141,15 @@
         "valid-sample and timestamp identity",
         "maximum offline-stream payload error",
         "schedule hash agreement",
+        "dedicated and complete-chain folding-band attenuation plus alias destination correctness",
         "runtime, peak RSS, input bytes, output bytes, and access counts"
       ],
-      "acceptance_boundary": "Proceed only if declared right context is zero, every schedule preserves valid samples and timestamps within preregistered tolerances, evaluation-fit/read counters are zero, and resource caps pass.",
-      "stop_rule": "Park any transform that needs future samples or cannot preserve timing; do not widen tolerances after observing a protected row.",
+      "acceptance_boundary": "Proceed only if the dedicated anti-alias and complete chain pass the full 50-500 Hz folding-band gate before seed access, declared right context is zero, every schedule preserves samples, timestamps, and state, all forbidden counters are zero, and resource caps pass.",
+      "stop_rule": "Park with both seeds unopened if the static filter gate fails; otherwise park any transform that needs future samples or cannot preserve timing, and never widen tolerances after observing a protected row.",
       "depends_on": [],
-      "external_gates": ["explicit_loop24_proceed_park_or_hold_decision"],
-      "authorization_boundary": "Planning only. Fixture generation, real-cache reads, preprocessing execution, and model access require a separate Loop 25 preregistration and authorization.",
-      "resource_cap": "One thread, one worker, 32 MiB generated artifacts, 60 seconds per isolated worker, and 1 GiB peak RSS."
+      "external_gates": ["explicit_loop25_authorization_decision"],
+      "authorization_boundary": "Amended at green commit b6b92d8 after the v0 anti-alias scope was superseded before authorization. Await a separate exact decision through docs/LOOP_25_AUTHORIZATION_PACKET_V1.md; the v1 request is false, seeds 2501/2502 are unopened, and coefficients, fixtures, runtime, data/cache/target/model/training access, RW3, streams, devices, and hardware remain unauthorized.",
+      "resource_cap": "One thread, one worker, 4 MiB fixtures, 16 MiB working arrays, 8 MiB total generated artifacts, 45 seconds internal runtime, 4 KiB mutable state, and 1 GiB peak RSS."
     },
     {
       "loop_id": 26,
@@ -754,7 +793,7 @@
     }
   ],
   "loop_source_map": {
-    "25": ["brain2qwerty_v2", "mne_resampling"],
+    "25": ["brain2qwerty_v2", "neuralset_v0_2_2", "mne_resampling", "scipy_iirdesign"],
     "26": ["brain2qwerty_v1", "brain2qwerty_v2"],
     "27": ["brain2qwerty_v1", "brain2qwerty_v2", "datasheets"],
     "28": ["brain2qwerty_v2", "moabb_benchmark"],
@@ -793,6 +832,18 @@
       "title": "MNE resampling documentation",
       "url": "https://mne.tools/stable/generated/mne.filter.resample.html",
       "roadmap_use": "Resampling, padding, event timing, and preprocessing provenance."
+    },
+    {
+      "source_id": "neuralset_v0_2_2",
+      "title": "NeuralSet 0.2.2 MNE extractor source",
+      "url": "https://github.com/facebookresearch/neuroai/blob/v0.2.2/neuralset-repo/neuralset/extractors/neuro.py#L334-L381",
+      "roadmap_use": "Pinned notch, bandpass, separate MNE resample, and scaler execution order used by the public Brain2Qwerty dependency chain."
+    },
+    {
+      "source_id": "scipy_iirdesign",
+      "title": "SciPy 1.14.1 complete IIR filter design",
+      "url": "https://docs.scipy.org/doc/scipy-1.14.1/reference/generated/scipy.signal.iirdesign.html",
+      "roadmap_use": "Explicit passband-loss, stopband-attenuation, minimum-order elliptic design, and recommended SOS representation for the amended causal anti-alias candidate."
     },
     {
       "source_id": "bids_derivatives",

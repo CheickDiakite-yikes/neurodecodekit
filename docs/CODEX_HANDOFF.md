@@ -32,9 +32,17 @@
 > new models, energy measurement, RW3, devices, and hardware remain unauthorized.
 > A primary-source-informed Loops 25-44 roadmap is now frozen as planning only:
 > 20 contiguous rows, five phases, detailed controls/metrics/stop rules, one-
-> thread and byte caps, row-level sources, and 20 false execution flags. It does
-> not reopen Loop 24 or authorize RW3, data, training, or
-> hardware.
+> thread and byte caps, row-level sources, and 20 false execution flags. Loop 25
+> causal preprocessing was registered at `a36d97b`, then superseded before
+> authorization by anti-alias amendment v1 at green commit `b6b92d8`. The
+> current target-free scope adds a dedicated causal elliptic anti-alias SOS,
+> 65,537 response points, 23 alias probes, 45 refusal IDs, and 23 access counters
+> while retaining seeds 2501/2502, seven schedules, ten resume cuts, and three
+> future-mutation cuts. Its replacement request still says
+> `authorized_now: false`; both seeds are unopened and no coefficient, fixture,
+> transform, partition, CLI, or runtime exists. Loops 26-44 remain `Not
+> Started`. This does not reopen Loop 24 or authorize RW3, data, models,
+> training, or hardware.
 > In parallel, RW0 closes a primary-source Real-World Practice research gate
 > with eight dataset records, 13 device records, a local BYO Neurodata
 > contract, and one exact S20 EEG dry-run packet. RW1 now closes a
@@ -169,8 +177,13 @@ This repo is a starter scaffold with working pure-Python components:
   governance, citation, issue forms, pull-request checks, and one-thread CI
 - primary-source-informed Loops 25-44 planning contract with five phases,
   acceptance and stop rules, resource/authorization boundaries, row-level
-  sources, a dedicated spreadsheet sheet, and dependency-free invariants; no
-  future loop execution is authorized by it
+  sources, a dedicated spreadsheet sheet, and dependency-free invariants; Loop
+  25 is amended and preregistered while all future-loop execution remains
+  unauthorized
+- hash-bound Loop 25 v1 causal-preprocessing amendment and decision packet with
+  a dedicated anti-alias stage, 65,537 response points, 23 alias probes, seven
+  chunk schedules, ten resume cuts, three future-mutation cuts, 45 refusals, 23
+  access counters, lower resource caps, and zero runtime operations
 - JSON/Markdown metrics report command
 - CLI smoke commands
 - unit tests
@@ -183,19 +196,20 @@ negative within-session event comparison. None is a decoder success. Do not
 turn these results, a variance ranking, or a geometry proxy into unseen-person
 or population generalization.
 
-Current verification after Loop 24 implementation: 313 unittests pass with 3
-skipped in 20.414 seconds (21.32 seconds wall and 570,753,024-byte maximum
-RSS); pytest reports 310 passed, 3 skipped, and 105 subtests. The focused Loop
-24 contract, authorization, fixture, candidate, and gate surface has 36 passing
-tests. True zero-dependency Python 3.12 discovery remains green, reporting 281
-tests with 121 optional skips in 0.60 seconds wall and 42,450,944-byte maximum
-RSS. This is 20 optional-suite tests above the 293-unittest/290-pytest
-authorization-only baseline. The registered run used no real/consumed data,
-targets, labels, text, training, energy, RW3, stream, board, or hardware.
-The tracked and delivered workbook hashes match at
-`1f65236ac4cee76745f57f57aa137a3e4c0833f84a3c1719d8daffb17019372d`.
-The tracked workbook is 76,476 bytes and its nine-sheet visual/formula audit
-passes with zero formula-error matches.
+Current verification after the Loop 25 v1 packet: 353 unittests pass with 3
+expected skips in 20.28 seconds wall and 570,310,656-byte maximum RSS; pytest
+reports 350 passed, 3 skipped, and 163 subtests in 21.03 seconds wall with
+583,467,008-byte maximum RSS. The focused v0, v1, request, and roadmap surface
+has 49 passing tests in 0.09 seconds wall and 23,216,128-byte maximum RSS.
+Dependency-light Python 3.12 discovery remains green at 321 tests with 121
+optional skips in 1.39 seconds wall and 45,465,600-byte maximum RSS. This is 40
+tests above the 313-unittest Loop 24 baseline. No Loop 25 fixture, coefficient,
+preprocessing run, data/cache/target/model read, training run, network call,
+RW3 operation, stream, board, device, or hardware operation occurred. The
+tracked workbook is 78,492 bytes with SHA-256
+`483fde426c8212e7956814462b0aa11b0ca8426163b3dad95f6574eb7e10eb92`;
+its nine-sheet render, reload, table-range, and formula audit passes with zero
+formula-error matches.
 
 ## The north star
 
@@ -209,12 +223,13 @@ This is not primarily a model repo. It is a **research loop repo**.
 
 ## Current Next Work
 
-1. **Loop 25 - decide whether to authorize a causal-preprocessing
-   preregistration, not execution.** First read
-   `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` and preserve its park: no seed-2401
-   rerun, no seed-2402 open, and no Loop 24 tuning. Then review the Loop 25 row
-   in `docs/LOOPS_25_44_ROADMAP.md`. A separate packet and explicit decision
-   must precede any fixture, transform, cache read, model operation, or runtime.
+1. **Loop 25 - authorize only the amended v1 target-free gate, amend it again,
+   or hold.** Read `docs/LOOP_25_AUTHORIZATION_PACKET_V1.md` and
+   `registries/loop25_authorization_request.v1.json`. The amendment is green,
+   but `authorized_now` remains false. Any authorization must first become a
+   tested, pushed, green v1 authorization-only commit. The static filter gate
+   must then pass before seed 2501 opens; no fixture, coefficient, transform,
+   partition open, CLI, or runtime can exist from this handoff alone.
 2. **RW3 - decide on the prepared Stage A packet only.** Review
    `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` and
    `registries/rw3_stage_a_authorization_request.v0.json`. The request is bound
@@ -227,12 +242,11 @@ This is not primarily a model repo. It is a **research loop repo**.
    `docs/LOOPS_25_44_ROADMAP.md`, and
    `registries/next_20_loops.v0.json`. Each future loop still requires its own
    preregistration or bounded implementation packet before execution.
-4. **Review draft PR #2 before publishing the latest evidence on `main`.** PR #1
-   has merged the open-source community surface through `e5d89ed`; PR #2 carries
-   the RW2 closeout, README results dashboard, canonical Apache license text,
-   Linux float32 portability record, RW3 registration, and the Stage A decision
-   packet. Do not merge until CI, license, issue-form, security, history,
-   visibility, and proof-boundary review is complete.
+4. **Keep the GitHub history reviewable.** PR #3 carries the validated Loop
+   8-24 evidence stack and is green. Draft PR #4 carries the separately stacked
+   Loop 25 v0 history, v1 amendment, and still-false decision packet so
+   preregistration and authorization remain auditable. Do not merge until CI,
+   license, privacy, history, and proof-boundary review is complete.
 
 RW4 is not next: S20 acquisition remains blocked until explicit approval names
 revision `88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684`, exactly four files, the
@@ -249,7 +263,14 @@ contract are in `docs/LOOP_24_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/local_precision_runtime_contract.v0.json`; authorization is in
 `docs/LOOP_24_AUTHORIZATION_DECISION.md`, the measured park is in
 `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md`, and the post-20 sequence is in
-`docs/POST_20_ROADMAP.md`. The next 20-loop research, work orders, and machine
+`docs/POST_20_ROADMAP.md`. Loop 25's v0 research, preregistration, contract, and
+request remain immutable history. Its current evidence and decision surface are
+`docs/LOOP_25_ANTI_ALIAS_AUDIT.md`,
+`docs/LOOP_25_CAUSAL_PREPROCESSING_AMENDMENT_1.md`,
+`registries/causal_preprocessing_contract.v1.json`,
+`docs/LOOP_25_AUTHORIZATION_PACKET_V1.md`, and
+`registries/loop25_authorization_request.v1.json`. The next 20-loop research,
+work orders, and machine
 contract are in `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`,
 `docs/LOOPS_25_44_ROADMAP.md`, and
 `registries/next_20_loops.v0.json`. RW1 evidence is in

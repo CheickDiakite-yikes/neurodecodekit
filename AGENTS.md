@@ -51,13 +51,35 @@ qint8 used `47.10%` of the float32 numeric payload but changed behavior and was
 65.154951 seconds exceeded the frozen 60-second cap. Retain float32. Seed 2401
 is consumed; do not tune or rerun Loop 24, and do not repurpose seed 2402.
 
-Real or consumed data, targets, labels, text, training, new architectures,
-energy measurement, RW3, devices, hardware, and Loops 25-44 execution remain
-unauthorized. The next numbered candidate is Loop 25 causal preprocessing, but
-its roadmap row is planning only. Do not create a Loop 25 fixture, transform,
-runtime, cache read, model operation, or generated payload until a separate
-Loop 25 preregistration and explicit authorization are recorded, tested,
-committed, and pushed.
+Loop 25 causal preprocessing was preregistered at commit `a36d97b`, then
+superseded before authorization by the anti-alias amendment at green commit
+`b6b92d8`. The v0 files remain immutable history, but their request and exact
+sentence are no longer actionable. The current v1 packet adds a dedicated
+causal anti-alias stage, a 65,537-point 0-500 Hz response gate, 23 alias probes,
+45 refusals, 23 counters, and a static design gate before either fixture array
+can open. Its replacement request keeps every `authorized_now` field false:
+
+```bash
+cat docs/LOOP_25_PRIMARY_SOURCE_RESEARCH.md
+cat docs/LOOP_25_CAUSAL_PREPROCESSING_PREREGISTRATION.md
+cat docs/LOOP_25_ANTI_ALIAS_AUDIT.md
+cat docs/LOOP_25_CAUSAL_PREPROCESSING_AMENDMENT_1.md
+cat docs/LOOP_25_AUTHORIZATION_PACKET_V1.md
+python -m json.tool registries/causal_preprocessing_contract.v0.json >/dev/null
+python -m json.tool registries/causal_preprocessing_contract.v1.json >/dev/null
+python -m json.tool registries/loop25_authorization_request.v1.json >/dev/null
+```
+
+The next numbered decision is to authorize only v1 using its exact sentence,
+amend it again, or hold. Packet preparation, roadmap approval, and general
+continuation are not authorization. Do not create a Loop 25 fixture, filter
+coefficients, transform, CLI, runtime, cache read, model operation, or generated
+payload until a separate v1 authorization-only record is tested, committed,
+pushed, and remotely green. Even then, the static filter gate must pass before
+seed 2501 opens; seed 2502 stays conditional. Both remain unopened. Real or
+consumed data, targets, labels, text, model inference, training, new
+architectures, energy measurement, RW3, streams, devices, hardware, and Loops
+26-44 execution remain unauthorized.
 
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
@@ -83,16 +105,16 @@ S7/S21 evidence and seeds 2203, 2303, 2353, and 2401 frozen; keep 2402
 unopened. Any future real-data acquisition remains dry-run by default and
 requires explicit byte caps plus `--execute`.
 
-A primary-source-informed next tranche now defines Loops 25-44 in
+A primary-source-informed next tranche defines Loops 25-44 in
 `docs/LOOPS_25_44_ROADMAP.md` and
 `registries/next_20_loops.v0.json`. It contains exactly 20 planning rows across
 five phases, with detailed controls, metrics, stop rules, resource caps,
-dependencies, and source bindings. Every row is `Not Started` and
-`execution_authorized: false`. This roadmap does not change the immediate
-decision order, reopen Loop 24, authorize RW3, or permit a Loop 25-44 fixture,
-data read, model run, training run, stream, board, or hardware operation. A broad
-request to continue toward Loop 44 is a goal, not a substitute for each frozen
-authorization boundary.
+dependencies, and source bindings. Loop 25 is `Amended Preregistration` with
+`execution_authorized: false`; Loops 26-44 remain `Not Started` with false
+execution flags. This roadmap does not reopen Loop 24, authorize RW3, or permit
+a Loop 25-44 fixture, data read, model run, training run, stream, board, or
+hardware operation. A broad request to continue toward Loop 44 is a goal, not a
+substitute for each frozen authorization boundary.
 
 ## Acceptance criteria for next PR
 
@@ -108,13 +130,22 @@ authorization boundary.
 - The Loops 25-44 roadmap contains exact IDs 25 through 44, five phases of four
   loops, row-level primary-source bindings, nine dependency-free invariants,
   and 20 false execution flags.
+- The Loop 25 v0 registration remains byte-exact at `a36d97b`; the superseding
+  v1 amendment remains exact at `b6b92d8` with a dedicated anti-alias stage,
+  65,537 response points, 23 alias probes, seven schedules, six signal
+  families, ten resume cuts, three future-mutation cuts, 45 refusal IDs, 23
+  access counters, and 11 amendment invariants.
+- The current Loop 25 v1 authorization request remains hash-bound to the green
+  amendment, every `authorized_now` field remains false, and the v0 request is
+  visibly historical and unauthorized.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed
   2401 is not rerun or tuned, qualification seed 2402 remains unopened, and
   real/consumed data, targets, energy, training, and RW3 counters remain zero.
-- No Loop 25-44 runtime, fixture, data/cache read, model run, training run, or
-  generated payload exists without its own preregistration and authorization.
+- No Loop 25-44 runtime, fixture, filter-design run, numerical preprocessing,
+  data/cache read, model run, training run, or generated payload exists without
+  its own preregistration and authorization.
 - All public docs agree that the registration freezes five schedules, 18 future
   fixture families, 30 refusal IDs, and four separately authorized stages, and
   that the Stage A packet proposes 90 future cases without authorizing them.
@@ -123,6 +154,9 @@ authorization boundary.
 - Loop 24 remains a parked target-free local result and establishes no speedup,
   integer-only execution, retained neural accuracy, end-to-end text latency,
   cross-device energy efficiency, or portable-hardware behavior.
+- Loop 25 remains an amended preregistered mechanics proposal and establishes
+  no filter result, official preprocessing equivalence, neural information,
+  decoding, latency, transfer, or device result.
 - Resource, privacy, access, timestamp, anomaly, hash, and claim boundaries stay
   explicit and machine-checkable.
 

@@ -2,7 +2,7 @@
 
 Date: 2026-07-12
 
-Status: **Planning only; no implementation or execution is authorized**
+Status: **Loop 25 amended v1 and awaiting authorization; Loops 26-44 planning only; no execution is authorized**
 
 Machine source of truth: `registries/next_20_loops.v0.json`
 
@@ -30,6 +30,10 @@ The roadmap does not assume that every branch succeeds. Each loop must end in
   remain closed to selection or tuning.
 - The Loop 24 park satisfies Loop 25's dependency on an explicit prior-loop
   decision, but it does not authorize Loop 25.
+- Loop 25's original registration is frozen at `a36d97b`; anti-alias amendment
+  v1 is frozen at green commit `b6b92d8`. The original request was superseded
+  before authorization. The current v1 request remains `authorized_now: false`,
+  and seeds 2501/2502 are unopened.
 - This roadmap does not authorize a download, real-data read, consumed-cache
   read, target read, fixture, model run, training run, optional streaming
   import, socket, stream, board, device, or hardware session.
@@ -53,7 +57,16 @@ packet that binds its exact inputs, outputs, access counters, metrics,
 thresholds, caps, refusals, and authorization sentence. Updating this roadmap
 or marking a loop as the next candidate is never execution authorization.
 
+Loop 25 has completed an amended preregistration step. Its next action is the
+exact decision in `docs/LOOP_25_AUTHORIZATION_PACKET_V1.md`, not
+implementation.
+
 ## Loop 25 - Causal Preprocessing Audit
+
+**Current status:** Amended preregistration at green commit `b6b92d8`; the v0
+packet was superseded before authorization; the v1 request is prepared with
+`execution_authorized: false`; no fixture, coefficient, seed open, transform,
+partition, CLI, or runtime exists.
 
 **Core question:** Can every transform before the causal encoder run
 incrementally without future samples, evaluation-fit statistics, timestamp
@@ -63,31 +76,43 @@ drift, or chunk-boundary changes?
 future-aware filter, whole-trial normalization, resampling shortcut, or end
 padding can invalidate the full streaming claim upstream.
 
-**Build:** Define a versioned stateful preprocessing contract and a replay
-harness that compares a canonical path with adversarial chunk schedules. Bind
-filter state, normalization source, padding, sample indices, valid lengths,
-timestamps, transform settings, and warnings into provenance.
+**Registered build:** Implement one five-channel, 1000-to-100 Hz stateful
+notch/bandpass/dedicated-elliptic-antialias SOS chain, phase-locked integer
+decimation, frozen normalization, and replay harness. Before seed access, audit
+65,537 response points and 23 exact alias probes across the complete 50-500 Hz
+folding band. Bind state, absolute sample indices, timestamps, valid lengths,
+configuration, hashes, warnings, and all 23 access counters into provenance.
 
 **Research:** Document causal versus zero-phase filtering, group delay,
 resampling and trigger behavior, train-only normalization, flush semantics, and
 which existing transformations are incompatible with an online path.
 
-**Data and controls:** Start with target-free impulse, step, chirp, drift, and
-end-padding signals. Perturb future samples and require earlier outputs to stay
-unchanged. Include single-sample, boundary, irregular, and flush schedules plus
-a separately labeled noncausal reference.
+**Data and controls:** The future physical partitions contain 12 target-free
+items each from unopened seeds 2501 and 2502 across six signal families. Seven
+exact chunk schedules, ten resume cuts, three future-mutation cuts, 45 refusal
+IDs, a 65,537-point response grid, and 23 alias probes are frozen. The static
+full-folding-band gate occurs before development opens. Qualification opens
+once only after the development report is frozen and every gate passes.
 
 **Metrics:** right-context samples/ms; valid-sample and timestamp identity;
-maximum offline-stream error; schedule hashes; state bytes; runtime; peak RSS;
-input/output bytes; raw/cache/target/model/training counters.
+full 50-500 Hz attenuation and alias-map correctness; maximum offline-stream
+error; schedule hashes; state bytes; runtime; peak RSS; input/output bytes;
+raw/cache/target/model/training counters.
 
-**Gate:** Proceed only with zero declared right context, registered numerical
-tolerance, exact semantic identity, zero evaluation access, and passed caps.
-Park any transform that needs future samples or whose timing cannot be proven.
+**Gate:** Before seed access, park if the dedicated anti-alias or complete chain
+misses the full 50-500 Hz gate. Then proceed only with zero declared right
+context, registered numerical tolerance, exact semantic identity, zero
+evaluation access, and passed caps. Park any transform that needs future
+samples or whose timing cannot be proven.
 
-**Dependencies and authorization:** An explicit proceed, park, or hold decision
-for Loop 24 comes first. Loop 25 fixtures and execution require a separate
-authorization; any future S21 use is source-train only and separately gated.
+**Dependencies and authorization:** Loop 24 is already parked. Loop 25 now
+requires the separate exact decision in
+`docs/LOOP_25_AUTHORIZATION_PACKET_V1.md`, followed by a tested, pushed, green
+authorization-only commit before
+implementation. Even exact authorization excludes real/consumed data, targets,
+models, training, RW3, streams, devices, and hardware. The Loop 25 cap is one
+thread/worker, 4 MiB fixtures, 16 MiB working arrays, 8 MiB total generated
+bytes, 45 seconds internal runtime, 4 KiB state, and 1 GiB peak RSS.
 
 ## Loop 26 - Real Validation-Only Encoder Gate
 
