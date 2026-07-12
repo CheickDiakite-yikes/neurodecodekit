@@ -225,6 +225,22 @@ duplicated arrays are not new acquisitions. Twenty future gates, 30 refusals,
 and 23 false `authorized_now` fields are machine checked. Acquisition is not
 recommended now, and all protected/model/training/scoring work is unauthorized.
 
+Loop 34 planning research is complete while its confidence, abstention, and
+revision experiment remains `Not Started` and confidence remains unavailable:
+
+```bash
+cat docs/LOOP_34_PRIMARY_SOURCE_RESEARCH.md
+python -m json.tool registries/loop34_research_boundary.v0.json >/dev/null
+```
+
+The research separates seven confidence semantics, eight score/control roles,
+and recommended fresh synthetic calibration/selection/final counts of
+`128/64/256`. The six real source-validation rows remain reserved for the
+shared Loop 26/31/33 event and cannot fit and independently qualify Loop 34.
+Twenty future gates, 30 refusals, and 26 false `authorized_now` fields are
+machine checked. No fixture, feature, confidence fit, target open, scoring,
+product-visible confidence, real-data read, or download is authorized.
+
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
 commit `c3d1f01`, before any adapter, source chunk, fixture, socket, board, or
@@ -266,7 +282,9 @@ experiment remains `Not Started`; Loop 32 planning research defines the
 32-parameter fresh-person calibration boundary while its experiment remains
 `Not Started`; Loop 33 planning research defines the bounded
 `8, 16, 24, 32, 44, 55` curve and shared-validation order while its experiment
-remains `Not Started`; Loops 34-44 remain `Not Started`. All 20
+remains `Not Started`; Loop 34 planning research defines a three-way confidence
+firewall while its experiment remains `Not Started`; Loops 35-44 remain `Not
+Started`. All 20
 execution flags are false. This roadmap does not
 reopen Loop 24, authorize RW3, or permit a Loop 25-44 fixture, download, data
 read, model run, training run, stream, board, or hardware operation. A broad
@@ -336,6 +354,11 @@ authorization boundary.
   18 candidate fits, one shared six-target open, four conditions, 20 future
   requirements, 30 refusals, no physical-repetition lane, no acquisition
   recommendation, and zero protected/model/training/scoring operations.
+- The Loop 34 planning registry remains exact with 26 false authorization
+  fields, seven confidence semantics, eight score/control roles, recommended
+  `128/64/256` fresh synthetic partitions, 20 future requirements, 30
+  refusals, an explicit unavailable state, no eligible existing real confidence
+  partition, and zero fixture/fit/target/scoring/product-confidence operations.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed

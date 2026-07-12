@@ -22,8 +22,12 @@
 > `8, 16, 24, 32, 44, 55` unique-sentence prefixes, at most three seeds and 18
 > candidate fits, and one target-blind shared validation event while its
 > experiment remains `Not Started`; no physical-repetition lane or acquisition
-> recommendation exists and all protected work is unauthorized. Loops 34-44 remain
-> planning-only. The
+> recommendation exists and all protected work is unauthorized. Loop 34
+> planning research defines seven confidence semantics, eight score/control
+> roles, and recommended fresh synthetic `128/64/256` partitions while its
+> experiment remains `Not Started`; confidence is unavailable and all fixture,
+> fit, target, scoring, and product-confidence work is unauthorized. Loops
+> 35-44 remain planning-only. The
 > spreadsheet dashboard displays the original roadmap, current gate, and next
 > 20-loop queue separately.
 
@@ -246,7 +250,9 @@ authorization rules live in `docs/LOOPS_25_44_ROADMAP.md` and
 `registries/next_20_loops.v0.json`. Loop 25 is `Amended Preregistration`;
 Loops 26 and 28-32 are `Not Started` with planning research complete; Loop 27
 has selected metadata while preregistration remains blocked; Loop 33 planning
-research is complete and its experiment remains `Not Started`; Loops 34-44 are
+research is complete and its experiment remains `Not Started`; Loop 34
+planning research is complete and its experiment remains `Not Started` with
+confidence unavailable; Loops 35-44 are
 `Not Started`. Every row retains `execution_authorized: false`.
 
 | # | Phase | Gate | Core outcome | Priority | Effort | Status |
@@ -260,7 +266,7 @@ research is complete and its experiment remains `Not Started`; Loops 34-44 are
 | 31 | Translation And Generalization | Neural Contribution Ablation | Freeze ten encoder conditions and five contingent LLM conditions that separate sensor signal, timing, context, language-prior, and Neuro Token effects while reserving brain-specific attribution for Loop 35. | P0 | L | Planning research complete; experiment Not Started |
 | 32 | Translation And Generalization | New-Subject Calibration And Adaptation | Freeze one causal 32-parameter adapter, four calibration claims, nested 0/2/4/8/16/32 sentence budgets, physical 32/16/48 partition floors, and a one-time final gate without using final rows for fit or selection. | P1 | L | Planning research complete; experiment Not Started |
 | 33 | Reliability And Confounds | Data Scaling And Sample Efficiency | Planning research complete: prospective `8, 16, 24, 32, 44, 55` unique-sentence curve, three-seed/18-fit ceiling, matched priors, one shared validation open, 20 gates, and 30 refusals; experiment unauthorized and Not Started. | P1 | L | Not Started |
-| 34 | Reliability And Confounds | Confidence, Abstention, And Revision | Expose confidence only if validation-fit risk-coverage generalizes independently. | P1 | M | Not Started |
+| 34 | Reliability And Confounds | Confidence, Abstention, And Revision | Planning research complete: seven confidence semantics, eight score/control roles, fresh 128/64/256 synthetic partitions, bounded loss, generalized risk, revision delay, 20 gates, and 30 refusals; confidence unavailable, experiment unauthorized and Not Started. | P1 | M | Not Started |
 | 35 | Reliability And Confounds | Peripheral Confound Firewall | Block neural claims explained by key timing, EMG, EOG, motion, audio, or prompt leakage. | P0 | L | Not Started |
 | 36 | Reliability And Confounds | Geometry And Reference Harmonization | Preserve channel geometry, units, reference, missingness, and transform provenance across sessions/devices. | P1 | M | Not Started |
 | 37 | Reproducibility And Local Deployment | BIDS Derivative And Provenance Export | Export tiny source-bound derivatives without copying raw recordings or inventing metadata. | P1 | M | Not Started |
@@ -345,6 +351,21 @@ are machine checked. The experiment remains `Not Started`, additional
 acquisition is not recommended, and all protected/model/training/scoring work
 is unauthorized. See `docs/LOOP_33_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop33_research_boundary.v0.json`.
+
+Loop 34's planning packet creates no synthetic fixture, score, probability
+mapping, abstention threshold, revision policy, target open, scoring result, or
+product-visible confidence. It recommends fresh target-free synthetic
+calibration/selection/final counts of `128/64/256`, seven noninterchangeable
+confidence semantics, eight candidate/control roles, exact-sequence error as
+the primary bounded loss, full working-point and generalized-risk reporting,
+and Loop 30 clock-domain timing. The six source-validation rows remain reserved
+for the shared Loop 26/31/33 event; even zero observed errors in six gives an
+optimistic one-sided 95% upper error bound of about `0.393`. Twenty future
+gates, 30 refusals, and 26 false authorization fields are machine checked. The
+experiment remains `Not Started`, confidence is unavailable, and all fixture,
+fit, target, scoring, product-confidence, protected-data, and download work is
+unauthorized. See `docs/LOOP_34_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop34_research_boundary.v0.json`.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |

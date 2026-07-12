@@ -2703,3 +2703,66 @@ or target was accessed, so there is no learning curve, neural advantage,
 scaling law, repetition-efficiency result, saturation finding, acquisition
 value, unseen-person generalization, real-time behavior, or portable-hardware
 result.
+
+## 2026-07-12 - Loop 34 confidence research boundary
+
+Closed Loop 34 planning research while leaving the confidence, abstention, and
+revision experiment `Not Started`, confidence unavailable, and all 26
+`authorized_now` fields false. The new machine contract separates seven
+confidence semantics and eight score/control roles, recommends fresh target-
+free synthetic calibration/selection/final counts of `128/64/256`, freezes 20
+future gates and 30 refusal IDs, and permits no fixture, confidence feature,
+probability mapping, threshold, target open, score, product confidence,
+protected-data access, or download.
+
+The critical scientific decision is that the six source-validation sentences
+cannot fit a confidence mapping, select a score and policy, and independently
+qualify that policy. Those rows remain reserved for the shared Loop 26/31/33
+event. Even zero errors in six independent Bernoulli trials has an optimistic
+one-sided 95% exact upper error bound of `0.39303776899708276`; the actual one-
+person sequence rows are more dependent. Existing real confidence therefore
+remains unavailable and would require fresh physically separate calibration,
+selection, and final evidence.
+
+The primary-source boundary distinguishes target-blind ranking from calibrated
+correctness probability, fixed abstention policy, conformal bounded-risk
+control, revision stability, and product-visible confidence. Exact-sequence
+0/1 error is the primary bounded loss. Raw CER stays unclipped; optional
+bounded CER must be separately named. A future report must show registered
+working points, accepted and generalized error, abstention, legacy AURC with
+limitations, and an AUGRC-equivalent area. ECE is secondary and unavailable
+for raw scores. Revision delay preserves the Loop 30 clock-domain contract.
+
+The nine-sheet tracker updates its dashboard and Loop 34 row, adds decision
+`34-R1`, risk `R39`, and prompt `Loop34-Research`, and preserves Loop 25 as the
+active execution decision. The 90,112-byte workbook has SHA-256
+`88b4251b06b4ac1e5514b0cdd1dcaffcf0aaa80c57f7c4a37811cd841e31066d`;
+all nine sheets rendered before and after the edit, the export reloads with
+exact key ranges, and the formula-error scan matches zero cells. The unrelated
+321,169-byte inspection sidecar remains byte-identical at SHA-256
+`5cd0ef08446c4e5feee5ce11f27eef41fae5eee8975cc77f6d401faca3b79f45`.
+
+Local verification passes 224 focused Loop 24-34 tests in 5.34 seconds wall
+with 314,818,560-byte maximum RSS; the strict Loop 34 plus roadmap slice passes
+26 tests in 0.07 seconds wall with 20,496,384-byte maximum RSS; 492 optional
+unittests pass with three expected skips in 22.64 seconds wall and
+575,291,392-byte maximum RSS; 489 pytest tests pass with three skips and 226
+subtests in 22.83 seconds wall and 588,234,752-byte maximum RSS; and 460
+dependency-light tests pass with 121 optional skips in 0.71 seconds wall and
+53,985,280-byte maximum RSS. Each full count is 17 above the Loop 33 closeout.
+
+Repository-wide Ruff, touched-file formatting, compileall, 22 source JSON and
+two TOML parses, seven CLI help surfaces, 55 registered commands, unauthorized
+Loop 34 runtime absence, 74 checked local Markdown links with zero missing,
+workbook render/reload/formula inspection, and `git diff --check` pass. Remote
+branch and pull-request CI remain pending until the research commit is pushed.
+
+Engineering capability added: a machine-checkable confidence semantics ladder,
+three-way evidence firewall, selective-risk and revision-latency protocol,
+target-leakage refusals, and explicit unavailable state now exist.
+
+Scientific claim not established: no protected data, model, confidence fit,
+target, score, or product surface was accessed, so there is no calibrated
+confidence, abstention benefit, selective-risk guarantee, neural advantage,
+decoding accuracy, unseen-person generalization, real-time behavior, or
+portable-hardware result.

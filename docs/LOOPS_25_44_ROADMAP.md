@@ -542,32 +542,58 @@ acquisition.
 
 ## Loop 34 - Confidence, Abstention, And Revision
 
-**Core question:** Can the system identify when to abstain or delay output
-without fitting confidence on the final test?
+**Current state:** Planning research complete; experiment `Not Started` and
+confidence unavailable. See `docs/LOOP_34_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop34_research_boundary.v0.json`. Every one of 26 authorization
+flags is false; no fixture, feature, probability mapping, threshold, target
+open, score, product confidence, or real-data operation exists.
+
+**Core question:** Can a target-blind score rank sequence errors, support a
+preregistered abstention rule on an independent partition, and keep revision
+stability separate from calibrated correctness?
 
 **Why it moves the goal:** Reliable refusal is more useful than fluent output
 whose error risk is unknown.
 
-**Build:** Define a validation-fit confidence schema, risk-coverage report,
-abstention/revision policy, calibration diagnostics, and explicit `unavailable`
-state in reports and UI.
+**Build:** After separate authorization, implement seven noninterchangeable
+confidence semantics, eight score/control roles, full registered working-point
+and generalized-risk reporting, a bounded-loss selective policy, revision-
+latency accounting, and an explicit `unavailable` state.
 
-**Research:** Map selective prediction and conformal risk control to small,
-correlated sequence samples. State minimum sample and partition requirements.
+**Research:** Completed. Primary sources distinguish raw ranking from
+correctness probability, selective operating points, conformal bounded-risk
+control, revision stability, and product-visible confidence. ECE is secondary
+and bin-sensitive; legacy AURC cannot be the only selective metric.
 
-**Data and controls:** Begin on a fresh synthetic split. Compare always-predict,
-entropy, margin, prefix stability, and prior-only confidence. Freeze coverage
-levels and select rules on calibration only.
+**Data and controls:** Recommend a fresh target-free synthetic lane with
+`128/64/256` calibration/selection/final sequences grouped by independent
+generation block and schedule. Compare normalized log score, entropy, margin,
+stability, train-only prior, fixed-random, always-predict, and post-hoc oracle
+roles. Select one score and policy on selection only; freeze all mappings,
+thresholds, predictions, and hashes before one final-target open. The oracle is
+never deployable.
 
-**Metrics:** risk-coverage curve/area; error at registered coverage; abstention
-rate; calibration error when supported; revision count; time to stability.
+**Metrics:** Exact-sequence 0/1 error as primary bounded loss; raw CER and
+separately named bounded CER; full risk-coverage table; accepted and
+generalized error at registered coverage; legacy AURC with limitations;
+AUGRC-equivalent area; abstention; Brier/log loss/reliability only for
+calibrated probabilities; revisions and first-output/stability/finalization/
+added-delay times in Loop 30 clock domains.
 
-**Gate:** Expose a confidence claim only if higher confidence lowers error on
-an independent partition and the registered coverage-risk rule passes. If not,
-report confidence as unavailable.
+**Gate:** A future synthetic claim needs all 20 gates, disjoint groups, target-
+blind generation, one selected score and policy, one final open, ranking above
+prior/random controls, useful minimum coverage, bounded conformal loss, named
+dependence assumptions, and complete access/resource/hash ledgers. Otherwise
+confidence remains unavailable. A synthetic pass cannot establish real
+confidence.
 
-**Dependencies and authorization:** Depends on Loops 30 and 31. Fitting,
-inference, and final-partition access need a separate authorization.
+**Dependencies and authorization:** Depends on Loops 30 and 31. The six real
+source-validation rows stay reserved for the shared Loop 26/31/33 event and
+cannot fit and independently qualify Loop 34. A real claim needs fresh physical
+calibration, selection, and final evidence. Future synthetic work remains one
+thread/worker, zero decoder training, at most six scalar mapping fits, 120
+seconds, 1 GiB RSS, 16 MiB artifacts, and zero downloads. Planning research is
+not authorization.
 
 ## Loop 35 - Peripheral Confound Firewall
 

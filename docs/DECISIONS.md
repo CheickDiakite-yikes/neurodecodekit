@@ -1843,3 +1843,54 @@ Evidence: `docs/LOOP_33_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop33_research_boundary.v0.json`,
 `tests/test_loop33_research_boundary.py`, roadmap row 33, research commit
 `25724de`, push CI run `29211291337`, and draft PR #12 CI run `29211306722`.
+
+## 0061 - Keep confidence unavailable until independent evidence exists
+
+Decision: close Loop 34 planning research while leaving the confidence,
+abstention, and revision experiment `Not Started`, confidence unavailable, all
+26 `authorized_now` fields false, and no fixture, feature, mapping, threshold,
+target, scoring, product-confidence, protected-data, or download operation
+opened. Separate seven confidence semantics and eight score/control roles.
+
+Why: the six real source-validation sentences remain reserved for one shared
+Loop 26/31/33 target open. They cannot also fit a confidence map, select a
+score and abstention policy, and independently qualify that policy. Even six
+observed successes give an optimistic one-sided 95% exact upper error bound of
+approximately `0.393`, before accounting for within-person dependence.
+
+Scientific boundary: raw log score, entropy, margin, or prefix stability may
+rank predictions but is not a correctness probability. Calibration requires a
+separately fit mapping and independent proper-scoring evaluation. Selective
+risk, conformal bounded-risk control, revision stability, and product-visible
+confidence are different claims. A synthetic pass cannot establish real
+confidence.
+
+Future design: recommend fresh target-free synthetic calibration, selection,
+and final counts of `128/64/256`, grouped by generation block and schedule.
+Fit probability or conformal mappings on calibration only; choose exactly one
+score and policy on selection only; hash-freeze all code, mappings, thresholds,
+predictions, and ledgers before opening final targets once. Exact-sequence
+0/1 error is primary. Raw CER stays unclipped; optional bounded CER must be
+separately named.
+
+Metric boundary: report every registered working point, accepted and
+generalized error, abstention, legacy AURC with its limitations, and an AUGRC-
+equivalent area. ECE is secondary and unavailable for raw scores. An
+abstain-all or below-minimum-coverage policy cannot pass. Revision count and
+added delay must preserve Loop 30 clock domains.
+
+Access and resource result: this research used five public web operations, one
+CPU thread/worker, and zero protected payload, signal, target, model,
+confidence fit, scoring, S20/S25, stream, device, or hardware operations.
+Future synthetic execution remains under one thread/worker, zero decoder
+training, six scalar mapping fits, 120 seconds, 1 GiB RSS, 16 MiB outputs, and
+zero downloads. The user's 5-10 GB capacity envelope is not authorization.
+
+Claim boundary: no calibrated confidence, abstention benefit, selective-risk
+guarantee, neural advantage, decoding accuracy, unseen-person generalization,
+real-time behavior, portable hardware, at-home use, assistive efficacy,
+diagnosis, clinical result, or product-safety claim exists.
+
+Evidence: `docs/LOOP_34_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop34_research_boundary.v0.json`,
+`tests/test_loop34_research_boundary.py`, and roadmap row 34.

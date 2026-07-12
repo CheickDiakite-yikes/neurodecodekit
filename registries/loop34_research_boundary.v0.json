@@ -1,0 +1,517 @@
+{
+  "schema_name": "neurodecodekit.loop34_research_boundary",
+  "schema_version": "0.1.0",
+  "prepared_at": "2026-07-12",
+  "status": "planning_research_complete_experiment_blocked_on_loop30_loop31_and_fresh_confidence_partitions",
+  "proof_posture": "planning_only_no_protected_cache_signal_target_checkpoint_model_confidence_fit_validation_or_product_claim",
+  "authorized_now": false,
+  "authorization": {
+    "loop34_preregistration_authorized_now": false,
+    "loop34_implementation_authorized_now": false,
+    "synthetic_trace_or_fixture_generation_authorized_now": false,
+    "confidence_feature_generation_authorized_now": false,
+    "confidence_calibration_fit_authorized_now": false,
+    "abstention_threshold_fit_authorized_now": false,
+    "revision_policy_fit_authorized_now": false,
+    "conformal_calibration_authorized_now": false,
+    "source_train_signal_read_authorized_now": false,
+    "source_train_target_read_authorized_now": false,
+    "source_validation_signal_read_authorized_now": false,
+    "source_validation_target_read_authorized_now": false,
+    "source_test_reopen_authorized_now": false,
+    "session2_reopen_authorized_now": false,
+    "checkpoint_or_model_run_authorized_now": false,
+    "training_or_parameter_update_authorized_now": false,
+    "no_signal_or_control_run_authorized_now": false,
+    "prediction_or_confidence_scoring_authorized_now": false,
+    "product_visible_confidence_authorized_now": false,
+    "new_real_data_download_authorized_now": false,
+    "network_payload_download_authorized_now": false,
+    "s20_or_s25_access_authorized_now": false,
+    "language_model_or_neurotoken_authorized_now": false,
+    "rw3_stream_device_or_hardware_authorized_now": false,
+    "loop35_or_later_authorized_now": false,
+    "authorization_sentence_exists": false,
+    "reason": "Loop 30 and Loop 31 have planning packets but no authorized results, the existing six source-validation targets are reserved for the shared Loop 26, Loop 31, and Loop 33 event rather than confidence fitting, and no fresh independent confidence partitions exist."
+  },
+  "decision": {
+    "current_experiment_status": "Not Started",
+    "research_question": "Can a target-blind score rank sequence errors, support a preregistered abstention rule on an independent partition, and separate revision stability from calibrated correctness?",
+    "maximum_current_claim_class": "L34-C0_no_new_result",
+    "maximum_future_synthetic_claim_class": "L34-C5_bounded_synthetic_selective_risk_control",
+    "maximum_future_real_claim_class_from_existing_partitions": "L34-C0_no_new_result",
+    "real_confidence_claim_available_from_existing_six_validation_rows": false,
+    "fresh_physically_separate_confidence_partitions_required_for_real_claim": true,
+    "stability_is_confidence": false,
+    "ranking_score_is_probability": false,
+    "abstention_is_decoding_accuracy": false,
+    "confidence_exposure_default": "unavailable",
+    "preregistration_prepared_now": false,
+    "authorization_request_prepared_now": false,
+    "experiment_matrix_frozen_now": false
+  },
+  "dependencies": {
+    "loop34_planning_research_complete": true,
+    "loop30_replay_and_clock_contract_required": true,
+    "loop30_planning_dependency_satisfied_now": true,
+    "loop30_execution_result_available_now": false,
+    "loop31_attribution_and_control_contract_required": true,
+    "loop31_planning_dependency_satisfied_now": true,
+    "loop31_execution_result_available_now": false,
+    "loop26_loop31_loop33_shared_source_validation_event_reserved": true,
+    "source_validation_rows_available_for_loop34_confidence_fitting": false,
+    "source_validation_rows_available_for_independent_loop34_qualification": false,
+    "source_test_and_session2_consumed_and_frozen": true,
+    "fresh_synthetic_calibration_selection_and_final_partitions_exist_now": false,
+    "fresh_real_calibration_selection_and_final_partitions_exist_now": false,
+    "loop34_preregistration_prepared": false,
+    "loop34_authorization_request_prepared": false,
+    "loop34_runtime_or_fixture_exists": false
+  },
+  "existing_evidence_inventory": [
+    {
+      "evidence_id": "loop14_source_split",
+      "proof_posture": "committed_metadata_and_consumed_split_contract",
+      "finding": "The source split has 55 train, 6 reserved validation, and 5 consumed source-test sentence rows; six rows cannot be divided into honest confidence fitting, selection, and final qualification partitions.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "loop15_and_loop19_negative_results",
+      "proof_posture": "consumed_real_negative_results",
+      "finding": "Both the cross-session MEG model and the EEG classifier were worse than their no-signal priors, so confidence planning cannot presume a useful neural predictor.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "loop23_stability_result",
+      "proof_posture": "consumed_synthetic_negative_gate",
+      "finding": "A sequence can stabilize and still be wrong; prefix stability is a candidate ranking feature, never correctness or calibrated probability by itself.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "loop30_replay_boundary",
+      "proof_posture": "planning_only",
+      "finding": "The interface contract keeps predictive confidence unavailable and separates nine clock domains, so a revision policy must report its added delay in the correct clock domain.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "loop31_attribution_boundary",
+      "proof_posture": "planning_only",
+      "finding": "Target-blind predictions and no-signal, timing, context, and corruption controls must freeze before target access; confidence cannot bypass the attribution firewall.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "six_row_zero_error_bound",
+      "proof_posture": "exact_binomial_design_calculation",
+      "finding": "Even zero errors in six independent Bernoulli trials gives a one-sided 95 percent exact upper error bound of approximately 0.393, before accounting for the actual within-person and sequence dependence.",
+      "payload_read_now": false
+    }
+  ],
+  "confidence_semantics": [
+    {
+      "level_id": "L34-S0_unavailable",
+      "meaning": "No score is shown because evidence or semantics are insufficient.",
+      "probability_semantics": false
+    },
+    {
+      "level_id": "L34-S1_raw_ranking_score",
+      "meaning": "A target-blind scalar orders predictions but has no correctness-probability meaning.",
+      "probability_semantics": false
+    },
+    {
+      "level_id": "L34-S2_calibrated_correctness_probability",
+      "meaning": "A separately fit mapping estimates correctness probability and is assessed with proper scoring rules on independent data.",
+      "probability_semantics": true
+    },
+    {
+      "level_id": "L34-S3_selective_policy",
+      "meaning": "A frozen threshold accepts, abstains, or delays at registered operating points.",
+      "probability_semantics": false
+    },
+    {
+      "level_id": "L34-S4_conformal_risk_control",
+      "meaning": "A bounded-loss risk claim is allowed only under the registered finite-sample assumptions and calibration protocol.",
+      "probability_semantics": false
+    },
+    {
+      "level_id": "L34-S5_revision_policy",
+      "meaning": "Prefix stability and delay govern when an output may revise or finalize; this is not correctness confidence.",
+      "probability_semantics": false
+    },
+    {
+      "level_id": "L34-S6_product_visible_confidence",
+      "meaning": "A user-visible value requires both valid semantics and independent qualification; otherwise the product must display unavailable.",
+      "probability_semantics": null
+    }
+  ],
+  "partition_recommendation": {
+    "status": "research_recommendation_not_frozen_until_preregistration",
+    "lane": "fresh_target_free_synthetic_sequence_replay_first",
+    "calibration_sequence_count": 128,
+    "selection_sequence_count": 64,
+    "final_sequence_count": 256,
+    "total_sequence_count": 448,
+    "counts_frozen_now": false,
+    "exact_seed_value": null,
+    "all_sequence_text_generated_from_fresh_seed_without_real_or_consumed_text": true,
+    "group_unit": "independent_generation_block_and_schedule_id",
+    "group_membership_must_be_disjoint": true,
+    "calibration_role": "fit_probability_mapping_or_conformal_threshold_only",
+    "selection_role": "choose_one_confidence_source_and_one_operating_policy_only",
+    "final_role": "one_time_qualification_after_all_candidates_thresholds_and_hashes_freeze",
+    "final_targets_may_fit_scale_threshold_bins_or_policy": false,
+    "synthetic_rows_are_biological_replication": false,
+    "synthetic_pass_implies_real_confidence": false,
+    "real_lane_requires_new_physically_separate_calibration_selection_and_final_evidence": true
+  },
+  "candidate_score_matrix": [
+    {
+      "candidate_id": "L34-F00_normalized_sequence_log_score",
+      "role": "length-normalized model path score",
+      "target_blind_at_inference": true,
+      "probability_without_calibration": false
+    },
+    {
+      "candidate_id": "L34-F01_frame_entropy_summary",
+      "role": "distribution-shape score summarized over valid frames",
+      "target_blind_at_inference": true,
+      "probability_without_calibration": false
+    },
+    {
+      "candidate_id": "L34-F02_top1_top2_margin_summary",
+      "role": "separation score summarized over valid frames",
+      "target_blind_at_inference": true,
+      "probability_without_calibration": false
+    },
+    {
+      "candidate_id": "L34-F03_prefix_stability_and_delay",
+      "role": "revision and time-to-stability descriptor",
+      "target_blind_at_inference": true,
+      "probability_without_calibration": false
+    },
+    {
+      "candidate_id": "L34-F04_train_only_prior_typicality",
+      "role": "signal-free confidence comparator",
+      "target_blind_at_inference": true,
+      "probability_without_calibration": false
+    },
+    {
+      "candidate_id": "L34-F05_fixed_random_score",
+      "role": "ranking-control floor from a preregistered fresh seed",
+      "target_blind_at_inference": true,
+      "probability_without_calibration": false
+    },
+    {
+      "candidate_id": "L34-F06_always_predict",
+      "role": "confidence-free coverage-one baseline",
+      "target_blind_at_inference": true,
+      "probability_without_calibration": false
+    },
+    {
+      "candidate_id": "L34-F07_oracle_error_ranking",
+      "role": "post-hoc unreachable diagnostic ceiling only",
+      "target_blind_at_inference": false,
+      "eligible_for_selection_or_deployment": false,
+      "probability_without_calibration": false
+    }
+  ],
+  "target_and_leakage_firewall": {
+    "synthetic_generation_may_use_real_target_text_labels_prompts_or_predictions": false,
+    "score_generation_may_use_current_item_target_correctness_cer_or_wer": false,
+    "calibration_targets_may_fit_registered_mapping_after_authorization": true,
+    "selection_targets_may_choose_one_candidate_and_policy_after_authorization": true,
+    "final_targets_may_change_candidate_mapping_threshold_coverage_bin_or_latency_rule": false,
+    "oracle_ranking_may_be_reported_only_after_final_scoring": true,
+    "oracle_ranking_may_be_presented_as_deployable": false,
+    "consumed_source_test_session2_s7_or_loop23_payload_may_seed_or_tune_confidence": false,
+    "language_model_text_typicality_may_be_called_neural_confidence": false
+  },
+  "metric_and_loss_recommendation": {
+    "status": "research_recommendation_not_frozen_until_preregistration",
+    "primary_bounded_loss": "exact_sequence_error_0_or_1",
+    "secondary_raw_loss": "raw_character_error_rate_unclipped",
+    "optional_bounded_cer_loss": "min_raw_CER_1_named_bounded_CER",
+    "raw_cer_may_be_silently_clipped": false,
+    "recommended_coverage_grid": [1.0, 0.9, 0.8, 0.6],
+    "recommended_primary_coverage": 0.8,
+    "recommended_minimum_coverage": 0.5,
+    "working_point_metrics": [
+      "coverage",
+      "accepted_exact_sequence_error",
+      "accepted_raw_CER",
+      "generalized_exact_sequence_error",
+      "abstention_rate"
+    ],
+    "multi_threshold_metrics": [
+      "full_risk_coverage_table",
+      "legacy_AURC_reported_with_limitations",
+      "AUGRC_or_equivalent_generalized_risk_area",
+      "failure_ranking_AUROC_as_diagnostic"
+    ],
+    "probability_metrics_only_after_probability_calibration": [
+      "Brier_score",
+      "negative_log_likelihood",
+      "reliability_table"
+    ],
+    "ece_available_for_raw_ranking_scores": false,
+    "ece_status": "secondary_only_if_probability_semantics_independent_sample_size_and_bins_are_preregistered",
+    "abstain_all_passes": false,
+    "ties_missing_scores_and_empty_accept_sets_must_be_reported": true
+  },
+  "small_sample_and_conformal_boundary": {
+    "existing_real_sequence_count": 6,
+    "zero_observed_error_one_sided_confidence_level": 0.95,
+    "zero_observed_error_exact_upper_bound": 0.39303776899708276,
+    "existing_rows_independent_exchangeable_evidence": false,
+    "existing_rows_can_certify_useful_error_risk": false,
+    "conformal_loss_must_be_bounded": true,
+    "conformal_guarantee_requires_registered_exchangeability_or_weighted_group_protocol": true,
+    "time_drift_or_group_dependence_may_be_ignored": false,
+    "synthetic_schedule_ids_and_blocks_must_be_grouped": true,
+    "conformal_result_may_be_transferred_from_synthetic_to_real": false,
+    "risk_level_and_failure_probability_frozen_now": false,
+    "population_person_or_device_inference_supported": false
+  },
+  "revision_and_latency_boundary": {
+    "stability_is_correctness": false,
+    "stable_prefix_may_still_be_wrong": true,
+    "revision_policy_must_freeze_before_final_targets": true,
+    "report_revision_count": true,
+    "report_time_to_first_output": true,
+    "report_time_to_stability": true,
+    "report_time_to_finalization": true,
+    "report_abstention_or_delay_added_latency": true,
+    "clock_domains_must_follow_loop30": true,
+    "end_to_end_latency_measured_now": false,
+    "real_time_claim_available_now": false
+  },
+  "future_access_sequence": [
+    "close_required_Loop30_and_Loop31_dependencies_or_bind_a_separate_synthetic_only_interface_lane",
+    "freeze_fresh_synthetic_generation_contract_exact_seed_partition_counts_grouping_and_hashes",
+    "freeze_candidate_scores_probability_mapping_options_losses_metrics_coverage_grid_revision_policy_resources_and_claims",
+    "commit_and_push_hash_bound_preregistration_and_separate_exact_authorization_request",
+    "after_exact_authorization_generate_calibration_selection_and_final_inputs_without_real_or_consumed_text",
+    "fit_registered calibration mappings and conformal thresholds on calibration only",
+    "choose_one_confidence_source_and_one_operating_policy on selection only",
+    "freeze_all_code_config_feature_mapping_threshold_policy_prediction_and_access hashes before final targets",
+    "open_final_targets_once and score every frozen condition without restart",
+    "publish support park invalid or unavailable without restart and with every working point warning and resource count"
+  ],
+  "outcome_taxonomy": [
+    {
+      "outcome_id": "L34-O0_not_run",
+      "meaning": "Planning only; confidence remains unavailable."
+    },
+    {
+      "outcome_id": "L34-O1_invalid",
+      "meaning": "Partition, target, hash, dependency, control, resource, or access order failed."
+    },
+    {
+      "outcome_id": "L34-O2_insufficient_independent_evidence",
+      "meaning": "There are not enough disjoint calibration, selection, and final groups; publish unavailable."
+    },
+    {
+      "outcome_id": "L34-O3_no_error_ranking",
+      "meaning": "The selected target-blind score does not rank errors better than the frozen random and prior-only controls."
+    },
+    {
+      "outcome_id": "L34-O4_ranking_only",
+      "meaning": "The score ranks some synthetic errors but has no calibrated probability or passing selective policy."
+    },
+    {
+      "outcome_id": "L34-O5_bounded_synthetic_selective_policy",
+      "meaning": "The frozen synthetic policy lowers independent final error at registered coverage while passing the minimum-coverage and control gates."
+    },
+    {
+      "outcome_id": "L34-O6_bounded_synthetic_conformal_control",
+      "meaning": "A bounded synthetic loss passes the registered finite-sample risk rule under explicit grouping and exchangeability assumptions."
+    },
+    {
+      "outcome_id": "L34-O7_real_confidence_unavailable",
+      "meaning": "The synthetic interface may pass, but no real confidence claim exists without fresh physical calibration, selection, and final evidence."
+    }
+  ],
+  "claim_taxonomy": [
+    {
+      "claim_id": "L34-C0_no_new_result",
+      "available_now": true,
+      "boundary": "Planning only; no confidence score, fit, policy, calibration, abstention result, or revision result exists."
+    },
+    {
+      "claim_id": "L34-C1_target_blind_raw_score",
+      "available_now": false,
+      "boundary": "One scalar can be computed target-blind; it is not a probability or evidence that higher values mean fewer errors."
+    },
+    {
+      "claim_id": "L34-C2_bounded_synthetic_error_ranking",
+      "available_now": false,
+      "boundary": "One frozen score ranks exact-sequence failures on a fresh independent synthetic final partition."
+    },
+    {
+      "claim_id": "L34-C3_bounded_synthetic_calibrated_probability",
+      "available_now": false,
+      "boundary": "A calibrated correctness probability passes independent Brier, log-loss, and reliability reporting on the named synthetic generator only."
+    },
+    {
+      "claim_id": "L34-C4_bounded_synthetic_abstention_and_revision",
+      "available_now": false,
+      "boundary": "A frozen synthetic policy lowers error at named coverage and reports the added revision or delay cost."
+    },
+    {
+      "claim_id": "L34-C5_bounded_synthetic_selective_risk_control",
+      "available_now": false,
+      "boundary": "A bounded synthetic risk statement holds only for the named generator, loss, groups, finite-sample rule, and assumptions."
+    },
+    {
+      "claim_id": "L34-C6_real_product_or_population_confidence",
+      "available_now": false,
+      "boundary": "Requires fresh physically separate real calibration, selection, and final evidence; the existing six rows, consumed tests, and synthetic pass are insufficient."
+    }
+  ],
+  "future_acceptance_gates": [
+    {"requirement_id": "L34-G01_dependencies", "requirement": "Loop 30 clocks and Loop 31 controls are bound, or the run is explicitly synthetic-interface-only."},
+    {"requirement_id": "L34-G02_fresh_partitions", "requirement": "Calibration, selection, and final groups are disjoint and generated from a new target-free seed."},
+    {"requirement_id": "L34-G03_exact_authorization", "requirement": "A separate exact sentence authorizes the named fixture, feature, target, fit, selection, final, and scoring operations."},
+    {"requirement_id": "L34-G04_target_firewall", "requirement": "No real, consumed, or current-item target text, label, correctness, CER, or WER enters synthetic generation or inference features."},
+    {"requirement_id": "L34-G05_score_freeze", "requirement": "All candidate score definitions, normalizations, missing-value rules, and tie rules freeze before target access."},
+    {"requirement_id": "L34-G06_probability_semantics", "requirement": "Raw ranking scores are never labeled probabilities; any mapping fits on calibration only."},
+    {"requirement_id": "L34-G07_candidate_selection", "requirement": "Exactly one score and policy are selected on the selection partition without final targets."},
+    {"requirement_id": "L34-G08_final_freeze", "requirement": "Code, features, mappings, thresholds, coverage points, revision rules, predictions, and hashes freeze before the final target open."},
+    {"requirement_id": "L34-G09_one_final_open", "requirement": "Final targets open once and every frozen condition scores in one pass."},
+    {"requirement_id": "L34-G10_controls", "requirement": "Always-predict, prior-only, fixed-random, and post-hoc oracle diagnostic rows are all reported with correct roles."},
+    {"requirement_id": "L34-G11_bounded_loss", "requirement": "Exact-sequence error is primary; raw CER and separately named bounded CER are never conflated."},
+    {"requirement_id": "L34-G12_working_points", "requirement": "Every registered coverage point reports accepted error, generalized error, abstention, and item counts."},
+    {"requirement_id": "L34-G13_minimum_coverage", "requirement": "No abstain-all or below-floor policy can pass."},
+    {"requirement_id": "L34-G14_multi_threshold_metrics", "requirement": "The full risk table and generalized-risk area accompany legacy AURC and its limitations."},
+    {"requirement_id": "L34-G15_calibration_metrics", "requirement": "Brier, log loss, reliability data, and ECE are reported only when probability semantics and preregistered bins exist."},
+    {"requirement_id": "L34-G16_conformal_assumptions", "requirement": "Any conformal claim names bounded loss, grouping, exchangeability or weighting, alpha, failure probability, and finite-sample rule."},
+    {"requirement_id": "L34-G17_revision_latency", "requirement": "Revision count and first-output, stability, finalization, and added-delay times use Loop 30 clock domains."},
+    {"requirement_id": "L34-G18_access_and_hash_ledgers", "requirement": "Raw, cache, target, model, fit, control, final-open, source, split, config, payload, and result counts and hashes are complete."},
+    {"requirement_id": "L34-G19_resource_caps", "requirement": "One thread and worker, zero model training, 120 seconds, 1 GiB RSS, 16 MiB artifacts, and zero downloads pass."},
+    {"requirement_id": "L34-G20_claim_boundary", "requirement": "A synthetic pass remains synthetic and product-visible confidence stays unavailable without fresh real qualification."}
+  ],
+  "future_refusal_ids": [
+    "L34-R01_loop30_or_loop31_dependency_missing_without_synthetic_only_boundary",
+    "L34-R02_missing_exact_execution_authorization",
+    "L34-R03_source_test_session2_s7_or_consumed_payload_reopen",
+    "L34-R04_s20_or_s25_access",
+    "L34-R05_real_target_text_label_prompt_or_prediction_used_in_synthetic_generation",
+    "L34-R06_current_item_target_correctness_cer_or_wer_used_as_feature",
+    "L34-R07_calibration_selection_or_final_groups_overlap",
+    "L34-R08_group_or_schedule_dependence_ignored",
+    "L34-R09_final_targets_used_to_fit_scale_bins_threshold_or_policy",
+    "L34-R10_more_than_one_final_target_open",
+    "L34-R11_candidate_or_policy_changed_after_final_open",
+    "L34-R12_raw_score_called_probability",
+    "L34-R13_stability_called_confidence_or_correctness",
+    "L34-R14_entropy_margin_or_logit_called_calibrated_without_fit",
+    "L34-R15_oracle_error_ranking_used_for_selection_or_deployment",
+    "L34-R16_missing_always_predict_prior_random_or_oracle_control",
+    "L34-R17_abstain_all_or_below_minimum_coverage_pass",
+    "L34-R18_only_favorable_coverage_point_reported",
+    "L34-R19_legacy_AURC_reported_as_complete_selective_evaluation",
+    "L34-R20_ECE_reported_for_nonprobability_score_or_unfrozen_bins",
+    "L34-R21_raw_CER_silently_clipped_or_called_bounded",
+    "L34-R22_unbounded_loss_used_for_conformal_risk_claim",
+    "L34-R23_exchangeability_drift_or_weighting_assumption_omitted",
+    "L34-R24_six_real_rows_called_useful_risk_certificate",
+    "L34-R25_synthetic_sequences_or_seeds_called_biological_replicates",
+    "L34-R26_synthetic_result_transferred_to_real_confidence",
+    "L34-R27_revision_or_abstention_delay_omitted_or_clock_domains_mixed",
+    "L34-R28_missing_access_hash_warning_tie_or_unavailable_field",
+    "L34-R29_runtime_rss_artifact_training_or_download_cap_exceeded",
+    "L34-R30_real_time_portable_at_home_assistive_diagnostic_clinical_or_product_safety_claim"
+  ],
+  "resource_boundaries": {
+    "current_research_cpu_threads": 1,
+    "current_research_workers": 1,
+    "current_research_generated_artifact_cap_bytes": 8388608,
+    "future_cpu_threads": 1,
+    "future_workers": 1,
+    "future_model_training_runs": 0,
+    "future_parameter_updates_for_decoder": 0,
+    "future_confidence_mapping_fits_ceiling": 6,
+    "future_total_runtime_cap_sec": 120,
+    "future_peak_rss_cap_bytes": 1073741824,
+    "future_generated_artifact_cap_bytes": 16777216,
+    "future_new_data_or_model_download_bytes_before_separate_authorization": 0,
+    "future_direct_energy_measurement_available": false,
+    "cpu_time_may_be_reported_as_energy": false,
+    "user_preferred_incremental_storage_bytes": 5000000000,
+    "user_absolute_incremental_storage_bytes": 10000000000,
+    "storage_envelope_is_data_access_model_target_or_execution_authorization": false
+  },
+  "research_access_counters": {
+    "high_level_public_web_research_operations": 5,
+    "public_github_api_operations": 0,
+    "protected_dataset_model_or_weight_download_bytes": 0,
+    "raw_signal_or_header_reads": 0,
+    "real_cache_content_reads": 0,
+    "source_train_signal_reads": 0,
+    "source_train_target_reads": 0,
+    "source_validation_signal_reads": 0,
+    "source_validation_target_reads": 0,
+    "source_test_or_session2_reads": 0,
+    "s20_or_s25_operations": 0,
+    "checkpoint_or_model_runs": 0,
+    "training_runs": 0,
+    "parameter_updates": 0,
+    "confidence_or_calibration_fits": 0,
+    "no_signal_or_control_runs": 0,
+    "prediction_or_scoring_runs": 0,
+    "synthetic_fixture_generations": 0,
+    "new_real_data_downloads": 0,
+    "rw3_stream_sdk_socket_device_or_hardware_operations": 0,
+    "public_network_response_bytes": null,
+    "public_network_response_bytes_unavailable_reason": "The interactive web research tool does not expose complete response-byte accounting."
+  },
+  "source_bindings": [
+    {
+      "source_id": "selective_classification_deep_networks",
+      "url": "https://papers.neurips.cc/paper_files/paper/2017/hash/4a8423d5e91fda00bb7e46540e2b0cf1-Abstract.html",
+      "use": "selective risk, coverage, abstention, and high-probability risk control motivation"
+    },
+    {
+      "source_id": "conformal_risk_control",
+      "url": "https://research.google/pubs/conformal-risk-control/",
+      "use": "finite-sample expected control for monotone bounded losses and explicit O(1/n) calibration tightness"
+    },
+    {
+      "source_id": "conformal_beyond_exchangeability",
+      "url": "https://arxiv.org/abs/2202.13415",
+      "use": "weighted conformal methods and explicit drift or nonexchangeability assumptions"
+    },
+    {
+      "source_id": "modern_neural_network_calibration",
+      "url": "https://proceedings.mlr.press/v70/guo17a.html",
+      "use": "probability-calibration semantics and separately fit temperature scaling"
+    },
+    {
+      "source_id": "measuring_calibration",
+      "url": "https://arxiv.org/abs/1904.01685",
+      "use": "ECE sensitivity to binning and measurement choices and the need for full reliability reporting"
+    },
+    {
+      "source_id": "generalized_risk_coverage",
+      "url": "https://arxiv.org/abs/2407.01032",
+      "use": "limitations of aggregate AURC and interpretable generalized-risk working-point evaluation"
+    },
+    {
+      "source_id": "loop30_local_replay_boundary",
+      "url": "docs/LOOP_30_PRIMARY_SOURCE_RESEARCH.md",
+      "use": "stability is not confidence and revision latency must preserve clock-domain semantics"
+    },
+    {
+      "source_id": "loop31_local_attribution_boundary",
+      "url": "docs/LOOP_31_PRIMARY_SOURCE_RESEARCH.md",
+      "use": "target-blind prediction freeze, no-signal controls, and sensor-signal claim firewall"
+    }
+  ],
+  "claim_boundary": [
+    "This registry closes Loop 34 planning research only; it is not a preregistration, authorization, implementation, confidence fit, abstention result, revision result, or product feature.",
+    "No protected cache, signal, target, checkpoint, model, calibration, selection, final scoring, consumed evidence, S20, S25, stream, device, or hardware operation occurred.",
+    "A raw log score, entropy, margin, or stability value is not a correctness probability and must remain visibly unavailable until its exact claim level is independently qualified.",
+    "The existing six source-validation sentences are reserved for the shared Loop 26, Loop 31, and Loop 33 event and cannot honestly fit and independently qualify Loop 34 confidence.",
+    "A future synthetic pass can prove only an interface and bounded synthetic selective-prediction result under the named generator, loss, partition, grouping, and assumptions.",
+    "No real confidence, neural advantage, decoding accuracy, risk certificate, unseen-person generalization, real-time behavior, portable hardware, at-home use, assistive benefit, diagnostic use, clinical claim, or product-safety claim is established."
+  ]
+}
