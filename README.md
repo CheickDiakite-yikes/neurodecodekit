@@ -656,7 +656,12 @@ The original numbered development sequence has reached:
 - Loop 24: preregistered at `186bb6f` with contract SHA-256
   `58e9d5407fef9419bc3bb0dc8cd3fa68d36dd238cb636d2f833dd9c5c6c3ae5d`;
   implementation and execution remain unauthorized, and consumed seed 2353
-  cannot select candidates.
+  cannot select candidates;
+- Loops 25-44: a new primary-source-informed planning tranche spans causal
+  evidence, translation/generalization, reliability/confounds,
+  reproducibility/local deployment, and live translation/release. All 20 rows
+  are `Not Started`, `execution_authorized: false`, and subordinate to the
+  current Loop 24 decision.
 
 The parallel Real-World Practice track has reached:
 
@@ -670,11 +675,15 @@ The parallel Real-World Practice track has reached:
 - RW4+: not authorized by RW3 registration;
 - proposed S20 acquisition: dry-run only until exact approval.
 
-The roadmap is not a promise of positive decoding performance. Gates can close,
-park, or kill a direction.
+The next tranche is a claim graph, not a feature wish list. A failed real
+validation gate parks model scaling; a failed neural ablation blocks neural
+attribution; a failed replay gate blocks device work. Negative results remain
+valid closeouts. Roadmap approval and general continuation are not execution
+authorization.
 
 See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
-[docs/REAL_WORLD_PRACTICE_TRACK_RESEARCH.md](docs/REAL_WORLD_PRACTICE_TRACK_RESEARCH.md).
+[docs/LOOPS_25_44_ROADMAP.md](docs/LOOPS_25_44_ROADMAP.md), plus the separate
+[real-world practice track](docs/REAL_WORLD_PRACTICE_TRACK_RESEARCH.md).
 
 ## Documentation Map
 
@@ -684,8 +693,12 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/CODEX_HANDOFF.md](docs/CODEX_HANDOFF.md) | exact continuation boundary for coding agents |
 | [docs/BUILD_NOTES.md](docs/BUILD_NOTES.md) | chronological measured build journal |
 | [docs/DECISIONS.md](docs/DECISIONS.md) | consequential architecture and research decisions |
-| [docs/NEXT_20_LOOPS_TRACKER.md](docs/NEXT_20_LOOPS_TRACKER.md) | original 20-loop tracker plus the current post-roadmap gate and decision status |
-| [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) | post-NeuroToken causal/evaluation roadmap |
+| [docs/NEXT_20_LOOPS_TRACKER.md](docs/NEXT_20_LOOPS_TRACKER.md) | original 20-loop tracker, current post-roadmap gate, and planning-only Loops 25-44 summary |
+| [docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx](docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx) | nine-sheet working tracker with separate original-roadmap, current-gate, practice-track, and Loops 25-44 views |
+| [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) | closed/current post-NeuroToken gates plus links to the next tranche |
+| [docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md](docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md) | Brain2Qwerty, MNE, BIDS, MOABB, LSL, privacy, uncertainty, and edge-runtime research behind Loops 25-44 |
+| [docs/LOOPS_25_44_ROADMAP.md](docs/LOOPS_25_44_ROADMAP.md) | detailed goals, controls, metrics, acceptance gates, stop rules, dependencies, caps, and authorization boundaries for the next 20 loops |
+| [registries/next_20_loops.v0.json](registries/next_20_loops.v0.json) | machine-readable five-phase roadmap with 20 false execution flags and row-level primary-source bindings |
 | [docs/REAL_DATA_VALIDATION_2026-07-10.md](docs/REAL_DATA_VALIDATION_2026-07-10.md) | S21 alignment, session, and upstream audit |
 | [docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md](docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md) | real EEG bridge and negative classifier result |
 | [docs/LOOP_20_NEUROTOKEN_CACHE_V0.md](docs/LOOP_20_NEUROTOKEN_CACHE_V0.md) | NeuroTokenCache schema and synthetic interface proof |

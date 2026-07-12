@@ -753,6 +753,28 @@
       "resource_cap": "Artifact-only review, one thread, one worker, 16 MiB generated reports, zero data/model/training/device access, and complete link/test checks."
     }
   ],
+  "loop_source_map": {
+    "25": ["brain2qwerty_v2", "mne_resampling"],
+    "26": ["brain2qwerty_v1", "brain2qwerty_v2"],
+    "27": ["brain2qwerty_v1", "brain2qwerty_v2", "datasheets"],
+    "28": ["brain2qwerty_v2", "moabb_benchmark"],
+    "29": ["brain2qwerty_v2", "moabb_benchmark"],
+    "30": ["brain2qwerty_v2", "lsl_time_sync"],
+    "31": ["brain2qwerty_v1", "brain2qwerty_v2"],
+    "32": ["brain2qwerty_v2", "moabb_benchmark"],
+    "33": ["brain2qwerty_v2", "moabb_benchmark"],
+    "34": ["selective_prediction"],
+    "35": ["brain2qwerty_v1", "brain2qwerty_v2"],
+    "36": ["mne_resampling", "bids_derivatives"],
+    "37": ["bids_derivatives", "datasheets"],
+    "38": ["eeg_identity_privacy", "nist_privacy_framework"],
+    "39": ["moabb_benchmark", "model_cards"],
+    "40": ["executorch"],
+    "41": ["lsl_time_sync", "bids_derivatives"],
+    "42": ["lsl_time_sync", "nist_privacy_framework"],
+    "43": ["moabb_benchmark", "model_cards", "datasheets"],
+    "44": ["model_cards", "datasheets", "nist_privacy_framework"]
+  },
   "primary_sources": [
     {
       "source_id": "brain2qwerty_v2",

@@ -1803,3 +1803,46 @@ formulas. All eight sheets render, the exported workbook reloads, and the
 formula-error scan finds zero matches. The tracked workbook is 57,473 bytes
 with SHA-256
 `3bb5b2ab03b4327912024bac401fb76ae682151df96140a379514e36caa22f82`.
+
+## 2026-07-12 - Research and freeze the next 20-loop planning tranche
+
+Reviewed Brain2Qwerty v1/v2, MNE resampling, BIDS derivatives, the MOABB
+benchmark, LSL clock synchronization, ExecuTorch, EEG identity privacy, the
+NIST Privacy Framework, model cards, datasheets, and selective prediction from
+primary or maintained sources. The review found that the highest-value next
+steps are not 20 larger-model variants: causal preprocessing, fresh evidence,
+neural-versus-language attribution, subject transfer, peripheral confounds,
+geometry/reference identity, timestamp semantics, privacy, cross-machine
+reproduction, and one-device qualification are the missing gates.
+
+Commit `56a1c0a` adds `neurodecodekit.next_twenty_loops_roadmap` v0.1.0 plus
+the human research and roadmap documents. The contract contains exactly Loops
+25-44, five phases of four loops, backward-only loop dependencies, protected
+S7/S21 and seed boundaries, one-thread and 32-MiB defaults, detailed controls,
+metrics, acceptance and stop rules, authorization boundaries, 12 primary
+sources, and row-level source mappings. Every loop is `Not Started` with
+`execution_authorized: false`.
+
+Nine dependency-free invariants pass in 0.070 seconds wall with 18,071,552-byte
+peak RSS. The full optional unittest run reaches 286 passes with three skips in
+20.180 seconds (21.320 seconds wall, 570,392,576-byte maximum RSS). Pytest
+reaches 283 passes, three skips, and 105 subtests in 18.78 seconds (20.010
+seconds wall, 579,158,016-byte maximum RSS). The true zero-dependency run
+reaches 274 tests with 118 expected optional skips, exactly nine more than the
+pre-roadmap 265-test baseline.
+
+The tracker was imported and edited only through the bundled artifact-tool
+runtime. Its ninth `Loops 25-44` sheet is generated from the JSON contract and
+contains frozen panes, filters, status validation, detailed work orders,
+proof/authorization fields, resource caps, and row-level source URLs. All nine
+sheets were rendered; the workbook was exported, reloaded, inspected at the
+first and last roadmap rows, and scanned with zero formula-error matches. The
+tracked and delivered files are both 75,181 bytes with SHA-256
+`775e907e63277fd42e536421715ce116adfb837b71bfdf270e70024dd39a13aa`.
+
+No dataset download, raw/real/consumed-cache/target read, fixture generation,
+checkpoint access, candidate conversion, model or decoder run, training,
+BrainFlow/LSL/PyXDF operation, socket, stream, board, device, or hardware
+session occurred. This milestone makes the next evidence queue detailed and
+machine-checkable; it establishes no new decoding, neural, transfer, latency,
+or device result.

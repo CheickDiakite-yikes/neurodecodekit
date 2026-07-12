@@ -69,6 +69,17 @@ training remain unauthorized. Keep S7/S21 evidence and seeds 2203, 2303, and
 2353 frozen. Any future real-data acquisition remains dry-run by default and
 requires explicit byte caps plus `--execute`.
 
+A primary-source-informed next tranche now defines Loops 25-44 in
+`docs/LOOPS_25_44_ROADMAP.md` and
+`registries/next_20_loops.v0.json`. It contains exactly 20 planning rows across
+five phases, with detailed controls, metrics, stop rules, resource caps,
+dependencies, and source bindings. Every row is `Not Started` and
+`execution_authorized: false`. This roadmap does not change the immediate
+decision order, authorize Loop 24 or RW3, or permit a Loop 25-44 fixture, data
+read, model run, training run, stream, board, or hardware operation. A broad
+request to continue toward Loop 44 is a goal, not a substitute for each frozen
+authorization boundary.
+
 ## Acceptance criteria for next PR
 
 - `python -m unittest discover -s tests` passes.
@@ -80,6 +91,9 @@ requires explicit byte caps plus `--execute`.
 - The Loop 24 JSON contract and nine dependency-free invariants remain exact;
   all execution flags stay false unless the exact authorization decision is
   separately recorded, tested, committed, and pushed.
+- The Loops 25-44 roadmap contains exact IDs 25 through 44, five phases of four
+  loops, row-level primary-source bindings, nine dependency-free invariants,
+  and 20 false execution flags.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - No Loop 24 runtime module, fixture, CLI, checkpoint read, candidate

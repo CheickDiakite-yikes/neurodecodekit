@@ -134,6 +134,13 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                 "selective_prediction",
             }.issubset(source_ids)
         )
+        source_map = self.roadmap["loop_source_map"]
+        self.assertEqual(set(source_map), {str(loop_id) for loop_id in range(25, 45)})
+        for loop_id, mapped_sources in source_map.items():
+            with self.subTest(loop=loop_id):
+                self.assertGreaterEqual(len(mapped_sources), 1)
+                self.assertEqual(len(mapped_sources), len(set(mapped_sources)))
+                self.assertTrue(set(mapped_sources).issubset(source_ids))
 
     def test_existing_loop24_and_rw3_execution_flags_remain_false(self):
         loop24 = json.loads(LOOP24_PATH.read_text(encoding="utf-8"))

@@ -8,8 +8,10 @@
    whether to authorize Loop 24 implementation.
 6. Review `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` only when deciding whether
    to authorize RW3 Stage A.
-7. Paste `prompts/CODEX_START_PROMPT.md` into Codex to continue.
-8. Run tests:
+7. Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md` and
+   `docs/LOOPS_25_44_ROADMAP.md` for the planning-only Loops 25-44 queue.
+8. Paste `prompts/CODEX_START_PROMPT.md` into Codex to continue.
+9. Run tests:
 
 ```bash
 PYTHONPATH=src python -m unittest discover -s tests -v
@@ -17,7 +19,9 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 
 Tracker scope: the spreadsheet's `20` KPI is the size of the original roadmap,
 not the current loop number. Its dashboard now separately reports the current
-post-roadmap position as **Loop 24 preregistered**.
+post-roadmap position as **Loop 24 preregistered**, and its ninth sheet contains
+the separate **Loops 25-44 planning-only queue**. Every new row is `Not Started`
+and unauthorized; adding the queue does not skip Loop 24 or authorize RW3.
 
 The parallel Real-World Practice Track starts at
 `docs/REAL_WORLD_PRACTICE_TRACK_RESEARCH.md`. RW0 is a completed research gate;

@@ -15,6 +15,9 @@ requests, and these files:
 - `docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md`
 - `registries/local_precision_runtime_contract.v0.json`
 - `docs/POST_20_ROADMAP.md`
+- `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`
+- `docs/LOOPS_25_44_ROADMAP.md`
+- `registries/next_20_loops.v0.json`
 - `docs/OPEN_SOURCE_READINESS.md`
 
 Preserve every existing change and the unrelated tracker inspection NDJSON.
@@ -45,6 +48,10 @@ Do not reset, revert, delete, or overwrite work already present.
   correctness/resource/claim gates, and nine dependency-free invariants are
   frozen. Every execution flag is false; no fixture, candidate, checkpoint
   read, inference, benchmark, profiler, energy, or qualification run exists.
+- Loops 25-44 are now a detailed planning-only queue: exactly 20 contiguous
+  rows across five phases, with source bindings, controls, metrics, acceptance
+  gates, stop rules, dependencies, resource caps, and 20 false execution flags.
+  The queue does not skip Loop 24 or authorize any operation.
 - No real recording quality, neural advantage, unseen-person generalization,
   useful EEG decoder, real-time decoding, portable-hardware, arbitrary-thought,
   or clinical result has been demonstrated.
@@ -108,21 +115,26 @@ Authorizing either Loop 24 or RW3 Stage A cannot authorize the other.
    generated data artifacts beyond tiny documentation-validation debris.
 7. Keep RW3 independent from Loop 24 precision/runtime and the
    blocked RW4 S20 acquisition packet.
+8. Do not implement or execute a Loop 25-44 item from roadmap approval or a
+   broad request to continue. Freeze and authorize the loop-specific packet
+   first; a failed gate parks its dependent claim branch.
 
 ## Required deliverables for this review milestone
 
 1. Keep README, tracker, decision log, build notes, handoff, start-here,
    roadmap, workbook, and continuation prompt consistent with Loop 24 commit
    `186bb6f`, RW3 commit `c3d1f01`, and the still-unauthorized request prepared
-   at `163ff2f`.
+   at `163ff2f`. Keep the Loops 25-44 planning-only contract and all 20 false
+   execution flags consistent too.
 2. Run documentation/contract validation, local-link checks, Ruff,
    `git diff --check`, Gitleaks, and the complete unit suites. Compare with the
-   pre-Loop-24 268-unittest / 265-pytest baseline and the registered 277/
-   274-test post-contract counts.
+   pre-roadmap 277-unittest / 274-pytest / 265-zero-dependency baseline and the
+   current 286-unittest / 283-pytest / 274-zero-dependency counts.
 3. Commit and push the coherent documentation milestone and refresh draft PR
    #2. Preserve unrelated files and generated debris outside Git.
 
 Do not call Loop 24 or RW3 implemented or runtime-validated. The current
 milestone proves only that two future synthetic experiments and their separate
 decision boundaries were frozen before candidate, transport, data, or hardware
-access.
+access, and that the later Loops 25-44 evidence queue was researched and made
+machine-checkable without authorizing execution.

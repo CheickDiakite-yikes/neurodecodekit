@@ -26,6 +26,11 @@
 > invariants pass. No fixture, candidate, checkpoint read, inference, timing,
 > profiler, energy, or qualification run exists, and every execution flag is
 > false.
+> A primary-source-informed Loops 25-44 roadmap is now frozen as planning only:
+> 20 contiguous rows, five phases, detailed controls/metrics/stop rules, one-
+> thread and byte caps, row-level sources, and 20 false execution flags. It does
+> not skip the current Loop 24 decision or authorize RW3, data, training, or
+> hardware.
 > In parallel, RW0 closes a primary-source Real-World Practice research gate
 > with eight dataset records, 13 device records, a local BYO Neurodata
 > contract, and one exact S20 EEG dry-run packet. RW1 now closes a
@@ -159,6 +164,10 @@ This repo is a starter scaffold with working pure-Python components:
 - open-source collaboration surface with Apache-2.0 license, third-party/data
   boundaries, detailed README, EEG data/hardware contribution paths, security,
   governance, citation, issue forms, pull-request checks, and one-thread CI
+- primary-source-informed Loops 25-44 planning contract with five phases,
+  acceptance and stop rules, resource/authorization boundaries, row-level
+  sources, a dedicated spreadsheet sheet, and dependency-free invariants; no
+  future loop execution is authorized by it
 - JSON/Markdown metrics report command
 - CLI smoke commands
 - unit tests
@@ -171,23 +180,21 @@ negative within-session event comparison. None is a decoder success. Do not
 turn these results, a variance ranking, or a geometry proxy into unseen-person
 or population generalization.
 
-Current verification after the Loop 24 preregistration at `186bb6f`: 277
-unittest tests pass with 3 skipped in 13.700 seconds (14.610 seconds wall and
-545,832,960-byte maximum RSS); pytest reports 274 passed, 3 skipped, and 25
-subtests passed in 14.31 seconds (15.460 seconds wall and 580,567,040-byte
-maximum RSS). All nine focused Loop 24 invariants pass in 0.110 seconds wall
-with 20,742,144-byte maximum RSS. A separate true zero-dependency run passes
-265 tests with 118 explicit optional skips in 1.440 seconds wall and
-64,290,816-byte maximum RSS. The pre-Loop-24 baseline was 268 unittest and 265
-pytest passes with the same optional-environment skips/subtests, so the frozen
-contract adds nine tests without regression. Full Ruff lint, compileall, root
-CLI help, JSON/TOML parsing, 43 local Markdown links, `git diff --check`, and
-staged Gitleaks pass. No data, fixture, checkpoint, candidate, inference,
-benchmark, model, or training operation was part of this registration gate.
+Current verification after adding the planning-only Loops 25-44 contract: 286
+unittest tests pass with 3 skipped in 20.180 seconds (21.320 seconds wall and
+570,392,576-byte maximum RSS); pytest reports 283 passed, 3 skipped, and 105
+subtests passed in 18.78 seconds (20.010 seconds wall and 579,158,016-byte
+maximum RSS). The nine focused roadmap invariants pass in 0.070 seconds wall
+with 18,071,552-byte maximum RSS. A separate true zero-dependency run passes
+274 tests with 118 explicit optional skips. The pre-roadmap 277-unittest /
+274-pytest / 265-zero-dependency baseline therefore gains nine tests without
+regression. No data, fixture, checkpoint, candidate, inference, benchmark,
+model, training, stream, board, or hardware operation was part of the roadmap
+gate.
 The tracked and delivered workbook hashes match at
-`3bb5b2ab03b4327912024bac401fb76ae682151df96140a379514e36caa22f82`.
-The tracked workbook is 57,473 bytes and its eight-sheet visual/formula audit
-passes.
+`775e907e63277fd42e536421715ce116adfb837b71bfdf270e70024dd39a13aa`.
+The tracked workbook is 75,181 bytes and its nine-sheet visual/formula audit
+passes with zero formula-error matches.
 
 ## The north star
 
@@ -216,7 +223,12 @@ This is not primarily a model repo. It is a **research loop repo**.
    false. Do not implement Stage A without an explicit user decision followed
    by a pushed authorization-only commit; BrainFlow, LSL, PyXDF, sockets, live
    sources, hardware, and Stages B-D remain later independent gates.
-3. **Review draft PR #2 before publishing the latest evidence on `main`.** PR #1
+3. **Use Loops 25-44 as the future evidence queue, not blanket authorization.**
+   Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`,
+   `docs/LOOPS_25_44_ROADMAP.md`, and
+   `registries/next_20_loops.v0.json`. Each future loop still requires its own
+   preregistration or bounded implementation packet before execution.
+4. **Review draft PR #2 before publishing the latest evidence on `main`.** PR #1
    has merged the open-source community surface through `e5d89ed`; PR #2 carries
    the RW2 closeout, README results dashboard, canonical Apache license text,
    Linux float32 portability record, RW3 registration, and the Stage A decision
@@ -236,7 +248,10 @@ are in `docs/LOOP_23_5_PREREGISTRATION.md` and
 contract are in `docs/LOOP_24_PRIMARY_SOURCE_RESEARCH.md`,
 `docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md`, and
 `registries/local_precision_runtime_contract.v0.json`; the post-20 sequence is in
-`docs/POST_20_ROADMAP.md`; RW1 evidence is in
+`docs/POST_20_ROADMAP.md`. The next 20-loop research, work orders, and machine
+contract are in `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`,
+`docs/LOOPS_25_44_ROADMAP.md`, and
+`registries/next_20_loops.v0.json`. RW1 evidence is in
 `docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md`; RW2 evidence is in
 `docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md`,
 `docs/RW2_PRIMARY_SOURCE_RESEARCH.md`, and

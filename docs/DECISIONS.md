@@ -1176,3 +1176,52 @@ Evidence: `docs/LOOP_24_PRIMARY_SOURCE_RESEARCH.md`,
 `docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md`,
 `registries/local_precision_runtime_contract.v0.json`,
 `tests/test_local_precision_runtime_contract.py`, and commit `186bb6f`.
+
+## 0048 - Define Loops 25-44 as an evidence-driven planning contract
+
+Decision: replace the earlier six-row provisional continuation with one exact
+20-loop planning tranche covering IDs 25 through 44. Group the work into five
+phases of four loops: causal evidence, translation/generalization,
+reliability/confounds, reproducibility/local deployment, and live
+translation/release. Keep every row `Not Started`,
+`execution_authorized: false`, and `proof_posture: planned_not_authorized`.
+
+Why: the project's main gap is no longer basic pipeline availability. Real S21
+cross-session MEG and S7 EEG comparisons are negative, consumed evidence must
+stay closed, and no neural advantage, unseen-person transfer, causal real-
+neural result, end-to-end latency, or portable device has been demonstrated.
+Primary sources identify causal preprocessing, data quantity versus sentence
+diversity, neural-token and language ablations, participant variability,
+patient/no-keypress translation, sensor/device non-equivalence, clock domains,
+provenance, privacy, abstention, and independent reproduction as the work that
+can move those claims.
+
+Contract: `neurodecodekit.next_twenty_loops_roadmap` v0.1.0 records exactly 20
+contiguous IDs, five phase groups, protected S7/S21 evidence and consumed seeds
+2203/2303/2353, global one-thread and 32-MiB defaults, detailed build/research
+deliverables, controls, primary metrics, acceptance and stop rules,
+dependencies, authorization boundaries, resource caps, 12 primary sources, and
+row-level source bindings. Nine dependency-free invariants protect the count,
+phase structure, backward-only dependency graph, source coverage, protected
+evidence, false execution flags, and human-document agreement.
+
+Authorization boundary: this is a roadmap result only. It does not authorize
+Loop 24, RW3 Stage A, a Loop 25-44 preregistration or implementation, a fixture,
+download, real or consumed data read, target access, model or decoder run,
+training, optional streaming import, socket, board, device, or hardware session.
+General continuation and approval of the roadmap are not experiment
+authorization.
+
+Measured planning result: focused invariants pass 9/9 in 0.070 seconds wall
+with 18,071,552-byte peak RSS. The optional environment reaches 286 unittest
+passes with three skips and 283 pytest passes with three skips plus 105
+subtests; the true zero-dependency environment reaches 274 tests with 118
+expected optional skips. The new nine-sheet tracker is 75,181 bytes with
+SHA-256
+`775e907e63277fd42e536421715ce116adfb837b71bfdf270e70024dd39a13aa`;
+tracked and delivered copies match and the render/reload/formula audit passes.
+
+Evidence: `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`,
+`docs/LOOPS_25_44_ROADMAP.md`, `registries/next_20_loops.v0.json`,
+`tests/test_next_20_loops_contract.py`, the `Loops 25-44` workbook sheet, and
+commit `56a1c0a`.
