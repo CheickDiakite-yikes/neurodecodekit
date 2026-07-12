@@ -2551,3 +2551,76 @@ language, context, timing, and conditional Neuro Token effects separate. It
 does not establish sensor-signal dependence, brain-specific neural
 contribution, decoding accuracy, unseen-person generalization, real-time or
 portable-hardware behavior, assistive efficacy, diagnosis, or clinical utility.
+
+## 2026-07-12 - Define the Loop 32 fresh-person calibration boundary
+
+Loop 32 planning research now makes calibration information and human burden
+explicit without opening a participant. The future recommendation is one
+pointwise causal hidden affine adapter over the proposed 16-wide Loop 26 source
+encoder: 16 scales plus 16 biases, exactly 32 target-trainable values, with all
+2,908 base values frozen. Strict zero-shot, unlabeled transductive, label-light,
+and supervised calibration remain four different modes and claims.
+
+The nested recommendation is `0, 2, 4, 8, 16, 32` unique completed calibration
+sentences. Label-light is capped at eight labeled calibration sentences and
+supervised calibration at 32, while every labeled selection row remains part of
+the reported supervision burden. Unlabeled mode cannot use target labels to
+select its budget, stopping rule, or threshold. Synthetic Loop 16 seconds are
+not translated into a human calibration-time claim.
+
+A future candidate requires physically distinct, row-disjoint, and semantic-
+text-disjoint recordings with at least 32 calibration, 16 selection, and 48
+final unique completed sentences. S25 session 2 block 2 remains final-only for
+Loop 28 and is ineligible. Strict zero-shot final predictions must hash-freeze
+before any target-person calibration access; one mode, adapter, and budget must
+then freeze before all adapted/control predictions and one final-target open.
+
+The future final matrix has six conditions: frozen zero-shot, identity adapter,
+selected adapter, source-train-only no-signal prior, robust normalization-only,
+and label derangement for labeled modes. The current statistical recommendation
+requires at least `0.05` macro-CER gain versus both zero-shot and prior, 65,535
+random sign assignments plus observed, and strict wins over every applicable
+control. The practical margins remain unfrozen until preregistration. Any tie,
+final harm, split/hash/access/resource failure, or selection-to-final reversal
+parks the claim without restart.
+
+The machine registry freezes four modes, six budgets, six conditions, seven
+claim classes, 20 future requirements, 26 refusals, nine source bindings, and
+22 false authorization fields. This planning pass used six public network
+operations including two pinned GitHub source reads, one CPU thread/worker, and
+zero candidate selection, protected payload, signal, target, checkpoint, model,
+adapter-fit, training, control-prediction, final-evaluation, stream, device, or
+hardware operation. Public transport bytes, end-to-end interactive research
+runtime, peak RSS, and candidate-specific calibration minutes remain
+unavailable rather than estimated.
+
+The nine-sheet tracker updates its dashboard and Loop 32 row, adds decision
+`32-R1`, risk `R37`, and prompt `Loop32-Research`, and preserves Loop 25 as the
+active execution decision. The 87,364-byte workbook has SHA-256
+`32d51d0690940d7231df6b0c8db366ce0647332893e12bcf29cff1c3b573847f`;
+all nine sheets render, the exported workbook reloads with exact key ranges,
+and both formula-error scans match zero cells. The unrelated 321,169-byte
+inspection sidecar remains byte-identical at SHA-256
+`5cd0ef08446c4e5feee5ce11f27eef41fae5eee8975cc77f6d401faca3b79f45`.
+
+Local verification passes 171 focused Loop 24-32/roadmap tests in 0.19 seconds
+wall with 32,391,168-byte maximum RSS; the strict Loop 32 plus roadmap slice
+passes 25 tests in 0.16 seconds wall with 22,167,552-byte maximum RSS; 459
+optional unittests pass with three expected skips in 22.80 seconds wall and
+573,243,392-byte maximum RSS; 456 pytest tests pass with three skips and 212
+subtests in 24.04 seconds wall and 586,711,040-byte maximum RSS; and 427
+dependency-light tests pass with 121 optional skips in 0.74 seconds wall and
+51,855,360-byte maximum RSS. Each full count is 16 above the Loop 31 closeout.
+
+Repository-wide Ruff, touched-file formatting, compileall, 21 source JSON and
+two TOML parses, seven CLI help surfaces, 55 registered commands, unauthorized
+Loop 32 runtime absence, 74 local Markdown links, workbook render/reload/formula
+inspection, and `git diff --check` pass. Research commit `8109b10` passes both
+jobs in push CI run `29209987034` and draft PR #11 run `29209996914`.
+
+This milestone adds a machine-checkable fresh-person calibration design with
+an inspectable low-parameter adapter, physical split firewall, human-burden
+ledger, and one-time final decision rule. It does not establish zero-shot or
+calibrated-person improvement, sensor-signal dependence, neural advantage,
+population generalization, real-time behavior, portable hardware, at-home
+decoding, assistive efficacy, diagnosis, or clinical utility.

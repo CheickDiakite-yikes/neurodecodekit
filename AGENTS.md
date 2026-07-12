@@ -190,6 +190,24 @@ until Loop 35 excludes peripheral and task-locked shortcuts. No cache, target,
 checkpoint, model, training, validation, language model, Neuro Token, S20,
 S25, stream, device, or hardware operation occurred or is authorized.
 
+Loop 32 planning research is complete while its fresh-person calibration
+experiment remains `Not Started`:
+
+```bash
+cat docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md
+python -m json.tool registries/loop32_research_boundary.v0.json >/dev/null
+```
+
+The research recommends one pointwise causal 32-parameter hidden affine
+adapter, four noninterchangeable calibration modes, nested sentence budgets of
+`0, 2, 4, 8, 16, 32`, and physically separate 32-row calibration, 16-row
+selection, and 48-row final floors. It freezes 20 future requirements, 26
+refusals, and 22 false `authorized_now` fields. No candidate or mode is
+selected; S25 remains final-only. Participant/cache/signal/label/target access,
+checkpoint/model/control runs, adapter fitting, parameter updates, training,
+final evaluation, downloads, streams, devices, and hardware remain
+unauthorized. Calibrated performance may never be relabeled zero-shot.
+
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
 commit `c3d1f01`, before any adapter, source chunk, fixture, socket, board, or
@@ -227,7 +245,9 @@ planning research defines separate EEG and OPM-MEG pathways while its
 experiment remains `Not Started`; Loop 30 planning research defines the local
 target-free replay boundary while its experiment remains `Not Started`; Loop
 31 planning research defines the sensor-signal attribution firewall while its
-experiment remains `Not Started`; Loops 32-44 remain `Not Started`. All 20
+experiment remains `Not Started`; Loop 32 planning research defines the
+32-parameter fresh-person calibration boundary while its experiment remains
+`Not Started`; Loops 33-44 remain `Not Started`. All 20
 execution flags are false. This roadmap does not
 reopen Loop 24, authorize RW3, or permit a Loop 25-44 fixture, download, data
 read, model run, training run, stream, board, or hardware operation. A broad
@@ -287,6 +307,11 @@ authorization boundary.
   18 future requirements, 24 refusal IDs, and a Loop 35 ceiling on
   brain-specific attribution; no protected input, model, training, validation,
   LLM, Neuro Token, or experiment payload exists.
+- The Loop 32 planning registry remains exact with 22 false authorization
+  fields, four calibration modes, six nested budgets, one 32-parameter adapter
+  recommendation, 32/16/48 physical partition floors, six conditions, 20
+  future requirements, 26 refusal IDs, and zero candidate, protected access,
+  model, adapter-fit, training, or evaluation operation.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed

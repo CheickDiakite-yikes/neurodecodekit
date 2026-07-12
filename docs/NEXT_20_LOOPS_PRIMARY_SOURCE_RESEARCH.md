@@ -360,8 +360,9 @@ are unopened, and no Loop 25 coefficient, runtime, or fixture exists. Loop 26
 planning research is complete while its experiment remains `Not Started`;
 Loop 27 metadata research, Loop 28 transfer research, and Loop 29 portability
 planning research are also complete while their experiments remain `Not
-Started`; Loop 30 interaction research and Loop 31 attribution research are
-also complete while their experiments remain `Not Started`; Loops 32-44 remain
+Started`; Loop 30 interaction research, Loop 31 attribution research, and Loop
+32 calibration research are also complete while their experiments remain `Not
+Started`; Loops 33-44 remain
 `Not Started`.
 
 The detailed source trace and design correction live in
@@ -537,3 +538,44 @@ protected cache/target/checkpoint/model/training/validation/LLM/S20/S25/stream/
 device operations. Exact sources and boundaries are in
 `docs/LOOP_31_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop31_research_boundary.v0.json`.
+
+## 2026-07-12 Loop 32 Research Addendum
+
+Loop 32 planning research is complete while its fresh-person calibration
+experiment remains `Not Started`. Brain2Qwerty v2 motivates person-specific
+adaptation, but its leave-one-participant-out regime finetunes on the held-out
+participant and therefore measures supervised calibrated transfer rather than
+strict zero-shot transfer. CORAL and Euclidean Alignment motivate target-label-
+free alignment, but target signal still influences the transform, so that lane
+is transductive unlabeled calibration rather than zero-shot.
+
+The future recommendation is one pointwise causal hidden affine transform over
+the 16-wide proposed Loop 26 encoder: 16 scales plus 16 biases, exactly 32
+target-trainable values, with all 2,908 source-model values frozen. Strict zero-
+shot, unlabeled, label-light, and supervised modes remain separate. Their
+nested sentence schedule is `0, 2, 4, 8, 16, 32`; label-light is capped at
+eight labeled calibration sentences and supervised calibration at 32, with
+all labeled selection rows also counted in human burden.
+
+One future candidate needs physically distinct, row-disjoint, and semantic-
+text-disjoint recordings with at least 32 calibration, 16 selection, and 48
+final unique completed sentences. S25 block 2 remains Loop 28 final-only and
+cannot be repurposed. Strict zero-shot final predictions must hash-freeze before
+any target-person calibration access; one mode, adapter, and budget must then
+freeze before every adapted/control final prediction and one final-target open.
+
+The future decision recommends at least `0.05` macro-CER gain versus both frozen
+zero-shot and the source-train-only prior, 65,535 paired random sign assignments
+plus the observed assignment, and strict wins over every applicable identity,
+normalization, and label-derangement control. The practical margins remain
+unfrozen until preregistration. A selection gain cannot override final harm,
+and one participant cannot support population inference.
+
+The machine boundary freezes four modes, six budgets, six conditions, seven
+claim classes, 20 future requirements, 26 refusals, and 22 false authorization
+fields. This research used six public network operations, one thread/worker,
+and zero candidate selection, protected payload, signal, target, checkpoint,
+model, adapter-fit, training, control-prediction, final-evaluation, stream,
+device, or hardware operation. Exact sources and boundaries are in
+`docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop32_research_boundary.v0.json`.

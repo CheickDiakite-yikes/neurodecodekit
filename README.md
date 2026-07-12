@@ -93,14 +93,15 @@ engineering wins, not hidden behind synthetic accuracy.
 | Loop 25 v1 amendment plus immutable-v0 request suite | 0.120 sec | 22,560,768 bytes | no generated payload |
 | Loop 26 research plus roadmap/Loop 25 boundary suite | 0.140 sec wall max | 22,986,752 bytes max | no generated payload |
 | Loop 27 pinned metadata selector | 3.100 sec wall | 63,766,528 bytes | zero downloaded payload bytes |
-| Loop 24-31 focused boundary suite | 0.12 sec wall | 29,179,904 bytes | 125 tests; no generated experiment payload |
-| Loop 31 plus roadmap invariants | 0.07 sec wall | 20,447,232 bytes | 26 tests; no cache, target, model, training, validation, LLM, or Neuro Token run |
+| Loop 24-32 focused boundary suite | 0.19 sec wall | 32,391,168 bytes | 171 tests; no generated experiment payload |
+| Loop 32 plus roadmap invariants | 0.16 sec wall | 22,167,552 bytes | 25 tests; no participant, cache, signal, target, model, adapter, training, or evaluation run |
 | Loop 28 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 10 web operations, 1 GitHub metadata call, zero code/data payload bytes |
 | Loop 29 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 14 public web operations, zero protected data/model/device operations, zero downloaded payload bytes |
 | Loop 30 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 10 public web operations, zero trace/server/browser/protected-data/model/stream operations, zero downloaded payload bytes |
 | Loop 31 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 16 public network operations including 8 GitHub API requests; zero protected-data/model/training/validation/LLM operations and zero downloaded data/model bytes |
+| Loop 32 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 6 public network operations including 2 pinned GitHub source reads; zero participant/cache/signal/target/model/adapter/training/evaluation operations |
 | Loop 24 registered selection | 65.154951 sec internal | 222,248,960 bytes max worker | 262,822 bytes fixture plus output |
-| Complete optional-neuro/ML test runners | 25.60 sec unittest / 24.31 sec pytest wall | 583,204,864 bytes max | temporary test output only |
+| Complete optional-neuro/ML test runners | 22.80 sec unittest / 24.04 sec pytest wall | 586,711,040 bytes max | temporary test output only |
 
 Proof labels are deliberately narrow:
 
@@ -216,6 +217,12 @@ Read this before interpreting any number in the repository.
   checked. All 19 authorization flags remain false, the experiment is `Not
   Started`, and brain-specific attribution remains blocked on Loop 35; the
   maximum future local claim is sensor-signal dependence.
+- **Loop 32 planning research:** the fresh-person calibration firewall
+  recommends one causal 32-parameter hidden affine adapter, four distinct
+  zero-shot/unlabeled/label-light/supervised modes, six nested sentence
+  budgets, 32/16/48 physical partition floors, six controls, 20 gates, and 26
+  refusals. All 22 authorization flags remain false, no candidate is selected,
+  and the experiment is `Not Started`; S25 remains final-only.
 
 ### What The Results Actually Say
 
@@ -257,6 +264,10 @@ Read this before interpreting any number in the repository.
   neural advantage result. Language gain and conditional Neuro Token gain stay
   separate, and brain-specific attribution remains blocked on Loop 35 even if
   the future local matrix passes.
+- Loop 32 defines the evidence needed for honest one-person calibration, not a
+  calibrated result. The 32-parameter adapter is a planning recommendation,
+  unlabeled adaptation remains transductive rather than zero-shot, and one
+  future participant could not establish population or device generalization.
 
 ### What Is Not Established
 
@@ -777,7 +788,10 @@ The original numbered development sequence has reached:
   free replay interaction boundary while its experiment remains `Not Started`.
   Loop 31 planning research defines a 10-condition encoder and contingent
   5-condition LLM attribution firewall while its experiment remains `Not
-  Started`; Loops 32-44 remain `Not Started`. All 20
+  Started`. Loop 32 planning research defines a causal 32-parameter adapter,
+  four calibration modes, and physically separate calibration/selection/final
+  evidence while its experiment remains `Not Started`; Loops 33-44 remain
+  `Not Started`. All 20
   execution flags are false. Loop 24's parked result does not authorize Loop
   25, and later research cannot authorize an earlier or later experiment.
 
@@ -825,6 +839,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/loop28_research_boundary.v0.json](registries/loop28_research_boundary.v0.json) | machine-readable Loop 28 estimand, controls, access order, resource limits, dependencies, zero protected access, and 21 false authorization fields |
 | [docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md) | primary-source OPM-MEG and EEG review, two-lane portability decision, storage allocation, qualification ladder, and result-oriented real-data path |
 | [registries/loop29_research_boundary.v0.json](registries/loop29_research_boundary.v0.json) | machine-readable modality requirements, device gates, storage ceilings, source bindings, zero protected access, and 24 false authorization fields |
+| [docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md) | primary-source calibration taxonomy, 32-parameter adapter recommendation, physical split and burden contract, access order, controls, and one-time final gate |
+| [registries/loop32_research_boundary.v0.json](registries/loop32_research_boundary.v0.json) | machine-readable four-mode calibration boundary, six-point budget, 32/16/48 partition floors, zero protected operations, and 22 false authorization fields |
 | [docs/REAL_DATA_VALIDATION_2026-07-10.md](docs/REAL_DATA_VALIDATION_2026-07-10.md) | S21 alignment, session, and upstream audit |
 | [docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md](docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md) | real EEG bridge and negative classifier result |
 | [docs/LOOP_20_NEUROTOKEN_CACHE_V0.md](docs/LOOP_20_NEUROTOKEN_CACHE_V0.md) | NeuroTokenCache schema and synthetic interface proof |

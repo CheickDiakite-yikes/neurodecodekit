@@ -118,10 +118,15 @@ free local replay boundary while its experiment remains `Not Started`. Loop 31
 planning research defines a 10-condition encoder and contingent 5-condition
 LLM/Neuro Token attribution firewall while its experiment remains `Not
 Started`; its maximum future local claim is sensor-signal dependence and
-brain-specific attribution remains blocked on Loop 35. Loops 32-44 remain `Not
+brain-specific attribution remains blocked on Loop 35. Loop 32 planning
+research recommends one causal 32-parameter hidden affine adapter, four
+calibration modes, nested `0, 2, 4, 8, 16, 32` sentence budgets, and physically
+separate 32/16/48 calibration/selection/final floors while its experiment
+remains `Not Started`. All 22 authorization fields are false, no candidate or
+mode is selected, and protected work is unauthorized. Loops 33-44 remain `Not
 Started`. All 20
 `execution_authorized` flags are false. Loop 25's exact decision packet is
-ready for review, while Loops 26-31 have no
+ready for review, while Loops 26-32 have no
 preregistration or authorization packet. Roadmap approval, general
 continuation, or documentation work cannot reopen Loop 24, authorize RW3 Stage
 A, or authorize any Loop 25-44 operation.
@@ -190,3 +195,7 @@ from the other.
   brain activity. Require brain-only, peripheral-only, and combined ablations.
 - Keep the S20 packet dry-run-only until explicit approval names its revision,
   four files, 128-MiB acquisition cap, and one-time split.
+- Keep Loop 32 planning-only. Its 32-parameter adapter, four modes, six budgets,
+  physical split floors, and human-burden ledger are recommendations, not
+  permission to select a participant, repurpose S25, read signal or labels,
+  fit an adapter, train, or open a final target.

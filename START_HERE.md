@@ -57,7 +57,9 @@ and OPM-MEG paths while its experiment remains `Not Started`; Loop 30 planning
 research defines a target-free local replay boundary while its experiment
 remains `Not Started`; Loop 31 planning research defines a 10-condition encoder
 and contingent 5-condition LLM attribution firewall while its experiment
-remains `Not Started`; Loops 32-44 remain `Not Started`. The maximum future
+remains `Not Started`; Loop 32 planning research defines the causal 32-parameter
+fresh-person calibration boundary while its experiment remains `Not Started`;
+Loops 33-44 remain `Not Started`. The maximum future
 local Loop 31 claim is sensor-signal dependence, and brain-specific attribution
 remains blocked on Loop 35. All are unauthorized.
 The queue does not reopen Loop 24 or authorize RW3.
@@ -121,6 +123,15 @@ Started`; no protected cache, target, checkpoint, model, training, validation,
 LLM, Neuro Token, S20, S25, stream, or device operation exists. Even a future
 clean local pass can establish only sensor-signal dependence until Loop 35
 excludes peripheral and task-locked shortcuts.
+Loop 32 planning research recommends one pointwise causal 32-parameter hidden
+affine adapter, four distinct zero-shot/unlabeled/label-light/supervised modes,
+the nested `0, 2, 4, 8, 16, 32` sentence schedule, and physically separate
+32-row calibration, 16-row selection, and 48-row final floors. Its 20 future
+requirements, 26 refusals, and 22 false authorization flags are machine
+checked. The experiment remains `Not Started`; no candidate or mode is
+selected, S25 remains final-only, and participant/cache/signal/label/target,
+checkpoint/model, adapter-fit, training, evaluation, download, stream, device,
+and hardware operations remain unauthorized.
 The proposed fresh S20 EEG block is **not authorized** for download or signal
 access. Its exact four-file, 96,090,264-byte dry run is in
 `docs/FRESH_EEG_BENCHMARK_S20_APPROVAL_PACKET.md`.

@@ -14,7 +14,11 @@
 > Started`. Loop 31 planning research defines a 10-condition encoder and
 > contingent 5-condition LLM attribution firewall while its experiment remains
 > `Not Started`; its maximum future local claim is sensor-signal dependence and
-> brain-specific attribution remains blocked on Loop 35. Loops 32-44 remain
+> brain-specific attribution remains blocked on Loop 35. Loop 32 planning
+> research defines a causal 32-parameter adapter, four calibration modes, six
+> nested budgets, and physically separate calibration/selection/final evidence
+> while its experiment remains `Not Started`; all protected work is
+> unauthorized. Loops 33-44 remain
 > planning-only. The
 > spreadsheet dashboard displays the original roadmap, current gate, and next
 > 20-loop queue separately.
@@ -236,8 +240,8 @@ These rows are an **authorization-gated queue**, not approved experiments. The f
 acceptance boundaries, stop rules, controls, resource caps, dependencies, and
 authorization rules live in `docs/LOOPS_25_44_ROADMAP.md` and
 `registries/next_20_loops.v0.json`. Loop 25 is `Amended Preregistration`;
-Loops 26 and 28-31 are `Not Started` with planning research complete; Loop 27
-has selected metadata while preregistration remains blocked; Loops 32-44 are
+Loops 26 and 28-32 are `Not Started` with planning research complete; Loop 27
+has selected metadata while preregistration remains blocked; Loops 33-44 are
 `Not Started`. Every row retains `execution_authorized: false`.
 
 | # | Phase | Gate | Core outcome | Priority | Effort | Status |
@@ -249,7 +253,7 @@ has selected metadata while preregistration remains blocked; Loops 32-44 are
 | 29 | Translation And Generalization | Portable Sensing Translation | Separate cryogenic MEG, OPM-MEG, EEG, and non-neural device requirements before hardware work. | P1 | M | Planning research complete; experiment Not Started |
 | 30 | Translation And Generalization | Local Private Streaming Prototype | Freeze a target-free loopback replay inspector with explicit revisions/finalization, nine clocks, six latency levels, privacy, accessibility, and browser QA. | P1 | M | Planning research complete; experiment Not Started |
 | 31 | Translation And Generalization | Neural Contribution Ablation | Freeze ten encoder conditions and five contingent LLM conditions that separate sensor signal, timing, context, language-prior, and Neuro Token effects while reserving brain-specific attribution for Loop 35. | P0 | L | Planning research complete; experiment Not Started |
-| 32 | Translation And Generalization | New-Subject Calibration And Adaptation | Measure the smallest honest calibration budget without using final rows for selection. | P1 | L | Not Started |
+| 32 | Translation And Generalization | New-Subject Calibration And Adaptation | Freeze one causal 32-parameter adapter, four calibration claims, nested 0/2/4/8/16/32 sentence budgets, physical 32/16/48 partition floors, and a one-time final gate without using final rows for fit or selection. | P1 | L | Planning research complete; experiment Not Started |
 | 33 | Reliability And Confounds | Data Scaling And Sample Efficiency | Separate gains from hours, trials, repetitions, and unique sentences under a fixed tiny model. | P1 | L | Not Started |
 | 34 | Reliability And Confounds | Confidence, Abstention, And Revision | Expose confidence only if validation-fit risk-coverage generalizes independently. | P1 | M | Not Started |
 | 35 | Reliability And Confounds | Peripheral Confound Firewall | Block neural claims explained by key timing, EMG, EOG, motion, audio, or prompt leakage. | P0 | L | Not Started |
@@ -309,6 +313,20 @@ S20 plus S25 bundles total 1,106,030,247 bytes; this research downloaded zero
 bytes and opened no real header, signal, target, model, stream, device, partner,
 or hardware path. See `docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop29_research_boundary.v0.json`.
+
+Loop 32's planning packet freezes no participant, adapter, or evaluation. It
+recommends one pointwise causal 32-parameter hidden affine adapter and keeps
+strict zero-shot, unlabeled, label-light, and supervised calibration as four
+different claims. The nested schedule is `0, 2, 4, 8, 16, 32` unique completed
+sentences; a full future candidate needs physically distinct 32-row
+calibration, 16-row selection, and 48-row final recordings with disjoint rows
+and semantic text hashes. Zero-shot final predictions must freeze before any
+target-person calibration access, then one adapted budget must freeze before
+one final-target open. Twenty future requirements, 26 refusals, six conditions,
+and 22 false authorization fields are machine checked. S25 remains final-only;
+no candidate, signal, label, checkpoint, model, adapter fit, training, or final
+evaluation was opened. See `docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop32_research_boundary.v0.json`.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |

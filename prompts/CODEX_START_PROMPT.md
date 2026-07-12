@@ -33,6 +33,12 @@ requests, and these files:
 - `registries/loop28_research_boundary.v0.json`
 - `docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md`
 - `registries/loop29_research_boundary.v0.json`
+- `docs/LOOP_30_PRIMARY_SOURCE_RESEARCH.md`
+- `registries/loop30_research_boundary.v0.json`
+- `docs/LOOP_31_PRIMARY_SOURCE_RESEARCH.md`
+- `registries/loop31_research_boundary.v0.json`
+- `docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md`
+- `registries/loop32_research_boundary.v0.json`
 - `docs/POST_20_ROADMAP.md`
 - `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`
 - `docs/LOOPS_25_44_ROADMAP.md`
@@ -84,7 +90,9 @@ Do not reset, revert, delete, or overwrite work already present.
   while its experiment remains `Not Started`; Loop 27 planning research has
   selected S25 metadata while preregistration remains blocked; Loop 28 planning
   research defines a strict zero-shot rule while its experiment remains `Not
-  Started`; Loops 29-44 are `Not Started`; all 20 execution flags remain false.
+  Started`; Loops 29-32 have completed planning research while their
+  experiments remain `Not Started`; Loops 33-44 remain `Not Started`; all 20
+  execution flags remain false.
 - Loop 26's planning boundary recommends a 2,908-parameter causal candidate, a
   2,884-parameter linear comparator, six controls, and exact enumeration of all
   64 paired sign assignments over six reserved source-validation sentences.
@@ -129,6 +137,15 @@ Do not reset, revert, delete, or overwrite work already present.
   dependence; brain-specific attribution remains blocked on Loop 35. No cache,
   target, checkpoint, model, training, validation, LLM, Neuro Token, S20, S25,
   stream, device, or hardware operation exists.
+- Loop 32 planning research is complete while the fresh-person calibration
+  experiment remains `Not Started`. The future boundary recommends one causal
+  32-parameter hidden affine adapter, four distinct calibration modes, nested
+  `0, 2, 4, 8, 16, 32` sentence budgets, physically separate 32/16/48
+  calibration/selection/final floors, six conditions, 20 gates, 26 refusals,
+  and 22 false authorization fields. No candidate or mode is selected; S25
+  remains final-only. No participant/cache/signal/label/target, checkpoint,
+  model, adapter-fit, training, final evaluation, download, stream, device, or
+  hardware operation exists or is authorized.
 - No real recording quality, neural advantage, unseen-person generalization,
   useful EEG decoder, real-time decoding, portable-hardware, arbitrary-thought,
   or clinical result has been demonstrated.
@@ -243,6 +260,10 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
     Do not generate a condition fixture, run an ablation, reopen consumed S7 or
     S21 evidence, access S20/S25, or label sensor-signal dependence as
     brain-specific before Loop 35.
+15. Treat the Loop 32 calibration boundary as planning research, not permission
+    to select or open a participant, repurpose S25, read calibration or final
+    signal/labels, run the 32-parameter adapter, train, or evaluate. Calibrated
+    performance is not zero-shot, and one person is not population evidence.
 
 ## Required deliverables for the next authorized milestone
 
@@ -255,7 +276,9 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
    authorization fields and zero protected access, the Loop 27 registry with
    18 false permissions and zero payload access, the Loop 28 registry with 21
    false permissions and zero protected access, and all 20 Loops 25-44
-   execution flags consistent.
+   execution flags consistent. Keep the Loop 32 registry at four modes, six
+   budgets, one 32-parameter recommendation, 32/16/48 physical floors, 20
+   gates, 26 refusals, 22 false permissions, and zero candidate or execution.
 2. Run documentation/contract validation, local-link checks, Ruff,
    `git diff --check`, Gitleaks, and the complete unit suites. Compare with the
    313-unittest Loop 24 baseline, the 323-unittest Loop 25 v0 preregistration
