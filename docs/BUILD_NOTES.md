@@ -2543,7 +2543,8 @@ Ruff, touched-file format checks, compileall, 24 source JSON and two TOML
 parses, seven CLI help surfaces, 55 registered commands, unauthorized Loop 31
 runtime absence, 70 checked local Markdown links with zero missing, workbook
 render/reload/formula inspection, and `git diff --check` pass. Remote CI is
-pending.
+green: research commit `5455340` passes both jobs in push run `29208510571`
+and draft PR #10 run `29208529886`.
 
 This milestone adds a machine-checkable attribution design that keeps signal,
 language, context, timing, and conditional Neuro Token effects separate. It

@@ -1723,4 +1723,5 @@ MiB artifacts, 1 GiB RSS, and zero new data/model downloads.
 
 Evidence: `docs/LOOP_31_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop31_research_boundary.v0.json`,
-`tests/test_loop31_research_boundary.py`, and roadmap row 31.
+`tests/test_loop31_research_boundary.py`, roadmap row 31, research commit
+`5455340`, push CI run `29208510571`, and draft PR #10 CI run `29208529886`.
