@@ -59,7 +59,9 @@ remains `Not Started`; Loop 31 planning research defines a 10-condition encoder
 and contingent 5-condition LLM attribution firewall while its experiment
 remains `Not Started`; Loop 32 planning research defines the causal 32-parameter
 fresh-person calibration boundary while its experiment remains `Not Started`;
-Loops 33-44 remain `Not Started`. The maximum future
+Loop 33 planning research defines the bounded `8, 16, 24, 32, 44, 55`
+unique-sentence curve and prospective shared-validation order while its
+experiment remains `Not Started`; Loops 34-44 remain `Not Started`. The maximum future
 local Loop 31 claim is sensor-signal dependence, and brain-specific attribution
 remains blocked on Loop 35. All are unauthorized.
 The queue does not reopen Loop 24 or authorize RW3.
@@ -132,6 +134,13 @@ checked. The experiment remains `Not Started`; no candidate or mode is
 selected, S25 remains final-only, and participant/cache/signal/label/target,
 checkpoint/model, adapter-fit, training, evaluation, download, stream, device,
 and hardware operations remain unauthorized.
+Loop 33 planning research recommends six strictly nested unique-sentence
+prefixes of `8, 16, 24, 32, 44, 55`, at most three optimization seeds and 18
+candidate fits, size-matched no-signal priors, and a single target-blind shared
+Loop 26/31/33 validation event. The experiment remains `Not Started`; all 23
+authorization fields are false. The current rows support no physical-
+repetition comparison, additional acquisition is not recommended, and all
+protected/model/training/scoring/device work remains unauthorized.
 The proposed fresh S20 EEG block is **not authorized** for download or signal
 access. Its exact four-file, 96,090,264-byte dry run is in
 `docs/FRESH_EEG_BENCHMARK_S20_APPROVAL_PACKET.md`.

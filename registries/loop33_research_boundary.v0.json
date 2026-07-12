@@ -1,0 +1,452 @@
+{
+  "schema_name": "neurodecodekit.loop33_research_boundary",
+  "schema_version": "0.1.0",
+  "prepared_at": "2026-07-12",
+  "status": "planning_research_complete_experiment_blocked_on_loop25_loop26_and_validation_access_order",
+  "proof_posture": "planning_only_no_protected_cache_signal_target_checkpoint_model_training_validation_or_acquisition",
+  "authorized_now": false,
+  "authorization": {
+    "loop33_preregistration_authorized_now": false,
+    "loop33_implementation_authorized_now": false,
+    "real_cache_content_read_authorized_now": false,
+    "source_train_signal_read_authorized_now": false,
+    "source_train_target_read_authorized_now": false,
+    "source_validation_signal_read_authorized_now": false,
+    "source_validation_target_read_authorized_now": false,
+    "source_test_reopen_authorized_now": false,
+    "session2_reopen_authorized_now": false,
+    "checkpoint_or_model_run_authorized_now": false,
+    "training_or_parameter_update_authorized_now": false,
+    "no_signal_or_control_run_authorized_now": false,
+    "prediction_generation_authorized_now": false,
+    "learning_curve_scoring_authorized_now": false,
+    "direct_energy_measurement_authorized_now": false,
+    "physical_repetition_study_authorized_now": false,
+    "new_real_data_download_authorized_now": false,
+    "network_payload_download_authorized_now": false,
+    "s20_or_s25_access_authorized_now": false,
+    "language_model_or_neurotoken_authorized_now": false,
+    "rw3_stream_device_or_hardware_authorized_now": false,
+    "loop34_or_later_authorized_now": false,
+    "authorization_sentence_exists": false,
+    "reason": "Loop 25 and Loop 26 have no authorized result, the shared source validation targets must remain unopened until every Loop 26 and Loop 33 prediction is frozen, and this research packet is not a preregistration or execution request."
+  },
+  "decision": {
+    "current_experiment_status": "Not Started",
+    "research_question": "Does additional unique source-training data improve one fixed tiny causal encoder within the observed local range, and is the upper boundary still improving enough to justify a separate acquisition decision?",
+    "maximum_current_claim_class": "L33-C0_no_new_result",
+    "maximum_future_local_claim_class": "L33-C4_bounded_one_person_unique_sentence_learning_curve",
+    "universal_scaling_law_available_now_or_from_this_design": false,
+    "brain2qwerty_v2_scaling_exponent_transferable_to_local_curve": false,
+    "physical_repetition_comparison_available_now": false,
+    "additional_acquisition_recommended_now": false,
+    "recommended_unique_sentence_prefix_counts": [8, 16, 24, 32, 44, 55],
+    "prefix_schedule_frozen_now": false,
+    "exact_optimization_seeds_selected_now": [],
+    "preregistration_prepared_now": false,
+    "authorization_request_prepared_now": false,
+    "experiment_matrix_frozen_now": false
+  },
+  "dependencies": {
+    "loop33_planning_research_complete": true,
+    "loop25_compatible_result_required": true,
+    "loop25_dependency_satisfied_now": false,
+    "loop26_frozen_source_model_and_contract_required": true,
+    "loop26_dependency_satisfied_now": false,
+    "loop31_result_required_for_sensor_signal_wording": true,
+    "loop31_dependency_satisfied_now": false,
+    "loop33_may_be_copreregistered_with_loop26_before_validation_target_open": true,
+    "source_validation_targets_reported_unused_now": true,
+    "source_validation_target_open_count_now": 0,
+    "prospective_shared_validation_path_available_now": true,
+    "prospective_path_is_lost_if_loop26_targets_open_before_loop33_freeze": true,
+    "fresh_physical_validation_required_after_lost_prospective_path": true,
+    "loop33_preregistration_prepared": false,
+    "loop33_authorization_request_prepared": false,
+    "loop33_runtime_or_fixture_exists": false
+  },
+  "existing_evidence_inventory": [
+    {
+      "evidence_id": "loop14_source_split",
+      "proof_posture": "committed_metadata_and_consumed_split_contract",
+      "finding": "The canonical S21 source split has 55 train, 6 reserved validation, and 5 consumed source-test sentence rows.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "loop15_s21_cross_session",
+      "proof_posture": "consumed_real_negative_result",
+      "finding": "The prior source model was worse than its no-signal comparator on consumed session 2, so more-data planning cannot assume a neural advantage.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "loop26_encoder_gate",
+      "proof_posture": "planning_only",
+      "finding": "Loop 26 recommends one 2,908-parameter TinyCausalSentenceCTC and one future six-row validation open; no implementation or result exists.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "loop29_capacity_policy",
+      "proof_posture": "planning_only",
+      "finding": "The 5-10 GB user storage envelope is capacity rather than permission, and no added source file should be selected until bounded scaling evidence justifies it.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "brain2qwerty_v2_scaling",
+      "proof_posture": "public_primary_source",
+      "finding": "Brain2Qwerty v2 reports a five-condition log10-hours trend through about 90 pooled hours and a separate matched trial-count advantage for unique over repeated sentences.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "image_decoding_scaling",
+      "proof_posture": "public_primary_source_different_task_and_modalities",
+      "finding": "A multi-dataset brain-image decoding study reports log-linear gains and stronger value from additional within-subject recording than additional subjects.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "eeg_speech_scaling",
+      "proof_posture": "public_primary_source_different_task_and_compute",
+      "finding": "A 175-hour single-person overt-speech EEG study reports scaling while using audio supervision, artifact channels, and large GPU compute that do not transfer to this local delayed-typing MEG protocol.",
+      "payload_read_now": false
+    }
+  ],
+  "local_scale_contract": {
+    "status": "research_recommendation_not_frozen_until_preregistration",
+    "fixed_person_count": 1,
+    "fixed_session_count": 1,
+    "fixed_modality": "MEG",
+    "fixed_device_and_channel_contract": true,
+    "fixed_architecture": "Loop26_recommended_TinyCausalSentenceCTC",
+    "fixed_model_parameter_count": 2908,
+    "varied_axis": "nested_unique_source_train_sentence_instances",
+    "required_report_axes": [
+      "unique_train_sentences",
+      "physical_train_trials",
+      "valid_signal_seconds",
+      "source_cache_bytes_read",
+      "training_runtime_seconds"
+    ],
+    "hours_label_allowed_only_when_valid_signal_seconds_at_least": 3600,
+    "otherwise_report_minutes": true,
+    "fixed_not_scaling_axes": [
+      "person_count",
+      "session_count",
+      "modality",
+      "device",
+      "sensor_set",
+      "sampling_rate",
+      "model_size",
+      "optimizer",
+      "epoch_or_update_budget",
+      "validation_membership",
+      "metric_code"
+    ],
+    "formal_power_law_fit_or_extrapolation_allowed": false,
+    "brain2qwerty_v2_90_hour_curve_is_a_local_reference_curve": false
+  },
+  "nested_prefix_recommendation": {
+    "status": "research_recommendation_not_frozen_until_preregistration",
+    "unit": "unique_source_train_sentence_instance",
+    "counts": [8, 16, 24, 32, 44, 55],
+    "maximum_sizes": 6,
+    "maximum_optimization_seeds": 3,
+    "maximum_candidate_training_runs": 18,
+    "exact_seed_values": null,
+    "membership_order": "ascending_sha256_of_future_contract_hash_pipe_semantic_id_pipe_performed_row_id",
+    "strictly_nested": true,
+    "full_size_exactly_equals_all_55_source_train_rows": true,
+    "validation_or_test_information_may_affect_membership_order": false,
+    "class_character_and_text_coverage_must_be_reported": true,
+    "coverage_may_be_used_to_reorder_after_target_access": false,
+    "all_prefix_membership_ids_and_hashes_must_freeze_before_any_signal_or_target_open": true,
+    "seeds_are_optimization_replicates_not_biological_replicates": true
+  },
+  "unique_vs_repetition_contract": {
+    "current_physical_repetition_groups_available": false,
+    "current_source_train_rows_may_support_unique_sentence_curve_only": true,
+    "duplicating_reweighting_or_augmenting_one_recorded_row_counts_as_physical_repetition": false,
+    "future_physical_repetition_lane_requires_distinct_performed_row_ids": true,
+    "future_physical_repetition_lane_requires_same_normalized_prompt_hash_with_distinct_recordings": true,
+    "future_matched_comparison_requires_equal_total_physical_trial_count": true,
+    "future_matched_comparison_requires_fixed_people_sessions_device_model_optimizer_and_validation": true,
+    "future_repetition_data_requires_separate_metadata_review_preregistration_and_authorization": true,
+    "absence_of_repetition_lane_invalidates_unique_sentence_curve": false,
+    "absence_of_repetition_lane_invalidates_repetition_efficiency_claim": true
+  },
+  "shared_validation_access_contract": {
+    "status": "prospective_path_available_only_before_first_source_validation_target_open",
+    "validation_rows": 6,
+    "same_validation_membership_for_every_size_seed_prior_and_applicable_control": true,
+    "validation_signals_may_be_reused_for_target_blind_inference_after_authorization": true,
+    "validation_targets_may_be_opened_once": true,
+    "required_sequence": [
+      "close_Loop25_with_a_compatible_result",
+      "freeze_Loop26_architecture_preprocessing_optimizer_stopping_decode_and_resource_contracts",
+      "freeze_Loop33_prefix_order_counts_exact_seeds_metrics_controls_outcome_rules_resources_and_claims",
+      "commit_and_push_hash_bound_Loop26_and_Loop33_preregistrations_and_separate_exact_authorization_requests",
+      "after_exact_authorization_fit_every_prefix_seed_candidate_and_size_matched_no_signal_prior_without_validation_targets",
+      "generate_every_Loop26_Loop31_and_Loop33_prediction_on_the_same_six_validation_signals_while_targets_remain_closed",
+      "hash_freeze_all_models_configs_prefixes_predictions_access_ledgers_and_payloads",
+      "open_all_six_validation_targets_once_and_score_every_condition_in_one_pass",
+      "mark_source_validation_targets_consumed_for_predictive_selection",
+      "close_as_support_or_park_without_restart_reordering_seed_addition_threshold_change_or_backup_target_open"
+    ],
+    "if_loop26_scores_before_loop33_preregistration": "Loop33 may report only an exploratory observed validation curve unless a fresh physical validation partition is separately approved.",
+    "exploratory_curve_may_authorize_acquisition_or_scaling_claim": false
+  },
+  "future_condition_matrix": [
+    {
+      "condition_id": "L33-S00_fixed_signal_candidate",
+      "role": "primary_bounded_unique_sentence_curve",
+      "sizes": [8, 16, 24, 32, 44, 55],
+      "maximum_seeds": 3,
+      "execution_status": "not_started"
+    },
+    {
+      "condition_id": "L33-S01_size_matched_train_only_no_signal_prior",
+      "role": "primary_signal_free_comparator_at_every_size",
+      "sizes": [8, 16, 24, 32, 44, 55],
+      "execution_status": "not_started"
+    },
+    {
+      "condition_id": "L33-S02_loop31_full_size_attribution_binding",
+      "role": "Loop 31 result required before the curve is called sensor-signal dependent",
+      "sizes": [55],
+      "execution_status": "not_started"
+    },
+    {
+      "condition_id": "L33-S03_optional_future_physical_repetition_lane",
+      "role": "separately_authorized_matched_unique_versus_repeated_recordings",
+      "sizes": [],
+      "execution_status": "unavailable_no_eligible_physical_repetition_groups"
+    }
+  ],
+  "statistical_decision_recommendation": {
+    "status": "research_recommendation_not_frozen_until_preregistration",
+    "primary_curve_metric": "median_across_seeds_of_macro_sentence_CER_at_each_size",
+    "registered_x_axis": "log2_unique_train_sentence_count",
+    "descriptive_seed_slope": "ordinary_least_squares_CER_slope_per_log2_sentence_count_for_each_seed",
+    "smallest_band_counts": [8, 16],
+    "upper_band_counts": [44, 55],
+    "minimum_practical_smallest_to_upper_band_macro_cer_gain_recommendation": 0.05,
+    "minimum_practical_upper_band_gain_over_size_matched_prior_recommendation": 0.05,
+    "practical_margins_frozen_now": false,
+    "all_seed_slopes_must_be_negative_for_stable_bounded_trend": true,
+    "every_adjacent_size_must_improve": false,
+    "all_adjacent_deltas_must_be_reported": true,
+    "all_item_seed_size_errors_must_be_reported": true,
+    "formal_p_value_for_slope": null,
+    "formal_p_value_unavailable_reason": "Six validation sentence instances from one person and repeated optimization fits do not provide an honest population-level scaling-law test.",
+    "confidence_interval_role": "descriptive_only",
+    "minimum_validation_sentences": 6,
+    "biological_replicates": 1,
+    "population_inference_supported": false,
+    "extrapolation_beyond_55_sentences_supported": false
+  },
+  "outcome_taxonomy": [
+    {
+      "outcome_id": "L33-O0_not_run",
+      "meaning": "Planning only; no curve exists."
+    },
+    {
+      "outcome_id": "L33-O1_invalid",
+      "meaning": "Access order, identity, control, hash, target, or resource contract failed."
+    },
+    {
+      "outcome_id": "L33-O2_predictive_branch_below_prior",
+      "meaning": "The full-size candidate does not clear its registered no-signal comparator; park predictive scaling."
+    },
+    {
+      "outcome_id": "L33-O3_no_stable_bounded_trend",
+      "meaning": "The local curve is noisy, seed-dependent, flat, or practically too small."
+    },
+    {
+      "outcome_id": "L33-O4_bounded_positive_unique_sentence_trend",
+      "meaning": "The preregistered local practical and seed-stability rules pass within 8-55 unique sentences."
+    },
+    {
+      "outcome_id": "L33-O5_local_plateau_within_observed_range",
+      "meaning": "Earlier gains exist but the preregistered upper-band marginal-gain threshold is not met; no claim beyond 55 sentences."
+    },
+    {
+      "outcome_id": "L33-O6_upper_boundary_still_improving",
+      "meaning": "The upper-band local rule passes and may justify a separate metadata-only acquisition packet, not a universal scaling law or download."
+    }
+  ],
+  "claim_taxonomy": [
+    {
+      "claim_id": "L33-C0_no_new_result",
+      "available_now": true,
+      "boundary": "Planning only; no data curve, model fit, or acquisition recommendation exists."
+    },
+    {
+      "claim_id": "L33-C1_resource_curve_only",
+      "available_now": false,
+      "boundary": "Measured runtime, memory, and bytes by prefix without a predictive claim."
+    },
+    {
+      "claim_id": "L33-C2_bounded_predictive_curve",
+      "available_now": false,
+      "boundary": "Candidate CER changes over the six named local prefixes on six named validation sentences."
+    },
+    {
+      "claim_id": "L33-C3_bounded_gain_over_prior",
+      "available_now": false,
+      "boundary": "Registered upper local sizes beat matched no-signal priors; not yet sensor-signal attribution."
+    },
+    {
+      "claim_id": "L33-C4_bounded_one_person_unique_sentence_learning_curve",
+      "available_now": false,
+      "boundary": "Requires the Loop 31 attribution dependency and supports only one person, session, device, model, and observed 8-55 sentence range."
+    },
+    {
+      "claim_id": "L33-C5_physical_repetition_efficiency",
+      "available_now": false,
+      "boundary": "Requires distinct repeated recordings in a separately approved matched design; duplicated arrays are ineligible."
+    },
+    {
+      "claim_id": "L33-C6_universal_scaling_population_or_acquisition_value",
+      "available_now": false,
+      "boundary": "The design cannot establish a transferable exponent, saturation beyond 55 sentences, population behavior, or guaranteed value of additional acquisition."
+    }
+  ],
+  "future_acceptance_gates": [
+    {"requirement_id": "L33-G01_dependencies", "requirement": "Loop 25 closes compatibly and Loop 26 architecture and training contracts are frozen."},
+    {"requirement_id": "L33-G02_prospective_order", "requirement": "Loop 33 freezes before any source validation target opens."},
+    {"requirement_id": "L33-G03_exact_authorization", "requirement": "A separate exact sentence authorizes the named train, validation, training, model, and one-time target operations."},
+    {"requirement_id": "L33-G04_split_binding", "requirement": "Exact 55 train and 6 validation semantic, row, split, scaler, channel, and cache hashes bind the run."},
+    {"requirement_id": "L33-G05_nested_prefixes", "requirement": "All six prefixes are deterministic, strictly nested, target-blind, and the 55 row prefix is complete."},
+    {"requirement_id": "L33-G06_seed_freeze", "requirement": "At most three exact optimization seeds freeze before protected access."},
+    {"requirement_id": "L33-G07_model_freeze", "requirement": "One 2,908-parameter architecture, optimizer, stopping, epochs, vocabulary, and decode rule remain fixed."},
+    {"requirement_id": "L33-G08_fixed_validation", "requirement": "Every size, seed, prior, and applicable control predicts the same six validation rows."},
+    {"requirement_id": "L33-G09_target_blind_freeze", "requirement": "Every prediction and payload hash exists before the first validation target read."},
+    {"requirement_id": "L33-G10_one_target_open", "requirement": "All targets open once and every condition scores in one pass."},
+    {"requirement_id": "L33-G11_no_signal", "requirement": "A train-size-matched, train-only no-signal prior is present at every size."},
+    {"requirement_id": "L33-G12_attribution_binding", "requirement": "Sensor-signal wording is unavailable unless the relevant Loop 31 gate passes."},
+    {"requirement_id": "L33-G13_axes", "requirement": "Unique sentences, physical trials, valid seconds, bytes, and runtime are reported without invented hours."},
+    {"requirement_id": "L33-G14_statistics", "requirement": "All per-item, seed, size, adjacent-delta, slope, practical-margin, and prior comparisons are reported."},
+    {"requirement_id": "L33-G15_repetition_integrity", "requirement": "No duplicated, reweighted, or augmented row is called a physical repeated acquisition."},
+    {"requirement_id": "L33-G16_access_ledger", "requirement": "Raw, cache, target, model, training, control, download, and consumed-evidence counts are exact."},
+    {"requirement_id": "L33-G17_hash_ledger", "requirement": "Source, split, prefix, seed, model, config, prediction, metric, and result hashes are complete."},
+    {"requirement_id": "L33-G18_resource_caps", "requirement": "One thread and worker, 18 candidate fits, 1,200 seconds total training, 1 GiB RSS, 32 MiB artifacts, and zero new downloads pass."},
+    {"requirement_id": "L33-G19_claim_boundary", "requirement": "Every result stays inside one person, session, device, model, validation set, and 8-55 sentence range."},
+    {"requirement_id": "L33-G20_no_restart", "requirement": "No restart, prefix reorder, seed addition, threshold change, backup target open, or favorable-result selection occurs after scoring."}
+  ],
+  "future_refusal_ids": [
+    "L33-R01_loop25_or_loop26_dependency_missing",
+    "L33-R02_validation_target_opened_before_loop33_freeze",
+    "L33-R03_missing_exact_execution_authorization",
+    "L33-R04_source_test_or_session2_reopen",
+    "L33-R05_s20_or_s25_access",
+    "L33-R06_prefix_not_strictly_nested",
+    "L33-R07_prefix_order_target_informed",
+    "L33-R08_more_than_six_sizes",
+    "L33-R09_more_than_three_seeds",
+    "L33-R10_model_architecture_or_size_changes_across_prefixes",
+    "L33-R11_optimizer_stopping_or_decode_changes_across_prefixes",
+    "L33-R12_validation_membership_changes",
+    "L33-R13_prediction_not_hash_frozen_before_target_open",
+    "L33-R14_more_than_one_validation_target_open",
+    "L33-R15_missing_size_matched_no_signal_prior",
+    "L33-R16_curve_below_or_tied_with_prior_called_neural_scaling",
+    "L33-R17_optimizer_seeds_called_biological_replicates",
+    "L33-R18_six_sentences_called_population_inference",
+    "L33-R19_minutes_or_trials_relabelled_as_hours",
+    "L33-R20_duplicate_reweighted_or_augmented_row_called_physical_repetition",
+    "L33-R21_unique_only_curve_called_repetition_efficiency",
+    "L33-R22_power_law_or_exponent_extrapolated_beyond_observed_range",
+    "L33-R23_brain2qwerty_v2_90_hour_curve_transferred_to_local_data",
+    "L33-R24_energy_claim_from_cpu_time_or_energy_proxy",
+    "L33-R25_new_data_download_or_acquisition_without_separate_packet",
+    "L33-R26_acquisition_value_claim_from_exploratory_curve",
+    "L33-R27_post_target_restart_reorder_seed_or_threshold_change",
+    "L33-R28_missing_access_hash_warning_or_unavailable_field",
+    "L33-R29_runtime_rss_artifact_or_training_cap_exceeded",
+    "L33-R30_real_time_portable_at_home_assistive_diagnostic_or_clinical_claim"
+  ],
+  "resource_boundaries": {
+    "current_research_cpu_threads": 1,
+    "current_research_workers": 1,
+    "current_research_generated_artifact_cap_bytes": 8388608,
+    "future_cpu_threads": 1,
+    "future_workers": 1,
+    "future_model_parameter_ceiling": 2908,
+    "future_maximum_candidate_training_runs": 18,
+    "future_maximum_no_signal_prior_fits": 6,
+    "future_total_training_runtime_cap_sec": 1200,
+    "future_peak_rss_cap_bytes": 1073741824,
+    "future_generated_artifact_cap_bytes": 33554432,
+    "future_new_data_or_model_download_bytes_before_separate_authorization": 0,
+    "future_direct_energy_measurement_available": false,
+    "cpu_time_may_be_reported_as_energy": false,
+    "user_preferred_incremental_storage_bytes": 5000000000,
+    "user_absolute_incremental_storage_bytes": 10000000000,
+    "storage_envelope_is_data_access_acquisition_or_execution_authorization": false
+  },
+  "research_access_counters": {
+    "high_level_public_web_research_operations": 6,
+    "public_github_api_operations": 0,
+    "protected_dataset_model_or_weight_download_bytes": 0,
+    "raw_signal_or_header_reads": 0,
+    "real_cache_content_reads": 0,
+    "source_train_signal_reads": 0,
+    "source_train_target_reads": 0,
+    "source_validation_signal_reads": 0,
+    "source_validation_target_reads": 0,
+    "source_test_or_session2_reads": 0,
+    "s20_or_s25_operations": 0,
+    "checkpoint_or_model_runs": 0,
+    "training_runs": 0,
+    "parameter_updates": 0,
+    "no_signal_or_control_runs": 0,
+    "prediction_or_scoring_runs": 0,
+    "new_real_data_downloads": 0,
+    "rw3_stream_sdk_socket_device_or_hardware_operations": 0,
+    "public_network_response_bytes": null,
+    "public_network_response_bytes_unavailable_reason": "The interactive web research tool does not expose complete response-byte accounting."
+  },
+  "source_bindings": [
+    {
+      "source_id": "brain2qwerty_v2_paper",
+      "url": "https://facebookresearch.github.io/brain2qwerty/assets/brain2qwerty_v2.pdf",
+      "use": "five-condition approximately 90-hour log-linear result, fixed test set, and matched unique-versus-repeated sentence experiment"
+    },
+    {
+      "source_id": "brain_decoding_image_scaling",
+      "url": "https://arxiv.org/abs/2501.15322",
+      "use": "within-subject recording amount and across-subject scaling evidence in different imaging tasks and modalities"
+    },
+    {
+      "source_id": "eeg_speech_scaling_175h",
+      "url": "https://arxiv.org/abs/2407.07595",
+      "use": "single-person long-duration overt-speech EEG scaling evidence and audio, artifact-channel, lexical-overlap, and compute confounds"
+    },
+    {
+      "source_id": "classification_learning_curve_sample_size",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22336388/",
+      "use": "learning-curve extrapolation as a separate model-based procedure that the tiny local descriptive curve does not attempt"
+    },
+    {
+      "source_id": "small_sample_cv_uncertainty",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28655633/",
+      "use": "limited-test-sample uncertainty and population-inference caution"
+    },
+    {
+      "source_id": "loop26_local_encoder_boundary",
+      "url": "docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md",
+      "use": "55 train, six reserved validation, fixed causal architecture recommendation, and 1,200-second resource cap"
+    },
+    {
+      "source_id": "loop31_local_attribution_firewall",
+      "url": "docs/LOOP_31_PRIMARY_SOURCE_RESEARCH.md",
+      "use": "no-signal and corrupted-signal controls required before sensor-signal wording"
+    }
+  ],
+  "claim_boundary": [
+    "This registry closes Loop 33 planning research only; it is not a preregistration, authorization, implementation, training run, validation result, or acquisition packet.",
+    "No protected cache, signal, target, checkpoint, model, training, validation, consumed evidence, S20, S25, stream, device, or hardware operation occurred.",
+    "The six prefix sizes, three-seed ceiling, trend rules, practical margins, and shared-target sequence are recommendations until a hash-bound preregistration freezes them.",
+    "The current 55-row source split can support only a unique-sentence prefix curve; duplicated arrays cannot establish the value of physically repeated recordings.",
+    "Even a future pass can establish only a bounded one-person, one-session, one-device, one-model curve over 8-55 unique sentences on six validation sentences.",
+    "No universal scaling law, transferable exponent, saturation beyond 55 sentences, guaranteed acquisition value, unseen-person generalization, real-time behavior, portable hardware, at-home use, assistive benefit, diagnostic use, or clinical claim is established."
+  ]
+}

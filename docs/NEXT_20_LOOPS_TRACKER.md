@@ -18,7 +18,11 @@
 > research defines a causal 32-parameter adapter, four calibration modes, six
 > nested budgets, and physically separate calibration/selection/final evidence
 > while its experiment remains `Not Started`; all protected work is
-> unauthorized. Loops 33-44 remain
+> unauthorized. Loop 33 planning research defines nested
+> `8, 16, 24, 32, 44, 55` unique-sentence prefixes, at most three seeds and 18
+> candidate fits, and one target-blind shared validation event while its
+> experiment remains `Not Started`; no physical-repetition lane or acquisition
+> recommendation exists and all protected work is unauthorized. Loops 34-44 remain
 > planning-only. The
 > spreadsheet dashboard displays the original roadmap, current gate, and next
 > 20-loop queue separately.
@@ -241,7 +245,8 @@ acceptance boundaries, stop rules, controls, resource caps, dependencies, and
 authorization rules live in `docs/LOOPS_25_44_ROADMAP.md` and
 `registries/next_20_loops.v0.json`. Loop 25 is `Amended Preregistration`;
 Loops 26 and 28-32 are `Not Started` with planning research complete; Loop 27
-has selected metadata while preregistration remains blocked; Loops 33-44 are
+has selected metadata while preregistration remains blocked; Loop 33 planning
+research is complete and its experiment remains `Not Started`; Loops 34-44 are
 `Not Started`. Every row retains `execution_authorized: false`.
 
 | # | Phase | Gate | Core outcome | Priority | Effort | Status |
@@ -254,7 +259,7 @@ has selected metadata while preregistration remains blocked; Loops 33-44 are
 | 30 | Translation And Generalization | Local Private Streaming Prototype | Freeze a target-free loopback replay inspector with explicit revisions/finalization, nine clocks, six latency levels, privacy, accessibility, and browser QA. | P1 | M | Planning research complete; experiment Not Started |
 | 31 | Translation And Generalization | Neural Contribution Ablation | Freeze ten encoder conditions and five contingent LLM conditions that separate sensor signal, timing, context, language-prior, and Neuro Token effects while reserving brain-specific attribution for Loop 35. | P0 | L | Planning research complete; experiment Not Started |
 | 32 | Translation And Generalization | New-Subject Calibration And Adaptation | Freeze one causal 32-parameter adapter, four calibration claims, nested 0/2/4/8/16/32 sentence budgets, physical 32/16/48 partition floors, and a one-time final gate without using final rows for fit or selection. | P1 | L | Planning research complete; experiment Not Started |
-| 33 | Reliability And Confounds | Data Scaling And Sample Efficiency | Separate gains from hours, trials, repetitions, and unique sentences under a fixed tiny model. | P1 | L | Not Started |
+| 33 | Reliability And Confounds | Data Scaling And Sample Efficiency | Planning research complete: prospective `8, 16, 24, 32, 44, 55` unique-sentence curve, three-seed/18-fit ceiling, matched priors, one shared validation open, 20 gates, and 30 refusals; experiment unauthorized and Not Started. | P1 | L | Not Started |
 | 34 | Reliability And Confounds | Confidence, Abstention, And Revision | Expose confidence only if validation-fit risk-coverage generalizes independently. | P1 | M | Not Started |
 | 35 | Reliability And Confounds | Peripheral Confound Firewall | Block neural claims explained by key timing, EMG, EOG, motion, audio, or prompt leakage. | P0 | L | Not Started |
 | 36 | Reliability And Confounds | Geometry And Reference Harmonization | Preserve channel geometry, units, reference, missingness, and transform provenance across sessions/devices. | P1 | M | Not Started |
@@ -327,6 +332,19 @@ and 22 false authorization fields are machine checked. S25 remains final-only;
 no candidate, signal, label, checkpoint, model, adapter fit, training, or final
 evaluation was opened. See `docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop32_research_boundary.v0.json`.
+
+Loop 33's planning packet freezes no prefix payload, seed, model, training run,
+prediction, target score, acquisition, or universal scaling claim. It
+recommends strictly nested `8, 16, 24, 32, 44, 55` unique-sentence prefixes,
+at most three optimization seeds and 18 candidate fits, size-matched train-only
+no-signal priors, and a single shared six-row validation event after every Loop
+26/31/33 prediction is hash-frozen. The current metadata supports no physical-
+repetition comparison; duplicated or reweighted arrays are ineligible. Twenty
+future gates, 30 refusals, four conditions, and 23 false authorization fields
+are machine checked. The experiment remains `Not Started`, additional
+acquisition is not recommended, and all protected/model/training/scoring work
+is unauthorized. See `docs/LOOP_33_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop33_research_boundary.v0.json`.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |

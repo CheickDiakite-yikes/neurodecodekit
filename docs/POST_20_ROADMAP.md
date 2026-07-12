@@ -123,10 +123,15 @@ research recommends one causal 32-parameter hidden affine adapter, four
 calibration modes, nested `0, 2, 4, 8, 16, 32` sentence budgets, and physically
 separate 32/16/48 calibration/selection/final floors while its experiment
 remains `Not Started`. All 22 authorization fields are false, no candidate or
-mode is selected, and protected work is unauthorized. Loops 33-44 remain `Not
+mode is selected, and protected work is unauthorized. Loop 33 planning
+research recommends nested `8, 16, 24, 32, 44, 55` unique-sentence prefixes,
+at most three seeds and 18 candidate fits, size-matched priors, and one shared
+validation event after every prediction is hash-frozen. Its experiment remains
+`Not Started`; no physical-repetition lane or acquisition recommendation
+exists, and all protected work is unauthorized. Loops 34-44 remain `Not
 Started`. All 20
 `execution_authorized` flags are false. Loop 25's exact decision packet is
-ready for review, while Loops 26-32 have no
+ready for review, while Loops 26-33 have no
 preregistration or authorization packet. Roadmap approval, general
 continuation, or documentation work cannot reopen Loop 24, authorize RW3 Stage
 A, or authorize any Loop 25-44 operation.
@@ -199,3 +204,8 @@ from the other.
   physical split floors, and human-burden ledger are recommendations, not
   permission to select a participant, repurpose S25, read signal or labels,
   fit an adapter, train, or open a final target.
+- Keep Loop 33 planning-only. Its `8, 16, 24, 32, 44, 55` prefixes, three-seed
+  ceiling, 18 candidate fits, trend rules, and shared target-open order are
+  recommendations, not permission to read protected data, train, score,
+  duplicate rows as physical repetitions, acquire data, or extrapolate a
+  universal scaling law. The experiment is `Not Started` and unauthorized.

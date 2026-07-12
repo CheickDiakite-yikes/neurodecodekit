@@ -486,35 +486,59 @@ data/model downloads before separate authorization.
 
 ## Loop 33 - Data Scaling And Sample Efficiency
 
-**Core question:** Do additional hours and unique sentences improve the fixed
-local encoder, and where does the bounded curve stop paying off?
+**Current state:** Planning research complete; experiment `Not Started`. See
+`docs/LOOP_33_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop33_research_boundary.v0.json`. Every one of 23 authorization
+flags is false; no protected cache, signal, target, model, training, score,
+physical-repetition study, or acquisition exists.
 
-**Why it moves the goal:** A measured curve guides whether to collect more
-repetitions, sentence diversity, sessions, or people.
+**Core question:** Within the existing 55 source-train sentence instances,
+does additional unique training data improve one fixed tiny causal encoder,
+and is its observed upper boundary still improving enough to justify a
+separate future acquisition decision?
 
-**Build:** Create nested train prefixes with fixed validation, a matched
-repetition-versus-unique-sentence comparison, fixed seeds, and a complete
-compute/data ledger.
+**Why it moves the goal:** A prospective bounded curve can guide whether a
+metadata-only acquisition packet is worth preparing without guessing,
+reopening consumed evidence, or transferring Brain2Qwerty v2's 90-hour slope.
 
-**Research:** Define the local scaling model and forbid extrapolation from the
-small observed range to Brain2Qwerty v2's 90-hour setting or to another
-modality.
+**Build:** After separate authorization, run strictly nested
+`8, 16, 24, 32, 44, 55` unique-sentence prefixes with at most three fresh
+optimization seeds and 18 candidate fits. Keep the 2,908-parameter architecture,
+person, session, device, channels, sampling rate, optimizer, stopping, decode
+rule, validation membership, and metric code fixed.
 
-**Data and controls:** Future authorized train/validation only; fixed
-architecture, optimizer, stop rule, and seeds. Run a no-signal baseline at each
-size and preserve participant/sentence group membership.
+**Research:** Completed. The primary sources separate recording quantity from
+sentence variety and show why a tiny one-person curve cannot inherit an
+exponent from 90-hour typed-sentence MEG, 175-hour overt-speech EEG, or
+multi-dataset image decoding. Formal power-law extrapolation is refused.
 
-**Metrics:** CER versus hours/trials/unique sentences; slope and interval;
-neural-minus-prior margin; runtime; optional within-host energy proxy; marginal
-gain per MiB and minute.
+**Data and controls:** Future execution may use only separately authorized 55
+source-train and six reserved validation rows. Fit a train-size-matched,
+train-only no-signal prior at each prefix. Hash-freeze every Loop 26/31/33
+prediction before opening all six validation targets once. Source test,
+session 2, S7, S20, S25, and new data remain closed. Duplicated, reweighted, or
+augmented arrays are not physical repetitions; an eligible repeated-acquisition
+lane would require distinct performed recordings and separate authorization.
 
-**Gate:** Proceed only on a stable preregistered trend that remains above the
-no-signal control. Stop when gains disappear or budget expires; report only the
-observed range.
+**Metrics:** Macro sentence CER by item, seed, size, and matched prior;
+descriptive slope versus `log2(unique sentences)`; every adjacent delta;
+smallest-band to upper-band and upper-band-over-prior practical gains; unique
+sentences, physical trials, valid signal seconds or minutes, bytes, runtime,
+RSS, warnings, unavailable fields, access counters, and hashes. CPU time is not
+energy.
 
-**Dependencies and authorization:** Depends on Loops 26 and 31. A future packet
-may register at most six train sizes and three seeds with a CPU-hour cap; no
-training is authorized here.
+**Gate:** A future bounded curve needs all 20 gates, target-blind access order,
+negative slopes for every registered seed, the recommended `0.05` practical
+smallest-to-upper and upper-over-prior gains, and Loop 31 attribution before
+sensor-signal wording. Report only the observed 8-55 range. A clean upper-bound
+result may justify a separate metadata-only acquisition packet, not a download.
+
+**Dependencies and authorization:** Depends on Loops 26 and 31. Loop 33 should
+be preregistered with Loop 26 before the first validation-target open. The
+future envelope remains one thread/worker, 18 candidate fits, 1,200 seconds
+total training, 1 GiB RSS, 32 MiB artifacts, and zero new downloads. Planning
+does not authorize any protected read, model run, training, scoring, or
+acquisition.
 
 ## Loop 34 - Confidence, Abstention, And Revision
 

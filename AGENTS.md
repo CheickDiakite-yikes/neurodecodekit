@@ -208,6 +208,23 @@ checkpoint/model/control runs, adapter fitting, parameter updates, training,
 final evaluation, downloads, streams, devices, and hardware remain
 unauthorized. Calibrated performance may never be relabeled zero-shot.
 
+Loop 33 planning research is complete while its bounded data-scaling
+experiment remains `Not Started`:
+
+```bash
+cat docs/LOOP_33_PRIMARY_SOURCE_RESEARCH.md
+python -m json.tool registries/loop33_research_boundary.v0.json >/dev/null
+```
+
+The research recommends strictly nested unique-sentence prefixes of
+`8, 16, 24, 32, 44, 55`, at most three optimization seeds and 18 candidate
+fits, size-matched no-signal priors, and one target-blind shared Loop 26/31/33
+validation event. Every prediction must hash-freeze before all six validation
+targets open once. Current metadata supports no physical-repetition lane;
+duplicated arrays are not new acquisitions. Twenty future gates, 30 refusals,
+and 23 false `authorized_now` fields are machine checked. Acquisition is not
+recommended now, and all protected/model/training/scoring work is unauthorized.
+
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
 commit `c3d1f01`, before any adapter, source chunk, fixture, socket, board, or
@@ -247,7 +264,9 @@ target-free replay boundary while its experiment remains `Not Started`; Loop
 31 planning research defines the sensor-signal attribution firewall while its
 experiment remains `Not Started`; Loop 32 planning research defines the
 32-parameter fresh-person calibration boundary while its experiment remains
-`Not Started`; Loops 33-44 remain `Not Started`. All 20
+`Not Started`; Loop 33 planning research defines the bounded
+`8, 16, 24, 32, 44, 55` curve and shared-validation order while its experiment
+remains `Not Started`; Loops 34-44 remain `Not Started`. All 20
 execution flags are false. This roadmap does not
 reopen Loop 24, authorize RW3, or permit a Loop 25-44 fixture, download, data
 read, model run, training run, stream, board, or hardware operation. A broad
@@ -312,6 +331,11 @@ authorization boundary.
   recommendation, 32/16/48 physical partition floors, six conditions, 20
   future requirements, 26 refusal IDs, and zero candidate, protected access,
   model, adapter-fit, training, or evaluation operation.
+- The Loop 33 planning registry remains exact with 23 false authorization
+  fields, six nested `8, 16, 24, 32, 44, 55` prefixes, at most three seeds and
+  18 candidate fits, one shared six-target open, four conditions, 20 future
+  requirements, 30 refusals, no physical-repetition lane, no acquisition
+  recommendation, and zero protected/model/training/scoring operations.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed

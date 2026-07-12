@@ -90,8 +90,8 @@ Do not reset, revert, delete, or overwrite work already present.
   while its experiment remains `Not Started`; Loop 27 planning research has
   selected S25 metadata while preregistration remains blocked; Loop 28 planning
   research defines a strict zero-shot rule while its experiment remains `Not
-  Started`; Loops 29-32 have completed planning research while their
-  experiments remain `Not Started`; Loops 33-44 remain `Not Started`; all 20
+  Started`; Loops 29-33 have completed planning research while their
+  experiments remain `Not Started`; Loops 34-44 remain `Not Started`; all 20
   execution flags remain false.
 - Loop 26's planning boundary recommends a 2,908-parameter causal candidate, a
   2,884-parameter linear comparator, six controls, and exact enumeration of all
@@ -146,6 +146,13 @@ Do not reset, revert, delete, or overwrite work already present.
   remains final-only. No participant/cache/signal/label/target, checkpoint,
   model, adapter-fit, training, final evaluation, download, stream, device, or
   hardware operation exists or is authorized.
+- Loop 33 planning research is complete while the bounded local scaling
+  experiment remains `Not Started`. The future boundary recommends nested
+  `8, 16, 24, 32, 44, 55` unique-sentence prefixes, at most three optimization
+  seeds and 18 candidate fits, matched no-signal priors, and one target-blind
+  shared Loop 26/31/33 validation event. All 23 authorization flags are false;
+  no physical-repetition lane or acquisition recommendation exists, and every
+  protected/model/training/scoring/device operation is unauthorized.
 - No real recording quality, neural advantage, unseen-person generalization,
   useful EEG decoder, real-time decoding, portable-hardware, arbitrary-thought,
   or clinical result has been demonstrated.
@@ -264,6 +271,11 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
     to select or open a participant, repurpose S25, read calibration or final
     signal/labels, run the 32-parameter adapter, train, or evaluate. Calibrated
     performance is not zero-shot, and one person is not population evidence.
+16. Treat the Loop 33 scaling boundary as planning research, not permission to
+    open source train or validation data, train 18 models, score targets,
+    duplicate rows as physical repetitions, or acquire more data. Freeze the
+    `8, 16, 24, 32, 44, 55` schedule before the first shared validation-target
+    open. The experiment is `Not Started`; all protected work is unauthorized.
 
 ## Required deliverables for the next authorized milestone
 
@@ -279,6 +291,10 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
    execution flags consistent. Keep the Loop 32 registry at four modes, six
    budgets, one 32-parameter recommendation, 32/16/48 physical floors, 20
    gates, 26 refusals, 22 false permissions, and zero candidate or execution.
+   Keep the Loop 33 registry at six nested `8, 16, 24, 32, 44, 55` prefixes,
+   at most three seeds and 18 candidate fits, one prospective shared validation
+   event, four conditions, 20 gates, 30 refusals, 23 false permissions, no
+   physical-repetition lane, no acquisition recommendation, and zero execution.
 2. Run documentation/contract validation, local-link checks, Ruff,
    `git diff --check`, Gitleaks, and the complete unit suites. Compare with the
    313-unittest Loop 24 baseline, the 323-unittest Loop 25 v0 preregistration
