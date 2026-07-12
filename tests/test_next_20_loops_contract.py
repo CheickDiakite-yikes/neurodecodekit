@@ -26,7 +26,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         self.assertEqual(
             roadmap["schema_name"], "neurodecodekit.next_twenty_loops_roadmap"
         )
-        self.assertEqual(roadmap["schema_version"], "0.4.0")
+        self.assertEqual(roadmap["schema_version"], "0.5.0")
         self.assertEqual(roadmap["roadmap_id"], "loops-25-44")
         self.assertEqual(roadmap["status"], "planning_only_not_execution_authorization")
         self.assertEqual(
@@ -63,6 +63,17 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         self.assertFalse(boundary["loop27_preregistration_prepared"])
         self.assertFalse(boundary["loop27_acquisition_request_prepared"])
         self.assertFalse(boundary["loop27_download_authorized"])
+        self.assertTrue(boundary["loop28_research_packet_prepared"])
+        self.assertEqual(
+            boundary["loop28_selected_claim_level"],
+            "T2_unseen_person_strict_zero_shot",
+        )
+        self.assertTrue(boundary["loop28_final_only_rule_research_ready"])
+        self.assertFalse(boundary["loop28_preregistration_prepared"])
+        self.assertFalse(boundary["loop28_execution_authorized"])
+        self.assertFalse(boundary["loop28_dependency_loop25_satisfied"])
+        self.assertFalse(boundary["loop28_dependency_loop26_satisfied"])
+        self.assertFalse(boundary["loop28_dependency_loop27_satisfied"])
         self.assertFalse(boundary["rw3_stage_a_authorized"])
         self.assertFalse(boundary["general_continuation_is_authorization"])
         self.assertFalse(boundary["roadmap_approval_is_loop_execution_authorization"])
@@ -111,7 +122,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                 else:
                     self.assertEqual(row["status"], "Not Started")
                     self.assertEqual(row["proof_posture"], "planned_not_authorized")
-                    if row["loop_id"] in {26, 27}:
+                    if row["loop_id"] in {26, 27, 28}:
                         self.assertEqual(
                             row["research_status"], "planning_research_complete"
                         )
@@ -173,6 +184,8 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
             {
                 "brain2qwerty_v2",
                 "brain2qwerty_v2_code",
+                "meg_cross_subject_transfer",
+                "brain_decoder_cv_guidelines",
                 "brain2qwerty_v1",
                 "scipy_permutation_test",
                 "scipy_bootstrap",

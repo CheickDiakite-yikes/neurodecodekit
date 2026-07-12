@@ -2,7 +2,7 @@
 
 Date: 2026-07-12
 
-Status: **Loop 25 amended v1 and awaiting authorization; Loops 26-44 planning only; no execution is authorized**
+Status: **Loop 25 amended v1 and awaiting authorization; Loops 26-28 planning research complete; Loops 29-44 planning only; no execution is authorized**
 
 Machine source of truth: `registries/next_20_loops.v0.json`
 
@@ -208,12 +208,21 @@ Ambiguity produces `hold`, not a substitute consumed cohort.
 
 **Dependencies and authorization:** Metadata research is complete without a
 prior-loop dependency. Preregistration now waits for a compatible Loop 25
-result, a frozen Loop 26 source model/control package, header and target-
-isolation protocols, and a Loop 28 final-only decision rule. Any download,
-local MAT hash, header, signal, target, model, training, or final access requires
-its own later exact packet and authorization.
+result, a frozen Loop 26 source model/control package, and header and target-
+isolation protocols. Loop 28 planning research now supplies the recommended
+final-only T2 decision rule, but Loop 27 must still bind that rule and all
+upstream hashes in a later preregistration. Any download, local MAT hash,
+header, signal, target, model, training, or final access requires its own later
+exact packet and authorization.
 
 ## Loop 28 - Session And Person Transfer
+
+**Current status:** Planning research complete; experiment status remains `Not
+Started`. The selected future question is T2 strict unseen-person zero-shot on
+the final-only S25 candidate. No preregistration, authorization sentence,
+acquisition, payload operation, model/control prediction, calibration, or final
+open exists. See `docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop28_research_boundary.v0.json`.
 
 **Core question:** Does the frozen causal system transfer to a genuinely fresh
 session or person, and how much predeclared calibration is required?
@@ -221,30 +230,42 @@ session or person, and how much predeclared calibration is required?
 **Why it moves the goal:** The current same-person session-2 result is negative.
 A fresh, one-time test is required before promoting any transfer claim.
 
-**Build:** Freeze the source model, split membership, zero-shot path, adapter
-family, calibration schedule, thresholds, and report before opening the fresh
-holdout. Keep zero-shot and calibrated results in separate cards.
+**Build:** After Loops 25-27 close, freeze the source model, split membership,
+strict zero-shot path, no-signal prior, corruption controls, threshold,
+randomization schedule, and report before opening the fresh holdout. Calibrated
+adaptation remains a separate physically partitioned future design.
 
-**Research:** Define four levels: same-session held-out text, same-person
-cross-session, unseen-person zero-shot, and unseen-person calibrated. Specify
-which claim the selected holdout can answer.
+**Research:** Complete at the planning boundary. The T0-T3 taxonomy separates
+same-session held-out text, same-person cross-session, unseen-person strict
+zero-shot, and unseen-person supervised calibration. Unlabeled target-corpus
+adaptation is separately labeled transductive and cannot count as T2. The v2
+paper is asynchronous but noncausal; its joint model includes target-person
+data and its leave-one-out regime finetunes on the target, so it does not
+establish strict zero-shot person transfer.
 
-**Data and controls:** Use only an approved Loop 27 holdout with physically
-separate calibration/selection/final members. Compare the same-split prior,
-frozen zero-shot model, registered adapters, and sentence/identity leakage
-checks.
+**Data and controls:** A future T2 test may use only the approved Loop 27 S25
+holdout, with zero candidate training, validation, calibration, target-wide
+normalization, subject embedding, adapter, threshold, or unlabeled corpus-fit
+rows. Compare the same-split source-train-only prior, frozen zero-shot model,
+exact-zero signal, channel-name derangement, and nonwrapping time displacement
+on identical final rows. Keep identity and sentence-overlap claims separate.
 
-**Metrics:** CER/WER where justified; exact sequence accuracy; neural-minus-
-prior interval; zero-shot versus calibrated delta; calibration items/minutes;
-compute; person/session failure rates.
+**Metrics:** Primary macro sentence-CER difference, prior minus model; one-sided
+paired randomization p-value from 65,535 frozen sign assignments plus the
+observed assignment; corpus CER; WER where justified; exact sequence accuracy;
+wins/ties/losses; identity, overlap, runtime, RSS, bytes, and access counters.
 
-**Gate:** Promote only the exact transfer level whose preregistered primary
-interval and controls pass once. A failed fresh gate closes that claim; the
-opened holdout cannot become tuning data and then be called fresh.
+**Gate:** T2 support for this one S25 person/session/task requires at least 48
+eligible unique final rows, at least 0.05 absolute macro CER improvement over
+the frozen prior, paired `p <= 0.05`, a strict win over every corruption
+control, and zero identity/hash/access/resource failures. A tie or unavailable
+required field parks the claim. One passing person is not population
+generalization, and unseen text additionally requires a zero-overlap audit.
 
 **Dependencies and authorization:** Requires Loops 25-27 plus explicit
-acquisition and one-time test authorizations. No such data or run is authorized
-by this document.
+acquisition and one-time test authorizations. Planning research resolves the
+Loop 27 final-only-rule question but satisfies none of the measured upstream
+dependencies. No such data or run is authorized by this document.
 
 ## Loop 29 - Portable Sensing Translation
 

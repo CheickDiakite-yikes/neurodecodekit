@@ -114,6 +114,24 @@ Loop 27 authorization fields are false. Do not download, hash the local S25 MAT
 payload, inspect a FIF header, read signal/targets, substitute a backup, or
 prepare Loop 28 execution from this research result.
 
+Loop 28 planning research now defines the transfer taxonomy and the missing
+final-only decision recommendation, but the experiment remains `Not Started`:
+
+```bash
+cat docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md
+python -m json.tool registries/loop28_research_boundary.v0.json >/dev/null
+```
+
+The selected future claim is T2 strict unseen-person zero-shot on S25 with
+zero candidate fit or calibration rows. A future pass requires at least 48
+unique final rows, at least 0.05 absolute macro sentence-CER improvement over
+the frozen source-train-only prior, `p <= 0.05` from 65,535 deterministic paired
+assignments plus observed, and strict wins over zero-signal, channel-
+derangement, and time-displacement controls. All 21 `authorized_now` fields are
+false. The rule is planning research, not a Loop 27 preregistration or Loop 28
+authorization. Calibrated transfer requires a different physically separated
+design and can never be relabeled as zero-shot.
+
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
 commit `c3d1f01`, before any adapter, source chunk, fixture, socket, board, or
@@ -145,11 +163,13 @@ five phases, with detailed controls, metrics, stop rules, resource caps,
 dependencies, and source bindings. Loop 25 is `Amended Preregistration` with
 `execution_authorized: false`; Loop 26 has completed planning research while
 its experiment remains `Not Started`; Loop 27 has selected S25 in metadata
-while preregistration remains blocked; Loops 28-44 remain `Not Started`. All 20
-execution flags are false. This roadmap does not reopen Loop 24, authorize RW3,
-or permit a Loop 25-44 fixture, download, data read, model run, training run,
-stream, board, or hardware operation. A broad request to continue toward Loop
-44 is a goal, not a substitute for each frozen authorization boundary.
+while preregistration remains blocked; Loop 28 planning research defines a T2
+strict zero-shot rule while its experiment remains `Not Started`; Loops 29-44
+remain `Not Started`. All 20 execution flags are false. This roadmap does not
+reopen Loop 24, authorize RW3, or permit a Loop 25-44 fixture, download, data
+read, model run, training run, stream, board, or hardware operation. A broad
+request to continue toward Loop 44 is a goal, not a substitute for each frozen
+authorization boundary.
 
 ## Acceptance criteria for next PR
 
@@ -180,6 +200,11 @@ stream, board, or hardware operation. A broad request to continue toward Loop
   fields, 315 MEG metadata entries, 23 strict pairs, 16 eligible pairs, the
   two-file 1,009,939,983-byte S25 selection, official S23/S20 boundaries, and
   no preregistration, request, download, payload hash, header, signal, or target
+  access.
+- The Loop 28 planning registry remains exact with 21 false authorization
+  fields, four noninterchangeable transfer levels, zero S25 fit/calibration
+  rows, the 48-row/0.05-CER/65,535-assignment rule, four required comparators,
+  physically separate calibrated-transfer requirements, and zero protected
   access.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.

@@ -34,6 +34,18 @@ final open, or backup substitution exists. Review
 `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop27_research_boundary.v0.json` as metadata research only.
 
+Loop 28 planning research is complete while the experiment remains `Not
+Started`. It separates T0-T3 transfer evidence and reserves S25 for strict T2
+zero-shot evaluation with zero target fit or calibration rows. The future
+recommendation requires at least 48 final rows, 0.05 macro sentence-CER
+improvement over the frozen prior, 65,535 deterministic paired assignments plus
+observed, and strict wins over zero-signal, channel-derangement, and time-
+displacement controls. All 21 authorization fields are false. Review
+`docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop28_research_boundary.v0.json` as planning evidence only; they
+do not authorize a Loop 27 packet, S25 operation, model prediction,
+calibration, or final open.
+
 The next numbered decision is **authorize Loop 25 v1 exactly, amend it again,
 or hold**. Review `docs/LOOP_25_AUTHORIZATION_PACKET_V1.md` and
 `registries/loop25_authorization_request.v1.json`. General continuation is not

@@ -6,9 +6,10 @@
 > things. A second tranche now defines Loops 25-44; Loop 25 is amended and
 > preregistered, Loop 26 planning research is complete while its experiment
 > remains `Not Started`, Loop 27 has selected S25 in metadata while
-> preregistration remains blocked, and Loops 28-44 remain planning-only, so the
-> spreadsheet dashboard displays the original roadmap, current gate, and next
-> 20-loop queue separately.
+> preregistration remains blocked, and Loop 28 planning research defines a
+> strict zero-shot final-only rule while its experiment remains `Not Started`.
+> Loops 29-44 remain planning-only, so the spreadsheet dashboard displays the
+> original roadmap, current gate, and next 20-loop queue separately.
 
 This tracker starts after PR1 lands. The core operating rule is simple: **do not add a more complex loop until the previous loop has produced a cache, report, demo, or explicit kill/park decision.**
 Each loop should be one PR or one experiment note whenever possible. Complexity is allowed, but only when a simpler loop proves why it is needed.
@@ -227,15 +228,15 @@ These rows are an **authorization-gated queue**, not approved experiments. The f
 acceptance boundaries, stop rules, controls, resource caps, dependencies, and
 authorization rules live in `docs/LOOPS_25_44_ROADMAP.md` and
 `registries/next_20_loops.v0.json`. Loop 25 is `Amended Preregistration`;
-Loops 26 and 27 are `Not Started` with planning research complete; Loops 28-44
-are `Not Started`. Every row retains `execution_authorized: false`.
+Loops 26-28 are `Not Started` with planning research complete; Loops 29-44 are
+`Not Started`. Every row retains `execution_authorized: false`.
 
 | # | Phase | Gate | Core outcome | Priority | Effort | Status |
 |---:|---|---|---|---|---|---|
 | 25 | Causal Evidence | Causal Preprocessing Audit | Prove the complete preprocessing path has zero undeclared future context, full folding-band anti-alias protection, stable timing, and schedule identity. | P0 | M | Amended v1; authorization pending |
 | 26 | Causal Evidence | Real Validation-Only Encoder Gate | Decide whether one fixed tiny causal encoder beats no-signal and shuffled controls on source validation only. | P0 | L | Planning research complete; experiment Not Started |
 | 27 | Causal Evidence | Fresh Holdout Preregistration | Identify one independent, licensed, byte-capped holdout without downloading or previewing it. | P0 | M | S25 metadata selected; preregistration blocked |
-| 28 | Causal Evidence | Session And Person Transfer | Make one claim-specific fresh same-person or unseen-person transfer decision under a frozen protocol. | P0 | L | Not Started |
+| 28 | Causal Evidence | Session And Person Transfer | Make one claim-specific fresh same-person or unseen-person transfer decision under a frozen protocol. | P0 | L | Planning research complete; experiment Not Started |
 | 29 | Translation And Generalization | Portable Sensing Translation | Separate cryogenic MEG, OPM-MEG, EEG, and non-neural device requirements before hardware work. | P1 | M | Not Started |
 | 30 | Translation And Generalization | Local Private Streaming Prototype | Expose incremental replay, revisions, stage latency, provenance, and warnings locally. | P1 | M | Not Started |
 | 31 | Translation And Generalization | Neural Contribution Ablation | Isolate neural signal from language priors, timing, sentence lists, and corrupted-signal controls. | P0 | L | Not Started |
@@ -275,6 +276,17 @@ freshness remain unavailable. All 18 authorization fields are false, and no
 candidate payload, local MAT hash, header, signal, target, model, training, or
 final open occurred. See `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop27_research_boundary.v0.json`.
+
+Loop 28's planning packet freezes no experiment or prediction. It defines T0-
+T3 transfer levels, labels unlabeled target-corpus adaptation as transductive
+rather than strict zero-shot, and reserves S25 for a zero-calibration T2 test.
+The future rule requires at least 48 unique final rows, at least 0.05 absolute
+macro sentence-CER improvement over the source-train-only prior, `p <= 0.05`
+from 65,535 deterministic paired assignments plus observed, and strict wins
+over zero-signal, channel-derangement, and time-displacement controls. All 21
+authorization fields are false; no S25 payload, target, model, calibration, or
+final open occurred. See `docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop28_research_boundary.v0.json`.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |

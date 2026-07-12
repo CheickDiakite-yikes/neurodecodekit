@@ -1517,3 +1517,55 @@ Evidence: `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop27_research_boundary.v0.json`,
 `tests/test_loop27_research_boundary.py`, roadmap commit `b3d61b6`, tracker row
 `27-R1`, and GitHub CI run `29199178320`.
+
+## 0055 - Reserve S25 for strict zero-shot and separate calibration
+
+Decision: close Loop 28 planning research while leaving its experiment `Not
+Started`, its Loops 25-27 dependencies unsatisfied, and all 21
+`authorized_now` fields false. Reserve the selected S25 block for a future T2
+strict unseen-person zero-shot test with zero target-person fit, validation,
+calibration, target-wide normalization, subject embedding, adapter, threshold,
+or unlabeled corpus-adaptation rows. A calibrated-transfer curve requires a
+different physically separated design and may never be relabeled as zero-shot.
+
+Why: Brain2Qwerty v2 is an important asynchronous continuous-sentence
+reference, but its paper explicitly says the current architecture is
+whole-sentence and noncausal. Its main joint model includes each target
+participant during training and uses a participant-index-conditioned affine
+layer. Its leave-one-out comparison excludes the target participant during
+pretraining and then finetunes on that participant. Those results support
+participant-aware and calibrated transfer research, not strict unseen-person
+zero-shot decoding. Public cross-subject MEG and BCI benchmarking work likewise
+shows that participant/session domain shift and evaluation context must be
+named rather than averaged away.
+
+Future T2 rule: require at least 48 eligible unique performed S25 rows. Freeze
+the source checkpoint, source-train-only no-signal prior, exact-zero signal,
+channel-name-hash derangement, nonwrapping zero-filled time displacement, all
+predictions, and the scorer before final target text opens. Pass only with at
+least 0.05 absolute macro sentence-CER improvement over the prior, one-sided
+paired `p <= 0.05` from 65,535 deterministic sign assignments plus observed,
+and strictly lower macro CER than every corruption control. Ties, missing
+fields, threshold misses, control failures, hash/access/resource violations,
+or fewer than 48 rows park T2. Failure permits no restart, calibration,
+threshold change, or backup substitution.
+
+Claim boundary: a future pass can support only T2 for this one S25 canonical
+person/session/task. It cannot establish population generalization. It can add
+an unseen-text label only if a separately authorized redacted hash audit finds
+zero source overlap. Unlabeled target-corpus adaptation is transductive, not
+strict zero-shot. Brain2Qwerty v2 equivalence, low-latency operation, portable
+sensing, at-home use, assistive efficacy, diagnosis, and clinical utility all
+remain unestablished.
+
+Access and resource result: this planning pass used ten high-level public-web
+research operations and one GitHub metadata call, downloaded zero code/data
+payload bytes, and performed zero S25 metadata/path/hash/header/signal/MAT/
+target, consumed-evidence, model, training, calibration, final, RW3, stream,
+board, device, or hardware operations. The 14 Loop 28 invariants pass in 0.08
+seconds wall with 19,513,344-byte maximum RSS. External browser peak RSS and
+end-to-end interactive research runtime are unavailable by tool contract.
+
+Evidence: `docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop28_research_boundary.v0.json`,
+`tests/test_loop28_research_boundary.py`, and tracker row `28-R1`.

@@ -2265,3 +2265,65 @@ This milestone adds an exact, storage-bounded candidate for a future
 unseen-person MEG transfer test. It does not establish an acquired or compatible
 holdout, target freshness, transfer, neural advantage, unseen text, population
 generalization, real-time behavior, or portable hardware.
+
+## 2026-07-12 - Define the Loop 28 strict unseen-person transfer boundary
+
+Loop 28 planning research converts the missing unseen-person claim into one
+falsifiable future S25 test without opening the candidate. The primary-source
+audit separates four noninterchangeable levels: T0 same-session heldout text,
+T1 same-person cross-session, T2 unseen-person strict zero-shot, and T3 unseen-
+person supervised calibrated transfer. It also records that Brain2Qwerty v2 is
+continuous at inference but whole-sentence and noncausal, and that its joint and
+leave-one-out transfer regimes use target-participant data rather than proving
+strict zero-shot transfer.
+
+The selected future S25 question is T2 only. It permits zero candidate training,
+validation, calibration, target-wide fitting, subject embedding, adapter, or
+unlabeled target-corpus adaptation rows. A future pass requires at least 48
+eligible unique final rows, at least 0.05 absolute macro sentence-CER advantage
+over the frozen source-train-only no-signal prior, a one-sided deterministic
+paired label-swap result at `p <= 0.05` from 65,535 random assignments plus the
+observed assignment, and strict wins over exact-zero signal, channel-name-hash
+derangement, and nonwrapping zero-filled time-displacement controls. Ties,
+missing fields, cap violations, fewer than 48 rows, and any failed gate park the
+result without restart, threshold changes, calibration, or backup substitution.
+
+The machine registry has 21 false `authorized_now` fields. It records zero S25
+path checks, local MAT hashes, FIF header or signal reads, MAT content or target
+reads, consumed source-evidence reads, model or checkpoint runs, training,
+calibration, final evaluation, and RW3 or hardware operations. Public research
+used ten high-level browser operations and one GitHub metadata API call, with
+zero code or data payload bytes. External interactive runtime and RSS are
+unavailable from the research tool contract and are reported as unavailable,
+not estimated. The future generated-artifact cap remains 32 MiB, one worker,
+one CPU thread, and no larger model or language model.
+
+The nine-sheet tracker adds decision `28-R1`, risk `R33`, prompt
+`Loop28-Research`, and the refreshed Loop 28 row while Loop 25 remains the
+active numbered execution decision. The 82,284-byte workbook has SHA-256
+`312a98d5d63d52ceb413383b7cd8a2424b0c1cb864665a485d3320f74d42ee7e`;
+all nine sheets render, the exported workbook reloads with byte-identical key-
+range inspection, and two formula scans match zero cells. The unrelated
+inspection sidecar remains byte-identical at SHA-256
+`5cd0ef08446c4e5feee5ce11f27eef41fae5eee8975cc77f6d401faca3b79f45`.
+
+Final local verification passes 69 focused Loop 25-28/roadmap tests in 0.08
+seconds wall with 27,639,808-byte maximum RSS; 394 optional unittests with three
+expected skips in 22.70 seconds wall and 566,378,496-byte maximum RSS; 391
+pytest tests with three skips and 184 subtests in 23.75 seconds wall and
+587,792,384-byte maximum RSS; and 362 true dependency-light Python 3.12 tests
+with 121 optional skips in 0.79 seconds wall and 46,891,008-byte maximum RSS.
+The three full counts are each 14 above the Loop 27 public closeout.
+
+Repository-wide Ruff, compileall, 17 tracked/worktree JSON and two TOML parses,
+seven CLI help surfaces, unauthorized Loop 25/26/27/28 command absence,
+`git diff --check`, and 68 local Markdown links pass. Staged Gitleaks and push/PR
+CI remain for the final closeout pass. No candidate payload, local MAT hash,
+header, signal, target, source consumed evidence, model, training, calibration,
+final holdout, backup, RW3, stream, board, device, hardware, or generated
+experiment payload was opened or created.
+
+This milestone adds a machine-checkable one-time strict zero-shot transfer
+decision design. It does not establish S25 compatibility, unseen-person neural
+advantage, decoding accuracy, unseen-text or population generalization,
+causality, real-time decoding, or portable-hardware behavior.

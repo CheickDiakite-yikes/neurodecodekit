@@ -137,10 +137,14 @@ Roadmap response:
 ## Finding 4: Transfer And Calibration Are Different Claims
 
 Brain2Qwerty v2 reports substantial participant variability and identifies
-cross-subject transfer or self-supervised pretraining as priorities. It also
-states that its healthy-volunteer typing protocol does not answer the patient
-case in which physical keypresses may be unavailable during training or
-finetuning.
+cross-subject transfer or self-supervised pretraining as priorities. Its joint
+model trains on all nine participants and uses a participant-index-conditioned
+affine layer. Its leave-one-out comparison excludes the target participant
+during pretraining but then finetunes on that participant. This is valuable
+supervised calibrated transfer evidence, not strict unseen-person zero-shot
+evidence. The paper also states that its healthy-volunteer typing protocol does
+not answer the patient case in which physical keypresses may be unavailable
+during training or finetuning.
 
 This creates four distinct claims:
 
@@ -154,10 +158,22 @@ as no-keypress communication.
 
 Roadmap response:
 
-- Loop 28 reports each transfer level separately;
+- Loop 28 reports each transfer level separately and treats unlabeled target-
+  corpus adaptation as transductive rather than strict zero-shot;
 - Loop 32 measures calibration items, minutes, compute, and no-harm behavior;
 - Loop 35 keeps the no-keypress translation problem visible rather than
   assuming it away.
+
+The dedicated Loop 28 research pass now sharpens this into one final-only rule.
+S25 session 2 block 2 remains a zero-calibration T2 candidate: at least 48
+eligible unique rows, at least 0.05 absolute macro sentence-CER improvement
+over the frozen source-train-only prior, a one-sided paired randomization result
+at `p <= 0.05` using 65,535 frozen assignments plus the observed assignment,
+and a strict win over zero-signal, channel-derangement, and time-displacement
+controls. Any tie, missing field, access violation, or cap failure parks the
+claim. A calibrated curve requires a different physically separated design.
+See `docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop28_research_boundary.v0.json`.
 
 ## Finding 5: Sensor Reduction Is Not Portable-Hardware Qualification
 

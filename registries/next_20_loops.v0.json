@@ -1,6 +1,6 @@
 {
   "schema_name": "neurodecodekit.next_twenty_loops_roadmap",
-  "schema_version": "0.4.0",
+  "schema_version": "0.5.0",
   "roadmap_id": "loops-25-44",
   "prepared_at": "2026-07-12",
   "status": "planning_only_not_execution_authorization",
@@ -35,6 +35,14 @@
     "loop27_preregistration_prepared": false,
     "loop27_acquisition_request_prepared": false,
     "loop27_download_authorized": false,
+    "loop28_research_packet_prepared": true,
+    "loop28_selected_claim_level": "T2_unseen_person_strict_zero_shot",
+    "loop28_final_only_rule_research_ready": true,
+    "loop28_preregistration_prepared": false,
+    "loop28_execution_authorized": false,
+    "loop28_dependency_loop25_satisfied": false,
+    "loop28_dependency_loop26_satisfied": false,
+    "loop28_dependency_loop27_satisfied": false,
     "rw3_status": "stage_a_packet_prepared_unauthorized",
     "rw3_stage_a_authorized": false,
     "general_continuation_is_authorization": false,
@@ -248,30 +256,36 @@
       "status": "Not Started",
       "execution_authorized": false,
       "proof_posture": "planned_not_authorized",
+      "research_status": "planning_research_complete",
+      "research_packet": "docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md",
+      "research_registry": "registries/loop28_research_boundary.v0.json",
+      "selected_claim_level": "T2",
+      "selected_candidate": "spanishbcbl-meg-s25-session2-block2-v0",
+      "preregistration_prepared": false,
       "core_question": "Does the frozen causal system transfer to a genuinely fresh session or person, and how much predeclared calibration is required?",
       "why_high_value": "The existing same-person cross-session result is negative; a fresh one-time test is required before any generalization claim can move.",
-      "build_deliverable": "Frozen source model, identity-safe adapter protocol, one-time holdout runner, calibration curve, paired controls, and claim-specific report card.",
-      "research_deliverable": "Transfer taxonomy distinguishing same-session, same-person cross-session, unseen-person zero-shot, and unseen-person calibrated evidence.",
-      "data_scope": "Only a separately acquired and authorized Loop 27 holdout after architecture, preprocessing, adapter, thresholds, and reports are frozen.",
+      "build_deliverable": "Future frozen source-model one-time holdout runner with paired controls and a claim-specific report card; calibrated adaptation remains a separate physically partitioned design.",
+      "research_deliverable": "Completed T0-T3 transfer taxonomy, strict zero-shot versus transductive boundary, and a one-time S25 final-only rule with a 0.05 macro-CER margin, 65,535 paired random assignments, and conjunctive controls.",
+      "data_scope": "Planning research only. A future S25 test may use only a separately acquired and authorized Loop 27 final-only holdout after preprocessing, source model, controls, thresholds, and reports are frozen; S25 contributes zero fit or calibration rows.",
       "controls": [
         "Train-only no-signal prior evaluated on identical rows.",
-        "Zero-shot frozen model before any calibration.",
-        "Calibration-size curve with a physically separate final partition.",
-        "Identity and repeated-text leakage audit."
+        "Same checkpoint with exact-zero signal, frozen channel-name derangement, and frozen nonwrapping time displacement.",
+        "Zero target-person fit, target-wide normalization, subject embedding, adapter, threshold, or unlabeled corpus adaptation.",
+        "Identity and repeated-text leakage audit with claim relabeling but no post-preregistration row removal."
       ],
       "primary_metrics": [
-        "CER, WER where justified, and exact sequence accuracy",
-        "neural-minus-prior paired interval",
-        "zero-shot versus calibrated delta",
-        "calibration examples, seconds, and compute",
-        "session/person-specific failure rates"
+        "macro sentence-CER prior-minus-model effect with a 0.05 practical floor",
+        "one-sided paired randomization p-value from 65,535 frozen assignments plus observed",
+        "corpus CER, WER where justified, exact sequence accuracy, and wins-ties-losses",
+        "strict candidate-versus-zero-signal, channel-derangement, and time-displacement controls",
+        "identity, sentence-overlap, access, runtime, RSS, and artifact counters"
       ],
-      "acceptance_boundary": "Promote only the exact same-person or unseen-person claim whose preregistered interval and controls pass on the one-time fresh partition.",
-      "stop_rule": "A failed fresh gate closes that transfer claim; do not tune on the opened holdout or relabel calibrated performance as zero-shot.",
+      "acceptance_boundary": "Support T2 only for this one S25 person/session/task when at least 48 unique final rows remain, macro CER improves by at least 0.05 over the frozen prior, paired p is at most 0.05, every corruption control is strictly worse, and all identity, hash, access, and resource gates pass.",
+      "stop_rule": "Any missing field, tie, threshold miss, control failure, access violation, or cap failure parks T2; do not tune, calibrate, restart, substitute a backup, or relabel calibrated or transductive performance as zero-shot.",
       "depends_on": [25, 26, 27],
       "external_gates": ["approved_fresh_holdout_packet", "separate_one_time_test_authorization"],
-      "authorization_boundary": "Planning only. No fresh acquisition, model run, calibration, or holdout opening is authorized.",
-      "resource_cap": "One thread and worker, frozen small model, 32 MiB outputs, preregistered calibration budget, and 1 GiB peak RSS."
+      "authorization_boundary": "Planning research only. No preregistration or authorization sentence exists; acquisition, local MAT hashing, header/signal/target access, model/control prediction, calibration, final opening, language model, backup, and device work remain unauthorized.",
+      "resource_cap": "Current research used zero payload bytes. A future T2 packet is limited to one thread and worker, the frozen Loop 26 checkpoint, zero target-person updates and language-model runs, 32 MiB outputs, and 1 GiB peak RSS."
     },
     {
       "loop_id": 29,
@@ -817,7 +831,7 @@
     "25": ["brain2qwerty_v2", "neuralset_v0_2_2", "mne_resampling", "scipy_iirdesign"],
     "26": ["brain2qwerty_v1", "brain2qwerty_v2", "brain2qwerty_v2_code", "scipy_permutation_test", "scipy_bootstrap", "classifier_permutation_tests", "small_sample_cv_uncertainty", "time_series_permutation_dependence"],
     "27": ["brain2qwerty_v1", "brain2qwerty_v2", "datasheets"],
-    "28": ["brain2qwerty_v2", "moabb_benchmark"],
+    "28": ["brain2qwerty_v2", "brain2qwerty_v2_code", "meg_cross_subject_transfer", "moabb_benchmark", "brain_decoder_cv_guidelines", "classifier_permutation_tests"],
     "29": ["brain2qwerty_v2", "moabb_benchmark"],
     "30": ["brain2qwerty_v2", "lsl_time_sync"],
     "31": ["brain2qwerty_v1", "brain2qwerty_v2"],
@@ -851,8 +865,20 @@
     {
       "source_id": "brain2qwerty_v2_code",
       "title": "Official Brain2Qwerty v2 implementation",
-      "url": "https://github.com/facebookresearch/brain2qwerty/tree/main/brain2qwerty_v2",
+      "url": "https://github.com/facebookresearch/brain2qwerty/tree/3bf5a4099ca0d23bbe994b2287905760236e56e0/brain2qwerty_v2",
       "roadmap_use": "Released whole-sentence Conv-Conformer, CTC, alignment, LLM, data, and training configuration boundaries."
+    },
+    {
+      "source_id": "meg_cross_subject_transfer",
+      "title": "MEG Decoding Across Subjects",
+      "url": "https://arxiv.org/abs/1404.4175",
+      "roadmap_use": "Cross-person MEG domain shift and the distinction between strict zero-shot, transductive zero-label, and supervised calibrated transfer."
+    },
+    {
+      "source_id": "brain_decoder_cv_guidelines",
+      "title": "Assessing and tuning brain decoders: Cross-validation, caveats, and guidelines",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27989847/",
+      "roadmap_use": "Split, tuning, small-sample uncertainty, and claim limits for predictive neuroimaging evaluation."
     },
     {
       "source_id": "scipy_permutation_test",

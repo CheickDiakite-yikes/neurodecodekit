@@ -9,6 +9,13 @@ Machine boundary: `registries/loop27_research_boundary.v0.json`
 
 Roadmap row: `registries/next_20_loops.v0.json` Loop 27
 
+Post-closeout update: Loop 28 planning research now recommends a strict
+zero-calibration T2 final-only rule in
+`docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md`. This resolves the missing decision
+rule at the research level only. It does not create a Loop 27 preregistration,
+freeze the Loop 26 model or controls, qualify S25, or authorize any acquisition
+or content access.
+
 ## Decision Summary
 
 The metadata-only selector recommends **SpanishBCBL MEG S25 session 2 block
@@ -26,8 +33,9 @@ cap margin                                    63,801,841 bytes
 
 This is a candidate selection, not a download plan ready for authorization.
 Loop 25 has no mechanics result, Loop 26 has no frozen source model or control
-package, exact S25 channels and trials are unopened, and no Loop 28 decision
-rule exists. Loop 27 remains `Not Started` as an experiment and has no
+package, and exact S25 channels and trials are unopened. Loop 28 now supplies a
+research-level decision recommendation, but it is not yet bound into a Loop 27
+preregistration. Loop 27 remains `Not Started` as an experiment and has no
 preregistration or authorization sentence.
 
 ## Measured Research Boundary
@@ -294,7 +302,8 @@ are resolved:
 3. Frozen no-signal and corrupted-signal controls.
 4. Header-only sensor compatibility protocol.
 5. Redacted target-isolation implementation and hash.
-6. Final-only estimand, threshold, tie rule, and failure behavior.
+6. Bind the Loop 28 final-only estimand, threshold, tie rule, and failure
+   behavior into the future Loop 27 contract.
 7. Exact source sentence-hash availability or explicit familiar-text claim.
 8. Separate staged permissions for acquisition, header, signal, targets, model,
    and final open.

@@ -34,7 +34,8 @@ and explain exactly what the result does not prove.
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
 | Full-path causality gate | Loop 25 v1 freezes a dedicated causal anti-alias stage, a 65,537-point 0-500 Hz response audit, 23 alias probes, 7 chunk schedules, 10 resume cuts, 3 future-mutation cuts, and 45 refusals | The source-audited protocol is awaiting authorization; v0 was superseded safely, and no coefficient, fixture, seed open, or preprocessing result exists |
 | Next predictive design | Loop 26 research narrows the future gate to a 2,908-parameter causal candidate, a 2,884-parameter linear comparator, six required controls, and all 64 paired sign assignments over six reserved validation sentences | The experiment is still `Not Started`; this is an identifiability and design result, not neural performance |
-| Fresh transfer candidate | Loop 27 metadata research selects S25 session 2 block 2: one MEG FIF plus one protected MAT log, exactly 1,009,939,983 bytes under 1 GiB | S25 is not downloaded or qualified; preregistration waits for the causal source model, controls, target isolation, and a one-time transfer rule |
+| Fresh transfer candidate | Loop 27 metadata research selects S25 session 2 block 2: one MEG FIF plus one protected MAT log, exactly 1,009,939,983 bytes under 1 GiB | S25 is not downloaded or qualified; preregistration waits for the causal source model, controls, and target isolation |
+| Transfer decision rule | Loop 28 research separates T0-T3 evidence and recommends a strict S25 T2 zero-shot gate: zero target fit, at least 48 final rows, at least 0.05 macro-CER improvement, 65,535 paired swaps plus observed, and strict corruption-control wins | The experiment is `Not Started`; this resolves one planning dependency without authorizing S25, a model run, calibration, or final access |
 | Real predictive evidence | Both the same-person cross-session MEG model and the bounded S7 EEG classifier lose to no-signal controls | The current scientific result is negative, explicit, and frozen against post-hoc tuning |
 | Local execution gate | Float16 preserved exact behavior but ran `1.170x` slower on the producer; qint8 cut payload to `47.1%` but changed behavior and ran `2.785x` slower | Float32 is retained, qualification stayed unopened, and Loop 24 is parked after the full run exceeded its 60-second cap |
 | Next transport layer | Stage A is specified as 90 future schedule-by-fixture cases with 30 exact refusals under a 32 MiB cap | The decision packet is review-ready; no replay runtime, socket, board, or hardware path is authorized yet |
@@ -59,7 +60,8 @@ and explain exactly what the result does not prove.
 | Causal preprocessing amendment | Pinned Brain2Qwerty -> NeuralSet 0.2.2 -> MNE 1.11 source trace; dedicated elliptic SOS; 65,537 response points; 23 alias probes; 24 future target-free items; 7 schedules; 10 resumes; 3 mutation cuts; 45 refusals; 23 counters | amended preregistration, no runtime | Corrects v0's incomplete anti-alias gate before authorization and makes the full 50-500 Hz folding band falsifiable before either seed opens |
 | Loop 26 identifiability boundary | 55/6/5 source split; one person/session; 64 exact sign assignments; minimum two-sided p `0.03125`; 2,908-parameter causal recommendation; 2,884-parameter comparator; 14 false authorization fields | planning research only | Defines the smallest honest next question and the hard inferential ceiling before any protected content, target, model, or validation access |
 | Loop 27 fresh-holdout boundary | 315 pinned MEG metadata entries; 23 strict single-FIF/log pairs; 16 eligible; S25 selected at 1,009,939,983 bytes; S23 excluded; 18 false authorization fields | metadata research only | Finds the smallest honest same-modality transfer candidate while keeping its local MAT payload, remote FIF, targets, and backups sealed |
-| Test and release surface | 380 local unittests; 3 expected skips; 377 pytest passes plus 177 subtests; Loop 27 research commit `b3d61b6` passed both CI jobs | local shell and CI verified | Makes research contracts, candidate selection, source bindings, access order, tamper checks, and authorization boundaries executable on ordinary hardware |
+| Loop 28 transfer boundary | T0-T3 taxonomy; strict zero-shot/transductive split; 48-row floor; 0.05 macro-CER margin; 65,535 paired assignments plus observed; 4 comparators; 21 false authorization fields | planning research only | Makes the future one-time S25 decision falsifiable while reserving calibrated transfer for a physically separate design |
+| Test and release surface | 394 local unittests with 3 expected skips; 391 pytest passes plus 184 subtests; 362 dependency-light Python 3.12 tests with 121 expected skips | local shell verified; Loop 28 CI pending | Makes research contracts, candidate selection, source bindings, access order, tamper checks, and authorization boundaries executable on ordinary hardware |
 
 ### Real-Data Scientific Scorecard
 
@@ -77,7 +79,7 @@ engineering wins, not hidden behind synthetic accuracy.
 
 | Gate | Runtime | Peak RSS | Persistent output |
 |---|---:|---:|---:|
-| Zero-dependency Python 3.12 unittest run | 0.730 sec wall | 46,383,104 bytes | temporary test output only |
+| Zero-dependency Python 3.12 unittest run | 0.790 sec wall | 46,891,008 bytes | temporary test output only |
 | RW1 metadata intake roundtrip | 0.001659 sec | 21,643,264 bytes | 11,545 bytes |
 | RW2 bounded FIF quality roundtrip | 3.839168 sec | 150,749,184 bytes | 76,592 bytes |
 | RW3 contract/request invariant suite | 0.040 sec | 20,529,152 bytes | no generated payload |
@@ -85,9 +87,10 @@ engineering wins, not hidden behind synthetic accuracy.
 | Loop 25 v1 amendment plus immutable-v0 request suite | 0.120 sec | 22,560,768 bytes | no generated payload |
 | Loop 26 research plus roadmap/Loop 25 boundary suite | 0.140 sec wall max | 22,986,752 bytes max | no generated payload |
 | Loop 27 pinned metadata selector | 3.100 sec wall | 63,766,528 bytes | zero downloaded payload bytes |
-| Loop 25-27 focused boundary suite | 0.100 sec wall max | 23,592,960 bytes max | no generated payload |
+| Loop 25-28 focused boundary suite | 0.080 sec wall | 27,639,808 bytes | no generated payload |
+| Loop 28 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 10 web operations, 1 GitHub metadata call, zero code/data payload bytes |
 | Loop 24 registered selection | 65.154951 sec internal | 222,248,960 bytes max worker | 262,822 bytes fixture plus output |
-| Complete optional-neuro/ML test runners | 21.31 sec unittest / 21.21 sec pytest wall | 586,498,048 bytes max | temporary test output only |
+| Complete optional-neuro/ML test runners | 22.70 sec unittest / 23.75 sec pytest wall | 587,792,384 bytes max | temporary test output only |
 
 Proof labels are deliberately narrow:
 
@@ -176,6 +179,12 @@ Read this before interpreting any number in the repository.
   S21 identity, consumed S7, and the official S23 metallic-implant case. Exact
   paths, bytes, LFS hashes, identity, license, task, unavailable fields, and 18
   false authorization flags are machine checked. No candidate payload opened.
+- **Loop 28 planning research:** the future S25 question is T2 strict unseen-
+  person zero-shot, not calibrated transfer. The frozen recommendation requires
+  zero target-person fit, at least 48 final rows, at least 0.05 macro sentence-
+  CER improvement over the source-train-only prior, 65,535 deterministic paired
+  assignments plus observed, and strict wins over three signal corruptions.
+  All 21 authorization flags remain false and the experiment is `Not Started`.
 
 ### What The Results Actually Say
 
@@ -201,6 +210,10 @@ Read this before interpreting any number in the repository.
 - Loop 27 identifies an acquisition candidate, not an acquired holdout. Exact
   channels, performed trials, sentence overlap, target freshness, transfer
   behavior, and one-time performance remain unavailable.
+- Loop 28 defines a falsifiable strict zero-shot rule, not a transfer result.
+  Brain2Qwerty v2's joint and target-finetuned evidence does not establish
+  strict unseen-person zero-shot behavior, and one future S25 pass could not
+  establish population generalization.
 
 ### What Is Not Established
 
@@ -712,10 +725,11 @@ The original numbered development sequence has reached:
   explicit authorization; v0 is historical and was never authorized. Loop 26
   planning research is complete at `03605c5`, while the experiment remains
   `Not Started`. Loop 27 planning research is green at `b3d61b6` and selects
-  S25 metadata, while preregistration and acquisition remain blocked; Loops
-  28-44 remain `Not Started`. All 20 execution flags are false. Loop 24's parked
-  result does not authorize Loop 25, and later research cannot authorize an
-  earlier or later experiment.
+  S25 metadata, while preregistration and acquisition remain blocked. Loop 28
+  planning research defines the strict zero-shot final-only rule while its
+  experiment remains `Not Started`; Loops 29-44 remain `Not Started`. All 20
+  execution flags are false. Loop 24's parked result does not authorize Loop
+  25, and later research cannot authorize an earlier or later experiment.
 
 The parallel Real-World Practice track has reached:
 
@@ -757,6 +771,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/loop26_research_boundary.v0.json](registries/loop26_research_boundary.v0.json) | machine-readable Loop 26 planning evidence, recommendations, zero access counters, and 14 false authorization fields |
 | [docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md) | official metadata ranking, selected S25 MEG candidate, exact bytes/hashes, target-isolation design, and preregistration blockers |
 | [registries/loop27_research_boundary.v0.json](registries/loop27_research_boundary.v0.json) | machine-readable Loop 27 candidate identity, unavailable fields, resource boundary, zero payload access, and 18 false authorization fields |
+| [docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md) | v2 transfer audit, T0-T3 taxonomy, strict zero-shot/transductive distinction, final-only rule, and calibrated-design boundary |
+| [registries/loop28_research_boundary.v0.json](registries/loop28_research_boundary.v0.json) | machine-readable Loop 28 estimand, controls, access order, resource limits, dependencies, zero protected access, and 21 false authorization fields |
 | [docs/REAL_DATA_VALIDATION_2026-07-10.md](docs/REAL_DATA_VALIDATION_2026-07-10.md) | S21 alignment, session, and upstream audit |
 | [docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md](docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md) | real EEG bridge and negative classifier result |
 | [docs/LOOP_20_NEUROTOKEN_CACHE_V0.md](docs/LOOP_20_NEUROTOKEN_CACHE_V0.md) | NeuroTokenCache schema and synthetic interface proof |
