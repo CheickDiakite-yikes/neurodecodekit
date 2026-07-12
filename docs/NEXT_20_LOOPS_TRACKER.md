@@ -11,7 +11,11 @@
 > Loop 29 planning research defines separate scalp EEG and OPM-MEG lanes while
 > its experiment remains `Not Started`. Loop 30 planning research defines a
 > target-free local replay inspector while its experiment remains `Not
-> Started`; Loops 31-44 remain planning-only. The
+> Started`. Loop 31 planning research defines a 10-condition encoder and
+> contingent 5-condition LLM attribution firewall while its experiment remains
+> `Not Started`; its maximum future local claim is sensor-signal dependence and
+> brain-specific attribution remains blocked on Loop 35. Loops 32-44 remain
+> planning-only. The
 > spreadsheet dashboard displays the original roadmap, current gate, and next
 > 20-loop queue separately.
 
@@ -232,8 +236,8 @@ These rows are an **authorization-gated queue**, not approved experiments. The f
 acceptance boundaries, stop rules, controls, resource caps, dependencies, and
 authorization rules live in `docs/LOOPS_25_44_ROADMAP.md` and
 `registries/next_20_loops.v0.json`. Loop 25 is `Amended Preregistration`;
-Loops 26 and 28-30 are `Not Started` with planning research complete; Loop 27
-has selected metadata while preregistration remains blocked; Loops 31-44 are
+Loops 26 and 28-31 are `Not Started` with planning research complete; Loop 27
+has selected metadata while preregistration remains blocked; Loops 32-44 are
 `Not Started`. Every row retains `execution_authorized: false`.
 
 | # | Phase | Gate | Core outcome | Priority | Effort | Status |
@@ -244,7 +248,7 @@ has selected metadata while preregistration remains blocked; Loops 31-44 are
 | 28 | Causal Evidence | Session And Person Transfer | Make one claim-specific fresh same-person or unseen-person transfer decision under a frozen protocol. | P0 | L | Planning research complete; experiment Not Started |
 | 29 | Translation And Generalization | Portable Sensing Translation | Separate cryogenic MEG, OPM-MEG, EEG, and non-neural device requirements before hardware work. | P1 | M | Planning research complete; experiment Not Started |
 | 30 | Translation And Generalization | Local Private Streaming Prototype | Freeze a target-free loopback replay inspector with explicit revisions/finalization, nine clocks, six latency levels, privacy, accessibility, and browser QA. | P1 | M | Planning research complete; experiment Not Started |
-| 31 | Translation And Generalization | Neural Contribution Ablation | Isolate neural signal from language priors, timing, sentence lists, and corrupted-signal controls. | P0 | L | Not Started |
+| 31 | Translation And Generalization | Neural Contribution Ablation | Freeze ten encoder conditions and five contingent LLM conditions that separate sensor signal, timing, context, language-prior, and Neuro Token effects while reserving brain-specific attribution for Loop 35. | P0 | L | Planning research complete; experiment Not Started |
 | 32 | Translation And Generalization | New-Subject Calibration And Adaptation | Measure the smallest honest calibration budget without using final rows for selection. | P1 | L | Not Started |
 | 33 | Reliability And Confounds | Data Scaling And Sample Efficiency | Separate gains from hours, trials, repetitions, and unique sentences under a fixed tiny model. | P1 | L | Not Started |
 | 34 | Reliability And Confounds | Confidence, Abstention, And Revision | Expose confidence only if validation-fit risk-coverage generalizes independently. | P1 | M | Not Started |

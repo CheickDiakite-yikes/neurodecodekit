@@ -360,7 +360,9 @@ are unopened, and no Loop 25 coefficient, runtime, or fixture exists. Loop 26
 planning research is complete while its experiment remains `Not Started`;
 Loop 27 metadata research, Loop 28 transfer research, and Loop 29 portability
 planning research are also complete while their experiments remain `Not
-Started`; Loops 30-44 remain `Not Started`.
+Started`; Loop 30 interaction research and Loop 31 attribution research are
+also complete while their experiments remain `Not Started`; Loops 32-44 remain
+`Not Started`.
 
 The detailed source trace and design correction live in
 `docs/LOOP_25_ANTI_ALIAS_AUDIT.md`. This addendum does not authorize execution
@@ -495,3 +497,43 @@ read, target, model, training, calibration, SDK, socket, stream, live source,
 device, or hardware operation occurred. Exact primary sources and boundaries
 are in `docs/LOOP_30_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop30_research_boundary.v0.json`.
+
+## 2026-07-12 Loop 31 Research Addendum
+
+Loop 31 planning research is complete while its neural-attribution experiment
+remains `Not Started`. The project currently has two negative real predictive
+comparisons: the consumed S21 session-2 MEG model reaches CER `0.917949` versus
+`0.775458` for its no-signal prior, and the consumed S7 EEG classifier reaches
+accuracy `0.009091` versus `0.122727` for its prior. The new boundary preserves
+those results and designs the next attribution question without reopening them.
+
+The future local encoder matrix has ten conditions: full signal, train-only
+prior, zero signal, whole-item derangement, channel derangement, time
+displacement, timing only, conditional context only, train-pairing
+derangement, and a parameter-matched linear diagnostic. A separate contingent
+five-condition LLM matrix distinguishes encoder output, language-prior gain,
+Neuro Token drop, item-deranged Neuro Tokens, and an LLM-only prior. No local
+LLM, v2 embedding, checkpoint, or data is assumed.
+
+The six source-validation rows imply 64 exact sign assignments when every
+paired effect is nonzero. The future recommendation is an intersection-union
+gate: every applicable component must pass in the registered direction, the
+primary prior comparison must pass its preregistered practical margin, and all
+predictions must be hash-frozen before one target open. With two zero paired
+effects, the minimum one-sided p-value becomes `0.0625`, so that component
+cannot pass alpha `0.05`.
+
+The claim ceiling is deliberate. A clean future local encoder gate may support
+sensor-signal dependence for one person/session/task/split. It cannot establish
+brain-specific neural origin until Loop 35 excludes EOG, EMG, motion,
+environmental, timing, prompt, and action shortcuts. Language gain cannot be
+credited to neural input, and a Neuro Token drop result is conditional on the
+same CTC text and LLM rather than total neural contribution.
+
+The machine boundary freezes 18 future requirements, 24 refusals, six claim
+classes, 14 source bindings, and 19 false authorization fields. This research
+used 16 public network operations including eight GitHub API requests and zero
+protected cache/target/checkpoint/model/training/validation/LLM/S20/S25/stream/
+device operations. Exact sources and boundaries are in
+`docs/LOOP_31_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop31_research_boundary.v0.json`.

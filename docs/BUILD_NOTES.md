@@ -2471,3 +2471,83 @@ does not add a running UI or establish live neural input, causal end-to-end
 text, confidence, neural advantage, decoding accuracy, unseen-person
 generalization, capture-to-user latency, portable hardware, arbitrary-thought
 typing, assistive efficacy, diagnosis, or clinical utility.
+
+## 2026-07-12 - Define the Loop 31 neural-attribution firewall
+
+Loop 31 planning research now separates predictive performance from scientific
+attribution without opening protected evidence. The local evidence remains
+negative: consumed S21 session-2 MEG reaches corpus CER `0.917949` versus
+`0.775458` for its no-signal prior, and consumed S7 EEG reaches key-label
+accuracy `0.009091` versus `0.122727` for its prior. Neither path was reopened.
+
+The future encoder matrix has ten named conditions: full signal, train-only
+no-signal prior, same-checkpoint zero signal, whole-item derangement, channel
+derangement, time displacement, timing-only, conditional context-only,
+train-pairing derangement, and a 2,884-parameter linear signal diagnostic. A
+separately gated five-condition language-model matrix distinguishes
+encoder-only output, full CTC-text-plus-Neuro-Token LLM output, Neuro Token
+drop, item-deranged Neuro Tokens, and an LLM-only prior. No local LLM, v2
+embedding, checkpoint, weight, or data is assumed.
+
+Five estimands keep encoder signal dependence, language-prior gain, conditional
+Neuro Token gain, total-system gain, and brain-specific increment separate.
+The six-row source validation recommendation uses exact one-sided paired
+sign-flip components under one intersection-union decision. Six nonzero pairs
+provide 64 assignments and minimum one-sided p `0.015625`; five provide 32 and
+`0.03125`; four provide 16 and `0.0625`. Two zero paired effects therefore make
+a component unable to pass alpha `0.05`. The primary `0.05` macro-CER margin
+remains a recommendation until preregistration.
+
+Every future condition must use identical validation membership, target
+normalization, and metric code. Item, channel, time, and train-pairing
+transforms plus every configuration and prediction hash freeze before one
+validation-target open. Timing-only inputs are restricted to candidate-visible
+lengths, masks, sampling rate, and relative sample timestamps. Any exposed
+prompt or sentence list makes the context-only control mandatory.
+
+The claim ceiling is explicit. A clean future local encoder gate can support at
+most sensor-signal dependence for the exact person, session, task, split,
+candidate, and conditions. Brain-specific neural origin remains unavailable
+until Loop 35 excludes EOG, EMG, motion, environmental, timing, prompt, and
+action shortcuts. Language gain is not neural gain, and a Neuro Token drop is
+conditional on identical CTC text and LLM rather than total neural
+contribution.
+
+The machine registry freezes six claim classes, 18 future requirements, 24
+refusals, 14 source bindings, and 19 false authorization fields. This planning
+pass used 16 high-level public network operations including eight GitHub API
+requests, one CPU thread/worker, and zero protected cache/target/checkpoint/
+model/training/validation/LLM/S20/S25/stream/device operations or downloaded
+data/model bytes. Exact external research network bytes and interactive peak
+RSS are unavailable from the tool contracts rather than estimated.
+
+The nine-sheet tracker updates its scope note and Loop 31 row, adds decision
+`31-R1`, risk `R36`, and prompt `Loop31-Research`, and preserves Loop 25 as the
+active execution decision. The 86,166-byte workbook has SHA-256
+`7e1da6c9e49ca5835adcb3b6216fe236e1521f38877c8ed3f508bd3b995ed60e`;
+all nine sheets render, the export reloads with exact key ranges, and both
+formula-error scans match zero cells. The unrelated 321,169-byte inspection
+sidecar remains byte-identical at SHA-256
+`5cd0ef08446c4e5feee5ce11f27eef41fae5eee8975cc77f6d401faca3b79f45`.
+
+Local verification passes 125 focused Loop 24-31/roadmap tests in 0.12 seconds
+wall with 29,179,904-byte maximum RSS; the strict Loop 31 plus roadmap slice
+passes 26 tests in 0.07 seconds wall with 20,447,232-byte maximum RSS; 443
+optional unittests pass with three expected skips in 23.12 seconds wall and
+574,603,264-byte maximum RSS; 440 pytest tests pass with three skips and 205
+subtests in 22.80 seconds wall and 591,003,648-byte maximum RSS; and 411
+dependency-light tests pass with 121 optional skips in 1.61 seconds wall and
+51,675,136-byte maximum RSS. Each full count is 17 above the Loop 30 closeout.
+
+Ruff, touched-file format checks, compileall, 24 source JSON and two TOML
+parses, seven CLI help surfaces, 55 registered commands, unauthorized Loop 31
+runtime absence, 70 checked local Markdown links with zero missing, workbook
+render/reload/formula inspection, and `git diff --check` pass. Remote CI is
+green: research commit `5455340` passes both jobs in push run `29208510571`
+and draft PR #10 run `29208529886`.
+
+This milestone adds a machine-checkable attribution design that keeps signal,
+language, context, timing, and conditional Neuro Token effects separate. It
+does not establish sensor-signal dependence, brain-specific neural
+contribution, decoding accuracy, unseen-person generalization, real-time or
+portable-hardware behavior, assistive efficacy, diagnosis, or clinical utility.

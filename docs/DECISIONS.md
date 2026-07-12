@@ -1674,3 +1674,54 @@ Evidence: `docs/LOOP_30_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop30_research_boundary.v0.json`,
 `tests/test_loop30_research_boundary.py`, roadmap row 30, research commit
 `958ac4e`, push CI run `29206964418`, and draft PR #9 CI run `29206972221`.
+
+## 0058 - Separate sensor dependence, language gain, and neural origin
+
+Decision: close Loop 31 planning research while leaving its attribution
+experiment `Not Started`, all 19 `authorized_now` fields false, and no cache,
+target, checkpoint, model, training, validation, language model, Neuro Token,
+or fixture opened or created. Define a future 10-condition encoder matrix and a
+separately gated 5-condition LLM/Neuro Token extension.
+
+Why: the consumed S21 session-2 MEG model and S7 EEG classifier both lose to
+their no-signal priors. A later language model could still produce fluent text
+without repairing that upstream scientific failure. Brain2Qwerty v1 separates
+encoder/transformer output from language-model correction, while v2 compares
+the same LLM with and without MEG-derived Neuro Tokens. Those contrasts answer
+different questions and must not be collapsed into one neural score.
+
+Future encoder boundary: require full signal, train-only prior, exact-zero
+signal, whole-item derangement, channel derangement, nonwrapping time
+displacement, timing-only, conditional context-only, and train-pairing
+derangement conditions on identical validation rows. Keep the nearly
+parameter-matched linear signal CTC as an architecture diagnostic. Freeze all
+transforms and prediction hashes before one target open; no validation target
+may select a transform, fixture, condition, threshold, or restart.
+
+Inference boundary: six validation sentences provide 64 exact sign assignments
+when all paired effects are nonzero. Use an exact one-sided component test and
+an intersection-union decision that requires every applicable control to pass.
+At most one zero paired effect can still attain alpha `0.05`; two zeros make
+the minimum one-sided p-value `0.0625`. Keep the recommended `0.05` primary
+macro-CER margin unfrozen until preregistration, and print all six item effects.
+
+Claim boundary: a future clean local encoder result may establish
+sensor-signal dependence only for the exact person, session, task, split,
+candidate, and conditions. Brain-specific neural contribution remains
+unavailable until Loop 35 excludes EOG, EMG, motion, environmental, timing,
+prompt, and action shortcuts. Language-prior gain is not neural gain, and a
+Neuro Token drop result is conditional on identical CTC text and LLM context,
+not total neural contribution.
+
+Access and resource result: this research used 16 public network operations,
+including eight GitHub API requests, one CPU thread/worker, and zero protected
+cache/target/checkpoint/model/training/validation/LLM/S20/S25/stream/device
+operations or downloaded data/model bytes. External research network bytes and
+interactive peak RSS are unavailable from the tool contracts. A future run
+retains one thread/worker, 2,908 parameters, 1,200 seconds total training, 32
+MiB artifacts, 1 GiB RSS, and zero new data/model downloads.
+
+Evidence: `docs/LOOP_31_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop31_research_boundary.v0.json`,
+`tests/test_loop31_research_boundary.py`, roadmap row 31, research commit
+`5455340`, push CI run `29208510571`, and draft PR #10 CI run `29208529886`.

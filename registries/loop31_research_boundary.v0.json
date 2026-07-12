@@ -1,0 +1,516 @@
+{
+  "schema_name": "neurodecodekit.loop31_research_boundary",
+  "schema_version": "0.1.0",
+  "prepared_at": "2026-07-12",
+  "status": "planning_research_complete_experiment_blocked_on_loop26",
+  "proof_posture": "planning_only_no_cache_target_checkpoint_model_training_or_evaluation",
+  "authorized_now": false,
+  "authorization": {
+    "loop31_preregistration_authorized_now": false,
+    "loop31_implementation_authorized_now": false,
+    "real_cache_content_read_authorized_now": false,
+    "target_label_or_text_read_authorized_now": false,
+    "checkpoint_or_model_run_authorized_now": false,
+    "training_or_parameter_update_authorized_now": false,
+    "source_validation_open_authorized_now": false,
+    "source_test_reopen_authorized_now": false,
+    "session2_reopen_authorized_now": false,
+    "language_model_load_or_run_authorized_now": false,
+    "external_model_or_weight_download_authorized_now": false,
+    "brain2qwerty_v2_data_or_embedding_access_authorized_now": false,
+    "s25_or_s20_access_authorized_now": false,
+    "loop35_peripheral_claim_authorized_now": false,
+    "rw3_stream_device_or_hardware_authorized_now": false,
+    "network_payload_download_authorized_now": false,
+    "candidate_fixture_generation_authorized_now": false,
+    "loop32_or_later_authorized_now": false,
+    "authorization_sentence_exists": false,
+    "reason": "Loop 26 has no authorized result, Loop 31 has no preregistration, and planning research cannot authorize protected inputs or execution."
+  },
+  "decision": {
+    "current_experiment_status": "Not Started",
+    "research_question": "What predictive improvement is attributable to sensor signal rather than language priors, timing, declared context, broken signal-target correspondence, or pipeline artifacts?",
+    "maximum_current_claim_class": "L31-C0_no_new_result",
+    "maximum_future_local_encoder_claim_class": "L31-C2_sensor_signal_dependence",
+    "brain_specific_claim_requires_loop35": true,
+    "language_model_extension_is_contingent": true,
+    "unreleased_brain2qwerty_v2_embeddings_assumed_available": false,
+    "execution_matrix_frozen_now": false,
+    "preregistration_prepared_now": false,
+    "authorization_request_prepared_now": false
+  },
+  "dependencies": {
+    "loop31_planning_research_complete": true,
+    "loop31_preregistration_prepared": false,
+    "loop31_authorization_request_prepared": false,
+    "loop31_runtime_or_fixture_exists": false,
+    "loop26_result_required": true,
+    "loop26_current_status": "planning_research_complete_experiment_not_started",
+    "loop26_dependency_satisfied_now": false,
+    "loop25_underlying_dependency_satisfied_now": false,
+    "loop35_required_for_brain_specific_claim": true,
+    "authorized_language_model_system_exists_now": false,
+    "separate_language_model_authorization_required": true
+  },
+  "existing_evidence_inventory": [
+    {
+      "evidence_id": "loop15_s21_cross_session",
+      "proof_posture": "consumed_real_same_subject_cross_session_evaluation",
+      "rows": 63,
+      "neural_corpus_cer": 0.917949,
+      "no_signal_prior_corpus_cer": 0.775458,
+      "neural_minus_prior_cer": 0.142491,
+      "neural_wins_ties_losses": [3, 2, 58],
+      "neural_advantage": false,
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "loop19_s7_eeg_event_holdout",
+      "proof_posture": "consumed_real_within_session_event_holdout",
+      "rows": 1100,
+      "neural_label_accuracy": 0.009091,
+      "no_signal_prior_label_accuracy": 0.122727,
+      "neural_minus_prior_accuracy": -0.113636,
+      "neural_wins_ties_losses": [9, 957, 134],
+      "neural_advantage": false,
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "loop18_report_cards",
+      "proof_posture": "compact_artifact_only",
+      "cards": 11,
+      "cohorts": 6,
+      "cross_cohort_ranking_performed": false,
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "loop26_source_validation_design",
+      "proof_posture": "planning_only",
+      "source_train_rows": 55,
+      "source_validation_rows": 6,
+      "source_test_rows": 5,
+      "candidate_parameter_ceiling": 2908,
+      "candidate_result_exists": false,
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "brain2qwerty_v1",
+      "proof_posture": "public_primary_source",
+      "encoder_only_and_language_model_outputs_separated": true,
+      "keystroke_aligned_windows": true,
+      "brain_specific_causal_origin_established_by_model_ablation": false,
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "brain2qwerty_v2",
+      "proof_posture": "public_primary_source",
+      "encoder_ctc_output_exists": true,
+      "ctc_text_only_llm_ablation_exists": true,
+      "ctc_text_plus_neurotokens_output_exists": true,
+      "reported_cer_without_neurotokens": 0.38,
+      "reported_cer_with_neurotokens": 0.34,
+      "reported_wer_without_neurotokens": 0.49,
+      "reported_wer_with_neurotokens": 0.43,
+      "reported_semer_without_neurotokens": 0.067,
+      "reported_semer_with_neurotokens": 0.064,
+      "local_embeddings_or_dataset_available": false,
+      "payload_read_now": false
+    }
+  ],
+  "estimands": {
+    "encoder_primary": {
+      "name": "mean_macro_sentence_cer_control_minus_full_signal",
+      "formula": "mean_i(CER_control_i - CER_full_signal_i)",
+      "positive_direction": "full_signal_better",
+      "paired_unit": "same_unique_validation_sentence",
+      "primary_comparator": "L31-E01_train_only_no_signal_prior",
+      "minimum_practical_margin_recommendation": 0.05,
+      "minimum_practical_margin_frozen_now": false
+    },
+    "language_prior_gain": {
+      "name": "mean_macro_sentence_cer_encoder_only_minus_ctc_text_llm",
+      "formula": "mean_i(CER_L31_L00_i - CER_L31_L02_i)",
+      "positive_direction": "language_model_improves_character_error",
+      "may_be_credited_to_neural_signal": false
+    },
+    "incremental_neurotoken_gain": {
+      "name": "mean_macro_error_neurotoken_drop_minus_full_neurotoken_llm",
+      "formula": "mean_i(metric_L31_L02_i - metric_L31_L01_i)",
+      "positive_direction": "neurotokens_improve_the_same_llm_given_the_same_ctc_text",
+      "claim_is_conditional_on_ctc_text": true,
+      "claim_is_total_neural_contribution": false
+    },
+    "total_system_gain": {
+      "name": "mean_macro_sentence_cer_no_signal_minus_full_system",
+      "formula": "mean_i(CER_L31_E01_i - CER_full_system_i)",
+      "positive_direction": "full_system_better",
+      "requires_encoder_and_language_components_reported_separately": true
+    },
+    "brain_specific_increment": {
+      "status": "unavailable_until_loop35",
+      "reason": "MEG or EEG sensors can contain ocular, muscular, motion, environmental, and task-locked information that Loop 31 alone cannot exclude."
+    }
+  },
+  "encoder_condition_matrix": [
+    {
+      "condition_id": "L31-E00_full_signal_encoder",
+      "role": "reference_candidate",
+      "signal_relation": "unaltered_registered_signal",
+      "model_relation": "registered_loop26_candidate",
+      "required_for_sensor_signal_claim": true,
+      "execution_status": "not_started"
+    },
+    {
+      "condition_id": "L31-E01_train_only_no_signal_prior",
+      "role": "primary_signal_free_comparator",
+      "signal_relation": "no_signal_access",
+      "model_relation": "fit_on_source_train_targets_only",
+      "required_for_sensor_signal_claim": true,
+      "execution_status": "not_started"
+    },
+    {
+      "condition_id": "L31-E02_same_checkpoint_zero_signal",
+      "role": "same_checkpoint_no_input_information_probe",
+      "signal_relation": "valid_samples_exact_zero_padding_unchanged",
+      "model_relation": "same_checkpoint_and_decode",
+      "required_for_sensor_signal_claim": true,
+      "out_of_distribution_warning_required": true,
+      "execution_status": "not_started"
+    },
+    {
+      "condition_id": "L31-E03_same_checkpoint_item_derangement",
+      "role": "item_correspondence_control",
+      "signal_relation": "whole_validation_signal_rows_deranged_by_item_id",
+      "model_relation": "same_checkpoint_and_decode",
+      "required_for_sensor_signal_claim": true,
+      "execution_status": "not_started"
+    },
+    {
+      "condition_id": "L31-E04_same_checkpoint_channel_derangement",
+      "role": "sensor_identity_falsification_control",
+      "signal_relation": "values_lengths_and_padding_preserved_channel_names_deranged",
+      "model_relation": "same_checkpoint_and_decode",
+      "required_for_sensor_signal_claim": true,
+      "not_an_exact_neural_null": true,
+      "execution_status": "not_started"
+    },
+    {
+      "condition_id": "L31-E05_same_checkpoint_time_displacement",
+      "role": "registered_timing_falsification_control",
+      "signal_relation": "nonwrapping_zero_filled_offset_with_boundary_loss_reported",
+      "model_relation": "same_checkpoint_and_decode",
+      "required_for_sensor_signal_claim": true,
+      "not_an_exact_neural_null": true,
+      "execution_status": "not_started"
+    },
+    {
+      "condition_id": "L31-E06_timing_only_baseline",
+      "role": "nonneural_runtime_metadata_shortcut_control",
+      "signal_relation": "no_signal_values_only_registered_timing_allowlist",
+      "model_relation": "separately_fit_train_only_tiny_baseline",
+      "required_for_sensor_signal_claim": true,
+      "execution_status": "not_started"
+    },
+    {
+      "condition_id": "L31-E07_declared_context_only_baseline",
+      "role": "prompt_or_sentence_list_shortcut_control",
+      "signal_relation": "no_signal_values_declared_runtime_context_only",
+      "model_relation": "no_candidate_target_access",
+      "required_for_sensor_signal_claim": "if_any_prompt_or_sentence_list_is_available_to_the_system",
+      "current_expected_applicability": "not_applicable_prompt_and_sentence_list_must_be_unavailable",
+      "execution_status": "not_started"
+    },
+    {
+      "condition_id": "L31-E08_train_pairing_derangement",
+      "role": "train_signal_target_correspondence_control",
+      "signal_relation": "train_rows_preserved_targets_deranged_by_semantic_id",
+      "model_relation": "separate_same_budget_training_run",
+      "required_for_sensor_signal_claim": true,
+      "execution_status": "not_started"
+    },
+    {
+      "condition_id": "L31-E09_parameter_matched_linear_signal_ctc",
+      "role": "architecture_capacity_diagnostic",
+      "signal_relation": "unaltered_registered_signal",
+      "model_relation": "2884_parameter_linear_ctc_same_split_and_budget",
+      "required_for_sensor_signal_claim": false,
+      "reason_not_claim_blocker": "A simpler signal model can outperform the candidate without refuting that the sensor signal carries predictive information.",
+      "execution_status": "not_started"
+    }
+  ],
+  "language_model_condition_matrix": {
+    "status": "contingent_unavailable_no_authorized_language_model_or_neurotokens",
+    "conditions": [
+      {
+        "condition_id": "L31-L00_encoder_ctc_text_only",
+        "role": "upstream_encoder_output",
+        "ctc_text": true,
+        "neurotokens": false,
+        "language_model": false
+      },
+      {
+        "condition_id": "L31-L01_ctc_text_plus_neurotokens_llm",
+        "role": "full_language_assisted_reference",
+        "ctc_text": true,
+        "neurotokens": true,
+        "language_model": true
+      },
+      {
+        "condition_id": "L31-L02_ctc_text_only_same_llm",
+        "role": "neurotoken_drop_control",
+        "ctc_text": true,
+        "neurotokens": false,
+        "language_model": true
+      },
+      {
+        "condition_id": "L31-L03_ctc_text_plus_item_deranged_neurotokens_same_llm",
+        "role": "neurotoken_item_correspondence_control",
+        "ctc_text": true,
+        "neurotokens": "whole_item_derangement",
+        "language_model": true
+      },
+      {
+        "condition_id": "L31-L04_text_prior_only_same_llm",
+        "role": "language_prior_only_control",
+        "ctc_text": false,
+        "neurotokens": false,
+        "language_model": true
+      }
+    ],
+    "incremental_neurotoken_claim_requires": [
+      "L31-L01_strictly_beats_L31-L02",
+      "L31-L01_strictly_beats_L31-L03",
+      "identical_rows_ctc_text_llm_decode_and_compute_budget",
+      "neurotoken_generation_uses_no_target_text_at_inference",
+      "all_predictions_hash_frozen_before_target_open"
+    ],
+    "cannot_establish": [
+      "total_neural_contribution_from_neurotoken_drop_alone",
+      "brain_specific_origin_without_peripheral_controls",
+      "language_model_gain_as_neural_gain",
+      "local_Brain2Qwerty_v2_replication"
+    ]
+  },
+  "timing_and_context_contract": {
+    "timing_only_allowlist": [
+      "source_valid_length_samples",
+      "source_padding_mask",
+      "source_sampling_rate_hz",
+      "relative_sample_timestamps_available_to_the_candidate"
+    ],
+    "timing_only_forbidden": [
+      "keypress_identity",
+      "keypress_trigger_code",
+      "typed_text",
+      "target_text",
+      "target_character_count_unless_derivable_from_candidate_runtime_input",
+      "MAT_keyTrig_or_response_text",
+      "evaluation_target_frequency"
+    ],
+    "closed_candidate_sentence_list_allowed": false,
+    "prompt_text_allowed_as_candidate_input": false,
+    "context_absence_requires_machine_evidence": true,
+    "context_exposure_makes_context_only_control_mandatory": true,
+    "unavailable_context_control_may_be_reported_as_zero": false
+  },
+  "transform_freeze_contract": {
+    "all_transforms_frozen_before_validation_target_open": true,
+    "item_derangement_source": "future_contract_hash_plus_item_ids",
+    "item_derangement_must_have_no_fixed_points": true,
+    "channel_derangement_source": "future_contract_hash_plus_ordered_channel_names",
+    "time_offsets_source": "future_contract_hash_plus_valid_lengths",
+    "train_pairing_derangement_source": "future_contract_hash_plus_train_semantic_ids",
+    "validation_targets_may_select_transform": false,
+    "transform_search_or_best_of_many_allowed": false,
+    "lengths_masks_values_and_boundary_loss_must_be_reported": true,
+    "every_transform_configuration_and_payload_sha256_required": true
+  },
+  "matched_analysis_contract": {
+    "same_validation_membership_for_every_condition": true,
+    "same_target_normalization_and_metric_code": true,
+    "same_checkpoint_conditions_require_identical_model_calls": true,
+    "separately_trained_conditions_require_same_seed_optimizer_epochs_batch_and_restart_policy_where_applicable": true,
+    "parameter_or_compute_mismatch_must_be_reported": true,
+    "compute_mismatch_may_be_hidden_by_claiming_matched": false,
+    "condition_specific_raw_cache_target_model_training_and_runtime_counters_required": true,
+    "condition_prediction_sha256_required": true,
+    "missing_condition_or_counter_is_a_gate_failure": true
+  },
+  "statistical_decision_recommendation": {
+    "status": "research_recommendation_not_frozen_until_preregistration",
+    "validation_items": 6,
+    "paired_unit": "same_unique_source_validation_sentence",
+    "component_alternative": "full_signal_has_lower_macro_sentence_cer_than_control",
+    "component_test": "exact_one_sided_paired_sign_flip_enumeration",
+    "component_alpha": 0.05,
+    "assignments_with_six_nonzero_pairs": 64,
+    "minimum_one_sided_p_with_six_nonzero_pairs": 0.015625,
+    "minimum_two_sided_p_with_six_nonzero_pairs": 0.03125,
+    "assignments_with_five_nonzero_pairs": 32,
+    "minimum_one_sided_p_with_five_nonzero_pairs": 0.03125,
+    "assignments_with_four_nonzero_pairs": 16,
+    "minimum_one_sided_p_with_four_nonzero_pairs": 0.0625,
+    "maximum_zero_differences_that_can_still_reach_one_sided_alpha": 1,
+    "overall_claim_test": "intersection_union_all_applicable_required_controls",
+    "overall_claim_requires_every_component_pass": true,
+    "multiplicity_adjustment_for_the_conjunctive_overall_claim": "none_intersection_union_principle",
+    "independent_component_claims_allowed": false,
+    "separately_selected_secondary_claims_require_multiplicity_control_or_descriptive_label": true,
+    "primary_no_signal_practical_margin_recommendation": 0.05,
+    "primary_no_signal_practical_margin_frozen_now": false,
+    "control_tie_passes": false,
+    "all_six_item_effects_must_be_reported": true,
+    "paired_bootstrap_role": "descriptive_only",
+    "biological_replicates": 1,
+    "population_inference_supported": false
+  },
+  "claim_taxonomy": [
+    {
+      "claim_id": "L31-C0_no_new_result",
+      "requirements": "planning or incomplete gate",
+      "available_now": true
+    },
+    {
+      "claim_id": "L31-C1_same_slice_predictive_gain",
+      "requirements": "full signal beats the train-only no-signal prior on the exact registered slice",
+      "available_now": false
+    },
+    {
+      "claim_id": "L31-C2_sensor_signal_dependence",
+      "requirements": "the complete applicable encoder intersection-union gate passes without leakage",
+      "available_now": false
+    },
+    {
+      "claim_id": "L31-C3_brain_specific_neural_contribution",
+      "requirements": "L31-C2 plus Loop 35 brain-only, peripheral-only, timing-only, and combined confound controls",
+      "available_now": false
+    },
+    {
+      "claim_id": "L31-C4_incremental_neurotoken_gain_conditional_on_ctc_text",
+      "requirements": "authorized LLM matrix passes its drop and item-derangement controls",
+      "available_now": false
+    },
+    {
+      "claim_id": "L31-C5_generalized_or_deployable_neural_decoding",
+      "requirements": "fresh people, sessions, devices, causal end-to-end latency, and downstream qualification outside Loop 31",
+      "available_now": false
+    }
+  ],
+  "future_access_sequence": [
+    "close_loop25_with_a_compatible_causal_preprocessing_result",
+    "preregister_and_separately_authorize_loop26",
+    "obtain_one_frozen_loop26_candidate_without_opening_source_test_or_session2",
+    "freeze_loop31_conditions_transforms_estimands_thresholds_seeds_budgets_and_hashes",
+    "record_a_separate_exact_loop31_authorization_sentence",
+    "open_source_train_inputs_and_targets_only_for_registered_fits",
+    "produce_every_validation_prediction_target_blind_and_hash_freeze_them",
+    "open_all_six_validation_targets_once_and_score_every_condition_in_one_pass",
+    "write_one_append_only_report_and_mark_validation_consumed_for_this_protocol",
+    "close_as_support_or_park_without_restart_threshold_change_or_backup_open"
+  ],
+  "future_requirements": [
+    {"requirement_id": "L31-G01_dependency", "gate": "Loop 25 and Loop 26 prerequisites pass before Loop 31 execution."},
+    {"requirement_id": "L31-G02_authorization", "gate": "One exact Loop 31 authorization sentence binds every protected access and exclusion."},
+    {"requirement_id": "L31-G03_membership", "gate": "All conditions use the same six registered validation sentence IDs and no consumed row."},
+    {"requirement_id": "L31-G04_target_blind", "gate": "All validation predictions and hashes exist before validation targets open."},
+    {"requirement_id": "L31-G05_full_matrix", "gate": "All applicable required encoder conditions execute; missing conditions fail closed."},
+    {"requirement_id": "L31-G06_transform_freeze", "gate": "Item, channel, time, and train-pairing transforms are frozen before protected content."},
+    {"requirement_id": "L31-G07_lengths_masks", "gate": "Zeroing and corruptions preserve true lengths and masks and report boundary loss."},
+    {"requirement_id": "L31-G08_timing_only", "gate": "The timing baseline uses only the registered runtime-metadata allowlist."},
+    {"requirement_id": "L31-G09_context", "gate": "Prompt and sentence-list absence is proven or the context-only baseline becomes mandatory."},
+    {"requirement_id": "L31-G10_matched_analysis", "gate": "Rows, metrics, normalization, decode, and model calls are matched or differences disclosed."},
+    {"requirement_id": "L31-G11_estimands", "gate": "Encoder, language-prior, neurotoken, and total-system effects remain separate."},
+    {"requirement_id": "L31-G12_exact_test", "gate": "Every applicable component passes the preregistered exact one-sided paired test."},
+    {"requirement_id": "L31-G13_practical_margin", "gate": "The primary no-signal comparison passes its preregistered practical margin."},
+    {"requirement_id": "L31-G14_condition_ledger", "gate": "Each condition reports access, model, training, runtime, RSS, bytes, and prediction hash."},
+    {"requirement_id": "L31-G15_claim_ceiling", "gate": "Loop 31 alone is labeled sensor-signal dependence, not brain-specific neural origin."},
+    {"requirement_id": "L31-G16_lm_contingency", "gate": "No LLM or neurotoken result is implied when that separately authorized matrix is unavailable."},
+    {"requirement_id": "L31-G17_resources", "gate": "One thread/worker and every runtime, RSS, parameter, and artifact cap pass."},
+    {"requirement_id": "L31-G18_closeout", "gate": "One append-only support-or-park report records every warning, unavailable field, and claim boundary."}
+  ],
+  "future_refusal_ids": [
+    "L31-R01_loop26_dependency_unsatisfied",
+    "L31-R02_missing_exact_authorization",
+    "L31-R03_consumed_source_test_access",
+    "L31-R04_consumed_session2_access",
+    "L31-R05_s25_or_s20_access",
+    "L31-R06_validation_target_open_before_prediction_freeze",
+    "L31-R07_target_informed_transform_or_fixture",
+    "L31-R08_best_of_many_permutation_search",
+    "L31-R09_missing_required_condition",
+    "L31-R10_mismatched_validation_membership",
+    "L31-R11_padding_or_length_corruption",
+    "L31-R12_forbidden_timing_feature",
+    "L31-R13_hidden_prompt_or_sentence_list",
+    "L31-R14_missing_condition_access_ledger",
+    "L31-R15_missing_prediction_or_configuration_hash",
+    "L31-R16_component_gate_failure_or_tie",
+    "L31-R17_practical_margin_failure",
+    "L31-R18_post_validation_restart_or_threshold_change",
+    "L31-R19_language_gain_labeled_neural_gain",
+    "L31-R20_neurotoken_drop_labeled_total_neural_contribution",
+    "L31-R21_sensor_dependence_labeled_brain_specific_before_loop35",
+    "L31-R22_unreleased_embedding_or_external_weight_assumption",
+    "L31-R23_resource_or_output_cap_exceeded",
+    "L31-R24_generalization_realtime_portable_or_clinical_claim"
+  ],
+  "resource_boundaries": {
+    "current_cpu_threads": 1,
+    "current_workers": 1,
+    "current_generated_planning_artifact_cap_bytes": 8388608,
+    "current_downloaded_data_model_or_weight_bytes": 0,
+    "external_research_network_bytes": null,
+    "future_cpu_threads": 1,
+    "future_workers": 1,
+    "future_model_parameter_ceiling": 2908,
+    "future_total_training_runtime_cap_sec": 1200,
+    "future_peak_rss_cap_bytes": 1073741824,
+    "future_generated_artifact_cap_bytes": 33554432,
+    "future_new_real_data_download_bytes": 0,
+    "future_external_model_or_weight_download_bytes": 0,
+    "source_test_reads": 0,
+    "session2_reads": 0
+  },
+  "research_access_counters": {
+    "high_level_public_network_research_operations": 16,
+    "public_github_api_requests": 8,
+    "raw_signal_reads": 0,
+    "real_cache_content_reads": 0,
+    "target_label_or_sentence_reads": 0,
+    "source_validation_prediction_opens": 0,
+    "source_test_opens": 0,
+    "session2_opens": 0,
+    "checkpoint_or_model_runs": 0,
+    "training_runs": 0,
+    "parameter_updates": 0,
+    "language_model_or_neurotoken_runs": 0,
+    "external_model_or_weight_downloads": 0,
+    "new_real_data_downloads": 0,
+    "s25_or_s20_operations": 0,
+    "rw3_stream_device_or_hardware_operations": 0
+  },
+  "source_bindings": [
+    {"source_id": "local_loop15_cross_session", "url": "docs/LOOP_15_SAME_SUBJECT_CROSS_SESSION.md", "use": "consumed negative real MEG comparison and exact no-signal boundary"},
+    {"source_id": "local_loop19_eeg", "url": "docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md", "use": "consumed negative real EEG comparison and within-session limitation"},
+    {"source_id": "local_loop18_report_cards", "url": "docs/LOOP_18_VERSIONED_REPORT_CARDS.md", "use": "cohort-local comparison and missing-metadata discipline"},
+    {"source_id": "local_loop26_design", "url": "docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md", "use": "six-row identifiability, tiny candidate, controls, and protected access boundary"},
+    {"source_id": "local_loop28_transfer", "url": "docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md", "use": "target-blind prediction freeze and conjunctive control precedent"},
+    {"source_id": "brain2qwerty_v1", "url": "https://www.nature.com/articles/s41593-026-02303-2", "use": "encoder, transformer, and language-model ablations plus motor-task boundary"},
+    {"source_id": "brain2qwerty_v2", "url": "https://facebookresearch.github.io/brain2qwerty/assets/brain2qwerty_v2.pdf", "use": "CTC, LLM, Neuro Token ablation, metric divergence, and noncausal scope"},
+    {"source_id": "brain2qwerty_v2_source", "url": "https://github.com/facebookresearch/brain2qwerty/tree/3bf5a4099ca0d23bbe994b2287905760236e56e0/brain2qwerty_v2", "use": "same LLM prefix combines CTC text and projected neurotokens at inspected commit"},
+    {"source_id": "classifier_permutation_tests", "url": "https://www.jmlr.org/papers/v11/ojala10a.html", "use": "label and restricted feature permutation interpretations"},
+    {"source_id": "same_analysis_approach", "url": "https://arxiv.org/abs/1703.06670", "use": "run the same analysis on design variables, simulated confounds, nulls, and controls"},
+    {"source_id": "neuroimaging_confounds", "url": "https://doi.org/10.1016/j.neuroimage.2018.09.074", "use": "confound handling must stay inside the split or cross-validation routine"},
+    {"source_id": "intersection_union_tests", "url": "https://doi.org/10.1214/ss/1032280304", "use": "conjunctive all-controls claim and multiplicity interpretation"},
+    {"source_id": "scipy_permutation_test", "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.permutation_test.html", "use": "exact paired sign-flip mechanics and exchangeability scope"},
+    {"source_id": "small_sample_cv_uncertainty", "url": "https://pubmed.ncbi.nlm.nih.gov/28655633/", "use": "hard uncertainty ceiling for small predictive samples"}
+  ],
+  "claim_boundary": [
+    "This registry is planning research, not a Loop 31 preregistration, authorization, implementation, fixture, or result.",
+    "No current NeuroDecodeKit result demonstrates neural advantage; the real S21 MEG and S7 EEG comparisons are negative against no-signal priors.",
+    "A future clean Loop 31 encoder gate can establish sensor-signal dependence only for the exact registered person, session, task, split, model, and conditions.",
+    "Brain-specific neural origin remains unavailable until Loop 35 excludes peripheral, timing, motion, environmental, prompt, and action shortcuts.",
+    "A Neuro Token drop contrast is conditional on identical CTC text and LLM context and cannot by itself establish total neural contribution.",
+    "No unseen-person, population, portable-device, at-home, causal end-to-end, real-time, arbitrary-thought, assistive, diagnostic, or clinical claim is established."
+  ]
+}

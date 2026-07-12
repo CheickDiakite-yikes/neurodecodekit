@@ -374,33 +374,55 @@ calibration, SDKs, devices, or hardware.
 
 ## Loop 31 - Neural Contribution Ablation
 
+**Current state:** Planning research complete; experiment `Not Started`. See
+`docs/LOOP_31_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop31_research_boundary.v0.json`. Every one of 19 authorization
+flags is false; no cache, target, checkpoint, model, training, validation, LLM,
+Neuro Token, or experiment fixture was opened or created.
+
 **Core question:** When a predictive system improves, how much comes from
-neural signal rather than text priors, timing, sentence lists, or artifacts?
+sensor signal rather than text priors, timing, declared context, broken
+correspondence, or pipeline artifacts?
 
 **Why it moves the goal:** This is the claim firewall against crediting
 autocomplete or event structure to brain activity.
 
-**Build:** Freeze an ablation matrix containing full signal, no signal,
-shuffled neural input, timing only, sentence-list/text prior, encoder only, and
-optional neurotoken-drop conditions with identical rows and report code.
+**Build:** After separate authorization, execute the frozen 10-condition local
+encoder matrix with full signal, no-signal prior, exact-zero input, item,
+channel, time, timing-only, context-only, train-pairing, and linear diagnostic
+conditions. Keep the separately gated 5-condition LLM/Neuro Token extension
+unavailable unless an authorized language-assisted system actually exists.
 
-**Research:** Define the neural-contribution estimand and separate encoder-only
-from language-model-assisted conclusions. Specify expected directions and
-multiple-comparison handling before evaluation.
+**Research:** Completed. Five estimands separate encoder signal dependence,
+language-prior gain, conditional Neuro Token gain, total-system gain, and the
+currently unavailable brain-specific increment. Six claim classes cap a clean
+local encoder result at sensor-signal dependence until Loop 35 passes.
 
-**Data and controls:** Future authorized validation only. Target, item, channel,
-and temporal permutations are generated from train rules and fixed before the
-evaluation partition opens. No target creates an input fixture.
+**Data and controls:** Future authorized six-row source validation only. Freeze
+item, channel, temporal, and train-pairing transforms before protected content;
+produce and hash every prediction target-blind before one target open. Keep
+consumed source test, session 2, S7, S20, and S25 closed. A prompt or sentence
+list is forbidden; if exposed, its context-only baseline becomes mandatory.
 
-**Metrics:** full-minus-ablation CER/WER; paired intervals; neural-token drop;
-language-prior gain; shortcut failures; matched compute and access counts.
+**Metrics:** macro sentence control-minus-full CER; exact one-sided paired
+component tests; intersection-union decision; primary practical margin;
+language-prior and conditional Neuro Token gains; per-item edits and
+wins/ties/losses; condition-specific access/model/training/runtime/RSS/byte/
+hash/warning ledgers.
 
-**Gate:** A neural contribution exists only if full signal beats every required
-signal-free/corrupted-signal condition in the registered direction without
-leakage. If a shortcut matches full signal, withhold the claim.
+**Gate:** A future sensor-signal dependence result exists only if every
+applicable required condition passes the exact six-item intersection-union
+gate, the primary no-signal practical margin, target-blind freeze order,
+ledgers, hashes, and resources. A tie fails. Brain-specific attribution remains
+unavailable until Loop 35 excludes peripheral and task-locked shortcuts.
 
-**Dependencies and authorization:** Depends on Loop 26. Validation, target,
-model, and language-model execution require a dedicated authorization.
+**Dependencies and authorization:** Depends on an actual Loop 26 result, which
+itself depends on Loop 25. Planning research only; the experiment remains `Not
+Started`. Preregistration, cache/target/checkpoint/model/training/validation,
+LLM/Neuro Token, S20/S25, stream, device, and hardware operations each remain
+unauthorized. The future local envelope is one thread/worker, 2,908 parameters,
+1,200 seconds training, 32 MiB artifacts, 1 GiB RSS, and zero new data/model
+downloads.
 
 ## Loop 32 - New-Subject Calibration And Adaptation
 

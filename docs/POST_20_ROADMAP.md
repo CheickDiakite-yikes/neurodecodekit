@@ -114,10 +114,14 @@ S25, but its preregistration remains blocked. Loop 28 planning research defines
 the strict zero-shot rule while its experiment remains `Not Started`. Loop 29
 planning research defines separate scalp EEG and OPM-MEG lanes while its
 experiment remains `Not Started`. Loop 30 planning research defines the target-
-free local replay boundary while its experiment remains `Not Started`; Loops
-31-44 remain `Not Started`. All 20
+free local replay boundary while its experiment remains `Not Started`. Loop 31
+planning research defines a 10-condition encoder and contingent 5-condition
+LLM/Neuro Token attribution firewall while its experiment remains `Not
+Started`; its maximum future local claim is sensor-signal dependence and
+brain-specific attribution remains blocked on Loop 35. Loops 32-44 remain `Not
+Started`. All 20
 `execution_authorized` flags are false. Loop 25's exact decision packet is
-ready for review, while Loops 26-30 have no
+ready for review, while Loops 26-31 have no
 preregistration or authorization packet. Roadmap approval, general
 continuation, or documentation work cannot reopen Loop 24, authorize RW3 Stage
 A, or authorize any Loop 25-44 operation.
