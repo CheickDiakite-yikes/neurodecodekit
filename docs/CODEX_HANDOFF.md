@@ -83,7 +83,13 @@
 > while its experiment remains `Not Started`. It freezes 20 future gates, 26
 > refusals, and 22 false authorization fields. No candidate or mode is selected;
 > S25 remains final-only, and every participant/cache/signal/label/target/model/
-> adapter/training/evaluation operation is unauthorized. Loops 33-44 remain
+> adapter/training/evaluation operation is unauthorized. Loop 33 planning
+> research recommends nested `8, 16, 24, 32, 44, 55` unique-sentence prefixes,
+> at most three seeds and 18 candidate fits, size-matched priors, and one shared
+> six-row target open after every Loop 26/31/33 prediction is hash-frozen. Its
+> experiment remains `Not Started`; 23 authorization flags are false, no
+> physical-repetition lane or acquisition recommendation exists, and all
+> protected/model/training/scoring work is unauthorized. Loops 34-44 remain
 > `Not Started`.
 > This does not reopen Loop 24 or authorize RW3, data, targets, models,
 > validation, training, calibration, or hardware.
@@ -262,6 +268,12 @@ This repo is a starter scaffold with working pure-Python components:
   32/16/48 physical split floors, six final conditions, 20 gates, 26 refusals,
   22 false authorization fields, and zero candidate, protected access, model,
   adapter-fit, training, or final evaluation; the experiment remains `Not Started`
+- machine-checked Loop 33 planning research with nested
+  `8, 16, 24, 32, 44, 55` prefixes, a three-seed/18-fit ceiling, one prospective
+  shared validation event, four conditions, 20 gates, 30 refusals, 23 false
+  authorization fields, no physical-repetition lane, no acquisition
+  recommendation, and zero protected/model/training/scoring execution; the
+  experiment remains `Not Started`
 - JSON/Markdown metrics report command
 - CLI smoke commands
 - unit tests
@@ -274,27 +286,27 @@ negative within-session event comparison. None is a decoder success. Do not
 turn these results, a variance ranking, or a geometry proxy into unseen-person
 or population generalization.
 
-Current Loop 32 local verification passes 459 unittests with 3 expected skips
-in 22.80 seconds wall and 573,243,392-byte maximum RSS; pytest reports 456
-passed, 3 skipped, and 212 subtests in 24.04 seconds wall with
-586,711,040-byte maximum RSS. The focused Loop 24-32/roadmap boundary has 171
-passing tests in 0.19 seconds wall and 32,391,168-byte maximum RSS; the strict
-Loop 32 plus roadmap slice has 25 tests in 0.16 seconds wall and
-22,167,552-byte maximum RSS. Dependency-light discovery is green at 427 tests
-with 121 optional skips in 0.74 seconds wall and 51,855,360-byte maximum RSS.
-Each full count is 16 above the Loop 31 public closeout. No Loop 25-32 fixture,
+Current Loop 33 local verification passes 475 unittests with 3 expected skips
+in 22.11 seconds wall and 575,733,760-byte maximum RSS; pytest reports 472
+passed, 3 skipped, and 219 subtests in 22.71 seconds wall with
+586,842,112-byte maximum RSS. The focused Loop 24-33/roadmap boundary has 175
+passing tests in 3.89 seconds wall and 237,322,240-byte maximum RSS; the strict
+Loop 33 plus roadmap slice has 25 tests in 0.07 seconds wall and
+20,463,616-byte maximum RSS. Dependency-light discovery is green at 443 tests
+with 121 optional skips in 1.02 seconds wall and 52,871,168-byte maximum RSS.
+Each full count is 16 above the Loop 32 closeout. No Loop 25-33 fixture,
 coefficient, preprocessing run, candidate selection/download, local MAT payload
 hash, header/signal/target/validation/model read, adapter fit, training run,
-calibration run, language-model/Neuro Token run, network payload download, RW3
-operation, SDK import, stream, board, device, partner, or hardware operation
-occurred. The tracked workbook is 87,364 bytes with SHA-256
-`32d51d0690940d7231df6b0c8db366ce0647332893e12bcf29cff1c3b573847f`;
-all nine sheets render, the export reloads with exact key ranges, and two
-formula scans have zero matches. Ruff, touched-file format checks, compileall,
-21 source JSON and two TOML parses, 74 checked local Markdown links with zero
-missing, seven CLI help surfaces, 55 registered commands, unauthorized Loop 32
-runtime absence, and `git diff --check` pass. Research commit `8109b10` passes
-both jobs in push CI run `29209987034` and draft PR #11 run `29209996914`.
+calibration run, learning-curve score, physical-repetition study, language-
+model/Neuro Token run, network payload download, RW3 operation, SDK import,
+stream, board, device, partner, or hardware operation occurred. The tracked
+workbook is 88,615 bytes with SHA-256
+`3ca4cff5ae1f744dd90d229934d8c831656411daaaa332a495ac2645bcb9ec08`;
+all nine sheets render, the export reloads with exact key ranges, and the
+formula scan has zero matches. Ruff, touched-file format checks, compileall, 21
+source JSON and two TOML parses, 72 checked local Markdown links with zero
+missing, seven CLI help surfaces, 55 registered commands, unauthorized Loop 33
+runtime absence, and `git diff --check` pass. Remote push/PR CI is pending.
 
 ## The north star
 
@@ -359,6 +371,11 @@ This is not primarily a model repo. It is a **research loop repo**.
    physical partition floors, access order, human burden, and one-time final
    gates, but no participant, candidate, preregistration, signal, label,
    checkpoint, adapter fit, training, or calibrated result exists.
+   For Loop 33, read `docs/LOOP_33_PRIMARY_SOURCE_RESEARCH.md` and
+   `registries/loop33_research_boundary.v0.json`. Its planning research defines
+   the `8, 16, 24, 32, 44, 55` prefixes and prospective shared-validation
+   order, but the experiment is `Not Started` and no protected access,
+   training, scoring, physical-repetition study, or acquisition is authorized.
    Each future loop still requires its own packet before execution.
 4. **Keep the GitHub history reviewable.** PR #3 carries the validated Loop
    8-24 evidence stack and is green. Draft PR #4 carries the separately stacked

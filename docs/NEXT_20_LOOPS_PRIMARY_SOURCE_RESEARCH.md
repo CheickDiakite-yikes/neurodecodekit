@@ -362,7 +362,8 @@ Loop 27 metadata research, Loop 28 transfer research, and Loop 29 portability
 planning research are also complete while their experiments remain `Not
 Started`; Loop 30 interaction research, Loop 31 attribution research, and Loop
 32 calibration research are also complete while their experiments remain `Not
-Started`; Loops 33-44 remain
+Started`; Loop 33 planning research is complete while its experiment remains
+`Not Started`; Loops 34-44 remain
 `Not Started`.
 
 The detailed source trace and design correction live in
@@ -579,3 +580,51 @@ model, adapter-fit, training, control-prediction, final-evaluation, stream,
 device, or hardware operation. Exact sources and boundaries are in
 `docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop32_research_boundary.v0.json`.
+
+## 2026-07-12 Loop 33 Research Addendum
+
+Loop 33 planning research is complete while its bounded local data-scaling
+experiment remains `Not Started`. Brain2Qwerty v2 reports a five-condition
+log-linear relationship between asynchronous encoder CER and approximately
+10-90 pooled recording hours, and a separate matched-trial comparison where
+256 unique sentences outperformed 128 sentences repeated twice. Those findings
+motivate measuring quantity and language variety separately; they do not make
+the reported exponent transferable to one local person, six validation
+sentences, and a 2,908-parameter encoder.
+
+Two additional primary studies reinforce the boundary. A multi-dataset image-
+decoding study reports strong within-subject recording-scale effects across 84
+volunteers and 498 hours, but uses different tasks and modalities. A 175-hour
+single-person overt-speech EEG study uses audio supervision, EMG/EOG handling,
+large GPU compute, and increasing lexical overlap. Neither is local typed-
+sentence MEG evidence. Learning-curve extrapolation is therefore treated as a
+separate model-based procedure, not a free conclusion from six tiny points.
+
+The future recommendation is a strictly nested
+`8, 16, 24, 32, 44, 55` unique-source-sentence schedule, at most three fresh
+optimization seeds and 18 candidate fits, one fixed Loop 26 architecture, and
+a train-size-matched no-signal prior at every point. Unique sentences,
+physical trials, valid seconds or minutes, cache bytes, runtime, RSS, and
+artifacts remain separate axes. Hours cannot be reported below 3,600 valid
+signal seconds, and CPU time cannot be called energy.
+
+Access order is the central result. Loop 33 should freeze with Loop 26 before
+the first source-validation target open. Every Loop 26/31/33 model, config,
+prefix, prediction, and ledger must hash-freeze before all six shared targets
+open once and every condition scores in one pass. If Loop 26 scores first, the
+later curve is exploratory unless a new physical validation partition is
+separately approved.
+
+Current metadata does not establish eligible physical repetitions. Duplicated,
+reweighted, augmented, or resliced arrays are not new acquisitions. A future
+repetition-efficiency lane would require distinct performed recordings of the
+same prompt, matched total physical trials, and its own metadata review,
+preregistration, and authorization.
+
+The machine boundary freezes four conditions, seven outcome classes, seven
+claim classes, 20 future requirements, 30 refusals, and 23 false authorization
+fields. This research used six public web operations, one thread/worker, and
+zero protected cache/signal/target, model, training, scoring, S20/S25, stream,
+device, or hardware operations. No acquisition is recommended now. Exact
+sources and boundaries are in `docs/LOOP_33_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop33_research_boundary.v0.json`.

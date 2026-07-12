@@ -1786,3 +1786,59 @@ Evidence: `docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop32_research_boundary.v0.json`,
 `tests/test_loop32_research_boundary.py`, roadmap row 32, research commit
 `8109b10`, push CI run `29209987034`, and draft PR #11 CI run `29209996914`.
+
+## 0060 - Spend the shared validation event once
+
+Decision: close Loop 33 planning research while leaving the bounded data-
+scaling experiment `Not Started`, all 23 `authorized_now` fields false, and no
+protected cache, signal, target, checkpoint, model, training, score, physical-
+repetition study, or acquisition opened. Recommend strictly nested source-
+train prefixes of `8, 16, 24, 32, 44, 55` unique sentence instances, at most
+three optimization seeds and 18 candidate fits, and a size-matched train-only
+no-signal prior at every point.
+
+Why: the six reserved source-validation sentences are the project's remaining
+prospective local predictive evidence. Loop 26, Loop 31, and Loop 33 can answer
+their compatible questions in one target open only if all architectures,
+prefixes, seeds, controls, predictions, and payload hashes freeze first. If
+Loop 26 opens those targets before Loop 33 freezes, a later curve is exploratory
+and cannot support the registered scaling or acquisition decision.
+
+Scientific boundary: Brain2Qwerty v2 reports a five-condition log-linear trend
+through approximately 90 pooled hours and a matched advantage for 256 unique
+sentences over 128 sentences repeated twice. Image-decoding and long-duration
+overt-speech EEG studies also report data-scale effects. Their people, tasks,
+modalities, supervision, language coverage, models, and compute differ. No
+published exponent or saturation point is transferred to one local person,
+six validation sentences, and a 2,908-parameter model.
+
+Repetition boundary: current metadata supports a unique-sentence prefix curve
+only. Duplicating, resampling, reweighting, augmenting, or reslicing one array
+does not create a physical repeated acquisition. A repetition-efficiency claim
+requires distinct performed recordings of the same normalized prompt, matched
+physical trial counts, and its own metadata review, preregistration, and exact
+authorization.
+
+Future decision boundary: report macro sentence CER by item, seed, size, and
+matched prior; every adjacent delta; descriptive slopes against `log2(unique
+sentences)`; and exact resource/access/hash ledgers. Recommend a `0.05`
+smallest-band to upper-band gain, a `0.05` upper-band gain over matched priors,
+and negative slopes for every registered seed. Those rules remain unfrozen
+until preregistration. Do not fit a formal power law, call optimizer seeds
+biological replicates, or extrapolate beyond 55 sentences.
+
+Access and resource result: this research used six public web operations, one
+CPU thread/worker, and zero protected payload, signal, target, model, training,
+scoring, S20/S25, stream, device, or hardware operations. Future execution
+stays under one thread/worker, 18 candidate fits, 1,200 total training seconds,
+1 GiB RSS, 32 MiB outputs, and zero new downloads. CPU time is not energy. The
+user's 5-10 GB capacity envelope is not access or acquisition authorization.
+
+Claim boundary: no learning curve, neural advantage, universal scaling law,
+repetition-efficiency result, saturation finding, acquisition value, unseen-
+person generalization, real-time behavior, portable hardware, at-home use,
+assistive efficacy, diagnosis, or clinical result exists.
+
+Evidence: `docs/LOOP_33_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop33_research_boundary.v0.json`,
+`tests/test_loop33_research_boundary.py`, and roadmap row 33.

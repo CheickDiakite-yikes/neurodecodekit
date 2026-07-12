@@ -2624,3 +2624,81 @@ ledger, and one-time final decision rule. It does not establish zero-shot or
 calibrated-person improvement, sensor-signal dependence, neural advantage,
 population generalization, real-time behavior, portable hardware, at-home
 decoding, assistive efficacy, diagnosis, or clinical utility.
+
+## 2026-07-12 - Define the Loop 33 bounded data-scaling boundary
+
+Loop 33 planning research now protects the remaining prospective local
+validation evidence before any scaling run exists. The future recommendation
+uses strictly nested `8, 16, 24, 32, 44, 55` unique source-train sentence
+instances, at most three fresh optimization seeds and 18 candidate fits, one
+fixed 2,908-parameter Loop 26 architecture, and a train-size-matched no-signal
+prior at every point. The experiment remains `Not Started`.
+
+Access order is the central decision. Loop 26 and Loop 33 should freeze
+together before the first source-validation target opens. Every architecture,
+prefix, seed, control, model, config, prediction, ledger, and payload hash must
+exist before all six shared targets open once and every Loop 26/31/33 condition
+scores in one pass. If Loop 26 scores first, a later Loop 33 curve is
+exploratory unless a new physical validation partition is separately approved.
+
+The primary-source review keeps public scale results in their own evidence
+cohorts. Brain2Qwerty v2's five-condition approximately 90-hour curve and
+matched unique-versus-repeated sentence comparison, a 498-hour multi-dataset
+image-decoding study, and a 175-hour overt-speech EEG study motivate the axes.
+Their people, tasks, modalities, supervision, language coverage, models, and
+compute do not supply a local exponent. Loop 33 refuses a formal power-law fit,
+population inference, and extrapolation beyond 55 sentences.
+
+Current committed metadata supports a unique-sentence prefix curve only.
+Duplicating, resampling, reweighting, augmenting, or reslicing an array is not
+a new physical neural recording. A future repetition-efficiency comparison
+would require distinct performed recordings of the same normalized prompt,
+matched physical trial counts, and its own metadata review, preregistration,
+and exact authorization. No additional acquisition is recommended now.
+
+The machine registry freezes four future conditions, seven outcomes, seven
+claims, 20 requirements, 30 refusal IDs, and 23 false authorization fields. The
+future resource envelope remains one thread/worker, 18 candidate fits, 1,200
+total training seconds, 1 GiB RSS, 32 MiB outputs, and zero new downloads. CPU
+time is not energy. This research used six public web operations and zero
+protected cache/signal/target, model, training, scoring, S20/S25, stream,
+device, or hardware operations. Complete public transport bytes, interactive
+research runtime/RSS, and direct energy remain unavailable rather than
+estimated.
+
+The nine-sheet tracker updates its dashboard and Loop 33 row, adds decision
+`33-R1`, risk `R38`, and prompt `Loop33-Research`, and preserves Loop 25 as the
+active execution decision. The 88,615-byte workbook has SHA-256
+`3ca4cff5ae1f744dd90d229934d8c831656411daaaa332a495ac2645bcb9ec08`;
+all nine sheets render, the exported workbook reloads with exact key ranges,
+and the formula-error scan matches zero cells. The unrelated 321,169-byte
+inspection sidecar remains byte-identical at SHA-256
+`5cd0ef08446c4e5feee5ce11f27eef41fae5eee8975cc77f6d401faca3b79f45`.
+
+Local verification passes 175 focused Loop 24-33/roadmap tests in 3.89 seconds
+wall with 237,322,240-byte maximum RSS; the strict Loop 33 plus roadmap slice
+passes 25 tests in 0.07 seconds wall with 20,463,616-byte maximum RSS; 475
+optional unittests pass with three expected skips in 22.11 seconds wall and
+575,733,760-byte maximum RSS; 472 pytest tests pass with three skips and 219
+subtests in 22.71 seconds wall and 586,842,112-byte maximum RSS; and 443
+dependency-light tests pass with 121 optional skips in 1.02 seconds wall and
+52,871,168-byte maximum RSS. Each full count is 16 above the Loop 32 closeout.
+A first dependency-light shell invocation omitted `PYTHONPATH=src` and failed
+at import before exercising the suite; the corrected acceptance command above
+is the measured passing gate.
+
+Repository-wide Ruff, touched-file formatting, compileall, 21 source JSON and
+two TOML parses, seven CLI help surfaces, 55 registered commands, unauthorized
+Loop 33 runtime absence, 72 checked local Markdown links with zero missing,
+workbook render/reload/formula inspection, and `git diff --check` pass. Remote
+push and draft-PR CI are pending.
+
+Engineering capability added: a machine-checkable bounded scaling design now
+preserves one target-blind shared validation event, separates unique sentences
+from physical repetitions, and gates any later acquisition packet.
+
+Scientific claim not established: no protected payload, model, training run,
+or target was accessed, so there is no learning curve, neural advantage,
+scaling law, repetition-efficiency result, saturation finding, acquisition
+value, unseen-person generalization, real-time behavior, or portable-hardware
+result.

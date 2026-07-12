@@ -67,7 +67,7 @@ and explain exactly what the result does not prove.
 | Loop 29 portability boundary | 15 modality requirements; 4 profiles; 6 qualification levels; 12 future packet gates; 24 false authorization fields; 5,000,000,000-byte preferred storage ceiling | planning research only | Chooses EEG as the immediate local-first lane and OPM-MEG as a partner/lab lane without treating channel ablation, vendor specifications, or home acquisition as text decoding |
 | Loop 30 replay interaction boundary | 4 source modes; 30 event fields; 9 clock domains; 6 latency levels; 18 future gates; 30 refusals; 30 false authorization fields | planning research only | Defines how a future target-free local replay can show revisions, finalization, clocks, privacy, and proof posture without implying live or low-latency neural decoding |
 | Loop 31 neural-attribution boundary | 10 encoder conditions; 5 contingent LLM conditions; 6 claim classes; 18 future gates; 24 refusals; 19 false authorization fields | planning research only | Separates no-signal, timing, context, corrupted-signal, language-prior, and conditional Neuro Token effects while blocking brain-specific claims until Loop 35 |
-| Test and release surface | 443 local unittests with 3 expected skips; 440 pytest passes plus 205 subtests; 411 dependency-light Python tests with 121 expected skips | Loop 31 local shell and remote push/PR CI verified at `5455340` | Makes research contracts, candidate selection, source bindings, access order, tamper checks, and authorization boundaries executable on ordinary hardware |
+| Test and release surface | 475 local unittests with 3 expected skips; 472 pytest passes plus 219 subtests; 443 dependency-light Python tests with 121 expected skips | Loop 33 local verification complete; remote push/PR CI pending | Makes research contracts, candidate selection, source bindings, access order, tamper checks, and authorization boundaries executable on ordinary hardware |
 
 ### Real-Data Scientific Scorecard
 
@@ -93,15 +93,16 @@ engineering wins, not hidden behind synthetic accuracy.
 | Loop 25 v1 amendment plus immutable-v0 request suite | 0.120 sec | 22,560,768 bytes | no generated payload |
 | Loop 26 research plus roadmap/Loop 25 boundary suite | 0.140 sec wall max | 22,986,752 bytes max | no generated payload |
 | Loop 27 pinned metadata selector | 3.100 sec wall | 63,766,528 bytes | zero downloaded payload bytes |
-| Loop 24-32 focused boundary suite | 0.19 sec wall | 32,391,168 bytes | 171 tests; no generated experiment payload |
-| Loop 32 plus roadmap invariants | 0.16 sec wall | 22,167,552 bytes | 25 tests; no participant, cache, signal, target, model, adapter, training, or evaluation run |
+| Loop 24-33 focused boundary suite | 3.89 sec wall | 237,322,240 bytes | 175 tests; no generated experiment payload |
+| Loop 33 plus roadmap invariants | 0.07 sec wall | 20,463,616 bytes | 25 tests; no protected cache, signal, target, model, training, score, repetition study, or acquisition |
 | Loop 28 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 10 web operations, 1 GitHub metadata call, zero code/data payload bytes |
 | Loop 29 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 14 public web operations, zero protected data/model/device operations, zero downloaded payload bytes |
 | Loop 30 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 10 public web operations, zero trace/server/browser/protected-data/model/stream operations, zero downloaded payload bytes |
 | Loop 31 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 16 public network operations including 8 GitHub API requests; zero protected-data/model/training/validation/LLM operations and zero downloaded data/model bytes |
 | Loop 32 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 6 public network operations including 2 pinned GitHub source reads; zero participant/cache/signal/target/model/adapter/training/evaluation operations |
+| Loop 33 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 6 public web operations; zero protected cache/signal/target/model/training/scoring/acquisition/device operations |
 | Loop 24 registered selection | 65.154951 sec internal | 222,248,960 bytes max worker | 262,822 bytes fixture plus output |
-| Complete optional-neuro/ML test runners | 22.80 sec unittest / 24.04 sec pytest wall | 586,711,040 bytes max | temporary test output only |
+| Complete optional-neuro/ML test runners | 22.11 sec unittest / 22.71 sec pytest wall | 586,842,112 bytes max | temporary test output only |
 
 Proof labels are deliberately narrow:
 
@@ -223,6 +224,14 @@ Read this before interpreting any number in the repository.
   budgets, 32/16/48 physical partition floors, six controls, 20 gates, and 26
   refusals. All 22 authorization flags remain false, no candidate is selected,
   and the experiment is `Not Started`; S25 remains final-only.
+- **Loop 33 planning research:** the bounded local scaling firewall recommends
+  nested `8, 16, 24, 32, 44, 55` unique-sentence prefixes, at most three seeds
+  and 18 candidate fits, size-matched no-signal priors, and one shared six-row
+  validation open only after every Loop 26/31/33 prediction is hash-frozen.
+  Twenty gates, 30 refusals, and 23 false authorization flags are machine
+  checked. The experiment is `Not Started`; physical-repetition evidence is
+  unavailable, acquisition is not recommended, and all protected work is
+  unauthorized.
 
 ### What The Results Actually Say
 
@@ -790,8 +799,10 @@ The original numbered development sequence has reached:
   5-condition LLM attribution firewall while its experiment remains `Not
   Started`. Loop 32 planning research defines a causal 32-parameter adapter,
   four calibration modes, and physically separate calibration/selection/final
-  evidence while its experiment remains `Not Started`; Loops 33-44 remain
-  `Not Started`. All 20
+  evidence while its experiment remains `Not Started`. Loop 33 planning
+  research defines the bounded `8, 16, 24, 32, 44, 55` unique-sentence curve,
+  one target-blind shared validation event, and no acquisition now while its
+  experiment remains `Not Started`; Loops 34-44 remain `Not Started`. All 20
   execution flags are false. Loop 24's parked result does not authorize Loop
   25, and later research cannot authorize an earlier or later experiment.
 
