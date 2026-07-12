@@ -268,7 +268,8 @@ all nine sheets render, the export reloads with exact key ranges, and two
 formula scans have zero matches. Ruff, compileall, 23 source JSON and two TOML
 parses, 72 local Markdown links, seven CLI help surfaces, 55 registered
 commands, unauthorized Loop 25-30 command absence, and `git diff --check` pass.
-Remote Loop 30 CI is pending.
+Research commit `958ac4e` passes both jobs in push CI run `29206964418` and
+draft PR #9 CI run `29206972221`.
 
 ## The north star
 

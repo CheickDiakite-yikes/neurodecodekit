@@ -2461,6 +2461,10 @@ parses, seven CLI help surfaces, 55 registered commands, unauthorized Loop
 25-30 command absence, 72 local Markdown links, workbook render/reload/formula
 inspection, and `git diff --check` pass.
 
+Research commit `958ac4e` is published on
+`codex/loop-30-local-streaming-research`. Both required jobs pass in push CI
+run `29206964418` and draft PR #9 CI run `29206972221`.
+
 This milestone adds a machine-checkable interaction, timing, privacy,
 accessibility, and browser-QA design for a future local target-free replay. It
 does not add a running UI or establish live neural input, causal end-to-end

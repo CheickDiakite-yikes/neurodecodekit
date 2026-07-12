@@ -1672,4 +1672,5 @@ hardware.
 
 Evidence: `docs/LOOP_30_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop30_research_boundary.v0.json`,
-`tests/test_loop30_research_boundary.py`, and roadmap row 30.
+`tests/test_loop30_research_boundary.py`, roadmap row 30, research commit
+`958ac4e`, push CI run `29206964418`, and draft PR #9 CI run `29206972221`.
