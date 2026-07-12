@@ -1841,4 +1841,5 @@ assistive efficacy, diagnosis, or clinical result exists.
 
 Evidence: `docs/LOOP_33_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop33_research_boundary.v0.json`,
-`tests/test_loop33_research_boundary.py`, and roadmap row 33.
+`tests/test_loop33_research_boundary.py`, roadmap row 33, research commit
+`25724de`, push CI run `29211291337`, and draft PR #12 CI run `29211306722`.

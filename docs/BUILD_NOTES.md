@@ -2690,8 +2690,9 @@ is the measured passing gate.
 Repository-wide Ruff, touched-file formatting, compileall, 21 source JSON and
 two TOML parses, seven CLI help surfaces, 55 registered commands, unauthorized
 Loop 33 runtime absence, 72 checked local Markdown links with zero missing,
-workbook render/reload/formula inspection, and `git diff --check` pass. Remote
-push and draft-PR CI are pending.
+workbook render/reload/formula inspection, and `git diff --check` pass. Research
+commit `25724de` passes both jobs in push CI run `29211291337` and draft PR #12
+run `29211306722`.
 
 Engineering capability added: a machine-checkable bounded scaling design now
 preserves one target-blind shared validation event, separates unique sentences
