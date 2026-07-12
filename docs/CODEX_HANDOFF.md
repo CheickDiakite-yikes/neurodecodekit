@@ -239,7 +239,9 @@ network payload, RW3 operation, stream, board, device, or hardware operation
 occurred. The tracked workbook is 82,284 bytes with SHA-256
 `312a98d5d63d52ceb413383b7cd8a2424b0c1cb864665a485d3320f74d42ee7e`;
 all nine sheets render, reload with byte-identical key-range inspection, and
-pass two formula scans with zero matches. Loop 28 push and PR CI are pending.
+pass two formula scans with zero matches. Loop 28 research commit `a55b7e6`
+passed both GitHub jobs in push run `29201270789` and draft PR #7 run
+`29201323258`.
 
 ## The north star
 

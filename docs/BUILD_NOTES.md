@@ -2317,11 +2317,12 @@ The three full counts are each 14 above the Loop 27 public closeout.
 
 Repository-wide Ruff, compileall, 17 tracked/worktree JSON and two TOML parses,
 seven CLI help surfaces, unauthorized Loop 25/26/27/28 command absence,
-`git diff --check`, and 68 local Markdown links pass. Staged Gitleaks and push/PR
-CI remain for the final closeout pass. No candidate payload, local MAT hash,
-header, signal, target, source consumed evidence, model, training, calibration,
-final holdout, backup, RW3, stream, board, device, hardware, or generated
-experiment payload was opened or created.
+`git diff --check`, 68 local Markdown links, and staged Gitleaks pass. Research
+commit `a55b7e6` passes both GitHub jobs in push run `29201270789` and draft PR
+#7 run `29201323258`. No candidate payload, local MAT hash, header, signal,
+target, source consumed evidence, model, training, calibration, final holdout,
+backup, RW3, stream, board, device, hardware, or generated experiment payload
+was opened or created.
 
 This milestone adds a machine-checkable one-time strict zero-shot transfer
 decision design. It does not establish S25 compatibility, unseen-person neural
