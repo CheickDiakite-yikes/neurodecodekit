@@ -2615,8 +2615,8 @@ dependency-light tests pass with 121 optional skips in 0.74 seconds wall and
 Repository-wide Ruff, touched-file formatting, compileall, 21 source JSON and
 two TOML parses, seven CLI help surfaces, 55 registered commands, unauthorized
 Loop 32 runtime absence, 74 local Markdown links, workbook render/reload/formula
-inspection, and `git diff --check` pass. Remote publication and CI remain the
-next gate.
+inspection, and `git diff --check` pass. Research commit `8109b10` passes both
+jobs in push CI run `29209987034` and draft PR #11 run `29209996914`.
 
 This milestone adds a machine-checkable fresh-person calibration design with
 an inspectable low-parameter adapter, physical split firewall, human-burden

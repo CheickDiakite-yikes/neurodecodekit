@@ -1784,4 +1784,5 @@ must be labeled by its exact mode and burden.
 
 Evidence: `docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop32_research_boundary.v0.json`,
-`tests/test_loop32_research_boundary.py`, and roadmap row 32.
+`tests/test_loop32_research_boundary.py`, roadmap row 32, research commit
+`8109b10`, push CI run `29209987034`, and draft PR #11 CI run `29209996914`.
