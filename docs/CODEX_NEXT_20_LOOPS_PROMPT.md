@@ -14,6 +14,16 @@ The current scope has a dedicated causal anti-alias SOS, 65,537 response points,
 `authorized_now: false`; seeds 2501/2502 remain unopened and no coefficient,
 fixture, CLI, or implementation exists.
 
+Loop 26 planning research is complete at `03605c5`. It recommends, without
+freezing or implementing, a 2,908-parameter zero-right-context candidate and a
+2,884-parameter linear comparator for the strict 55/6/5 source protocol. Six
+reserved validation sentences permit exactly 64 paired sign assignments. The
+experiment remains `Not Started`: all 14 authorization fields are false, Loop
+25 is unsatisfied, and no cache content, target, model, training, validation,
+source-test, or session-2 evidence was opened. Review
+`docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop26_research_boundary.v0.json` only as planning evidence.
+
 The next numbered decision is **authorize Loop 25 v1 exactly, amend it again,
 or hold**. Review `docs/LOOP_25_AUTHORIZATION_PACKET_V1.md` and
 `registries/loop25_authorization_request.v1.json`. General continuation is not
@@ -41,7 +51,9 @@ Do not download or open S20. Do not reopen consumed S7/S21 evidence or seeds
 hardware, open a socket or live source, implement an adapter, create targets,
 run a model, or train anything without the separate stage authorization.
 Do not rerun or retune Loop 24. A Loop 25 decision cannot authorize RW3, and an
-RW3 decision cannot authorize Loop 25.
+RW3 decision cannot authorize Loop 25. Neither decision authorizes Loop 26,
+which requires a compatible Loop 25 closeout plus its own preregistration and
+exact real-cache/target/model/training/validation authorization.
 
 Passing either future synthetic gate could establish only its registered
 interface, numerical, resource, or accounting behavior. It would not establish

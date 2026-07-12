@@ -2129,3 +2129,66 @@ It does not add a filter result or establish official Brain2Qwerty equivalence,
 acceptable phase/ringing for neural decoding, neural information, CER/WER
 improvement, end-to-end latency, transfer, portable hardware, assistive
 efficacy, diagnosis, or clinical utility.
+
+## 2026-07-12 - Close Loop 26 planning research at the identifiability boundary
+
+Commit `03605c5` completes a primary-source and committed-local-evidence audit
+for the future real validation-only encoder gate. It does not preregister or
+run the experiment. The machine boundary records the strict 55/6/5 source
+protocol, one person/session, six reserved validation sentence instances, 64
+exact paired sign assignments, minimum two-sided resolution 0.03125 with six
+nonzero differences, and one biological replicate. All 14 authorization fields
+are false and 12 protected-operation counters are zero.
+
+The audit found that the existing 2,908-parameter `TinySentenceCTC` is
+noncausal because its kernel-3 temporal layer uses symmetric padding. The
+smallest future recommendation preserves all parameters and uses exactly two
+left-context samples with zero right context and 128 bytes of float32 temporal
+state. A 2,884-parameter one-layer linear signal CTC is the nearly matched
+comparator. Six future controls separate a train-only no-signal prior, zero
+signal, target derangement, channel derangement, nonwrapping zero-filled time
+displacement, and the linear path. None is frozen, implemented, trained, or
+evaluated by this pass.
+
+The official Brain2Qwerty v2 source trace is kept as a scientific reference,
+not copied as a local architecture. Its current whole-sentence path is
+noncausal and GPU-scale. Loop 26 therefore remains a small, language-model-free
+same-source question whose eventual result could apply only to six named
+validation sentences. Source test and session 2 remain consumed and closed;
+unseen-person, population, transfer, modality, device, real-time, assistive,
+and clinical claims remain unavailable.
+
+Public closeout updates AGENTS, README, Start Here, the handoff, both
+continuation prompts, human roadmaps, decision log, and the tracker. A new
+invariant requires seven public status surfaces to say both planning research
+and `Not Started`, preventing documentation drift from silently authorizing an
+experiment. The nine-sheet workbook adds decision `26-R1`, risk `R31`, prompt
+`Loop26-Research`, and the refreshed Loop 26 row while retaining Loop 25 as the
+active numbered decision. It is 79,856 bytes with SHA-256
+`255b51b8d083db92030c389f8d40cf001b256dbe0345748c9120e35b993bdb15`;
+all nine sheets render and reload, and the formula-error scan matches zero
+cells. The unrelated inspection sidecar remains byte-identical at SHA-256
+`5cd0ef08446c4e5feee5ce11f27eef41fae5eee8975cc77f6d401faca3b79f45`.
+
+Final local verification passes 41 focused Loop 25/26/roadmap tests in at most
+0.14 seconds wall with 22,986,752-byte maximum RSS; 366 optional unittests with
+three expected skips in 21.53 seconds wall and 575,389,696-byte maximum RSS;
+363 pytest tests with three skips and 170 subtests in 21.44 seconds wall and
+584,957,952-byte maximum RSS; and 334 true dependency-light Python 3.12 tests
+with 121 optional skips in 0.75 seconds wall and 45,170,688-byte maximum RSS.
+The three full counts are each 13 above the Loop 25 v1 baseline; the public
+closeout adds one invariant above the 365-unittest `03605c5` milestone.
+
+Repository-wide Ruff, compileall, 15 tracked JSON and two TOML parses, seven
+CLI help surfaces, unauthorized Loop 25/26 command absence, `git diff --check`,
+64 local Markdown links, workbook render/reload/formula inspection, and the
+55-commit Gitleaks history scan pass. GitHub CI run `29197895836` is green for
+the research milestone. No raw signal, real-cache content, target, source
+validation prediction, consumed source-test/session-2 evidence, checkpoint,
+model, training, numerical preprocessing, network, RW3, stream, board, device,
+hardware, or generated experiment payload was opened or created.
+
+This milestone adds a falsifiable, resource-bounded design for the next neural
+question. It does not establish a causal model, neural information, decoding
+advantage, validation performance, generalization, real-time text, or portable
+hardware behavior.

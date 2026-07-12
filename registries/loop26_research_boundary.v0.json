@@ -1,0 +1,256 @@
+{
+  "schema_name": "neurodecodekit.loop26_research_boundary",
+  "schema_version": "0.1.0",
+  "prepared_at": "2026-07-12",
+  "status": "planning_research_complete_preregistration_blocked_on_loop25",
+  "proof_posture": "planning_only_no_data_target_model_training_or_execution",
+  "authorized_now": false,
+  "authorization": {
+    "loop26_preregistration_authorized_now": false,
+    "loop26_implementation_authorized_now": false,
+    "real_cache_content_read_authorized_now": false,
+    "target_label_or_text_read_authorized_now": false,
+    "training_or_parameter_update_authorized_now": false,
+    "model_or_checkpoint_run_authorized_now": false,
+    "source_validation_open_authorized_now": false,
+    "source_test_reopen_authorized_now": false,
+    "session2_reopen_authorized_now": false,
+    "new_real_data_download_authorized_now": false,
+    "language_model_authorized_now": false,
+    "rw3_stream_board_device_or_hardware_authorized_now": false,
+    "loop27_or_later_authorized_now": false,
+    "authorization_sentence_exists": false,
+    "reason": "Loop 25 is not closed and Loop 26 experiment details are research recommendations rather than a frozen preregistration."
+  },
+  "dependencies": {
+    "loop25_required": true,
+    "loop25_current_status": "amended_preregistration_awaiting_explicit_authorization",
+    "loop25_dependency_satisfied": false,
+    "loop25_compatible_result_required": true,
+    "separate_real_cache_target_training_and_validation_authorization_required": true,
+    "loop26_preregistration_prepared": false,
+    "loop26_authorization_request_prepared": false
+  },
+  "local_evidence": {
+    "canonical_person_group_count": 1,
+    "session_group_count": 1,
+    "source_train_rows": 55,
+    "source_validation_rows": 6,
+    "source_test_rows": 5,
+    "source_validation_status": "reserved_not_used_for_model_or_hyperparameter_selection_per_loop15_closeout",
+    "source_test_status": "consumed_near_null_loop14_evaluation_frozen_no_reopen",
+    "session2_status": "consumed_harmful_cross_session_evaluation_frozen_no_reuse",
+    "scaler_fit_split": "train",
+    "scaler_fit_rows": 55,
+    "source_cache_content_opened_this_research_pass": false,
+    "target_content_opened_this_research_pass": false,
+    "existing_real_model": {
+      "name": "TinySentenceCTC",
+      "input_channels": 102,
+      "hidden_channels": 16,
+      "classes": 28,
+      "parameter_count": 2908,
+      "epochs": 60,
+      "batch_size": 16,
+      "learning_rate": 0.02,
+      "initializations": 1,
+      "causal": false,
+      "noncausal_reason": "kernel_3_temporal_convolution_uses_symmetric_padding_1"
+    },
+    "existing_causal_model": {
+      "name": "TinyCausalWindowEncoder",
+      "parameter_count": 1130,
+      "proof_surface": "synthetic_motif_frame_classification",
+      "real_text_compatible": false
+    }
+  },
+  "identifiability": {
+    "validation_items": 6,
+    "unit_of_analysis": "unique_sentence_instances_within_one_person_and_one_session",
+    "independent_biological_replicates": 1,
+    "exact_paired_sign_assignments": 64,
+    "minimum_attainable_one_sided_p": 0.015625,
+    "minimum_attainable_two_sided_p": 0.03125,
+    "effective_pairs_after_one_zero_difference": 5,
+    "minimum_two_sided_p_after_one_zero_difference": 0.0625,
+    "exact_ordered_paired_bootstrap_index_resamples": 46656,
+    "can_establish": [
+      "candidate-versus-control differences on the six named validation sentence instances",
+      "same-source validation signal dependence only if every preregistered corruption control passes",
+      "mechanical model causality only after independent schedule and resume replay proof"
+    ],
+    "cannot_establish": [
+      "source-test performance",
+      "cross-session performance",
+      "unseen-person or population generalization",
+      "Brain2Qwerty v2 equivalence",
+      "real-time end-to-end text latency",
+      "EEG, OPM-MEG, wearable, or at-home device performance",
+      "thought, imagined-speech, assistive, diagnostic, or clinical capability"
+    ]
+  },
+  "candidate_architecture_recommendation": {
+    "status": "research_recommendation_not_frozen_or_authorized",
+    "name": "TinyCausalSentenceCTC",
+    "input_channels": 102,
+    "hidden_channels": 16,
+    "classes": 28,
+    "layers": [
+      "conv1d_102_to_16_kernel_1",
+      "gelu",
+      "conv1d_16_to_16_kernel_3_explicit_left_pad_2_right_pad_0",
+      "gelu",
+      "conv1d_16_to_28_kernel_1"
+    ],
+    "parameter_count": 2908,
+    "parameter_size_ceiling_count": 2908,
+    "source_sampling_rate_hz_if_loop25_passes": 100,
+    "output_stride_samples": 1,
+    "right_context_samples": 0,
+    "right_context_ms": 0,
+    "history_samples": 2,
+    "history_ms": 20,
+    "mutable_model_state_bytes_float32": 128,
+    "implementation_exists": false,
+    "measured_causality_result_exists": false
+  },
+  "linear_comparator_recommendation": {
+    "status": "research_recommendation_not_frozen_or_authorized",
+    "name": "LinearSignalCTC",
+    "layer": "conv1d_102_to_28_kernel_1",
+    "parameter_count": 2884,
+    "parameter_difference_from_candidate": 24,
+    "parameter_difference_fraction": 0.008253094910591471,
+    "same_ctc_loss_rows_schedule_and_seed_policy_required": true,
+    "implementation_exists": false
+  },
+  "future_controls": [
+    {
+      "control_id": "train_only_no_signal_sentence_prior",
+      "role": "primary_signal_free_baseline",
+      "must_be_fitted_on_source_train_targets_only": true
+    },
+    {
+      "control_id": "zero_validation_signal",
+      "role": "checkpoint_text_prior_probe",
+      "must_preserve_lengths_and_padding": true
+    },
+    {
+      "control_id": "semantic_id_target_derangement",
+      "role": "destroy_train_signal_target_correspondence",
+      "must_be_frozen_before_target_open": true
+    },
+    {
+      "control_id": "channel_name_hash_derangement",
+      "role": "test_sensor_identity_dependence",
+      "must_be_frozen_before_signal_array_open": true
+    },
+    {
+      "control_id": "nonwrapping_zero_filled_time_displacement",
+      "role": "timing_falsification_not_exact_null_test",
+      "must_be_frozen_before_signal_array_open": true
+    },
+    {
+      "control_id": "linear_signal_ctc",
+      "role": "nearly_parameter_matched_signal_comparator",
+      "parameter_count": 2884
+    }
+  ],
+  "future_statistical_recommendations": {
+    "status": "not_frozen_until_preregistration",
+    "primary_estimand": "macro_mean_per_sentence_control_cer_minus_candidate_cer",
+    "primary_comparison": "candidate_vs_train_only_no_signal_sentence_prior",
+    "exact_primary_test": "enumerate_all_64_paired_sign_assignments",
+    "paired_bootstrap_role": "descriptive_only_not_a_replacement_for_exact_enumeration",
+    "all_six_item_differences_must_be_reported": true,
+    "candidate_absolute_macro_cer_margin": 0.05,
+    "candidate_margin_is_frozen": false,
+    "exact_sequence_accuracy_is_secondary": true,
+    "all_required_controls_must_pass": true
+  },
+  "preregistration_prerequisites": [
+    "loop25_closes_with_a_result_compatible_with_the_exact_loop26_input_path",
+    "source_cache_split_scaler_membership_channel_and_file_hashes_are_named_without_protected_array_access",
+    "exact_2908_parameter_causal_tensor_contract_is_frozen",
+    "linear_prior_zero_target_time_and_channel_controls_are_frozen",
+    "one_seed_one_initialization_optimizer_epochs_batch_ctc_vocabulary_and_decode_rule_are_frozen",
+    "primary_estimand_exact_test_practical_margin_all_control_rule_and_tie_behavior_are_frozen",
+    "train_then_single_validation_access_order_is_frozen_while_test_and_session2_remain_closed",
+    "runtime_rss_working_memory_artifact_and_access_ledger_caps_are_frozen",
+    "exact_authorization_sentence_names_real_cache_targets_training_model_and_one_validation_open"
+  ],
+  "resource_boundaries": {
+    "research_generated_artifact_cap_bytes": 1048576,
+    "future_cpu_threads": 1,
+    "future_workers": 1,
+    "future_model_parameter_ceiling": 2908,
+    "future_total_training_runtime_cap_sec": 1200,
+    "future_peak_rss_cap_bytes": 1073741824,
+    "future_generated_artifact_cap_bytes": 33554432,
+    "future_new_real_data_download_bytes": 0,
+    "source_test_reads": 0,
+    "session2_reads": 0
+  },
+  "research_access_counters": {
+    "raw_signal_reads": 0,
+    "real_cache_content_reads": 0,
+    "target_label_or_sentence_reads": 0,
+    "validation_prediction_opens": 0,
+    "source_test_opens": 0,
+    "session2_opens": 0,
+    "model_or_checkpoint_runs": 0,
+    "training_runs": 0,
+    "parameter_updates": 0,
+    "loop25_numerical_operations": 0,
+    "rw3_stream_board_device_or_hardware_operations": 0,
+    "new_real_data_downloads": 0
+  },
+  "source_bindings": [
+    {
+      "source_id": "brain2qwerty_v2_paper",
+      "url": "https://facebookresearch.github.io/brain2qwerty/assets/brain2qwerty_v2.pdf",
+      "use": "whole-sentence noncausal boundary, encoder controls, Neuro Token ablation, and subject-level statistics"
+    },
+    {
+      "source_id": "brain2qwerty_v2_code",
+      "url": "https://github.com/facebookresearch/brain2qwerty/tree/main/brain2qwerty_v2",
+      "use": "released architecture and training surface"
+    },
+    {
+      "source_id": "brain2qwerty_v1_paper",
+      "url": "https://www.nature.com/articles/s41593-026-02303-2.pdf",
+      "use": "sentence-level CER, unseen-sentence split, motor/typing boundary, and baseline comparisons"
+    },
+    {
+      "source_id": "scipy_permutation_test",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.permutation_test.html",
+      "use": "exact paired assignment count and exchangeability semantics"
+    },
+    {
+      "source_id": "scipy_bootstrap",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html",
+      "use": "paired index-resampling semantics"
+    },
+    {
+      "source_id": "classifier_permutation_tests",
+      "url": "https://jmlr.org/beta/papers/v11/ojala10a.html",
+      "use": "label and restricted feature permutation control rationale"
+    },
+    {
+      "source_id": "small_sample_cv_uncertainty",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28655633/",
+      "use": "small-sample predictive error-bar boundary"
+    },
+    {
+      "source_id": "time_series_permutation_dependence",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/jtsa.12638",
+      "use": "why naive time-point permutation is not an exact null under dependence"
+    }
+  ],
+  "claim_boundary": [
+    "This registry records planning research, not a Loop 26 preregistration, authorization, implementation, or result.",
+    "The architecture, controls, effect margin, seeds, and access sequence remain recommendations until a later hash-bound contract.",
+    "Six validation sentences from one person and one session cannot establish source-test, cross-session, unseen-person, population, device, assistive, or clinical performance.",
+    "No causal encoder, neural information, decoding advantage, real-time behavior, or Brain2Qwerty v2 equivalence is established."
+  ]
+}

@@ -25,6 +25,8 @@ requests, and these files:
 - `registries/causal_preprocessing_contract.v1.json`
 - `docs/LOOP_25_AUTHORIZATION_PACKET_V1.md`
 - `registries/loop25_authorization_request.v1.json`
+- `docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md`
+- `registries/loop26_research_boundary.v0.json`
 - `docs/POST_20_ROADMAP.md`
 - `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`
 - `docs/LOOPS_25_44_ROADMAP.md`
@@ -72,8 +74,15 @@ Do not reset, revert, delete, or overwrite work already present.
 - Loops 25-44 are now a detailed planning-only queue: exactly 20 contiguous
   rows across five phases, with source bindings, controls, metrics, acceptance
   gates, stop rules, dependencies, resource caps, and 20 false execution flags.
-  Loop 25 is `Amended Preregistration`; Loops 26-44 are `Not Started`; all 20
-  execution flags remain false.
+  Loop 25 is `Amended Preregistration`; Loop 26 planning research is complete
+  while its experiment remains `Not Started`; Loops 27-44 are `Not Started`;
+  all 20 execution flags remain false.
+- Loop 26's planning boundary recommends a 2,908-parameter causal candidate, a
+  2,884-parameter linear comparator, six controls, and exact enumeration of all
+  64 paired sign assignments over six reserved source-validation sentences.
+  All 14 authorization fields are false. No Loop 26 cache content, target,
+  model, checkpoint, training, validation prediction, source-test row, or
+  session-2 evidence was opened; no preregistration or authorization exists.
 - No real recording quality, neural advantage, unseen-person generalization,
   useful EEG decoder, real-time decoding, portable-hardware, arbitrary-thought,
   or clinical result has been demonstrated.
@@ -106,6 +115,13 @@ again before authorization, or hold. Packet preparation, roadmap approval, and
 this continuation prompt do not authorize implementation. Exact authorization
 must first become its own tested, pushed, remotely green v1 authorization-only
 commit, after which the static filter gate must pass before seed 2501 opens.
+
+Loop 26 is review-only planning evidence until Loop 25 closes compatibly. Do
+not turn `docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md`, its roadmap status, or this
+prompt into an experiment contract. A future Loop 26 preregistration must
+separately freeze architecture, controls, statistics, seeds, access order, and
+resources before any exact authorization can permit real-cache, target,
+training, model, or one-time validation access.
 
 Independently, inspect and validate the RW3 Stage A decision surface:
 
@@ -152,6 +168,9 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
    preparation, or a broad request to continue. Loop 25 v1 is frozen but still
    awaits its exact decision; v0 is immutable history, and later loops still
    require their own packets. A failed gate parks its dependent claim branch.
+9. Keep Loop 26 source test and session 2 closed. Planning research does not
+   authorize preregistration, implementation, real-cache or target reads,
+   model/checkpoint operations, training, validation predictions, or metrics.
 
 ## Required deliverables for the next authorized milestone
 
@@ -160,11 +179,14 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
    closeout, RW3 commit `c3d1f01`, and the
    still-unauthorized request prepared at `163ff2f`. Keep Loop 25's immutable
    `a36d97b` v0 registration, green `b6b92d8` v1 amendment, false replacement
-   authorization request, and all 20 Loops 25-44 execution flags consistent.
+   authorization request, the planning-only Loop 26 registry with 14 false
+   authorization fields and zero protected access, and all 20 Loops 25-44
+   execution flags consistent.
 2. Run documentation/contract validation, local-link checks, Ruff,
    `git diff --check`, Gitleaks, and the complete unit suites. Compare with the
    313-unittest Loop 24 baseline, the 323-unittest Loop 25 v0 preregistration
-   baseline, and the 342-unittest Loop 25 v1 amendment baseline.
+   baseline, the 342-unittest Loop 25 v1 amendment baseline, and the current
+   366-unittest Loop 26 planning-research closeout.
 3. Commit and push any future authorization-only milestone and confirm its own
    CI before implementation. Preserve unrelated files and generated debris
    outside Git.

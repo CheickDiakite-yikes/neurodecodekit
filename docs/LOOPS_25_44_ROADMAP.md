@@ -116,6 +116,12 @@ bytes, 45 seconds internal runtime, 4 KiB state, and 1 GiB peak RSS.
 
 ## Loop 26 - Real Validation-Only Encoder Gate
 
+**Current status:** Planning research complete; experiment status remains `Not
+Started`, no preregistration or authorization sentence exists, and all data,
+target, model, training, and validation access remains unauthorized. See
+`docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop26_research_boundary.v0.json`.
+
 **Core question:** Does one fixed, small causal encoder show real neural
 information above no-signal and shuffled controls on source validation without
 touching test?
@@ -124,31 +130,43 @@ touching test?
 advantage. This is the smallest honest predictive gate that can justify
 continuing rather than scaling model complexity by instinct.
 
-**Build:** Freeze the tiny architecture, preprocessing, optimizer, stopping
-rule, seeds, output report, and access ledger before targets open. Fit only on
-authorized source-train rows and open the six source-validation rows only under
-the registered sequence.
+**Build:** After Loop 25 closes, freeze the tiny architecture, preprocessing,
+optimizer, stopping rule, seeds, output report, and access ledger before
+targets open. The research recommendation preserves the existing 2,908-
+parameter ceiling by replacing the baseline's symmetric kernel-3 padding with
+two samples of left padding. Fit only on authorized source-train rows and open
+the six source-validation rows once under the registered sequence.
 
-**Research:** State what six validation rows can identify, how paired
-uncertainty will be interpreted, and why a validation pass cannot authorize or
-predict source-test performance.
+**Research:** Complete. Six rows permit exactly 64 paired sign assignments, so
+the minimum attainable one-/two-sided p-values are 0.015625/0.03125 with six
+nonzero pairs. These are sentence instances from one person/session, not six
+biological replicates. A validation pass cannot authorize or predict source-
+test, cross-session, or unseen-person performance.
 
-**Data and controls:** Required controls are the same-split no-signal prior,
-train-fit target permutation, preregistered time shifts, channel permutations,
-and a compute-matched non-neural comparator where feasible. Five source-test
-rows and every session-2 row stay closed.
+**Data and controls:** Required controls are the same-split train-only no-signal
+prior, zero-signal inference, one semantic-ID target derangement, nonwrapping
+zero-filled time displacement, channel-name-hash derangements, and a 2,884-
+parameter linear signal CTC. Time/channel corruptions are engineering
+falsification controls, not exact null tests over autocorrelated samples. Five
+consumed source-test rows and every consumed session-2 row stay closed.
 
-**Metrics:** CER; exact sequence accuracy; paired item differences and
-intervals; margin over every control; parameters; training/runtime/RSS/bytes;
-all raw/cache/target/model/training access counts.
+**Metrics:** Macro per-sentence and corpus CER; every one of the six paired item
+differences; the complete 64-assignment exact null; exact sequence accuracy;
+WER; blank fraction; wins/ties/losses; margin over every control; parameters;
+training/runtime/RSS/bytes; all raw/cache/target/model/training access counts.
 
-**Gate:** Proceed only if the registered neural-versus-prior margin and every
-required control pass with no access violation. Otherwise park real-model
-scaling, preserve the negative result, and do not touch test.
+**Gate:** A future preregistration must freeze the practical margin, exact
+paired test, all-control rule, tie behavior, seed, schedule, and access order.
+Proceed only if that registered neural-versus-prior margin and every required
+control pass with no access violation. Otherwise park real-model scaling,
+preserve the negative result, and do not touch test.
 
-**Dependencies and authorization:** Requires Loop 25 plus a separate real-cache,
-target, training, and validation authorization. The existing tiny-model class
-is the size ceiling for this gate.
+**Dependencies and authorization:** Requires a Loop 25 result compatible with
+the exact input path plus a separate real-cache, target, training, model, and
+single-validation-open authorization. Planning research is not
+preregistration. The future ceiling is one thread/worker, 2,908 trainable
+parameters, 20 total CPU minutes across candidate and controls, 1 GiB RSS, and
+32 MiB outputs.
 
 ## Loop 27 - Fresh Holdout Preregistration
 

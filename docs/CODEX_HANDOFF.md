@@ -40,9 +40,14 @@
 > while retaining seeds 2501/2502, seven schedules, ten resume cuts, and three
 > future-mutation cuts. Its replacement request still says
 > `authorized_now: false`; both seeds are unopened and no coefficient, fixture,
-> transform, partition, CLI, or runtime exists. Loops 26-44 remain `Not
-> Started`. This does not reopen Loop 24 or authorize RW3, data, models,
-> training, or hardware.
+> transform, partition, CLI, or runtime exists. Loop 26 planning research is
+> complete at `03605c5`, while its experiment remains `Not Started`: the note
+> narrows the future gate to a 2,908-parameter causal recommendation, a
+> 2,884-parameter linear comparator, six controls, and all 64 exact paired sign
+> assignments over the reserved six-row validation slice. All 14 authorization
+> fields remain false and every protected access counter is zero. Loops 27-44
+> remain `Not Started`. This does not reopen Loop 24 or authorize RW3, data,
+> targets, models, validation, training, or hardware.
 > In parallel, RW0 closes a primary-source Real-World Practice research gate
 > with eight dataset records, 13 device records, a local BYO Neurodata
 > contract, and one exact S20 EEG dry-run packet. RW1 now closes a
@@ -184,6 +189,10 @@ This repo is a starter scaffold with working pure-Python components:
   a dedicated anti-alias stage, 65,537 response points, 23 alias probes, seven
   chunk schedules, ten resume cuts, three future-mutation cuts, 45 refusals, 23
   access counters, lower resource caps, and zero runtime operations
+- machine-checked Loop 26 planning research with the 55/6/5 source protocol,
+  six-item exact-inference ceiling, causal padding repair, 2,884-parameter
+  linear comparator, six required controls, 14 false authorization fields, and
+  zero protected access; no experiment or model implementation exists
 - JSON/Markdown metrics report command
 - CLI smoke commands
 - unit tests
@@ -196,20 +205,23 @@ negative within-session event comparison. None is a decoder success. Do not
 turn these results, a variance ranking, or a geometry proxy into unseen-person
 or population generalization.
 
-Current verification after the Loop 25 v1 packet: 353 unittests pass with 3
-expected skips in 20.28 seconds wall and 570,310,656-byte maximum RSS; pytest
-reports 350 passed, 3 skipped, and 163 subtests in 21.03 seconds wall with
-583,467,008-byte maximum RSS. The focused v0, v1, request, and roadmap surface
-has 49 passing tests in 0.09 seconds wall and 23,216,128-byte maximum RSS.
-Dependency-light Python 3.12 discovery remains green at 321 tests with 121
-optional skips in 1.39 seconds wall and 45,465,600-byte maximum RSS. This is 40
-tests above the 313-unittest Loop 24 baseline. No Loop 25 fixture, coefficient,
-preprocessing run, data/cache/target/model read, training run, network call,
-RW3 operation, stream, board, device, or hardware operation occurred. The
-tracked workbook is 78,492 bytes with SHA-256
-`483fde426c8212e7956814462b0aa11b0ca8426163b3dad95f6574eb7e10eb92`;
-its nine-sheet render, reload, table-range, and formula audit passes with zero
-formula-error matches.
+Current verification after the Loop 26 public closeout: 366 unittests pass with
+3 expected skips in 21.53 seconds wall and 575,389,696-byte maximum RSS; pytest
+reports 363 passed, 3 skipped, and 170 subtests in 21.44 seconds wall with
+584,957,952-byte maximum RSS. The focused Loop 25/26/roadmap boundary has 41
+passing tests in at most 0.14 seconds wall and 22,986,752-byte maximum RSS.
+Dependency-light Python 3.12 discovery is green at 334 tests with 121 optional
+skips in 0.75 seconds wall and 45,170,688-byte maximum RSS. The optional,
+pytest, and dependency-light counts are each 13 above the Loop 25 v1 baseline;
+the final public-status invariant is one test above the green `03605c5`
+research milestone. No Loop 25/26 fixture, coefficient, preprocessing run,
+cache/target/validation/model read, training run, network call, RW3 operation,
+stream, board, device, or hardware operation occurred. The tracked workbook is
+79,856 bytes with SHA-256
+`255b51b8d083db92030c389f8d40cf001b256dbe0345748c9120e35b993bdb15`;
+all nine sheets render, reload, and pass the formula scan with zero matches.
+Loop 26 research commit `03605c5` passed both GitHub CI jobs in run
+`29197895836`.
 
 ## The north star
 
@@ -240,13 +252,20 @@ This is not primarily a model repo. It is a **research loop repo**.
 3. **Use Loops 25-44 as the future evidence queue, not blanket authorization.**
    Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`,
    `docs/LOOPS_25_44_ROADMAP.md`, and
-   `registries/next_20_loops.v0.json`. Each future loop still requires its own
-   preregistration or bounded implementation packet before execution.
+   `registries/next_20_loops.v0.json`. For Loop 26, also read
+   `docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md` and
+   `registries/loop26_research_boundary.v0.json`. Its planning research is
+   complete, but it has no preregistration, authorization sentence, runtime,
+   cache/target open, model, training run, or validation result. Each future
+   loop still requires its own preregistration or bounded implementation packet
+   before execution.
 4. **Keep the GitHub history reviewable.** PR #3 carries the validated Loop
    8-24 evidence stack and is green. Draft PR #4 carries the separately stacked
    Loop 25 v0 history, v1 amendment, and still-false decision packet so
-   preregistration and authorization remain auditable. Do not merge until CI,
-   license, privacy, history, and proof-boundary review is complete.
+   preregistration and authorization remain auditable. The
+   `codex/loop-26-research` branch stacks the planning-only Loop 26 evidence on
+   top and must remain independently reviewable. Do not merge until CI, license,
+   privacy, history, and proof-boundary review is complete.
 
 RW4 is not next: S20 acquisition remains blocked until explicit approval names
 revision `88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684`, exactly four files, the

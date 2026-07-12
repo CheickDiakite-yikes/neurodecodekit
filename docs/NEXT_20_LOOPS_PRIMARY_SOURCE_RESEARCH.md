@@ -340,10 +340,44 @@ provenance. The current numbered gate has since advanced to Loop 25 planning:
 Loop 24 is parked. Loop 25's original preregistration at `a36d97b` was
 superseded before authorization by the source-audited anti-alias amendment at
 green commit `b6b92d8`. The current v1 request remains false, seeds 2501/2502
-are unopened, no Loop 25 coefficient, runtime, or fixture exists, and Loops
-26-44 remain `Not Started`.
+are unopened, and no Loop 25 coefficient, runtime, or fixture exists. Loop 26
+planning research is complete while its experiment remains `Not Started`;
+Loops 27-44 remain `Not Started`.
 
 The detailed source trace and design correction live in
 `docs/LOOP_25_ANTI_ALIAS_AUDIT.md`. This addendum does not authorize execution
 or upgrade the amended protocol into a filter, neural, decoding, or latency
 result.
+
+## 2026-07-12 Loop 26 Research Addendum
+
+Loop 26 planning research is now complete at commit `03605c5`, without opening
+real-cache contents, targets, a checkpoint, a model, training, source
+validation predictions, consumed source test, or consumed session 2. The
+experiment remains `Not Started`; no preregistration or authorization sentence
+exists, and all 14 `authorized_now` fields in
+`registries/loop26_research_boundary.v0.json` are false.
+
+The local evidence has one 55/6/5 source split from one person/session. The six
+reserved validation sentences permit exactly `2**6 = 64` paired sign
+assignments, with minimum attainable two-sided p `0.03125` when all six paired
+differences are nonzero. That resolution can support a narrow same-source
+validation decision, not source-test, cross-session, unseen-person, modality,
+device, population, real-time, assistive, or clinical claims.
+
+The smallest future candidate recommendation preserves the existing 2,908-
+parameter real CTC architecture but replaces symmetric kernel-3 padding with
+two left-context samples and zero right context. A 2,884-parameter pointwise
+linear CTC is the nearly matched signal comparator. Required future controls
+are the train-only no-signal prior, zero validation signal, one target
+derangement, frozen channel derangement, nonwrapping zero-filled time
+displacement, and the linear comparator. These are recommendations only; no
+seed, threshold, model, transform, or access sequence is frozen.
+
+The primary-source trace also prevents a misleading shortcut: the official
+Brain2Qwerty v2 reference is a whole-sentence, noncausal, GPU-scale Conv plus
+Conformer plus CTC/contrastive/LLM system. Its evaluation lessons are relevant,
+but its architecture and reported results are not a local causal template or a
+result on NeuroDecodeKit's six rows. The exact sources and future
+preregistration prerequisites are in
+`docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md`.
