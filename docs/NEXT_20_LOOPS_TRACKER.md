@@ -8,8 +8,10 @@
 > remains `Not Started`, Loop 27 has selected S25 in metadata while
 > preregistration remains blocked, and Loop 28 planning research defines a
 > strict zero-shot final-only rule while its experiment remains `Not Started`.
-> Loops 29-44 remain planning-only, so the spreadsheet dashboard displays the
-> original roadmap, current gate, and next 20-loop queue separately.
+> Loop 29 planning research defines separate scalp EEG and OPM-MEG lanes while
+> its experiment remains `Not Started`; Loops 30-44 remain planning-only. The
+> spreadsheet dashboard displays the original roadmap, current gate, and next
+> 20-loop queue separately.
 
 This tracker starts after PR1 lands. The core operating rule is simple: **do not add a more complex loop until the previous loop has produced a cache, report, demo, or explicit kill/park decision.**
 Each loop should be one PR or one experiment note whenever possible. Complexity is allowed, but only when a simpler loop proves why it is needed.
@@ -228,7 +230,8 @@ These rows are an **authorization-gated queue**, not approved experiments. The f
 acceptance boundaries, stop rules, controls, resource caps, dependencies, and
 authorization rules live in `docs/LOOPS_25_44_ROADMAP.md` and
 `registries/next_20_loops.v0.json`. Loop 25 is `Amended Preregistration`;
-Loops 26-28 are `Not Started` with planning research complete; Loops 29-44 are
+Loops 26 and 28-29 are `Not Started` with planning research complete; Loop 27
+has selected metadata while preregistration remains blocked; Loops 30-44 are
 `Not Started`. Every row retains `execution_authorized: false`.
 
 | # | Phase | Gate | Core outcome | Priority | Effort | Status |
@@ -237,7 +240,7 @@ Loops 26-28 are `Not Started` with planning research complete; Loops 29-44 are
 | 26 | Causal Evidence | Real Validation-Only Encoder Gate | Decide whether one fixed tiny causal encoder beats no-signal and shuffled controls on source validation only. | P0 | L | Planning research complete; experiment Not Started |
 | 27 | Causal Evidence | Fresh Holdout Preregistration | Identify one independent, licensed, byte-capped holdout without downloading or previewing it. | P0 | M | S25 metadata selected; preregistration blocked |
 | 28 | Causal Evidence | Session And Person Transfer | Make one claim-specific fresh same-person or unseen-person transfer decision under a frozen protocol. | P0 | L | Planning research complete; experiment Not Started |
-| 29 | Translation And Generalization | Portable Sensing Translation | Separate cryogenic MEG, OPM-MEG, EEG, and non-neural device requirements before hardware work. | P1 | M | Not Started |
+| 29 | Translation And Generalization | Portable Sensing Translation | Separate cryogenic MEG, OPM-MEG, EEG, and non-neural device requirements before hardware work. | P1 | M | Planning research complete; experiment Not Started |
 | 30 | Translation And Generalization | Local Private Streaming Prototype | Expose incremental replay, revisions, stage latency, provenance, and warnings locally. | P1 | M | Not Started |
 | 31 | Translation And Generalization | Neural Contribution Ablation | Isolate neural signal from language priors, timing, sentence lists, and corrupted-signal controls. | P0 | L | Not Started |
 | 32 | Translation And Generalization | New-Subject Calibration And Adaptation | Measure the smallest honest calibration budget without using final rows for selection. | P1 | L | Not Started |
@@ -287,6 +290,19 @@ over zero-signal, channel-derangement, and time-displacement controls. All 21
 authorization fields are false; no S25 payload, target, model, calibration, or
 final open occurred. See `docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop28_research_boundary.v0.json`.
+
+Loop 29's planning packet freezes no device, acquisition, or portable
+experiment. It selects scalp EEG as the immediate local-first research lane,
+OPM-MEG as a same-modality partner/lab lane, cryogenic MEG as the reference,
+and non-neural wearables as controls or separate accessibility inputs. The
+machine boundary contains 15 cross-modality requirements, four profiles, six
+qualification levels, 12 future device-packet gates, and 24 false
+authorization fields. The preferred 5,000,000,000-byte and absolute
+10,000,000,000-byte capacity limits are not download permission. Exact future
+S20 plus S25 bundles total 1,106,030,247 bytes; this research downloaded zero
+bytes and opened no real header, signal, target, model, stream, device, partner,
+or hardware path. See `docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop29_research_boundary.v0.json`.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |

@@ -132,6 +132,27 @@ false. The rule is planning research, not a Loop 27 preregistration or Loop 28
 authorization. Calibrated transfer requires a different physically separated
 design and can never be relabeled as zero-shot.
 
+Loop 29 planning research is complete, but its portable-sensing experiment
+remains `Not Started` and every execution decision remains separate:
+
+```bash
+cat docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md
+python -m json.tool registries/loop29_research_boundary.v0.json >/dev/null
+```
+
+The research selects a two-lane direction: scalp EEG is the immediate local-
+first accessibility lane, OPM-MEG is a same-modality partner/lab lane, and
+cryogenic MEG remains the scientific reference. It freezes 15 cross-modality
+requirements, four modality profiles, six qualification levels, and an exact
+storage envelope of 5,000,000,000 preferred and 10,000,000,000 absolute
+incremental bytes. The selected future S20 EEG and S25 MEG bundles total
+1,106,030,247 bytes, but zero bytes were downloaded. All 24 `authorized_now`
+fields are false. Storage capacity is not download permission; no device is
+selected, purchased, connected, or recommended, and no real header, signal,
+target, model, training, SDK, stream, partner session, or hardware operation
+occurred. Home EEG recording feasibility is not home text decoding, and the
+Brain2Qwerty v2 cryogenic channel ablation is not OPM-MEG or EEG evidence.
+
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
 commit `c3d1f01`, before any adapter, source chunk, fixture, socket, board, or
@@ -164,8 +185,10 @@ dependencies, and source bindings. Loop 25 is `Amended Preregistration` with
 `execution_authorized: false`; Loop 26 has completed planning research while
 its experiment remains `Not Started`; Loop 27 has selected S25 in metadata
 while preregistration remains blocked; Loop 28 planning research defines a T2
-strict zero-shot rule while its experiment remains `Not Started`; Loops 29-44
-remain `Not Started`. All 20 execution flags are false. This roadmap does not
+strict zero-shot rule while its experiment remains `Not Started`; Loop 29
+planning research defines separate EEG and OPM-MEG pathways while its
+experiment remains `Not Started`; Loops 30-44 remain `Not Started`. All 20
+execution flags are false. This roadmap does not
 reopen Loop 24, authorize RW3, or permit a Loop 25-44 fixture, download, data
 read, model run, training run, stream, board, or hardware operation. A broad
 request to continue toward Loop 44 is a goal, not a substitute for each frozen
@@ -206,6 +229,13 @@ authorization boundary.
   rows, the 48-row/0.05-CER/65,535-assignment rule, four required comparators,
   physically separate calibrated-transfer requirements, and zero protected
   access.
+- The Loop 29 planning registry remains exact with 24 false authorization
+  fields, 15 cross-modality requirements, four modality profiles, six
+  qualification levels, 12 future device-packet gates, zero protected access,
+  and no preregistration, runtime, device selection, download, or generated
+  payload. Its 5,000,000,000-byte preferred and 10,000,000,000-byte absolute
+  storage envelope is capacity only; the selected S20 plus S25 future bundles
+  total exactly 1,106,030,247 bytes.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed

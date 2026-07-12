@@ -40,6 +40,14 @@ decision.
   targets, training, energy, RW3, and hardware remain unauthorized. See
   `docs/LOOP_24_PRECISION_RUNTIME_PREREGISTRATION.md` and
   `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md`.
+- Loop 29: Planning research complete; experiment `Not Started`. Scalp EEG is
+  the immediate local-first research lane, OPM-MEG is the same-modality
+  partner/lab lane, and cryogenic MEG remains the reference. The 15-field
+  matrix, six qualification levels, 5-10 GB capacity envelope, and exact
+  1,106,030,247-byte future S20 plus S25 allocation are documented with 24
+  false authorization flags. No download, real-data read, model, stream,
+  device, partner, or hardware operation occurred. See
+  `docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md`.
 - Real-World Practice Track RW0: Done as a primary-source research and planning
   gate. Versioned dataset/device registries, a local BYO Neurodata contract,
   and an exact 96,090,264-byte S20 EEG approval packet are frozen. No raw data,
@@ -79,6 +87,7 @@ decision.
 | 26 | Real validation-only encoder gate | Can one fixed tiny causal encoder beat honest controls on the six reserved source-validation sentences? | Planning-only identifiability note and machine boundary before any experiment contract. | Planning research complete at `03605c5`; 2,908/2,884-parameter recommendations, six controls, 64 exact paired assignments, and 14 false authorization fields; experiment remains `Not Started` with zero protected access. |
 | 27 | Fresh holdout preregistration | Which independent recording can answer the next transfer claim without consumed evidence? | Planning-only official metadata selector, exact candidate identities, target-isolation design, and blockers. | Planning research complete at `b3d61b6`; S25 session 2 block 2 selected as two files/1,009,939,983 bytes; 18 false authorization fields; no preregistration, request, download, hash, header, signal, target, or model access. |
 | 28 | Session and person transfer | What claim can one unseen-person final-only recording answer without fitting anything to that person? | Planning-only T0-T3 taxonomy and strict zero-shot final decision rule. | Planning research complete; S25 reserved for T2 with zero fit rows, a 48-row floor, 0.05 macro-CER margin, 65,535 paired assignments plus observed, four comparators, and 21 false authorization fields; experiment remains `Not Started`. |
+| 29 | Portable sensing translation | Which requirements survive movement from cryogenic MEG to OPM-MEG or scalp EEG? | Planning-only modality matrix, qualification ladder, two-lane decision, and bounded data path. | Planning research complete; experiment `Not Started`; 15 requirements, 4 profiles, 6 qualification levels, 24 false authorization fields, and no data/device execution. |
 
 ## Next Planned Tranche: Loops 25-44
 
@@ -94,9 +103,11 @@ Loop 25 is now `Amended Preregistration` with
 planning research is complete, but its experiment remains `Not Started` and
 `planned_not_authorized`. Loop 27 has completed metadata research and selected
 S25, but its preregistration remains blocked. Loop 28 planning research defines
-the strict zero-shot rule while its experiment remains `Not Started`; Loops
-29-44 remain `Not Started`. All 20 `execution_authorized` flags are false. Loop
-25's exact decision packet is ready for review, while Loops 26-28 have no
+the strict zero-shot rule while its experiment remains `Not Started`. Loop 29
+planning research defines separate scalp EEG and OPM-MEG lanes while its
+experiment remains `Not Started`; Loops 30-44 remain `Not Started`. All 20
+`execution_authorized` flags are false. Loop 25's exact decision packet is
+ready for review, while Loops 26-29 have no
 preregistration or authorization packet. Roadmap approval, general
 continuation, or documentation work cannot reopen Loop 24, authorize RW3 Stage
 A, or authorize any Loop 25-44 operation.
