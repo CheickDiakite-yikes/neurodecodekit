@@ -381,3 +381,40 @@ but its architecture and reported results are not a local causal template or a
 result on NeuroDecodeKit's six rows. The exact sources and future
 preregistration prerequisites are in
 `docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md`.
+
+## 2026-07-12 Loop 27 Research Addendum
+
+Loop 27 planning research is green at commit `b3d61b6`, without downloading or
+opening a candidate payload. A one-thread pinned Hub metadata pass examined 315
+MEG entries in 3.10 seconds wall with 63,766,528-byte peak RSS, found 23 strict
+single-FIF/log pairs and 16 eligible pairs, and selected SpanishBCBL S25 session
+2 block 2 as the smallest eligible same-modality/task candidate.
+
+The selected raw FIF and protected MAT log total exactly 1,009,939,983 bytes,
+leaving 63,801,841 bytes below a future 1 GiB cap. Their official Git blob, LFS
+SHA-256, Xet, and last-commit identities are frozen in
+`registries/loop27_research_boundary.v0.json`. The MAT path already exists
+locally at the expected size, but its payload was neither hashed nor opened;
+the raw FIF is absent. Local presence is not provenance proof or permission to
+inspect content.
+
+Selection required the prompted-typing MEG cohort, one primary FIF without a
+split continuation, and one matching log. Published aliases were
+canonicalized; the observed S5/S10/S21 person and consumed S7 were excluded.
+S23 was smaller but rejected because the official dataset card excludes that
+participant for a metallic implant. S20 remains task-matched EEG and therefore
+a separate RW4 question rather than a MEG transfer holdout.
+
+S25 is only a metadata candidate. Exact channel order, geometry, performed
+trials, unique sentences, source overlap, and external target-viewing history
+remain unavailable. A future final-only recommendation assigns zero S25 rows
+to training, validation, or calibration, requires at least 48 performed unique
+rows as a pragmatic retention floor rather than a power claim, and opens every
+eligible row once only after source-model, control, target-isolation, and Loop
+28 decision hashes are frozen.
+
+All 18 authorization fields are false. No Loop 27 preregistration, acquisition
+request, download selection, authorization sentence, local MAT hash, FIF
+header, signal, target, model, training, final open, or backup substitution
+exists. Exact research and source links are in
+`docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md`.

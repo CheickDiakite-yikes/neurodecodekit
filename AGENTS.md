@@ -97,6 +97,23 @@ target, model, checkpoint, training, validation prediction, source test, or
 session-2 evidence was opened. Do not turn this planning result into a Loop 26
 implementation, validation run, neural result, or authorization shortcut.
 
+Loop 27 planning research is complete at green commit `b3d61b6`, but no
+preregistration or acquisition request exists:
+
+```bash
+cat docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md
+python -m json.tool registries/loop27_research_boundary.v0.json >/dev/null
+```
+
+The pinned metadata selector examined 315 MEG entries, found 23 strict
+single-FIF/log pairs and 16 eligible pairs, and selected S25 session 2 block 2
+as the smallest eligible same-modality/task candidate: exactly two files and
+1,009,939,983 bytes under a 1 GiB future cap. S23 is ineligible under the
+official metallic-implant exclusion; S20 remains a separate EEG cohort. All 18
+Loop 27 authorization fields are false. Do not download, hash the local S25 MAT
+payload, inspect a FIF header, read signal/targets, substitute a backup, or
+prepare Loop 28 execution from this research result.
+
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
 commit `c3d1f01`, before any adapter, source chunk, fixture, socket, board, or
@@ -127,11 +144,12 @@ A primary-source-informed next tranche defines Loops 25-44 in
 five phases, with detailed controls, metrics, stop rules, resource caps,
 dependencies, and source bindings. Loop 25 is `Amended Preregistration` with
 `execution_authorized: false`; Loop 26 has completed planning research while
-its experiment remains `Not Started`; Loops 27-44 also remain `Not Started`.
-All 20 execution flags are false. This roadmap does not reopen Loop 24,
-authorize RW3, or permit a Loop 25-44 fixture, data read, model run, training
-run, stream, board, or hardware operation. A broad request to continue toward
-Loop 44 is a goal, not a substitute for each frozen authorization boundary.
+its experiment remains `Not Started`; Loop 27 has selected S25 in metadata
+while preregistration remains blocked; Loops 28-44 remain `Not Started`. All 20
+execution flags are false. This roadmap does not reopen Loop 24, authorize RW3,
+or permit a Loop 25-44 fixture, download, data read, model run, training run,
+stream, board, or hardware operation. A broad request to continue toward Loop
+44 is a goal, not a substitute for each frozen authorization boundary.
 
 ## Acceptance criteria for next PR
 
@@ -158,6 +176,11 @@ Loop 44 is a goal, not a substitute for each frozen authorization boundary.
 - The Loop 26 planning registry remains exact with 14 false authorization
   fields, a 55/6/5 split, six validation items, 64 exact paired assignments,
   2,908/2,884-parameter recommendations, and no preregistration or runtime.
+- The Loop 27 planning registry remains exact with 18 false authorization
+  fields, 315 MEG metadata entries, 23 strict pairs, 16 eligible pairs, the
+  two-file 1,009,939,983-byte S25 selection, official S23/S20 boundaries, and
+  no preregistration, request, download, payload hash, header, signal, or target
+  access.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed

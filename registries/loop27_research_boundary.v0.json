@@ -1,0 +1,359 @@
+{
+  "schema_name": "neurodecodekit.loop27_research_boundary",
+  "schema_version": "0.1.0",
+  "prepared_at": "2026-07-12",
+  "status": "planning_research_complete_preregistration_blocked",
+  "proof_posture": "metadata_only_candidate_selected_no_download_or_payload_access",
+  "authorized_now": false,
+  "authorization": {
+    "loop27_preregistration_authorized_now": false,
+    "acquisition_request_authorized_now": false,
+    "selected_file_download_authorized_now": false,
+    "local_log_payload_hash_authorized_now": false,
+    "fif_header_read_authorized_now": false,
+    "fif_signal_read_authorized_now": false,
+    "mat_content_read_authorized_now": false,
+    "target_label_or_text_read_authorized_now": false,
+    "model_or_checkpoint_run_authorized_now": false,
+    "training_or_parameter_update_authorized_now": false,
+    "candidate_final_open_authorized_now": false,
+    "backup_substitution_authorized_now": false,
+    "consumed_source_evidence_reopen_authorized_now": false,
+    "loop28_execution_authorized_now": false,
+    "rw4_s20_authorized_now": false,
+    "stream_board_device_or_hardware_authorized_now": false,
+    "authorization_sentence_exists": false,
+    "reason": "The metadata candidate is exact, but the source model, control package, target-isolation procedure, and one-time Loop 28 decision rule are not frozen."
+  },
+  "dependencies": {
+    "metadata_research_depends_on_prior_loop": false,
+    "selected_candidate_requires_loop25_compatible_result": true,
+    "selected_candidate_requires_loop26_frozen_source_model_and_controls": true,
+    "loop25_current_status": "amended_preregistration_awaiting_explicit_authorization",
+    "loop26_current_status": "planning_research_complete_experiment_not_started",
+    "loop27_preregistration_prepared": false,
+    "loop27_acquisition_request_prepared": false,
+    "loop27_download_selection_prepared": false,
+    "separate_acquisition_authorization_required": true,
+    "separate_header_signal_target_and_final_open_authorizations_required": true
+  },
+  "official_metadata_snapshot": {
+    "repo_id": "bcbl190626/SpanishBCBL",
+    "repo_type": "dataset",
+    "revision": "88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684",
+    "license": "CC-BY-NC-4.0",
+    "cohort": "prompted_typing",
+    "language": "Spanish",
+    "meg_system": "Megin_Elekta_Neuromag",
+    "meg_channels": 306,
+    "meg_magnetometers": 102,
+    "meg_planar_gradiometers": 204,
+    "sampling_rate_hz": 1000,
+    "nominal_unique_sentences_per_session": 128,
+    "metadata_method": "huggingface_hub.HfApi.list_repo_tree_and_get_paths_info",
+    "metadata_payload_only": true,
+    "remote_signal_or_log_payload_downloaded": false,
+    "meg_metadata_file_count": 315,
+    "meg_metadata_total_bytes": 267591914602,
+    "strict_clean_single_fif_log_pairs": 23,
+    "eligible_strict_pairs_after_exclusions": 16,
+    "measured_selector_runtime_sec": 3.1,
+    "measured_selector_peak_rss_bytes": 63766528,
+    "selector_cpu_threads": 1,
+    "selector_workers": 1,
+    "http_request_count": null,
+    "http_request_count_unavailable_reason": "The Hub client paginates internally; six high-level metadata API operations were issued during the complete research pass."
+  },
+  "selection_policy": {
+    "status": "research_policy_not_acquisition_authorization",
+    "required_modality": "MEG",
+    "required_cohort": "prompted_typing",
+    "required_sampling_rate_hz": 1000,
+    "required_raw_format": "FIF",
+    "required_behavior_format": "MAT",
+    "require_one_primary_fif_without_split_continuation": true,
+    "require_one_matching_subject_session_block_log": true,
+    "exclude_tapping_localizer_and_failed_recordings": true,
+    "exclude_observed_s21_canonical_person_ids": ["S5", "S10", "S21"],
+    "exclude_consumed_cross_modality_person_ids": ["S7"],
+    "exclude_official_dataset_card_ids": ["S23"],
+    "official_s23_exclusion_reason": "metallic_implant",
+    "canonicalize_published_alias_groups": [
+      ["S1", "S18"],
+      ["S4", "S14"],
+      ["S5", "S10", "S21"]
+    ],
+    "ranking": "ascending_exact_fif_plus_log_bytes_then_subject_session_block",
+    "automatic_backup_after_protected_access": false
+  },
+  "selected_candidate": {
+    "candidate_id": "spanishbcbl-meg-s25-session2-block2-v0",
+    "status": "recommended_metadata_only_not_preregistered_or_authorized",
+    "subject": "S25",
+    "canonical_person": "spanishbcbl-person-s25",
+    "session": 2,
+    "block": 2,
+    "recording_directory": "25_12032/240530",
+    "recording_date_code": "240530",
+    "published_alias_with_observed_s21_person": false,
+    "published_exclusion": false,
+    "modality": "MEG",
+    "task": "read_wait_type_memorized_spanish_sentence_without_feedback",
+    "intended_future_claim": "unseen_canonical_person_same_modality_same_task_final_only",
+    "files": [
+      {
+        "path": "MEG/FIF/25_12032/240530/block2.fif",
+        "role": "raw_meg",
+        "size_bytes": 1009713753,
+        "git_blob_id": "59e7d2f7b0bc57aa6b10c729475fcfe241a1ed43",
+        "lfs_sha256": "ef6b36fbf3efbfc86580cf68f45edf5254f2e134083a77e1fd88b22084f654be",
+        "xet_hash": "d7e3d6f06f01efdc25cac231d1ee07c93a208420187c148b9b2bd4ab09fe2185",
+        "last_file_commit": "072c0eaaa889eb54cc6b23a112fb15905e884cb3",
+        "local_presence_observed": false,
+        "content_opened_this_pass": false
+      },
+      {
+        "path": "MEG/logs/S25-session2_block2_list1.mat",
+        "role": "behavior_log_targets_and_timing_protected",
+        "size_bytes": 226230,
+        "git_blob_id": "7dcb9236aad504ee65f8e43268d30d77bd12bfb8",
+        "lfs_sha256": "470888435ddf8ab3a7fc50ab568d015e260aff908b08cb58aeb7aabe1da97557",
+        "xet_hash": "bb16d4ee60c453f2e1d6c9edac6cbe8dfbc7010e2df1081e2f33cd21739d8cf3",
+        "last_file_commit": "072c0eaaa889eb54cc6b23a112fb15905e884cb3",
+        "local_presence_observed": true,
+        "local_size_metadata_matches": true,
+        "local_payload_hash_computed_this_pass": false,
+        "content_opened_this_pass": false
+      }
+    ],
+    "exact_file_count": 2,
+    "exact_total_bytes": 1009939983,
+    "future_download_cap_bytes": 1073741824,
+    "cap_margin_bytes": 63801841,
+    "future_expected_network_bytes_if_local_log_is_not_reused": 1009939983,
+    "future_expected_network_bytes_if_local_log_hashes_exactly": 1009713753,
+    "future_local_log_reuse_requires_separate_payload_hash_authorization": true
+  },
+  "candidate_comparison": [
+    {
+      "rank_in_strict_eligible_pairs": 1,
+      "candidate_id": "S25-session2-block2",
+      "exact_total_bytes": 1009939983,
+      "decision": "selected",
+      "warning": "Exact sensor names, performed trials, targets, and sentence overlap remain unopened."
+    },
+    {
+      "rank_in_strict_eligible_pairs": 2,
+      "candidate_id": "S18-session2-block2",
+      "canonical_person": "spanishbcbl-person-s1-s18",
+      "exact_total_bytes": 1018878168,
+      "decision": "not_selected",
+      "warning": "Published S1/S18 alias group adds avoidable identity bookkeeping."
+    },
+    {
+      "rank_in_strict_eligible_pairs": 3,
+      "candidate_id": "S24-session2-block2",
+      "exact_total_bytes": 1048579727,
+      "decision": "not_selected",
+      "warning": "Larger than selected S25 candidate."
+    },
+    {
+      "rank_in_strict_eligible_pairs": 4,
+      "candidate_id": "S22-session1-block1",
+      "exact_total_bytes": 1107866218,
+      "decision": "not_selected",
+      "warning": "Exceeds 1 GiB and is larger than selected S25 candidate."
+    },
+    {
+      "candidate_id": "S23-session2-block2",
+      "exact_total_bytes": 958422728,
+      "decision": "ineligible",
+      "warning": "Official dataset card excludes S23 because of a metallic implant."
+    },
+    {
+      "candidate_id": "S21-session1-block2",
+      "exact_total_bytes": 621786920,
+      "decision": "ineligible",
+      "warning": "Already observed source evidence from the S5/S10/S21 canonical person."
+    },
+    {
+      "candidate_id": "S20-session2-block2-EEG",
+      "exact_total_bytes": 96090264,
+      "decision": "separate_rw4_cohort",
+      "warning": "Task matched but EEG is not a compatible holdout for the 102-magnetometer source model."
+    }
+  ],
+  "eligibility_boundary": {
+    "identity_independent_from_observed_s21_canonical_person": true,
+    "same_modality_as_source_model": true,
+    "same_nominal_meg_system": true,
+    "same_prompted_typing_task": true,
+    "same_sampling_rate": true,
+    "license_verified_noncommercial": true,
+    "exact_sensor_names_and_order_verified": false,
+    "exact_geometry_compatibility_verified": false,
+    "exact_performed_trial_count_verified": false,
+    "exact_unique_sentence_count_verified": false,
+    "sentence_overlap_with_source_partitions_verified": false,
+    "candidate_target_freshness_proven_against_external_manual_access": false,
+    "candidate_target_freshness_note": "No committed S25 target-content access was found and this pass opened none, but absence of unrecorded external/manual viewing cannot be proven.",
+    "eligible_for_metadata_selection": true,
+    "eligible_for_preregistration_now": false,
+    "eligible_for_acquisition_authorization_now": false,
+    "eligible_for_signal_or_target_open_now": false
+  },
+  "future_final_only_protocol_recommendation": {
+    "status": "research_recommendation_not_frozen",
+    "candidate_train_rows": 0,
+    "candidate_validation_rows": 0,
+    "candidate_calibration_rows": 0,
+    "candidate_final_rows": "all_eligible_performed_rows_after_redacted_audit",
+    "nominal_session_unique_sentences": 128,
+    "inferred_nominal_rows_per_two_block_session": 64,
+    "inference_warning": "The official card states 128 unique sentences per session, not an exact 64-row guarantee for this block.",
+    "minimum_performed_unique_rows": 48,
+    "minimum_row_reason": "Pragmatic 75-percent retention floor from the nominal 64-row block; not a prospective power claim.",
+    "if_below_minimum": "park_before_model_or_final_target_open",
+    "source_model_and_controls_frozen_before_candidate_content": true,
+    "no_candidate_fit_or_threshold_selection": true,
+    "unseen_text_claim_requires_zero_source_overlap": true,
+    "unseen_person_claim_may_report_sentence_overlap_but_must_not_call_it_unseen_text": true
+  },
+  "future_target_isolation_recommendation": {
+    "status": "not_implemented_or_authorized",
+    "mat_log_stays_opaque_until_source_model_controls_and_reports_are_hash_frozen": true,
+    "redacted_audit_outputs": [
+      "performed_row_count",
+      "unique_canonical_sentence_hash_count",
+      "duplicate_count",
+      "empty_or_missing_trial_count",
+      "source_sentence_overlap_count_if_a_separately_authorized_source_hash_set_exists"
+    ],
+    "forbidden_outputs": [
+      "sentence_plaintext",
+      "typed_response_plaintext",
+      "per_item_target_preview",
+      "candidate_label_distribution_for_model_selection"
+    ],
+    "target_audit_authorized_now": false
+  },
+  "future_control_requirements": [
+    {
+      "control_id": "source_train_only_no_signal_sentence_prior",
+      "must_be_hash_frozen_before_candidate_content": true,
+      "frozen_now": false
+    },
+    {
+      "control_id": "same_checkpoint_zero_candidate_signal",
+      "must_be_hash_frozen_before_candidate_content": true,
+      "frozen_now": false
+    },
+    {
+      "control_id": "channel_name_hash_derangement",
+      "must_be_hash_frozen_before_candidate_signal": true,
+      "frozen_now": false
+    },
+    {
+      "control_id": "nonwrapping_zero_filled_time_displacement",
+      "must_be_hash_frozen_before_candidate_signal": true,
+      "frozen_now": false
+    }
+  ],
+  "future_access_order": [
+    "commit_and_remotely_validate_a_loop27_preregistration_after_source_model_and_controls_exist",
+    "prepare_a_hash_bound_acquisition_request_with_every_permission_false",
+    "record_exact_user_authorization_in_a_separate_commit_before_any_download_or_local_log_hash",
+    "dry_run_two_exact_paths_revision_sizes_hashes_disk_headroom_and_one_worker",
+    "download_only_the_absent_exact_files_under_the_one_gibibyte_cap",
+    "verify_payload_hashes_without_opening_fif_header_signal_or_mat_content",
+    "require_separate_header_only_authorization_and_compatibility_gate",
+    "require_loop28_preregistration_before_signal_target_model_or_final_open",
+    "open_the_final_only_candidate_once_or_park_without_backup_substitution"
+  ],
+  "preregistration_blockers": [
+    "Loop 25 has no compatible causal preprocessing result.",
+    "Loop 26 has no frozen source model, checkpoint, or control package.",
+    "The exact S25 sensor names, channel order, geometry, and duration are unopened.",
+    "The S25 performed-trial and unique-sentence counts are unopened.",
+    "The source-versus-candidate sentence-overlap audit is unavailable.",
+    "The redacted target-isolation procedure is not implemented or hash bound.",
+    "The Loop 28 primary transfer estimand, threshold, and one-time decision rule are not frozen.",
+    "No acquisition authorization sentence or request exists."
+  ],
+  "resource_boundaries": {
+    "current_cpu_threads": 1,
+    "current_workers": 1,
+    "current_downloaded_payload_bytes": 0,
+    "current_generated_planning_artifact_cap_bytes": 8388608,
+    "future_exact_file_count": 2,
+    "future_exact_bundle_bytes": 1009939983,
+    "future_download_cap_bytes": 1073741824,
+    "future_minimum_free_disk_bytes": 4294967296,
+    "future_workers": 1,
+    "future_cpu_threads": 1,
+    "future_automatic_backup_files": 0,
+    "future_signal_reads": 0,
+    "future_target_reads": 0,
+    "note": "The future signal and target counters remain zero until later separately authorized stages; this registry authorizes none of them."
+  },
+  "research_access_counters": {
+    "high_level_remote_metadata_api_operations": 6,
+    "remote_file_payload_downloads": 0,
+    "remote_file_payload_bytes": 0,
+    "local_candidate_path_metadata_checks": 1,
+    "local_candidate_log_content_reads": 0,
+    "local_candidate_log_payload_hash_reads": 0,
+    "candidate_fif_header_reads": 0,
+    "candidate_fif_signal_reads": 0,
+    "candidate_mat_content_reads": 0,
+    "candidate_target_label_or_text_reads": 0,
+    "source_consumed_evidence_reads": 0,
+    "model_or_checkpoint_runs": 0,
+    "training_or_parameter_updates": 0,
+    "rw3_stream_board_device_or_hardware_operations": 0
+  },
+  "source_bindings": [
+    {
+      "source_id": "spanishbcbl_dataset_card",
+      "role": "task_device_license_alias_and_s23_exclusion",
+      "url": "https://huggingface.co/datasets/bcbl190626/SpanishBCBL"
+    },
+    {
+      "source_id": "spanishbcbl_pinned_tree",
+      "role": "immutable_repository_revision",
+      "url": "https://huggingface.co/datasets/bcbl190626/SpanishBCBL/tree/88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684"
+    },
+    {
+      "source_id": "s25_fif_metadata",
+      "role": "selected_raw_meg_path_size_and_payload_identity",
+      "url": "https://huggingface.co/datasets/bcbl190626/SpanishBCBL/blob/88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684/MEG/FIF/25_12032/240530/block2.fif"
+    },
+    {
+      "source_id": "s25_mat_metadata",
+      "role": "selected_behavior_log_path_size_and_payload_identity",
+      "url": "https://huggingface.co/datasets/bcbl190626/SpanishBCBL/blob/88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684/MEG/logs/S25-session2_block2_list1.mat"
+    },
+    {
+      "source_id": "official_spanishbcbl_loader",
+      "role": "official_file_and_event_semantics",
+      "url": "https://github.com/facebookresearch/brain2qwerty/blob/3bf5a4099ca0d23bbe994b2287905760236e56e0/studies/spanishbcbl.py"
+    },
+    {
+      "source_id": "brain2qwerty_v1_paper",
+      "role": "cohort_task_split_and_biological_replication_context",
+      "url": "https://www.nature.com/articles/s41593-026-02303-2"
+    },
+    {
+      "source_id": "huggingface_hub_api",
+      "role": "metadata_only_tree_and_file_identity_api",
+      "url": "https://huggingface.co/docs/huggingface_hub/en/package_reference/hf_api"
+    }
+  ],
+  "claim_boundary": [
+    "S25 session 2 block 2 is the smallest strict clean eligible MEG metadata candidate found under the frozen selector, not an acquired or qualified holdout.",
+    "Published aliases support an unseen-canonical-person candidate relative to S21, but exact sensor and sentence compatibility remain unavailable.",
+    "No signal, target, model, training, validation, final-test, or transfer result is established.",
+    "The candidate cannot establish unseen text unless a future redacted overlap audit proves it.",
+    "One candidate person cannot establish population generalization, EEG or OPM transfer, real-time use, portable hardware, assistive benefit, diagnosis, or clinical utility."
+  ]
+}

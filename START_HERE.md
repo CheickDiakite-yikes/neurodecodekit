@@ -13,12 +13,15 @@
 7. Read `docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md` for the next predictive
    design and its six-item identifiability ceiling. It is planning research
    only; Loop 26 remains `Not Started` with no preregistration or authorization.
-8. Review `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` only when deciding whether
+8. Read `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` for the selected S25
+   metadata candidate and every blocker that still prevents preregistration,
+   download, signal/target access, or transfer evaluation.
+9. Review `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` only when deciding whether
    to authorize the independent RW3 Stage A.
-9. Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md` and
+10. Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md` and
    `docs/LOOPS_25_44_ROADMAP.md` for the planning-only Loops 25-44 queue.
-10. Paste `prompts/CODEX_START_PROMPT.md` into Codex to continue.
-11. Run tests:
+11. Paste `prompts/CODEX_START_PROMPT.md` into Codex to continue.
+12. Run tests:
 
 ```bash
 PYTHONPATH=src python -m unittest discover -s tests -v
@@ -29,7 +32,8 @@ not the current loop number. Its dashboard now separately reports the current
 post-roadmap position as **Loop 25 amended v1; authorization pending**, and
 its ninth sheet contains the separate **Loops 25-44 queue**. Loop 25 is in
 review with `execution_authorized: false`; Loop 26 planning research is
-complete while its experiment remains `Not Started`; Loops 27-44 also remain
+complete while its experiment remains `Not Started`; Loop 27 planning research
+selects S25 metadata while preregistration remains blocked; Loops 28-44 remain
 `Not Started`. All are unauthorized. The queue does not reopen Loop 24 or
 authorize RW3.
 
@@ -82,7 +86,11 @@ float32, consumed selection seed 2401, and left qualification seed 2402
 physically unopened. Loop 25 is amended and preregistered but not authorized;
 seeds 2501 and 2502 remain unopened. Loops 26-44 remain planning-only.
 Loop 26's planning research is complete, but its experiment status remains
-`Not Started`; Loops 27-44 have no loop-specific research closeout yet.
+`Not Started`. Loop 27's planning research is also complete: S25 session 2
+block 2 is the smallest eligible strict MEG pair at 1,009,939,983 bytes, but no
+preregistration, acquisition request, download, local MAT hash, header, signal,
+target, model, or transfer operation is authorized. Loops 28-44 have no
+loop-specific research closeout yet.
 Session 1 provides a strict 55/6/5 split with
 train-only robust scaling. Session 2 is a complete two-part FIFF recording with
 63 performed trials; MAT slots 54, 58, and 60 are explicitly empty and are
