@@ -2390,3 +2390,84 @@ portable-device signal quality, OPM sentence production, useful EEG text
 decoding, neural advantage, unseen-person generalization, at-home text input,
 end-to-end real-time behavior, assistive efficacy, diagnosis, or clinical
 utility.
+
+## 2026-07-12 - Define the Loop 30 target-free local replay boundary
+
+Loop 30 planning research now turns "local streaming" into an inspectable
+interaction contract without creating a streaming runtime. The future product
+is a loopback-only target-free replay inspector. Four source modes keep
+artifact replay, synthetic replay, recorded replay, and live sources distinct.
+The future trace has 30 required identity, timing, revision, finalization,
+causality, hash, warning, and unavailable-field entries; target text, labels,
+prompts, real sentence text, consumed predictions, quality metrics, logits,
+checkpoints, real signal, and consumed caches are forbidden producer inputs.
+
+The primary-source review preserves three lessons. Brain2Qwerty v2 is
+continuous/asynchronous but still whole-sentence and noncausal, with a fully
+real-time low-latency version left to future work. Loop 21 establishes a causal
+producer but no decoder or capture-to-user latency. Loop 23's consumed test
+recorded zero revisions yet reached only 5/8 exact against its 6/8 threshold,
+so stability is not correctness or confidence. Finalization must therefore be
+explicit and predictive confidence remains unavailable until a separately
+authorized Loop 34 calibration result exists.
+
+The machine registry freezes nine clock domains and six latency claim levels.
+Source, backend monotonic, browser performance, and user-observed origins may
+not be subtracted without a measured mapping. A future Loop 30 implementation
+can qualify at most local replay presentation Level 3; device capture through
+user-visible render is Level 5 and outside scope. Cold start, scheduling,
+queueing, producer, decoder, serialization, browser receive, render, first
+partial, first committed token, and finalization remain separate, with missing
+stages reported as unavailable rather than zero.
+
+Privacy and accessibility are fail-closed. The future launcher fixes
+`127.0.0.1`, disables host override, share, analytics, monitoring, uploads,
+allowed/static directories, service workers, popups, and external network
+dependencies, and caps execution at one thread, one worker, and two sessions.
+Browser QA records requests, responses, WebSockets, pages, console errors,
+screenshots, blankness/overlap, W3C 50-ms long tasks, and Event Timing support.
+Incremental changes require textual source/proof labels, status/log semantics,
+polite announcements, keyboard access, stable focus, no forced autoscroll, and
+reduced motion. Eighteen future pass requirements and 30 exact refusals bind
+these behaviors before any code or fixture exists.
+
+All 30 `authorized_now` fields are false. This research used ten high-level
+public-web operations, one CPU thread and worker, and zero remote payload
+bytes, real path/hash/header/signal/cache/target/consumed-artifact reads,
+checkpoint/model/training/calibration runs, trace generations, server launches,
+browser runs, SDK imports, sockets, streams, devices, or hardware sessions.
+External research peak RSS and one end-to-end runtime are unavailable by tool
+contract. The planning cap is 8 MiB; future separately authorized execution is
+bounded to 32 MiB generated artifacts and 1 GiB peak RSS.
+
+The nine-sheet tracker keeps Loop 25 as the active execution decision, updates
+the Loop 30 row and dashboard, and adds decision `30-R1`, risk `R35`, and prompt
+`Loop30-Research`. The 85,167-byte workbook has SHA-256
+`c92c4fe378532c2d22b0be24b60c5f6c85192a14eac239dd954508f6f1e01d69`;
+all nine sheets render, the export reloads with exact key ranges, and both
+formula-error scans match zero cells. The unrelated 321,169-byte inspection
+sidecar remains byte-identical at SHA-256
+`5cd0ef08446c4e5feee5ce11f27eef41fae5eee8975cc77f6d401faca3b79f45`.
+
+Local verification passes 122 focused Loop 25-30/roadmap tests in 0.11 seconds
+wall with 29,097,984-byte maximum RSS; the strict Loop 30 plus roadmap slice
+passes 24 tests in 0.15 seconds wall with 20,037,632-byte maximum RSS; 426
+optional unittests pass with three expected skips in 22.27 seconds wall and
+574,521,344-byte maximum RSS; 423 pytest tests pass with three skips and 198
+subtests in 22.06 seconds wall and 591,413,248-byte maximum RSS; and 394
+dependency-light tests pass with 121 optional skips in 0.75 seconds wall and
+48,594,944-byte maximum RSS. Ruff, compileall, 23 source JSON and two TOML
+parses, seven CLI help surfaces, 55 registered commands, unauthorized Loop
+25-30 command absence, 72 local Markdown links, workbook render/reload/formula
+inspection, and `git diff --check` pass.
+
+Research commit `958ac4e` is published on
+`codex/loop-30-local-streaming-research`. Both required jobs pass in push CI
+run `29206964418` and draft PR #9 CI run `29206972221`.
+
+This milestone adds a machine-checkable interaction, timing, privacy,
+accessibility, and browser-QA design for a future local target-free replay. It
+does not add a running UI or establish live neural input, causal end-to-end
+text, confidence, neural advantage, decoding accuracy, unseen-person
+generalization, capture-to-user latency, portable hardware, arbitrary-thought
+typing, assistive efficacy, diagnosis, or clinical utility.

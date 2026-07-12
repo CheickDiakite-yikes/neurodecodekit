@@ -24,12 +24,16 @@
    EEG lane, partner/lab OPM-MEG lane, 15-field modality matrix, six-level
    qualification ladder, and exact 5-10 GB capacity boundary. It is planning
    research only; Loop 29 remains `Not Started`.
-11. Review `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` only when deciding whether
+11. Read `docs/LOOP_30_PRIMARY_SOURCE_RESEARCH.md` for the future loopback-only
+   target-free replay inspector, nine-clock timing contract, six latency claim
+   levels, 18 future gates, and 30 refusals. It is planning research only;
+   Loop 30 remains `Not Started` with no trace, UI, server, or browser run.
+12. Review `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` only when deciding whether
    to authorize the independent RW3 Stage A.
-12. Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md` and
+13. Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md` and
    `docs/LOOPS_25_44_ROADMAP.md` for the planning-only Loops 25-44 queue.
-13. Paste `prompts/CODEX_START_PROMPT.md` into Codex to continue.
-14. Run tests:
+14. Paste `prompts/CODEX_START_PROMPT.md` into Codex to continue.
+15. Run tests:
 
 ```bash
 PYTHONPATH=src python -m unittest discover -s tests -v
@@ -44,8 +48,9 @@ complete while its experiment remains `Not Started`; Loop 27 planning research
 selects S25 metadata while preregistration remains blocked; Loop 28 planning
 research defines a strict zero-shot final-only rule while its experiment
 remains `Not Started`; Loop 29 planning research defines separate scalp EEG
-and OPM-MEG paths while its experiment remains `Not Started`; Loops 30-44
-remain `Not Started`. All are unauthorized.
+and OPM-MEG paths while its experiment remains `Not Started`; Loop 30 planning
+research defines a target-free local replay boundary while its experiment
+remains `Not Started`; Loops 31-44 remain `Not Started`. All are unauthorized.
 The queue does not reopen Loop 24 or authorize RW3.
 
 The parallel Real-World Practice Track starts at
@@ -93,6 +98,13 @@ are machine checked. The preferred 5,000,000,000-byte and absolute
 would total 1,106,030,247 bytes, but no Loop 29 download, real-data read, model,
 stream, device, partner, or hardware operation occurred. The experiment
 remains `Not Started`.
+Loop 30 planning research freezes four source modes, a 30-field target-free
+trace, nine clock domains, six latency claim levels, 18 future requirements,
+30 refusal IDs, and 30 false authorization flags. A future interface must bind
+exactly to `127.0.0.1`, show revision/finalization/proof labels accessibly, and
+fail on any non-loopback browser traffic. No trace seed, fixture, UI, server,
+browser run, consumed artifact, model, stream, live source, or hardware
+operation exists; the experiment remains `Not Started`.
 The proposed fresh S20 EEG block is **not authorized** for download or signal
 access. Its exact four-file, 96,090,264-byte dry run is in
 `docs/FRESH_EEG_BENCHMARK_S20_APPROVAL_PACKET.md`.
@@ -115,8 +127,9 @@ T3 evidence, reserves S25 for zero-calibration T2, and recommends a minimum 48
 final rows, 0.05 macro sentence-CER advantage, 65,535 paired random assignments
 plus observed, and strict corruption-control wins. All 21 authorization fields
 are false and the experiment remains `Not Started`. Loop 29 planning research
-is complete while its experiment remains `Not Started`; Loops 30-44 have no
-loop-specific research closeout yet.
+is complete while its experiment remains `Not Started`. Loop 30 planning
+research is complete while its target-free replay experiment remains `Not
+Started`; Loops 31-44 have no loop-specific research closeout yet.
 Session 1 provides a strict 55/6/5 split with
 train-only robust scaling. Session 2 is a complete two-part FIFF recording with
 63 performed trials; MAT slots 54, 58, and 60 are explicitly empty and are
