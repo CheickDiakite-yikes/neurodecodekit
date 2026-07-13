@@ -3187,3 +3187,48 @@ complete deployment cost, simulator integration, and physical-device claims.
 Scientific claim not established: no package or inference ran, so no neural
 advantage, decoding accuracy, unseen-person generalization, real-time capture-
 to-text latency, portable-hardware behavior, or scientific result exists.
+
+## 2026-07-13 - Loop 41 Stream-To-NeuroToken Planning Research
+
+- Audited the frozen RW3 source-chunk contract, the still-false RW3 Stage A
+  request, NeuroTokenCache v0, the Loop 21 causal mock producer, and Loops 25,
+  37, and 39 dependency states without opening any runtime or payload.
+- Reviewed eight official primary pages covering LSL timestamps, clock offsets,
+  buffering/recovery, postprocessing, monotonic duration clocks, Python timing,
+  and BIDS derivative provenance. Four public search queries and two high-level
+  web operations are recorded; public response bytes/runtime/RSS are
+  unavailable from the tool contract.
+- Added `registries/loop41_research_boundary.v0.json` with six integration
+  layers, seven clock views, eight anomaly classes, five inherited schedules,
+  five resume cuts, 18 hash bindings, 28 fixture families, four stages, 32
+  gates, 42 refusals, and 42 false authorization fields.
+- Added 14 dependency-light Loop 41 invariants and advanced the machine roadmap
+  to schema v0.18.0 while keeping all 20 loop execution flags false.
+- Generated experiment bytes, fixtures, source chunks, adapters,
+  preprocessing/token runs, protected reads, target/model/training operations,
+  streams, devices, hardware operations, and end-to-end latency measurements
+  remain zero. Loop 41 remains `Not Started` and unauthorized.
+- The user-owned workbook inspection sidecar remains untracked and must remain
+  byte-exact at SHA-256
+  `b96bbea77ec93e59c0db7c4bcaeb4a9182f1f7cc7039d13fb223b65e0005beb6`.
+- Local acceptance passed on one numerical thread: `unittest` ran 601 tests
+  with three skips in 22.250 seconds (23.43 seconds wall, 616,284,160-byte peak
+  RSS), `pytest` ran 598 tests with three skips and 277 subtests in 22.14
+  seconds (23.37 seconds wall, 621,232,128-byte peak RSS), and dependency-light
+  Python ran 569 tests with 121 skips in 1.474 seconds (2.73 seconds wall,
+  92,831,744-byte peak RSS). These are increases of 14 tests, 14 tests plus
+  eight subtests, and 14 tests respectively over the Loop 40 baselines.
+- Focused verification passed 23 Loop 41/roadmap tests and 248 planning-boundary
+  tests. Ruff check/format, compileall, all 29 source JSON files, both TOML
+  files, and `git diff --check` passed.
+- The CLI registers 55 commands; root help plus the existing
+  `make-neurotoken-cache`, `inspect-neurotoken-cache`, and
+  `causal-replay-gate` help surfaces passed. All 72 tracked local Markdown
+  links resolve, and Gitleaks found no leaks across 84 commits and about 5.07
+  MB of Git history.
+- The visually inspected nine-sheet tracker workbook is 98,959 bytes at
+  SHA-256
+  `185cbc483321e3b1b53c7c6426092a31ed3ef4be0c7e0b1b4c9c5963b1a4c672`;
+  its formula scan found zero errors. All 20 roadmap execution flags and all
+  42 Loop 41 `*_authorized_now` fields remain false; the three authorization
+  setup booleans are also false.

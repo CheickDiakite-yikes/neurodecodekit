@@ -353,6 +353,23 @@ profiler, memory-planner, delegate, simulator, app, device, or hardware
 operation is authorized. Packaging cannot establish neural advantage, decoding
 accuracy, end-to-end latency, or portable hardware.
 
+Loop 41 planning research is complete while its RW3 stream-to-NeuroToken
+integration experiment remains `Not Started` and unauthorized:
+
+```bash
+cat docs/LOOP_41_PRIMARY_SOURCE_RESEARCH.md
+python -m json.tool registries/loop41_research_boundary.v0.json >/dev/null
+```
+
+The boundary freezes six integration layers, seven distinct clock views,
+eight anomaly classes, five inherited schedules, five resume cuts, 18 hash
+bindings, 28 future fixture families, 32 gates, 42 refusals, and 42 false
+authorization fields. Loop 20/21 interfaces are not evidence of the missing
+join. Loop 25, Loop 37, Loop 39, and RW3 Stage A execution closeouts are all
+unsatisfied. No fixture, source chunk, correction, preprocessing, adapter,
+state, token runtime, stream, device, latency measurement, or scientific
+result exists or is authorized.
+
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
 commit `c3d1f01`, before any adapter, source chunk, fixture, socket, board, or
@@ -406,7 +423,10 @@ privacy/lifecycle and deletion-claim firewall while its experiment remains
 semantic-identity, and numerical-tolerance firewall while its experiment
 remains `Not Started`; Loop 40 planning research defines the edge-package,
 host-state, fallback, resource, and target-identity firewall while its
-experiment remains `Not Started`; Loops 41-44 remain `Not Started`. All 20
+experiment remains `Not Started`; Loop 41 planning research defines the
+stream-to-NeuroToken clock, anomaly, state, schedule, and provenance firewall
+while its experiment remains `Not Started` and unauthorized; Loops 42-44
+remain `Not Started`. All 20
 execution flags are false. This roadmap does not
 reopen Loop 24, authorize RW3, or permit a Loop 25-44 fixture, download, data
 read, model run, training run, stream, board, or hardware operation. A broad
@@ -520,6 +540,12 @@ authorization boundary.
   Loop 24 hold, Loop 39 prerequisite, host-state boundary, and Loop 42 device
   ceiling remain explicit; no install, export, package, inference, profiler,
   simulator, app, device, or hardware operation exists.
+- The Loop 41 planning registry remains exact with 42 false authorization
+  fields, six integration layers, seven clock views, eight anomaly classes,
+  five schedules, five resume cuts, 18 hash bindings, 28 fixture families,
+  four stages, 32 gates, and 42 refusals. No source-chunk adapter, fixture,
+  causal-preprocessing run, NeuroToken runtime, end-to-end latency result,
+  stream, device, hardware operation, or scientific claim exists.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed

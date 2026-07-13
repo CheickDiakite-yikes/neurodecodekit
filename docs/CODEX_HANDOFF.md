@@ -129,7 +129,13 @@
 > remains `Not Started` and unauthorized; ExecuTorch/XNNPACK is a research lead
 > only, Loop 39 has not qualified the reference, and no install, export,
 > package, inference, simulator, app, device, or hardware operation exists.
-> Loops 41-44 remain `Not Started`.
+> Loop 41 planning research freezes six integration layers, seven clock views,
+> eight anomaly classes, five schedules, five resume cuts, 18 hash bindings,
+> 28 fixtures, 32 gates, 42 refusals, and 42 false authorization fields. Its
+> experiment remains `Not Started` and unauthorized; all four execution
+> dependencies are unsatisfied and no fixture, source chunk, adapter,
+> preprocessing, token runtime, latency result, stream, device, or hardware
+> operation exists. Loops 42-44 remain `Not Started`.
 > This does not reopen Loop 24 or authorize RW3, data, targets, models,
 > validation, training, calibration, or hardware.
 > In parallel, RW0 closes a primary-source Real-World Practice research gate
@@ -349,6 +355,11 @@ This repo is a starter scaffold with working pure-Python components:
   four stages, 30 gates, 40 refusals, and 40 false authorization fields; the
   experiment remains `Not Started`, no target/backend is selected, and all
   packaging, inference, simulator, device, and hardware work is unauthorized
+- machine-checked Loop 41 planning research with six integration layers, seven
+  clock views, eight anomaly classes, five schedules, five resume cuts, 18
+  identity/hash bindings, 28 fixtures, four stages, 32 gates, 42 refusals, and
+  42 false authorization fields; the experiment remains `Not Started` and
+  unauthorized, with no stream-to-NeuroToken runtime or latency result
 - JSON/Markdown metrics report command
 - CLI smoke commands
 - unit tests

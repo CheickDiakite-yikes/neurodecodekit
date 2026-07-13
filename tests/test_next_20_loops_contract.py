@@ -22,7 +22,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
     def test_identity_range_and_planning_boundary_are_exact(self):
         roadmap = self.roadmap
         self.assertEqual(roadmap["schema_name"], "neurodecodekit.next_twenty_loops_roadmap")
-        self.assertEqual(roadmap["schema_version"], "0.17.0")
+        self.assertEqual(roadmap["schema_version"], "0.18.0")
         self.assertEqual(roadmap["roadmap_id"], "loops-25-44")
         self.assertEqual(roadmap["status"], "planning_only_not_execution_authorization")
         self.assertEqual(
@@ -308,7 +308,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                     self.assertFalse(registration["superseded_v0"]["was_authorized"])
                 else:
                     self.assertEqual(row["status"], "Not Started")
-                    if row["loop_id"] in {34, 35, 36, 37, 38, 39, 40}:
+                    if row["loop_id"] in {34, 35, 36, 37, 38, 39, 40, 41}:
                         expected = {
                             34: "planning_research_complete_no_confidence_fit_or_result_unauthorized",
                             35: "planning_research_complete_no_confound_fixture_acquisition_or_brain_specific_result_unauthorized",
@@ -317,6 +317,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                             38: "planning_research_complete_experiment_not_started",
                             39: "planning_research_complete_experiment_not_started",
                             40: "planning_research_complete_experiment_not_started",
+                            41: "planning_research_complete_experiment_not_started",
                         }
                         self.assertEqual(row["proof_posture"], expected[row["loop_id"]])
                     else:

@@ -215,7 +215,7 @@ class Loop40ResearchBoundaryTests(unittest.TestCase):
             self.assertIn(text, self.research)
 
     def test_machine_roadmap_and_public_status_are_synchronized(self):
-        self.assertEqual(self.roadmap["schema_version"], "0.17.0")
+        self.assertEqual(self.roadmap["schema_version"], "0.18.0")
         current = self.roadmap["current_boundary"]
         self.assertTrue(current["loop40_research_packet_prepared"])
         self.assertEqual(current["loop40_qualification_level_count"], 7)

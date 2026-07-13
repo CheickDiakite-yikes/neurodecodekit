@@ -101,8 +101,10 @@ Do not reset, revert, delete, or overwrite work already present.
   compatibility, reproduction, independent reproduction, and replication,
   Loop 40 separates the frozen graph from host state/timestamps, fallback,
   complete package cost, named-target qualification, and physical-device
-  claims while its experiment remains `Not Started`, and Loops 41-44 remain
-  `Not Started`; all 20
+  claims while its experiment remains `Not Started`; Loop 41 planning research
+  defines the stream-to-NeuroToken clock, anomaly, state, schedule, and
+  provenance firewall while its experiment remains `Not Started` and
+  unauthorized; Loops 42-44 remain `Not Started`; all 20
   execution flags remain false.
 - Loop 26's planning boundary recommends a 2,908-parameter causal candidate, a
   2,884-parameter linear comparator, six controls, and exact enumeration of all
@@ -226,6 +228,13 @@ Do not reset, revert, delete, or overwrite work already present.
   authorization fields. ExecuTorch/XNNPACK is a research lead only; Loop 39
   has not qualified the reference, and no fixture, install, export, package,
   inference, profiler, simulator, app, device, or hardware operation exists.
+- Loop 41 planning research is complete while the RW3 stream-to-NeuroToken
+  integration experiment remains `Not Started` and unauthorized. The boundary
+  freezes 6 integration layers, 7 clock views, 8 anomaly classes, 5 schedules,
+  5 resume cuts, 18 hash bindings, 28 fixtures, 4 stages, 32 gates, 42 refusals,
+  and 42 false authorization fields. No source chunk, fixture, preprocessing,
+  adapter, state, token runtime, end-to-end latency result, stream, device, or
+  hardware operation exists.
 - No real recording quality, neural advantage, unseen-person generalization,
   useful EEG decoder, real-time decoding, portable-hardware, arbitrary-thought,
   or clinical result has been demonstrated.
