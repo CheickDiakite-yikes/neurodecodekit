@@ -1213,6 +1213,26 @@ thought, portable-hardware, and real-time claims default to unestablished.
 maintainer release decision. It cannot retroactively authorize or upgrade an
 earlier experiment.
 
+### Loop 44 Research Closeout Addendum
+
+Loop 44's artifact-only review is complete while every new experiment and
+release mutation remains unauthorized. The strict matrix at
+`registries/loop44_claim_release_matrix.v0.json` freezes 16 claim cards, seven
+evidence levels, five model cards, four dataset cards, 14 release gates, and
+eight risks.
+
+Three engineering claims are promoted, three negative or inconclusive real-
+data findings are retained, two claims remain fixture-backed, two measured
+paths remain parked, five desired claims remain unavailable, and one clinical
+or arbitrary-thought overclaim is prohibited. The engineering source release
+is held because the current stack is not on `main` and Loops 38, 39, and 43
+have not executed. The scientific performance release is parked because no
+real neural model has beaten its no-signal comparator convincingly.
+
+No tag, GitHub release, archive, DOI, participant payload, protected read,
+model operation, training run, stream, device, or hardware operation occurred.
+This planning closeout does not authorize or upgrade any earlier loop.
+
 ## Cross-Loop Kill Branches
 
 | Trigger | Required response |

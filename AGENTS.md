@@ -418,6 +418,33 @@ files. It ran no tuning, scoring, inference, training, or claim selection; the
 zero-consumed-read claim is withdrawn, the incident is machine-recorded, and
 future validation is restricted to Git-tracked JSON paths.
 
+Loop 44 artifact-only claim review is complete while release mutation remains
+held and unauthorized:
+
+```bash
+cat docs/LOOP_44_PRIMARY_SOURCE_RESEARCH.md
+cat docs/LOOP_44_CLAIM_PROMOTION_AND_RELEASE_DECISION.md
+python -m json.tool registries/loop44_claim_release_matrix.v0.json >/dev/null
+```
+
+The matrix freezes 16 claim cards, seven evidence levels, five model cards,
+four dataset cards, 14 release gates, and eight risks. Engineering source
+release is `hold`; scientific performance release is `park`; clinical or
+arbitrary-thought wording is prohibited. No tag, GitHub release, archive, DOI,
+participant payload, protected/consumed read, target, model, training, stream,
+device, hardware operation, independent reproduction, or scientific claim
+upgrade exists. Future roadmap work does not authorize any frozen experiment.
+
+The next research tranche is frozen in
+`docs/LOOPS_45_64_SCIENTIFIC_ROADMAP.md` and
+`registries/next_scientific_loops.v0.json`. It contains exact loop IDs 45-64 in
+five phases of four. Every status is `Not Started`, every execution flag is
+false, and every global authorization field is false. The scientific critical
+path is Loop 45 causal mechanics, Loop 46 reserved S21 validation, Loop 47
+signal attribution, a nonfinal development person, and only then Loop 52's
+strict S25 final-only zero-shot verdict. Do not start these from a broad
+continuation request.
+
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
 commit `c3d1f01`, before any adapter, source chunk, fixture, socket, board, or
@@ -477,7 +504,8 @@ while its experiment remains `Not Started` and unauthorized; Loop 42 planning
 research selects OpenBCI Cyton base 8-channel USB-radio for future mechanics
 only while its experiment remains `Not Started`; Loop 43 planning research
 defines the independent artifact-reproduction firewall while its challenge
-remains `Not Started`; Loop 44 remains `Not Started`. All 20
+remains `Not Started`. Loop 44 artifact-only claim review is complete;
+engineering release is held and scientific performance release is parked. All 20
 execution flags are false. This roadmap does not
 reopen Loop 24, authorize RW3, or permit a Loop 25-44 fixture, download, data
 read, model run, training run, stream, board, or hardware operation. A broad
@@ -615,6 +643,15 @@ authorization boundary.
   136 cache JSON files touched, 11 known consumed session-2 files touched, zero
   raw array/FIF/MAT/model operations, and zero use for tuning, scoring, or claim
   selection.
+- The Loop 44 claim-release matrix remains exact with 16 claim cards, seven
+  evidence levels, five model cards, four dataset cards, 14 release gates,
+  eight risks, an engineering `hold`, and a scientific `park`. No tag, GitHub
+  release, archive, DOI, payload publication, protected read, model run,
+  training run, independent reproduction, or scientific claim upgrade exists.
+- The Loops 45-64 scientific registry remains exact with 20 contiguous loops,
+  five phases of four, 20 false execution flags, nine false global
+  authorization fields, ten source bindings, and ten cross-loop kill branches.
+  S21 session 2 and S7 remain consumed; S25 remains unopened and final-only.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed

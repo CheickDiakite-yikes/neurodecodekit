@@ -368,7 +368,9 @@ remains `Not Started` and confidence is unavailable; Loop 35 confound research
 is complete while its experiment remains `Not Started`; Loop 36 geometry/
 reference research is complete while its experiment remains `Not Started`;
 Loop 37 BIDS derivative/provenance research is complete while its experiment
-remains `Not Started`; Loops 38-44 remain `Not Started`.
+remains `Not Started`; at the original roadmap freeze, Loops 38-44 were all
+`Not Started`. Later addenda record planning closeouts without authorizing
+their experiments.
 
 The detailed source trace and design correction live in
 `docs/LOOP_25_ANTI_ALIAS_AUDIT.md`. This addendum does not authorize execution
@@ -1007,3 +1009,19 @@ acceptance did record an overbroad validator read of 136 cache JSON files,
 including 11 known consumed session-2 report/metadata files; no content was
 used for tuning, scoring, or claim selection. A future successful independent artifact reproduction would not be
 scientific replication or neural decoding evidence.
+
+## 2026-07-13 Loop 44 Research Addendum
+
+Loop 44 artifact-only planning and claim review are complete. Model Cards,
+Datasheets, NIST AI RMF, COBIDAS-MEEG, ACM artifact terminology, FAIR4RS,
+GitHub citation guidance, and Zenodo versioning support a three-gate boundary:
+software availability, computational reproducibility, and scientific support
+must be assessed separately.
+
+The strict matrix freezes 16 claim cards, seven evidence levels, five model
+cards, four dataset cards, 14 release gates, and eight risks. Engineering
+release is held because current evidence is not on `main` and privacy-
+lifecycle, cross-machine, and independent-reproduction execution remains open.
+Scientific performance is parked because S21 session 1 is inconclusive while
+S21 session 2 and S7 EEG favor their no-signal priors. No tag, release, DOI,
+payload, protected read, model operation, or claim upgrade occurred.

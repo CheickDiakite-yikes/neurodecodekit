@@ -167,5 +167,6 @@ Do not create a packet, oracle, challenge workflow, outreach, contributor
 submission, adjudication, archive, badge, DOI, release, protected payload, or
 runtime from a broad continuation request. Independent artifact reproduction
 is not scientific replication, neural advantage, decoding evidence, or person,
-platform, device, and home-use generalization. Continue to Loop 44 planning
+platform, device, and home-use generalization. Loop 44 artifact-only planning
+is complete; continue through the separately authorized Loops 45-64 scientific
 research only.

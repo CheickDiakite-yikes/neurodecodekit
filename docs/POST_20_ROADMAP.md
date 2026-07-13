@@ -169,7 +169,8 @@ planning research selects OpenBCI Cyton base 8-channel USB-radio at Q0 for one
 future mechanics path while its experiment remains `Not Started` and
 unauthorized; Loop 43 planning research defines the independent artifact-
 reproduction firewall while its challenge remains `Not Started` and
-unauthorized; Loop 44 remains `Not Started`. All 20
+unauthorized. Loop 44 artifact-only claim review is complete, with engineering
+release held and scientific performance parked. All 20
 `execution_authorized` flags are false. Loop 25's exact decision packet is
 ready for review, while Loops 26-33 have no
 preregistration or authorization packet. Roadmap approval, general

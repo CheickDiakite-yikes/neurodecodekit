@@ -306,6 +306,12 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                     self.assertEqual(registration["commit"][:7], "b6b92d8")
                     self.assertFalse(registration["authorized_now"])
                     self.assertFalse(registration["superseded_v0"]["was_authorized"])
+                elif row["loop_id"] == 44:
+                    self.assertEqual(row["status"], "Planning Research Complete")
+                    self.assertEqual(
+                        row["proof_posture"],
+                        "artifact_only_claim_review_release_held",
+                    )
                 else:
                     self.assertEqual(row["status"], "Not Started")
                     if row["loop_id"] in {34, 35, 36, 37, 38, 39, 40, 41, 42, 43}:

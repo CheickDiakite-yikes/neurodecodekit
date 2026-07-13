@@ -115,7 +115,8 @@ anomaly, state, schedule, and provenance firewall while its experiment remains
 Cyton base 8-channel USB-radio for future mechanics only while its experiment
 remains `Not Started` and unauthorized; Loop 43 planning research defines the
 independent artifact-reproduction firewall while its challenge remains `Not
-Started` and unauthorized; Loop 44 remains `Not Started`.
+Started` and unauthorized. Loop 44 artifact-only claim review is complete;
+engineering release is held and scientific performance release is parked.
 The maximum future
 local Loop 31 claim is sensor-signal dependence, and brain-specific attribution
 remains blocked on Loop 35. All are unauthorized.
@@ -408,3 +409,27 @@ submission, or independent artifact reproduction exists. Even a future pass
 would be software-artifact reproduction, not scientific replication, neural
 advantage, decoding, person generalization, or device qualification. Read
 `docs/LOOP_43_PRIMARY_SOURCE_RESEARCH.md` before any Loop 43 proposal.
+
+## Loop 44 Claim And Release Boundary
+
+Loop 44 artifact-only planning and claim review are complete. Read
+`docs/LOOP_44_PRIMARY_SOURCE_RESEARCH.md`,
+`docs/LOOP_44_CLAIM_PROMOTION_AND_RELEASE_DECISION.md`, and
+`registries/loop44_claim_release_matrix.v0.json`.
+
+The exact decision is an engineering release `hold` and a scientific
+performance `park`. The repository has useful engineering contracts and three
+retained real-data predictive results, but none demonstrates positive neural
+advantage. No tag, GitHub release, DOI, participant payload, unseen-person
+result, end-to-end real-time result, portable/home device result, independent
+reproduction, or scientific replication exists.
+
+## Loops 45-64 Scientific Roadmap
+
+Read `docs/LOOPS_45_64_SCIENTIFIC_ROADMAP.md` and validate
+`registries/next_scientific_loops.v0.json`. The five phases are Real Signal
+Truth, Unseen-Person Verdict, Accessible EEG Evidence, Causal Local Use, and
+Independent Evidence And Release. Every loop is `Not Started` and
+unauthorized. The first desired scientific result is a frozen S21 validation
+model that beats a matched no-signal prior and every corrupted-signal control;
+S25 remains sealed until a separate final-only zero-shot packet is complete.

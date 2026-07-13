@@ -1,261 +1,225 @@
 # Open-Source Readiness
 
-Date: 2026-07-12
+Date: 2026-07-13
 
-Status: **Open-source collaboration surface merged to public `main`; latest
-RW2 evidence, RW3 preregistration/decision packet, and parked Loop 24 closeout
-remain in draft PR #2**
+Status: **public development repository; Loop 44 engineering release held;
+scientific performance release parked**
 
 ## Purpose
 
-This record separates public-release preparation from GitHub visibility,
-default-branch publication, and scientific proof claims. Documentation,
-community workflows, licensing, privacy checks, and metadata each require an
-explicit review trail even after the repository is visible publicly.
+This record separates four facts that are easy to blur:
+
+1. the GitHub repository is publicly visible;
+2. the current evidence branch stack is not yet merged to `main`;
+3. no versioned, archived research-software release exists;
+4. no positive real neural-decoding claim has been established.
+
+Loop 44's machine-readable decision is
+`registries/loop44_claim_release_matrix.v0.json`. Public visibility, green CI,
+a tag, or a DOI cannot upgrade a scientific claim.
 
 ## Current GitHub State
 
-| Field | Current state after PR #1 and before PR #2 merge |
+| Field | Current state |
 |---|---|
 | Repository | `CheickDiakite-yikes/neurodecodekit` |
-| Visibility | Public; no visibility-changing command was issued in this work |
-| Default branch | `main` at merge commit `18a705e` |
-| Open-source surface on `main` | Through commit `e5d89ed` via merged PR #1 |
-| Active evidence closeout | Draft PR #2 from `codex/loops-8-19-validated` |
+| Visibility | Public |
+| Default branch | `main` |
+| Current Loop 44 branch | `codex/loop-44-claim-release-research` |
+| Current evidence on `main` | No; Loops 8-44 remain a stacked review series |
+| Detected license | Apache-2.0 for original NeuroDecodeKit work |
+| Upstream Brain2Qwerty/SpanishBCBL boundary | CC BY-NC 4.0; not relicensed |
 | Issues | Enabled |
 | Discussions | Disabled |
 | Wiki | Disabled |
-| Description | Open-source, local-first EEG/MEG toolkit description with bounded access, honest baselines, reproducible caches, and explicit proof boundaries |
-| Homepage | Empty |
-| Topics | 20 research, modality, reproducibility, open-source, and local-first topics set |
-| Detected license | GitHub API reports Apache-2.0 on `main` at `18a705e`; PR #2 still restores the canonical appendix text and keeps project copyright in `NOTICE` |
-| Draft PR CI | 4/4 at the last checked commit; every later push must be rechecked before merge |
+| Homepage | Empty by design until a maintained site exists |
+| Topics | 20 research, modality, reproducibility, and open-source topics |
+| Git tags | 0 |
+| GitHub releases | 0 |
+| Archival DOI | Unavailable |
+| Independent reproduction | Not executed |
+| Positive real neural advantage | Not established |
 
-The repository was private at the start of this milestone and later reported
-public; no visibility-changing command was issued in this work. PR #1 has now
-merged the safety/community files, description, and contribution surface to
-`main`. Draft PR #2 contains the latest RW2 closeout, README results dashboard,
-current handoff, canonical license-text correction, CI portability record, and
-RW3's registration-only replay/live-source contract. It also contains the
-hash-bound Stage A decision packet prepared at `163ff2f`; the request remains
-unauthorized. Loop 24 was preregistered at `186bb6f`, authorized separately,
-implemented at `3a5dc0b`, and then parked after one target-free selection. Its
-generated fixture/report remain ignored and untracked.
-Do not describe those latest results, either protocol, or either decision
-surface as default-branch content until PR #2 is reviewed and merged.
+The last pre-Loop-44 tracked-path audit counted 295 tracked files and zero
+tracked neural/array/model binary candidates. That is a branch-development
+fact, not a final release scan. The exact candidate commit must be rescanned.
 
-## Added Public Surface
+## What Is Ready
 
-- detailed proof-first `README.md`;
-- `CONTRIBUTING.md` with dedicated EEG data and hardware paths;
+The repository has a substantial collaboration surface:
+
+- proof-first `README.md` and `START_HERE.md`;
+- `CONTRIBUTING.md` with dedicated EEG data, hardware, model, documentation,
+  and reproduction paths;
 - `CODE_OF_CONDUCT.md`, `GOVERNANCE.md`, `SUPPORT.md`, and `SECURITY.md`;
-- `CITATION.cff`;
-- provisional Apache-2.0 `LICENSE` and `NOTICE`;
-- `THIRD_PARTY_NOTICES.md` preserving Brain2Qwerty/SpanishBCBL terms;
-- bug, EEG data, EEG hardware, and research-result issue forms;
+- `CITATION.cff`, Apache-2.0 `LICENSE`, `NOTICE`, and
+  `THIRD_PARTY_NOTICES.md`;
+- structured bug, EEG data, EEG hardware, and research-result issue forms;
 - pull-request template and code ownership;
-- one-thread base and optional-neuro GitHub Actions jobs;
-- Gitleaks default configuration plus one exact documented-hash finding
-  fingerprint;
-- an explicit EEG-contributor launch table in the README;
-- a machine-bound RW3 Stage A decision packet that cannot silently authorize
-  implementation, later stages, sockets, devices, or real data.
-- a machine-bound Loop 24 precision/runtime implementation and closeout that
-  preserves physical split order, exact backend provenance, balanced timing,
-  correctness/resource gates, strict artifact inspection, and a negative park.
+- one-thread dependency-light and optional-neuro CI profiles;
+- explicit privacy, license, target-leakage, no-signal-comparator, storage,
+  runtime, and claim boundaries;
+- a strict Loop 44 claim matrix with 16 evidence cards.
+
+These are engineering prerequisites. They do not constitute a release or a
+neural-decoding result.
+
+## Claim Surface
+
+### Promotable engineering claims
+
+- bounded, dry-run-first selective data access;
+- strict modality/timing/mask/split/provenance NeuroTokenCache contracts;
+- 66/66 S21 session-1 trial identity reconciliation;
+- target-free synthetic causal replay and bounded local mechanics tests.
+
+### Real scientific findings that must remain visible
+
+| Evidence | Signal model | No-signal comparator | Status |
+|---|---:|---:|---|
+| S21 session-1 frozen test, 5 sentences | CER `0.947674` | CER `0.953488` | inconclusive near-null |
+| S21 session-2 consumed evaluation, 63 trials | CER `0.917949` | CER `0.775458` | signal model worse |
+| S7 EEG consumed evaluation, 1,100 key events | accuracy `0.009091` | accuracy `0.122727` | signal model worse |
+
+### Unavailable claims
+
+- positive real neural advantage;
+- zero-shot unseen-person generalization;
+- end-to-end real-time neural text decoding;
+- portable or home EEG/OPM-MEG performance;
+- independent artifact reproduction;
+- independent scientific replication;
+- clinical utility or arbitrary-thought decoding.
 
 ## License Boundary
 
-The proposed public license is Apache-2.0 for NeuroDecodeKit's original source
-code and documentation.
-
-This does not relicense:
+Apache-2.0 applies to original NeuroDecodeKit source and documentation. It does
+not relicense:
 
 - Brain2Qwerty source, models, papers, names, or assets;
-- SpanishBCBL recordings, logs, labels, or derived participant-level data;
+- SpanishBCBL recordings, logs, labels, or participant-derived artifacts;
 - optional dependencies;
 - device SDKs, firmware, sample recordings, or trademarks;
-- contributor material that the contributor had no right to submit.
+- contributor material the contributor lacks authority to submit.
 
-Brain2Qwerty and SpanishBCBL are documented separately as
-`CC-BY-NC-4.0`. The lead maintainer should explicitly approve the Apache-2.0
-choice before changing repository visibility. This is an engineering readiness
-record, not legal advice.
+Brain2Qwerty and SpanishBCBL are separately identified as CC BY-NC 4.0. The
+project must not bundle participant data, derived caches, predictions, target
+text, or upstream model payloads into an Apache-2.0 release. This record is not
+legal advice.
 
-## Tracked-Content Audit
+## Privacy And Payload Gate
 
-Measured on the active branch before the documentation additions:
+Before any release candidate, confirm at the exact candidate commit and across
+reachable Git history:
 
-```text
-tracked files:                 182
-git object store:              6.22 MiB loose objects plus 332.37 KiB pack
-largest historical blob:      321,169 bytes
-tracked data/ entries:         data/.gitkeep
-tracked cache/ entries:        cache/.gitkeep
-tracked neural recordings:    0 found by extension/name scan
-tracked NPZ/Zarr caches:       0 found by extension/name scan
-git-lfs dependency:           not used
-```
+- no raw EEG, MEG, EOG, EMG, gaze, motion, audio, or behavioral payload;
+- no event target list, sentence text, participant table, free-text annotation,
+  precise acquisition timestamp, device serial, or signed/private link;
+- no derived participant cache, NeuroToken payload, embedding, checkpoint,
+  individual prediction, or error-row artifact;
+- no generated inspection sidecar, local path, secret, credential, cookie, or
+  environment file;
+- all examples use synthetic or placeholder identities;
+- issue forms and contribution docs reject participant uploads;
+- private security and conduct-reporting routes work.
 
-Local ignored `data/`, `cache/`, `outputs/`, `.venv/`, and `.codex_work/`
-content is not evidence of tracked public content. Run the audit again from the
-exact release commit.
+Loop 38 is planning research only. Its unexecuted lifecycle gate is a release
+blocker, not paperwork that may be waived.
 
-## Secret Scan
+## Reproducibility Gate
 
-Gitleaks 8.30.0 scanned 31 commits and approximately 2.58 MB of additions.
-It reported one `generic-api-key` candidate in
-`docs/LOOP_20_NEUROTOKEN_CACHE_V0.md`.
+Before calling the project a versioned reproducible release:
 
-Manual review confirmed that the candidate is a labeled 64-character SHA-256 of
-a deterministic NeuroToken numerical payload. Adjacent lines contain source
-cache and split-report SHA-256 values for reproducibility. It is not a token,
-credential, signed URL, or identifier with authority.
+1. Review and merge the stacked evidence series onto `main`.
+2. Freeze an exact source commit, supported environments, dependencies,
+   commands, inputs, expected outputs, comparisons, and resource caps.
+3. Run the Loop 39 cross-machine matrix rather than citing maintainer CI.
+4. Run the Loop 43 independent author-artifact challenge with public-only
+   communication and immutable discrepancy records.
+5. Keep independent artifact reproduction separate from scientific
+   replication.
 
-`.gitleaks.toml` keeps the complete default rule set. `.gitleaksignore` records
-the exact commit/path/rule/line fingerprint of this one reviewed finding. It
-does not suppress another hexadecimal string, another line, another commit, or
-another rule.
+Green maintainer CI establishes neither independent reproduction nor scientific
+replication.
 
-The scan must be rerun after all documentation and before publication.
+## Candidate Verification
 
-## Neural-Data Privacy Gate
-
-Before release, confirm:
-
-- no raw recording or behavioral/event target file is tracked in current or
-  historical commits;
-- no participant table, free-text annotation dump, target sentence list, exact
-  acquisition timestamp, device serial, or private cloud link is tracked;
-- no generated cache, embedding, prediction/error report, or inspection debris
-  is tracked;
-- every example uses synthetic or placeholder paths;
-- local ignored artifacts remain outside staged changes;
-- GitHub issue forms warn against uploads;
-- private vulnerability reporting is available or an alternate private route is
-  documented.
-
-## Community Gate
-
-Before release:
-
-- validate every issue form on GitHub after merge;
-- create the referenced labels and descriptions;
-- ensure issue-template links resolve on `main`;
-- decide whether to enable Discussions;
-- decide whether branch protection and required CI should be enabled;
-- enable private vulnerability reporting when GitHub permits it;
-- verify `CODEOWNERS` resolves to the maintainer account;
-- review the conduct-reporting route for a sustainable private contact.
-
-## Repository Metadata Gate
-
-Safe metadata can be applied while the repository remains private:
-
-- description;
-- topics;
-- issue labels.
-
-Do not invent a homepage. The GitHub repository is the documentation home until
-a maintained project site exists.
-
-Recommended description:
-
-```text
-Open-source, local-first EEG/MEG language-decoding research toolkit with bounded data access, honest baselines, reproducible caches, and explicit proof boundaries.
-```
-
-Recommended topics:
-
-```text
-brain-computer-interface
-brain-decoding
-eeg
-meg
-neural-decoding
-neurotechnology
-signal-processing
-mne-python
-bids
-python
-local-first
-reproducible-research
-research-software
-assistive-technology
-machine-learning
-brain2qwerty
-eeg-analysis
-neuroinformatics
-open-science
-open-source
-```
-
-## Verification Gate
-
-The release candidate must pass:
+The exact candidate commit must pass at minimum:
 
 ```bash
 PYTHONPATH=src python -m unittest discover -s tests -v
-PYTHONPATH=src python -m unittest discover -s tests -p 'test_signal_quality.py' -v
-PYTHONPATH=src python -m unittest discover -s tests -p 'test_replay_equivalence_contract.py' -v
-PYTHONPATH=src python -m unittest discover -s tests -p 'test_local_precision_runtime_contract.py' -v
+PYTHONPATH=src python -m unittest discover -s tests -p 'test_loop44_claim_release_matrix.py' -v
 ruff check .
 python -m compileall -q src tests
 git diff --check
 gitleaks git . --redact --no-banner
 neurodecode --help
-neurodecode inspect-recording --help
-neurodecode make-signal-quality-fixtures --help
-neurodecode make-precision-runtime-fixture --help
-neurodecode local-precision-runtime-gate --help
-neurodecode inspect-local-precision-runtime-report --help
 ```
 
-Also run one bounded synthetic RW2 create/inspect/report roundtrip and record:
+Verification must also report:
 
-- input and output bytes;
-- runtime and peak RSS;
-- reader/fixture counts;
-- requested/returned sample values;
-- materialized array bytes;
-- raw/real/cache/target/model/training/network access;
-- causality and end-to-end latency status;
-- warnings and unavailable fields.
+- exact commit and environment;
+- test counts, skips, runtime, and peak RSS when available;
+- tracked files and historical blobs;
+- generated, data, cache, model, and secret candidates;
+- license and citation validation;
+- unresolved privacy, security, reproduction, and claim blockers;
+- every unavailable field.
 
-Loop 24 is a parked target-free local result. Release verification must confirm
-that its fixture, numeric payloads, timing rows, and reports remain ignored;
-seed 2401 is not rerun; seed 2402 remains unopened; every real/consumed/target/
-training/energy/RW3 counter remains zero; and all contract, authorization,
-backend, tamper, resource, CLI, and dependency-free invariants pass.
+Do not rerun consumed scientific evaluations merely to qualify a release.
 
-## Visibility Decision
+## Version And Archive Gate
 
-Public visibility is active and PR #1 has merged the community surface. The
-maintainer must still explicitly decide whether public visibility should
-remain. The latest evidence closeout should be called current on the public
-default only after:
+`CITATION.cff` currently identifies version `0.1.0`, but no matching tag,
+GitHub release, or archive DOI exists. A future release decision must:
 
-1. draft PR #2 is reviewed and merged;
-2. CI passes on the merge result;
-3. Apache-2.0 for original NeuroDecodeKit work is approved and detected;
-4. the tracked-content and Gitleaks scans pass;
-5. issue forms and security reporting are verified;
-6. the README proof boundary matches the current closeout;
-7. the maintainer confirms that publishing repository history is intended.
+1. select a version only after the exact candidate is green;
+2. synchronize `pyproject.toml`, `CITATION.cff`, release notes, and docs;
+3. create a signed or otherwise attributable maintainer decision;
+4. create the Git tag and GitHub release only after approval;
+5. archive the exact version if desired and record version-specific and concept
+   DOI identities separately;
+6. verify the public archive contains no protected or nonredistributable
+   payload.
 
-No command in this milestone changed repository visibility. The description,
-topics, and labels were updated without a visibility flag. The current state
-should therefore be reviewed in GitHub's repository settings before release
-signoff.
+A DOI improves citability. It does not peer-review the work or establish a
+neural effect.
+
+## Community Gate
+
+Before a first formal release:
+
+- validate issue forms and links on `main`;
+- create and document referenced labels;
+- verify `CODEOWNERS` resolves correctly;
+- decide branch protection and required checks;
+- enable private vulnerability reporting if available;
+- verify the conduct-reporting route is sustainable;
+- label beginner, EEG-data, hardware, documentation, and reproduction
+  contribution paths clearly;
+- state that contributor-owned EEG remains local unless a separate consent,
+  license, privacy, retention, and aggregate-output protocol is approved.
+
+## Loop 44 Decision
+
+| Decision | State |
+|---|---|
+| Artifact-only claim review | Proceed / complete |
+| Engineering source release | Hold |
+| Scientific performance release | Park |
+| Clinical or arbitrary-thought claim | Prohibit |
+
+The engineering hold can be cleared by completing the branch, security,
+privacy-lifecycle, reproducibility, and maintainer gates. The scientific park
+requires new qualifying evidence, not stronger release language.
 
 ## Closeout Language
 
-**Engineering capability added:** the repository gains a complete, reviewable
-open-source collaboration surface with EEG-specific contribution paths,
-licensing boundaries, security/privacy reporting, structured intake forms, and
-bounded CI.
+**Engineering capability added:** Loop 44 provides a strict evidence and
+release ledger that keeps source availability, reproducibility, scientific
+support, privacy, and licensing as separate reviewable gates.
 
-**Scientific or decoding claim not established:** documentation, community
-files, and synthetic interface tests do not establish neural advantage,
-unseen-person generalization, real-time decoding, portable EEG performance, or
-clinical utility.
+**Scientific or decoding claim not established:** Open source, tests,
+documentation, tags, or archival identifiers do not establish positive neural
+advantage, unseen-person generalization, real-time decoding, portable/home
+hardware performance, scientific replication, or clinical utility.
