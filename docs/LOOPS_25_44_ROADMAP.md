@@ -832,26 +832,58 @@ embeddings live, who can access them, and how they are retained or deleted?
 **Why it moves the goal:** Neural signals and embeddings can expose identity;
 local-first behavior needs a verifiable lifecycle, not only a README promise.
 
-**Build:** Create a data inventory, sensitivity labels, approved local roots,
-retention policy, deletion receipts, redaction scanner, and threat model for
-raw, derived, report, log, temporary, backup, and Git paths.
+**Planning result:** Research is complete while the experiment remains `Not
+Started` and unauthorized. The future interface freezes five sensitivity
+levels, eight artifact classes, ten lifecycle surfaces, 12 sensitive-field
+classes, 12 threat scenarios, five deletion-receipt levels, and four separately
+authorized stages. Pseudonyms, stable hashes, embeddings, and de-identified
+neural payloads remain potentially linkable.
 
-**Research:** Map NIST privacy functions and EEG identity-risk findings to
-repository controls and contributor guidance.
+**Build after separate authorization:** Create a target-free synthetic data
+inventory, sensitivity labels, approved local roots, retention policy,
+redaction scanner, and narrow deletion receipts. Keep raw, derived, report,
+log, temporary, backup/sync, Git/LFS/history, remote clone/PR, CI, and release
+copies separate.
 
-**Data and controls:** Repository metadata and generated fixtures only. Test
-absolute paths, aliases, timestamps, serials, secrets, temporary files,
-backups, tracked history, and staged changes. Do not run a real identity attack.
+**Research:** The stable pin is NIST Privacy Framework 1.0 because 1.1 remains
+an initial public draft. NISTIR 8062 contributes predictability,
+manageability, and disassociability; PRAM structures the risk analysis; SP
+800-88 Rev. 2 separates application path receipts from media sanitization.
+GitHub history guidance, Open Brain Consent, EEG identity research, and OECD
+neurotechnology stewardship define clone, consent, identity, and anti-hype
+boundaries.
 
-**Metrics:** sensitive-field coverage; fixture redaction recall; policy
-violations; tracked neural bytes; verified deletion; unresolved copies.
+**Data and controls:** This research used repository metadata and public sources
+only. A future Stage A is target-free synthetic fixtures only. Test absolute
+paths, aliases, timestamps, serials, secrets, consent/IRB IDs, targets/free
+text, rare rows, stable hashes, neural-derived suffixes, temporary files,
+backups, aliases, tracked history, force-add, clones, and CI copies. Do not run
+a real identity attack or touch a protected root.
 
-**Gate:** Every artifact class needs an owner, location, retention rule,
-redaction behavior, and narrow deletion path, with zero tracked neural payload.
-Block sharing when consent, license, lifecycle, or deletion is unclear.
+**Metrics:** artifact and lifecycle coverage; fixture redaction recall and
+public precision; policy violations; current and all-ref tracked neural paths
+and bytes; receipt level; deleted/skipped/failed/unresolved copies; runtime,
+RSS, bytes, files, threads, workers, network, and mutation counts.
 
-**Dependencies and authorization:** Depends on Loop 37. No real identity
-analysis or destructive broad cleanup is authorized.
+**Gate:** Every artifact class needs an owner, sensitivity, location, retention,
+redaction, sharing, and deletion policy. Every copy surface is checked, blocked,
+unavailable, or unresolved. Prohibited survivor bytes and tracked neural
+payloads are zero. Unknown copies remain unresolved. Block anonymity,
+privacy-safe, secure-deletion, sharing, and release claims when consent,
+license, lifecycle, receipt level, or media evidence is unclear.
+
+**Dependencies and authorization:** Depends on Loop 37. Stage A synthetic,
+Stage B read-only local metadata, Stage C named real-derived lifecycle, and
+Stage D release are independent decisions. Loop 39 is required for cross-
+machine copy claims, Loop 42 for device lifecycle, and Loop 44 plus external
+governance for release. No fixture, scanner, deletion, protected-root scan,
+identity attack, history rewrite, remote cleanup, consent/legal determination,
+release/upload, model, training, stream, device, or hardware work is authorized.
+
+**Resources:** Current generated experiment bytes are zero. Future Stage A is
+standard-library-first, one thread/worker, 120 seconds, 512 MiB RSS, 8 MiB
+reports, 128 files, zero network/download/upload bytes, zero real signal reads,
+and zero nonfixture destructive mutations.
 
 ## Loop 39 - Cross-Machine Reproducibility Matrix
 

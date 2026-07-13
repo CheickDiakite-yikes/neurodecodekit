@@ -147,8 +147,13 @@ maximum future real-header claim. Loop 37 planning research freezes six export
 layers, five artifact profiles, 15 stable BIDS mappings, 16 NeuroDecodeKit
 extension fields, 20 fixtures, four stages, 24 gates, 32 refusals, and 29 false
 authorization fields. Its experiment remains `Not Started` and unauthorized;
-custom payloads remain explicitly non-standard. Loops 38-44 remain `Not
-Started`. All 20
+custom payloads remain explicitly non-standard. Loop 38 planning research
+freezes five sensitivity levels, eight artifact classes, ten lifecycle
+surfaces, 12 sensitive-field classes, 12 threats, five deletion-receipt levels,
+24 fixtures, four stages, 26 gates, 36 refusals, and 32 false authorization
+fields. Its experiment remains `Not Started`; unknown copies remain unresolved
+and all scanner/deletion/identity/release work is unauthorized. Loops 39-44
+remain `Not Started`. All 20
 `execution_authorized` flags are false. Loop 25's exact decision packet is
 ready for review, while Loops 26-33 have no
 preregistration or authorization packet. Roadmap approval, general
@@ -251,3 +256,9 @@ from the other.
   install/run a validator, inspect protected payloads, copy data, map real
   subject identifiers, release/upload an artifact, or call a non-standard NPZ
   or report payload BIDS-compliant.
+- Keep Loop 38 planning-only. Its sensitivity, artifact, lifecycle, redaction,
+  threat, and deletion-receipt taxonomies are not permission to create a
+  fixture or scanner, inspect protected roots, delete files, rewrite history,
+  clean remotes or backups, run an identity attack, decide consent/license,
+  release/upload data, or call path absence secure media sanitization. Unknown
+  copies stay unresolved.

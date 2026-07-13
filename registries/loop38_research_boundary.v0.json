@@ -1,0 +1,513 @@
+{
+  "schema_name": "neurodecodekit.loop38_research_boundary",
+  "schema_version": "0.1.0",
+  "loop_id": 38,
+  "prepared_at": "2026-07-13",
+  "status": "planning_research_complete_experiment_not_started",
+  "proof_posture": "planning_only_no_fixture_scanner_deletion_identity_attack_protected_access_or_release",
+  "authorization": {
+    "authorized_now": false,
+    "authorization_sentence_exists": false,
+    "loop38_preregistration_authorized_now": false,
+    "loop38_implementation_authorized_now": false,
+    "synthetic_privacy_fixture_authorized_now": false,
+    "redaction_scanner_implementation_authorized_now": false,
+    "lifecycle_scanner_implementation_authorized_now": false,
+    "deletion_receipt_implementation_authorized_now": false,
+    "destructive_cleanup_authorized_now": false,
+    "real_data_root_inventory_authorized_now": false,
+    "real_header_or_signal_read_authorized_now": false,
+    "real_cache_embedding_or_report_payload_read_authorized_now": false,
+    "real_target_label_text_or_consent_read_authorized_now": false,
+    "participant_identifier_mapping_authorized_now": false,
+    "identity_linkage_or_reidentification_attack_authorized_now": false,
+    "consumed_s7_or_s21_reopen_authorized_now": false,
+    "s20_or_s25_access_authorized_now": false,
+    "source_payload_hash_read_authorized_now": false,
+    "local_backup_or_sync_root_scan_authorized_now": false,
+    "git_history_rewrite_authorized_now": false,
+    "remote_clone_or_fork_cleanup_authorized_now": false,
+    "github_actions_artifact_cleanup_authorized_now": false,
+    "media_sanitization_authorized_now": false,
+    "consent_or_irb_legal_determination_authorized_now": false,
+    "license_clearance_authorized_now": false,
+    "public_release_or_upload_authorized_now": false,
+    "network_fetch_or_download_authorized_now": false,
+    "cloud_or_remote_storage_authorized_now": false,
+    "model_checkpoint_or_embedding_inference_authorized_now": false,
+    "training_or_parameter_update_authorized_now": false,
+    "generated_fixture_report_or_receipt_git_add_authorized_now": false,
+    "loop39_or_later_authorized_now": false,
+    "rw3_stream_sdk_socket_device_or_hardware_authorized_now": false
+  },
+  "decision": {
+    "current_experiment_status": "Not Started",
+    "selected_future_mode": "target_free_synthetic_lifecycle_and_redaction_contract",
+    "maximum_current_claim_class": "L38-C0_no_new_result",
+    "maximum_future_stage_a_claim": "L38-C1_synthetic_inventory_redaction_and_receipt_behavior",
+    "maximum_future_stage_b_claim": "L38-C2_repository_and_named_local_root_lifecycle_coverage",
+    "maximum_future_real_metadata_claim": "L38-C3_named_artifact_local_lifecycle_qualified",
+    "anonymous_neural_data_available_now": false,
+    "privacy_safe_release_available_now": false,
+    "verified_media_sanitization_available_now": false,
+    "unknown_copy_consent_license_or_owner_default": "unresolved_and_block_sharing",
+    "negative_or_incomplete_result_is_publishable": true
+  },
+  "dependencies": {
+    "loop37_planning_dependency_satisfied_now": true,
+    "loop37_execution_or_derivative_tree_required_for_stage_a": false,
+    "loop37_real_or_public_export_blocked_until_loop38_qualification": true,
+    "loop39_required_before_cross_machine_copy_inventory_claim": true,
+    "loop42_required_before_device_lifecycle_claim": true,
+    "loop44_required_before_public_release_claim": true,
+    "license_implies_participant_consent": false,
+    "deidentification_implies_share_permission": false,
+    "gitignore_implies_deletion": false,
+    "path_absence_implies_media_sanitization": false
+  },
+  "standards_pins": {
+    "nist_privacy_framework_stable_version": "1.0",
+    "nist_privacy_framework_1_1_status": "initial_public_draft_not_stable_pin",
+    "nist_ir_8062_privacy_objectives": [
+      "predictability",
+      "manageability",
+      "disassociability"
+    ],
+    "nist_pram_used_as_risk_method_not_compliance_certificate": true,
+    "nist_sp_800_88_revision": "2",
+    "nist_sp_800_88_publication_date": "2025-09",
+    "github_history_removal_requires_clone_coordination": true,
+    "open_brain_consent_is_template_not_local_legal_clearance": true,
+    "oecd_brain_data_stewardship_is_governance_guidance": true,
+    "eeg_identity_results_are_risk_evidence_not_local_attack_results": true
+  },
+  "existing_evidence_inventory": [
+    {
+      "evidence_id": "current_tracked_payload_inventory",
+      "finding": "Git currently tracks zero neural or model binary candidate files and zero candidate bytes.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "all_history_payload_path_inventory",
+      "finding": "Metadata-only all-ref Git history lists zero neural or model binary candidate paths.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "ignored_local_roots",
+      "finding": "data cache outputs virtual environments and tool caches are ignored, but ignore rules do not prove ownership retention deletion backup absence or media sanitization.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "temporary_test_roots",
+      "finding": "Tests use process-managed temporary directories; current code has no repository-wide lifecycle inventory or durable deletion receipt contract.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "internal_provenance_linkability",
+      "finding": "Existing caches and reports can preserve paths subject/session/item identities timestamps and stable hashes that are useful for provenance but potentially linkable.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "git_history_boundary",
+      "finding": "Deleting a tracked working-tree file does not remove prior Git objects clones forks pull-request references or downstream copies.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "consent_license_boundary",
+      "finding": "CC BY-NC terms public availability de-identification and technical redaction do not by themselves establish participant consent or release authority.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "neural_identity_risk",
+      "finding": "Published EEG studies demonstrate participant-identification risk across sessions and tasks; no local identity attack was run and no risk percentage is transferred to this repository.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "deletion_claim_boundary",
+      "finding": "A future application receipt can prove scoped path and manifest behavior but cannot prove physical-media sanitization or deletion from unknown backups and clones.",
+      "payload_read_now": false
+    }
+  ],
+  "sensitivity_levels": [
+    {
+      "level_id": "L38-S0_public",
+      "meaning": "Reviewed public source code documentation schemas and synthetic aggregate examples."
+    },
+    {
+      "level_id": "L38-S1_internal_operational",
+      "meaning": "Nonparticipant local paths logs environment details and workflow metadata requiring redaction before sharing."
+    },
+    {
+      "level_id": "L38-S2_pseudonymous_research",
+      "meaning": "Subject session trial event timing channel geometry provenance hashes and derived aggregate rows that can remain linkable."
+    },
+    {
+      "level_id": "L38-S3_neural_or_derived_sensitive",
+      "meaning": "Raw neural signals windows continuous caches embeddings Neuro Tokens checkpoints and individual predictions."
+    },
+    {
+      "level_id": "L38-S4_direct_or_governance_restricted",
+      "meaning": "Direct identifiers consent IRB keys target text participant mappings credentials and release authority records."
+    }
+  ],
+  "artifact_classes": [
+    {
+      "artifact_id": "L38-A1_raw_recording",
+      "default_sensitivity": "L38-S3_neural_or_derived_sensitive",
+      "default_retention": "source_terms_and_named_owner_only",
+      "public_release_default": "forbidden"
+    },
+    {
+      "artifact_id": "L38-A2_event_target_and_consent",
+      "default_sensitivity": "L38-S4_direct_or_governance_restricted",
+      "default_retention": "separate_controlled_root_and_named_owner",
+      "public_release_default": "forbidden"
+    },
+    {
+      "artifact_id": "L38-A3_derived_signal_cache",
+      "default_sensitivity": "L38-S3_neural_or_derived_sensitive",
+      "default_retention": "bounded_run_or_explicit_research_record",
+      "public_release_default": "forbidden_without_separate_review"
+    },
+    {
+      "artifact_id": "L38-A4_embedding_neurotoken_or_checkpoint",
+      "default_sensitivity": "L38-S3_neural_or_derived_sensitive",
+      "default_retention": "bounded_run_or_explicit_research_record",
+      "public_release_default": "forbidden_without_identity_and_inversion_review"
+    },
+    {
+      "artifact_id": "L38-A5_report_aggregate_or_manifest",
+      "default_sensitivity": "L38-S2_pseudonymous_research",
+      "default_retention": "reviewed_evidence_record",
+      "public_release_default": "redaction_consent_license_and_minimum_cell_review"
+    },
+    {
+      "artifact_id": "L38-A6_log_trace_or_runtime_metadata",
+      "default_sensitivity": "L38-S1_internal_operational",
+      "default_retention": "short_bounded_debug_window",
+      "public_release_default": "redacted_only"
+    },
+    {
+      "artifact_id": "L38-A7_temporary_intermediate_or_backup",
+      "default_sensitivity": "inherit_highest_source_sensitivity",
+      "default_retention": "delete_after_verified_success_or_failure_cleanup",
+      "public_release_default": "forbidden"
+    },
+    {
+      "artifact_id": "L38-A8_git_ci_release_or_remote_copy",
+      "default_sensitivity": "inherit_highest_contained_sensitivity",
+      "default_retention": "provider_and_repository_policy_with_named_owner",
+      "public_release_default": "allowlist_only"
+    }
+  ],
+  "lifecycle_surfaces": [
+    "approved_raw_data_root",
+    "approved_derived_cache_root",
+    "authorized_ignored_run_root",
+    "operating_system_temporary_root",
+    "shell_editor_notebook_and_application_logs",
+    "local_sync_backup_snapshot_and_trash",
+    "git_worktree_index_objects_refs_and_lfs",
+    "remote_origin_forks_clones_and_pull_request_refs",
+    "ci_logs_caches_and_artifacts",
+    "release_bundle_archive_and_download_copies"
+  ],
+  "sensitive_field_classes": [
+    "absolute_path_home_username_and_hostname",
+    "participant_alias_subject_mapping_and_filename_identity",
+    "acquisition_date_wall_clock_and_high_resolution_timestamp",
+    "device_serial_mac_ip_board_and_stream_identity",
+    "email_phone_address_institution_and_operator_identity",
+    "credential_token_secret_key_cookie_and_environment_value",
+    "consent_irb_protocol_and_data_use_identifier",
+    "target_prompt_response_sentence_label_and_free_text",
+    "rare_demographic_clinical_or_behavioral_attribute",
+    "stable_source_payload_or_membership_hash",
+    "individual_prediction_error_and_confidence_row",
+    "neural_signal_window_embedding_neurotoken_or_checkpoint_payload"
+  ],
+  "threat_scenarios": [
+    "accidental_git_stage_or_force_add_of_ignored_payload",
+    "absolute_path_or_username_leak_in_report",
+    "subject_alias_linkage_across_artifacts_or_releases",
+    "high_resolution_timestamp_or_device_serial_linkage",
+    "target_text_or consent_record_leak",
+    "temporary_file_or_failed_run_residue",
+    "cloud_sync_backup_snapshot_or_trash_persistence",
+    "git_history_pull_request_fork_clone_or_lfs_persistence",
+    "ci_log_cache_or_artifact_exposure",
+    "embedding_checkpoint_or_hash_used_for_identity_linkage",
+    "small_cell_or_unique_error_row_singling_out",
+    "overbroad_cleanup_deletes_unrelated_user_work"
+  ],
+  "deletion_receipt_levels": [
+    {
+      "receipt_id": "L38-D0_not_requested_or_unknown",
+      "claim": "No deletion claim."
+    },
+    {
+      "receipt_id": "L38-D1_scoped_path_absent",
+      "claim": "Named paths are absent from one authorized root after a narrow operation."
+    },
+    {
+      "receipt_id": "L38-D2_local_manifest_rescan_clean",
+      "claim": "Expected local paths aliases and manifest entries are absent and unresolved copies are enumerated."
+    },
+    {
+      "receipt_id": "L38-D3_repository_remote_coordination_recorded",
+      "claim": "Git history LFS origin pull-request clone and collaborator remediation status is explicitly recorded."
+    },
+    {
+      "receipt_id": "L38-D4_media_sanitization_external",
+      "claim": "Storage-specific sanitization evidence exists outside the application under NIST SP 800-88 Rev. 2 or an equivalent owner-approved process."
+    }
+  ],
+  "deletion_policy": {
+    "default_operation": "dry_run_inventory_only",
+    "broad_recursive_cleanup_allowed": false,
+    "unowned_root_cleanup_allowed": false,
+    "symlink_following_allowed": false,
+    "hardlink_alias_must_be_reported": true,
+    "path_must_be_under_exact_authorized_root": true,
+    "expected_manifest_and_preoperation_hash_required": true,
+    "deletion_receipt_must_list_deleted_missing_skipped_and_unresolved": true,
+    "receipt_contains_payload_bytes": false,
+    "receipt_is_media_sanitization_proof": false,
+    "unknown_backup_clone_or_remote_copy_default": "unresolved"
+  },
+  "future_fixture_families": [
+    "valid_public_document_tree",
+    "valid_pseudonymous_metadata_tree",
+    "valid_derived_sensitive_tree",
+    "absolute_home_path_and_username",
+    "participant_alias_and_mapping_table",
+    "acquisition_date_and_high_resolution_timestamp",
+    "device_serial_hostname_ip_and_mac",
+    "credential_token_cookie_and_env_secret",
+    "consent_irb_and_data_use_identifier",
+    "target_prompt_response_and_free_text",
+    "rare_small_cell_and_unique_error_row",
+    "stable_hash_cross_bundle_linkage",
+    "neural_embedding_and_checkpoint_suffixes",
+    "unknown_extension_and_mime_mismatch",
+    "symlink_escape_and_hardlink_alias",
+    "case_folded_duplicate_and_unicode_alias",
+    "temporary_file_after_success",
+    "temporary_file_after_failure",
+    "backup_snapshot_trash_and_sync_copy",
+    "git_index_history_lfs_and_force_add",
+    "remote_clone_fork_pull_request_and_ci_copy",
+    "narrow_deletion_manifest_drift",
+    "overbroad_root_or_unowned_path",
+    "deterministic_receipt_replay_and_tamper"
+  ],
+  "future_stage_sequence": [
+    {
+      "stage_id": "L38-STAGE-A",
+      "scope": "target_free_synthetic_inventory_redaction_and_narrow_deletion_receipts",
+      "separate_authorization_required": true
+    },
+    {
+      "stage_id": "L38-STAGE-B",
+      "scope": "read_only_repository_and_named_local_root_metadata_lifecycle_scan",
+      "separate_authorization_required": true
+    },
+    {
+      "stage_id": "L38-STAGE-C",
+      "scope": "named_real_derived_artifact_lifecycle_qualification_without_identity_attack",
+      "separate_authorization_required": true
+    },
+    {
+      "stage_id": "L38-STAGE-D",
+      "scope": "consent_license_cross_machine_and_release_qualified_public_sharing",
+      "separate_authorization_required": true
+    }
+  ],
+  "outcome_taxonomy": [
+    {
+      "outcome_id": "L38-O1_invalid",
+      "meaning": "Schema authorization path cap receipt or tamper contract failed."
+    },
+    {
+      "outcome_id": "L38-O2_inventory_incomplete",
+      "meaning": "One or more artifact owners locations retention rules or copy surfaces are unknown."
+    },
+    {
+      "outcome_id": "L38-O3_redaction_failed",
+      "meaning": "A prohibited field payload or linkable identifier survives review."
+    },
+    {
+      "outcome_id": "L38-O4_local_receipt_verified",
+      "meaning": "The exact authorized local-root receipt level passes while external copies remain separately stated."
+    },
+    {
+      "outcome_id": "L38-O5_repository_remediation_required",
+      "meaning": "Sensitive material entered Git LFS CI or remote history and coordinated remediation is required."
+    },
+    {
+      "outcome_id": "L38-O6_consent_or_license_blocked",
+      "meaning": "Technical redaction passes but sharing authority remains unavailable."
+    },
+    {
+      "outcome_id": "L38-O7_external_copy_or_sanitization_unavailable",
+      "meaning": "Backup clone remote or physical-media deletion cannot be proven."
+    },
+    {
+      "outcome_id": "L38-O8_negative_published",
+      "meaning": "Incomplete coverage or failed fixtures are published without weakening policy or deleting unrelated work."
+    }
+  ],
+  "claim_taxonomy": [
+    {
+      "claim_id": "L38-C0_no_new_result",
+      "status": "current"
+    },
+    {
+      "claim_id": "L38-C1_synthetic_inventory_redaction_and_receipt_behavior",
+      "status": "future_stage_a_maximum"
+    },
+    {
+      "claim_id": "L38-C2_repository_and_named_local_root_lifecycle_coverage",
+      "status": "future_stage_b_maximum"
+    },
+    {
+      "claim_id": "L38-C3_named_artifact_local_lifecycle_qualified",
+      "status": "future_stage_c_maximum"
+    },
+    {
+      "claim_id": "L38-C4_cross_machine_copy_inventory",
+      "status": "reserved_for_loop39"
+    },
+    {
+      "claim_id": "L38-C5_public_shareable_release",
+      "status": "reserved_for_loop44_and_external_governance"
+    }
+  ],
+  "future_acceptance_gates": [
+    {"requirement_id": "L38-G01", "requirement": "A separate authorization-only commit freezes the exact stage before any fixture scanner or deletion operation exists."},
+    {"requirement_id": "L38-G02", "requirement": "Every fixture is target-free synthetic and contains no participant-derived bytes or real identifiers."},
+    {"requirement_id": "L38-G03", "requirement": "Every artifact class has an owner sensitivity location retention redaction sharing and deletion policy."},
+    {"requirement_id": "L38-G04", "requirement": "Every lifecycle surface is classified as checked clean blocked unavailable or unresolved."},
+    {"requirement_id": "L38-G05", "requirement": "NIST predictability manageability and disassociability mappings are explicit and never treated as certification."},
+    {"requirement_id": "L38-G06", "requirement": "Sensitive-field fixtures cover paths identifiers timestamps serials secrets governance text hashes rows and neural-derived payloads."},
+    {"requirement_id": "L38-G07", "requirement": "Redaction recall is exact on required fixture members with zero prohibited survivor bytes."},
+    {"requirement_id": "L38-G08", "requirement": "Public non-sensitive fixture precision is exact with zero silent destructive mutation."},
+    {"requirement_id": "L38-G09", "requirement": "Stable hashes and pseudonyms are treated as linkable unless explicitly scoped and salted for the release context."},
+    {"requirement_id": "L38-G10", "requirement": "Raw neural derived embeddings checkpoints targets consent and direct mappings fail closed."},
+    {"requirement_id": "L38-G11", "requirement": "Absolute paths home usernames hostnames device identifiers and wall-clock acquisition times redact by default."},
+    {"requirement_id": "L38-G12", "requirement": "Unknown extensions MIME mismatches archives and nested containers refuse or remain unresolved."},
+    {"requirement_id": "L38-G13", "requirement": "Symlink escapes hardlink aliases case collisions and Unicode aliases are detected without following unsafe links."},
+    {"requirement_id": "L38-G14", "requirement": "Temporary success failure backup sync trash and snapshot surfaces are reported separately."},
+    {"requirement_id": "L38-G15", "requirement": "Git worktree index history refs LFS force-add and ignore behavior are tested separately."},
+    {"requirement_id": "L38-G16", "requirement": "Remote clones forks pull-request refs CI logs caches and artifacts are never inferred clean from local state."},
+    {"requirement_id": "L38-G17", "requirement": "Deletion defaults to dry-run and requires an exact new or fixture-owned root manifest and authorization."},
+    {"requirement_id": "L38-G18", "requirement": "Deletion refuses traversal root drift symlink following unowned paths and unrelated files."},
+    {"requirement_id": "L38-G19", "requirement": "Receipts enumerate deleted already-missing skipped failed and unresolved copies without embedding sensitive payload."},
+    {"requirement_id": "L38-G20", "requirement": "Receipt levels distinguish path absence local rescan repository coordination and external media sanitization."},
+    {"requirement_id": "L38-G21", "requirement": "Consent license de-identification and technical privacy review remain separate required decisions."},
+    {"requirement_id": "L38-G22", "requirement": "Input scanned output temporary deletion and unresolved-copy bytes and counts are exact and under cap."},
+    {"requirement_id": "L38-G23", "requirement": "Runtime peak RSS thread worker file network and mutation counters are exact."},
+    {"requirement_id": "L38-G24", "requirement": "Deterministic replay in two fresh roots preserves findings receipts hashes and ordering."},
+    {"requirement_id": "L38-G25", "requirement": "Tampering policy weakening and missing unavailable fields fail closed without auto-repair."},
+    {"requirement_id": "L38-G26", "requirement": "Any failure publishes blocked unavailable or unresolved without overclaiming anonymity privacy safety secure deletion or sharing authority."}
+  ],
+  "future_refusal_ids": [
+    "L38-R01_missing_stage_authorization",
+    "L38-R02_fixture_or_policy_hash_drift",
+    "L38-R03_real_or_participant_derived_fixture",
+    "L38-R04_missing_artifact_owner",
+    "L38-R05_missing_location_or_retention_rule",
+    "L38-R06_missing_redaction_sharing_or_deletion_rule",
+    "L38-R07_unclassified_lifecycle_surface",
+    "L38-R08_absolute_path_home_username_or_hostname",
+    "L38-R09_participant_alias_mapping_or_filename_identity",
+    "L38-R10_acquisition_date_or_high_resolution_timestamp",
+    "L38-R11_device_serial_network_or_stream_identity",
+    "L38-R12_email_contact_institution_or_operator_identity",
+    "L38-R13_credential_token_cookie_secret_or_env_value",
+    "L38-R14_consent_irb_protocol_or_data_use_identifier",
+    "L38-R15_target_prompt_response_label_or_free_text",
+    "L38-R16_rare_demographic_small_cell_or_unique_error_row",
+    "L38-R17_stable_hash_or_pseudonym_linkability_unreviewed",
+    "L38-R18_neural_signal_embedding_neurotoken_or_checkpoint_payload",
+    "L38-R19_unknown_extension_mime_archive_or_nested_payload",
+    "L38-R20_symlink_escape_hardlink_alias_or_inode_reuse",
+    "L38-R21_case_collision_unicode_alias_or_path_traversal",
+    "L38-R22_temporary_success_or_failure_residue",
+    "L38-R23_backup_sync_snapshot_trash_or_cloud_copy_unresolved",
+    "L38-R24_git_index_history_ref_lfs_or_force_add_hit",
+    "L38-R25_remote_clone_fork_pull_request_or_ci_copy_unresolved",
+    "L38-R26_unowned_root_or_broad_recursive_cleanup",
+    "L38-R27_deletion_manifest_or_preoperation_hash_drift",
+    "L38-R28_deletion_escape_symlink_follow_or_unrelated_file",
+    "L38-R29_receipt_missing_deleted_skipped_failed_or_unresolved_rows",
+    "L38-R30_path_absence_relabelled_as_media_sanitization",
+    "L38-R31_license_relabelled_as_participant_consent",
+    "L38-R32_deidentification_relabelled_as_sharing_authority",
+    "L38-R33_identity_attack_model_or_protected_payload_open",
+    "L38-R34_resource_file_network_or_mutation_cap_exceeded",
+    "L38-R35_generated_fixture_report_or_receipt_staged_or_tracked",
+    "L38-R36_anonymous_privacy_safe_securely_deleted_or_shareable_overclaim"
+  ],
+  "resource_boundaries": {
+    "current_cpu_threads": 1,
+    "current_generated_artifact_bytes": 0,
+    "current_planning_artifact_cap_bytes": 8388608,
+    "future_stage_a_runtime_cap_sec": 120,
+    "future_stage_a_peak_rss_cap_bytes": 536870912,
+    "future_stage_a_generated_report_cap_bytes": 8388608,
+    "future_stage_a_file_count_cap": 128,
+    "future_stage_a_network_download_bytes": 0,
+    "future_stage_a_upload_bytes": 0,
+    "future_stage_a_real_signal_reads": 0,
+    "future_stage_a_destructive_nonfixture_mutations": 0,
+    "base_dependencies_added_now": 0,
+    "standard_library_first": true
+  },
+  "research_access_counters": {
+    "high_level_public_web_research_operations": 6,
+    "official_or_primary_source_pages_opened": 8,
+    "public_network_response_bytes": null,
+    "public_network_response_bytes_unavailable_reason": "The web research tool does not expose exact transfer bytes runtime or RSS.",
+    "current_tracked_neural_or_model_binary_candidate_files": 0,
+    "current_tracked_neural_or_model_binary_candidate_bytes": 0,
+    "all_ref_history_neural_or_model_binary_candidate_paths": 0,
+    "protected_download_bytes": 0,
+    "real_header_reads": 0,
+    "real_signal_reads": 0,
+    "real_cache_embedding_or_report_payload_reads": 0,
+    "real_target_label_text_consent_or_mapping_reads": 0,
+    "s20_operations": 0,
+    "s25_operations": 0,
+    "consumed_s7_or_s21_reopens": 0,
+    "payload_hash_reads": 0,
+    "synthetic_fixtures_created": 0,
+    "privacy_or_lifecycle_scanner_runs": 0,
+    "deletion_operations": 0,
+    "git_history_rewrites": 0,
+    "identity_attack_or_reidentification_runs": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "network_downloads": 0,
+    "uploads_or_releases": 0,
+    "streams_devices_or_hardware_operations": 0
+  },
+  "source_bindings": [
+    {"source_id": "nist_privacy_framework", "url": "https://www.nist.gov/privacy-framework"},
+    {"source_id": "nist_ir_8062", "url": "https://doi.org/10.6028/NIST.IR.8062"},
+    {"source_id": "nist_pram", "url": "https://www.nist.gov/privacy-framework/nist-pram"},
+    {"source_id": "nist_sp_800_88_r2", "url": "https://doi.org/10.6028/NIST.SP.800-88r2"},
+    {"source_id": "github_remove_sensitive_data", "url": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository"},
+    {"source_id": "open_brain_consent", "url": "https://doi.org/10.1002/hbm.25351"},
+    {"source_id": "eeg_identity_privacy", "url": "https://arxiv.org/abs/2412.09854"},
+    {"source_id": "oecd_responsible_neurotechnology", "url": "https://www.oecd.org/en/topics/responsible-innovation.html"}
+  ],
+  "claim_boundary": [
+    "Planning research is complete while the Loop 38 experiment is Not Started.",
+    "No fixture scanner deletion protected root identity attack consent review history rewrite release or upload exists.",
+    "A future synthetic pass can establish only inventory redaction refusal and narrow receipt behavior on fresh fixture-owned roots.",
+    "Local path absence cannot establish physical-media sanitization deletion from unknown backups clones forks or remotes or withdrawal compliance.",
+    "Pseudonyms hashes embeddings and de-identified neural data remain potentially linkable and require consent license and release review.",
+    "This privacy planning result establishes no neural advantage decoding accuracy unseen-person generalization real-time behavior or portable-hardware result."
+  ]
+}

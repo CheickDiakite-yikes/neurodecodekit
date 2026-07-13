@@ -1,8 +1,8 @@
 {
   "schema_name": "neurodecodekit.next_twenty_loops_roadmap",
-  "schema_version": "0.14.0",
+  "schema_version": "0.15.0",
   "roadmap_id": "loops-25-44",
-  "prepared_at": "2026-07-12",
+  "prepared_at": "2026-07-13",
   "status": "planning_only_not_execution_authorization",
   "proof_posture": "primary_source_informed_roadmap_only",
   "range": {
@@ -156,6 +156,26 @@
     "loop37_bids_validator_authorized": false,
     "loop37_public_release_authorized": false,
     "loop37_dependency_loop36_execution_satisfied": false,
+    "loop38_research_packet_prepared": true,
+    "loop38_sensitivity_level_count": 5,
+    "loop38_artifact_class_count": 8,
+    "loop38_lifecycle_surface_count": 10,
+    "loop38_sensitive_field_class_count": 12,
+    "loop38_threat_scenario_count": 12,
+    "loop38_deletion_receipt_level_count": 5,
+    "loop38_future_fixture_family_count": 24,
+    "loop38_future_requirement_count": 26,
+    "loop38_future_refusal_count": 36,
+    "loop38_current_tracked_neural_or_model_binary_candidate_files": 0,
+    "loop38_all_ref_history_neural_or_model_binary_candidate_paths": 0,
+    "loop38_maximum_future_stage_b_claim": "repository_and_named_local_root_lifecycle_coverage",
+    "loop38_preregistration_prepared": false,
+    "loop38_authorization_request_prepared": false,
+    "loop38_execution_authorized": false,
+    "loop38_scanner_or_deletion_authorized": false,
+    "loop38_identity_attack_authorized": false,
+    "loop38_public_release_authorized": false,
+    "loop38_dependency_loop37_execution_satisfied": false,
     "user_preferred_incremental_storage_bytes": 5000000000,
     "user_absolute_incremental_storage_bytes": 10000000000,
     "selected_s20_plus_s25_future_bundle_bytes": 1106030247,
@@ -835,31 +855,49 @@
       "effort": "M",
       "status": "Not Started",
       "execution_authorized": false,
-      "proof_posture": "planned_not_authorized",
+      "proof_posture": "planning_research_complete_experiment_not_started",
       "core_question": "Can the project prove where sensitive recordings and embeddings live, who can access them, and how they are retained or deleted?",
       "why_high_value": "Neural signals and embeddings can carry identity information; local-first behavior needs verifiable lifecycle controls, not just a promise.",
-      "build_deliverable": "Data inventory, sensitivity labels, local path policy, retention and deletion receipts, redaction scanner, and privacy threat model.",
-      "research_deliverable": "NIST-aligned privacy risk map plus EEG identity-risk review and contributor guidance.",
-      "data_scope": "Repository metadata and synthetic fixtures only; no identity attack, real embedding export, or participant re-identification experiment.",
+      "build_deliverable": "Future separately authorized target-free synthetic inventory, sensitivity, redaction, copy-surface, retention, and narrow deletion-receipt interface.",
+      "research_deliverable": "Completed NIST PF 1.0, NISTIR 8062, PRAM, SP 800-88 Rev. 2, Git-history, consent, EEG identity-risk, and neurotechnology-stewardship boundary.",
+      "research_status": "planning_research_complete",
+      "research_boundary_registry": "registries/loop38_research_boundary.v0.json",
+      "primary_source_research": "docs/LOOP_38_PRIMARY_SOURCE_RESEARCH.md",
+      "data_scope": "Repository metadata and public sources only now. Future Stage A is target-free synthetic fixtures only; no identity attack, real embedding export, participant re-identification, protected-root scan, or destructive nonfixture operation.",
       "controls": [
-        "Tracked-history and staged-secret scans.",
-        "Raw, derived, report, log, temporary, and backup lifecycle paths tested separately.",
-        "Absolute paths, participant aliases, timestamps, and device serials redacted by default.",
-        "Deletion receipt verifies expected paths without destructive broad cleanup."
+        "Five sensitivity levels and eight artifact classes inherit the highest source sensitivity; hashes and pseudonyms remain potentially linkable.",
+        "Ten lifecycle surfaces separate local roots, temporary/log/backup copies, Git/LFS/history, remotes/clones/PRs, CI, and releases.",
+        "Twelve sensitive-field classes cover paths, aliases, timestamps, serials, secrets, consent, targets, rare rows, hashes, and neural-derived payloads.",
+        "Five receipt levels separate path absence, local rescan, repository coordination, and external media sanitization.",
+        "Consent, license, de-identification, technical redaction, and public release authority remain independent gates."
       ],
       "primary_metrics": [
-        "sensitive path and field coverage",
-        "redaction recall on generated fixtures",
-        "retention-policy violations",
-        "tracked neural payload bytes",
-        "verified deletion and unresolved copy counts"
+        "artifact and lifecycle-surface coverage by checked blocked unavailable and unresolved state",
+        "sensitive-field recall and public-fixture precision",
+        "retention-policy and prohibited-payload violations",
+        "tracked current and all-ref history neural payload paths and bytes",
+        "receipt level plus deleted skipped failed and unresolved copy counts",
+        "runtime peak RSS generated bytes file thread worker network and mutation counters"
       ],
-      "acceptance_boundary": "Pass when every artifact class has an owner, location, retention rule, redaction behavior, and verifiable local deletion path, with zero tracked neural payloads.",
-      "stop_rule": "Block data-sharing or release claims when lifecycle ownership, consent, license, or deletion cannot be proven.",
+      "acceptance_boundary": "A future stage passes only when every in-scope artifact class has an owner, sensitivity, location, retention, redaction, sharing, and receipt policy; every copy surface is checked, blocked, unavailable, or unresolved; prohibited survivor bytes and tracked neural payloads are zero; and unknown copies remain unresolved.",
+      "stop_rule": "Block sharing, anonymity, privacy-safe, secure-deletion, or release claims when lifecycle ownership, consent, license, redaction, copy inventory, receipt level, or media evidence is incomplete.",
       "depends_on": [37],
-      "external_gates": [],
-      "authorization_boundary": "Planning only. No real identity analysis or destructive cleanup is authorized.",
-      "resource_cap": "Standard-library scanners where possible, one thread, one worker, 8 MiB reports, no real signal reads, and no network upload."
+      "external_gates": ["separate_stage_a_synthetic_authorization", "separate_stage_b_read_only_local_metadata_authorization", "loop39_before_cross_machine_copy_claim", "loop42_before_device_lifecycle_claim", "loop44_and_external_governance_before_public_release"],
+      "authorization_boundary": "Planning research only and unauthorized. No fixture, scanner, deletion, protected root, identity attack, consent or legal determination, Git history rewrite, remote cleanup, release/upload, model, training, stream, device, or hardware operation is authorized. Every stage needs a separate Loop 38 decision.",
+      "resource_cap": "Current research used one thread/worker, six public web operations, zero protected/generated payload bytes, and an 8 MiB planning cap. Future Stage A remains standard-library-first, one thread/worker, 120 seconds, 512 MiB RSS, 8 MiB reports, 128 files, zero network/download/upload bytes, zero real signal reads, and zero nonfixture destructive mutations.",
+      "sensitivity_level_count": 5,
+      "artifact_class_count": 8,
+      "lifecycle_surface_count": 10,
+      "sensitive_field_class_count": 12,
+      "threat_scenario_count": 12,
+      "deletion_receipt_level_count": 5,
+      "future_fixture_family_count": 24,
+      "future_requirement_count": 26,
+      "future_refusal_count": 36,
+      "current_tracked_neural_or_model_binary_candidate_files": 0,
+      "all_ref_history_neural_or_model_binary_candidate_paths": 0,
+      "preregistration_prepared": false,
+      "authorization_request_prepared": false
     },
     {
       "loop_id": 39,
@@ -1080,7 +1118,7 @@
     "35": ["brain2qwerty_v1", "brain2qwerty_v2", "eye_movement_decoding_confounds", "eeg_bci_artifacts", "meg_movement_muscle_artifacts", "motion_muscle_phantom_validation"],
     "36": ["bids_coordinate_systems", "bids_meg", "bids_eeg", "bids_units", "mne_coordinate_frames", "mne_transform", "mne_digmontage", "mne_eeg_reference", "mne_bad_interpolation"],
     "37": ["bids_derivatives", "bids_dataset_description", "bids_derivative_common_data", "bids_common_principles", "bids_extensions", "bids_validator", "bids_examples", "datasheets"],
-    "38": ["eeg_identity_privacy", "nist_privacy_framework"],
+    "38": ["nist_privacy_framework", "nist_ir_8062", "nist_pram", "nist_sp_800_88_r2", "github_remove_sensitive_data", "open_brain_consent", "eeg_identity_privacy", "oecd_responsible_neurotechnology"],
     "39": ["moabb_benchmark", "model_cards"],
     "40": ["executorch"],
     "41": ["lsl_time_sync", "bids_derivatives"],
@@ -1410,8 +1448,44 @@
     {
       "source_id": "nist_privacy_framework",
       "title": "NIST Privacy Framework",
-      "url": "https://www.nist.gov/privacy-framework/privacy-framework",
-      "roadmap_use": "Privacy risk, governance, inventory, processing, retention, and accountability."
+      "url": "https://www.nist.gov/privacy-framework",
+      "roadmap_use": "Stable PF 1.0 privacy risk and governance structure while PF 1.1 remains an initial public draft."
+    },
+    {
+      "source_id": "nist_ir_8062",
+      "title": "NISTIR 8062: Privacy Engineering And Risk Management",
+      "url": "https://doi.org/10.6028/NIST.IR.8062",
+      "roadmap_use": "Predictability, manageability, disassociability, and problematic-data-action evidence mapping."
+    },
+    {
+      "source_id": "nist_pram",
+      "title": "NIST Privacy Risk Assessment Methodology",
+      "url": "https://www.nist.gov/privacy-framework/nist-pram",
+      "roadmap_use": "Data-processing inventory, individual problem, impact, prioritization, and control structure without certification claims."
+    },
+    {
+      "source_id": "nist_sp_800_88_r2",
+      "title": "NIST SP 800-88 Rev. 2: Guidelines for Media Sanitization",
+      "url": "https://doi.org/10.6028/NIST.SP.800-88r2",
+      "roadmap_use": "Separate application path receipts from storage-specific physical-media sanitization evidence."
+    },
+    {
+      "source_id": "github_remove_sensitive_data",
+      "title": "GitHub: Removing Sensitive Data From A Repository",
+      "url": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository",
+      "roadmap_use": "History rewrite, clone coordination, recontamination, pull-request, and remote-copy boundaries."
+    },
+    {
+      "source_id": "open_brain_consent",
+      "title": "The Open Brain Consent",
+      "url": "https://doi.org/10.1002/hbm.25351",
+      "roadmap_use": "Separate technical de-identification from participant-facing secondary-sharing consent and local governance."
+    },
+    {
+      "source_id": "oecd_responsible_neurotechnology",
+      "title": "OECD Responsible Innovation In Neurotechnology",
+      "url": "https://www.oecd.org/en/topics/responsible-innovation.html",
+      "roadmap_use": "Brain-data stewardship, accountability, transparency, safeguarding, and anti-hype release behavior."
     },
     {
       "source_id": "model_cards",

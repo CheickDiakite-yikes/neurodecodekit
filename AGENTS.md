@@ -292,6 +292,26 @@ fixture, exporter, derivative tree, validator install/run, protected payload,
 raw copy, release/upload, model, training, device, or hardware operation is
 authorized.
 
+Loop 38 planning research is complete while its neural-data privacy/lifecycle
+experiment remains `Not Started` and unauthorized:
+
+```bash
+cat docs/LOOP_38_PRIMARY_SOURCE_RESEARCH.md
+python -m json.tool registries/loop38_research_boundary.v0.json >/dev/null
+```
+
+The boundary freezes five sensitivity levels, eight artifact classes, ten
+lifecycle surfaces, 12 sensitive-field classes, 12 threat scenarios, five
+deletion-receipt levels, 24 fixture families, four separately authorized
+stages, 26 gates, 36 refusals, and 32 false `authorized_now` fields. NIST
+Privacy Framework 1.0 is the stable pin; 1.1 remains an initial public draft.
+Pseudonyms, hashes, embeddings, and de-identified neural data remain
+potentially linkable. Path absence is not media sanitization, `.gitignore` is
+not deletion, and consent, license, redaction, de-identification, and sharing
+authority remain separate. No fixture, scanner, deletion, protected-root scan,
+identity attack, history rewrite, remote cleanup, consent determination,
+release/upload, model, training, device, or hardware operation is authorized.
+
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
 commit `c3d1f01`, before any adapter, source chunk, fixture, socket, board, or
@@ -339,7 +359,9 @@ defines a staged peripheral-confound firewall while its experiment remains
 `Not Started`; Loop 36 planning research defines the geometry/reference
 identity firewall while its experiment remains `Not Started`; Loop 37 planning
 research defines the BIDS-envelope/non-standard-payload firewall while its
-experiment remains `Not Started`; Loops 38-44 remain `Not Started`. All 20
+experiment remains `Not Started`; Loop 38 planning research defines the
+privacy/lifecycle and deletion-claim firewall while its experiment remains
+`Not Started`; Loops 39-44 remain `Not Started`. All 20
 execution flags are false. This roadmap does not
 reopen Loop 24, authorize RW3, or permit a Loop 25-44 fixture, download, data
 read, model run, training run, stream, board, or hardware operation. A broad
@@ -431,6 +453,13 @@ authorization boundary.
   stages, 24 gates, and 32 refusals. Non-standard payloads remain labeled, raw
   copies remain zero, and validator success cannot establish privacy, license,
   reproducibility, or scientific validity.
+- The Loop 38 planning registry remains exact with 32 false authorization
+  fields, five sensitivity levels, eight artifact classes, ten lifecycle
+  surfaces, 12 sensitive-field classes, 12 threat scenarios, five deletion-
+  receipt levels, 24 fixture families, four stages, 26 gates, and 36 refusals.
+  Unknown copies remain unresolved; path absence, Git cleanliness, technical
+  redaction, consent, license, media sanitization, and sharing authority remain
+  separate claims.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed

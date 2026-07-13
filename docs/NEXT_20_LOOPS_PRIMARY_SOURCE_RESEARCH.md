@@ -810,3 +810,38 @@ protected payload, raw copy, release, upload, model, training, stream, device,
 or hardware operations. Exact sources and boundaries are in
 `docs/LOOP_37_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop37_research_boundary.v0.json`.
+
+## 2026-07-13 Loop 38 Research Addendum
+
+Loop 38 planning research is complete while its privacy/lifecycle experiment
+remains `Not Started` and unauthorized. NIST Privacy Framework 1.0 is the
+stable pin because 1.1 remains an initial public draft. NISTIR 8062 provides
+predictability, manageability, and disassociability; PRAM structures the risk
+analysis; SP 800-88 Rev. 2 prevents an application-level path receipt from
+being relabeled physical-media sanitization.
+
+Published EEG identity results justify treating raw signals, derived arrays,
+embeddings, Neuro Tokens, stable hashes, and individual rows as potentially
+linkable. They do not establish a local identity attack result. Open Brain
+Consent is a sharing-consent template, not local legal clearance. GitHub's
+history guidance makes worktree deletion, `.gitignore`, and a clean current
+tree insufficient evidence for clones, forks, pull-request refs, LFS, CI, or
+other remote copies.
+
+The machine boundary freezes five sensitivity levels, eight artifact classes,
+ten lifecycle surfaces, 12 sensitive-field classes, 12 threat scenarios, five
+deletion-receipt levels, 24 fixture families, four separately authorized
+stages, eight outcomes, six claims, 26 gates, 36 refusals, and 32 false
+authorization fields. Consent, license, de-identification, redaction, deletion,
+and sharing authority remain separate decisions. Unknown copies remain
+`unresolved` rather than being inferred clean.
+
+The local metadata-only audit found zero current tracked neural/model candidate
+files and bytes and zero candidate paths across all-ref Git history. It opened
+no ignored cache, signal, embedding, target, consent, or protected MAT payload.
+This research used six high-level public web operations, eight official or
+primary source page opens, one thread/worker, and zero fixture, scanner,
+deletion, history rewrite, identity attack, model, training, release, upload,
+stream, device, or hardware operations. Exact sources and boundaries are in
+`docs/LOOP_38_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop38_research_boundary.v0.json`.
