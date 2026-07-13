@@ -90,13 +90,14 @@ Do not reset, revert, delete, or overwrite work already present.
   while its experiment remains `Not Started`; Loop 27 planning research has
   selected S25 metadata while preregistration remains blocked; Loop 28 planning
   research defines a strict zero-shot rule while its experiment remains `Not
-  Started`; Loops 29-37 have completed planning research while their
+  Started`; Loops 29-38 have completed planning research while their
   experiments remain `Not Started`; confidence is unavailable, Loop 35's
   maximum future local claim is incremental brain-sensor information beyond
   recorded controls, Loop 36's maximum future real-header claim is
   declared metadata compatibility, Loop 37 caps future Stage B at a validator-
-  assessed BIDS envelope with explicitly non-standard payloads, and Loops 38-44
-  remain `Not Started`; all 20
+  assessed BIDS envelope with explicitly non-standard payloads, Loop 38 keeps
+  unknown copies unresolved and separates path receipts from media
+  sanitization, and Loops 39-44 remain `Not Started`; all 20
   execution flags remain false.
 - Loop 26's planning boundary recommends a 2,908-parameter causal candidate, a
   2,884-parameter linear comparator, six controls, and exact enumeration of all
@@ -191,6 +192,16 @@ Do not reset, revert, delete, or overwrite work already present.
   refusals, and 29 false authorization fields. NeuroToken NPZ caches and report
   artifacts remain non-standard. No fixture, exporter, derivative tree,
   validator install/run, protected payload, raw copy, release/upload, model,
+  training, stream, device, or hardware operation is authorized.
+- Loop 38 planning research is complete while the privacy/lifecycle experiment
+  remains `Not Started` and unauthorized. The boundary freezes 5 sensitivity
+  levels, 8 artifact classes, 10 lifecycle surfaces, 12 sensitive-field
+  classes, 12 threats, 5 deletion-receipt levels, 24 fixtures, 4 stages, 26
+  gates, 36 refusals, and 32 false authorization fields. Pseudonyms, hashes,
+  embeddings, and de-identified neural data remain potentially linkable;
+  unknown backups, clones, PR refs, CI artifacts, and remotes remain
+  unresolved. No fixture, scanner, deletion, protected-root scan, identity
+  attack, history rewrite, consent determination, release/upload, model,
   training, stream, device, or hardware operation is authorized.
 - No real recording quality, neural advantage, unseen-person generalization,
   useful EEG decoder, real-time decoding, portable-hardware, arbitrary-thought,

@@ -47,12 +47,18 @@
    five artifact profiles, stable BIDS 1.11.1 field mapping, explicitly
    non-standard NeuroDecodeKit payload boundary, 24 gates, and 32 refusals. It
    is planning research only; Loop 37 remains `Not Started` and unauthorized.
-16. Review `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` only when deciding whether
+16. Read `docs/LOOP_38_PRIMARY_SOURCE_RESEARCH.md` for the five sensitivity
+   levels, eight artifact classes, ten lifecycle surfaces, 12 sensitive-field
+   classes, five deletion-receipt levels, 26 gates, and 36 refusals. It is
+   planning research only; Loop 38 remains `Not Started`, unresolved copies
+   remain unresolved, and all scanner/deletion/identity/release work is
+   unauthorized.
+17. Review `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` only when deciding whether
    to authorize the independent RW3 Stage A.
-17. Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md` and
+18. Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md` and
    `docs/LOOPS_25_44_ROADMAP.md` for the planning-only Loops 25-44 queue.
-18. Paste `prompts/CODEX_START_PROMPT.md` into Codex to continue.
-19. Run tests:
+19. Paste `prompts/CODEX_START_PROMPT.md` into Codex to continue.
+20. Run tests:
 
 ```bash
 PYTHONPATH=src python -m unittest discover -s tests -v
@@ -82,7 +88,9 @@ peripheral-confound firewall while its experiment remains `Not Started`;
 Loop 36 planning research defines the geometry/reference identity firewall
 while its experiment remains `Not Started`; Loop 37 planning research defines
 the BIDS-envelope/non-standard-payload firewall while its experiment remains
-`Not Started`; Loops 38-44 remain `Not Started`.
+`Not Started`; Loop 38 planning research defines the privacy/lifecycle and
+deletion-claim firewall while its experiment remains `Not Started`; Loops
+39-44 remain `Not Started`.
 The maximum future
 local Loop 31 claim is sensor-signal dependence, and brain-specific attribution
 remains blocked on Loop 35. All are unauthorized.
@@ -191,6 +199,14 @@ authorization fields. NeuroToken NPZ caches, split reports, and report cards
 remain non-standard payloads. The experiment is `Not Started` and unauthorized;
 no fixture, exporter, derivative tree, validator, protected payload, raw copy,
 release, or upload exists.
+Loop 38 planning research freezes five sensitivity levels, eight artifact
+classes, ten lifecycle surfaces, 12 sensitive-field classes, 12 threat
+scenarios, five deletion-receipt levels, 24 fixture families, four stages, 26
+gates, 36 refusals, and 32 false authorization fields. NIST PF 1.0 is pinned;
+PF 1.1 remains draft. Unknown copies remain unresolved, and path absence is not
+media sanitization. The experiment is `Not Started` and unauthorized; no
+fixture, scanner, deletion, protected-root scan, identity attack, history
+rewrite, consent determination, release, or upload exists.
 The proposed fresh S20 EEG block is **not authorized** for download or signal
 access. Its exact four-file, 96,090,264-byte dry run is in
 `docs/FRESH_EEG_BENCHMARK_S20_APPROVAL_PACKET.md`.

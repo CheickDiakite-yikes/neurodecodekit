@@ -2973,3 +2973,70 @@ score, device, or hardware was accessed, so there is no BIDS-organized bundle,
 privacy/license qualification, cross-machine reproduction, neural advantage,
 decoding accuracy, unseen-person generalization, real-time behavior, or
 portable-hardware result.
+
+## 2026-07-13 - Loop 38 neural-data privacy/lifecycle research boundary
+
+Closed Loop 38 planning research while leaving the privacy/lifecycle
+experiment `Not Started`, all 32 `authorized_now` fields false, and every
+fixture, scanner, deletion, protected-root scan, identity attack, consent/legal
+determination, history rewrite, remote cleanup, release/upload, model,
+training, stream, device, and hardware operation closed. The machine contract
+freezes five sensitivity levels, eight artifact classes, ten lifecycle
+surfaces, 12 sensitive-field classes, 12 threat scenarios, five deletion-
+receipt levels, 24 fixture families, four independently authorized stages,
+eight outcomes, six claims, 26 gates, and 36 refusal IDs.
+
+The primary-source audit pins stable NIST Privacy Framework 1.0, NISTIR 8062,
+PRAM, SP 800-88 Rev. 2, Git-history cleanup limits, Open Brain Consent, EEG
+identity risk, and OECD neurotechnology stewardship. It separates technical
+redaction, de-identification, path absence, repository coordination, media
+sanitization, consent, license, and sharing authority. Neural derivatives,
+stable hashes, pseudonyms, high-resolution timing, geometry, and small
+individual rows remain potentially linkable. Unknown external copies remain
+`unresolved`.
+
+The metadata-only local audit found zero current tracked neural/model binary
+candidate files and bytes and zero candidate paths across all-ref Git history;
+no payload was opened. Six high-level public web operations and eight official
+or primary page opens informed the planning record. Public response bytes and
+web runtime/RSS are unavailable by tool contract. Protected downloads, real
+header/cache/signal/target reads, fixtures, generated payloads, scanner runs,
+deletions, identity attacks, history rewrites, releases/uploads, models,
+training runs, streams, devices, and hardware operations remain zero.
+
+The nine-sheet tracker updates Dashboard `B10` and Loop 38 row 18, adds
+decision `38-R1`, risk `R43`, and prompt `Loop38-Research`, and preserves Loop
+25 as the active execution decision. The 96,249-byte workbook has SHA-256
+`8f03b7369362822c14f59ae438ffb09967ebd9cb4cb83f36cf852876b28e0b5c`;
+all nine sheets rendered after the edit, the export reloads with exact key
+ranges, and the formula-error scan matches zero cells. The unrelated
+321,169-byte inspection sidecar remains byte-identical at SHA-256
+`5cd0ef08446c4e5feee5ce11f27eef41fae5eee8975cc77f6d401faca3b79f45`.
+
+Local verification passes 240 focused Loop 24-38 planning tests in 0.16 seconds
+wall with 58,589,184-byte maximum RSS; the strict Loop 38 plus roadmap slice
+passes 23 tests in 0.07 seconds wall with 34,390,016-byte maximum RSS; 558
+optional unittests pass with three expected skips in 21.97 seconds wall and
+605,208,576-byte maximum RSS; 555 pytest tests pass with three skips and 254
+subtests in 22.13 seconds wall and 604,880,896-byte maximum RSS; and 526
+dependency-light tests pass with 121 optional skips in 0.63 seconds wall and
+77,545,472-byte maximum RSS. Each full count is 14 above the Loop 37 closeout.
+
+Repository-wide Ruff lint, touched-file formatting, compileall, 26 source JSON
+and two TOML parses, seven CLI help surfaces, 55 registered commands,
+unauthorized Loop 38 runtime absence, 72 checked local Markdown links with zero
+missing, workbook render/reload/formula inspection, and `git diff --check`
+pass. Commit and CI identities are added only after the tested research
+milestone is pushed.
+
+Engineering capability added: a machine-checkable privacy risk map,
+sensitivity taxonomy, artifact/copy inventory contract, redaction surface,
+deletion-receipt ladder, consent/license firewall, staged evidence program,
+and strict claim ceiling now exist.
+
+Scientific claim not established: no fixture, protected payload, scanner,
+deletion operation, identity attack, consent determination, model, training
+run, target, score, release, device, or hardware was accessed, so there is no
+privacy-safe dataset, anonymous neural representation, verified media
+sanitization, shareable release, neural advantage, decoding accuracy,
+unseen-person generalization, real-time behavior, or portable-hardware result.

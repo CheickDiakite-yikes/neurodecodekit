@@ -2087,3 +2087,65 @@ Evidence: `docs/LOOP_37_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop37_research_boundary.v0.json`,
 `tests/test_loop37_research_boundary.py`, roadmap row 37, research commit
 `ef31efc`, push CI run `29226436884`, and draft PR #16 CI run `29226853455`.
+
+## 0065 - Keep Neural-Data Privacy, Deletion, And Sharing Claims Separate
+
+Decision: close Loop 38 planning research while leaving the privacy/lifecycle
+experiment `Not Started`, all 32 `authorized_now` fields false, and no fixture,
+scanner, deletion, protected-root scan, identity attack, consent or legal
+determination, Git history rewrite, remote cleanup, public release/upload,
+model, training, stream, device, or hardware operation opened. Freeze five
+sensitivity levels, eight artifact classes, ten lifecycle surfaces, 12
+sensitive-field classes, 12 threat scenarios, five deletion-receipt levels, 24
+fixture families, four independently authorized stages, 26 gates, and 36
+refusal IDs.
+
+Framework boundary: pin stable NIST Privacy Framework 1.0 because 1.1 remains
+an initial public draft. Map future controls to NISTIR 8062 predictability,
+manageability, and disassociability and use PRAM as a risk method, never a
+certificate. Treat OECD stewardship and anti-hype guidance as governance, not
+proof of local compliance.
+
+Sensitivity boundary: raw signals, windows, continuous caches, embeddings,
+Neuro Tokens, checkpoints, and individual predictions default sensitive.
+Subject/session/trial identity, high-resolution timing, geometry, stable
+hashes, pseudonyms, and small individual rows remain potentially linkable.
+Compression, feature extraction, hashing, or technical de-identification does
+not automatically lower sensitivity or create sharing authority.
+
+Lifecycle boundary: separately inventory approved raw/cache/run roots, OS
+temporary files, logs, backups/sync/trash/snapshots, Git worktree/index/history/
+LFS, origin/forks/clones/PR refs, CI logs/caches/artifacts, and release/download
+copies. A clean current tree cannot establish another surface is clean.
+Unknown copies remain `unresolved`.
+
+Deletion boundary: distinguish no claim, scoped path absence, local manifest
+rescan, repository/remote coordination, and external media sanitization. A
+future application receipt is dry-run by default, exact-root and manifest
+bound, does not follow links, never deletes unrelated work, and cannot prove
+SP 800-88 Rev. 2 media sanitization. Broad cleanup and history rewrite remain
+separate explicit decisions.
+
+Governance boundary: consent, license, de-identification, technical redaction,
+retention, deletion, and public sharing authority are independent. Open Brain
+Consent is a template, CC BY-NC is not participant consent, and a BIDS or
+privacy-tool pass is not legal or institutional release clearance.
+
+Access and resource result: six high-level public web operations and eight
+official or primary source page opens informed the planning record. Public
+response bytes and web runtime/RSS are unavailable. The metadata-only local
+audit found zero current tracked neural/model candidate files and bytes and
+zero candidate paths across all-ref Git history. Protected reads, fixtures,
+scanners, deletions, history rewrites, identity attacks, models, training runs,
+releases, uploads, streams, devices, and hardware operations remain zero.
+
+Claim boundary: no synthetic privacy interface, named local-root coverage,
+real-artifact lifecycle qualification, anonymous neural representation,
+privacy-safe dataset, verified media sanitization, shareable release, neural
+advantage, decoding accuracy, unseen-person generalization, real-time behavior,
+or portable-hardware result exists.
+
+Evidence: `docs/LOOP_38_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop38_research_boundary.v0.json`,
+`tests/test_loop38_research_boundary.py`, and roadmap row 38. Commit and CI
+identities are added only after the tested research milestone is pushed.

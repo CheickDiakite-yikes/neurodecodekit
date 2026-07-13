@@ -40,7 +40,12 @@
 > five artifact profiles, 15 standard mappings, 16 extension fields, 20
 > fixtures, four stages, 24 gates, 32 refusals, and 29 false authorization
 > fields while its experiment remains `Not Started`. Custom payloads remain
-> non-standard and the work is unauthorized. Loops 38-44 remain planning-only. The
+> non-standard and the work is unauthorized. Loop 38 planning research freezes
+> five sensitivity levels, eight artifact classes, ten lifecycle surfaces, 12
+> sensitive-field classes, five deletion-receipt levels, 24 fixtures, 26 gates,
+> 36 refusals, and 32 false authorization fields while its experiment remains
+> `Not Started`. Unknown copies remain unresolved and all execution is
+> unauthorized. Loops 39-44 remain planning-only. The
 > spreadsheet dashboard displays the original roadmap, current gate, and next
 > 20-loop queue separately.
 
@@ -268,7 +273,8 @@ planning research is complete and its experiment remains `Not Started` with
 confidence unavailable; Loop 35 planning research is complete and its
 experiment remains `Not Started`; Loop 36 planning research is complete and
 its experiment remains `Not Started`; Loop 37 planning research is complete and
-its experiment remains `Not Started`; Loops 38-44 are
+its experiment remains `Not Started`; Loop 38 planning research is complete
+and its experiment remains `Not Started`; Loops 39-44 are
 `Not Started`. Every row retains `execution_authorized: false`.
 
 | # | Phase | Gate | Core outcome | Priority | Effort | Status |
@@ -286,7 +292,7 @@ its experiment remains `Not Started`; Loops 38-44 are
 | 35 | Reliability And Confounds | Peripheral Confound Firewall | Planning research complete: freeze 10 confound classes, 9 synchronized stream classes, 13 conditions, 3 stages, 24 gates, and 32 refusals; missing controls block the claim and absolute brain origin stays unavailable. | P0 | L | Not Started |
 | 36 | Reliability And Confounds | Geometry And Reference Harmonization | Planning research complete: freeze 6 representation layers, 5 modality profiles, 24 channel fields, 12 operation classes, 16 fixtures, 22 gates, and 30 refusals; metadata compatibility stays separate from signal/model/device equivalence. | P1 | M | Not Started |
 | 37 | Reproducibility And Local Deployment | BIDS Derivative And Provenance Export | Planning research complete: freeze 6 export layers, 5 artifact profiles, 15 stable mappings, 16 extension fields, 20 fixtures, 24 gates, and 32 refusals; standard envelopes cannot standardize custom payloads. | P1 | M | Not Started |
-| 38 | Reproducibility And Local Deployment | Neural Data Privacy And Lifecycle | Verify inventory, redaction, retention, local storage, and narrow deletion behavior. | P0 | M | Not Started |
+| 38 | Reproducibility And Local Deployment | Neural Data Privacy And Lifecycle | Planning research complete: freeze 5 sensitivity levels, 8 artifact classes, 10 lifecycle surfaces, 12 sensitive-field classes, 5 receipt levels, 24 fixtures, 26 gates, and 36 refusals; unknown copies remain unresolved. | P0 | M | Not Started |
 | 39 | Reproducibility And Local Deployment | Cross-Machine Reproducibility Matrix | Define bitwise semantic identity versus explicit numerical compatibility across supported environments. | P0 | M | Not Started |
 | 40 | Reproducibility And Local Deployment | Edge Runtime Packaging Gate | Package one already qualified frozen path only if behavior and deployment benefit survive. | P2 | L | Not Started |
 | 41 | Live Translation And Release | RW3 Stream-To-NeuroToken Integration | Join separately authorized source-chunk replay to causal tokens without timestamp or state drift. | P1 | L | Not Started |
@@ -423,6 +429,22 @@ checked. No fixture, exporter, derivative tree, validator install/run,
 protected payload, raw copy, release, upload, model, training, device, or
 hardware operation exists. See `docs/LOOP_37_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop37_research_boundary.v0.json`.
+
+Loop 38 planning research is complete while the experiment remains `Not
+Started` and unauthorized. The stable NIST pin is Privacy Framework 1.0 because
+1.1 remains an initial public draft. The boundary separates redaction,
+de-identification, deletion receipts, media sanitization, consent, license, and
+sharing authority. Five sensitivity levels, eight artifact classes, ten
+lifecycle surfaces, 12 sensitive-field classes, 12 threats, five receipt
+levels, 24 fixture families, four stages, 26 gates, 36 refusals, and 32 false
+authorization fields are machine checked. Current Git and all-ref history each
+contain zero neural/model candidate paths; no payload was opened. Unknown
+backups, clones, forks, PR refs, CI artifacts, and remote copies remain
+`unresolved`. No fixture, scanner, deletion, protected-root scan, identity
+attack, history rewrite, consent determination, release, upload, model,
+training, device, or hardware operation exists. See
+`docs/LOOP_38_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop38_research_boundary.v0.json`.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |
