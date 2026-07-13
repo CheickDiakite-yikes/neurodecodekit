@@ -3101,7 +3101,8 @@ Repository-wide Ruff lint, seven touched Python file format checks, compileall,
 27 source JSON and two TOML parses, seven CLI help surfaces, 55 registered
 commands, unauthorized Loop 39 runtime absence, 72 checked local Markdown links
 with zero missing, workbook render/reload/formula inspection, and `git diff
---check` pass. Remote commit and CI identifiers are pending.
+--check` pass. Research commit `efbf764` passes push CI run `29230660807` and
+draft PR #18 CI run `29230681661`.
 
 Engineering capability added: a machine-checkable cross-machine
 reproducibility taxonomy, environment identity contract, six-cell future

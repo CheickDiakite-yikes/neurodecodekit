@@ -2203,8 +2203,8 @@ hardware result exists.
 
 Evidence: `docs/LOOP_39_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop39_research_boundary.v0.json`,
-`tests/test_loop39_research_boundary.py`, and roadmap row 39. Research commit,
-push CI, and draft-PR CI identifiers are pending verification. Local
-verification passes 256 focused planning tests, 25 strict Loop 39/roadmap
-tests, 574 optional unittests, 571 pytest tests plus 261 subtests, and 542
-dependency-light tests.
+`tests/test_loop39_research_boundary.py`, roadmap row 39, research commit
+`efbf764`, push CI run `29230660807`, and draft PR #18 CI run `29230681661`.
+Local verification passes 256 focused planning tests, 25 strict Loop
+39/roadmap tests, 574 optional unittests, 571 pytest tests plus 261 subtests,
+and 542 dependency-light tests.
