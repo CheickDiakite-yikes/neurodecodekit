@@ -884,3 +884,42 @@ package, upload, protected read, model, training, edge, stream, device, or
 hardware operations. Exact sources and boundaries are in
 `docs/LOOP_39_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop39_research_boundary.v0.json`.
+
+## 2026-07-13 Loop 40 Research Addendum
+
+Loop 40 planning research is complete while its edge-runtime packaging
+experiment remains `Not Started` and unauthorized. The detailed source audit is
+in `docs/LOOP_40_PRIMARY_SOURCE_RESEARCH.md`; the dependency-free contract is
+`registries/loop40_research_boundary.v0.json`.
+
+The retained Loop 22/24 reference is a 1,130-parameter float32 causal producer
+and diagnostic probe with 5,210 registered numeric bytes. The torch graph is
+only Linear/GELU computation: normalization, stream state, timestamps, frame
+scheduling, decoder behavior, and app integration remain host responsibilities.
+The relevant Loop 39 matrix has not run, so the reference is not eligible for
+package qualification.
+
+Official documentation supports four future profiles:
+
+- [ExecuTorch](https://docs.pytorch.org/executorch/stable/getting-started.html)
+  with XNNPACK is the leading research candidate because the source is PyTorch
+  and the stack exposes target lowering, delegates, profiling, memory planning,
+  and mobile bindings;
+- [ONNX Runtime Mobile](https://onnxruntime.ai/docs/tutorials/mobile/) offers a
+  cross-platform CPU/XNNPACK path and reduced operator builds but adds ONNX/ORT
+  conversion and compatibility boundaries;
+- [LiteRT Torch](https://developers.google.com/edge/litert/conversion/pytorch/overview)
+  offers direct `torch.export`-compliant conversion but still requires exact
+  converter/runtime/operator and host-integration qualification;
+- [Core ML Tools](https://apple.github.io/coremltools/docs-guides/source/target-conversion-formats.html)
+  is Apple-specific, requires explicit input shape, and has newer float16
+  defaults that cannot silently replace the retained float32 reference.
+
+No backend is selected because no target OS, architecture, ABI, minimum
+deployment target, or app envelope is named. The boundary freezes seven
+qualification levels, six package layers, four backend profiles, 20 identity
+fields, eight output classes, six comparison classes, 24 fixture families,
+four separately authorized stages, 30 gates, 40 refusals, and 40 false
+authorization fields. A future Loop 40 pass can establish at most parity and
+measured resources for one exact named host or simulator. Physical devices
+remain Loop 42 work; packaging cannot establish decoding or neural science.

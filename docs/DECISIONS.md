@@ -2208,3 +2208,50 @@ Evidence: `docs/LOOP_39_PRIMARY_SOURCE_RESEARCH.md`,
 Local verification passes 256 focused planning tests, 25 strict Loop
 39/roadmap tests, 574 optional unittests, 571 pytest tests plus 261 subtests,
 and 542 dependency-light tests.
+
+## 0067 - Require A Named Target And Complete Package Boundary Before Edge Export
+
+Decision: close Loop 40 planning research while leaving its experiment `Not
+Started`, all 40 `authorized_now` fields false, and no target/backend selection,
+fixture, install, export, conversion, package, inference, profiler, memory
+planner, delegate, simulator, app, device, or hardware operation open. Freeze
+seven qualification levels, six package layers, four backend profiles, 20
+identity fields, eight output classes, six comparison classes, 24 fixture
+families, four stages, 30 gates, and 40 refusal IDs.
+
+Reference boundary: the only plausible future reference is the retained
+1,130-parameter, 5,210-byte float32 Loop 22/24 producer and diagnostic probe.
+Its torch graph excludes normalization, causal stream state, timestamps, frame
+scheduling, decoder behavior, and app integration. Loop 24 seed 2401 remains
+consumed, seed 2402 remains unopened, and neither may be reused to choose an
+edge path.
+
+Backend decision: keep ExecuTorch/XNNPACK as a research lead only because the
+source is PyTorch and the official stack exposes CPU delegation, memory
+planning, profiling, and mobile integration. Preserve ONNX Runtime Mobile,
+LiteRT, and Core ML as alternatives. Select none until a target OS/version,
+architecture, ABI, minimum deployment target, and application envelope are
+frozen and the relevant Loop 39 matrix cells pass.
+
+Measurement boundary: compare exact discrete/state/timestamp/provenance
+behavior, field-specific floating rules, delegated/undelegated/fallback/
+unsupported operators, complete model/runtime/kernel/app bytes, startup/load/
+warmup/steady/teardown latency, RSS, and planned memory. Model bytes alone are
+not deployment size; desktop or simulator execution is not physical-device
+qualification; package latency is not capture-to-text latency.
+
+Future authorization boundary: Stage A static eligibility, Stage B local
+target-free export/parity, Stage C cross-machine package parity, and Stage D
+simulator/app integration require separate decisions. Loop 42 is required for
+physical-device evidence and Loop 44 for release. One backend, one thread, one
+worker, 60 seconds per measurement worker, 1 GiB RSS, and 32 MiB generated
+package/report bytes are the future ceilings; any install needs its own byte
+cap.
+
+Claim boundary: no edge package, runtime benefit, neural advantage, decoding
+accuracy, unseen-person generalization, end-to-end latency, or portable-
+hardware result exists.
+
+Evidence: `docs/LOOP_40_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop40_research_boundary.v0.json`,
+`tests/test_loop40_research_boundary.py`, and roadmap row 40.

@@ -968,35 +968,67 @@ total artifacts, and zero large-cache/protected/model/training access.
 
 ## Loop 40 - Edge Runtime Packaging Gate
 
+**Current status:** Planning research complete; experiment `Not Started` and
+unauthorized. The machine boundary is
+`registries/loop40_research_boundary.v0.json`, and the official-source decision
+note is `docs/LOOP_40_PRIMARY_SOURCE_RESEARCH.md`.
+
 **Core question:** Can one already qualified frozen pipeline be packaged for an
 edge runtime while preserving outputs, state, timestamps, and resources?
 
 **Why it moves the goal:** Edge packaging matters only after correctness and
 local runtime gates; otherwise export complexity is deployment theater.
 
-**Build:** Select one backend, freeze its export/operator contract, validate
-the package against eager reference behavior, and report startup, steady-state,
-memory planning, delegation, and fallback.
+**Build:** A future separately authorized pass may select one named target and
+backend, freeze its export/operator contract, validate the package against
+eager reference behavior, and report startup, steady-state, memory planning,
+delegation, fallback, and complete package/runtime/app bytes. No build exists.
 
-**Research:** Choose ExecuTorch or an alternative from target-platform/operator
-evidence. Document unsupported operators and why adding the optional dependency
-is justified.
+**Research:** Official-source comparison covers ExecuTorch/XNNPACK, ONNX
+Runtime Mobile, LiteRT, and Core ML. ExecuTorch/XNNPACK is the leading future
+research candidate because the source is PyTorch and the stack exposes CPU
+delegation, memory planning, profiling, and mobile integration. It is not
+selected: the relevant Loop 39 matrix has not run, and no target OS,
+architecture, ABI, minimum deployment target, or app envelope is frozen.
 
-**Data and controls:** Frozen target-free synthetic fixture only. Keep eager
-reference, exact frame/timestamp/decoder/state comparisons, and separate
-package/load/producer/decoder/full-pipeline measures.
+**Data and controls:** Current access is repository source, recorded Loop 24/39
+evidence, and official public documentation only. Future data is one frozen
+target-free synthetic fixture. Keep the retained 1,130-parameter,
+5,210-byte float32 causal reference and seeds 2401/2402 closed. Separate six
+layers: source reference, exported graph, numeric payload, runtime/kernels,
+host normalization/state/timestamps/decoder, and app/device envelope.
 
-**Metrics:** semantic identity; numerical drift; package/tensor bytes; startup
-and steady latency; RSS/planned memory; delegated/fallback/unsupported
-operators.
+**Metrics:** Exact semantics, state, timestamps, and provenance; field-specific
+numerical drift; delegated/undelegated/fallback/unsupported operators; graph,
+payload, runtime, kernel, app, temporary, and total bytes; startup, load, first
+inference, warmup, steady state, and teardown; RSS and planned mutable,
+constant, and scratch memory; explicit failures, warnings, and claim ceiling.
 
-**Gate:** Adopt only if a previously qualified reference is preserved and a
-registered deployment benefit passes without hidden fallback. Park if export
-needs retraining, architecture changes, or extra resources without benefit.
+**Gate:** All 30 future gates and 40 refusals pass. Adopt only if the relevant
+Loop 39 cells qualify the reference, one named target/backend preserves the
+registered float32 outputs/state/timestamps/provenance, fallback is fully
+visible, all resource caps hold, and a preregistered complete deployment
+benefit passes. Model bytes alone are not a deployment benefit.
 
-**Dependencies and authorization:** Depends on Loop 39 and an explicit Loop 24
-result or hold. No edge dependency, conversion, inference, profiler, or package
-is authorized here.
+**Stop rule:** Park on missing prerequisites, unsupported export, hidden
+fallback, post-hoc tolerance, dtype/quantization drift, retraining,
+architecture/checkpoint changes, resource overflow, or no complete benefit.
+Do not tune a failed candidate on the same fixture.
+
+**Dependencies and authorization:** The Loop 24 hold is recorded, but its seeds
+stay closed. The Loop 39 planning dependency exists while execution remains
+unsatisfied. Stages A static eligibility, B local export/parity, C cross-machine
+package matrix, and D simulator/app integration each need separate
+preregistration and authorization. Loop 42 is required for physical-device
+qualification and Loop 44 for release. No target/backend selection, fixture,
+dependency install, export, conversion, package, inference, profiler, memory
+planner, delegate, fallback, simulator, app, device, or hardware operation is
+authorized.
+
+**Resources:** Current generated experiment bytes and execution operations are
+zero. Future work is capped at one backend, one thread, one worker, 60 seconds
+per measurement worker, 1 GiB peak RSS, and 32 MiB generated package/report
+bytes. Any dependency install needs a separate explicit byte cap.
 
 ## Loop 41 - RW3 Stream-To-NeuroToken Integration
 

@@ -98,7 +98,9 @@ the BIDS-envelope/non-standard-payload firewall while its experiment remains
 deletion-claim firewall while its experiment remains `Not Started`; Loop 39
 planning research defines the cross-machine environment, semantic-identity,
 and numerical-tolerance firewall while its experiment remains `Not Started`;
-Loops 40-44 remain `Not Started`.
+Loop 40 planning research defines the edge-package, host-state, fallback,
+complete-cost, and target-identity firewall while its experiment remains `Not
+Started`; Loops 41-44 remain `Not Started`.
 The maximum future
 local Loop 31 claim is sensor-signal dependence, and brain-specific attribution
 remains blocked on Loop 35. All are unauthorized.
@@ -225,6 +227,17 @@ built-package identity exists. The experiment is `Not Started` and
 unauthorized; no fixture, manifest, matrix job, install, lockfile, package,
 protected read, model, training, edge, stream, device, or hardware operation
 exists.
+Loop 40 planning research freezes seven qualification levels, six package
+layers, four unselected backend profiles, 20 identity fields, eight output
+classes, six comparison classes, 24 fixture families, four stages, 30 gates,
+40 refusals, and 40 false authorization fields. The retained 1,130-parameter,
+5,210-byte float32 causal producer remains blocked by the unexecuted Loop 39
+matrix and the absence of a named target OS/architecture/ABI. ExecuTorch/
+XNNPACK is a research lead only beside ONNX Runtime Mobile, LiteRT, and Core
+ML. The experiment is `Not Started` and unauthorized; no fixture, install,
+export, package, inference, profiler, simulator, app, device, or hardware
+operation exists. See `docs/LOOP_40_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop40_research_boundary.v0.json`.
 The proposed fresh S20 EEG block is **not authorized** for download or signal
 access. Its exact four-file, 96,090,264-byte dry run is in
 `docs/FRESH_EEG_BENCHMARK_S20_APPROVAL_PACKET.md`.

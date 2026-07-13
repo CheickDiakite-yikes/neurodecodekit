@@ -22,7 +22,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
     def test_identity_range_and_planning_boundary_are_exact(self):
         roadmap = self.roadmap
         self.assertEqual(roadmap["schema_name"], "neurodecodekit.next_twenty_loops_roadmap")
-        self.assertEqual(roadmap["schema_version"], "0.16.0")
+        self.assertEqual(roadmap["schema_version"], "0.17.0")
         self.assertEqual(roadmap["roadmap_id"], "loops-25-44")
         self.assertEqual(roadmap["status"], "planning_only_not_execution_authorization")
         self.assertEqual(
@@ -238,6 +238,25 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         self.assertFalse(boundary["loop39_protected_access_authorized"])
         self.assertFalse(boundary["loop39_dependency_loop37_execution_satisfied"])
         self.assertFalse(boundary["loop39_dependency_loop38_execution_satisfied"])
+        self.assertTrue(boundary["loop40_research_packet_prepared"])
+        self.assertEqual(boundary["loop40_qualification_level_count"], 7)
+        self.assertEqual(boundary["loop40_package_layer_count"], 6)
+        self.assertEqual(boundary["loop40_backend_profile_count"], 4)
+        self.assertEqual(boundary["loop40_package_identity_field_count"], 20)
+        self.assertEqual(boundary["loop40_future_fixture_family_count"], 24)
+        self.assertEqual(boundary["loop40_future_requirement_count"], 30)
+        self.assertEqual(boundary["loop40_future_refusal_count"], 40)
+        self.assertEqual(boundary["loop40_false_authorization_field_count"], 40)
+        self.assertEqual(boundary["loop40_leading_research_candidate"], "executorch_xnnpack")
+        self.assertFalse(boundary["loop40_backend_selected"])
+        self.assertFalse(boundary["loop40_target_platform_selected"])
+        self.assertFalse(boundary["loop40_preregistration_prepared"])
+        self.assertFalse(boundary["loop40_execution_authorized"])
+        self.assertFalse(boundary["loop40_optional_install_authorized"])
+        self.assertFalse(boundary["loop40_package_generation_authorized"])
+        self.assertFalse(boundary["loop40_device_or_hardware_authorized"])
+        self.assertTrue(boundary["loop40_dependency_loop24_result_available"])
+        self.assertFalse(boundary["loop40_dependency_loop39_execution_satisfied"])
         self.assertEqual(boundary["user_preferred_incremental_storage_bytes"], 5_000_000_000)
         self.assertEqual(boundary["user_absolute_incremental_storage_bytes"], 10_000_000_000)
         self.assertEqual(boundary["selected_s20_plus_s25_future_bundle_bytes"], 1_106_030_247)
@@ -289,7 +308,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                     self.assertFalse(registration["superseded_v0"]["was_authorized"])
                 else:
                     self.assertEqual(row["status"], "Not Started")
-                    if row["loop_id"] in {34, 35, 36, 37, 38, 39}:
+                    if row["loop_id"] in {34, 35, 36, 37, 38, 39, 40}:
                         expected = {
                             34: "planning_research_complete_no_confidence_fit_or_result_unauthorized",
                             35: "planning_research_complete_no_confound_fixture_acquisition_or_brain_specific_result_unauthorized",
@@ -297,6 +316,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                             37: "planning_research_complete_experiment_not_started",
                             38: "planning_research_complete_experiment_not_started",
                             39: "planning_research_complete_experiment_not_started",
+                            40: "planning_research_complete_experiment_not_started",
                         }
                         self.assertEqual(row["proof_posture"], expected[row["loop_id"]])
                     else:
@@ -316,6 +336,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                         37,
                         38,
                         39,
+                        40,
                     }:
                         self.assertEqual(row["research_status"], "planning_research_complete")
                         self.assertFalse(row["preregistration_prepared"])

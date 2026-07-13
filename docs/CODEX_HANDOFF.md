@@ -123,7 +123,13 @@
 > authorization fields. Its experiment remains `Not Started` and unauthorized;
 > Python 3.10, macOS, cross-OS, dependency-lock, and built-package evidence is
 > unqualified, and no fixture, manifest, matrix, install, or build exists.
-> Loops 40-44 remain `Not Started`.
+> Loop 40 planning research freezes seven qualification levels, six package
+> layers, four unselected backend profiles, 20 identity fields, 24 fixtures,
+> 30 gates, 40 refusals, and 40 false authorization fields. Its experiment
+> remains `Not Started` and unauthorized; ExecuTorch/XNNPACK is a research lead
+> only, Loop 39 has not qualified the reference, and no install, export,
+> package, inference, simulator, app, device, or hardware operation exists.
+> Loops 41-44 remain `Not Started`.
 > This does not reopen Loop 24 or authorize RW3, data, targets, models,
 > validation, training, calibration, or hardware.
 > In parallel, RW0 closes a primary-source Real-World Practice research gate
@@ -338,6 +344,11 @@ This repo is a starter scaffold with working pure-Python components:
   and 36 false authorization fields; the experiment remains `Not Started`,
   current declared support is not cross-machine qualified, and execution is
   unauthorized
+- machine-checked Loop 40 planning research with seven qualification levels,
+  six package layers, four backend profiles, 20 identity fields, 24 fixtures,
+  four stages, 30 gates, 40 refusals, and 40 false authorization fields; the
+  experiment remains `Not Started`, no target/backend is selected, and all
+  packaging, inference, simulator, device, and hardware work is unauthorized
 - JSON/Markdown metrics report command
 - CLI smoke commands
 - unit tests
@@ -350,15 +361,15 @@ negative within-session event comparison. None is a decoder success. Do not
 turn these results, a variance ranking, or a geometry proxy into unseen-person
 or population generalization.
 
-Current Loop 39 local verification passes 574 unittests with 3 expected skips
-in 21.80 seconds wall and 608,272,384-byte maximum RSS; pytest reports 571
-passed, 3 skipped, and 261 subtests in 21.96 seconds wall with
-615,596,032-byte maximum RSS. The focused Loop 24-39 planning boundary has 256
-passing tests in 0.25 seconds wall and 66,093,056-byte maximum RSS; the strict
-Loop 39 plus roadmap slice has 25 tests in 0.09 seconds wall and
-34,930,688-byte maximum RSS. Dependency-light discovery is green at 542 tests
-with 121 optional skips in 0.64 seconds wall and 83,509,248-byte maximum RSS.
-Each full count is 16 above the Loop 38 closeout. No Loop 25-39 fixture, coefficient,
+Current Loop 40 local verification passes 587 unittests with 3 expected skips
+in 23.91 seconds wall and 608,894,976-byte maximum RSS; pytest reports 584
+passed, 3 skipped, and 269 subtests in 23.07 seconds wall with
+614,612,992-byte maximum RSS. The focused Loop 24-40 planning boundary has 269
+passing tests in 1.28 seconds wall and 74,825,728-byte maximum RSS; the strict
+Loop 40 plus roadmap slice has 22 tests in 1.10 seconds wall and
+42,139,648-byte maximum RSS. Dependency-light discovery is green at 555 tests
+with 121 optional skips in 2.63 seconds wall and 99,549,184-byte maximum RSS.
+Each full count is 13 above the Loop 39 closeout. No Loop 25-40 fixture, coefficient,
 preprocessing run, candidate selection/download, local MAT payload hash,
 header/signal/target/validation/model read, adapter fit, training run,
 calibration or confidence fit, learning-curve or confidence score, peripheral
@@ -366,17 +377,19 @@ recording, residualization fit, physical-repetition study, product-confidence
 surface, geometry transform, unit conversion, rereference, interpolation,
 exporter, derivative tree, validator run, raw copy, release, upload,
 environment manifest, dependency lock, cross-machine matrix job, package build,
+runtime install, export, conversion, packaged inference, profiler, delegate,
+simulator, app,
 language-model/Neuro Token run, protected network payload download, RW3
 operation, SDK import, stream, board, device, partner, or hardware operation
-occurred. The tracked workbook is 97,628 bytes
+occurred. The tracked workbook is 98,147 bytes
 with SHA-256
-`d0f661b9718891237605873eff1124cea7df90fbb70f4affeb04740b497a327c`;
+`31675786de3d09be758f2001e7e681c3bdfa1b2ff75378162430e32ddf3d00e5`;
 all nine sheets render, the export reloads with exact key ranges, and the
-formula scan has zero matches. Ruff, touched-file format checks, compileall, 27
+formula scan has zero matches. Ruff, touched-file format checks, compileall, 28
 source JSON and two TOML parses, 72 checked local Markdown links with zero
-missing, seven CLI help surfaces, 55 registered commands, unauthorized Loop 39
-runtime absence, and `git diff --check` pass. Research commit `efbf764` passes
-push CI run `29230660807` and draft PR #18 CI run `29230681661`.
+missing, seven CLI help surfaces, 55 registered commands, unauthorized Loop 40
+runtime absence, the 82-commit Gitleaks scan, and `git diff --check` pass. Push,
+draft PR, and remote CI are pending.
 
 ## The north star
 
