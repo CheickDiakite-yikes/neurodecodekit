@@ -3232,3 +3232,16 @@ to-text latency, portable-hardware behavior, or scientific result exists.
   its formula scan found zero errors. All 20 roadmap execution flags and all
   42 Loop 41 `*_authorized_now` fields remain false; the three authorization
   setup booleans are also false.
+- Research commit `5e8308f` is pushed on
+  `codex/loop-41-stream-neurotoken-research`. Push CI run `29235264294` and
+  draft PR #20 CI run `29235281640` both pass Base Python and Optional Neuro
+  Readers.
+
+Engineering capability added: a machine-checkable future stream-to-NeuroToken
+integration boundary now keeps clocks, anomaly propagation, resume state,
+identity, provenance, resources, and unavailable latency claims explicit.
+
+Scientific claim not established: no Loop 41 runtime or protected payload was
+opened, so no neural advantage, decoding accuracy, unseen-person
+generalization, real-time capture-to-text latency, or portable-hardware result
+exists.

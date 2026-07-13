@@ -372,15 +372,14 @@ negative within-session event comparison. None is a decoder success. Do not
 turn these results, a variance ranking, or a geometry proxy into unseen-person
 or population generalization.
 
-Current Loop 40 local verification passes 587 unittests with 3 expected skips
-in 23.91 seconds wall and 608,894,976-byte maximum RSS; pytest reports 584
-passed, 3 skipped, and 269 subtests in 23.07 seconds wall with
-614,612,992-byte maximum RSS. The focused Loop 24-40 planning boundary has 269
-passing tests in 1.28 seconds wall and 74,825,728-byte maximum RSS; the strict
-Loop 40 plus roadmap slice has 22 tests in 1.10 seconds wall and
-42,139,648-byte maximum RSS. Dependency-light discovery is green at 555 tests
-with 121 optional skips in 2.63 seconds wall and 99,549,184-byte maximum RSS.
-Each full count is 13 above the Loop 39 closeout. No Loop 25-40 fixture, coefficient,
+Current Loop 41 local verification passes 601 unittests with 3 expected skips
+in 23.43 seconds wall and 616,284,160-byte maximum RSS; pytest reports 598
+passed, 3 skipped, and 277 subtests in 23.37 seconds wall with
+621,232,128-byte maximum RSS. The focused Loop 41 plus roadmap slice has 23
+passing tests, and the Loop 25-41 planning-boundary discovery has 248 passing
+tests. Dependency-light discovery is green at 569 tests with 121 optional
+skips in 2.73 seconds wall and 92,831,744-byte maximum RSS. Each full count is
+14 above the Loop 40 closeout. No Loop 25-41 fixture, coefficient,
 preprocessing run, candidate selection/download, local MAT payload hash,
 header/signal/target/validation/model read, adapter fit, training run,
 calibration or confidence fit, learning-curve or confidence score, peripheral
@@ -389,19 +388,20 @@ surface, geometry transform, unit conversion, rereference, interpolation,
 exporter, derivative tree, validator run, raw copy, release, upload,
 environment manifest, dependency lock, cross-machine matrix job, package build,
 runtime install, export, conversion, packaged inference, profiler, delegate,
-simulator, app,
+simulator, app, source chunk, stream-to-NeuroToken adapter, resume state,
+clock correction, anomaly fixture, token runtime, end-to-end latency result,
 language-model/Neuro Token run, protected network payload download, RW3
 operation, SDK import, stream, board, device, partner, or hardware operation
-occurred. The tracked workbook is 98,147 bytes
-with SHA-256
-`31675786de3d09be758f2001e7e681c3bdfa1b2ff75378162430e32ddf3d00e5`;
+occurred. The tracked workbook is 98,959 bytes with SHA-256
+`185cbc483321e3b1b53c7c6426092a31ed3ef4be0c7e0b1b4c9c5963b1a4c672`;
 all nine sheets render, the export reloads with exact key ranges, and the
-formula scan has zero matches. Ruff, touched-file format checks, compileall, 28
+formula scan has zero matches. Ruff, touched-file format checks, compileall, 29
 source JSON and two TOML parses, 72 checked local Markdown links with zero
-missing, seven CLI help surfaces, 55 registered commands, unauthorized Loop 40
-runtime absence, the 82-commit Gitleaks scan, and `git diff --check` pass.
-Research commit `55a2191` passes push CI run `29233258741` and draft PR #19 CI
-run `29233277952`.
+missing, four exercised CLI help surfaces, 55 registered commands, unauthorized
+Loop 41 runtime absence, the 84-commit Gitleaks scan, and `git diff --check`
+pass. Research commit `5e8308f` passes push CI run `29235264294` and draft PR
+#20 CI run `29235281640`; both Base Python and Optional Neuro Readers jobs are
+green.
 
 ## The north star
 
