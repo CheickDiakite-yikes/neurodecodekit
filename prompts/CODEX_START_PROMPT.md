@@ -104,7 +104,9 @@ Do not reset, revert, delete, or overwrite work already present.
   claims while its experiment remains `Not Started`; Loop 41 planning research
   defines the stream-to-NeuroToken clock, anomaly, state, schedule, and
   provenance firewall while its experiment remains `Not Started` and
-  unauthorized; Loops 42-44 remain `Not Started`; all 20
+  unauthorized; Loop 42 planning research selects OpenBCI Cyton base
+  8-channel USB-radio for future mechanics only while its experiment remains
+  `Not Started` and unauthorized; Loops 43-44 remain `Not Started`; all 20
   execution flags remain false.
 - Loop 26's planning boundary recommends a 2,908-parameter causal candidate, a
   2,884-parameter linear comparator, six controls, and exact enumeration of all
@@ -365,6 +367,12 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
     raw scores as probabilities, transfer a synthetic pass to real data, or
     hide abstention delay. The experiment is `Not Started`, confidence is
     unavailable, and all work remains unauthorized.
+18. Treat the Loop 42 Q0 candidate selection as planning research, not a
+    purchase, SDK, serial, device, participant, or recording authorization.
+    Do not substitute Daisy or Wi-Fi, infer sensor-capture latency from
+    BrainFlow timestamps, call generic ExG EEG without verified configuration,
+    or promote connectivity into signal quality, decoding, home usability, or
+    safety.
 
 ## Required deliverables for the next authorized milestone
 

@@ -63,12 +63,17 @@
    RW3-to-NeuroToken join, seven-clock ledger, anomaly and resume rules, and
    explicit dependency firewall. It is planning research only; Loop 41
    remains `Not Started` and unauthorized, with no fixture or runtime.
-19. Review `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` only when deciding whether
+19. Read `docs/LOOP_42_PRIMARY_SOURCE_RESEARCH.md` for the Q0-only OpenBCI
+   Cyton base 8-channel USB-radio selection, 28-field identity record, packet/
+   timing/locality/safety boundaries, four stages, 34 gates, and 46 refusals.
+   It is planning research only; no purchase, SDK, connection, participant,
+   recording, device qualification, or scientific result is authorized.
+20. Review `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` only when deciding whether
    to authorize the independent RW3 Stage A.
-20. Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md` and
+21. Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md` and
    `docs/LOOPS_25_44_ROADMAP.md` for the planning-only Loops 25-44 queue.
-21. Paste `prompts/CODEX_START_PROMPT.md` into Codex to continue.
-22. Run tests:
+22. Paste `prompts/CODEX_START_PROMPT.md` into Codex to continue.
+23. Run tests:
 
 ```bash
 PYTHONPATH=src python -m unittest discover -s tests -v
@@ -106,7 +111,9 @@ Loop 40 planning research defines the edge-package, host-state, fallback,
 complete-cost, and target-identity firewall while its experiment remains `Not
 Started`; Loop 41 planning research defines the stream-to-NeuroToken clock,
 anomaly, state, schedule, and provenance firewall while its experiment remains
-`Not Started` and unauthorized; Loops 42-44 remain `Not Started`.
+`Not Started` and unauthorized; Loop 42 planning research selects OpenBCI
+Cyton base 8-channel USB-radio for future mechanics only while its experiment
+remains `Not Started` and unauthorized; Loops 43-44 remain `Not Started`.
 The maximum future
 local Loop 31 claim is sensor-signal dependence, and brain-specific attribution
 remains blocked on Loop 35. All are unauthorized.

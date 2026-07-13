@@ -45,6 +45,7 @@ and explain exactly what the result does not prove.
 | Neural-data privacy decision | Loop 38 research freezes 5 sensitivity levels, 8 artifact classes, 10 lifecycle surfaces, 12 sensitive-field classes, 5 deletion-receipt levels, 24 fixtures, 26 gates, and 36 refusals | Planning research is complete while the experiment is `Not Started` and unauthorized; unknown copies remain unresolved, and path absence is not media sanitization |
 | Cross-machine reproducibility decision | Loop 39 research freezes 7 qualification levels, 18 environment fields, 8 output classes, 6 comparison classes, 6 future matrix cells, 28 gates, and 38 refusals | Planning research is complete while the experiment is `Not Started` and unauthorized; current Python 3.10, macOS, cross-OS, dependency-lock, and built-package claims remain unqualified |
 | Edge-runtime packaging decision | Loop 40 research freezes 7 qualification levels, 6 package layers, 4 backend profiles, 20 identity fields, 24 fixtures, 30 gates, and 40 refusals around the retained 1,130-parameter float32 reference | Planning research is complete while the experiment is `Not Started` and unauthorized; ExecuTorch/XNNPACK is a research lead only, with no selected target, export, package, inference, simulator, or hardware result |
+| One-device qualification decision | Loop 42 selects the exact OpenBCI Cyton base 8-channel USB-radio path and freezes 28 identity fields, 7 timing observables, 10 anomalies, 4 stages, 34 gates, and 46 refusals | Current evidence is Q0 official-specification eligibility only; no device is owned, purchased, connected, streamed, or qualified, and no signal or decoding claim exists |
 | Real predictive evidence | Both the same-person cross-session MEG model and the bounded S7 EEG classifier lose to no-signal controls | The current scientific result is negative, explicit, and frozen against post-hoc tuning |
 | Local execution gate | Float16 preserved exact behavior but ran `1.170x` slower on the producer; qint8 cut payload to `47.1%` but changed behavior and ran `2.785x` slower | Float32 is retained, qualification stayed unopened, and Loop 24 is parked after the full run exceeded its 60-second cap |
 | Next transport layer | Stage A is specified as 90 future schedule-by-fixture cases with 30 exact refusals under a 32 MiB cap | The decision packet is review-ready; no replay runtime, socket, board, or hardware path is authorized yet |
@@ -80,7 +81,9 @@ and explain exactly what the result does not prove.
 | Loop 38 privacy/lifecycle boundary | 5 sensitivity levels; 8 artifact classes; 10 lifecycle surfaces; 12 sensitive-field classes; 12 threats; 5 receipt levels; 24 fixtures; 4 stages; 26 gates; 36 refusals; 32 false authorization fields | planning research only; copies outside current Git metadata remain unresolved | Separates redaction, de-identification, local path receipts, repository coordination, media sanitization, consent, license, and sharing authority |
 | Loop 39 reproducibility boundary | 7 qualification levels; 18 environment fields; 8 output classes; 6 comparison classes; 6 future cells; 20 fixtures; 4 stages; 28 gates; 38 refusals; 36 false authorization fields | planning research only; no matrix cell has run | Separates semantic identity, field-specific numerical compatibility, descriptive resources, same-team repeatability, supported-matrix compatibility, independent reproduction, and scientific replication |
 | Loop 40 edge-package boundary | 7 qualification levels; 6 package layers; 4 unselected backends; 20 identity fields; 8 outputs; 6 comparisons; 24 fixtures; 4 stages; 30 gates; 40 refusals; 40 false authorization fields | planning research only; no backend, target, export, package, or inference exists | Separates graph export from host normalization/state/timestamps/decoder, total deployment cost from model bytes, simulator evidence from physical devices, and packaging from science |
-| Test and release surface | 587 local unittests with 3 expected skips; 584 pytest passes plus 269 subtests; 555 dependency-light Python tests with 121 expected skips | Loop 40 research commit `55a2191` is green in push CI `29233258741` and draft PR #19 CI `29233277952` | Makes research contracts, candidate selection, source bindings, access order, tamper checks, and authorization boundaries executable on ordinary hardware |
+| Loop 41 stream-to-token boundary | 6 integration layers; 7 clock views; 8 anomaly classes; 5 schedules; 5 resume cuts; 18 hash bindings; 28 fixtures; 4 stages; 32 gates; 42 refusals; 42 false authorization fields | planning research only; no source chunk, adapter, preprocessing output, NeuroToken runtime, stream, or latency result exists | Preserves source time, derived corrections, anomaly evidence, resume state, and provenance without calling replay scheduling capture-to-text latency |
+| Loop 42 named-device boundary | OpenBCI Cyton base 8-channel USB-radio; Q0 only; 28 identity fields; 16 packet fields; 7 timing observables; 10 anomalies; 30 fixtures; 4 stages; 34 gates; 46 refusals; 45 false authorization fields | planning research only; no purchase, SDK, serial read, board connection, participant, recording, or device result exists | Makes a future local-device mechanics test exact while refusing to turn host timestamps, local files, connectivity, or eight channels into latency, privacy, EEG-quality, or text-decoding claims |
+| Test and release surface | 616 local unittests with 3 expected skips; 613 pytest passes plus 277 subtests; 584 dependency-light Python tests with 121 expected skips | Loop 42 local acceptance is green on one numerical thread; remote CI status is linked at closeout | Makes research contracts, candidate selection, source bindings, access order, tamper checks, and authorization boundaries executable on ordinary hardware |
 
 ### Real-Data Scientific Scorecard
 
@@ -98,7 +101,7 @@ engineering wins, not hidden behind synthetic accuracy.
 
 | Gate | Runtime | Peak RSS | Persistent output |
 |---|---:|---:|---:|
-| Dependency-light Python unittest run | 2.63 sec wall | 99,549,184 bytes | 555 tests with 121 expected optional skips; temporary output only |
+| Dependency-light Python unittest run | 2.57 sec wall | 106,840,064 bytes | 584 tests with 121 expected optional skips; temporary output only |
 | RW1 metadata intake roundtrip | 0.001659 sec | 21,643,264 bytes | 11,545 bytes |
 | RW2 bounded FIF quality roundtrip | 3.839168 sec | 150,749,184 bytes | 76,592 bytes |
 | RW3 contract/request invariant suite | 0.040 sec | 20,529,152 bytes | no generated payload |
@@ -116,6 +119,8 @@ engineering wins, not hidden behind synthetic accuracy.
 | Loop 39 plus roadmap invariants | 0.09 sec wall | 34,930,688 bytes | 25 tests; no fixture, environment manifest, matrix job, dependency lock, package build, protected payload, model, training, independent reproducer, edge, device, or hardware operation |
 | Loop 24-40 planning boundary suite | 1.28 sec wall | 74,825,728 bytes | 269 tests; no generated experiment payload |
 | Loop 40 plus roadmap invariants | 1.10 sec wall | 42,139,648 bytes | 22 tests; zero fixtures, installs, exports, packages, inference, profiler, simulator, device, or hardware operations |
+| Loop 24-42 planning boundary suite | 1.99 sec wall | 88,997,888 bytes | 263 tests; zero generated experiment, protected-data, model, stream, participant, device, or hardware operations |
+| Loop 42 plus roadmap invariants | 0.043 sec internal | not separately measured | 24 tests; zero SDK imports, fixtures, playback, serial reads, discovery, connections, recordings, model runs, or latency measurements |
 | Loop 28 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 10 web operations, 1 GitHub metadata call, zero code/data payload bytes |
 | Loop 29 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 14 public web operations, zero protected data/model/device operations, zero downloaded payload bytes |
 | Loop 30 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 10 public web operations, zero trace/server/browser/protected-data/model/stream operations, zero downloaded payload bytes |
@@ -129,8 +134,9 @@ engineering wins, not hidden behind synthetic accuracy.
 | Loop 38 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 6 high-level public web operations and 8 official/primary page opens; zero protected reads, fixtures, scanners, deletions, identity attacks, history rewrites, models, training runs, releases, uploads, devices, or hardware operations |
 | Loop 39 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 6 high-level public web operations and 8 official/primary page opens; zero fixtures, manifests, matrix jobs, installs, lockfiles, package builds, protected reads, models, training runs, edge, stream, device, or hardware operations |
 | Loop 40 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 3 high-level web operations and 12 official/primary page opens; zero fixtures, installs, exports, packages, inference, profiler, memory-planner, delegate, simulator, app, protected-data, model, training, device, or hardware operations |
+| Loop 42 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 4 high-level web operations, 12 search queries, and 9 official page opens; zero SDK, fixture, device, participant, signal, target, model, training, decoder, stream, network/cloud, or hardware operations |
 | Loop 24 registered selection | 65.154951 sec internal | 222,248,960 bytes max worker | 262,822 bytes fixture plus output |
-| Complete optional-neuro/ML test runners | 23.91 sec unittest / 23.07 sec pytest wall | 614,612,992 bytes max | temporary test output only |
+| Complete optional-neuro/ML test runners | 24.31 sec unittest / 23.34 sec pytest wall | 625,065,984 bytes max | temporary test output only |
 
 Proof labels are deliberately narrow:
 
@@ -326,6 +332,13 @@ Read this before interpreting any number in the repository.
   unauthorized: no source chunk, fixture, preprocessing run, adapter, token
   runtime, end-to-end latency measurement, live source, device, or scientific
   result exists.
+- **Loop 42 planning research:** OpenBCI Cyton base 8-channel over USB radio is
+  the one future mechanics candidate, with Daisy, Wi-Fi, cloud, targets, and
+  models excluded. The Q0 boundary freezes exact firmware/host/configuration
+  identity, packet and clock semantics, locality, battery-only safety, four
+  separately authorized stages, 34 gates, and 46 refusals. No device is known
+  to be present; there was no purchase, install, connection, stream, recording,
+  participant contact, signal result, latency measurement, or decoding claim.
 
 ### What The Results Actually Say
 
@@ -912,7 +925,9 @@ The original numbered development sequence has reached:
   firewall while its experiment remains `Not Started`; Loop 41 planning
   research defines the stream-to-NeuroToken clock, anomaly, state, schedule,
   and provenance firewall while its experiment remains `Not Started` and
-  unauthorized; Loops 42-44 remain `Not Started`. All 20
+  unauthorized; Loop 42 planning research selects the exact OpenBCI Cyton
+  8-channel USB-radio path for future mechanics only while its experiment
+  remains `Not Started` and unauthorized; Loops 43-44 remain `Not Started`. All 20
   execution flags are false. Loop 24's parked result does not authorize Loop
   25, and later research cannot authorize an earlier or later experiment.
 
@@ -960,6 +975,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/loop28_research_boundary.v0.json](registries/loop28_research_boundary.v0.json) | machine-readable Loop 28 estimand, controls, access order, resource limits, dependencies, zero protected access, and 21 false authorization fields |
 | [docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md) | primary-source OPM-MEG and EEG review, two-lane portability decision, storage allocation, qualification ladder, and result-oriented real-data path |
 | [registries/loop29_research_boundary.v0.json](registries/loop29_research_boundary.v0.json) | machine-readable modality requirements, device gates, storage ceilings, source bindings, zero protected access, and 24 false authorization fields |
+| [docs/LOOP_42_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_42_PRIMARY_SOURCE_RESEARCH.md) | official OpenBCI/BrainFlow audit, exact future Cyton candidate, packet/clock/locality/safety boundaries, staged gates, and no-execution decision |
+| [registries/loop42_research_boundary.v0.json](registries/loop42_research_boundary.v0.json) | machine-readable candidate identity, packet and timing semantics, anomaly/privacy/safety controls, resource caps, zero operation counters, and 45 false authorization fields |
 | [docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md) | primary-source calibration taxonomy, 32-parameter adapter recommendation, physical split and burden contract, access order, controls, and one-time final gate |
 | [registries/loop32_research_boundary.v0.json](registries/loop32_research_boundary.v0.json) | machine-readable four-mode calibration boundary, six-point budget, 32/16/48 partition floors, zero protected operations, and 22 false authorization fields |
 | [docs/REAL_DATA_VALIDATION_2026-07-10.md](docs/REAL_DATA_VALIDATION_2026-07-10.md) | S21 alignment, session, and upstream audit |

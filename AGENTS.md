@@ -370,6 +370,27 @@ unsatisfied. No fixture, source chunk, correction, preprocessing, adapter,
 state, token runtime, stream, device, latency measurement, or scientific
 result exists or is authorized.
 
+Loop 42 planning research is complete while its one-device qualification
+experiment remains `Not Started` and unauthorized:
+
+```bash
+cat docs/LOOP_42_PRIMARY_SOURCE_RESEARCH.md
+python -m json.tool registries/loop42_research_boundary.v0.json >/dev/null
+```
+
+OpenBCI Cyton base 8-channel over USB radio is selected as the exact future
+mechanics candidate at Q0 official-specification level. The boundary freezes
+28 identity fields, 16 packet fields, seven timing observables, ten anomaly
+classes, ten privacy surfaces, ten safety requirements, six qualification
+levels, four separately authorized stages, 30 fixture families, 34 gates, 46
+refusals, and 45 false `authorized_now` fields. Daisy, Wi-Fi Shield, GUI
+network streaming, cloud, targets, and models are excluded. Selection is not a
+purchase recommendation; no device is known to be present, and no fixture,
+install, SDK import, serial read, discovery, firmware query, connection,
+hardware operation, participant contact, electrode placement, recording,
+network operation, device result, latency measurement, or scientific claim
+exists. Loop 38, Loop 41, and RW3 execution dependencies remain unsatisfied.
+
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
 commit `c3d1f01`, before any adapter, source chunk, fixture, socket, board, or
@@ -425,8 +446,10 @@ remains `Not Started`; Loop 40 planning research defines the edge-package,
 host-state, fallback, resource, and target-identity firewall while its
 experiment remains `Not Started`; Loop 41 planning research defines the
 stream-to-NeuroToken clock, anomaly, state, schedule, and provenance firewall
-while its experiment remains `Not Started` and unauthorized; Loops 42-44
-remain `Not Started`. All 20
+while its experiment remains `Not Started` and unauthorized; Loop 42 planning
+research selects OpenBCI Cyton base 8-channel USB-radio for future mechanics
+only while its experiment remains `Not Started`; Loops 43-44 remain `Not
+Started`. All 20
 execution flags are false. This roadmap does not
 reopen Loop 24, authorize RW3, or permit a Loop 25-44 fixture, download, data
 read, model run, training run, stream, board, or hardware operation. A broad
@@ -546,6 +569,13 @@ authorization boundary.
   four stages, 32 gates, and 42 refusals. No source-chunk adapter, fixture,
   causal-preprocessing run, NeuroToken runtime, end-to-end latency result,
   stream, device, hardware operation, or scientific claim exists.
+- The Loop 42 planning registry remains exact with 45 false authorization
+  fields, the Q0 OpenBCI Cyton base 8-channel USB-radio candidate, 28 identity
+  fields, 16 packet fields, seven timing observables, ten anomalies, ten
+  privacy surfaces, ten safety requirements, six qualification levels, four
+  stages, 30 fixture families, 34 gates, and 46 refusals. Candidate selection
+  is not purchase permission; no SDK, serial, device, participant, recording,
+  signal, model, decoding, latency, portability, or home-use result exists.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed

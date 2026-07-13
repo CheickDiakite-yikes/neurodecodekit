@@ -1090,35 +1090,66 @@ targets, model runs, and training runs.
 
 ## Loop 42 - One-Device Qualification
 
+**Current status:** Planning research complete; experiment `Not Started` and
+unauthorized. OpenBCI Cyton base 8-channel over its USB-radio dongle is the
+selected future mechanics candidate. Daisy, Wi-Fi Shield, GUI network
+streaming, targets, models, and cloud paths are excluded. This is Q0 official-
+specification eligibility, not a purchase recommendation or device result.
+
 **Core question:** Can one named device preserve declared channels, units,
 clocks, packets, and privacy from recorded replay through one bounded session?
 
 **Why it moves the goal:** One measured device/firmware/host claim is more
 credible than broad support inferred from an SDK import.
 
-**Build:** Create a device descriptor, consent/locality checklist,
-recorded-versus-live equivalence packet, packet-loss/reconnect stress report,
-retention audit, and compatibility-level decision.
+**Build:** Future only. Create the 28-field device descriptor, consent/locality
+checklist, target-free playback equivalence packet, packet-loss/reconnect stress
+report, network-off retention audit, battery-only no-contact bench, separately
+consented scalp mechanics session, and exact compatibility-level decision.
 
-**Research:** Review device-specific timestamps, units, reference, geometry,
-firmware, transports, cloud behavior, and data ownership from primary sources.
+**Research:** Complete. Official OpenBCI and BrainFlow sources define the 33-
+byte packet, 8-bit counter, eight 24-bit ExG fields, auxiliary bytes, 250 Hz
+nominal rate, firmware/radio queries, ADS1299/SRB2/BIAS/gain identity, local-
+file and optional-network surfaces, adapter units, playback modes, and host-
+generated timestamp warning. Vendor-service privacy and software licensing
+remain separate from measured locality, consent, safety, and publication
+authority.
 
-**Data and controls:** One separately approved board or headset. Start with SDK
-synthetic/playback, then one consented local qualification session if approved.
-Compare recorded/live paths and test loss, reconnect, clock reset, buffer drain,
-and network-off behavior.
+**Data and controls:** Four non-collapsible future stages: A static adapter
+eligibility, B target-free synthetic/playback equivalence, C battery-powered
+no-contact board bench, and D consented battery-only scalp mechanics. Each
+needs separate authorization. Compare recorded/live paths only after Loop 41
+and RW3 dependencies close. Test loss, duplicate, reorder, counter wrap/reset,
+disconnect/reconnect, rate mismatch, buffer overflow/drain, timestamp origin,
+network-off behavior, and every raw/log/temp/backup/sync surface.
 
-**Metrics:** channel/unit/rate/packet identity; offset/jitter/gaps/duplicates/
-reorder; observed capture-to-arrival boundary; runtime/RSS/bytes/drops; privacy
-and retention violations.
+**Metrics:** Exact hardware/firmware/dongle/adapter/host/configuration identity;
+channel/unit/rate/packet semantics; gaps/duplicates/reorder/wrap/reset;
+adapter, arrival, retrieval, and marker timing without clock collapse; runtime,
+RSS, bytes, packets, drops, sockets, retention, privacy, and access counters.
+Physical capture time and capture-to-arrival latency remain unavailable without
+an instrumented common-clock event.
 
-**Gate:** Qualify only the exact device, firmware, transport, host, and tested
-compatibility level. Connectivity does not qualify signal quality, useful
-neural signal, decoding, portability, or clinical use.
+**Gate:** Thirty-four exact requirements and 46 refusals qualify at most the
+named board, firmware, dongle, USB-radio transport, BrainFlow version, macOS
+host, configuration, and measured level. Connectivity does not qualify EEG
+identity, signal quality, useful neural signal, task information, decoding,
+reliability, portability, safety, home use, or clinical use. A failed stage
+parks that exact configuration without substitution or gate weakening.
 
-**Dependencies and authorization:** Depends on Loops 29, 38, and 41 plus exact
-device, ethics, consent, retention, file, session, and byte authorization. No
-SDK import, discovery, socket, board, or hardware is authorized now.
+**Dependencies and authorization:** Loop 29 planning exists, but Loop 38 device-
+lifecycle execution, Loop 41 stream-to-NeuroToken execution, RW3 Stage A, an
+exact device, and ethics/consent/retention packets are unsatisfied. No fixture,
+install, SDK import, playback, source chunk, serial read, discovery, firmware
+query/update, radio configuration, connection, hardware, participant,
+electrode, recording, file write, network/cloud, protected read, target, model,
+training, decoder, token, claim, purchase, or release is authorized.
+
+**Resources:** Current experiment bytes and device seconds are zero. Future
+ceilings are one device/host/thread/worker, 60 seconds for Stage A/B, 300
+seconds for Stage C, 600 seconds for Stage D, 1 GiB RSS, 64 MiB raw, 32 MiB
+derived, 96 MiB total generated, and zero network-stream/cloud bytes. Any SDK
+install needs its own exact byte cap.
 
 ## Loop 43 - Independent Reproduction Challenge
 

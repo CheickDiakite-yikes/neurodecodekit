@@ -2291,3 +2291,51 @@ time latency, device qualification, or portable-hardware result exists.
 Evidence: `docs/LOOP_41_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop41_research_boundary.v0.json`,
 `tests/test_loop41_research_boundary.py`, and roadmap row 41.
+
+## 0069 - Select One Inspectable Local Device Path Without Promoting It
+
+Decision: close Loop 42 planning research while leaving its device experiment
+`Not Started`, all 45 `authorized_now` fields false, and no purchase, fixture,
+install, SDK import, playback, serial read, discovery, firmware operation,
+connection, hardware, participant, electrode, recording, network, signal,
+model, decoding, latency, or release operation open.
+
+Candidate decision: select OpenBCI Cyton base 8-channel over USB radio as the
+one future mechanics candidate at Q0 official-specification level. Exclude
+Daisy, Wi-Fi Shield, GUI network streaming, cloud, targets, and models. The
+candidate has an official 33-byte packet, 8-bit counter, eight ExG channels at
+250 Hz, firmware/radio commands, ADS1299/SRB2/BIAS identity, battery-only
+power, local-file support, and a direct BrainFlow descriptor. This makes it
+inspectable, not scientifically superior and not recommended for purchase.
+
+Identity and timing decision: freeze 28 device/configuration fields, 16 packet
+fields, seven timing observables, and ten anomalies. Generic ExG becomes EEG
+only after exact scalp/reference/BIAS/gain/geometry verification. Sample
+counter, adapter timestamp, local arrival, local retrieval, marker, physical
+capture, and render/text clocks may not be collapsed. Host-generated adapter
+timestamps cannot establish capture latency; an instrumented common-clock
+event is required.
+
+Stage decision: A static adapter eligibility, B target-free playback, C
+battery-powered no-contact board bench, and D separately consented battery-only
+scalp mechanics each require their own hash-bound preregistration,
+authorization-only commit, and green CI. Loop 38, Loop 41, and RW3 execution
+dependencies remain unsatisfied. A failed stage parks the exact configuration
+without device, firmware, transport, adapter, host, or gate substitution.
+
+Privacy and safety decision: freeze ten lifecycle/network surfaces and ten
+safety/consent rules. Local recording support is not locality or privacy proof;
+future work must run network-off and inventory raw, derived, settings, logs,
+support, screenshot, temp, backup, sync, identity, and socket surfaces. Any
+body-connected stage is battery only, with charging and mains absent.
+
+Claim boundary: current evidence establishes only that one officially
+documented device configuration is eligible for a future staged mechanics
+packet. No EEG quality, neural advantage, task information, decoding,
+reliability, real-time text, portability, at-home usability, safety, clinical,
+or population result exists.
+
+Evidence: `docs/LOOP_42_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop42_research_boundary.v0.json`,
+`tests/test_loop42_research_boundary.py`, roadmap row 42, and the unchanged
+13-record device registry.

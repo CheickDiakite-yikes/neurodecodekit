@@ -79,7 +79,9 @@ class Loop40ResearchBoundaryTests(unittest.TestCase):
         self.assertFalse(dependencies["loop24_qualification_seed_may_be_opened"])
         self.assertTrue(dependencies["loop39_planning_dependency_satisfied_now"])
         self.assertFalse(dependencies["loop39_required_matrix_executed_now"])
-        self.assertTrue(dependencies["loop39_relevant_matrix_pass_required_before_export_qualification"])
+        self.assertTrue(
+            dependencies["loop39_relevant_matrix_pass_required_before_export_qualification"]
+        )
         self.assertTrue(dependencies["named_target_required_before_backend_selection"])
         self.assertTrue(dependencies["loop42_required_before_physical_device_claim"])
         self.assertFalse(dependencies["general_continuation_is_execution_authorization"])
@@ -130,9 +132,24 @@ class Loop40ResearchBoundaryTests(unittest.TestCase):
         self.assertEqual(len(self.boundary["outcome_taxonomy"]), 8)
         self.assertEqual(len(self.boundary["claim_taxonomy"]), 7)
         combined = " ".join(self.boundary["package_identity_fields"])
-        for term in ("target_os", "runtime_binary", "operator_set", "fallback", "host_normalization", "timestamp", "causal", "thermal", "claim_ceiling"):
+        for term in (
+            "target_os",
+            "runtime_binary",
+            "operator_set",
+            "fallback",
+            "host_normalization",
+            "timestamp",
+            "causal",
+            "thermal",
+            "claim_ceiling",
+        ):
             self.assertIn(term, combined)
-        self.assertTrue(all(row["separate_authorization_required"] for row in self.boundary["future_stage_sequence"]))
+        self.assertTrue(
+            all(
+                row["separate_authorization_required"]
+                for row in self.boundary["future_stage_sequence"]
+            )
+        )
 
     def test_backend_profiles_preserve_four_real_options(self):
         profiles = self.boundary["backend_profiles"]
@@ -153,11 +170,34 @@ class Loop40ResearchBoundaryTests(unittest.TestCase):
         gates = self.boundary["future_acceptance_gates"]
         refusals = self.boundary["future_refusal_ids"]
         self.assertEqual(len(gates), 30)
-        self.assertEqual([row["requirement_id"] for row in gates], [f"L40-G{index:02d}" for index in range(1, 31)])
+        self.assertEqual(
+            [row["requirement_id"] for row in gates],
+            [f"L40-G{index:02d}" for index in range(1, 31)],
+        )
         self.assertEqual(len(refusals), 40)
-        self.assertEqual([row.split("_", 1)[0] for row in refusals], [f"L40-R{index:02d}" for index in range(1, 41)])
+        self.assertEqual(
+            [row.split("_", 1)[0] for row in refusals],
+            [f"L40-R{index:02d}" for index in range(1, 41)],
+        )
         combined = " ".join(refusals)
-        for term in ("authorization", "loop39", "target_platform", "backend", "install", "protected", "operator", "fallback", "dtype", "timestamp", "hash", "runtime", "rss", "thermal", "portable", "scientific"):
+        for term in (
+            "authorization",
+            "loop39",
+            "target_platform",
+            "backend",
+            "install",
+            "protected",
+            "operator",
+            "fallback",
+            "dtype",
+            "timestamp",
+            "hash",
+            "runtime",
+            "rss",
+            "thermal",
+            "portable",
+            "scientific",
+        ):
             self.assertIn(term, combined)
 
     def test_resources_and_access_are_zero_and_bounded(self):
@@ -173,7 +213,10 @@ class Loop40ResearchBoundaryTests(unittest.TestCase):
         self.assertEqual(counters["high_level_public_web_operations"], 3)
         self.assertEqual(counters["official_or_primary_pages_opened"], 12)
         for key, value in counters.items():
-            if isinstance(value, int) and key not in {"high_level_public_web_operations", "official_or_primary_pages_opened"}:
+            if isinstance(value, int) and key not in {
+                "high_level_public_web_operations",
+                "official_or_primary_pages_opened",
+            }:
                 self.assertEqual(value, 0, key)
 
     def test_sources_are_official_and_complete(self):
@@ -215,7 +258,7 @@ class Loop40ResearchBoundaryTests(unittest.TestCase):
             self.assertIn(text, self.research)
 
     def test_machine_roadmap_and_public_status_are_synchronized(self):
-        self.assertEqual(self.roadmap["schema_version"], "0.18.0")
+        self.assertEqual(self.roadmap["schema_version"], "0.19.0")
         current = self.roadmap["current_boundary"]
         self.assertTrue(current["loop40_research_packet_prepared"])
         self.assertEqual(current["loop40_qualification_level_count"], 7)
@@ -245,7 +288,10 @@ class Loop40ResearchBoundaryTests(unittest.TestCase):
                 self.assertIn("unauthorized", text.lower())
 
     def test_no_loop40_runtime_dependency_or_package_was_added(self):
-        source_text = "\n".join(path.read_text(encoding="utf-8", errors="replace") for path in (REPO_ROOT / "src").rglob("*.py")).lower()
+        source_text = "\n".join(
+            path.read_text(encoding="utf-8", errors="replace")
+            for path in (REPO_ROOT / "src").rglob("*.py")
+        ).lower()
         self.assertNotIn("loop40", source_text)
         self.assertNotIn("executorch", source_text)
         self.assertNotIn("onnxruntime", source_text)
@@ -255,7 +301,13 @@ class Loop40ResearchBoundaryTests(unittest.TestCase):
         for dependency in ("executorch", "onnxruntime", "litert", "coremltools"):
             self.assertNotIn(dependency, pyproject_lower)
         tracked_package_suffixes = {".pte", ".onnx", ".ort", ".tflite", ".mlmodel", ".mlpackage"}
-        tracked = [path for path in REPO_ROOT.rglob("*") if path.is_file() and path.suffix.lower() in tracked_package_suffixes and ".git" not in path.parts]
+        tracked = [
+            path
+            for path in REPO_ROOT.rglob("*")
+            if path.is_file()
+            and path.suffix.lower() in tracked_package_suffixes
+            and ".git" not in path.parts
+        ]
         self.assertEqual(tracked, [])
         self.assertNotIn("executorch", self.ci.lower())
 
