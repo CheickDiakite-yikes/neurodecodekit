@@ -1,6 +1,23 @@
 # Codex Handoff - NeuroDecodeKit
 
-> Current handoff, 2026-07-12: Loops 1-12, 14-22, and 23.5 are complete; Loops
+> Current handoff, 2026-07-13: Loop 25 v1 is complete at its one-time,
+> target-free causal-preprocessing mechanics boundary. Authorization commit
+> `1e7296a` and implementation commit `439f151` were pushed and remotely green
+> before the registered run. The static 65,537-point response and 23-probe
+> alias gate passed before either partition opened; development seed 2501 then
+> passed and froze, and qualification seed 2502 passed once unchanged. Across
+> 24 items, all 168 schedule, 240 resume, and 72 future-mutation checks passed.
+> Static plus complete-gate runtime was 5.542175 seconds, maximum peak RSS was
+> 136,806,400 bytes, and all generated artifacts totaled 788,967 bytes. Every
+> real-data, cache, consumed-evidence, target, model, training, network, RW3,
+> stream, device, and hardware counter was zero. The producer is causal with
+> zero right context; retained neural information and end-to-end latency remain
+> unmeasured. No rerun is authorized. The next numbered decision is a new
+> hash-bound Loop 26/roadmap Loop 46 preregistration or hold; this handoff does
+> not authorize protected reads, targets, inference, training, or later loops.
+
+> Historical pre-Loop-25-execution context, retained for audit: Loops 1-12,
+> 14-22, and 23.5 are complete; Loops
 > 13, 23, and 24 are parked after measured gates. Two S21 MEG sessions support strict
 > sentence-text and same-subject session protocols, but the fixed tiny CTC has
 > no reliable neural advantage and loses its cross-session comparison to the
@@ -437,13 +454,14 @@ This is not primarily a model repo. It is a **research loop repo**.
 
 ## Current Next Work
 
-1. **Loop 25 - authorize only the amended v1 target-free gate, amend it again,
-   or hold.** Read `docs/LOOP_25_AUTHORIZATION_PACKET_V1.md` and
-   `registries/loop25_authorization_request.v1.json`. The amendment is green,
-   but `authorized_now` remains false. Any authorization must first become a
-   tested, pushed, green v1 authorization-only commit. The static filter gate
-   must then pass before seed 2501 opens; no fixture, coefficient, transform,
-   partition open, CLI, or runtime can exist from this handoff alone.
+1. **Loop 26 / roadmap Loop 46 - preregister the reserved S21 validation gate,
+   or hold.** Read `docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md` and
+   `registries/loop26_research_boundary.v0.json`. Freeze the 55/6/5 split,
+   2,908-parameter candidate, 2,884-parameter comparator, six controls, target-
+   blind prediction hashes, exact 64-assignment test, one-thread caps, and
+   source-test/session-2 exclusions before requesting authorization. Planning
+   and this handoff do not authorize a cache read, target open, model run, or
+   training run.
 2. **RW3 - decide on the prepared Stage A packet only.** Review
    `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` and
    `registries/rw3_stage_a_authorization_request.v0.json`. The request is bound
@@ -451,7 +469,8 @@ This is not primarily a model repo. It is a **research loop repo**.
    false. Do not implement Stage A without an explicit user decision followed
    by a pushed authorization-only commit; BrainFlow, LSL, PyXDF, sockets, live
    sources, hardware, and Stages B-D remain later independent gates.
-3. **Use Loops 25-44 as the future evidence queue, not blanket authorization.**
+3. **Use Loops 26-44 and 46-64 as future evidence queues, not blanket
+   authorization.**
    Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`,
    `docs/LOOPS_25_44_ROADMAP.md`, and
    `registries/next_20_loops.v0.json`. For Loop 26, also read
@@ -572,12 +591,15 @@ contract are in `docs/LOOP_24_PRIMARY_SOURCE_RESEARCH.md`,
 `docs/LOOP_24_AUTHORIZATION_DECISION.md`, the measured park is in
 `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md`, and the post-20 sequence is in
 `docs/POST_20_ROADMAP.md`. Loop 25's v0 research, preregistration, contract, and
-request remain immutable history. Its current evidence and decision surface are
+request remain immutable history. Its v1 audit and completed result surface are
 `docs/LOOP_25_ANTI_ALIAS_AUDIT.md`,
 `docs/LOOP_25_CAUSAL_PREPROCESSING_AMENDMENT_1.md`,
 `registries/causal_preprocessing_contract.v1.json`,
 `docs/LOOP_25_AUTHORIZATION_PACKET_V1.md`, and
-`registries/loop25_authorization_request.v1.json`. The next 20-loop research,
+`registries/loop25_authorization_request.v1.json`, plus
+`registries/loop25_authorization_decision.v1.json`,
+`docs/LOOP_25_CAUSAL_PREPROCESSING_RESULT.md`, and
+`registries/loop25_causal_preprocessing_result.v1.json`. The next 20-loop research,
 work orders, and machine
 contract are in `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`,
 `docs/LOOPS_25_44_ROADMAP.md`, and

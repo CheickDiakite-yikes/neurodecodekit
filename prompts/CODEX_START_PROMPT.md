@@ -25,6 +25,9 @@ requests, and these files:
 - `registries/causal_preprocessing_contract.v1.json`
 - `docs/LOOP_25_AUTHORIZATION_PACKET_V1.md`
 - `registries/loop25_authorization_request.v1.json`
+- `registries/loop25_authorization_decision.v1.json`
+- `docs/LOOP_25_CAUSAL_PREPROCESSING_RESULT.md`
+- `registries/loop25_causal_preprocessing_result.v1.json`
 - `docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md`
 - `registries/loop26_research_boundary.v0.json`
 - `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md`
@@ -75,18 +78,18 @@ Do not reset, revert, delete, or overwrite work already present.
   and 65.154951 seconds exceeded the 60-second cap. Loop 24 is parked, float32
   is retained, and seed 2401 is consumed. No rerun or post-result tuning is
   authorized. Real/consumed data, targets, labels, text, training, energy, RW3,
-  devices, hardware, and Loops 25-44 remain unauthorized.
-- Loop 25 causal preprocessing was preregistered at `a36d97b`, then superseded
-  before authorization by anti-alias amendment v1 at green commit `b6b92d8`.
-  The current contract freezes a dedicated causal anti-alias SOS, 65,537
-  response points, 23 alias probes, seeds 2501/2502, 7 schedules, 10 resume
-  cuts, 3 future-mutation cuts, 45 refusals, 23 access counters, and the same
-  8-MiB/45-second caps. Its replacement request says `authorized_now: false`;
-  both seeds are unopened and no Loop 25 coefficient, runtime, or payload exists.
+  devices, hardware, and Loops 26-44 remain unauthorized.
+- Loop 25 causal preprocessing preserves immutable v0 history, green amendment
+  `b6b92d8`, separate green authorization `1e7296a`, and green implementation
+  `439f151`. One registered target-free run passed its static gate before either
+  partition opened, then passed 24/24 items, 168 schedule checks, 240 resume
+  checks, and 72 future-mutation controls with zero protected reads. Static plus
+  complete-gate runtime was 5.542175 seconds, maximum RSS was 136,806,400 bytes,
+  and generated output was 788,967 bytes. It is complete with no rerun open.
 - Loops 25-44 are now a detailed planning-only queue: exactly 20 contiguous
   rows across five phases, with source bindings, controls, metrics, acceptance
   gates, stop rules, dependencies, resource caps, and 20 false execution flags.
-  Loop 25 is `Amended Preregistration`; Loop 26 planning research is complete
+  Loop 25 is `Complete`; Loop 26 planning research is complete
   while its experiment remains `Not Started`; Loop 27 planning research has
   selected S25 metadata while preregistration remains blocked; Loop 28 planning
   research defines a strict zero-shot rule while its experiment remains `Not
@@ -108,7 +111,7 @@ Do not reset, revert, delete, or overwrite work already present.
   8-channel USB-radio for future mechanics only while its experiment remains
   `Not Started` and unauthorized; Loop 43 planning research defines the
   independent artifact-reproduction firewall while its challenge remains `Not
-  Started` and unauthorized; Loop 44 remains `Not Started`; all 20
+  Started` and unauthorized; Loop 44 artifact-only review is complete; all 20
   execution flags remain false.
 - Loop 26's planning boundary recommends a 2,908-parameter causal candidate, a
   2,884-parameter linear comparator, six controls, and exact enumeration of all
@@ -263,16 +266,13 @@ failure, zero forbidden counters, ignored artifacts, and parked claim boundary.
 Do not rerun seed 2401, open seed 2402, change worker startup, or retune a
 threshold under the same claim.
 
-Loop 25 causal preprocessing has completed its superseding preregistration at
-`b6b92d8`. Review the anti-alias audit, immutable v1 contract, and
-`docs/LOOP_25_AUTHORIZATION_PACKET_V1.md`. The only permissible numbered
-decision is to authorize the exact v1 target-free implementation, amend it
-again before authorization, or hold. Packet preparation, roadmap approval, and
-this continuation prompt do not authorize implementation. Exact authorization
-must first become its own tested, pushed, remotely green v1 authorization-only
-commit, after which the static filter gate must pass before seed 2501 opens.
+Loop 25 causal preprocessing is complete. Review the result document and
+machine record, then verify that the immutable request, separate authorization,
+implementation, static-first access order, measured counters, and no-rerun
+boundary remain intact. Do not regenerate the fixture, reopen either partition,
+or rerun the gate.
 
-Loop 26 is review-only planning evidence until Loop 25 closes compatibly. Do
+Loop 26 is review-only planning evidence until it receives its own packet. Do
 not turn `docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md`, its roadmap status, or this
 prompt into an experiment contract. A future Loop 26 preregistration must
 separately freeze architecture, controls, statistics, seeds, access order, and
@@ -308,10 +308,8 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
 
 1. Do not download data, open S20, or reopen consumed S7/S21 raw arrays,
    caches, target logs, or seeds 2203, 2303, 2353, and 2401. Keep seed 2402
-   unopened and do not repurpose it. Keep Loop 25 seeds 2501 and 2502 unopened
-   until a separate v1 authorization-only commit is pushed and green. Even
-   after authorization, the static filter-design gate must pass before either
-   seed can be opened.
+   unopened and do not repurpose it. Loop 25 seeds 2501 and 2502 are consumed
+   for the completed mechanics gate; do not reopen, rerun, or repurpose them.
 2. Do not install or import BrainFlow, LSL, MNE-BIDS, or hardware SDKs. Do not
    connect to hardware, enumerate devices, open sockets, or execute a live
    source.
@@ -326,10 +324,10 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
    generated data artifacts beyond tiny documentation-validation debris.
 7. Keep RW3 independent from Loop 24 precision/runtime and the
    blocked RW4 S20 acquisition packet.
-8. Do not implement or execute a Loop 25-44 item from roadmap approval, packet
-   preparation, or a broad request to continue. Loop 25 v1 is frozen but still
-   awaits its exact decision; v0 is immutable history, and later loops still
-   require their own packets. A failed gate parks its dependent claim branch.
+8. Do not rerun Loop 25 or implement/execute a Loop 26-44 item from roadmap
+   approval, packet preparation, or a broad request to continue. Loop 25 v1 is
+   complete and frozen; later loops still require their own packets. A failed
+   gate parks its dependent claim branch.
 9. Keep Loop 26 source test and session 2 closed. Planning research does not
    authorize preregistration, implementation, real-cache or target reads,
    model/checkpoint operations, training, validation predictions, or metrics.

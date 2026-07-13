@@ -2431,3 +2431,37 @@ None may borrow a MEG result or be called home text decoding by default.
 Evidence: `docs/LOOPS_45_64_SCIENTIFIC_ROADMAP.md`,
 `registries/next_scientific_loops.v0.json`,
 `tests/test_next_scientific_loops.py`, and the `Loops 45-64` tracker sheet.
+
+## 0073 - Accept Loop 25 Causal Mechanics And Keep Science Closed
+
+Decision: close Loop 25 and scientific-roadmap Loop 45 after one registered,
+target-free execution. Preserve the immutable v0 history, green v1 amendment
+`b6b92d8`, separate green authorization commit `1e7296a`, and green
+implementation commit `439f151` as the required execution chain. No rerun or
+post-result tuning is authorized.
+
+Mechanics decision: accept the exact stateful 1000-to-100 Hz implementation.
+Its 65,537-point static response and 23-probe alias gate passed before either
+partition opened. Development seed 2501 passed and froze before qualification
+seed 2502 opened once and passed unchanged. All 24 items, 168 schedule checks,
+240 resume checks, and 72 future-mutation controls passed with zero right
+context and exact timestamp, padding, resume-state, and output identity.
+
+Resource and access decision: accept the run under its frozen caps. Static plus
+complete-gate internal runtime was 5.542175 seconds, maximum peak RSS was
+136,806,400 bytes, mutable state was 720 bytes, and all generated artifacts
+totaled 788,967 bytes. Every real-data, real-cache, consumed-evidence, target,
+checkpoint, model, training, parameter-update, network, RW3, stream, device,
+and hardware counter was zero.
+
+Claim decision: this result establishes target-free synthetic causal-
+preprocessing mechanics only. It does not establish official MNE equivalence,
+retained neural information, neural advantage, decoding accuracy, unseen-
+person generalization, end-to-end latency, real-time operation, portable/home
+hardware, or clinical utility. Loop 26 and roadmap Loop 46 require a new hash-
+bound preregistration and separate authorization.
+
+Evidence: `docs/LOOP_25_CAUSAL_PREPROCESSING_RESULT.md`,
+`registries/loop25_causal_preprocessing_result.v1.json`,
+`registries/loop25_authorization_decision.v1.json`, and
+`tests/test_loop25_causal_preprocessing_result.py`.

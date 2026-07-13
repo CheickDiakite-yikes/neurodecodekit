@@ -30,10 +30,10 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
             {"first_loop": 25, "last_loop": 44, "loop_count": 20},
         )
         boundary = roadmap["current_boundary"]
-        self.assertEqual(boundary["current_numbered_gate"], 25)
+        self.assertEqual(boundary["current_numbered_gate"], 26)
         self.assertEqual(
             boundary["current_gate_status"],
-            "amended_preregistration_awaiting_explicit_authorization",
+            "loop25_complete_loop26_requires_new_preregistration_and_authorization",
         )
         self.assertEqual(boundary["loop24_status"], "parked_resource_cap_exceeded")
         self.assertTrue(boundary["loop24_execution_was_authorized"])
@@ -42,13 +42,23 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         self.assertTrue(boundary["loop25_amendment_ci_green"])
         self.assertTrue(boundary["loop25_original_request_superseded_before_authorization"])
         self.assertTrue(boundary["loop25_authorization_request_prepared"])
+        self.assertEqual(boundary["loop25_authorization_decision_commit"][:7], "1e7296a")
+        self.assertEqual(boundary["loop25_authorization_ci_run_id"], 29275552886)
+        self.assertEqual(boundary["loop25_implementation_commit"][:7], "439f151")
+        self.assertEqual(boundary["loop25_implementation_ci_run_id"], 29277702513)
+        self.assertTrue(boundary["loop25_execution_was_authorized"])
         self.assertFalse(boundary["loop25_execution_authorized"])
-        self.assertFalse(boundary["loop25_development_seed_opened"])
-        self.assertFalse(boundary["loop25_qualification_seed_opened"])
+        self.assertFalse(boundary["loop25_rerun_authorized"])
+        self.assertEqual(
+            boundary["loop25_result"],
+            "registries/loop25_causal_preprocessing_result.v1.json",
+        )
+        self.assertTrue(boundary["loop25_development_seed_opened"])
+        self.assertTrue(boundary["loop25_qualification_seed_opened"])
         self.assertTrue(boundary["loop26_research_packet_prepared"])
         self.assertFalse(boundary["loop26_preregistration_prepared"])
         self.assertFalse(boundary["loop26_execution_authorized"])
-        self.assertFalse(boundary["loop26_dependency_loop25_satisfied"])
+        self.assertTrue(boundary["loop26_dependency_loop25_satisfied"])
         self.assertTrue(boundary["loop27_research_packet_prepared"])
         self.assertEqual(
             boundary["loop27_selected_candidate"],
@@ -65,7 +75,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         self.assertTrue(boundary["loop28_final_only_rule_research_ready"])
         self.assertFalse(boundary["loop28_preregistration_prepared"])
         self.assertFalse(boundary["loop28_execution_authorized"])
-        self.assertFalse(boundary["loop28_dependency_loop25_satisfied"])
+        self.assertTrue(boundary["loop28_dependency_loop25_satisfied"])
         self.assertFalse(boundary["loop28_dependency_loop26_satisfied"])
         self.assertFalse(boundary["loop28_dependency_loop27_satisfied"])
         self.assertTrue(boundary["loop29_research_packet_prepared"])
@@ -112,7 +122,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         self.assertFalse(boundary["loop32_preregistration_prepared"])
         self.assertFalse(boundary["loop32_authorization_request_prepared"])
         self.assertFalse(boundary["loop32_execution_authorized"])
-        self.assertFalse(boundary["loop32_dependency_loop25_satisfied"])
+        self.assertTrue(boundary["loop32_dependency_loop25_satisfied"])
         self.assertFalse(boundary["loop32_dependency_loop26_satisfied"])
         self.assertFalse(boundary["loop32_dependency_loop31_satisfied"])
         self.assertTrue(boundary["loop33_research_packet_prepared"])
@@ -127,7 +137,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         self.assertFalse(boundary["loop33_preregistration_prepared"])
         self.assertFalse(boundary["loop33_authorization_request_prepared"])
         self.assertFalse(boundary["loop33_execution_authorized"])
-        self.assertFalse(boundary["loop33_dependency_loop25_satisfied"])
+        self.assertTrue(boundary["loop33_dependency_loop25_satisfied"])
         self.assertFalse(boundary["loop33_dependency_loop26_satisfied"])
         self.assertFalse(boundary["loop33_dependency_loop31_satisfied"])
         self.assertTrue(boundary["loop34_research_packet_prepared"])
@@ -257,6 +267,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         self.assertFalse(boundary["loop40_device_or_hardware_authorized"])
         self.assertTrue(boundary["loop40_dependency_loop24_result_available"])
         self.assertFalse(boundary["loop40_dependency_loop39_execution_satisfied"])
+        self.assertTrue(boundary["loop41_dependency_loop25_satisfied"])
         self.assertEqual(boundary["user_preferred_incremental_storage_bytes"], 5_000_000_000)
         self.assertEqual(boundary["user_absolute_incremental_storage_bytes"], 10_000_000_000)
         self.assertEqual(boundary["selected_s20_plus_s25_future_bundle_bytes"], 1_106_030_247)
@@ -277,7 +288,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         phase_counts = Counter(row["phase_id"] for row in self.loops)
         self.assertEqual(phase_counts, Counter({f"P{index}": 4 for index in range(1, 6)}))
 
-    def test_loop25_is_preregistered_and_every_loop_is_unauthorized(self):
+    def test_loop25_is_complete_once_and_every_loop_is_unauthorized_now(self):
         required_text = {
             "title",
             "priority",
@@ -297,14 +308,24 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
             with self.subTest(loop=row["loop_id"]):
                 self.assertFalse(row["execution_authorized"])
                 if row["loop_id"] == 25:
-                    self.assertEqual(row["status"], "Amended Preregistration")
+                    self.assertEqual(row["status"], "Complete")
                     self.assertEqual(
                         row["proof_posture"],
-                        "amended_preregistered_no_implementation_or_execution",
+                        "target_free_synthetic_causal_preprocessing_mechanics_passed",
                     )
                     registration = row["registration"]
                     self.assertEqual(registration["commit"][:7], "b6b92d8")
                     self.assertFalse(registration["authorized_now"])
+                    self.assertEqual(
+                        registration["authorization_request_status"],
+                        "immutable_unauthorized_request_superseded_by_separate_decision",
+                    )
+                    self.assertEqual(registration["authorization_commit"][:7], "1e7296a")
+                    self.assertEqual(registration["authorization_ci_run_id"], 29275552886)
+                    self.assertEqual(registration["implementation_commit"][:7], "439f151")
+                    self.assertEqual(registration["implementation_ci_run_id"], 29277702513)
+                    self.assertTrue(registration["execution_completed_once"])
+                    self.assertFalse(registration["rerun_authorized_now"])
                     self.assertFalse(registration["superseded_v0"]["was_authorized"])
                 elif row["loop_id"] == 44:
                     self.assertEqual(row["status"], "Planning Research Complete")

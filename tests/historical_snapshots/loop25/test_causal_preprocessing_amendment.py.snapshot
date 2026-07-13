@@ -12,13 +12,7 @@ V0_PREREGISTRATION_PATH = (
     REPO_ROOT / "docs" / "LOOP_25_CAUSAL_PREPROCESSING_PREREGISTRATION.md"
 )
 V0_RESEARCH_PATH = REPO_ROOT / "docs" / "LOOP_25_PRIMARY_SOURCE_RESEARCH.md"
-V0_TEST_PATH = (
-    REPO_ROOT
-    / "tests"
-    / "historical_snapshots"
-    / "loop25"
-    / "test_causal_preprocessing_contract.py.snapshot"
-)
+V0_TEST_PATH = REPO_ROOT / "tests" / "test_causal_preprocessing_contract.py"
 CONTRACT_PATH = REPO_ROOT / "registries" / "causal_preprocessing_contract.v1.json"
 AMENDMENT_PATH = (
     REPO_ROOT / "docs" / "LOOP_25_CAUSAL_PREPROCESSING_AMENDMENT_1.md"
@@ -263,26 +257,17 @@ class CausalPreprocessingAmendmentTests(unittest.TestCase):
             "frequency_dependent_filter_delay_is_not_end_to_end_latency", warnings
         )
 
-    def test_preregistration_snapshot_stays_historical_after_separate_authorization(self):
+    def test_no_runtime_cli_dependency_or_numeric_artifact_exists(self):
         planned = self.contract["planned_implementation"]
         self.assertFalse(planned["files_exist_now"])
         self.assertFalse(planned["cli_exists_now"])
-        decision = json.loads(
-            (REPO_ROOT / "registries/loop25_authorization_decision.v1.json").read_text(
-                encoding="utf-8"
-            )
-        )
-        self.assertEqual(decision["status"], "authorized_no_implementation_yet")
-        self.assertTrue(
-            decision["authorized_contract"]["contract_remains_immutable_preregistration_snapshot"]
-        )
         for relative in planned["files"]:
-            self.assertTrue((REPO_ROOT / relative).exists(), relative)
+            self.assertFalse((REPO_ROOT / relative).exists(), relative)
         cli_text = (REPO_ROOT / "src" / "neurodecodekit" / "cli.py").read_text(
             encoding="utf-8"
         )
         for command in planned["cli_commands"]:
-            self.assertIn(command, cli_text)
+            self.assertNotIn(command, cli_text)
         project = tomllib.loads((REPO_ROOT / "pyproject.toml").read_text(encoding="utf-8"))
         self.assertEqual(project["project"]["dependencies"], [])
         self.assertIn("scipy>=1.11", project["project"]["optional-dependencies"]["neuro"])

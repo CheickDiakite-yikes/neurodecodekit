@@ -6,10 +6,10 @@
 4. Read `docs/CODEX_HANDOFF.md` for the next three work orders.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
    result, then use its preregistration and authorization documents for audit.
-6. Read `docs/LOOP_25_ANTI_ALIAS_AUDIT.md`,
-   `docs/LOOP_25_CAUSAL_PREPROCESSING_AMENDMENT_1.md`, and
-   `docs/LOOP_25_AUTHORIZATION_PACKET_V1.md` before making the next numbered
-   decision. The original v0 registration remains historical provenance.
+6. Read `docs/LOOP_25_CAUSAL_PREPROCESSING_RESULT.md` and
+   `registries/loop25_causal_preprocessing_result.v1.json` for the completed
+   target-free mechanics result; use the amendment and authorization records
+   only to audit its frozen execution order. No rerun is authorized.
 7. Read `docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md` for the next predictive
    design and its six-item identifiability ceiling. It is planning research
    only; Loop 26 remains `Not Started` with no preregistration or authorization.
@@ -81,10 +81,11 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 
 Tracker scope: the spreadsheet's `20` KPI is the size of the original roadmap,
 not the current loop number. Its dashboard now separately reports the current
-post-roadmap position as **Loop 25 amended v1; authorization pending**, and
-its ninth sheet contains the separate **Loops 25-44 queue**. Loop 25 is in
-review with `execution_authorized: false`; Loop 26 planning research is
-complete while its experiment remains `Not Started`; Loop 27 planning research
+post-roadmap position as **Loop 25 complete; Loop 26 decision next**, and its
+ninth sheet contains the separate **Loops 25-44 queue**. Loop 25 passed once
+at its target-free mechanics boundary and now has `execution_authorized: false`
+because no rerun is open; Loop 26 planning research is complete while its
+experiment remains `Not Started`; Loop 27 planning research
 selects S25 metadata while preregistration remains blocked; Loop 28 planning
 research defines a strict zero-shot final-only rule while its experiment
 remains `Not Started`; Loop 29 planning research defines separate scalp EEG
@@ -140,17 +141,18 @@ must not be used for tuning. No real data, targets, training, energy measurement
 RW3 Stage A, BrainFlow/LSL/PyXDF, sockets, streams, hardware, consumed caches,
 S20, and automatic cleaning remain unauthorized. Loop 24 and RW3 remain
 independent.
-Loop 25's original registration at `a36d97b` was superseded before
-authorization by green anti-alias amendment `b6b92d8`. V1 preserves seeds
-2501/2502, seven chunk schedules, ten resume cuts, and three future-mutation
-cuts while adding a dedicated causal anti-alias SOS, a 65,537-point 0-500 Hz
-response grid, 23 alias probes, 45 refusal IDs, and 23 access counters. Its
-one-thread, 8 MiB output, and 45-second caps are unchanged. The replacement
-machine request remains `authorized_now: false`; both seeds are unopened. No
-coefficients, fixture, transform, partition open, cache read, target, model,
-training run, CLI, or experiment payload exists. The next numbered decision is
-to use the exact sentence in `docs/LOOP_25_AUTHORIZATION_PACKET_V1.md`, amend
-again, or hold.
+Loop 25's original registration at `a36d97b` remains immutable history. The
+green v1 amendment `b6b92d8`, authorization commit `1e7296a`, and implementation
+commit `439f151` preceded one registered run. The static 65,537-point response
+and 23-probe alias gate passed before either partition opened; development seed
+2501 then passed and froze, and qualification seed 2502 passed once unchanged.
+All 24 target-free items, 168 schedule checks, 240 resume checks, and 72 future-
+mutation controls passed with zero protected reads. Static plus complete-gate
+runtime was 5.542175 seconds, maximum RSS was 136,806,400 bytes, and generated
+artifacts totaled 788,967 bytes. The producer is causal with zero right context,
+but retained neural information and end-to-end latency remain unmeasured. No
+rerun is authorized. The next numbered decision is Loop 26 preregistration or
+hold; this closeout does not authorize real data, targets, models, or training.
 Loop 26 planning research at `03605c5` identifies a 2,908-parameter causal
 candidate recommendation, a 2,884-parameter linear comparator, six required
 controls, and all 64 paired sign assignments available from six reserved
@@ -264,8 +266,9 @@ logs have been selectively downloaded under exact caps; the full dataset and
 12.79-GB EEG subtree have not been downloaded. Loops 9-12, 14-22, and 23.5 are
 complete; Loops 13, 23, and 24 are parked after measured gates. Loop 24 retains
 float32, consumed selection seed 2401, and left qualification seed 2402
-physically unopened. Loop 25 is amended and preregistered but not authorized;
-seeds 2501 and 2502 remain unopened. Loops 26-44 remain planning-only.
+physically unopened. Loop 25 is complete at its one-time target-free mechanics
+boundary; seeds 2501 and 2502 are consumed for this gate and no rerun is
+authorized. Loops 26-44 remain planning-only.
 Loop 26's planning research is complete, but its experiment status remains
 `Not Started`. Loop 27's planning research is also complete: S25 session 2
 block 2 is the smallest eligible strict MEG pair at 1,009,939,983 bytes, but no
@@ -429,7 +432,8 @@ reproduction, or scientific replication exists.
 Read `docs/LOOPS_45_64_SCIENTIFIC_ROADMAP.md` and validate
 `registries/next_scientific_loops.v0.json`. The five phases are Real Signal
 Truth, Unseen-Person Verdict, Accessible EEG Evidence, Causal Local Use, and
-Independent Evidence And Release. Every loop is `Not Started` and
-unauthorized. The first desired scientific result is a frozen S21 validation
+Independent Evidence And Release. Loop 45 is complete at its target-free
+mechanics boundary; Loops 46-64 are `Not Started`, and all current execution
+flags are false. The first desired scientific result is a frozen S21 validation
 model that beats a matched no-signal prior and every corrupted-signal control;
 S25 remains sealed until a separate final-only zero-shot packet is complete.

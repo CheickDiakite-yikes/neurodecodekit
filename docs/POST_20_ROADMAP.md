@@ -90,7 +90,7 @@ decision.
 | 23 | Streaming CTC prefix decoder | Can causal encoder frames produce stable incremental characters rather than only final strings? | Greedy/prefix state, partial-hypothesis trace, revision and emission-delay metrics. | Parked: mechanics and validation pass, but frozen exact test accuracy is 5/8 below 6/8; test consumed; no tuning or rerun. |
 | 23.5 | Blank/boundary calibration | Can one train-frame-fitted, target-length-independent blank intercept suppress tail false positives on fresh splits without harming any item? | Fresh 64/16/16 fixture, one convex scalar fit, unchanged comparator, calibration metrics, and one new test. | Closed: validation and frozen test are 16/16 exact at CER 0; zero regressions; 5/5 replay; seed 2353 consumed; supervised synthetic calibration only. |
 | 24 | Local precision and runtime | Can a decoder that first passes its correctness gate fit a realistic local CPU envelope without changing outputs beyond a registered tolerance? | float32/float16/dynamic-int8 candidates, state/parameter/RSS/RTF report. | Parked: float16 is exact but slower; qint8 is smaller but incorrect and slower; no qualification open; runtime 65.154951 sec exceeds 60 sec; retain float32 and do not rerun seed 2401. |
-| 25 | Causal preprocessing audit | Can every upstream transform run with zero future context, full folding-band anti-alias protection, exact timing, and chunk/resume identity? | Frozen stateful notch/bandpass/dedicated-antialias SOS, decimation, normalization, and target-free v1 packet. | Amended at green commit `b6b92d8`; 65,537 response points, 23 alias probes, 7 schedules, 10 resume cuts, 3 mutation cuts, 45 refusals, and 23 counters are frozen; request remains false, both seeds are unopened, and no runtime exists. |
+| 25 | Causal preprocessing audit | Can every upstream transform run with zero future context, full folding-band anti-alias protection, exact timing, and chunk/resume identity? | Frozen stateful notch/bandpass/dedicated-antialias SOS, decimation, normalization, and target-free v1 packet. | Complete after green authorization `1e7296a` and implementation `439f151`; 24/24 items, 168 schedules, 240 resumes, and 72 mutation controls passed with zero protected reads; no rerun is authorized. |
 | 26 | Real validation-only encoder gate | Can one fixed tiny causal encoder beat honest controls on the six reserved source-validation sentences? | Planning-only identifiability note and machine boundary before any experiment contract. | Planning research complete at `03605c5`; 2,908/2,884-parameter recommendations, six controls, 64 exact paired assignments, and 14 false authorization fields; experiment remains `Not Started` with zero protected access. |
 | 27 | Fresh holdout preregistration | Which independent recording can answer the next transfer claim without consumed evidence? | Planning-only official metadata selector, exact candidate identities, target-isolation design, and blockers. | Planning research complete at `b3d61b6`; S25 session 2 block 2 selected as two files/1,009,939,983 bytes; 18 false authorization fields; no preregistration, request, download, hash, header, signal, target, or model access. |
 | 28 | Session and person transfer | What claim can one unseen-person final-only recording answer without fitting anything to that person? | Planning-only T0-T3 taxonomy and strict zero-shot final decision rule. | Planning research complete; S25 reserved for T2 with zero fit rows, a 48-row floor, 0.05 macro-CER margin, 65,535 paired assignments plus observed, four comparators, and 21 false authorization fields; experiment remains `Not Started`. |
@@ -106,8 +106,9 @@ deployment, and live translation/release. The machine source of truth is
 in `docs/LOOPS_25_44_ROADMAP.md`; the primary-source rationale is in
 `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`.
 
-Loop 25 is now `Amended Preregistration` with
-`proof_posture: amended_preregistered_no_implementation_or_execution`. Loop 26
+Loop 25 is now `Complete` with
+`proof_posture: target_free_synthetic_causal_preprocessing_mechanics_passed`
+and no rerun authorization. Loop 26
 planning research is complete, but its experiment remains `Not Started` and
 `planned_not_authorized`. Loop 27 has completed metadata research and selected
 S25, but its preregistration remains blocked. Loop 28 planning research defines
@@ -221,10 +222,9 @@ from the other.
 - Do not rerun or tune Loop 24 selection seed 2401 after its parked result.
 - Keep Loop 24 seed 2402 physically unopened; candidate outputs, targets,
   labels, text, and consumed evidence may not repurpose it.
-- Do not implement or execute Loop 25 from the roadmap or preregistration alone;
-  use its exact decision packet, then require a tested, pushed, green
-  authorization-only commit first. Keep seeds 2501 and 2502 unopened until
-  then.
+- Do not rerun or tune Loop 25 or repurpose its consumed seeds 2501 and 2502.
+  Loop 26 and every later experiment require their own tested, pushed, green
+  authorization sequence.
 - Do not download another real recording without a pinned metadata plan,
   explicit file/byte cap, dry run, and approval.
 - “Causal,” “streaming,” “online,” “real-time,” and “low latency” are distinct

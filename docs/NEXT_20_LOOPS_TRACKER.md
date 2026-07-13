@@ -3,8 +3,9 @@
 > **Scope:** the 20-row table and its KPI describe the original roadmap. Loop
 > numbers 21-24 and the Loop 23.5 calibration gate are post-roadmap extensions,
 > so “20 loops” and “Loop 24 parked” are both true but refer to different
-> things. A second tranche now defines Loops 25-44; Loop 25 is amended and
-> preregistered, Loop 26 planning research is complete while its experiment
+> things. A second tranche now defines Loops 25-44; Loop 25 passed once at its
+> target-free mechanics boundary with no rerun authorized, while Loop 26
+> planning research is complete and its experiment
 > remains `Not Started`, Loop 27 has selected S25 in metadata while
 > preregistration remains blocked, and Loop 28 planning research defines a
 > strict zero-shot final-only rule while its experiment remains `Not Started`.
@@ -235,16 +236,16 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md`,
   `registries/local_precision_runtime_contract.v0.json`, and
   `registries/loop24_authorization_decision.v0.json`.
-- Post-roadmap Loop 25: Amended preregistration at green commit `b6b92d8` after
-  the original `a36d97b` scope was superseded before authorization. V1 adds a
-  dedicated causal anti-alias SOS, 65,537 response points across 0-500 Hz, 23
-  alias probes, 45 refusals, and 23 counters while preserving seeds 2501/2502,
-  seven schedules, ten resume cuts, three future-mutation cuts, and the lower
-  resource caps. The replacement request remains `authorized_now: false`; both
-  seeds are unopened and no fixture, coefficient, transform, partition open,
-  CLI, or runtime exists. See `docs/LOOP_25_ANTI_ALIAS_AUDIT.md`,
-  `docs/LOOP_25_CAUSAL_PREPROCESSING_AMENDMENT_1.md`, and
-  `docs/LOOP_25_AUTHORIZATION_PACKET_V1.md`.
+- Post-roadmap Loop 25: Complete after one registered target-free execution.
+  Amendment `b6b92d8`, authorization `1e7296a`, and implementation `439f151`
+  were remotely green before execution. The static gate passed before either
+  seed opened; development seed 2501 passed and froze before qualification
+  seed 2502 passed once unchanged. All 24 items, 168 schedules, 240 resumes,
+  and 72 future-mutation controls passed with zero protected reads. Static plus
+  complete-gate runtime was 5.542175 seconds, maximum RSS was 136,806,400
+  bytes, and generated output was 788,967 bytes. No rerun is authorized. See
+  `docs/LOOP_25_CAUSAL_PREPROCESSING_RESULT.md` and
+  `registries/loop25_causal_preprocessing_result.v1.json`.
 - Parallel Real-World Practice Track RW0: Done as a primary-source metadata
   research gate. Eight dataset records, 13 device records, a local workbench
   contract, and one exact S20 EEG dry-run packet are frozen. No download or
@@ -275,16 +276,15 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   pure-Python synthetic replay, or hold. Registration and packet preparation
   authorize no code. Loop 24 is now parked and cannot authorize RW3, data,
   training, or hardware. Seeds 2203, 2303, 2353, and 2401 stay consumed; seed
-  2402 remains unopened. Loop 25's separate numbered decision is now to
-  authorize only its v1 packet exactly, amend it again, or hold; registration
-  and packet preparation do not authorize execution.
+  2402 remains unopened. Loop 25 is consumed at its exact mechanics boundary;
+  the next numbered decision is a separate Loop 26 preregistration or hold.
 
 ## Next planned 20 loops: 25-44
 
 These rows are an **authorization-gated queue**, not approved experiments. The full
 acceptance boundaries, stop rules, controls, resource caps, dependencies, and
 authorization rules live in `docs/LOOPS_25_44_ROADMAP.md` and
-`registries/next_20_loops.v0.json`. Loop 25 is `Amended Preregistration`;
+`registries/next_20_loops.v0.json`. Loop 25 is `Complete` with no rerun;
 Loops 26 and 28-32 are `Not Started` with planning research complete; Loop 27
 has selected metadata while preregistration remains blocked; Loop 33 planning
 research is complete and its experiment remains `Not Started`; Loop 34
@@ -299,12 +299,13 @@ and its experiment remains `Not Started`; Loop 41 planning research is complete
 and its experiment remains `Not Started` and unauthorized; Loop 42 planning
 research selects the exact OpenBCI Cyton base 8-channel USB-radio path for
 future mechanics only while its experiment remains `Not Started` and
-unauthorized; Loops 43-44 are `Not Started`. Every row retains
+unauthorized; Loop 43 is `Not Started`, and Loop 44's artifact-only review is
+complete. Every row retains
 `execution_authorized: false`.
 
 | # | Phase | Gate | Core outcome | Priority | Effort | Status |
 |---:|---|---|---|---|---|---|
-| 25 | Causal Evidence | Causal Preprocessing Audit | Prove the complete preprocessing path has zero undeclared future context, full folding-band anti-alias protection, stable timing, and schedule identity. | P0 | M | Amended v1; authorization pending |
+| 25 | Causal Evidence | Causal Preprocessing Audit | Prove the complete preprocessing path has zero undeclared future context, full folding-band anti-alias protection, stable timing, and schedule identity. | P0 | M | Complete; target-free mechanics passed once; no rerun |
 | 26 | Causal Evidence | Real Validation-Only Encoder Gate | Decide whether one fixed tiny causal encoder beats no-signal and shuffled controls on source validation only. | P0 | L | Planning research complete; experiment Not Started |
 | 27 | Causal Evidence | Fresh Holdout Preregistration | Identify one independent, licensed, byte-capped holdout without downloading or previewing it. | P0 | M | S25 metadata selected; preregistration blocked |
 | 28 | Causal Evidence | Session And Person Transfer | Make one claim-specific fresh same-person or unseen-person transfer decision under a frozen protocol. | P0 | L | Planning research complete; experiment Not Started |
@@ -322,8 +323,8 @@ unauthorized; Loops 43-44 are `Not Started`. Every row retains
 | 40 | Reproducibility And Local Deployment | Edge Runtime Packaging Gate | Planning research complete: freeze 7 qualification levels, 6 package layers, 4 unselected backends, 20 identity fields, 24 fixtures, 30 gates, and 40 refusals; require Loop 39, a named target, exact host-state parity, visible fallback, and complete-cost benefit. | P2 | L | Planning research complete; experiment Not Started |
 | 41 | Live Translation And Release | RW3 Stream-To-NeuroToken Integration | Join separately authorized source-chunk replay to causal tokens without timestamp or state drift. | P1 | L | Not Started |
 | 42 | Live Translation And Release | One-Device Qualification | Qualify one exact device, firmware, transport, host, and compatibility level only. | P2 | L | Planning research complete; Q0 Cyton candidate; experiment Not Started |
-| 43 | Live Translation And Release | Independent Reproduction Challenge | Have an independent environment reproduce a bounded artifact without neural-data exchange. | P1 | M | Not Started |
-| 44 | Live Translation And Release | Claim Promotion And Release Decision | Promote only claims with complete evidence, privacy, license, reproduction, and control records. | P0 | M | Not Started |
+| 43 | Live Translation And Release | Independent Reproduction Challenge | Have an independent environment reproduce a bounded artifact without neural-data exchange. | P1 | M | Planning research complete; challenge Not Started |
+| 44 | Live Translation And Release | Claim Promotion And Release Decision | Promote only claims with complete evidence, privacy, license, reproduction, and control records. | P0 | M | Artifact-only review complete; release held |
 
 The execution order is evidence-driven, not automatic. A failed Loop 26 parks
 real-model scaling; a missing fresh holdout blocks transfer; a shortcut in Loop

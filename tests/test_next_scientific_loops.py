@@ -33,9 +33,7 @@ class NextScientificLoopsTests(unittest.TestCase):
             self.assertTrue(phase["exit_gate"])
 
     def test_every_execution_and_global_authorization_is_false(self):
-        self.assertTrue(
-            all(not row["execution_authorized"] for row in self.registry["loops"])
-        )
+        self.assertTrue(all(not row["execution_authorized"] for row in self.registry["loops"]))
         authorization = self.registry["global_authorization"]
         self.assertEqual(len(authorization), 9)
         self.assertTrue(all(value is False for value in authorization.values()))
@@ -77,7 +75,8 @@ class NextScientificLoopsTests(unittest.TestCase):
         }
         for row in self.registry["loops"]:
             self.assertEqual(set(row), required, row["loop_id"])
-            self.assertEqual(row["status"], "Not Started")
+            expected_status = "Complete" if row["loop_id"] == 45 else "Not Started"
+            self.assertEqual(row["status"], expected_status)
             self.assertTrue(row["controls"])
             self.assertTrue(row["primary_metrics"])
             self.assertIn("authoriz", row["authorization_boundary"].lower())
@@ -127,9 +126,7 @@ class NextScientificLoopsTests(unittest.TestCase):
         self.assertEqual(len(sources), 10)
         self.assertEqual(len({row["source_id"] for row in sources}), 10)
         self.assertEqual(len(self.registry["cross_loop_kill_branches"]), 10)
-        combined = " ".join(
-            row["response"] for row in self.registry["cross_loop_kill_branches"]
-        )
+        combined = " ".join(row["response"] for row in self.registry["cross_loop_kill_branches"])
         for term in ("S25", "negative", "neural", "release"):
             self.assertIn(term, combined)
 

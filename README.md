@@ -32,7 +32,7 @@ and explain exactly what the result does not prove.
 | Trial identity | All 66 S21 session-1 trials and all 63 performed session-2 trials reconcile to MAT provenance; empty session-2 slots remain explicit | The real MEG evidence has exact trial identity instead of fuzzy sentence matching |
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
-| Full-path causality gate | Loop 25 v1 freezes a dedicated causal anti-alias stage, a 65,537-point 0-500 Hz response audit, 23 alias probes, 7 chunk schedules, 10 resume cuts, 3 future-mutation cuts, and 45 refusals | The source-audited protocol is awaiting authorization; v0 was superseded safely, and no coefficient, fixture, seed open, or preprocessing result exists |
+| Full-path causality gate | Loop 25 v1 passed a dedicated causal anti-alias audit, 65,537 response points, 23 alias probes, 168 schedule checks, 240 resume checks, and 72 future-mutation controls across 24 target-free items | The exact 1000-to-100 Hz path is mechanically causal with zero right context; this is synthetic mechanics evidence, not proof that neural information survives |
 | Next predictive design | Loop 26 research narrows the future gate to a 2,908-parameter causal candidate, a 2,884-parameter linear comparator, six required controls, and all 64 paired sign assignments over six reserved validation sentences | The experiment is still `Not Started`; this is an identifiability and design result, not neural performance |
 | Fresh transfer candidate | Loop 27 metadata research selects S25 session 2 block 2: one MEG FIF plus one protected MAT log, exactly 1,009,939,983 bytes under 1 GiB | S25 is not downloaded or qualified; preregistration waits for the causal source model, controls, and target isolation |
 | Transfer decision rule | Loop 28 research separates T0-T3 evidence and recommends a strict S25 T2 zero-shot gate: zero target fit, at least 48 final rows, at least 0.05 macro-CER improvement, 65,535 paired swaps plus observed, and strict corruption-control wins | The experiment is `Not Started`; this resolves one planning dependency without authorizing S25, a model run, calibration, or final access |
@@ -56,8 +56,9 @@ and explain exactly what the result does not prove.
 
 Loops 45-64 are specified in
 [`docs/LOOPS_45_64_SCIENTIFIC_ROADMAP.md`](docs/LOOPS_45_64_SCIENTIFIC_ROADMAP.md)
-and `registries/next_scientific_loops.v0.json`. All 20 are `Not Started` and
-all execution flags are false.
+and `registries/next_scientific_loops.v0.json`. Loop 45 is complete at its
+target-free mechanics boundary; Loops 46-64 are `Not Started`, and all current
+execution flags are false.
 
 | Phase | Loops | Decisive goal |
 |---|---:|---|
@@ -89,7 +90,7 @@ negative result and S25 is never repurposed for calibration.
 | Metadata-only local intake | 6 format families; 532 source bytes; 11,545 report bytes; 0 binary/raw/target/model/network reads | fixture-backed | Lets EEG owners start with safe structure and provenance instead of uploading a recording |
 | Bounded signal-quality interface | 40 fixtures; 38 readable and 2 exact refusals across 6 format families; 3.839 sec; 76,592 output bytes | fixture-backed | Validates readers, metrics, privacy, caps, and no-mutation identity before any real quality claim |
 | Replay/live-source authorization gate | 5 schedules x 18 fixture families = 90 future cases; 30 refusal IDs; 4 separately gated stages; 10 invariants | review-ready, not authorized | Binds the exact Stage A scope and caps before any source-chunk, socket, board, fixture, or hardware implementation |
-| Causal preprocessing amendment | Pinned Brain2Qwerty -> NeuralSet 0.2.2 -> MNE 1.11 source trace; dedicated elliptic SOS; 65,537 response points; 23 alias probes; 24 future target-free items; 7 schedules; 10 resumes; 3 mutation cuts; 45 refusals; 23 counters | amended preregistration, no runtime | Corrects v0's incomplete anti-alias gate before authorization and makes the full 50-500 Hz folding band falsifiable before either seed opens |
+| Causal preprocessing v1 | 4 anti-alias and 9 total SOS sections; 65,537 response points; 23/23 alias probes; 24/24 target-free items; 168 schedules; 240 resumes; 72 mutation controls; 0 protected reads | completed target-free synthetic mechanics | Establishes one strict, resumable 1000-to-100 Hz causal path with zero right context while leaving retained neural information and decoding performance unproven |
 | Loop 26 identifiability boundary | 55/6/5 source split; one person/session; 64 exact sign assignments; minimum two-sided p `0.03125`; 2,908-parameter causal recommendation; 2,884-parameter comparator; 14 false authorization fields | planning research only | Defines the smallest honest next question and the hard inferential ceiling before any protected content, target, model, or validation access |
 | Loop 27 fresh-holdout boundary | 315 pinned MEG metadata entries; 23 strict single-FIF/log pairs; 16 eligible; S25 selected at 1,009,939,983 bytes; S23 excluded; 18 false authorization fields | metadata research only | Finds the smallest honest same-modality transfer candidate while keeping its local MAT payload, remote FIF, targets, and backups sealed |
 | Loop 28 transfer boundary | T0-T3 taxonomy; strict zero-shot/transductive split; 48-row floor; 0.05 macro-CER margin; 65,535 paired assignments plus observed; 4 comparators; 21 false authorization fields | planning research only | Makes the future one-time S25 decision falsifiable while reserving calibrated transfer for a physically separate design |
@@ -107,7 +108,7 @@ negative result and S25 is never repurposed for calibration.
 | Loop 42 named-device boundary | OpenBCI Cyton base 8-channel USB-radio; Q0 only; 28 identity fields; 16 packet fields; 7 timing observables; 10 anomalies; 30 fixtures; 4 stages; 34 gates; 46 refusals; 45 false authorization fields | planning research only; no purchase, SDK, serial read, board connection, participant, recording, or device result exists | Makes a future local-device mechanics test exact while refusing to turn host timestamps, local files, connectivity, or eight channels into latency, privacy, EEG-quality, or text-decoding claims |
 | Loop 43 independent-reproduction boundary | 7 qualification levels; 16 independence fields; 28 packet fields; 34 submission fields; 8 comparison classes; 12 discrepancy classes; 32 fixtures; 4 stages; 36 gates; 48 refusals; 48 false authorization fields | planning research only; no packet, oracle, outreach, contributor, submission, adjudication, archive, or release exists | Defines how one future external environment can reproduce a released target-free software artifact without inflating that result into scientific replication, neural advantage, or population generalization |
 | Loop 44 claim-release matrix | 16 claims; 7 evidence levels; 5 model cards; 4 dataset cards; 14 gates; 8 risks; 0 tag/release/DOI operations | artifact-only review complete; engineering release held; scientific release parked | Makes every public claim traceable to cohort, task, split, comparator, uncertainty, resources, access, privacy, license, and evidence while preserving negative results |
-| Test and release surface | 655 local unittests with 3 expected skips; 652 pytest passes plus 277 subtests; 623 dependency-light Python tests with 121 expected skips | Loop 44 research commit `90d8919` is green in push CI `29243833014` and draft PR #23 CI `29243844680` | Makes research contracts, incident accounting, source bindings, access order, tamper checks, and authorization boundaries executable on ordinary hardware |
+| Test and release surface | 684 local unittests with 3 expected skips; 637 dependency-light Python tests with 124 expected skips | Loop 25 authorization and implementation CI are green; the closeout gates pass locally | Makes research contracts, incident accounting, source bindings, access order, tamper checks, and authorization boundaries executable on ordinary hardware |
 
 ### Real-Data Scientific Scorecard
 
@@ -125,12 +126,13 @@ engineering wins, not hidden behind synthetic accuracy.
 
 | Gate | Runtime | Peak RSS | Persistent output |
 |---|---:|---:|---:|
-| Dependency-light Python unittest run | 1.77 sec wall | 92,422,144 bytes | 623 tests with 121 expected optional skips; temporary output only |
+| Dependency-light Python unittest run | 1.80 sec wall | 107,659,264 bytes | 637 tests with 124 expected optional skips; temporary output only |
 | RW1 metadata intake roundtrip | 0.001659 sec | 21,643,264 bytes | 11,545 bytes |
 | RW2 bounded FIF quality roundtrip | 3.839168 sec | 150,749,184 bytes | 76,592 bytes |
 | RW3 contract/request invariant suite | 0.040 sec | 20,529,152 bytes | no generated payload |
 | Loop 24 authorization plus frozen-boundary suite | 0.210 sec | 21,397,504 bytes | no generated payload |
 | Loop 25 v1 amendment plus immutable-v0 request suite | 0.120 sec | 22,560,768 bytes | no generated payload |
+| Loop 25 registered static plus complete gates | 5.542175 sec internal | 136,806,400 bytes max | 788,967 generated bytes; 24/24 items, all caps and 23 counters exact |
 | Loop 26 research plus roadmap/Loop 25 boundary suite | 0.140 sec wall max | 22,986,752 bytes max | no generated payload |
 | Loop 27 pinned metadata selector | 3.100 sec wall | 63,766,528 bytes | zero downloaded payload bytes |
 | Loop 24-36 focused boundary suite | 3.74 sec wall | 240,041,984 bytes | 248 tests; no generated experiment payload |
@@ -164,7 +166,7 @@ engineering wins, not hidden behind synthetic accuracy.
 | Loop 42 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 4 high-level web operations, 12 search queries, and 9 official page opens; zero SDK, fixture, device, participant, signal, target, model, training, decoder, stream, network/cloud, or hardware operations |
 | Loop 43 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 5 high-level web operations, 8 search queries, 10 official/primary page opens, and 4 GitHub metadata operations; local validation later parsed 136 cache JSON files including 11 known consumed session-2 files, with zero tuning/scoring/model use |
 | Loop 24 registered selection | 65.154951 sec internal | 222,248,960 bytes max worker | 262,822 bytes fixture plus output |
-| Complete optional-neuro/ML test runners | 21.87 sec unittest / 22.52 sec pytest wall | 622,362,624 bytes max | 655 unittest and 652 pytest passes; temporary output only |
+| Current Loop 25 full unittest runner | 26.17 sec wall | 618,528,768 bytes | 684 tests with 3 expected skips; temporary output only |
 
 Proof labels are deliberately narrow:
 
@@ -234,14 +236,15 @@ Read this before interpreting any number in the repository.
   physically unopened, and the final gate parked at `65.154951` seconds versus
   its 60-second cap. Real data, targets, training, energy measurement, RW3,
   devices, and hardware remained outside Loop 24.
-- **Loop 25 causal-preprocessing amendment:** the original registration at
-  `a36d97b` remains immutable but was superseded before authorization by green
-  v1 commit `b6b92d8`. The current contract adds a dedicated causal elliptic
-  anti-alias stage, a 65,537-point 0-500 Hz response grid, 23 alias probes, 45
-  refusals, and 23 access counters while preserving physical seeds 2501/2502,
-  seven schedules, ten resumes, three future mutations, and the 8 MiB cap. The
-  replacement request says `authorized_now: false`; no coefficient, fixture,
-  seed open, numerical preprocessing, CLI, or runtime exists.
+- **Loop 25 causal-preprocessing result:** the original registration at
+  `a36d97b` remains immutable history; v1 amendment `b6b92d8`, authorization
+  commit `1e7296a`, and implementation commit `439f151` preserve the complete
+  audit trail. The static gate passed before either partition opened; seed
+  2501 development then passed and froze, and seed 2502 qualification passed
+  once unchanged. Across 24 target-free items, all 168 schedule, 240 resume,
+  and 72 future-mutation checks passed with zero protected reads. Generated
+  output was 788,967 bytes and maximum RSS was 136,806,400 bytes. Loop 25 is
+  complete, consumed, and not authorized for rerun.
 - **Loop 26 planning research:** a machine-checked boundary identifies the
   existing real model's symmetric-padding causality defect, recommends a
   parameter-identical left-padded candidate and a nearly matched linear
@@ -383,9 +386,10 @@ Read this before interpreting any number in the repository.
 - Loop 24 retains float32. Float16 passes correctness but misses every runtime
   replacement threshold; qint8 is smaller but fails correctness and runtime;
   the complete target-free gate parks on its 60-second orchestration cap.
-- Loop 25 has a green amended preregistration and a review-ready v1 packet, not
-  a causal-preprocessing result. Its anti-alias, phase/ringing, right-context,
-  timing, schedule, resume, and resource claims remain proposed gates.
+- Loop 25 now has a passed causal-preprocessing mechanics result: the exact
+  target-free path is causal with zero right context and passes anti-alias,
+  timing, schedule, resume, mutation, access, and resource gates. It does not
+  show that neural information survives preprocessing, and no rerun is open.
 - Loop 26 has a green planning-research packet, not a model, training run,
   validation result, or neural advantage. Six sentence instances from one
   person and session cannot establish transfer or population generalization.
@@ -919,8 +923,10 @@ The original numbered development sequence has reached:
 - Loops 25-44: a primary-source-informed tranche spans causal
   evidence, translation/generalization, reliability/confounds,
   reproducibility/local deployment, and live translation/release. Loop 25 is
-  `Amended Preregistration` at `b6b92d8` with a hash-bound v1 request awaiting
-  explicit authorization; v0 is historical and was never authorized. Loop 26
+  complete after one registered target-free execution: authorization commit
+  `1e7296a` and implementation commit `439f151` were remotely green before the
+  static, development, and conditional qualification gates passed. Its current
+  execution flag is false because no rerun is authorized. Loop 26
   planning research is complete at `03605c5`, while the experiment remains
   `Not Started`. Loop 27 planning research is green at `b3d61b6` and selects
   S25 metadata, while preregistration and acquisition remain blocked. Loop 28
@@ -958,9 +964,10 @@ The original numbered development sequence has reached:
   remains `Not Started` and unauthorized; Loop 43 planning research defines the
   independent artifact-reproduction firewall while its challenge remains `Not
   Started` and unauthorized. Loop 44 artifact-only planning is complete; its
-  engineering release is held and scientific performance release is parked. All 20
-  execution flags are false. Loop 24's parked result does not authorize Loop
-  25, and later research cannot authorize an earlier or later experiment.
+  engineering release is held and scientific performance release is parked.
+  All 20 current execution flags are false. Loop 25's mechanics closeout
+  satisfies that dependency only; it does not authorize Loop 26 or any later
+  experiment.
 
 The parallel Real-World Practice track has reached:
 
@@ -1029,6 +1036,9 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/causal_preprocessing_contract.v1.json](registries/causal_preprocessing_contract.v1.json) | current machine-readable Loop 25 amendment with every execution flag false |
 | [docs/LOOP_25_AUTHORIZATION_PACKET_V1.md](docs/LOOP_25_AUTHORIZATION_PACKET_V1.md) | current exact bounded decision language and the work still forbidden even after authorization |
 | [registries/loop25_authorization_request.v1.json](registries/loop25_authorization_request.v1.json) | green-amendment-bound replacement request; currently `authorized_now: false` |
+| [registries/loop25_authorization_decision.v1.json](registries/loop25_authorization_decision.v1.json) | separate hash-bound authorization record for the one completed target-free execution; protected scopes remain false |
+| [docs/LOOP_25_CAUSAL_PREPROCESSING_RESULT.md](docs/LOOP_25_CAUSAL_PREPROCESSING_RESULT.md) | measured static, fixture, replay, access, resource, warning, and claim-boundary closeout |
+| [registries/loop25_causal_preprocessing_result.v1.json](registries/loop25_causal_preprocessing_result.v1.json) | machine-readable Loop 25 measurements, hashes, counters, pass decision, and no-rerun boundary |
 | [docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md](docs/RW1_METADATA_ONLY_LOCAL_INTAKE.md) | metadata-only file intake closeout |
 | [docs/RW2_PRIMARY_SOURCE_RESEARCH.md](docs/RW2_PRIMARY_SOURCE_RESEARCH.md) | reader/quality primary-source review |
 | [docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md](docs/RW2_SIGNAL_QUALITY_PREREGISTRATION.md) | frozen RW2 protocol |

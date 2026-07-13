@@ -2,8 +2,9 @@
 
 Machine source of truth: `registries/next_scientific_loops.v0.json`
 
-Status: **planning approved as direction; every experiment, download, model,
-participant, device, and release action remains separately unauthorized**
+Status: **Loop 45 mechanics complete; every experiment in Loops 46-64 and every
+download, model, participant, device, and release action remain separately
+unauthorized**
 
 ## North Star
 
@@ -27,7 +28,8 @@ remain valuable, but they cannot substitute for those scientific gates.
 - S7 EEG: nearest centroid is worse than the prior by `-0.113636` accuracy on
   1,100 consumed key events.
 - S25 remains unopened and final-only.
-- Loop 25 v1 causal preprocessing remains preregistered but unauthorized.
+- Loop 25 v1 causal preprocessing passed once on 24 target-free synthetic items
+  with zero right context, zero protected reads, and no rerun authorization.
 - Loops 26-43 provide detailed future contracts, not execution results.
 
 The roadmap does not erase those negative results. It uses them to stop broad
@@ -57,13 +59,15 @@ generalization, confounds, and reproducibility.
 
 ### Loop 45 - Causal Source-Path Qualification
 
-Execute the already amended Loop 25 v1 target-free path under its exact
-authorization order. The static 65,537-point response and 23-probe alias gate
-must pass before seed 2501 opens. Seven schedules, ten resume cuts, three future
-mutation cuts, timestamp identity, and zero right context then qualify the
-mechanics.
+**Status: Complete.** The separately authorized Loop 25 v1 path passed its
+65,537-point static response and 23-probe alias gate before seed 2501 opened.
+Development froze before seed 2502 qualification opened. Across 24 target-free
+items, all 168 schedule, 240 resume, and 72 future-mutation checks passed with
+zero right context and zero protected reads. Total generated output was 788,967
+bytes and maximum RSS was 136,806,400 bytes.
 
-**Gate:** causal mechanics pass exactly. **Claim:** mechanics only.
+**Gate:** passed once. **Claim:** mechanics only; retained neural information
+and end-to-end latency remain unmeasured. No rerun is authorized.
 
 ### Loop 46 - Reserved S21 Neural-Effect Gate
 
@@ -218,7 +222,7 @@ an engineering alpha even if scientific performance is negative.
 
 | Trigger | Mandatory response |
 |---|---|
-| Loop 45 fails | Keep all real training sealed; amend mechanics only. |
+| Loop 45 result is invalidated | Keep all real training sealed; amend mechanics only. |
 | Loop 46 fails | Park scaling; run Loop 48; do not open source test or S25. |
 | Loop 47 finds a shortcut | Block neural-contribution wording; prioritize confound repair. |
 | No Loop 49 development person | Keep S25 final-only and hold transfer. |
@@ -254,9 +258,10 @@ the machine registry.
 
 ## Authorization Boundary
 
-This document is a research roadmap. Every loop is `Not Started`, every
-`execution_authorized` flag is false, and the global authorization fields are
-false. The roadmap does not authorize Loop 25, any real-data read or download,
-training, target opening, S25 access, EEG acquisition, stream, device,
-participant contact, home recording, external outreach, tag, release, archive,
-DOI, or scientific claim.
+This document is a research roadmap. Loop 45 is complete at its target-free
+mechanics boundary; Loops 46-64 are `Not Started`. Every current
+`execution_authorized` flag and every global authorization field is false. The
+roadmap does not authorize a Loop 45 rerun, Loop 46, any real-data read or
+download, training, target opening, S25 access, EEG acquisition, stream,
+device, participant contact, home recording, external outreach, tag, release,
+archive, DOI, or scientific claim.
