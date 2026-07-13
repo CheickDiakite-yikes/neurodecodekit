@@ -2255,3 +2255,39 @@ hardware result exists.
 Evidence: `docs/LOOP_40_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop40_research_boundary.v0.json`,
 `tests/test_loop40_research_boundary.py`, and roadmap row 40.
+
+## 0068 - Preserve Every Clock And Anomaly Across The Stream-To-Token Join
+
+Decision: close Loop 41 planning research while leaving its integration
+experiment `Not Started`, all 42 `authorized_now` fields false, and no fixture,
+source chunk, correction, preprocessing, adapter, state, token runtime, stream,
+device, latency measurement, or generated experiment payload open. Freeze six
+integration layers, seven clock views, eight anomaly classes, five inherited
+schedules, five resume cuts, 18 identity/hash bindings, 28 future fixture
+families, four separately authorized stages, 32 gates, and 42 refusals.
+
+Clock decision: source timestamps are immutable evidence. Corrected timestamps
+are derived, segmented, reversible, and hash-bound. Arrival, preprocessing-
+ready, token-available, decoder-emission, and render-presented times remain
+separate. Subtract only clocks in one named monotonic domain. Replay has no
+physical capture event; decoder and render operations do not exist, so capture-
+to-arrival and end-to-end latency remain unavailable.
+
+Anomaly and state decision: never silently interpolate gaps, deduplicate
+samples, sort reordered samples, or carry state across a reset without a new
+segment. The complete future state is capped at 64 KiB, may not contain payload
+history, and must reproduce uninterrupted outputs, state, provenance, and
+semantic hashes across five resume cuts.
+
+Dependency decision: Loop 20/21 component evidence is not the missing join.
+Compatible Loop 25, Loop 37, Loop 39, and RW3 Stage A execution closeouts are
+all required and currently unsatisfied. A future Loop 41 preregistration and
+authorization remain separate after those close.
+
+Claim boundary: no stream-to-NeuroToken integration, live capture, neural
+advantage, decoding accuracy, unseen-person generalization, end-to-end real-
+time latency, device qualification, or portable-hardware result exists.
+
+Evidence: `docs/LOOP_41_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop41_research_boundary.v0.json`,
+`tests/test_loop41_research_boundary.py`, and roadmap row 41.

@@ -162,8 +162,10 @@ qualification levels, six package layers, four unselected backend profiles, 20
 identity fields, 24 fixtures, four stages, 30 gates, 40 refusals, and 40 false
 authorization fields around the retained float32 reference. Its experiment
 remains `Not Started`; no target, backend, install, export, package, inference,
-simulator, device, or hardware operation exists. Loops 41-44 remain `Not
-Started`. All 20
+simulator, device, or hardware operation exists. Loop 41 planning research
+freezes the stream-to-NeuroToken clock, anomaly, state, schedule, and provenance
+firewall while its experiment remains `Not Started` and unauthorized; Loops
+42-44 remain `Not Started`. All 20
 `execution_authorized` flags are false. Loop 25's exact decision packet is
 ready for review, while Loops 26-33 have no
 preregistration or authorization packet. Roadmap approval, general
@@ -286,3 +288,9 @@ from the other.
   generate a package, run inference/profiling/delegation, launch a simulator or
   app, or operate a device. ExecuTorch/XNNPACK is a research lead only;
   desktop packaging is not portable hardware and packaging is not science.
+- Keep Loop 41 planning-only. Its six integration layers, seven clock views,
+  eight anomaly classes, five schedules, five resume cuts, bounded state, 18
+  hash bindings, 28 fixtures, 32 gates, and 42 refusals are not permission to
+  create a source chunk, fixture, adapter, preprocessing output, NeuroToken
+  payload, stream, latency claim, device operation, or scientific result. The
+  experiment remains `Not Started` and unauthorized.

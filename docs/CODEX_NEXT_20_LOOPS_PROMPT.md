@@ -91,6 +91,17 @@ profiler, simulator, app, device, hardware operation, or end-to-end latency
 result exists. Review `docs/LOOP_40_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop40_research_boundary.v0.json` as planning evidence only.
 
+Loop 41 planning research is complete while the RW3 stream-to-NeuroToken
+experiment remains `Not Started` and unauthorized. The boundary freezes six
+integration layers, seven clock views, eight anomaly classes, five inherited
+schedules, five resume cuts, 18 hash bindings, 28 fixtures, 32 gates, 42
+refusals, and 42 false authorization fields. Loop 25, Loop 37, Loop 39, and
+RW3 Stage A execution closeouts are unsatisfied. Review
+`docs/LOOP_41_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop41_research_boundary.v0.json` as planning evidence only; they
+authorize no source chunk, fixture, adapter, preprocessing, token runtime,
+latency claim, stream, device, hardware operation, or scientific result.
+
 The next numbered decision is **authorize Loop 25 v1 exactly, amend it again,
 or hold**. Review `docs/LOOP_25_AUTHORIZATION_PACKET_V1.md` and
 `registries/loop25_authorization_request.v1.json`. General continuation is not
@@ -125,10 +136,12 @@ decisions authorizes Loop 27 acquisition or Loop 28 transfer.
 None authorizes Loop 29 acquisition or device work; storage permission is not
 download permission, and cryogenic channel ablation is not OPM-MEG or EEG
 qualification.
-None authorizes a Loop 30-40 fixture or experiment. In particular, Loop 39
+None authorizes a Loop 30-41 fixture or experiment. In particular, Loop 39
 planning does not qualify a runtime matrix, and Loop 40 planning does not
 select a backend or establish an edge-package, real-time, device, or portable-
-hardware result.
+hardware result. Loop 41 planning does not implement the RW3-to-NeuroToken join
+or establish replay, live-source, end-to-end latency, decoding, or scientific
+behavior.
 
 Passing either future synthetic gate could establish only its registered
 interface, numerical, resource, or accounting behavior. It would not establish

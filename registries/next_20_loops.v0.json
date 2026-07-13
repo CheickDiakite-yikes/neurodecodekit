@@ -1,6 +1,6 @@
 {
   "schema_name": "neurodecodekit.next_twenty_loops_roadmap",
-  "schema_version": "0.17.0",
+  "schema_version": "0.18.0",
   "roadmap_id": "loops-25-44",
   "prepared_at": "2026-07-13",
   "status": "planning_only_not_execution_authorization",
@@ -219,6 +219,28 @@
     "loop40_device_or_hardware_authorized": false,
     "loop40_dependency_loop24_result_available": true,
     "loop40_dependency_loop39_execution_satisfied": false,
+    "loop41_research_packet_prepared": true,
+    "loop41_integration_layer_count": 6,
+    "loop41_clock_view_count": 7,
+    "loop41_anomaly_class_count": 8,
+    "loop41_schedule_count": 5,
+    "loop41_resume_cut_count": 5,
+    "loop41_identity_hash_binding_count": 18,
+    "loop41_future_fixture_family_count": 28,
+    "loop41_future_requirement_count": 32,
+    "loop41_future_refusal_count": 42,
+    "loop41_false_authorization_field_count": 42,
+    "loop41_maximum_future_claim": "target_free_replay_integration_semantic_equivalence",
+    "loop41_preregistration_prepared": false,
+    "loop41_authorization_request_prepared": false,
+    "loop41_execution_authorized": false,
+    "loop41_fixture_or_source_chunk_authorized": false,
+    "loop41_adapter_or_neurotoken_runtime_authorized": false,
+    "loop41_stream_device_or_hardware_authorized": false,
+    "loop41_dependency_loop25_satisfied": false,
+    "loop41_dependency_loop37_satisfied": false,
+    "loop41_dependency_loop39_satisfied": false,
+    "loop41_dependency_rw3_stage_a_satisfied": false,
     "user_preferred_incremental_storage_bytes": 5000000000,
     "user_absolute_incremental_storage_bytes": 10000000000,
     "selected_s20_plus_s25_future_bundle_bytes": 1106030247,
@@ -1056,11 +1078,12 @@
       "effort": "L",
       "status": "Not Started",
       "execution_authorized": false,
-      "proof_posture": "planned_not_authorized",
+      "proof_posture": "planning_research_complete_experiment_not_started",
+      "research_status": "planning_research_complete",
       "core_question": "Can an authorized source-chunk replay pass through causal preprocessing into NeuroTokenCache without timestamp, gap, state, or schedule drift?",
       "why_high_value": "This joins the acquisition contract to the model interface while keeping replay mechanics separate from hardware and decoding claims.",
-      "build_deliverable": "Source-chunk to preprocessing to NeuroToken adapter, resume state, gap propagation, schedule matrix, and end-to-end provenance hashes.",
-      "research_deliverable": "Clock-domain and latency ledger mapping source, corrected, arrival, preprocessing, token, decoder, and render times.",
+      "build_deliverable": "Future only: compose the RW3 source chunk, authorized Loop 25 causal preprocessing, causal NeuroToken producer, bounded resume state, anomaly propagation, schedule matrix, and end-to-end provenance hashes.",
+      "research_deliverable": "Complete: six integration layers, seven clock views, eight anomaly classes, five schedules, five resume cuts, 18 hash bindings, 28 fixture families, 32 gates, and 42 refusals are frozen in registries/loop41_research_boundary.v0.json.",
       "data_scope": "Only future authorized target-free RW3 synthetic replay; no BrainFlow, LSL, PyXDF, socket, live source, hardware, or real recording unless separately staged later.",
       "controls": [
         "Canonical offline path and every authorized chunk schedule.",
@@ -1075,12 +1098,24 @@
         "state bytes and resume identity",
         "stage runtime, scheduling delay, peak RSS, and output bytes"
       ],
-      "acceptance_boundary": "Pass only when every authorized schedule and resume path preserves canonical tokens and provenance, and anomalies remain explicit rather than repaired silently.",
-      "stop_rule": "Any timestamp collapse, silent interpolation, lost anomaly, schedule-dependent token, or state mismatch parks integration before live or device work.",
+      "acceptance_boundary": "After separately closed dependencies, preregistration, and authorization, pass only when every registered schedule, anomaly, and resume path preserves the registered source, preprocessing, token, state, and provenance semantics within caps.",
+      "stop_rule": "Missing dependencies, clock collapse, silent interpolation/deduplication/reordering, a lost anomaly, cross-gap token, schedule-dependent token, state mismatch, unavailable latency presented as measured, or a resource overflow parks integration before live or device work.",
       "depends_on": [25, 37, 39],
-      "external_gates": ["explicit_rw3_stage_a_authorization_and_closeout", "separate_loop41_authorization"],
-      "authorization_boundary": "Planning only. This roadmap does not authorize RW3 Stage A or any adapter, fixture, source-chunk, stream, or token runtime.",
-      "resource_cap": "One thread and worker, 32 MiB generated target-free artifacts, 60 seconds per worker, and 1 GiB peak RSS."
+      "external_gates": ["compatible_loop25_execution_and_closeout", "compatible_loop37_execution_and_closeout", "relevant_loop39_matrix_closeout", "explicit_rw3_stage_a_authorization_and_closeout", "separate_loop41_preregistration", "separate_loop41_authorization"],
+      "authorization_boundary": "Planning research only and unauthorized. No preregistration, fixture, seed, source chunk, correction, preprocessing, adapter, state, schedule matrix, NeuroToken runtime, generated payload, protected read, target, model, training, decoder, language model, server, browser, socket, stream, SDK, device, or hardware operation is authorized.",
+      "resource_cap": "Current generated experiment bytes and execution operations are zero. Future work is capped at one thread and worker, 60 seconds per worker, 1 GiB peak RSS, 4 KiB RW3 state, 64 KiB complete integration state, and 32 MiB generated fixtures/states/caches/reports with zero network, protected reads, target reads, model runs, and training runs.",
+      "integration_layer_count": 6,
+      "clock_view_count": 7,
+      "anomaly_class_count": 8,
+      "schedule_count": 5,
+      "resume_cut_count": 5,
+      "identity_hash_binding_count": 18,
+      "future_fixture_family_count": 28,
+      "future_requirement_count": 32,
+      "future_refusal_count": 42,
+      "false_authorization_field_count": 42,
+      "preregistration_prepared": false,
+      "authorization_request_prepared": false
     },
     {
       "loop_id": 42,
@@ -1202,7 +1237,7 @@
     "38": ["nist_privacy_framework", "nist_ir_8062", "nist_pram", "nist_sp_800_88_r2", "github_remove_sensitive_data", "open_brain_consent", "eeg_identity_privacy", "oecd_responsible_neurotechnology"],
     "39": ["acm_artifact_badging", "reproducible_builds_definition", "python_hash_seed", "pip_inspect_schema", "pypa_pylock", "numpy_runtime_and_global_state", "pytorch_reproducibility", "github_hosted_runners", "mne_sys_info", "scientific_python_spec0"],
     "40": ["executorch"],
-    "41": ["lsl_time_sync", "bids_derivatives"],
+    "41": ["lsl_time_sync", "lsl_introduction", "lsl_faq", "liblsl_postprocessing_flags", "w3c_high_resolution_time", "python_monotonic_ns", "bids_derivatives", "bids_derivative_common_data"],
     "42": ["lsl_time_sync", "nist_privacy_framework"],
     "43": ["moabb_benchmark", "model_cards", "datasheets"],
     "44": ["model_cards", "datasheets", "nist_privacy_framework"]
@@ -1455,6 +1490,24 @@
       "roadmap_use": "Raw versus corrected timestamps, low-latency versus synchronized timing, and clock-domain boundaries."
     },
     {
+      "source_id": "lsl_introduction",
+      "title": "Lab Streaming Layer introduction",
+      "url": "https://labstreaminglayer.readthedocs.io/info/intro.html",
+      "roadmap_use": "Sample, chunk, metadata, buffering, retransmission, recovery, synchronization, and XDF recording boundaries."
+    },
+    {
+      "source_id": "lsl_faq",
+      "title": "Lab Streaming Layer FAQ",
+      "url": "https://labstreaminglayer.readthedocs.io/info/faqs.html",
+      "roadmap_use": "Steady-clock origin, wall-clock separation, buffering, chunk-size, and latency caveats."
+    },
+    {
+      "source_id": "liblsl_postprocessing_flags",
+      "title": "liblsl postprocessing flags",
+      "url": "https://labstreaminglayer.readthedocs.io/projects/liblsl/ref/enums.html",
+      "roadmap_use": "Clock-sync, dejitter, monotonic forcing, and thread-safe postprocessing as explicit timestamp transformations."
+    },
+    {
       "source_id": "gradio_blocks",
       "title": "Gradio Blocks and launch parameters",
       "url": "https://www.gradio.app/main/docs/gradio/blocks",
@@ -1473,9 +1526,15 @@
       "roadmap_use": "Integer monotonic nanosecond measurement for backend stage durations without wall-clock conversion."
     },
     {
+      "source_id": "python_monotonic_ns",
+      "title": "Python monotonic_ns documentation",
+      "url": "https://docs.python.org/3/library/time.html#time.monotonic_ns",
+      "roadmap_use": "Integer monotonic nanosecond evidence for local arrival, preprocessing, token, decoder, and render intervals."
+    },
+    {
       "source_id": "w3c_high_resolution_time",
       "title": "W3C High Resolution Time",
-      "url": "https://www.w3.org/TR/2026/WD-hr-time-3-20260225/",
+      "url": "https://www.w3.org/TR/hr-time-3/",
       "roadmap_use": "Browser monotonic timing, time-origin provenance, and cross-context mapping boundaries."
     },
     {

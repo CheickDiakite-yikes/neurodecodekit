@@ -923,3 +923,33 @@ four separately authorized stages, 30 gates, 40 refusals, and 40 false
 authorization fields. A future Loop 40 pass can establish at most parity and
 measured resources for one exact named host or simulator. Physical devices
 remain Loop 42 work; packaging cannot establish decoding or neural science.
+
+## 2026-07-13 Loop 41 Research Addendum
+
+Loop 41 planning research is complete while its RW3 stream-to-NeuroToken
+experiment remains `Not Started` and unauthorized. The detailed source audit is
+in `docs/LOOP_41_PRIMARY_SOURCE_RESEARCH.md`; the dependency-free boundary is
+`registries/loop41_research_boundary.v0.json`.
+
+The LSL sources require sample timestamps and clock-offset histories to remain
+distinct, and leave correction and smoothing policy to the consumer. W3C and
+Python timing sources reinforce that duration evidence needs one named
+monotonic domain rather than wall-clock subtraction. BIDS derivative guidance
+requires generated payloads to point back to source and software provenance.
+
+The resulting boundary separates six integration layers and seven clock views;
+preserves eight anomaly classes; freezes five inherited schedules, five resume
+cuts, 18 identity/hash bindings, 28 future fixture families, four separately
+authorized stages, 32 gates, 42 refusals, and 42 false authorization fields.
+The complete future state is capped at 64 KiB and may not retain payload
+history. Replay capture-to-arrival, decoder, render, and end-to-end latency are
+unavailable.
+
+Loop 20/21 evidence does not implement the join. Compatible Loop 25, Loop 37,
+Loop 39, and RW3 Stage A execution closeouts are all missing. No fixture,
+source chunk, correction, preprocessing run, adapter, state, NeuroToken
+runtime, generated payload, protected read, target, model, training, stream,
+device, hardware, or latency result exists. The maximum future Loop 41 claim is
+target-free replay integration semantic equivalence on the registered host and
+fixture matrix, not live capture, decoding, neural information, or real-time
+device behavior.

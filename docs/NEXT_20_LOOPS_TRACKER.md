@@ -53,7 +53,11 @@
 > research freezes seven qualification levels, six package layers, four
 > unselected backend profiles, 20 identity fields, 24 fixtures, 30 gates, 40
 > refusals, and 40 false authorization fields while its experiment remains
-> `Not Started` and unauthorized. Loops 41-44 remain planning-only. The
+> `Not Started` and unauthorized. Loop 41 planning research freezes six
+> integration layers, seven clock views, eight anomaly classes, five schedules,
+> five resume cuts, 18 hash bindings, 28 fixtures, 32 gates, 42 refusals, and
+> 42 false authorization fields while its experiment remains `Not Started` and
+> unauthorized. Loops 42-44 remain planning-only. The
 > spreadsheet dashboard displays the original roadmap, current gate, and next
 > 20-loop queue separately.
 
@@ -284,7 +288,8 @@ its experiment remains `Not Started`; Loop 37 planning research is complete and
 its experiment remains `Not Started`; Loop 38 planning research is complete
 and its experiment remains `Not Started`; Loop 39 planning research is complete
 and its experiment remains `Not Started`; Loop 40 planning research is complete
-and its experiment remains `Not Started`; Loops 41-44 are
+and its experiment remains `Not Started`; Loop 41 planning research is complete
+and its experiment remains `Not Started` and unauthorized; Loops 42-44 are
 `Not Started`. Every row retains `execution_authorized: false`.
 
 | # | Phase | Gate | Core outcome | Priority | Effort | Status |
@@ -487,6 +492,17 @@ export, conversion, package, inference, profiler, memory planner, delegate,
 simulator, app, device, or hardware operation exists. See
 `docs/LOOP_40_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop40_research_boundary.v0.json`.
+
+Loop 41 planning research is complete while the stream-to-NeuroToken
+integration experiment remains `Not Started` and unauthorized. The boundary
+separates source, corrected, arrival, preprocessing-ready, token-available,
+decoder-emission, and render-presented clocks; preserves eight anomaly classes;
+and freezes five schedules, five resume cuts, 18 hash bindings, 28 fixture
+families, four stages, 32 gates, 42 refusals, and 42 false authorization fields.
+No fixture, source chunk, causal-preprocessing run, adapter, state, NeuroToken
+runtime, latency measurement, stream, device, or hardware operation exists.
+See `docs/LOOP_41_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop41_research_boundary.v0.json`.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |

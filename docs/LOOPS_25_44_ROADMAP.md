@@ -1032,6 +1032,12 @@ bytes. Any dependency install needs a separate explicit byte cap.
 
 ## Loop 41 - RW3 Stream-To-NeuroToken Integration
 
+**Current status:** Planning research complete; experiment `Not Started` and
+unauthorized. Six integration layers, seven clock views, eight anomaly classes,
+five inherited schedules, five resume cuts, 18 hash bindings, 28 future fixture
+families, four stages, 32 gates, 42 refusals, and 42 false authorization fields
+are frozen in `registries/loop41_research_boundary.v0.json`.
+
 **Core question:** Can an authorized source-chunk replay pass through causal
 preprocessing into NeuroTokenCache without timestamp, gap, state, or schedule
 drift?
@@ -1040,13 +1046,17 @@ drift?
 mechanics and the model interface, while remaining upstream of hardware and
 decoding claims.
 
-**Build:** Implement a source-chunk-to-preprocessing-to-NeuroToken adapter,
-serialized resume state, anomaly propagation, schedule matrix, and end-to-end
-provenance hashes.
+**Build:** Future only. Compose the RW3 source-chunk envelope, an authorized
+Loop 25 causal preprocessor, the causal NeuroToken producer, NeuroTokenCache,
+bounded serialized state, anomaly propagation, schedule/resume matrices, and
+end-to-end provenance hashes. Decoder and render layers remain unavailable.
 
-**Research:** Define the ledger across source, corrected, arrival,
-preprocessing, token, decoder, and render time domains and identify which
-latencies are measured or unavailable.
+**Research:** Complete at the planning boundary. Source timestamps remain
+immutable; corrected timestamps are derived, segmented, reversible, and hash-
+bound. Arrival, preprocessing-ready, token-available, decoder-emission, and
+render-presented time remain separate. Only clocks in a shared named monotonic
+domain may be subtracted. Replay capture latency, decoder time, render time,
+and end-to-end latency are unavailable.
 
 **Data and controls:** Only future authorized target-free RW3 synthetic replay.
 Compare canonical offline and every schedule; include gaps, duplicates,
@@ -1056,13 +1066,27 @@ reorder, reconnect, reset, and interrupted/resumed state. Keep clocks distinct.
 propagation; state bytes; resume identity; scheduling and stage runtime; RSS;
 output bytes.
 
-**Gate:** Every schedule/resume path must preserve canonical tokens and
-provenance, with anomalies explicit. Any silent repair, clock collapse,
-schedule-dependent token, or state mismatch parks the join.
+**Gate:** After separately closed dependencies, preregistration, and
+authorization, every schedule, anomaly, and resume path must preserve the
+registered source, preprocessing, token, state, and provenance semantics under
+the frozen numerical policy. Any silent interpolation/deduplication/reordering,
+clock collapse, cross-gap token, schedule drift, resume mismatch, hidden
+unavailable latency, or resource overflow parks the join.
 
-**Dependencies and authorization:** Depends on Loops 25, 37, and 39 plus an
-explicit RW3 Stage A authorization and closeout. This roadmap authorizes no RW3
-fixture, source chunk, adapter, stream, or token runtime.
+**Dependencies and authorization:** Loop 20/21 interface evidence is available
+but is not Loop 41 runtime evidence. Compatible Loop 25, Loop 37, Loop 39, and
+RW3 Stage A execution closeouts are all unsatisfied. A future Loop 41
+preregistration and exact authorization remain separate after those close.
+This roadmap authorizes no seed, fixture, source chunk, clock correction,
+preprocessing, adapter, state, schedule matrix, token runtime, protected read,
+target, model, training, decoder, language model, server, browser, socket,
+stream, SDK, device, hardware, generated payload, or latency claim.
+
+**Resources:** Current generated experiment bytes and execution operations are
+zero. Future work is capped at one thread, one worker, 60 seconds per worker,
+1 GiB RSS, 4 KiB RW3 state, 64 KiB complete integration state, and 32 MiB total
+generated fixtures/states/caches/reports with zero network, protected reads,
+targets, model runs, and training runs.
 
 ## Loop 42 - One-Device Qualification
 

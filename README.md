@@ -319,6 +319,13 @@ Read this before interpreting any number in the repository.
   unauthorized because the relevant Loop 39 matrix has not run. No install,
   export, conversion, package, inference, profiler, delegate, simulator, app,
   device, or hardware operation exists.
+- **Loop 41 planning research:** the first proposed RW3-to-NeuroToken join now
+  has a machine-checkable firewall for seven distinct clock views, eight
+  anomaly classes, five schedules, five resume cuts, bounded state, and 18
+  provenance/hash bindings. The experiment remains `Not Started` and
+  unauthorized: no source chunk, fixture, preprocessing run, adapter, token
+  runtime, end-to-end latency measurement, live source, device, or scientific
+  result exists.
 
 ### What The Results Actually Say
 
@@ -902,8 +909,10 @@ The original numbered development sequence has reached:
   environment, semantic-identity, and numerical-tolerance firewall while its
   experiment remains `Not Started`; Loop 40 planning research defines the
   edge-package, host-state, fallback, complete-cost, and target-identity
-  firewall while its experiment remains `Not Started`; Loops 41-44 remain
-  `Not Started`. All 20
+  firewall while its experiment remains `Not Started`; Loop 41 planning
+  research defines the stream-to-NeuroToken clock, anomaly, state, schedule,
+  and provenance firewall while its experiment remains `Not Started` and
+  unauthorized; Loops 42-44 remain `Not Started`. All 20
   execution flags are false. Loop 24's parked result does not authorize Loop
   25, and later research cannot authorize an earlier or later experiment.
 
