@@ -2016,3 +2016,74 @@ Evidence: `docs/LOOP_36_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop36_research_boundary.v0.json`,
 `tests/test_loop36_research_boundary.py`, roadmap row 36, research commit
 `4d5c7d2`, push CI run `29216381237`, and draft PR #15 CI run `29216397245`.
+
+## 0064 - Separate the BIDS envelope from non-standard NeuroDecodeKit payloads
+
+Decision: close Loop 37 planning research while leaving the derivative export
+experiment `Not Started`, all 29 `authorized_now` fields false, and no fixture,
+exporter, derivative tree, validator install/run, protected payload, payload
+hash, subject mapping, raw copy, external write, release/upload, model,
+training, stream, device, or hardware operation opened. Freeze six export
+layers, five artifact profiles, 15 standard-field mappings, 16 explicit
+NeuroDecodeKit extension fields, 20 fixture families, four independently
+authorized stages, 24 gates, and 32 refusal IDs.
+
+Standard boundary: pin the researched interface to stable BIDS 1.11.1. Every
+future derivative envelope needs exact `Name`, `BIDSVersion`, `DatasetType`,
+`GeneratedBy`, and README behavior. File-level direct inputs use BIDS URIs;
+named datasets resolve through `DatasetLinks`. Relative source paths and
+`RawSources` are deprecated. Required source metadata propagates only while it
+remains valid after processing.
+
+Extension boundary: NeuroToken NPZ caches, signal/sentence caches, split
+reports, report cards, and manifests have no stable BIDS derivative suffix.
+They may live as explicitly non-standard versioned files inside a BIDS-
+organized envelope, but the envelope cannot standardize them. Proposed BIDS
+provenance fields are not treated as stable 1.11.1 requirements.
+
+Identity and privacy boundary: replace local paths with resolvable BIDS URIs or
+an opaque source hash plus an unavailable standard-source warning. Absolute
+paths, usernames, home roots, traversal, case collisions, subject/session/item
+collisions, overwrite, symlinks, hardlinks, shared inodes, direct identifiers,
+and unreviewed source labels refuse. Loop 38 must qualify privacy, license,
+identifier, retention, and lifecycle behavior before real or public export.
+
+Payload boundary: future export is schema- and stage-allowlisted, never a
+recursive copy. Known raw extensions, raw-permissible filenames, full or
+sampled raw-byte duplicates, targets, prompts, responses, sentence text,
+unrestricted free text, unknown payloads, and incompatible licenses refuse.
+Raw copy files, duplicate bytes, and shared inodes must remain zero.
+
+Validator boundary: future Stage B may pin official validator `2.4.1` as an
+optional offline tool after separate authorization. Its complete issue ledger
+must be retained. A passing validator can establish only the standard-envelope
+behavior it checks; it cannot standardize custom payloads or validate source
+hashes, privacy, license, scientific provenance, cross-machine
+reproducibility, neural advantage, or decoding accuracy.
+
+Staging boundary: Stage A is target-free synthetic metadata/refusal behavior.
+Stage B adds one bounded synthetic payload and optional validator. Stage C is
+named local real-derived metadata only after Loop 38. Stage D is public release
+only after privacy/license, cross-machine, and claim-promotion gates. No stage
+self-authorizes the next.
+
+Access and resource result: this research used seven high-level public web
+operations including two official GitHub repository reads, one CPU
+thread/worker, and zero generated derivative bytes, tracked neural/model binary
+candidate files, protected downloads, real header/cache/signal/target reads,
+payload hashes, fixtures, validator runs, raw copies, releases, uploads, models,
+training runs, streams, devices, or hardware operations. Public-network
+response bytes and browser runtime/RSS are unavailable. Future Stage A remains
+capped at 120 seconds, 1 GiB RSS, 16 MiB, 128 files, zero network/download
+bytes, zero raw-copy bytes, and no base dependency.
+
+Claim boundary: no BIDS-organized synthetic bundle, validator-assessed
+envelope, source-bound real provenance bundle, privacy/license qualification,
+cross-machine reproduction, public release, neural advantage, decoding
+accuracy, unseen-person generalization, real-time behavior, or portable-
+hardware result exists.
+
+Evidence: `docs/LOOP_37_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop37_research_boundary.v0.json`,
+`tests/test_loop37_research_boundary.py`, roadmap row 37, research commit
+`ef31efc`, push CI run `29226436884`, and draft PR #16 CI run `29226853455`.

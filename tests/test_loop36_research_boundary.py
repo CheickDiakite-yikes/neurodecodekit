@@ -329,7 +329,7 @@ class Loop36ResearchBoundaryTests(unittest.TestCase):
             self.assertIn(text, self.research)
 
     def test_machine_roadmap_and_public_status_are_synchronized(self):
-        self.assertEqual(self.roadmap["schema_version"], "0.13.0")
+        self.assertEqual(self.roadmap["schema_version"], "0.14.0")
         current = self.roadmap["current_boundary"]
         self.assertTrue(current["loop36_research_packet_prepared"])
         self.assertEqual(current["loop36_representation_layer_count"], 6)

@@ -90,11 +90,13 @@ Do not reset, revert, delete, or overwrite work already present.
   while its experiment remains `Not Started`; Loop 27 planning research has
   selected S25 metadata while preregistration remains blocked; Loop 28 planning
   research defines a strict zero-shot rule while its experiment remains `Not
-  Started`; Loops 29-36 have completed planning research while their
+  Started`; Loops 29-37 have completed planning research while their
   experiments remain `Not Started`; confidence is unavailable, Loop 35's
   maximum future local claim is incremental brain-sensor information beyond
   recorded controls, Loop 36's maximum future real-header claim is
-  declared metadata compatibility, and Loops 37-44 remain `Not Started`; all 20
+  declared metadata compatibility, Loop 37 caps future Stage B at a validator-
+  assessed BIDS envelope with explicitly non-standard payloads, and Loops 38-44
+  remain `Not Started`; all 20
   execution flags remain false.
 - Loop 26's planning boundary recommends a 2,908-parameter causal candidate, a
   2,884-parameter linear comparator, six controls, and exact enumeration of all
@@ -182,6 +184,14 @@ Do not reset, revert, delete, or overwrite work already present.
   unit conversion, rereference, compensation, interpolation, source
   localization, model, training, download, stream, device, hardware, or
   equivalence claim is authorized.
+- Loop 37 planning research is complete while the BIDS derivative/provenance
+  experiment remains `Not Started` and unauthorized. The boundary freezes 6
+  export layers, 5 artifact profiles, 15 stable-field mappings, 16 explicit
+  NeuroDecodeKit extension fields, 20 fixture families, 4 stages, 24 gates, 32
+  refusals, and 29 false authorization fields. NeuroToken NPZ caches and report
+  artifacts remain non-standard. No fixture, exporter, derivative tree,
+  validator install/run, protected payload, raw copy, release/upload, model,
+  training, stream, device, or hardware operation is authorized.
 - No real recording quality, neural advantage, unseen-person generalization,
   useful EEG decoder, real-time decoding, portable-hardware, arbitrary-thought,
   or clinical result has been demonstrated.

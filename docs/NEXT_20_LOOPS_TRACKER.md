@@ -36,7 +36,11 @@
 > 24 channel fields, 12 operation classes, 16 fixture families, 22 gates, 30
 > refusals, and 29 false authorization fields while its experiment remains
 > `Not Started`. A future real-header result can establish at most declared
-> metadata compatibility. Loops 37-44 remain planning-only. The
+> metadata compatibility. Loop 37 planning research freezes six export layers,
+> five artifact profiles, 15 standard mappings, 16 extension fields, 20
+> fixtures, four stages, 24 gates, 32 refusals, and 29 false authorization
+> fields while its experiment remains `Not Started`. Custom payloads remain
+> non-standard and the work is unauthorized. Loops 38-44 remain planning-only. The
 > spreadsheet dashboard displays the original roadmap, current gate, and next
 > 20-loop queue separately.
 
@@ -263,7 +267,8 @@ research is complete and its experiment remains `Not Started`; Loop 34
 planning research is complete and its experiment remains `Not Started` with
 confidence unavailable; Loop 35 planning research is complete and its
 experiment remains `Not Started`; Loop 36 planning research is complete and
-its experiment remains `Not Started`; Loops 37-44 are
+its experiment remains `Not Started`; Loop 37 planning research is complete and
+its experiment remains `Not Started`; Loops 38-44 are
 `Not Started`. Every row retains `execution_authorized: false`.
 
 | # | Phase | Gate | Core outcome | Priority | Effort | Status |
@@ -280,7 +285,7 @@ its experiment remains `Not Started`; Loops 37-44 are
 | 34 | Reliability And Confounds | Confidence, Abstention, And Revision | Planning research complete: seven confidence semantics, eight score/control roles, fresh 128/64/256 synthetic partitions, bounded loss, generalized risk, revision delay, 20 gates, and 30 refusals; confidence unavailable, experiment unauthorized and Not Started. | P1 | M | Not Started |
 | 35 | Reliability And Confounds | Peripheral Confound Firewall | Planning research complete: freeze 10 confound classes, 9 synchronized stream classes, 13 conditions, 3 stages, 24 gates, and 32 refusals; missing controls block the claim and absolute brain origin stays unavailable. | P0 | L | Not Started |
 | 36 | Reliability And Confounds | Geometry And Reference Harmonization | Planning research complete: freeze 6 representation layers, 5 modality profiles, 24 channel fields, 12 operation classes, 16 fixtures, 22 gates, and 30 refusals; metadata compatibility stays separate from signal/model/device equivalence. | P1 | M | Not Started |
-| 37 | Reproducibility And Local Deployment | BIDS Derivative And Provenance Export | Export tiny source-bound derivatives without copying raw recordings or inventing metadata. | P1 | M | Not Started |
+| 37 | Reproducibility And Local Deployment | BIDS Derivative And Provenance Export | Planning research complete: freeze 6 export layers, 5 artifact profiles, 15 stable mappings, 16 extension fields, 20 fixtures, 24 gates, and 32 refusals; standard envelopes cannot standardize custom payloads. | P1 | M | Not Started |
 | 38 | Reproducibility And Local Deployment | Neural Data Privacy And Lifecycle | Verify inventory, redaction, retention, local storage, and narrow deletion behavior. | P0 | M | Not Started |
 | 39 | Reproducibility And Local Deployment | Cross-Machine Reproducibility Matrix | Define bitwise semantic identity versus explicit numerical compatibility across supported environments. | P0 | M | Not Started |
 | 40 | Reproducibility And Local Deployment | Edge Runtime Packaging Gate | Package one already qualified frozen path only if behavior and deployment benefit survive. | P2 | L | Not Started |
@@ -407,6 +412,17 @@ header pass can establish at most declared metadata compatibility; numerical
 compatibility, model transfer, device equivalence, and scientific performance
 remain separate. See `docs/LOOP_36_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop36_research_boundary.v0.json`.
+
+Loop 37 planning research is complete while the experiment remains `Not
+Started` and unauthorized. The boundary separates a stable BIDS 1.11.1 dataset
+envelope from explicitly non-standard NeuroDecodeKit NPZ caches, split reports,
+report cards, and manifests. Six export layers, five artifact profiles, 15
+standard-field mappings, 16 extension fields, 20 fixture families, four
+stages, 24 gates, 32 refusals, and 29 false authorization fields are machine
+checked. No fixture, exporter, derivative tree, validator install/run,
+protected payload, raw copy, release, upload, model, training, device, or
+hardware operation exists. See `docs/LOOP_37_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop37_research_boundary.v0.json`.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |
