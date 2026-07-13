@@ -1952,5 +1952,5 @@ claim exists.
 
 Evidence: `docs/LOOP_35_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop35_research_boundary.v0.json`,
-`tests/test_loop35_research_boundary.py`, and roadmap row 35. Commit and CI
-identities are added only after the tested research milestone is pushed.
+`tests/test_loop35_research_boundary.py`, roadmap row 35, research commit
+`6f48363`, push CI run `29214860306`, and draft PR #14 CI run `29214881916`.
