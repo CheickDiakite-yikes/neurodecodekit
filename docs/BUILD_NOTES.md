@@ -3026,8 +3026,8 @@ Repository-wide Ruff lint, touched-file formatting, compileall, 26 source JSON
 and two TOML parses, seven CLI help surfaces, 55 registered commands,
 unauthorized Loop 38 runtime absence, 72 checked local Markdown links with zero
 missing, workbook render/reload/formula inspection, and `git diff --check`
-pass. Commit and CI identities are added only after the tested research
-milestone is pushed.
+pass. Research commit `c82c3fa` passes push CI run `29228686142` and draft PR
+#17 CI run `29228698759`.
 
 Engineering capability added: a machine-checkable privacy risk map,
 sensitivity taxonomy, artifact/copy inventory contract, redaction surface,

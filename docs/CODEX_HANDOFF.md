@@ -361,8 +361,8 @@ all nine sheets render, the export reloads with exact key ranges, and the
 formula scan has zero matches. Ruff, touched-file format checks, compileall, 26
 source JSON and two TOML parses, 72 checked local Markdown links with zero
 missing, seven CLI help surfaces, 55 registered commands, unauthorized Loop 38
-runtime absence, and `git diff --check` pass. Commit and CI identities are
-recorded after push.
+runtime absence, and `git diff --check` pass. Research commit `c82c3fa` passes
+push CI run `29228686142` and draft PR #17 CI run `29228698759`.
 
 ## The north star
 

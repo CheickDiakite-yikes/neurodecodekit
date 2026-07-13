@@ -2147,5 +2147,5 @@ or portable-hardware result exists.
 
 Evidence: `docs/LOOP_38_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop38_research_boundary.v0.json`,
-`tests/test_loop38_research_boundary.py`, and roadmap row 38. Commit and CI
-identities are added only after the tested research milestone is pushed.
+`tests/test_loop38_research_boundary.py`, roadmap row 38, research commit
+`c82c3fa`, push CI run `29228686142`, and draft PR #17 CI run `29228698759`.
