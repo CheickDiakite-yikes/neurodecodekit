@@ -164,8 +164,10 @@ authorization fields around the retained float32 reference. Its experiment
 remains `Not Started`; no target, backend, install, export, package, inference,
 simulator, device, or hardware operation exists. Loop 41 planning research
 freezes the stream-to-NeuroToken clock, anomaly, state, schedule, and provenance
-firewall while its experiment remains `Not Started` and unauthorized; Loops
-42-44 remain `Not Started`. All 20
+firewall while its experiment remains `Not Started` and unauthorized. Loop 42
+planning research selects OpenBCI Cyton base 8-channel USB-radio at Q0 for one
+future mechanics path while its experiment remains `Not Started` and
+unauthorized; Loops 43-44 remain `Not Started`. All 20
 `execution_authorized` flags are false. Loop 25's exact decision packet is
 ready for review, while Loops 26-33 have no
 preregistration or authorization packet. Roadmap approval, general
@@ -294,3 +296,10 @@ from the other.
   create a source chunk, fixture, adapter, preprocessing output, NeuroToken
   payload, stream, latency claim, device operation, or scientific result. The
   experiment remains `Not Started` and unauthorized.
+- Keep Loop 42 planning-only. Its Q0 Cyton candidate, identity and packet
+  fields, clock-origin rules, anomaly accounting, privacy/locality surfaces,
+  battery-only safety rules, stages, gates, and refusals are not permission to
+  purchase a board, install/import BrainFlow, read a serial port, discover or
+  connect hardware, query/update firmware, contact a participant, place
+  electrodes, record data, open a network path, or claim signal quality,
+  capture latency, decoding, portability, safety, or home usability.

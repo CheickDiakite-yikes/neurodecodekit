@@ -953,3 +953,35 @@ device, hardware, or latency result exists. The maximum future Loop 41 claim is
 target-free replay integration semantic equivalence on the registered host and
 fixture matrix, not live capture, decoding, neural information, or real-time
 device behavior.
+
+## 2026-07-13 Loop 42 Research Addendum
+
+Loop 42 planning research is complete while its one-device qualification
+experiment remains `Not Started` and unauthorized. The detailed source audit is
+in `docs/LOOP_42_PRIMARY_SOURCE_RESEARCH.md`; the dependency-free boundary is
+`registries/loop42_research_boundary.v0.json`.
+
+The selected future mechanics candidate is OpenBCI Cyton base 8-channel over
+its USB-radio dongle, without Daisy, Wi-Fi Shield, or GUI network streaming.
+Official OpenBCI sources expose its 33-byte packet, 8-bit sample counter, eight
+24-bit ExG fields, firmware/radio queries, 250 Hz ceiling, ADS1299, SRB2/BIAS,
+gain, battery-only power, and local raw-file path. Official BrainFlow sources
+expose Cyton board ID 0, synthetic/playback development paths, microvolt unit
+conventions, and the warning that some timestamps are generated on the host.
+
+The result therefore remains Q0 specification eligibility. Generic ExG is not
+EEG until scalp electrodes, reference, BIAS, gain, and geometry are verified.
+The packet counter is sequence evidence, not a physical capture clock.
+Adapter, arrival, retrieval, marker, and physical-capture times remain
+separate, and capture-to-arrival stays unavailable without an instrumented
+common-clock event. Local-file support is not a privacy result; a future
+network-off audit must inventory raw, derived, settings, logs, support,
+screenshot, temp, backup, sync, identity, and socket surfaces.
+
+The boundary freezes 28 identity fields, 16 packet fields, seven timing
+observables, ten anomalies, ten privacy surfaces, ten safety requirements, six
+qualification levels, four separately authorized stages, 30 fixture families,
+34 gates, 46 refusals, and 45 false authorization fields. No device is known to
+be present and no fixture, install, SDK import, serial read, discovery,
+connection, firmware operation, participant contact, recording, network,
+signal, model, decoding, latency, portability, or home-use result exists.

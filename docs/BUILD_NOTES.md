@@ -3245,3 +3245,61 @@ Scientific claim not established: no Loop 41 runtime or protected payload was
 opened, so no neural advantage, decoding accuracy, unseen-person
 generalization, real-time capture-to-text latency, or portable-hardware result
 exists.
+
+## 2026-07-13 - Loop 42 One-Device Qualification Planning Research
+
+- Audited all 13 device-registry records, including seven EEG/ExG candidates,
+  against the Loop 29 portability, Loop 38 privacy, Loop 41 stream, and RW3
+  dependency boundaries without installing or importing an SDK.
+- Selected OpenBCI Cyton base 8-channel over USB radio as the future mechanics
+  candidate at Q0 official-specification level. Daisy, Wi-Fi Shield, GUI
+  network streaming, cloud, targets, models, purchase, and ownership claims
+  are excluded.
+- Reviewed nine official OpenBCI/BrainFlow pages through 12 public search
+  queries and four high-level web operations. Public response bytes, runtime,
+  and RSS are unavailable from the tool contract.
+- Added `registries/loop42_research_boundary.v0.json` with 28 identity fields,
+  16 packet fields, seven timing observables, ten anomalies, ten privacy
+  surfaces, ten safety requirements, six qualification levels, four stages, 30
+  fixture families, 34 gates, 46 refusals, and 45 false authorization fields.
+- Added 15 dependency-light invariants and advanced the machine roadmap to
+  schema v0.19.0 while keeping all 20 execution flags false.
+- Generated experiment files/bytes, device seconds, installs, SDK imports,
+  serial reads, discovery, connections, hardware operations, participant
+  contacts, recordings, network/cloud operations, raw/cache/target reads,
+  models, training, decoders, NeuroTokens, and latency measurements remain
+  zero. Loop 42 remains `Not Started` and unauthorized.
+- The user-owned workbook inspection sidecar remains untracked and must remain
+  byte-exact at SHA-256
+  `b96bbea77ec93e59c0db7c4bcaeb4a9182f1f7cc7039d13fb223b65e0005beb6`.
+- Local acceptance passed on one numerical thread. The strict Loop 42 plus
+  roadmap slice passes 24 tests in 0.043 seconds internal; all Loop 24-42
+  planning boundaries pass 263 tests in 1.99 seconds wall with 88,997,888-byte
+  maximum RSS. Full unittest discovery passes 616 tests with three expected
+  skips in 24.31 seconds wall and 612,483,072-byte maximum RSS; pytest passes
+  613 tests with three skips and 277 subtests in 23.34 seconds wall and
+  625,065,984-byte maximum RSS; dependency-light Python passes 584 tests with
+  121 optional skips in 2.57 seconds wall and 106,840,064-byte maximum RSS.
+  Each full count is 15 above Loop 41 with no prior regression.
+- Ruff lint, all ten touched Python format checks, compileall, all 31 source
+  JSON files, both TOML files, four CLI help surfaces, 55 registered commands,
+  72 local Markdown links, the 86-commit Gitleaks scan, authorization/runtime
+  absence checks, and `git diff --check` pass. Repository-wide Ruff formatting
+  still reports the pre-existing 96-file backlog and remains out of scope.
+- The visually inspected nine-sheet tracker is 99,626 bytes at SHA-256
+  `7ac856e73b7e4b985f3becbf3372e1b973074959eb4973213a53a1452249c2a8`.
+  Exact key ranges reload, the formula-error scan matches zero cells, and the
+  user-owned untracked sidecar remains byte-exact and unstaged.
+- Research commit `9188157` is pushed on
+  `codex/loop-42-device-qualification-research`. Push CI run `29237366884` and
+  draft PR #21 CI run `29237382715` both pass Base Python and Optional Neuro
+  Readers. GitHub reports only its platform-level Node 20 action deprecation
+  annotation; no repository check failed.
+
+Engineering capability added: a machine-checkable one-device qualification
+boundary now makes future identity, packet, clock, anomaly, locality, safety,
+resource, stage, and claim decisions exact for one named path.
+
+Scientific claim not established: no SDK, device, participant, signal, target,
+model, decoding, or latency operation ran, so there is no EEG-quality, neural-
+advantage, unseen-person, real-time, portable-hardware, or text-decoding result.

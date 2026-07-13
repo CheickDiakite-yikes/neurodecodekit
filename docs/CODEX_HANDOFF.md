@@ -135,7 +135,14 @@
 > experiment remains `Not Started` and unauthorized; all four execution
 > dependencies are unsatisfied and no fixture, source chunk, adapter,
 > preprocessing, token runtime, latency result, stream, device, or hardware
-> operation exists. Loops 42-44 remain `Not Started`.
+> operation exists.
+> Loop 42 planning research selects OpenBCI Cyton base 8-channel over USB radio
+> as the exact future mechanics candidate at Q0 specification level. It freezes
+> 28 identity fields, 16 packet fields, seven timing observables, ten anomalies,
+> four stages, 34 gates, 46 refusals, and 45 false authorization fields. Its
+> experiment remains `Not Started`; no purchase, SDK, serial read, board
+> connection, participant, recording, locality result, signal, latency, model,
+> decoding, or hardware qualification exists. Loops 43-44 remain `Not Started`.
 > This does not reopen Loop 24 or authorize RW3, data, targets, models,
 > validation, training, calibration, or hardware.
 > In parallel, RW0 closes a primary-source Real-World Practice research gate
@@ -360,6 +367,13 @@ This repo is a starter scaffold with working pure-Python components:
   identity/hash bindings, 28 fixtures, four stages, 32 gates, 42 refusals, and
   42 false authorization fields; the experiment remains `Not Started` and
   unauthorized, with no stream-to-NeuroToken runtime or latency result
+- machine-checked Loop 42 planning research selecting OpenBCI Cyton base
+  8-channel USB-radio at Q0 only, with 28 identity fields, 16 packet fields,
+  seven timing observables, ten anomalies, ten privacy surfaces, ten safety
+  requirements, four separately authorized stages, 30 fixtures, 34 gates, 46
+  refusals, and 45 false authorization fields; no device is present or
+  qualified, and no SDK, participant, recording, signal, or decoding operation
+  exists
 - JSON/Markdown metrics report command
 - CLI smoke commands
 - unit tests
@@ -372,14 +386,15 @@ negative within-session event comparison. None is a decoder success. Do not
 turn these results, a variance ranking, or a geometry proxy into unseen-person
 or population generalization.
 
-Current Loop 41 local verification passes 601 unittests with 3 expected skips
-in 23.43 seconds wall and 616,284,160-byte maximum RSS; pytest reports 598
-passed, 3 skipped, and 277 subtests in 23.37 seconds wall with
-621,232,128-byte maximum RSS. The focused Loop 41 plus roadmap slice has 23
-passing tests, and the Loop 25-41 planning-boundary discovery has 248 passing
-tests. Dependency-light discovery is green at 569 tests with 121 optional
-skips in 2.73 seconds wall and 92,831,744-byte maximum RSS. Each full count is
-14 above the Loop 40 closeout. No Loop 25-41 fixture, coefficient,
+Current Loop 42 local verification passes 616 unittests with 3 expected skips
+in 24.31 seconds wall and 612,483,072-byte maximum RSS; pytest reports 613
+passed, 3 skipped, and 277 subtests in 23.34 seconds wall with
+625,065,984-byte maximum RSS. The focused Loop 42 plus roadmap slice has 24
+passing tests, and the Loop 25-42 planning-boundary discovery has 263 passing
+tests in 1.99 seconds wall with 88,997,888-byte maximum RSS. Dependency-light
+discovery is green at 584 tests with 121 optional skips in 2.57 seconds wall
+and 106,840,064-byte maximum RSS. Each full count is 15 above the Loop 41
+closeout. No Loop 25-42 fixture, coefficient,
 preprocessing run, candidate selection/download, local MAT payload hash,
 header/signal/target/validation/model read, adapter fit, training run,
 calibration or confidence fit, learning-curve or confidence score, peripheral
@@ -391,17 +406,20 @@ runtime install, export, conversion, packaged inference, profiler, delegate,
 simulator, app, source chunk, stream-to-NeuroToken adapter, resume state,
 clock correction, anomaly fixture, token runtime, end-to-end latency result,
 language-model/Neuro Token run, protected network payload download, RW3
-operation, SDK import, stream, board, device, partner, or hardware operation
-occurred. The tracked workbook is 98,959 bytes with SHA-256
-`185cbc483321e3b1b53c7c6426092a31ed3ef4be0c7e0b1b4c9c5963b1a4c672`;
+operation, SDK import, playback, serial read, discovery, stream, board,
+participant contact, recording, device, partner, or hardware operation
+occurred. The tracked workbook is 99,626 bytes with SHA-256
+`7ac856e73b7e4b985f3becbf3372e1b973074959eb4973213a53a1452249c2a8`;
 all nine sheets render, the export reloads with exact key ranges, and the
-formula scan has zero matches. Ruff, touched-file format checks, compileall, 29
-source JSON and two TOML parses, 72 checked local Markdown links with zero
-missing, four exercised CLI help surfaces, 55 registered commands, unauthorized
-Loop 41 runtime absence, the 84-commit Gitleaks scan, and `git diff --check`
-pass. Research commit `5e8308f` passes push CI run `29235264294` and draft PR
-#20 CI run `29235281640`; both Base Python and Optional Neuro Readers jobs are
-green.
+formula scan has zero matches. Ruff lint, touched-file format checks,
+compileall, 31 source JSON and two TOML parses, 72 checked local Markdown links
+with zero missing, four exercised CLI help surfaces, 55 registered commands,
+unauthorized Loop 42 runtime absence, the 86-commit Gitleaks scan, and
+`git diff --check` pass. Repository-wide `ruff format --check src tests` still
+reports the pre-existing 96-file formatting backlog and was not applied as an
+unrelated rewrite. Research commit `9188157` passes push CI run `29237366884`
+and draft PR #21 CI run `29237382715`; both Base Python and Optional Neuro
+Readers jobs are green.
 
 ## The north star
 

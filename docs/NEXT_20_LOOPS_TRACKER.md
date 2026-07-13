@@ -57,7 +57,11 @@
 > integration layers, seven clock views, eight anomaly classes, five schedules,
 > five resume cuts, 18 hash bindings, 28 fixtures, 32 gates, 42 refusals, and
 > 42 false authorization fields while its experiment remains `Not Started` and
-> unauthorized. Loops 42-44 remain planning-only. The
+> unauthorized. Loop 42 planning research selects OpenBCI Cyton base 8-channel
+> USB-radio at Q0 specification level and freezes 28 identity fields, seven
+> timing observables, ten anomalies, four stages, 34 gates, 46 refusals, and 45
+> false authorization fields while its experiment remains `Not Started` and
+> unauthorized. Loops 43-44 remain planning-only. The
 > spreadsheet dashboard displays the original roadmap, current gate, and next
 > 20-loop queue separately.
 
@@ -289,8 +293,11 @@ its experiment remains `Not Started`; Loop 38 planning research is complete
 and its experiment remains `Not Started`; Loop 39 planning research is complete
 and its experiment remains `Not Started`; Loop 40 planning research is complete
 and its experiment remains `Not Started`; Loop 41 planning research is complete
-and its experiment remains `Not Started` and unauthorized; Loops 42-44 are
-`Not Started`. Every row retains `execution_authorized: false`.
+and its experiment remains `Not Started` and unauthorized; Loop 42 planning
+research selects the exact OpenBCI Cyton base 8-channel USB-radio path for
+future mechanics only while its experiment remains `Not Started` and
+unauthorized; Loops 43-44 are `Not Started`. Every row retains
+`execution_authorized: false`.
 
 | # | Phase | Gate | Core outcome | Priority | Effort | Status |
 |---:|---|---|---|---|---|---|
@@ -311,7 +318,7 @@ and its experiment remains `Not Started` and unauthorized; Loops 42-44 are
 | 39 | Reproducibility And Local Deployment | Cross-Machine Reproducibility Matrix | Planning research complete: freeze 7 qualification levels, 18 environment fields, 8 output classes, 6 comparison classes, a 6-cell future matrix, 20 fixtures, 28 gates, and 38 refusals; no matrix cell or reproduction has run. | P0 | M | Planning research complete; experiment Not Started |
 | 40 | Reproducibility And Local Deployment | Edge Runtime Packaging Gate | Planning research complete: freeze 7 qualification levels, 6 package layers, 4 unselected backends, 20 identity fields, 24 fixtures, 30 gates, and 40 refusals; require Loop 39, a named target, exact host-state parity, visible fallback, and complete-cost benefit. | P2 | L | Planning research complete; experiment Not Started |
 | 41 | Live Translation And Release | RW3 Stream-To-NeuroToken Integration | Join separately authorized source-chunk replay to causal tokens without timestamp or state drift. | P1 | L | Not Started |
-| 42 | Live Translation And Release | One-Device Qualification | Qualify one exact device, firmware, transport, host, and compatibility level only. | P2 | L | Not Started |
+| 42 | Live Translation And Release | One-Device Qualification | Qualify one exact device, firmware, transport, host, and compatibility level only. | P2 | L | Planning research complete; Q0 Cyton candidate; experiment Not Started |
 | 43 | Live Translation And Release | Independent Reproduction Challenge | Have an independent environment reproduce a bounded artifact without neural-data exchange. | P1 | M | Not Started |
 | 44 | Live Translation And Release | Claim Promotion And Release Decision | Promote only claims with complete evidence, privacy, license, reproduction, and control records. | P0 | M | Not Started |
 

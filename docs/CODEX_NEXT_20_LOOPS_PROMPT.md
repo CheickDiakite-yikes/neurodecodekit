@@ -102,6 +102,15 @@ RW3 Stage A execution closeouts are unsatisfied. Review
 authorize no source chunk, fixture, adapter, preprocessing, token runtime,
 latency claim, stream, device, hardware operation, or scientific result.
 
+Loop 42 planning research is complete while the one-device qualification
+experiment remains `Not Started` and unauthorized. OpenBCI Cyton base
+8-channel over USB radio is selected for future mechanics only at Q0 official-
+specification level. Review `docs/LOOP_42_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop42_research_boundary.v0.json`; they authorize no purchase,
+install, SDK import, playback, serial read, discovery, firmware query, board
+connection, participant contact, electrode placement, recording, network,
+device claim, model, decoding, or scientific result.
+
 The next numbered decision is **authorize Loop 25 v1 exactly, amend it again,
 or hold**. Review `docs/LOOP_25_AUTHORIZATION_PACKET_V1.md` and
 `registries/loop25_authorization_request.v1.json`. General continuation is not
@@ -136,12 +145,14 @@ decisions authorizes Loop 27 acquisition or Loop 28 transfer.
 None authorizes Loop 29 acquisition or device work; storage permission is not
 download permission, and cryogenic channel ablation is not OPM-MEG or EEG
 qualification.
-None authorizes a Loop 30-41 fixture or experiment. In particular, Loop 39
+None authorizes a Loop 30-42 fixture or experiment. In particular, Loop 39
 planning does not qualify a runtime matrix, and Loop 40 planning does not
 select a backend or establish an edge-package, real-time, device, or portable-
 hardware result. Loop 41 planning does not implement the RW3-to-NeuroToken join
 or establish replay, live-source, end-to-end latency, decoding, or scientific
-behavior.
+behavior. Loop 42 candidate selection does not establish ownership,
+compatibility, signal quality, locality, capture latency, portability, or home
+use.
 
 Passing either future synthetic gate could establish only its registered
 interface, numerical, resource, or accounting behavior. It would not establish

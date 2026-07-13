@@ -1,6 +1,6 @@
 {
   "schema_name": "neurodecodekit.next_twenty_loops_roadmap",
-  "schema_version": "0.18.0",
+  "schema_version": "0.19.0",
   "roadmap_id": "loops-25-44",
   "prepared_at": "2026-07-13",
   "status": "planning_only_not_execution_authorization",
@@ -241,6 +241,32 @@
     "loop41_dependency_loop37_satisfied": false,
     "loop41_dependency_loop39_satisfied": false,
     "loop41_dependency_rw3_stage_a_satisfied": false,
+    "loop42_research_packet_prepared": true,
+    "loop42_selected_future_candidate": "openbci_cyton_8ch_usb_radio",
+    "loop42_current_qualification_level": "L42-Q0_official_specification_candidate_only",
+    "loop42_identity_field_count": 28,
+    "loop42_packet_field_count": 16,
+    "loop42_timing_observable_count": 7,
+    "loop42_anomaly_class_count": 10,
+    "loop42_privacy_surface_count": 10,
+    "loop42_safety_requirement_count": 10,
+    "loop42_qualification_level_count": 6,
+    "loop42_future_stage_count": 4,
+    "loop42_future_fixture_family_count": 30,
+    "loop42_future_requirement_count": 34,
+    "loop42_future_refusal_count": 46,
+    "loop42_false_authorization_field_count": 45,
+    "loop42_preregistration_prepared": false,
+    "loop42_authorization_request_prepared": false,
+    "loop42_execution_authorized": false,
+    "loop42_device_purchase_or_connection_authorized": false,
+    "loop42_sdk_or_playback_operation_authorized": false,
+    "loop42_participant_or_recording_authorized": false,
+    "loop42_network_or_cloud_authorized": false,
+    "loop42_signal_model_decoding_or_claim_authorized": false,
+    "loop42_dependency_loop38_execution_satisfied": false,
+    "loop42_dependency_loop41_execution_satisfied": false,
+    "loop42_dependency_rw3_stage_a_satisfied": false,
     "user_preferred_incremental_storage_bytes": 5000000000,
     "user_absolute_incremental_storage_bytes": 10000000000,
     "selected_s20_plus_s25_future_bundle_bytes": 1106030247,
@@ -1125,12 +1151,13 @@
       "effort": "L",
       "status": "Not Started",
       "execution_authorized": false,
-      "proof_posture": "planned_not_authorized",
+      "proof_posture": "planning_research_complete_experiment_not_started",
+      "research_status": "planning_research_complete",
       "core_question": "Can one named device preserve declared channels, units, clocks, packets, and privacy from recorded replay through a bounded local session?",
       "why_high_value": "One measured device is more credible than broad compatibility claims based on SDK imports or vendor tables.",
-      "build_deliverable": "Device descriptor, consent and locality checklist, recorded-versus-live equivalence packet, loss/reconnect stress report, and compatibility-level decision.",
-      "research_deliverable": "Device-specific timestamp, unit, reference, geometry, firmware, and data-retention review.",
-      "data_scope": "One separately approved board or headset, one local synthetic or consented non-sensitive qualification session, and no decoding target unless separately approved.",
+      "build_deliverable": "Future only: exact Cyton descriptor, consent/locality checklist, target-free playback equivalence, loss/reconnect stress report, battery-only no-contact bench, and separately consented bounded scalp mechanics session.",
+      "research_deliverable": "Complete: OpenBCI Cyton 8-channel USB-radio is selected for future mechanics only; 28 identity fields, 16 packet fields, seven timing observables, ten anomalies, four stages, 34 gates, and 46 refusals are frozen in registries/loop42_research_boundary.v0.json.",
+      "data_scope": "Future exact OpenBCI Cyton base 8-channel board over USB radio without Daisy, Wi-Fi Shield, GUI network streaming, targets, models, or cloud; every playback, no-contact bench, and consented scalp stage is separately authorized.",
       "controls": [
         "SDK synthetic or playback source before physical hardware.",
         "Recorded and live paths compared under the same source-chunk contract.",
@@ -1144,12 +1171,28 @@
         "runtime, peak RSS, bytes, and dropped samples",
         "privacy and retention violations"
       ],
-      "acceptance_boundary": "Qualify only the named device, firmware, transport, host, and tested compatibility level; connectivity alone cannot qualify signal quality or decoding.",
-      "stop_rule": "Park physical qualification on ambiguous consent, cloud dependence, hidden timestamps, unstable identity, unsafe retention, or failed replay equivalence.",
+      "acceptance_boundary": "After every dependency and separate stage gate closes, qualify at most the exact Cyton hardware, firmware, dongle, USB-radio transport, BrainFlow version, macOS host, configuration, and measured level; connectivity cannot qualify EEG identity, signal quality, task information, decoding, reliability, portability, safety, or home use.",
+      "stop_rule": "Park the exact configuration on missing authorization, identity, firmware, reference, packet, timestamp origin, common-clock latency evidence, locality, consent, battery-only proof, retention, resource, replay-equivalence, or anomaly-accounting failure; do not substitute Daisy, Wi-Fi, another board, firmware, adapter, host, or weakened gate.",
       "depends_on": [29, 38, 41],
-      "external_gates": ["explicit_device_stage_authorization", "ethics_consent_and_retention_approval"],
-      "authorization_boundary": "Planning only. No SDK import, device discovery, socket, stream, board, hardware, or recording session is authorized.",
-      "resource_cap": "One device, one host, one thread for analysis, exact session and byte cap in a future packet, 32 MiB derived artifacts, and no cloud upload."
+      "external_gates": ["compatible_loop38_device_lifecycle_closeout", "compatible_loop41_stream_to_neurotoken_closeout", "explicit_rw3_stage_a_closeout", "separate_stage_a_authorization", "separate_stage_b_authorization", "separate_stage_c_hardware_authorization", "separate_stage_d_ethics_consent_retention_and_recording_authorization"],
+      "authorization_boundary": "Planning research only and unauthorized. Candidate selection is not purchase permission. No fixture, dependency install, SDK import, playback, source chunk, serial read, discovery, firmware query/update, radio configuration, board connection, hardware operation, participant contact, electrode placement, recording, file write, network/cloud operation, protected read, target, model, training, decoder, NeuroToken runtime, device claim, or release is authorized.",
+      "resource_cap": "Current generated experiment bytes and device seconds are zero. Future work is one device/host/thread/worker, 60 seconds for Stage A/B, 300 seconds for Stage C, 600 seconds for Stage D, 1 GiB RSS, 64 MiB raw plus 32 MiB derived and 96 MiB total generated bytes, and zero network-stream/cloud bytes.",
+      "selected_future_candidate": "openbci_cyton_8ch_usb_radio",
+      "current_qualification_level": "L42-Q0_official_specification_candidate_only",
+      "identity_field_count": 28,
+      "packet_field_count": 16,
+      "timing_observable_count": 7,
+      "anomaly_class_count": 10,
+      "privacy_surface_count": 10,
+      "safety_requirement_count": 10,
+      "qualification_level_count": 6,
+      "future_stage_count": 4,
+      "future_fixture_family_count": 30,
+      "future_requirement_count": 34,
+      "future_refusal_count": 46,
+      "false_authorization_field_count": 45,
+      "preregistration_prepared": false,
+      "authorization_request_prepared": false
     },
     {
       "loop_id": 43,
@@ -1238,7 +1281,7 @@
     "39": ["acm_artifact_badging", "reproducible_builds_definition", "python_hash_seed", "pip_inspect_schema", "pypa_pylock", "numpy_runtime_and_global_state", "pytorch_reproducibility", "github_hosted_runners", "mne_sys_info", "scientific_python_spec0"],
     "40": ["executorch"],
     "41": ["lsl_time_sync", "lsl_introduction", "lsl_faq", "liblsl_postprocessing_flags", "w3c_high_resolution_time", "python_monotonic_ns", "bids_derivatives", "bids_derivative_common_data"],
-    "42": ["lsl_time_sync", "nist_privacy_framework"],
+    "42": ["openbci_cyton_format", "openbci_cyton_sdk", "openbci_cyton_specs", "openbci_eeg_setup", "openbci_gui", "openbci_privacy", "brainflow_supported_boards", "brainflow_data_format", "brainflow_license", "lsl_time_sync", "nist_privacy_framework"],
     "43": ["moabb_benchmark", "model_cards", "datasheets"],
     "44": ["model_cards", "datasheets", "nist_privacy_framework"]
   },
@@ -1472,10 +1515,52 @@
       "roadmap_use": "Representative board packet, counter, timestamp, gain, units, source-rate, and Daisy delay requirements."
     },
     {
+      "source_id": "openbci_cyton_sdk",
+      "title": "OpenBCI Cyton SDK",
+      "url": "https://docs.openbci.com/Cyton/CytonSDK/",
+      "roadmap_use": "Firmware and radio identity, board mode, sample-rate ceiling, health queries, and timestamp-command caveats."
+    },
+    {
+      "source_id": "openbci_cyton_specs",
+      "title": "OpenBCI Cyton specifications",
+      "url": "https://docs.openbci.com/Cyton/CytonSpecs/",
+      "roadmap_use": "ADS1299, battery-only power, accelerometer, USB-radio, SD, and hardware identity boundaries."
+    },
+    {
+      "source_id": "openbci_eeg_setup",
+      "title": "OpenBCI EEG setup",
+      "url": "https://docs.openbci.com/GettingStarted/Biosensing-Setups/EEGSetup/",
+      "roadmap_use": "SRB2 reference, BIAS, gain, electrode placement, saved-polarity warning, and ExG-to-EEG configuration requirements."
+    },
+    {
+      "source_id": "openbci_gui",
+      "title": "OpenBCI GUI documentation",
+      "url": "https://docs.openbci.com/Software/OpenBCISoftware/GUIDocs/",
+      "roadmap_use": "Local unfiltered recordings, settings and log surfaces, BrainFlow integration, and optional network streaming."
+    },
+    {
+      "source_id": "openbci_privacy",
+      "title": "OpenBCI privacy notice",
+      "url": "https://docs.openbci.com/FAQ/Privacy/",
+      "roadmap_use": "Vendor-service privacy scope kept separate from measured local runtime, retention, consent, and network behavior."
+    },
+    {
+      "source_id": "brainflow_supported_boards",
+      "title": "BrainFlow supported boards",
+      "url": "https://brainflow.readthedocs.io/en/stable/SupportedBoards.html",
+      "roadmap_use": "Cyton board identity plus synthetic, playback, streaming, platform, and old/new timestamp modes."
+    },
+    {
       "source_id": "brainflow_data_format",
       "title": "BrainFlow data format description",
       "url": "https://brainflow.readthedocs.io/en/stable/DataFormatDesc.html",
       "roadmap_use": "Adapter units, host-generated timestamp warning, independent preset clocks, packet IDs, and stream provenance."
+    },
+    {
+      "source_id": "brainflow_license",
+      "title": "BrainFlow MIT license",
+      "url": "https://brainflow.readthedocs.io/en/stable/License.html",
+      "roadmap_use": "Software-license permission kept separate from device-data consent, ownership, safety, and release authority."
     },
     {
       "source_id": "moabb_benchmark",
