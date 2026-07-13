@@ -44,6 +44,7 @@ and explain exactly what the result does not prove.
 | BIDS provenance decision | Loop 37 research freezes 6 export layers, 5 artifact profiles, 15 stable-field mappings, 16 NeuroDecodeKit extension fields, 20 fixtures, 24 gates, and 32 refusals | Planning research is complete while the experiment is `Not Started` and unauthorized; future NeuroToken/report payloads remain explicitly non-standard inside a BIDS-organized envelope |
 | Neural-data privacy decision | Loop 38 research freezes 5 sensitivity levels, 8 artifact classes, 10 lifecycle surfaces, 12 sensitive-field classes, 5 deletion-receipt levels, 24 fixtures, 26 gates, and 36 refusals | Planning research is complete while the experiment is `Not Started` and unauthorized; unknown copies remain unresolved, and path absence is not media sanitization |
 | Cross-machine reproducibility decision | Loop 39 research freezes 7 qualification levels, 18 environment fields, 8 output classes, 6 comparison classes, 6 future matrix cells, 28 gates, and 38 refusals | Planning research is complete while the experiment is `Not Started` and unauthorized; current Python 3.10, macOS, cross-OS, dependency-lock, and built-package claims remain unqualified |
+| Edge-runtime packaging decision | Loop 40 research freezes 7 qualification levels, 6 package layers, 4 backend profiles, 20 identity fields, 24 fixtures, 30 gates, and 40 refusals around the retained 1,130-parameter float32 reference | Planning research is complete while the experiment is `Not Started` and unauthorized; ExecuTorch/XNNPACK is a research lead only, with no selected target, export, package, inference, simulator, or hardware result |
 | Real predictive evidence | Both the same-person cross-session MEG model and the bounded S7 EEG classifier lose to no-signal controls | The current scientific result is negative, explicit, and frozen against post-hoc tuning |
 | Local execution gate | Float16 preserved exact behavior but ran `1.170x` slower on the producer; qint8 cut payload to `47.1%` but changed behavior and ran `2.785x` slower | Float32 is retained, qualification stayed unopened, and Loop 24 is parked after the full run exceeded its 60-second cap |
 | Next transport layer | Stage A is specified as 90 future schedule-by-fixture cases with 30 exact refusals under a 32 MiB cap | The decision packet is review-ready; no replay runtime, socket, board, or hardware path is authorized yet |
@@ -78,7 +79,8 @@ and explain exactly what the result does not prove.
 | Loop 37 BIDS provenance boundary | 6 export layers; 5 artifact profiles; 15 stable BIDS fields; 16 explicit NeuroDecodeKit extension fields; 20 fixture families; 4 stages; 24 gates; 32 refusals; 29 false authorization fields | planning research only; no derivative tree exists | Separates a standards-valid dataset envelope from non-standard NPZ/report payloads while refusing raw copies, local paths, target text, invented source URIs, and release overclaims |
 | Loop 38 privacy/lifecycle boundary | 5 sensitivity levels; 8 artifact classes; 10 lifecycle surfaces; 12 sensitive-field classes; 12 threats; 5 receipt levels; 24 fixtures; 4 stages; 26 gates; 36 refusals; 32 false authorization fields | planning research only; copies outside current Git metadata remain unresolved | Separates redaction, de-identification, local path receipts, repository coordination, media sanitization, consent, license, and sharing authority |
 | Loop 39 reproducibility boundary | 7 qualification levels; 18 environment fields; 8 output classes; 6 comparison classes; 6 future cells; 20 fixtures; 4 stages; 28 gates; 38 refusals; 36 false authorization fields | planning research only; no matrix cell has run | Separates semantic identity, field-specific numerical compatibility, descriptive resources, same-team repeatability, supported-matrix compatibility, independent reproduction, and scientific replication |
-| Test and release surface | 574 local unittests with 3 expected skips; 571 pytest passes plus 261 subtests; 542 dependency-light Python tests with 121 expected skips | Loop 39 research commit `efbf764` is green in push CI `29230660807` and draft PR #18 CI `29230681661` | Makes research contracts, candidate selection, source bindings, access order, tamper checks, and authorization boundaries executable on ordinary hardware |
+| Loop 40 edge-package boundary | 7 qualification levels; 6 package layers; 4 unselected backends; 20 identity fields; 8 outputs; 6 comparisons; 24 fixtures; 4 stages; 30 gates; 40 refusals; 40 false authorization fields | planning research only; no backend, target, export, package, or inference exists | Separates graph export from host normalization/state/timestamps/decoder, total deployment cost from model bytes, simulator evidence from physical devices, and packaging from science |
+| Test and release surface | 587 local unittests with 3 expected skips; 584 pytest passes plus 269 subtests; 555 dependency-light Python tests with 121 expected skips | Loop 40 research commit `55a2191` is green in push CI `29233258741` and draft PR #19 CI `29233277952` | Makes research contracts, candidate selection, source bindings, access order, tamper checks, and authorization boundaries executable on ordinary hardware |
 
 ### Real-Data Scientific Scorecard
 
@@ -96,7 +98,7 @@ engineering wins, not hidden behind synthetic accuracy.
 
 | Gate | Runtime | Peak RSS | Persistent output |
 |---|---:|---:|---:|
-| Dependency-light Python unittest run | 0.64 sec wall | 83,509,248 bytes | 542 tests with 121 expected optional skips; temporary output only |
+| Dependency-light Python unittest run | 2.63 sec wall | 99,549,184 bytes | 555 tests with 121 expected optional skips; temporary output only |
 | RW1 metadata intake roundtrip | 0.001659 sec | 21,643,264 bytes | 11,545 bytes |
 | RW2 bounded FIF quality roundtrip | 3.839168 sec | 150,749,184 bytes | 76,592 bytes |
 | RW3 contract/request invariant suite | 0.040 sec | 20,529,152 bytes | no generated payload |
@@ -112,6 +114,8 @@ engineering wins, not hidden behind synthetic accuracy.
 | Loop 38 plus roadmap invariants | 0.07 sec wall | 34,390,016 bytes | 23 tests; no fixture, scanner, deletion, protected-root scan, identity attack, history rewrite, release, model, training, device, or hardware operation |
 | Loop 24-39 planning boundary suite | 0.25 sec wall | 66,093,056 bytes | 256 tests; no generated experiment payload |
 | Loop 39 plus roadmap invariants | 0.09 sec wall | 34,930,688 bytes | 25 tests; no fixture, environment manifest, matrix job, dependency lock, package build, protected payload, model, training, independent reproducer, edge, device, or hardware operation |
+| Loop 24-40 planning boundary suite | 1.28 sec wall | 74,825,728 bytes | 269 tests; no generated experiment payload |
+| Loop 40 plus roadmap invariants | 1.10 sec wall | 42,139,648 bytes | 22 tests; zero fixtures, installs, exports, packages, inference, profiler, simulator, device, or hardware operations |
 | Loop 28 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 10 web operations, 1 GitHub metadata call, zero code/data payload bytes |
 | Loop 29 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 14 public web operations, zero protected data/model/device operations, zero downloaded payload bytes |
 | Loop 30 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 10 public web operations, zero trace/server/browser/protected-data/model/stream operations, zero downloaded payload bytes |
@@ -124,8 +128,9 @@ engineering wins, not hidden behind synthetic accuracy.
 | Loop 37 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 7 high-level public web operations including 2 official GitHub repository reads; zero protected downloads, payload/header/cache/signal/target reads, fixtures, derivative bytes, raw copies, validator/model/training runs, releases, devices, or hardware operations |
 | Loop 38 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 6 high-level public web operations and 8 official/primary page opens; zero protected reads, fixtures, scanners, deletions, identity attacks, history rewrites, models, training runs, releases, uploads, devices, or hardware operations |
 | Loop 39 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 6 high-level public web operations and 8 official/primary page opens; zero fixtures, manifests, matrix jobs, installs, lockfiles, package builds, protected reads, models, training runs, edge, stream, device, or hardware operations |
+| Loop 40 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 3 high-level web operations and 12 official/primary page opens; zero fixtures, installs, exports, packages, inference, profiler, memory-planner, delegate, simulator, app, protected-data, model, training, device, or hardware operations |
 | Loop 24 registered selection | 65.154951 sec internal | 222,248,960 bytes max worker | 262,822 bytes fixture plus output |
-| Complete optional-neuro/ML test runners | 21.80 sec unittest / 21.96 sec pytest wall | 615,596,032 bytes max | temporary test output only |
+| Complete optional-neuro/ML test runners | 23.91 sec unittest / 23.07 sec pytest wall | 614,612,992 bytes max | temporary test output only |
 
 Proof labels are deliberately narrow:
 
@@ -306,6 +311,14 @@ Read this before interpreting any number in the repository.
   and independent-reproduction evidence remains unavailable; no fixture,
   manifest, CI matrix, install, build, protected read, model, training, edge,
   stream, device, or hardware operation exists.
+- **Loop 40 planning research:** the deployment firewall separates the frozen
+  float32 graph, exported graph, numeric payload, runtime/kernels, host causal
+  state/timestamps/decoder, and named app/device envelope. ExecuTorch/XNNPACK
+  is a research lead only beside ONNX Runtime Mobile, LiteRT, and Core ML; no
+  backend or target is selected. The experiment is `Not Started` and
+  unauthorized because the relevant Loop 39 matrix has not run. No install,
+  export, conversion, package, inference, profiler, delegate, simulator, app,
+  device, or hardware operation exists.
 
 ### What The Results Actually Say
 
@@ -887,7 +900,10 @@ The original numbered development sequence has reached:
   research defines the privacy/lifecycle and deletion-claim firewall while its
   experiment remains `Not Started`; Loop 39 planning research defines the
   environment, semantic-identity, and numerical-tolerance firewall while its
-  experiment remains `Not Started`; Loops 40-44 remain `Not Started`. All 20
+  experiment remains `Not Started`; Loop 40 planning research defines the
+  edge-package, host-state, fallback, complete-cost, and target-identity
+  firewall while its experiment remains `Not Started`; Loops 41-44 remain
+  `Not Started`. All 20
   execution flags are false. Loop 24's parked result does not authorize Loop
   25, and later research cannot authorize an earlier or later experiment.
 

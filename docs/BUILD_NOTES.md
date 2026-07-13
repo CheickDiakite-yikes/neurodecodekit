@@ -3115,3 +3115,75 @@ target, score, independent reproducer, edge runtime, device, or hardware was
 accessed, so there is no cross-machine reproduction, independent replication,
 neural advantage, decoding accuracy, unseen-person generalization, real-time
 behavior, or portable-hardware result.
+
+## 2026-07-13 - Loop 40 edge-runtime packaging research boundary
+
+Closed Loop 40 planning research while leaving the packaging experiment `Not
+Started`, all 40 `authorized_now` fields false, and every target/backend
+selection, fixture, optional install, export, conversion, package, eager or
+packaged inference, profiler, memory planner, delegate, simulator, app, device,
+and hardware operation closed.
+
+The primary-source audit compares ExecuTorch/XNNPACK, ONNX Runtime Mobile,
+LiteRT, and Core ML without selecting a winner. ExecuTorch/XNNPACK is a research
+lead only because the source is PyTorch and the official stack exposes the
+needed delegate, memory-planning, profiling, and mobile-integration surfaces.
+The relevant Loop 39 matrix has not run, and no target OS, architecture, ABI,
+minimum deployment target, or application envelope exists.
+
+The machine contract freezes seven qualification levels, six package layers,
+four backend profiles, 20 identity fields, eight output classes, six comparison
+classes, 24 fixture families, four separately authorized stages, eight
+outcomes, seven claims, 30 gates, and 40 refusals. It pins the retained
+1,130-parameter/5,210-byte float32 reference while keeping normalization,
+causal state, timestamps, frame scheduling, decoder behavior, and app
+integration outside the torch-graph claim.
+
+Three high-level public web operations and 12 official or primary page opens
+informed the record. Public response bytes and web runtime/RSS are unavailable
+by tool contract. Generated experiment bytes, fixtures, installs, exports,
+packages, inference runs, profiler/memory-planner/delegate runs, protected
+reads, model/training runs, simulator/app runs, devices, and hardware remain
+zero.
+
+The nine-sheet tracker updates Dashboard `B10` and Loop 40 row 20, adds
+decision `40-R1`, risk `R45`, and prompt `Loop40-Research`, and preserves Loop
+25 as the active execution decision. The 98,147-byte workbook has SHA-256
+`31675786de3d09be758f2001e7e681c3bdfa1b2ff75378162430e32ddf3d00e5`;
+all nine sheets render, exact key ranges reload, and the formula-error scan
+matches zero cells.
+
+Artifact-tool export unintentionally rewrote the unrelated untracked workbook
+inspection sidecar. No filesystem snapshot retained its exact original bytes.
+The preserved Loop 16 workbook reproduces the sidecar's complete semantic
+content and original 321,169-byte size, but artifact-tool-generated workbook
+and sheet IDs differ, so the reconstructed SHA-256 is
+`b96bbea77ec93e59c0db7c4bcaeb4a9182f1f7cc7039d13fb223b65e0005beb6`
+rather than the original
+`5cd0ef08446c4e5feee5ce11f27eef41fae5eee8975cc77f6d401faca3b79f45`.
+The sidecar remains untracked and unstaged; the accidental Loop 40 rewrite is
+preserved outside the repository in `/tmp` for this local session.
+
+Local verification passes 269 focused Loop 24-40 planning tests in 1.28
+seconds wall with 74,825,728-byte maximum RSS; the strict Loop 40 plus roadmap
+slice passes 22 tests in 1.10 seconds wall with 42,139,648-byte maximum RSS;
+587 optional unittests pass with three expected skips in 23.91 seconds wall and
+608,894,976-byte maximum RSS; 584 pytest tests pass with three skips and 269
+subtests in 23.07 seconds wall and 614,612,992-byte maximum RSS; and 555
+dependency-light tests pass with 121 optional skips in 2.63 seconds wall and
+99,549,184-byte maximum RSS. Each full count is 13 above the Loop 39 closeout.
+
+Repository-wide Ruff lint, seven touched Python file format checks, compileall,
+28 source JSON and two TOML parses, seven CLI help surfaces, 55 registered
+commands, unauthorized Loop 40 runtime absence, 72 checked local Markdown links
+with zero missing, workbook render/reload/formula inspection, the 82-commit
+Gitleaks scan, and `git diff --check` pass. Research commit `55a2191` passes
+push CI run `29233258741` and draft PR #19 CI run `29233277952`.
+
+Engineering capability added: a machine-checkable, named-target edge-package
+decision boundary now separates graph export, host stream semantics, fallback,
+complete deployment cost, simulator integration, and physical-device claims.
+
+Scientific claim not established: no package or inference ran, so no neural
+advantage, decoding accuracy, unseen-person generalization, real-time capture-
+to-text latency, portable-hardware behavior, or scientific result exists.

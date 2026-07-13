@@ -332,6 +332,27 @@ manifest, matrix job, lockfile, install, package build/upload, protected read,
 model, training, edge runtime, stream, device, or hardware operation is
 authorized.
 
+Loop 40 planning research is complete while its edge-runtime packaging
+experiment remains `Not Started` and unauthorized:
+
+```bash
+cat docs/LOOP_40_PRIMARY_SOURCE_RESEARCH.md
+python -m json.tool registries/loop40_research_boundary.v0.json >/dev/null
+```
+
+The boundary freezes seven qualification levels, six package layers, four
+backend profiles, 20 identity fields, eight output classes, six comparison
+classes, 24 fixture families, four separately authorized stages, 30 gates, 40
+refusals, and 40 false `authorized_now` fields. The retained 1,130-parameter,
+5,210-byte float32 Loop 22/24 producer is the only plausible future reference,
+but it is blocked because the relevant Loop 39 matrix has not run and no target
+OS, architecture, ABI, or app envelope is selected. ExecuTorch/XNNPACK is a
+research lead only; ONNX Runtime Mobile, LiteRT, and Core ML remain explicit
+alternatives. No fixture, install, export, conversion, package, inference,
+profiler, memory-planner, delegate, simulator, app, device, or hardware
+operation is authorized. Packaging cannot establish neural advantage, decoding
+accuracy, end-to-end latency, or portable hardware.
+
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
 commit `c3d1f01`, before any adapter, source chunk, fixture, socket, board, or
@@ -383,7 +404,9 @@ experiment remains `Not Started`; Loop 38 planning research defines the
 privacy/lifecycle and deletion-claim firewall while its experiment remains
 `Not Started`; Loop 39 planning research defines the cross-machine environment,
 semantic-identity, and numerical-tolerance firewall while its experiment
-remains `Not Started`; Loops 40-44 remain `Not Started`. All 20
+remains `Not Started`; Loop 40 planning research defines the edge-package,
+host-state, fallback, resource, and target-identity firewall while its
+experiment remains `Not Started`; Loops 41-44 remain `Not Started`. All 20
 execution flags are false. This roadmap does not
 reopen Loop 24, authorize RW3, or permit a Loop 25-44 fixture, download, data
 read, model run, training run, stream, board, or hardware operation. A broad
@@ -490,6 +513,13 @@ authorization boundary.
   evidence remains unavailable; no fixture, manifest, job, install, build,
   protected read, model, training, edge, stream, device, or hardware operation
   exists.
+- The Loop 40 planning registry remains exact with 40 false authorization
+  fields, seven qualification levels, six package layers, four unselected
+  backend profiles, 20 identity fields, 24 fixture families, four stages, 30
+  gates, and 40 refusals. The 1,130-parameter/5,210-byte float32 reference,
+  Loop 24 hold, Loop 39 prerequisite, host-state boundary, and Loop 42 device
+  ceiling remain explicit; no install, export, package, inference, profiler,
+  simulator, app, device, or hardware operation exists.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed

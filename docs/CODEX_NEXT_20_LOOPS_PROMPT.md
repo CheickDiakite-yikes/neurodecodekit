@@ -59,6 +59,38 @@ were downloaded. Review `docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md` and
 do not select a device or authorize real-data reads, SDKs, streams, purchases,
 partner sessions, hardware, models, or training.
 
+Loops 30-38 planning research is complete while every experiment remains `Not
+Started` and unauthorized. These boundaries cover a target-free local replay
+inspector, sensor-signal attribution, fresh-person calibration, bounded data
+scaling, confidence and abstention, peripheral confounds, geometry/reference
+identity, a BIDS-organized provenance envelope, and neural-data privacy and
+lifecycle accounting. They define future controls and refusal rules only. No
+fixture, protected payload, target, model, training, stream, device, hardware,
+export, deletion, release, or generated experiment artifact is authorized.
+Review the matching `docs/LOOP_30_PRIMARY_SOURCE_RESEARCH.md` through
+`docs/LOOP_38_PRIMARY_SOURCE_RESEARCH.md` notes and their
+`registries/loop*_research_boundary.v0.json` files as planning evidence only.
+
+Loop 39 planning research is complete while the cross-machine experiment
+remains `Not Started`. It freezes seven qualification levels, 18 environment
+fields, eight output classes, six comparisons, 20 fixtures, four stages, 28
+gates, and 38 refusals. No environment matrix, dependency lock, package build,
+fixture, model run, independent reproducer, edge runtime, device, or hardware
+operation exists. Review `docs/LOOP_39_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop39_research_boundary.v0.json`; planning does not satisfy the
+future Loop 40 matrix dependency.
+
+Loop 40 planning research is complete while the edge-package experiment
+remains `Not Started` and unauthorized. The machine boundary keeps the frozen
+1,130-parameter, 5,210-byte float32 reference; separates six package layers;
+compares ExecuTorch/XNNPACK, ONNX Runtime Mobile, LiteRT, and Core ML; and
+freezes 20 identity fields, 24 fixtures, 30 gates, 40 refusals, and 40 false
+authorization fields. ExecuTorch/XNNPACK is a research lead only, not a backend
+selection. No named target, install, export, conversion, package, inference,
+profiler, simulator, app, device, hardware operation, or end-to-end latency
+result exists. Review `docs/LOOP_40_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop40_research_boundary.v0.json` as planning evidence only.
+
 The next numbered decision is **authorize Loop 25 v1 exactly, amend it again,
 or hold**. Review `docs/LOOP_25_AUTHORIZATION_PACKET_V1.md` and
 `registries/loop25_authorization_request.v1.json`. General continuation is not
@@ -93,6 +125,10 @@ decisions authorizes Loop 27 acquisition or Loop 28 transfer.
 None authorizes Loop 29 acquisition or device work; storage permission is not
 download permission, and cryogenic channel ablation is not OPM-MEG or EEG
 qualification.
+None authorizes a Loop 30-40 fixture or experiment. In particular, Loop 39
+planning does not qualify a runtime matrix, and Loop 40 planning does not
+select a backend or establish an edge-package, real-time, device, or portable-
+hardware result.
 
 Passing either future synthetic gate could establish only its registered
 interface, numerical, resource, or accounting behavior. It would not establish

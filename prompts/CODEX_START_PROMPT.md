@@ -99,7 +99,10 @@ Do not reset, revert, delete, or overwrite work already present.
   unknown copies unresolved and separates path receipts from media
   sanitization, Loop 39 separates deterministic replay, semantic/numerical
   compatibility, reproduction, independent reproduction, and replication,
-  and Loops 40-44 remain `Not Started`; all 20
+  Loop 40 separates the frozen graph from host state/timestamps, fallback,
+  complete package cost, named-target qualification, and physical-device
+  claims while its experiment remains `Not Started`, and Loops 41-44 remain
+  `Not Started`; all 20
   execution flags remain false.
 - Loop 26's planning boundary recommends a 2,908-parameter causal candidate, a
   2,884-parameter linear comparator, six controls, and exact enumeration of all
@@ -216,6 +219,13 @@ Do not reset, revert, delete, or overwrite work already present.
   No fixture, environment manifest, matrix job, dependency lock, package
   build, protected payload, model, training run, independent reproducer, edge
   runtime, device, or hardware operation is authorized.
+- Loop 40 planning research is complete while the edge-runtime packaging
+  experiment remains `Not Started` and unauthorized. The boundary freezes 7
+  qualification levels, 6 package layers, 4 unselected backend profiles, 20
+  identity fields, 24 fixtures, 4 stages, 30 gates, 40 refusals, and 40 false
+  authorization fields. ExecuTorch/XNNPACK is a research lead only; Loop 39
+  has not qualified the reference, and no fixture, install, export, package,
+  inference, profiler, simulator, app, device, or hardware operation exists.
 - No real recording quality, neural advantage, unseen-person generalization,
   useful EEG decoder, real-time decoding, portable-hardware, arbitrary-thought,
   or clinical result has been demonstrated.

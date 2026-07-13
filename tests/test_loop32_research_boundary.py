@@ -297,7 +297,7 @@ class Loop32ResearchBoundaryTests(unittest.TestCase):
             self.assertIn(text, self.research)
 
     def test_machine_roadmap_and_public_status_are_synchronized(self):
-        self.assertEqual(self.roadmap["schema_version"], "0.16.0")
+        self.assertEqual(self.roadmap["schema_version"], "0.17.0")
         boundary = self.roadmap["current_boundary"]
         self.assertTrue(boundary["loop32_research_packet_prepared"])
         self.assertEqual(boundary["loop32_calibration_mode_count"], 4)

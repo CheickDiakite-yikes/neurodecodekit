@@ -157,7 +157,13 @@ planning research freezes seven qualification levels, 18 environment identity
 fields, eight output classes, six comparison classes, six future matrix cells,
 20 fixture families, four stages, 28 gates, 38 refusals, and 36 false
 authorization fields. Its experiment remains `Not Started`; no matrix cell or
-cross-machine reproduction has run. Loops 40-44 remain `Not Started`. All 20
+cross-machine reproduction has run. Loop 40 planning research freezes seven
+qualification levels, six package layers, four unselected backend profiles, 20
+identity fields, 24 fixtures, four stages, 30 gates, 40 refusals, and 40 false
+authorization fields around the retained float32 reference. Its experiment
+remains `Not Started`; no target, backend, install, export, package, inference,
+simulator, device, or hardware operation exists. Loops 41-44 remain `Not
+Started`. All 20
 `execution_authorized` flags are false. Loop 25's exact decision packet is
 ready for review, while Loops 26-33 have no
 preregistration or authorization packet. Roadmap approval, general
@@ -274,3 +280,9 @@ from the other.
   claim cross-machine reproduction. Deterministic replay, exact semantics,
   numerical compatibility, reproduction, independent reproduction, and
   replication remain distinct claims.
+- Keep Loop 40 planning-only. Its backend profiles, package layers, identity
+  fields, host-state boundary, fixture families, gates, and refusals are not
+  permission to select a target, install a runtime, export or convert a model,
+  generate a package, run inference/profiling/delegation, launch a simulator or
+  app, or operate a device. ExecuTorch/XNNPACK is a research lead only;
+  desktop packaging is not portable hardware and packaging is not science.
