@@ -284,31 +284,19 @@ class CausalPreprocessingContractTests(unittest.TestCase):
         self.assertEqual(len({row["id"] for row in sources}), 12)
         self.assertTrue(all(row["url"].startswith("https://") for row in sources))
 
-    def test_v0_snapshot_remains_unauthorized_while_v1_decision_enables_runtime(self):
+    def test_no_runtime_fixture_cli_or_dependency_exists_before_authorization(self):
         planned = self.contract["planned_implementation"]
         self.assertFalse(planned["files_exist_now"])
         self.assertFalse(planned["cli_exists_now"])
         self.assertEqual(planned["base_dependencies_added"], [])
         self.assertEqual(planned["optional_dependencies_added"], [])
-        decision = json.loads(
-            (REPO_ROOT / "registries/loop25_authorization_decision.v1.json").read_text(
-                encoding="utf-8"
-            )
-        )
-        self.assertEqual(
-            decision["authorized_contract"]["contract_id"],
-            "loop25-causal-preprocessing-v1",
-        )
-        self.assertTrue(
-            decision["authorization"]["loop25_implementation_authorized_now"]
-        )
         for relative in planned["files"]:
-            self.assertTrue((REPO_ROOT / relative).exists(), relative)
+            self.assertFalse((REPO_ROOT / relative).exists(), relative)
         cli_text = (REPO_ROOT / "src" / "neurodecodekit" / "cli.py").read_text(
             encoding="utf-8"
         )
         for command in planned["cli_commands"]:
-            self.assertIn(command, cli_text)
+            self.assertNotIn(command, cli_text)
         project = tomllib.loads((REPO_ROOT / "pyproject.toml").read_text(encoding="utf-8"))
         self.assertEqual(project["project"]["dependencies"], [])
         self.assertIn("scipy>=1.11", project["project"]["optional-dependencies"]["neuro"])

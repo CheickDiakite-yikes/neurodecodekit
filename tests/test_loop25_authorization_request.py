@@ -14,6 +14,13 @@ LOOP24_DECISION_PATH = (
 RW3_REQUEST_PATH = (
     REPO_ROOT / "registries" / "rw3_stage_a_authorization_request.v0.json"
 )
+INVARIANT_TEST_SNAPSHOT_PATH = (
+    REPO_ROOT
+    / "tests"
+    / "historical_snapshots"
+    / "loop25"
+    / "test_causal_preprocessing_contract.py.snapshot"
+)
 
 
 def sha256(path):
@@ -85,7 +92,7 @@ class Loop25AuthorizationRequestTests(unittest.TestCase):
             ),
             (
                 "invariant_test",
-                REPO_ROOT / "tests" / "test_causal_preprocessing_contract.py",
+                INVARIANT_TEST_SNAPSHOT_PATH,
             ),
         )
         for prefix, path in bindings:
@@ -171,7 +178,22 @@ class Loop25AuthorizationRequestTests(unittest.TestCase):
         self.assertIn("S21 session-1", real)
         self.assertIn("S21 session-2", real)
         self.assertIn("S7 EEG", real)
-        self.assertTrue(all(not (REPO_ROOT / path).exists() for path in self.request["registered_scope"]["planned_files"]))
+        self.assertFalse(self.request["authorized_now"])
+        decision = json.loads(
+            (REPO_ROOT / "registries/loop25_authorization_decision.v1.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertEqual(
+            decision["authorization_request"]["request_path"],
+            "registries/loop25_authorization_request.v1.json",
+        )
+        self.assertTrue(
+            all(
+                (REPO_ROOT / path).exists()
+                for path in self.request["registered_scope"]["planned_files"]
+            )
+        )
 
     def test_loop24_and_rw3_history_cannot_authorize_loop25(self):
         loop24_flags = self.loop24["authorization"]

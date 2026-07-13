@@ -1248,7 +1248,86 @@ def _cmd_inspect_local_precision_runtime_report(args: argparse.Namespace) -> int
     return 0
 
 
+def _cmd_make_causal_preprocessing_fixture(args: argparse.Namespace) -> int:
+    _set_loop25_thread_environment()
+    from neurodecodekit.training.causal_preprocessing_fixture import (
+        prepare_causal_preprocessing_fixture,
+        summarize_causal_preprocessing_manifest,
+    )
+
+    manifest = prepare_causal_preprocessing_fixture(
+        args.out_dir,
+        static_filter_bundle_path=args.static_filter_bundle,
+    )
+    print(json.dumps(summarize_causal_preprocessing_manifest(manifest), indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_inspect_causal_preprocessing_fixture(args: argparse.Namespace) -> int:
+    from neurodecodekit.training.causal_preprocessing_fixture import (
+        load_causal_preprocessing_manifest,
+        summarize_causal_preprocessing_manifest,
+    )
+
+    manifest = load_causal_preprocessing_manifest(args.manifest)
+    print(json.dumps(summarize_causal_preprocessing_manifest(manifest), indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_causal_preprocessing_gate(args: argparse.Namespace) -> int:
+    _set_loop25_thread_environment()
+    from neurodecodekit.experiments.causal_preprocessing_gate import (
+        inspect_causal_preprocessing_report,
+        run_causal_preprocessing_gate,
+        run_static_causal_preprocessing_gate,
+    )
+
+    if args.static_only:
+        if args.fixture_manifest or args.filter_bundle:
+            raise ValueError("--static-only cannot be combined with fixture or filter inputs")
+        report = run_static_causal_preprocessing_gate(out_dir=args.out_dir)
+        report_path = Path(args.out_dir) / "static_gate.json"
+    else:
+        if not args.fixture_manifest or not args.filter_bundle:
+            raise ValueError(
+                "full gate requires --fixture-manifest and --filter-bundle; "
+                "use --static-only for the prerequisite design gate"
+            )
+        report = run_causal_preprocessing_gate(
+            fixture_manifest_path=args.fixture_manifest,
+            filter_bundle_path=args.filter_bundle,
+            out_dir=args.out_dir,
+        )
+        report_path = Path(args.out_dir) / "gate.json"
+    summary = inspect_causal_preprocessing_report(report_path)
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0 if report["gate_passed"] else 1
+
+
+def _cmd_inspect_causal_preprocessing_report(args: argparse.Namespace) -> int:
+    from neurodecodekit.experiments.causal_preprocessing_gate import (
+        inspect_causal_preprocessing_report,
+    )
+
+    summary = inspect_causal_preprocessing_report(args.report)
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0
+
+
 def _set_loop24_thread_environment() -> None:
+    import os
+
+    for name in (
+        "OMP_NUM_THREADS",
+        "OPENBLAS_NUM_THREADS",
+        "MKL_NUM_THREADS",
+        "NUMEXPR_NUM_THREADS",
+        "VECLIB_MAXIMUM_THREADS",
+    ):
+        os.environ[name] = "1"
+
+
+def _set_loop25_thread_environment() -> None:
     import os
 
     for name in (
@@ -3309,6 +3388,88 @@ def build_parser() -> argparse.ArgumentParser:
     )
     p.add_argument("--report", required=True, help="Path to a saved Loop 24 gate.json.")
     p.set_defaults(func=_cmd_inspect_local_precision_runtime_report)
+
+    p = sub.add_parser(
+        "make-causal-preprocessing-fixture",
+        help=(
+            "Create the registered target-free Loop 25 development and physically "
+            "separate qualification fixture after a passing static filter gate."
+        ),
+        description=(
+            "Generate exact synthetic seeds 2501 and 2502 without real data, targets, "
+            "labels, text, predictions, models, or training. The combined fixture is "
+            "capped at 4 MiB and may be written only under an authorized Loop 25 root."
+        ),
+    )
+    p.add_argument(
+        "--static-filter-bundle",
+        required=True,
+        help="Exact filter_bundle.json produced by a passing Loop 25 static gate.",
+    )
+    p.add_argument(
+        "--out-dir",
+        required=True,
+        help=(
+            "New nested directory under cache/loop25, outputs/loop25, or "
+            ".codex_work/loop25."
+        ),
+    )
+    p.set_defaults(func=_cmd_make_causal_preprocessing_fixture)
+
+    p = sub.add_parser(
+        "inspect-causal-preprocessing-fixture",
+        help=(
+            "Validate Loop 25 fixture identities, hashes, ZIP members, splits, and caps "
+            "without opening signal arrays."
+        ),
+    )
+    p.add_argument("--manifest", required=True, help="Registered Loop 25 manifest JSON.")
+    p.set_defaults(func=_cmd_inspect_causal_preprocessing_fixture)
+
+    p = sub.add_parser(
+        "causal-preprocessing-gate",
+        help="Run the authorized target-free Loop 25 static or complete mechanics gate.",
+        description=(
+            "Use --static-only exactly once to design and audit the registered filter. "
+            "After that pass, omit --static-only and supply the bound fixture manifest "
+            "and saved filter bundle. The complete gate opens seed 2502 only after seed "
+            "2501 passes and its report is frozen. One CPU thread and the 8 MiB total "
+            "artifact cap are enforced."
+        ),
+    )
+    p.add_argument(
+        "--static-only",
+        action="store_true",
+        help="Run only the pre-fixture coefficient, pole, response, alias, and transient gate.",
+    )
+    p.add_argument(
+        "--fixture-manifest",
+        help="Registered target-free fixture manifest; required for the complete gate.",
+    )
+    p.add_argument(
+        "--filter-bundle",
+        help="Passing static filter_bundle.json; required for the complete gate.",
+    )
+    p.add_argument(
+        "--out-dir",
+        required=True,
+        help=(
+            "New nested directory under cache/loop25, outputs/loop25, or "
+            ".codex_work/loop25."
+        ),
+    )
+    p.set_defaults(func=_cmd_causal_preprocessing_gate)
+
+    p = sub.add_parser(
+        "inspect-causal-preprocessing-report",
+        help="Strictly validate a Loop 25 report, audit hashes, counters, and resource caps.",
+    )
+    p.add_argument(
+        "--report",
+        required=True,
+        help="Path to static_gate.json or gate.json.",
+    )
+    p.set_defaults(func=_cmd_inspect_causal_preprocessing_report)
 
     p = sub.add_parser(
         "extract-windows",

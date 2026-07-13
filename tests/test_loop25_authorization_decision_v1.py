@@ -166,17 +166,22 @@ class Loop25AuthorizationDecisionV1Tests(unittest.TestCase):
             else:
                 self.assertEqual(value, 0, key)
 
-    def test_no_registered_implementation_or_cli_exists_at_authorization(self):
+    def test_authorization_record_froze_zero_work_before_current_implementation(self):
         planned = self.contract["planned_implementation"]
         self.assertFalse(planned["files_exist_now"])
         self.assertFalse(planned["cli_exists_now"])
+        measurements = self.decision["authorization_only_measurements"]
+        self.assertEqual(measurements["filter_coefficients_generated"], 0)
+        self.assertEqual(measurements["fixture_items_generated"], 0)
+        self.assertEqual(measurements["partition_arrays_opened"], 0)
+        self.assertEqual(measurements["numeric_preprocessing_runs"], 0)
         for relative in planned["files"]:
-            self.assertFalse((REPO_ROOT / relative).exists(), relative)
+            self.assertTrue((REPO_ROOT / relative).exists(), relative)
         cli_source = (REPO_ROOT / "src" / "neurodecodekit" / "cli.py").read_text(
             encoding="utf-8"
         )
         for command in planned["cli_commands"]:
-            self.assertNotIn(command, cli_source)
+            self.assertIn(command, cli_source)
 
     def test_human_decision_matches_machine_scope_and_claim_ceiling(self):
         for term in [

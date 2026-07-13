@@ -12,7 +12,13 @@ AMENDMENT_PATH = (
     REPO_ROOT / "docs" / "LOOP_25_CAUSAL_PREPROCESSING_AMENDMENT_1.md"
 )
 AUDIT_PATH = REPO_ROOT / "docs" / "LOOP_25_ANTI_ALIAS_AUDIT.md"
-AMENDMENT_TEST_PATH = REPO_ROOT / "tests" / "test_causal_preprocessing_amendment.py"
+AMENDMENT_TEST_PATH = (
+    REPO_ROOT
+    / "tests"
+    / "historical_snapshots"
+    / "loop25"
+    / "test_causal_preprocessing_amendment.py.snapshot"
+)
 V0_CONTRACT_PATH = REPO_ROOT / "registries" / "causal_preprocessing_contract.v0.json"
 V0_REQUEST_PATH = REPO_ROOT / "registries" / "loop25_authorization_request.v0.json"
 
@@ -233,14 +239,26 @@ class Loop25AuthorizationRequestV1Tests(unittest.TestCase):
         self.assertIn("end-to-end latency", claims)
         self.assertIn("clinical utility", claims)
 
-    def test_no_runtime_fixture_cli_or_model_surface_exists(self):
+    def test_request_remains_immutable_while_separate_decision_enables_runtime(self):
+        self.assertFalse(self.request["authorized_now"])
+        decision = json.loads(
+            (REPO_ROOT / "registries/loop25_authorization_decision.v1.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertTrue(
+            decision["authorization_request"]["request_remains_immutable_and_unauthorized"]
+        )
+        self.assertTrue(
+            decision["authorization"]["loop25_implementation_authorized_now"]
+        )
         for relative in self.request["registered_scope"]["planned_files"]:
-            self.assertFalse((REPO_ROOT / relative).exists(), relative)
+            self.assertTrue((REPO_ROOT / relative).exists(), relative)
         cli_text = (REPO_ROOT / "src" / "neurodecodekit" / "cli.py").read_text(
             encoding="utf-8"
         )
         for command in self.request["registered_scope"]["planned_cli_commands"]:
-            self.assertNotIn(command, cli_text)
+            self.assertIn(command, cli_text)
 
 
 if __name__ == "__main__":
