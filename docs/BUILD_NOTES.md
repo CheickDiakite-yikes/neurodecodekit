@@ -3177,8 +3177,8 @@ Repository-wide Ruff lint, seven touched Python file format checks, compileall,
 28 source JSON and two TOML parses, seven CLI help surfaces, 55 registered
 commands, unauthorized Loop 40 runtime absence, 72 checked local Markdown links
 with zero missing, workbook render/reload/formula inspection, the 82-commit
-Gitleaks scan, and `git diff --check` pass. Push, draft PR, and remote CI are
-pending.
+Gitleaks scan, and `git diff --check` pass. Research commit `55a2191` passes
+push CI run `29233258741` and draft PR #19 CI run `29233277952`.
 
 Engineering capability added: a machine-checkable, named-target edge-package
 decision boundary now separates graph export, host stream semantics, fallback,

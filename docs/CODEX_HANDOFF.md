@@ -388,8 +388,9 @@ all nine sheets render, the export reloads with exact key ranges, and the
 formula scan has zero matches. Ruff, touched-file format checks, compileall, 28
 source JSON and two TOML parses, 72 checked local Markdown links with zero
 missing, seven CLI help surfaces, 55 registered commands, unauthorized Loop 40
-runtime absence, the 82-commit Gitleaks scan, and `git diff --check` pass. Push,
-draft PR, and remote CI are pending.
+runtime absence, the 82-commit Gitleaks scan, and `git diff --check` pass.
+Research commit `55a2191` passes push CI run `29233258741` and draft PR #19 CI
+run `29233277952`.
 
 ## The north star
 
