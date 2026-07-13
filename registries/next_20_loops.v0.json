@@ -1,6 +1,6 @@
 {
   "schema_name": "neurodecodekit.next_twenty_loops_roadmap",
-  "schema_version": "0.13.0",
+  "schema_version": "0.14.0",
   "roadmap_id": "loops-25-44",
   "prepared_at": "2026-07-12",
   "status": "planning_only_not_execution_authorization",
@@ -140,6 +140,22 @@
     "loop36_authorization_request_prepared": false,
     "loop36_execution_authorized": false,
     "loop36_dependency_loop29_execution_satisfied": false,
+    "loop37_research_packet_prepared": true,
+    "loop37_export_layer_count": 6,
+    "loop37_artifact_profile_count": 5,
+    "loop37_standard_field_mapping_count": 15,
+    "loop37_ndk_extension_field_count": 16,
+    "loop37_future_fixture_family_count": 20,
+    "loop37_future_requirement_count": 24,
+    "loop37_future_refusal_count": 32,
+    "loop37_tracked_neural_or_model_binary_candidate_files": 0,
+    "loop37_maximum_future_stage_b_claim": "validator_assessed_standard_envelope_with_nonstandard_payloads",
+    "loop37_preregistration_prepared": false,
+    "loop37_authorization_request_prepared": false,
+    "loop37_execution_authorized": false,
+    "loop37_bids_validator_authorized": false,
+    "loop37_public_release_authorized": false,
+    "loop37_dependency_loop36_execution_satisfied": false,
     "user_preferred_incremental_storage_bytes": 5000000000,
     "user_absolute_incremental_storage_bytes": 10000000000,
     "selected_s20_plus_s25_future_bundle_bytes": 1106030247,
@@ -771,30 +787,45 @@
       "effort": "M",
       "status": "Not Started",
       "execution_authorized": false,
-      "proof_posture": "planned_not_authorized",
+      "proof_posture": "planning_research_complete_experiment_not_started",
+      "research_status": "planning_research_complete",
+      "primary_source_research": "docs/LOOP_37_PRIMARY_SOURCE_RESEARCH.md",
+      "research_boundary_registry": "registries/loop37_research_boundary.v0.json",
+      "preregistration_prepared": false,
+      "authorization_request_prepared": false,
       "core_question": "Can caches, tokens, reports, and split metadata be exported as inspectable derivatives without copying raw data or losing source identity?",
       "why_high_value": "A standards-aware derivative makes external reproduction easier while preserving the local-first raw-data boundary.",
-      "build_deliverable": "BIDS-derivative export plan, dataset description, GeneratedBy and SourceDatasets provenance, sidecars, path validator, and no-raw-copy audit.",
-      "research_deliverable": "BIDS derivative and electrophysiology mapping note identifying standard fields, extension fields, and unsupported claims.",
-      "data_scope": "Tiny synthetic caches and reports only for the interface proof; no real raw file is copied, packaged, or redistributed.",
+      "build_deliverable": "Future target-free synthetic BIDS-organized envelope with dataset_description, README, standard file metadata, explicitly non-standard NeuroDecodeKit provenance, collision-safe paths, full hashes, and a no-raw-copy audit.",
+      "research_deliverable": "Completed BIDS 1.11.1 derivative, dataset-description, URI, naming, validator, non-standard payload, privacy, license, and provenance mapping with an executable planning registry.",
+      "data_scope": "Planning research only. Future Stage A is target-free synthetic metadata/refusal fixtures; Stage B may add one bounded synthetic payload and pinned optional validator. Real-derived metadata, raw data, targets, releases, and uploads remain closed.",
       "controls": [
-        "Source, configuration, split, payload, and code hashes retained.",
-        "Path traversal, subject collision, overwrite, and raw-copy refusals.",
-        "Roundtrip validation from derivative metadata back to source artifact identity."
+        "BIDS 1.11.1 standard fields remain separate from versioned non-standard NeuroDecodeKit fields and every file declares its standardization status.",
+        "SourceDatasets and file-level Sources are truthful resolvable URIs or explicitly unavailable; absolute paths, usernames, traversal, and invented metadata refuse.",
+        "Path, case-fold, subject/session/item, overwrite, symlink, hardlink, inode, raw-filename, raw-byte-duplicate, unknown-payload, target-text, privacy, and license refusals are exact.",
+        "Source, split, configuration, payload, code, manifest, and bundle hashes plus input/output/duplicate/raw-copy bytes and access counters are complete.",
+        "Validator success cannot upgrade non-standard payloads, privacy, license, cross-machine reproducibility, or scientific claims."
       ],
       "primary_metrics": [
-        "required and unavailable field counts",
-        "source-to-derivative hash coverage",
-        "roundtrip identity",
-        "input, output, and duplicated bytes",
-        "raw-data copy count"
+        "standard, non-standard, required, propagated, omitted, and unavailable field counts",
+        "BIDS URI and DatasetLinks resolution plus source-to-derivative hash coverage",
+        "path, subject/session/item, manifest, and two-clean-root roundtrip identity",
+        "input, output, duplicate, raw-copy, file-count, and generated-tree bytes",
+        "validator errors/warnings/ignored files, runtime, peak RSS, threads, workers, network, and complete access counters"
       ],
-      "acceptance_boundary": "Pass as a synthetic derivative interface only when provenance is complete, extension fields are namespaced, no raw payload is copied, and all generated files remain under cap.",
-      "stop_rule": "Do not claim BIDS compliance for unsupported fields or invent source metadata; export an explicit warning or refuse.",
+      "export_layer_count": 6,
+      "artifact_profile_count": 5,
+      "standard_field_mapping_count": 15,
+      "ndk_extension_field_count": 16,
+      "future_fixture_family_count": 20,
+      "future_requirement_count": 24,
+      "future_refusal_count": 32,
+      "maximum_future_stage_b_claim": "validator_assessed_standard_envelope_with_nonstandard_payloads",
+      "acceptance_boundary": "A future Stage A passes only when all 24 gates and 32 refusals are exact, every path and identity roundtrips, standard and non-standard fields remain separate, targets and local paths are absent, every allowlisted output is hashed, raw-copy counts are zero, and the tree stays under cap. Stage B can establish only a validator-assessed standard envelope with explicitly non-standard payloads.",
+      "stop_rule": "Publish invalid, unavailable, non-standard, or blocked on any source URI, metadata validity, path, collision, raw-copy, target, hash, privacy, license, validator, resource, access, or claim failure. Never invent metadata, auto-repair, weaken gates, hide issues, or call a custom payload BIDS-compliant.",
       "depends_on": [36],
-      "external_gates": [],
-      "authorization_boundary": "Planning only. Export implementation and generated fixtures require a separate Loop 37 authorization.",
-      "resource_cap": "One thread, one worker, dependency-free metadata core, 16 MiB generated derivative tree, and zero real-data bytes."
+      "external_gates": ["separate_stage_a_synthetic_metadata_authorization", "separate_stage_b_payload_and_validator_authorization", "loop38_privacy_license_lifecycle_gate_before_real_or_public_export", "loop39_before_cross_machine_reproducibility_claim", "loop44_before_public_release_claim"],
+      "authorization_boundary": "Planning research only and unauthorized. No fixture, exporter, derivative tree, validator install/run, real header/cache/signal/target read, payload hash, subject mapping, raw copy, external write, release/upload, network, model, training, stream, device, or hardware operation is authorized. Every stage needs a separate Loop 37 decision.",
+      "resource_cap": "Current research used one thread/worker, seven public web operations including two official GitHub reads, zero protected or generated payload bytes, and an 8 MiB planning cap. Future Stage A remains one thread/worker, 120 seconds, 1 GiB RSS, 16 MiB, 128 files, zero network/download bytes, zero raw-copy bytes, and no base dependency."
     },
     {
       "loop_id": 38,
@@ -1048,7 +1079,7 @@
     "34": ["selective_prediction", "conformal_risk_control", "conformal_beyond_exchangeability", "neural_network_calibration", "calibration_measurement", "generalized_risk_coverage"],
     "35": ["brain2qwerty_v1", "brain2qwerty_v2", "eye_movement_decoding_confounds", "eeg_bci_artifacts", "meg_movement_muscle_artifacts", "motion_muscle_phantom_validation"],
     "36": ["bids_coordinate_systems", "bids_meg", "bids_eeg", "bids_units", "mne_coordinate_frames", "mne_transform", "mne_digmontage", "mne_eeg_reference", "mne_bad_interpolation"],
-    "37": ["bids_derivatives", "datasheets"],
+    "37": ["bids_derivatives", "bids_dataset_description", "bids_derivative_common_data", "bids_common_principles", "bids_extensions", "bids_validator", "bids_examples", "datasheets"],
     "38": ["eeg_identity_privacy", "nist_privacy_framework"],
     "39": ["moabb_benchmark", "model_cards"],
     "40": ["executorch"],
@@ -1195,6 +1226,42 @@
       "title": "BIDS Derivatives specification",
       "url": "https://bids-specification.readthedocs.io/en/stable/derivatives/introduction.html",
       "roadmap_use": "SourceDatasets, GeneratedBy, filenames, sidecars, and provenance export."
+    },
+    {
+      "source_id": "bids_dataset_description",
+      "title": "BIDS Dataset Description",
+      "url": "https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/dataset-description.html",
+      "roadmap_use": "Required derivative dataset envelope, GeneratedBy, SourceDatasets, DatasetLinks, README, license, and pipeline identity."
+    },
+    {
+      "source_id": "bids_derivative_common_data",
+      "title": "BIDS Common Derivative Data And Metadata",
+      "url": "https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html",
+      "roadmap_use": "File-level Description and Sources, BIDS URIs, desc labels, spatial references, metadata propagation, and non-standard output boundaries."
+    },
+    {
+      "source_id": "bids_common_principles",
+      "title": "BIDS Common Principles",
+      "url": "https://bids-specification.readthedocs.io/en/stable/common-principles.html",
+      "roadmap_use": "Derivative storage, additional/non-compliant files, path portability, BIDS URI resolution, source sharing constraints, and metadata availability rules."
+    },
+    {
+      "source_id": "bids_extensions",
+      "title": "BIDS Extension Proposals",
+      "url": "https://bids-specification.readthedocs.io/en/stable/extensions.html",
+      "roadmap_use": "Boundary between stable BIDS 1.11.1 fields and proposed provenance or data-type extensions."
+    },
+    {
+      "source_id": "bids_validator",
+      "title": "BIDS Validator",
+      "url": "https://github.com/bids-standard/bids-validator",
+      "roadmap_use": "Optional pinned offline standards-envelope validation, complete issue reporting, and explicit limits of validator success."
+    },
+    {
+      "source_id": "bids_examples",
+      "title": "BIDS Examples",
+      "url": "https://github.com/bids-standard/bids-examples",
+      "roadmap_use": "Lightweight official example trees for future synthetic validator fixtures without real neural payloads."
     },
     {
       "source_id": "opm_speech_tracking",

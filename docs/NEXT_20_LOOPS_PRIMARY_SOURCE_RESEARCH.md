@@ -367,7 +367,8 @@ Started`; Loop 33 planning research is complete while its experiment remains
 remains `Not Started` and confidence is unavailable; Loop 35 confound research
 is complete while its experiment remains `Not Started`; Loop 36 geometry/
 reference research is complete while its experiment remains `Not Started`;
-Loops 37-44 remain `Not Started`.
+Loop 37 BIDS derivative/provenance research is complete while its experiment
+remains `Not Started`; Loops 38-44 remain `Not Started`.
 
 The detailed source trace and design correction live in
 `docs/LOOP_25_ANTI_ALIAS_AUDIT.md`. This addendum does not authorize execution
@@ -774,3 +775,38 @@ rereference, interpolation, model, training, S20/S25, stream, device, or
 hardware operations. Exact sources and boundaries are in
 `docs/LOOP_36_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop36_research_boundary.v0.json`.
+
+## 2026-07-12 Loop 37 Research Addendum
+
+Loop 37 planning research is complete while its BIDS derivative/provenance
+experiment remains `Not Started` and unauthorized. Stable BIDS 1.11.1 requires
+the derivative dataset envelope to identify the dataset, standard version, and
+generating pipeline. File-level direct inputs use BIDS URIs resolved through
+the current dataset or `DatasetLinks`. Relative source paths and `RawSources`
+are deprecated, and required source metadata propagates only while still valid.
+
+NeuroToken NPZ caches, NeuroDecodeKit split reports, report cards, and manifests
+have no stable BIDS derivative suffix. BIDS permits additional/non-compliant
+files, but a standards-valid envelope cannot make those payloads standard. The
+future ceiling is therefore a validator-assessed BIDS envelope with explicitly
+non-standard NeuroDecodeKit payloads. Validator success cannot establish
+privacy, license, hash truth, cross-machine reproducibility, scientific
+provenance, or decoding accuracy.
+
+The machine boundary freezes six export layers, five artifact profiles, 15
+stable-field mappings, 16 explicit NeuroDecodeKit extension fields, 20 future
+fixture families, four separately authorized stages, eight outcomes, six
+claims, 24 gates, 32 refusals, and 29 false authorization fields. Absolute
+paths, usernames, traversal, case/identity collisions, overwrite, symlinks,
+hardlinks, shared inodes, raw filenames/content copies, unknown payloads,
+target/free-text leakage, incompatible licenses, incomplete privacy evidence,
+and overclaiming all refuse.
+
+The current tracked inventory contains zero neural/model binary candidate files
+and zero such payload bytes. No artifact payload was opened. This research used
+seven high-level public web operations, including two official GitHub
+repository reads, and zero fixture, exporter, derivative tree, validator,
+protected payload, raw copy, release, upload, model, training, stream, device,
+or hardware operations. Exact sources and boundaries are in
+`docs/LOOP_37_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop37_research_boundary.v0.json`.

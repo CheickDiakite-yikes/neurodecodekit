@@ -143,7 +143,12 @@ than absolute brain origin. Loop 36 planning research freezes six
 representation layers, five modality profiles, 24 channel fields, 12 operation
 classes, 16 fixtures, 22 gates, 30 refusals, and 29 false authorization fields.
 Its experiment remains `Not Started`; declared metadata compatibility is the
-maximum future real-header claim. Loops 37-44 remain `Not Started`. All 20
+maximum future real-header claim. Loop 37 planning research freezes six export
+layers, five artifact profiles, 15 stable BIDS mappings, 16 NeuroDecodeKit
+extension fields, 20 fixtures, four stages, 24 gates, 32 refusals, and 29 false
+authorization fields. Its experiment remains `Not Started` and unauthorized;
+custom payloads remain explicitly non-standard. Loops 38-44 remain `Not
+Started`. All 20
 `execution_authorized` flags are false. Loop 25's exact decision packet is
 ready for review, while Loops 26-33 have no
 preregistration or authorization packet. Roadmap approval, general
@@ -240,3 +245,9 @@ from the other.
   read signals, transform coordinates, scale signals, rereference, compensate,
   interpolate, fit a mapping, run a model, or claim device equivalence. Unknown
   metadata remains unavailable rather than guessed.
+- Keep Loop 37 planning-only. Its BIDS field map, artifact profiles, fixture
+  families, path/identity rules, no-raw-copy audit, validator ceiling, gates,
+  and refusals are not permission to generate a fixture or derivative tree,
+  install/run a validator, inspect protected payloads, copy data, map real
+  subject identifiers, release/upload an artifact, or call a non-standard NPZ
+  or report payload BIDS-compliant.

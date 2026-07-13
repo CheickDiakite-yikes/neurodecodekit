@@ -275,6 +275,23 @@ remain unavailable. No fixture, header/signal read, transform, unit conversion,
 rereference, interpolation, model, training, device, or hardware operation is
 authorized.
 
+Loop 37 planning research is complete while its BIDS derivative/provenance
+experiment remains `Not Started` and unauthorized:
+
+```bash
+cat docs/LOOP_37_PRIMARY_SOURCE_RESEARCH.md
+python -m json.tool registries/loop37_research_boundary.v0.json >/dev/null
+```
+
+The boundary freezes six export layers, five artifact profiles, 15 stable BIDS
+field mappings, 16 explicit NeuroDecodeKit extension fields, 20 fixture
+families, four separately authorized stages, 24 gates, 32 refusals, and 29
+false `authorized_now` fields. NeuroToken NPZ caches and report artifacts
+remain non-standard payloads inside any future BIDS-organized envelope. No
+fixture, exporter, derivative tree, validator install/run, protected payload,
+raw copy, release/upload, model, training, device, or hardware operation is
+authorized.
+
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
 commit `c3d1f01`, before any adapter, source chunk, fixture, socket, board, or
@@ -320,8 +337,9 @@ remains `Not Started`; Loop 34 planning research defines a three-way confidence
 firewall while its experiment remains `Not Started`; Loop 35 planning research
 defines a staged peripheral-confound firewall while its experiment remains
 `Not Started`; Loop 36 planning research defines the geometry/reference
-identity firewall while its experiment remains `Not Started`; Loops 37-44
-remain `Not Started`. All 20
+identity firewall while its experiment remains `Not Started`; Loop 37 planning
+research defines the BIDS-envelope/non-standard-payload firewall while its
+experiment remains `Not Started`; Loops 38-44 remain `Not Started`. All 20
 execution flags are false. This roadmap does not
 reopen Loop 24, authorize RW3, or permit a Loop 25-44 fixture, download, data
 read, model run, training run, stream, board, or hardware operation. A broad
@@ -407,6 +425,12 @@ authorization boundary.
   record, 12 operation classes, 16 fixture families, 22 gates, and 30 refusals.
   Metadata compatibility remains separate from signal transforms, model
   transfer, device equivalence, and scientific claims.
+- The Loop 37 planning registry remains exact with 29 false authorization
+  fields, six export layers, five artifact profiles, 15 standard-field
+  mappings, 16 NeuroDecodeKit extension fields, 20 fixture families, four
+  stages, 24 gates, and 32 refusals. Non-standard payloads remain labeled, raw
+  copies remain zero, and validator success cannot establish privacy, license,
+  reproducibility, or scientific validity.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed

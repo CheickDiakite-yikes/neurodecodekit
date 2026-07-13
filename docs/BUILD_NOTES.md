@@ -2907,3 +2907,69 @@ signal, transform, model, training run, target, score, device, or hardware was
 accessed, so there is no metadata-compatibility result, numerical compatibility,
 model transfer, device equivalence, neural advantage, decoding accuracy,
 unseen-person generalization, real-time behavior, or portable-hardware result.
+
+## 2026-07-13 - Loop 37 BIDS derivative/provenance research boundary
+
+Closed Loop 37 planning research while leaving the derivative export
+experiment `Not Started`, all 29 `authorized_now` fields false, and every
+fixture, exporter, derivative tree, validator install/run, protected payload,
+raw copy, release/upload, model, training, stream, device, and hardware
+operation closed. The machine contract freezes six export layers, five
+artifact profiles, 15 stable BIDS field mappings, 16 explicit NeuroDecodeKit
+extension fields, 20 fixture families, four independently authorized stages,
+24 future gates, and 32 refusal IDs.
+
+The primary-source audit pins the future envelope to BIDS 1.11.1 dataset,
+derivative, URI, metadata-propagation, naming, and validator behavior.
+NeuroToken NPZ caches, sentence/signal caches, split reports, report cards, and
+manifests have no stable BIDS derivative suffix and remain explicitly
+non-standard payloads. A future export must use BIDS URIs or opaque hashes,
+allowlist every payload, redact local identity, copy zero raw files, refuse
+target/prompt/response/free text, and retain every validator issue. Validator
+success cannot establish privacy, license, source hashes, cross-machine
+reproduction, or scientific validity.
+
+The local audit found zero tracked neural/model binary candidate files and zero
+candidate bytes; no payload was opened. Seven high-level public web operations,
+including two official GitHub repository reads, informed the planning record.
+Public response bytes and browser runtime/RSS are unavailable by tool contract.
+Protected downloads, real header/cache/signal/target reads, fixtures, generated
+derivative bytes, validator runs, raw copies, releases/uploads, models, training
+runs, streams, devices, and hardware operations remain zero.
+
+The nine-sheet tracker updates Dashboard `B10` and Loop 37 row 17, adds decision
+`37-R1`, risk `R42`, and prompt `Loop37-Research`, and preserves Loop 25 as the
+active execution decision. The 94,670-byte workbook has SHA-256
+`9787dd51a5c0b7432a3e31316e56075a4495e0879dae8850a8def11c41900365`;
+all nine sheets rendered before and after the edit, the export reloads with
+exact key ranges, and the formula-error scan matches zero cells. The unrelated
+321,169-byte inspection sidecar remains byte-identical at SHA-256
+`5cd0ef08446c4e5feee5ce11f27eef41fae5eee8975cc77f6d401faca3b79f45`.
+
+Local verification passes 226 focused Loop 24-37 planning tests in 0.20 seconds
+wall with 50,167,808-byte maximum RSS; the strict Loop 37 plus roadmap slice
+passes 26 tests in 0.09 seconds wall with 34,865,152-byte maximum RSS; 544
+optional unittests pass with three expected skips in 22.45 seconds wall and
+587,300,864-byte maximum RSS; 541 pytest tests pass with three skips and 247
+subtests in 23.08 seconds wall and 601,358,336-byte maximum RSS; and 512
+dependency-light tests pass with 121 optional skips in 1.90 seconds wall and
+73,728,000-byte maximum RSS. Each full count is 17 above the Loop 36 closeout.
+
+Repository-wide Ruff lint, touched-file formatting, compileall, 25 source JSON
+and two TOML parses, seven CLI help surfaces, 55 registered commands,
+unauthorized Loop 37 runtime absence, 72 checked local Markdown links with zero
+missing, workbook render/reload/formula inspection, and `git diff --check`
+pass. Commit and CI identities are added only after the tested research
+milestone is pushed.
+
+Engineering capability added: a machine-checkable BIDS envelope and provenance
+firewall, explicit non-standard payload taxonomy, portable source-identity
+rules, no-raw-copy/privacy refusals, validator ceiling, staged release program,
+and bounded future export claim now exist.
+
+Scientific claim not established: no fixture, protected payload, exporter,
+derivative tree, validator run, raw copy, release, model, training run, target,
+score, device, or hardware was accessed, so there is no BIDS-organized bundle,
+privacy/license qualification, cross-machine reproduction, neural advantage,
+decoding accuracy, unseen-person generalization, real-time behavior, or
+portable-hardware result.

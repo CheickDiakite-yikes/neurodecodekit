@@ -724,32 +724,105 @@ transfer, device equivalence, or scientific performance.
 
 ## Loop 37 - BIDS Derivative And Provenance Export
 
+**Current state:** Planning research complete; experiment `Not Started`. See
+`docs/LOOP_37_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop37_research_boundary.v0.json`. All 29 authorization fields are
+false. No fixture, exporter, derivative tree, validator, payload copy, or
+release exists.
+
 **Core question:** Can caches, tokens, reports, and splits be exported as
 inspectable derivatives without copying raw data or losing source identity?
 
 **Why it moves the goal:** A standards-aware derivative lowers the barrier for
 external reproduction while preserving local raw-data ownership.
 
-**Build:** Define a tiny BIDS-derivative tree with `dataset_description.json`,
-`GeneratedBy`, `SourceDatasets`, sidecars, source/config/split/payload/code
-hashes, path validation, and a no-raw-copy audit.
+**Research result:** Stable BIDS 1.11.1 requires `Name` and `BIDSVersion` in
+every `dataset_description.json` and `GeneratedBy` in a derivative dataset.
+`DatasetType: derivative` makes the envelope explicit. File-level `Sources`
+identify direct inputs with BIDS URIs; deprecated relative paths and
+`RawSources` do not meet the future contract. A named BIDS URI requires a
+truthful `DatasetLinks` entry. Required source metadata propagates only while
+it remains semantically valid after processing.
 
-**Research:** Map stable BIDS derivative/electrophysiology fields, namespaced
-NeuroDecodeKit extensions, unsupported fields, and compliance language.
+BIDS permits additional and non-compliant files inside derivative trees. A
+valid envelope therefore cannot standardize NeuroToken NPZ caches, split
+reports, report cards, or manifests that have no stable BIDS derivative suffix.
+The maximum future Stage B claim is a validator-assessed standard envelope with
+explicitly non-standard NeuroDecodeKit payloads, not a BIDS-compliant
+NeuroToken derivative.
 
-**Data and controls:** Tiny synthetic caches/reports only. Test path traversal,
-subject collision, overwrite, raw-copy refusal, missing provenance, and
-roundtrip source identity.
+**Build after separate authorization:** Implement six layers:
 
-**Metrics:** required/unavailable fields; hash coverage; roundtrip identity;
-input/output/duplicate bytes; raw-copy count; runtime/RSS.
+1. dataset envelope: `dataset_description.json`, UTF-8 `README`, BIDS version,
+   derivative type, pipeline identity, and truthful source dataset links;
+2. identity tree: portable, collision-safe subject/session/task/run/split/item
+   paths with no direct identifiers;
+3. standard metadata: only stable BIDS fields such as `Description`,
+   `Sources`, relevant source entities, `desc`, and still-valid required
+   metadata;
+4. NeuroDecodeKit extension metadata: an explicit non-standard versioned
+   object/file for schema, hashes, timing, masks, geometry, causality,
+   resources, warnings, and claim boundaries;
+5. payload/hash manifest: every allowlisted file, byte count, SHA-256, source
+   relation, duplicate status, and standardization status;
+6. audit/release ledger: raw-copy, path, redaction, privacy, license, validator,
+   resource, access, and claim checks.
 
-**Gate:** Close as a synthetic derivative interface only when provenance is
-complete, extensions are explicit, no raw payload is copied, and caps pass.
-Refuse rather than invent missing source metadata.
+Five artifact profiles keep NeuroToken caches, signal/sentence caches, split
+protocols, report cards, and the standard dataset envelope separate. Fifteen
+stable-field mappings and 16 explicit NeuroDecodeKit extension fields are
+frozen. Proposed BIDS provenance fields are not treated as stable 1.11.1
+requirements.
 
-**Dependencies and authorization:** Depends on Loop 36. Export code and fixtures
-require a separate Loop 37 authorization.
+**Data and controls:** Future Stage A may use only target-free synthetic
+metadata/refusal fixtures. Twenty fixture families cover valid standalone and
+nested trees plus missing dataset descriptions, malformed `GeneratedBy`,
+pipeline mismatch, missing README, unresolved BIDS URIs, deprecated paths,
+absolute-path/user leaks, traversal, case/subject collisions, raw-name/content
+duplicates, symlink/hardlink aliases, overwrite, license failure, target/free-
+text leakage, unknown payloads, and hash/roundtrip drift.
+
+The exporter may never recursively copy a source tree. Known raw extensions,
+raw-permissible filenames, sampled or full byte duplicates, shared inodes,
+symlinks, hardlinks, aliases, targets, prompts, responses, and unrestricted
+free text refuse. A source without a truthful resolvable BIDS URI keeps only an
+opaque hash in the non-standard record and marks standard `Sources`
+unavailable. Absolute paths, usernames, home directories, drive letters, and
+`file://` URIs remain forbidden.
+
+**Metrics:** standard/non-standard/required/propagated/omitted/unavailable
+field counts; BIDS URI resolution; source/split/config/payload/code/manifest/
+bundle hash coverage; path and identity roundtrip; input/output/duplicate/raw-
+copy/generated bytes; files; validator errors/warnings/ignored files; runtime;
+peak RSS; threads/workers; network; and all access counters.
+
+**Four stages:** Stage A freezes dependency-free target-free synthetic
+metadata/refusal behavior. Stage B adds one bounded synthetic payload and one
+pinned optional offline validator. Stage C may inspect named local real-derived
+metadata only after Loop 38 privacy, identifier, license, and lifecycle gates.
+Stage D is a separate public-release decision after Loops 38, 39, and 44.
+Authorization of one stage never authorizes another.
+
+**Gate:** Future Stage A passes only if all 24 gates and 32 refusals are exact,
+paths and identities roundtrip, targets/local paths are absent, every output is
+hashed, raw-copy counts remain zero, and two clean output roots are identical.
+Stage B additionally preserves every issue from pinned validator `2.4.1`. A
+validator success cannot establish custom-payload standardization, source-hash
+truth, privacy, license, scientific provenance, reproducibility, or decoding.
+
+**Stop rule:** Publish `invalid`, `unavailable`, `non-standard`, or `blocked`
+on any source URI, metadata validity, path, collision, raw-copy, target, hash,
+privacy, license, validator, resource, access, or claim failure. Never invent
+metadata, auto-repair a failed tree, weaken gates, hide issues, or rerun until
+a passing variant appears.
+
+**Dependencies and authorization:** Depends on Loop 36 planning. Loop 38 is
+required before real/public metadata export, Loop 39 before cross-machine
+reproducibility, and Loop 44 before release wording. Stage A is capped at one
+thread/worker, 120 seconds, 1 GiB RSS, 16 MiB, 128 files, zero network/download
+bytes, zero raw-copy bytes, and no base dependency. Export code, fixtures,
+validator install/run, protected reads, external writes, or release require an
+exact separate Loop 37 authorization-only commit and green CI.
 
 ## Loop 38 - Neural Data Privacy And Lifecycle
 
