@@ -1,0 +1,463 @@
+{
+  "schema_name": "neurodecodekit.loop36_research_boundary",
+  "schema_version": "0.1.0",
+  "loop_id": 36,
+  "prepared_at": "2026-07-12",
+  "status": "planning_research_complete_experiment_not_started",
+  "proof_posture": "planning_only_no_geometry_fixture_header_signal_transform_reference_interpolation_or_model_execution",
+  "authorization": {
+    "authorized_now": false,
+    "authorization_sentence_exists": false,
+    "loop36_preregistration_authorized_now": false,
+    "loop36_implementation_authorized_now": false,
+    "synthetic_geometry_fixture_authorized_now": false,
+    "metadata_adapter_authorized_now": false,
+    "real_header_read_authorized_now": false,
+    "real_signal_read_authorized_now": false,
+    "real_target_or_prompt_read_authorized_now": false,
+    "consumed_s7_or_s21_reopen_authorized_now": false,
+    "s20_or_s25_access_authorized_now": false,
+    "channel_alias_map_fit_authorized_now": false,
+    "coordinate_transform_fit_authorized_now": false,
+    "coordinate_transform_apply_authorized_now": false,
+    "unit_conversion_apply_authorized_now": false,
+    "eeg_rereference_authorized_now": false,
+    "meg_compensation_or_reference_transform_authorized_now": false,
+    "bad_channel_interpolation_authorized_now": false,
+    "sensor_to_template_interpolation_authorized_now": false,
+    "missing_channel_imputation_authorized_now": false,
+    "orientation_reconstruction_authorized_now": false,
+    "source_localization_or_coregistration_authorized_now": false,
+    "model_or_checkpoint_run_authorized_now": false,
+    "training_or_parameter_update_authorized_now": false,
+    "accuracy_based_mapping_selection_authorized_now": false,
+    "new_real_data_or_model_download_authorized_now": false,
+    "network_payload_download_authorized_now": false,
+    "rw3_stream_sdk_socket_device_or_hardware_authorized_now": false,
+    "cross_device_equivalence_claim_authorized_now": false,
+    "loop37_or_later_authorized_now": false
+  },
+  "decision": {
+    "current_experiment_status": "Not Started",
+    "selected_future_mode": "metadata_first_identity_and_transform_ledger",
+    "maximum_current_claim_class": "L36-C0_no_new_result",
+    "maximum_future_stage_a_claim": "L36-C1_synthetic_schema_and_refusal_identity",
+    "maximum_future_real_metadata_claim": "L36-C2_declared_metadata_compatibility",
+    "maximum_future_signal_transform_claim": "L36-C4_named_protocol_specific_numerical_compatibility",
+    "channel_name_equivalence_available_from_name_alone": false,
+    "device_equivalence_available_from_shared_channel_count": false,
+    "geometry_equivalence_available_from_visual_similarity": false,
+    "unknown_frame_or_reference_default": "unavailable",
+    "negative_or_incompatible_result_is_publishable": true
+  },
+  "dependencies": {
+    "loop29_planning_dependency_satisfied_now": true,
+    "loop29_device_selected_now": false,
+    "loop29_real_header_or_signal_evidence_available_now": false,
+    "loop30_clock_contract_required_for_time_varying_geometry": true,
+    "loop35_peripheral_motion_geometry_boundary_required": true,
+    "existing_s21_geometry_is_complete_loop36_evidence": false,
+    "existing_s7_eeg_geometry_and_reference_are_complete_loop36_evidence": false
+  },
+  "existing_evidence_inventory": [
+    {
+      "evidence_id": "bids_channel_contract",
+      "finding": "BIDS channels tables require ordered channel name type and physical units; EEG electrodes and recorded channels are distinct entities.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "bids_coordinate_contract",
+      "finding": "BIDS records coordinate-system identity separately from coordinate units and requires Other systems to be described.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "mne_coordinate_frames",
+      "finding": "MNE distinguishes MEG device head MRI and other frames; explicit transforms align them and integer frame codes require a named semantic mapping.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "mne_reference_and_interpolation",
+      "finding": "EEG rereferencing and MEG EEG bad-channel interpolation change signal values and depend on channel state geometry and method choices.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "s21_sentence_cache_geometry",
+      "finding": "The S21 extraction path records channel name type position_m integer coord_frame coil_type and integer unit for selected channels, but not a BIDS coordinate keyword or transform ledger.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "s21_channel_subset_boundary",
+      "finding": "Loop 11 uses positions from one 102-magnetometer cache for within-cache subset selection; it does not prove cross-session or cross-device geometry equivalence.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "s7_eeg_boundary",
+      "finding": "The consumed S7 cache has 61 EEG channels but no qualified electrode-coordinate and acquisition-reference contract for Loop 36.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "cross_session_exact_identity",
+      "finding": "Current cross-session evaluation requires exact channel-name order identity and therefore performs no hidden harmonization.",
+      "payload_read_now": false
+    }
+  ],
+  "representation_layers": [
+    {
+      "layer_id": "L36-L0_source_identity",
+      "content": "source cache hash file identity subject session device acquisition and adapter version",
+      "may_be_inferred": false
+    },
+    {
+      "layer_id": "L36-L1_channel_identity",
+      "content": "ordered unique source name declared canonical name type status and role",
+      "may_be_inferred": false
+    },
+    {
+      "layer_id": "L36-L2_physical_units",
+      "content": "signal unit coordinate unit exact conversion factor and original spelling",
+      "may_be_inferred": false
+    },
+    {
+      "layer_id": "L36-L3_sensor_or_electrode_geometry",
+      "content": "position orientation coil or electrode identity fiducials and finite-value masks",
+      "may_be_inferred": false
+    },
+    {
+      "layer_id": "L36-L4_coordinate_frame_and_transform",
+      "content": "named source and destination frames handedness origin axes 4x4 transform provenance and residuals",
+      "may_be_inferred": false
+    },
+    {
+      "layer_id": "L36-L5_reference_and_linear_mixing",
+      "content": "EEG acquisition reference ground derived reference MEG compensation projectors interpolation and full linear operator provenance",
+      "may_be_inferred": false
+    }
+  ],
+  "modality_profiles": [
+    {
+      "profile_id": "L36-M0_meg_magnetometer",
+      "signal_units": ["T", "fT"],
+      "required_geometry": ["position", "orientation", "coil_type", "coordinate_frame"],
+      "may_mix_with": ["L36-M0_meg_magnetometer"],
+      "reference_scheme": "not_electrical_reference_but_compensation_projectors_and_reference_sensors_must_be_declared"
+    },
+    {
+      "profile_id": "L36-M1_meg_gradiometer",
+      "signal_units": ["T/m", "fT/cm"],
+      "required_geometry": ["position", "orientation_or_baseline", "coil_type", "coordinate_frame"],
+      "may_mix_with": ["L36-M1_meg_gradiometer"],
+      "reference_scheme": "compensation_projectors_and_reference_sensors_must_be_declared"
+    },
+    {
+      "profile_id": "L36-M2_opm_meg_vector",
+      "signal_units": ["T", "fT"],
+      "required_geometry": ["time_bound_position", "axis_orientation", "coordinate_frame", "motion_transform"],
+      "may_mix_with": ["L36-M2_opm_meg_vector"],
+      "reference_scheme": "field_control_reference_sensors_and_interference_model_must_be_declared"
+    },
+    {
+      "profile_id": "L36-M3_scalp_eeg",
+      "signal_units": ["V", "mV", "uV"],
+      "required_geometry": ["electrode_position", "coordinate_frame", "fiducials_or_named_standard_montage"],
+      "may_mix_with": ["L36-M3_scalp_eeg"],
+      "reference_scheme": "acquisition_reference_ground_channel_specific_exceptions_and_every_derived_rereference_required"
+    },
+    {
+      "profile_id": "L36-M4_peripheral_or_auxiliary",
+      "signal_units": ["modality_specific"],
+      "required_geometry": ["sensor_role_and_location_when_claim_relevant"],
+      "may_mix_with": ["exact_same_declared_type_only"],
+      "reference_scheme": "modality_specific_and_never_inherited_from_eeg_or_meg"
+    }
+  ],
+  "future_channel_record_fields": [
+    "source_index",
+    "source_name",
+    "canonical_name",
+    "alias_rule_id",
+    "channel_type",
+    "channel_status",
+    "signal_unit_original",
+    "signal_unit_canonical",
+    "signal_unit_scale_to_si",
+    "sensor_or_electrode",
+    "position_xyz",
+    "position_valid_mask",
+    "coordinate_unit_original",
+    "coordinate_unit_canonical",
+    "coordinate_frame_source",
+    "coordinate_frame_destination",
+    "orientation_or_baseline",
+    "orientation_valid_mask",
+    "coil_or_electrode_type",
+    "reference_and_ground",
+    "compensation_projector_state",
+    "transform_chain_ids",
+    "missingness_reason",
+    "source_metadata_sha256"
+  ],
+  "operation_taxonomy": [
+    {
+      "operation_id": "L36-O00_exact_reorder",
+      "class": "identity_preserving_when_unique_explicit_and_hash_bound",
+      "requires_signal_values": false
+    },
+    {
+      "operation_id": "L36-O01_explicit_alias",
+      "class": "metadata_compatibility_only",
+      "requires_signal_values": false
+    },
+    {
+      "operation_id": "L36-O02_coordinate_unit_scale",
+      "class": "identity_preserving_with_exact_declared_factor",
+      "requires_signal_values": false
+    },
+    {
+      "operation_id": "L36-O03_signal_unit_scale",
+      "class": "numerical_transform_with_exact_declared_factor",
+      "requires_signal_values": true
+    },
+    {
+      "operation_id": "L36-O04_rigid_coordinate_transform",
+      "class": "geometry_identity_when_frames_and_transform_are_explicit",
+      "requires_signal_values": false
+    },
+    {
+      "operation_id": "L36-O05_reflection_or_axis_swap",
+      "class": "refuse_unless_named_source_standard_explicitly_requires_it",
+      "requires_signal_values": false
+    },
+    {
+      "operation_id": "L36-O06_eeg_rereference",
+      "class": "data_changing_linear_operator",
+      "requires_signal_values": true
+    },
+    {
+      "operation_id": "L36-O07_meg_compensation_or_projector",
+      "class": "data_changing_linear_operator",
+      "requires_signal_values": true
+    },
+    {
+      "operation_id": "L36-O08_bad_channel_interpolation",
+      "class": "model_based_data_imputation_not_identity",
+      "requires_signal_values": true
+    },
+    {
+      "operation_id": "L36-O09_sensor_to_template_interpolation",
+      "class": "model_based_data_remapping_not_identity",
+      "requires_signal_values": true
+    },
+    {
+      "operation_id": "L36-O10_missing_channel_zero_fill",
+      "class": "missingness_encoding_only_never_equivalent_signal",
+      "requires_signal_values": true
+    },
+    {
+      "operation_id": "L36-O11_accuracy_selected_mapping",
+      "class": "forbidden_evaluation_leakage",
+      "requires_signal_values": true
+    }
+  ],
+  "alias_policy": {
+    "source_names_must_be_unique": true,
+    "casefold_or_strip_punctuation_automatically": false,
+    "position_only_aliasing_allowed": false,
+    "standard_montage_name_implies_measured_position": false,
+    "explicit_versioned_bijective_alias_map_required": true,
+    "one_to_many_or_many_to_one_alias_allowed": false,
+    "collision_refuses": true,
+    "evaluation_accuracy_may_select_alias": false
+  },
+  "unit_policy": {
+    "signal_and_coordinate_units_are_separate": true,
+    "coordinate_units_allowed": ["m", "cm", "mm"],
+    "canonical_coordinate_unit": "m",
+    "coordinate_scale_factors_to_m": {"m": 1.0, "cm": 0.01, "mm": 0.001},
+    "unit_may_be_inferred_from_magnitude": false,
+    "unknown_or_custom_unit_without_definition": "unavailable",
+    "original_unit_spelling_preserved": true,
+    "signal_conversion_requires_channel_type_compatible_dimensions": true
+  },
+  "rigid_transform_policy": {
+    "matrix_shape": [4, 4],
+    "homogeneous_last_row": [0.0, 0.0, 0.0, 1.0],
+    "rotation_orthogonality_tolerance": 1e-9,
+    "rotation_determinant_target": 1.0,
+    "rotation_determinant_tolerance": 1e-9,
+    "reflection_allowed": false,
+    "source_and_destination_frames_required": true,
+    "transform_direction_required": true,
+    "inverse_roundtrip_residual_max_m": 1e-9,
+    "position_and_orientation_transformed_separately": true,
+    "translation_applies_to_orientation": false,
+    "transform_chain_hash_required": true,
+    "unknown_integer_frame_code_without_semantic_mapping": "unavailable"
+  },
+  "reference_and_interpolation_policy": {
+    "acquisition_reference_and_ground_preserved": true,
+    "derived_reference_operator_preserved": true,
+    "bad_channels_excluded_from_average_reference_must_be_declared": true,
+    "rereference_is_metadata_only": false,
+    "interpolation_is_geometry_identity": false,
+    "interpolated_channels_retain_source_missingness_flag": true,
+    "template_montage_may_replace_measured_positions": false,
+    "meg_compensation_and_projectors_must_match_or_be_transformed_explicitly": true,
+    "different_sensor_types_may_be_silently_concatenated": false
+  },
+  "future_fixture_families": [
+    "exact_identity_roundtrip",
+    "safe_permutation_with_explicit_inverse",
+    "duplicate_channel_name_refusal",
+    "ambiguous_alias_refusal",
+    "coordinate_m_cm_mm_identity",
+    "signal_V_mV_uV_identity",
+    "unknown_unit_refusal",
+    "known_rigid_transform_roundtrip",
+    "wrong_transform_direction_refusal",
+    "reflection_and_mirror_refusal",
+    "missing_orientation_refusal",
+    "integer_frame_without_semantic_map_refusal",
+    "unknown_eeg_reference_refusal",
+    "rereference_operator_provenance",
+    "interpolation_missingness_provenance",
+    "accuracy_selected_mapping_refusal"
+  ],
+  "future_access_sequence": [
+    "freeze human and machine preregistration without generating a fixture",
+    "record a separate authorization-only decision commit and obtain green remote CI",
+    "generate only target-free synthetic metadata fixtures under the Stage A cap",
+    "validate schema aliases units transforms refusals hashes and roundtrip without signal claims",
+    "close Stage A and keep real headers signals and references sealed",
+    "prepare a separate real-header metadata packet naming exact files bytes fields and privacy redactions",
+    "authorize and inspect only declared headers without opening signal arrays",
+    "freeze one named compatibility decision before any signal transform",
+    "obtain separate signal-transform authorization if rereference interpolation or unit scaling is needed",
+    "report compatible incompatible and unavailable fields without accuracy-based restart"
+  ],
+  "outcome_taxonomy": [
+    {"outcome_id": "L36-R0_not_run", "meaning": "Planning exists but no fixture or evidence operation ran."},
+    {"outcome_id": "L36-R1_schema_failure", "meaning": "The synthetic record cannot preserve identities fields masks or hashes."},
+    {"outcome_id": "L36-R2_ambiguous_identity", "meaning": "Names aliases types or duplicate channels prevent a unique mapping."},
+    {"outcome_id": "L36-R3_unit_or_frame_unavailable", "meaning": "Units frame semantics transform direction or orientation are unavailable."},
+    {"outcome_id": "L36-R4_metadata_compatible", "meaning": "Declared metadata can be compared or transformed without opening signals."},
+    {"outcome_id": "L36-R5_signal_transform_required", "meaning": "Reference compensation interpolation or signal scaling needs a separately authorized data-changing operation."},
+    {"outcome_id": "L36-R6_protocol_specific_numerical_compatibility", "meaning": "A frozen explicit signal transform passes only for the named protocol."},
+    {"outcome_id": "L36-R7_not_device_or_scientific_equivalence", "meaning": "No mapping result proves devices people or neural information equivalent."}
+  ],
+  "claim_taxonomy": [
+    {"claim_id": "L36-C0_no_new_result", "available_now": true, "boundary": "Planning research only."},
+    {"claim_id": "L36-C1_synthetic_schema_and_refusal_identity", "available_now": false, "boundary": "Target-free synthetic metadata only."},
+    {"claim_id": "L36-C2_declared_metadata_compatibility", "available_now": false, "boundary": "Exact named headers and metadata fields only."},
+    {"claim_id": "L36-C3_coordinate_geometry_compatibility", "available_now": false, "boundary": "Explicit frame and transform chain for exact sensors only."},
+    {"claim_id": "L36-C4_named_protocol_specific_numerical_compatibility", "available_now": false, "boundary": "separately authorized signal transform for one named protocol."},
+    {"claim_id": "L36-C5_cross_session_or_device_model_transfer", "available_now": false, "boundary": "Requires independent model and outcome evidence beyond harmonization."},
+    {"claim_id": "L36-C6_neural_device_population_or_clinical_equivalence", "available_now": false, "boundary": "Unavailable from this design."}
+  ],
+  "future_acceptance_gates": [
+    {"requirement_id": "L36-G01", "requirement": "Every source channel name and index is preserved and unique."},
+    {"requirement_id": "L36-G02", "requirement": "Canonical names come only from a versioned explicit bijection."},
+    {"requirement_id": "L36-G03", "requirement": "Channel and sensor or electrode types remain separate and declared."},
+    {"requirement_id": "L36-G04", "requirement": "Signal units and coordinate units are never conflated."},
+    {"requirement_id": "L36-G05", "requirement": "Every unit conversion records exact factor original and canonical unit."},
+    {"requirement_id": "L36-G06", "requirement": "Unknown units remain unavailable rather than magnitude-inferred."},
+    {"requirement_id": "L36-G07", "requirement": "Coordinate frame name origin axes handedness and units are explicit."},
+    {"requirement_id": "L36-G08", "requirement": "Every 4x4 transform names source destination direction and provenance."},
+    {"requirement_id": "L36-G09", "requirement": "Rigid rotations pass orthogonality determinant and no-reflection checks."},
+    {"requirement_id": "L36-G10", "requirement": "Forward inverse position roundtrip residual is at most 1e-9 m."},
+    {"requirement_id": "L36-G11", "requirement": "Orientations transform without translation and retain validity masks."},
+    {"requirement_id": "L36-G12", "requirement": "Missing positions orientations and channels keep explicit reasons and masks."},
+    {"requirement_id": "L36-G13", "requirement": "Acquisition and derived EEG references plus ground are explicit."},
+    {"requirement_id": "L36-G14", "requirement": "MEG compensation projectors and reference-sensor state are explicit."},
+    {"requirement_id": "L36-G15", "requirement": "Rereference compensation interpolation and template mapping remain data-changing operations."},
+    {"requirement_id": "L36-G16", "requirement": "Interpolated or imputed channels never lose their missing-source flag."},
+    {"requirement_id": "L36-G17", "requirement": "No mapping choice uses evaluation accuracy targets or prompts."},
+    {"requirement_id": "L36-G18", "requirement": "Original and harmonized metadata plus full operator chain remain inspectable."},
+    {"requirement_id": "L36-G19", "requirement": "Source config transform and payload hashes bind every output."},
+    {"requirement_id": "L36-G20", "requirement": "All malformed ambiguous mirrored and missing-field fixtures refuse exactly."},
+    {"requirement_id": "L36-G21", "requirement": "Runtime RSS bytes threads access counters warnings and unavailable fields are reported."},
+    {"requirement_id": "L36-G22", "requirement": "Claims stop at the exact compatibility level reached."}
+  ],
+  "future_refusal_ids": [
+    "L36-F01_duplicate_source_channel_name",
+    "L36-F02_duplicate_canonical_channel_name",
+    "L36-F03_alias_not_explicit_or_versioned",
+    "L36-F04_alias_not_bijective",
+    "L36-F05_alias_collision",
+    "L36-F06_channel_type_mismatch",
+    "L36-F07_sensor_electrode_confusion",
+    "L36-F08_signal_unit_missing_or_unknown",
+    "L36-F09_coordinate_unit_missing_or_unknown",
+    "L36-F10_unit_inferred_from_magnitude",
+    "L36-F11_dimensionally_invalid_unit_conversion",
+    "L36-F12_coordinate_frame_missing_or_unknown",
+    "L36-F13_integer_frame_without_semantic_mapping",
+    "L36-F14_transform_source_destination_missing",
+    "L36-F15_transform_direction_ambiguous",
+    "L36-F16_transform_not_4x4_homogeneous",
+    "L36-F17_rotation_not_orthogonal",
+    "L36-F18_reflection_or_left_handed_transform",
+    "L36-F19_inverse_roundtrip_residual_exceeded",
+    "L36-F20_orientation_missing_when_required",
+    "L36-F21_translation_applied_to_orientation",
+    "L36-F22_eeg_reference_or_ground_unknown",
+    "L36-F23_meg_compensation_or_projector_state_unknown",
+    "L36-F24_template_montage_substituted_for_measured_geometry",
+    "L36-F25_interpolation_presented_as_identity",
+    "L36-F26_missing_channel_zero_fill_presented_as_signal",
+    "L36-F27_evaluation_accuracy_selected_mapping",
+    "L36-F28_source_or_transform_hash_mismatch",
+    "L36-F29_resource_output_or_access_cap_exceeded",
+    "L36-F30_cross_device_or_scientific_equivalence_overclaim"
+  ],
+  "resource_boundaries": {
+    "current_cpu_threads": 1,
+    "current_generated_artifact_bytes": 0,
+    "future_stage_a_cpu_threads": 1,
+    "future_stage_a_runtime_cap_sec": 120,
+    "future_stage_a_peak_rss_cap_bytes": 1073741824,
+    "future_stage_a_generated_artifact_cap_bytes": 16777216,
+    "future_real_header_byte_cap": null,
+    "future_signal_transform_byte_cap": null,
+    "future_new_data_or_model_download_bytes_before_separate_authorization": 0,
+    "heavy_base_dependency_added": false,
+    "mne_remains_optional": true,
+    "cpu_time_may_be_reported_as_energy": false,
+    "storage_envelope_is_execution_authorization": false
+  },
+  "research_access_counters": {
+    "high_level_public_web_research_operations": 3,
+    "protected_dataset_model_or_weight_download_bytes": 0,
+    "real_headers_read": 0,
+    "real_signal_arrays_read": 0,
+    "real_cache_reads": 0,
+    "target_or_prompt_reads": 0,
+    "synthetic_fixtures_generated": 0,
+    "coordinate_transforms_fit_or_applied": 0,
+    "unit_conversions_applied": 0,
+    "rereference_or_interpolation_runs": 0,
+    "model_or_checkpoint_runs": 0,
+    "training_runs": 0,
+    "device_stream_or_hardware_operations": 0,
+    "public_network_response_bytes": null,
+    "public_network_response_bytes_unavailable_reason": "The web research tool does not expose response byte counts."
+  },
+  "source_bindings": [
+    {"source_id": "bids_coordinate_systems", "url": "https://bids-specification.readthedocs.io/en/stable/appendices/coordinate-systems.html", "use": "named origins orientations handedness and coordinate-unit separation"},
+    {"source_id": "bids_meg", "url": "https://bids-specification.readthedocs.io/en/stable/modality-specific-files/magnetoencephalography.html", "use": "MEG channel types units coordinate systems and reference sensors"},
+    {"source_id": "bids_eeg", "url": "https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html", "use": "channel versus electrode identity units and reference fields"},
+    {"source_id": "bids_units", "url": "https://bids-specification.readthedocs.io/en/stable/appendices/units.html", "use": "SI and portable unit encoding"},
+    {"source_id": "mne_coordinate_frames", "url": "https://mne.tools/1.8/auto_tutorials/forward/20_source_alignment.html", "use": "device head MRI frames and explicit transform direction"},
+    {"source_id": "mne_transform", "url": "https://mne.tools/stable/generated/mne.transforms.Transform.html", "use": "4x4 from-to transform representation and valid frame semantics"},
+    {"source_id": "mne_digmontage", "url": "https://mne.tools/stable/generated/mne.channels.DigMontage.html", "use": "fiducials montage coordinates and head-frame conversion"},
+    {"source_id": "mne_eeg_reference", "url": "https://mne.tools/stable/generated/mne.set_eeg_reference.html", "use": "rereference choices bad-channel dependence and data-changing semantics"},
+    {"source_id": "mne_bad_interpolation", "url": "https://mne.tools/stable/auto_examples/preprocessing/interpolate_bad_channels.html", "use": "method and geometry dependent bad-channel interpolation"}
+  ],
+  "claim_boundary": [
+    "This artifact is planning research, not a Loop 36 preregistration or authorization.",
+    "No synthetic geometry fixture, real header, signal array, target, transform, rereference, interpolation, model, or training operation ran.",
+    "Channel-name equality, channel count, visual layout similarity, or a shared standard montage name does not prove sensor equivalence.",
+    "Metadata compatibility does not establish numerical compatibility, model transfer, neural advantage, or device equivalence.",
+    "Unknown frames, units, references, orientations, compensation, or missing channels remain unavailable rather than guessed.",
+    "No cross-session accuracy, cross-device transfer, portable hardware, real-time behavior, at-home use, patient benefit, or clinical claim is established."
+  ]
+}

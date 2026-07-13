@@ -1,6 +1,6 @@
 {
   "schema_name": "neurodecodekit.next_twenty_loops_roadmap",
-  "schema_version": "0.12.0",
+  "schema_version": "0.13.0",
   "roadmap_id": "loops-25-44",
   "prepared_at": "2026-07-12",
   "status": "planning_only_not_execution_authorization",
@@ -126,6 +126,20 @@
     "loop35_authorization_request_prepared": false,
     "loop35_execution_authorized": false,
     "loop35_dependency_loop31_execution_satisfied": false,
+    "loop36_research_packet_prepared": true,
+    "loop36_representation_layer_count": 6,
+    "loop36_modality_profile_count": 5,
+    "loop36_channel_record_field_count": 24,
+    "loop36_operation_class_count": 12,
+    "loop36_future_fixture_family_count": 16,
+    "loop36_future_requirement_count": 22,
+    "loop36_future_refusal_count": 30,
+    "loop36_current_complete_geometry_reference_evidence_available": false,
+    "loop36_maximum_future_real_metadata_claim": "declared_metadata_compatibility",
+    "loop36_preregistration_prepared": false,
+    "loop36_authorization_request_prepared": false,
+    "loop36_execution_authorized": false,
+    "loop36_dependency_loop29_execution_satisfied": false,
     "user_preferred_incremental_storage_bytes": 5000000000,
     "user_absolute_incremental_storage_bytes": 10000000000,
     "selected_s20_plus_s25_future_bundle_bytes": 1106030247,
@@ -711,30 +725,43 @@
       "effort": "M",
       "status": "Not Started",
       "execution_authorized": false,
-      "proof_posture": "planned_not_authorized",
+      "research_status": "planning_research_complete",
+      "research_packet": "docs/LOOP_36_PRIMARY_SOURCE_RESEARCH.md",
+      "research_registry": "registries/loop36_research_boundary.v0.json",
+      "preregistration_prepared": false,
+      "authorization_request_prepared": false,
+      "proof_posture": "planning_research_complete_no_geometry_fixture_header_signal_transform_or_result_unauthorized",
       "core_question": "Can channel geometry, names, units, reference, and missing sensors be normalized across sessions and devices without erasing provenance?",
       "why_high_value": "Cross-session and cross-device failures can come from coordinate or reference mismatch rather than model capacity.",
-      "build_deliverable": "Versioned channel ontology, geometry transform ledger, reference/unit converter, missing-channel mask, and roundtrip validation.",
-      "research_deliverable": "Modality-specific coordinate-frame and referencing requirements with explicit non-equivalence rules.",
-      "data_scope": "Synthetic geometry fixtures and metadata sidecars first; real headers only after separate authorization and without opening signal arrays.",
+      "build_deliverable": "Future six-layer identity/units/geometry/frame/reference ledger with a 24-field channel record, 12 operation classes, missingness masks, transform hashes, and roundtrip validation.",
+      "research_deliverable": "Completed BIDS/MNE coordinate, unit, montage, reference, and interpolation boundary with five modality profiles, eight outcomes, seven claims, 22 gates, and 30 refusals.",
+      "data_scope": "Planning used public standards and committed code/aggregate metadata only. Future Stage A may use target-free synthetic metadata after separate authorization; real headers and every signal transform remain separately gated.",
       "controls": [
-        "Permutation, missing-channel, mirrored-coordinate, wrong-unit, and wrong-reference fixtures.",
-        "Original and harmonized metadata retained side by side.",
-        "No accuracy-based channel mapping on evaluation data."
+        "Exact identity, safe permutation, duplicate/colliding alias, coordinate/signal unit, rigid-transform, reflection, missing-orientation/frame/reference, and interpolation-provenance fixtures.",
+        "Original and canonical names, units, positions, orientations, references, missingness, operators, and hashes retained side by side.",
+        "No magnitude-inferred units, template substitution, hidden interpolation/rereference, or accuracy-based channel mapping."
       ],
       "primary_metrics": [
         "matched, missing, duplicate, and ambiguous channel counts",
-        "coordinate transform residual",
-        "unit and reference conversion identity",
-        "geometry availability fraction",
-        "roundtrip and provenance hashes"
+        "coordinate transform orthogonality, determinant, and inverse roundtrip residual",
+        "unit conversion identity and dimension compatibility",
+        "geometry, orientation, reference, and compensation availability fractions",
+        "exact refusal, access, resource, warning, unavailable-field, and provenance-hash ledgers"
       ],
-      "acceptance_boundary": "Proceed only when transforms are deterministic, reversible where promised, hash-bound, and refuse ambiguous geometry or reference instead of guessing.",
-      "stop_rule": "Keep geometry unavailable if source coordinates or frames cannot be proven; do not infer device equivalence from channel names alone.",
-      "depends_on": [29],
-      "external_gates": [],
-      "authorization_boundary": "Planning only. Synthetic fixture work or real-header inspection requires a separately scoped Loop 36 authorization.",
-      "resource_cap": "Dependency-free core, optional MNE only inside adapters, one thread, 16 MiB artifacts, and zero signal-array reads for metadata mode."
+      "representation_layer_count": 6,
+      "modality_profile_count": 5,
+      "channel_record_field_count": 24,
+      "operation_class_count": 12,
+      "future_fixture_family_count": 16,
+      "future_requirement_count": 22,
+      "future_refusal_count": 30,
+      "maximum_future_real_metadata_claim": "declared_metadata_compatibility",
+      "acceptance_boundary": "A future Stage A passes only when exact identities, explicit bijective aliases, declared units, named frames, rigid transform direction/roundtrip, orientations, references, missingness, operator classes, 22 gates, 30 refusals, resources, access counters, and hashes are exact. It establishes synthetic schema identity only.",
+      "stop_rule": "Publish unavailable or incompatible on ambiguous identity, unknown units/frame/reference/orientation, reflection, failed roundtrip, template substitution, hidden rereference/interpolation, accuracy-selected mapping, cap/hash failure, or overclaim. Never infer numerical, model, device, neural, or scientific equivalence from metadata alone.",
+      "depends_on": [29, 30, 35],
+      "external_gates": ["separate_stage_a_synthetic_metadata_preregistration_and_authorization", "separate_real_header_file_byte_privacy_packet", "separate_signal_transform_authorization"],
+      "authorization_boundary": "Planning research only. No fixture, metadata adapter, real header/signal/target read, alias/transform fit or apply, unit conversion, rereference, compensation, interpolation, source localization, model, training, download, stream, device, hardware, or equivalence claim is authorized.",
+      "resource_cap": "Current research used one thread/worker, three public web operations, zero protected bytes, and an 8 MiB planning cap. Future Stage A remains one thread/worker, 120 seconds, 1 GiB RSS, 16 MiB artifacts, zero downloads, and optional MNE only inside adapters; real-header and signal-transform bytes remain unavailable until exact packets."
     },
     {
       "loop_id": 37,
@@ -1020,7 +1047,7 @@
     "33": ["brain2qwerty_v2", "brain_decoding_image_scaling", "eeg_speech_scaling_175h", "classification_learning_curve_sample_size", "small_sample_cv_uncertainty"],
     "34": ["selective_prediction", "conformal_risk_control", "conformal_beyond_exchangeability", "neural_network_calibration", "calibration_measurement", "generalized_risk_coverage"],
     "35": ["brain2qwerty_v1", "brain2qwerty_v2", "eye_movement_decoding_confounds", "eeg_bci_artifacts", "meg_movement_muscle_artifacts", "motion_muscle_phantom_validation"],
-    "36": ["mne_resampling", "bids_derivatives"],
+    "36": ["bids_coordinate_systems", "bids_meg", "bids_eeg", "bids_units", "mne_coordinate_frames", "mne_transform", "mne_digmontage", "mne_eeg_reference", "mne_bad_interpolation"],
     "37": ["bids_derivatives", "datasheets"],
     "38": ["eeg_identity_privacy", "nist_privacy_framework"],
     "39": ["moabb_benchmark", "model_cards"],
@@ -1390,6 +1417,48 @@
       "title": "Motion and Muscle Artifact Removal Validation Using an Electrical Head Phantom, Robotic Motion Platform, and Dual Layer Mobile EEG",
       "url": "https://pubmed.ncbi.nlm.nih.gov/32746290/",
       "roadmap_use": "Ground-truth source, motion, noise-sensor, and neck-EMG validation of artifact removal rather than assuming cleaning success."
+    },
+    {
+      "source_id": "bids_coordinate_systems",
+      "title": "BIDS Coordinate Systems",
+      "url": "https://bids-specification.readthedocs.io/en/stable/appendices/coordinate-systems.html",
+      "roadmap_use": "Named MEG/EEG coordinate systems, origins, orientations, handedness, and separate coordinate units."
+    },
+    {
+      "source_id": "bids_units",
+      "title": "BIDS Units Appendix",
+      "url": "https://bids-specification.readthedocs.io/en/stable/appendices/units.html",
+      "roadmap_use": "SI-compatible unit encoding and explicit custom-unit definitions."
+    },
+    {
+      "source_id": "mne_coordinate_frames",
+      "title": "MNE Source Alignment and Coordinate Frames",
+      "url": "https://mne.tools/1.8/auto_tutorials/forward/20_source_alignment.html",
+      "roadmap_use": "MEG device, head, and MRI frames plus explicit directional transforms and alignment failure examples."
+    },
+    {
+      "source_id": "mne_transform",
+      "title": "MNE Transform API",
+      "url": "https://mne.tools/stable/generated/mne.transforms.Transform.html",
+      "roadmap_use": "From/to frame identity and 4x4 homogeneous transform representation."
+    },
+    {
+      "source_id": "mne_digmontage",
+      "title": "MNE DigMontage API",
+      "url": "https://mne.tools/stable/generated/mne.channels.DigMontage.html",
+      "roadmap_use": "Channel positions, fiducials, montage provenance, and conversion into the head frame."
+    },
+    {
+      "source_id": "mne_eeg_reference",
+      "title": "MNE EEG Reference API",
+      "url": "https://mne.tools/stable/generated/mne.set_eeg_reference.html",
+      "roadmap_use": "Acquisition and derived reference choices, bad-channel dependence, and data-changing reference operators."
+    },
+    {
+      "source_id": "mne_bad_interpolation",
+      "title": "MNE Bad-Channel Interpolation Example",
+      "url": "https://mne.tools/stable/auto_examples/preprocessing/interpolate_bad_channels.html",
+      "roadmap_use": "Geometry- and method-dependent interpolation as model-based imputation rather than identity."
     }
   ]
 }

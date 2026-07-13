@@ -258,6 +258,23 @@ information beyond recorded controls, not absolute brain origin. No synthetic
 fixture, EOG/EMG/gaze/motion/audio acquisition, protected-data read, model,
 training, scoring, no-keypress study, device, or hardware work is authorized.
 
+Loop 36 planning research is complete while its geometry/reference experiment
+remains `Not Started` and unauthorized:
+
+```bash
+cat docs/LOOP_36_PRIMARY_SOURCE_RESEARCH.md
+python -m json.tool registries/loop36_research_boundary.v0.json >/dev/null
+```
+
+The boundary freezes six representation layers, five modality profiles, a
+24-field future channel record, 12 operation classes, 16 fixture families, 22
+gates, 30 refusals, and 29 false `authorized_now` fields. It permits a future
+real-header result to claim at most declared metadata compatibility. Unknown
+names, units, frames, orientations, references, compensation, or missingness
+remain unavailable. No fixture, header/signal read, transform, unit conversion,
+rereference, interpolation, model, training, device, or hardware operation is
+authorized.
+
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
 commit `c3d1f01`, before any adapter, source chunk, fixture, socket, board, or
@@ -302,7 +319,9 @@ experiment remains `Not Started`; Loop 32 planning research defines the
 remains `Not Started`; Loop 34 planning research defines a three-way confidence
 firewall while its experiment remains `Not Started`; Loop 35 planning research
 defines a staged peripheral-confound firewall while its experiment remains
-`Not Started`; Loops 36-44 remain `Not Started`. All 20
+`Not Started`; Loop 36 planning research defines the geometry/reference
+identity firewall while its experiment remains `Not Started`; Loops 37-44
+remain `Not Started`. All 20
 execution flags are false. This roadmap does not
 reopen Loop 24, authorize RW3, or permit a Loop 25-44 fixture, download, data
 read, model run, training run, stream, board, or hardware operation. A broad
@@ -383,6 +402,11 @@ authorization boundary.
   refusals. Missing real peripheral controls fail closed; the maximum future
   local claim is incremental brain-sensor information beyond recorded controls,
   not absolute brain origin.
+- The Loop 36 planning registry remains exact with 29 false authorization
+  fields, six representation layers, five modality profiles, a 24-field channel
+  record, 12 operation classes, 16 fixture families, 22 gates, and 30 refusals.
+  Metadata compatibility remains separate from signal transforms, model
+  transfer, device equivalence, and scientific claims.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed

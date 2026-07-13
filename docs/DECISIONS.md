@@ -1954,3 +1954,65 @@ Evidence: `docs/LOOP_35_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop35_research_boundary.v0.json`,
 `tests/test_loop35_research_boundary.py`, roadmap row 35, research commit
 `6f48363`, push CI run `29214860306`, and draft PR #14 CI run `29214881916`.
+
+## 0063 - Treat harmonization as an explicit operator, not hidden equivalence
+
+Decision: close Loop 36 planning research while leaving the geometry/reference
+experiment `Not Started`, all 29 `authorized_now` fields false, and no fixture,
+real header, signal, transform, unit conversion, rereference, compensation,
+interpolation, model, training, stream, device, or hardware operation opened.
+Freeze six representation layers, five modality profiles, a 24-field future
+channel record, 12 operation classes, 16 fixture families, 22 gates, and 30
+refusal IDs.
+
+Why: BIDS separates channels from electrodes, signal units from coordinate
+units, and coordinate-system semantics from coordinates. MNE separates device,
+head, and MRI frames and treats rereference and interpolation as data-changing
+operations. A matching label, channel count, standard montage name, integer
+frame code, or visually similar layout cannot prove equivalence.
+
+Identity boundary: allow only unique explicit reorder, versioned bijective
+aliases, exact declared unit factors, and directional right-handed rigid
+transforms as candidate identity-preserving metadata operations. Require frame
+names, origin, axes, handedness, transform direction, orthogonality,
+determinant `+1`, orientation-without-translation, source/config/transform
+hashes, and a `1e-9 m` synthetic inverse-roundtrip ceiling. Unknown or custom
+units, unknown frames, reflections, missing orientation, and ambiguous aliases
+refuse rather than guess.
+
+Signal boundary: EEG rereference, MEG compensation/projectors, signal-unit
+scaling, bad-channel interpolation, sensor-to-template mapping, and zero-fill
+change or synthesize signal values. They require signal access, their own
+operator provenance, preserved missingness, frozen fit scope, and separate
+authorization. Evaluation accuracy may not select a mapping.
+
+Current-evidence boundary: S21 caches preserve names, MNE types, positions in
+metres, integer frame/unit codes, and coil types but not a complete exchange-
+frame, orientation, transform, and compensation ledger. Loop 11's within-cache
+subsets are not cross-device evidence. The consumed S7 cache lacks a qualified
+measured electrode and acquisition-reference contract. None was reopened.
+
+Staging boundary: future Stage A is target-free synthetic metadata and can
+establish only schema/refusal identity. Stage B is an exact real-header packet
+with file, byte, field, and privacy caps and can establish at most declared
+metadata compatibility. Stage C is a separately authorized signal-transform
+protocol and can establish at most named protocol-specific numerical
+compatibility. No stage establishes model transfer or device equivalence.
+
+Access and resource result: this research used three high-level public web
+operations, one CPU thread/worker, and zero protected download bytes, real
+headers, signal/cache/target reads, fixtures, transforms, conversions,
+rereference/interpolation, model/training runs, S20/S25 operations, streams,
+devices, or hardware operations. Public-network response bytes and browser
+runtime/RSS are unavailable. The user's 5-10 GB envelope is capacity only.
+
+Claim boundary: no synthetic schema result, real metadata compatibility,
+geometry compatibility, numerical compatibility, model transfer, device
+equivalence, neural advantage, unseen-person generalization, real-time
+behavior, portable hardware, at-home use, patient benefit, or clinical result
+exists.
+
+Evidence: `docs/LOOP_36_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop36_research_boundary.v0.json`,
+`tests/test_loop36_research_boundary.py`, roadmap row 36, research commit
+`4d5c7d2`, push CI run `29216381237`, and draft PR #15 CI run `29216397245`.

@@ -2838,3 +2838,72 @@ accessed, so there is no peripheral-control result, incremental brain-sensor
 result, absolute brain-origin result, neural advantage, decoding accuracy,
 unseen-person generalization, no-keypress transfer, real-time behavior, or
 portable-hardware result.
+
+## 2026-07-12 - Loop 36 geometry/reference research boundary
+
+Closed Loop 36 planning research while leaving the geometry/reference
+experiment `Not Started`, all 29 `authorized_now` fields false, and every
+fixture, real-header read, protected-data read, geometry transform, signal-unit
+conversion, rereference, compensation, interpolation, model, training, stream,
+device, and hardware operation closed. The machine contract freezes six
+representation layers, five modality profiles, a 24-field future channel
+record, 12 operation classes, 16 fixture families, 22 future gates, and 30
+refusal IDs.
+
+The primary-source audit binds BIDS channel, electrode, coordinate-system, and
+unit semantics to MNE frame, montage, reference, transform, and interpolation
+behavior. A matching label, standard montage name, integer coordinate-frame
+code, channel count, or visually similar layout is not enough to establish
+identity. Explicit unique reorder, versioned bijective aliases, declared unit
+factors, and directional right-handed rigid transforms are the only candidate
+identity-preserving operations. Signal scaling, EEG rereference, MEG
+compensation/projectors, interpolation, zero-fill, and template mapping change
+or synthesize data and require a separate signal authorization.
+
+Current S21 aggregate/code evidence preserves names, types, positions in
+metres, integer frame/unit codes, and coil types, but not a complete exchange-
+frame, orientation, transform, reference, and compensation ledger. The
+consumed S7 cache has no qualified measured electrode and acquisition-reference
+contract. Neither dataset was reopened. A future separately authorized real-
+header pass can establish at most declared metadata compatibility, not
+numerical compatibility, model transfer, or device equivalence.
+
+The nine-sheet tracker updates Dashboard `B10` and Loop 36 row 16, adds decision
+`36-R1`, risk `R41`, and prompt `Loop36-Research`, and preserves Loop 25 as the
+active execution decision. The 92,990-byte workbook has SHA-256
+`12d49d56ab0bc2b316c3df0537a221282a220538b7ddc5544b7646d3dcba3dad`;
+all nine sheets rendered before and after the edit, the export reloads with
+exact key ranges, and the formula-error scan matches zero cells. The unrelated
+321,169-byte inspection sidecar remains byte-identical at SHA-256
+`5cd0ef08446c4e5feee5ce11f27eef41fae5eee8975cc77f6d401faca3b79f45`.
+
+Local verification passes 248 focused Loop 24-36 tests in 3.74 seconds wall
+with 240,041,984-byte maximum RSS; the strict Loop 36 plus roadmap slice passes
+26 tests in 0.07 seconds wall with 20,365,312-byte maximum RSS; 527 optional
+unittests pass with three expected skips in 21.80 seconds wall and
+564,117,504-byte maximum RSS; 524 pytest tests pass with three skips and 240
+subtests in 22.73 seconds wall and 591,183,872-byte maximum RSS; and 495
+dependency-light tests pass with 121 optional skips in 1.57 seconds wall and
+57,638,912-byte maximum RSS. Each full count is 17 above the Loop 35 closeout.
+
+Repository-wide Ruff lint, touched-file formatting, compileall, 25 source JSON
+and two TOML parses, seven CLI help surfaces, 55 registered commands,
+unauthorized Loop 36 runtime absence, 72 checked local Markdown links with zero
+missing, workbook render/reload/formula inspection, and `git diff --check`
+pass. Three high-level public web operations were used; public response bytes
+and browser runtime/RSS are unavailable by tool contract. Protected download
+bytes, real header/cache/signal/target reads, fixtures, generated payload,
+transforms, models, training runs, streams, devices, and hardware operations
+remain zero. Commit and CI identities are added only after the tested research
+milestone is pushed. Research commit `4d5c7d2` passes push CI run
+`29216381237` and draft PR #15 CI run `29216397245`.
+
+Engineering capability added: a machine-checkable geometry/reference identity
+firewall, operation taxonomy, staged header/signal protocol, strict refusal
+surface, and bounded declared-metadata claim now exist.
+
+Scientific claim not established: no fixture, protected data, real header,
+signal, transform, model, training run, target, score, device, or hardware was
+accessed, so there is no metadata-compatibility result, numerical compatibility,
+model transfer, device equivalence, neural advantage, decoding accuracy,
+unseen-person generalization, real-time behavior, or portable-hardware result.

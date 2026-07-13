@@ -100,7 +100,12 @@
 > experiment remains `Not Started`; current evidence cannot support
 > incremental brain-sensor information beyond recorded controls or absolute
 > brain origin.
-> Loops 36-44 remain `Not Started`.
+> Loop 36 planning research freezes six representation layers, five modality
+> profiles, 24 channel fields, 12 operation classes, 16 fixture families, 22
+> gates, 30 refusals, and 29 false authorization fields. Its experiment remains
+> `Not Started`; declared metadata compatibility is the maximum future real-
+> header claim, while numerical/model/device equivalence remains unavailable.
+> Loops 37-44 remain `Not Started`.
 > This does not reopen Loop 24 or authorize RW3, data, targets, models,
 > validation, training, calibration, or hardware.
 > In parallel, RW0 closes a primary-source Real-World Practice research gate
@@ -293,6 +298,11 @@ This repo is a starter scaffold with working pure-Python components:
   future synchronized stream classes, 13 conditions, three independently
   authorized stages, 24 gates, 32 refusals, 31 false authorization fields, and
   a fail-closed missing-control rule; the experiment remains `Not Started`
+- machine-checked Loop 36 planning research with six representation layers,
+  five modality profiles, a 24-field channel record, 12 operation classes, 16
+  fixture families, 22 gates, 30 refusals, 29 false authorization fields, and
+  strict separation between metadata identity and data-changing transforms;
+  the experiment remains `Not Started`
 - JSON/Markdown metrics report command
 - CLI smoke commands
 - unit tests
@@ -305,30 +315,31 @@ negative within-session event comparison. None is a decoder success. Do not
 turn these results, a variance ranking, or a geometry proxy into unseen-person
 or population generalization.
 
-Current Loop 35 local verification passes 510 unittests with 3 expected skips
-in 23.06 seconds wall and 561,594,368-byte maximum RSS; pytest reports 507
-passed, 3 skipped, and 233 subtests in 23.41 seconds wall with
-587,186,176-byte maximum RSS. The focused Loop 24-35 boundary has 231 passing
-tests in 4.43 seconds wall and 239,075,328-byte maximum RSS; the strict Loop 35
-plus roadmap slice has 27 tests in 0.09 seconds wall and 20,299,776-byte
-maximum RSS. Dependency-light discovery is green at 478 tests with 121
-optional skips in 0.96 seconds wall and 55,902,208-byte maximum RSS. Each full
-count is 18 above the Loop 34 closeout. No Loop 25-35 fixture, coefficient,
+Current Loop 36 local verification passes 527 unittests with 3 expected skips
+in 21.80 seconds wall and 564,117,504-byte maximum RSS; pytest reports 524
+passed, 3 skipped, and 240 subtests in 22.73 seconds wall with
+591,183,872-byte maximum RSS. The focused Loop 24-36 boundary has 248 passing
+tests in 3.74 seconds wall and 240,041,984-byte maximum RSS; the strict Loop 36
+plus roadmap slice has 26 tests in 0.07 seconds wall and 20,365,312-byte
+maximum RSS. Dependency-light discovery is green at 495 tests with 121
+optional skips in 1.57 seconds wall and 57,638,912-byte maximum RSS. Each full
+count is 17 above the Loop 35 closeout. No Loop 25-36 fixture, coefficient,
 preprocessing run, candidate selection/download, local MAT payload hash,
 header/signal/target/validation/model read, adapter fit, training run,
 calibration or confidence fit, learning-curve or confidence score, peripheral
 recording, residualization fit, physical-repetition study, product-confidence
-surface, language-model/Neuro Token run, network payload download, RW3
+surface, geometry transform, unit conversion, rereference, interpolation,
+language-model/Neuro Token run, protected network payload download, RW3
 operation, SDK import, stream, board, device, partner, or hardware operation
-occurred. The tracked workbook is 91,463 bytes
+occurred. The tracked workbook is 92,990 bytes
 with SHA-256
-`90b59a0646837b1a83281c144edff688b967fd44deda06e2a7c09a0dccb9f61a`;
+`12d49d56ab0bc2b316c3df0537a221282a220538b7ddc5544b7646d3dcba3dad`;
 all nine sheets render, the export reloads with exact key ranges, and the
-formula scan has zero matches. Ruff, touched-file format checks, compileall, 23
-source JSON and two TOML parses, 74 checked local Markdown links with zero
-missing, seven CLI help surfaces, 55 registered commands, unauthorized Loop 35
-runtime absence, and `git diff --check` pass. Research commit `6f48363` passes
-push CI run `29214860306` and draft PR #14 CI run `29214881916`.
+formula scan has zero matches. Ruff, touched-file format checks, compileall, 25
+source JSON and two TOML parses, 72 checked local Markdown links with zero
+missing, seven CLI help surfaces, 55 registered commands, unauthorized Loop 36
+runtime absence, and `git diff --check` pass. Research commit `4d5c7d2` passes
+push CI run `29216381237` and draft PR #15 CI run `29216397245`.
 
 ## The north star
 
@@ -411,6 +422,13 @@ This is not primarily a model repo. It is a **research loop repo**.
    brain-sensor information beyond recorded controls. The experiment is `Not
    Started`; no fixture, acquisition, protected-data read, model, training,
    scoring, no-keypress study, device, or hardware work is authorized.
+   For Loop 36, read `docs/LOOP_36_PRIMARY_SOURCE_RESEARCH.md` and
+   `registries/loop36_research_boundary.v0.json`. Its planning research defines
+   channel, unit, frame, transform, reference, compensation, interpolation,
+   and missingness boundaries. The experiment is `Not Started`; no fixture,
+   header/signal read, transform, rereference, interpolation, model, training,
+   or device operation is authorized. Declared metadata compatibility is not
+   numerical compatibility or model/device equivalence.
    Each future loop still requires its own packet before execution.
 4. **Keep the GitHub history reviewable.** PR #3 carries the validated Loop
    8-24 evidence stack and is green. Draft PR #4 carries the separately stacked
