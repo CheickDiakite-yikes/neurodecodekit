@@ -90,14 +90,16 @@ Do not reset, revert, delete, or overwrite work already present.
   while its experiment remains `Not Started`; Loop 27 planning research has
   selected S25 metadata while preregistration remains blocked; Loop 28 planning
   research defines a strict zero-shot rule while its experiment remains `Not
-  Started`; Loops 29-38 have completed planning research while their
+  Started`; Loops 29-39 have completed planning research while their
   experiments remain `Not Started`; confidence is unavailable, Loop 35's
   maximum future local claim is incremental brain-sensor information beyond
   recorded controls, Loop 36's maximum future real-header claim is
   declared metadata compatibility, Loop 37 caps future Stage B at a validator-
   assessed BIDS envelope with explicitly non-standard payloads, Loop 38 keeps
   unknown copies unresolved and separates path receipts from media
-  sanitization, and Loops 39-44 remain `Not Started`; all 20
+  sanitization, Loop 39 separates deterministic replay, semantic/numerical
+  compatibility, reproduction, independent reproduction, and replication,
+  and Loops 40-44 remain `Not Started`; all 20
   execution flags remain false.
 - Loop 26's planning boundary recommends a 2,908-parameter causal candidate, a
   2,884-parameter linear comparator, six controls, and exact enumeration of all
@@ -203,6 +205,17 @@ Do not reset, revert, delete, or overwrite work already present.
   unresolved. No fixture, scanner, deletion, protected-root scan, identity
   attack, history rewrite, consent determination, release/upload, model,
   training, stream, device, or hardware operation is authorized.
+- Loop 39 planning research is complete while the cross-machine reproducibility
+  experiment remains `Not Started` and unauthorized. The boundary freezes 7
+  qualification levels, 18 environment identity fields, 8 output classes, 6
+  comparison classes, 6 future Ubuntu/macOS matrix cells, 20 fixture families,
+  4 stages, 28 gates, 38 refusals, and 36 false authorization fields. The
+  current repository has 2 Ubuntu-latest Python 3.12 CI profiles, 0 explicit
+  cross-OS cells, 0 tracked lockfiles, no package reproducibility job, and 2
+  direct `tomllib` test imports that block claiming Python 3.10 qualification.
+  No fixture, environment manifest, matrix job, dependency lock, package
+  build, protected payload, model, training run, independent reproducer, edge
+  runtime, device, or hardware operation is authorized.
 - No real recording quality, neural advantage, unseen-person generalization,
   useful EEG decoder, real-time decoding, portable-hardware, arbitrary-thought,
   or clinical result has been demonstrated.

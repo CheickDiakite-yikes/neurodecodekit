@@ -3040,3 +3040,77 @@ run, target, score, release, device, or hardware was accessed, so there is no
 privacy-safe dataset, anonymous neural representation, verified media
 sanitization, shareable release, neural advantage, decoding accuracy,
 unseen-person generalization, real-time behavior, or portable-hardware result.
+
+## 2026-07-13 - Loop 39 cross-machine reproducibility research boundary
+
+Closed Loop 39 planning research while leaving the reproducibility experiment
+`Not Started`, all 36 `authorized_now` fields false, and every fixture,
+environment manifest, matrix job, dependency lock/install, package build,
+protected payload, model, training run, independent reproducer, edge runtime,
+stream, device, and hardware operation closed. The machine contract freezes
+seven qualification levels, 18 environment identity fields, eight output
+classes, six comparison classes, six future matrix cells, 20 fixture families,
+four independently authorized stages, eight outcomes, seven claims, 28 gates,
+and 38 refusal IDs.
+
+The primary-source audit uses ACM terminology to separate same-team
+repeatability, different-team reproduction, and replication; uses Reproducible
+Builds only for specified bit-identical build artifacts; and records Python,
+PyPA, NumPy, PyTorch, GitHub Actions, MNE, and Scientific Python environment
+boundaries. The future matrix contains Ubuntu 24.04 x64 Python 3.10/3.11/3.12
+base, macOS 15 arm64 Python 3.12 base, and separate Ubuntu/macOS Python 3.12
+optional-neuro cells. Semantic identity and floating compatibility use
+different comparison classes and cannot be promoted into independent
+reproduction or scientific replication.
+
+The local support audit found two `ubuntu-latest` Python 3.12 CI profiles, zero
+explicit cross-OS cells, zero tracked lockfiles, no reproducible package-build
+job, and two direct `tomllib` test imports that leave complete Python 3.10 test
+qualification unavailable. The diagnostics-only local host was Darwin 25.6.0
+arm64 with CPython 3.13.5, NeuroDecodeKit 0.1.0, NumPy 2.5.0, SciPy 1.18.0, MNE
+1.12.1, and Torch 2.13.0; it was not counted as a completed matrix cell. Six
+high-level public web operations and eight official or primary page opens
+informed the planning record. Public response bytes and web runtime/RSS are
+unavailable by tool contract. Protected reads, fixtures, manifests, matrix
+jobs, installs, lockfiles, package builds, models, training runs, edge runs,
+streams, devices, and hardware operations remain zero.
+
+The nine-sheet tracker updates Dashboard `B10` and Loop 39 row 19, adds
+decision `39-R1`, risk `R44`, and prompt `Loop39-Research`, and preserves Loop
+25 as the active execution decision. The 97,628-byte workbook has SHA-256
+`d0f661b9718891237605873eff1124cea7df90fbb70f4affeb04740b497a327c`;
+all nine sheets rendered before and after the edit, four untouched sheets were
+pixel-identical, the export reloads with exact key ranges, and the formula-
+error scan matches zero cells. The unrelated 321,169-byte inspection sidecar
+remains byte-identical at SHA-256
+`5cd0ef08446c4e5feee5ce11f27eef41fae5eee8975cc77f6d401faca3b79f45`.
+
+Local verification passes 256 focused Loop 24-39 planning tests in 0.25 seconds
+wall with 66,093,056-byte maximum RSS; the strict Loop 39 plus roadmap slice
+passes 25 tests in 0.09 seconds wall with 34,930,688-byte maximum RSS; 574
+optional unittests pass with three expected skips in 21.80 seconds wall and
+608,272,384-byte maximum RSS; 571 pytest tests pass with three skips and 261
+subtests in 21.96 seconds wall and 615,596,032-byte maximum RSS; and 542
+dependency-light tests pass with 121 optional skips in 0.64 seconds wall and
+83,509,248-byte maximum RSS. Each full count is 16 above the Loop 38 closeout.
+One initial full-suite invocation omitted `PYTHONPATH=src` and failed import
+collection; the corrected source-layout command produced the green counts
+above.
+
+Repository-wide Ruff lint, seven touched Python file format checks, compileall,
+27 source JSON and two TOML parses, seven CLI help surfaces, 55 registered
+commands, unauthorized Loop 39 runtime absence, 72 checked local Markdown links
+with zero missing, workbook render/reload/formula inspection, and `git diff
+--check` pass. Remote commit and CI identifiers are pending.
+
+Engineering capability added: a machine-checkable cross-machine
+reproducibility taxonomy, environment identity contract, six-cell future
+matrix, output comparison firewall, numerical tolerance policy, resource
+envelope, and strict claim ceiling now exist.
+
+Scientific claim not established: no fixture, environment manifest, matrix
+job, dependency lock, package build, protected payload, model, training run,
+target, score, independent reproducer, edge runtime, device, or hardware was
+accessed, so there is no cross-machine reproduction, independent replication,
+neural advantage, decoding accuracy, unseen-person generalization, real-time
+behavior, or portable-hardware result.

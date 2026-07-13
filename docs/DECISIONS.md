@@ -2149,3 +2149,62 @@ Evidence: `docs/LOOP_38_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop38_research_boundary.v0.json`,
 `tests/test_loop38_research_boundary.py`, roadmap row 38, research commit
 `c82c3fa`, push CI run `29228686142`, and draft PR #17 CI run `29228698759`.
+
+## 0066 - Separate Replay, Compatibility, Reproduction, And Replication
+
+Decision: close Loop 39 planning research while leaving the cross-machine
+reproducibility experiment `Not Started`, all 36 `authorized_now` fields false,
+and no fixture, environment manifest, matrix job, dependency lock, package
+build, protected payload, model, training run, independent reproducer, edge
+runtime, device, or hardware operation opened. Freeze seven qualification
+levels, 18 environment identity fields, eight output classes, six comparison
+classes, six future matrix cells, 20 fixture families, four independently
+authorized stages, 28 gates, and 38 refusal IDs.
+
+Claim boundary: deterministic replay on one machine is not bitwise identity;
+bitwise identity is not exact semantic identity; numerical compatibility is
+not cross-machine reproduction; same-team reproduction is not independent
+reproduction; and independent reproduction is not scientific replication.
+Each claim requires its own named evidence and failures remain visible.
+
+Environment boundary: every future cell binds OS name/version/architecture,
+Python implementation/version, NeuroDecodeKit revision, dependency manifest,
+optional profile, thread variables, `PYTHONHASHSEED`, locale, time zone,
+filesystem, machine/runner identity, processor, BLAS/backend information, and
+hardware accelerator state. Human-readable diagnostics are evidence, not a
+portable lock or proof of compatibility.
+
+Comparison boundary: compare schemas, metadata, identities, arrays, floating
+values, reports, and package artifacts by their declared class. Require exact
+hashes for canonical bytes and exact semantic fields; allow only
+preregistered absolute/relative tolerance for floating arrays, with NaN,
+infinity, dtype, shape, and mask handling explicit. A wheel or source archive
+hash mismatch does not by itself imply behavioral incompatibility, and a
+passing numerical tolerance does not imply package reproducibility.
+
+Support result: the current repository declares Python 3.10-3.12 and OS
+independence but runs two `ubuntu-latest` Python 3.12 CI profiles, zero explicit
+cross-OS cells, no tracked lockfile, and no reproducible package-build job. Two
+tests directly import `tomllib`, so the complete Python 3.10 test surface is
+currently unqualified. The local diagnostics-only host is Darwin 25.6.0 arm64,
+CPython 3.13.5 with NeuroDecodeKit 0.1.0, NumPy 2.5.0, SciPy 1.18.0, MNE 1.12.1,
+and Torch 2.13.0; this is not a completed matrix cell.
+
+Future resource boundary: at most two parallel jobs, one thread per worker, 20
+minutes and 1 GiB peak RSS per cell, 4 MiB generated artifacts per cell, and 24
+MiB total generated artifacts. Protected reads, model runs, training runs,
+downloads, package releases, streams, devices, and hardware operations remain
+zero until separately authorized.
+
+Claim boundary: no cross-machine reproduction, independent reproduction,
+scientific replication, neural advantage, decoding accuracy, unseen-person
+generalization, real-time behavior, edge-runtime qualification, or portable-
+hardware result exists.
+
+Evidence: `docs/LOOP_39_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop39_research_boundary.v0.json`,
+`tests/test_loop39_research_boundary.py`, and roadmap row 39. Research commit,
+push CI, and draft-PR CI identifiers are pending verification. Local
+verification passes 256 focused planning tests, 25 strict Loop 39/roadmap
+tests, 574 optional unittests, 571 pytest tests plus 261 subtests, and 542
+dependency-light tests.

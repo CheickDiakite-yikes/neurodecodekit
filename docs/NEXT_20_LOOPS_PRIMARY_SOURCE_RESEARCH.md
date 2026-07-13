@@ -845,3 +845,42 @@ deletion, history rewrite, identity attack, model, training, release, upload,
 stream, device, or hardware operations. Exact sources and boundaries are in
 `docs/LOOP_38_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop38_research_boundary.v0.json`.
+
+## 2026-07-13 Loop 39 Research Addendum
+
+Loop 39 planning research is complete while its cross-machine reproducibility
+experiment remains `Not Started` and unauthorized. ACM terminology separates
+same-team repeatability, different-team same-setup reproduction, and different-
+team different-setup replication. Reproducible Builds adds a narrower bitwise
+artifact definition tied to the same source, environment, and instructions.
+Neither definition permits one maintainer's green CI to stand in for
+independent reproduction or scientific replication.
+
+The current audit found a meaningful support gap. The project declares Python
+3.10-3.12 and OS Independent, but public CI runs only `ubuntu-latest` with
+Python 3.12. There is no macOS cell, exact OS pin, dependency lock,
+environment-manifest schema, central tolerance registry, or wheel/sdist
+reproducibility job. Two tests import standard-library `tomllib`, which is not
+available in Python 3.10 without a fallback. Python 3.10 therefore remains
+unqualified until the complete suite runs or the support declaration changes.
+
+The machine boundary freezes seven qualification levels, 18 environment
+identity fields, eight output classes, six comparison classes, six required
+future cells, 20 fixture families, four separately authorized stages, eight
+outcomes, seven claims, 28 gates, 38 refusals, and 36 false authorization
+fields. Exact IDs, timestamps, lengths, masks, splits, state, dtypes, shapes,
+and discrete values stay exact. Floating fields require preregistered absolute,
+relative, ULP, finite, and signed-zero policies; no global tolerance exists.
+
+The future matrix covers Ubuntu 24.04 with Python 3.10/3.11/3.12 base, macOS 15
+arm64 with Python 3.12 base, and separate Ubuntu/macOS Python 3.12 optional-
+neuro cells. It is capped at two parallel jobs, one thread/worker per cell, 20
+minutes, 1 GiB RSS, 4 MiB per cell, and 24 MiB total artifacts. Runtime and RSS
+remain descriptive rather than semantic identity.
+
+This research used six public web operations and eight official or primary
+page opens. It created zero fixture, manifest, matrix, lockfile, install,
+package, upload, protected read, model, training, edge, stream, device, or
+hardware operations. Exact sources and boundaries are in
+`docs/LOOP_39_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop39_research_boundary.v0.json`.

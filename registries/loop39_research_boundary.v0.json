@@ -1,0 +1,557 @@
+{
+  "schema_name": "neurodecodekit.loop39_research_boundary",
+  "schema_version": "0.1.0",
+  "loop_id": 39,
+  "prepared_at": "2026-07-13",
+  "status": "planning_research_complete_experiment_not_started",
+  "proof_posture": "planning_only_no_fixture_manifest_matrix_job_install_build_or_cross_machine_result",
+  "authorization": {
+    "authorization_sentence_exists": false,
+    "authorization_request_prepared": false,
+    "preregistration_prepared": false,
+    "experiment_execution_authorized_now": false,
+    "fixture_creation_authorized_now": false,
+    "environment_manifest_implementation_authorized_now": false,
+    "ci_matrix_mutation_authorized_now": false,
+    "workflow_job_addition_authorized_now": false,
+    "dependency_lock_creation_authorized_now": false,
+    "optional_dependency_install_authorized_now": false,
+    "network_install_authorized_now": false,
+    "package_build_authorized_now": false,
+    "wheel_or_sdist_upload_authorized_now": false,
+    "matrix_artifact_upload_authorized_now": false,
+    "base_matrix_execution_authorized_now": false,
+    "optional_neuro_matrix_execution_authorized_now": false,
+    "macos_matrix_runner_authorized_now": false,
+    "linux_loop39_matrix_runner_authorized_now": false,
+    "python310_matrix_cell_authorized_now": false,
+    "python311_matrix_cell_authorized_now": false,
+    "python312_loop39_matrix_cell_authorized_now": false,
+    "protected_data_read_authorized_now": false,
+    "consumed_cache_read_authorized_now": false,
+    "target_or_label_read_authorized_now": false,
+    "model_run_authorized_now": false,
+    "training_run_authorized_now": false,
+    "synthetic_seed_open_authorized_now": false,
+    "tolerance_calibration_authorized_now": false,
+    "tolerance_change_authorized_now": false,
+    "golden_payload_generation_authorized_now": false,
+    "cross_machine_reproducibility_claim_authorized_now": false,
+    "independent_reproducer_claim_authorized_now": false,
+    "public_release_authorized_now": false,
+    "edge_runtime_authorized_now": false,
+    "rw3_operation_authorized_now": false,
+    "device_operation_authorized_now": false,
+    "hardware_operation_authorized_now": false,
+    "loop40_execution_authorized_now": false,
+    "loop43_execution_authorized_now": false
+  },
+  "decision": {
+    "current_experiment_status": "Not Started",
+    "maximum_current_claim_class": "L39-C0_no_cross_machine_result",
+    "selected_future_required_cell_count": 6,
+    "selected_future_stage_b_claim": "L39-C3_supported_base_matrix_semantic_reproduction",
+    "selected_future_stage_c_claim": "L39-C4_supported_optional_neuro_numerical_compatibility",
+    "single_host_green_ci_is_cross_machine_reproduction": false,
+    "same_rounded_metric_is_artifact_identity": false,
+    "dependency_range_is_reproducible_environment": false,
+    "runtime_identity_required_for_semantic_pass": false,
+    "tolerance_can_be_widened_after_result_access": false,
+    "unsupported_cells_must_fail_explicitly": true,
+    "loop43_required_for_independent_team_reproduction": true
+  },
+  "dependencies": {
+    "loop37_planning_dependency_satisfied_now": true,
+    "loop38_planning_dependency_satisfied_now": true,
+    "loop37_execution_or_derivative_tree_required_for_stage_a": false,
+    "loop38_execution_or_lifecycle_scanner_required_for_stage_a": false,
+    "loop37_required_before_real_derivative_reproduction": true,
+    "loop38_required_before_real_or_public_artifact_transfer": true,
+    "loop40_requires_relevant_loop39_matrix_pass": true,
+    "loop43_required_before_independent_reproduction_claim": true,
+    "loop44_required_before_release_claim": true,
+    "general_continuation_is_execution_authorization": false
+  },
+  "standards_pins": {
+    "acm_artifact_review_badging_policy": "current_2026_page",
+    "acm_repeatability_definition": "same_team_same_experimental_setup",
+    "acm_reproducibility_definition": "different_team_same_experimental_setup",
+    "acm_replication_definition": "different_team_different_experimental_setup",
+    "reproducible_builds_definition": "same_source_environment_and_instructions_recreate_bit_identical_specified_artifacts",
+    "python_hash_seed_pin": "PYTHONHASHSEED=0_current_ci",
+    "pip_inspect_report_schema": "version_1_stable",
+    "pypa_reproducible_environment_spec": "pylock_toml_available_not_adopted_now",
+    "github_runner_labels": [
+      "ubuntu-24.04",
+      "macos-15"
+    ],
+    "mne_environment_report": "mne.sys_info_documented_but_not_run_now",
+    "numpy_runtime_report": "numpy.show_runtime_documented_but_not_run_now",
+    "pytorch_cross_release_platform_bitwise_guarantee": false,
+    "scientific_python_spec0_is_support_policy_not_environment_lock": true
+  },
+  "current_support_audit": {
+    "declared_python_minimum": "3.10",
+    "declared_python_classifier_minors": [
+      "3.10",
+      "3.11",
+      "3.12"
+    ],
+    "declared_operating_system_classifier": "Operating System :: OS Independent",
+    "current_public_ci_os_label": "ubuntu-latest",
+    "current_public_ci_python_minor": "3.12",
+    "current_public_ci_profiles": [
+      "base",
+      "optional_neuro"
+    ],
+    "current_public_ci_cross_os_cells": 0,
+    "current_public_ci_exact_os_label_pinned": false,
+    "current_dependency_lockfiles": 0,
+    "current_wheel_or_sdist_reproducibility_jobs": 0,
+    "current_environment_manifest_schema": false,
+    "current_central_tolerance_registry": false,
+    "current_ci_one_thread_environment": true,
+    "current_ci_fixed_python_hash_seed": true,
+    "python310_complete_test_suite_qualified_now": false,
+    "python311_complete_test_suite_qualified_now": false,
+    "macos_complete_test_suite_qualified_now": false,
+    "local_observed_environment": {
+      "status": "diagnostic_only_not_supported_matrix_evidence",
+      "python": "CPython 3.13.5",
+      "system": "Darwin 25.6.0",
+      "machine": "arm64",
+      "neurodecodekit": "0.1.0",
+      "numpy": "2.5.0",
+      "scipy": "1.18.0",
+      "mne": "1.12.1",
+      "torch": "2.13.0"
+    },
+    "python310_test_collection_warning": "two tests import standard_library_tomllib_which_exists_from_python_3_11_without_a_declared_fallback",
+    "support_decision": "declared_cells_remain_unqualified_until_the_registered_matrix_runs"
+  },
+  "qualification_levels": [
+    {
+      "level_id": "L39-Q0_unavailable",
+      "meaning": "No registered environment or comparison evidence exists."
+    },
+    {
+      "level_id": "L39-Q1_contract_declared",
+      "meaning": "Inputs outputs environment fields comparison rules and refusal states are frozen before execution."
+    },
+    {
+      "level_id": "L39-Q2_same_process_repeatable",
+      "meaning": "One process repeats the registered output under identical state and seed controls."
+    },
+    {
+      "level_id": "L39-Q3_clean_root_same_host_repeatable",
+      "meaning": "Two clean roots on one host reproduce the registered semantics and allowed numerical bounds."
+    },
+    {
+      "level_id": "L39-Q4_separate_host_same_cell_reproduced",
+      "meaning": "A separate host with the same registered cell reproduces the contract."
+    },
+    {
+      "level_id": "L39-Q5_supported_cross_platform_compatible",
+      "meaning": "Every required supported cell passes exact semantic gates and preregistered numerical compatibility."
+    },
+    {
+      "level_id": "L39-Q6_independent_team_reproduced",
+      "meaning": "A different team reproduces the result under Loop 43 without private maintainer state."
+    }
+  ],
+  "environment_identity_fields": [
+    "source_commit_and_dirty_state",
+    "workflow_revision_and_job_profile",
+    "runner_image_label_and_image_version",
+    "operating_system_name_version_and_kernel",
+    "cpu_architecture_and_exposed_instruction_set",
+    "python_implementation_full_version_and_executable_origin",
+    "python_abi_and_packaging_platform_tags",
+    "installer_name_and_version",
+    "requested_extras_and_dependency_graph",
+    "distribution_versions_direct_urls_and_available_hashes",
+    "numpy_blas_lapack_build_and_runtime_backend",
+    "numpy_simd_baseline_dispatch_and_disabled_features",
+    "torch_version_device_backend_and_determinism_flags",
+    "mne_version_and_core_dependency_report",
+    "thread_worker_and_hash_seed_environment",
+    "locale_timezone_encoding_and_filesystem_case_behavior",
+    "source_build_and_temporary_path_policy",
+    "resource_limits_and_runner_visibility_warnings"
+  ],
+  "output_classes": [
+    {
+      "output_id": "L39-O1_semantic_metadata",
+      "examples": "schema IDs item subject session trial split configuration provenance and warnings",
+      "comparison": "canonical_semantic_hash_exact"
+    },
+    {
+      "output_id": "L39-O2_time_and_state_identity",
+      "examples": "sample indices token timestamps causal flags context lengths and state transitions",
+      "comparison": "bitwise_or_canonical_exact"
+    },
+    {
+      "output_id": "L39-O3_discrete_arrays",
+      "examples": "lengths masks labels integer counters booleans and categorical predictions",
+      "comparison": "dtype_shape_and_values_exact"
+    },
+    {
+      "output_id": "L39-O4_floating_arrays",
+      "examples": "windows embeddings logits probabilities and numerical summaries",
+      "comparison": "dtype_shape_finite_policy_and_preregistered_field_tolerance"
+    },
+    {
+      "output_id": "L39-O5_container_bytes",
+      "examples": "npz zip wheel sdist and compressed report bundles",
+      "comparison": "exact_only_when_container_metadata_is_frozen_otherwise_payload_manifest_exact"
+    },
+    {
+      "output_id": "L39-O6_human_reports",
+      "examples": "markdown tables warning order and summaries",
+      "comparison": "canonical_content_exact_with_measured_audit_separate"
+    },
+    {
+      "output_id": "L39-O7_runtime_resources",
+      "examples": "wall time peak RSS install time and artifact bytes",
+      "comparison": "descriptive_distribution_not_semantic_identity"
+    },
+    {
+      "output_id": "L39-O8_failure_and_unsupported_records",
+      "examples": "install refusal unsupported operator missing wheel and unavailable backend",
+      "comparison": "stable_reason_code_exact_diagnostic_text_informational"
+    }
+  ],
+  "comparison_classes": [
+    "L39-K1_file_bytes_sha256_exact",
+    "L39-K2_canonical_semantic_json_sha256_exact",
+    "L39-K3_dtype_shape_and_discrete_values_exact",
+    "L39-K4_float_field_max_abs_max_rel_and_ulp_policy_preregistered",
+    "L39-K5_metric_or_runtime_interval_descriptive_only",
+    "L39-K6_explicit_unsupported_or_unavailable_reason"
+  ],
+  "future_required_matrix_cells": [
+    {
+      "cell_id": "L39-M1_ubuntu2404_py310_base",
+      "os": "ubuntu-24.04",
+      "architecture": "x64",
+      "python": "3.10",
+      "profile": "base",
+      "role": "declared_minimum_support_gate"
+    },
+    {
+      "cell_id": "L39-M2_ubuntu2404_py311_base",
+      "os": "ubuntu-24.04",
+      "architecture": "x64",
+      "python": "3.11",
+      "profile": "base",
+      "role": "declared_intermediate_support_gate"
+    },
+    {
+      "cell_id": "L39-M3_ubuntu2404_py312_base",
+      "os": "ubuntu-24.04",
+      "architecture": "x64",
+      "python": "3.12",
+      "profile": "base",
+      "role": "current_ci_reference_replacement_with_pinned_os"
+    },
+    {
+      "cell_id": "L39-M4_macos15_py312_base",
+      "os": "macos-15",
+      "architecture": "arm64",
+      "python": "3.12",
+      "profile": "base",
+      "role": "cross_os_and_at_home_mac_gate"
+    },
+    {
+      "cell_id": "L39-M5_ubuntu2404_py312_neuro",
+      "os": "ubuntu-24.04",
+      "architecture": "x64",
+      "python": "3.12",
+      "profile": "optional_neuro",
+      "role": "numpy_scipy_mne_reference_gate"
+    },
+    {
+      "cell_id": "L39-M6_macos15_py312_neuro",
+      "os": "macos-15",
+      "architecture": "arm64",
+      "python": "3.12",
+      "profile": "optional_neuro",
+      "role": "cross_os_numeric_backend_gate"
+    }
+  ],
+  "tolerance_policy": {
+    "central_registry_required": true,
+    "one_global_float_tolerance_allowed": false,
+    "semantic_fields_have_float_tolerance": false,
+    "shape_or_dtype_mismatch_can_pass_tolerance": false,
+    "nan_or_inf_is_implicit_equal": false,
+    "field_specific_max_abs_required": true,
+    "field_specific_max_rel_required": true,
+    "ulp_policy_required_when_meaningful": true,
+    "signed_zero_policy_required": true,
+    "reference_hash_frozen_before_matrix_execution": true,
+    "tolerance_frozen_before_candidate_result_access": true,
+    "protected_or_consumed_data_may_set_tolerance": false,
+    "runtime_or_rss_may_select_semantic_winner": false,
+    "post_failure_change_requires_new_version_decision_and_fresh_evidence": true
+  },
+  "future_fixture_families": [
+    "canonical_semantic_json_key_order_and_unicode",
+    "absolute_path_hostname_and_username_redaction",
+    "timezone_locale_and_encoding_variation",
+    "filesystem_case_and_separator_variation",
+    "python_hash_seed_variation_refusal",
+    "source_commit_or_dirty_state_mismatch",
+    "dependency_graph_and_direct_url_difference",
+    "wheel_abi_and_platform_tag_difference",
+    "blas_lapack_backend_difference",
+    "simd_dispatch_difference",
+    "thread_count_and_worker_count_difference",
+    "exact_timestamp_index_length_and_mask_identity",
+    "float32_field_specific_tolerance_pass",
+    "float32_field_specific_tolerance_fail",
+    "nan_inf_and_signed_zero_policy",
+    "compressed_container_metadata_variation",
+    "human_report_measured_audit_exclusion",
+    "unsupported_python_or_os_reason",
+    "artifact_cap_and_timeout_refusal",
+    "cross_cell_diagnostic_diff_stable_order"
+  ],
+  "future_stage_sequence": [
+    {
+      "stage_id": "L39-A_contract_and_target_free_fixture",
+      "separate_authorization_required": true,
+      "maximum_claim": "L39-C1_registered_repeatability_interface"
+    },
+    {
+      "stage_id": "L39-B_required_base_matrix",
+      "separate_authorization_required": true,
+      "maximum_claim": "L39-C3_supported_base_matrix_semantic_reproduction"
+    },
+    {
+      "stage_id": "L39-C_optional_neuro_matrix",
+      "separate_authorization_required": true,
+      "maximum_claim": "L39-C4_supported_optional_neuro_numerical_compatibility"
+    },
+    {
+      "stage_id": "L39-D_independent_handoff",
+      "separate_authorization_required": true,
+      "maximum_claim": "reserved_for_loop43_independent_team_reproduction"
+    }
+  ],
+  "outcome_taxonomy": [
+    "L39-X1_pass_exact_semantic_and_numeric",
+    "L39-X2_pass_exact_semantic_preregistered_numeric_tolerance",
+    "L39-X3_pass_semantic_runtime_differs_descriptively",
+    "L39-X4_unsupported_dependency_or_wheel_absent",
+    "L39-X5_fail_semantic_identity",
+    "L39-X6_fail_numerical_tolerance",
+    "L39-X7_fail_resource_or_artifact_cap",
+    "L39-X8_invalid_environment_or_provenance_manifest"
+  ],
+  "claim_taxonomy": [
+    {
+      "claim_id": "L39-C0_no_cross_machine_result",
+      "status": "current"
+    },
+    {
+      "claim_id": "L39-C1_registered_repeatability_interface",
+      "status": "future_stage_a_only"
+    },
+    {
+      "claim_id": "L39-C2_same_host_clean_root_repeatability",
+      "status": "future_stage_a_only"
+    },
+    {
+      "claim_id": "L39-C3_supported_base_matrix_semantic_reproduction",
+      "status": "future_stage_b_only"
+    },
+    {
+      "claim_id": "L39-C4_supported_optional_neuro_numerical_compatibility",
+      "status": "future_stage_c_only"
+    },
+    {
+      "claim_id": "L39-C5_independent_team_reproduction",
+      "status": "reserved_for_loop43"
+    },
+    {
+      "claim_id": "L39-C6_scientific_result_replicated",
+      "status": "reserved_for_independent_data_and_scientific_protocol"
+    }
+  ],
+  "future_acceptance_gates": [
+    {"requirement_id": "L39-G01", "requirement": "A versioned contract freezes cells fields outputs comparisons resources and claims before execution."},
+    {"requirement_id": "L39-G02", "requirement": "Every authorization field is false until a separate exact stage decision is committed pushed and green."},
+    {"requirement_id": "L39-G03", "requirement": "All six required cells use explicit OS labels rather than latest aliases."},
+    {"requirement_id": "L39-G04", "requirement": "Each cell records the full environment identity field set and stable pip inspect schema version."},
+    {"requirement_id": "L39-G05", "requirement": "Source commit workflow revision and dirty state are exact and local paths hosts and usernames are redacted from public cores."},
+    {"requirement_id": "L39-G06", "requirement": "Python ABI wheel platform dependency BLAS SIMD and thread identities are explicit."},
+    {"requirement_id": "L39-G07", "requirement": "The target-free fixture contains no real neural payload target label prompt consumed prediction or checkpoint."},
+    {"requirement_id": "L39-G08", "requirement": "Fixture semantics are identical across two clean roots before any matrix job opens."},
+    {"requirement_id": "L39-G09", "requirement": "Canonical JSON key ordering encoding newline and nonfinite-float policy are frozen."},
+    {"requirement_id": "L39-G10", "requirement": "IDs timestamps indices lengths masks splits causal flags context and warning codes compare exactly."},
+    {"requirement_id": "L39-G11", "requirement": "Discrete arrays require exact dtype shape and values."},
+    {"requirement_id": "L39-G12", "requirement": "Every floating field has a named preregistered comparison policy and no global catch-all tolerance exists."},
+    {"requirement_id": "L39-G13", "requirement": "NaN Inf signed zero dtype and shape behavior fail closed."},
+    {"requirement_id": "L39-G14", "requirement": "Compressed containers distinguish exact container bytes from exact canonical payload manifests."},
+    {"requirement_id": "L39-G15", "requirement": "Measured runtime RSS host and temporary path fields stay outside deterministic semantic hashes."},
+    {"requirement_id": "L39-G16", "requirement": "Every required cell passes or returns one exact unsupported reason without silent continue-on-error."},
+    {"requirement_id": "L39-G17", "requirement": "Matrix fail-fast is false so one failure cannot erase diagnostics from other cells."},
+    {"requirement_id": "L39-G18", "requirement": "Maximum parallel matrix jobs are two while every job and numerical backend uses one thread and worker."},
+    {"requirement_id": "L39-G19", "requirement": "Each cell reports install test and comparison runtime peak RSS dependency bytes and artifact bytes."},
+    {"requirement_id": "L39-G20", "requirement": "Per-cell and total artifact caps are checked before upload and include diagnostics."},
+    {"requirement_id": "L39-G21", "requirement": "The Python 3.10 tomllib test-collection gap is resolved or explicitly classified unsupported before support is claimed."},
+    {"requirement_id": "L39-G22", "requirement": "Current floating ubuntu-latest jobs cannot count as pinned Loop 39 cells."},
+    {"requirement_id": "L39-G23", "requirement": "Tolerance changes require a new version public failure record rationale and fresh evidence before rerun."},
+    {"requirement_id": "L39-G24", "requirement": "Protected data consumed caches targets labels models and training remain inaccessible to every matrix cell."},
+    {"requirement_id": "L39-G25", "requirement": "Unsupported optional dependencies do not downgrade the base profile and profile claims remain separate."},
+    {"requirement_id": "L39-G26", "requirement": "No matrix result upgrades privacy license BIDS scientific neural decoding latency device or release claims."},
+    {"requirement_id": "L39-G27", "requirement": "Loop 40 remains blocked unless its selected path passes the relevant Loop 39 cells without hidden fallback."},
+    {"requirement_id": "L39-G28", "requirement": "Loop 43 remains required before any independent team reproduction claim."}
+  ],
+  "future_refusal_ids": [
+    "L39-R01_missing_stage_authorization",
+    "L39-R02_missing_or_changed_contract_hash",
+    "L39-R03_unregistered_matrix_cell",
+    "L39-R04_floating_latest_runner_label",
+    "L39-R05_wrong_python_implementation_or_minor",
+    "L39-R06_missing_runner_image_identity",
+    "L39-R07_dirty_or_wrong_source_commit",
+    "L39-R08_workflow_revision_mismatch",
+    "L39-R09_missing_pip_inspect_schema_or_environment",
+    "L39-R10_dependency_graph_or_direct_url_unavailable",
+    "L39-R11_missing_wheel_abi_or_platform_tags",
+    "L39-R12_missing_blas_lapack_identity",
+    "L39-R13_missing_simd_or_cpu_dispatch_identity",
+    "L39-R14_wrong_thread_worker_or_hash_seed",
+    "L39-R15_locale_timezone_encoding_or_path_leak",
+    "L39-R16_real_neural_or_consumed_cache_access",
+    "L39-R17_target_label_prompt_or_prediction_leak",
+    "L39-R18_model_training_seed_or_checkpoint_operation",
+    "L39-R19_fixture_not_target_free_or_not_new",
+    "L39-R20_fixture_clean_root_replay_mismatch",
+    "L39-R21_canonical_semantic_hash_mismatch",
+    "L39-R22_timestamp_index_length_mask_or_split_mismatch",
+    "L39-R23_discrete_dtype_shape_or_value_mismatch",
+    "L39-R24_float_policy_missing_or_posthoc",
+    "L39-R25_float_max_abs_max_rel_or_ulp_failure",
+    "L39-R26_nan_inf_or_signed_zero_policy_failure",
+    "L39-R27_container_bytes_overclaimed_as_payload_identity",
+    "L39-R28_runtime_or_rss_used_as_semantic_gate",
+    "L39-R29_missing_unsupported_reason_code",
+    "L39-R30_silent_continue_on_error_or_cancelled_diagnostics",
+    "L39-R31_cell_timeout_rss_or_disk_cap_exceeded",
+    "L39-R32_artifact_upload_cap_exceeded",
+    "L39-R33_python310_test_collection_gap_unresolved",
+    "L39-R34_optional_profile_promoted_to_base_support",
+    "L39-R35_single_host_or_single_os_reproducibility_overclaim",
+    "L39-R36_independent_team_or_scientific_replication_overclaim",
+    "L39-R37_privacy_license_bids_latency_device_or_release_overclaim",
+    "L39-R38_loop40_or_loop43_shortcut"
+  ],
+  "resource_boundaries": {
+    "planning_cpu_threads": 1,
+    "planning_workers": 1,
+    "planning_generated_experiment_bytes": 0,
+    "future_max_parallel_matrix_jobs": 2,
+    "future_threads_per_job": 1,
+    "future_workers_per_job": 1,
+    "future_timeout_minutes_per_cell": 20,
+    "future_peak_rss_bytes_per_cell": 1073741824,
+    "future_artifact_bytes_per_cell": 4194304,
+    "future_total_artifact_bytes": 25165824,
+    "future_large_cache_reads": 0,
+    "future_protected_data_reads": 0,
+    "future_model_or_training_runs": 0,
+    "network_default": "off_except_separately_authorized_dependency_install"
+  },
+  "research_access_counters": {
+    "high_level_public_web_operations": 6,
+    "official_or_primary_pages_opened": 8,
+    "public_response_bytes": "unavailable_by_tool_contract",
+    "public_web_runtime": "unavailable_by_tool_contract",
+    "public_web_peak_rss": "unavailable_by_tool_contract",
+    "generated_experiment_bytes": 0,
+    "new_ci_jobs": 0,
+    "new_matrix_cells_executed": 0,
+    "new_dependency_lockfiles": 0,
+    "new_optional_installs": 0,
+    "new_network_install_bytes": 0,
+    "new_wheel_or_sdist_builds": 0,
+    "new_uploaded_artifact_bytes": 0,
+    "real_header_reads": 0,
+    "real_signal_reads": 0,
+    "real_cache_reads": 0,
+    "consumed_cache_reads": 0,
+    "target_or_label_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "synthetic_seed_opens": 0,
+    "tolerance_fit_runs": 0,
+    "device_operations": 0,
+    "hardware_operations": 0,
+    "rw3_operations": 0,
+    "loop40_operations": 0,
+    "loop43_operations": 0
+  },
+  "source_bindings": [
+    {
+      "source_id": "acm_artifact_badging",
+      "url": "https://www.acm.org/publications/policies/artifact-review-and-badging-current",
+      "use": "Repeatability reproducibility replication and tolerance-aware claim terminology."
+    },
+    {
+      "source_id": "reproducible_builds_definition",
+      "url": "https://reproducible-builds.org/docs/definition/",
+      "use": "Bit-identical specified artifacts require the same source environment and instructions."
+    },
+    {
+      "source_id": "python_hash_seed",
+      "url": "https://docs.python.org/3.12/using/cmdline.html#envvar-PYTHONHASHSEED",
+      "use": "Repeatable Python hash behavior is an explicit environment input."
+    },
+    {
+      "source_id": "pip_inspect_schema",
+      "url": "https://pip.pypa.io/en/stable/reference/inspect-report/",
+      "use": "Stable versioned environment and installed-distribution report."
+    },
+    {
+      "source_id": "pypa_pylock",
+      "url": "https://packaging.python.org/en/latest/specifications/pylock-toml/",
+      "use": "Machine-readable reproducible-environment lock format without claiming current adoption."
+    },
+    {
+      "source_id": "numpy_runtime_and_global_state",
+      "url": "https://numpy.org/doc/stable/reference/global_state.html",
+      "use": "BLAS threads SIMD dispatch and runtime configuration can vary numerical behavior and resources."
+    },
+    {
+      "source_id": "pytorch_reproducibility",
+      "url": "https://docs.pytorch.org/docs/stable/notes/randomness.html",
+      "use": "Bitwise reproducibility is not guaranteed across releases platforms or CPU and GPU."
+    },
+    {
+      "source_id": "github_hosted_runners",
+      "url": "https://docs.github.com/en/actions/reference/runners/github-hosted-runners",
+      "use": "Explicit Ubuntu and macOS labels architectures resources and runner-image evidence."
+    },
+    {
+      "source_id": "mne_sys_info",
+      "url": "https://mne.tools/stable/install/check_installation.html",
+      "use": "MNE environment reports include platform Python CPU memory NumPy BLAS and dependency versions."
+    },
+    {
+      "source_id": "scientific_python_spec0",
+      "url": "https://scientific-python.org/specs/spec-0000/",
+      "use": "Time-based minimum-support policy is separate from exact environment reproduction."
+    }
+  ],
+  "claim_boundary": [
+    "Planning research does not establish any Loop 39 matrix result.",
+    "Current Ubuntu Python 3.12 CI proves only those workflow jobs on their recorded runners and does not establish cross-machine artifact reproduction.",
+    "A future matrix pass can establish only the exact registered semantic and numerical compatibility claims for its supported cells.",
+    "Runtime and RSS are environment-specific measurements and cannot establish semantic identity or real-time latency.",
+    "Loop 43 remains required for an independent-team reproduction claim and independent data remains required for scientific replication.",
+    "No fixture manifest matrix job install build protected read model training release edge runtime stream device or hardware operation occurred."
+  ]
+}

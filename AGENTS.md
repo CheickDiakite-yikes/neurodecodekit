@@ -312,6 +312,26 @@ authority remain separate. No fixture, scanner, deletion, protected-root scan,
 identity attack, history rewrite, remote cleanup, consent determination,
 release/upload, model, training, device, or hardware operation is authorized.
 
+Loop 39 planning research is complete while its cross-machine reproducibility
+experiment remains `Not Started` and unauthorized:
+
+```bash
+cat docs/LOOP_39_PRIMARY_SOURCE_RESEARCH.md
+python -m json.tool registries/loop39_research_boundary.v0.json >/dev/null
+```
+
+The boundary freezes seven qualification levels, 18 environment identity
+fields, eight output classes, six comparison classes, six required future
+matrix cells, 20 fixture families, four separately authorized stages, 28
+gates, 38 refusals, and 36 false `authorized_now` fields. The future matrix
+covers Ubuntu 24.04 Python 3.10/3.11/3.12 base, macOS 15 arm64 Python 3.12
+base, and separate Ubuntu/macOS Python 3.12 optional-neuro cells. Current CI
+qualifies neither cross-OS behavior nor every declared Python version; Python
+3.10 has an unresolved `tomllib` test-collection gap. No fixture, environment
+manifest, matrix job, lockfile, install, package build/upload, protected read,
+model, training, edge runtime, stream, device, or hardware operation is
+authorized.
+
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
 commit `c3d1f01`, before any adapter, source chunk, fixture, socket, board, or
@@ -361,7 +381,9 @@ identity firewall while its experiment remains `Not Started`; Loop 37 planning
 research defines the BIDS-envelope/non-standard-payload firewall while its
 experiment remains `Not Started`; Loop 38 planning research defines the
 privacy/lifecycle and deletion-claim firewall while its experiment remains
-`Not Started`; Loops 39-44 remain `Not Started`. All 20
+`Not Started`; Loop 39 planning research defines the cross-machine environment,
+semantic-identity, and numerical-tolerance firewall while its experiment
+remains `Not Started`; Loops 40-44 remain `Not Started`. All 20
 execution flags are false. This roadmap does not
 reopen Loop 24, authorize RW3, or permit a Loop 25-44 fixture, download, data
 read, model run, training run, stream, board, or hardware operation. A broad
@@ -460,6 +482,14 @@ authorization boundary.
   Unknown copies remain unresolved; path absence, Git cleanliness, technical
   redaction, consent, license, media sanitization, and sharing authority remain
   separate claims.
+- The Loop 39 planning registry remains exact with 36 false authorization
+  fields, seven qualification levels, 18 environment identity fields, eight
+  output classes, six comparison classes, six future matrix cells, 20 fixture
+  families, four stages, 28 gates, and 38 refusals. Current Python 3.10,
+  macOS, cross-OS, lockfile, package-build, and independent-reproduction
+  evidence remains unavailable; no fixture, manifest, job, install, build,
+  protected read, model, training, edge, stream, device, or hardware operation
+  exists.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed

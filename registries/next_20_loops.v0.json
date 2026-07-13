@@ -1,6 +1,6 @@
 {
   "schema_name": "neurodecodekit.next_twenty_loops_roadmap",
-  "schema_version": "0.15.0",
+  "schema_version": "0.16.0",
   "roadmap_id": "loops-25-44",
   "prepared_at": "2026-07-13",
   "status": "planning_only_not_execution_authorization",
@@ -176,6 +176,27 @@
     "loop38_identity_attack_authorized": false,
     "loop38_public_release_authorized": false,
     "loop38_dependency_loop37_execution_satisfied": false,
+    "loop39_research_packet_prepared": true,
+    "loop39_qualification_level_count": 7,
+    "loop39_environment_identity_field_count": 18,
+    "loop39_output_class_count": 8,
+    "loop39_comparison_class_count": 6,
+    "loop39_required_matrix_cell_count": 6,
+    "loop39_future_fixture_family_count": 20,
+    "loop39_future_requirement_count": 28,
+    "loop39_future_refusal_count": 38,
+    "loop39_current_public_ci_cross_os_cells": 0,
+    "loop39_current_dependency_lockfiles": 0,
+    "loop39_maximum_future_stage_b_claim": "supported_base_matrix_semantic_reproduction",
+    "loop39_preregistration_prepared": false,
+    "loop39_authorization_request_prepared": false,
+    "loop39_execution_authorized": false,
+    "loop39_ci_matrix_authorized": false,
+    "loop39_optional_install_authorized": false,
+    "loop39_package_build_authorized": false,
+    "loop39_protected_access_authorized": false,
+    "loop39_dependency_loop37_execution_satisfied": false,
+    "loop39_dependency_loop38_execution_satisfied": false,
     "user_preferred_incremental_storage_bytes": 5000000000,
     "user_absolute_incremental_storage_bytes": 10000000000,
     "selected_s20_plus_s25_future_bundle_bytes": 1106030247,
@@ -907,31 +928,48 @@
       "effort": "M",
       "status": "Not Started",
       "execution_authorized": false,
-      "proof_posture": "planned_not_authorized",
+      "proof_posture": "planning_research_complete_experiment_not_started",
       "core_question": "Which outputs are bitwise stable across supported Python and operating-system combinations, and which require explicit numerical tolerances?",
       "why_high_value": "Open-source users need to know whether a mismatch is a bug, a backend difference, or an unsupported environment.",
-      "build_deliverable": "CI matrix, environment manifest, golden semantic hashes, tolerance registry, failure diagnostics, and artifact reproducibility report.",
-      "research_deliverable": "Reproducibility policy distinguishing semantic identity, numerical compatibility, timing comparison, and environment-specific evidence.",
-      "data_scope": "Dependency-free tests and authorized synthetic fixtures only; no real or consumed cache, target, or model training access.",
+      "build_deliverable": "Future separately authorized environment manifest, canonical semantic comparator, six-cell CI matrix, golden semantic hashes, tolerance registry, failure diagnostics, and artifact reproducibility report.",
+      "research_deliverable": "Completed ACM, Reproducible Builds, Python, PyPA, NumPy, PyTorch, GitHub runner, MNE, and Scientific Python boundary separating repeatability, supported-matrix compatibility, independent reproduction, and scientific replication.",
+      "research_status": "planning_research_complete",
+      "research_boundary_registry": "registries/loop39_research_boundary.v0.json",
+      "primary_source_research": "docs/LOOP_39_PRIMARY_SOURCE_RESEARCH.md",
+      "data_scope": "Repository metadata, workflow text, installed-package metadata, and public sources only now. Future Stage A is dependency-free target-free synthetic fixtures only; no real or consumed cache, target, model, training, edge, stream, device, or hardware access.",
       "controls": [
-        "At least macOS and Linux where CI capacity permits.",
-        "Base and optional-neuro environments kept separate.",
-        "Bitwise semantic fields tested separately from floating payload tolerances.",
-        "Tolerance changes require a recorded failing environment and explicit decision."
+        "Six explicit future cells cover Ubuntu 24.04 Python 3.10/3.11/3.12 base, macOS 15 arm64 Python 3.12 base, and separate Ubuntu/macOS Python 3.12 optional-neuro profiles.",
+        "Eighteen environment fields bind source, workflow, runner image, OS, CPU, Python ABI, dependencies, BLAS, SIMD, backends, threads, locale, paths, and resource limits.",
+        "Eight output classes and six comparison classes keep semantic IDs, timestamps, masks, splits, state, discrete arrays, floating payloads, containers, reports, resources, and failures separate.",
+        "Every floating field needs a preregistered max-absolute, max-relative, ULP, finite, dtype, shape, and signed-zero policy; no global catch-all tolerance exists.",
+        "Current Python 3.10 test collection, macOS, dependency lock, package-build identity, and cross-OS support remain unqualified."
       ],
       "primary_metrics": [
-        "matrix pass rate",
-        "semantic hash agreement",
-        "maximum numerical drift",
-        "runtime and peak RSS by environment",
-        "artifact and dependency size"
+        "required cell status by exact pass fail unsupported or invalid outcome",
+        "canonical semantic hash and exact discrete identity",
+        "field-level maximum absolute relative and ULP drift",
+        "install test comparison runtime and peak RSS by environment",
+        "dependency wheel package and diagnostic artifact bytes",
+        "missing environment fields unsupported reasons and claim ceiling"
       ],
-      "acceptance_boundary": "Pass when every supported cell either reproduces the registered contract or fails with an explicit unsupported reason; no tolerance is widened after hidden evaluation access.",
-      "stop_rule": "Do not claim cross-machine reproducibility from one host; quarantine platform-specific drift until diagnosed and documented.",
-      "depends_on": [37],
-      "external_gates": ["ci_capacity_and_optional_environment_review"],
-      "authorization_boundary": "Planning only. New matrix jobs, fixtures, and optional installs require a separate bounded Loop 39 change.",
-      "resource_cap": "One thread per job, no large cache, 32 MiB job artifacts, and existing CI time limits."
+      "acceptance_boundary": "A future stage passes only when every required cell records all environment fields and either reproduces exact semantics plus its preregistered numerical policy or emits one explicit unsupported reason. A Python 3.10 collection gap, semantic mismatch, missing diagnostic, post-hoc tolerance, silent continue-on-error, or resource overflow blocks the corresponding claim.",
+      "stop_rule": "Do not claim cross-machine reproduction from one host, one OS, matching rounded metrics, or an unpinned dependency range. Preserve failures and quarantine platform drift until a versioned public diagnosis and fresh evidence exist.",
+      "depends_on": [37, 38],
+      "external_gates": ["separate_stage_a_fixture_authorization", "separate_stage_b_base_matrix_authorization", "separate_stage_c_optional_neuro_matrix_authorization", "loop43_before_independent_team_reproduction", "loop44_before_release_claim"],
+      "authorization_boundary": "Planning research only and unauthorized. No fixture, environment-manifest implementation, CI matrix job, dependency lock/install, package build/upload, protected read, model, training, edge runtime, stream, device, or hardware operation is authorized. Every stage needs a separate Loop 39 decision.",
+      "resource_cap": "Current research used one thread/worker, six public web operations, zero protected/generated payload bytes, and no new installs or jobs. Future work is capped at two parallel jobs, one thread/worker per cell, 20 minutes, 1 GiB RSS, 4 MiB artifacts per cell, 24 MiB total artifacts, and zero large-cache/protected/model/training access.",
+      "qualification_level_count": 7,
+      "environment_identity_field_count": 18,
+      "output_class_count": 8,
+      "comparison_class_count": 6,
+      "required_matrix_cell_count": 6,
+      "future_fixture_family_count": 20,
+      "future_requirement_count": 28,
+      "future_refusal_count": 38,
+      "current_public_ci_cross_os_cells": 0,
+      "current_dependency_lockfiles": 0,
+      "preregistration_prepared": false,
+      "authorization_request_prepared": false
     },
     {
       "loop_id": 40,
@@ -1119,7 +1157,7 @@
     "36": ["bids_coordinate_systems", "bids_meg", "bids_eeg", "bids_units", "mne_coordinate_frames", "mne_transform", "mne_digmontage", "mne_eeg_reference", "mne_bad_interpolation"],
     "37": ["bids_derivatives", "bids_dataset_description", "bids_derivative_common_data", "bids_common_principles", "bids_extensions", "bids_validator", "bids_examples", "datasheets"],
     "38": ["nist_privacy_framework", "nist_ir_8062", "nist_pram", "nist_sp_800_88_r2", "github_remove_sensitive_data", "open_brain_consent", "eeg_identity_privacy", "oecd_responsible_neurotechnology"],
-    "39": ["moabb_benchmark", "model_cards"],
+    "39": ["acm_artifact_badging", "reproducible_builds_definition", "python_hash_seed", "pip_inspect_schema", "pypa_pylock", "numpy_runtime_and_global_state", "pytorch_reproducibility", "github_hosted_runners", "mne_sys_info", "scientific_python_spec0"],
     "40": ["executorch"],
     "41": ["lsl_time_sync", "bids_derivatives"],
     "42": ["lsl_time_sync", "nist_privacy_framework"],
@@ -1486,6 +1524,66 @@
       "title": "OECD Responsible Innovation In Neurotechnology",
       "url": "https://www.oecd.org/en/topics/responsible-innovation.html",
       "roadmap_use": "Brain-data stewardship, accountability, transparency, safeguarding, and anti-hype release behavior."
+    },
+    {
+      "source_id": "acm_artifact_badging",
+      "title": "ACM Artifact Review And Badging",
+      "url": "https://www.acm.org/publications/policies/artifact-review-and-badging-current",
+      "roadmap_use": "Repeatability, reproducibility, replication, independent-team, artifact-quality, and acceptable-tolerance terminology."
+    },
+    {
+      "source_id": "reproducible_builds_definition",
+      "title": "Reproducible Builds Definition",
+      "url": "https://reproducible-builds.org/docs/definition/",
+      "roadmap_use": "Bit-identical specified artifacts under the same source, environment, and instructions with explicit environment attributes."
+    },
+    {
+      "source_id": "python_hash_seed",
+      "title": "Python PYTHONHASHSEED Documentation",
+      "url": "https://docs.python.org/3.12/using/cmdline.html#envvar-PYTHONHASHSEED",
+      "roadmap_use": "Explicit repeatable hash behavior and the boundary between process hash state and canonical artifact ordering."
+    },
+    {
+      "source_id": "pip_inspect_schema",
+      "title": "pip inspect JSON Output Specification",
+      "url": "https://pip.pypa.io/en/stable/reference/inspect-report/",
+      "roadmap_use": "Stable versioned environment, installed-distribution, direct-URL, installer, and requested-package reporting."
+    },
+    {
+      "source_id": "pypa_pylock",
+      "title": "PyPA pylock.toml Specification",
+      "url": "https://packaging.python.org/en/latest/specifications/pylock-toml/",
+      "roadmap_use": "Machine-readable reproducible-environment lock format without treating current dependency ranges as a lock."
+    },
+    {
+      "source_id": "numpy_runtime_and_global_state",
+      "title": "NumPy Global Configuration And Runtime State",
+      "url": "https://numpy.org/doc/stable/reference/global_state.html",
+      "roadmap_use": "BLAS thread, SIMD dispatch, huge-page, import-time, numerical-path, and resource-reporting boundaries."
+    },
+    {
+      "source_id": "pytorch_reproducibility",
+      "title": "PyTorch Reproducibility",
+      "url": "https://docs.pytorch.org/docs/stable/notes/randomness.html",
+      "roadmap_use": "Release, platform, CPU/GPU, RNG, deterministic-algorithm, and performance tradeoff boundaries."
+    },
+    {
+      "source_id": "github_hosted_runners",
+      "title": "GitHub-Hosted Runners Reference",
+      "url": "https://docs.github.com/en/actions/reference/runners/github-hosted-runners",
+      "roadmap_use": "Explicit Ubuntu and macOS labels, architectures, resources, image evidence, and CI capacity boundaries."
+    },
+    {
+      "source_id": "mne_sys_info",
+      "title": "MNE Testing Your Installation",
+      "url": "https://mne.tools/stable/install/check_installation.html",
+      "roadmap_use": "Platform, Python, CPU, memory, NumPy BLAS, SciPy, MNE, and optional-dependency environment diagnostics."
+    },
+    {
+      "source_id": "scientific_python_spec0",
+      "title": "Scientific Python SPEC 0 Minimum Supported Dependencies",
+      "url": "https://scientific-python.org/specs/spec-0000/",
+      "roadmap_use": "Time-based support-policy decisions kept separate from exact environment locks and qualified matrix evidence."
     },
     {
       "source_id": "model_cards",

@@ -53,9 +53,15 @@
    planning research only; Loop 38 remains `Not Started`, unresolved copies
    remain unresolved, and all scanner/deletion/identity/release work is
    unauthorized.
-17. Review `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` only when deciding whether
+17. Read `docs/LOOP_39_PRIMARY_SOURCE_RESEARCH.md` for the seven qualification
+   levels, 18 environment fields, eight output classes, six comparison classes,
+   six future matrix cells, 28 gates, and 38 refusals. It is planning research
+   only; Loop 39 remains `Not Started`, Python 3.10/macOS/cross-OS support stays
+   unqualified, and all fixture/manifest/matrix/install/build work is
+   unauthorized.
+18. Review `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` only when deciding whether
    to authorize the independent RW3 Stage A.
-18. Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md` and
+19. Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md` and
    `docs/LOOPS_25_44_ROADMAP.md` for the planning-only Loops 25-44 queue.
 19. Paste `prompts/CODEX_START_PROMPT.md` into Codex to continue.
 20. Run tests:
@@ -89,8 +95,10 @@ Loop 36 planning research defines the geometry/reference identity firewall
 while its experiment remains `Not Started`; Loop 37 planning research defines
 the BIDS-envelope/non-standard-payload firewall while its experiment remains
 `Not Started`; Loop 38 planning research defines the privacy/lifecycle and
-deletion-claim firewall while its experiment remains `Not Started`; Loops
-39-44 remain `Not Started`.
+deletion-claim firewall while its experiment remains `Not Started`; Loop 39
+planning research defines the cross-machine environment, semantic-identity,
+and numerical-tolerance firewall while its experiment remains `Not Started`;
+Loops 40-44 remain `Not Started`.
 The maximum future
 local Loop 31 claim is sensor-signal dependence, and brain-specific attribution
 remains blocked on Loop 35. All are unauthorized.
@@ -207,6 +215,16 @@ PF 1.1 remains draft. Unknown copies remain unresolved, and path absence is not
 media sanitization. The experiment is `Not Started` and unauthorized; no
 fixture, scanner, deletion, protected-root scan, identity attack, history
 rewrite, consent determination, release, or upload exists.
+Loop 39 planning research freezes seven qualification levels, 18 environment
+identity fields, eight output classes, six comparison classes, six required
+future cells, 20 fixture families, four stages, 28 gates, 38 refusals, and 36
+false authorization fields. Current public CI is one floating Ubuntu/Python
+3.12 environment; Python 3.10 has an unresolved `tomllib` collection gap,
+macOS and cross-OS support are unqualified, and no exact dependency lock or
+built-package identity exists. The experiment is `Not Started` and
+unauthorized; no fixture, manifest, matrix job, install, lockfile, package,
+protected read, model, training, edge, stream, device, or hardware operation
+exists.
 The proposed fresh S20 EEG block is **not authorized** for download or signal
 access. Its exact four-file, 96,090,264-byte dry run is in
 `docs/FRESH_EEG_BENCHMARK_S20_APPROVAL_PACKET.md`.
