@@ -1,0 +1,525 @@
+{
+  "schema_name": "neurodecodekit.loop35_research_boundary",
+  "schema_version": "0.1.0",
+  "prepared_at": "2026-07-12",
+  "status": "planning_research_complete_experiment_blocked_on_loop31_and_fresh_synchronized_multimodal_evidence",
+  "proof_posture": "planning_only_no_protected_signal_target_model_confounds_fixture_acquisition_device_or_brain_specific_claim",
+  "authorized_now": false,
+  "authorization": {
+    "loop35_preregistration_authorized_now": false,
+    "loop35_implementation_authorized_now": false,
+    "synthetic_confound_fixture_authorized_now": false,
+    "synthetic_condition_run_authorized_now": false,
+    "real_metadata_or_header_read_authorized_now": false,
+    "real_brain_sensor_read_authorized_now": false,
+    "real_target_or_prompt_read_authorized_now": false,
+    "source_test_or_session2_reopen_authorized_now": false,
+    "consumed_s7_eeg_reopen_authorized_now": false,
+    "checkpoint_or_model_run_authorized_now": false,
+    "training_or_parameter_update_authorized_now": false,
+    "timing_only_fit_or_run_authorized_now": false,
+    "peripheral_only_fit_or_run_authorized_now": false,
+    "brain_sensor_only_fit_or_run_authorized_now": false,
+    "combined_fit_or_run_authorized_now": false,
+    "artifact_residualization_fit_authorized_now": false,
+    "source_localization_authorized_now": false,
+    "eog_or_gaze_recording_authorized_now": false,
+    "emg_recording_authorized_now": false,
+    "motion_or_head_position_recording_authorized_now": false,
+    "microphone_or_audio_recording_authorized_now": false,
+    "keyboard_or_hand_tracking_recording_authorized_now": false,
+    "fresh_multimodal_acquisition_authorized_now": false,
+    "new_real_data_download_authorized_now": false,
+    "network_payload_download_authorized_now": false,
+    "s20_or_s25_access_authorized_now": false,
+    "rw3_stream_sdk_socket_device_or_hardware_authorized_now": false,
+    "brain_specific_claim_authorized_now": false,
+    "patient_no_keypress_or_clinical_stage_authorized_now": false,
+    "loop36_or_later_authorized_now": false,
+    "authorization_sentence_exists": false,
+    "reason": "Loop 31 has no executed sensor-dependence result, current S21 and consumed S7 evidence do not provide a fresh synchronized complete peripheral-control set, and planning research is not consent, acquisition, data access, model, or claim authorization."
+  },
+  "decision": {
+    "current_experiment_status": "Not Started",
+    "research_question": "Can future predictive information attributed to EEG or MEG remain after target leakage, timing, key identity, ocular, muscular, motion, audio, environmental, and prompt shortcuts are measured under one synchronized protocol?",
+    "maximum_current_claim_class": "L35-C0_no_new_result",
+    "maximum_future_claim_from_existing_local_data": "L35-C3_sensor_signal_dependence_only",
+    "maximum_future_local_claim_with_fresh_complete_multimodal_evidence": "L35-C4_incremental_brain_sensor_information_beyond_recorded_controls",
+    "absolute_brain_specific_origin_claim_available_from_this_design": false,
+    "patient_no_keypress_transfer_available_from_this_design": false,
+    "brain_sensor_channel_label_proves_brain_origin": false,
+    "artifact_rejection_proves_artifact_absence": false,
+    "negative_or_peripheral_explanation_is_publishable_result": true,
+    "missing_control_default": "claim_unavailable",
+    "preregistration_prepared_now": false,
+    "authorization_request_prepared_now": false,
+    "experiment_matrix_frozen_now": false
+  },
+  "dependencies": {
+    "loop35_planning_research_complete": true,
+    "loop31_attribution_contract_required": true,
+    "loop31_planning_dependency_satisfied_now": true,
+    "loop31_execution_result_available_now": false,
+    "loop31_sensor_signal_dependence_required_before_loop35_increment": true,
+    "loop29_modality_and_peripheral_profile_available": true,
+    "loop30_clock_domain_contract_required_for_synchronization": true,
+    "current_s21_cache_is_complete_loop35_multimodal_evidence": false,
+    "consumed_s7_eeg_is_fresh_loop35_evidence": false,
+    "fresh_synchronized_multimodal_protocol_exists_now": false,
+    "fresh_multimodal_consent_and_retention_packet_exists_now": false,
+    "loop35_preregistration_prepared": false,
+    "loop35_authorization_request_prepared": false,
+    "loop35_runtime_fixture_or_acquisition_exists": false
+  },
+  "existing_evidence_inventory": [
+    {
+      "evidence_id": "brain2qwerty_v1_task",
+      "proof_posture": "public_primary_source",
+      "finding": "Brain2Qwerty v1 uses 500 ms EEG or MEG windows aligned from 200 ms before to 300 ms after known keypresses and reports motor and keyboard-layout structure, so its result is overt prompted typing rather than no-keypress language production.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "brain2qwerty_v2_task",
+      "proof_posture": "public_primary_source",
+      "finding": "Brain2Qwerty v2 removes explicit keypress alignment at inference but still records healthy volunteers physically typing after audio prompts with keypress-locked minimal visual feedback; it explicitly leaves patient operation without actual keypresses for future validation.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "s21_local_meg_cache",
+      "proof_posture": "committed_real_mechanics_evidence",
+      "finding": "The working S21 sentence path uses 102 magnetometers and STI101-derived timing. The committed cache and reports do not carry synchronized EOG, EMG, gaze, hand motion, microphone, or body-motion streams for a complete Loop 35 comparison.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "s7_local_eeg_bridge",
+      "proof_posture": "consumed_real_negative_result",
+      "finding": "The source S7 BrainVision bundle names three ocular channels that were excluded from the 61-channel EEG cache, but the evaluation is consumed and exclusion does not prove the remaining scalp channels are free of ocular or muscle information.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "local_negative_predictive_results",
+      "proof_posture": "consumed_real_negative_results",
+      "finding": "The cross-session S21 MEG model and within-session S7 EEG classifier were both worse than no-signal priors, so no positive local result currently reaches the Loop 35 attribution question.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "loop31_attribution_firewall",
+      "proof_posture": "planning_only",
+      "finding": "Loop 31 can at most establish sensor-signal dependence and explicitly requires Loop 35 before stronger origin wording.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "eye_movement_decoding_confound",
+      "proof_posture": "public_primary_source_different_task",
+      "finding": "Small task-specific eye movements supported persistent MEG decoding in a visual working-memory study, demonstrating that above-chance sensor decoding can track behavior outside the intended neural representation.",
+      "payload_read_now": false
+    },
+    {
+      "evidence_id": "movement_artifact_bci_and_meg",
+      "proof_posture": "public_primary_sources_different_tasks",
+      "finding": "Simultaneous EEG/EMG movement work found artifact components could be more informative to classifiers, while synchronized MEG/EMG/audio/head-position speech recordings showed task-linked movement and muscle artifacts can distort MEG.",
+      "payload_read_now": false
+    }
+  ],
+  "confound_taxonomy": [
+    {
+      "confound_id": "L35-T00_prompt_target_or_label_leakage",
+      "measurement_class": "content_leakage",
+      "examples": ["target sentence", "prompt identity", "typed response", "evaluation character frequency"],
+      "may_enter_predictive_features": false
+    },
+    {
+      "confound_id": "L35-T01_key_identity_or_trigger_code",
+      "measurement_class": "direct_behavioral_label",
+      "examples": ["ASCII trigger", "key code", "actual typed character", "hand assignment"],
+      "may_enter_predictive_features": false
+    },
+    {
+      "confound_id": "L35-T02_event_timing_length_and_schedule",
+      "measurement_class": "behavioral_timing",
+      "examples": ["keypress onset", "interkey interval", "sentence duration", "event count"],
+      "may_enter_timing_control_only": true
+    },
+    {
+      "confound_id": "L35-T03_visual_feedback_gaze_and_eyelid",
+      "measurement_class": "ocular_and_stimulus",
+      "examples": ["fixation deviation", "saccade", "blink", "keypress-linked visual rotation"],
+      "requires_eog_or_eye_tracking": true
+    },
+    {
+      "confound_id": "L35-T04_hand_forearm_and_finger_muscle",
+      "measurement_class": "peripheral_motor",
+      "examples": ["finger flexor", "finger extensor", "wrist", "forearm EMG"],
+      "requires_emg_or_kinematics": true
+    },
+    {
+      "confound_id": "L35-T05_face_jaw_neck_and_scalp_muscle",
+      "measurement_class": "proximal_muscle_artifact",
+      "examples": ["temporalis", "masseter", "neck", "facial EMG", "jaw movement"],
+      "requires_emg_or_kinematics": true
+    },
+    {
+      "confound_id": "L35-T06_head_body_sensor_and_contact_motion",
+      "measurement_class": "motion_and_geometry",
+      "examples": ["head position", "head orientation", "cap or helmet shift", "electrode motion", "body IMU"],
+      "requires_motion_or_head_localization": true
+    },
+    {
+      "confound_id": "L35-T07_audio_environment_and_equipment",
+      "measurement_class": "environmental_context",
+      "examples": ["prompt audio", "keyboard sound", "room noise", "equipment vibration", "line interference"],
+      "requires_audio_or_reference_measurement": true
+    },
+    {
+      "confound_id": "L35-T08_cardiac_respiration_reference_and_impedance",
+      "measurement_class": "physiology_and_recording_state",
+      "examples": ["ECG", "respiration", "reference choice", "contact impedance", "bad channel pattern"],
+      "requires_declared_measurement_or_unavailable_state": true
+    },
+    {
+      "confound_id": "L35-T09_task_context_language_and_identity",
+      "measurement_class": "nonneural_context",
+      "examples": ["sentence context", "subject identity", "session identity", "block order", "autocomplete"],
+      "handled_jointly_with_loop31": true
+    }
+  ],
+  "current_data_availability": {
+    "s21_meg_brain_sensor_channels": 102,
+    "s21_meg_channel_type": "magnetometer",
+    "s21_stim_timing_available_in_committed_cache_path": true,
+    "s21_key_identity_available_but_forbidden_as_predictive_input": true,
+    "s21_synchronized_eog_available_in_committed_cache_path": false,
+    "s21_synchronized_emg_available_in_committed_cache_path": false,
+    "s21_synchronized_gaze_available_in_committed_cache_path": false,
+    "s21_synchronized_motion_available_in_committed_cache_path": false,
+    "s21_synchronized_audio_available_in_committed_cache_path": false,
+    "s7_source_named_eog_channels": 3,
+    "s7_eog_channels_in_eeg_cache": 0,
+    "s7_eeg_channels_in_cache": 61,
+    "s7_evidence_consumed": true,
+    "current_data_can_support_timing_shortcut_audit_after_separate_authorization": true,
+    "current_data_can_support_complete_peripheral_firewall": false,
+    "current_data_can_support_brain_specific_claim": false
+  },
+  "staged_future_program": [
+    {
+      "stage_id": "L35-A_synthetic_interface",
+      "status": "not_started_unauthorized",
+      "purpose": "Prove stream identities, masks, synchronization, condition routing, leakage refusals, metrics, and unavailable fields with target-free generated traces.",
+      "maximum_claim": "L35-C1_synthetic_confound_interface",
+      "authorizes_next_stage": false
+    },
+    {
+      "stage_id": "L35-B_fresh_multimodal_local",
+      "status": "not_started_no_consent_or_acquisition_packet",
+      "purpose": "Measure one bounded task with synchronized brain sensors, behavioral timing, and declared peripheral streams under physically separate fit, selection, and final evidence.",
+      "maximum_claim": "L35-C4_incremental_brain_sensor_information_beyond_recorded_controls",
+      "authorizes_next_stage": false
+    },
+    {
+      "stage_id": "L35-C_no_keypress_or_patient",
+      "status": "unavailable_separate_ethics_task_population_and_model_program",
+      "purpose": "Test attempted or imagined communication without actual keypresses in the target population.",
+      "maximum_claim": "L35-C5_no_keypress_attempted_or_patient_transfer",
+      "authorizes_next_stage": false
+    }
+  ],
+  "future_stream_registry": [
+    {
+      "stream_id": "L35-M00_brain_sensors",
+      "role": "registered EEG MEG or OPM-MEG candidate stream",
+      "brain_origin_guaranteed_by_channel_type": false
+    },
+    {
+      "stream_id": "L35-M01_keyboard_events",
+      "role": "timing and behavioral truth with key identity isolated as forbidden predictive content",
+      "brain_signal": false
+    },
+    {
+      "stream_id": "L35-M02_stimulus_and_prompt_events",
+      "role": "audio visual cue and prompt exposure ledger",
+      "brain_signal": false
+    },
+    {
+      "stream_id": "L35-M03_eog_or_gaze",
+      "role": "ocular-only comparator and nuisance measurement",
+      "brain_signal": false
+    },
+    {
+      "stream_id": "L35-M04_hand_forearm_emg_or_kinematics",
+      "role": "distal motor-only comparator",
+      "brain_signal": false
+    },
+    {
+      "stream_id": "L35-M05_face_jaw_neck_emg_or_kinematics",
+      "role": "proximal muscle and movement comparator",
+      "brain_signal": false
+    },
+    {
+      "stream_id": "L35-M06_head_body_motion_and_geometry",
+      "role": "head position orientation body motion and sensor-contact state",
+      "brain_signal": false
+    },
+    {
+      "stream_id": "L35-M07_audio_and_environment_references",
+      "role": "prompt keyboard sound room and equipment comparator",
+      "brain_signal": false
+    },
+    {
+      "stream_id": "L35-M08_cardiac_respiration_and_reference_state",
+      "role": "physiology and recording-state nuisance stream",
+      "brain_signal": false
+    }
+  ],
+  "future_condition_matrix": [
+    {"condition_id": "L35-E00_train_only_no_signal_prior", "role": "signal-free predictive floor", "status": "not_started"},
+    {"condition_id": "L35-E01_timing_length_schedule_only", "role": "noncontent behavioral timing comparator", "status": "not_started"},
+    {"condition_id": "L35-E02_key_identity_leak_sentinel", "role": "forbidden direct-label path detector, never eligible", "status": "not_started"},
+    {"condition_id": "L35-E03_prompt_or_target_leak_sentinel", "role": "forbidden content path detector, never eligible", "status": "not_started"},
+    {"condition_id": "L35-E04_eog_or_gaze_only", "role": "ocular comparator", "status": "unavailable_until_recorded"},
+    {"condition_id": "L35-E05_hand_forearm_emg_or_kinematics_only", "role": "distal motor comparator", "status": "unavailable_until_recorded"},
+    {"condition_id": "L35-E06_face_jaw_neck_emg_or_kinematics_only", "role": "proximal artifact comparator", "status": "unavailable_until_recorded"},
+    {"condition_id": "L35-E07_motion_geometry_only", "role": "motion and placement comparator", "status": "unavailable_until_recorded"},
+    {"condition_id": "L35-E08_audio_environment_reference_only", "role": "environment comparator", "status": "unavailable_until_recorded"},
+    {"condition_id": "L35-E09_all_recorded_peripheral", "role": "strongest combined nonbrain comparator", "status": "unavailable_until_recorded"},
+    {"condition_id": "L35-E10_brain_sensor_only", "role": "registered candidate sensors without nonbrain inputs", "status": "not_started"},
+    {"condition_id": "L35-E11_brain_sensor_train_only_residualized", "role": "candidate after nuisance transform fit on train only", "status": "unavailable_until_recorded"},
+    {"condition_id": "L35-E12_all_synchronized_streams", "role": "combined upper-bound system with contributions reported separately", "status": "unavailable_until_recorded"}
+  ],
+  "partition_and_selection_recommendation": {
+    "status": "research_recommendation_not_frozen_until_preregistration",
+    "calibration_sentence_floor": 32,
+    "selection_sentence_floor": 16,
+    "final_sentence_floor": 48,
+    "performed_row_ids_disjoint": true,
+    "semantic_text_hashes_disjoint": true,
+    "session_or_block_groups_respected": true,
+    "strongest_peripheral_condition_selected_on_selection_only": true,
+    "one_brain_sensor_condition_and_one_residualization_rule_selected_on_selection_only": true,
+    "all_conditions_predictions_and_hashes_freeze_before_final_targets": true,
+    "final_targets_open_once": true,
+    "unrecorded_stream_may_be_imputed_as_clean_or_zero_control": false,
+    "synthetic_streams_may_replace_missing_real_controls": false,
+    "one_person_supports_population_inference": false
+  },
+  "estimands_and_statistics_recommendation": {
+    "status": "research_recommendation_not_frozen_until_preregistration",
+    "primary_estimand": "macro_CER_strongest_peripheral_minus_macro_CER_all_synchronized_streams",
+    "primary_positive_direction": "adding_brain_sensors_improves_over_all_recorded_peripheral_information",
+    "secondary_brain_sensor_estimand": "macro_CER_strongest_nonbrain_minus_macro_CER_brain_sensor_only",
+    "residualized_estimand": "macro_CER_strongest_nonbrain_minus_macro_CER_train_only_residualized_brain_sensor",
+    "primary_practical_margin_recommendation": 0.05,
+    "secondary_practical_margin_recommendation": 0.05,
+    "practical_margins_frozen_now": false,
+    "paired_random_sign_assignments_plus_observed": 65536,
+    "maximum_future_p_value_resolution": 0.0000152587890625,
+    "familywise_decision": "intersection_union_all_registered_required_components_pass",
+    "control_tie_passes": false,
+    "all_final_item_errors_and_differences_reported": true,
+    "bootstrap_role": "descriptive_only",
+    "biological_replicates_now": 1,
+    "population_inference_supported": false,
+    "neural_origin_proven_by_performance_only": false
+  },
+  "synchronization_and_residualization_boundary": {
+    "all_streams_require_source_and_host_clock_identity": true,
+    "clock_conversion_must_follow_loop30": true,
+    "per_stream_sampling_rate_and_timestamp_uncertainty_required": true,
+    "hardware_and_software_sync_events_required": true,
+    "dropped_packet_missing_interval_and_clock_reset_counts_required": true,
+    "alignment_residual_distribution_required": true,
+    "residualization_statistics_fit_on_train_only": true,
+    "residualization_may_use_selection_or_final_targets": false,
+    "residualized_output_must_preserve_lengths_masks_channels_and_provenance": true,
+    "raw_and_residualized_results_both_reported": true,
+    "artifact_correction_may_be_selected_for_best_final_result": false,
+    "source_localization_or_topography_is_supporting_not_decisive_evidence": true
+  },
+  "future_access_sequence": [
+    "close_Loop31_with_a_compatible_sensor_signal_dependence_result_or_keep_Loop35_descriptive_only",
+    "freeze_synthetic_interface_schema_stream_ids_clocks_injected_confounds_metrics_resources_and_refusals",
+    "commit_push_and_separately_authorize_only_the_synthetic_interface_stage",
+    "run_target_free_synthetic_interface_gate_and_close_without_claiming_biology",
+    "prepare_separate_ethics_consent_privacy_retention_device_stream_file_byte_and_stop_packet_for_real_multimodal_work",
+    "freeze_real_people_sessions_tasks_partitions_streams_sensors_sync_qc_models_controls_estimands_statistics_resources_and_claims",
+    "commit_push_and_obtain_a_new_exact_real_multimodal_authorization",
+    "acquire_or_access_calibration_selection_and_final recordings without opening final targets",
+    "fit nuisance transforms and every model on train or calibration only and select conditions on selection only",
+    "generate_and_hash_freeze_every_final prediction condition config access ledger and payload before final targets",
+    "open_final_targets_once and score the complete condition matrix in one pass",
+    "publish task_peripheral_sensor_increment_or_unavailable outcome without restart threshold change missing_control_substitution or patient_transfer"
+  ],
+  "outcome_taxonomy": [
+    {"outcome_id": "L35-O0_not_run", "meaning": "Planning only; no confound result exists."},
+    {"outcome_id": "L35-O1_invalid", "meaning": "Consent, stream, sync, split, leakage, target, hash, model, resource, or access contract failed."},
+    {"outcome_id": "L35-O2_missing_required_control", "meaning": "At least one required real peripheral stream is absent or unusable; stronger attribution stays unavailable."},
+    {"outcome_id": "L35-O3_direct_leakage", "meaning": "Prompt, target, key identity, or forbidden content reaches a predictive path; invalidate rather than score."},
+    {"outcome_id": "L35-O4_timing_or_peripheral_explains_result", "meaning": "A registered nonbrain condition matches or beats the brain-sensor candidate; relabel as task or peripheral decoding."},
+    {"outcome_id": "L35-O5_sensor_signal_without_increment", "meaning": "Loop 31 sensor dependence exists but adding brain sensors does not beat the strongest recorded peripheral comparator."},
+    {"outcome_id": "L35-O6_bounded_incremental_brain_sensor_information", "meaning": "Every registered component passes for the named people, task, device, streams, partitions, and recorded controls only."},
+    {"outcome_id": "L35-O7_no_keypress_and_patient_transfer_unavailable", "meaning": "Even a clean overt-typing result does not transfer to attempted movement, no-keypress operation, patients, or clinical use."}
+  ],
+  "claim_taxonomy": [
+    {"claim_id": "L35-C0_no_new_result", "available_now": true, "boundary": "Planning only; no fixture, acquisition, model, confound comparison, or attribution result exists."},
+    {"claim_id": "L35-C1_synthetic_confound_interface", "available_now": false, "boundary": "Generated streams prove routing, synchronization, leakage refusals, metrics, and unavailable fields only."},
+    {"claim_id": "L35-C2_task_or_peripheral_predictability", "available_now": false, "boundary": "Timing, ocular, muscle, motion, audio, or other recorded nonbrain information predicts the task; this is a useful negative attribution result."},
+    {"claim_id": "L35-C3_sensor_signal_dependence", "available_now": false, "boundary": "Loop 31 establishes dependence on the registered EEG or MEG sensor values without identifying physical origin."},
+    {"claim_id": "L35-C4_incremental_brain_sensor_information_beyond_recorded_controls", "available_now": false, "boundary": "Brain-sensor inputs add preregistered predictive information over every set of recorded controls, including peripheral and timing comparators, for the exact local protocol; unrecorded confounds and absolute origin remain unresolved."},
+    {"claim_id": "L35-C5_no_keypress_attempted_or_patient_transfer", "available_now": false, "boundary": "Requires a separately authorized task and target population where actual keypresses are missing during training and inference."},
+    {"claim_id": "L35-C6_population_clinical_or_product_brain_interface", "available_now": false, "boundary": "Requires independent people, sessions, devices, causal latency, safety, usability, privacy, and clinical evidence outside this design."}
+  ],
+  "future_acceptance_gates": [
+    {"requirement_id": "L35-G01_loop31_dependency", "requirement": "A compatible Loop 31 sensor-signal result exists before an incremental brain-sensor claim."},
+    {"requirement_id": "L35-G02_staged_authorization", "requirement": "Synthetic interface and real multimodal stages each have separate hash-bound preregistrations and exact authorizations."},
+    {"requirement_id": "L35-G03_ethics_consent_privacy", "requirement": "Every real stream has consent, purpose, sensitivity, retention, deletion, access, and redistribution rules."},
+    {"requirement_id": "L35-G04_exact_streams", "requirement": "Every required brain, timing, ocular, muscle, motion, audio, physiology, and recording-state stream is named or blocks the claim."},
+    {"requirement_id": "L35-G05_split_binding", "requirement": "Calibration, selection, and final performed rows, semantic texts, sessions or blocks, and hashes are physically disjoint as registered."},
+    {"requirement_id": "L35-G06_target_firewall", "requirement": "Prompt, target, typed response, key identity, and final statistics cannot enter eligible predictive features or fixture generation."},
+    {"requirement_id": "L35-G07_timing_allowlist", "requirement": "Timing-only uses only registered onsets, intervals, durations, counts, and masks without key identity or text."},
+    {"requirement_id": "L35-G08_sync_identity", "requirement": "Source and host clocks, sync events, conversions, uncertainty, residuals, resets, drops, and missing intervals are complete."},
+    {"requirement_id": "L35-G09_train_only_nuisance_fit", "requirement": "Artifact detection, residualization, normalization, and source transforms fit on train or calibration only."},
+    {"requirement_id": "L35-G10_condition_matrix", "requirement": "All 13 registered conditions run or report unavailable with no silent substitution."},
+    {"requirement_id": "L35-G11_peripheral_selection", "requirement": "The strongest peripheral comparator is selected on selection only and frozen before final targets."},
+    {"requirement_id": "L35-G12_brain_condition_selection", "requirement": "One brain-sensor and one residualized rule are selected on selection only and frozen before final targets."},
+    {"requirement_id": "L35-G13_one_final_open", "requirement": "Every final prediction and hash freezes before one target open and one-pass scoring."},
+    {"requirement_id": "L35-G14_primary_increment", "requirement": "Combined streams beat the strongest peripheral condition by the frozen practical and paired-statistical rules."},
+    {"requirement_id": "L35-G15_brain_sensor_increment", "requirement": "Brain-sensor-only and residualized conditions beat every required nonbrain comparator under the intersection-union gate."},
+    {"requirement_id": "L35-G16_raw_and_residualized", "requirement": "Raw and residualized brain-sensor results, retained variance, and distortion diagnostics are both reported."},
+    {"requirement_id": "L35-G17_leak_sentinels", "requirement": "Key-identity and prompt leak sentinels remain ineligible and detect any forbidden path."},
+    {"requirement_id": "L35-G18_item_level_reporting", "requirement": "Every final item error, condition difference, tie, failure, missing stream, and unavailable field is visible."},
+    {"requirement_id": "L35-G19_access_ledger", "requirement": "Raw, cache, target, model, fit, condition, acquisition, download, consumed-evidence, device, and stream counts are exact."},
+    {"requirement_id": "L35-G20_hash_ledger", "requirement": "Source, stream, clock, split, transform, model, condition, prediction, metric, and result hashes are complete."},
+    {"requirement_id": "L35-G21_resource_caps", "requirement": "One thread and worker, frozen fit/runtime/RSS/artifact caps, and exact storage and network counts pass."},
+    {"requirement_id": "L35-G22_negative_outcome", "requirement": "A timing or peripheral explanation is published and blocks stronger neural wording rather than being discarded."},
+    {"requirement_id": "L35-G23_claim_language", "requirement": "Any pass says beyond recorded controls for the exact local protocol, not absolute brain origin or arbitrary thought."},
+    {"requirement_id": "L35-G24_no_patient_transfer", "requirement": "Overt healthy typing cannot imply no-keypress, attempted movement, patient, assistive, diagnostic, or clinical performance."}
+  ],
+  "future_refusal_ids": [
+    "L35-R01_loop31_sensor_dependency_missing",
+    "L35-R02_missing_exact_stage_authorization",
+    "L35-R03_synthetic_stage_used_to_authorize_real_acquisition",
+    "L35-R04_missing_ethics_consent_privacy_retention_or_deletion_rule",
+    "L35-R05_source_test_session2_or_consumed_s7_reopen",
+    "L35-R06_s20_or_s25_access",
+    "L35-R07_prompt_target_label_typed_response_or_final_statistics_leak",
+    "L35-R08_key_identity_ascii_trigger_or_hand_label_used_as_predictive_input",
+    "L35-R09_timing_control_contains_content_or_key_identity",
+    "L35-R10_missing_required_peripheral_stream_called_clean",
+    "L35-R11_synthetic_zero_or_imputation_replaces_unrecorded_real_control",
+    "L35-R12_brain_sensor_channel_name_called_brain_origin",
+    "L35-R13_eog_channel_exclusion_called_ocular_artifact_proof",
+    "L35-R14_artifact_rejection_called_artifact_absence",
+    "L35-R15_calibration_selection_or_final_groups_overlap",
+    "L35-R16_sync_clock_origin_residual_drop_or_reset_missing",
+    "L35-R17_nuisance_transform_fit_on_selection_or_final",
+    "L35-R18_strongest_peripheral_condition_chosen_on_final",
+    "L35-R19_brain_condition_or_residualization_chosen_on_final",
+    "L35-R20_prediction_not_hash_frozen_before_final_target_open",
+    "L35-R21_more_than_one_final_target_open_or_post_target_restart",
+    "L35-R22_incomplete_condition_matrix_or_silent_backup_substitution",
+    "L35-R23_key_or_prompt_leak_sentinel_presented_as_eligible_model",
+    "L35-R24_combined_gain_without_brain_sensor_increment_called_neural",
+    "L35-R25_sensor_signal_dependence_called_brain_specific",
+    "L35-R26_peripheral_or_timing_match_hidden_or_discarded",
+    "L35-R27_missing_raw_residualized_retained_variance_or_distortion_result",
+    "L35-R28_one_person_or_one_session_called_population_evidence",
+    "L35-R29_healthy_overt_typing_transferred_to_no_keypress_attempted_or_patient_use",
+    "L35-R30_cpu_time_called_energy_or_replay_time_called_end_to_end_latency",
+    "L35-R31_missing_access_hash_warning_unavailable_or_resource_field",
+    "L35-R32_real_time_portable_at_home_arbitrary_thought_assistive_diagnostic_clinical_or_product_safety_claim"
+  ],
+  "resource_boundaries": {
+    "current_research_cpu_threads": 1,
+    "current_research_workers": 1,
+    "current_research_generated_artifact_cap_bytes": 8388608,
+    "future_stage_a_cpu_threads": 1,
+    "future_stage_a_workers": 1,
+    "future_stage_a_runtime_cap_sec": 120,
+    "future_stage_a_peak_rss_cap_bytes": 1073741824,
+    "future_stage_a_generated_artifact_cap_bytes": 16777216,
+    "future_stage_b_cpu_threads": 1,
+    "future_stage_b_workers": 1,
+    "future_stage_b_analysis_runtime_cap_sec": 1200,
+    "future_stage_b_peak_rss_cap_bytes": 1073741824,
+    "future_stage_b_generated_artifact_cap_bytes": 33554432,
+    "future_stage_b_acquisition_byte_cap": null,
+    "future_stage_b_acquisition_byte_cap_unavailable_reason": "No device, stream set, duration, file plan, consent packet, or acquisition request has been selected.",
+    "future_new_data_or_model_download_bytes_before_separate_authorization": 0,
+    "future_direct_energy_measurement_available": false,
+    "cpu_time_may_be_reported_as_energy": false,
+    "user_preferred_incremental_storage_bytes": 5000000000,
+    "user_absolute_incremental_storage_bytes": 10000000000,
+    "storage_envelope_is_multimodal_acquisition_data_access_or_execution_authorization": false
+  },
+  "research_access_counters": {
+    "high_level_public_web_research_operations": 6,
+    "public_github_api_operations": 0,
+    "protected_dataset_model_or_weight_download_bytes": 0,
+    "raw_signal_or_header_reads": 0,
+    "real_cache_content_reads": 0,
+    "target_prompt_or_typed_response_reads": 0,
+    "source_test_session2_or_consumed_s7_reads": 0,
+    "s20_or_s25_operations": 0,
+    "checkpoint_or_model_runs": 0,
+    "training_runs": 0,
+    "parameter_updates": 0,
+    "confound_condition_fits_or_runs": 0,
+    "synthetic_fixture_generations": 0,
+    "fresh_recording_or_acquisition_sessions": 0,
+    "eog_gaze_emg_motion_audio_keyboard_or_hand_tracking_operations": 0,
+    "new_real_data_downloads": 0,
+    "rw3_stream_sdk_socket_device_or_hardware_operations": 0,
+    "public_network_response_bytes": null,
+    "public_network_response_bytes_unavailable_reason": "The interactive web research tool does not expose complete response-byte accounting."
+  },
+  "source_bindings": [
+    {
+      "source_id": "brain2qwerty_v1_paper",
+      "url": "https://www.nature.com/articles/s41593-026-02303-2",
+      "use": "known keypress alignment, motor and keyboard-layout dependence, healthy overt-typing task, three ocular source channels, and no-keypress patient boundary"
+    },
+    {
+      "source_id": "brain2qwerty_v2_paper",
+      "url": "https://facebookresearch.github.io/brain2qwerty/assets/brain2qwerty_v2.pdf",
+      "use": "continuous input, audio prompt and keypress-linked visual task context, Neuro Token attribution, and explicit missing-keypress patient transfer boundary"
+    },
+    {
+      "source_id": "eye_movement_decoding_confounds",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30310862/",
+      "use": "small task-specific eye movements as a successful MEG decoding confound in a different cognitive task"
+    },
+    {
+      "source_id": "eeg_bci_artifacts_friend_or_foe",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8747566/",
+      "use": "simultaneous EMG benchmark and evidence that EEG artifact components can be more informative to movement classifiers"
+    },
+    {
+      "source_id": "meg_speech_artifact_correction",
+      "url": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2021.682419/full",
+      "use": "simultaneous MEG, EMG, audio, and head-position evidence for task-linked head, jaw, and muscle distortion and correction limits"
+    },
+    {
+      "source_id": "motion_muscle_phantom_validation",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32746290/",
+      "use": "ground-truth electrical source, robotic motion, noise sensors, and neck EMG validation of artifact-removal methods"
+    },
+    {
+      "source_id": "loop29_modality_boundary",
+      "url": "docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md",
+      "use": "modality-specific EOG, EMG, IMU, contact, head-localization, timing, and environmental requirements"
+    },
+    {
+      "source_id": "loop31_attribution_boundary",
+      "url": "docs/LOOP_31_PRIMARY_SOURCE_RESEARCH.md",
+      "use": "sensor-signal dependence ceiling, no-signal and corruption controls, target-blind freeze, and Loop 35 dependency"
+    }
+  ],
+  "claim_boundary": [
+    "This registry closes Loop 35 planning research only; it is not a preregistration, authorization, fixture, acquisition, model run, confound result, or brain-specific claim.",
+    "No protected signal, cache, target, prompt, typed response, checkpoint, model, EOG, gaze, EMG, motion, audio, keyboard, device, stream, S20, S25, or hardware operation occurred.",
+    "The current S21 and consumed S7 paths can cite timing and channel metadata but cannot provide a fresh complete synchronized peripheral-control comparison.",
+    "A channel called EEG or MEG and an artifact-rejected signal do not by themselves prove that predictive information originates in the brain.",
+    "The maximum future local result is incremental brain-sensor information beyond every recorded peripheral and timing comparator for the exact people, task, device, streams, and partitions; unrecorded confounds remain unresolved.",
+    "No absolute brain origin, language-intent decoding, no-keypress or attempted-movement transfer, patient benefit, population generalization, real-time behavior, portable hardware, at-home use, arbitrary-thought typing, assistive efficacy, diagnostic use, clinical claim, or product-safety claim is established."
+  ]
+}

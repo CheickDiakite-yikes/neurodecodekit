@@ -1895,3 +1895,62 @@ Evidence: `docs/LOOP_34_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop34_research_boundary.v0.json`,
 `tests/test_loop34_research_boundary.py`, roadmap row 34, research commit
 `ad9d647`, push CI run `29213220777`, and draft PR #13 CI run `29213242970`.
+
+## 0062 - Require recorded peripheral controls before bounded neural attribution
+
+Decision: close Loop 35 planning research while leaving the peripheral-
+confound experiment `Not Started`, all 31 `authorized_now` fields false, and no
+fixture, synchronized peripheral acquisition, protected-data read, model,
+training, scoring, device, or hardware operation opened. Freeze ten confound
+classes, nine future synchronized stream classes, 13 comparison conditions,
+three independently authorized stages, 24 future gates, and 32 refusal IDs.
+
+Why: Brain2Qwerty v1 centers windows on known keypresses during physical typing.
+Brain2Qwerty v2 removes that explicit timing at inference but still studies
+overt prompted typing with audio, visual, motor, and somatosensory context.
+Primary MEG/EEG evidence shows that task-linked eye, muscle, head/jaw motion,
+and other artifact streams can carry predictive information. Calling an input
+EEG or MEG, or artifact-rejecting it, does not prove physical origin.
+
+Current-evidence boundary: S21's committed cache path has 102 magnetometers and
+trigger timing but no synchronized EOG, EMG, gaze, motion, or audio stream. S7
+source metadata names three ocular channels, but its consumed 61-channel cache
+contains none. Current evidence can support a separately authorized timing
+audit, not a complete peripheral firewall. Consumed S7/S21 evidence remains
+closed and cannot become fresh Loop 35 qualification data.
+
+Future design: recommend 32 physically and semantically distinct calibration
+sentences, 16 selection sentences, and 48 final sentences. Select the strongest
+peripheral comparator and one brain candidate on selection only, hash-freeze
+every prediction/config/access ledger, then open final targets once. The
+primary estimand compares all synchronized streams against the strongest
+peripheral condition; the secondary compares brain-sensor-only against the
+strongest nonbrain condition. Recommend a 0.05 practical margin for both,
+65,535 paired sign assignments plus observed, an intersection-union decision,
+and failure on ties. These recommendations are not yet preregistered.
+
+Staging boundary: Stage A is target-free synthetic interface validation and
+cannot claim biology. Stage B requires a new consented, synchronized multimodal
+protocol and can establish at most incremental brain-sensor information beyond
+recorded controls for the exact local protocol. Stage C no-keypress, attempted-
+movement, or patient work is a separate ethics, population, task, and model
+program. No stage self-authorizes the next, and missing controls may not be
+imputed as zero, clean, or synthetic real evidence.
+
+Access and resource result: this research used six public web operations, one
+CPU thread/worker, and zero protected dataset/model bytes, real-cache reads,
+target reads, model runs, training runs, acquisitions, S20/S25 operations,
+streams, devices, or hardware operations. Public-network response bytes, tool
+runtime, and tool RSS are unavailable from the browser contract. The user's
+5-10 GB storage envelope is capacity, not access or acquisition permission.
+
+Claim boundary: no peripheral-control result, incremental brain-sensor result,
+absolute brain origin, language-intent decoding, no-keypress transfer, patient
+benefit, population generalization, real-time behavior, portable hardware,
+at-home use, assistive efficacy, diagnosis, clinical result, or product-safety
+claim exists.
+
+Evidence: `docs/LOOP_35_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop35_research_boundary.v0.json`,
+`tests/test_loop35_research_boundary.py`, roadmap row 35, research commit
+`6f48363`, push CI run `29214860306`, and draft PR #14 CI run `29214881916`.

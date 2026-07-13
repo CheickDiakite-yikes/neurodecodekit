@@ -33,12 +33,17 @@
    exact six-row gate, and the sensor-signal claim ceiling that reserves
    brain-specific attribution for Loop 35. It is planning research only; Loop
    31 remains `Not Started`.
-13. Review `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` only when deciding whether
+13. Read `docs/LOOP_35_PRIMARY_SOURCE_RESEARCH.md` for the ten confound classes,
+   nine future synchronized stream classes, 13 conditions, three-stage access
+   boundary, and the claim ceiling of incremental brain-sensor information
+   beyond recorded controls. It is planning research only; Loop 35 remains
+   `Not Started` and unauthorized.
+14. Review `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` only when deciding whether
    to authorize the independent RW3 Stage A.
-14. Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md` and
+15. Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md` and
    `docs/LOOPS_25_44_ROADMAP.md` for the planning-only Loops 25-44 queue.
-15. Paste `prompts/CODEX_START_PROMPT.md` into Codex to continue.
-16. Run tests:
+16. Paste `prompts/CODEX_START_PROMPT.md` into Codex to continue.
+17. Run tests:
 
 ```bash
 PYTHONPATH=src python -m unittest discover -s tests -v
@@ -63,7 +68,9 @@ Loop 33 planning research defines the bounded `8, 16, 24, 32, 44, 55`
 unique-sentence curve and prospective shared-validation order while its
 experiment remains `Not Started`; Loop 34 planning research defines the
 fresh three-way confidence firewall while its experiment remains `Not Started`
-and confidence is unavailable; Loops 35-44 remain `Not Started`. The maximum future
+and confidence is unavailable; Loop 35 planning research defines the staged
+peripheral-confound firewall while its experiment remains `Not Started`;
+Loops 36-44 remain `Not Started`. The maximum future
 local Loop 31 claim is sensor-signal dependence, and brain-specific attribution
 remains blocked on Loop 35. All are unauthorized.
 The queue does not reopen Loop 24 or authorize RW3.
@@ -150,6 +157,13 @@ for the shared Loop 26/31/33 event and cannot fit and independently qualify
 confidence. The experiment remains `Not Started`; all 26 authorization fields
 are false, confidence is unavailable, and fixture, confidence-fit, target,
 scoring, product-confidence, real-data, and download work is unauthorized.
+Loop 35 planning research freezes ten confound classes, nine future synchronized
+stream classes, 13 conditions, three stages, 24 gates, 32 refusals, and 31 false
+authorization fields. Current S21/S7 evidence lacks a fresh complete peripheral-
+control set. The maximum future local claim is incremental brain-sensor
+information beyond recorded controls; absolute brain origin, no-keypress
+transfer, and patient benefit remain unavailable. The experiment is `Not
+Started` and unauthorized.
 The proposed fresh S20 EEG block is **not authorized** for download or signal
 access. Its exact four-file, 96,090,264-byte dry run is in
 `docs/FRESH_EEG_BENCHMARK_S20_APPROVAL_PACKET.md`.

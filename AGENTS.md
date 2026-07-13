@@ -241,6 +241,23 @@ Twenty future gates, 30 refusals, and 26 false `authorized_now` fields are
 machine checked. No fixture, feature, confidence fit, target open, scoring,
 product-visible confidence, real-data read, or download is authorized.
 
+Loop 35 planning research is complete while its peripheral-confound experiment
+remains `Not Started` and unauthorized:
+
+```bash
+cat docs/LOOP_35_PRIMARY_SOURCE_RESEARCH.md
+python -m json.tool registries/loop35_research_boundary.v0.json >/dev/null
+```
+
+The boundary freezes ten confound classes, nine future synchronized stream
+classes, a 13-condition comparison matrix, three separately authorized stages,
+24 future gates, 32 refusals, and 31 false `authorized_now` fields. Existing
+S21/S7 evidence lacks a fresh complete synchronized peripheral-control set.
+Even a future local pass can establish at most incremental brain-sensor
+information beyond recorded controls, not absolute brain origin. No synthetic
+fixture, EOG/EMG/gaze/motion/audio acquisition, protected-data read, model,
+training, scoring, no-keypress study, device, or hardware work is authorized.
+
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
 commit `c3d1f01`, before any adapter, source chunk, fixture, socket, board, or
@@ -283,8 +300,9 @@ experiment remains `Not Started`; Loop 32 planning research defines the
 `Not Started`; Loop 33 planning research defines the bounded
 `8, 16, 24, 32, 44, 55` curve and shared-validation order while its experiment
 remains `Not Started`; Loop 34 planning research defines a three-way confidence
-firewall while its experiment remains `Not Started`; Loops 35-44 remain `Not
-Started`. All 20
+firewall while its experiment remains `Not Started`; Loop 35 planning research
+defines a staged peripheral-confound firewall while its experiment remains
+`Not Started`; Loops 36-44 remain `Not Started`. All 20
 execution flags are false. This roadmap does not
 reopen Loop 24, authorize RW3, or permit a Loop 25-44 fixture, download, data
 read, model run, training run, stream, board, or hardware operation. A broad
@@ -359,6 +377,12 @@ authorization boundary.
   `128/64/256` fresh synthetic partitions, 20 future requirements, 30
   refusals, an explicit unavailable state, no eligible existing real confidence
   partition, and zero fixture/fit/target/scoring/product-confidence operations.
+- The Loop 35 planning registry remains exact with 31 false authorization
+  fields, ten confound classes, nine future synchronized stream classes, 13
+  conditions, three separately authorized stages, 24 future gates, and 32
+  refusals. Missing real peripheral controls fail closed; the maximum future
+  local claim is incremental brain-sensor information beyond recorded controls,
+  not absolute brain origin.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed

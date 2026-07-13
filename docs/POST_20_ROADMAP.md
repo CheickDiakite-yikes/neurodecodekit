@@ -133,8 +133,13 @@ separates seven confidence semantics, eight score/control roles, and fresh
 synthetic `128/64/256` calibration/selection/final recommendations. Its
 experiment remains `Not Started`; confidence is unavailable, the six real
 validation rows are ineligible for Loop 34 fitting and independent
-qualification, and all fixture/fit/target/scoring work is unauthorized. Loops
-35-44 remain `Not Started`. All 20
+qualification, and all fixture/fit/target/scoring work is unauthorized. Loop
+35 planning research freezes ten confound classes, nine future synchronized
+stream classes, 13 conditions, three stages, 24 gates, 32 refusals, and 31 false
+authorization fields. Its experiment remains `Not Started`; existing evidence
+lacks complete synchronized peripheral controls, and the maximum future local
+claim is incremental brain-sensor information beyond recorded controls rather
+than absolute brain origin. Loops 36-44 remain `Not Started`. All 20
 `execution_authorized` flags are false. Loop 25's exact decision packet is
 ready for review, while Loops 26-33 have no
 preregistration or authorization packet. Roadmap approval, general
@@ -220,3 +225,8 @@ from the other.
   generate a fixture, fit confidence, open targets, score, expose confidence,
   or access real data. The experiment is `Not Started`, confidence is
   unavailable, and all 26 authorization fields are false.
+- Keep Loop 35 planning-only. Its confound taxonomy, stream registry,
+  13-condition matrix, 32/16/48 split recommendation, estimands, gates, and
+  refusal IDs are not permission to generate a fixture, acquire synchronized
+  EOG/EMG/gaze/motion/audio, open protected data, fit or score a model, or
+  claim brain origin. Missing controls remain unavailable, not clean.

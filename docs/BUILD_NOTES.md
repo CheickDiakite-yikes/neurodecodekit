@@ -2767,3 +2767,74 @@ target, score, or product surface was accessed, so there is no calibrated
 confidence, abstention benefit, selective-risk guarantee, neural advantage,
 decoding accuracy, unseen-person generalization, real-time behavior, or
 portable-hardware result.
+
+## 2026-07-12 - Loop 35 peripheral-confound research boundary
+
+Closed Loop 35 planning research while leaving the peripheral-confound
+experiment `Not Started`, all 31 `authorized_now` fields false, and every
+fixture, synchronized peripheral acquisition, protected-data read, model,
+training, residualization fit, scoring, no-keypress study, stream, device, and
+hardware operation closed. The machine contract freezes ten confound classes,
+nine future synchronized stream classes, 13 comparison conditions, three
+independently authorized stages, 24 future gates, and 32 refusal IDs.
+
+The primary-source task audit separates known-keypress v1 decoding from
+continuous-input v2 inference while preserving the fact that both public
+protocols use overt prompted typing. Eye movements, EMG, head/jaw/neck motion,
+audio/environment, physiology/equipment, and task identity remain credible
+predictive shortcuts. Calling a channel EEG/MEG or artifact-rejecting it does
+not establish physical origin.
+
+Current S21 has 102 magnetometers and timing but no synchronized EOG, EMG,
+gaze, motion, or audio stream in the committed cache path. Consumed S7 source
+metadata names three ocular channels, but its 61-channel cache contains none.
+Current evidence therefore cannot close a peripheral firewall. A future local
+pass can establish at most incremental brain-sensor information beyond every
+recorded control for the exact people, task, device, streams, and split, not
+absolute brain origin.
+
+The future recommendation uses physically and semantically disjoint 32/16/48
+calibration/selection/final floors. Select the strongest peripheral condition
+and one brain candidate on selection only, freeze all predictions/configs/
+access ledgers and hashes, then open final targets once. Recommend 0.05
+practical margins for both the all-stream-over-peripheral and brain-sensor-over-
+nonbrain estimands, 65,535 paired sign assignments plus observed, an
+intersection-union decision, and failure on ties. These values remain planning
+recommendations until a separate preregistration.
+
+The nine-sheet tracker updates Dashboard `B10` and Loop 35 row 15, adds decision
+`35-R1`, risk `R40`, and prompt `Loop35-Research`, and preserves Loop 25 as the
+active execution decision. The 91,463-byte workbook has SHA-256
+`90b59a0646837b1a83281c144edff688b967fd44deda06e2a7c09a0dccb9f61a`;
+all nine sheets rendered before and after the edit, the export reloads with
+exact key ranges, and the formula-error scan matches zero cells. The unrelated
+321,169-byte inspection sidecar remains byte-identical at SHA-256
+`5cd0ef08446c4e5feee5ce11f27eef41fae5eee8975cc77f6d401faca3b79f45`.
+
+Local verification passes 231 focused Loop 24-35 tests in 4.43 seconds wall
+with 239,075,328-byte maximum RSS; the strict Loop 35 plus roadmap slice passes
+27 tests in 0.09 seconds wall with 20,299,776-byte maximum RSS; 510 optional
+unittests pass with three expected skips in 23.06 seconds wall and
+561,594,368-byte maximum RSS; 507 pytest tests pass with three skips and 233
+subtests in 23.41 seconds wall and 587,186,176-byte maximum RSS; and 478
+dependency-light tests pass with 121 optional skips in 0.96 seconds wall and
+55,902,208-byte maximum RSS. Each full count is 18 above the Loop 34 closeout.
+
+Repository-wide Ruff lint, touched-file formatting, compileall, 23 source JSON
+and two TOML parses, seven CLI help surfaces, 55 registered commands,
+unauthorized Loop 35 runtime absence, 74 checked local Markdown links with zero
+missing, workbook render/reload/formula inspection, and `git diff --check`
+pass. Research commit `6f48363` passes push CI run `29214860306` and draft PR
+#14 CI run `29214881916`.
+
+Engineering capability added: a machine-checkable confound taxonomy,
+synchronized-stream contract, 13-condition comparison design, staged evidence
+program, missing-control refusals, and bounded incremental-attribution ceiling
+now exist.
+
+Scientific claim not established: no fixture, protected data, peripheral
+recording, model, training run, residualization fit, target, or score was
+accessed, so there is no peripheral-control result, incremental brain-sensor
+result, absolute brain-origin result, neural advantage, decoding accuracy,
+unseen-person generalization, no-keypress transfer, real-time behavior, or
+portable-hardware result.
