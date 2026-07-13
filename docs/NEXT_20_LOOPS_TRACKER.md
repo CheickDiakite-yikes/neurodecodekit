@@ -63,7 +63,8 @@
 > false authorization fields while its experiment remains `Not Started` and
 > unauthorized. Loop 43 planning research defines the independent artifact-
 > reproduction firewall while its challenge remains `Not Started` and
-> unauthorized. Loop 44 remains planning-only. The
+> unauthorized. Loop 44 artifact-only claim review is complete; engineering
+> release is held and scientific performance is parked. The
 > spreadsheet dashboard displays the original roadmap, current gate, and next
 > 20-loop queue separately.
 
@@ -570,4 +571,27 @@ validator incident parsed 136 cache JSON files, including 11 known consumed
 session-2 report/metadata files; none was used for tuning, scoring, or claim
 selection. Independent artifact reproduction must never be relabeled scientific
 replication, neural advantage, decoding, or population/device generalization.
-Loop 44 planning research is next; all 20 execution flags remain false.
+## Loop 44 Status
+
+Loop 44 artifact-only planning and claim review are complete; all 20 execution
+flags remain false. The strict registry contains 16 claim cards, seven evidence
+levels, five model cards, four dataset cards, 14 release gates, and eight
+risks. Engineering release is held because the evidence stack is not on
+`main` and Loops 38, 39, and 43 have not executed. Scientific performance
+release is parked because no real neural model has convincingly beaten its
+no-signal comparator. No tag, GitHub release, DOI, protected payload, model
+operation, or claim upgrade occurred.
+
+## Loops 45-64 Scientific Tranche
+
+The next 20 work orders are frozen in
+`docs/LOOPS_45_64_SCIENTIFIC_ROADMAP.md` and
+`registries/next_scientific_loops.v0.json`. They form five phases: Real Signal
+Truth, Unseen-Person Verdict, Accessible EEG Evidence, Causal Local Use, and
+Independent Evidence And Release.
+
+All 20 statuses are `Not Started`; all execution flags and all nine global
+authorization fields are false. The first possible positive scientific claim
+is a bounded S21 source-validation effect that beats a no-signal prior and all
+registered corrupted-signal controls. The stronger claim is a frozen final-only
+S25 zero-shot result. No roadmap row authorizes either experiment.

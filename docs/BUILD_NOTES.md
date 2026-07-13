@@ -3358,3 +3358,68 @@ discrepancies, privacy/security checks, resources, outcomes, and claim ceilings.
 Scientific claim not established: no independent run or protected experiment
 occurred, so there is no scientific replication, neural advantage, decoding,
 unseen-person generalization, real-time, device, or home-use result.
+
+## 2026-07-13 - Loop 44 Claim Promotion And Release Review
+
+- Reviewed Model Cards, Datasheets for Datasets, NIST AI RMF, COBIDAS-MEEG,
+  ACM artifact terminology, FAIR4RS, GitHub citation guidance, and Zenodo DOI
+  versioning without creating a release or running a new experiment.
+- Added `registries/loop44_claim_release_matrix.v0.json` with 16 claim cards,
+  seven evidence levels, five model cards, four dataset cards, 14 release gates,
+  eight risks, and explicit engineering/scientific decisions.
+- Promoted three engineering claims, retained three negative or inconclusive
+  real-data findings, kept two claims fixture-backed, parked two measured
+  paths, marked five desired claims unavailable, and prohibited one overclaim.
+- Held the engineering release because the current evidence stack is not on
+  `main` and Loops 38, 39, and 43 have not executed. Parked scientific
+  performance because no real neural model has convincingly beaten its
+  no-signal comparator.
+- Opened no raw data, real cache, consumed evaluation, target, model,
+  checkpoint, stream, device, or hardware. One overbroad documentation search
+  displayed the user-owned tracker inspection sidecar once. Artifact-tool later
+  overwrote it during workbook export; the exact prior bytes were recovered,
+  restored, and kept untracked and unstaged. It was not used as scientific
+  evidence.
+- Local acceptance passes 24 focused Loop 44 and Loops 45-64 invariants in
+  0.06 seconds wall with 18,546,688-byte peak RSS; 655 unittests with three
+  expected skips in 21.87 seconds wall and 616,251,392-byte peak RSS; 652
+  pytest tests with three skips and 277 subtests in 22.52 seconds wall and
+  622,362,624-byte peak RSS; and 623 dependency-light tests with 121 optional
+  skips in 1.77 seconds wall and 92,422,144-byte peak RSS. Ruff lint,
+  compileall, tracked plus new JSON, both TOML files, three CI CLI help
+  surfaces, `git diff --check`, and a 90-commit/5.34-MB gitleaks scan pass.
+  Exact-commit remote CI remains pending push.
+
+Engineering capability added: a machine-checkable claim and release ledger now
+binds public statements to evidence, limitations, access, privacy, and license.
+
+Scientific claim not established: Loop 44 adds no positive neural advantage,
+unseen-person generalization, real-time decoding, portable/home hardware,
+independent reproduction, scientific replication, or clinical result.
+
+## 2026-07-13 - Loops 45-64 Scientific Evidence Roadmap
+
+- Added 20 contiguous planning work orders across Real Signal Truth,
+  Unseen-Person Verdict, Accessible EEG Evidence, Causal Local Use, and
+  Independent Evidence And Release.
+- Bound the critical path to causal mechanics, one reserved S21 validation
+  event, intact-signal controls, one nonfinal development person, and one frozen
+  final-only S25 verdict.
+- Kept all 20 execution flags and all nine global authorization fields false;
+  S21 session 2 and S7 remain consumed and S25 remains unopened.
+- Added ten primary-source bindings, ten cross-loop kill branches, and 11
+  dependency-light invariants.
+- Extended the tracker to ten sheets. The 114,652-byte workbook reloads at
+  SHA-256 `83606898dc58201e016f1f44ca156c1817f3719a8a401b2619e20d7f349f91ae`;
+  all sheets rendered and the formula-error scan found zero matches.
+- Artifact-tool overwrote the adjacent user-owned inspection sidecar during
+  export. The exact prior copy was recovered and restored to SHA-256
+  `b96bbea77ec93e59c0db7c4bcaeb4a9182f1f7cc7039d13fb223b65e0005beb6`;
+  it remains untracked and unstaged.
+
+Engineering capability added: the tracker now routes directly from current
+negative evidence to falsifiable real-effect, unseen-person, EEG, causal-use,
+and independent-release gates.
+
+Scientific claim not established: planning these gates creates no neural
+advantage, transfer, EEG, real-time, home-use, or independent result.

@@ -2383,3 +2383,51 @@ evidence.
 Evidence: `docs/LOOP_43_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop43_research_boundary.v0.json`,
 `tests/test_loop43_research_boundary.py`, and roadmap row 43.
+
+## 0071 - Hold Engineering Release And Park Scientific Performance
+
+Decision: close Loop 44's artifact-only claim review with no new experiment,
+release mutation, or scientific claim upgrade. Freeze 16 claim cards, seven
+evidence levels, five model cards, four dataset cards, 14 release gates, and
+eight risks in `registries/loop44_claim_release_matrix.v0.json`.
+
+Promotion decision: retain bounded access, NeuroToken interface, and validated
+trial-identity claims as engineering capability. Preserve the S21 session-1
+near-null, S21 session-2 harmful cross-session, and S7 EEG harmful results as
+real scientific evidence. Keep synthetic mechanisms explicitly synthetic.
+
+Release decision: hold the engineering source release until the current stack
+is reviewed onto `main`, exact-candidate privacy/security checks pass, and
+Loops 38, 39, and 43 execute. Park scientific performance until a frozen real
+neural model beats no-signal and neural-derangement controls. Prohibit clinical
+and arbitrary-thought wording.
+
+Claim boundary: no tag, GitHub release, archive, DOI, participant payload,
+protected read, model operation, training, unseen-person result, real-time
+result, portable/home hardware result, independent reproduction, scientific
+replication, or clinical evidence exists.
+
+Evidence: `docs/LOOP_44_PRIMARY_SOURCE_RESEARCH.md`,
+`docs/LOOP_44_CLAIM_PROMOTION_AND_RELEASE_DECISION.md`,
+`registries/loop44_claim_release_matrix.v0.json`, and
+`tests/test_loop44_claim_release_matrix.py`.
+
+## 0072 - Target Real Signal Truth Before Model Scale
+
+Decision: freeze Loops 45-64 as five four-loop phases with every experiment and
+global authorization field false. The first scientific gate is not a larger
+model: it is a 2,908-parameter S21 source-validation candidate that must beat a
+matched no-signal prior and every registered corrupted-signal control.
+
+Transfer decision: qualify one non-S25 development person, freeze the complete
+model and statistical packet, and only then open S25 once for a strict zero-fit,
+zero-calibration unseen-person verdict. A failed S25 gate is retained as the
+negative result and S25 becomes consumed.
+
+Accessibility decision: fresh S20 EEG, local device mechanics, end-to-end
+clocks, and at-home acquisition feasibility are separate downstream claims.
+None may borrow a MEG result or be called home text decoding by default.
+
+Evidence: `docs/LOOPS_45_64_SCIENTIFIC_ROADMAP.md`,
+`registries/next_scientific_loops.v0.json`,
+`tests/test_next_scientific_loops.py`, and the `Loops 45-64` tracker sheet.

@@ -144,7 +144,9 @@
 > connection, participant, recording, locality result, signal, latency, model,
 > decoding, or hardware qualification exists. Loop 43 planning research defines
 > the independent artifact-reproduction firewall while its challenge remains
-> `Not Started` and unauthorized. Loop 44 remains `Not Started`.
+> `Not Started` and unauthorized. Loop 44 artifact-only claim review is
+> complete; engineering release is held and scientific performance release is
+> parked.
 > This does not reopen Loop 24 or authorize RW3, data, targets, models,
 > validation, training, calibration, or hardware.
 > In parallel, RW0 closes a primary-source Real-World Practice research gate
@@ -1030,7 +1032,7 @@ independence fields, 28 packet fields, 34 submission fields, eight comparison
 classes, 12 discrepancy classes, four stages, 32 fixture families, 36 gates,
 48 refusals, and 48 false authorization fields. No packet, oracle, outreach,
 contributor, submission, adjudication, archive, release, protected operation,
-or scientific result exists. Next numbered planning work is Loop 44; the
+or scientific result exists. Loop 44 artifact review is now complete; the
 current execution gate remains the separately controlled Loop 25 v1 decision.
 
 Local Loop 43 acceptance passes 631 unittests with three expected skips, 628
@@ -1039,3 +1041,55 @@ with 121 optional skips. Research commit `81798e0` is pushed on
 `codex/loop-43-independent-reproduction-research`; push CI `29240649149` and
 draft PR #22 CI `29240665109` both pass Base Python and Optional Neuro Readers.
 The user-owned workbook inspection sidecar remains untracked and byte-exact.
+
+## Loop 44 Handoff
+
+Loop 44 artifact-only claim review is complete. The machine source of truth is
+`registries/loop44_claim_release_matrix.v0.json`; the research and decision
+notes are `docs/LOOP_44_PRIMARY_SOURCE_RESEARCH.md` and
+`docs/LOOP_44_CLAIM_PROMOTION_AND_RELEASE_DECISION.md`.
+
+The matrix freezes 16 claim cards, seven evidence levels, five model cards,
+four dataset cards, 14 release gates, and eight risks. Three engineering claims
+are promoted; three negative or inconclusive real-data results are retained;
+two claims remain fixture-backed; two measured paths remain parked; five
+desired claims remain unavailable; clinical/arbitrary-thought wording is
+prohibited. Engineering release is held and scientific performance release is
+parked.
+
+No tag, GitHub release, archive, DOI, participant payload, protected data,
+consumed evaluation, target, model, training, stream, device, or hardware
+operation occurred. One overbroad documentation search displayed the untracked
+tracker inspection sidecar once; artifact-tool later overwrote it during export,
+after which the exact prior bytes were recovered and restored. It remains
+untracked and unstaged. The next roadmap must target the evidence gaps without
+reopening consumed S21/S7 data or turning general continuation into experiment
+authorization.
+
+Local acceptance passes 24 focused Loop 44 and Loops 45-64 invariants, 655
+unittests with three expected skips, 652 pytest tests with three skips and 277
+subtests, and 623 dependency-light tests with 121 optional skips. Ruff lint,
+compileall, JSON/TOML validation, three CI CLI help surfaces, diff hygiene, and
+the tracked-history secret scan also pass. Exact-commit remote CI remains
+pending push.
+
+## Loops 45-64 Handoff
+
+The next scientific tranche is in
+`docs/LOOPS_45_64_SCIENTIFIC_ROADMAP.md` and
+`registries/next_scientific_loops.v0.json`: contiguous IDs 45-64, five phases
+of four, ten sources, ten kill branches, 20 false execution flags, and nine
+false global authorization fields.
+
+The critical sequence is Loop 45 causal mechanics, Loop 46's six reserved S21
+validation rows, Loop 47 intact-signal attribution, one non-S25 development
+person, a complete freeze, and Loop 52's one-time S25 zero-shot verdict. S21
+session 2 and S7 stay consumed; S25 stays unopened and final-only. EEG,
+streaming, device, home, reproduction, and release phases remain downstream
+and separately authorized.
+
+The tracker now has ten sheets, including `Loops 45-64`. It is 114,652 bytes at
+SHA-256 `83606898dc58201e016f1f44ca156c1817f3719a8a401b2619e20d7f349f91ae`.
+All sheets rendered, key ranges reloaded, and the formula-error scan found zero
+matches. The user-owned inspection sidecar was restored byte-exact and remains
+untracked and unstaged.
