@@ -167,7 +167,9 @@ freezes the stream-to-NeuroToken clock, anomaly, state, schedule, and provenance
 firewall while its experiment remains `Not Started` and unauthorized. Loop 42
 planning research selects OpenBCI Cyton base 8-channel USB-radio at Q0 for one
 future mechanics path while its experiment remains `Not Started` and
-unauthorized; Loops 43-44 remain `Not Started`. All 20
+unauthorized; Loop 43 planning research defines the independent artifact-
+reproduction firewall while its challenge remains `Not Started` and
+unauthorized; Loop 44 remains `Not Started`. All 20
 `execution_authorized` flags are false. Loop 25's exact decision packet is
 ready for review, while Loops 26-33 have no
 preregistration or authorization packet. Roadmap approval, general
@@ -303,3 +305,11 @@ from the other.
   connect hardware, query/update firmware, contact a participant, place
   electrodes, record data, open a network path, or claim signal quality,
   capture latency, decoding, portability, safety, or home usability.
+- Keep Loop 43 planning-only. Its independent identity record, packet and
+  submission fields, commit-reveal order, comparison/discrepancy classes,
+  security/privacy rules, stages, gates, and refusals are not permission to
+  create a packet, oracle, fixture, challenge workflow, outreach, contributor
+  submission, adjudication, archive, DOI, badge, release, or runtime. The
+  challenge remains `Not Started` and unauthorized. Independent artifact
+  reproduction is not scientific replication, neural decoding evidence, or
+  person, platform, device, and home-use generalization.

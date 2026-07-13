@@ -448,6 +448,27 @@ Significant decisions belong in `docs/DECISIONS.md`. Measured implementation
 closeouts belong in a focused document and `docs/BUILD_NOTES.md`. Update
 `START_HERE.md`, the handoff, and the tracker when the current next gate changes.
 
+## Independent Reproduction
+
+Loop 43 planning research defines a future target-free NeuroToken causal-replay
+artifact challenge. The experiment is `Not Started` and unauthorized: there is
+no public packet, oracle, challenge issue, submission form, contributor run, or
+independent result to attempt yet.
+
+When separately authorized, the core challenge will accept only public,
+target-free synthetic artifacts and a hash-frozen commit-reveal submission. It
+will record clean-environment identity, public/private guidance, conflicts,
+commands, resource use, semantic comparisons, warnings, discrepancies, privacy
+scans, and negative or partial outcomes. Untrusted fork code must remain
+unprivileged and receive no secrets, protected caches, or write authority.
+
+Contributor-owned EEG is valuable, but it is outside the Loop 43 core challenge
+and must remain local under a separate protocol. Even a successful future Loop
+43 result would be independent artifact reproduction, not scientific
+replication, neural advantage, decoding accuracy, participant generalization,
+or device qualification. See `docs/LOOP_43_PRIMARY_SOURCE_RESEARCH.md` for the
+complete boundary.
+
 ## Pull Request Process
 
 1. Open an issue first for a new format, dataset, hardware adapter, dependency,

@@ -142,7 +142,9 @@
 > four stages, 34 gates, 46 refusals, and 45 false authorization fields. Its
 > experiment remains `Not Started`; no purchase, SDK, serial read, board
 > connection, participant, recording, locality result, signal, latency, model,
-> decoding, or hardware qualification exists. Loops 43-44 remain `Not Started`.
+> decoding, or hardware qualification exists. Loop 43 planning research defines
+> the independent artifact-reproduction firewall while its challenge remains
+> `Not Started` and unauthorized. Loop 44 remains `Not Started`.
 > This does not reopen Loop 24 or authorize RW3, data, targets, models,
 > validation, training, calibration, or hardware.
 > In parallel, RW0 closes a primary-source Real-World Practice research gate
@@ -1015,3 +1017,18 @@ NPZ remains the default until a recorded revisit trigger is reached. Loop 14
 is complete with strict train-only preprocessing and a near-null first real
 test. Qint16/qint8 remain representation candidates, not retained-accuracy
 results.
+
+## Loop 43 Handoff
+
+Loop 43 planning research is complete while the independent-reproduction
+challenge remains `Not Started` and unauthorized. The selected future lane is
+one target-free NeuroToken causal-replay software artifact under a commit-
+reveal protocol; the current artifact is not eligible because Loop 37 release,
+Loop 38 lifecycle, and Loop 39 matrix/independent-handoff execution dependencies
+remain open. The machine contract freezes seven qualification levels, 16
+independence fields, 28 packet fields, 34 submission fields, eight comparison
+classes, 12 discrepancy classes, four stages, 32 fixture families, 36 gates,
+48 refusals, and 48 false authorization fields. No packet, oracle, outreach,
+contributor, submission, adjudication, archive, release, protected operation,
+or scientific result exists. Next numbered planning work is Loop 44; the
+current execution gate remains the separately controlled Loop 25 v1 decision.

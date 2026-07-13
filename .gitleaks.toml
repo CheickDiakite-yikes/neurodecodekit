@@ -1,2 +1,7 @@
 [extend]
 useDefault = true
+
+[allowlist]
+description = "Exact roadmap dependency identifier misclassified as a generic API key"
+regexTarget = "match"
+regexes = ['''compatible_loop41_stream_to_neurotoken_closeout''']

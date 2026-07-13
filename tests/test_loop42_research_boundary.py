@@ -275,7 +275,7 @@ class Loop42ResearchBoundaryTests(unittest.TestCase):
         self.assertEqual(len(boundary["forbidden_promotions"]), 8)
 
     def test_roadmap_row_and_machine_summary_match(self):
-        self.assertEqual(self.roadmap["schema_version"], "0.19.0")
+        self.assertEqual(self.roadmap["schema_version"], "0.20.0")
         self.assertEqual(len(self.roadmap["loops"]), 20)
         self.assertTrue(all(row["execution_authorized"] is False for row in self.roadmap["loops"]))
         row = next(row for row in self.roadmap["loops"] if row["loop_id"] == 42)

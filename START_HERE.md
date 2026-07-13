@@ -113,7 +113,9 @@ Started`; Loop 41 planning research defines the stream-to-NeuroToken clock,
 anomaly, state, schedule, and provenance firewall while its experiment remains
 `Not Started` and unauthorized; Loop 42 planning research selects OpenBCI
 Cyton base 8-channel USB-radio for future mechanics only while its experiment
-remains `Not Started` and unauthorized; Loops 43-44 remain `Not Started`.
+remains `Not Started` and unauthorized; Loop 43 planning research defines the
+independent artifact-reproduction firewall while its challenge remains `Not
+Started` and unauthorized; Loop 44 remains `Not Started`.
 The maximum future
 local Loop 31 claim is sensor-signal dependence, and brain-specific attribution
 remains blocked on Loop 35. All are unauthorized.
@@ -394,3 +396,15 @@ The current registries keep prompted typing, imagined speech, natural reading,
 P300, SSVEP, and motor imagery as separate evidence cohorts. They also keep
 EEG separate from eye tracking, wrist EMG, heart/PPG, IMU, microphone, and hand
 tracking. No live or portable device is qualified.
+
+## Loop 43 Independent Reproduction Boundary
+
+Loop 43 planning research is complete while the challenge remains `Not
+Started` and unauthorized. It defines a future commit-reveal reproduction of
+one target-free NeuroToken causal-replay software artifact with 16 independence
+fields, 28 packet fields, 34 submission fields, four separately authorized
+stages, 36 gates, and 48 refusals. No packet, oracle, outreach, contributor,
+submission, or independent artifact reproduction exists. Even a future pass
+would be software-artifact reproduction, not scientific replication, neural
+advantage, decoding, person generalization, or device qualification. Read
+`docs/LOOP_43_PRIMARY_SOURCE_RESEARCH.md` before any Loop 43 proposal.
