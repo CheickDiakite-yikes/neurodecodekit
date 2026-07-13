@@ -2465,3 +2465,52 @@ Evidence: `docs/LOOP_25_CAUSAL_PREPROCESSING_RESULT.md`,
 `registries/loop25_causal_preprocessing_result.v1.json`,
 `registries/loop25_authorization_decision.v1.json`, and
 `tests/test_loop25_causal_preprocessing_result.py`.
+
+## 0074 - Share The Six S21 Validation Targets Across Loops 26, 31, And 33
+
+Decision: preregister one prospective Loop 26/31/33 and scientific-Loop-46
+event instead of scoring the scarce six-row S21 validation slice separately.
+Freeze the primary causal model, all encoder-attribution controls, all bounded
+data-scaling predictions, and 31 prediction sets before one target delivery.
+
+Model and compute decision: retain one 2,908-parameter left-padded causal
+candidate and one 2,884-parameter linear comparator. Permit only a future exact
+inventory of 21 parameter-update runs, 24 target-blind model inferences, six
+train-only prior fits, 5,040 optimizer steps, three fixed seeds, one CPU thread,
+1 GiB peak RSS, and 32 MiB generated artifacts. No restart, favorable-seed
+selection, or post-target rerun is available.
+
+Access decision: withdraw the old phrase that validation targets were
+physically unopened. The legacy deflated NPZ loader materialized complete
+target arrays in at least two historical commands, although the six validation
+rows were not used for fitting, hyperparameter/restart/threshold selection, or
+predictive scoring. Future execution must use bounded row streaming, isolate a
+55-row train derivative and six-row target-free validation-input derivative,
+and deliver validation targets only after a hash-only prediction-freeze commit
+is pushed and remotely green. Five source-test rows and session 2 stay closed.
+
+Statistical decision: require at least 0.05 macro sentence-CER improvement over
+the train-only prior, six strict sentence wins, one-sided exact `p <= 0.05`
+from all 64 sign assignments, the complete registered control intersection,
+and a strict win over the linear comparator. The bounded scaling result must
+also satisfy the frozen small-to-upper and size-55-over-prior margins plus
+negative slopes for every seed.
+
+Authorization decision: green preregistration commit `881145d` and CI run
+`29282661766` establish design only. The separate request remains unauthorized
+with every `authorized_now` field false. General continuation, co-researcher
+autonomy, roadmap approval, and Loop 25/RW3 decisions are not the exact one-time
+protected execution sentence.
+
+Claim boundary: even a complete pass can establish at most a bounded same-
+person, same-session predictive advantage and sensor-signal dependence for the
+exact slice, task, preprocessing, and model. It cannot establish brain-specific
+origin, source-test/cross-session behavior, unseen-person generalization,
+end-to-end causality or real-time decoding, Brain2Qwerty v2 equivalence, EEG or
+portable/home performance, arbitrary-thought decoding, or clinical utility.
+
+Evidence: `docs/LOOP_26_SHARED_VALIDATION_PREREGISTRATION.md`,
+`docs/LOOP_26_AUTHORIZATION_PACKET.md`,
+`registries/loop26_shared_validation_contract.v0.json`,
+`registries/loop26_authorization_request.v0.json`, and their dependency-light
+invariant suites.

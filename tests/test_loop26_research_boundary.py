@@ -37,15 +37,11 @@ class Loop26ResearchBoundaryTests(unittest.TestCase):
         cls.boundary = json.loads(BOUNDARY_PATH.read_text(encoding="utf-8"))
         cls.research = RESEARCH_PATH.read_text(encoding="utf-8")
         cls.roadmap = json.loads(ROADMAP_PATH.read_text(encoding="utf-8"))
-        cls.public_status = {
-            path: path.read_text(encoding="utf-8") for path in PUBLIC_STATUS_PATHS
-        }
+        cls.public_status = {path: path.read_text(encoding="utf-8") for path in PUBLIC_STATUS_PATHS}
 
     def test_identity_is_research_only_and_every_authorization_flag_is_false(self):
         boundary = self.boundary
-        self.assertEqual(
-            boundary["schema_name"], "neurodecodekit.loop26_research_boundary"
-        )
+        self.assertEqual(boundary["schema_name"], "neurodecodekit.loop26_research_boundary")
         self.assertEqual(boundary["schema_version"], "0.1.0")
         self.assertEqual(
             boundary["status"],
@@ -119,21 +115,15 @@ class Loop26ResearchBoundaryTests(unittest.TestCase):
         self.assertEqual(calculated, 2884)
         self.assertEqual(comparator["parameter_count"], calculated)
         self.assertEqual(comparator["parameter_difference_from_candidate"], 24)
-        self.assertAlmostEqual(
-            comparator["parameter_difference_fraction"], 24 / 2908, places=15
-        )
+        self.assertAlmostEqual(comparator["parameter_difference_fraction"], 24 / 2908, places=15)
         self.assertFalse(comparator["implementation_exists"])
 
     def test_six_item_exact_inference_resolution_is_machine_checkable(self):
         identifiability = self.boundary["identifiability"]
         self.assertEqual(identifiability["validation_items"], 6)
         self.assertEqual(identifiability["exact_paired_sign_assignments"], 2**6)
-        self.assertEqual(
-            identifiability["minimum_attainable_one_sided_p"], 1 / (2**6)
-        )
-        self.assertEqual(
-            identifiability["minimum_attainable_two_sided_p"], 2 / (2**6)
-        )
+        self.assertEqual(identifiability["minimum_attainable_one_sided_p"], 1 / (2**6))
+        self.assertEqual(identifiability["minimum_attainable_two_sided_p"], 2 / (2**6))
         self.assertEqual(
             identifiability["minimum_two_sided_p_after_one_zero_difference"],
             2 / (2**5),
@@ -211,34 +201,44 @@ class Loop26ResearchBoundaryTests(unittest.TestCase):
         self.assertIn("real-time", claims)
         self.assertIn("clinical", claims)
 
-    def test_roadmap_keeps_loop26_not_started_and_unauthorized(self):
+    def test_roadmap_advances_from_research_to_preregistration_without_execution(self):
         row = next(row for row in self.roadmap["loops"] if row["loop_id"] == 26)
-        self.assertEqual(row["status"], "Not Started")
+        self.assertEqual(row["status"], "Preregistered; Authorization Pending")
         self.assertFalse(row["execution_authorized"])
-        self.assertEqual(row["proof_posture"], "planned_not_authorized")
+        self.assertEqual(
+            row["proof_posture"],
+            "green_hash_bound_shared_validation_preregistration_no_protected_execution",
+        )
         self.assertEqual(row["research_status"], "planning_research_complete")
         self.assertEqual(
             row["research_registry"],
             "registries/loop26_research_boundary.v0.json",
         )
-        self.assertFalse(row["preregistration_prepared"])
+        self.assertTrue(row["preregistration_prepared"])
+        self.assertTrue(row["authorization_request_prepared"])
+        self.assertFalse(row["authorization_received"])
 
     def test_no_loop26_runtime_or_experiment_surface_exists(self):
         forbidden = (
             "src/neurodecodekit/models/tiny_causal_sentence_ctc.py",
             "src/neurodecodekit/experiments/real_validation_encoder_gate.py",
             "registries/loop26_experiment_contract.v0.json",
-            "registries/loop26_authorization_request.v0.json",
         )
         self.assertTrue(all(not (REPO_ROOT / path).exists() for path in forbidden))
+        request = json.loads(
+            (REPO_ROOT / "registries" / "loop26_authorization_request.v0.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertFalse(request["authorized_now"])
 
-    def test_public_status_keeps_research_complete_separate_from_execution(self):
+    def test_public_status_keeps_preregistration_separate_from_execution(self):
         for path, contents in self.public_status.items():
             with self.subTest(path=path.relative_to(REPO_ROOT)):
                 lowered = contents.lower()
                 self.assertIn("loop 26", lowered)
-                self.assertIn("planning research", lowered)
-                self.assertIn("not started", lowered)
+                self.assertIn("preregister", lowered)
+                self.assertIn("authoriz", lowered)
         combined = "\n".join(self.public_status.values())
         self.assertIn("2,908-parameter", combined)
         self.assertIn("2,884-parameter", combined)

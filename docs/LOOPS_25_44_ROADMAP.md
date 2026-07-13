@@ -116,11 +116,13 @@ bytes, 45 seconds internal runtime, 4 KiB state, and 1 GiB peak RSS.
 
 ## Loop 26 - Real Validation-Only Encoder Gate
 
-**Current status:** Planning research complete; experiment status remains `Not
-Started`, no preregistration or authorization sentence exists, and all data,
-target, model, training, and validation access remains unauthorized. See
-`docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md` and
-`registries/loop26_research_boundary.v0.json`.
+**Current status:** Shared Loop 26/31/33 preregistration is green at commit
+`881145d` and CI run `29282661766`. The request is prepared, the exact
+authorization sentence has not been received, every execution flag is false,
+and all cache-value, target, model, training, prediction, and validation access
+remains unauthorized. See
+`docs/LOOP_26_SHARED_VALIDATION_PREREGISTRATION.md` and
+`registries/loop26_shared_validation_contract.v0.json`.
 
 **Core question:** Does one fixed, small causal encoder show real neural
 information above no-signal and shuffled controls on source validation without
@@ -130,12 +132,14 @@ touching test?
 advantage. This is the smallest honest predictive gate that can justify
 continuing rather than scaling model complexity by instinct.
 
-**Build:** After Loop 25 closes, freeze the tiny architecture, preprocessing,
-optimizer, stopping rule, seeds, output report, and access ledger before
-targets open. The research recommendation preserves the existing 2,908-
-parameter ceiling by replacing the baseline's symmetric kernel-3 padding with
-two samples of left padding. Fit only on authorized source-train rows and open
-the six source-validation rows once under the registered sequence.
+**Build:** The green contract freezes the tiny architecture, optimizer, fixed
+240-step schedule, three seeds, output report, and access ledger before any
+target delivery. It preserves the 2,908-parameter ceiling by replacing the
+baseline's symmetric kernel-3 padding with two samples of left padding. The
+shared event contains 21 parameter-update runs, 24 target-blind model
+inferences, six train-only priors, and 31 six-row prediction sets. Validation
+targets may reach one isolated scorer only after a hash-only prediction-freeze
+commit is tested, pushed, and remotely green.
 
 **Research:** Complete. Six rows permit exactly 64 paired sign assignments, so
 the minimum attainable one-/two-sided p-values are 0.015625/0.03125 with six
@@ -155,18 +159,20 @@ differences; the complete 64-assignment exact null; exact sequence accuracy;
 WER; blank fraction; wins/ties/losses; margin over every control; parameters;
 training/runtime/RSS/bytes; all raw/cache/target/model/training access counts.
 
-**Gate:** A future preregistration must freeze the practical margin, exact
-paired test, all-control rule, tie behavior, seed, schedule, and access order.
-Proceed only if that registered neural-versus-prior margin and every required
-control pass with no access violation. Otherwise park real-model scaling,
-preserve the negative result, and do not touch test.
+**Gate:** The candidate must improve macro sentence CER over the train-only
+prior by at least 0.05, win strictly on all six sentences, achieve one-sided
+exact `p <= 0.05`, pass every registered signal-corruption component, beat the
+linear comparator, satisfy the bounded scaling rules, and preserve every hash,
+access, and resource gate. Otherwise park real-model scaling, preserve the
+negative result, and do not touch test.
 
-**Dependencies and authorization:** Requires a Loop 25 result compatible with
-the exact input path plus a separate real-cache, target, training, model, and
-single-validation-open authorization. Planning research is not
-preregistration. The future ceiling is one thread/worker, 2,908 trainable
-parameters, 20 total CPU minutes across candidate and controls, 1 GiB RSS, and
-32 MiB outputs.
+**Dependencies and authorization:** Loop 25 mechanics is satisfied, but it did
+not numerically produce the offline Loop 14 cache. Only the proposed model may
+be called causal; the upstream cache is zero-phase, whole-recording FFT-
+resampled, and sentence-delimited. The exact sentence in
+`docs/LOOP_26_AUTHORIZATION_PACKET.md` is still required in a separate green
+authorization record. The ceiling is one thread/worker, 2,908 trainable
+parameters, 1,500 seconds end to end, 1 GiB RSS, and 32 MiB outputs.
 
 ## Loop 27 - Fresh Holdout Preregistration
 
@@ -374,11 +380,11 @@ calibration, SDKs, devices, or hardware.
 
 ## Loop 31 - Neural Contribution Ablation
 
-**Current state:** Planning research complete; experiment `Not Started`. See
-`docs/LOOP_31_PRIMARY_SOURCE_RESEARCH.md` and
-`registries/loop31_research_boundary.v0.json`. Every one of 19 authorization
-flags is false; no cache, target, checkpoint, model, training, validation, LLM,
-Neuro Token, or experiment fixture was opened or created.
+**Current state:** The ten-condition encoder slice is preregistered inside the
+green shared Loop 26 contract; its exact authorization is pending. The
+five-condition LLM/Neuro Token extension remains unpreregistered. No cache,
+target, checkpoint, model, training, validation, LLM, Neuro Token, or
+experiment fixture was opened or created.
 
 **Core question:** When a predictive system improves, how much comes from
 sensor signal rather than text priors, timing, declared context, broken
@@ -486,11 +492,10 @@ data/model downloads before separate authorization.
 
 ## Loop 33 - Data Scaling And Sample Efficiency
 
-**Current state:** Planning research complete; experiment `Not Started`. See
-`docs/LOOP_33_PRIMARY_SOURCE_RESEARCH.md` and
-`registries/loop33_research_boundary.v0.json`. Every one of 23 authorization
-flags is false; no protected cache, signal, target, model, training, score,
-physical-repetition study, or acquisition exists.
+**Current state:** The bounded `8, 16, 24, 32, 44, 55` curve is preregistered
+inside the green shared Loop 26 contract; exact authorization is pending. No
+protected cache, signal, target, model, training, score, physical-repetition
+study, or acquisition exists.
 
 **Core question:** Within the existing 55 source-train sentence instances,
 does additional unique training data improve one fixed tiny causal encoder,

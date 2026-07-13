@@ -6,23 +6,24 @@ The original 20-loop sequence is complete except parked Loop 13. Loop 23 is
 parked after its frozen synthetic test gate; Loop 23.5 is complete. Loop 24 ran
 once and parked after its registered target-free runtime gate exceeded 60
 seconds; retain float32, keep seed 2401 consumed, and leave seed 2402 unopened.
-Loop 25 causal preprocessing was preregistered at `a36d97b`, then superseded
-before authorization by anti-alias amendment v1 at green commit `b6b92d8`.
-The current scope has a dedicated causal anti-alias SOS, 65,537 response points,
-23 alias probes, seven schedules, ten resume cuts, three future-mutation cuts,
-45 refusals, and 23 access counters. Its replacement request says
-`authorized_now: false`; seeds 2501/2502 remain unopened and no coefficient,
-fixture, CLI, or implementation exists.
+Loop 25 causal preprocessing completed its one-time target-free mechanics gate.
+The static 65,537-point response and 23-probe alias gate passed before the two
+registered partitions opened in order; 24/24 items and all 168 schedule, 240
+resume, and 72 mutation controls passed. Seeds 2501/2502 are consumed for this
+gate, no rerun is authorized, and no real/consumed data, target, model,
+training, network, RW3, stream, device, or hardware operation occurred.
 
-Loop 26 planning research is complete at `03605c5`. It recommends, without
-freezing or implementing, a 2,908-parameter zero-right-context candidate and a
-2,884-parameter linear comparator for the strict 55/6/5 source protocol. Six
-reserved validation sentences permit exactly 64 paired sign assignments. The
-experiment remains `Not Started`: all 14 authorization fields are false, Loop
-25 is unsatisfied, and no cache content, target, model, training, validation,
-source-test, or session-2 evidence was opened. Review
-`docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md` and
-`registries/loop26_research_boundary.v0.json` only as planning evidence.
+Loop 26 planning at `03605c5` has advanced to a green shared Loop 26/31/33
+preregistration at commit `881145d` and CI run `29282661766`. It freezes the
+2,908-parameter causal candidate, 2,884-parameter linear comparator, strict
+55/6/5 source protocol, 21 parameter-update runs, 24 target-blind inferences,
+six train-only priors, 31 prediction sets, ten attribution conditions, and the
+`8, 16, 24, 32, 44, 55` scaling curve before one six-target scoring delivery.
+The exact authorization request is prepared but every `authorized_now` field
+is false; no cache value, target delivery, model run, training run, prediction,
+or score exists. Review `docs/LOOP_26_SHARED_VALIDATION_PREREGISTRATION.md`,
+`docs/LOOP_26_AUTHORIZATION_PACKET.md`, and the matching registries. General
+continuation or research autonomy does not authorize this protected event.
 
 Loop 27 planning research is green at `b3d61b6`. Pinned official metadata
 selects S25 session 2 block 2 as the smallest eligible strict MEG pair: one FIF

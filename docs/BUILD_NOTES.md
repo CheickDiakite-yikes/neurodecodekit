@@ -3477,3 +3477,56 @@ Scientific claim not established: no neural recording, target, model, or
 training operation occurred, so retained neural information, neural advantage,
 decoding accuracy, unseen-person generalization, end-to-end latency, real-time
 operation, and portable/home hardware remain unproven.
+
+## 2026-07-13 - Loop 26/31/33 Shared Validation Authorization Packet
+
+- Preserved the green shared preregistration at commit `881145d` and CI run
+  `29282661766`, then prepared a separate hash-bound authorization request with
+  all 19 `authorized_now` fields false and every protected/model/training/
+  scoring counter at zero.
+- Reconciled the machine and human roadmaps around one event: 21 bounded
+  parameter-update runs, 24 target-blind model-inference runs, six train-only
+  priors, 31 frozen six-row prediction sets, the ten-condition Loop 31 encoder
+  matrix, the six-size Loop 33 curve, and one target delivery only after a
+  separately committed, pushed, remotely green prediction freeze.
+- Corrected the evidence boundary. The legacy deflated NPZ loader historically
+  materialized the complete target array, so physical-never-opened wording is
+  withdrawn. The supported boundary is narrower: the six validation targets
+  were not used for fitting, restart/model/threshold selection, or predictive
+  scoring.
+- Kept source-test rows, session 2, S7, S20, S25, raw FIF/MAT, downloads,
+  language models, RW3, streams, devices, and hardware closed. This milestone
+  performed zero raw-data reads, real-cache value reads, target deliveries,
+  model runs, training runs, parameter updates, prediction freezes, or scores.
+- Updated the ten-sheet tracker in an ignored isolated work directory. The
+  input workbook was 114,890 bytes and the verified output is 115,658 bytes at
+  SHA-256 `651b9be4bab74c0258b340e6a3415f4ae1795a616a8b609d6b111d4d6e5cc237`;
+  generation completed in 3.985 seconds wall, all changed sheets rendered, the
+  formula scan found zero errors, and ZIP integrity passed. Peak builder RSS
+  was unavailable. The adjacent user-owned sidecar remains untracked,
+  unstaged, and byte-identical at SHA-256
+  `b96bbea77ec93e59c0db7c4bcaeb4a9182f1f7cc7039d13fb223b65e0005beb6`.
+- A focused invariant caught an accidental Loop 29 flag mutation before the
+  final pass; it was restored to planning-only. The first full pass then caught
+  three stale Loop 31/33 living-roadmap expectations; those were reconciled
+  without changing either immutable planning-research registry.
+- Final local acceptance passes 90 focused shared-contract, request, planning-
+  boundary, and roadmap tests; 708 full unittests with three expected skips in
+  25.212 seconds and
+  616,710,144-byte process maximum RSS; and 661 dependency-light tests with 124
+  expected skips in 1.550 seconds and 107,626,496-byte process maximum RSS.
+  The pre-change baselines were 684/3 and 637/124. Ruff lint, changed-file Ruff
+  formatting, compileall, all registry JSON, TOML, CLI help, `git diff --check`,
+  workbook render/formula/ZIP checks, and a 70,283-byte staged Gitleaks scan
+  pass. A repository-wide Ruff format check still identifies 104
+  pre-existing files outside this milestone and they remain untouched.
+
+Engineering capability added: one green, machine-checked authorization packet
+now binds a bounded causal model, signal-attribution controls, scaling curve,
+prediction-freeze order, exact inference, access accounting, and resource caps
+before any protected execution.
+
+Scientific claim not established: no protected validation experiment ran, so
+there is still no demonstrated neural advantage, sensor-signal dependence,
+brain-specific origin, unseen-person transfer, decoding accuracy, real-time
+operation, or portable/home hardware result.

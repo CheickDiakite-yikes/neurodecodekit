@@ -58,11 +58,11 @@
       "phase_id": "P6",
       "title": "Reserved S21 Neural-Effect Gate",
       "priority": "P0",
-      "status": "Not Started",
+      "status": "Preregistered; Authorization Pending",
       "execution_authorized": false,
       "core_question": "Does one fixed 2,908-parameter causal encoder beat the train-only no-signal prior on all six reserved S21 source-validation sentences?",
       "scientific_claim_target": "bounded one-person one-session neural advantage on source validation",
-      "build_deliverable": "Preregister, train on 55 source-train rows, hash-freeze six predictions, open six validation targets once, and report exact paired inference.",
+      "build_deliverable": "Green shared Loop 26/31/33 contract freezes the 55-row train path, 31 six-row prediction sets, one post-freeze target delivery, exact paired inference, 10-condition attribution matrix, and bounded scaling curve; implementation and execution await the exact authorization sentence.",
       "data_scope": "S21 session-1 source train and six reserved validation rows only; five source-test rows and session 2 remain closed.",
       "controls": ["train-only no-signal prior", "zero-signal inference", "semantic-ID target derangement", "time displacement", "channel-name-hash derangement", "2,884-parameter linear signal comparator"],
       "primary_metrics": ["macro sentence CER", "corpus CER", "64 exact sign assignments", "margin over every control", "wins ties losses", "blank fraction", "runtime and RSS"],
@@ -70,7 +70,7 @@
       "kill_or_park_rule": "If any primary or control gate fails, park real-model scaling and move to Loop 48 failure localization; never open source test or increase model size.",
       "depends_on": [45, 26],
       "future_resource_cap": "one thread; one worker; <=2,908 trainable parameters; <=20 CPU minutes; <=1 GiB RSS; <=32 MiB generated",
-      "authorization_boundary": "Needs a new hash-bound preregistration and a separate authorization for exact cache members, targets, training, and validation opening."
+      "authorization_boundary": "Preregistered at green commit 881145d and represented by registries/loop26_shared_validation_contract.v0.json. The exact separate authorization sentence has not been received, so cache values, targets, training, inference, prediction freezing, and validation scoring remain unauthorized."
     },
     {
       "loop_id": 47,
@@ -79,9 +79,9 @@
       "priority": "P0",
       "status": "Not Started",
       "execution_authorized": false,
-      "core_question": "If Loop 46 passes, does the advantage require intact sensor signal rather than timing, labels, padding, or a language prior?",
+      "core_question": "Within the same shared Loop 46 scoring event, does any primary advantage require intact sensor signal rather than timing, labels, padding, or a language prior?",
       "scientific_claim_target": "sensor-signal dependence for the exact S21 source slice",
-      "build_deliverable": "Execute the frozen Loop 31 ten-condition encoder matrix with intersection-union logic and prediction commitments before target opening.",
+      "build_deliverable": "Freeze the Loop 31 ten-condition encoder matrix before target delivery and score it inside the same Loop 46 event with intersection-union logic; do not run a post-score matrix event.",
       "data_scope": "Exactly the authorized Loop 46 train/validation members and frozen predictions; no source test, session 2, S7, S20, or S25.",
       "controls": ["no-signal prior", "zero signal", "channel derangement", "time displacement", "train-target derangement", "padding-only", "timestamp-only", "linear signal comparator", "candidate encoder", "frozen positive control"],
       "primary_metrics": ["macro CER deltas", "all six paired differences", "intersection-union pass", "control ordering", "prediction hashes", "access counters"],
@@ -89,7 +89,7 @@
       "kill_or_park_rule": "Any shortcut win blocks a neural-contribution claim and sends the exact discrepancy to Loop 48 or the Loop 35 peripheral firewall.",
       "depends_on": [46, 31],
       "future_resource_cap": "one thread; one worker; no new architecture; <=10 inference conditions; <=15 CPU minutes; <=32 MiB generated",
-      "authorization_boundary": "Contingent on a passing Loop 46 and a separate matrix authorization; language-model and NeuroToken extensions remain separately gated."
+      "authorization_boundary": "Prediction and scoring operations are bound to the shared Loop 26/31/33 authorization sequence and one Loop 46 target delivery; no separate post-Loop-46 target open or matrix run exists. Language-model and NeuroToken extensions remain separately gated."
     },
     {
       "loop_id": 48,

@@ -89,8 +89,8 @@ Do not reset, revert, delete, or overwrite work already present.
 - Loops 25-44 are now a detailed planning-only queue: exactly 20 contiguous
   rows across five phases, with source bindings, controls, metrics, acceptance
   gates, stop rules, dependencies, resource caps, and 20 false execution flags.
-  Loop 25 is `Complete`; Loop 26 planning research is complete
-  while its experiment remains `Not Started`; Loop 27 planning research has
+  Loop 25 is `Complete`; Loop 26/31/33 share a green preregistration at
+  `881145d` while its request and all execution remain unauthorized; Loop 27 planning research has
   selected S25 metadata while preregistration remains blocked; Loop 28 planning
   research defines a strict zero-shot rule while its experiment remains `Not
   Started`; Loops 29-39 have completed planning research while their
@@ -113,12 +113,13 @@ Do not reset, revert, delete, or overwrite work already present.
   independent artifact-reproduction firewall while its challenge remains `Not
   Started` and unauthorized; Loop 44 artifact-only review is complete; all 20
   execution flags remain false.
-- Loop 26's planning boundary recommends a 2,908-parameter causal candidate, a
-  2,884-parameter linear comparator, six controls, and exact enumeration of all
-  64 paired sign assignments over six reserved source-validation sentences.
-  All 14 authorization fields are false. No Loop 26 cache content, target,
-  model, checkpoint, training, validation prediction, source-test row, or
-  session-2 evidence was opened; no preregistration or authorization exists.
+- Loop 26's green shared contract freezes a 2,908-parameter causal candidate,
+  2,884-parameter linear comparator, 21 fits, 24 target-blind inferences, six
+  priors, 31 prediction sets, ten encoder conditions, six nested data sizes,
+  and all 64 paired sign assignments over six validation sentences. The
+  request is prepared but its exact sentence has not been received. No cache
+  value, target delivery, model, checkpoint, training, prediction, source-test
+  row, session-2 evidence, or score was opened or run.
 - Loop 27 planning research at `b3d61b6` selects S25 session 2 block 2 as the
   smallest eligible strict MEG metadata pair: two files totaling
   1,009,939,983 bytes. S23 is officially excluded and S20 remains a separate
@@ -272,12 +273,13 @@ implementation, static-first access order, measured counters, and no-rerun
 boundary remain intact. Do not regenerate the fixture, reopen either partition,
 or rerun the gate.
 
-Loop 26 is review-only planning evidence until it receives its own packet. Do
-not turn `docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md`, its roadmap status, or this
-prompt into an experiment contract. A future Loop 26 preregistration must
-separately freeze architecture, controls, statistics, seeds, access order, and
-resources before any exact authorization can permit real-cache, target,
-training, model, or one-time validation access.
+Loop 26 is preregistered but unauthorized. Review
+`docs/LOOP_26_SHARED_VALIDATION_PREREGISTRATION.md`,
+`docs/LOOP_26_AUTHORIZATION_PACKET.md`, and the two Loop 26 v0 registries. Do
+not implement or execute from this prompt. Cache-value reads, target delivery,
+training, model inference, prediction freezing, and one-time validation access
+require the exact packet sentence in a separate tested, pushed, green
+authorization-only record.
 
 Loop 27 is also review-only planning evidence. Do not turn the selected S25
 paths, official hashes, local MAT presence, 1 GiB cap, or roadmap status into a

@@ -1,20 +1,19 @@
 # Codex Handoff - NeuroDecodeKit
 
-> Current handoff, 2026-07-13: Loop 25 v1 is complete at its one-time,
-> target-free causal-preprocessing mechanics boundary. Authorization commit
-> `1e7296a` and implementation commit `439f151` were pushed and remotely green
-> before the registered run. The static 65,537-point response and 23-probe
-> alias gate passed before either partition opened; development seed 2501 then
-> passed and froze, and qualification seed 2502 passed once unchanged. Across
-> 24 items, all 168 schedule, 240 resume, and 72 future-mutation checks passed.
-> Static plus complete-gate runtime was 5.542175 seconds, maximum peak RSS was
-> 136,806,400 bytes, and all generated artifacts totaled 788,967 bytes. Every
-> real-data, cache, consumed-evidence, target, model, training, network, RW3,
-> stream, device, and hardware counter was zero. The producer is causal with
-> zero right context; retained neural information and end-to-end latency remain
-> unmeasured. No rerun is authorized. The next numbered decision is a new
-> hash-bound Loop 26/roadmap Loop 46 preregistration or hold; this handoff does
-> not authorize protected reads, targets, inference, training, or later loops.
+> Current handoff, 2026-07-13: Loop 25 v1 and scientific Loop 45 remain complete
+> at their one-time target-free mechanics boundary with no rerun. Loop 26,
+> Loop 31's encoder-only matrix, Loop 33's bounded scaling curve, and scientific
+> Loop 46 now share a green preregistration at commit `881145d`; push CI run
+> `29282661766` passed both required jobs. The contract freezes a 2,908-
+> parameter causal model, a 2,884-parameter linear comparator, 21 parameter-
+> update runs, 24 target-blind inferences, six train-only prior fits, 31
+> prediction sets, ten encoder conditions, six nested data sizes, one green
+> prediction freeze, and one six-target scoring delivery. Its separate request
+> is prepared but every `authorized_now` field remains false. No real-cache
+> value, target delivery, model run, training run, prediction, or validation
+> score occurred. The next numbered decision is the exact sentence in
+> `docs/LOOP_26_AUTHORIZATION_PACKET.md` or hold; general autonomy is not that
+> one-time protected execution decision.
 
 > Historical pre-Loop-25-execution context, retained for audit: Loops 1-12,
 > 14-22, and 23.5 are complete; Loops
@@ -454,14 +453,13 @@ This is not primarily a model repo. It is a **research loop repo**.
 
 ## Current Next Work
 
-1. **Loop 26 / roadmap Loop 46 - preregister the reserved S21 validation gate,
-   or hold.** Read `docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md` and
-   `registries/loop26_research_boundary.v0.json`. Freeze the 55/6/5 split,
-   2,908-parameter candidate, 2,884-parameter comparator, six controls, target-
-   blind prediction hashes, exact 64-assignment test, one-thread caps, and
-   source-test/session-2 exclusions before requesting authorization. Planning
-   and this handoff do not authorize a cache read, target open, model run, or
-   training run.
+1. **Loop 26 / roadmap Loop 46 - decide on the exact shared authorization, or
+   hold.** Read `docs/LOOP_26_SHARED_VALIDATION_PREREGISTRATION.md`,
+   `docs/LOOP_26_AUTHORIZATION_PACKET.md`, and both Loop 26 v0 registries. The
+   preregistration is green at `881145d`; the request remains immutable and
+   unauthorized. Do not implement, hash/open cache values, deliver targets,
+   train, infer, freeze predictions, or score until the exact sentence is
+   recorded separately, pushed, and remotely green.
 2. **RW3 - decide on the prepared Stage A packet only.** Review
    `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` and
    `registries/rw3_stage_a_authorization_request.v0.json`. The request is bound
@@ -473,11 +471,10 @@ This is not primarily a model repo. It is a **research loop repo**.
    authorization.**
    Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`,
    `docs/LOOPS_25_44_ROADMAP.md`, and
-   `registries/next_20_loops.v0.json`. For Loop 26, also read
-   `docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md` and
-   `registries/loop26_research_boundary.v0.json`. Its planning research is
-   complete, but it has no preregistration, authorization sentence, runtime,
-   cache/target open, model, training run, or validation result. For Loop 27,
+   `registries/next_20_loops.v0.json`. For Loop 26, also read the green shared
+   preregistration and unauthorized request. It has no implementation,
+   protected runtime, cache-value/target delivery, model run, training run,
+   prediction, or validation result. For Loop 27,
    read `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop27_research_boundary.v0.json`: S25 is selected in metadata,
    but the source model, controls, target isolation, and staged permissions are

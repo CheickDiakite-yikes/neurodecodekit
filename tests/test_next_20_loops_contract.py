@@ -33,7 +33,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         self.assertEqual(boundary["current_numbered_gate"], 26)
         self.assertEqual(
             boundary["current_gate_status"],
-            "loop25_complete_loop26_requires_new_preregistration_and_authorization",
+            "loop26_shared_validation_preregistered_authorization_pending",
         )
         self.assertEqual(boundary["loop24_status"], "parked_resource_cap_exceeded")
         self.assertTrue(boundary["loop24_execution_was_authorized"])
@@ -56,7 +56,11 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         self.assertTrue(boundary["loop25_development_seed_opened"])
         self.assertTrue(boundary["loop25_qualification_seed_opened"])
         self.assertTrue(boundary["loop26_research_packet_prepared"])
-        self.assertFalse(boundary["loop26_preregistration_prepared"])
+        self.assertTrue(boundary["loop26_preregistration_prepared"])
+        self.assertEqual(boundary["loop26_preregistration_commit"][:7], "881145d")
+        self.assertEqual(boundary["loop26_preregistration_ci_run_id"], 29282661766)
+        self.assertTrue(boundary["loop26_authorization_request_prepared"])
+        self.assertFalse(boundary["loop26_authorization_received"])
         self.assertFalse(boundary["loop26_execution_authorized"])
         self.assertTrue(boundary["loop26_dependency_loop25_satisfied"])
         self.assertTrue(boundary["loop27_research_packet_prepared"])
@@ -108,8 +112,10 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
             "sensor_signal_dependence",
         )
         self.assertTrue(boundary["loop31_brain_specific_claim_requires_loop35"])
-        self.assertFalse(boundary["loop31_preregistration_prepared"])
-        self.assertFalse(boundary["loop31_authorization_request_prepared"])
+        self.assertTrue(boundary["loop31_preregistration_prepared"])
+        self.assertTrue(boundary["loop31_encoder_slice_bound_to_loop26_shared_contract"])
+        self.assertFalse(boundary["loop31_language_model_extension_preregistered"])
+        self.assertTrue(boundary["loop31_authorization_request_prepared"])
         self.assertFalse(boundary["loop31_execution_authorized"])
         self.assertFalse(boundary["loop31_dependency_loop26_satisfied"])
         self.assertTrue(boundary["loop32_research_packet_prepared"])
@@ -134,8 +140,9 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         self.assertTrue(boundary["loop33_prospective_shared_validation_path_available"])
         self.assertFalse(boundary["loop33_physical_repetition_lane_available"])
         self.assertFalse(boundary["loop33_acquisition_recommended"])
-        self.assertFalse(boundary["loop33_preregistration_prepared"])
-        self.assertFalse(boundary["loop33_authorization_request_prepared"])
+        self.assertTrue(boundary["loop33_preregistration_prepared"])
+        self.assertTrue(boundary["loop33_bound_to_loop26_shared_contract"])
+        self.assertTrue(boundary["loop33_authorization_request_prepared"])
         self.assertFalse(boundary["loop33_execution_authorized"])
         self.assertTrue(boundary["loop33_dependency_loop25_satisfied"])
         self.assertFalse(boundary["loop33_dependency_loop26_satisfied"])
@@ -327,6 +334,38 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                     self.assertTrue(registration["execution_completed_once"])
                     self.assertFalse(registration["rerun_authorized_now"])
                     self.assertFalse(registration["superseded_v0"]["was_authorized"])
+                elif row["loop_id"] == 26:
+                    self.assertEqual(row["status"], "Preregistered; Authorization Pending")
+                    self.assertEqual(
+                        row["proof_posture"],
+                        "green_hash_bound_shared_validation_preregistration_no_protected_execution",
+                    )
+                    self.assertTrue(row["preregistration_prepared"])
+                    self.assertTrue(row["authorization_request_prepared"])
+                    self.assertFalse(row["authorization_received"])
+                elif row["loop_id"] == 31:
+                    self.assertEqual(
+                        row["status"],
+                        "Shared Encoder Preregistration; Authorization Pending",
+                    )
+                    self.assertEqual(
+                        row["proof_posture"],
+                        "encoder_matrix_preregistered_with_loop26_language_extension_not_preregistered_no_execution",
+                    )
+                    self.assertTrue(row["preregistration_prepared"])
+                    self.assertTrue(row["authorization_request_prepared"])
+                    self.assertFalse(row["language_model_extension_preregistered"])
+                elif row["loop_id"] == 33:
+                    self.assertEqual(
+                        row["status"],
+                        "Shared Preregistration; Authorization Pending",
+                    )
+                    self.assertEqual(
+                        row["proof_posture"],
+                        "bounded_scaling_preregistered_with_loop26_no_protected_execution",
+                    )
+                    self.assertTrue(row["preregistration_prepared"])
+                    self.assertTrue(row["authorization_request_prepared"])
                 elif row["loop_id"] == 44:
                     self.assertEqual(row["status"], "Planning Research Complete")
                     self.assertEqual(
@@ -372,7 +411,8 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                         43,
                     }:
                         self.assertEqual(row["research_status"], "planning_research_complete")
-                        self.assertFalse(row["preregistration_prepared"])
+                        if row["loop_id"] not in {26, 31, 33}:
+                            self.assertFalse(row["preregistration_prepared"])
                     if row["loop_id"] == 27:
                         self.assertFalse(row["acquisition_request_prepared"])
                 self.assertTrue(

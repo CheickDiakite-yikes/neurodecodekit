@@ -71,20 +71,25 @@ and end-to-end latency remain unmeasured. No rerun is authorized.
 
 ### Loop 46 - Reserved S21 Neural-Effect Gate
 
-Train the frozen 2,908-parameter candidate on 55 S21 source-train rows. Freeze
-predictions before opening six reserved validation targets once. Compare with
-the train-only prior, zero signal, target derangement, time displacement,
-channel derangement, and the 2,884-parameter linear signal comparator.
+**Status: preregistered; authorization pending.** Green commit `881145d`
+freezes the 2,908-parameter candidate, 55-row train path, 31 prediction sets,
+and one six-target scoring delivery only after a green prediction-freeze
+record. Compare with the train-only prior, zero signal, target derangement,
+time displacement, channel derangement, timing-only and pairing controls, and
+the 2,884-parameter linear signal comparator. No protected execution exists.
 
 **Gate:** at least `0.05` macro sentence-CER improvement over prior, exact paired
-`p <= 0.05`, and strict wins over every control. **Ceiling:** one person, one
-session, source validation only.
+`p <= 0.05`, strict wins on all six sentences, and the complete registered
+control intersection. **Ceiling:** one person, one session, source validation
+only.
 
 ### Loop 47 - Neural Signal Attribution Matrix
 
-If Loop 46 passes, execute the frozen ten-condition Loop 31 matrix. The intact
-signal must beat timing-only, padding-only, label, zero-signal, and corrupted-
-signal paths. The language-model/NeuroToken extension remains a separate gate.
+The frozen ten-condition Loop 31 encoder matrix is now part of the same Loop 46
+prediction-freeze and target-scoring event; it is not run after observing a
+Loop 46 score. The intact signal must beat timing-only, label-pairing, zero-
+signal, and corrupted-signal paths. The language-model/NeuroToken extension
+remains a separate unpreregistered gate.
 
 **Gate:** intersection-union pass across every registered control. **Ceiling:**
 sensor-signal dependence, not absolute brain origin.
