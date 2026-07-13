@@ -22,7 +22,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
     def test_identity_range_and_planning_boundary_are_exact(self):
         roadmap = self.roadmap
         self.assertEqual(roadmap["schema_name"], "neurodecodekit.next_twenty_loops_roadmap")
-        self.assertEqual(roadmap["schema_version"], "0.11.0")
+        self.assertEqual(roadmap["schema_version"], "0.12.0")
         self.assertEqual(roadmap["roadmap_id"], "loops-25-44")
         self.assertEqual(roadmap["status"], "planning_only_not_execution_authorization")
         self.assertEqual(
@@ -143,6 +143,22 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         self.assertFalse(boundary["loop34_execution_authorized"])
         self.assertFalse(boundary["loop34_dependency_loop30_execution_satisfied"])
         self.assertFalse(boundary["loop34_dependency_loop31_execution_satisfied"])
+        self.assertTrue(boundary["loop35_research_packet_prepared"])
+        self.assertEqual(boundary["loop35_confound_class_count"], 10)
+        self.assertEqual(boundary["loop35_future_stream_count"], 9)
+        self.assertEqual(boundary["loop35_future_condition_count"], 13)
+        self.assertEqual(boundary["loop35_staged_program_count"], 3)
+        self.assertEqual(boundary["loop35_future_requirement_count"], 24)
+        self.assertEqual(boundary["loop35_future_refusal_count"], 32)
+        self.assertFalse(boundary["loop35_current_complete_multimodal_evidence_available"])
+        self.assertEqual(
+            boundary["loop35_maximum_future_local_claim"],
+            "incremental_brain_sensor_information_beyond_recorded_controls",
+        )
+        self.assertFalse(boundary["loop35_absolute_brain_origin_claim_available"])
+        self.assertFalse(boundary["loop35_preregistration_prepared"])
+        self.assertFalse(boundary["loop35_execution_authorized"])
+        self.assertFalse(boundary["loop35_dependency_loop31_execution_satisfied"])
         self.assertEqual(boundary["user_preferred_incremental_storage_bytes"], 5_000_000_000)
         self.assertEqual(boundary["user_absolute_incremental_storage_bytes"], 10_000_000_000)
         self.assertEqual(boundary["selected_s20_plus_s25_future_bundle_bytes"], 1_106_030_247)
@@ -194,14 +210,15 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                     self.assertFalse(registration["superseded_v0"]["was_authorized"])
                 else:
                     self.assertEqual(row["status"], "Not Started")
-                    if row["loop_id"] == 34:
-                        self.assertEqual(
-                            row["proof_posture"],
-                            "planning_research_complete_no_confidence_fit_or_result_unauthorized",
-                        )
+                    if row["loop_id"] in {34, 35}:
+                        expected = {
+                            34: "planning_research_complete_no_confidence_fit_or_result_unauthorized",
+                            35: "planning_research_complete_no_confound_fixture_acquisition_or_brain_specific_result_unauthorized",
+                        }
+                        self.assertEqual(row["proof_posture"], expected[row["loop_id"]])
                     else:
                         self.assertEqual(row["proof_posture"], "planned_not_authorized")
-                    if row["loop_id"] in {26, 27, 28, 29, 30, 31, 32, 33, 34}:
+                    if row["loop_id"] in {26, 27, 28, 29, 30, 31, 32, 33, 34, 35}:
                         self.assertEqual(row["research_status"], "planning_research_complete")
                         self.assertFalse(row["preregistration_prepared"])
                     if row["loop_id"] == 27:
@@ -320,6 +337,10 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                 "neural_network_calibration",
                 "calibration_measurement",
                 "generalized_risk_coverage",
+                "eye_movement_decoding_confounds",
+                "eeg_bci_artifacts",
+                "meg_movement_muscle_artifacts",
+                "motion_muscle_phantom_validation",
             }.issubset(source_ids)
         )
         source_map = self.roadmap["loop_source_map"]

@@ -364,7 +364,8 @@ Started`; Loop 30 interaction research, Loop 31 attribution research, and Loop
 32 calibration research are also complete while their experiments remain `Not
 Started`; Loop 33 planning research is complete while its experiment remains
 `Not Started`; Loop 34 confidence research is complete while its experiment
-remains `Not Started` and confidence is unavailable; Loops 35-44 remain
+remains `Not Started` and confidence is unavailable; Loop 35 confound research
+is complete while its experiment remains `Not Started`; Loops 36-44 remain
 `Not Started`.
 
 The detailed source trace and design correction live in
@@ -676,3 +677,54 @@ target, checkpoint, model, confidence fit, scoring, product-confidence, S20,
 S25, stream, device, or hardware operation. Exact sources and boundaries are
 in `docs/LOOP_34_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop34_research_boundary.v0.json`.
+
+## 2026-07-12 Loop 35 Research Addendum
+
+Loop 35 planning research is complete while its peripheral-confound experiment
+remains `Not Started` and unauthorized. Brain2Qwerty v1 uses 500 ms windows
+centered on known keypresses during physical typing, while Brain2Qwerty v2
+removes explicit keypress timing at inference but still studies overt prompted
+typing with audio, visual, motor, and somatosensory context. Neither protocol
+by itself establishes that predictive sensor information originates in the
+brain or transfers to no-keypress and patient use.
+
+Primary MEG and EEG sources sharpen the risk. Small task-specific eye movements
+can sustain MEG decoding; EMG and other artifact components can outperform the
+intended signal in movement classification; overt movement can induce head,
+jaw, neck, and muscle artifacts in MEG; and phantom-plus-EMG designs are used
+to validate artifact-removal behavior. Artifact rejection and a channel label
+therefore cannot replace synchronized comparator streams.
+
+The machine boundary inventories ten confound classes and nine future stream
+classes. Its 13-condition matrix includes no-signal and timing baselines,
+direct-leak sentinels, ocular, distal/proximal muscle, motion,
+audio/environment, all-peripheral, brain-sensor-only, train-only residualized,
+and all-stream comparisons. Missing controls remain unavailable rather than
+being imputed as zero or replaced by synthetic traces.
+
+The recommended fresh protocol uses physically and semantically disjoint floors
+of 32 calibration, 16 selection, and 48 final sentences. The strongest
+peripheral condition and one brain candidate are selected before all final
+predictions and hashes freeze. Final targets then open once. The primary
+estimand asks whether all synchronized streams beat the strongest peripheral
+condition; the secondary asks whether brain-sensor-only beats the strongest
+nonbrain condition. Both recommend a 0.05 practical margin, 65,535 paired sign
+assignments plus observed, an intersection-union decision, and a fail on ties.
+
+Current S21/S7 evidence cannot provide the complete comparison. S21's committed
+path has 102 magnetometers and timing but no synchronized EOG, EMG, gaze,
+motion, or audio. The consumed S7 source named three ocular channels, but its
+61-channel cache contains none. A future clean local result can therefore claim
+at most incremental brain-sensor information beyond recorded controls for the
+exact protocol. Absolute brain origin, language intent, no-keypress transfer,
+patient benefit, population generalization, real-time behavior, portable
+hardware, at-home use, and clinical efficacy remain unavailable.
+
+Stage A synthetic interface work, Stage B fresh consented multimodal evidence,
+and Stage C no-keypress/patient work are independent authorization decisions.
+The boundary freezes 24 future gates, 32 refusal IDs, and 31 false authorization
+fields. This research used six public web operations and zero protected data,
+target, model, training, acquisition, S20/S25, stream, device, or hardware
+operations. Exact sources and boundaries are in
+`docs/LOOP_35_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop35_research_boundary.v0.json`.

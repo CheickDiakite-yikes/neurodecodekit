@@ -90,9 +90,10 @@ Do not reset, revert, delete, or overwrite work already present.
   while its experiment remains `Not Started`; Loop 27 planning research has
   selected S25 metadata while preregistration remains blocked; Loop 28 planning
   research defines a strict zero-shot rule while its experiment remains `Not
-  Started`; Loops 29-34 have completed planning research while their
-  experiments remain `Not Started`; confidence is unavailable and Loops 35-44
-  remain `Not Started`; all 20
+  Started`; Loops 29-35 have completed planning research while their
+  experiments remain `Not Started`; confidence is unavailable, Loop 35's
+  maximum future local claim is incremental brain-sensor information beyond
+  recorded controls, and Loops 36-44 remain `Not Started`; all 20
   execution flags remain false.
 - Loop 26's planning boundary recommends a 2,908-parameter causal candidate, a
   2,884-parameter linear comparator, six controls, and exact enumeration of all
@@ -162,6 +163,15 @@ Do not reset, revert, delete, or overwrite work already present.
   flags are false; the six real validation rows are unavailable for Loop 34
   fitting and independent qualification, confidence is unavailable, and every
   fixture/fit/target/scoring/product-confidence operation is unauthorized.
+- Loop 35 planning research is complete while the peripheral-confound
+  experiment remains `Not Started`. The boundary freezes 10 confound classes,
+  9 future synchronized stream classes, 13 conditions, 3 independently
+  authorized stages, 24 gates, 32 refusals, and 31 false authorization fields.
+  Current S21/S7 evidence cannot supply a fresh complete peripheral-control
+  comparison. Missing controls fail closed, and the maximum future local claim
+  is incremental brain-sensor information beyond recorded controls, not
+  absolute brain origin. No fixture, acquisition, protected-data read, model,
+  training, scoring, no-keypress study, device, or hardware work is authorized.
 - No real recording quality, neural advantage, unseen-person generalization,
   useful EEG decoder, real-time decoding, portable-hardware, arbitrary-thought,
   or clinical result has been demonstrated.

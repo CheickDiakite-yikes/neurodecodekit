@@ -1,6 +1,6 @@
 {
   "schema_name": "neurodecodekit.next_twenty_loops_roadmap",
-  "schema_version": "0.11.0",
+  "schema_version": "0.12.0",
   "roadmap_id": "loops-25-44",
   "prepared_at": "2026-07-12",
   "status": "planning_only_not_execution_authorization",
@@ -112,6 +112,20 @@
     "loop34_execution_authorized": false,
     "loop34_dependency_loop30_execution_satisfied": false,
     "loop34_dependency_loop31_execution_satisfied": false,
+    "loop35_research_packet_prepared": true,
+    "loop35_confound_class_count": 10,
+    "loop35_future_stream_count": 9,
+    "loop35_future_condition_count": 13,
+    "loop35_staged_program_count": 3,
+    "loop35_future_requirement_count": 24,
+    "loop35_future_refusal_count": 32,
+    "loop35_current_complete_multimodal_evidence_available": false,
+    "loop35_maximum_future_local_claim": "incremental_brain_sensor_information_beyond_recorded_controls",
+    "loop35_absolute_brain_origin_claim_available": false,
+    "loop35_preregistration_prepared": false,
+    "loop35_authorization_request_prepared": false,
+    "loop35_execution_authorized": false,
+    "loop35_dependency_loop31_execution_satisfied": false,
     "user_preferred_incremental_storage_bytes": 5000000000,
     "user_absolute_incremental_storage_bytes": 10000000000,
     "selected_s20_plus_s25_future_bundle_bytes": 1106030247,
@@ -648,32 +662,46 @@
       "priority": "P0",
       "effort": "L",
       "status": "Not Started",
+      "research_status": "planning_research_complete",
+      "research_packet": "docs/LOOP_35_PRIMARY_SOURCE_RESEARCH.md",
+      "research_registry": "registries/loop35_research_boundary.v0.json",
+      "preregistration_prepared": false,
+      "authorization_request_prepared": false,
       "execution_authorized": false,
-      "proof_posture": "planned_not_authorized",
-      "core_question": "Is apparent decoding driven by brain signal, or by keystroke timing, muscle, eye, motion, audio, or prompt leakage?",
+      "proof_posture": "planning_research_complete_no_confound_fixture_acquisition_or_brain_specific_result_unauthorized",
+      "core_question": "After target leakage, timing, key identity, eye, muscle, motion, audio, environment, prompt, and language shortcuts are measured, do brain-sensor inputs add predictive information beyond every recorded nonbrain control?",
       "why_high_value": "Prompted typing strongly recruits motor systems, so a positive score is not enough to establish neural specificity.",
-      "build_deliverable": "Confound registry, synchronized brain-only/peripheral-only/combined protocol, shortcut audits, and claim-blocking report fields.",
-      "research_deliverable": "Primary-source confound taxonomy for prompted typing and future no-keypress translation.",
-      "data_scope": "Protocol and synthetic timing fixtures first; real multimodal collection requires separate consent, retention, device, and acquisition authorization.",
+      "build_deliverable": "Future ten-class confound registry, nine synchronized stream types, 13-condition timing/peripheral/brain-sensor/residualized/combined protocol, staged authorization, and claim-blocking unavailable fields.",
+      "research_deliverable": "Completed primary-source overt-typing, ocular, EEG movement-artifact, MEG movement/muscle, cleaning-validation, and no-keypress transfer review.",
+      "data_scope": "Target-free synthetic interface first. Current S21 can support timing controls only after authorization and consumed S7 cannot be fresh evidence. Any real multimodal study requires separate ethics, consent, privacy, retention, device, stream, file, byte, and acquisition authorization.",
       "controls": [
-        "Keystroke timing and key identity without neural samples.",
-        "Peripheral-only channels including EOG, EMG, motion, microphone, or hand tracking when actually recorded.",
-        "Brain-only channels with synchronized event structure.",
-        "Time-shift, channel-drop, and event-jitter controls."
+        "Timing-only control with onsets, intervals, durations, counts, and masks but no key identity or text.",
+        "Key-identity and prompt/target leak sentinels that are never eligible predictive models.",
+        "EOG/gaze, distal EMG/kinematics, proximal EMG/kinematics, motion/geometry, audio/environment, and all-peripheral conditions when physically recorded.",
+        "Brain-sensor-only, train-only residualized brain-sensor, and all-stream conditions on identical final items.",
+        "Strongest peripheral and one brain-sensor rule selected on selection only; every final prediction hash-frozen before one target open."
       ],
       "primary_metrics": [
-        "brain-only, peripheral-only, combined, and timing-only performance",
-        "incremental neural contribution",
-        "shortcut detection rate",
-        "clock and event alignment residuals",
-        "unavailable modality count"
+        "macro CER for all 13 timing, leakage-sentinel, peripheral, brain-sensor, residualized, and combined conditions",
+        "strongest-peripheral minus all-stream and strongest-nonbrain minus brain-sensor incremental estimands",
+        "paired intersection-union decision, item-level differences, practical margins, ties, and negative outcomes",
+        "clock origins, alignment residuals, uncertainty, drops, resets, missing intervals, and event jitter",
+        "raw versus residualized retained variance and distortion diagnostics",
+        "missing-stream, unavailable-field, access, resource, warning, and hash ledgers"
       ],
-      "acceptance_boundary": "A brain-specific claim requires brain-only performance above all preregistered non-brain controls and a positive incremental contribution over the strongest peripheral condition.",
-      "stop_rule": "If peripheral or timing controls explain the result, relabel it as task/peripheral decoding and block a neural claim.",
+      "confound_class_count": 10,
+      "future_stream_count": 9,
+      "future_condition_count": 13,
+      "staged_program_count": 3,
+      "future_requirement_count": 24,
+      "future_refusal_count": 32,
+      "maximum_future_local_claim": "incremental_brain_sensor_information_beyond_recorded_controls",
+      "acceptance_boundary": "A future local increment requires compatible Loop 31 sensor dependence, all required physical streams, disjoint 32/16/48 calibration/selection/final floors, train-only nuisance fits, one selected strongest peripheral and brain-sensor rule, all predictions frozen before one final open, recommended 0.05 paired increments under the intersection-union rule, all 24 gates, and complete ledgers. It remains beyond recorded controls, not absolute brain origin.",
+      "stop_rule": "Publish task/peripheral decoding or unavailable on missing controls, leakage, timing/peripheral parity, sync failure, final-informed cleaning or selection, incomplete conditions, cap failure, or post-target restart. Never transfer healthy overt typing to no-keypress, patient, population, clinical, or product claims.",
       "depends_on": [31],
-      "external_gates": ["separate_multimodal_ethics_and_acquisition_authorization"],
-      "authorization_boundary": "Planning only. No peripheral recording, device access, real signal read, or model run is authorized.",
-      "resource_cap": "Zero collection now; future packet must set exact files, bytes, retention, one-thread analysis, and 32 MiB derived-artifact cap."
+      "external_gates": ["separate_synthetic_interface_preregistration_and_authorization", "separate_multimodal_ethics_consent_privacy_retention_and_acquisition_authorization", "separate_no_keypress_or_patient_program"],
+      "authorization_boundary": "Planning research only. No fixture, metadata/header/signal/target read, model/control fit or run, residualization, source localization, EOG/gaze/EMG/motion/audio/keyboard operation, acquisition, download, device, stream, hardware, or brain-specific claim is authorized.",
+      "resource_cap": "Current research used one thread/worker, six public web operations, zero protected bytes, and an 8 MiB planning cap. Future synthetic interface remains one thread/worker, 120 seconds, 1 GiB RSS, 16 MiB artifacts, and zero downloads; future real analysis remains one thread/worker, 1,200 seconds, 1 GiB RSS, and 32 MiB derived artifacts, while acquisition bytes stay unavailable until an exact packet."
     },
     {
       "loop_id": 36,
@@ -991,7 +1019,7 @@
     "32": ["brain2qwerty_v2", "brain2qwerty_v2_code", "coral_domain_adaptation", "euclidean_alignment", "long_term_bci_calibration_reduction", "brain_decoder_cv_guidelines", "moabb_benchmark"],
     "33": ["brain2qwerty_v2", "brain_decoding_image_scaling", "eeg_speech_scaling_175h", "classification_learning_curve_sample_size", "small_sample_cv_uncertainty"],
     "34": ["selective_prediction", "conformal_risk_control", "conformal_beyond_exchangeability", "neural_network_calibration", "calibration_measurement", "generalized_risk_coverage"],
-    "35": ["brain2qwerty_v1", "brain2qwerty_v2"],
+    "35": ["brain2qwerty_v1", "brain2qwerty_v2", "eye_movement_decoding_confounds", "eeg_bci_artifacts", "meg_movement_muscle_artifacts", "motion_muscle_phantom_validation"],
     "36": ["mne_resampling", "bids_derivatives"],
     "37": ["bids_derivatives", "datasheets"],
     "38": ["eeg_identity_privacy", "nist_privacy_framework"],
@@ -1338,6 +1366,30 @@
       "title": "Overcoming Common Flaws in the Evaluation of Selective Classification Systems",
       "url": "https://arxiv.org/abs/2407.01032",
       "roadmap_use": "Limitations of aggregate AURC plus generalized-risk working points and multi-threshold evaluation."
+    },
+    {
+      "source_id": "eye_movement_decoding_confounds",
+      "title": "Eye Movement-Related Confounds in Neural Decoding of Visual Working Memory Representations",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30310862/",
+      "roadmap_use": "Small task-specific eye movements as a successful MEG decoding confound and the need for explicit ocular controls."
+    },
+    {
+      "source_id": "eeg_bci_artifacts",
+      "title": "Artifacts in EEG-Based BCI Therapies: Friend or Foe?",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8747566/",
+      "roadmap_use": "Simultaneous EMG benchmarking and evidence that artifact components can be more informative than intended EEG components in movement classification."
+    },
+    {
+      "source_id": "meg_movement_muscle_artifacts",
+      "title": "Correcting MEG Artifacts Caused by Overt Speech",
+      "url": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2021.682419/full",
+      "roadmap_use": "Simultaneous MEG, EMG, audio, and head-position evidence for task-linked head, jaw, and muscle distortion and cleaning limitations."
+    },
+    {
+      "source_id": "motion_muscle_phantom_validation",
+      "title": "Motion and Muscle Artifact Removal Validation Using an Electrical Head Phantom, Robotic Motion Platform, and Dual Layer Mobile EEG",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32746290/",
+      "roadmap_use": "Ground-truth source, motion, noise-sensor, and neck-EMG validation of artifact removal rather than assuming cleaning success."
     }
   ]
 }

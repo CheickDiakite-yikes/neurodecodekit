@@ -39,6 +39,7 @@ and explain exactly what the result does not prove.
 | Portable sensing decision | Loop 29 research separates cryogenic MEG, partner/lab OPM-MEG, local-first scalp EEG, and non-neural controls through 15 requirements and six qualification levels | Planning research is complete while the experiment is `Not Started`; no device, download, stream, hardware session, or portable decoding result exists |
 | Local replay interaction decision | Loop 30 research freezes four source modes, a 30-field target-free trace, nine clock domains, six latency levels, 18 gates, 30 refusals, and fixed loopback/browser/accessibility controls | Planning research is complete while the experiment is `Not Started`; no trace, UI, server, browser run, live source, confidence, or end-to-end latency result exists |
 | Neural-attribution decision | Loop 31 research freezes a 10-condition encoder matrix, a contingent 5-condition LLM/Neuro Token matrix, exact six-row intersection-union inference, 18 gates, and 24 refusals | Planning research is complete while the experiment is `Not Started`; a future local pass can establish at most sensor-signal dependence, with brain-specific attribution reserved for Loop 35 |
+| Peripheral-confound decision | Loop 35 research freezes 10 confound classes, 9 synchronized stream classes, 13 conditions, 3 separately authorized stages, 24 gates, and 32 refusals | Planning research is complete while the experiment is `Not Started`; current data cannot support the complete firewall, and even a future pass can claim only incremental brain-sensor information beyond recorded controls |
 | Real predictive evidence | Both the same-person cross-session MEG model and the bounded S7 EEG classifier lose to no-signal controls | The current scientific result is negative, explicit, and frozen against post-hoc tuning |
 | Local execution gate | Float16 preserved exact behavior but ran `1.170x` slower on the producer; qint8 cut payload to `47.1%` but changed behavior and ran `2.785x` slower | Float32 is retained, qualification stayed unopened, and Loop 24 is parked after the full run exceeded its 60-second cap |
 | Next transport layer | Stage A is specified as 90 future schedule-by-fixture cases with 30 exact refusals under a 32 MiB cap | The decision packet is review-ready; no replay runtime, socket, board, or hardware path is authorized yet |
@@ -68,7 +69,8 @@ and explain exactly what the result does not prove.
 | Loop 30 replay interaction boundary | 4 source modes; 30 event fields; 9 clock domains; 6 latency levels; 18 future gates; 30 refusals; 30 false authorization fields | planning research only | Defines how a future target-free local replay can show revisions, finalization, clocks, privacy, and proof posture without implying live or low-latency neural decoding |
 | Loop 31 neural-attribution boundary | 10 encoder conditions; 5 contingent LLM conditions; 6 claim classes; 18 future gates; 24 refusals; 19 false authorization fields | planning research only | Separates no-signal, timing, context, corrupted-signal, language-prior, and conditional Neuro Token effects while blocking brain-specific claims until Loop 35 |
 | Loop 34 confidence boundary | 7 confidence semantics; 8 score/control roles; recommended fresh `128/64/256` synthetic partitions; 20 future gates; 30 refusals; 26 false authorization fields | planning research only; confidence unavailable | Separates ranking, calibrated probability, abstention, conformal risk, revision stability, and product confidence while refusing reuse of six real validation rows |
-| Test and release surface | 492 local unittests with 3 expected skips; 489 pytest passes plus 226 subtests; 460 dependency-light Python tests with 121 expected skips | Loop 34 research commit `ad9d647` is green in push CI `29213220777` and draft PR #13 CI `29213242970` | Makes research contracts, candidate selection, source bindings, access order, tamper checks, and authorization boundaries executable on ordinary hardware |
+| Loop 35 peripheral-confound boundary | 10 confound classes; 9 future synchronized stream classes; 13 conditions; 3 stages; 24 future gates; 32 refusals; 31 false authorization fields | planning research only; complete real controls unavailable | Requires timing, ocular, distal/proximal muscle, motion, audio/environment, and combined nonbrain comparators before any bounded incremental brain-sensor claim |
+| Test and release surface | 510 local unittests with 3 expected skips; 507 pytest passes plus 233 subtests; 478 dependency-light Python tests with 121 expected skips | Loop 35 local acceptance is green; research commit and remote CI are pending | Makes research contracts, candidate selection, source bindings, access order, tamper checks, and authorization boundaries executable on ordinary hardware |
 
 ### Real-Data Scientific Scorecard
 
@@ -86,7 +88,7 @@ engineering wins, not hidden behind synthetic accuracy.
 
 | Gate | Runtime | Peak RSS | Persistent output |
 |---|---:|---:|---:|
-| Dependency-light Python unittest run | 0.71 sec wall | 53,985,280 bytes | 460 tests with 121 expected optional skips; temporary output only |
+| Dependency-light Python unittest run | 0.96 sec wall | 55,902,208 bytes | 478 tests with 121 expected optional skips; temporary output only |
 | RW1 metadata intake roundtrip | 0.001659 sec | 21,643,264 bytes | 11,545 bytes |
 | RW2 bounded FIF quality roundtrip | 3.839168 sec | 150,749,184 bytes | 76,592 bytes |
 | RW3 contract/request invariant suite | 0.040 sec | 20,529,152 bytes | no generated payload |
@@ -94,8 +96,8 @@ engineering wins, not hidden behind synthetic accuracy.
 | Loop 25 v1 amendment plus immutable-v0 request suite | 0.120 sec | 22,560,768 bytes | no generated payload |
 | Loop 26 research plus roadmap/Loop 25 boundary suite | 0.140 sec wall max | 22,986,752 bytes max | no generated payload |
 | Loop 27 pinned metadata selector | 3.100 sec wall | 63,766,528 bytes | zero downloaded payload bytes |
-| Loop 24-34 focused boundary suite | 5.34 sec wall | 314,818,560 bytes | 224 tests; no generated experiment payload |
-| Loop 34 plus roadmap invariants | 0.07 sec wall | 20,496,384 bytes | 26 tests; no fixture, protected cache, signal, target, model, confidence fit, score, or product-confidence operation |
+| Loop 24-35 focused boundary suite | 4.43 sec wall | 239,075,328 bytes | 231 tests; no generated experiment payload |
+| Loop 35 plus roadmap invariants | 0.09 sec wall | 20,299,776 bytes | 27 tests; no fixture, peripheral acquisition, protected cache, signal, target, model, training, residualization fit, score, or brain-origin operation |
 | Loop 28 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 10 web operations, 1 GitHub metadata call, zero code/data payload bytes |
 | Loop 29 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 14 public web operations, zero protected data/model/device operations, zero downloaded payload bytes |
 | Loop 30 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 10 public web operations, zero trace/server/browser/protected-data/model/stream operations, zero downloaded payload bytes |
@@ -103,8 +105,9 @@ engineering wins, not hidden behind synthetic accuracy.
 | Loop 32 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 6 public network operations including 2 pinned GitHub source reads; zero participant/cache/signal/target/model/adapter/training/evaluation operations |
 | Loop 33 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 6 public web operations; zero protected cache/signal/target/model/training/scoring/acquisition/device operations |
 | Loop 34 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 5 public web operations; zero fixture/protected-data/target/model/confidence-fit/scoring/product-confidence/device operations |
+| Loop 35 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 6 public web operations; zero protected-data/target/model/training/acquisition/S20/S25/stream/device/hardware operations |
 | Loop 24 registered selection | 65.154951 sec internal | 222,248,960 bytes max worker | 262,822 bytes fixture plus output |
-| Complete optional-neuro/ML test runners | 22.64 sec unittest / 22.83 sec pytest wall | 588,234,752 bytes max | temporary test output only |
+| Complete optional-neuro/ML test runners | 23.06 sec unittest / 23.41 sec pytest wall | 587,186,176 bytes max | temporary test output only |
 
 Proof labels are deliberately narrow:
 
@@ -244,6 +247,15 @@ Read this before interpreting any number in the repository.
   gates, 30 refusals, and 26 false authorization flags are machine checked.
   The experiment is `Not Started`; confidence is unavailable and all fixture,
   fit, target, scoring, product-confidence, and real-data work is unauthorized.
+- **Loop 35 planning research:** the peripheral-confound firewall inventories
+  ten shortcut classes and nine synchronized stream classes, then separates 13
+  timing, leakage-sentinel, peripheral, brain-sensor, residualized, and combined
+  conditions across three independently authorized stages. Missing controls
+  cannot be imputed as clean or synthetic. Twenty-four gates, 32 refusals, and
+  31 false authorization flags are machine checked. The experiment is `Not
+  Started`; current S21/S7 evidence cannot establish incremental brain-sensor
+  information beyond recorded controls, absolute brain origin, or no-keypress
+  and patient transfer.
 
 ### What The Results Actually Say
 
@@ -816,8 +828,9 @@ The original numbered development sequence has reached:
   one target-blind shared validation event, and no acquisition now while its
   experiment remains `Not Started`; Loop 34 planning research defines the
   three-way confidence, abstention, and revision firewall while its experiment
-  remains `Not Started` and confidence is unavailable; Loops 35-44 remain `Not
-  Started`. All 20
+  remains `Not Started` and confidence is unavailable; Loop 35 planning
+  research defines the staged peripheral-confound firewall while its experiment
+  remains `Not Started`; Loops 36-44 remain `Not Started`. All 20
   execution flags are false. Loop 24's parked result does not authorize Loop
   25, and later research cannot authorize an earlier or later experiment.
 

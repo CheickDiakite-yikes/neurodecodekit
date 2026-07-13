@@ -26,8 +26,13 @@
 > planning research defines seven confidence semantics, eight score/control
 > roles, and recommended fresh synthetic `128/64/256` partitions while its
 > experiment remains `Not Started`; confidence is unavailable and all fixture,
-> fit, target, scoring, and product-confidence work is unauthorized. Loops
-> 35-44 remain planning-only. The
+> fit, target, scoring, and product-confidence work is unauthorized. Loop 35
+> planning research freezes ten confound classes, nine future synchronized
+> stream classes, 13 conditions, three stages, 24 gates, 32 refusals, and 31
+> false authorization fields while its experiment remains `Not Started`.
+> Missing controls fail closed, and the maximum future local claim is
+> incremental brain-sensor information beyond recorded controls. Loops 36-44
+> remain planning-only. The
 > spreadsheet dashboard displays the original roadmap, current gate, and next
 > 20-loop queue separately.
 
@@ -252,7 +257,8 @@ Loops 26 and 28-32 are `Not Started` with planning research complete; Loop 27
 has selected metadata while preregistration remains blocked; Loop 33 planning
 research is complete and its experiment remains `Not Started`; Loop 34
 planning research is complete and its experiment remains `Not Started` with
-confidence unavailable; Loops 35-44 are
+confidence unavailable; Loop 35 planning research is complete and its
+experiment remains `Not Started`; Loops 36-44 are
 `Not Started`. Every row retains `execution_authorized: false`.
 
 | # | Phase | Gate | Core outcome | Priority | Effort | Status |
@@ -267,7 +273,7 @@ confidence unavailable; Loops 35-44 are
 | 32 | Translation And Generalization | New-Subject Calibration And Adaptation | Freeze one causal 32-parameter adapter, four calibration claims, nested 0/2/4/8/16/32 sentence budgets, physical 32/16/48 partition floors, and a one-time final gate without using final rows for fit or selection. | P1 | L | Planning research complete; experiment Not Started |
 | 33 | Reliability And Confounds | Data Scaling And Sample Efficiency | Planning research complete: prospective `8, 16, 24, 32, 44, 55` unique-sentence curve, three-seed/18-fit ceiling, matched priors, one shared validation open, 20 gates, and 30 refusals; experiment unauthorized and Not Started. | P1 | L | Not Started |
 | 34 | Reliability And Confounds | Confidence, Abstention, And Revision | Planning research complete: seven confidence semantics, eight score/control roles, fresh 128/64/256 synthetic partitions, bounded loss, generalized risk, revision delay, 20 gates, and 30 refusals; confidence unavailable, experiment unauthorized and Not Started. | P1 | M | Not Started |
-| 35 | Reliability And Confounds | Peripheral Confound Firewall | Block neural claims explained by key timing, EMG, EOG, motion, audio, or prompt leakage. | P0 | L | Not Started |
+| 35 | Reliability And Confounds | Peripheral Confound Firewall | Planning research complete: freeze 10 confound classes, 9 synchronized stream classes, 13 conditions, 3 stages, 24 gates, and 32 refusals; missing controls block the claim and absolute brain origin stays unavailable. | P0 | L | Not Started |
 | 36 | Reliability And Confounds | Geometry And Reference Harmonization | Preserve channel geometry, units, reference, missingness, and transform provenance across sessions/devices. | P1 | M | Not Started |
 | 37 | Reproducibility And Local Deployment | BIDS Derivative And Provenance Export | Export tiny source-bound derivatives without copying raw recordings or inventing metadata. | P1 | M | Not Started |
 | 38 | Reproducibility And Local Deployment | Neural Data Privacy And Lifecycle | Verify inventory, redaction, retention, local storage, and narrow deletion behavior. | P0 | M | Not Started |
@@ -366,6 +372,22 @@ experiment remains `Not Started`, confidence is unavailable, and all fixture,
 fit, target, scoring, product-confidence, protected-data, and download work is
 unauthorized. See `docs/LOOP_34_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop34_research_boundary.v0.json`.
+
+Loop 35's planning packet creates no synthetic fixture, synchronized peripheral
+recording, protected-data read, model, training run, score, or brain-specific
+result. It inventories ten confound classes and nine future synchronized stream
+classes; separates 13 leakage-sentinel, timing, ocular, distal/proximal muscle,
+motion, audio/environment, peripheral-combined, brain-sensor, residualized, and
+all-stream conditions; and stages synthetic interface work separately from a
+fresh consented multimodal protocol and any later no-keypress/patient program.
+The recommended future physical split floors are 32 calibration, 16 selection,
+and 48 final sentences. Missing controls cannot be replaced by zero or
+synthetic traces. Twenty-four gates, 32 refusals, and 31 false authorization
+fields are machine checked. The experiment remains `Not Started`; the maximum
+future local claim is incremental brain-sensor information beyond recorded
+controls, not absolute brain origin. See
+`docs/LOOP_35_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop35_research_boundary.v0.json`.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |

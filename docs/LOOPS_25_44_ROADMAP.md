@@ -597,34 +597,66 @@ not authorization.
 
 ## Loop 35 - Peripheral Confound Firewall
 
-**Core question:** Is apparent decoding driven by brain signal, or by keystroke
-timing, muscle, eye, motion, audio, or prompt leakage?
+**Current state:** Planning research complete; experiment `Not Started`. See
+`docs/LOOP_35_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop35_research_boundary.v0.json`. Every one of 31 authorization
+fields is false.
 
-**Why it moves the goal:** Prompted typing strongly recruits motor systems, and
-a positive score alone does not establish neural specificity.
+**Core question:** Does a candidate add predictive information beyond every
+recorded timing and peripheral control, or can key timing, prompt/target
+leakage, ocular activity, distal/proximal muscle, motion, audio/environment,
+physiology, equipment, or task identity explain the result?
 
-**Build:** Add a confound registry and a synchronized brain-only,
-peripheral-only, timing-only, and combined report contract. Make missing
-peripheral measurements claim blockers rather than silently absent fields.
+**Why it moves the goal:** Brain2Qwerty v1 decodes 500 ms windows centered on
+known keypresses during physical typing. Brain2Qwerty v2 removes explicit
+keypress timing at inference but still studies overt prompted typing with
+audio, visual, motor, and somatosensory context. MEG and EEG literature shows
+that small eye movements, EMG, head/jaw motion, and other task-linked artifacts
+can be strongly predictive. A positive sensor score alone is not an origin
+claim.
 
-**Research:** Define confounds for prompted typing and what additional evidence
-would be required for no-keypress or patient translation.
+**Build recommendation:** Freeze ten confound classes, nine typed synchronized
+streams, and 13 conditions: no-signal, timing-only, two direct-leak sentinels,
+ocular-only, distal-muscle-only, proximal-muscle-only, motion-only,
+audio/environment-only, combined-peripheral, brain-sensor-only, train-only
+residualized brain-sensor, and all-stream. Missing controls remain unavailable;
+they may not be represented as zero, clean, or synthetic real controls.
 
-**Data and controls:** Start with synthetic timing fixtures. A future real
-protocol must separately authorize and consent EEG/MEG, EOG, EMG, motion,
-microphone, hand tracking, and keystroke data. Include shifts, drops, and event
-jitter.
+**Staged evidence:** Stage A is a target-free synthetic interface test with no
+biological claim. Stage B is a separately consented and authorized fresh
+multimodal local protocol with synchronized brain sensors, keyboard timing,
+prompt events, EOG/gaze, distal and proximal EMG/kinematics, motion/geometry,
+audio/environment, and physiology/equipment streams. Stage C is a separate
+ethics, task, population, and model program for no-keypress, attempted-movement,
+or patient evidence. No stage authorizes the next.
 
-**Metrics:** performance by brain/peripheral/timing/combined condition;
-incremental neural contribution; shortcut detections; clock residuals;
-unavailable-modality count.
+**Partition and statistics recommendation:** Require disjoint performed-row and
+semantic-text identities with floors of 32 calibration, 16 selection, and 48
+final sentences. Select the strongest peripheral comparator and one brain
+candidate on selection only, hash-freeze every prediction and ledger, then
+open final targets once. The primary estimand is all-stream macro sentence-CER
+gain over the strongest peripheral condition; the secondary estimand compares
+brain-sensor-only with the strongest nonbrain condition. Recommend a 0.05
+practical margin for each, 65,535 paired random sign assignments plus observed,
+and intersection-union success. Ties fail; one person cannot support population
+inference.
 
-**Gate:** A brain-specific claim requires brain-only performance above every
-registered non-brain control and positive incremental contribution over the
-strongest peripheral condition. Otherwise relabel the result.
+**Claim boundary:** Current S21 has 102 MEG magnetometers and trigger timing but
+no synchronized EOG, EMG, gaze, motion, or audio in the committed cache path.
+S7's source named three ocular channels, but its consumed 61-channel cache
+contains none. These facts can support future timing audits after separate
+authorization, not a complete peripheral firewall. The maximum future local
+claim is incremental brain-sensor information beyond recorded controls for the
+exact people, task, device, streams, and split. Absolute brain origin,
+language-intent decoding, no-keypress transfer, patient benefit, real-time
+behavior, portable hardware, and clinical use remain unavailable.
 
-**Dependencies and authorization:** Depends on Loop 31. Collection requires a
-separate ethics, consent, retention, device, file, and byte packet.
+**Dependencies and authorization:** Loop 31 must first establish sensor-signal
+dependence. Stage A, Stage B acquisition/access, and Stage C each require their
+own preregistration, exact authorization-only record, tested commit, push, and
+green CI. Stage B additionally requires ethics/consent, retention, device/file/
+byte caps, synchronization, privacy, and anomaly packets. Current planning
+authorizes none of them.
 
 ## Loop 36 - Geometry And Reference Harmonization
 
