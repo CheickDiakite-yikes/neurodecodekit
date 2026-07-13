@@ -417,8 +417,9 @@ with zero missing, four exercised CLI help surfaces, 55 registered commands,
 unauthorized Loop 42 runtime absence, the 86-commit Gitleaks scan, and
 `git diff --check` pass. Repository-wide `ruff format --check src tests` still
 reports the pre-existing 96-file formatting backlog and was not applied as an
-unrelated rewrite. Remote commit, push, PR, and CI evidence are recorded in the
-Loop 42 build-journal closeout after publication.
+unrelated rewrite. Research commit `9188157` passes push CI run `29237366884`
+and draft PR #21 CI run `29237382715`; both Base Python and Optional Neuro
+Readers jobs are green.
 
 ## The north star
 

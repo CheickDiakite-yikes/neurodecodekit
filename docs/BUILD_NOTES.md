@@ -3290,6 +3290,11 @@ exists.
   `7ac856e73b7e4b985f3becbf3372e1b973074959eb4973213a53a1452249c2a8`.
   Exact key ranges reload, the formula-error scan matches zero cells, and the
   user-owned untracked sidecar remains byte-exact and unstaged.
+- Research commit `9188157` is pushed on
+  `codex/loop-42-device-qualification-research`. Push CI run `29237366884` and
+  draft PR #21 CI run `29237382715` both pass Base Python and Optional Neuro
+  Readers. GitHub reports only its platform-level Node 20 action deprecation
+  annotation; no repository check failed.
 
 Engineering capability added: a machine-checkable one-device qualification
 boundary now makes future identity, packet, clock, anomaly, locality, safety,
