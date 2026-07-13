@@ -1,0 +1,143 @@
+{
+  "schema_name": "neurodecodekit.loop25_authorization_decision",
+  "schema_version": "0.1.0",
+  "decision_id": "loop25-causal-preprocessing-authorization-2026-07-13-v1",
+  "recorded_at": "2026-07-13",
+  "status": "authorized_no_implementation_yet",
+  "proof_posture": "authorization_record_only_no_runtime",
+  "authorization_parent_commit": "6174b37b24a408a6b953538d85d43d3b30d36f26",
+  "effective_only_after_this_record_is_tested_committed_pushed_and_ci_green": true,
+  "authorized_contract": {
+    "contract_id": "loop25-causal-preprocessing-v1",
+    "contract_path": "registries/causal_preprocessing_contract.v1.json",
+    "contract_schema_version": "0.2.0",
+    "contract_sha256": "ecec99a7cc505ec0256c01c3c1e8aeaa05323ab54a71528323fa6d32bd289141",
+    "contract_git_blob_sha1": "2a4c2e4daf5e11bbcc73ca8844a9f010a3421fbc",
+    "amendment_commit": "b6b92d8ea1cdeadfd6b7cd9f4704aee018516197",
+    "contract_remains_immutable_preregistration_snapshot": true
+  },
+  "authorization_request": {
+    "request_path": "registries/loop25_authorization_request.v1.json",
+    "request_schema_version": "0.2.0",
+    "request_sha256": "9587a0a19cea36e175020fa6bd43bb7c79e86a814dd88e5437a2f33dd316eb97",
+    "request_git_blob_sha1": "6b0af7062502335a504ff2ff6de4d1c692c10657",
+    "request_remains_immutable_and_unauthorized": true
+  },
+  "user_authorization": {
+    "broad_statement_verbatim": "Authorize Loop 25 implementation exactly as scoped in docs/LOOP_25_CAUSAL_PREPROCESSING_AMENDMENT_1.md and registries/causal_preprocessing_contract.v1.json. I also authorize real or consumed data, targets, model inference, training, RW3 Stage A.",
+    "delegation_statement_verbatim": "that my way of letting you know you have autonomy in this research and are co-researcher with executive decision making, what matters to me is simply not breaking my computer, storage, or other projects.",
+    "explicit_loop25_authorization_intent": true,
+    "delegated_research_decision_authority": true,
+    "matches_packet_exact_sentence": false,
+    "treated_as_conservative_frozen_scope_decision": true,
+    "conservative_scope_interpretation": "Authorize only the already frozen Loop 25 v1 target-free causal-preprocessing implementation. Keep real or consumed data, targets, model inference, training, RW3 Stage A, streams, devices, and hardware outside this experiment and route them to their separately preregistered gates.",
+    "computer_storage_and_other_project_safety_is_governing_operational_constraint": true,
+    "broader_research_mandate_is_recorded_for_later_separate_gates": true
+  },
+  "authorization": {
+    "loop25_implementation_authorized_now": true,
+    "target_free_fixture_generation_authorized_now": true,
+    "registered_filter_design_authorized_now": true,
+    "registered_numeric_preprocessing_authorized_now": true,
+    "development_partition_open_authorized_now": true,
+    "conditional_qualification_partition_open_authorized_now": true,
+    "report_and_cli_implementation_authorized_now": true,
+    "real_or_consumed_data_access_authorized_now": false,
+    "target_label_text_or_prediction_access_authorized_now": false,
+    "checkpoint_or_model_inference_authorized_now": false,
+    "training_or_parameter_updates_authorized_now": false,
+    "network_access_authorized_now": false,
+    "rw3_stage_a_or_source_chunk_authorized_now": false,
+    "stream_socket_board_device_hardware_authorized_now": false,
+    "loop26_or_later_authorized_now": false
+  },
+  "conditional_access_rules": {
+    "filter_coefficients_may_be_designed_once_only_after_authorization_ci_green": true,
+    "static_filter_gate_must_pass_before_seed_2501_opens": true,
+    "static_filter_failure_keeps_seed_2501_and_seed_2502_unopened": true,
+    "seed_2501_may_open_once_after_static_gate_passes": true,
+    "development_report_must_be_frozen_before_seed_2502_opens": true,
+    "seed_2502_may_open_once_only_if_every_development_gate_passes": true,
+    "post_result_tuning_or_rerun_allowed": false
+  },
+  "scope_routing": {
+    "loop25": "Execute only the frozen target-free synthetic causal-preprocessing contract with seeds 2501 and conditional 2502, no protected evidence, and every registered access, resource, and claim gate.",
+    "real_data_and_training": "Route the fixed small real neural-effect experiment to Loop 46 only after Loop 45 closes and a new hash-bound preregistration and execution decision exist. Keep source test, S21 session 2, and S7 consumed evidence closed.",
+    "fresh_holdout": "Keep S25 unopened and final-only until the strict Loop 52 zero-shot packet is frozen and separately authorized.",
+    "rw3": "Keep RW3 Stage A under its independent contract and authorization packet; this Loop 25 decision cannot authorize it.",
+    "devices_and_home_use": "Keep streams, SDKs, boards, devices, participants, and hardware under their later mechanics and safety gates. No purchase or connection is implied."
+  },
+  "required_execution_order": [
+    "test_this_authorization_record_and_all_existing_contract_invariants",
+    "commit_and_push_authorization_only_changes_before_implementation",
+    "confirm_the_pushed_authorization_commit_and_both_ci_jobs_are_green",
+    "implement_only_the_registered_loop25_files_and_cli_surface",
+    "construct_and_hash_the_registered_filter_coefficients_exactly_once",
+    "pass_the_complete_static_filter_gate_before_any_fixture_array_open",
+    "park_with_both_seeds_unopened_if_the_static_gate_fails",
+    "open_seed_2501_once_and_freeze_the_development_report_if_static_passes",
+    "open_seed_2502_once_only_if_every_development_gate_passes",
+    "close_loop25_without_rerun_post_result_tuning_or_scope_expansion"
+  ],
+  "authorized_generated_roots": [
+    "cache/loop25/",
+    "outputs/loop25/",
+    ".codex_work/loop25/"
+  ],
+  "protected_evidence": {
+    "real_cohorts": [
+      "S21 session-1 source-test rows",
+      "S21 session-2 consumed evaluation",
+      "S7 EEG consumed evaluation",
+      "S25 final-only holdout"
+    ],
+    "consumed_synthetic_seeds": [2203, 2303, 2353, 2401],
+    "unopened_synthetic_seeds_at_authorization": [2402, 2501, 2502],
+    "loop25_development_seed": 2501,
+    "loop25_qualification_seed": 2502
+  },
+  "resource_boundary": {
+    "cpu_threads": 1,
+    "worker_processes": 1,
+    "maximum_fixture_bytes_total": 4194304,
+    "maximum_materialized_working_array_bytes": 16777216,
+    "maximum_mutable_state_bytes": 4096,
+    "maximum_report_bytes": 1048576,
+    "maximum_generated_bytes_total": 8388608,
+    "maximum_internal_runtime_sec": 45,
+    "maximum_peak_rss_bytes": 1073741824,
+    "new_download_bytes": 0,
+    "real_data_reads": 0,
+    "real_cache_reads": 0,
+    "consumed_evidence_reads": 0,
+    "target_label_text_prediction_reads": 0,
+    "checkpoint_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "parameter_updates": 0,
+    "rw3_operations": 0,
+    "stream_socket_board_device_hardware_operations": 0
+  },
+  "authorization_only_measurements": {
+    "filter_coefficients_generated": 0,
+    "fixture_items_generated": 0,
+    "fixture_bytes_generated": 0,
+    "partition_arrays_opened": 0,
+    "numeric_preprocessing_runs": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "consumed_evidence_reads": 0,
+    "target_label_text_prediction_reads": 0,
+    "network_calls": 0,
+    "generated_runtime_payload_bytes": 0,
+    "end_to_end_latency_measured": false
+  },
+  "claim_boundary": [
+    "This authorization record creates no coefficient, fixture, transform, runtime, model, or scientific result by itself.",
+    "A passing Loop 25 can establish only one registered target-free causal preprocessing mechanics result.",
+    "It cannot establish official Brain2Qwerty numeric equivalence, retained neural information, decoding accuracy, CER or WER improvement, end-to-end latency, unseen-person generalization, EEG or MEG usefulness, device portability, assistive efficacy, or clinical utility.",
+    "The delegated research mandate does not make authorization transitive across preregistered experiments."
+  ]
+}
