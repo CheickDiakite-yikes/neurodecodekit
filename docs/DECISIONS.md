@@ -2339,3 +2339,47 @@ Evidence: `docs/LOOP_42_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop42_research_boundary.v0.json`,
 `tests/test_loop42_research_boundary.py`, roadmap row 42, and the unchanged
 13-record device registry.
+
+## 0070 - Separate Independent Artifact Reproduction From Scientific Replication
+
+Decision: close Loop 43 planning research while leaving its challenge `Not
+Started`, all 48 `authorized_now` fields false, and every packet, oracle,
+fixture, workflow, outreach, contributor, submission, adjudication, archive,
+release, model, stream, device, and experiment runtime operation at zero.
+
+Terminology decision: a maintainer clean-root rerun is repeatability. A
+different eligible team reproducing an author-supplied software artifact is
+independent artifact reproduction. Scientific replication requires an
+independently developed implementation and a separately frozen protocol. One
+external environment never establishes person, platform, device, or population
+generalization.
+
+Protocol decision: select one future target-free NeuroToken causal-replay
+artifact lane with commit-reveal ordering, public communication, record-dont-
+fix checking, retained negative outcomes, unprivileged fork execution, and no
+contributor-owned EEG upload. Freeze seven qualification levels, 16
+independence fields, 28 packet fields, 34 submission fields, eight comparison
+classes, 12 discrepancy classes, four separately authorized stages, 32 fixture
+families, 36 gates, and 48 refusals.
+
+Dependency decision: the artifact is not currently eligible. Compatible Loop
+37 release-envelope execution, Loop 38 public-artifact lifecycle execution, and
+the Loop 39 required matrix plus independent handoff must close before a public
+challenge. Loop 44 claim review remains separate.
+
+Verification-incident decision: a local acceptance command validated every
+local `*.json` path instead of only Git-tracked source JSON. It read 603 paths,
+parsed 602, touched 136 cache JSON files, and included 11 known consumed S21
+session-2 report/metadata files. No raw arrays, FIF/MAT payloads, model
+operation, inference, scoring, tuning, training, or claim selection occurred.
+The zero-consumed-read claim is withdrawn; the incident is retained and future
+validation is Git-tracked-only.
+
+Claim boundary: planning research adds no independent result, scientific
+replication, neural advantage, decoding accuracy, unseen-person
+generalization, real-time latency, device qualification, home-use, or clinical
+evidence.
+
+Evidence: `docs/LOOP_43_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop43_research_boundary.v0.json`,
+`tests/test_loop43_research_boundary.py`, and roadmap row 43.

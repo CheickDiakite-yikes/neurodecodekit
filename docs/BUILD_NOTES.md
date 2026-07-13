@@ -3303,3 +3303,58 @@ resource, stage, and claim decisions exact for one named path.
 Scientific claim not established: no SDK, device, participant, signal, target,
 model, decoding, or latency operation ran, so there is no EEG-quality, neural-
 advantage, unseen-person, real-time, portable-hardware, or text-decoding result.
+
+## 2026-07-13 - Loop 43 Independent Reproduction Planning Research
+
+- Reviewed ACM Artifact Review and Badging, CODECHECK principles/project,
+  ReScience C guidance/FAQ, the NeurIPS reproducibility program, FAIR4RS v1,
+  and GitHub Actions security guidance without creating a challenge or running
+  an external experiment.
+- Selected one future target-free NeuroToken causal-replay software-artifact
+  reproduction lane, but marked it currently ineligible because compatible
+  Loop 37, 38, and 39 execution dependencies remain unsatisfied.
+- Added `registries/loop43_research_boundary.v0.json` with seven qualification
+  levels, 16 independence fields, 28 packet fields, 34 submission fields,
+  eight comparison classes, 12 discrepancy classes, four stages, 32 fixture
+  families, 36 gates, 48 refusals, and 48 false authorization fields.
+- Added 15 dependency-light invariants and advanced the machine roadmap to
+  schema v0.20.0 while retaining all 20 false execution flags.
+- Packet, oracle, fixture, workflow, outreach, contributor, submission,
+  adjudication, archive, release, model, training, stream, device, runtime, and
+  generated experiment byte counters remain zero. An overbroad local JSON
+  validator nevertheless parsed 136 cache JSON files, including 11 known
+  consumed S21 session-2 report/metadata files. No raw array, FIF/MAT, model,
+  inference, scoring, tuning, training, or claim-selection operation occurred;
+  the zero-consumed-read claim is withdrawn and the incident is retained.
+- Local acceptance passed on one numerical thread after the incident was
+  machine-recorded. The strict Loop 43 plus roadmap slice passes 24 tests in
+  0.049 seconds internal; Loop 24-43 planning boundaries pass 308 tests in 1.33
+  seconds wall with 91,504,640-byte peak RSS. Full unittest discovery passes
+  631 tests with three expected skips in 22.99 seconds wall and 620,167,168-byte
+  peak RSS; pytest passes 628 tests with three skips and 277 subtests in 22.06
+  seconds wall and 624,771,072-byte peak RSS; dependency-light Python passes
+  599 tests with 121 optional skips in 1.75 seconds wall and 108,773,376-byte
+  peak RSS. Each full count is 15 above Loop 42 with no prior regression.
+- Ruff lint/format, compileall, 32 Git-bound JSON source files, both TOML files,
+  four CLI help surfaces, 55 registered commands, 76 local Markdown links,
+  authorization/runtime absence checks, and `git diff --check` pass. Gitleaks
+  scans 88 commits and about 5.23 MB with zero leaks after narrowly allowing the
+  exact non-secret roadmap identifier it had misclassified.
+- The visually inspected nine-sheet tracker is 100,461 bytes at SHA-256
+  `7464dcc19b67740ff8f43fe0501e9c95be0f5dda1b62386c09eb4b5b537730f0`.
+  Key ranges reload, the formula-error scan matches zero cells, and the
+  user-owned inspection sidecar remains untracked and byte-exact at SHA-256
+  `b96bbea77ec93e59c0db7c4bcaeb4a9182f1f7cc7039d13fb223b65e0005beb6`.
+- Research commit `81798e0` is pushed on
+  `codex/loop-43-independent-reproduction-research`. Push CI run
+  `29240649149` and draft PR #22 CI run `29240665109` both pass Base Python and
+  Optional Neuro Readers. GitHub reports only its platform-level Node 20 action
+  deprecation annotation; no repository check failed.
+
+Engineering capability added: a machine-checkable independent artifact-
+reproduction boundary now freezes identities, commitment order, comparisons,
+discrepancies, privacy/security checks, resources, outcomes, and claim ceilings.
+
+Scientific claim not established: no independent run or protected experiment
+occurred, so there is no scientific replication, neural advantage, decoding,
+unseen-person generalization, real-time, device, or home-use result.

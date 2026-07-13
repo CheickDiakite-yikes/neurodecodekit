@@ -391,6 +391,33 @@ hardware operation, participant contact, electrode placement, recording,
 network operation, device result, latency measurement, or scientific claim
 exists. Loop 38, Loop 41, and RW3 execution dependencies remain unsatisfied.
 
+Loop 43 planning research is complete while its independent-reproduction
+challenge remains `Not Started` and unauthorized:
+
+```bash
+cat docs/LOOP_43_PRIMARY_SOURCE_RESEARCH.md
+python -m json.tool registries/loop43_research_boundary.v0.json >/dev/null
+```
+
+The future lane is one target-free NeuroToken causal-replay software-artifact
+reproduction, but it is not currently eligible. The boundary freezes seven
+qualification levels, 16 independence fields, 28 challenge-packet fields, 34
+submission fields, eight comparison classes, 12 discrepancy classes, four
+separately authorized stages, 32 fixture families, 36 gates, 48 refusals, and
+48 false `authorized_now` fields. A maintainer clean-root rerun is repeatability,
+not independent reproduction; reproduction of author artifacts is not
+scientific replication; one external result is not person, platform, or device
+generalization. Loop 37 release-envelope execution, Loop 38 public-lifecycle
+execution, and the Loop 39 required matrix plus independent handoff remain
+unsatisfied. No preregistration, request, packet, oracle, challenge issue,
+workflow, outreach, contributor, submission, adjudication, archive, DOI, badge,
+release, raw neural payload, model, device, or generated experiment artifact
+exists or is authorized. During local acceptance, an overbroad validator parsed
+136 cache JSON files, including 11 known consumed S21 session-2 report/metadata
+files. It ran no tuning, scoring, inference, training, or claim selection; the
+zero-consumed-read claim is withdrawn, the incident is machine-recorded, and
+future validation is restricted to Git-tracked JSON paths.
+
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
 commit `c3d1f01`, before any adapter, source chunk, fixture, socket, board, or
@@ -448,8 +475,9 @@ experiment remains `Not Started`; Loop 41 planning research defines the
 stream-to-NeuroToken clock, anomaly, state, schedule, and provenance firewall
 while its experiment remains `Not Started` and unauthorized; Loop 42 planning
 research selects OpenBCI Cyton base 8-channel USB-radio for future mechanics
-only while its experiment remains `Not Started`; Loops 43-44 remain `Not
-Started`. All 20
+only while its experiment remains `Not Started`; Loop 43 planning research
+defines the independent artifact-reproduction firewall while its challenge
+remains `Not Started`; Loop 44 remains `Not Started`. All 20
 execution flags are false. This roadmap does not
 reopen Loop 24, authorize RW3, or permit a Loop 25-44 fixture, download, data
 read, model run, training run, stream, board, or hardware operation. A broad
@@ -576,14 +604,28 @@ authorization boundary.
   stages, 30 fixture families, 34 gates, and 46 refusals. Candidate selection
   is not purchase permission; no SDK, serial, device, participant, recording,
   signal, model, decoding, latency, portability, or home-use result exists.
+- The Loop 43 planning registry remains exact with 48 false authorization
+  fields, seven qualification levels, 16 independence fields, 28 packet fields,
+  34 submission fields, eight comparison classes, 12 discrepancy classes, four
+  stages, 32 fixture families, 36 gates, and 48 refusals. The selected
+  target-free artifact remains ineligible; no packet, oracle, outreach,
+  contributor, submission, independent artifact reproduction, scientific
+  replication, archive, badge, DOI, release, protected operation, or runtime
+  exists. It also preserves the local validator incident: 603 JSON paths read,
+  136 cache JSON files touched, 11 known consumed session-2 files touched, zero
+  raw array/FIF/MAT/model operations, and zero use for tuning, scoring, or claim
+  selection.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed
   2401 is not rerun or tuned, qualification seed 2402 remains unopened, and
   real/consumed data, targets, energy, training, and RW3 counters remain zero.
 - No Loop 25-44 runtime, fixture, filter-design run, numerical preprocessing,
-  data/cache read, model run, training run, validation open, or generated
-  payload exists without its own preregistration and authorization.
+  model run, training run, generated payload, or intentional protected-data
+  operation exists without its own preregistration and authorization. Loop 43's
+  overbroad local JSON-validation incident is the explicit exception: 136 cache
+  JSON files and 11 known consumed session-2 report/metadata files were parsed,
+  with no raw payload, inference, scoring, tuning, or claim-selection use.
 - All public docs agree that the registration freezes five schedules, 18 future
   fixture families, 30 refusal IDs, and four separately authorized stages, and
   that the Stage A packet proposes 90 future cases without authorizing them.

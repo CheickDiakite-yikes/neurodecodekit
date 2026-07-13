@@ -985,3 +985,25 @@ qualification levels, four separately authorized stages, 30 fixture families,
 be present and no fixture, install, SDK import, serial read, discovery,
 connection, firmware operation, participant contact, recording, network,
 signal, model, decoding, latency, portability, or home-use result exists.
+
+## 2026-07-13 Loop 43 Research Addendum
+
+Loop 43 planning research is complete while its experiment remains `Not
+Started` and unauthorized. ACM terminology separates same-team repeatability,
+different-team author-artifact reproduction, and different-team independent-
+implementation replication. CODECHECK adds record-dont-fix, communication,
+credit, auditability, and sensitive-data exceptions; ReScience requires public
+code/reporting and retention of obstacles; FAIR4RS requires versioned software
+identity; GitHub requires untrusted fork code to remain unprivileged.
+
+Those sources support a future target-free NeuroToken causal-replay artifact
+challenge with commit-reveal ordering, 16 independence fields, 28 packet
+fields, 34 submission fields, eight comparison classes, 12 discrepancy
+classes, four separately authorized stages, 36 gates, and 48 refusals. The
+selected artifact is currently ineligible and every one of 48 authorization
+fields is false. No packet, oracle, fixture, outreach, contributor, submission,
+adjudication, archive, release, model, device, or runtime exists. Local
+acceptance did record an overbroad validator read of 136 cache JSON files,
+including 11 known consumed session-2 report/metadata files; no content was
+used for tuning, scoring, or claim selection. A future successful independent artifact reproduction would not be
+scientific replication or neural decoding evidence.

@@ -1250,3 +1250,17 @@ not approved experiments. The current numbered execution gate is Loop 24 under
 its separate target-free authorization; that decision does not change any of
 the 20 false roadmap flags. The next practice-track decision remains the
 separately unauthorized RW3 Stage A.
+
+## Loop 43 Research Closeout Addendum
+
+Loop 43 planning research is complete while the independent-reproduction
+challenge remains `Not Started` and unauthorized. The selected future lane is
+one target-free NeuroToken causal-replay software artifact with commit-reveal
+ordering, public communication, a record-dont-fix checker, retained negative
+outcomes, unprivileged fork execution, and no contributor-owned EEG upload.
+Seven qualification levels, 16 independence fields, 28 packet fields, 34
+submission fields, eight comparison classes, 12 discrepancy classes, four
+stages, 32 fixtures, 36 gates, and 48 refusals are frozen. No packet, oracle,
+outreach, contributor, submission, independent artifact reproduction, or
+scientific replication exists. Loop 44 is the next planning-only row; all 20
+roadmap execution flags remain false.

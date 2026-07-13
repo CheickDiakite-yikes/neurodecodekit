@@ -61,7 +61,9 @@
 > USB-radio at Q0 specification level and freezes 28 identity fields, seven
 > timing observables, ten anomalies, four stages, 34 gates, 46 refusals, and 45
 > false authorization fields while its experiment remains `Not Started` and
-> unauthorized. Loops 43-44 remain planning-only. The
+> unauthorized. Loop 43 planning research defines the independent artifact-
+> reproduction firewall while its challenge remains `Not Started` and
+> unauthorized. Loop 44 remains planning-only. The
 > spreadsheet dashboard displays the original roadmap, current gate, and next
 > 20-loop queue separately.
 
@@ -555,3 +557,17 @@ explicit approval.
 - Do not merge typing, inner speech, reading, P300, SSVEP, and motor imagery
   into one evidence cohort.
 - Do not call eye, hand, heart, motion, microphone, or wrist-EMG data EEG.
+
+## Loop 43 Status
+
+Loop 43 planning research is complete; the independent-reproduction challenge
+is `Not Started` and unauthorized. The future target-free NeuroToken causal-
+replay lane has seven qualification levels, 16 independence fields, 28 packet
+fields, 34 submission fields, four stages, 36 gates, and 48 refusals. Current
+packet, oracle, outreach, contributor, submission, adjudication, archive,
+release, model, training, stream, device, and runtime counts are zero. A local
+validator incident parsed 136 cache JSON files, including 11 known consumed
+session-2 report/metadata files; none was used for tuning, scoring, or claim
+selection. Independent artifact reproduction must never be relabeled scientific
+replication, neural advantage, decoding, or population/device generalization.
+Loop 44 planning research is next; all 20 execution flags remain false.

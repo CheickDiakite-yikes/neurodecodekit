@@ -106,7 +106,9 @@ Do not reset, revert, delete, or overwrite work already present.
   provenance firewall while its experiment remains `Not Started` and
   unauthorized; Loop 42 planning research selects OpenBCI Cyton base
   8-channel USB-radio for future mechanics only while its experiment remains
-  `Not Started` and unauthorized; Loops 43-44 remain `Not Started`; all 20
+  `Not Started` and unauthorized; Loop 43 planning research defines the
+  independent artifact-reproduction firewall while its challenge remains `Not
+  Started` and unauthorized; Loop 44 remains `Not Started`; all 20
   execution flags remain false.
 - Loop 26's planning boundary recommends a 2,908-parameter causal candidate, a
   2,884-parameter linear comparator, six controls, and exact enumeration of all
@@ -409,3 +411,16 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
 Do not call Loop 24 a speedup, retained-accuracy, integer-only, neural,
 decoding, energy, real-time, transport, or hardware result. Its engineering
 gate exists and ran; its primary decision is parked.
+
+## Loop 43 Continuation Boundary
+
+Loop 43 planning research is complete, but its independent artifact-
+reproduction challenge is `Not Started` and unauthorized. Do not create a
+packet, oracle, challenge issue, workflow, fixture, outreach message,
+contributor submission, adjudication, archive, DOI, badge, release, or runtime.
+The future target-free NeuroToken causal-replay lane remains ineligible until
+compatible Loop 37, 38, and 39 execution closeouts exist. A maintainer rerun is
+repeatability, author-artifact reproduction is not scientific replication, and
+one independent environment is not generalization. Continue with Loop 44
+planning research only unless a narrower exact authorization is separately
+prepared, committed, pushed, and green.

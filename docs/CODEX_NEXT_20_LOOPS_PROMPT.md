@@ -158,3 +158,14 @@ Passing either future synthetic gate could establish only its registered
 interface, numerical, resource, or accounting behavior. It would not establish
 signal quality, useful EEG, neural advantage, decoding, end-to-end real-time
 performance, or portable hardware.
+
+Loop 43 planning research is complete while its challenge remains `Not Started`
+and unauthorized. Its future lane can establish at most independent artifact
+reproduction of one target-free NeuroToken causal-replay contract after four
+separately authorized stages and compatible Loop 37-39 execution closeouts.
+Do not create a packet, oracle, challenge workflow, outreach, contributor
+submission, adjudication, archive, badge, DOI, release, protected payload, or
+runtime from a broad continuation request. Independent artifact reproduction
+is not scientific replication, neural advantage, decoding evidence, or person,
+platform, device, and home-use generalization. Continue to Loop 44 planning
+research only.
