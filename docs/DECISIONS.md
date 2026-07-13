@@ -2085,5 +2085,5 @@ hardware result exists.
 
 Evidence: `docs/LOOP_37_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop37_research_boundary.v0.json`,
-`tests/test_loop37_research_boundary.py`, and roadmap row 37. Commit and CI
-identities are added only after the tested research milestone is pushed.
+`tests/test_loop37_research_boundary.py`, roadmap row 37, research commit
+`ef31efc`, push CI run `29226436884`, and draft PR #16 CI run `29226853455`.
