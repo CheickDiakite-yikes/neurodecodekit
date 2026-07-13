@@ -2014,5 +2014,5 @@ exists.
 
 Evidence: `docs/LOOP_36_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop36_research_boundary.v0.json`,
-`tests/test_loop36_research_boundary.py`, and roadmap row 36. Commit and CI
-identities are added only after the tested research milestone is pushed.
+`tests/test_loop36_research_boundary.py`, roadmap row 36, research commit
+`4d5c7d2`, push CI run `29216381237`, and draft PR #15 CI run `29216397245`.

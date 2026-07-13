@@ -2895,7 +2895,8 @@ and browser runtime/RSS are unavailable by tool contract. Protected download
 bytes, real header/cache/signal/target reads, fixtures, generated payload,
 transforms, models, training runs, streams, devices, and hardware operations
 remain zero. Commit and CI identities are added only after the tested research
-milestone is pushed.
+milestone is pushed. Research commit `4d5c7d2` passes push CI run
+`29216381237` and draft PR #15 CI run `29216397245`.
 
 Engineering capability added: a machine-checkable geometry/reference identity
 firewall, operation taxonomy, staged header/signal protocol, strict refusal
