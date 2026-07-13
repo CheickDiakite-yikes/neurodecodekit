@@ -3345,8 +3345,11 @@ advantage, unseen-person, real-time, portable-hardware, or text-decoding result.
   Key ranges reload, the formula-error scan matches zero cells, and the
   user-owned inspection sidecar remains untracked and byte-exact at SHA-256
   `b96bbea77ec93e59c0db7c4bcaeb4a9182f1f7cc7039d13fb223b65e0005beb6`.
-- Commit, push, draft-PR, and CI identities are recorded only after the tested
-  milestone is staged, committed, and pushed.
+- Research commit `81798e0` is pushed on
+  `codex/loop-43-independent-reproduction-research`. Push CI run
+  `29240649149` and draft PR #22 CI run `29240665109` both pass Base Python and
+  Optional Neuro Readers. GitHub reports only its platform-level Node 20 action
+  deprecation annotation; no repository check failed.
 
 Engineering capability added: a machine-checkable independent artifact-
 reproduction boundary now freezes identities, commitment order, comparisons,

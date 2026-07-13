@@ -1032,3 +1032,10 @@ classes, 12 discrepancy classes, four stages, 32 fixture families, 36 gates,
 contributor, submission, adjudication, archive, release, protected operation,
 or scientific result exists. Next numbered planning work is Loop 44; the
 current execution gate remains the separately controlled Loop 25 v1 decision.
+
+Local Loop 43 acceptance passes 631 unittests with three expected skips, 628
+pytest tests with three skips and 277 subtests, and 599 dependency-light tests
+with 121 optional skips. Research commit `81798e0` is pushed on
+`codex/loop-43-independent-reproduction-research`; push CI `29240649149` and
+draft PR #22 CI `29240665109` both pass Base Python and Optional Neuro Readers.
+The user-owned workbook inspection sidecar remains untracked and byte-exact.
