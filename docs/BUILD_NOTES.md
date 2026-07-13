@@ -3388,7 +3388,11 @@ unseen-person generalization, real-time, device, or home-use result.
   skips in 1.77 seconds wall and 92,422,144-byte peak RSS. Ruff lint,
   compileall, tracked plus new JSON, both TOML files, three CI CLI help
   surfaces, `git diff --check`, and a 90-commit/5.34-MB gitleaks scan pass.
-  Exact-commit remote CI remains pending push.
+- Research commit `90d8919` is pushed on
+  `codex/loop-44-claim-release-research`. Push CI run `29243833014` and draft PR
+  #23 CI run `29243844680` both pass Base Python and Optional Neuro Readers.
+  GitHub reports only its platform-level Node 20 action deprecation annotation;
+  no repository check failed.
 
 Engineering capability added: a machine-checkable claim and release ledger now
 binds public statements to evidence, limitations, access, privacy, and license.

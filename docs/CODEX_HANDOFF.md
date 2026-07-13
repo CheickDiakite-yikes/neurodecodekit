@@ -1070,8 +1070,9 @@ Local acceptance passes 24 focused Loop 44 and Loops 45-64 invariants, 655
 unittests with three expected skips, 652 pytest tests with three skips and 277
 subtests, and 623 dependency-light tests with 121 optional skips. Ruff lint,
 compileall, JSON/TOML validation, three CI CLI help surfaces, diff hygiene, and
-the tracked-history secret scan also pass. Exact-commit remote CI remains
-pending push.
+the tracked-history secret scan also pass. Research commit `90d8919` is pushed
+on `codex/loop-44-claim-release-research`; push CI `29243833014` and draft PR
+#23 CI `29243844680` both pass Base Python and Optional Neuro Readers.
 
 ## Loops 45-64 Handoff
 
