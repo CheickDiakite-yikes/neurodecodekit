@@ -365,8 +365,9 @@ Started`; Loop 30 interaction research, Loop 31 attribution research, and Loop
 Started`; Loop 33 planning research is complete while its experiment remains
 `Not Started`; Loop 34 confidence research is complete while its experiment
 remains `Not Started` and confidence is unavailable; Loop 35 confound research
-is complete while its experiment remains `Not Started`; Loops 36-44 remain
-`Not Started`.
+is complete while its experiment remains `Not Started`; Loop 36 geometry/
+reference research is complete while its experiment remains `Not Started`;
+Loops 37-44 remain `Not Started`.
 
 The detailed source trace and design correction live in
 `docs/LOOP_25_ANTI_ALIAS_AUDIT.md`. This addendum does not authorize execution
@@ -728,3 +729,48 @@ target, model, training, acquisition, S20/S25, stream, device, or hardware
 operations. Exact sources and boundaries are in
 `docs/LOOP_35_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop35_research_boundary.v0.json`.
+
+## 2026-07-12 Loop 36 Research Addendum
+
+Loop 36 planning research is complete while its geometry/reference experiment
+remains `Not Started` and unauthorized. BIDS separates ordered channel name,
+type, and signal units from physical electrode identity and separately records
+coordinate-system semantics and coordinate units. MNE distinguishes device,
+head, and MRI frames and represents directional transforms explicitly. A bare
+name, channel count, integer frame code, or visual layout is not equivalence.
+
+EEG reference and MEG compensation/projector state are part of the signal
+definition. Bad-channel and sensor-to-template interpolation estimate values
+from other sensors and geometry. Rereference, compensation, signal scaling,
+interpolation, and zero-fill therefore remain data-changing operations rather
+than metadata identity.
+
+The machine boundary freezes six representation layers, five modality
+profiles, a 24-field future channel record, 12 operation classes, 16 fixture
+families, eight outcomes, seven claims, 22 gates, 30 refusals, and 29 false
+authorization fields. Aliases must be explicit, versioned, bijective, and
+collision-free. Signal and coordinate units stay separate. A future rigid
+transform must name direction, frames, origin/axes/handedness, pass
+orthogonality and determinant `+1`, preserve orientation without translation,
+and roundtrip synthetic positions within `1e-9 m`.
+
+Current S21 metadata exposes channel names, types, positions in metres, integer
+frame/unit codes, and coil types but lacks a complete exchange-frame,
+orientation, transform, and compensation ledger. Loop 11's within-cache
+spatial selection is not cross-device evidence. The consumed S7 cache lacks a
+qualified measured electrode and acquisition-reference contract. No real
+header, cache, or signal was opened for this research.
+
+Future Stage A is target-free synthetic metadata only. A separately authorized
+Stage B may inspect exact named headers under file/byte/privacy caps without
+signals. Stage C is required for signal scaling, rereference, compensation, or
+interpolation. The maximum future real-header claim is declared metadata
+compatibility. Numerical compatibility, model transfer, device equivalence,
+neural advantage, and scientific performance remain separate.
+
+This research used three high-level public web operations, one thread/worker,
+and zero fixture, protected header/signal/cache/target, transform, conversion,
+rereference, interpolation, model, training, S20/S25, stream, device, or
+hardware operations. Exact sources and boundaries are in
+`docs/LOOP_36_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop36_research_boundary.v0.json`.

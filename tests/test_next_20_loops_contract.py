@@ -22,7 +22,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
     def test_identity_range_and_planning_boundary_are_exact(self):
         roadmap = self.roadmap
         self.assertEqual(roadmap["schema_name"], "neurodecodekit.next_twenty_loops_roadmap")
-        self.assertEqual(roadmap["schema_version"], "0.12.0")
+        self.assertEqual(roadmap["schema_version"], "0.13.0")
         self.assertEqual(roadmap["roadmap_id"], "loops-25-44")
         self.assertEqual(roadmap["status"], "planning_only_not_execution_authorization")
         self.assertEqual(
@@ -159,6 +159,22 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         self.assertFalse(boundary["loop35_preregistration_prepared"])
         self.assertFalse(boundary["loop35_execution_authorized"])
         self.assertFalse(boundary["loop35_dependency_loop31_execution_satisfied"])
+        self.assertTrue(boundary["loop36_research_packet_prepared"])
+        self.assertEqual(boundary["loop36_representation_layer_count"], 6)
+        self.assertEqual(boundary["loop36_modality_profile_count"], 5)
+        self.assertEqual(boundary["loop36_channel_record_field_count"], 24)
+        self.assertEqual(boundary["loop36_operation_class_count"], 12)
+        self.assertEqual(boundary["loop36_future_fixture_family_count"], 16)
+        self.assertEqual(boundary["loop36_future_requirement_count"], 22)
+        self.assertEqual(boundary["loop36_future_refusal_count"], 30)
+        self.assertFalse(boundary["loop36_current_complete_geometry_reference_evidence_available"])
+        self.assertEqual(
+            boundary["loop36_maximum_future_real_metadata_claim"],
+            "declared_metadata_compatibility",
+        )
+        self.assertFalse(boundary["loop36_preregistration_prepared"])
+        self.assertFalse(boundary["loop36_execution_authorized"])
+        self.assertFalse(boundary["loop36_dependency_loop29_execution_satisfied"])
         self.assertEqual(boundary["user_preferred_incremental_storage_bytes"], 5_000_000_000)
         self.assertEqual(boundary["user_absolute_incremental_storage_bytes"], 10_000_000_000)
         self.assertEqual(boundary["selected_s20_plus_s25_future_bundle_bytes"], 1_106_030_247)
@@ -210,15 +226,16 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                     self.assertFalse(registration["superseded_v0"]["was_authorized"])
                 else:
                     self.assertEqual(row["status"], "Not Started")
-                    if row["loop_id"] in {34, 35}:
+                    if row["loop_id"] in {34, 35, 36}:
                         expected = {
                             34: "planning_research_complete_no_confidence_fit_or_result_unauthorized",
                             35: "planning_research_complete_no_confound_fixture_acquisition_or_brain_specific_result_unauthorized",
+                            36: "planning_research_complete_no_geometry_fixture_header_signal_transform_or_result_unauthorized",
                         }
                         self.assertEqual(row["proof_posture"], expected[row["loop_id"]])
                     else:
                         self.assertEqual(row["proof_posture"], "planned_not_authorized")
-                    if row["loop_id"] in {26, 27, 28, 29, 30, 31, 32, 33, 34, 35}:
+                    if row["loop_id"] in {26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36}:
                         self.assertEqual(row["research_status"], "planning_research_complete")
                         self.assertFalse(row["preregistration_prepared"])
                     if row["loop_id"] == 27:
@@ -341,6 +358,15 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                 "eeg_bci_artifacts",
                 "meg_movement_muscle_artifacts",
                 "motion_muscle_phantom_validation",
+                "bids_coordinate_systems",
+                "bids_meg",
+                "bids_eeg",
+                "bids_units",
+                "mne_coordinate_frames",
+                "mne_transform",
+                "mne_digmontage",
+                "mne_eeg_reference",
+                "mne_bad_interpolation",
             }.issubset(source_ids)
         )
         source_map = self.roadmap["loop_source_map"]

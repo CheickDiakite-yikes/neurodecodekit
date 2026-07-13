@@ -38,12 +38,17 @@
    boundary, and the claim ceiling of incremental brain-sensor information
    beyond recorded controls. It is planning research only; Loop 35 remains
    `Not Started` and unauthorized.
-14. Review `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` only when deciding whether
+14. Read `docs/LOOP_36_PRIMARY_SOURCE_RESEARCH.md` for the six representation
+   layers, five modality profiles, 24 channel fields, 12 operation classes,
+   explicit unit/transform/reference/interpolation boundaries, 22 gates, and
+   30 refusals. It is planning research only; Loop 36 remains `Not Started`,
+   unauthorized, and capped at future declared metadata compatibility.
+15. Review `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` only when deciding whether
    to authorize the independent RW3 Stage A.
-15. Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md` and
+16. Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md` and
    `docs/LOOPS_25_44_ROADMAP.md` for the planning-only Loops 25-44 queue.
-16. Paste `prompts/CODEX_START_PROMPT.md` into Codex to continue.
-17. Run tests:
+17. Paste `prompts/CODEX_START_PROMPT.md` into Codex to continue.
+18. Run tests:
 
 ```bash
 PYTHONPATH=src python -m unittest discover -s tests -v
@@ -70,7 +75,9 @@ experiment remains `Not Started`; Loop 34 planning research defines the
 fresh three-way confidence firewall while its experiment remains `Not Started`
 and confidence is unavailable; Loop 35 planning research defines the staged
 peripheral-confound firewall while its experiment remains `Not Started`;
-Loops 36-44 remain `Not Started`. The maximum future
+Loop 36 planning research defines the geometry/reference identity firewall
+while its experiment remains `Not Started`; Loops 37-44 remain `Not Started`.
+The maximum future
 local Loop 31 claim is sensor-signal dependence, and brain-specific attribution
 remains blocked on Loop 35. All are unauthorized.
 The queue does not reopen Loop 24 or authorize RW3.
@@ -164,6 +171,13 @@ control set. The maximum future local claim is incremental brain-sensor
 information beyond recorded controls; absolute brain origin, no-keypress
 transfer, and patient benefit remain unavailable. The experiment is `Not
 Started` and unauthorized.
+Loop 36 planning research freezes six representation layers, five modality
+profiles, a 24-field future channel record, 12 operation classes, 16 fixture
+families, 22 gates, 30 refusals, and 29 false authorization fields. A future
+real-header pass can establish at most declared metadata compatibility.
+Numerical compatibility, rereference/interpolation behavior, model transfer,
+and device equivalence remain unavailable. The experiment is `Not Started` and
+unauthorized.
 The proposed fresh S20 EEG block is **not authorized** for download or signal
 access. Its exact four-file, 96,090,264-byte dry run is in
 `docs/FRESH_EEG_BENCHMARK_S20_APPROVAL_PACKET.md`.

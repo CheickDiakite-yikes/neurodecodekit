@@ -90,10 +90,11 @@ Do not reset, revert, delete, or overwrite work already present.
   while its experiment remains `Not Started`; Loop 27 planning research has
   selected S25 metadata while preregistration remains blocked; Loop 28 planning
   research defines a strict zero-shot rule while its experiment remains `Not
-  Started`; Loops 29-35 have completed planning research while their
+  Started`; Loops 29-36 have completed planning research while their
   experiments remain `Not Started`; confidence is unavailable, Loop 35's
   maximum future local claim is incremental brain-sensor information beyond
-  recorded controls, and Loops 36-44 remain `Not Started`; all 20
+  recorded controls, Loop 36's maximum future real-header claim is
+  declared metadata compatibility, and Loops 37-44 remain `Not Started`; all 20
   execution flags remain false.
 - Loop 26's planning boundary recommends a 2,908-parameter causal candidate, a
   2,884-parameter linear comparator, six controls, and exact enumeration of all
@@ -172,6 +173,15 @@ Do not reset, revert, delete, or overwrite work already present.
   is incremental brain-sensor information beyond recorded controls, not
   absolute brain origin. No fixture, acquisition, protected-data read, model,
   training, scoring, no-keypress study, device, or hardware work is authorized.
+- Loop 36 planning research is complete while the geometry/reference
+  experiment remains `Not Started`. The boundary freezes 6 representation
+  layers, 5 modality profiles, a 24-field channel record, 12 operation classes,
+  16 fixture families, 22 gates, 30 refusals, and 29 false authorization fields.
+  A future real-header result can establish at most declared metadata
+  compatibility. No fixture, header/signal read, alias/transform fit or apply,
+  unit conversion, rereference, compensation, interpolation, source
+  localization, model, training, download, stream, device, hardware, or
+  equivalence claim is authorized.
 - No real recording quality, neural advantage, unseen-person generalization,
   useful EEG decoder, real-time decoding, portable-hardware, arbitrary-thought,
   or clinical result has been demonstrated.

@@ -660,33 +660,67 @@ authorizes none of them.
 
 ## Loop 36 - Geometry And Reference Harmonization
 
-**Core question:** Can channel geometry, names, units, reference, and missing
-sensors be normalized across sessions/devices without erasing provenance?
+**Current state:** Planning research complete; experiment `Not Started`. See
+`docs/LOOP_36_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop36_research_boundary.v0.json`. All 29 authorization fields are
+false.
 
-**Why it moves the goal:** A transfer failure may be a coordinate, unit, or
-reference mismatch rather than an encoder limitation.
+**Core question:** Can source/channel identities, signal and coordinate units,
+sensor/electrode geometry, directional transforms, reference state,
+compensation, interpolation, and missingness be preserved and compared without
+guessing or selecting a mapping by accuracy?
 
-**Build:** Define a channel ontology, coordinate-frame transform ledger,
-reference/unit converter, missing-channel mask, original/harmonized metadata,
-and deterministic roundtrip validator.
+**Why it moves the goal:** The same channel label can refer to a different
+physical sensor, reference, frame, or derived signal; the same physical sensor
+can have different names, order, units, and frames. A hidden mapping can
+manufacture transfer, while exact-name refusal alone prevents legitimate
+declared comparisons.
 
-**Research:** Record modality-specific coordinate frames, references, units,
-montage requirements, and cases where harmonization is scientifically invalid.
+**Build recommendation:** Use six independent representation layers and five
+modality profiles. A 24-field future channel record preserves source and
+canonical identities, type/status, signal units, sensor/electrode role,
+position/orientation masks, coordinate units and frames, coil/electrode type,
+reference/ground, compensation/projectors, transform-chain IDs, missingness,
+and source hashes.
 
-**Data and controls:** Synthetic permutations, missing/duplicate channels,
-mirrored coordinates, wrong units, wrong references, and ambiguous names.
-Accuracy may not choose a mapping on evaluation data.
+**Operation boundary:** Twelve operation classes separate exact reorder,
+explicit bijective aliases, coordinate-unit scaling, signal-unit scaling,
+known rigid transforms, reflections/axis swaps, EEG rereference, MEG
+compensation/projectors, bad-channel interpolation, sensor-to-template mapping,
+zero-fill, and accuracy-selected mappings. Only exact reorder, declared
+coordinate-unit conversion, and a known right-handed transform can preserve
+metadata/geometry identity. Signal scaling, rereference, compensation, and
+interpolation are data-changing operations.
 
-**Metrics:** matched/missing/duplicate/ambiguous counts; transform residual;
-conversion identity; geometry availability; roundtrip and provenance hashes.
+**Future fixtures:** After separate preregistration and authorization, 16
+target-free families cover exact roundtrip, safe permutation, duplicate and
+ambiguous aliases, coordinate and signal units, unknown units, known rigid
+transforms, wrong direction, reflection, missing orientation/frame/reference,
+interpolation provenance, and evaluation-leakage refusal.
 
-**Gate:** Proceed only with deterministic, source-bound transforms that refuse
-ambiguity. Preserve `geometry unavailable` instead of inventing coordinates or
-equating devices from channel names.
+**Gate:** Pass all 22 requirements and 30 refusals. Require unique explicit
+aliases, separate signal/coordinate units, named frame origin/axes/handedness,
+directional 4-by-4 transforms, orthogonality and determinant `+1`, at most
+`1e-9 m` synthetic inverse residual, orientation-without-translation, complete
+reference/compensation state, original and harmonized metadata, hashes,
+resources, warnings, access counters, and claim-level reporting. Unknown fields
+remain unavailable.
 
-**Dependencies and authorization:** Depends on Loop 29. Synthetic fixtures or
-real-header inspection require separate scope; metadata mode must not open
-signal arrays.
+**Current evidence:** S21 caches expose names, MNE types, positions in metres,
+integer frame/unit codes, and coil types but no complete exchange-frame,
+orientation, transform, or compensation ledger. Loop 11 is within-cache subset
+selection, not cross-device equivalence. The consumed S7 61-channel cache has
+no qualified measured electrode/reference contract. No real header or cache
+was opened for this research.
+
+**Dependencies and authorization:** Depends on Loop 29's modality matrix, Loop
+30 for time-varying geometry clocks, and Loop 35 for motion-geometry confounds.
+Stage A synthetic metadata, Stage B named real headers, and Stage C signal
+transforms each need a separate preregistration, authorization-only tested
+commit, push, and green CI. Future Stage A is one thread, 120 seconds, 1 GiB
+RSS, 16 MiB artifacts, and zero downloads. The maximum future real-header
+claim is declared metadata compatibility, not numerical compatibility, model
+transfer, device equivalence, or scientific performance.
 
 ## Loop 37 - BIDS Derivative And Provenance Export
 
