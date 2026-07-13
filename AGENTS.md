@@ -51,13 +51,10 @@ qint8 used `47.10%` of the float32 numeric payload but changed behavior and was
 65.154951 seconds exceeded the frozen 60-second cap. Retain float32. Seed 2401
 is consumed; do not tune or rerun Loop 24, and do not repurpose seed 2402.
 
-Loop 25 causal preprocessing was preregistered at commit `a36d97b`, then
-superseded before authorization by the anti-alias amendment at green commit
-`b6b92d8`. The v0 files remain immutable history, but their request and exact
-sentence are no longer actionable. The current v1 packet adds a dedicated
-causal anti-alias stage, a 65,537-point 0-500 Hz response gate, 23 alias probes,
-45 refusals, 23 counters, and a static design gate before either fixture array
-can open. Its replacement request keeps every `authorized_now` field false:
+Loop 25 causal preprocessing was preregistered at commit `a36d97b`, superseded
+before authorization by the anti-alias amendment at green commit `b6b92d8`,
+authorized separately at green commit `1e7296a`, and implemented at green
+commit `439f151` before one registered target-free execution:
 
 ```bash
 cat docs/LOOP_25_PRIMARY_SOURCE_RESEARCH.md
@@ -65,21 +62,27 @@ cat docs/LOOP_25_CAUSAL_PREPROCESSING_PREREGISTRATION.md
 cat docs/LOOP_25_ANTI_ALIAS_AUDIT.md
 cat docs/LOOP_25_CAUSAL_PREPROCESSING_AMENDMENT_1.md
 cat docs/LOOP_25_AUTHORIZATION_PACKET_V1.md
+cat docs/LOOP_25_CAUSAL_PREPROCESSING_RESULT.md
 python -m json.tool registries/causal_preprocessing_contract.v0.json >/dev/null
 python -m json.tool registries/causal_preprocessing_contract.v1.json >/dev/null
 python -m json.tool registries/loop25_authorization_request.v1.json >/dev/null
+python -m json.tool registries/loop25_authorization_decision.v1.json >/dev/null
+python -m json.tool registries/loop25_causal_preprocessing_result.v1.json >/dev/null
 ```
 
-The next numbered decision is to authorize only v1 using its exact sentence,
-amend it again, or hold. Packet preparation, roadmap approval, and general
-continuation are not authorization. Do not create a Loop 25 fixture, filter
-coefficients, transform, CLI, runtime, cache read, model operation, or generated
-payload until a separate v1 authorization-only record is tested, committed,
-pushed, and remotely green. Even then, the static filter gate must pass before
-seed 2501 opens; seed 2502 stays conditional. Both remain unopened. Real or
-consumed data, targets, labels, text, model inference, training, new
-architectures, energy measurement, RW3, streams, devices, hardware, and Loops
-26-44 execution remain unauthorized.
+The static 65,537-point response and 23-probe alias gate passed before either
+partition opened. Development seed 2501 then passed and froze before
+qualification seed 2502 opened once and passed unchanged. All 24 target-free
+items, 168 schedule checks, 240 resume checks, and 72 future-mutation controls
+passed. Static plus complete-gate internal runtime was 5.542175 seconds,
+maximum peak RSS was 136,806,400 bytes, and generated output was 788,967 bytes.
+Every real/consumed data, target, model, training, network, RW3, stream, device,
+and hardware counter was zero. The producer is causal with zero right context;
+retained neural information and end-to-end latency remain unmeasured. Loop 25
+is complete, both fixture seeds are consumed for this gate, and no rerun is
+authorized. The next numbered decision is a new Loop 26 preregistration and
+separate authorization or hold; this closeout does not authorize Loop 26-44,
+roadmap Loop 46-64, protected access, inference, or training.
 
 Loop 26 planning research is complete at commit `03605c5`, but the experiment
 remains `Not Started` and has no preregistration or authorization sentence:
@@ -365,8 +368,8 @@ The boundary freezes six integration layers, seven distinct clock views,
 eight anomaly classes, five inherited schedules, five resume cuts, 18 hash
 bindings, 28 future fixture families, 32 gates, 42 refusals, and 42 false
 authorization fields. Loop 20/21 interfaces are not evidence of the missing
-join. Loop 25, Loop 37, Loop 39, and RW3 Stage A execution closeouts are all
-unsatisfied. No fixture, source chunk, correction, preprocessing, adapter,
+join. Loop 25 is now satisfied, but Loop 37, Loop 39, and RW3 Stage A execution
+closeouts remain unsatisfied. No fixture, source chunk, correction, adapter,
 state, token runtime, stream, device, latency measurement, or scientific
 result exists or is authorized.
 
@@ -438,9 +441,10 @@ upgrade exists. Future roadmap work does not authorize any frozen experiment.
 The next research tranche is frozen in
 `docs/LOOPS_45_64_SCIENTIFIC_ROADMAP.md` and
 `registries/next_scientific_loops.v0.json`. It contains exact loop IDs 45-64 in
-five phases of four. Every status is `Not Started`, every execution flag is
-false, and every global authorization field is false. The scientific critical
-path is Loop 45 causal mechanics, Loop 46 reserved S21 validation, Loop 47
+five phases of four. Loop 45 is complete at its target-free mechanics boundary;
+Loops 46-64 are `Not Started`, every current execution flag is false, and every
+global authorization field is false. The scientific critical path continues
+with Loop 46 reserved S21 validation, Loop 47
 signal attribution, a nonfinal development person, and only then Loop 52's
 strict S25 final-only zero-shot verdict. Do not start these from a broad
 continuation request.
@@ -473,8 +477,9 @@ A primary-source-informed next tranche defines Loops 25-44 in
 `docs/LOOPS_25_44_ROADMAP.md` and
 `registries/next_20_loops.v0.json`. It contains exactly 20 planning rows across
 five phases, with detailed controls, metrics, stop rules, resource caps,
-dependencies, and source bindings. Loop 25 is `Amended Preregistration` with
-`execution_authorized: false`; Loop 26 has completed planning research while
+dependencies, and source bindings. Loop 25 is `Complete` after one target-free
+mechanics execution and has `execution_authorized: false` because no rerun is
+open; Loop 26 has completed planning research while
 its experiment remains `Not Started`; Loop 27 has selected S25 in metadata
 while preregistration remains blocked; Loop 28 planning research defines a T2
 strict zero-shot rule while its experiment remains `Not Started`; Loop 29
@@ -507,8 +512,8 @@ defines the independent artifact-reproduction firewall while its challenge
 remains `Not Started`. Loop 44 artifact-only claim review is complete;
 engineering release is held and scientific performance release is parked. All 20
 execution flags are false. This roadmap does not
-reopen Loop 24, authorize RW3, or permit a Loop 25-44 fixture, download, data
-read, model run, training run, stream, board, or hardware operation. A broad
+reopen Loop 24 or 25, authorize RW3, or permit a Loop 26-44 fixture, download,
+data read, model run, training run, stream, board, or hardware operation. A broad
 request to continue toward Loop 44 is a goal, not a substitute for each frozen
 authorization boundary.
 
@@ -534,6 +539,10 @@ authorization boundary.
 - The current Loop 25 v1 authorization request remains hash-bound to the green
   amendment, every `authorized_now` field remains false, and the v0 request is
   visibly historical and unauthorized.
+- The separate Loop 25 authorization and implementation commits remain green,
+  the result registry preserves the one-time static-development-qualification
+  order, 24/24 items, 168/240/72 replay checks, exact zero protected counters,
+  788,967 generated bytes, and the no-rerun/Loop-46-unauthorized boundary.
 - The Loop 26 planning registry remains exact with 14 false authorization
   fields, a 55/6/5 split, six validation items, 64 exact paired assignments,
   2,908/2,884-parameter recommendations, and no preregistration or runtime.
@@ -657,9 +666,9 @@ authorization boundary.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed
   2401 is not rerun or tuned, qualification seed 2402 remains unopened, and
   real/consumed data, targets, energy, training, and RW3 counters remain zero.
-- No Loop 25-44 runtime, fixture, filter-design run, numerical preprocessing,
-  model run, training run, generated payload, or intentional protected-data
-  operation exists without its own preregistration and authorization. Loop 43's
+- No new Loop 25 rerun or Loop 26-44 runtime, fixture, model run, training run,
+  generated payload, or intentional protected-data operation exists without
+  its own preregistration and authorization. Loop 43's
   overbroad local JSON-validation incident is the explicit exception: 136 cache
   JSON files and 11 known consumed session-2 report/metadata files were parsed,
   with no raw payload, inference, scoring, tuning, or claim-selection use.
@@ -671,9 +680,9 @@ authorization boundary.
 - Loop 24 remains a parked target-free local result and establishes no speedup,
   integer-only execution, retained neural accuracy, end-to-end text latency,
   cross-device energy efficiency, or portable-hardware behavior.
-- Loop 25 remains an amended preregistered mechanics proposal and establishes
-  no filter result, official preprocessing equivalence, neural information,
-  decoding, latency, transfer, or device result.
+- Loop 25 establishes one passed target-free causal-preprocessing mechanics
+  result, not official preprocessing equivalence, retained neural information,
+  decoding accuracy, end-to-end latency, transfer, or device performance.
 - Resource, privacy, access, timestamp, anomaly, hash, and claim boundaries stay
   explicit and machine-checkable.
 

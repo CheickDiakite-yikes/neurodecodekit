@@ -39,7 +39,7 @@
       "phase_id": "P6",
       "title": "Causal Source-Path Qualification",
       "priority": "P0",
-      "status": "Not Started",
+      "status": "Complete",
       "execution_authorized": false,
       "core_question": "Can the amended Loop 25 v1 preprocessing path pass its static anti-alias and exact causal replay gates before any real training row opens?",
       "scientific_claim_target": "mechanics prerequisite only",
@@ -51,7 +51,7 @@
       "kill_or_park_rule": "Park the exact transform with both seeds unopened if the static gate fails; do not alter schedules, tolerances, or filters after protected access.",
       "depends_on": [25],
       "future_resource_cap": "one thread; one worker; 45 seconds internal; 1 GiB RSS; 8 MiB generated",
-      "authorization_boundary": "Requires the exact separate Loop 25 v1 authorization-only commit and green CI; this roadmap does not supply it."
+      "authorization_boundary": "Completed once through the separate green Loop 25 v1 authorization at 1e7296a and green implementation at 439f151. No rerun is authorized; Loop 46 remains a separate preregistration and authorization decision."
     },
     {
       "loop_id": 46,
