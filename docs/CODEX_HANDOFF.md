@@ -116,7 +116,14 @@
 > 32 false authorization fields. Its experiment remains `Not Started` and
 > unauthorized; unknown copies remain unresolved and no fixture, scanner,
 > deletion, identity attack, history rewrite, consent determination, release,
-> or upload exists. Loops 39-44 remain `Not Started`.
+> or upload exists.
+> Loop 39 planning research freezes seven qualification levels, 18 environment
+> identity fields, eight output classes, six comparison classes, six required
+> future cells, 20 fixtures, four stages, 28 gates, 38 refusals, and 36 false
+> authorization fields. Its experiment remains `Not Started` and unauthorized;
+> Python 3.10, macOS, cross-OS, dependency-lock, and built-package evidence is
+> unqualified, and no fixture, manifest, matrix, install, or build exists.
+> Loops 40-44 remain `Not Started`.
 > This does not reopen Loop 24 or authorize RW3, data, targets, models,
 > validation, training, calibration, or hardware.
 > In parallel, RW0 closes a primary-source Real-World Practice research gate
@@ -325,6 +332,12 @@ This repo is a starter scaffold with working pure-Python components:
   26 gates, 36 refusals, 32 false authorization fields, and zero current/all-
   history neural candidate paths; the experiment remains `Not Started`,
   unknown copies remain unresolved, and execution is unauthorized
+- machine-checked Loop 39 planning research with seven qualification levels,
+  18 environment identity fields, eight output classes, six comparison classes,
+  six required future cells, 20 fixtures, four stages, 28 gates, 38 refusals,
+  and 36 false authorization fields; the experiment remains `Not Started`,
+  current declared support is not cross-machine qualified, and execution is
+  unauthorized
 - JSON/Markdown metrics report command
 - CLI smoke commands
 - unit tests
@@ -337,32 +350,33 @@ negative within-session event comparison. None is a decoder success. Do not
 turn these results, a variance ranking, or a geometry proxy into unseen-person
 or population generalization.
 
-Current Loop 38 local verification passes 558 unittests with 3 expected skips
-in 21.97 seconds wall and 605,208,576-byte maximum RSS; pytest reports 555
-passed, 3 skipped, and 254 subtests in 22.13 seconds wall with
-604,880,896-byte maximum RSS. The focused Loop 24-38 planning boundary has 240
-passing tests in 0.16 seconds wall and 58,589,184-byte maximum RSS; the strict
-Loop 38 plus roadmap slice has 23 tests in 0.07 seconds wall and
-34,390,016-byte maximum RSS. Dependency-light discovery is green at 526 tests
-with 121 optional skips in 0.63 seconds wall and 77,545,472-byte maximum RSS.
-Each full count is 14 above the Loop 37 closeout. No Loop 25-38 fixture, coefficient,
+Current Loop 39 local verification passes 574 unittests with 3 expected skips
+in 21.80 seconds wall and 608,272,384-byte maximum RSS; pytest reports 571
+passed, 3 skipped, and 261 subtests in 21.96 seconds wall with
+615,596,032-byte maximum RSS. The focused Loop 24-39 planning boundary has 256
+passing tests in 0.25 seconds wall and 66,093,056-byte maximum RSS; the strict
+Loop 39 plus roadmap slice has 25 tests in 0.09 seconds wall and
+34,930,688-byte maximum RSS. Dependency-light discovery is green at 542 tests
+with 121 optional skips in 0.64 seconds wall and 83,509,248-byte maximum RSS.
+Each full count is 16 above the Loop 38 closeout. No Loop 25-39 fixture, coefficient,
 preprocessing run, candidate selection/download, local MAT payload hash,
 header/signal/target/validation/model read, adapter fit, training run,
 calibration or confidence fit, learning-curve or confidence score, peripheral
 recording, residualization fit, physical-repetition study, product-confidence
 surface, geometry transform, unit conversion, rereference, interpolation,
 exporter, derivative tree, validator run, raw copy, release, upload,
+environment manifest, dependency lock, cross-machine matrix job, package build,
 language-model/Neuro Token run, protected network payload download, RW3
 operation, SDK import, stream, board, device, partner, or hardware operation
-occurred. The tracked workbook is 96,249 bytes
+occurred. The tracked workbook is 97,628 bytes
 with SHA-256
-`8f03b7369362822c14f59ae438ffb09967ebd9cb4cb83f36cf852876b28e0b5c`;
+`d0f661b9718891237605873eff1124cea7df90fbb70f4affeb04740b497a327c`;
 all nine sheets render, the export reloads with exact key ranges, and the
-formula scan has zero matches. Ruff, touched-file format checks, compileall, 26
+formula scan has zero matches. Ruff, touched-file format checks, compileall, 27
 source JSON and two TOML parses, 72 checked local Markdown links with zero
-missing, seven CLI help surfaces, 55 registered commands, unauthorized Loop 38
-runtime absence, and `git diff --check` pass. Research commit `c82c3fa` passes
-push CI run `29228686142` and draft PR #17 CI run `29228698759`.
+missing, seven CLI help surfaces, 55 registered commands, unauthorized Loop 39
+runtime absence, and `git diff --check` pass. Research commit `efbf764` passes
+push CI run `29230660807` and draft PR #18 CI run `29230681661`.
 
 ## The north star
 
@@ -467,6 +481,14 @@ This is not primarily a model repo. It is a **research loop repo**.
    Started` and unauthorized; no fixture, scanner, deletion, protected-root
    scan, identity attack, history rewrite, consent determination, release, or
    upload exists. Unknown copies remain unresolved.
+   For Loop 39, read `docs/LOOP_39_PRIMARY_SOURCE_RESEARCH.md` and
+   `registries/loop39_research_boundary.v0.json`. Its planning research defines
+   seven qualification levels, 18 environment fields, exact semantic/discrete
+   identity, field-specific float policies, six future cells, and the boundary
+   between maintainer-run CI, independent reproduction, and scientific
+   replication. The experiment is `Not Started` and unauthorized; no fixture,
+   manifest, matrix job, dependency lock/install, package build, protected
+   read, model, training, edge, stream, device, or hardware operation exists.
    Each future loop still requires its own packet before execution.
 4. **Keep the GitHub history reviewable.** PR #3 carries the validated Loop
    8-24 evidence stack and is green. Draft PR #4 carries the separately stacked

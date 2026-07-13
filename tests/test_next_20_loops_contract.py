@@ -22,7 +22,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
     def test_identity_range_and_planning_boundary_are_exact(self):
         roadmap = self.roadmap
         self.assertEqual(roadmap["schema_name"], "neurodecodekit.next_twenty_loops_roadmap")
-        self.assertEqual(roadmap["schema_version"], "0.15.0")
+        self.assertEqual(roadmap["schema_version"], "0.16.0")
         self.assertEqual(roadmap["roadmap_id"], "loops-25-44")
         self.assertEqual(roadmap["status"], "planning_only_not_execution_authorization")
         self.assertEqual(
@@ -219,6 +219,25 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         self.assertFalse(boundary["loop38_identity_attack_authorized"])
         self.assertFalse(boundary["loop38_public_release_authorized"])
         self.assertFalse(boundary["loop38_dependency_loop37_execution_satisfied"])
+        self.assertTrue(boundary["loop39_research_packet_prepared"])
+        self.assertEqual(boundary["loop39_qualification_level_count"], 7)
+        self.assertEqual(boundary["loop39_environment_identity_field_count"], 18)
+        self.assertEqual(boundary["loop39_output_class_count"], 8)
+        self.assertEqual(boundary["loop39_comparison_class_count"], 6)
+        self.assertEqual(boundary["loop39_required_matrix_cell_count"], 6)
+        self.assertEqual(boundary["loop39_future_fixture_family_count"], 20)
+        self.assertEqual(boundary["loop39_future_requirement_count"], 28)
+        self.assertEqual(boundary["loop39_future_refusal_count"], 38)
+        self.assertEqual(boundary["loop39_current_public_ci_cross_os_cells"], 0)
+        self.assertEqual(boundary["loop39_current_dependency_lockfiles"], 0)
+        self.assertFalse(boundary["loop39_preregistration_prepared"])
+        self.assertFalse(boundary["loop39_execution_authorized"])
+        self.assertFalse(boundary["loop39_ci_matrix_authorized"])
+        self.assertFalse(boundary["loop39_optional_install_authorized"])
+        self.assertFalse(boundary["loop39_package_build_authorized"])
+        self.assertFalse(boundary["loop39_protected_access_authorized"])
+        self.assertFalse(boundary["loop39_dependency_loop37_execution_satisfied"])
+        self.assertFalse(boundary["loop39_dependency_loop38_execution_satisfied"])
         self.assertEqual(boundary["user_preferred_incremental_storage_bytes"], 5_000_000_000)
         self.assertEqual(boundary["user_absolute_incremental_storage_bytes"], 10_000_000_000)
         self.assertEqual(boundary["selected_s20_plus_s25_future_bundle_bytes"], 1_106_030_247)
@@ -270,13 +289,14 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                     self.assertFalse(registration["superseded_v0"]["was_authorized"])
                 else:
                     self.assertEqual(row["status"], "Not Started")
-                    if row["loop_id"] in {34, 35, 36, 37, 38}:
+                    if row["loop_id"] in {34, 35, 36, 37, 38, 39}:
                         expected = {
                             34: "planning_research_complete_no_confidence_fit_or_result_unauthorized",
                             35: "planning_research_complete_no_confound_fixture_acquisition_or_brain_specific_result_unauthorized",
                             36: "planning_research_complete_no_geometry_fixture_header_signal_transform_or_result_unauthorized",
                             37: "planning_research_complete_experiment_not_started",
                             38: "planning_research_complete_experiment_not_started",
+                            39: "planning_research_complete_experiment_not_started",
                         }
                         self.assertEqual(row["proof_posture"], expected[row["loop_id"]])
                     else:
@@ -295,6 +315,7 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                         36,
                         37,
                         38,
+                        39,
                     }:
                         self.assertEqual(row["research_status"], "planning_research_complete")
                         self.assertFalse(row["preregistration_prepared"])
@@ -412,6 +433,16 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                 "github_remove_sensitive_data",
                 "open_brain_consent",
                 "oecd_responsible_neurotechnology",
+                "acm_artifact_badging",
+                "reproducible_builds_definition",
+                "python_hash_seed",
+                "pip_inspect_schema",
+                "pypa_pylock",
+                "numpy_runtime_and_global_state",
+                "pytorch_reproducibility",
+                "github_hosted_runners",
+                "mne_sys_info",
+                "scientific_python_spec0",
                 "model_cards",
                 "datasheets",
                 "selective_prediction",

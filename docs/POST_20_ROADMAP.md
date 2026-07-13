@@ -152,8 +152,12 @@ freezes five sensitivity levels, eight artifact classes, ten lifecycle
 surfaces, 12 sensitive-field classes, 12 threats, five deletion-receipt levels,
 24 fixtures, four stages, 26 gates, 36 refusals, and 32 false authorization
 fields. Its experiment remains `Not Started`; unknown copies remain unresolved
-and all scanner/deletion/identity/release work is unauthorized. Loops 39-44
-remain `Not Started`. All 20
+and all scanner/deletion/identity/release work is unauthorized. Loop 39
+planning research freezes seven qualification levels, 18 environment identity
+fields, eight output classes, six comparison classes, six future matrix cells,
+20 fixture families, four stages, 28 gates, 38 refusals, and 36 false
+authorization fields. Its experiment remains `Not Started`; no matrix cell or
+cross-machine reproduction has run. Loops 40-44 remain `Not Started`. All 20
 `execution_authorized` flags are false. Loop 25's exact decision packet is
 ready for review, while Loops 26-33 have no
 preregistration or authorization packet. Roadmap approval, general
@@ -262,3 +266,11 @@ from the other.
   clean remotes or backups, run an identity attack, decide consent/license,
   release/upload data, or call path absence secure media sanitization. Unknown
   copies stay unresolved.
+- Keep Loop 39 planning-only. Its qualification levels, environment identity
+  schema, output classes, tolerance policy, future matrix, fixture families,
+  gates, and refusals are not permission to create fixtures, install or lock
+  dependencies, mutate CI, build packages, open protected payloads, run models
+  or training, recruit an independent reproducer, package an edge runtime, or
+  claim cross-machine reproduction. Deterministic replay, exact semantics,
+  numerical compatibility, reproduction, independent reproduction, and
+  replication remain distinct claims.

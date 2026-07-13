@@ -45,7 +45,12 @@
 > sensitive-field classes, five deletion-receipt levels, 24 fixtures, 26 gates,
 > 36 refusals, and 32 false authorization fields while its experiment remains
 > `Not Started`. Unknown copies remain unresolved and all execution is
-> unauthorized. Loops 39-44 remain planning-only. The
+> unauthorized. Loop 39 planning research freezes seven qualification levels,
+> 18 environment identity fields, eight output classes, six comparison classes,
+> six future matrix cells, 20 fixture families, four stages, 28 gates, 38
+> refusals, and 36 false authorization fields while its experiment remains
+> `Not Started`. No cross-machine reproduction has occurred. Loops 40-44
+> remain planning-only. The
 > spreadsheet dashboard displays the original roadmap, current gate, and next
 > 20-loop queue separately.
 
@@ -274,7 +279,8 @@ confidence unavailable; Loop 35 planning research is complete and its
 experiment remains `Not Started`; Loop 36 planning research is complete and
 its experiment remains `Not Started`; Loop 37 planning research is complete and
 its experiment remains `Not Started`; Loop 38 planning research is complete
-and its experiment remains `Not Started`; Loops 39-44 are
+and its experiment remains `Not Started`; Loop 39 planning research is complete
+and its experiment remains `Not Started`; Loops 40-44 are
 `Not Started`. Every row retains `execution_authorized: false`.
 
 | # | Phase | Gate | Core outcome | Priority | Effort | Status |
@@ -293,7 +299,7 @@ and its experiment remains `Not Started`; Loops 39-44 are
 | 36 | Reliability And Confounds | Geometry And Reference Harmonization | Planning research complete: freeze 6 representation layers, 5 modality profiles, 24 channel fields, 12 operation classes, 16 fixtures, 22 gates, and 30 refusals; metadata compatibility stays separate from signal/model/device equivalence. | P1 | M | Not Started |
 | 37 | Reproducibility And Local Deployment | BIDS Derivative And Provenance Export | Planning research complete: freeze 6 export layers, 5 artifact profiles, 15 stable mappings, 16 extension fields, 20 fixtures, 24 gates, and 32 refusals; standard envelopes cannot standardize custom payloads. | P1 | M | Not Started |
 | 38 | Reproducibility And Local Deployment | Neural Data Privacy And Lifecycle | Planning research complete: freeze 5 sensitivity levels, 8 artifact classes, 10 lifecycle surfaces, 12 sensitive-field classes, 5 receipt levels, 24 fixtures, 26 gates, and 36 refusals; unknown copies remain unresolved. | P0 | M | Not Started |
-| 39 | Reproducibility And Local Deployment | Cross-Machine Reproducibility Matrix | Define bitwise semantic identity versus explicit numerical compatibility across supported environments. | P0 | M | Not Started |
+| 39 | Reproducibility And Local Deployment | Cross-Machine Reproducibility Matrix | Planning research complete: freeze 7 qualification levels, 18 environment fields, 8 output classes, 6 comparison classes, a 6-cell future matrix, 20 fixtures, 28 gates, and 38 refusals; no matrix cell or reproduction has run. | P0 | M | Planning research complete; experiment Not Started |
 | 40 | Reproducibility And Local Deployment | Edge Runtime Packaging Gate | Package one already qualified frozen path only if behavior and deployment benefit survive. | P2 | L | Not Started |
 | 41 | Live Translation And Release | RW3 Stream-To-NeuroToken Integration | Join separately authorized source-chunk replay to causal tokens without timestamp or state drift. | P1 | L | Not Started |
 | 42 | Live Translation And Release | One-Device Qualification | Qualify one exact device, firmware, transport, host, and compatibility level only. | P2 | L | Not Started |
@@ -445,6 +451,23 @@ attack, history rewrite, consent determination, release, upload, model,
 training, device, or hardware operation exists. See
 `docs/LOOP_38_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop38_research_boundary.v0.json`.
+
+Loop 39 planning research is complete while the experiment remains `Not
+Started` and unauthorized. The boundary separates deterministic replay,
+bitwise identity, exact semantic identity, numerical compatibility,
+cross-machine reproduction, independent reproduction, and replication. It
+freezes 18 environment identity fields, eight output classes, six comparison
+classes, six future matrix cells across Ubuntu 24.04 x64 and macOS 15 arm64,
+20 fixture families, four independently authorized stages, 28 gates, 38
+refusals, and 36 false authorization fields. The current support audit found
+two `ubuntu-latest` Python 3.12 CI profiles, zero explicit cross-OS cells, zero
+tracked lockfiles, no package reproducibility job, and two tests whose direct
+`tomllib` imports prevent claiming the declared Python 3.10 test surface is
+qualified. No fixture, environment manifest, matrix job, lockfile, package
+build, protected payload, model, training run, independent reproducer, edge
+runtime, device, or hardware operation exists. See
+`docs/LOOP_39_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop39_research_boundary.v0.json`.
 
 ## 20 loops
 | # | Phase | Loop | Core question | Deliverable | Acceptance gate | Priority | Effort | Prompt seed |

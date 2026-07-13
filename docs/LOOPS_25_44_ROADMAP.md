@@ -892,28 +892,79 @@ OS combinations, and which require explicit numerical tolerances?
 
 **Why it moves the goal:** Contributors need to distinguish a semantic
 regression from expected backend arithmetic or an unsupported environment.
+Later edge, live, device, independent-reproduction, and release claims are not
+credible when one maintainer's environment is the hidden reference.
 
-**Build:** Add an environment manifest, CI matrix, golden semantic hashes,
-tolerance registry, diagnostic diff, and per-cell resource report for base and
-optional-neuro environments.
+**Build:** Future separately authorized work adds a sanitized environment
+manifest, canonical semantic comparator, six-cell CI matrix, golden semantic
+hashes, field-specific tolerance registry, stable diagnostic diff, and per-cell
+resource report. No implementation or workflow mutation exists now.
 
-**Research:** Define semantic identity, numerical compatibility, runtime
-comparison, and environment-specific evidence as separate reproducibility
-levels.
+**Research:** Planning research is complete. ACM terminology separates
+same-team repeatability, different-team same-setup reproduction, and different-
+team different-setup replication. Reproducible Builds requires same source,
+environment, and instructions for bit-identical specified artifacts. Python,
+pip, PyPA, NumPy, PyTorch, GitHub runner, MNE, and Scientific Python sources
+define the environment and numerical boundaries.
 
-**Data and controls:** Dependency-free tests and authorized synthetic fixtures
-only. Cover macOS/Linux where capacity permits. Keep exact IDs/timestamps/state
-separate from floating payload tolerances.
+**Current audit:** `pyproject.toml` declares Python 3.10-3.12 and OS Independent,
+but public CI currently exercises only `ubuntu-latest` with Python 3.12 for base
+and optional-neuro profiles. There is no cross-OS cell, dependency lock,
+environment-manifest schema, central tolerance registry, or wheel/sdist
+reproducibility job. Two tests import standard-library `tomllib`, unavailable
+in Python 3.10 without a fallback, so the declared minimum remains unqualified.
+This local Darwin arm64 Python 3.13.5 pass is diagnostic only.
 
-**Metrics:** matrix pass rate; semantic hashes; maximum numerical drift;
-runtime/RSS; artifact/dependency size; unsupported-cell count.
+**Future matrix:** Six required cells are Ubuntu 24.04 x64 with Python
+3.10/3.11/3.12 base; macOS 15 arm64 with Python 3.12 base; and Ubuntu 24.04 plus
+macOS 15 with Python 3.12 optional-neuro. Windows, GPU, Python 3.13+, edge,
+stream, device, and hardware cells remain separate.
 
-**Gate:** Every supported cell must reproduce the contract or fail with an
-explicit reason. Tolerances can change only after a recorded public failure and
-decision, never after protected evaluation access.
+**Data and controls:** Repository metadata and public sources only now. Future
+Stage A uses new target-free dependency-free synthetic fixtures. Eighteen
+environment fields bind source/workflow, runner image, OS/CPU, Python ABI,
+dependency graph, BLAS/LAPACK, SIMD, Torch/MNE, threads, locale, paths, and
+resources. Exact IDs, timestamps, indices, lengths, masks, splits, causal
+state, dtypes, shapes, discrete values, and warning codes never receive float
+tolerances.
 
-**Dependencies and authorization:** Depends on Loop 37 and CI capacity review.
-New jobs, optional installs, and fixtures need their own bounded change.
+**Comparisons:** Eight output classes and six comparison classes separate
+canonical semantic hashes, discrete arrays, floating arrays, containers,
+human reports, resources, and failures. Every floating field requires a frozen
+maximum absolute, maximum relative, ULP, NaN/Inf, signed-zero, dtype, and shape
+policy. There is no global `allclose` threshold. Runtime and RSS are descriptive
+unless a registered resource cap fails.
+
+**Metrics:** required-cell outcome; semantic-hash and discrete identity;
+field-level numerical drift; install/test/comparison runtime and RSS;
+dependency, package, and artifact bytes; unavailable fields; unsupported reason;
+and claim ceiling.
+
+**Gate:** All 28 future gates and 38 refusals pass. Every required cell either
+reproduces exact semantics plus its preregistered numerical policy or emits one
+explicit unsupported reason. Matrix fail-fast is false, silent continue-on-
+error is forbidden, and Python 3.10 must collect the complete suite or the
+support claim fails. A tolerance can change only under a new version after a
+public failure record and before fresh evidence, never after protected or
+consumed result access.
+
+**Stop rule:** One failing required cell blocks the corresponding claim. Never
+convert one host, one OS, matching rounded metrics, a dependency range, or an
+editable-install pass into cross-machine reproduction. Preserve and diagnose
+the failure instead of excluding the cell or widening a threshold.
+
+**Dependencies and authorization:** Depends on Loop 37 and Loop 38 planning.
+Stages A fixture/manifest, B base matrix, C optional-neuro matrix, and D Loop 43
+handoff are separately authorized. Loop 40 requires the relevant matrix pass;
+Loop 43 remains required for independent-team reproduction; Loop 44 remains
+required for release. No fixture, manifest implementation, CI job, lockfile,
+install, build/upload, protected read, model, training, edge, stream, device,
+or hardware operation is authorized.
+
+**Resources:** Current generated experiment bytes, jobs, installs, builds, and
+protected operations are zero. Future work is capped at two parallel jobs, one
+thread/worker per cell, 20 minutes, 1 GiB RSS, 4 MiB artifacts per cell, 24 MiB
+total artifacts, and zero large-cache/protected/model/training access.
 
 ## Loop 40 - Edge Runtime Packaging Gate
 
