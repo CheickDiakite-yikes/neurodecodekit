@@ -18,6 +18,11 @@
    `docs/LOOP_26_AUTHORIZATION_DECISION.md`, and
    `docs/LOOP_26_SHARED_VALIDATION_IMPLEMENTATION.md` to audit the green shared
    design, one-time authorization, implementation, and target-firewall order.
+   Then read `docs/LOOP_48_PRIMARY_SOURCE_RESEARCH.md` and
+   `registries/loop48_failure_localization_contract.v0.json` for the
+   post-outcome artifact-only failure tree. Its leading `F5` phenotype is
+   output-distribution instability, not a proven root cause; implementation
+   and execution remain unauthorized.
 8. Read `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` for the selected S25
    metadata candidate and every blocker that still prevents preregistration,
    download, signal/target access, or transfer evaluation.
@@ -87,8 +92,8 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 
 Tracker scope: the spreadsheet's `20` KPI is the size of the original roadmap,
 not the current loop number. Its dashboard now separately reports **Loops
-26/31/33 consumed and parked; Loop 48 failure localization next but not
-authorized**, and its
+26/31/33 consumed and parked; Loop 48 artifact-only preregistered with
+authorization pending**, and its
 ninth sheet contains the separate **Loops 25-44 queue**. Loop 25 passed once
 at its target-free mechanics boundary and now has `execution_authorized: false`
 because no rerun is open; Loop 26 was preregistered at `881145d`, authorized at
@@ -450,7 +455,9 @@ Truth, Unseen-Person Verdict, Accessible EEG Evidence, Causal Local Use, and
 Independent Evidence And Release. Loop 45 is complete at its target-free
 mechanics boundary. Loops 46/47 consumed one registered S21 validation event
 and are parked after the candidate lost to the no-signal prior; no rerun is
-authorized. Loop 48 artifact-first failure localization is the next numbered
-work order but remains `Not Started` and separately gated. Loops 49-64 remain
-`Not Started`, and all current execution flags are false. S25 remains sealed
-until a separate final-only zero-shot packet is complete.
+authorized. Loop 48 now has a post-outcome artifact-only diagnostic contract
+that records `F5` output-distribution instability as the leading phenotype.
+The contract is not implemented or executed and every authorization field
+remains false. Loops 49-64 remain `Not Started`, and all current execution
+flags are false. S25 remains sealed until a separate final-only zero-shot
+packet is complete.

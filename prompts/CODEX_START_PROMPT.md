@@ -281,8 +281,14 @@ negative result. Review
 `docs/LOOP_26_SHARED_VALIDATION_IMPLEMENTATION.md`, and the Loop 26 v0
 registries. Do not rerun any implementation stage, reopen validation targets,
 tune after targets, increase the model, or touch source test or session 2.
-Loop 48 artifact-first failure-localization planning is next; implementation or
-any train-array/protected read needs a separate exact authorization.
+Loop 48 artifact-only failure localization is preregistered in
+`docs/LOOP_48_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop48_failure_localization_contract.v0.json`. The leading `F5`
+output-instability phenotype is descriptive and not a proven root cause. The
+contract remains unimplemented and every authorization field is false. Commit,
+push, test, and remotely qualify the exact contract before preparing a separate
+Stage A authorization packet. Any implementation, train-array/protected read,
+target, checkpoint, private prediction, model run, or tuning remains closed.
 
 Loop 27 is also review-only planning evidence. Do not turn the selected S25
 paths, official hashes, local MAT presence, 1 GiB cap, or roadmap status into a

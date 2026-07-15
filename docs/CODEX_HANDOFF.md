@@ -9,8 +9,9 @@
 > the attribution conjunction and scaling gate also failed. Engineering,
 > access-order, one-thread, 1 GiB RSS, and 32 MiB artifact gates all passed.
 > Five source-test rows, session 2, post-target tuning, and any rerun remain
-> closed. Loop 48 artifact-first failure localization is next but `Not Started`
-> and requires a separate authorization for any train-array or protected read.
+> closed. Loop 48 artifact-only failure localization is preregistered with
+> authorization pending. Its leading `F5` output-instability phenotype is not
+> a proven root cause; the contract has no implementation or execution.
 
 > Historical pre-Loop-25-execution context, retained for audit: Loops 1-12,
 > 14-22, and 23.5 are complete; Loops
@@ -450,12 +451,15 @@ This is not primarily a model repo. It is a **research loop repo**.
 
 ## Current Next Work
 
-1. **Loop 48 - design failure localization; do not rerun Loop 26.**
-   Read `docs/LOOP_26_SHARED_VALIDATION_RESULT.md` and
-   `registries/loop26_shared_validation_result.v0.json`. Use only committed
-   aggregate artifacts for planning. Any train-array diagnostic, cache member,
-   target, model run, or implementation requires a new exact scope and separate
-   authorization; source test and session 2 stay closed.
+1. **Loop 48 - qualify the artifact-only contract; do not rerun Loop 26.**
+   Read `docs/LOOP_48_PRIMARY_SOURCE_RESEARCH.md` and
+   `registries/loop48_failure_localization_contract.v0.json`. The contract
+   binds four committed JSON inputs, eight ordered classes, 17 unavailable
+   root-cause fields, 30 refusals, and a one-thread Stage A. Commit and remotely
+   qualify it before preparing a separate authorization request. No artifact
+   analyzer, train-array diagnostic, cache member, target, checkpoint, private
+   prediction, or model run is authorized; source test and session 2 stay
+   closed.
 2. **RW3 - decide on the prepared Stage A packet only.** Review
    `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` and
    `registries/rw3_stage_a_authorization_request.v0.json`. The request is bound
@@ -1095,10 +1099,10 @@ The next scientific tranche is in
 of four, ten sources, ten kill branches, 20 false execution flags, and nine
 false global authorization fields.
 
-The critical sequence has stopped at the failed Loop 46/47 S21 gate. The next
-allowed design step is Loop 48 artifact-first failure localization; only a
-separately designed non-S25 development-person path could later reopen the
-predictive branch before Loop 52's one-time S25 verdict. S21
+The critical sequence has stopped at the failed Loop 46/47 S21 gate. Loop 48
+artifact-only failure localization is preregistered but not implemented or
+authorized; only a separately designed non-S25 development-person path could
+later reopen the predictive branch before Loop 52's one-time S25 verdict. S21
 session 2 and S7 stay consumed; S25 stays unopened and final-only. EEG,
 streaming, device, home, reproduction, and release phases remain downstream
 and separately authorized.

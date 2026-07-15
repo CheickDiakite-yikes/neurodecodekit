@@ -280,7 +280,8 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   authorize no code. Loop 24 is now parked and cannot authorize RW3, data,
   training, or hardware. Seeds 2203, 2303, 2353, and 2401 stay consumed; seed
   2402 remains unopened. Loop 25 is consumed at its exact mechanics boundary;
-  the next numbered gate is separately scoped Loop 48 failure localization.
+  Loop 48 artifact-only failure localization is now preregistered with
+  authorization pending, no implementation, and every execution flag false.
 
 ## Next planned 20 loops: 25-44
 

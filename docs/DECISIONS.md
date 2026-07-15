@@ -2581,3 +2581,38 @@ claim is available.
 Evidence: `docs/LOOP_26_SHARED_VALIDATION_RESULT.md`,
 `registries/loop26_shared_validation_result.v0.json`, prediction-freeze commit
 `54bdca9`, and the consumed private scoring marker outside Git.
+
+## 0077 - Preregister Artifact-Only Failure Localization Before New Experiments
+
+Decision: classify the consumed Loop 26/31/33 discrepancy first from four exact
+committed aggregate artifacts. Freeze an ordered eight-class tree and treat
+`F5` model-fit/output-distribution instability as the leading observed
+phenotype because the primary checkpoint is blank-dominant and every fixed
+prefix has substantial three-seed blank-fraction dispersion.
+
+Interpretation decision: do not promote `F5` into a causal explanation. The
+public artifacts lack loss and gradient trajectories, train-only decoding,
+input-to-target length ratios, signal-quality summaries, timing residuals, and
+paired causal/offline representations. CTC behavior, weak signal, preprocessing,
+temporal alignment, and their interactions remain unresolved.
+
+Execution decision: prepare only a post-outcome artifact-only contract. A
+future Stage A may verify four committed JSON hashes, reproduce aggregate
+arithmetic, apply the frozen tree, and emit one target-free JSON report under
+one thread, 30 seconds, 256 MiB RSS, and 1 MiB output. Implementation and
+execution remain unauthorized until a separate request binds a remotely green
+contract commit.
+
+Access decision: this planning pass read no source cache, ignored derivative,
+checkpoint, private prediction, target bundle, source-test row, session 2, S7,
+S20, S25, raw FIF/MAT, stream, device, or hardware payload. It ran no model,
+training, scoring, download, or network operation.
+
+Claim boundary: the leading evidence is an unstable output phenotype, not a
+proven failure mechanism. It establishes no neural advantage, sensor-signal
+dependence, brain-specific origin, decoding utility, transfer, real-time
+behavior, EEG result, portable/home hardware result, or clinical result.
+
+Evidence: `docs/LOOP_48_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop48_failure_localization_contract.v0.json`, and
+`tests/test_loop48_failure_localization_contract.py`.

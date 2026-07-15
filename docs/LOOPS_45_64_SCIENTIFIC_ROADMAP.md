@@ -95,10 +95,16 @@ sensor-signal dependence, not absolute brain origin.
 
 ### Loop 48 - Negative-Result Failure Localization
 
-If Loop 46 or 47 fails, classify the failure using target-blind evidence:
-identity, causal preprocessing, signal quality, temporal resolution, fit,
-blank dominance, or prior strength. Do not use validation targets to select a
-larger architecture.
+**Status: preregistered; authorization pending.** The post-outcome artifact-only
+contract freezes eight ordered classes, 30 refusals, four exact committed JSON
+inputs, and one bounded Stage A. The leading observed phenotype is `F5`:
+seed-sensitive output-distribution instability with a blank-dominant primary
+checkpoint. That is not a proven root cause. The contract is not implemented
+or executed, and no train-array diagnostic exists.
+
+Future Stage A may only verify hashes, reproduce aggregate blank/CER summaries,
+apply the ordered tree, and emit one target-free aggregate report. Do not use
+validation targets to select a seed, threshold, loss, or larger architecture.
 
 **Gate:** one evidence-backed failure class or an explicit unresolved set.
 
@@ -263,8 +269,9 @@ the machine registry.
 ## Authorization Boundary
 
 This document is a research roadmap. Loop 45 is complete at its target-free
-mechanics boundary; Loops 46/47 are consumed and parked; Loops 48-64 are `Not
-Started`. Every current
+mechanics boundary; Loops 46/47 are consumed and parked; Loop 48 is
+preregistered with authorization pending; and Loops 49-64 are `Not Started`.
+Every current
 `execution_authorized` flag and every global authorization field is false. The
 roadmap does not authorize a Loop 45 rerun, Loop 46/47 rerun, Loop 48, any real-data read or
 download, training, target opening, S25 access, EEG acquisition, stream,

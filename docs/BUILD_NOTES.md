@@ -3636,3 +3636,51 @@ brain-specific origin, transfer, real-time, portable-hardware, or clinical resul
   baseline; and 701 dependency-light tests with 142 expected optional skips.
   Final static, CLI, workbook, and secret-scan gates passed. Closeout commit
   `f407ffb` passed push CI `29428087084` and PR CI `29428091698`.
+
+## 2026-07-15 - Loop 48 Artifact-Only Failure Localization Preregistration
+
+- Audited only four committed aggregate JSON artifacts from the consumed
+  Loop 26/31/33 result. No cache, derivative, checkpoint, private prediction,
+  target bundle, raw FIF/MAT, source-test row, session 2, S7, S20, or S25
+  payload was read.
+- Reproduced the public failure signature: primary blank fraction `0.993477`,
+  primary macro sentence CER `0.938177` versus prior `0.751235`, all-condition
+  blank range `0.997146`, all six prefix groups above `0.25` three-seed blank
+  dispersion, and all three size-55 seeds worse than the no-signal prior.
+- Registered `F5` model-fit/output-distribution instability as the leading
+  observable phenotype, not a proven root cause. The contract records the
+  missing optimization, CTC-feasibility, train-only decoding, signal-quality,
+  timing, and representation-comparison evidence instead of guessing.
+- Frozen eight ordered failure classes, 17 unavailable evidence fields, 30
+  refusals, four exact artifact identities, and one future artifact-only Stage
+  A capped at one thread, 30 seconds, 256 MiB RSS, and 1 MiB output.
+- Kept every authorization flag false. No Loop 48 implementation, generated
+  diagnostic report, model run, training run, target read, protected data read,
+  download, network call, stream, device, or hardware operation occurred.
+- Updated and visually verified the ten-sheet tracker using the bundled
+  spreadsheet runtime. The workbook grew from 115,442 to 116,124 bytes and is
+  SHA-256 `3f5a2d70ff654b0eb56fc04cbed3153139816b4681b8d164a8f6292d6a427753`;
+  all ten sheets rendered, the formula-error scan found zero matches, and ZIP
+  integrity passed. The full render/export took 17.42 seconds and briefly
+  reached 2,352,807,936-byte process RSS, so no further full render was used.
+  The adjacent user-owned sidecar remained untracked and byte-identical at
+  SHA-256 `b96bbea77ec93e59c0db7c4bcaeb4a9182f1f7cc7039d13fb223b65e0005beb6`.
+- Local acceptance passes 25 focused Loop 48/roadmap tests in 0.009 seconds;
+  762 fully provisioned tests with three expected skips in 24.742 seconds and
+  624,001,024-byte process maximum RSS, versus the 748/3 pre-change baseline;
+  and 715 dependency-light tests with 142 expected optional skips in 1.240
+  seconds and 118,374,400-byte process maximum RSS, versus the 701/142
+  baseline. Ruff lint, changed-test formatting, compileall, every registry
+  JSON, CLI help, `git diff --check`, workbook render/formula/ZIP checks, and
+  the contract hash binding pass. An accidental Apple Python 3.9 invocation
+  failed collection because it lacked `PYTHONPATH`, `tomllib`, and modern type
+  syntax; the supported Python 3.13 dependency-light command passed unchanged.
+
+Engineering capability proposed: one exact artifact-only discrepancy tree can
+make the consumed negative result mechanically classifiable without reopening
+protected data.
+
+Scientific claim not established: the planning result does not prove why the
+model failed or establish neural advantage, signal dependence, decoding,
+generalization, real-time behavior, EEG performance, portable/home hardware,
+or clinical utility.

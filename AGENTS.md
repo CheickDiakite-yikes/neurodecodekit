@@ -132,9 +132,17 @@ resource gates passed. Source test and session 2 remained closed. Loops 26,
 31, 33 and scientific Loops 46/47 are parked; no rerun, post-target tuning, or
 larger-model escalation is authorized.
 
-The next numbered work order is Loop 48 artifact-first failure localization.
-Do not implement it or read train arrays, protected cache members, or targets
-without its own exact scope and separate authorization.
+Loop 48 artifact-first failure-localization research and its post-outcome
+diagnostic contract are now prepared in
+`docs/LOOP_48_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop48_failure_localization_contract.v0.json`. The leading
+artifact-level phenotype is `F5`: seed-sensitive output-distribution
+instability with a `0.993477` blank-dominant primary checkpoint. This is not a
+proven root cause. The contract remains unimplemented and unauthorized; every
+authorization field is false. Do not prepare an execution decision until this
+contract is committed, pushed, tested, and remotely green. Do not read train
+arrays, protected cache members, targets, ignored outputs, checkpoints, or
+private predictions from this planning boundary.
 
 Loop 27 planning research is complete at green commit `b3d61b6`, but no
 preregistration or acquisition request exists:
@@ -478,11 +486,11 @@ The next research tranche is frozen in
 `docs/LOOPS_45_64_SCIENTIFIC_ROADMAP.md` and
 `registries/next_scientific_loops.v0.json`. It contains exact loop IDs 45-64 in
 five phases of four. Loop 45 is complete at its target-free mechanics boundary;
-Loops 46/47 are consumed and parked after the failed shared S21 event; Loops
-48-64 are `Not Started`, every current execution flag is false, and every
-global authorization field is false. The next scientific work order is Loop 48
-artifact-first failure localization. Do not start it, a new development person,
-or any S25 path from a broad continuation request.
+Loops 46/47 are consumed and parked after the failed shared S21 event. Loop 48
+is preregistered at an artifact-only post-outcome boundary with authorization
+pending; Loops 49-64 are `Not Started`, every current execution flag is false,
+and every global authorization field is false. Do not execute Loop 48, start a
+new development person, or open any S25 path from a broad continuation request.
 
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
@@ -709,7 +717,8 @@ authorization boundary.
   five phases of four, 20 false execution flags, nine false global
   authorization fields, ten source bindings, and ten cross-loop kill branches.
   S21 session-1 validation, session 2, and S7 remain consumed; S25 remains
-  unopened and final-only. Loops 46/47 are parked and Loop 48 is `Not Started`.
+  unopened and final-only. Loops 46/47 are parked and Loop 48 is preregistered
+  artifact-only with authorization pending and no implementation.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed
