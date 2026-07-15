@@ -18,16 +18,14 @@
    `docs/LOOP_26_AUTHORIZATION_DECISION.md`, and
    `docs/LOOP_26_SHARED_VALIDATION_IMPLEMENTATION.md` to audit the green shared
    design, one-time authorization, implementation, and target-firewall order.
-   Then read `docs/LOOP_48_PRIMARY_SOURCE_RESEARCH.md` and
-   `registries/loop48_failure_localization_contract.v0.json` for the
-   post-outcome artifact-only failure tree. Its leading `F5` phenotype is
-   output-distribution instability, not a proven root cause; implementation
-   and execution remain unauthorized. Review
-   `docs/LOOP_48_AUTHORIZATION_PACKET.md` and
-   `registries/loop48_authorization_request.v0.json` for the exact next
-   decision. Request/portfolio commit `0ffdf47` passed push CI `29433294092`
-   and PR CI `29433297546`; preparing and qualifying the request still did not
-   authorize Stage A.
+   Then read `docs/LOOP_48_FAILURE_LOCALIZATION_RESULT.md` and
+   `registries/loop48_failure_localization_result.v0.json` for the consumed
+   artifact-only result. One Stage A execution verified four committed JSON
+   artifacts totaling 155,545 bytes and selected descriptive `F5`
+   output-distribution instability in `0.016568875` seconds at 23,429,120-byte
+   peak RSS. This is not a proven root cause and no rerun is authorized. Read
+   `docs/LOOP_48_PRIMARY_SOURCE_RESEARCH.md`, the contract, request, and
+   authorization decision only to audit the frozen pre-execution sequence.
    Read `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md` as the immutable
    five-hypothesis starting point, then read
    `docs/LOOP_48_HYPOTHESIS_DISCRIMINATION_RESEARCH.md` and
@@ -106,8 +104,8 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 
 Tracker scope: the spreadsheet's `20` KPI is the size of the original roadmap,
 not the current loop number. Its dashboard now separately reports **Loops
-26/31/33 consumed and parked; Loop 48 artifact-only preregistered with
-authorization pending**, and its
+26/31/33 consumed and parked; Loop 48 artifact-only Stage A complete with F5
+descriptive phenotype and no rerun**, and its
 ninth sheet contains the separate **Loops 25-44 queue**. Loop 25 passed once
 at its target-free mechanics boundary and now has `execution_authorized: false`
 because no rerun is open; Loop 26 was preregistered at `881145d`, authorized at
@@ -469,11 +467,11 @@ Truth, Unseen-Person Verdict, Accessible EEG Evidence, Causal Local Use, and
 Independent Evidence And Release. Loop 45 is complete at its target-free
 mechanics boundary. Loops 46/47 consumed one registered S21 validation event
 and are parked after the candidate lost to the no-signal prior; no rerun is
-authorized. Loop 48 now has a post-outcome artifact-only diagnostic contract
-that records `F5` output-distribution instability as the leading phenotype.
-The contract is not implemented or executed and every authorization field
-remains false. Its request/portfolio commit `0ffdf47` is remotely green, so
-the exact Stage A sentence or an explicit hold is the next decision. The
+authorized. Loop 48 completed one post-outcome artifact-only Stage A that
+selected `F5` output-distribution instability as the descriptive phenotype.
+The result is consumed, root cause remains unresolved, and no rerun is
+authorized. Authorization commit `5bae880` and implementation commit
+`ca21539` were each pushed and remotely green before the one execution. The
 additive H1-H6 discrimination design changes no authorization and caps a future
 Stage B result at bounded sensor dependence under frozen margin and uncertainty
 gates; brain-specific origin remains a separate Loop 35 question. Commit

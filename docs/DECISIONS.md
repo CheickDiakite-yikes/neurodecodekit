@@ -2707,3 +2707,39 @@ stream, device, or hardware operation occurred or is authorized.
 Evidence: `docs/LOOP_48_HYPOTHESIS_DISCRIMINATION_RESEARCH.md`,
 `registries/loop48_hypothesis_discrimination.v0.json`, and
 `tests/test_loop48_hypothesis_discrimination.py`.
+
+## 0081 - Consume One Artifact-Only Failure-Localization Pass
+
+Authorization decision: bind the user's exact Stage A sentence to the frozen
+Loop 48 contract in a separate decision record. Authorization commit `5bae880`
+passed push CI `29442914090` and PR CI `29442916230` before implementation.
+Implementation commit `ca21539` then passed push CI `29444008688` and PR CI
+`29444012075` before any registered input opened.
+
+Execution decision: run the dependency-light analyzer exactly once over the
+four named committed aggregate JSON artifacts. Verify all four SHA-256
+identities, reproduce the frozen blank/CER summaries and six seed-dispersion
+checks, apply the ordered eight-class tree, and emit one aggregate report. The
+run used one thread and one worker, took `0.016568875` seconds internally,
+peaked at 23,429,120 bytes RSS, and wrote 10,643 bytes. Every resource gate
+passed.
+
+Scientific decision: retain `F5` as a descriptive output-distribution
+instability phenotype because the primary condition was `0.993477` blank, all
+six prefix groups crossed the frozen `0.25` dispersion threshold, and all three
+size-55 seeds were worse than the train-only prior. Do not call `F5` a root
+cause. Temporal feasibility, signal quality, preprocessing, representation,
+prior dominance, and interactions remain unresolved.
+
+Firewall decision: the pass read no ignored output, cache member, array,
+target, checkpoint, private prediction, source-test or session-2 payload, S7,
+S20, S25, raw FIF/MAT, stream, device, or hardware source. It ran no model,
+training, parameter update, selection, download, language model, or RW3
+operation. The result is consumed; no rerun, tuning, architecture escalation,
+or scientific claim upgrade is authorized.
+
+Evidence: `docs/LOOP_48_AUTHORIZATION_DECISION.md`,
+`registries/loop48_authorization_decision.v0.json`,
+`docs/LOOP_48_FAILURE_LOCALIZATION_RESULT.md`,
+`registries/loop48_failure_localization_result.v0.json`, and
+`tests/test_loop48_failure_localization_result.py`.

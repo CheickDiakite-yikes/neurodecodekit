@@ -95,16 +95,14 @@ sensor-signal dependence, not absolute brain origin.
 
 ### Loop 48 - Negative-Result Failure Localization
 
-**Status: preregistered; authorization pending.** The post-outcome artifact-only
-contract freezes eight ordered classes, 30 refusals, four exact committed JSON
-inputs, and one bounded Stage A. The leading observed phenotype is `F5`:
-seed-sensitive output-distribution instability with a blank-dominant primary
-checkpoint. That is not a proven root cause. The contract is not implemented
-or executed, and no train-array diagnostic exists. Its separate exact Stage A
-authorization request is prepared but every authorization field remains false.
-The request and hypothesis-portfolio milestone is remotely green at commit
-`0ffdf47` (push CI `29433294092`; PR CI `29433297546`), which qualifies the
-decision surface but does not authorize Stage A or Stage B.
+**Status: complete at the consumed artifact-only Stage A boundary.** One
+hash-bound execution read four exact committed aggregate JSON artifacts totaling
+155,545 bytes and selected descriptive `F5` seed-sensitive output-distribution
+instability. It ran in `0.016568875` seconds, peaked at 23,429,120 bytes RSS,
+and emitted 10,643 bytes. That is not a proven root cause. No train-array
+diagnostic exists, and no rerun is authorized. Authorization commit `5bae880`
+and implementation commit `ca21539` were each pushed and remotely green before
+the single execution.
 
 Future Stage B design starts from the immutable five-hypothesis portfolio and
 adds a primary-source-informed sixth hypothesis for data quantity/sentence
@@ -121,9 +119,10 @@ inherit Stage A scope. Additive design commit `33a14d8` passed push CI
 `29436731383` and PR CI `29436735374`; remote qualification changes no
 authorization field.
 
-Future Stage A may only verify hashes, reproduce aggregate blank/CER summaries,
-apply the ordered tree, and emit one target-free aggregate report. Do not use
-validation targets to select a seed, threshold, loss, or larger architecture.
+The consumed Stage A verified hashes, reproduced aggregate blank/CER summaries,
+applied the ordered tree, and emitted one target-free aggregate report. Do not
+rerun it or use validation targets to select a seed, threshold, loss, or larger
+architecture.
 
 **Gate:** one evidence-backed failure class or an explicit unresolved set.
 
@@ -288,12 +287,12 @@ the machine registry.
 ## Authorization Boundary
 
 This document is a research roadmap. Loop 45 is complete at its target-free
-mechanics boundary; Loops 46/47 are consumed and parked; Loop 48 is
-preregistered with authorization pending, while its H1-H6 discrimination map
-is additive design research only; and Loops 49-64 are `Not Started`.
+mechanics boundary; Loops 46/47 are consumed and parked; Loop 48 is complete at
+its consumed artifact-only `F5` boundary with no rerun, while its H1-H6
+discrimination map is additive design research only; and Loops 49-64 are `Not Started`.
 Every current
 `execution_authorized` flag and every global authorization field is false. The
-roadmap does not authorize a Loop 45 rerun, Loop 46/47 rerun, Loop 48, any real-data read or
+roadmap does not authorize a Loop 45 rerun, Loop 46/47 rerun, Loop 48 rerun, any real-data read or
 download, training, target opening, S25 access, EEG acquisition, stream,
 device, participant contact, home recording, external outreach, tag, release,
 archive, DOI, or scientific claim.

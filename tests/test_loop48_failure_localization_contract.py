@@ -171,17 +171,13 @@ class Loop48FailureLocalizationContractTests(unittest.TestCase):
         self.assertIn("artifact-only", claim["maximum_future_stage_a_claim"])
         self.assertIn("No root cause", claim["scientific_claim_not_established"])
 
-    def test_living_status_docs_preserve_the_preregistered_unexecuted_boundary(self):
+    def test_living_status_docs_preserve_the_contract_and_claim_boundary(self):
         for path in PUBLIC_STATUS_PATHS:
             content = path.read_text(encoding="utf-8")
             self.assertIn("Loop 48", content, path)
-            self.assertTrue(
-                "preregister" in content.lower() or "authorization pending" in content.lower(),
-                path,
-            )
         combined = "\n".join(path.read_text(encoding="utf-8") for path in PUBLIC_STATUS_PATHS)
         self.assertIn("not a proven root cause", combined.lower())
-        self.assertIn("execution remains unauthorized", combined.lower())
+        self.assertIn("no rerun", combined.lower())
 
     def test_human_research_note_explains_the_exact_boundary(self):
         for phrase in (
@@ -197,10 +193,11 @@ class Loop48FailureLocalizationContractTests(unittest.TestCase):
         ):
             self.assertIn(phrase, self.research)
 
-    def test_scientific_roadmap_still_keeps_loop48_unexecuted(self):
+    def test_scientific_roadmap_marks_stage_a_consumed_without_a_rerun(self):
         row = next(row for row in self.roadmap["loops"] if row["loop_id"] == 48)
         self.assertFalse(row["execution_authorized"])
-        self.assertIn(row["status"], {"Not Started", "Preregistered; Authorization Pending"})
+        self.assertEqual(row["status"], "Complete; Artifact-Only F5 Phenotype")
+        self.assertIn("no rerun", row["authorization_boundary"])
 
     def test_registration_snapshot_records_no_runtime_or_authorization(self):
         self.assertEqual(self.contract["status"], "preregistered_authorization_pending")

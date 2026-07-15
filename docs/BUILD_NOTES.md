@@ -3804,3 +3804,50 @@ Scientific claim not established: no hypothesis was tested or confirmed, no
 new neural evidence was created, and neural advantage, useful decoding,
 brain-specific origin, generalization, real-time behavior, EEG portability,
 home use, and clinical utility remain unestablished.
+
+## 2026-07-15 - Loop 48 Artifact-Only Stage A Result
+
+- Recorded the user's exact bounded permission in a separate authorization-only
+  milestone. Commit `5bae880` passed push CI `29442914090` and PR CI
+  `29442916230` before implementation began.
+- Added the dependency-light Loop 48 analyzer, strict path and hash checks,
+  ordered eight-class decision tree, bounded JSON writer, two CLI commands, and
+  15 synthetic-only tests. Implementation commit `ca21539` passed push CI
+  `29444008688` and PR CI `29444012075` before registered inputs opened.
+- Executed Stage A exactly once. Four committed aggregate JSON artifacts
+  totaling 155,545 bytes passed SHA-256 verification. The run read no ignored
+  Loop 26 output, arrays, targets, checkpoints, private predictions, source
+  test, session 2, S7, S20, S25, FIF, or MAT payloads.
+- Reproduced the primary blank fraction `0.9934773746432939`, all six
+  fixed-prefix blank ranges, and all three size-55 seeds losing to the
+  train-only prior. The ordered tree selected descriptive `F5`
+  output-distribution instability; root cause remains unresolved.
+- Internal runtime was `0.016568875` seconds, external wall time was 0.38
+  seconds, internal/external peak RSS was 23,429,120/23,560,192 bytes, and the
+  report was 10,643 bytes. Model inference, training, parameter updates,
+  downloads, network, stream, device, hardware, and scientific claim upgrades
+  were all zero.
+- Bound the result to SHA-256
+  `dbfb4c7cc6163ff31fa216c1b33e7510a87b0b843ef714754037d37275924659`
+  and marked Stage A consumed with no rerun or post-result tuning authorized.
+- Updated the ten-sheet tracker dashboard, roadmap summaries, scientific Loop
+  48 row, and decision `48-R5`. The 117,187-byte workbook has SHA-256
+  `7e6424cd5f69d29f78ea7335d1cf277d293eeac4071668991f66d37d7679d4c3`;
+  all ten post-edit renders, focused crops, formula scan, and ZIP integrity
+  passed. The final artifact-tool pass took 11.04 seconds and peaked at
+  1,572,667,392 bytes RSS, so future updates should avoid unnecessary full
+  workbook imports. The adjacent user-owned inspection sidecar was not read,
+  modified, staged, or committed.
+- Local acceptance passes 86 focused Loop 48/roadmap tests, 776
+  dependency-light tests with 142 expected skips, and 823 optional-neuro tests
+  with 3 expected skips. The full runs took 2.338/34.585 seconds and peaked at
+  104,415,232/607,223,808 bytes RSS. Ruff lint and changed-file formatting pass.
+  Repository-wide formatting still reports 106 historical files, which this
+  closeout deliberately leaves untouched.
+
+Engineering capability added: one hash-bound aggregate analyzer can reproduce
+the registered failure phenotype under strict resource and access limits.
+
+Scientific claim not established: this result does not identify a causal root
+cause or establish neural advantage, decoding utility, generalization,
+real-time behavior, EEG portability, device performance, or clinical value.

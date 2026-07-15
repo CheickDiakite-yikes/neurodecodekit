@@ -36,6 +36,9 @@ requests, and these files:
 - `registries/loop48_failure_localization_contract.v0.json`
 - `docs/LOOP_48_AUTHORIZATION_PACKET.md`
 - `registries/loop48_authorization_request.v0.json`
+- `docs/LOOP_48_AUTHORIZATION_DECISION.md`
+- `docs/LOOP_48_FAILURE_LOCALIZATION_RESULT.md`
+- `registries/loop48_failure_localization_result.v0.json`
 - `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md`
 - `registries/loop48_hypothesis_portfolio.v0.json`
 - `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md`
@@ -287,20 +290,15 @@ negative result. Review
 `docs/LOOP_26_SHARED_VALIDATION_IMPLEMENTATION.md`, and the Loop 26 v0
 registries. Do not rerun any implementation stage, reopen validation targets,
 tune after targets, increase the model, or touch source test or session 2.
-Loop 48 artifact-only failure localization is preregistered in
-`docs/LOOP_48_PRIMARY_SOURCE_RESEARCH.md` and
-`registries/loop48_failure_localization_contract.v0.json`. The leading `F5`
-output-instability phenotype is descriptive and not a proven root cause. The
-contract remains unimplemented and every authorization field is false. Commit,
-push, test, and remotely qualify the exact contract before preparing a separate
-Stage A authorization packet. That qualification is now green at `83309bf`,
-and the still-false request is in `docs/LOOP_48_AUTHORIZATION_PACKET.md` and
-`registries/loop48_authorization_request.v0.json`. Request/portfolio commit
-`0ffdf47` passed push CI `29433294092` and PR CI `29433297546`, but
-qualification is not authorization. Any implementation,
-train-array/protected read, target, checkpoint, private prediction, model run,
-or tuning remains closed until the exact sentence receives its own green
-decision record.
+Loop 48 artifact-only failure localization is complete at its one-shot Stage A
+boundary. Read `docs/LOOP_48_FAILURE_LOCALIZATION_RESULT.md` and
+`registries/loop48_failure_localization_result.v0.json`: four exact committed
+aggregate JSON artifacts totaling 155,545 bytes selected descriptive `F5`
+output-instability in `0.016568875` seconds at 23,429,120-byte peak RSS. It is
+not a proven root cause. Authorization commit `5bae880` and implementation
+commit `ca21539` were remotely green before execution. The result is consumed;
+do not rerun, tune thresholds or seeds, read ignored/protected payloads, reopen
+targets, or increase the model.
 The future train-only portfolio in
 `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md` and
 `registries/loop48_hypothesis_portfolio.v0.json` is design research only. It

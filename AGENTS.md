@@ -132,23 +132,19 @@ resource gates passed. Source test and session 2 remained closed. Loops 26,
 31, 33 and scientific Loops 46/47 are parked; no rerun, post-target tuning, or
 larger-model escalation is authorized.
 
-Loop 48 artifact-first failure-localization research and its post-outcome
-diagnostic contract are now prepared in
-`docs/LOOP_48_PRIMARY_SOURCE_RESEARCH.md` and
-`registries/loop48_failure_localization_contract.v0.json`. The leading
-artifact-level phenotype is `F5`: seed-sensitive output-distribution
-instability with a `0.993477` blank-dominant primary checkpoint. This is not a
-proven root cause. The contract remains unimplemented and unauthorized; every
-authorization field is false. Green contract commit `83309bf` passed push CI
-`29431318268` and PR CI `29431347801`; a separate request is now prepared in
-`docs/LOOP_48_AUTHORIZATION_PACKET.md` and
-`registries/loop48_authorization_request.v0.json`. Request/portfolio commit
-`0ffdf47` passed push CI `29433294092` and PR CI `29433297546`; this qualifies
-the request but does not authorize it. Do not implement or execute Stage A
-without the exact sentence in that packet and a separately committed,
-pushed, remotely green decision record. Do not read train arrays, protected
-cache members, targets, ignored outputs, checkpoints, or private predictions
-from this planning boundary.
+Loop 48 artifact-first failure localization is complete at its one-shot
+artifact-only Stage A boundary. The exact decision was recorded at green commit
+`5bae880` before implementation commit `ca21539`; both push and PR CI runs were
+green before the four registered artifacts opened once. The consumed result is
+`registries/loop48_failure_localization_result.v0.json` with SHA-256
+`dbfb4c7cc6163ff31fa216c1b33e7510a87b0b843ef714754037d37275924659`.
+The frozen tree selected descriptive `F5`: seed-sensitive output-distribution
+instability with a `0.993477` blank-dominant primary checkpoint. Runtime was
+`0.016568875` seconds, peak RSS was 23,429,120 bytes, and output was 10,643
+bytes. This is not a proven root cause. No ignored output, cache member, array,
+target, checkpoint, private prediction, model, training, network, stream,
+device, or hardware payload was accessed or run. Stage A is consumed; do not
+rerun it, tune from it, or promote its phenotype into a causal explanation.
 
 Future train-only Loop 48 thinking is now separated into
 `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md` and
@@ -161,8 +157,8 @@ the orthogonal `T1` peripheral/task-locked shortcut threat. It compares six
 coexisting hypotheses from shared evidence with sequential one-thread compute.
 It is design research only: exact splits, thresholds, model inventory, runtime,
 RSS, and output caps are unfrozen, every Stage B execution field is false, and
-Stage B cannot establish brain-specific origin. A future Stage A authorization
-would not authorize this portfolio or additive design. Additive design commit
+Stage B cannot establish brain-specific origin. The consumed Stage A decision
+does not authorize this portfolio or additive design. Additive design commit
 `33a14d8` passed push CI `29436731383` and PR CI `29436735374`; Base Python ran
 743 tests with 142 expected skips, Optional Neuro Readers ran 775 with 22
 expected skips, and qualification changed no authorization.
@@ -510,12 +506,12 @@ The next research tranche is frozen in
 `registries/next_scientific_loops.v0.json`. It contains exact loop IDs 45-64 in
 five phases of four. Loop 45 is complete at its target-free mechanics boundary;
 Loops 46/47 are consumed and parked after the failed shared S21 event. Loop 48
-is preregistered at an artifact-only post-outcome boundary with authorization
-pending. Its additive six-hypothesis discrimination research is design-only,
+is complete at its consumed artifact-only `F5` boundary with no rerun. Its
+additive six-hypothesis discrimination research is design-only,
 unpreregistered, remotely green at commit `33a14d8`, and unauthorized. Loops
-49-64 are `Not Started`, every current execution flag is false,
-and every global authorization field is false. Do not execute Loop 48, start a
-new development person, or open any S25 path from a broad continuation request.
+49-64 are `Not Started`, every current execution flag is false, and every
+global authorization field is false. Do not rerun Loop 48, start a new
+development person, or open any S25 path from a broad continuation request.
 
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
@@ -742,13 +738,12 @@ authorization boundary.
   five phases of four, 20 false execution flags, nine false global
   authorization fields, ten source bindings, and ten cross-loop kill branches.
   S21 session-1 validation, session 2, and S7 remain consumed; S25 remains
-  unopened and final-only. Loops 46/47 are parked and Loop 48 is preregistered
-  artifact-only with authorization pending and no implementation. Its
-  request/portfolio commit `0ffdf47` passed push CI `29433294092` and PR CI
-  `29433297546`; the additive H1-H6/T1 discrimination map also leaves every
-  Stage A and Stage B authorization false and every protected/model counter at
-  zero. Its commit `33a14d8` passed push CI `29436731383` and PR CI
-  `29436735374`.
+  unopened and final-only. Loops 46/47 are parked and Loop 48 completed one
+  artifact-only Stage A at descriptive `F5`; its result is consumed, root cause
+  remains unresolved, and no rerun is authorized. The additive H1-H6/T1
+  discrimination map still leaves every Stage B authorization false and every
+  protected/model counter at zero. Its commit `33a14d8` passed push CI
+  `29436731383` and PR CI `29436735374`.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed

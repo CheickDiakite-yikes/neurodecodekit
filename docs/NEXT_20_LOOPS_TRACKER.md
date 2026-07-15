@@ -280,9 +280,9 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   authorize no code. Loop 24 is now parked and cannot authorize RW3, data,
   training, or hardware. Seeds 2203, 2303, 2353, and 2401 stay consumed; seed
   2402 remains unopened. Loop 25 is consumed at its exact mechanics boundary;
-  Loop 48 artifact-only failure localization is now preregistered with
-  an exact Stage A authorization request prepared, no implementation, and every
-  execution flag false. The immutable five-hypothesis train-only portfolio now
+  Loop 48 artifact-only failure localization completed one exact Stage A and
+  selected descriptive `F5`; the 10,643-byte result is consumed and no rerun is
+  authorized. The immutable five-hypothesis train-only portfolio now
   has an additive six-hypothesis discrimination map that separates the fixed
   recipe from data quantity/diversity and routes shortcut risk to Loop 35; both
   remain design-only and unauthorized.
@@ -606,9 +606,9 @@ Independent Evidence And Release.
 
 Loop 45 is complete at its target-free mechanics boundary. Loops 46 and 47 are
 parked after the one consumed S21 event failed the candidate-versus-prior and
-full attribution conjunctions. Loop 48 is preregistered with authorization
-pending; its Stage A request is remotely green, while its five-hypothesis Stage
-B portfolio and additive H1-H6/T1 discrimination map remain design-only. The
+full attribution conjunctions. Loop 48 completed one artifact-only Stage A at
+descriptive `F5`; its result is consumed with no rerun, while its five-hypothesis
+Stage B portfolio and additive H1-H6/T1 discrimination map remain design-only. The
 additive map is remotely green at commit `33a14d8` with push CI `29436731383`
 and PR CI `29436735374`, but no authorization changed. Loops
 49-64 are `Not Started`. All execution
