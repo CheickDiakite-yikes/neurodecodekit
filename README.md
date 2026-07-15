@@ -86,13 +86,17 @@ binds a deterministic 44-fit/11-check source-train split, exact model/control
 inventory, prediction-before-target order, paired statistics, resource caps,
 and stop rules. All 55 rows were used by earlier fits, so the new check split
 is prospective only inside this execution; Stage B can reach at most E2
-diagnostic evidence. No implementation, protected read, training, inference,
-check-target delivery, scoring, or run is authorized. Preregistration commit
+diagnostic evidence. The maintainer's exact one-run authorization is recorded
+in `docs/LOOP_48_STAGE_B_AUTHORIZATION_DECISION.md` and
+`registries/loop48_stage_b_authorization_decision.v0.json`, effective only after
+that decision commit is remotely green. No implementation, protected read,
+training, inference, check-target delivery, scoring, or run exists yet.
+Preregistration commit
 `0ee0ab7` passed push CI `29452286159` and PR CI `29452288520`; the exact
 hash-bound decision surface is now prepared in
 `docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md` and
 `registries/loop48_stage_b_authorization_request.v0.json` with every
-authorization flag false.
+authorization flag false as an immutable pre-decision snapshot.
 
 Loop 49 planning research now selects S24 session 2 block 2 as the preferred
 permanently development-only participant from pinned public metadata. The exact
@@ -160,7 +164,7 @@ negative result and S25 is never repurposed for calibration.
 | Causal preprocessing v1 | 4 anti-alias and 9 total SOS sections; 65,537 response points; 23/23 alias probes; 24/24 target-free items; 168 schedules; 240 resumes; 72 mutation controls; 0 protected reads | completed target-free synthetic mechanics | Establishes one strict, resumable 1000-to-100 Hz causal path with zero right context while leaving retained neural information and decoding performance unproven |
 | Loop 26/31/33 shared validation gate | 55/6/5 source split; 2,908/2,884-parameter models; 21 fits; 24 target-blind inferences; six priors; 31 frozen prediction sets; one post-freeze six-target score; candidate/prior macro CER `0.938177/0.751235` | consumed negative result; all three gates parked; no rerun | Proves the target firewall and bounded research runtime work while showing this exact predictive design does not beat an honest no-signal baseline |
 | Loop 48 artifact-only failure localization | 4 exact committed JSON inputs; 155,545 input bytes; 18 blank fractions; 6 fixed-prefix ranges; `F5`; 0.016568875 sec; 23,429,120-byte peak RSS; 10,643 output bytes; 0 protected/model/training operations | consumed post-outcome descriptive result; no rerun | Reproduces the failure phenotype mechanically while keeping causal root cause, neural advantage, and every decoding or device claim explicitly unavailable |
-| Loop 48 Stage B preregistration | 44 fit / 11 check rows; prefixes `8,16,24,32,44`; seeds `4801-4803`; 20 fits; 35 target-blind inferences; 5 priors; 41 frozen sets; 2,048 exact sign assignments; 1 thread; 32 MiB cap | preregistered, unauthorized, zero protected reads | Converts six competing failure explanations into one falsifiable diagnostic while correcting the ceiling from E3 to E2 because the rows are not historically fresh |
+| Loop 48 Stage B preregistration | 44 fit / 11 check rows; prefixes `8,16,24,32,44`; seeds `4801-4803`; 20 fits; 35 target-blind inferences; 5 priors; 41 frozen sets; 2,048 exact sign assignments; 1 thread; 32 MiB cap | exact authorization recorded pending its remote-green gate; no implementation or protected read | Converts six competing failure explanations into one falsifiable diagnostic while correcting the ceiling from E3 to E2 because the rows are not historically fresh |
 | Loop 49 development-person boundary | 396 pinned metadata rows; S24 session 2 block 2; 2 exact files; 1,048,579,727 bytes; 293,597,553-byte cap margin; 16 future selection groups; 32 minimum fit groups; 25 false authorization fields | metadata research only; experiment `Not Started` | Creates a clean development-person path without consuming final-only S25, while keeping trial count, channels, geometry, targets, signal, models, and transfer claims closed |
 | Loop 50 multi-source research boundary | 6 primary sources; 5 S21 out-of-fold folds; 16 future S24 selection groups; 10 fixed conditions; 20 parameter-update runs; seeds `5001-5003`; 30 refusals; 31 false authorization fields | planning research only; experiment `Not Started` | Defines a text-leakage-resistant, participant-balanced, worst-person-gated development experiment while keeping S24/S25 payloads, model choice, training, scoring, and claims closed |
 | Loop 27 fresh-holdout boundary | 315 pinned MEG metadata entries; 23 strict single-FIF/log pairs; 16 eligible; S25 selected at 1,009,939,983 bytes; S23 excluded; 18 false authorization fields | metadata research only | Finds the smallest honest same-modality transfer candidate while keeping its local MAT payload, remote FIF, targets, and backups sealed |
@@ -1115,6 +1119,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/loop48_train_only_discrimination_contract.v0.json](registries/loop48_train_only_discrimination_contract.v0.json) | machine-readable 20-fit, 35-inference, 41-prediction Stage B contract with 25 refusals, zero protected activity, and every authorization false |
 | [docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md](docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md) | plain-language exact Stage B operation, control, access-order, storage, resource, and claim decision surface |
 | [registries/loop48_stage_b_authorization_request.v0.json](registries/loop48_stage_b_authorization_request.v0.json) | request bound to green preregistration commit `0ee0ab7` and both CI runs; no implementation, protected access, or execution is authorized |
+| [docs/LOOP_48_STAGE_B_AUTHORIZATION_DECISION.md](docs/LOOP_48_STAGE_B_AUTHORIZATION_DECISION.md) | exact one-run maintainer decision, ordered three-green-gate sequence, resource boundary, refusals, and E2 claim ceiling |
+| [registries/loop48_stage_b_authorization_decision.v0.json](registries/loop48_stage_b_authorization_decision.v0.json) | machine-readable Stage B authorization with exact counts, conditional target delivery, immutable request bindings, and zero pre-implementation counters |
 | [docs/LOOP_49_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_49_PRIMARY_SOURCE_RESEARCH.md) | S24 development-person metadata decision, clean-identity tradeoff, exact bytes/hashes, text-group split recommendation, access order, and claim ceiling |
 | [registries/loop49_research_boundary.v0.json](registries/loop49_research_boundary.v0.json) | machine-readable S24 selection, 25 false authorization fields, zero payload/model counters, `>=48` blocker, and permanent development-only role |
 | [docs/LOOP_50_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_50_PRIMARY_SOURCE_RESEARCH.md) | primary-source multi-person design, global text firewall, historical S21 out-of-fold protocol, S24 development gate, controls, resources, and claim ceiling |

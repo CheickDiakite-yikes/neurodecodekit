@@ -2946,3 +2946,30 @@ Evidence: `docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md`,
 `docs/RESEARCH_AUTONOMY_CHARTER_DECISION.md`,
 `registries/research_autonomy_charter_decision.v0.json`, and
 `tests/test_research_autonomy_charter_decision.py`.
+
+## 0088 - Authorize One Registered Loop 48 Stage B Execution
+
+Decision: record the maintainer's exact Loop 48 Stage B sentence in a separate
+authorization-only document and registry. Bind it to preregistration commit
+`0ee0ab7`, request commit `1de3fa3`, contract SHA-256
+`009e320ea4df17e9f6fa58f74053b2ab70cce73eb0a9eea3cefc5b7b14112a9a`,
+and request SHA-256
+`c23030f655fd662128dbc70f879a7a7a7d062f861ec279779b53852521d08c38`.
+
+Authorized scope: after this decision commit is remotely green, implement the
+synthetic-qualified bounded path and execute once over exactly 44 source-train
+fit rows plus 11 target-withheld source-train check inputs. Allow one cache
+hash pass, 20 parameter-update runs, 4,800 optimizer steps, 35 target-blind
+inferences, five train-only priors, 41 prediction sets, and one later delivery
+and scoring of the same 11 check targets only after a plaintext-free prediction
+freeze is committed, pushed, and remotely green.
+
+Refusal decision: keep validation, source test, session 2, S7/S20/S25, raw
+FIF/MAT, downloads, larger or additional models, restarts, language models,
+NeuroTokens, RW3, streams, devices, hardware, post-check tuning, claim promotion
+beyond E2, and reruns closed. All 55 rows were used historically, so the result
+cannot become independent validation or neural advantage.
+
+Evidence: `docs/LOOP_48_STAGE_B_AUTHORIZATION_DECISION.md`,
+`registries/loop48_stage_b_authorization_decision.v0.json`, and
+`tests/test_loop48_stage_b_authorization_decision.py`.

@@ -614,8 +614,9 @@ fits, 35 target-blind inferences, five priors, 41 frozen prediction sets, and
 reach at most E2 diagnostic evidence. The contract authorizes nothing and no
 protected read, implementation, training, inference, or check score occurred.
 Preregistration commit `0ee0ab7` and push/PR CI runs `29452286159` /
-`29452288520` are green. The exact packet and machine request are prepared, but
-all authorization remains false.
+`29452288520` are green. The exact one-run authorization is now separately
+recorded in `docs/LOOP_48_STAGE_B_AUTHORIZATION_DECISION.md` and becomes
+effective only after its own remote-green gate; no implementation exists yet.
 Loop 49 planning research is now complete while its experiment remains `Not
 Started`. Pinned public metadata selects S24 session 2 block 2 as the preferred
 permanently development-only MEG person: one FIF plus one protected MAT log,

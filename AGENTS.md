@@ -176,10 +176,12 @@ sign assignments. All 55 rows were used historically, so Stage B can reach at
 most E2 pipeline-discriminative evidence. Preregistration commit `0ee0ab7`
 passed push CI `29452286159` and PR CI `29452288520`. The separate exact request
 is prepared in `docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md` and
-`registries/loop48_stage_b_authorization_request.v0.json`. Every authorization
-field remains false; do not implement, read the cache, train, infer, freeze
-predictions, deliver check targets, or score from general continuation or the
-draft autonomy charter.
+`registries/loop48_stage_b_authorization_request.v0.json`. The exact maintainer
+decision is now recorded in `docs/LOOP_48_STAGE_B_AUTHORIZATION_DECISION.md` and
+`registries/loop48_stage_b_authorization_decision.v0.json`, effective only after
+that authorization-only commit is remotely green. No implementation, cache
+read, training, inference, prediction freeze, target delivery, or score exists
+yet. The immutable request remains false as the pre-decision snapshot.
 
 Loop 49 planning research is complete on the current branch while its
 experiment remains `Not Started`:

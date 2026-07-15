@@ -4124,3 +4124,40 @@ Scientific claim not established: this governance decision is not an
 experiment and establishes no neural advantage, decoding accuracy,
 sensor-signal dependence, brain-specific origin, generalization, real-time,
 EEG, device, assistive, diagnostic, or clinical result.
+
+## 2026-07-15 - Loop 48 Stage B Authorization Decision
+
+- Recorded the maintainer's exact one-run sentence in
+  `docs/LOOP_48_STAGE_B_AUTHORIZATION_DECISION.md` and
+  `registries/loop48_stage_b_authorization_decision.v0.json`, binding the green
+  preregistration, immutable request, exact hashes, operation counts, resources,
+  access order, and E2 ceiling.
+- Authorized the exact implementation and one registered execution only after
+  this authorization-only commit is remotely green. Protected input remains
+  closed during implementation and synthetic tests; the 11 check targets stay
+  sealed until a later plaintext-free prediction-freeze commit is remotely
+  green.
+- Kept validation, source test, session 2, S7/S20/S25, raw FIF/MAT, downloads,
+  larger or additional models, restarts, language models, NeuroTokens, RW3,
+  streams, devices, hardware, post-check tuning, claim promotion beyond E2, and
+  reruns closed.
+- Authorization-only counters remain zero. No protected path, cache member,
+  signal, target, derivative, model, training, inference, prediction, score,
+  download, stream, device, or hardware operation occurred.
+- Added nine decision invariants. The three new core artifacts total 27,098
+  bytes. Focused Stage B contract/request/decision plus charter acceptance
+  passes 44 tests in 0.007 seconds. The complete dependency-light suite passes
+  859 tests with 142 expected skips in 1.88 seconds at 117,407,744-byte maximum
+  RSS; the optional-neuro suite passes 891 tests with 22 expected skips in 10.36
+  seconds at 241,254,400-byte maximum RSS. Both are exactly nine tests above
+  the charter-decision baseline.
+
+Engineering capability authorized for testing: one exact, hash-bound,
+resource-bounded Stage B implementation and one registered train-only
+failure-discrimination execution may proceed through three ordered green gates.
+
+Scientific claim not established: this decision is not a result, and even a
+later clean Stage B run cannot establish independent validation, neural
+advantage, brain-specific origin, useful decoding, unseen-person
+generalization, causal preprocessing, real-time behavior, EEG or device
+performance, assistive value, diagnostic value, or clinical utility.

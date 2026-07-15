@@ -28,9 +28,12 @@
 > `0ee0ab7` passed push CI `29452286159` and PR CI `29452288520`. The separate
 > packet and machine request are prepared at
 > `docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md` and
-> `registries/loop48_stage_b_authorization_request.v0.json`. Every
-> authorization remains false; no protected read, implementation, model
-> operation, or score occurred.
+> `registries/loop48_stage_b_authorization_request.v0.json`. The exact
+> one-run decision is now recorded in
+> `docs/LOOP_48_STAGE_B_AUTHORIZATION_DECISION.md` and
+> `registries/loop48_stage_b_authorization_decision.v0.json`, effective only
+> after its authorization-only commit is remotely green. No implementation,
+> protected read, model operation, or score exists yet.
 > Loop 49 planning research now selects S24 session 2 block 2 as the preferred
 > permanently development-only MEG person from pinned public metadata. The
 > exact two-file bundle is `1,048,579,727` bytes; S24 avoids the S1/S18 alias
@@ -497,16 +500,17 @@ irreversible evidence, real-data, hardware, destructive, release, and claim
 actions still require a separate exact decision; no existing narrow contract
 is loosened.
 
-1. **Loop 48 - keep Stage A consumed and Stage B closed pending its exact
-   decision.** Read `docs/LOOP_48_FAILURE_LOCALIZATION_RESULT.md` for the
+1. **Loop 48 - qualify the exact Stage B authorization before implementation.**
+   Read `docs/LOOP_48_FAILURE_LOCALIZATION_RESULT.md` for the
    descriptive `F5` Stage A result; do not rerun or tune it. Stage B is now
    frozen in `docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md` and
    `registries/loop48_train_only_discrimination_contract.v0.json`: 44 fit rows,
    11 check rows, 20 fits, 35 target-blind inferences, five priors, 41 prediction
-   sets, and an E2 ceiling. The exact packet and request are green-bound, but
-   every authorization remains false. Do not implement, stat/hash/read the
-   cache, train, infer, freeze predictions, deliver check targets, or score from
-   general continuation.
+   sets, and an E2 ceiling. The exact one-run authorization is separately
+   recorded in `docs/LOOP_48_STAGE_B_AUTHORIZATION_DECISION.md`; no
+   implementation or protected access may begin until that decision commit is
+   remotely green. Check targets remain sealed until the later prediction-
+   freeze commit is also remotely green.
 2. **Loop 49 - preserve the metadata-only S24 development decision.** Read
    `docs/LOOP_49_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop49_research_boundary.v0.json`. S24 session 2 block 2 is the

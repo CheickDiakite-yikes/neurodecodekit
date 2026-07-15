@@ -116,12 +116,16 @@ fits, the check rows are not historically fresh; the exact Stage B ceiling is
 E2 pipeline-discriminative evidence, not the earlier design-level E3 ceiling.
 Raw quality, causal preprocessing, peripheral origin, independent validation,
 and every generalization claim remain unavailable. The protocol is
-preregistered but unauthorized and cannot inherit Stage A scope.
+preregistered and now has one exact separately recorded authorization in
+`docs/LOOP_48_STAGE_B_AUTHORIZATION_DECISION.md` and
+`registries/loop48_stage_b_authorization_decision.v0.json`. It becomes effective
+only after that authorization-only commit is remotely green. No implementation
+or protected execution exists yet, and Stage A scope remains nontransitive.
 Preregistration commit `0ee0ab7` passed push CI `29452286159` and PR CI
 `29452288520`. One hash-bound decision surface is prepared in
 `docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md` and
-`registries/loop48_stage_b_authorization_request.v0.json`; preparing it changes
-no authorization field.
+`registries/loop48_stage_b_authorization_request.v0.json`; those immutable
+pre-decision snapshots retain false authorization fields.
 
 The consumed Stage A verified hashes, reproduced aggregate blank/CER summaries,
 applied the ordered tree, and emitted one target-free aggregate report. Do not
