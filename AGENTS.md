@@ -179,6 +179,30 @@ field remains false; do not implement, read the cache, train, infer, freeze
 predictions, deliver check targets, or score from general continuation or the
 draft autonomy charter.
 
+Loop 49 planning research is complete on the current branch while its
+experiment remains `Not Started`:
+
+```bash
+cat docs/LOOP_49_PRIMARY_SOURCE_RESEARCH.md
+python -m json.tool registries/loop49_research_boundary.v0.json >/dev/null
+```
+
+Pinned public metadata selects S24 session 2 block 2 as the preferred
+permanently development-only MEG person: exactly two files totaling
+1,048,579,727 bytes under a 1.25 GiB future cap. S24 is preferred over the
+29,701,559-byte-smaller S18 pair because S18 carries the published S1/S18
+alias; S25 remains final-only. The future recommendation reserves 16 canonical
+sentence groups for development selection, assigns the remainder to fit, and
+excludes matching S21 selection text from future fit. No S24 local path,
+payload, header, signal, MAT content, target, source hash set, derivative,
+model, or training operation was opened. The `>=48` usable-unique-row, channel,
+geometry, duration, and overlap gates remain unproven; all 25 authorization
+fields are false. Decision 0083 requires Loop 48 Stage B to close or park before
+new Loop 49 acquisition. Do not prepare or execute acquisition, substitute a
+backup, or promote a person-transfer claim from this metadata decision.
+Planning commit `5afa61e` passed push CI `29454969710` and PR #27 CI
+`29455166081`; both required jobs are green.
+
 Loop 27 planning research is complete at green commit `b3d61b6`, but no
 preregistration or acquisition request exists:
 
@@ -525,10 +549,13 @@ Loops 46/47 are consumed and parked after the failed shared S21 event. Loop 48
 is complete at its consumed artifact-only `F5` boundary with no rerun. Its
 additive six-hypothesis research has an exact unauthorized Stage B
 preregistration with an E2 ceiling; no implementation or protected execution
-exists. Loops
-49-64 are `Not Started`, every current execution flag is false, and every
-global authorization field is false. Do not rerun Loop 48, start a new
-development person, or open any S25 path from a broad continuation request.
+exists. Loop 49 planning research selects S24 session 2 block 2 from metadata
+only as the preferred development person, but the experiment remains `Not
+Started`, the `>=48` trial gate is unproven, and no path or payload opened.
+Loops 50-64 are `Not Started`, every current execution flag is false, and every
+global authorization field is false. Do not rerun Loop 48, acquire or open S24,
+substitute a development person, or open any S25 path from a broad continuation
+request.
 
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at

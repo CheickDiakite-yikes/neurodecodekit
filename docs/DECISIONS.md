@@ -2830,3 +2830,42 @@ draft autonomy charter, Stage A, and Loop 26 are not transitive authorization.
 Evidence: `docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md`,
 `registries/loop48_stage_b_authorization_request.v0.json`, and
 `tests/test_loop48_stage_b_authorization_request.py`.
+
+## 0085 - Preserve Separate Development And Final People
+
+Decision: select SpanishBCBL MEG S24 session 2 block 2 as the preferred future
+Loop 49 development-only person from pinned public metadata. Preserve S25 as
+the final-only person selected by Loop 27. S24 is one exact FIF/log pair totaling
+1,048,579,727 bytes, which is 293,597,553 bytes below the 1.25 GiB future cap.
+
+Identity decision: prefer S24 over the 29,701,559-byte-smaller S18 pair because
+S18 belongs to the published S1/S18 alias group. The small storage premium buys
+a cleaner canonical-person ledger. S23 remains ineligible under the official
+metallic-implant exclusion; S21 is the observed source; S7 is consumed EEG;
+S20 remains a separate accessible-EEG lane. No backup may open automatically.
+
+Split decision: recommend a deterministic canonical-sentence-group split only
+after a separately authorized redacted audit proves at least 48 usable unique
+rows. Reserve the first 16 salt-hash-ordered groups for development selection
+and assign the remainder to development fit, producing a minimum 16/32 split.
+Keep identical text in one partition across people and exclude every matching
+S21 source-train selection text from future fit. Persist no plaintext or raw
+sentence hashes. S24 is permanently development-only after first protected
+access and can never become final evidence.
+
+Evidence decision: the current pass establishes only metadata selection. It
+does not establish the trial floor, channels, geometry, duration, signal or
+target quality, sentence overlap, model performance, neural advantage, person
+generalization, real-time behavior, or portable/home-device behavior. The
+48-row floor is pragmatic, not a prospective power calculation.
+
+Sequence and authorization decision: retain Decision 0083, which places the
+separately gated Loop 48 Stage B before new Loop 49 acquisition. No S24 local
+path was inspected and no payload, header, signal, MAT content, target, source
+hash set, derivative, model, training, prediction, or score was opened. Loop 49
+remains `Not Started`, unpreregistered, unqualified, and unauthorized; all 25
+authorization fields are false.
+
+Evidence: `docs/LOOP_49_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop49_research_boundary.v0.json`, and
+`tests/test_loop49_research_boundary.py`.

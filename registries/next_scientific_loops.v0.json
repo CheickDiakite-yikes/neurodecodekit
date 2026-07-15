@@ -120,15 +120,15 @@
       "execution_authorized": false,
       "core_question": "Can one non-S25 participant provide a development-only transfer cohort without consuming the final unseen-person test?",
       "scientific_claim_target": "development cohort qualification only",
-      "build_deliverable": "Metadata selector, exact byte plan, task/license/identity audit, preregistration, and bounded acquisition request for one nonfinal MEG participant.",
-      "data_scope": "Public metadata first; future two-file single-FIF/log bundle preferred under 1.25 GiB; S25 remains physically final-only.",
-      "controls": ["exclude S21 S7 S20 S25", "single complete FIF/log pair", "task and modality match", "subject exclusion audit", "dry-run exact bytes", "no backup substitution"],
-      "primary_metrics": ["eligible candidates", "files", "bytes", "sessions", "trial floor", "license", "identity overlap", "unavailable fields"],
-      "acceptance_gate": "One eligible development participant has exact identities, >=48 usable trials, compatible task/modality, explicit license, and total planned bytes within cap.",
-      "kill_or_park_rule": "If no candidate qualifies, do not repurpose S25; return to public-data search or multi-session S21 mechanics without a generalization claim.",
+      "build_deliverable": "Planning research in docs/LOOP_49_PRIMARY_SOURCE_RESEARCH.md and registries/loop49_research_boundary.v0.json selects one exact S24 session-2 block-2 MEG FIF/log bundle from pinned metadata, defines a text-grouped 16-selection/remainder-fit development split, and leaves preregistration, acquisition request, qualification, and execution pending.",
+      "data_scope": "Public metadata only. S24 session 2 block 2 is the preferred permanently development-only candidate: two exact files totaling 1,048,579,727 bytes. No S24 local path or payload was inspected; S25 remains physically final-only.",
+      "controls": ["exclude S21 S7 S20 S25", "single complete FIF/log pair", "task and modality match", "subject exclusion and alias audit", "S24 permanently development-only", "canonical sentence-text grouping across people", "exclude S21 fit rows matching future S24 selection text", "dry-run exact bytes", "no backup substitution"],
+      "primary_metrics": ["eligible candidates", "exact files and hashes", "exact bytes and cap margin", "canonical identity", "usable unique-trial floor", "fit and selection sentence groups", "source-text overlap", "license", "unavailable fields", "protected access counters"],
+      "acceptance_gate": "After separate acquisition and redacted audit, S24 has exact identities, >=48 usable unique trials, compatible task/modality/channels/geometry, explicit license, deterministic text-group split, and total bytes within cap.",
+      "kill_or_park_rule": "If S24 fails the >=48 unique-row, identity, hash, channel, geometry, resource, or alignment gate, do not open a backup and do not repurpose S25; park or prepare a versioned amendment without a generalization claim.",
       "depends_on": [47],
-      "future_resource_cap": "metadata planning zero download; future preferred <=1.25 GiB; absolute cumulative user envelope remains 10 GB",
-      "authorization_boundary": "Candidate selection and storage capacity are not download permission; exact acquisition needs a separate dry-run and --execute authorization."
+      "future_resource_cap": "Metadata planning used one thread/worker, 3.51 seconds, 62,685,184-byte peak RSS, and zero payload bytes. The future exact S24 bundle is 1,048,579,727 bytes under a 1.25 GiB cap, 20 GiB free-disk floor, and 10 GB cumulative user envelope.",
+      "authorization_boundary": "Metadata selection and storage capacity are not download permission. Loop 49 remains Not Started: every authorization is false, Decision 0083 keeps new acquisition after Loop 48 Stage B, and exact acquisition still needs a separately green dry-run/--execute decision. No S24 stat, hash, header, signal, MAT, target, split, model, training, scoring, or backup substitution is authorized."
     },
     {
       "loop_id": 50,

@@ -1,0 +1,478 @@
+{
+  "schema_name": "neurodecodekit.loop49_research_boundary",
+  "schema_version": "0.1.0",
+  "prepared_at": "2026-07-15",
+  "status": "planning_research_complete_metadata_candidate_selected_qualification_pending",
+  "proof_posture": "metadata_only_development_candidate_selected_no_download_or_payload_access",
+  "authorized_now": false,
+  "authorization": {
+    "loop49_preregistration_authorized_now": false,
+    "acquisition_request_authorized_now": false,
+    "selected_bundle_download_authorized_now": false,
+    "local_candidate_path_stat_or_hash_authorized_now": false,
+    "fif_header_read_authorized_now": false,
+    "fif_signal_read_authorized_now": false,
+    "mat_content_read_authorized_now": false,
+    "target_text_or_label_read_authorized_now": false,
+    "redacted_trial_audit_authorized_now": false,
+    "source_sentence_hash_set_read_authorized_now": false,
+    "split_derivative_creation_authorized_now": false,
+    "model_or_checkpoint_run_authorized_now": false,
+    "training_authorized_now": false,
+    "parameter_update_authorized_now": false,
+    "development_selection_scoring_authorized_now": false,
+    "loop50_execution_authorized_now": false,
+    "s25_payload_or_target_open_authorized_now": false,
+    "s21_validation_or_source_test_reopen_authorized_now": false,
+    "s21_session2_reopen_authorized_now": false,
+    "s7_or_s20_reopen_authorized_now": false,
+    "rw3_stream_device_or_hardware_authorized_now": false,
+    "backup_substitution_authorized_now": false,
+    "scientific_claim_upgrade_authorized_now": false,
+    "authorization_sentence_exists": false,
+    "reason": "This boundary selects a public-metadata candidate only. Loop 48 Stage B remains unauthorized, and S24 trial count, channel identity, geometry, duration, target hashes, and source-text overlap remain unopened."
+  },
+  "dependencies": {
+    "loop47_status": "parked_shared_attribution_gate_failed",
+    "loop48_stage_a_status": "complete_consumed_descriptive_f5_not_root_cause",
+    "loop48_stage_b_status": "preregistered_authorization_request_green_execution_unauthorized",
+    "loop48_stage_b_result_available": false,
+    "decision_0083_requires_stage_b_before_new_loop49_acquisition": true,
+    "loop49_planning_research_complete": true,
+    "loop49_preregistration_prepared": false,
+    "loop49_acquisition_request_prepared": false,
+    "loop49_experiment_started": false,
+    "separate_acquisition_authorization_required": true,
+    "separate_header_signal_redacted_target_and_split_authorizations_required": true,
+    "s25_remains_final_only_and_unopened": true
+  },
+  "official_metadata_snapshot": {
+    "repo_id": "bcbl190626/SpanishBCBL",
+    "repo_type": "dataset",
+    "revision": "88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684",
+    "license": "CC-BY-NC-4.0",
+    "cohort": "prompted_typing",
+    "language": "Spanish",
+    "meg_system": "Megin_Elekta_Neuromag",
+    "meg_channels": 306,
+    "meg_magnetometers": 102,
+    "meg_planar_gradiometers": 204,
+    "sampling_rate_hz": 1000,
+    "nominal_unique_sentences_per_session": 128,
+    "metadata_method": "huggingface_hub.HfApi.list_repo_tree_recursive_expand_at_pinned_revision",
+    "metadata_rows_observed_current_pass": 396,
+    "prior_loop27_meg_metadata_entries": 315,
+    "prior_loop27_strict_single_fif_log_pairs": 23,
+    "prior_loop27_eligible_pairs_after_exclusions": 16,
+    "measured_metadata_runtime_sec": 3.51,
+    "measured_metadata_peak_rss_bytes": 62685184,
+    "metadata_cpu_threads": 1,
+    "metadata_workers": 1,
+    "remote_signal_or_log_payload_downloaded": false,
+    "remote_payload_download_bytes": 0,
+    "http_request_count": null,
+    "http_request_count_unavailable_reason": "The high-level Hub client performs pagination internally; this pass issued one list_repo_tree operation and recorded returned metadata rows instead of claiming a transport request count."
+  },
+  "selection_policy": {
+    "status": "research_policy_not_preregistration_or_acquisition_authorization",
+    "required_role": "development_only_never_final",
+    "required_modality": "MEG",
+    "required_cohort": "prompted_typing",
+    "required_sampling_rate_hz": 1000,
+    "required_raw_format": "FIF",
+    "required_behavior_format": "MAT",
+    "require_one_primary_fif_without_split_continuation": true,
+    "require_one_matching_subject_session_block_log": true,
+    "exclude_tapping_localizer_failed_and_split_continuation_recordings": true,
+    "exclude_subject_ids": ["S7", "S20", "S21", "S25"],
+    "exclude_observed_s21_canonical_person_ids": ["S5", "S10", "S21"],
+    "exclude_official_dataset_card_ids": ["S23"],
+    "official_s23_exclusion_reason": "metallic_implant",
+    "canonicalize_published_alias_groups": [
+      ["S1", "S18"],
+      ["S4", "S14"],
+      ["S5", "S10", "S21"]
+    ],
+    "candidate_priority": [
+      "canonical_person_identity_clarity",
+      "same_modality_task_and_nominal_system",
+      "single_complete_fif_log_pair",
+      "exact_bytes_within_cap",
+      "ascending_exact_bytes"
+    ],
+    "automatic_backup_after_protected_access": false,
+    "selection_does_not_establish_trial_floor": true
+  },
+  "selected_candidate": {
+    "candidate_id": "spanishbcbl-meg-s24-session2-block2-development-v0",
+    "status": "recommended_metadata_only_not_preregistered_qualified_or_authorized",
+    "subject": "S24",
+    "canonical_person": "spanishbcbl-person-s24",
+    "session": 2,
+    "block": 2,
+    "recording_directory": "24_7010/240531",
+    "recording_date_code": "240531",
+    "published_alias_group": null,
+    "published_alias_with_observed_s21_person": false,
+    "published_exclusion": false,
+    "modality": "MEG",
+    "task": "read_wait_type_memorized_spanish_sentence_without_feedback",
+    "intended_future_role": "development_fit_and_selection_only",
+    "prohibited_future_role": "final_unseen_person_evidence",
+    "files": [
+      {
+        "path": "MEG/FIF/24_7010/240531/block2.fif",
+        "role": "raw_meg",
+        "size_bytes": 1048357252,
+        "git_blob_id": "87047b090ba1ffd7db68b5c40e8c1bd8b62137d9",
+        "lfs_sha256": "b75a60d1dc7210fc6abb2b65e959b392057bc09a884296ccbe15979bd332fb1a",
+        "xet_hash": "2a023b8655c759cbd90712bcc93e679d8bcf27a50833c565b9bb2b42bfbb4754",
+        "last_file_commit": "072c0eaaa889eb54cc6b23a112fb15905e884cb3",
+        "local_presence_checked_this_pass": false,
+        "local_presence": null,
+        "content_opened_this_pass": false
+      },
+      {
+        "path": "MEG/logs/S24-session2_block2_list1.mat",
+        "role": "behavior_log_targets_and_timing_protected",
+        "size_bytes": 222475,
+        "git_blob_id": "7c611adcebc0c83edefed14aa17a624f32b9e2b5",
+        "lfs_sha256": "4da5387cf099364071bd806970c7db715577b6bcee218296361538a86928ebb3",
+        "xet_hash": "248ec34c7fb6892206f1caad10173bd2fc23a73fb2967772b6ef21a43b13a99a",
+        "last_file_commit": "072c0eaaa889eb54cc6b23a112fb15905e884cb3",
+        "local_presence_checked_this_pass": false,
+        "local_presence": null,
+        "content_opened_this_pass": false
+      }
+    ],
+    "exact_file_count": 2,
+    "exact_total_bytes": 1048579727,
+    "future_download_cap_bytes": 1342177280,
+    "cap_margin_bytes": 293597553,
+    "one_gib_margin_bytes": 25162097,
+    "fraction_of_future_cap": 0.7812527768313885,
+    "future_expected_network_bytes_if_both_files_absent": 1048579727,
+    "absolute_cumulative_user_envelope_bytes": 10000000000,
+    "remaining_cumulative_envelope_after_bundle_bytes": 8951420273
+  },
+  "candidate_comparison": [
+    {
+      "candidate_id": "S18-session2-block2",
+      "canonical_person": "spanishbcbl-person-s1-s18",
+      "exact_total_bytes": 1018878168,
+      "bytes_relative_to_selected": -29701559,
+      "decision": "not_selected",
+      "reason": "It is 29,701,559 bytes smaller, but the published S1/S18 alias adds avoidable participant-identity bookkeeping to a transfer-development cohort."
+    },
+    {
+      "candidate_id": "S24-session2-block2",
+      "canonical_person": "spanishbcbl-person-s24",
+      "exact_total_bytes": 1048579727,
+      "bytes_relative_to_selected": 0,
+      "decision": "selected_metadata_only",
+      "reason": "Smallest clean no-alias development candidate after reserving S25 final-only and declining the avoidable S1/S18 alias."
+    },
+    {
+      "candidate_id": "S22-session1-block1",
+      "canonical_person": "spanishbcbl-person-s22",
+      "exact_total_bytes": 1107866218,
+      "bytes_relative_to_selected": 59286491,
+      "decision": "not_selected",
+      "reason": "Clean identity but larger than S24."
+    },
+    {
+      "candidate_id": "S25-session2-block2",
+      "canonical_person": "spanishbcbl-person-s25",
+      "exact_total_bytes": 1009939983,
+      "bytes_relative_to_selected": -38639744,
+      "decision": "reserved_final_only",
+      "reason": "Loop 27 reserves S25 for a future strict unseen-person zero-shot verdict; development use would irreversibly consume that role."
+    },
+    {
+      "candidate_id": "S23-session2-block2",
+      "exact_total_bytes": 958422728,
+      "decision": "ineligible",
+      "reason": "The official dataset card excludes S23 because of a metallic implant."
+    },
+    {
+      "candidate_id": "S21-session1-block2",
+      "decision": "ineligible_observed_source",
+      "reason": "S21 is the observed source person and aliases S5 and S10."
+    },
+    {
+      "candidate_id": "S7",
+      "decision": "ineligible_consumed_evaluation",
+      "reason": "S7 EEG is consumed and is not a same-modality MEG development person."
+    },
+    {
+      "candidate_id": "S20",
+      "decision": "separate_accessible_eeg_lane",
+      "reason": "S20 is reserved for the separately gated EEG pathway and cannot qualify a MEG transfer model."
+    }
+  ],
+  "eligibility_boundary": {
+    "identity_independent_from_observed_s21_canonical_person": true,
+    "not_reserved_s25_final_person": true,
+    "same_modality_as_source_model": true,
+    "same_nominal_meg_system": true,
+    "same_prompted_typing_task": true,
+    "same_nominal_sampling_rate": true,
+    "license_verified_noncommercial": true,
+    "exact_remote_file_identities_and_bytes_verified": true,
+    "future_bundle_within_1_25_gib_cap": true,
+    "exact_sensor_names_and_order_verified": false,
+    "exact_geometry_compatibility_verified": false,
+    "exact_recording_duration_verified": false,
+    "exact_performed_trial_count_verified": false,
+    "minimum_48_usable_unique_trials_verified": false,
+    "exact_unique_sentence_count_verified": false,
+    "sentence_overlap_with_s21_source_train_verified": false,
+    "candidate_target_freshness_proven_against_external_manual_access": false,
+    "candidate_target_freshness_note": "This pass did not inspect local paths or payloads. Absence of unrecorded external or manual target viewing cannot be proven.",
+    "eligible_for_metadata_selection": true,
+    "qualified_as_loop49_development_cohort_now": false,
+    "eligible_for_preregistration_now": false,
+    "eligible_for_acquisition_execution_now": false,
+    "eligible_for_signal_target_split_or_model_use_now": false
+  },
+  "future_development_split_recommendation": {
+    "status": "research_recommendation_not_frozen_contract_or_authorization",
+    "candidate_role_is_permanently_development_only_after_first_payload_access": true,
+    "minimum_usable_unique_rows": 48,
+    "minimum_row_reason": "Pragmatic intake floor inherited from the roadmap and nominal 64-row half-session; it is not a prospective power claim.",
+    "selection_unique_sentence_hashes": 16,
+    "fit_unique_sentence_hashes": "all_remaining_usable_unique_hashes",
+    "minimum_fit_unique_sentence_hashes_at_gate": 32,
+    "nominal_fit_unique_sentence_hashes_if_64_usable": 48,
+    "final_or_test_rows": 0,
+    "assignment_unit": "canonical_sentence_text_hash_group",
+    "assignment_salt": "neurodecodekit-loop49-development-split-v0",
+    "assignment_digest": "SHA-256",
+    "selection_rule": "Sort unique canonical sentence groups by SHA-256 of UTF-8 assignment_salt, NUL, and canonical sentence text; assign the first 16 groups to development_selection and all remaining groups to development_fit.",
+    "canonicalization": "Unicode NFKC, strip, collapse internal whitespace, and lowercase before hashing; exact implementation must be tested and hash-bound before target access.",
+    "same_text_across_rows_and_people_must_share_partition": true,
+    "s21_source_train_rows_matching_s24_selection_text_must_be_excluded_from_future_fit": true,
+    "s21_validation_source_test_and_session2_rows_may_not_be_used": true,
+    "trial_order_may_not_assign_or_predict_partition": true,
+    "participant_id_may_not_assign_or_predict_target": true,
+    "raw_sentence_hashes_may_not_be_persisted": true,
+    "sentence_plaintext_may_not_be_emitted": true,
+    "split_manifest_may_emit_only_opaque_item_ids_roles_and_manifest_hash": true,
+    "fit_targets_may_open_only_after_a_separate_authorized_split_freeze": true,
+    "selection_targets_may_open_only_after_prediction_freeze_commit_push_and_green_ci": true,
+    "development_selection_becomes_consumed_for_model_selection_after_scoring": true,
+    "s24_may_never_be_relabelled_as_independent_or_final_evidence": true,
+    "if_minimum_fails": "park_without_s25_or_backup_substitution"
+  },
+  "future_redacted_audit_recommendation": {
+    "status": "not_implemented_preregistered_or_authorized",
+    "mat_log_stays_opaque_today": true,
+    "allowed_outputs": [
+      "performed_trial_count",
+      "usable_unique_sentence_count",
+      "duplicate_and_missing_counts",
+      "development_fit_and_selection_counts",
+      "aggregate_s21_source_train_overlap_count_by_future_partition",
+      "opaque_split_manifest_sha256"
+    ],
+    "forbidden_outputs": [
+      "sentence_plaintext",
+      "typed_response_plaintext",
+      "per_item_target_preview",
+      "raw_canonical_sentence_hashes",
+      "target_distribution_for_model_seed_threshold_or_architecture_selection"
+    ],
+    "minimum_gate_must_run_before_fit_target_delivery": true,
+    "audit_authorized_now": false
+  },
+  "future_loop50_control_requirements": [
+    "source_train_only_no_signal_sentence_prior",
+    "pooled_train_only_no_signal_sentence_prior",
+    "same_checkpoint_zero_signal",
+    "channel_name_hash_derangement",
+    "nonwrapping_zero_filled_time_displacement",
+    "participant_id_only_predictor",
+    "participant_balanced_sampling",
+    "per_person_and_worst_person_reporting",
+    "candidate_and_every_control_prediction_frozen_before_selection_targets"
+  ],
+  "scientific_claim_boundary": {
+    "established_now": [
+      "One exact public-metadata S24 MEG FIF/log pair is selected as the preferred future development-only candidate.",
+      "The exact two-file bundle is 1,048,579,727 bytes and fits the 1.25 GiB future cap.",
+      "S24 avoids the published S1/S18 identity alias while preserving S25 as final-only."
+    ],
+    "maximum_future_loop49_claim_if_all_intake_gates_pass": "S24 is a qualified same-task same-modality development cohort for bounded model fitting and selection.",
+    "maximum_future_loop50_claim_if_its_separate_gates_pass": "Multi-source development evidence on S21 source-train and S24 development partitions only.",
+    "not_established": [
+      "S24 has at least 48 usable unique trials.",
+      "S24 channels, geometry, timing, signal quality, or target alignment are compatible.",
+      "A model learns neural information or beats a no-signal prior.",
+      "Independent validation, unseen-person generalization, or unseen-text generalization.",
+      "Brain-specific rather than peripheral or task-locked signal origin.",
+      "Real-time, causal end-to-end, EEG, OPM-MEG, portable, home-device, assistive, diagnostic, or clinical performance."
+    ]
+  },
+  "resource_boundaries": {
+    "current_remote_payload_download_bytes": 0,
+    "current_real_payload_read_bytes": 0,
+    "current_metadata_rows": 396,
+    "current_metadata_input_bytes": null,
+    "current_metadata_input_bytes_unavailable_reason": "HfApi returned parsed metadata objects and did not expose exact compressed or wire response bytes.",
+    "current_metadata_runtime_sec": 3.51,
+    "current_metadata_peak_rss_bytes": 62685184,
+    "current_cpu_threads": 1,
+    "current_workers": 1,
+    "current_generated_planning_artifact_cap_bytes": 8388608,
+    "future_exact_file_count": 2,
+    "future_exact_bundle_bytes": 1048579727,
+    "future_download_cap_bytes": 1342177280,
+    "future_absolute_cumulative_download_envelope_bytes": 10000000000,
+    "future_minimum_free_disk_bytes": 21474836480,
+    "measured_free_disk_bytes_before_documentation": 42255929344,
+    "future_workers": 1,
+    "future_cpu_threads": 1,
+    "future_header_or_redacted_audit_peak_rss_cap_bytes": 1073741824,
+    "future_persistent_background_processes": 0,
+    "tracked_workbook_reopened_this_pass": false,
+    "tracked_workbook_skip_reason": "Its last artifact-tool pass measured 1,572,667,392-byte peak RSS, above this planning boundary's 1 GiB envelope."
+  },
+  "research_access_counters": {
+    "high_level_remote_metadata_api_operations": 1,
+    "remote_metadata_rows_received": 396,
+    "local_s24_path_stat_operations": 0,
+    "remote_payload_file_downloads": 0,
+    "remote_payload_bytes_downloaded": 0,
+    "real_fif_header_reads": 0,
+    "real_fif_signal_reads": 0,
+    "real_mat_content_reads": 0,
+    "target_label_or_text_reads": 0,
+    "source_sentence_hash_set_reads": 0,
+    "split_derivative_writes": 0,
+    "model_or_checkpoint_runs": 0,
+    "training_runs": 0,
+    "parameter_update_runs": 0,
+    "prediction_sets": 0,
+    "target_scoring_events": 0,
+    "downloads": 0,
+    "rw3_stream_device_or_hardware_operations": 0
+  },
+  "primary_source_findings": [
+    {
+      "finding_id": "PS1_inter_subject_variability",
+      "finding": "Brain2Qwerty v2 reports substantial inter-subject variability and identifies cross-subject transfer or self-supervised pretraining as a priority.",
+      "design_consequence": "Use a separate development person before spending the final-only S25 verdict."
+    },
+    {
+      "finding_id": "PS2_text_group_split",
+      "finding": "Brain2Qwerty v2 assigns all instances of the same sentence text to one deterministic hash partition across subjects.",
+      "design_consequence": "Future S24 selection text must be grouped and matching S21 source-train text excluded from fit."
+    },
+    {
+      "finding_id": "PS3_test_once",
+      "finding": "The Brain2Qwerty v2 auto-research protocol kept agents on validation and performed cross-subject evaluation once after tuning.",
+      "design_consequence": "S24 is development-only; S25 remains the one-time final-person test."
+    },
+    {
+      "finding_id": "PS4_quantity_and_variety",
+      "finding": "Brain2Qwerty v2 reports that both recording quantity and sentence diversity affect asynchronous encoder CER.",
+      "design_consequence": "Report usable unique sentence groups, not merely duplicated row count."
+    },
+    {
+      "finding_id": "PS5_dataset_identity_and_license",
+      "finding": "The official SpanishBCBL card declares the CC BY-NC 4.0 license, nominal MEG system, repeated-person aliases, and S23 exclusion.",
+      "design_consequence": "Prefer clean S24 identity, preserve noncommercial posture, canonicalize aliases, and exclude S23."
+    },
+    {
+      "finding_id": "PS6_selection_bias",
+      "finding": "Primary methodological literature warns that tuning and reporting on the same validation evidence biases performance estimates and that small neuroimaging samples have large uncertainty.",
+      "design_consequence": "Use S24 only for development, consume its selection rows after use, keep S25 independent, and never treat the 48-row floor as a power claim."
+    },
+    {
+      "finding_id": "PS7_real_time_gap",
+      "finding": "Brain2Qwerty v2 states that its current whole-sentence architecture is noncausal and necessarily slow for word-by-word feedback.",
+      "design_consequence": "A Loop 49 intake cannot support a real-time or home-device claim."
+    }
+  ],
+  "source_bindings": [
+    {
+      "source_id": "brain2qwerty_v2_paper",
+      "kind": "primary_paper",
+      "url": "https://facebookresearch.github.io/brain2qwerty/assets/brain2qwerty_v2.pdf",
+      "used_for": ["inter_subject_variability", "cross_subject_priority", "text_hash_split", "single_test_open", "quantity_and_variety", "noncausal_limit"]
+    },
+    {
+      "source_id": "spanishbcbl_dataset_card",
+      "kind": "official_dataset_card",
+      "url": "https://huggingface.co/datasets/bcbl190626/SpanishBCBL",
+      "used_for": ["cohort", "task", "modality", "sampling_rate", "alias_groups", "S23_exclusion", "license"]
+    },
+    {
+      "source_id": "spanishbcbl_pinned_revision",
+      "kind": "immutable_dataset_metadata",
+      "url": "https://huggingface.co/datasets/bcbl190626/SpanishBCBL/tree/88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684",
+      "used_for": ["candidate_paths", "sizes", "blob_ids", "LFS_hashes", "Xet_hashes"]
+    },
+    {
+      "source_id": "brain2qwerty_official_loader",
+      "kind": "official_code",
+      "url": "https://github.com/facebookresearch/brain2qwerty/blob/3bf5a4099ca0d23bbe994b2287905760236e56e0/studies/spanishbcbl.py",
+      "used_for": ["task_structure", "subject_identity_mapping", "event_loading_context"]
+    },
+    {
+      "source_id": "huggingface_hub_api",
+      "kind": "official_documentation",
+      "url": "https://huggingface.co/docs/huggingface_hub/en/package_reference/hf_api",
+      "used_for": ["metadata_only_listing_method"]
+    },
+    {
+      "source_id": "brain2qwerty_v1_paper",
+      "kind": "primary_paper",
+      "url": "https://www.nature.com/articles/s41593-026-02303-2",
+      "used_for": ["SpanishBCBL_scientific_context", "synchronous_source_context"]
+    },
+    {
+      "source_id": "varma_simon_2006",
+      "kind": "primary_methodology_paper",
+      "url": "https://europepmc.org/article/PMC/1397873",
+      "used_for": ["model_selection_bias", "independent_evaluation_separation"]
+    },
+    {
+      "source_id": "varoquaux_2017",
+      "kind": "primary_methodology_paper",
+      "url": "https://arxiv.org/abs/1706.07581",
+      "used_for": ["small_sample_uncertainty", "trial_floor_not_power_claim"]
+    }
+  ],
+  "preregistration_blockers": [
+    "Loop 48 Stage B has no authorization or result, and Decision 0083 places it before new Loop 49 acquisition.",
+    "The exact S24 channel names, order, geometry, duration, and signal integrity remain unopened.",
+    "The S24 performed and usable unique trial counts remain unopened, so the >=48 acceptance gate is unproven.",
+    "The S24-to-S21 source-train sentence overlap remains unopened.",
+    "The redacted target audit and deterministic split implementation do not exist or have frozen hashes.",
+    "No acquisition request or exact acquisition authorization exists.",
+    "No Loop 50 architecture, controls, selection rule implementation, or claim contract is frozen."
+  ],
+  "future_access_order": [
+    "Complete or explicitly park the separately authorized Loop 48 Stage B path before new acquisition.",
+    "Implement and test the target-isolated S24 redacted audit and sentence-group split without opening payloads.",
+    "Preregister exact paths, hashes, caps, access order, minimum trial gate, split semantics, controls, and claim ceiling.",
+    "Prepare and remotely qualify an acquisition request with every permission false.",
+    "Record one exact acquisition decision in a separate committed, pushed, remotely green artifact.",
+    "Dry-run pinned revision, exact paths, sizes, disk headroom, collision policy, one thread, and one worker.",
+    "Download only the two exact S24 files if absent and verify hashes without opening FIF or MAT content.",
+    "Run a separately authorized header-only compatibility gate, then a separately authorized redacted trial/split audit.",
+    "Park if fewer than 48 usable unique rows or any identity, geometry, hash, resource, or overlap boundary is ambiguous.",
+    "Only after a frozen Loop 50 contract, deliver fit targets and later selection targets in prediction-before-target order."
+  ],
+  "warnings": [
+    "S24 is selected, not downloaded, qualified, or authorized.",
+    "S24 becomes permanently development-only upon first protected access and can never substitute for S25 final evidence.",
+    "The 48-row floor is pragmatic and is not a power calculation.",
+    "Sentence overlap may limit claims to person transfer on seen prompts; unseen-text language is unavailable unless an authorized audit proves zero overlap.",
+    "MEG during overt typing may contain neural, muscular, movement, auditory, visual, and task-locked information; Loop 35 remains required for brain-origin claims.",
+    "Brain2Qwerty v2 is not currently causal end to end, and this intake has no real-time or home-device result.",
+    "CC BY-NC 4.0 keeps the planned data use noncommercial unless a separate license exists.",
+    "No automatic backup candidate may open after a failure."
+  ]
+}

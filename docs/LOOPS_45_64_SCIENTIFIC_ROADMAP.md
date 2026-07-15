@@ -134,10 +134,25 @@ architecture.
 
 ### Loop 49 - Fresh Development-Person Intake
 
-Select one non-S25 MEG participant as development-only evidence. Start with
-public metadata and prefer one complete single-FIF/log pair under 1.25 GiB.
-Exclude S21, S7, S20, and S25. Require task match, license clarity, exact bytes,
-official subject exclusions, and at least 48 usable trials.
+Planning research in `docs/LOOP_49_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop49_research_boundary.v0.json` now selects **S24 session 2 block
+2** as the preferred development-only MEG person from pinned public metadata:
+one FIF plus one protected MAT log, exactly `1,048,579,727` bytes. S24 costs
+`29,701,559` bytes more than S18 but avoids the published S1/S18 identity alias;
+S25 stays final-only. The metadata pass used one thread and worker, took `3.51`
+seconds, peaked at `62,685,184` bytes RSS, downloaded zero payload bytes, and
+did not inspect any S24 local path or content.
+
+The future research recommendation reserves 16 canonical sentence groups for
+development selection and assigns every remaining usable unique group to fit,
+with a minimum `16 + 32 = 48` gate. Identical text stays in one partition
+across people, and any S21 source-train row matching future S24 selection text
+must be excluded from fit. The 48-row floor, channels, geometry, duration,
+signal, targets, and source-text overlap remain unavailable, so Loop 49 is
+still `Not Started`, unqualified, unpreregistered, and unauthorized. Decision
+0083 keeps any new acquisition after the separately gated Loop 48 Stage B.
+Planning commit `5afa61e` passed push CI `29454969710` and PR #27 CI
+`29455166081`; both required jobs are green.
 
 **Gate:** one eligible nonfinal person or an explicit no-candidate result.
 
