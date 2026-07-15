@@ -3567,6 +3567,21 @@ operation, or portable/home hardware result.
   the 12-member archive plus two static header reads and six derivative member
   headers totals 20, not 16. Protected values remained closed while the exact
   invariant was corrected for a new implementation commit and remote CI pass.
+- Corrected implementation `4015677` passed push CI `29425275808` and PR CI
+  `29425280317`. Its static gate passed in 0.797510 seconds, then the source
+  cache matched one 10,632,576-byte hash pass. Derivatives delivered 55 train
+  signals/targets and six validation signals with zero validation-target,
+  source-test, or session-2 rows; working arrays used 30,726,776 bytes.
+- The target-blind run completed 18 candidate plus three control fits, 5,040
+  optimizer steps, 24 model inferences, six train-only priors, 21 checkpoint
+  writes, and 31 frozen prediction sets. Parameter updates took 182.152382
+  seconds; end-to-end runtime was 184.046922 seconds; peak RSS was 522,797,056
+  bytes; working arrays were bounded at 43,114,644 bytes. Checkpoints used
+  278,753 bytes and private predictions used 50,810 bytes.
+- The 31,271-byte hash-only freeze record is
+  `10191558a68a8c646e32c4ab0516f84ee99d127b9e6a2ea277c432c6c28b2348`.
+  Validation-target deliveries and scores remain zero. It must be committed,
+  pushed, tested, and remotely green before the one-shot scorer can run.
 
 Engineering capability added: a bounded and auditable implementation now
 exists for the separately authorized shared S21 validation event.
