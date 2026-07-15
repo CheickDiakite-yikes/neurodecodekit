@@ -11,7 +11,11 @@
 > Five source-test rows, session 2, post-target tuning, and any rerun remain
 > closed. Loop 48 artifact-only failure localization is preregistered with
 > authorization pending. Its leading `F5` output-instability phenotype is not
-> a proven root cause; the contract has no implementation or execution.
+> a proven root cause; the contract has no implementation or execution. Green
+> commit `83309bf` passed push CI `29431318268` and PR CI `29431347801`; the
+> exact Stage A request is prepared but every authorization remains false.
+> A separate five-hypothesis train-only Stage B portfolio is design research
+> only; it is not preregistered and cannot inherit Stage A authorization.
 
 > Historical pre-Loop-25-execution context, retained for audit: Loops 1-12,
 > 14-22, and 23.5 are complete; Loops
@@ -455,11 +459,16 @@ This is not primarily a model repo. It is a **research loop repo**.
    Read `docs/LOOP_48_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop48_failure_localization_contract.v0.json`. The contract
    binds four committed JSON inputs, eight ordered classes, 17 unavailable
-   root-cause fields, 30 refusals, and a one-thread Stage A. Commit and remotely
-   qualify it before preparing a separate authorization request. No artifact
-   analyzer, train-array diagnostic, cache member, target, checkpoint, private
-   prediction, or model run is authorized; source test and session 2 stay
-   closed.
+   root-cause fields, 30 refusals, and a one-thread Stage A. The exact request
+   is now in `docs/LOOP_48_AUTHORIZATION_PACKET.md` and
+   `registries/loop48_authorization_request.v0.json`; provide its exact
+   sentence or hold. No artifact analyzer, train-array diagnostic, cache
+   member, target, checkpoint, private prediction, or model run is authorized;
+   source test and session 2 stay closed.
+   The future portfolio in
+   `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md` compares `H1`-`H5` from
+   shared train-only evidence, but its split, thresholds, models, caps, and
+   execution remain unfrozen and unauthorized.
 2. **RW3 - decide on the prepared Stage A packet only.** Review
    `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` and
    `registries/rw3_stage_a_authorization_request.v0.json`. The request is bound

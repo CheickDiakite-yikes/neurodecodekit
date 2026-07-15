@@ -281,7 +281,9 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   training, or hardware. Seeds 2203, 2303, 2353, and 2401 stay consumed; seed
   2402 remains unopened. Loop 25 is consumed at its exact mechanics boundary;
   Loop 48 artifact-only failure localization is now preregistered with
-  authorization pending, no implementation, and every execution flag false.
+  an exact Stage A authorization request prepared, no implementation, and every
+  execution flag false. A separate five-hypothesis train-only Stage B portfolio
+  improves the causal questions but remains design-only and unauthorized.
 
 ## Next planned 20 loops: 25-44
 

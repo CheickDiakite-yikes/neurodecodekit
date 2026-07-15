@@ -100,7 +100,15 @@ contract freezes eight ordered classes, 30 refusals, four exact committed JSON
 inputs, and one bounded Stage A. The leading observed phenotype is `F5`:
 seed-sensitive output-distribution instability with a blank-dominant primary
 checkpoint. That is not a proven root cause. The contract is not implemented
-or executed, and no train-array diagnostic exists.
+or executed, and no train-array diagnostic exists. Its separate exact Stage A
+authorization request is prepared but every authorization field remains false.
+
+Future Stage B design uses a five-hypothesis support vector rather than forcing
+one root-cause winner: CTC feasibility/fit, signal quality, temporal or
+preprocessing mismatch, representation separability, and prior dominance may
+coexist. One shared train-only evidence bundle should evaluate them in parallel
+scientifically while one-thread numerical work remains sequential. This
+portfolio is not preregistered or authorized and cannot inherit Stage A scope.
 
 Future Stage A may only verify hashes, reproduce aggregate blank/CER summaries,
 apply the ordered tree, and emit one target-free aggregate report. Do not use

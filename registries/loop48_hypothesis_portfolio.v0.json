@@ -1,0 +1,145 @@
+{
+  "schema_name": "neurodecodekit.loop48_hypothesis_portfolio",
+  "schema_version": "0.1.0",
+  "prepared_at": "2026-07-15",
+  "status": "design_research_only_not_preregistered_or_authorized",
+  "proof_posture": "parallel_hypothesis_design_no_data_or_model_execution",
+  "authorized_now": false,
+  "design_principles": {
+    "hypotheses_may_coexist": true,
+    "forced_single_root_cause": false,
+    "shared_evidence_collection": true,
+    "parallel_means_scientific_comparison_not_concurrent_compute": true,
+    "physical_compute_is_sequential": true,
+    "cpu_threads": 1,
+    "workers": 1,
+    "validation_targets_allowed": false,
+    "consumed_gate_rescue_allowed": false
+  },
+  "hypotheses": [
+    {
+      "hypothesis_id": "H1",
+      "label": "ctc_feasibility_or_optimization_failure",
+      "shared_measurements": ["ctc_length_feasibility", "frame_target_ratio", "loss_trajectory", "gradient_norms", "parameter_update_norms", "blank_posterior", "posterior_entropy", "nonblank_logit_margin", "seed_dispersion", "train_only_decode_metrics"],
+      "causal_status_now": "unresolved"
+    },
+    {
+      "hypothesis_id": "H2",
+      "label": "sensor_or_trial_quality_insufficiency",
+      "shared_measurements": ["channel_robust_amplitude", "channel_variance", "flat_channel_count", "power_spectral_density", "line_noise_burden", "bad_trial_count", "repeat_reliability"],
+      "causal_status_now": "unresolved"
+    },
+    {
+      "hypothesis_id": "H3",
+      "label": "timing_or_preprocessing_information_mismatch",
+      "shared_measurements": ["event_timing_residual", "alignment_uncertainty", "train_only_time_shift_profile", "paired_offline_causal_representation_distance", "paired_offline_causal_probe_metrics"],
+      "causal_status_now": "unresolved"
+    },
+    {
+      "hypothesis_id": "H4",
+      "label": "stable_but_nonseparable_representation",
+      "shared_measurements": ["fit_partition_metrics", "diagnostic_check_metrics", "simple_aligned_probe_metrics", "linear_sequence_metrics", "intact_signal_control_metrics"],
+      "causal_status_now": "unresolved"
+    },
+    {
+      "hypothesis_id": "H5",
+      "label": "prior_dominated_task_regime",
+      "shared_measurements": ["train_only_prior_metrics", "exact_zero_metrics", "label_derangement_metrics", "row_derangement_metrics", "channel_derangement_metrics", "time_displacement_metrics", "intact_signal_metrics"],
+      "causal_status_now": "unresolved"
+    }
+  ],
+  "shared_measurement_families": [
+    "identity_and_split_integrity",
+    "ctc_static_feasibility",
+    "channel_and_trial_quality",
+    "timing_and_alignment_quality",
+    "fit_dynamics",
+    "train_only_decode_metrics",
+    "simple_aligned_probe",
+    "paired_offline_causal_transform",
+    "signal_and_label_corruption_controls",
+    "resource_and_access_ledger"
+  ],
+  "future_output_row_fields": [
+    "hypothesis_id",
+    "support_level",
+    "evidence_for",
+    "evidence_against",
+    "missing_evidence",
+    "conflicting_evidence",
+    "shared_measurements",
+    "causal_statement_allowed",
+    "smallest_next_falsifying_measurement"
+  ],
+  "future_split_boundary": {
+    "source_membership": "only_the_55_loop26_source_train_rows",
+    "grouping_unit": "normalized_sentence_identity",
+    "fit_and_check_rows_must_be_disjoint": true,
+    "exact_counts_frozen": false,
+    "exact_seeds_frozen": false,
+    "exact_thresholds_frozen": false,
+    "exact_model_inventory_frozen": false,
+    "validation_rows_allowed": false,
+    "source_test_rows_allowed": false,
+    "session2_rows_allowed": false,
+    "s7_s20_s25_allowed": false
+  },
+  "future_resource_boundary": {
+    "current_portfolio_artifact_bytes": 20377,
+    "cpu_threads": 1,
+    "workers": 1,
+    "concurrent_numerical_jobs": 1,
+    "runtime_cap_frozen": false,
+    "peak_rss_cap_frozen": false,
+    "generated_output_cap_frozen": false,
+    "model_run_inventory_frozen": false,
+    "reason_unfrozen": "Stage A and a dependency-light static prototype must measure diagnostic overhead before a train-only preregistration."
+  },
+  "authorization": {
+    "stage_a_authorization_would_be_transitive": false,
+    "portfolio_design_authorizes_execution": false,
+    "fixture_or_static_prototype_authorized_now": false,
+    "train_array_read_authorized_now": false,
+    "cache_or_signal_read_authorized_now": false,
+    "target_read_authorized_now": false,
+    "model_inference_authorized_now": false,
+    "training_or_parameter_update_authorized_now": false,
+    "prediction_or_checkpoint_authorized_now": false,
+    "score_or_interpretation_authorized_now": false,
+    "source_test_session2_s7_s20_or_s25_authorized_now": false,
+    "download_network_stream_device_or_hardware_authorized_now": false
+  },
+  "current_access_counters": {
+    "fixture_generations": 0,
+    "static_prototype_runs": 0,
+    "train_array_reads": 0,
+    "cache_or_signal_reads": 0,
+    "target_reads": 0,
+    "model_inference_runs": 0,
+    "training_or_parameter_update_runs": 0,
+    "prediction_or_checkpoint_operations": 0,
+    "scoring_runs": 0,
+    "network_calls": 0,
+    "downloads": 0,
+    "stream_device_or_hardware_operations": 0
+  },
+  "source_bindings": [
+    {"source_id": "ctc_peaky_behavior", "url": "https://arxiv.org/abs/2105.14849", "use": "CTC peak and input-target-ratio diagnostics"},
+    {"source_id": "brain2qwerty_v1", "url": "https://www.nature.com/articles/s41593-026-02303-2", "use": "simple task-locked probes before sentence decoding and language-model separation"},
+    {"source_id": "large_scale_noninvasive_word_decoding", "url": "https://www.nature.com/articles/s41467-025-65499-0", "use": "modality task data-scale and averaging hypotheses"},
+    {"source_id": "eeg_preprocessing_decoding", "url": "https://www.nature.com/articles/s42003-025-08464-3", "use": "systematic preprocessing sensitivity"},
+    {"source_id": "reproducible_meg_eeg", "url": "https://pubmed.ncbi.nlm.nih.gov/30127712/", "use": "quality assessment temporal decoding and statistical controls"}
+  ],
+  "claim_boundary": {
+    "engineering_capability_proposed": "One shared train-only telemetry bundle can evaluate several competing and coexisting failure hypotheses without validation-target reuse.",
+    "scientific_claim_not_established": "No hypothesis is causally confirmed and no neural advantage signal dependence decoding generalization real-time EEG portable home-device or clinical result exists."
+  },
+  "warnings": [
+    "F5_is_a_phenotype_not_the_only_hypothesis",
+    "hypotheses_may_coexist",
+    "parallel_hypotheses_do_not_mean_concurrent_compute",
+    "exact_stage_b_inventory_and_caps_are_unfrozen",
+    "stage_b_requires_separate_preregistration_and_authorization",
+    "consumed_validation_cannot_be_used_to_select_or_rescue_a_design"
+  ]
+}

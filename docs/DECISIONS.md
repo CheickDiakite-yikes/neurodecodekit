@@ -2616,3 +2616,60 @@ behavior, EEG result, portable/home hardware result, or clinical result.
 Evidence: `docs/LOOP_48_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop48_failure_localization_contract.v0.json`, and
 `tests/test_loop48_failure_localization_contract.py`.
+
+## 0078 - Request One Artifact-Only Stage A Without Opening Train Diagnostics
+
+Decision: after green contract commit `83309bf`, push CI `29431318268`, and PR
+CI `29431347801`, prepare one immutable authorization request for a
+dependency-light analyzer and one artifact-only Stage A execution.
+
+Scope decision: permit a future authorized run to read only four exact
+committed JSON files totaling 155,545 bytes, verify their hashes, reproduce
+frozen aggregate arithmetic, apply the ordered eight-class tree, and write one
+target-free aggregate report. Cap it at one thread, one worker, 30 seconds,
+256 MiB RSS, and 1 MiB output.
+
+Firewall decision: keep every authorization false until the exact sentence is
+captured in a separate green decision record. This request excludes ignored
+outputs, caches, arrays, targets, checkpoints, private predictions, model
+inference, training, parameter updates, seed/threshold/architecture selection,
+source test, session 2, S7, S20, S25, raw FIF/MAT, downloads, language models,
+RW3, streams, devices, hardware, scientific claim upgrades, and reruns.
+
+Claim boundary: even a clean Stage A can establish only that the exact public
+aggregate artifacts satisfy `F5` under the frozen post-outcome tree. It cannot
+establish a root cause or any positive neural, decoding, transfer, real-time,
+EEG, device, assistive, diagnostic, or clinical result.
+
+Evidence: `docs/LOOP_48_AUTHORIZATION_PACKET.md`,
+`registries/loop48_authorization_request.v0.json`, and
+`tests/test_loop48_authorization_request.py`.
+
+## 0079 - Evaluate Multiple Failure Hypotheses From One Shared Train-Only Bundle
+
+Decision: do not treat the artifact-level `F5` phenotype as the only hypothesis
+or force one root-cause winner. Design future Stage B around five hypotheses
+that may coexist: CTC feasibility/optimization, sensor/trial quality,
+timing/preprocessing mismatch, representation separability, and prior
+dominance.
+
+Efficiency decision: collect static feasibility, quality, timing, fit telemetry,
+simple-probe, transform, and corruption-control measurements once, then reuse
+them across the five hypothesis rows. “Parallel” means parallel scientific
+comparison; physical numerical execution remains sequential, one-threaded, and
+single-worker.
+
+Leakage decision: any future diagnostic fit/check partition must live entirely
+inside the 55 source-train rows and be grouped by sentence identity. Validation,
+source test, session 2, S7, S20, and S25 remain excluded. Exact split counts,
+seeds, thresholds, model inventory, runtime, RSS, and output caps remain
+unfrozen pending Stage A and a separately authorized static prototype.
+
+Authorization decision: the portfolio is design research only. It does not
+inherit a future Stage A authorization and currently permits no fixture,
+prototype, train/cache/signal/target read, model, training, prediction,
+checkpoint, scoring, download, stream, device, or hardware operation.
+
+Evidence: `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md`,
+`registries/loop48_hypothesis_portfolio.v0.json`, and
+`tests/test_loop48_hypothesis_portfolio.py`.

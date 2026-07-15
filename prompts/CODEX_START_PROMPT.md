@@ -287,8 +287,19 @@ Loop 48 artifact-only failure localization is preregistered in
 output-instability phenotype is descriptive and not a proven root cause. The
 contract remains unimplemented and every authorization field is false. Commit,
 push, test, and remotely qualify the exact contract before preparing a separate
-Stage A authorization packet. Any implementation, train-array/protected read,
-target, checkpoint, private prediction, model run, or tuning remains closed.
+Stage A authorization packet. That qualification is now green at `83309bf`,
+and the still-false request is in `docs/LOOP_48_AUTHORIZATION_PACKET.md` and
+`registries/loop48_authorization_request.v0.json`. Any implementation,
+train-array/protected read, target, checkpoint, private prediction, model run,
+or tuning remains closed until the exact sentence receives its own green
+decision record.
+The future train-only portfolio in
+`docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md` and
+`registries/loop48_hypothesis_portfolio.v0.json` is design research only. It
+compares five potentially coexisting hypotheses from shared evidence while
+physical compute stays sequential and one-threaded. Do not create its split,
+fixture, static prototype, model inventory, data read, or execution from a
+Stage A decision.
 
 Loop 27 is also review-only planning evidence. Do not turn the selected S25
 paths, official hashes, local MAT presence, 1 GiB cap, or roadmap status into a

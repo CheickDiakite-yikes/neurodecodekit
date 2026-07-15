@@ -139,10 +139,23 @@ diagnostic contract are now prepared in
 artifact-level phenotype is `F5`: seed-sensitive output-distribution
 instability with a `0.993477` blank-dominant primary checkpoint. This is not a
 proven root cause. The contract remains unimplemented and unauthorized; every
-authorization field is false. Do not prepare an execution decision until this
-contract is committed, pushed, tested, and remotely green. Do not read train
-arrays, protected cache members, targets, ignored outputs, checkpoints, or
-private predictions from this planning boundary.
+authorization field is false. Green contract commit `83309bf` passed push CI
+`29431318268` and PR CI `29431347801`; a separate request is now prepared in
+`docs/LOOP_48_AUTHORIZATION_PACKET.md` and
+`registries/loop48_authorization_request.v0.json`. Do not implement or execute
+Stage A without the exact sentence in that packet and a separately committed,
+pushed, remotely green decision record. Do not read train arrays, protected
+cache members, targets, ignored outputs, checkpoints, or private predictions
+from this planning boundary.
+
+Future train-only Loop 48 thinking is now separated into
+`docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md` and
+`registries/loop48_hypothesis_portfolio.v0.json`. It evaluates five coexisting
+hypotheses from shared evidence and defines parallel scientific comparison with
+sequential one-thread compute. It is design research only: exact splits,
+thresholds, model inventory, runtime, RSS, and output caps are unfrozen, and
+every Stage B execution field is false. A future Stage A authorization would
+not authorize this portfolio.
 
 Loop 27 planning research is complete at green commit `b3d61b6`, but no
 preregistration or acquisition request exists:

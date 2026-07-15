@@ -35,6 +35,7 @@ and explain exactly what the result does not prove.
 | Full-path causality gate | Loop 25 v1 passed a dedicated causal anti-alias audit, 65,537 response points, 23 alias probes, 168 schedule checks, 240 resume checks, and 72 future-mutation controls across 24 target-free items | The exact 1000-to-100 Hz path is mechanically causal with zero right context; this is synthetic mechanics evidence, not proof that neural information survives |
 | Consumed S21 validation | The registered 2,908-parameter candidate reached macro CER `0.938177`; the train-only no-signal prior reached `0.751235`, so the candidate was worse by `0.186942` | Loop 26 is parked after one consumed six-target event; this is a clear negative result, not neural advantage |
 | Failure-localization decision | The primary checkpoint emitted `99.3477%` blank; all six fixed-prefix groups showed at least `0.25` three-seed blank-fraction range; every size-55 seed lost to the prior | Loop 48 now preregisters `F5` output-distribution instability as the leading phenotype, not a proven root cause; execution remains unauthorized |
+| Improved failure hypotheses | Five coexisting train-only hypotheses cover CTC fit, sensor quality, timing/preprocessing, representation separability, and prior dominance using one shared evidence bundle | This is design research only; hypotheses are compared in parallel while compute stays sequential and one-threaded, with no validation targets or execution authorization |
 | Fresh transfer candidate | Loop 27 metadata research selects S25 session 2 block 2: one MEG FIF plus one protected MAT log, exactly 1,009,939,983 bytes under 1 GiB | S25 is not downloaded or qualified; preregistration waits for the causal source model, controls, and target isolation |
 | Transfer decision rule | Loop 28 research separates T0-T3 evidence and recommends a strict S25 T2 zero-shot gate: zero target fit, at least 48 final rows, at least 0.05 macro-CER improvement, 65,535 paired swaps plus observed, and strict corruption-control wins | The experiment is `Not Started`; this resolves one planning dependency without authorizing S25, a model run, calibration, or final access |
 | Portable sensing decision | Loop 29 research separates cryogenic MEG, partner/lab OPM-MEG, local-first scalp EEG, and non-neural controls through 15 requirements and six qualification levels | Planning research is complete while the experiment is `Not Started`; no device, download, stream, hardware session, or portable decoding result exists |
@@ -62,7 +63,14 @@ target-free mechanics boundary. Loops 46 and 47 are now parked after the one
 registered S21 validation event failed its primary and attribution gates. Loop
 48 now has a post-outcome artifact-only diagnostic contract with eight ordered
 classes, 30 refusals, and every authorization field false. It is preregistered,
-not implemented or executed; all current execution flags are false.
+not implemented or executed; its exact Stage A authorization request is
+prepared and still false. All current execution flags are false.
+
+The separate future Stage B design in
+`docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md` deliberately avoids betting
+on `F5` alone. It defines five hypotheses that may coexist and reuses one
+train-only telemetry/control bundle across them. No Stage B split, model
+inventory, cap, implementation, data read, or run is authorized.
 
 | Phase | Loops | Decisive goal |
 |---|---:|---|
@@ -113,7 +121,7 @@ negative result and S25 is never repurposed for calibration.
 | Loop 42 named-device boundary | OpenBCI Cyton base 8-channel USB-radio; Q0 only; 28 identity fields; 16 packet fields; 7 timing observables; 10 anomalies; 30 fixtures; 4 stages; 34 gates; 46 refusals; 45 false authorization fields | planning research only; no purchase, SDK, serial read, board connection, participant, recording, or device result exists | Makes a future local-device mechanics test exact while refusing to turn host timestamps, local files, connectivity, or eight channels into latency, privacy, EEG-quality, or text-decoding claims |
 | Loop 43 independent-reproduction boundary | 7 qualification levels; 16 independence fields; 28 packet fields; 34 submission fields; 8 comparison classes; 12 discrepancy classes; 32 fixtures; 4 stages; 36 gates; 48 refusals; 48 false authorization fields | planning research only; no packet, oracle, outreach, contributor, submission, adjudication, archive, or release exists | Defines how one future external environment can reproduce a released target-free software artifact without inflating that result into scientific replication, neural advantage, or population generalization |
 | Loop 44 claim-release matrix | 16 claims; 7 evidence levels; 5 model cards; 4 dataset cards; 14 gates; 8 risks; 0 tag/release/DOI operations | artifact-only review complete; engineering release held; scientific release parked | Makes every public claim traceable to cohort, task, split, comparator, uncertainty, resources, access, privacy, license, and evidence while preserving negative results |
-| Test and release surface | 762 fully provisioned unittests with 3 expected skips; 715 dependency-light tests with 142 expected skips; 25 focused Loop 48/roadmap tests | Loop 26 prediction-freeze and closeout CI were green; Loop 48 remains local-green pending its first contract push | Makes the consumed negative result, research contracts, target isolation, freeze binding, access order, tamper checks, and authorization boundaries executable and reviewable on ordinary hardware |
+| Test and release surface | 762 fully provisioned unittests with 3 expected skips at the green contract commit; 733 dependency-light tests with 142 expected skips and 43 focused Loop 48 tests after the request/portfolio additions | Loop 48 contract push CI `29431318268` and PR CI `29431347801` passed; the request/portfolio milestone awaits its clean-host CI | Makes the consumed negative result, research contracts, target isolation, freeze binding, access order, tamper checks, and authorization boundaries executable and reviewable on ordinary hardware |
 
 ### Real-Data Scientific Scorecard
 
@@ -1027,6 +1035,12 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/LOOP_26_SHARED_VALIDATION_IMPLEMENTATION.md](docs/LOOP_26_SHARED_VALIDATION_IMPLEMENTATION.md) | bounded reader, causal models, controls, freeze, scorer, CLI stages, synthetic qualification, and pre-access boundary |
 | [registries/loop26_shared_validation_contract.v0.json](registries/loop26_shared_validation_contract.v0.json) | machine-readable 21-fit, 31-prediction, 40-refusal shared validation contract and archive-access correction |
 | [registries/loop26_authorization_request.v0.json](registries/loop26_authorization_request.v0.json) | green-commit-bound request with every authorization flag false and every protected/model/training/scoring counter zero |
+| [docs/LOOP_48_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_48_PRIMARY_SOURCE_RESEARCH.md) | post-outcome aggregate diagnosis, eight-class tree, exact artifact evidence, unavailable root-cause fields, and no-execution boundary |
+| [registries/loop48_failure_localization_contract.v0.json](registries/loop48_failure_localization_contract.v0.json) | green hash-bound four-input Stage A contract with `F5` as a phenotype, 30 refusals, measured caps, and every authorization false |
+| [docs/LOOP_48_AUTHORIZATION_PACKET.md](docs/LOOP_48_AUTHORIZATION_PACKET.md) | exact four-JSON Stage A permission surface, one-thread resource envelope, exclusions, and claim ceiling |
+| [registries/loop48_authorization_request.v0.json](registries/loop48_authorization_request.v0.json) | request bound to green commit `83309bf` and both CI runs; no implementation or execution is authorized |
+| [docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md](docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md) | five coexisting future train-only hypotheses, shared evidence design, sequential compute policy, and leakage firewall |
+| [registries/loop48_hypothesis_portfolio.v0.json](registries/loop48_hypothesis_portfolio.v0.json) | design-only H1-H5 support-vector schema with unfrozen Stage B inventory/caps and zero operation counters |
 | [docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md) | official metadata ranking, selected S25 MEG candidate, exact bytes/hashes, target-isolation design, and preregistration blockers |
 | [registries/loop27_research_boundary.v0.json](registries/loop27_research_boundary.v0.json) | machine-readable Loop 27 candidate identity, unavailable fields, resource boundary, zero payload access, and 18 false authorization fields |
 | [docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md) | v2 transfer audit, T0-T3 taxonomy, strict zero-shot/transductive distinction, final-only rule, and calibrated-design boundary |

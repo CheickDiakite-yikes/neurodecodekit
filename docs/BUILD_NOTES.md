@@ -3684,3 +3684,67 @@ Scientific claim not established: the planning result does not prove why the
 model failed or establish neural advantage, signal dependence, decoding,
 generalization, real-time behavior, EEG performance, portable/home hardware,
 or clinical utility.
+
+## 2026-07-15 - Loop 48 Stage A Authorization Request
+
+- Bound the request to green contract commit `83309bf`, push CI
+  `29431318268`, PR CI `29431347801`, the exact contract/research/test hashes,
+  and the four exact committed input identities totaling 155,545 bytes.
+- Requested only a dependency-light analyzer plus one future aggregate Stage A
+  under one thread, one worker, 30 seconds, 256 MiB RSS, and 1 MiB output.
+- Kept all 18 `authorized_now` fields and 19 current runtime/access counters at
+  zero or false. No implementation, runtime input read, report, model,
+  training, target, protected payload, download, stream, device, or hardware
+  operation occurred.
+- Added ten request invariants; the combined Loop 48 request, contract, and
+  roadmap suite passes 35 tests.
+
+Engineering capability proposed: a separately reviewable permission gate now
+binds the exact artifact-only runtime before any implementation or execution.
+
+Scientific claim not established: preparing the request creates no new
+evidence and does not establish a root cause, neural advantage, decoding,
+generalization, real-time behavior, EEG result, portable/home hardware, or
+clinical utility.
+
+## 2026-07-15 - Loop 48 Multi-Hypothesis Stage B Design
+
+- Replaced the implicit single-cause framing with five potentially coexisting
+  hypotheses: CTC fit, sensor quality, timing/preprocessing, representation
+  separability, and prior dominance.
+- Designed one shared train-only evidence bundle spanning ten measurement
+  families and explicit support-for, support-against, missing, conflicting,
+  and next-falsifier fields for every hypothesis.
+- Defined parallel scientific evaluation with sequential one-thread compute so
+  evidence is reused without concurrent workloads or repeated prediction sets.
+- Kept Stage B entirely outside the Stage A request. Exact train-only splits,
+  thresholds, seeds, model inventory, and resource caps remain unfrozen; all 11
+  authorization fields and 12 access counters remain false or zero.
+- Added eight dependency-light portfolio invariants; the combined Loop 48
+  request, portfolio, contract, and roadmap suite passes 43 tests.
+- Updated the tracker to the exact Stage A decision and H1-H5 portfolio. The
+  116,641-byte workbook is SHA-256
+  `2d7d3c7b87aa58c9cb43d9b2ca39a360489b2b252944407a0fc3d602ffd81c7e`;
+  focused dashboard/decision/scientific-roadmap renders are readable, the
+  formula scan found zero errors, and ZIP integrity passed. The isolated
+  renderer took 86.88 seconds and peaked at 840,777,728-byte RSS. The adjacent
+  user-owned sidecar remains untracked and byte-identical at SHA-256
+  `b96bbea77ec93e59c0db7c4bcaeb4a9182f1f7cc7039d13fb223b65e0005beb6`.
+- Local acceptance passes 43 focused request/portfolio/contract/roadmap tests
+  and 733 dependency-light tests with 142 expected optional skips. Ruff,
+  formatting, all registry JSON, workbook formula/render/ZIP checks, and
+  `git diff --check` pass. The fully provisioned suite discovered 780 tests;
+  779 reached expected outcomes, while the pre-existing Loop 24 isolated timing
+  test exceeded its hard five-second worker timeout under heavy host CPU
+  contention. An isolated rerun failed for the same measured timing reason.
+  The previously committed 762-test suite was green before these 18 pure
+  request/portfolio tests were added, and all 18 new tests pass focused. No
+  timeout, threshold, or experiment code was changed; remote CI is the required
+  clean-host full-suite gate for this milestone.
+
+Engineering capability proposed: a future shared telemetry pass can test
+several failure mechanisms efficiently without reusing consumed validation.
+
+Scientific claim not established: the design confirms none of the five
+hypotheses and adds no neural, decoding, generalization, real-time, EEG,
+portable/home-device, or clinical evidence.

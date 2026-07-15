@@ -22,7 +22,14 @@
    `registries/loop48_failure_localization_contract.v0.json` for the
    post-outcome artifact-only failure tree. Its leading `F5` phenotype is
    output-distribution instability, not a proven root cause; implementation
-   and execution remain unauthorized.
+   and execution remain unauthorized. Review
+   `docs/LOOP_48_AUTHORIZATION_PACKET.md` and
+   `registries/loop48_authorization_request.v0.json` for the exact next
+   decision; preparing the request did not authorize Stage A.
+   Read `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md` only as future Stage
+   B design research: five hypotheses may coexist, scientific comparisons are
+   parallel, numerical compute is sequential, and every execution field is
+   false.
 8. Read `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` for the selected S25
    metadata candidate and every blocker that still prevents preregistration,
    download, signal/target access, or transfer evaluation.

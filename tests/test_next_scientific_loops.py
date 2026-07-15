@@ -110,9 +110,12 @@ class NextScientificLoopsTests(unittest.TestCase):
         loop48 = next(row for row in self.registry["loops"] if row["loop_id"] == 48)
         self.assertIn("loop48_failure_localization_contract.v0.json", loop48["build_deliverable"])
         self.assertIn("F5", loop48["build_deliverable"])
+        self.assertIn("loop48_hypothesis_portfolio.v0.json", loop48["build_deliverable"])
         self.assertIn("four exact committed", loop48["data_scope"])
         self.assertIn("<=30 seconds", loop48["future_resource_cap"])
-        self.assertIn("Every authorization field is false", loop48["authorization_boundary"])
+        self.assertIn("every authorization field remains false", loop48["authorization_boundary"])
+        self.assertIn("loop48_authorization_request.v0.json", loop48["authorization_boundary"])
+        self.assertIn("cannot inherit Stage A authorization", loop48["authorization_boundary"])
         self.assertFalse(loop48["execution_authorized"])
 
     def test_s25_is_final_only_with_zero_fit_and_strict_gate(self):
