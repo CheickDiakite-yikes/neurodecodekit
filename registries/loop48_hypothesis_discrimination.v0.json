@@ -1,0 +1,200 @@
+{
+  "schema_name": "neurodecodekit.loop48_hypothesis_discrimination",
+  "schema_version": "0.1.0",
+  "prepared_at": "2026-07-15",
+  "status": "design_research_only_not_preregistered_or_authorized",
+  "proof_posture": "six_hypothesis_discrimination_design_no_protected_or_model_execution",
+  "authorized_now": false,
+  "additive_to_green_portfolio": {
+    "portfolio_path": "registries/loop48_hypothesis_portfolio.v0.json",
+    "portfolio_sha256": "43215c85337b5c883119046dfe527a2ed993d61e8997874db43f4569f5dbe931",
+    "portfolio_doc_path": "docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md",
+    "portfolio_doc_sha256": "edd8afddf26457672bca994601d86a45fbbbf965ff4e7d1bb9a5fbd1705ce149",
+    "stage_a_contract_path": "registries/loop48_failure_localization_contract.v0.json",
+    "stage_a_contract_sha256": "ecd226f8ae8892e40ecd65c25d59e000384289e9c434886db71dabcfde9e31b1",
+    "mutates_stage_a_request": false,
+    "authorizes_stage_a_or_stage_b": false
+  },
+  "design_corrections": {
+    "h1_is_fixed_recipe_not_universal_ctc_verdict": true,
+    "data_quantity_and_sentence_diversity_are_separate_hypothesis": true,
+    "descriptive_measurement_is_not_discriminating_intervention": true,
+    "sensor_dependence_is_not_brain_specific_origin": true,
+    "hypotheses_may_coexist": true,
+    "forced_single_winner": false,
+    "parallel_science_means_concurrent_compute": false,
+    "cpu_threads": 1,
+    "workers": 1,
+    "concurrent_numerical_jobs": 1
+  },
+  "evidence_levels": [
+    {"level": "E0", "label": "unavailable", "maximum_wording": "unresolved"},
+    {"level": "E1", "label": "descriptive", "maximum_wording": "observed phenotype or feasibility fact"},
+    {"level": "E2", "label": "pipeline_discriminative", "maximum_wording": "supports or weighs against one bounded pipeline mechanism"},
+    {"level": "E3", "label": "bounded_sensor_dependence", "maximum_wording": "intact signal clears every registered train-only corruption and prior by the preregistered practical margin and paired uncertainty gate on the diagnostic partition"},
+    {"level": "E4", "label": "brain_origin_review_eligible", "maximum_wording": "eligible for separate Loop 35 review after synchronized peripheral controls and fresh prospective evidence"}
+  ],
+  "current_evidence_ceiling": "E1",
+  "future_stage_b_ceiling": "E3",
+  "hypotheses": [
+    {
+      "hypothesis_id": "H1",
+      "label": "fixed_tiny_ctc_recipe_feasibility_or_optimization_failure",
+      "support_pattern": "infeasible alignment or frozen-recipe tiny-fit failure with persistent blank loss or gradient pathology",
+      "against_pattern": "all items feasible and the same frozen recipe reliably fits a tiny train-only subset",
+      "smallest_falsifier": "static feasibility plus one separately registered tiny-fit sanity check",
+      "maximum_claim": "the exact local recipe fails not that CTC is unsuitable",
+      "overlaps_with": ["H2", "H3", "H6"],
+      "causal_status_now": "unresolved"
+    },
+    {
+      "hypothesis_id": "H2",
+      "label": "sensor_or_trial_quality_insufficiency",
+      "support_pattern": "registered quality floors fail and simple and sequence probes also fail",
+      "against_pattern": "quality floors pass and stable task-locked probes survive corruption controls",
+      "smallest_falsifier": "train-only channel and trial quality audit paired with one simple probe",
+      "maximum_claim": "this slice fails declared quality floors not that S21 lacks neural information",
+      "overlaps_with": ["H1", "H3", "H4"],
+      "causal_status_now": "unresolved"
+    },
+    {
+      "hypothesis_id": "H3",
+      "label": "timing_or_preprocessing_information_mismatch",
+      "support_pattern": "off-center train-only time profile or declared paired transform contrast isolates sensitivity",
+      "against_pattern": "centered profile and paired transform agreement under the same split and probe",
+      "smallest_falsifier": "frozen nonwrapping time-shift profile and one declared paired transform",
+      "maximum_claim": "the local pipeline is timing or transform sensitive not that one transform is biologically correct",
+      "overlaps_with": ["H1", "H2", "H4"],
+      "causal_status_now": "unresolved"
+    },
+    {
+      "hypothesis_id": "H4",
+      "label": "stable_but_nonseparable_representation",
+      "support_pattern": "stable fit dynamics while simple and sequence probes fail intact versus corrupted controls on disjoint train-only check rows",
+      "against_pattern": "a simple task-locked probe succeeds while continuous CTC fails",
+      "smallest_falsifier": "one frozen shared check bundle containing simple and sequence probes",
+      "maximum_claim": "this representation and probe combination is not separable at the measured scale",
+      "overlaps_with": ["H2", "H3", "H6"],
+      "causal_status_now": "unresolved"
+    },
+    {
+      "hypothesis_id": "H5",
+      "label": "prior_dominated_task_regime",
+      "support_pattern": "intact signal clears registered corruptions but fails the frozen practical margin or paired uncertainty gate against a train-only no-signal prior",
+      "against_pattern": "intact signal clears the preregistered practical margin and paired uncertainty gate against the prior and every frozen corruption on the same check rows",
+      "smallest_falsifier": "shared frozen intact corruption and prior predictions on one train-only check partition",
+      "maximum_claim": "sensor evidence is weaker than the prior on this diagnostic partition",
+      "overlaps_with": ["H4", "H6"],
+      "causal_status_now": "unresolved"
+    },
+    {
+      "hypothesis_id": "H6",
+      "label": "data_quantity_or_sentence_diversity_insufficiency",
+      "support_pattern": "fit succeeds while check error improves across nested unique-sentence prefixes seed dispersion shrinks and no plateau appears",
+      "against_pattern": "stable fit and check behavior reaches an early plateau insensitive to additional unique rows",
+      "smallest_falsifier": "nested train-only unique-sentence curve with fixed seeds and one frozen check partition",
+      "maximum_claim": "the observed 55-row range is non-saturated not that more data will necessarily create advantage",
+      "overlaps_with": ["H1", "H4", "H5"],
+      "causal_status_now": "unresolved"
+    }
+  ],
+  "orthogonal_claim_threat": {
+    "threat_id": "T1",
+    "label": "peripheral_or_task_locked_shortcut_dependence",
+    "why_orthogonal": "This threat bounds interpretation of a positive sensor result rather than explaining the current model failure.",
+    "current_status": "unresolved_complete_synchronized_controls_unavailable",
+    "route": "Loop_35_peripheral_confound_firewall",
+    "stage_b_can_clear_threat": false,
+    "brain_specific_claim_allowed": false
+  },
+  "future_discrimination_stages": [
+    {"stage_id": "D0", "label": "artifact_integrity_and_aggregate_replay", "hypotheses": ["H1"], "status": "stage_a_requested_not_authorized"},
+    {"stage_id": "D1", "label": "static_feasibility_quality_and_timing", "hypotheses": ["H1", "H2", "H3"], "status": "not_preregistered"},
+    {"stage_id": "D2", "label": "fixed_recipe_fit_telemetry", "hypotheses": ["H1", "H6"], "status": "not_preregistered"},
+    {"stage_id": "D3", "label": "shared_disjoint_train_only_probe_bundle", "hypotheses": ["H1", "H4", "H6"], "status": "not_preregistered"},
+    {"stage_id": "D4", "label": "prior_corruption_and_transform_controls", "hypotheses": ["H2", "H3", "H4", "H5"], "status": "not_preregistered"},
+    {"stage_id": "D5", "label": "support_vector_conflicts_resources_and_next_falsifier", "hypotheses": ["H1", "H2", "H3", "H4", "H5", "H6"], "status": "not_preregistered"}
+  ],
+  "shared_evidence_families": [
+    "identity_split_and_hash_integrity",
+    "ctc_static_feasibility",
+    "channel_and_trial_quality",
+    "timing_and_alignment_uncertainty",
+    "fit_loss_gradient_update_and_blank_dynamics",
+    "tiny_fit_sanity",
+    "task_locked_simple_probe",
+    "continuous_sequence_probe",
+    "nested_unique_sentence_curve",
+    "prior_and_signal_corruption_controls",
+    "paired_transform_or_time_shift_control",
+    "resource_access_and_claim_ledger"
+  ],
+  "non_identifiability_rules": [
+    "blank_dominance_alone_cannot_distinguish_H1_H2_H3_or_H6",
+    "failed_simple_probe_without_quality_audit_cannot_distinguish_H2_from_weak_information",
+    "improving_learning_curve_cannot_prove_unobserved_data_will_cross_the_prior",
+    "offline_causal_difference_cannot_identify_one_preprocessing_operation",
+    "intact_signal_corruption_win_cannot_establish_brain_specific_origin"
+  ],
+  "future_unfrozen_fields": [
+    "exact_fit_and_check_row_counts",
+    "exact_subset_and_optimizer_seeds",
+    "support_thresholds_and_quality_floors",
+    "model_and_probe_inventory",
+    "fit_inference_prediction_and_checkpoint_counts",
+    "runtime_peak_rss_and_generated_output_caps",
+    "target_conditioned_interpretation_or_stopping_rules"
+  ],
+  "authorization": {
+    "discrimination_implementation_authorized_now": false,
+    "static_prototype_authorized_now": false,
+    "train_array_read_authorized_now": false,
+    "cache_signal_target_read_authorized_now": false,
+    "split_creation_authorized_now": false,
+    "model_inference_authorized_now": false,
+    "training_parameter_update_authorized_now": false,
+    "prediction_checkpoint_authorized_now": false,
+    "interpretation_scoring_authorized_now": false,
+    "fresh_person_data_authorized_now": false,
+    "source_test_session2_s7_s20_s25_authorized_now": false,
+    "download_network_authorized_now": false,
+    "stream_device_hardware_authorized_now": false,
+    "stage_a_authorization_transfers_to_stage_b_authorized_now": false
+  },
+  "current_activity_counters": {
+    "public_primary_source_documents_consulted": 5,
+    "public_source_research_passes": 1,
+    "protected_cache_or_array_reads": 0,
+    "signal_reads": 0,
+    "target_reads": 0,
+    "fixture_generations": 0,
+    "split_creations": 0,
+    "model_inference_runs": 0,
+    "training_or_parameter_update_runs": 0,
+    "prediction_or_checkpoint_operations": 0,
+    "scoring_or_interpretation_runs": 0,
+    "downloads": 0,
+    "stream_device_or_hardware_operations": 0
+  },
+  "source_bindings": [
+    {"source_id": "brain2qwerty_v2", "url": "https://facebookresearch.github.io/brain2qwerty/assets/brain2qwerty_v2.pdf", "use": "asynchronous CTC data scale sentence diversity architecture and noncausal boundary"},
+    {"source_id": "brain2qwerty_v1", "url": "https://www.nature.com/articles/s41593-026-02303-2", "use": "task locked simple probes before sentence decoding and motor linked evidence"},
+    {"source_id": "ctc_peaky_behavior", "url": "https://arxiv.org/abs/2105.14849", "use": "blank dominance local convergence and input target ratio"},
+    {"source_id": "large_scale_noninvasive_word_decoding", "url": "https://www.nature.com/articles/s41467-025-65499-0", "use": "data task modality averaging bias and variance distinctions"},
+    {"source_id": "preprocessing_decoding_sensitivity", "url": "https://arxiv.org/abs/2410.14453", "use": "preprocessing sensitivity and artifact interpretation risk"}
+  ],
+  "claim_boundary": {
+    "engineering_capability_proposed": "A six-hypothesis discrimination map separates fixed-recipe quality timing representation prior and data-regime explanations while reusing one future train-only evidence bundle.",
+    "scientific_claim_not_established": "No hypothesis is confirmed and no new neural advantage useful decoding brain-specific origin generalization causal real-time EEG portable home-device or clinical evidence exists."
+  },
+  "warnings": [
+    "additive_design_does_not_mutate_green_stage_a_request",
+    "H1_is_not_a_universal_CTC_verdict",
+    "H6_does_not_transfer_Brain2Qwerty_v2_scaling_to_S21",
+    "parallel_hypotheses_do_not_mean_concurrent_compute",
+    "stage_B_exact_inventory_and_caps_remain_unfrozen",
+    "sensor_dependence_is_not_brain_specific_origin",
+    "stage_A_authorization_cannot_transfer_to_stage_B",
+    "consumed_validation_cannot_select_or_rescue_a_design"
+  ]
+}

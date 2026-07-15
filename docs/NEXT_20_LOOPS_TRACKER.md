@@ -280,7 +280,12 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   authorize no code. Loop 24 is now parked and cannot authorize RW3, data,
   training, or hardware. Seeds 2203, 2303, 2353, and 2401 stay consumed; seed
   2402 remains unopened. Loop 25 is consumed at its exact mechanics boundary;
-  the next numbered gate is separately scoped Loop 48 failure localization.
+  Loop 48 artifact-only failure localization completed one exact Stage A and
+  selected descriptive `F5`; the 10,643-byte result is consumed and no rerun is
+  authorized. The immutable five-hypothesis train-only portfolio now
+  has an additive six-hypothesis discrimination map that separates the fixed
+  recipe from data quantity/diversity and routes shortcut risk to Loop 35; both
+  remain design-only and unauthorized.
 
 ## Next planned 20 loops: 25-44
 
@@ -599,8 +604,20 @@ The next 20 work orders are frozen in
 Truth, Unseen-Person Verdict, Accessible EEG Evidence, Causal Local Use, and
 Independent Evidence And Release.
 
-All 20 statuses are `Not Started`; all execution flags and all nine global
-authorization fields are false. The first possible positive scientific claim
-is a bounded S21 source-validation effect that beats a no-signal prior and all
-registered corrupted-signal controls. The stronger claim is a frozen final-only
-S25 zero-shot result. No roadmap row authorizes either experiment.
+Loop 45 is complete at its target-free mechanics boundary. Loops 46 and 47 are
+parked after the one consumed S21 event failed the candidate-versus-prior and
+full attribution conjunctions. Loop 48 completed one artifact-only Stage A at
+descriptive `F5`; its result is consumed with no rerun. Stage B is now exactly
+preregistered over a deterministic 44-fit/11-check source-train split with 20
+fits, 35 target-blind inferences, five priors, 41 frozen prediction sets, and
+2,048 exact sign assignments. All 55 rows were used historically, so this can
+reach at most E2 diagnostic evidence. The contract authorizes nothing and no
+protected read, implementation, training, inference, or check score occurred.
+Preregistration commit `0ee0ab7` and push/PR CI runs `29452286159` /
+`29452288520` are green. The exact packet and machine request are prepared, but
+all authorization remains false.
+Loops 49-64 are `Not Started`. All execution
+flags and all nine global authorization fields are false. The next possible
+positive scientific claim now requires a fresh, separately registered
+development-person path before the final-only S25 zero-shot verdict. No roadmap
+row authorizes either experiment.

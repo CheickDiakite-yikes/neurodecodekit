@@ -9,8 +9,28 @@
 > the attribution conjunction and scaling gate also failed. Engineering,
 > access-order, one-thread, 1 GiB RSS, and 32 MiB artifact gates all passed.
 > Five source-test rows, session 2, post-target tuning, and any rerun remain
-> closed. Loop 48 artifact-first failure localization is next but `Not Started`
-> and requires a separate authorization for any train-array or protected read.
+> closed. Loop 48 completed exactly one artifact-only Stage A after separate
+> authorization commit `5bae880` and implementation commit `ca21539` were each
+> pushed and remotely green. The frozen tree selected descriptive `F5`
+> output-distribution instability from four committed aggregate JSON files.
+> Internal runtime was `0.016568875` seconds, peak RSS was 23,429,120 bytes,
+> and the consumed report is 10,643 bytes at SHA-256
+> `dbfb4c7cc6163ff31fa216c1b33e7510a87b0b843ef714754037d37275924659`.
+> This is not a proven root cause, and no rerun is authorized.
+> Closeout commit `6322635` passed push CI `29446438743` and PR CI
+> `29446440355`.
+> The additive six-hypothesis pass has now advanced to one exact Stage B
+> preregistration: 44 fit rows, 11 target-withheld check rows, five nested
+> sizes, three fixed seeds, 20 fits, 35 target-blind inferences, five priors,
+> 41 prediction sets, and 2,048 exact sign assignments. All 55 rows were used
+> historically, so the check partition is not independent confirmation and
+> the result ceiling is E2 diagnostic evidence. Preregistration commit
+> `0ee0ab7` passed push CI `29452286159` and PR CI `29452288520`. The separate
+> packet and machine request are prepared at
+> `docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md` and
+> `registries/loop48_stage_b_authorization_request.v0.json`. Every
+> authorization remains false; no protected read, implementation, model
+> operation, or score occurred.
 
 > Historical pre-Loop-25-execution context, retained for audit: Loops 1-12,
 > 14-22, and 23.5 are complete; Loops
@@ -450,12 +470,29 @@ This is not primarily a model repo. It is a **research loop repo**.
 
 ## Current Next Work
 
-1. **Loop 48 - design failure localization; do not rerun Loop 26.**
-   Read `docs/LOOP_26_SHARED_VALIDATION_RESULT.md` and
-   `registries/loop26_shared_validation_result.v0.json`. Use only committed
-   aggregate artifacts for planning. Any train-array diagnostic, cache member,
-   target, model run, or implementation requires a new exact scope and separate
-   authorization; source test and session 2 stay closed.
+Governance note: `docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md` proposes automatic
+Tier A routine work and Tier B bounded development experiments, with one exact
+stop before Tier C irreversible evidence, real-data, hardware, destructive,
+release, or claim actions. The draft is inactive and changes no current loop
+authorization.
+
+1. **Loop 48 - audit the consumed artifact-only result; do not rerun it.**
+   Read `docs/LOOP_48_FAILURE_LOCALIZATION_RESULT.md` and
+   `registries/loop48_failure_localization_result.v0.json`. One bounded pass
+   verified four committed JSON identities, reproduced the aggregate evidence,
+   and selected descriptive `F5`. It opened no ignored output, train array,
+   target, checkpoint, private prediction, source-test row, or session-2
+   payload, and ran no model or training. The result is not a proven root cause.
+   The immutable pre-execution contract, request, and decision remain audit
+   records; Stage A is consumed and cannot be rerun or tuned.
+   The immutable future portfolio in
+   `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md` starts with `H1`-`H5`.
+   `docs/LOOP_48_HYPOTHESIS_DISCRIMINATION_RESEARCH.md` and
+   `registries/loop48_hypothesis_discrimination.v0.json` add `H6` for data
+   quantity/diversity, narrow `H1` to the exact fixed recipe, and route `T1`
+   shortcut risk to Loop 35. Splits, thresholds, models, caps, and execution
+   remain unfrozen and unauthorized. Commit `33a14d8` and both CI runs are
+   green, but the consumed Stage A decision does not authorize Stage B.
 2. **RW3 - decide on the prepared Stage A packet only.** Review
    `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` and
    `registries/rw3_stage_a_authorization_request.v0.json`. The request is bound
@@ -1095,28 +1132,39 @@ The next scientific tranche is in
 of four, ten sources, ten kill branches, 20 false execution flags, and nine
 false global authorization fields.
 
-The critical sequence has stopped at the failed Loop 46/47 S21 gate. The next
-allowed design step is Loop 48 artifact-first failure localization; only a
-separately designed non-S25 development-person path could later reopen the
-predictive branch before Loop 52's one-time S25 verdict. S21
+The critical sequence has stopped at the failed Loop 46/47 S21 gate. Loop 48
+completed one artifact-only Stage A and selected descriptive `F5`, but did not
+establish a root cause. Its result is consumed and no rerun is authorized. The
+additive H1-H6 discrimination map remains design-only and preserves an `E3`
+ceiling below brain-specific origin; only a separately designed non-S25
+development-person path could
+later reopen the predictive branch before Loop 52's one-time S25 verdict. S21
 session 2 and S7 stay consumed; S25 stays unopened and final-only. EEG,
 streaming, device, home, reproduction, and release phases remain downstream
 and separately authorized.
 
-The tracker now has ten sheets, including `Loops 45-64`. After the consumed
-Loop 26/31/33 closeout it is 115,442 bytes at SHA-256
-`f081e7755c586433b821345974f62effdab777346aeaad4f9114afb953157a85`.
-All ten sheets rendered, the four changed sheets passed visual review, key
-ranges reloaded, the exported ZIP passed integrity validation, and the
-formula-error scan found zero matches. The user-owned inspection sidecar
-remains byte-exact at SHA-256
-`b96bbea77ec93e59c0db7c4bcaeb4a9182f1f7cc7039d13fb223b65e0005beb6`
-and remains untracked and unstaged.
+The tracker has ten sheets, including `Loops 45-64`. After the consumed Loop 48
+Stage A closeout it is 117,187 bytes at SHA-256
+`7e6424cd5f69d29f78ea7335d1cf277d293eeac4071668991f66d37d7679d4c3`.
+The dashboard, decision `48-R5`, evidence-roadmap summary, and scientific Loop
+48 row passed focused visual review. All ten sheets received a post-edit visual
+pass, the formula-error scan found zero matches, and ZIP integrity passed. The
+final artifact-tool update/export took 11.04 seconds and reached
+1,572,667,392-byte maximum RSS; do not repeat full workbook imports casually.
+The adjacent user-owned inspection sidecar was not read, modified, staged, or
+committed during this closeout.
 
-Local closeout acceptance passes 70 focused result and roadmap tests; 748 fully
-provisioned unittests with three expected skips in 24.603 seconds and
-625,442,816-byte maximum RSS, compared with the 744-test, three-skip pre-change
-baseline; and 701 dependency-light tests with 142 expected skips in 1.596
-seconds and 118,538,240-byte maximum RSS. Final static checks and the staged
-secret scan passed. Closeout commit `f407ffb` passed push CI `29428087084` and
-PR CI `29428091698`, including Base Python and Optional Neuro Readers.
+Current local acceptance passes 86 focused Loop 48/roadmap tests plus five
+autonomy-charter invariants, 781 dependency-light tests with 142 expected
+skips, and 828 optional-neuro tests with 3 expected skips. The final
+dependency-light run took 1.318 seconds at 110,821,376-byte maximum RSS; the
+final optional-neuro run took 26.177 seconds at 611,926,016-byte maximum RSS.
+Ruff lint, changed-file formatting, compileall,
+every registry JSON, root and Loop 48 CLI help, result inspection,
+`git diff --check`, workbook inspection/render/formula/ZIP checks, and the
+staged secret scan are the closeout gates. Repository-wide `ruff format
+--check .` still reports 106 historical files outside this closeout; those
+unrelated files were deliberately not reformatted.
+
+Closeout commit `6322635` passed push CI `29446438743` and PR CI
+`29446440355`; both Base Python and Optional Neuro Readers jobs were green.

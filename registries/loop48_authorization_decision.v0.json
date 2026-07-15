@@ -1,0 +1,182 @@
+{
+  "schema_name": "neurodecodekit.loop48_authorization_decision",
+  "schema_version": "0.1.0",
+  "decision_id": "loop48-artifact-only-failure-localization-stage-a-authorization-v0",
+  "recorded_at": "2026-07-15",
+  "status": "authorized_no_implementation_or_execution_yet",
+  "proof_posture": "exact_user_authorization_recorded_authorization_commit_not_yet_green",
+  "authorization_parent_commit": "8c96c7f009d9f3b5b5d93178f3f7e43771bdce61",
+  "effective_only_after_this_record_is_tested_committed_pushed_and_ci_green": true,
+  "authorized_contract": {
+    "contract_path": "registries/loop48_failure_localization_contract.v0.json",
+    "contract_schema_name": "neurodecodekit.loop48_failure_localization_contract",
+    "contract_schema_version": "0.1.0",
+    "contract_sha256": "ecd226f8ae8892e40ecd65c25d59e000384289e9c434886db71dabcfde9e31b1",
+    "contract_git_blob_sha1": "8d659010c2259b638aa5ccf3ebadcb678656cdb2",
+    "registration_commit": "83309bfc29300c542c7a7a6dc0f193baba28d42e",
+    "contract_remains_immutable_preregistration_snapshot": true
+  },
+  "authorization_request": {
+    "request_path": "registries/loop48_authorization_request.v0.json",
+    "request_schema_version": "0.1.0",
+    "request_sha256": "799e5c09c6b5dddf555c19a06f8bf1ce3734246218e4323dffb816b47af813f8",
+    "request_git_blob_sha1": "900ab0b65aa0f0b3400ce19dbd1c019f2e888bd3",
+    "request_commit": "0ffdf47384a35a09e61158921711b033fd62707d",
+    "request_push_ci_run_id": 29433294092,
+    "request_pr_ci_run_id": 29433297546,
+    "request_remains_immutable_and_unauthorized": true
+  },
+  "registration_snapshot": {
+    "research_path": "docs/LOOP_48_PRIMARY_SOURCE_RESEARCH.md",
+    "research_sha256": "d948fb45eb869470300b76f9bb8df81bf59d78c499515d0c25a1db932b796b3f",
+    "research_git_blob_sha1": "8ba6411ec22449cf41565a0ffc1bed76415bfdab",
+    "historical_invariant_test_path": "tests/test_loop48_failure_localization_contract.py",
+    "historical_invariant_test_sha256": "eec77e323b7b46ea12110b33238718895df1b27ca53a7fd8aa9ea35ae2d54605",
+    "historical_invariant_test_git_blob_sha1": "bba4f394d124ef528e2f1a6976afe2aeb772c7b1",
+    "historical_test_blob_remains_bound_by_request_and_git_history": true,
+    "live_test_may_transition_without_mutating_contract_request_or_research": true
+  },
+  "user_authorization": {
+    "exact_sentence_verbatim": "Authorize the Loop 48 artifact-only failure-localization implementation and one Stage A execution exactly as scoped in docs/LOOP_48_PRIMARY_SOURCE_RESEARCH.md and registries/loop48_failure_localization_contract.v0.json. I authorize reading and SHA-256 verification of only the four committed JSON artifacts named by that contract; recomputation of the frozen aggregate blank/CER summaries and six fixed-prefix seed-dispersion checks; application of the ordered eight-class decision tree; and emission of one aggregate target-free JSON report under one CPU thread, one worker, 30 seconds, 256 MiB peak RSS, and 1 MiB generated output. I do not authorize any Git-ignored Loop 26 output, cache/member, train/validation array, target, checkpoint, private prediction, source-test/session-2, S7/S20/S25, raw FIF/MAT, model inference, training, parameter update, threshold/seed/architecture selection, download, language model, RW3, stream, device, hardware, scientific claim upgrade, or rerun.",
+    "matches_packet_exact_sentence": true,
+    "explicit_loop48_stage_a_authorization_intent": true,
+    "one_registered_execution_only": true,
+    "computer_storage_and_other_project_safety_remains_governing_operational_constraint": true,
+    "scope_may_not_expand_by_inference": true
+  },
+  "authorization": {
+    "loop48_artifact_only_implementation_authorized_now": true,
+    "exact_four_committed_json_reads_authorized_now": true,
+    "exact_input_sha256_verification_authorized_now": true,
+    "frozen_aggregate_recomputation_authorized_now": true,
+    "fixed_prefix_seed_dispersion_checks_authorized_now": true,
+    "ordered_eight_class_tree_authorized_now": true,
+    "one_aggregate_target_free_report_authorized_now": true,
+    "one_stage_a_execution_authorized_now": true,
+    "git_ignored_loop26_output_read_authorized_now": false,
+    "cache_or_member_read_authorized_now": false,
+    "train_or_validation_array_read_authorized_now": false,
+    "target_read_authorized_now": false,
+    "checkpoint_or_private_prediction_read_authorized_now": false,
+    "source_test_or_session2_read_authorized_now": false,
+    "s7_s20_or_s25_operation_authorized_now": false,
+    "raw_fif_or_mat_read_authorized_now": false,
+    "model_inference_authorized_now": false,
+    "training_or_parameter_update_authorized_now": false,
+    "threshold_seed_or_architecture_selection_authorized_now": false,
+    "new_download_authorized_now": false,
+    "language_model_or_neurotoken_authorized_now": false,
+    "rw3_stream_device_or_hardware_authorized_now": false,
+    "scientific_claim_upgrade_authorized_now": false,
+    "rerun_authorized_now": false
+  },
+  "registered_execution": {
+    "numbered_loop": 48,
+    "stage": "artifact_only_stage_a",
+    "committed_json_input_count": 4,
+    "committed_json_input_bytes": 155545,
+    "allowed_inputs": [
+      {
+        "artifact_id": "loop26_consumed_result",
+        "path": "registries/loop26_shared_validation_result.v0.json",
+        "bytes": 83713,
+        "sha256": "7577c84eaea7579250b5c1fcdf53234a3d56fdab4640df2edebaee9ae8bd31b4"
+      },
+      {
+        "artifact_id": "loop26_prediction_freeze",
+        "path": "registries/loop26_prediction_freeze.v0.json",
+        "bytes": 31271,
+        "sha256": "10191558a68a8c646e32c4ab0516f84ee99d127b9e6a2ea277c432c6c28b2348"
+      },
+      {
+        "artifact_id": "loop26_shared_contract",
+        "path": "registries/loop26_shared_validation_contract.v0.json",
+        "bytes": 31988,
+        "sha256": "c4f94b214993973ec4b4ea7e7b27174023dfef227c8dd4d9b912ac48bb98ccce"
+      },
+      {
+        "artifact_id": "loop25_causal_mechanics_result",
+        "path": "registries/loop25_causal_preprocessing_result.v1.json",
+        "bytes": 8573,
+        "sha256": "5f80c4d282be79aadaf78908c151acd3949e0a754182cf58b27dcca681218ab1"
+      }
+    ],
+    "operations_in_order": [
+      "verify_exact_paths_bytes_and_sha256",
+      "verify_no_plaintext_target_or_prediction_fields",
+      "recompute_primary_candidate_prior_and_exact_sentence_summary",
+      "recompute_all_18_scaling_blank_fractions",
+      "recompute_six_fixed_prefix_three_seed_blank_ranges",
+      "verify_every_size55_seed_is_worse_than_the_prior",
+      "apply_ordered_failure_class_precedence",
+      "emit_one_aggregate_json_report"
+    ],
+    "aggregate_report_writes": 1,
+    "model_inference_runs": 0,
+    "training_or_parameter_update_runs": 0,
+    "target_deliveries": 0,
+    "protected_cache_or_member_reads": 0,
+    "network_calls": 0,
+    "new_download_bytes": 0,
+    "reruns_after_stage_a": 0
+  },
+  "required_execution_order": [
+    "test_this_authorization_record_and_all_existing_contract_invariants",
+    "commit_and_push_authorization_only_changes_before_implementation",
+    "confirm_the_pushed_authorization_commit_and_both_ci_jobs_are_green",
+    "implement_dependency_light_analyzer_and_synthetic_isolation_tests_without_runtime_read_of_registered_inputs",
+    "test_commit_push_and_obtain_green_ci_for_implementation",
+    "execute_stage_a_once_over_four_exact_committed_json_inputs",
+    "validate_one_aggregate_report_and_record_resources_and_access_counters",
+    "close_or_park_without_rerun_model_operation_or_protected_read"
+  ],
+  "conditional_access_rules": {
+    "registered_artifacts_may_be_read_before_authorization_commit_is_remotely_green": false,
+    "registered_artifacts_may_be_read_during_implementation_or_synthetic_tests": false,
+    "registered_artifacts_may_be_read_after_implementation_commit_is_remotely_green": true,
+    "only_exact_path_size_and_sha256_bound_artifacts_allowed": true,
+    "plaintext_target_or_prediction_fields_allowed": false,
+    "per_item_target_conditioned_metrics_allowed": false,
+    "stage_a_may_run_more_than_once": false,
+    "post_stage_a_tuning_selection_or_rerun_allowed": false
+  },
+  "resource_boundary": {
+    "cpu_threads": 1,
+    "workers": 1,
+    "runtime_sec": 30,
+    "peak_rss_bytes": 268435456,
+    "generated_output_bytes": 1048576,
+    "network_calls": 0,
+    "new_download_bytes": 0,
+    "model_inference_runs": 0,
+    "training_or_parameter_update_runs": 0
+  },
+  "authorization_only_measurements": {
+    "runtime_committed_json_reads": 0,
+    "generated_diagnostic_reports": 0,
+    "git_ignored_output_reads": 0,
+    "cache_or_member_reads": 0,
+    "train_or_validation_array_reads": 0,
+    "target_reads": 0,
+    "checkpoint_or_private_prediction_reads": 0,
+    "source_test_or_session2_reads": 0,
+    "s7_s20_or_s25_operations": 0,
+    "raw_fif_or_mat_reads": 0,
+    "model_inference_runs": 0,
+    "training_or_parameter_update_runs": 0,
+    "threshold_seed_or_architecture_selection_runs": 0,
+    "network_calls": 0,
+    "new_download_bytes": 0,
+    "language_model_or_neurotoken_runs": 0,
+    "rw3_stream_device_or_hardware_operations": 0,
+    "scientific_claim_upgrades": 0,
+    "reruns": 0,
+    "generated_experiment_payload_bytes": 0,
+    "end_to_end_latency_measured": false
+  },
+  "claim_boundary": {
+    "engineering_capability_authorized_for_testing": "One dependency-light, hash-bound artifact-only failure-localization implementation and one registered Stage A execution may proceed after staged green gates.",
+    "maximum_after_clean_stage_a": "The four exact committed aggregate artifacts satisfy F5 under the frozen post-outcome artifact-only decision tree.",
+    "scientific_claim_not_established": "This authorization is not a runtime result and establishes no causal root cause, independent evidence, neural advantage, sensor-signal dependence, brain-specific origin, decoding improvement, unseen-person generalization, real-time behavior, EEG result, portable or home-device result, assistive efficacy, diagnostic value, or clinical capability."
+  }
+}

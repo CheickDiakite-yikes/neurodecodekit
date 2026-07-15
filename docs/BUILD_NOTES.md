@@ -3636,3 +3636,327 @@ brain-specific origin, transfer, real-time, portable-hardware, or clinical resul
   baseline; and 701 dependency-light tests with 142 expected optional skips.
   Final static, CLI, workbook, and secret-scan gates passed. Closeout commit
   `f407ffb` passed push CI `29428087084` and PR CI `29428091698`.
+
+## 2026-07-15 - Loop 48 Artifact-Only Failure Localization Preregistration
+
+- Audited only four committed aggregate JSON artifacts from the consumed
+  Loop 26/31/33 result. No cache, derivative, checkpoint, private prediction,
+  target bundle, raw FIF/MAT, source-test row, session 2, S7, S20, or S25
+  payload was read.
+- Reproduced the public failure signature: primary blank fraction `0.993477`,
+  primary macro sentence CER `0.938177` versus prior `0.751235`, all-condition
+  blank range `0.997146`, all six prefix groups above `0.25` three-seed blank
+  dispersion, and all three size-55 seeds worse than the no-signal prior.
+- Registered `F5` model-fit/output-distribution instability as the leading
+  observable phenotype, not a proven root cause. The contract records the
+  missing optimization, CTC-feasibility, train-only decoding, signal-quality,
+  timing, and representation-comparison evidence instead of guessing.
+- Frozen eight ordered failure classes, 17 unavailable evidence fields, 30
+  refusals, four exact artifact identities, and one future artifact-only Stage
+  A capped at one thread, 30 seconds, 256 MiB RSS, and 1 MiB output.
+- Kept every authorization flag false. No Loop 48 implementation, generated
+  diagnostic report, model run, training run, target read, protected data read,
+  download, network call, stream, device, or hardware operation occurred.
+- Updated and visually verified the ten-sheet tracker using the bundled
+  spreadsheet runtime. The workbook grew from 115,442 to 116,124 bytes and is
+  SHA-256 `3f5a2d70ff654b0eb56fc04cbed3153139816b4681b8d164a8f6292d6a427753`;
+  all ten sheets rendered, the formula-error scan found zero matches, and ZIP
+  integrity passed. The full render/export took 17.42 seconds and briefly
+  reached 2,352,807,936-byte process RSS, so no further full render was used.
+  The adjacent user-owned sidecar remained untracked and byte-identical at
+  SHA-256 `b96bbea77ec93e59c0db7c4bcaeb4a9182f1f7cc7039d13fb223b65e0005beb6`.
+- Local acceptance passes 25 focused Loop 48/roadmap tests in 0.009 seconds;
+  762 fully provisioned tests with three expected skips in 24.742 seconds and
+  624,001,024-byte process maximum RSS, versus the 748/3 pre-change baseline;
+  and 715 dependency-light tests with 142 expected optional skips in 1.240
+  seconds and 118,374,400-byte process maximum RSS, versus the 701/142
+  baseline. Ruff lint, changed-test formatting, compileall, every registry
+  JSON, CLI help, `git diff --check`, workbook render/formula/ZIP checks, and
+  the contract hash binding pass. An accidental Apple Python 3.9 invocation
+  failed collection because it lacked `PYTHONPATH`, `tomllib`, and modern type
+  syntax; the supported Python 3.13 dependency-light command passed unchanged.
+
+Engineering capability proposed: one exact artifact-only discrepancy tree can
+make the consumed negative result mechanically classifiable without reopening
+protected data.
+
+Scientific claim not established: the planning result does not prove why the
+model failed or establish neural advantage, signal dependence, decoding,
+generalization, real-time behavior, EEG performance, portable/home hardware,
+or clinical utility.
+
+## 2026-07-15 - Loop 48 Stage A Authorization Request
+
+- Bound the request to green contract commit `83309bf`, push CI
+  `29431318268`, PR CI `29431347801`, the exact contract/research/test hashes,
+  and the four exact committed input identities totaling 155,545 bytes.
+- Requested only a dependency-light analyzer plus one future aggregate Stage A
+  under one thread, one worker, 30 seconds, 256 MiB RSS, and 1 MiB output.
+- Kept all 18 `authorized_now` fields and 19 current runtime/access counters at
+  zero or false. No implementation, runtime input read, report, model,
+  training, target, protected payload, download, stream, device, or hardware
+  operation occurred.
+- Added ten request invariants; the combined Loop 48 request, contract, and
+  roadmap suite passes 35 tests.
+
+Engineering capability proposed: a separately reviewable permission gate now
+binds the exact artifact-only runtime before any implementation or execution.
+
+Scientific claim not established: preparing the request creates no new
+evidence and does not establish a root cause, neural advantage, decoding,
+generalization, real-time behavior, EEG result, portable/home hardware, or
+clinical utility.
+
+## 2026-07-15 - Loop 48 Multi-Hypothesis Stage B Design
+
+- Replaced the implicit single-cause framing with five potentially coexisting
+  hypotheses: CTC fit, sensor quality, timing/preprocessing, representation
+  separability, and prior dominance.
+- Designed one shared train-only evidence bundle spanning ten measurement
+  families and explicit support-for, support-against, missing, conflicting,
+  and next-falsifier fields for every hypothesis.
+- Defined parallel scientific evaluation with sequential one-thread compute so
+  evidence is reused without concurrent workloads or repeated prediction sets.
+- Kept Stage B entirely outside the Stage A request. Exact train-only splits,
+  thresholds, seeds, model inventory, and resource caps remain unfrozen; all 11
+  authorization fields and 12 access counters remain false or zero.
+- Added eight dependency-light portfolio invariants; the combined Loop 48
+  request, portfolio, contract, and roadmap suite passes 43 tests.
+- Updated the tracker to the exact Stage A decision and H1-H5 portfolio. The
+  116,641-byte workbook is SHA-256
+  `2d7d3c7b87aa58c9cb43d9b2ca39a360489b2b252944407a0fc3d602ffd81c7e`;
+  focused dashboard/decision/scientific-roadmap renders are readable, the
+  formula scan found zero errors, and ZIP integrity passed. The isolated
+  renderer took 86.88 seconds and peaked at 840,777,728-byte RSS. The adjacent
+  user-owned sidecar remains untracked and byte-identical at SHA-256
+  `b96bbea77ec93e59c0db7c4bcaeb4a9182f1f7cc7039d13fb223b65e0005beb6`.
+- Local acceptance passes 43 focused request/portfolio/contract/roadmap tests
+  and 733 dependency-light tests with 142 expected optional skips. Ruff,
+  formatting, all registry JSON, workbook formula/render/ZIP checks, and
+  `git diff --check` pass. The fully provisioned suite discovered 780 tests;
+  779 reached expected outcomes, while the pre-existing Loop 24 isolated timing
+  test exceeded its hard five-second worker timeout under heavy host CPU
+  contention. An isolated rerun failed for the same measured timing reason.
+  The previously committed 762-test suite was green before these 18 pure
+  request/portfolio tests were added, and all 18 new tests pass focused. No
+  timeout, threshold, or experiment code was changed; remote CI is the required
+  clean-host full-suite gate for this milestone.
+- Request/portfolio commit `0ffdf47` then passed push CI `29433294092` and PR
+  CI `29433297546`. Each clean-host run passed 733 dependency-light tests with
+  142 expected skips and 765 optional-neuro tests with 22 expected skips, plus
+  Ruff. This closes the clean-host qualification gap without erasing the local
+  780-test lane's measured Loop 24 timing timeout under host contention.
+
+Engineering capability proposed: a future shared telemetry pass can test
+several failure mechanisms efficiently without reusing consumed validation.
+
+Scientific claim not established: the design confirms none of the five
+hypotheses and adds no neural, decoding, generalization, real-time, EEG,
+portable/home-device, or clinical evidence.
+
+## 2026-07-15 - Loop 48 Hypothesis Discrimination Research
+
+- Preserved the green H1-H5 portfolio and added an independent H1-H6
+  discrimination map rather than rewriting historical evidence. `H1` now means
+  failure of the exact 2,908-parameter, 240-step tiny CTC recipe, not failure of
+  CTC generally; `H6` separately tests data quantity and unique-sentence
+  diversity.
+- Added orthogonal threat `T1` for peripheral/task-locked shortcut dependence.
+  A future Stage B result can reach at most `E3` bounded sensor dependence and
+  only if intact signal clears every registered prior/corruption by both a
+  preregistered practical margin and paired uncertainty gate. Brain-specific
+  origin remains behind the separate Loop 35 firewall.
+- Bound six coexisting hypotheses to six shared sequential evidence stages,
+  five evidence levels, five non-identifiability rules, seven deliberately
+  unfrozen Stage B fields, five public primary-source bindings, 15 false
+  authorization fields, one thread, one worker, and one numerical job.
+- Read five public sources and produced a 12,215-byte research note plus a
+  12,053-byte registry. Protected cache/array, signal, target, fixture, split,
+  model, training, prediction, checkpoint, scoring, download, stream, device,
+  and hardware counters all remained zero.
+- Added ten dependency-light invariants. The combined Loop 48 and scientific
+  roadmap surface passes 53 focused tests. The full dependency-light suite
+  passes 743 tests with 142 expected skips, versus the 733/142 pre-change
+  baseline; measured final-tree local runtime was 3.32 seconds with 112,672,768-byte
+  maximum RSS.
+- Commit `33a14d8` passed push CI `29436731383` and PR CI `29436735374`. Each
+  clean host passed Ruff, 743 dependency-light tests with 142 expected skips,
+  and 775 optional-neuro tests with 22 expected skips.
+- Updated the ten-sheet tracker with dashboard scope, decision `48-R4`, the
+  Loops 25-44 summary, and the scientific Loop 48 row. The workbook grew from
+  116,641 to 117,184 bytes and is SHA-256
+  `9a25c0eef4557618d3639c74549b30ace0c352cc559f45de9c73a0dbda3f33ec`.
+  Changed ranges rendered cleanly after two targeted row-height repairs, the
+  formula scan found zero errors, and ZIP integrity passed. The artifact-tool
+  export took 11.53 seconds and peaked at 1,496,907,776-byte RSS, so the pass
+  deliberately avoided a new full-workbook render. The adjacent user-owned
+  sidecar remained untracked and byte-identical at SHA-256
+  `b96bbea77ec93e59c0db7c4bcaeb4a9182f1f7cc7039d13fb223b65e0005beb6`.
+- Ruff lint, changed-test formatting, compileall, every registry JSON, CLI help,
+  `git diff --check`, workbook value inspection, focused renders,
+  formula-error scan, ZIP integrity, and staged secret scanning passed.
+
+Engineering capability proposed: a future one-pass train-only diagnostic can
+compare six plausible failure mechanisms while retaining conflicts, resource
+limits, uncertainty, and claim ceilings.
+
+Scientific claim not established: no hypothesis was tested or confirmed, no
+new neural evidence was created, and neural advantage, useful decoding,
+brain-specific origin, generalization, real-time behavior, EEG portability,
+home use, and clinical utility remain unestablished.
+
+## 2026-07-15 - Loop 48 Artifact-Only Stage A Result
+
+- Recorded the user's exact bounded permission in a separate authorization-only
+  milestone. Commit `5bae880` passed push CI `29442914090` and PR CI
+  `29442916230` before implementation began.
+- Added the dependency-light Loop 48 analyzer, strict path and hash checks,
+  ordered eight-class decision tree, bounded JSON writer, two CLI commands, and
+  15 synthetic-only tests. Implementation commit `ca21539` passed push CI
+  `29444008688` and PR CI `29444012075` before registered inputs opened.
+- Executed Stage A exactly once. Four committed aggregate JSON artifacts
+  totaling 155,545 bytes passed SHA-256 verification. The run read no ignored
+  Loop 26 output, arrays, targets, checkpoints, private predictions, source
+  test, session 2, S7, S20, S25, FIF, or MAT payloads.
+- Reproduced the primary blank fraction `0.9934773746432939`, all six
+  fixed-prefix blank ranges, and all three size-55 seeds losing to the
+  train-only prior. The ordered tree selected descriptive `F5`
+  output-distribution instability; root cause remains unresolved.
+- Internal runtime was `0.016568875` seconds, external wall time was 0.38
+  seconds, internal/external peak RSS was 23,429,120/23,560,192 bytes, and the
+  report was 10,643 bytes. Model inference, training, parameter updates,
+  downloads, network, stream, device, hardware, and scientific claim upgrades
+  were all zero.
+- Bound the result to SHA-256
+  `dbfb4c7cc6163ff31fa216c1b33e7510a87b0b843ef714754037d37275924659`
+  and marked Stage A consumed with no rerun or post-result tuning authorized.
+- Updated the ten-sheet tracker dashboard, roadmap summaries, scientific Loop
+  48 row, and decision `48-R5`. The 117,187-byte workbook has SHA-256
+  `7e6424cd5f69d29f78ea7335d1cf277d293eeac4071668991f66d37d7679d4c3`;
+  all ten post-edit renders, focused crops, formula scan, and ZIP integrity
+  passed. The final artifact-tool pass took 11.04 seconds and peaked at
+  1,572,667,392 bytes RSS, so future updates should avoid unnecessary full
+  workbook imports. The adjacent user-owned inspection sidecar was not read,
+  modified, staged, or committed.
+- Local acceptance passes 86 focused Loop 48/roadmap tests, 776
+  dependency-light tests with 142 expected skips, and 823 optional-neuro tests
+  with 3 expected skips. The full runs took 2.338/34.585 seconds and peaked at
+  104,415,232/607,223,808 bytes RSS. Ruff lint and changed-file formatting pass.
+  Repository-wide formatting still reports 106 historical files, which this
+  closeout deliberately leaves untouched.
+- Closeout commit `6322635` passed push CI `29446438743` and PR CI
+  `29446440355`; both clean-host jobs were green.
+
+Engineering capability added: one hash-bound aggregate analyzer can reproduce
+the registered failure phenotype under strict resource and access limits.
+
+Scientific claim not established: this result does not identify a causal root
+cause or establish neural advantage, decoding utility, generalization,
+real-time behavior, EEG portability, device performance, or clinical value.
+
+## 2026-07-15 - Draft Tiered Research Autonomy
+
+- Documented why the current gates exist: machine-safety controls protect
+  storage, CPU, background processes, unrelated projects, and destructive
+  operations; scientific controls protect sealed targets, consumed evaluations,
+  frozen protocols, and honest claims.
+- Proposed Tier A autonomous routine work and Tier B bounded development work
+  under one thread, one worker, one numerical job, 1 GiB RSS, and 32 MiB output.
+  An already-authorized development partition can move through later Tier B
+  loops without another permission message when every split, metric, seed,
+  threshold, stop rule, cap, and claim ceiling is frozen first.
+- Retained one exact Tier C stop for new real payloads, final or unseen-person
+  targets, consumed-evaluation reuse, post-outcome protocol changes, downloads,
+  hardware or participant recording, destructive operations, releases, and
+  claim promotion.
+- Kept the charter explicitly inactive. Its exact standing approval is
+  prospective and cannot reopen Loop 48 Stage B, RW3, S25, or another consumed
+  or independently gated experiment.
+- Added five dependency-light invariants. The final branch-level local suites
+  pass 781 tests with 142 expected skips and 828 optional-neuro tests with 3
+  expected skips. Runtime was 1.318/26.177 seconds and maximum RSS was
+  110,821,376/611,926,016 bytes.
+
+Engineering capability proposed: one standing decision can remove repeated
+permission stops from reversible routine and bounded development work.
+
+Scientific claim not established: the draft authorizes nothing and creates no
+new neural, decoding, generalization, real-time, EEG, device, or clinical
+evidence.
+
+## 2026-07-15 - Loop 48 Stage B Train-Only Preregistration
+
+- Advanced the additive six-hypothesis design into one exact, machine-readable
+  protocol over the existing S21 session-1 source-train partition. No cache
+  member, signal, target, checkpoint, private prediction, model, or ignored
+  experiment artifact was read.
+- Corrected the scientific ceiling after auditing historical use: every one of
+  the 55 source-train rows contributed to prior Loop 26 fits, so a new 44/11
+  split is prospective only within this execution and can reach at most E2
+  pipeline-discriminative evidence.
+- Froze target-independent row assignment; prefixes `8, 16, 24, 32, 44`;
+  seeds `4801-4803`; the exact 2,908/2,884-parameter models; 20 fits; 35 model
+  inferences; five priors; 41 prediction sets; 4,800 optimizer steps; and one
+  post-green-freeze 11-target score using all 2,048 paired sign assignments.
+- Separated the seven-comparator candidate corruption conjunction from a
+  six-set candidate/linear prior rule. The latter cannot imply uncomputed
+  linear corruption controls or a task-locked character probe.
+- Retained one thread, one worker, one numerical job, 1 GiB RSS, 32 MiB output,
+  a 20 GiB free-disk floor, and zero downloads. Current free disk was 39 GiB.
+- Updated the Markdown tracker, machine roadmap, README, start-here guide,
+  handoff, agent boundary, decision journal, and this build journal. The tracked
+  workbook was deliberately not reopened: its last required artifact-tool pass
+  measured 1,572,667,392-byte RSS, above this protocol's 1 GiB envelope. The
+  adjacent user-owned inspection sidecar remained unread and untouched.
+- Local acceptance passes 100 focused Loop 48/roadmap tests, 795 dependency-
+  light tests with 142 expected skips, and 842 optional-neuro tests with 3
+  expected skips. The complete runs took 1.64/27.55 seconds wall time and
+  peaked at 90,767,360/609,239,040 bytes RSS. The 781/828 pre-change baselines
+  therefore gain exactly 14 invariants without losing a prior test.
+- A separate probe with macOS system Python 3.9 was rejected as outside the
+  declared Python `>=3.10` range: it collected 777 tests but produced 22
+  version-caused errors (`zip(strict=...)`, `tomllib`, and modern union syntax)
+  with 141 skips. It is not counted as a project regression or qualification
+  result, and no compatibility code was changed in response.
+
+Engineering capability preregistered: one bounded, prediction-frozen protocol
+can test six competing pipeline-failure explanations before a new acquisition.
+
+Scientific claim not established: no Stage B execution or result exists, and
+there is no new neural advantage, independent validation, brain-origin,
+decoding, generalization, real-time, EEG, home-device, assistive, or clinical
+evidence.
+
+## 2026-07-15 - Loop 48 Stage B Authorization Request
+
+- Verified preregistration commit
+  `0ee0ab7cd3abae4ce654af9954854a6e236c8a0e` as green on push CI
+  `29452286159` and PR CI `29452288520`; Base Python and Optional Neuro Readers
+  passed in both workflows.
+- Added one plain-language packet and one machine request bound to the immutable
+  preregistration, contract, and invariant-test byte counts, SHA-256 hashes,
+  Git blob identities, operation inventory, resource caps, access order, exact
+  sentence, and E2 claim ceiling.
+- Kept every authorization field false. Request preparation read no cache stat,
+  hash, member, ignored file, signal, target, checkpoint, private prediction,
+  or experiment artifact and ran no model, training, inference, or scoring
+  operation.
+- Added 12 dependency-light request invariants and updated the README,
+  start-here guide, scientific roadmap, Markdown tracker, handoff, machine
+  roadmap, agent boundary, decision journal, and this build journal. The
+  tracked workbook and adjacent user-owned inspection sidecar remained
+  unopened and unchanged.
+- Local acceptance passes 112 focused Loop 48/roadmap tests, 807 dependency-
+  light tests with 142 expected skips, and 854 optional-neuro tests with 3
+  expected skips. The complete runs took 1.99/27.59 seconds wall time and
+  peaked at 83,935,232/616,579,072 bytes RSS. The green preregistration
+  baseline of 795/842 therefore gains exactly 12 request invariants without
+  losing a prior test.
+
+Engineering capability prepared: one exact decision surface can authorize the
+smallest registered experiment that distinguishes six pipeline-failure
+hypotheses without silently widening data, compute, or claims.
+
+Scientific claim not established: an authorization request is not an
+experiment, and no new neural, decoding, independent-validation,
+generalization, real-time, EEG, device, assistive, or clinical evidence exists.

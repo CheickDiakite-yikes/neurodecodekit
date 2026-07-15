@@ -1,5 +1,10 @@
 # Start Here
 
+> Autonomy note: `docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md` explains why the
+> gates exist and proposes automatic Tier A routine work plus Tier B bounded
+> development experiments. It is a draft and grants no authorization until its
+> exact standing sentence is approved and separately recorded.
+
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.
 3. Read `AGENTS.md` for coding-agent rules.
@@ -18,6 +23,29 @@
    `docs/LOOP_26_AUTHORIZATION_DECISION.md`, and
    `docs/LOOP_26_SHARED_VALIDATION_IMPLEMENTATION.md` to audit the green shared
    design, one-time authorization, implementation, and target-firewall order.
+   Then read `docs/LOOP_48_FAILURE_LOCALIZATION_RESULT.md` and
+   `registries/loop48_failure_localization_result.v0.json` for the consumed
+   artifact-only result. One Stage A execution verified four committed JSON
+   artifacts totaling 155,545 bytes and selected descriptive `F5`
+   output-distribution instability in `0.016568875` seconds at 23,429,120-byte
+   peak RSS. This is not a proven root cause and no rerun is authorized. Read
+   `docs/LOOP_48_PRIMARY_SOURCE_RESEARCH.md`, the contract, request, and
+   authorization decision only to audit the frozen pre-execution sequence.
+   Read `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md` as the immutable
+   five-hypothesis starting point, then read
+   `docs/LOOP_48_HYPOTHESIS_DISCRIMINATION_RESEARCH.md` and
+   `registries/loop48_hypothesis_discrimination.v0.json` for the additive
+   six-hypothesis refinement. Then read
+   `docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md` and
+   `registries/loop48_train_only_discrimination_contract.v0.json` for the
+   exact Stage B 44/11 split, 20-fit, 35-inference, 41-prediction protocol.
+   Then read `docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md` and
+   `registries/loop48_stage_b_authorization_request.v0.json` for the green-
+   bound exact decision surface. Preregistration commit `0ee0ab7` passed push
+   CI `29452286159` and PR CI `29452288520`.
+   Every execution field remains false. All 55 rows were used historically,
+   so the 11-row check is not independent confirmation and Stage B is capped
+   at E2 diagnostic evidence even if every control passes.
 8. Read `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` for the selected S25
    metadata candidate and every blocker that still prevents preregistration,
    download, signal/target access, or transfer evaluation.
@@ -87,8 +115,8 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 
 Tracker scope: the spreadsheet's `20` KPI is the size of the original roadmap,
 not the current loop number. Its dashboard now separately reports **Loops
-26/31/33 consumed and parked; Loop 48 failure localization next but not
-authorized**, and its
+26/31/33 consumed and parked; Loop 48 artifact-only Stage A complete with F5
+descriptive phenotype and no rerun**, and its
 ninth sheet contains the separate **Loops 25-44 queue**. Loop 25 passed once
 at its target-free mechanics boundary and now has `execution_authorized: false`
 because no rerun is open; Loop 26 was preregistered at `881145d`, authorized at
@@ -450,7 +478,18 @@ Truth, Unseen-Person Verdict, Accessible EEG Evidence, Causal Local Use, and
 Independent Evidence And Release. Loop 45 is complete at its target-free
 mechanics boundary. Loops 46/47 consumed one registered S21 validation event
 and are parked after the candidate lost to the no-signal prior; no rerun is
-authorized. Loop 48 artifact-first failure localization is the next numbered
-work order but remains `Not Started` and separately gated. Loops 49-64 remain
-`Not Started`, and all current execution flags are false. S25 remains sealed
-until a separate final-only zero-shot packet is complete.
+authorized. Loop 48 completed one post-outcome artifact-only Stage A that
+selected `F5` output-distribution instability as the descriptive phenotype.
+The result is consumed, root cause remains unresolved, and no rerun is
+authorized. Authorization commit `5bae880` and implementation commit
+`ca21539` were each pushed and remotely green before the one execution. The
+additive H1-H6 design has now advanced to an exact Stage B preregistration: 44
+fit rows, 11 target-withheld check rows, 20 fits, 35 target-blind inferences,
+five priors, 41 frozen prediction sets, and one post-green-freeze check score.
+It changes no authorization. Because all 55 source-train rows were used by
+prior Loop 26 fits, its ceiling is E2 pipeline discrimination rather than
+independent validation or sensor-dependence confirmation. Brain-specific
+origin remains a separate Loop 35 question. Loops 49-64 remain `Not Started`,
+and all current execution
+flags are false. S25 remains sealed until a separate final-only zero-shot
+packet is complete.

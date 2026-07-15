@@ -22,6 +22,15 @@ Do not optimize for impressiveness before reproducibility. A boring baseline tha
 6. **Measure complexity.** Every new pipeline stage should report storage footprint, runtime, and a human-readable summary.
 7. **Avoid LLM-only illusions.** Always keep a language-model-only baseline so we do not accidentally credit the neural decoder for autocomplete.
 
+## Research autonomy
+
+`docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md` proposes standing Tier A routine work
+and Tier B bounded development work while retaining exact approval for Tier C
+irreversible evidence, real-data, hardware, destructive, release, and claim
+actions. It is a draft and grants no authorization. Until its exact standing
+sentence is approved and separately recorded, continue to follow every existing
+loop-specific contract and authorization boundary.
+
 ## Immediate next task
 
 The first 20-loop roadmap is complete except for the deliberately parked Loop
@@ -132,9 +141,43 @@ resource gates passed. Source test and session 2 remained closed. Loops 26,
 31, 33 and scientific Loops 46/47 are parked; no rerun, post-target tuning, or
 larger-model escalation is authorized.
 
-The next numbered work order is Loop 48 artifact-first failure localization.
-Do not implement it or read train arrays, protected cache members, or targets
-without its own exact scope and separate authorization.
+Loop 48 artifact-first failure localization is complete at its one-shot
+artifact-only Stage A boundary. The exact decision was recorded at green commit
+`5bae880` before implementation commit `ca21539`; both push and PR CI runs were
+green before the four registered artifacts opened once. The consumed result is
+`registries/loop48_failure_localization_result.v0.json` with SHA-256
+`dbfb4c7cc6163ff31fa216c1b33e7510a87b0b843ef714754037d37275924659`.
+The frozen tree selected descriptive `F5`: seed-sensitive output-distribution
+instability with a `0.993477` blank-dominant primary checkpoint. Runtime was
+`0.016568875` seconds, peak RSS was 23,429,120 bytes, and output was 10,643
+bytes. This is not a proven root cause. No ignored output, cache member, array,
+target, checkpoint, private prediction, model, training, network, stream,
+device, or hardware payload was accessed or run. Stage A is consumed; do not
+rerun it, tune from it, or promote its phenotype into a causal explanation.
+Closeout commit `6322635` passed push CI `29446438743` and PR CI `29446440355`.
+
+Future train-only Loop 48 thinking is now separated into
+`docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md` and
+`registries/loop48_hypothesis_portfolio.v0.json`. The green five-hypothesis
+portfolio remains immutable. Additive primary-source research in
+`docs/LOOP_48_HYPOTHESIS_DISCRIMINATION_RESEARCH.md` and
+`registries/loop48_hypothesis_discrimination.v0.json` narrows `H1` to the fixed
+tiny CTC recipe, adds `H6` for data quantity/sentence diversity, and separates
+the orthogonal `T1` peripheral/task-locked shortcut threat. It compares six
+coexisting hypotheses from shared evidence with sequential one-thread compute.
+The design is preserved as research history. Its Stage B questions are now
+frozen in `docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md` and
+`registries/loop48_train_only_discrimination_contract.v0.json`: 44 fit rows,
+11 target-withheld check rows, five prefixes, three seeds, 20 fits, 35
+target-blind inferences, five priors, 41 frozen prediction sets, and 2,048 exact
+sign assignments. All 55 rows were used historically, so Stage B can reach at
+most E2 pipeline-discriminative evidence. Preregistration commit `0ee0ab7`
+passed push CI `29452286159` and PR CI `29452288520`. The separate exact request
+is prepared in `docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md` and
+`registries/loop48_stage_b_authorization_request.v0.json`. Every authorization
+field remains false; do not implement, read the cache, train, infer, freeze
+predictions, deliver check targets, or score from general continuation or the
+draft autonomy charter.
 
 Loop 27 planning research is complete at green commit `b3d61b6`, but no
 preregistration or acquisition request exists:
@@ -478,11 +521,14 @@ The next research tranche is frozen in
 `docs/LOOPS_45_64_SCIENTIFIC_ROADMAP.md` and
 `registries/next_scientific_loops.v0.json`. It contains exact loop IDs 45-64 in
 five phases of four. Loop 45 is complete at its target-free mechanics boundary;
-Loops 46/47 are consumed and parked after the failed shared S21 event; Loops
-48-64 are `Not Started`, every current execution flag is false, and every
-global authorization field is false. The next scientific work order is Loop 48
-artifact-first failure localization. Do not start it, a new development person,
-or any S25 path from a broad continuation request.
+Loops 46/47 are consumed and parked after the failed shared S21 event. Loop 48
+is complete at its consumed artifact-only `F5` boundary with no rerun. Its
+additive six-hypothesis research has an exact unauthorized Stage B
+preregistration with an E2 ceiling; no implementation or protected execution
+exists. Loops
+49-64 are `Not Started`, every current execution flag is false, and every
+global authorization field is false. Do not rerun Loop 48, start a new
+development person, or open any S25 path from a broad continuation request.
 
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
@@ -709,7 +755,12 @@ authorization boundary.
   five phases of four, 20 false execution flags, nine false global
   authorization fields, ten source bindings, and ten cross-loop kill branches.
   S21 session-1 validation, session 2, and S7 remain consumed; S25 remains
-  unopened and final-only. Loops 46/47 are parked and Loop 48 is `Not Started`.
+  unopened and final-only. Loops 46/47 are parked and Loop 48 completed one
+  artifact-only Stage A at descriptive `F5`; its result is consumed, root cause
+  remains unresolved, and no rerun is authorized. The additive H1-H6/T1
+  discrimination map still leaves every Stage B authorization false and every
+  protected/model counter at zero. Its commit `33a14d8` passed push CI
+  `29436731383` and PR CI `29436735374`.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed

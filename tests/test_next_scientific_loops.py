@@ -17,7 +17,7 @@ class NextScientificLoopsTests(unittest.TestCase):
             self.registry["schema_name"],
             "neurodecodekit.next_scientific_loops",
         )
-        self.assertEqual(self.registry["schema_version"], "0.2.0")
+        self.assertEqual(self.registry["schema_version"], "0.3.0")
         self.assertEqual(self.registry["loop_range"], [45, 64])
         loops = self.registry["loops"]
         self.assertEqual(len(loops), 20)
@@ -80,6 +80,7 @@ class NextScientificLoopsTests(unittest.TestCase):
                 45: "Complete",
                 46: "Parked; Registered Gate Failed",
                 47: "Parked; Shared Attribution Gate Failed",
+                48: "Complete; Artifact-Only F5 Phenotype",
             }.get(row["loop_id"], "Not Started")
             self.assertEqual(row["status"], expected_status)
             self.assertTrue(row["controls"])
@@ -105,6 +106,20 @@ class NextScientificLoopsTests(unittest.TestCase):
         self.assertIn("no post-Loop-46 target open", loop47["authorization_boundary"])
         self.assertIn("complete control conjunction failed", loop47["authorization_boundary"])
         self.assertFalse(loop47["execution_authorized"])
+
+        loop48 = next(row for row in self.registry["loops"] if row["loop_id"] == 48)
+        self.assertIn("loop48_failure_localization_contract.v0.json", loop48["build_deliverable"])
+        self.assertIn("F5", loop48["build_deliverable"])
+        self.assertIn("loop48_hypothesis_portfolio.v0.json", loop48["build_deliverable"])
+        self.assertIn("four exact committed", loop48["data_scope"])
+        self.assertIn("0.016568875", loop48["future_resource_cap"])
+        self.assertIn("23,429,120", loop48["future_resource_cap"])
+        self.assertIn("ca21539", loop48["authorization_boundary"])
+        self.assertIn("consumed", loop48["authorization_boundary"])
+        self.assertIn(
+            "cannot inherit consumed Stage A authorization", loop48["authorization_boundary"]
+        )
+        self.assertFalse(loop48["execution_authorized"])
 
     def test_s25_is_final_only_with_zero_fit_and_strict_gate(self):
         loop51 = next(row for row in self.registry["loops"] if row["loop_id"] == 51)
