@@ -4017,7 +4017,10 @@ generalization, real-time, EEG, device, assistive, or clinical evidence exists.
   change.
 - Ruff lint and changed-test formatting pass. Compileall, all 49 registry JSON
   files, root and two CI CLI-help surfaces, and `git diff --check` pass. Remote
-  CI qualification is pending the milestone push.
+  qualification also passes: milestone commit
+  `5afa61e3dad72e671f4c829187e593560a157f67` passed push CI `29454969710` and
+  pull-request #27 CI `29455166081`, with Base Python and Optional Neuro Readers
+  green in both workflows.
 
 Engineering capability added: one exact, storage-bounded, identity-aware
 metadata boundary now preserves separate development-person and final-person

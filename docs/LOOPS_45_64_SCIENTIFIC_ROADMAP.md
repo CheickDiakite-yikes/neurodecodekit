@@ -151,6 +151,8 @@ must be excluded from fit. The 48-row floor, channels, geometry, duration,
 signal, targets, and source-text overlap remain unavailable, so Loop 49 is
 still `Not Started`, unqualified, unpreregistered, and unauthorized. Decision
 0083 keeps any new acquisition after the separately gated Loop 48 Stage B.
+Planning commit `5afa61e` passed push CI `29454969710` and PR #27 CI
+`29455166081`; both required jobs are green.
 
 **Gate:** one eligible nonfinal person or an explicit no-candidate result.
 

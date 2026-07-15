@@ -627,6 +627,8 @@ groups, with matching S21 selection text excluded from fit. No S24 local path,
 payload, header, signal, MAT content, target, split, model, or training run was
 opened. The `>=48` unique-row floor, channels, geometry, and text overlap remain
 unavailable, so there is no acquisition request or qualification result.
+Planning commit `5afa61e` passed push CI `29454969710` and PR #27 CI
+`29455166081`; both Base Python and Optional Neuro Readers are green.
 
 Loops 50-64 are `Not Started`. All execution flags and all nine global
 authorization fields are false. Decision 0083 keeps new Loop 49 acquisition

@@ -200,6 +200,8 @@ geometry, duration, and overlap gates remain unproven; all 25 authorization
 fields are false. Decision 0083 requires Loop 48 Stage B to close or park before
 new Loop 49 acquisition. Do not prepare or execute acquisition, substitute a
 backup, or promote a person-transfer claim from this metadata decision.
+Planning commit `5afa61e` passed push CI `29454969710` and PR #27 CI
+`29455166081`; both required jobs are green.
 
 Loop 27 planning research is complete at green commit `b3d61b6`, but no
 preregistration or acquisition request exists:

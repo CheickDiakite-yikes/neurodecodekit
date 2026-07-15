@@ -104,7 +104,8 @@ content, target, split, model, or training operation occurred. The `>=48`
 unique-row floor and compatibility fields remain unavailable, so Loop 49 is
 planning-complete but experimentally `Not Started`, unpreregistered, and
 unauthorized. See `docs/LOOP_49_PRIMARY_SOURCE_RESEARCH.md` and
-`registries/loop49_research_boundary.v0.json`.
+`registries/loop49_research_boundary.v0.json`. Planning commit `5afa61e` passed
+push CI `29454969710` and PR #27 CI `29455166081`, with both required jobs green.
 
 | Phase | Loops | Decisive goal |
 |---|---:|---|

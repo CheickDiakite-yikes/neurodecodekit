@@ -36,7 +36,9 @@
 > exact two-file bundle is `1,048,579,727` bytes; S24 avoids the S1/S18 alias
 > while S25 remains final-only. No S24 path or payload was opened, the `>=48`
 > unique-row and compatibility gates remain unproven, and Loop 49 remains `Not
-> Started`, unpreregistered, and unauthorized.
+> Started`, unpreregistered, and unauthorized. Planning commit `5afa61e` passed
+> push CI `29454969710` and PR #27 CI `29455166081`; both required jobs are
+> green.
 
 > Historical pre-Loop-25-execution context, retained for audit: Loops 1-12,
 > 14-22, and 23.5 are complete; Loops
