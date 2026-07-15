@@ -158,12 +158,34 @@ Planning commit `5afa61e` passed push CI `29454969710` and PR #27 CI
 
 ### Loop 50 - Multi-Source Frozen Encoder
 
-Train one participant-grouped candidate on S21 plus the development person.
-Report per-person and worst-person performance against source-only and pooled
-priors, participant-ID-only features, zero signal, channel derangement, and time
-displacement. A pooled average may not hide a failed person.
+Planning research in `docs/LOOP_50_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop50_research_boundary.v0.json` now defines the future experiment
+without opening protected data. It combines a global canonical-text firewall,
+five-fold historical S21 out-of-fold diagnostics, one 16-group S24 development
+qualification, a fixed `0.5/0.5` participant-balanced CTC loss, one shared
+causal candidate family, primary seed `5001`, two nonselectable stability seeds,
+ten fixed candidate/prior/corruption conditions, and an exact 20-parameter-
+update inventory. Participant ID may index only sampling and metrics; it may not
+enter a model, scaler, affine, adapter, checkpoint, or decoder. The four-run
+margin below the 24-run ceiling is not rerun permission.
 
-**Gate:** positive control ordering on every development person.
+The future primary gate is per-person and worst-person, never pooled-only. The
+primary seed must beat the strongest no-signal prior by at least `0.05` macro
+CER and strictly beat exact-zero, channel, time, timing-only, and linear
+conditions separately on S21 and S24. S24 must improve over the S21-only neural
+comparator while S21 degrades by no more than `0.02`; stability seeds may not
+replace the primary. S24 selection remains development evidence, S21 remains
+historically used, and S25 remains the one-time final-only person.
+
+Loop 50 is still `Not Started`, unpreregistered, and unauthorized. Loop 48
+Stage B must first close or park and route the acquisition decision; then S24
+must pass separately authorized acquisition, header, redacted trial, split,
+channel, geometry, and `>=48` unique-group gates. All 31 authorization fields
+are false and every protected/model/training/scoring counter is zero.
+
+**Gate:** positive prior/control ordering on both development people, with no
+pooled rescue, seed substitution, target-corpus normalization, or post-target
+rerun.
 
 ### Loop 51 - S25 Final-Only Freeze Packet
 

@@ -203,6 +203,26 @@ backup, or promote a person-transfer claim from this metadata decision.
 Planning commit `5afa61e` passed push CI `29454969710` and PR #27 CI
 `29455166081`; both required jobs are green.
 
+Loop 50 planning research is complete while its experiment remains `Not
+Started`:
+
+```bash
+cat docs/LOOP_50_PRIMARY_SOURCE_RESEARCH.md
+python -m json.tool registries/loop50_research_boundary.v0.json >/dev/null
+```
+
+The design freezes a global canonical-text firewall, five-fold historical S21
+out-of-fold diagnostics, one 16-group S24 development qualification, equal
+`0.5/0.5` participant loss, one shared candidate family, ten fixed conditions,
+primary seed 5001, two nonselectable stability seeds, an exact 20-update
+inventory, and a worst-person gate. No exact model is selected before Loop 48
+Stage B closes or parks. S21
+validation/source-test/session 2 stay closed, S24 remains metadata-only and
+unqualified, and S25 remains final-only. All 31 authorization fields are false;
+every S24/S25/S21-cache/model/training/inference/scoring counter is zero. Do not
+implement or execute Loop 50, acquire S24, or open S25 from this planning
+boundary.
+
 Loop 27 planning research is complete at green commit `b3d61b6`, but no
 preregistration or acquisition request exists:
 
@@ -552,7 +572,11 @@ preregistration with an E2 ceiling; no implementation or protected execution
 exists. Loop 49 planning research selects S24 session 2 block 2 from metadata
 only as the preferred development person, but the experiment remains `Not
 Started`, the `>=48` trial gate is unproven, and no path or payload opened.
-Loops 50-64 are `Not Started`, every current execution flag is false, and every
+Loop 50 planning research now freezes the text, participant, seed, control,
+metric, resource, and claim firewalls, including an exact 20-update inventory,
+while its experiment remains `Not Started`; no exact model or protected
+operation exists. Loops 51-64 are `Not Started`, every current execution flag
+is false, and every
 global authorization field is false. Do not rerun Loop 48, acquire or open S24,
 substitute a development person, or open any S25 path from a broad continuation
 request.

@@ -4029,3 +4029,60 @@ roles before any S24 payload opens.
 Scientific claim not established: no S24 payload, trial, target, signal, model,
 training, decoding, unseen-person, real-time, EEG, device, assistive, or clinical
 result exists from this planning pass.
+
+## 2026-07-15 - Loop 50 Multi-Source Encoder Planning Research
+
+- Added `docs/LOOP_50_PRIMARY_SOURCE_RESEARCH.md`,
+  `registries/loop50_research_boundary.v0.json`, and 17 dependency-light
+  invariants. The machine boundary contains 31 false authorization fields, 30
+  refusal IDs, and zero protected data, model, training, inference, prediction,
+  scoring, download, stream, device, or hardware operations.
+- Bound the design to six primary sources: Brain2Qwerty v2 joint training and
+  text-level hash splitting, the official SpanishBCBL identity/license record,
+  participant-leakage evidence, worst-group methodology, small-sample
+  uncertainty, and model-selection bias.
+- Froze a research recommendation, not an executable protocol: one global
+  canonical-text firewall, five historical S21 out-of-fold folds, 16 future
+  S24 selection groups plus at least 32 fit groups, equal `0.5/0.5`
+  participant loss, one shared causal candidate family, ten fixed conditions,
+  primary seed 5001, stability seeds 5002/5003, an exact 20-parameter-update
+  inventory, and a both-person/worst-person pass rule. The inventory uses five
+  pooled out-of-fold fits, three pooled final fits, six linear fits, and six
+  S21-only fits; its four-run cap margin is not rerun permission.
+- Added a six-route Loop 48 Stage B outcome table. Mechanics, timing, plateau,
+  and unresolved outcomes park S24; only a viable registered probe or stable
+  non-saturation result can make a separately gated S24 intake eligible. A
+  route is never acquisition authorization.
+- Preserved strict future zero-shot compatibility: no participant-specific
+  scaler, target-corpus normalization, participant embedding/affine/adapter,
+  LLM, n-gram, semantic target, best-seed selection, pooled rescue, or S25 use.
+- Updated the scientific roadmap, machine roadmap, Markdown tracker, README,
+  start-here guide, handoff, agent boundary, decision journal, and this build
+  journal. The tracked workbook and adjacent user-owned inspection sidecar were
+  not opened or changed.
+- The three new core artifacts total 66,845 bytes under the 8 MiB planning cap.
+  No project `.venv`, protected payload, model, prediction, experiment output,
+  or persistent process was created. Free disk remained approximately 39 GiB.
+- Focused Loop 49/50 plus scientific-roadmap acceptance passes 45 tests in
+  0.004 seconds. The complete dependency-light suite passes 841 tests with 142
+  expected skips in 1.53 seconds wall time at 120,537,088-byte maximum RSS,
+  exactly 17 tests above the 824-test pre-change baseline with the same skip
+  count. The Python 3.12 optional-neuro suite passes 873 tests with 22 expected
+  skips in 10.47 seconds at 240,304,128-byte maximum RSS, exactly 17 tests above
+  the 856-test baseline; focused signal quality passes 9 tests in 4.12 seconds
+  at 159,252,480 bytes.
+- Ruff lint and changed-test formatting pass. Compileall, all 50 registry JSON
+  files, root and two CI CLI-help surfaces, and `git diff --check` pass. A
+  repository-wide formatter check would rewrite 104 pre-existing files under
+  the current Ruff formatter, so it was deliberately scoped to the new test to
+  avoid unrelated churn. Remote qualification is pending the milestone push.
+
+Engineering capability added: one machine-checkable design now specifies how a
+future two-person tiny causal experiment must prevent text leakage, participant
+shortcuts, row-count imbalance, pooled-average masking, seed selection, and
+target-corpus normalization.
+
+Scientific claim not established: no S24 payload or target was opened and no
+model ran, so there is no new neural advantage, sensor-signal dependence,
+brain-specific origin, decoding, unseen-person, real-time, EEG, home-device,
+assistive, diagnostic, or clinical evidence.
