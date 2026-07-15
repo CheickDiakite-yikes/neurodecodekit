@@ -117,6 +117,11 @@ E2 pipeline-discriminative evidence, not the earlier design-level E3 ceiling.
 Raw quality, causal preprocessing, peripheral origin, independent validation,
 and every generalization claim remain unavailable. The protocol is
 preregistered but unauthorized and cannot inherit Stage A scope.
+Preregistration commit `0ee0ab7` passed push CI `29452286159` and PR CI
+`29452288520`. One hash-bound decision surface is prepared in
+`docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md` and
+`registries/loop48_stage_b_authorization_request.v0.json`; preparing it changes
+no authorization field.
 
 The consumed Stage A verified hashes, reproduced aggregate blank/CER summaries,
 applied the ordered tree, and emitted one target-free aggregate report. Do not

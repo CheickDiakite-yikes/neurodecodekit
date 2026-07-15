@@ -39,6 +39,10 @@
    `docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md` and
    `registries/loop48_train_only_discrimination_contract.v0.json` for the
    exact Stage B 44/11 split, 20-fit, 35-inference, 41-prediction protocol.
+   Then read `docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md` and
+   `registries/loop48_stage_b_authorization_request.v0.json` for the green-
+   bound exact decision surface. Preregistration commit `0ee0ab7` passed push
+   CI `29452286159` and PR CI `29452288520`.
    Every execution field remains false. All 55 rows were used historically,
    so the 11-row check is not independent confirmation and Stage B is capped
    at E2 diagnostic evidence even if every control passes.

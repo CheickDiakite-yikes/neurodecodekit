@@ -43,7 +43,7 @@ irreversible events. The draft is not active yet.
 | Full-path causality gate | Loop 25 v1 passed a dedicated causal anti-alias audit, 65,537 response points, 23 alias probes, 168 schedule checks, 240 resume checks, and 72 future-mutation controls across 24 target-free items | The exact 1000-to-100 Hz path is mechanically causal with zero right context; this is synthetic mechanics evidence, not proof that neural information survives |
 | Consumed S21 validation | The registered 2,908-parameter candidate reached macro CER `0.938177`; the train-only no-signal prior reached `0.751235`, so the candidate was worse by `0.186942` | Loop 26 is parked after one consumed six-target event; this is a clear negative result, not neural advantage |
 | Failure-localization result | The one-shot artifact-only pass reproduced `99.3477%` primary blank, all 6/6 unstable fixed-prefix groups, and all 3/3 size-55 seeds worse than the prior | Loop 48 selected descriptive `F5` output-distribution instability in `0.0166` sec and 23.4 MB RSS; root cause remains unresolved and no rerun is authorized |
-| Preregistered failure discrimination | A deterministic 44-fit/11-check split, five nested sizes, three fixed seeds, 20 fits, 35 target-blind inferences, five priors, 41 frozen prediction sets, and 2,048 exact sign assignments now bind six failure hypotheses | Stage B is preregistered but unauthorized; because all 55 rows were used historically, its ceiling is E2 diagnostic evidence, not independent validation or neural advantage |
+| Preregistered failure discrimination | A deterministic 44-fit/11-check split, five nested sizes, three fixed seeds, 20 fits, 35 target-blind inferences, five priors, 41 frozen prediction sets, and 2,048 exact sign assignments now bind six failure hypotheses | The preregistration and exact request are green-bound but unauthorized; because all 55 rows were used historically, the ceiling is E2 diagnostic evidence, not independent validation or neural advantage |
 | Fresh transfer candidate | Loop 27 metadata research selects S25 session 2 block 2: one MEG FIF plus one protected MAT log, exactly 1,009,939,983 bytes under 1 GiB | S25 is not downloaded or qualified; preregistration waits for the causal source model, controls, and target isolation |
 | Transfer decision rule | Loop 28 research separates T0-T3 evidence and recommends a strict S25 T2 zero-shot gate: zero target fit, at least 48 final rows, at least 0.05 macro-CER improvement, 65,535 paired swaps plus observed, and strict corruption-control wins | The experiment is `Not Started`; this resolves one planning dependency without authorizing S25, a model run, calibration, or final access |
 | Portable sensing decision | Loop 29 research separates cryogenic MEG, partner/lab OPM-MEG, local-first scalp EEG, and non-neural controls through 15 requirements and six qualification levels | Planning research is complete while the experiment is `Not Started`; no device, download, stream, hardware session, or portable decoding result exists |
@@ -84,7 +84,12 @@ inventory, prediction-before-target order, paired statistics, resource caps,
 and stop rules. All 55 rows were used by earlier fits, so the new check split
 is prospective only inside this execution; Stage B can reach at most E2
 diagnostic evidence. No implementation, protected read, training, inference,
-check-target delivery, scoring, or run is authorized.
+check-target delivery, scoring, or run is authorized. Preregistration commit
+`0ee0ab7` passed push CI `29452286159` and PR CI `29452288520`; the exact
+hash-bound decision surface is now prepared in
+`docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md` and
+`registries/loop48_stage_b_authorization_request.v0.json` with every
+authorization flag false.
 
 | Phase | Loops | Decisive goal |
 |---|---:|---|
@@ -1068,6 +1073,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/loop48_hypothesis_discrimination.v0.json](registries/loop48_hypothesis_discrimination.v0.json) | additive H1-H6 discrimination map with shared sequential stages, strict claim ceilings, 15 false authorizations, and zero protected/model operations |
 | [docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md](docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md) | exact 44/11 split, model/control inventory, telemetry, paired statistics, prediction-freeze order, resource caps, and E2 historical-use correction |
 | [registries/loop48_train_only_discrimination_contract.v0.json](registries/loop48_train_only_discrimination_contract.v0.json) | machine-readable 20-fit, 35-inference, 41-prediction Stage B contract with 25 refusals, zero protected activity, and every authorization false |
+| [docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md](docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md) | plain-language exact Stage B operation, control, access-order, storage, resource, and claim decision surface |
+| [registries/loop48_stage_b_authorization_request.v0.json](registries/loop48_stage_b_authorization_request.v0.json) | request bound to green preregistration commit `0ee0ab7` and both CI runs; no implementation, protected access, or execution is authorized |
 | [docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md) | official metadata ranking, selected S25 MEG candidate, exact bytes/hashes, target-isolation design, and preregistration blockers |
 | [registries/loop27_research_boundary.v0.json](registries/loop27_research_boundary.v0.json) | machine-readable Loop 27 candidate identity, unavailable fields, resource boundary, zero payload access, and 18 false authorization fields |
 | [docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md) | v2 transfer audit, T0-T3 taxonomy, strict zero-shot/transductive distinction, final-only rule, and calibrated-design boundary |

@@ -613,6 +613,9 @@ fits, 35 target-blind inferences, five priors, 41 frozen prediction sets, and
 2,048 exact sign assignments. All 55 rows were used historically, so this can
 reach at most E2 diagnostic evidence. The contract authorizes nothing and no
 protected read, implementation, training, inference, or check score occurred.
+Preregistration commit `0ee0ab7` and push/PR CI runs `29452286159` /
+`29452288520` are green. The exact packet and machine request are prepared, but
+all authorization remains false.
 Loops 49-64 are `Not Started`. All execution
 flags and all nine global authorization fields are false. The next possible
 positive scientific claim now requires a fresh, separately registered

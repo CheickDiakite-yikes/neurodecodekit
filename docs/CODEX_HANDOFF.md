@@ -24,8 +24,13 @@
 > sizes, three fixed seeds, 20 fits, 35 target-blind inferences, five priors,
 > 41 prediction sets, and 2,048 exact sign assignments. All 55 rows were used
 > historically, so the check partition is not independent confirmation and
-> the result ceiling is E2 diagnostic evidence. The contract is unauthorized;
-> no protected read, implementation, model operation, or score occurred.
+> the result ceiling is E2 diagnostic evidence. Preregistration commit
+> `0ee0ab7` passed push CI `29452286159` and PR CI `29452288520`. The separate
+> packet and machine request are prepared at
+> `docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md` and
+> `registries/loop48_stage_b_authorization_request.v0.json`. Every
+> authorization remains false; no protected read, implementation, model
+> operation, or score occurred.
 
 > Historical pre-Loop-25-execution context, retained for audit: Loops 1-12,
 > 14-22, and 23.5 are complete; Loops

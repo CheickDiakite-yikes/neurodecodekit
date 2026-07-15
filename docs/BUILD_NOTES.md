@@ -3926,3 +3926,37 @@ Scientific claim not established: no Stage B execution or result exists, and
 there is no new neural advantage, independent validation, brain-origin,
 decoding, generalization, real-time, EEG, home-device, assistive, or clinical
 evidence.
+
+## 2026-07-15 - Loop 48 Stage B Authorization Request
+
+- Verified preregistration commit
+  `0ee0ab7cd3abae4ce654af9954854a6e236c8a0e` as green on push CI
+  `29452286159` and PR CI `29452288520`; Base Python and Optional Neuro Readers
+  passed in both workflows.
+- Added one plain-language packet and one machine request bound to the immutable
+  preregistration, contract, and invariant-test byte counts, SHA-256 hashes,
+  Git blob identities, operation inventory, resource caps, access order, exact
+  sentence, and E2 claim ceiling.
+- Kept every authorization field false. Request preparation read no cache stat,
+  hash, member, ignored file, signal, target, checkpoint, private prediction,
+  or experiment artifact and ran no model, training, inference, or scoring
+  operation.
+- Added 12 dependency-light request invariants and updated the README,
+  start-here guide, scientific roadmap, Markdown tracker, handoff, machine
+  roadmap, agent boundary, decision journal, and this build journal. The
+  tracked workbook and adjacent user-owned inspection sidecar remained
+  unopened and unchanged.
+- Local acceptance passes 112 focused Loop 48/roadmap tests, 807 dependency-
+  light tests with 142 expected skips, and 854 optional-neuro tests with 3
+  expected skips. The complete runs took 1.99/27.59 seconds wall time and
+  peaked at 83,935,232/616,579,072 bytes RSS. The green preregistration
+  baseline of 795/842 therefore gains exactly 12 request invariants without
+  losing a prior test.
+
+Engineering capability prepared: one exact decision surface can authorize the
+smallest registered experiment that distinguishes six pipeline-failure
+hypotheses without silently widening data, compute, or claims.
+
+Scientific claim not established: an authorization request is not an
+experiment, and no new neural, decoding, independent-validation,
+generalization, real-time, EEG, device, assistive, or clinical evidence exists.

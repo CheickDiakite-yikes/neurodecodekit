@@ -171,10 +171,13 @@ frozen in `docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md` and
 11 target-withheld check rows, five prefixes, three seeds, 20 fits, 35
 target-blind inferences, five priors, 41 frozen prediction sets, and 2,048 exact
 sign assignments. All 55 rows were used historically, so Stage B can reach at
-most E2 pipeline-discriminative evidence. Every authorization field is false;
-do not implement, read the cache, train, infer, freeze predictions, deliver
-check targets, or score from general continuation or the draft autonomy
-charter.
+most E2 pipeline-discriminative evidence. Preregistration commit `0ee0ab7`
+passed push CI `29452286159` and PR CI `29452288520`. The separate exact request
+is prepared in `docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md` and
+`registries/loop48_stage_b_authorization_request.v0.json`. Every authorization
+field remains false; do not implement, read the cache, train, infer, freeze
+predictions, deliver check targets, or score from general continuation or the
+draft autonomy charter.
 
 Loop 27 planning research is complete at green commit `b3d61b6`, but no
 preregistration or acquisition request exists:

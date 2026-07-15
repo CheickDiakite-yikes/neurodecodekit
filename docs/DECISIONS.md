@@ -2806,3 +2806,27 @@ before implementation or protected access.
 Evidence: `docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md`,
 `registries/loop48_train_only_discrimination_contract.v0.json`, and
 `tests/test_loop48_train_only_discrimination_contract.py`.
+
+## 0084 - Prepare A Green-Bound Stage B Decision Surface
+
+Decision: prepare one human-readable packet and one machine request only after
+the exact Stage B preregistration was committed, pushed, and independently
+green on push and pull-request workflows. Bind commit
+`0ee0ab7cd3abae4ce654af9954854a6e236c8a0e`, push CI `29452286159`, PR CI
+`29452288520`, and the immutable document, contract, and invariant-test hashes.
+
+Scope decision: request exactly one cache hash pass, 44 fit signal/target rows,
+11 pre-freeze target-free check inputs, 20 parameter-update runs, 35 target-
+blind inferences, five priors, 41 prediction sets, and one post-green-freeze
+11-target scoring delivery. Preserve the E2 ceiling, zero downloads, one-thread
+resource envelope, and every excluded partition and operation.
+
+Authorization decision: preparing or remotely qualifying the request grants no
+permission. Every `authorized_now` field remains false. A future decision must
+reproduce the exact sentence, bind the green request commit, and itself become
+green before implementation. General continuation, co-researcher status, the
+draft autonomy charter, Stage A, and Loop 26 are not transitive authorization.
+
+Evidence: `docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md`,
+`registries/loop48_stage_b_authorization_request.v0.json`, and
+`tests/test_loop48_stage_b_authorization_request.py`.
