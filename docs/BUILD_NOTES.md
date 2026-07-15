@@ -3741,6 +3741,11 @@ clinical utility.
   request/portfolio tests were added, and all 18 new tests pass focused. No
   timeout, threshold, or experiment code was changed; remote CI is the required
   clean-host full-suite gate for this milestone.
+- Request/portfolio commit `0ffdf47` then passed push CI `29433294092` and PR
+  CI `29433297546`. Each clean-host run passed 733 dependency-light tests with
+  142 expected skips and 765 optional-neuro tests with 22 expected skips, plus
+  Ruff. This closes the clean-host qualification gap without erasing the local
+  780-test lane's measured Loop 24 timing timeout under host contention.
 
 Engineering capability proposed: a future shared telemetry pass can test
 several failure mechanisms efficiently without reusing consumed validation.

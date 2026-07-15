@@ -602,8 +602,12 @@ The next 20 work orders are frozen in
 Truth, Unseen-Person Verdict, Accessible EEG Evidence, Causal Local Use, and
 Independent Evidence And Release.
 
-All 20 statuses are `Not Started`; all execution flags and all nine global
-authorization fields are false. The first possible positive scientific claim
-is a bounded S21 source-validation effect that beats a no-signal prior and all
-registered corrupted-signal controls. The stronger claim is a frozen final-only
-S25 zero-shot result. No roadmap row authorizes either experiment.
+Loop 45 is complete at its target-free mechanics boundary. Loops 46 and 47 are
+parked after the one consumed S21 event failed the candidate-versus-prior and
+full attribution conjunctions. Loop 48 is preregistered with authorization
+pending; its Stage A request is remotely green, while its five-hypothesis Stage
+B portfolio remains design-only. Loops 49-64 are `Not Started`. All execution
+flags and all nine global authorization fields are false. The next possible
+positive scientific claim now requires a fresh, separately registered
+development-person path before the final-only S25 zero-shot verdict. No roadmap
+row authorizes either experiment.

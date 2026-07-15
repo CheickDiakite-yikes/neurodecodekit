@@ -102,6 +102,9 @@ seed-sensitive output-distribution instability with a blank-dominant primary
 checkpoint. That is not a proven root cause. The contract is not implemented
 or executed, and no train-array diagnostic exists. Its separate exact Stage A
 authorization request is prepared but every authorization field remains false.
+The request and hypothesis-portfolio milestone is remotely green at commit
+`0ffdf47` (push CI `29433294092`; PR CI `29433297546`), which qualifies the
+decision surface but does not authorize Stage A or Stage B.
 
 Future Stage B design uses a five-hypothesis support vector rather than forcing
 one root-cause winner: CTC feasibility/fit, signal quality, temporal or

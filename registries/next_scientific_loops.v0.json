@@ -109,7 +109,7 @@
       "kill_or_park_rule": "If diagnosis requires target-conditioned search or a larger model, park and design a fresh development cohort instead.",
       "depends_on": [46, 47],
       "future_resource_cap": "artifact-only Stage A only; one thread; one worker; <=30 seconds; <=256 MiB RSS; <=1 MiB generated; zero network, model, training, or protected reads",
-      "authorization_boundary": "Green contract commit 83309bf passed push CI 29431318268 and PR CI 29431347801. The exact Stage A request is prepared in registries/loop48_authorization_request.v0.json, but it is not a decision: every authorization field remains false and implementation and execution are closed. The five-hypothesis train-only portfolio is a later independent design with unfrozen splits, inventory, and caps; it cannot inherit Stage A authorization."
+      "authorization_boundary": "Green contract commit 83309bf passed push CI 29431318268 and PR CI 29431347801. Request and portfolio commit 0ffdf47 passed push CI 29433294092 and PR CI 29433297546. The exact Stage A request in registries/loop48_authorization_request.v0.json is qualified but is not a decision: every authorization field remains false and implementation and execution are closed. The five-hypothesis train-only portfolio is a later independent design with unfrozen splits, inventory, and caps; it cannot inherit Stage A authorization."
     },
     {
       "loop_id": 49,

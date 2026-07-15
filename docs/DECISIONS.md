@@ -2672,4 +2672,6 @@ checkpoint, scoring, download, stream, device, or hardware operation.
 
 Evidence: `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md`,
 `registries/loop48_hypothesis_portfolio.v0.json`, and
-`tests/test_loop48_hypothesis_portfolio.py`.
+`tests/test_loop48_hypothesis_portfolio.py`. Request/portfolio commit
+`0ffdf47` passed push CI `29433294092` and PR CI `29433297546`; this qualifies
+the decision surface without changing any false authorization field.

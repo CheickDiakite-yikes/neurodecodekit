@@ -142,8 +142,10 @@ proven root cause. The contract remains unimplemented and unauthorized; every
 authorization field is false. Green contract commit `83309bf` passed push CI
 `29431318268` and PR CI `29431347801`; a separate request is now prepared in
 `docs/LOOP_48_AUTHORIZATION_PACKET.md` and
-`registries/loop48_authorization_request.v0.json`. Do not implement or execute
-Stage A without the exact sentence in that packet and a separately committed,
+`registries/loop48_authorization_request.v0.json`. Request/portfolio commit
+`0ffdf47` passed push CI `29433294092` and PR CI `29433297546`; this qualifies
+the request but does not authorize it. Do not implement or execute Stage A
+without the exact sentence in that packet and a separately committed,
 pushed, remotely green decision record. Do not read train arrays, protected
 cache members, targets, ignored outputs, checkpoints, or private predictions
 from this planning boundary.
@@ -731,7 +733,9 @@ authorization boundary.
   authorization fields, ten source bindings, and ten cross-loop kill branches.
   S21 session-1 validation, session 2, and S7 remain consumed; S25 remains
   unopened and final-only. Loops 46/47 are parked and Loop 48 is preregistered
-  artifact-only with authorization pending and no implementation.
+  artifact-only with authorization pending and no implementation. Its
+  request/portfolio commit `0ffdf47` passed push CI `29433294092` and PR CI
+  `29433297546`; every Stage A and Stage B authorization remains false.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed

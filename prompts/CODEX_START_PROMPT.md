@@ -32,6 +32,12 @@ requests, and these files:
 - `registries/loop26_research_boundary.v0.json`
 - `docs/LOOP_26_SHARED_VALIDATION_RESULT.md`
 - `registries/loop26_shared_validation_result.v0.json`
+- `docs/LOOP_48_PRIMARY_SOURCE_RESEARCH.md`
+- `registries/loop48_failure_localization_contract.v0.json`
+- `docs/LOOP_48_AUTHORIZATION_PACKET.md`
+- `registries/loop48_authorization_request.v0.json`
+- `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md`
+- `registries/loop48_hypothesis_portfolio.v0.json`
 - `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md`
 - `registries/loop27_research_boundary.v0.json`
 - `docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md`
@@ -289,7 +295,9 @@ contract remains unimplemented and every authorization field is false. Commit,
 push, test, and remotely qualify the exact contract before preparing a separate
 Stage A authorization packet. That qualification is now green at `83309bf`,
 and the still-false request is in `docs/LOOP_48_AUTHORIZATION_PACKET.md` and
-`registries/loop48_authorization_request.v0.json`. Any implementation,
+`registries/loop48_authorization_request.v0.json`. Request/portfolio commit
+`0ffdf47` passed push CI `29433294092` and PR CI `29433297546`, but
+qualification is not authorization. Any implementation,
 train-array/protected read, target, checkpoint, private prediction, model run,
 or tuning remains closed until the exact sentence receives its own green
 decision record.

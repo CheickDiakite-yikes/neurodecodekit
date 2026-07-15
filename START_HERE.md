@@ -25,7 +25,9 @@
    and execution remain unauthorized. Review
    `docs/LOOP_48_AUTHORIZATION_PACKET.md` and
    `registries/loop48_authorization_request.v0.json` for the exact next
-   decision; preparing the request did not authorize Stage A.
+   decision. Request/portfolio commit `0ffdf47` passed push CI `29433294092`
+   and PR CI `29433297546`; preparing and qualifying the request still did not
+   authorize Stage A.
    Read `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md` only as future Stage
    B design research: five hypotheses may coexist, scientific comparisons are
    parallel, numerical compute is sequential, and every execution field is
@@ -465,6 +467,8 @@ and are parked after the candidate lost to the no-signal prior; no rerun is
 authorized. Loop 48 now has a post-outcome artifact-only diagnostic contract
 that records `F5` output-distribution instability as the leading phenotype.
 The contract is not implemented or executed and every authorization field
-remains false. Loops 49-64 remain `Not Started`, and all current execution
+remains false. Its request/portfolio commit `0ffdf47` is remotely green, so
+the exact Stage A sentence or an explicit hold is the next decision. Loops
+49-64 remain `Not Started`, and all current execution
 flags are false. S25 remains sealed until a separate final-only zero-shot
 packet is complete.

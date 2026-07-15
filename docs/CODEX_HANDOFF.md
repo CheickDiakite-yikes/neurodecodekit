@@ -13,7 +13,9 @@
 > authorization pending. Its leading `F5` output-instability phenotype is not
 > a proven root cause; the contract has no implementation or execution. Green
 > commit `83309bf` passed push CI `29431318268` and PR CI `29431347801`; the
-> exact Stage A request is prepared but every authorization remains false.
+> exact Stage A request and five-hypothesis portfolio are green at commit
+> `0ffdf47`, push CI `29433294092`, and PR CI `29433297546`, but every
+> authorization remains false.
 > A separate five-hypothesis train-only Stage B portfolio is design research
 > only; it is not preregistered and cannot inherit Stage A authorization.
 
@@ -462,7 +464,9 @@ This is not primarily a model repo. It is a **research loop repo**.
    root-cause fields, 30 refusals, and a one-thread Stage A. The exact request
    is now in `docs/LOOP_48_AUTHORIZATION_PACKET.md` and
    `registries/loop48_authorization_request.v0.json`; provide its exact
-   sentence or hold. No artifact analyzer, train-array diagnostic, cache
+   sentence or hold. Commit `0ffdf47` and both of its CI runs are green, so
+   this is now the sole Stage A decision rather than a qualification task. No
+   artifact analyzer, train-array diagnostic, cache
    member, target, checkpoint, private prediction, or model run is authorized;
    source test and session 2 stay closed.
    The future portfolio in
@@ -1109,8 +1113,9 @@ of four, ten sources, ten kill branches, 20 false execution flags, and nine
 false global authorization fields.
 
 The critical sequence has stopped at the failed Loop 46/47 S21 gate. Loop 48
-artifact-only failure localization is preregistered but not implemented or
-authorized; only a separately designed non-S25 development-person path could
+artifact-only failure localization and its request are remotely qualified but
+not implemented or authorized; only a separately designed non-S25
+development-person path could
 later reopen the predictive branch before Loop 52's one-time S25 verdict. S21
 session 2 and S7 stay consumed; S25 stays unopened and final-only. EEG,
 streaming, device, home, reproduction, and release phases remain downstream
