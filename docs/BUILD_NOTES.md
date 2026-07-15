@@ -3883,3 +3883,46 @@ permission stops from reversible routine and bounded development work.
 Scientific claim not established: the draft authorizes nothing and creates no
 new neural, decoding, generalization, real-time, EEG, device, or clinical
 evidence.
+
+## 2026-07-15 - Loop 48 Stage B Train-Only Preregistration
+
+- Advanced the additive six-hypothesis design into one exact, machine-readable
+  protocol over the existing S21 session-1 source-train partition. No cache
+  member, signal, target, checkpoint, private prediction, model, or ignored
+  experiment artifact was read.
+- Corrected the scientific ceiling after auditing historical use: every one of
+  the 55 source-train rows contributed to prior Loop 26 fits, so a new 44/11
+  split is prospective only within this execution and can reach at most E2
+  pipeline-discriminative evidence.
+- Froze target-independent row assignment; prefixes `8, 16, 24, 32, 44`;
+  seeds `4801-4803`; the exact 2,908/2,884-parameter models; 20 fits; 35 model
+  inferences; five priors; 41 prediction sets; 4,800 optimizer steps; and one
+  post-green-freeze 11-target score using all 2,048 paired sign assignments.
+- Separated the seven-comparator candidate corruption conjunction from a
+  six-set candidate/linear prior rule. The latter cannot imply uncomputed
+  linear corruption controls or a task-locked character probe.
+- Retained one thread, one worker, one numerical job, 1 GiB RSS, 32 MiB output,
+  a 20 GiB free-disk floor, and zero downloads. Current free disk was 39 GiB.
+- Updated the Markdown tracker, machine roadmap, README, start-here guide,
+  handoff, agent boundary, decision journal, and this build journal. The tracked
+  workbook was deliberately not reopened: its last required artifact-tool pass
+  measured 1,572,667,392-byte RSS, above this protocol's 1 GiB envelope. The
+  adjacent user-owned inspection sidecar remained unread and untouched.
+- Local acceptance passes 100 focused Loop 48/roadmap tests, 795 dependency-
+  light tests with 142 expected skips, and 842 optional-neuro tests with 3
+  expected skips. The complete runs took 1.64/27.55 seconds wall time and
+  peaked at 90,767,360/609,239,040 bytes RSS. The 781/828 pre-change baselines
+  therefore gain exactly 14 invariants without losing a prior test.
+- A separate probe with macOS system Python 3.9 was rejected as outside the
+  declared Python `>=3.10` range: it collected 777 tests but produced 22
+  version-caused errors (`zip(strict=...)`, `tomllib`, and modern union syntax)
+  with 141 skips. It is not counted as a project regression or qualification
+  result, and no compatibility code was changed in response.
+
+Engineering capability preregistered: one bounded, prediction-frozen protocol
+can test six competing pipeline-failure explanations before a new acquisition.
+
+Scientific claim not established: no Stage B execution or result exists, and
+there is no new neural advantage, independent validation, brain-origin,
+decoding, generalization, real-time, EEG, home-device, assistive, or clinical
+evidence.

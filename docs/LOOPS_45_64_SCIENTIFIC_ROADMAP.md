@@ -104,20 +104,19 @@ diagnostic exists, and no rerun is authorized. Authorization commit `5bae880`
 and implementation commit `ca21539` were each pushed and remotely green before
 the single execution.
 
-Future Stage B design starts from the immutable five-hypothesis portfolio and
-adds a primary-source-informed sixth hypothesis for data quantity/sentence
-diversity. The refined support vector separates the exact fixed CTC recipe,
-signal quality, temporal or preprocessing mismatch, representation
-separability, prior dominance, and data regime; these mechanisms may coexist.
-An orthogonal `T1` threat tracks peripheral/task-locked shortcuts. One shared
-train-only evidence bundle should evaluate the hypotheses in parallel
-scientifically while one-thread numerical work remains sequential. The
-preregistered practical-margin and paired-uncertainty gate is required for a
-future `E3` bounded sensor-dependence result, while brain-specific origin stays
-behind Loop 35. This design is not preregistered or authorized and cannot
-inherit Stage A scope. Additive design commit `33a14d8` passed push CI
-`29436731383` and PR CI `29436735374`; remote qualification changes no
-authorization field.
+Stage B is now frozen in
+`docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md` and
+`registries/loop48_train_only_discrimination_contract.v0.json`. The protocol
+uses a target-independent 44-fit/11-check split inside the 55 source-train
+rows, prefixes `8, 16, 24, 32, 44`, seeds `4801-4803`, 20 fits, 35 target-blind
+inferences, five priors, 41 prediction sets, and 2,048 exact paired sign
+assignments. Predictions and telemetry must become remotely green before one
+11-target scoring delivery. Because all 55 rows were used by prior Loop 26
+fits, the check rows are not historically fresh; the exact Stage B ceiling is
+E2 pipeline-discriminative evidence, not the earlier design-level E3 ceiling.
+Raw quality, causal preprocessing, peripheral origin, independent validation,
+and every generalization claim remain unavailable. The protocol is
+preregistered but unauthorized and cannot inherit Stage A scope.
 
 The consumed Stage A verified hashes, reproduced aggregate blank/CER summaries,
 applied the ordered tree, and emitted one target-free aggregate report. Do not

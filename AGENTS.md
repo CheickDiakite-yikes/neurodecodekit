@@ -165,13 +165,16 @@ portfolio remains immutable. Additive primary-source research in
 tiny CTC recipe, adds `H6` for data quantity/sentence diversity, and separates
 the orthogonal `T1` peripheral/task-locked shortcut threat. It compares six
 coexisting hypotheses from shared evidence with sequential one-thread compute.
-It is design research only: exact splits, thresholds, model inventory, runtime,
-RSS, and output caps are unfrozen, every Stage B execution field is false, and
-Stage B cannot establish brain-specific origin. The consumed Stage A decision
-does not authorize this portfolio or additive design. Additive design commit
-`33a14d8` passed push CI `29436731383` and PR CI `29436735374`; Base Python ran
-743 tests with 142 expected skips, Optional Neuro Readers ran 775 with 22
-expected skips, and qualification changed no authorization.
+The design is preserved as research history. Its Stage B questions are now
+frozen in `docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md` and
+`registries/loop48_train_only_discrimination_contract.v0.json`: 44 fit rows,
+11 target-withheld check rows, five prefixes, three seeds, 20 fits, 35
+target-blind inferences, five priors, 41 frozen prediction sets, and 2,048 exact
+sign assignments. All 55 rows were used historically, so Stage B can reach at
+most E2 pipeline-discriminative evidence. Every authorization field is false;
+do not implement, read the cache, train, infer, freeze predictions, deliver
+check targets, or score from general continuation or the draft autonomy
+charter.
 
 Loop 27 planning research is complete at green commit `b3d61b6`, but no
 preregistration or acquisition request exists:
@@ -517,8 +520,9 @@ The next research tranche is frozen in
 five phases of four. Loop 45 is complete at its target-free mechanics boundary;
 Loops 46/47 are consumed and parked after the failed shared S21 event. Loop 48
 is complete at its consumed artifact-only `F5` boundary with no rerun. Its
-additive six-hypothesis discrimination research is design-only,
-unpreregistered, remotely green at commit `33a14d8`, and unauthorized. Loops
+additive six-hypothesis research has an exact unauthorized Stage B
+preregistration with an E2 ceiling; no implementation or protected execution
+exists. Loops
 49-64 are `Not Started`, every current execution flag is false, and every
 global authorization field is false. Do not rerun Loop 48, start a new
 development person, or open any S25 path from a broad continuation request.

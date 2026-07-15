@@ -2773,3 +2773,36 @@ RW3, or another consumed or independently gated experiment.
 
 Evidence: `docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md` and
 `tests/test_research_autonomy_charter.py`.
+
+## 0083 - Preregister Train-Only Failure Discrimination Before New Acquisition
+
+Sequence decision: run one bounded Loop 48 Stage B diagnostic design before a
+new Loop 49 participant acquisition. The existing 10,632,576-byte sentence
+cache can distinguish optimization collapse, gross transformed-cache defects,
+timing sensitivity, registered-probe nonseparability, prior dominance, and
+bounded data-regime effects with materially less storage and compute than a
+new download. Loop 49 remains required and is not replaced.
+
+Historical-use decision: all 55 source-train rows contributed to earlier Loop
+26 fits. A new target-independent 44-fit/11-check split therefore creates an
+internal prediction firewall but not historically fresh or independently
+confirmatory evidence. Correct the exact claim ceiling from the design-level
+E3 concept to E2 pipeline-discriminative evidence.
+
+Protocol decision: freeze five nested prefixes, three seeds, 20 parameter-
+update runs, 35 target-blind model inferences, five train-only priors, 41
+prediction sets, and exact 2,048-assignment paired inference. Freeze one
+candidate corruption conjunction and a separate six-set candidate/linear
+prior rule; do not imply that uncomputed linear corruption controls or a
+task-locked character probe exist.
+
+Resource and access decision: retain one thread, one worker, one numerical job,
+1 GiB peak RSS, 32 MiB total output, a 20 GiB free-disk floor, and zero new
+downloads. Keep validation, source test, session 2, S7, S20, S25, raw FIF/MAT,
+private Loop 26 outputs, training, inference, and check scoring closed. The
+preregistration grants no authorization and requires a separate exact decision
+before implementation or protected access.
+
+Evidence: `docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md`,
+`registries/loop48_train_only_discrimination_contract.v0.json`, and
+`tests/test_loop48_train_only_discrimination_contract.py`.

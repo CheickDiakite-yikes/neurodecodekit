@@ -607,11 +607,13 @@ Independent Evidence And Release.
 Loop 45 is complete at its target-free mechanics boundary. Loops 46 and 47 are
 parked after the one consumed S21 event failed the candidate-versus-prior and
 full attribution conjunctions. Loop 48 completed one artifact-only Stage A at
-descriptive `F5`; its result is consumed with no rerun, while its five-hypothesis
-Stage B portfolio and additive H1-H6/T1 discrimination map remain design-only. The
-additive map is remotely green at commit `33a14d8` with push CI `29436731383`
-and PR CI `29436735374`, but no authorization changed. Loops
-49-64 are `Not Started`. All execution
+descriptive `F5`; its result is consumed with no rerun. Stage B is now exactly
+preregistered over a deterministic 44-fit/11-check source-train split with 20
+fits, 35 target-blind inferences, five priors, 41 frozen prediction sets, and
+2,048 exact sign assignments. All 55 rows were used historically, so this can
+reach at most E2 diagnostic evidence. The contract authorizes nothing and no
+protected read, implementation, training, inference, or check score occurred.
+Loops 49-64 are `Not Started`. All execution
 flags and all nine global authorization fields are false. The next possible
 positive scientific claim now requires a fresh, separately registered
 development-person path before the final-only S25 zero-shot verdict. No roadmap

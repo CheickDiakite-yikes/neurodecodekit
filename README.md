@@ -43,7 +43,7 @@ irreversible events. The draft is not active yet.
 | Full-path causality gate | Loop 25 v1 passed a dedicated causal anti-alias audit, 65,537 response points, 23 alias probes, 168 schedule checks, 240 resume checks, and 72 future-mutation controls across 24 target-free items | The exact 1000-to-100 Hz path is mechanically causal with zero right context; this is synthetic mechanics evidence, not proof that neural information survives |
 | Consumed S21 validation | The registered 2,908-parameter candidate reached macro CER `0.938177`; the train-only no-signal prior reached `0.751235`, so the candidate was worse by `0.186942` | Loop 26 is parked after one consumed six-target event; this is a clear negative result, not neural advantage |
 | Failure-localization result | The one-shot artifact-only pass reproduced `99.3477%` primary blank, all 6/6 unstable fixed-prefix groups, and all 3/3 size-55 seeds worse than the prior | Loop 48 selected descriptive `F5` output-distribution instability in `0.0166` sec and 23.4 MB RSS; root cause remains unresolved and no rerun is authorized |
-| Improved failure hypotheses | Six coexisting train-only hypotheses separate the fixed tiny CTC recipe, sensor quality, timing/preprocessing, representation separability, prior dominance, and data quantity/diversity; `T1` separately tracks peripheral/task-locked shortcuts | This is design research only; hypotheses share one evidence bundle while compute stays sequential and one-threaded, and even a future positive Stage B result cannot establish brain-specific origin |
+| Preregistered failure discrimination | A deterministic 44-fit/11-check split, five nested sizes, three fixed seeds, 20 fits, 35 target-blind inferences, five priors, 41 frozen prediction sets, and 2,048 exact sign assignments now bind six failure hypotheses | Stage B is preregistered but unauthorized; because all 55 rows were used historically, its ceiling is E2 diagnostic evidence, not independent validation or neural advantage |
 | Fresh transfer candidate | Loop 27 metadata research selects S25 session 2 block 2: one MEG FIF plus one protected MAT log, exactly 1,009,939,983 bytes under 1 GiB | S25 is not downloaded or qualified; preregistration waits for the causal source model, controls, and target isolation |
 | Transfer decision rule | Loop 28 research separates T0-T3 evidence and recommends a strict S25 T2 zero-shot gate: zero target fit, at least 48 final rows, at least 0.05 macro-CER improvement, 65,535 paired swaps plus observed, and strict corruption-control wins | The experiment is `Not Started`; this resolves one planning dependency without authorizing S25, a model run, calibration, or final access |
 | Portable sensing decision | Loop 29 research separates cryogenic MEG, partner/lab OPM-MEG, local-first scalp EEG, and non-neural controls through 15 requirements and six qualification levels | Planning research is complete while the experiment is `Not Started`; no device, download, stream, hardware session, or portable decoding result exists |
@@ -75,14 +75,16 @@ output-distribution instability; the 10,643-byte result is consumed, root cause
 remains unresolved, and no rerun is authorized. All current execution flags
 are false because no execution is presently open.
 
-The separate future Stage B design starts with the immutable five-hypothesis
-portfolio in `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md`. The additive
-primary-source pass in `docs/LOOP_48_HYPOTHESIS_DISCRIMINATION_RESEARCH.md`
-narrows `H1` to the exact failed recipe, adds `H6` for data quantity and
-sentence diversity, and routes the orthogonal `T1` shortcut threat to Loop 35.
-It reuses one train-only evidence bundle and requires practical-margin plus
-paired-uncertainty gates for bounded sensor dependence. No Stage B split,
-model inventory, cap, implementation, data read, or run is authorized.
+The separate Stage B protocol is now frozen in
+`docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md` and
+`registries/loop48_train_only_discrimination_contract.v0.json`. It starts from
+the immutable five-hypothesis portfolio and additive H1-H6/T1 research, then
+binds a deterministic 44-fit/11-check source-train split, exact model/control
+inventory, prediction-before-target order, paired statistics, resource caps,
+and stop rules. All 55 rows were used by earlier fits, so the new check split
+is prospective only inside this execution; Stage B can reach at most E2
+diagnostic evidence. No implementation, protected read, training, inference,
+check-target delivery, scoring, or run is authorized.
 
 | Phase | Loops | Decisive goal |
 |---|---:|---|
@@ -117,6 +119,7 @@ negative result and S25 is never repurposed for calibration.
 | Causal preprocessing v1 | 4 anti-alias and 9 total SOS sections; 65,537 response points; 23/23 alias probes; 24/24 target-free items; 168 schedules; 240 resumes; 72 mutation controls; 0 protected reads | completed target-free synthetic mechanics | Establishes one strict, resumable 1000-to-100 Hz causal path with zero right context while leaving retained neural information and decoding performance unproven |
 | Loop 26/31/33 shared validation gate | 55/6/5 source split; 2,908/2,884-parameter models; 21 fits; 24 target-blind inferences; six priors; 31 frozen prediction sets; one post-freeze six-target score; candidate/prior macro CER `0.938177/0.751235` | consumed negative result; all three gates parked; no rerun | Proves the target firewall and bounded research runtime work while showing this exact predictive design does not beat an honest no-signal baseline |
 | Loop 48 artifact-only failure localization | 4 exact committed JSON inputs; 155,545 input bytes; 18 blank fractions; 6 fixed-prefix ranges; `F5`; 0.016568875 sec; 23,429,120-byte peak RSS; 10,643 output bytes; 0 protected/model/training operations | consumed post-outcome descriptive result; no rerun | Reproduces the failure phenotype mechanically while keeping causal root cause, neural advantage, and every decoding or device claim explicitly unavailable |
+| Loop 48 Stage B preregistration | 44 fit / 11 check rows; prefixes `8,16,24,32,44`; seeds `4801-4803`; 20 fits; 35 target-blind inferences; 5 priors; 41 frozen sets; 2,048 exact sign assignments; 1 thread; 32 MiB cap | preregistered, unauthorized, zero protected reads | Converts six competing failure explanations into one falsifiable diagnostic while correcting the ceiling from E3 to E2 because the rows are not historically fresh |
 | Loop 27 fresh-holdout boundary | 315 pinned MEG metadata entries; 23 strict single-FIF/log pairs; 16 eligible; S25 selected at 1,009,939,983 bytes; S23 excluded; 18 false authorization fields | metadata research only | Finds the smallest honest same-modality transfer candidate while keeping its local MAT payload, remote FIF, targets, and backups sealed |
 | Loop 28 transfer boundary | T0-T3 taxonomy; strict zero-shot/transductive split; 48-row floor; 0.05 macro-CER margin; 65,535 paired assignments plus observed; 4 comparators; 21 false authorization fields | planning research only | Makes the future one-time S25 decision falsifiable while reserving calibrated transfer for a physically separate design |
 | Loop 29 portability boundary | 15 modality requirements; 4 profiles; 6 qualification levels; 12 future packet gates; 24 false authorization fields; 5,000,000,000-byte preferred storage ceiling | planning research only | Chooses EEG as the immediate local-first lane and OPM-MEG as a partner/lab lane without treating channel ablation, vendor specifications, or home acquisition as text decoding |
@@ -1063,6 +1066,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/loop48_hypothesis_portfolio.v0.json](registries/loop48_hypothesis_portfolio.v0.json) | design-only H1-H5 support-vector schema with unfrozen Stage B inventory/caps and zero operation counters |
 | [docs/LOOP_48_HYPOTHESIS_DISCRIMINATION_RESEARCH.md](docs/LOOP_48_HYPOTHESIS_DISCRIMINATION_RESEARCH.md) | primary-source refinement adding data-regime hypothesis `H6`, evidence levels, non-identifiability rules, and the `T1` shortcut firewall |
 | [registries/loop48_hypothesis_discrimination.v0.json](registries/loop48_hypothesis_discrimination.v0.json) | additive H1-H6 discrimination map with shared sequential stages, strict claim ceilings, 15 false authorizations, and zero protected/model operations |
+| [docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md](docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md) | exact 44/11 split, model/control inventory, telemetry, paired statistics, prediction-freeze order, resource caps, and E2 historical-use correction |
+| [registries/loop48_train_only_discrimination_contract.v0.json](registries/loop48_train_only_discrimination_contract.v0.json) | machine-readable 20-fit, 35-inference, 41-prediction Stage B contract with 25 refusals, zero protected activity, and every authorization false |
 | [docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md) | official metadata ranking, selected S25 MEG candidate, exact bytes/hashes, target-isolation design, and preregistration blockers |
 | [registries/loop27_research_boundary.v0.json](registries/loop27_research_boundary.v0.json) | machine-readable Loop 27 candidate identity, unavailable fields, resource boundary, zero payload access, and 18 false authorization fields |
 | [docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md) | v2 transfer audit, T0-T3 taxonomy, strict zero-shot/transductive distinction, final-only rule, and calibrated-design boundary |

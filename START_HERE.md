@@ -35,11 +35,13 @@
    five-hypothesis starting point, then read
    `docs/LOOP_48_HYPOTHESIS_DISCRIMINATION_RESEARCH.md` and
    `registries/loop48_hypothesis_discrimination.v0.json` for the additive
-   six-hypothesis refinement. Scientific comparisons are parallel, numerical
-   compute is sequential, `T1` routes shortcut risk to Loop 35, and every
-   execution field is false. Additive design commit `33a14d8` passed push CI
-   `29436731383` and PR CI `29436735374`; qualification still authorizes no
-   Stage A or Stage B operation.
+   six-hypothesis refinement. Then read
+   `docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md` and
+   `registries/loop48_train_only_discrimination_contract.v0.json` for the
+   exact Stage B 44/11 split, 20-fit, 35-inference, 41-prediction protocol.
+   Every execution field remains false. All 55 rows were used historically,
+   so the 11-row check is not independent confirmation and Stage B is capped
+   at E2 diagnostic evidence even if every control passes.
 8. Read `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` for the selected S25
    metadata candidate and every blocker that still prevents preregistration,
    download, signal/target access, or transfer evaluation.
@@ -477,10 +479,13 @@ selected `F5` output-distribution instability as the descriptive phenotype.
 The result is consumed, root cause remains unresolved, and no rerun is
 authorized. Authorization commit `5bae880` and implementation commit
 `ca21539` were each pushed and remotely green before the one execution. The
-additive H1-H6 discrimination design changes no authorization and caps a future
-Stage B result at bounded sensor dependence under frozen margin and uncertainty
-gates; brain-specific origin remains a separate Loop 35 question. Commit
-`33a14d8` and both CI runs are green. Loops
-49-64 remain `Not Started`, and all current execution
+additive H1-H6 design has now advanced to an exact Stage B preregistration: 44
+fit rows, 11 target-withheld check rows, 20 fits, 35 target-blind inferences,
+five priors, 41 frozen prediction sets, and one post-green-freeze check score.
+It changes no authorization. Because all 55 source-train rows were used by
+prior Loop 26 fits, its ceiling is E2 pipeline discrimination rather than
+independent validation or sensor-dependence confirmation. Brain-specific
+origin remains a separate Loop 35 question. Loops 49-64 remain `Not Started`,
+and all current execution
 flags are false. S25 remains sealed until a separate final-only zero-shot
 packet is complete.

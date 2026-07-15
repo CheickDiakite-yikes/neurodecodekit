@@ -19,11 +19,13 @@
 > This is not a proven root cause, and no rerun is authorized.
 > Closeout commit `6322635` passed push CI `29446438743` and PR CI
 > `29446440355`.
-> An additive primary-source pass now defines six coexisting hypotheses, a
-> five-level evidence ladder, and an orthogonal shortcut threat. It is design
-> research only, is not preregistered, cannot inherit Stage A authorization,
-> and cannot establish brain-specific origin. Commit `33a14d8` passed push CI
-> `29436731383` and PR CI `29436735374`; all authorization fields remain false.
+> The additive six-hypothesis pass has now advanced to one exact Stage B
+> preregistration: 44 fit rows, 11 target-withheld check rows, five nested
+> sizes, three fixed seeds, 20 fits, 35 target-blind inferences, five priors,
+> 41 prediction sets, and 2,048 exact sign assignments. All 55 rows were used
+> historically, so the check partition is not independent confirmation and
+> the result ceiling is E2 diagnostic evidence. The contract is unauthorized;
+> no protected read, implementation, model operation, or score occurred.
 
 > Historical pre-Loop-25-execution context, retained for audit: Loops 1-12,
 > 14-22, and 23.5 are complete; Loops
