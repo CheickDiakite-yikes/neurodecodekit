@@ -33,7 +33,7 @@ and explain exactly what the result does not prove.
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
 | Full-path causality gate | Loop 25 v1 passed a dedicated causal anti-alias audit, 65,537 response points, 23 alias probes, 168 schedule checks, 240 resume checks, and 72 future-mutation controls across 24 target-free items | The exact 1000-to-100 Hz path is mechanically causal with zero right context; this is synthetic mechanics evidence, not proof that neural information survives |
-| Next predictive design | Green shared Loop 26/31/33 preregistration freezes a 2,908-parameter causal candidate, 2,884-parameter linear comparator, 21 fits, 24 target-blind inferences, six priors, 31 prediction sets, ten encoder conditions, a six-point scaling curve, and all 64 paired sign assignments | Authorization is still absent and every execution flag is false; this is a prospective design result, not neural performance |
+| Next predictive design | Green shared Loop 26/31/33 preregistration freezes a 2,908-parameter causal candidate, 2,884-parameter linear comparator, 21 fits, 24 target-blind inferences, six priors, 31 prediction sets, ten encoder conditions, a six-point scaling curve, and all 64 paired sign assignments | Separately authorized at `1c0e52c`; the staged implementation is synthetic-only and must become remotely green before protected access, so this is still not neural performance |
 | Fresh transfer candidate | Loop 27 metadata research selects S25 session 2 block 2: one MEG FIF plus one protected MAT log, exactly 1,009,939,983 bytes under 1 GiB | S25 is not downloaded or qualified; preregistration waits for the causal source model, controls, and target isolation |
 | Transfer decision rule | Loop 28 research separates T0-T3 evidence and recommends a strict S25 T2 zero-shot gate: zero target fit, at least 48 final rows, at least 0.05 macro-CER improvement, 65,535 paired swaps plus observed, and strict corruption-control wins | The experiment is `Not Started`; this resolves one planning dependency without authorizing S25, a model run, calibration, or final access |
 | Portable sensing decision | Loop 29 research separates cryogenic MEG, partner/lab OPM-MEG, local-first scalp EEG, and non-neural controls through 15 requirements and six qualification levels | Planning research is complete while the experiment is `Not Started`; no device, download, stream, hardware session, or portable decoding result exists |
@@ -92,7 +92,7 @@ negative result and S25 is never repurposed for calibration.
 | Bounded signal-quality interface | 40 fixtures; 38 readable and 2 exact refusals across 6 format families; 3.839 sec; 76,592 output bytes | fixture-backed | Validates readers, metrics, privacy, caps, and no-mutation identity before any real quality claim |
 | Replay/live-source authorization gate | 5 schedules x 18 fixture families = 90 future cases; 30 refusal IDs; 4 separately gated stages; 10 invariants | review-ready, not authorized | Binds the exact Stage A scope and caps before any source-chunk, socket, board, fixture, or hardware implementation |
 | Causal preprocessing v1 | 4 anti-alias and 9 total SOS sections; 65,537 response points; 23/23 alias probes; 24/24 target-free items; 168 schedules; 240 resumes; 72 mutation controls; 0 protected reads | completed target-free synthetic mechanics | Establishes one strict, resumable 1000-to-100 Hz causal path with zero right context while leaving retained neural information and decoding performance unproven |
-| Loop 26/31/33 shared preregistration | 55/6/5 source split; 2,908/2,884-parameter models; 21 fits; 24 target-blind inferences; six priors; 31 frozen prediction sets; 10 encoder conditions; nested `8/16/24/32/44/55`; 64 exact sign assignments; 40 refusals | green preregistration; unauthorized | Preserves one prospective six-target event across predictive advantage, signal attribution, and bounded scaling before any new protected execution |
+| Loop 26/31/33 shared validation gate | 55/6/5 source split; 2,908/2,884-parameter models; 21 fits; 24 target-blind inferences; six priors; 31 frozen prediction sets; 10 encoder conditions; nested `8/16/24/32/44/55`; 64 exact sign assignments; 40 refusals | green preregistration and authorization; synthetic implementation awaiting remote qualification | Preserves one prospective six-target event across predictive advantage, signal attribution, and bounded scaling before any protected value access |
 | Loop 27 fresh-holdout boundary | 315 pinned MEG metadata entries; 23 strict single-FIF/log pairs; 16 eligible; S25 selected at 1,009,939,983 bytes; S23 excluded; 18 false authorization fields | metadata research only | Finds the smallest honest same-modality transfer candidate while keeping its local MAT payload, remote FIF, targets, and backups sealed |
 | Loop 28 transfer boundary | T0-T3 taxonomy; strict zero-shot/transductive split; 48-row floor; 0.05 macro-CER margin; 65,535 paired assignments plus observed; 4 comparators; 21 false authorization fields | planning research only | Makes the future one-time S25 decision falsifiable while reserving calibrated transfer for a physically separate design |
 | Loop 29 portability boundary | 15 modality requirements; 4 profiles; 6 qualification levels; 12 future packet gates; 24 false authorization fields; 5,000,000,000-byte preferred storage ceiling | planning research only | Chooses EEG as the immediate local-first lane and OPM-MEG as a partner/lab lane without treating channel ablation, vendor specifications, or home acquisition as text decoding |
@@ -109,7 +109,7 @@ negative result and S25 is never repurposed for calibration.
 | Loop 42 named-device boundary | OpenBCI Cyton base 8-channel USB-radio; Q0 only; 28 identity fields; 16 packet fields; 7 timing observables; 10 anomalies; 30 fixtures; 4 stages; 34 gates; 46 refusals; 45 false authorization fields | planning research only; no purchase, SDK, serial read, board connection, participant, recording, or device result exists | Makes a future local-device mechanics test exact while refusing to turn host timestamps, local files, connectivity, or eight channels into latency, privacy, EEG-quality, or text-decoding claims |
 | Loop 43 independent-reproduction boundary | 7 qualification levels; 16 independence fields; 28 packet fields; 34 submission fields; 8 comparison classes; 12 discrepancy classes; 32 fixtures; 4 stages; 36 gates; 48 refusals; 48 false authorization fields | planning research only; no packet, oracle, outreach, contributor, submission, adjudication, archive, or release exists | Defines how one future external environment can reproduce a released target-free software artifact without inflating that result into scientific replication, neural advantage, or population generalization |
 | Loop 44 claim-release matrix | 16 claims; 7 evidence levels; 5 model cards; 4 dataset cards; 14 gates; 8 risks; 0 tag/release/DOI operations | artifact-only review complete; engineering release held; scientific release parked | Makes every public claim traceable to cohort, task, split, comparator, uncertainty, resources, access, privacy, license, and evidence while preserving negative results |
-| Test and release surface | 708 local unittests with 3 expected skips; 661 dependency-light Python tests with 124 expected skips | Loop 25 execution and Loop 26 preregistration CI are green; all current execution flags remain false | Makes research contracts, incident accounting, source bindings, access order, tamper checks, and authorization boundaries executable on ordinary hardware |
+| Test and release surface | 739 local unittests with 3 expected skips; 45 focused Loop 26 implementation/contract tests | Loop 26 preregistration and authorization CI are green; the implementation awaits its own remote qualification before protected access | Makes research contracts, bounded readers, target isolation, freeze binding, access order, tamper checks, and authorization boundaries executable on ordinary hardware |
 
 ### Real-Data Scientific Scorecard
 
@@ -246,12 +246,14 @@ Read this before interpreting any number in the repository.
   and 72 future-mutation checks passed with zero protected reads. Generated
   output was 788,967 bytes and maximum RSS was 136,806,400 bytes. Loop 25 is
   complete, consumed, and not authorized for rerun.
-- **Loop 26/31/33 shared preregistration:** green commit `881145d` freezes the
+- **Loop 26/31/33 shared validation:** green commit `881145d` freezes the
   left-padded 2,908-parameter candidate, 2,884-parameter comparator, 21 fits,
   24 target-blind model inferences, six train-only priors, 31 prediction sets,
   ten encoder conditions, six nested data sizes, and one six-target scoring
-  delivery after a green prediction freeze. The request exists but remains
-  unauthorized; every protected/model/training/scoring counter is zero.
+  delivery after a green prediction freeze. The exact request was separately
+  authorized at green commit `1c0e52c`; the bounded implementation and
+  synthetic isolation tests now exist, but protected access still waits for
+  the exact implementation commit to be pushed and remotely green.
 - **Loop 27 planning research:** pinned official metadata selects S25 session 2
   block 2 as the smallest eligible clean MEG candidate after excluding observed
   S21 identity, consumed S7, and the official S23 metallic-implant case. Exact
@@ -387,10 +389,10 @@ Read this before interpreting any number in the repository.
   target-free path is causal with zero right context and passes anti-alias,
   timing, schedule, resume, mutation, access, and resource gates. It does not
   show that neural information survives preprocessing, and no rerun is open.
-- Loop 26 has a green preregistration and an unauthorized request, not an
-  implementation, model run, training run, validation result, or neural
-  advantage. Six sentence instances from one person and session cannot
-  establish transfer or population generalization.
+- Loop 26 has a green preregistration, a separately green authorization, and a
+  synthetic-only implementation, not a protected model run, validation result,
+  or neural advantage. Six sentence instances from one person and session
+  cannot establish transfer or population generalization.
 - Loop 27 identifies an acquisition candidate, not an acquired holdout. Exact
   channels, performed trials, sentence overlap, target freshness, transfer
   behavior, and one-time performance remain unavailable.
@@ -942,7 +944,7 @@ The original numbered development sequence has reached:
   evidence while its experiment remains `Not Started`. Loop 33 planning
   research defines the bounded `8, 16, 24, 32, 44, 55` unique-sentence curve,
   one target-blind shared validation event, and no acquisition now; the curve
-  is preregistered but unauthorized. Loop 34 planning research defines the
+  shares the separately authorized Loop 26 event but has not executed. Loop 34 planning research defines the
   three-way confidence, abstention, and revision firewall while its experiment
   remains `Not Started` and confidence is unavailable; Loop 35 planning
   research defines the staged peripheral-confound firewall while its experiment
@@ -1007,7 +1009,9 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md) | six-item identifiability limit, causal candidate repair, parameter-matched comparator, control design, and exact no-execution boundary |
 | [registries/loop26_research_boundary.v0.json](registries/loop26_research_boundary.v0.json) | machine-readable Loop 26 planning evidence, recommendations, zero access counters, and 14 false authorization fields |
 | [docs/LOOP_26_SHARED_VALIDATION_PREREGISTRATION.md](docs/LOOP_26_SHARED_VALIDATION_PREREGISTRATION.md) | green prospective Loop 26/31/33 model, attribution, scaling, prediction-freeze, scoring, access, and resource protocol |
-| [docs/LOOP_26_AUTHORIZATION_PACKET.md](docs/LOOP_26_AUTHORIZATION_PACKET.md) | plain-language exact decision surface for the still-unauthorized shared event |
+| [docs/LOOP_26_AUTHORIZATION_PACKET.md](docs/LOOP_26_AUTHORIZATION_PACKET.md) | immutable plain-language exact decision surface for the shared event |
+| [docs/LOOP_26_AUTHORIZATION_DECISION.md](docs/LOOP_26_AUTHORIZATION_DECISION.md) | separately green one-time authorization, exact scope, order, resources, and refusals |
+| [docs/LOOP_26_SHARED_VALIDATION_IMPLEMENTATION.md](docs/LOOP_26_SHARED_VALIDATION_IMPLEMENTATION.md) | bounded reader, causal models, controls, freeze, scorer, CLI stages, synthetic qualification, and pre-access boundary |
 | [registries/loop26_shared_validation_contract.v0.json](registries/loop26_shared_validation_contract.v0.json) | machine-readable 21-fit, 31-prediction, 40-refusal shared validation contract and archive-access correction |
 | [registries/loop26_authorization_request.v0.json](registries/loop26_authorization_request.v0.json) | green-commit-bound request with every authorization flag false and every protected/model/training/scoring counter zero |
 | [docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md) | official metadata ranking, selected S25 MEG candidate, exact bytes/hashes, target-isolation design, and preregistration blockers |

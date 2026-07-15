@@ -218,19 +218,31 @@ class Loop26ResearchBoundaryTests(unittest.TestCase):
         self.assertTrue(row["authorization_request_prepared"])
         self.assertFalse(row["authorization_received"])
 
-    def test_no_loop26_runtime_or_experiment_surface_exists(self):
-        forbidden = (
-            "src/neurodecodekit/models/tiny_causal_sentence_ctc.py",
-            "src/neurodecodekit/experiments/real_validation_encoder_gate.py",
-            "registries/loop26_experiment_contract.v0.json",
+    def test_separate_authorization_supersedes_surface_absence_not_frozen_request(self):
+        self.assertTrue(
+            (REPO_ROOT / "src/neurodecodekit/models/tiny_causal_sentence_ctc.py").is_file()
         )
-        self.assertTrue(all(not (REPO_ROOT / path).exists() for path in forbidden))
+        self.assertTrue(
+            (REPO_ROOT / "src/neurodecodekit/experiments/shared_s21_validation_gate.py").is_file()
+        )
+        self.assertFalse(
+            (REPO_ROOT / "src/neurodecodekit/experiments/real_validation_encoder_gate.py").exists()
+        )
+        self.assertFalse((REPO_ROOT / "registries/loop26_experiment_contract.v0.json").exists())
         request = json.loads(
             (REPO_ROOT / "registries" / "loop26_authorization_request.v0.json").read_text(
                 encoding="utf-8"
             )
         )
         self.assertFalse(request["authorized_now"])
+        decision = json.loads(
+            (REPO_ROOT / "registries" / "loop26_authorization_decision.v0.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertEqual(decision["status"], "authorized_no_implementation_yet")
+        self.assertTrue(decision["authorization"]["loop26_implementation_authorized_now"])
+        self.assertFalse(decision["authorization"]["source_test_or_session2_authorized_now"])
 
     def test_public_status_keeps_preregistration_separate_from_execution(self):
         for path, contents in self.public_status.items():

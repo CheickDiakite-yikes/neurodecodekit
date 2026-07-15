@@ -10,11 +10,12 @@
    `registries/loop25_causal_preprocessing_result.v1.json` for the completed
    target-free mechanics result; use the amendment and authorization records
    only to audit its frozen execution order. No rerun is authorized.
-7. Read `docs/LOOP_26_SHARED_VALIDATION_PREREGISTRATION.md` and
-   `docs/LOOP_26_AUTHORIZATION_PACKET.md` for the green shared Loop 26/31/33
-   design, archive-access correction, exact one-time scoring order, and pending
-   decision. The request is prepared but unauthorized; no protected execution
-   exists.
+7. Read `docs/LOOP_26_SHARED_VALIDATION_PREREGISTRATION.md`,
+   `docs/LOOP_26_AUTHORIZATION_DECISION.md`, and
+   `docs/LOOP_26_SHARED_VALIDATION_IMPLEMENTATION.md` for the green shared
+   design, separately green one-time authorization, staged implementation, and
+   exact access order. Protected cache access still waits for the exact
+   implementation commit to be pushed and remotely green.
 8. Read `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` for the selected S25
    metadata candidate and every blocker that still prevents preregistration,
    download, signal/target access, or transfer evaluation.
@@ -83,12 +84,13 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 
 Tracker scope: the spreadsheet's `20` KPI is the size of the original roadmap,
 not the current loop number. Its dashboard now separately reports the current
-post-roadmap position as **Loop 25 complete; Loop 26 authorization decision
-next**, and its
+post-roadmap position as **Loop 25 complete; Loop 26 implementation
+qualification next**, and its
 ninth sheet contains the separate **Loops 25-44 queue**. Loop 25 passed once
 at its target-free mechanics boundary and now has `execution_authorized: false`
-because no rerun is open; Loop 26 is preregistered at green commit `881145d`
-with an unauthorized request; Loop 27 planning research
+because no rerun is open; Loop 26 is preregistered at `881145d`, separately
+authorized at `1c0e52c`, and implemented locally with protected access still
+blocked on remote-green implementation CI; Loop 27 planning research
 selects S25 metadata while preregistration remains blocked; Loop 28 planning
 research defines a strict zero-shot final-only rule while its experiment
 remains `Not Started`; Loop 29 planning research defines separate scalp EEG
@@ -273,9 +275,10 @@ complete; Loops 13, 23, and 24 are parked after measured gates. Loop 24 retains
 float32, consumed selection seed 2401, and left qualification seed 2402
 physically unopened. Loop 25 is complete at its one-time target-free mechanics
 boundary; seeds 2501 and 2502 are consumed for this gate and no rerun is
-authorized. Loop 26/31/33 now has one green shared preregistration, but its
-exact authorization is pending and no protected implementation or execution
-exists. Loop 26 is `Preregistered; Authorization Pending`; all other Loops
+authorized. Loop 26/31/33 now has one green shared preregistration, a separately
+green authorization at `1c0e52c`, and a synthetic-only staged implementation.
+Protected execution waits for the implementation commit to become remotely
+green. All other Loops
 27-44 remain planning-only or artifact-only at their documented boundaries.
 Loop 27's planning research is complete: S25 session 2
 block 2 is the smallest eligible strict MEG pair at 1,009,939,983 bytes, but no

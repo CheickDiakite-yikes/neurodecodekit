@@ -91,7 +91,7 @@ decision.
 | 23.5 | Blank/boundary calibration | Can one train-frame-fitted, target-length-independent blank intercept suppress tail false positives on fresh splits without harming any item? | Fresh 64/16/16 fixture, one convex scalar fit, unchanged comparator, calibration metrics, and one new test. | Closed: validation and frozen test are 16/16 exact at CER 0; zero regressions; 5/5 replay; seed 2353 consumed; supervised synthetic calibration only. |
 | 24 | Local precision and runtime | Can a decoder that first passes its correctness gate fit a realistic local CPU envelope without changing outputs beyond a registered tolerance? | float32/float16/dynamic-int8 candidates, state/parameter/RSS/RTF report. | Parked: float16 is exact but slower; qint8 is smaller but incorrect and slower; no qualification open; runtime 65.154951 sec exceeds 60 sec; retain float32 and do not rerun seed 2401. |
 | 25 | Causal preprocessing audit | Can every upstream transform run with zero future context, full folding-band anti-alias protection, exact timing, and chunk/resume identity? | Frozen stateful notch/bandpass/dedicated-antialias SOS, decimation, normalization, and target-free v1 packet. | Complete after green authorization `1e7296a` and implementation `439f151`; 24/24 items, 168 schedules, 240 resumes, and 72 mutation controls passed with zero protected reads; no rerun is authorized. |
-| 26 | Real validation-only encoder gate | Can one fixed tiny causal encoder beat honest controls on the six reserved source-validation sentences? | Green shared Loop 26/31/33 contract before protected execution. | Preregistered at `881145d`; 2,908/2,884-parameter models, 21 fits, 31 prediction sets, 10 encoder conditions, six data sizes, 64 exact assignments, and one post-freeze target delivery; authorization is pending and protected access remains zero. |
+| 26 | Real validation-only encoder gate | Can one fixed tiny causal encoder beat honest controls on the six reserved source-validation sentences? | Green shared Loop 26/31/33 contract before protected execution. | Preregistered at `881145d`, separately authorized at `1c0e52c`, and synthetically implemented; protected access remains zero until the implementation commit is remotely green. |
 | 27 | Fresh holdout preregistration | Which independent recording can answer the next transfer claim without consumed evidence? | Planning-only official metadata selector, exact candidate identities, target-isolation design, and blockers. | Planning research complete at `b3d61b6`; S25 session 2 block 2 selected as two files/1,009,939,983 bytes; 18 false authorization fields; no preregistration, request, download, hash, header, signal, target, or model access. |
 | 28 | Session and person transfer | What claim can one unseen-person final-only recording answer without fitting anything to that person? | Planning-only T0-T3 taxonomy and strict zero-shot final decision rule. | Planning research complete; S25 reserved for T2 with zero fit rows, a 48-row floor, 0.05 macro-CER margin, 65,535 paired assignments plus observed, four comparators, and 21 false authorization fields; experiment remains `Not Started`. |
 | 29 | Portable sensing translation | Which requirements survive movement from cryogenic MEG to OPM-MEG or scalp EEG? | Planning-only modality matrix, qualification ladder, two-lane decision, and bounded data path. | Planning research complete; experiment `Not Started`; 15 requirements, 4 profiles, 6 qualification levels, 24 false authorization fields, and no data/device execution. |
@@ -108,8 +108,9 @@ in `docs/LOOPS_25_44_ROADMAP.md`; the primary-source rationale is in
 
 Loop 25 is now `Complete` with
 `proof_posture: target_free_synthetic_causal_preprocessing_mechanics_passed`
-and no rerun authorization. Loop 26 is preregistered at `881145d` with an
-unauthorized request. Loop 27 has completed metadata research and selected
+and no rerun authorization. Loop 26 is preregistered at `881145d`, separately
+authorized at `1c0e52c`, and synthetically implemented pending remote
+qualification. Loop 27 has completed metadata research and selected
 S25, but its preregistration remains blocked. Loop 28 planning research defines
 the strict zero-shot rule while its experiment remains `Not Started`. Loop 29
 planning research defines separate scalp EEG and OPM-MEG lanes while its
@@ -172,9 +173,11 @@ unauthorized; Loop 43 planning research defines the independent artifact-
 reproduction firewall while its challenge remains `Not Started` and
 unauthorized. Loop 44 artifact-only claim review is complete, with engineering
 release held and scientific performance parked. All 20
-`execution_authorized` flags are false. Loop 26/31/33 has one green shared
-preregistration and one prepared but unauthorized request; its exact execution
-sentence is the next decision. No other Loop 26-44 execution is authorized.
+`execution_authorized` flags are false in the frozen planning registry. Loop
+26/31/33 has one green shared preregistration, an immutable request, and a
+separate green authorization decision at `1c0e52c`; its implementation still
+requires remote qualification before protected access. No other Loop 26-44
+execution is authorized.
 Roadmap approval, general continuation, or documentation work cannot reopen
 Loop 24, authorize RW3 Stage A, or substitute for the exact Loop 26 decision.
 

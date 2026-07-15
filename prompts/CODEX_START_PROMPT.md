@@ -273,13 +273,15 @@ implementation, static-first access order, measured counters, and no-rerun
 boundary remain intact. Do not regenerate the fixture, reopen either partition,
 or rerun the gate.
 
-Loop 26 is preregistered but unauthorized. Review
+Loop 26 is preregistered and separately authorized at green commit `1c0e52c`.
+Review
 `docs/LOOP_26_SHARED_VALIDATION_PREREGISTRATION.md`,
-`docs/LOOP_26_AUTHORIZATION_PACKET.md`, and the two Loop 26 v0 registries. Do
-not implement or execute from this prompt. Cache-value reads, target delivery,
-training, model inference, prediction freezing, and one-time validation access
-require the exact packet sentence in a separate tested, pushed, green
-authorization-only record.
+`docs/LOOP_26_AUTHORIZATION_DECISION.md`,
+`docs/LOOP_26_SHARED_VALIDATION_IMPLEMENTATION.md`, and the Loop 26 v0
+registries. The implementation may proceed only through its frozen stages.
+Do not touch protected cache values until the exact implementation commit is
+tested, pushed, and remotely green; never open validation targets before the
+hash-only prediction-freeze commit is separately remotely green.
 
 Loop 27 is also review-only planning evidence. Do not turn the selected S25
 paths, official hashes, local MAT presence, 1 GiB cap, or roadmap status into a

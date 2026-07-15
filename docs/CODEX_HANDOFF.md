@@ -1,19 +1,16 @@
 # Codex Handoff - NeuroDecodeKit
 
-> Current handoff, 2026-07-13: Loop 25 v1 and scientific Loop 45 remain complete
-> at their one-time target-free mechanics boundary with no rerun. Loop 26,
-> Loop 31's encoder-only matrix, Loop 33's bounded scaling curve, and scientific
-> Loop 46 now share a green preregistration at commit `881145d`; push CI run
-> `29282661766` passed both required jobs. The contract freezes a 2,908-
-> parameter causal model, a 2,884-parameter linear comparator, 21 parameter-
-> update runs, 24 target-blind inferences, six train-only prior fits, 31
-> prediction sets, ten encoder conditions, six nested data sizes, one green
-> prediction freeze, and one six-target scoring delivery. Its separate request
-> is prepared but every `authorized_now` field remains false. No real-cache
-> value, target delivery, model run, training run, prediction, or validation
-> score occurred. The next numbered decision is the exact sentence in
-> `docs/LOOP_26_AUTHORIZATION_PACKET.md` or hold; general autonomy is not that
-> one-time protected execution decision.
+> Current handoff, 2026-07-15: Loop 25 v1 and scientific Loop 45 remain complete
+> at their one-time target-free mechanics boundary with no rerun. The shared
+> Loop 26/31/33 contract is green at `881145d`, and the user's exact one-time
+> authorization is separately green at `1c0e52c` with push/PR CI runs
+> `29422150469` and `29422152661`. A bounded reader, exact 2,908/2,884-parameter
+> models, controls, 31-set prediction freezer, isolated scorer, and five CLI
+> stages are implemented and synthetically qualified. No real S21 cache stat,
+> hash, member, signal, or target value was read during implementation. The
+> next gate is to commit, push, and remotely qualify this exact implementation;
+> only then may the static metadata/header gate run. Five source-test rows,
+> session 2, and all post-target tuning or reruns remain closed.
 
 > Historical pre-Loop-25-execution context, retained for audit: Loops 1-12,
 > 14-22, and 23.5 are complete; Loops
@@ -453,13 +450,14 @@ This is not primarily a model repo. It is a **research loop repo**.
 
 ## Current Next Work
 
-1. **Loop 26 / roadmap Loop 46 - decide on the exact shared authorization, or
-   hold.** Read `docs/LOOP_26_SHARED_VALIDATION_PREREGISTRATION.md`,
-   `docs/LOOP_26_AUTHORIZATION_PACKET.md`, and both Loop 26 v0 registries. The
-   preregistration is green at `881145d`; the request remains immutable and
-   unauthorized. Do not implement, hash/open cache values, deliver targets,
-   train, infer, freeze predictions, or score until the exact sentence is
-   recorded separately, pushed, and remotely green.
+1. **Loop 26 / roadmap Loop 46 - remotely qualify the exact implementation.**
+   Read `docs/LOOP_26_SHARED_VALIDATION_PREREGISTRATION.md`,
+   `docs/LOOP_26_AUTHORIZATION_DECISION.md`,
+   `docs/LOOP_26_SHARED_VALIDATION_IMPLEMENTATION.md`, and the Loop 26 v0
+   registries. Authorization commit `1c0e52c` is green. Commit and push the
+   synthetic implementation, wait for both remote jobs, and only then run the
+   static metadata/header gate. Keep validation targets closed until the later
+   hash-only freeze commit is separately green.
 2. **RW3 - decide on the prepared Stage A packet only.** Review
    `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` and
    `registries/rw3_stage_a_authorization_request.v0.json`. The request is bound
@@ -472,9 +470,9 @@ This is not primarily a model repo. It is a **research loop repo**.
    Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`,
    `docs/LOOPS_25_44_ROADMAP.md`, and
    `registries/next_20_loops.v0.json`. For Loop 26, also read the green shared
-   preregistration and unauthorized request. It has no implementation,
-   protected runtime, cache-value/target delivery, model run, training run,
-   prediction, or validation result. For Loop 27,
+   preregistration, separate authorization, and synthetic implementation. It
+   still has no protected runtime, cache-value/target delivery, real model run,
+   prediction freeze, or validation result. For Loop 27,
    read `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop27_research_boundary.v0.json`: S25 is selected in metadata,
    but the source model, controls, target isolation, and staged permissions are

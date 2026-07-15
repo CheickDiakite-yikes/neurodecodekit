@@ -2514,3 +2514,36 @@ Evidence: `docs/LOOP_26_SHARED_VALIDATION_PREREGISTRATION.md`,
 `registries/loop26_shared_validation_contract.v0.json`,
 `registries/loop26_authorization_request.v0.json`, and their dependency-light
 invariant suites.
+
+## 0075 - Implement The Shared Validation Gate Before Protected Access
+
+Decision: accept a staged implementation of the frozen Loop 26/31/33 contract
+only after synthetic isolation and malformed-input tests pass. Keep real S21
+cache values closed until this exact implementation commit is pushed and both
+remote CI jobs are green.
+
+Access decision: require bounded forward NPZ member traversal, one later cache
+hash pass, isolated 55-row train and six-row target-free validation derivatives,
+and a separate scorer that refuses to open targets until the hash-only freeze
+record exists in the remotely green `HEAD`. Create the consumed marker before
+the first validation-target read so interruption cannot create an accidental
+rerun path.
+
+Execution decision: enforce the exact inventory of 21 fits, 5,040 optimizer
+steps, 24 target-blind model inferences, six train-only priors, 21 checkpoints,
+and 31 prediction sets. Bind each private prediction to its file, item order,
+lengths, configuration, checkpoint identity, transform, and prediction hashes.
+
+Resource decision: preserve one thread, one worker, 2,908/2,884 parameters,
+128 MiB working arrays, 4 MiB checkpoints, 2 MiB private predictions, 32 MiB
+all generated artifacts, 1,200 seconds parameter runtime, 1,500 seconds total
+runtime, 1 GiB RSS, and zero downloads.
+
+Claim boundary: this implementation milestone uses synthetic fixtures only. It
+creates no real neural result and establishes no neural advantage, signal
+dependence, decoding accuracy, cross-session or unseen-person generalization,
+real-time behavior, EEG or hardware performance, or clinical utility.
+
+Evidence: `docs/LOOP_26_SHARED_VALIDATION_IMPLEMENTATION.md`, the bounded
+reader, causal model, shared evaluator, staged experiment gate, five CLI
+commands, and their focused synthetic and dependency-light invariant tests.
