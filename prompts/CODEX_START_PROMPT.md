@@ -30,6 +30,8 @@ requests, and these files:
 - `registries/loop25_causal_preprocessing_result.v1.json`
 - `docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md`
 - `registries/loop26_research_boundary.v0.json`
+- `docs/LOOP_26_SHARED_VALIDATION_RESULT.md`
+- `registries/loop26_shared_validation_result.v0.json`
 - `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md`
 - `registries/loop27_research_boundary.v0.json`
 - `docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md`
@@ -90,7 +92,8 @@ Do not reset, revert, delete, or overwrite work already present.
   rows across five phases, with source bindings, controls, metrics, acceptance
   gates, stop rules, dependencies, resource caps, and 20 false execution flags.
   Loop 25 is `Complete`; Loop 26/31/33 share a green preregistration at
-  `881145d` while its request and all execution remain unauthorized; Loop 27 planning research has
+  `881145d`, authorization at `1c0e52c`, and one consumed negative result; all
+  three are parked and no rerun is authorized. Loop 27 planning research has
   selected S25 metadata while preregistration remains blocked; Loop 28 planning
   research defines a strict zero-shot rule while its experiment remains `Not
   Started`; Loops 29-39 have completed planning research while their
@@ -113,13 +116,14 @@ Do not reset, revert, delete, or overwrite work already present.
   independent artifact-reproduction firewall while its challenge remains `Not
   Started` and unauthorized; Loop 44 artifact-only review is complete; all 20
   execution flags remain false.
-- Loop 26's green shared contract freezes a 2,908-parameter causal candidate,
+- Loop 26's green shared contract froze a 2,908-parameter causal candidate,
   2,884-parameter linear comparator, 21 fits, 24 target-blind inferences, six
   priors, 31 prediction sets, ten encoder conditions, six nested data sizes,
-  and all 64 paired sign assignments over six validation sentences. The
-  request is prepared but its exact sentence has not been received. No cache
-  value, target delivery, model, checkpoint, training, prediction, source-test
-  row, session-2 evidence, or score was opened or run.
+  and all 64 paired sign assignments over six validation sentences. After the
+  exact authorization and remote-green prediction freeze, the six targets
+  opened once. Candidate macro CER was `0.938177` versus prior `0.751235`;
+  primary, attribution, and scaling gates failed. Source test and session 2
+  stayed closed. The result is consumed and no rerun or tuning is authorized.
 - Loop 27 planning research at `b3d61b6` selects S25 session 2 block 2 as the
   smallest eligible strict MEG metadata pair: two files totaling
   1,009,939,983 bytes. S23 is officially excluded and S20 remains a separate
@@ -150,14 +154,11 @@ Do not reset, revert, delete, or overwrite work already present.
   server, browser run, consumed artifact, model, stream, live source, or
   hardware operation exists. Stability is not confidence or correctness, and
   replay scheduling is not capture-to-user latency.
-- Loop 31 planning research is complete while the neural-attribution experiment
-  remains `Not Started`. The future boundary freezes a 10-condition encoder
-  matrix, a contingent 5-condition LLM/Neuro Token matrix, exact six-row
-  intersection-union inference, 18 gates, 24 refusals, and 19 false
-  authorization fields. The maximum future local claim is sensor-signal
-  dependence; brain-specific attribution remains blocked on Loop 35. No cache,
-  target, checkpoint, model, training, validation, LLM, Neuro Token, S20, S25,
-  stream, device, or hardware operation exists.
+- Loop 31 planning research remains immutable, while its shared encoder matrix
+  has now been consumed and parked. Exact-zero and timing-only components
+  passed, but the complete six-row intersection-union gate failed. The
+  contingent LLM/Neuro Token matrix stayed closed; sensor-signal dependence
+  and brain-specific attribution were not established.
 - Loop 32 planning research is complete while the fresh-person calibration
   experiment remains `Not Started`. The future boundary recommends one causal
   32-parameter hidden affine adapter, four distinct calibration modes, nested
@@ -167,13 +168,11 @@ Do not reset, revert, delete, or overwrite work already present.
   remains final-only. No participant/cache/signal/label/target, checkpoint,
   model, adapter-fit, training, final evaluation, download, stream, device, or
   hardware operation exists or is authorized.
-- Loop 33 planning research is complete while the bounded local scaling
-  experiment remains `Not Started`. The future boundary recommends nested
-  `8, 16, 24, 32, 44, 55` unique-sentence prefixes, at most three optimization
-  seeds and 18 candidate fits, matched no-signal priors, and one target-blind
-  shared Loop 26/31/33 validation event. All 23 authorization flags are false;
-  no physical-repetition lane or acquisition recommendation exists, and every
-  protected/model/training/scoring/device operation is unauthorized.
+- Loop 33 planning research remains immutable, while its bounded local scaling
+  curve has now been consumed and parked. The `8, 16, 24, 32, 44, 55` curve
+  improved descriptively across all three seed slopes, but the 55-row model
+  remained worse than its matched prior. No scaling-law, repetition, or
+  acquisition claim exists, and no rerun is authorized.
 - Loop 34 planning research is complete while the confidence, abstention, and
   revision experiment remains `Not Started`. The future boundary separates
   seven confidence semantics, eight score/control roles, recommended fresh
@@ -273,15 +272,17 @@ implementation, static-first access order, measured counters, and no-rerun
 boundary remain intact. Do not regenerate the fixture, reopen either partition,
 or rerun the gate.
 
-Loop 26 is preregistered and separately authorized at green commit `1c0e52c`.
-Review
+Loop 26/31/33 was preregistered, authorized once, and is now a consumed
+negative result. Review
+`docs/LOOP_26_SHARED_VALIDATION_RESULT.md`,
+`registries/loop26_shared_validation_result.v0.json`,
 `docs/LOOP_26_SHARED_VALIDATION_PREREGISTRATION.md`,
 `docs/LOOP_26_AUTHORIZATION_DECISION.md`,
 `docs/LOOP_26_SHARED_VALIDATION_IMPLEMENTATION.md`, and the Loop 26 v0
-registries. The implementation may proceed only through its frozen stages.
-Do not touch protected cache values until the exact implementation commit is
-tested, pushed, and remotely green; never open validation targets before the
-hash-only prediction-freeze commit is separately remotely green.
+registries. Do not rerun any implementation stage, reopen validation targets,
+tune after targets, increase the model, or touch source test or session 2.
+Loop 48 artifact-first failure-localization planning is next; implementation or
+any train-array/protected read needs a separate exact authorization.
 
 Loop 27 is also review-only planning evidence. Do not turn the selected S25
 paths, official hashes, local MAT presence, 1 GiB cap, or roadmap status into a
@@ -328,13 +329,14 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
    generated data artifacts beyond tiny documentation-validation debris.
 7. Keep RW3 independent from Loop 24 precision/runtime and the
    blocked RW4 S20 acquisition packet.
-8. Do not rerun Loop 25 or implement/execute a Loop 26-44 item from roadmap
+8. Do not rerun Loop 25 or Loop 26/31/33, or implement/execute another Loop
+   26-44 item from roadmap
    approval, packet preparation, or a broad request to continue. Loop 25 v1 is
    complete and frozen; later loops still require their own packets. A failed
    gate parks its dependent claim branch.
-9. Keep Loop 26 source test and session 2 closed. Planning research does not
-   authorize preregistration, implementation, real-cache or target reads,
-   model/checkpoint operations, training, validation predictions, or metrics.
+9. Keep Loop 26 source test and session 2 closed. The six validation targets
+   are consumed; no rerun, new metric selection, model/checkpoint operation,
+   training, validation prediction, or post-target analysis is authorized.
 10. Keep S25 sealed. Do not hash or open its local MAT payload, download its
     FIF, inspect a header, read signal/targets, substitute S24/S22/S18, or
     prepare a transfer run from Loop 27 planning research.
@@ -350,20 +352,18 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
     or server authorization. Do not generate its trace, reopen consumed Loop
     23/24 artifacts, launch a browser/server, expose a file path, make a network
     request, display confidence, or imply live neural decoding from this prompt.
-14. Treat the Loop 31 attribution firewall as planning research, not permission
-    to open source validation, targets, caches, checkpoints, models, or an LLM.
-    Do not generate a condition fixture, run an ablation, reopen consumed S7 or
-    S21 evidence, access S20/S25, or label sensor-signal dependence as
-    brain-specific before Loop 35.
+14. Treat Loop 31 as a consumed failed attribution conjunction. Do not reopen
+    source validation, targets, caches, checkpoints, models, or an LLM; do not
+    rerun an ablation, access S20/S25, or turn the zero/timing component wins
+    into sensor-signal or brain-specific wording.
 15. Treat the Loop 32 calibration boundary as planning research, not permission
     to select or open a participant, repurpose S25, read calibration or final
     signal/labels, run the 32-parameter adapter, train, or evaluate. Calibrated
     performance is not zero-shot, and one person is not population evidence.
-16. Treat the Loop 33 scaling boundary as planning research, not permission to
-    open source train or validation data, train 18 models, score targets,
-    duplicate rows as physical repetitions, or acquire more data. Freeze the
-    `8, 16, 24, 32, 44, 55` schedule before the first shared validation-target
-    open. The experiment is `Not Started`; all protected work is unauthorized.
+16. Treat Loop 33 as a consumed failed scaling gate. Do not reopen source train
+    or validation data, retrain the 18 models, rescore targets, duplicate rows
+    as physical repetitions, fit a post-hoc scaling law, or acquire more data
+    from this result.
 17. Treat the Loop 34 confidence boundary as planning research, not permission
     to generate its fresh fixture, compute candidate scores, fit a probability
     map or threshold, open final targets, score, or expose confidence. Do not

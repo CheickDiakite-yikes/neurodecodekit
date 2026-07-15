@@ -2547,3 +2547,37 @@ real-time behavior, EEG or hardware performance, or clinical utility.
 Evidence: `docs/LOOP_26_SHARED_VALIDATION_IMPLEMENTATION.md`, the bounded
 reader, causal model, shared evaluator, staged experiment gate, five CLI
 commands, and their focused synthetic and dependency-light invariant tests.
+
+## 0076 - Park The Shared S21 Gate After Its Registered Negative Result
+
+Decision: accept the one-shot result exactly as observed and park Loops 26,
+31, and 33. Do not tune around the failed gate, increase model size, reopen the
+six validation targets, or substitute source test, session 2, S7, S20, or S25.
+
+Scientific decision: the fixed candidate's macro sentence CER of `0.938177`
+is worse than the train-only prior's `0.751235`; its registered margin is
+`-0.186942`, with zero wins, one tie, five losses, and one-sided exact
+`p = 1.0`. The primary neural-effect gate failed. Although exact-zero and
+timing-only controls passed individually, the complete attribution conjunction
+failed. Although all three scaling slopes were negative, the 55-row model
+failed its matched-prior rule. These components are diagnostics, not claims.
+
+Engineering decision: retain the implementation and access-ledger machinery.
+It preserved the one-cache-hash, 55/6 train/validation split, remote-green
+prediction freeze before one six-target delivery, zero source-test/session-2
+access, zero post-target changes, one-thread execution, 1 GiB RSS cap, and
+32 MiB artifact cap.
+
+Next-step decision: Loop 48 artifact-first failure localization is the next
+research work order. Planning may use committed aggregate artifacts; any
+train-array diagnostic, protected cache read, target read, model operation, or
+implementation requires a separate exact authorization.
+
+Claim boundary: no neural advantage, sensor-signal dependence, brain-specific
+origin, decoding utility, unseen-person generalization, real-time result,
+portable/home hardware result, assistive result, diagnostic result, or clinical
+claim is available.
+
+Evidence: `docs/LOOP_26_SHARED_VALIDATION_RESULT.md`,
+`registries/loop26_shared_validation_result.v0.json`, prediction-freeze commit
+`54bdca9`, and the consumed private scoring marker outside Git.

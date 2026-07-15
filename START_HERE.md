@@ -10,12 +10,14 @@
    `registries/loop25_causal_preprocessing_result.v1.json` for the completed
    target-free mechanics result; use the amendment and authorization records
    only to audit its frozen execution order. No rerun is authorized.
-7. Read `docs/LOOP_26_SHARED_VALIDATION_PREREGISTRATION.md`,
+7. Read `docs/LOOP_26_SHARED_VALIDATION_RESULT.md` and
+   `registries/loop26_shared_validation_result.v0.json` first for the consumed
+   negative result: candidate macro CER `0.938177` versus prior `0.751235`,
+   with Loops 26/31/33 parked and no rerun authorized. Then read
+   `docs/LOOP_26_SHARED_VALIDATION_PREREGISTRATION.md`,
    `docs/LOOP_26_AUTHORIZATION_DECISION.md`, and
-   `docs/LOOP_26_SHARED_VALIDATION_IMPLEMENTATION.md` for the green shared
-   design, separately green one-time authorization, staged implementation, and
-   exact access order. Protected cache access still waits for the exact
-   implementation commit to be pushed and remotely green.
+   `docs/LOOP_26_SHARED_VALIDATION_IMPLEMENTATION.md` to audit the green shared
+   design, one-time authorization, implementation, and target-firewall order.
 8. Read `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` for the selected S25
    metadata candidate and every blocker that still prevents preregistration,
    download, signal/target access, or transfer evaluation.
@@ -32,10 +34,11 @@
    levels, 18 future gates, and 30 refusals. It is planning research only;
    Loop 30 remains `Not Started` with no trace, UI, server, or browser run.
 12. Read `docs/LOOP_31_PRIMARY_SOURCE_RESEARCH.md` for the attribution
-   taxonomy. Its ten-condition encoder slice is now frozen inside the shared
-   Loop 26 contract; the five-condition LLM/Neuro Token extension remains
-   unpreregistered, all execution remains unauthorized, and brain-specific
-   attribution is still reserved for Loop 35.
+   taxonomy. Its ten-condition encoder slice ran inside the consumed shared
+   event: zero-signal and timing-only components passed, but the complete
+   registered conjunction failed. Loop 31 is parked; sensor-signal dependence
+   and brain-specific origin were not established, and the five-condition
+   LLM/Neuro Token extension remained closed.
 13. Read `docs/LOOP_35_PRIMARY_SOURCE_RESEARCH.md` for the ten confound classes,
    nine future synchronized stream classes, 13 conditions, three-stage access
    boundary, and the claim ceiling of incremental brain-sensor information
@@ -83,26 +86,27 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 ```
 
 Tracker scope: the spreadsheet's `20` KPI is the size of the original roadmap,
-not the current loop number. Its dashboard now separately reports the current
-post-roadmap position as **Loop 25 complete; Loop 26 implementation
-qualification next**, and its
+not the current loop number. Its dashboard now separately reports **Loops
+26/31/33 consumed and parked; Loop 48 failure localization next but not
+authorized**, and its
 ninth sheet contains the separate **Loops 25-44 queue**. Loop 25 passed once
 at its target-free mechanics boundary and now has `execution_authorized: false`
-because no rerun is open; Loop 26 is preregistered at `881145d`, separately
-authorized at `1c0e52c`, and implemented locally with protected access still
-blocked on remote-green implementation CI; Loop 27 planning research
+because no rerun is open; Loop 26 was preregistered at `881145d`, authorized at
+`1c0e52c`, and scored once after remote-green prediction freeze `54bdca9`. Its
+candidate lost to the prior and the event is consumed; Loop 27 planning research
 selects S25 metadata while preregistration remains blocked; Loop 28 planning
 research defines a strict zero-shot final-only rule while its experiment
 remains `Not Started`; Loop 29 planning research defines separate scalp EEG
 and OPM-MEG paths while its experiment remains `Not Started`; Loop 30 planning
 research defines a target-free local replay boundary while its experiment
-remains `Not Started`; Loop 31's 10-condition encoder slice shares the Loop 26
-preregistration while its contingent LLM/Neuro Token extension and all
-execution remain closed; Loop 32 planning research defines the causal 32-parameter
+remains `Not Started`; Loop 31's 10-condition encoder slice failed its complete
+shared attribution conjunction while its contingent LLM/Neuro Token extension
+remained closed; Loop 32 planning research defines the causal 32-parameter
 fresh-person calibration boundary while its experiment remains `Not Started`;
 Loop 33 planning research defines the bounded `8, 16, 24, 32, 44, 55`
-unique-sentence curve and prospective shared-validation order inside the Loop
-26 preregistration while execution remains unauthorized; Loop 34 planning research defines the
+unique-sentence curve and shared-validation order; it ran once and failed at
+the 55-row-versus-prior rule, so no rerun or scaling claim is authorized; Loop
+34 planning research defines the
 fresh three-way confidence firewall while its experiment remains `Not Started`
 and confidence is unavailable; Loop 35 planning research defines the staged
 peripheral-confound firewall while its experiment remains `Not Started`;
@@ -444,7 +448,9 @@ Read `docs/LOOPS_45_64_SCIENTIFIC_ROADMAP.md` and validate
 `registries/next_scientific_loops.v0.json`. The five phases are Real Signal
 Truth, Unseen-Person Verdict, Accessible EEG Evidence, Causal Local Use, and
 Independent Evidence And Release. Loop 45 is complete at its target-free
-mechanics boundary; Loops 46-64 are `Not Started`, and all current execution
-flags are false. The first desired scientific result is a frozen S21 validation
-model that beats a matched no-signal prior and every corrupted-signal control;
-S25 remains sealed until a separate final-only zero-shot packet is complete.
+mechanics boundary. Loops 46/47 consumed one registered S21 validation event
+and are parked after the candidate lost to the no-signal prior; no rerun is
+authorized. Loop 48 artifact-first failure localization is the next numbered
+work order but remains `Not Started` and separately gated. Loops 49-64 remain
+`Not Started`, and all current execution flags are false. S25 remains sealed
+until a separate final-only zero-shot packet is complete.

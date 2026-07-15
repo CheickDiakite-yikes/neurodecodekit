@@ -71,12 +71,11 @@ and end-to-end latency remain unmeasured. No rerun is authorized.
 
 ### Loop 46 - Reserved S21 Neural-Effect Gate
 
-**Status: preregistered; authorization pending.** Green commit `881145d`
-freezes the 2,908-parameter candidate, 55-row train path, 31 prediction sets,
-and one six-target scoring delivery only after a green prediction-freeze
-record. Compare with the train-only prior, zero signal, target derangement,
-time displacement, channel derangement, timing-only and pairing controls, and
-the 2,884-parameter linear signal comparator. No protected execution exists.
+**Status: parked; registered gate failed.** Green commit `881145d` froze the
+2,908-parameter candidate, 55-row train path, 31 prediction sets, and one
+six-target scoring delivery. Prediction-freeze commit `54bdca9` was remotely
+green before the targets opened once. Candidate macro CER was `0.938177`
+versus prior `0.751235`, so the gate failed and no rerun is authorized.
 
 **Gate:** at least `0.05` macro sentence-CER improvement over prior, exact paired
 `p <= 0.05`, strict wins on all six sentences, and the complete registered
@@ -85,11 +84,11 @@ only.
 
 ### Loop 47 - Neural Signal Attribution Matrix
 
-The frozen ten-condition Loop 31 encoder matrix is now part of the same Loop 46
-prediction-freeze and target-scoring event; it is not run after observing a
-Loop 46 score. The intact signal must beat timing-only, label-pairing, zero-
-signal, and corrupted-signal paths. The language-model/NeuroToken extension
-remains a separate unpreregistered gate.
+**Status: parked; shared attribution gate failed.** The frozen ten-condition
+Loop 31 matrix ran inside the same consumed Loop 46 event. Exact-zero and
+timing-only components passed individually, but the complete prior and
+corrupted-signal conjunction failed. The language-model/NeuroToken extension
+remained closed, and no sensor-signal-dependence claim is available.
 
 **Gate:** intersection-union pass across every registered control. **Ceiling:**
 sensor-signal dependence, not absolute brain origin.
@@ -264,9 +263,10 @@ the machine registry.
 ## Authorization Boundary
 
 This document is a research roadmap. Loop 45 is complete at its target-free
-mechanics boundary; Loops 46-64 are `Not Started`. Every current
+mechanics boundary; Loops 46/47 are consumed and parked; Loops 48-64 are `Not
+Started`. Every current
 `execution_authorized` flag and every global authorization field is false. The
-roadmap does not authorize a Loop 45 rerun, Loop 46, any real-data read or
+roadmap does not authorize a Loop 45 rerun, Loop 46/47 rerun, Loop 48, any real-data read or
 download, training, target opening, S25 access, EEG acquisition, stream,
 device, participant contact, home recording, external outreach, tag, release,
 archive, DOI, or scientific claim.

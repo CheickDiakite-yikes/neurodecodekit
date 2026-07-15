@@ -17,7 +17,7 @@ class NextScientificLoopsTests(unittest.TestCase):
             self.registry["schema_name"],
             "neurodecodekit.next_scientific_loops",
         )
-        self.assertEqual(self.registry["schema_version"], "0.1.0")
+        self.assertEqual(self.registry["schema_version"], "0.2.0")
         self.assertEqual(self.registry["loop_range"], [45, 64])
         loops = self.registry["loops"]
         self.assertEqual(len(loops), 20)
@@ -50,6 +50,7 @@ class NextScientificLoopsTests(unittest.TestCase):
         ):
             self.assertFalse(boundary[key])
         self.assertTrue(boundary["S21_session2_consumed_never_tune"])
+        self.assertTrue(boundary["S21_session1_validation_consumed_never_rerun"])
         self.assertTrue(boundary["S7_EEG_consumed_never_tune"])
         self.assertTrue(boundary["S25_final_only_unopened"])
 
@@ -77,7 +78,8 @@ class NextScientificLoopsTests(unittest.TestCase):
             self.assertEqual(set(row), required, row["loop_id"])
             expected_status = {
                 45: "Complete",
-                46: "Preregistered; Authorization Pending",
+                46: "Parked; Registered Gate Failed",
+                47: "Parked; Shared Attribution Gate Failed",
             }.get(row["loop_id"], "Not Started")
             self.assertEqual(row["status"], expected_status)
             self.assertTrue(row["controls"])
@@ -91,6 +93,8 @@ class NextScientificLoopsTests(unittest.TestCase):
         self.assertIn("0.05", loop46["acceptance_gate"])
         self.assertIn("p <= 0.05", loop46["acceptance_gate"])
         self.assertIn("881145d", loop46["authorization_boundary"])
+        self.assertIn("0.938177", loop46["authorization_boundary"])
+        self.assertIn("0.751235", loop46["authorization_boundary"])
         self.assertFalse(loop46["execution_authorized"])
         controls = " ".join(loop46["controls"])
         for term in ("no-signal", "zero-signal", "derangement", "displacement", "linear"):
@@ -98,7 +102,8 @@ class NextScientificLoopsTests(unittest.TestCase):
 
         loop47 = next(row for row in self.registry["loops"] if row["loop_id"] == 47)
         self.assertIn("same shared Loop 46 scoring event", loop47["core_question"])
-        self.assertIn("no separate post-Loop-46 target open", loop47["authorization_boundary"])
+        self.assertIn("no post-Loop-46 target open", loop47["authorization_boundary"])
+        self.assertIn("complete control conjunction failed", loop47["authorization_boundary"])
         self.assertFalse(loop47["execution_authorized"])
 
     def test_s25_is_final_only_with_zero_fit_and_strict_gate(self):

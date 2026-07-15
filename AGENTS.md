@@ -112,15 +112,29 @@ the six rows were not used for fitting, selection, threshold choice, or
 predictive scoring.
 
 The bounded reader, exact causal and linear models, controls, prediction
-freezer, isolated scorer, and five CLI stages now exist with synthetic tests.
-No real S21 cache stat, hash, member, signal, or target value was read during
-implementation. Do not begin even the static cache gate until the exact
-implementation commit is tested, committed, pushed, and remotely green. After
-that, follow the registered order exactly: static metadata/header gate; one
-cache hash and isolated derivatives; target-blind fits/inference/freeze;
-commit, push, and remotely qualify the hash-only freeze; then one six-target
-score. Source test, session 2, post-target reruns, and every other refusal
-remain closed.
+freezer, isolated scorer, and five CLI stages were implemented at `91409bd`.
+The static-ledger correction at `4015677` was green before one cache hash and
+the isolated derivatives ran. Twenty-one fits, 24 target-blind inferences, six
+train-only priors, and 31 prediction sets then froze at hash-only commit
+`54bdca9`, which was pushed and remotely green before the six targets opened
+once.
+
+The consumed result is
+`registries/loop26_shared_validation_result.v0.json` with SHA-256
+`7577c84eaea7579250b5c1fcdf53234a3d56fdab4640df2edebaee9ae8bd31b4`.
+The candidate macro sentence CER was `0.938177` versus `0.751235` for the
+train-only no-signal prior, a `-0.186942` margin. The primary gate, complete
+Loop 31 attribution conjunction, and Loop 33 scaling gate failed. The linear
+comparator component passed; zero-signal and timing-only controls each produced
+6/6 candidate wins at one-sided `p = 0.015625`, but those isolated components
+do not establish sensor-signal dependence. All engineering, access-order, and
+resource gates passed. Source test and session 2 remained closed. Loops 26,
+31, 33 and scientific Loops 46/47 are parked; no rerun, post-target tuning, or
+larger-model escalation is authorized.
+
+The next numbered work order is Loop 48 artifact-first failure localization.
+Do not implement it or read train arrays, protected cache members, or targets
+without its own exact scope and separate authorization.
 
 Loop 27 planning research is complete at green commit `b3d61b6`, but no
 preregistration or acquisition request exists:
@@ -464,12 +478,11 @@ The next research tranche is frozen in
 `docs/LOOPS_45_64_SCIENTIFIC_ROADMAP.md` and
 `registries/next_scientific_loops.v0.json`. It contains exact loop IDs 45-64 in
 five phases of four. Loop 45 is complete at its target-free mechanics boundary;
-Loops 46-64 are `Not Started`, every current execution flag is false, and every
-global authorization field is false. The scientific critical path continues
-with Loop 46 reserved S21 validation, Loop 47
-signal attribution, a nonfinal development person, and only then Loop 52's
-strict S25 final-only zero-shot verdict. Do not start these from a broad
-continuation request.
+Loops 46/47 are consumed and parked after the failed shared S21 event; Loops
+48-64 are `Not Started`, every current execution flag is false, and every
+global authorization field is false. The next scientific work order is Loop 48
+artifact-first failure localization. Do not start it, a new development person,
+or any S25 path from a broad continuation request.
 
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
@@ -572,8 +585,12 @@ authorization boundary.
   the 55/6/5 split, 2,908/2,884-parameter models, 21 fits, 24 target-blind
   inferences, six priors, 31 prediction sets, 64 exact paired assignments, 40
   refusals, one post-freeze target delivery, one thread, 1 GiB RSS, and 32 MiB
-  generated artifacts. Its separate request remains unauthorized with every
-  current protected/model/training/scoring counter at zero.
+  generated artifacts. Its immutable request remains false, while the separate
+  authorization, implementation, freeze, and consumed result preserve the
+  exact order. The result records candidate/prior macro CER
+  `0.938177/0.751235`, a failed primary/control conjunction, 55 train rows, six
+  validation rows, zero source-test/session-2 rows, one score, zero post-target
+  changes, and no rerun.
 - The Loop 27 planning registry remains exact with 18 false authorization
   fields, 315 MEG metadata entries, 23 strict pairs, 16 eligible pairs, the
   two-file 1,009,939,983-byte S25 selection, official S23/S20 boundaries, and
@@ -600,8 +617,9 @@ authorization boundary.
 - The Loop 31 planning registry remains exact with 19 false authorization
   fields, a 10-condition encoder matrix, a contingent 5-condition LLM matrix,
   18 future requirements, 24 refusal IDs, and a Loop 35 ceiling on
-  brain-specific attribution; no protected input, model, training, validation,
-  LLM, Neuro Token, or experiment payload exists.
+  brain-specific attribution. The separately authorized shared encoder slice
+  is consumed and parked after the complete attribution conjunction failed;
+  the LLM/Neuro Token extension remained closed.
 - The Loop 32 planning registry remains exact with 22 false authorization
   fields, four calibration modes, six nested budgets, one 32-parameter adapter
   recommendation, 32/16/48 physical partition floors, six conditions, 20
@@ -611,7 +629,9 @@ authorization boundary.
   fields, six nested `8, 16, 24, 32, 44, 55` prefixes, at most three seeds and
   18 candidate fits, one shared six-target open, four conditions, 20 future
   requirements, 30 refusals, no physical-repetition lane, no acquisition
-  recommendation, and zero protected/model/training/scoring operations.
+  recommendation. The separately authorized shared curve is consumed and
+  parked: all three slopes were negative, but the size-55 candidate remained
+  `0.186942` worse than its matched prior.
 - The Loop 34 planning registry remains exact with 26 false authorization
   fields, seven confidence semantics, eight score/control roles, recommended
   `128/64/256` fresh synthetic partitions, 20 future requirements, 30
@@ -688,16 +708,16 @@ authorization boundary.
 - The Loops 45-64 scientific registry remains exact with 20 contiguous loops,
   five phases of four, 20 false execution flags, nine false global
   authorization fields, ten source bindings, and ten cross-loop kill branches.
-  S21 session 2 and S7 remain consumed; S25 remains unopened and final-only.
+  S21 session-1 validation, session 2, and S7 remain consumed; S25 remains
+  unopened and final-only. Loops 46/47 are parked and Loop 48 is `Not Started`.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed
   2401 is not rerun or tuned, qualification seed 2402 remains unopened, and
   real/consumed data, targets, energy, training, and RW3 counters remain zero.
-- No new Loop 25 rerun or protected Loop 26-44 runtime, real model run,
-  generated protected payload, or intentional protected-data operation exists
-  outside its exact preregistration and authorization. Loop 26 has only a
-  synthetic implementation before remote qualification. Loop 43's
+- No new Loop 25 rerun or Loop 26/31/33 rerun exists. The one protected shared
+  runtime occurred only inside its exact preregistration, authorization,
+  remote-green freeze, and consumed score sequence. Loop 43's
   overbroad local JSON-validation incident is the explicit exception: 136 cache
   JSON files and 11 known consumed session-2 report/metadata files were parsed,
   with no raw payload, inference, scoring, tuning, or claim-selection use.

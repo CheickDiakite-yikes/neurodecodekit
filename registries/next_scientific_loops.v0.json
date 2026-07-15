@@ -1,7 +1,7 @@
 {
   "schema_name": "neurodecodekit.next_scientific_loops",
-  "schema_version": "0.1.0",
-  "prepared_at": "2026-07-13",
+  "schema_version": "0.2.0",
+  "prepared_at": "2026-07-15",
   "loop_range": [45, 64],
   "objective": "Move from strong research mechanics and negative local baselines toward one honest real neural-effect verdict, one strict unseen-person verdict, and only then bounded EEG, streaming, home-use, reproduction, and release evidence.",
   "current_proof_boundary": {
@@ -12,6 +12,7 @@
     "independent_reproduction": false,
     "scientific_replication": false,
     "S21_session2_consumed_never_tune": true,
+    "S21_session1_validation_consumed_never_rerun": true,
     "S7_EEG_consumed_never_tune": true,
     "S25_final_only_unopened": true
   },
@@ -58,11 +59,11 @@
       "phase_id": "P6",
       "title": "Reserved S21 Neural-Effect Gate",
       "priority": "P0",
-      "status": "Preregistered; Authorization Pending",
+      "status": "Parked; Registered Gate Failed",
       "execution_authorized": false,
       "core_question": "Does one fixed 2,908-parameter causal encoder beat the train-only no-signal prior on all six reserved S21 source-validation sentences?",
       "scientific_claim_target": "bounded one-person one-session neural advantage on source validation",
-      "build_deliverable": "Green shared Loop 26/31/33 contract freezes the 55-row train path, 31 six-row prediction sets, one post-freeze target delivery, exact paired inference, 10-condition attribution matrix, and bounded scaling curve; implementation and execution await the exact authorization sentence.",
+      "build_deliverable": "Completed the 55-row train path, 31-set target-blind prediction freeze, remote-green target firewall, one six-target delivery, exact paired inference, attribution matrix, and bounded scaling curve.",
       "data_scope": "S21 session-1 source train and six reserved validation rows only; five source-test rows and session 2 remain closed.",
       "controls": ["train-only no-signal prior", "zero-signal inference", "semantic-ID target derangement", "time displacement", "channel-name-hash derangement", "2,884-parameter linear signal comparator"],
       "primary_metrics": ["macro sentence CER", "corpus CER", "64 exact sign assignments", "margin over every control", "wins ties losses", "blank fraction", "runtime and RSS"],
@@ -70,18 +71,18 @@
       "kill_or_park_rule": "If any primary or control gate fails, park real-model scaling and move to Loop 48 failure localization; never open source test or increase model size.",
       "depends_on": [45, 26],
       "future_resource_cap": "one thread; one worker; <=2,908 trainable parameters; <=20 CPU minutes; <=1 GiB RSS; <=32 MiB generated",
-      "authorization_boundary": "Preregistered at green commit 881145d and represented by registries/loop26_shared_validation_contract.v0.json. The exact separate authorization sentence has not been received, so cache values, targets, training, inference, prediction freezing, and validation scoring remain unauthorized."
+      "authorization_boundary": "Preregistered at green commit 881145d, then authorized and executed once under the shared contract. The candidate macro CER was 0.938177 versus prior 0.751235; the gate failed and the six-target event is consumed. No rerun, source-test/session-2 access, larger model, or post-target tuning is authorized."
     },
     {
       "loop_id": 47,
       "phase_id": "P6",
       "title": "Neural Signal Attribution Matrix",
       "priority": "P0",
-      "status": "Not Started",
+      "status": "Parked; Shared Attribution Gate Failed",
       "execution_authorized": false,
       "core_question": "Within the same shared Loop 46 scoring event, does any primary advantage require intact sensor signal rather than timing, labels, padding, or a language prior?",
       "scientific_claim_target": "sensor-signal dependence for the exact S21 source slice",
-      "build_deliverable": "Freeze the Loop 31 ten-condition encoder matrix before target delivery and score it inside the same Loop 46 event with intersection-union logic; do not run a post-score matrix event.",
+      "build_deliverable": "The ten-condition encoder matrix was frozen before target delivery and scored inside the consumed Loop 46 event with intersection-union logic.",
       "data_scope": "Exactly the authorized Loop 46 train/validation members and frozen predictions; no source test, session 2, S7, S20, or S25.",
       "controls": ["no-signal prior", "zero signal", "channel derangement", "time displacement", "train-target derangement", "padding-only", "timestamp-only", "linear signal comparator", "candidate encoder", "frozen positive control"],
       "primary_metrics": ["macro CER deltas", "all six paired differences", "intersection-union pass", "control ordering", "prediction hashes", "access counters"],
@@ -89,7 +90,7 @@
       "kill_or_park_rule": "Any shortcut win blocks a neural-contribution claim and sends the exact discrepancy to Loop 48 or the Loop 35 peripheral firewall.",
       "depends_on": [46, 31],
       "future_resource_cap": "one thread; one worker; no new architecture; <=10 inference conditions; <=15 CPU minutes; <=32 MiB generated",
-      "authorization_boundary": "Prediction and scoring operations are bound to the shared Loop 26/31/33 authorization sequence and one Loop 46 target delivery; no separate post-Loop-46 target open or matrix run exists. Language-model and NeuroToken extensions remain separately gated."
+      "authorization_boundary": "The shared event is consumed. Zero-signal and timing-only components passed, but the complete control conjunction failed, so no sensor-signal-dependence claim exists and no post-Loop-46 target open or matrix rerun is authorized. Language-model and NeuroToken extensions remain closed."
     },
     {
       "loop_id": 48,

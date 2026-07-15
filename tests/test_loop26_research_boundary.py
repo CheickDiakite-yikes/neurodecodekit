@@ -201,13 +201,13 @@ class Loop26ResearchBoundaryTests(unittest.TestCase):
         self.assertIn("real-time", claims)
         self.assertIn("clinical", claims)
 
-    def test_roadmap_advances_from_research_to_preregistration_without_execution(self):
+    def test_roadmap_records_consumed_registered_negative_result(self):
         row = next(row for row in self.roadmap["loops"] if row["loop_id"] == 26)
-        self.assertEqual(row["status"], "Preregistered; Authorization Pending")
+        self.assertEqual(row["status"], "Parked; Registered Gate Failed")
         self.assertFalse(row["execution_authorized"])
         self.assertEqual(
             row["proof_posture"],
-            "green_hash_bound_shared_validation_preregistration_no_protected_execution",
+            "consumed_same_person_same_session_validation_primary_gate_failed_no_rerun",
         )
         self.assertEqual(row["research_status"], "planning_research_complete")
         self.assertEqual(
@@ -216,7 +216,10 @@ class Loop26ResearchBoundaryTests(unittest.TestCase):
         )
         self.assertTrue(row["preregistration_prepared"])
         self.assertTrue(row["authorization_request_prepared"])
-        self.assertFalse(row["authorization_received"])
+        self.assertTrue(row["authorization_received"])
+        self.assertTrue(row["execution_completed_once"])
+        self.assertFalse(row["rerun_authorized"])
+        self.assertFalse(row["primary_gate_passed"])
 
     def test_separate_authorization_supersedes_surface_absence_not_frozen_request(self):
         self.assertTrue(
@@ -244,18 +247,20 @@ class Loop26ResearchBoundaryTests(unittest.TestCase):
         self.assertTrue(decision["authorization"]["loop26_implementation_authorized_now"])
         self.assertFalse(decision["authorization"]["source_test_or_session2_authorized_now"])
 
-    def test_public_status_keeps_preregistration_separate_from_execution(self):
+    def test_public_status_records_the_consumed_negative_result(self):
         for path, contents in self.public_status.items():
             with self.subTest(path=path.relative_to(REPO_ROOT)):
                 lowered = contents.lower()
                 self.assertIn("loop 26", lowered)
                 self.assertIn("preregister", lowered)
                 self.assertIn("authoriz", lowered)
+                self.assertIn("park", lowered)
         combined = "\n".join(self.public_status.values())
         self.assertIn("2,908-parameter", combined)
         self.assertIn("2,884-parameter", combined)
         self.assertIn("64", combined)
-        self.assertNotIn("Loop 26 is complete", combined)
+        self.assertIn("0.938177", combined)
+        self.assertIn("0.751235", combined)
 
 
 if __name__ == "__main__":

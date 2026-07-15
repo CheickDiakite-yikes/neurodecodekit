@@ -1,16 +1,16 @@
 # Codex Handoff - NeuroDecodeKit
 
 > Current handoff, 2026-07-15: Loop 25 v1 and scientific Loop 45 remain complete
-> at their one-time target-free mechanics boundary with no rerun. The shared
-> Loop 26/31/33 contract is green at `881145d`, and the user's exact one-time
-> authorization is separately green at `1c0e52c` with push/PR CI runs
-> `29422150469` and `29422152661`. A bounded reader, exact 2,908/2,884-parameter
-> models, controls, 31-set prediction freezer, isolated scorer, and five CLI
-> stages are implemented and synthetically qualified. No real S21 cache stat,
-> hash, member, signal, or target value was read during implementation. The
-> next gate is to commit, push, and remotely qualify this exact implementation;
-> only then may the static metadata/header gate run. Five source-test rows,
-> session 2, and all post-target tuning or reruns remain closed.
+> at their one-time target-free mechanics boundary. The shared Loop 26/31/33
+> event is now consumed and parked after its registered scientific gates
+> failed. Prediction-freeze commit `54bdca9` was pushed and remotely green
+> before the six targets opened once. The fixed candidate reached macro CER
+> `0.938177` versus `0.751235` for the train-only prior, a `-0.186942` margin;
+> the attribution conjunction and scaling gate also failed. Engineering,
+> access-order, one-thread, 1 GiB RSS, and 32 MiB artifact gates all passed.
+> Five source-test rows, session 2, post-target tuning, and any rerun remain
+> closed. Loop 48 artifact-first failure localization is next but `Not Started`
+> and requires a separate authorization for any train-array or protected read.
 
 > Historical pre-Loop-25-execution context, retained for audit: Loops 1-12,
 > 14-22, and 23.5 are complete; Loops
@@ -450,14 +450,12 @@ This is not primarily a model repo. It is a **research loop repo**.
 
 ## Current Next Work
 
-1. **Loop 26 / roadmap Loop 46 - remotely qualify the exact implementation.**
-   Read `docs/LOOP_26_SHARED_VALIDATION_PREREGISTRATION.md`,
-   `docs/LOOP_26_AUTHORIZATION_DECISION.md`,
-   `docs/LOOP_26_SHARED_VALIDATION_IMPLEMENTATION.md`, and the Loop 26 v0
-   registries. Authorization commit `1c0e52c` is green. Commit and push the
-   synthetic implementation, wait for both remote jobs, and only then run the
-   static metadata/header gate. Keep validation targets closed until the later
-   hash-only freeze commit is separately green.
+1. **Loop 48 - design failure localization; do not rerun Loop 26.**
+   Read `docs/LOOP_26_SHARED_VALIDATION_RESULT.md` and
+   `registries/loop26_shared_validation_result.v0.json`. Use only committed
+   aggregate artifacts for planning. Any train-array diagnostic, cache member,
+   target, model run, or implementation requires a new exact scope and separate
+   authorization; source test and session 2 stay closed.
 2. **RW3 - decide on the prepared Stage A packet only.** Review
    `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` and
    `registries/rw3_stage_a_authorization_request.v0.json`. The request is bound
@@ -465,14 +463,12 @@ This is not primarily a model repo. It is a **research loop repo**.
    false. Do not implement Stage A without an explicit user decision followed
    by a pushed authorization-only commit; BrainFlow, LSL, PyXDF, sockets, live
    sources, hardware, and Stages B-D remain later independent gates.
-3. **Use Loops 26-44 and 46-64 as future evidence queues, not blanket
+3. **Use Loops 27-44 and 48-64 as future evidence queues, not blanket
    authorization.**
    Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`,
    `docs/LOOPS_25_44_ROADMAP.md`, and
-   `registries/next_20_loops.v0.json`. For Loop 26, also read the green shared
-   preregistration, separate authorization, and synthetic implementation. It
-   still has no protected runtime, cache-value/target delivery, real model run,
-   prediction freeze, or validation result. For Loop 27,
+   `registries/next_20_loops.v0.json`. Loop 26/31/33 and scientific Loops 46/47
+   are consumed negative results with no rerun. For Loop 27,
    read `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop27_research_boundary.v0.json`: S25 is selected in metadata,
    but the source model, controls, target isolation, and staged permissions are
@@ -1099,15 +1095,27 @@ The next scientific tranche is in
 of four, ten sources, ten kill branches, 20 false execution flags, and nine
 false global authorization fields.
 
-The critical sequence is Loop 45 causal mechanics, Loop 46's six reserved S21
-validation rows, Loop 47 intact-signal attribution, one non-S25 development
-person, a complete freeze, and Loop 52's one-time S25 zero-shot verdict. S21
+The critical sequence has stopped at the failed Loop 46/47 S21 gate. The next
+allowed design step is Loop 48 artifact-first failure localization; only a
+separately designed non-S25 development-person path could later reopen the
+predictive branch before Loop 52's one-time S25 verdict. S21
 session 2 and S7 stay consumed; S25 stays unopened and final-only. EEG,
 streaming, device, home, reproduction, and release phases remain downstream
 and separately authorized.
 
-The tracker now has ten sheets, including `Loops 45-64`. It is 114,652 bytes at
-SHA-256 `83606898dc58201e016f1f44ca156c1817f3719a8a401b2619e20d7f349f91ae`.
-All sheets rendered, key ranges reloaded, and the formula-error scan found zero
-matches. The user-owned inspection sidecar was restored byte-exact and remains
-untracked and unstaged.
+The tracker now has ten sheets, including `Loops 45-64`. After the consumed
+Loop 26/31/33 closeout it is 115,442 bytes at SHA-256
+`f081e7755c586433b821345974f62effdab777346aeaad4f9114afb953157a85`.
+All ten sheets rendered, the four changed sheets passed visual review, key
+ranges reloaded, the exported ZIP passed integrity validation, and the
+formula-error scan found zero matches. The user-owned inspection sidecar
+remains byte-exact at SHA-256
+`b96bbea77ec93e59c0db7c4bcaeb4a9182f1f7cc7039d13fb223b65e0005beb6`
+and remains untracked and unstaged.
+
+Local closeout acceptance passes 70 focused result and roadmap tests; 748 fully
+provisioned unittests with three expected skips in 24.603 seconds and
+625,442,816-byte maximum RSS, compared with the 744-test, three-skip pre-change
+baseline; and 701 dependency-light tests with 142 expected skips in 1.596
+seconds and 118,538,240-byte maximum RSS. Publication still requires the final
+static checks, staged secret scan, closeout commit, push, and remote CI pass.

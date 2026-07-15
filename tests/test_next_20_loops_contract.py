@@ -22,18 +22,21 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
     def test_identity_range_and_planning_boundary_are_exact(self):
         roadmap = self.roadmap
         self.assertEqual(roadmap["schema_name"], "neurodecodekit.next_twenty_loops_roadmap")
-        self.assertEqual(roadmap["schema_version"], "0.20.0")
+        self.assertEqual(roadmap["schema_version"], "0.21.0")
         self.assertEqual(roadmap["roadmap_id"], "loops-25-44")
-        self.assertEqual(roadmap["status"], "planning_only_not_execution_authorization")
+        self.assertEqual(
+            roadmap["status"],
+            "planning_roadmap_with_consumed_loop26_31_33_negative_result",
+        )
         self.assertEqual(
             roadmap["range"],
             {"first_loop": 25, "last_loop": 44, "loop_count": 20},
         )
         boundary = roadmap["current_boundary"]
-        self.assertEqual(boundary["current_numbered_gate"], 26)
+        self.assertEqual(boundary["current_numbered_gate"], 48)
         self.assertEqual(
             boundary["current_gate_status"],
-            "loop26_shared_validation_preregistered_authorization_pending",
+            "loop48_failure_localization_not_started_separate_authorization_required",
         )
         self.assertEqual(boundary["loop24_status"], "parked_resource_cap_exceeded")
         self.assertTrue(boundary["loop24_execution_was_authorized"])
@@ -60,8 +63,12 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
         self.assertEqual(boundary["loop26_preregistration_commit"][:7], "881145d")
         self.assertEqual(boundary["loop26_preregistration_ci_run_id"], 29282661766)
         self.assertTrue(boundary["loop26_authorization_request_prepared"])
-        self.assertFalse(boundary["loop26_authorization_received"])
+        self.assertTrue(boundary["loop26_authorization_received"])
+        self.assertTrue(boundary["loop26_execution_completed_once"])
         self.assertFalse(boundary["loop26_execution_authorized"])
+        self.assertFalse(boundary["loop26_rerun_authorized"])
+        self.assertFalse(boundary["loop26_primary_gate_passed"])
+        self.assertTrue(boundary["loop26_validation_event_consumed"])
         self.assertTrue(boundary["loop26_dependency_loop25_satisfied"])
         self.assertTrue(boundary["loop27_research_packet_prepared"])
         self.assertEqual(
@@ -335,37 +342,44 @@ class NextTwentyLoopsContractTests(unittest.TestCase):
                     self.assertFalse(registration["rerun_authorized_now"])
                     self.assertFalse(registration["superseded_v0"]["was_authorized"])
                 elif row["loop_id"] == 26:
-                    self.assertEqual(row["status"], "Preregistered; Authorization Pending")
+                    self.assertEqual(row["status"], "Parked; Registered Gate Failed")
                     self.assertEqual(
                         row["proof_posture"],
-                        "green_hash_bound_shared_validation_preregistration_no_protected_execution",
+                        "consumed_same_person_same_session_validation_primary_gate_failed_no_rerun",
                     )
                     self.assertTrue(row["preregistration_prepared"])
                     self.assertTrue(row["authorization_request_prepared"])
-                    self.assertFalse(row["authorization_received"])
+                    self.assertTrue(row["authorization_received"])
+                    self.assertTrue(row["execution_completed_once"])
+                    self.assertFalse(row["rerun_authorized"])
+                    self.assertFalse(row["primary_gate_passed"])
                 elif row["loop_id"] == 31:
                     self.assertEqual(
                         row["status"],
-                        "Shared Encoder Preregistration; Authorization Pending",
+                        "Parked; Shared Attribution Gate Failed",
                     )
                     self.assertEqual(
                         row["proof_posture"],
-                        "encoder_matrix_preregistered_with_loop26_language_extension_not_preregistered_no_execution",
+                        "consumed_encoder_matrix_required_conjunction_failed_no_sensor_dependence_claim",
                     )
                     self.assertTrue(row["preregistration_prepared"])
                     self.assertTrue(row["authorization_request_prepared"])
                     self.assertFalse(row["language_model_extension_preregistered"])
+                    self.assertTrue(row["shared_execution_completed_once"])
+                    self.assertFalse(row["intersection_union_gate_passed"])
                 elif row["loop_id"] == 33:
                     self.assertEqual(
                         row["status"],
-                        "Shared Preregistration; Authorization Pending",
+                        "Parked; Shared Scaling Gate Failed",
                     )
                     self.assertEqual(
                         row["proof_posture"],
-                        "bounded_scaling_preregistered_with_loop26_no_protected_execution",
+                        "consumed_bounded_curve_size55_failed_matched_prior_no_scaling_claim",
                     )
                     self.assertTrue(row["preregistration_prepared"])
                     self.assertTrue(row["authorization_request_prepared"])
+                    self.assertTrue(row["shared_execution_completed_once"])
+                    self.assertFalse(row["scaling_gate_passed"])
                 elif row["loop_id"] == 44:
                     self.assertEqual(row["status"], "Planning Research Complete")
                     self.assertEqual(
