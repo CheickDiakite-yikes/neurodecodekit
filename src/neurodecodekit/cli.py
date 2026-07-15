@@ -1396,6 +1396,38 @@ def _cmd_loop26_score(args: argparse.Namespace) -> int:
     return 0 if report["status"] == "passed" else 1
 
 
+def _cmd_loop48_failure_localization(args: argparse.Namespace) -> int:
+    _set_loop48_thread_environment()
+    from neurodecodekit.experiments.failure_localization import (
+        inspect_failure_localization_report,
+        run_registered_failure_localization,
+    )
+
+    run_registered_failure_localization(
+        repo_root=args.repo_root,
+        implementation_commit=args.implementation_commit,
+        implementation_push_ci_run_id=args.implementation_push_ci_run_id,
+        implementation_pr_ci_run_id=args.implementation_pr_ci_run_id,
+        output_path=args.out,
+    )
+    report_path = Path(args.out)
+    if not report_path.is_absolute():
+        report_path = Path(args.repo_root) / report_path
+    summary = inspect_failure_localization_report(report_path)
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_loop48_inspect_failure_localization(args: argparse.Namespace) -> int:
+    from neurodecodekit.experiments.failure_localization import (
+        inspect_failure_localization_report,
+    )
+
+    summary = inspect_failure_localization_report(args.report)
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0
+
+
 def _set_loop24_thread_environment() -> None:
     import os
 
@@ -1423,6 +1455,10 @@ def _set_loop25_thread_environment() -> None:
 
 
 def _set_loop26_thread_environment() -> None:
+    _set_loop25_thread_environment()
+
+
+def _set_loop48_thread_environment() -> None:
     _set_loop25_thread_environment()
 
 
@@ -3636,6 +3672,52 @@ def build_parser() -> argparse.ArgumentParser:
     )
     p.add_argument("--out-root", default=".codex_work/loop26")
     p.set_defaults(func=_cmd_loop26_score)
+
+    p = sub.add_parser(
+        "loop48-failure-localization",
+        help="Run the authorized one-shot aggregate-only Loop 48 Stage A classifier.",
+        description=(
+            "Verify and read only the four hash-bound committed aggregate JSON artifacts, "
+            "recompute the frozen blank/CER summaries, apply the eight-class tree, and "
+            "write one target-free report. The command refuses protected data, model work, "
+            "downloads, cap drift, dirty tracked code, and any rerun."
+        ),
+    )
+    p.add_argument("--repo-root", default=".", help="NeuroDecodeKit repository root.")
+    p.add_argument(
+        "--implementation-commit",
+        required=True,
+        help="Exact 40-character remotely green implementation commit at HEAD.",
+    )
+    p.add_argument(
+        "--implementation-push-ci-run-id",
+        required=True,
+        type=int,
+        help="Successful branch-push CI run ID for the implementation commit.",
+    )
+    p.add_argument(
+        "--implementation-pr-ci-run-id",
+        required=True,
+        type=int,
+        help="Successful pull-request CI run ID for the implementation commit.",
+    )
+    p.add_argument(
+        "--out",
+        default="registries/loop48_failure_localization_result.v0.json",
+        help="Frozen aggregate result path; no alternate registered path is accepted.",
+    )
+    p.set_defaults(func=_cmd_loop48_failure_localization)
+
+    p = sub.add_parser(
+        "loop48-inspect-failure-localization",
+        help="Strictly inspect one aggregate Loop 48 report without source-artifact reads.",
+    )
+    p.add_argument(
+        "--report",
+        default="registries/loop48_failure_localization_result.v0.json",
+        help="Aggregate Loop 48 result JSON.",
+    )
+    p.set_defaults(func=_cmd_loop48_inspect_failure_localization)
 
     p = sub.add_parser(
         "extract-windows",
