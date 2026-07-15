@@ -106,12 +106,18 @@ The request and hypothesis-portfolio milestone is remotely green at commit
 `0ffdf47` (push CI `29433294092`; PR CI `29433297546`), which qualifies the
 decision surface but does not authorize Stage A or Stage B.
 
-Future Stage B design uses a five-hypothesis support vector rather than forcing
-one root-cause winner: CTC feasibility/fit, signal quality, temporal or
-preprocessing mismatch, representation separability, and prior dominance may
-coexist. One shared train-only evidence bundle should evaluate them in parallel
-scientifically while one-thread numerical work remains sequential. This
-portfolio is not preregistered or authorized and cannot inherit Stage A scope.
+Future Stage B design starts from the immutable five-hypothesis portfolio and
+adds a primary-source-informed sixth hypothesis for data quantity/sentence
+diversity. The refined support vector separates the exact fixed CTC recipe,
+signal quality, temporal or preprocessing mismatch, representation
+separability, prior dominance, and data regime; these mechanisms may coexist.
+An orthogonal `T1` threat tracks peripheral/task-locked shortcuts. One shared
+train-only evidence bundle should evaluate the hypotheses in parallel
+scientifically while one-thread numerical work remains sequential. The
+preregistered practical-margin and paired-uncertainty gate is required for a
+future `E3` bounded sensor-dependence result, while brain-specific origin stays
+behind Loop 35. This design is not preregistered or authorized and cannot
+inherit Stage A scope.
 
 Future Stage A may only verify hashes, reproduce aggregate blank/CER summaries,
 apply the ordered tree, and emit one target-free aggregate report. Do not use
@@ -281,7 +287,8 @@ the machine registry.
 
 This document is a research roadmap. Loop 45 is complete at its target-free
 mechanics boundary; Loops 46/47 are consumed and parked; Loop 48 is
-preregistered with authorization pending; and Loops 49-64 are `Not Started`.
+preregistered with authorization pending, while its H1-H6 discrimination map
+is additive design research only; and Loops 49-64 are `Not Started`.
 Every current
 `execution_authorized` flag and every global authorization field is false. The
 roadmap does not authorize a Loop 45 rerun, Loop 46/47 rerun, Loop 48, any real-data read or

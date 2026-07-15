@@ -2675,3 +2675,35 @@ Evidence: `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md`,
 `tests/test_loop48_hypothesis_portfolio.py`. Request/portfolio commit
 `0ffdf47` passed push CI `29433294092` and PR CI `29433297546`; this qualifies
 the decision surface without changing any false authorization field.
+
+## 0080 - Separate Data-Regime Failure From The Fixed CTC Recipe
+
+Decision: preserve the green five-hypothesis portfolio byte-for-byte and add an
+independent six-hypothesis discrimination map. Narrow `H1` from a general CTC
+question to the exact 2,908-parameter, 240-step recipe, and add `H6` for data
+quantity and unique-sentence diversity. Brain2Qwerty v2 makes scale and
+diversity plausible mechanisms, but its much larger noncausal GPU setting does
+not transfer a threshold, exponent, architecture, or expected score to S21.
+
+Evidence decision: compare the six mechanisms through one shared train-only
+bundle and return a support vector, including conflicts and unresolved fields.
+Descriptive evidence is `E1`; a frozen pipeline intervention can reach `E2`;
+bounded sensor dependence requires intact signal to clear every registered
+prior/corruption by both a preregistered practical margin and paired uncertainty
+gate. A lucky aggregate win is not sufficient.
+
+Claim-firewall decision: track peripheral or task-locked shortcut dependence as
+orthogonal threat `T1`, not as a seventh explanation for model failure. Even a
+future Stage B pass stops at `E3` and routes to the separately authorized Loop
+35 firewall; it cannot establish brain-specific origin during overt typing.
+
+Resource and authorization decision: “parallel” means parallel scientific
+comparison over shared evidence. Numerical execution remains sequential with
+one thread, one worker, and one job. Exact splits, seeds, inventory, thresholds,
+fits, predictions, checkpoints, resource caps, and stopping rules remain
+unfrozen. No protected payload, model, training, prediction, scoring, download,
+stream, device, or hardware operation occurred or is authorized.
+
+Evidence: `docs/LOOP_48_HYPOTHESIS_DISCRIMINATION_RESEARCH.md`,
+`registries/loop48_hypothesis_discrimination.v0.json`, and
+`tests/test_loop48_hypothesis_discrimination.py`.

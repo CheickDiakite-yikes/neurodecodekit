@@ -28,10 +28,13 @@
    decision. Request/portfolio commit `0ffdf47` passed push CI `29433294092`
    and PR CI `29433297546`; preparing and qualifying the request still did not
    authorize Stage A.
-   Read `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md` only as future Stage
-   B design research: five hypotheses may coexist, scientific comparisons are
-   parallel, numerical compute is sequential, and every execution field is
-   false.
+   Read `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md` as the immutable
+   five-hypothesis starting point, then read
+   `docs/LOOP_48_HYPOTHESIS_DISCRIMINATION_RESEARCH.md` and
+   `registries/loop48_hypothesis_discrimination.v0.json` for the additive
+   six-hypothesis refinement. Scientific comparisons are parallel, numerical
+   compute is sequential, `T1` routes shortcut risk to Loop 35, and every
+   execution field is false.
 8. Read `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` for the selected S25
    metadata candidate and every blocker that still prevents preregistration,
    download, signal/target access, or transfer evaluation.
@@ -468,7 +471,10 @@ authorized. Loop 48 now has a post-outcome artifact-only diagnostic contract
 that records `F5` output-distribution instability as the leading phenotype.
 The contract is not implemented or executed and every authorization field
 remains false. Its request/portfolio commit `0ffdf47` is remotely green, so
-the exact Stage A sentence or an explicit hold is the next decision. Loops
+the exact Stage A sentence or an explicit hold is the next decision. The
+additive H1-H6 discrimination design changes no authorization and caps a future
+Stage B result at bounded sensor dependence under frozen margin and uncertainty
+gates; brain-specific origin remains a separate Loop 35 question. Loops
 49-64 remain `Not Started`, and all current execution
 flags are false. S25 remains sealed until a separate final-only zero-shot
 packet is complete.

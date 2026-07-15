@@ -304,10 +304,13 @@ decision record.
 The future train-only portfolio in
 `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md` and
 `registries/loop48_hypothesis_portfolio.v0.json` is design research only. It
-compares five potentially coexisting hypotheses from shared evidence while
-physical compute stays sequential and one-threaded. Do not create its split,
-fixture, static prototype, model inventory, data read, or execution from a
-Stage A decision.
+preserves the green five-hypothesis starting point. The additive research in
+`docs/LOOP_48_HYPOTHESIS_DISCRIMINATION_RESEARCH.md` and
+`registries/loop48_hypothesis_discrimination.v0.json` narrows `H1` to the exact
+fixed recipe, adds `H6` for data quantity/diversity, and routes the orthogonal
+`T1` shortcut threat to Loop 35. Physical compute stays sequential and
+one-threaded. Do not create a split, fixture, static prototype, model inventory,
+data read, or execution from a Stage A decision.
 
 Loop 27 is also review-only planning evidence. Do not turn the selected S25
 paths, official hashes, local MAT presence, 1 GiB cap, or roadmap status into a

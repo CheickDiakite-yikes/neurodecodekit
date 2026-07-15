@@ -282,8 +282,10 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   2402 remains unopened. Loop 25 is consumed at its exact mechanics boundary;
   Loop 48 artifact-only failure localization is now preregistered with
   an exact Stage A authorization request prepared, no implementation, and every
-  execution flag false. A separate five-hypothesis train-only Stage B portfolio
-  improves the causal questions but remains design-only and unauthorized.
+  execution flag false. The immutable five-hypothesis train-only portfolio now
+  has an additive six-hypothesis discrimination map that separates the fixed
+  recipe from data quantity/diversity and routes shortcut risk to Loop 35; both
+  remain design-only and unauthorized.
 
 ## Next planned 20 loops: 25-44
 
@@ -606,7 +608,8 @@ Loop 45 is complete at its target-free mechanics boundary. Loops 46 and 47 are
 parked after the one consumed S21 event failed the candidate-versus-prior and
 full attribution conjunctions. Loop 48 is preregistered with authorization
 pending; its Stage A request is remotely green, while its five-hypothesis Stage
-B portfolio remains design-only. Loops 49-64 are `Not Started`. All execution
+B portfolio and additive H1-H6/T1 discrimination map remain design-only. Loops
+49-64 are `Not Started`. All execution
 flags and all nine global authorization fields are false. The next possible
 positive scientific claim now requires a fresh, separately registered
 development-person path before the final-only S25 zero-shot verdict. No roadmap

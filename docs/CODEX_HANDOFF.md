@@ -13,11 +13,13 @@
 > authorization pending. Its leading `F5` output-instability phenotype is not
 > a proven root cause; the contract has no implementation or execution. Green
 > commit `83309bf` passed push CI `29431318268` and PR CI `29431347801`; the
-> exact Stage A request and five-hypothesis portfolio are green at commit
+> exact Stage A request and immutable five-hypothesis portfolio are green at commit
 > `0ffdf47`, push CI `29433294092`, and PR CI `29433297546`, but every
 > authorization remains false.
-> A separate five-hypothesis train-only Stage B portfolio is design research
-> only; it is not preregistered and cannot inherit Stage A authorization.
+> An additive primary-source pass now defines six coexisting hypotheses, a
+> five-level evidence ladder, and an orthogonal shortcut threat. It is design
+> research only, is not preregistered, cannot inherit Stage A authorization,
+> and cannot establish brain-specific origin.
 
 > Historical pre-Loop-25-execution context, retained for audit: Loops 1-12,
 > 14-22, and 23.5 are complete; Loops
@@ -469,10 +471,13 @@ This is not primarily a model repo. It is a **research loop repo**.
    artifact analyzer, train-array diagnostic, cache
    member, target, checkpoint, private prediction, or model run is authorized;
    source test and session 2 stay closed.
-   The future portfolio in
-   `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md` compares `H1`-`H5` from
-   shared train-only evidence, but its split, thresholds, models, caps, and
-   execution remain unfrozen and unauthorized.
+   The immutable future portfolio in
+   `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md` starts with `H1`-`H5`.
+   `docs/LOOP_48_HYPOTHESIS_DISCRIMINATION_RESEARCH.md` and
+   `registries/loop48_hypothesis_discrimination.v0.json` add `H6` for data
+   quantity/diversity, narrow `H1` to the exact fixed recipe, and route `T1`
+   shortcut risk to Loop 35. Splits, thresholds, models, caps, and execution
+   remain unfrozen and unauthorized.
 2. **RW3 - decide on the prepared Stage A packet only.** Review
    `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` and
    `registries/rw3_stage_a_authorization_request.v0.json`. The request is bound
@@ -1114,7 +1119,8 @@ false global authorization fields.
 
 The critical sequence has stopped at the failed Loop 46/47 S21 gate. Loop 48
 artifact-only failure localization and its request are remotely qualified but
-not implemented or authorized; only a separately designed non-S25
+not implemented or authorized. Its additive H1-H6 discrimination map is also
+design-only and preserves an `E3` ceiling below brain-specific origin; only a separately designed non-S25
 development-person path could
 later reopen the predictive branch before Loop 52's one-time S25 verdict. S21
 session 2 and S7 stay consumed; S25 stays unopened and final-only. EEG,

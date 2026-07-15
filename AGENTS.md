@@ -152,12 +152,17 @@ from this planning boundary.
 
 Future train-only Loop 48 thinking is now separated into
 `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md` and
-`registries/loop48_hypothesis_portfolio.v0.json`. It evaluates five coexisting
-hypotheses from shared evidence and defines parallel scientific comparison with
-sequential one-thread compute. It is design research only: exact splits,
-thresholds, model inventory, runtime, RSS, and output caps are unfrozen, and
-every Stage B execution field is false. A future Stage A authorization would
-not authorize this portfolio.
+`registries/loop48_hypothesis_portfolio.v0.json`. The green five-hypothesis
+portfolio remains immutable. Additive primary-source research in
+`docs/LOOP_48_HYPOTHESIS_DISCRIMINATION_RESEARCH.md` and
+`registries/loop48_hypothesis_discrimination.v0.json` narrows `H1` to the fixed
+tiny CTC recipe, adds `H6` for data quantity/sentence diversity, and separates
+the orthogonal `T1` peripheral/task-locked shortcut threat. It compares six
+coexisting hypotheses from shared evidence with sequential one-thread compute.
+It is design research only: exact splits, thresholds, model inventory, runtime,
+RSS, and output caps are unfrozen, every Stage B execution field is false, and
+Stage B cannot establish brain-specific origin. A future Stage A authorization
+would not authorize this portfolio or additive design.
 
 Loop 27 planning research is complete at green commit `b3d61b6`, but no
 preregistration or acquisition request exists:
@@ -503,7 +508,8 @@ The next research tranche is frozen in
 five phases of four. Loop 45 is complete at its target-free mechanics boundary;
 Loops 46/47 are consumed and parked after the failed shared S21 event. Loop 48
 is preregistered at an artifact-only post-outcome boundary with authorization
-pending; Loops 49-64 are `Not Started`, every current execution flag is false,
+pending. Its additive six-hypothesis discrimination research is design-only,
+unpreregistered, and unauthorized; Loops 49-64 are `Not Started`, every current execution flag is false,
 and every global authorization field is false. Do not execute Loop 48, start a
 new development person, or open any S25 path from a broad continuation request.
 
@@ -735,7 +741,9 @@ authorization boundary.
   unopened and final-only. Loops 46/47 are parked and Loop 48 is preregistered
   artifact-only with authorization pending and no implementation. Its
   request/portfolio commit `0ffdf47` passed push CI `29433294092` and PR CI
-  `29433297546`; every Stage A and Stage B authorization remains false.
+  `29433297546`; the additive H1-H6/T1 discrimination map also leaves every
+  Stage A and Stage B authorization false and every protected/model counter at
+  zero.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed
