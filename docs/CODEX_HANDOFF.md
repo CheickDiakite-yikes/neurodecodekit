@@ -31,6 +31,12 @@
 > `registries/loop48_stage_b_authorization_request.v0.json`. Every
 > authorization remains false; no protected read, implementation, model
 > operation, or score occurred.
+> Loop 49 planning research now selects S24 session 2 block 2 as the preferred
+> permanently development-only MEG person from pinned public metadata. The
+> exact two-file bundle is `1,048,579,727` bytes; S24 avoids the S1/S18 alias
+> while S25 remains final-only. No S24 path or payload was opened, the `>=48`
+> unique-row and compatibility gates remain unproven, and Loop 49 remains `Not
+> Started`, unpreregistered, and unauthorized.
 
 > Historical pre-Loop-25-execution context, retained for audit: Loops 1-12,
 > 14-22, and 23.5 are complete; Loops
@@ -476,31 +482,34 @@ stop before Tier C irreversible evidence, real-data, hardware, destructive,
 release, or claim actions. The draft is inactive and changes no current loop
 authorization.
 
-1. **Loop 48 - audit the consumed artifact-only result; do not rerun it.**
-   Read `docs/LOOP_48_FAILURE_LOCALIZATION_RESULT.md` and
-   `registries/loop48_failure_localization_result.v0.json`. One bounded pass
-   verified four committed JSON identities, reproduced the aggregate evidence,
-   and selected descriptive `F5`. It opened no ignored output, train array,
-   target, checkpoint, private prediction, source-test row, or session-2
-   payload, and ran no model or training. The result is not a proven root cause.
-   The immutable pre-execution contract, request, and decision remain audit
-   records; Stage A is consumed and cannot be rerun or tuned.
-   The immutable future portfolio in
-   `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md` starts with `H1`-`H5`.
-   `docs/LOOP_48_HYPOTHESIS_DISCRIMINATION_RESEARCH.md` and
-   `registries/loop48_hypothesis_discrimination.v0.json` add `H6` for data
-   quantity/diversity, narrow `H1` to the exact fixed recipe, and route `T1`
-   shortcut risk to Loop 35. Splits, thresholds, models, caps, and execution
-   remain unfrozen and unauthorized. Commit `33a14d8` and both CI runs are
-   green, but the consumed Stage A decision does not authorize Stage B.
-2. **RW3 - decide on the prepared Stage A packet only.** Review
+1. **Loop 48 - keep Stage A consumed and Stage B closed pending its exact
+   decision.** Read `docs/LOOP_48_FAILURE_LOCALIZATION_RESULT.md` for the
+   descriptive `F5` Stage A result; do not rerun or tune it. Stage B is now
+   frozen in `docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md` and
+   `registries/loop48_train_only_discrimination_contract.v0.json`: 44 fit rows,
+   11 check rows, 20 fits, 35 target-blind inferences, five priors, 41 prediction
+   sets, and an E2 ceiling. The exact packet and request are green-bound, but
+   every authorization remains false. Do not implement, stat/hash/read the
+   cache, train, infer, freeze predictions, deliver check targets, or score from
+   general continuation.
+2. **Loop 49 - preserve the metadata-only S24 development decision.** Read
+   `docs/LOOP_49_PRIMARY_SOURCE_RESEARCH.md` and
+   `registries/loop49_research_boundary.v0.json`. S24 session 2 block 2 is the
+   clean-identity candidate at 1,048,579,727 bytes; S25 stays final-only. The
+   future recommendation is 16 canonical sentence groups for selection and at
+   least 32 for fit, with matching S21 selection text excluded from fit. No S24
+   path or content was opened. Decision 0083 requires Stage B to close or park
+   before acquisition; the trial floor, channels, geometry, duration, and text
+   overlap remain unavailable. Do not prepare or execute acquisition, open a
+   backup, or claim person transfer from metadata selection.
+3. **RW3 - decide on the prepared Stage A packet only.** Review
    `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` and
    `registries/rw3_stage_a_authorization_request.v0.json`. The request is bound
    to commit `c3d1f01` and its exact contract hash, but `authorized_now` remains
    false. Do not implement Stage A without an explicit user decision followed
    by a pushed authorization-only commit; BrainFlow, LSL, PyXDF, sockets, live
    sources, hardware, and Stages B-D remain later independent gates.
-3. **Use Loops 27-44 and 48-64 as future evidence queues, not blanket
+4. **Use Loops 27-44 and 48-64 as future evidence queues, not blanket
    authorization.**
    Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`,
    `docs/LOOPS_25_44_ROADMAP.md`, and
@@ -1142,6 +1151,18 @@ later reopen the predictive branch before Loop 52's one-time S25 verdict. S21
 session 2 and S7 stay consumed; S25 stays unopened and final-only. EEG,
 streaming, device, home, reproduction, and release phases remain downstream
 and separately authorized.
+
+Loop 49 planning research now provides that development-person metadata
+decision without opening data. S24 session 2 block 2 is the preferred clean-
+identity candidate: two pinned files totaling 1,048,579,727 bytes, 293,597,553
+bytes below the future 1.25 GiB cap. S24 is selected over the 29,701,559-byte-
+smaller S18 pair to avoid the S1/S18 alias. The future text-grouped split
+reserves 16 unique sentence groups for selection, requires at least 32 fit
+groups, and excludes matching S21 selection text from future fit. All 25
+authorization fields and every protected/model counter remain false. The
+`>=48` trial floor and every header/signal/target compatibility field are still
+unavailable, so Loop 49 remains experimentally `Not Started` and cannot support
+a transfer or decoding claim.
 
 The tracker has ten sheets, including `Loops 45-64`. After the consumed Loop 48
 Stage A closeout it is 117,187 bytes at SHA-256

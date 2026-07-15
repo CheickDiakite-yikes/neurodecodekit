@@ -616,8 +616,21 @@ protected read, implementation, training, inference, or check score occurred.
 Preregistration commit `0ee0ab7` and push/PR CI runs `29452286159` /
 `29452288520` are green. The exact packet and machine request are prepared, but
 all authorization remains false.
-Loops 49-64 are `Not Started`. All execution
-flags and all nine global authorization fields are false. The next possible
-positive scientific claim now requires a fresh, separately registered
+Loop 49 planning research is now complete while its experiment remains `Not
+Started`. Pinned public metadata selects S24 session 2 block 2 as the preferred
+permanently development-only MEG person: one FIF plus one protected MAT log,
+exactly 1,048,579,727 bytes. The clean S24 identity is preferred over the
+29,701,559-byte-smaller S18 bundle because S18 carries the published S1/S18
+alias; S25 remains final-only. The future split recommendation reserves 16
+unique canonical sentence groups for selection and requires at least 32 fit
+groups, with matching S21 selection text excluded from fit. No S24 local path,
+payload, header, signal, MAT content, target, split, model, or training run was
+opened. The `>=48` unique-row floor, channels, geometry, and text overlap remain
+unavailable, so there is no acquisition request or qualification result.
+
+Loops 50-64 are `Not Started`. All execution flags and all nine global
+authorization fields are false. Decision 0083 keeps new Loop 49 acquisition
+after the separately gated Loop 48 Stage B. The next possible positive
+scientific claim still requires a fresh, separately registered
 development-person path before the final-only S25 zero-shot verdict. No roadmap
 row authorizes either experiment.

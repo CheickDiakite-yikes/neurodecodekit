@@ -3960,3 +3960,69 @@ hypotheses without silently widening data, compute, or claims.
 Scientific claim not established: an authorization request is not an
 experiment, and no new neural, decoding, independent-validation,
 generalization, real-time, EEG, device, assistive, or clinical evidence exists.
+
+## 2026-07-15 - Loop 49 Development-Person Metadata Research
+
+- Added `docs/LOOP_49_PRIMARY_SOURCE_RESEARCH.md`,
+  `registries/loop49_research_boundary.v0.json`, and 17 dependency-light
+  invariants. The machine boundary contains 25 false authorization fields and
+  zero S24 path-stat, payload, header, signal, MAT, target, source-hash,
+  derivative, model, training, prediction, or scoring operations.
+- Selected S24 session 2 block 2 as the preferred future permanently
+  development-only MEG participant from pinned public metadata. The exact FIF
+  and MAT paths total 1,048,579,727 bytes, 293,597,553 bytes below the 1.25 GiB
+  cap and 8,951,420,273 bytes below the user's remaining 10 GB cumulative
+  envelope if both files are absent.
+- Preferred S24 over the 29,701,559-byte-smaller S18 bundle because S18 carries
+  the published S1/S18 alias. Preserved S25 as final-only, S23 as officially
+  excluded, S21 as the observed source, S7 as consumed EEG, and S20 as a
+  separate accessible-EEG lane. No backup substitution is automatic.
+- Froze a research recommendation, not an executable contract: require at
+  least 48 usable unique canonical sentence groups, reserve 16 salt-hash-ordered
+  groups for development selection, assign the remainder to fit, and exclude
+  every matching S21 source-train selection text from future fit. Emit no
+  plaintext or raw sentence hashes. S24 can never become independent or final
+  evidence after protected access.
+- Bound the reasoning to the official Brain2Qwerty v2 paper, the official
+  SpanishBCBL card and pinned revision, the official loader and Hub API, the v1
+  primary paper, and primary model-selection/small-sample methodology papers.
+  The key design consequences are cross-person development before final test,
+  text-group splitting across people, a one-time final-person evaluation, and
+  no power claim from a 48-row pragmatic floor.
+- The metadata-only pass returned 396 rows in 3.51 seconds at 62,685,184-byte
+  peak RSS under one thread and one worker. Exact wire bytes and transport-level
+  request count are unavailable from the high-level Hub API. Payload download
+  bytes were zero. Free disk before documentation was 42,255,929,344 bytes.
+- Updated the scientific roadmap, machine roadmap, Markdown tracker, README,
+  start-here guide, handoff, agent boundary, decision journal, and this build
+  journal. The tracked workbook was deliberately not reopened because its last
+  artifact-tool pass measured 1,572,667,392-byte peak RSS. The adjacent
+  user-owned inspection sidecar remained unread and untouched.
+- The three new core artifacts total 59,891 bytes, well below the 8 MiB
+  planning-artifact cap. The isolated optional-reader setup left the shared
+  `uv` cache at an apparent 1.0 GB and free disk at approximately 39.0 GiB; it
+  created no project `.venv`, dataset payload, model, or experiment artifact.
+- Focused Loop 49 plus scientific-roadmap acceptance passes 28 tests in 0.003
+  seconds. The complete dependency-light suite passes 824 tests with 142
+  expected skips in 1.91 seconds wall time at 115,032,064-byte maximum RSS,
+  exactly 17 tests above the 807-test pre-change baseline with the same skip
+  count. A Python 3.12 CI-shaped optional-neuro run passes 856 tests with 22
+  expected skips in 36.12 seconds at 290,406,400-byte maximum RSS; its focused
+  signal-quality cell passes 9 tests in 25.77 seconds at 210,026,496 bytes.
+- One first optional command used `uv --extra neuro`, which unexpectedly tried
+  to resolve the repository's `all` extra across Python 3.10 and stopped before
+  tests at the known Zarr/Python compatibility boundary. The corrected
+  `--no-project` command installed only MNE, SciPy, NumPy, pytest, and Ruff on
+  Python 3.12. This was a harness-resolution failure, not a test failure or code
+  change.
+- Ruff lint and changed-test formatting pass. Compileall, all 49 registry JSON
+  files, root and two CI CLI-help surfaces, and `git diff --check` pass. Remote
+  CI qualification is pending the milestone push.
+
+Engineering capability added: one exact, storage-bounded, identity-aware
+metadata boundary now preserves separate development-person and final-person
+roles before any S24 payload opens.
+
+Scientific claim not established: no S24 payload, trial, target, signal, model,
+training, decoding, unseen-person, real-time, EEG, device, assistive, or clinical
+result exists from this planning pass.

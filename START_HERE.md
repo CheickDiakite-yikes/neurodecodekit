@@ -489,7 +489,21 @@ five priors, 41 frozen prediction sets, and one post-green-freeze check score.
 It changes no authorization. Because all 55 source-train rows were used by
 prior Loop 26 fits, its ceiling is E2 pipeline discrimination rather than
 independent validation or sensor-dependence confirmation. Brain-specific
-origin remains a separate Loop 35 question. Loops 49-64 remain `Not Started`,
-and all current execution
-flags are false. S25 remains sealed until a separate final-only zero-shot
-packet is complete.
+  origin remains a separate Loop 35 question.
+
+Loop 49 planning research is complete while the experiment remains `Not
+Started`. Read `docs/LOOP_49_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop49_research_boundary.v0.json`. Pinned public metadata selects
+S24 session 2 block 2 as the preferred permanently development-only MEG person:
+one FIF plus one protected MAT log totaling exactly `1,048,579,727` bytes. S24
+costs `29,701,559` bytes more than S18 but avoids the published S1/S18 alias and
+preserves S25 as final-only. A future text-grouped split reserves 16 unique
+sentence groups for selection and requires at least 32 fit groups, with matching
+S21 selection text excluded from fit. No S24 local path or payload was opened;
+the `>=48` unique-row, channel, geometry, duration, and overlap gates remain
+unproven. There is no preregistration, acquisition request, or authorization.
+Decision 0083 places any new acquisition after the separately gated Loop 48
+Stage B.
+
+Loops 50-64 remain `Not Started`, and all current execution flags are false.
+S25 remains sealed until a separate final-only zero-shot packet is complete.
