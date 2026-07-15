@@ -4075,7 +4075,12 @@ result exists from this planning pass.
   files, root and two CI CLI-help surfaces, and `git diff --check` pass. A
   repository-wide formatter check would rewrite 104 pre-existing files under
   the current Ruff formatter, so it was deliberately scoped to the new test to
-  avoid unrelated churn. Remote qualification is pending the milestone push.
+  avoid unrelated churn.
+- Remote qualification passes for milestone commit
+  `085f341941006383f859804caad4e2ffc50c1737`: push CI `29458102674` and PR #28
+  CI `29458116994` both passed Base Python and Optional Neuro Readers. The only
+  annotations were GitHub-hosted runner notices that Node.js 20 actions are
+  being forced to Node.js 24; no repository test or lint warning occurred.
 
 Engineering capability added: one machine-checkable design now specifies how a
 future two-person tiny causal experiment must prevent text leakage, participant

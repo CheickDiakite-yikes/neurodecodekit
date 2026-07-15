@@ -123,6 +123,8 @@ Pooled gain cannot rescue a failed person. All 31
 authorization fields and all protected/model counters remain zero; Stage B must
 close or park before S24 acquisition can even be prepared, and S25 stays
 final-only.
+Planning commit `085f341` passed push CI `29458102674` and PR #28 CI
+`29458116994`, with Base Python and Optional Neuro Readers green in both.
 
 | Phase | Loops | Decisive goal |
 |---|---:|---|

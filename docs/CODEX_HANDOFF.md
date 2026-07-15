@@ -48,6 +48,8 @@
 > read, training, inference, prediction, or scoring event exists. Stage B
 > remains the next protected decision, S24 remains unopened, and S25 remains
 > final-only.
+> Planning commit `085f341` passed push CI `29458102674` and PR #28 CI
+> `29458116994`; both required jobs are green in both workflows.
 
 > Historical pre-Loop-25-execution context, retained for audit: Loops 1-12,
 > 14-22, and 23.5 are complete; Loops

@@ -2914,4 +2914,6 @@ performance, assistive value, or clinical result.
 
 Evidence: `docs/LOOP_50_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop50_research_boundary.v0.json`, and
-`tests/test_loop50_research_boundary.py`.
+`tests/test_loop50_research_boundary.py`. Planning commit `085f341` passed push
+CI `29458102674` and PR #28 CI `29458116994`, with both required jobs green in
+both workflows.

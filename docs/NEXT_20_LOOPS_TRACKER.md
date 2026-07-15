@@ -641,6 +641,8 @@ the strongest no-signal prior by at least `0.05` macro CER on both development
 people; pooled gain cannot rescue either person. All 31 authorization fields
 are false, all protected/model counters are zero, and no exact candidate is
 selected before Stage B closes.
+Planning commit `085f341` passed push CI `29458102674` and PR #28 CI
+`29458116994`; Base Python and Optional Neuro Readers are green in both.
 
 Loops 51-64 are `Not Started`. All execution flags and all nine global
 authorization fields are false. Decision 0083 keeps new Loop 49 acquisition

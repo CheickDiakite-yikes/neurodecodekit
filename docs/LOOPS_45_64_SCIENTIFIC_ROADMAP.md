@@ -182,6 +182,8 @@ Stage B must first close or park and route the acquisition decision; then S24
 must pass separately authorized acquisition, header, redacted trial, split,
 channel, geometry, and `>=48` unique-group gates. All 31 authorization fields
 are false and every protected/model/training/scoring counter is zero.
+Planning commit `085f341` passed push CI `29458102674` and PR #28 CI
+`29458116994`, with both required jobs green in both workflows.
 
 **Gate:** positive prior/control ordering on both development people, with no
 pooled rescue, seed substitution, target-corpus normalization, or post-target

@@ -222,6 +222,8 @@ unqualified, and S25 remains final-only. All 31 authorization fields are false;
 every S24/S25/S21-cache/model/training/inference/scoring counter is zero. Do not
 implement or execute Loop 50, acquire S24, or open S25 from this planning
 boundary.
+Planning commit `085f341` passed push CI `29458102674` and PR #28 CI
+`29458116994`; both required jobs are green in both workflows.
 
 Loop 27 planning research is complete at green commit `b3d61b6`, but no
 preregistration or acquisition request exists:
