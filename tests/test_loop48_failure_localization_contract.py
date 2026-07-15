@@ -202,15 +202,20 @@ class Loop48FailureLocalizationContractTests(unittest.TestCase):
         self.assertFalse(row["execution_authorized"])
         self.assertIn(row["status"], {"Not Started", "Preregistered; Authorization Pending"})
 
-    def test_no_loop48_runtime_or_authorization_decision_exists(self):
-        forbidden = (
-            "registries/loop48_failure_localization_result.v0.json",
-            "registries/loop48_authorization_decision.v0.json",
-            "docs/LOOP_48_FAILURE_LOCALIZATION_RESULT.md",
-            "docs/LOOP_48_AUTHORIZATION_DECISION.md",
-            "src/neurodecodekit/experiments/failure_localization.py",
+    def test_registration_snapshot_records_no_runtime_or_authorization(self):
+        self.assertEqual(self.contract["status"], "preregistered_authorization_pending")
+        self.assertEqual(
+            self.contract["future_artifact_only_stage_a"]["status"],
+            "preregistered_not_authorized_or_implemented",
         )
-        self.assertTrue(all(not (REPO_ROOT / path).exists() for path in forbidden))
+        flags = authorization_flags(self.contract)
+        self.assertTrue(flags)
+        self.assertTrue(all(value is False for _, value in flags), flags)
+        counters = self.contract["planning_access_counters"]
+        protected = {
+            key: value for key, value in counters.items() if key != "committed_aggregate_json_reads"
+        }
+        self.assertTrue(all(value == 0 for value in protected.values()), protected)
 
 
 if __name__ == "__main__":

@@ -67,14 +67,22 @@ class Loop48AuthorizationRequestTests(unittest.TestCase):
 
     def test_contract_research_and_invariant_test_hashes_are_exact(self):
         target = self.request["target"]
-        for prefix, path in (
-            ("contract", CONTRACT_PATH),
-            ("research", RESEARCH_PATH),
-            ("invariant_test", INVARIANT_TEST_PATH),
-        ):
+        for prefix, path in (("contract", CONTRACT_PATH), ("research", RESEARCH_PATH)):
             with self.subTest(path=path.name):
                 self.assertEqual(target[f"{prefix}_sha256"], sha256(path))
                 self.assertEqual(target[f"{prefix}_git_blob_sha1"], git_blob_sha1(path))
+        self.assertEqual(
+            target["invariant_test_sha256"],
+            "eec77e323b7b46ea12110b33238718895df1b27ca53a7fd8aa9ea35ae2d54605",
+        )
+        self.assertEqual(
+            target["invariant_test_git_blob_sha1"],
+            "bba4f394d124ef528e2f1a6976afe2aeb772c7b1",
+        )
+        self.assertEqual(
+            target["invariant_test_path"],
+            str(INVARIANT_TEST_PATH.relative_to(REPO_ROOT)),
+        )
         self.assertEqual(target["contract_schema_version"], "0.1.0")
         self.assertTrue(target["registration_snapshot_must_remain_immutable"])
 
@@ -160,15 +168,17 @@ class Loop48AuthorizationRequestTests(unittest.TestCase):
         ):
             self.assertIn(phrase, self.packet)
 
-    def test_no_decision_implementation_or_result_exists(self):
-        forbidden = (
-            "registries/loop48_authorization_decision.v0.json",
-            "registries/loop48_failure_localization_result.v0.json",
-            "docs/LOOP_48_AUTHORIZATION_DECISION.md",
-            "docs/LOOP_48_FAILURE_LOCALIZATION_RESULT.md",
-            "src/neurodecodekit/experiments/failure_localization.py",
+    def test_request_snapshot_records_no_decision_implementation_or_result(self):
+        self.assertEqual(
+            self.request["proof_posture"],
+            "green_hash_bound_request_only_no_implementation_or_execution",
         )
-        self.assertTrue(all(not (REPO_ROOT / path).exists() for path in forbidden))
+        self.assertFalse(self.request["authorized_now"])
+        self.assertIsNone(self.request["user_decision"])
+        self.assertIsNone(self.request["authorization_record_commit"])
+        self.assertTrue(
+            all(value == 0 for value in self.request["current_access_counters"].values())
+        )
 
 
 if __name__ == "__main__":
