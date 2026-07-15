@@ -2917,3 +2917,32 @@ Evidence: `docs/LOOP_50_PRIMARY_SOURCE_RESEARCH.md`,
 `tests/test_loop50_research_boundary.py`. Planning commit `085f341` passed push
 CI `29458102674` and PR #28 CI `29458116994`, with both required jobs green in
 both workflows.
+
+## 0087 - Activate Tier A And Tier B Research Autonomy
+
+Decision: accept the exact standing sentence in the 2026-07-15 Research
+Autonomy Charter. Preserve `docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md` byte-for-
+byte at SHA-256
+`c9381bfc729dfca4aaab03929a6623f23c3cf06eb33fbae5379b0517981dcb64`;
+use the separate activation document and registry as the prospective decision
+record.
+
+Standing scope decision: after this decision is tested, committed, pushed, and
+remotely green, Tier A routine research engineering and Tier B fully frozen,
+bounded development experiments may proceed without repeated permission,
+including coherent commits, pushes, and CI inspection. Retain the default one-
+thread, one-worker, one-job, 1 GiB RSS, 32 MiB output, zero-real-download, and
+20 GiB free-disk envelope unless a narrower registered contract applies.
+
+Irreversibility decision: Tier C remains separately gated. The charter does not
+reopen consumed evidence; authorize a new real participant payload, sealed or
+final target, consumed-evaluation reuse, post-outcome change, download, cap
+increase, hardware, destructive action, release, or scientific claim only by a
+separate exact decision. It does not itself authorize Loop 48 Stage B, RW3, or
+S25. The separately supplied Loop 48 Stage B sentence must receive its own
+authorization-only record and remote-green gate.
+
+Evidence: `docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md`,
+`docs/RESEARCH_AUTONOMY_CHARTER_DECISION.md`,
+`registries/research_autonomy_charter_decision.v0.json`, and
+`tests/test_research_autonomy_charter_decision.py`.

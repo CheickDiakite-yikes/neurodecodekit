@@ -24,12 +24,14 @@ Do not optimize for impressiveness before reproducibility. A boring baseline tha
 
 ## Research autonomy
 
-`docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md` proposes standing Tier A routine work
-and Tier B bounded development work while retaining exact approval for Tier C
-irreversible evidence, real-data, hardware, destructive, release, and claim
-actions. It is a draft and grants no authorization. Until its exact standing
-sentence is approved and separately recorded, continue to follow every existing
-loop-specific contract and authorization boundary.
+`docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md` is the byte-identical approved charter
+snapshot, and `docs/RESEARCH_AUTONOMY_CHARTER_DECISION.md` is its activation
+record. After the decision commit is remotely green, Tier A routine work and
+Tier B bounded development work may proceed autonomously, including coherent
+commits, pushes, and CI checks. Tier C irreversible evidence, real-data,
+hardware, destructive, release, and claim actions still require a separate
+exact decision. Existing narrower contracts continue to govern and cannot be
+silently loosened.
 
 ## Immediate next task
 

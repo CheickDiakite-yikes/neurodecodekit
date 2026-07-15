@@ -4091,3 +4091,36 @@ Scientific claim not established: no S24 payload or target was opened and no
 model ran, so there is no new neural advantage, sensor-signal dependence,
 brain-specific origin, decoding, unseen-person, real-time, EEG, home-device,
 assistive, diagnostic, or clinical evidence.
+
+## 2026-07-15 - Research Autonomy Charter Activation
+
+- Recorded the maintainer's exact charter approval in
+  `docs/RESEARCH_AUTONOMY_CHARTER_DECISION.md` and
+  `registries/research_autonomy_charter_decision.v0.json`. The approved source
+  remains byte-identical at commit `df9035a`, SHA-256
+  `c9381bfc729dfca4aaab03929a6623f23c3cf06eb33fbae5379b0517981dcb64`.
+- Activated Tier A routine work and Tier B fully frozen bounded development
+  experiments, including autonomous commits, pushes, and CI checks, effective
+  only after this decision commit is remotely green.
+- Preserved every Tier C stop for irreversible evidence, real-data acquisition,
+  sealed/final targets, consumed-evaluation reuse, hardware, destructive work,
+  release, and claim promotion. The charter is prospective and does not itself
+  authorize Loop 48 Stage B, RW3, S25, or any existing closed contract.
+- Authorization-only access counters remain zero: no protected payload, target,
+  model, training, inference, download, stream, device, hardware, destructive,
+  release, or claim-promotion operation occurred.
+- Added nine decision invariants. The three new core artifacts total 16,449
+  bytes. Focused charter/Loop 50 acceptance passes 31 tests in 0.004 seconds;
+  the complete dependency-light suite passes 850 tests with 142 expected skips
+  in 1.92 seconds at 121,503,744-byte maximum RSS, and the optional-neuro suite
+  passes 882 tests with 22 expected skips in 10.56 seconds at 227,950,592-byte
+  maximum RSS. Both suites are exactly nine tests above the Loop 50 baseline.
+
+Engineering capability authorized: routine research engineering and fully
+frozen bounded development experiments may advance autonomously through local
+verification, commits, pushes, and remote CI.
+
+Scientific claim not established: this governance decision is not an
+experiment and establishes no neural advantage, decoding accuracy,
+sensor-signal dependence, brain-specific origin, generalization, real-time,
+EEG, device, assistive, diagnostic, or clinical result.

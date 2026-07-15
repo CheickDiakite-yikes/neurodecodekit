@@ -1,9 +1,11 @@
 # Start Here
 
-> Autonomy note: `docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md` explains why the
-> gates exist and proposes automatic Tier A routine work plus Tier B bounded
-> development experiments. It is a draft and grants no authorization until its
-> exact standing sentence is approved and separately recorded.
+> Autonomy note: `docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md` is the byte-identical
+> approved charter snapshot, and `docs/RESEARCH_AUTONOMY_CHARTER_DECISION.md`
+> is its activation record. Tier A routine work and Tier B bounded development
+> experiments may proceed autonomously after that decision is remotely green;
+> Tier C irreversible evidence, real-data, hardware, destructive, release, and
+> claim actions still require separate exact permission.
 
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.

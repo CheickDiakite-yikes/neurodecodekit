@@ -21,11 +21,12 @@ and explain exactly what the result does not prove.
 
 Why the gates? Most routine engineering is reversible, but opening a held-out
 target, reusing a consumed evaluation, or changing a rule after seeing the
-outcome is not scientifically reversible. The draft
-[Research Autonomy Charter](docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md) would let
+outcome is not scientifically reversible. The approved
+[Research Autonomy Charter](docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md) and its
+[activation decision](docs/RESEARCH_AUTONOMY_CHARTER_DECISION.md) let
 routine code, tests, synthetic work, bounded development experiments, commits,
 pushes, and CI proceed autonomously while reserving exact approval for those
-irreversible events. The draft is not active yet.
+irreversible Tier C events.
 
 ## Results At A Glance
 
@@ -1081,7 +1082,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 |---|---|
 | [START_HERE.md](START_HERE.md) | shortest current orientation |
 | [docs/CODEX_HANDOFF.md](docs/CODEX_HANDOFF.md) | exact continuation boundary for coding agents |
-| [docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md](docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md) | inactive three-tier proposal for autonomous routine/development work and exact irreversible-event stops |
+| [docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md](docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md) | byte-identical approved charter snapshot defining autonomous Tier A/B work and exact Tier C stops |
+| [docs/RESEARCH_AUTONOMY_CHARTER_DECISION.md](docs/RESEARCH_AUTONOMY_CHARTER_DECISION.md) | exact maintainer approval, frozen charter hashes, standing resource envelope, and nonretroactive Tier C boundary |
 | [docs/BUILD_NOTES.md](docs/BUILD_NOTES.md) | chronological measured build journal |
 | [docs/DECISIONS.md](docs/DECISIONS.md) | consequential architecture and research decisions |
 | [docs/NEXT_20_LOOPS_TRACKER.md](docs/NEXT_20_LOOPS_TRACKER.md) | original 20-loop tracker, current post-roadmap gate, and planning-only Loops 25-44 summary |

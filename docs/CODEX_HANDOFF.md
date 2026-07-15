@@ -489,11 +489,13 @@ This is not primarily a model repo. It is a **research loop repo**.
 
 ## Current Next Work
 
-Governance note: `docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md` proposes automatic
-Tier A routine work and Tier B bounded development experiments, with one exact
-stop before Tier C irreversible evidence, real-data, hardware, destructive,
-release, or claim actions. The draft is inactive and changes no current loop
-authorization.
+Governance note: `docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md` is the byte-identical
+approved charter snapshot and `docs/RESEARCH_AUTONOMY_CHARTER_DECISION.md` is
+its activation record. After that decision is remotely green, Tier A routine
+work and Tier B bounded development experiments proceed autonomously. Tier C
+irreversible evidence, real-data, hardware, destructive, release, and claim
+actions still require a separate exact decision; no existing narrow contract
+is loosened.
 
 1. **Loop 48 - keep Stage A consumed and Stage B closed pending its exact
    decision.** Read `docs/LOOP_48_FAILURE_LOCALIZATION_RESULT.md` for the
