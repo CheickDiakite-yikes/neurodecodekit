@@ -1,0 +1,550 @@
+{
+  "schema_name": "neurodecodekit.loop50_research_boundary",
+  "schema_version": "0.1.0",
+  "prepared_at": "2026-07-15",
+  "loop_id": 50,
+  "status": "planning_research_complete_experiment_not_started",
+  "proof_posture": "primary_source_design_only_no_protected_payload_or_model_execution",
+  "authorized_now": false,
+  "authorization": {
+    "loop48_stage_b_execution_authorized_now": false,
+    "loop49_preregistration_authorized_now": false,
+    "s24_acquisition_request_authorized_now": false,
+    "s24_download_authorized_now": false,
+    "s24_local_path_stat_or_hash_authorized_now": false,
+    "s24_fif_header_read_authorized_now": false,
+    "s24_signal_read_authorized_now": false,
+    "s24_mat_content_read_authorized_now": false,
+    "s24_target_or_label_read_authorized_now": false,
+    "s24_redacted_trial_audit_authorized_now": false,
+    "s24_split_derivative_creation_authorized_now": false,
+    "s21_cache_or_member_read_authorized_now": false,
+    "s21_array_or_target_read_authorized_now": false,
+    "s21_validation_or_source_test_reopen_authorized_now": false,
+    "s21_session2_reopen_authorized_now": false,
+    "s7_or_s20_reopen_authorized_now": false,
+    "loop50_preregistration_authorized_now": false,
+    "loop50_implementation_authorized_now": false,
+    "loop50_training_authorized_now": false,
+    "loop50_parameter_update_authorized_now": false,
+    "loop50_model_inference_authorized_now": false,
+    "loop50_prediction_freeze_authorized_now": false,
+    "loop50_selection_target_delivery_authorized_now": false,
+    "loop50_scoring_authorized_now": false,
+    "s25_payload_or_target_open_authorized_now": false,
+    "download_or_network_payload_authorized_now": false,
+    "language_model_neurotoken_or_rw3_authorized_now": false,
+    "stream_device_or_hardware_authorized_now": false,
+    "rerun_or_post_target_tuning_authorized_now": false,
+    "scientific_claim_upgrade_authorized_now": false,
+    "authorization_sentence_exists": false,
+    "draft_autonomy_charter_is_authorization": false,
+    "general_continuation_is_authorization": false,
+    "reason": "This artifact freezes a primary-source-informed planning boundary only. Loop 48 Stage B has no result, S24 remains metadata-only and unqualified, and every protected or numerical operation stays closed."
+  },
+  "dependencies": {
+    "loop26_31_33_status": "consumed_negative_result_parked_no_rerun",
+    "loop48_stage_a_status": "complete_consumed_descriptive_f5_not_root_cause",
+    "loop48_stage_b_status": "preregistered_request_green_execution_unauthorized",
+    "loop48_stage_b_result_available": false,
+    "decision_0083_requires_stage_b_close_or_park_before_s24_acquisition": true,
+    "loop49_status": "planning_research_complete_metadata_candidate_selected_qualification_pending",
+    "loop49_s24_payload_opened": false,
+    "loop49_s24_minimum_row_gate_proven": false,
+    "loop49_s24_channel_geometry_compatibility_proven": false,
+    "loop50_experiment_started": false,
+    "loop50_preregistration_prepared": false,
+    "loop50_authorization_request_prepared": false,
+    "s25_status": "final_only_unopened",
+    "s25_may_be_used_by_loop50": false,
+    "source_validation_source_test_session2_may_be_used_by_loop50": false
+  },
+  "research_question": {
+    "primary": "Can one small shared causal CTC encoder learn from S21 and one development-only S24 fit partition while beating no-signal and corruption controls separately on both development people?",
+    "shortcut_threats": [
+      "canonical_sentence_text_overlap_across_people",
+      "participant_identity_predicting_different_target_lists",
+      "participant_imbalance_in_the_pooled_loss",
+      "pooled_average_hiding_one_person_failure",
+      "target_corpus_normalization_or_geometry_adaptation",
+      "seed_selection_after_outcome",
+      "historically_used_s21_rows_relabelled_as_fresh",
+      "language_model_fluency_misattributed_to_neural_signal"
+    ],
+    "primary_estimand_recommendation": "For each development person separately, strongest matched no-signal prior macro sentence CER minus frozen multi-source candidate macro sentence CER.",
+    "positive_values_favor_candidate": true,
+    "scientific_role": "multi_source_development_qualification_only"
+  },
+  "primary_source_bindings": [
+    {
+      "source_id": "brain2qwerty-v2-2026",
+      "url": "https://facebookresearch.github.io/brain2qwerty/assets/brain2qwerty_v2.pdf",
+      "use": "deterministic sentence-text grouping across people, joint-training motivation, participant-signature risk, multi-person reporting, and explicit noncausal whole-sentence limitation"
+    },
+    {
+      "source_id": "spanishbcbl-official-card",
+      "url": "https://huggingface.co/datasets/bcbl190626/SpanishBCBL",
+      "use": "official license, modalities, file formats, repeated-person aliases, and S23 exclusion"
+    },
+    {
+      "source_id": "brookshire-2024-eeg-leakage",
+      "url": "https://doi.org/10.3389/fnins.2024.1373515",
+      "use": "participant-specific leakage risk and the need to reserve a separate person-level final test"
+    },
+    {
+      "source_id": "sagawa-2020-group-dro",
+      "url": "https://arxiv.org/abs/1911.08731",
+      "use": "worst-group motivation and caution that naive robust optimization adds regularization-sensitive complexity"
+    },
+    {
+      "source_id": "varoquaux-2018-small-sample-cv",
+      "url": "https://arxiv.org/abs/1706.07581",
+      "use": "small-neuroimaging-sample uncertainty and refusal to promote a 16-row development gate into a final estimate"
+    },
+    {
+      "source_id": "varma-simon-2006-selection-bias",
+      "url": "https://doi.org/10.1186/1471-2105-7-91",
+      "use": "separation of development selection from independent error estimation"
+    }
+  ],
+  "evidence_roles": {
+    "s21_session1_source_train": {
+      "role": "historically_used_development_fit_and_out_of_fold_diagnostic",
+      "fresh_or_independent": false,
+      "maximum_evidence": "historical_development_regression_control",
+      "validation_source_test_or_session2_rows_allowed": false
+    },
+    "s24_session2_block2": {
+      "role": "permanently_development_only_fit_and_selection_after_separate_qualification",
+      "current_state": "metadata_only_unopened_unqualified",
+      "future_selection_groups": 16,
+      "future_minimum_fit_groups": 32,
+      "future_minimum_usable_unique_groups": 48,
+      "may_become_final_or_independent_evidence": false
+    },
+    "s25_session2_block2": {
+      "role": "future_final_only_strict_zero_shot_person",
+      "current_state": "unopened",
+      "loop50_fit_selection_normalization_or_scoring_rows": 0,
+      "may_influence_loop50_model_or_protocol": false
+    },
+    "closed_or_consumed_sources": [
+      "s21_validation",
+      "s21_source_test",
+      "s21_session2",
+      "s7",
+      "s20"
+    ]
+  },
+  "stage_b_outcome_router": {
+    "status": "frozen_research_recommendation_pending_stage_b_result",
+    "automatic_s24_acquisition_after_any_result": false,
+    "routes": [
+      {
+        "route_id": "L50-R01",
+        "condition": "identity_feasibility_nonfinite_or_gross_transformed_cache_failure",
+        "action": "park_s24_and_repair_then_separately_requalify_mechanics"
+      },
+      {
+        "route_id": "L50-R02",
+        "condition": "corrected_timing_shift_materially_beats_intact",
+        "action": "park_s24_and_resolve_causal_timing_or_preprocessing"
+      },
+      {
+        "route_id": "L50-R03",
+        "condition": "stable_intact_candidate_or_linear_probe_clears_registered_prior_and_control_rule",
+        "action": "eligible_to_prepare_separately_gated_s24_intake"
+      },
+      {
+        "route_id": "L50-R04",
+        "condition": "stable_mechanics_and_registered_H6_non_saturation_even_if_prior_dominance_remains",
+        "action": "eligible_to_prepare_s24_only_as_bounded_data_regime_test"
+      },
+      {
+        "route_id": "L50-R05",
+        "condition": "stable_nonseparability_or_prior_dominance_with_registered_plateau_evidence",
+        "action": "park_s24_acquisition_for_this_model_family"
+      },
+      {
+        "route_id": "L50-R06",
+        "condition": "mixed_or_unresolved",
+        "action": "park_and_document_without_automatic_backup_person"
+      }
+    ],
+    "route_application_is_acquisition_authorization": false
+  },
+  "future_global_text_firewall": {
+    "status": "research_recommendation_not_implemented_or_authorized",
+    "canonicalization": "Unicode NFKC, strip, collapse internal whitespace, lowercase",
+    "assignment_unit": "global_canonical_sentence_text_group_across_all_people_sessions_trials_and_lists",
+    "digest": "SHA-256",
+    "s24_assignment_salt": "neurodecodekit-loop49-development-split-v0",
+    "s21_oof_assignment_salt": "neurodecodekit-loop50-s21-oof-v0",
+    "same_text_must_never_cross_fit_and_evaluation_roles": true,
+    "s24_selection_groups": 16,
+    "s24_fit_groups": "all_remaining_usable_unique_groups",
+    "s24_minimum_fit_groups": 32,
+    "s24_minimum_total_usable_groups": 48,
+    "s21_rows_matching_s24_selection_text_excluded_from_every_loop50_fit_normalizer_prior_and_diagnostic": true,
+    "s24_rows_matching_current_s21_oof_fold_excluded_from_that_fold_training": true,
+    "trial_order_session_id_list_id_and_participant_id_may_not_assign_partition": true,
+    "sentence_plaintext_may_not_be_emitted": true,
+    "raw_canonical_sentence_hashes_may_not_be_persisted": true,
+    "allowed_split_outputs": [
+      "opaque_item_ids",
+      "fit_selection_or_oof_roles",
+      "aggregate_overlap_counts",
+      "opaque_split_manifest_sha256"
+    ]
+  },
+  "future_s21_oof_diagnostic": {
+    "status": "historical_development_only_not_fresh_validation",
+    "fold_count": 5,
+    "assignment": "integer_value_of_SHA256(salt_NUL_canonical_text)_mod_5",
+    "same_text_group_stays_in_one_fold": true,
+    "fold_train_scaler_must_exclude_held_out_fold": true,
+    "fold_train_candidate_must_exclude_held_out_fold": true,
+    "s24_fit_rows_sharing_held_out_s21_text_must_be_excluded_for_that_fold": true,
+    "predictions_concatenated_in_opaque_item_id_order": true,
+    "direct_in_sample_scoring_allowed": false,
+    "historical_freshness_restored_by_oof": false,
+    "allowed_label": "historical_development_oof"
+  },
+  "future_compatibility_gate": {
+    "required_input_channels": 102,
+    "required_channel_type": "MEG_magnetometer",
+    "exact_same_ordered_channel_names_required": true,
+    "exact_units_sampling_rate_time_axis_padding_and_ctc_vocabulary_compatibility_required": true,
+    "silent_channel_interpolation_substitution_or_reordering_allowed": false,
+    "participant_specific_geometry_warp_or_sensor_map_allowed": false,
+    "loop36_geometry_and_reference_semantics_must_be_satisfied_or_explicitly_parked": true,
+    "nominal_same_megin_system_is_sufficient": false,
+    "minimum_s24_usable_unique_groups_required": 48,
+    "compatibility_proven_now": false
+  },
+  "future_normalization_policy": {
+    "fit_scope": "current_fit_rows_only",
+    "s21_oof": "one_pooled_fold_train_scaler_per_fold",
+    "final_development_candidate": "one_pooled_s21_plus_s24_fit_only_scaler_frozen_with_checkpoint",
+    "participant_specific_scalers_allowed": false,
+    "s24_selection_signal_statistics_allowed": false,
+    "s25_target_corpus_signal_statistics_allowed": false,
+    "future_s25_zero_shot_compatibility_reason": "Loop 28 T2 permits no target-corpus normalization fit, so the Loop 50 scaler must freeze before S25."
+  },
+  "future_candidate_policy": {
+    "status": "single_candidate_family_recommended_exact_model_pending_stage_b",
+    "exact_candidate_selected_now": false,
+    "candidate_configurations_allowed_after_preregistration": 1,
+    "trainable_parameter_ceiling": 10000,
+    "right_context_samples": 0,
+    "whole_sentence_or_bidirectional_layer_allowed": false,
+    "primary_shared_checkpoint_count": 1,
+    "nonselectable_shared_stability_checkpoint_count": 2,
+    "final_candidate_checkpoint_count": 1,
+    "participant_specific_checkpoint_count": 0,
+    "shared_pooled_scaler_count": 1,
+    "participant_id_as_model_input": false,
+    "participant_embedding": false,
+    "participant_conditioned_affine": false,
+    "participant_specific_adapter_checkpoint_or_finetuning": false,
+    "language_model_or_ngram": false,
+    "neurotoken_semantic_target": false,
+    "target_text_derived_model_input": false,
+    "primary_seed": 5001,
+    "stability_seeds": [5002, 5003],
+    "best_seed_selection": false,
+    "restarts": 0,
+    "current_reference_candidate": "TinyCausalSentenceCTC-v0_2908_parameters_not_selected",
+    "current_reference_linear_comparator": "LinearSignalCTC-v0_2884_parameters_not_selected",
+    "fixed_recipe_failure_blocks_silent_reuse": true
+  },
+  "future_training_objective": {
+    "applies_to": "primary_multi_source_candidate",
+    "participant_balancing": "equal_mean_loss_weight_per_person",
+    "formula": "0.5 * mean_S21_CTC_loss + 0.5 * mean_S24_CTC_loss",
+    "participant_weights": {
+      "S21": 0.5,
+      "S24": 0.5
+    },
+    "every_optimizer_update_requires_both_people": true,
+    "replacement_or_cycling_rule_must_be_deterministic_and_preregistered": true,
+    "participant_id_use_allowed_only_for_sampler_metric_and_access_ledgers": true,
+    "learned_group_dro_selected": false,
+    "learned_group_dro_not_selected_reason": "Two development groups do not justify a new regularization-sensitive optimization axis before the simpler equal-weight objective is tested."
+  },
+  "future_parameter_update_inventory_recommendation": {
+    "status": "bounded_research_recommendation_exact_inventory_pending_stage_b_and_s24_qualification",
+    "pooled_candidate_primary_seed_s21_oof_fits": 5,
+    "pooled_candidate_final_fit_seeds_5001_5002_5003": 3,
+    "shared_linear_primary_seed_s21_oof_plus_final_fits": 6,
+    "s21_only_causal_primary_seed_s21_oof_plus_final_fits": 6,
+    "total_parameter_update_runs": 20,
+    "absolute_parameter_update_run_cap": 24,
+    "no_signal_prior_parameter_update_runs": 0,
+    "exact_zero_channel_and_time_controls_reuse_frozen_checkpoints": true,
+    "timing_length_only_control_must_be_deterministic_or_closed_form": true,
+    "unused_cap_margin_is_rerun_permission": false
+  },
+  "future_condition_inventory": [
+    {
+      "condition_id": "L50-C00",
+      "condition": "shared_multi_source_causal_candidate",
+      "role": "primary"
+    },
+    {
+      "condition_id": "L50-C01",
+      "condition": "pooled_fit_only_most_frequent_sentence_prior",
+      "role": "global_no_signal"
+    },
+    {
+      "condition_id": "L50-C02",
+      "condition": "per_participant_fit_only_prior",
+      "role": "participant_id_only_shortcut"
+    },
+    {
+      "condition_id": "L50-C03",
+      "condition": "s21_only_prior_applied_without_s24_targets",
+      "role": "source_only_no_signal"
+    },
+    {
+      "condition_id": "L50-C04",
+      "condition": "exact_zero_signal_through_primary_checkpoint",
+      "role": "signal_use_control"
+    },
+    {
+      "condition_id": "L50-C05",
+      "condition": "channel_name_hash_derangement_through_primary_checkpoint",
+      "role": "spatial_identity_control"
+    },
+    {
+      "condition_id": "L50-C06",
+      "condition": "nonwrapping_zero_filled_positive_time_displacement",
+      "role": "temporal_information_control"
+    },
+    {
+      "condition_id": "L50-C07",
+      "condition": "timing_and_length_only_train_fit_model",
+      "role": "task_structure_control"
+    },
+    {
+      "condition_id": "L50-C08",
+      "condition": "shared_parameter_matched_linear_ctc_comparator",
+      "role": "architecture_complexity_control"
+    },
+    {
+      "condition_id": "L50-C09",
+      "condition": "s21_only_causal_checkpoint",
+      "role": "descriptive_added_s24_fit_value"
+    }
+  ],
+  "future_prediction_firewall": {
+    "fit_targets_allowed_only_after_green_preregistration_authorization_and_implementation": true,
+    "s24_selection_targets_available_to_fit_or_prediction_process": false,
+    "all_candidate_and_control_predictions_hash_frozen_before_s24_selection_targets": true,
+    "prediction_freeze_record_must_be_tested_committed_pushed_and_remotely_green": true,
+    "s24_selection_target_delivery_exactly_once": true,
+    "s24_selection_scoring_exactly_once": true,
+    "post_selection_parameter_or_configuration_updates": 0,
+    "reruns_after_selection_scoring": 0,
+    "s21_historical_target_use_must_be_disclosed": true,
+    "prediction_freeze_restores_s21_historical_freshness": false
+  },
+  "future_metrics": {
+    "primary": [
+      "S21_historical_oof_macro_sentence_CER",
+      "S24_development_selection_macro_sentence_CER",
+      "worst_person_macro_sentence_CER",
+      "worst_person_strongest_no_signal_margin"
+    ],
+    "secondary": [
+      "pooled_macro_sentence_CER_descriptive_only",
+      "per_person_corpus_CER",
+      "per_person_WER",
+      "per_person_exact_sequences",
+      "per_person_wins_ties_losses",
+      "blank_fraction",
+      "output_length",
+      "source_only_neural_margin",
+      "linear_and_corruption_margins",
+      "parameter_count",
+      "optimizer_steps",
+      "runtime_sec",
+      "peak_rss_bytes",
+      "generated_output_bytes",
+      "access_training_inference_and_scoring_counters",
+      "warnings_and_unavailable_fields"
+    ],
+    "macro_sentence_CER_weights_each_sentence_equally": true,
+    "worst_person_primary_over_pooled": true,
+    "pooled_metric_may_rescue_failed_person": false
+  },
+  "future_acceptance_recommendation": {
+    "status": "research_recommendation_not_preregistered_threshold",
+    "primary_seed": 5001,
+    "strongest_no_signal_macro_CER_margin_min_each_person": 0.05,
+    "strictly_beat_exact_zero_channel_time_timing_and_linear_each_person": true,
+    "strictly_improve_s24_over_s21_only_neural_comparator": true,
+    "maximum_allowed_s21_oof_macro_CER_degradation_vs_s21_only_neural": 0.02,
+    "stability_seeds_must_preserve_s24_primary_no_signal_margin_direction": true,
+    "stability_seed_may_replace_primary": false,
+    "participant_id_only_prior_may_erase_candidate_margin": false,
+    "both_people_must_pass": true,
+    "worst_person_must_pass": true,
+    "pooled_only_pass_allowed": false,
+    "s24_selection_p_value_is_confirmatory": false,
+    "paired_randomization_and_intervals_are_descriptive": true,
+    "failure_action": "park_loop50_block_loop51_no_rerun_or_post_target_tuning"
+  },
+  "future_access_sequence": [
+    "close_or_explicitly_park_loop48_stage_b_and_apply_router",
+    "separately_preregister_authorize_and_qualify_s24_acquisition_header_redacted_audit_and_split",
+    "freeze_exact_loop50_model_scaler_folds_controls_seeds_thresholds_resources_and_claim_ceiling",
+    "commit_push_and_obtain_remote_green_preregistration_authorization_and_implementation",
+    "deliver_only_s21_source_train_and_s24_fit_targets",
+    "run_exact_bounded_fit_and_target_blind_inference_inventory",
+    "commit_push_and_obtain_remote_green_hash_only_prediction_freeze",
+    "deliver_and_score_same_16_s24_selection_targets_once",
+    "emit_one_result_consume_s24_selection_and_proceed_or_park_without_rerun"
+  ],
+  "resource_boundaries": {
+    "current_cpu_threads": 1,
+    "current_workers": 1,
+    "current_concurrent_numerical_jobs": 0,
+    "current_generated_core_artifact_cap_bytes": 8388608,
+    "future_cpu_threads": 1,
+    "future_workers": 1,
+    "future_concurrent_numerical_jobs": 1,
+    "future_trainable_parameter_ceiling": 10000,
+    "future_parameter_update_run_ceiling": 24,
+    "future_parameter_update_runtime_cap_sec": 3600,
+    "future_peak_rss_cap_bytes": 2147483648,
+    "future_generated_output_cap_bytes": 67108864,
+    "future_minimum_free_disk_bytes": 21474836480,
+    "future_s24_bundle_cap_bytes": 1342177280,
+    "current_new_download_bytes": 0,
+    "current_protected_payload_read_bytes": 0,
+    "persistent_background_processes_started": 0,
+    "tracked_workbook_reopened_this_pass": false,
+    "user_owned_inspection_sidecar_touched": false
+  },
+  "planning_access_counters": {
+    "s24_local_path_stats": 0,
+    "s24_hash_passes": 0,
+    "s24_header_reads": 0,
+    "s24_signal_reads": 0,
+    "s24_mat_reads": 0,
+    "s24_target_reads": 0,
+    "s25_path_or_payload_operations": 0,
+    "s25_target_reads": 0,
+    "s21_cache_or_member_reads": 0,
+    "s21_array_reads": 0,
+    "s21_target_reads": 0,
+    "validation_source_test_or_session2_reads": 0,
+    "s7_or_s20_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "parameter_updates": 0,
+    "inference_runs": 0,
+    "prediction_sets": 0,
+    "scoring_runs": 0,
+    "target_conditioned_choices": 0,
+    "network_payload_downloads": 0,
+    "network_payload_bytes": 0,
+    "language_model_or_neurotoken_runs": 0,
+    "rw3_stream_device_or_hardware_runs": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "unavailable_fields": [
+    "loop48_stage_b_result_and_route",
+    "s24_local_presence",
+    "s24_content_hash_verification",
+    "s24_exact_ordered_channel_names",
+    "s24_geometry_and_reference_compatibility",
+    "s24_recording_duration",
+    "s24_performed_trial_count",
+    "s24_usable_unique_canonical_sentence_count",
+    "s24_sentence_overlap_with_s21",
+    "s24_signal_or_target_quality",
+    "exact_loop50_candidate_architecture",
+    "exact_loop50_optimizer_and_step_budget",
+    "exact_loop50_fit_inference_and_prediction_counts",
+    "loop50_runtime_peak_rss_and_output",
+    "loop50_per_person_or_pooled_metrics",
+    "loop50_neural_or_control_margins",
+    "end_to_end_causality_or_latency",
+    "unseen_person_generalization"
+  ],
+  "refusal_ids": [
+    "L50-REF-01-stage-b-has-no-result",
+    "L50-REF-02-s24-acquisition-before-stage-b-route",
+    "L50-REF-03-s24-download-or-local-path-inspection",
+    "L50-REF-04-s24-header-signal-mat-or-target-open",
+    "L50-REF-05-s24-under-48-usable-groups",
+    "L50-REF-06-unverified-channel-geometry-or-reference-compatibility",
+    "L50-REF-07-text-group-crosses-fit-and-evaluation",
+    "L50-REF-08-plaintext-or-raw-text-hash-output",
+    "L50-REF-09-participant-id-model-input",
+    "L50-REF-10-participant-conditioned-affine-adapter-or-checkpoint",
+    "L50-REF-11-participant-specific-or-target-corpus-normalization",
+    "L50-REF-12-pooled-row-count-weighted-loss",
+    "L50-REF-13-pooled-average-rescues-person-level-failure",
+    "L50-REF-14-best-seed-selection-or-restart",
+    "L50-REF-15-more-than-one-candidate-configuration",
+    "L50-REF-16-over-10000-trainable-parameters",
+    "L50-REF-17-right-context-or-whole-sentence-model",
+    "L50-REF-18-language-model-ngram-or-semantic-target",
+    "L50-REF-19-s21-validation-source-test-session2-or-s7-reopen",
+    "L50-REF-20-s20-or-s25-use",
+    "L50-REF-21-selection-target-before-green-prediction-freeze",
+    "L50-REF-22-post-selection-update-rerun-or-tuning",
+    "L50-REF-23-resource-cap-or-disk-floor-breach",
+    "L50-REF-24-unregistered-download-network-or-background-process",
+    "L50-REF-25-s24-relabelled-independent-or-final",
+    "L50-REF-26-s21-oof-relabelled-fresh-validation",
+    "L50-REF-27-development-p-value-called-confirmatory",
+    "L50-REF-28-brain-specific-real-time-home-device-or-clinical-claim",
+    "L50-REF-29-automatic-backup-person",
+    "L50-REF-30-general-continuation-or-draft-charter-treated-as-authorization"
+  ],
+  "claim_boundary": {
+    "current_engineering_capability": "A reviewable, machine-checkable design now specifies how a future two-person tiny causal experiment must prevent global text leakage, participant shortcuts, row-count imbalance, pooled-average masking, seed selection, and target-corpus normalization.",
+    "maximum_future_claim_if_every_separate_loop50_gate_passes": "One frozen tiny shared encoder produced positive multi-source development evidence on historically used S21 out-of-fold rows and one permanently development-only S24 selection partition.",
+    "not_established": [
+      "Loop 48 Stage B cause or result",
+      "S24 qualification or usable trial floor",
+      "neural advantage",
+      "sensor-signal dependence",
+      "brain-specific origin",
+      "decoding accuracy or utility",
+      "independent validation",
+      "unseen-person generalization",
+      "causal end-to-end preprocessing",
+      "real-time or end-to-end latency",
+      "EEG performance",
+      "portable or home-device performance",
+      "assistive efficacy",
+      "diagnostic value",
+      "clinical utility"
+    ],
+    "s25_is_required_for_future_strict_zero_shot_verdict": true,
+    "loop35_is_required_for_brain_specific_origin": true,
+    "real_time_requires_separate_causal_stream_and_latency_evidence": true
+  },
+  "warnings": [
+    "Brain2Qwerty v2 joint-training results come from nine participants, about 90 recording hours, a much larger noncausal architecture, and different data; they motivate this question but do not predict NeuroDecodeKit's outcome.",
+    "S21 source-train rows are historically used. Five-fold out-of-fold prediction prevents direct in-sample scoring but cannot restore freshness.",
+    "S24's 16 future selection groups are development-only and too small to carry a final or population claim.",
+    "Participant-balanced loss and worst-person gates are transparent safeguards, not proof of domain generalization.",
+    "The tiny candidate can be model-causal while the current real sentence cache remains offline and noncausal.",
+    "Nominal channel count and device family do not prove geometry, reference, unit, or transform compatibility.",
+    "No exact architecture may be selected until Loop 48 Stage B closes or parks under its own authorization boundary."
+  ],
+  "next_actions": [
+    "obtain_or_decline_the_separate_loop48_stage_b_decision_without_treating_this_boundary_as_authorization",
+    "apply_the_frozen_stage_b_router_to_decide_whether_s24_intake_preparation_is_eligible",
+    "if_eligible_implement_and_synthetically_test_global_text_grouping_oof_ledgers_participant_balancing_controls_and_prediction_freeze",
+    "prepare_separate_s24_acquisition_header_redacted_audit_and_split_contracts",
+    "freeze_an_exact_loop50_preregistration_only_after_stage_b_and_s24_qualification",
+    "keep_s25_final_only_and_unopened"
+  ]
+}

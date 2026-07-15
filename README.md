@@ -45,6 +45,7 @@ irreversible events. The draft is not active yet.
 | Failure-localization result | The one-shot artifact-only pass reproduced `99.3477%` primary blank, all 6/6 unstable fixed-prefix groups, and all 3/3 size-55 seeds worse than the prior | Loop 48 selected descriptive `F5` output-distribution instability in `0.0166` sec and 23.4 MB RSS; root cause remains unresolved and no rerun is authorized |
 | Preregistered failure discrimination | A deterministic 44-fit/11-check split, five nested sizes, three fixed seeds, 20 fits, 35 target-blind inferences, five priors, 41 frozen prediction sets, and 2,048 exact sign assignments now bind six failure hypotheses | The preregistration and exact request are green-bound but unauthorized; because all 55 rows were used historically, the ceiling is E2 diagnostic evidence, not independent validation or neural advantage |
 | Development-person intake planning | Loop 49 metadata research selects S24 session 2 block 2: one MEG FIF plus one protected MAT log, exactly `1,048,579,727` bytes; a future text-grouped split reserves 16 unique sentence groups for selection and requires at least 32 fit groups | S24 avoids the S1/S18 alias and preserves S25 final-only, but no S24 path or payload was opened and the `>=48` usable-row, channel, geometry, and overlap gates are unproven; Loop 49 remains `Not Started` |
+| Multi-source encoder planning | Loop 50 research freezes global text grouping, five-fold historical S21 out-of-fold diagnostics, one 16-group S24 development gate, equal-person loss, ten fixed conditions, and an exact 20-update inventory led by seed `5001` | Two stability seeds cannot replace the primary, and pooled gain cannot rescue a failed person; Loop 50 remains `Not Started`, with Stage B, S24 qualification, model selection, training, scoring, and every scientific claim unavailable |
 | Fresh transfer candidate | Loop 27 metadata research selects S25 session 2 block 2: one MEG FIF plus one protected MAT log, exactly 1,009,939,983 bytes under 1 GiB | S25 is not downloaded or qualified; preregistration waits for the causal source model, controls, and target isolation |
 | Transfer decision rule | Loop 28 research separates T0-T3 evidence and recommends a strict S25 T2 zero-shot gate: zero target fit, at least 48 final rows, at least 0.05 macro-CER improvement, 65,535 paired swaps plus observed, and strict corruption-control wins | The experiment is `Not Started`; this resolves one planning dependency without authorizing S25, a model run, calibration, or final access |
 | Portable sensing decision | Loop 29 research separates cryogenic MEG, partner/lab OPM-MEG, local-first scalp EEG, and non-neural controls through 15 requirements and six qualification levels | Planning research is complete while the experiment is `Not Started`; no device, download, stream, hardware session, or portable decoding result exists |
@@ -107,6 +108,24 @@ unauthorized. See `docs/LOOP_49_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop49_research_boundary.v0.json`. Planning commit `5afa61e` passed
 push CI `29454969710` and PR #27 CI `29455166081`, with both required jobs green.
 
+Loop 50 planning research is complete in
+[`docs/LOOP_50_PRIMARY_SOURCE_RESEARCH.md`](docs/LOOP_50_PRIMARY_SOURCE_RESEARCH.md)
+and `registries/loop50_research_boundary.v0.json`, while the experiment remains
+`Not Started`. The future design globally groups identical text across people,
+uses five historical S21 out-of-fold folds plus one 16-group S24 development
+qualification, weights S21 and S24 equally, forbids participant-conditioned
+model paths and target-corpus normalization, and requires both participants and
+the worst-person margin to pass. Primary seed `5001` cannot be replaced by the
+two stability seeds. Five pooled out-of-fold fits, three pooled final fits, six
+linear fits, and six S21-only fits bound the recommendation to 20 parameter-
+update runs; the four-run gap below the absolute cap is not rerun permission.
+Pooled gain cannot rescue a failed person. All 31
+authorization fields and all protected/model counters remain zero; Stage B must
+close or park before S24 acquisition can even be prepared, and S25 stays
+final-only.
+Planning commit `085f341` passed push CI `29458102674` and PR #28 CI
+`29458116994`, with Base Python and Optional Neuro Readers green in both.
+
 | Phase | Loops | Decisive goal |
 |---|---:|---|
 | Real Signal Truth | 45-48 | Qualify causality, then require frozen S21 validation to beat no-signal and corrupted-signal controls |
@@ -142,6 +161,7 @@ negative result and S25 is never repurposed for calibration.
 | Loop 48 artifact-only failure localization | 4 exact committed JSON inputs; 155,545 input bytes; 18 blank fractions; 6 fixed-prefix ranges; `F5`; 0.016568875 sec; 23,429,120-byte peak RSS; 10,643 output bytes; 0 protected/model/training operations | consumed post-outcome descriptive result; no rerun | Reproduces the failure phenotype mechanically while keeping causal root cause, neural advantage, and every decoding or device claim explicitly unavailable |
 | Loop 48 Stage B preregistration | 44 fit / 11 check rows; prefixes `8,16,24,32,44`; seeds `4801-4803`; 20 fits; 35 target-blind inferences; 5 priors; 41 frozen sets; 2,048 exact sign assignments; 1 thread; 32 MiB cap | preregistered, unauthorized, zero protected reads | Converts six competing failure explanations into one falsifiable diagnostic while correcting the ceiling from E3 to E2 because the rows are not historically fresh |
 | Loop 49 development-person boundary | 396 pinned metadata rows; S24 session 2 block 2; 2 exact files; 1,048,579,727 bytes; 293,597,553-byte cap margin; 16 future selection groups; 32 minimum fit groups; 25 false authorization fields | metadata research only; experiment `Not Started` | Creates a clean development-person path without consuming final-only S25, while keeping trial count, channels, geometry, targets, signal, models, and transfer claims closed |
+| Loop 50 multi-source research boundary | 6 primary sources; 5 S21 out-of-fold folds; 16 future S24 selection groups; 10 fixed conditions; 20 parameter-update runs; seeds `5001-5003`; 30 refusals; 31 false authorization fields | planning research only; experiment `Not Started` | Defines a text-leakage-resistant, participant-balanced, worst-person-gated development experiment while keeping S24/S25 payloads, model choice, training, scoring, and claims closed |
 | Loop 27 fresh-holdout boundary | 315 pinned MEG metadata entries; 23 strict single-FIF/log pairs; 16 eligible; S25 selected at 1,009,939,983 bytes; S23 excluded; 18 false authorization fields | metadata research only | Finds the smallest honest same-modality transfer candidate while keeping its local MAT payload, remote FIF, targets, and backups sealed |
 | Loop 28 transfer boundary | T0-T3 taxonomy; strict zero-shot/transductive split; 48-row floor; 0.05 macro-CER margin; 65,535 paired assignments plus observed; 4 comparators; 21 false authorization fields | planning research only | Makes the future one-time S25 decision falsifiable while reserving calibrated transfer for a physically separate design |
 | Loop 29 portability boundary | 15 modality requirements; 4 profiles; 6 qualification levels; 12 future packet gates; 24 false authorization fields; 5,000,000,000-byte preferred storage ceiling | planning research only | Chooses EEG as the immediate local-first lane and OPM-MEG as a partner/lab lane without treating channel ablation, vendor specifications, or home acquisition as text decoding |
@@ -1095,6 +1115,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/loop48_stage_b_authorization_request.v0.json](registries/loop48_stage_b_authorization_request.v0.json) | request bound to green preregistration commit `0ee0ab7` and both CI runs; no implementation, protected access, or execution is authorized |
 | [docs/LOOP_49_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_49_PRIMARY_SOURCE_RESEARCH.md) | S24 development-person metadata decision, clean-identity tradeoff, exact bytes/hashes, text-group split recommendation, access order, and claim ceiling |
 | [registries/loop49_research_boundary.v0.json](registries/loop49_research_boundary.v0.json) | machine-readable S24 selection, 25 false authorization fields, zero payload/model counters, `>=48` blocker, and permanent development-only role |
+| [docs/LOOP_50_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_50_PRIMARY_SOURCE_RESEARCH.md) | primary-source multi-person design, global text firewall, historical S21 out-of-fold protocol, S24 development gate, controls, resources, and claim ceiling |
+| [registries/loop50_research_boundary.v0.json](registries/loop50_research_boundary.v0.json) | machine-readable two-person design with six Stage B routes, ten conditions, 30 refusals, 31 false authorizations, and zero protected/model counters |
 | [docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md) | official metadata ranking, selected S25 MEG candidate, exact bytes/hashes, target-isolation design, and preregistration blockers |
 | [registries/loop27_research_boundary.v0.json](registries/loop27_research_boundary.v0.json) | machine-readable Loop 27 candidate identity, unavailable fields, resource boundary, zero payload access, and 18 false authorization fields |
 | [docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_28_PRIMARY_SOURCE_RESEARCH.md) | v2 transfer audit, T0-T3 taxonomy, strict zero-shot/transductive distinction, final-only rule, and calibrated-design boundary |

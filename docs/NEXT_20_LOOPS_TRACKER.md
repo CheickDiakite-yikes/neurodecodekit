@@ -630,9 +630,23 @@ unavailable, so there is no acquisition request or qualification result.
 Planning commit `5afa61e` passed push CI `29454969710` and PR #27 CI
 `29455166081`; both Base Python and Optional Neuro Readers are green.
 
-Loops 50-64 are `Not Started`. All execution flags and all nine global
+Loop 50 planning research is now complete while its experiment remains `Not
+Started`. `docs/LOOP_50_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop50_research_boundary.v0.json` freeze a global text-group
+firewall, five-fold historical S21 out-of-fold diagnostic, 16-group S24
+development qualification, equal-person loss, one shared candidate family,
+one primary plus two nonselectable stability seeds, ten fixed conditions, an
+exact 20-update inventory, and a worst-person gate. The primary seed must beat
+the strongest no-signal prior by at least `0.05` macro CER on both development
+people; pooled gain cannot rescue either person. All 31 authorization fields
+are false, all protected/model counters are zero, and no exact candidate is
+selected before Stage B closes.
+Planning commit `085f341` passed push CI `29458102674` and PR #28 CI
+`29458116994`; Base Python and Optional Neuro Readers are green in both.
+
+Loops 51-64 are `Not Started`. All execution flags and all nine global
 authorization fields are false. Decision 0083 keeps new Loop 49 acquisition
 after the separately gated Loop 48 Stage B. The next possible positive
-scientific claim still requires a fresh, separately registered
-development-person path before the final-only S25 zero-shot verdict. No roadmap
-row authorizes either experiment.
+scientific claim still requires a fresh, separately registered development-
+person path before the final-only S25 zero-shot verdict. No roadmap row
+authorizes either experiment.

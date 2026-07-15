@@ -39,6 +39,17 @@
 > Started`, unpreregistered, and unauthorized. Planning commit `5afa61e` passed
 > push CI `29454969710` and PR #27 CI `29455166081`; both required jobs are
 > green.
+> Loop 50 planning research is now complete while its experiment remains `Not
+> Started`. The design freezes global text grouping, five historical S21
+> out-of-fold folds, a 16-group S24 development gate, equal-person loss, one
+> shared candidate family, ten conditions, primary seed `5001`, two
+> nonselectable stability seeds, an exact 20-update inventory, and a worst-
+> person gate. All 31 authorization fields are false; no exact model, protected
+> read, training, inference, prediction, or scoring event exists. Stage B
+> remains the next protected decision, S24 remains unopened, and S25 remains
+> final-only.
+> Planning commit `085f341` passed push CI `29458102674` and PR #28 CI
+> `29458116994`; both required jobs are green in both workflows.
 
 > Historical pre-Loop-25-execution context, retained for audit: Loops 1-12,
 > 14-22, and 23.5 are complete; Loops
@@ -504,14 +515,23 @@ authorization.
    before acquisition; the trial floor, channels, geometry, duration, and text
    overlap remain unavailable. Do not prepare or execute acquisition, open a
    backup, or claim person transfer from metadata selection.
-3. **RW3 - decide on the prepared Stage A packet only.** Review
+3. **Loop 50 - preserve the planning-only multi-source boundary.** Read
+   `docs/LOOP_50_PRIMARY_SOURCE_RESEARCH.md` and
+   `registries/loop50_research_boundary.v0.json`. It freezes global text
+   grouping, five historical S21 out-of-fold folds, equal-person loss, one
+   shared candidate family, ten conditions, one primary plus two nonselectable
+   stability seeds, an exact 20-update inventory, and a both-person/worst-person
+   gate. The experiment is `Not Started`; do not select an exact model, access
+   S24/S25, read the S21 cache, train, infer, freeze predictions, or score from
+   this boundary.
+4. **RW3 - decide on the prepared Stage A packet only.** Review
    `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` and
    `registries/rw3_stage_a_authorization_request.v0.json`. The request is bound
    to commit `c3d1f01` and its exact contract hash, but `authorized_now` remains
    false. Do not implement Stage A without an explicit user decision followed
    by a pushed authorization-only commit; BrainFlow, LSL, PyXDF, sockets, live
    sources, hardware, and Stages B-D remain later independent gates.
-4. **Use Loops 27-44 and 48-64 as future evidence queues, not blanket
+5. **Use Loops 27-44 and 48-64 as future evidence queues, not blanket
    authorization.**
    Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`,
    `docs/LOOPS_25_44_ROADMAP.md`, and
@@ -1165,6 +1185,16 @@ authorization fields and every protected/model counter remain false. The
 `>=48` trial floor and every header/signal/target compatibility field are still
 unavailable, so Loop 49 remains experimentally `Not Started` and cannot support
 a transfer or decoding claim.
+
+Loop 50 planning research now provides the corresponding model-design boundary
+without opening data. It requires one global text assignment across people,
+five-fold historical S21 out-of-fold behavior, one 16-group S24 development
+qualification, equal participant loss, no participant-conditioned path, ten
+fixed candidate/control conditions, an exact 20-update inventory, and separate
+per-person and worst-person passes. Primary seed 5001 is immutable and cannot
+be replaced by stability seeds 5002/5003. All 31 authorization fields and every
+protected/model counter remain false, so this is not a preregistration,
+execution, or result.
 
 The tracker has ten sheets, including `Loops 45-64`. After the consumed Loop 48
 Stage A closeout it is 117,187 bytes at SHA-256

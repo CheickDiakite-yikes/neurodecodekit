@@ -2869,3 +2869,51 @@ authorization fields are false.
 Evidence: `docs/LOOP_49_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop49_research_boundary.v0.json`, and
 `tests/test_loop49_research_boundary.py`.
+
+## 0086 - Freeze A Two-Person Development Design Before S24 Access
+
+Decision: complete Loop 50 primary-source planning while keeping the experiment
+`Not Started`. Freeze a global canonical-sentence firewall, five-fold
+historical S21 out-of-fold diagnostic, one 16-group S24 development
+qualification, equal `0.5/0.5` participant loss, one shared causal candidate
+family, ten fixed candidate/prior/control conditions, primary seed 5001, two
+nonselectable stability seeds, an exact 20-parameter-update inventory, and
+separate per-person plus worst-person gates. The four-run margin below the
+absolute cap is not rerun permission.
+
+Leakage decision: identical text may never cross a fit/evaluation boundary
+through another participant. Any S21 row matching S24 selection text is removed
+from all fits, normalizers, priors, and diagnostics. For each S21 out-of-fold
+fold, matching S24 fit text is also excluded. Participant ID may index only the
+sampler, metric, and access ledgers; it may not enter a model, scaler, affine,
+adapter, checkpoint, or decoder. S21 out-of-fold results remain historically
+used development evidence and may never be relabeled fresh validation.
+
+Model and gate decision: choose no exact model before Loop 48 Stage B closes or
+parks. A later preregistration may choose one <=10,000-parameter, zero-right-
+context shared model with no language model or participant-conditioned path.
+Primary seed 5001 must beat the strongest no-signal prior by at least 0.05 macro
+CER and strictly beat registered corruptions separately on both people. S24
+must improve over the S21-only neural comparator while S21 degrades by no more
+than 0.02. Pooled gain and stability seeds cannot rescue a failed primary or
+person.
+
+Sequence decision: retain Decision 0083. A future Stage B result must first
+apply the six-route repair/proceed/park table. S24 then needs separate
+acquisition, header, redacted audit, split, channel, geometry, and >=48-group
+qualification. All predictions must be committed, pushed, and remotely green
+before the same 16 S24 selection targets open once. Failure parks Loop 50 and
+blocks Loop 51 without rerun. S25 remains final-only and receives zero Loop 50
+fit, normalization, selection, or scoring rows.
+
+Evidence and authorization decision: all 31 authorization fields are false and
+every protected/model/training/inference/scoring counter is zero. This planning
+boundary establishes no neural advantage, decoding accuracy, unseen-person
+generalization, brain-specific origin, real-time behavior, EEG or home-device
+performance, assistive value, or clinical result.
+
+Evidence: `docs/LOOP_50_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop50_research_boundary.v0.json`, and
+`tests/test_loop50_research_boundary.py`. Planning commit `085f341` passed push
+CI `29458102674` and PR #28 CI `29458116994`, with both required jobs green in
+both workflows.

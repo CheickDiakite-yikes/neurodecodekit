@@ -505,5 +505,17 @@ unproven. There is no preregistration, acquisition request, or authorization.
 Decision 0083 places any new acquisition after the separately gated Loop 48
 Stage B.
 
-Loops 50-64 remain `Not Started`, and all current execution flags are false.
+Loop 50 planning research is complete while the experiment remains `Not
+Started`. Read `docs/LOOP_50_PRIMARY_SOURCE_RESEARCH.md` and validate
+`registries/loop50_research_boundary.v0.json`. The design freezes global text
+grouping, five historical S21 out-of-fold folds, a 16-group S24 development
+gate, equal-person loss, one shared candidate family, ten controls, an exact
+20-update inventory, and a worst-person acceptance rule. All 31 authorization
+fields are false and no S24, S25, S21 cache, model, training, inference, or
+score occurred. Stage B remains the next protected decision; this planning
+result does not authorize it or S24.
+Planning commit `085f341` passed push CI `29458102674` and PR #28 CI
+`29458116994`; both required jobs are green in both workflows.
+
+Loops 51-64 remain `Not Started`, and all current execution flags are false.
 S25 remains sealed until a separate final-only zero-shot packet is complete.
