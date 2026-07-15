@@ -111,7 +111,7 @@ class SharedS21ValidationGateTests(unittest.TestCase):
         scored = dict(counters)
         scored.update(
             {
-                "archive_header_reads": 18,
+                "archive_header_reads": 22,
                 "archive_row_member_streams": 10,
                 "validation_target_rows_delivered_after_prediction_freeze": 6,
                 "validation_scoring_runs": 1,

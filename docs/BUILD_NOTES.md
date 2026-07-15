@@ -3559,6 +3559,14 @@ operation, or portable/home hardware result.
   the 716-test, three-skip pre-change baseline. Repository Ruff, compileall,
   all registry JSON, all five Loop 26 CLI help surfaces, and `git diff --check`
   pass.
+- The first target-free static run on green implementation `91409bd` passed all
+  frozen identities in 0.798270 seconds with 208,224,256-byte internal peak
+  RSS. It made one cache stat read, 14 archive-header reads, two target-free
+  metadata member streams, zero cache hash passes, and zero signal or target
+  row deliveries. That measured ledger exposed a pre-model expectation bug:
+  the 12-member archive plus two static header reads and six derivative member
+  headers totals 20, not 16. Protected values remained closed while the exact
+  invariant was corrected for a new implementation commit and remote CI pass.
 
 Engineering capability added: a bounded and auditable implementation now
 exists for the separately authorized shared S21 validation event.

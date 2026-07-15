@@ -62,7 +62,7 @@ EXACT_TARGET_BLIND_COUNTERS = {
     "source_cache_stat_reads": 1,
     "source_cache_hash_passes": 1,
     "split_report_metadata_reads": 1,
-    "archive_header_reads": 16,
+    "archive_header_reads": 20,
     "archive_row_member_streams": 8,
     "train_signal_rows_delivered": 55,
     "train_target_rows_delivered": 55,
@@ -1234,7 +1234,7 @@ def _validate_exact_target_blind_counters(counters: Mapping[str, int]) -> None:
 def _validate_exact_scoring_counters(counters: Mapping[str, int]) -> None:
     expected = {
         **EXACT_TARGET_BLIND_COUNTERS,
-        "archive_header_reads": 18,
+        "archive_header_reads": 22,
         "archive_row_member_streams": 10,
         "validation_target_rows_delivered_after_prediction_freeze": 6,
         "validation_scoring_runs": 1,
