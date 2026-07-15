@@ -22,6 +22,15 @@ Do not optimize for impressiveness before reproducibility. A boring baseline tha
 6. **Measure complexity.** Every new pipeline stage should report storage footprint, runtime, and a human-readable summary.
 7. **Avoid LLM-only illusions.** Always keep a language-model-only baseline so we do not accidentally credit the neural decoder for autocomplete.
 
+## Research autonomy
+
+`docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md` proposes standing Tier A routine work
+and Tier B bounded development work while retaining exact approval for Tier C
+irreversible evidence, real-data, hardware, destructive, release, and claim
+actions. It is a draft and grants no authorization. Until its exact standing
+sentence is approved and separately recorded, continue to follow every existing
+loop-specific contract and authorization boundary.
+
 ## Immediate next task
 
 The first 20-loop roadmap is complete except for the deliberately parked Loop
@@ -80,25 +89,95 @@ Every real/consumed data, target, model, training, network, RW3, stream, device,
 and hardware counter was zero. The producer is causal with zero right context;
 retained neural information and end-to-end latency remain unmeasured. Loop 25
 is complete, both fixture seeds are consumed for this gate, and no rerun is
-authorized. The next numbered decision is a new Loop 26 preregistration and
-separate authorization or hold; this closeout does not authorize Loop 26-44,
-roadmap Loop 46-64, protected access, inference, or training.
+authorized.
 
-Loop 26 planning research is complete at commit `03605c5`, but the experiment
-remains `Not Started` and has no preregistration or authorization sentence:
+Loop 26 planning research at `03605c5` advanced to one green, hash-bound shared
+Loop 26/31/33 preregistration at commit `881145d` and CI run `29282661766`.
+The user then supplied the exact registered authorization sentence. The
+separate authorization-only decision is green at commit `1c0e52c`; its push
+CI run `29422150469` and PR CI run `29422152661` passed both required jobs:
 
 ```bash
 cat docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md
+cat docs/LOOP_26_SHARED_VALIDATION_PREREGISTRATION.md
+cat docs/LOOP_26_AUTHORIZATION_PACKET.md
+cat docs/LOOP_26_AUTHORIZATION_DECISION.md
+cat docs/LOOP_26_SHARED_VALIDATION_IMPLEMENTATION.md
 python -m json.tool registries/loop26_research_boundary.v0.json >/dev/null
+python -m json.tool registries/loop26_shared_validation_contract.v0.json >/dev/null
+python -m json.tool registries/loop26_authorization_request.v0.json >/dev/null
+python -m json.tool registries/loop26_authorization_decision.v0.json >/dev/null
 ```
 
-The note identifies a 2,908-parameter causal candidate recommendation, a
-2,884-parameter linear signal comparator, the strict 55/6/5 source split, and
-the 64 exact paired sign assignments available from six reserved validation
-sentences. All 14 `authorized_now` fields are false. No real-cache content,
-target, model, checkpoint, training, validation prediction, source test, or
-session-2 evidence was opened. Do not turn this planning result into a Loop 26
-implementation, validation run, neural result, or authorization shortcut.
+The contract freezes a 2,908-parameter causal candidate, a 2,884-parameter
+linear comparator, 21 parameter-update runs, 24 target-blind model-inference
+runs, six train-only prior fits, 31 prediction sets, the complete ten-condition
+encoder attribution matrix, the nested `8, 16, 24, 32, 44, 55` curve, and one
+shared six-target scoring event only after a hash-only prediction-freeze commit
+is pushed and remotely green. The five source-test rows and session 2 remain
+closed. The old physical-never-opened validation-target wording is withdrawn:
+the monolithic legacy loader historically materialized those target bytes, but
+the six rows were not used for fitting, selection, threshold choice, or
+predictive scoring.
+
+The bounded reader, exact causal and linear models, controls, prediction
+freezer, isolated scorer, and five CLI stages were implemented at `91409bd`.
+The static-ledger correction at `4015677` was green before one cache hash and
+the isolated derivatives ran. Twenty-one fits, 24 target-blind inferences, six
+train-only priors, and 31 prediction sets then froze at hash-only commit
+`54bdca9`, which was pushed and remotely green before the six targets opened
+once.
+
+The consumed result is
+`registries/loop26_shared_validation_result.v0.json` with SHA-256
+`7577c84eaea7579250b5c1fcdf53234a3d56fdab4640df2edebaee9ae8bd31b4`.
+The candidate macro sentence CER was `0.938177` versus `0.751235` for the
+train-only no-signal prior, a `-0.186942` margin. The primary gate, complete
+Loop 31 attribution conjunction, and Loop 33 scaling gate failed. The linear
+comparator component passed; zero-signal and timing-only controls each produced
+6/6 candidate wins at one-sided `p = 0.015625`, but those isolated components
+do not establish sensor-signal dependence. All engineering, access-order, and
+resource gates passed. Source test and session 2 remained closed. Loops 26,
+31, 33 and scientific Loops 46/47 are parked; no rerun, post-target tuning, or
+larger-model escalation is authorized.
+
+Loop 48 artifact-first failure localization is complete at its one-shot
+artifact-only Stage A boundary. The exact decision was recorded at green commit
+`5bae880` before implementation commit `ca21539`; both push and PR CI runs were
+green before the four registered artifacts opened once. The consumed result is
+`registries/loop48_failure_localization_result.v0.json` with SHA-256
+`dbfb4c7cc6163ff31fa216c1b33e7510a87b0b843ef714754037d37275924659`.
+The frozen tree selected descriptive `F5`: seed-sensitive output-distribution
+instability with a `0.993477` blank-dominant primary checkpoint. Runtime was
+`0.016568875` seconds, peak RSS was 23,429,120 bytes, and output was 10,643
+bytes. This is not a proven root cause. No ignored output, cache member, array,
+target, checkpoint, private prediction, model, training, network, stream,
+device, or hardware payload was accessed or run. Stage A is consumed; do not
+rerun it, tune from it, or promote its phenotype into a causal explanation.
+Closeout commit `6322635` passed push CI `29446438743` and PR CI `29446440355`.
+
+Future train-only Loop 48 thinking is now separated into
+`docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md` and
+`registries/loop48_hypothesis_portfolio.v0.json`. The green five-hypothesis
+portfolio remains immutable. Additive primary-source research in
+`docs/LOOP_48_HYPOTHESIS_DISCRIMINATION_RESEARCH.md` and
+`registries/loop48_hypothesis_discrimination.v0.json` narrows `H1` to the fixed
+tiny CTC recipe, adds `H6` for data quantity/sentence diversity, and separates
+the orthogonal `T1` peripheral/task-locked shortcut threat. It compares six
+coexisting hypotheses from shared evidence with sequential one-thread compute.
+The design is preserved as research history. Its Stage B questions are now
+frozen in `docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md` and
+`registries/loop48_train_only_discrimination_contract.v0.json`: 44 fit rows,
+11 target-withheld check rows, five prefixes, three seeds, 20 fits, 35
+target-blind inferences, five priors, 41 frozen prediction sets, and 2,048 exact
+sign assignments. All 55 rows were used historically, so Stage B can reach at
+most E2 pipeline-discriminative evidence. Preregistration commit `0ee0ab7`
+passed push CI `29452286159` and PR CI `29452288520`. The separate exact request
+is prepared in `docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md` and
+`registries/loop48_stage_b_authorization_request.v0.json`. Every authorization
+field remains false; do not implement, read the cache, train, infer, freeze
+predictions, deliver check targets, or score from general continuation or the
+draft autonomy charter.
 
 Loop 27 planning research is complete at green commit `b3d61b6`, but no
 preregistration or acquisition request exists:
@@ -442,12 +521,14 @@ The next research tranche is frozen in
 `docs/LOOPS_45_64_SCIENTIFIC_ROADMAP.md` and
 `registries/next_scientific_loops.v0.json`. It contains exact loop IDs 45-64 in
 five phases of four. Loop 45 is complete at its target-free mechanics boundary;
-Loops 46-64 are `Not Started`, every current execution flag is false, and every
-global authorization field is false. The scientific critical path continues
-with Loop 46 reserved S21 validation, Loop 47
-signal attribution, a nonfinal development person, and only then Loop 52's
-strict S25 final-only zero-shot verdict. Do not start these from a broad
-continuation request.
+Loops 46/47 are consumed and parked after the failed shared S21 event. Loop 48
+is complete at its consumed artifact-only `F5` boundary with no rerun. Its
+additive six-hypothesis research has an exact unauthorized Stage B
+preregistration with an E2 ceiling; no implementation or protected execution
+exists. Loops
+49-64 are `Not Started`, every current execution flag is false, and every
+global authorization field is false. Do not rerun Loop 48, start a new
+development person, or open any S25 path from a broad continuation request.
 
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
@@ -479,8 +560,10 @@ A primary-source-informed next tranche defines Loops 25-44 in
 five phases, with detailed controls, metrics, stop rules, resource caps,
 dependencies, and source bindings. Loop 25 is `Complete` after one target-free
 mechanics execution and has `execution_authorized: false` because no rerun is
-open; Loop 26 has completed planning research while
-its experiment remains `Not Started`; Loop 27 has selected S25 in metadata
+open; the frozen roadmap still labels Loop 26 `Preregistered; Authorization
+Pending`, while the later separate decision at `1c0e52c` authorizes its exact
+shared event. The encoder-only Loop 31 slice and bounded Loop 33 curve share
+that event while the roadmap execution flags remain false; Loop 27 has selected S25 in metadata
 while preregistration remains blocked; Loop 28 planning research defines a T2
 strict zero-shot rule while its experiment remains `Not Started`; Loop 29
 planning research defines separate EEG and OPM-MEG pathways while its
@@ -543,9 +626,17 @@ authorization boundary.
   the result registry preserves the one-time static-development-qualification
   order, 24/24 items, 168/240/72 replay checks, exact zero protected counters,
   788,967 generated bytes, and the no-rerun/Loop-46-unauthorized boundary.
-- The Loop 26 planning registry remains exact with 14 false authorization
-  fields, a 55/6/5 split, six validation items, 64 exact paired assignments,
-  2,908/2,884-parameter recommendations, and no preregistration or runtime.
+- The immutable Loop 26 planning registry remains exact with 14 false
+  authorization fields, while the green shared contract at `881145d` freezes
+  the 55/6/5 split, 2,908/2,884-parameter models, 21 fits, 24 target-blind
+  inferences, six priors, 31 prediction sets, 64 exact paired assignments, 40
+  refusals, one post-freeze target delivery, one thread, 1 GiB RSS, and 32 MiB
+  generated artifacts. Its immutable request remains false, while the separate
+  authorization, implementation, freeze, and consumed result preserve the
+  exact order. The result records candidate/prior macro CER
+  `0.938177/0.751235`, a failed primary/control conjunction, 55 train rows, six
+  validation rows, zero source-test/session-2 rows, one score, zero post-target
+  changes, and no rerun.
 - The Loop 27 planning registry remains exact with 18 false authorization
   fields, 315 MEG metadata entries, 23 strict pairs, 16 eligible pairs, the
   two-file 1,009,939,983-byte S25 selection, official S23/S20 boundaries, and
@@ -572,8 +663,9 @@ authorization boundary.
 - The Loop 31 planning registry remains exact with 19 false authorization
   fields, a 10-condition encoder matrix, a contingent 5-condition LLM matrix,
   18 future requirements, 24 refusal IDs, and a Loop 35 ceiling on
-  brain-specific attribution; no protected input, model, training, validation,
-  LLM, Neuro Token, or experiment payload exists.
+  brain-specific attribution. The separately authorized shared encoder slice
+  is consumed and parked after the complete attribution conjunction failed;
+  the LLM/Neuro Token extension remained closed.
 - The Loop 32 planning registry remains exact with 22 false authorization
   fields, four calibration modes, six nested budgets, one 32-parameter adapter
   recommendation, 32/16/48 physical partition floors, six conditions, 20
@@ -583,7 +675,9 @@ authorization boundary.
   fields, six nested `8, 16, 24, 32, 44, 55` prefixes, at most three seeds and
   18 candidate fits, one shared six-target open, four conditions, 20 future
   requirements, 30 refusals, no physical-repetition lane, no acquisition
-  recommendation, and zero protected/model/training/scoring operations.
+  recommendation. The separately authorized shared curve is consumed and
+  parked: all three slopes were negative, but the size-55 candidate remained
+  `0.186942` worse than its matched prior.
 - The Loop 34 planning registry remains exact with 26 false authorization
   fields, seven confidence semantics, eight score/control roles, recommended
   `128/64/256` fresh synthetic partitions, 20 future requirements, 30
@@ -660,15 +754,21 @@ authorization boundary.
 - The Loops 45-64 scientific registry remains exact with 20 contiguous loops,
   five phases of four, 20 false execution flags, nine false global
   authorization fields, ten source bindings, and ten cross-loop kill branches.
-  S21 session 2 and S7 remain consumed; S25 remains unopened and final-only.
+  S21 session-1 validation, session 2, and S7 remain consumed; S25 remains
+  unopened and final-only. Loops 46/47 are parked and Loop 48 completed one
+  artifact-only Stage A at descriptive `F5`; its result is consumed, root cause
+  remains unresolved, and no rerun is authorized. The additive H1-H6/T1
+  discrimination map still leaves every Stage B authorization false and every
+  protected/model counter at zero. Its commit `33a14d8` passed push CI
+  `29436731383` and PR CI `29436735374`.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed
   2401 is not rerun or tuned, qualification seed 2402 remains unopened, and
   real/consumed data, targets, energy, training, and RW3 counters remain zero.
-- No new Loop 25 rerun or Loop 26-44 runtime, fixture, model run, training run,
-  generated payload, or intentional protected-data operation exists without
-  its own preregistration and authorization. Loop 43's
+- No new Loop 25 rerun or Loop 26/31/33 rerun exists. The one protected shared
+  runtime occurred only inside its exact preregistration, authorization,
+  remote-green freeze, and consumed score sequence. Loop 43's
   overbroad local JSON-validation incident is the explicit exception: 136 cache
   JSON files and 11 known consumed session-2 report/metadata files were parsed,
   with no raw payload, inference, scoring, tuning, or claim-selection use.

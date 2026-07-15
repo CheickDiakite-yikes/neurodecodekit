@@ -1314,6 +1314,120 @@ def _cmd_inspect_causal_preprocessing_report(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_loop26_static_gate(args: argparse.Namespace) -> int:
+    _set_loop26_thread_environment()
+    from neurodecodekit.experiments.shared_s21_validation_gate import (
+        run_static_shared_s21_gate,
+    )
+
+    report = run_static_shared_s21_gate(
+        repo_root=args.repo_root,
+        implementation_commit=args.implementation_commit,
+        output_root=args.out_root,
+    )
+    print(json.dumps(report, indent=2, sort_keys=True))
+    return 0 if report["status"] == "passed" else 1
+
+
+def _cmd_loop26_create_derivatives(args: argparse.Namespace) -> int:
+    _set_loop26_thread_environment()
+    from neurodecodekit.experiments.shared_s21_validation_gate import (
+        create_shared_s21_derivatives,
+    )
+
+    report = create_shared_s21_derivatives(
+        repo_root=args.repo_root,
+        output_root=args.out_root,
+    )
+    print(json.dumps(report, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_loop26_target_blind_gate(args: argparse.Namespace) -> int:
+    _set_loop26_thread_environment()
+    from neurodecodekit.experiments.shared_s21_validation_gate import (
+        run_target_blind_shared_s21_gate,
+    )
+
+    report = run_target_blind_shared_s21_gate(
+        repo_root=args.repo_root,
+        implementation_commit=args.implementation_commit,
+        freeze_record_out=args.freeze_record,
+        output_root=args.out_root,
+    )
+    print(json.dumps(report, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_loop26_inspect_freeze(args: argparse.Namespace) -> int:
+    from neurodecodekit.evaluation.shared_s21_validation import (
+        validate_prediction_freeze_record,
+    )
+
+    payload = json.loads(Path(args.freeze_record).read_text(encoding="utf-8"))
+    validate_prediction_freeze_record(payload)
+    summary = {
+        "status": payload["status"],
+        "prediction_set_count": payload["prediction_set_count"],
+        "implementation_commit": payload["implementation_commit"],
+        "validation_target_rows_delivered": payload["validation_target_rows_delivered"],
+        "validation_scoring_runs": payload["validation_scoring_runs"],
+        "resources": payload["resources"],
+        "warnings": payload["warnings"],
+    }
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_loop26_score(args: argparse.Namespace) -> int:
+    _set_loop26_thread_environment()
+    from neurodecodekit.experiments.shared_s21_validation_gate import (
+        score_frozen_shared_s21_validation,
+    )
+
+    report = score_frozen_shared_s21_validation(
+        repo_root=args.repo_root,
+        freeze_record_path=args.freeze_record,
+        green_freeze_commit=args.green_freeze_commit,
+        public_report_out=args.public_report,
+        output_root=args.out_root,
+    )
+    print(json.dumps(report, indent=2, sort_keys=True))
+    return 0 if report["status"] == "passed" else 1
+
+
+def _cmd_loop48_failure_localization(args: argparse.Namespace) -> int:
+    _set_loop48_thread_environment()
+    from neurodecodekit.experiments.failure_localization import (
+        inspect_failure_localization_report,
+        run_registered_failure_localization,
+    )
+
+    run_registered_failure_localization(
+        repo_root=args.repo_root,
+        implementation_commit=args.implementation_commit,
+        implementation_push_ci_run_id=args.implementation_push_ci_run_id,
+        implementation_pr_ci_run_id=args.implementation_pr_ci_run_id,
+        output_path=args.out,
+    )
+    report_path = Path(args.out)
+    if not report_path.is_absolute():
+        report_path = Path(args.repo_root) / report_path
+    summary = inspect_failure_localization_report(report_path)
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_loop48_inspect_failure_localization(args: argparse.Namespace) -> int:
+    from neurodecodekit.experiments.failure_localization import (
+        inspect_failure_localization_report,
+    )
+
+    summary = inspect_failure_localization_report(args.report)
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0
+
+
 def _set_loop24_thread_environment() -> None:
     import os
 
@@ -1338,6 +1452,14 @@ def _set_loop25_thread_environment() -> None:
         "VECLIB_MAXIMUM_THREADS",
     ):
         os.environ[name] = "1"
+
+
+def _set_loop26_thread_environment() -> None:
+    _set_loop25_thread_environment()
+
+
+def _set_loop48_thread_environment() -> None:
+    _set_loop25_thread_environment()
 
 
 def _cmd_extract_sentence_cache(args: argparse.Namespace) -> int:
@@ -3470,6 +3592,132 @@ def build_parser() -> argparse.ArgumentParser:
         help="Path to static_gate.json or gate.json.",
     )
     p.set_defaults(func=_cmd_inspect_causal_preprocessing_report)
+
+    p = sub.add_parser(
+        "loop26-static-gate",
+        help="Validate every frozen Loop 26 identity before signal or target values open.",
+        description=(
+            "Run the single-thread static cache, archive, split, scaler, channel, code, "
+            "environment, and resource gate. This command reads target-free metadata and "
+            "NPY headers only; the source-cache hash and protected values remain deferred."
+        ),
+    )
+    p.add_argument("--repo-root", default=".", help="NeuroDecodeKit repository root.")
+    p.add_argument(
+        "--implementation-commit",
+        required=True,
+        help="Exact remotely green 40-character implementation commit at HEAD.",
+    )
+    p.add_argument(
+        "--out-root",
+        default=".codex_work/loop26",
+        help="Registered ignored Loop 26 output root; defaults to .codex_work/loop26.",
+    )
+    p.set_defaults(func=_cmd_loop26_static_gate)
+
+    p = sub.add_parser(
+        "loop26-create-derivatives",
+        help="Create only the registered train and target-free validation derivatives.",
+        description=(
+            "Require a passing static gate, hash the source cache exactly once, stream "
+            "selected rows with bounded buffers, and create no source-test derivative or "
+            "validation target payload."
+        ),
+    )
+    p.add_argument("--repo-root", default=".", help="NeuroDecodeKit repository root.")
+    p.add_argument("--out-root", default=".codex_work/loop26")
+    p.set_defaults(func=_cmd_loop26_create_derivatives)
+
+    p = sub.add_parser(
+        "loop26-target-blind-gate",
+        help="Run 21 registered fits and freeze all 31 target-blind prediction sets.",
+        description=(
+            "Run the exact six-prefix, three-seed candidate curve, six train-only priors, "
+            "and seven attribution controls on one CPU thread. Validation targets are not "
+            "accepted by this command."
+        ),
+    )
+    p.add_argument("--repo-root", default=".", help="NeuroDecodeKit repository root.")
+    p.add_argument("--implementation-commit", required=True)
+    p.add_argument(
+        "--freeze-record",
+        default="registries/loop26_prediction_freeze.v0.json",
+        help="Hash-only freeze record to commit; no plaintext predictions are written here.",
+    )
+    p.add_argument("--out-root", default=".codex_work/loop26")
+    p.set_defaults(func=_cmd_loop26_target_blind_gate)
+
+    p = sub.add_parser(
+        "loop26-inspect-freeze",
+        help="Validate a hash-only 31-set Loop 26 prediction-freeze record.",
+    )
+    p.add_argument("--freeze-record", required=True)
+    p.set_defaults(func=_cmd_loop26_inspect_freeze)
+
+    p = sub.add_parser(
+        "loop26-score",
+        help="Deliver six validation targets once and score every frozen condition together.",
+        description=(
+            "This consumed one-shot command requires the remotely green prediction-freeze "
+            "commit at HEAD. It refuses any rerun, source-test row, session 2 evidence, "
+            "parameter update, or post-target configuration change."
+        ),
+    )
+    p.add_argument("--repo-root", default=".", help="NeuroDecodeKit repository root.")
+    p.add_argument("--freeze-record", required=True)
+    p.add_argument("--green-freeze-commit", required=True)
+    p.add_argument(
+        "--public-report",
+        default="registries/loop26_shared_validation_result.v0.json",
+    )
+    p.add_argument("--out-root", default=".codex_work/loop26")
+    p.set_defaults(func=_cmd_loop26_score)
+
+    p = sub.add_parser(
+        "loop48-failure-localization",
+        help="Run the authorized one-shot aggregate-only Loop 48 Stage A classifier.",
+        description=(
+            "Verify and read only the four hash-bound committed aggregate JSON artifacts, "
+            "recompute the frozen blank/CER summaries, apply the eight-class tree, and "
+            "write one target-free report. The command refuses protected data, model work, "
+            "downloads, cap drift, dirty tracked code, and any rerun."
+        ),
+    )
+    p.add_argument("--repo-root", default=".", help="NeuroDecodeKit repository root.")
+    p.add_argument(
+        "--implementation-commit",
+        required=True,
+        help="Exact 40-character remotely green implementation commit at HEAD.",
+    )
+    p.add_argument(
+        "--implementation-push-ci-run-id",
+        required=True,
+        type=int,
+        help="Successful branch-push CI run ID for the implementation commit.",
+    )
+    p.add_argument(
+        "--implementation-pr-ci-run-id",
+        required=True,
+        type=int,
+        help="Successful pull-request CI run ID for the implementation commit.",
+    )
+    p.add_argument(
+        "--out",
+        default="registries/loop48_failure_localization_result.v0.json",
+        help="Frozen aggregate result path; no alternate registered path is accepted.",
+    )
+    p.set_defaults(func=_cmd_loop48_failure_localization)
+
+    p = sub.add_parser(
+        "loop48-inspect-failure-localization",
+        help="Strictly inspect one aggregate Loop 48 report without source-artifact reads.",
+    )
+    p.add_argument(
+        "--report",
+        default="registries/loop48_failure_localization_result.v0.json",
+        help="Aggregate Loop 48 result JSON.",
+    )
+    p.set_defaults(func=_cmd_loop48_inspect_failure_localization)
 
     p = sub.add_parser(
         "extract-windows",

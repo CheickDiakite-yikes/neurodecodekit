@@ -1,0 +1,418 @@
+{
+  "schema_name": "neurodecodekit.loop48_failure_localization_contract",
+  "schema_version": "0.1.0",
+  "prepared_at": "2026-07-15",
+  "status": "preregistered_authorization_pending",
+  "proof_posture": "post_outcome_artifact_only_diagnostic_plan_no_execution",
+  "contract_kind": "post_outcome_diagnostic_registration_not_prospective_performance_preregistration",
+  "authorized_now": false,
+  "authorization": {
+    "artifact_only_implementation_authorized_now": false,
+    "artifact_only_execution_authorized_now": false,
+    "generated_diagnostic_report_authorized_now": false,
+    "git_ignored_loop26_output_read_authorized_now": false,
+    "source_cache_or_member_read_authorized_now": false,
+    "train_derivative_read_authorized_now": false,
+    "validation_signal_read_authorized_now": false,
+    "validation_target_read_authorized_now": false,
+    "source_test_or_session2_read_authorized_now": false,
+    "checkpoint_or_private_prediction_read_authorized_now": false,
+    "model_inference_authorized_now": false,
+    "training_or_parameter_update_authorized_now": false,
+    "threshold_seed_or_architecture_selection_authorized_now": false,
+    "new_participant_or_download_authorized_now": false,
+    "s7_s20_or_s25_operation_authorized_now": false,
+    "language_model_or_neurotoken_authorized_now": false,
+    "rw3_stream_device_or_hardware_authorized_now": false,
+    "authorization_request_prepared": false,
+    "authorization_sentence_exists": false,
+    "reason": "The artifact-only contract must be committed, pushed, tested, and remotely green before a separate authorization packet may request one execution."
+  },
+  "inherited_boundaries": {
+    "loop26_31_33_event_consumed": true,
+    "loop46_47_parked": true,
+    "loop26_rerun_authorized": false,
+    "s21_session1_validation_reopen_authorized": false,
+    "s21_source_test_authorized": false,
+    "s21_session2_authorized": false,
+    "s25_final_only_unopened": true,
+    "post_target_tuning_authorized": false,
+    "larger_model_escalation_authorized": false,
+    "current_scientific_neural_advantage": false,
+    "current_sensor_signal_dependence": false,
+    "current_brain_specific_origin": false
+  },
+  "committed_input_artifacts": [
+    {
+      "artifact_id": "loop26_consumed_result",
+      "path": "registries/loop26_shared_validation_result.v0.json",
+      "bytes": 83713,
+      "sha256": "7577c84eaea7579250b5c1fcdf53234a3d56fdab4640df2edebaee9ae8bd31b4",
+      "allowed_for_future_stage_a": true,
+      "contains_plaintext_targets_or_predictions": false,
+      "role": "consumed aggregate metrics and access ledger"
+    },
+    {
+      "artifact_id": "loop26_prediction_freeze",
+      "path": "registries/loop26_prediction_freeze.v0.json",
+      "bytes": 31271,
+      "sha256": "10191558a68a8c646e32c4ab0516f84ee99d127b9e6a2ea277c432c6c28b2348",
+      "allowed_for_future_stage_a": true,
+      "contains_plaintext_targets_or_predictions": false,
+      "role": "target-blind prediction identities and resources"
+    },
+    {
+      "artifact_id": "loop26_shared_contract",
+      "path": "registries/loop26_shared_validation_contract.v0.json",
+      "bytes": 31988,
+      "sha256": "c4f94b214993973ec4b4ea7e7b27174023dfef227c8dd4d9b912ac48bb98ccce",
+      "allowed_for_future_stage_a": true,
+      "contains_plaintext_targets_or_predictions": false,
+      "role": "frozen split model optimizer CTC and control definitions"
+    },
+    {
+      "artifact_id": "loop25_causal_mechanics_result",
+      "path": "registries/loop25_causal_preprocessing_result.v1.json",
+      "bytes": 8573,
+      "sha256": "5f80c4d282be79aadaf78908c151acd3949e0a754182cf58b27dcca681218ab1",
+      "allowed_for_future_stage_a": true,
+      "contains_plaintext_targets_or_predictions": false,
+      "role": "synthetic causal mechanics context only not the Loop 14 producer"
+    }
+  ],
+  "observed_aggregate_snapshot": {
+    "snapshot_is_already_consumed_public_evidence": true,
+    "snapshot_is_independent_loop48_evidence": false,
+    "primary_candidate_id": "L33-N55-S2601",
+    "primary_candidate_macro_sentence_cer": 0.9381765674382471,
+    "primary_candidate_blank_fraction": 0.9934773746432939,
+    "primary_candidate_exact_sentences": 0,
+    "validation_sentence_count": 6,
+    "train_only_prior_id": "L33-P55",
+    "train_only_prior_macro_sentence_cer": 0.7512350583540796,
+    "primary_prior_minus_candidate_margin": -0.1869415090841675,
+    "primary_wins_ties_losses": [0, 1, 5],
+    "primary_one_sided_exact_p": 1.0,
+    "size55_seed_ids": ["L33-N55-S2601", "L33-N55-S2602", "L33-N55-S2603"],
+    "size55_blank_fractions": [0.9934773746432939, 0.9971463514064411, 0.5238483489604566],
+    "size55_blank_fraction_min": 0.5238483489604566,
+    "size55_blank_fraction_max": 0.9971463514064411,
+    "size55_blank_fraction_range": 0.4732980024459845,
+    "size55_macro_sentence_cers": [0.9381765674382471, 0.9664131331991456, 0.8815063474407189],
+    "size55_every_seed_worse_than_prior": true,
+    "trained_scaling_condition_count": 18,
+    "trained_scaling_blank_fraction_min": 0.0024459845087647777,
+    "trained_scaling_blank_fraction_max": 0.9995923359152059,
+    "trained_scaling_blank_fraction_range": 0.9971463514064411,
+    "trained_scaling_blank_fraction_ge_0_95_count": 8,
+    "trained_scaling_blank_fraction_le_0_05_count": 1,
+    "prefix_blank_ranges": {
+      "8": 0.2751732572360376,
+      "16": 0.9910313901345291,
+      "24": 0.8573175703220546,
+      "32": 0.8695474928658786,
+      "44": 0.3318385650224216,
+      "55": 0.4732980024459845
+    },
+    "prefix_groups_with_blank_range_at_least_0_25": 6,
+    "prefix_group_count": 6,
+    "zero_signal_component_wins_ties_losses": [6, 0, 0],
+    "zero_signal_component_one_sided_p": 0.015625,
+    "timing_only_component_wins_ties_losses": [6, 0, 0],
+    "timing_only_component_one_sided_p": 0.015625,
+    "complete_attribution_conjunction_passed": false,
+    "scaling_gate_passed": false,
+    "linear_comparator_component_passed": true,
+    "source_cache_preprocessing_is_causal": false,
+    "loop25_mechanics_produced_source_cache": false
+  },
+  "leading_observed_diagnosis": {
+    "failure_class_id": "F5",
+    "label": "model_fit_output_distribution_instability",
+    "phenotype": "seed_sensitive_emission_distribution_with_blank_dominant_primary_checkpoint",
+    "support_level": "strong_descriptive_support_for_phenotype_low_support_for_root_cause",
+    "primary_failure_class_selected_during_planning": true,
+    "root_cause_established": false,
+    "loop48_acceptance_gate_satisfied_now": false,
+    "reason_gate_is_not_satisfied_now": "The diagnostic contract is prepared but has not been separately authorized, implemented, or executed.",
+    "forbidden_interpretations": [
+      "S21 contains no decodable neural information",
+      "CTC is the sole cause",
+      "the optimizer is the sole cause",
+      "offline preprocessing is the sole cause",
+      "a larger model would pass",
+      "a favorable seed may be selected",
+      "Brain2Qwerty v2 performance transfers to this cache"
+    ]
+  },
+  "ordered_failure_classes": [
+    {
+      "order": 1,
+      "class_id": "F1",
+      "label": "identity_or_provenance_breach",
+      "decisive_rule": "Any registered artifact, split, item, configuration, prediction-freeze, or target-firewall identity mismatch.",
+      "current_support": "not_supported_by_committed_integrity_records",
+      "root_cause_claim_allowed": false
+    },
+    {
+      "order": 2,
+      "class_id": "F2",
+      "label": "temporal_or_ctc_infeasibility",
+      "decisive_rule": "Any input length is CTC-infeasible for its normalized target or registered length identities disagree.",
+      "current_support": "unavailable_from_public_aggregate_values",
+      "root_cause_claim_allowed": false
+    },
+    {
+      "order": 3,
+      "class_id": "F5",
+      "label": "model_fit_output_distribution_instability",
+      "decisive_rule": "F1 and F2 do not trigger, primary blank fraction is at least 0.95, at least one fixed-prefix three-seed blank range is at least 0.25, every size-55 seed is worse than the prior, and the primary exact-sentence count is zero.",
+      "current_support": "all_descriptive_rules_match_the_consumed_snapshot",
+      "root_cause_claim_allowed": false
+    },
+    {
+      "order": 4,
+      "class_id": "F3",
+      "label": "signal_quality_insufficiency",
+      "decisive_rule": "Complete preregistered train-only channel and trial quality summaries fail their frozen floors after F1 F2 and F5 are excluded.",
+      "current_support": "unavailable_no_signal_quality_summary",
+      "root_cause_claim_allowed": false
+    },
+    {
+      "order": 5,
+      "class_id": "F4",
+      "label": "preprocessing_or_temporal_resolution_mismatch",
+      "decisive_rule": "A separately preregistered train-only paired diagnostic isolates preprocessing or timing after F1 F2 F5 and F3 are excluded.",
+      "current_support": "plausible_but_unresolved_upstream_cache_is_offline_noncausal",
+      "root_cause_claim_allowed": false
+    },
+    {
+      "order": 6,
+      "class_id": "F6",
+      "label": "stable_but_nonseparable_sensor_representation",
+      "decisive_rule": "Stable train-only fits fail registered intact-versus-corrupted signal controls after F1 through F5 are excluded.",
+      "current_support": "unavailable_no_train_only_decoding_or_stability_diagnostics",
+      "root_cause_claim_allowed": false
+    },
+    {
+      "order": 7,
+      "class_id": "F7",
+      "label": "prior_dominated_task_regime",
+      "decisive_rule": "Stable sensor-dependent fits remain worse than the train-only prior after F1 through F6 are excluded.",
+      "current_support": "prior_dominance_observed_but_fit_stability_prerequisite_failed",
+      "root_cause_claim_allowed": false
+    },
+    {
+      "order": 8,
+      "class_id": "U0",
+      "label": "unresolved",
+      "decisive_rule": "A required field is unavailable or multiple causes remain inseparable.",
+      "current_support": "root_cause_remains_unresolved_even_with_F5_phenotype",
+      "root_cause_claim_allowed": false
+    }
+  ],
+  "unavailable_root_cause_fields": [
+    "per_step_and_per_epoch_training_loss",
+    "gradient_norms",
+    "parameter_update_norms",
+    "nonblank_logit_margins",
+    "train_only_cer_and_exact_sequence_accuracy",
+    "per_item_input_to_target_length_ratios",
+    "per_item_ctc_minimum_alignment_frame_requirements",
+    "posterior_entropy_trajectories",
+    "blank_posterior_trajectories",
+    "per_channel_variance_and_robust_amplitude",
+    "power_spectral_density_and_line_noise",
+    "flat_channel_and_bad_trial_counts",
+    "event_timing_residuals",
+    "per_item_alignment_uncertainty",
+    "paired_offline_versus_causal_train_representations",
+    "independently_aligned_keystroke_window_baseline",
+    "fresh_development_person_evidence"
+  ],
+  "future_artifact_only_stage_a": {
+    "status": "preregistered_not_authorized_or_implemented",
+    "allowed_input_artifact_ids": [
+      "loop26_consumed_result",
+      "loop26_prediction_freeze",
+      "loop26_shared_contract",
+      "loop25_causal_mechanics_result"
+    ],
+    "operations_in_order": [
+      "verify_exact_paths_bytes_and_sha256",
+      "verify_no_plaintext_target_or_prediction_fields",
+      "recompute_primary_candidate_prior_and_exact_sentence_summary",
+      "recompute_all_18_scaling_blank_fractions",
+      "recompute_six_fixed_prefix_three_seed_blank_ranges",
+      "verify_every_size55_seed_is_worse_than_the_prior",
+      "apply_ordered_failure_class_precedence",
+      "emit_one_aggregate_json_report"
+    ],
+    "descriptive_thresholds": {
+      "primary_blank_dominant_at_or_above": 0.95,
+      "fixed_prefix_seed_blank_range_unstable_at_or_above": 0.25,
+      "minimum_unstable_prefix_groups_for_F5": 1,
+      "require_every_size55_seed_worse_than_prior_for_F5": true,
+      "require_primary_exact_sentence_count_for_F5": 0,
+      "thresholds_are_independent_performance_tests": false,
+      "thresholds_are_post_outcome_descriptive_sorting_rules": true
+    },
+    "expected_primary_class_if_bound_artifacts_remain_exact": "F5",
+    "expected_class_is_new_independent_evidence": false,
+    "output_schema_fields": [
+      "schema_name",
+      "schema_version",
+      "contract_sha256",
+      "input_artifact_hashes",
+      "primary_failure_class",
+      "secondary_unresolved_classes",
+      "aggregate_evidence",
+      "unavailable_fields",
+      "access_counters",
+      "runtime_sec",
+      "peak_rss_bytes",
+      "generated_bytes",
+      "warnings",
+      "claim_boundary"
+    ],
+    "output_may_contain_plaintext_targets_or_predictions": false,
+    "output_may_contain_per_item_target_conditioned_metrics": false,
+    "output_may_recommend_a_larger_architecture": false,
+    "output_may_select_a_seed": false,
+    "output_may_upgrade_a_scientific_claim": false
+  },
+  "future_train_only_stage": {
+    "status": "not_preregistered_not_authorized",
+    "minimum_diagnostic_families": [
+      "ctc_input_target_feasibility",
+      "loss_and_blank_trajectory",
+      "gradient_and_parameter_update_norms",
+      "train_only_decode_metrics",
+      "channel_and_trial_signal_quality",
+      "event_timing_and_alignment_quality",
+      "paired_offline_and_causal_preprocessing"
+    ],
+    "validation_targets_allowed": false,
+    "source_test_allowed": false,
+    "session2_allowed": false,
+    "s25_allowed": false,
+    "model_run_inventory_frozen": false,
+    "stop_rules_frozen": false,
+    "reason_not_preregistered": "Artifact-only Stage A and an exact train-only isolation design must precede any model-run inventory; the consumed validation result may not become a tuning set."
+  },
+  "resource_caps": {
+    "future_stage_a_cpu_threads": 1,
+    "future_stage_a_workers": 1,
+    "future_stage_a_runtime_sec": 30,
+    "future_stage_a_peak_rss_bytes": 268435456,
+    "future_stage_a_generated_bytes": 1048576,
+    "future_stage_a_network_calls": 0,
+    "future_stage_a_model_runs": 0,
+    "future_stage_a_training_runs": 0,
+    "future_stage_a_downloaded_bytes": 0,
+    "current_generated_planning_bytes": 42044,
+    "current_generated_planning_byte_scope": "research_note_contract_and_dependency_light_test"
+  },
+  "planning_access_counters": {
+    "committed_aggregate_json_reads": 4,
+    "protected_cache_or_member_reads": 0,
+    "git_ignored_derivative_reads": 0,
+    "checkpoint_reads": 0,
+    "private_prediction_reads": 0,
+    "train_signal_or_target_rows_read": 0,
+    "validation_signal_rows_read": 0,
+    "validation_target_rows_read": 0,
+    "source_test_rows_read": 0,
+    "session2_rows_read": 0,
+    "raw_fif_or_mat_reads": 0,
+    "model_inference_runs": 0,
+    "training_or_parameter_update_runs": 0,
+    "new_downloads": 0,
+    "network_payload_downloads": 0,
+    "s7_s20_s25_operations": 0,
+    "language_model_or_neurotoken_runs": 0,
+    "rw3_stream_device_or_hardware_operations": 0
+  },
+  "refusal_ids": [
+    "L48-R001-unbound-artifact-input",
+    "L48-R002-artifact-byte-or-hash-mismatch",
+    "L48-R003-plaintext-target-or-prediction-output",
+    "L48-R004-git-ignored-loop26-output-read",
+    "L48-R005-source-cache-or-member-read",
+    "L48-R006-train-derivative-read",
+    "L48-R007-validation-signal-read",
+    "L48-R008-validation-target-reopen",
+    "L48-R009-source-test-read-or-score",
+    "L48-R010-session2-read-or-score",
+    "L48-R011-checkpoint-or-private-prediction-read",
+    "L48-R012-model-inference",
+    "L48-R013-training-or-parameter-update",
+    "L48-R014-seed-selection",
+    "L48-R015-threshold-selection-from_validation",
+    "L48-R016-architecture-search",
+    "L48-R017-larger-model-escalation",
+    "L48-R018-language-model-or-neurotoken",
+    "L48-R019-s7-s20-or-s25-operation",
+    "L48-R020-new-participant-or-download",
+    "L48-R021-rw3-stream-device-or-hardware",
+    "L48-R022-claim-F5-is-a-proven-root-cause",
+    "L48-R023-claim-S21-has-no-neural-information",
+    "L48-R024-claim-CTC-is-the-sole-cause",
+    "L48-R025-claim-preprocessing-is-the-sole-cause",
+    "L48-R026-claim-larger-model-would-pass",
+    "L48-R027-relabel-post-outcome-diagnosis-as-prospective",
+    "L48-R028-upgrade-neural-signal-or-decoding-claim",
+    "L48-R029-exceed-runtime-RSS-or-artifact-cap",
+    "L48-R030-execute-before-separate-green-authorization"
+  ],
+  "source_bindings": [
+    {
+      "source_id": "loop26_consumed_result",
+      "url": "https://github.com/CheickDiakite-yikes/neurodecodekit/blob/39be98d/registries/loop26_shared_validation_result.v0.json",
+      "use": "exact aggregate phenotype and consumed access boundary"
+    },
+    {
+      "source_id": "brain2qwerty_v1_nature",
+      "url": "https://doi.org/10.1038/s41593-026-02303-2",
+      "use": "keystroke-aligned window architecture data-scale preprocessing and non-realtime reference"
+    },
+    {
+      "source_id": "brain2qwerty_v2_meta_primary_page",
+      "url": "https://ai.meta.com/research/publications/accurate-decoding-of-natural-sentences-from-non-invasive-brain-recordings/",
+      "use": "June 2026 v2 data-scale event-detection representation and language-component contrast"
+    },
+    {
+      "source_id": "ctc_peaky_behavior",
+      "url": "https://arxiv.org/abs/2105.14849",
+      "use": "formal dominant-label convergence and input-to-target-ratio interpretation"
+    },
+    {
+      "source_id": "ctc_sequence_modeling",
+      "url": "https://distill.pub/2017/ctc/",
+      "use": "CTC blank collapse monotonic alignment and feasibility semantics"
+    }
+  ],
+  "claim_boundary": {
+    "engineering_capability_proposed": "A hash-bound artifact-only discrepancy tree can classify the consumed negative result without reopening protected data.",
+    "scientific_claim_not_established": "No root cause, neural advantage, sensor-signal dependence, brain-specific origin, new decoding result, generalization, real-time behavior, EEG result, portable or home hardware result, assistive result, diagnostic result, or clinical result is established.",
+    "maximum_future_stage_a_claim": "The exact committed aggregate artifacts satisfy one descriptive artifact-only failure-phenotype class under the post-outcome decision tree.",
+    "cannot_claim": [
+      "independent evidence",
+      "prospective validation",
+      "absence of neural information",
+      "causal root cause",
+      "model improvement",
+      "decoding performance",
+      "participant or device generalization"
+    ]
+  },
+  "warnings": [
+    "post_outcome_artifact_only_diagnostic_registration",
+    "F5_is_a_failure_phenotype_not_a_proven_root_cause",
+    "validation_event_is_consumed_and_cannot_be_reopened",
+    "upstream_source_cache_is_offline_and_noncausal",
+    "training_signal_quality_and_alignment_diagnostics_are_unavailable",
+    "Brain2Qwerty_v1_and_v2_are_architecture_and_scale_references_not_local_results",
+    "no_execution_or_authorization_request_exists"
+  ]
+}

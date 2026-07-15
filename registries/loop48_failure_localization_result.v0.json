@@ -1,0 +1,295 @@
+{
+  "access_counters": {
+    "cache_or_member_reads": 0,
+    "checkpoint_or_private_prediction_reads": 0,
+    "generated_diagnostic_reports": 1,
+    "git_ignored_output_reads": 0,
+    "governance_json_reads": 2,
+    "input_sha256_verifications": 4,
+    "language_model_or_neurotoken_runs": 0,
+    "model_inference_runs": 0,
+    "network_calls": 0,
+    "new_download_bytes": 0,
+    "raw_fif_or_mat_reads": 0,
+    "reruns": 0,
+    "runtime_committed_json_reads": 4,
+    "rw3_stream_device_or_hardware_operations": 0,
+    "s7_s20_or_s25_operations": 0,
+    "scientific_claim_upgrades": 0,
+    "source_test_or_session2_reads": 0,
+    "target_reads": 0,
+    "threshold_seed_or_architecture_selection_runs": 0,
+    "train_or_validation_array_reads": 0,
+    "training_or_parameter_update_runs": 0
+  },
+  "aggregate_evidence": {
+    "loop25_mechanics_produced_source_cache": false,
+    "prefix_blank_ranges": {
+      "16": 0.9910313901345291,
+      "24": 0.8573175703220546,
+      "32": 0.8695474928658786,
+      "44": 0.3318385650224216,
+      "55": 0.4732980024459845,
+      "8": 0.2751732572360376
+    },
+    "prefix_group_count": 6,
+    "prefix_groups_with_blank_range_at_least_0_25": 6,
+    "primary_candidate_blank_fraction": 0.9934773746432939,
+    "primary_candidate_exact_sentences": 0,
+    "primary_candidate_id": "L33-N55-S2601",
+    "primary_candidate_macro_sentence_cer": 0.9381765674382471,
+    "primary_one_sided_exact_p": 1.0,
+    "primary_prior_minus_candidate_margin": -0.1869415090841675,
+    "primary_wins_ties_losses": [
+      0,
+      1,
+      5
+    ],
+    "size55_blank_fraction_max": 0.9971463514064411,
+    "size55_blank_fraction_min": 0.5238483489604566,
+    "size55_blank_fraction_range": 0.4732980024459845,
+    "size55_blank_fractions": [
+      0.9934773746432939,
+      0.9971463514064411,
+      0.5238483489604566
+    ],
+    "size55_every_seed_worse_than_prior": true,
+    "size55_macro_sentence_cers": [
+      0.9381765674382471,
+      0.9664131331991456,
+      0.8815063474407189
+    ],
+    "size55_seed_ids": [
+      "L33-N55-S2601",
+      "L33-N55-S2602",
+      "L33-N55-S2603"
+    ],
+    "source_cache_preprocessing_is_causal": false,
+    "train_only_prior_id": "L33-P55",
+    "train_only_prior_macro_sentence_cer": 0.7512350583540796,
+    "trained_scaling_blank_fraction_ge_0_95_count": 8,
+    "trained_scaling_blank_fraction_le_0_05_count": 1,
+    "trained_scaling_blank_fraction_max": 0.9995923359152059,
+    "trained_scaling_blank_fraction_min": 0.0024459845087647777,
+    "trained_scaling_blank_fraction_range": 0.9971463514064411,
+    "trained_scaling_blank_fractions": {
+      "L33-N08-S2601": 0.5809213208316347,
+      "L33-N08-S2602": 0.8369343660823482,
+      "L33-N08-S2603": 0.5617611088463106,
+      "L33-N16-S2601": 0.9934773746432939,
+      "L33-N16-S2602": 0.0024459845087647777,
+      "L33-N16-S2603": 0.5430085609457806,
+      "L33-N24-S2601": 0.9877700774561761,
+      "L33-N24-S2602": 0.1304525071341215,
+      "L33-N24-S2603": 0.4565837749694252,
+      "L33-N32-S2601": 0.9983693436608235,
+      "L33-N32-S2602": 0.13004484304932734,
+      "L33-N32-S2603": 0.9995923359152059,
+      "L33-N44-S2601": 0.6677537708927843,
+      "L33-N44-S2602": 0.9959233591520587,
+      "L33-N44-S2603": 0.9995923359152059,
+      "L33-N55-S2601": 0.9934773746432939,
+      "L33-N55-S2602": 0.9971463514064411,
+      "L33-N55-S2603": 0.5238483489604566
+    },
+    "trained_scaling_condition_count": 18,
+    "validation_sentence_count": 6
+  },
+  "authorization": {
+    "authorization_commit": "5bae88092525206b1d3cf3add055c75665943f14",
+    "authorization_pr_ci_run_id": 29442916230,
+    "authorization_push_ci_run_id": 29442914090,
+    "decision_sha256": "0cce86e0e4fc858b05d037d71364c30d642e768e8adecd61afdd967acf35a1b7",
+    "one_stage_a_execution_only": true
+  },
+  "claim_boundary": {
+    "maximum_claim": "The four exact committed aggregate artifacts satisfy F5 under the frozen post-outcome artifact-only decision tree.",
+    "not_established": "No causal root cause, independent evidence, neural advantage, sensor-signal dependence, brain-specific origin, decoding improvement, unseen-person generalization, real-time behavior, EEG result, portable or home-device result, assistive efficacy, diagnostic value, or clinical capability is established."
+  },
+  "contract_sha256": "ecd226f8ae8892e40ecd65c25d59e000384289e9c434886db71dabcfde9e31b1",
+  "decision_trace": [
+    {
+      "class_id": "F1",
+      "label": "identity_or_provenance_breach",
+      "order": 1,
+      "root_cause_claim_allowed": false,
+      "state": "not_triggered"
+    },
+    {
+      "class_id": "F2",
+      "label": "temporal_or_ctc_infeasibility",
+      "order": 2,
+      "root_cause_claim_allowed": false,
+      "state": "unavailable"
+    },
+    {
+      "checks": {
+        "every_size55_seed_worse_than_prior": true,
+        "minimum_unstable_prefix_groups": true,
+        "primary_blank_dominant": true,
+        "primary_exact_sentence_count": true
+      },
+      "class_id": "F5",
+      "label": "model_fit_output_distribution_instability",
+      "order": 3,
+      "root_cause_claim_allowed": false,
+      "state": "triggered"
+    },
+    {
+      "class_id": "F3",
+      "label": "signal_quality_insufficiency",
+      "order": 4,
+      "root_cause_claim_allowed": false,
+      "state": "not_evaluated_after_higher_priority_selection"
+    },
+    {
+      "class_id": "F4",
+      "label": "preprocessing_or_temporal_resolution_mismatch",
+      "order": 5,
+      "root_cause_claim_allowed": false,
+      "state": "not_evaluated_after_higher_priority_selection"
+    },
+    {
+      "class_id": "F6",
+      "label": "stable_but_nonseparable_sensor_representation",
+      "order": 6,
+      "root_cause_claim_allowed": false,
+      "state": "not_evaluated_after_higher_priority_selection"
+    },
+    {
+      "class_id": "F7",
+      "label": "prior_dominated_task_regime",
+      "order": 7,
+      "root_cause_claim_allowed": false,
+      "state": "not_evaluated_after_higher_priority_selection"
+    },
+    {
+      "class_id": "U0",
+      "label": "unresolved",
+      "order": 8,
+      "root_cause_claim_allowed": false,
+      "state": "not_evaluated_after_higher_priority_selection"
+    }
+  ],
+  "generated_bytes": 10643,
+  "implementation": {
+    "commit": "ca21539cb25949650e1b5a79ccba8fa586e88ccf",
+    "operator_confirmed_both_runs_green_before_stage_a": true,
+    "pr_ci_run_id": 29444012075,
+    "push_ci_run_id": 29444008688
+  },
+  "input_artifact_hashes": [
+    {
+      "artifact_id": "loop26_consumed_result",
+      "bytes": 83713,
+      "path": "registries/loop26_shared_validation_result.v0.json",
+      "plaintext_targets_or_predictions_present": false,
+      "sha256": "7577c84eaea7579250b5c1fcdf53234a3d56fdab4640df2edebaee9ae8bd31b4",
+      "sha256_verified": true
+    },
+    {
+      "artifact_id": "loop26_prediction_freeze",
+      "bytes": 31271,
+      "path": "registries/loop26_prediction_freeze.v0.json",
+      "plaintext_targets_or_predictions_present": false,
+      "sha256": "10191558a68a8c646e32c4ab0516f84ee99d127b9e6a2ea277c432c6c28b2348",
+      "sha256_verified": true
+    },
+    {
+      "artifact_id": "loop26_shared_contract",
+      "bytes": 31988,
+      "path": "registries/loop26_shared_validation_contract.v0.json",
+      "plaintext_targets_or_predictions_present": false,
+      "sha256": "c4f94b214993973ec4b4ea7e7b27174023dfef227c8dd4d9b912ac48bb98ccce",
+      "sha256_verified": true
+    },
+    {
+      "artifact_id": "loop25_causal_mechanics_result",
+      "bytes": 8573,
+      "path": "registries/loop25_causal_preprocessing_result.v1.json",
+      "plaintext_targets_or_predictions_present": false,
+      "sha256": "5f80c4d282be79aadaf78908c151acd3949e0a754182cf58b27dcca681218ab1",
+      "sha256_verified": true
+    }
+  ],
+  "input_bytes": 155545,
+  "peak_rss_bytes": 23429120,
+  "per_item_target_conditioned_metrics_present": false,
+  "plaintext_targets_or_predictions_present": false,
+  "primary_failure_class": {
+    "class_id": "F5",
+    "descriptive_failure_phenotype_only": true,
+    "label": "model_fit_output_distribution_instability",
+    "root_cause_established": false
+  },
+  "producer": {
+    "artifact_analyzer_is_neural_producer": false,
+    "end_to_end_latency_measured": false,
+    "producer_causal_status": "not_applicable_artifact_only_analyzer",
+    "required_right_context": "unavailable_not_measured",
+    "source_cache_preprocessing_is_causal": false
+  },
+  "proof_posture": "post_outcome_artifact_only_target_free_failure_phenotype",
+  "resource_caps": {
+    "cpu_threads": 1,
+    "generated_output_bytes": 1048576,
+    "model_inference_runs": 0,
+    "network_calls": 0,
+    "new_download_bytes": 0,
+    "peak_rss_bytes": 268435456,
+    "runtime_sec": 30.0,
+    "training_or_parameter_update_runs": 0,
+    "workers": 1
+  },
+  "resource_checks": {
+    "all_caps_passed": true,
+    "cpu_threads_exact": true,
+    "generated_output_within_cap": true,
+    "model_inference_runs_exact_zero": true,
+    "network_calls_exact_zero": true,
+    "new_download_bytes_exact_zero": true,
+    "peak_rss_within_cap": true,
+    "runtime_within_cap": true,
+    "training_or_parameter_update_runs_exact_zero": true,
+    "workers_exact": true
+  },
+  "runtime_sec": 0.016568875,
+  "schema_name": "neurodecodekit.loop48_failure_localization_result",
+  "schema_version": "0.1.0",
+  "secondary_unresolved_classes": [
+    "F2",
+    "F3",
+    "F4",
+    "F6",
+    "F7",
+    "U0"
+  ],
+  "status": "completed_descriptive_f5_no_root_cause",
+  "unavailable_fields": [
+    "per_step_and_per_epoch_training_loss",
+    "gradient_norms",
+    "parameter_update_norms",
+    "nonblank_logit_margins",
+    "train_only_cer_and_exact_sequence_accuracy",
+    "per_item_input_to_target_length_ratios",
+    "per_item_ctc_minimum_alignment_frame_requirements",
+    "posterior_entropy_trajectories",
+    "blank_posterior_trajectories",
+    "per_channel_variance_and_robust_amplitude",
+    "power_spectral_density_and_line_noise",
+    "flat_channel_and_bad_trial_counts",
+    "event_timing_residuals",
+    "per_item_alignment_uncertainty",
+    "paired_offline_versus_causal_train_representations",
+    "independently_aligned_keystroke_window_baseline",
+    "fresh_development_person_evidence"
+  ],
+  "warnings": [
+    "post_outcome_descriptive_sorting_rule_not_prospective_validation",
+    "F5_is_a_failure_phenotype_not_a_causal_root_cause",
+    "registered_inputs_are_committed_aggregate_JSON_not_raw_or_private_payloads",
+    "source_cache_is_offline_noncausal",
+    "retained_neural_information_and_end_to_end_latency_remain_unmeasured",
+    "no_model_training_target_download_stream_device_hardware_or_claim_upgrade"
+  ]
+}

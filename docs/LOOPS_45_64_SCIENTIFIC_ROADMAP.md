@@ -71,30 +71,62 @@ and end-to-end latency remain unmeasured. No rerun is authorized.
 
 ### Loop 46 - Reserved S21 Neural-Effect Gate
 
-Train the frozen 2,908-parameter candidate on 55 S21 source-train rows. Freeze
-predictions before opening six reserved validation targets once. Compare with
-the train-only prior, zero signal, target derangement, time displacement,
-channel derangement, and the 2,884-parameter linear signal comparator.
+**Status: parked; registered gate failed.** Green commit `881145d` froze the
+2,908-parameter candidate, 55-row train path, 31 prediction sets, and one
+six-target scoring delivery. Prediction-freeze commit `54bdca9` was remotely
+green before the targets opened once. Candidate macro CER was `0.938177`
+versus prior `0.751235`, so the gate failed and no rerun is authorized.
 
 **Gate:** at least `0.05` macro sentence-CER improvement over prior, exact paired
-`p <= 0.05`, and strict wins over every control. **Ceiling:** one person, one
-session, source validation only.
+`p <= 0.05`, strict wins on all six sentences, and the complete registered
+control intersection. **Ceiling:** one person, one session, source validation
+only.
 
 ### Loop 47 - Neural Signal Attribution Matrix
 
-If Loop 46 passes, execute the frozen ten-condition Loop 31 matrix. The intact
-signal must beat timing-only, padding-only, label, zero-signal, and corrupted-
-signal paths. The language-model/NeuroToken extension remains a separate gate.
+**Status: parked; shared attribution gate failed.** The frozen ten-condition
+Loop 31 matrix ran inside the same consumed Loop 46 event. Exact-zero and
+timing-only components passed individually, but the complete prior and
+corrupted-signal conjunction failed. The language-model/NeuroToken extension
+remained closed, and no sensor-signal-dependence claim is available.
 
 **Gate:** intersection-union pass across every registered control. **Ceiling:**
 sensor-signal dependence, not absolute brain origin.
 
 ### Loop 48 - Negative-Result Failure Localization
 
-If Loop 46 or 47 fails, classify the failure using target-blind evidence:
-identity, causal preprocessing, signal quality, temporal resolution, fit,
-blank dominance, or prior strength. Do not use validation targets to select a
-larger architecture.
+**Status: complete at the consumed artifact-only Stage A boundary.** One
+hash-bound execution read four exact committed aggregate JSON artifacts totaling
+155,545 bytes and selected descriptive `F5` seed-sensitive output-distribution
+instability. It ran in `0.016568875` seconds, peaked at 23,429,120 bytes RSS,
+and emitted 10,643 bytes. That is not a proven root cause. No train-array
+diagnostic exists, and no rerun is authorized. Authorization commit `5bae880`
+and implementation commit `ca21539` were each pushed and remotely green before
+the single execution.
+
+Stage B is now frozen in
+`docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md` and
+`registries/loop48_train_only_discrimination_contract.v0.json`. The protocol
+uses a target-independent 44-fit/11-check split inside the 55 source-train
+rows, prefixes `8, 16, 24, 32, 44`, seeds `4801-4803`, 20 fits, 35 target-blind
+inferences, five priors, 41 prediction sets, and 2,048 exact paired sign
+assignments. Predictions and telemetry must become remotely green before one
+11-target scoring delivery. Because all 55 rows were used by prior Loop 26
+fits, the check rows are not historically fresh; the exact Stage B ceiling is
+E2 pipeline-discriminative evidence, not the earlier design-level E3 ceiling.
+Raw quality, causal preprocessing, peripheral origin, independent validation,
+and every generalization claim remain unavailable. The protocol is
+preregistered but unauthorized and cannot inherit Stage A scope.
+Preregistration commit `0ee0ab7` passed push CI `29452286159` and PR CI
+`29452288520`. One hash-bound decision surface is prepared in
+`docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md` and
+`registries/loop48_stage_b_authorization_request.v0.json`; preparing it changes
+no authorization field.
+
+The consumed Stage A verified hashes, reproduced aggregate blank/CER summaries,
+applied the ordered tree, and emitted one target-free aggregate report. Do not
+rerun it or use validation targets to select a seed, threshold, loss, or larger
+architecture.
 
 **Gate:** one evidence-backed failure class or an explicit unresolved set.
 
@@ -259,9 +291,12 @@ the machine registry.
 ## Authorization Boundary
 
 This document is a research roadmap. Loop 45 is complete at its target-free
-mechanics boundary; Loops 46-64 are `Not Started`. Every current
+mechanics boundary; Loops 46/47 are consumed and parked; Loop 48 is complete at
+its consumed artifact-only `F5` boundary with no rerun, while its H1-H6
+discrimination map is additive design research only; and Loops 49-64 are `Not Started`.
+Every current
 `execution_authorized` flag and every global authorization field is false. The
-roadmap does not authorize a Loop 45 rerun, Loop 46, any real-data read or
+roadmap does not authorize a Loop 45 rerun, Loop 46/47 rerun, Loop 48 rerun, any real-data read or
 download, training, target opening, S25 access, EEG acquisition, stream,
 device, participant contact, home recording, external outreach, tag, release,
 archive, DOI, or scientific claim.

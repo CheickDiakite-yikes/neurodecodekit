@@ -273,7 +273,7 @@ class Loop43ResearchBoundaryTests(unittest.TestCase):
         self.assertIn("no_packet", claims["scientific_claim_not_established"])
 
     def test_machine_roadmap_is_synchronized(self):
-        self.assertEqual(self.roadmap["schema_version"], "0.20.0")
+        self.assertEqual(self.roadmap["schema_version"], "0.21.0")
         current = self.roadmap["current_boundary"]
         self.assertTrue(current["loop43_research_packet_prepared"])
         self.assertEqual(current["loop43_qualification_level_count"], 7)

@@ -1,0 +1,672 @@
+{
+  "schema_name": "neurodecodekit.loop26_shared_validation_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "loop26-31-33-shared-s21-validation-v0",
+  "prepared_at": "2026-07-13",
+  "status": "preregistered_not_authorized_no_protected_execution",
+  "proof_posture": "hash_bound_shared_validation_preregistration_only",
+  "parent_commit": "344760aec9253b73f2247ca39dd95e36251bf08e",
+  "scope": {
+    "numbered_loops": [26, 31, 33],
+    "scientific_roadmap_loops": [46],
+    "primary_decision_loop": 26,
+    "source_person": "spanishbcbl-person-s5-s10-s21",
+    "source_session": "1",
+    "source_modality": "MEG",
+    "source_task": "prompted_physical_typing",
+    "shared_validation_items": 6,
+    "source_train_items": 55,
+    "source_test_items": 5,
+    "validation_scoring_exposures_exact": 1,
+    "source_test_scoring_exposures": 0,
+    "session2_scoring_exposures": 0,
+    "new_download_bytes": 0,
+    "reason_for_shared_contract": "All Loop 26, Loop 31, and Loop 33 predictions must freeze before the six shared validation targets are scored once."
+  },
+  "authorization": {
+    "authorized_now": false,
+    "implementation_authorized_now": false,
+    "legacy_archive_layout_audit_authorized_now": false,
+    "real_cache_hash_or_payload_read_authorized_now": false,
+    "monolithic_archive_traversal_authorized_now": false,
+    "train_signal_delivery_authorized_now": false,
+    "train_target_delivery_authorized_now": false,
+    "validation_signal_delivery_authorized_now": false,
+    "validation_target_delivery_authorized_now": false,
+    "training_or_parameter_updates_authorized_now": false,
+    "checkpoint_write_or_read_authorized_now": false,
+    "model_inference_authorized_now": false,
+    "prediction_freeze_authorized_now": false,
+    "validation_scoring_authorized_now": false,
+    "source_test_delivery_or_scoring_authorized_now": false,
+    "session2_delivery_or_scoring_authorized_now": false,
+    "raw_fif_or_mat_read_authorized_now": false,
+    "new_download_authorized_now": false,
+    "language_model_or_neurotoken_authorized_now": false,
+    "rw3_stream_device_or_hardware_authorized_now": false,
+    "loop27_or_later_execution_authorized_now": false,
+    "exact_authorization_sentence": "Authorize the Loop 26/31/33 shared S21 validation implementation and one registered execution exactly as scoped in docs/LOOP_26_SHARED_VALIDATION_PREREGISTRATION.md and registries/loop26_shared_validation_contract.v0.json. I authorize one hash pass over the named monolithic S21 session-1 cache; opaque streaming traversal of its deflated row members; delivery of exactly 55 train signal/target rows and six validation signal rows into isolated derivatives; 21 bounded training runs, 24 target-blind model-inference runs, six train-only no-signal prior fits, 31 frozen prediction sets, and one conditional scoring delivery of the same six validation targets only after the prediction-freeze hash record is committed, pushed, and remotely green. I do not authorize delivery or scoring of the five source-test rows or session 2, raw FIF/MAT reads, S7/S20/S25, downloads, larger models, restarts, language models, RW3, streams, devices, hardware, post-target tuning, or any rerun after validation scoring.",
+    "authorization_must_be_recorded_in_separate_commit": true,
+    "authorization_commit_must_be_pushed_and_remotely_green": true,
+    "implementation_commit_must_be_pushed_and_remotely_green_before_cache_access": true
+  },
+  "dependency_bindings": {
+    "loop25_result": {
+      "path": "registries/loop25_causal_preprocessing_result.v1.json",
+      "sha256": "5f80c4d282be79aadaf78908c151acd3949e0a754182cf58b27dcca681218ab1",
+      "status": "complete_passed_no_rerun_authorized",
+      "dependency_satisfied": true,
+      "numeric_input_producer_for_loop26": false,
+      "role": "target-free causal mechanics prerequisite only"
+    },
+    "loop26_research": {
+      "path": "registries/loop26_research_boundary.v0.json",
+      "sha256": "d5738fc3bf2ffccb18886decb7cfdf3209a848d3ce0d759b381dcdffdc0ca193"
+    },
+    "loop31_research": {
+      "path": "registries/loop31_research_boundary.v0.json",
+      "sha256": "5d7ae8ab0ad7f9a4023874b0317be21174ace9cc037438c319546b4c46c1c7c1"
+    },
+    "loop33_research": {
+      "path": "registries/loop33_research_boundary.v0.json",
+      "sha256": "5d907bc1decba650354c982133bb60a0800be1305e397a8bd0adc518811be465"
+    }
+  },
+  "local_evidence_bindings": {
+    "loop14_closeout": {
+      "path": "docs/LOOP_14_SPLIT_PROTOCOL_V1.md",
+      "sha256": "243488629c425c53b408c3b617d1a7698066daafe100e78a0de93c3992add6e0",
+      "role": "source-cache, split, scaler, and consumed source-test evidence"
+    },
+    "loop15_closeout": {
+      "path": "docs/LOOP_15_SAME_SUBJECT_CROSS_SESSION.md",
+      "sha256": "2890a94abf3ce469ebb0d14c58da7b24492d4dcaa225f194fdb1a02cd5587d18",
+      "role": "minimum second legacy full-cache load and consumed session-2 evidence"
+    },
+    "legacy_sentence_cache_loader": {
+      "path": "src/neurodecodekit/cache/sentence_npz.py",
+      "sha256": "5715abcd8b50cf974826fcf768f6fbf2b204be413fda391f2a31a80538537dc7",
+      "role": "archive-access correction evidence; not permitted for the registered runtime"
+    },
+    "existing_tiny_ctc": {
+      "path": "src/neurodecodekit/models/tiny_ctc.py",
+      "sha256": "2c676d17251902ad01874fc0ea575d9ebd91bf7186a56be5e705368ecb34abee",
+      "role": "noncausal 2908-parameter architecture reference only"
+    },
+    "ctc_text": {
+      "path": "src/neurodecodekit/preprocess/ctc_text.py",
+      "sha256": "3e77774281dc18d01c5bda11d25b1d531ab58787c65e2183e8b89dd2d3f45796",
+      "role": "vocabulary, normalization, and greedy-decoding reference"
+    },
+    "metrics": {
+      "path": "src/neurodecodekit/evaluation/metrics.py",
+      "sha256": "92c16d626479983d9aaea13da8e94ef1a6cdc635f6f05467500d78af65af5eb1",
+      "role": "CER and WER reference"
+    },
+    "split_protocol": {
+      "path": "src/neurodecodekit/evaluation/split_protocol.py",
+      "sha256": "0def471923da0d136db9fb7d5ab6d16c510d53e681fdd84b11b730382b9830e6",
+      "role": "split membership and identity reference"
+    },
+    "prior_baseline": {
+      "path": "src/neurodecodekit/models/prior_baseline.py",
+      "sha256": "d2336e7cbea5202a29163b88373b11e4462391c7b81c8f1988a7afec3dd3f2ce",
+      "role": "train-only no-signal comparator reference"
+    }
+  },
+  "source_contract": {
+    "cache": {
+      "path": "cache/loop14_s21_split_aware/base_102mag_100hz_trainfit.npz",
+      "bytes": 10632576,
+      "sha256": "45ad465bb2512d827a6d8863b05ddd269c950701cc09535aa086120839d56815",
+      "schema_name": "b2q-sentence-cache",
+      "schema_version": 0,
+      "kind": "real_fif_mat_continuous_sentences",
+      "shape": [66, 102, 617],
+      "dtype": "float32",
+      "sampling_rate_hz": 100.0,
+      "total_valid_timepoints": 28397,
+      "minimum_valid_timepoints": 329,
+      "maximum_valid_timepoints": 617,
+      "signal_member": "signals.npy",
+      "source_content_read_during_preregistration": false
+    },
+    "split_report": {
+      "path": "cache/loop14_s21_split_aware/split/split.json",
+      "bytes": 60499,
+      "sha256": "cd0001b49666352919ea137859a6948a5e96c467def2e2b9c08be8c1c94574ef",
+      "protocol_config_sha256": "503ec4e77c64dea4b30b435e48fa0ec21279b61630dde5081a2a1e917388002d",
+      "group_assignment_sha256": "ea978a8c43f627a38c3b79ecbc6e815202fc15083329b5d2f0c042e221242dba",
+      "semantic_membership_sha256": "2382bd42f09630591ccbd1405e24e3aaf9035f8fec06eb05273a2596fde17dd7",
+      "physical_membership_sha256": "4feb3854161c7f336a73c3d3ae5d7e67ac6ec11825de6370df1387c8f949ea85",
+      "partition_rows": {"train": 55, "val": 6, "test": 5},
+      "strict_training_ready": true,
+      "plaintext_sentence_values_present": false
+    },
+    "extraction_summary": {
+      "path": "cache/loop14_s21_split_aware/extraction_summary.json",
+      "bytes": 3009,
+      "sha256": "6f5d293c3efcc17341becb6affec6059a19b261951651514c2835d454ba690d9"
+    },
+    "frozen_scaler": {
+      "fit_partition": "train",
+      "fit_rows": 55,
+      "fit_valid_timepoints": 23669,
+      "center_sha256": "d0beb18fe682042931ceda95ef5b6ba3fa66b57b93302c86fa3b11766bdb7a7d",
+      "scale_sha256": "e67ae077cc432be95d042900613b638e109843b845f50dee7fa96ecaf2807ee2",
+      "validation_fit_rows": 0,
+      "test_fit_rows": 0
+    },
+    "channels": {
+      "count": 102,
+      "kind": "magnetometer",
+      "ordered_names_sha256": "2befa0b191802432f1907e71ad727b4254f7c48f68c7572bf17df03000c50cc3",
+      "hash_canonicalization": "sha256_of_utf8_compact_json_array_with_no_trailing_newline",
+      "order_frozen": true
+    },
+    "ctc_arrays": {
+      "target_token_ids_shape": [66, 44],
+      "target_token_ids_dtype": "int16",
+      "target_lengths_shape": [66],
+      "target_lengths_dtype": "int32",
+      "target_texts_shape": [66],
+      "target_texts_dtype": "unicode_44",
+      "vocabulary": ["<blank>", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " "],
+      "blank_id": 0,
+      "normalization": "uppercase_collapse_whitespace_strip_reject_non_A_to_Z_or_space"
+    },
+    "upstream_causality": {
+      "cache_preprocessing_is_causal": false,
+      "whole_recording_fft_resample_used": true,
+      "zero_phase_filtering_used": true,
+      "sentence_endpoint_and_post_context_used": true,
+      "loop26_may_call_only_the_model_causal": true,
+      "end_to_end_causal_or_realtime_claim_allowed": false
+    }
+  },
+  "legacy_archive_access_audit": {
+    "archive_format": "deflated_npz",
+    "archive_entries": 12,
+    "uncompressed_bytes": 16856912,
+    "compressed_member_bytes": 10630980,
+    "signals_member_uncompressed_bytes": 16614704,
+    "signals_member_compressed_bytes": 10602165,
+    "row_selective_random_access_available": false,
+    "legacy_loader_path": "src/neurodecodekit/cache/sentence_npz.py",
+    "legacy_loader_sha256": "5715abcd8b50cf974826fcf768f6fbf2b204be413fda391f2a31a80538537dc7",
+    "legacy_loader_materializes_all_required_arrays": true,
+    "known_minimum_prior_full_cache_loads": 2,
+    "exact_prior_full_cache_load_count": null,
+    "validation_target_bytes_were_physically_materialized_by_legacy_loader": true,
+    "validation_targets_were_used_for_prior_loss_selection_or_scoring": false,
+    "source_test_targets_are_consumed_from_loop14_scoring": true,
+    "physical_never_opened_validation_target_claim_withdrawn": true,
+    "remaining_prospective_claim": "The six validation targets have not been used for model fitting, hyperparameter selection, restart selection, threshold choice, or predictive scoring."
+  },
+  "isolation_derivative_contract": {
+    "required": true,
+    "standard_numpy_full_array_loader_allowed": false,
+    "reader": "bounded_row_streaming_npy_reader_over_zip_ext_file",
+    "reader_must_parse_header_before_values": true,
+    "reader_must_refuse_object_dtype_for_row_members": true,
+    "reader_must_use_precommitted_split_indices": true,
+    "reader_must_never_return_excluded_rows": true,
+    "discarded_row_buffers_must_be_overwritten_before_reuse": true,
+    "source_cache_hash_passes_exact": 1,
+    "pre_score_outputs": [
+      {
+        "artifact_id": "train_bundle",
+        "rows": 55,
+        "contains_signals": true,
+        "contains_targets": true,
+        "contains_plaintext_targets": true,
+        "git_ignored": true
+      },
+      {
+        "artifact_id": "validation_inputs",
+        "rows": 6,
+        "contains_signals": true,
+        "contains_targets": false,
+        "contains_plaintext_targets": false,
+        "git_ignored": true
+      }
+    ],
+    "post_freeze_output": {
+      "artifact_id": "validation_targets",
+      "rows": 6,
+      "contains_signals": false,
+      "contains_targets": true,
+      "created_only_after_green_prediction_freeze_commit": true,
+      "git_ignored": true
+    },
+    "source_test_outputs": 0,
+    "source_test_rows_delivered_to_training_inference_or_scoring": 0,
+    "opaque_archive_traversal_is_not_claimed_as_physical_nonaccess": true,
+    "all_derivatives_require_sha256_size_shape_dtype_row_id_and_membership_bindings": true
+  },
+  "candidate_model": {
+    "model_id": "TinyCausalSentenceCTC-v0",
+    "input_layout": "batch_channels_time",
+    "input_channels": 102,
+    "input_dtype": "float32",
+    "classes": 28,
+    "hidden_channels": 16,
+    "layers": [
+      {"type": "conv1d", "in": 102, "out": 16, "kernel": 1, "bias": true, "parameters": 1648},
+      {"type": "gelu", "approximate": "none", "parameters": 0},
+      {"type": "left_zero_pad", "left_samples": 2, "right_samples": 0, "parameters": 0},
+      {"type": "conv1d", "in": 16, "out": 16, "kernel": 3, "padding": 0, "bias": true, "parameters": 784},
+      {"type": "gelu", "approximate": "none", "parameters": 0},
+      {"type": "conv1d", "in": 16, "out": 28, "kernel": 1, "bias": true, "parameters": 476}
+    ],
+    "parameter_count": 2908,
+    "parameter_bytes_float32": 11632,
+    "output_stride_samples": 1,
+    "output_length_equals_input_length": true,
+    "right_context_samples": 0,
+    "right_context_ms_at_100hz": 0.0,
+    "left_history_samples": 2,
+    "left_history_ms_at_100hz": 20.0,
+    "stream_state_bytes_float32": 128,
+    "dropout": false,
+    "normalization_layers": false,
+    "model_causal": true,
+    "whole_pipeline_causal": false
+  },
+  "linear_comparator": {
+    "model_id": "LinearSignalCTC-v0",
+    "layer": {"type": "conv1d", "in": 102, "out": 28, "kernel": 1, "bias": true},
+    "parameter_count": 2884,
+    "parameter_difference_from_candidate": 24,
+    "same_training_contract": true,
+    "claim_role": "required_architecture_comparator"
+  },
+  "training_contract": {
+    "device": "cpu",
+    "dtype": "float32",
+    "cpu_threads": 1,
+    "workers": 1,
+    "seeds": [2601, 2602, 2603],
+    "primary_seed": 2601,
+    "restarts": 0,
+    "best_of_seed_selection": false,
+    "optimizer": {
+      "name": "Adam",
+      "learning_rate": 0.02,
+      "betas": [0.9, 0.999],
+      "epsilon": 1e-08,
+      "weight_decay": 0.0,
+      "amsgrad": false,
+      "maximize": false
+    },
+    "batch_size_ceiling": 16,
+    "optimizer_steps_per_fit": 240,
+    "fixed_step_budget_for_every_prefix": true,
+    "batch_order": "numpy_default_rng_seed_epoch_permutation_then_contiguous_batches_cycle_until_exact_step_240",
+    "early_stopping": false,
+    "checkpoint_selection": "state_after_optimizer_step_240_only",
+    "gradient_clipping": false,
+    "loss": {
+      "name": "torch.nn.CTCLoss",
+      "blank": 0,
+      "reduction": "mean",
+      "zero_infinity": false,
+      "nonfinite_or_impossible_alignment_action": "fail_gate_without_restart"
+    },
+    "decode": "argmax_each_valid_step_then_collapse_repeats_and_remove_blank",
+    "determinism": {
+      "torch_use_deterministic_algorithms": true,
+      "warn_only": false,
+      "python_version": "3.13.5",
+      "numpy_version": "2.5.0",
+      "torch_version": "2.13.0",
+      "scipy_version": "1.18.0",
+      "environment_drift_action": "amend_before_protected_access"
+    },
+    "candidate_fits": 18,
+    "target_derangement_fits": 1,
+    "timing_only_fits": 1,
+    "linear_comparator_fits": 1,
+    "total_parameter_update_runs": 21,
+    "total_optimizer_steps": 5040,
+    "no_signal_prior_fits": 6,
+    "target_blind_model_inference_runs": 24,
+    "target_blind_prediction_sets": 31
+  },
+  "scaling_contract": {
+    "prefix_sizes": [8, 16, 24, 32, 44, 55],
+    "seeds_per_prefix": 3,
+    "candidate_fits": 18,
+    "prior_fits": 6,
+    "prefix_order_key": "sha256(prefix_salt_utf8 || 0x00 || semantic_row_uid_utf8 || 0x00 || performed_row_id_utf8)",
+    "prefix_salt": "neurodecodekit-loop26-31-33-shared-validation-v0-prefix",
+    "strictly_nested": true,
+    "final_prefix_equals_all_train_rows": true,
+    "target_or_validation_metric_may_change_order": false,
+    "primary_curve": "median_seed_macro_sentence_cer_at_each_prefix",
+    "descriptive_x_axis": "log2_unique_train_sentences",
+    "formal_slope_p_value": false,
+    "required_curve_rules": {
+      "smallest_band_sizes": [8, 16],
+      "upper_band_sizes": [44, 55],
+      "smallest_to_upper_macro_cer_gain_min": 0.05,
+      "size55_gain_over_matched_prior_min": 0.05,
+      "every_seed_ordinary_least_squares_slope_must_be_negative": true,
+      "every_adjacent_size_must_improve": false
+    },
+    "physical_repetition_lane_available": false,
+    "universal_power_law_fit_allowed": false,
+    "acquisition_authorized_by_positive_curve": false
+  },
+  "encoder_condition_matrix": [
+    {"id": "L31-E00", "condition": "full_registered_signal_primary_candidate", "prediction_source": "size55_seed2601_candidate", "required": true},
+    {"id": "L31-E01", "condition": "train_only_most_frequent_sentence_prior", "prediction_source": "size55_train_targets_only", "required": true},
+    {"id": "L31-E02", "condition": "exact_zero_valid_signal_same_primary_checkpoint", "prediction_source": "inference_only", "required": true},
+    {"id": "L31-E03", "condition": "whole_validation_row_derangement", "prediction_source": "target_blind_cycle_of_E00_predictions", "required": true},
+    {"id": "L31-E04", "condition": "channel_name_hash_derangement", "prediction_source": "same_primary_checkpoint", "required": true},
+    {"id": "L31-E05", "condition": "nonwrapping_zero_filled_plus_100_sample_time_displacement", "prediction_source": "same_primary_checkpoint", "required": true},
+    {"id": "L31-E06", "condition": "timing_only_train_fit_candidate", "prediction_source": "separate_fit", "required": true},
+    {"id": "L31-E07", "condition": "prompt_or_sentence_list_only", "prediction_source": "unavailable_and_forbidden_assert_no_context_fields", "required": false},
+    {"id": "L31-E08", "condition": "train_signal_target_pairing_derangement", "prediction_source": "separate_fit", "required": true},
+    {"id": "L31-E09", "condition": "linear_signal_ctc", "prediction_source": "separate_fit", "required": true}
+  ],
+  "control_transform_contract": {
+    "validation_row_derangement": {
+      "salt": "neurodecodekit-L31-E03-validation-row-cycle-v0",
+      "algorithm": "sort_item_ids_by_sha256_salt_item_id_then_map_each_prediction_to_next_item_cyclically",
+      "fixed_points": 0
+    },
+    "channel_derangement": {
+      "salt": "neurodecodekit-L31-E04-channel-cycle-v0",
+      "algorithm": "sort_channel_names_by_sha256_salt_name_then_move_each_source_channel_to_the_next_sorted_name_slot_cyclically",
+      "fixed_points": 0,
+      "metadata_order_remains_original": true
+    },
+    "time_displacement": {
+      "offset_samples": 100,
+      "offset_seconds": 1.0,
+      "direction": "delay_signal_values",
+      "algorithm": "output_0_to_99_zero_and_output_100_to_length_minus_1_equals_input_0_to_length_minus_101",
+      "wrapping": false,
+      "padding_after_valid_length": "zero",
+      "boundary_loss_must_be_reported": true
+    },
+    "timing_only": {
+      "shape": "same_102_by_time_as_signal",
+      "channel_0_valid_values": 1.0,
+      "channel_1_valid_values": "t_divided_by_max_1_length_minus_1",
+      "channels_2_to_101": 0.0,
+      "padding": 0.0,
+      "signal_values_used": false
+    },
+    "train_target_derangement": {
+      "salt": "neurodecodekit-L31-E08-train-target-cycle-v0",
+      "algorithm": "sort_train_semantic_ids_by_sha256_salt_id_then_assign_each_signal_the_next_sorted_rows_target_cyclically",
+      "fixed_points": 0,
+      "validation_targets_used": false
+    },
+    "zero_signal": {
+      "valid_values": 0.0,
+      "padding_values": 0.0,
+      "input_lengths_unchanged": true
+    }
+  },
+  "prediction_freeze_contract": {
+    "prediction_sets_exact": 31,
+    "candidate_curve_sets": 18,
+    "matched_prior_sets": 6,
+    "additional_encoder_control_sets": 7,
+    "all_prediction_sets_have_six_rows": true,
+    "validation_targets_available_to_prediction_process": false,
+    "each_set_requires": [
+      "condition_id",
+      "configuration_sha256",
+      "checkpoint_sha256_or_no_checkpoint_reason",
+      "transform_sha256_or_identity",
+      "ordered_item_ids_sha256",
+      "prediction_payload_sha256",
+      "lengths_sha256",
+      "runtime_sec",
+      "peak_rss_bytes",
+      "model_run_count",
+      "warnings"
+    ],
+    "prediction_text_payloads_are_git_ignored": true,
+    "committed_freeze_record_contains_hashes_not_prediction_text": true,
+    "freeze_record_must_be_tested_committed_pushed_and_remotely_green": true,
+    "validation_target_delivery_before_green_freeze_record": false,
+    "configuration_or_prediction_change_after_freeze": "fail_and_park"
+  },
+  "scoring_contract": {
+    "validation_items": 6,
+    "target_delivery_events_exact": 1,
+    "scorer_receives_all_31_prediction_sets_together": true,
+    "primary_candidate": "L31-E00",
+    "primary_comparator": "L31-E01",
+    "per_sentence_difference": "comparator_cer_minus_candidate_cer",
+    "primary_statistic": "mean_of_six_per_sentence_differences",
+    "exact_sign_assignments": 64,
+    "exact_test": "enumerate_all_64_sign_flips_in_binary_order_with_observed_assignment_included",
+    "primary_alternative": "greater",
+    "primary_one_sided_alpha": 0.05,
+    "two_sided_p_also_reported": true,
+    "primary_macro_cer_margin_min": 0.05,
+    "primary_requires_six_strict_sentence_wins": true,
+    "required_exact_control_ids": ["L31-E01", "L31-E02", "L31-E03", "L31-E04", "L31-E05", "L31-E06", "L31-E08"],
+    "each_required_exact_control_must_have_one_sided_p_at_most": 0.05,
+    "candidate_must_have_lower_macro_cer_than_linear_E09": true,
+    "intersection_union_gate": true,
+    "missing_condition_is_failure": true,
+    "metrics": [
+      "per_sentence_character_edits",
+      "per_sentence_cer",
+      "macro_sentence_cer",
+      "corpus_cer",
+      "corpus_wer",
+      "exact_sentence_count",
+      "blank_fraction",
+      "wins_ties_losses",
+      "all_64_null_statistics",
+      "one_sided_and_two_sided_exact_p",
+      "runtime_sec",
+      "peak_rss_bytes",
+      "input_output_and_artifact_bytes"
+    ],
+    "plaintext_targets_or_predictions_in_committed_report": false,
+    "post_score_restart_or_threshold_change": false
+  },
+  "access_sequence": [
+    "preregistration_commit_tested_pushed_and_remotely_green",
+    "separate_exact_authorization_commit_tested_pushed_and_remotely_green",
+    "implementation_and_synthetic_isolation_tests_committed_pushed_and_remotely_green",
+    "source_cache_identity_archive_layout_split_scaler_channel_and_environment_static_gate",
+    "one_source_cache_hash_pass",
+    "stream_train_bundle_and_validation_inputs_without_returning_source_test_rows_or_validation_targets",
+    "run_21_training_fits_and_24_target_blind_model_inferences_and_6_prior_fits",
+    "freeze_31_six_row_prediction_sets_and_every_checkpoint_transform_config_and_access_hash",
+    "commit_push_and_obtain_green_ci_for_hash_only_prediction_freeze_record",
+    "stream_exactly_six_validation_targets_into_isolated_scorer_once",
+    "score_every_condition_in_one_pass_and_mark_validation_protocol_consumed",
+    "close_or_park_without_restart_rerun_backup_target_open_test_open_or_session2_open"
+  ],
+  "resource_caps": {
+    "cpu_threads": 1,
+    "workers": 1,
+    "candidate_parameter_ceiling": 2908,
+    "linear_parameter_count": 2884,
+    "total_parameter_update_runtime_sec": 1200,
+    "total_end_to_end_runtime_sec": 1500,
+    "peak_rss_bytes": 1073741824,
+    "maximum_working_array_bytes": 134217728,
+    "maximum_checkpoint_bytes": 4194304,
+    "maximum_prediction_payload_bytes": 2097152,
+    "total_generated_artifact_bytes": 33554432,
+    "new_download_bytes": 0,
+    "external_model_or_weight_download_bytes": 0,
+    "direct_energy_measurement": "unavailable"
+  },
+  "required_runtime_access_counters": [
+    "source_cache_stat_reads",
+    "source_cache_hash_passes",
+    "split_report_metadata_reads",
+    "archive_header_reads",
+    "archive_row_member_streams",
+    "opaque_excluded_row_traversals",
+    "train_signal_rows_delivered",
+    "train_target_rows_delivered",
+    "validation_signal_rows_delivered",
+    "validation_target_rows_delivered_before_prediction_freeze",
+    "validation_target_rows_delivered_after_prediction_freeze",
+    "source_test_rows_delivered",
+    "session2_rows_delivered",
+    "raw_fif_or_mat_reads",
+    "candidate_training_runs",
+    "control_training_runs",
+    "optimizer_steps",
+    "checkpoint_writes",
+    "checkpoint_reads",
+    "target_blind_model_inference_runs",
+    "no_signal_prior_fits",
+    "prediction_sets_frozen",
+    "validation_scoring_runs",
+    "source_test_scoring_runs",
+    "session2_scoring_runs",
+    "post_target_parameter_updates",
+    "post_target_configuration_changes",
+    "external_network_calls",
+    "new_downloads",
+    "language_model_or_neurotoken_runs",
+    "rw3_stream_device_or_hardware_operations"
+  ],
+  "refusal_ids": [
+    "L26-R001-missing-separate-authorization",
+    "L26-R002-contract-or-parent-hash-mismatch",
+    "L26-R003-source-cache-size-or-hash-mismatch",
+    "L26-R004-split-or-membership-hash-mismatch",
+    "L26-R005-scaler-or-channel-hash-mismatch",
+    "L26-R006-environment-version-drift",
+    "L26-R007-raw-fif-mat-or-new-download-request",
+    "L26-R008-standard-numpy-full-array-loader-request",
+    "L26-R009-source-test-row-delivery-or-scoring",
+    "L26-R010-session2-s7-s20-or-s25-access",
+    "L26-R011-validation-target-delivery-before-green-freeze",
+    "L26-R012-incomplete-or-unhashed-prediction-set",
+    "L26-R013-freeze-record-not-committed-pushed-and-green",
+    "L26-R014-candidate-over-2908-parameters",
+    "L26-R015-noncausal-model-padding-or-future-context",
+    "L26-R016-unregistered-seed-restart-or-best-of-selection",
+    "L26-R017-not-exactly-240-optimizer-steps-per-fit",
+    "L26-R018-optimizer-loss-vocabulary-or-decode-drift",
+    "L26-R019-validation-or-test-fit-transform",
+    "L26-R020-missing-required-encoder-condition",
+    "L26-R021-target-informed-prefix-or-transform",
+    "L26-R022-post-target-training-threshold-or-code-change",
+    "L26-R023-resource-cap-exceeded",
+    "L26-R024-access-counter-missing-or-mismatch",
+    "L26-R025-plaintext-target-or-prediction-in-committed-report",
+    "L26-R026-generated-cache-checkpoint-or-prediction-staged-in-git",
+    "L26-R027-prompt-sentence-list-or-hidden-context-exposure",
+    "L26-R028-language-model-or-neurotoken-use",
+    "L26-R029-rw3-stream-socket-board-device-or-hardware-use",
+    "L26-R030-claim-that-validation-target-bytes-were-physically-never-loaded",
+    "L26-R031-claim-that-causal-model-makes-upstream-cache-causal",
+    "L26-R032-brain-specific-claim-before-loop35",
+    "L26-R033-source-test-cross-session-or-unseen-person-claim",
+    "L26-R034-realtime-portable-home-assistive-or-clinical-claim",
+    "L26-R035-universal-scaling-law-or-extrapolation-claim",
+    "L26-R036-acquisition-authorized-by-scaling-curve",
+    "L26-R037-physical-repetition-claim-from-duplicated-rows",
+    "L26-R038-rerun-after-validation-scoring",
+    "L26-R039-backup-target-open-or-alternate-holdout",
+    "L26-R040-missing-negative-or-invalid-closeout"
+  ],
+  "primary_sources": [
+    {
+      "source_id": "brain2qwerty_v2_code",
+      "url": "https://github.com/facebookresearch/brain2qwerty/tree/3bf5a4099ca0d23bbe994b2287905760236e56e0/brain2qwerty_v2",
+      "use": "whole-sentence asynchronous reference, CTC encoder surface, and GPU-scale contrast"
+    },
+    {
+      "source_id": "pytorch_ctc_loss_2_13",
+      "url": "https://docs.pytorch.org/docs/2.13/generated/torch.nn.CTCLoss.html",
+      "use": "input, target, length, blank, reduction, and impossible-alignment semantics"
+    },
+    {
+      "source_id": "pytorch_deterministic_algorithms_2_13",
+      "url": "https://docs.pytorch.org/docs/2.13/generated/torch.use_deterministic_algorithms.html",
+      "use": "same-software-and-hardware determinism requirement and fail-closed unsupported operation behavior"
+    },
+    {
+      "source_id": "scipy_permutation_test_1_18",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.permutation_test.html",
+      "use": "paired sample reassignment, exact null enumeration, and one-sided/two-sided p-value definitions"
+    },
+    {
+      "source_id": "intersection_union_tests",
+      "url": "https://doi.org/10.1214/ss/1032280304",
+      "use": "conjunctive all-controls decision interpretation"
+    },
+    {
+      "source_id": "classifier_permutation_controls",
+      "url": "https://www.jmlr.org/papers/v11/ojala10a.html",
+      "use": "separate label and feature correspondence controls"
+    },
+    {
+      "source_id": "decoding_confound_control",
+      "url": "https://doi.org/10.1016/j.neuroimage.2018.09.074",
+      "use": "confound-aware predictive interpretation"
+    }
+  ],
+  "preregistration_access_ledger": {
+    "committed_document_reads_minimum": 10,
+    "target_free_sidecar_metadata_reads_minimum": 4,
+    "source_cache_stat_reads": 1,
+    "source_cache_zip_directory_reads": 1,
+    "source_cache_npy_header_reads": 12,
+    "source_cache_signal_value_reads": 0,
+    "source_cache_target_value_reads": 0,
+    "raw_fif_or_mat_reads": 0,
+    "model_or_checkpoint_runs": 0,
+    "training_runs": 0,
+    "parameter_updates": 0,
+    "validation_scoring_runs": 0,
+    "source_test_or_session2_scoring_runs": 0,
+    "public_web_operations": 6,
+    "external_model_or_data_download_bytes": 0,
+    "new_generated_experiment_payload_bytes": 0,
+    "user_owned_workbook_sidecar_search_incidents": 1,
+    "sidecar_used_as_scientific_evidence": false
+  },
+  "warnings": [
+    "The legacy deflated NPZ cannot provide physical row-level random access.",
+    "The legacy loader previously materialized all target arrays even though validation targets were not used for fitting, selection, or scoring.",
+    "Future target blindness means no validation target delivery to the model or scorer before the green prediction-freeze record; it does not mean the bytes were historically never loaded.",
+    "Loop 25 is a synthetic causal-mechanics prerequisite, not the numerical producer of the Loop 14 cache.",
+    "Only the proposed encoder is causal; the upstream Loop 14 cache is offline, zero-phase, FFT-resampled, and sentence-delimited.",
+    "Six validation sentences from one person and one session are not six biological replicates.",
+    "A clean gate can support at most a bounded same-slice predictive advantage and sensor-signal dependence claim.",
+    "Peripheral, task-locked, ocular, muscle, motion, audio, and keyboard confounds remain unresolved until Loop 35 execution.",
+    "The scaling curve is bounded to 8 through 55 local training sentences and cannot establish a universal law or authorize acquisition.",
+    "No implementation, protected execution, target scoring, or scientific result exists at preregistration."
+  ],
+  "claim_boundaries": {
+    "may_claim_if_every_registered_gate_passes": [
+      "the exact 2908-parameter encoder has zero model right context",
+      "the primary candidate beats the train-only prior on all six named validation sentences by at least 0.05 macro CER with the exact paired gate",
+      "the registered candidate depends on the available sensor-signal structure for this one person session task split and model",
+      "the registered 8-to-55-sentence curve has the exact bounded descriptive outcome reported"
+    ],
+    "must_not_claim_even_if_every_gate_passes": [
+      "physical never-accessed validation targets",
+      "causal or real-time end-to-end preprocessing and decoding",
+      "source-test or cross-session performance",
+      "unseen-person or population generalization",
+      "brain-specific neural origin before peripheral controls",
+      "Brain2Qwerty v2 equivalence or improvement",
+      "universal scaling law or guaranteed acquisition value",
+      "EEG OPM wearable portable or at-home performance",
+      "arbitrary-thought imagined-speech assistive diagnostic clinical or medical capability"
+    ],
+    "current_claim": "Preregistration and archive-access audit only; no scientific result."
+  }
+}

@@ -2465,3 +2465,368 @@ Evidence: `docs/LOOP_25_CAUSAL_PREPROCESSING_RESULT.md`,
 `registries/loop25_causal_preprocessing_result.v1.json`,
 `registries/loop25_authorization_decision.v1.json`, and
 `tests/test_loop25_causal_preprocessing_result.py`.
+
+## 0074 - Share The Six S21 Validation Targets Across Loops 26, 31, And 33
+
+Decision: preregister one prospective Loop 26/31/33 and scientific-Loop-46
+event instead of scoring the scarce six-row S21 validation slice separately.
+Freeze the primary causal model, all encoder-attribution controls, all bounded
+data-scaling predictions, and 31 prediction sets before one target delivery.
+
+Model and compute decision: retain one 2,908-parameter left-padded causal
+candidate and one 2,884-parameter linear comparator. Permit only a future exact
+inventory of 21 parameter-update runs, 24 target-blind model inferences, six
+train-only prior fits, 5,040 optimizer steps, three fixed seeds, one CPU thread,
+1 GiB peak RSS, and 32 MiB generated artifacts. No restart, favorable-seed
+selection, or post-target rerun is available.
+
+Access decision: withdraw the old phrase that validation targets were
+physically unopened. The legacy deflated NPZ loader materialized complete
+target arrays in at least two historical commands, although the six validation
+rows were not used for fitting, hyperparameter/restart/threshold selection, or
+predictive scoring. Future execution must use bounded row streaming, isolate a
+55-row train derivative and six-row target-free validation-input derivative,
+and deliver validation targets only after a hash-only prediction-freeze commit
+is pushed and remotely green. Five source-test rows and session 2 stay closed.
+
+Statistical decision: require at least 0.05 macro sentence-CER improvement over
+the train-only prior, six strict sentence wins, one-sided exact `p <= 0.05`
+from all 64 sign assignments, the complete registered control intersection,
+and a strict win over the linear comparator. The bounded scaling result must
+also satisfy the frozen small-to-upper and size-55-over-prior margins plus
+negative slopes for every seed.
+
+Authorization decision: green preregistration commit `881145d` and CI run
+`29282661766` establish design only. The separate request remains unauthorized
+with every `authorized_now` field false. General continuation, co-researcher
+autonomy, roadmap approval, and Loop 25/RW3 decisions are not the exact one-time
+protected execution sentence.
+
+Claim boundary: even a complete pass can establish at most a bounded same-
+person, same-session predictive advantage and sensor-signal dependence for the
+exact slice, task, preprocessing, and model. It cannot establish brain-specific
+origin, source-test/cross-session behavior, unseen-person generalization,
+end-to-end causality or real-time decoding, Brain2Qwerty v2 equivalence, EEG or
+portable/home performance, arbitrary-thought decoding, or clinical utility.
+
+Evidence: `docs/LOOP_26_SHARED_VALIDATION_PREREGISTRATION.md`,
+`docs/LOOP_26_AUTHORIZATION_PACKET.md`,
+`registries/loop26_shared_validation_contract.v0.json`,
+`registries/loop26_authorization_request.v0.json`, and their dependency-light
+invariant suites.
+
+## 0075 - Implement The Shared Validation Gate Before Protected Access
+
+Decision: accept a staged implementation of the frozen Loop 26/31/33 contract
+only after synthetic isolation and malformed-input tests pass. Keep real S21
+cache values closed until this exact implementation commit is pushed and both
+remote CI jobs are green.
+
+Access decision: require bounded forward NPZ member traversal, one later cache
+hash pass, isolated 55-row train and six-row target-free validation derivatives,
+and a separate scorer that refuses to open targets until the hash-only freeze
+record exists in the remotely green `HEAD`. Create the consumed marker before
+the first validation-target read so interruption cannot create an accidental
+rerun path.
+
+Execution decision: enforce the exact inventory of 21 fits, 5,040 optimizer
+steps, 24 target-blind model inferences, six train-only priors, 21 checkpoints,
+and 31 prediction sets. Bind each private prediction to its file, item order,
+lengths, configuration, checkpoint identity, transform, and prediction hashes.
+
+Resource decision: preserve one thread, one worker, 2,908/2,884 parameters,
+128 MiB working arrays, 4 MiB checkpoints, 2 MiB private predictions, 32 MiB
+all generated artifacts, 1,200 seconds parameter runtime, 1,500 seconds total
+runtime, 1 GiB RSS, and zero downloads.
+
+Claim boundary: this implementation milestone uses synthetic fixtures only. It
+creates no real neural result and establishes no neural advantage, signal
+dependence, decoding accuracy, cross-session or unseen-person generalization,
+real-time behavior, EEG or hardware performance, or clinical utility.
+
+Evidence: `docs/LOOP_26_SHARED_VALIDATION_IMPLEMENTATION.md`, the bounded
+reader, causal model, shared evaluator, staged experiment gate, five CLI
+commands, and their focused synthetic and dependency-light invariant tests.
+
+## 0076 - Park The Shared S21 Gate After Its Registered Negative Result
+
+Decision: accept the one-shot result exactly as observed and park Loops 26,
+31, and 33. Do not tune around the failed gate, increase model size, reopen the
+six validation targets, or substitute source test, session 2, S7, S20, or S25.
+
+Scientific decision: the fixed candidate's macro sentence CER of `0.938177`
+is worse than the train-only prior's `0.751235`; its registered margin is
+`-0.186942`, with zero wins, one tie, five losses, and one-sided exact
+`p = 1.0`. The primary neural-effect gate failed. Although exact-zero and
+timing-only controls passed individually, the complete attribution conjunction
+failed. Although all three scaling slopes were negative, the 55-row model
+failed its matched-prior rule. These components are diagnostics, not claims.
+
+Engineering decision: retain the implementation and access-ledger machinery.
+It preserved the one-cache-hash, 55/6 train/validation split, remote-green
+prediction freeze before one six-target delivery, zero source-test/session-2
+access, zero post-target changes, one-thread execution, 1 GiB RSS cap, and
+32 MiB artifact cap.
+
+Next-step decision: Loop 48 artifact-first failure localization is the next
+research work order. Planning may use committed aggregate artifacts; any
+train-array diagnostic, protected cache read, target read, model operation, or
+implementation requires a separate exact authorization.
+
+Claim boundary: no neural advantage, sensor-signal dependence, brain-specific
+origin, decoding utility, unseen-person generalization, real-time result,
+portable/home hardware result, assistive result, diagnostic result, or clinical
+claim is available.
+
+Evidence: `docs/LOOP_26_SHARED_VALIDATION_RESULT.md`,
+`registries/loop26_shared_validation_result.v0.json`, prediction-freeze commit
+`54bdca9`, and the consumed private scoring marker outside Git.
+
+## 0077 - Preregister Artifact-Only Failure Localization Before New Experiments
+
+Decision: classify the consumed Loop 26/31/33 discrepancy first from four exact
+committed aggregate artifacts. Freeze an ordered eight-class tree and treat
+`F5` model-fit/output-distribution instability as the leading observed
+phenotype because the primary checkpoint is blank-dominant and every fixed
+prefix has substantial three-seed blank-fraction dispersion.
+
+Interpretation decision: do not promote `F5` into a causal explanation. The
+public artifacts lack loss and gradient trajectories, train-only decoding,
+input-to-target length ratios, signal-quality summaries, timing residuals, and
+paired causal/offline representations. CTC behavior, weak signal, preprocessing,
+temporal alignment, and their interactions remain unresolved.
+
+Execution decision: prepare only a post-outcome artifact-only contract. A
+future Stage A may verify four committed JSON hashes, reproduce aggregate
+arithmetic, apply the frozen tree, and emit one target-free JSON report under
+one thread, 30 seconds, 256 MiB RSS, and 1 MiB output. Implementation and
+execution remain unauthorized until a separate request binds a remotely green
+contract commit.
+
+Access decision: this planning pass read no source cache, ignored derivative,
+checkpoint, private prediction, target bundle, source-test row, session 2, S7,
+S20, S25, raw FIF/MAT, stream, device, or hardware payload. It ran no model,
+training, scoring, download, or network operation.
+
+Claim boundary: the leading evidence is an unstable output phenotype, not a
+proven failure mechanism. It establishes no neural advantage, sensor-signal
+dependence, brain-specific origin, decoding utility, transfer, real-time
+behavior, EEG result, portable/home hardware result, or clinical result.
+
+Evidence: `docs/LOOP_48_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop48_failure_localization_contract.v0.json`, and
+`tests/test_loop48_failure_localization_contract.py`.
+
+## 0078 - Request One Artifact-Only Stage A Without Opening Train Diagnostics
+
+Decision: after green contract commit `83309bf`, push CI `29431318268`, and PR
+CI `29431347801`, prepare one immutable authorization request for a
+dependency-light analyzer and one artifact-only Stage A execution.
+
+Scope decision: permit a future authorized run to read only four exact
+committed JSON files totaling 155,545 bytes, verify their hashes, reproduce
+frozen aggregate arithmetic, apply the ordered eight-class tree, and write one
+target-free aggregate report. Cap it at one thread, one worker, 30 seconds,
+256 MiB RSS, and 1 MiB output.
+
+Firewall decision: keep every authorization false until the exact sentence is
+captured in a separate green decision record. This request excludes ignored
+outputs, caches, arrays, targets, checkpoints, private predictions, model
+inference, training, parameter updates, seed/threshold/architecture selection,
+source test, session 2, S7, S20, S25, raw FIF/MAT, downloads, language models,
+RW3, streams, devices, hardware, scientific claim upgrades, and reruns.
+
+Claim boundary: even a clean Stage A can establish only that the exact public
+aggregate artifacts satisfy `F5` under the frozen post-outcome tree. It cannot
+establish a root cause or any positive neural, decoding, transfer, real-time,
+EEG, device, assistive, diagnostic, or clinical result.
+
+Evidence: `docs/LOOP_48_AUTHORIZATION_PACKET.md`,
+`registries/loop48_authorization_request.v0.json`, and
+`tests/test_loop48_authorization_request.py`.
+
+## 0079 - Evaluate Multiple Failure Hypotheses From One Shared Train-Only Bundle
+
+Decision: do not treat the artifact-level `F5` phenotype as the only hypothesis
+or force one root-cause winner. Design future Stage B around five hypotheses
+that may coexist: CTC feasibility/optimization, sensor/trial quality,
+timing/preprocessing mismatch, representation separability, and prior
+dominance.
+
+Efficiency decision: collect static feasibility, quality, timing, fit telemetry,
+simple-probe, transform, and corruption-control measurements once, then reuse
+them across the five hypothesis rows. “Parallel” means parallel scientific
+comparison; physical numerical execution remains sequential, one-threaded, and
+single-worker.
+
+Leakage decision: any future diagnostic fit/check partition must live entirely
+inside the 55 source-train rows and be grouped by sentence identity. Validation,
+source test, session 2, S7, S20, and S25 remain excluded. Exact split counts,
+seeds, thresholds, model inventory, runtime, RSS, and output caps remain
+unfrozen pending Stage A and a separately authorized static prototype.
+
+Authorization decision: the portfolio is design research only. It does not
+inherit a future Stage A authorization and currently permits no fixture,
+prototype, train/cache/signal/target read, model, training, prediction,
+checkpoint, scoring, download, stream, device, or hardware operation.
+
+Evidence: `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md`,
+`registries/loop48_hypothesis_portfolio.v0.json`, and
+`tests/test_loop48_hypothesis_portfolio.py`. Request/portfolio commit
+`0ffdf47` passed push CI `29433294092` and PR CI `29433297546`; this qualifies
+the decision surface without changing any false authorization field.
+
+## 0080 - Separate Data-Regime Failure From The Fixed CTC Recipe
+
+Decision: preserve the green five-hypothesis portfolio byte-for-byte and add an
+independent six-hypothesis discrimination map. Narrow `H1` from a general CTC
+question to the exact 2,908-parameter, 240-step recipe, and add `H6` for data
+quantity and unique-sentence diversity. Brain2Qwerty v2 makes scale and
+diversity plausible mechanisms, but its much larger noncausal GPU setting does
+not transfer a threshold, exponent, architecture, or expected score to S21.
+
+Evidence decision: compare the six mechanisms through one shared train-only
+bundle and return a support vector, including conflicts and unresolved fields.
+Descriptive evidence is `E1`; a frozen pipeline intervention can reach `E2`;
+bounded sensor dependence requires intact signal to clear every registered
+prior/corruption by both a preregistered practical margin and paired uncertainty
+gate. A lucky aggregate win is not sufficient.
+
+Claim-firewall decision: track peripheral or task-locked shortcut dependence as
+orthogonal threat `T1`, not as a seventh explanation for model failure. Even a
+future Stage B pass stops at `E3` and routes to the separately authorized Loop
+35 firewall; it cannot establish brain-specific origin during overt typing.
+
+Resource and authorization decision: “parallel” means parallel scientific
+comparison over shared evidence. Numerical execution remains sequential with
+one thread, one worker, and one job. Exact splits, seeds, inventory, thresholds,
+fits, predictions, checkpoints, resource caps, and stopping rules remain
+unfrozen. No protected payload, model, training, prediction, scoring, download,
+stream, device, or hardware operation occurred or is authorized.
+
+Evidence: `docs/LOOP_48_HYPOTHESIS_DISCRIMINATION_RESEARCH.md`,
+`registries/loop48_hypothesis_discrimination.v0.json`, and
+`tests/test_loop48_hypothesis_discrimination.py`.
+
+## 0081 - Consume One Artifact-Only Failure-Localization Pass
+
+Authorization decision: bind the user's exact Stage A sentence to the frozen
+Loop 48 contract in a separate decision record. Authorization commit `5bae880`
+passed push CI `29442914090` and PR CI `29442916230` before implementation.
+Implementation commit `ca21539` then passed push CI `29444008688` and PR CI
+`29444012075` before any registered input opened.
+
+Execution decision: run the dependency-light analyzer exactly once over the
+four named committed aggregate JSON artifacts. Verify all four SHA-256
+identities, reproduce the frozen blank/CER summaries and six seed-dispersion
+checks, apply the ordered eight-class tree, and emit one aggregate report. The
+run used one thread and one worker, took `0.016568875` seconds internally,
+peaked at 23,429,120 bytes RSS, and wrote 10,643 bytes. Every resource gate
+passed.
+
+Scientific decision: retain `F5` as a descriptive output-distribution
+instability phenotype because the primary condition was `0.993477` blank, all
+six prefix groups crossed the frozen `0.25` dispersion threshold, and all three
+size-55 seeds were worse than the train-only prior. Do not call `F5` a root
+cause. Temporal feasibility, signal quality, preprocessing, representation,
+prior dominance, and interactions remain unresolved.
+
+Firewall decision: the pass read no ignored output, cache member, array,
+target, checkpoint, private prediction, source-test or session-2 payload, S7,
+S20, S25, raw FIF/MAT, stream, device, or hardware source. It ran no model,
+training, parameter update, selection, download, language model, or RW3
+operation. The result is consumed; no rerun, tuning, architecture escalation,
+or scientific claim upgrade is authorized.
+
+Evidence: `docs/LOOP_48_AUTHORIZATION_DECISION.md`,
+`registries/loop48_authorization_decision.v0.json`,
+`docs/LOOP_48_FAILURE_LOCALIZATION_RESULT.md`,
+`registries/loop48_failure_localization_result.v0.json`, and
+`tests/test_loop48_failure_localization_result.py`.
+
+## 0082 - Draft Standing Autonomy Around Reversible Work
+
+Decision: replace repeated permission requests for routine work with a proposed
+three-tier charter. Tier A covers research, documentation, code, tests,
+synthetic fixtures, target-free aggregate analysis, preregistration, commits,
+pushes, and CI. Tier B covers bounded development experiments only when the
+development partition, hypotheses, metrics, thresholds, seeds, stop rules,
+resource caps, and claim ceiling are frozen before execution.
+
+Irreversibility decision: retain exact one-time permission for Tier C events:
+new real participant payloads, sealed targets, final or unseen-person scoring,
+consumed-evaluation reuse, post-outcome protocol changes, real downloads,
+hardware or participant recording, destructive operations, releases, and claim
+promotion. These stops protect evidence validity and the user's machine; they
+are not a judgment about the co-researcher's competence.
+
+Resource decision: propose a standing default of one thread, one worker, one
+numerical job, 1 GiB RSS, 32 MiB generated artifacts per loop, no new real-data
+download, no persistent process, and no deletion outside the repository. A
+loop-specific contract may tighten but cannot silently loosen these limits.
+
+Activation decision: the charter is a draft and grants no authorization. It
+becomes active only after the exact sentence in
+`docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md` is supplied and captured in a separate
+committed decision. Approval is prospective and cannot reopen Loop 48, S25,
+RW3, or another consumed or independently gated experiment.
+
+Evidence: `docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md` and
+`tests/test_research_autonomy_charter.py`.
+
+## 0083 - Preregister Train-Only Failure Discrimination Before New Acquisition
+
+Sequence decision: run one bounded Loop 48 Stage B diagnostic design before a
+new Loop 49 participant acquisition. The existing 10,632,576-byte sentence
+cache can distinguish optimization collapse, gross transformed-cache defects,
+timing sensitivity, registered-probe nonseparability, prior dominance, and
+bounded data-regime effects with materially less storage and compute than a
+new download. Loop 49 remains required and is not replaced.
+
+Historical-use decision: all 55 source-train rows contributed to earlier Loop
+26 fits. A new target-independent 44-fit/11-check split therefore creates an
+internal prediction firewall but not historically fresh or independently
+confirmatory evidence. Correct the exact claim ceiling from the design-level
+E3 concept to E2 pipeline-discriminative evidence.
+
+Protocol decision: freeze five nested prefixes, three seeds, 20 parameter-
+update runs, 35 target-blind model inferences, five train-only priors, 41
+prediction sets, and exact 2,048-assignment paired inference. Freeze one
+candidate corruption conjunction and a separate six-set candidate/linear
+prior rule; do not imply that uncomputed linear corruption controls or a
+task-locked character probe exist.
+
+Resource and access decision: retain one thread, one worker, one numerical job,
+1 GiB peak RSS, 32 MiB total output, a 20 GiB free-disk floor, and zero new
+downloads. Keep validation, source test, session 2, S7, S20, S25, raw FIF/MAT,
+private Loop 26 outputs, training, inference, and check scoring closed. The
+preregistration grants no authorization and requires a separate exact decision
+before implementation or protected access.
+
+Evidence: `docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md`,
+`registries/loop48_train_only_discrimination_contract.v0.json`, and
+`tests/test_loop48_train_only_discrimination_contract.py`.
+
+## 0084 - Prepare A Green-Bound Stage B Decision Surface
+
+Decision: prepare one human-readable packet and one machine request only after
+the exact Stage B preregistration was committed, pushed, and independently
+green on push and pull-request workflows. Bind commit
+`0ee0ab7cd3abae4ce654af9954854a6e236c8a0e`, push CI `29452286159`, PR CI
+`29452288520`, and the immutable document, contract, and invariant-test hashes.
+
+Scope decision: request exactly one cache hash pass, 44 fit signal/target rows,
+11 pre-freeze target-free check inputs, 20 parameter-update runs, 35 target-
+blind inferences, five priors, 41 prediction sets, and one post-green-freeze
+11-target scoring delivery. Preserve the E2 ceiling, zero downloads, one-thread
+resource envelope, and every excluded partition and operation.
+
+Authorization decision: preparing or remotely qualifying the request grants no
+permission. Every `authorized_now` field remains false. A future decision must
+reproduce the exact sentence, bind the green request commit, and itself become
+green before implementation. General continuation, co-researcher status, the
+draft autonomy charter, Stage A, and Loop 26 are not transitive authorization.
+
+Evidence: `docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md`,
+`registries/loop48_stage_b_authorization_request.v0.json`, and
+`tests/test_loop48_stage_b_authorization_request.py`.

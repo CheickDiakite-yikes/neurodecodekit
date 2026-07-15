@@ -320,7 +320,7 @@ class Loop33ResearchBoundaryTests(unittest.TestCase):
             self.assertIn(text, self.research)
 
     def test_machine_roadmap_and_public_status_are_synchronized(self):
-        self.assertEqual(self.roadmap["schema_version"], "0.20.0")
+        self.assertEqual(self.roadmap["schema_version"], "0.21.0")
         boundary = self.roadmap["current_boundary"]
         self.assertTrue(boundary["loop33_research_packet_prepared"])
         self.assertEqual(boundary["loop33_prefix_counts"], [8, 16, 24, 32, 44, 55])
@@ -330,20 +330,28 @@ class Loop33ResearchBoundaryTests(unittest.TestCase):
         self.assertTrue(boundary["loop33_prospective_shared_validation_path_available"])
         self.assertFalse(boundary["loop33_physical_repetition_lane_available"])
         self.assertFalse(boundary["loop33_acquisition_recommended"])
-        self.assertFalse(boundary["loop33_preregistration_prepared"])
+        self.assertTrue(boundary["loop33_preregistration_prepared"])
+        self.assertTrue(boundary["loop33_bound_to_loop26_shared_contract"])
+        self.assertTrue(boundary["loop33_authorization_request_prepared"])
         self.assertFalse(boundary["loop33_execution_authorized"])
         loop33 = next(row for row in self.roadmap["loops"] if row["loop_id"] == 33)
+        self.assertEqual(loop33["status"], "Parked; Shared Scaling Gate Failed")
         self.assertEqual(loop33["research_status"], "planning_research_complete")
         self.assertEqual(loop33["research_packet"], "docs/LOOP_33_PRIMARY_SOURCE_RESEARCH.md")
         self.assertEqual(loop33["research_registry"], "registries/loop33_research_boundary.v0.json")
         self.assertEqual(loop33["prefix_counts"], [8, 16, 24, 32, 44, 55])
         self.assertEqual(loop33["future_requirement_count"], 20)
         self.assertEqual(loop33["future_refusal_count"], 30)
+        self.assertTrue(loop33["preregistration_prepared"])
+        self.assertTrue(loop33["authorization_request_prepared"])
+        self.assertFalse(loop33["execution_authorized"])
+        self.assertTrue(loop33["shared_execution_completed_once"])
+        self.assertFalse(loop33["scaling_gate_passed"])
         for path, content in self.public_status.items():
             with self.subTest(path=path.name):
                 self.assertIn("Loop 33", content)
                 self.assertIn("planning research", content.lower())
-                self.assertIn("Not Started", content)
+                self.assertIn("park", content.lower())
                 self.assertIn("8, 16, 24, 32, 44, 55", content)
                 self.assertIn("unauthorized", content.lower())
 

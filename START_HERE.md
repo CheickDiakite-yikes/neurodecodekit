@@ -1,5 +1,10 @@
 # Start Here
 
+> Autonomy note: `docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md` explains why the
+> gates exist and proposes automatic Tier A routine work plus Tier B bounded
+> development experiments. It is a draft and grants no authorization until its
+> exact standing sentence is approved and separately recorded.
+
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.
 3. Read `AGENTS.md` for coding-agent rules.
@@ -10,9 +15,37 @@
    `registries/loop25_causal_preprocessing_result.v1.json` for the completed
    target-free mechanics result; use the amendment and authorization records
    only to audit its frozen execution order. No rerun is authorized.
-7. Read `docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md` for the next predictive
-   design and its six-item identifiability ceiling. It is planning research
-   only; Loop 26 remains `Not Started` with no preregistration or authorization.
+7. Read `docs/LOOP_26_SHARED_VALIDATION_RESULT.md` and
+   `registries/loop26_shared_validation_result.v0.json` first for the consumed
+   negative result: candidate macro CER `0.938177` versus prior `0.751235`,
+   with Loops 26/31/33 parked and no rerun authorized. Then read
+   `docs/LOOP_26_SHARED_VALIDATION_PREREGISTRATION.md`,
+   `docs/LOOP_26_AUTHORIZATION_DECISION.md`, and
+   `docs/LOOP_26_SHARED_VALIDATION_IMPLEMENTATION.md` to audit the green shared
+   design, one-time authorization, implementation, and target-firewall order.
+   Then read `docs/LOOP_48_FAILURE_LOCALIZATION_RESULT.md` and
+   `registries/loop48_failure_localization_result.v0.json` for the consumed
+   artifact-only result. One Stage A execution verified four committed JSON
+   artifacts totaling 155,545 bytes and selected descriptive `F5`
+   output-distribution instability in `0.016568875` seconds at 23,429,120-byte
+   peak RSS. This is not a proven root cause and no rerun is authorized. Read
+   `docs/LOOP_48_PRIMARY_SOURCE_RESEARCH.md`, the contract, request, and
+   authorization decision only to audit the frozen pre-execution sequence.
+   Read `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md` as the immutable
+   five-hypothesis starting point, then read
+   `docs/LOOP_48_HYPOTHESIS_DISCRIMINATION_RESEARCH.md` and
+   `registries/loop48_hypothesis_discrimination.v0.json` for the additive
+   six-hypothesis refinement. Then read
+   `docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md` and
+   `registries/loop48_train_only_discrimination_contract.v0.json` for the
+   exact Stage B 44/11 split, 20-fit, 35-inference, 41-prediction protocol.
+   Then read `docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md` and
+   `registries/loop48_stage_b_authorization_request.v0.json` for the green-
+   bound exact decision surface. Preregistration commit `0ee0ab7` passed push
+   CI `29452286159` and PR CI `29452288520`.
+   Every execution field remains false. All 55 rows were used historically,
+   so the 11-row check is not independent confirmation and Stage B is capped
+   at E2 diagnostic evidence even if every control passes.
 8. Read `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` for the selected S25
    metadata candidate and every blocker that still prevents preregistration,
    download, signal/target access, or transfer evaluation.
@@ -28,11 +61,12 @@
    target-free replay inspector, nine-clock timing contract, six latency claim
    levels, 18 future gates, and 30 refusals. It is planning research only;
    Loop 30 remains `Not Started` with no trace, UI, server, or browser run.
-12. Read `docs/LOOP_31_PRIMARY_SOURCE_RESEARCH.md` for the future 10-condition
-   encoder attribution matrix, contingent 5-condition LLM/Neuro Token matrix,
-   exact six-row gate, and the sensor-signal claim ceiling that reserves
-   brain-specific attribution for Loop 35. It is planning research only; Loop
-   31 remains `Not Started`.
+12. Read `docs/LOOP_31_PRIMARY_SOURCE_RESEARCH.md` for the attribution
+   taxonomy. Its ten-condition encoder slice ran inside the consumed shared
+   event: zero-signal and timing-only components passed, but the complete
+   registered conjunction failed. Loop 31 is parked; sensor-signal dependence
+   and brain-specific origin were not established, and the five-condition
+   LLM/Neuro Token extension remained closed.
 13. Read `docs/LOOP_35_PRIMARY_SOURCE_RESEARCH.md` for the ten confound classes,
    nine future synchronized stream classes, 13 conditions, three-stage access
    boundary, and the claim ceiling of incremental brain-sensor information
@@ -80,24 +114,27 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 ```
 
 Tracker scope: the spreadsheet's `20` KPI is the size of the original roadmap,
-not the current loop number. Its dashboard now separately reports the current
-post-roadmap position as **Loop 25 complete; Loop 26 decision next**, and its
+not the current loop number. Its dashboard now separately reports **Loops
+26/31/33 consumed and parked; Loop 48 artifact-only Stage A complete with F5
+descriptive phenotype and no rerun**, and its
 ninth sheet contains the separate **Loops 25-44 queue**. Loop 25 passed once
 at its target-free mechanics boundary and now has `execution_authorized: false`
-because no rerun is open; Loop 26 planning research is complete while its
-experiment remains `Not Started`; Loop 27 planning research
+because no rerun is open; Loop 26 was preregistered at `881145d`, authorized at
+`1c0e52c`, and scored once after remote-green prediction freeze `54bdca9`. Its
+candidate lost to the prior and the event is consumed; Loop 27 planning research
 selects S25 metadata while preregistration remains blocked; Loop 28 planning
 research defines a strict zero-shot final-only rule while its experiment
 remains `Not Started`; Loop 29 planning research defines separate scalp EEG
 and OPM-MEG paths while its experiment remains `Not Started`; Loop 30 planning
 research defines a target-free local replay boundary while its experiment
-remains `Not Started`; Loop 31 planning research defines a 10-condition encoder
-and contingent 5-condition LLM attribution firewall while its experiment
-remains `Not Started`; Loop 32 planning research defines the causal 32-parameter
+remains `Not Started`; Loop 31's 10-condition encoder slice failed its complete
+shared attribution conjunction while its contingent LLM/Neuro Token extension
+remained closed; Loop 32 planning research defines the causal 32-parameter
 fresh-person calibration boundary while its experiment remains `Not Started`;
 Loop 33 planning research defines the bounded `8, 16, 24, 32, 44, 55`
-unique-sentence curve and prospective shared-validation order while its
-experiment remains `Not Started`; Loop 34 planning research defines the
+unique-sentence curve and shared-validation order; it ran once and failed at
+the 55-row-versus-prior rule, so no rerun or scaling claim is authorized; Loop
+34 planning research defines the
 fresh three-way confidence firewall while its experiment remains `Not Started`
 and confidence is unavailable; Loop 35 planning research defines the staged
 peripheral-confound firewall while its experiment remains `Not Started`;
@@ -151,15 +188,15 @@ mutation controls passed with zero protected reads. Static plus complete-gate
 runtime was 5.542175 seconds, maximum RSS was 136,806,400 bytes, and generated
 artifacts totaled 788,967 bytes. The producer is causal with zero right context,
 but retained neural information and end-to-end latency remain unmeasured. No
-rerun is authorized. The next numbered decision is Loop 26 preregistration or
-hold; this closeout does not authorize real data, targets, models, or training.
-Loop 26 planning research at `03605c5` identifies a 2,908-parameter causal
-candidate recommendation, a 2,884-parameter linear comparator, six required
-controls, and all 64 paired sign assignments available from six reserved
-validation sentences. Its machine registry keeps all 14 `authorized_now`
-fields false. No real-cache content, target, model, training, validation,
-source-test, or session-2 access occurred; the experiment remains `Not
-Started` and waits on Loop 25 plus its own preregistration and authorization.
+rerun is authorized. Loop 26 planning at `03605c5` has advanced to a green
+shared preregistration at `881145d`: a 2,908-parameter causal candidate, a
+2,884-parameter linear comparator, 21 fits, 24 target-blind inferences, six
+priors, 31 frozen prediction sets, the complete encoder-attribution matrix,
+the bounded `8, 16, 24, 32, 44, 55` curve, and all 64 paired sign assignments
+over six validation sentences. The request remains unauthorized. No real-cache
+value, target delivery, model run, training run, prediction, or validation
+score occurred. The next decision is the exact sentence in
+`docs/LOOP_26_AUTHORIZATION_PACKET.md` or hold.
 Loop 29 planning research records scalp EEG as the immediate local-first lane,
 OPM-MEG as the same-modality partner/lab lane, and cryogenic MEG as the
 scientific reference. Its 15 requirements, four modality profiles, six
@@ -178,9 +215,11 @@ browser run, consumed artifact, model, stream, live source, or hardware
 operation exists; the experiment remains `Not Started`.
 Loop 31 planning research freezes ten encoder conditions, five contingent
 language-model conditions, six distinct claim classes, 18 future requirements,
-24 refusal IDs, and 19 false authorization flags. Its experiment remains `Not
-Started`; no protected cache, target, checkpoint, model, training, validation,
-LLM, Neuro Token, S20, S25, stream, or device operation exists. Even a future
+24 refusal IDs, and 19 false authorization flags. The encoder conditions now
+share the green Loop 26 preregistration; the language-model extension and all
+execution remain closed. No protected cache, target, checkpoint, model,
+training, validation, LLM, Neuro Token, S20, S25, stream, or device operation
+exists. Even a future
 clean local pass can establish only sensor-signal dependence until Loop 35
 excludes peripheral and task-locked shortcuts.
 Loop 32 planning research recommends one pointwise causal 32-parameter hidden
@@ -195,8 +234,8 @@ and hardware operations remain unauthorized.
 Loop 33 planning research recommends six strictly nested unique-sentence
 prefixes of `8, 16, 24, 32, 44, 55`, at most three optimization seeds and 18
 candidate fits, size-matched no-signal priors, and a single target-blind shared
-Loop 26/31/33 validation event. The experiment remains `Not Started`; all 23
-authorization fields are false. The current rows support no physical-
+Loop 26/31/33 validation event. The bounded curve now shares the green Loop 26
+preregistration, but execution remains unauthorized. The current rows support no physical-
 repetition comparison, additional acquisition is not recommended, and all
 protected/model/training/scoring/device work remains unauthorized.
 Loop 34 planning research separates seven confidence semantics, eight score and
@@ -268,9 +307,12 @@ complete; Loops 13, 23, and 24 are parked after measured gates. Loop 24 retains
 float32, consumed selection seed 2401, and left qualification seed 2402
 physically unopened. Loop 25 is complete at its one-time target-free mechanics
 boundary; seeds 2501 and 2502 are consumed for this gate and no rerun is
-authorized. Loops 26-44 remain planning-only.
-Loop 26's planning research is complete, but its experiment status remains
-`Not Started`. Loop 27's planning research is also complete: S25 session 2
+authorized. Loop 26/31/33 now has one green shared preregistration, a separately
+green authorization at `1c0e52c`, and a synthetic-only staged implementation.
+Protected execution waits for the implementation commit to become remotely
+green. All other Loops
+27-44 remain planning-only or artifact-only at their documented boundaries.
+Loop 27's planning research is complete: S25 session 2
 block 2 is the smallest eligible strict MEG pair at 1,009,939,983 bytes, but no
 preregistration, acquisition request, download, local MAT hash, header, signal,
 target, model, or transfer operation is authorized. Loops 28-44 have no
@@ -281,9 +323,10 @@ plus observed, and strict corruption-control wins. All 21 authorization fields
 are false and the experiment remains `Not Started`. Loop 29 planning research
 is complete while its experiment remains `Not Started`. Loop 30 planning
 research is complete while its target-free replay experiment remains `Not
-Started`. Loop 31 planning research is complete while its neural-attribution
-experiment remains `Not Started`; Loops 32-44 have no loop-specific research
-closeout yet.
+Started`. Loop 31's encoder-only matrix is frozen inside the shared Loop 26
+event, while its language-model/NeuroToken extension remains unpreregistered;
+no Loop 31 execution exists. Loops 32-44 remain at their documented planning
+or artifact-only boundaries.
 Session 1 provides a strict 55/6/5 split with
 train-only robust scaling. Session 2 is a complete two-part FIFF recording with
 63 performed trials; MAT slots 54, 58, and 60 are explicitly empty and are
@@ -433,7 +476,20 @@ Read `docs/LOOPS_45_64_SCIENTIFIC_ROADMAP.md` and validate
 `registries/next_scientific_loops.v0.json`. The five phases are Real Signal
 Truth, Unseen-Person Verdict, Accessible EEG Evidence, Causal Local Use, and
 Independent Evidence And Release. Loop 45 is complete at its target-free
-mechanics boundary; Loops 46-64 are `Not Started`, and all current execution
-flags are false. The first desired scientific result is a frozen S21 validation
-model that beats a matched no-signal prior and every corrupted-signal control;
-S25 remains sealed until a separate final-only zero-shot packet is complete.
+mechanics boundary. Loops 46/47 consumed one registered S21 validation event
+and are parked after the candidate lost to the no-signal prior; no rerun is
+authorized. Loop 48 completed one post-outcome artifact-only Stage A that
+selected `F5` output-distribution instability as the descriptive phenotype.
+The result is consumed, root cause remains unresolved, and no rerun is
+authorized. Authorization commit `5bae880` and implementation commit
+`ca21539` were each pushed and remotely green before the one execution. The
+additive H1-H6 design has now advanced to an exact Stage B preregistration: 44
+fit rows, 11 target-withheld check rows, 20 fits, 35 target-blind inferences,
+five priors, 41 frozen prediction sets, and one post-green-freeze check score.
+It changes no authorization. Because all 55 source-train rows were used by
+prior Loop 26 fits, its ceiling is E2 pipeline discrimination rather than
+independent validation or sensor-dependence confirmation. Brain-specific
+origin remains a separate Loop 35 question. Loops 49-64 remain `Not Started`,
+and all current execution
+flags are false. S25 remains sealed until a separate final-only zero-shot
+packet is complete.

@@ -325,10 +325,13 @@ class Loop31ResearchBoundaryTests(unittest.TestCase):
         )
         self.assertTrue(all(not (REPO_ROOT / path).exists() for path in forbidden))
 
-    def test_roadmap_keeps_loop31_not_started_and_unauthorized(self):
+    def test_roadmap_records_consumed_failed_attribution_gate(self):
         row = next(row for row in self.roadmap["loops"] if row["loop_id"] == 31)
-        self.assertEqual(row["status"], "Not Started")
-        self.assertEqual(row["proof_posture"], "planned_not_authorized")
+        self.assertEqual(row["status"], "Parked; Shared Attribution Gate Failed")
+        self.assertEqual(
+            row["proof_posture"],
+            "consumed_encoder_matrix_required_conjunction_failed_no_sensor_dependence_claim",
+        )
         self.assertFalse(row["execution_authorized"])
         self.assertEqual(row["research_status"], "planning_research_complete")
         self.assertEqual(row["research_registry"], "registries/loop31_research_boundary.v0.json")
@@ -336,9 +339,12 @@ class Loop31ResearchBoundaryTests(unittest.TestCase):
         self.assertEqual(row["language_model_condition_count"], 5)
         self.assertEqual(row["future_requirement_count"], 18)
         self.assertEqual(row["future_refusal_count"], 24)
-        self.assertFalse(row["preregistration_prepared"])
-        self.assertFalse(row["authorization_request_prepared"])
+        self.assertTrue(row["preregistration_prepared"])
+        self.assertTrue(row["authorization_request_prepared"])
+        self.assertFalse(row["language_model_extension_preregistered"])
         self.assertFalse(row["brain_specific_claim_available"])
+        self.assertTrue(row["shared_execution_completed_once"])
+        self.assertFalse(row["intersection_union_gate_passed"])
 
     def test_public_status_keeps_research_separate_from_execution(self):
         for path, contents in self.public_status.items():
@@ -346,13 +352,13 @@ class Loop31ResearchBoundaryTests(unittest.TestCase):
                 lowered = contents.lower()
                 self.assertIn("loop 31", lowered)
                 self.assertIn("planning research", lowered)
-                self.assertIn("not started", lowered)
+                self.assertIn("park", lowered)
                 self.assertIn("sensor-signal", lowered)
         combined = "\n".join(self.public_status.values())
         self.assertIn("10-condition", combined)
         self.assertIn("5-condition", combined)
         self.assertIn("Loop 35", combined)
-        self.assertNotIn("Loop 31 is complete", combined)
+        self.assertIn("conjunction", combined.lower())
 
 
 if __name__ == "__main__":

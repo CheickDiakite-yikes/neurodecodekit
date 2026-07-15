@@ -1,20 +1,36 @@
 # Codex Handoff - NeuroDecodeKit
 
-> Current handoff, 2026-07-13: Loop 25 v1 is complete at its one-time,
-> target-free causal-preprocessing mechanics boundary. Authorization commit
-> `1e7296a` and implementation commit `439f151` were pushed and remotely green
-> before the registered run. The static 65,537-point response and 23-probe
-> alias gate passed before either partition opened; development seed 2501 then
-> passed and froze, and qualification seed 2502 passed once unchanged. Across
-> 24 items, all 168 schedule, 240 resume, and 72 future-mutation checks passed.
-> Static plus complete-gate runtime was 5.542175 seconds, maximum peak RSS was
-> 136,806,400 bytes, and all generated artifacts totaled 788,967 bytes. Every
-> real-data, cache, consumed-evidence, target, model, training, network, RW3,
-> stream, device, and hardware counter was zero. The producer is causal with
-> zero right context; retained neural information and end-to-end latency remain
-> unmeasured. No rerun is authorized. The next numbered decision is a new
-> hash-bound Loop 26/roadmap Loop 46 preregistration or hold; this handoff does
-> not authorize protected reads, targets, inference, training, or later loops.
+> Current handoff, 2026-07-15: Loop 25 v1 and scientific Loop 45 remain complete
+> at their one-time target-free mechanics boundary. The shared Loop 26/31/33
+> event is now consumed and parked after its registered scientific gates
+> failed. Prediction-freeze commit `54bdca9` was pushed and remotely green
+> before the six targets opened once. The fixed candidate reached macro CER
+> `0.938177` versus `0.751235` for the train-only prior, a `-0.186942` margin;
+> the attribution conjunction and scaling gate also failed. Engineering,
+> access-order, one-thread, 1 GiB RSS, and 32 MiB artifact gates all passed.
+> Five source-test rows, session 2, post-target tuning, and any rerun remain
+> closed. Loop 48 completed exactly one artifact-only Stage A after separate
+> authorization commit `5bae880` and implementation commit `ca21539` were each
+> pushed and remotely green. The frozen tree selected descriptive `F5`
+> output-distribution instability from four committed aggregate JSON files.
+> Internal runtime was `0.016568875` seconds, peak RSS was 23,429,120 bytes,
+> and the consumed report is 10,643 bytes at SHA-256
+> `dbfb4c7cc6163ff31fa216c1b33e7510a87b0b843ef714754037d37275924659`.
+> This is not a proven root cause, and no rerun is authorized.
+> Closeout commit `6322635` passed push CI `29446438743` and PR CI
+> `29446440355`.
+> The additive six-hypothesis pass has now advanced to one exact Stage B
+> preregistration: 44 fit rows, 11 target-withheld check rows, five nested
+> sizes, three fixed seeds, 20 fits, 35 target-blind inferences, five priors,
+> 41 prediction sets, and 2,048 exact sign assignments. All 55 rows were used
+> historically, so the check partition is not independent confirmation and
+> the result ceiling is E2 diagnostic evidence. Preregistration commit
+> `0ee0ab7` passed push CI `29452286159` and PR CI `29452288520`. The separate
+> packet and machine request are prepared at
+> `docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md` and
+> `registries/loop48_stage_b_authorization_request.v0.json`. Every
+> authorization remains false; no protected read, implementation, model
+> operation, or score occurred.
 
 > Historical pre-Loop-25-execution context, retained for audit: Loops 1-12,
 > 14-22, and 23.5 are complete; Loops
@@ -454,14 +470,29 @@ This is not primarily a model repo. It is a **research loop repo**.
 
 ## Current Next Work
 
-1. **Loop 26 / roadmap Loop 46 - preregister the reserved S21 validation gate,
-   or hold.** Read `docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md` and
-   `registries/loop26_research_boundary.v0.json`. Freeze the 55/6/5 split,
-   2,908-parameter candidate, 2,884-parameter comparator, six controls, target-
-   blind prediction hashes, exact 64-assignment test, one-thread caps, and
-   source-test/session-2 exclusions before requesting authorization. Planning
-   and this handoff do not authorize a cache read, target open, model run, or
-   training run.
+Governance note: `docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md` proposes automatic
+Tier A routine work and Tier B bounded development experiments, with one exact
+stop before Tier C irreversible evidence, real-data, hardware, destructive,
+release, or claim actions. The draft is inactive and changes no current loop
+authorization.
+
+1. **Loop 48 - audit the consumed artifact-only result; do not rerun it.**
+   Read `docs/LOOP_48_FAILURE_LOCALIZATION_RESULT.md` and
+   `registries/loop48_failure_localization_result.v0.json`. One bounded pass
+   verified four committed JSON identities, reproduced the aggregate evidence,
+   and selected descriptive `F5`. It opened no ignored output, train array,
+   target, checkpoint, private prediction, source-test row, or session-2
+   payload, and ran no model or training. The result is not a proven root cause.
+   The immutable pre-execution contract, request, and decision remain audit
+   records; Stage A is consumed and cannot be rerun or tuned.
+   The immutable future portfolio in
+   `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md` starts with `H1`-`H5`.
+   `docs/LOOP_48_HYPOTHESIS_DISCRIMINATION_RESEARCH.md` and
+   `registries/loop48_hypothesis_discrimination.v0.json` add `H6` for data
+   quantity/diversity, narrow `H1` to the exact fixed recipe, and route `T1`
+   shortcut risk to Loop 35. Splits, thresholds, models, caps, and execution
+   remain unfrozen and unauthorized. Commit `33a14d8` and both CI runs are
+   green, but the consumed Stage A decision does not authorize Stage B.
 2. **RW3 - decide on the prepared Stage A packet only.** Review
    `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` and
    `registries/rw3_stage_a_authorization_request.v0.json`. The request is bound
@@ -469,15 +500,12 @@ This is not primarily a model repo. It is a **research loop repo**.
    false. Do not implement Stage A without an explicit user decision followed
    by a pushed authorization-only commit; BrainFlow, LSL, PyXDF, sockets, live
    sources, hardware, and Stages B-D remain later independent gates.
-3. **Use Loops 26-44 and 46-64 as future evidence queues, not blanket
+3. **Use Loops 27-44 and 48-64 as future evidence queues, not blanket
    authorization.**
    Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md`,
    `docs/LOOPS_25_44_ROADMAP.md`, and
-   `registries/next_20_loops.v0.json`. For Loop 26, also read
-   `docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md` and
-   `registries/loop26_research_boundary.v0.json`. Its planning research is
-   complete, but it has no preregistration, authorization sentence, runtime,
-   cache/target open, model, training run, or validation result. For Loop 27,
+   `registries/next_20_loops.v0.json`. Loop 26/31/33 and scientific Loops 46/47
+   are consumed negative results with no rerun. For Loop 27,
    read `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop27_research_boundary.v0.json`: S25 is selected in metadata,
    but the source model, controls, target isolation, and staged permissions are
@@ -1104,15 +1132,39 @@ The next scientific tranche is in
 of four, ten sources, ten kill branches, 20 false execution flags, and nine
 false global authorization fields.
 
-The critical sequence is Loop 45 causal mechanics, Loop 46's six reserved S21
-validation rows, Loop 47 intact-signal attribution, one non-S25 development
-person, a complete freeze, and Loop 52's one-time S25 zero-shot verdict. S21
+The critical sequence has stopped at the failed Loop 46/47 S21 gate. Loop 48
+completed one artifact-only Stage A and selected descriptive `F5`, but did not
+establish a root cause. Its result is consumed and no rerun is authorized. The
+additive H1-H6 discrimination map remains design-only and preserves an `E3`
+ceiling below brain-specific origin; only a separately designed non-S25
+development-person path could
+later reopen the predictive branch before Loop 52's one-time S25 verdict. S21
 session 2 and S7 stay consumed; S25 stays unopened and final-only. EEG,
 streaming, device, home, reproduction, and release phases remain downstream
 and separately authorized.
 
-The tracker now has ten sheets, including `Loops 45-64`. It is 114,652 bytes at
-SHA-256 `83606898dc58201e016f1f44ca156c1817f3719a8a401b2619e20d7f349f91ae`.
-All sheets rendered, key ranges reloaded, and the formula-error scan found zero
-matches. The user-owned inspection sidecar was restored byte-exact and remains
-untracked and unstaged.
+The tracker has ten sheets, including `Loops 45-64`. After the consumed Loop 48
+Stage A closeout it is 117,187 bytes at SHA-256
+`7e6424cd5f69d29f78ea7335d1cf277d293eeac4071668991f66d37d7679d4c3`.
+The dashboard, decision `48-R5`, evidence-roadmap summary, and scientific Loop
+48 row passed focused visual review. All ten sheets received a post-edit visual
+pass, the formula-error scan found zero matches, and ZIP integrity passed. The
+final artifact-tool update/export took 11.04 seconds and reached
+1,572,667,392-byte maximum RSS; do not repeat full workbook imports casually.
+The adjacent user-owned inspection sidecar was not read, modified, staged, or
+committed during this closeout.
+
+Current local acceptance passes 86 focused Loop 48/roadmap tests plus five
+autonomy-charter invariants, 781 dependency-light tests with 142 expected
+skips, and 828 optional-neuro tests with 3 expected skips. The final
+dependency-light run took 1.318 seconds at 110,821,376-byte maximum RSS; the
+final optional-neuro run took 26.177 seconds at 611,926,016-byte maximum RSS.
+Ruff lint, changed-file formatting, compileall,
+every registry JSON, root and Loop 48 CLI help, result inspection,
+`git diff --check`, workbook inspection/render/formula/ZIP checks, and the
+staged secret scan are the closeout gates. Repository-wide `ruff format
+--check .` still reports 106 historical files outside this closeout; those
+unrelated files were deliberately not reformatted.
+
+Closeout commit `6322635` passed push CI `29446438743` and PR CI
+`29446440355`; both Base Python and Optional Neuro Readers jobs were green.

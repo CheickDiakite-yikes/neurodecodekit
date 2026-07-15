@@ -4,25 +4,28 @@
 > numbers 21-24 and the Loop 23.5 calibration gate are post-roadmap extensions,
 > so “20 loops” and “Loop 24 parked” are both true but refer to different
 > things. A second tranche now defines Loops 25-44; Loop 25 passed once at its
-> target-free mechanics boundary with no rerun authorized, while Loop 26
-> planning research is complete and its experiment
-> remains `Not Started`, Loop 27 has selected S25 in metadata while
+> target-free mechanics boundary with no rerun authorized. Loop 26/31/33 was
+> preregistered at `881145d`, authorized at `1c0e52c`, and consumed once after
+> remote-green prediction freeze `54bdca9`. The candidate macro CER was
+> `0.938177` versus prior `0.751235`; primary, attribution, and scaling gates
+> failed, so all three loops are parked with no rerun. Loop
+> 27 has selected S25 in metadata while
 > preregistration remains blocked, and Loop 28 planning research defines a
 > strict zero-shot final-only rule while its experiment remains `Not Started`.
 > Loop 29 planning research defines separate scalp EEG and OPM-MEG lanes while
 > its experiment remains `Not Started`. Loop 30 planning research defines a
 > target-free local replay inspector while its experiment remains `Not
-> Started`. Loop 31 planning research defines a 10-condition encoder and
-> contingent 5-condition LLM attribution firewall while its experiment remains
-> `Not Started`; its maximum future local claim is sensor-signal dependence and
-> brain-specific attribution remains blocked on Loop 35. Loop 32 planning
+> Started`. Loop 31's 10-condition encoder slice failed its complete shared
+> conjunction; the contingent 5-condition LLM extension remained closed.
+> Sensor-signal dependence and brain-specific origin were not established.
+> Loop 32 planning
 > research defines a causal 32-parameter adapter, four calibration modes, six
 > nested budgets, and physically separate calibration/selection/final evidence
 > while its experiment remains `Not Started`; all protected work is
 > unauthorized. Loop 33 planning research defines nested
 > `8, 16, 24, 32, 44, 55` unique-sentence prefixes, at most three seeds and 18
-> candidate fits, and one target-blind shared validation event while its
-> experiment remains `Not Started`; no physical-repetition lane or acquisition
+> candidate fits, and one target-blind shared validation event. The curve ran
+> once but its 55-row model remained worse than the matched prior; no physical-repetition lane or acquisition
 > recommendation exists and all protected work is unauthorized. Loop 34
 > planning research defines seven confidence semantics, eight score/control
 > roles, and recommended fresh synthetic `128/64/256` partitions while its
@@ -277,17 +280,24 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   authorize no code. Loop 24 is now parked and cannot authorize RW3, data,
   training, or hardware. Seeds 2203, 2303, 2353, and 2401 stay consumed; seed
   2402 remains unopened. Loop 25 is consumed at its exact mechanics boundary;
-  the next numbered decision is a separate Loop 26 preregistration or hold.
+  Loop 48 artifact-only failure localization completed one exact Stage A and
+  selected descriptive `F5`; the 10,643-byte result is consumed and no rerun is
+  authorized. The immutable five-hypothesis train-only portfolio now
+  has an additive six-hypothesis discrimination map that separates the fixed
+  recipe from data quantity/diversity and routes shortcut risk to Loop 35; both
+  remain design-only and unauthorized.
 
 ## Next planned 20 loops: 25-44
 
 These rows are an **authorization-gated queue**, not approved experiments. The full
 acceptance boundaries, stop rules, controls, resource caps, dependencies, and
 authorization rules live in `docs/LOOPS_25_44_ROADMAP.md` and
-`registries/next_20_loops.v0.json`. Loop 25 is `Complete` with no rerun;
-Loops 26 and 28-32 are `Not Started` with planning research complete; Loop 27
-has selected metadata while preregistration remains blocked; Loop 33 planning
-research is complete and its experiment remains `Not Started`; Loop 34
+`registries/next_20_loops.v0.json`. Loop 25 is `Complete` with no rerun; Loop
+26/31/33 are consumed and parked after the registered gate failed; Loops 28-30 and 32 are `Not
+Started` with planning research complete; Loop 27
+has selected metadata while preregistration remains blocked; Loop 31's encoder
+slice and Loop 33's bounded curve were scored in the consumed shared event and
+failed their registered conjunctions; Loop 34
 planning research is complete and its experiment remains `Not Started` with
 confidence unavailable; Loop 35 planning research is complete and its
 experiment remains `Not Started`; Loop 36 planning research is complete and
@@ -306,14 +316,14 @@ complete. Every row retains
 | # | Phase | Gate | Core outcome | Priority | Effort | Status |
 |---:|---|---|---|---|---|---|
 | 25 | Causal Evidence | Causal Preprocessing Audit | Prove the complete preprocessing path has zero undeclared future context, full folding-band anti-alias protection, stable timing, and schedule identity. | P0 | M | Complete; target-free mechanics passed once; no rerun |
-| 26 | Causal Evidence | Real Validation-Only Encoder Gate | Decide whether one fixed tiny causal encoder beats no-signal and shuffled controls on source validation only. | P0 | L | Planning research complete; experiment Not Started |
+| 26 | Causal Evidence | Real Validation-Only Encoder Gate | Decide whether one fixed tiny causal encoder beats no-signal and shuffled controls on source validation only. | P0 | L | Parked; candidate `0.938177` CER vs prior `0.751235`; six-target event consumed |
 | 27 | Causal Evidence | Fresh Holdout Preregistration | Identify one independent, licensed, byte-capped holdout without downloading or previewing it. | P0 | M | S25 metadata selected; preregistration blocked |
 | 28 | Causal Evidence | Session And Person Transfer | Make one claim-specific fresh same-person or unseen-person transfer decision under a frozen protocol. | P0 | L | Planning research complete; experiment Not Started |
 | 29 | Translation And Generalization | Portable Sensing Translation | Separate cryogenic MEG, OPM-MEG, EEG, and non-neural device requirements before hardware work. | P1 | M | Planning research complete; experiment Not Started |
 | 30 | Translation And Generalization | Local Private Streaming Prototype | Freeze a target-free loopback replay inspector with explicit revisions/finalization, nine clocks, six latency levels, privacy, accessibility, and browser QA. | P1 | M | Planning research complete; experiment Not Started |
-| 31 | Translation And Generalization | Neural Contribution Ablation | Freeze ten encoder conditions and five contingent LLM conditions that separate sensor signal, timing, context, language-prior, and Neuro Token effects while reserving brain-specific attribution for Loop 35. | P0 | L | Planning research complete; experiment Not Started |
+| 31 | Translation And Generalization | Neural Contribution Ablation | Freeze ten encoder conditions and five contingent LLM conditions that separate sensor signal, timing, context, language-prior, and Neuro Token effects while reserving brain-specific attribution for Loop 35. | P0 | L | Parked; complete attribution conjunction failed; LLM extension remained closed |
 | 32 | Translation And Generalization | New-Subject Calibration And Adaptation | Freeze one causal 32-parameter adapter, four calibration claims, nested 0/2/4/8/16/32 sentence budgets, physical 32/16/48 partition floors, and a one-time final gate without using final rows for fit or selection. | P1 | L | Planning research complete; experiment Not Started |
-| 33 | Reliability And Confounds | Data Scaling And Sample Efficiency | Planning research complete: prospective `8, 16, 24, 32, 44, 55` unique-sentence curve, three-seed/18-fit ceiling, matched priors, one shared validation open, 20 gates, and 30 refusals; experiment unauthorized and Not Started. | P1 | L | Not Started |
+| 33 | Reliability And Confounds | Data Scaling And Sample Efficiency | Prospective `8, 16, 24, 32, 44, 55` unique-sentence curve, three-seed/18-fit ceiling, matched priors, one shared validation open, 20 gates, and 30 refusals. | P1 | L | Parked; descriptive curve improved but 55-row model lost to matched prior |
 | 34 | Reliability And Confounds | Confidence, Abstention, And Revision | Planning research complete: seven confidence semantics, eight score/control roles, fresh 128/64/256 synthetic partitions, bounded loss, generalized risk, revision delay, 20 gates, and 30 refusals; confidence unavailable, experiment unauthorized and Not Started. | P1 | M | Not Started |
 | 35 | Reliability And Confounds | Peripheral Confound Firewall | Planning research complete: freeze 10 confound classes, 9 synchronized stream classes, 13 conditions, 3 stages, 24 gates, and 32 refusals; missing controls block the claim and absolute brain origin stays unavailable. | P0 | L | Not Started |
 | 36 | Reliability And Confounds | Geometry And Reference Harmonization | Planning research complete: freeze 6 representation layers, 5 modality profiles, 24 channel fields, 12 operation classes, 16 fixtures, 22 gates, and 30 refusals; metadata compatibility stays separate from signal/model/device equivalence. | P1 | M | Not Started |
@@ -331,13 +341,16 @@ real-model scaling; a missing fresh holdout blocks transfer; a shortcut in Loop
 31 blocks neural attribution; a replay failure in Loop 41 blocks device work.
 Negative results stay in the tracker instead of being tuned around.
 
-Loop 26's planning packet freezes no experiment. It records a 2,908-parameter
-causal recommendation, a 2,884-parameter linear comparator, six controls, the
-55/6/5 source split, all 64 exact paired assignments available from six
-validation sentences, and 14 false authorization fields. It opened no cache
-content, target, model, validation prediction, source-test row, or session-2
-evidence. See `docs/LOOP_26_PRIMARY_SOURCE_RESEARCH.md` and
-`registries/loop26_research_boundary.v0.json`.
+Loop 26's green shared packet froze the experiment before execution: a
+2,908-parameter causal candidate, 2,884-parameter linear comparator, 21 fits,
+24 target-blind inferences, six priors, 31 prediction sets, the ten-condition
+encoder matrix, nested `8, 16, 24, 32, 44, 55` curve, one post-freeze six-target
+delivery, all 64 sign assignments, and 40 refusals. It was authorized once,
+executed within caps, and scored only after remote-green prediction freeze.
+The primary, attribution, and scaling gates failed; source-test and session-2
+evidence stayed closed. See `docs/LOOP_26_SHARED_VALIDATION_RESULT.md`,
+`docs/LOOP_26_SHARED_VALIDATION_PREREGISTRATION.md` and
+`registries/loop26_shared_validation_contract.v0.json`.
 
 Loop 27's planning packet also freezes no acquisition. A measured pinned
 metadata selector examined 315 MEG entries, found 23 strict pairs and 16
@@ -591,8 +604,20 @@ The next 20 work orders are frozen in
 Truth, Unseen-Person Verdict, Accessible EEG Evidence, Causal Local Use, and
 Independent Evidence And Release.
 
-All 20 statuses are `Not Started`; all execution flags and all nine global
-authorization fields are false. The first possible positive scientific claim
-is a bounded S21 source-validation effect that beats a no-signal prior and all
-registered corrupted-signal controls. The stronger claim is a frozen final-only
-S25 zero-shot result. No roadmap row authorizes either experiment.
+Loop 45 is complete at its target-free mechanics boundary. Loops 46 and 47 are
+parked after the one consumed S21 event failed the candidate-versus-prior and
+full attribution conjunctions. Loop 48 completed one artifact-only Stage A at
+descriptive `F5`; its result is consumed with no rerun. Stage B is now exactly
+preregistered over a deterministic 44-fit/11-check source-train split with 20
+fits, 35 target-blind inferences, five priors, 41 frozen prediction sets, and
+2,048 exact sign assignments. All 55 rows were used historically, so this can
+reach at most E2 diagnostic evidence. The contract authorizes nothing and no
+protected read, implementation, training, inference, or check score occurred.
+Preregistration commit `0ee0ab7` and push/PR CI runs `29452286159` /
+`29452288520` are green. The exact packet and machine request are prepared, but
+all authorization remains false.
+Loops 49-64 are `Not Started`. All execution
+flags and all nine global authorization fields are false. The next possible
+positive scientific claim now requires a fresh, separately registered
+development-person path before the final-only S25 zero-shot verdict. No roadmap
+row authorizes either experiment.

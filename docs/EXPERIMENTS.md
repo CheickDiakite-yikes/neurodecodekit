@@ -922,6 +922,25 @@ decision: causal frame replay passed; learned encoder gate next
 Full method and interpretation:
 `docs/LOOP_21_CAUSAL_CHUNK_REPLAY.md`.
 
+## Design note - Loop 48 multi-hypothesis failure discrimination
+
+This is not an executed experiment. The consumed S21 result currently supports
+only an `E1` blank-heavy, seed-sensitive output phenotype. A future separately
+preregistered Stage B would evaluate six coexisting explanations from one
+disjoint train-only evidence bundle: fixed-recipe optimization, sensor/trial
+quality, timing/preprocessing, representation separability, prior dominance,
+and data quantity/sentence diversity.
+
+Any future bounded sensor-dependence result must clear all registered
+prior/corruption controls by both a frozen practical margin and paired
+uncertainty gate. Peripheral/task-locked shortcut threat `T1` remains outside
+Stage B and routes to Loop 35. Current model, training, prediction, target,
+protected-data, download, stream, device, and hardware operation counts are all
+zero.
+
+See `docs/LOOP_48_HYPOTHESIS_DISCRIMINATION_RESEARCH.md` and
+`registries/loop48_hypothesis_discrimination.v0.json`.
+
 ## Anti-goals
 
 Do not do these until the earlier experiments pass:
