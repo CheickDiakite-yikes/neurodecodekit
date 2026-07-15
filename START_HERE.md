@@ -1,5 +1,10 @@
 # Start Here
 
+> Autonomy note: `docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md` explains why the
+> gates exist and proposes automatic Tier A routine work plus Tier B bounded
+> development experiments. It is a draft and grants no authorization until its
+> exact standing sentence is approved and separately recorded.
+
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.
 3. Read `AGENTS.md` for coding-agent rules.

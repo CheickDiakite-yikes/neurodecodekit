@@ -17,6 +17,8 @@
 > and the consumed report is 10,643 bytes at SHA-256
 > `dbfb4c7cc6163ff31fa216c1b33e7510a87b0b843ef714754037d37275924659`.
 > This is not a proven root cause, and no rerun is authorized.
+> Closeout commit `6322635` passed push CI `29446438743` and PR CI
+> `29446440355`.
 > An additive primary-source pass now defines six coexisting hypotheses, a
 > five-level evidence ladder, and an orthogonal shortcut threat. It is design
 > research only, is not preregistered, cannot inherit Stage A authorization,
@@ -460,6 +462,12 @@ huge raw neurodata → tiny selected shard → reproducible cache → baseline d
 This is not primarily a model repo. It is a **research loop repo**.
 
 ## Current Next Work
+
+Governance note: `docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md` proposes automatic
+Tier A routine work and Tier B bounded development experiments, with one exact
+stop before Tier C irreversible evidence, real-data, hardware, destructive,
+release, or claim actions. The draft is inactive and changes no current loop
+authorization.
 
 1. **Loop 48 - audit the consumed artifact-only result; do not rerun it.**
    Read `docs/LOOP_48_FAILURE_LOCALIZATION_RESULT.md` and
@@ -1139,13 +1147,17 @@ final artifact-tool update/export took 11.04 seconds and reached
 The adjacent user-owned inspection sidecar was not read, modified, staged, or
 committed during this closeout.
 
-Current local acceptance passes 86 focused Loop 48/roadmap tests, 776
-dependency-light tests with 142 expected skips, and 823 optional-neuro tests
-with 3 expected skips. The dependency-light run took 2.338 seconds at
-104,415,232-byte maximum RSS; the optional-neuro run took 34.585 seconds at
-607,223,808-byte maximum RSS. Ruff lint, changed-file formatting, compileall,
+Current local acceptance passes 86 focused Loop 48/roadmap tests plus five
+autonomy-charter invariants, 781 dependency-light tests with 142 expected
+skips, and 828 optional-neuro tests with 3 expected skips. The final
+dependency-light run took 1.318 seconds at 110,821,376-byte maximum RSS; the
+final optional-neuro run took 26.177 seconds at 611,926,016-byte maximum RSS.
+Ruff lint, changed-file formatting, compileall,
 every registry JSON, root and Loop 48 CLI help, result inspection,
 `git diff --check`, workbook inspection/render/formula/ZIP checks, and the
 staged secret scan are the closeout gates. Repository-wide `ruff format
 --check .` still reports 106 historical files outside this closeout; those
 unrelated files were deliberately not reformatted.
+
+Closeout commit `6322635` passed push CI `29446438743` and PR CI
+`29446440355`; both Base Python and Optional Neuro Readers jobs were green.

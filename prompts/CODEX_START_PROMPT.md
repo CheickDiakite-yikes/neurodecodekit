@@ -8,6 +8,7 @@ requests, and these files:
 - `README.md`
 - `START_HERE.md`
 - `CONTRIBUTING.md`
+- `docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md`
 - `docs/CODEX_HANDOFF.md`
 - `docs/RW2_SIGNAL_QUALITY_CLOSEOUT.md`
 - `docs/BYO_NEURODATA_WORKBENCH_SPEC.md`

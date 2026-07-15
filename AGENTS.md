@@ -22,6 +22,15 @@ Do not optimize for impressiveness before reproducibility. A boring baseline tha
 6. **Measure complexity.** Every new pipeline stage should report storage footprint, runtime, and a human-readable summary.
 7. **Avoid LLM-only illusions.** Always keep a language-model-only baseline so we do not accidentally credit the neural decoder for autocomplete.
 
+## Research autonomy
+
+`docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md` proposes standing Tier A routine work
+and Tier B bounded development work while retaining exact approval for Tier C
+irreversible evidence, real-data, hardware, destructive, release, and claim
+actions. It is a draft and grants no authorization. Until its exact standing
+sentence is approved and separately recorded, continue to follow every existing
+loop-specific contract and authorization boundary.
+
 ## Immediate next task
 
 The first 20-loop roadmap is complete except for the deliberately parked Loop
@@ -145,6 +154,7 @@ bytes. This is not a proven root cause. No ignored output, cache member, array,
 target, checkpoint, private prediction, model, training, network, stream,
 device, or hardware payload was accessed or run. Stage A is consumed; do not
 rerun it, tune from it, or promote its phenotype into a causal explanation.
+Closeout commit `6322635` passed push CI `29446438743` and PR CI `29446440355`.
 
 Future train-only Loop 48 thinking is now separated into
 `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md` and

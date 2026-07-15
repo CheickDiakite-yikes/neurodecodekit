@@ -2743,3 +2743,33 @@ Evidence: `docs/LOOP_48_AUTHORIZATION_DECISION.md`,
 `docs/LOOP_48_FAILURE_LOCALIZATION_RESULT.md`,
 `registries/loop48_failure_localization_result.v0.json`, and
 `tests/test_loop48_failure_localization_result.py`.
+
+## 0082 - Draft Standing Autonomy Around Reversible Work
+
+Decision: replace repeated permission requests for routine work with a proposed
+three-tier charter. Tier A covers research, documentation, code, tests,
+synthetic fixtures, target-free aggregate analysis, preregistration, commits,
+pushes, and CI. Tier B covers bounded development experiments only when the
+development partition, hypotheses, metrics, thresholds, seeds, stop rules,
+resource caps, and claim ceiling are frozen before execution.
+
+Irreversibility decision: retain exact one-time permission for Tier C events:
+new real participant payloads, sealed targets, final or unseen-person scoring,
+consumed-evaluation reuse, post-outcome protocol changes, real downloads,
+hardware or participant recording, destructive operations, releases, and claim
+promotion. These stops protect evidence validity and the user's machine; they
+are not a judgment about the co-researcher's competence.
+
+Resource decision: propose a standing default of one thread, one worker, one
+numerical job, 1 GiB RSS, 32 MiB generated artifacts per loop, no new real-data
+download, no persistent process, and no deletion outside the repository. A
+loop-specific contract may tighten but cannot silently loosen these limits.
+
+Activation decision: the charter is a draft and grants no authorization. It
+becomes active only after the exact sentence in
+`docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md` is supplied and captured in a separate
+committed decision. Approval is prospective and cannot reopen Loop 48, S25,
+RW3, or another consumed or independently gated experiment.
+
+Evidence: `docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md` and
+`tests/test_research_autonomy_charter.py`.

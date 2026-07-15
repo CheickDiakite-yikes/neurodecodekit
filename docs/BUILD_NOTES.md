@@ -3844,6 +3844,8 @@ home use, and clinical utility remain unestablished.
   104,415,232/607,223,808 bytes RSS. Ruff lint and changed-file formatting pass.
   Repository-wide formatting still reports 106 historical files, which this
   closeout deliberately leaves untouched.
+- Closeout commit `6322635` passed push CI `29446438743` and PR CI
+  `29446440355`; both clean-host jobs were green.
 
 Engineering capability added: one hash-bound aggregate analyzer can reproduce
 the registered failure phenotype under strict resource and access limits.
@@ -3851,3 +3853,33 @@ the registered failure phenotype under strict resource and access limits.
 Scientific claim not established: this result does not identify a causal root
 cause or establish neural advantage, decoding utility, generalization,
 real-time behavior, EEG portability, device performance, or clinical value.
+
+## 2026-07-15 - Draft Tiered Research Autonomy
+
+- Documented why the current gates exist: machine-safety controls protect
+  storage, CPU, background processes, unrelated projects, and destructive
+  operations; scientific controls protect sealed targets, consumed evaluations,
+  frozen protocols, and honest claims.
+- Proposed Tier A autonomous routine work and Tier B bounded development work
+  under one thread, one worker, one numerical job, 1 GiB RSS, and 32 MiB output.
+  An already-authorized development partition can move through later Tier B
+  loops without another permission message when every split, metric, seed,
+  threshold, stop rule, cap, and claim ceiling is frozen first.
+- Retained one exact Tier C stop for new real payloads, final or unseen-person
+  targets, consumed-evaluation reuse, post-outcome protocol changes, downloads,
+  hardware or participant recording, destructive operations, releases, and
+  claim promotion.
+- Kept the charter explicitly inactive. Its exact standing approval is
+  prospective and cannot reopen Loop 48 Stage B, RW3, S25, or another consumed
+  or independently gated experiment.
+- Added five dependency-light invariants. The final branch-level local suites
+  pass 781 tests with 142 expected skips and 828 optional-neuro tests with 3
+  expected skips. Runtime was 1.318/26.177 seconds and maximum RSS was
+  110,821,376/611,926,016 bytes.
+
+Engineering capability proposed: one standing decision can remove repeated
+permission stops from reversible routine and bounded development work.
+
+Scientific claim not established: the draft authorizes nothing and creates no
+new neural, decoding, generalization, real-time, EEG, device, or clinical
+evidence.

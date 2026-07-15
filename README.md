@@ -19,6 +19,14 @@ should be able to identify one legal dataset slice, inspect it locally, build a
 bounded cache, preserve provenance, compare against a language-only control,
 and explain exactly what the result does not prove.
 
+Why the gates? Most routine engineering is reversible, but opening a held-out
+target, reusing a consumed evaluation, or changing a rule after seeing the
+outcome is not scientifically reversible. The draft
+[Research Autonomy Charter](docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md) would let
+routine code, tests, synthetic work, bounded development experiments, commits,
+pushes, and CI proceed autonomously while reserving exact approval for those
+irreversible events. The draft is not active yet.
+
 ## Results At A Glance
 
 > The standout result is not an inflated decoder score. It is a complete,
@@ -127,7 +135,7 @@ negative result and S25 is never repurposed for calibration.
 | Loop 42 named-device boundary | OpenBCI Cyton base 8-channel USB-radio; Q0 only; 28 identity fields; 16 packet fields; 7 timing observables; 10 anomalies; 30 fixtures; 4 stages; 34 gates; 46 refusals; 45 false authorization fields | planning research only; no purchase, SDK, serial read, board connection, participant, recording, or device result exists | Makes a future local-device mechanics test exact while refusing to turn host timestamps, local files, connectivity, or eight channels into latency, privacy, EEG-quality, or text-decoding claims |
 | Loop 43 independent-reproduction boundary | 7 qualification levels; 16 independence fields; 28 packet fields; 34 submission fields; 8 comparison classes; 12 discrepancy classes; 32 fixtures; 4 stages; 36 gates; 48 refusals; 48 false authorization fields | planning research only; no packet, oracle, outreach, contributor, submission, adjudication, archive, or release exists | Defines how one future external environment can reproduce a released target-free software artifact without inflating that result into scientific replication, neural advantage, or population generalization |
 | Loop 44 claim-release matrix | 16 claims; 7 evidence levels; 5 model cards; 4 dataset cards; 14 gates; 8 risks; 0 tag/release/DOI operations | artifact-only review complete; engineering release held; scientific release parked | Makes every public claim traceable to cohort, task, split, comparator, uncertainty, resources, access, privacy, license, and evidence while preserving negative results |
-| Test and release surface | 86 focused Loop 48 tests; local dependency-light suite 776 tests with 142 expected skips; local optional-neuro suite 823 tests with 3 expected skips | Authorization commit `5bae880` and implementation commit `ca21539` each passed push and PR CI before the one Stage A execution; result closeout is locally qualified pending its own remote gate | Makes the consumed negative result, research contracts, target isolation, freeze binding, access order, tamper checks, and authorization boundaries executable and reviewable without hiding environment-specific timing evidence |
+| Test and release surface | 86 focused Loop 48 tests plus 5 autonomy-charter invariants; local dependency-light suite 781 tests with 142 expected skips; local optional-neuro suite 828 tests with 3 expected skips | Authorization `5bae880`, implementation `ca21539`, and closeout `6322635` each passed push and PR CI; closeout runs were `29446438743` / `29446440355` | Makes the consumed negative result, research contracts, target isolation, freeze binding, access order, tamper checks, and authorization boundaries executable and reviewable without hiding environment-specific timing evidence |
 
 ### Real-Data Scientific Scorecard
 
@@ -1027,6 +1035,7 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 |---|---|
 | [START_HERE.md](START_HERE.md) | shortest current orientation |
 | [docs/CODEX_HANDOFF.md](docs/CODEX_HANDOFF.md) | exact continuation boundary for coding agents |
+| [docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md](docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md) | inactive three-tier proposal for autonomous routine/development work and exact irreversible-event stops |
 | [docs/BUILD_NOTES.md](docs/BUILD_NOTES.md) | chronological measured build journal |
 | [docs/DECISIONS.md](docs/DECISIONS.md) | consequential architecture and research decisions |
 | [docs/NEXT_20_LOOPS_TRACKER.md](docs/NEXT_20_LOOPS_TRACKER.md) | original 20-loop tracker, current post-roadmap gate, and planning-only Loops 25-44 summary |
