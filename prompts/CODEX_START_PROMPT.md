@@ -310,7 +310,9 @@ preserves the green five-hypothesis starting point. The additive research in
 fixed recipe, adds `H6` for data quantity/diversity, and routes the orthogonal
 `T1` shortcut threat to Loop 35. Physical compute stays sequential and
 one-threaded. Do not create a split, fixture, static prototype, model inventory,
-data read, or execution from a Stage A decision.
+data read, or execution from a Stage A decision. Commit `33a14d8` passed push
+CI `29436731383` and PR CI `29436735374`; this qualifies only the additive
+design and authorizes nothing.
 
 Loop 27 is also review-only planning evidence. Do not turn the selected S25
 paths, official hashes, local MAT presence, 1 GiB cap, or roadmap status into a

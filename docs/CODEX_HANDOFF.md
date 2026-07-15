@@ -19,7 +19,8 @@
 > An additive primary-source pass now defines six coexisting hypotheses, a
 > five-level evidence ladder, and an orthogonal shortcut threat. It is design
 > research only, is not preregistered, cannot inherit Stage A authorization,
-> and cannot establish brain-specific origin.
+> and cannot establish brain-specific origin. Commit `33a14d8` passed push CI
+> `29436731383` and PR CI `29436735374`; all authorization fields remain false.
 
 > Historical pre-Loop-25-execution context, retained for audit: Loops 1-12,
 > 14-22, and 23.5 are complete; Loops
@@ -477,7 +478,8 @@ This is not primarily a model repo. It is a **research loop repo**.
    `registries/loop48_hypothesis_discrimination.v0.json` add `H6` for data
    quantity/diversity, narrow `H1` to the exact fixed recipe, and route `T1`
    shortcut risk to Loop 35. Splits, thresholds, models, caps, and execution
-   remain unfrozen and unauthorized.
+   remain unfrozen and unauthorized. Commit `33a14d8` and both CI runs are
+   green, but qualification is not execution permission.
 2. **RW3 - decide on the prepared Stage A packet only.** Review
    `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` and
    `registries/rw3_stage_a_authorization_request.v0.json`. The request is bound
@@ -1127,20 +1129,23 @@ session 2 and S7 stay consumed; S25 stays unopened and final-only. EEG,
 streaming, device, home, reproduction, and release phases remain downstream
 and separately authorized.
 
-The tracker now has ten sheets, including `Loops 45-64`. After the consumed
-Loop 26/31/33 closeout it is 115,442 bytes at SHA-256
-`f081e7755c586433b821345974f62effdab777346aeaad4f9114afb953157a85`.
-All ten sheets rendered, the four changed sheets passed visual review, key
-ranges reloaded, the exported ZIP passed integrity validation, and the
-formula-error scan found zero matches. The user-owned inspection sidecar
+The tracker has ten sheets, including `Loops 45-64`. After the additive Loop 48
+research update it is 117,184 bytes at SHA-256
+`9a25c0eef4557618d3639c74549b30ace0c352cc559f45de9c73a0dbda3f33ec`.
+The dashboard, decision log, evidence-roadmap header, and scientific Loop 48 row
+passed focused visual review; key ranges reloaded; the exported ZIP passed
+integrity validation; and the formula-error scan found zero matches. The
+artifact-tool export took 11.53 seconds and reached 1,496,907,776-byte maximum
+RSS, so no new full-workbook render was used. The user-owned inspection sidecar
 remains byte-exact at SHA-256
 `b96bbea77ec93e59c0db7c4bcaeb4a9182f1f7cc7039d13fb223b65e0005beb6`
 and remains untracked and unstaged.
 
-Local closeout acceptance passes 70 focused result and roadmap tests; 748 fully
-provisioned unittests with three expected skips in 24.603 seconds and
-625,442,816-byte maximum RSS, compared with the 744-test, three-skip pre-change
-baseline; and 701 dependency-light tests with 142 expected skips in 1.596
-seconds and 118,538,240-byte maximum RSS. Final static checks and the staged
-secret scan passed. Closeout commit `f407ffb` passed push CI `29428087084` and
-PR CI `29428091698`, including Base Python and Optional Neuro Readers.
+Current closeout acceptance passes 53 focused Loop 48/roadmap tests and 743
+dependency-light tests with 142 expected skips; the measured local full run
+took 3.32 seconds and 112,672,768-byte maximum RSS. Ruff, formatting,
+compileall, every registry JSON, CLI help, `git diff --check`, workbook
+inspection/render/formula/ZIP checks, and the staged secret scan pass. Commit
+`33a14d8` passed push CI `29436731383` and PR CI `29436735374`; each clean host
+passed 743 dependency-light tests with 142 expected skips and 775 optional-neuro
+tests with 22 expected skips.

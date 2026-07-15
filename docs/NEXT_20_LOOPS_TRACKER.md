@@ -608,7 +608,9 @@ Loop 45 is complete at its target-free mechanics boundary. Loops 46 and 47 are
 parked after the one consumed S21 event failed the candidate-versus-prior and
 full attribution conjunctions. Loop 48 is preregistered with authorization
 pending; its Stage A request is remotely green, while its five-hypothesis Stage
-B portfolio and additive H1-H6/T1 discrimination map remain design-only. Loops
+B portfolio and additive H1-H6/T1 discrimination map remain design-only. The
+additive map is remotely green at commit `33a14d8` with push CI `29436731383`
+and PR CI `29436735374`, but no authorization changed. Loops
 49-64 are `Not Started`. All execution
 flags and all nine global authorization fields are false. The next possible
 positive scientific claim now requires a fresh, separately registered

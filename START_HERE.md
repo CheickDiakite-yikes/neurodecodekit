@@ -34,7 +34,9 @@
    `registries/loop48_hypothesis_discrimination.v0.json` for the additive
    six-hypothesis refinement. Scientific comparisons are parallel, numerical
    compute is sequential, `T1` routes shortcut risk to Loop 35, and every
-   execution field is false.
+   execution field is false. Additive design commit `33a14d8` passed push CI
+   `29436731383` and PR CI `29436735374`; qualification still authorizes no
+   Stage A or Stage B operation.
 8. Read `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` for the selected S25
    metadata candidate and every blocker that still prevents preregistration,
    download, signal/target access, or transfer evaluation.
@@ -474,7 +476,8 @@ remains false. Its request/portfolio commit `0ffdf47` is remotely green, so
 the exact Stage A sentence or an explicit hold is the next decision. The
 additive H1-H6 discrimination design changes no authorization and caps a future
 Stage B result at bounded sensor dependence under frozen margin and uncertainty
-gates; brain-specific origin remains a separate Loop 35 question. Loops
+gates; brain-specific origin remains a separate Loop 35 question. Commit
+`33a14d8` and both CI runs are green. Loops
 49-64 remain `Not Started`, and all current execution
 flags are false. S25 remains sealed until a separate final-only zero-shot
 packet is complete.

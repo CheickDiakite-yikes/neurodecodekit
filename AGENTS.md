@@ -162,7 +162,10 @@ coexisting hypotheses from shared evidence with sequential one-thread compute.
 It is design research only: exact splits, thresholds, model inventory, runtime,
 RSS, and output caps are unfrozen, every Stage B execution field is false, and
 Stage B cannot establish brain-specific origin. A future Stage A authorization
-would not authorize this portfolio or additive design.
+would not authorize this portfolio or additive design. Additive design commit
+`33a14d8` passed push CI `29436731383` and PR CI `29436735374`; Base Python ran
+743 tests with 142 expected skips, Optional Neuro Readers ran 775 with 22
+expected skips, and qualification changed no authorization.
 
 Loop 27 planning research is complete at green commit `b3d61b6`, but no
 preregistration or acquisition request exists:
@@ -509,7 +512,8 @@ five phases of four. Loop 45 is complete at its target-free mechanics boundary;
 Loops 46/47 are consumed and parked after the failed shared S21 event. Loop 48
 is preregistered at an artifact-only post-outcome boundary with authorization
 pending. Its additive six-hypothesis discrimination research is design-only,
-unpreregistered, and unauthorized; Loops 49-64 are `Not Started`, every current execution flag is false,
+unpreregistered, remotely green at commit `33a14d8`, and unauthorized. Loops
+49-64 are `Not Started`, every current execution flag is false,
 and every global authorization field is false. Do not execute Loop 48, start a
 new development person, or open any S25 path from a broad continuation request.
 
@@ -743,7 +747,8 @@ authorization boundary.
   request/portfolio commit `0ffdf47` passed push CI `29433294092` and PR CI
   `29433297546`; the additive H1-H6/T1 discrimination map also leaves every
   Stage A and Stage B authorization false and every protected/model counter at
-  zero.
+  zero. Its commit `33a14d8` passed push CI `29436731383` and PR CI
+  `29436735374`.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed

@@ -3753,3 +3753,54 @@ several failure mechanisms efficiently without reusing consumed validation.
 Scientific claim not established: the design confirms none of the five
 hypotheses and adds no neural, decoding, generalization, real-time, EEG,
 portable/home-device, or clinical evidence.
+
+## 2026-07-15 - Loop 48 Hypothesis Discrimination Research
+
+- Preserved the green H1-H5 portfolio and added an independent H1-H6
+  discrimination map rather than rewriting historical evidence. `H1` now means
+  failure of the exact 2,908-parameter, 240-step tiny CTC recipe, not failure of
+  CTC generally; `H6` separately tests data quantity and unique-sentence
+  diversity.
+- Added orthogonal threat `T1` for peripheral/task-locked shortcut dependence.
+  A future Stage B result can reach at most `E3` bounded sensor dependence and
+  only if intact signal clears every registered prior/corruption by both a
+  preregistered practical margin and paired uncertainty gate. Brain-specific
+  origin remains behind the separate Loop 35 firewall.
+- Bound six coexisting hypotheses to six shared sequential evidence stages,
+  five evidence levels, five non-identifiability rules, seven deliberately
+  unfrozen Stage B fields, five public primary-source bindings, 15 false
+  authorization fields, one thread, one worker, and one numerical job.
+- Read five public sources and produced a 12,215-byte research note plus a
+  12,053-byte registry. Protected cache/array, signal, target, fixture, split,
+  model, training, prediction, checkpoint, scoring, download, stream, device,
+  and hardware counters all remained zero.
+- Added ten dependency-light invariants. The combined Loop 48 and scientific
+  roadmap surface passes 53 focused tests. The full dependency-light suite
+  passes 743 tests with 142 expected skips, versus the 733/142 pre-change
+  baseline; measured final-tree local runtime was 3.32 seconds with 112,672,768-byte
+  maximum RSS.
+- Commit `33a14d8` passed push CI `29436731383` and PR CI `29436735374`. Each
+  clean host passed Ruff, 743 dependency-light tests with 142 expected skips,
+  and 775 optional-neuro tests with 22 expected skips.
+- Updated the ten-sheet tracker with dashboard scope, decision `48-R4`, the
+  Loops 25-44 summary, and the scientific Loop 48 row. The workbook grew from
+  116,641 to 117,184 bytes and is SHA-256
+  `9a25c0eef4557618d3639c74549b30ace0c352cc559f45de9c73a0dbda3f33ec`.
+  Changed ranges rendered cleanly after two targeted row-height repairs, the
+  formula scan found zero errors, and ZIP integrity passed. The artifact-tool
+  export took 11.53 seconds and peaked at 1,496,907,776-byte RSS, so the pass
+  deliberately avoided a new full-workbook render. The adjacent user-owned
+  sidecar remained untracked and byte-identical at SHA-256
+  `b96bbea77ec93e59c0db7c4bcaeb4a9182f1f7cc7039d13fb223b65e0005beb6`.
+- Ruff lint, changed-test formatting, compileall, every registry JSON, CLI help,
+  `git diff --check`, workbook value inspection, focused renders,
+  formula-error scan, ZIP integrity, and staged secret scanning passed.
+
+Engineering capability proposed: a future one-pass train-only diagnostic can
+compare six plausible failure mechanisms while retaining conflicts, resource
+limits, uncertainty, and claim ceilings.
+
+Scientific claim not established: no hypothesis was tested or confirmed, no
+new neural evidence was created, and neural advantage, useful decoding,
+brain-specific origin, generalization, real-time behavior, EEG portability,
+home use, and clinical utility remain unestablished.

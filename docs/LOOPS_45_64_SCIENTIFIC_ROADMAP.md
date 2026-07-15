@@ -117,7 +117,9 @@ scientifically while one-thread numerical work remains sequential. The
 preregistered practical-margin and paired-uncertainty gate is required for a
 future `E3` bounded sensor-dependence result, while brain-specific origin stays
 behind Loop 35. This design is not preregistered or authorized and cannot
-inherit Stage A scope.
+inherit Stage A scope. Additive design commit `33a14d8` passed push CI
+`29436731383` and PR CI `29436735374`; remote qualification changes no
+authorization field.
 
 Future Stage A may only verify hashes, reproduce aggregate blank/CER summaries,
 apply the ordered tree, and emit one target-free aggregate report. Do not use
