@@ -145,5 +145,6 @@ authorized.
 - Dependency-light suite: 701 tests passed with 142 expected optional skips in
   `1.596` seconds; process maximum RSS was `118,538,240` bytes.
 - Ruff, compileall, registry JSON, all five Loop 26 CLI help surfaces, workbook
-  ZIP/formula/render checks, diff hygiene, and staged secret scanning are final
-  publication gates and must pass before this closeout is pushed.
+  ZIP/formula/render checks, diff hygiene, and staged secret scanning passed.
+- Closeout commit `f407ffb` passed push CI `29428087084` and PR CI
+  `29428091698`, including Base Python and Optional Neuro Readers.

@@ -3634,5 +3634,5 @@ brain-specific origin, transfer, real-time, portable-hardware, or clinical resul
 - Closeout verification passes 70 focused result/roadmap tests; 748 fully
   provisioned unittests with three expected skips versus the 744/3 pre-change
   baseline; and 701 dependency-light tests with 142 expected optional skips.
-  Final static, CLI, workbook, secret-scan, and remote-CI gates remain required
-  before publication.
+  Final static, CLI, workbook, and secret-scan gates passed. Closeout commit
+  `f407ffb` passed push CI `29428087084` and PR CI `29428091698`.

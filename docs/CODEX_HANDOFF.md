@@ -1117,5 +1117,6 @@ Local closeout acceptance passes 70 focused result and roadmap tests; 748 fully
 provisioned unittests with three expected skips in 24.603 seconds and
 625,442,816-byte maximum RSS, compared with the 744-test, three-skip pre-change
 baseline; and 701 dependency-light tests with 142 expected skips in 1.596
-seconds and 118,538,240-byte maximum RSS. Publication still requires the final
-static checks, staged secret scan, closeout commit, push, and remote CI pass.
+seconds and 118,538,240-byte maximum RSS. Final static checks and the staged
+secret scan passed. Closeout commit `f407ffb` passed push CI `29428087084` and
+PR CI `29428091698`, including Base Python and Optional Neuro Readers.
