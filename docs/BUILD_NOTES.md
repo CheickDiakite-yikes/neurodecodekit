@@ -4397,3 +4397,31 @@ Scientific claim not established: no real signal or target was opened, so
 neural advantage, sensor-signal dependence, brain-specific origin, real
 decoding improvement, generalization, real-time performance, and portable or
 home EEG performance remain unestablished.
+
+## 2026-07-15 - Loop 53 Fresh EEG Acquisition Registration
+
+- Reverified only public metadata for the pinned SpanishBCBL revision and froze
+  one exact S20 session 2 block 2 BrainVision triplet plus MAT log: four files
+  totaling 96,090,264 bytes with Git/LFS/Xet source identities.
+- Split acquisition from interpretation. Loop 53 permits only a future metadata
+  recheck, one isolated transfer, opaque integrity hashes, and a bounded
+  receipt; Loop 54 retains header, marker, geometry, signal, MAT, target, trial,
+  and cache decisions.
+- Froze one thread/worker, 600 seconds, 512 MiB RSS, 128 MiB network, 256 MiB
+  incremental disk, 1 MiB receipt, and 2 GiB free-disk limits. Destination
+  collisions and every mismatch park without overwrite, substitution, or rerun.
+- Registration commit `bccd367` passed push CI `29469813041` and PR #31 CI
+  `29469829357`. Base Python passed 929 tests with 156 expected skips; Optional
+  Neuro Readers passed 961 with 29 expected skips. The local full environment
+  passed 976 tests with 3 expected skips.
+- Added the exact Tier C packet and hash-bound machine request. All 16 request
+  execution flags remain false. No S20 payload, local path, header, marker,
+  signal, MAT, target, cache, split, model, training, scoring, stream, device,
+  or hardware operation occurred.
+
+Engineering capability added: NeuroDecodeKit now has a source-bound,
+resource-bounded, no-overwrite acquisition contract for one fresh EEG bundle.
+
+Scientific claim not established: no EEG payload was acquired or interpreted,
+so no signal quality, neural advantage, decoding accuracy, generalization,
+real-time, portable/home, or clinical result was established.

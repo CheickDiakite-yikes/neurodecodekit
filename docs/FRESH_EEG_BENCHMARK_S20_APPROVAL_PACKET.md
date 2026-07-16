@@ -6,6 +6,13 @@ Prepared: 2026-07-10
 
 Status: **NOT AUTHORIZED - DRY RUN ONLY**
 
+> Historical packet. For all future S20 work, this broad acquisition-through-
+> scoring proposal is superseded by the narrower Loop 53 acquisition-only
+> contract in `docs/LOOP_53_FRESH_EEG_ACQUISITION_PREREGISTRATION.md` and
+> `registries/loop53_fresh_eeg_acquisition_contract.v0.json`. This document is
+> retained for provenance and grants no implementation, download, payload,
+> target, model, training, or scoring permission.
+
 ## Question
 
 Can one fresh, task-matched SpanishBCBL EEG block pass the existing

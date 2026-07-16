@@ -2,9 +2,9 @@
 
 Machine source of truth: `registries/next_scientific_loops.v0.json`
 
-Status: **Loop 45 mechanics complete; every experiment in Loops 46-64 and every
-download, model, participant, device, and release action remain separately
-unauthorized**
+Status: **Loop 45 mechanics complete; Loop 53 acquisition preregistered with
+authorization pending; every experiment in Loops 46-64 and every download,
+model, participant, device, and release action remain separately unauthorized**
 
 ## North Star
 
@@ -244,9 +244,21 @@ S25 then becomes consumed forever.
 
 ### Loop 53 - Fresh S20 EEG Acquisition Gate
 
-Acquire only the exact previously selected S20 BrainVision/log bundle after an
-explicit dry-run and `--execute` decision. Storage capacity alone is not
-permission. S7 remains consumed and excluded from selection.
+**Status: preregistered; authorization pending.** The frozen contract is
+`registries/loop53_fresh_eeg_acquisition_contract.v0.json`. It binds revision
+`88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684`, one S20 session 2 block 2
+BrainVision triplet plus companion MAT log, four exact files, and 96,090,264
+bytes. A future authorized run may reverify metadata, transfer once, perform
+opaque integrity hashes, and emit a bounded receipt. It may not parse a header,
+marker, signal, or MAT field; read a target; create a cache/split; or run a
+model. Header audit and cache planning now belong to Loop 54.
+
+**Gate:** exact revision/license/path/size/hash identity, a complete isolated
+bundle, 128 MiB network and 256 MiB incremental-disk caps, one thread/worker,
+and zero forbidden access counters. Any mismatch, collision, partial transfer,
+or cap breach parks without substitution or rerun. Storage capacity and general
+research autonomy are not acquisition permission; exact Tier C authorization
+is pending. S7 remains consumed and excluded.
 
 ### Loop 54 - EEG Trial Geometry And Confound Ledger
 

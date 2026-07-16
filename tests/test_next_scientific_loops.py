@@ -81,6 +81,7 @@ class NextScientificLoopsTests(unittest.TestCase):
                 46: "Parked; Registered Gate Failed",
                 47: "Parked; Shared Attribution Gate Failed",
                 48: "Complete A/B; Stage C Consumed and Parked",
+                53: "Preregistered; Authorization Pending",
             }.get(row["loop_id"], "Not Started")
             self.assertEqual(row["status"], expected_status)
             self.assertTrue(row["controls"])
@@ -151,9 +152,15 @@ class NextScientificLoopsTests(unittest.TestCase):
         self.assertIn("consumed", loop52["kill_or_park_rule"])
 
     def test_eeg_home_and_device_claims_stay_separate(self):
+        loop53 = next(row for row in self.registry["loops"] if row["loop_id"] == 53)
         loop55 = next(row for row in self.registry["loops"] if row["loop_id"] == 55)
         loop58 = next(row for row in self.registry["loops"] if row["loop_id"] == 58)
         loop60 = next(row for row in self.registry["loops"] if row["loop_id"] == 60)
+        self.assertIn("loop53_fresh_eeg_acquisition_contract.v0.json", loop53["build_deliverable"])
+        self.assertIn("96,090,264", loop53["data_scope"])
+        self.assertIn("no payload has opened", loop53["data_scope"])
+        self.assertIn("exact Loop 53 Tier C sentence", loop53["authorization_boundary"])
+        self.assertFalse(loop53["execution_authorized"])
         self.assertIn("EEG sensor-signal", loop55["scientific_claim_target"])
         self.assertEqual(loop58["scientific_claim_target"], "device mechanics only")
         self.assertIn("never home text decoding", loop60["scientific_claim_target"])

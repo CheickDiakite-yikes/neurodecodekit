@@ -83,57 +83,66 @@
    EEG lane, partner/lab OPM-MEG lane, 15-field modality matrix, six-level
    qualification ladder, and exact 5-10 GB capacity boundary. It is planning
    research only; Loop 29 remains `Not Started`.
-11. Read `docs/LOOP_30_PRIMARY_SOURCE_RESEARCH.md` for the future loopback-only
+11. Read `docs/LOOP_53_PRIMARY_SOURCE_RESEARCH.md`,
+   `docs/LOOP_53_FRESH_EEG_ACQUISITION_PREREGISTRATION.md`, and
+   `registries/loop53_fresh_eeg_acquisition_contract.v0.json` for the exact
+   four-file, 96,090,264-byte S20 acquisition-only gate. Registration commit
+   `bccd367` passed push CI `29469813041` and PR CI `29469829357`. Then read
+   `docs/LOOP_53_AUTHORIZATION_PACKET.md` and
+   `registries/loop53_authorization_request.v0.json` for the pending exact Tier
+   C decision. Every execution flag is false; no S20 payload, local stat/hash,
+   header, signal, MAT, target, cache, split, or model operation occurred.
+12. Read `docs/LOOP_30_PRIMARY_SOURCE_RESEARCH.md` for the future loopback-only
    target-free replay inspector, nine-clock timing contract, six latency claim
    levels, 18 future gates, and 30 refusals. It is planning research only;
    Loop 30 remains `Not Started` with no trace, UI, server, or browser run.
-12. Read `docs/LOOP_31_PRIMARY_SOURCE_RESEARCH.md` for the attribution
+13. Read `docs/LOOP_31_PRIMARY_SOURCE_RESEARCH.md` for the attribution
    taxonomy. Its ten-condition encoder slice ran inside the consumed shared
    event: zero-signal and timing-only components passed, but the complete
    registered conjunction failed. Loop 31 is parked; sensor-signal dependence
    and brain-specific origin were not established, and the five-condition
    LLM/Neuro Token extension remained closed.
-13. Read `docs/LOOP_35_PRIMARY_SOURCE_RESEARCH.md` for the ten confound classes,
+14. Read `docs/LOOP_35_PRIMARY_SOURCE_RESEARCH.md` for the ten confound classes,
    nine future synchronized stream classes, 13 conditions, three-stage access
    boundary, and the claim ceiling of incremental brain-sensor information
    beyond recorded controls. It is planning research only; Loop 35 remains
    `Not Started` and unauthorized.
-14. Read `docs/LOOP_36_PRIMARY_SOURCE_RESEARCH.md` for the six representation
+15. Read `docs/LOOP_36_PRIMARY_SOURCE_RESEARCH.md` for the six representation
    layers, five modality profiles, 24 channel fields, 12 operation classes,
    explicit unit/transform/reference/interpolation boundaries, 22 gates, and
    30 refusals. It is planning research only; Loop 36 remains `Not Started`,
    unauthorized, and capped at future declared metadata compatibility.
-15. Read `docs/LOOP_37_PRIMARY_SOURCE_RESEARCH.md` for the six export layers,
+16. Read `docs/LOOP_37_PRIMARY_SOURCE_RESEARCH.md` for the six export layers,
    five artifact profiles, stable BIDS 1.11.1 field mapping, explicitly
    non-standard NeuroDecodeKit payload boundary, 24 gates, and 32 refusals. It
    is planning research only; Loop 37 remains `Not Started` and unauthorized.
-16. Read `docs/LOOP_38_PRIMARY_SOURCE_RESEARCH.md` for the five sensitivity
+17. Read `docs/LOOP_38_PRIMARY_SOURCE_RESEARCH.md` for the five sensitivity
    levels, eight artifact classes, ten lifecycle surfaces, 12 sensitive-field
    classes, five deletion-receipt levels, 26 gates, and 36 refusals. It is
    planning research only; Loop 38 remains `Not Started`, unresolved copies
    remain unresolved, and all scanner/deletion/identity/release work is
    unauthorized.
-17. Read `docs/LOOP_39_PRIMARY_SOURCE_RESEARCH.md` for the seven qualification
+18. Read `docs/LOOP_39_PRIMARY_SOURCE_RESEARCH.md` for the seven qualification
    levels, 18 environment fields, eight output classes, six comparison classes,
    six future matrix cells, 28 gates, and 38 refusals. It is planning research
    only; Loop 39 remains `Not Started`, Python 3.10/macOS/cross-OS support stays
    unqualified, and all fixture/manifest/matrix/install/build work is
    unauthorized.
-18. Read `docs/LOOP_41_PRIMARY_SOURCE_RESEARCH.md` for the six-layer future
+19. Read `docs/LOOP_41_PRIMARY_SOURCE_RESEARCH.md` for the six-layer future
    RW3-to-NeuroToken join, seven-clock ledger, anomaly and resume rules, and
    explicit dependency firewall. It is planning research only; Loop 41
    remains `Not Started` and unauthorized, with no fixture or runtime.
-19. Read `docs/LOOP_42_PRIMARY_SOURCE_RESEARCH.md` for the Q0-only OpenBCI
+20. Read `docs/LOOP_42_PRIMARY_SOURCE_RESEARCH.md` for the Q0-only OpenBCI
    Cyton base 8-channel USB-radio selection, 28-field identity record, packet/
    timing/locality/safety boundaries, four stages, 34 gates, and 46 refusals.
    It is planning research only; no purchase, SDK, connection, participant,
    recording, device qualification, or scientific result is authorized.
-20. Review `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` only when deciding whether
+21. Review `docs/RW3_STAGE_A_AUTHORIZATION_PACKET.md` only when deciding whether
    to authorize the independent RW3 Stage A.
-21. Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md` and
+22. Read `docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md` and
    `docs/LOOPS_25_44_ROADMAP.md` for the planning-only Loops 25-44 queue.
-22. Paste `prompts/CODEX_START_PROMPT.md` into Codex to continue.
-23. Run tests:
+23. Paste `prompts/CODEX_START_PROMPT.md` into Codex to continue.
+24. Run tests:
 
 ```bash
 PYTHONPATH=src python -m unittest discover -s tests -v
@@ -325,9 +334,13 @@ ML. The experiment is `Not Started` and unauthorized; no fixture, install,
 export, package, inference, profiler, simulator, app, device, or hardware
 operation exists. See `docs/LOOP_40_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop40_research_boundary.v0.json`.
-The proposed fresh S20 EEG block is **not authorized** for download or signal
-access. Its exact four-file, 96,090,264-byte dry run is in
-`docs/FRESH_EEG_BENCHMARK_S20_APPROVAL_PACKET.md`.
+The proposed fresh S20 EEG block is **not authorized** for implementation,
+download, local stat/hash, or signal/target access. Its exact four-file,
+96,090,264-byte acquisition-only contract and pending Tier C request are in
+`docs/LOOP_53_FRESH_EEG_ACQUISITION_PREREGISTRATION.md`,
+`registries/loop53_fresh_eeg_acquisition_contract.v0.json`, and
+`docs/LOOP_53_AUTHORIZATION_PACKET.md`. The older broad S20 packet is
+historical and grants no permission.
 
 Current verified state: two complete S21 SpanishBCBL MEG recordings plus one
 94,842,381-byte S7 SpanishBCBL EEG BrainVision bundle and their matching MAT
@@ -550,5 +563,6 @@ score occurred inside that planning snapshot. Stage B has since closed at
 Planning commit `085f341` passed push CI `29458102674` and PR #28 CI
 `29458116994`; both required jobs are green in both workflows.
 
-Loops 51-64 remain `Not Started`, and all current execution flags are false.
+Loop 53 is `Preregistered; Authorization Pending`; Loops 51-52 and 54-64 remain
+`Not Started`. All current execution flags are false.
 S25 remains sealed until a separate final-only zero-shot packet is complete.
