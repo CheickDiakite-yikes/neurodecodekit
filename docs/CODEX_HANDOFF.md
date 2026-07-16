@@ -1309,3 +1309,33 @@ closeout invariants over their 878/925-test implementation baselines without
 losing a prior test. Result closeout commit `ad4410c` passed push CI
 `29464527230` and PR CI `29464529524`, with Base Python and Optional Neuro
 Readers green in both workflows.
+
+## Loop 48 Stage C Representation-Repair Handoff
+
+Stage C planning research is complete in
+`docs/LOOP_48_STAGE_C_REPRESENTATION_REPAIR_RESEARCH.md` and
+`registries/loop48_stage_c_representation_repair_research.v0.json`. It selects
+one narrow, falsifiable explanation for the Stage B failure: the original
+candidate's 20 ms learned left context may be too short to represent relevant
+temporal structure. This is hypothesis `R1`, not a result.
+
+The exact comparison is frozen before implementation: a 7,692-parameter
+`TinyCausalTemporalCTC-v0` with 470 ms left context versus a 7,568-parameter
+`TinyCausalTemporalAblation-v0` with no learned temporal history. Both emit on
+the same 25 Hz grid and have zero right context. The candidate contains four
+causal kernel-5 blocks with dilations `1,2,4,1` and a learned depthwise
+kernel-16/stride-4 feature reducer; the reducer is not an anti-aliased waveform
+resampler.
+
+The next autonomous work is implementation, then one separately green-bound
+synthetic calibration: seed 4850, 40 synthetic rows, a 24/8/8 split, three
+candidate optimizer recipes, one ablation fit, at most 1,800 optimizer steps,
+600 seconds, 1 GiB peak RSS, 16 MiB generated output, one CPU thread, one
+worker, and zero real-data downloads. Synthetic success can establish only
+causality, length, padding, deterministic replay, and ordered-motif mechanics.
+
+No protected Stage C contract exists. Do not stat, hash, or read the S21 cache;
+do not reuse its 44 fit rows or reopen its 11 consumed check rows; do not touch
+validation, source test, session 2, S24, or S25; and do not perform a real model
+operation or promote a scientific claim without a separate exact Tier C
+decision.

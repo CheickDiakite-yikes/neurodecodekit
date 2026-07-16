@@ -77,9 +77,20 @@
 > against it, and `H1/H2/H5/H6` remain unresolved. The 11 check rows are
 > historically used development rows, so this is an E2 diagnostic, not fresh
 > validation. Route `L50-R05` parks S24 acquisition for this model family.
-> Stage B is consumed and no rerun is authorized. This Markdown tracker and
-> `registries/next_scientific_loops.v0.json` are the current Stage B sources of
-> truth. The workbook remains the last visually reviewed Stage A snapshot; it
+> Stage B is consumed and no rerun is authorized. Stage C planning research now
+> freezes `R1` temporal-context starvation as the next falsifiable hypothesis:
+> one 7,692-parameter candidate with 470 ms causal left context versus one
+> 7,568-parameter one-frame ablation on the same 25 Hz output grid. Its next
+> milestone is synthetic mechanics only: 40 synthetic rows, a 24/8/8 split,
+> four total training runs, at most 1,800 steps, 600 seconds, 1 GiB RSS, 16 MiB
+> generated, one thread, one worker, and zero real-data downloads. Protected
+> Stage C work is not preregistered or authorized; S21 cache operations, S24,
+> S25, and claim promotion remain closed. This Markdown tracker,
+> `docs/LOOP_48_STAGE_C_REPRESENTATION_REPAIR_RESEARCH.md`,
+> `registries/next_scientific_loops.v0.json`, and
+> `registries/loop48_stage_c_representation_repair_research.v0.json` are the
+> current Stage C research sources of truth. The workbook remains the last
+> visually reviewed Stage A snapshot; it
 > was not reopened because its prior full import reached 1.57 GiB peak RSS.
 
 This tracker starts after PR1 lands. The core operating rule is simple: **do not add a more complex loop until the previous loop has produced a cache, report, demo, or explicit kill/park decision.**

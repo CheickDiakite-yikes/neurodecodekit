@@ -1,0 +1,395 @@
+{
+  "schema_name": "neurodecodekit.loop48_stage_c_representation_repair_research",
+  "schema_version": "0.1.0",
+  "research_id": "loop48-stage-c-temporal-representation-repair-research-v0",
+  "prepared_at": "2026-07-15",
+  "status": "planning_research_complete_synthetic_calibration_not_started_protected_execution_unauthorized",
+  "proof_posture": "primary_source_and_git_tracked_aggregate_research_only_no_model_or_protected_operation",
+  "numbered_loop": 48,
+  "stage": "stage_c_temporal_representation_repair",
+  "authorized_now": false,
+  "research_document": "docs/LOOP_48_STAGE_C_REPRESENTATION_REPAIR_RESEARCH.md",
+  "dependency_bindings": {
+    "consumed_stage_b_result": {
+      "path": "registries/loop48_train_only_discrimination_result.v0.json",
+      "sha256": "ef8290eb45e755bedb2deed781e6e472aa3621c25d91a01d01626c17c96ce891"
+    },
+    "sampling_rate_and_ctc_feasibility_audit": {
+      "path": "docs/LOOP_10_SAMPLING_RATE_SWEEP.md",
+      "sha256": "b4067f6b3165186415980da40c697e94bf4c8b5cc4ea8885bd09be6395a955c1"
+    },
+    "loop50_research_boundary": {
+      "path": "registries/loop50_research_boundary.v0.json",
+      "sha256": "50e8891c6f77637a6d4157a44953241fdbed6b0f78fafbcb66f27beb8b843970"
+    },
+    "autonomy_charter_decision": {
+      "path": "registries/research_autonomy_charter_decision.v0.json",
+      "sha256": "edb02e2be125650ac7fbc4dafd359e2e8462ead5a7b38673c323bd58ffb59de4"
+    },
+    "failed_model_source": {
+      "path": "src/neurodecodekit/models/tiny_causal_sentence_ctc.py",
+      "sha256": "cf6967c2a0fc1419d6e8998f07276aad1e535e5bc30a034c19e023fee7203dc9"
+    }
+  },
+  "observed_failure_boundary": {
+    "primary_candidate_macro_sentence_cer": 0.9535663244239262,
+    "train_only_prior_macro_sentence_cer": 0.8220446152037734,
+    "candidate_minus_prior_improvement": -0.13152170922015277,
+    "primary_blank_fraction": 0.9963163596966413,
+    "full_size_causal_fits_finite_and_stable": 3,
+    "full_size_linear_fits_finite_and_stable": 3,
+    "full_size_fits_clearing_prior": 0,
+    "supported_hypothesis": "H4_stable_nonseparability_for_registered_probes",
+    "fixed_shift_h3_status": "evidence_against",
+    "raw_sensor_quality_status": "unavailable",
+    "sensor_signal_dependence_status": "not_established",
+    "neural_advantage_status": "not_established"
+  },
+  "selected_repair_hypothesis": {
+    "hypothesis_id": "R1_temporal_context_starvation",
+    "statement": "The 20 ms left context of the failed candidate may not represent the hundreds-of-milliseconds temporal structure needed for key-related MEG decoding.",
+    "falsifiable_comparison": "A 470 ms causal candidate must beat a near-parameter-matched zero-context ablation under the same 4x output grid and future protected fold protocol.",
+    "is_proven_now": false,
+    "is_architecture_selection_from_fresh_targets": false,
+    "can_establish_information_absence": false
+  },
+  "candidate_architecture": {
+    "model_id": "TinyCausalTemporalCTC-v0",
+    "implemented_now": false,
+    "input_channels": 102,
+    "input_sampling_rate_hz": 100,
+    "hidden_channels": 16,
+    "classes": 28,
+    "spatial_projection": {
+      "operation": "conv1d",
+      "in_channels": 102,
+      "out_channels": 16,
+      "kernel_size": 1,
+      "bias": true,
+      "parameters": 1648
+    },
+    "residual_temporal_blocks": {
+      "count": 4,
+      "kernel_size": 5,
+      "dilations": [1, 2, 4, 1],
+      "left_padding_only": true,
+      "activation": "gelu_exact",
+      "normalization": "per_time_layer_norm_across_channels_only",
+      "normalization_may_aggregate_over_time": false,
+      "residual_scale": 0.1,
+      "parameters_per_block": 1328,
+      "parameters_total": 5312
+    },
+    "temporal_reducer": {
+      "operation": "depthwise_conv1d",
+      "channels": 16,
+      "kernel_size": 16,
+      "stride": 4,
+      "groups": 16,
+      "bias": false,
+      "left_padding_only": true,
+      "parameters": 256,
+      "is_anti_aliased_waveform_resampling": false,
+      "description_ceiling": "learned_temporal_feature_reducer"
+    },
+    "ctc_head": {
+      "operation": "conv1d",
+      "in_channels": 16,
+      "out_channels": 28,
+      "kernel_size": 1,
+      "bias": true,
+      "parameters": 476
+    },
+    "trainable_parameters": 7692,
+    "parameter_ceiling": 10000,
+    "source_receptive_field_frames": 48,
+    "required_left_context_frames": 47,
+    "required_left_context_ms": 470,
+    "right_context_frames": 0,
+    "output_stride_source_frames": 4,
+    "output_sampling_rate_hz": 25,
+    "output_length_formula": "(input_length + 3) // 4",
+    "output_timestamp_formula": "source_frame_index = 4 * output_frame_index",
+    "conformer": false,
+    "attention": false,
+    "recurrence": false,
+    "participant_identity_input": false,
+    "geometry_conditioned_merger": false,
+    "language_model": false,
+    "neurotoken_semantic_target": false
+  },
+  "parameter_matched_ablation": {
+    "model_id": "TinyCausalTemporalAblation-v0",
+    "implemented_now": false,
+    "hidden_channels": 29,
+    "spatial_projection_parameters": 2987,
+    "residual_blocks": 4,
+    "residual_kernel_size": 1,
+    "residual_dilations": [1, 1, 1, 1],
+    "residual_and_layer_norm_parameters_total": 3712,
+    "depthwise_kernel1_stride4_parameters": 29,
+    "ctc_head_parameters": 840,
+    "trainable_parameters": 7568,
+    "candidate_minus_ablation_parameters": 124,
+    "absolute_parameter_gap_fraction_of_candidate": 0.01612064482579303,
+    "maximum_parameter_gap_fraction": 0.02,
+    "source_receptive_field_frames": 1,
+    "required_left_context_frames": 0,
+    "right_context_frames": 0,
+    "output_stride_source_frames": 4,
+    "output_sampling_rate_hz": 25,
+    "purpose": "isolate_registered_temporal_context_from_raw_parameter_capacity"
+  },
+  "ctc_geometry_boundary": {
+    "existing_loop10_all_66_rows_feasible_at_100hz_with_kernel16_stride4": true,
+    "existing_loop10_worst_output_step_margin": 49,
+    "stage_c_exact_44_row_feasibility_verified_now": false,
+    "future_static_gate_must_recompute_before_signal_or_target_fit": true,
+    "adjacent_repeats_included_in_minimum_steps": true,
+    "identity_or_feasibility_drift_action": "park_before_parameter_update"
+  },
+  "primary_source_bindings": [
+    {
+      "source_id": "SRC-B2QV2-PAPER",
+      "url": "https://facebookresearch.github.io/brain2qwerty/assets/brain2qwerty_v2.pdf",
+      "use": "four_layer_dilated_conv_kernel5_and_kernel16_stride4_downsampling",
+      "transfer_limit": "published_model_is_large_noncausal_and_not_a_local_tiny_model"
+    },
+    {
+      "source_id": "SRC-B2QV2-CODE",
+      "url": "https://github.com/facebookresearch/brain2qwerty/blob/main/brain2qwerty_v2/config/model_config.py",
+      "use": "official_depth_dilation_kernel_stride_and_aux_ctc_configuration",
+      "transfer_limit": "configuration_does_not_prove_neurodecodekit_candidate_accuracy"
+    },
+    {
+      "source_id": "SRC-B2QV1-PAPER",
+      "url": "https://www.nature.com/articles/s41593-026-02303-2",
+      "use": "published_500ms_key_aligned_input_window",
+      "transfer_limit": "keypress_aligned_window_is_not_causal_unaligned_sentence_decoding"
+    },
+    {
+      "source_id": "SRC-EEGNET",
+      "url": "https://arxiv.org/abs/1611.08024",
+      "use": "compact_temporal_and_spatial_convolution_factorization",
+      "transfer_limit": "eeg_classification_accuracy_does_not_transfer_to_meg_ctc"
+    },
+    {
+      "source_id": "SRC-TCN",
+      "url": "https://arxiv.org/abs/1803.01271",
+      "use": "causal_dilated_convolution_as_sequence_model",
+      "transfer_limit": "generic_sequence_results_are_not_neural_decoding_evidence"
+    },
+    {
+      "source_id": "SRC-CTC",
+      "url": "https://www.cs.toronto.edu/~graves/icml_2006.pdf",
+      "use": "blank_alignment_and_input_target_length_contract",
+      "transfer_limit": "ctc_mechanics_do_not_establish_signal_information"
+    },
+    {
+      "source_id": "SRC-MRCP",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8168458/",
+      "use": "movement_related_activity_spans_hundreds_of_milliseconds",
+      "transfer_limit": "averaged_eeg_movement_potentials_do_not_prove_typing_meg_decodability"
+    }
+  ],
+  "synthetic_calibration_plan": {
+    "status": "frozen_plan_not_implemented_not_executed",
+    "tier": "tier_a_synthetic_only",
+    "implementation_commit_must_be_pushed_and_remotely_green_before_execution": true,
+    "fixture_seed": 4850,
+    "rows": 40,
+    "partitions": {
+      "train": 24,
+      "selection": 8,
+      "final": 8
+    },
+    "sampling_rate_hz": 100,
+    "channels": 102,
+    "real_data_or_target_derived_values": false,
+    "ordered_history_required_for_motif_identity": true,
+    "optimizer_recipes": [
+      {
+        "recipe_id": "L48C-SYN-OPT0",
+        "optimizer": "Adam",
+        "learning_rate": 0.003,
+        "weight_decay": 0.0,
+        "optimizer_steps": 360
+      },
+      {
+        "recipe_id": "L48C-SYN-OPT1",
+        "optimizer": "AdamW",
+        "learning_rate": 0.001,
+        "weight_decay": 0.01,
+        "optimizer_steps": 480
+      },
+      {
+        "recipe_id": "L48C-SYN-OPT2",
+        "optimizer": "AdamW",
+        "learning_rate": 0.003,
+        "weight_decay": 0.01,
+        "optimizer_steps": 480
+      }
+    ],
+    "shared_settings": {
+      "batch_size": 8,
+      "dtype": "float32",
+      "device": "cpu",
+      "cpu_threads": 1,
+      "workers": 1,
+      "concurrent_numerical_jobs": 1,
+      "seed": 4850,
+      "restarts": 0,
+      "early_stopping": false,
+      "checkpoint_selection": "final_optimizer_step_only"
+    },
+    "selection_rule": "lowest_selection_cer_then_fewer_optimizer_steps_then_recipe_id_lexical",
+    "final_openings": 1,
+    "candidate_parameter_update_runs": 3,
+    "ablation_parameter_update_runs": 1,
+    "total_parameter_update_runs": 4,
+    "total_optimizer_steps_ceiling": 1800,
+    "gates": {
+      "candidate_final_cer_max": 0.1,
+      "candidate_final_exact_sequences_min": 7,
+      "candidate_final_rows": 8,
+      "candidate_minus_ablation_cer_improvement_min": 0.1,
+      "deterministic_checkpoint_replay_required": true,
+      "future_mutation_controls_must_all_pass": true,
+      "resume_equivalence_must_pass": true
+    },
+    "resource_caps": {
+      "runtime_sec": 600,
+      "peak_rss_bytes": 1073741824,
+      "generated_artifact_bytes": 16777216,
+      "minimum_free_disk_bytes": 21474836480,
+      "new_real_data_download_bytes": 0
+    },
+    "maximum_claim": "synthetic_temporal_representation_mechanics_only"
+  },
+  "future_protected_diagnostic_recommendation": {
+    "status": "design_recommendation_not_preregistered_not_authorized",
+    "allowed_rows_recommended": "the_44_stage_b_fit_rows_only",
+    "consumed_stage_b_check_rows_recommended": 0,
+    "validation_rows_recommended": 0,
+    "source_test_rows_recommended": 0,
+    "session2_rows_recommended": 0,
+    "s24_rows_recommended": 0,
+    "s25_rows_recommended": 0,
+    "folds": 5,
+    "fold_assignment": "target_independent_semantic_hash",
+    "candidate_seeds": 3,
+    "candidate_out_of_fold_fits": 15,
+    "ablation_out_of_fold_fits": 5,
+    "total_parameter_update_runs": 20,
+    "fold_local_no_signal_priors": true,
+    "reuse_primary_checkpoints_for_zero_channel_and_positive_time_controls": true,
+    "prediction_hash_freeze_before_aggregate_scoring": true,
+    "maximum_evidence_level": "E2_historical_development_representation_diagnostic",
+    "exact_contract_fields_still_unavailable": [
+      "implementation_hashes",
+      "synthetic_selected_optimizer",
+      "fold_identities",
+      "exact_inference_and_prediction_counts",
+      "exact_statistics_and_thresholds",
+      "exact_runtime_cap",
+      "exact_authorization_sentence"
+    ]
+  },
+  "outcome_router": [
+    {
+      "route_id": "L48C-R01",
+      "condition": "candidate_fails_fold_local_prior",
+      "action": "park_representation_and_s24_prioritize_raw_quality_and_causal_source_audits"
+    },
+    {
+      "route_id": "L48C-R02",
+      "condition": "candidate_clears_prior_but_not_parameter_matched_ablation",
+      "action": "park_s24_temporal_representation_not_isolated"
+    },
+    {
+      "route_id": "L48C-R03",
+      "condition": "candidate_clears_prior_and_ablation_but_fails_signal_corruptions",
+      "action": "park_s24_prioritize_shortcut_and_confound_work"
+    },
+    {
+      "route_id": "L48C-R04",
+      "condition": "candidate_clears_prior_ablation_corruptions_and_seed_rules",
+      "action": "permit_preparation_not_execution_of_versioned_loop49_s24_amendment"
+    },
+    {
+      "route_id": "L48C-R05",
+      "condition": "mixed_unstable_infeasible_or_over_cap",
+      "action": "park_without_restart_backup_person_or_threshold_change"
+    }
+  ],
+  "authorization": {
+    "tier_a_research_and_documentation_authorized_now": true,
+    "synthetic_implementation_authorized_after_green_research_milestone": true,
+    "synthetic_calibration_execution_authorized_after_green_implementation_milestone": true,
+    "protected_stage_c_preregistration_exists_now": false,
+    "protected_stage_c_execution_authorized_now": false,
+    "s21_cache_stat_or_hash_authorized_now": false,
+    "s21_cache_member_or_target_read_authorized_now": false,
+    "stage_b_44_fit_row_reuse_authorized_now": false,
+    "stage_b_11_check_row_reopen_authorized_now": false,
+    "validation_or_source_test_authorized_now": false,
+    "session2_s7_s20_s24_or_s25_authorized_now": false,
+    "raw_fif_or_mat_authorized_now": false,
+    "new_real_data_download_authorized_now": false,
+    "real_model_training_or_inference_authorized_now": false,
+    "real_prediction_or_scoring_authorized_now": false,
+    "post_outcome_tuning_or_rerun_authorized_now": false,
+    "s24_acquisition_preparation_authorized_now": false,
+    "s25_freeze_or_final_open_authorized_now": false,
+    "stream_device_hardware_or_rw3_authorized_now": false,
+    "scientific_claim_upgrade_authorized_now": false
+  },
+  "refusal_ids": [
+    "L48C-RF01_no_s21_cache_or_target_read",
+    "L48C-RF02_no_stage_b_check_reopen",
+    "L48C-RF03_no_validation_or_source_test",
+    "L48C-RF04_no_session2_s7_s20_s24_s25",
+    "L48C-RF05_no_raw_fif_mat_or_download",
+    "L48C-RF06_no_real_training_inference_prediction_or_score",
+    "L48C-RF07_no_conformer_attention_lm_neurotoken_or_subject_path",
+    "L48C-RF08_no_s24_preparation_or_backup_person",
+    "L48C-RF09_no_post_outcome_tuning_or_rerun",
+    "L48C-RF10_no_stream_device_hardware_rw3",
+    "L48C-RF11_no_scientific_or_clinical_claim_upgrade"
+  ],
+  "planning_operation_counters": {
+    "git_tracked_stage_b_result_reads": 1,
+    "git_tracked_loop10_report_reads": 1,
+    "protected_cache_stat_reads": 0,
+    "protected_cache_hash_passes": 0,
+    "protected_cache_member_reads": 0,
+    "real_signal_rows_read": 0,
+    "real_target_rows_read": 0,
+    "ignored_derivative_reads": 0,
+    "checkpoint_reads": 0,
+    "private_prediction_reads": 0,
+    "model_inference_runs": 0,
+    "training_runs": 0,
+    "parameter_updates": 0,
+    "synthetic_fixture_rows_generated": 0,
+    "new_real_data_download_bytes": 0,
+    "raw_fif_or_mat_reads": 0,
+    "s24_or_s25_path_stats": 0,
+    "stream_device_hardware_or_rw3_operations": 0,
+    "scientific_claim_upgrades": 0,
+    "external_research_wire_bytes": "unavailable_by_tool_contract"
+  },
+  "warnings": [
+    "the_selected_hypothesis_is_not_a_result",
+    "brain2qwerty_v2_is_large_and_noncausal_and_its_performance_does_not_transfer",
+    "eegnet_and_mrcp_sources_are_architecture_or_physiology_rationale_not_meg_ctc_evidence",
+    "learned_stride4_features_are_not_anti_aliased_waveform_resampling",
+    "synthetic_calibration_can_prove_mechanics_only",
+    "future_44_row_oof_work_would_remain_historical_post_outcome_e2_evidence",
+    "s24_and_s25_remain_unopened"
+  ],
+  "claim_boundary": {
+    "engineering_capability_prepared": "An exact parameter-controlled causal temporal-representation hypothesis and synthetic-only calibration plan are ready for implementation without protected evidence.",
+    "scientific_claim_not_established": "No model was implemented or run and no real signal or target was opened; neural advantage, sensor-signal dependence, brain-specific origin, decoding improvement, generalization, real-time performance, EEG or device performance, assistive value, diagnostic value, and clinical utility remain unestablished."
+  }
+}

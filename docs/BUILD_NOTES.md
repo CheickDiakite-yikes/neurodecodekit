@@ -4254,3 +4254,44 @@ freeze.
 Scientific claim not established: the run did not show neural advantage,
 brain-specific decoding, independent generalization, real-time performance, or
 portable/home EEG performance.
+
+## 2026-07-15 - Loop 48 Stage C Temporal-Representation Repair Research
+
+- Audited the failed `TinyCausalSentenceCTC-v0` architecture against the
+  consumed Stage B aggregate result and the existing Loop 10 CTC geometry
+  report without opening any protected cache, target, checkpoint, private
+  prediction, S24 path, or S25 path. The failed candidate has only 20 ms of
+  learned left context; raw quality and retained neural information remain
+  unavailable.
+- Added primary-source-informed Stage C research and a strict machine boundary.
+  The selected `R1` hypothesis compares one 7,692-parameter causal candidate
+  with 470 ms left context against one 7,568-parameter zero-context ablation on
+  the same 25 Hz output grid. The 124-parameter gap is 1.612070% of the
+  candidate. No model was implemented or run in this milestone.
+- Froze a Tier A synthetic-only calibration path before implementation results:
+  seed 4850, 40 rows, a 24/8/8 split, three candidate recipes, one ablation fit,
+  four total parameter-update runs, at most 1,800 optimizer steps, 600 seconds,
+  1 GiB peak RSS, 16 MiB generated output, one CPU thread, one worker, and zero
+  real-data downloads. A protected diagnostic remains unpreregistered and
+  unauthorized.
+- Updated the README, start-here guide, agent boundary, Markdown tracker,
+  machine roadmap, scientific roadmap, handoff, decision journal, and start
+  prompt. The 117,187-byte workbook remains the last reviewed Stage A visual
+  snapshot because its prior full import reached 1.57 GiB RSS; the adjacent
+  user-owned inspection sidecar was not read, modified, staged, or committed.
+- Focused Stage C/roadmap/legacy Loop 48 acceptance passes 52 tests in 0.018
+  seconds. The complete dependency-light suite passes 897 tests with 149
+  expected skips in 1.310 seconds internal time and 1.56 seconds wall time at
+  126,533,632-byte external maximum RSS. The complete optional-neuro suite
+  passes 944 tests with 3 expected skips in 29.221 seconds internal time; its
+  observed in-suite peak RSS was 598,966,272 bytes. Both suites add exactly ten
+  tests over the 887/934 Stage B baseline without losing a prior test.
+
+Engineering capability added: NeuroDecodeKit now has an exact, parameter-
+controlled causal temporal-representation hypothesis and a bounded synthetic
+calibration decision surface ready for implementation.
+
+Scientific claim not established: no model was implemented or run and no real
+signal or target was opened, so neural advantage, sensor-signal dependence,
+brain-specific origin, decoding improvement, generalization, real-time
+performance, and portable or home EEG performance remain unestablished.

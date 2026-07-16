@@ -318,7 +318,16 @@ it; `H1/H2/H5/H6` remain unresolved. Freeze commit `00215b1` passed both CI
 workflows before one 11-target score. Applied route `L50-R05` parks S24
 acquisition for this model family. Do not rerun Stage B, tune from the check
 rows, acquire S24, substitute a participant, open S25, or implement a
-post-outcome repair from a broad continuation request.
+protected post-outcome repair from a broad continuation request. Read
+`docs/LOOP_48_STAGE_C_REPRESENTATION_REPAIR_RESEARCH.md` and
+`registries/loop48_stage_c_representation_repair_research.v0.json` for the
+current reversible next step. Stage C research selects `R1` temporal-context
+starvation, a 7,692-parameter 470 ms causal candidate, and a 7,568-parameter
+zero-context ablation. After this research milestone is remotely green, Tier A
+allows implementation; after implementation is remotely green, it allows one
+bounded synthetic-only calibration. Do not stat, hash, or read the S21 cache;
+do not use real targets, S24, or S25; and do not treat synthetic success as a
+neural or decoding result.
 
 Loop 27 is also review-only planning evidence. Do not turn the selected S25
 paths, official hashes, local MAT presence, 1 GiB cap, or roadmap status into a

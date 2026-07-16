@@ -133,6 +133,18 @@ acquisition for this model family. The result is consumed at E2 with no rerun,
 post-check tuning, or claim upgrade. See `docs/LOOP_48_STAGE_B_RESULT.md` and
 `registries/loop48_train_only_discrimination_result.v0.json`.
 
+Stage C planning research now selects `R1` temporal-context starvation as the
+next falsifiable repair hypothesis. It freezes a 7,692-parameter causal
+candidate with 470 ms left context against a 7,568-parameter zero-context
+ablation on the same 25 Hz output grid. The next gate is synthetic mechanics
+only: seed 4850, 40 rows, a 24/8/8 split, three candidate recipes, one ablation
+fit, at most 1,800 optimizer steps, 600 seconds, 1 GiB peak RSS, 16 MiB output,
+one thread, one worker, and zero real-data downloads. See
+`docs/LOOP_48_STAGE_C_REPRESENTATION_REPAIR_RESEARCH.md` and
+`registries/loop48_stage_c_representation_repair_research.v0.json`. No
+protected Stage C preregistration or execution exists, and synthetic success
+cannot establish neural information or decoding improvement.
+
 The consumed Stage A verified hashes, reproduced aggregate blank/CER summaries,
 applied the ordered tree, and emitted one target-free aggregate report. Do not
 rerun it or use validation targets to select a seed, threshold, loss, or larger
@@ -345,11 +357,13 @@ the machine registry.
 This document is a research roadmap. Loop 45 is complete at its target-free
 mechanics boundary; Loops 46/47 are consumed and parked; Loop 48 Stage A is
 consumed at descriptive `F5`, and Stage B is consumed at `H4` stable
-nonseparability with `L50-R05` parking S24 for this model family. Loops 49-64
-remain `Not Started`. Every current
+nonseparability with `L50-R05` parking S24 for this model family. Stage C
+research permits only a green-bound synthetic implementation and calibration
+under the approved charter; it does not open a protected roadmap experiment.
+Loops 49-64 remain `Not Started`. Every current
 `execution_authorized` flag and every global authorization field is false. The
-roadmap does not authorize a Loop 45 rerun, Loop 46/47 rerun, Loop 48 rerun,
-representation-repair training, any new real-data read or download, target
-opening, S24/S25 access, EEG acquisition, stream, device, participant contact,
-home recording, external outreach, tag, release, archive, DOI, or scientific
-claim.
+roadmap does not authorize a Loop 45 rerun, Loop 46/47 rerun, Loop 48 protected
+rerun, real-data representation-repair training, any new real-data read or
+download, target opening, S24/S25 access, EEG acquisition, stream, device,
+participant contact, home recording, external outreach, tag, release, archive,
+DOI, or scientific claim.

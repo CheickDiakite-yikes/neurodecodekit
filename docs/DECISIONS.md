@@ -3031,3 +3031,42 @@ Evidence: `docs/LOOP_48_STAGE_B_RESULT.md`,
 `registries/loop48_stage_b_prediction_freeze.v0.json`,
 `registries/loop48_train_only_discrimination_result.v0.json`, and
 `tests/test_loop48_stage_b_result.py`.
+
+## 0090 - Test Temporal Context Before Reopening Protected Evidence
+
+Decision: select `R1`, temporal-context starvation, as the next falsifiable
+representation-repair hypothesis after Loop 48 Stage B. The failed
+`TinyCausalSentenceCTC-v0` mixed sensors pointwise and exposed only 20 ms of
+learned left context. Compare one 7,692-parameter causal temporal candidate
+with 470 ms left context against one 7,568-parameter zero-context ablation on
+the same 25 Hz output grid. The 124-parameter gap is 1.612070% of the candidate,
+so a future difference can test registered temporal context more cleanly than
+an unmatched capacity increase.
+
+Mechanics decision: implement and calibrate on a synthetic ordered-motif
+fixture before preparing any protected contract. Freeze seed 4850, 40 rows, a
+24/8/8 train/selection/final split, three candidate optimizer recipes, one
+ablation fit, one final opening, at most four training runs, 1,800 optimizer
+steps, 600 seconds, 1 GiB peak RSS, 16 MiB generated output, one thread, one
+worker, and zero real-data downloads. Require deterministic checkpoint replay,
+zero right context, exact length/timestamp/padding behavior, resume equivalence,
+and a candidate-versus-ablation final CER margin.
+
+Scientific boundary: synthetic success can establish only that the registered
+causal interface can learn ordered temporal motifs under its exact mechanics.
+It cannot establish that S21 contains usable neural information, that longer
+context improves real decoding, or that S24/S25 should open. Primary-source
+architecture and physiology findings provide rationale, not transferred
+accuracy.
+
+Authorization decision: the Research Autonomy Charter allows implementation
+after this research milestone is pushed and remotely green, and one synthetic
+calibration after the implementation milestone is pushed and remotely green.
+No S21 cache stat, hash, member, target, 44-row reuse, 11-row reopen,
+validation, source test, session 2, S24, S25, real model operation, download,
+device, hardware, or claim upgrade is authorized. Any protected Stage C
+diagnostic remains Tier C and needs its own exact preregistration and decision.
+
+Evidence: `docs/LOOP_48_STAGE_C_REPRESENTATION_REPAIR_RESEARCH.md`,
+`registries/loop48_stage_c_representation_repair_research.v0.json`, and
+`tests/test_loop48_stage_c_representation_repair_research.py`.

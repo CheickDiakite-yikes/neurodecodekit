@@ -54,7 +54,14 @@
    independent validation or neural advantage; no rerun is authorized. Use
    `docs/LOOP_48_STAGE_B_AUTHORIZATION_DECISION.md`, the authorization packet,
    request, implementation, and hash-only freeze only to audit the
-   pre-execution order.
+   pre-execution order. Finally, read
+   `docs/LOOP_48_STAGE_C_REPRESENTATION_REPAIR_RESEARCH.md` and
+   `registries/loop48_stage_c_representation_repair_research.v0.json`. They
+   select `R1` temporal-context starvation as the next falsifiable hypothesis,
+   freeze a 7,692-parameter 470 ms causal candidate against a 7,568-parameter
+   zero-context ablation, and permit only a bounded synthetic mechanics
+   milestone next. No protected cache, real model run, S24/S25 operation, or
+   scientific claim is authorized by that research.
 8. Read `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` for the selected S25
    metadata candidate and every blocker that still prevents preregistration,
    download, signal/target access, or transfer evaluation.
