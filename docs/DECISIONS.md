@@ -2917,3 +2917,117 @@ Evidence: `docs/LOOP_50_PRIMARY_SOURCE_RESEARCH.md`,
 `tests/test_loop50_research_boundary.py`. Planning commit `085f341` passed push
 CI `29458102674` and PR #28 CI `29458116994`, with both required jobs green in
 both workflows.
+
+## 0087 - Activate Tier A And Tier B Research Autonomy
+
+Decision: accept the exact standing sentence in the 2026-07-15 Research
+Autonomy Charter. Preserve `docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md` byte-for-
+byte at SHA-256
+`c9381bfc729dfca4aaab03929a6623f23c3cf06eb33fbae5379b0517981dcb64`;
+use the separate activation document and registry as the prospective decision
+record.
+
+Standing scope decision: after this decision is tested, committed, pushed, and
+remotely green, Tier A routine research engineering and Tier B fully frozen,
+bounded development experiments may proceed without repeated permission,
+including coherent commits, pushes, and CI inspection. Retain the default one-
+thread, one-worker, one-job, 1 GiB RSS, 32 MiB output, zero-real-download, and
+20 GiB free-disk envelope unless a narrower registered contract applies.
+
+Irreversibility decision: Tier C remains separately gated. The charter does not
+reopen consumed evidence; authorize a new real participant payload, sealed or
+final target, consumed-evaluation reuse, post-outcome change, download, cap
+increase, hardware, destructive action, release, or scientific claim only by a
+separate exact decision. It does not itself authorize Loop 48 Stage B, RW3, or
+S25. The separately supplied Loop 48 Stage B sentence must receive its own
+authorization-only record and remote-green gate.
+
+Evidence: `docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md`,
+`docs/RESEARCH_AUTONOMY_CHARTER_DECISION.md`,
+`registries/research_autonomy_charter_decision.v0.json`, and
+`tests/test_research_autonomy_charter_decision.py`.
+
+## 0088 - Authorize One Registered Loop 48 Stage B Execution
+
+Decision: record the maintainer's exact Loop 48 Stage B sentence in a separate
+authorization-only document and registry. Bind it to preregistration commit
+`0ee0ab7`, request commit `1de3fa3`, contract SHA-256
+`009e320ea4df17e9f6fa58f74053b2ab70cce73eb0a9eea3cefc5b7b14112a9a`,
+and request SHA-256
+`c23030f655fd662128dbc70f879a7a7a7d062f861ec279779b53852521d08c38`.
+
+Authorized scope: after this decision commit is remotely green, implement the
+synthetic-qualified bounded path and execute once over exactly 44 source-train
+fit rows plus 11 target-withheld source-train check inputs. Allow one cache
+hash pass, 20 parameter-update runs, 4,800 optimizer steps, 35 target-blind
+inferences, five train-only priors, 41 prediction sets, and one later delivery
+and scoring of the same 11 check targets only after a plaintext-free prediction
+freeze is committed, pushed, and remotely green.
+
+Refusal decision: keep validation, source test, session 2, S7/S20/S25, raw
+FIF/MAT, downloads, larger or additional models, restarts, language models,
+NeuroTokens, RW3, streams, devices, hardware, post-check tuning, claim promotion
+beyond E2, and reruns closed. All 55 rows were used historically, so the result
+cannot become independent validation or neural advantage.
+
+Evidence: `docs/LOOP_48_STAGE_B_AUTHORIZATION_DECISION.md`,
+`registries/loop48_stage_b_authorization_decision.v0.json`, and
+`tests/test_loop48_stage_b_authorization_decision.py`.
+
+## 0089 - Close Loop 48 At Stable Nonseparability And Park Same-Family S24
+
+Decision: accept the one-shot Loop 48 Stage B result at its registered E2
+post-outcome train-only ceiling. The primary size-44 causal candidate reached
+macro sentence CER `0.953566` versus `0.822045` for the train-only no-signal
+prior, a `-0.131522` margin. All three size-44 causal fits and all three
+size-44 linear fits had finite, stable telemetry, but none cleared the frozen
+prior margin and exact-p rule.
+
+Hypothesis decision: support `H4`, stable but nonseparable representation, for
+this transformed S21 source-train slice and fixed tiny model family. Record
+evidence against `H3` because none of the `-50`, `-25`, `+25`, or `+50`
+sample offsets improved all three seeds under the corrected rule. Keep `H1`,
+`H2`, `H5`, and `H6` unresolved. The transformed-cache quality audit found no
+gross defect, but raw sensor quality and peripheral physiology remain
+unavailable. The nested size curve was nonmonotonic and does not support a
+data-scaling extrapolation.
+
+Control decision: preserve the exact-zero, timing-only, and severe-displacement
+component wins as diagnostic facts only. The candidate failed the prior and
+complete corruption conjunction, so those isolated wins do not establish
+sensor-signal dependence, neural advantage, brain-specific origin, or useful
+decoding.
+
+Access decision: implementation commit `1d840e3` passed push CI `29461579009`
+and PR CI `29461580293` before one source-cache hash pass or protected row
+delivery. Hash-only freeze commit `00215b1` passed push CI `29461934145` and PR
+CI `29461935560` before the same 11 check targets opened once. The run used
+exactly 44 fit rows, 11 target-withheld check signals, 20 fits, 4,800 optimizer
+steps, 35 target-blind inferences, five priors, 41 prediction sets, and one
+check score. Validation, source test, session 2, S7/S20/S24/S25, raw FIF/MAT,
+downloads, post-check changes, and reruns remained zero.
+
+Resource decision: accept `190.140486` cumulative execution seconds through
+freeze, `483,540,992`-byte maximum peak RSS, and `9,623,773` generated bytes as
+passing the one-thread, 900-second, 1 GiB, and 32 MiB caps. The producer has two
+frames of left context and zero right context, but the upstream cache is
+offline/noncausal and end-to-end latency is unmeasured.
+
+Routing decision: apply frozen Loop 50 route `L50-R05`. Stable
+nonseparability, no prior-clearing probe family, and no registered `H6`
+nonsaturation mean S24 acquisition is parked for this model family. S24 remains
+metadata-only and unopened; S25 remains physically unopened and final-only.
+This does not claim that S24 lacks information or that another representation
+must fail. A future representation-repair experiment requires a new prospective
+contract, and any Tier C post-outcome or protected-data operation still needs a
+separate exact decision.
+
+Disposition: Loop 48 Stage B is complete and consumed. No fit, inference,
+prediction, target delivery, score, tuning, or rerun is open. Maximum wording
+remains E2 pipeline-discriminative failure localization, not independent
+validation or scientific claim promotion.
+
+Evidence: `docs/LOOP_48_STAGE_B_RESULT.md`,
+`registries/loop48_stage_b_prediction_freeze.v0.json`,
+`registries/loop48_train_only_discrimination_result.v0.json`, and
+`tests/test_loop48_stage_b_result.py`.

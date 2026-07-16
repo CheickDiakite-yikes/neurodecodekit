@@ -1,0 +1,110 @@
+{
+  "schema_name": "neurodecodekit.research_autonomy_charter_decision",
+  "schema_version": "0.1.0",
+  "decision_id": "research-autonomy-charter-2026-07-15-activation-v0",
+  "recorded_at": "2026-07-15",
+  "status": "tier_a_tier_b_authorized_effective_after_remote_green",
+  "proof_posture": "exact_user_approval_recorded_no_tier_c_or_experiment_operation",
+  "authorization_parent_commit": "d49f026fc3eee5f78bca9cf0640cbe73fe8684d8",
+  "effective_only_after_this_record_is_tested_committed_pushed_and_ci_green": true,
+  "charter_snapshot": {
+    "path": "docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md",
+    "date": "2026-07-15",
+    "commit": "df9035a74ac3201c1f7dda740e417537044be966",
+    "sha256": "c9381bfc729dfca4aaab03929a6623f23c3cf06eb33fbae5379b0517981dcb64",
+    "git_blob_sha1": "e55d7d88202021280ec70185ce8bb99892ca4a64",
+    "push_ci_run_id": 29446791389,
+    "pr_ci_run_id": 29446794979,
+    "remains_byte_identical_historical_proposal": true,
+    "historical_draft_status_text_is_not_the_activation_record": true,
+    "separate_decision_is_activation_record": true
+  },
+  "green_parent": {
+    "commit": "d49f026fc3eee5f78bca9cf0640cbe73fe8684d8",
+    "push_ci_run_id": 29458544066,
+    "pr_ci_run_id": 29458546300,
+    "both_required_jobs_green_in_both_workflows": true
+  },
+  "user_authorization": {
+    "exact_sentence_verbatim": "Authorize the NeuroDecodeKit Research Autonomy Charter dated 2026-07-15. I authorize Tier A routine work and Tier B bounded development experiments exactly as written, including autonomous commits, pushes, and CI checks. Tier C irreversible evidence, real-data acquisition, hardware, destructive, release, and scientific-claim actions still require my separate exact permission.",
+    "matches_charter_standing_approval_sentence": true,
+    "prospective_only": true,
+    "scope_may_not_expand_by_inference": true
+  },
+  "authorization": {
+    "tier_a_routine_work_authorized_now": true,
+    "tier_b_bounded_development_experiments_authorized_now": true,
+    "autonomous_commits_pushes_and_ci_checks_authorized_now": true,
+    "tier_c_irreversible_evidence_authorized_now": false,
+    "new_real_participant_payload_or_target_authorized_now": false,
+    "held_out_final_source_test_or_unseen_person_scoring_authorized_now": false,
+    "consumed_evaluation_reuse_authorized_now": false,
+    "post_outcome_protocol_change_or_rerun_authorized_now": false,
+    "new_real_data_download_authorized_now": false,
+    "resource_cap_increase_authorized_now": false,
+    "rw3_stream_device_or_hardware_authorized_now": false,
+    "destructive_git_or_cross_project_delete_authorized_now": false,
+    "merge_tag_release_publish_or_payload_upload_authorized_now": false,
+    "scientific_or_clinical_claim_upgrade_authorized_now": false,
+    "loop48_stage_b_authorized_by_this_charter_now": false,
+    "s25_access_authorized_now": false
+  },
+  "tier_a_scope": [
+    "repository_inspection_primary_source_research_hypothesis_and_documentation",
+    "code_tests_schemas_validators_cli_and_synthetic_fixtures",
+    "target_free_synthetic_experiments_within_default_envelope",
+    "git_tracked_target_free_aggregate_analysis",
+    "dry_run_manifest_and_metadata_only_selection_without_payload_download",
+    "lint_complete_tests_bounded_smokes_commits_pushes_and_ci_inspection",
+    "preregistration_authorization_packet_and_nonexecuting_closeout_preparation"
+  ],
+  "tier_b_requirements": {
+    "input_must_be_synthetic_public_aggregate_or_already_authorized_development_only": true,
+    "held_out_final_source_test_cross_person_final_or_consumed_validation_target_reads": 0,
+    "development_target_use_must_be_explicit_and_disclosed": true,
+    "split_hypotheses_comparators_controls_metrics_thresholds_seeds_stop_rules_and_claim_ceiling_frozen_first": true,
+    "default_resource_envelope_must_be_sufficient": true,
+    "future_scientific_test_may_not_be_consumed": true,
+    "failed_results_must_be_retained_without_silent_rerun": true
+  },
+  "default_operating_envelope": {
+    "cpu_threads": 1,
+    "workers": 1,
+    "concurrent_numerical_jobs": 1,
+    "ordinary_peak_rss_bytes": 1073741824,
+    "generated_artifacts_per_loop_bytes": 33554432,
+    "minimum_free_disk_bytes": 21474836480,
+    "new_real_data_download_bytes": 0,
+    "persistent_background_processes_after_verification": 0,
+    "deletions_outside_repository": 0,
+    "destructive_git_operations": 0,
+    "loop_specific_contract_may_silently_loosen_envelope": false
+  },
+  "nonretroactive_boundary": {
+    "consumed_loop_may_reopen": false,
+    "existing_narrower_contract_may_be_loosened": false,
+    "loop48_stage_b_requires_separate_exact_decision": true,
+    "rw3_requires_separate_exact_decision": true,
+    "s25_requires_separate_exact_decision": true,
+    "same_session_loop48_stage_b_sentence_must_be_recorded_independently": true
+  },
+  "authorization_only_measurements": {
+    "protected_payload_reads": 0,
+    "target_reads": 0,
+    "model_inference_runs": 0,
+    "training_runs": 0,
+    "parameter_updates": 0,
+    "network_payload_downloads": 0,
+    "network_payload_bytes": 0,
+    "stream_device_or_hardware_operations": 0,
+    "destructive_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0,
+    "generated_experiment_artifacts": 0,
+    "end_to_end_latency_measured": false
+  },
+  "claim_boundary": {
+    "engineering_capability_authorized": "Tier A routine research engineering and fully frozen Tier B bounded development experiments may proceed autonomously through local verification, coherent commits, pushes, and CI.",
+    "scientific_claim_not_established": "This governance decision is not an experiment and establishes no neural advantage, decoding accuracy, sensor-signal dependence, brain-specific origin, unseen-person generalization, real-time behavior, EEG or portable-device performance, assistive value, diagnostic value, or clinical utility."
+  }
+}

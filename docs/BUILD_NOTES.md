@@ -4091,3 +4091,166 @@ Scientific claim not established: no S24 payload or target was opened and no
 model ran, so there is no new neural advantage, sensor-signal dependence,
 brain-specific origin, decoding, unseen-person, real-time, EEG, home-device,
 assistive, diagnostic, or clinical evidence.
+
+## 2026-07-15 - Research Autonomy Charter Activation
+
+- Recorded the maintainer's exact charter approval in
+  `docs/RESEARCH_AUTONOMY_CHARTER_DECISION.md` and
+  `registries/research_autonomy_charter_decision.v0.json`. The approved source
+  remains byte-identical at commit `df9035a`, SHA-256
+  `c9381bfc729dfca4aaab03929a6623f23c3cf06eb33fbae5379b0517981dcb64`.
+- Activated Tier A routine work and Tier B fully frozen bounded development
+  experiments, including autonomous commits, pushes, and CI checks, effective
+  only after this decision commit is remotely green.
+- Preserved every Tier C stop for irreversible evidence, real-data acquisition,
+  sealed/final targets, consumed-evaluation reuse, hardware, destructive work,
+  release, and claim promotion. The charter is prospective and does not itself
+  authorize Loop 48 Stage B, RW3, S25, or any existing closed contract.
+- Authorization-only access counters remain zero: no protected payload, target,
+  model, training, inference, download, stream, device, hardware, destructive,
+  release, or claim-promotion operation occurred.
+- Added nine decision invariants. The three new core artifacts total 16,449
+  bytes. Focused charter/Loop 50 acceptance passes 31 tests in 0.004 seconds;
+  the complete dependency-light suite passes 850 tests with 142 expected skips
+  in 1.92 seconds at 121,503,744-byte maximum RSS, and the optional-neuro suite
+  passes 882 tests with 22 expected skips in 10.56 seconds at 227,950,592-byte
+  maximum RSS. Both suites are exactly nine tests above the Loop 50 baseline.
+
+Engineering capability authorized: routine research engineering and fully
+frozen bounded development experiments may advance autonomously through local
+verification, commits, pushes, and remote CI.
+
+Scientific claim not established: this governance decision is not an
+experiment and establishes no neural advantage, decoding accuracy,
+sensor-signal dependence, brain-specific origin, generalization, real-time,
+EEG, device, assistive, diagnostic, or clinical result.
+
+## 2026-07-15 - Loop 48 Stage B Authorization Decision
+
+- Recorded the maintainer's exact one-run sentence in
+  `docs/LOOP_48_STAGE_B_AUTHORIZATION_DECISION.md` and
+  `registries/loop48_stage_b_authorization_decision.v0.json`, binding the green
+  preregistration, immutable request, exact hashes, operation counts, resources,
+  access order, and E2 ceiling.
+- Authorized the exact implementation and one registered execution only after
+  this authorization-only commit is remotely green. Protected input remains
+  closed during implementation and synthetic tests; the 11 check targets stay
+  sealed until a later plaintext-free prediction-freeze commit is remotely
+  green.
+- Kept validation, source test, session 2, S7/S20/S25, raw FIF/MAT, downloads,
+  larger or additional models, restarts, language models, NeuroTokens, RW3,
+  streams, devices, hardware, post-check tuning, claim promotion beyond E2, and
+  reruns closed.
+- Authorization-only counters remain zero. No protected path, cache member,
+  signal, target, derivative, model, training, inference, prediction, score,
+  download, stream, device, or hardware operation occurred.
+- Added nine decision invariants. The three new core artifacts total 27,098
+  bytes. Focused Stage B contract/request/decision plus charter acceptance
+  passes 44 tests in 0.007 seconds. The complete dependency-light suite passes
+  859 tests with 142 expected skips in 1.88 seconds at 117,407,744-byte maximum
+  RSS; the optional-neuro suite passes 891 tests with 22 expected skips in 10.36
+  seconds at 241,254,400-byte maximum RSS. Both are exactly nine tests above
+  the charter-decision baseline.
+
+Engineering capability authorized for testing: one exact, hash-bound,
+resource-bounded Stage B implementation and one registered train-only
+failure-discrimination execution may proceed through three ordered green gates.
+
+Scientific claim not established: this decision is not a result, and even a
+later clean Stage B run cannot establish independent validation, neural
+advantage, brain-specific origin, useful decoding, unseen-person
+generalization, causal preprocessing, real-time behavior, EEG or device
+performance, assistive value, diagnostic value, or clinical utility.
+
+## 2026-07-15 - Loop 48 Stage B Train-Only Failure Discrimination
+
+- Implemented the exact frozen Stage B boundary at commit `1d840e3`. The
+  bounded archive reader, deterministic 44/11 source-train split, transforms,
+  tiny causal and linear probes, five priors, registered controls, hash-only
+  prediction freezer, isolated scorer, five CLI stages, and synthetic tests
+  passed push CI `29461579009` and PR CI `29461580293` before protected access.
+- The static gate passed at 41,714,499,584 free bytes in 0.956671 seconds with
+  209,305,600-byte peak RSS. It delivered no signal or target rows and
+  performed no source-cache hash pass.
+- The isolated derivative stage performed the one authorized SHA-256 pass over
+  the exact 10,632,576-byte S21 session-1 sentence cache. It delivered 44 fit
+  signal/target rows and 11 check signal rows, while delivering zero check,
+  validation, source-test, or session-2 targets. The 7,084,125-byte fit bundle
+  and 1,750,971-byte target-free check bundle were created in 0.599360 seconds
+  at 150,568,960-byte peak RSS.
+- The one target-blind execution completed 15 causal fits, three linear fits,
+  two control fits, 4,800 optimizer steps, 35 model-inference runs, five
+  train-only prior fits, and 41 private prediction sets. It took 188.584455
+  seconds for the target-blind stage and 190.140486 cumulative seconds through
+  freeze, peaking at 483,540,992 bytes RSS. Check-target deliveries and scores
+  remained zero.
+- Hash-only freeze commit `00215b1` bound all 20 fit telemetry bundles and 41
+  private prediction sets without plaintext predictions or targets. Push CI
+  `29461934145` and PR CI `29461935560` were both green before the same 11
+  train-check targets opened once for one 0.112110-second scoring event. No
+  post-check parameter update, configuration change, or rerun occurred.
+- The consumed machine result is
+  `registries/loop48_train_only_discrimination_result.v0.json`, SHA-256
+  `ef8290eb45e755bedb2deed781e6e472aa3621c25d91a01d01626c17c96ce891`,
+  with readable closeout in `docs/LOOP_48_STAGE_B_RESULT.md`. The primary
+  causal candidate reached macro CER `0.953566` versus `0.822045` for its
+  matched train-only prior, a `-0.131522` improvement. It won 2 of 11 rows and
+  lost 9 with one-sided p-value `0.980957` over all 2,048 assignments.
+- All three full-size causal and all three full-size linear fits were finite and
+  stable, but none cleared the registered prior rule. This supports `H4`,
+  stable but nonseparable representation, for this transformed historical
+  source-train slice and fixed probe family. No registered `-50/-25/+25/+50`
+  shift improved all three seeds, providing evidence against fixed-offset
+  `H3`. `H1`, `H2`, `H5`, and `H6` remain unresolved.
+- The primary beat exact-zero and timing-only components on 11/11 rows at
+  one-sided p-value `0.000488`, and beat the severe `+100` displacement on six
+  rows with five ties at p-value `0.015625`. These isolated diagnostics cannot
+  rescue the failed no-signal-prior and complete corrupted-signal conjunction;
+  sensor-signal dependence remains unavailable.
+- The frozen Loop 50 router selects `L50-R05`: park S24 acquisition for this
+  model family. S24 remains metadata-only and unopened; S25 remains sealed and
+  final-only. The next reversible work is Tier A representation-repair research
+  and contract design. Any real post-outcome model operation, protected-data
+  repair run, new participant acquisition, or sealed-target event remains Tier
+  C and requires a separate exact maintainer decision.
+- Total generated execution artifacts were 9,623,773 bytes under the 32 MiB
+  cap, maximum RSS was 483,540,992 bytes under the 1 GiB cap, and the run used
+  one thread and one worker. There were zero downloads, raw FIF/MAT reads,
+  validation or test reads, language-model, NeuroToken, RW3, stream, device, or
+  hardware operations. The model has two frames of left context and zero right
+  context, but the upstream cache is offline/noncausal and end-to-end latency
+  was not measured.
+- Local closeout acceptance passes 63 focused Stage B tests in 6.758 seconds
+  internal time and 7.39 seconds wall time at 316,719,104-byte maximum RSS. The
+  complete dependency-light suite passes 887 tests with 149 expected skips in
+  1.377 seconds internal time and 1.63 seconds wall time at 124,157,952-byte
+  maximum RSS. The complete optional-neuro suite passes 934 tests with 3
+  expected skips in 29.827 seconds internal time and 30.79 seconds wall time at
+  609,648,640-byte maximum RSS. Both complete suites add exactly nine tests over
+  their 878/925-test implementation baselines without losing a prior test.
+- Ruff lint and scoped changed-test formatting pass. Compileall, all 54 registry
+  JSON files, five Stage B CLI-help surfaces, strict prediction-freeze
+  inspection, and `git diff --check` pass. Freeze inspection confirms 20 fit
+  telemetry bundles, 41 prediction sets, zero check-target delivery, and zero
+  score at the committed pre-target boundary. None of these closeout checks
+  reran a scientific fit, inference, prediction, target delivery, or score.
+- Result closeout commit `ad4410cfe41ba250c737c6345c83098906029479`
+  passed push CI `29464527230` and PR CI `29464529524`. Base Python and Optional
+  Neuro Readers were green in both workflows; the only annotations were
+  GitHub-hosted runner notices that Node.js 20 actions are being forced to
+  Node.js 24, not repository test or lint failures.
+- Updated the README, start-here guide, Markdown tracker, scientific roadmap,
+  machine roadmap, handoff, agent boundary, decision journal, start prompt, and
+  this build journal. The tracked workbook remains the last reviewed Stage A
+  visual snapshot because its prior import reached 1,572,667,392-byte peak RSS;
+  its adjacent user-owned inspection sidecar was not opened, modified, staged,
+  or committed.
+
+Engineering capability added: NeuroDecodeKit now has a one-shot,
+target-firewalled train-only failure-discrimination path with exact provenance,
+resource accounting, hypothesis decisions, and a remotely green prediction
+freeze.
+
+Scientific claim not established: the run did not show neural advantage,
+brain-specific decoding, independent generalization, real-time performance, or
+portable/home EEG performance.

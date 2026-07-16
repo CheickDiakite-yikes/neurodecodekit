@@ -68,9 +68,19 @@
 > unauthorized. Loop 43 planning research defines the independent artifact-
 > reproduction firewall while its challenge remains `Not Started` and
 > unauthorized. Loop 44 artifact-only claim review is complete; engineering
-> release is held and scientific performance is parked. The
-> spreadsheet dashboard displays the original roadmap, current gate, and next
-> 20-loop queue separately.
+> release is held and scientific performance is parked. Loop 48 Stage B has
+> now completed exactly once after its implementation and hash-only prediction
+> freeze each passed push and PR CI. The primary causal candidate reached macro
+> CER `0.953566` versus `0.822045` for the train-only prior. All six full-size
+> causal and linear probes were finite and stable, but none cleared the prior;
+> `H4` stable nonseparability is supported, fixed-shift `H3` has evidence
+> against it, and `H1/H2/H5/H6` remain unresolved. The 11 check rows are
+> historically used development rows, so this is an E2 diagnostic, not fresh
+> validation. Route `L50-R05` parks S24 acquisition for this model family.
+> Stage B is consumed and no rerun is authorized. This Markdown tracker and
+> `registries/next_scientific_loops.v0.json` are the current Stage B sources of
+> truth. The workbook remains the last visually reviewed Stage A snapshot; it
+> was not reopened because its prior full import reached 1.57 GiB peak RSS.
 
 This tracker starts after PR1 lands. The core operating rule is simple: **do not add a more complex loop until the previous loop has produced a cache, report, demo, or explicit kill/park decision.**
 Each loop should be one PR or one experiment note whenever possible. Complexity is allowed, but only when a simpler loop proves why it is needed.
@@ -284,8 +294,10 @@ Each loop should be one PR or one experiment note whenever possible. Complexity 
   selected descriptive `F5`; the 10,643-byte result is consumed and no rerun is
   authorized. The immutable five-hypothesis train-only portfolio now
   has an additive six-hypothesis discrimination map that separates the fixed
-  recipe from data quantity/diversity and routes shortcut risk to Loop 35; both
-  remain design-only and unauthorized.
+  recipe from data quantity/diversity and routes shortcut risk to Loop 35.
+  Its exact Stage B ran once: `H4` stable nonseparability is supported, fixed-
+  shift `H3` has evidence against it, and route `L50-R05` parks S24 acquisition
+  for this model family. Stage B is consumed and no rerun is authorized.
 
 ## Next planned 20 loops: 25-44
 
@@ -607,15 +619,18 @@ Independent Evidence And Release.
 Loop 45 is complete at its target-free mechanics boundary. Loops 46 and 47 are
 parked after the one consumed S21 event failed the candidate-versus-prior and
 full attribution conjunctions. Loop 48 completed one artifact-only Stage A at
-descriptive `F5`; its result is consumed with no rerun. Stage B is now exactly
-preregistered over a deterministic 44-fit/11-check source-train split with 20
-fits, 35 target-blind inferences, five priors, 41 frozen prediction sets, and
-2,048 exact sign assignments. All 55 rows were used historically, so this can
-reach at most E2 diagnostic evidence. The contract authorizes nothing and no
-protected read, implementation, training, inference, or check score occurred.
-Preregistration commit `0ee0ab7` and push/PR CI runs `29452286159` /
-`29452288520` are green. The exact packet and machine request are prepared, but
-all authorization remains false.
+descriptive `F5`; its result is consumed with no rerun. Stage B then completed
+exactly once over the deterministic 44-fit/11-check source-train split with 20
+fits, 4,800 optimizer steps, 35 target-blind inferences, five priors, 41 frozen
+prediction sets, and 2,048 exact sign assignments. Hash-only freeze commit
+`00215b1` passed push CI `29461934145` and PR CI `29461935560` before the same
+11 check targets opened once. The primary candidate reached macro CER
+`0.953566` versus prior `0.822045`; `H4` stable nonseparability is supported,
+fixed-shift `H3` has evidence against it, and `H1/H2/H5/H6` remain unresolved.
+All 55 rows were used historically, so this is E2 diagnostic evidence, not
+fresh validation. Route `L50-R05` parks S24 acquisition for this model family.
+No rerun, post-check tuning, validation/source-test/session-2 access, S24/S25
+access, larger model, or claim upgrade is authorized.
 Loop 49 planning research is now complete while its experiment remains `Not
 Started`. Pinned public metadata selects S24 session 2 block 2 as the preferred
 permanently development-only MEG person: one FIF plus one protected MAT log,
@@ -630,7 +645,7 @@ unavailable, so there is no acquisition request or qualification result.
 Planning commit `5afa61e` passed push CI `29454969710` and PR #27 CI
 `29455166081`; both Base Python and Optional Neuro Readers are green.
 
-Loop 50 planning research is now complete while its experiment remains `Not
+Loop 50 planning research is complete while its experiment remains `Not
 Started`. `docs/LOOP_50_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop50_research_boundary.v0.json` freeze a global text-group
 firewall, five-fold historical S21 out-of-fold diagnostic, 16-group S24
@@ -639,14 +654,15 @@ one primary plus two nonselectable stability seeds, ten fixed conditions, an
 exact 20-update inventory, and a worst-person gate. The primary seed must beat
 the strongest no-signal prior by at least `0.05` macro CER on both development
 people; pooled gain cannot rescue either person. All 31 authorization fields
-are false, all protected/model counters are zero, and no exact candidate is
-selected before Stage B closes.
+are false, all protected/model counters are zero, and no exact candidate was
+selected in the planning snapshot. Stage B has now closed under `L50-R05`, so
+the same-family S24 intake path is parked.
 Planning commit `085f341` passed push CI `29458102674` and PR #28 CI
 `29458116994`; Base Python and Optional Neuro Readers are green in both.
 
 Loops 51-64 are `Not Started`. All execution flags and all nine global
-authorization fields are false. Decision 0083 keeps new Loop 49 acquisition
-after the separately gated Loop 48 Stage B. The next possible positive
-scientific claim still requires a fresh, separately registered development-
-person path before the final-only S25 zero-shot verdict. No roadmap row
-authorizes either experiment.
+authorization fields are false. Decision 0083 and the applied `L50-R05` route
+now block S24 acquisition for this model family. Any future predictive branch
+needs a separately preregistered representation repair before another
+development-person intake can be considered; S25 remains final-only and
+sealed. No roadmap row authorizes either experiment.

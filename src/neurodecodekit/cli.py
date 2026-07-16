@@ -1428,6 +1428,93 @@ def _cmd_loop48_inspect_failure_localization(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_loop48_stage_b_static_gate(args: argparse.Namespace) -> int:
+    _set_loop48_thread_environment()
+    from neurodecodekit.experiments.train_only_failure_discrimination_gate import (
+        run_static_stage_b_gate,
+    )
+
+    report = run_static_stage_b_gate(
+        repo_root=args.repo_root,
+        implementation_commit=args.implementation_commit,
+        implementation_push_ci_run_id=args.implementation_push_ci_run_id,
+        implementation_pr_ci_run_id=args.implementation_pr_ci_run_id,
+        output_root=args.out_root,
+    )
+    print(json.dumps(report, indent=2, sort_keys=True))
+    return 0 if report["status"] == "passed" else 1
+
+
+def _cmd_loop48_stage_b_create_derivatives(args: argparse.Namespace) -> int:
+    _set_loop48_thread_environment()
+    from neurodecodekit.experiments.train_only_failure_discrimination_gate import (
+        create_stage_b_derivatives,
+    )
+
+    report = create_stage_b_derivatives(
+        repo_root=args.repo_root,
+        output_root=args.out_root,
+    )
+    print(json.dumps(report, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_loop48_stage_b_target_blind(args: argparse.Namespace) -> int:
+    _set_loop48_thread_environment()
+    from neurodecodekit.experiments.train_only_failure_discrimination_gate import (
+        run_target_blind_stage_b_gate,
+    )
+
+    report = run_target_blind_stage_b_gate(
+        repo_root=args.repo_root,
+        implementation_commit=args.implementation_commit,
+        freeze_record_out=args.freeze_record,
+        output_root=args.out_root,
+    )
+    print(json.dumps(report, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_loop48_stage_b_inspect_freeze(args: argparse.Namespace) -> int:
+    from neurodecodekit.evaluation.train_only_failure_discrimination import (
+        validate_prediction_freeze_record,
+    )
+
+    payload = json.loads(Path(args.freeze_record).read_text(encoding="utf-8"))
+    validate_prediction_freeze_record(payload)
+    summary = {
+        "status": payload["status"],
+        "prediction_set_count": payload["prediction_set_count"],
+        "fit_telemetry_bundle_count": payload["fit_telemetry_bundle_count"],
+        "implementation_commit": payload["implementation_commit"],
+        "check_target_rows_delivered": payload["check_target_rows_delivered"],
+        "check_scoring_runs": payload["check_scoring_runs"],
+        "resources": payload["resources"],
+        "warnings": payload["warnings"],
+    }
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_loop48_stage_b_score(args: argparse.Namespace) -> int:
+    _set_loop48_thread_environment()
+    from neurodecodekit.experiments.train_only_failure_discrimination_gate import (
+        score_frozen_stage_b,
+    )
+
+    report = score_frozen_stage_b(
+        repo_root=args.repo_root,
+        freeze_record_path=args.freeze_record,
+        green_freeze_commit=args.green_freeze_commit,
+        freeze_push_ci_run_id=args.freeze_push_ci_run_id,
+        freeze_pr_ci_run_id=args.freeze_pr_ci_run_id,
+        public_report_out=args.public_report,
+        output_root=args.out_root,
+    )
+    print(json.dumps(report, indent=2, sort_keys=True))
+    return 0
+
+
 def _set_loop24_thread_environment() -> None:
     import os
 
@@ -3718,6 +3805,97 @@ def build_parser() -> argparse.ArgumentParser:
         help="Aggregate Loop 48 result JSON.",
     )
     p.set_defaults(func=_cmd_loop48_inspect_failure_localization)
+
+    p = sub.add_parser(
+        "loop48-stage-b-static-gate",
+        help="Bind the authorized Stage B source and split without signal or target delivery.",
+        description=(
+            "Require the remotely green implementation HEAD, verify the exact authorization, "
+            "source size, split hash, NPY headers, channel order, one-thread environment, "
+            "free disk, and deterministic 44/11 assignment. This stage does not hash the "
+            "source cache or return signal or target values."
+        ),
+    )
+    p.add_argument("--repo-root", default=".", help="NeuroDecodeKit repository root.")
+    p.add_argument(
+        "--implementation-commit",
+        required=True,
+        help="Exact remotely green 40-character implementation commit at HEAD.",
+    )
+    p.add_argument(
+        "--implementation-push-ci-run-id",
+        required=True,
+        type=int,
+        help="Successful branch-push CI run ID for the implementation commit.",
+    )
+    p.add_argument(
+        "--implementation-pr-ci-run-id",
+        required=True,
+        type=int,
+        help="Successful pull-request CI run ID for the implementation commit.",
+    )
+    p.add_argument("--out-root", default=".codex_work/loop48_stage_b")
+    p.set_defaults(func=_cmd_loop48_stage_b_static_gate)
+
+    p = sub.add_parser(
+        "loop48-stage-b-create-derivatives",
+        help="Create the registered 44-row fit and target-free 11-row check derivatives.",
+        description=(
+            "Require a passing Stage B static gate, perform the source cache's single "
+            "SHA-256 pass, stream only the 55 source-train rows, and write no check target, "
+            "validation, source-test, or session-2 derivative."
+        ),
+    )
+    p.add_argument("--repo-root", default=".", help="NeuroDecodeKit repository root.")
+    p.add_argument("--out-root", default=".codex_work/loop48_stage_b")
+    p.set_defaults(func=_cmd_loop48_stage_b_create_derivatives)
+
+    p = sub.add_parser(
+        "loop48-stage-b-target-blind",
+        help="Run the exact 20 fits and freeze all 41 Stage B prediction sets.",
+        description=(
+            "Run 4,800 fixed optimizer steps, 35 target-blind model inferences, and five "
+            "train-only priors on one CPU thread. Check targets are not accepted by this "
+            "command; its committed output is a plaintext-free hash record."
+        ),
+    )
+    p.add_argument("--repo-root", default=".", help="NeuroDecodeKit repository root.")
+    p.add_argument("--implementation-commit", required=True)
+    p.add_argument(
+        "--freeze-record",
+        default="registries/loop48_stage_b_prediction_freeze.v0.json",
+        help="Registered hash-only prediction freeze to commit before check scoring.",
+    )
+    p.add_argument("--out-root", default=".codex_work/loop48_stage_b")
+    p.set_defaults(func=_cmd_loop48_stage_b_target_blind)
+
+    p = sub.add_parser(
+        "loop48-stage-b-inspect-freeze",
+        help="Validate the plaintext-free 20-fit, 41-set Stage B prediction freeze.",
+    )
+    p.add_argument("--freeze-record", required=True)
+    p.set_defaults(func=_cmd_loop48_stage_b_inspect_freeze)
+
+    p = sub.add_parser(
+        "loop48-stage-b-score",
+        help="Deliver the same 11 check targets once and score all Stage B conditions.",
+        description=(
+            "This consumed one-shot command requires the remotely green prediction-freeze "
+            "commit and both successful CI run IDs. It refuses reruns, validation or test "
+            "rows, session 2, parameter updates, and post-check configuration changes."
+        ),
+    )
+    p.add_argument("--repo-root", default=".", help="NeuroDecodeKit repository root.")
+    p.add_argument("--freeze-record", required=True)
+    p.add_argument("--green-freeze-commit", required=True)
+    p.add_argument("--freeze-push-ci-run-id", required=True, type=int)
+    p.add_argument("--freeze-pr-ci-run-id", required=True, type=int)
+    p.add_argument(
+        "--public-report",
+        default="registries/loop48_train_only_discrimination_result.v0.json",
+    )
+    p.add_argument("--out-root", default=".codex_work/loop48_stage_b")
+    p.set_defaults(func=_cmd_loop48_stage_b_score)
 
     p = sub.add_parser(
         "extract-windows",
