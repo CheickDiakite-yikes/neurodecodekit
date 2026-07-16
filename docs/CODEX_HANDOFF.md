@@ -21,6 +21,8 @@
 > stream, device, hardware, or scientific result was accessed. Loop 53 remains
 > the next irreversible decision. Loop 55 is `Not Started`, Loop 54 dependent,
 > and unauthorized. Preserve the unrelated tracker inspection NDJSON.
+> Documentation-sync commit `8efcb17` passed push CI `29473032843` and PR #33
+> CI `29473045583`; Base Python and Optional Neuro Readers passed in both.
 
 > Current handoff, 2026-07-16 after Loop 54 planning research: commit `aec440a`
 > freezes the acquisition-dependent EEG qualification design in

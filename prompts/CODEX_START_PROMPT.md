@@ -396,6 +396,8 @@ final-trial tests, and a committed, pushed, remotely green prediction freeze
 before final targets open once. No Loop 55 split, target, implementation,
 model, training, inference, or score is authorized. Do not call any future
 hand-only pass key decoding, or any centered-window pass causal or real time.
+Documentation-sync commit `8efcb17` passed push CI `29473032843` and PR #33 CI
+`29473045583`; Base Python and Optional Neuro Readers passed in both.
 
 Independently, RW3 Stage A remains a separate pending decision surface:
 

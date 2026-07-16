@@ -467,6 +467,8 @@ Read this before interpreting any number in the repository.
   green hash-only prediction freeze before one final target delivery. Planning
   currently passes 24 focused roadmap/contract tests plus 9 public-status
   subtests, and the full local suite passes 1007 tests with 3 expected skips.
+  Documentation-sync commit `8efcb17` passed push CI `29473032843` and PR #33
+  CI `29473045583`, with Base Python and Optional Neuro Readers green in both.
   The experiment remains `Not Started` and every
   S20, split, target, model, training, inference, and scoring permission is
   false.

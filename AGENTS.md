@@ -125,6 +125,9 @@ exact Tier C sequence is recorded. Even a future clean key-level pass cannot
 establish brain-specific origin, continuous thought-to-text, generalization,
 real-time operation, portable hardware, home use, or clinical utility.
 
+Documentation-sync commit `8efcb17` passed push CI `29473032843` and PR #33 CI
+`29473045583`; Base Python and Optional Neuro Readers passed in both.
+
 The first 20-loop roadmap is complete except for the deliberately parked Loop
 13 backend. Post-roadmap Loops 21 and 22 validate bounded synthetic causal
 replay and one tiny learned motif encoder. Loop 23 implemented the frozen
