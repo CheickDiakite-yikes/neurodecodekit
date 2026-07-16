@@ -262,9 +262,31 @@ is pending. S7 remains consumed and excluded.
 
 ### Loop 54 - EEG Trial Geometry And Confound Ledger
 
-Reconcile at least 48 trials; record channels, units, geometry, reference,
-sampling, missing/bad channels, EOG/EMG/motion availability, keypress timing,
-and target-isolation order. Missing peripheral controls cap later claims.
+**Status: planning research complete; acquisition dependent; unauthorized.**
+`docs/LOOP_54_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop54_eeg_trial_geometry_research.v0.json` now replace the coarse
+"header then signal/target" idea with four ordered stages. L54-A parses exactly
+one VHDR without MNE or sibling-file resolution. L54-B opens only VHDR+EEG,
+retains every source channel, and emits bounded target-blind quality summaries
+without rereference, interpolation, ICA, filtering, resampling, target-aligned
+windowing, or a raw-signal derivative. L54-C opens only VHDR+VMRK+MAT in an
+isolated process and emits opaque trial commitments and aggregate alignment
+facts while protecting marker descriptions, keycodes, responses, and targets.
+L54-D reads only the aggregate public ledgers and returns eligibility or a
+measured park reason.
+
+The source audit found that the current Loop 19 extractor is not eligible for
+this future claim path: it attaches BrainVision marker annotations, loads the
+MAT payload, excludes EOG-named channels, reads signal, and writes plaintext
+labels in one invocation. That historical engineering result remains valid at
+its original boundary.
+
+**Gate:** at least 48 unique performed trials with unambiguous identity, strict
+stage isolation, all channels retained, and every channel, geometry, reference,
+quality, and recorded-confound field known or explicitly unavailable. Event
+windows are not independent trials. Loop 54 creates no split, model, training,
+inference, score, or scientific result. Loop 53 must finish first, and each
+real content stage requires a separate exact Tier C decision.
 
 ### Loop 55 - Fresh EEG Neural-Effect Gate
 
