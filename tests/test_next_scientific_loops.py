@@ -80,7 +80,7 @@ class NextScientificLoopsTests(unittest.TestCase):
                 45: "Complete",
                 46: "Parked; Registered Gate Failed",
                 47: "Parked; Shared Attribution Gate Failed",
-                48: "Complete A/B; Stage C Preflight Fix Pending Green",
+                48: "Complete A/B; Stage C Consumed and Parked",
             }.get(row["loop_id"], "Not Started")
             self.assertEqual(row["status"], expected_status)
             self.assertTrue(row["controls"])
@@ -123,7 +123,8 @@ class NextScientificLoopsTests(unittest.TestCase):
         self.assertIn("7,568-parameter", loop48["build_deliverable"])
         self.assertIn("loop48_stage_c_synthetic_implementation.v0.json", loop48["build_deliverable"])
         self.assertIn("zero-update local qualification", loop48["build_deliverable"])
-        self.assertIn("calibration did not start", loop48["build_deliverable"])
+        self.assertIn("candidate reached final CER 0.433333", loop48["build_deliverable"])
+        self.assertIn("Stage C is consumed and parked", loop48["authorization_boundary"])
         self.assertIn("44 source-train", loop48["data_scope"])
         self.assertIn("11 check targets once", loop48["data_scope"])
         self.assertIn("190.140486", loop48["future_resource_cap"])

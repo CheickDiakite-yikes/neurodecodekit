@@ -65,10 +65,13 @@
    `docs/LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md` and
    `registries/loop48_stage_c_synthetic_implementation.v0.json` for the exact
    models, fixture, gate, CLI, zero-update qualification, and source hashes.
-   The first post-green invocation refused before fixture generation because
-   the validator read `seed` instead of `fixture_seed`; all model, update,
-   output, and protected counters stayed zero. The four-fit calibration did not
-   start. Its one-field correction must be pushed and remotely green first.
+   Then read `docs/LOOP_48_STAGE_C_SYNTHETIC_RESULT.md` and
+   `registries/loop48_stage_c_synthetic_result.v0.json`. After correction
+   commit `2836ecc` became remotely green, the one synthetic gate ran and is
+   consumed: candidate CER `0.433333`, `1/8` exact, versus ablation CER
+   `1.000000`. The `0.566667` relative improvement passed, but both absolute
+   gates failed. Stage C is parked without rerun; no real signal, target, cache,
+   S24, or S25 path opened.
 8. Read `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` for the selected S25
    metadata candidate and every blocker that still prevents preregistration,
    download, signal/target access, or transfer evaluation.
@@ -141,8 +144,9 @@ not the current loop number. The workbook remains the last visually reviewed
 Stage A snapshot because its prior import reached 1.57 GiB peak RSS. The current
 sources of truth are `docs/NEXT_20_LOOPS_TRACKER.md` and
 `registries/next_scientific_loops.v0.json`; they report **Loops 26/31/33
-consumed and parked; Loop 48 Stage A F5 plus consumed Stage B H4 diagnostic
-with no rerun**. The workbook's ninth sheet contains the separate **Loops
+   consumed and parked; Loop 48 Stage A F5, consumed Stage B H4 diagnostic,
+   and consumed failed Stage C synthetic gate, all with no rerun**. The
+   workbook's ninth sheet contains the separate **Loops
 25-44 queue**. Loop 25 passed once
 at its target-free mechanics boundary and now has `execution_authorized: false`
 because no rerun is open; Loop 26 was preregistered at `881145d`, authorized at

@@ -4352,3 +4352,48 @@ unestablished.
   tests with 3 expected skips in 29.511 seconds at 638,550,016-byte peak RSS.
 - The correction must be committed, pushed, and pass fresh push and PR CI
   before the one synthetic calibration can begin. No immediate retry occurred.
+
+## 2026-07-15 - Loop 48 Stage C Synthetic Result
+
+- Correction commit `2836ecc` passed push CI `29467415680` and PR CI
+  `29467416894` before the one synthetic calibration began. The prior preflight
+  refusal remained a zero-row, zero-update event and did not consume the run.
+- Executed the frozen seed-4850, 40-row, 24/8/8 gate once under one CPU thread
+  and one worker. `L48C-SYN-OPT0` was selected by the unchanged selection rule.
+- The 7,692-parameter temporal candidate reached final macro CER `0.433333`
+  and `1/8` exact sequences. The 7,568-parameter zero-context ablation reached
+  CER `1.000000` and `0/8` exact. The `0.566667` relative CER improvement
+  passed, but the absolute CER `<=0.10` and exact-sequence `>=7/8` gates failed.
+- Deterministic checkpoint replay, 8/8 future-mutation checks, 8/8 prefix-
+  resume checks, causality, lengths, padding, output geometry, fixture identity,
+  and every resource gate passed.
+- The run performed four training runs, 1,680 optimizer steps, eight model-
+  inference runs, two checkpoint writes, and one checkpoint read in 7.829308
+  seconds internal time. Internal peak RSS was 310,509,568 bytes; external peak
+  RSS was 320,405,504 bytes. Fixture arrays were 1,699,920 bytes and generated
+  artifacts totaled 83,132 bytes.
+- Raw-data reads, real-cache stat/hash/member reads, real signal and target
+  rows, downloads, S24/S25 operations, stream/device/hardware/RW3 operations,
+  and plaintext target/prediction emission were all zero. End-to-end latency
+  was not measured.
+- Added a 7,546-byte aggregate machine result and a human closeout. The ignored
+  checkpoints and source reports remain uncommitted. Loop 48 Stage C is
+  consumed and parked without tuning or rerun.
+- The focused closeout set passes 64 tests. The dependency-light suite passes
+  919 tests with 156 expected skips in 1.439 seconds internal time and 1.70
+  seconds wall time at 123,912,192-byte external peak RSS. The optional-neuro
+  suite passes 966 tests with 3 expected skips in 29.839 seconds internal time
+  and 30.87 seconds wall time at 621,412,352-byte external peak RSS. Both add
+  exactly eight result-contract tests over the corrected 911/958 baseline.
+- Ruff, compileall, every registry JSON, three CLI help surfaces, source-result
+  inspection, and `git diff --check` pass without rerunning the consumed gate.
+
+Engineering capability added: NeuroDecodeKit executed the registered causal
+temporal candidate, zero-context ablation, deterministic selection,
+checkpoint-replay, causal-control, padding, resource, and no-leakage gates once
+under a bounded synthetic interface.
+
+Scientific claim not established: no real signal or target was opened, so
+neural advantage, sensor-signal dependence, brain-specific origin, real
+decoding improvement, generalization, real-time performance, and portable or
+home EEG performance remain unestablished.

@@ -16,11 +16,11 @@ HAS_TORCH = importlib.util.find_spec("torch") is not None
 
 
 class Loop48StageCSyntheticDependencyLightTests(unittest.TestCase):
-    def test_implementation_record_is_pre_execution_and_hash_bound(self):
+    def test_implementation_record_is_consumed_and_hash_bound(self):
         record = json.loads(IMPLEMENTATION_REGISTRY.read_text(encoding="utf-8"))
         self.assertEqual(
             record["status"],
-            "preflight_refused_zero_update_fix_pending_remote_green",
+            "synthetic_execution_consumed_parked_gate_failed_no_rerun",
         )
         self.assertEqual(
             record["research_milestone"]["commit"], "9579be93340d86f87f1b8c8f4ad7f987ebd765f0"
@@ -32,9 +32,22 @@ class Loop48StageCSyntheticDependencyLightTests(unittest.TestCase):
             self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), binding["sha256"])
         authorization = record["authorization"]
         self.assertTrue(authorization["implementation_authorized_and_completed_now"])
-        self.assertFalse(authorization["synthetic_calibration_executed_now"])
+        self.assertTrue(authorization["synthetic_calibration_executed_now"])
+        self.assertTrue(authorization["synthetic_calibration_consumed_now"])
+        self.assertFalse(authorization["synthetic_calibration_rerun_authorized_now"])
         self.assertFalse(record["preflight_refusal"]["calibration_started"])
         self.assertEqual(record["preflight_refusal"]["optimizer_steps"], 0)
+        self.assertEqual(
+            record["preflight_correction_milestone"]["commit"],
+            "2836ecceafed3d35c6f255714ad1c7a9b71e2e25",
+        )
+        self.assertTrue(
+            record["preflight_correction_milestone"][
+                "both_remote_workflows_green_before_execution"
+            ]
+        )
+        self.assertFalse(record["consumed_synthetic_result"]["aggregate_gate_passed"])
+        self.assertEqual(record["consumed_synthetic_result"]["optimizer_steps"], 1680)
         for key, value in authorization.items():
             if (
                 key.endswith("authorized_now")
@@ -56,6 +69,8 @@ class Loop48StageCSyntheticDependencyLightTests(unittest.TestCase):
             text = path.read_text(encoding="utf-8")
             self.assertIn("LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md", text, path)
             self.assertIn("loop48_stage_c_synthetic_implementation.v0.json", text, path)
+            self.assertIn("LOOP_48_STAGE_C_SYNTHETIC_RESULT.md", text, path)
+            self.assertIn("loop48_stage_c_synthetic_result.v0.json", text, path)
 
     def test_cli_help_exposes_only_synthetic_paths(self):
         env = dict(os.environ)

@@ -3,8 +3,8 @@
   "schema_version": "0.1.0",
   "implementation_id": "loop48-stage-c-synthetic-temporal-representation-v0",
   "prepared_at": "2026-07-15",
-  "status": "preflight_refused_zero_update_fix_pending_remote_green",
-  "proof_posture": "synthetic_implementation_qualification_only_no_parameter_update_or_protected_operation",
+  "status": "synthetic_execution_consumed_parked_gate_failed_no_rerun",
+  "proof_posture": "synthetic_temporal_representation_mechanics_only_no_protected_operation",
   "research_milestone": {
     "commit": "9579be93340d86f87f1b8c8f4ad7f987ebd765f0",
     "push_ci_run_id": 29466218879,
@@ -36,7 +36,7 @@
     },
     "tests": {
       "path": "tests/test_loop48_stage_c_synthetic_implementation.py",
-      "sha256": "159a8d763996976ffa554e03a44b4c04b9c76f5c1fce5fc9d394d75706bd0341"
+      "sha256": "7dc6bfd1c75f7a2cf944d247c18d2efa61c46fe6b11de2eccc57196bb7fd313b"
     }
   },
   "implemented_interface": {
@@ -135,8 +135,8 @@
     "cli_help_surfaces_passed": 2,
     "git_diff_check_passed": true,
     "full_suite_pending": false,
-    "implementation_push_pending": true,
-    "implementation_remote_green_pending": true
+    "implementation_push_pending": false,
+    "implementation_remote_green_pending": false
   },
   "preflight_refusal": {
     "implementation_commit": "59b30a3c64ad8aa55156a87599bdc495b66ea3bc",
@@ -162,10 +162,39 @@
     "calibration_consumed": false,
     "rerun_before_corrected_commit_remote_green_authorized": false
   },
+  "preflight_correction_milestone": {
+    "commit": "2836ecceafed3d35c6f255714ad1c7a9b71e2e25",
+    "push_ci_run_id": 29467415680,
+    "pull_request_ci_run_id": 29467416894,
+    "push_ci_conclusion": "success",
+    "pull_request_ci_conclusion": "success",
+    "both_remote_workflows_green_before_execution": true
+  },
+  "consumed_synthetic_result": {
+    "path": "registries/loop48_stage_c_synthetic_result.v0.json",
+    "sha256": "3c1c0d7286526f00a51325c04493b2c07bd5a989f683df03c50d2181f6fa738a",
+    "status": "consumed_parked_gate_failed_no_rerun",
+    "selected_recipe_id": "L48C-SYN-OPT0",
+    "candidate_final_macro_cer": 0.43333333333333335,
+    "candidate_final_exact_sequences": 1,
+    "ablation_final_macro_cer": 1.0,
+    "candidate_minus_ablation_cer_improvement": 0.5666666666666667,
+    "aggregate_gate_passed": false,
+    "training_runs": 4,
+    "optimizer_steps": 1680,
+    "model_inference_runs": 8,
+    "internal_runtime_sec": 7.829308,
+    "internal_peak_rss_bytes": 310509568,
+    "generated_artifact_bytes": 83132,
+    "real_or_protected_reads": 0,
+    "reruns": 0
+  },
   "authorization": {
     "implementation_authorized_and_completed_now": true,
     "synthetic_calibration_authorized_only_after_this_implementation_commit_is_remotely_green": true,
-    "synthetic_calibration_executed_now": false,
+    "synthetic_calibration_executed_now": true,
+    "synthetic_calibration_consumed_now": true,
+    "synthetic_calibration_rerun_authorized_now": false,
     "protected_stage_c_contract_exists_now": false,
     "protected_stage_c_execution_authorized_now": false,
     "s21_cache_stat_hash_member_or_target_read_authorized_now": false,
@@ -179,14 +208,14 @@
     "scientific_claim_upgrade_authorized_now": false
   },
   "warnings": [
-    "implementation_is_not_a_synthetic_gate_result",
-    "no_parameter_update_was_run_during_local_precommit_qualification",
-    "synthetic_gate_must_wait_for_remote_green_implementation_commit",
-    "synthetic_success_can_establish_mechanics_only",
+    "preexecution_qualification_used_zero_parameter_updates",
+    "one_synthetic_execution_is_consumed_with_no_rerun",
+    "candidate_beat_ablation_but_failed_absolute_synthetic_gates",
+    "synthetic_result_can_establish_mechanics_only",
     "protected_evidence_remains_closed"
   ],
   "claim_boundary": {
-    "engineering_capability_added": "The exact causal candidate, zero-context ablation, deterministic fixture, bounded gate, safe checkpoints, and inspect CLI are implemented and locally qualified without parameter updates.",
-    "scientific_claim_not_established": "No synthetic calibration or real model run occurred and no real signal or target was opened; neural advantage, sensor-signal dependence, brain-specific origin, decoding improvement, generalization, real-time performance, and portable or home EEG performance remain unestablished."
+    "engineering_capability_added": "The exact causal candidate, zero-context ablation, deterministic fixture, bounded gate, safe checkpoints, and inspect CLI are implemented, remotely qualified, and executed once under the synthetic boundary.",
+    "scientific_claim_not_established": "The synthetic calibration opened no real signal or target; neural advantage, sensor-signal dependence, brain-specific origin, real decoding improvement, generalization, real-time performance, and portable or home EEG performance remain unestablished."
   }
 }

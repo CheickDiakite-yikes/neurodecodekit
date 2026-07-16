@@ -321,20 +321,18 @@ rows, acquire S24, substitute a participant, open S25, or implement a
 protected post-outcome repair from a broad continuation request. Read
 `docs/LOOP_48_STAGE_C_REPRESENTATION_REPAIR_RESEARCH.md` and
 `registries/loop48_stage_c_representation_repair_research.v0.json` for the
-current reversible next step. Stage C research selects `R1` temporal-context
-starvation, a 7,692-parameter 470 ms causal candidate, and a 7,568-parameter
-zero-context ablation. After this research milestone is remotely green, Tier A
-allows implementation; after implementation is remotely green, it allows one
-bounded synthetic-only calibration. Do not stat, hash, or read the S21 cache;
-do not use real targets, S24, or S25; and do not treat synthetic success as a
-neural or decoding result. The implementation now lives in
+frozen `R1` temporal-context hypothesis, then read
+`docs/LOOP_48_STAGE_C_SYNTHETIC_RESULT.md` and
+`registries/loop48_stage_c_synthetic_result.v0.json`. The one synthetic gate is
+consumed: the 7,692-parameter, 470 ms causal candidate reached CER `0.433333`
+and `1/8` exact versus ablation CER `1.000000`. Its `0.566667` relative CER
+improvement and mechanics checks passed, but both absolute gates failed. Stage
+C is parked with no rerun or post-final tuning. Do not stat, hash, or read the
+S21 cache; do not use real targets, S24, or S25; and do not treat the synthetic
+contrast as a neural or decoding result. The implementation lives in
 `docs/LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md` and
-`registries/loop48_stage_c_synthetic_implementation.v0.json`; it passed local
-qualification without a parameter update. Do not execute the four-fit
-calibration until its corrected implementation commit is pushed and remotely
-green. The first invocation refused before fixture generation because the
-validator read `seed` instead of `fixture_seed`; all model, update, output, and
-protected counters were zero, so the calibration did not start.
+`registries/loop48_stage_c_synthetic_implementation.v0.json`. No protected
+Stage C contract or further real-data/model operation is open.
 
 Loop 27 is also review-only planning evidence. Do not turn the selected S25
 paths, official hashes, local MAT presence, 1 GiB cap, or roadmap status into a
