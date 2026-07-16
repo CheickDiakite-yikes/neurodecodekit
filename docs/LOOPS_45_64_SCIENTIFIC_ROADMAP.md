@@ -319,9 +319,27 @@ now.
 
 ### Loop 56 - Cross-Modality Accessibility Verdict
 
-Compare the exact engineering and scientific requirements that survive between
-cryogenic MEG and scalp EEG. Never pool scores, equate channels, or call shared
-software shared performance.
+**Status: planning research complete; Loop 55 result dependent; final verdict
+`Not Started`; unauthorized.** The exact boundary is in
+`docs/LOOP_56_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop56_cross_modality_accessibility_research.v0.json`.
+
+The design freezes five verdict classes, from shared proven artifact through
+prohibited inference; 12 non-skippable capability levels, from source identity
+through assistive or clinical utility; 18 comparison dimensions; a 16-field
+claim sentence; and a 12-part at-home conjunction. It keeps published v1/v2
+results external, local S21 and S7 negatives unmatched, and fresh S20 evidence
+unavailable. Continuous input, causal incremental output, measured end-to-end
+latency, device mechanics, and repeated home feasibility are separate gates.
+
+**Gate:** after Loop 55 closes, preregister the exact committed aggregate
+allowlist and hashes, then obtain a separate exact Tier C scientific-claim
+decision. The future verdict may count classes and satisfied capability levels
+only. It may not open payloads, ignored artifacts, caches, targets, predictions,
+checkpoints, or models; recompute scores; pool modality or participant values;
+inherit thresholds; equate channels or representations; or extrapolate to a
+device, home, patient, or clinical result. Until then, the provisional route is
+`L56-O2`: mechanics and interfaces only.
 
 ## Phase P9 - Causal Local Use (Loops 57-60)
 

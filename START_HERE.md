@@ -114,6 +114,15 @@
    or score was accessed. Documentation-sync commit `8efcb17` passed push CI
    `29473032843` and PR #33 CI `29473045583`; Base Python and Optional Neuro
    Readers are green in both.
+   Then read `docs/LOOP_56_PRIMARY_SOURCE_RESEARCH.md` and
+   `registries/loop56_cross_modality_accessibility_research.v0.json`. Loop 56
+   freezes five verdict classes, a 12-level capability ladder, 18 comparison
+   dimensions, 16 claim fields, and a 12-part at-home conjunction. It separates
+   continuous input from causal incremental output and measured end-to-end
+   latency. Current local MEG and historical EEG tiny-model evidence is
+   negative, not matched; fresh EEG evidence is unavailable. Planning is
+   complete, but the final cross-modality verdict is `Not Started`, Loop 55
+   result dependent, and separately unauthorized.
 12. Read `docs/LOOP_30_PRIMARY_SOURCE_RESEARCH.md` for the future loopback-only
    target-free replay inspector, nine-clock timing contract, six latency claim
    levels, 18 future gates, and 30 refusals. It is planning research only;
@@ -585,8 +594,9 @@ score occurred inside that planning snapshot. Stage B has since closed at
 Planning commit `085f341` passed push CI `29458102674` and PR #28 CI
 `29458116994`; both required jobs are green in both workflows.
 
-Loop 53 is `Preregistered; Authorization Pending`. Loop 54 qualification and
-Loop 55 neural-effect planning research are complete, but both experiments
-remain `Not Started`, dependency-blocked, and unauthorized. Loops 51-52 and
-56-64 remain `Not Started`. All current execution flags are false.
+Loop 53 is `Preregistered; Authorization Pending`. Loop 54 qualification,
+Loop 55 neural-effect, and Loop 56 cross-modality accessibility planning
+research are complete, but their experiments or final verdict remain `Not
+Started`, dependency-blocked, and unauthorized. Loops 51-52 and 57-64 remain
+`Not Started`. All current execution flags are false.
 S25 remains sealed until a separate final-only zero-shot packet is complete.
