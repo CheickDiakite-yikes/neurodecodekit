@@ -48,6 +48,7 @@ irreversible Tier C events.
 | Temporal-representation repair | The consumed Stage C synthetic candidate reached CER `0.433333` and `1/8` exact versus ablation CER `1.000000`; its `0.566667` CER advantage passed, but the absolute `<=0.10` CER and `>=7/8` exact gates failed | Temporal context was usable on the purpose-built fixture, but Stage C is parked without rerun and establishes no real neural-decoding benefit |
 | Fresh EEG acquisition gate | Loop 53 freezes one public S20 session-2 block-2 BrainVision triplet plus MAT log: 4 exact files, `96,090,264` bytes, pinned source hashes, one thread/worker, 128 MiB network, and 256 MiB disk caps | The preregistration and exact Tier C request are green-bound, but every execution flag is false; no S20 payload, header, marker, signal, MAT field, target, cache, split, or model has opened |
 | Fresh EEG qualification design | Loop 54 now separates strict VHDR-only metadata, target-blind VHDR+EEG quality, isolated target-bearing VMRK+MAT reconciliation, and aggregate closeout through 22 gates and 30 exact refusals | Planning research is complete and acquisition-dependent; no S20 content was opened, all real stages remain separately unauthorized, and the current monolithic extractor is excluded from this future claim path |
+| Fresh EEG neural-effect design | Loop 55 now separates a causal pre-keypress performed-hand gate from a harder causal 29-key gate, with performed actions as primary targets, a post-keypress diagnostic, 12 matched conditions, exact trial-level tests, and one-shot target order | Planning research is complete and Loop 54 dependent; the experiment is `Not Started`, no S20 content or target was opened, and no EEG model, training run, prediction, score, neural advantage, or decoding result exists |
 | Development-person intake planning | Loop 49 metadata research selects S24 session 2 block 2: one MEG FIF plus one protected MAT log, exactly `1,048,579,727` bytes; a future text-grouped split reserves 16 unique sentence groups for selection and requires at least 32 fit groups | S24 avoids the S1/S18 alias and preserves S25 final-only, but no S24 path or payload was opened and the `>=48` usable-row, channel, geometry, and overlap gates are unproven; Loop 49 remains `Not Started` |
 | Multi-source encoder planning | Loop 50 research freezes global text grouping, five-fold historical S21 out-of-fold diagnostics, one 16-group S24 development gate, equal-person loss, ten fixed conditions, and an exact 20-update inventory led by seed `5001` | Stage B route `L50-R05` now parks the same-family S24 path; Loop 50 remains `Not Started`, with S24 qualification, model selection, training, scoring, and every scientific claim unavailable |
 | Fresh transfer candidate | Loop 27 metadata research selects S25 session 2 block 2: one MEG FIF plus one protected MAT log, exactly 1,009,939,983 bytes under 1 GiB | S25 is not downloaded or qualified; preregistration waits for the causal source model, controls, and target isolation |
@@ -144,6 +145,23 @@ that emits no plaintext target values. At least 48 unique performed trials must
 reconcile, event windows may not masquerade as independent trials, and Loop 54
 creates no split or model. See `docs/LOOP_54_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop54_eeg_trial_geometry_research.v0.json`.
+
+Loop 55 planning research then defines the scientific question that becomes
+eligible only after Loop 54 reports at least 48 unambiguous performed trials.
+It does not use one vague "EEG decoding" endpoint. The same future compact
+model has two prospectively ordered tests: causal pre-keypress left/right-hand
+prediction and harder 29-class performed-key prediction. The published
+`[-200,+300] ms` keypress-centered window remains a noncausal diagnostic
+because it includes post-keypress execution and feedback. Intended sentence
+text is secondary; performed action is primary. The future gate requires a
+grouped trial-level split, at most 10,000 parameters and 12 fits, twelve matched
+no-signal/timing/corruption/peripheral conditions, exact paired final-trial
+tests, and a committed, pushed, remotely green prediction freeze before final
+targets open once. Even a clean key-level pass would establish only one-block
+EEG sensor-signal dependence with known keypress onsets, not brain-specific
+origin, continuous thought-to-text, generalization, real-time operation, or
+home use. See `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop55_eeg_neural_effect_research.v0.json`.
 
 Loop 49 planning research now selects S24 session 2 block 2 as the preferred
 permanently development-only participant from pinned public metadata. The exact
@@ -439,6 +457,19 @@ Read this before interpreting any number in the repository.
   or scientific result is authorized. Documentation-sync commit `b6785d7`
   passed push CI `29471589279` and PR #32 CI `29471598364`, with Base Python
   and Optional Neuro Readers green in both workflows.
+- **Loop 55 EEG neural-effect research:** planning commit `f3158c7` freezes two
+  ordered causal endpoints from the same future final trials: performed-hand
+  error and 29-class performed-key keypress-aligned CER. It makes performed
+  action primary, keeps intended text secondary, and treats `[-200,+300] ms`
+  as a noncausal diagnostic only. A future execution needs at least 48 Loop 54-
+  qualified trials, a grouped split, one `<=10,000`-parameter family, at most
+  12 fits, twelve matched conditions, exact trial-level tests, and a remotely
+  green hash-only prediction freeze before one final target delivery. Planning
+  currently passes 24 focused roadmap/contract tests plus 9 public-status
+  subtests, and the full local suite passes 1007 tests with 3 expected skips.
+  The experiment remains `Not Started` and every
+  S20, split, target, model, training, inference, and scoring permission is
+  false.
 - **Loop 30 planning research:** the future product is a loopback-only target-
   free replay inspector. The boundary separates artifact, synthetic, recorded,
   and live source modes; freezes a 30-field trace, nine clocks, six latency

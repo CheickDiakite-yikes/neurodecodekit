@@ -101,6 +101,30 @@ from this planning boundary.
 Documentation-sync commit `b6785d7` passed push CI `29471589279` and PR #32
 CI `29471598364`; Base Python and Optional Neuro Readers passed in both.
 
+Loop 55 planning research is now complete at commit `f3158c7`; its experiment
+remains `Not Started`, Loop 54 dependent, and unauthorized:
+
+```bash
+cat docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md
+python -m json.tool registries/loop55_eeg_neural_effect_research.v0.json >/dev/null
+```
+
+The prospective design separates causal pre-keypress performed-hand evidence
+from harder causal 29-class performed-key evidence. Performed action is the
+primary target; intended sentence text is secondary. The published
+`[-200,+300] ms` window is a noncausal diagnostic because it includes
+post-keypress execution and feedback. A future clean gate needs at least 48
+Loop 54-qualified trials, a grouped trial-level split, one compact causal
+family at `<=10,000` parameters, at most 12 fits, twelve matched no-signal,
+timing, corruption, and peripheral conditions, exact final-trial tests, and a
+committed, pushed, remotely green prediction freeze before final targets open
+once. One thread, 45 CPU minutes, 1 GiB RSS, and 64 MiB generated output remain
+hard limits. Do not implement or preregister Loop 55, create a split, open any
+target, or run/train a model before Loop 53 and Loop 54 close and a separate
+exact Tier C sequence is recorded. Even a future clean key-level pass cannot
+establish brain-specific origin, continuous thought-to-text, generalization,
+real-time operation, portable hardware, home use, or clinical utility.
+
 The first 20-loop roadmap is complete except for the deliberately parked Loop
 13 backend. Post-roadmap Loops 21 and 22 validate bounded synthetic causal
 replay and one tiny learned motif encoder. Loop 23 implemented the frozen
@@ -663,8 +687,10 @@ Loop 50 planning research now freezes the text, participant, seed, control,
 metric, resource, and claim firewalls, including an exact 20-update inventory,
 while its experiment remains `Not Started`; no exact model or protected
 operation exists. Loop 53 is `Preregistered; Authorization Pending` at the
-acquisition-only boundary described above. Loops 51-52 and 54-64 are `Not
-Started`, every current execution flag is false, and every
+acquisition-only boundary described above. Loop 54 qualification and Loop 55
+neural-effect planning research are complete while both experiments remain
+`Not Started`, dependency-blocked, and unauthorized. Loops 51-52 and 56-64
+are `Not Started`, every current execution flag is false, and every
 global authorization field is false. Do not rerun Loop 48, acquire or open S24,
 substitute a development person, implement a post-outcome representation
 repair, implement/download/open S20, or open any S25 path from a broad

@@ -7,6 +7,17 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = REPO_ROOT / "registries" / "loop55_eeg_neural_effect_research.v0.json"
 RESEARCH_PATH = REPO_ROOT / "docs" / "LOOP_55_PRIMARY_SOURCE_RESEARCH.md"
 ROADMAP_PATH = REPO_ROOT / "registries" / "next_scientific_loops.v0.json"
+PUBLIC_STATUS_PATHS = (
+    REPO_ROOT / "AGENTS.md",
+    REPO_ROOT / "README.md",
+    REPO_ROOT / "START_HERE.md",
+    REPO_ROOT / "docs" / "BUILD_NOTES.md",
+    REPO_ROOT / "docs" / "CODEX_HANDOFF.md",
+    REPO_ROOT / "docs" / "DECISIONS.md",
+    REPO_ROOT / "docs" / "LOOPS_45_64_SCIENTIFIC_ROADMAP.md",
+    REPO_ROOT / "docs" / "NEXT_20_LOOPS_TRACKER.md",
+    REPO_ROOT / "prompts" / "CODEX_START_PROMPT.md",
+)
 
 
 def authorization_flags(value):
@@ -28,6 +39,9 @@ class Loop55EEGNeuralEffectResearchTests(unittest.TestCase):
         cls.registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
         cls.research = RESEARCH_PATH.read_text(encoding="utf-8")
         cls.roadmap = json.loads(ROADMAP_PATH.read_text(encoding="utf-8"))
+        cls.public_status = {
+            path: path.read_text(encoding="utf-8") for path in PUBLIC_STATUS_PATHS
+        }
 
     def test_identity_is_planning_only_and_execution_is_unauthorized(self):
         registry = self.registry
@@ -217,6 +231,14 @@ class Loop55EEGNeuralEffectResearchTests(unittest.TestCase):
         self.assertIn("loop55_eeg_neural_effect_research.v0.json", loop55["build_deliverable"])
         self.assertIn("performed-hand", loop55["scientific_claim_target"])
         self.assertIn("separate exact Tier C", loop55["authorization_boundary"])
+
+    def test_public_status_surfaces_share_the_loop55_boundary(self):
+        for path, content in self.public_status.items():
+            with self.subTest(path=path.name):
+                self.assertIn("Loop 55", content)
+                self.assertIn("performed", content.lower())
+                self.assertIn("causal", content.lower())
+                self.assertIn("authoriz", content.lower())
 
 
 if __name__ == "__main__":

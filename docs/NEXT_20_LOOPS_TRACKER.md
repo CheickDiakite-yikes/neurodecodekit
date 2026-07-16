@@ -709,8 +709,12 @@ and reruns are outside the gate. Push CI `29469813041` and PR #31 CI
 `registries/loop53_authorization_request.v0.json`, but every execution flag is
 false and no S20 payload or local path was touched.
 
-Loops 51-52 and 54-64 are `Not Started`. All execution flags and all nine global
-authorization fields are false. Decision 0083 and the applied `L50-R05` route
+Loop 54 qualification and Loop 55 neural-effect planning research are complete,
+but both experiments remain `Not Started`, dependency-blocked, and
+unauthorized. Loop 55 prospectively separates causal performed-hand evidence
+from harder causal 29-key evidence and cannot run before Loop 53 and Loop 54
+close cleanly. Loops 51-52 and 56-64 are `Not Started`. All execution flags and
+all nine global authorization fields are false. Decision 0083 and the applied `L50-R05` route
 now block S24 acquisition for this model family. Any future predictive branch
 needs a separately preregistered representation repair before another
 development-person intake can be considered; S25 remains final-only and
