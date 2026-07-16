@@ -82,6 +82,7 @@ class NextScientificLoopsTests(unittest.TestCase):
                 47: "Parked; Shared Attribution Gate Failed",
                 48: "Complete A/B; Stage C Consumed and Parked",
                 53: "Preregistered; Authorization Pending",
+                54: "Planning Research Complete; Acquisition Dependent",
             }.get(row["loop_id"], "Not Started")
             self.assertEqual(row["status"], expected_status)
             self.assertTrue(row["controls"])

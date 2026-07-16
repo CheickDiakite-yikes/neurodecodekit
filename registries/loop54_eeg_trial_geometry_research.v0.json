@@ -1,0 +1,464 @@
+{
+  "schema_name": "neurodecodekit.loop54_eeg_trial_geometry_research",
+  "schema_version": "0.1.0",
+  "created_at": "2026-07-16",
+  "loop_id": 54,
+  "title": "EEG Trial Geometry And Confound Ledger",
+  "status": "planning_research_complete_acquisition_dependent_experiment_not_started",
+  "proof_posture": "primary_source_and_committed_code_audit_only_no_S20_payload_or_local_path_access",
+  "current_experiment_status": "Not Started",
+  "claim_target": "EEG identity quality and confound qualification only",
+  "scientific_claim_ceiling": "A future clean execution may establish only the declared identity, target-isolation, signal-quality, event-reconciliation, geometry, reference, and recorded-confound ceiling of the exact S20 block. It cannot establish neural advantage, brain-specific origin, decoding accuracy, real-time operation, portable hardware, home use, or clinical utility.",
+  "authorization": {
+    "planning_research_authorized_now": true,
+    "implementation_authorized_now": false,
+    "loop53_acquisition_authorized_now": false,
+    "local_S20_path_stat_or_hash_authorized_now": false,
+    "vhdr_parse_authorized_now": false,
+    "eeg_signal_read_authorized_now": false,
+    "vmrk_parse_authorized_now": false,
+    "mat_parse_authorized_now": false,
+    "target_or_label_read_authorized_now": false,
+    "trial_reconciliation_authorized_now": false,
+    "cache_or_derivative_creation_authorized_now": false,
+    "split_creation_or_selection_authorized_now": false,
+    "model_or_checkpoint_load_authorized_now": false,
+    "model_inference_authorized_now": false,
+    "training_or_parameter_update_authorized_now": false,
+    "scoring_authorized_now": false,
+    "download_authorized_now": false,
+    "network_operation_authorized_now": false,
+    "device_or_hardware_operation_authorized_now": false,
+    "release_or_upload_authorized_now": false,
+    "rerun_authorized_now": false,
+    "scientific_claim_upgrade_authorized_now": false,
+    "separate_exact_tier_c_authorization_required_for_each_real_stage": true
+  },
+  "dependencies": {
+    "loop53_contract_path": "registries/loop53_fresh_eeg_acquisition_contract.v0.json",
+    "loop53_contract_sha256": "bc7d86a1ce6ef3dc71dacca0af97cb5813df87620ac35d4f34ecd343f97e65ac",
+    "loop53_contract_git_blob": "d6b3c04179327176b72bf44c40e46a38dfbefdf5",
+    "loop53_status_required_before_any_real_stage": "complete_clean_acquisition_receipt",
+    "loop53_status_satisfied_now": false,
+    "loop35_contract_path": "registries/loop35_research_boundary.v0.json",
+    "loop35_contract_sha256": "b68e0721ed964138feb608af404f8e80bc80fa94418215b7efe914cd93de5fcf",
+    "loop35_peripheral_claim_firewall_inherited": true,
+    "loop36_contract_path": "registries/loop36_research_boundary.v0.json",
+    "loop36_contract_sha256": "a621d79a46a8ac20af75cfd077e933a901d4f8a38e39648cdb5e0bff4c6897b4",
+    "loop36_geometry_reference_firewall_inherited": true,
+    "loop55_preregistration_blocked_until_loop54_result": true,
+    "S7_consumed_and_forbidden": true,
+    "S21_S24_S25_forbidden": true
+  },
+  "prospective_source_identity": {
+    "modality": "EEG",
+    "subject_id": "S20",
+    "session_id": "2",
+    "block_id": "2",
+    "recording_stem": "020_DECOMEG_S2_11966_task2",
+    "bundle_members": [
+      "EEG/EEG/020_DECOMEG_S2_11966_task2.vhdr",
+      "EEG/EEG/020_DECOMEG_S2_11966_task2.eeg",
+      "EEG/EEG/020_DECOMEG_S2_11966_task2.vmrk",
+      "EEG/logs/S20_session2_block2_list1.mat"
+    ],
+    "expected_bundle_bytes_from_loop53_metadata": 96090264,
+    "payload_local_now": false,
+    "header_verified_now": false,
+    "channel_count_verified_now": false,
+    "sampling_rate_verified_now": false,
+    "trial_count_verified_now": false,
+    "target_alignment_verified_now": false
+  },
+  "primary_source_findings": [
+    {
+      "finding_id": "L54-S01",
+      "source_id": "brainvision_core_data_format",
+      "finding": "BrainVision Core Data Format separates text header, text marker, and binary signal into VHDR, VMRK, and EEG files. File membership does not make their contents equally target-free."
+    },
+    {
+      "finding_id": "L54-S02",
+      "source_id": "brainproducts_marker_design",
+      "finding": "A marker carries type and description for what happened plus position for when it happened. Marker descriptions can therefore encode labels or task conditions."
+    },
+    {
+      "finding_id": "L54-S03",
+      "source_id": "mne_read_raw_brainvision",
+      "finding": "The normal MNE BrainVision reader converts marker type and description into Raw annotations. preload=False does not make a VHDR read marker-blind."
+    },
+    {
+      "finding_id": "L54-S04",
+      "source_id": "bids_eeg_1_11_1",
+      "finding": "EEG channel name, type, unit, order, reference, electrodes, and coordinate system are separate metadata concepts. Unknown fields must not be inferred from a familiar channel label."
+    },
+    {
+      "finding_id": "L54-S05",
+      "source_id": "bids_events_1_11_1",
+      "finding": "Event tables may mix stimuli, participant responses, and other markers. Timing fields and condition or response fields require separate sensitivity treatment."
+    },
+    {
+      "finding_id": "L54-S06",
+      "source_id": "brain2qwerty_v1_nature_2026",
+      "finding": "The published EEG cohort used 61 EEG and three ocular channels at 1 kHz, two 64-sentence blocks per session, and keypress-aligned windows. Those cohort facts do not verify this S20 file and do not establish a local neural result."
+    }
+  ],
+  "source_bindings": [
+    {
+      "source_id": "brainvision_core_data_format",
+      "url": "https://www.brainproducts.com/support-resources/brainvision-core-data-format-1-0/",
+      "publisher": "Brain Products GmbH",
+      "role": "authoritative file-role boundary"
+    },
+    {
+      "source_id": "brainproducts_marker_design",
+      "url": "https://pressrelease.brainproducts.com/trigger-code-design/",
+      "publisher": "Brain Products GmbH",
+      "role": "authoritative marker semantics"
+    },
+    {
+      "source_id": "mne_read_raw_brainvision",
+      "url": "https://mne.tools/stable/generated/mne.io.read_raw_brainvision.html",
+      "publisher": "MNE-Python",
+      "role": "reader annotation and channel-typing behavior"
+    },
+    {
+      "source_id": "bids_eeg_1_11_1",
+      "url": "https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html",
+      "publisher": "BIDS Contributors",
+      "role": "EEG channel electrode reference and coordinate requirements"
+    },
+    {
+      "source_id": "bids_events_1_11_1",
+      "url": "https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/events.html",
+      "publisher": "BIDS Contributors",
+      "role": "event timing response and condition separation"
+    },
+    {
+      "source_id": "brain2qwerty_v1_nature_2026",
+      "url": "https://www.nature.com/articles/s41593-026-02303-2",
+      "publisher": "Nature Neuroscience",
+      "role": "cohort device task split and performance context"
+    }
+  ],
+  "current_code_audit": {
+    "path": "src/neurodecodekit/preprocess/brainvision_extraction.py",
+    "sha256": "6aa8fcfff84a165cd88432bfd27ced3bab36af254261b28642ae12d9529ef7e9",
+    "git_blob": "ee19bb28c8cd499f7774fcd89b08be86e2937e0b",
+    "classification": "legacy_engineering_bridge_not_eligible_for_future_loop54_or_loop55_claim_path",
+    "findings": [
+      {
+        "finding_id": "L54-C01",
+        "line": 206,
+        "finding": "mne.io.read_raw_brainvision is called on VHDR and exposes VMRK-derived annotations through raw.annotations."
+      },
+      {
+        "finding_id": "L54-C02",
+        "line": 212,
+        "finding": "Channels whose names contain EOG are excluded before extraction, removing a required peripheral control."
+      },
+      {
+        "finding_id": "L54-C03",
+        "line": 219,
+        "finding": "VMRK annotations and MAT trigger records are consumed in the same extraction invocation as signal access."
+      },
+      {
+        "finding_id": "L54-C04",
+        "line": 428,
+        "finding": "scipy.io.loadmat materializes the companion MAT payload before field-level target isolation."
+      },
+      {
+        "finding_id": "L54-C05",
+        "line": 374,
+        "finding": "Plaintext labels and trial indices are written into the produced cache."
+      }
+    ],
+    "required_replacement_properties": [
+      "dependency-light strict VHDR parser that cannot open sibling VMRK or EEG files",
+      "direct bounded EEG signal reader driven only by validated VHDR binary metadata",
+      "all channels retained with declared inferred and unavailable type status kept separate",
+      "isolated VMRK and MAT reconciler with protected outputs and no plaintext labels in public ledgers",
+      "stage-specific access counters and refusal tests"
+    ]
+  },
+  "sensitivity_classes": [
+    {
+      "class_id": "L54-D0",
+      "name": "public_or_committed_design_metadata",
+      "examples": ["contract hashes", "registered paths", "resource caps"],
+      "target_bearing": false
+    },
+    {
+      "class_id": "L54-D1",
+      "name": "target_free_header_metadata",
+      "examples": ["sampling interval", "channel table", "binary orientation", "data file reference"],
+      "target_bearing": false
+    },
+    {
+      "class_id": "L54-D2",
+      "name": "target_free_signal_values",
+      "examples": ["bounded EEG samples", "aggregate quality summaries"],
+      "target_bearing": false
+    },
+    {
+      "class_id": "L54-D3",
+      "name": "task_locked_event_timing",
+      "examples": ["marker position", "keypress interval", "trial duration"],
+      "target_bearing": true
+    },
+    {
+      "class_id": "L54-D4",
+      "name": "protected_behavior_and_targets",
+      "examples": ["marker description", "keycode", "typed response", "target sentence", "trial text"],
+      "target_bearing": true
+    }
+  ],
+  "future_stage_protocol": [
+    {
+      "stage_id": "L54-A",
+      "name": "strict_vhdr_identity_and_geometry_ledger",
+      "requires_separate_authorization": true,
+      "prerequisites": ["clean Loop 53 acquisition receipt", "hash-bound implementation commit", "remote green CI", "exact Stage A decision"],
+      "allowed_inputs": ["020_DECOMEG_S2_11966_task2.vhdr"],
+      "forbidden_inputs": ["020_DECOMEG_S2_11966_task2.vmrk", "020_DECOMEG_S2_11966_task2.eeg", "S20_session2_block2_list1.mat"],
+      "mne_reader_allowed": false,
+      "allowed_outputs": ["bounded target-free VHDR identity ledger", "warnings", "unavailable fields", "access and resource counters"],
+      "required_fields": ["format version", "data file basename", "marker file basename without opening it", "data format", "data orientation", "binary format", "declared channel count", "sampling interval", "derived sampling rate", "ordered channel names", "per-channel declared reference", "resolution", "unit", "impedance section availability", "declared filter metadata availability"],
+      "must_remain_unavailable_unless_explicitly_declared": ["channel type", "measured electrode position", "coordinate frame", "orientation", "ground", "global acquisition reference", "bad-channel status", "EOG or EMG identity", "trial count", "target text"],
+      "wall_time_seconds": 30,
+      "peak_rss_bytes": 268435456,
+      "generated_output_bytes": 1048576
+    },
+    {
+      "stage_id": "L54-B",
+      "name": "target_blind_signal_quality_and_channel_preservation",
+      "requires_separate_authorization": true,
+      "prerequisites": ["accepted L54-A ledger", "hash-bound Stage B implementation commit", "remote green CI", "exact Stage B decision"],
+      "allowed_inputs": ["020_DECOMEG_S2_11966_task2.vhdr", "020_DECOMEG_S2_11966_task2.eeg"],
+      "forbidden_inputs": ["020_DECOMEG_S2_11966_task2.vmrk", "S20_session2_block2_list1.mat"],
+      "all_source_channels_retained": true,
+      "forbidden_transforms": ["EOG exclusion", "channel deletion", "rereference", "interpolation", "ICA", "filtering", "resampling", "target-aligned windowing"],
+      "required_summaries": ["sample count and duration", "finite fraction", "exact-zero fraction", "per-channel min max mean standard deviation RMS median MAD and peak-to-peak", "flat and extreme-outlier flags", "clipping evidence", "50 and 60 Hz line-noise ratios", "three fixed target-blind temporal probe summaries", "streaming content hash"],
+      "raw_signal_derivative_allowed": false,
+      "wall_time_seconds": 120,
+      "peak_rss_bytes": 1073741824,
+      "generated_output_bytes": 8388608
+    },
+    {
+      "stage_id": "L54-C",
+      "name": "isolated_vmrk_mat_trial_reconciliation_and_target_firewall",
+      "requires_separate_authorization": true,
+      "prerequisites": ["accepted L54-A and L54-B ledgers", "model-independent trial rules frozen", "hash-bound isolated implementation commit", "remote green CI", "exact Stage C decision"],
+      "allowed_inputs": ["020_DECOMEG_S2_11966_task2.vhdr", "020_DECOMEG_S2_11966_task2.vmrk", "S20_session2_block2_list1.mat"],
+      "forbidden_inputs": ["020_DECOMEG_S2_11966_task2.eeg"],
+      "isolated_process_required": true,
+      "plaintext_marker_description_or_target_in_public_output": false,
+      "allowed_public_outputs": ["opaque trial identity commitments", "event and trial counts", "timing residual summaries", "per-trial event counts", "alignment status", "warnings", "unavailable fields", "access and resource counters"],
+      "protected_outputs": ["marker descriptions", "keycodes", "typed responses", "target sentences", "trial text", "label arrays"],
+      "protected_output_policy": "ignored isolated derivative only; never stdout, public ledger, Git, logs, exception messages, or cache metadata",
+      "wall_time_seconds": 120,
+      "peak_rss_bytes": 536870912,
+      "generated_output_bytes": 8388608
+    },
+    {
+      "stage_id": "L54-D",
+      "name": "immutable_qualification_closeout",
+      "requires_separate_authorization": false,
+      "prerequisites": ["all authorized prior stages are complete and immutable"],
+      "allowed_inputs": ["aggregate target-free L54-A ledger", "aggregate target-free L54-B ledger", "aggregate public L54-C reconciliation ledger"],
+      "forbidden_inputs": ["raw S20 payload", "protected target derivative", "model checkpoint", "prediction"],
+      "allowed_outputs": ["one qualification result", "claim ceiling", "Loop 55 eligibility or park decision"],
+      "wall_time_seconds": 30,
+      "peak_rss_bytes": 268435456,
+      "generated_output_bytes": 1048576
+    }
+  ],
+  "future_trial_and_split_rules": {
+    "minimum_unique_performed_trials_for_loop54_acceptance": 48,
+    "trial_is_unit_of_identity_and_future_inference": true,
+    "event_windows_are_not_independent_trials": true,
+    "training_validation_test_split_created_in_loop54": false,
+    "exact_loop55_partition_counts_known_now": false,
+    "exact_loop55_partition_counts_must_be_frozen_after_target_blind_usable_trial_count_and_before_target_values_or_model_operations": true,
+    "same_trial_events_must_remain_in_one_partition": true,
+    "same_or_semantically_similar_target_text_grouping_required_before_loop55": true,
+    "target_values_may_not_choose_partitions": true,
+    "if_usable_unique_trials_below_48": "park_without_training",
+    "if_trial_identity_is_ambiguous": "park_without_training",
+    "if_exact_counts_require_a_protocol_change": "write_and_green_a_prospective_amendment_before_any_target_or_model access"
+  },
+  "future_geometry_and_confound_ledger": {
+    "channel_fields": ["source index", "source name", "declared type", "inferred type", "type evidence", "unit", "resolution", "channel-specific reference", "status", "status reason", "electrode role", "position", "position availability", "coordinate frame", "coordinate units", "orientation", "global acquisition reference", "ground", "filter declarations", "impedance availability", "source metadata hash"],
+    "confound_fields": ["EOG recorded", "EOG channel identity", "EMG recorded", "motion recorded", "gaze recorded", "audio recorded", "trigger or response timing recorded", "keypress identity recorded", "visual feedback schedule available", "typing task status", "unmeasured confounds"],
+    "channel_name_alone_proves_type": false,
+    "standard_montage_name_proves_measured_geometry": false,
+    "missing_peripheral_stream_may_be_imputed": false,
+    "source_channels_may_be_removed_before_confound_audit": false,
+    "unknown_fields_default": "unavailable"
+  },
+  "future_claim_classes": [
+    {
+      "claim_id": "L54-Q0",
+      "name": "planning_only",
+      "available_now": true,
+      "boundary": "The staged target-isolation and qualification design is documented and machine checked."
+    },
+    {
+      "claim_id": "L54-Q1",
+      "name": "acquisition_identity",
+      "available_now": false,
+      "boundary": "Exact Loop 53 bundle acquired and hash verified only."
+    },
+    {
+      "claim_id": "L54-Q2",
+      "name": "declared_header_compatibility",
+      "available_now": false,
+      "boundary": "Exact VHDR fields parsed without marker signal or target access."
+    },
+    {
+      "claim_id": "L54-Q3",
+      "name": "target_blind_signal_quality",
+      "available_now": false,
+      "boundary": "Aggregate quality and channel preservation for one S20 block, without predictive meaning."
+    },
+    {
+      "claim_id": "L54-Q4",
+      "name": "trial_and_confound_qualification",
+      "available_now": false,
+      "boundary": "At least 48 unique performed trials reconcile and every geometry, reference, and recorded-confound field is known or unavailable."
+    },
+    {
+      "claim_id": "L54-Q5",
+      "name": "loop55_eligible_sensor_signal_test",
+      "available_now": false,
+      "boundary": "A separately preregistered Loop 55 may test within-person sensor-signal advantage under the frozen Loop 54 ceiling."
+    },
+    {
+      "claim_id": "L54-Q6",
+      "name": "brain_specific_or_decoding_claim",
+      "available_now": false,
+      "boundary": "Never available from Loop 54."
+    }
+  ],
+  "future_acceptance_gates": [
+    "Loop 53 completed cleanly before any S20 content parse",
+    "each real stage has a separate exact Tier C decision and green implementation commit",
+    "L54-A opens exactly one VHDR and cannot resolve or open sibling paths",
+    "L54-A uses no MNE reader and emits no marker annotation",
+    "VHDR format data orientation binary format channel count and sampling interval are internally consistent",
+    "ordered channel names are unique and units resolutions and references are preserved without guessing",
+    "geometry reference ground type and bad-channel unknowns remain explicitly unavailable",
+    "L54-B opens exactly VHDR and EEG and never VMRK or MAT",
+    "L54-B retains every source channel and applies no rereference interpolation ICA filter resample or target alignment",
+    "L54-B produces finite bounded aggregate quality summaries and no raw signal derivative",
+    "L54-C opens exactly VHDR VMRK and MAT in isolation and never EEG",
+    "L54-C emits no plaintext marker descriptions keycodes responses targets or trial text",
+    "marker and MAT ordering reconcile under one frozen deterministic rule",
+    "at least 48 unique performed trial identities are unambiguous",
+    "event windows are grouped by trial and never treated as independent final samples",
+    "EOG EMG motion gaze audio timing and unmeasured confounds are each known or explicitly unavailable",
+    "no split model checkpoint inference training scoring threshold or claim selection occurs",
+    "one thread one worker per stage and all runtime RSS and output caps pass",
+    "combined generated public output remains at or below 33554432 bytes",
+    "every input output hash counter warning and unavailable field is recorded",
+    "Loop 55 exact split model control and scoring protocol remains a future prospective preregistration",
+    "claim language remains at or below L54-Q4"
+  ],
+  "future_refusal_ids": [
+    "L54-F01_loop53_not_complete",
+    "L54-F02_missing_exact_stage_authorization",
+    "L54-F03_contract_or_receipt_hash_mismatch",
+    "L54-F04_unexpected_or_symlinked_input",
+    "L54-F05_mne_used_in_vhdr_only_stage",
+    "L54-F06_vmrk_opened_in_stage_a_or_b",
+    "L54-F07_mat_opened_in_stage_a_or_b",
+    "L54-F08_eeg_opened_in_stage_a_or_c",
+    "L54-F09_marker_description_in_target_free_output",
+    "L54-F10_target_or_label_in_public_output",
+    "L54-F11_plaintext_protected_value_in_log_or_exception",
+    "L54-F12_channel_removed_before_confound_audit",
+    "L54-F13_eog_excluded_or_retyped_without_evidence",
+    "L54-F14_unknown_unit_reference_or_geometry_inferred",
+    "L54-F15_template_geometry_called_measured",
+    "L54-F16_rereference_filter_resample_ica_or_interpolation",
+    "L54-F17_raw_signal_derivative_created",
+    "L54-F18_trial_identity_ambiguous",
+    "L54-F19_fewer_than_48_unique_performed_trials",
+    "L54-F20_event_window_pseudoreplication",
+    "L54-F21_target_dependent_split_or_exclusion",
+    "L54-F22_split_created_before_loop55_preregistration",
+    "L54-F23_model_checkpoint_inference_training_or_scoring",
+    "L54-F24_resource_or_output_cap_breach",
+    "L54-F25_unrecorded_warning_or_unavailable_field",
+    "L54-F26_S7_S21_S24_or_S25_access",
+    "L54-F27_new_download_or_network_operation",
+    "L54-F28_device_stream_or_hardware_operation",
+    "L54-F29_rerun_or_substitution",
+    "L54-F30_neural_decoding_realtime_home_or_clinical_overclaim"
+  ],
+  "resource_boundaries": {
+    "cpu_threads_per_future_stage": 1,
+    "workers_per_future_stage": 1,
+    "maximum_future_peak_rss_bytes": 1073741824,
+    "maximum_combined_generated_public_output_bytes": 33554432,
+    "new_download_bytes": 0,
+    "new_incremental_payload_bytes": 0,
+    "network_operations": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "mne_remains_optional": true
+  },
+  "research_access_counters": {
+    "primary_source_pages_consulted": 6,
+    "committed_code_files_read": 1,
+    "committed_research_contracts_read": 3,
+    "S20_local_path_stats": 0,
+    "S20_local_payload_hash_reads": 0,
+    "S20_header_reads": 0,
+    "S20_marker_reads": 0,
+    "S20_signal_reads": 0,
+    "S20_mat_reads": 0,
+    "target_or_label_reads": 0,
+    "cache_or_derivative_reads_or_writes": 0,
+    "split_operations": 0,
+    "model_or_checkpoint_loads": 0,
+    "model_inference_runs": 0,
+    "training_or_parameter_update_runs": 0,
+    "scoring_runs": 0,
+    "downloads": 0,
+    "device_or_hardware_operations": 0,
+    "generated_experiment_bytes": 0
+  },
+  "current_warnings": [
+    "The published 61 EEG plus three ocular channel configuration is a cohort-level method fact, not verified S20 file metadata.",
+    "The normal MNE BrainVision reader is not eligible for a VHDR-only target-free stage because it attaches marker-derived annotations.",
+    "The current legacy extractor removes EOG-named channels and co-loads VMRK, MAT, signal, and labels.",
+    "BrainVision marker descriptions can reveal event or key identity; marker access is target-bearing.",
+    "A clean Loop 54 result would qualify one S20 block only and would not itself be a decoding result."
+  ],
+  "current_unavailable_fields": [
+    "S20 local payload presence",
+    "S20 content hashes",
+    "S20 VHDR format and encoding",
+    "S20 channel count names types units resolutions references and status",
+    "S20 sampling rate duration and sample count",
+    "S20 measured electrode geometry and coordinate frame",
+    "S20 impedance and filter declarations",
+    "S20 EOG EMG motion gaze audio and trigger-channel availability",
+    "S20 signal quality",
+    "S20 marker and MAT ordering",
+    "S20 unique performed trial count",
+    "S20 usable trial count",
+    "S20 exact future split counts",
+    "S20 target correctness",
+    "S20 sensor-signal or neural advantage",
+    "S20 decoding accuracy",
+    "end-to-end latency",
+    "portable-device or home-use performance"
+  ],
+  "claim_boundary": {
+    "proven_now": "Primary-source and committed-code research now defines a fail-closed, stage-separated future Loop 54 qualification path and identifies why the current monolithic BrainVision extractor is ineligible for that claim path.",
+    "not_proven_now": "No S20 path or payload was stated, hashed, parsed, or opened; no acquisition, header, signal, marker, MAT, target, trial reconciliation, cache, split, model, training, scoring, latency, stream, device, or hardware result exists.",
+    "next_evidence_gate": "First complete Loop 53 under its exact acquisition authorization. Then preregister and separately authorize L54-A before implementing or parsing any VHDR content.",
+    "future_loop55_ceiling": "If Loop 54 later passes, Loop 55 may test only bounded within-person S20 EEG sensor-signal advantage at the trial unit. Missing peripheral controls keep brain-specific attribution unavailable."
+  }
+}

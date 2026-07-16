@@ -75,6 +75,32 @@ MAT, read a header/signal/target, create a cache/split, or run a model from this
 request. The old broad S20 packet is superseded for future work. S24 remains
 parked for this model family; S25 remains sealed; Loop 48 Stage C has no rerun.
 
+Loop 54 planning research is now complete at commit `aec440a` while every real
+content stage remains unauthorized:
+
+```bash
+cat docs/LOOP_54_PRIMARY_SOURCE_RESEARCH.md
+python -m json.tool registries/loop54_eeg_trial_geometry_research.v0.json >/dev/null
+```
+
+The source and code audit found that the normal MNE BrainVision reader exposes
+marker-derived annotations and that the historical Loop 19 extractor co-loads
+VMRK annotations, MAT labels, and signal, excludes EOG-named channels, and
+writes plaintext labels. Preserve that historical result, but do not use its
+extractor for a future Loop 54/55 claim path. The prospective replacement has
+four stages: VHDR-only metadata without MNE or sibling resolution; target-blind
+VHDR+EEG quality with every channel retained and no transforms; isolated
+target-bearing VMRK+MAT reconciliation with no plaintext protected public
+output; and aggregate closeout. Require at least 48 unique performed trials and
+treat trials, not key windows, as the future inference unit. Loop 54 creates no
+split or model. Loop 53 must complete cleanly first, and each real L54-A/B/C
+stage needs a separate exact Tier C decision after its implementation is pushed
+and remotely green. Do not stat/hash/read S20 or implement a real Loop 54 reader
+from this planning boundary.
+
+Documentation-sync commit `b6785d7` passed push CI `29471589279` and PR #32
+CI `29471598364`; Base Python and Optional Neuro Readers passed in both.
+
 The first 20-loop roadmap is complete except for the deliberately parked Loop
 13 backend. Post-roadmap Loops 21 and 22 validate bounded synthetic causal
 replay and one tiny learned motif encoder. Loop 23 implemented the frozen

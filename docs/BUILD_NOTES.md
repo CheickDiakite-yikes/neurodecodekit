@@ -4425,3 +4425,38 @@ resource-bounded, no-overwrite acquisition contract for one fresh EEG bundle.
 Scientific claim not established: no EEG payload was acquired or interpreted,
 so no signal quality, neural advantage, decoding accuracy, generalization,
 real-time, portable/home, or clinical result was established.
+
+## 2026-07-16 - Loop 54 EEG Qualification Research
+
+- Audited six primary sources covering BrainVision file roles and marker
+  semantics, MNE reader behavior, BIDS EEG/events identity, and the published
+  Brain2Qwerty EEG cohort. No S20 path or payload was accessed.
+- Audited the committed Loop 19 extractor at SHA-256
+  `6aa8fcfff84a165cd88432bfd27ced3bab36af254261b28642ae12d9529ef7e9`.
+  It co-loads marker annotations, MAT labels, and signal, excludes EOG-named
+  channels, and writes plaintext labels. It remains valid at its historical
+  engineering boundary but is not eligible for the future Loop 54/55 claim
+  path.
+- Added a four-stage prospective design: strict VHDR-only metadata with no MNE,
+  target-blind VHDR+EEG quality with every channel retained, isolated VMRK+MAT
+  reconciliation with protected outputs, and aggregate closeout.
+- Froze five sensitivity classes, a 48-unique-trial floor, the trial as the
+  future inference unit, 22 acceptance gates, 30 refusal IDs, one thread/worker,
+  1 GiB maximum RSS, and 32 MiB combined public output. Loop 54 creates no
+  split; exact Loop 55 counts remain a future prospective decision.
+- Planning commit `aec440a` passes 22 focused contract/roadmap tests, the full
+  996-test local suite with three expected skips in 30.312 seconds, Ruff, JSON
+  validation, and `git diff --check`.
+- Documentation-sync commit `b6785d7` passed push CI `29471589279` and PR #32
+  CI `29471598364`; Base Python and Optional Neuro Readers passed in both.
+- Loop 53 remains authorization-pending and is the next irreversible decision.
+  All S20 stat/hash/header/marker/signal/MAT/target, split, model, training,
+  inference, score, download, stream, device, and hardware counters remain zero.
+
+Engineering capability added: NeuroDecodeKit now has a source-backed,
+machine-checkable design for separating EEG metadata, target-blind signal
+quality, and target-bearing trial reconciliation before any classifier claim.
+
+Scientific claim not established: no S20 payload was accessed and no neural
+advantage, decoding accuracy, brain-specific attribution, real-time operation,
+portable hardware, home-use result, or clinical utility was demonstrated.

@@ -92,6 +92,13 @@
    `registries/loop53_authorization_request.v0.json` for the pending exact Tier
    C decision. Every execution flag is false; no S20 payload, local stat/hash,
    header, signal, MAT, target, cache, split, or model operation occurred.
+   Then read `docs/LOOP_54_PRIMARY_SOURCE_RESEARCH.md` and
+   `registries/loop54_eeg_trial_geometry_research.v0.json` for the prospective
+   four-stage VHDR, target-blind signal-quality, isolated VMRK+MAT, and
+   aggregate-closeout firewall. Planning commit `aec440a` passed the complete
+   local 996-test suite with three expected skips. Loop 54 is acquisition-
+   dependent and experimentally `Not Started`: no S20 content stage, split,
+   model, training, inference, score, or scientific claim is authorized.
 12. Read `docs/LOOP_30_PRIMARY_SOURCE_RESEARCH.md` for the future loopback-only
    target-free replay inspector, nine-clock timing contract, six latency claim
    levels, 18 future gates, and 30 refusals. It is planning research only;

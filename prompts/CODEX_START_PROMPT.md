@@ -359,7 +359,25 @@ decision is whether the user sends the packet's exact Tier C sentence unchanged.
 The request itself authorizes nothing. If the sentence is received, first
 create and remotely qualify a separate authorization-only record; then
 implement and fixture-qualify without payload access; then obtain another green
-commit before the one acquisition. Stop before Loop 54.
+commit before the one acquisition. Stop before any Loop 54 content stage.
+
+Loop 54 planning research is complete and reviewable at:
+
+- `docs/LOOP_54_PRIMARY_SOURCE_RESEARCH.md`;
+- `registries/loop54_eeg_trial_geometry_research.v0.json`;
+- `tests/test_loop54_eeg_trial_geometry_research.py`.
+
+Planning commit `aec440a` defines L54-A VHDR-only metadata without MNE or
+sibling resolution, L54-B target-blind VHDR+EEG quality with all channels
+retained, L54-C isolated target-bearing VMRK+MAT reconciliation, and L54-D
+aggregate closeout. It requires at least 48 unique performed trials, treats the
+trial rather than each key window as the future inference unit, and creates no
+split or model. The committed Loop 19 extractor remains historical evidence but
+is ineligible for this future claim path because it co-loads annotations, MAT,
+and signal, excludes EOG-named channels, and writes plaintext labels. Loop 53
+must complete first; each real L54-A/B/C stage needs a separate exact Tier C
+decision after a hash-bound implementation is remotely green. Do not implement
+or open any real Loop 54 stage from the planning packet.
 
 Independently, RW3 Stage A remains a separate pending decision surface:
 
@@ -387,6 +405,8 @@ preparation alone do not authorize RW3. The parked Loop 24 result and any Loop
    for the completed mechanics gate; do not reopen, rerun, or repurpose them.
    Loop 53 is preregistered but unauthorized: its exact sentence, separate
    green decision, green implementation, and one-run order are mandatory.
+   Loop 54 planning is complete but every real VHDR, EEG, VMRK, and MAT content
+   stage remains separately unauthorized and acquisition-dependent.
 2. Do not install or import BrainFlow, LSL, MNE-BIDS, or hardware SDKs. Do not
    connect to hardware, enumerate devices, open sockets, or execute a live
    source.

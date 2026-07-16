@@ -1,5 +1,28 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current handoff, 2026-07-16 after Loop 54 planning research: commit `aec440a`
+> freezes the acquisition-dependent EEG qualification design in
+> `docs/LOOP_54_PRIMARY_SOURCE_RESEARCH.md` and
+> `registries/loop54_eeg_trial_geometry_research.v0.json`. Six primary sources
+> and the committed extractor were audited without S20 access. The future path
+> is L54-A strict VHDR-only metadata with no MNE or sibling-file resolution;
+> L54-B target-blind VHDR+EEG quality with every source channel retained and no
+> transform; L54-C isolated target-bearing VMRK+MAT reconciliation with no
+> plaintext protected values in public output; and L54-D aggregate closeout.
+> At least 48 unique performed trials must reconcile, event windows are not
+> independent trials, and Loop 54 creates no split or model. The boundary has
+> 22 gates, 30 refusals, one thread/worker, at most 1 GiB RSS per stage, and at
+> most 32 MiB combined public output. The complete local suite passed 996 tests
+> with three expected skips in 30.312 seconds; focused 22/22, Ruff, JSON, and
+> `git diff --check` also passed. Loop 53 remains the next irreversible
+> decision and is still unauthorized. Do not implement or open L54-A until a
+> clean Loop 53 receipt exists and a separate exact L54-A decision is recorded,
+> pushed, and remotely green. No S20 local stat/hash, header, marker, signal,
+> MAT, target, split, model, training, inference, score, or scientific result
+> occurred. The unrelated tracker inspection NDJSON remains untouched.
+> Documentation-sync commit `b6785d7` passed push CI `29471589279` and PR #32
+> CI `29471598364`; Base Python and Optional Neuro Readers passed in both.
+
 > Current handoff, 2026-07-15 after Loop 53 registration: the accessible EEG
 > lane is now preregistered at an acquisition-only boundary. Registration
 > commit `bccd367` binds S20 session 2 block 2 at pinned revision
