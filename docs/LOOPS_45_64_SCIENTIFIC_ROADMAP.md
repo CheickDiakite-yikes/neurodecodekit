@@ -290,9 +290,32 @@ real content stage requires a separate exact Tier C decision.
 
 ### Loop 55 - Fresh EEG Neural-Effect Gate
 
-Test one tiny causal and one linear EEG model against a train-only prior, zero
-signal, time displacement, channel derangement, keypress-timing-only, and all
-available peripheral controls. Do not borrow MEG thresholds or claims.
+Planning research is complete in `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop55_eeg_neural_effect_research.v0.json`; the experiment remains
+`Not Started` and unauthorized. The primary question is no longer one vague
+"EEG decoding" score. It is split prospectively into two ordered endpoints
+from the same frozen final trials:
+
+1. causal pre-keypress performed-hand prediction; and
+2. causal pre-keypress 29-class performed-key prediction, reported as macro
+   trial keypress-aligned CER.
+
+The future candidate uses only EEG samples strictly before each known keypress,
+zero right context, and no language model. The published `[-200,+300] ms`
+window is a noncausal diagnostic only because it includes post-keypress motor
+execution and somatosensory feedback. Intended sentence text is secondary;
+performed key and hand are the primary targets.
+
+**Gate:** after Loop 53 and Loop 54 close cleanly, freeze one grouped trial-level
+split, one `<=10,000`-parameter causal family, at most 12 fits, and twelve
+matched conditions. Each causal endpoint must clear its practical margin over
+the strongest train-only no-signal prior and strictly beat every applicable
+zero, row, channel, timing, train-pairing, timing-only, and peripheral control
+under exact paired final-trial tests. A final prediction hash must be committed,
+pushed, and remotely green before the same final targets open once. One thread,
+45 CPU minutes, 1 GiB RSS, and 64 MiB generated output remain hard ceilings.
+No S20 read, split, target, model, training, inference, or score is authorized
+now.
 
 ### Loop 56 - Cross-Modality Accessibility Verdict
 

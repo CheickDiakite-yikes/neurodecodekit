@@ -83,6 +83,7 @@ class NextScientificLoopsTests(unittest.TestCase):
                 48: "Complete A/B; Stage C Consumed and Parked",
                 53: "Preregistered; Authorization Pending",
                 54: "Planning Research Complete; Acquisition Dependent",
+                55: "Planning Research Complete; Loop 54 Dependent",
             }.get(row["loop_id"], "Not Started")
             self.assertEqual(row["status"], expected_status)
             self.assertTrue(row["controls"])

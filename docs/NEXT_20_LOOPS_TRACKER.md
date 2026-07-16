@@ -106,7 +106,16 @@
 > contract. Its 22 gates, 30 refusals, 1 GiB RSS ceiling, 32 MiB public-output
 > cap, and every real-stage execution flag are machine checked. No S20 payload,
 > local stat/hash, header, marker, signal, MAT, target, split, model, training,
-> inference, or score has opened. The workbook remains the last
+> inference, or score has opened. Loop 55 planning research now separates a
+> causal performed-hand gate from a harder causal 29-key gate, uses performed
+> actions rather than corrected intended text as the primary targets, and
+> keeps the published post-keypress-centered window diagnostic-only. It binds a
+> future grouped trial-level split, twelve matched controls, exact paired
+> final-trial inference, one-shot target order, at most 12 fits, 10,000
+> parameters, 45 CPU minutes, 1 GiB RSS, and 64 MiB generated output. Loop 55
+> remains `Not Started`, Loop 54 dependent, and unauthorized; no S20 content,
+> split, target, model, training, inference, or score was accessed. The workbook
+> remains the last
 > visually reviewed Stage A snapshot; it
 > was not reopened because its prior full import reached 1.57 GiB peak RSS.
 
