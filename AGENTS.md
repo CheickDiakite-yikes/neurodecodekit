@@ -41,9 +41,12 @@ research in `docs/LOOP_48_STAGE_C_REPRESENTATION_REPAIR_RESEARCH.md` and
 `registries/loop48_stage_c_representation_repair_research.v0.json` selects the
 falsifiable `R1` temporal-context-starvation hypothesis: compare one
 7,692-parameter, 470 ms causal candidate with one 7,568-parameter zero-context
-ablation on the same 25 Hz grid. After the research milestone is remotely
-green, Tier A permits implementation; after the implementation milestone is
-remotely green, it permits exactly one bounded synthetic calibration with four
+ablation on the same 25 Hz grid. Research commit `9579be9` is remotely green,
+and the exact implementation is recorded in
+`docs/LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md` and
+`registries/loop48_stage_c_synthetic_implementation.v0.json`. It has not run a
+parameter update. After the implementation milestone is remotely green, Tier
+A permits exactly one bounded synthetic calibration with four
 training runs, at most 1,800 steps, 600 seconds, 1 GiB RSS, 16 MiB generated,
 one thread, one worker, and zero real-data downloads. This can prove synthetic
 mechanics only. Do not stat/hash/read the S21 cache, perform another real-data

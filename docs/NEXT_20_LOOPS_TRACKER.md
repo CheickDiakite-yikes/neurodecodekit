@@ -89,7 +89,13 @@
 > `docs/LOOP_48_STAGE_C_REPRESENTATION_REPAIR_RESEARCH.md`,
 > `registries/next_scientific_loops.v0.json`, and
 > `registries/loop48_stage_c_representation_repair_research.v0.json` are the
-> current Stage C research sources of truth. The workbook remains the last
+> current Stage C research sources of truth. The exact candidate, ablation,
+> fixture, bounded gate, safe checkpoints, and two CLI commands are now
+> implemented and locally pass 13 focused tests with zero parameter updates;
+> see `docs/LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md` and
+> `registries/loop48_stage_c_synthetic_implementation.v0.json`. The four-fit
+> synthetic calibration remains unexecuted until the implementation milestone
+> is remotely green. The workbook remains the last
 > visually reviewed Stage A snapshot; it
 > was not reopened because its prior full import reached 1.57 GiB peak RSS.
 

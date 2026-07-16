@@ -4295,3 +4295,42 @@ Scientific claim not established: no model was implemented or run and no real
 signal or target was opened, so neural advantage, sensor-signal dependence,
 brain-specific origin, decoding improvement, generalization, real-time
 performance, and portable or home EEG performance remain unestablished.
+
+## 2026-07-15 - Loop 48 Stage C Synthetic Implementation
+
+- Implemented the exact 7,692-parameter causal candidate and 7,568-parameter
+  zero-context ablation with fixed 100-to-25 Hz geometry, numeric-only NPZ
+  checkpoints, strict payload hashes, and optional NumPy/Torch imports.
+- Added the exact seed-4850 synthetic fixture: 40 unique 102-channel rows in a
+  24/8/8 split, 3,996 valid source samples, 999 valid output steps, 1,699,920
+  array bytes, exact zero padding, and no file, cache, participant, or real-
+  target input. Its SHA-256 is
+  `0322b5d2a89c5b0bd95cd8829e0a5d463fb1c8a9da3a7aad82f6e00fd1e95537`.
+- Added one refusal-first aggregate gate and two CLI surfaces. The gate freezes
+  all three candidate recipes, one selected-recipe ablation, one final opening,
+  bitwise checkpoint replay, eight future-mutation rows, eight prefix-resume
+  rows, one thread, one worker, 1,800 steps, 600 seconds, 1 GiB RSS, 16 MiB
+  generated output, and a 20 GiB free-disk floor.
+- Thirteen focused tests pass in 1.331 seconds with zero parameter updates. The
+  complete dependency-light suite passes 910 tests with 156 expected skips in
+  1.745 seconds internal time and 1.97 seconds wall time at 121,733,120-byte
+  peak RSS. The optional-neuro suite passes 957 tests with 3 expected skips in
+  29.474 seconds internal time and 30.38 seconds wall time at 611,270,656-byte
+  peak RSS. Both add exactly 13 tests over the 897/944 research baseline.
+- Repository-wide Ruff, compileall, every registry JSON, both new CLI help
+  surfaces, and `git diff --check` pass. The user-owned tracker inspection
+  sidecar remains unread, unmodified, unstaged, and uncommitted.
+- No synthetic training run, optimizer step, persistent generated artifact,
+  real-data read, cache operation, download, S24/S25 operation, stream, device,
+  hardware operation, or claim upgrade occurred. The four-fit calibration
+  remains closed until this implementation commit is pushed and remotely green.
+
+Engineering capability added: NeuroDecodeKit now implements the exact Stage C
+causal temporal candidate, parameter-matched ablation, deterministic fixture,
+bounded aggregate gate, safe checkpoints, and inspect CLI.
+
+Scientific claim not established: implementation did not run the synthetic
+calibration or open real signal or targets, so neural advantage, sensor-signal
+dependence, brain-specific origin, decoding improvement, generalization,
+real-time performance, and portable or home EEG performance remain
+unestablished.

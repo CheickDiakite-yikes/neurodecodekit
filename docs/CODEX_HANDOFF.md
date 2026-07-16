@@ -1339,3 +1339,11 @@ do not reuse its 44 fit rows or reopen its 11 consumed check rows; do not touch
 validation, source test, session 2, S24, or S25; and do not perform a real model
 operation or promote a scientific claim without a separate exact Tier C
 decision.
+
+Implementation is now prepared in
+`docs/LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md` and
+`registries/loop48_stage_c_synthetic_implementation.v0.json`. The exact models,
+fixture, bounded gate, numeric checkpoints, and two CLI commands pass 13
+focused tests with zero parameter updates. Do not run the four-fit calibration
+until this implementation commit passes both push and PR CI; then execute it
+once in a Git-ignored directory and close it without a restart.

@@ -45,7 +45,7 @@ irreversible Tier C events.
 | Consumed S21 validation | The registered 2,908-parameter candidate reached macro CER `0.938177`; the train-only no-signal prior reached `0.751235`, so the candidate was worse by `0.186942` | Loop 26 is parked after one consumed six-target event; this is a clear negative result, not neural advantage |
 | Artifact-only failure localization | The one-shot Stage A pass reproduced `99.3477%` primary blank, all 6/6 unstable fixed-prefix groups, and all 3/3 size-55 seeds worse than the prior | Loop 48 selected descriptive `F5` output-distribution instability in `0.0166` sec and 23.4 MB RSS; that phenotype is not a proven root cause |
 | Train-only failure discrimination | The consumed Stage B primary reached macro CER `0.953566` versus `0.822045` for its train-only prior; all six full-size causal/linear fits were finite and stable, but none cleared the prior | `H4` stable nonseparability is supported and fixed timing-offset `H3` has evidence against it; the exact `L50-R05` route parks S24 acquisition for this model family, with no neural advantage or rerun |
-| Temporal-representation repair research | Stage C freezes a `7,692`-parameter causal candidate with `470 ms` left context and a `7,568`-parameter zero-context ablation on the same 25 Hz output grid | `R1` temporal-context starvation is a falsifiable hypothesis, not a result; only a bounded synthetic mechanics gate is next, and no protected evidence is open |
+| Temporal-representation repair | Stage C implements a `7,692`-parameter causal candidate with `470 ms` left context, a `7,568`-parameter zero-context ablation, and a deterministic 24/8/8 synthetic gate | `R1` temporal-context starvation is a falsifiable hypothesis, not a result; the four-fit calibration awaits a remotely green implementation commit, and no protected evidence is open |
 | Development-person intake planning | Loop 49 metadata research selects S24 session 2 block 2: one MEG FIF plus one protected MAT log, exactly `1,048,579,727` bytes; a future text-grouped split reserves 16 unique sentence groups for selection and requires at least 32 fit groups | S24 avoids the S1/S18 alias and preserves S25 final-only, but no S24 path or payload was opened and the `>=48` usable-row, channel, geometry, and overlap gates are unproven; Loop 49 remains `Not Started` |
 | Multi-source encoder planning | Loop 50 research freezes global text grouping, five-fold historical S21 out-of-fold diagnostics, one 16-group S24 development gate, equal-person loss, ten fixed conditions, and an exact 20-update inventory led by seed `5001` | Stage B route `L50-R05` now parks the same-family S24 path; Loop 50 remains `Not Started`, with S24 qualification, model selection, training, scoring, and every scientific claim unavailable |
 | Fresh transfer candidate | Loop 27 metadata research selects S25 session 2 block 2: one MEG FIF plus one protected MAT log, exactly 1,009,939,983 bytes under 1 GiB | S25 is not downloaded or qualified; preregistration waits for the causal source model, controls, and target isolation |
@@ -103,7 +103,7 @@ four registered fixed timing offsets. The primary candidate reached macro CER
 consumed, no rerun is open, S24 remains metadata-only, and S25 remains sealed.
 See `docs/LOOP_48_STAGE_B_RESULT.md`.
 
-Stage C research now selects one narrower explanation for the failed family:
+Stage C research selects one narrower explanation for the failed family:
 the original causal probe may be starved of temporal context. The frozen
 comparison is a `7,692`-parameter, 470 ms causal temporal encoder against a
 `7,568`-parameter one-frame ablation on the same 25 Hz output grid. The next
@@ -113,6 +113,11 @@ one CPU thread, four total training runs, at most 1,800 steps, 600 seconds,
 `docs/LOOP_48_STAGE_C_REPRESENTATION_REPAIR_RESEARCH.md`. A synthetic pass can
 prove causality, length, padding, replay, and motif-learning mechanics; it
 cannot prove that S21 contains usable neural information or reopen S24/S25.
+The exact models, fixture, safe checkpoints, aggregate gate, and two CLI
+surfaces are now implemented and pass 13 focused tests without a parameter
+update. The calibration itself has not run; it remains behind the remotely
+green implementation boundary in
+`docs/LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md`.
 
 Loop 49 planning research now selects S24 session 2 block 2 as the preferred
 permanently development-only participant from pinned public metadata. The exact
@@ -1160,6 +1165,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/LOOP_48_STAGE_B_RESULT.md](docs/LOOP_48_STAGE_B_RESULT.md) | one-shot H1-H6 verdict, candidate/prior and control results, exact access/resource ledger, `L50-R05` route, and no-rerun claim boundary |
 | [docs/LOOP_48_STAGE_C_REPRESENTATION_REPAIR_RESEARCH.md](docs/LOOP_48_STAGE_C_REPRESENTATION_REPAIR_RESEARCH.md) | primary-source temporal-context hypothesis, exact causal candidate and parameter-matched ablation, bounded synthetic gate, and protected-evidence firewall |
 | [registries/loop48_stage_c_representation_repair_research.v0.json](registries/loop48_stage_c_representation_repair_research.v0.json) | machine-readable `R1` comparison, architecture math, synthetic caps, outcome router, zero protected/model counters, and false protected authorization fields |
+| [docs/LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md](docs/LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md) | exact model/fixture/gate implementation, local zero-update qualification, frozen execution order, resource caps, and remote-green boundary |
+| [registries/loop48_stage_c_synthetic_implementation.v0.json](registries/loop48_stage_c_synthetic_implementation.v0.json) | hash-bound model, fixture, gate, CLI, and test sources with zero execution counters and every protected authorization false |
 | [registries/loop48_train_only_discrimination_result.v0.json](registries/loop48_train_only_discrimination_result.v0.json) | consumed 11-row train-check diagnostic supporting `H4`, recording evidence against fixed-shift `H3`, and preserving the E2 ceiling without plaintext targets or predictions |
 | [docs/LOOP_49_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_49_PRIMARY_SOURCE_RESEARCH.md) | S24 development-person metadata decision, clean-identity tradeoff, exact bytes/hashes, text-group split recommendation, access order, and claim ceiling |
 | [registries/loop49_research_boundary.v0.json](registries/loop49_research_boundary.v0.json) | machine-readable S24 selection, 25 false authorization fields, zero payload/model counters, `>=48` blocker, and permanent development-only role |

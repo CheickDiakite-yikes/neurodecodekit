@@ -3070,3 +3070,41 @@ diagnostic remains Tier C and needs its own exact preregistration and decision.
 Evidence: `docs/LOOP_48_STAGE_C_REPRESENTATION_REPAIR_RESEARCH.md`,
 `registries/loop48_stage_c_representation_repair_research.v0.json`, and
 `tests/test_loop48_stage_c_representation_repair_research.py`.
+
+## 0091 - Implement Stage C Without Spending The Synthetic Gate
+
+Decision: implement the exact Stage C candidate, ablation, deterministic
+fixture, bounded gate, safe numeric checkpoints, and inspect CLI after research
+commit `9579be9` passed push CI `29466218879` and PR CI `29466225955`. Keep
+NumPy and Torch optional and imported only inside the functions that need them.
+
+Mechanics decision: preserve all frozen architecture and fixture identity. The
+candidate has 7,692 parameters, 470 ms left context, zero right context, and a
+25 Hz output grid. The ablation has 7,568 parameters, no learned temporal
+history, zero right context, and the same grid. The seed-4850 fixture has 40
+unique rows, 102 channels, 1,699,920 array bytes, strict 24/8/8 identities,
+zero signal/target padding, and a stable SHA-256. Every source frame visible to
+the ablation is zero; motif identity lives in the ordered past.
+
+Qualification decision: test shape, parameter, causality, padding, split,
+hash, checkpoint, cap, CLI, and forbidden-import behavior without a parameter
+update. Accept 13 focused tests, 910 dependency-light tests with 156 expected
+skips, and 957 optional-neuro tests with 3 expected skips. No persistent
+generated artifact, real read, download, or model training occurred.
+
+Execution decision: this implementation does not spend the registered four-fit
+synthetic gate. The one calibration may run only after the implementation
+commit passes both push and PR CI. It must use one thread, one worker, at most
+1,800 optimizer steps, 600 seconds, 1 GiB RSS, 16 MiB generated output, at
+least 20 GiB free disk, one final opening, and no restart.
+
+Scientific boundary: an eventual synthetic pass can establish only mechanics.
+No protected Stage C contract, S21 cache operation, S24/S25 operation, real
+model run, or scientific claim is opened by implementation.
+
+Evidence: `docs/LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md`,
+`registries/loop48_stage_c_synthetic_implementation.v0.json`,
+`src/neurodecodekit/models/tiny_causal_temporal_ctc.py`,
+`src/neurodecodekit/training/temporal_motif_sentences.py`,
+`src/neurodecodekit/experiments/temporal_representation_gate.py`, and
+`tests/test_loop48_stage_c_synthetic_implementation.py`.

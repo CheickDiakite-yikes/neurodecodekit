@@ -61,7 +61,12 @@
    freeze a 7,692-parameter 470 ms causal candidate against a 7,568-parameter
    zero-context ablation, and permit only a bounded synthetic mechanics
    milestone next. No protected cache, real model run, S24/S25 operation, or
-   scientific claim is authorized by that research.
+   scientific claim is authorized by that research. Then read
+   `docs/LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md` and
+   `registries/loop48_stage_c_synthetic_implementation.v0.json` for the exact
+   models, fixture, gate, CLI, zero-update qualification, and source hashes.
+   The four-fit calibration remains unexecuted until that implementation
+   milestone is pushed and remotely green.
 8. Read `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` for the selected S25
    metadata candidate and every blocker that still prevents preregistration,
    download, signal/target access, or transfer evaluation.

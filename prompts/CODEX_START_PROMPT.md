@@ -327,7 +327,11 @@ zero-context ablation. After this research milestone is remotely green, Tier A
 allows implementation; after implementation is remotely green, it allows one
 bounded synthetic-only calibration. Do not stat, hash, or read the S21 cache;
 do not use real targets, S24, or S25; and do not treat synthetic success as a
-neural or decoding result.
+neural or decoding result. The implementation now lives in
+`docs/LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md` and
+`registries/loop48_stage_c_synthetic_implementation.v0.json`; it passed local
+qualification without a parameter update. Do not execute the four-fit
+calibration until its implementation commit is pushed and remotely green.
 
 Loop 27 is also review-only planning evidence. Do not turn the selected S25
 paths, official hashes, local MAT presence, 1 GiB cap, or roadmap status into a

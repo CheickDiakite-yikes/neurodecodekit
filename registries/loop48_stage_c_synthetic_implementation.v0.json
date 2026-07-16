@@ -1,0 +1,168 @@
+{
+  "schema_name": "neurodecodekit.loop48_stage_c_synthetic_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "loop48-stage-c-synthetic-temporal-representation-v0",
+  "prepared_at": "2026-07-15",
+  "status": "implemented_locally_not_executed_remote_green_pending",
+  "proof_posture": "synthetic_implementation_qualification_only_no_parameter_update_or_protected_operation",
+  "research_milestone": {
+    "commit": "9579be93340d86f87f1b8c8f4ad7f987ebd765f0",
+    "push_ci_run_id": 29466218879,
+    "pull_request_ci_run_id": 29466225955,
+    "push_ci_conclusion": "success",
+    "pull_request_ci_conclusion": "success",
+    "pull_request": 30,
+    "document_path": "docs/LOOP_48_STAGE_C_REPRESENTATION_REPAIR_RESEARCH.md",
+    "document_sha256": "58e61d23d4cd49f441f1ce5333b3dbf7515eb6c29ed26f699851d9b002a3ff49",
+    "registry_path": "registries/loop48_stage_c_representation_repair_research.v0.json",
+    "registry_sha256": "c12ec28c03fb742a9d24cfb76dff54776e40c77c52096f810166c52030b5435a"
+  },
+  "source_bindings": {
+    "model": {
+      "path": "src/neurodecodekit/models/tiny_causal_temporal_ctc.py",
+      "sha256": "45f2215a7888adc9a2756aa8fef5d51db4553c2aa2d2206477af1c01e22e7120"
+    },
+    "fixture": {
+      "path": "src/neurodecodekit/training/temporal_motif_sentences.py",
+      "sha256": "6c274ebe76d013d6045418d9fce9da37a539a2865d802ab86045988ac1c5fac5"
+    },
+    "gate": {
+      "path": "src/neurodecodekit/experiments/temporal_representation_gate.py",
+      "sha256": "6b6c2c5cb2aa6a93af62d214202291d3b4a61ca9dde84bb710d8235267b0d187"
+    },
+    "cli": {
+      "path": "src/neurodecodekit/cli.py",
+      "sha256": "1082642a53a53a2e891feb24e9dd50b807a0276e06d5c415099a303c89e88a40"
+    },
+    "tests": {
+      "path": "tests/test_loop48_stage_c_synthetic_implementation.py",
+      "sha256": "0a2bc0040ffb50e3b354b1a554ca237202e7cab15f185d8114e97fd6cf95416a"
+    }
+  },
+  "implemented_interface": {
+    "candidate_model_id": "TinyCausalTemporalCTC-v0",
+    "candidate_parameters": 7692,
+    "candidate_required_left_context_frames": 47,
+    "candidate_required_left_context_ms": 470,
+    "candidate_right_context_frames": 0,
+    "ablation_model_id": "TinyCausalTemporalAblation-v0",
+    "ablation_parameters": 7568,
+    "ablation_required_left_context_frames": 0,
+    "ablation_right_context_frames": 0,
+    "parameter_gap": 124,
+    "parameter_gap_fraction_of_candidate": 0.01612064482579303,
+    "input_channels": 102,
+    "input_sampling_rate_hz": 100,
+    "output_sampling_rate_hz": 25,
+    "output_length_formula": "(input_length + 3) // 4",
+    "output_timestamp_formula": "source_frame_index = 4 * output_frame_index",
+    "checkpoint_serialization": "numpy_npz_allow_pickle_false",
+    "cli_commands": [
+      "loop48-stage-c-synthetic",
+      "loop48-stage-c-inspect-synthetic"
+    ]
+  },
+  "fixture_identity": {
+    "seed": 4850,
+    "partitions": {
+      "train": 24,
+      "selection": 8,
+      "final": 8
+    },
+    "items": 40,
+    "channels": 102,
+    "sampling_rate_hz": 100,
+    "array_bytes": 1699920,
+    "valid_source_samples": 3996,
+    "valid_output_steps": 999,
+    "fixture_sha256": "0322b5d2a89c5b0bd95cd8829e0a5d463fb1c8a9da3a7aad82f6e00fd1e95537",
+    "train_partition_sha256": "87174ded817ec2fb9fd245605c48c9ed3ac19c4370d6bcaa468aa2da70e2ae78",
+    "selection_partition_sha256": "674160e74c75d8eae2b91fcf3b82cd552d8bc34913bf6b2472d2a6070d424d9e",
+    "final_partition_sha256": "6e0b225380e3cbeead2e9c00dbeed4f88f748708199f372f87f321a3da421e92",
+    "sampled_source_frames_are_zero": true,
+    "signal_padding_is_zero": true,
+    "target_padding_is_blank_zero": true,
+    "partition_item_ids_are_disjoint": true,
+    "real_source_files_read": 0,
+    "real_signal_rows_read": 0,
+    "real_target_rows_read": 0
+  },
+  "gate_inventory": {
+    "candidate_optimizer_recipes": 3,
+    "ablation_fits": 1,
+    "total_training_runs": 4,
+    "maximum_optimizer_steps": 1800,
+    "synthetic_final_openings": 1,
+    "candidate_final_cer_max": 0.1,
+    "candidate_final_exact_sequences_min": 7,
+    "candidate_minus_ablation_cer_improvement_min": 0.1,
+    "deterministic_checkpoint_replay_required": true,
+    "future_mutation_controls_required": true,
+    "prefix_resume_equivalence_required": true
+  },
+  "resource_caps": {
+    "cpu_threads": 1,
+    "workers": 1,
+    "runtime_sec": 600,
+    "peak_rss_bytes": 1073741824,
+    "generated_artifact_bytes": 16777216,
+    "minimum_free_disk_bytes": 21474836480,
+    "fixture_array_bytes": 4194304,
+    "new_real_data_download_bytes": 0
+  },
+  "local_precommit_qualification": {
+    "focused_tests": 13,
+    "focused_tests_passed": 13,
+    "parameter_update_runs": 0,
+    "optimizer_steps": 0,
+    "real_data_reads": 0,
+    "real_cache_reads": 0,
+    "real_target_reads": 0,
+    "new_real_data_download_bytes": 0,
+    "generated_persistent_artifact_bytes": 0,
+    "temporary_artifacts_removed_by_test_context": true,
+    "dependency_light_tests": 910,
+    "dependency_light_expected_skips": 156,
+    "dependency_light_internal_runtime_sec": 1.745,
+    "dependency_light_external_peak_rss_bytes": 121733120,
+    "optional_neuro_tests": 957,
+    "optional_neuro_expected_skips": 3,
+    "optional_neuro_internal_runtime_sec": 29.474,
+    "optional_neuro_external_peak_rss_bytes": 611270656,
+    "ruff_passed": true,
+    "compileall_passed": true,
+    "all_registry_json_passed": true,
+    "cli_help_surfaces_passed": 2,
+    "git_diff_check_passed": true,
+    "full_suite_pending": false,
+    "implementation_push_pending": true,
+    "implementation_remote_green_pending": true
+  },
+  "authorization": {
+    "implementation_authorized_and_completed_now": true,
+    "synthetic_calibration_authorized_only_after_this_implementation_commit_is_remotely_green": true,
+    "synthetic_calibration_executed_now": false,
+    "protected_stage_c_contract_exists_now": false,
+    "protected_stage_c_execution_authorized_now": false,
+    "s21_cache_stat_hash_member_or_target_read_authorized_now": false,
+    "stage_b_44_fit_row_reuse_authorized_now": false,
+    "stage_b_11_check_row_reopen_authorized_now": false,
+    "validation_source_test_or_session2_authorized_now": false,
+    "s24_or_s25_operation_authorized_now": false,
+    "real_model_training_inference_or_scoring_authorized_now": false,
+    "new_real_data_download_authorized_now": false,
+    "stream_device_hardware_or_rw3_authorized_now": false,
+    "scientific_claim_upgrade_authorized_now": false
+  },
+  "warnings": [
+    "implementation_is_not_a_synthetic_gate_result",
+    "no_parameter_update_was_run_during_local_precommit_qualification",
+    "synthetic_gate_must_wait_for_remote_green_implementation_commit",
+    "synthetic_success_can_establish_mechanics_only",
+    "protected_evidence_remains_closed"
+  ],
+  "claim_boundary": {
+    "engineering_capability_added": "The exact causal candidate, zero-context ablation, deterministic fixture, bounded gate, safe checkpoints, and inspect CLI are implemented and locally qualified without parameter updates.",
+    "scientific_claim_not_established": "No synthetic calibration or real model run occurred and no real signal or target was opened; neural advantage, sensor-signal dependence, brain-specific origin, decoding improvement, generalization, real-time performance, and portable or home EEG performance remain unestablished."
+  }
+}

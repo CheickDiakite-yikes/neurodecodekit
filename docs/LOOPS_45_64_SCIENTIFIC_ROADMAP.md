@@ -145,6 +145,14 @@ one thread, one worker, and zero real-data downloads. See
 protected Stage C preregistration or execution exists, and synthetic success
 cannot establish neural information or decoding improvement.
 
+The exact candidate, ablation, deterministic fixture, numeric checkpoints,
+bounded aggregate gate, and inspect CLI are now implemented in
+`docs/LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md` and
+`registries/loop48_stage_c_synthetic_implementation.v0.json`. Local
+qualification passes 13 focused tests with zero parameter updates. The
+four-fit synthetic calibration remains unexecuted until the implementation
+commit is pushed and remotely green.
+
 The consumed Stage A verified hashes, reproduced aggregate blank/CER summaries,
 applied the ordered tree, and emitted one target-free aggregate report. Do not
 rerun it or use validation targets to select a seed, threshold, loss, or larger
