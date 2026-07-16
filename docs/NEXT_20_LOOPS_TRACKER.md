@@ -677,9 +677,21 @@ the same-family S24 intake path is parked.
 Planning commit `085f341` passed push CI `29458102674` and PR #28 CI
 `29458116994`; Base Python and Optional Neuro Readers are green in both.
 
-Loops 51-64 are `Not Started`. All execution flags and all nine global
+Loop 53 is now `Preregistered; Authorization Pending`. Registration commit
+`bccd367` freezes one exact S20 session 2 block 2 BrainVision triplet plus MAT
+log at revision `88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684`: four files and
+96,090,264 bytes. It allows only a future metadata recheck, one isolated
+transfer, opaque integrity hashes, and a bounded receipt; header/marker/signal/
+MAT/target parsing, caches, splits, models, training, scoring, substitutions,
+and reruns are outside the gate. Push CI `29469813041` and PR #31 CI
+`29469829357` are green. The exact request is prepared in
+`docs/LOOP_53_AUTHORIZATION_PACKET.md` and
+`registries/loop53_authorization_request.v0.json`, but every execution flag is
+false and no S20 payload or local path was touched.
+
+Loops 51-52 and 54-64 are `Not Started`. All execution flags and all nine global
 authorization fields are false. Decision 0083 and the applied `L50-R05` route
 now block S24 acquisition for this model family. Any future predictive branch
 needs a separately preregistered representation repair before another
 development-person intake can be considered; S25 remains final-only and
-sealed. No roadmap row authorizes either experiment.
+sealed. No roadmap row authorizes an experiment.

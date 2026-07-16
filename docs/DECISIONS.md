@@ -3167,3 +3167,42 @@ performance. It does not justify opening S21, acquiring S24, or opening S25.
 Evidence: `docs/LOOP_48_STAGE_C_SYNTHETIC_RESULT.md`,
 `registries/loop48_stage_c_synthetic_result.v0.json`, and
 `tests/test_loop48_stage_c_synthetic_result.py`.
+
+## 0094 - Separate Fresh EEG Acquisition From Interpretation
+
+Decision: advance the independent accessible-EEG lane through Loop 53 while
+keeping the failed MEG model-family branch parked. Select the previously
+identified S20 session 2 block 2 bundle at pinned SpanishBCBL revision
+`88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684`: one BrainVision triplet plus one
+companion MAT log, four exact files, and 96,090,264 bytes.
+
+Staging decision: replace the historical broad S20 packet for future work with
+an acquisition-only gate. A future authorized Loop 53 execution may reverify
+public metadata, transfer the four files once into a new isolated destination,
+perform opaque size/integrity hashes, emit a receipt, and clean up only its own
+temporary files. It may not parse a header, marker, EEG sample, or MAT field;
+read targets or events; create a cache/split; or access a model.
+
+Resource decision: freeze one CPU thread, one worker, 600 seconds, 512 MiB peak
+RSS, 128 MiB network payload, 256 MiB incremental disk, 1 MiB receipt output,
+and a 2 GiB free-disk floor. Any identity/license mismatch, destination
+collision, partial transfer, cap breach, forbidden read, substitution, or hash
+failure parks without rerun.
+
+Registration decision: commit `bccd367` passed push CI `29469813041` and PR
+CI `29469829357`, with 929 dependency-light tests/156 expected skips and 961
+optional-neuro tests/29 expected skips remotely green. Prepare a separate
+hash-bound request, but leave every execution authorization false until the
+user supplies its exact Tier C sentence and the decision is separately
+committed, pushed, and green. General autonomy and the 5-10 GB storage allowance
+are not transitive acquisition permission.
+
+Scientific boundary: acquisition mechanics cannot establish BrainVision
+readability, EEG quality, target validity, neural advantage, decoding accuracy,
+generalization, real-time behavior, portable/home hardware, or clinical utility.
+
+Evidence: `docs/LOOP_53_PRIMARY_SOURCE_RESEARCH.md`,
+`docs/LOOP_53_FRESH_EEG_ACQUISITION_PREREGISTRATION.md`,
+`registries/loop53_fresh_eeg_acquisition_contract.v0.json`,
+`docs/LOOP_53_AUTHORIZATION_PACKET.md`, and
+`registries/loop53_authorization_request.v0.json`.

@@ -340,7 +340,28 @@ download or content-open instruction. Preregistration waits for compatible
 Loop 25 mechanics, a frozen Loop 26 model/control package, target isolation,
 and a Loop 28 final-only decision rule.
 
-Independently, inspect and validate the RW3 Stage A decision surface:
+The current next Tier C decision surface is Loop 53 fresh S20 acquisition:
+
+- `docs/LOOP_53_PRIMARY_SOURCE_RESEARCH.md`;
+- `docs/LOOP_53_FRESH_EEG_ACQUISITION_PREREGISTRATION.md`;
+- `registries/loop53_fresh_eeg_acquisition_contract.v0.json`;
+- `docs/LOOP_53_AUTHORIZATION_PACKET.md`;
+- `registries/loop53_authorization_request.v0.json`;
+- `tests/test_loop53_fresh_eeg_acquisition_contract.py`;
+- `tests/test_loop53_authorization_request.py`.
+
+Registration commit `bccd367` passed push CI `29469813041` and PR CI
+`29469829357`. Confirm that the exact four S20 files total 96,090,264 bytes;
+the pinned Git/LFS hashes, license, new isolated destination, no-overwrite
+rules, 128 MiB network, 256 MiB disk, 512 MiB RSS, one-thread/worker caps,
+access counters, unavailable fields, and claim ceiling agree. The only current
+decision is whether the user sends the packet's exact Tier C sentence unchanged.
+The request itself authorizes nothing. If the sentence is received, first
+create and remotely qualify a separate authorization-only record; then
+implement and fixture-qualify without payload access; then obtain another green
+commit before the one acquisition. Stop before Loop 54.
+
+Independently, RW3 Stage A remains a separate pending decision surface:
 
 - `docs/RW3_PRIMARY_SOURCE_RESEARCH.md`;
 - `docs/RW3_REPLAY_LIVE_EQUIVALENCE_PREREGISTRATION.md`;
@@ -354,10 +375,9 @@ clock views, packet anomalies, state, five schedules, 18 fixture families, 30
 refusal IDs, four staged adapters, resource caps, access counters, and claim
 boundaries. Confirm that the request binds the exact contract hash, 90-case
 matrix, 30 refusals, caps, forbidden work, and authorization-only commit
-sequence while leaving `authorized_now` false. The only permissible next
-decision is whether the user separately authorizes Stage A pure-Python
-synthetic replay or holds it. Registration and packet preparation alone do not.
-The parked Loop 24 result cannot authorize RW3 Stage A.
+sequence while leaving `authorized_now` false. Registration and packet
+preparation alone do not authorize RW3. The parked Loop 24 result and any Loop
+53 decision cannot authorize RW3 Stage A.
 
 ## Hard boundaries
 
@@ -365,6 +385,8 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
    caches, target logs, or seeds 2203, 2303, 2353, and 2401. Keep seed 2402
    unopened and do not repurpose it. Loop 25 seeds 2501 and 2502 are consumed
    for the completed mechanics gate; do not reopen, rerun, or repurpose them.
+   Loop 53 is preregistered but unauthorized: its exact sentence, separate
+   green decision, green implementation, and one-run order are mandatory.
 2. Do not install or import BrainFlow, LSL, MNE-BIDS, or hardware SDKs. Do not
    connect to hardware, enumerate devices, open sockets, or execute a live
    source.
@@ -377,8 +399,9 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
    calculate CER/WER, or claim decoding performance.
 6. Keep heavy dependencies optional. Use one CPU thread and do not create
    generated data artifacts beyond tiny documentation-validation debris.
-7. Keep RW3 independent from Loop 24 precision/runtime and the
-   blocked RW4 S20 acquisition packet.
+7. Keep RW3 independent from Loop 24 precision/runtime and the Loop 53 S20
+   acquisition request. The historical broad RW4/S20 packet is superseded for
+   future S20 work and grants no permission.
 8. Do not rerun Loop 25 or Loop 26/31/33, or implement/execute another Loop
    26-44 item from roadmap
    approval, packet preparation, or a broad request to continue. Loop 25 v1 is
@@ -433,7 +456,10 @@ The parked Loop 24 result cannot authorize RW3 Stage A.
 1. Keep README, tracker, decision log, build notes, handoff, start-here,
    roadmap, workbook, and continuation prompt consistent with Loop 24's parked
    closeout, RW3 commit `c3d1f01`, and the
-   still-unauthorized request prepared at `163ff2f`. Keep Loop 25's immutable
+   still-unauthorized request prepared at `163ff2f`. Keep Loop 53's green
+   registration `bccd367`, exact 96,090,264-byte four-file contract, pending
+   request, false execution flags, and zero-payload boundary consistent. Keep
+   Loop 25's immutable
    `a36d97b` v0 registration, green `b6b92d8` v1 amendment, false replacement
    authorization request, the planning-only Loop 26 registry with 14 false
    authorization fields and zero protected access, the Loop 27 registry with

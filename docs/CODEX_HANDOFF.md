@@ -1,5 +1,21 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current handoff, 2026-07-15 after Loop 53 registration: the accessible EEG
+> lane is now preregistered at an acquisition-only boundary. Registration
+> commit `bccd367` binds S20 session 2 block 2 at pinned revision
+> `88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684`: one BrainVision triplet plus
+> one MAT log, four exact files, and 96,090,264 bytes. Push CI `29469813041`
+> and PR #31 CI `29469829357` passed Base Python and Optional Neuro Readers.
+> The exact request is `docs/LOOP_53_AUTHORIZATION_PACKET.md` plus
+> `registries/loop53_authorization_request.v0.json`; every execution flag is
+> false. No S20 payload download, local path stat/hash, header, marker, signal,
+> MAT, target, cache, split, model, training, or score occurred. The next
+> decision is whether the user sends the exact sentence unchanged. If received,
+> record a separate authorization-only decision and obtain green push/PR CI
+> before implementation. Then implement and fixture-qualify without payload
+> access, commit/push/green again, and only then perform the one registered
+> acquisition. Stop before Loop 54. Do not revive the older broad S20 packet.
+
 > Current handoff, 2026-07-15 after Loop 48 Stage B: the one-shot train-only
 > diagnostic is complete and consumed. Implementation commit `1d840e3` passed
 > push CI `29461579009` and PR CI `29461580293` before protected access.
