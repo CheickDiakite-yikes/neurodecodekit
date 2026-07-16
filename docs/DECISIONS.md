@@ -3206,3 +3206,41 @@ Evidence: `docs/LOOP_53_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop53_fresh_eeg_acquisition_contract.v0.json`,
 `docs/LOOP_53_AUTHORIZATION_PACKET.md`, and
 `registries/loop53_authorization_request.v0.json`.
+
+## 0095 - Separate EEG Header, Signal, And Target-Bearing Event Access
+
+Decision: complete Loop 54 planning research without implementing or executing
+an S20 reader. Replace the coarse header-then-signal idea with four ordered
+future stages: strict VHDR-only identity metadata, target-blind VHDR+EEG signal
+quality, isolated VMRK+MAT trial reconciliation, and aggregate closeout.
+
+Reader decision: prohibit MNE in the VHDR-only stage because the standard
+BrainVision reader attaches marker-derived annotations. Preserve the current
+Loop 19 extractor as valid historical engineering evidence, but make it
+ineligible for the future Loop 54/55 claim path because it co-loads annotations,
+MAT labels, and signal, excludes EOG-named channels, and writes plaintext
+labels. A future path must use a dependency-light one-file VHDR parser, a direct
+bounded EEG reader, all-channel preservation, and an isolated protected
+reconciler.
+
+Inference-unit decision: require at least 48 unique performed trials and treat
+the trial, not each keypress window, as the future unit of partitioning and
+paired uncertainty. Loop 54 creates no train, validation, or final split. Exact
+Loop 55 counts remain unavailable until the target-blind usable-trial count is
+known, then must freeze prospectively before target values or model operations.
+
+Resource and authorization decision: freeze 22 gates, 30 refusals, one thread
+and worker, at most 1 GiB peak RSS per future stage, and at most 32 MiB combined
+public generated output. Loop 53 must complete first. L54-A, L54-B, and L54-C
+each require a separate exact Tier C decision after a hash-bound implementation
+is pushed and remotely green. No current real-stage permission is granted.
+
+Scientific boundary: a future clean Loop 54 closeout may establish only the
+identity, quality, event reconciliation, geometry, reference, and recorded-
+confound ceiling of one S20 block. It cannot establish neural advantage,
+brain-specific origin, decoding accuracy, real-time behavior, portable or home
+hardware, or clinical utility.
+
+Evidence: `docs/LOOP_54_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop54_eeg_trial_geometry_research.v0.json`, and
+`tests/test_loop54_eeg_trial_geometry_research.py`.

@@ -95,7 +95,18 @@
 > See `docs/LOOP_48_STAGE_C_SYNTHETIC_RESULT.md` and
 > `registries/loop48_stage_c_synthetic_result.v0.json`. Protected Stage C work
 > is not preregistered or authorized; S21 cache operations, S24, S25, and claim
-> promotion remain closed. The workbook remains the last
+> promotion remain closed. Loop 53 is now separately preregistered at an exact
+> four-file, 96,090,264-byte S20 acquisition-only boundary with authorization
+> pending. Loop 54 planning research at `aec440a` then freezes a four-stage
+> future qualification firewall: VHDR only without MNE, target-blind VHDR+EEG
+> quality with all channels retained, isolated target-bearing VMRK+MAT trial
+> reconciliation, and aggregate closeout. It requires at least 48 unique
+> performed trials, treats the trial rather than each key window as the future
+> inference unit, and leaves exact Loop 55 splits for a later prospective
+> contract. Its 22 gates, 30 refusals, 1 GiB RSS ceiling, 32 MiB public-output
+> cap, and every real-stage execution flag are machine checked. No S20 payload,
+> local stat/hash, header, marker, signal, MAT, target, split, model, training,
+> inference, or score has opened. The workbook remains the last
 > visually reviewed Stage A snapshot; it
 > was not reopened because its prior full import reached 1.57 GiB peak RSS.
 

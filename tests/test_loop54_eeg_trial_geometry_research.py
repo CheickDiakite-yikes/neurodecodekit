@@ -7,6 +7,17 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = REPO_ROOT / "registries" / "loop54_eeg_trial_geometry_research.v0.json"
 RESEARCH_PATH = REPO_ROOT / "docs" / "LOOP_54_PRIMARY_SOURCE_RESEARCH.md"
 ROADMAP_PATH = REPO_ROOT / "registries" / "next_scientific_loops.v0.json"
+PUBLIC_STATUS_PATHS = (
+    REPO_ROOT / "AGENTS.md",
+    REPO_ROOT / "README.md",
+    REPO_ROOT / "START_HERE.md",
+    REPO_ROOT / "docs" / "BUILD_NOTES.md",
+    REPO_ROOT / "docs" / "CODEX_HANDOFF.md",
+    REPO_ROOT / "docs" / "DECISIONS.md",
+    REPO_ROOT / "docs" / "LOOPS_45_64_SCIENTIFIC_ROADMAP.md",
+    REPO_ROOT / "docs" / "NEXT_20_LOOPS_TRACKER.md",
+    REPO_ROOT / "prompts" / "CODEX_START_PROMPT.md",
+)
 
 
 def authorization_flags(value):
@@ -28,6 +39,9 @@ class Loop54EEGTrialGeometryResearchTests(unittest.TestCase):
         cls.registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
         cls.research = RESEARCH_PATH.read_text(encoding="utf-8")
         cls.roadmap = json.loads(ROADMAP_PATH.read_text(encoding="utf-8"))
+        cls.public_status = {
+            path: path.read_text(encoding="utf-8") for path in PUBLIC_STATUS_PATHS
+        }
 
     def test_identity_is_planning_only_and_real_stages_are_unauthorized(self):
         registry = self.registry
@@ -201,6 +215,15 @@ class Loop54EEGTrialGeometryResearchTests(unittest.TestCase):
         self.assertIn("loop54_eeg_trial_geometry_research.v0.json", loop54["build_deliverable"])
         self.assertIn("does not create a split", loop54["build_deliverable"])
         self.assertIn("separate exact Tier C", loop54["authorization_boundary"])
+
+    def test_public_status_surfaces_share_the_loop54_boundary(self):
+        for path, content in self.public_status.items():
+            with self.subTest(path=path.name):
+                self.assertIn("Loop 54", content)
+                self.assertIn("VHDR", content)
+                self.assertIn("VMRK", content)
+                self.assertIn("48", content)
+                self.assertIn("unauthoriz", content.lower())
 
 
 if __name__ == "__main__":
