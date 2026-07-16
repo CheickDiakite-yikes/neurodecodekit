@@ -3,7 +3,7 @@
   "schema_version": "0.1.0",
   "implementation_id": "loop48-stage-c-synthetic-temporal-representation-v0",
   "prepared_at": "2026-07-15",
-  "status": "implemented_locally_not_executed_remote_green_pending",
+  "status": "preflight_refused_zero_update_fix_pending_remote_green",
   "proof_posture": "synthetic_implementation_qualification_only_no_parameter_update_or_protected_operation",
   "research_milestone": {
     "commit": "9579be93340d86f87f1b8c8f4ad7f987ebd765f0",
@@ -28,7 +28,7 @@
     },
     "gate": {
       "path": "src/neurodecodekit/experiments/temporal_representation_gate.py",
-      "sha256": "6b6c2c5cb2aa6a93af62d214202291d3b4a61ca9dde84bb710d8235267b0d187"
+      "sha256": "a8ede5a1db2b0082c16612b35169a1f249c7e7b2ab8d532b0e5b1e496e49f064"
     },
     "cli": {
       "path": "src/neurodecodekit/cli.py",
@@ -36,7 +36,7 @@
     },
     "tests": {
       "path": "tests/test_loop48_stage_c_synthetic_implementation.py",
-      "sha256": "0a2bc0040ffb50e3b354b1a554ca237202e7cab15f185d8114e97fd6cf95416a"
+      "sha256": "159a8d763996976ffa554e03a44b4c04b9c76f5c1fce5fc9d394d75706bd0341"
     }
   },
   "implemented_interface": {
@@ -111,8 +111,8 @@
     "new_real_data_download_bytes": 0
   },
   "local_precommit_qualification": {
-    "focused_tests": 13,
-    "focused_tests_passed": 13,
+    "focused_tests": 14,
+    "focused_tests_passed": 14,
     "parameter_update_runs": 0,
     "optimizer_steps": 0,
     "real_data_reads": 0,
@@ -121,14 +121,14 @@
     "new_real_data_download_bytes": 0,
     "generated_persistent_artifact_bytes": 0,
     "temporary_artifacts_removed_by_test_context": true,
-    "dependency_light_tests": 910,
+    "dependency_light_tests": 911,
     "dependency_light_expected_skips": 156,
-    "dependency_light_internal_runtime_sec": 1.745,
-    "dependency_light_external_peak_rss_bytes": 121733120,
-    "optional_neuro_tests": 957,
+    "dependency_light_internal_runtime_sec": 1.755,
+    "dependency_light_external_peak_rss_bytes": 123158528,
+    "optional_neuro_tests": 958,
     "optional_neuro_expected_skips": 3,
-    "optional_neuro_internal_runtime_sec": 29.474,
-    "optional_neuro_external_peak_rss_bytes": 611270656,
+    "optional_neuro_internal_runtime_sec": 29.511,
+    "optional_neuro_external_peak_rss_bytes": 638550016,
     "ruff_passed": true,
     "compileall_passed": true,
     "all_registry_json_passed": true,
@@ -137,6 +137,30 @@
     "full_suite_pending": false,
     "implementation_push_pending": true,
     "implementation_remote_green_pending": true
+  },
+  "preflight_refusal": {
+    "implementation_commit": "59b30a3c64ad8aa55156a87599bdc495b66ea3bc",
+    "implementation_push_ci_run_id": 29467094688,
+    "implementation_pull_request_ci_run_id": 29467095865,
+    "stage": "research_registry_validation",
+    "error": "Stage C synthetic plan identity drifted",
+    "cause": "validator_read_seed_instead_of_frozen_fixture_seed_field",
+    "wall_runtime_sec": 0.12,
+    "maximum_resident_set_size_bytes": 21954560,
+    "fixture_rows_generated": 0,
+    "training_runs": 0,
+    "optimizer_steps": 0,
+    "model_inference_runs": 0,
+    "checkpoint_writes": 0,
+    "result_writes": 0,
+    "output_directory_created": false,
+    "real_data_reads": 0,
+    "real_cache_reads": 0,
+    "real_target_reads": 0,
+    "download_bytes": 0,
+    "calibration_started": false,
+    "calibration_consumed": false,
+    "rerun_before_corrected_commit_remote_green_authorized": false
   },
   "authorization": {
     "implementation_authorized_and_completed_now": true,

@@ -331,7 +331,10 @@ neural or decoding result. The implementation now lives in
 `docs/LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md` and
 `registries/loop48_stage_c_synthetic_implementation.v0.json`; it passed local
 qualification without a parameter update. Do not execute the four-fit
-calibration until its implementation commit is pushed and remotely green.
+calibration until its corrected implementation commit is pushed and remotely
+green. The first invocation refused before fixture generation because the
+validator read `seed` instead of `fixture_seed`; all model, update, output, and
+protected counters were zero, so the calibration did not start.
 
 Loop 27 is also review-only planning evidence. Do not turn the selected S25
 paths, official hashes, local MAT presence, 1 GiB cap, or roadmap status into a

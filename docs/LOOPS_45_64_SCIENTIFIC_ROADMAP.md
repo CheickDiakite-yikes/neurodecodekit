@@ -149,9 +149,11 @@ The exact candidate, ablation, deterministic fixture, numeric checkpoints,
 bounded aggregate gate, and inspect CLI are now implemented in
 `docs/LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md` and
 `registries/loop48_stage_c_synthetic_implementation.v0.json`. Local
-qualification passes 13 focused tests with zero parameter updates. The
-four-fit synthetic calibration remains unexecuted until the implementation
-commit is pushed and remotely green.
+qualification passes 14 focused tests with zero parameter updates. The
+first post-green invocation refused before fixture generation because the
+validator read `seed` instead of `fixture_seed`; all model, update, output, and
+protected counters remained zero. The calibration did not start. Its one-field
+correction must be pushed and remotely green before execution.
 
 The consumed Stage A verified hashes, reproduced aggregate blank/CER summaries,
 applied the ordered tree, and emitted one target-free aggregate report. Do not

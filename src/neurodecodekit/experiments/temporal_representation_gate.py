@@ -673,7 +673,7 @@ def _load_and_validate_research_registry(path: Path) -> dict[str, Any]:
     ):
         raise ValueError("Stage C research status is not the frozen pre-implementation state")
     plan = payload.get("synthetic_calibration_plan") or {}
-    if plan.get("seed") != 4850 or plan.get("partitions") != {
+    if plan.get("fixture_seed") != 4850 or plan.get("partitions") != {
         "train": 24,
         "selection": 8,
         "final": 8,

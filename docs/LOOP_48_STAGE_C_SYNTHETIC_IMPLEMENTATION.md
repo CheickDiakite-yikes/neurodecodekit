@@ -2,8 +2,9 @@
 
 Date: 2026-07-15
 
-Status: **Implemented and locally qualified without parameter updates; remote
-green implementation gate pending; synthetic calibration not executed**
+Status: **Implementation preflight refused before fixture generation or model
+work; one-field correction locally qualified; corrected commit remote green
+pending; synthetic calibration not started**
 
 Machine record:
 `registries/loop48_stage_c_synthetic_implementation.v0.json`
@@ -75,7 +76,7 @@ participant, target-file, S24, or S25 argument.
 
 ## Local Qualification
 
-Thirteen focused tests pass. They cover deterministic fixture replay, strict
+Fourteen focused tests pass. They cover deterministic fixture replay, strict
 split identity, zero signal and target padding, sampled-frame leakage refusal,
 exact model parameter counts, output lengths, zero right context, ablation
 blindness, numeric checkpoint replay, malformed checkpoint refusal, nonzero
@@ -86,11 +87,25 @@ The qualification performed zero parameter updates and wrote no persistent
 artifact. Temporary initialized-model checkpoints lived only inside test
 temporary directories. The four registered training runs have not occurred.
 
-The complete dependency-light suite passes 910 tests with 156 expected skips
-in 1.745 seconds internal time and 1.97 seconds wall time at 121,733,120-byte
-external peak RSS. The complete optional-neuro suite passes 957 tests with 3
-expected skips in 29.474 seconds internal time and 30.38 seconds wall time at
-611,270,656-byte external peak RSS. Both suites add exactly 13 tests over the
+After implementation commit `59b30a3` passed push CI `29467094688` and PR CI
+`29467095865`, the first command invocation refused during research-registry
+validation because the implementation looked for `seed` instead of the frozen
+`fixture_seed` field. The refusal took 0.12 seconds and 21,954,560 bytes peak
+RSS. It occurred before output-directory creation, fixture generation, model
+construction, inference, training, checkpoint writing, or result writing.
+Every protected and download counter remained zero. The calibration therefore
+did not start and is not consumed.
+
+The validator now reads the exact frozen `fixture_seed` field, and a regression
+test opens and validates the committed research registry. The corrected gate
+must be committed, pushed, and remotely green before the still-unspent
+calibration can begin. No immediate retry is permitted.
+
+The corrected dependency-light suite passes 911 tests with 156 expected skips
+in 1.755 seconds internal time and 2.00 seconds wall time at 123,158,528-byte
+external peak RSS. The corrected optional-neuro suite passes 958 tests with 3
+expected skips in 29.511 seconds internal time and 30.42 seconds wall time at
+638,550,016-byte external peak RSS. Both suites add exactly 14 tests over the
 897/944 green research baseline. Repository-wide Ruff, compileall, all registry
 JSON, both CLI help surfaces, and `git diff --check` pass.
 

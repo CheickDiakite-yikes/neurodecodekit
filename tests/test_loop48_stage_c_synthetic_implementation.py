@@ -20,7 +20,7 @@ class Loop48StageCSyntheticDependencyLightTests(unittest.TestCase):
         record = json.loads(IMPLEMENTATION_REGISTRY.read_text(encoding="utf-8"))
         self.assertEqual(
             record["status"],
-            "implemented_locally_not_executed_remote_green_pending",
+            "preflight_refused_zero_update_fix_pending_remote_green",
         )
         self.assertEqual(
             record["research_milestone"]["commit"], "9579be93340d86f87f1b8c8f4ad7f987ebd765f0"
@@ -33,6 +33,8 @@ class Loop48StageCSyntheticDependencyLightTests(unittest.TestCase):
         authorization = record["authorization"]
         self.assertTrue(authorization["implementation_authorized_and_completed_now"])
         self.assertFalse(authorization["synthetic_calibration_executed_now"])
+        self.assertFalse(record["preflight_refusal"]["calibration_started"])
+        self.assertEqual(record["preflight_refusal"]["optimizer_steps"], 0)
         for key, value in authorization.items():
             if (
                 key.endswith("authorized_now")
@@ -97,6 +99,19 @@ class Loop48StageCSyntheticDependencyLightTests(unittest.TestCase):
             _validate_caps(StageCSyntheticCaps(max_generated_artifact_bytes=16 * 1024**2 + 1))
         with self.assertRaisesRegex(ValueError, "one thread"):
             _validate_caps(StageCSyntheticCaps(cpu_threads=2))
+
+    def test_gate_accepts_the_exact_frozen_research_registry(self):
+        from neurodecodekit.experiments.temporal_representation_gate import (
+            _load_and_validate_research_registry,
+        )
+
+        path = REPO_ROOT / "registries/loop48_stage_c_representation_repair_research.v0.json"
+        payload = _load_and_validate_research_registry(path)
+        self.assertEqual(payload["synthetic_calibration_plan"]["fixture_seed"], 4850)
+        self.assertEqual(
+            payload["synthetic_calibration_plan"]["partitions"],
+            {"train": 24, "selection": 8, "final": 8},
+        )
 
     def test_implementation_sources_have_no_protected_reader_import(self):
         paths = (

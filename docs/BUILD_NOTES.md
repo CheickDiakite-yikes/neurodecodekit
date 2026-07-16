@@ -4334,3 +4334,21 @@ calibration or open real signal or targets, so neural advantage, sensor-signal
 dependence, brain-specific origin, decoding improvement, generalization,
 real-time performance, and portable or home EEG performance remain
 unestablished.
+
+## 2026-07-15 - Loop 48 Stage C Preflight Correction
+
+- After implementation commit `59b30a3` passed push CI `29467094688` and PR CI
+  `29467095865`, the first command invocation refused during research-registry
+  validation because it read `seed` instead of the frozen `fixture_seed` field.
+- The refusal occurred in 0.12 seconds at 21,954,560-byte peak RSS before
+  output-directory creation, fixture generation, model construction, inference,
+  training, checkpoint writing, or result writing. Fixture rows, model runs,
+  optimizer steps, outputs, protected reads, and downloads were all zero. The
+  calibration did not start and remains unspent.
+- Corrected the one field and added a regression test against the exact
+  committed research registry. Fourteen focused tests pass. The corrected
+  dependency-light suite passes 911 tests with 156 expected skips in 1.755
+  seconds at 123,158,528-byte peak RSS; the optional-neuro suite passes 958
+  tests with 3 expected skips in 29.511 seconds at 638,550,016-byte peak RSS.
+- The correction must be committed, pushed, and pass fresh push and PR CI
+  before the one synthetic calibration can begin. No immediate retry occurred.

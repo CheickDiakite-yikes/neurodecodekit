@@ -153,7 +153,7 @@ class Loop48FailureLocalizationResultTests(unittest.TestCase):
         ):
             self.assertIn(phrase, self.closeout)
         loop48 = next(row for row in self.roadmap["loops"] if row["loop_id"] == 48)
-        self.assertEqual(loop48["status"], "Complete A/B; Stage C Implemented Pending Green")
+        self.assertEqual(loop48["status"], "Complete A/B; Stage C Preflight Fix Pending Green")
         self.assertFalse(loop48["execution_authorized"])
         self.assertIn("consumed", loop48["authorization_boundary"])
         self.assertIn("no rerun", loop48["authorization_boundary"])

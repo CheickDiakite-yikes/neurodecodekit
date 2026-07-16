@@ -114,10 +114,14 @@ one CPU thread, four total training runs, at most 1,800 steps, 600 seconds,
 prove causality, length, padding, replay, and motif-learning mechanics; it
 cannot prove that S21 contains usable neural information or reopen S24/S25.
 The exact models, fixture, safe checkpoints, aggregate gate, and two CLI
-surfaces are now implemented and pass 13 focused tests without a parameter
+surfaces are now implemented and pass 14 focused tests without a parameter
 update. The calibration itself has not run; it remains behind the remotely
 green implementation boundary in
 `docs/LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md`.
+The first post-green invocation refused during registry preflight because the
+validator read `seed` instead of the frozen `fixture_seed` field. It generated
+zero rows, model runs, optimizer steps, or outputs, so the calibration did not
+start. The one-field correction and regression test now await fresh remote CI.
 
 Loop 49 planning research now selects S24 session 2 block 2 as the preferred
 permanently development-only participant from pinned public metadata. The exact

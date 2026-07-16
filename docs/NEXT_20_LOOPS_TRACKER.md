@@ -91,11 +91,13 @@
 > `registries/loop48_stage_c_representation_repair_research.v0.json` are the
 > current Stage C research sources of truth. The exact candidate, ablation,
 > fixture, bounded gate, safe checkpoints, and two CLI commands are now
-> implemented and locally pass 13 focused tests with zero parameter updates;
+> implemented and locally pass 14 focused tests with zero parameter updates;
 > see `docs/LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md` and
 > `registries/loop48_stage_c_synthetic_implementation.v0.json`. The four-fit
-> synthetic calibration remains unexecuted until the implementation milestone
-> is remotely green. The workbook remains the last
+> post-green invocation refused before fixture generation because the validator
+> read `seed` instead of `fixture_seed`; all model, update, output, and protected
+> counters remained zero. The calibration did not start. Its one-field
+> correction must be remotely green before execution. The workbook remains the last
 > visually reviewed Stage A snapshot; it
 > was not reopened because its prior full import reached 1.57 GiB peak RSS.
 

@@ -1343,7 +1343,11 @@ decision.
 Implementation is now prepared in
 `docs/LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md` and
 `registries/loop48_stage_c_synthetic_implementation.v0.json`. The exact models,
-fixture, bounded gate, numeric checkpoints, and two CLI commands pass 13
+fixture, bounded gate, numeric checkpoints, and two CLI commands pass 14
 focused tests with zero parameter updates. Do not run the four-fit calibration
 until this implementation commit passes both push and PR CI; then execute it
-once in a Git-ignored directory and close it without a restart.
+once in a Git-ignored directory and close it without a restart. The first
+post-green invocation refused before fixture generation because the validator
+read `seed` instead of `fixture_seed`; it performed zero model runs or updates
+and wrote no output. The correction now needs fresh push and PR CI before the
+still-unspent calibration may begin.

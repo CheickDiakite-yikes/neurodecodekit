@@ -3108,3 +3108,27 @@ Evidence: `docs/LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md`,
 `src/neurodecodekit/training/temporal_motif_sentences.py`,
 `src/neurodecodekit/experiments/temporal_representation_gate.py`, and
 `tests/test_loop48_stage_c_synthetic_implementation.py`.
+
+## 0092 - Fail Closed Before Spending The Stage C Calibration
+
+Decision: classify the first post-green Stage C command refusal as a static
+implementation preflight failure, not a calibration execution or scientific
+outcome. The validator looked for `seed`; the frozen registry names the field
+`fixture_seed`. The command stopped in 0.12 seconds at 21,954,560-byte peak RSS
+before output-directory creation, fixture generation, model construction,
+inference, training, checkpoint writing, or result writing.
+
+Counter decision: record zero fixture rows, model runs, optimizer steps,
+checkpoints, results, protected reads, cache reads, target reads, and download
+bytes. The calibration did not start and remains unspent. Do not retry from the
+already green implementation commit.
+
+Correction decision: change only the validator field name, add a regression
+test that validates the exact committed research registry, recompute source
+hashes, and require a new commit plus fresh push and PR CI before execution.
+The corrected baseline is 14 focused tests, 911 dependency-light tests with 156
+expected skips, and 958 optional-neuro tests with 3 expected skips.
+
+Evidence: `docs/LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md`,
+`registries/loop48_stage_c_synthetic_implementation.v0.json`, and
+`tests/test_loop48_stage_c_synthetic_implementation.py`.

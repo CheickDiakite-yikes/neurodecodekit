@@ -45,8 +45,11 @@ ablation on the same 25 Hz grid. Research commit `9579be9` is remotely green,
 and the exact implementation is recorded in
 `docs/LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md` and
 `registries/loop48_stage_c_synthetic_implementation.v0.json`. It has not run a
-parameter update. After the implementation milestone is remotely green, Tier
-A permits exactly one bounded synthetic calibration with four
+parameter update. The first post-green invocation then refused before fixture
+generation because the validator read `seed` instead of `fixture_seed`; every
+model, update, output, and protected counter stayed zero. The correction must
+be pushed and remotely green before Tier A permits the still-unspent bounded
+synthetic calibration with four
 training runs, at most 1,800 steps, 600 seconds, 1 GiB RSS, 16 MiB generated,
 one thread, one worker, and zero real-data downloads. This can prove synthetic
 mechanics only. Do not stat/hash/read the S21 cache, perform another real-data

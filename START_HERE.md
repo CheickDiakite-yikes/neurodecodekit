@@ -65,8 +65,10 @@
    `docs/LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md` and
    `registries/loop48_stage_c_synthetic_implementation.v0.json` for the exact
    models, fixture, gate, CLI, zero-update qualification, and source hashes.
-   The four-fit calibration remains unexecuted until that implementation
-   milestone is pushed and remotely green.
+   The first post-green invocation refused before fixture generation because
+   the validator read `seed` instead of `fixture_seed`; all model, update,
+   output, and protected counters stayed zero. The four-fit calibration did not
+   start. Its one-field correction must be pushed and remotely green first.
 8. Read `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` for the selected S25
    metadata candidate and every blocker that still prevents preregistration,
    download, signal/target access, or transfer evaluation.
