@@ -3031,3 +3031,139 @@ Evidence: `docs/LOOP_48_STAGE_B_RESULT.md`,
 `registries/loop48_stage_b_prediction_freeze.v0.json`,
 `registries/loop48_train_only_discrimination_result.v0.json`, and
 `tests/test_loop48_stage_b_result.py`.
+
+## 0090 - Test Temporal Context Before Reopening Protected Evidence
+
+Decision: select `R1`, temporal-context starvation, as the next falsifiable
+representation-repair hypothesis after Loop 48 Stage B. The failed
+`TinyCausalSentenceCTC-v0` mixed sensors pointwise and exposed only 20 ms of
+learned left context. Compare one 7,692-parameter causal temporal candidate
+with 470 ms left context against one 7,568-parameter zero-context ablation on
+the same 25 Hz output grid. The 124-parameter gap is 1.612070% of the candidate,
+so a future difference can test registered temporal context more cleanly than
+an unmatched capacity increase.
+
+Mechanics decision: implement and calibrate on a synthetic ordered-motif
+fixture before preparing any protected contract. Freeze seed 4850, 40 rows, a
+24/8/8 train/selection/final split, three candidate optimizer recipes, one
+ablation fit, one final opening, at most four training runs, 1,800 optimizer
+steps, 600 seconds, 1 GiB peak RSS, 16 MiB generated output, one thread, one
+worker, and zero real-data downloads. Require deterministic checkpoint replay,
+zero right context, exact length/timestamp/padding behavior, resume equivalence,
+and a candidate-versus-ablation final CER margin.
+
+Scientific boundary: synthetic success can establish only that the registered
+causal interface can learn ordered temporal motifs under its exact mechanics.
+It cannot establish that S21 contains usable neural information, that longer
+context improves real decoding, or that S24/S25 should open. Primary-source
+architecture and physiology findings provide rationale, not transferred
+accuracy.
+
+Authorization decision: the Research Autonomy Charter allows implementation
+after this research milestone is pushed and remotely green, and one synthetic
+calibration after the implementation milestone is pushed and remotely green.
+No S21 cache stat, hash, member, target, 44-row reuse, 11-row reopen,
+validation, source test, session 2, S24, S25, real model operation, download,
+device, hardware, or claim upgrade is authorized. Any protected Stage C
+diagnostic remains Tier C and needs its own exact preregistration and decision.
+
+Evidence: `docs/LOOP_48_STAGE_C_REPRESENTATION_REPAIR_RESEARCH.md`,
+`registries/loop48_stage_c_representation_repair_research.v0.json`, and
+`tests/test_loop48_stage_c_representation_repair_research.py`.
+
+## 0091 - Implement Stage C Without Spending The Synthetic Gate
+
+Decision: implement the exact Stage C candidate, ablation, deterministic
+fixture, bounded gate, safe numeric checkpoints, and inspect CLI after research
+commit `9579be9` passed push CI `29466218879` and PR CI `29466225955`. Keep
+NumPy and Torch optional and imported only inside the functions that need them.
+
+Mechanics decision: preserve all frozen architecture and fixture identity. The
+candidate has 7,692 parameters, 470 ms left context, zero right context, and a
+25 Hz output grid. The ablation has 7,568 parameters, no learned temporal
+history, zero right context, and the same grid. The seed-4850 fixture has 40
+unique rows, 102 channels, 1,699,920 array bytes, strict 24/8/8 identities,
+zero signal/target padding, and a stable SHA-256. Every source frame visible to
+the ablation is zero; motif identity lives in the ordered past.
+
+Qualification decision: test shape, parameter, causality, padding, split,
+hash, checkpoint, cap, CLI, and forbidden-import behavior without a parameter
+update. Accept 13 focused tests, 910 dependency-light tests with 156 expected
+skips, and 957 optional-neuro tests with 3 expected skips. No persistent
+generated artifact, real read, download, or model training occurred.
+
+Execution decision: this implementation does not spend the registered four-fit
+synthetic gate. The one calibration may run only after the implementation
+commit passes both push and PR CI. It must use one thread, one worker, at most
+1,800 optimizer steps, 600 seconds, 1 GiB RSS, 16 MiB generated output, at
+least 20 GiB free disk, one final opening, and no restart.
+
+Scientific boundary: an eventual synthetic pass can establish only mechanics.
+No protected Stage C contract, S21 cache operation, S24/S25 operation, real
+model run, or scientific claim is opened by implementation.
+
+Evidence: `docs/LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md`,
+`registries/loop48_stage_c_synthetic_implementation.v0.json`,
+`src/neurodecodekit/models/tiny_causal_temporal_ctc.py`,
+`src/neurodecodekit/training/temporal_motif_sentences.py`,
+`src/neurodecodekit/experiments/temporal_representation_gate.py`, and
+`tests/test_loop48_stage_c_synthetic_implementation.py`.
+
+## 0092 - Fail Closed Before Spending The Stage C Calibration
+
+Decision: classify the first post-green Stage C command refusal as a static
+implementation preflight failure, not a calibration execution or scientific
+outcome. The validator looked for `seed`; the frozen registry names the field
+`fixture_seed`. The command stopped in 0.12 seconds at 21,954,560-byte peak RSS
+before output-directory creation, fixture generation, model construction,
+inference, training, checkpoint writing, or result writing.
+
+Counter decision: record zero fixture rows, model runs, optimizer steps,
+checkpoints, results, protected reads, cache reads, target reads, and download
+bytes. The calibration did not start and remains unspent. Do not retry from the
+already green implementation commit.
+
+Correction decision: change only the validator field name, add a regression
+test that validates the exact committed research registry, recompute source
+hashes, and require a new commit plus fresh push and PR CI before execution.
+The corrected baseline is 14 focused tests, 911 dependency-light tests with 156
+expected skips, and 958 optional-neuro tests with 3 expected skips.
+
+Evidence: `docs/LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md`,
+`registries/loop48_stage_c_synthetic_implementation.v0.json`, and
+`tests/test_loop48_stage_c_synthetic_implementation.py`.
+
+## 0093 - Consume And Park The Stage C Synthetic Gate
+
+Decision: accept the one Stage C synthetic execution only after correction
+commit `2836ecc` passed push CI `29467415680` and PR CI `29467416894`. Record
+the run as consumed and prohibit rerun, final-outcome tuning, threshold changes,
+recipe substitution, added steps, fixture changes, or protected escalation from
+this result.
+
+Outcome decision: select `L48C-SYN-OPT0` by the frozen selection rule. The
+7,692-parameter temporal candidate reached final macro CER `0.433333` and
+`1/8` exact sequences; the 7,568-parameter zero-context ablation reached CER
+`1.000000` and `0/8` exact. The `0.566667` candidate-ablation CER improvement
+passed, as did deterministic checkpoint replay, future-mutation,
+prefix-resume, causality, padding, and every resource check. The candidate
+failed the absolute CER `<=0.10` and exact-sequence `>=7/8` gates, so the
+aggregate gate failed.
+
+Resource decision: accept four training runs, 1,680 optimizer steps, eight
+model-inference runs, 7.829308 seconds internal runtime, 310,509,568-byte
+internal peak RSS, and 83,132 generated bytes as within the frozen caps. Raw-
+data, real-cache, real-signal, real-target, download, S24/S25, stream, device,
+hardware, and RW3 counters remained zero. The producer was causal with zero
+right context; end-to-end latency was not measured.
+
+Scientific boundary: the candidate-ablation difference establishes only that
+the registered temporal model used ordered history on this purpose-built
+synthetic fixture. It does not establish usable neural information, neural
+advantage, sensor-signal dependence, brain-specific origin, real decoding
+improvement, generalization, real-time performance, or portable/home EEG
+performance. It does not justify opening S21, acquiring S24, or opening S25.
+
+Evidence: `docs/LOOP_48_STAGE_C_SYNTHETIC_RESULT.md`,
+`registries/loop48_stage_c_synthetic_result.v0.json`, and
+`tests/test_loop48_stage_c_synthetic_result.py`.

@@ -318,7 +318,21 @@ it; `H1/H2/H5/H6` remain unresolved. Freeze commit `00215b1` passed both CI
 workflows before one 11-target score. Applied route `L50-R05` parks S24
 acquisition for this model family. Do not rerun Stage B, tune from the check
 rows, acquire S24, substitute a participant, open S25, or implement a
-post-outcome repair from a broad continuation request.
+protected post-outcome repair from a broad continuation request. Read
+`docs/LOOP_48_STAGE_C_REPRESENTATION_REPAIR_RESEARCH.md` and
+`registries/loop48_stage_c_representation_repair_research.v0.json` for the
+frozen `R1` temporal-context hypothesis, then read
+`docs/LOOP_48_STAGE_C_SYNTHETIC_RESULT.md` and
+`registries/loop48_stage_c_synthetic_result.v0.json`. The one synthetic gate is
+consumed: the 7,692-parameter, 470 ms causal candidate reached CER `0.433333`
+and `1/8` exact versus ablation CER `1.000000`. Its `0.566667` relative CER
+improvement and mechanics checks passed, but both absolute gates failed. Stage
+C is parked with no rerun or post-final tuning. Do not stat, hash, or read the
+S21 cache; do not use real targets, S24, or S25; and do not treat the synthetic
+contrast as a neural or decoding result. The implementation lives in
+`docs/LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md` and
+`registries/loop48_stage_c_synthetic_implementation.v0.json`. No protected
+Stage C contract or further real-data/model operation is open.
 
 Loop 27 is also review-only planning evidence. Do not turn the selected S25
 paths, official hashes, local MAT presence, 1 GiB cap, or roadmap status into a

@@ -1,0 +1,172 @@
+{
+  "schema_name": "neurodecodekit.loop48_stage_c_synthetic_result",
+  "schema_version": "0.1.0",
+  "result_id": "loop48-stage-c-synthetic-temporal-representation-result-v0",
+  "executed_at": "2026-07-15",
+  "status": "consumed_parked_gate_failed_no_rerun",
+  "proof_posture": "synthetic_temporal_representation_mechanics_only",
+  "identity": {
+    "research_registry_path": "registries/loop48_stage_c_representation_repair_research.v0.json",
+    "research_registry_sha256": "c12ec28c03fb742a9d24cfb76dff54776e40c77c52096f810166c52030b5435a",
+    "implementation_registry_path": "registries/loop48_stage_c_synthetic_implementation.v0.json",
+    "implementation_commit": "59b30a3c64ad8aa55156a87599bdc495b66ea3bc",
+    "implementation_push_ci_run_id": 29467094688,
+    "implementation_pull_request_ci_run_id": 29467095865,
+    "preflight_correction_commit": "2836ecceafed3d35c6f255714ad1c7a9b71e2e25",
+    "preflight_correction_push_ci_run_id": 29467415680,
+    "preflight_correction_pull_request_ci_run_id": 29467416894,
+    "all_remote_workflows_green_before_execution": true,
+    "source_result_json_sha256": "1d35b38150a09add7839fe61dd667336f18e19d6a4ef4bea7352aa88468c512a",
+    "source_result_json_bytes": 13138,
+    "fixture_sha256": "0322b5d2a89c5b0bd95cd8829e0a5d463fb1c8a9da3a7aad82f6e00fd1e95537"
+  },
+  "execution": {
+    "one_shot_execution_count": 1,
+    "rerun_count": 0,
+    "cpu_threads": 1,
+    "workers": 1,
+    "training_runs": 4,
+    "optimizer_steps": 1680,
+    "model_inference_runs": 8,
+    "checkpoint_writes": 2,
+    "checkpoint_reads": 1,
+    "selected_recipe_id": "L48C-SYN-OPT0",
+    "synthetic_fixture_rows_generated": 40,
+    "synthetic_train_rows_used": 24,
+    "synthetic_selection_rows_used": 8,
+    "synthetic_final_rows_opened_once": 8,
+    "plaintext_targets_or_predictions_emitted": false
+  },
+  "models": {
+    "candidate": {
+      "model_id": "TinyCausalTemporalCTC-v0",
+      "parameter_count": 7692,
+      "required_left_context_frames": 47,
+      "required_left_context_ms": 470,
+      "right_context_frames": 0,
+      "output_sampling_rate_hz": 25,
+      "checkpoint_bytes": 34594,
+      "checkpoint_sha256": "70aebbb8cf2b99e25a4558480f7b22b34166f754339c5ffbf43406b057d1eb29"
+    },
+    "ablation": {
+      "model_id": "TinyCausalTemporalAblation-v0",
+      "parameter_count": 7568,
+      "required_left_context_frames": 0,
+      "right_context_frames": 0,
+      "output_sampling_rate_hz": 25,
+      "checkpoint_bytes": 33988,
+      "checkpoint_sha256": "0025f7fa16e1dd3838807401f0d698f135ab0653f9eb785a9f737dce04b4486f"
+    }
+  },
+  "selection": {
+    "L48C-SYN-OPT0_macro_cer": 0.5104166666666666,
+    "L48C-SYN-OPT1_macro_cer": 1.0,
+    "L48C-SYN-OPT2_macro_cer": 0.5333333333333333,
+    "selected_recipe_id": "L48C-SYN-OPT0",
+    "selection_rule_applied_unchanged": true
+  },
+  "final_metrics": {
+    "rows": 8,
+    "candidate_macro_cer": 0.43333333333333335,
+    "candidate_exact_sequences": 1,
+    "candidate_exact_fraction": 0.125,
+    "ablation_macro_cer": 1.0,
+    "ablation_exact_sequences": 0,
+    "ablation_exact_fraction": 0.0,
+    "candidate_minus_ablation_cer_improvement": 0.5666666666666667,
+    "candidate_prediction_sha256": "ae5a6f4030efbdb281ffd92d62aa846cdac3fb12ddbd105f4bf3025f6ad5d473",
+    "ablation_prediction_sha256": "5c9ff34e9e1abd50c456f61c699f25107f9e7a42201070117e1c8ad964485031"
+  },
+  "gates": {
+    "candidate_final_cer_max": 0.1,
+    "candidate_final_cer_passed": false,
+    "candidate_final_exact_sequences_min": 7,
+    "candidate_final_exact_sequences_passed": false,
+    "candidate_minus_ablation_cer_improvement_min": 0.1,
+    "candidate_minus_ablation_passed": true,
+    "deterministic_checkpoint_replay_passed": true,
+    "future_mutation_controls_passed": true,
+    "prefix_resume_equivalence_passed": true,
+    "aggregate_gate_passed": false
+  },
+  "resources": {
+    "fixture_input_array_bytes": 1699920,
+    "generated_artifact_bytes": 83132,
+    "generated_artifact_cap_bytes": 16777216,
+    "internal_runtime_sec": 7.829308,
+    "external_wall_runtime_sec": 8.31,
+    "internal_peak_rss_bytes": 310509568,
+    "external_peak_rss_bytes": 320405504,
+    "peak_rss_cap_bytes": 1073741824,
+    "free_disk_before_bytes": 41574039552,
+    "minimum_free_disk_bytes": 21474836480,
+    "all_resource_caps_passed": true
+  },
+  "access_counters": {
+    "raw_data_reads": 0,
+    "real_cache_stat_reads": 0,
+    "real_cache_hash_passes": 0,
+    "real_cache_member_reads": 0,
+    "real_signal_rows_read": 0,
+    "real_target_rows_read": 0,
+    "downloads": 0,
+    "download_bytes": 0,
+    "s24_or_s25_operations": 0,
+    "stream_device_hardware_or_rw3_operations": 0
+  },
+  "producer": {
+    "causal": true,
+    "right_context_frames": 0,
+    "end_to_end_latency_measured": false,
+    "upstream_real_cache_causality": "not_applicable_synthetic_fixture"
+  },
+  "closeout_verification": {
+    "focused_tests": 64,
+    "focused_tests_passed": 64,
+    "dependency_light_tests": 919,
+    "dependency_light_expected_skips": 156,
+    "dependency_light_internal_runtime_sec": 1.439,
+    "dependency_light_external_wall_runtime_sec": 1.70,
+    "dependency_light_external_peak_rss_bytes": 123912192,
+    "optional_neuro_tests": 966,
+    "optional_neuro_expected_skips": 3,
+    "optional_neuro_internal_runtime_sec": 29.839,
+    "optional_neuro_external_wall_runtime_sec": 30.87,
+    "optional_neuro_external_peak_rss_bytes": 621412352,
+    "tests_added_over_corrected_preexecution_baseline": 8,
+    "ruff_passed": true,
+    "compileall_passed": true,
+    "all_registry_json_passed": true,
+    "cli_help_surfaces_passed": 3,
+    "source_result_inspection_passed": true,
+    "git_diff_check_passed": true,
+    "scientific_execution_rerun_during_closeout": false
+  },
+  "authorization": {
+    "synthetic_execution_was_authorized_under_research_autonomy_charter": true,
+    "synthetic_execution_consumed": true,
+    "synthetic_rerun_authorized_now": false,
+    "protected_stage_c_contract_exists_now": false,
+    "protected_stage_c_execution_authorized_now": false,
+    "s21_cache_or_target_operation_authorized_now": false,
+    "s24_or_s25_operation_authorized_now": false,
+    "real_model_operation_authorized_now": false,
+    "scientific_claim_upgrade_authorized_now": false
+  },
+  "warnings": [
+    "synthetic_fixture_only",
+    "synthetic_labels_define_motifs_and_are_not_real_neural_targets",
+    "learned_stride4_features_are_not_anti_aliased_waveform_resampling",
+    "no_real_signal_target_or_cache_was_opened",
+    "synthetic_success_does_not_predict_real_data_benefit",
+    "sensor_signal_dependence_and_brain_specific_origin_remain_unavailable",
+    "end_to_end_latency_was_not_measured",
+    "absolute_synthetic_gate_failed_no_rerun_or_tuning"
+  ],
+  "disposition": {
+    "hypothesis_result": "R1 temporal context improved this purpose-built synthetic fixture relative to the zero-context ablation, but the candidate failed the frozen absolute CER and exact-sequence gates.",
+    "next_action": "park_loop48_stage_c_without_rerun_or_protected_escalation",
+    "engineering_capability_added": "The registered causal temporal candidate, zero-context ablation, synthetic selection, checkpoint replay, causality, padding, resource, and no-leakage gates executed once under a bounded interface.",
+    "scientific_claim_not_established": "No real signal or target was opened; neural advantage, sensor-signal dependence, brain-specific origin, real decoding improvement, generalization, real-time performance, and portable or home EEG performance remain unestablished."
+  }
+}

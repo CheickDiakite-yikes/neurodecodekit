@@ -200,7 +200,7 @@ class Loop48StageBResultTests(unittest.TestCase):
         ):
             self.assertIn(phrase, normalized_closeout)
         loop48 = next(row for row in self.roadmap["loops"] if row["loop_id"] == 48)
-        self.assertEqual(loop48["status"], "Complete; Stage A F5 And Stage B H4 Diagnostic")
+        self.assertEqual(loop48["status"], "Complete A/B; Stage C Consumed and Parked")
         self.assertFalse(loop48["execution_authorized"])
         self.assertIn("L50-R05", loop48["kill_or_park_rule"])
         self.assertIn("park S24 acquisition", loop48["kill_or_park_rule"])

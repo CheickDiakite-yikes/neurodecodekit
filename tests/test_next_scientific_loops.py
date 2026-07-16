@@ -80,7 +80,7 @@ class NextScientificLoopsTests(unittest.TestCase):
                 45: "Complete",
                 46: "Parked; Registered Gate Failed",
                 47: "Parked; Shared Attribution Gate Failed",
-                48: "Complete; Stage A F5 And Stage B H4 Diagnostic",
+                48: "Complete A/B; Stage C Consumed and Parked",
             }.get(row["loop_id"], "Not Started")
             self.assertEqual(row["status"], expected_status)
             self.assertTrue(row["controls"])
@@ -118,6 +118,13 @@ class NextScientificLoopsTests(unittest.TestCase):
             "loop48_train_only_discrimination_result.v0.json", loop48["build_deliverable"]
         )
         self.assertIn("H4 stable nonseparability", loop48["build_deliverable"])
+        self.assertIn("R1 temporal-context-starvation", loop48["build_deliverable"])
+        self.assertIn("7,692-parameter", loop48["build_deliverable"])
+        self.assertIn("7,568-parameter", loop48["build_deliverable"])
+        self.assertIn("loop48_stage_c_synthetic_implementation.v0.json", loop48["build_deliverable"])
+        self.assertIn("zero-update local qualification", loop48["build_deliverable"])
+        self.assertIn("candidate reached final CER 0.433333", loop48["build_deliverable"])
+        self.assertIn("Stage C is consumed and parked", loop48["authorization_boundary"])
         self.assertIn("44 source-train", loop48["data_scope"])
         self.assertIn("11 check targets once", loop48["data_scope"])
         self.assertIn("190.140486", loop48["future_resource_cap"])
@@ -126,6 +133,10 @@ class NextScientificLoopsTests(unittest.TestCase):
         self.assertIn("consumed", loop48["authorization_boundary"])
         self.assertIn("unable to inherit Stage A authorization", loop48["authorization_boundary"])
         self.assertIn("L50-R05", loop48["kill_or_park_rule"])
+        self.assertIn("Implementation commit 59b30a3", loop48["authorization_boundary"])
+        self.assertIn("9579be9", loop48["authorization_boundary"])
+        self.assertIn("59b30a3", loop48["authorization_boundary"])
+        self.assertIn("No S21 cache stat/hash/member/target read", loop48["authorization_boundary"])
         self.assertFalse(loop48["execution_authorized"])
 
     def test_s25_is_final_only_with_zero_fit_and_strict_gate(self):

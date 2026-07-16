@@ -4254,3 +4254,146 @@ freeze.
 Scientific claim not established: the run did not show neural advantage,
 brain-specific decoding, independent generalization, real-time performance, or
 portable/home EEG performance.
+
+## 2026-07-15 - Loop 48 Stage C Temporal-Representation Repair Research
+
+- Audited the failed `TinyCausalSentenceCTC-v0` architecture against the
+  consumed Stage B aggregate result and the existing Loop 10 CTC geometry
+  report without opening any protected cache, target, checkpoint, private
+  prediction, S24 path, or S25 path. The failed candidate has only 20 ms of
+  learned left context; raw quality and retained neural information remain
+  unavailable.
+- Added primary-source-informed Stage C research and a strict machine boundary.
+  The selected `R1` hypothesis compares one 7,692-parameter causal candidate
+  with 470 ms left context against one 7,568-parameter zero-context ablation on
+  the same 25 Hz output grid. The 124-parameter gap is 1.612070% of the
+  candidate. No model was implemented or run in this milestone.
+- Froze a Tier A synthetic-only calibration path before implementation results:
+  seed 4850, 40 rows, a 24/8/8 split, three candidate recipes, one ablation fit,
+  four total parameter-update runs, at most 1,800 optimizer steps, 600 seconds,
+  1 GiB peak RSS, 16 MiB generated output, one CPU thread, one worker, and zero
+  real-data downloads. A protected diagnostic remains unpreregistered and
+  unauthorized.
+- Updated the README, start-here guide, agent boundary, Markdown tracker,
+  machine roadmap, scientific roadmap, handoff, decision journal, and start
+  prompt. The 117,187-byte workbook remains the last reviewed Stage A visual
+  snapshot because its prior full import reached 1.57 GiB RSS; the adjacent
+  user-owned inspection sidecar was not read, modified, staged, or committed.
+- Focused Stage C/roadmap/legacy Loop 48 acceptance passes 52 tests in 0.018
+  seconds. The complete dependency-light suite passes 897 tests with 149
+  expected skips in 1.310 seconds internal time and 1.56 seconds wall time at
+  126,533,632-byte external maximum RSS. The complete optional-neuro suite
+  passes 944 tests with 3 expected skips in 29.221 seconds internal time; its
+  observed in-suite peak RSS was 598,966,272 bytes. Both suites add exactly ten
+  tests over the 887/934 Stage B baseline without losing a prior test.
+
+Engineering capability added: NeuroDecodeKit now has an exact, parameter-
+controlled causal temporal-representation hypothesis and a bounded synthetic
+calibration decision surface ready for implementation.
+
+Scientific claim not established: no model was implemented or run and no real
+signal or target was opened, so neural advantage, sensor-signal dependence,
+brain-specific origin, decoding improvement, generalization, real-time
+performance, and portable or home EEG performance remain unestablished.
+
+## 2026-07-15 - Loop 48 Stage C Synthetic Implementation
+
+- Implemented the exact 7,692-parameter causal candidate and 7,568-parameter
+  zero-context ablation with fixed 100-to-25 Hz geometry, numeric-only NPZ
+  checkpoints, strict payload hashes, and optional NumPy/Torch imports.
+- Added the exact seed-4850 synthetic fixture: 40 unique 102-channel rows in a
+  24/8/8 split, 3,996 valid source samples, 999 valid output steps, 1,699,920
+  array bytes, exact zero padding, and no file, cache, participant, or real-
+  target input. Its SHA-256 is
+  `0322b5d2a89c5b0bd95cd8829e0a5d463fb1c8a9da3a7aad82f6e00fd1e95537`.
+- Added one refusal-first aggregate gate and two CLI surfaces. The gate freezes
+  all three candidate recipes, one selected-recipe ablation, one final opening,
+  bitwise checkpoint replay, eight future-mutation rows, eight prefix-resume
+  rows, one thread, one worker, 1,800 steps, 600 seconds, 1 GiB RSS, 16 MiB
+  generated output, and a 20 GiB free-disk floor.
+- Thirteen focused tests pass in 1.331 seconds with zero parameter updates. The
+  complete dependency-light suite passes 910 tests with 156 expected skips in
+  1.745 seconds internal time and 1.97 seconds wall time at 121,733,120-byte
+  peak RSS. The optional-neuro suite passes 957 tests with 3 expected skips in
+  29.474 seconds internal time and 30.38 seconds wall time at 611,270,656-byte
+  peak RSS. Both add exactly 13 tests over the 897/944 research baseline.
+- Repository-wide Ruff, compileall, every registry JSON, both new CLI help
+  surfaces, and `git diff --check` pass. The user-owned tracker inspection
+  sidecar remains unread, unmodified, unstaged, and uncommitted.
+- No synthetic training run, optimizer step, persistent generated artifact,
+  real-data read, cache operation, download, S24/S25 operation, stream, device,
+  hardware operation, or claim upgrade occurred. The four-fit calibration
+  remains closed until this implementation commit is pushed and remotely green.
+
+Engineering capability added: NeuroDecodeKit now implements the exact Stage C
+causal temporal candidate, parameter-matched ablation, deterministic fixture,
+bounded aggregate gate, safe checkpoints, and inspect CLI.
+
+Scientific claim not established: implementation did not run the synthetic
+calibration or open real signal or targets, so neural advantage, sensor-signal
+dependence, brain-specific origin, decoding improvement, generalization,
+real-time performance, and portable or home EEG performance remain
+unestablished.
+
+## 2026-07-15 - Loop 48 Stage C Preflight Correction
+
+- After implementation commit `59b30a3` passed push CI `29467094688` and PR CI
+  `29467095865`, the first command invocation refused during research-registry
+  validation because it read `seed` instead of the frozen `fixture_seed` field.
+- The refusal occurred in 0.12 seconds at 21,954,560-byte peak RSS before
+  output-directory creation, fixture generation, model construction, inference,
+  training, checkpoint writing, or result writing. Fixture rows, model runs,
+  optimizer steps, outputs, protected reads, and downloads were all zero. The
+  calibration did not start and remains unspent.
+- Corrected the one field and added a regression test against the exact
+  committed research registry. Fourteen focused tests pass. The corrected
+  dependency-light suite passes 911 tests with 156 expected skips in 1.755
+  seconds at 123,158,528-byte peak RSS; the optional-neuro suite passes 958
+  tests with 3 expected skips in 29.511 seconds at 638,550,016-byte peak RSS.
+- The correction must be committed, pushed, and pass fresh push and PR CI
+  before the one synthetic calibration can begin. No immediate retry occurred.
+
+## 2026-07-15 - Loop 48 Stage C Synthetic Result
+
+- Correction commit `2836ecc` passed push CI `29467415680` and PR CI
+  `29467416894` before the one synthetic calibration began. The prior preflight
+  refusal remained a zero-row, zero-update event and did not consume the run.
+- Executed the frozen seed-4850, 40-row, 24/8/8 gate once under one CPU thread
+  and one worker. `L48C-SYN-OPT0` was selected by the unchanged selection rule.
+- The 7,692-parameter temporal candidate reached final macro CER `0.433333`
+  and `1/8` exact sequences. The 7,568-parameter zero-context ablation reached
+  CER `1.000000` and `0/8` exact. The `0.566667` relative CER improvement
+  passed, but the absolute CER `<=0.10` and exact-sequence `>=7/8` gates failed.
+- Deterministic checkpoint replay, 8/8 future-mutation checks, 8/8 prefix-
+  resume checks, causality, lengths, padding, output geometry, fixture identity,
+  and every resource gate passed.
+- The run performed four training runs, 1,680 optimizer steps, eight model-
+  inference runs, two checkpoint writes, and one checkpoint read in 7.829308
+  seconds internal time. Internal peak RSS was 310,509,568 bytes; external peak
+  RSS was 320,405,504 bytes. Fixture arrays were 1,699,920 bytes and generated
+  artifacts totaled 83,132 bytes.
+- Raw-data reads, real-cache stat/hash/member reads, real signal and target
+  rows, downloads, S24/S25 operations, stream/device/hardware/RW3 operations,
+  and plaintext target/prediction emission were all zero. End-to-end latency
+  was not measured.
+- Added a 7,546-byte aggregate machine result and a human closeout. The ignored
+  checkpoints and source reports remain uncommitted. Loop 48 Stage C is
+  consumed and parked without tuning or rerun.
+- The focused closeout set passes 64 tests. The dependency-light suite passes
+  919 tests with 156 expected skips in 1.439 seconds internal time and 1.70
+  seconds wall time at 123,912,192-byte external peak RSS. The optional-neuro
+  suite passes 966 tests with 3 expected skips in 29.839 seconds internal time
+  and 30.87 seconds wall time at 621,412,352-byte external peak RSS. Both add
+  exactly eight result-contract tests over the corrected 911/958 baseline.
+- Ruff, compileall, every registry JSON, three CLI help surfaces, source-result
+  inspection, and `git diff --check` pass without rerunning the consumed gate.
+
+Engineering capability added: NeuroDecodeKit executed the registered causal
+temporal candidate, zero-context ablation, deterministic selection,
+checkpoint-replay, causal-control, padding, resource, and no-leakage gates once
+under a bounded synthetic interface.
+
+Scientific claim not established: no real signal or target was opened, so
+neural advantage, sensor-signal dependence, brain-specific origin, real
+decoding improvement, generalization, real-time performance, and portable or
+home EEG performance remain unestablished.

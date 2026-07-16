@@ -1515,6 +1515,32 @@ def _cmd_loop48_stage_b_score(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_loop48_stage_c_synthetic(args: argparse.Namespace) -> int:
+    _set_loop48_thread_environment()
+    from neurodecodekit.experiments.temporal_representation_gate import (
+        run_stage_c_synthetic_gate,
+        summarize_stage_c_synthetic_result,
+    )
+
+    report = run_stage_c_synthetic_gate(
+        research_registry_path=args.research_registry,
+        output_dir=args.out_dir,
+    )
+    print(json.dumps(summarize_stage_c_synthetic_result(report), indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_loop48_stage_c_inspect_synthetic(args: argparse.Namespace) -> int:
+    from neurodecodekit.experiments.temporal_representation_gate import (
+        load_stage_c_synthetic_result,
+        summarize_stage_c_synthetic_result,
+    )
+
+    report = load_stage_c_synthetic_result(args.report)
+    print(json.dumps(summarize_stage_c_synthetic_result(report), indent=2, sort_keys=True))
+    return 0
+
+
 def _set_loop24_thread_environment() -> None:
     import os
 
@@ -3896,6 +3922,35 @@ def build_parser() -> argparse.ArgumentParser:
     )
     p.add_argument("--out-root", default=".codex_work/loop48_stage_b")
     p.set_defaults(func=_cmd_loop48_stage_b_score)
+
+    p = sub.add_parser(
+        "loop48-stage-c-synthetic",
+        help="Run the frozen four-fit synthetic temporal-representation gate.",
+        description=(
+            "Generate the exact 24/8/8 synthetic motif fixture, select one of three "
+            "candidate optimizer recipes, compare one zero-context ablation, and verify "
+            "checkpoint replay plus zero-right-context mechanics. This command accepts "
+            "no real-data, cache, participant, or target path."
+        ),
+    )
+    p.add_argument(
+        "--research-registry",
+        default="registries/loop48_stage_c_representation_repair_research.v0.json",
+        help="Exact green Stage C research registry.",
+    )
+    p.add_argument(
+        "--out-dir",
+        required=True,
+        help="New or empty directory for two checkpoints and aggregate reports.",
+    )
+    p.set_defaults(func=_cmd_loop48_stage_c_synthetic)
+
+    p = sub.add_parser(
+        "loop48-stage-c-inspect-synthetic",
+        help="Strictly inspect one aggregate Stage C synthetic result.",
+    )
+    p.add_argument("--report", required=True, help="Stage C result.json path.")
+    p.set_defaults(func=_cmd_loop48_stage_c_inspect_synthetic)
 
     p = sub.add_parser(
         "extract-windows",

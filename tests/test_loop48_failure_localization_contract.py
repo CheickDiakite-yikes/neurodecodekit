@@ -196,7 +196,7 @@ class Loop48FailureLocalizationContractTests(unittest.TestCase):
     def test_scientific_roadmap_marks_stage_a_consumed_without_a_rerun(self):
         row = next(row for row in self.roadmap["loops"] if row["loop_id"] == 48)
         self.assertFalse(row["execution_authorized"])
-        self.assertEqual(row["status"], "Complete; Stage A F5 And Stage B H4 Diagnostic")
+        self.assertEqual(row["status"], "Complete A/B; Stage C Consumed and Parked")
         self.assertIn("Stage A has no rerun authorized", row["authorization_boundary"])
         self.assertIn("no rerun", row["authorization_boundary"])
 

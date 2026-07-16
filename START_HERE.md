@@ -54,7 +54,24 @@
    independent validation or neural advantage; no rerun is authorized. Use
    `docs/LOOP_48_STAGE_B_AUTHORIZATION_DECISION.md`, the authorization packet,
    request, implementation, and hash-only freeze only to audit the
-   pre-execution order.
+   pre-execution order. Finally, read
+   `docs/LOOP_48_STAGE_C_REPRESENTATION_REPAIR_RESEARCH.md` and
+   `registries/loop48_stage_c_representation_repair_research.v0.json`. They
+   select `R1` temporal-context starvation as the next falsifiable hypothesis,
+   freeze a 7,692-parameter 470 ms causal candidate against a 7,568-parameter
+   zero-context ablation, and permit only a bounded synthetic mechanics
+   milestone next. No protected cache, real model run, S24/S25 operation, or
+   scientific claim is authorized by that research. Then read
+   `docs/LOOP_48_STAGE_C_SYNTHETIC_IMPLEMENTATION.md` and
+   `registries/loop48_stage_c_synthetic_implementation.v0.json` for the exact
+   models, fixture, gate, CLI, zero-update qualification, and source hashes.
+   Then read `docs/LOOP_48_STAGE_C_SYNTHETIC_RESULT.md` and
+   `registries/loop48_stage_c_synthetic_result.v0.json`. After correction
+   commit `2836ecc` became remotely green, the one synthetic gate ran and is
+   consumed: candidate CER `0.433333`, `1/8` exact, versus ablation CER
+   `1.000000`. The `0.566667` relative improvement passed, but both absolute
+   gates failed. Stage C is parked without rerun; no real signal, target, cache,
+   S24, or S25 path opened.
 8. Read `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` for the selected S25
    metadata candidate and every blocker that still prevents preregistration,
    download, signal/target access, or transfer evaluation.
@@ -127,8 +144,9 @@ not the current loop number. The workbook remains the last visually reviewed
 Stage A snapshot because its prior import reached 1.57 GiB peak RSS. The current
 sources of truth are `docs/NEXT_20_LOOPS_TRACKER.md` and
 `registries/next_scientific_loops.v0.json`; they report **Loops 26/31/33
-consumed and parked; Loop 48 Stage A F5 plus consumed Stage B H4 diagnostic
-with no rerun**. The workbook's ninth sheet contains the separate **Loops
+   consumed and parked; Loop 48 Stage A F5, consumed Stage B H4 diagnostic,
+   and consumed failed Stage C synthetic gate, all with no rerun**. The
+   workbook's ninth sheet contains the separate **Loops
 25-44 queue**. Loop 25 passed once
 at its target-free mechanics boundary and now has `execution_authorized: false`
 because no rerun is open; Loop 26 was preregistered at `881145d`, authorized at
