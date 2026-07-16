@@ -3244,3 +3244,57 @@ hardware, or clinical utility.
 Evidence: `docs/LOOP_54_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop54_eeg_trial_geometry_research.v0.json`, and
 `tests/test_loop54_eeg_trial_geometry_research.py`.
+
+## 0096 - Separate Causal Hand Evidence From Key-Level EEG Decoding
+
+Decision: complete Loop 55 planning research without preregistering,
+implementing, or executing an S20 model. Replace one ambiguous EEG-decoding
+endpoint with two prospectively ordered endpoints from the same future final
+trials: causal pre-keypress performed-hand prediction and causal pre-keypress
+29-class performed-key prediction.
+
+Target decision: make the performed key and its deterministic hand mapping the
+primary targets because the overt physical action generates the keypress-
+aligned motor and peripheral signal. Keep corrected intended sentence text as
+a protected secondary target that cannot create features, choose a model or
+checkpoint, or upgrade a hand effect into a key-decoding claim.
+
+Causality decision: require EEG samples strictly before each known keypress,
+zero right context, causal anti-aliasing, train-only normalization, and no
+future-touching baseline or zero-phase transform. Retain the published
+`[-200,+300] ms` keypress-centered window only as a noncausal post-keypress and
+task-aligned diagnostic. It cannot rescue a causal failure.
+
+Inference decision: treat the performed trial as the split and paired-
+inference unit. Require a future grouped `44/10/10` split only if the currently
+unverified usable count is 64, with deterministic alternatives for 48-59 and
+60-plus trials. Every causal endpoint must clear its practical margin over the
+strongest train-only no-signal prior and strictly beat every applicable
+zero-signal, whole-trial, channel, timing, train-pairing, timing-only, and
+peripheral control under exact one-sided paired sign-flip tests. A hand pass
+without a key pass remains a hand effect only.
+
+Model and resource decision: recommend one shared compact causal EEG encoder
+with key and hand heads, one fixed linear comparator, at most 10,000 trainable
+parameters per model, at most 12 parameter-update runs, one thread and worker,
+45 CPU minutes, 1 GiB peak RSS, 64 MiB total generated output, zero downloads,
+and no language model, pretrained weight, larger model, stream, device, or
+hardware operation. The exact run inventory remains a future preregistration.
+
+Authorization decision: Loop 53 and all required Loop 54 stages must close
+cleanly first. A future Loop 55 run needs its own exact preregistration,
+separate exact Tier C decision, green implementation, isolated grouped split,
+selection-prediction freeze before selection targets, and committed, pushed,
+remotely green final-prediction freeze before the same final targets open once.
+No current execution permission is granted.
+
+Scientific boundary: the strongest future clean result can establish only a
+bounded within-person pre-keypress EEG sensor-signal effect for performed hand
+or key prediction on one overt-typing block with known event onsets. It cannot
+establish brain-specific origin, intended-thought decoding, continuous event
+detection, unseen-person/session/device generalization, real-time operation,
+portable hardware, home use, or clinical utility.
+
+Evidence: `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop55_eeg_neural_effect_research.v0.json`, and
+`tests/test_loop55_eeg_neural_effect_research.py`.

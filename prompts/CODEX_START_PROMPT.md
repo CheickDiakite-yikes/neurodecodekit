@@ -379,6 +379,26 @@ must complete first; each real L54-A/B/C stage needs a separate exact Tier C
 decision after a hash-bound implementation is remotely green. Do not implement
 or open any real Loop 54 stage from the planning packet.
 
+Loop 55 planning research is also complete and reviewable at:
+
+- `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md`;
+- `registries/loop55_eeg_neural_effect_research.v0.json`;
+- `tests/test_loop55_eeg_neural_effect_research.py`.
+
+Planning commit `f3158c7` separates causal pre-keypress performed-hand evidence
+from harder causal 29-class performed-key evidence. Performed action is the
+primary target; intended sentence text is secondary. The published
+`[-200,+300] ms` keypress-centered window is a noncausal diagnostic only. A
+future gate needs at least 48 Loop 54-qualified trials, one grouped trial-level
+split, one compact causal family at `<=10,000` parameters, at most 12 fits,
+twelve matched no-signal/timing/corruption/peripheral conditions, exact paired
+final-trial tests, and a committed, pushed, remotely green prediction freeze
+before final targets open once. No Loop 55 split, target, implementation,
+model, training, inference, or score is authorized. Do not call any future
+hand-only pass key decoding, or any centered-window pass causal or real time.
+Documentation-sync commit `8efcb17` passed push CI `29473032843` and PR #33 CI
+`29473045583`; Base Python and Optional Neuro Readers passed in both.
+
 Independently, RW3 Stage A remains a separate pending decision surface:
 
 - `docs/RW3_PRIMARY_SOURCE_RESEARCH.md`;
@@ -406,7 +426,10 @@ preparation alone do not authorize RW3. The parked Loop 24 result and any Loop
    Loop 53 is preregistered but unauthorized: its exact sentence, separate
    green decision, green implementation, and one-run order are mandatory.
    Loop 54 planning is complete but every real VHDR, EEG, VMRK, and MAT content
-   stage remains separately unauthorized and acquisition-dependent.
+   stage remains separately unauthorized and acquisition-dependent. Loop 55
+   planning is complete but remains Loop 54 dependent and experimentally `Not
+   Started`; it authorizes no split, target, model, training, inference, or
+   score.
 2. Do not install or import BrainFlow, LSL, MNE-BIDS, or hardware SDKs. Do not
    connect to hardware, enumerate devices, open sockets, or execute a live
    source.
@@ -479,6 +502,12 @@ preparation alone do not authorize RW3. The parked Loop 24 result and any Loop
    still-unauthorized request prepared at `163ff2f`. Keep Loop 53's green
    registration `bccd367`, exact 96,090,264-byte four-file contract, pending
    request, false execution flags, and zero-payload boundary consistent. Keep
+   Loop 54's four-stage VHDR/EEG/VMRK+MAT firewall, 48-trial floor, 22 gates,
+   30 refusals, and zero real-stage access consistent. Keep Loop 55's ordered
+   causal hand/key endpoints, performed-action target, noncausal centered
+   diagnostic, twelve-condition control matrix, trial-level exact inference,
+   at-most-12-fit and 10,000-parameter ceilings, one-shot target order, and
+   false execution flags consistent. Keep
    Loop 25's immutable
    `a36d97b` v0 registration, green `b6b92d8` v1 amendment, false replacement
    authorization request, the planning-only Loop 26 registry with 14 false

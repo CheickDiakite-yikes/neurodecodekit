@@ -1,0 +1,809 @@
+{
+  "schema_name": "neurodecodekit.loop55_eeg_neural_effect_research",
+  "schema_version": "0.1.0",
+  "created_at": "2026-07-16",
+  "loop_id": 55,
+  "title": "Fresh EEG Neural-Effect Gate",
+  "status": "planning_research_complete_loop54_dependent_experiment_not_started",
+  "proof_posture": "primary_source_and_committed_artifact_research_only_no_S20_path_payload_target_split_model_or_execution_access",
+  "current_experiment_status": "Not Started",
+  "claim_target": "bounded within_person causal pre_keypress EEG sensor_signal advantage for performed hand and performed key prediction",
+  "scientific_claim_ceiling": "A future clean execution may establish only a bounded within-person pre-keypress EEG sensor-signal effect for performed-hand or performed-key prediction on the exact qualified S20 overt-typing block. It cannot establish brain-specific origin, intended-thought decoding, continuous event detection, unseen-person or session generalization, real-time operation, portable hardware, home use, or clinical utility.",
+  "authorization": {
+    "planning_research_authorized_now": true,
+    "loop53_acquisition_authorized_now": false,
+    "loop54_real_stage_authorized_now": false,
+    "loop55_preregistration_authorized_now": false,
+    "loop55_implementation_authorized_now": false,
+    "local_S20_path_stat_or_hash_authorized_now": false,
+    "S20_header_marker_signal_or_mat_read_authorized_now": false,
+    "target_label_or_text_read_authorized_now": false,
+    "trial_grouping_or_split_creation_authorized_now": false,
+    "cache_or_derivative_creation_authorized_now": false,
+    "model_or_checkpoint_load_authorized_now": false,
+    "model_inference_authorized_now": false,
+    "training_or_parameter_update_authorized_now": false,
+    "selection_scoring_authorized_now": false,
+    "final_target_delivery_or_scoring_authorized_now": false,
+    "new_download_authorized_now": false,
+    "network_operation_authorized_now": false,
+    "language_model_or_pretrained_weight_authorized_now": false,
+    "stream_device_or_hardware_operation_authorized_now": false,
+    "release_or_upload_authorized_now": false,
+    "rerun_or_post_final_tuning_authorized_now": false,
+    "scientific_claim_upgrade_authorized_now": false,
+    "separate_exact_tier_c_decisions_required": true
+  },
+  "dependencies": {
+    "loop53_contract_path": "registries/loop53_fresh_eeg_acquisition_contract.v0.json",
+    "loop53_contract_sha256": "bc7d86a1ce6ef3dc71dacca0af97cb5813df87620ac35d4f34ecd343f97e65ac",
+    "loop53_complete_now": false,
+    "loop54_research_path": "registries/loop54_eeg_trial_geometry_research.v0.json",
+    "loop54_research_sha256": "ab158abf5b7425c63c66e201ed341c096b9a622aff0eef8ba1b3bdeacf7f5ec7",
+    "loop54_required_claim_class": "L54-Q5",
+    "loop54_required_claim_class_available_now": false,
+    "loop31_research_path": "registries/loop31_research_boundary.v0.json",
+    "loop31_research_sha256": "5d7ae8ab0ad7f9a4023874b0317be21174ace9cc037438c319546b4c46c1c7c1",
+    "loop31_matched_control_and_intersection_union_rules_inherited": true,
+    "loop35_research_path": "registries/loop35_research_boundary.v0.json",
+    "loop35_research_sha256": "b68e0721ed964138feb608af404f8e80bc80fa94418215b7efe914cd93de5fcf",
+    "loop35_peripheral_claim_firewall_inherited": true,
+    "loop48_hypothesis_path": "registries/loop48_hypothesis_discrimination.v0.json",
+    "loop48_hypothesis_sha256": "22f6a99801d7fc9259501b43a032078e584544a54581b7a1bd1eabc4c321af60",
+    "loop48_negative_model_family_result_may_not_be_silently_reused_as_proven": true,
+    "S7_consumed_and_forbidden": true,
+    "S21_S24_S25_forbidden": true
+  },
+  "prospective_source_identity": {
+    "modality": "EEG",
+    "subject_id": "S20",
+    "session_id": "2",
+    "block_id": "2",
+    "recording_stem": "020_DECOMEG_S2_11966_task2",
+    "expected_bundle_bytes_from_public_metadata": 96090264,
+    "payload_local_now": false,
+    "loop54_qualified_now": false,
+    "usable_unique_trial_count_known_now": false,
+    "exact_partition_counts_known_now": false,
+    "exact_partition_identities_known_now": false,
+    "channel_roles_known_now": false,
+    "sampling_rate_known_now": false,
+    "recorded_peripheral_streams_known_now": false
+  },
+  "primary_source_findings": [
+    {
+      "finding_id": "L55-S01",
+      "source_id": "brain2qwerty_v1_nature_2026",
+      "finding": "The published EEG system used 61 EEG and three ocular channels at 1 kHz, and the decoder used known keypress-aligned 500 ms windows from -200 to +300 ms. Hand and key classification peaked after keypress, and the authors state the system is not real time and depends on known keystroke onsets."
+    },
+    {
+      "finding_id": "L55-S02",
+      "source_id": "brain2qwerty_v1_nature_2026",
+      "finding": "The published preprocessing distinguishes the key actually pressed from the intended target key and usually analyzes the intended target. Typing errors alter interkey timing and reduce decoding performance, so performed action and intended text are noninterchangeable estimands."
+    },
+    {
+      "finding_id": "L55-S03",
+      "source_id": "eegnet_original",
+      "finding": "EEGNet uses depthwise and separable convolutions to build a compact EEG-specific temporal and spatial classifier across multiple BCI paradigms. This supports a small candidate family but does not validate it on S20."
+    },
+    {
+      "finding_id": "L55-S04",
+      "source_id": "same_analysis_approach",
+      "finding": "The Same Analysis Approach recommends applying the main pipeline to design variables, simulated confounds, null data, and controls so analysis-specific failures remain visible."
+    },
+    {
+      "finding_id": "L55-S05",
+      "source_id": "classifier_permutation_tests",
+      "finding": "Label and restricted feature permutations answer different classifier questions. Event-window corruption controls are falsification probes, not interchangeable perfect neural nulls."
+    },
+    {
+      "finding_id": "L55-S06",
+      "source_id": "small_sample_cv_uncertainty",
+      "finding": "Small predictive neuroimaging samples have large error bars that fold-wise variation can underestimate. Keypress windows do not create independent trials or additional biological replicates."
+    }
+  ],
+  "source_bindings": [
+    {
+      "source_id": "brain2qwerty_v1_nature_2026",
+      "url": "https://www.nature.com/articles/s41593-026-02303-2",
+      "publisher": "Nature Neuroscience",
+      "role": "overt typing task device windows targets splits metrics and stated limitations"
+    },
+    {
+      "source_id": "eegnet_original",
+      "url": "https://arxiv.org/abs/1611.08024",
+      "doi": "10.1088/1741-2552/aace8c",
+      "publisher": "Journal of Neural Engineering",
+      "role": "compact EEG-specific temporal and spatial model precedent"
+    },
+    {
+      "source_id": "same_analysis_approach",
+      "url": "https://arxiv.org/abs/1703.06670",
+      "doi": "10.1016/j.neuroimage.2017.12.083",
+      "publisher": "NeuroImage",
+      "role": "matched design confound null and control analysis"
+    },
+    {
+      "source_id": "classifier_permutation_tests",
+      "url": "https://www.jmlr.org/papers/v11/ojala10a.html",
+      "publisher": "Journal of Machine Learning Research",
+      "role": "permutation interpretation and classifier dependence tests"
+    },
+    {
+      "source_id": "small_sample_cv_uncertainty",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28655633/",
+      "doi": "10.1016/j.neuroimage.2017.06.061",
+      "publisher": "NeuroImage",
+      "role": "small predictive sample uncertainty ceiling"
+    },
+    {
+      "source_id": "intersection_union_tests",
+      "url": "https://doi.org/10.1214/ss/1032280304",
+      "publisher": "Statistical Science",
+      "role": "conjunctive all-controls decision and multiplicity interpretation"
+    }
+  ],
+  "hypothesis_portfolio": [
+    {
+      "hypothesis_id": "L55-H0",
+      "name": "no_usable_causal_EEG_advantage",
+      "discriminator": "The causal candidate does not clear the strongest no-signal comparator and complete required-control conjunction."
+    },
+    {
+      "hypothesis_id": "L55-H1",
+      "name": "pre_keypress_EEG_carries_performed_action_information",
+      "discriminator": "The causal hand and or key endpoint clears every applicable required comparison under exact trial-level paired tests."
+    },
+    {
+      "hypothesis_id": "L55-H2",
+      "name": "information_is_post_keypress_or_feedback_locked",
+      "discriminator": "The centered -200 to +300 ms diagnostic passes while the causal pre-keypress endpoint fails."
+    },
+    {
+      "hypothesis_id": "L55-H3",
+      "name": "ocular_or_other_peripheral_route_explains_prediction",
+      "discriminator": "A qualified peripheral-only condition matches or beats EEG, or a required peripheral measurement remains unavailable."
+    },
+    {
+      "hypothesis_id": "L55-H4",
+      "name": "event_count_position_or_timing_explains_prediction",
+      "discriminator": "The strongest no-signal or timing-only comparator matches or beats the causal EEG candidate."
+    },
+    {
+      "hypothesis_id": "L55-H5",
+      "name": "fixed_compact_representation_or_training_is_insufficient",
+      "discriminator": "The fixed linear comparator passes while the compact candidate fails, or both remain stable but negative."
+    },
+    {
+      "hypothesis_id": "L55-H6",
+      "name": "target_marker_or_split_leakage_invalidates_run",
+      "discriminator": "Any semantic marker, key identity, target text, or final target reaches a forbidden stage."
+    }
+  ],
+  "ordered_endpoints": [
+    {
+      "endpoint_id": "L55-E1",
+      "name": "causal_performed_hand_effect",
+      "target": "performed_hand_2",
+      "input_window_recommendation_ms": [-500, 0],
+      "right_endpoint_exclusive": true,
+      "producer_causal_required": true,
+      "right_context_ms": 0,
+      "primary_metric": "macro_trial_hand_error_rate",
+      "primary_estimand": "mean_trial_HER_strongest_no_signal_minus_mean_trial_HER_causal_EEG",
+      "practical_margin_recommendation": 0.03,
+      "component_test_recommendation": "exact_one_sided_paired_sign_flip_over_final_trials",
+      "component_alpha": 0.05,
+      "complete_required_control_conjunction": true,
+      "claim_if_clean": "bounded one_block pre_keypress EEG sensor_signal effect for performed_hand prediction"
+    },
+    {
+      "endpoint_id": "L55-E2",
+      "name": "causal_performed_key_effect",
+      "target": "performed_key_29",
+      "input_window_recommendation_ms": [-500, 0],
+      "right_endpoint_exclusive": true,
+      "producer_causal_required": true,
+      "right_context_ms": 0,
+      "primary_metric": "macro_trial_keypress_aligned_CER",
+      "known_event_onsets_and_output_count_disclosed": true,
+      "insertions_deletions_or_event_detection_tested": false,
+      "primary_estimand": "mean_trial_CER_strongest_no_signal_minus_mean_trial_CER_causal_EEG",
+      "practical_margin_recommendation": 0.05,
+      "component_test_recommendation": "exact_one_sided_paired_sign_flip_over_final_trials",
+      "component_alpha": 0.05,
+      "complete_required_control_conjunction": true,
+      "claim_if_clean": "bounded one_block pre_keypress EEG sensor_signal effect for performed_key prediction"
+    },
+    {
+      "endpoint_id": "L55-D1",
+      "name": "noncausal_centered_window_diagnostic",
+      "target": "performed_key_29_and_performed_hand_2",
+      "input_window_ms": [-200, 300],
+      "producer_causal": false,
+      "right_context_ms": 300,
+      "role": "post_keypress_and_task_aligned_positive_diagnostic_only",
+      "may_rescue_or_upgrade_causal_endpoint": false
+    }
+  ],
+  "endpoint_interpretation": [
+    {
+      "hand_pass": false,
+      "key_pass": false,
+      "meaning": "no_detected_causal_EEG_sensor_signal_advantage"
+    },
+    {
+      "hand_pass": true,
+      "key_pass": false,
+      "meaning": "bounded_causal_performed_hand_sensor_effect_only"
+    },
+    {
+      "hand_pass": false,
+      "key_pass": true,
+      "meaning": "internally_inconsistent_audit_required_no_claim"
+    },
+    {
+      "hand_pass": true,
+      "key_pass": true,
+      "meaning": "bounded_causal_performed_key_sensor_effect_with_hand_consistency"
+    }
+  ],
+  "target_and_feature_firewall": {
+    "primary_model_allowed_inputs": [
+      "Loop54-qualified EEG candidate channels",
+      "samples strictly before each known keypress",
+      "source channel order",
+      "train-only normalization parameters",
+      "padding masks"
+    ],
+    "primary_model_forbidden_inputs": [
+      "marker type or description",
+      "keypress identity or keycode",
+      "performed key or hand label in a feature",
+      "intended key or target sentence text",
+      "prompt or canonical sentence identity",
+      "semantic group identity",
+      "future sample at or after keypress",
+      "EOG EMG gaze motion audio or timing value",
+      "language model ngram autocomplete NeuroToken or target-derived embedding",
+      "target-dependent class frequency from selection or final"
+    ],
+    "known_event_onset_role": "alignment_scaffolding_only",
+    "known_event_count_role": "disclosed_output_shape_scaffolding_only",
+    "timing_only_comparator_required": true,
+    "primary_targets": [
+      {
+        "target_id": "performed_key_29",
+        "role": "primary key target"
+      },
+      {
+        "target_id": "performed_hand_2",
+        "role": "primary hand target derived under frozen keyboard map"
+      }
+    ],
+    "secondary_target": {
+      "target_id": "intended_sentence",
+      "role": "protected separately identified secondary only",
+      "available_to_primary_fit_or_selection": false,
+      "may_upgrade_hand_or_key_claim": false
+    },
+    "unmapped_or_ambiguous_key_policy": "trial_level_refusal_under_rule_frozen_before_target_values",
+    "silent_post_target_event_drop_allowed": false
+  },
+  "future_split_recommendation": {
+    "status": "recommendation_not_frozen_until_loop54_reports_target_blind_usable_count",
+    "minimum_usable_unique_trials": 48,
+    "trial_is_identity_and_inference_unit": true,
+    "event_windows_are_independent_trials": false,
+    "if_usable_count_below_48": "park_without_split_or_training",
+    "if_usable_count_48_to_59": {
+      "final_trials": 10,
+      "selection_trials": 8,
+      "train_trials": "all_remaining_at_least_30"
+    },
+    "if_usable_count_at_least_60": {
+      "final_trials": 10,
+      "selection_trials": 10,
+      "train_trials": "all_remaining"
+    },
+    "expected_but_unverified_count_64_example": {
+      "train_trials": 44,
+      "selection_trials": 10,
+      "final_trials": 10
+    },
+    "same_trial_events_stay_together": true,
+    "exact_and_semantically_similar_intended_texts_stay_together": true,
+    "isolated_target_bearing_grouper_required": true,
+    "grouper_algorithm_frozen_before_text_delivery": true,
+    "grouper_public_output": "opaque_group_commitments_and_partition_memberships_only",
+    "target_values_class_frequencies_signal_quality_or_model_behavior_may_choose_partition": false,
+    "partition_freeze_before_model_or_train_target_delivery": true,
+    "ten_final_trial_exact_assignments_if_all_nonzero": 1024,
+    "zero_pair_differences_reduce_resolution_and_must_be_reported": true
+  },
+  "future_model_recommendation": {
+    "status": "family_recommendation_only_exact_architecture_deferred_until_loop54",
+    "primary_family": "compact_causal_spatiotemporal_EEG_classifier",
+    "shared_encoder": true,
+    "output_heads": ["performed_key_29", "performed_hand_2"],
+    "maximum_trainable_parameters_per_model": 10000,
+    "spatial_temporal_precedent": "depthwise_or_low_rank_operations_inspired_by_EEGNet",
+    "primary_seed_count": 1,
+    "maximum_nonselectable_stability_seed_count": 2,
+    "linear_comparator": "one deterministic parameter_matched_or_smaller_EEG_model",
+    "transform_requirements": [
+      "train-only normalization",
+      "zero right context",
+      "no zero-phase filter",
+      "no baseline interval touching keypress or future samples",
+      "causal anti-aliasing before any downsampling",
+      "padding masks preserved"
+    ],
+    "forbidden_components": [
+      "transformer language context",
+      "recurrent language context",
+      "ngram",
+      "language model",
+      "LLM",
+      "NeuroToken input",
+      "pretrained weights",
+      "external embedding",
+      "architecture search after any target-bearing selection or final score"
+    ],
+    "maximum_parameter_update_runs_recommendation": 12,
+    "exact_fit_checkpoint_inference_seed_and_selection_inventory_required_in_future_preregistration": true,
+    "unused_run_capacity_authorizes_new_model_after_targets": false
+  },
+  "required_condition_matrix": [
+    {
+      "condition_id": "L55-E00",
+      "name": "causal_pre_keypress_EEG_only_candidate",
+      "role": "reference_candidate",
+      "required_for_causal_claim": true,
+      "status": "not_started"
+    },
+    {
+      "condition_id": "L55-E01",
+      "name": "strongest_train_only_no_signal_prior",
+      "role": "primary_comparator",
+      "required_for_causal_claim": true,
+      "status": "not_started"
+    },
+    {
+      "condition_id": "L55-E02",
+      "name": "same_checkpoint_exact_zero_signal",
+      "role": "no_input_information_probe",
+      "required_for_causal_claim": true,
+      "out_of_distribution_warning_required": true,
+      "status": "not_started"
+    },
+    {
+      "condition_id": "L55-E03",
+      "name": "same_checkpoint_whole_final_trial_row_derangement",
+      "role": "trial_correspondence_control",
+      "required_for_causal_claim": true,
+      "status": "not_started"
+    },
+    {
+      "condition_id": "L55-E04",
+      "name": "same_checkpoint_channel_derangement",
+      "role": "sensor_identity_control",
+      "required_for_causal_claim": true,
+      "not_an_exact_neural_null": true,
+      "status": "not_started"
+    },
+    {
+      "condition_id": "L55-E05",
+      "name": "same_checkpoint_nonwrapping_pre_keypress_time_displacement",
+      "role": "timing_relation_control",
+      "required_for_causal_claim": true,
+      "not_an_exact_neural_null": true,
+      "status": "not_started"
+    },
+    {
+      "condition_id": "L55-E06",
+      "name": "timing_count_and_position_only_model",
+      "role": "task_structure_comparator",
+      "required_for_causal_claim": true,
+      "status": "not_started"
+    },
+    {
+      "condition_id": "L55-E07",
+      "name": "train_signal_target_pairing_derangement",
+      "role": "training_correspondence_control",
+      "required_for_causal_claim": true,
+      "status": "not_started"
+    },
+    {
+      "condition_id": "L55-E08",
+      "name": "EOG_only_model",
+      "role": "ocular_comparator",
+      "required_for_causal_claim": "if_Loop54_qualifies_ocular_channels",
+      "status": "unavailable_until_loop54"
+    },
+    {
+      "condition_id": "L55-E09",
+      "name": "EEG_plus_EOG_model",
+      "role": "combined_diagnostic_upper_bound",
+      "required_for_causal_claim": false,
+      "status": "unavailable_until_loop54"
+    },
+    {
+      "condition_id": "L55-E10",
+      "name": "compact_linear_EEG_comparator",
+      "role": "representation_diagnostic",
+      "required_for_causal_claim": false,
+      "status": "not_started"
+    },
+    {
+      "condition_id": "L55-E11",
+      "name": "noncausal_centered_minus200_plus300_ms_EEG_model",
+      "role": "post_keypress_and_task_aligned_positive_diagnostic",
+      "required_for_causal_claim": false,
+      "may_rescue_causal_failure": false,
+      "status": "not_started"
+    }
+  ],
+  "no_signal_and_timing_contract": {
+    "no_signal_candidate_pool": [
+      "global_train_only_performed_key_and_hand_prior",
+      "train_only_position_and_length_conditioned_prior_with_frozen_smoothing"
+    ],
+    "strongest_no_signal_selected_using_train_only": true,
+    "selection_or_final_class_frequency_allowed": false,
+    "timing_only_allowlist": [
+      "event count",
+      "event position",
+      "elapsed trial time at causal point",
+      "preceding interkey interval",
+      "total duration only where causally available"
+    ],
+    "timing_only_forbidden": [
+      "signal value",
+      "channel field",
+      "marker description",
+      "key identity",
+      "sentence identity",
+      "target-derived statistic"
+    ]
+  },
+  "matched_analysis_contract": {
+    "identical_partition_membership_for_every_condition": true,
+    "identical_target_map_and_normalization": true,
+    "identical_event_inclusion_and_trial_exclusion_rules": true,
+    "identical_metric_code_and_macro_trial_aggregation": true,
+    "same_checkpoint_controls_require_identical_model_calls": true,
+    "separately_trained_controls_require_matched_seed_optimizer_step_batch_and_checkpoint_budget": true,
+    "parameter_and_compute_mismatch_reported": true,
+    "condition_specific_input_output_access_runtime_RSS_and_run_counters": true,
+    "condition_prediction_sha256_required": true,
+    "missing_applicable_condition_or_counter_fails_gate": true,
+    "biological_replicates": 1,
+    "population_inference_supported": false
+  },
+  "statistical_decision_recommendation": {
+    "status": "recommendation_not_frozen_until_future_preregistration",
+    "final_trial_count_recommendation": 10,
+    "paired_unit": "same_unique_final_performed_trial",
+    "component_alternative": "causal_EEG_has_lower_macro_trial_error_than_control",
+    "component_test": "exact_one_sided_paired_sign_flip_enumeration",
+    "component_alpha": 0.05,
+    "assignments_with_ten_nonzero_pairs": 1024,
+    "minimum_one_sided_p_with_ten_nonzero_pairs": 0.0009765625,
+    "overall_claim_test": "intersection_union_all_applicable_required_controls",
+    "overall_claim_requires_every_component_pass": true,
+    "multiplicity_for_conjunctive_claim": "none_under_intersection_union_principle",
+    "individual_component_claims_allowed": false,
+    "secondary_families_require_adjustment_or_descriptive_label": true,
+    "control_tie_passes": false,
+    "all_final_trial_errors_and_differences_reported": true,
+    "bootstrap_role": "descriptive_only",
+    "post_target_endpoint_switching_allowed": false
+  },
+  "future_access_sequence": [
+    {
+      "order": 1,
+      "stage": "complete_loop53",
+      "boundary": "exact acquisition decision and clean receipt"
+    },
+    {
+      "order": 2,
+      "stage": "complete_loop54",
+      "boundary": "at least 48 unambiguous trials and frozen confound claim ceiling"
+    },
+    {
+      "order": 3,
+      "stage": "preregister_loop55",
+      "boundary": "commit push and remotely green exact hashes split architecture transforms runs endpoints controls caps and refusals"
+    },
+    {
+      "order": 4,
+      "stage": "record_exact_tier_c_decision",
+      "boundary": "authorization-only commit push and remote green before implementation or protected access"
+    },
+    {
+      "order": 5,
+      "stage": "freeze_opaque_grouped_partitions",
+      "boundary": "isolated target-bearing grouper emits no plaintext and freezes identities before model or train-label delivery"
+    },
+    {
+      "order": 6,
+      "stage": "train_and_freeze_selection_predictions",
+      "boundary": "train receives train signal and performed targets only; every selection prediction freezes before selection targets open once"
+    },
+    {
+      "order": 7,
+      "stage": "apply_frozen_selection_rule",
+      "boundary": "no architecture endpoint transform seed or control addition after selection targets"
+    },
+    {
+      "order": 8,
+      "stage": "freeze_all_final_predictions",
+      "boundary": "all final conditions run target blind"
+    },
+    {
+      "order": 9,
+      "stage": "commit_push_and_remote_green_hash_only_freeze",
+      "boundary": "all required CI passes before final target delivery"
+    },
+    {
+      "order": 10,
+      "stage": "one_shot_isolated_final_scoring",
+      "boundary": "same final targets open once score once then park with no rerun"
+    }
+  ],
+  "outcome_taxonomy": [
+    {
+      "outcome_id": "L55-O0",
+      "name": "planning_only",
+      "meaning": "No protected execution occurred and the experiment remains Not Started."
+    },
+    {
+      "outcome_id": "L55-O1",
+      "name": "invalid",
+      "meaning": "Leakage ordering split hash target-freeze resource or access contract failed; park without scientific score."
+    },
+    {
+      "outcome_id": "L55-O2",
+      "name": "no_causal_effect",
+      "meaning": "Both causal endpoints fail the complete conjunction; retain the negative result."
+    },
+    {
+      "outcome_id": "L55-O3",
+      "name": "post_keypress_or_task_aligned_only",
+      "meaning": "The centered diagnostic passes while causal endpoints fail; no causal or real-time claim."
+    },
+    {
+      "outcome_id": "L55-O4",
+      "name": "timing_or_peripheral_explanation",
+      "meaning": "A required nonbrain comparator matches or beats the candidate; report the nonneural predictive route."
+    },
+    {
+      "outcome_id": "L55-O5",
+      "name": "causal_hand_effect_only",
+      "meaning": "The hand endpoint passes and key endpoint fails; claim only one-block performed-hand EEG sensor dependence."
+    },
+    {
+      "outcome_id": "L55-O6",
+      "name": "causal_key_effect",
+      "meaning": "Hand and key endpoints pass; claim only one-block performed-key EEG sensor dependence."
+    },
+    {
+      "outcome_id": "L55-O7",
+      "name": "representation_diagnostic",
+      "meaning": "The fixed linear comparator passes while the compact candidate fails; identify architecture-specific failure without rerun."
+    }
+  ],
+  "claim_taxonomy": [
+    {
+      "claim_id": "L55-C0",
+      "name": "planning_only",
+      "available_now": true,
+      "boundary": "A prospective hypothesis endpoint control access and resource design is documented and machine checked."
+    },
+    {
+      "claim_id": "L55-C1",
+      "name": "causal_performed_hand_sensor_signal_effect",
+      "available_now": false,
+      "boundary": "E1 clears every applicable required comparison on the frozen final trials."
+    },
+    {
+      "claim_id": "L55-C2",
+      "name": "causal_performed_key_sensor_signal_effect",
+      "available_now": false,
+      "boundary": "E1 and E2 clear every applicable required comparison on the frozen final trials."
+    },
+    {
+      "claim_id": "L55-C3",
+      "name": "post_keypress_or_task_aligned_predictability",
+      "available_now": false,
+      "boundary": "The noncausal centered diagnostic passes without a causal claim."
+    },
+    {
+      "claim_id": "L55-C4",
+      "name": "brain_specific_origin",
+      "available_now": false,
+      "boundary": "Unavailable from Loop 55 because scalp EEG can contain ocular muscular motion environmental and other unrecorded peripheral contributions."
+    },
+    {
+      "claim_id": "L55-C5",
+      "name": "intended_language_or_thought_decoding",
+      "available_now": false,
+      "boundary": "Unavailable because the task uses overt performed keypresses and the primary target is the performed action."
+    },
+    {
+      "claim_id": "L55-C6",
+      "name": "continuous_realtime_decoding",
+      "available_now": false,
+      "boundary": "Unavailable because keypress onsets and event count are supplied and end-to-end latency is not measured."
+    },
+    {
+      "claim_id": "L55-C7",
+      "name": "generalized_portable_home_or_clinical_result",
+      "available_now": false,
+      "boundary": "Requires independent people sessions devices causal latency safety usability privacy and clinical evidence outside Loop 55."
+    }
+  ],
+  "future_acceptance_gates": [
+    "Loop 53 completes under its exact acquisition decision and clean receipt",
+    "Loop 54 reaches L54-Q5 with at least 48 unambiguous unique performed trials",
+    "exact Loop 55 contract and implementation commits are pushed and remotely green before protected access",
+    "separate exact Tier C authorization decision is pushed and remotely green",
+    "all input contract implementation split transform and payload hashes match",
+    "isolated grouping algorithm freezes before any intended text delivery",
+    "same and semantically similar intended text groups stay in one partition",
+    "every event from one trial stays in one partition",
+    "exact train selection and final identities freeze before model or train-target delivery",
+    "primary target is performed_key_29 and performed_hand_2 uses the frozen keyboard map",
+    "marker keycode target text prompt identity and semantic group never enter model features",
+    "causal input contains only qualified EEG samples strictly before keypress",
+    "causal transform has zero right context and no zero-phase or future-touching operation",
+    "candidate and every model stay at or below 10000 trainable parameters",
+    "future preregistration enumerates at most 12 parameter-update runs exactly",
+    "strongest no-signal prior is selected using train only",
+    "timing-only input obeys the exact allowlist and contains no semantic or signal field",
+    "all twelve conditions run or an inapplicable condition has a preregistered unavailable reason",
+    "EOG-only control is required if Loop 54 qualifies ocular channels",
+    "same-checkpoint controls use identical calls and separately trained controls use matched budgets",
+    "selection predictions freeze before selection targets open once",
+    "endpoint checkpoint and control choices follow only the frozen selection rule",
+    "all final-condition predictions freeze target blind",
+    "hash-only final prediction record is committed pushed and remotely green before final target delivery",
+    "same final targets open once in isolated scoring and no rerun follows",
+    "all final-trial endpoint errors and paired differences are reported",
+    "E1 and E2 each use exact paired trial-level tests and their own practical margin",
+    "causal claims require the complete intersection-union conjunction",
+    "one thread one worker 45 CPU minutes 1 GiB RSS 64 MiB output and all access counters pass",
+    "claim language remains within the exact achieved L55 claim class"
+  ],
+  "future_refusal_ids": [
+    "L55-F01_loop53_or_loop54_not_complete",
+    "L55-F02_missing_exact_tier_c_decision",
+    "L55-F03_contract_implementation_or_payload_hash_mismatch",
+    "L55-F04_usable_unique_trial_count_below_48",
+    "L55-F05_ambiguous_trial_or_event_identity",
+    "L55-F06_split_before_loop54_target_blind_count",
+    "L55-F07_target_or_model_dependent_partition",
+    "L55-F08_same_or_similar_text_cross_partition",
+    "L55-F09_event_window_pseudoreplication",
+    "L55-F10_marker_keycode_target_or_prompt_feature_leak",
+    "L55-F11_selection_or_final_class_frequency_leak",
+    "L55-F12_future_sample_at_or_after_keypress_in_causal_input",
+    "L55-F13_zero_phase_or_future_touching_transform",
+    "L55-F14_noncausal_diagnostic_promoted_to_causal_claim",
+    "L55-F15_intended_text_substituted_for_primary_performed_key",
+    "L55-F16_silent_unmapped_or_ambiguous_key_drop",
+    "L55-F17_language_model_ngram_LLM_neurotoken_or_pretrained_weight",
+    "L55-F18_model_exceeds_10000_parameters",
+    "L55-F19_unregistered_fit_checkpoint_seed_inference_or_selection_action",
+    "L55-F20_more_than_12_parameter_update_runs",
+    "L55-F21_unmatched_control_partition_metric_or_compute",
+    "L55-F22_missing_required_zero_row_channel_time_timing_or_pairing_control",
+    "L55-F23_missing_EOG_only_control_when_ocular_channels_available",
+    "L55-F24_timing_only_field_outside_allowlist",
+    "L55-F25_selection_target_open_before_prediction_freeze",
+    "L55-F26_final_target_open_before_committed_pushed_remote_green_freeze",
+    "L55-F27_final_rerun_or_post_target_tuning",
+    "L55-F28_component_tie_or_failed_control_called_pass",
+    "L55-F29_hand_fail_key_pass_claim_without_audit",
+    "L55-F30_resource_output_or_access_counter_breach",
+    "L55-F31_plaintext_target_prediction_or_trial_text_in_public_artifact",
+    "L55-F32_S7_S21_S24_S25_or_session_substitution",
+    "L55-F33_new_download_network_stream_device_or_hardware_operation",
+    "L55-F34_unmeasured_end_to_end_latency_called_realtime",
+    "L55-F35_sensor_dependence_called_brain_specific_or_thought_decoding",
+    "L55-F36_generalization_portable_home_clinical_or_product_overclaim"
+  ],
+  "resource_boundaries": {
+    "cpu_threads": 1,
+    "workers": 1,
+    "maximum_trainable_parameters_per_model": 10000,
+    "maximum_parameter_update_runs": 12,
+    "maximum_total_cpu_seconds": 2700,
+    "maximum_peak_rss_bytes": 1073741824,
+    "maximum_generated_output_bytes_including_protected_derivatives": 67108864,
+    "new_download_bytes": 0,
+    "additional_real_payload_bytes": 0,
+    "network_operations": 0,
+    "language_model_runs": 0,
+    "device_or_hardware_operations": 0,
+    "reruns_after_final_scoring": 0,
+    "end_to_end_latency_required_to_be_reported_as": "not_measured_unless_separately_instrumented_and_authorized"
+  },
+  "future_measurement_ledger": [
+    "input and output bytes by stage and condition",
+    "wall and CPU runtime",
+    "peak RSS",
+    "trainable parameter count",
+    "trial event valid and padded counts",
+    "all fit checkpoint inference and prediction set counts",
+    "raw derivative target and cache reads",
+    "target delivery count and order",
+    "producer causal status and right context",
+    "whether end-to-end latency was measured",
+    "every warning and unavailable field"
+  ],
+  "research_access_counters": {
+    "primary_source_pages_consulted": 6,
+    "committed_research_boundaries_read": 5,
+    "S20_local_path_stats": 0,
+    "S20_payload_hash_reads": 0,
+    "S20_header_reads": 0,
+    "S20_marker_reads": 0,
+    "S20_signal_reads": 0,
+    "S20_mat_reads": 0,
+    "target_label_or_text_reads": 0,
+    "trial_grouping_or_split_operations": 0,
+    "cache_or_derivative_reads_or_writes": 0,
+    "model_or_checkpoint_loads": 0,
+    "model_inference_runs": 0,
+    "training_or_parameter_update_runs": 0,
+    "selection_or_final_scoring_runs": 0,
+    "downloads": 0,
+    "network_operations": 0,
+    "stream_device_or_hardware_operations": 0,
+    "generated_experiment_bytes": 0
+  },
+  "current_warnings": [
+    "The expected 61 EEG plus three ocular channels 1 kHz and 64 trials are cohort or protocol facts, not verified S20 file evidence.",
+    "The published -200 to +300 ms window includes post-keypress activity and cannot support a causal or real-time claim.",
+    "Known keypress timing and event count make the future task keypress aligned rather than continuous decoding.",
+    "Performed key and intended target are distinct; the primary Loop 55 target is the performed key.",
+    "One participant and one block cannot support population unseen-person session or device inference.",
+    "Missing ocular muscular motion gaze audio or other peripheral measurements narrow the claim ceiling even if sensor controls pass.",
+    "The Loop 48 tiny model family was negative on S21 and its synthetic repair missed absolute gates; it is not a proven EEG representation."
+  ],
+  "current_unavailable_fields": [
+    "S20 local payload presence and content hashes",
+    "S20 channel count names roles units reference and geometry",
+    "S20 sampling rate sample count duration and signal quality",
+    "S20 EOG EMG motion gaze audio and timing availability",
+    "S20 marker and MAT reconciliation",
+    "S20 usable unique trial count",
+    "S20 performed key map and ambiguous event count",
+    "exact train selection and final counts and identities",
+    "exact causal preprocessing implementation",
+    "exact compact candidate architecture and parameter count",
+    "exact fit inference checkpoint seed and selection inventory",
+    "EEG hand or key predictive effect",
+    "brain-specific origin",
+    "continuous event detection and insertion deletion behavior",
+    "unseen sentence session participant or device generalization",
+    "end-to-end latency",
+    "portable home patient clinical or product performance"
+  ],
+  "claim_boundary": {
+    "proven_now": "Primary-source and committed-artifact research now defines prospective causal hand and key endpoints, a post-keypress diagnostic, matched control conjunction, protected split and target order, hypothesis router, and bounded resource ceiling for a future S20 experiment.",
+    "not_proven_now": "No S20 path or payload was stated hashed parsed or opened and no split target cache model checkpoint prediction training score latency stream device or hardware result exists.",
+    "next_irreversible_gate": "Complete Loop 53 using the exact authorization sentence in docs/LOOP_53_AUTHORIZATION_PACKET.md, then complete separately authorized Loop 54 stages before writing an exact Loop 55 preregistration.",
+    "strongest_future_clean_claim": "For one preregistered S20 overt-typing block a frozen compact model using only causal pre-keypress EEG values improved performed-hand and or performed-key prediction over every registered applicable comparator under exact trial-level paired tests.",
+    "claims_never_available_from_loop55": [
+      "brain-specific physical origin",
+      "intended-thought decoding",
+      "continuous event detection",
+      "unseen-person session or device generalization",
+      "real-time end-to-end operation",
+      "portable home patient clinical or product performance"
+    ]
+  }
+}

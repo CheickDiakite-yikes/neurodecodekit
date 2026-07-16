@@ -1,5 +1,29 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current handoff, 2026-07-16 after Loop 55 planning research: commit `f3158c7`
+> freezes the future fresh-EEG neural-effect question in
+> `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md` and
+> `registries/loop55_eeg_neural_effect_research.v0.json`. The design uses two
+> ordered endpoints from the same frozen final trials: causal pre-keypress
+> performed-hand error and harder causal 29-class performed-key keypress-aligned
+> CER. Performed action is primary, intended text is secondary, and the
+> published `[-200,+300] ms` window is a post-keypress diagnostic only. The
+> future gate requires at least 48 Loop 54-qualified trials, one grouped split,
+> one `<=10,000`-parameter causal family, at most 12 fits, twelve matched
+> no-signal/timing/corruption/peripheral conditions, exact trial-level tests,
+> and a committed, pushed, remotely green final-prediction freeze before one
+> target delivery. Hard ceilings are one thread/worker, 45 CPU minutes, 1 GiB
+> RSS, and 64 MiB generated output. Focused roadmap/contract checks passed
+> 24/24 plus 9 public-status subtests; the full suite passed 1007 tests with 3
+> expected skips and 365 subtests in 31.88 seconds; Ruff and `git diff --check`
+> passed. No S20 path, payload,
+> split, target, model, checkpoint, training, inference, score, download,
+> stream, device, hardware, or scientific result was accessed. Loop 53 remains
+> the next irreversible decision. Loop 55 is `Not Started`, Loop 54 dependent,
+> and unauthorized. Preserve the unrelated tracker inspection NDJSON.
+> Documentation-sync commit `8efcb17` passed push CI `29473032843` and PR #33
+> CI `29473045583`; Base Python and Optional Neuro Readers passed in both.
+
 > Current handoff, 2026-07-16 after Loop 54 planning research: commit `aec440a`
 > freezes the acquisition-dependent EEG qualification design in
 > `docs/LOOP_54_PRIMARY_SOURCE_RESEARCH.md` and

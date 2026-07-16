@@ -4460,3 +4460,45 @@ quality, and target-bearing trial reconciliation before any classifier claim.
 Scientific claim not established: no S20 payload was accessed and no neural
 advantage, decoding accuracy, brain-specific attribution, real-time operation,
 portable hardware, home-use result, or clinical utility was demonstrated.
+
+## 2026-07-16 - Loop 55 Fresh EEG Neural-Effect Research
+
+- Audited the published Brain2Qwerty overt-typing windows and targets, EEGNet's
+  compact spatial-temporal precedent, matched-control analysis, classifier
+  permutations, small-sample uncertainty, and the inherited Loop 31/35/48
+  boundaries. No S20 path or payload was accessed.
+- Replaced one vague EEG score with two ordered endpoints from the same future
+  final trials: causal pre-keypress performed-hand error and causal pre-
+  keypress 29-class performed-key keypress-aligned CER.
+- Made performed action primary and corrected intended sentence text secondary.
+  The published `[-200,+300] ms` window is now explicitly diagnostic-only
+  because it includes post-keypress execution and somatosensory feedback.
+- Added seven competing hypotheses, a grouped trial-level split recommendation,
+  twelve matched candidate/control/diagnostic conditions, exact paired final-
+  trial decisions, a ten-stage target-access order, 30 acceptance gates, and 36
+  exact refusal IDs.
+- Froze prospective ceilings of one thread/worker, at most 10,000 trainable
+  parameters per model, at most 12 fits, 45 CPU minutes, 1 GiB RSS, 64 MiB
+  generated output, zero downloads, and no language model, stream, device, or
+  hardware operation.
+- Core planning commit `f3158c7` was followed by public-status synchronization.
+  Current verification passes 24 focused Loop 55 and roadmap tests plus 9
+  public-status subtests, Ruff, JSON validation, `git diff --check`, and the
+  full local suite at 1007 passed, 3 expected skips, and 365 subtests in 31.88
+  seconds.
+- Documentation-sync commit `8efcb17` passed push CI `29473032843` and PR #33
+  CI `29473045583`; Base Python and Optional Neuro Readers passed in both.
+- Loop 53 remains the next irreversible Tier C decision. Loop 55 is Loop 54
+  dependent, experimentally `Not Started`, and unauthorized; all S20, split,
+  target, model, training, inference, scoring, and scientific-result counters
+  remain zero.
+
+Engineering capability added: NeuroDecodeKit now has a source-backed,
+machine-checkable prospective design that distinguishes causal performed-hand
+EEG evidence, causal performed-key evidence, and post-keypress task-aligned
+diagnostics before any fresh target opens.
+
+Scientific claim not established: no S20 payload, split, target, model,
+prediction, training run, score, or latency measurement was accessed or
+produced, so there is still no demonstrated EEG neural advantage or decoding
+result.

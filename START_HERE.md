@@ -99,6 +99,21 @@
    local 996-test suite with three expected skips. Loop 54 is acquisition-
    dependent and experimentally `Not Started`: no S20 content stage, split,
    model, training, inference, score, or scientific claim is authorized.
+   Then read `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md` and
+   `registries/loop55_eeg_neural_effect_research.v0.json`. Loop 55 planning
+   separates a higher-power causal performed-hand endpoint from a harder
+   causal 29-key endpoint, makes performed action primary rather than corrected
+   intended text, and keeps the published post-keypress-centered window as a
+   diagnostic only. It recommends a future grouped trial split, twelve matched
+   controls, exact final-trial inference, at most 10,000 parameters and 12
+   fits, and one-shot final target order. Current local verification passes 24
+   focused checks plus 9 public-status subtests and the full suite at 1007
+   passed with 3 expected skips. Loop 55 is still Loop 54 dependent,
+   experimentally `Not Started`,
+   and unauthorized; no S20 content, split, target, model, training, inference,
+   or score was accessed. Documentation-sync commit `8efcb17` passed push CI
+   `29473032843` and PR #33 CI `29473045583`; Base Python and Optional Neuro
+   Readers are green in both.
 12. Read `docs/LOOP_30_PRIMARY_SOURCE_RESEARCH.md` for the future loopback-only
    target-free replay inspector, nine-clock timing contract, six latency claim
    levels, 18 future gates, and 30 refusals. It is planning research only;
@@ -570,6 +585,8 @@ score occurred inside that planning snapshot. Stage B has since closed at
 Planning commit `085f341` passed push CI `29458102674` and PR #28 CI
 `29458116994`; both required jobs are green in both workflows.
 
-Loop 53 is `Preregistered; Authorization Pending`; Loops 51-52 and 54-64 remain
-`Not Started`. All current execution flags are false.
+Loop 53 is `Preregistered; Authorization Pending`. Loop 54 qualification and
+Loop 55 neural-effect planning research are complete, but both experiments
+remain `Not Started`, dependency-blocked, and unauthorized. Loops 51-52 and
+56-64 remain `Not Started`. All current execution flags are false.
 S25 remains sealed until a separate final-only zero-shot packet is complete.
