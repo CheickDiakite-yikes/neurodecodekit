@@ -41,16 +41,20 @@
    `docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md` and
    `registries/loop48_train_only_discrimination_contract.v0.json` for the
    exact Stage B 44/11 split, 20-fit, 35-inference, 41-prediction protocol.
-   Then read `docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md` and
-   `registries/loop48_stage_b_authorization_request.v0.json` for the green-
-   bound exact decision surface, then
-   `docs/LOOP_48_STAGE_B_AUTHORIZATION_DECISION.md` and
-   `registries/loop48_stage_b_authorization_decision.v0.json` for the exact
-   one-run decision. It is effective only after its own remote-green gate; no
-   implementation or protected execution exists yet. Preregistration commit
-   `0ee0ab7` passed push CI `29452286159` and PR CI `29452288520`. All 55 rows
-   were used historically, so the 11-row check is not independent confirmation
-   and Stage B is capped at E2 diagnostic evidence even if every control passes.
+   Then read `docs/LOOP_48_STAGE_B_RESULT.md` and
+   `registries/loop48_train_only_discrimination_result.v0.json` for the
+   consumed result. The primary candidate reached macro CER `0.953566` versus
+   prior `0.822045`; all six full-size causal/linear probes were finite and
+   stable but none cleared the prior rule. `H4` stable nonseparability is
+   supported, registered fixed-shift `H3` has evidence against it, and
+   `H1/H2/H5/H6` remain unresolved. Freeze commit `00215b1` passed push CI
+   `29461934145` and PR CI `29461935560` before the 11 train-check targets
+   opened once. Route `L50-R05` parks S24 acquisition for this model family.
+   All 55 rows were used historically, so this is E2 diagnostic evidence, not
+   independent validation or neural advantage; no rerun is authorized. Use
+   `docs/LOOP_48_STAGE_B_AUTHORIZATION_DECISION.md`, the authorization packet,
+   request, implementation, and hash-only freeze only to audit the
+   pre-execution order.
 8. Read `docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md` for the selected S25
    metadata candidate and every blocker that still prevents preregistration,
    download, signal/target access, or transfer evaluation.
@@ -119,10 +123,13 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 ```
 
 Tracker scope: the spreadsheet's `20` KPI is the size of the original roadmap,
-not the current loop number. Its dashboard now separately reports **Loops
-26/31/33 consumed and parked; Loop 48 artifact-only Stage A complete with F5
-descriptive phenotype and no rerun**, and its
-ninth sheet contains the separate **Loops 25-44 queue**. Loop 25 passed once
+not the current loop number. The workbook remains the last visually reviewed
+Stage A snapshot because its prior import reached 1.57 GiB peak RSS. The current
+sources of truth are `docs/NEXT_20_LOOPS_TRACKER.md` and
+`registries/next_scientific_loops.v0.json`; they report **Loops 26/31/33
+consumed and parked; Loop 48 Stage A F5 plus consumed Stage B H4 diagnostic
+with no rerun**. The workbook's ninth sheet contains the separate **Loops
+25-44 queue**. Loop 25 passed once
 at its target-free mechanics boundary and now has `execution_authorized: false`
 because no rerun is open; Loop 26 was preregistered at `881145d`, authorized at
 `1c0e52c`, and scored once after remote-green prediction freeze `54bdca9`. Its
@@ -488,13 +495,15 @@ selected `F5` output-distribution instability as the descriptive phenotype.
 The result is consumed, root cause remains unresolved, and no rerun is
 authorized. Authorization commit `5bae880` and implementation commit
 `ca21539` were each pushed and remotely green before the one execution. The
-additive H1-H6 design has now advanced to an exact Stage B preregistration: 44
-fit rows, 11 target-withheld check rows, 20 fits, 35 target-blind inferences,
-five priors, 41 frozen prediction sets, and one post-green-freeze check score.
-It changes no authorization. Because all 55 source-train rows were used by
-prior Loop 26 fits, its ceiling is E2 pipeline discrimination rather than
-independent validation or sensor-dependence confirmation. Brain-specific
-  origin remains a separate Loop 35 question.
+additive H1-H6 design then advanced through one exact Stage B: 44 fit rows, 11
+target-withheld check rows, 20 fits, 35 target-blind inferences, five priors,
+41 frozen prediction sets, and one post-green-freeze check score. The primary
+candidate lost to the prior (`0.953566` versus `0.822045` macro CER), `H4`
+stable nonseparability is supported, and fixed-shift `H3` has evidence against
+it. Because all 55 source-train rows were used by prior Loop 26 fits, the result
+is E2 pipeline discrimination rather than independent validation or sensor-
+dependence confirmation. Brain-specific origin remains a separate Loop 35
+question. Stage B is consumed with no rerun.
 
 Loop 49 planning research is complete while the experiment remains `Not
 Started`. Read `docs/LOOP_49_PRIMARY_SOURCE_RESEARCH.md` and
@@ -507,8 +516,9 @@ sentence groups for selection and requires at least 32 fit groups, with matching
 S21 selection text excluded from fit. No S24 local path or payload was opened;
 the `>=48` unique-row, channel, geometry, duration, and overlap gates remain
 unproven. There is no preregistration, acquisition request, or authorization.
-Decision 0083 places any new acquisition after the separately gated Loop 48
-Stage B.
+Decision 0083 placed any new acquisition after the separately gated Loop 48
+Stage B. The consumed result now selects `L50-R05`, which parks S24 acquisition
+for this model family.
 
 Loop 50 planning research is complete while the experiment remains `Not
 Started`. Read `docs/LOOP_50_PRIMARY_SOURCE_RESEARCH.md` and validate
@@ -517,8 +527,8 @@ grouping, five historical S21 out-of-fold folds, a 16-group S24 development
 gate, equal-person loss, one shared candidate family, ten controls, an exact
 20-update inventory, and a worst-person acceptance rule. All 31 authorization
 fields are false and no S24, S25, S21 cache, model, training, inference, or
-score occurred. Stage B remains the next protected decision; this planning
-result does not authorize it or S24.
+score occurred inside that planning snapshot. Stage B has since closed at
+`L50-R05`; no S24 operation or Loop 50 execution is authorized.
 Planning commit `085f341` passed push CI `29458102674` and PR #28 CI
 `29458116994`; both required jobs are green in both workflows.
 

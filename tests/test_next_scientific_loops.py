@@ -80,7 +80,7 @@ class NextScientificLoopsTests(unittest.TestCase):
                 45: "Complete",
                 46: "Parked; Registered Gate Failed",
                 47: "Parked; Shared Attribution Gate Failed",
-                48: "Complete; Artifact-Only F5 Phenotype",
+                48: "Complete; Stage A F5 And Stage B H4 Diagnostic",
             }.get(row["loop_id"], "Not Started")
             self.assertEqual(row["status"], expected_status)
             self.assertTrue(row["controls"])
@@ -114,11 +114,18 @@ class NextScientificLoopsTests(unittest.TestCase):
         self.assertIn("four exact committed", loop48["data_scope"])
         self.assertIn("0.016568875", loop48["future_resource_cap"])
         self.assertIn("23,429,120", loop48["future_resource_cap"])
+        self.assertIn(
+            "loop48_train_only_discrimination_result.v0.json", loop48["build_deliverable"]
+        )
+        self.assertIn("H4 stable nonseparability", loop48["build_deliverable"])
+        self.assertIn("44 source-train", loop48["data_scope"])
+        self.assertIn("11 check targets once", loop48["data_scope"])
+        self.assertIn("190.140486", loop48["future_resource_cap"])
+        self.assertIn("483,540,992", loop48["future_resource_cap"])
         self.assertIn("ca21539", loop48["authorization_boundary"])
         self.assertIn("consumed", loop48["authorization_boundary"])
-        self.assertIn(
-            "cannot inherit consumed Stage A authorization", loop48["authorization_boundary"]
-        )
+        self.assertIn("unable to inherit Stage A authorization", loop48["authorization_boundary"])
+        self.assertIn("L50-R05", loop48["kill_or_park_rule"])
         self.assertFalse(loop48["execution_authorized"])
 
     def test_s25_is_final_only_with_zero_fit_and_strict_gate(self):

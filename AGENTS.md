@@ -35,6 +35,13 @@ silently loosened.
 
 ## Immediate next task
 
+Loop 48 Stage B is now consumed at `H4` stable nonseparability, and the frozen
+`L50-R05` route parks S24 acquisition for this model family. The next allowed
+work is Tier A representation-repair research and prospective contract design
+only. Do not perform another S21 parameter update, reopen the 11 check targets,
+acquire S24, substitute another participant, open S25, or promote a claim
+without a separate exact Tier C decision.
+
 The first 20-loop roadmap is complete except for the deliberately parked Loop
 13 backend. Post-roadmap Loops 21 and 22 validate bounded synthetic causal
 replay and one tiny learned motif encoder. Loop 23 implemented the frozen
@@ -158,7 +165,7 @@ device, or hardware payload was accessed or run. Stage A is consumed; do not
 rerun it, tune from it, or promote its phenotype into a causal explanation.
 Closeout commit `6322635` passed push CI `29446438743` and PR CI `29446440355`.
 
-Future train-only Loop 48 thinking is now separated into
+Train-only Loop 48 design history is separated into
 `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md` and
 `registries/loop48_hypothesis_portfolio.v0.json`. The green five-hypothesis
 portfolio remains immutable. Additive primary-source research in
@@ -167,21 +174,30 @@ portfolio remains immutable. Additive primary-source research in
 tiny CTC recipe, adds `H6` for data quantity/sentence diversity, and separates
 the orthogonal `T1` peripheral/task-locked shortcut threat. It compares six
 coexisting hypotheses from shared evidence with sequential one-thread compute.
-The design is preserved as research history. Its Stage B questions are now
-frozen in `docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md` and
+The design is preserved as research history. Its Stage B questions were frozen
+in `docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md` and
 `registries/loop48_train_only_discrimination_contract.v0.json`: 44 fit rows,
 11 target-withheld check rows, five prefixes, three seeds, 20 fits, 35
 target-blind inferences, five priors, 41 frozen prediction sets, and 2,048 exact
 sign assignments. All 55 rows were used historically, so Stage B can reach at
-most E2 pipeline-discriminative evidence. Preregistration commit `0ee0ab7`
-passed push CI `29452286159` and PR CI `29452288520`. The separate exact request
-is prepared in `docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md` and
-`registries/loop48_stage_b_authorization_request.v0.json`. The exact maintainer
-decision is now recorded in `docs/LOOP_48_STAGE_B_AUTHORIZATION_DECISION.md` and
-`registries/loop48_stage_b_authorization_decision.v0.json`, effective only after
-that authorization-only commit is remotely green. No implementation, cache
-read, training, inference, prediction freeze, target delivery, or score exists
-yet. The immutable request remains false as the pre-decision snapshot.
+most E2 pipeline-discriminative evidence. The immutable request remains false
+as the pre-decision snapshot. Separate decision commit `8d17342` and
+`docs/LOOP_48_STAGE_B_AUTHORIZATION_DECISION.md` preserve the exact decision;
+implementation commit `1d840e3` was remotely green before protected access.
+Hash-only prediction-freeze commit `00215b1` passed push CI `29461934145` and
+PR CI `29461935560` before the same 11 check targets opened once.
+
+The consumed result is
+`registries/loop48_train_only_discrimination_result.v0.json` at SHA-256
+`ef8290eb45e755bedb2deed781e6e472aa3621c25d91a01d01626c17c96ce891`.
+The primary candidate macro CER was `0.953566` versus prior `0.822045`, a
+`-0.131522` margin. All six full-size causal and linear probes were finite and
+stable but none cleared the prior rule, supporting `H4` stable
+nonseparability. The four fixed-shift `H3` conditions have evidence against
+them; `H1/H2/H5/H6` remain unresolved. The complete signal-control conjunction
+failed. Stage B is consumed with no rerun, tuning, larger model, validation,
+source-test, session-2, S24, or S25 access authorized. The applied Loop 50
+route is `L50-R05`: park S24 acquisition for this model family.
 
 Loop 49 planning research is complete on the current branch while its
 experiment remains `Not Started`:
@@ -201,9 +217,11 @@ excludes matching S21 selection text from future fit. No S24 local path,
 payload, header, signal, MAT content, target, source hash set, derivative,
 model, or training operation was opened. The `>=48` usable-unique-row, channel,
 geometry, duration, and overlap gates remain unproven; all 25 authorization
-fields are false. Decision 0083 requires Loop 48 Stage B to close or park before
-new Loop 49 acquisition. Do not prepare or execute acquisition, substitute a
-backup, or promote a person-transfer claim from this metadata decision.
+fields are false. Decision 0083 required Loop 48 Stage B to close or park before
+new Loop 49 acquisition; Stage B has now closed at `L50-R05`, which parks S24
+acquisition for this model family. Do not prepare or execute acquisition,
+substitute a backup, or promote a person-transfer claim from this metadata
+decision.
 Planning commit `5afa61e` passed push CI `29454969710` and PR #27 CI
 `29455166081`; both required jobs are green.
 
@@ -219,13 +237,13 @@ The design freezes a global canonical-text firewall, five-fold historical S21
 out-of-fold diagnostics, one 16-group S24 development qualification, equal
 `0.5/0.5` participant loss, one shared candidate family, ten fixed conditions,
 primary seed 5001, two nonselectable stability seeds, an exact 20-update
-inventory, and a worst-person gate. No exact model is selected before Loop 48
-Stage B closes or parks. S21
+inventory, and a worst-person gate. No exact model was selected in the planning
+snapshot before Loop 48 Stage B closed. S21
 validation/source-test/session 2 stay closed, S24 remains metadata-only and
 unqualified, and S25 remains final-only. All 31 authorization fields are false;
-every S24/S25/S21-cache/model/training/inference/scoring counter is zero. Do not
-implement or execute Loop 50, acquire S24, or open S25 from this planning
-boundary.
+every S24/S25/S21-cache/model/training/inference/scoring counter is zero. The
+later `L50-R05` result parks the same-family S24 path. Do not implement or
+execute Loop 50, acquire S24, or open S25 from this planning boundary.
 Planning commit `085f341` passed push CI `29458102674` and PR #28 CI
 `29458116994`; both required jobs are green in both workflows.
 
@@ -572,20 +590,22 @@ The next research tranche is frozen in
 `registries/next_scientific_loops.v0.json`. It contains exact loop IDs 45-64 in
 five phases of four. Loop 45 is complete at its target-free mechanics boundary;
 Loops 46/47 are consumed and parked after the failed shared S21 event. Loop 48
-is complete at its consumed artifact-only `F5` boundary with no rerun. Its
-additive six-hypothesis research has an exact unauthorized Stage B
-preregistration with an E2 ceiling; no implementation or protected execution
-exists. Loop 49 planning research selects S24 session 2 block 2 from metadata
-only as the preferred development person, but the experiment remains `Not
-Started`, the `>=48` trial gate is unproven, and no path or payload opened.
+Stage A is consumed at descriptive `F5`, and its one exact Stage B is consumed
+at `H4` stable nonseparability with an E2 ceiling. Stage B's primary candidate
+lost to the prior (`0.953566` versus `0.822045` macro CER), fixed-shift `H3`
+has evidence against it, and `H1/H2/H5/H6` remain unresolved. Applied route
+`L50-R05` parks S24 acquisition for this model family. Loop 49 planning
+research selected S24 session 2 block 2 from metadata only, but the experiment
+remains `Not Started`, the `>=48` trial gate is unproven, and no S24 path or
+payload opened.
 Loop 50 planning research now freezes the text, participant, seed, control,
 metric, resource, and claim firewalls, including an exact 20-update inventory,
 while its experiment remains `Not Started`; no exact model or protected
 operation exists. Loops 51-64 are `Not Started`, every current execution flag
 is false, and every
 global authorization field is false. Do not rerun Loop 48, acquire or open S24,
-substitute a development person, or open any S25 path from a broad continuation
-request.
+substitute a development person, implement a post-outcome representation
+repair, or open any S25 path from a broad continuation request.
 
 The parallel practice track has closed RW1 and RW2 at their exact synthetic
 proof boundaries. RW3's replay/live-source-equivalence protocol is frozen at
@@ -814,10 +834,10 @@ authorization boundary.
   S21 session-1 validation, session 2, and S7 remain consumed; S25 remains
   unopened and final-only. Loops 46/47 are parked and Loop 48 completed one
   artifact-only Stage A at descriptive `F5`; its result is consumed, root cause
-  remains unresolved, and no rerun is authorized. The additive H1-H6/T1
-  discrimination map still leaves every Stage B authorization false and every
-  protected/model counter at zero. Its commit `33a14d8` passed push CI
-  `29436731383` and PR CI `29436735374`.
+  remains unresolved, and no rerun is authorized. The additive H1-H6/T1 map is
+  preserved as pre-execution history. One separately authorized Stage B is now
+  consumed at `H4` stable nonseparability; its primary lost to the prior,
+  `L50-R05` parks S24 for this model family, and no further execution is open.
 - No RW3 implementation, fixture, CLI, optional import, socket, stream, board,
   XDF operation, real-data read, target access, model run, or training run exists.
 - The ignored Loop 24 fixture and report remain outside Git. Selection seed

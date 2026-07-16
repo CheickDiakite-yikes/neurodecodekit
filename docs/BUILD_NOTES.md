@@ -4161,3 +4161,91 @@ later clean Stage B run cannot establish independent validation, neural
 advantage, brain-specific origin, useful decoding, unseen-person
 generalization, causal preprocessing, real-time behavior, EEG or device
 performance, assistive value, diagnostic value, or clinical utility.
+
+## 2026-07-15 - Loop 48 Stage B Train-Only Failure Discrimination
+
+- Implemented the exact frozen Stage B boundary at commit `1d840e3`. The
+  bounded archive reader, deterministic 44/11 source-train split, transforms,
+  tiny causal and linear probes, five priors, registered controls, hash-only
+  prediction freezer, isolated scorer, five CLI stages, and synthetic tests
+  passed push CI `29461579009` and PR CI `29461580293` before protected access.
+- The static gate passed at 41,714,499,584 free bytes in 0.956671 seconds with
+  209,305,600-byte peak RSS. It delivered no signal or target rows and
+  performed no source-cache hash pass.
+- The isolated derivative stage performed the one authorized SHA-256 pass over
+  the exact 10,632,576-byte S21 session-1 sentence cache. It delivered 44 fit
+  signal/target rows and 11 check signal rows, while delivering zero check,
+  validation, source-test, or session-2 targets. The 7,084,125-byte fit bundle
+  and 1,750,971-byte target-free check bundle were created in 0.599360 seconds
+  at 150,568,960-byte peak RSS.
+- The one target-blind execution completed 15 causal fits, three linear fits,
+  two control fits, 4,800 optimizer steps, 35 model-inference runs, five
+  train-only prior fits, and 41 private prediction sets. It took 188.584455
+  seconds for the target-blind stage and 190.140486 cumulative seconds through
+  freeze, peaking at 483,540,992 bytes RSS. Check-target deliveries and scores
+  remained zero.
+- Hash-only freeze commit `00215b1` bound all 20 fit telemetry bundles and 41
+  private prediction sets without plaintext predictions or targets. Push CI
+  `29461934145` and PR CI `29461935560` were both green before the same 11
+  train-check targets opened once for one 0.112110-second scoring event. No
+  post-check parameter update, configuration change, or rerun occurred.
+- The consumed machine result is
+  `registries/loop48_train_only_discrimination_result.v0.json`, SHA-256
+  `ef8290eb45e755bedb2deed781e6e472aa3621c25d91a01d01626c17c96ce891`,
+  with readable closeout in `docs/LOOP_48_STAGE_B_RESULT.md`. The primary
+  causal candidate reached macro CER `0.953566` versus `0.822045` for its
+  matched train-only prior, a `-0.131522` improvement. It won 2 of 11 rows and
+  lost 9 with one-sided p-value `0.980957` over all 2,048 assignments.
+- All three full-size causal and all three full-size linear fits were finite and
+  stable, but none cleared the registered prior rule. This supports `H4`,
+  stable but nonseparable representation, for this transformed historical
+  source-train slice and fixed probe family. No registered `-50/-25/+25/+50`
+  shift improved all three seeds, providing evidence against fixed-offset
+  `H3`. `H1`, `H2`, `H5`, and `H6` remain unresolved.
+- The primary beat exact-zero and timing-only components on 11/11 rows at
+  one-sided p-value `0.000488`, and beat the severe `+100` displacement on six
+  rows with five ties at p-value `0.015625`. These isolated diagnostics cannot
+  rescue the failed no-signal-prior and complete corrupted-signal conjunction;
+  sensor-signal dependence remains unavailable.
+- The frozen Loop 50 router selects `L50-R05`: park S24 acquisition for this
+  model family. S24 remains metadata-only and unopened; S25 remains sealed and
+  final-only. The next reversible work is Tier A representation-repair research
+  and contract design. Any real post-outcome model operation, protected-data
+  repair run, new participant acquisition, or sealed-target event remains Tier
+  C and requires a separate exact maintainer decision.
+- Total generated execution artifacts were 9,623,773 bytes under the 32 MiB
+  cap, maximum RSS was 483,540,992 bytes under the 1 GiB cap, and the run used
+  one thread and one worker. There were zero downloads, raw FIF/MAT reads,
+  validation or test reads, language-model, NeuroToken, RW3, stream, device, or
+  hardware operations. The model has two frames of left context and zero right
+  context, but the upstream cache is offline/noncausal and end-to-end latency
+  was not measured.
+- Local closeout acceptance passes 63 focused Stage B tests in 6.758 seconds
+  internal time and 7.39 seconds wall time at 316,719,104-byte maximum RSS. The
+  complete dependency-light suite passes 887 tests with 149 expected skips in
+  1.377 seconds internal time and 1.63 seconds wall time at 124,157,952-byte
+  maximum RSS. The complete optional-neuro suite passes 934 tests with 3
+  expected skips in 29.827 seconds internal time and 30.79 seconds wall time at
+  609,648,640-byte maximum RSS. Both complete suites add exactly nine tests over
+  their 878/925-test implementation baselines without losing a prior test.
+- Ruff lint and scoped changed-test formatting pass. Compileall, all 54 registry
+  JSON files, five Stage B CLI-help surfaces, strict prediction-freeze
+  inspection, and `git diff --check` pass. Freeze inspection confirms 20 fit
+  telemetry bundles, 41 prediction sets, zero check-target delivery, and zero
+  score at the committed pre-target boundary. None of these closeout checks
+  reran a scientific fit, inference, prediction, target delivery, or score.
+- Updated the README, start-here guide, Markdown tracker, scientific roadmap,
+  machine roadmap, handoff, agent boundary, decision journal, start prompt, and
+  this build journal. The tracked workbook remains the last reviewed Stage A
+  visual snapshot because its prior import reached 1,572,667,392-byte peak RSS;
+  its adjacent user-owned inspection sidecar was not opened, modified, staged,
+  or committed.
+
+Engineering capability added: NeuroDecodeKit now has a one-shot,
+target-firewalled train-only failure-discrimination path with exact provenance,
+resource accounting, hypothesis decisions, and a remotely green prediction
+freeze.
+
+Scientific claim not established: the run did not show neural advantage,
+brain-specific decoding, independent generalization, real-time performance, or
+portable/home EEG performance.

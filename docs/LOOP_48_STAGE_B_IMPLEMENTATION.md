@@ -2,7 +2,13 @@
 
 Date: 2026-07-15
 
-Status: **Implemented and synthetic-tested; protected execution has not started**
+Status at implementation commit `1d840e3`: **Implemented and synthetic-tested;
+protected execution has not started**
+
+Post-execution status: **Completed once and consumed.** See
+`docs/LOOP_48_STAGE_B_RESULT.md` and
+`registries/loop48_train_only_discrimination_result.v0.json`. This document
+retains the pre-access implementation boundary for audit.
 
 Registered design:
 `docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md`

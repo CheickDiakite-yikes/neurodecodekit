@@ -300,18 +300,25 @@ not a proven root cause. Authorization commit `5bae880` and implementation
 commit `ca21539` were remotely green before execution. The result is consumed;
 do not rerun, tune thresholds or seeds, read ignored/protected payloads, reopen
 targets, or increase the model.
-The future train-only portfolio in
+The train-only portfolio in
 `docs/LOOP_48_TRAIN_ONLY_HYPOTHESIS_PORTFOLIO.md` and
-`registries/loop48_hypothesis_portfolio.v0.json` is design research only. It
-preserves the green five-hypothesis starting point. The additive research in
+`registries/loop48_hypothesis_portfolio.v0.json` preserves the green
+five-hypothesis starting point. The additive research in
 `docs/LOOP_48_HYPOTHESIS_DISCRIMINATION_RESEARCH.md` and
 `registries/loop48_hypothesis_discrimination.v0.json` narrows `H1` to the exact
 fixed recipe, adds `H6` for data quantity/diversity, and routes the orthogonal
-`T1` shortcut threat to Loop 35. Physical compute stays sequential and
-one-threaded. Do not create a split, fixture, static prototype, model inventory,
-data read, or execution from a Stage A decision. Commit `33a14d8` passed push
-CI `29436731383` and PR CI `29436735374`; this qualifies only the additive
-design and authorizes nothing.
+`T1` shortcut threat to Loop 35. Its separately authorized Stage B is now
+complete and consumed. Read `docs/LOOP_48_STAGE_B_RESULT.md`,
+`registries/loop48_stage_b_prediction_freeze.v0.json`, and
+`registries/loop48_train_only_discrimination_result.v0.json`. The primary
+candidate reached macro CER `0.953566` versus prior `0.822045`. All six full-
+size causal and linear probes were finite and stable but none cleared its prior,
+supporting `H4` stable nonseparability. Fixed-shift `H3` has evidence against
+it; `H1/H2/H5/H6` remain unresolved. Freeze commit `00215b1` passed both CI
+workflows before one 11-target score. Applied route `L50-R05` parks S24
+acquisition for this model family. Do not rerun Stage B, tune from the check
+rows, acquire S24, substitute a participant, open S25, or implement a
+post-outcome repair from a broad continuation request.
 
 Loop 27 is also review-only planning evidence. Do not turn the selected S25
 paths, official hashes, local MAT presence, 1 GiB cap, or roadmap status into a

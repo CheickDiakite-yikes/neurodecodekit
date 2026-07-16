@@ -39,7 +39,7 @@ class Loop48StageBImplementationTests(unittest.TestCase):
             self.assertIn(f"def {function}(", self.gate)
 
     def test_doc_discloses_inventory_gates_resources_and_claim_ceiling(self):
-        normalized = self.doc.casefold()
+        normalized = " ".join(self.doc.casefold().split())
         for phrase in (
             "implemented and synthetic-tested; protected execution has not started",
             "44/11",

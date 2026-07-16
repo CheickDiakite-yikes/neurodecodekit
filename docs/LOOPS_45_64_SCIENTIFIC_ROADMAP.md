@@ -95,16 +95,16 @@ sensor-signal dependence, not absolute brain origin.
 
 ### Loop 48 - Negative-Result Failure Localization
 
-**Status: complete at the consumed artifact-only Stage A boundary.** One
+**Status: complete after consumed Stage A and one consumed Stage B
+diagnostic.** One
 hash-bound execution read four exact committed aggregate JSON artifacts totaling
 155,545 bytes and selected descriptive `F5` seed-sensitive output-distribution
 instability. It ran in `0.016568875` seconds, peaked at 23,429,120 bytes RSS,
-and emitted 10,643 bytes. That is not a proven root cause. No train-array
-diagnostic exists, and no rerun is authorized. Authorization commit `5bae880`
+and emitted 10,643 bytes. That is not a proven root cause. Authorization commit `5bae880`
 and implementation commit `ca21539` were each pushed and remotely green before
 the single execution.
 
-Stage B is now frozen in
+Stage B was frozen in
 `docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md` and
 `registries/loop48_train_only_discrimination_contract.v0.json`. The protocol
 uses a target-independent 44-fit/11-check split inside the 55 source-train
@@ -115,17 +115,23 @@ assignments. Predictions and telemetry must become remotely green before one
 fits, the check rows are not historically fresh; the exact Stage B ceiling is
 E2 pipeline-discriminative evidence, not the earlier design-level E3 ceiling.
 Raw quality, causal preprocessing, peripheral origin, independent validation,
-and every generalization claim remain unavailable. The protocol is
-preregistered and now has one exact separately recorded authorization in
-`docs/LOOP_48_STAGE_B_AUTHORIZATION_DECISION.md` and
-`registries/loop48_stage_b_authorization_decision.v0.json`. It becomes effective
-only after that authorization-only commit is remotely green. No implementation
-or protected execution exists yet, and Stage A scope remains nontransitive.
-Preregistration commit `0ee0ab7` passed push CI `29452286159` and PR CI
-`29452288520`. One hash-bound decision surface is prepared in
-`docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md` and
-`registries/loop48_stage_b_authorization_request.v0.json`; those immutable
-pre-decision snapshots retain false authorization fields.
+and every generalization claim remain unavailable. Stage B received one exact
+separate authorization at commit `8d17342`; implementation commit `1d840e3`
+passed push CI `29461579009` and PR CI `29461580293` before protected access.
+The target-blind run completed 20 fits, 4,800 optimizer steps, 35 model
+inferences, five priors, and 41 prediction sets. Hash-only freeze commit
+`00215b1` passed push CI `29461934145` and PR CI `29461935560` before the same
+11 check targets opened once.
+
+The primary candidate reached macro CER `0.953566` versus prior `0.822045`, a
+`-0.131522` margin. All six full-size causal and linear probes were finite and
+stable, but none cleared the prior rule. Stage B therefore supports `H4`
+stable nonseparability and records evidence against the four fixed-shift `H3`
+conditions; `H1`, `H2`, `H5`, and `H6` remain unresolved. The full intact-
+signal conjunction failed. The Loop 50 router selects `L50-R05`, parking S24
+acquisition for this model family. The result is consumed at E2 with no rerun,
+post-check tuning, or claim upgrade. See `docs/LOOP_48_STAGE_B_RESULT.md` and
+`registries/loop48_train_only_discrimination_result.v0.json`.
 
 The consumed Stage A verified hashes, reproduced aggregate blank/CER summaries,
 applied the ordered tree, and emitted one target-free aggregate report. Do not
@@ -154,7 +160,9 @@ across people, and any S21 source-train row matching future S24 selection text
 must be excluded from fit. The 48-row floor, channels, geometry, duration,
 signal, targets, and source-text overlap remain unavailable, so Loop 49 is
 still `Not Started`, unqualified, unpreregistered, and unauthorized. Decision
-0083 keeps any new acquisition after the separately gated Loop 48 Stage B.
+0083 kept any new acquisition after the separately gated Loop 48 Stage B. The
+consumed Stage B now applies `L50-R05`, so S24 acquisition is parked for this
+model family.
 Planning commit `5afa61e` passed push CI `29454969710` and PR #27 CI
 `29455166081`; both required jobs are green.
 
@@ -182,10 +190,11 @@ replace the primary. S24 selection remains development evidence, S21 remains
 historically used, and S25 remains the one-time final-only person.
 
 Loop 50 is still `Not Started`, unpreregistered, and unauthorized. Loop 48
-Stage B must first close or park and route the acquisition decision; then S24
-must pass separately authorized acquisition, header, redacted trial, split,
-channel, geometry, and `>=48` unique-group gates. All 31 authorization fields
-are false and every protected/model/training/scoring counter is zero.
+Stage B has closed at `L50-R05`, which parks this same-family S24 acquisition
+path. Any future representation repair must be separately preregistered before
+another intake decision can be considered. All 31 authorization fields in the
+planning snapshot remain false and every protected/model/training/scoring
+counter in that snapshot is zero.
 Planning commit `085f341` passed push CI `29458102674` and PR #28 CI
 `29458116994`, with both required jobs green in both workflows.
 
@@ -334,12 +343,13 @@ the machine registry.
 ## Authorization Boundary
 
 This document is a research roadmap. Loop 45 is complete at its target-free
-mechanics boundary; Loops 46/47 are consumed and parked; Loop 48 is complete at
-its consumed artifact-only `F5` boundary with no rerun, while its H1-H6
-discrimination map is additive design research only; and Loops 49-64 are `Not Started`.
-Every current
+mechanics boundary; Loops 46/47 are consumed and parked; Loop 48 Stage A is
+consumed at descriptive `F5`, and Stage B is consumed at `H4` stable
+nonseparability with `L50-R05` parking S24 for this model family. Loops 49-64
+remain `Not Started`. Every current
 `execution_authorized` flag and every global authorization field is false. The
-roadmap does not authorize a Loop 45 rerun, Loop 46/47 rerun, Loop 48 rerun, any real-data read or
-download, training, target opening, S25 access, EEG acquisition, stream,
-device, participant contact, home recording, external outreach, tag, release,
-archive, DOI, or scientific claim.
+roadmap does not authorize a Loop 45 rerun, Loop 46/47 rerun, Loop 48 rerun,
+representation-repair training, any new real-data read or download, target
+opening, S24/S25 access, EEG acquisition, stream, device, participant contact,
+home recording, external outreach, tag, release, archive, DOI, or scientific
+claim.

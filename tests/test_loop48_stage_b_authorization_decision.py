@@ -195,7 +195,7 @@ class Loop48StageBAuthorizationDecisionTests(unittest.TestCase):
             else:
                 self.assertEqual(value, 0, key)
 
-    def test_claim_ceiling_and_public_status_remain_pre_execution(self):
+    def test_claim_ceiling_and_public_status_preserve_history_and_result(self):
         claim = self.decision["claim_boundary"]
         self.assertEqual(claim["maximum_evidence_level"], "E2_pipeline_discriminative")
         unavailable = claim["scientific_claim_not_established"]
@@ -210,11 +210,16 @@ class Loop48StageBAuthorizationDecisionTests(unittest.TestCase):
         ):
             self.assertIn(term, unavailable)
 
+        self.assertIn(
+            "no implementation",
+            " ".join(DOC_PATH.read_text(encoding="utf-8").lower().split()),
+        )
         for path in PUBLIC_PATHS:
             content = path.read_text(encoding="utf-8")
             with self.subTest(path=path):
                 self.assertIn("LOOP_48_STAGE_B_AUTHORIZATION_DECISION.md", content)
-                self.assertIn("no implementation", " ".join(content.lower().split()))
+                self.assertIn("loop48_train_only_discrimination_result.v0.json", content)
+                self.assertIn("no rerun", " ".join(content.lower().split()))
 
 
 if __name__ == "__main__":

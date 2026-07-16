@@ -43,10 +43,10 @@ irreversible Tier C events.
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
 | Full-path causality gate | Loop 25 v1 passed a dedicated causal anti-alias audit, 65,537 response points, 23 alias probes, 168 schedule checks, 240 resume checks, and 72 future-mutation controls across 24 target-free items | The exact 1000-to-100 Hz path is mechanically causal with zero right context; this is synthetic mechanics evidence, not proof that neural information survives |
 | Consumed S21 validation | The registered 2,908-parameter candidate reached macro CER `0.938177`; the train-only no-signal prior reached `0.751235`, so the candidate was worse by `0.186942` | Loop 26 is parked after one consumed six-target event; this is a clear negative result, not neural advantage |
-| Failure-localization result | The one-shot artifact-only pass reproduced `99.3477%` primary blank, all 6/6 unstable fixed-prefix groups, and all 3/3 size-55 seeds worse than the prior | Loop 48 selected descriptive `F5` output-distribution instability in `0.0166` sec and 23.4 MB RSS; root cause remains unresolved and no rerun is authorized |
-| Preregistered failure discrimination | A deterministic 44-fit/11-check split, five nested sizes, three fixed seeds, 20 fits, 35 target-blind inferences, five priors, 41 frozen prediction sets, and 2,048 exact sign assignments now bind six failure hypotheses | The preregistration and exact request are green-bound but unauthorized; because all 55 rows were used historically, the ceiling is E2 diagnostic evidence, not independent validation or neural advantage |
+| Artifact-only failure localization | The one-shot Stage A pass reproduced `99.3477%` primary blank, all 6/6 unstable fixed-prefix groups, and all 3/3 size-55 seeds worse than the prior | Loop 48 selected descriptive `F5` output-distribution instability in `0.0166` sec and 23.4 MB RSS; that phenotype is not a proven root cause |
+| Train-only failure discrimination | The consumed Stage B primary reached macro CER `0.953566` versus `0.822045` for its train-only prior; all six full-size causal/linear fits were finite and stable, but none cleared the prior | `H4` stable nonseparability is supported and fixed timing-offset `H3` has evidence against it; the exact `L50-R05` route parks S24 acquisition for this model family, with no neural advantage or rerun |
 | Development-person intake planning | Loop 49 metadata research selects S24 session 2 block 2: one MEG FIF plus one protected MAT log, exactly `1,048,579,727` bytes; a future text-grouped split reserves 16 unique sentence groups for selection and requires at least 32 fit groups | S24 avoids the S1/S18 alias and preserves S25 final-only, but no S24 path or payload was opened and the `>=48` usable-row, channel, geometry, and overlap gates are unproven; Loop 49 remains `Not Started` |
-| Multi-source encoder planning | Loop 50 research freezes global text grouping, five-fold historical S21 out-of-fold diagnostics, one 16-group S24 development gate, equal-person loss, ten fixed conditions, and an exact 20-update inventory led by seed `5001` | Two stability seeds cannot replace the primary, and pooled gain cannot rescue a failed person; Loop 50 remains `Not Started`, with Stage B, S24 qualification, model selection, training, scoring, and every scientific claim unavailable |
+| Multi-source encoder planning | Loop 50 research freezes global text grouping, five-fold historical S21 out-of-fold diagnostics, one 16-group S24 development gate, equal-person loss, ten fixed conditions, and an exact 20-update inventory led by seed `5001` | Stage B route `L50-R05` now parks the same-family S24 path; Loop 50 remains `Not Started`, with S24 qualification, model selection, training, scoring, and every scientific claim unavailable |
 | Fresh transfer candidate | Loop 27 metadata research selects S25 session 2 block 2: one MEG FIF plus one protected MAT log, exactly 1,009,939,983 bytes under 1 GiB | S25 is not downloaded or qualified; preregistration waits for the causal source model, controls, and target isolation |
 | Transfer decision rule | Loop 28 research separates T0-T3 evidence and recommends a strict S25 T2 zero-shot gate: zero target fit, at least 48 final rows, at least 0.05 macro-CER improvement, 65,535 paired swaps plus observed, and strict corruption-control wins | The experiment is `Not Started`; this resolves one planning dependency without authorizing S25, a model run, calibration, or final access |
 | Portable sensing decision | Loop 29 research separates cryogenic MEG, partner/lab OPM-MEG, local-first scalp EEG, and non-neural controls through 15 requirements and six qualification levels | Planning research is complete while the experiment is `Not Started`; no device, download, stream, hardware session, or portable decoding result exists |
@@ -74,11 +74,10 @@ target-free mechanics boundary. Loops 46 and 47 are now parked after the one
 registered S21 validation event failed its primary and attribution gates. Loop
 48 completed one post-outcome artifact-only Stage A over four exact committed
 JSON artifacts. The frozen eight-class tree selected descriptive `F5`
-output-distribution instability; the 10,643-byte result is consumed, root cause
-remains unresolved, and no rerun is authorized. All current execution flags
-are false because no execution is presently open.
+output-distribution instability; the 10,643-byte result is consumed and is not
+a proven root cause.
 
-The separate Stage B protocol is now frozen in
+The separate Stage B protocol was frozen in
 `docs/LOOP_48_TRAIN_ONLY_DISCRIMINATION_PREREGISTRATION.md` and
 `registries/loop48_train_only_discrimination_contract.v0.json`. It starts from
 the immutable five-hypothesis portfolio and additive H1-H6/T1 research, then
@@ -86,17 +85,22 @@ binds a deterministic 44-fit/11-check source-train split, exact model/control
 inventory, prediction-before-target order, paired statistics, resource caps,
 and stop rules. All 55 rows were used by earlier fits, so the new check split
 is prospective only inside this execution; Stage B can reach at most E2
-diagnostic evidence. The maintainer's exact one-run authorization is recorded
-in `docs/LOOP_48_STAGE_B_AUTHORIZATION_DECISION.md` and
-`registries/loop48_stage_b_authorization_decision.v0.json`, effective only after
-that decision commit is remotely green. No implementation, protected read,
-training, inference, check-target delivery, scoring, or run exists yet.
-Preregistration commit
-`0ee0ab7` passed push CI `29452286159` and PR CI `29452288520`; the exact
-hash-bound decision surface is now prepared in
-`docs/LOOP_48_STAGE_B_AUTHORIZATION_PACKET.md` and
-`registries/loop48_stage_b_authorization_request.v0.json` with every
-authorization flag false as an immutable pre-decision snapshot.
+diagnostic evidence. The exact decision at `8d17342` and implementation at
+`1d840e3` were separately pushed and remotely green before protected access.
+The target-blind run then completed 20 fits, 4,800 optimizer steps, 35 model
+inferences, five priors, and 41 prediction sets. Hash-only freeze commit
+`00215b1` passed push CI `29461934145` and PR CI `29461935560` before the same
+11 train-check targets opened once.
+
+The consumed result in
+`registries/loop48_train_only_discrimination_result.v0.json` supports `H4`,
+stable but nonseparable representation, and records evidence against `H3`, the
+four registered fixed timing offsets. The primary candidate reached macro CER
+`0.953566` versus `0.822045` for its train-only prior, a `-0.131522` margin.
+`H1`, `H2`, `H5`, and `H6` remain unresolved. The frozen Loop 50 router selects
+`L50-R05`, so S24 acquisition is parked for this model family. Stage B is
+consumed, no rerun is open, S24 remains metadata-only, and S25 remains sealed.
+See `docs/LOOP_48_STAGE_B_RESULT.md`.
 
 Loop 49 planning research now selects S24 session 2 block 2 as the preferred
 permanently development-only participant from pinned public metadata. The exact
@@ -124,10 +128,10 @@ the worst-person margin to pass. Primary seed `5001` cannot be replaced by the
 two stability seeds. Five pooled out-of-fold fits, three pooled final fits, six
 linear fits, and six S21-only fits bound the recommendation to 20 parameter-
 update runs; the four-run gap below the absolute cap is not rerun permission.
-Pooled gain cannot rescue a failed person. All 31
-authorization fields and all protected/model counters remain zero; Stage B must
-close or park before S24 acquisition can even be prepared, and S25 stays
-final-only.
+Pooled gain cannot rescue a failed person. Stage B has now closed at route
+`L50-R05`: stable nonseparability parks S24 acquisition for this model family.
+The Loop 50 planning snapshot still correctly preserves 31 false authorization
+fields and zero protected/model counters; no S24 or S25 operation is open.
 Planning commit `085f341` passed push CI `29458102674` and PR #28 CI
 `29458116994`, with Base Python and Optional Neuro Readers green in both.
 
@@ -164,7 +168,7 @@ negative result and S25 is never repurposed for calibration.
 | Causal preprocessing v1 | 4 anti-alias and 9 total SOS sections; 65,537 response points; 23/23 alias probes; 24/24 target-free items; 168 schedules; 240 resumes; 72 mutation controls; 0 protected reads | completed target-free synthetic mechanics | Establishes one strict, resumable 1000-to-100 Hz causal path with zero right context while leaving retained neural information and decoding performance unproven |
 | Loop 26/31/33 shared validation gate | 55/6/5 source split; 2,908/2,884-parameter models; 21 fits; 24 target-blind inferences; six priors; 31 frozen prediction sets; one post-freeze six-target score; candidate/prior macro CER `0.938177/0.751235` | consumed negative result; all three gates parked; no rerun | Proves the target firewall and bounded research runtime work while showing this exact predictive design does not beat an honest no-signal baseline |
 | Loop 48 artifact-only failure localization | 4 exact committed JSON inputs; 155,545 input bytes; 18 blank fractions; 6 fixed-prefix ranges; `F5`; 0.016568875 sec; 23,429,120-byte peak RSS; 10,643 output bytes; 0 protected/model/training operations | consumed post-outcome descriptive result; no rerun | Reproduces the failure phenotype mechanically while keeping causal root cause, neural advantage, and every decoding or device claim explicitly unavailable |
-| Loop 48 Stage B preregistration | 44 fit / 11 check rows; prefixes `8,16,24,32,44`; seeds `4801-4803`; 20 fits; 35 target-blind inferences; 5 priors; 41 frozen sets; 2,048 exact sign assignments; 1 thread; 32 MiB cap | exact authorization recorded pending its remote-green gate; no implementation or protected read | Converts six competing failure explanations into one falsifiable diagnostic while correcting the ceiling from E3 to E2 because the rows are not historically fresh |
+| Loop 48 Stage B failure discrimination | 44 fit / 11 check rows; prefixes `8,16,24,32,44`; seeds `4801-4803`; 20 fits; 4,800 steps; 35 target-blind inferences; 5 priors; 41 frozen sets; one post-freeze 11-target score; candidate/prior macro CER `0.953566/0.822045` | consumed E2 diagnostic; `H4` supported, `H3` evidence against, `L50-R05` parks S24 for this family; no rerun | Distinguishes stable nonseparability from a simple fixed timing offset while preserving the negative neural result and refusing independent-validation or neural-advantage wording |
 | Loop 49 development-person boundary | 396 pinned metadata rows; S24 session 2 block 2; 2 exact files; 1,048,579,727 bytes; 293,597,553-byte cap margin; 16 future selection groups; 32 minimum fit groups; 25 false authorization fields | metadata research only; experiment `Not Started` | Creates a clean development-person path without consuming final-only S25, while keeping trial count, channels, geometry, targets, signal, models, and transfer claims closed |
 | Loop 50 multi-source research boundary | 6 primary sources; 5 S21 out-of-fold folds; 16 future S24 selection groups; 10 fixed conditions; 20 parameter-update runs; seeds `5001-5003`; 30 refusals; 31 false authorization fields | planning research only; experiment `Not Started` | Defines a text-leakage-resistant, participant-balanced, worst-person-gated development experiment while keeping S24/S25 payloads, model choice, training, scoring, and claims closed |
 | Loop 27 fresh-holdout boundary | 315 pinned MEG metadata entries; 23 strict single-FIF/log pairs; 16 eligible; S25 selected at 1,009,939,983 bytes; S23 excluded; 18 false authorization fields | metadata research only | Finds the smallest honest same-modality transfer candidate while keeping its local MAT payload, remote FIF, targets, and backups sealed |
@@ -185,7 +189,7 @@ negative result and S25 is never repurposed for calibration.
 | Loop 42 named-device boundary | OpenBCI Cyton base 8-channel USB-radio; Q0 only; 28 identity fields; 16 packet fields; 7 timing observables; 10 anomalies; 30 fixtures; 4 stages; 34 gates; 46 refusals; 45 false authorization fields | planning research only; no purchase, SDK, serial read, board connection, participant, recording, or device result exists | Makes a future local-device mechanics test exact while refusing to turn host timestamps, local files, connectivity, or eight channels into latency, privacy, EEG-quality, or text-decoding claims |
 | Loop 43 independent-reproduction boundary | 7 qualification levels; 16 independence fields; 28 packet fields; 34 submission fields; 8 comparison classes; 12 discrepancy classes; 32 fixtures; 4 stages; 36 gates; 48 refusals; 48 false authorization fields | planning research only; no packet, oracle, outreach, contributor, submission, adjudication, archive, or release exists | Defines how one future external environment can reproduce a released target-free software artifact without inflating that result into scientific replication, neural advantage, or population generalization |
 | Loop 44 claim-release matrix | 16 claims; 7 evidence levels; 5 model cards; 4 dataset cards; 14 gates; 8 risks; 0 tag/release/DOI operations | artifact-only review complete; engineering release held; scientific release parked | Makes every public claim traceable to cohort, task, split, comparator, uncertainty, resources, access, privacy, license, and evidence while preserving negative results |
-| Test and release surface | 86 focused Loop 48 tests plus 5 autonomy-charter invariants; local dependency-light suite 781 tests with 142 expected skips; local optional-neuro suite 828 tests with 3 expected skips | Authorization `5bae880`, implementation `ca21539`, and closeout `6322635` each passed push and PR CI; closeout runs were `29446438743` / `29446440355` | Makes the consumed negative result, research contracts, target isolation, freeze binding, access order, tamper checks, and authorization boundaries executable and reviewable without hiding environment-specific timing evidence |
+| Current Loop 48 Stage B verification | 63 focused Stage B tests; complete dependency-light suite 887 tests with 149 expected skips; complete optional-neuro suite 934 tests with 3 expected skips | Authorization `8d17342`, implementation `1d840e3`, and hash-only freeze `00215b1` passed both push and PR CI before their protected-access gates; local closeout adds exactly 9 tests over the implementation baseline | Makes one-shot access order, target isolation, freeze binding, exact operation counts, hypothesis rules, outcome routing, tamper checks, and the no-rerun boundary executable and reviewable |
 
 ### Real-Data Scientific Scorecard
 
@@ -195,6 +199,7 @@ negative result and S25 is never repurposed for calibration.
 | S21 session-2 same-person transfer | CER `0.9179` | CER `0.7755` | Neural model is materially worse; session is consumed |
 | S7 EEG within-session key events | exact accuracy `0.91%` | exact accuracy `12.27%` | Neural template is materially worse; EEG bridge is mechanics only |
 | S21 session-1 reserved six-sentence gate | macro CER `0.938177` | macro CER `0.751235` | Fixed causal candidate is worse by `0.186942`; Loops 26/31/33 are consumed and parked |
+| S21 source-train 11-row diagnostic | macro CER `0.953566` | macro CER `0.822045` | Post-outcome Stage B supports stable nonseparability for this model family; these historically used rows are not fresh validation |
 
 **Scientific headline:** the real MEG and EEG evaluations run so far do not
 show a reliable neural advantage. That negative result is preserved beside the
@@ -230,6 +235,7 @@ engineering wins, not hidden behind synthetic accuracy.
 | Loop 48 contract plus roadmap invariants | 0.009 sec internal | not separately measured | 25 tests; 4 exact aggregate artifacts, 8 ordered classes, 17 unavailable root-cause fields, 30 refusals, and every execution authorization false |
 | Loop 48 hypothesis-discrimination invariants | 0.004 sec internal | not separately measured | 10 tests; 6 unresolved hypotheses, 1 orthogonal shortcut threat, 5 evidence levels, 6 sequential stages, 5 public sources, 15 false authorizations, and zero protected/model operations |
 | Loop 48 artifact-only Stage A | 0.016568875 sec internal / 0.38 sec wall | 23,429,120 bytes internal / 23,560,192 bytes external | 155,545 input bytes; 10,643-byte aggregate report; `F5`; 0 model, training, target, protected, network, stream, device, or hardware operations |
+| Loop 48 train-only Stage B | 190.140486 sec through prediction freeze; 0.112110 sec scoring | 483,540,992 bytes maximum | 20 fits; 4,800 steps; 35 inferences; 41 frozen sets; 9,623,773 generated bytes; one 10,632,576-byte cache hash pass; one post-freeze target delivery; no rerun |
 | Loop 49 metadata-only candidate pass | 3.51 sec wall | 62,685,184 bytes | 396 pinned metadata rows; exact 1,048,579,727-byte future S24 bundle; 0 payload downloads, local candidate stats, real reads, targets, derivatives, models, training, predictions, or scores |
 | Loop 44 plus Loops 45-64 invariants | 0.06 sec wall | 18,546,688 bytes | 24 tests; 16 claim cards, 20 false roadmap execution flags, and 9 false global authorizations |
 | Loop 28 public-source research | external interactive runtime/RSS unavailable | unavailable by tool contract | 10 web operations, 1 GitHub metadata call, zero code/data payload bytes |
@@ -339,6 +345,17 @@ Read this before interpreting any number in the repository.
   The primary, attribution-conjunction, and scaling gates failed. The event is
   consumed, all three loops are parked, and no rerun or post-target tuning is
   authorized. See `docs/LOOP_26_SHARED_VALIDATION_RESULT.md`.
+- **Loop 48 Stage B failure discrimination:** one exact train-only execution
+  split the historically used 55 source-train rows into 44 fit and 11
+  target-withheld check rows, froze 41 prediction sets at remotely green commit
+  `00215b1`, then scored the same 11 targets once. The primary candidate reached
+  macro CER `0.953566` versus prior `0.822045`. All six full-size causal and
+  linear fits were finite and stable but lost their prior rule, supporting
+  `H4` stable nonseparability. None of four fixed timing offsets improved all
+  three seeds, providing evidence against registered `H3`. The complete
+  signal-control conjunction failed, so no neural advantage or sensor-signal
+  dependence is established. Route `L50-R05` parks S24 acquisition for this
+  model family. Stage B is consumed with no rerun.
 - **Loop 27 planning research:** pinned official metadata selects S25 session 2
   block 2 as the smallest eligible clean MEG candidate after excluding observed
   S21 identity, consumed S7, and the official S23 metallic-implant case. Exact
@@ -496,6 +513,11 @@ Read this before interpreting any number in the repository.
 - Loop 31's consumed matrix failed its complete conjunction. Individual wins
   over zero and timing controls do not establish sensor-signal dependence;
   language gain, Neuro Token gain, and brain-specific origin remain unavailable.
+- Loop 48 Stage B localizes the current failure to stable nonseparability for
+  the registered causal and linear probe families, not to one of the four fixed
+  timing offsets. The candidate still loses to the train-only prior, the rows
+  are historically used development data, raw signal quality remains
+  unresolved, and the result cannot be called validation or neural advantage.
 - Loop 32 defines the evidence needed for honest one-person calibration, not a
   calibrated result. The 32-parameter adapter is a planning recommendation,
   unlabeled adaptation remains transductive rather than zero-shot, and one
@@ -1091,7 +1113,7 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/BUILD_NOTES.md](docs/BUILD_NOTES.md) | chronological measured build journal |
 | [docs/DECISIONS.md](docs/DECISIONS.md) | consequential architecture and research decisions |
 | [docs/NEXT_20_LOOPS_TRACKER.md](docs/NEXT_20_LOOPS_TRACKER.md) | original 20-loop tracker, current post-roadmap gate, and planning-only Loops 25-44 summary |
-| [docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx](docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx) | ten-sheet working tracker with separate original-roadmap, current-gate, practice-track, Loops 25-44, and Loops 45-64 views |
+| [docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx](docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx) | ten-sheet visual tracker preserved at the last reviewed Stage A snapshot; use the Markdown tracker and machine roadmap for the current Stage B result because a prior workbook import reached 1.57 GiB peak RSS |
 | [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) | closed/current post-NeuroToken gates plus links to the next tranche |
 | [docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md](docs/NEXT_20_LOOPS_PRIMARY_SOURCE_RESEARCH.md) | Brain2Qwerty, MNE, BIDS, MOABB, LSL, privacy, uncertainty, and edge-runtime research behind Loops 25-44 |
 | [docs/LOOPS_25_44_ROADMAP.md](docs/LOOPS_25_44_ROADMAP.md) | detailed goals, controls, metrics, acceptance gates, stop rules, dependencies, caps, and authorization boundaries for the next 20 loops |
@@ -1121,6 +1143,10 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/loop48_stage_b_authorization_request.v0.json](registries/loop48_stage_b_authorization_request.v0.json) | request bound to green preregistration commit `0ee0ab7` and both CI runs; no implementation, protected access, or execution is authorized |
 | [docs/LOOP_48_STAGE_B_AUTHORIZATION_DECISION.md](docs/LOOP_48_STAGE_B_AUTHORIZATION_DECISION.md) | exact one-run maintainer decision, ordered three-green-gate sequence, resource boundary, refusals, and E2 claim ceiling |
 | [registries/loop48_stage_b_authorization_decision.v0.json](registries/loop48_stage_b_authorization_decision.v0.json) | machine-readable Stage B authorization with exact counts, conditional target delivery, immutable request bindings, and zero pre-implementation counters |
+| [docs/LOOP_48_STAGE_B_IMPLEMENTATION.md](docs/LOOP_48_STAGE_B_IMPLEMENTATION.md) | bounded reader, deterministic transforms, exact tiny models, private prediction freezer, isolated scorer, CLI stages, and pre-access qualification evidence |
+| [registries/loop48_stage_b_prediction_freeze.v0.json](registries/loop48_stage_b_prediction_freeze.v0.json) | remotely qualified hash-only record for 20 fit telemetry bundles and 41 target-blind prediction sets, with zero check-target delivery or score |
+| [docs/LOOP_48_STAGE_B_RESULT.md](docs/LOOP_48_STAGE_B_RESULT.md) | one-shot H1-H6 verdict, candidate/prior and control results, exact access/resource ledger, `L50-R05` route, and no-rerun claim boundary |
+| [registries/loop48_train_only_discrimination_result.v0.json](registries/loop48_train_only_discrimination_result.v0.json) | consumed 11-row train-check diagnostic supporting `H4`, recording evidence against fixed-shift `H3`, and preserving the E2 ceiling without plaintext targets or predictions |
 | [docs/LOOP_49_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_49_PRIMARY_SOURCE_RESEARCH.md) | S24 development-person metadata decision, clean-identity tradeoff, exact bytes/hashes, text-group split recommendation, access order, and claim ceiling |
 | [registries/loop49_research_boundary.v0.json](registries/loop49_research_boundary.v0.json) | machine-readable S24 selection, 25 false authorization fields, zero payload/model counters, `>=48` blocker, and permanent development-only role |
 | [docs/LOOP_50_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_50_PRIMARY_SOURCE_RESEARCH.md) | primary-source multi-person design, global text firewall, historical S21 out-of-fold protocol, S24 development gate, controls, resources, and claim ceiling |
