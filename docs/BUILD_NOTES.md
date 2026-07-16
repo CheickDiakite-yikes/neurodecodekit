@@ -4234,6 +4234,11 @@ performance, assistive value, diagnostic value, or clinical utility.
   telemetry bundles, 41 prediction sets, zero check-target delivery, and zero
   score at the committed pre-target boundary. None of these closeout checks
   reran a scientific fit, inference, prediction, target delivery, or score.
+- Result closeout commit `ad4410cfe41ba250c737c6345c83098906029479`
+  passed push CI `29464527230` and PR CI `29464529524`. Base Python and Optional
+  Neuro Readers were green in both workflows; the only annotations were
+  GitHub-hosted runner notices that Node.js 20 actions are being forced to
+  Node.js 24, not repository test or lint failures.
 - Updated the README, start-here guide, Markdown tracker, scientific roadmap,
   machine roadmap, handoff, agent boundary, decision journal, start prompt, and
   this build journal. The tracked workbook remains the last reviewed Stage A

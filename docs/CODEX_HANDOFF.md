@@ -1306,4 +1306,6 @@ maximum RSS. The complete optional-neuro suite passes 934 tests with 3 expected
 skips in 29.827 seconds internal time and 30.79 seconds wall time at
 609,648,640-byte maximum RSS. Both complete suites add exactly nine result and
 closeout invariants over their 878/925-test implementation baselines without
-losing a prior test.
+losing a prior test. Result closeout commit `ad4410c` passed push CI
+`29464527230` and PR CI `29464529524`, with Base Python and Optional Neuro
+Readers green in both workflows.

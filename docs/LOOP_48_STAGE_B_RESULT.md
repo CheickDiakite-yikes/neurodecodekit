@@ -37,6 +37,9 @@ prospective-within-execution 44/11 split was created.
 | Freeze push CI | `29461934145`, green before check-target delivery |
 | Freeze PR CI | `29461935560`, green before check-target delivery |
 | Consumed result | `registries/loop48_train_only_discrimination_result.v0.json`, SHA-256 `ef8290eb45e755bedb2deed781e6e472aa3621c25d91a01d01626c17c96ce891` |
+| Result closeout | commit `ad4410cfe41ba250c737c6345c83098906029479` |
+| Result push CI | `29464527230`, green |
+| Result PR CI | `29464529524`, green |
 
 The prediction-freeze record contains hashes and fit telemetry, not plaintext
 check predictions, targets, or scores. The same 11 check targets opened once
