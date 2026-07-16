@@ -436,7 +436,9 @@ Read this before interpreting any number in the repository.
   are target-bearing, MNE is forbidden from the VHDR-only stage, and exact
   Loop 55 split counts remain intentionally unfrozen until the target-blind
   usable-trial count exists. Loop 53 must complete first; no Loop 54 real stage
-  or scientific result is authorized.
+  or scientific result is authorized. Documentation-sync commit `b6785d7`
+  passed push CI `29471589279` and PR #32 CI `29471598364`, with Base Python
+  and Optional Neuro Readers green in both workflows.
 - **Loop 30 planning research:** the future product is a loopback-only target-
   free replay inspector. The boundary separates artifact, synthetic, recorded,
   and live source modes; freezes a 30-field trace, nine clocks, six latency

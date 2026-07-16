@@ -20,6 +20,8 @@
 > pushed, and remotely green. No S20 local stat/hash, header, marker, signal,
 > MAT, target, split, model, training, inference, score, or scientific result
 > occurred. The unrelated tracker inspection NDJSON remains untouched.
+> Documentation-sync commit `b6785d7` passed push CI `29471589279` and PR #32
+> CI `29471598364`; Base Python and Optional Neuro Readers passed in both.
 
 > Current handoff, 2026-07-15 after Loop 53 registration: the accessible EEG
 > lane is now preregistered at an acquisition-only boundary. Registration

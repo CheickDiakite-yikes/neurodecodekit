@@ -98,6 +98,9 @@ stage needs a separate exact Tier C decision after its implementation is pushed
 and remotely green. Do not stat/hash/read S20 or implement a real Loop 54 reader
 from this planning boundary.
 
+Documentation-sync commit `b6785d7` passed push CI `29471589279` and PR #32
+CI `29471598364`; Base Python and Optional Neuro Readers passed in both.
+
 The first 20-loop roadmap is complete except for the deliberately parked Loop
 13 backend. Post-roadmap Loops 21 and 22 validate bounded synthetic causal
 replay and one tiny learned motif encoder. Loop 23 implemented the frozen

@@ -4447,6 +4447,8 @@ real-time, portable/home, or clinical result was established.
 - Planning commit `aec440a` passes 22 focused contract/roadmap tests, the full
   996-test local suite with three expected skips in 30.312 seconds, Ruff, JSON
   validation, and `git diff --check`.
+- Documentation-sync commit `b6785d7` passed push CI `29471589279` and PR #32
+  CI `29471598364`; Base Python and Optional Neuro Readers passed in both.
 - Loop 53 remains authorization-pending and is the next irreversible decision.
   All S20 stat/hash/header/marker/signal/MAT/target, split, model, training,
   inference, score, download, stream, device, and hardware counters remain zero.
