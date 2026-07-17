@@ -125,6 +125,29 @@ real-time operation, portable hardware, home use, or clinical utility.
 Documentation-sync commit `8efcb17` passed push CI `29473032843` and PR #33 CI
 `29473045583`; Base Python and Optional Neuro Readers passed in both.
 
+An additive Loop 55 AI-assisted representation policy is now frozen at commit
+`8855fae`, and its dependency-free synthetic proposal guard is implemented at
+`bd52cce`:
+
+```bash
+cat docs/LOOP_55_AI_ASSISTED_REPRESENTATION_RESEARCH.md
+python -m json.tool registries/loop55_ai_research_policy.v0.json >/dev/null
+neurodecode validate-ai-research-proposal \
+  --proposal fixtures/loop55_ai_synthetic_proposal.v0.json
+```
+
+The guard constrains an AI proposer to one compact causal family, a fixed
+hyperparameter menu, canonical hashes, zero protected-access counters, and
+synthetic-only validation. It reserves at most four future train-inner proposal
+rounds inside the unchanged 12-fit ceiling, but no future real proposal round
+is authorized. Do not give an agent raw S20 content, individual labels or
+predictions, intended text, selection/final outcomes, private paths, an LLM, or
+scientific claim authority. This tooling does not override the requirement to
+close Loop 54 and separately preregister and authorize Loop 55.
+Historical-hash repair `f50be96` passed push CI `29621564301`; it preserves the
+consumed Loop 53 CLI hash as historical evidence while allowing additive CLI
+commands. The complete local suite passes 1,087 tests with 3 expected skips.
+
 Loop 56 cross-modality accessibility planning research is now complete while
 the final verdict remains `Not Started`, Loop 55 result dependent, and
 unauthorized:

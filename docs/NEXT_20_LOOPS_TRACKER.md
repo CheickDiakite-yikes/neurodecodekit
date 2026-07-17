@@ -115,8 +115,15 @@
 > final-trial inference, one-shot target order, at most 12 fits, 10,000
 > parameters, 45 CPU minutes, 1 GiB RSS, and 64 MiB generated output. Loop 55
 > remains `Not Started`, Loop 54 dependent, and unauthorized; no S20 content,
-> split, target, model, training, inference, or score was accessed. Loop 56
-> planning research now freezes five verdict classes, 12 capability levels, 18
+> split, target, model, training, inference, or score was accessed.
+> An additive Loop 55 AI policy now validates strict synthetic recipe manifests
+> with canonical hashes and zero protected-access counters. It reserves at most
+> four future train-inner proposal rounds inside the existing 12-fit ceiling,
+> but performs no AI-service call, data read, model run, or scientific scoring.
+> This engineering milestone does not change Loop 55's `Not Started` status or
+> authorize real work.
+> Loop 56 planning research now freezes five verdict classes, 12 capability
+> levels, 18
 > comparison dimensions, 16 claim fields, 28 gates, 34 refusals, and a 12-part
 > at-home conjunction. Its provisional route is `L56-O2`, mechanics and
 > interfaces only: local tiny MEG and historical EEG prediction results remain
@@ -720,7 +727,9 @@ Loop 54 qualification, Loop 55 neural-effect, and Loop 56 cross-modality
 accessibility planning research are complete, but their experiments or final
 verdict remain `Not Started` and unauthorized. Loop 55
 prospectively separates causal performed-hand evidence from harder causal
-29-key evidence and cannot run before Loop 54 closes cleanly. Loop
+29-key evidence and cannot run before Loop 54 closes cleanly. Its synthetic AI
+proposal guard is implemented, while every real proposal, split, target, model,
+training, inference, and score remains closed. Loop
 56 then classifies only closed aggregate evidence and cannot run before Loop 55
 closes and a separate exact Tier C claim decision is green. Loops 51-52 and
 57-64 are `Not Started`. All future execution flags and all nine global

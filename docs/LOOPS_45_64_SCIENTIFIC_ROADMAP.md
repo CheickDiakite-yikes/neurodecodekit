@@ -318,6 +318,17 @@ pushed, and remotely green before the same final targets open once. One thread,
 No S20 read, split, target, model, training, inference, or score is authorized
 now.
 
+An additive AI-assisted representation policy is now implemented for synthetic
+proposal governance only. It freezes one compact causal family, exact causal
+window and resource checks, a small hyperparameter menu, canonical proposal
+hashes, protected-content refusals, and at most four future train-inner proposal
+rounds inside the same 12-fit ceiling. AI may eventually propose recipes from
+aggregate train-inner summaries, but it may never receive raw protected EEG,
+individual labels/predictions, intended text, selection/final outcomes, an LLM,
+or claim authority. The real phase remains Loop 54 dependent and separately
+unauthorized. See `docs/LOOP_55_AI_ASSISTED_REPRESENTATION_RESEARCH.md` and
+`registries/loop55_ai_research_policy.v0.json`.
+
 ### Loop 56 - Cross-Modality Accessibility Verdict
 
 **Status: planning research complete; Loop 55 result dependent; final verdict

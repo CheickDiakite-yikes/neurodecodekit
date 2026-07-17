@@ -8,6 +8,14 @@ unauthorized**
 Machine boundary:
 `registries/loop55_eeg_neural_effect_research.v0.json`
 
+Additive AI research boundary, 2026-07-17:
+`docs/LOOP_55_AI_ASSISTED_REPRESENTATION_RESEARCH.md` and
+`registries/loop55_ai_research_policy.v0.json` now define a synthetic-only,
+dependency-free proposal guard. It permits AI to emit bounded recipe manifests
+and protocol criticism, but it grants no S20 access, split, target, model,
+training, inference, scoring, or claim authority. The real experiment remains
+Loop 54 dependent, `Not Started`, and separately unauthorized.
+
 ## Decision
 
 Do not treat the future S20 block as a miniature reproduction of the published

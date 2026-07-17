@@ -4595,3 +4595,49 @@ Scientific claim not established: no BrainVision readability, channel,
 geometry, signal-quality, event, trial, target, neural-advantage, decoding,
 generalization, latency, portable-hardware, at-home, or clinical result was
 measured or established.
+
+## 2026-07-17 - Loop 55 Bounded AI Research Guard
+
+- Audited Brain2Qwerty v2 Auto Research, its encoder/LLM failure discussion,
+  LaBraM, BIOT, EEGNet, and the existing Loop 54/55 proof boundaries.
+- Froze AI as a bounded recipe proposer and protocol critic, never a protected-
+  data controller, endpoint selector, language-model decoder, or claim author.
+- Preserved one compact causal family, the `[-500,0)` ms window, zero right
+  context, `<=10,000` parameters, and the existing 12-fit total. At most four
+  future train-inner proposal rounds may be preregistered; extra control needs
+  reduce those rounds instead of expanding the total.
+- Added a strict dependency-free proposal validator, canonical JSON/SHA-256
+  identities, bounded JSON I/O, three CLI commands, and one 1,771-byte synthetic
+  proposal. No AI service, NumPy, MNE, Torch, network, or model is required.
+- Rejected target/text leakage, performed labels during self-supervised warm-
+  up, pretrained weights, language models, final observation scope, noncausal
+  windows, future context, unknown fields, unlisted hyperparameters, Boolean
+  zero tricks, resource expansion, model/training runs, nonzero access
+  counters, and untrusted warning text.
+- Policy commit `8855fae` passed push CI `29620964755`. Implementation commit
+  `bd52cce` was pushed separately before this documentation synchronization.
+  Its first CI correctly exposed a brittle Loop 53 historical CLI hash test;
+  repair `f50be96` preserved the consumed hash as a snapshot, retained semantic
+  command checks, and passed push CI `29621564301`.
+- One CLI validation read 11,949 policy bytes and 1,771 proposal bytes, ran in
+  `0.000741542` seconds, reported 21,856,256-byte peak RSS, and recorded zero
+  raw-data, real-cache, model, training, inference, scoring, network, language-
+  model, stream, device, or hardware runs.
+- The unrelated tracker inspection NDJSON remains untouched. The Excel
+  workbook was not reopened because this additive policy does not change a
+  loop's scientific status and its prior full import reached 1.57 GiB peak RSS.
+- Final verification passed 49 focused policy/Loop 55/roadmap tests and the
+  complete 1,087-test suite with 3 expected skips in 21.592 seconds. This adds
+  exactly 25 tests to the 1,062-test pre-change baseline without changing the
+  skip count. External peak RSS was 636,977,152 bytes. Ruff, compilation, both
+  modified registry JSON files, three CLI help surfaces, the bounded synthetic
+  roundtrip, and `git diff --check` passed.
+
+Engineering capability added: NeuroDecodeKit can now constrain, hash, inspect,
+and reject synthetic AI-generated representation proposals before they can
+interact with protected evidence or executable model stages.
+
+Scientific claim not established: no AI proposal accessed S20, trained or ran
+a model, or measured an EEG effect, so no neural advantage, decoding,
+brain-specific, generalization, real-time, portable, home, or clinical result
+was established.

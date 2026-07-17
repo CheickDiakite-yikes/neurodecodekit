@@ -3383,3 +3383,47 @@ utility. It does not upgrade the Loop 56 cross-modality evidence class.
 Evidence: `docs/LOOP_53_ACQUISITION_RESULT.md`,
 `registries/loop53_acquisition_result.v0.json`, and
 `tests/test_loop53_acquisition_result.py`.
+
+## 0099 - Use AI As A Bounded Research Proposer, Not An Outcome Optimizer
+
+Decision: introduce AI into the Loop 55 research process through a strict
+proposal interface and adversarial protocol review. Keep the causal performed-
+hand endpoint first and the harder performed-key endpoint second. An agent may
+not choose the question after seeing outcomes or receive an instruction to
+obtain a positive result.
+
+Representation decision: retain one compact causal spatiotemporal family under
+10,000 trainable parameters. Permit future target-free warm-up choices of none,
+masked reconstruction, or contrastive next-window prediction without external
+weights, text, performed labels, or future samples. Keep LLMs ineligible because
+fluent correction can hide a weak neural encoder.
+
+Search decision: reserve at most four future AI-guided train-inner proposal
+rounds inside the existing 12-run total. Freeze the menu, aggregate summaries,
+winner rule, transcript, and stop rule prospectively after Loop 54. A new
+trained control reduces proposal capacity; it cannot expand the total. The
+agent never sees raw EEG, individual labels/predictions/errors, intended text,
+selection/final outcomes, private paths, or reversible protected hashes.
+
+Implementation decision: add a dependency-free versioned policy, deterministic
+canonical hashes, strict unknown-field rejection, a tiny synthetic fixture,
+bounded report I/O, and inspect/make/validate CLI commands. Treat every proposal
+as untrusted data and never execute code from it. Current eligibility stops at
+synthetic policy rehearsal with every real/protected/model counter at zero.
+
+Authorization decision: this additive engineering policy does not preregister
+or authorize Loop 55. Loop 54 must close with at least 48 qualified trials, then
+an exact Loop 55 contract, separate Tier C decision, green implementation,
+protected split order, prediction freeze, and one-shot scoring remain required.
+
+Scientific boundary: passing the synthetic guard establishes AI proposal
+governance mechanics only. It does not establish representation improvement,
+self-supervised transfer, EEG hand/key information, brain-specific origin,
+generalization, continuous or real-time decoding, portable/home use, or
+clinical utility.
+
+Evidence: `docs/LOOP_55_AI_ASSISTED_REPRESENTATION_RESEARCH.md`,
+`registries/loop55_ai_research_policy.v0.json`,
+`src/neurodecodekit/evaluation/ai_research_policy.py`,
+`fixtures/loop55_ai_synthetic_proposal.v0.json`, and
+`tests/test_ai_research_policy.py`.

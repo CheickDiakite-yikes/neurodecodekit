@@ -1,5 +1,27 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current handoff, 2026-07-17 after the Loop 55 synthetic AI-policy milestone:
+> policy commit `8855fae` is pushed and remotely green; implementation commit
+> `bd52cce` adds a pure-standard-library validator, three CLI
+> commands, a strict 1,771-byte synthetic proposal, canonical hashes, bounded
+> report writing, and adversarial tests. The committed proposal validates at
+> SHA-256 `146232dc22864cde88202aa70a42621d58d73f3cfc8dd31dfd07c64360cc0278`.
+> One measured CLI pass read 11,949 policy bytes and 1,771 proposal bytes,
+> finished in `0.000741542` seconds, and reported 21,856,256-byte peak RSS with
+> zero raw-data, cache, model, training, inference, scoring, network, LLM,
+> stream, device, or hardware operations. Preserve the unrelated tracker
+> inspection NDJSON. The tool validates synthetic proposals only; Loop 55
+> remains `Not Started`, Loop 54 dependent, and separately unauthorized. Do not
+> open or interpret S20, create a split, train a model, or run a real AI proposal
+> from this milestone.
+> The first implementation CI exposed one historical Loop 53 CLI hash test that
+> incorrectly treated the shared CLI as immutable. Repair commit `f50be96`
+> preserved the consumed hash as historical evidence, retained the Loop 53
+> command checks, and passed push CI `29621564301`. Final local verification
+> passed 1,087 tests with 3 expected skips in 21.592 seconds at 636,977,152-byte
+> external peak RSS; Ruff, compilation, focused CLI help/roundtrip, JSON
+> validation, and `git diff --check` passed.
+>
 > Current handoff, 2026-07-17 after the one Loop 53 acquisition: authorization
 > commit `2a47bbc` passed push/PR CI `29589212626` / `29589225113`, and
 > implementation commit `8ec5b1b` passed `29591387642` / `29591391286` before

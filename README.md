@@ -49,6 +49,7 @@ irreversible Tier C events.
 | Fresh EEG acquisition gate | Loop 53 acquired and opaque-verified the exact public S20 session-2 block-2 bundle: 4 files, `96,090,264` bytes, `3.629499s`, 63,225,856-byte peak RSS, and all 10 gates passed | Acquisition mechanics are proven and the one invocation is consumed; no header, marker, signal sample, MAT field, target, cache, split, or model was interpreted or run |
 | Fresh EEG qualification design | Loop 54 now separates strict VHDR-only metadata, target-blind VHDR+EEG quality, isolated target-bearing VMRK+MAT reconciliation, and aggregate closeout through 22 gates and 30 exact refusals | Planning research is complete and Loop 53 acquisition passed; every real interpretation stage remains separately unauthorized, and the current monolithic extractor is excluded from this future claim path |
 | Fresh EEG neural-effect design | Loop 55 now separates a causal pre-keypress performed-hand gate from a harder causal 29-key gate, with performed actions as primary targets, a post-keypress diagnostic, 12 matched conditions, exact trial-level tests, and one-shot target order | Planning research is complete and Loop 54 dependent; the S20 bundle is acquired but uninterpreted, the experiment is `Not Started`, and no target, model, prediction, score, neural advantage, or decoding result exists |
+| Bounded AI research guard | A dependency-free Loop 55 policy now validates and hashes strict synthetic AI recipe proposals, rejects target leakage, future context, LLMs, pretrained weights, unknown fields, model runs, and cap expansion, and reserves at most four future train-inner proposal rounds inside the existing 12-fit ceiling | The synthetic interface is implemented and measured; no AI proposal has accessed S20, trained a model, or produced neural evidence, and any future real proposal phase remains Loop 54 dependent and separately Tier C authorized |
 | Cross-modality accessibility verdict design | Loop 56 freezes five verdict classes, 12 non-skippable capability levels, 18 EEG/MEG comparison dimensions, a 16-field claim sentence, and a 12-part at-home conjunction | Planning research is complete and Loop 55 result dependent; only modality-aware interfaces are shared, tested MEG/EEG predictors remain negative, S20 has acquisition evidence only, and no equivalence, transfer, real-time, device, home, or clinical claim exists |
 | Development-person intake planning | Loop 49 metadata research selects S24 session 2 block 2: one MEG FIF plus one protected MAT log, exactly `1,048,579,727` bytes; a future text-grouped split reserves 16 unique sentence groups for selection and requires at least 32 fit groups | S24 avoids the S1/S18 alias and preserves S25 final-only, but no S24 path or payload was opened and the `>=48` usable-row, channel, geometry, and overlap gates are unproven; Loop 49 remains `Not Started` |
 | Multi-source encoder planning | Loop 50 research freezes global text grouping, five-fold historical S21 out-of-fold diagnostics, one 16-group S24 development gate, equal-person loss, ten fixed conditions, and an exact 20-update inventory led by seed `5001` | Stage B route `L50-R05` now parks the same-family S24 path; Loop 50 remains `Not Started`, with S24 qualification, model selection, training, scoring, and every scientific claim unavailable |
@@ -161,6 +162,27 @@ EEG sensor-signal dependence with known keypress onsets, not brain-specific
 origin, continuous thought-to-text, generalization, real-time operation, or
 home use. See `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop55_eeg_neural_effect_research.v0.json`.
+
+The additive Loop 55 AI policy makes that future search more disciplined
+without pretending it has run. One compact causal family remains fixed. An AI
+proposer may eventually choose from a small preregistered recipe menu using at
+most four aggregate train-inner rounds, while a deterministic local runner
+retains all data access. Selection/final outcomes, raw protected EEG, trial
+labels, intended text, language models, pretrained weights, and scientific
+claim decisions remain unavailable to the agent. The currently implemented
+surface validates synthetic manifests only:
+
+```bash
+neurodecode inspect-ai-research-policy
+neurodecode validate-ai-research-proposal \
+  --proposal fixtures/loop55_ai_synthetic_proposal.v0.json
+```
+
+The committed roundtrip reads 11,949 policy bytes and 1,771 proposal bytes,
+takes approximately 0.001 seconds, peaks near 22 MB RSS, and records zero real
+data, cache, model, training, inference, scoring, network, or device operations.
+See `docs/LOOP_55_AI_ASSISTED_REPRESENTATION_RESEARCH.md` and
+`registries/loop55_ai_research_policy.v0.json`.
 
 Loop 56 planning research defines how to report whatever survives those gates
 without pretending EEG and MEG are interchangeable. It freezes five classes:
@@ -486,6 +508,16 @@ Read this before interpreting any number in the repository.
   The experiment remains `Not Started` and every
   S20, split, target, model, training, inference, and scoring permission is
   false.
+- **Loop 55 bounded AI research guard:** policy commit `8855fae` and
+  implementation commit `bd52cce` add a strict synthetic proposal schema,
+  canonical SHA-256 identity, three CLI commands, one 1,771-byte fixture, and
+  adversarial checks for target leakage, noncausal context, language models,
+  pretrained weights, protected observation scopes, unknown fields, Boolean
+  counter tricks, and output/resource expansion. The guard makes no network or
+  AI-service call and executes no proposal. The future real agent phase remains
+  Loop 54 dependent and needs an exact preregistration plus separate Tier C
+  authorization. Historical-hash repair `f50be96` passed push CI `29621564301`;
+  the complete local suite passes 1,087 tests with 3 expected skips.
 - **Loop 56 cross-modality accessibility research:** the planning boundary
   freezes five verdict classes, a 12-level capability ladder, 18 comparison
   dimensions, 16 mandatory claim fields, 28 gates, 34 refusals, and a 12-part

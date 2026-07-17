@@ -377,7 +377,11 @@ Loop 55 planning research is also complete and reviewable at:
 
 - `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md`;
 - `registries/loop55_eeg_neural_effect_research.v0.json`;
-- `tests/test_loop55_eeg_neural_effect_research.py`.
+- `tests/test_loop55_eeg_neural_effect_research.py`;
+- `docs/LOOP_55_AI_ASSISTED_REPRESENTATION_RESEARCH.md`;
+- `registries/loop55_ai_research_policy.v0.json`;
+- `fixtures/loop55_ai_synthetic_proposal.v0.json`;
+- `tests/test_ai_research_policy.py`.
 
 Planning commit `f3158c7` separates causal pre-keypress performed-hand evidence
 from harder causal 29-class performed-key evidence. Performed action is the
@@ -392,6 +396,19 @@ model, training, inference, or score is authorized. Do not call any future
 hand-only pass key decoding, or any centered-window pass causal or real time.
 Documentation-sync commit `8efcb17` passed push CI `29473032843` and PR #33 CI
 `29473045583`; Base Python and Optional Neuro Readers passed in both.
+
+The additive AI policy is implemented at policy commit `8855fae` and code
+commit `bd52cce`. Its only eligible phase validates synthetic JSON proposals
+against one fixed causal family, exact hyperparameter and resource menus,
+canonical SHA-256 identities, and zero protected-access counters. It performs
+no AI-service call and no model operation. A future real agent may receive only
+aggregate train-inner summaries under an exact post-Loop-54 preregistration;
+never provide raw S20, individual labels/predictions, intended text,
+selection/final outcomes, private paths, or claim authority. Do not treat the
+synthetic guard as Loop 55 execution permission or scientific evidence.
+Historical-hash repair `f50be96` passed push CI `29621564301`; it keeps the
+consumed Loop 53 CLI hash historical while verifying that command remains
+present. Final local qualification passes 1,087 tests with 3 expected skips.
 
 Loop 56 cross-modality accessibility planning research is complete and
 reviewable at:
@@ -525,7 +542,9 @@ preparation alone do not authorize RW3. The parked Loop 24 result and any Loop
    causal hand/key endpoints, performed-action target, noncausal centered
    diagnostic, twelve-condition control matrix, trial-level exact inference,
    at-most-12-fit and 10,000-parameter ceilings, one-shot target order, and
-   false execution flags consistent. Keep
+   false execution flags consistent. Keep its additive AI policy at synthetic-
+   only validation, at most four future proposal rounds inside the same 12-fit
+   total, and zero real/protected/model counters. Keep
    Loop 25's immutable
    `a36d97b` v0 registration, green `b6b92d8` v1 amendment, false replacement
    authorization request, the planning-only Loop 26 registry with 14 false

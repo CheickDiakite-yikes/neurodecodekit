@@ -6,6 +6,15 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "registries" / "loop55_ai_research_policy.v0.json"
 RESEARCH = ROOT / "docs" / "LOOP_55_AI_ASSISTED_REPRESENTATION_RESEARCH.md"
+PUBLIC_STATUS = [
+    ROOT / "README.md",
+    ROOT / "START_HERE.md",
+    ROOT / "AGENTS.md",
+    ROOT / "docs" / "CODEX_HANDOFF.md",
+    ROOT / "docs" / "LOOPS_45_64_SCIENTIFIC_ROADMAP.md",
+    ROOT / "docs" / "NEXT_20_LOOPS_TRACKER.md",
+    ROOT / "prompts" / "CODEX_START_PROMPT.md",
+]
 
 
 class Loop55AIResearchPolicyTests(unittest.TestCase):
@@ -133,6 +142,14 @@ class Loop55AIResearchPolicyTests(unittest.TestCase):
             "Scientific claim not established:",
         ):
             self.assertIn(phrase, self.research)
+
+    def test_public_status_surfaces_disclose_synthetic_only_ai_boundary(self):
+        for path in PUBLIC_STATUS:
+            with self.subTest(path=path.name):
+                content = path.read_text(encoding="utf-8")
+                self.assertIn("AI", content)
+                self.assertIn("synthetic", content.lower())
+                self.assertIn("Loop 55", content)
 
 
 if __name__ == "__main__":

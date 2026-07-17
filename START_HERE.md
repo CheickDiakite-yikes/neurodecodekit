@@ -116,6 +116,20 @@
    or score was accessed. Documentation-sync commit `8efcb17` passed push CI
    `29473032843` and PR #33 CI `29473045583`; Base Python and Optional Neuro
    Readers are green in both.
+   Then read `docs/LOOP_55_AI_ASSISTED_REPRESENTATION_RESEARCH.md`,
+   `registries/loop55_ai_research_policy.v0.json`, and
+   `fixtures/loop55_ai_synthetic_proposal.v0.json`. The additive policy lets AI
+   propose only strict synthetic causal-representation recipes today. The
+   dependency-free validator hashes accepted proposals and rejects target
+   leakage, future context, language models, pretrained weights, unknown
+   fields, protected observations, model/training runs, and resource expansion.
+   Policy commit `8855fae` is remotely green; implementation commit `bd52cce`
+   adds the CLI and 24 focused tests. Historical-hash repair `f50be96` passed
+   push CI `29621564301`, and the complete local suite passes 1,087 tests with
+   3 expected skips. This is engineering governance only: no
+   S20 content or scientific result opened, and a future real train-inner agent
+   phase still requires Loop 54 closeout, an exact preregistration, and separate
+   Tier C authorization.
    Then read `docs/LOOP_56_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop56_cross_modality_accessibility_research.v0.json`. Loop 56
    freezes five verdict classes, a 12-level capability ladder, 18 comparison
@@ -603,4 +617,6 @@ Loop 55 neural-effect, and Loop 56 cross-modality accessibility planning
 research are complete, but their real stages or final verdict remain `Not
 Started` and unauthorized. Loops 51-52 and 57-64 remain `Not Started`. No
 Loop 54 content interpretation is authorized by the Loop 53 pass.
+Loop 55's synthetic AI proposal guard is implemented, but this does not change
+the real experiment status or authorize a model operation.
 S25 remains sealed until a separate final-only zero-shot packet is complete.
