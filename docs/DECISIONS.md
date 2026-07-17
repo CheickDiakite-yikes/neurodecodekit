@@ -3340,3 +3340,46 @@ or claim operation is authorized by this planning boundary.
 Evidence: `docs/LOOP_56_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop56_cross_modality_accessibility_research.v0.json`, and
 `tests/test_loop56_cross_modality_accessibility_research.py`.
+
+## 0098 - Consume Loop 53 At Acquisition Mechanics Only
+
+Decision: accept the one registered Loop 53 invocation as a clean acquisition-
+mechanics pass and consume the gate with no rerun. Authorization commit
+`2a47bbc` passed push CI `29589212626` and PR CI `29589225113`;
+implementation commit `8ec5b1b` passed push CI `29591387642` and PR CI
+`29591391286` before the registered paths or metadata network were opened.
+
+Identity decision: retain exactly the four S20 session-2 block-2 files at
+revision `88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684`, CC BY-NC 4.0 metadata,
+and 96,090,264 total bytes. The pinned revision remained public, ungated, and
+enabled; every path, size, Git object, LFS SHA-256, and Xet identity matched.
+No substitute file, participant, session, block, or retry was used.
+
+Resource decision: record 3.629499 seconds runtime, 63,225,856-byte peak RSS,
+96,090,264 network bytes, 102,035,529-byte peak incremental disk,
+44,104,826,880 free bytes before execution, and 8,265 private receipt bytes.
+All frozen thread, worker, time, memory, network, disk, free-space, and output
+caps passed.
+
+Access decision: preserve zero header, marker, signal, MAT, target, cache,
+split, checkpoint, model, inference, training, scoring, language-model, RW3,
+stream, device, hardware, additional-file, additional-participant, and rerun
+counters. The four local reads were opaque integrity hashes only. Keep the
+payload and both receipts ignored and outside Git; publish only aggregate
+mechanics and the two receipt hashes.
+
+Next-gate decision: Loop 53 creates no permission for Loop 54. Do not reopen,
+parse, interpret, split, model, or score S20 from this result. Each applicable
+L54-A/B/C content stage still requires its own exact Tier C decision after a
+hash-bound implementation is committed, pushed, and remotely green.
+
+Scientific boundary: this pass proves only that one exact public S20 bundle was
+acquired and opaque-verified within the registered controls. It does not prove
+BrainVision readability, channel or geometry facts, signal quality, event or
+trial validity, target correctness, neural advantage, decoding accuracy,
+generalization, end-to-end latency, portable hardware, at-home use, or clinical
+utility. It does not upgrade the Loop 56 cross-modality evidence class.
+
+Evidence: `docs/LOOP_53_ACQUISITION_RESULT.md`,
+`registries/loop53_acquisition_result.v0.json`, and
+`tests/test_loop53_acquisition_result.py`.

@@ -2,9 +2,9 @@
 
 Machine source of truth: `registries/next_scientific_loops.v0.json`
 
-Status: **Loop 45 mechanics complete; Loop 53 acquisition preregistered with
-authorization pending; every experiment in Loops 46-64 and every download,
-model, participant, device, and release action remain separately unauthorized**
+Status: **Loop 45 mechanics is complete; Loops 46-48 are consumed or parked;
+Loop 53 acquisition passed once with no rerun; future interpretation, model,
+participant, device, and release actions remain separately unauthorized**
 
 ## North Star
 
@@ -244,25 +244,26 @@ S25 then becomes consumed forever.
 
 ### Loop 53 - Fresh S20 EEG Acquisition Gate
 
-**Status: preregistered; authorization pending.** The frozen contract is
+**Status: consumed; acquisition passed; no rerun.** The frozen contract is
 `registries/loop53_fresh_eeg_acquisition_contract.v0.json`. It binds revision
 `88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684`, one S20 session 2 block 2
 BrainVision triplet plus companion MAT log, four exact files, and 96,090,264
-bytes. A future authorized run may reverify metadata, transfer once, perform
-opaque integrity hashes, and emit a bounded receipt. It may not parse a header,
-marker, signal, or MAT field; read a target; create a cache/split; or run a
-model. Header audit and cache planning now belong to Loop 54.
+bytes. Authorization `2a47bbc` and implementation `8ec5b1b` were separately
+green before the one invocation acquired and opaque-verified the complete
+bundle. It did not parse a header, marker, signal, or MAT field; read a target;
+create a cache/split; or run a model. Header audit and cache planning belong to
+Loop 54.
 
 **Gate:** exact revision/license/path/size/hash identity, a complete isolated
 bundle, 128 MiB network and 256 MiB incremental-disk caps, one thread/worker,
-and zero forbidden access counters. Any mismatch, collision, partial transfer,
-or cap breach parks without substitution or rerun. Storage capacity and general
-research autonomy are not acquisition permission; exact Tier C authorization
-is pending. S7 remains consumed and excluded.
+and zero forbidden access counters. All gates passed in 3.629499 seconds at
+63,225,856-byte peak RSS and 102,035,529-byte peak incremental disk. The result
+is in `registries/loop53_acquisition_result.v0.json`; S7 remains consumed and
+excluded.
 
 ### Loop 54 - EEG Trial Geometry And Confound Ledger
 
-**Status: planning research complete; acquisition dependent; unauthorized.**
+**Status: planning research complete; acquisition passed; content stages unauthorized.**
 `docs/LOOP_54_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop54_eeg_trial_geometry_research.v0.json` now replace the coarse
 "header then signal/target" idea with four ordered stages. L54-A parses exactly
@@ -285,8 +286,8 @@ its original boundary.
 stage isolation, all channels retained, and every channel, geometry, reference,
 quality, and recorded-confound field known or explicitly unavailable. Event
 windows are not independent trials. Loop 54 creates no split, model, training,
-inference, score, or scientific result. Loop 53 must finish first, and each
-real content stage requires a separate exact Tier C decision.
+inference, score, or scientific result. Loop 53 has finished cleanly, but each
+real content stage still requires a separate exact Tier C decision.
 
 ### Loop 55 - Fresh EEG Neural-Effect Gate
 
@@ -442,10 +443,12 @@ consumed at descriptive `F5`, and Stage B is consumed at `H4` stable
 nonseparability with `L50-R05` parking S24 for this model family. Stage C
 research permits only a green-bound synthetic implementation and calibration
 under the approved charter; it does not open a protected roadmap experiment.
-Loops 49-64 remain `Not Started`. Every current
-`execution_authorized` flag and every global authorization field is false. The
-roadmap does not authorize a Loop 45 rerun, Loop 46/47 rerun, Loop 48 protected
-rerun, real-data representation-repair training, any new real-data read or
-download, target opening, S24/S25 access, EEG acquisition, stream, device,
-participant contact, home recording, external outreach, tag, release, archive,
-DOI, or scientific claim.
+Loop 53 acquisition mechanics passed once and are consumed without a rerun;
+Loops 49-52 and 54-64 remain `Not Started` at their experiment boundaries.
+Every current `execution_authorized` flag and every global authorization field
+is false because no future action is presently open. The roadmap does not
+authorize a Loop 45 rerun, Loop 46/47 rerun, Loop 48 protected rerun, Loop 53
+rerun, S20 content interpretation, real-data representation-repair training,
+any new real-data read or download, target opening, S24/S25 access, stream,
+device, participant contact, home recording, external outreach, tag, release,
+archive, DOI, or scientific claim.

@@ -210,10 +210,14 @@ class Loop54EEGTrialGeometryResearchTests(unittest.TestCase):
 
     def test_scientific_roadmap_marks_loop54_research_complete_but_unauthorized(self):
         loop54 = next(row for row in self.roadmap["loops"] if row["loop_id"] == 54)
-        self.assertEqual(loop54["status"], "Planning Research Complete; Acquisition Dependent")
+        self.assertEqual(
+            loop54["status"],
+            "Planning Research Complete; Acquisition Passed; Content Stages Unauthorized",
+        )
         self.assertFalse(loop54["execution_authorized"])
         self.assertIn("loop54_eeg_trial_geometry_research.v0.json", loop54["build_deliverable"])
         self.assertIn("does not create a split", loop54["build_deliverable"])
+        self.assertIn("Loop 53 completed cleanly", loop54["authorization_boundary"])
         self.assertIn("separate exact Tier C", loop54["authorization_boundary"])
 
     def test_public_status_surfaces_share_the_loop54_boundary(self):

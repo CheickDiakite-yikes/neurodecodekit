@@ -27,9 +27,24 @@ class Loop48StageCSyntheticDependencyLightTests(unittest.TestCase):
         )
         self.assertEqual(record["research_milestone"]["push_ci_run_id"], 29466218879)
         self.assertEqual(record["research_milestone"]["pull_request_ci_run_id"], 29466225955)
-        for binding in record["source_bindings"].values():
+        for name, binding in record["source_bindings"].items():
             path = REPO_ROOT / binding["path"]
-            self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), binding["sha256"])
+            # Shared CLI/test surfaces evolve after this consumed historical snapshot.
+            if name == "cli":
+                self.assertEqual(
+                    binding["sha256"],
+                    "1082642a53a53a2e891feb24e9dd50b807a0276e06d5c415099a303c89e88a40",
+                )
+                current_cli = path.read_text(encoding="utf-8")
+                self.assertIn("def _cmd_loop48_stage_c_synthetic", current_cli)
+                self.assertIn('"loop48-stage-c-synthetic"', current_cli)
+            elif name == "tests":
+                self.assertEqual(
+                    binding["sha256"],
+                    "7dc6bfd1c75f7a2cf944d247c18d2efa61c46fe6b11de2eccc57196bb7fd313b",
+                )
+            else:
+                self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), binding["sha256"])
         authorization = record["authorization"]
         self.assertTrue(authorization["implementation_authorized_and_completed_now"])
         self.assertTrue(authorization["synthetic_calibration_executed_now"])

@@ -4541,3 +4541,57 @@ Scientific claim not established: no new EEG or MEG payload, target,
 prediction, checkpoint, model, score, device, home session, or latency trace
 was accessed or produced, so no cross-modality neural advantage, transfer,
 real-time, portable, home, or clinical result was established.
+
+## 2026-07-17 - Loop 53 Fresh S20 EEG Acquisition Closeout
+
+- Recorded the user's exact acquisition-only decision at authorization commit
+  `2a47bbc`; push CI `29589212626` and PR CI `29589225113` passed before
+  implementation began.
+- Added a standard-library, dry-run-by-default executor and CLI with immutable
+  contract/decision hashes, current-clean-Git evidence, one-thread controls,
+  metadata-first refusals, streaming byte/disk/time/RSS caps, opaque Git/LFS
+  verification, complete-directory promotion, bounded receipts, and no payload
+  parser. Implementation commit `8ec5b1b` passed push CI `29591387642` and PR
+  CI `29591391286` before registered path or metadata network access.
+- Qualified the implementation with 17 executor tests, 6 implementation-
+  registry tests, 51 focused Loop 53 tests, Ruff, compile, all registry JSON,
+  CLI help/dry-run, and `git diff --check`. The pre-execution full suite passed
+  1,056 tests with 3 expected skips in 30.623 seconds.
+- Ran the one registered invocation. The pinned public revision, CC BY-NC 4.0
+  metadata, four paths, sizes, Git OIDs, LFS SHA-256 values, and Xet identities
+  all matched. Exactly 96,090,264 network bytes became one exact four-file,
+  96,090,264-byte isolated bundle; no partial or substitute was promoted.
+- Measured 3.629499 seconds runtime, 63,225,856-byte peak RSS,
+  102,035,529-byte peak incremental disk, 44,104,826,880 free bytes before,
+  and 8,265 private receipt bytes. All ten frozen gates passed.
+- Preserved zero header, marker, signal, MAT, target, cache, split, checkpoint,
+  model, inference, training, scoring, language-model, RW3, stream, device,
+  hardware, additional-file, additional-participant, and rerun counters. Four
+  local reads were opaque integrity hashes only.
+- Kept the payload and receipts Git-ignored. The public result repeats no per-
+  file local content hashes and binds only the private manifest and receipt
+  hashes plus aggregate measurements, counters, warnings, unavailable fields,
+  and claim boundary.
+- Marked Loop 53 `Consumed; Acquisition Passed; No Rerun` and stopped before
+  Loop 54. No L54-A/B/C content stage is authorized by this closeout.
+- Synchronized the current Markdown, JSON, and Excel trackers. The workbook
+  now records consumed Loop 48 A/B/C, the exact Loop 53 result, the still-
+  unauthorized Loop 54-56 boundaries, and the parked superseded RW4 route;
+  its post-edit formula-error scan found zero matches and all ten sheets were
+  rendered for visual review.
+- Final closeout verification passed 68 focused tests and the complete 1,062-
+  test suite with 3 expected skips in 44.090 seconds at 581,648,384-byte
+  external peak RSS. Against the pre-execution 1,056-test baseline, this adds
+  exactly 6 result tests; skips stayed at 3, measured runtime increased by
+  13.467 seconds, and external peak RSS increased by 12,959,744 bytes. Ruff,
+  compile, 65 registry JSON files, both CLI help surfaces, and
+  `git diff --check` also passed.
+
+Engineering capability added: NeuroDecodeKit can now acquire, opaque-verify,
+atomically retain, and privately receipt one exact public EEG bundle under a
+hash-bound one-shot resource and access-order contract.
+
+Scientific claim not established: no BrainVision readability, channel,
+geometry, signal-quality, event, trial, target, neural-advantage, decoding,
+generalization, latency, portable-hardware, at-home, or clinical result was
+measured or established.

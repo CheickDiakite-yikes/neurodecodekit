@@ -1,5 +1,27 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current handoff, 2026-07-17 after the one Loop 53 acquisition: authorization
+> commit `2a47bbc` passed push/PR CI `29589212626` / `29589225113`, and
+> implementation commit `8ec5b1b` passed `29591387642` / `29591391286` before
+> the registered invocation. The exact four-file S20 session-2 block-2 bundle
+> passed revision, availability, license, path, size, Git/LFS/Xet, resource,
+> isolation, and receipt gates. It transferred and retained 96,090,264 bytes in
+> 3.629499 seconds at 63,225,856-byte peak RSS and 102,035,529-byte peak disk;
+> the private receipts total 8,265 bytes. Every header, marker, signal, MAT,
+> target, cache, split, checkpoint, model, training, inference, scoring,
+> language-model, RW3, stream, device, hardware, additional-file, additional-
+> participant, and rerun counter is zero. Loop 53 is consumed with no rerun.
+> Stop before Loop 54: the bundle remains uninterpreted and each applicable
+> L54-A/B/C content stage still needs its own exact Tier C decision after its
+> implementation is pushed and remotely green. Read
+> `docs/LOOP_53_ACQUISITION_RESULT.md` and
+> `registries/loop53_acquisition_result.v0.json`. Preserve the unrelated
+> tracker inspection NDJSON and never commit the payload or private receipts.
+> Final local verification passed 68 focused tests and the complete 1,062-test
+> suite with 3 expected skips in 44.090 seconds; Ruff, compilation, all 65
+> registry JSON files, both CLI help surfaces, workbook formula/visual checks,
+> and `git diff --check` also passed.
+>
 > Current handoff, 2026-07-16 after Loop 56 cross-modality planning research:
 > the current
 > branch freezes `docs/LOOP_56_PRIMARY_SOURCE_RESEARCH.md`,
@@ -10,7 +32,8 @@
 > The current provisional route is `L56-O2`, mechanics and interfaces only.
 > Registered local S21 MEG and historical S7 EEG predictors remain negative
 > against their no-signal comparators and are not a matched modality
-> comparison; fresh S20 evidence remains unavailable. Continuous input is not
+> comparison; fresh S20 has acquisition evidence only and remains
+> uninterpreted. Continuous input is not
 > causal incremental output or measured end-to-end latency. No payload,
 > target, prediction, checkpoint, model, training, score, device, home, or
 > claim action occurred. The final Loop 56 verdict is `Not Started`, Loop 55
