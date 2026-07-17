@@ -2454,6 +2454,42 @@ def _cmd_download_selection(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_loop53_acquire_s20(args: argparse.Namespace) -> int:
+    from neurodecodekit.datasets.loop53_acquisition import (
+        ExecutionEvidence,
+        execute_registered_acquisition,
+        registered_plan,
+    )
+
+    repo_root = Path.cwd()
+    if not args.execute:
+        print(json.dumps(registered_plan(repo_root), indent=2, sort_keys=True))
+        print("Safety default: dry-run only. No registered path stat or network access occurred.")
+        return 0
+
+    missing = [
+        name
+        for name, value in (
+            ("--implementation-commit", args.implementation_commit),
+            ("--implementation-push-ci-run-id", args.implementation_push_ci_run_id),
+            ("--implementation-pr-ci-run-id", args.implementation_pr_ci_run_id),
+        )
+        if value is None
+    ]
+    if missing:
+        raise ValueError(f"--execute requires: {', '.join(missing)}")
+    evidence = ExecutionEvidence(
+        implementation_commit=args.implementation_commit,
+        implementation_push_ci_run_id=args.implementation_push_ci_run_id,
+        implementation_pr_ci_run_id=args.implementation_pr_ci_run_id,
+    )
+    outcome = execute_registered_acquisition(repo_root, evidence=evidence)
+    print(json.dumps(outcome.manifest, indent=2, sort_keys=True))
+    print(f"Private machine manifest: {outcome.manifest_path}")
+    print(f"Private human receipt: {outcome.receipt_path}")
+    return 0 if outcome.passed else 1
+
+
 def _print_selection_plan(selection: Any, *, heading: str) -> None:
     from neurodecodekit.datasets.selection import format_bytes
 
@@ -4520,6 +4556,37 @@ def build_parser() -> argparse.ArgumentParser:
         help="Maximum concurrent Hub download workers. Default: 1.",
     )
     p.set_defaults(func=_cmd_download_selection)
+
+    p = sub.add_parser(
+        "loop53-acquire-s20",
+        help="Dry-run or execute the one hash-bound Loop 53 S20 EEG acquisition.",
+    )
+    mode = p.add_mutually_exclusive_group()
+    mode.add_argument(
+        "--execute",
+        action="store_true",
+        help="Consume the single registered acquisition invocation after remote-green gates.",
+    )
+    mode.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Print the frozen plan without path stats or network access. This is the default.",
+    )
+    p.add_argument(
+        "--implementation-commit",
+        help="Full remotely-green implementation commit; must equal current HEAD.",
+    )
+    p.add_argument(
+        "--implementation-push-ci-run-id",
+        type=int,
+        help="Successful push CI run ID for the implementation commit.",
+    )
+    p.add_argument(
+        "--implementation-pr-ci-run-id",
+        type=int,
+        help="Successful pull-request CI run ID for the implementation commit.",
+    )
+    p.set_defaults(func=_cmd_loop53_acquire_s20)
 
     return parser
 

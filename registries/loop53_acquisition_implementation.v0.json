@@ -1,0 +1,136 @@
+{
+  "schema_name": "neurodecodekit.loop53_acquisition_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "loop53-fresh-s20-eeg-acquisition-v0",
+  "prepared_at": "2026-07-17",
+  "status": "implemented_locally_fixture_qualified_remote_green_pending_no_execution",
+  "proof_posture": "offline_opaque_fixture_only_zero_real_metadata_payload_or_s20_path_access",
+  "authorization_binding": {
+    "authorization_commit": "2a47bbc75eac0118c3f9de87363d7da02584d2fc",
+    "authorization_push_ci_run_id": 29589212626,
+    "authorization_pull_request_ci_run_id": 29589225113,
+    "authorization_decision_path": "registries/loop53_authorization_decision.v0.json",
+    "authorization_decision_sha256": "f5e75bb9f9315ced6f45812f3841973abedbef3c8a0890fa78737a7b5b478107",
+    "contract_path": "registries/loop53_fresh_eeg_acquisition_contract.v0.json",
+    "contract_sha256": "bc7d86a1ce6ef3dc71dacca0af97cb5813df87620ac35d4f34ecd343f97e65ac",
+    "both_authorization_workflows_green_before_implementation": true
+  },
+  "source_bindings": {
+    "executor": {
+      "path": "src/neurodecodekit/datasets/loop53_acquisition.py",
+      "sha256": "f6261cfebb695fc80a932b8b260684646992cc2c579acc3f74d438d58ae1a814"
+    },
+    "cli": {
+      "path": "src/neurodecodekit/cli.py",
+      "sha256": "6aee3a3166863428abe5d26c24736ad5549e7aa2c2f77dfa286e29eb459ec342"
+    },
+    "tests": {
+      "path": "tests/test_loop53_acquisition.py",
+      "sha256": "406a579c5819a3157631ddb71a2887c31f7f6d4d638da56bb609bcacad22a704"
+    }
+  },
+  "frozen_interface": {
+    "cli_command": "loop53-acquire-s20",
+    "default_mode": "dry_run_no_registered_path_stat_no_network",
+    "execution_requires_explicit_flag": true,
+    "execution_requires_current_full_implementation_commit": true,
+    "execution_requires_push_and_pull_request_ci_run_ids": true,
+    "base_dependencies_added": [],
+    "payload_parser_exposed": false,
+    "stream_chunk_bytes": 1048576,
+    "metadata_response_cap_bytes": 1048576,
+    "atomic_promotion_unit": "complete_verified_bundle_directory",
+    "receipt_files": [
+      "acquisition_manifest.json",
+      "acquisition_receipt.md"
+    ]
+  },
+  "enforced_identity": {
+    "repository": "bcbl190626/SpanishBCBL",
+    "revision": "88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684",
+    "license_id": "cc-by-nc-4.0",
+    "subject_id": "S20",
+    "session_id": "2",
+    "block_id": "2",
+    "file_count": 4,
+    "expected_payload_bytes": 96090264,
+    "substitution_allowed": false
+  },
+  "enforced_resources": {
+    "cpu_threads": 1,
+    "workers": 1,
+    "wall_time_seconds": 600,
+    "peak_rss_bytes": 536870912,
+    "maximum_network_payload_bytes": 134217728,
+    "maximum_incremental_disk_bytes": 268435456,
+    "minimum_free_disk_bytes": 2147483648,
+    "maximum_manifest_and_receipt_bytes": 1048576,
+    "payload_download_invocations": 1
+  },
+  "fixture_qualification": {
+    "fixture_kind": "four_tiny_invalid_utf8_opaque_binary_streams",
+    "executor_tests": 17,
+    "implementation_registry_tests": 6,
+    "focused_loop53_tests": 51,
+    "focused_loop53_internal_runtime_seconds": 0.06,
+    "complete_suite_tests": 1056,
+    "complete_suite_expected_skips": 3,
+    "complete_suite_internal_runtime_seconds": 30.623,
+    "complete_suite_external_peak_rss_bytes": 568688640,
+    "prechange_suite_tests": 1033,
+    "new_tests_since_prechange_baseline": 23,
+    "metadata_or_payload_network_calls": 0,
+    "registered_s20_path_stats_or_hash_reads": 0,
+    "real_payload_bytes": 0,
+    "header_marker_signal_mat_target_reads": 0,
+    "cache_split_model_inference_training_scoring_runs": 0,
+    "persistent_generated_experiment_bytes": 0,
+    "complete_suite_passed": true,
+    "ruff_passed": true,
+    "compileall_passed": true,
+    "registry_json_validation_passed": true,
+    "cli_help_and_dry_run_passed": true,
+    "git_diff_check_passed": true,
+    "complete_suite_pending": false,
+    "ruff_pending": false,
+    "registry_json_validation_pending": false,
+    "cli_help_and_dry_run_pending": false,
+    "git_diff_check_pending": false,
+    "implementation_commit_pending": true,
+    "implementation_push_pending": true,
+    "implementation_remote_green_pending": true
+  },
+  "failure_controls": [
+    "metadata_mismatch_aborts_before_payload_request",
+    "network_runtime_rss_and_disk_caps_checked_during_transfer",
+    "file_size_and_opaque_integrity_verified_after_transfer",
+    "partial_bundle_never_promoted",
+    "cleanup_limited_to_invocation_created_temporary_paths",
+    "preexisting_and_symlink_paths_refused_without_overwrite_or_delete",
+    "receipt_root_prevents_second_invocation",
+    "all_forbidden_access_and_operation_counters_explicit"
+  ],
+  "execution_state": {
+    "implementation_commit": null,
+    "implementation_push_ci_run_id": null,
+    "implementation_pull_request_ci_run_id": null,
+    "remote_metadata_calls": 0,
+    "payload_download_invocations": 0,
+    "network_payload_bytes": 0,
+    "local_s20_path_stats_or_hash_reads": 0,
+    "bundle_created": false,
+    "manifest_or_receipt_created": false,
+    "registered_execution_consumed": false
+  },
+  "warnings": [
+    "implementation_is_not_an_acquisition_result",
+    "registered_execution_remains_blocked_until_implementation_commit_is_remotely_green",
+    "payload_content_has_no_parser_in_loop53",
+    "cc_by_nc_4_0_noncommercial_research_boundary",
+    "one_future_invocation_has_no_rerun"
+  ],
+  "claim_boundary": {
+    "engineering_capability_added": "One strict standard-library path can acquire, opaque-hash, atomically promote, and privately receipt the exact registered four-file bundle after both remote-green gates.",
+    "scientific_claim_not_established": "No real S20 metadata or payload operation occurred during implementation, so BrainVision readability, EEG signal quality, trial or target validity, neural advantage, decoding accuracy, generalization, end-to-end latency, portable hardware, at-home use, and clinical utility remain unestablished."
+  }
+}
