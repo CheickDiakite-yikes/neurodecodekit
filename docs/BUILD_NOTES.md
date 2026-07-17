@@ -4530,6 +4530,8 @@ result.
   256 MiB RSS, and 16 MiB output. It waits for Loop 55 to close, exact aggregate
   hashes, and a separate exact Tier C claim decision. The provisional outcome
   is `L56-O2`, mechanics and interfaces only; execution remains `Not Started`.
+- Planning commit `6583ca3` passed push CI `29586877054` and PR #34 CI
+  `29586915269`; Base Python and Optional Neuro Readers passed in both.
 
 Engineering capability added: NeuroDecodeKit now has a machine-checkable
 cross-modality verdict vocabulary that separates shared artifacts and

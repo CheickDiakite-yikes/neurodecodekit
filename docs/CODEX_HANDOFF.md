@@ -17,6 +17,8 @@
 > result dependent, and requires a separate exact Tier C claim decision after
 > an exact aggregate-only preregistration is green. Preserve the unrelated
 > tracker inspection NDJSON.
+> Planning commit `6583ca3` passed push CI `29586877054` and PR #34 CI
+> `29586915269`; Base Python and Optional Neuro Readers passed in both.
 >
 > Current handoff, 2026-07-16 after Loop 55 planning research: commit `f3158c7`
 > freezes the future fresh-EEG neural-effect question in

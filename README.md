@@ -498,7 +498,9 @@ Read this before interpreting any number in the repository.
   `L56-O2`, mechanics and interfaces only. The final artifact-only verdict is
   `Not Started`, Loop 55 result dependent, and separately unauthorized; no raw
   or protected payload, target, prediction, checkpoint, model, score, device,
-  or latency trace was opened or produced.
+  or latency trace was opened or produced. Planning commit `6583ca3` passed
+  push CI `29586877054` and PR #34 CI `29586915269`, with both required jobs
+  green.
 - **Loop 30 planning research:** the future product is a loopback-only target-
   free replay inspector. The boundary separates artifact, synthetic, recorded,
   and live source modes; freezes a 30-field trace, nine clocks, six latency

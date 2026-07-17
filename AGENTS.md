@@ -150,6 +150,9 @@ and a separate exact Tier C claim decision is committed, pushed, and remotely
 green. No payload, target, prediction, checkpoint, model, score recomputation,
 device, home, release, or scientific-claim operation is authorized now.
 
+Planning commit `6583ca3` passed push CI `29586877054` and PR #34 CI
+`29586915269`; Base Python and Optional Neuro Readers passed in both.
+
 The first 20-loop roadmap is complete except for the deliberately parked Loop
 13 backend. Post-roadmap Loops 21 and 22 validate bounded synthetic causal
 replay and one tiny learned motif encoder. Loop 23 implemented the frozen

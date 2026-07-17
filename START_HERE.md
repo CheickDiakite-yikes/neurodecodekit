@@ -122,7 +122,9 @@
    latency. Current local MEG and historical EEG tiny-model evidence is
    negative, not matched; fresh EEG evidence is unavailable. Planning is
    complete, but the final cross-modality verdict is `Not Started`, Loop 55
-   result dependent, and separately unauthorized.
+   result dependent, and separately unauthorized. Planning commit `6583ca3`
+   passed push CI `29586877054` and PR #34 CI `29586915269`; Base Python and
+   Optional Neuro Readers are green in both.
 12. Read `docs/LOOP_30_PRIMARY_SOURCE_RESEARCH.md` for the future loopback-only
    target-free replay inspector, nine-clock timing contract, six latency claim
    levels, 18 future gates, and 30 refusals. It is planning research only;

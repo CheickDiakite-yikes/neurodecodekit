@@ -415,6 +415,8 @@ device mechanics, repeated home feasibility, and clinical utility separate.
 The final verdict is `Not Started`, Loop 55 result dependent, and requires an
 exact aggregate allowlist plus a separate exact Tier C claim decision. Do not
 open payloads, targets, predictions, checkpoints, models, or scores for Loop 56.
+Planning commit `6583ca3` passed push CI `29586877054` and PR #34 CI
+`29586915269`; Base Python and Optional Neuro Readers passed in both.
 
 Independently, RW3 Stage A remains a separate pending decision surface:
 
