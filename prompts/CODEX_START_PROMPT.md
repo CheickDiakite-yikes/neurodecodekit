@@ -399,6 +399,25 @@ hand-only pass key decoding, or any centered-window pass causal or real time.
 Documentation-sync commit `8efcb17` passed push CI `29473032843` and PR #33 CI
 `29473045583`; Base Python and Optional Neuro Readers passed in both.
 
+Loop 56 cross-modality accessibility planning research is complete and
+reviewable at:
+
+- `docs/LOOP_56_PRIMARY_SOURCE_RESEARCH.md`;
+- `registries/loop56_cross_modality_accessibility_research.v0.json`;
+- `tests/test_loop56_cross_modality_accessibility_research.py`.
+
+It freezes five verdict classes, 12 non-skippable capability levels, 18
+comparison dimensions, 16 claim fields, 28 gates, 34 refusals, and a 12-part
+at-home conjunction. Current local tiny MEG and historical EEG prediction
+evidence is negative but unmatched; fresh S20 evidence remains unavailable.
+Keep continuous input, causal incremental output, measured end-to-end latency,
+device mechanics, repeated home feasibility, and clinical utility separate.
+The final verdict is `Not Started`, Loop 55 result dependent, and requires an
+exact aggregate allowlist plus a separate exact Tier C claim decision. Do not
+open payloads, targets, predictions, checkpoints, models, or scores for Loop 56.
+Planning commit `6583ca3` passed push CI `29586877054` and PR #34 CI
+`29586915269`; Base Python and Optional Neuro Readers passed in both.
+
 Independently, RW3 Stage A remains a separate pending decision surface:
 
 - `docs/RW3_PRIMARY_SOURCE_RESEARCH.md`;
@@ -429,7 +448,10 @@ preparation alone do not authorize RW3. The parked Loop 24 result and any Loop
    stage remains separately unauthorized and acquisition-dependent. Loop 55
    planning is complete but remains Loop 54 dependent and experimentally `Not
    Started`; it authorizes no split, target, model, training, inference, or
-   score.
+   score. Loop 56 planning is complete but its aggregate-only final verdict
+   remains Loop 55 result dependent, `Not Started`, and separately unauthorized;
+   it authorizes no payload, score recomputation, device, home, release, or
+   scientific-claim action.
 2. Do not install or import BrainFlow, LSL, MNE-BIDS, or hardware SDKs. Do not
    connect to hardware, enumerate devices, open sockets, or execute a live
    source.

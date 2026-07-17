@@ -4502,3 +4502,42 @@ Scientific claim not established: no S20 payload, split, target, model,
 prediction, training run, score, or latency measurement was accessed or
 produced, so there is still no demonstrated EEG neural advantage or decoding
 result.
+
+## 2026-07-16 - Loop 56 Cross-Modality Accessibility Research
+
+- Audited the local aggregate MEG and EEG evidence, Brain2Qwerty v1/v2,
+  BIDS EEG/MEG channel semantics, OpenBCI Cyton packet mechanics, and the
+  existing modality, geometry, and device boundaries without opening any raw,
+  ignored, protected, target, prediction, checkpoint, model, or device payload.
+- Froze five verdict classes: shared proven artifact, shared interface only,
+  modality-specific requalification, unavailable, and prohibited inference.
+  Signal values, scores, thresholds, channels, preprocessing, representations,
+  weights, causal behavior, latency, and device capability cannot transfer by
+  interface compatibility.
+- Froze 12 non-skippable capability levels, 18 comparison dimensions, 16
+  mandatory claim fields, 28 acceptance gates, 34 refusal IDs, eight outcome
+  routes, and a 12-part at-home conjunction.
+- Preserved the current evidence honestly: the registered tiny S21 MEG
+  candidate reached macro CER `0.938177` versus prior `0.751235`; the historical
+  S7 EEG nearest-centroid classifier reached accuracy `0.009091` versus prior
+  `0.122727`. These are both negative but not a matched modality comparison.
+  Fresh S20 qualification and neural-effect results remain unavailable.
+- Separated continuous input, causal incremental output, and measured physical-
+  source-to-visible-output latency. Published Brain2Qwerty v2 continuous MEG
+  remains external, noncausal, whole-sentence evidence and establishes no local
+  EEG, OPM, portable, device, or home result.
+- The future final verdict is artifact-only under one thread/worker, 600 seconds,
+  256 MiB RSS, and 16 MiB output. It waits for Loop 55 to close, exact aggregate
+  hashes, and a separate exact Tier C claim decision. The provisional outcome
+  is `L56-O2`, mechanics and interfaces only; execution remains `Not Started`.
+- Planning commit `6583ca3` passed push CI `29586877054` and PR #34 CI
+  `29586915269`; Base Python and Optional Neuro Readers passed in both.
+
+Engineering capability added: NeuroDecodeKit now has a machine-checkable
+cross-modality verdict vocabulary that separates shared artifacts and
+interfaces from modality-specific evidence and prohibited inferences.
+
+Scientific claim not established: no new EEG or MEG payload, target,
+prediction, checkpoint, model, score, device, home session, or latency trace
+was accessed or produced, so no cross-modality neural advantage, transfer,
+real-time, portable, home, or clinical result was established.

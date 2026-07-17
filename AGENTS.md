@@ -128,6 +128,31 @@ real-time operation, portable hardware, home use, or clinical utility.
 Documentation-sync commit `8efcb17` passed push CI `29473032843` and PR #33 CI
 `29473045583`; Base Python and Optional Neuro Readers passed in both.
 
+Loop 56 cross-modality accessibility planning research is now complete while
+the final verdict remains `Not Started`, Loop 55 result dependent, and
+unauthorized:
+
+```bash
+cat docs/LOOP_56_PRIMARY_SOURCE_RESEARCH.md
+python -m json.tool registries/loop56_cross_modality_accessibility_research.v0.json >/dev/null
+```
+
+The prospective protocol freezes five verdict classes, 12 non-skippable
+capability levels, 18 comparison dimensions, 16 claim fields, 28 gates, 34
+refusals, and a 12-part at-home conjunction. Current local evidence supports
+shared modality-aware software interfaces only: the tested tiny S21 MEG and
+historical S7 EEG predictors both lost to their no-signal comparators, but they
+are not a matched modality comparison; fresh S20 evidence is unavailable.
+Published Brain2Qwerty v1/v2 results remain external, and v2 continuous MEG is
+noncausal whole-sentence evidence, not measured causal real-time output. Do not
+execute Loop 56 until Loop 55 closes, an exact aggregate allowlist is frozen,
+and a separate exact Tier C claim decision is committed, pushed, and remotely
+green. No payload, target, prediction, checkpoint, model, score recomputation,
+device, home, release, or scientific-claim operation is authorized now.
+
+Planning commit `6583ca3` passed push CI `29586877054` and PR #34 CI
+`29586915269`; Base Python and Optional Neuro Readers passed in both.
+
 The first 20-loop roadmap is complete except for the deliberately parked Loop
 13 backend. Post-roadmap Loops 21 and 22 validate bounded synthetic causal
 replay and one tiny learned motif encoder. Loop 23 implemented the frozen
@@ -690,10 +715,11 @@ Loop 50 planning research now freezes the text, participant, seed, control,
 metric, resource, and claim firewalls, including an exact 20-update inventory,
 while its experiment remains `Not Started`; no exact model or protected
 operation exists. Loop 53 is `Preregistered; Authorization Pending` at the
-acquisition-only boundary described above. Loop 54 qualification and Loop 55
-neural-effect planning research are complete while both experiments remain
-`Not Started`, dependency-blocked, and unauthorized. Loops 51-52 and 56-64
-are `Not Started`, every current execution flag is false, and every
+acquisition-only boundary described above. Loop 54 qualification, Loop 55
+neural-effect, and Loop 56 cross-modality accessibility planning research are
+complete while their experiments or verdict remain `Not Started`, dependency-
+blocked, and unauthorized. Loops 51-52 and 57-64 are `Not Started`, every
+current execution flag is false, and every
 global authorization field is false. Do not rerun Loop 48, acquire or open S24,
 substitute a development person, implement a post-outcome representation
 repair, implement/download/open S20, or open any S25 path from a broad

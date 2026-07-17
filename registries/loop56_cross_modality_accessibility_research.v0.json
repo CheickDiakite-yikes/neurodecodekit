@@ -1,0 +1,753 @@
+{
+  "schema_name": "neurodecodekit.loop56_cross_modality_accessibility_research",
+  "schema_version": "0.1.0",
+  "created_at": "2026-07-16",
+  "loop_id": 56,
+  "title": "Cross-Modality Accessibility Verdict",
+  "status": "planning_research_complete_loop55_result_dependent_verdict_not_started",
+  "proof_posture": "primary_source_and_committed_aggregate_boundary_research_only_no_payload_target_model_device_or_final_verdict_execution",
+  "current_verdict_status": "Not Started",
+  "provisional_verdict": "shared_engineering_interfaces_with_modality_specific_evidence_only",
+  "provisional_outcome_id": "L56-O2",
+  "scientific_claim_target": "qualified cross_modality boundary without score pooling channel equivalence model transfer device extrapolation or home claim",
+  "scientific_claim_ceiling": "A future clean artifact-only verdict may state which exact engineering interfaces and independently proven capability levels are shared or modality-specific across named cryogenic MEG and scalp EEG evidence. It cannot create neural advantage, transfer, equivalence, causal latency, portable hardware, at-home, patient, assistive, or clinical evidence.",
+  "authorization": {
+    "planning_research_authorized_now": true,
+    "loop56_preregistration_authorized_now": false,
+    "loop56_final_verdict_execution_authorized_now": false,
+    "scientific_claim_synthesis_authorized_now": false,
+    "local_or_external_payload_read_authorized_now": false,
+    "ignored_or_protected_artifact_read_authorized_now": false,
+    "target_prediction_checkpoint_or_cache_read_authorized_now": false,
+    "score_recomputation_authorized_now": false,
+    "pooled_metric_or_cross_modality_statistic_authorized_now": false,
+    "model_or_checkpoint_load_authorized_now": false,
+    "model_inference_authorized_now": false,
+    "training_or_parameter_update_authorized_now": false,
+    "new_download_authorized_now": false,
+    "network_operation_authorized_now": false,
+    "stream_device_or_hardware_operation_authorized_now": false,
+    "home_or_participant_operation_authorized_now": false,
+    "release_or_public_claim_authorized_now": false,
+    "rerun_or_result_substitution_authorized_now": false,
+    "separate_exact_tier_c_claim_decision_required_for_final_verdict": true
+  },
+  "dependencies": {
+    "loop15_cross_session_path": "docs/LOOP_15_SAME_SUBJECT_CROSS_SESSION.md",
+    "loop15_cross_session_sha256": "2890a94abf3ce469ebb0d14c58da7b24492d4dcaa225f194fdb1a02cd5587d18",
+    "loop19_eeg_bridge_path": "docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md",
+    "loop19_eeg_bridge_sha256": "c778d15c51ca43a638df51cb1251c74105467b59ac65b6a8e35c845bcfcf4930",
+    "loop26_shared_validation_result_path": "registries/loop26_shared_validation_result.v0.json",
+    "loop26_shared_validation_result_sha256": "7577c84eaea7579250b5c1fcdf53234a3d56fdab4640df2edebaee9ae8bd31b4",
+    "loop29_modality_path": "registries/loop29_research_boundary.v0.json",
+    "loop29_modality_sha256": "22a514203413107c2c4a0ce6827d43d50ec65fe0e647e43d4bedacc62f1b0811",
+    "loop36_geometry_path": "registries/loop36_research_boundary.v0.json",
+    "loop36_geometry_sha256": "a621d79a46a8ac20af75cfd077e933a901d4f8a38e39648cdb5e0bff4c6897b4",
+    "loop42_device_path": "registries/loop42_research_boundary.v0.json",
+    "loop42_device_sha256": "5274dfa5e1ec0535a8b4a068268249c7f0fd5062c5b9ad19e6d4f24e81feb994",
+    "loop54_qualification_research_path": "registries/loop54_eeg_trial_geometry_research.v0.json",
+    "loop54_qualification_research_sha256": "ab158abf5b7425c63c66e201ed341c096b9a622aff0eef8ba1b3bdeacf7f5ec7",
+    "loop54_final_result_exists_now": false,
+    "loop55_effect_research_path": "registries/loop55_eeg_neural_effect_research.v0.json",
+    "loop55_effect_research_sha256": "032157b8a90be68a16cc5963bf0c1c513e626a50b417b1e76ce7c06715d9c9af",
+    "loop55_final_result_exists_now": false,
+    "loop56_final_verdict_blocked_until_loop55_closes": true,
+    "S7_and_S21_consumed_evidence_may_be_read_only_as_committed_aggregate": true,
+    "S20_S24_S25_payload_access_forbidden": true
+  },
+  "primary_source_findings": [
+    {
+      "finding_id": "L56-S01",
+      "source_id": "brain2qwerty_v1_nature_2026",
+      "finding": "EEG records electric fields and MEG records magnetic fields. The published devices used 61 EEG plus three ocular channels versus 102 magnetometers plus 204 planar gradiometers, so shared task vocabulary does not imply shared channel semantics."
+    },
+    {
+      "finding_id": "L56-S02",
+      "source_id": "brain2qwerty_v1_nature_2026",
+      "finding": "Brain2Qwerty v1 reported mean sentence CER of 29 percent for MEG and 65 percent for EEG under its own cohort model preprocessing split and language context. These are external conditional results, not local thresholds or pooled modality scores."
+    },
+    {
+      "finding_id": "L56-S03",
+      "source_id": "brain2qwerty_v2_project",
+      "finding": "The official v2 project page says v2 removes individual keypress timing and generates sentences from continuous MEG recordings. Continuous input is a distinct capability from causal incremental output."
+    },
+    {
+      "finding_id": "L56-S04",
+      "source_id": "brain2qwerty_v2_paper",
+      "finding": "Brain2Qwerty v2 uses 306-channel cryogenic MEG and states that the current architecture is noncausal works with an entire sentence and has slow real-time latency. It is not EEG OPM home or causal streaming evidence."
+    },
+    {
+      "finding_id": "L56-S05",
+      "source_id": "bids_eeg_1_11_1",
+      "finding": "BIDS distinguishes EEG electrodes from recorded channels and requires the EEG reference scheme and sampling frequency while preserving units filters channel order and channel-specific reference."
+    },
+    {
+      "finding_id": "L56-S06",
+      "source_id": "bids_meg_1_11_1",
+      "finding": "BIDS distinguishes MEG magnetometers axial and planar gradiometers reference sensors and non-MEG auxiliary channels. Equal tensor dimensions cannot establish sensor equivalence."
+    },
+    {
+      "finding_id": "L56-S07",
+      "source_id": "openbci_cyton_data_format",
+      "finding": "Cyton documents 250 Hz packets with a sample counter eight 24-bit channels six auxiliary bytes and a footer. Packet mechanics do not establish EEG configuration signal quality task information or decoding."
+    }
+  ],
+  "source_bindings": [
+    {
+      "source_id": "brain2qwerty_v1_nature_2026",
+      "url": "https://www.nature.com/articles/s41593-026-02303-2",
+      "publisher": "Nature Neuroscience",
+      "role": "EEG MEG device task preprocessing model metric and performance boundary"
+    },
+    {
+      "source_id": "brain2qwerty_v2_project",
+      "url": "https://facebookresearch.github.io/brain2qwerty/",
+      "publisher": "Meta Fundamental AI Research",
+      "role": "official continuous-input claim and stated accessibility limits"
+    },
+    {
+      "source_id": "brain2qwerty_v2_paper",
+      "url": "https://facebookresearch.github.io/brain2qwerty/assets/brain2qwerty_v2.pdf",
+      "publisher": "Meta Fundamental AI Research",
+      "role": "v2 modality device cohort noncausal latency and clinical boundary"
+    },
+    {
+      "source_id": "bids_eeg_1_11_1",
+      "url": "https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html",
+      "publisher": "BIDS Contributors",
+      "role": "EEG electrode channel reference unit filter and ordering semantics"
+    },
+    {
+      "source_id": "bids_meg_1_11_1",
+      "url": "https://bids-specification.readthedocs.io/en/stable/modality-specific-files/magnetoencephalography.html",
+      "publisher": "BIDS Contributors",
+      "role": "MEG sensor reference auxiliary and coordinate semantics"
+    },
+    {
+      "source_id": "openbci_cyton_data_format",
+      "url": "https://docs.openbci.com/Cyton/CytonDataFormat/",
+      "publisher": "OpenBCI",
+      "role": "candidate local-device packet mechanics boundary"
+    },
+    {
+      "source_id": "local_loop29_primary_research",
+      "url": "docs/LOOP_29_PRIMARY_SOURCE_RESEARCH.md",
+      "publisher": "NeuroDecodeKit",
+      "role": "previously audited portability requirement matrix and evidence limits"
+    }
+  ],
+  "verdict_classes": [
+    {
+      "class_id": "L56-X0",
+      "name": "shared_proven_artifact",
+      "definition": "The exact same committed artifact dependency-free algorithm or invariant has direct evidence for both modalities.",
+      "example": "dependency-free CER implementation and report schema",
+      "score_or_signal_value_may_use_class": false
+    },
+    {
+      "class_id": "L56-X1",
+      "name": "shared_interface_only",
+      "definition": "Field names contracts and refusal behavior transfer but every value payload and qualification remains modality-specific.",
+      "example": "NeuroTokenCache modality channel geometry timestamp and provenance fields"
+    },
+    {
+      "class_id": "L56-X2",
+      "name": "modality_specific_requalification",
+      "definition": "The scientific or engineering question is shared but each modality needs independent data transforms controls thresholds and results.",
+      "example": "sensor-signal effect over a train-only no-signal comparator"
+    },
+    {
+      "class_id": "L56-X3",
+      "name": "unavailable",
+      "definition": "Required evidence is missing pending incomplete ineligible or not comparable.",
+      "example": "fresh S20 causal key effect before Loop 55 executes"
+    },
+    {
+      "class_id": "L56-X4",
+      "name": "prohibited_inference",
+      "definition": "The proposed equivalence ranking transfer or accessibility claim is invalid under the current evidence design.",
+      "example": "cryogenic MEG sensor ablation proves eight-channel home EEG decoding"
+    }
+  ],
+  "capability_ladder": [
+    {
+      "level_id": "L56-C0",
+      "name": "source_identity",
+      "required_evidence": "exact modality device participant session task files hashes and license"
+    },
+    {
+      "level_id": "L56-C1",
+      "name": "bounded_reader",
+      "required_evidence": "metadata and arrays read under caps with channel semantics preserved"
+    },
+    {
+      "level_id": "L56-C2",
+      "name": "signal_quality",
+      "required_evidence": "finite values units reference geometry artifacts duration and warnings"
+    },
+    {
+      "level_id": "L56-C3",
+      "name": "trial_and_target_integrity",
+      "required_evidence": "event performed action intended target trial and split identities reconcile"
+    },
+    {
+      "level_id": "L56-C4",
+      "name": "sensor_signal_effect",
+      "required_evidence": "frozen model beats no-signal timing corruption and applicable peripheral controls"
+    },
+    {
+      "level_id": "L56-C5",
+      "name": "key_or_text_prediction",
+      "required_evidence": "target scaffolding metric held-out result and language contribution separated"
+    },
+    {
+      "level_id": "L56-C6",
+      "name": "continuous_input",
+      "required_evidence": "inference requires no externally supplied keypress onsets"
+    },
+    {
+      "level_id": "L56-C7",
+      "name": "causal_incremental_output",
+      "required_evidence": "zero declared future context and incremental semantic parity"
+    },
+    {
+      "level_id": "L56-C8",
+      "name": "measured_end_to_end_latency",
+      "required_evidence": "named clocks from physical source event through visible output"
+    },
+    {
+      "level_id": "L56-C9",
+      "name": "local_device_mechanics",
+      "required_evidence": "named hardware packet reference locality privacy and failure qualification"
+    },
+    {
+      "level_id": "L56-C10",
+      "name": "repeated_at_home_feasibility",
+      "required_evidence": "repeated self-application usable channels burden safety retention and failures"
+    },
+    {
+      "level_id": "L56-C11",
+      "name": "assistive_or_clinical_utility",
+      "required_evidence": "target population no-keypress task usability safety benefit and governance"
+    }
+  ],
+  "capability_semantics": {
+    "higher_software_level_may_fill_missing_physical_level": false,
+    "continuous_input_equals_causal_incremental_output": false,
+    "causal_incremental_output_equals_measured_end_to_end_latency": false,
+    "bounded_reader_equals_signal_quality": false,
+    "signal_quality_equals_sensor_signal_effect": false,
+    "sensor_signal_effect_equals_brain_specific_origin": false,
+    "local_device_mechanics_equals_at_home_feasibility": false,
+    "at_home_feasibility_equals_clinical_utility": false
+  },
+  "current_local_evidence": {
+    "cryogenic_MEG": {
+      "source_identity": {
+        "status": "passed_for_named_S21_slices",
+        "verdict_class": "L56-X2"
+      },
+      "reader": {
+        "status": "passed_for_named_S21_FIF_slices",
+        "verdict_class": "L56-X2"
+      },
+      "trial_integrity": {
+        "status": "passed_66_session1_and_63_performed_session2_trials",
+        "verdict_class": "L56-X2"
+      },
+      "same_person_cross_session_prediction": {
+        "status": "failed_candidate_worse_than_prior_by_0_142491_corpus_CER",
+        "verdict_class": "L56-X2"
+      },
+      "registered_sensor_signal_effect": {
+        "status": "failed_candidate_macro_CER_0_938177_prior_0_751235",
+        "verdict_class": "L56-X2"
+      },
+      "continuous_input": {
+        "status": "unavailable_locally",
+        "verdict_class": "L56-X3"
+      },
+      "causal_incremental_output": {
+        "status": "unavailable_target_free_mechanics_only",
+        "verdict_class": "L56-X3"
+      },
+      "portable_or_home": {
+        "status": "unavailable_and_inapplicable_to_cryogenic_MEGIN_system",
+        "verdict_class": "L56-X4"
+      }
+    },
+    "scalp_EEG": {
+      "historical_reader": {
+        "status": "bounded_pass_for_consumed_S7",
+        "verdict_class": "L56-X2"
+      },
+      "historical_sensor_signal_effect": {
+        "status": "failed_nearest_centroid_accuracy_0_009091_prior_0_122727",
+        "verdict_class": "L56-X2"
+      },
+      "historical_fresh_claim_eligibility": {
+        "status": "ineligible_extractor_removed_EOG_and_coloaded_targets",
+        "verdict_class": "L56-X4"
+      },
+      "fresh_source_identity": {
+        "status": "preregistered_public_metadata_only_unauthorized",
+        "verdict_class": "L56-X3"
+      },
+      "fresh_signal_quality_and_trials": {
+        "status": "unavailable_loop54_not_executed",
+        "verdict_class": "L56-X3"
+      },
+      "fresh_causal_hand_or_key_effect": {
+        "status": "unavailable_loop55_not_executed",
+        "verdict_class": "L56-X3"
+      },
+      "continuous_or_causal_output": {
+        "status": "unavailable",
+        "verdict_class": "L56-X3"
+      },
+      "local_device_mechanics": {
+        "status": "OpenBCI_Cyton_Q0_specification_candidate_only",
+        "verdict_class": "L56-X3"
+      },
+      "repeated_at_home_feasibility": {
+        "status": "unavailable",
+        "verdict_class": "L56-X3"
+      }
+    }
+  },
+  "external_evidence_separation": {
+    "brain2qwerty_v1": {
+      "evidence_origin": "external_published_cohort",
+      "MEG_mean_sentence_CER": 0.29,
+      "EEG_mean_sentence_CER": 0.65,
+      "known_keypress_onsets_required": true,
+      "language_model_used": true,
+      "may_define_local_threshold": false,
+      "may_reverse_local_negative_result": false,
+      "may_be_pooled_with_local_scores": false
+    },
+    "brain2qwerty_v2": {
+      "evidence_origin": "external_preprint_cryogenic_MEG_only",
+      "best_participant_word_accuracy": 0.78,
+      "participants": 9,
+      "sessions_per_participant": 10,
+      "sensor_count": 306,
+      "magnetometers": 102,
+      "planar_gradiometers": 204,
+      "continuous_input": true,
+      "causal_architecture": false,
+      "entire_sentence_context": true,
+      "measured_local_end_to_end_latency": false,
+      "EEG_evidence": false,
+      "OPM_MEG_evidence": false,
+      "home_device_evidence": false,
+      "patient_evidence": false
+    }
+  },
+  "dimension_matrix": [
+    {
+      "dimension_id": "L56-D01",
+      "name": "source_identity_and_provenance",
+      "shared_part": "schema hash and warning requirements",
+      "modality_specific_part": "device participant session task file license and source values",
+      "default_class": "L56-X1",
+      "score_pooling_allowed": false
+    },
+    {
+      "dimension_id": "L56-D02",
+      "name": "raw_format_and_reader",
+      "shared_part": "bounded reader access counter and refusal contract",
+      "modality_specific_part": "FIF BrainVision or device format implementation and qualification",
+      "default_class": "L56-X1",
+      "score_pooling_allowed": false
+    },
+    {
+      "dimension_id": "L56-D03",
+      "name": "sensor_electrode_and_channel_ontology",
+      "shared_part": "ordered typed channel record",
+      "modality_specific_part": "electrode sensor coil reference and auxiliary roles",
+      "default_class": "L56-X2",
+      "score_pooling_allowed": false
+    },
+    {
+      "dimension_id": "L56-D04",
+      "name": "units_gain_reference_ground_and_compensation",
+      "shared_part": "dimensional validation and provenance",
+      "modality_specific_part": "EEG electrical reference and gain versus MEG calibration compensation projectors",
+      "default_class": "L56-X2",
+      "score_pooling_allowed": false
+    },
+    {
+      "dimension_id": "L56-D05",
+      "name": "geometry_frame_orientation_and_transforms",
+      "shared_part": "geometry availability mask frame and transform record",
+      "modality_specific_part": "electrode positions sensor coil axes device head and MRI transforms",
+      "default_class": "L56-X2",
+      "score_pooling_allowed": false
+    },
+    {
+      "dimension_id": "L56-D06",
+      "name": "sampling_filters_antialiasing_and_clocks",
+      "shared_part": "causality timestamp and response invariants",
+      "modality_specific_part": "hardware filters rates coefficients delays and clock sources",
+      "default_class": "L56-X2",
+      "score_pooling_allowed": false
+    },
+    {
+      "dimension_id": "L56-D07",
+      "name": "task_prompt_performed_action_and_intended_target",
+      "shared_part": "field separation and leakage firewall",
+      "modality_specific_part": "task language prompt behavior target and claim values",
+      "default_class": "L56-X1",
+      "score_pooling_allowed": false
+    },
+    {
+      "dimension_id": "L56-D08",
+      "name": "event_scaffolding_and_trial_identity",
+      "shared_part": "opaque identity count and reconciliation contract",
+      "modality_specific_part": "event source timing residual and trial membership",
+      "default_class": "L56-X2",
+      "score_pooling_allowed": false
+    },
+    {
+      "dimension_id": "L56-D09",
+      "name": "grouped_split_and_target_firewall",
+      "shared_part": "prospective grouping freeze and one-shot target order",
+      "modality_specific_part": "exact group partition and target hashes",
+      "default_class": "L56-X1",
+      "score_pooling_allowed": false
+    },
+    {
+      "dimension_id": "L56-D10",
+      "name": "no_signal_and_timing_baselines",
+      "shared_part": "comparator role and train-only rule",
+      "modality_specific_part": "fit target distribution timing features and result",
+      "default_class": "L56-X2",
+      "score_pooling_allowed": false
+    },
+    {
+      "dimension_id": "L56-D11",
+      "name": "signal_corruption_controls",
+      "shared_part": "zero row channel and time falsification questions",
+      "modality_specific_part": "physically valid corruption transforms and warnings",
+      "default_class": "L56-X2",
+      "score_pooling_allowed": false
+    },
+    {
+      "dimension_id": "L56-D12",
+      "name": "peripheral_and_environmental_controls",
+      "shared_part": "Loop35 taxonomy and unavailable-state requirement",
+      "modality_specific_part": "recorded EOG EMG motion gaze audio reference and environment",
+      "default_class": "L56-X2",
+      "score_pooling_allowed": false
+    },
+    {
+      "dimension_id": "L56-D13",
+      "name": "model_architecture_weights_and_representations",
+      "shared_part": "parameter provenance and model-card schema",
+      "modality_specific_part": "architecture weights normalization checkpoint and representation evidence",
+      "default_class": "L56-X4",
+      "score_pooling_allowed": false
+    },
+    {
+      "dimension_id": "L56-D14",
+      "name": "metrics_and_report_schema",
+      "shared_part": "dependency-free CER WER accuracy and report algorithms",
+      "modality_specific_part": "metric values thresholds cohorts and uncertainty",
+      "default_class": "L56-X0",
+      "score_pooling_allowed": false
+    },
+    {
+      "dimension_id": "L56-D15",
+      "name": "inference_unit_and_uncertainty",
+      "shared_part": "trial-level principle exact paired mechanics and biological replicate count",
+      "modality_specific_part": "trial effects exchangeability sample size and inference result",
+      "default_class": "L56-X1",
+      "score_pooling_allowed": false
+    },
+    {
+      "dimension_id": "L56-D16",
+      "name": "continuous_causal_and_latency_status",
+      "shared_part": "capability vocabulary and clock fields",
+      "modality_specific_part": "right context incremental parity physical endpoints and measurements",
+      "default_class": "L56-X2",
+      "score_pooling_allowed": false
+    },
+    {
+      "dimension_id": "L56-D17",
+      "name": "compute_bytes_dependencies_and_privacy",
+      "shared_part": "resource and access ledger schema",
+      "modality_specific_part": "actual files dependencies runtime RSS outputs license and sensitivity",
+      "default_class": "L56-X1",
+      "score_pooling_allowed": false
+    },
+    {
+      "dimension_id": "L56-D18",
+      "name": "device_burden_portability_home_use_and_safety",
+      "shared_part": "requirement checklist only",
+      "modality_specific_part": "named hardware participant setup repeated use failures safety and usability",
+      "default_class": "L56-X4",
+      "score_pooling_allowed": false
+    }
+  ],
+  "claim_sentence_required_fields": [
+    "evidence origin local or external",
+    "modality and physical measurement",
+    "device class and exact model where known",
+    "participant and biological replicate scope",
+    "session and task",
+    "performed versus intended target",
+    "event onset and output count scaffolding",
+    "causal or noncausal status and right context",
+    "split and inference unit",
+    "model and parameter source",
+    "language model contribution",
+    "no-signal timing corruption and peripheral controls",
+    "metric and direction",
+    "measured result and uncertainty",
+    "warnings and unavailable fields",
+    "maximum claim class"
+  ],
+  "forbidden_unqualified_phrases": [
+    "works on EEG",
+    "real-time Brain2Qwerty",
+    "portable MEG",
+    "same signal with fewer channels",
+    "EEG equivalent to MEG",
+    "home thought typing",
+    "wearable decoding proven",
+    "shared model performance"
+  ],
+  "future_artifact_only_verdict": {
+    "status": "not_started_waiting_for_closed_loop55_result_and_exact_claim_decision",
+    "allowed_input_class": "committed aggregate target-free JSON and Markdown allowlist only",
+    "raw_ignored_private_or_protected_input_allowed": false,
+    "cache_array_target_prediction_checkpoint_or_model_input_allowed": false,
+    "score_recomputation_allowed": false,
+    "required_steps": [
+      "SHA256 verify every allowed aggregate input",
+      "retain cohort metric model and claim ceiling with every score",
+      "populate all eighteen dimensions for cryogenic MEG and scalp EEG",
+      "classify every cell L56-X0 through L56-X4",
+      "compute verdict class and satisfied capability counts only",
+      "refuse pooled scores inherited thresholds channel equivalence and device extrapolation",
+      "emit every missing field contradiction warning and refusal",
+      "route through the frozen outcome taxonomy",
+      "emit one bounded JSON and one Markdown report"
+    ],
+    "resource_ratio_rule": "allowed_only_for_homologous_stages_with_same_boundary_and_measured_numerator_and_denominator",
+    "missing_resource_measure_makes_ratio_unavailable": true,
+    "fewer_channels_or_bytes_proves_usability": false,
+    "separate_exact_tier_c_claim_decision_required": true
+  },
+  "outcome_taxonomy": [
+    {
+      "outcome_id": "L56-O0",
+      "name": "planning_only",
+      "meaning": "The protocol exists but the final artifact-only verdict has not run."
+    },
+    {
+      "outcome_id": "L56-O1",
+      "name": "invalid_aggregate_or_claim_sentence",
+      "meaning": "An input hash eligibility claim-field or access rule failed; park and repair prospectively without payload access."
+    },
+    {
+      "outcome_id": "L56-O2",
+      "name": "mechanics_and_interfaces_only",
+      "meaning": "Shared interfaces are supported while scientific cross-modality capability remains negative or unavailable."
+    },
+    {
+      "outcome_id": "L56-O3",
+      "name": "EEG_hand_effect_only",
+      "meaning": "Retain one modality-specific motor-side effect without key text or modality-equivalence claim."
+    },
+    {
+      "outcome_id": "L56-O4",
+      "name": "EEG_key_effect_with_local_MEG_effect_absent",
+      "meaning": "Report an independent EEG result without ranking modalities transferring weights or reversing local MEG evidence."
+    },
+    {
+      "outcome_id": "L56-O5",
+      "name": "independent_EEG_and_MEG_effects",
+      "meaning": "Report two separately qualified effects with no pooled score model transfer or hardware equivalence."
+    },
+    {
+      "outcome_id": "L56-O6",
+      "name": "continuous_but_noncausal_evidence",
+      "meaning": "Preserve asynchronous sentence capability while causal incremental and latency levels remain unavailable."
+    },
+    {
+      "outcome_id": "L56-O7",
+      "name": "future_causal_and_device_levels_complete",
+      "meaning": "Advance only exact independently satisfied capability levels to Loops 57 through 60."
+    }
+  ],
+  "at_home_conjunction": [
+    "device presence and exact firmware software identity",
+    "verified EEG electrode reference ground gain and channel roles",
+    "local raw access without mandatory cloud transport",
+    "measured packet clock loss reconnect and retention behavior",
+    "target-blind signal quality and artifact inventory",
+    "repeated self-application with setup time and failure rate",
+    "task and target integrity",
+    "sensor-signal effect over no-signal and peripheral controls",
+    "causal incremental parity",
+    "measured capture-to-visible-output latency",
+    "privacy deletion consent and license compliance",
+    "safety and usability evidence for the target population"
+  ],
+  "at_home_conjunction_complete_now": false,
+  "openbci_specification_satisfies_complete_at_home_conjunction": false,
+  "future_acceptance_gates": [
+    "Loop 55 has a closed immutable result or explicit park report",
+    "exact Loop 56 aggregate allowlist and SHA256 values are preregistered",
+    "separate Tier C claim decision is committed pushed and remotely green",
+    "only committed aggregate JSON and Markdown allowlist inputs open",
+    "every input hash and schema identity matches",
+    "no raw ignored protected cache array target prediction checkpoint or private report opens",
+    "no score target metric or model inference is recomputed",
+    "all five verdict classes retain exact definitions",
+    "all twelve capability levels are evaluated without skipping missing levels",
+    "all eighteen dimensions are populated for cryogenic MEG and scalp EEG",
+    "every cell has exactly one L56-X0 through L56-X4 class",
+    "external and local evidence remain separate",
+    "every score retains cohort task split model metric language and claim ceiling",
+    "no participant score or modality score is pooled averaged or ranked",
+    "no external performance value defines a local threshold",
+    "channel count names tensor shape and sensor ablation never establish equivalence",
+    "EEG reference and MEG compensation geometry and sensor roles remain explicit",
+    "continuous input causal incremental output and measured latency remain distinct",
+    "model architecture weights normalization and representations do not transfer without an experiment",
+    "no-signal timing corruption and peripheral controls remain modality-specific",
+    "resource ratios use homologous measured stages or remain unavailable",
+    "fewer channels bytes cost or setup statements do not establish usability alone",
+    "every cross-modality claim sentence includes all sixteen fields or unavailable markers",
+    "all twelve at-home conjunction requirements remain independent gates",
+    "one thread one worker 600 seconds 256 MiB RSS and 16 MiB output caps pass",
+    "every input output runtime RSS warning unavailable field and refusal is reported",
+    "result routes through exactly one frozen outcome class",
+    "claim language remains at or below independently satisfied capability levels"
+  ],
+  "future_refusal_ids": [
+    "L56-F01_loop55_not_closed",
+    "L56-F02_missing_exact_tier_c_claim_decision",
+    "L56-F03_unregistered_or_hash_mismatched_aggregate_input",
+    "L56-F04_raw_ignored_private_protected_or_payload_access",
+    "L56-F05_cache_array_target_prediction_checkpoint_or_model_access",
+    "L56-F06_score_metric_target_or_inference_recomputation",
+    "L56-F07_external_and_local_evidence_blended",
+    "L56-F08_external_score_used_as_local_threshold",
+    "L56-F09_participant_or_modality_score_pooling",
+    "L56-F10_cross_modality_average_ratio_or_rank_without_homology",
+    "L56-F11_channel_count_or_name_equivalence",
+    "L56-F12_tensor_shape_called_sensor_equivalence",
+    "L56-F13_cryogenic_sensor_ablation_called_EEG_or_OPM_evidence",
+    "L56-F14_EEG_reference_ground_gain_or_contact_omitted",
+    "L56-F15_MEG_sensor_type_geometry_orientation_compensation_or_projector_omitted",
+    "L56-F16_modality_specific_filter_or_clock_inherited",
+    "L56-F17_task_target_or_event_scaffolding_hidden",
+    "L56-F18_performed_and_intended_targets_conflated",
+    "L56-F19_no_signal_timing_corruption_or_peripheral_control_inherited",
+    "L56-F20_model_weight_architecture_normalization_or_representation_transfer",
+    "L56-F21_continuous_input_called_causal_output",
+    "L56-F22_causal_output_called_measured_end_to_end_latency",
+    "L56-F23_noncausal_sentence_output_called_realtime",
+    "L56-F24_file_reader_or_signal_quality_called_sensor_signal_effect",
+    "L56-F25_device_specification_called_EEG_quality_or_decoding",
+    "L56-F26_fewer_channels_bytes_or_cost_called_accessibility_result",
+    "L56-F27_missing_claim_sentence_field",
+    "L56-F28_missing_capability_level_or_dimension_cell",
+    "L56-F29_at_home_conjunction_shortcut",
+    "L56-F30_patient_assistive_clinical_or_thought_typing_overclaim",
+    "L56-F31_resource_output_or_access_counter_breach",
+    "L56-F32_download_network_stream_device_hardware_or_participant_operation",
+    "L56-F33_post_result_rule_change_or_substitution",
+    "L56-F34_scientific_claim_promotion_without_exact_decision"
+  ],
+  "resource_boundaries": {
+    "cpu_threads": 1,
+    "workers": 1,
+    "maximum_wall_time_seconds": 600,
+    "maximum_peak_rss_bytes": 268435456,
+    "maximum_generated_output_bytes": 16777216,
+    "allowed_future_input_class": "committed aggregate target-free allowlist only",
+    "raw_payload_reads": 0,
+    "protected_or_ignored_reads": 0,
+    "target_prediction_checkpoint_cache_or_model_reads": 0,
+    "score_recomputations": 0,
+    "model_inference_runs": 0,
+    "training_or_parameter_update_runs": 0,
+    "downloads": 0,
+    "network_operations": 0,
+    "stream_device_hardware_or_participant_operations": 0
+  },
+  "future_measurement_ledger": [
+    "input bytes and SHA256 by aggregate artifact",
+    "output bytes and SHA256",
+    "wall and CPU runtime",
+    "peak RSS",
+    "verdict class counts by modality and dimension",
+    "satisfied unavailable failed and prohibited capability levels",
+    "claim sentence completeness",
+    "warnings contradictions unavailable fields and refusals",
+    "whether end-to-end latency was measured"
+  ],
+  "research_access_counters": {
+    "public_primary_or_official_sources_consulted": 7,
+    "committed_local_evidence_boundaries_read": 8,
+    "raw_EEG_or_MEG_path_stats": 0,
+    "raw_EEG_or_MEG_payload_hash_reads": 0,
+    "raw_EEG_or_MEG_content_reads": 0,
+    "S20_S24_or_S25_reads": 0,
+    "ignored_or_protected_artifact_reads": 0,
+    "target_prediction_checkpoint_or_cache_reads": 0,
+    "score_recomputations": 0,
+    "model_or_checkpoint_loads": 0,
+    "model_inference_runs": 0,
+    "training_or_parameter_update_runs": 0,
+    "downloads": 0,
+    "network_operations": 0,
+    "stream_device_hardware_or_participant_operations": 0,
+    "generated_experiment_bytes": 0
+  },
+  "current_warnings": [
+    "Published Brain2Qwerty v1 EEG and MEG scores are external cohort results and cannot define a local threshold or cross-modality ratio.",
+    "Brain2Qwerty v2 removes keypress onset dependence but remains noncausal and sentence-level; continuous input is not measured causal real-time output.",
+    "The local S21 and S7 tiny model results are both negative but are not a matched modality comparison.",
+    "The historical S7 extractor removed EOG-named channels and is ineligible for the fresh Loop54 and Loop55 claim path.",
+    "S20 remains unopened and fresh EEG signal quality trial integrity and neural effect are unavailable.",
+    "OpenBCI Cyton is a Q0 specification candidate only and no device is known to be present or qualified.",
+    "Shared cache report metric and causal interfaces establish software mechanics only."
+  ],
+  "current_unavailable_fields": [
+    "closed Loop53 acquisition receipt",
+    "closed Loop54 S20 qualification result",
+    "closed Loop55 S20 neural-effect result",
+    "fresh S20 channel reference geometry quality and trial facts",
+    "fresh EEG performed-hand or performed-key effect",
+    "local continuous-input EEG or MEG decoding",
+    "local causal incremental decoder parity",
+    "local physical-source-to-visible-output latency",
+    "cross-modality model or representation transfer",
+    "OPM-MEG sentence-production result",
+    "named local EEG device presence and mechanics",
+    "repeated at-home EEG setup and signal quality",
+    "at-home task effect or text decoding",
+    "patient no-keypress assistive safety or clinical utility",
+    "final Loop56 aggregate allowlist hashes and verdict"
+  ],
+  "claim_boundary": {
+    "proven_now": "Primary-source and committed-boundary research now defines five transfer classes twelve non-skippable capability levels eighteen comparison dimensions a sixteen-field claim sentence an at-home conjunction and a fail-closed future artifact-only verdict.",
+    "current_provisional_verdict": "Only modality-aware engineering interfaces are shared. Local tiny predictive evidence is negative for tested MEG and historical EEG baselines while fresh EEG effect evidence is unavailable.",
+    "not_proven_now": "No payload target prediction checkpoint model training score device participant home session or latency trace was accessed or produced and the final Loop56 verdict did not run.",
+    "next_irreversible_gate": "Complete Loop53 then separately authorized Loop54 and Loop55 stages. After Loop55 closes register exact aggregate hashes and obtain a separate Tier C claim decision before the Loop56 final verdict.",
+    "claims_never_created_by_loop56": [
+      "new neural advantage",
+      "cross-modality equivalence",
+      "model weight or representation transfer",
+      "causal real-time latency",
+      "portable or at-home decoding",
+      "patient assistive or clinical utility"
+    ]
+  }
+}

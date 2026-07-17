@@ -1,5 +1,25 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current handoff, 2026-07-16 after Loop 56 cross-modality planning research:
+> the current
+> branch freezes `docs/LOOP_56_PRIMARY_SOURCE_RESEARCH.md`,
+> `registries/loop56_cross_modality_accessibility_research.v0.json`, and their
+> tests. Five verdict classes, 12 capability levels, 18 comparison dimensions,
+> 16 claim fields, 28 gates, 34 refusals, and a 12-part at-home conjunction now
+> prevent shared software from being mislabeled shared scientific evidence.
+> The current provisional route is `L56-O2`, mechanics and interfaces only.
+> Registered local S21 MEG and historical S7 EEG predictors remain negative
+> against their no-signal comparators and are not a matched modality
+> comparison; fresh S20 evidence remains unavailable. Continuous input is not
+> causal incremental output or measured end-to-end latency. No payload,
+> target, prediction, checkpoint, model, training, score, device, home, or
+> claim action occurred. The final Loop 56 verdict is `Not Started`, Loop 55
+> result dependent, and requires a separate exact Tier C claim decision after
+> an exact aggregate-only preregistration is green. Preserve the unrelated
+> tracker inspection NDJSON.
+> Planning commit `6583ca3` passed push CI `29586877054` and PR #34 CI
+> `29586915269`; Base Python and Optional Neuro Readers passed in both.
+>
 > Current handoff, 2026-07-16 after Loop 55 planning research: commit `f3158c7`
 > freezes the future fresh-EEG neural-effect question in
 > `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md` and

@@ -3298,3 +3298,45 @@ portable hardware, home use, or clinical utility.
 Evidence: `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/loop55_eeg_neural_effect_research.v0.json`, and
 `tests/test_loop55_eeg_neural_effect_research.py`.
+
+## 0097 - Shared Interfaces Are Not Shared EEG/MEG Evidence
+
+Decision: complete Loop 56 planning research with a five-class verdict instead
+of one cross-modality score. The classes are shared proven artifact, shared
+interface only, modality-specific requalification, unavailable, and prohibited
+inference. A dependency-free metric implementation may be shared; a signal,
+score, threshold, channel ontology, preprocessing transform, representation,
+weight set, causal behavior, latency, or device capability may not transfer
+without an independent experiment.
+
+Capability decision: freeze 12 non-skippable levels from source identity and
+bounded reading through signal quality, trial integrity, sensor-signal effect,
+prediction, continuous input, causal incremental output, measured end-to-end
+latency, local device mechanics, repeated at-home feasibility, and assistive or
+clinical utility. Passing a later software level cannot fill an earlier
+physical or scientific level. In particular, continuous whole-sentence input
+is not causal incremental output or measured real-time latency.
+
+Evidence decision: retain the registered local S21 MEG and historical S7 EEG
+negative results with their exact cohorts, models, and metrics. They are not a
+matched modality comparison. Keep published Brain2Qwerty v1/v2 results external
+and prevent them from setting local thresholds or reversing local negatives.
+Fresh S20 qualification and neural-effect evidence remains unavailable.
+
+Accessibility decision: require a 12-part conjunction for any future at-home
+claim, including named device mechanics, EEG reference and channel roles,
+locality, clock and packet behavior, target-blind quality, repeated setup,
+task integrity, sensor-signal effect, causal parity, measured latency, privacy,
+and safety/usability. An OpenBCI packet specification satisfies none of that
+conjunction as a complete result.
+
+Authorization decision: the final Loop 56 verdict remains `Not Started` and
+waits for Loop 55 to close. It requires an exact hash-bound aggregate-only
+preregistration and a separate exact Tier C scientific-claim decision. No raw,
+ignored, protected, cache, target, prediction, checkpoint, model, score
+recomputation, download, network, stream, device, participant, home, release,
+or claim operation is authorized by this planning boundary.
+
+Evidence: `docs/LOOP_56_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/loop56_cross_modality_accessibility_research.v0.json`, and
+`tests/test_loop56_cross_modality_accessibility_research.py`.

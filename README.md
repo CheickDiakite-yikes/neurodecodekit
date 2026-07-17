@@ -49,6 +49,7 @@ irreversible Tier C events.
 | Fresh EEG acquisition gate | Loop 53 freezes one public S20 session-2 block-2 BrainVision triplet plus MAT log: 4 exact files, `96,090,264` bytes, pinned source hashes, one thread/worker, 128 MiB network, and 256 MiB disk caps | The preregistration and exact Tier C request are green-bound, but every execution flag is false; no S20 payload, header, marker, signal, MAT field, target, cache, split, or model has opened |
 | Fresh EEG qualification design | Loop 54 now separates strict VHDR-only metadata, target-blind VHDR+EEG quality, isolated target-bearing VMRK+MAT reconciliation, and aggregate closeout through 22 gates and 30 exact refusals | Planning research is complete and acquisition-dependent; no S20 content was opened, all real stages remain separately unauthorized, and the current monolithic extractor is excluded from this future claim path |
 | Fresh EEG neural-effect design | Loop 55 now separates a causal pre-keypress performed-hand gate from a harder causal 29-key gate, with performed actions as primary targets, a post-keypress diagnostic, 12 matched conditions, exact trial-level tests, and one-shot target order | Planning research is complete and Loop 54 dependent; the experiment is `Not Started`, no S20 content or target was opened, and no EEG model, training run, prediction, score, neural advantage, or decoding result exists |
+| Cross-modality accessibility verdict design | Loop 56 freezes five verdict classes, 12 non-skippable capability levels, 18 EEG/MEG comparison dimensions, a 16-field claim sentence, and a 12-part at-home conjunction | Planning research is complete and Loop 55 result dependent; only modality-aware interfaces are currently shared, local tested MEG/EEG predictors remain negative, fresh EEG evidence is unavailable, and no equivalence, transfer, real-time, device, home, or clinical claim exists |
 | Development-person intake planning | Loop 49 metadata research selects S24 session 2 block 2: one MEG FIF plus one protected MAT log, exactly `1,048,579,727` bytes; a future text-grouped split reserves 16 unique sentence groups for selection and requires at least 32 fit groups | S24 avoids the S1/S18 alias and preserves S25 final-only, but no S24 path or payload was opened and the `>=48` usable-row, channel, geometry, and overlap gates are unproven; Loop 49 remains `Not Started` |
 | Multi-source encoder planning | Loop 50 research freezes global text grouping, five-fold historical S21 out-of-fold diagnostics, one 16-group S24 development gate, equal-person loss, ten fixed conditions, and an exact 20-update inventory led by seed `5001` | Stage B route `L50-R05` now parks the same-family S24 path; Loop 50 remains `Not Started`, with S24 qualification, model selection, training, scoring, and every scientific claim unavailable |
 | Fresh transfer candidate | Loop 27 metadata research selects S25 session 2 block 2: one MEG FIF plus one protected MAT log, exactly 1,009,939,983 bytes under 1 GiB | S25 is not downloaded or qualified; preregistration waits for the causal source model, controls, and target isolation |
@@ -162,6 +163,22 @@ EEG sensor-signal dependence with known keypress onsets, not brain-specific
 origin, continuous thought-to-text, generalization, real-time operation, or
 home use. See `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop55_eeg_neural_effect_research.v0.json`.
+
+Loop 56 planning research defines how to report whatever survives those gates
+without pretending EEG and MEG are interchangeable. It freezes five classes:
+shared proven artifact, shared interface only, modality-specific
+requalification, unavailable, and prohibited inference. Its 12-level ladder
+separates source identity, bounded reading, signal quality, trial integrity,
+sensor-signal effect, key/text prediction, continuous input, causal incremental
+output, measured end-to-end latency, local device mechanics, repeated at-home
+feasibility, and assistive or clinical utility. Missing levels cannot be
+skipped. The current provisional route is mechanics and interfaces only:
+registered local MEG and historical EEG predictors both lost to no-signal
+comparators, but they are not a matched modality comparison, and fresh S20 EEG
+remains unopened. A future final verdict may read only hash-bound committed
+aggregate reports after Loop 55 closes and a separate Tier C claim decision is
+green. See `docs/LOOP_56_PRIMARY_SOURCE_RESEARCH.md` and
+`registries/loop56_cross_modality_accessibility_research.v0.json`.
 
 Loop 49 planning research now selects S24 session 2 block 2 as the preferred
 permanently development-only participant from pinned public metadata. The exact
@@ -472,6 +489,18 @@ Read this before interpreting any number in the repository.
   The experiment remains `Not Started` and every
   S20, split, target, model, training, inference, and scoring permission is
   false.
+- **Loop 56 cross-modality accessibility research:** the planning boundary
+  freezes five verdict classes, a 12-level capability ladder, 18 comparison
+  dimensions, 16 mandatory claim fields, 28 gates, 34 refusals, and a 12-part
+  at-home conjunction. Published Brain2Qwerty v1/v2 evidence remains external;
+  v2 continuous MEG is explicitly noncausal and cannot establish local EEG,
+  latency, device, or home capability. The current provisional outcome is
+  `L56-O2`, mechanics and interfaces only. The final artifact-only verdict is
+  `Not Started`, Loop 55 result dependent, and separately unauthorized; no raw
+  or protected payload, target, prediction, checkpoint, model, score, device,
+  or latency trace was opened or produced. Planning commit `6583ca3` passed
+  push CI `29586877054` and PR #34 CI `29586915269`, with both required jobs
+  green.
 - **Loop 30 planning research:** the future product is a loopback-only target-
   free replay inspector. The boundary separates artifact, synthetic, recorded,
   and live source modes; freezes a 30-field trace, nine clocks, six latency
