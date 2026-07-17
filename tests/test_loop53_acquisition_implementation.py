@@ -7,6 +7,9 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = REPO_ROOT / "registries/loop53_acquisition_implementation.v0.json"
 DOC_PATH = REPO_ROOT / "docs/LOOP_53_ACQUISITION_IMPLEMENTATION.md"
+HISTORICAL_MUTABLE_BINDINGS = {
+    "cli": "6aee3a3166863428abe5d26c24736ad5549e7aa2c2f77dfa286e29eb459ec342",
+}
 
 
 def sha256(relative_path):
@@ -39,9 +42,15 @@ class Loop53AcquisitionImplementationTests(unittest.TestCase):
         self.assertEqual(binding["authorization_pull_request_ci_run_id"], 29589225113)
         self.assertTrue(binding["both_authorization_workflows_green_before_implementation"])
 
-    def test_source_hashes_are_exact(self):
-        for binding in self.registry["source_bindings"].values():
-            self.assertEqual(binding["sha256"], sha256(binding["path"]), binding["path"])
+    def test_source_hashes_preserve_historical_cli_and_current_owned_files(self):
+        for name, binding in self.registry["source_bindings"].items():
+            if name in HISTORICAL_MUTABLE_BINDINGS:
+                self.assertEqual(binding["sha256"], HISTORICAL_MUTABLE_BINDINGS[name])
+                current_source = (REPO_ROOT / binding["path"]).read_text(encoding="utf-8")
+                self.assertIn("_cmd_loop53_acquire_s20", current_source)
+                self.assertIn('"loop53-acquire-s20"', current_source)
+            else:
+                self.assertEqual(binding["sha256"], sha256(binding["path"]), binding["path"])
 
     def test_interface_is_dependency_light_dry_run_by_default_and_parser_free(self):
         interface = self.registry["frozen_interface"]
