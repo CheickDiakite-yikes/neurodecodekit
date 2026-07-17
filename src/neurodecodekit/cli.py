@@ -2490,6 +2490,63 @@ def _cmd_loop53_acquire_s20(args: argparse.Namespace) -> int:
     return 0 if outcome.passed else 1
 
 
+def _cmd_inspect_ai_research_policy(args: argparse.Namespace) -> int:
+    from neurodecodekit.evaluation.ai_research_policy import (
+        inspect_ai_research_policy,
+        load_ai_research_policy,
+    )
+
+    summary = inspect_ai_research_policy(load_ai_research_policy(args.policy))
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_make_ai_research_proposal_fixture(args: argparse.Namespace) -> int:
+    from neurodecodekit.evaluation.ai_research_policy import (
+        build_synthetic_proposal,
+        load_ai_research_policy,
+        sha256_json,
+        write_bounded_json,
+    )
+
+    policy = load_ai_research_policy(args.policy)
+    proposal = build_synthetic_proposal(
+        policy,
+        proposal_id=args.proposal_id,
+        pretraining_objective=args.pretraining_objective,
+    )
+    written = write_bounded_json(args.out, proposal, overwrite=args.overwrite)
+    print(
+        json.dumps(
+            {
+                "proposal_path": str(args.out),
+                "proposal_sha256": sha256_json(proposal),
+                "output_bytes": written,
+                "real_data_reads": 0,
+                "model_runs": 0,
+                "training_runs": 0,
+                "claim_boundary": "synthetic interface only; no neural or decoding claim",
+            },
+            indent=2,
+            sort_keys=True,
+        )
+    )
+    return 0
+
+
+def _cmd_validate_ai_research_proposal(args: argparse.Namespace) -> int:
+    from neurodecodekit.evaluation.ai_research_policy import (
+        build_validation_envelope,
+        write_bounded_json,
+    )
+
+    report = build_validation_envelope(args.policy, args.proposal)
+    if args.out_report:
+        write_bounded_json(args.out_report, report, overwrite=args.overwrite)
+    print(json.dumps(report, indent=2, sort_keys=True))
+    return 0 if report["accepted"] else 1
+
+
 def _print_selection_plan(selection: Any, *, heading: str) -> None:
     from neurodecodekit.datasets.selection import format_bytes
 
@@ -4587,6 +4644,55 @@ def build_parser() -> argparse.ArgumentParser:
         help="Successful pull-request CI run ID for the implementation commit.",
     )
     p.set_defaults(func=_cmd_loop53_acquire_s20)
+
+    p = sub.add_parser(
+        "inspect-ai-research-policy",
+        help="Inspect the synthetic-only Loop 55 AI proposal policy.",
+    )
+    p.add_argument(
+        "--policy",
+        default="registries/loop55_ai_research_policy.v0.json",
+        help="Committed Loop 55 AI research policy JSON.",
+    )
+    p.set_defaults(func=_cmd_inspect_ai_research_policy)
+
+    p = sub.add_parser(
+        "make-ai-research-proposal-fixture",
+        help="Create one tiny synthetic AI proposal without model or data access.",
+    )
+    p.add_argument(
+        "--policy",
+        default="registries/loop55_ai_research_policy.v0.json",
+        help="Committed Loop 55 AI research policy JSON.",
+    )
+    p.add_argument("--out", required=True, help="New synthetic proposal JSON path.")
+    p.add_argument(
+        "--proposal-id",
+        default="L55-AI-SYNTH-001",
+        help="Synthetic proposal identity matching L55-AI-SYNTH-NNN.",
+    )
+    p.add_argument(
+        "--pretraining-objective",
+        choices=["none", "masked_reconstruction", "contrastive_next_window"],
+        default="masked_reconstruction",
+        help="Target-free representation warm-up interface choice.",
+    )
+    p.add_argument("--overwrite", action="store_true", help="Replace an existing synthetic output.")
+    p.set_defaults(func=_cmd_make_ai_research_proposal_fixture)
+
+    p = sub.add_parser(
+        "validate-ai-research-proposal",
+        help="Validate and hash one untrusted synthetic AI proposal without executing it.",
+    )
+    p.add_argument(
+        "--policy",
+        default="registries/loop55_ai_research_policy.v0.json",
+        help="Committed Loop 55 AI research policy JSON.",
+    )
+    p.add_argument("--proposal", required=True, help="Synthetic proposal JSON to validate.")
+    p.add_argument("--out-report", default=None, help="Optional bounded validation report path.")
+    p.add_argument("--overwrite", action="store_true", help="Replace an existing report output.")
+    p.set_defaults(func=_cmd_validate_ai_research_proposal)
 
     return parser
 

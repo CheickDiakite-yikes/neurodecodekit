@@ -1,0 +1,60 @@
+{
+  "access_counters": {
+    "EEG_reads": 0,
+    "MAT_reads": 0,
+    "S20_path_reads": 0,
+    "VHDR_reads": 0,
+    "VMRK_reads": 0,
+    "device_stream_or_hardware_runs": 0,
+    "inference_runs": 0,
+    "language_model_runs": 0,
+    "model_runs": 0,
+    "network_downloads": 0,
+    "protected_target_reads": 0,
+    "raw_signal_reads": 0,
+    "scoring_runs": 0,
+    "split_creations": 0,
+    "training_runs": 0
+  },
+  "agent_role": "L55-AI-R1",
+  "claim_boundary": "synthetic_interface_only_no_neural_or_decoding_claim",
+  "objective_id": "L55-E1_causal_performed_hand_first",
+  "observation_scope": "synthetic_fixture_summaries_only",
+  "phase_id": "L55-AI-A",
+  "proposal_id": "L55-AI-SYNTH-001",
+  "representation_recipe": {
+    "family": "tiny_causal_spatiotemporal_shared_hand_key_heads",
+    "input_window_ms": [-500, 0],
+    "pretraining_objective": "masked_reconstruction",
+    "producer_causal": true,
+    "right_context_ms": 0,
+    "right_endpoint_exclusive": true,
+    "trainable_parameters": 8192,
+    "uses_language_model": false,
+    "uses_performed_labels_during_pretraining": false,
+    "uses_pretrained_weights": false,
+    "uses_target_text": false
+  },
+  "requested_budget": {
+    "cpu_threads": 1,
+    "maximum_generated_output_bytes": 1048576,
+    "maximum_peak_rss_bytes": 268435456,
+    "maximum_runtime_seconds": 30,
+    "parameter_update_runs": 0,
+    "proposal_round": 1,
+    "workers": 1
+  },
+  "schema_name": "neurodecodekit.ai_research_proposal",
+  "schema_version": 0,
+  "search_parameters": {
+    "dropout": 0.1,
+    "hand_loss_weight": 1.0,
+    "learning_rate": 0.001,
+    "mask_fraction": 0.15,
+    "temporal_kernel_samples": 9,
+    "weight_decay": 0.0001
+  },
+  "warnings": [
+    "synthetic_fixture_only_no_real_or_protected_access"
+  ]
+}

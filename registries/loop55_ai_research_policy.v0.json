@@ -206,6 +206,12 @@
     ],
     "synthetic_required_access_counter_value": 0,
     "warnings_minimum_count": 1,
+    "warnings_maximum_count": 3,
+    "allowed_warning_values": [
+      "synthetic_fixture_only_no_real_or_protected_access",
+      "self_supervised_transfer_to_overt_typing_is_unproven",
+      "AI_assistance_cannot_guarantee_a_positive_result"
+    ],
     "proposal_id_pattern": "^L55-AI-SYNTH-[0-9]{3}$",
     "canonical_json": "UTF-8_sorted_keys_compact_separators_no_NaN",
     "hash_algorithm": "sha256"
