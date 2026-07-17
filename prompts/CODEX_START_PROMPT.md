@@ -340,26 +340,20 @@ download or content-open instruction. Preregistration waits for compatible
 Loop 25 mechanics, a frozen Loop 26 model/control package, target isolation,
 and a Loop 28 final-only decision rule.
 
-The current next Tier C decision surface is Loop 53 fresh S20 acquisition:
+Loop 53 fresh S20 acquisition is now consumed and passed:
 
-- `docs/LOOP_53_PRIMARY_SOURCE_RESEARCH.md`;
-- `docs/LOOP_53_FRESH_EEG_ACQUISITION_PREREGISTRATION.md`;
-- `registries/loop53_fresh_eeg_acquisition_contract.v0.json`;
-- `docs/LOOP_53_AUTHORIZATION_PACKET.md`;
-- `registries/loop53_authorization_request.v0.json`;
-- `tests/test_loop53_fresh_eeg_acquisition_contract.py`;
-- `tests/test_loop53_authorization_request.py`.
+- `docs/LOOP_53_ACQUISITION_RESULT.md`;
+- `registries/loop53_acquisition_result.v0.json`;
+- `docs/LOOP_53_ACQUISITION_IMPLEMENTATION.md`;
+- `registries/loop53_acquisition_implementation.v0.json`;
+- `tests/test_loop53_acquisition_result.py`.
 
-Registration commit `bccd367` passed push CI `29469813041` and PR CI
-`29469829357`. Confirm that the exact four S20 files total 96,090,264 bytes;
-the pinned Git/LFS hashes, license, new isolated destination, no-overwrite
-rules, 128 MiB network, 256 MiB disk, 512 MiB RSS, one-thread/worker caps,
-access counters, unavailable fields, and claim ceiling agree. The only current
-decision is whether the user sends the packet's exact Tier C sentence unchanged.
-The request itself authorizes nothing. If the sentence is received, first
-create and remotely qualify a separate authorization-only record; then
-implement and fixture-qualify without payload access; then obtain another green
-commit before the one acquisition. Stop before any Loop 54 content stage.
+Authorization `2a47bbc` and implementation `8ec5b1b` were separately remotely
+green before the one invocation. All four files and 96,090,264 bytes matched;
+runtime was 3.629499 seconds, peak RSS 63,225,856 bytes, peak incremental disk
+102,035,529 bytes, and every forbidden counter zero. The gate has no rerun.
+Do not reopen, parse, interpret, split, model, or score S20 from this result.
+Stop before any Loop 54 content stage.
 
 Loop 54 planning research is complete and reviewable at:
 
@@ -375,7 +369,7 @@ trial rather than each key window as the future inference unit, and creates no
 split or model. The committed Loop 19 extractor remains historical evidence but
 is ineligible for this future claim path because it co-loads annotations, MAT,
 and signal, excludes EOG-named channels, and writes plaintext labels. Loop 53
-must complete first; each real L54-A/B/C stage needs a separate exact Tier C
+has completed cleanly; each real L54-A/B/C stage still needs a separate exact Tier C
 decision after a hash-bound implementation is remotely green. Do not implement
 or open any real Loop 54 stage from the planning packet.
 
@@ -409,7 +403,10 @@ reviewable at:
 It freezes five verdict classes, 12 non-skippable capability levels, 18
 comparison dimensions, 16 claim fields, 28 gates, 34 refusals, and a 12-part
 at-home conjunction. Current local tiny MEG and historical EEG prediction
-evidence is negative but unmatched; fresh S20 evidence remains unavailable.
+evidence is negative but unmatched. The fresh S20 byte bundle is now local
+after one opaque acquisition-only pass, but its header, signal, trial, target,
+and neural evidence remain unavailable because content interpretation is still
+closed.
 Keep continuous input, causal incremental output, measured end-to-end latency,
 device mechanics, repeated home feasibility, and clinical utility separate.
 The final verdict is `Not Started`, Loop 55 result dependent, and requires an
@@ -438,14 +435,13 @@ preparation alone do not authorize RW3. The parked Loop 24 result and any Loop
 
 ## Hard boundaries
 
-1. Do not download data, open S20, or reopen consumed S7/S21 raw arrays,
+1. Do not download more data, reopen or interpret S20, or reopen consumed S7/S21 raw arrays,
    caches, target logs, or seeds 2203, 2303, 2353, and 2401. Keep seed 2402
    unopened and do not repurpose it. Loop 25 seeds 2501 and 2502 are consumed
    for the completed mechanics gate; do not reopen, rerun, or repurpose them.
-   Loop 53 is preregistered but unauthorized: its exact sentence, separate
-   green decision, green implementation, and one-run order are mandatory.
+   Loop 53 passed once and is consumed with no rerun.
    Loop 54 planning is complete but every real VHDR, EEG, VMRK, and MAT content
-   stage remains separately unauthorized and acquisition-dependent. Loop 55
+   stage remains separately unauthorized. Loop 55
    planning is complete but remains Loop 54 dependent and experimentally `Not
    Started`; it authorizes no split, target, model, training, inference, or
    score. Loop 56 planning is complete but its aggregate-only final verdict
@@ -464,8 +460,8 @@ preparation alone do not authorize RW3. The parked Loop 24 result and any Loop
    calculate CER/WER, or claim decoding performance.
 6. Keep heavy dependencies optional. Use one CPU thread and do not create
    generated data artifacts beyond tiny documentation-validation debris.
-7. Keep RW3 independent from Loop 24 precision/runtime and the Loop 53 S20
-   acquisition request. The historical broad RW4/S20 packet is superseded for
+7. Keep RW3 independent from Loop 24 precision/runtime and the consumed Loop 53
+   S20 result. The historical broad RW4/S20 packet is superseded for
    future S20 work and grants no permission.
 8. Do not rerun Loop 25 or Loop 26/31/33, or implement/execute another Loop
    26-44 item from roadmap
@@ -521,9 +517,9 @@ preparation alone do not authorize RW3. The parked Loop 24 result and any Loop
 1. Keep README, tracker, decision log, build notes, handoff, start-here,
    roadmap, workbook, and continuation prompt consistent with Loop 24's parked
    closeout, RW3 commit `c3d1f01`, and the
-   still-unauthorized request prepared at `163ff2f`. Keep Loop 53's green
-   registration `bccd367`, exact 96,090,264-byte four-file contract, pending
-   request, false execution flags, and zero-payload boundary consistent. Keep
+   still-unauthorized request prepared at `163ff2f`. Keep Loop 53's exact
+   96,090,264-byte four-file pass, measured caps, zero forbidden counters,
+   consumed no-rerun state, and uninterpreted-payload boundary consistent. Keep
    Loop 54's four-stage VHDR/EEG/VMRK+MAT firewall, 48-trial floor, 22 gates,
    30 refusals, and zero real-stage access consistent. Keep Loop 55's ordered
    causal hand/key endpoints, performed-action target, noncausal centered

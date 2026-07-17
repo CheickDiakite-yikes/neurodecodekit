@@ -86,18 +86,20 @@
 11. Read `docs/LOOP_53_PRIMARY_SOURCE_RESEARCH.md`,
    `docs/LOOP_53_FRESH_EEG_ACQUISITION_PREREGISTRATION.md`, and
    `registries/loop53_fresh_eeg_acquisition_contract.v0.json` for the exact
-   four-file, 96,090,264-byte S20 acquisition-only gate. Registration commit
-   `bccd367` passed push CI `29469813041` and PR CI `29469829357`. Then read
-   `docs/LOOP_53_AUTHORIZATION_PACKET.md` and
-   `registries/loop53_authorization_request.v0.json` for the pending exact Tier
-   C decision. Every execution flag is false; no S20 payload, local stat/hash,
-   header, signal, MAT, target, cache, split, or model operation occurred.
+   four-file, 96,090,264-byte S20 acquisition-only gate. Then read
+   `docs/LOOP_53_AUTHORIZATION_DECISION.md`,
+   `docs/LOOP_53_ACQUISITION_IMPLEMENTATION.md`, and
+   `docs/LOOP_53_ACQUISITION_RESULT.md` with their matching registries. The one
+   invocation passed in `3.629499` seconds at 63,225,856-byte peak RSS, all four
+   source identities matched, and Loop 53 is consumed with no rerun. Header,
+   marker, signal, MAT, target, cache, split, model, training, inference, and
+   scoring counters remain zero.
    Then read `docs/LOOP_54_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop54_eeg_trial_geometry_research.v0.json` for the prospective
    four-stage VHDR, target-blind signal-quality, isolated VMRK+MAT, and
    aggregate-closeout firewall. Planning commit `aec440a` passed the complete
-   local 996-test suite with three expected skips. Loop 54 is acquisition-
-   dependent and experimentally `Not Started`: no S20 content stage, split,
+   local 996-test suite with three expected skips. Loop 53 acquisition is now
+   complete, but Loop 54 is experimentally `Not Started`: no S20 content stage, split,
    model, training, inference, score, or scientific claim is authorized.
    Then read `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop55_eeg_neural_effect_research.v0.json`. Loop 55 planning
@@ -367,17 +369,17 @@ ML. The experiment is `Not Started` and unauthorized; no fixture, install,
 export, package, inference, profiler, simulator, app, device, or hardware
 operation exists. See `docs/LOOP_40_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop40_research_boundary.v0.json`.
-The proposed fresh S20 EEG block is **not authorized** for implementation,
-download, local stat/hash, or signal/target access. Its exact four-file,
-96,090,264-byte acquisition-only contract and pending Tier C request are in
-`docs/LOOP_53_FRESH_EEG_ACQUISITION_PREREGISTRATION.md`,
-`registries/loop53_fresh_eeg_acquisition_contract.v0.json`, and
-`docs/LOOP_53_AUTHORIZATION_PACKET.md`. The older broad S20 packet is
-historical and grants no permission.
+The exact four-file, 96,090,264-byte S20 EEG acquisition passed once and is
+consumed. Read `docs/LOOP_53_ACQUISITION_RESULT.md` and
+`registries/loop53_acquisition_result.v0.json` for the measured pass, zero
+forbidden counters, private receipt bindings, and claim ceiling. The payload
+remains uninterpreted: Loop 54 header, marker, signal, MAT, target, geometry,
+event, and trial work still requires its own exact staged Tier C decisions. The
+older broad S20 packet remains historical and grants no future permission.
 
-Current verified state: two complete S21 SpanishBCBL MEG recordings plus one
-94,842,381-byte S7 SpanishBCBL EEG BrainVision bundle and their matching MAT
-logs have been selectively downloaded under exact caps; the full dataset and
+Current verified state: two complete S21 SpanishBCBL MEG recordings, one
+94,842,381-byte S7 EEG bundle, and one 96,090,264-byte opaque-verified S20 EEG
+bundle have been selectively acquired under exact caps; the full dataset and
 12.79-GB EEG subtree have not been downloaded. Loops 9-12, 14-22, and 23.5 are
 complete; Loops 13, 23, and 24 are parked after measured gates. Loop 24 retains
 float32, consumed selection seed 2401, and left qualification seed 2402
@@ -596,9 +598,9 @@ score occurred inside that planning snapshot. Stage B has since closed at
 Planning commit `085f341` passed push CI `29458102674` and PR #28 CI
 `29458116994`; both required jobs are green in both workflows.
 
-Loop 53 is `Preregistered; Authorization Pending`. Loop 54 qualification,
+Loop 53 is `Consumed; Acquisition Passed; No Rerun`. Loop 54 qualification,
 Loop 55 neural-effect, and Loop 56 cross-modality accessibility planning
-research are complete, but their experiments or final verdict remain `Not
-Started`, dependency-blocked, and unauthorized. Loops 51-52 and 57-64 remain
-`Not Started`. All current execution flags are false.
+research are complete, but their real stages or final verdict remain `Not
+Started` and unauthorized. Loops 51-52 and 57-64 remain `Not Started`. No
+Loop 54 content interpretation is authorized by the Loop 53 pass.
 S25 remains sealed until a separate final-only zero-shot packet is complete.

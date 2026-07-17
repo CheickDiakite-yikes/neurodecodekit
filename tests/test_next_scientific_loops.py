@@ -81,8 +81,8 @@ class NextScientificLoopsTests(unittest.TestCase):
                 46: "Parked; Registered Gate Failed",
                 47: "Parked; Shared Attribution Gate Failed",
                 48: "Complete A/B; Stage C Consumed and Parked",
-                53: "Preregistered; Authorization Pending",
-                54: "Planning Research Complete; Acquisition Dependent",
+                53: "Consumed; Acquisition Passed; No Rerun",
+                54: "Planning Research Complete; Acquisition Passed; Content Stages Unauthorized",
                 55: "Planning Research Complete; Loop 54 Dependent",
                 56: "Planning Research Complete; Loop 55 Result Dependent",
             }.get(row["loop_id"], "Not Started")
@@ -159,10 +159,12 @@ class NextScientificLoopsTests(unittest.TestCase):
         loop55 = next(row for row in self.registry["loops"] if row["loop_id"] == 55)
         loop58 = next(row for row in self.registry["loops"] if row["loop_id"] == 58)
         loop60 = next(row for row in self.registry["loops"] if row["loop_id"] == 60)
-        self.assertIn("loop53_fresh_eeg_acquisition_contract.v0.json", loop53["build_deliverable"])
+        self.assertIn("loop53_acquisition_result.v0.json", loop53["build_deliverable"])
         self.assertIn("96,090,264", loop53["data_scope"])
-        self.assertIn("no payload has opened", loop53["data_scope"])
-        self.assertIn("exact Loop 53 Tier C sentence", loop53["authorization_boundary"])
+        self.assertIn("acquired and opaque-verified once", loop53["data_scope"])
+        self.assertIn("2a47bbc", loop53["authorization_boundary"])
+        self.assertIn("8ec5b1b", loop53["authorization_boundary"])
+        self.assertIn("No Loop 53 rerun", loop53["authorization_boundary"])
         self.assertFalse(loop53["execution_authorized"])
         self.assertIn("EEG sensor-signal", loop55["scientific_claim_target"])
         self.assertEqual(loop58["scientific_claim_target"], "device mechanics only")
@@ -194,7 +196,8 @@ class NextScientificLoopsTests(unittest.TestCase):
         )
         for loop_id in range(45, 65):
             self.assertIn(f"Loop {loop_id}", roadmap)
-        self.assertIn("every experiment", roadmap)
+        self.assertIn("Loop 53 acquisition passed once with no rerun", roadmap)
+        self.assertIn("content stages unauthorized", roadmap)
         self.assertIn("unauthorized", roadmap)
         self.assertIn("S25 stays final-only", roadmap)
 

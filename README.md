@@ -46,10 +46,10 @@ irreversible Tier C events.
 | Artifact-only failure localization | The one-shot Stage A pass reproduced `99.3477%` primary blank, all 6/6 unstable fixed-prefix groups, and all 3/3 size-55 seeds worse than the prior | Loop 48 selected descriptive `F5` output-distribution instability in `0.0166` sec and 23.4 MB RSS; that phenotype is not a proven root cause |
 | Train-only failure discrimination | The consumed Stage B primary reached macro CER `0.953566` versus `0.822045` for its train-only prior; all six full-size causal/linear fits were finite and stable, but none cleared the prior | `H4` stable nonseparability is supported and fixed timing-offset `H3` has evidence against it; the exact `L50-R05` route parks S24 acquisition for this model family, with no neural advantage or rerun |
 | Temporal-representation repair | The consumed Stage C synthetic candidate reached CER `0.433333` and `1/8` exact versus ablation CER `1.000000`; its `0.566667` CER advantage passed, but the absolute `<=0.10` CER and `>=7/8` exact gates failed | Temporal context was usable on the purpose-built fixture, but Stage C is parked without rerun and establishes no real neural-decoding benefit |
-| Fresh EEG acquisition gate | Loop 53 freezes one public S20 session-2 block-2 BrainVision triplet plus MAT log: 4 exact files, `96,090,264` bytes, pinned source hashes, one thread/worker, 128 MiB network, and 256 MiB disk caps | The preregistration and exact Tier C request are green-bound, but every execution flag is false; no S20 payload, header, marker, signal, MAT field, target, cache, split, or model has opened |
-| Fresh EEG qualification design | Loop 54 now separates strict VHDR-only metadata, target-blind VHDR+EEG quality, isolated target-bearing VMRK+MAT reconciliation, and aggregate closeout through 22 gates and 30 exact refusals | Planning research is complete and acquisition-dependent; no S20 content was opened, all real stages remain separately unauthorized, and the current monolithic extractor is excluded from this future claim path |
-| Fresh EEG neural-effect design | Loop 55 now separates a causal pre-keypress performed-hand gate from a harder causal 29-key gate, with performed actions as primary targets, a post-keypress diagnostic, 12 matched conditions, exact trial-level tests, and one-shot target order | Planning research is complete and Loop 54 dependent; the experiment is `Not Started`, no S20 content or target was opened, and no EEG model, training run, prediction, score, neural advantage, or decoding result exists |
-| Cross-modality accessibility verdict design | Loop 56 freezes five verdict classes, 12 non-skippable capability levels, 18 EEG/MEG comparison dimensions, a 16-field claim sentence, and a 12-part at-home conjunction | Planning research is complete and Loop 55 result dependent; only modality-aware interfaces are currently shared, local tested MEG/EEG predictors remain negative, fresh EEG evidence is unavailable, and no equivalence, transfer, real-time, device, home, or clinical claim exists |
+| Fresh EEG acquisition gate | Loop 53 acquired and opaque-verified the exact public S20 session-2 block-2 bundle: 4 files, `96,090,264` bytes, `3.629499s`, 63,225,856-byte peak RSS, and all 10 gates passed | Acquisition mechanics are proven and the one invocation is consumed; no header, marker, signal sample, MAT field, target, cache, split, or model was interpreted or run |
+| Fresh EEG qualification design | Loop 54 now separates strict VHDR-only metadata, target-blind VHDR+EEG quality, isolated target-bearing VMRK+MAT reconciliation, and aggregate closeout through 22 gates and 30 exact refusals | Planning research is complete and Loop 53 acquisition passed; every real interpretation stage remains separately unauthorized, and the current monolithic extractor is excluded from this future claim path |
+| Fresh EEG neural-effect design | Loop 55 now separates a causal pre-keypress performed-hand gate from a harder causal 29-key gate, with performed actions as primary targets, a post-keypress diagnostic, 12 matched conditions, exact trial-level tests, and one-shot target order | Planning research is complete and Loop 54 dependent; the S20 bundle is acquired but uninterpreted, the experiment is `Not Started`, and no target, model, prediction, score, neural advantage, or decoding result exists |
+| Cross-modality accessibility verdict design | Loop 56 freezes five verdict classes, 12 non-skippable capability levels, 18 EEG/MEG comparison dimensions, a 16-field claim sentence, and a 12-part at-home conjunction | Planning research is complete and Loop 55 result dependent; only modality-aware interfaces are shared, tested MEG/EEG predictors remain negative, S20 has acquisition evidence only, and no equivalence, transfer, real-time, device, home, or clinical claim exists |
 | Development-person intake planning | Loop 49 metadata research selects S24 session 2 block 2: one MEG FIF plus one protected MAT log, exactly `1,048,579,727` bytes; a future text-grouped split reserves 16 unique sentence groups for selection and requires at least 32 fit groups | S24 avoids the S1/S18 alias and preserves S25 final-only, but no S24 path or payload was opened and the `>=48` usable-row, channel, geometry, and overlap gates are unproven; Loop 49 remains `Not Started` |
 | Multi-source encoder planning | Loop 50 research freezes global text grouping, five-fold historical S21 out-of-fold diagnostics, one 16-group S24 development gate, equal-person loss, ten fixed conditions, and an exact 20-update inventory led by seed `5001` | Stage B route `L50-R05` now parks the same-family S24 path; Loop 50 remains `Not Started`, with S24 qualification, model selection, training, scoring, and every scientific claim unavailable |
 | Fresh transfer candidate | Loop 27 metadata research selects S25 session 2 block 2: one MEG FIF plus one protected MAT log, exactly 1,009,939,983 bytes under 1 GiB | S25 is not downloaded or qualified; preregistration waits for the causal source model, controls, and target isolation |
@@ -121,18 +121,16 @@ without tuning or rerun. The run took 7.829308 seconds internally, peaked at
 target, or cache. See `docs/LOOP_48_STAGE_C_SYNTHETIC_RESULT.md` and
 `registries/loop48_stage_c_synthetic_result.v0.json`.
 
-The accessible-modality path now advances independently at Loop 53. Public
-metadata at the pinned SpanishBCBL revision identifies one complete S20 session
-2 block 2 bundle: a BrainVision VHDR/EEG/VMRK triplet plus one MAT log, four
-files totaling exactly `96,090,264` bytes. Registration commit `bccd367`
-passed push CI `29469813041` and PR #31 CI `29469829357`. The frozen gate may
-eventually reverify metadata, download once into a new isolated destination,
-perform opaque integrity hashes, and emit a receipt under strict 128 MiB
-network, 256 MiB incremental-disk, 512 MiB RSS, and one-thread/worker caps.
-It explicitly may not parse any payload, inspect signal or targets, create a
-cache/split, or run a model. The exact Tier C request is prepared in
-`docs/LOOP_53_AUTHORIZATION_PACKET.md`; authorization has not been received and
-no download or local S20 access occurred.
+The accessible-modality path has now completed Loop 53. Authorization commit
+`2a47bbc` and implementation commit `8ec5b1b` each passed push and PR CI before
+the one registered invocation ran. The exact S20 BrainVision VHDR/EEG/VMRK
+triplet plus MAT log totaled `96,090,264` bytes and matched every frozen path,
+size, Git/LFS, and Xet identity. The pass took `3.629499` seconds, peaked at
+`63,225,856` bytes RSS and `102,035,529` incremental disk bytes, and generated
+an `8,265`-byte private receipt. Every header, marker, signal, MAT, target,
+cache, split, model, training, inference, scoring, device, and rerun counter is
+zero. Loop 53 is consumed with no rerun; see
+`docs/LOOP_53_ACQUISITION_RESULT.md`.
 
 Loop 54 planning research now defines what happens only after a clean Loop 53
 receipt. The source audit found that MNE's standard BrainVision reader exposes
@@ -175,9 +173,9 @@ feasibility, and assistive or clinical utility. Missing levels cannot be
 skipped. The current provisional route is mechanics and interfaces only:
 registered local MEG and historical EEG predictors both lost to no-signal
 comparators, but they are not a matched modality comparison, and fresh S20 EEG
-remains unopened. A future final verdict may read only hash-bound committed
-aggregate reports after Loop 55 closes and a separate Tier C claim decision is
-green. See `docs/LOOP_56_PRIMARY_SOURCE_RESEARCH.md` and
+is acquired but remains uninterpreted. A future final verdict may read only
+hash-bound committed aggregate reports after Loop 55 closes and a separate Tier
+C claim decision is green. See `docs/LOOP_56_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop56_cross_modality_accessibility_research.v0.json`.
 
 Loop 49 planning research now selects S24 session 2 block 2 as the preferred
@@ -248,7 +246,7 @@ negative result and S25 is never repurposed for calibration.
 | Loop 48 artifact-only failure localization | 4 exact committed JSON inputs; 155,545 input bytes; 18 blank fractions; 6 fixed-prefix ranges; `F5`; 0.016568875 sec; 23,429,120-byte peak RSS; 10,643 output bytes; 0 protected/model/training operations | consumed post-outcome descriptive result; no rerun | Reproduces the failure phenotype mechanically while keeping causal root cause, neural advantage, and every decoding or device claim explicitly unavailable |
 | Loop 48 Stage B failure discrimination | 44 fit / 11 check rows; prefixes `8,16,24,32,44`; seeds `4801-4803`; 20 fits; 4,800 steps; 35 target-blind inferences; 5 priors; 41 frozen sets; one post-freeze 11-target score; candidate/prior macro CER `0.953566/0.822045` | consumed E2 diagnostic; `H4` supported, `H3` evidence against, `L50-R05` parks S24 for this family; no rerun | Distinguishes stable nonseparability from a simple fixed timing offset while preserving the negative neural result and refusing independent-validation or neural-advantage wording |
 | Loop 48 Stage C synthetic representation gate | 40 synthetic rows; 24/8/8 split; 4 fits; 1,680 steps; candidate/ablation CER `0.433333/1.000000`; candidate exact `1/8`; replay, mutation, resume, causality, padding, and resource checks passed | consumed synthetic gate; absolute CER and exact-sequence gates failed; no rerun | Shows the causal temporal model can use ordered synthetic history while refusing to transfer that contrast into a real neural-decoding claim |
-| Loop 53 fresh EEG acquisition boundary | 4 exact S20 files; 96,090,264 bytes; pinned revision, Git/LFS hashes, CC BY-NC 4.0 metadata; 128 MiB network, 256 MiB disk, 512 MiB RSS, 1 MiB receipt caps; every contract execution permission and all 16 request authorization flags remain false | public-metadata preregistration and green-bound authorization request only; no payload access or download | Separates reproducible EEG acquisition from later header, geometry, signal, target, cache, model, and scientific decisions |
+| Loop 53 fresh EEG acquisition result | 4 exact S20 files; 96,090,264 network/final bytes; 3.629499 sec; 63,225,856-byte peak RSS; 102,035,529-byte peak disk; 8,265 receipt bytes; all 10 gates passed | consumed acquisition-mechanics pass; one invocation; no rerun; zero interpretive or model operations | Establishes a reproducible local EEG byte bundle while keeping header, geometry, signal, target, cache, model, and scientific decisions closed |
 | Loop 49 development-person boundary | 396 pinned metadata rows; S24 session 2 block 2; 2 exact files; 1,048,579,727 bytes; 293,597,553-byte cap margin; 16 future selection groups; 32 minimum fit groups; 25 false authorization fields | metadata research only; experiment `Not Started` | Creates a clean development-person path without consuming final-only S25, while keeping trial count, channels, geometry, targets, signal, models, and transfer claims closed |
 | Loop 50 multi-source research boundary | 6 primary sources; 5 S21 out-of-fold folds; 16 future S24 selection groups; 10 fixed conditions; 20 parameter-update runs; seeds `5001-5003`; 30 refusals; 31 false authorization fields | planning research only; experiment `Not Started` | Defines a text-leakage-resistant, participant-balanced, worst-person-gated development experiment while keeping S24/S25 payloads, model choice, training, scoring, and claims closed |
 | Loop 27 fresh-holdout boundary | 315 pinned MEG metadata entries; 23 strict single-FIF/log pairs; 16 eligible; S25 selected at 1,009,939,983 bytes; S23 excluded; 18 false authorization fields | metadata research only | Finds the smallest honest same-modality transfer candidate while keeping its local MAT payload, remote FIF, targets, and backups sealed |
@@ -271,7 +269,7 @@ negative result and S25 is never repurposed for calibration.
 | Loop 44 claim-release matrix | 16 claims; 7 evidence levels; 5 model cards; 4 dataset cards; 14 gates; 8 risks; 0 tag/release/DOI operations | artifact-only review complete; engineering release held; scientific release parked | Makes every public claim traceable to cohort, task, split, comparator, uncertainty, resources, access, privacy, license, and evidence while preserving negative results |
 | Current Loop 48 Stage B verification | 63 focused Stage B tests; complete dependency-light suite 887 tests with 149 expected skips; complete optional-neuro suite 934 tests with 3 expected skips | Authorization `8d17342`, implementation `1d840e3`, freeze `00215b1`, and result closeout `ad4410c` passed both push and PR CI; closeout runs were `29464527230` / `29464529524` and added exactly 9 tests over the implementation baseline | Makes one-shot access order, target isolation, freeze binding, exact operation counts, hypothesis rules, outcome routing, tamper checks, and the no-rerun boundary executable and reviewable |
 | Current Loop 48 Stage C verification | 64 focused tests; 919 dependency-light tests with 156 expected skips; 966 optional-neuro tests with 3 expected skips | Research `9579be9`, implementation `59b30a3`, and correction `2836ecc` passed push and PR CI before one execution; result is consumed and no rerun is open | Makes synthetic selection, absolute-gate failure, replay, causal controls, resource accounting, zero protected access, and the parked disposition machine-checkable |
-| Current Loop 53 registration verification | 21 focused tests; 929 dependency-light tests with 156 expected skips; 961 optional-neuro tests with 29 expected skips; 976 local full-environment tests with 3 expected skips | Registration `bccd367` passed push CI `29469813041` and PR CI `29469829357`; request preparation adds no execution permission | Makes exact files, hashes, bytes, caps, access order, unavailable fields, no-overwrite behavior, and claim ceiling machine-checkable before Tier C permission |
+| Current Loop 53 verification | 68 focused closeout tests; final full suite 1,062 tests with 3 expected skips in 44.090 sec and 581,648,384-byte external peak RSS; baseline was 1,056 tests, 3 skips, 30.623 sec, and 568,688,640 bytes | Authorization `2a47bbc` passed CI `29589212626` / `29589225113`; implementation `8ec5b1b` passed CI `29591387642` / `29591391286` before the single pass; workbook formula-error scan found 0 matches | Adds exactly 6 aggregate-result tests while making identity, green-gate order, no-overwrite behavior, caps, opaque hashing, counters, private receipt binding, no-rerun status, and claim ceiling machine-checkable |
 
 ### Real-Data Scientific Scorecard
 
@@ -457,21 +455,20 @@ Read this before interpreting any number in the repository.
   bytes inside the user's 5-10 GB storage envelope, but the envelope is not
   download permission. All 24 authorization flags remain false, no device is
   selected, and the experiment is `Not Started`.
-- **Loop 53 fresh EEG acquisition:** registration commit `bccd367` freezes the
-  exact S20 session 2 block 2 four-file bundle at `96,090,264` bytes, opaque
-  source-identity hashing, an isolated no-overwrite destination, one transfer,
-  and strict resource/access counters. Push CI `29469813041` and PR CI
-  `29469829357` are green. The exact request exists, but every execution flag
-  remains false: no payload download, local S20 stat/hash, header/marker/signal/
-  MAT/target read, cache, split, model, training, or score has occurred.
+- **Loop 53 fresh EEG acquisition:** authorization `2a47bbc` and implementation
+  `8ec5b1b` were separately green before the one registered invocation acquired
+  and opaque-verified all 4 files and `96,090,264` bytes. All 10 gates passed in
+  `3.629499` seconds at 63,225,856-byte peak RSS. The gate is consumed with no
+  rerun; header, marker, signal, MAT, target, cache, split, model, training,
+  inference, scoring, and device counters all remain zero.
 - **Loop 54 EEG qualification research:** planning commit `aec440a` freezes
   four ordered future stages, five sensitivity classes, 22 acceptance gates,
   30 refusal IDs, a 48-unique-trial floor, all-channel preservation, and a
   32 MiB public-output ceiling. VMRK descriptions and MAT behavior/target fields
   are target-bearing, MNE is forbidden from the VHDR-only stage, and exact
   Loop 55 split counts remain intentionally unfrozen until the target-blind
-  usable-trial count exists. Loop 53 must complete first; no Loop 54 real stage
-  or scientific result is authorized. Documentation-sync commit `b6785d7`
+  usable-trial count exists. Loop 53 has completed cleanly, but no Loop 54 real
+  stage or scientific result is authorized. Documentation-sync commit `b6785d7`
   passed push CI `29471589279` and PR #32 CI `29471598364`, with Base Python
   and Optional Neuro Readers green in both workflows.
 - **Loop 55 EEG neural-effect research:** planning commit `f3158c7` freezes two
@@ -1286,7 +1283,13 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/LOOP_53_FRESH_EEG_ACQUISITION_PREREGISTRATION.md](docs/LOOP_53_FRESH_EEG_ACQUISITION_PREREGISTRATION.md) | exact acquisition-only order, caps, integrity rules, stop conditions, receipt fields, and post-pass nonclaims |
 | [registries/loop53_fresh_eeg_acquisition_contract.v0.json](registries/loop53_fresh_eeg_acquisition_contract.v0.json) | machine-readable 96,090,264-byte S20 contract with pinned source hashes, no-overwrite paths, one-invocation cap, and every execution permission false |
 | [docs/LOOP_53_AUTHORIZATION_PACKET.md](docs/LOOP_53_AUTHORIZATION_PACKET.md) | plain-language exact Tier C sentence for implementation plus one bounded acquisition, with all interpretive and model work excluded |
-| [registries/loop53_authorization_request.v0.json](registries/loop53_authorization_request.v0.json) | request bound to green registration `bccd367` and both CI runs; no implementation, download, payload access, or claim is authorized |
+| [registries/loop53_authorization_request.v0.json](registries/loop53_authorization_request.v0.json) | immutable pre-decision request bound to green registration `bccd367` and both registration CI runs |
+| [docs/LOOP_53_AUTHORIZATION_DECISION.md](docs/LOOP_53_AUTHORIZATION_DECISION.md) | exact user decision, immutable contract/request hashes, authorized acquisition surfaces, excluded interpretation/model work, and ordered green gates |
+| [registries/loop53_authorization_decision.v0.json](registries/loop53_authorization_decision.v0.json) | machine-readable authorization record at `2a47bbc`, with exact identity, caps, operation ledger, and nonclaims |
+| [docs/LOOP_53_ACQUISITION_IMPLEMENTATION.md](docs/LOOP_53_ACQUISITION_IMPLEMENTATION.md) | standard-library executor, dry-run CLI, metadata-first refusal logic, opaque hashes, atomic promotion, receipts, tests, and implementation boundary |
+| [registries/loop53_acquisition_implementation.v0.json](registries/loop53_acquisition_implementation.v0.json) | hash-bound implementation record for commit `8ec5b1b`, 51 focused tests, resource controls, zero pre-execution S20 access, and remote-green dependency |
+| [docs/LOOP_53_ACQUISITION_RESULT.md](docs/LOOP_53_ACQUISITION_RESULT.md) | consumed four-file acquisition pass, exact measured resources and counters, ten gate results, unavailable fields, and stop-before-Loop-54 boundary |
+| [registries/loop53_acquisition_result.v0.json](registries/loop53_acquisition_result.v0.json) | content-free aggregate result binding the private receipts, `96,090,264` bytes, `3.629499` seconds, all-zero forbidden counters, and no rerun |
 | [docs/LOOP_54_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_54_PRIMARY_SOURCE_RESEARCH.md) | primary-source BrainVision/BIDS/MNE audit, current extractor gap analysis, staged target firewall, trial-unit rule, resource caps, and claim ceiling |
 | [registries/loop54_eeg_trial_geometry_research.v0.json](registries/loop54_eeg_trial_geometry_research.v0.json) | machine-readable four-stage protocol with exact file-role isolation, 22 gates, 30 refusals, zero protected access counters, and false real-stage authorizations |
 | [docs/LOOP_50_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_50_PRIMARY_SOURCE_RESEARCH.md) | primary-source multi-person design, global text firewall, historical S21 out-of-fold protocol, S24 development gate, controls, resources, and claim ceiling |

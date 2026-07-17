@@ -95,18 +95,19 @@
 > See `docs/LOOP_48_STAGE_C_SYNTHETIC_RESULT.md` and
 > `registries/loop48_stage_c_synthetic_result.v0.json`. Protected Stage C work
 > is not preregistered or authorized; S21 cache operations, S24, S25, and claim
-> promotion remain closed. Loop 53 is now separately preregistered at an exact
-> four-file, 96,090,264-byte S20 acquisition-only boundary with authorization
-> pending. Loop 54 planning research at `aec440a` then freezes a four-stage
+> promotion remain closed. Loop 53 has now consumed one exact four-file,
+> 96,090,264-byte S20 acquisition-only pass with no rerun and zero interpretive
+> or model operations. Loop 54 planning research at `aec440a` then freezes a four-stage
 > future qualification firewall: VHDR only without MNE, target-blind VHDR+EEG
 > quality with all channels retained, isolated target-bearing VMRK+MAT trial
 > reconciliation, and aggregate closeout. It requires at least 48 unique
 > performed trials, treats the trial rather than each key window as the future
 > inference unit, and leaves exact Loop 55 splits for a later prospective
 > contract. Its 22 gates, 30 refusals, 1 GiB RSS ceiling, 32 MiB public-output
-> cap, and every real-stage execution flag are machine checked. No S20 payload,
-> local stat/hash, header, marker, signal, MAT, target, split, model, training,
-> inference, or score has opened. Loop 55 planning research now separates a
+> cap, and every real-stage execution flag are machine checked. Loop 53 opened
+> the bundle only for its authorized opaque size/hash pass; no S20 header,
+> marker, signal, MAT field, target, split, model, training, inference, or score
+> has opened. Loop 55 planning research now separates a
 > causal performed-hand gate from a harder causal 29-key gate, uses performed
 > actions rather than corrected intended text as the primary targets, and
 > keeps the published post-keypress-centered window diagnostic-only. It binds a
@@ -119,7 +120,8 @@
 > comparison dimensions, 16 claim fields, 28 gates, 34 refusals, and a 12-part
 > at-home conjunction. Its provisional route is `L56-O2`, mechanics and
 > interfaces only: local tiny MEG and historical EEG prediction results remain
-> negative and unmatched, while fresh S20 evidence is unavailable. The final
+> negative and unmatched, while fresh S20 neural evidence remains unavailable
+> because the newly acquired bundle is still uninterpreted. The final
 > verdict remains `Not Started`, Loop 55 result dependent, aggregate-only, and
 > separately unauthorized. The workbook
 > remains the last
@@ -704,27 +706,25 @@ the same-family S24 intake path is parked.
 Planning commit `085f341` passed push CI `29458102674` and PR #28 CI
 `29458116994`; Base Python and Optional Neuro Readers are green in both.
 
-Loop 53 is now `Preregistered; Authorization Pending`. Registration commit
-`bccd367` freezes one exact S20 session 2 block 2 BrainVision triplet plus MAT
-log at revision `88f9096c6ce3a3fb17cc7b8e3131ff7f96da5684`: four files and
-96,090,264 bytes. It allows only a future metadata recheck, one isolated
-transfer, opaque integrity hashes, and a bounded receipt; header/marker/signal/
-MAT/target parsing, caches, splits, models, training, scoring, substitutions,
-and reruns are outside the gate. Push CI `29469813041` and PR #31 CI
-`29469829357` are green. The exact request is prepared in
-`docs/LOOP_53_AUTHORIZATION_PACKET.md` and
-`registries/loop53_authorization_request.v0.json`, but every execution flag is
-false and no S20 payload or local path was touched.
+Loop 53 is now `Consumed; Acquisition Passed; No Rerun`. Authorization commit
+`2a47bbc` and implementation commit `8ec5b1b` were separately pushed and green
+before the one invocation acquired and opaque-verified the exact S20 session 2
+block 2 BrainVision triplet plus MAT log: four files and 96,090,264 bytes. All
+ten gates passed in 3.629499 seconds at 63,225,856-byte peak RSS and
+102,035,529-byte peak incremental disk. Header, marker, signal, MAT, target,
+cache, split, model, training, inference, scoring, device, substitution, and
+rerun counters remain zero. See `docs/LOOP_53_ACQUISITION_RESULT.md` and
+`registries/loop53_acquisition_result.v0.json`.
 
 Loop 54 qualification, Loop 55 neural-effect, and Loop 56 cross-modality
 accessibility planning research are complete, but their experiments or final
-verdict remain `Not Started`, dependency-blocked, and unauthorized. Loop 55
+verdict remain `Not Started` and unauthorized. Loop 55
 prospectively separates causal performed-hand evidence from harder causal
-29-key evidence and cannot run before Loop 53 and Loop 54 close cleanly. Loop
+29-key evidence and cannot run before Loop 54 closes cleanly. Loop
 56 then classifies only closed aggregate evidence and cannot run before Loop 55
 closes and a separate exact Tier C claim decision is green. Loops 51-52 and
-57-64 are `Not Started`. All execution flags and all nine global authorization
-fields are false. Decision 0083 and the applied `L50-R05` route
+57-64 are `Not Started`. All future execution flags and all nine global
+authorization fields are false. Decision 0083 and the applied `L50-R05` route
 now block S24 acquisition for this model family. Any future predictive branch
 needs a separately preregistered representation repair before another
 development-person intake can be considered; S25 remains final-only and
