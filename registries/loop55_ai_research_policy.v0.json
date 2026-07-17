@@ -1,0 +1,322 @@
+{
+  "schema_name": "neurodecodekit.loop55_ai_research_policy",
+  "schema_version": 0,
+  "created_at": "2026-07-17",
+  "loop_id": 55,
+  "title": "AI-Assisted Causal Representation Research Policy",
+  "status": "planning_research_addendum_complete_synthetic_policy_tooling_eligible_real_experiment_not_started_unauthorized",
+  "proof_posture": "source_backed_policy_and_synthetic_manifest_validation_only",
+  "parent_research_boundary": "registries/loop55_eeg_neural_effect_research.v0.json",
+  "scientific_objective": {
+    "fixed_primary_endpoint": "L55-E1_causal_performed_hand",
+    "fixed_secondary_endpoint": "L55-E2_causal_performed_key_29",
+    "diagnostic_only_endpoint": "centered_minus_200_plus_300_ms_noncausal",
+    "optimization_instruction": "improve_a_preregistered_train_inner_decision_statistic_without_target_or_claim_drift",
+    "positive_result_instruction_allowed": false,
+    "endpoint_selection_after_outcomes_allowed": false,
+    "strongest_future_clean_claim": "one_block_causal_performed_key_EEG_sensor_signal_dependence_beyond_every_registered_available_comparator"
+  },
+  "authorization": {
+    "planning_research_authorized": true,
+    "synthetic_policy_validator_implementation_authorized": true,
+    "synthetic_proposal_validation_authorized": true,
+    "S20_path_or_payload_access_authorized": false,
+    "Loop54_content_stage_authorized": false,
+    "real_proposal_round_authorized": false,
+    "real_split_authorized": false,
+    "real_target_access_authorized": false,
+    "real_model_training_authorized": false,
+    "real_model_inference_authorized": false,
+    "real_scoring_authorized": false,
+    "scientific_claim_upgrade_authorized": false,
+    "language_model_authorized": false,
+    "external_pretrained_weight_authorized": false,
+    "network_or_download_authorized": false
+  },
+  "agent_roles": [
+    {
+      "role_id": "L55-AI-R1",
+      "name": "bounded_recipe_proposer",
+      "may_emit": ["strict_JSON_proposal_manifest"],
+      "may_execute_code": false,
+      "may_change_endpoints": false,
+      "may_view_protected_content": false
+    },
+    {
+      "role_id": "L55-AI-R2",
+      "name": "adversarial_protocol_critic",
+      "may_emit": ["policy_findings", "unavailable_field_findings"],
+      "may_replace_proposal": false,
+      "may_view_protected_content": false
+    },
+    {
+      "role_id": "L55-AI-R3",
+      "name": "target_free_representation_warmup",
+      "agent_is_model_stage_not_data_controller": true,
+      "future_source_train_signal_only": true,
+      "performed_labels_or_text_allowed_during_warmup": false,
+      "current_execution_authorized": false
+    }
+  ],
+  "phase_sequence": [
+    {
+      "phase_id": "L55-AI-A",
+      "name": "synthetic_policy_rehearsal",
+      "eligible_now": true,
+      "inputs": ["committed_policy", "synthetic_proposal_manifest"],
+      "outputs": ["deterministic_hash", "validation_report"],
+      "claim_ceiling": "governance_mechanics_only"
+    },
+    {
+      "phase_id": "L55-AI-B",
+      "name": "post_Loop54_preregistration_design",
+      "eligible_now": false,
+      "requires": ["Loop54_closed", "at_least_48_qualified_unique_trials"],
+      "claim_ceiling": "future_contract_design_only"
+    },
+    {
+      "phase_id": "L55-AI-C",
+      "name": "protected_train_inner_proposal_rounds",
+      "eligible_now": false,
+      "requires": ["exact_contract_green", "implementation_green", "separate_exact_Tier_C_decision_green"],
+      "claim_ceiling": "train_inner_model_selection_only"
+    }
+  ],
+  "proposal_contract": {
+    "proposal_schema_name": "neurodecodekit.ai_research_proposal",
+    "proposal_schema_version": 0,
+    "required_top_level_fields": [
+      "schema_name",
+      "schema_version",
+      "proposal_id",
+      "phase_id",
+      "objective_id",
+      "agent_role",
+      "observation_scope",
+      "representation_recipe",
+      "search_parameters",
+      "requested_budget",
+      "access_counters",
+      "claim_boundary",
+      "warnings"
+    ],
+    "allowed_top_level_fields": [
+      "schema_name",
+      "schema_version",
+      "proposal_id",
+      "phase_id",
+      "objective_id",
+      "agent_role",
+      "observation_scope",
+      "representation_recipe",
+      "search_parameters",
+      "requested_budget",
+      "access_counters",
+      "claim_boundary",
+      "warnings"
+    ],
+    "synthetic_fixed_values": {
+      "phase_id": "L55-AI-A",
+      "objective_id": "L55-E1_causal_performed_hand_first",
+      "agent_role": "L55-AI-R1",
+      "observation_scope": "synthetic_fixture_summaries_only",
+      "claim_boundary": "synthetic_interface_only_no_neural_or_decoding_claim"
+    },
+    "representation_recipe_fields": [
+      "family",
+      "pretraining_objective",
+      "input_window_ms",
+      "right_endpoint_exclusive",
+      "right_context_ms",
+      "producer_causal",
+      "trainable_parameters",
+      "uses_target_text",
+      "uses_performed_labels_during_pretraining",
+      "uses_pretrained_weights",
+      "uses_language_model"
+    ],
+    "representation_family": "tiny_causal_spatiotemporal_shared_hand_key_heads",
+    "allowed_pretraining_objectives": [
+      "none",
+      "masked_reconstruction",
+      "contrastive_next_window"
+    ],
+    "required_input_window_ms": [-500, 0],
+    "right_endpoint_exclusive_required": true,
+    "right_context_ms_required": 0,
+    "producer_causal_required": true,
+    "maximum_trainable_parameters": 10000,
+    "required_false_recipe_fields": [
+      "uses_target_text",
+      "uses_performed_labels_during_pretraining",
+      "uses_pretrained_weights",
+      "uses_language_model"
+    ],
+    "search_parameter_fields": [
+      "learning_rate",
+      "weight_decay",
+      "dropout",
+      "temporal_kernel_samples",
+      "mask_fraction",
+      "hand_loss_weight"
+    ],
+    "search_parameter_menu": {
+      "learning_rate": [0.0003, 0.001, 0.003],
+      "weight_decay": [0.0, 0.0001, 0.001],
+      "dropout": [0.0, 0.1, 0.2],
+      "temporal_kernel_samples": [5, 9, 17],
+      "mask_fraction": [0.0, 0.15, 0.3],
+      "hand_loss_weight": [0.5, 1.0, 2.0]
+    },
+    "requested_budget_fields": [
+      "proposal_round",
+      "parameter_update_runs",
+      "cpu_threads",
+      "workers",
+      "maximum_runtime_seconds",
+      "maximum_peak_rss_bytes",
+      "maximum_generated_output_bytes"
+    ],
+    "synthetic_budget_caps": {
+      "proposal_round_minimum": 1,
+      "proposal_round_maximum": 4,
+      "parameter_update_runs": 0,
+      "cpu_threads": 1,
+      "workers": 1,
+      "maximum_runtime_seconds": 30,
+      "maximum_peak_rss_bytes": 268435456,
+      "maximum_generated_output_bytes": 1048576
+    },
+    "access_counter_fields": [
+      "S20_path_reads",
+      "VHDR_reads",
+      "EEG_reads",
+      "VMRK_reads",
+      "MAT_reads",
+      "raw_signal_reads",
+      "protected_target_reads",
+      "split_creations",
+      "model_runs",
+      "training_runs",
+      "inference_runs",
+      "scoring_runs",
+      "network_downloads",
+      "language_model_runs",
+      "device_stream_or_hardware_runs"
+    ],
+    "synthetic_required_access_counter_value": 0,
+    "warnings_minimum_count": 1,
+    "proposal_id_pattern": "^L55-AI-SYNTH-[0-9]{3}$",
+    "canonical_json": "UTF-8_sorted_keys_compact_separators_no_NaN",
+    "hash_algorithm": "sha256"
+  },
+  "future_real_visibility_firewall": {
+    "agent_may_receive": [
+      "committed_public_policy",
+      "accepted_aggregate_Loop54_geometry_and_confound_ledger",
+      "aggregate_train_inner_trial_metrics",
+      "aggregate_required_control_margins",
+      "aggregate_resource_counters",
+      "validator_findings",
+      "unavailable_field_declarations"
+    ],
+    "agent_may_not_receive": [
+      "raw_or_windowed_EEG_values",
+      "VHDR_VMRK_or_MAT_content",
+      "individual_key_or_hand_labels",
+      "individual_predictions_or_errors",
+      "intended_or_typed_text",
+      "marker_descriptions_or_semantic_groups",
+      "selection_or_final_metrics",
+      "selection_or_final_predictions_or_targets",
+      "dictionary_reversible_protected_hashes",
+      "private_payload_or_derivative_paths"
+    ],
+    "agent_may_not_be_instructed_to": [
+      "obtain_a_positive_result",
+      "maximize_publishability",
+      "choose_an_endpoint_after_outcomes",
+      "soften_a_failed_gate",
+      "write_a_broader_scientific_claim"
+    ]
+  },
+  "future_fit_budget_recommendation": {
+    "maximum_total_parameter_update_runs": 12,
+    "maximum_ai_guided_train_inner_proposal_runs": 4,
+    "maximum_frozen_primary_and_stability_runs": 3,
+    "maximum_train_pairing_derangement_runs": 1,
+    "maximum_peripheral_only_runs": 1,
+    "maximum_EEG_plus_peripheral_diagnostic_runs": 1,
+    "maximum_linear_comparator_runs": 1,
+    "maximum_centered_noncausal_diagnostic_runs": 1,
+    "unused_capacity_authorizes_extra_work": false,
+    "trained_control_need_reduces_ai_rounds_before_total_can_expand": true
+  },
+  "synthetic_acceptance_gates": [
+    "research_document_and_machine_policy_agree",
+    "every_real_or_protected_execution_flag_remains_false",
+    "valid_synthetic_proposal_replays_to_same_hash",
+    "unknown_fields_are_rejected",
+    "target_text_is_rejected",
+    "final_metrics_or_protected_observation_scope_is_rejected",
+    "raw_EEG_access_is_rejected",
+    "noncausal_context_is_rejected",
+    "language_model_is_rejected",
+    "pretrained_weights_are_rejected",
+    "hyperparameters_outside_menu_are_rejected",
+    "resource_cap_expansion_is_rejected",
+    "parameter_update_or_model_run_is_rejected",
+    "CLI_reads_only_named_policy_and_synthetic_proposal",
+    "base_install_remains_dependency_free",
+    "complete_existing_unit_suite_does_not_regress",
+    "ruff_and_git_diff_check_pass",
+    "no_generated_model_cache_participant_or_inspection_debris_is_committed"
+  ],
+  "current_access_counters": {
+    "public_primary_source_pages_consulted": 4,
+    "committed_research_boundaries_read": 2,
+    "S20_path_reads": 0,
+    "VHDR_reads": 0,
+    "EEG_reads": 0,
+    "VMRK_reads": 0,
+    "MAT_reads": 0,
+    "raw_signal_reads": 0,
+    "protected_target_reads": 0,
+    "split_creations": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "inference_runs": 0,
+    "scoring_runs": 0,
+    "network_data_downloads": 0,
+    "language_model_decoder_runs": 0,
+    "device_stream_or_hardware_runs": 0
+  },
+  "current_warnings": [
+    "AI_assistance_can_increase_search_efficiency_but_cannot_guarantee_a_positive_result",
+    "small_one_participant_trial_counts_create_high_overfitting_risk",
+    "self_supervised_transfer_to_overt_typing_is_unproven",
+    "peripheral_and_task_locked_information_can_drive_EEG_prediction",
+    "a_language_model_can_make_weak_neural_output_look_fluent",
+    "Loop54_must_close_before_any_real_Loop55_preregistration_or_execution"
+  ],
+  "current_unavailable_fields": [
+    "S20_channel_count_and_types",
+    "S20_sampling_rate",
+    "S20_usable_unique_trial_count",
+    "S20_peripheral_channel_availability",
+    "exact_Loop55_split",
+    "exact_Loop55_architecture",
+    "future_train_inner_summary_contract",
+    "future_agent_selection_statistic",
+    "future_proposal_transcript",
+    "EEG_hand_or_key_effect",
+    "brain_specific_origin",
+    "generalization",
+    "continuous_or_real_time_decoding"
+  ],
+  "claim_boundary": {
+    "engineering_capability_added": "prospective_machine_checkable_AI_proposal_policy_with_deterministic_synthetic_validation",
+    "scientific_claim_not_established": "no_AI_assisted_neural_advantage_EEG_decoding_brain_specific_generalization_real_time_portable_home_or_clinical_result",
+    "strongest_claim_available_after_synthetic_gate": "AI_generated_research_proposals_can_be_constrained_hashed_inspected_and_rejected_before_protected_evidence_access"
+  }
+}
