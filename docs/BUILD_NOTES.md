@@ -4733,3 +4733,53 @@ committed local artifacts only; it downloaded no EEG payload, touched no S20
 path, loaded no checkpoint, trained or scored no model, and established no EEG
 effect, neural advantage, decoding, generalization, real-time, hardware,
 home-use, or clinical result.
+
+## 2026-08-06 - Causal Motor Lattice Architecture Research
+
+- Reviewed nine primary sources spanning Brain2Qwerty keyboard geometry,
+  compact filter-bank models, EEGNet, Riemannian decoding, movement-onset and
+  signal-quality sensitivity, channel adaptation, responder/session effects,
+  synchronized kinematics, and EEG+EMG movement-onset data.
+- Selected `CML-v0` as a project-specific research synthesis, not a global
+  novelty or superiority claim. It gives potential, causal mu, and causal beta
+  separate rank-8 spatial branches and three temporal cells each, then uses a
+  72-to-24 bottleneck. Every learned spatial row is zero-sum and unit-norm,
+  adding no parameter while reducing common-reference and scale ambiguity.
+- Replaced independent hand/key heads with a fixed physical keyboard lattice,
+  one `rho * tanh(...)` bounded 29-key residual, and an exact hand probability
+  marginal. This
+  prevents internally contradictory hand and key predictions while preserving
+  performed-action supervision and excluding intended text.
+- Derived the exact trainable-parameter formula `24C + 2,549 + 25P`. At 64
+  channels and the maximum 18 primitives, the reference has 4,535 parameters;
+  it stays below 10,000 through 291 channels.
+- Added eight same-checkpoint evidence-escrow probes for branch, channel, time,
+  and optional hemisphere failure localization. They are explicitly
+  diagnostic and cannot prove cortical physiology or replace trained controls.
+- Split the public qualification strategy into two independent axes: the
+  existing 23,248,224-byte PhysioNet prospect for left/right execution and a
+  future exact EEG+EMG MRCP slice for pre-movement timing. No public payload was
+  downloaded or opened.
+- Defined the next eligible Tier B milestone as a separately contracted
+  deterministic synthetic factor-isolation gate under one thread, 600 seconds,
+  512 MiB RSS, and 4 MiB output. It was not implemented or executed here.
+- Added the research document, machine-readable registry, and dependency-free
+  invariants while preserving every frozen Loop 54/55 hash and zeroing every
+  real/protected/model counter.
+- The three new research artifacts total 64,022 bytes under the declared
+  1 MiB cap. Focused verification passed 50 tests across the new architecture,
+  existing Loop 55, open EEG strategy, and scientific-roadmap boundaries.
+- The pre-change 1,113-test baseline advanced to 1,129 passing tests with the
+  same 3 expected skips in 28.817 seconds of unittest runtime and 29.94 seconds
+  wall time at 638,500,864-byte external peak RSS under one-thread limits.
+  Ruff, compileall, all registry JSON parsing, and `git diff --check` passed.
+
+Engineering capability proposed: NeuroDecodeKit now has a machine-checkable,
+failure-addressable compact EEG architecture and a two-axis qualification
+strategy that can localize potential, mu, beta, spatial, timing, peripheral,
+and keyboard-structure failure before protected evidence is spent.
+
+Scientific claim not established: no EEG payload, protected target, model, or
+score was accessed, so this work establishes no EEG effect, neural advantage,
+decoding accuracy, generalization, causal real-time output, portable hardware,
+home use, or clinical utility.

@@ -137,6 +137,15 @@
 > contributor receipts. No public payload was downloaded, and this research is
 > neither a preregistration nor authorization. Foundation models and
 > generative EEG imputation remain deferred from the protected Loop 55 path.
+> The additive architecture pass selects `CML-v0` as the next bounded
+> hypothesis: separate potential/mu/beta views, rank-8 spatial mixers, a
+> 24-value bottleneck, and a physical 29-key lattice with an exact hand
+> marginal. The 64-channel/18-primitive reference has 4,535 parameters and
+> eight same-checkpoint failure-localization probes. Public qualification is
+> now two-axis because PhysioNet left/right execution does not establish strict
+> pre-movement timing; a separately scoped EEG+EMG MRCP slice would test that
+> second axis. No synthetic model, public payload, S20 content, training,
+> inference, or score was accessed, and all execution remains unauthorized.
 > Loop 56 planning research now freezes five verdict classes, 12 capability
 > levels, 18
 > comparison dimensions, 16 claim fields, 28 gates, 34 refusals, and a 12-part

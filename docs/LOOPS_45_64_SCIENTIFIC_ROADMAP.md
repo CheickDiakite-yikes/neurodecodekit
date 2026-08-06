@@ -357,6 +357,23 @@ EEG imputation remain separate, later, public-data-only research lanes. See
 `docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md` and
 `registries/open_eeg_rd_strategy.v0.json`.
 
+The additive architecture pass in
+`docs/LOOP_55_CAUSAL_MOTOR_LATTICE_ARCHITECTURE_RESEARCH.md` and
+`registries/loop55_causal_motor_lattice_research.v0.json` selects `CML-v0` as
+the next source-independent hypothesis. It uses separate potential, causal mu,
+and causal beta views, one rank-8 spatial mixer per view, a 24-dimensional
+bottleneck, and a fixed physical-key lattice. Hand probability is an exact
+marginal of the 29-key distribution, so the two endpoints cannot silently
+contradict. The reference at 64 channels and 18 primitives has 4,535 trainable
+parameters. Eight same-checkpoint probes localize failure without replacing
+the registered scientific controls.
+
+The public ladder now has two noninterchangeable axes: the existing PhysioNet
+slice tests left/right execution mechanics, while a future bounded EEG+EMG MRCP
+slice would test strictly pre-movement timing against measured EMG onset. Both
+are unauthorized. Synthetic CML-v0 implementation is also `Not Started`; this
+research does not amend the frozen Loop 55 gate or authorize S20 work.
+
 ### Loop 56 - Cross-Modality Accessibility Verdict
 
 **Status: planning research complete; Loop 55 result dependent; final verdict

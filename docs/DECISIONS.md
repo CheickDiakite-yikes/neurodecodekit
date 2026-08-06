@@ -3520,3 +3520,67 @@ scientific claim.
 Evidence: `docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md`,
 `registries/open_eeg_rd_strategy.v0.json`, and
 `tests/test_open_eeg_rd_strategy.py`.
+
+## 0102 - Select A Failure-Addressable Causal Motor Lattice Before More Scale
+
+Decision: select `CML-v0` as the next source-independent Loop 55 architecture
+hypothesis. Use three explicit pre-keypress views for potential shape, causal
+mu energy, and causal beta energy; one rank-8 spatial mixer and three temporal
+cells per view; and one 24-dimensional shared bottleneck. Do not answer current
+negative evidence with a larger transformer, foundation model, or language
+model.
+
+Spatial decision: transform each learned spatial row to zero sum and unit L2
+norm before use. This adds no trainable parameter, reduces common-reference and
+scale ambiguity, and does not claim universal reference or artifact invariance.
+
+Output decision: map the shared bottleneck through at most 18 fixed physical
+keyboard primitives plus a 29-key residual. Derive hand probability exactly by
+marginalizing the final key distribution under a frozen hand-eligibility map.
+Do not train an independent hand head that can contradict the key prediction.
+Intended text, sentence context, and target frequency may not construct the
+lattice. Bound the residual as `rho * tanh(z_residual)` with fixed
+`0 <= rho <= 1`; choose and freeze `rho` only under a future synthetic contract
+before public or protected payload access.
+
+Complexity decision: use the exact formula `24C + 2,549 + 25P`, where `C` is
+the qualified EEG channel count and `P <= 18` is the frozen primitive count.
+The 64-channel/18-primitive reference is 4,535 parameters. A future mismatch or
+cap breach parks the design instead of expanding the existing 10,000-parameter
+ceiling.
+
+Causality decision: publish exact one-sided filter coefficients, response,
+group delay, left context, valid sample count, and anti-alias behavior before
+any real execution. A 500 ms potential view may describe slow shape but may not
+claim narrow `0.1-1 Hz` resolution. Centered filters, zero-phase processing,
+future padding, and filter-reset artifacts remain forbidden.
+
+Qualification decision: split the public positive control into two axes.
+Retain the undownloaded 23,248,224-byte PhysioNet prospect for left/right
+execution mechanics. Prepare a separate future bounded EEG+EMG MRCP prospect
+for pre-movement timing against measured EMG onset. They are
+noninterchangeable, off-task controls and each needs a separate exact Tier C
+contract. Either failed axis parks the protected architecture path.
+
+Diagnostic decision: freeze full, potential-muted, mu-muted, beta-muted,
+all-muted, channel-deranged, time-displaced, and conditionally hemisphere-
+mirrored predictions from the same checkpoint. These add no training run and
+localize failure, but they do not replace matched scientific controls or prove
+cortical physiology.
+
+Authorization decision: architecture research, documentation, tests, commit,
+push, and CI inspection are authorized under Tier A/B. No synthetic model was
+implemented or run. No public or S20 payload, target, split, checkpoint, model,
+training, inference, scoring, hardware, release, or claim action is authorized.
+Frozen Loop 54/55 artifacts remain unchanged, and exact L54-A commit `c114623`
+still needs replacement remote-green evidence before its Tier C packet can
+freeze.
+
+Scientific boundary: this decision proposes a falsifiable and resource-bounded
+research architecture. It establishes no EEG effect, neural advantage,
+decoding accuracy, generalization, brain-specific origin, causal real-time
+output, portable hardware, home use, or clinical utility.
+
+Evidence: `docs/LOOP_55_CAUSAL_MOTOR_LATTICE_ARCHITECTURE_RESEARCH.md`,
+`registries/loop55_causal_motor_lattice_research.v0.json`, and
+`tests/test_loop55_causal_motor_lattice_research.py`.

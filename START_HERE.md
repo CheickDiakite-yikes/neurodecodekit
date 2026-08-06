@@ -148,6 +148,16 @@
    local-first aggregate receipt for EEG contributors. This is additive
    planning only: no public EEG payload, S20 path, target, model, checkpoint,
    training, inference, score, or upload was accessed or authorized.
+   Then read
+   `docs/LOOP_55_CAUSAL_MOTOR_LATTICE_ARCHITECTURE_RESEARCH.md` and
+   `registries/loop55_causal_motor_lattice_research.v0.json`. The additive
+   `CML-v0` proposal separates potential, mu, and beta branches, derives hand
+   probabilities exactly from a physical key lattice, and uses 4,535 trainable
+   parameters in the 64-channel/18-primitive reference. It also separates the
+   public laterality and EEG+EMG pre-movement timing controls. This is
+   architecture research only: synthetic implementation, public downloads,
+   Loop 54 content, S20 modeling, and every scientific claim remain
+   unauthorized.
    Then read `docs/LOOP_56_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop56_cross_modality_accessibility_research.v0.json`. Loop 56
    freezes five verdict classes, a 12-level capability ladder, 18 comparison

@@ -17,6 +17,23 @@
 > with 3 expected skips in 29.866 seconds at 643,842,048-byte external peak
 > RSS. Preserve the unrelated tracker inspection NDJSON.
 >
+> Additive architecture research, 2026-08-06: read
+> `docs/LOOP_55_CAUSAL_MOTOR_LATTICE_ARCHITECTURE_RESEARCH.md` and
+> `registries/loop55_causal_motor_lattice_research.v0.json`. `CML-v0` is the
+> selected source-independent hypothesis: separate potential/mu/beta views,
+> rank-8 spatial mixers, three temporal cells per view, a 24-value bottleneck,
+> and a physical key lattice with no independent hand head. The 64-channel,
+> 18-primitive reference is 4,535 parameters. Public qualification is now
+> explicitly two-axis: the existing PhysioNet prospect tests laterality while
+> a future EEG+EMG MRCP slice would test pre-movement timing. Neither payload
+> was opened. Synthetic implementation, public execution, Loop 54 content, and
+> S20 modeling remain `Not Started` or unauthorized. Preserve the frozen
+> artifacts and the unrelated tracker inspection NDJSON. The three research
+> artifacts total 64,022 bytes; 50 focused tests pass, and the full suite
+> advances from 1,113 to 1,129 passing tests with the same 3 expected skips in
+> 28.817 seconds at 638,500,864-byte external peak RSS. Ruff, compileall, all
+> registry JSON parsing, and diff hygiene pass.
+>
 > Additive strategy refresh, 2026-08-06: read
 > `docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md` and
 > `registries/open_eeg_rd_strategy.v0.json`. Current open EEG benchmarks

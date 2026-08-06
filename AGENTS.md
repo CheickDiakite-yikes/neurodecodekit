@@ -131,6 +131,24 @@ authorized. The nine-file 23,248,224-byte PhysioNet prospect and every real
 stage require separate exact Tier C decisions. Foundation models and
 generative EEG imputation remain deferred from the protected Loop 55 path.
 
+The additive architecture pass now selects `CML-v0` as the next hypothesis:
+
+```bash
+cat docs/LOOP_55_CAUSAL_MOTOR_LATTICE_ARCHITECTURE_RESEARCH.md
+python -m json.tool registries/loop55_causal_motor_lattice_research.v0.json >/dev/null
+```
+
+It is a source-independent, failure-addressable research design with separate
+potential, mu, and beta views; rank-8 spatial mixers; three temporal cells per
+view; a 24-dimensional bottleneck; and a physical keyboard lattice whose hand
+probability is an exact marginal of the 29-key output. The maximum-primitive
+formula is `24C + 2,999`, or 4,535 parameters at 64 channels. It also corrects
+the public qualification ladder: PhysioNet left/right execution and a future
+EEG+EMG pre-movement-onset slice test different axes and need separate exact
+Tier C contracts. Synthetic implementation has not started. Do not implement
+or run CML-v0, download either public prospect, touch S20, amend frozen Loop
+54/55 artifacts, or promote a scientific claim from this research alone.
+
 Documentation-sync commit `b6785d7` passed push CI `29471589279` and PR #32
 CI `29471598364`; Base Python and Optional Neuro Readers passed in both.
 

@@ -441,6 +441,22 @@ Foundation models and generative EEG imputation remain separate later lanes.
 The strategy is not a preregistration or Tier C decision; do not download the
 public prospect or change frozen Loop 54/55 artifacts from it alone.
 
+The additive `CML-v0` architecture research is in:
+
+- `docs/LOOP_55_CAUSAL_MOTOR_LATTICE_ARCHITECTURE_RESEARCH.md`;
+- `registries/loop55_causal_motor_lattice_research.v0.json`; and
+- `tests/test_loop55_causal_motor_lattice_research.py`.
+
+It selects a source-independent compact hypothesis with potential, causal mu,
+and causal beta branches; rank-8 spatial mixers; a 24-dimensional bottleneck;
+and a physical 29-key lattice whose hand output is an exact probability
+marginal. The 64-channel/18-primitive reference has 4,535 parameters. The
+qualification ladder now separates PhysioNet laterality from a future EEG+EMG
+pre-movement timing control. This is architecture research only: synthetic
+implementation, public payload access, Loop 54 content, S20 model work, and
+claim promotion remain unauthorized. Do not infer execution permission from
+the selected hypothesis.
+
 Loop 56 cross-modality accessibility planning research is complete and
 reviewable at:
 

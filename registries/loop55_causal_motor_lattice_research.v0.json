@@ -1,0 +1,478 @@
+{
+  "schema_name": "neurodecodekit.loop55_causal_motor_lattice_research",
+  "schema_version": "0.1.0",
+  "created_at": "2026-08-06",
+  "loop_id": 55,
+  "title": "Causal Motor Lattice v0 Architecture Research",
+  "status": "additive_architecture_research_complete_synthetic_implementation_not_started_real_stages_unauthorized",
+  "decision": "select_CML_v0_as_the_next_failure_addressable_architecture_hypothesis_without_amending_or_executing_Loop55",
+  "frozen_boundary": {
+    "loop54_stage_a_research_path": "docs/LOOP_54_STAGE_A_VHDR_PREREGISTRATION.md",
+    "loop54_stage_a_research_sha256": "9b17d31a70c88eff3ab77d731abf1c0c759152f5c2ee6c8b3c5153bbd57875b6",
+    "loop54_stage_a_contract_path": "registries/loop54_stage_a_vhdr_contract.v0.json",
+    "loop54_stage_a_contract_sha256": "a0a466d845bff79e9461646f76791a3583fe7c567aeb532b6e951e570411124e",
+    "loop55_research_path": "docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md",
+    "loop55_research_sha256": "c7c0910ceab2d8365645a1a92998e95368cd90b8c0503abc572b70eba418629e",
+    "loop55_registry_path": "registries/loop55_eeg_neural_effect_research.v0.json",
+    "loop55_registry_sha256": "032157b8a90be68a16cc5963bf0c1c513e626a50b417b1e76ce7c06715d9c9af",
+    "loop55_ai_research_path": "docs/LOOP_55_AI_ASSISTED_REPRESENTATION_RESEARCH.md",
+    "loop55_ai_research_sha256": "ced712d5c5a5b02d1fa09eb48e83e3946918d2cc3c19eba331ef17b3fcbbc3d9",
+    "loop55_ai_policy_path": "registries/loop55_ai_research_policy.v0.json",
+    "loop55_ai_policy_sha256": "d20a22199f293dce540247579dede6b2496edb78ce914fa89753ab6a0fd91023",
+    "open_eeg_strategy_path": "docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md",
+    "open_eeg_strategy_sha256": "1dd8723e8227d310b644cd7b5602332500f1174eca524f61fcaa6447b3e113b0",
+    "open_eeg_registry_path": "registries/open_eeg_rd_strategy.v0.json",
+    "open_eeg_registry_sha256": "0291e802cefbbe73bb9ecdcd4d5d1d40b56e53e0836f2fadf28a11f59738e742",
+    "loop54_stage_a_registration_commit": "c114623",
+    "loop54_stage_a_replacement_remote_green_required": true,
+    "loop54_stage_a_exact_authorization_pending": true,
+    "this_artifact_amends_frozen_loop54_or_loop55_artifacts": false,
+    "this_artifact_authorizes_any_real_or_protected_action": false
+  },
+  "research_question": "Can a compact architecture expose and test distinct pre-keypress motor hypotheses while enforcing physical consistency between performed-key and performed-hand predictions?",
+  "primary_sources": [
+    {
+      "source_id": "brain2qwerty_v1_nature_2026",
+      "url": "https://www.nature.com/articles/s41593-026-02303-2",
+      "finding": "Character confusion correlates with physical keyboard distance at r=0.73 p=0.02 n=19, and a two-cluster analysis separates left-hand from right-hand keys.",
+      "design_use": "fixed physical keyboard lattice and exact hand marginal without language input",
+      "transfer_ceiling": "published cohort result does not establish causal pre-keypress information or transfer to local S20"
+    },
+    {
+      "source_id": "fbcnet_2021",
+      "url": "https://arxiv.org/abs/2104.01233",
+      "finding": "A multi-view filter-bank, learned spatial filtering, and variance aggregation target limited-sample noisy motor EEG.",
+      "design_use": "separate potential mu and beta views with low-rank spatial mixing",
+      "transfer_ceiling": "motor-imagery benchmark performance does not transfer to pre-keypress typing"
+    },
+    {
+      "source_id": "eegnet_2016",
+      "url": "https://arxiv.org/abs/1611.08024",
+      "finding": "Compact depthwise and separable operations support limited-parameter EEG models across multiple paradigms.",
+      "design_use": "compact specialist precedent under the existing 10000-parameter cap",
+      "transfer_ceiling": "architectural precedent is not a validated S20 recipe"
+    },
+    {
+      "source_id": "deep_riemannian_networks_2025",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12319850/",
+      "finding": "Learnable filterbanks combined with SPD geometry produce strong public motor-task decoding and physiologically plausible frequency selection.",
+      "design_use": "retain a fixed Riemannian family as a serious external comparator",
+      "transfer_ceiling": "short-window covariance and geometry add design surface and are not the first protected candidate"
+    },
+    {
+      "source_id": "eeg_handwriting_foundation_models_2026",
+      "url": "https://arxiv.org/abs/2605.15698",
+      "finding": "Removing movement-onset knowledge reduced average four-letter accuracy from 41.3 percent to 32.4 percent; improved test-time signal quality raised the best subject from 45 percent to 78 percent; specialist models remained stronger.",
+      "design_use": "separate onset signal quality and architecture qualification before model scale",
+      "transfer_ceiling": "handwriting results do not establish typing-key or S20 performance"
+    },
+    {
+      "source_id": "channel_adaptation_benchmark_2026",
+      "url": "https://arxiv.org/abs/2604.23091",
+      "finding": "Channel adaptation is architecture-dependent and can cause negative transfer; a 5-million-parameter specialist beat models up to 31 times larger on four of five tasks.",
+      "design_use": "do not invent geometry or import a large model before source montage qualification",
+      "transfer_ceiling": "benchmark results do not choose the local S20 channel adapter"
+    },
+    {
+      "source_id": "finger_bci_2025",
+      "url": "https://www.nature.com/articles/s41467-025-61064-x",
+      "finding": "The real-time finger study used experienced participants, subject-specific EEGNet fine-tuning, an offline session, and two online sessions.",
+      "design_use": "treat participant and session response as an explicit stop hypothesis",
+      "transfer_ceiling": "multi-session finger execution and imagery do not validate one-block pre-keypress typing"
+    },
+    {
+      "source_id": "iackd_2026",
+      "url": "https://doi.org/10.1038/s41597-026-07146-x",
+      "finding": "The 15-participant synchronized EEG-kinematics dataset technically validates readiness-potential and mu/beta ERD/ERS signatures across 7040 trials.",
+      "design_use": "separate potential mu and beta architecture branches",
+      "transfer_ceiling": "visible task cues and the approximately 7.4 GB release prevent use as a tiny clean typing substitute"
+    },
+    {
+      "source_id": "mrcp_eeg_emg_2026",
+      "url": "https://doi.org/10.1016/j.dib.2026.112596",
+      "data_url": "https://data.mendeley.com/datasets/y23s2xg6x4/1",
+      "finding": "The dataset synchronizes 32-channel EEG at 128 Hz with forearm EMG for 40 participants across five sessions of repeated right-fist closure and rest.",
+      "design_use": "prospective true pre-movement timing and displacement positive control using EMG onset",
+      "transfer_ceiling": "right-hand-only visually cued fist closure cannot qualify left/right typing or brain-specific origin"
+    }
+  ],
+  "architecture": {
+    "candidate_id": "CML-v0",
+    "candidate_name": "Causal Motor Lattice v0",
+    "status": "source_independent_architecture_hypothesis_not_implemented_not_preregistered",
+    "novelty_boundary": "project_specific_synthesis_not_a_global_novelty_or_superiority_claim",
+    "primary_goal": "failure_addressable_causal_performed_action_model",
+    "input_contract": {
+      "modality": "EEG",
+      "analysis_window_ms_recommendation": [-500, 0],
+      "right_endpoint_exclusive": true,
+      "right_context_ms": 0,
+      "required_left_filter_context_must_be_strictly_pre_keypress": true,
+      "known_onset_and_event_count_role": "alignment_scaffolding_only",
+      "allowed_inputs": [
+        "Loop54-qualified EEG channels in source order",
+        "train-only channel normalization parameters",
+        "strictly pre-keypress signal samples",
+        "valid-sample and padding masks"
+      ],
+      "forbidden_inputs": [
+        "marker description or event code",
+        "performed key or hand label as an input",
+        "intended key sentence text prompt or semantic group",
+        "event position interkey interval or trial duration",
+        "sample at or after the keypress",
+        "EOG EMG gaze motion audio or other peripheral value",
+        "language model pretrained embedding or NeuroToken input"
+      ]
+    },
+    "views": [
+      {
+        "view_id": "CML-V0",
+        "name": "potential_shape",
+        "frequency_definition": "unbanded_train_normalized_slow_shape",
+        "spatial_rank": 8,
+        "temporal_cells": 3,
+        "aggregation": "piecewise_pre_keypress_means",
+        "feature_count": 24,
+        "future_or_centered_baseline_allowed": false,
+        "claim_limit": "does_not_claim_0_1_to_1_Hz_resolution_from_500_ms"
+      },
+      {
+        "view_id": "CML-V1",
+        "name": "mu_energy",
+        "frequency_definition": "8_to_13_Hz_fixed_one_sided_FIR",
+        "spatial_rank": 8,
+        "temporal_cells": 3,
+        "aggregation": "square_valid_only_cell_mean_train_fixed_log1p",
+        "feature_count": 24,
+        "centered_or_zero_phase_filter_allowed": false,
+        "future_padding_allowed": false
+      },
+      {
+        "view_id": "CML-V2",
+        "name": "beta_energy",
+        "frequency_definition": "13_to_30_Hz_fixed_one_sided_FIR",
+        "spatial_rank": 8,
+        "temporal_cells": 3,
+        "aggregation": "square_valid_only_cell_mean_train_fixed_log1p",
+        "feature_count": 24,
+        "centered_or_zero_phase_filter_allowed": false,
+        "future_padding_allowed": false
+      }
+    ],
+    "spatial_mixer_contract": {
+      "rank_per_view": 8,
+      "all_qualified_EEG_channels_enter_each_view": true,
+      "learned_row_zero_sum_before_use": true,
+      "learned_row_unit_L2_norm_before_use": true,
+      "added_trainable_parameters": 0,
+      "uniform_common_reference_offset_visible_to_mixed_row": false,
+      "invariant_to_every_reference_or_artifact": false,
+      "channel_drop_after_Loop54_qualification_allowed": false
+    },
+    "fusion": {
+      "input_features": 72,
+      "bottleneck_features": 24,
+      "operations": [
+        "one affine 72 to 24 projection",
+        "one 24-feature layer normalization",
+        "one fixed activation"
+      ],
+      "attention_allowed": false,
+      "transformer_allowed": false,
+      "recurrent_state_allowed": false,
+      "sentence_context_allowed": false,
+      "pretrained_weights_allowed": false
+    },
+    "motor_lattice": {
+      "registered_key_class_count": 29,
+      "maximum_primitive_count": 18,
+      "primitive_groups_prospective": [
+        "hand side for hand-eligible keys",
+        "physical row",
+        "horizontal zone or column",
+        "explicit special-key type"
+      ],
+      "incidence_map_fixed_before_training": true,
+      "incidence_map_may_use_target_frequency_text_or_model_outcome": false,
+      "primitive_logits": "24_to_P_affine",
+      "residual_key_logits": "24_to_29_affine",
+      "final_key_logits": "normalized_fixed_lattice_contribution_plus_rho_times_tanh_of_direct_residual",
+      "residual_gain_symbol": "rho",
+      "residual_gain_range_inclusive": [0.0, 1.0],
+      "residual_gain_trainable": false,
+      "residual_gain_selected_only_in_future_synthetic_contract": true,
+      "residual_gain_frozen_before_any_public_or_protected_payload": true,
+      "residual_norm_and_contribution_report_required": true,
+      "independent_trainable_hand_head": false,
+      "hand_probability": "renormalized_sum_of_final_key_probabilities_over_frozen_hand_eligible_key_sets",
+      "hand_key_prediction_contradiction_possible": false,
+      "ambiguous_hand_classes": "prospectively_mask_and_count_never_post_outcome_assign",
+      "allowed_supervised_targets": [
+        "performed_key_29",
+        "performed_hand_2 derived from performed key for eligible events",
+        "physical primitive groups derived from performed key"
+      ],
+      "intended_text_or_sentence_context_in_loss": false,
+      "exact_loss_weights_deferred_to_synthetic_only_contract": true
+    },
+    "parameter_ledger": {
+      "channel_symbol": "C",
+      "primitive_symbol": "P",
+      "primitive_upper_bound": 18,
+      "three_spatial_mixers_formula": "3 * (8*C + 8)",
+      "bottleneck_parameters": 1752,
+      "layer_norm_parameters": 48,
+      "primitive_head_formula": "25*P",
+      "key_residual_head_parameters": 725,
+      "total_formula": "24*C + 2549 + 25*P",
+      "maximum_primitive_total_formula": "24*C + 2999",
+      "reference_channel_count_61_parameters": 4463,
+      "reference_channel_count_64_parameters": 4535,
+      "maximum_channels_under_10000_at_P18": 291,
+      "fixed_filters_spatial_normalization_cells_incidence_residual_gain_marginals_and_masks_trainable_parameters": 0,
+      "existing_parameter_ceiling": 10000,
+      "mismatch_action": "park_without_silent_expansion"
+    },
+    "causal_dsp_contract": {
+      "future_exact_coefficients_required": true,
+      "future_impulse_response_required": true,
+      "future_frequency_response_required": true,
+      "future_group_delay_required": true,
+      "future_required_left_context_required": true,
+      "future_valid_sample_count_required": true,
+      "future_anti_alias_response_required_before_downsampling": true,
+      "centered_convolution_allowed": false,
+      "zero_phase_filter_allowed": false,
+      "reflected_future_padding_allowed": false,
+      "circular_padding_allowed": false,
+      "filter_reset_transient_may_be_scored_as_signal": false
+    },
+    "geometry_policy": {
+      "primary_model_requires_geometry": false,
+      "primary_low_rank_mixers_support_source_channel_order": true,
+      "invented_coordinates_allowed": false,
+      "template_montage_interpolation_allowed": false,
+      "source_reconstruction_allowed": false,
+      "hemisphere_mirror_diagnostic_requires_Loop54_qualified_pairs": true,
+      "hemisphere_mirror_diagnostic_trainable_parameters": 0,
+      "missing_geometry_action": "mark_diagnostic_unavailable_and_narrow_claim_ceiling"
+    }
+  },
+  "same_checkpoint_evidence_escrow": {
+    "status": "prospective_target_blind_diagnostic_only",
+    "parameter_update_runs_added": 0,
+    "probes": [
+      {"probe_id": "CML-A0", "name": "full", "operation": "no mutation"},
+      {"probe_id": "CML-A1", "name": "potential_muted", "operation": "replace CML-V0 with train-only neutral value"},
+      {"probe_id": "CML-A2", "name": "mu_muted", "operation": "replace CML-V1 with train-only neutral value"},
+      {"probe_id": "CML-A3", "name": "beta_muted", "operation": "replace CML-V2 with train-only neutral value"},
+      {"probe_id": "CML-A4", "name": "all_views_muted", "operation": "replace all three views with train-only neutral values"},
+      {"probe_id": "CML-A5", "name": "channel_deranged", "operation": "apply frozen channel permutation"},
+      {"probe_id": "CML-A6", "name": "time_displaced", "operation": "apply frozen nonwrapping pre-keypress displacement"},
+      {"probe_id": "CML-A7", "name": "hemisphere_mirrored", "operation": "apply fixed qualified pair swap if available"}
+    ],
+    "predictions_freeze_before_selection_or_final_targets": true,
+    "branch_ablation_proves_cortical_physiology": false,
+    "replaces_separately_trained_scientific_controls": false
+  },
+  "two_axis_public_qualification_ladder": {
+    "decision": "one_tiny_dataset_cannot_qualify_both_laterality_and_true_pre_movement_timing",
+    "axis_P1_laterality": {
+      "status": "prospective_metadata_only_not_downloaded_not_authorized",
+      "dataset": "PhysioNet EEG Motor Movement Imagery",
+      "subjects": ["S001", "S002", "S003"],
+      "execution_runs": [3, 7, 11],
+      "file_count": 9,
+      "public_metadata_bytes": 23248224,
+      "qualifies": [
+        "left_right_execution reader mechanics",
+        "spatial laterality mechanics",
+        "classical comparator lane"
+      ],
+      "does_not_qualify": [
+        "strict pre-keypress typing",
+        "S20 transfer",
+        "thought to text"
+      ],
+      "separate_exact_tier_c_contract_required": true
+    },
+    "axis_P2_pre_movement_timing": {
+      "status": "prospective_metadata_only_exact_slice_unselected_not_downloaded_not_authorized",
+      "dataset": "EEG and EMG dataset for analyzing movement-related cortical potentials in hand gesture tasks",
+      "participants_available": 40,
+      "sessions_per_participant": 5,
+      "task": "repeated_right_fist_closure_and_rest",
+      "EEG_channels": 32,
+      "EEG_sampling_rate_Hz": 128,
+      "independent_onset_reference": "forearm_EMG",
+      "qualifies_prospectively": [
+        "strict pre_movement alignment mechanics",
+        "causal timing and displacement controls",
+        "potential branch implementation"
+      ],
+      "does_not_qualify": [
+        "left_right laterality",
+        "typing",
+        "brain specific origin without cue and peripheral controls"
+      ],
+      "exact_file_list_known_now": false,
+      "exact_payload_bytes_known_now": false,
+      "license_interpretation_frozen_now": false,
+      "separate_exact_tier_c_contract_required": true
+    },
+    "eligibility_rule": {
+      "P1_pass_P2_pass": "eligible_for_future_S20_architecture_freeze_only_after_Loop54",
+      "P1_pass_P2_fail": "park_before_protected_model_work_due_to_pre_movement_mechanics_failure",
+      "P1_fail_P2_pass": "park_and_audit_reader_channel_and_laterality_mechanics",
+      "P1_fail_P2_fail": "stop_candidate_without_protected_model_work"
+    }
+  },
+  "synthetic_factor_isolation_gate": {
+    "status": "recommended_future_tier_B_contract_not_implemented_not_executed",
+    "factor_families": [
+      "potential_shape_signal",
+      "mu_energy_signal",
+      "beta_energy_signal",
+      "mixed_potential_mu_beta_signal",
+      "left_right_spatial_reversal",
+      "timing_only_labels_without_signal_relation",
+      "peripheral_like_common_mode_artifact",
+      "pure_noise"
+    ],
+    "requirements": [
+      "fresh deterministic seed and strict train check final partitions",
+      "no real channel name path target or payload",
+      "no external or pretrained weight",
+      "exact parameter accounting",
+      "future mutation causal and padding tests",
+      "deterministic replay",
+      "branch-specific ablation ordering",
+      "exact hand key consistency",
+      "negative controls remain negative",
+      "runtime RSS and output accounting"
+    ],
+    "maximum_cpu_threads": 1,
+    "maximum_workers": 1,
+    "maximum_parameter_update_runs": 4,
+    "maximum_wall_seconds": 600,
+    "maximum_peak_rss_bytes": 536870912,
+    "maximum_generated_output_bytes": 4194304,
+    "passing_establishes_real_EEG_effect": false
+  },
+  "hypothesis_routes": [
+    {"route_id": "CML-R0", "observation": "synthetic mechanics fail", "action": "repair_once_under_new_bounded_contract_or_park"},
+    {"route_id": "CML-R1", "observation": "public P1 laterality fails", "action": "audit_reader_and_channel_handling_without_protected_model_work"},
+    {"route_id": "CML-R2", "observation": "public P2 pre_movement timing fails", "action": "park_causal_CML_v0_for_S20"},
+    {"route_id": "CML-R3", "observation": "public axes pass but Loop54 fails", "action": "park_unqualified_S20"},
+    {"route_id": "CML-R4", "observation": "public axes and Loop54 pass", "action": "freeze_one_exact_protected_candidate_and_control_inventory"},
+    {"route_id": "CML-R5", "observation": "S20 hand passes and key fails", "action": "retain_bounded_performed_hand_sensor_effect_only"},
+    {"route_id": "CML-R6", "observation": "centered diagnostic passes and causal views fail", "action": "report_task_aligned_or_post_keypress_information_only"},
+    {"route_id": "CML-R7", "observation": "EOG timing or another required control matches candidate", "action": "no_EEG_specific_claim_localize_shortcut"},
+    {"route_id": "CML-R8", "observation": "causal hand and key clear every future gate", "action": "bounded_one_block_sensor_signal_result_only"}
+  ],
+  "alternatives_rejected_or_deferred": [
+    {"alternative": "transformer_SSM_or_recurrent_sequence_model", "decision": "rejected_for_first_protected_pass", "reason": "larger_context_compute_and_leakage_surface_before_single_event_effect"},
+    {"alternative": "EEG_foundation_model", "decision": "deferred_public_data_watch_lane", "reason": "scale_not_shown_to_be_binding_constraint_and_channel_adaptation_can_hurt"},
+    {"alternative": "end_to_end_deep_SPD_network", "decision": "classical_comparator_and_watch_lane", "reason": "short_window_covariance_and_geometry_add_unqualified_design_surface"},
+    {"alternative": "electrode_graph_neural_network", "decision": "deferred", "reason": "source_geometry_unopened_and_may_not_be_invented"},
+    {"alternative": "independent_hand_and_key_heads", "decision": "rejected", "reason": "predictions_can_contradict_and_ignore_physical_hierarchy"},
+    {"alternative": "monolithic_learned_temporal_convolution", "decision": "rejected", "reason": "cannot_localize_potential_mu_or_beta_failure"},
+    {"alternative": "intended_text_or_language_model_correction", "decision": "forbidden", "reason": "can_hide_weak_neural_encoder"},
+    {"alternative": "generative_channel_or_sample_imputation", "decision": "forbidden_for_primary_evidence", "reason": "generated_signal_is_not_measured_observation"}
+  ],
+  "ordered_research_strategy": [
+    "recover remote green for exact L54-A registration commit c114623 and obtain separate exact Tier C decision",
+    "contract and implement synthetic CML-v0 factor isolation under Tier B",
+    "if synthetic passes prepare separate exact metadata and execution contracts for public P1 and P2",
+    "execute each public axis once only after its own green decision and implementation sequence",
+    "continue separately authorized Loop54 A B C D stages",
+    "only after both public axes and Loop54 pass freeze one exact S20 candidate split transform lattice control and 12-fit inventory",
+    "freeze predictions in a committed pushed remotely green hash-only record before one final target delivery",
+    "stop at the first failed qualification rung without model scale language model or post-target tuning"
+  ],
+  "current_unknowns": [
+    "S20 channel count names sample rate reference and geometry",
+    "S20 signal quality usable trials event ontology and key frequencies",
+    "exact 29-key list and hand eligibility of special keys",
+    "exact causal FIR coefficients required left context and loss weights",
+    "lattice primitive count optimizer and seed",
+    "public P1 and P2 outcomes",
+    "presence of any usable S20 pre-keypress effect",
+    "cortical versus peripheral cue motion or timing origin"
+  ],
+  "resource_boundaries": {
+    "current_research_generated_artifact_cap_bytes": 1048576,
+    "future_synthetic_cpu_threads": 1,
+    "future_synthetic_workers": 1,
+    "future_synthetic_wall_seconds": 600,
+    "future_synthetic_peak_rss_bytes": 536870912,
+    "future_synthetic_generated_output_bytes": 4194304,
+    "existing_future_protected_parameter_cap": 10000,
+    "existing_future_protected_fit_cap": 12,
+    "existing_future_protected_cpu_threads": 1,
+    "existing_future_protected_peak_rss_bytes": 1073741824,
+    "existing_future_protected_generated_output_bytes": 67108864,
+    "new_download_bytes_now": 0
+  },
+  "authorization": {
+    "planning_research_documentation_tests_commit_and_push_authorized_now": true,
+    "synthetic_architecture_implementation_authorized_by_this_artifact_now": false,
+    "synthetic_training_or_execution_authorized_by_this_artifact_now": false,
+    "S20_path_stat_or_content_access_authorized_now": false,
+    "public_EEG_download_or_payload_access_authorized_now": false,
+    "real_header_signal_marker_event_trial_target_or_label_read_authorized_now": false,
+    "split_creation_authorized_now": false,
+    "model_or_checkpoint_access_authorized_now": false,
+    "model_inference_authorized_now": false,
+    "training_or_parameter_update_authorized_now": false,
+    "scoring_or_selection_authorized_now": false,
+    "pretrained_weight_language_model_or_external_embedding_authorized_now": false,
+    "RW3_stream_device_or_hardware_operation_authorized_now": false,
+    "frozen_loop54_or_loop55_artifact_amendment_authorized_now": false,
+    "scientific_claim_upgrade_authorized_now": false,
+    "separate_exact_tier_c_decisions_required_for_every_real_stage": true
+  },
+  "current_access_counters": {
+    "S20_path_stats": 0,
+    "S20_payload_reads": 0,
+    "public_EEG_payload_downloads": 0,
+    "public_EEG_payload_bytes": 0,
+    "other_real_neural_payload_reads": 0,
+    "header_reads": 0,
+    "signal_sample_reads": 0,
+    "marker_event_or_trial_reads": 0,
+    "target_or_label_reads": 0,
+    "split_creations": 0,
+    "model_or_checkpoint_loads": 0,
+    "model_inference_runs": 0,
+    "training_or_parameter_update_runs": 0,
+    "scoring_or_selection_runs": 0,
+    "pretrained_weight_or_language_model_runs": 0,
+    "network_payload_bytes": 0,
+    "RW3_stream_device_or_hardware_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "warnings": [
+    "CML-v0 is a project-specific research synthesis not a global architecture novelty claim",
+    "a 500 ms window cannot honestly resolve a narrow 0.1 to 1 Hz band",
+    "known keypress onset and event count are task scaffolding",
+    "branch ablations do not prove cortical physiology",
+    "missing geometry narrows the claim rather than permitting invented coordinates",
+    "PhysioNet laterality is cue-aligned and off-task",
+    "the MRCP prospect is right-hand-only and visually cued",
+    "one participant and one block cannot support population inference",
+    "a negative S20 result may reflect nonresponse session quality or absent effect",
+    "GitHub Actions recovery for exact L54-A registration commit c114623 remains a separate pending gate"
+  ],
+  "claim_boundary": {
+    "engineering_capability_proposed": "A machine-checkable compact architecture and qualification strategy can localize potential mu beta spatial timing peripheral and keyboard-structure failure modes before protected evidence is spent.",
+    "scientific_claim_not_established": "No EEG payload protected target model or score was accessed, so there is no EEG effect neural advantage decoding accuracy generalization causal real-time output portable hardware home-use or clinical result.",
+    "maximum_future_CML_v0_claim_if_every_current_Loop55_gate_passes": "bounded one-block causal pre-keypress EEG sensor-signal dependence for performed hand and performed key with known event onsets and output count",
+    "brain_specific_origin_available_from_CML_v0_alone": false,
+    "continuous_thought_to_text_available_from_CML_v0_alone": false,
+    "unseen_person_generalization_available_from_CML_v0_alone": false,
+    "real_time_or_portable_hardware_available_from_CML_v0_alone": false,
+    "home_or_clinical_utility_available_from_CML_v0_alone": false
+  }
+}

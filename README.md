@@ -51,6 +51,7 @@ irreversible Tier C events.
 | Fresh EEG neural-effect design | Loop 55 now separates a causal pre-keypress performed-hand gate from a harder causal 29-key gate, with performed actions as primary targets, a post-keypress diagnostic, 12 matched conditions, exact trial-level tests, and one-shot target order | Planning research is complete and Loop 54 dependent; the S20 bundle is acquired but uninterpreted, the experiment is `Not Started`, and no target, model, prediction, score, neural advantage, or decoding result exists |
 | Bounded AI research guard | A dependency-free Loop 55 policy now validates and hashes strict synthetic AI recipe proposals, rejects target leakage, future context, LLMs, pretrained weights, unknown fields, model runs, and cap expansion, and reserves at most four future train-inner proposal rounds inside the existing 12-fit ceiling | The synthetic interface is implemented and measured; no AI proposal has accessed S20, trained a model, or produced neural evidence, and any future real proposal phase remains Loop 54 dependent and separately Tier C authorized |
 | Open EEG R&D strategy | Current 2025-2026 evidence supports the compact specialist path and adds a prospective 23,248,224-byte public motor positive control, an interpretable motor-physiology rung, classical EEG baselines, and local-first contributor receipts | Research and planning only: no public EEG payload, S20 content, model, target, or pretrained weight was opened, and every real execution remains separately Tier C gated |
+| Causal Motor Lattice architecture | `CML-v0` assigns separate potential, mu, and beta views to rank-8 spatial mixers, fuses 72 features through a 24-value bottleneck, and derives hand probability exactly from a physical 29-key lattice; the 64-channel, 18-primitive reference has 4,535 parameters | Architecture research only: synthetic implementation is `Not Started`; PhysioNet laterality, EEG+EMG pre-movement timing, Loop 54, and protected S20 execution are separate unauthorized gates |
 | Cross-modality accessibility verdict design | Loop 56 freezes five verdict classes, 12 non-skippable capability levels, 18 EEG/MEG comparison dimensions, a 16-field claim sentence, and a 12-part at-home conjunction | Planning research is complete and Loop 55 result dependent; only modality-aware interfaces are shared, tested MEG/EEG predictors remain negative, S20 has acquisition evidence only, and no equivalence, transfer, real-time, device, home, or clinical claim exists |
 | Development-person intake planning | Loop 49 metadata research selects S24 session 2 block 2: one MEG FIF plus one protected MAT log, exactly `1,048,579,727` bytes; a future text-grouped split reserves 16 unique sentence groups for selection and requires at least 32 fit groups | S24 avoids the S1/S18 alias and preserves S25 final-only, but no S24 path or payload was opened and the `>=48` usable-row, channel, geometry, and overlap gates are unproven; Loop 49 remains `Not Started` |
 | Multi-source encoder planning | Loop 50 research freezes global text grouping, five-fold historical S21 out-of-fold diagnostics, one 16-group S24 development gate, equal-person loss, ten fixed conditions, and an exact 20-update inventory led by seed `5001` | Stage B route `L50-R05` now parks the same-family S24 path; Loop 50 remains `Not Started`, with S24 qualification, model selection, training, scoring, and every scientific claim unavailable |
@@ -208,6 +209,25 @@ a separate public-data watch lane, and generative channel imputation may not
 support primary evidence. See
 `docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md` and
 `registries/open_eeg_rd_strategy.v0.json`.
+
+The architecture research now makes that specialist path concrete without
+opening a model stage. `CML-v0` separates slow potential shape, causal mu
+energy, and causal beta energy; each view has a rank-8 spatial mixer and three
+time cells. A 24-dimensional bottleneck feeds a fixed physical keyboard
+lattice plus a small 29-key residual. Hand probability is an exact marginal of
+the key distribution rather than a contradictory second head. The exact
+parameter formula is `24C + 2,549 + 25P`; at 64 channels and the maximum 18
+primitives it is 4,535 parameters. Same-checkpoint branch muting localizes
+failure but cannot prove cortical physiology.
+
+The qualification ladder is now two-axis because one tiny public dataset does
+not test both questions. The existing 23,248,224-byte PhysioNet prospect tests
+left/right execution mechanics; a separately scoped 2026 EEG+EMG MRCP slice
+would test true pre-movement alignment against EMG onset. Both remain
+undownloaded and unauthorized, and both must pass independently before this
+architecture can become eligible for a future S20 freeze. See
+`docs/LOOP_55_CAUSAL_MOTOR_LATTICE_ARCHITECTURE_RESEARCH.md` and
+`registries/loop55_causal_motor_lattice_research.v0.json`.
 
 Loop 56 planning research defines how to report whatever survives those gates
 without pretending EEG and MEG are interchangeable. It freezes five classes:
@@ -562,6 +582,14 @@ Read this before interpreting any number in the repository.
   causal motor-physiology assay and the compact model. No public payload,
   protected content, model, checkpoint, target, or pretrained weight opened;
   the strategy is not an execution contract.
+- **Causal Motor Lattice architecture research:** `CML-v0` is the next compact
+  hypothesis, not an execution. Three causal physiological views, an exact
+  key-to-hand marginal, a fixed physical keyboard lattice, eight target-blind
+  same-checkpoint probes, and the formula `24C + 2,549 + 25P` make failures
+  localizable under the existing 10,000-parameter ceiling. The revised public
+  ladder separates PhysioNet left/right mechanics from an EEG+EMG pre-movement
+  timing check. Synthetic implementation, both public payload stages, Loop 54,
+  and S20 training/scoring remain `Not Started` or unauthorized.
 - **Loop 56 cross-modality accessibility research:** the planning boundary
   freezes five verdict classes, a 12-level capability ladder, 18 comparison
   dimensions, 16 mandatory claim fields, 28 gates, 34 refusals, and a 12-part
@@ -1366,6 +1394,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/LOOP_53_FRESH_EEG_ACQUISITION_PREREGISTRATION.md](docs/LOOP_53_FRESH_EEG_ACQUISITION_PREREGISTRATION.md) | exact acquisition-only order, caps, integrity rules, stop conditions, receipt fields, and post-pass nonclaims |
 | [docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md](docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md) | current open EEG benchmark review, public motor positive-control prospect, specialist baseline and physiology upgrades, foundation-model deferral, and local-first contributor strategy |
 | [registries/open_eeg_rd_strategy.v0.json](registries/open_eeg_rd_strategy.v0.json) | machine-readable source pins, tool decisions, nine-file public prospect, resource caps, authorization zeros, and claim boundary |
+| [docs/LOOP_55_CAUSAL_MOTOR_LATTICE_ARCHITECTURE_RESEARCH.md](docs/LOOP_55_CAUSAL_MOTOR_LATTICE_ARCHITECTURE_RESEARCH.md) | failure-addressable compact EEG architecture, physical key lattice, exact hand marginal, causal DSP rules, two-axis public qualification, and stop strategy |
+| [registries/loop55_causal_motor_lattice_research.v0.json](registries/loop55_causal_motor_lattice_research.v0.json) | machine-readable CML-v0 graph, parameter formula, source ceilings, branch escrow, public gates, authorization zeros, and nonclaims |
 | [registries/loop53_fresh_eeg_acquisition_contract.v0.json](registries/loop53_fresh_eeg_acquisition_contract.v0.json) | machine-readable 96,090,264-byte S20 contract with pinned source hashes, no-overwrite paths, one-invocation cap, and every execution permission false |
 | [docs/LOOP_53_AUTHORIZATION_PACKET.md](docs/LOOP_53_AUTHORIZATION_PACKET.md) | plain-language exact Tier C sentence for implementation plus one bounded acquisition, with all interpretive and model work excluded |
 | [registries/loop53_authorization_request.v0.json](registries/loop53_authorization_request.v0.json) | immutable pre-decision request bound to green registration `bccd367` and both registration CI runs |
