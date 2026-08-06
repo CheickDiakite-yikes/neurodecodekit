@@ -47,7 +47,7 @@ neuro = ["mne>=1.12,<1.13", "scipy>=1.11", "numpy>=1.26"]
 cache = ["zarr>=3.0", "numcodecs>=0.13", "numpy>=1.26"]
 ml = ["numpy>=1.26", "scikit-learn>=1.4", "torch>=2.2"]
 demo = ["gradio>=6.20,<7"]
-dev = ["pytest>=8.0", "ruff>=0.5"]
+dev = ["pytest>=8.0", "ruff==0.15.20"]
 all = [
   "huggingface_hub>=0.24",
   "mne>=1.12,<1.13",
@@ -59,7 +59,7 @@ all = [
   "torch>=2.2",
   "gradio>=6.20,<7",
   "pytest>=8.0",
-  "ruff>=0.5",
+  "ruff==0.15.20",
 ]
 
 [project.scripts]

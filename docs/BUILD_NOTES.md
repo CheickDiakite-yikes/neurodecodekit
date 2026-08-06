@@ -4773,6 +4773,13 @@ home-use, or clinical result.
   same 3 expected skips in 28.817 seconds of unittest runtime and 29.94 seconds
   wall time at 638,500,864-byte external peak RSS under one-thread limits.
   Ruff, compileall, all registry JSON parsing, and `git diff --check` passed.
+- Push CI exposed a separate reproducibility defect already present in the
+  preceding strategy commit: `pyproject.toml` allowed `ruff>=0.5`, so GitHub
+  installed Ruff 0.16.1 while the locally qualified environment used 0.15.20.
+  The newer release expanded lint behavior and surfaced 402 historical findings
+  unrelated to this packet. Pin both `dev` and `all` extras to Ruff 0.15.20,
+  matching the clean local gate, instead of mechanically rewriting unrelated
+  source and test files.
 
 Engineering capability proposed: NeuroDecodeKit now has a machine-checkable,
 failure-addressable compact EEG architecture and a two-axis qualification

@@ -32,7 +32,11 @@
 > artifacts total 64,022 bytes; 50 focused tests pass, and the full suite
 > advances from 1,113 to 1,129 passing tests with the same 3 expected skips in
 > 28.817 seconds at 638,500,864-byte external peak RSS. Ruff, compileall, all
-> registry JSON parsing, and diff hygiene pass.
+> registry JSON parsing, and diff hygiene pass. Push CI then exposed the
+> pre-existing unbounded Ruff dependency: the runner installed 0.16.1 while the
+> qualified local tool is 0.15.20, producing 402 historical findings. The
+> follow-up tooling repair pins Ruff 0.15.20 in both development extras; do not
+> rewrite unrelated modules to satisfy an unreviewed linter expansion.
 >
 > Additive strategy refresh, 2026-08-06: read
 > `docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md` and
