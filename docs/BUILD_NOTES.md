@@ -4779,7 +4779,9 @@ home-use, or clinical result.
   The newer release expanded lint behavior and surfaced 402 historical findings
   unrelated to this packet. Pin both `dev` and `all` extras to Ruff 0.15.20,
   matching the clean local gate, instead of mechanically rewriting unrelated
-  source and test files.
+  source and test files. Repair commit `2232993` passed push CI
+  `31132586790`: Base Python completed in 18 seconds and Optional Neuro Readers
+  completed in 51 seconds.
 
 Engineering capability proposed: NeuroDecodeKit now has a machine-checkable,
 failure-addressable compact EEG architecture and a two-axis qualification

@@ -35,8 +35,10 @@
 > registry JSON parsing, and diff hygiene pass. Push CI then exposed the
 > pre-existing unbounded Ruff dependency: the runner installed 0.16.1 while the
 > qualified local tool is 0.15.20, producing 402 historical findings. The
-> follow-up tooling repair pins Ruff 0.15.20 in both development extras; do not
-> rewrite unrelated modules to satisfy an unreviewed linter expansion.
+> follow-up tooling repair `2232993` pins Ruff 0.15.20 in both development
+> extras and passed push CI `31132586790`: Base Python in 18 seconds and
+> Optional Neuro Readers in 51 seconds. Do not rewrite unrelated modules to
+> satisfy an unreviewed linter expansion.
 >
 > Additive strategy refresh, 2026-08-06: read
 > `docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md` and
