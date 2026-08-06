@@ -343,6 +343,20 @@ or claim authority. The real phase remains Loop 54 dependent and separately
 unauthorized. See `docs/LOOP_55_AI_ASSISTED_REPRESENTATION_RESEARCH.md` and
 `registries/loop55_ai_research_policy.v0.json`.
 
+The additive 2026-08-06 open EEG strategy refresh leaves this frozen planning
+boundary intact while sharpening the pre-execution ladder. Current open
+foundation-model benchmarks support retaining specialist models at this data
+and compute scale. Before a future protected Loop 55 freeze, the recommended
+path is one separately authorized public motor-execution positive control,
+selection of at most one classical CSP/Riemannian family on that public lane,
+and a fixed causal pre-keypress motor-physiology assay beside the compact model.
+The exact public prospect is nine PhysioNet EDF files from S001-S003, runs
+3/7/11, totaling 23,248,224 bytes under a future 32 MiB network cap. No file was
+downloaded and no execution is authorized. Foundation models and generative
+EEG imputation remain separate, later, public-data-only research lanes. See
+`docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md` and
+`registries/open_eeg_rd_strategy.v0.json`.
+
 ### Loop 56 - Cross-Modality Accessibility Verdict
 
 **Status: planning research complete; Loop 55 result dependent; final verdict

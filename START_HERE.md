@@ -139,6 +139,15 @@
    S20 content or scientific result opened, and a future real train-inner agent
    phase still requires Loop 54 closeout, an exact preregistration, and separate
    Tier C authorization.
+   Then read `docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md` and
+   `registries/open_eeg_rd_strategy.v0.json`. The current evidence review keeps
+   the compact specialist-first path, adds a prospective 23,248,224-byte
+   PhysioNet motor positive control, recommends one public-data-selected
+   classical baseline plus a causal motor-physiology assay, and defers
+   foundation models to a separate public-data lane. It also defines a future
+   local-first aggregate receipt for EEG contributors. This is additive
+   planning only: no public EEG payload, S20 path, target, model, checkpoint,
+   training, inference, score, or upload was accessed or authorized.
    Then read `docs/LOOP_56_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop56_cross_modality_accessibility_research.v0.json`. Loop 56
    freezes five verdict classes, a 12-level capability ladder, 18 comparison

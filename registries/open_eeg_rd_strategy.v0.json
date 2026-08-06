@@ -1,0 +1,354 @@
+{
+  "schema_name": "neurodecodekit.open_eeg_rd_strategy",
+  "schema_version": "0.1.0",
+  "created_at": "2026-08-06",
+  "status": "research_complete_strategy_additive_no_execution_authorized",
+  "title": "Open EEG Research And Development Strategy Refresh",
+  "objective": "Increase the probability of a valid narrow EEG result through known-effect positive controls, interpretable specialist baselines, strict preprocessing controls, and local-first external contribution without spending protected S20 evidence or expanding laptop risk.",
+  "decision": "stay_on_loop54_loop55_path_with_public_positive_control_specialist_baseline_and_open_cohort_upgrades",
+  "frozen_boundary": {
+    "loop54_stage_a_contract_path": "registries/loop54_stage_a_vhdr_contract.v0.json",
+    "loop54_stage_a_contract_sha256": "a0a466d845bff79e9461646f76791a3583fe7c567aeb532b6e951e570411124e",
+    "loop54_stage_a_registration_commit": "c1146233a6178ca5e1153b92565915abad029719",
+    "loop54_stage_a_registration_must_remain_immutable": true,
+    "loop54_stage_a_authorization_still_pending": true,
+    "loop55_research_path": "docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md",
+    "loop55_research_sha256": "c7c0910ceab2d8365645a1a92998e95368cd90b8c0503abc572b70eba418629e",
+    "loop55_registry_path": "registries/loop55_eeg_neural_effect_research.v0.json",
+    "loop55_registry_sha256": "032157b8a90be68a16cc5963bf0c1c513e626a50b417b1e76ce7c06715d9c9af",
+    "loop55_ai_research_path": "docs/LOOP_55_AI_ASSISTED_REPRESENTATION_RESEARCH.md",
+    "loop55_ai_research_sha256": "ced712d5c5a5b02d1fa09eb48e83e3946918d2cc3c19eba331ef17b3fcbbc3d9",
+    "loop55_ai_policy_path": "registries/loop55_ai_research_policy.v0.json",
+    "loop55_ai_policy_sha256": "d20a22199f293dce540247579dede6b2496edb78ce914fa89753ab6a0fd91023",
+    "this_strategy_amends_frozen_artifacts": false,
+    "this_strategy_authorizes_any_real_action": false
+  },
+  "competitive_context": {
+    "conduit_public_claim_source": "https://condu.it/thought/10k-hours",
+    "reported_scale": "approximately_10000_hours_across_thousands_of_participants",
+    "evidence_class": "company_reported_competitive_signal_not_independently_reproduced_scientific_evidence",
+    "neurodecodekit_response": "build_an_open_reproducible_local_first_evidence_network_not_a_centralized_raw_data_warehouse"
+  },
+  "source_snapshots": [
+    {
+      "source_id": "eeg_fm_compass",
+      "type": "paper_and_official_code",
+      "paper_url": "https://arxiv.org/abs/2601.17883",
+      "code_url": "https://github.com/Dingkun0817/EEG-FM-Benchmark",
+      "code_commit": "06b607ec28ceae29f32001518dd822925b409ac1",
+      "license": "MIT",
+      "finding": "Across 12 open foundation models and specialist baselines on 13 datasets, linear probing is frequently insufficient, specialist models remain competitive, and larger models do not consistently generalize better."
+    },
+    {
+      "source_id": "steegformer",
+      "type": "peer_reviewed_paper_and_official_code",
+      "paper_url": "https://openreview.net/forum?id=5Xwm8e6vbh",
+      "code_url": "https://github.com/LiuyinYang1101/STEEGFormer",
+      "code_commit": "542ee17918c3c2c36ba1d4ea02bedff5eb149370",
+      "license": "MIT_code",
+      "finding": "Classic decoders remain competitive; full fine-tuning can lead the average ranking, but the strongest reported variant exceeds 300 million parameters."
+    },
+    {
+      "source_id": "preprocessing_multiverse",
+      "type": "peer_reviewed_paper_and_official_code",
+      "paper_url": "https://doi.org/10.1038/s42003-025-08464-3",
+      "code_url": "https://github.com/kesslerr/m4d",
+      "license": "CC-BY-4.0",
+      "finding": "Preprocessing materially changes decoding, and uncorrected artifacts or structured noise can increase predictive performance while weakening interpretability and validity."
+    },
+    {
+      "source_id": "typewriting_motor_potentials",
+      "type": "peer_reviewed_paper",
+      "paper_url": "https://doi.org/10.1080/23273798.2017.1283427",
+      "open_repository_url": "https://hal.science/hal-02097730",
+      "finding": "A typewriting task elicited lateralized motor-response potentials for left- and right-hand responses."
+    },
+    {
+      "source_id": "premovement_direction_decoding",
+      "type": "peer_reviewed_paper",
+      "paper_url": "https://doi.org/10.1523/JNEUROSCI.5171-07.2008",
+      "finding": "Simultaneous EEG and MEG supported hand-movement direction decoding, with accuracy rising above chance before movement onset."
+    },
+    {
+      "source_id": "physionet_eegmmidb",
+      "type": "official_public_dataset",
+      "dataset_url": "https://physionet.org/content/eegmmidb/1.0.0/",
+      "doi": "10.13026/C28G6P",
+      "version": "1.0.0",
+      "license": "Open_Data_Commons_Attribution_1.0",
+      "finding": "The dataset provides 64-channel 160 Hz EDF+ motor execution and imagery recordings from 109 volunteers."
+    },
+    {
+      "source_id": "mne_eegbci_run_map",
+      "type": "official_documentation",
+      "url": "https://mne.tools/stable/generated/mne.datasets.eegbci.load_data.html",
+      "version": "MNE_1.12.1",
+      "finding": "Runs 3, 7, and 11 are left-versus-right hand motor execution."
+    }
+  ],
+  "tool_matrix": [
+    {
+      "tool_id": "mne",
+      "verified_release": "1.12.1",
+      "license": "BSD-3-Clause",
+      "decision": "retain_optional",
+      "role": "format_readers_signal_metadata_and_CSP_reference",
+      "base_dependency": false,
+      "loop54_stage_a_allowed": false,
+      "automatic_download_allowed": false
+    },
+    {
+      "tool_id": "moabb",
+      "verified_release": "1.5",
+      "verified_commit": "ea431132f07e7817fba1cd7d5af59c5decf4a5b6",
+      "license": "BSD-3-Clause",
+      "decision": "prepare_isolated_adapter",
+      "role": "public_motor_positive_control_and_reproducible_evaluation_pattern",
+      "base_dependency": false,
+      "automatic_download_allowed": false
+    },
+    {
+      "tool_id": "braindecode",
+      "verified_release": "1.7.0",
+      "verified_commit": "eafc0532333c82e6886cd64a8db5443c56790acd",
+      "license": "BSD-3-Clause_with_component_notices",
+      "decision": "prepare_isolated_adapter",
+      "role": "reference_EEGNet_and_compact_specialist_models",
+      "base_dependency": false,
+      "protected_architecture_search_allowed": false
+    },
+    {
+      "tool_id": "pyriemann",
+      "verified_release": "0.12",
+      "verified_commit": "733a46e8aca8edeb0c30fb1082e1b3718a3fc03b",
+      "license": "BSD-3-Clause",
+      "decision": "evaluate_on_public_positive_control_before_optional_adoption",
+      "role": "covariance_MDM_and_tangent_space_classical_baseline",
+      "base_dependency": false,
+      "automatic_download_allowed": false
+    },
+    {
+      "tool_id": "mne_bids",
+      "verified_release": "0.19.0",
+      "verified_commit": "d9ff7b74b093913b90560748a63486faf801800b",
+      "license": "BSD-3-Clause",
+      "decision": "retain_for_later_provenance_and_contributor_interoperability",
+      "role": "BIDS_read_write_envelope",
+      "base_dependency": false,
+      "loop54_stage_a_allowed": false
+    },
+    {
+      "tool_id": "open_eeg_bench",
+      "verified_release": "0.6.0",
+      "verified_commit": "3e4d034ae3e009deeda9c987d05a37e18fd87e15",
+      "license": "BSD-3-Clause",
+      "decision": "watch_and_use_only_in_separate_public_data_lane",
+      "role": "foundation_model_and_parameter_efficient_tuning_benchmark",
+      "base_dependency": false,
+      "default_all_dataset_download_allowed": false
+    },
+    {
+      "tool_id": "zuna_1_1",
+      "verified_commit": "953c258ab557cd381fc04fadc1a0a02bf5bdb188",
+      "license": "Apache-2.0_claimed_by_project",
+      "decision": "exclude_from_primary_evidence_watch_for_public_data_robustness_only",
+      "role": "generative_EEG_denoising_and_channel_imputation",
+      "base_dependency": false,
+      "primary_input_imputation_allowed": false,
+      "reason": "Project documentation warns that generated channels are plausible imputation and can hallucinate signals."
+    }
+  ],
+  "strategic_upgrades": [
+    {
+      "upgrade_id": "U1",
+      "name": "known_effect_public_positive_control",
+      "decision": "prepare_contract_only",
+      "purpose": "Catch reader window grouping and baseline failures before protected S20 model evidence is spent.",
+      "claim_ceiling": "Off-task engineering evidence that the frozen pipeline can recover a known left-versus-right motor-execution effect on the exact public slice."
+    },
+    {
+      "upgrade_id": "U2",
+      "name": "interpretable_motor_physiology_rung",
+      "decision": "include_in_future_loop55_design_refresh_before_preregistration",
+      "purpose": "Test fixed pre-keypress low-frequency mu beta and lateralized motor summaries with trial-level aggregation before interpreting a learned model.",
+      "claim_ceiling": "Task-locked scalp-sensor physiology consistent with motor preparation under available controls, not absolute brain-specific origin."
+    },
+    {
+      "upgrade_id": "U3",
+      "name": "specialist_baseline_triangle",
+      "decision": "select_one_classical_family_on_public_data_then_freeze_with_compact_family",
+      "purpose": "Separate representation failure from absent signal using shrinkage LDA, one CSP or Riemannian family, and one compact EEGNet-style family.",
+      "claim_ceiling": "Model-family discrimination for the exact task and slice."
+    },
+    {
+      "upgrade_id": "U4",
+      "name": "preprocessing_validity_pair",
+      "decision": "freeze_minimal_causal_primary_and_one_nonselectable_artifact_attenuated_diagnostic",
+      "purpose": "Prevent structured EOG EMG timing or filter artifacts from being mistaken for neural improvement.",
+      "claim_ceiling": "Sensitivity analysis only; the diagnostic may narrow but not rescue the primary claim."
+    },
+    {
+      "upgrade_id": "U5",
+      "name": "open_cohort_federation",
+      "decision": "build_local_first_receipts_before_any_raw_upload_feature",
+      "purpose": "Let EEG contributors validate locally and share hash-bound aggregate evidence without central raw-data collection.",
+      "claim_ceiling": "Software interoperability and aggregate reproducibility until matched external cohorts qualify."
+    }
+  ],
+  "public_positive_control_prospect": {
+    "status": "research_only_not_preregistered_not_authorized",
+    "dataset_id": "PhysioNet_EEGMMIDB_1.0.0",
+    "subjects": ["S001", "S002", "S003"],
+    "runs": [3, 7, 11],
+    "task": "motor_execution_left_vs_right_hand",
+    "files": [
+      {"path": "S001/S001R03.edf", "public_metadata_size_bytes": 2596896},
+      {"path": "S001/S001R07.edf", "public_metadata_size_bytes": 2596896},
+      {"path": "S001/S001R11.edf", "public_metadata_size_bytes": 2596896},
+      {"path": "S002/S002R03.edf", "public_metadata_size_bytes": 2555616},
+      {"path": "S002/S002R07.edf", "public_metadata_size_bytes": 2555616},
+      {"path": "S002/S002R11.edf", "public_metadata_size_bytes": 2555616},
+      {"path": "S003/S003R03.edf", "public_metadata_size_bytes": 2596896},
+      {"path": "S003/S003R07.edf", "public_metadata_size_bytes": 2596896},
+      {"path": "S003/S003R11.edf", "public_metadata_size_bytes": 2596896}
+    ],
+    "total_public_metadata_size_bytes": 23248224,
+    "prospective_fit_runs": [3, 7],
+    "prospective_frozen_check_run": 11,
+    "candidate_families": [
+      "fixed_low_frequency_shrinkage_LDA",
+      "fixed_8_to_30_Hz_CSP_LDA",
+      "fixed_covariance_Riemannian_MDM_or_tangent_space"
+    ],
+    "selection_rule_must_be_frozen_before_payload_access": true,
+    "future_network_cap_bytes": 33554432,
+    "future_incremental_disk_cap_bytes": 67108864,
+    "future_generated_output_cap_bytes": 16777216,
+    "future_cpu_threads": 1,
+    "future_workers": 1,
+    "future_wall_time_seconds": 600,
+    "future_peak_rss_bytes": 1073741824,
+    "separate_exact_tier_c_contract_required": true,
+    "download_or_payload_access_authorized_now": false
+  },
+  "future_loop55_design_refresh": {
+    "status": "recommendation_only_before_future_preregistration",
+    "ordered_endpoints": [
+      "causal_pre_keypress_performed_hand",
+      "causal_pre_keypress_performed_key_29",
+      "noncausal_centered_post_keypress_diagnostic"
+    ],
+    "physiology_assay": {
+      "required_in_design_refresh": true,
+      "data_independent_channel_rule_required": true,
+      "fixed_feature_families": [
+        "low_frequency_movement_related_potential",
+        "mu_band_8_to_13_Hz",
+        "beta_band_13_to_30_Hz",
+        "left_right_motor_lateralization_if_declared_motor_channels_are_available"
+      ],
+      "causal_pre_keypress_only": true,
+      "trial_level_aggregation": true,
+      "EOG_timing_and_displacement_controls_required": true
+    },
+    "classical_family_selected_only_from_public_positive_control": true,
+    "S20_selection_or_final_targets_may_choose_family": false,
+    "foundation_model_or_pretrained_weight_allowed": false,
+    "language_model_or_target_text_allowed": false,
+    "existing_10000_parameter_compact_ceiling_preserved": true,
+    "existing_12_fit_ceiling_preserved": true
+  },
+  "foundation_model_gate": {
+    "status": "deferred_watch_lane",
+    "eligible_only_after": [
+      "loop54_closes_cleanly",
+      "public_positive_control_passes_or_parks_with_measured_reason",
+      "compact_specialist_S20_result_is_frozen",
+      "license_checkpoint_geometry_sampling_context_and_normalization_are_exactly_bound",
+      "separate_resource_and_target_firewall_contract_is_green"
+    ],
+    "must_separate": [
+      "frozen_linear_or_ridge_probe",
+      "parameter_efficient_finetuning",
+      "full_parameter_finetuning"
+    ],
+    "generative_imputation_may_support_primary_evidence": false,
+    "protected_final_targets_may_select_model_or_strategy": false
+  },
+  "open_cohort_federation": {
+    "status": "prospective_local_first_design",
+    "raw_data_upload_default": false,
+    "local_validation_required": true,
+    "shareable_receipt_fields": [
+      "schema_and_tool_versions",
+      "source_and_configuration_hashes",
+      "modality_device_and_montage",
+      "sampling_and_channel_availability",
+      "task_trial_and_split_identities",
+      "runtime_RSS_input_and_output_bytes",
+      "warnings_unavailable_fields_and_claim_ceiling",
+      "aggregate_control_and_metric_cards"
+    ],
+    "plaintext_targets_in_public_receipt": false,
+    "absolute_local_paths_in_public_receipt": false,
+    "raw_release_requires_separate_consent_license_and_repository_decision": true,
+    "matched_protocol_required_for_scientific_aggregation": true
+  },
+  "recommended_order": [
+    "obtain_replacement_green_CI_for_exact_L54A_registration_commit",
+    "freeze_and_receive_exact_L54A_Tier_C_decision",
+    "implement_L54A_parser_with_synthetic_fixtures_and_green_CI",
+    "execute_L54A_once_then_stop",
+    "build_synthetic_motor_and_shortcut_fixtures_under_Tier_B",
+    "prepare_separate_public_positive_control_contract",
+    "complete_separately_authorized_L54B_and_L54C",
+    "refresh_and_preregister_L55_with_public_selected_classical_family_and_physiology_rung",
+    "execute_one_protected_L55_result_only_after_exact_Tier_C_sequence",
+    "consider_foundation_models_only_in_a_later_separate_public_or_train_inner_lane"
+  ],
+  "authorization": {
+    "planning_research_and_documentation_authorized_now": true,
+    "S20_path_stat_or_content_access_authorized_now": false,
+    "PhysioNet_download_or_payload_access_authorized_now": false,
+    "new_real_data_acquisition_authorized_now": false,
+    "real_header_signal_marker_event_trial_target_or_label_read_authorized_now": false,
+    "model_or_checkpoint_access_authorized_now": false,
+    "model_inference_authorized_now": false,
+    "training_or_parameter_update_authorized_now": false,
+    "scoring_or_selection_authorized_now": false,
+    "pretrained_weight_download_or_execution_authorized_now": false,
+    "raw_neural_upload_or_release_authorized_now": false,
+    "stream_device_or_hardware_operation_authorized_now": false,
+    "scientific_claim_upgrade_authorized_now": false
+  },
+  "current_access_counters": {
+    "S20_path_stats": 0,
+    "S20_payload_reads": 0,
+    "PhysioNet_payload_downloads": 0,
+    "PhysioNet_payload_bytes": 0,
+    "other_real_EEG_payload_reads": 0,
+    "target_or_label_reads": 0,
+    "model_or_checkpoint_loads": 0,
+    "model_inference_runs": 0,
+    "training_or_parameter_update_runs": 0,
+    "scoring_or_selection_runs": 0,
+    "pretrained_weight_downloads": 0,
+    "raw_neural_uploads": 0,
+    "stream_device_or_hardware_operations": 0,
+    "generated_experiment_bytes": 0
+  },
+  "warnings": [
+    "competitive company reports are not independently reproduced scientific evidence",
+    "public motor execution is an off-task positive control and not a typing or language result",
+    "preprocessing can expose structured artifacts that improve score while weakening validity",
+    "foundation-model scale and public benchmark performance do not imply transfer to S20",
+    "generative EEG reconstruction can hallucinate plausible signals and is diagnostic-only",
+    "a local-first contribution receipt does not grant consent or a license to aggregate raw data",
+    "GitHub Actions remained in a major outage while this strategy was prepared"
+  ],
+  "claim_boundary": {
+    "proven_now": "Current primary sources and official tool metadata support retaining the specialist-first controlled EEG path and motivate public positive-control, interpretable physiology, classical-baseline, and local-first contribution upgrades.",
+    "not_proven_now": "No EEG payload was downloaded or opened, no S20 path was touched, no model was loaded trained inferred or scored, and no protected target or label was accessed.",
+    "scientific_claim_not_established": "This research review establishes no EEG effect, neural advantage, decoding accuracy, generalization, causal real-time output, portable hardware, at-home use, or clinical utility."
+  }
+}

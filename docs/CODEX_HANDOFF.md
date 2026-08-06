@@ -17,6 +17,19 @@
 > with 3 expected skips in 29.866 seconds at 643,842,048-byte external peak
 > RSS. Preserve the unrelated tracker inspection NDJSON.
 >
+> Additive strategy refresh, 2026-08-06: read
+> `docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md` and
+> `registries/open_eeg_rd_strategy.v0.json`. Current open EEG benchmarks
+> reinforce the compact specialist-first path. The next prospective upgrade is
+> a separately contracted public motor positive control over nine PhysioNet
+> EDF files totaling 23,248,224 bytes, followed by one public-data-selected
+> classical family and a fixed causal motor-physiology assay in the future
+> Loop 55 design. Local-first contributor receipts are the data-scale strategy;
+> foundation models and generative imputation remain later public-data lanes.
+> No PhysioNet payload, S20 path, target, model, checkpoint, training,
+> inference, score, or upload opened. Do not download or implement a real-data
+> adapter from the strategy alone.
+>
 > Current handoff, 2026-07-17 after the Loop 55 synthetic AI-policy milestone:
 > policy commit `8855fae` is pushed and remotely green; implementation commit
 > `bd52cce` adds a pure-standard-library validator, three CLI

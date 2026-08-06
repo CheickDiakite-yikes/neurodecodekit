@@ -4681,3 +4681,55 @@ Scientific claim not established: no S20 path was statted and no header,
 signal, marker, MAT, event, trial, target, or model content was accessed, so no
 EEG quality, neural advantage, decoding, generalization, latency, hardware,
 home-use, or clinical result was established.
+
+## 2026-08-06 - Open EEG R&D Strategy Refresh
+
+- Re-audited the current Loop 54/55 path against current primary papers,
+  official tool repositories, public dataset metadata, and the project's
+  frozen proof boundary.
+- Confirmed that two current EEG foundation-model benchmarks support retaining
+  a specialist-first path: specialist models remain competitive, linear probes
+  are often insufficient, and larger models do not consistently generalize
+  better. Full fine-tuning can help, but the strongest cited ST-EEGFormer
+  variant exceeds 300 million parameters and belongs to a different resource
+  regime.
+- Added a prospective known-effect positive control using only public metadata:
+  PhysioNet EEGMMIDB participants S001-S003, motor-execution runs 3/7/11, nine
+  exact EDF paths totaling 23,248,224 bytes. No payload was downloaded. A
+  future 32 MiB network/64 MiB disk contract and exact Tier C decision remain
+  required.
+- Recommended one public-data-selected CSP or Riemannian family, fixed
+  low-frequency shrinkage LDA, a causal pre-keypress motor-physiology assay,
+  and the existing compact EEGNet-style family. The existing 10,000-parameter,
+  12-fit, target, language-model, and protected-access ceilings remain intact.
+- Added an open-source adoption matrix for MNE 1.12.1, MOABB 1.5, Braindecode
+  1.7.0, pyRiemann 0.12, MNE-BIDS 0.19.0, OpenEEGBench 0.6.0,
+  EEG-FM-Compass, ST-EEGFormer, and ZUNA1.1. Every dependency remains optional
+  or isolated. Automatic benchmark downloads and generative primary-input
+  imputation remain forbidden.
+- Defined a local-first contributor direction: raw EEG and plaintext targets
+  remain on the contributor's machine by default, while future shareable
+  receipts carry hashes, metadata, resources, controls, warnings, and aggregate
+  claim boundaries.
+- Added `docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md`,
+  `registries/open_eeg_rd_strategy.v0.json`, and ten machine-checking tests.
+  The three new strategy artifacts total 41,065 bytes.
+- Focused verification passed 10/10 tests. The pre-change 1,103-test baseline
+  advanced to 1,113 passing tests with the same 3 expected skips in 29.353
+  seconds at 617,611,264-byte external peak RSS under one-thread environment
+  limits. Ruff, compileall, JSON
+  validation, source-link checks, and `git diff --check` passed.
+- GitHub Actions remained in a major outage during preparation. No remote-green
+  claim is made, and the separate L54-A registration recovery gate remains
+  pending.
+
+Engineering capability proposed: NeuroDecodeKit now has a machine-checkable
+strategy for de-risking protected EEG work with a tiny public motor positive
+control, interpretable specialist baselines, and local-first contributor
+receipts.
+
+Scientific claim not established: this refresh accessed public metadata and
+committed local artifacts only; it downloaded no EEG payload, touched no S20
+path, loaded no checkpoint, trained or scored no model, and established no EEG
+effect, neural advantage, decoding, generalization, real-time, hardware,
+home-use, or clinical result.

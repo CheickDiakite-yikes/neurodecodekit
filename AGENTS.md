@@ -114,6 +114,23 @@ before any step started; a replacement run over exact commit `c114623` must
 become green before the authorization packet is frozen. Do not implement the
 parser or touch the registered local path from the preregistration alone.
 
+The additive open EEG strategy refresh is planning-only and does not loosen
+that gate:
+
+```bash
+cat docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md
+python -m json.tool registries/open_eeg_rd_strategy.v0.json >/dev/null
+```
+
+Current open benchmarks support the compact specialist-first path. The refresh
+prospectively adds a tiny public left/right motor positive control, one
+public-data-selected classical baseline, a causal motor-physiology assay, and
+local-first contributor receipts. No PhysioNet payload, S20 path, target,
+model, checkpoint, training, inference, score, or upload was accessed or
+authorized. The nine-file 23,248,224-byte PhysioNet prospect and every real
+stage require separate exact Tier C decisions. Foundation models and
+generative EEG imputation remain deferred from the protected Loop 55 path.
+
 Documentation-sync commit `b6785d7` passed push CI `29471589279` and PR #32
 CI `29471598364`; Base Python and Optional Neuro Readers passed in both.
 

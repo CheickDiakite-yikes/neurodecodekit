@@ -50,6 +50,7 @@ irreversible Tier C events.
 | Fresh EEG qualification gate | Loop 54 separates strict VHDR-only metadata, target-blind VHDR+EEG quality, isolated target-bearing VMRK+MAT reconciliation, and aggregate closeout; L54-A now freezes one exact 11,705-byte header, 18 gates, 22 refusals, and a one-shot strict parser boundary | L54-A is preregistered with exact authorization pending; no S20 path was statted and no header, sibling, signal, marker, MAT, target, split, or model content was accessed |
 | Fresh EEG neural-effect design | Loop 55 now separates a causal pre-keypress performed-hand gate from a harder causal 29-key gate, with performed actions as primary targets, a post-keypress diagnostic, 12 matched conditions, exact trial-level tests, and one-shot target order | Planning research is complete and Loop 54 dependent; the S20 bundle is acquired but uninterpreted, the experiment is `Not Started`, and no target, model, prediction, score, neural advantage, or decoding result exists |
 | Bounded AI research guard | A dependency-free Loop 55 policy now validates and hashes strict synthetic AI recipe proposals, rejects target leakage, future context, LLMs, pretrained weights, unknown fields, model runs, and cap expansion, and reserves at most four future train-inner proposal rounds inside the existing 12-fit ceiling | The synthetic interface is implemented and measured; no AI proposal has accessed S20, trained a model, or produced neural evidence, and any future real proposal phase remains Loop 54 dependent and separately Tier C authorized |
+| Open EEG R&D strategy | Current 2025-2026 evidence supports the compact specialist path and adds a prospective 23,248,224-byte public motor positive control, an interpretable motor-physiology rung, classical EEG baselines, and local-first contributor receipts | Research and planning only: no public EEG payload, S20 content, model, target, or pretrained weight was opened, and every real execution remains separately Tier C gated |
 | Cross-modality accessibility verdict design | Loop 56 freezes five verdict classes, 12 non-skippable capability levels, 18 EEG/MEG comparison dimensions, a 16-field claim sentence, and a 12-part at-home conjunction | Planning research is complete and Loop 55 result dependent; only modality-aware interfaces are shared, tested MEG/EEG predictors remain negative, S20 has acquisition evidence only, and no equivalence, transfer, real-time, device, home, or clinical claim exists |
 | Development-person intake planning | Loop 49 metadata research selects S24 session 2 block 2: one MEG FIF plus one protected MAT log, exactly `1,048,579,727` bytes; a future text-grouped split reserves 16 unique sentence groups for selection and requires at least 32 fit groups | S24 avoids the S1/S18 alias and preserves S25 final-only, but no S24 path or payload was opened and the `>=48` usable-row, channel, geometry, and overlap gates are unproven; Loop 49 remains `Not Started` |
 | Multi-source encoder planning | Loop 50 research freezes global text grouping, five-fold historical S21 out-of-fold diagnostics, one 16-group S24 development gate, equal-person loss, ten fixed conditions, and an exact 20-update inventory led by seed `5001` | Stage B route `L50-R05` now parks the same-family S24 path; Loop 50 remains `Not Started`, with S24 qualification, model selection, training, scoring, and every scientific claim unavailable |
@@ -193,6 +194,20 @@ takes approximately 0.001 seconds, peaks near 22 MB RSS, and records zero real
 data, cache, model, training, inference, scoring, network, or device operations.
 See `docs/LOOP_55_AI_ASSISTED_REPRESENTATION_RESEARCH.md` and
 `registries/loop55_ai_research_policy.v0.json`.
+
+The 2026-08-06 open EEG strategy refresh confirms that this specialist-first
+path is still the correct laptop-scale scientific choice. Two current open
+benchmarks report that specialist models remain competitive, linear probing is
+often insufficient, and larger EEG foundation models do not consistently
+generalize better. The refresh therefore adds three prospective upgrades
+without changing any authorization: a tiny public left/right motor-execution
+positive control before protected discovery, one externally selected classical
+EEG baseline plus an interpretable pre-keypress physiology assay, and
+local-first hash-bound receipts for EEG contributors. Foundation models remain
+a separate public-data watch lane, and generative channel imputation may not
+support primary evidence. See
+`docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md` and
+`registries/open_eeg_rd_strategy.v0.json`.
 
 Loop 56 planning research defines how to report whatever survives those gates
 without pretending EEG and MEG are interchangeable. It freezes five classes:
@@ -538,6 +553,15 @@ Read this before interpreting any number in the repository.
   Loop 54 dependent and needs an exact preregistration plus separate Tier C
   authorization. Historical-hash repair `f50be96` passed push CI `29621564301`;
   the complete local suite passes 1,087 tests with 3 expected skips.
+- **Open EEG R&D strategy refresh:** current EEG-FM-Compass, ST-EEGFormer,
+  preprocessing, motor-physiology, and official tool evidence supports keeping
+  the specialist-first route. A prospective public positive control binds only
+  S001-S003 PhysioNet motor-execution runs 3/7/11, nine EDF files and
+  23,248,224 public-metadata bytes under a future 32 MiB network cap. It would
+  qualify one classical family before S20, then pair that family with a fixed
+  causal motor-physiology assay and the compact model. No public payload,
+  protected content, model, checkpoint, target, or pretrained weight opened;
+  the strategy is not an execution contract.
 - **Loop 56 cross-modality accessibility research:** the planning boundary
   freezes five verdict classes, a 12-level capability ladder, 18 comparison
   dimensions, 16 mandatory claim fields, 28 gates, 34 refusals, and a 12-part
@@ -825,6 +849,13 @@ feature should not make `import neurodecodekit` import MNE, NumPy, or Torch.
 ## I Have EEG Data
 
 You can contribute without uploading the recording.
+
+The project is moving toward a local-first cohort federation: contributors
+would validate source identity, geometry, timing, trials, splits, controls, and
+resources on their own machines, then share a hash-bound aggregate receipt
+rather than raw EEG or plaintext targets. That direction is researched but not
+implemented or authorized for real-data aggregation yet. See
+[`docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md`](docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md).
 
 1. Read [CONTRIBUTING.md](CONTRIBUTING.md), especially **I Have EEG Data**.
 2. Open the **EEG data compatibility** issue form.
@@ -1333,6 +1364,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/loop49_research_boundary.v0.json](registries/loop49_research_boundary.v0.json) | machine-readable S24 selection, 25 false authorization fields, zero payload/model counters, `>=48` blocker, and permanent development-only role |
 | [docs/LOOP_53_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_53_PRIMARY_SOURCE_RESEARCH.md) | source-verified S20 selection, exact four-file identities, staged EEG evidence rationale, resource envelope, and zero-payload research boundary |
 | [docs/LOOP_53_FRESH_EEG_ACQUISITION_PREREGISTRATION.md](docs/LOOP_53_FRESH_EEG_ACQUISITION_PREREGISTRATION.md) | exact acquisition-only order, caps, integrity rules, stop conditions, receipt fields, and post-pass nonclaims |
+| [docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md](docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md) | current open EEG benchmark review, public motor positive-control prospect, specialist baseline and physiology upgrades, foundation-model deferral, and local-first contributor strategy |
+| [registries/open_eeg_rd_strategy.v0.json](registries/open_eeg_rd_strategy.v0.json) | machine-readable source pins, tool decisions, nine-file public prospect, resource caps, authorization zeros, and claim boundary |
 | [registries/loop53_fresh_eeg_acquisition_contract.v0.json](registries/loop53_fresh_eeg_acquisition_contract.v0.json) | machine-readable 96,090,264-byte S20 contract with pinned source hashes, no-overwrite paths, one-invocation cap, and every execution permission false |
 | [docs/LOOP_53_AUTHORIZATION_PACKET.md](docs/LOOP_53_AUTHORIZATION_PACKET.md) | plain-language exact Tier C sentence for implementation plus one bounded acquisition, with all interpretive and model work excluded |
 | [registries/loop53_authorization_request.v0.json](registries/loop53_authorization_request.v0.json) | immutable pre-decision request bound to green registration `bccd367` and both registration CI runs |

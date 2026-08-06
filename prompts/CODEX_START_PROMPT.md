@@ -426,6 +426,21 @@ Historical-hash repair `f50be96` passed push CI `29621564301`; it keeps the
 consumed Loop 53 CLI hash historical while verifying that command remains
 present. Final local qualification passes 1,087 tests with 3 expected skips.
 
+The additive current-strategy review is in:
+
+- `docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md`;
+- `registries/open_eeg_rd_strategy.v0.json`; and
+- `tests/test_open_eeg_rd_strategy.py`.
+
+It retains the compact specialist-first path and prospectively adds a
+23,248,224-byte public left/right motor-execution positive control, one
+public-data-selected classical baseline, a causal motor-physiology assay, and
+local-first contributor receipts. No PhysioNet payload, S20 path, target,
+model, checkpoint, training, inference, score, or upload was accessed.
+Foundation models and generative EEG imputation remain separate later lanes.
+The strategy is not a preregistration or Tier C decision; do not download the
+public prospect or change frozen Loop 54/55 artifacts from it alone.
+
 Loop 56 cross-modality accessibility planning research is complete and
 reviewable at:
 

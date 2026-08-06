@@ -129,6 +129,14 @@
 > but performs no AI-service call, data read, model run, or scientific scoring.
 > This engineering milestone does not change Loop 55's `Not Started` status or
 > authorize real work.
+> The additive 2026-08-06 strategy refresh keeps the same loop order and adds a
+> prospective public positive-control lane before protected model discovery:
+> nine PhysioNet left/right motor-execution EDF files, S001-S003 runs 3/7/11,
+> totaling 23,248,224 bytes. It also recommends one public-data-selected
+> classical family, a fixed causal motor-physiology assay, and local-first EEG
+> contributor receipts. No public payload was downloaded, and this research is
+> neither a preregistration nor authorization. Foundation models and
+> generative EEG imputation remain deferred from the protected Loop 55 path.
 > Loop 56 planning research now freezes five verdict classes, 12 capability
 > levels, 18
 > comparison dimensions, 16 claim fields, 28 gates, 34 refusals, and a 12-part

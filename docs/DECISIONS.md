@@ -3469,3 +3469,54 @@ real-time latency, portable or at-home operation, or clinical utility.
 Evidence: `docs/LOOP_54_STAGE_A_VHDR_PREREGISTRATION.md`,
 `registries/loop54_stage_a_vhdr_contract.v0.json`, and
 `tests/test_loop54_stage_a_vhdr_contract.py`.
+
+## 0101 - Keep The Specialist EEG Path And Add A Known-Effect Ladder
+
+Decision: retain the staged Loop 54 qualification and compact Loop 55 model
+path. Current 2026 EEG foundation-model benchmarks do not support replacing a
+small controlled experiment with a larger model by default: specialist models
+remain competitive, linear probes are often insufficient, and parameter scale
+does not consistently improve generalization.
+
+Positive-control decision: prepare a separate future contract for the public
+PhysioNet EEG Motor Movement/Imagery dataset before protected S20 model work.
+The prospective slice is S001-S003, motor-execution runs 3/7/11, exactly nine
+EDF files totaling 23,248,224 bytes by public HTTP metadata. Runs 3 and 7 are
+prospective fit data and run 11 is the prospective frozen check. No download or
+payload access is authorized by this decision.
+
+Model decision: use the public positive control to choose at most one classical
+spatial/covariance family between fixed CSP-LDA and a Riemannian alternative.
+Carry that family, fixed low-frequency shrinkage LDA, one compact causal
+EEGNet-style family, and an interpretable pre-keypress motor-physiology assay
+into the future Loop 55 design refresh without changing the existing
+10,000-parameter and 12-fit ceilings. S20 selection or final targets may not
+choose the family.
+
+Validity decision: preserve all channels until qualification, freeze causal
+preprocessing before protected scoring, and compare minimal causal processing
+with at most one nonselectable artifact-attenuated diagnostic. Higher accuracy
+from EOG, EMG, timing, or structured noise narrows or invalidates the claim; it
+does not become neural evidence.
+
+Foundation-model decision: keep pretrained EEG models in a separate later
+public-data benchmark lane. OpenEEGBench is a useful adapter target, but its
+multi-dataset downloads must be explicitly capped. ZUNA or another generative
+imputer may never create primary input samples that are then called measured
+evidence.
+
+Community decision: pursue local-first cohort receipts rather than centralized
+raw-data collection. Contributors keep raw EEG and plaintext targets locally
+and may eventually share only redacted, hash-bound aggregate compatibility and
+benchmark evidence. Consent, license, raw release, and matched scientific
+aggregation remain separate decisions.
+
+Authorization decision: this is additive Tier A/B research and documentation.
+It does not amend frozen Loop 54/55 artifacts or authorize S20 access,
+PhysioNet acquisition, another real-data read, model/checkpoint access,
+training, inference, scoring, pretrained weights, raw upload, hardware, or a
+scientific claim.
+
+Evidence: `docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md`,
+`registries/open_eeg_rd_strategy.v0.json`, and
+`tests/test_open_eeg_rd_strategy.py`.

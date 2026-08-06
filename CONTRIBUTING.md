@@ -95,6 +95,14 @@ code. Do not quietly relax a cap or proof boundary to make a demo pass.
 Excellent. The safest and most useful first contribution is usually a
 **compatibility report**, not the recording itself.
 
+The prospective open-cohort direction is local-first. A future contributor
+runner would keep raw EEG and plaintext targets on the contributor's machine
+and emit only a redacted, hash-bound aggregate receipt covering source identity,
+modality, device, montage, sampling, trial/split identity, controls, resources,
+warnings, unavailable fields, and claim ceiling. That design is documented in
+`docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md`, but no real-data federation or
+upload service exists yet. Do not send data in anticipation of that feature.
+
 ### What Not To Upload
 
 Do not attach or link private raw EEG, event files, target text, participant
