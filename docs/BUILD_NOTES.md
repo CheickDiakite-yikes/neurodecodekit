@@ -4641,3 +4641,43 @@ Scientific claim not established: no AI proposal accessed S20, trained or ran
 a model, or measured an EEG effect, so no neural advantage, decoding,
 brain-specific, generalization, real-time, portable, home, or clinical result
 was established.
+
+## 2026-08-06 - Loop 54-A Strict VHDR Preregistration
+
+- Converted the first real EEG qualification step into one exact one-file
+  contract instead of expanding the roadmap.
+- Bound `EEG/EEG/020_DECOMEG_S2_11966_task2.vhdr` at exactly 11,705 bytes and
+  source Git ID `9ab325a0f8523b675ecab1c97e16169143f1f341`.
+- Froze a base-Python-only parser with no-follow input handling, strict
+  codepage decoding, exact required sections, ordered `Ch1..ChN` validation,
+  deterministic sampling-rate derivation, inert sibling basenames, and no MNE
+  or sibling resolution.
+- Froze 18 acceptance gates, 22 refusal classes, one VHDR content open, one
+  registered execution, one thread/worker, 30 seconds, 256 MiB peak RSS, 1 MiB
+  generated output, and zero network or new payload bytes.
+- Prepared an exact Tier C authorization request that permits synthetic-fixture
+  implementation first and one real VHDR execution only after separate green
+  decision and implementation commits. VMRK, EEG, MAT, target, split, model,
+  training, inference, scoring, language-model, device, and rerun operations
+  remain forbidden.
+- Registration commit `c114623` is pushed. Local verification passed 20 focused
+  Loop 54 tests and the complete 1,095-test suite with 3 expected skips in
+  33.037 seconds at 650,264,576-byte external peak RSS, plus Ruff, compileall,
+  JSON validation, and diff checks.
+- GitHub registration CI `31127199848` was cancelled before any step started
+  during the confirmed 2026-08-06 Actions major outage. The authorization
+  request is preserved only as a non-actionable draft. A remote-green run over
+  exact registration commit `c114623` remains required before it can freeze.
+- The complete authorization-request tree passes 1,103 tests with 3 expected
+  skips in 29.866 seconds at 643,842,048-byte external peak RSS; 39 focused
+  contract/request/roadmap tests, Ruff, compileall, JSON validation, and diff
+  checks also pass.
+
+Engineering capability proposed: NeuroDecodeKit now has a machine-checkable
+one-file path from opaque S20 acquisition toward declared-header qualification
+without exposing marker, signal, MAT, or target siblings.
+
+Scientific claim not established: no S20 path was statted and no header,
+signal, marker, MAT, event, trial, target, or model content was accessed, so no
+EEG quality, neural advantage, decoding, generalization, latency, hardware,
+home-use, or clinical result was established.

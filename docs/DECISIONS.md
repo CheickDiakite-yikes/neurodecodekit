@@ -3427,3 +3427,45 @@ Evidence: `docs/LOOP_55_AI_ASSISTED_REPRESENTATION_RESEARCH.md`,
 `src/neurodecodekit/evaluation/ai_research_policy.py`,
 `fixtures/loop55_ai_synthetic_proposal.v0.json`, and
 `tests/test_ai_research_policy.py`.
+
+## 0100 - Advance The Fresh EEG Lane Through One Strict Header Stage
+
+Decision: preregister L54-A as the smallest real-content step after the
+consumed Loop 53 acquisition. Bind exactly one 11,705-byte S20 VHDR and do not
+combine it with signal quality, marker interpretation, target reconciliation,
+or model work.
+
+Parser decision: require a standard-library implementation with no-follow path
+validation, one content open, exact size and Git-blob verification, strict
+codepage decoding, duplicate rejection, complete ordered channel declarations,
+and deterministic sampling-rate derivation. Record DataFile and MarkerFile only
+as exact inert basenames; never resolve, stat, hash, or open either sibling.
+
+Evidence-order decision: freeze 18 gates, 22 refusals, one real execution, one
+thread/worker, 30 seconds, 256 MiB RSS, 1 MiB output, and no network or new
+payload. First green the contract, then record an exact Tier C decision, then
+green a synthetic-fixture-only implementation, and only then open the VHDR
+once. Any failed real gate parks the stage without rerun.
+
+Ordering clarification: for L54-A this decision supersedes only the ambiguous
+older phrase that placed the exact decision after implementation. It does not
+loosen any access rule. The exact decision authorizes bounded implementation
+and one execution, while the implementation must still be committed, pushed,
+and remotely green before the registered VHDR can open.
+
+Authorization decision: registration commit `c114623` alone grants no local
+path stat or content access. Registration CI `31127199848` was cancelled before
+any test step during the GitHub Actions major outage; a replacement run over
+exact commit `c114623` must become green before the authorization packet is
+frozen. Earlier acquisition permission, general Tier A/B autonomy, storage
+allowance, and competitive urgency are not transitive Tier C decisions.
+
+Scientific boundary: a future clean L54-A pass can establish only strict
+readability and internal consistency of allowlisted declared header fields
+under L54-Q2. It cannot establish signal quality, event/trial/target validity,
+sensor-signal or brain-specific information, decoding accuracy, generalization,
+real-time latency, portable or at-home operation, or clinical utility.
+
+Evidence: `docs/LOOP_54_STAGE_A_VHDR_PREREGISTRATION.md`,
+`registries/loop54_stage_a_vhdr_contract.v0.json`, and
+`tests/test_loop54_stage_a_vhdr_contract.py`.

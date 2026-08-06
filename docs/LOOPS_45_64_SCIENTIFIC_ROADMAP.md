@@ -263,7 +263,10 @@ excluded.
 
 ### Loop 54 - EEG Trial Geometry And Confound Ledger
 
-**Status: planning research complete; acquisition passed; content stages unauthorized.**
+**Status: planning research complete; acquisition passed; L54-A preregistered;
+exact authorization pending.**
+All content stages unauthorized until their exact decision and green
+implementation gates pass.
 `docs/LOOP_54_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop54_eeg_trial_geometry_research.v0.json` now replace the coarse
 "header then signal/target" idea with four ordered stages. L54-A parses exactly
@@ -288,6 +291,17 @@ quality, and recorded-confound field known or explicitly unavailable. Event
 windows are not independent trials. Loop 54 creates no split, model, training,
 inference, score, or scientific result. Loop 53 has finished cleanly, but each
 real content stage still requires a separate exact Tier C decision.
+
+L54-A is now frozen in
+`registries/loop54_stage_a_vhdr_contract.v0.json` at registration commit
+`c114623`. It binds exactly one 11,705-byte VHDR, no sibling resolution or MNE,
+18 acceptance gates, 22 refusals, one content open, one registered execution,
+and one thread/worker under 30 seconds, 256 MiB RSS, and 1 MiB output. No S20
+path was statted and no payload was opened during preregistration. Registration
+CI `31127199848` was cancelled before any test step during the Actions outage;
+a replacement run over exact commit `c114623` must become green before its
+exact Tier C packet is frozen. Implementation and execution remain
+unauthorized.
 
 ### Loop 55 - Fresh EEG Neural-Effect Gate
 

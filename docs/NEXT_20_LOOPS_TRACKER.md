@@ -107,7 +107,14 @@
 > cap, and every real-stage execution flag are machine checked. Loop 53 opened
 > the bundle only for its authorized opaque size/hash pass; no S20 header,
 > marker, signal, MAT field, target, split, model, training, inference, or score
-> has opened. Loop 55 planning research now separates a
+> has opened. L54-A is now preregistered at `c114623` for exactly one
+> 11,705-byte VHDR under 18 gates, 22 refusals, one content open, and a
+> 30-second/256 MiB/1 MiB envelope. Registration CI `31127199848` was cancelled
+> before any test step during the Actions outage; a replacement run over exact
+> commit `c114623` must become green and exact Tier C authorization must be
+> recorded before implementation. Contract preparation performed zero S20 path
+> stats or payload reads. Loop 55
+> planning research now separates a
 > causal performed-hand gate from a harder causal 29-key gate, uses performed
 > actions rather than corrected intended text as the primary targets, and
 > keeps the published post-keypress-centered window diagnostic-only. It binds a
@@ -738,3 +745,7 @@ now block S24 acquisition for this model family. Any future predictive branch
 needs a separately preregistered representation repair before another
 development-person intake can be considered; S25 remains final-only and
 sealed. No roadmap row authorizes an experiment.
+
+L54-A is the sole newly preregistered content stage. Its contract is not
+permission to stat or open S20; the exact authorization and green implementation
+must precede the one registered VHDR execution.

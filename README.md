@@ -47,7 +47,7 @@ irreversible Tier C events.
 | Train-only failure discrimination | The consumed Stage B primary reached macro CER `0.953566` versus `0.822045` for its train-only prior; all six full-size causal/linear fits were finite and stable, but none cleared the prior | `H4` stable nonseparability is supported and fixed timing-offset `H3` has evidence against it; the exact `L50-R05` route parks S24 acquisition for this model family, with no neural advantage or rerun |
 | Temporal-representation repair | The consumed Stage C synthetic candidate reached CER `0.433333` and `1/8` exact versus ablation CER `1.000000`; its `0.566667` CER advantage passed, but the absolute `<=0.10` CER and `>=7/8` exact gates failed | Temporal context was usable on the purpose-built fixture, but Stage C is parked without rerun and establishes no real neural-decoding benefit |
 | Fresh EEG acquisition gate | Loop 53 acquired and opaque-verified the exact public S20 session-2 block-2 bundle: 4 files, `96,090,264` bytes, `3.629499s`, 63,225,856-byte peak RSS, and all 10 gates passed | Acquisition mechanics are proven and the one invocation is consumed; no header, marker, signal sample, MAT field, target, cache, split, or model was interpreted or run |
-| Fresh EEG qualification design | Loop 54 now separates strict VHDR-only metadata, target-blind VHDR+EEG quality, isolated target-bearing VMRK+MAT reconciliation, and aggregate closeout through 22 gates and 30 exact refusals | Planning research is complete and Loop 53 acquisition passed; every real interpretation stage remains separately unauthorized, and the current monolithic extractor is excluded from this future claim path |
+| Fresh EEG qualification gate | Loop 54 separates strict VHDR-only metadata, target-blind VHDR+EEG quality, isolated target-bearing VMRK+MAT reconciliation, and aggregate closeout; L54-A now freezes one exact 11,705-byte header, 18 gates, 22 refusals, and a one-shot strict parser boundary | L54-A is preregistered with exact authorization pending; no S20 path was statted and no header, sibling, signal, marker, MAT, target, split, or model content was accessed |
 | Fresh EEG neural-effect design | Loop 55 now separates a causal pre-keypress performed-hand gate from a harder causal 29-key gate, with performed actions as primary targets, a post-keypress diagnostic, 12 matched conditions, exact trial-level tests, and one-shot target order | Planning research is complete and Loop 54 dependent; the S20 bundle is acquired but uninterpreted, the experiment is `Not Started`, and no target, model, prediction, score, neural advantage, or decoding result exists |
 | Bounded AI research guard | A dependency-free Loop 55 policy now validates and hashes strict synthetic AI recipe proposals, rejects target leakage, future context, LLMs, pretrained weights, unknown fields, model runs, and cap expansion, and reserves at most four future train-inner proposal rounds inside the existing 12-fit ceiling | The synthetic interface is implemented and measured; no AI proposal has accessed S20, trained a model, or produced neural evidence, and any future real proposal phase remains Loop 54 dependent and separately Tier C authorized |
 | Cross-modality accessibility verdict design | Loop 56 freezes five verdict classes, 12 non-skippable capability levels, 18 EEG/MEG comparison dimensions, a 16-field claim sentence, and a 12-part at-home conjunction | Planning research is complete and Loop 55 result dependent; only modality-aware interfaces are shared, tested MEG/EEG predictors remain negative, S20 has acquisition evidence only, and no equivalence, transfer, real-time, device, home, or clinical claim exists |
@@ -145,6 +145,16 @@ that emits no plaintext target values. At least 48 unique performed trials must
 reconcile, event windows may not masquerade as independent trials, and Loop 54
 creates no split or model. See `docs/LOOP_54_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop54_eeg_trial_geometry_research.v0.json`.
+
+The first real-content stage is now prospectively frozen, not executed. L54-A
+binds exactly one 11,705-byte S20 VHDR and requires a strict standard-library
+parser that cannot resolve, stat, or open its EEG, VMRK, or MAT siblings. Its
+18 acceptance gates, 22 refusal classes, one-thread/worker limit, 30-second and
+256 MiB caps, one content open, one execution, and 1 MiB output ceiling are in
+`docs/LOOP_54_STAGE_A_VHDR_PREREGISTRATION.md` and
+`registries/loop54_stage_a_vhdr_contract.v0.json`. Exact Tier C authorization,
+a green synthetic-only implementation, and then one registered execution are
+still required; no S20 content was accessed while preparing the contract.
 
 Loop 55 planning research then defines the scientific question that becomes
 eligible only after Loop 54 reports at least 48 unambiguous performed trials.
@@ -493,6 +503,16 @@ Read this before interpreting any number in the repository.
   stage or scientific result is authorized. Documentation-sync commit `b6785d7`
   passed push CI `29471589279` and PR #32 CI `29471598364`, with Base Python
   and Optional Neuro Readers green in both workflows.
+- **Loop 54-A strict VHDR preregistration:** registration commit `c114623`
+  freezes one exact 11,705-byte S20 VHDR, a base-Python-only parser, inert
+  sibling basenames, 18 acceptance gates, 22 refusals, one content open, and
+  one registered execution under 30-second, 256 MiB RSS, and 1 MiB output
+  limits. Contract preparation performed zero S20 path stats and zero header,
+  marker, signal, MAT, target, model, or network reads. Exact Tier C
+  authorization remains pending. GitHub-hosted registration CI run
+  `31127199848` was cancelled before any test step during the Actions outage; a
+  replacement run over exact commit `c114623` must become green before the
+  packet is frozen.
 - **Loop 55 EEG neural-effect research:** planning commit `f3158c7` freezes two
   ordered causal endpoints from the same future final trials: performed-hand
   error and 29-class performed-key keypress-aligned CER. It makes performed

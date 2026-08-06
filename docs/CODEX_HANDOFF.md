@@ -1,5 +1,22 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current handoff, 2026-08-06 after Loop 54-A preregistration: registration
+> commit `c114623` is pushed on `codex/loop-54a-vhdr-preregistration` and binds
+> exactly one 11,705-byte S20 VHDR. The strict future parser may use only the
+> standard library, may open that file once, and may record EEG/VMRK references
+> only as inert basenames without resolving, statting, hashing, or opening any
+> sibling. The contract freezes 18 gates, 22 refusals, one thread/worker, 30
+> seconds, 256 MiB RSS, 1 MiB output, one execution, zero network bytes, and no
+> rerun. Local qualification passes 1,095 tests with 3 expected skips; GitHub
+> registration CI `31127199848` was cancelled before any step started during
+> the confirmed 2026-08-06 Actions major outage. The authorization request is
+> preserved only as a non-actionable draft; a new run over exact commit
+> `c114623` must become green before the packet can freeze. Zero S20 path stats,
+> header reads, sibling reads, targets, models, or
+> experiment bytes occurred. The complete local request tree passes 1,103 tests
+> with 3 expected skips in 29.866 seconds at 643,842,048-byte external peak
+> RSS. Preserve the unrelated tracker inspection NDJSON.
+>
 > Current handoff, 2026-07-17 after the Loop 55 synthetic AI-policy milestone:
 > policy commit `8855fae` is pushed and remotely green; implementation commit
 > `bd52cce` adds a pure-standard-library validator, three CLI

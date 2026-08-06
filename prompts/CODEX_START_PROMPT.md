@@ -369,9 +369,25 @@ trial rather than each key window as the future inference unit, and creates no
 split or model. The committed Loop 19 extractor remains historical evidence but
 is ineligible for this future claim path because it co-loads annotations, MAT,
 and signal, excludes EOG-named channels, and writes plaintext labels. Loop 53
-has completed cleanly; each real L54-A/B/C stage still needs a separate exact Tier C
-decision after a hash-bound implementation is remotely green. Do not implement
-or open any real Loop 54 stage from the planning packet.
+has completed cleanly; each real L54-A/B/C stage still needs a separate exact
+Tier C sequence. The newer L54-A contract freezes this order: green contract,
+green exact decision, synthetic-only implementation, green implementation, then
+one real execution. Do not implement or open any real Loop 54 stage from the
+older planning packet alone.
+
+L54-A is now prospectively frozen at registration commit `c114623` in:
+
+- `docs/LOOP_54_STAGE_A_VHDR_PREREGISTRATION.md`;
+- `registries/loop54_stage_a_vhdr_contract.v0.json`; and
+- `tests/test_loop54_stage_a_vhdr_contract.py`.
+
+It binds exactly one 11,705-byte VHDR, a standard-library parser, no sibling
+resolution, 18 gates, 22 refusals, one content open, one registered execution,
+one thread/worker, 30 seconds, 256 MiB RSS, and 1 MiB output. Registration CI
+`31127199848` was cancelled before any test step during the Actions outage; a
+replacement run over exact commit `c114623` must become green before the exact
+authorization request is frozen. Do not stat the local path, implement the real
+parser, or open S20 from the preregistration alone.
 
 Loop 55 planning research is also complete and reviewable at:
 
@@ -457,8 +473,8 @@ preparation alone do not authorize RW3. The parked Loop 24 result and any Loop
    unopened and do not repurpose it. Loop 25 seeds 2501 and 2502 are consumed
    for the completed mechanics gate; do not reopen, rerun, or repurpose them.
    Loop 53 passed once and is consumed with no rerun.
-   Loop 54 planning is complete but every real VHDR, EEG, VMRK, and MAT content
-   stage remains separately unauthorized. Loop 55
+   Loop 54 planning is complete and L54-A is preregistered, but every real VHDR,
+   EEG, VMRK, and MAT content stage remains separately unauthorized. Loop 55
    planning is complete but remains Loop 54 dependent and experimentally `Not
    Started`; it authorizes no split, target, model, training, inference, or
    score. Loop 56 planning is complete but its aggregate-only final verdict

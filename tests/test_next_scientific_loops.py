@@ -82,7 +82,7 @@ class NextScientificLoopsTests(unittest.TestCase):
                 47: "Parked; Shared Attribution Gate Failed",
                 48: "Complete A/B; Stage C Consumed and Parked",
                 53: "Consumed; Acquisition Passed; No Rerun",
-                54: "Planning Research Complete; Acquisition Passed; Content Stages Unauthorized",
+                54: "Stage A Preregistered; Exact Authorization Pending",
                 55: "Planning Research Complete; Loop 54 Dependent",
                 56: "Planning Research Complete; Loop 55 Result Dependent",
             }.get(row["loop_id"], "Not Started")

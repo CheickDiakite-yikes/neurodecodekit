@@ -101,6 +101,15 @@
    local 996-test suite with three expected skips. Loop 53 acquisition is now
    complete, but Loop 54 is experimentally `Not Started`: no S20 content stage, split,
    model, training, inference, score, or scientific claim is authorized.
+   L54-A is now preregistered at commit `c114623` in
+   `docs/LOOP_54_STAGE_A_VHDR_PREREGISTRATION.md` and
+   `registries/loop54_stage_a_vhdr_contract.v0.json`. It binds one exact
+   11,705-byte VHDR, no sibling resolution, 18 gates, 22 refusals, one content
+   open, and one registered execution under a 30-second/256 MiB/1 MiB envelope.
+   Registration CI `31127199848` was infrastructure-cancelled before any test
+   step; a replacement run over exact commit `c114623` must become green and
+   the exact Tier C sentence must be recorded before implementation. No local
+   S20 path or payload was accessed during preregistration.
    Then read `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop55_eeg_neural_effect_research.v0.json`. Loop 55 planning
    separates a higher-power causal performed-hand endpoint from a harder
@@ -617,6 +626,8 @@ Loop 55 neural-effect, and Loop 56 cross-modality accessibility planning
 research are complete, but their real stages or final verdict remain `Not
 Started` and unauthorized. Loops 51-52 and 57-64 remain `Not Started`. No
 Loop 54 content interpretation is authorized by the Loop 53 pass.
+L54-A now has a frozen one-file preregistration and pending authorization
+packet, but that contract is not content-access permission.
 Loop 55's synthetic AI proposal guard is implemented, but this does not change
 the real experiment status or authorize a model operation.
 S25 remains sealed until a separate final-only zero-shot packet is complete.

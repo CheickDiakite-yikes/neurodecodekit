@@ -91,9 +91,28 @@ target-bearing VMRK+MAT reconciliation with no plaintext protected public
 output; and aggregate closeout. Require at least 48 unique performed trials and
 treat trials, not key windows, as the future inference unit. Loop 54 creates no
 split or model. Loop 53 has completed cleanly, but each real L54-A/B/C stage
-still needs a separate exact Tier C decision after its implementation is pushed
-and remotely green. Do not reopen or interpret S20, or implement a real Loop 54
-reader, from this planning boundary.
+still needs a separate exact Tier C sequence. For L54-A, the newer frozen
+contract resolves the order: green contract, green exact decision,
+synthetic-fixture-only implementation, green implementation, then one real
+execution. Do not reopen or interpret S20, or implement a real Loop 54 reader,
+from the older planning boundary alone.
+
+Loop 54 Stage A is now prospectively frozen at registration commit `c114623`
+without any S20 path stat or payload read:
+
+```bash
+cat docs/LOOP_54_STAGE_A_VHDR_PREREGISTRATION.md
+python -m json.tool registries/loop54_stage_a_vhdr_contract.v0.json >/dev/null
+```
+
+The one-shot contract binds exactly one 11,705-byte VHDR, a standard-library
+strict parser, no-follow path handling, no sibling resolution, one content
+open, one thread and worker, 30 seconds, 256 MiB RSS, and 1 MiB output. VMRK,
+EEG, MAT, target, split, model, network, and rerun access remain zero and
+unauthorized. Registration CI run `31127199848` was infrastructure-cancelled
+before any step started; a replacement run over exact commit `c114623` must
+become green before the authorization packet is frozen. Do not implement the
+parser or touch the registered local path from the preregistration alone.
 
 Documentation-sync commit `b6785d7` passed push CI `29471589279` and PR #32
 CI `29471598364`; Base Python and Optional Neuro Readers passed in both.
