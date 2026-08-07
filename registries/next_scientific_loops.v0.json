@@ -272,15 +272,15 @@
       "execution_authorized": false,
       "core_question": "Does the exact trained preprocessing and encoder path produce semantically identical frames offline and incrementally?",
       "scientific_claim_target": "causal implementation parity only",
-      "build_deliverable": "Join qualified Loop 45 preprocessing, frozen encoder, NeuroToken state, decoder state, schedules, resumes, timestamps, and anomaly records.",
+      "build_deliverable": "Join qualified Loop 45 preprocessing, frozen encoder, NeuroToken state, structured foundation-model evidence export, decoder request and response state, schedules, resumes, timestamps, and anomaly records.",
       "data_scope": "Target-free fixtures first; later authorized source-validation replay only, never S25 or consumed cohorts.",
       "controls": ["whole item", "single sample", "boundary splits", "seeded irregular", "resume cuts", "future mutation", "state hash", "zero right context"],
-      "primary_metrics": ["frame identity", "timestamp identity", "decoder state identity", "revision trace", "right context", "runtime RSS bytes"],
+      "primary_metrics": ["frame identity", "timestamp identity", "decoder request and response state identity", "FM-A00 through FM-A03 condition identity", "revision trace", "right context", "runtime RSS bytes"],
       "acceptance_gate": "All registered schedules and resumes preserve semantic identity and declared causality within caps.",
       "kill_or_park_rule": "Any hidden future context or state mismatch blocks streaming claims and returns to the smallest failed layer.",
       "depends_on": [45, 47, 41],
       "future_resource_cap": "one thread; one worker; <=64 MiB generated; target-free first",
-      "authorization_boundary": "Each fixture, model, replay cache, and integration stage requires separate authorization."
+      "authorization_boundary": "FM-0 synthetic no-call bridge work is eligible under the additive strategy; every provider call, credential read, spend event, fixture beyond that boundary, model, replay cache, and real integration stage requires its own applicable authorization decision."
     },
     {
       "loop_id": 58,

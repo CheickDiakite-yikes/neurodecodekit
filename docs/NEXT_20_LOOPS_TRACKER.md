@@ -146,6 +146,13 @@
 > pre-movement timing; a separately scoped EEG+EMG MRCP slice would test that
 > second axis. No synthetic model, public payload, S20 content, training,
 > inference, or score was accessed, and all execution remains unauthorized.
+> The additive foundation-model decoder strategy now separates the small
+> trained sensor adapter from the final language layer. The first hosted
+> candidate is frozen `gpt-5.6-sol`, receiving only structured CTC and causal
+> key evidence. Four matched conditions require full `FM-A02` to beat both
+> CTC-only and fixed item-deranged evidence under the same model. FM-0 is a
+> synthetic no-call bridge only: provider calls, credentials, spend, protected
+> rows, targets, scores, and scientific claims remain zero or unauthorized.
 > Loop 56 planning research now freezes five verdict classes, 12 capability
 > levels, 18
 > comparison dimensions, 16 claim fields, 28 gates, 34 refusals, and a 12-part

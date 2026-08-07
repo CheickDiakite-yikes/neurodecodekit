@@ -149,6 +149,22 @@ Tier C contracts. Synthetic implementation has not started. Do not implement
 or run CML-v0, download either public prospect, touch S20, amend frozen Loop
 54/55 artifacts, or promote a scientific claim from this research alone.
 
+The additive foundation-model decoder strategy is now explicit:
+
+```bash
+cat docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md
+python -m json.tool registries/foundation_model_decoder_strategy.v0.json >/dev/null
+```
+
+The intended product stack uses a compact causal sensor adapter followed by
+frozen `gpt-5.6-sol`; it does not train a GPT-scale model. The hosted evidence
+packet may contain CTC n-best text and compact causal key evidence, but never
+raw EEG/MEG, dense NeuroToken vectors, targets, identities, or local paths.
+The future full `FM-A02` arm must beat both CTC-only and fixed item-deranged
+evidence under the same model. Only FM-0 synthetic no-call bridge work is
+eligible now. Do not read an API credential, contact a provider, spend funds,
+access protected data, score targets, or run fine-tuning from this strategy.
+
 Documentation-sync commit `b6785d7` passed push CI `29471589279` and PR #32
 CI `29471598364`; Base Python and Optional Neuro Readers passed in both.
 

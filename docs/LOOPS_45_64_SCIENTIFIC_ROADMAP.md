@@ -406,6 +406,16 @@ Join qualified causal preprocessing, the frozen encoder, NeuroToken state,
 decoder state, timestamps, schedules, resumes, and anomalies. Target-free
 fixtures precede any authorized neural replay.
 
+An additive decoder strategy now assigns the hosted language role to frozen
+`gpt-5.6-sol` downstream of a compact causal sensor adapter. Hosted requests
+receive structured CTC and key evidence, not raw EEG or custom hidden
+embeddings. The future parity surface must preserve all four matched arms,
+including full `FM-A02` and fixed item-deranged `FM-A03`, under one model and
+prompt. Only the FM-0 synthetic no-call bridge is eligible now; this does not
+authorize provider access, real replay, target delivery, or scoring. See
+`docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md` and
+`registries/foundation_model_decoder_strategy.v0.json`.
+
 ### Loop 58 - Local Capture And Device Mechanics
 
 Progress OpenBCI Cyton through synthetic/playback, battery no-contact bench,

@@ -4792,3 +4792,30 @@ Scientific claim not established: no EEG payload, protected target, model, or
 score was accessed, so this work establishes no EEG effect, neural advantage,
 decoding accuracy, generalization, causal real-time output, portable hardware,
 home use, or clinical utility.
+
+## 2026-08-06 - Foundation-Model Decoder Strategy
+
+- Recorded the product architecture as a compact causal sensor adapter followed
+  by frozen `gpt-5.6-sol`, rather than treating the compact model as the final
+  language decoder or attempting to train a GPT-scale model.
+- Separated the hosted structured-evidence path from a future local continuous
+  embedding-prefix path. Sol receives no raw EEG/MEG, dense NeuroToken vector,
+  participant identity, target, intended sentence, label, or local path.
+- Frozen four matched conditions: language-only `FM-A00`, CTC-only `FM-A01`,
+  matched `FM-A02`, and fixed cyclically item-deranged `FM-A03`. A future
+  incremental result requires `FM-A02` to beat both matched controls under the
+  same model and prompt after a prediction freeze.
+- Selected FM-0 as a deterministic synthetic no-call bridge under one thread,
+  30 seconds, 256 MiB RSS, and 1 MiB input/output caps. External inference,
+  credentials, spend, protected data, targets, scores, and fine-tuning remain
+  closed.
+- Added the strategy document, machine-readable registry, and invariants. No
+  provider, model, network, real-data, target, training, inference, or scoring
+  operation occurred.
+
+Engineering capability proposed: NeuroDecodeKit now has an explicit and
+testable boundary between neural evidence production and foundation-model
+language decoding.
+
+Scientific claim not established: no language model or neural model was run,
+so this strategy establishes no neural advantage or decoding result.

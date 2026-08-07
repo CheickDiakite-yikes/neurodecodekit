@@ -52,6 +52,7 @@ irreversible Tier C events.
 | Bounded AI research guard | A dependency-free Loop 55 policy now validates and hashes strict synthetic AI recipe proposals, rejects target leakage, future context, LLMs, pretrained weights, unknown fields, model runs, and cap expansion, and reserves at most four future train-inner proposal rounds inside the existing 12-fit ceiling | The synthetic interface is implemented and measured; no AI proposal has accessed S20, trained a model, or produced neural evidence, and any future real proposal phase remains Loop 54 dependent and separately Tier C authorized |
 | Open EEG R&D strategy | Current 2025-2026 evidence supports the compact specialist path and adds a prospective 23,248,224-byte public motor positive control, an interpretable motor-physiology rung, classical EEG baselines, and local-first contributor receipts | Research and planning only: no public EEG payload, S20 content, model, target, or pretrained weight was opened, and every real execution remains separately Tier C gated |
 | Causal Motor Lattice architecture | `CML-v0` assigns separate potential, mu, and beta views to rank-8 spatial mixers, fuses 72 features through a 24-value bottleneck, and derives hand probability exactly from a physical 29-key lattice; the 64-channel, 18-primitive reference has 4,535 parameters | Architecture research only: synthetic implementation is `Not Started`; PhysioNet laterality, EEG+EMG pre-movement timing, Loop 54, and protected S20 execution are separate unauthorized gates |
+| Foundation-model decoder strategy | A compact causal sensor adapter will export CTC and bounded key evidence to frozen `gpt-5.6-sol`; `FM-A02` must beat CTC-only and fixed-derangement controls under the same model | The FM-0 synthetic no-call bridge is the only eligible stage; no provider call, credential, model run, real row, target, score, or scientific result exists |
 | Cross-modality accessibility verdict design | Loop 56 freezes five verdict classes, 12 non-skippable capability levels, 18 EEG/MEG comparison dimensions, a 16-field claim sentence, and a 12-part at-home conjunction | Planning research is complete and Loop 55 result dependent; only modality-aware interfaces are shared, tested MEG/EEG predictors remain negative, S20 has acquisition evidence only, and no equivalence, transfer, real-time, device, home, or clinical claim exists |
 | Development-person intake planning | Loop 49 metadata research selects S24 session 2 block 2: one MEG FIF plus one protected MAT log, exactly `1,048,579,727` bytes; a future text-grouped split reserves 16 unique sentence groups for selection and requires at least 32 fit groups | S24 avoids the S1/S18 alias and preserves S25 final-only, but no S24 path or payload was opened and the `>=48` usable-row, channel, geometry, and overlap gates are unproven; Loop 49 remains `Not Started` |
 | Multi-source encoder planning | Loop 50 research freezes global text grouping, five-fold historical S21 out-of-fold diagnostics, one 16-group S24 development gate, equal-person loss, ten fixed conditions, and an exact 20-update inventory led by seed `5001` | Stage B route `L50-R05` now parks the same-family S24 path; Loop 50 remains `Not Started`, with S24 qualification, model selection, training, scoring, and every scientific claim unavailable |
@@ -590,6 +591,15 @@ Read this before interpreting any number in the repository.
   ladder separates PhysioNet left/right mechanics from an EEG+EMG pre-movement
   timing check. Synthetic implementation, both public payload stages, Loop 54,
   and S20 training/scoring remain `Not Started` or unauthorized.
+- **Foundation-model decoder strategy:** the product path now explicitly uses
+  a compact causal sensor adapter as a bridge into frozen `gpt-5.6-sol`, not as
+  the final language model. Hosted Sol receives only CTC n-best text and
+  compact causal key evidence because its API does not accept custom hidden
+  embeddings. The matched matrix keeps `FM-A00` language-only, `FM-A01`
+  CTC-only, `FM-A02` matched CTC plus neural evidence, and `FM-A03` fixed
+  item-deranged evidence. Only the deterministic FM-0 synthetic no-call bridge
+  is eligible now; external API use, credentials, spending, real rows, target
+  delivery, scoring, and claim promotion remain separately closed.
 - **Loop 56 cross-modality accessibility research:** the planning boundary
   freezes five verdict classes, a 12-level capability ladder, 18 comparison
   dimensions, 16 mandatory claim fields, 28 gates, 34 refusals, and a 12-part

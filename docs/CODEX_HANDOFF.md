@@ -1,5 +1,17 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Additive foundation-model decision, 2026-08-06: read
+> `docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md` and
+> `registries/foundation_model_decoder_strategy.v0.json`. The intended product
+> stack is causal preprocessing, a compact trained sensor adapter, structured
+> CTC/key evidence, then frozen `gpt-5.6-sol`. The hosted route cannot inject
+> custom NeuroToken embeddings, so raw EEG, dense vectors, targets, identities,
+> and local paths remain outside the provider packet. `FM-A02` must beat both
+> CTC-only and fixed item-deranged evidence under the same Sol configuration.
+> Only FM-0 synthetic no-call bridge work is eligible now; do not read an API
+> credential, contact a provider, spend funds, access protected data, score a
+> target, or claim decoding evidence from this strategy.
+>
 > Current handoff, 2026-08-06 after Loop 54-A preregistration: registration
 > commit `c114623` is pushed on `codex/loop-54a-vhdr-preregistration` and binds
 > exactly one 11,705-byte S20 VHDR. The strict future parser may use only the

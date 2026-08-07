@@ -1,0 +1,254 @@
+{
+  "schema_name": "neurodecodekit.foundation_model_decoder_strategy",
+  "schema_version": "0.1.0",
+  "created_at": "2026-08-06",
+  "status": "additive_strategy_complete_synthetic_no_call_bridge_eligible_external_execution_unauthorized",
+  "title": "Foundation-Model Decoder Strategy",
+  "decision": "use_compact_causal_sensor_adapter_then_frozen_foundation_model_decoder",
+  "objective": "Use a pretrained language model for downstream language reasoning without training a GPT-scale model or allowing language fluency to masquerade as neural evidence.",
+  "selected_hosted_candidate": {
+    "provider": "OpenAI",
+    "model_id": "gpt-5.6-sol",
+    "endpoint": "responses",
+    "candidate_reasoning_effort": "low",
+    "input_modalities": [
+      "text",
+      "image"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "structured_outputs_supported": true,
+    "custom_hidden_embedding_input_supported": false,
+    "fine_tuning_supported_now": false,
+    "fine_tuning_selected_now": false,
+    "tools_selected_now": [],
+    "model_source": "https://developers.openai.com/api/docs/models/gpt-5.6-sol",
+    "guidance_source": "https://developers.openai.com/api/docs/guides/model-guidance?model=gpt-5.6-sol",
+    "source_checked_at": "2026-08-06"
+  },
+  "frozen_boundary": {
+    "loop31_research_path": "docs/LOOP_31_PRIMARY_SOURCE_RESEARCH.md",
+    "loop31_research_sha256": "1ba2c58fca932ecef47c3ab4bef5e7c83e1fcbf209c076661d3c2698c1968369",
+    "loop31_registry_path": "registries/loop31_research_boundary.v0.json",
+    "loop31_registry_sha256": "5d7ae8ab0ad7f9a4023874b0317be21174ace9cc037438c319546b4c46c1c7c1",
+    "loop55_research_path": "docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md",
+    "loop55_research_sha256": "c7c0910ceab2d8365645a1a92998e95368cd90b8c0503abc572b70eba418629e",
+    "loop55_registry_path": "registries/loop55_eeg_neural_effect_research.v0.json",
+    "loop55_registry_sha256": "032157b8a90be68a16cc5963bf0c1c513e626a50b417b1e76ce7c06715d9c9af",
+    "cml_research_path": "docs/LOOP_55_CAUSAL_MOTOR_LATTICE_ARCHITECTURE_RESEARCH.md",
+    "cml_research_sha256": "ce50a5a140ef89a69421303a3e65eb623372c773935309daa6836e24cb6671eb",
+    "cml_registry_path": "registries/loop55_causal_motor_lattice_research.v0.json",
+    "cml_registry_sha256": "9fd05f9c14858b2964f1e4a7317ee60b32bd262c5152471fa20c9710c260eb8f",
+    "this_strategy_amends_consumed_loop31": false,
+    "this_strategy_amends_frozen_loop55": false,
+    "this_strategy_authorizes_real_or_protected_execution": false
+  },
+  "architecture": {
+    "layers": [
+      {
+        "layer_id": "FM-L0",
+        "name": "causal_preprocessing",
+        "role": "produce timestamped sensor frames with zero right context",
+        "large_language_model": false
+      },
+      {
+        "layer_id": "FM-L1",
+        "name": "compact_sensor_adapter",
+        "role": "map neural sensor frames to CTC hypotheses and causal structured key evidence",
+        "large_language_model": false,
+        "training_may_be_required": true,
+        "training_scale": "small_bounded_task_specific"
+      },
+      {
+        "layer_id": "FM-L2",
+        "name": "foundation_model_decoder",
+        "role": "perform frozen language reasoning over bounded exported evidence",
+        "large_language_model": true,
+        "training_selected_now": false
+      }
+    ],
+    "hosted_evidence_export": {
+      "allowed_fields": [
+        "causal_CTC_nbest_text_and_scores",
+        "causal_top_key_probabilities",
+        "frame_entropy",
+        "source_relative_frame_timestamps",
+        "frame_availability_timestamps",
+        "missingness_causality_and_uncertainty"
+      ],
+      "forbidden_fields": [
+        "raw_EEG_or_MEG_samples",
+        "dense_source_embeddings_or_NeuroToken_vectors",
+        "absolute_local_paths",
+        "participant_names_or_direct_identifiers",
+        "target_or_reference_text",
+        "intended_sentence_text",
+        "performed_target_labels",
+        "post_outcome_corrections"
+      ],
+      "continuous_NeuroToken_cache_replaced": false,
+      "continuous_NeuroToken_directly_injected_into_hosted_model": false,
+      "future_local_continuous_prefix_adapter_is_separate": true
+    },
+    "output_contract_fields": [
+      "decoded_text",
+      "abstained",
+      "evidence_used",
+      "unsupported_content_warning"
+    ],
+    "output_contract_strict": true,
+    "one_item_per_independent_request": true,
+    "conversation_memory_enabled": false,
+    "provider_tools_enabled": false
+  },
+  "matched_ablation_matrix": [
+    {
+      "condition_id": "FM-A00",
+      "ctc_evidence": "absent",
+      "neural_evidence": "absent",
+      "purpose": "language_prior_and_abstention_control"
+    },
+    {
+      "condition_id": "FM-A01",
+      "ctc_evidence": "matched",
+      "neural_evidence": "absent",
+      "purpose": "language_repair_from_CTC_text_alone"
+    },
+    {
+      "condition_id": "FM-A02",
+      "ctc_evidence": "matched",
+      "neural_evidence": "matched",
+      "purpose": "full_hosted_reference"
+    },
+    {
+      "condition_id": "FM-A03",
+      "ctc_evidence": "matched",
+      "neural_evidence": "fixed_cyclic_item_derangement",
+      "purpose": "neural_item_correspondence_control"
+    }
+  ],
+  "scientific_interpretation": {
+    "required_incremental_conjunction": [
+      "FM-A02_beats_FM-A01_on_same_frozen_items",
+      "FM-A02_beats_FM-A03_on_same_frozen_items",
+      "identical_model_prompt_output_schema_reasoning_and_compute",
+      "derangement_frozen_before_model_outputs_or_targets",
+      "predictions_hash_frozen_before_target_delivery"
+    ],
+    "FM_A00_improvement_alone_is_neural_evidence": false,
+    "fluency_or_plausibility_is_decoding_proof": false,
+    "incremental_structured_evidence_gain_is_total_neural_contribution": false,
+    "brain_specific_origin_available_before_peripheral_controls": false
+  },
+  "stage_sequence": [
+    {
+      "stage_id": "FM-0",
+      "name": "synthetic_no_call_bridge",
+      "eligible_now": true,
+      "provider_calls": 0,
+      "real_or_protected_reads": 0,
+      "claim_ceiling": "deterministic_interface_and_ablation_mechanics_only"
+    },
+    {
+      "stage_id": "FM-1",
+      "name": "one_synthetic_Sol_qualification",
+      "eligible_now": false,
+      "requires": "separate_explicit_network_credential_and_spend_decision",
+      "claim_ceiling": "provider_transport_schema_latency_cost_and_refusal_mechanics_only"
+    },
+    {
+      "stage_id": "FM-2",
+      "name": "public_development_evidence",
+      "eligible_now": false,
+      "requires": "separate_exact_public_data_privacy_model_request_and_freeze_contract",
+      "claim_ceiling": "development_only_model_and_interface_evidence"
+    },
+    {
+      "stage_id": "FM-3",
+      "name": "protected_scientific_evaluation",
+      "eligible_now": false,
+      "requires": "clean_upstream_signal_result_frozen_adapter_green_prediction_freeze_and_exact_Tier_C_target_decision",
+      "claim_ceiling": "incremental_evidence_for_exact_registered_slice_only"
+    }
+  ],
+  "synthetic_stage_caps": {
+    "cpu_threads": 1,
+    "workers": 1,
+    "maximum_input_json_bytes": 1048576,
+    "maximum_generated_json_bytes": 1048576,
+    "maximum_wall_seconds": 30,
+    "maximum_peak_rss_bytes": 268435456,
+    "maximum_items": 8,
+    "maximum_ctc_hypotheses_per_item": 8,
+    "maximum_neural_frames_per_item": 64,
+    "maximum_top_keys_per_frame": 8,
+    "network_calls": 0,
+    "provider_model_calls": 0,
+    "local_model_calls": 0,
+    "training_runs": 0,
+    "real_or_protected_reads": 0,
+    "target_or_label_reads": 0
+  },
+  "failure_rules": [
+    "reject_unknown_or_missing_fields",
+    "reject_target_reference_label_intended_or_ground_truth_fields",
+    "reject_raw_signal_dense_embedding_path_or_direct_identifier_fields",
+    "reject_noncausal_or_nonmonotonic_timestamps",
+    "reject_invalid_unsorted_or_nonfinite_probabilities",
+    "reject_duplicate_item_identities",
+    "reject_noncyclic_or_self_derangement",
+    "reject_nonzero_access_counters",
+    "reject_input_or_output_cap_expansion",
+    "reject_any_provider_execution_in_FM_0"
+  ],
+  "relationship_to_roadmap": {
+    "loop20": "continuous_internal_NeuroToken_cache_contract_retained",
+    "loop31": "matched_LLM_ablation_logic_retained_without_reopening_consumed_execution",
+    "loop55": "language_model_free_neural_effect_gate_retained",
+    "loop57": "future_integration_home_for_preprocessing_adapter_evidence_export_foundation_model_state_timestamps_resume_and_anomalies"
+  },
+  "authorization": {
+    "planning_documentation_tests_commit_and_push_authorized_now": true,
+    "synthetic_no_call_bridge_implementation_authorized_now": true,
+    "external_API_or_network_call_authorized_now": false,
+    "API_credential_read_authorized_now": false,
+    "provider_spend_authorized_now": false,
+    "real_or_protected_data_read_authorized_now": false,
+    "target_label_or_reference_read_authorized_now": false,
+    "raw_neural_upload_authorized_now": false,
+    "model_weight_download_or_local_load_authorized_now": false,
+    "foundation_model_inference_authorized_now": false,
+    "fine_tuning_authorized_now": false,
+    "small_sensor_adapter_training_authorized_by_this_strategy": false,
+    "scoring_or_selection_authorized_now": false,
+    "scientific_claim_upgrade_authorized_now": false
+  },
+  "current_access_counters": {
+    "external_network_calls": 0,
+    "API_credential_reads": 0,
+    "provider_spend_events": 0,
+    "provider_model_calls": 0,
+    "local_foundation_model_loads": 0,
+    "model_weight_downloads": 0,
+    "fine_tuning_runs": 0,
+    "small_sensor_adapter_training_runs": 0,
+    "real_or_protected_data_reads": 0,
+    "raw_neural_uploads": 0,
+    "target_label_or_reference_reads": 0,
+    "scoring_or_selection_runs": 0
+  },
+  "warnings": [
+    "Codex research assistance is not a NeuroDecodeKit decoder runtime call",
+    "GPT-5.6 Sol cannot natively consume arbitrary EEG tensors or custom hidden embeddings through the hosted API",
+    "structured neural evidence requires a compact trained sensor adapter",
+    "language fluency can improve while neural information contributes nothing",
+    "a structured response parse is not a correct decoding result",
+    "hosted provider use requires a separate privacy credential network and spend decision",
+    "fine tuning is neither supported for the selected hosted model nor selected for v0"
+  ],
+  "claim_boundary": {
+    "engineering_capability_added": "A precise architecture and controlled evaluation plan now places GPT-5.6 Sol downstream of a compact causal sensor adapter while preserving matched no-language and deranged-evidence controls.",
+    "scientific_claim_not_established": "No LLM neural model real signal target or protected row was run or scored, so this strategy establishes no neural advantage decoding accuracy generalization real-time output portable use home use or clinical utility."
+  }
+}

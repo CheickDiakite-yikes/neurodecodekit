@@ -158,6 +158,14 @@
    architecture research only: synthetic implementation, public downloads,
    Loop 54 content, S20 modeling, and every scientific claim remain
    unauthorized.
+   Then read `docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md` and
+   `registries/foundation_model_decoder_strategy.v0.json`. The product
+   architecture now treats the compact causal model as a sensor-to-evidence
+   adapter and selects frozen `gpt-5.6-sol` as the first hosted language
+   decoder candidate. The matched `FM-A02` condition must beat both CTC-only
+   and fixed item-deranged evidence under the same model. Only the FM-0
+   synthetic no-call bridge is eligible: no provider call, credential, raw
+   neural upload, protected row, target, score, or scientific claim is open.
    Then read `docs/LOOP_56_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop56_cross_modality_accessibility_research.v0.json`. Loop 56
    freezes five verdict classes, a 12-level capability ladder, 18 comparison

@@ -3584,3 +3584,45 @@ output, portable hardware, home use, or clinical utility.
 Evidence: `docs/LOOP_55_CAUSAL_MOTOR_LATTICE_ARCHITECTURE_RESEARCH.md`,
 `registries/loop55_causal_motor_lattice_research.v0.json`, and
 `tests/test_loop55_causal_motor_lattice_research.py`.
+
+## 0103 - Put A Frozen Foundation Model Downstream Of The Sensor Adapter
+
+Decision: NeuroDecodeKit will not train a GPT-scale language model. Preserve a
+small causal trained model only as the sensor-to-evidence adapter, then use a
+frozen foundation model for downstream language reasoning. Select
+`gpt-5.6-sol` as the first hosted candidate through the Responses API.
+
+Transport decision: hosted Sol receives only bounded CTC n-best text, causal
+top-key probabilities, entropy, relative timestamps, availability timestamps,
+missingness, and uncertainty. Do not send raw EEG/MEG, dense NeuroToken
+vectors, participant identities, absolute local paths, target/reference text,
+intended sentences, performed target labels, or post-outcome corrections. The
+hosted API cannot inject arbitrary custom hidden embeddings. A future local
+continuous-prefix adapter is a separate architecture and decision.
+
+Control decision: freeze four matched conditions under the same model, prompt,
+reasoning effort, output schema, and compute: language-only `FM-A00`, CTC-only
+`FM-A01`, matched CTC plus neural evidence `FM-A02`, and fixed cyclically
+item-deranged neural evidence `FM-A03`. Incremental neural evidence requires
+`FM-A02` to beat both `FM-A01` and `FM-A03` after predictions freeze and before
+targets open. Fluency or improvement over language-only is not enough.
+
+Fine-tuning decision: use no LLM fine-tuning for v0. The selected hosted model
+does not currently expose fine-tuning, and prompting plus structured evidence
+is sufficient for the first falsifiable question. Any later supported model,
+local weights, adapter training, or fine-tuning is a separate model, resource,
+license, privacy, and evidence decision.
+
+Stage decision: only FM-0 deterministic synthetic no-call bridge work is
+eligible now under Tier B. FM-1 needs a separate network, API-credential, and
+spend decision; FM-2 needs a public development-data contract; FM-3 needs clean
+upstream evidence, a frozen adapter, a remotely green prediction freeze, and a
+separate Tier C target and scientific-claim decision.
+
+Scientific boundary: this strategy and FM-0 planning establish no provider
+behavior, neural effect, decoding accuracy, generalization, real-time output,
+portable hardware, home use, or clinical utility.
+
+Evidence: `docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md`,
+`registries/foundation_model_decoder_strategy.v0.json`, and
+`tests/test_foundation_model_decoder_strategy.py`.
