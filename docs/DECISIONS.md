@@ -3626,3 +3626,38 @@ portable hardware, home use, or clinical utility.
 Evidence: `docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md`,
 `registries/foundation_model_decoder_strategy.v0.json`, and
 `tests/test_foundation_model_decoder_strategy.py`.
+
+## 0104 - Implement FM-0 As A No-Call Compiler
+
+Decision: implement only FM-0 from Decision 0103. The dependency-free bridge
+creates strict synthetic evidence, compiles `FM-A00` through `FM-A03`, freezes
+cyclic item derangement, binds source evidence and every request by SHA-256,
+and validates the result without contacting a provider.
+
+Leakage decision: fail closed on target/reference/label/intended fields, raw
+sensor samples, dense embeddings, NeuroToken vectors, identities, paths,
+noncausal timestamps, malformed probabilities, unknown fields, nonzero access
+counters, source substitution, derangement drift, symlinks, cap expansion, and
+accidental overwrite.
+
+Measurement: the committed 7,327-byte fixture contains 3 synthetic items, 6
+CTC hypotheses, 12 causal frames, and 24 top-key probabilities. It compiled to
+12 conditions and 34,349 bytes in 0.002745583 seconds at 21,495,808-byte peak
+RSS. Inspection took 0.001411584 seconds at 21,037,056-byte peak RSS. The plan
+core SHA-256 is
+`355e018f6cd33d7a0d8213fa20eb0798f571c84e4c2e5a2f84dff33ed6c47b5d`.
+
+Authorization decision: code, synthetic fixture, tests, documentation, commit,
+push, and CI inspection are authorized under Tier B. External provider calls,
+API credentials, spending, model inference, real/protected reads, annotations,
+training, scoring, fine-tuning, and claim promotion remain unauthorized.
+
+Scientific boundary: a deterministic provider-free request plan is an
+engineering artifact. It is not evidence that GPT-5.6 Sol follows the schema,
+that a neural adapter contains useful information, or that any text was
+decoded.
+
+Evidence: `docs/FOUNDATION_MODEL_BRIDGE_V0.md`,
+`registries/foundation_model_bridge_v0.json`,
+`src/neurodecodekit/evaluation/foundation_model_bridge.py`, and
+`tests/test_foundation_model_bridge.py`.

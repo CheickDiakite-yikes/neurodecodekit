@@ -4819,3 +4819,35 @@ language decoding.
 
 Scientific claim not established: no language model or neural model was run,
 so this strategy establishes no neural advantage or decoding result.
+
+## 2026-08-06 - Foundation-Model Bridge v0
+
+- Implemented FM-0 as a dependency-free synthetic no-call compiler with three
+  CLI commands for fixture creation, four-arm plan compilation, and inspection.
+- Bound the source file, canonical evidence, per-item CTC and causal-key rows,
+  fixed cyclic derangement, each blinded request, and the complete plan core by
+  SHA-256.
+- Added strict refusals for target/reference/label leakage, raw signal and
+  dense-vector content, identity/path fields, noncausal timing, malformed
+  probabilities, unknown fields, nonzero or Boolean counters, hash tampering,
+  cap expansion, symlinks, and accidental overwrite.
+- The committed 7,327-byte fixture contains 3 items, 6 CTC hypotheses, 12
+  causal frames, and 24 top-key probabilities. It compiled into all 12
+  conditions and 34,349 bytes in 0.002745583 seconds at 21,495,808-byte peak
+  RSS. Inspection took 0.001411584 seconds at 21,037,056-byte peak RSS.
+- Every provider, credential, model, network, real/protected read, annotation,
+  training, and scoring counter remained integer zero. Provider responses,
+  token usage, cost, latency, text accuracy, and end-to-end latency remain
+  unavailable.
+- Focused strategy/implementation verification passed 35 tests. The complete
+  pre-change 1,129-test baseline advanced to 1,164 passing tests with the same
+  3 expected skips in 31.172 seconds internal and 32.28 seconds wall time at
+  629,456,896-byte external peak RSS. Ruff, compileall, every registry JSON,
+  root and command help, the bounded roundtrip, and diff hygiene passed. The
+  six implementation artifacts total 84,637 bytes.
+
+Engineering capability added: NeuroDecodeKit can compile and audit the exact
+four-condition foundation-model evidence experiment without a provider call.
+
+Scientific claim not established: `FM-A02` has not run, no model output or
+target exists, and FM-0 establishes no neural advantage or decoding result.

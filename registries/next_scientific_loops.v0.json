@@ -273,7 +273,7 @@
       "core_question": "Does the exact trained preprocessing and encoder path produce semantically identical frames offline and incrementally?",
       "scientific_claim_target": "causal implementation parity only",
       "build_deliverable": "Join qualified Loop 45 preprocessing, frozen encoder, NeuroToken state, structured foundation-model evidence export, decoder request and response state, schedules, resumes, timestamps, and anomaly records.",
-      "data_scope": "Target-free fixtures first; later authorized source-validation replay only, never S25 or consumed cohorts.",
+      "data_scope": "FM-0 target-free no-call bridge is implemented over a 7,327-byte synthetic fixture and a 34,349-byte temporary plan; later authorized source-validation replay only, never S25 or consumed cohorts.",
       "controls": ["whole item", "single sample", "boundary splits", "seeded irregular", "resume cuts", "future mutation", "state hash", "zero right context"],
       "primary_metrics": ["frame identity", "timestamp identity", "decoder request and response state identity", "FM-A00 through FM-A03 condition identity", "revision trace", "right context", "runtime RSS bytes"],
       "acceptance_gate": "All registered schedules and resumes preserve semantic identity and declared causality within caps.",

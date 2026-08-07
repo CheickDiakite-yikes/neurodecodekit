@@ -2547,6 +2547,44 @@ def _cmd_validate_ai_research_proposal(args: argparse.Namespace) -> int:
     return 0 if report["accepted"] else 1
 
 
+def _cmd_make_foundation_model_bridge_fixture(args: argparse.Namespace) -> int:
+    from neurodecodekit.evaluation.foundation_model_bridge import (
+        make_synthetic_evidence_file,
+    )
+
+    summary = make_synthetic_evidence_file(
+        args.out,
+        fixture_id=args.fixture_id,
+        overwrite=args.overwrite,
+    )
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_build_foundation_model_ablation(args: argparse.Namespace) -> int:
+    from neurodecodekit.evaluation.foundation_model_bridge import (
+        build_ablation_plan_file,
+    )
+
+    summary = build_ablation_plan_file(
+        args.evidence,
+        args.out,
+        overwrite=args.overwrite,
+    )
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_inspect_foundation_model_ablation(args: argparse.Namespace) -> int:
+    from neurodecodekit.evaluation.foundation_model_bridge import (
+        inspect_ablation_plan_file,
+    )
+
+    summary = inspect_ablation_plan_file(args.plan)
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0
+
+
 def _print_selection_plan(selection: Any, *, heading: str) -> None:
     from neurodecodekit.datasets.selection import format_bytes
 
@@ -4693,6 +4731,36 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--out-report", default=None, help="Optional bounded validation report path.")
     p.add_argument("--overwrite", action="store_true", help="Replace an existing report output.")
     p.set_defaults(func=_cmd_validate_ai_research_proposal)
+
+    p = sub.add_parser(
+        "make-foundation-model-bridge-fixture",
+        help="Create tiny target-free FM-0 evidence without a model or provider call.",
+    )
+    p.add_argument("--out", required=True, help="New synthetic evidence JSON path.")
+    p.add_argument(
+        "--fixture-id",
+        default="FM-SYNTH-001",
+        help="Synthetic fixture identity matching FM-SYNTH-NNN.",
+    )
+    p.add_argument("--overwrite", action="store_true", help="Replace an existing output.")
+    p.set_defaults(func=_cmd_make_foundation_model_bridge_fixture)
+
+    p = sub.add_parser(
+        "build-foundation-model-ablation",
+        help="Compile four blinded GPT-Sol request plans without contacting a provider.",
+        description="Compile four blinded GPT-Sol request plans without contacting a provider.",
+    )
+    p.add_argument("--evidence", required=True, help="Synthetic FM-0 evidence JSON.")
+    p.add_argument("--out", required=True, help="New deterministic ablation-plan JSON path.")
+    p.add_argument("--overwrite", action="store_true", help="Replace an existing output.")
+    p.set_defaults(func=_cmd_build_foundation_model_ablation)
+
+    p = sub.add_parser(
+        "inspect-foundation-model-ablation",
+        help="Validate and summarize an FM-0 plan without executing any request.",
+    )
+    p.add_argument("--plan", required=True, help="FM-0 ablation-plan JSON.")
+    p.set_defaults(func=_cmd_inspect_foundation_model_ablation)
 
     return parser
 

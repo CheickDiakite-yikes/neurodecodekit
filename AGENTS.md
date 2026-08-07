@@ -161,9 +161,12 @@ frozen `gpt-5.6-sol`; it does not train a GPT-scale model. The hosted evidence
 packet may contain CTC n-best text and compact causal key evidence, but never
 raw EEG/MEG, dense NeuroToken vectors, targets, identities, or local paths.
 The future full `FM-A02` arm must beat both CTC-only and fixed item-deranged
-evidence under the same model. Only FM-0 synthetic no-call bridge work is
-eligible now. Do not read an API credential, contact a provider, spend funds,
-access protected data, score targets, or run fine-tuning from this strategy.
+evidence under the same model. FM-0 is now implemented as a synthetic no-call
+compiler: the 7,327-byte fixture produces 12 request plans and 34,349 bytes in
+0.00275 seconds at about 21.5 MB peak RSS. The plan is not a provider wire
+request and there is no transport. Do not read an API credential, contact a
+provider, spend funds, access protected data, score targets, or run fine-tuning
+from this implementation.
 
 Documentation-sync commit `b6785d7` passed push CI `29471589279` and PR #32
 CI `29471598364`; Base Python and Optional Neuro Readers passed in both.

@@ -150,9 +150,11 @@
 > trained sensor adapter from the final language layer. The first hosted
 > candidate is frozen `gpt-5.6-sol`, receiving only structured CTC and causal
 > key evidence. Four matched conditions require full `FM-A02` to beat both
-> CTC-only and fixed item-deranged evidence under the same model. FM-0 is a
-> synthetic no-call bridge only: provider calls, credentials, spend, protected
-> rows, targets, scores, and scientific claims remain zero or unauthorized.
+> CTC-only and fixed item-deranged evidence under the same model. FM-0 is now
+> implemented as a synthetic no-call compiler: 7,327 input bytes produced 12
+> request plans totaling 34,349 bytes in 0.00275 seconds at about 21.5 MB peak
+> RSS. Provider calls, credentials, spend, protected rows, targets, models,
+> scores, and scientific claims remain zero or unauthorized.
 > Loop 56 planning research now freezes five verdict classes, 12 capability
 > levels, 18
 > comparison dimensions, 16 claim fields, 28 gates, 34 refusals, and a 12-part

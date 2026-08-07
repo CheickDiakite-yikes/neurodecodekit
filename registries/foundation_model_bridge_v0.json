@@ -1,0 +1,200 @@
+{
+  "schema_name": "neurodecodekit.foundation_model_bridge_implementation",
+  "schema_version": "0.1.0",
+  "created_at": "2026-08-06",
+  "stage_id": "FM-0",
+  "status": "implemented_and_locally_validated_synthetic_no_call_only",
+  "strategy_commit": "35debc7",
+  "strategy_binding": {
+    "strategy_path": "docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md",
+    "strategy_sha256": "ce69fb8fb13d540a295052524cfde0436dfa199caf9a7d2ec0431319a09d5b8c",
+    "strategy_registry_path": "registries/foundation_model_decoder_strategy.v0.json",
+    "strategy_registry_sha256": "168b6ead46067897ab73c4a6fb6ecad164f72502b1d2552616c559014250f6fe"
+  },
+  "implementation_binding": {
+    "module_path": "src/neurodecodekit/evaluation/foundation_model_bridge.py",
+    "module_sha256": "60f090c0d2625d2694ea32461c8a5f1101936682affd0c7d3bda3e9c301f8df7",
+    "fixture_path": "fixtures/foundation_model_bridge_synthetic_evidence.v0.json",
+    "fixture_sha256": "12f1b68f3241c80e4ba54872a3c97769e666ad2342f84328b1a5df91f0089bdb",
+    "test_path": "tests/test_foundation_model_bridge.py",
+    "test_sha256": "c158ba7740b35a32cf36a84dabf48aeeb3e8fb8c45fd543e6d11bce74f3d5a01",
+    "fixture_canonical_sha256": "24d373f179d2b01e099f033a9a576af39bff8a946513a6cd62976b4b2c927c35"
+  },
+  "schemas": {
+    "evidence_schema_name": "neurodecodekit.foundation_model_synthetic_evidence",
+    "evidence_schema_version": 0,
+    "plan_schema_name": "neurodecodekit.foundation_model_ablation_plan",
+    "plan_schema_version": 0,
+    "summary_schema_name": "neurodecodekit.foundation_model_bridge_summary",
+    "summary_schema_version": 0
+  },
+  "selected_future_model_metadata": {
+    "provider": "OpenAI",
+    "model_id": "gpt-5.6-sol",
+    "endpoint": "responses",
+    "reasoning_effort": "low",
+    "external_call_enabled": false,
+    "fine_tuning_used": false,
+    "custom_embedding_injection": false,
+    "tools": []
+  },
+  "commands": [
+    "make-foundation-model-bridge-fixture",
+    "build-foundation-model-ablation",
+    "inspect-foundation-model-ablation"
+  ],
+  "condition_contract": [
+    {
+      "condition_id": "FM-A00",
+      "ctc": "absent",
+      "neural": "absent"
+    },
+    {
+      "condition_id": "FM-A01",
+      "ctc": "matched",
+      "neural": "absent"
+    },
+    {
+      "condition_id": "FM-A02",
+      "ctc": "matched",
+      "neural": "matched"
+    },
+    {
+      "condition_id": "FM-A03",
+      "ctc": "matched",
+      "neural": "fixed_cyclic_next_item"
+    }
+  ],
+  "source_binding_contract": [
+    "source_file_bytes_and_sha256",
+    "source_canonical_sha256",
+    "per_item_CTC_sha256",
+    "per_item_neural_frame_sha256",
+    "fixed_derangement_rows_and_sha256",
+    "each_blinded_request_sha256",
+    "plan_core_sha256"
+  ],
+  "blinded_payload_fields": [
+    "instruction",
+    "task_context",
+    "ctc_nbest",
+    "neural_key_frames",
+    "response_contract"
+  ],
+  "forbidden_content_classes": [
+    "target_reference_label_intended_or_ground_truth_fields",
+    "raw_EEG_or_MEG",
+    "signal_samples",
+    "dense_embeddings_or_NeuroToken_vectors",
+    "participant_or_subject_names",
+    "absolute_local_paths",
+    "condition_or_item_identity_inside_blinded_payload"
+  ],
+  "resource_caps": {
+    "cpu_threads": 1,
+    "workers": 1,
+    "maximum_runtime_seconds": 30,
+    "maximum_peak_rss_bytes": 268435456,
+    "maximum_input_bytes": 1048576,
+    "maximum_output_bytes": 1048576,
+    "maximum_items": 8,
+    "maximum_CTC_hypotheses_per_item": 8,
+    "maximum_neural_frames_per_item": 64,
+    "maximum_top_keys_per_frame": 8
+  },
+  "measured_roundtrip": {
+    "source_fixture_bytes": 7327,
+    "source_items": 3,
+    "source_CTC_hypotheses": 6,
+    "source_neural_frames": 12,
+    "source_top_key_probabilities": 24,
+    "compiled_condition_plans": 12,
+    "compiled_plan_bytes": 34349,
+    "build_runtime_seconds": 0.002745583,
+    "build_peak_rss_bytes": 21495808,
+    "inspect_runtime_seconds": 0.001411584,
+    "inspect_peak_rss_bytes": 21037056,
+    "plan_core_sha256": "355e018f6cd33d7a0d8213fa20eb0798f571c84e4c2e5a2f84dff33ed6c47b5d",
+    "plan_file_sha256": "66f7af99c418945ac878608a64203277e1c7413680e0fd9c5af93f1b5b07d3be",
+    "producer_causal": true,
+    "end_to_end_latency_measured": false
+  },
+  "verification": {
+    "pre_change_full_test_count": 1129,
+    "focused_test_count": 35,
+    "final_full_test_count": 1164,
+    "expected_skip_count": 3,
+    "full_test_internal_runtime_seconds": 31.172,
+    "full_test_wall_seconds": 32.28,
+    "full_test_external_peak_rss_bytes": 629456896,
+    "implementation_artifact_bytes": 84637,
+    "ruff_passed": true,
+    "compileall_passed": true,
+    "all_registry_JSON_valid": true,
+    "CLI_help_and_roundtrip_passed": true,
+    "git_diff_check_passed": true
+  },
+  "validation_coverage": [
+    "deterministic_replay",
+    "four_condition_shape",
+    "blinded_payload_identity",
+    "strict_cyclic_derangement",
+    "source_item_hash_binding",
+    "target_and_sensitive_field_leakage",
+    "causal_timestamp_order",
+    "finite_sorted_probability_rows",
+    "integer_zero_access_counters",
+    "unknown_and_missing_fields",
+    "hash_tampering",
+    "input_and_output_caps",
+    "symlink_refusal",
+    "overwrite_refusal",
+    "CLI_help_and_roundtrip"
+  ],
+  "access_counters": {
+    "external_network_calls": 0,
+    "api_credential_reads": 0,
+    "provider_model_calls": 0,
+    "local_model_calls": 0,
+    "real_or_protected_reads": 0,
+    "protected_annotation_reads": 0,
+    "training_runs": 0,
+    "scoring_runs": 0
+  },
+  "authorization": {
+    "synthetic_no_call_implementation_tests_docs_commit_and_push_authorized": true,
+    "external_API_or_network_call_authorized": false,
+    "API_credential_read_authorized": false,
+    "provider_spend_authorized": false,
+    "provider_or_local_model_inference_authorized": false,
+    "model_weight_download_authorized": false,
+    "fine_tuning_authorized": false,
+    "real_or_protected_data_read_authorized": false,
+    "protected_annotation_read_authorized": false,
+    "raw_neural_upload_authorized": false,
+    "scoring_or_selection_authorized": false,
+    "scientific_claim_upgrade_authorized": false
+  },
+  "unavailable_fields": [
+    "provider_response",
+    "provider_response_id",
+    "provider_reported_model",
+    "input_tokens",
+    "output_tokens",
+    "provider_latency_seconds",
+    "provider_cost",
+    "decoded_text_accuracy",
+    "end_to_end_latency"
+  ],
+  "warnings": [
+    "the plan is not an OpenAI wire request",
+    "the fixture has no reference or ground truth",
+    "no provider model or training call was executed",
+    "schema validity and fluency cannot establish neural information",
+    "FM-1 requires a separate credential network privacy and spend decision"
+  ],
+  "claim_boundary": {
+    "engineering_capability_added": "NeuroDecodeKit can deterministically compile and audit a four-condition foundation-model evidence experiment without contacting a provider.",
+    "scientific_claim_not_established": "No language model neural model real signal protected row target or score was used, so FM-0 establishes no neural advantage or decoding result."
+  }
+}

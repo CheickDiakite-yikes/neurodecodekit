@@ -163,9 +163,13 @@
    architecture now treats the compact causal model as a sensor-to-evidence
    adapter and selects frozen `gpt-5.6-sol` as the first hosted language
    decoder candidate. The matched `FM-A02` condition must beat both CTC-only
-   and fixed item-deranged evidence under the same model. Only the FM-0
-   synthetic no-call bridge is eligible: no provider call, credential, raw
-   neural upload, protected row, target, score, or scientific claim is open.
+   and fixed item-deranged evidence under the same model. Then read
+   `docs/FOUNDATION_MODEL_BRIDGE_V0.md` and
+   `registries/foundation_model_bridge_v0.json`: FM-0 is implemented as a
+   synthetic no-call compiler. It transformed 7,327 input bytes into 12 plans
+   totaling 34,349 bytes in 0.00275 seconds at about 21.5 MB peak RSS. No
+   provider call, credential, raw neural upload, protected row, target, model,
+   score, or scientific claim opened.
    Then read `docs/LOOP_56_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop56_cross_modality_accessibility_research.v0.json`. Loop 56
    freezes five verdict classes, a 12-level capability ladder, 18 comparison

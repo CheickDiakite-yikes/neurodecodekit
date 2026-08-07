@@ -1,0 +1,306 @@
+{
+  "access_counters": {
+    "api_credential_reads": 0,
+    "external_network_calls": 0,
+    "local_model_calls": 0,
+    "protected_annotation_reads": 0,
+    "provider_model_calls": 0,
+    "real_or_protected_reads": 0,
+    "scoring_runs": 0,
+    "training_runs": 0
+  },
+  "fixture_id": "FM-SYNTH-001",
+  "items": [
+    {
+      "ctc_nbest": [
+        {
+          "log_probability": -0.12,
+          "rank": 1,
+          "text": "HELLO WURLD"
+        },
+        {
+          "log_probability": -0.84,
+          "rank": 2,
+          "text": "HELLO WORLD"
+        }
+      ],
+      "item_id": "SYNTH-ITEM-00",
+      "neural_key_frames": [
+        {
+          "available_at_ms": 100,
+          "end_ms": 100,
+          "entropy_nats": 0.62,
+          "frame_index": 0,
+          "start_ms": 0,
+          "top_keys": [
+            {
+              "probability": 0.72,
+              "symbol": "H"
+            },
+            {
+              "probability": 0.12,
+              "symbol": "SPACE"
+            }
+          ]
+        },
+        {
+          "available_at_ms": 200,
+          "end_ms": 200,
+          "entropy_nats": 0.66,
+          "frame_index": 1,
+          "start_ms": 100,
+          "top_keys": [
+            {
+              "probability": 0.69,
+              "symbol": "E"
+            },
+            {
+              "probability": 0.13,
+              "symbol": "SPACE"
+            }
+          ]
+        },
+        {
+          "available_at_ms": 300,
+          "end_ms": 300,
+          "entropy_nats": 0.7,
+          "frame_index": 2,
+          "start_ms": 200,
+          "top_keys": [
+            {
+              "probability": 0.66,
+              "symbol": "L"
+            },
+            {
+              "probability": 0.14,
+              "symbol": "SPACE"
+            }
+          ]
+        },
+        {
+          "available_at_ms": 400,
+          "end_ms": 400,
+          "entropy_nats": 0.74,
+          "frame_index": 3,
+          "start_ms": 300,
+          "top_keys": [
+            {
+              "probability": 0.63,
+              "symbol": "O"
+            },
+            {
+              "probability": 0.15,
+              "symbol": "SPACE"
+            }
+          ]
+        }
+      ],
+      "producer": {
+        "dense_vector_exported": false,
+        "producer_causal": true,
+        "representation_kind": "structured_key_evidence",
+        "right_context_ms": 0,
+        "source_modality": "synthetic",
+        "supervision_content_included": false
+      },
+      "split_id": "synthetic-development"
+    },
+    {
+      "ctc_nbest": [
+        {
+          "log_probability": -0.18,
+          "rank": 1,
+          "text": "OPEN SORCE"
+        },
+        {
+          "log_probability": -0.91,
+          "rank": 2,
+          "text": "OPEN SOURCE"
+        }
+      ],
+      "item_id": "SYNTH-ITEM-01",
+      "neural_key_frames": [
+        {
+          "available_at_ms": 100,
+          "end_ms": 100,
+          "entropy_nats": 0.62,
+          "frame_index": 0,
+          "start_ms": 0,
+          "top_keys": [
+            {
+              "probability": 0.72,
+              "symbol": "O"
+            },
+            {
+              "probability": 0.12,
+              "symbol": "SPACE"
+            }
+          ]
+        },
+        {
+          "available_at_ms": 200,
+          "end_ms": 200,
+          "entropy_nats": 0.66,
+          "frame_index": 1,
+          "start_ms": 100,
+          "top_keys": [
+            {
+              "probability": 0.69,
+              "symbol": "P"
+            },
+            {
+              "probability": 0.13,
+              "symbol": "SPACE"
+            }
+          ]
+        },
+        {
+          "available_at_ms": 300,
+          "end_ms": 300,
+          "entropy_nats": 0.7,
+          "frame_index": 2,
+          "start_ms": 200,
+          "top_keys": [
+            {
+              "probability": 0.66,
+              "symbol": "E"
+            },
+            {
+              "probability": 0.14,
+              "symbol": "SPACE"
+            }
+          ]
+        },
+        {
+          "available_at_ms": 400,
+          "end_ms": 400,
+          "entropy_nats": 0.74,
+          "frame_index": 3,
+          "start_ms": 300,
+          "top_keys": [
+            {
+              "probability": 0.63,
+              "symbol": "N"
+            },
+            {
+              "probability": 0.15,
+              "symbol": "SPACE"
+            }
+          ]
+        }
+      ],
+      "producer": {
+        "dense_vector_exported": false,
+        "producer_causal": true,
+        "representation_kind": "structured_key_evidence",
+        "right_context_ms": 0,
+        "source_modality": "synthetic",
+        "supervision_content_included": false
+      },
+      "split_id": "synthetic-development"
+    },
+    {
+      "ctc_nbest": [
+        {
+          "log_probability": -0.21,
+          "rank": 1,
+          "text": "BRAIN TOL"
+        },
+        {
+          "log_probability": -0.97,
+          "rank": 2,
+          "text": "BRAIN TOOL"
+        }
+      ],
+      "item_id": "SYNTH-ITEM-02",
+      "neural_key_frames": [
+        {
+          "available_at_ms": 100,
+          "end_ms": 100,
+          "entropy_nats": 0.62,
+          "frame_index": 0,
+          "start_ms": 0,
+          "top_keys": [
+            {
+              "probability": 0.72,
+              "symbol": "B"
+            },
+            {
+              "probability": 0.12,
+              "symbol": "SPACE"
+            }
+          ]
+        },
+        {
+          "available_at_ms": 200,
+          "end_ms": 200,
+          "entropy_nats": 0.66,
+          "frame_index": 1,
+          "start_ms": 100,
+          "top_keys": [
+            {
+              "probability": 0.69,
+              "symbol": "R"
+            },
+            {
+              "probability": 0.13,
+              "symbol": "SPACE"
+            }
+          ]
+        },
+        {
+          "available_at_ms": 300,
+          "end_ms": 300,
+          "entropy_nats": 0.7,
+          "frame_index": 2,
+          "start_ms": 200,
+          "top_keys": [
+            {
+              "probability": 0.66,
+              "symbol": "A"
+            },
+            {
+              "probability": 0.14,
+              "symbol": "SPACE"
+            }
+          ]
+        },
+        {
+          "available_at_ms": 400,
+          "end_ms": 400,
+          "entropy_nats": 0.74,
+          "frame_index": 3,
+          "start_ms": 300,
+          "top_keys": [
+            {
+              "probability": 0.63,
+              "symbol": "I"
+            },
+            {
+              "probability": 0.15,
+              "symbol": "SPACE"
+            }
+          ]
+        }
+      ],
+      "producer": {
+        "dense_vector_exported": false,
+        "producer_causal": true,
+        "representation_kind": "structured_key_evidence",
+        "right_context_ms": 0,
+        "source_modality": "synthetic",
+        "supervision_content_included": false
+      },
+      "split_id": "synthetic-development"
+    }
+  ],
+  "proof_posture": "synthetic_target_free_interface_only",
+  "schema_name": "neurodecodekit.foundation_model_synthetic_evidence",
+  "schema_version": 0,
+  "task_context": "synthetic_unprompted_typing_without_reference",
+  "warnings": [
+    "synthetic_fixture_only_no_real_or_protected_content",
+    "no_reference_or_ground_truth_exists",
+    "no_provider_or_model_call_executed"
+  ]
+}

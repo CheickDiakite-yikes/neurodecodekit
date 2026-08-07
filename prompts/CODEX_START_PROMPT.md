@@ -54,6 +54,8 @@ requests, and these files:
 - `registries/loop31_research_boundary.v0.json`
 - `docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md`
 - `registries/foundation_model_decoder_strategy.v0.json`
+- `docs/FOUNDATION_MODEL_BRIDGE_V0.md`
+- `registries/foundation_model_bridge_v0.json`
 - `docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md`
 - `registries/loop32_research_boundary.v0.json`
 - `docs/POST_20_ROADMAP.md`
@@ -79,8 +81,10 @@ Do not reset, revert, delete, or overwrite work already present.
 - The additive decoder direction uses a compact causal sensor adapter followed
   by frozen `gpt-5.6-sol`. Only the FM-0 synthetic no-call bridge is eligible;
   full `FM-A02` must eventually beat CTC-only and fixed item-deranged evidence
-  under the same model. No API credential, provider call, protected row,
-  target, score, or fine-tuning is authorized by that strategy.
+  under the same model. FM-0 is implemented: 7,327 synthetic input bytes
+  compile into 12 plans and 34,349 bytes with no provider transport. No API
+  credential, provider call, protected row, target, score, or fine-tuning is
+  authorized by that implementation.
 - RW1 closes metadata-only local intake. RW2 closes bounded, redacted signal
   reading and descriptive reporting on generated fixtures only: 38 readable
   sources pass and two malformed or unsafe layouts refuse exactly.

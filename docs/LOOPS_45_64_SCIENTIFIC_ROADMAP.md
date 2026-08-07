@@ -414,7 +414,11 @@ including full `FM-A02` and fixed item-deranged `FM-A03`, under one model and
 prompt. Only the FM-0 synthetic no-call bridge is eligible now; this does not
 authorize provider access, real replay, target delivery, or scoring. See
 `docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md` and
-`registries/foundation_model_decoder_strategy.v0.json`.
+`registries/foundation_model_decoder_strategy.v0.json`. FM-0 is now locally
+implemented: 7,327 synthetic input bytes compiled into 12 plans and 34,349
+output bytes in 0.00275 seconds at about 21.5 MB peak RSS. The implementation
+contains no provider transport and does not change Loop 57's `Not Started`
+real-integration status.
 
 ### Loop 58 - Local Capture And Device Mechanics
 

@@ -8,9 +8,17 @@
 > custom NeuroToken embeddings, so raw EEG, dense vectors, targets, identities,
 > and local paths remain outside the provider packet. `FM-A02` must beat both
 > CTC-only and fixed item-deranged evidence under the same Sol configuration.
-> Only FM-0 synthetic no-call bridge work is eligible now; do not read an API
-> credential, contact a provider, spend funds, access protected data, score a
-> target, or claim decoding evidence from this strategy.
+> FM-0 is now implemented and locally validated through
+> `docs/FOUNDATION_MODEL_BRIDGE_V0.md` and
+> `registries/foundation_model_bridge_v0.json`. The committed 7,327-byte
+> no-call fixture compiles into all 12 request plans and 34,349 bytes in 0.00275 seconds
+> at about 21.5 MB peak RSS. The plan is not an OpenAI wire request and no
+> provider transport exists. Do not read an API credential, contact a provider,
+> spend funds, access protected data, score a target, or claim decoding
+> evidence from this implementation. Focused verification passes 35 tests;
+> the full baseline advances from 1,129 to 1,164 passing tests with the same 3
+> expected skips. Ruff, compileall, all registry JSON, CLI help/roundtrip, and
+> diff hygiene pass.
 >
 > Current handoff, 2026-08-06 after Loop 54-A preregistration: registration
 > commit `c114623` is pushed on `codex/loop-54a-vhdr-preregistration` and binds
