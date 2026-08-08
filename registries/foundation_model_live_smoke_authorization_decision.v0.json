@@ -1,0 +1,82 @@
+{
+  "schema_name": "neurodecodekit.foundation_model_live_smoke_authorization_decision",
+  "schema_version": "0.1.0",
+  "created_at": "2026-08-08",
+  "stage_id": "FM-1",
+  "status": "authorized_pending_implementation_and_execution",
+  "decision": "authorize_exactly_one_bounded_synthetic_Terra_provider_qualification",
+  "contract_binding": {
+    "contract_path": "registries/foundation_model_live_smoke_contract.v0.json",
+    "contract_sha256": "30dd5fc7475f4985e97f496166792a65d0f2e9353230652cb5c2526c74f86eae",
+    "contract_commit": "7db14d51cbe8bde5a5d7ac43479b20e575e9ae7c",
+    "contract_push_CI_run_id": 31267860543,
+    "contract_push_CI_conclusion": "success",
+    "contract_base_python_job": "success",
+    "contract_optional_neuro_readers_job": "success"
+  },
+  "exact_authorization_text": "Authorize one FM-1 synthetic GPT-5.6 Terra provider qualification exactly as scoped in docs/FOUNDATION_MODEL_LIVE_SMOKE_PREREGISTRATION.md and registries/foundation_model_live_smoke_contract.v0.json. I authorize one read of the existing usable OPENAI_API_KEY environment variable, exactly 12 sequential Responses API calls to gpt-5.6-terra over only the committed 7,327-byte synthetic fixture and its four blinded conditions, standard service, low reasoning, strict structured output, no tools, store false, no retries, at most 3,072 output tokens, 420 seconds, 256 MiB peak RSS, 2 MiB generated output, and 0.50 USD estimated standard provider charge. I do not authorize real or protected data, targets, labels, reference or intended text, raw EEG or MEG, dense embeddings or NeuroTokens, participant identities, local paths, training, fine-tuning, model downloads, search tools, additional models, additional calls, substitutions, reruns, scientific scoring, or claim upgrades.",
+  "authorization": {
+    "maximum_invocations": 1,
+    "maximum_API_credential_reads": 1,
+    "maximum_external_network_calls": 12,
+    "maximum_provider_model_calls": 12,
+    "maximum_provider_spend_events": 12,
+    "maximum_estimated_standard_provider_charge_usd": 0.5,
+    "authorized_model_ids": [
+      "gpt-5.6-terra"
+    ],
+    "authorized_endpoint": "https://api.openai.com/v1/responses",
+    "authorized_fixture_path": "fixtures/foundation_model_bridge_synthetic_evidence.v0.json",
+    "authorized_fixture_sha256": "12f1b68f3241c80e4ba54872a3c97769e666ad2342f84328b1a5df91f0089bdb",
+    "maximum_output_tokens": 3072,
+    "maximum_wall_seconds": 420,
+    "maximum_peak_rss_bytes": 268435456,
+    "maximum_generated_output_bytes": 2097152,
+    "standard_service_only": true,
+    "low_reasoning_only": true,
+    "strict_structured_output_only": true,
+    "no_tools": true,
+    "store_false": true,
+    "no_retries": true,
+    "sequential_one_worker": true
+  },
+  "explicitly_not_authorized": [
+    "real_or_protected_data",
+    "targets_labels_reference_or_intended_text",
+    "raw_EEG_or_MEG",
+    "dense_embeddings_or_NeuroTokens",
+    "participant_identities",
+    "local_paths_in_provider_payloads",
+    "training_or_fine_tuning",
+    "model_downloads",
+    "provider_search_tools",
+    "additional_models_calls_substitutions_or_reruns",
+    "scientific_scoring",
+    "scientific_claim_upgrade"
+  ],
+  "pre_execution_requirements": [
+    "this_decision_commit_is_pushed_and_remotely_green",
+    "implementation_is_synthetic_fixture_only",
+    "implementation_commit_is_pushed_and_remotely_green",
+    "current_HEAD_equals_the_supplied_implementation_commit",
+    "tracked_worktree_is_clean",
+    "dry_run_rebuilds_and_verifies_the_exact_FM0_plan",
+    "pricing_is_reverified_against_the_frozen_snapshot",
+    "at_least_one_GiB_free_disk_is_available"
+  ],
+  "access_counters_at_decision": {
+    "external_network_calls": 0,
+    "API_credential_reads": 0,
+    "provider_spend_events": 0,
+    "provider_model_calls": 0,
+    "real_or_protected_data_reads": 0,
+    "target_or_reference_reads": 0,
+    "raw_or_dense_neural_uploads": 0,
+    "training_runs": 0,
+    "fine_tuning_runs": 0,
+    "scoring_runs": 0
+  },
+  "execution_started": false,
+  "result_available": false,
+  "claim_boundary": "Authorization permits only the registered synthetic provider qualification. It does not establish or authorize a neural, decoding, scientific, device, home-use, or clinical claim."
+}
