@@ -94,9 +94,9 @@ class SyntheticMotorFixtureResultTests(unittest.TestCase):
         work_order_three = next(line for line in queue.splitlines() if line.startswith("| 3 |"))
         work_order_four = next(line for line in queue.splitlines() if line.startswith("| 4 |"))
         self.assertIn("| Complete |", work_order_three)
-        self.assertIn("| In Progress |", work_order_four)
+        self.assertIn("| In Progress", work_order_four)
         self.assertEqual(queue.count("| Complete |"), 3)
-        self.assertEqual(queue.count("| In Progress |"), 1)
+        self.assertEqual(sum("| In Progress" in line for line in queue.splitlines()), 1)
         self.assertFalse(self.result["next_route"]["install_new_dependencies_now"])
         self.assertFalse(self.result["next_route"]["real_data_action_authorized_by_this_result"])
 

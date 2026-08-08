@@ -3887,3 +3887,27 @@ home use, or clinical utility.
 
 Evidence: `docs/SYNTHETIC_MOTOR_FIXTURE_RESULT.md` and
 `registries/synthetic_motor_fixture_result.v0.json`.
+
+## 0112 - Freeze Classical Adapter Interfaces Before Dependencies
+
+Decision: define three optional classical EEG adapter families as symbolic,
+strictly validated plans before installing or importing their backends. Keep
+low-frequency shrinkage LDA, causal CSP-LDA, and Riemannian MDM all registered
+and unselected.
+
+Reason: a public positive control should determine whether CSP or Riemannian
+geometry earns the future protected slot. Synthetic behavior and S20 outcomes
+must not choose the family. Formal train-group-only fit scopes and explicit
+refusals make leakage errors visible before data or compute is spent.
+
+Route: after this contract commit is remotely green, implement a
+standard-library plan builder, validator, canonical hash, and synthetic mutation
+tests only. Use the prior tooling receipt for availability; do not install,
+probe, import, fit, infer, score, or select an optional adapter.
+
+Scientific boundary: a valid adapter plan is engineering evidence only. Public
+or protected execution remains Tier C and cannot inherit authorization from
+this work order.
+
+Evidence: `docs/CLASSICAL_EEG_ADAPTER_PREREGISTRATION.md` and
+`registries/classical_eeg_adapter_contract.v0.json`.

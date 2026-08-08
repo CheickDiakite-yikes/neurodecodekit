@@ -69,8 +69,12 @@
 > before one closeout. All 18 gates passed in 1.20 seconds at 118,177,792-byte
 > peak RSS and 584,308 bytes; generated files were removed. Work order 3 is
 > complete. Continue work order 4's classical adapter contracts and leakage
-> tests without installing or running an adapter. No architecture, model,
-> fitting, inference, scoring, or real-data action is permitted.
+> tests without installing or running an adapter. The frozen contract is
+> `docs/CLASSICAL_EEG_ADAPTER_PREREGISTRATION.md` plus
+> `registries/classical_eeg_adapter_contract.v0.json`: three unselected
+> families, train-only fits, pair/group isolation, twelve refusals, and no
+> optional import. Implementation is still `Not Started`. No architecture,
+> model, fitting, inference, scoring, or real-data action is permitted.
 >
 > Current handoff, 2026-08-06 after Loop 54-A preregistration: registration
 > commit `c114623` is pushed on `codex/loop-54a-vhdr-preregistration` and binds

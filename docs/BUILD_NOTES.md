@@ -5138,3 +5138,36 @@ and architecture testing.
 Scientific claim not established: no real EEG physiology, neural origin,
 decoding accuracy, generalization, end-to-end latency, device performance,
 home use, or clinical result was established.
+
+## 2026-08-08 - Classical EEG Adapter Contract
+
+- Froze work order 4 before implementation as a standard-library symbolic-plan
+  task. Registered low-frequency shrinkage LDA, causal 8-30 Hz CSP-LDA, and
+  regularized Riemannian MDM without choosing, importing, fitting, or scoring a
+  family.
+- Bound availability to the completed zero-network audit: NumPy/SciPy substrate
+  is available; MNE CSP is incomplete because scikit-learn is absent; pyRiemann
+  and scikit-learn are absent. No install, new import probe, or silent fallback
+  is allowed.
+- Froze explicit item/group/pair/partition identities; zero cross-partition
+  groups or pairs; train-only preprocessing, quality, standardization, spatial
+  transform, classifier, and prior stages; target-blind check/final use; and
+  zero post-event/right context.
+- Added twelve required refusal classes covering group/pair leakage, duplicate
+  or missing identity, row splits, evaluation targets, evaluation fitting,
+  global normalization, future context, forbidden fields, unknown adapters,
+  and dependency substitution.
+- The eventual Tier B implementation may build only a deterministic 96-item,
+  48-group symbolic plan from the synthetic identity formula. Every array,
+  data, target, feature, fit, inference, score, network, provider, and hardware
+  counter remains zero in this contract.
+- Seven contract invariants and 20 combined contract/prior-result checks pass.
+  The complete pre-implementation suite passes 1,255 tests with three expected
+  skips and 469 subtests in 38.59 seconds wall time.
+
+Engineering capability proposed: NeuroDecodeKit can validate leakage-resistant
+optional classical EEG adapter plans before installing or fitting them.
+
+Scientific claim not established: adapter specifications establish no real EEG
+effect, neural origin, decoding, generalization, latency, device performance,
+home use, or clinical result.

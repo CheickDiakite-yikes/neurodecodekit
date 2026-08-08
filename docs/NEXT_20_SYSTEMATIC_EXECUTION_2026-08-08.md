@@ -14,7 +14,7 @@ decision after its own frozen packet and required remote-green evidence exist.
 | 1 | Recover Loop 54-A registration CI evidence | A | Preserve frozen artifacts, diagnose toolchain drift, obtain green descendant evidence | Complete |
 | 2 | Audit local EEG tool capabilities | A | Fixed zero-network probes, one thread, <=1 MiB output, all data/model counters zero | Complete |
 | 3 | Build synthetic physiology/confound fixtures | B | Deterministic motor, timing, ocular, line-noise, dropout, and corruption cases with no target leakage | Complete |
-| 4 | Add classical EEG adapter contracts | B | Optional dependency boundaries, grouped-fit rules, leakage tests, no real execution | In Progress |
+| 4 | Add classical EEG adapter contracts | B | Optional dependency boundaries, grouped-fit rules, leakage tests, no real execution | In Progress: Contract Frozen |
 | 5 | Add a contact-aware ear-channel adapter | B | Synthetic contact/noise/missingness fixtures and exact channel-mask semantics only | Queued |
 | 6 | Freeze Loop 54-A decision and qualify parser | A/B then C decision | Recovery-bound exact packet, strict synthetic parser tests, green implementation before real access | Gated |
 | 7 | Execute Loop 54-A once | C | One 11,705-byte VHDR open; no sibling resolution; all 18 gates pass | Gated |
@@ -45,6 +45,9 @@ Work order 3 is complete. Contract commit `9238fd7` and implementation commit
 run used 1.20 seconds, 118,177,792-byte peak RSS, and 584,308 output bytes; all
 18 gates passed and the two generated files were removed. Work order 4 is now
 active at a contract-and-test-only boundary with no install or real execution.
+Its frozen plan registers low-frequency shrinkage LDA, causal CSP-LDA, and
+Riemannian MDM without choosing or importing one, plus twelve fail-closed
+leakage mutations.
 
 This queue never authorizes S20 interpretation, PhysioNet acquisition, target
 delivery, training, scoring, hardware, release, or a scientific claim by

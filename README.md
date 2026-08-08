@@ -571,7 +571,10 @@ Read this before interpreting any number in the repository.
   `1.20` seconds at `118,177,792`-byte peak RSS with 584,308 output bytes. The
   generated NPZ and sidecar were removed, and every real-data, target, model,
   training, inference, scoring, network, provider, and hardware counter was
-  zero. Work order 4's classical adapter contracts are next.
+  zero. Work order 4 now freezes three unexecuted adapter plans: low-frequency
+  shrinkage LDA, causal CSP-LDA, and Riemannian MDM. No winner is selected, no
+  optional package is installed or imported, and twelve leakage mutations must
+  fail closed before any future adapter execution.
 - **Loop 55 EEG neural-effect research:** planning commit `f3158c7` freezes two
   ordered causal endpoints from the same future final trials: performed-hand
   error and 29-class performed-key keypress-aligned CER. It makes performed
@@ -1427,6 +1430,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/synthetic_motor_fixture_implementation.v0.json](registries/synthetic_motor_fixture_implementation.v0.json) | hash-bound work-order-3 source, test, resource, and pending-remote-green implementation receipt |
 | [docs/SYNTHETIC_MOTOR_FIXTURE_RESULT.md](docs/SYNTHETIC_MOTOR_FIXTURE_RESULT.md) | consumed one-shot synthetic closeout with measured shape, bytes, runtime, RSS, counters, warnings, and claim boundary |
 | [registries/synthetic_motor_fixture_result.v0.json](registries/synthetic_motor_fixture_result.v0.json) | machine-readable all-gates-pass work-order-3 receipt and no-real-data access ledger |
+| [docs/CLASSICAL_EEG_ADAPTER_PREREGISTRATION.md](docs/CLASSICAL_EEG_ADAPTER_PREREGISTRATION.md) | frozen no-install shrinkage-LDA, CSP-LDA, Riemannian-MDM, grouped-fit, target-firewall, and refusal boundary |
+| [registries/classical_eeg_adapter_contract.v0.json](registries/classical_eeg_adapter_contract.v0.json) | machine-readable three-adapter work-order-4 plan contract with twelve leakage refusals and zero execution counters |
 | [docs/NEXT_20_LOOPS_TRACKER.md](docs/NEXT_20_LOOPS_TRACKER.md) | original 20-loop tracker, current post-roadmap gate, and planning-only Loops 25-44 summary |
 | [docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx](docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx) | ten-sheet visual tracker preserved at the last reviewed Stage A snapshot; use the Markdown tracker and machine roadmap for the current Stage B result because a prior workbook import reached 1.57 GiB peak RSS |
 | [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) | closed/current post-NeuroToken gates plus links to the next tranche |

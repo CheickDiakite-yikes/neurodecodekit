@@ -137,7 +137,11 @@
    RSS, 584,308 output bytes, and zero retained generated files. Work order 3 is
    complete and work order 4's no-install classical adapter contract is active.
    No model, training, inference, scoring, S20, PhysioNet, or claim operation
-   is permitted by this result.
+   is permitted by this result. Read
+   `docs/CLASSICAL_EEG_ADAPTER_PREREGISTRATION.md` and
+   `registries/classical_eeg_adapter_contract.v0.json` for the frozen
+   low-frequency shrinkage-LDA, causal CSP-LDA, Riemannian-MDM, grouped-fit,
+   twelve-refusal, no-import boundary. Implementation has not started.
    Then read `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop55_eeg_neural_effect_research.v0.json`. Loop 55 planning
    separates a higher-power causal performed-hand endpoint from a harder

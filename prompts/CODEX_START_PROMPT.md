@@ -74,6 +74,8 @@ requests, and these files:
 - `registries/synthetic_motor_fixture_implementation.v0.json`
 - `docs/SYNTHETIC_MOTOR_FIXTURE_RESULT.md`
 - `registries/synthetic_motor_fixture_result.v0.json`
+- `docs/CLASSICAL_EEG_ADAPTER_PREREGISTRATION.md`
+- `registries/classical_eeg_adapter_contract.v0.json`
 - `docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md`
 - `registries/loop32_research_boundary.v0.json`
 - `docs/POST_20_ROADMAP.md`
@@ -131,6 +133,13 @@ Do not reset, revert, delete, or overwrite work already present.
   or executing an adapter. Do not implement CML-v0 or run a model, fit,
   inference, score, download, S20 read, PhysioNet read, provider call, stream,
   device, or hardware operation.
+- Work order 4 is frozen but not implemented. Register all three families
+  without choosing one: low-frequency shrinkage LDA, causal CSP-LDA, and
+  Riemannian MDM. Build only a standard-library symbolic plan/validator with
+  train-group-only fits, pair/group isolation, target-blind check/final use,
+  zero post-event context, canonical hashing, and twelve leakage refusals.
+  Do not install or import an optional backend, read arrays, fit, infer, select,
+  score, or access real/public data.
 - RW1 closes metadata-only local intake. RW2 closes bounded, redacted signal
   reading and descriptive reporting on generated fixtures only: 38 readable
   sources pass and two malformed or unsafe layouts refuse exactly.

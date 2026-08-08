@@ -1,0 +1,313 @@
+{
+  "schema_name": "neurodecodekit.classical_eeg_adapter_contract",
+  "schema_version": "0.1.0",
+  "status": "preregistered_tier_B_contract_only_not_implemented_not_executed",
+  "date": "2026-08-08",
+  "work_order": 4,
+  "title": "Optional Classical EEG Adapter And Leakage Contract",
+  "source_bindings": {
+    "open_EEG_strategy": {
+      "path": "registries/open_eeg_rd_strategy.v0.json",
+      "sha256": "0291e802cefbbe73bb9ecdcd4d5d1d40b56e53e0836f2fadf28a11f59738e742"
+    },
+    "local_tooling_result": {
+      "path": "registries/local_eeg_tooling_audit_result.v0.json",
+      "sha256": "1466d1c19fdd80cf8f478677df7746c9d7ef1aa625120c2ca1a4b9b27a506f80"
+    },
+    "local_tooling_receipt": {
+      "path": "registries/local_eeg_tooling_audit_receipt.v0.json",
+      "sha256": "da82292e4cf126ad78c8210c77b64bd2d298b08c381af3c157225b91d6f9de5a"
+    },
+    "synthetic_fixture_result": {
+      "path": "registries/synthetic_motor_fixture_result.v0.json",
+      "sha256": "3a250ccaebdf29e89d52089391c8f10e28f7c5bb51ed96aba82dddfebd21600a"
+    },
+    "autonomy_charter": {
+      "path": "docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md",
+      "sha256": "c9381bfc729dfca4aaab03929a6623f23c3cf06eb33fbae5379b0517981dcb64"
+    },
+    "autonomy_decision": {
+      "path": "docs/RESEARCH_AUTONOMY_CHARTER_DECISION.md",
+      "sha256": "700d7243ff53b191c2bd262424efe45cc5a5e40200b115503a84d3563c93e7b7"
+    }
+  },
+  "scope": {
+    "adapter_specification_and_plan_validation_only": true,
+    "optional_dependency_install": false,
+    "optional_adapter_import_or_probe": false,
+    "real_or_public_data_access": false,
+    "target_or_label_value_access": false,
+    "feature_extraction": false,
+    "parameter_update": false,
+    "model_inference": false,
+    "scoring_or_selection": false,
+    "scientific_claim_upgrade": false
+  },
+  "adapter_families": [
+    {
+      "adapter_id": "fixed_low_frequency_shrinkage_lda",
+      "role": "interpretable_potential_shape_baseline",
+      "feature_contract": {
+        "input_view": "strictly_pre_event_potential_view",
+        "summary": "four_equal_valid_time_bins_plus_one_train_standardized_slope_per_channel",
+        "feature_dimensions_formula": "5C",
+        "right_context_samples": 0,
+        "post_event_samples": 0
+      },
+      "estimator_contract": {
+        "class_means_fit_scope": "train_groups_only",
+        "pooled_covariance_fit_scope": "train_groups_only",
+        "fixed_trace_shrinkage": 0.1,
+        "class_prior_scope": "train_groups_only"
+      },
+      "optional_dependencies": [
+        "numpy>=1.26",
+        "scipy>=1.11"
+      ],
+      "audited_local_status": "substrate_available_specification_only_not_fitted"
+    },
+    {
+      "adapter_id": "fixed_8_to_30_hz_csp_lda",
+      "role": "motor_band_spatial_variance_baseline",
+      "feature_contract": {
+        "input_view": "strictly_causal_8_to_30_Hz_view_from_future_registered_preprocessor",
+        "CSP_components": 4,
+        "component_selection": "fixed_first_four_no_check_or_final_selection",
+        "feature": "log_variance",
+        "right_context_samples": 0,
+        "post_event_samples": 0
+      },
+      "estimator_contract": {
+        "CSP_fit_scope": "train_groups_only",
+        "CSP_regularization": 0.1,
+        "LDA_fit_scope": "train_groups_only",
+        "class_prior_scope": "train_groups_only"
+      },
+      "optional_dependencies": [
+        "mne>=1.12,<1.13",
+        "scikit-learn>=1.4",
+        "numpy>=1.26",
+        "scipy>=1.11"
+      ],
+      "audited_local_status": "unavailable_mne_CSP_incomplete_and_scikit_learn_absent"
+    },
+    {
+      "adapter_id": "regularized_riemannian_mdm",
+      "role": "motor_band_covariance_geometry_baseline",
+      "feature_contract": {
+        "input_view": "strictly_causal_8_to_30_Hz_view_from_future_registered_preprocessor",
+        "covariance": "per_item_spatial_covariance_with_fixed_0.1_trace_regularization",
+        "metric": "riemann",
+        "right_context_samples": 0,
+        "post_event_samples": 0
+      },
+      "estimator_contract": {
+        "class_centroid_fit_scope": "train_groups_only",
+        "class_prior_scope": "train_groups_only",
+        "check_or_final_adaptation": false
+      },
+      "optional_dependencies": [
+        "pyriemann>=0.12",
+        "scikit-learn>=1.4",
+        "numpy>=1.26",
+        "scipy>=1.11"
+      ],
+      "audited_local_status": "unavailable_pyriemann_and_scikit_learn_absent"
+    }
+  ],
+  "selection_contract": {
+    "families_registered_without_winner": 3,
+    "winner_selected_now": false,
+    "future_CSP_vs_Riemannian_choice_source": "separately_authorized_public_positive_control_only",
+    "protected_S20_selection_allowed": false,
+    "synthetic_fixture_selection_allowed": false,
+    "final_partition_selection_allowed": false,
+    "mandatory_future_comparator": "train_only_no_signal_prior"
+  },
+  "input_contract": {
+    "signals_layout": "items_channels_time",
+    "valid_mask_required": true,
+    "valid_lengths_required": true,
+    "strictly_pre_event_timestamps_required": true,
+    "channel_names_required": true,
+    "available_geometry_preserved": true,
+    "group_id_required": true,
+    "pair_id_required_when_available": true,
+    "partition_id_required": true,
+    "sampling_rate_required": true,
+    "target_values_in_plan": false,
+    "participant_identity_in_features": false,
+    "session_or_run_identity_in_features": false
+  },
+  "grouped_split_contract": {
+    "partitions": [
+      "train",
+      "check",
+      "final"
+    ],
+    "group_unit": "source_trial_or_execution_run_as_frozen_by_future_data_contract",
+    "synthetic_pair_is_group_surrogate_for_plan_tests": true,
+    "group_cross_partition_count_required": 0,
+    "pair_cross_partition_count_required": 0,
+    "duplicate_item_count_required": 0,
+    "row_level_random_split_allowed": false,
+    "split_reassignment_after_any_label_or_outcome": false,
+    "check_used_for_bounded_public_family_selection_only": true,
+    "final_used_once_after_prediction_freeze_only": true,
+    "final_is_not_scientific_in_synthetic_plan_tests": true
+  },
+  "fit_scope_contract": [
+    {
+      "stage": "causal_preprocessing_state",
+      "fit_scope": "train_groups_only_or_data_independent_frozen_state"
+    },
+    {
+      "stage": "channel_quality_or_selection",
+      "fit_scope": "train_groups_only_or_external_fixed_rule"
+    },
+    {
+      "stage": "feature_standardization",
+      "fit_scope": "train_groups_only"
+    },
+    {
+      "stage": "spatial_or_covariance_transform",
+      "fit_scope": "train_groups_only"
+    },
+    {
+      "stage": "classifier_or_class_centroid",
+      "fit_scope": "train_groups_only"
+    },
+    {
+      "stage": "class_prior",
+      "fit_scope": "train_groups_only"
+    }
+  ],
+  "evaluation_firewall": {
+    "check_target_values_available_to_fit_or_transform": false,
+    "final_target_values_available_before_prediction_freeze": false,
+    "evaluation_batch_statistics_allowed": false,
+    "test_time_adaptation_allowed": false,
+    "post_evaluation_parameter_update_allowed": false,
+    "semantic_marker_or_prompt_features_allowed": false,
+    "timing_or_event_position_features_allowed": false,
+    "target_derived_channel_or_feature_selection_allowed": false,
+    "language_model_or_autocomplete_allowed": false,
+    "forbidden_recursive_field_fragments": [
+      "target_text",
+      "reference_text",
+      "intended_text",
+      "performed_key",
+      "performed_hand",
+      "label_value",
+      "prediction_value",
+      "participant_id",
+      "subject_id",
+      "protected_path"
+    ]
+  },
+  "required_refusal_matrix": [
+    "group_cross_partition",
+    "pair_cross_partition",
+    "duplicate_item_identity",
+    "missing_group_identity",
+    "row_level_random_split",
+    "check_or_final_target_access",
+    "evaluation_time_fit_or_update",
+    "global_or_evaluation_normalization",
+    "post_event_or_right_context",
+    "forbidden_target_or_identity_field",
+    "unknown_or_unregistered_adapter",
+    "silent_dependency_fallback_or_substitution"
+  ],
+  "plan_fixture": {
+    "seed": 5504,
+    "source": "work_order_3_synthetic_identity_formula_without_array_payload_read",
+    "items": 96,
+    "groups": 48,
+    "factor_families": 8,
+    "partition_item_counts": {
+      "train": 48,
+      "check": 32,
+      "final": 16
+    },
+    "partition_group_counts": {
+      "train": 24,
+      "check": 16,
+      "final": 8
+    },
+    "actual_target_or_label_values_created_or_read": 0,
+    "array_payload_reads": 0
+  },
+  "resource_caps": {
+    "maximum_CPU_threads": 1,
+    "maximum_workers": 1,
+    "maximum_wall_seconds": 15,
+    "maximum_peak_RSS_bytes": 268435456,
+    "maximum_generated_output_bytes": 1048576,
+    "maximum_retained_plan_files": 1
+  },
+  "dependency_contract": {
+    "base_dependencies_added": false,
+    "optional_dependencies_installed_now": false,
+    "adapter_imports_attempted_now": false,
+    "specification_module_standard_library_only": true,
+    "future_imports_must_be_lazy": true,
+    "silent_fallback_between_adapter_families": false,
+    "missing_dependency_must_name_exact_optional_extra": true
+  },
+  "acceptance_gates": [
+    "three_adapter_specs_are_exact_and_no_winner_is_selected",
+    "audited_availability_is_routed_without_new_import_or_install",
+    "96_item_48_group_synthetic_plan_is_deterministic",
+    "train_check_final_group_and_pair_isolation_passes",
+    "all_six_fit_stages_are_train_only_or_data_independent",
+    "check_and_final_target_values_are_absent",
+    "post_event_and_right_context_are_zero",
+    "forbidden_recursive_fields_fail_closed",
+    "all_twelve_refusal_mutations_fail_closed",
+    "unknown_or_missing_dependency_cannot_silently_substitute",
+    "canonical_plan_hash_replays_exactly",
+    "runtime_RSS_output_thread_and_file_caps_pass",
+    "all_data_target_model_training_inference_scoring_network_and_hardware_counters_remain_zero",
+    "full_tests_ruff_compile_JSON_help_and_diff_checks_pass"
+  ],
+  "authorization": {
+    "tier_A_contract_documentation_tests_commit_push_and_CI_allowed": true,
+    "tier_B_standard_library_plan_builder_validator_and_synthetic_tests_allowed": true,
+    "optional_dependency_install_or_import_probe_allowed": false,
+    "adapter_feature_extraction_fit_inference_scoring_or_selection_allowed": false,
+    "real_public_or_protected_data_access_allowed": false,
+    "download_network_provider_stream_device_or_hardware_allowed": false,
+    "scientific_claim_upgrade_allowed": false,
+    "future_public_or_protected_execution_requires_separate_exact_tier_C_decision": true
+  },
+  "current_access_counters": {
+    "synthetic_plan_builds": 0,
+    "adapter_import_attempts": 0,
+    "optional_dependency_installs": 0,
+    "array_payload_reads": 0,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "public_EEG_payload_reads": 0,
+    "target_or_label_value_reads": 0,
+    "feature_extraction_runs": 0,
+    "parameter_update_runs": 0,
+    "model_inference_runs": 0,
+    "scoring_or_selection_runs": 0,
+    "network_calls": 0,
+    "provider_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "warnings": [
+    "These are adapter specifications and leakage controls, not fitted baselines.",
+    "The low-frequency substrate being locally available does not establish predictive value.",
+    "CSP-LDA and Riemannian MDM are unavailable locally and no install is authorized.",
+    "A future public positive control may select CSP or Riemannian; synthetic or protected outcomes may not.",
+    "Causal pre-event classification at a known event is not continuous or real-time decoding."
+  ],
+  "claim_boundary": {
+    "engineering_capability_if_all_gates_pass": "NeuroDecodeKit can express and validate leakage-resistant optional classical EEG adapter plans before installing or fitting them.",
+    "scientific_claim_not_established_even_if_all_gates_pass": "Adapter contracts establish no real EEG signal effect neural origin decoding accuracy generalization latency device home-use or clinical result."
+  }
+}
