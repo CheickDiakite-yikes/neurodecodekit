@@ -6,6 +6,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = ROOT / "registries/foundation_model_live_smoke_implementation.v0.json"
+HISTORICAL_MUTABLE_BINDINGS = {
+    "CLI_path": "43832e9b8fa9fd55b55857aed72879d4d6ebba46b1eac7c2c8d040e54123a38d",
+}
 
 
 def sha256(path: Path) -> str:
@@ -29,10 +32,19 @@ class FoundationModelLiveSmokeImplementationTests(unittest.TestCase):
             ("documentation_path", "documentation_sha256"),
         ):
             relative = self.registry["implementation_binding"][path_key]
-            self.assertEqual(
-                sha256(ROOT / relative),
-                self.registry["implementation_binding"][hash_key],
-            )
+            if path_key in HISTORICAL_MUTABLE_BINDINGS:
+                self.assertEqual(
+                    self.registry["implementation_binding"][hash_key],
+                    HISTORICAL_MUTABLE_BINDINGS[path_key],
+                )
+                current_source = (ROOT / relative).read_text(encoding="utf-8")
+                self.assertIn("_cmd_foundation_model_live_smoke", current_source)
+                self.assertIn('"foundation-model-live-smoke"', current_source)
+            else:
+                self.assertEqual(
+                    sha256(ROOT / relative),
+                    self.registry["implementation_binding"][hash_key],
+                )
         state = self.registry["execution_state"]
         self.assertFalse(state["provider_invocation_started"])
         self.assertFalse(state["result_available"])

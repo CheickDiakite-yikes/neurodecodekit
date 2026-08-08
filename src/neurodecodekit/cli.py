@@ -2624,6 +2624,23 @@ def _cmd_inspect_foundation_model_live_result(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_inspect_local_eeg_tooling(args: argparse.Namespace) -> int:
+    from neurodecodekit.evaluation.local_eeg_tooling import (
+        audit_local_eeg_tooling,
+        write_local_eeg_tooling_report,
+    )
+
+    maximum_output_bytes = int(args.max_output_mib * 1024 * 1024)
+    report = audit_local_eeg_tooling(
+        timeout_seconds=args.timeout_seconds,
+        max_output_bytes=maximum_output_bytes,
+    )
+    if args.out:
+        write_local_eeg_tooling_report(args.out, report)
+    print(json.dumps(report, indent=2, sort_keys=True))
+    return 0
+
+
 def _print_selection_plan(selection: Any, *, heading: str) -> None:
     from neurodecodekit.datasets.selection import format_bytes
 
@@ -4834,6 +4851,34 @@ def build_parser() -> argparse.ArgumentParser:
     )
     p.add_argument("--result", required=True, help="Bounded sanitized FM-1 result JSON.")
     p.set_defaults(func=_cmd_inspect_foundation_model_live_result)
+
+    p = sub.add_parser(
+        "inspect-local-eeg-tooling",
+        help="Audit installed local EEG libraries without network or data access.",
+        description=(
+            "Probe fixed optional EEG library capabilities in isolated zero-network "
+            "child processes. This command performs no install, download, data read, "
+            "model load, training, inference, or scoring operation."
+        ),
+    )
+    p.add_argument(
+        "--out",
+        default=None,
+        help="Optional new JSON report path; existing files are never overwritten.",
+    )
+    p.add_argument(
+        "--timeout-seconds",
+        type=float,
+        default=20.0,
+        help="Per-library isolated import timeout. Default: 20.",
+    )
+    p.add_argument(
+        "--max-output-mib",
+        type=float,
+        default=1.0,
+        help="Maximum retained JSON report size in MiB. Default: 1.",
+    )
+    p.set_defaults(func=_cmd_inspect_local_eeg_tooling)
 
     return parser
 
