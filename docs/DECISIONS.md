@@ -3661,3 +3661,55 @@ Evidence: `docs/FOUNDATION_MODEL_BRIDGE_V0.md`,
 `registries/foundation_model_bridge_v0.json`,
 `src/neurodecodekit/evaluation/foundation_model_bridge.py`, and
 `tests/test_foundation_model_bridge.py`.
+
+## 0105 - Qualify Terra Once On The Frozen Synthetic Matrix
+
+Decision: preserve `gpt-5.6-sol` as the quality-first product candidate while
+using lower-cost `gpt-5.6-terra` for one bounded FM-1 provider qualification.
+The question is whether the exact FM-0 matrix can traverse the Responses API
+and return through a strict schema, not whether any text is correct.
+
+Ordering decision: bind the provider surface and source hashes first, then
+record the user's exact execution decision separately, then commit and remotely
+qualify the implementation before any credential read or provider call.
+Contract commit `7db14d5` passed push CI `31267860543`; authorization commit
+`04fc009` passed push CI `31268358553`. The implementation milestone remains
+unexecuted until its own exact SHA is remotely green.
+
+Transport decision: issue at most the frozen 12 independent sequential
+requests to `https://api.openai.com/v1/responses` with model
+`gpt-5.6-terra`, low reasoning, default service, strict JSON Schema, no tools,
+`store=false`, `stream=false`, 256 output tokens per request, and zero retries.
+Read the existing `OPENAI_API_KEY` once only after every preflight gate passes.
+Never serialize, hash, persist, or surface the credential.
+
+Privacy decision: transmit only the committed synthetic task context, CTC
+hypotheses, and compact synthetic key evidence. Reject targets, references,
+labels, intended text, raw EEG/MEG, dense embeddings, NeuroTokens, identities,
+and local paths. Retain parsed structured outputs and bounded hashes, not raw
+provider IDs, headers, organization metadata, or error bodies.
+
+Receipt decision: bind every response to its frozen request and recompute all
+usage, price, byte, condition-summary, warning, and access-counter aggregates.
+A failed or partial invocation parks and consumes FM-1 without retry. Failed
+reply bodies survive only as byte count and SHA-256 so accounting remains exact
+without retaining provider content.
+
+Local measurement: the zero-network dry run rebuilt 12 requests totaling
+18,399 bytes in 0.004586541 seconds at 33,832,960-byte peak RSS. Thirteen
+focused implementation tests pass. Credential, network, model, spend,
+protected-read, target, training, fine-tuning, and scoring counters remain zero.
+
+Scientific boundary: FM-1 has no target and no real neural evidence. Even a
+clean provider run can establish only bounded transport, strict parsing,
+measured cost/latency, and descriptive behavior on this exact synthetic
+fixture. It cannot establish decoding accuracy, neural advantage,
+brain-specific information, generalization, real-time operation, portable
+hardware, home use, or clinical utility.
+
+Evidence: `docs/FOUNDATION_MODEL_LIVE_SMOKE_PREREGISTRATION.md`,
+`registries/foundation_model_live_smoke_contract.v0.json`,
+`docs/FOUNDATION_MODEL_LIVE_SMOKE_AUTHORIZATION_DECISION.md`,
+`registries/foundation_model_live_smoke_authorization_decision.v0.json`,
+`docs/FOUNDATION_MODEL_LIVE_SMOKE_IMPLEMENTATION.md`, and
+`registries/foundation_model_live_smoke_implementation.v0.json`.

@@ -1,0 +1,175 @@
+{
+  "schema_name": "neurodecodekit.foundation_model_live_smoke_implementation",
+  "schema_version": "0.1.0",
+  "created_at": "2026-08-08",
+  "stage_id": "FM-1",
+  "status": "implemented_locally_validated_not_executed_pending_remote_green",
+  "contract_binding": {
+    "path": "registries/foundation_model_live_smoke_contract.v0.json",
+    "sha256": "30dd5fc7475f4985e97f496166792a65d0f2e9353230652cb5c2526c74f86eae",
+    "commit": "7db14d51cbe8bde5a5d7ac43479b20e575e9ae7c",
+    "push_CI_run_id": 31267860543
+  },
+  "authorization_binding": {
+    "path": "registries/foundation_model_live_smoke_authorization_decision.v0.json",
+    "sha256": "01ba69b0fc1e1c3e372721076de4b75de9a9c92541d73fa4a95f8e56491b3295",
+    "commit": "04fc00987d2c68827054acaac32ab6edfae5430b",
+    "push_CI_run_id": 31268358553,
+    "exact_authorization_recorded": true
+  },
+  "source_binding": {
+    "fixture_path": "fixtures/foundation_model_bridge_synthetic_evidence.v0.json",
+    "fixture_bytes": 7327,
+    "fixture_sha256": "12f1b68f3241c80e4ba54872a3c97769e666ad2342f84328b1a5df91f0089bdb",
+    "rebuilt_plan_bytes": 34349,
+    "rebuilt_plan_file_sha256": "66f7af99c418945ac878608a64203277e1c7413680e0fd9c5af93f1b5b07d3be",
+    "rebuilt_plan_core_sha256": "355e018f6cd33d7a0d8213fa20eb0798f571c84e4c2e5a2f84dff33ed6c47b5d",
+    "item_count": 3,
+    "condition_count": 12
+  },
+  "implementation_binding": {
+    "module_path": "src/neurodecodekit/evaluation/foundation_model_live.py",
+    "module_sha256": "94d86776e444964b2af81055259579b8c23da8bc418f3a76fed546cd4cb304db",
+    "CLI_path": "src/neurodecodekit/cli.py",
+    "CLI_sha256": "43832e9b8fa9fd55b55857aed72879d4d6ebba46b1eac7c2c8d040e54123a38d",
+    "test_path": "tests/test_foundation_model_live.py",
+    "test_sha256": "49403188fa451adb1c36ce30a526fe1f958f156b6f51f00ef2afac9d1cfeda3f",
+    "documentation_path": "docs/FOUNDATION_MODEL_LIVE_SMOKE_IMPLEMENTATION.md",
+    "documentation_sha256": "19072f4d3299bf3af30bf785b7ef36814ab95349de9283459ad598dbe8a0c3a1"
+  },
+  "provider_request_contract": {
+    "provider": "OpenAI",
+    "endpoint": "https://api.openai.com/v1/responses",
+    "model_id": "gpt-5.6-terra",
+    "reasoning_effort": "low",
+    "service_tier": "default",
+    "store": false,
+    "stream": false,
+    "tools": [],
+    "structured_output": "strict_JSON_schema",
+    "maximum_output_tokens_per_request": 256,
+    "maximum_requests": 12,
+    "retry_count": 0,
+    "credential_environment_variable": "OPENAI_API_KEY",
+    "maximum_credential_reads": 1
+  },
+  "execution_guards": [
+    "contract_decision_fixture_plan_and_request_hash_verification",
+    "exact_current_implementation_commit",
+    "authorization_decision_is_ancestor",
+    "implementation_present_on_origin_branch",
+    "tracked_worktree_clean",
+    "new_nonsymlink_output",
+    "minimum_one_GiB_free_disk",
+    "one_thread_environment",
+    "fixed_endpoint_model_schema_and_budget",
+    "no_retry_or_substitution",
+    "bounded_sanitized_failure_receipt",
+    "strict_offline_result_revalidation"
+  ],
+  "privacy_guards": {
+    "credential_logged_serialized_hashed_or_persisted": false,
+    "provider_response_ID_or_headers_retained": false,
+    "provider_error_body_retained": false,
+    "raw_EEG_or_MEG_allowed": false,
+    "dense_embedding_or_NeuroToken_allowed": false,
+    "target_reference_label_or_intended_text_allowed": false,
+    "participant_identity_or_local_path_allowed": false,
+    "synthetic_blinded_structured_evidence_only": true
+  },
+  "local_dry_run": {
+    "request_count": 12,
+    "condition_counts": {
+      "FM-A00": 3,
+      "FM-A01": 3,
+      "FM-A02": 3,
+      "FM-A03": 3
+    },
+    "minimum_wire_request_bytes": 1047,
+    "maximum_wire_request_bytes": 1958,
+    "total_wire_request_bytes": 18399,
+    "runtime_seconds": 0.004586541,
+    "peak_RSS_bytes": 33832960
+  },
+  "focused_validation": {
+    "test_count": 13,
+    "passed": true,
+    "coverage": [
+      "deterministic_exact_plan_rebuild",
+      "twelve_blinded_request_shapes",
+      "dry_run_credential_and_network_isolation",
+      "bounded_successful_fake_transport",
+      "partial_failure_without_retry",
+      "oversized_response_parking",
+      "provider_model_binding",
+      "strict_structured_output_schema",
+      "malformed_usage_parking",
+      "output_token_cap_receipt",
+      "request_summary_and_claim_tamper_rejection",
+      "offline_sanitized_result_inspection",
+      "CLI_evidence_gates_and_help",
+      "fixed_endpoint_and_no_heavy_dependency"
+    ]
+  },
+  "precommit_acceptance": {
+    "complete_unit_suite_required": true,
+    "ruff_required": true,
+    "compileall_required": true,
+    "all_registry_JSON_required": true,
+    "CLI_help_and_zero_network_dry_run_required": true,
+    "git_diff_check_required": true,
+    "exact_implementation_commit_remote_green_required_before_execution": true,
+    "pre_change_complete_test_count": 1176,
+    "final_complete_test_count": 1193,
+    "expected_skip_count": 3,
+    "complete_suite_internal_runtime_seconds": 28.274,
+    "complete_suite_wall_seconds": 29.3,
+    "complete_suite_external_peak_RSS_bytes": 618086400,
+    "complete_unit_suite_passed": true,
+    "ruff_passed": true,
+    "compileall_passed": true,
+    "all_registry_JSON_passed": true,
+    "CLI_help_and_zero_network_dry_run_passed": true,
+    "git_diff_check_passed": true,
+    "remote_green_passed": false
+  },
+  "pricing_reverification": {
+    "checked_at": "2026-08-08",
+    "source": "https://developers.openai.com/api/docs/pricing",
+    "standard_input_USD_per_million_tokens": 2.0,
+    "standard_cached_input_USD_per_million_tokens": 0.2,
+    "registered_cache_write_input_USD_per_million_tokens": 2.5,
+    "standard_output_USD_per_million_tokens": 12.0,
+    "maximum_estimated_charge_USD": 0.5,
+    "provider_billing_is_authoritative": true
+  },
+  "current_access_counters": {
+    "external_network_calls": 0,
+    "API_credential_reads": 0,
+    "provider_spend_events": 0,
+    "provider_model_calls": 0,
+    "real_or_protected_data_reads": 0,
+    "target_or_reference_reads": 0,
+    "raw_or_dense_neural_uploads": 0,
+    "training_runs": 0,
+    "fine_tuning_runs": 0,
+    "scoring_runs": 0
+  },
+  "execution_state": {
+    "provider_invocation_started": false,
+    "result_available": false,
+    "stage_consumed": false,
+    "rerun_authorized": false
+  },
+  "warnings": [
+    "all provider behavior in unit tests comes from injected synthetic fake responses",
+    "the live provider has not been contacted at this milestone",
+    "the fixture has no target or reference text",
+    "descriptive output changes cannot establish correctness or neural information",
+    "execution remains blocked until the exact implementation commit is pushed and remotely green"
+  ],
+  "claim_boundary": {
+    "engineering_capability_added": "NeuroDecodeKit can deterministically build validate and dry-run the exact bounded FM-1 provider matrix and can consume it only after exact remote-green evidence.",
+    "scientific_claim_not_established": "No provider call real neural evidence target score training or fine-tuning occurred, so this implementation milestone establishes no decoding or neural result."
+  }
+}

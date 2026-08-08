@@ -2585,6 +2585,45 @@ def _cmd_inspect_foundation_model_ablation(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_foundation_model_live_smoke(args: argparse.Namespace) -> int:
+    from neurodecodekit.evaluation.foundation_model_live import (
+        ExecutionEvidence,
+        dry_run_summary,
+        execute_live_smoke,
+    )
+
+    if not args.execute:
+        summary = dry_run_summary()
+        print(json.dumps(summary, indent=2, sort_keys=True))
+        return 0
+    missing = []
+    if not args.out:
+        missing.append("--out")
+    if not args.implementation_commit:
+        missing.append("--implementation-commit")
+    if args.implementation_push_ci_run_id is None:
+        missing.append("--implementation-push-ci-run-id")
+    if missing:
+        raise ValueError(f"--execute requires: {', '.join(missing)}")
+    summary = execute_live_smoke(
+        args.out,
+        evidence=ExecutionEvidence(
+            implementation_commit=args.implementation_commit,
+            implementation_push_ci_run_id=args.implementation_push_ci_run_id,
+        ),
+    )
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0 if summary["status"] == "passed" else 1
+
+
+def _cmd_inspect_foundation_model_live_result(args: argparse.Namespace) -> int:
+    from neurodecodekit.evaluation.foundation_model_live import inspect_live_result
+
+    summary = inspect_live_result(args.result)
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    return 0
+
+
 def _print_selection_plan(selection: Any, *, heading: str) -> None:
     from neurodecodekit.datasets.selection import format_bytes
 
@@ -4761,6 +4800,40 @@ def build_parser() -> argparse.ArgumentParser:
     )
     p.add_argument("--plan", required=True, help="FM-0 ablation-plan JSON.")
     p.set_defaults(func=_cmd_inspect_foundation_model_ablation)
+
+    p = sub.add_parser(
+        "foundation-model-live-smoke",
+        help="Dry-run or consume the one authorized 12-call synthetic Terra qualification.",
+        description=(
+            "Dry-run by default with no credential or network access. --execute consumes the "
+            "single authorized 12-call synthetic GPT-5.6 Terra qualification."
+        ),
+    )
+    p.add_argument(
+        "--execute",
+        action="store_true",
+        help="Consume the one-shot provider invocation. Default is zero-network dry-run.",
+    )
+    p.add_argument("--out", default=None, help="New bounded sanitized result JSON path.")
+    p.add_argument(
+        "--implementation-commit",
+        default=None,
+        help="Full remotely green implementation commit SHA required by --execute.",
+    )
+    p.add_argument(
+        "--implementation-push-ci-run-id",
+        type=int,
+        default=None,
+        help="Successful push CI run ID for the exact implementation commit.",
+    )
+    p.set_defaults(func=_cmd_foundation_model_live_smoke)
+
+    p = sub.add_parser(
+        "inspect-foundation-model-live-result",
+        help="Validate and summarize a sanitized consumed FM-1 result without network access.",
+    )
+    p.add_argument("--result", required=True, help="Bounded sanitized FM-1 result JSON.")
+    p.set_defaults(func=_cmd_inspect_foundation_model_live_result)
 
     return parser
 

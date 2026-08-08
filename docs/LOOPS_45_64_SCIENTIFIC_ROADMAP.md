@@ -411,14 +411,22 @@ An additive decoder strategy now assigns the hosted language role to frozen
 receive structured CTC and key evidence, not raw EEG or custom hidden
 embeddings. The future parity surface must preserve all four matched arms,
 including full `FM-A02` and fixed item-deranged `FM-A03`, under one model and
-prompt. Only the FM-0 synthetic no-call bridge is eligible now; this does not
-authorize provider access, real replay, target delivery, or scoring. See
+prompt. FM-0 remains the deterministic no-call bridge. FM-1 is now separately
+preregistered and exactly authorized for one synthetic-only
+`gpt-5.6-terra` provider qualification, but it cannot execute until its exact
+implementation commit is pushed and remotely green. This does not authorize
+real replay, target delivery, scoring, training, tuning, or scientific claim
+promotion. See
 `docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md` and
-`registries/foundation_model_decoder_strategy.v0.json`. FM-0 is now locally
+`registries/foundation_model_decoder_strategy.v0.json`, plus
+`docs/FOUNDATION_MODEL_LIVE_SMOKE_IMPLEMENTATION.md`. FM-0 is locally
 implemented: 7,327 synthetic input bytes compiled into 12 plans and 34,349
 output bytes in 0.00275 seconds at about 21.5 MB peak RSS. The implementation
-contains no provider transport and does not change Loop 57's `Not Started`
-real-integration status.
+now also includes the bounded FM-1 transport and strict result inspector. Its
+zero-network dry run compiled 12 blinded wire requests totaling 18,399 bytes
+in 0.004586541 seconds at 33,832,960-byte peak RSS. All provider, credential,
+spend, protected-read, target, training, and scoring counters remain zero, and
+Loop 57's real-integration status remains `Not Started`.
 
 ### Loop 58 - Local Capture And Device Mechanics
 

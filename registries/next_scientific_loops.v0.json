@@ -273,14 +273,14 @@
       "core_question": "Does the exact trained preprocessing and encoder path produce semantically identical frames offline and incrementally?",
       "scientific_claim_target": "causal implementation parity only",
       "build_deliverable": "Join qualified Loop 45 preprocessing, frozen encoder, NeuroToken state, structured foundation-model evidence export, decoder request and response state, schedules, resumes, timestamps, and anomaly records.",
-      "data_scope": "FM-0 target-free no-call bridge is implemented over a 7,327-byte synthetic fixture and a 34,349-byte temporary plan; later authorized source-validation replay only, never S25 or consumed cohorts.",
+      "data_scope": "FM-0 target-free no-call bridge is implemented over a 7,327-byte synthetic fixture and a 34,349-byte temporary plan. FM-1 adds an implemented but not yet executed 12-request synthetic Terra transport over the same fixture; later source-validation replay remains separate and may never use S25 or consumed cohorts.",
       "controls": ["whole item", "single sample", "boundary splits", "seeded irregular", "resume cuts", "future mutation", "state hash", "zero right context"],
       "primary_metrics": ["frame identity", "timestamp identity", "decoder request and response state identity", "FM-A00 through FM-A03 condition identity", "revision trace", "right context", "runtime RSS bytes"],
       "acceptance_gate": "All registered schedules and resumes preserve semantic identity and declared causality within caps.",
       "kill_or_park_rule": "Any hidden future context or state mismatch blocks streaming claims and returns to the smallest failed layer.",
       "depends_on": [45, 47, 41],
       "future_resource_cap": "one thread; one worker; <=64 MiB generated; target-free first",
-      "authorization_boundary": "FM-0 synthetic no-call bridge work is eligible under the additive strategy; every provider call, credential read, spend event, fixture beyond that boundary, model, replay cache, and real integration stage requires its own applicable authorization decision."
+      "authorization_boundary": "FM-1 has one exact synthetic-only Terra authorization after green contract and decision commits, but execution remains blocked until the exact implementation commit is pushed and remotely green. That decision permits one 12-call no-retry run only; every real payload, protected row, target, score, training or tuning action, additional model or call, rerun, replay cache, and real integration stage requires its own applicable authorization decision."
     },
     {
       "loop_id": 58,

@@ -56,6 +56,10 @@ requests, and these files:
 - `registries/foundation_model_decoder_strategy.v0.json`
 - `docs/FOUNDATION_MODEL_BRIDGE_V0.md`
 - `registries/foundation_model_bridge_v0.json`
+- `docs/FOUNDATION_MODEL_LIVE_SMOKE_PREREGISTRATION.md`
+- `docs/FOUNDATION_MODEL_LIVE_SMOKE_AUTHORIZATION_DECISION.md`
+- `docs/FOUNDATION_MODEL_LIVE_SMOKE_IMPLEMENTATION.md`
+- `registries/foundation_model_live_smoke_implementation.v0.json`
 - `docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md`
 - `registries/loop32_research_boundary.v0.json`
 - `docs/POST_20_ROADMAP.md`
@@ -79,12 +83,18 @@ Do not reset, revert, delete, or overwrite work already present.
   parked synthetic CTC decoder, and the synthetic blank-intercept calibration
   are engineering results, not evidence of useful neural decoding.
 - The additive decoder direction uses a compact causal sensor adapter followed
-  by frozen `gpt-5.6-sol`. Only the FM-0 synthetic no-call bridge is eligible;
-  full `FM-A02` must eventually beat CTC-only and fixed item-deranged evidence
-  under the same model. FM-0 is implemented: 7,327 synthetic input bytes
-  compile into 12 plans and 34,349 bytes with no provider transport. No API
-  credential, provider call, protected row, target, score, or fine-tuning is
-  authorized by that implementation.
+  by frozen `gpt-5.6-sol`; FM-1 separately selects lower-cost
+  `gpt-5.6-terra` for one synthetic transport qualification. Full `FM-A02`
+  must eventually beat CTC-only and fixed item-deranged evidence under the
+  same model before any neural interpretation. The FM-0 no-call bridge is
+  implemented: 7,327
+  synthetic input bytes compile into 12 plans and 34,349 bytes. FM-1's
+  contract and exact authorization are remotely green, and the local transport
+  dry run builds 12 requests totaling 18,399 bytes without reading the key or
+  contacting the provider. Do not execute until the exact implementation
+  commit is pushed and remotely green. Then consume only the one authorized
+  no-retry synthetic run. Protected rows, targets, scoring, training,
+  fine-tuning, tuning from outputs, reruns, and claim upgrades remain closed.
 - RW1 closes metadata-only local intake. RW2 closes bounded, redacted signal
   reading and descriptive reporting on generated fixtures only: 38 readable
   sources pass and two malformed or unsafe layouts refuse exactly.

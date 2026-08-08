@@ -52,7 +52,7 @@ irreversible Tier C events.
 | Bounded AI research guard | A dependency-free Loop 55 policy now validates and hashes strict synthetic AI recipe proposals, rejects target leakage, future context, LLMs, pretrained weights, unknown fields, model runs, and cap expansion, and reserves at most four future train-inner proposal rounds inside the existing 12-fit ceiling | The synthetic interface is implemented and measured; no AI proposal has accessed S20, trained a model, or produced neural evidence, and any future real proposal phase remains Loop 54 dependent and separately Tier C authorized |
 | Open EEG R&D strategy | Current 2025-2026 evidence supports the compact specialist path and adds a prospective 23,248,224-byte public motor positive control, an interpretable motor-physiology rung, classical EEG baselines, and local-first contributor receipts | Research and planning only: no public EEG payload, S20 content, model, target, or pretrained weight was opened, and every real execution remains separately Tier C gated |
 | Causal Motor Lattice architecture | `CML-v0` assigns separate potential, mu, and beta views to rank-8 spatial mixers, fuses 72 features through a 24-value bottleneck, and derives hand probability exactly from a physical 29-key lattice; the 64-channel, 18-primitive reference has 4,535 parameters | Architecture research only: synthetic implementation is `Not Started`; PhysioNet laterality, EEG+EMG pre-movement timing, Loop 54, and protected S20 execution are separate unauthorized gates |
-| Foundation-model decoder bridge | FM-0 deterministically compiled 3 synthetic items into all 12 `FM-A00`-`FM-A03` request plans: 7,327 input bytes to 34,349 output bytes in 0.00275 seconds and about 21.5 MB peak RSS | The bridge is implemented and locally validated, but it made zero provider, credential, model, data, training, or scoring calls; `FM-A02` has not run and no decoding result exists |
+| Foundation-model decoder bridge | FM-0 deterministically compiled 3 synthetic items into all 12 `FM-A00`-`FM-A03` plans; FM-1 now builds the exact 12-request Terra wire matrix in a zero-network dry run: 18,399 request bytes in 0.00459 seconds and 33.8 MB peak RSS | The bounded provider transport is implemented and exactly authorized, but execution still waits for the implementation commit to be remotely green; provider, credential, model, spend, protected-data, target, training, and scoring counters remain zero, so no decoding result exists |
 | Cross-modality accessibility verdict design | Loop 56 freezes five verdict classes, 12 non-skippable capability levels, 18 EEG/MEG comparison dimensions, a 16-field claim sentence, and a 12-part at-home conjunction | Planning research is complete and Loop 55 result dependent; only modality-aware interfaces are shared, tested MEG/EEG predictors remain negative, S20 has acquisition evidence only, and no equivalence, transfer, real-time, device, home, or clinical claim exists |
 | Development-person intake planning | Loop 49 metadata research selects S24 session 2 block 2: one MEG FIF plus one protected MAT log, exactly `1,048,579,727` bytes; a future text-grouped split reserves 16 unique sentence groups for selection and requires at least 32 fit groups | S24 avoids the S1/S18 alias and preserves S25 final-only, but no S24 path or payload was opened and the `>=48` usable-row, channel, geometry, and overlap gates are unproven; Loop 49 remains `Not Started` |
 | Multi-source encoder planning | Loop 50 research freezes global text grouping, five-fold historical S21 out-of-fold diagnostics, one 16-group S24 development gate, equal-person loss, ten fixed conditions, and an exact 20-update inventory led by seed `5001` | Stage B route `L50-R05` now parks the same-family S24 path; Loop 50 remains `Not Started`, with S24 qualification, model selection, training, scoring, and every scientific claim unavailable |
@@ -599,9 +599,20 @@ Read this before interpreting any number in the repository.
   CTC-only, `FM-A02` matched CTC plus neural evidence, and `FM-A03` fixed
   item-deranged evidence. FM-0 is now implemented as a deterministic no-call
   compiler: its committed 7,327-byte fixture produced 12 plans in 34,349 bytes,
-  0.00275 seconds, and about 21.5 MB peak RSS. It has no OpenAI client or
-  executable provider path. External API use, credentials, spending, real
-  rows, target delivery, scoring, and claim promotion remain separately closed.
+  0.00275 seconds, and about 21.5 MB peak RSS. The additive FM-1 qualification
+  freezes `gpt-5.6-terra` as the lower-cost synthetic transport candidate while
+  preserving Sol as the quality-first product candidate. Its contract and
+  exact authorization are remotely green, and the dependency-free provider
+  runner now verifies commit ancestry, origin presence, clean tracked state,
+  disk/thread caps, blinded request hashes, strict structured output, token and
+  cost totals, sanitized failure receipts, and offline result replay. The latest
+  dry run built 12 requests totaling 18,399 bytes in 0.00459 seconds at
+  33,832,960-byte peak RSS without reading the credential or contacting the
+  provider. One 12-call synthetic invocation is authorized only after the exact
+  implementation commit is pushed and remotely green; it has no retry and can
+  establish provider mechanics and descriptive synthetic behavior only. Real
+  rows, targets, scoring, training, fine-tuning, and scientific claim promotion
+  remain closed.
 - **Loop 56 cross-modality accessibility research:** the planning boundary
   freezes five verdict classes, a 12-level capability ladder, 18 comparison
   dimensions, 16 mandatory claim fields, 28 gates, 34 refusals, and a 12-part
@@ -1361,6 +1372,10 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/DECISIONS.md](docs/DECISIONS.md) | consequential architecture and research decisions |
 | [docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md](docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md) | layered compact-adapter plus GPT-Sol architecture, four matched conditions, and staged authorization boundary |
 | [docs/FOUNDATION_MODEL_BRIDGE_V0.md](docs/FOUNDATION_MODEL_BRIDGE_V0.md) | implemented FM-0 synthetic no-call schemas, CLI, strict refusals, hashes, and measured roundtrip |
+| [docs/FOUNDATION_MODEL_LIVE_SMOKE_PREREGISTRATION.md](docs/FOUNDATION_MODEL_LIVE_SMOKE_PREREGISTRATION.md) | frozen one-shot FM-1 Terra matrix, privacy boundary, provider settings, resource caps, and no-science ceiling |
+| [docs/FOUNDATION_MODEL_LIVE_SMOKE_AUTHORIZATION_DECISION.md](docs/FOUNDATION_MODEL_LIVE_SMOKE_AUTHORIZATION_DECISION.md) | exact user authorization bound to the remotely green FM-1 contract |
+| [docs/FOUNDATION_MODEL_LIVE_SMOKE_IMPLEMENTATION.md](docs/FOUNDATION_MODEL_LIVE_SMOKE_IMPLEMENTATION.md) | dependency-free provider transport, dry-run and inspect CLI, strict receipts, local measurements, and pre-execution remote-green gate |
+| [registries/foundation_model_live_smoke_implementation.v0.json](registries/foundation_model_live_smoke_implementation.v0.json) | machine-readable FM-1 code hashes, request shape, guards, measurements, zero counters, and current not-executed state |
 | [docs/NEXT_20_LOOPS_TRACKER.md](docs/NEXT_20_LOOPS_TRACKER.md) | original 20-loop tracker, current post-roadmap gate, and planning-only Loops 25-44 summary |
 | [docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx](docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx) | ten-sheet visual tracker preserved at the last reviewed Stage A snapshot; use the Markdown tracker and machine roadmap for the current Stage B result because a prior workbook import reached 1.57 GiB peak RSS |
 | [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) | closed/current post-NeuroToken gates plus links to the next tranche |

@@ -12,10 +12,23 @@
 > `docs/FOUNDATION_MODEL_BRIDGE_V0.md` and
 > `registries/foundation_model_bridge_v0.json`. The committed 7,327-byte
 > no-call fixture compiles into all 12 request plans and 34,349 bytes in 0.00275 seconds
-> at about 21.5 MB peak RSS. The plan is not an OpenAI wire request and no
-> provider transport exists. Do not read an API credential, contact a provider,
-> spend funds, access protected data, score a target, or claim decoding
-> evidence from this implementation. Focused verification passes 35 tests;
+> at about 21.5 MB peak RSS. FM-1 now adds a separately frozen
+> synthetic-only Terra transport through
+> `docs/FOUNDATION_MODEL_LIVE_SMOKE_PREREGISTRATION.md`,
+> `docs/FOUNDATION_MODEL_LIVE_SMOKE_AUTHORIZATION_DECISION.md`, and
+> `docs/FOUNDATION_MODEL_LIVE_SMOKE_IMPLEMENTATION.md`. Contract commit
+> `7db14d5` and exact-decision commit `04fc009` are remotely green. The local
+> implementation rebuilds all 12 blinded requests, totaling 18,399 bytes, in
+> 0.004586541 seconds at 33,832,960-byte peak RSS; focused tests pass and every
+> irreversible counter is still zero. The full post-decision baseline advances
+> from 1,176 to 1,193 passing tests with 3 expected skips; Ruff, compileall,
+> every registry JSON, CLI dry-run/help, and diff hygiene pass. Do not execute
+> until the exact
+> implementation commit is pushed and remotely green. Then consume only the
+> one authorized 12-call `gpt-5.6-terra` invocation, with no retry, protected
+> content, target, training, scoring, tuning, model substitution, or claim
+> upgrade. FM-1 can establish provider mechanics and descriptive synthetic
+> behavior only. FM-0 focused verification passes 35 tests;
 > the full baseline advances from 1,129 to 1,164 passing tests with the same 3
 > expected skips. Ruff, compileall, all registry JSON, CLI help/roundtrip, and
 > diff hygiene pass.

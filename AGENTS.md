@@ -154,6 +154,8 @@ The additive foundation-model decoder strategy is now explicit:
 ```bash
 cat docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md
 python -m json.tool registries/foundation_model_decoder_strategy.v0.json >/dev/null
+cat docs/FOUNDATION_MODEL_LIVE_SMOKE_IMPLEMENTATION.md
+python -m json.tool registries/foundation_model_live_smoke_implementation.v0.json >/dev/null
 ```
 
 The intended product stack uses a compact causal sensor adapter followed by
@@ -164,9 +166,18 @@ The future full `FM-A02` arm must beat both CTC-only and fixed item-deranged
 evidence under the same model. FM-0 is now implemented as a synthetic no-call
 compiler: the 7,327-byte fixture produces 12 request plans and 34,349 bytes in
 0.00275 seconds at about 21.5 MB peak RSS. The plan is not a provider wire
-request and there is no transport. Do not read an API credential, contact a
-provider, spend funds, access protected data, score targets, or run fine-tuning
-from this implementation.
+request. FM-1 is now separately preregistered and exactly authorized for one
+synthetic-only `gpt-5.6-terra` qualification. Contract commit `7db14d5` passed
+push CI `31267860543`; decision commit `04fc009` passed push CI `31268358553`.
+The dependency-free transport, strict receipt validator, and dry-run/inspect
+CLI are implemented locally. The zero-network dry run built exactly 12 wire
+requests totaling 18,399 bytes in 0.004586541 seconds at 33,832,960-byte peak
+RSS; every credential, network, model, spend, protected-read, target, training,
+fine-tuning, and scoring counter remains zero. Do not execute FM-1 until this
+exact implementation is committed, pushed, and remotely green. After that
+gate, consume exactly the one authorized invocation with no retry and preserve
+its sanitized result. Do not send protected content, expand the model/call
+matrix, rerun, tune from outputs, score targets, or promote a scientific claim.
 
 Documentation-sync commit `b6785d7` passed push CI `29471589279` and PR #32
 CI `29471598364`; Base Python and Optional Neuro Readers passed in both.

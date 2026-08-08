@@ -153,8 +153,14 @@
 > CTC-only and fixed item-deranged evidence under the same model. FM-0 is now
 > implemented as a synthetic no-call compiler: 7,327 input bytes produced 12
 > request plans totaling 34,349 bytes in 0.00275 seconds at about 21.5 MB peak
-> RSS. Provider calls, credentials, spend, protected rows, targets, models,
-> scores, and scientific claims remain zero or unauthorized.
+> RSS. FM-1 is separately preregistered and exactly authorized as one bounded
+> synthetic `gpt-5.6-terra` provider qualification. Its local implementation
+> builds 12 blinded wire requests totaling 18,399 bytes in 0.004586541 seconds
+> at 33,832,960-byte peak RSS, with strict structured output, sanitized failure
+> receipts, and offline validation. It has not executed: provider calls,
+> credential reads, spend, protected rows, targets, scores, training, and
+> scientific claims remain zero. The exact implementation commit must be
+> pushed and remotely green before the one no-retry invocation can run.
 > Loop 56 planning research now freezes five verdict classes, 12 capability
 > levels, 18
 > comparison dimensions, 16 claim fields, 28 gates, 34 refusals, and a 12-part

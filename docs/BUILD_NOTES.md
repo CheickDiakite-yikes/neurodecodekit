@@ -4851,3 +4851,56 @@ four-condition foundation-model evidence experiment without a provider call.
 
 Scientific claim not established: `FM-A02` has not run, no model output or
 target exists, and FM-0 establishes no neural advantage or decoding result.
+
+## 2026-08-08 - FM-1 Terra Contract, Authorization, And Provider Runner
+
+- Preregistered one synthetic-only FM-1 Responses API qualification at commit
+  `7db14d5`. The contract freezes the committed 7,327-byte fixture, rebuilt
+  34,349-byte FM-0 plan, 12 independent requests, four blinded conditions,
+  `gpt-5.6-terra`, low reasoning, strict structured output, standard service,
+  no tools, no storage, no streaming, and no retries. Push CI `31267860543`
+  passed both required jobs.
+- Recorded the user's exact separate authorization at commit `04fc009` without
+  reading the environment credential or contacting the provider. Push CI
+  `31268358553` passed both required jobs.
+- Implemented a standard-library provider transport with no new base
+  dependency. It verifies every contract, decision, fixture, plan, and request
+  hash; requires exact implementation `HEAD`, decision ancestry, origin
+  presence, a clean tracked tree, one-thread settings, a new nonsymlink output,
+  and at least 1 GiB free disk before credential access.
+- Added a strict Responses request with fixed endpoint/model/reasoning/service,
+  `store=false`, `stream=false`, no tools, and a four-field JSON Schema. The
+  provider payload excludes condition/item identity, targets, references,
+  labels, intended text, raw EEG/MEG, dense embeddings, NeuroTokens,
+  participant identity, and local paths.
+- Added sanitized consumed receipts with exact request/response hashes, parsed
+  outputs, refusals, usage, estimated standard cost, byte totals, per-request
+  latency, condition summaries, descriptive pairing, warnings, unavailable
+  fields, and access counters. Raw response IDs, headers, provider error
+  bodies, organization metadata, and credentials are not retained.
+- Added fail-closed parking for transport, model, schema, usage, response-byte,
+  total-byte, token, cost, runtime, and RSS failures. There is no retry. Failed
+  response bodies are represented only by byte count and SHA-256.
+- Added dry-run and offline inspection CLI commands. The current dry run rebuilt
+  exactly 12 requests totaling 18,399 bytes, with a 1,047-byte minimum and
+  1,958-byte maximum, in 0.004586541 seconds at 33,832,960-byte peak RSS.
+- Focused implementation verification passes 13 tests covering exact replay,
+  zero-network isolation, fake success, partial failure, malformed replies,
+  cap parking, tamper rejection, offline inspection, CLI gates, and dependency
+  boundaries. The post-decision 1,176-test baseline advanced to 1,193 passing
+  tests with the same 3 expected skips in 28.274 seconds internal and 29.30
+  seconds wall time at 618,086,400-byte external peak RSS. Ruff, compileall,
+  every registry JSON, root and FM-1 CLI help, the zero-network dry run, and
+  diff hygiene pass. Exact remote-green implementation evidence remains
+  required before the one live invocation.
+- No API credential was read. External network calls, provider calls, spend
+  events, real/protected reads, target/reference reads, raw/dense neural
+  uploads, training, fine-tuning, and scoring all remain zero.
+
+Engineering capability added: NeuroDecodeKit now has a bounded, inspectable
+provider boundary for the frozen synthetic FM-1 matrix, gated on an exact
+remotely green implementation commit.
+
+Scientific claim not established: no provider output, real neural evidence,
+target, or score exists at this milestone, so no decoding or neural result was
+established.

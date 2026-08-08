@@ -170,6 +170,17 @@
    totaling 34,349 bytes in 0.00275 seconds at about 21.5 MB peak RSS. No
    provider call, credential, raw neural upload, protected row, target, model,
    score, or scientific claim opened.
+   Then read `docs/FOUNDATION_MODEL_LIVE_SMOKE_PREREGISTRATION.md`,
+   `docs/FOUNDATION_MODEL_LIVE_SMOKE_AUTHORIZATION_DECISION.md`,
+   `docs/FOUNDATION_MODEL_LIVE_SMOKE_IMPLEMENTATION.md`, and
+   `registries/foundation_model_live_smoke_implementation.v0.json`. FM-1 is a
+   separately frozen one-shot synthetic `gpt-5.6-terra` qualification. Its
+   contract and exact authorization commits are remotely green; the local
+   implementation builds 12 blinded wire requests totaling 18,399 bytes in
+   0.004586541 seconds at 33,832,960-byte peak RSS. It has not read the API key
+   or contacted the provider. Execution remains blocked until the exact
+   implementation commit is pushed and remotely green, then may run once with
+   no retry. FM-1 has no target and cannot establish decoding or neural value.
    Then read `docs/LOOP_56_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop56_cross_modality_accessibility_research.v0.json`. Loop 56
    freezes five verdict classes, a 12-level capability ladder, 18 comparison
