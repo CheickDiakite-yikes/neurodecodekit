@@ -80,6 +80,8 @@ requests, and these files:
 - `registries/classical_eeg_adapter_implementation.v0.json`
 - `docs/CLASSICAL_EEG_ADAPTER_RESULT.md`
 - `registries/classical_eeg_adapter_result.v0.json`
+- `docs/CONTACT_AWARE_EAR_CHANNEL_PREREGISTRATION.md`
+- `registries/contact_aware_ear_channel_contract.v0.json`
 - `docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md`
 - `registries/loop32_research_boundary.v0.json`
 - `docs/POST_20_ROADMAP.md`
@@ -141,11 +143,14 @@ Do not reset, revert, delete, or overwrite work already present.
 - Work order 4 is complete. Its standard-library planner keeps low-frequency
   shrinkage LDA, causal CSP-LDA, and Riemannian MDM unselected, with train-only
   fits, pair/group isolation, target-blind check/final use, zero future context,
-  canonical hashing, and twelve leakage refusals. Continue only work order 5:
-  freeze and synthetically qualify contact-mask, channel-noise, and
-  missing-channel semantics for an ear-channel adapter. Do not infer AirPods
-  capability, install or import an optional backend, connect hardware, read
-  arrays, fit, infer, select, score, or access real/public data.
+  canonical hashing, and twelve leakage refusals. Continue only work order 5.
+  Its frozen synthetic contract uses seed 5505, 48 items, 16 generic bilateral
+  channels, six masks, a fixed target-blind four-per-side policy, equal side
+  weights, and 16 refusals. Obtain exact-contract green CI before implementing
+  the lazy-NumPy synthetic fixture, adapter, validator, inspector, mutations,
+  and CLI. Do not infer AirPods capability, implement physical switching,
+  install an optional backend, connect hardware, fit, infer, select, score, or
+  access real/public data.
 - RW1 closes metadata-only local intake. RW2 closes bounded, redacted signal
   reading and descriptive reporting on generated fixtures only: 38 readable
   sources pass and two malformed or unsafe layouts refuse exactly.

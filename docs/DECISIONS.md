@@ -3962,3 +3962,35 @@ utility.
 
 Evidence: `docs/CLASSICAL_EEG_ADAPTER_RESULT.md` and
 `registries/classical_eeg_adapter_result.v0.json`.
+
+## 0115 - Freeze A Generic Contact-Aware Ear-Channel Interface
+
+Decision: define Work Order 5 as a synthetic post-acquisition adapter, not a
+device controller. Preserve all 16 generic bilateral source channels and their
+reference state while keeping observed, present, contact-valid, eligible,
+selected, and adapted-observed masks distinct.
+
+Reason: ear-centered research systems and the cited patent make variable
+contact and channel subsets credible engineering concerns, but a patent is not
+an implementation license or product result. A fixed quality rule can qualify
+missingness and provenance semantics without copying hardware topology,
+installing a package, or touching a signal.
+
+Frozen policy: require valid contact score at least `0.6`, noise score at most
+`0.4`, and at least `95%` observed pre-event samples. Select at most four and at
+least two channels per side with a fixed tie break and equal `0.5/0.5` side
+weight. If either side is insufficient, select none. Unknown impedance and
+measured geometry remain unavailable.
+
+Gate: commit, push, and obtain remote-green CI for the exact contract before
+implementing a lazy-NumPy synthetic fixture. Require a second green
+implementation commit before one measured synthetic roundtrip. No real data,
+hardware, physical switching, model, fit, inference, score, or claim is
+authorized.
+
+Scientific boundary: passing masks and selection mechanics establishes no real
+ear-EEG quality, brain-specific source, decoding, portability, home use, or
+clinical utility.
+
+Evidence: `docs/CONTACT_AWARE_EAR_CHANNEL_PREREGISTRATION.md` and
+`registries/contact_aware_ear_channel_contract.v0.json`.

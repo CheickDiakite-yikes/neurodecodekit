@@ -5231,3 +5231,36 @@ classical EEG adapters.
 Scientific claim not established: no EEG adapter was executed and no real
 neural effect, decoding accuracy, generalization, latency, device performance,
 home use, or clinical result was established.
+
+## 2026-08-08 - Contact-Aware Ear-Channel Contract
+
+- Used the Apple dynamic-electrode application, OpenBCI cEEGrid documentation,
+  the original cEEGrid paper, and the open OpenBCI-cEEGrid adapter paper only to
+  bound the engineering problem. The contract does not infer current AirPods
+  capability, freedom to operate, brain-specific origin, or decoding.
+- Froze a generic post-acquisition interface with seed 5505, 48 items, 16
+  bilateral source channels, 256 strictly pre-event samples at 128 Hz, and
+  eight six-item contact/noise/missingness scenarios.
+- Kept observed, channel-present, contact-valid, eligible, selected, and
+  adapted-observed masks separate. Zero fill is transport encoding only; it is
+  never measured or imputed signal.
+- Froze a target-blind rule: contact score at least 0.6, noise at most 0.4,
+  observed fraction at least 0.95, maximum four and minimum two channels per
+  side, equal side weight, stable source-index tie break, and select-none on
+  insufficient bilateral contact.
+- Registered 16 fail-closed mutations spanning identity, source order,
+  nonfinite observations, invalid selection, side caps and weights, zero-fill
+  semantics, invented impedance/geometry, target fields, and future context.
+- Seven focused contract tests pass. The complete pre-implementation suite
+  passes 1,286 tests with three expected skips and 469 subtests in 34.24
+  seconds wall time at 621,395,968-byte peak RSS.
+- Every payload, data, target, adapter, model, training, inference, scoring,
+  network, provider, stream, device, hardware, and claim counter remains zero.
+
+Engineering capability proposed: NeuroDecodeKit can preserve and validate
+contact quality, missingness, bilateral selection, and mask semantics for a
+bounded synthetic ear-channel interface.
+
+Scientific claim not established: no real ear EEG hardware signal, brain
+origin, decoding accuracy, generalization, latency, home-use, or clinical
+result is established.

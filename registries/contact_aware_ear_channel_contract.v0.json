@@ -1,0 +1,398 @@
+{
+  "schema_name": "neurodecodekit.contact_aware_ear_channel_contract",
+  "schema_version": "0.1.0",
+  "status": "preregistered_tier_B_synthetic_only_not_implemented_not_executed",
+  "date": "2026-08-08",
+  "work_order": 5,
+  "title": "Generic Contact-Aware Ear-Channel Adapter Contract",
+  "source_bindings": {
+    "AI_local_first_budget": {
+      "path": "registries/ai_local_first_rd_budget.v0.json",
+      "sha256": "6b4ed9cdc2acbb915215c4dacf1137d58abe337e3a02c4457e49e626530b4b1b"
+    },
+    "classical_adapter_result": {
+      "path": "registries/classical_eeg_adapter_result.v0.json",
+      "sha256": "6425b9baa09d5138affdcb4ee1de4144f44aa9ffad671667c004efff94901862"
+    },
+    "synthetic_motor_result": {
+      "path": "registries/synthetic_motor_fixture_result.v0.json",
+      "sha256": "3a250ccaebdf29e89d52089391c8f10e28f7c5bb51ed96aba82dddfebd21600a"
+    },
+    "modality_representation_research": {
+      "path": "registries/loop36_research_boundary.v0.json",
+      "sha256": "a621d79a46a8ac20af75cfd077e933a901d4f8a38e39648cdb5e0bff4c6897b4"
+    },
+    "autonomy_charter": {
+      "path": "docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md",
+      "sha256": "c9381bfc729dfca4aaab03929a6623f23c3cf06eb33fbae5379b0517981dcb64"
+    },
+    "autonomy_decision": {
+      "path": "docs/RESEARCH_AUTONOMY_CHARTER_DECISION.md",
+      "sha256": "700d7243ff53b191c2bd262424efe45cc5a5e40200b115503a84d3563c93e7b7"
+    }
+  },
+  "primary_source_boundaries": [
+    {
+      "source_id": "US20230225659A1",
+      "url": "https://patents.google.com/patent/US20230225659A1/en",
+      "supports": [
+        "ear_worn_multiple_electrode_research_direction",
+        "dynamic_subset_selection_based_on_impedance_or_noise",
+        "separate_active_and_reference_electrode_roles"
+      ],
+      "does_not_support": [
+        "current_AirPods_EEG_capability",
+        "open_source_implementation_license",
+        "freedom_to_operate",
+        "thought_to_text_or_decoding_result"
+      ]
+    },
+    {
+      "source_id": "OpenBCI_cEEGrid_documentation",
+      "url": "https://docs.openbci.com/ThirdParty/cEEGrid_Kit/",
+      "supports": [
+        "concrete_16_channel_around_the_ear_research_surface",
+        "OpenBCI_GUI_and_BrainFlow_compatibility"
+      ],
+      "does_not_support": [
+        "compatibility_with_current_consumer_earbuds",
+        "brain_specific_origin_for_any_future_prediction"
+      ]
+    },
+    {
+      "source_id": "Bleichner_Debener_2017_cEEGrid",
+      "url": "https://doi.org/10.3389/fnhum.2017.00163",
+      "supports": [
+        "around_the_ear_multichannel_EEG_feasibility",
+        "brain_and_nonbrain_source_sensitivity"
+      ],
+      "does_not_support": [
+        "typing_decoding_transfer",
+        "portable_thought_to_text"
+      ]
+    },
+    {
+      "source_id": "Knierim_Schemmer_Bauer_2022_OpenBCI_cEEGrid",
+      "url": "https://doi.org/10.1016/j.ohx.2022.e00357",
+      "supports": [
+        "open_research_hardware_adapter_precedent",
+        "importance_of_impedance_and_mechanical_artifact_visibility"
+      ],
+      "does_not_support": [
+        "NeuroDecodeKit_hardware_execution_now",
+        "neural_origin_of_large_amplitude_ear_signals"
+      ]
+    }
+  ],
+  "scope": {
+    "generic_post_acquisition_channel_adapter_only": true,
+    "synthetic_fixture_generation_and_validation_only": true,
+    "physical_electrode_switching_or_control": false,
+    "active_or_reference_electrode_selection": false,
+    "real_or_public_data_access": false,
+    "hardware_purchase_connection_or_recording": false,
+    "target_or_label_value_access": false,
+    "feature_extraction_for_prediction": false,
+    "parameter_update": false,
+    "model_inference": false,
+    "training": false,
+    "scoring_or_selection_by_outcome": false,
+    "scientific_claim_upgrade": false
+  },
+  "adapter_boundary": {
+    "adapter_id": "generic_contact_aware_ear_channel_v0",
+    "input_is_already_acquired_differential_channels": true,
+    "source_channel_order_preserved": true,
+    "source_signal_preserved_verbatim": true,
+    "source_reference_state_preserved": true,
+    "physical_reference_or_ground_reconfiguration": false,
+    "channel_interpolation": false,
+    "missing_channel_imputation": false,
+    "rereferencing": false,
+    "learned_quality_or_selection_model": false,
+    "target_or_outcome_selected_threshold": false,
+    "adapter_output": "source_order_signal_plus_explicit_masks_and_target_blind_weights",
+    "zero_fill_semantics": "transport_encoding_only_never_measured_signal"
+  },
+  "synthetic_fixture": {
+    "seed": 5505,
+    "items": 48,
+    "channels": 16,
+    "channels_per_side": 8,
+    "samples_per_item": 256,
+    "sampling_rate_hz": 128.0,
+    "window_start_sec": -2.0,
+    "window_stop_sec_exclusive": 0.0,
+    "scenario_item_count": 6,
+    "scenario_ids": [
+      "all_contacts_observed",
+      "left_partial_contact_loss",
+      "right_partial_contact_loss",
+      "bilateral_sparse_contact",
+      "unknown_contact_quality",
+      "line_noise_contamination",
+      "common_mode_motion_contamination",
+      "mixed_dropout_noise_contact"
+    ],
+    "channel_name_formula": "ear-{L_or_R}{00_through_07}",
+    "geometry_fields": [
+      "ear_side",
+      "synthetic_ring_index",
+      "geometry_provenance"
+    ],
+    "geometry_provenance": "synthetic_nominal_not_measured_not_anatomical",
+    "target_or_label_values_created_or_read": 0,
+    "participant_session_trial_or_device_identity_created": false
+  },
+  "array_contract": {
+    "signals": {
+      "shape": [48, 16, 256],
+      "dtype": "float32",
+      "meaning": "synthetic_source_signal_in_source_order"
+    },
+    "observed_mask": {
+      "shape": [48, 16, 256],
+      "dtype": "bool",
+      "meaning": "true_only_for_finite_physically_observed_synthetic_samples"
+    },
+    "channel_present_mask": {
+      "shape": [48, 16],
+      "dtype": "bool",
+      "meaning": "source_channel_exists_for_item"
+    },
+    "contact_score": {
+      "shape": [48, 16],
+      "dtype": "float32",
+      "range": [0.0, 1.0],
+      "meaning": "synthetic_normalized_device_quality_proxy_not_impedance"
+    },
+    "contact_score_valid_mask": {
+      "shape": [48, 16],
+      "dtype": "bool"
+    },
+    "noise_score": {
+      "shape": [48, 16],
+      "dtype": "float32",
+      "range": [0.0, 1.0],
+      "meaning": "synthetic_normalized_pre_event_noise_proxy"
+    },
+    "eligible_mask": {
+      "shape": [48, 16],
+      "dtype": "bool"
+    },
+    "selected_mask": {
+      "shape": [48, 16],
+      "dtype": "bool"
+    },
+    "selection_weight": {
+      "shape": [48, 16],
+      "dtype": "float32"
+    },
+    "adapted_signal": {
+      "shape": [48, 16, 256],
+      "dtype": "float32",
+      "meaning": "masked_weighted_transport_values_with_measured_status_carried_separately"
+    },
+    "adapted_observed_mask": {
+      "shape": [48, 16, 256],
+      "dtype": "bool",
+      "meaning": "observed_mask_and_selected_mask"
+    },
+    "time_sec": {
+      "shape": [256],
+      "dtype": "float64",
+      "right_endpoint_exclusive": true
+    }
+  },
+  "quality_and_selection_policy": {
+    "policy_version": "fixed_quality_rank_v0",
+    "policy_fit_or_learning": false,
+    "contact_score_source": "declared_synthetic_quality_proxy_with_validity_mask",
+    "impedance_ohm_available": false,
+    "impedance_invention_allowed": false,
+    "minimum_contact_score": 0.6,
+    "maximum_noise_score": 0.4,
+    "minimum_observed_fraction": 0.95,
+    "rank_score_formula": "0.6*contact_score+0.4*(1-noise_score)",
+    "stable_tie_break": "ascending_source_channel_index",
+    "maximum_selected_channels_per_side": 4,
+    "minimum_selected_channels_per_side": 2,
+    "bilateral_minimum_required": true,
+    "insufficient_bilateral_action": "select_none_and_emit_explicit_status",
+    "unknown_contact_action": "ineligible",
+    "selected_weight_total_left": 0.5,
+    "selected_weight_total_right": 0.5,
+    "weights_nonnegative": true,
+    "weights_outside_selected_mask": 0.0,
+    "quality_uses_target_or_outcome": false,
+    "quality_uses_post_event_samples": false,
+    "quality_uses_cross_item_evaluation_statistics": false
+  },
+  "identity_and_provenance_contract": {
+    "item_id_required": true,
+    "source_channel_name_required": true,
+    "source_channel_index_required": true,
+    "ear_side_required": true,
+    "source_sampling_rate_required": true,
+    "source_reference_state_required": true,
+    "quality_metric_provenance_required": true,
+    "mask_reason_per_unavailable_channel_required": true,
+    "configuration_hash_required": true,
+    "payload_hash_required": true,
+    "metadata_hash_required": true,
+    "source_order_hash_required": true,
+    "selected_subset_and_weight_hash_required": true,
+    "geometry_may_be_measured_when_only_synthetic_nominal": false
+  },
+  "causality_contract": {
+    "producer_is_causal_at_event_boundary": true,
+    "required_left_context_samples": 256,
+    "required_right_context_samples": 0,
+    "post_event_samples": 0,
+    "selection_decision_time_sec": 0.0,
+    "decision_endpoint_exclusive": true,
+    "future_tail_prefix_invariance_required": true,
+    "streaming_latency_measured": false,
+    "end_to_end_latency_measured": false
+  },
+  "required_refusal_matrix": [
+    "duplicate_or_missing_channel_identity",
+    "unknown_or_mismatched_ear_side",
+    "payload_sidecar_source_order_drift",
+    "nonfinite_sample_marked_observed",
+    "absent_channel_marked_selected",
+    "invalid_or_unknown_contact_marked_selected",
+    "over_noise_threshold_channel_marked_selected",
+    "bilateral_minimum_not_met_but_selection_emitted",
+    "selected_channel_count_above_side_cap",
+    "nonzero_weight_outside_selected_mask",
+    "left_or_right_weight_total_mismatch",
+    "zero_filled_missing_value_marked_measured",
+    "invented_impedance_or_contact_provenance",
+    "measured_geometry_claim_from_synthetic_nominal_fields",
+    "forbidden_target_identity_or_outcome_field",
+    "post_event_or_right_context_dependency"
+  ],
+  "serialization_contract": {
+    "payload_format": "compressed_NPZ",
+    "metadata_format": "canonical_JSON_sidecar",
+    "metadata_only_inspector_opens_array_members": 0,
+    "collision_policy": "refuse_existing_output",
+    "hash_algorithm": "SHA-256",
+    "strict_unknown_field_refusal": true,
+    "generated_fixture_committed": false,
+    "measured_fixture_retained_after_closeout": false
+  },
+  "resource_caps": {
+    "maximum_CPU_threads": 1,
+    "maximum_workers": 1,
+    "maximum_wall_seconds": 60,
+    "maximum_peak_RSS_bytes": 268435456,
+    "maximum_generated_output_bytes": 4194304,
+    "maximum_generated_files": 2,
+    "maximum_retained_generated_files_after_closeout": 0,
+    "maximum_network_bytes": 0,
+    "minimum_free_disk_bytes_before_execution": 1073741824
+  },
+  "dependency_contract": {
+    "base_dependencies_added": false,
+    "implementation_optional_extra": "array",
+    "implementation_requires_only_numpy": true,
+    "numpy_import_must_be_lazy": true,
+    "scipy_MNE_sklearn_pyRiemann_torch_imports_allowed": false,
+    "optional_dependency_install_allowed_now": false,
+    "model_or_hardware_SDK_dependency_allowed": false
+  },
+  "preimplementation_verification": {
+    "focused_contract_tests_passed": 7,
+    "complete_tests_passed": 1286,
+    "complete_tests_skipped": 3,
+    "complete_subtests_passed": 469,
+    "complete_test_wall_seconds": 34.24,
+    "complete_test_peak_RSS_bytes": 621395968,
+    "note": "Complete-suite RSS is not judged against the future single-fixture 256 MiB cap."
+  },
+  "acceptance_gates": [
+    "all_source_bindings_match_exactly",
+    "48_item_16_channel_seed_5505_replay_is_byte_identical",
+    "all_eight_scenarios_have_six_items",
+    "source_order_signal_and_reference_state_are_preserved",
+    "observed_present_contact_valid_eligible_selected_and_adapted_masks_are_distinct",
+    "missing_values_are_never_labeled_measured_or_imputed",
+    "fixed_policy_selects_at_most_four_and_at_least_two_channels_per_side_or_none",
+    "left_and_right_selected_weights_each_sum_to_0_5_or_all_weights_are_zero",
+    "unknown_contact_impedance_and_geometry_remain_explicitly_unavailable",
+    "all_sixteen_refusal_mutations_fail_closed",
+    "future_tail_prefix_invariance_passes",
+    "canonical_metadata_and_payload_hashes_replay_exactly",
+    "metadata_only_inspector_opens_zero_arrays",
+    "collision_unknown_field_malformed_payload_and_output_cap_tests_pass",
+    "runtime_RSS_output_thread_worker_and_disk_gates_pass",
+    "all_data_target_model_training_inference_scoring_network_provider_and_hardware_counters_remain_zero",
+    "full_tests_ruff_compile_JSON_help_and_diff_checks_pass",
+    "all_gates_pass"
+  ],
+  "implementation_order": [
+    "commit_push_and_obtain_remote_green_for_this_exact_contract",
+    "implement_lazy_numpy_fixture_adapter_validator_mutations_and_metadata_only_inspector",
+    "commit_push_and_obtain_remote_green_for_exact_implementation",
+    "run_exactly_one_measured_synthetic_create_and_inspect_roundtrip",
+    "remove_both_generated_files_and_retain_only_aggregate_receipt",
+    "commit_push_and_obtain_remote_green_for_closeout"
+  ],
+  "authorization": {
+    "tier_A_research_documentation_tests_commit_push_and_CI_allowed": true,
+    "tier_B_lazy_numpy_synthetic_implementation_allowed_after_contract_green": true,
+    "one_measured_synthetic_roundtrip_allowed_after_implementation_green": true,
+    "optional_dependency_install_allowed": false,
+    "real_public_or_protected_data_access_allowed": false,
+    "physical_electrode_switching_or_hardware_allowed": false,
+    "feature_fit_inference_training_scoring_or_outcome_selection_allowed": false,
+    "download_network_provider_stream_or_device_allowed": false,
+    "scientific_claim_upgrade_allowed": false
+  },
+  "current_access_counters": {
+    "synthetic_payload_generations": 0,
+    "array_payload_reads": 0,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "real_or_protected_data_reads": 0,
+    "public_EEG_payload_reads": 0,
+    "target_or_label_value_reads": 0,
+    "adapter_backend_imports": 0,
+    "feature_extraction_runs": 0,
+    "parameter_update_runs": 0,
+    "model_inference_runs": 0,
+    "training_runs": 0,
+    "scoring_or_selection_by_outcome_runs": 0,
+    "network_calls": 0,
+    "provider_calls": 0,
+    "hardware_or_device_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "warnings": [
+    "The 16 channels and bilateral ring indices are synthetic interface fixtures, not a copied device layout or anatomical montage.",
+    "A normalized contact score is not impedance and must never be reported in ohms.",
+    "Zero-filled transport values remain missing and require the adapted observed mask.",
+    "The adapter operates after acquisition and does not control active or reference electrodes.",
+    "Ear-centered signals may contain brain, muscle, eye, motion, cardiac, and environmental components.",
+    "A patent application and open research hardware do not establish consumer-earbud capability or freedom to operate."
+  ],
+  "unavailable_fields": [
+    "measured_electrode_positions",
+    "measured_impedance_ohm",
+    "physical_active_reference_or_ground_topology",
+    "real_ear_EEG_signal_quality",
+    "brain_specific_origin",
+    "typing_or_language_decoding_accuracy",
+    "unseen_person_generalization",
+    "streaming_or_end_to_end_latency",
+    "current_consumer_earbud_support",
+    "home_or_clinical_utility",
+    "freedom_to_operate"
+  ],
+  "claim_boundary": {
+    "engineering_capability_if_all_gates_pass": "NeuroDecodeKit can preserve and validate contact quality missingness bilateral selection and mask semantics for a bounded synthetic ear-channel interface.",
+    "scientific_claim_not_established": "No real ear EEG hardware signal brain origin decoding accuracy generalization latency home-use or clinical result is established."
+  }
+}

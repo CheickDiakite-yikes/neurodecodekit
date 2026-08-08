@@ -197,12 +197,24 @@ zero post-event context, twelve leakage refusals, one thread/worker, 15 seconds,
 in 0.12 seconds at 22,822,912-byte peak RSS with 27,335 output bytes; the plan
 was removed. No adapter was selected, imported, fitted, inferred, or scored.
 
-Work order 5 is now the only active autonomous task. Freeze and synthetically
-qualify exact contact-mask, channel-noise, and missing-channel semantics for an
-ear-channel adapter. Do not infer current AirPods capability, implement patent
-claims, connect hardware, install a dependency, read real/public data, or run a
-model. CML-v0, S20, PhysioNet, targets, training, inference, scoring, hardware,
-and scientific claims remain separately gated.
+Work order 5 is now the only active autonomous task. Its synthetic-only contract
+is frozen:
+
+```bash
+cat docs/CONTACT_AWARE_EAR_CHANNEL_PREREGISTRATION.md
+python -m json.tool registries/contact_aware_ear_channel_contract.v0.json >/dev/null
+```
+
+Seed 5505 defines 48 items, 16 generic bilateral channels, six distinct mask
+semantics, a fixed target-blind maximum-four/minimum-two-per-side policy, equal
+side weights, 16 refusals, one thread/worker, 60 seconds, 256 MiB RSS, and 4 MiB
+output. After this exact contract commit is remotely green, implement only the
+lazy-NumPy synthetic generator, post-acquisition adapter, validator, mutation
+suite, metadata-only inspector, and CLI. Do not infer current AirPods
+capability, copy or implement patent claims, control physical electrodes,
+connect hardware, install a dependency, read real/public data, or run a model.
+CML-v0, S20, PhysioNet, targets, training, inference, scoring, hardware, and
+scientific claims remain separately gated.
 
 The additive architecture pass now selects `CML-v0` as the next hypothesis:
 

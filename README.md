@@ -579,8 +579,11 @@ Read this before interpreting any number in the repository.
   All 18 gates passed in `0.12` seconds at `22,822,912`-byte peak RSS with a
   27,335-byte plan that was removed. This qualifies the interface and leakage
   guards only; no adapter was selected, imported, fitted, inferred, or scored.
-  Work order 5 now targets synthetic contact-mask, channel-noise, and
-  missing-channel semantics without hardware or real data.
+  Work order 5 now freezes synthetic contact-mask, channel-noise, and
+  missing-channel semantics: 48 seed-5505 items, 16 generic bilateral channels,
+  six separate masks, a fixed four-per-side target-blind policy, and 16
+  fail-closed mutations. It is a post-acquisition interface, not physical
+  switching, a consumer-earbud claim, hardware work, or real data.
 - **Loop 55 EEG neural-effect research:** planning commit `f3158c7` freezes two
   ordered causal endpoints from the same future final trials: performed-hand
   error and 29-class performed-key keypress-aligned CER. It makes performed
@@ -1442,6 +1445,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/classical_eeg_adapter_implementation.v0.json](registries/classical_eeg_adapter_implementation.v0.json) | hash-bound pre-execution work-order-4 implementation sources, tests, resources, and zero-access ledger |
 | [docs/CLASSICAL_EEG_ADAPTER_RESULT.md](docs/CLASSICAL_EEG_ADAPTER_RESULT.md) | consumed one-shot symbolic roundtrip with bytes, runtime, RSS, refusals, access counters, and no-science boundary |
 | [registries/classical_eeg_adapter_result.v0.json](registries/classical_eeg_adapter_result.v0.json) | machine-readable all-gates-pass work-order-4 receipt and route to synthetic contact semantics |
+| [docs/CONTACT_AWARE_EAR_CHANNEL_PREREGISTRATION.md](docs/CONTACT_AWARE_EAR_CHANNEL_PREREGISTRATION.md) | primary-source-bounded work-order-5 contact, missingness, bilateral weighting, causality, and no-hardware contract |
+| [registries/contact_aware_ear_channel_contract.v0.json](registries/contact_aware_ear_channel_contract.v0.json) | machine-readable 48-item, 16-channel, 16-refusal synthetic ear-channel contract and zero-action ledger |
 | [docs/NEXT_20_LOOPS_TRACKER.md](docs/NEXT_20_LOOPS_TRACKER.md) | original 20-loop tracker, current post-roadmap gate, and planning-only Loops 25-44 summary |
 | [docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx](docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx) | ten-sheet visual tracker preserved at the last reviewed Stage A snapshot; use the Markdown tracker and machine roadmap for the current Stage B result because a prior workbook import reached 1.57 GiB peak RSS |
 | [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) | closed/current post-NeuroToken gates plus links to the next tranche |

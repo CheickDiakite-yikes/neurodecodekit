@@ -79,9 +79,15 @@
 > CI `31280581308` before one 0.12-second measured roundtrip at 22,822,912-byte
 > peak RSS. All 18 gates passed and the 27,335-byte plan was removed. Read
 > `docs/CLASSICAL_EEG_ADAPTER_RESULT.md` and its registry. Continue only work
-> order 5's synthetic contact-mask, noise, and missing-channel contract. No
-> hardware, architecture execution, model, fitting, inference, scoring, or
-> real-data action is permitted.
+> order 5's synthetic contact-mask, noise, and missing-channel contract. That
+> contract is now frozen in
+> `docs/CONTACT_AWARE_EAR_CHANNEL_PREREGISTRATION.md` and
+> `registries/contact_aware_ear_channel_contract.v0.json`: seed 5505, 48 items,
+> 16 generic bilateral channels, six masks, a fixed maximum-four/minimum-two
+> per-side policy, equal side weights, and 16 refusals. Obtain exact-contract
+> green CI before implementing the lazy-NumPy synthetic fixture. No hardware,
+> physical electrode switching, architecture execution, model, fitting,
+> inference, scoring, or real-data action is permitted.
 >
 > Current handoff, 2026-08-06 after Loop 54-A preregistration: registration
 > commit `c114623` is pushed on `codex/loop-54a-vhdr-preregistration` and binds

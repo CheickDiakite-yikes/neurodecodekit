@@ -149,6 +149,12 @@
    peak RSS with a 27,335-byte plan that was removed. Work order 5 is now the
    synthetic-only contact-mask, noise, and missing-channel contract. It does
    not authorize hardware, real data, adapter execution, or a scientific claim.
+   Read `docs/CONTACT_AWARE_EAR_CHANNEL_PREREGISTRATION.md` and
+   `registries/contact_aware_ear_channel_contract.v0.json`. Seed 5505 freezes
+   48 items, 16 generic bilateral channels, six separate masks, a fixed
+   maximum-four/minimum-two-per-side target-blind rule, and 16 refusals.
+   Implementation may begin only after the exact contract commit is remotely
+   green.
    Then read `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop55_eeg_neural_effect_research.v0.json`. Loop 55 planning
    separates a higher-power causal performed-hand endpoint from a harder
