@@ -78,6 +78,8 @@ requests, and these files:
 - `registries/classical_eeg_adapter_contract.v0.json`
 - `docs/CLASSICAL_EEG_ADAPTER_IMPLEMENTATION.md`
 - `registries/classical_eeg_adapter_implementation.v0.json`
+- `docs/CLASSICAL_EEG_ADAPTER_RESULT.md`
+- `registries/classical_eeg_adapter_result.v0.json`
 - `docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md`
 - `registries/loop32_research_boundary.v0.json`
 - `docs/POST_20_ROADMAP.md`
@@ -130,21 +132,20 @@ Do not reset, revert, delete, or overwrite work already present.
   NumPy/SciPy generator, validator, metadata-only inspector, mutation API, CLI,
   and tests passed one post-green measured closeout: 1.20 seconds,
   118,177,792-byte peak RSS, 584,308 bytes, all 18 gates passed, zero retained
-  generated files. Work order 3 is complete. Continue only work order 4's
-  optional classical adapter contracts and leakage tests, without installing
-  or executing an adapter. Do not implement CML-v0 or run a model, fit,
+  generated files. Work order 3 is complete. Work order 4 also completed one
+  post-green symbolic plan roundtrip: 0.12 seconds, 22,822,912-byte peak RSS,
+  27,335 bytes, all 18 gates passed, and zero retained plan files. Do not
+  implement CML-v0 or run a model, fit,
   inference, score, download, S20 read, PhysioNet read, provider call, stream,
   device, or hardware operation.
-- Work order 4 is frozen but not implemented. Register all three families
-  without choosing one: low-frequency shrinkage LDA, causal CSP-LDA, and
-  Riemannian MDM. Build only a standard-library symbolic plan/validator with
-  train-group-only fits, pair/group isolation, target-blind check/final use,
-  zero post-event context, canonical hashing, and twelve leakage refusals.
-  The standard-library plan builder, validator, hash, save/load/summary APIs,
-  CLI, and tests are locally qualified. Push the exact implementation, require
-  green CI, then run one measured symbolic closeout. Do not install or import
-  an optional backend, read arrays, fit, infer, select, score, or access
-  real/public data.
+- Work order 4 is complete. Its standard-library planner keeps low-frequency
+  shrinkage LDA, causal CSP-LDA, and Riemannian MDM unselected, with train-only
+  fits, pair/group isolation, target-blind check/final use, zero future context,
+  canonical hashing, and twelve leakage refusals. Continue only work order 5:
+  freeze and synthetically qualify contact-mask, channel-noise, and
+  missing-channel semantics for an ear-channel adapter. Do not infer AirPods
+  capability, install or import an optional backend, connect hardware, read
+  arrays, fit, infer, select, score, or access real/public data.
 - RW1 closes metadata-only local intake. RW2 closes bounded, redacted signal
   reading and descriptive reporting on generated fixtures only: 38 readable
   sources pass and two malformed or unsafe layouts refuse exactly.

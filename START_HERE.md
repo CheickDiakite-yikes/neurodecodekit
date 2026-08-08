@@ -135,7 +135,7 @@
    `docs/SYNTHETIC_MOTOR_FIXTURE_RESULT.md` and its result registry. All 18
    gates passed after exact-commit green CI: 1.20 seconds, 118,177,792-byte peak
    RSS, 584,308 output bytes, and zero retained generated files. Work order 3 is
-   complete and work order 4's no-install classical adapter contract is active.
+   complete. Work order 4's no-install classical adapter plan is also complete.
    No model, training, inference, scoring, S20, PhysioNet, or claim operation
    is permitted by this result. Read
    `docs/CLASSICAL_EEG_ADAPTER_PREREGISTRATION.md` and
@@ -143,9 +143,12 @@
    low-frequency shrinkage-LDA, causal CSP-LDA, Riemannian-MDM, grouped-fit,
    twelve-refusal, no-import boundary. Then read
    `docs/CLASSICAL_EEG_ADAPTER_IMPLEMENTATION.md` and its implementation
-   registry. The standard-library plan builder, validator, hash, save/load,
-   summary, CLI, and 10 focused tests are locally qualified. One measured
-   symbolic closeout waits for exact-commit green CI.
+   registry, then `docs/CLASSICAL_EEG_ADAPTER_RESULT.md` and its result
+   registry. Exact implementation `eefb7b0` passed CI `31280581308` before one
+   measured roundtrip. All 18 gates passed in 0.12 seconds at 22,822,912-byte
+   peak RSS with a 27,335-byte plan that was removed. Work order 5 is now the
+   synthetic-only contact-mask, noise, and missing-channel contract. It does
+   not authorize hardware, real data, adapter execution, or a scientific claim.
    Then read `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop55_eeg_neural_effect_research.v0.json`. Loop 55 planning
    separates a higher-power causal performed-hand endpoint from a harder

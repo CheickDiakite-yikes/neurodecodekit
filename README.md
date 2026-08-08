@@ -574,10 +574,13 @@ Read this before interpreting any number in the repository.
   zero. Work order 4 now freezes three unexecuted adapter plans: low-frequency
   shrinkage LDA, causal CSP-LDA, and Riemannian MDM. No winner is selected, no
   optional package is installed or imported, and twelve leakage mutations must
-  fail closed before any future adapter execution. The standard-library plan
-  builder, strict validator, canonical hash, bounded save/load/summary APIs,
-  and create/inspect CLI are locally qualified; measured symbolic closeout
-  waits for exact-commit green CI.
+  fail closed before any future adapter execution. Exact implementation
+  `eefb7b0` passed CI `31280581308` before one measured symbolic roundtrip.
+  All 18 gates passed in `0.12` seconds at `22,822,912`-byte peak RSS with a
+  27,335-byte plan that was removed. This qualifies the interface and leakage
+  guards only; no adapter was selected, imported, fitted, inferred, or scored.
+  Work order 5 now targets synthetic contact-mask, channel-noise, and
+  missing-channel semantics without hardware or real data.
 - **Loop 55 EEG neural-effect research:** planning commit `f3158c7` freezes two
   ordered causal endpoints from the same future final trials: performed-hand
   error and 29-class performed-key keypress-aligned CER. It makes performed
@@ -1436,7 +1439,9 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/CLASSICAL_EEG_ADAPTER_PREREGISTRATION.md](docs/CLASSICAL_EEG_ADAPTER_PREREGISTRATION.md) | frozen no-install shrinkage-LDA, CSP-LDA, Riemannian-MDM, grouped-fit, target-firewall, and refusal boundary |
 | [registries/classical_eeg_adapter_contract.v0.json](registries/classical_eeg_adapter_contract.v0.json) | machine-readable three-adapter work-order-4 plan contract with twelve leakage refusals and zero execution counters |
 | [docs/CLASSICAL_EEG_ADAPTER_IMPLEMENTATION.md](docs/CLASSICAL_EEG_ADAPTER_IMPLEMENTATION.md) | locally qualified standard-library symbolic plan, hash, validation, refusal, CLI, and pre-execution boundary |
-| [registries/classical_eeg_adapter_implementation.v0.json](registries/classical_eeg_adapter_implementation.v0.json) | hash-bound work-order-4 implementation sources, tests, resources, zero-access ledger, and pending-green gate |
+| [registries/classical_eeg_adapter_implementation.v0.json](registries/classical_eeg_adapter_implementation.v0.json) | hash-bound pre-execution work-order-4 implementation sources, tests, resources, and zero-access ledger |
+| [docs/CLASSICAL_EEG_ADAPTER_RESULT.md](docs/CLASSICAL_EEG_ADAPTER_RESULT.md) | consumed one-shot symbolic roundtrip with bytes, runtime, RSS, refusals, access counters, and no-science boundary |
+| [registries/classical_eeg_adapter_result.v0.json](registries/classical_eeg_adapter_result.v0.json) | machine-readable all-gates-pass work-order-4 receipt and route to synthetic contact semantics |
 | [docs/NEXT_20_LOOPS_TRACKER.md](docs/NEXT_20_LOOPS_TRACKER.md) | original 20-loop tracker, current post-roadmap gate, and planning-only Loops 25-44 summary |
 | [docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx](docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx) | ten-sheet visual tracker preserved at the last reviewed Stage A snapshot; use the Markdown tracker and machine roadmap for the current Stage B result because a prior workbook import reached 1.57 GiB peak RSS |
 | [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) | closed/current post-NeuroToken gates plus links to the next tranche |

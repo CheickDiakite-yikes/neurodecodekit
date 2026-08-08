@@ -3935,3 +3935,30 @@ Tier C.
 
 Evidence: `docs/CLASSICAL_EEG_ADAPTER_IMPLEMENTATION.md` and
 `registries/classical_eeg_adapter_implementation.v0.json`.
+
+## 0114 - Close Symbolic Adapter Plans And Advance To Contact Semantics
+
+Decision: accept the one post-green symbolic create/inspect roundtrip. All 18
+registered gates passed under the frozen time, memory, output, leakage,
+dependency, causality, and access limits. Retain only aggregate hashes and
+measurements; remove the generated plan.
+
+Measured basis: exact implementation
+`eefb7b066810c2a6b87417b105bdb746218e87dc` passed CI `31280581308` before one
+0.12-second execution at 22,822,912-byte peak RSS. The 27,335-byte serialized
+plan replayed canonical hash
+`66800348e76d03b9b994a460b2e78fbe569c450fdb289be5948cecbcea860bf1`.
+Creation and inspection agreed; no plan file was retained.
+
+Route: mark work order 4 complete and activate work order 5 only at a
+synthetic interface boundary. Freeze exact contact-mask, channel-noise, and
+missing-channel semantics for an ear-channel adapter before implementing them.
+Do not infer capability from a patent, current earbuds, or invented geometry.
+
+Scientific boundary: no adapter backend was imported, selected, fitted,
+inferred, or scored. The result establishes no EEG effect, neural origin,
+decoding, generalization, latency, device performance, home use, or clinical
+utility.
+
+Evidence: `docs/CLASSICAL_EEG_ADAPTER_RESULT.md` and
+`registries/classical_eeg_adapter_result.v0.json`.

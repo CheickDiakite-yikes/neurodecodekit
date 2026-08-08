@@ -175,32 +175,34 @@ The Tier B fixture contract freezes seed 5503, 96 items, eight factor families,
 thread/worker, 60 seconds, 512 MiB RSS, and 4 MiB output. Contract commit
 `9238fd7` and implementation commit `ad361c8` were remotely green before one
 measured closeout. All 18 gates passed in 1.20 seconds at 118,177,792-byte peak
-RSS with 584,308 output bytes; the two generated files were removed. Continue
-with work order 4's optional classical EEG adapter contracts and leakage tests.
-Do not install a dependency or execute a real adapter. This result does not
-authorize CML-v0, training, inference, scoring, S20, PhysioNet, a model, or a
-scientific claim.
+RSS with 584,308 output bytes; the two generated files were removed.
 
-Work order 4 is preregistered and locally implemented, but its measured
-symbolic closeout has not started:
+Work order 4 is complete after one measured symbolic closeout:
 
 ```bash
 cat docs/CLASSICAL_EEG_ADAPTER_PREREGISTRATION.md
 python -m json.tool registries/classical_eeg_adapter_contract.v0.json >/dev/null
 cat docs/CLASSICAL_EEG_ADAPTER_IMPLEMENTATION.md
 python -m json.tool registries/classical_eeg_adapter_implementation.v0.json >/dev/null
+cat docs/CLASSICAL_EEG_ADAPTER_RESULT.md
+python -m json.tool registries/classical_eeg_adapter_result.v0.json >/dev/null
 ```
 
 The contract registers low-frequency shrinkage LDA, causal 8-30 Hz CSP-LDA,
 and regularized Riemannian MDM without choosing or importing one. It freezes
 train-group-only fitting, pair/group isolation, target-blind check/final use,
 zero post-event context, twelve leakage refusals, one thread/worker, 15 seconds,
-256 MiB RSS, and 1 MiB output. The standard-library symbolic plan builder,
-validator, canonical hash, save/load/summary APIs, two CLI commands, and 10
-focused tests are locally qualified. Push the exact implementation and require
-green CI before one measured symbolic closeout. Do not install or probe an
-optional backend, read an array payload, fit, infer, select, score, or open
-real/public data.
+256 MiB RSS, and 1 MiB output. Exact implementation `eefb7b0` passed CI
+`31280581308` before one measured create/inspect roundtrip. All 18 gates passed
+in 0.12 seconds at 22,822,912-byte peak RSS with 27,335 output bytes; the plan
+was removed. No adapter was selected, imported, fitted, inferred, or scored.
+
+Work order 5 is now the only active autonomous task. Freeze and synthetically
+qualify exact contact-mask, channel-noise, and missing-channel semantics for an
+ear-channel adapter. Do not infer current AirPods capability, implement patent
+claims, connect hardware, install a dependency, read real/public data, or run a
+model. CML-v0, S20, PhysioNet, targets, training, inference, scoring, hardware,
+and scientific claims remain separately gated.
 
 The additive architecture pass now selects `CML-v0` as the next hypothesis:
 

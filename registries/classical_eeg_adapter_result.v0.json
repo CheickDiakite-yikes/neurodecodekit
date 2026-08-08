@@ -1,0 +1,158 @@
+{
+  "schema_name": "neurodecodekit.classical_eeg_adapter_result",
+  "schema_version": "0.1.0",
+  "status": "complete_consumed_one_measured_symbolic_roundtrip",
+  "date": "2026-08-08",
+  "work_order": 4,
+  "contract_binding": {
+    "path": "registries/classical_eeg_adapter_contract.v0.json",
+    "sha256": "ae1dc56d7610cb8a4a0bfb970e02c1466b53f5cff0391040eff51ac00084020d",
+    "registration_commit": "ea5fafda3e408972797e579f00d786ab6c8ee6bc",
+    "registration_push_CI_run_id": 31279856066,
+    "registration_push_CI_conclusion": "success"
+  },
+  "implementation_binding": {
+    "commit": "eefb7b066810c2a6b87417b105bdb746218e87dc",
+    "push_CI_run_id": 31280581308,
+    "push_CI_conclusion": "success",
+    "base_python_job_seconds": 16,
+    "optional_neuro_readers_job_seconds": 57,
+    "implementation_registry": {
+      "path": "registries/classical_eeg_adapter_implementation.v0.json",
+      "sha256": "cc00dfc8172c1d472d6ff031934081796be39bf77ec21e1636ce4581e63723e1"
+    }
+  },
+  "execution_identity": {
+    "execution_count": 1,
+    "rerun_after_measured_closeout": false,
+    "configured_numerical_threads": 1,
+    "worker_count": 1,
+    "create_command": "make-classical-eeg-adapter-plan",
+    "inspect_command": "inspect-classical-eeg-adapter-plan",
+    "create_return_code": 0,
+    "inspect_return_code": 0,
+    "create_and_inspect_summaries_equal": true,
+    "temporary_plan_files_created_then_removed": 1,
+    "retained_generated_plan_files": 0
+  },
+  "measurements": {
+    "input_contract_bytes": 12025,
+    "plan_bytes": 27335,
+    "plan_file_sha256": "680f95e41ea2e4b7b2bcec0961d493c9bc2889294f0652dabc120db79f6ecb2d",
+    "canonical_plan_sha256": "66800348e76d03b9b994a460b2e78fbe569c450fdb289be5948cecbcea860bf1",
+    "runtime_seconds": 0.12,
+    "peak_RSS_bytes": 22822912,
+    "item_count": 96,
+    "group_count": 48,
+    "partition_item_counts": {
+      "train": 48,
+      "check": 32,
+      "final": 16
+    },
+    "partition_group_counts": {
+      "train": 24,
+      "check": 16,
+      "final": 8
+    },
+    "adapter_count": 3,
+    "winner_adapter_id": null,
+    "planned_producer_is_causal": true,
+    "producer_executed": false,
+    "required_right_context_samples": 0,
+    "post_event_samples": 0,
+    "end_to_end_latency_measured": false
+  },
+  "adapter_ids": [
+    "fixed_low_frequency_shrinkage_lda",
+    "fixed_8_to_30_hz_csp_lda",
+    "regularized_riemannian_mdm"
+  ],
+  "access_counters": {
+    "synthetic_plan_builds": 1,
+    "symbolic_plan_inspections": 1,
+    "adapter_backend_imports": 0,
+    "optional_dependency_installs": 0,
+    "array_payload_reads": 0,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "real_or_protected_data_reads": 0,
+    "public_EEG_payload_reads": 0,
+    "target_or_label_value_reads": 0,
+    "feature_extraction_runs": 0,
+    "parameter_update_runs": 0,
+    "model_inference_runs": 0,
+    "training_runs": 0,
+    "scoring_or_selection_runs": 0,
+    "network_calls": 0,
+    "provider_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "acceptance_gates": {
+    "contract_commit_remote_green_before_implementation": true,
+    "implementation_commit_remote_green_before_execution": true,
+    "exact_registered_contract_and_implementation_hashes_passed": true,
+    "deterministic_canonical_replay_passed": true,
+    "group_pair_and_partition_isolation_passed": true,
+    "train_only_fit_scope_and_target_firewall_passed": true,
+    "all_twelve_refusal_mutations_passed": true,
+    "exclusive_create_bounded_load_and_collision_refusal_passed": true,
+    "no_optional_backend_import_or_fallback": true,
+    "create_and_inspect_roundtrip_passed": true,
+    "runtime_under_15_seconds": true,
+    "peak_RSS_under_268435456_bytes": true,
+    "output_under_1048576_bytes": true,
+    "one_thread_one_worker": true,
+    "no_generated_plan_retained": true,
+    "all_prohibited_access_counters_zero": true,
+    "full_tests_ruff_compile_JSON_help_and_diff_checks_passed": true,
+    "all_gates_passed": true
+  },
+  "verification": {
+    "pre_result_focused_tests_passed": 33,
+    "pre_result_complete_tests_passed": 1273,
+    "pre_result_complete_tests_skipped": 3,
+    "pre_result_complete_subtests_passed": 469,
+    "result_receipt_tests_passed": 6,
+    "combined_closeout_focused_tests_passed": 39,
+    "complete_closeout_tests_passed": 1279,
+    "complete_tests_skipped": 3,
+    "complete_subtests_passed": 469,
+    "complete_closeout_wall_seconds": 34.62,
+    "complete_closeout_peak_RSS_bytes": 638877696,
+    "ruff_passed": true,
+    "compileall_passed": true,
+    "all_registry_JSON_passed": true,
+    "CLI_root_and_two_command_help_passed": true,
+    "git_diff_check_passed": true
+  },
+  "warnings": [
+    "The output is a symbolic interface plan and does not contain EEG features or predictions.",
+    "No adapter family was selected, imported, fitted, inferred, or scored.",
+    "Synthetic group and pair identities are leakage-test surrogates, not participant observations.",
+    "Causal fields constrain a future producer; no producer or end-to-end latency was measured.",
+    "Public and protected adapter execution remain separately gated Tier C actions."
+  ],
+  "unavailable_fields": [
+    "real_EEG_or_MEG_quality",
+    "biological_neural_origin",
+    "adapter_accuracy",
+    "decoding_accuracy",
+    "unseen_person_generalization",
+    "end_to_end_latency",
+    "device_or_home_performance",
+    "clinical_utility"
+  ],
+  "claim_boundary": {
+    "engineering_capability_added": "NeuroDecodeKit can deterministically construct hash save inspect and fail closed on leakage in three optional classical EEG adapter plans.",
+    "scientific_claim_not_established": "No EEG adapter was executed and no real neural effect decoding accuracy generalization latency device home-use or clinical result was established."
+  },
+  "next_route": {
+    "work_order_4_complete": true,
+    "work_order_5": "Freeze and synthetically qualify exact contact mask noise and missing-channel semantics for an ear-channel adapter.",
+    "install_new_dependencies_now": false,
+    "real_data_action_authorized_by_this_result": false,
+    "model_training_or_scoring_authorized_by_this_result": false,
+    "hardware_action_authorized_by_this_result": false
+  }
+}

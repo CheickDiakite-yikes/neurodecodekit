@@ -68,16 +68,20 @@
 > CLI, and tests. Exact implementation `ad361c8` passed push CI `31279302969`
 > before one closeout. All 18 gates passed in 1.20 seconds at 118,177,792-byte
 > peak RSS and 584,308 bytes; generated files were removed. Work order 3 is
-> complete. Continue work order 4's classical adapter contracts and leakage
-> tests without installing or running an adapter. The frozen contract is
+> complete. Work order 4's classical adapter contract and symbolic planner are
+> also complete. The frozen contract is
 > `docs/CLASSICAL_EEG_ADAPTER_PREREGISTRATION.md` plus
 > `registries/classical_eeg_adapter_contract.v0.json`: three unselected
 > families, train-only fits, pair/group isolation, twelve refusals, and no
 > optional import. `docs/CLASSICAL_EEG_ADAPTER_IMPLEMENTATION.md` and its
-> registry now bind the locally qualified standard-library plan builder,
-> validator, hash, save/load/summary APIs, CLI, and 10 focused tests. Obtain
-> exact-SHA green CI before one measured symbolic closeout. No architecture,
-> model, fitting, inference, scoring, or real-data action is permitted.
+> registry bind the standard-library plan builder, validator, hash,
+> save/load/summary APIs, CLI, and tests. Exact implementation `eefb7b0` passed
+> CI `31280581308` before one 0.12-second measured roundtrip at 22,822,912-byte
+> peak RSS. All 18 gates passed and the 27,335-byte plan was removed. Read
+> `docs/CLASSICAL_EEG_ADAPTER_RESULT.md` and its registry. Continue only work
+> order 5's synthetic contact-mask, noise, and missing-channel contract. No
+> hardware, architecture execution, model, fitting, inference, scoring, or
+> real-data action is permitted.
 >
 > Current handoff, 2026-08-06 after Loop 54-A preregistration: registration
 > commit `c114623` is pushed on `codex/loop-54a-vhdr-preregistration` and binds

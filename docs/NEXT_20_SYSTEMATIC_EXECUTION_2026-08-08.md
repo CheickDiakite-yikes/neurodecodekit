@@ -14,8 +14,8 @@ decision after its own frozen packet and required remote-green evidence exist.
 | 1 | Recover Loop 54-A registration CI evidence | A | Preserve frozen artifacts, diagnose toolchain drift, obtain green descendant evidence | Complete |
 | 2 | Audit local EEG tool capabilities | A | Fixed zero-network probes, one thread, <=1 MiB output, all data/model counters zero | Complete |
 | 3 | Build synthetic physiology/confound fixtures | B | Deterministic motor, timing, ocular, line-noise, dropout, and corruption cases with no target leakage | Complete |
-| 4 | Add classical EEG adapter contracts | B | Optional dependency boundaries, grouped-fit rules, leakage tests, no real execution | In Progress: Implementation Awaiting Green |
-| 5 | Add a contact-aware ear-channel adapter | B | Synthetic contact/noise/missingness fixtures and exact channel-mask semantics only | Queued |
+| 4 | Add classical EEG adapter contracts | B | Optional dependency boundaries, grouped-fit rules, leakage tests, no real execution | Complete |
+| 5 | Add a contact-aware ear-channel adapter | B | Synthetic contact/noise/missingness fixtures and exact channel-mask semantics only | In Progress: Contract Research |
 | 6 | Freeze Loop 54-A decision and qualify parser | A/B then C decision | Recovery-bound exact packet, strict synthetic parser tests, green implementation before real access | Gated |
 | 7 | Execute Loop 54-A once | C | One 11,705-byte VHDR open; no sibling resolution; all 18 gates pass | Gated |
 | 8 | Acquire tiny PhysioNet motor slice | C | Exactly nine pinned EDF files, 23,248,224 bytes, isolated receipt, no substitutions | Gated |
@@ -47,9 +47,12 @@ run used 1.20 seconds, 118,177,792-byte peak RSS, and 584,308 output bytes; all
 active at a contract-and-test-only boundary with no install or real execution.
 Its frozen plan registers low-frequency shrinkage LDA, causal CSP-LDA, and
 Riemannian MDM without choosing or importing one, plus twelve fail-closed
-leakage mutations. The standard-library builder, validator, canonical hash,
-save/load/summary APIs, two CLI commands, and 10 focused tests are implemented
-locally. One measured symbolic closeout waits for exact-commit green CI.
+leakage mutations. Exact implementation `eefb7b0` passed CI `31280581308`
+before one measured roundtrip. All 18 gates passed in 0.12 seconds at
+22,822,912-byte peak RSS with a 27,335-byte plan that was removed. Work order 4
+is complete. Work order 5 is active only for synthetic contact-mask,
+channel-noise, and missing-channel semantics; it authorizes no hardware or real
+data.
 
 This queue never authorizes S20 interpretation, PhysioNet acquisition, target
 delivery, training, scoring, hardware, release, or a scientific claim by

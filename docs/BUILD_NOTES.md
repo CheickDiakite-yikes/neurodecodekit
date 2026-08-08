@@ -5198,3 +5198,36 @@ without importing or fitting an adapter.
 Scientific claim not established: no real EEG effect, neural origin, decoding,
 generalization, latency, device performance, home use, or clinical result was
 established.
+
+## 2026-08-08 - Classical EEG Adapter Plan Measured Closeout
+
+- Exact implementation `eefb7b066810c2a6b87417b105bdb746218e87dc` passed
+  push CI `31280581308` before execution: Base Python in 16 seconds and
+  Optional Neuro Readers in 57 seconds.
+- Exactly one CLI creation and one CLI inspection ran in an automatically
+  removed temporary directory. Both returned zero and their compact summaries
+  matched. There was no retry or post-result tuning.
+- Runtime was 0.12 seconds, peak RSS was 22,822,912 bytes, the input contract
+  was 12,025 bytes, and the generated plan was 27,335 bytes under a 1 MiB cap.
+  The plan was removed after hashing.
+- The plan held 96 symbolic items in 48 pair-bound groups across exact
+  48/32/16 item and 24/16/8 group partitions. All three adapter families
+  remained unselected. Required right context and post-event samples were zero;
+  no producer ran and end-to-end latency was not measured.
+- All 18 gates passed. One symbolic build and one inspection occurred. Every
+  adapter import, dependency install, array/data/target read, feature, fit,
+  inference, training, scoring/selection, network/provider, hardware, and
+  claim-upgrade counter was zero.
+- Thirty-nine focused closeout checks and the complete suite pass at 1,279
+  tests, three expected skips, and 469 subtests.
+- Work order 4 is complete. Work order 5 is active only for a synthetic
+  contact-mask, channel-noise, and missing-channel contract; no hardware or
+  real-data action follows.
+
+Engineering capability added: NeuroDecodeKit now has a measured,
+leakage-resistant, bounded symbolic planning surface for three optional
+classical EEG adapters.
+
+Scientific claim not established: no EEG adapter was executed and no real
+neural effect, decoding accuracy, generalization, latency, device performance,
+home use, or clinical result was established.
