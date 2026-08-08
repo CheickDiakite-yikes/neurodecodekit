@@ -3787,3 +3787,34 @@ result.
 
 Evidence: `docs/AI_LOCAL_FIRST_R_AND_D_BUDGET_2026-08-08.md` and
 `registries/ai_local_first_rd_budget.v0.json`.
+
+## 0108 - Measure Before Installing The EEG Stack
+
+Decision: inventory the existing local EEG environment through fixed isolated
+zero-network imports before adding optional packages. Bind the retained result
+to a remotely green implementation and report every missing capability,
+warning, resource measurement, temporary write, unavailable field, and access
+counter.
+
+Result: implementation commit `e1de855` passed push CI `31277731869` before the
+measured run. NumPy 2.5.0 and SciPy 1.18.0 provide the immediate array/signal
+core. MNE 1.12.1 provides BrainVision reading and ICA, while its CSP surface is
+incomplete in this environment. scikit-learn, pyRiemann, MOABB, and Braindecode
+are absent. Runtime was 14.52799025 seconds, maximum child RSS was 173,211,648
+bytes, and retained output was 9,416 bytes under 1 MiB.
+
+Route: do not install a broad stack. Build deterministic synthetic motor,
+timing, ocular, line-noise, dropout, and channel-corruption fixtures with
+NumPy/SciPy first. Add optional adapter contracts before deciding which missing
+library earns an install. PhysioNet and S20 remain behind their exact Tier C
+boundaries.
+
+Scientific boundary: availability and imports are engineering evidence only.
+They establish no dataset quality, neural effect, model accuracy,
+generalization, real-time latency, portable hardware, home use, or clinical
+utility.
+
+Evidence: `docs/LOCAL_EEG_TOOLING_AUDIT_2026-08-08.md`,
+`registries/local_eeg_tooling_audit_result.v0.json`,
+`registries/local_eeg_tooling_audit_receipt.v0.json`, and
+`docs/NEXT_20_SYSTEMATIC_EXECUTION_2026-08-08.md`.

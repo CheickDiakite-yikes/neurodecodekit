@@ -1,0 +1,111 @@
+{
+  "schema_name": "neurodecodekit.local_eeg_tooling_audit_receipt",
+  "schema_version": "0.1.0",
+  "status": "measured_result_complete",
+  "date": "2026-08-08",
+  "authorization_tier": "Tier_A_routine_environment_audit",
+  "implementation_binding": {
+    "branch": "codex/loop-54a-vhdr-preregistration",
+    "commit": "e1de855f8767840c04e719bade616ba7a22514ed",
+    "push_CI_run_id": 31277731869,
+    "push_CI_conclusion": "success",
+    "push_CI_url": "https://github.com/CheickDiakite-yikes/neurodecodekit/actions/runs/31277731869",
+    "base_job_id": 93153961577,
+    "optional_neuro_job_id": 93153961590,
+    "source_bindings": {
+      "module": {
+        "path": "src/neurodecodekit/evaluation/local_eeg_tooling.py",
+        "sha256": "ce9c2efef6ff041756aa987373d2877a982e0813b3d70d9d4372bedac252f8e9"
+      },
+      "CLI": {
+        "path": "src/neurodecodekit/cli.py",
+        "sha256": "a095a18b62d2aa21408ce7dc7be7eb52f019f3ed4c92f69e604f73b91a388138"
+      },
+      "tests": {
+        "path": "tests/test_local_eeg_tooling.py",
+        "sha256": "1cd9061fdf44f82d09c5f2e26ad5acd46c8e26dfc5bbf93e7a2837dee6c9253a"
+      }
+    }
+  },
+  "result_binding": {
+    "path": "registries/local_eeg_tooling_audit_result.v0.json",
+    "sha256": "1466d1c19fdd80cf8f478677df7746c9d7ef1aa625120c2ca1a4b9b27a506f80",
+    "bytes": 9416
+  },
+  "measured_summary": {
+    "tool_count": 7,
+    "available_module_count": 3,
+    "complete_capability_probe_count": 2,
+    "array_signal_core_ready": true,
+    "brainvision_reader_ready": true,
+    "ocular_ICA_substrate_ready": true,
+    "MNE_CSP_substrate_ready": false,
+    "classical_ML_substrate_ready": false,
+    "riemannian_substrate_ready": false,
+    "public_benchmark_harness_ready": false,
+    "compact_neural_adapter_ready": false,
+    "missing_tool_ids": [
+      "scikit_learn",
+      "pyriemann",
+      "moabb",
+      "braindecode"
+    ]
+  },
+  "resource_measurements": {
+    "runtime_seconds": 14.52799025,
+    "parent_peak_RSS_bytes": 25083904,
+    "maximum_child_peak_RSS_bytes": 173211648,
+    "retained_output_bytes": 9416,
+    "maximum_output_bytes": 1048576,
+    "worker_count": 1,
+    "configured_numerical_threads": 1,
+    "temporary_files_created_then_removed": 1,
+    "temporary_bytes_created_then_removed": 290596
+  },
+  "access_counters": {
+    "distribution_metadata_reads": 7,
+    "isolated_import_probes": 3,
+    "blocked_network_attempts": 0,
+    "successful_network_operations": 0,
+    "downloads": 0,
+    "real_or_protected_data_reads": 0,
+    "target_or_label_reads": 0,
+    "raw_signal_reads": 0,
+    "model_loads": 0,
+    "training_runs": 0,
+    "inference_runs": 0,
+    "scoring_runs": 0,
+    "provider_calls": 0,
+    "device_or_hardware_operations": 0
+  },
+  "warnings": [
+    "optional_tool_not_installed:scikit_learn",
+    "optional_tool_not_installed:pyriemann",
+    "optional_tool_not_installed:moabb",
+    "optional_tool_not_installed:braindecode",
+    "optional_tool_capability_incomplete:mne:mne.decoding.CSP",
+    "optional_tool_emitted_sanitized_output:mne:63_bytes"
+  ],
+  "unavailable_fields": [
+    "stable_input_byte_count",
+    "dataset_compatibility",
+    "real_signal_quality",
+    "runtime_model_accuracy",
+    "neural_advantage",
+    "device_compatibility"
+  ],
+  "next_route": {
+    "work_order": 3,
+    "action": "build_deterministic_synthetic_motor_timing_ocular_and_corruption_fixtures",
+    "use_installed_surfaces": [
+      "numpy",
+      "scipy"
+    ],
+    "install_new_dependencies_now": false,
+    "download_or_real_data_access_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_capability": "A fixed local EEG tool matrix is inspectable through isolated sanitized zero-network probes with bounded resource accounting.",
+    "scientific_claim_not_established": "Library availability establishes no EEG quality, neural effect, decoding accuracy, generalization, latency, portable hardware, home-use, or clinical result."
+  }
+}

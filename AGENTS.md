@@ -139,6 +139,26 @@ authorized. The nine-file 23,248,224-byte PhysioNet prospect and every real
 stage require separate exact Tier C decisions. Foundation models and
 generative EEG imputation remain deferred from the protected Loop 55 path.
 
+The zero-network local EEG tooling audit is now complete:
+
+```bash
+cat docs/LOCAL_EEG_TOOLING_AUDIT_2026-08-08.md
+python -m json.tool registries/local_eeg_tooling_audit_result.v0.json >/dev/null
+python -m json.tool registries/local_eeg_tooling_audit_receipt.v0.json >/dev/null
+cat docs/NEXT_20_SYSTEMATIC_EXECUTION_2026-08-08.md
+```
+
+Implementation commit `e1de855` passed push CI `31277731869` before one
+measured audit. NumPy 2.5.0, SciPy 1.18.0, and MNE 1.12.1 are present;
+BrainVision reading and ICA are available, while MNE CSP is incomplete and
+scikit-learn, pyRiemann, MOABB, and Braindecode are absent. Runtime was
+14.52799025 seconds, maximum child RSS was 173,211,648 bytes, and retained
+output was 9,416 bytes. Every real/protected, raw-signal, target, model,
+training, inference, scoring, network, provider, and hardware counter is zero.
+Do not install a broad EEG stack from this result. The active work order is the
+NumPy/SciPy-only synthetic physiology and confound fixture pack; it must not
+touch S20, PhysioNet, targets, models, or hardware.
+
 The additive architecture pass now selects `CML-v0` as the next hypothesis:
 
 ```bash

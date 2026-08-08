@@ -2,6 +2,13 @@
 
 Use `prompts/CODEX_START_PROMPT.md` for the current work order.
 
+The current 20-work-order execution overlay is
+`docs/NEXT_20_SYSTEMATIC_EXECUTION_2026-08-08.md`. It preserves the frozen
+scientific roadmaps, marks work orders 1-2 complete, and makes the
+NumPy/SciPy-only synthetic physiology/confound fixture pack work order 3. Any
+older "next decision" text below is historical context, not current execution
+authority.
+
 The original 20-loop sequence is complete except parked Loop 13. Loop 23 is
 parked after its frozen synthetic test gate; Loop 23.5 is complete. Loop 24 ran
 once and parked after its registered target-free runtime gate exceeded 60

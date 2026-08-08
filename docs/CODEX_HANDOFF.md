@@ -48,6 +48,19 @@
 > `US20230225659A1` supports an ear-channel quality research direction but does
 > not prove shipping AirPods EEG or thought-to-text.
 >
+> Local tooling update, 2026-08-08: read
+> `docs/LOCAL_EEG_TOOLING_AUDIT_2026-08-08.md`, both
+> `registries/local_eeg_tooling_audit_*.v0.json` files, and
+> `docs/NEXT_20_SYSTEMATIC_EXECUTION_2026-08-08.md`. Implementation commit
+> `e1de855` passed push CI `31277731869` before one zero-network audit. NumPy
+> 2.5.0, SciPy 1.18.0, MNE BrainVision reading, and MNE ICA are available;
+> scikit-learn, pyRiemann, MOABB, and Braindecode are absent. The 9,416-byte
+> report took 14.52799025 seconds at 173,211,648-byte maximum child RSS with all
+> data, target, model, training, scoring, network, provider, and hardware
+> counters zero. Work orders 1-2 are complete. Continue with work order 3's
+> deterministic NumPy/SciPy synthetic physiology/confound fixtures and no new
+> dependency, download, S20 read, target, model, or hardware action.
+>
 > Current handoff, 2026-08-06 after Loop 54-A preregistration: registration
 > commit `c114623` is pushed on `codex/loop-54a-vhdr-preregistration` and binds
 > exactly one 11,705-byte S20 VHDR. The strict future parser may use only the

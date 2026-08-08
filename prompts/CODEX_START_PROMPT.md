@@ -64,6 +64,10 @@ requests, and these files:
 - `registries/foundation_model_live_smoke_result.v0.json`
 - `docs/AI_LOCAL_FIRST_R_AND_D_BUDGET_2026-08-08.md`
 - `registries/ai_local_first_rd_budget.v0.json`
+- `docs/LOCAL_EEG_TOOLING_AUDIT_2026-08-08.md`
+- `registries/local_eeg_tooling_audit_result.v0.json`
+- `registries/local_eeg_tooling_audit_receipt.v0.json`
+- `docs/NEXT_20_SYSTEMATIC_EXECUTION_2026-08-08.md`
 - `docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md`
 - `registries/loop32_research_boundary.v0.json`
 - `docs/POST_20_ROADMAP.md`
@@ -102,6 +106,14 @@ Do not reset, revert, delete, or overwrite work already present.
   mature local MNE, MOABB, pyRiemann, and Braindecode paths first. Protected
   rows, targets, scoring, training, fine-tuning, hardware, large downloads,
   reruns, and claim upgrades retain their exact gates.
+- The green local tooling implementation at `e1de855` and push CI
+  `31277731869` precede one zero-network audit. NumPy 2.5.0, SciPy 1.18.0,
+  MNE's BrainVision reader, and MNE ICA are available; scikit-learn, pyRiemann,
+  MOABB, and Braindecode are absent. The audit used 14.52799025 seconds,
+  173,211,648-byte maximum child RSS, and 9,416 retained bytes with every data,
+  target, model, training, scoring, network, provider, and hardware counter at
+  zero. The active autonomous work is the NumPy/SciPy synthetic physiology and
+  confound fixture pack; no install or real-data action follows automatically.
 - RW1 closes metadata-only local intake. RW2 closes bounded, redacted signal
   reading and descriptive reporting on generated fixtures only: 38 readable
   sources pass and two malformed or unsafe layouts refuse exactly.

@@ -721,6 +721,15 @@ The next 20 work orders are frozen in
 Truth, Unseen-Person Verdict, Accessible EEG Evidence, Causal Local Use, and
 Independent Evidence And Release.
 
+The additive execution overlay in
+`docs/NEXT_20_SYSTEMATIC_EXECUTION_2026-08-08.md` orders the current small work
+packets without changing those loop IDs or contracts. Its work orders 1-2 are
+complete: Loop 54-A registration evidence was recovered, then a green
+zero-network local EEG tooling audit measured the existing NumPy/SciPy/MNE
+surface. Work order 3, deterministic synthetic physiology/confound fixtures,
+is active. Every real-data, target, training, scoring, hardware, release, and
+claim row remains separately gated.
+
 Loop 45 is complete at its target-free mechanics boundary. Loops 46 and 47 are
 parked after the one consumed S21 event failed the candidate-versus-prior and
 full attribution conjunctions. Loop 48 completed one artifact-only Stage A at

@@ -54,6 +54,7 @@ irreversible Tier C events.
 | Causal Motor Lattice architecture | `CML-v0` assigns separate potential, mu, and beta views to rank-8 spatial mixers, fuses 72 features through a 24-value bottleneck, and derives hand probability exactly from a physical 29-key lattice; the 64-channel, 18-primitive reference has 4,535 parameters | Architecture research only: synthetic implementation is `Not Started`; PhysioNet laterality, EEG+EMG pre-movement timing, Loop 54, and protected S20 execution are separate unauthorized gates |
 | Foundation-model decoder bridge | FM-0 compiled all 12 synthetic plans; the one FM-1 Terra invocation then attempted 3 calls, returned 2 strict responses, and parked on a non-completed `FM-A02` response after 8.406 seconds at 39.3 MB peak RSS | Live bounded transport and fail-closed receipts worked, but the four-arm matrix did not complete and has no rerun; no real neural evidence or target was used, so no decoding or neural result exists |
 | AI budget and local-tool leverage | A $50 aggregate provider ceiling is split into conservative experiment caps while MNE, MOABB, pyRiemann, Braindecode, and future cEEGrid adapters carry local work first | The budget is not a spend target; $0.50 is reserved for incomplete FM-1 accounting, at least $30 stays behind future evidence gates, and a pending earbud-electrode patent is architecture context, not proof that AirPods read thoughts |
+| Local EEG tooling inventory | One green, zero-network audit found NumPy `2.5.0`, SciPy `1.18.0`, and MNE `1.12.1`; array/signal mechanics, BrainVision reading, and ICA are available in 14.53 seconds at 173.2 MB maximum child RSS, while scikit-learn, pyRiemann, MOABB, and Braindecode are absent | The next synthetic fixture work can proceed without an install; availability is engineering evidence only and establishes no dataset quality, neural effect, model accuracy, or device result |
 | Cross-modality accessibility verdict design | Loop 56 freezes five verdict classes, 12 non-skippable capability levels, 18 EEG/MEG comparison dimensions, a 16-field claim sentence, and a 12-part at-home conjunction | Planning research is complete and Loop 55 result dependent; only modality-aware interfaces are shared, tested MEG/EEG predictors remain negative, S20 has acquisition evidence only, and no equivalence, transfer, real-time, device, home, or clinical claim exists |
 | Development-person intake planning | Loop 49 metadata research selects S24 session 2 block 2: one MEG FIF plus one protected MAT log, exactly `1,048,579,727` bytes; a future text-grouped split reserves 16 unique sentence groups for selection and requires at least 32 fit groups | S24 avoids the S1/S18 alias and preserves S25 final-only, but no S24 path or payload was opened and the `>=48` usable-row, channel, geometry, and overlap gates are unproven; Loop 49 remains `Not Started` |
 | Multi-source encoder planning | Loop 50 research freezes global text grouping, five-fold historical S21 out-of-fold diagnostics, one 16-group S24 development gate, equal-person loss, ten fixed conditions, and an exact 20-update inventory led by seed `5001` | Stage B route `L50-R05` now parks the same-family S24 path; Loop 50 remains `Not Started`, with S24 qualification, model selection, training, scoring, and every scientific claim unavailable |
@@ -554,6 +555,16 @@ Read this before interpreting any number in the repository.
   `0.15.20` replay passed 1,095 tests with three skips. The additive recovery
   record preserves that distinction; a new exact request and Tier C decision
   are still required before implementation.
+- **Local EEG tooling audit:** implementation commit `e1de855` passed exact-SHA
+  push CI `31277731869` before one zero-network inventory. NumPy `2.5.0` and
+  SciPy `1.18.0` expose the bounded array/signal core; MNE `1.12.1` exposes its
+  BrainVision reader and ICA, while CSP is incomplete and scikit-learn,
+  pyRiemann, MOABB, and Braindecode are absent. The run finished in
+  `14.52799025` seconds at `173,211,648`-byte maximum child RSS and wrote 9,416
+  bytes. All real/protected, raw-signal, target, model, training, inference,
+  scoring, network, provider, and hardware counters are zero. No broad install
+  follows; the next work order is a NumPy/SciPy synthetic physiology fixture
+  pack.
 - **Loop 55 EEG neural-effect research:** planning commit `f3158c7` freezes two
   ordered causal endpoints from the same future final trials: performed-hand
   error and 29-class performed-key keypress-aligned CER. It makes performed
@@ -1399,6 +1410,10 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/foundation_model_live_smoke_result.v0.json](registries/foundation_model_live_smoke_result.v0.json) | machine-readable parked result, response summaries, counters, unavailable fields, and claim ceiling |
 | [docs/AI_LOCAL_FIRST_R_AND_D_BUDGET_2026-08-08.md](docs/AI_LOCAL_FIRST_R_AND_D_BUDGET_2026-08-08.md) | $50 provider ceiling portfolio, local open-source tool strategy, earbud-patent boundary, and ordered next work |
 | [registries/ai_local_first_rd_budget.v0.json](registries/ai_local_first_rd_budget.v0.json) | machine-readable ceilings, release conditions, standing target-free scope, local tools, and closed scientific gates |
+| [docs/LOCAL_EEG_TOOLING_AUDIT_2026-08-08.md](docs/LOCAL_EEG_TOOLING_AUDIT_2026-08-08.md) | measured zero-network capability inventory, resource accounting, missing tools, and no-science boundary |
+| [registries/local_eeg_tooling_audit_result.v0.json](registries/local_eeg_tooling_audit_result.v0.json) | raw bounded seven-tool capability report with sanitized warnings and zero access counters |
+| [registries/local_eeg_tooling_audit_receipt.v0.json](registries/local_eeg_tooling_audit_receipt.v0.json) | exact green-implementation, result-hash, resource, route, and claim receipt |
+| [docs/NEXT_20_SYSTEMATIC_EXECUTION_2026-08-08.md](docs/NEXT_20_SYSTEMATIC_EXECUTION_2026-08-08.md) | active 20-work-order execution overlay with Tier A/B autonomy and exact Tier C stops |
 | [docs/NEXT_20_LOOPS_TRACKER.md](docs/NEXT_20_LOOPS_TRACKER.md) | original 20-loop tracker, current post-roadmap gate, and planning-only Loops 25-44 summary |
 | [docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx](docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx) | ten-sheet visual tracker preserved at the last reviewed Stage A snapshot; use the Markdown tracker and machine roadmap for the current Stage B result because a prior workbook import reached 1.57 GiB peak RSS |
 | [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) | closed/current post-NeuroToken gates plus links to the next tranche |

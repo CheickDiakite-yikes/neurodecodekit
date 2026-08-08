@@ -1,0 +1,280 @@
+{
+  "access_counters": {
+    "blocked_network_attempts": 0,
+    "device_or_hardware_operations": 0,
+    "distribution_metadata_reads": 7,
+    "downloads": 0,
+    "inference_runs": 0,
+    "isolated_import_probes": 3,
+    "model_loads": 0,
+    "provider_calls": 0,
+    "raw_signal_reads": 0,
+    "real_or_protected_data_reads": 0,
+    "scoring_runs": 0,
+    "successful_network_operations": 0,
+    "target_or_label_reads": 0,
+    "training_runs": 0
+  },
+  "claim_boundary": {
+    "engineering_capability": "Installed optional EEG libraries and selected import surfaces are inspectable under isolated zero-network probes.",
+    "scientific_claim_not_established": "Library availability establishes no data quality, neural signal, decoding accuracy, generalization, latency, device, or clinical result."
+  },
+  "environment": {
+    "base_process_imported_optional_tools": false,
+    "base_process_optional_modules_present_after": [],
+    "base_process_optional_modules_present_before": [],
+    "platform_machine": "arm64",
+    "platform_system": "Darwin",
+    "python_version": "3.13.5",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    },
+    "worker_count": 1
+  },
+  "operation": "zero_network_local_eeg_tooling_audit",
+  "resources": {
+    "maximum_child_peak_rss_bytes": 173211648,
+    "maximum_output_bytes": 1048576,
+    "output_bytes": 9416,
+    "peak_rss_bytes": 25083904,
+    "runtime_seconds": 14.52799025,
+    "timeout_seconds_per_probe": 20.0
+  },
+  "schema_name": "neurodecodekit.local_eeg_tooling_audit",
+  "schema_version": "0.1.0",
+  "summary": {
+    "array_signal_core_ready": true,
+    "available_module_count": 3,
+    "brainvision_quality_substrate_ready": true,
+    "brainvision_reader_ready": true,
+    "capability_complete_count": 2,
+    "classical_ml_substrate_ready": false,
+    "compact_neural_adapter_ready": false,
+    "failed_tool_ids": [],
+    "import_ready_count": 3,
+    "installed_distribution_count": 3,
+    "isolated_probe_count": 3,
+    "missing_tool_ids": [
+      "scikit_learn",
+      "pyriemann",
+      "moabb",
+      "braindecode"
+    ],
+    "mne_csp_substrate_ready": false,
+    "ocular_ica_substrate_ready": true,
+    "public_benchmark_harness_ready": false,
+    "riemannian_substrate_ready": false,
+    "tool_count": 7
+  },
+  "tools": [
+    {
+      "available_capabilities": [
+        "numpy.ndarray",
+        "numpy.asarray"
+      ],
+      "blocked_network_attempts": 0,
+      "captured_output_bytes": 0,
+      "captured_output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "distribution": "numpy",
+      "distribution_installed": true,
+      "distribution_version": "2.5.0",
+      "error_type": null,
+      "missing_capabilities": [],
+      "module": "numpy",
+      "module_available": true,
+      "peak_rss_bytes": 34832384,
+      "probe_executed": true,
+      "probe_status": "import_ready",
+      "requested_capabilities": [
+        "numpy.ndarray",
+        "numpy.asarray"
+      ],
+      "role": "bounded arrays and deterministic numerical plumbing",
+      "runtime_seconds": 0.070318708,
+      "temporary_bytes_created": 0,
+      "temporary_files_created": 0,
+      "tool_id": "numpy"
+    },
+    {
+      "available_capabilities": [
+        "scipy.signal.butter",
+        "scipy.linalg.eigh"
+      ],
+      "blocked_network_attempts": 0,
+      "captured_output_bytes": 0,
+      "captured_output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "distribution": "scipy",
+      "distribution_installed": true,
+      "distribution_version": "1.18.0",
+      "error_type": null,
+      "missing_capabilities": [],
+      "module": "scipy",
+      "module_available": true,
+      "peak_rss_bytes": 109871104,
+      "probe_executed": true,
+      "probe_status": "import_ready",
+      "requested_capabilities": [
+        "scipy.signal.butter",
+        "scipy.linalg.eigh"
+      ],
+      "role": "signal processing and linear algebra",
+      "runtime_seconds": 0.918855042,
+      "temporary_bytes_created": 0,
+      "temporary_files_created": 0,
+      "tool_id": "scipy"
+    },
+    {
+      "available_capabilities": [],
+      "blocked_network_attempts": 0,
+      "captured_output_bytes": 0,
+      "captured_output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "distribution": "scikit-learn",
+      "distribution_installed": false,
+      "distribution_version": null,
+      "error_type": null,
+      "missing_capabilities": [],
+      "module": "sklearn",
+      "module_available": false,
+      "peak_rss_bytes": 0,
+      "probe_executed": false,
+      "probe_status": "not_installed",
+      "requested_capabilities": [
+        "sklearn.discriminant_analysis.LinearDiscriminantAnalysis",
+        "sklearn.covariance.LedoitWolf",
+        "sklearn.pipeline.Pipeline"
+      ],
+      "role": "grouped classical estimators and shrinkage baselines",
+      "runtime_seconds": 0.0,
+      "temporary_bytes_created": 0,
+      "temporary_files_created": 0,
+      "tool_id": "scikit_learn"
+    },
+    {
+      "available_capabilities": [
+        "mne.io.read_raw_brainvision",
+        "mne.preprocessing.ICA"
+      ],
+      "blocked_network_attempts": 0,
+      "captured_output_bytes": 63,
+      "captured_output_sha256": "cace1071573ef725e762e8856427937617c8c67e5d0784c45c0e854e56a803a8",
+      "distribution": "mne",
+      "distribution_installed": true,
+      "distribution_version": "1.12.1",
+      "error_type": null,
+      "missing_capabilities": [
+        "mne.decoding.CSP"
+      ],
+      "module": "mne",
+      "module_available": true,
+      "peak_rss_bytes": 173211648,
+      "probe_executed": true,
+      "probe_status": "import_ready_capability_incomplete",
+      "requested_capabilities": [
+        "mne.io.read_raw_brainvision",
+        "mne.decoding.CSP",
+        "mne.preprocessing.ICA"
+      ],
+      "role": "EEG metadata, BrainVision reading, quality, and CSP substrate",
+      "runtime_seconds": 13.257493334,
+      "temporary_bytes_created": 290596,
+      "temporary_files_created": 1,
+      "tool_id": "mne"
+    },
+    {
+      "available_capabilities": [],
+      "blocked_network_attempts": 0,
+      "captured_output_bytes": 0,
+      "captured_output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "distribution": "pyriemann",
+      "distribution_installed": false,
+      "distribution_version": null,
+      "error_type": null,
+      "missing_capabilities": [],
+      "module": "pyriemann",
+      "module_available": false,
+      "peak_rss_bytes": 0,
+      "probe_executed": false,
+      "probe_status": "not_installed",
+      "requested_capabilities": [
+        "pyriemann.estimation.Covariances",
+        "pyriemann.classification.MDM",
+        "pyriemann.tangentspace.TangentSpace"
+      ],
+      "role": "covariance, MDM, and tangent-space low-data baselines",
+      "runtime_seconds": 0.0,
+      "temporary_bytes_created": 0,
+      "temporary_files_created": 0,
+      "tool_id": "pyriemann"
+    },
+    {
+      "available_capabilities": [],
+      "blocked_network_attempts": 0,
+      "captured_output_bytes": 0,
+      "captured_output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "distribution": "moabb",
+      "distribution_installed": false,
+      "distribution_version": null,
+      "error_type": null,
+      "missing_capabilities": [],
+      "module": "moabb",
+      "module_available": false,
+      "peak_rss_bytes": 0,
+      "probe_executed": false,
+      "probe_status": "not_installed",
+      "requested_capabilities": [
+        "moabb.datasets.PhysionetMI",
+        "moabb.paradigms.MotorImagery",
+        "moabb.evaluations.CrossSubjectEvaluation"
+      ],
+      "role": "public EEG datasets and grouped benchmark protocols",
+      "runtime_seconds": 0.0,
+      "temporary_bytes_created": 0,
+      "temporary_files_created": 0,
+      "tool_id": "moabb"
+    },
+    {
+      "available_capabilities": [],
+      "blocked_network_attempts": 0,
+      "captured_output_bytes": 0,
+      "captured_output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "distribution": "braindecode",
+      "distribution_installed": false,
+      "distribution_version": null,
+      "error_type": null,
+      "missing_capabilities": [],
+      "module": "braindecode",
+      "module_available": false,
+      "peak_rss_bytes": 0,
+      "probe_executed": false,
+      "probe_status": "not_installed",
+      "requested_capabilities": [
+        "braindecode.models.EEGNetv4",
+        "braindecode.models.ShallowFBCSPNet"
+      ],
+      "role": "optional compact published EEG model adapters",
+      "runtime_seconds": 0.0,
+      "temporary_bytes_created": 0,
+      "temporary_files_created": 0,
+      "tool_id": "braindecode"
+    }
+  ],
+  "unavailable_fields": [
+    "dataset_compatibility",
+    "real_signal_quality",
+    "runtime_model_accuracy",
+    "neural_advantage",
+    "device_compatibility"
+  ],
+  "warnings": [
+    "optional_tool_not_installed:scikit_learn",
+    "optional_tool_not_installed:pyriemann",
+    "optional_tool_not_installed:moabb",
+    "optional_tool_not_installed:braindecode",
+    "optional_tool_capability_incomplete:mne:mne.decoding.CSP",
+    "optional_tool_emitted_sanitized_output:mne:63_bytes"
+  ]
+}

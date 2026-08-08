@@ -115,6 +115,18 @@
    `0.15.20` passed 1,095 tests with three skips. A new recovery-bound exact
    Tier C request is still required before implementation. No local S20 path or
    payload was accessed during preregistration or recovery.
+   Then read `docs/LOCAL_EEG_TOOLING_AUDIT_2026-08-08.md`,
+   `registries/local_eeg_tooling_audit_result.v0.json`,
+   `registries/local_eeg_tooling_audit_receipt.v0.json`, and
+   `docs/NEXT_20_SYSTEMATIC_EXECUTION_2026-08-08.md`. Green implementation
+   `e1de855` added a fixed zero-network optional-tool audit; CI `31277731869`
+   passed before the measured run. NumPy/SciPy plus MNE BrainVision reading and
+   ICA are ready locally, while scikit-learn, pyRiemann, MOABB, and Braindecode
+   are absent. Runtime was `14.52799025` seconds, maximum child RSS was
+   173,211,648 bytes, retained output was 9,416 bytes, and every data, target,
+   model, training, scoring, network, provider, and hardware counter stayed
+   zero. Work orders 1-2 are complete; work order 3 is a no-install synthetic
+   physiology/confound fixture pack.
    Then read `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop55_eeg_neural_effect_research.v0.json`. Loop 55 planning
    separates a higher-power causal performed-hand endpoint from a harder

@@ -5007,3 +5007,44 @@ development-tool drift without rewriting the frozen scientific contract.
 
 Scientific claim not established: this recovery accessed no S20 content and
 produced no EEG, trial, neural, decoding, latency, device, or clinical result.
+
+## 2026-08-08 - Zero-Network Local EEG Tooling Audit
+
+- Added a dependency-light `inspect-local-eeg-tooling` command with a fixed
+  seven-library matrix, isolated child imports, blocked socket operations,
+  one-thread environment, disposable home/cache, sanitized output hashes,
+  strict caps, no-overwrite writing, and malformed/timeout handling.
+- Eight implementation tests raised the pre-change 1,206-test baseline to
+  1,214 passing tests with three expected skips. The complete suite finished in
+  28.129 seconds at 643,203,072-byte external peak RSS; Ruff, compileall, CLI
+  help, and diff hygiene passed.
+- Implementation commit `e1de855` passed exact-SHA push CI `31277731869`: Base
+  Python in 16 seconds and Optional Neuro Readers in 49 seconds. A consumed
+  FM-1 CLI digest remains preserved as historical evidence while current tests
+  continue to assert that its command surface exists.
+- One post-green audit found NumPy 2.5.0, SciPy 1.18.0, and MNE 1.12.1.
+  NumPy/SciPy capabilities, the BrainVision reader, and ICA are available; MNE
+  CSP is incomplete and scikit-learn, pyRiemann, MOABB, and Braindecode are
+  absent. No dependency was installed.
+- The audit finished in 14.52799025 seconds at 25,083,904-byte parent and
+  173,211,648-byte maximum child RSS. It retained 9,416 bytes under a 1 MiB cap.
+  One 290,596-byte MNE cache file existed only inside the disposable audit home
+  and was removed. MNE's 63 captured terminal bytes survive only as count and
+  SHA-256.
+- All successful-network, download, real/protected, raw-signal, target, model,
+  training, inference, scoring, provider, device, and hardware counters are
+  zero. Stable import input bytes and all scientific fields remain unavailable.
+- Added an active 20-work-order execution overlay. Work orders 1-2 are complete;
+  work order 3 uses the existing NumPy/SciPy core for deterministic synthetic
+  physiology/confound fixtures before any optional install or real-data gate.
+- Seven result/receipt invariants bring the complete closeout to 1,221 passing
+  tests with three expected skips, 15 tests above the 1,206-test starting
+  baseline. The one-thread suite took 28.863 seconds internal and 29.94 seconds
+  wall time at 653,066,240-byte external peak RSS.
+
+Engineering capability added: the repository can inventory its local EEG stack
+through bounded zero-network probes and route work from measured capability.
+
+Scientific claim not established: installed library surfaces establish no EEG
+quality, neural effect, decoding accuracy, generalization, latency, device, or
+clinical result.
