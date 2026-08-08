@@ -546,10 +546,14 @@ Read this before interpreting any number in the repository.
   one registered execution under 30-second, 256 MiB RSS, and 1 MiB output
   limits. Contract preparation performed zero S20 path stats and zero header,
   marker, signal, MAT, target, model, or network reads. Exact Tier C
-  authorization remains pending. GitHub-hosted registration CI run
-  `31127199848` was cancelled before any test step during the Actions outage; a
-  replacement run over exact commit `c114623` must become green before the
-  packet is frozen.
+  authorization remains pending. Exact-commit CI run `31127199848` was retried:
+  the neuro-reader job passed, while Base Python selected Ruff `0.16.2` from a
+  floating historical requirement and stopped on 400 later lint findings. The
+  three frozen registration artifacts remain byte-identical at pinned commit
+  `2232993`, whose CI `31132586790` passed both jobs, and an exact-tree Ruff
+  `0.15.20` replay passed 1,095 tests with three skips. The additive recovery
+  record preserves that distinction; a new exact request and Tier C decision
+  are still required before implementation.
 - **Loop 55 EEG neural-effect research:** planning commit `f3158c7` freezes two
   ordered causal endpoints from the same future final trials: performed-hand
   error and 29-class performed-key keypress-aligned CER. It makes performed
@@ -1455,6 +1459,9 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/loop53_acquisition_result.v0.json](registries/loop53_acquisition_result.v0.json) | content-free aggregate result binding the private receipts, `96,090,264` bytes, `3.629499` seconds, all-zero forbidden counters, and no rerun |
 | [docs/LOOP_54_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_54_PRIMARY_SOURCE_RESEARCH.md) | primary-source BrainVision/BIDS/MNE audit, current extractor gap analysis, staged target firewall, trial-unit rule, resource caps, and claim ceiling |
 | [registries/loop54_eeg_trial_geometry_research.v0.json](registries/loop54_eeg_trial_geometry_research.v0.json) | machine-readable four-stage protocol with exact file-role isolation, 22 gates, 30 refusals, zero protected access counters, and false real-stage authorizations |
+| [docs/LOOP_54_STAGE_A_REGISTRATION_CI_RECOVERY.md](docs/LOOP_54_STAGE_A_REGISTRATION_CI_RECOVERY.md) | exact-commit retry failure, frozen-payload identity, pinned remote proof anchor, exact-tree replay, and unchanged authorization boundary |
+| [registries/loop54_stage_a_registration_ci_recovery.v0.json](registries/loop54_stage_a_registration_ci_recovery.v0.json) | machine-readable toolchain-drift classification, immutable hashes, measured replay, green anchor, zero access counters, and false authorization flags |
+| [docs/LOOP_54_STAGE_A_AUTHORIZATION_PACKET.md](docs/LOOP_54_STAGE_A_AUTHORIZATION_PACKET.md) | historical non-actionable v0 request retained for audit; a new recovery-bound request is required |
 | [docs/LOOP_50_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_50_PRIMARY_SOURCE_RESEARCH.md) | primary-source multi-person design, global text firewall, historical S21 out-of-fold protocol, S24 development gate, controls, resources, and claim ceiling |
 | [registries/loop50_research_boundary.v0.json](registries/loop50_research_boundary.v0.json) | machine-readable two-person design with six Stage B routes, ten conditions, 30 refusals, 31 false authorizations, and zero protected/model counters |
 | [docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md](docs/LOOP_27_PRIMARY_SOURCE_RESEARCH.md) | official metadata ranking, selected S25 MEG candidate, exact bytes/hashes, target-isolation design, and preregistration blockers |

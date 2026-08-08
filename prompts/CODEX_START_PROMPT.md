@@ -412,10 +412,16 @@ L54-A is now prospectively frozen at registration commit `c114623` in:
 It binds exactly one 11,705-byte VHDR, a standard-library parser, no sibling
 resolution, 18 gates, 22 refusals, one content open, one registered execution,
 one thread/worker, 30 seconds, 256 MiB RSS, and 1 MiB output. Registration CI
-`31127199848` was cancelled before any test step during the Actions outage; a
-replacement run over exact commit `c114623` must become green before the exact
-authorization request is frozen. Do not stat the local path, implement the real
-parser, or open S20 from the preregistration alone.
+`31127199848` was retried at exact commit `c114623`: Optional Neuro Readers
+passed, while Base Python installed Ruff `0.16.2` from the old floating
+requirement and failed on 400 later lint findings. Read
+`docs/LOOP_54_STAGE_A_REGISTRATION_CI_RECOVERY.md` and
+`registries/loop54_stage_a_registration_ci_recovery.v0.json`. The frozen
+payload is byte-identical at pinned commit `2232993`, whose CI passed both
+jobs, and exact-tree Ruff `0.15.20` replay passed 1,095 tests with three skips.
+A new recovery-bound exact request remains required. Do not stat the local
+path, implement the parser, or open S20 from the preregistration or recovery
+alone.
 
 Loop 55 planning research is also complete and reviewable at:
 

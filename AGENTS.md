@@ -103,16 +103,24 @@ without any S20 path stat or payload read:
 ```bash
 cat docs/LOOP_54_STAGE_A_VHDR_PREREGISTRATION.md
 python -m json.tool registries/loop54_stage_a_vhdr_contract.v0.json >/dev/null
+cat docs/LOOP_54_STAGE_A_REGISTRATION_CI_RECOVERY.md
+python -m json.tool registries/loop54_stage_a_registration_ci_recovery.v0.json >/dev/null
 ```
 
 The one-shot contract binds exactly one 11,705-byte VHDR, a standard-library
 strict parser, no-follow path handling, no sibling resolution, one content
 open, one thread and worker, 30 seconds, 256 MiB RSS, and 1 MiB output. VMRK,
 EEG, MAT, target, split, model, network, and rerun access remain zero and
-unauthorized. Registration CI run `31127199848` was infrastructure-cancelled
-before any step started; a replacement run over exact commit `c114623` must
-become green before the authorization packet is frozen. Do not implement the
-parser or touch the registered local path from the preregistration alone.
+unauthorized. CI run `31127199848` was retried at exact commit `c114623` on
+2026-08-08: Optional Neuro Readers passed, but Base Python installed Ruff
+`0.16.2` from the historical floating requirement and stopped on 400 later
+repository-wide findings. The frozen preregistration, contract, and invariant
+test are byte-identical at pinned-toolchain commit `2232993`, whose push CI
+`31132586790` passed both jobs; an exact-tree local replay under Ruff `0.15.20`
+also passed 1,095 tests with three skips. Preserve the failed exact run as
+evidence. A new authorization request must bind the recovery record and become
+remotely green before an exact Tier C decision. Do not implement the parser or
+touch the registered local path from the preregistration or recovery alone.
 
 The additive open EEG strategy refresh is planning-only and does not loosen
 that gate:

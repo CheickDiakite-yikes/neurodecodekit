@@ -297,11 +297,14 @@ L54-A is now frozen in
 `c114623`. It binds exactly one 11,705-byte VHDR, no sibling resolution or MNE,
 18 acceptance gates, 22 refusals, one content open, one registered execution,
 and one thread/worker under 30 seconds, 256 MiB RSS, and 1 MiB output. No S20
-path was statted and no payload was opened during preregistration. Registration
-CI `31127199848` was cancelled before any test step during the Actions outage;
-a replacement run over exact commit `c114623` must become green before its
-exact Tier C packet is frozen. Implementation and execution remain
-unauthorized.
+path was statted and no payload was opened during preregistration. Exact-commit
+CI run `31127199848` was retried: Optional Neuro Readers passed, while Base
+Python selected Ruff `0.16.2` from the historical floating requirement and
+failed on 400 later lint findings. The three frozen artifacts are byte-identical
+at pinned commit `2232993`, whose CI `31132586790` passed both jobs; exact-tree
+local replay under Ruff `0.15.20` passed 1,095 tests with three skips. The
+additive recovery record does not authorize implementation or execution. A new
+recovery-bound exact Tier C request remains required.
 
 ### Loop 55 - Fresh EEG Neural-Effect Gate
 

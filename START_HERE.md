@@ -106,10 +106,15 @@
    `registries/loop54_stage_a_vhdr_contract.v0.json`. It binds one exact
    11,705-byte VHDR, no sibling resolution, 18 gates, 22 refusals, one content
    open, and one registered execution under a 30-second/256 MiB/1 MiB envelope.
-   Registration CI `31127199848` was infrastructure-cancelled before any test
-   step; a replacement run over exact commit `c114623` must become green and
-   the exact Tier C sentence must be recorded before implementation. No local
-   S20 path or payload was accessed during preregistration.
+   Then read `docs/LOOP_54_STAGE_A_REGISTRATION_CI_RECOVERY.md` and
+   `registries/loop54_stage_a_registration_ci_recovery.v0.json`. Exact-commit
+   run `31127199848` was retried: the neuro job passed, while Base Python
+   installed Ruff `0.16.2` from the old floating requirement and failed on 400
+   later lint findings. The frozen payload is byte-identical at pinned commit
+   `2232993`, whose CI passed both jobs, and exact-tree replay under Ruff
+   `0.15.20` passed 1,095 tests with three skips. A new recovery-bound exact
+   Tier C request is still required before implementation. No local S20 path or
+   payload was accessed during preregistration or recovery.
    Then read `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop55_eeg_neural_effect_research.v0.json`. Loop 55 planning
    separates a higher-power causal performed-hand endpoint from a harder

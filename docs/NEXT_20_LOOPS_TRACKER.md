@@ -109,10 +109,13 @@
 > marker, signal, MAT field, target, split, model, training, inference, or score
 > has opened. L54-A is now preregistered at `c114623` for exactly one
 > 11,705-byte VHDR under 18 gates, 22 refusals, one content open, and a
-> 30-second/256 MiB/1 MiB envelope. Registration CI `31127199848` was cancelled
-> before any test step during the Actions outage; a replacement run over exact
-> commit `c114623` must become green and exact Tier C authorization must be
-> recorded before implementation. Contract preparation performed zero S20 path
+> 30-second/256 MiB/1 MiB envelope. Exact-commit CI `31127199848` was retried:
+> the neuro job passed, while Base Python selected Ruff `0.16.2` from the old
+> floating requirement and failed on 400 later lint findings. The three frozen
+> artifacts remain byte-identical at pinned commit `2232993`, whose CI passed
+> both jobs; exact-tree Ruff `0.15.20` replay passed 1,095 tests with three
+> skips. A new recovery-bound exact Tier C request is still required before
+> implementation. Contract preparation and recovery performed zero S20 path
 > stats or payload reads. Loop 55
 > planning research now separates a
 > causal performed-hand gate from a harder causal 29-key gate, uses performed

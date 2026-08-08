@@ -3454,11 +3454,17 @@ and one execution, while the implementation must still be committed, pushed,
 and remotely green before the registered VHDR can open.
 
 Authorization decision: registration commit `c114623` alone grants no local
-path stat or content access. Registration CI `31127199848` was cancelled before
-any test step during the GitHub Actions major outage; a replacement run over
-exact commit `c114623` must become green before the authorization packet is
-frozen. Earlier acquisition permission, general Tier A/B autonomy, storage
-allowance, and competitive urgency are not transitive Tier C decisions.
+path stat or content access. CI run `31127199848` was retried at that exact
+commit on 2026-08-08. Optional Neuro Readers passed, while Base Python installed
+Ruff `0.16.2` from the historical floating declaration and stopped on 400
+later repository-wide findings. The frozen preregistration, contract, and
+invariant test are byte-identical at pinned-toolchain commit `2232993`, whose
+CI `31132586790` passed both jobs; exact-tree Ruff `0.15.20` replay passed 1,095
+tests with three skips. The additive recovery record retires repeated
+unbounded-toolchain reruns without calling the failed exact run green. A new
+recovery-bound request and exact Tier C decision remain required. Earlier
+acquisition permission, Tier A/B autonomy, storage allowance, and competitive
+urgency are not transitive Tier C decisions.
 
 Scientific boundary: a future clean L54-A pass can establish only strict
 readability and internal consistency of allowlisted declared header fields

@@ -4975,3 +4975,35 @@ contact-variable ear-worn sensing.
 
 Scientific claim not established: no new signal, target, model, or hardware
 evidence was produced, so no neural or decoding result follows.
+
+## 2026-08-08 - Loop 54-A Registration CI Recovery
+
+- Cancelled the two-day zero-job queue for run `31127199848` and retried it as
+  attempt 2 against exact commit `c114623`. Optional Neuro Readers passed in 48
+  seconds. Base Python installed Ruff `0.16.2` from the historical
+  `ruff>=0.5` declaration and stopped at Ruff in 13 seconds with 400
+  repository-wide findings; compile, tests, and CLI help did not run in that
+  job. The exact-commit run remains failed evidence.
+- Verified that the frozen preregistration, contract, and invariant test are
+  byte-identical at `c114623`, pinned-toolchain descendant `2232993`, and the
+  recovery parent. Push CI `31132586790` for `2232993` passed Base Python and
+  Optional Neuro Readers under Ruff `0.15.20`.
+- Replayed the exact `c114623` tree locally under pinned Ruff `0.15.20`: Ruff
+  passed in 0.05 seconds at 49,659,904-byte peak RSS; 1,095 tests passed with
+  three expected skips in 28.824 seconds internal and 30.26 seconds wall time
+  at 626,622,464-byte external peak RSS. Compileall, every registry JSON, and
+  CLI help passed.
+- No S20 path, VHDR, sibling, signal, marker, MAT, target, model, network,
+  provider, device, or hardware content was accessed. The old draft request
+  remains non-actionable; a new recovery-bound exact request is required.
+- Fresh recovery-tree verification passed 1,206 tests with three expected
+  skips in 29.152 seconds internal and 30.25 seconds wall time at
+  638,009,344-byte external peak RSS under one configured compute thread.
+  Forty-four focused recovery, contract, request, roadmap, and tracker tests
+  passed.
+
+Engineering capability added: immutable registration evidence can survive
+development-tool drift without rewriting the frozen scientific contract.
+
+Scientific claim not established: this recovery accessed no S20 content and
+produced no EEG, trial, neural, decoding, latency, device, or clinical result.

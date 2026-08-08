@@ -56,14 +56,17 @@
 > sibling. The contract freezes 18 gates, 22 refusals, one thread/worker, 30
 > seconds, 256 MiB RSS, 1 MiB output, one execution, zero network bytes, and no
 > rerun. Local qualification passes 1,095 tests with 3 expected skips; GitHub
-> registration CI `31127199848` was cancelled before any step started during
-> the confirmed 2026-08-06 Actions major outage. The authorization request is
-> preserved only as a non-actionable draft; a new run over exact commit
-> `c114623` must become green before the packet can freeze. Zero S20 path stats,
-> header reads, sibling reads, targets, models, or
-> experiment bytes occurred. The complete local request tree passes 1,103 tests
-> with 3 expected skips in 29.866 seconds at 643,842,048-byte external peak
-> RSS. Preserve the unrelated tracker inspection NDJSON.
+> registration CI `31127199848` was retried at exact commit `c114623` on
+> 2026-08-08. Optional Neuro Readers passed in 48 seconds; Base Python installed
+> Ruff `0.16.2` from the historical floating declaration and stopped on 400
+> later repository-wide findings. The frozen preregistration, contract, and
+> invariant test are byte-identical at pinned-toolchain commit `2232993`, whose
+> CI `31132586790` passed both jobs. Exact-tree local replay with Ruff `0.15.20`
+> passed 1,095 tests with 3 expected skips. Read the additive recovery record;
+> the old draft request remains non-actionable and a new recovery-bound exact
+> request must become green before a Tier C decision. Zero S20 path stats,
+> header reads, sibling reads, targets, models, or experiment bytes occurred.
+> Preserve the unrelated tracker inspection NDJSON.
 >
 > Additive architecture research, 2026-08-06: read
 > `docs/LOOP_55_CAUSAL_MOTOR_LATTICE_ARCHITECTURE_RESEARCH.md` and

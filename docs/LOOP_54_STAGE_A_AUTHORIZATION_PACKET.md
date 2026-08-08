@@ -2,7 +2,14 @@
 
 Date: 2026-08-06
 
-Status: **Draft; registration CI infrastructure-blocked; not actionable**
+Status: **Historical v0 draft; superseded by the 2026-08-08 registration CI
+recovery record; not actionable**
+
+This file preserves the pre-recovery request state. Its original CI description
+below is historical. Read `docs/LOOP_54_STAGE_A_REGISTRATION_CI_RECOVERY.md`
+and `registries/loop54_stage_a_registration_ci_recovery.v0.json`. A new
+recovery-bound request must be frozen and remotely green before any exact Tier
+C decision; this draft sentence may not be reused as authorization.
 
 Registration commit:
 `c1146233a6178ca5e1153b92565915abad029719`

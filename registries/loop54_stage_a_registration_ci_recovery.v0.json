@@ -1,0 +1,139 @@
+{
+  "schema_name": "neurodecodekit.loop54_stage_a_registration_ci_recovery",
+  "schema_version": "0.1.0",
+  "created_at": "2026-08-08",
+  "loop_id": 54,
+  "stage_id": "L54-A",
+  "status": "immutable_payload_recovered_via_green_pinned_toolchain_descendant",
+  "authorization": {
+    "implementation_authorized_now": false,
+    "real_execution_authorized_now": false,
+    "old_draft_request_actionable": false,
+    "new_exact_request_required": true,
+    "new_exact_user_decision_required": true
+  },
+  "original_registration": {
+    "commit": "c1146233a6178ca5e1153b92565915abad029719",
+    "branch": "codex/loop-54a-vhdr-preregistration",
+    "first_run_id": 31127199848,
+    "first_attempt_status": "cancelled_before_jobs_during_actions_outage",
+    "second_attempt_date": "2026-08-08",
+    "second_attempt_status": "completed_failure",
+    "second_attempt_head_sha_exact": true,
+    "second_attempt_base_python": {
+      "conclusion": "failure_at_ruff",
+      "duration_seconds": 13,
+      "installed_ruff_version": "0.16.2",
+      "ruff_findings": 400,
+      "compile_ran": false,
+      "unit_tests_ran": false,
+      "cli_help_ran": false
+    },
+    "second_attempt_optional_neuro_readers": {
+      "conclusion": "success",
+      "duration_seconds": 48,
+      "focused_suite_passed": true,
+      "complete_neuro_enabled_suite_passed": true,
+      "cli_help_passed": true
+    }
+  },
+  "failure_classification": {
+    "category": "floating_development_dependency_toolchain_drift",
+    "historical_requirement_met": false,
+    "root_cause_available": true,
+    "evidence": "The exact tree declared ruff>=0.5; attempt 2 installed Ruff 0.16.2 and stopped on 400 repository-wide findings, while the same tree passes Ruff 0.15.20.",
+    "scientific_contract_failure": false,
+    "real_data_failure": false,
+    "repeat_exact_unbounded_run_recommended": false
+  },
+  "immutable_registration_payload": [
+    {
+      "path": "docs/LOOP_54_STAGE_A_VHDR_PREREGISTRATION.md",
+      "sha256": "9b17d31a70c88eff3ab77d731abf1c0c759152f5c2ee6c8b3c5153bbd57875b6"
+    },
+    {
+      "path": "registries/loop54_stage_a_vhdr_contract.v0.json",
+      "sha256": "a0a466d845bff79e9461646f76791a3583fe7c567aeb532b6e951e570411124e"
+    },
+    {
+      "path": "tests/test_loop54_stage_a_vhdr_contract.py",
+      "sha256": "33591567aab4999d7f9c9bab8986147869b0a9339b0c618149a8fd60ffb86ef5"
+    }
+  ],
+  "payload_identity_checks": {
+    "original_to_pinned_descendant_byte_identical": true,
+    "original_to_recovery_parent_byte_identical": true,
+    "frozen_artifacts_modified": false
+  },
+  "pinned_remote_proof_anchor": {
+    "commit": "223299381036217631374d096fc842add5f6baf7",
+    "ruff_version": "0.15.20",
+    "push_ci_run_id": 31132586790,
+    "push_ci_conclusion": "success",
+    "base_python_passed": true,
+    "base_python_duration_seconds": 18,
+    "optional_neuro_readers_passed": true,
+    "optional_neuro_readers_duration_seconds": 51
+  },
+  "exact_tree_local_replay": {
+    "target_commit": "c1146233a6178ca5e1153b92565915abad029719",
+    "detached_worktree": true,
+    "configured_cpu_threads": 1,
+    "ruff_version": "0.15.20",
+    "ruff_passed": true,
+    "ruff_wall_seconds": 0.05,
+    "ruff_peak_rss_bytes": 49659904,
+    "complete_tests": 1095,
+    "complete_expected_skips": 3,
+    "complete_test_runtime_seconds": 28.824,
+    "complete_external_wall_seconds": 30.26,
+    "complete_external_peak_rss_bytes": 626622464,
+    "compileall_passed": true,
+    "all_registry_json_passed": true,
+    "cli_help_passed": true,
+    "temporary_worktree_removed": true
+  },
+  "recovery_protocol": {
+    "exact_historical_run_green_requirement_retired": true,
+    "retirement_reason": "A floating lint dependency makes repeated exact-head runs test later tool policy rather than the reviewed immutable payload.",
+    "required_future_binding": [
+      "original_registration_commit",
+      "immutable_registration_payload_hashes",
+      "pinned_remote_proof_anchor",
+      "remotely_green_recovery_record_commit",
+      "new_exact_authorization_request",
+      "new_exact_user_decision"
+    ],
+    "parser_implementation_may_start_from_recovery_alone": false,
+    "real_execution_may_start_from_recovery_alone": false
+  },
+  "documentation_binding": {
+    "path": "docs/LOOP_54_STAGE_A_REGISTRATION_CI_RECOVERY.md",
+    "sha256": "1a33c165d29903a57a73828eff2d930b937019d4769abb41ffdd8cc2923f4a8c"
+  },
+  "access_counters": {
+    "S20_path_stats": 0,
+    "VHDR_content_opens": 0,
+    "VHDR_hash_reads": 0,
+    "VHDR_parse_runs": 0,
+    "VMRK_stats_or_reads": 0,
+    "EEG_stats_or_reads": 0,
+    "MAT_stats_or_reads": 0,
+    "signal_reads": 0,
+    "marker_reads": 0,
+    "target_or_label_reads": 0,
+    "network_payloads": 0,
+    "downloads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "inference_runs": 0,
+    "scoring_runs": 0,
+    "provider_runs": 0,
+    "device_or_hardware_runs": 0,
+    "generated_real_data_artifacts": 0
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "An immutable preregistration can be recovered from development-tool drift through byte identity, a pinned green descendant, and an explicit additive record.",
+    "scientific_claim_not_established": "No S20 content was accessed, so this recovery establishes no header readability, signal quality, trial validity, neural advantage, decoding accuracy, generalization, latency, device, home-use, or clinical result."
+  }
+}
