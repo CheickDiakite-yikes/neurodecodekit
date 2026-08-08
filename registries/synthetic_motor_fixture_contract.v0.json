@@ -1,0 +1,242 @@
+{
+  "schema_name": "neurodecodekit.synthetic_motor_fixture_contract",
+  "schema_version": "0.1.0",
+  "status": "preregistered_tier_B_fixture_only_not_implemented_not_executed",
+  "date": "2026-08-08",
+  "work_order": 3,
+  "title": "Deterministic Synthetic Motor And Shortcut Fixture",
+  "scope": {
+    "fixture_generation_only": true,
+    "architecture_implementation": false,
+    "parameter_updates": false,
+    "model_inference": false,
+    "scientific_scoring": false,
+    "real_or_public_data_access": false
+  },
+  "source_bindings": {
+    "CML_research_document": {
+      "path": "docs/LOOP_55_CAUSAL_MOTOR_LATTICE_ARCHITECTURE_RESEARCH.md",
+      "sha256": "ce50a5a140ef89a69421303a3e65eb623372c773935309daa6836e24cb6671eb"
+    },
+    "CML_research_registry": {
+      "path": "registries/loop55_causal_motor_lattice_research.v0.json",
+      "sha256": "9fd05f9c14858b2964f1e4a7317ee60b32bd262c5152471fa20c9710c260eb8f"
+    },
+    "open_EEG_strategy_document": {
+      "path": "docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md",
+      "sha256": "1dd8723e8227d310b644cd7b5602332500f1174eca524f61fcaa6447b3e113b0"
+    },
+    "open_EEG_strategy_registry": {
+      "path": "registries/open_eeg_rd_strategy.v0.json",
+      "sha256": "0291e802cefbbe73bb9ecdcd4d5d1d40b56e53e0836f2fadf28a11f59738e742"
+    },
+    "local_tooling_audit_document": {
+      "path": "docs/LOCAL_EEG_TOOLING_AUDIT_2026-08-08.md",
+      "sha256": "de3cddbb996fbc1e0275ab2ab7dea1c95059ecff4ef9c2fa73af94caa8ac9dd8"
+    },
+    "local_tooling_audit_receipt": {
+      "path": "registries/local_eeg_tooling_audit_receipt.v0.json",
+      "sha256": "da82292e4cf126ad78c8210c77b64bd2d298b08c381af3c157225b91d6f9de5a"
+    },
+    "autonomy_charter": {
+      "path": "docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md",
+      "sha256": "c9381bfc729dfca4aaab03929a6623f23c3cf06eb33fbae5379b0517981dcb64"
+    },
+    "autonomy_decision": {
+      "path": "docs/RESEARCH_AUTONOMY_CHARTER_DECISION.md",
+      "sha256": "700d7243ff53b191c2bd262424efe45cc5a5e40200b115503a84d3563c93e7b7"
+    }
+  },
+  "fixture_identity": {
+    "seed": 5503,
+    "sampling_rate_hz": 128,
+    "maximum_samples": 256,
+    "maximum_pre_event_context_seconds": 2.0,
+    "right_context_samples": 0,
+    "channel_count": 8,
+    "channel_names": [
+      "SYN00",
+      "SYN01",
+      "SYN02",
+      "SYN03",
+      "SYN04",
+      "SYN05",
+      "SYN06",
+      "SYN07"
+    ],
+    "channel_identity_is_synthetic_not_anatomical": true,
+    "geometry_is_synthetic_arbitrary_unit_layout": true,
+    "signal_unit": "synthetic_arbitrary_unit",
+    "item_count": 96,
+    "factor_family_count": 8,
+    "items_per_factor_family": 12,
+    "paired_design_classes_per_factor_family": 6,
+    "partition_counts": {
+      "train": 48,
+      "check": 32,
+      "final": 16
+    },
+    "per_family_partition_counts": {
+      "train": 6,
+      "check": 4,
+      "final": 2
+    },
+    "pair_members_must_share_partition": true
+  },
+  "factor_families": [
+    {
+      "factor_id": "potential_shape_signal",
+      "waveform_relation": "design_class_controls_lateralized_slow_pre_event_shape"
+    },
+    {
+      "factor_id": "mu_energy_signal",
+      "waveform_relation": "design_class_controls_lateralized_8_to_13_Hz_energy"
+    },
+    {
+      "factor_id": "beta_energy_signal",
+      "waveform_relation": "design_class_controls_lateralized_13_to_30_Hz_energy"
+    },
+    {
+      "factor_id": "mixed_potential_mu_beta_signal",
+      "waveform_relation": "design_class_controls_all_three_motor_views"
+    },
+    {
+      "factor_id": "left_right_spatial_reversal",
+      "waveform_relation": "mixed_motor_view_is_emitted_under_frozen_left_right_reversal"
+    },
+    {
+      "factor_id": "timing_only_labels_without_signal_relation",
+      "waveform_relation": "paired_waveforms_are_equal_on_shared_valid_support_and_only_timing_metadata_differs"
+    },
+    {
+      "factor_id": "peripheral_like_common_mode_artifact",
+      "waveform_relation": "design_class_controls_synthetic_peripheral_proxy_and_common_mode_projection"
+    },
+    {
+      "factor_id": "pure_noise",
+      "waveform_relation": "paired_waveforms_and_timing_are_equal_across_design_classes"
+    }
+  ],
+  "partition_protocol": {
+    "pair_indices_by_partition": {
+      "train": [0, 1, 2],
+      "check": [3, 4],
+      "final": [5]
+    },
+    "selection_from_check_or_final": false,
+    "final_is_scientific_test": false,
+    "meaning": "Synthetic interface partition only; no real or scientific evidence is consumed."
+  },
+  "required_arrays": {
+    "signals": {"dtype": "float32", "shape": [96, 8, 256]},
+    "peripheral_proxy": {"dtype": "float32", "shape": [96, 256]},
+    "valid_mask": {"dtype": "bool", "shape": [96, 256]},
+    "timestamps_sec": {"dtype": "float64", "shape": [96, 256]},
+    "valid_lengths": {"dtype": "int32", "shape": [96]},
+    "synthetic_hand_class": {"dtype": "int8", "shape": [96]},
+    "item_ids": {"dtype": "unicode", "shape": [96]},
+    "pair_ids": {"dtype": "unicode", "shape": [96]},
+    "factor_ids": {"dtype": "unicode", "shape": [96]},
+    "partition_ids": {"dtype": "unicode", "shape": [96]},
+    "channel_names": {"dtype": "unicode", "shape": [8]},
+    "geometry_xyz": {"dtype": "float32", "shape": [8, 3]},
+    "metadata": {"dtype": "unicode_scalar", "shape": []}
+  },
+  "mutation_contract": [
+    {"mutation_id": "line_noise_50_hz", "parameter": "fixed_amplitude_50_Hz_valid_samples_only"},
+    {"mutation_id": "line_noise_60_hz", "parameter": "fixed_amplitude_60_Hz_valid_samples_only"},
+    {"mutation_id": "single_channel_dropout", "parameter": "channel_index_2"},
+    {"mutation_id": "frozen_channel_derangement", "parameter": "permutation_4_5_6_7_0_1_2_3"},
+    {"mutation_id": "nonwrapping_time_displacement", "parameter": "shift_16_samples_toward_earlier_time"},
+    {"mutation_id": "peripheral_proxy_only", "parameter": "broadcast_proxy_with_frozen_mixing_weights"},
+    {"mutation_id": "zero_signal", "parameter": "all_valid_signal_values_zero"},
+    {"mutation_id": "future_tail_mutation", "parameter": "modify_only_valid_samples_after_declared_cutoff"}
+  ],
+  "privacy_and_leakage": {
+    "synthetic_design_class_values_created": 96,
+    "synthetic_design_classes_are_not_real_targets": true,
+    "target_reference_intended_or_prompt_text_created_or_read": false,
+    "real_channel_names_created_or_read": false,
+    "participant_or_session_identity_created_or_read": false,
+    "local_protected_path_serialized": false,
+    "pretrained_weight_or_external_embedding_used": false,
+    "forbidden_recursive_field_fragments": [
+      "target_text",
+      "reference_text",
+      "intended_text",
+      "participant_id",
+      "subject_id",
+      "protected_path"
+    ]
+  },
+  "resource_caps": {
+    "maximum_cpu_threads": 1,
+    "maximum_workers": 1,
+    "maximum_wall_seconds": 60,
+    "maximum_peak_rss_bytes": 536870912,
+    "maximum_generated_output_bytes": 4194304,
+    "maximum_retained_files": 2
+  },
+  "dependency_contract": {
+    "base_dependencies_added": false,
+    "generation_extra": "neuro",
+    "numpy_minimum": "1.26",
+    "scipy_minimum": "1.11",
+    "imports_must_be_lazy": true,
+    "network_install_or_runtime_fetch_allowed": false
+  },
+  "acceptance_gates": [
+    "byte_identical_seed_5503_replay",
+    "exact_factor_pair_and_partition_inventory",
+    "strict_dtype_shape_mask_timestamp_padding_geometry_and_hash_validation",
+    "analytic_factor_isolation_checks_without_model_fit",
+    "timing_only_shared_support_waveforms_are_pairwise_equal",
+    "pure_noise_waveforms_and_timing_are_pairwise_equal",
+    "mutations_are_deterministic_shape_preserving_and_zero_padded",
+    "future_tail_mutation_preserves_prefix_exactly",
+    "forbidden_content_and_access_counters_remain_zero",
+    "output_runtime_RSS_and_file_caps_pass",
+    "CLI_create_inspect_malformed_and_collision_tests_pass",
+    "full_tests_ruff_compile_JSON_help_and_diff_checks_pass"
+  ],
+  "retention": {
+    "generated_array_payload_committed": false,
+    "temporary_test_replays_allowed": true,
+    "one_measured_closeout_may_retain_hashes_and_aggregate_metadata_only": true
+  },
+  "authorization": {
+    "tier_A_contract_documentation_tests_commit_push_and_CI_allowed": true,
+    "tier_B_fixture_implementation_and_bounded_synthetic_replay_allowed": true,
+    "CML_architecture_implementation_allowed_by_this_contract": false,
+    "parameter_update_model_inference_or_scoring_allowed": false,
+    "real_public_or_protected_data_access_allowed": false,
+    "download_network_provider_stream_device_or_hardware_allowed": false,
+    "scientific_claim_upgrade_allowed": false,
+    "every_future_tier_C_action_requires_a_separate_exact_decision": true
+  },
+  "current_access_counters": {
+    "synthetic_fixture_payload_generations": 0,
+    "real_or_protected_data_reads": 0,
+    "public_EEG_payload_reads": 0,
+    "target_or_label_reads": 0,
+    "model_or_checkpoint_loads": 0,
+    "parameter_update_runs": 0,
+    "model_inference_runs": 0,
+    "scoring_or_selection_runs": 0,
+    "network_calls": 0,
+    "provider_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "warnings": [
+    "Generated motor-like factors are deliberately constructed and are not biological observations.",
+    "Synthetic left/right geometry is not an anatomical montage.",
+    "The timing-only family intentionally exposes a metadata shortcut for control testing.",
+    "The peripheral family is an ocular-like shortcut proxy, not a validated EOG model.",
+    "Passing fixture mechanics cannot qualify CML-v0 or any real EEG pipeline."
+  ],
+  "claim_boundary": {
+    "engineering_capability_if_all_gates_pass": "A deterministic synthetic fixture can exercise motor-factor timing peripheral padding and corruption interfaces before real evidence is spent.",
+    "scientific_claim_not_established_even_if_all_gates_pass": "Generated factors establish no real EEG physiology neural origin decoding accuracy generalization latency device performance home use or clinical utility."
+  }
+}

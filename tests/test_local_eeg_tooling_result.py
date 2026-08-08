@@ -87,7 +87,10 @@ class LocalEegToolingResultTests(unittest.TestCase):
         self.assertIn("Scientific claim not established", document)
         self.assertIn("Work orders 1 and 2 are complete", queue)
         self.assertEqual(queue.count("| Complete |"), 2)
-        self.assertEqual(queue.count("| In Progress |"), 1)
+        work_order_three = next(
+            line for line in queue.splitlines() if line.startswith("| 3 |")
+        )
+        self.assertIn("| In Progress: Contract Frozen |", work_order_three)
         self.assertEqual(sum(line.startswith("| ") for line in queue.splitlines()), 21)
 
 

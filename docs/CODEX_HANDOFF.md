@@ -59,7 +59,13 @@
 > data, target, model, training, scoring, network, provider, and hardware
 > counters zero. Work orders 1-2 are complete. Continue with work order 3's
 > deterministic NumPy/SciPy synthetic physiology/confound fixtures and no new
-> dependency, download, S20 read, target, model, or hardware action.
+> dependency, download, S20 read, target, model, or hardware action. Work order
+> 3 is now frozen in `docs/SYNTHETIC_MOTOR_FIXTURE_PREREGISTRATION.md` and
+> `registries/synthetic_motor_fixture_contract.v0.json`: seed 5503, 96 paired
+> items, eight factor families, 48/32/16 partitions, eight mutations, and a
+> 4 MiB cap. Implementation and execution are still `Not Started`; the contract
+> permits no architecture, model, fitting, inference, scoring, or real-data
+> action.
 >
 > Current handoff, 2026-08-06 after Loop 54-A preregistration: registration
 > commit `c114623` is pushed on `codex/loop-54a-vhdr-preregistration` and binds

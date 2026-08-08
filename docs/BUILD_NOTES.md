@@ -5048,3 +5048,29 @@ through bounded zero-network probes and route work from measured capability.
 Scientific claim not established: installed library surfaces establish no EEG
 quality, neural effect, decoding accuracy, generalization, latency, device, or
 clinical result.
+
+## 2026-08-08 - Synthetic Motor Fixture Contract
+
+- Froze work order 3 as a fixture-only Tier B contract before implementation.
+  Seed 5503 produces a prospective 96-item, eight-family array set with six
+  paired synthetic design classes per family and exact 48/32/16
+  train/check/final counts.
+- The eight families match the additive CML research recommendation exactly:
+  potential, mu, beta, mixed, spatial reversal, timing-only, peripheral common
+  mode, and pure noise. Eight separate mutations cover 50/60 Hz line noise,
+  channel dropout/derangement, time displacement, peripheral-only, zero-signal,
+  and future-tail prefix checks.
+- No real names, text targets, participant identity, protected paths, external
+  weights, model, parameter update, inference, scoring, network, stream,
+  device, or hardware action is allowed. NumPy/SciPy remain optional and lazy.
+- Seven contract invariants pass. The registry, source hashes, factor list,
+  pair/split inventory, array schema, mutation list, resource caps,
+  authorization boundary, zero counters, and tracker state agree.
+
+Engineering capability proposed: one deterministic fixture can exercise motor,
+timing, peripheral, padding, and corruption interfaces before real evidence is
+spent.
+
+Scientific claim not established: preregistration and generated factors cannot
+establish real EEG physiology, neural origin, decoding, generalization,
+latency, device performance, home use, or clinical utility.

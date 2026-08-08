@@ -126,7 +126,12 @@
    173,211,648 bytes, retained output was 9,416 bytes, and every data, target,
    model, training, scoring, network, provider, and hardware counter stayed
    zero. Work orders 1-2 are complete; work order 3 is a no-install synthetic
-   physiology/confound fixture pack.
+   physiology/confound fixture pack. Read
+   `docs/SYNTHETIC_MOTOR_FIXTURE_PREREGISTRATION.md` and
+   `registries/synthetic_motor_fixture_contract.v0.json` for its frozen seed
+   5503, 96-item, eight-family, 48/32/16, 4 MiB fixture-only boundary. The
+   generator and measured result do not exist yet, and this contract permits no
+   model, training, inference, scoring, S20, PhysioNet, or claim operation.
    Then read `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop55_eeg_neural_effect_research.v0.json`. Loop 55 planning
    separates a higher-power causal performed-hand endpoint from a harder

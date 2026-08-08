@@ -3818,3 +3818,24 @@ Evidence: `docs/LOCAL_EEG_TOOLING_AUDIT_2026-08-08.md`,
 `registries/local_eeg_tooling_audit_result.v0.json`,
 `registries/local_eeg_tooling_audit_receipt.v0.json`, and
 `docs/NEXT_20_SYSTEMATIC_EXECUTION_2026-08-08.md`.
+
+## 0109 - Separate Synthetic Factor Fixtures From CML-v0
+
+Decision: freeze a reusable factor-isolation fixture before implementing any
+architecture. Use seed 5503 for 96 paired items spanning the eight factors
+already selected by the CML research, with strict train/check/final groups and
+deterministic shortcut/corruption transforms.
+
+Boundary: this is reversible Tier B infrastructure under the active autonomy
+charter and systematic execution request. Synthetic design classes are allowed
+only as generator controls. No text target, real identity, protected path,
+public payload, architecture, fit, model, inference, score, or claim is in
+scope. The frozen CML research artifact remains unchanged.
+
+Route: implement a lazy NumPy/SciPy generator, strict validator, metadata-only
+inspector, deterministic mutation surface, and CLI. Retain no generated array
+payload in Git. CML-v0 remains work order 13 and every real-data action remains
+Tier C.
+
+Evidence: `docs/SYNTHETIC_MOTOR_FIXTURE_PREREGISTRATION.md` and
+`registries/synthetic_motor_fixture_contract.v0.json`.

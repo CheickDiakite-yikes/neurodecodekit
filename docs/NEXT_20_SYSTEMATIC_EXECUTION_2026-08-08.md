@@ -13,7 +13,7 @@ decision after its own frozen packet and required remote-green evidence exist.
 |---:|---|---|---|---|
 | 1 | Recover Loop 54-A registration CI evidence | A | Preserve frozen artifacts, diagnose toolchain drift, obtain green descendant evidence | Complete |
 | 2 | Audit local EEG tool capabilities | A | Fixed zero-network probes, one thread, <=1 MiB output, all data/model counters zero | Complete |
-| 3 | Build synthetic physiology/confound fixtures | B | Deterministic motor, timing, ocular, line-noise, dropout, and corruption cases with no target leakage | In Progress |
+| 3 | Build synthetic physiology/confound fixtures | B | Deterministic motor, timing, ocular, line-noise, dropout, and corruption cases with no target leakage | In Progress: Contract Frozen |
 | 4 | Add classical EEG adapter contracts | B | Optional dependency boundaries, grouped-fit rules, leakage tests, no real execution | Queued |
 | 5 | Add a contact-aware ear-channel adapter | B | Synthetic contact/noise/missingness fixtures and exact channel-mask semantics only | Queued |
 | 6 | Freeze Loop 54-A decision and qualify parser | A/B then C decision | Recovery-bound exact packet, strict synthetic parser tests, green implementation before real access | Gated |
@@ -39,6 +39,10 @@ found NumPy `2.5.0` and SciPy `1.18.0` ready without adding dependencies. MNE
 `1.12.1` exposes the BrainVision reader and ICA, while scikit-learn, pyRiemann,
 MOABB, and Braindecode are absent. No broad install is justified before the
 synthetic fixture and adapter contracts show exactly what is needed.
+
+Work order 3's fixture-only contract is now frozen in
+`registries/synthetic_motor_fixture_contract.v0.json`. Implementation and a
+measured fixture result remain pending.
 
 This queue never authorizes S20 interpretation, PhysioNet acquisition, target
 delivery, training, scoring, hardware, release, or a scientific claim by
