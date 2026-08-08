@@ -1,0 +1,116 @@
+{
+  "schema_name": "neurodecodekit.synthetic_motor_fixture_implementation",
+  "schema_version": "0.1.0",
+  "status": "implemented_locally_qualified_not_measured_pending_remote_green",
+  "date": "2026-08-08",
+  "work_order": 3,
+  "contract_binding": {
+    "path": "registries/synthetic_motor_fixture_contract.v0.json",
+    "sha256": "0613f2d5df4b4b58b3e49d49cebe159550da7c1cb244f19a2de114cccc0bde27",
+    "registration_commit": "9238fd79433e849054f453c47f2aff9470ba6947",
+    "registration_push_CI_run_id": 31278502496,
+    "registration_push_CI_conclusion": "success"
+  },
+  "implementation_binding": {
+    "module": {
+      "path": "src/neurodecodekit/training/synthetic_motor_fixture.py",
+      "sha256": "23f3b87a987c8f7354c749b7f67215ebdbab9f8e00afe52ac8623fbb8965cc2a"
+    },
+    "CLI": {
+      "path": "src/neurodecodekit/cli.py",
+      "sha256": "56ec2ae6822391196f3c782fbdfc2bb38325941b3193f92b3c5d9d7dd0893abb"
+    },
+    "tests": {
+      "path": "tests/test_synthetic_motor_fixture.py",
+      "sha256": "41d0e127b27549f475b9cad530878788b87687a708b957093d924693dc7286ff"
+    },
+    "prior_result_regression_test": {
+      "path": "tests/test_local_eeg_tooling_result.py",
+      "sha256": "114db34f4a2b1108c5dbf4d84b296db4d4f914934a77816025a8d132c9bd2ea7"
+    },
+    "documentation": {
+      "path": "docs/SYNTHETIC_MOTOR_FIXTURE_IMPLEMENTATION.md",
+      "sha256": "11b9b1ea41736dbde0d56607068f97481643bd11610f396678fc5e595f2ed022"
+    }
+  },
+  "implemented_surfaces": {
+    "registered_contract_loader": true,
+    "deterministic_array_generator": true,
+    "deterministic_NPZ_writer": true,
+    "strict_array_loader_and_validator": true,
+    "metadata_only_hash_and_member_inspector": true,
+    "deterministic_mutation_interface": true,
+    "CLI_create_command": "make-synthetic-motor-fixture",
+    "CLI_inspect_command": "inspect-synthetic-motor-fixture",
+    "generated_payload_committed": false
+  },
+  "local_verification": {
+    "preimplementation_complete_tests_passed": 1225,
+    "preimplementation_complete_tests_skipped": 3,
+    "focused_implementation_tests_passed": 12,
+    "combined_focused_tests_passed": 31,
+    "complete_tests_passed": 1242,
+    "complete_tests_skipped": 3,
+    "complete_subtests_passed": 469,
+    "complete_test_wall_seconds": 32.93,
+    "complete_test_peak_RSS_bytes": 658866176,
+    "ruff_passed": true,
+    "diff_check_passed": true,
+    "measured_fixture_execution_completed": false,
+    "note": "Complete-suite RSS is not the single-fixture execution measurement."
+  },
+  "disposable_probe_observation": {
+    "scientific_evidence": false,
+    "signal_shape": [
+      96,
+      8,
+      256
+    ],
+    "valid_sample_count": 20448,
+    "padding_fraction": 0.16796875,
+    "payload_bytes": 572292,
+    "metadata_sidecar_bytes": 11841,
+    "total_output_bytes": 584133,
+    "retained_files": 0
+  },
+  "execution_gate": {
+    "exact_implementation_commit_known": false,
+    "exact_implementation_commit_pushed": false,
+    "exact_implementation_commit_remote_green": false,
+    "one_measured_roundtrip_started": false,
+    "one_measured_roundtrip_completed": false,
+    "result_receipt_available": false
+  },
+  "resource_contract": {
+    "maximum_CPU_threads": 1,
+    "maximum_workers": 1,
+    "maximum_wall_seconds": 60,
+    "maximum_peak_RSS_bytes": 536870912,
+    "maximum_generated_output_bytes": 4194304,
+    "maximum_retained_fixture_files": 2
+  },
+  "access_counters": {
+    "retained_synthetic_fixture_payloads": 0,
+    "real_or_protected_data_reads": 0,
+    "public_EEG_payload_reads": 0,
+    "target_or_label_reads": 0,
+    "model_or_checkpoint_loads": 0,
+    "parameter_update_runs": 0,
+    "model_inference_runs": 0,
+    "scoring_or_selection_runs": 0,
+    "network_calls": 0,
+    "provider_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "warnings": [
+    "Generated motor-like factors are constructed software fixtures, not biological observations.",
+    "The measured retained closeout remains pending exact-commit remote-green evidence.",
+    "The complete test suite peak RSS is not the fixture execution peak RSS.",
+    "CML-v0 implementation and every real-data action remain outside this work order."
+  ],
+  "claim_boundary": {
+    "engineering_capability_added": "A deterministic synthetic motor-factor fixture now has strict generation validation inspection mutation and CLI interfaces.",
+    "scientific_claim_not_established": "No real EEG physiology neural origin decoding accuracy generalization latency device home-use or clinical result was established."
+  }
+}

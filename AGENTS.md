@@ -159,18 +159,24 @@ Do not install a broad EEG stack from this result. The active work order is the
 NumPy/SciPy-only synthetic physiology and confound fixture pack; it must not
 touch S20, PhysioNet, targets, models, or hardware.
 
-Work order 3 is now preregistered, but not implemented or executed:
+Work order 3 is now preregistered and locally implemented, but its measured
+closeout has not started:
 
 ```bash
 cat docs/SYNTHETIC_MOTOR_FIXTURE_PREREGISTRATION.md
 python -m json.tool registries/synthetic_motor_fixture_contract.v0.json >/dev/null
+cat docs/SYNTHETIC_MOTOR_FIXTURE_IMPLEMENTATION.md
+python -m json.tool registries/synthetic_motor_fixture_implementation.v0.json >/dev/null
 ```
 
 The Tier B fixture contract freezes seed 5503, 96 items, eight factor families,
 48/32/16 paired train/check/final rows, eight deterministic mutations, one
-thread/worker, 60 seconds, 512 MiB RSS, and 4 MiB output. It permits fixture
-generation and validation only. It does not authorize CML-v0 implementation,
-training, inference, scoring, S20, PhysioNet, a model, or a scientific claim.
+thread/worker, 60 seconds, 512 MiB RSS, and 4 MiB output. A deterministic
+generator, strict loader, metadata-only inspector, eight-mutation interface,
+two CLI commands, and 12 focused tests are locally qualified. Push the exact
+implementation and require green CI before one measured synthetic closeout.
+It does not authorize CML-v0 implementation, training, inference, scoring,
+S20, PhysioNet, a model, or a scientific claim.
 
 The additive architecture pass now selects `CML-v0` as the next hypothesis:
 

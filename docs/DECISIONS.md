@@ -3839,3 +3839,27 @@ Tier C.
 
 Evidence: `docs/SYNTHETIC_MOTOR_FIXTURE_PREREGISTRATION.md` and
 `registries/synthetic_motor_fixture_contract.v0.json`.
+
+## 0110 - Qualify Fixture Mechanics Before Retaining A Measurement
+
+Decision: implement the frozen work-order-3 fixture as one deterministic NPZ,
+one inspectable sidecar, a strict full loader, a metadata-only inspector, eight
+fixed mutations, and two CLI commands. Keep NumPy and SciPy optional and lazy.
+
+Reason: the public EEG and protected S20 paths should not pay for basic schema,
+timing, pairing, padding, corruption, or leakage mistakes. Exact synthetic
+relations let those failures be caught cheaply without fitting a model or
+opening evidence.
+
+Gate: local tests may use disposable fixture replays. One retained aggregate
+measurement may occur only after the exact implementation commit is pushed and
+both remote CI jobs pass. Retain hashes and aggregate metrics, never the NPZ or
+sidecar. A failed replay, resource cap, or validator parks the work order rather
+than widening it.
+
+Boundary: invented factors can qualify software mechanics only. CML-v0,
+PhysioNet, S20, targets, models, training, inference, scoring, hardware, and
+scientific claims remain outside this decision.
+
+Evidence: `docs/SYNTHETIC_MOTOR_FIXTURE_IMPLEMENTATION.md` and
+`registries/synthetic_motor_fixture_implementation.v0.json`.

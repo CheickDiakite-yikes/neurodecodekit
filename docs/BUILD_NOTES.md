@@ -5074,3 +5074,35 @@ spent.
 Scientific claim not established: preregistration and generated factors cannot
 establish real EEG physiology, neural origin, decoding, generalization,
 latency, device performance, home use, or clinical utility.
+
+## 2026-08-08 - Synthetic Motor Fixture Implementation
+
+- Added a lazy optional NumPy/SciPy generator for the exact seed-5503,
+  96-item, eight-channel, eight-factor contract. Every row carries explicit
+  length, mask, strictly pre-event timestamps, synthetic pair/class/factor
+  identity, partition, channel name, and invented geometry.
+- Added deterministic ZIP metadata, array hashes, a strict full loader, and a
+  metadata-only inspector that hashes the payload and examines ZIP members
+  without opening arrays. Output collision and 4 MiB cap failures occur before
+  any fixture file is written.
+- Added eight deterministic mutations. Tests verify byte replay, analytic
+  factor isolation, pair-bound 48/32/16 splits, exact padding, malformed and
+  hidden-target refusal, future-prefix invariance, lazy imports, cap behavior,
+  and create/inspect CLI roundtrip.
+- Twelve focused tests and 31 combined fixture/contract/receipt/prior-result
+  tests pass. The complete suite currently passes 1,242 tests with three
+  expected skips and 469 subtests. One historical local-tooling CLI digest
+  remains preserved while its exact command surface is asserted after this
+  additive CLI change.
+- A disposable probe observed shape `[96, 8, 256]`, 20,448 valid samples,
+  `0.16796875` padding fraction, and 584,133 total bytes. These are development
+  observations, not the retained measured closeout. The exact implementation
+  commit must be pushed and remotely green before that one measured replay.
+
+Engineering capability added: the repository can generate, validate, inspect,
+and mutate a deterministic synthetic motor-factor fixture with fail-closed
+identity, leakage, causality, padding, hash, and resource checks.
+
+Scientific claim not established: no real EEG physiology, neural origin,
+decoding accuracy, generalization, end-to-end latency, device performance,
+home use, or clinical utility was established.

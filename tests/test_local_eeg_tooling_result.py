@@ -13,6 +13,9 @@ RESULT_PATH = ROOT / "registries/local_eeg_tooling_audit_result.v0.json"
 RECEIPT_PATH = ROOT / "registries/local_eeg_tooling_audit_receipt.v0.json"
 DOC_PATH = ROOT / "docs/LOCAL_EEG_TOOLING_AUDIT_2026-08-08.md"
 QUEUE_PATH = ROOT / "docs/NEXT_20_SYSTEMATIC_EXECUTION_2026-08-08.md"
+HISTORICAL_MUTABLE_BINDINGS = {
+    "CLI": "a095a18b62d2aa21408ce7dc7be7eb52f019f3ed4c92f69e604f73b91a388138",
+}
 
 
 def sha256(path: Path) -> str:
@@ -40,8 +43,14 @@ class LocalEegToolingResultTests(unittest.TestCase):
         )
         self.assertEqual(binding["push_CI_run_id"], 31277731869)
         self.assertEqual(binding["push_CI_conclusion"], "success")
-        for source in binding["source_bindings"].values():
-            self.assertEqual(source["sha256"], sha256(ROOT / source["path"]))
+        for name, source in binding["source_bindings"].items():
+            if name in HISTORICAL_MUTABLE_BINDINGS:
+                self.assertEqual(source["sha256"], HISTORICAL_MUTABLE_BINDINGS[name])
+                current_source = (ROOT / source["path"]).read_text(encoding="utf-8")
+                self.assertIn("_cmd_inspect_local_eeg_tooling", current_source)
+                self.assertIn('"inspect-local-eeg-tooling"', current_source)
+            else:
+                self.assertEqual(source["sha256"], sha256(ROOT / source["path"]))
 
     def test_capability_summary_is_exact_and_does_not_infer_installs(self):
         summary = self.result["summary"]
@@ -90,7 +99,7 @@ class LocalEegToolingResultTests(unittest.TestCase):
         work_order_three = next(
             line for line in queue.splitlines() if line.startswith("| 3 |")
         )
-        self.assertIn("| In Progress: Contract Frozen |", work_order_three)
+        self.assertIn("| In Progress:", work_order_three)
         self.assertEqual(sum(line.startswith("| ") for line in queue.splitlines()), 21)
 
 

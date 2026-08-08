@@ -2641,6 +2641,37 @@ def _cmd_inspect_local_eeg_tooling(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_make_synthetic_motor_fixture(args: argparse.Namespace) -> int:
+    _set_loop25_thread_environment()
+    from neurodecodekit.training.synthetic_motor_fixture import (
+        prepare_synthetic_motor_fixture,
+        summarize_synthetic_motor_metadata,
+    )
+
+    sidecar = prepare_synthetic_motor_fixture(
+        args.out_dir,
+        contract_path=args.contract,
+        max_output_bytes=int(args.max_output_mib * 1024 * 1024),
+    )
+    print(json.dumps(summarize_synthetic_motor_metadata(sidecar), indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_inspect_synthetic_motor_fixture(args: argparse.Namespace) -> int:
+    from neurodecodekit.training.synthetic_motor_fixture import (
+        load_synthetic_motor_metadata,
+        summarize_synthetic_motor_metadata,
+    )
+
+    sidecar = load_synthetic_motor_metadata(
+        args.metadata,
+        contract_path=args.contract,
+        max_output_bytes=int(args.max_output_mib * 1024 * 1024),
+    )
+    print(json.dumps(summarize_synthetic_motor_metadata(sidecar), indent=2, sort_keys=True))
+    return 0
+
+
 def _print_selection_plan(selection: Any, *, heading: str) -> None:
     from neurodecodekit.datasets.selection import format_bytes
 
@@ -4879,6 +4910,47 @@ def build_parser() -> argparse.ArgumentParser:
         help="Maximum retained JSON report size in MiB. Default: 1.",
     )
     p.set_defaults(func=_cmd_inspect_local_eeg_tooling)
+
+    p = sub.add_parser(
+        "make-synthetic-motor-fixture",
+        help="Create the registered synthetic motor-factor and shortcut fixture.",
+        description=(
+            "Create one deterministic NPZ and one metadata sidecar from synthetic-only "
+            "generator controls. No real data, targets, model, training, inference, or "
+            "scientific scoring is used. Existing output directories are never replaced."
+        ),
+    )
+    p.add_argument("--out-dir", required=True, help="New output directory for two fixture files.")
+    p.add_argument(
+        "--contract",
+        default="registries/synthetic_motor_fixture_contract.v0.json",
+        help="Exact registered fixture contract. Substitutions fail closed.",
+    )
+    p.add_argument(
+        "--max-output-mib",
+        type=float,
+        default=4.0,
+        help="Output cap in MiB, at most 4. Default: 4.",
+    )
+    p.set_defaults(func=_cmd_make_synthetic_motor_fixture)
+
+    p = sub.add_parser(
+        "inspect-synthetic-motor-fixture",
+        help="Verify fixture metadata, hashes, members, identities, and caps without arrays.",
+    )
+    p.add_argument("--metadata", required=True, help="Path to the fixture metadata.json sidecar.")
+    p.add_argument(
+        "--contract",
+        default="registries/synthetic_motor_fixture_contract.v0.json",
+        help="Exact registered fixture contract. Substitutions fail closed.",
+    )
+    p.add_argument(
+        "--max-output-mib",
+        type=float,
+        default=4.0,
+        help="Validation cap in MiB, at most 4. Default: 4.",
+    )
+    p.set_defaults(func=_cmd_inspect_synthetic_motor_fixture)
 
     return parser
 

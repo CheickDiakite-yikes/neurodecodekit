@@ -63,7 +63,10 @@
 > 3 is now frozen in `docs/SYNTHETIC_MOTOR_FIXTURE_PREREGISTRATION.md` and
 > `registries/synthetic_motor_fixture_contract.v0.json`: seed 5503, 96 paired
 > items, eight factor families, 48/32/16 partitions, eight mutations, and a
-> 4 MiB cap. Implementation and execution are still `Not Started`; the contract
+> 4 MiB cap. `docs/SYNTHETIC_MOTOR_FIXTURE_IMPLEMENTATION.md` and its registry
+> now bind the locally qualified generator, strict loader, metadata-only
+> inspector, mutation API, CLI, and 12 focused tests. Commit and obtain
+> exact-SHA green CI before one measured synthetic closeout. The contract
 > permits no architecture, model, fitting, inference, scoring, or real-data
 > action.
 >

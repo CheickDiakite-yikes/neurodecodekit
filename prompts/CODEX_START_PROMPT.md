@@ -70,6 +70,8 @@ requests, and these files:
 - `docs/NEXT_20_SYSTEMATIC_EXECUTION_2026-08-08.md`
 - `docs/SYNTHETIC_MOTOR_FIXTURE_PREREGISTRATION.md`
 - `registries/synthetic_motor_fixture_contract.v0.json`
+- `docs/SYNTHETIC_MOTOR_FIXTURE_IMPLEMENTATION.md`
+- `registries/synthetic_motor_fixture_implementation.v0.json`
 - `docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md`
 - `registries/loop32_research_boundary.v0.json`
 - `docs/POST_20_ROADMAP.md`
@@ -118,10 +120,12 @@ Do not reset, revert, delete, or overwrite work already present.
   confound fixture pack; no install or real-data action follows automatically.
 - Work order 3 is preregistered at a fixture-only boundary: seed 5503, 96 paired
   items, eight factors, 48/32/16 partitions, eight deterministic mutations,
-  one thread/worker, 60 seconds, 512 MiB RSS, and 4 MiB output. Implement only
-  the lazy NumPy/SciPy generator, validator, mutation interface, CLI, and tests.
-  Do not implement CML-v0 or run a model, fit, inference, score, download, S20
-  read, PhysioNet read, provider call, stream, device, or hardware operation.
+  one thread/worker, 60 seconds, 512 MiB RSS, and 4 MiB output. The lazy
+  NumPy/SciPy generator, validator, metadata-only inspector, mutation API, CLI,
+  and tests are locally qualified. Push that exact implementation, require
+  green CI, then perform one measured synthetic closeout. Do not implement
+  CML-v0 or run a model, fit, inference, score, download, S20 read, PhysioNet
+  read, provider call, stream, device, or hardware operation.
 - RW1 closes metadata-only local intake. RW2 closes bounded, redacted signal
   reading and descriptive reporting on generated fixtures only: 38 readable
   sources pass and two malformed or unsafe layouts refuse exactly.

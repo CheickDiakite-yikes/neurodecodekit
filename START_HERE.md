@@ -129,9 +129,13 @@
    physiology/confound fixture pack. Read
    `docs/SYNTHETIC_MOTOR_FIXTURE_PREREGISTRATION.md` and
    `registries/synthetic_motor_fixture_contract.v0.json` for its frozen seed
-   5503, 96-item, eight-family, 48/32/16, 4 MiB fixture-only boundary. The
-   generator and measured result do not exist yet, and this contract permits no
-   model, training, inference, scoring, S20, PhysioNet, or claim operation.
+   5503, 96-item, eight-family, 48/32/16, 4 MiB fixture-only boundary. Then read
+   `docs/SYNTHETIC_MOTOR_FIXTURE_IMPLEMENTATION.md` and
+   `registries/synthetic_motor_fixture_implementation.v0.json`. The generator,
+   validator, metadata-only inspector, mutation API, CLI, and 12 focused tests
+   are locally qualified; measured closeout waits for exact-commit green CI.
+   No model, training, inference, scoring, S20, PhysioNet, or claim operation
+   is permitted.
    Then read `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop55_eeg_neural_effect_research.v0.json`. Loop 55 planning
    separates a higher-power causal performed-hand endpoint from a harder

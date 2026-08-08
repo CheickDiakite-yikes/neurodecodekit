@@ -564,9 +564,11 @@ Read this before interpreting any number in the repository.
   bytes. All real/protected, raw-signal, target, model, training, inference,
   scoring, network, provider, and hardware counters are zero. No broad install
   follows; the next work order is a NumPy/SciPy synthetic physiology fixture
-  pack. Its fixture-only Tier B contract now freezes seed `5503`, 96 paired
-  items, eight factor families, a 48/32/16 split, eight deterministic
-  mutations, and a 4 MiB cap; implementation has not started.
+  pack. Its fixture-only Tier B contract freezes seed `5503`, 96 paired items,
+  eight factor families, a 48/32/16 split, eight deterministic mutations, and
+  a 4 MiB cap. The generator, strict loader, metadata-only inspector, mutation
+  API, and create/inspect CLI commands are locally qualified; the measured
+  closeout waits for exact-commit green CI.
 - **Loop 55 EEG neural-effect research:** planning commit `f3158c7` freezes two
   ordered causal endpoints from the same future final trials: performed-hand
   error and 29-class performed-key keypress-aligned CER. It makes performed
@@ -1418,6 +1420,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/NEXT_20_SYSTEMATIC_EXECUTION_2026-08-08.md](docs/NEXT_20_SYSTEMATIC_EXECUTION_2026-08-08.md) | active 20-work-order execution overlay with Tier A/B autonomy and exact Tier C stops |
 | [docs/SYNTHETIC_MOTOR_FIXTURE_PREREGISTRATION.md](docs/SYNTHETIC_MOTOR_FIXTURE_PREREGISTRATION.md) | frozen work-order-3 factor, pair, partition, mutation, resource, leakage, and no-model fixture boundary |
 | [registries/synthetic_motor_fixture_contract.v0.json](registries/synthetic_motor_fixture_contract.v0.json) | machine-readable seed-5503, 96-item, eight-family Tier B fixture contract with zero execution counters |
+| [docs/SYNTHETIC_MOTOR_FIXTURE_IMPLEMENTATION.md](docs/SYNTHETIC_MOTOR_FIXTURE_IMPLEMENTATION.md) | locally qualified deterministic generator, validator, inspector, mutation, CLI, and pre-execution boundary |
+| [registries/synthetic_motor_fixture_implementation.v0.json](registries/synthetic_motor_fixture_implementation.v0.json) | hash-bound work-order-3 source, test, resource, and pending-remote-green implementation receipt |
 | [docs/NEXT_20_LOOPS_TRACKER.md](docs/NEXT_20_LOOPS_TRACKER.md) | original 20-loop tracker, current post-roadmap gate, and planning-only Loops 25-44 summary |
 | [docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx](docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx) | ten-sheet visual tracker preserved at the last reviewed Stage A snapshot; use the Markdown tracker and machine roadmap for the current Stage B result because a prior workbook import reached 1.57 GiB peak RSS |
 | [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) | closed/current post-NeuroToken gates plus links to the next tranche |
