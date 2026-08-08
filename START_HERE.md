@@ -112,9 +112,14 @@
    installed Ruff `0.16.2` from the old floating requirement and failed on 400
    later lint findings. The frozen payload is byte-identical at pinned commit
    `2232993`, whose CI passed both jobs, and exact-tree replay under Ruff
-   `0.15.20` passed 1,095 tests with three skips. A new recovery-bound exact
-   Tier C request is still required before implementation. No local S20 path or
-   payload was accessed during preregistration or recovery.
+   `0.15.20` passed 1,095 tests with three skips. Then read
+   `docs/LOOP_54_STAGE_A_RECOVERY_AUTHORIZATION_PACKET.md` and
+   `registries/loop54_stage_a_recovery_authorization_request.v1.json`. This is
+   the current recovery-bound exact decision surface. Every authorization flag
+   remains false; its commit must be pushed and remotely green before the exact
+   user decision can be recorded, and that decision must become green before
+   synthetic parser implementation. No local S20 path or payload was accessed
+   during preregistration, recovery, or request preparation.
    Then read `docs/LOCAL_EEG_TOOLING_AUDIT_2026-08-08.md`,
    `registries/local_eeg_tooling_audit_result.v0.json`,
    `registries/local_eeg_tooling_audit_receipt.v0.json`, and
@@ -162,8 +167,9 @@
    `docs/CONTACT_AWARE_EAR_CHANNEL_RESULT.md` and its result registry. All 18
    gates passed in 0.40 seconds at 55,394,304-byte peak RSS with 938,874 output
    bytes and zero retained generated files. Work order 5 is complete. Continue
-   work order 6 only at the recovery-bound decision and synthetic-parser
-   boundary; the real S20 VHDR read remains separately gated Tier C.
+   work order 6 only after the recovery-bound packet is remotely green and the
+   exact Tier C user decision is received. Synthetic parser qualification must
+   become green before the one real S20 VHDR read; every sibling stays closed.
    Then read `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop55_eeg_neural_effect_research.v0.json`. Loop 55 planning
    separates a higher-power causal performed-hand endpoint from a harder

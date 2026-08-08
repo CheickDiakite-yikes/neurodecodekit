@@ -4049,3 +4049,33 @@ use, or clinical utility.
 
 Evidence: `docs/CONTACT_AWARE_EAR_CHANNEL_RESULT.md` and
 `registries/contact_aware_ear_channel_result.v0.json`.
+
+## 0118 - Freeze The Recovery-Bound Loop 54-A Decision Surface
+
+Decision: supersede the historical non-actionable v0 request with a new v1
+request that binds the immutable `c114623` registration, green pinned-toolchain
+anchor `2232993`, green additive recovery commit `5915bdf`, and completed work
+order 5. Preserve the historical exact-run Ruff failure rather than calling it
+green or rewriting the frozen registration.
+
+Evidence order: the v1 request commit must first be pushed and remotely green.
+Only then may the user send its exact Tier C sentence. That sentence must be
+preserved in a separate authorization-only commit and become remotely green
+before generated synthetic parser implementation. The implementation commit
+must then become remotely green before one registered 11,705-byte VHDR open.
+
+Boundary: every implementation, path-stat, VHDR, sibling, target, model,
+network, hardware, rerun, and claim authorization remains false in the request.
+No S20 path was resolved, statted, hashed, or opened while preparing it.
+
+Engineering capability proposed: NeuroDecodeKit can qualify and then execute a
+strict one-file BrainVision-header compatibility check under a recovery-bound,
+no-sibling, one-shot evidence order.
+
+Scientific claim not established: no S20 path or content was accessed, so this
+request establishes no header readability, EEG signal quality, trial validity,
+neural advantage, decoding accuracy, generalization, latency, device, home-use,
+or clinical result.
+
+Evidence: `docs/LOOP_54_STAGE_A_RECOVERY_AUTHORIZATION_PACKET.md` and
+`registries/loop54_stage_a_recovery_authorization_request.v1.json`.

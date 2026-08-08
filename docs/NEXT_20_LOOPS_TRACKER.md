@@ -114,9 +114,13 @@
 > floating requirement and failed on 400 later lint findings. The three frozen
 > artifacts remain byte-identical at pinned commit `2232993`, whose CI passed
 > both jobs; exact-tree Ruff `0.15.20` replay passed 1,095 tests with three
-> skips. A new recovery-bound exact Tier C request is still required before
-> implementation. Contract preparation and recovery performed zero S20 path
-> stats or payload reads. Loop 55
+> skips. The current recovery-bound v1 packet and machine request bind the
+> immutable registration, pinned green anchor, and green recovery record while
+> retaining all-false permissions and zero S20 access counters. Their exact
+> commit must become remotely green before the exact Tier C user decision;
+> that decision and then the synthetic parser implementation must each become
+> green before the one real VHDR open. Contract preparation, recovery, and
+> request preparation performed zero S20 path stats or payload reads. Loop 55
 > planning research now separates a
 > causal performed-hand gate from a harder causal 29-key gate, uses performed
 > actions rather than corrected intended text as the primary targets, and
@@ -723,12 +727,12 @@ Independent Evidence And Release.
 
 The additive execution overlay in
 `docs/NEXT_20_SYSTEMATIC_EXECUTION_2026-08-08.md` orders the current small work
-packets without changing those loop IDs or contracts. Its work orders 1-2 are
-complete: Loop 54-A registration evidence was recovered, then a green
-zero-network local EEG tooling audit measured the existing NumPy/SciPy/MNE
-surface. Work order 3, deterministic synthetic physiology/confound fixtures,
-is active. Every real-data, target, training, scoring, hardware, release, and
-claim row remains separately gated.
+packets without changing those loop IDs or contracts. Work orders 1-5 are
+complete: registration recovery, local tooling audit, deterministic synthetic
+physiology/confound fixtures, classical adapter contracts, and contact-aware
+ear-channel semantics all passed their bounded gates. Work order 6 now waits at
+the recovery-bound exact Loop 54-A user decision. Every real-data, target,
+training, scoring, hardware, release, and claim row remains separately gated.
 
 Loop 45 is complete at its target-free mechanics boundary. Loops 46 and 47 are
 parked after the one consumed S21 event failed the candidate-versus-prior and

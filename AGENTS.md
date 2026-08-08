@@ -105,6 +105,8 @@ cat docs/LOOP_54_STAGE_A_VHDR_PREREGISTRATION.md
 python -m json.tool registries/loop54_stage_a_vhdr_contract.v0.json >/dev/null
 cat docs/LOOP_54_STAGE_A_REGISTRATION_CI_RECOVERY.md
 python -m json.tool registries/loop54_stage_a_registration_ci_recovery.v0.json >/dev/null
+cat docs/LOOP_54_STAGE_A_RECOVERY_AUTHORIZATION_PACKET.md
+python -m json.tool registries/loop54_stage_a_recovery_authorization_request.v1.json >/dev/null
 ```
 
 The one-shot contract binds exactly one 11,705-byte VHDR, a standard-library
@@ -118,9 +120,13 @@ repository-wide findings. The frozen preregistration, contract, and invariant
 test are byte-identical at pinned-toolchain commit `2232993`, whose push CI
 `31132586790` passed both jobs; an exact-tree local replay under Ruff `0.15.20`
 also passed 1,095 tests with three skips. Preserve the failed exact run as
-evidence. A new authorization request must bind the recovery record and become
-remotely green before an exact Tier C decision. Do not implement the parser or
-touch the registered local path from the preregistration or recovery alone.
+evidence. The recovery-bound v1 packet and request now bind that record while
+keeping every authorization flag and S20 access counter false. Their exact
+commit must become remotely green before an exact Tier C decision; that
+decision must become green before synthetic parser implementation, and the
+implementation must become green before the one real VHDR open. Do not
+implement the parser or touch the registered local path from the
+preregistration, recovery, or request alone.
 
 The additive open EEG strategy refresh is planning-only and does not loosen
 that gate:
@@ -222,12 +228,13 @@ infer current AirPods capability, copy or implement patent claims, control
 physical electrodes, connect hardware, install a dependency, read real/public
 data, or run a model.
 
-Work order 6 is now active only for the recovery-bound Loop 54-A decision
-surface and strict synthetic-parser qualification. Bind the immutable
+Work order 6 is now waiting at the recovery-bound Loop 54-A exact user decision
+surface. The current packet and machine request bind the immutable
 registration at `c114623`, green pinned-toolchain proof anchor `2232993`, and
 the remotely green additive recovery record. The historical draft request is
-non-actionable. A new exact user Tier C decision must be committed, pushed, and
-green before parser implementation under the frozen order, and parser
+non-actionable. The recovery-bound request commit must become green, then its
+exact user Tier C decision must be committed, pushed, and green before parser
+implementation under the frozen order, and parser
 implementation must become green before the one real VHDR open. Do not stat or
 read the S20 path, resolve siblings, or implement/execute the real parser from
 work order 5. CML-v0, S20, PhysioNet, targets, training, inference, scoring,

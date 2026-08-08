@@ -303,8 +303,12 @@ Python selected Ruff `0.16.2` from the historical floating requirement and
 failed on 400 later lint findings. The three frozen artifacts are byte-identical
 at pinned commit `2232993`, whose CI `31132586790` passed both jobs; exact-tree
 local replay under Ruff `0.15.20` passed 1,095 tests with three skips. The
-additive recovery record does not authorize implementation or execution. A new
-recovery-bound exact Tier C request remains required.
+additive recovery record does not authorize implementation or execution. The
+recovery-bound v1 packet and machine request now bind that evidence while all
+permissions and S20 access counters remain false. Their exact commit must be
+remotely green before the exact Tier C user decision, which must itself become
+green before synthetic parser implementation; the implementation must then
+become green before the one real VHDR open.
 
 ### Loop 55 - Fresh EEG Neural-Effect Gate
 

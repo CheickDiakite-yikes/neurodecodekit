@@ -5331,3 +5331,41 @@ source-preserving contact and missingness interface for synthetic ear channels.
 Scientific claim not established: no real ear EEG hardware signal, brain
 origin, decoding accuracy, generalization, latency, device performance,
 home-use, or clinical result was established.
+
+## 2026-08-08 - Loop 54-A Recovery-Bound Authorization Request
+
+- Added a current v1 decision packet without modifying the immutable
+  preregistration, contract, invariant test, recovery record, or historical v0
+  request.
+- Bound registration `c114623`, its three exact SHA-256 and Git-blob identities,
+  green pinned anchor `2232993` / CI `31132586790`, and green recovery commit
+  `5915bdf` / CI `31277277711`.
+- Bound completed work order 5 only as queue state. It does not authorize S20 or
+  parser work.
+- Froze one exact authorization sentence and the evidence order: green request,
+  green decision, generated-synthetic parser qualification, green
+  implementation, then one real VHDR open.
+- Retained one thread, one worker, 30 seconds, 256 MiB RSS, 16,384 maximum read
+  bytes, 1 MiB output, one VHDR open, one real execution, zero network bytes,
+  zero new payload bytes, and no rerun.
+- Every authorization field and every S20, sibling, target, model, training,
+  inference, scoring, provider, hardware, and claim counter remains false or
+  zero. The local S20 path was not resolved, statted, hashed, or opened.
+- Fifty focused route checks passed. The authoritative project environment
+  advanced the complete suite from 1,309 to 1,317 passing tests with three
+  expected skips in 34.89 seconds external wall time at 605,143,040-byte peak
+  RSS. Ruff 0.15.20, compileall, 90 registry JSON files, 177 local Markdown
+  links, root CLI help, staged Gitleaks, and diff hygiene passed.
+- One preliminary system-interpreter discovery omitted the source-layout import
+  path and failed imports before substantive execution. The corrected
+  base-Python lane passed 1,245 tests with 158 expected optional skips before
+  the authoritative `.venv` run above.
+
+Engineering capability proposed: NeuroDecodeKit can qualify and then execute a
+strict one-file BrainVision-header compatibility check under a recovery-bound,
+no-sibling, one-shot evidence order.
+
+Scientific claim not established: no S20 path or content was accessed, so this
+request establishes no header readability, EEG signal quality, trial validity,
+neural advantage, decoding accuracy, generalization, latency, device, home-use,
+or clinical result.

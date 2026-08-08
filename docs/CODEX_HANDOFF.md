@@ -94,9 +94,13 @@
 > `docs/CONTACT_AWARE_EAR_CHANNEL_RESULT.md` and its result registry. All 18
 > gates passed in 0.40 seconds at 55,394,304-byte peak RSS with 938,874 output
 > bytes and zero retained files. Work order 5 is complete. Continue work order
-> 6 only by preparing the recovery-bound Loop 54-A decision surface and
-> qualifying a parser on synthetic fixtures; the real S20 VHDR access remains
-> separately gated Tier C. No hardware,
+> 6 only through the current recovery-bound Loop 54-A packet in
+> `docs/LOOP_54_STAGE_A_RECOVERY_AUTHORIZATION_PACKET.md` and
+> `registries/loop54_stage_a_recovery_authorization_request.v1.json`. Every
+> authorization flag remains false. Require that request commit to be remotely
+> green, then receive and preserve the exact Tier C decision before qualifying
+> a parser on generated synthetic fixtures. Require the implementation commit
+> to become green before the one real VHDR open. No hardware,
 > physical electrode switching, architecture execution, model, fitting,
 > inference, scoring, or real-data action is permitted.
 >
@@ -115,8 +119,9 @@
 > invariant test are byte-identical at pinned-toolchain commit `2232993`, whose
 > CI `31132586790` passed both jobs. Exact-tree local replay with Ruff `0.15.20`
 > passed 1,095 tests with 3 expected skips. Read the additive recovery record;
-> the old draft request remains non-actionable and a new recovery-bound exact
-> request must become green before a Tier C decision. Zero S20 path stats,
+> the old draft request remains non-actionable. The v1 recovery-bound packet
+> and request are now the sole current decision surface and must become green
+> before a Tier C decision. Zero S20 path stats,
 > header reads, sibling reads, targets, models, or experiment bytes occurred.
 > Preserve the unrelated tracker inspection NDJSON.
 >
