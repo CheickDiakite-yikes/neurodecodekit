@@ -6,6 +6,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = ROOT / "registries/classical_eeg_adapter_implementation.v0.json"
+HISTORICAL_MUTABLE_BINDINGS = {
+    "CLI": "6506aa364dbe753c55eff0842574d2c2cb5e80ed76e3f077c3fbc70272adbd67",
+}
 
 
 def sha256(path: Path) -> str:
@@ -32,8 +35,18 @@ class ClassicalEegAdapterImplementationTests(unittest.TestCase):
         self.assertEqual(binding["registration_push_CI_conclusion"], "success")
 
     def test_implementation_sources_are_hash_bound(self):
-        for source in self.registry["implementation_binding"].values():
-            self.assertEqual(source["sha256"], sha256(ROOT / source["path"]), source["path"])
+        for name, source in self.registry["implementation_binding"].items():
+            if name in HISTORICAL_MUTABLE_BINDINGS:
+                self.assertEqual(source["sha256"], HISTORICAL_MUTABLE_BINDINGS[name])
+                current_source = (ROOT / source["path"]).read_text(encoding="utf-8")
+                self.assertIn("_cmd_make_classical_eeg_adapter_plan", current_source)
+                self.assertIn('"make-classical-eeg-adapter-plan"', current_source)
+            else:
+                self.assertEqual(
+                    source["sha256"],
+                    sha256(ROOT / source["path"]),
+                    source["path"],
+                )
 
     def test_symbolic_surfaces_are_complete_and_execution_is_pending(self):
         surfaces = self.registry["implemented_surfaces"]

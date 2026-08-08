@@ -5264,3 +5264,37 @@ bounded synthetic ear-channel interface.
 Scientific claim not established: no real ear EEG hardware signal, brain
 origin, decoding accuracy, generalization, latency, home-use, or clinical
 result is established.
+
+## 2026-08-08 - Contact-Aware Ear-Channel Implementation
+
+- Implemented the exact post-green work-order-5 synthetic boundary with lazy
+  NumPy, 48 items, 16 generic bilateral channels, eight scenarios, and six
+  distinct mask meanings. The source signal, source order, synthetic geometry,
+  and reference-state identity remain explicit and unchanged.
+- Added the fixed target-blind contact/noise/observed-fraction rule, stable
+  source-index ranking, bilateral count caps, equal side totals, and explicit
+  select-none status. Missing source values remain NaN; adapted transport zeros
+  remain unavailable under their mask and are never called measured or imputed.
+- Added deterministic array, configuration, source-order, selected-subset,
+  metadata, and compressed-payload hashes; strict save/load/validation/summary
+  APIs; a zero-array-open metadata inspector; two CLI commands; and exclusive
+  output creation with cap, free-disk, collision, and partial-write guards.
+- All 16 registered malformed fixtures fail closed. Target and unknown fields,
+  future-tail dependence, payload tampering, malformed NPZ, low disk, and cap
+  failures are independently covered.
+- Twelve focused implementation tests pass. The pre-receipt complete suite
+  passes 1,298 tests with three expected skips and 469 subtests in 34.82 seconds
+  wall time at 606,126,080-byte peak RSS. With five receipt invariants included,
+  the final complete suite passes 1,303 tests with three expected skips and 469
+  subtests in 35.35 seconds external wall time at 614,825,984-byte peak RSS.
+- A disposable probe produced a 923,980-byte NPZ and 14,894-byte sidecar,
+  totaling 938,874 bytes, then removed them. One measured closeout remains
+  blocked until this exact implementation commit is pushed and remotely green.
+
+Engineering capability added: the repository can generate, hash, validate,
+inspect, and reject invalid contact, missingness, bilateral selection, and
+transport-mask states in a bounded synthetic ear-channel interface.
+
+Scientific claim not established: no real ear EEG hardware signal, brain
+origin, decoding accuracy, generalization, latency, device performance,
+home-use, or clinical result was established.

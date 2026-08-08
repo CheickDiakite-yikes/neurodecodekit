@@ -153,8 +153,12 @@
    `registries/contact_aware_ear_channel_contract.v0.json`. Seed 5505 freezes
    48 items, 16 generic bilateral channels, six separate masks, a fixed
    maximum-four/minimum-two-per-side target-blind rule, and 16 refusals.
-   Implementation may begin only after the exact contract commit is remotely
-   green.
+   Contract commit `c6e216f` passed CI `31281290300` before implementation.
+   Then read `docs/CONTACT_AWARE_EAR_CHANNEL_IMPLEMENTATION.md` and
+   `registries/contact_aware_ear_channel_implementation.v0.json`. The
+   lazy-NumPy fixture, validator, metadata-only inspector, hashes, resource
+   guards, refusal matrix, and CLI are locally qualified. Run no measured
+   roundtrip until the exact implementation commit is remotely green.
    Then read `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop55_eeg_neural_effect_research.v0.json`. Loop 55 planning
    separates a higher-power causal performed-hand endpoint from a harder

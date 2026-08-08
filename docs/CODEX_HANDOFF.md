@@ -84,8 +84,13 @@
 > `docs/CONTACT_AWARE_EAR_CHANNEL_PREREGISTRATION.md` and
 > `registries/contact_aware_ear_channel_contract.v0.json`: seed 5505, 48 items,
 > 16 generic bilateral channels, six masks, a fixed maximum-four/minimum-two
-> per-side policy, equal side weights, and 16 refusals. Obtain exact-contract
-> green CI before implementing the lazy-NumPy synthetic fixture. No hardware,
+> per-side policy, equal side weights, and 16 refusals. Contract commit
+> `c6e216f` passed CI `31281290300` before implementation. Read
+> `docs/CONTACT_AWARE_EAR_CHANNEL_IMPLEMENTATION.md` and its implementation
+> registry for the locally qualified generator, policy, strict validator,
+> metadata-only inspector, deterministic hashes, resource guards, refusal
+> matrix, and CLI. Do not run the one measured synthetic roundtrip before the
+> exact implementation commit is pushed and remotely green. No hardware,
 > physical electrode switching, architecture execution, model, fitting,
 > inference, scoring, or real-data action is permitted.
 >

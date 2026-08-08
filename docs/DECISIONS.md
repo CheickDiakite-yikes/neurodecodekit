@@ -3994,3 +3994,31 @@ clinical utility.
 
 Evidence: `docs/CONTACT_AWARE_EAR_CHANNEL_PREREGISTRATION.md` and
 `registries/contact_aware_ear_channel_contract.v0.json`.
+
+## 0116 - Implement Contact Semantics Before Any Ear-Hardware Path
+
+Decision: implement only the frozen synthetic post-acquisition interface after
+contract commit `c6e216f` passed CI `31281290300`. Preserve the source arrays
+and reference identity while deriving explicit eligibility, selection, weights,
+and adapted transport masks under the registered target-blind rule.
+
+Reason: contact loss, unknown quality, channel noise, and missing samples can
+be represented and refused without copying hardware topology, inventing
+impedance or anatomy, installing a backend, or touching a real signal. Exact
+configuration, source-order, subset/weight, metadata, and payload hashes make
+those semantics replayable and inspectable.
+
+Gate: commit and push the locally qualified implementation, require both CI
+jobs to pass for that exact commit, then run at most one measured synthetic
+create/metadata-inspect roundtrip under the registered time, RSS, disk, output,
+thread, and file caps. Remove both generated files and retain only aggregate
+measurements and hashes. Any failed gate parks work order 5 without a rerun or
+scope expansion.
+
+Scientific boundary: deterministic contact and mask mechanics are engineering
+evidence only. They establish no real ear-EEG quality, brain-specific source,
+decoding accuracy, generalization, latency, consumer-earbud capability, home
+use, or clinical utility.
+
+Evidence: `docs/CONTACT_AWARE_EAR_CHANNEL_IMPLEMENTATION.md` and
+`registries/contact_aware_ear_channel_implementation.v0.json`.

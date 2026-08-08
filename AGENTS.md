@@ -203,14 +203,18 @@ is frozen:
 ```bash
 cat docs/CONTACT_AWARE_EAR_CHANNEL_PREREGISTRATION.md
 python -m json.tool registries/contact_aware_ear_channel_contract.v0.json >/dev/null
+cat docs/CONTACT_AWARE_EAR_CHANNEL_IMPLEMENTATION.md
+python -m json.tool registries/contact_aware_ear_channel_implementation.v0.json >/dev/null
 ```
 
 Seed 5505 defines 48 items, 16 generic bilateral channels, six distinct mask
 semantics, a fixed target-blind maximum-four/minimum-two-per-side policy, equal
 side weights, 16 refusals, one thread/worker, 60 seconds, 256 MiB RSS, and 4 MiB
-output. After this exact contract commit is remotely green, implement only the
-lazy-NumPy synthetic generator, post-acquisition adapter, validator, mutation
-suite, metadata-only inspector, and CLI. Do not infer current AirPods
+output. Contract commit `c6e216f` passed CI `31281290300` before the lazy-NumPy
+synthetic generator, post-acquisition adapter, validator, mutation suite,
+metadata-only inspector, hashes, resource guards, and CLI were locally
+qualified. Commit and push this exact implementation, then require remote-green
+CI before one measured synthetic roundtrip. Do not infer current AirPods
 capability, copy or implement patent claims, control physical electrodes,
 connect hardware, install a dependency, read real/public data, or run a model.
 CML-v0, S20, PhysioNet, targets, training, inference, scoring, hardware, and

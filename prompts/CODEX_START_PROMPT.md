@@ -82,6 +82,8 @@ requests, and these files:
 - `registries/classical_eeg_adapter_result.v0.json`
 - `docs/CONTACT_AWARE_EAR_CHANNEL_PREREGISTRATION.md`
 - `registries/contact_aware_ear_channel_contract.v0.json`
+- `docs/CONTACT_AWARE_EAR_CHANNEL_IMPLEMENTATION.md`
+- `registries/contact_aware_ear_channel_implementation.v0.json`
 - `docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md`
 - `registries/loop32_research_boundary.v0.json`
 - `docs/POST_20_ROADMAP.md`
@@ -146,9 +148,11 @@ Do not reset, revert, delete, or overwrite work already present.
   canonical hashing, and twelve leakage refusals. Continue only work order 5.
   Its frozen synthetic contract uses seed 5505, 48 items, 16 generic bilateral
   channels, six masks, a fixed target-blind four-per-side policy, equal side
-  weights, and 16 refusals. Obtain exact-contract green CI before implementing
-  the lazy-NumPy synthetic fixture, adapter, validator, inspector, mutations,
-  and CLI. Do not infer AirPods capability, implement physical switching,
+  weights, and 16 refusals. Contract commit `c6e216f` passed CI `31281290300`
+  before the lazy-NumPy synthetic fixture, adapter, validator, inspector,
+  mutations, hashes, resource guards, and CLI were locally qualified. Commit,
+  push, and require exact-implementation green CI before one measured synthetic
+  roundtrip. Do not infer AirPods capability, implement physical switching,
   install an optional backend, connect hardware, fit, infer, select, score, or
   access real/public data.
 - RW1 closes metadata-only local intake. RW2 closes bounded, redacted signal

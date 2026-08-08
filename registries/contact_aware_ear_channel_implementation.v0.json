@@ -1,0 +1,140 @@
+{
+  "schema_name": "neurodecodekit.contact_aware_ear_channel_implementation",
+  "schema_version": "0.1.0",
+  "status": "implemented_locally_qualified_not_measured_pending_remote_green",
+  "date": "2026-08-08",
+  "work_order": 5,
+  "contract_binding": {
+    "path": "registries/contact_aware_ear_channel_contract.v0.json",
+    "sha256": "9a18c1ec1d7b234ffb302add9ea974d0cdf412ff722fc1fcc44445b0201882cc",
+    "registration_commit": "c6e216f68a450ac78f7f67501beaf528999626a6",
+    "registration_push_CI_run_id": 31281290300,
+    "registration_push_CI_conclusion": "success"
+  },
+  "implementation_binding": {
+    "module": {
+      "path": "src/neurodecodekit/preprocess/contact_aware_ear_channels.py",
+      "sha256": "4b3a0bf4210847bb0fe46cc53feb14d4a633a4dca91f5038c758daae4f5e91bc"
+    },
+    "CLI": {
+      "path": "src/neurodecodekit/cli.py",
+      "sha256": "16219ba1927513663f06bdb78a3dd0ab1d87f7f346ee1c6bbe5d487795ff5be7"
+    },
+    "tests": {
+      "path": "tests/test_contact_aware_ear_channels.py",
+      "sha256": "4a359ca1a2cc2dbc8eabd6cbf871ca5ca3d4431d93b86006a60ff89e9c5d7e0a"
+    },
+    "prior_CLI_regression_test": {
+      "path": "tests/test_classical_eeg_adapter_implementation.py",
+      "sha256": "548b97256c0723a7b677c21466023c2f204bc30a7a7761c4d91f79fd4c95d534"
+    },
+    "documentation": {
+      "path": "docs/CONTACT_AWARE_EAR_CHANNEL_IMPLEMENTATION.md",
+      "sha256": "9e3c2b40fcdc22abecc50dbf56d317fb3e90f8661bc2f0869ba96ab532b58242"
+    }
+  },
+  "implemented_surfaces": {
+    "registered_contract_loader": true,
+    "deterministic_synthetic_array_generator": true,
+    "fixed_target_blind_bilateral_policy": true,
+    "deterministic_compressed_NPZ_writer": true,
+    "strict_array_loader_and_validator": true,
+    "metadata_only_hash_and_member_inspector": true,
+    "configuration_source_order_selection_metadata_and_payload_hashes": true,
+    "sixteen_refusal_mutation_builders": true,
+    "free_disk_output_cap_collision_and_partial_write_guards": true,
+    "CLI_create_command": "make-contact-aware-ear-fixture",
+    "CLI_inspect_command": "inspect-contact-aware-ear-fixture",
+    "generated_payload_committed": false,
+    "hardware_or_physical_switching_implementation": false
+  },
+  "local_verification": {
+    "preimplementation_complete_tests_passed": 1286,
+    "preimplementation_complete_tests_skipped": 3,
+    "focused_implementation_tests_passed": 12,
+    "combined_focused_tests_passed": 29,
+    "complete_tests_passed": 1303,
+    "complete_tests_skipped": 3,
+    "complete_subtests_passed": 469,
+    "complete_test_wall_seconds": 35.35,
+    "complete_test_peak_RSS_bytes": 614825984,
+    "ruff_passed": true,
+    "compile_passed": true,
+    "registry_JSON_passed": true,
+    "CLI_help_passed": true,
+    "diff_check_passed": true,
+    "measured_fixture_execution_completed": false,
+    "note": "Complete-suite RSS is not the single-fixture execution measurement."
+  },
+  "disposable_probe_observation": {
+    "scientific_evidence": false,
+    "signal_shape": [
+      48,
+      16,
+      256
+    ],
+    "observed_source_sample_count": 168192,
+    "adapted_observed_sample_count": 76800,
+    "source_missing_fraction": 0.14453125,
+    "adapted_masked_fraction": 0.609375,
+    "selection_status_counts": {
+      "insufficient_bilateral_contact": 6,
+      "ok": 42
+    },
+    "payload_bytes": 923980,
+    "metadata_sidecar_bytes": 14894,
+    "total_output_bytes": 938874,
+    "payload_sha256": "caf1be67271a3753eb638e78e01fa8cae17154bc306eaff15ae1ed672a4c7051",
+    "fixture_metadata_sha256": "ce3aa6bc6e3056ebcb66fad6ce19461a11b9e445cdd1cf064ae26dc02550d931",
+    "configuration_sha256": "d955fef2ea71cd0b13def1b32f2ef6b4b6e0c00ea0131d942baa47b2b89ba51f",
+    "source_order_sha256": "2ba9d54cd526f2664524c5386a34e8e7a2b2ab04596a0778f571849f9b94d383",
+    "selected_subset_and_weight_sha256": "8eecf9f93dbb9b2f3c0cfb7b210361c470933621492eca1a7e1b104a50496c70",
+    "retained_files": 0
+  },
+  "execution_gate": {
+    "exact_implementation_commit_known": false,
+    "exact_implementation_commit_pushed": false,
+    "exact_implementation_commit_remote_green": false,
+    "one_measured_roundtrip_started": false,
+    "one_measured_roundtrip_completed": false,
+    "result_receipt_available": false
+  },
+  "resource_contract": {
+    "maximum_CPU_threads": 1,
+    "maximum_workers": 1,
+    "maximum_wall_seconds": 60,
+    "maximum_peak_RSS_bytes": 268435456,
+    "maximum_generated_output_bytes": 4194304,
+    "minimum_free_disk_bytes_before_execution": 1073741824,
+    "maximum_generated_files": 2,
+    "maximum_retained_generated_files_after_closeout": 0
+  },
+  "access_counters": {
+    "measured_roundtrip_runs": 0,
+    "retained_synthetic_fixture_payloads": 0,
+    "real_or_protected_data_reads": 0,
+    "public_EEG_payload_reads": 0,
+    "target_or_label_value_reads": 0,
+    "feature_extraction_runs": 0,
+    "parameter_update_runs": 0,
+    "model_inference_runs": 0,
+    "training_runs": 0,
+    "scoring_or_selection_by_outcome_runs": 0,
+    "network_calls": 0,
+    "provider_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "physical_electrode_switching_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "warnings": [
+    "All channels, geometry, contact values, noise, missingness, and signals are synthetic interface fixtures.",
+    "A normalized contact score is not impedance and no value in ohms was created.",
+    "Zero-filled adapted values remain unavailable under the adapted observed mask.",
+    "The complete-suite peak RSS is not the future single-fixture peak RSS.",
+    "Hardware, physical switching, public or protected data, models, scoring, and claims remain separately gated."
+  ],
+  "claim_boundary": {
+    "engineering_capability_added": "A deterministic bounded interface can preserve validate hash inspect and reject invalid contact missingness bilateral selection and transport-mask states.",
+    "scientific_claim_not_established": "No real ear EEG hardware signal brain origin decoding accuracy generalization latency device home-use or clinical result was established."
+  }
+}

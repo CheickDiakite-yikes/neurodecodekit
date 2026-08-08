@@ -2706,6 +2706,37 @@ def _cmd_inspect_classical_eeg_adapter_plan(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_make_contact_aware_ear_fixture(args: argparse.Namespace) -> int:
+    _set_loop25_thread_environment()
+    from neurodecodekit.preprocess.contact_aware_ear_channels import (
+        prepare_contact_aware_ear_fixture,
+        summarize_contact_aware_ear_metadata,
+    )
+
+    sidecar = prepare_contact_aware_ear_fixture(
+        args.out_dir,
+        contract_path=args.contract,
+        max_output_bytes=int(args.max_output_mib * 1024 * 1024),
+    )
+    print(json.dumps(summarize_contact_aware_ear_metadata(sidecar), indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_inspect_contact_aware_ear_fixture(args: argparse.Namespace) -> int:
+    from neurodecodekit.preprocess.contact_aware_ear_channels import (
+        load_contact_aware_ear_metadata,
+        summarize_contact_aware_ear_metadata,
+    )
+
+    sidecar = load_contact_aware_ear_metadata(
+        args.metadata,
+        contract_path=args.contract,
+        max_output_bytes=int(args.max_output_mib * 1024 * 1024),
+    )
+    print(json.dumps(summarize_contact_aware_ear_metadata(sidecar), indent=2, sort_keys=True))
+    return 0
+
+
 def _print_selection_plan(selection: Any, *, heading: str) -> None:
     from neurodecodekit.datasets.selection import format_bytes
 
@@ -5026,6 +5057,51 @@ def build_parser() -> argparse.ArgumentParser:
         help="Plan validation cap in MiB, at most 1. Default: 1.",
     )
     p.set_defaults(func=_cmd_inspect_classical_eeg_adapter_plan)
+
+    p = sub.add_parser(
+        "make-contact-aware-ear-fixture",
+        help="Create the registered synthetic contact-aware ear-channel fixture.",
+        description=(
+            "Create one deterministic NPZ and metadata sidecar with distinct contact, "
+            "missingness, selection, and transport masks. This is a synthetic "
+            "post-acquisition interface test, not a hardware or decoding operation."
+        ),
+    )
+    p.add_argument("--out-dir", required=True, help="New output directory for two fixture files.")
+    p.add_argument(
+        "--contract",
+        default="registries/contact_aware_ear_channel_contract.v0.json",
+        help="Exact registered work-order-5 contract. Substitutions fail closed.",
+    )
+    p.add_argument(
+        "--max-output-mib",
+        type=float,
+        default=4.0,
+        help="Output cap in MiB, at most 4. Default: 4.",
+    )
+    p.set_defaults(func=_cmd_make_contact_aware_ear_fixture)
+
+    p = sub.add_parser(
+        "inspect-contact-aware-ear-fixture",
+        help="Verify ear-fixture metadata, hashes, members, identities, and caps.",
+        description=(
+            "Validate the sidecar, complete payload hash, ZIP member inventory, "
+            "provenance, and resource accounting without opening NumPy arrays."
+        ),
+    )
+    p.add_argument("--metadata", required=True, help="Path to the metadata.json sidecar.")
+    p.add_argument(
+        "--contract",
+        default="registries/contact_aware_ear_channel_contract.v0.json",
+        help="Exact registered work-order-5 contract. Substitutions fail closed.",
+    )
+    p.add_argument(
+        "--max-output-mib",
+        type=float,
+        default=4.0,
+        help="Validation cap in MiB, at most 4. Default: 4.",
+    )
+    p.set_defaults(func=_cmd_inspect_contact_aware_ear_fixture)
 
     return parser
 
