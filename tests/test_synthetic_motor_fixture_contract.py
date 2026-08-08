@@ -82,10 +82,10 @@ class SyntheticMotorFixtureContractTests(unittest.TestCase):
             self.assertFalse(authorization[field], field)
         self.assertIn("Scientific claim not established", DOC_PATH.read_text(encoding="utf-8"))
 
-    def test_execution_queue_keeps_work_order_three_in_progress(self):
+    def test_execution_queue_preserves_work_order_three(self):
         queue = QUEUE_PATH.read_text(encoding="utf-8")
         row = next(line for line in queue.splitlines() if line.startswith("| 3 |"))
-        self.assertIn("In Progress", row)
+        self.assertIn("Complete", row)
         self.assertIn("synthetic", row.lower())
 
 

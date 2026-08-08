@@ -3863,3 +3863,27 @@ scientific claims remain outside this decision.
 
 Evidence: `docs/SYNTHETIC_MOTOR_FIXTURE_IMPLEMENTATION.md` and
 `registries/synthetic_motor_fixture_implementation.v0.json`.
+
+## 0111 - Close Work Order 3 And Advance To Adapter Contracts
+
+Decision: accept the one post-green synthetic closeout. All 18 registered gates
+passed under the frozen time, memory, output, leakage, causality, and access
+limits. Remove the generated NPZ and sidecar after hashing and retain only the
+aggregate result and documentation.
+
+Measured basis: implementation `ad361c8` passed CI `31279302969` before one
+1.20-second execution at 118,177,792-byte peak RSS. Total output was 584,308
+bytes for `[96, 8, 256]`, 20,448 valid samples, and `0.16796875` padding. All
+prohibited counters were zero.
+
+Route: mark work order 3 complete and activate work order 4. Freeze interfaces
+for optional classical EEG baselines, grouped-fit semantics, and leakage tests
+without installing a library, opening real data, fitting a real model, or
+scoring a scientific endpoint.
+
+Scientific boundary: successful synthetic mechanics do not establish EEG
+physiology, neural origin, decoding, generalization, latency, device behavior,
+home use, or clinical utility.
+
+Evidence: `docs/SYNTHETIC_MOTOR_FIXTURE_RESULT.md` and
+`registries/synthetic_motor_fixture_result.v0.json`.

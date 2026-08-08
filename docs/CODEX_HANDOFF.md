@@ -64,11 +64,13 @@
 > `registries/synthetic_motor_fixture_contract.v0.json`: seed 5503, 96 paired
 > items, eight factor families, 48/32/16 partitions, eight mutations, and a
 > 4 MiB cap. `docs/SYNTHETIC_MOTOR_FIXTURE_IMPLEMENTATION.md` and its registry
-> now bind the locally qualified generator, strict loader, metadata-only
-> inspector, mutation API, CLI, and 12 focused tests. Commit and obtain
-> exact-SHA green CI before one measured synthetic closeout. The contract
-> permits no architecture, model, fitting, inference, scoring, or real-data
-> action.
+> now bind the generator, strict loader, metadata-only inspector, mutation API,
+> CLI, and tests. Exact implementation `ad361c8` passed push CI `31279302969`
+> before one closeout. All 18 gates passed in 1.20 seconds at 118,177,792-byte
+> peak RSS and 584,308 bytes; generated files were removed. Work order 3 is
+> complete. Continue work order 4's classical adapter contracts and leakage
+> tests without installing or running an adapter. No architecture, model,
+> fitting, inference, scoring, or real-data action is permitted.
 >
 > Current handoff, 2026-08-06 after Loop 54-A preregistration: registration
 > commit `c114623` is pushed on `codex/loop-54a-vhdr-preregistration` and binds

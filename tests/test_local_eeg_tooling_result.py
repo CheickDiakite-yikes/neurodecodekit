@@ -95,11 +95,9 @@ class LocalEegToolingResultTests(unittest.TestCase):
         self.assertIn("Do not install a broad EEG stack yet", document)
         self.assertIn("Scientific claim not established", document)
         self.assertIn("Work orders 1 and 2 are complete", queue)
-        self.assertEqual(queue.count("| Complete |"), 2)
-        work_order_three = next(
-            line for line in queue.splitlines() if line.startswith("| 3 |")
-        )
-        self.assertIn("| In Progress:", work_order_three)
+        for number in (1, 2):
+            row = next(line for line in queue.splitlines() if line.startswith(f"| {number} |"))
+            self.assertIn("| Complete |", row)
         self.assertEqual(sum(line.startswith("| ") for line in queue.splitlines()), 21)
 
 

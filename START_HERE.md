@@ -131,11 +131,13 @@
    `registries/synthetic_motor_fixture_contract.v0.json` for its frozen seed
    5503, 96-item, eight-family, 48/32/16, 4 MiB fixture-only boundary. Then read
    `docs/SYNTHETIC_MOTOR_FIXTURE_IMPLEMENTATION.md` and
-   `registries/synthetic_motor_fixture_implementation.v0.json`. The generator,
-   validator, metadata-only inspector, mutation API, CLI, and 12 focused tests
-   are locally qualified; measured closeout waits for exact-commit green CI.
+   `registries/synthetic_motor_fixture_implementation.v0.json`, then
+   `docs/SYNTHETIC_MOTOR_FIXTURE_RESULT.md` and its result registry. All 18
+   gates passed after exact-commit green CI: 1.20 seconds, 118,177,792-byte peak
+   RSS, 584,308 output bytes, and zero retained generated files. Work order 3 is
+   complete and work order 4's no-install classical adapter contract is active.
    No model, training, inference, scoring, S20, PhysioNet, or claim operation
-   is permitted.
+   is permitted by this result.
    Then read `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop55_eeg_neural_effect_research.v0.json`. Loop 55 planning
    separates a higher-power causal performed-hand endpoint from a harder

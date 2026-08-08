@@ -566,9 +566,12 @@ Read this before interpreting any number in the repository.
   follows; the next work order is a NumPy/SciPy synthetic physiology fixture
   pack. Its fixture-only Tier B contract freezes seed `5503`, 96 paired items,
   eight factor families, a 48/32/16 split, eight deterministic mutations, and
-  a 4 MiB cap. The generator, strict loader, metadata-only inspector, mutation
-  API, and create/inspect CLI commands are locally qualified; the measured
-  closeout waits for exact-commit green CI.
+  a 4 MiB cap. Contract commit `9238fd7` and implementation commit `ad361c8`
+  were remotely green before one measured closeout. All 18 gates passed in
+  `1.20` seconds at `118,177,792`-byte peak RSS with 584,308 output bytes. The
+  generated NPZ and sidecar were removed, and every real-data, target, model,
+  training, inference, scoring, network, provider, and hardware counter was
+  zero. Work order 4's classical adapter contracts are next.
 - **Loop 55 EEG neural-effect research:** planning commit `f3158c7` freezes two
   ordered causal endpoints from the same future final trials: performed-hand
   error and 29-class performed-key keypress-aligned CER. It makes performed
@@ -1422,6 +1425,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/synthetic_motor_fixture_contract.v0.json](registries/synthetic_motor_fixture_contract.v0.json) | machine-readable seed-5503, 96-item, eight-family Tier B fixture contract with zero execution counters |
 | [docs/SYNTHETIC_MOTOR_FIXTURE_IMPLEMENTATION.md](docs/SYNTHETIC_MOTOR_FIXTURE_IMPLEMENTATION.md) | locally qualified deterministic generator, validator, inspector, mutation, CLI, and pre-execution boundary |
 | [registries/synthetic_motor_fixture_implementation.v0.json](registries/synthetic_motor_fixture_implementation.v0.json) | hash-bound work-order-3 source, test, resource, and pending-remote-green implementation receipt |
+| [docs/SYNTHETIC_MOTOR_FIXTURE_RESULT.md](docs/SYNTHETIC_MOTOR_FIXTURE_RESULT.md) | consumed one-shot synthetic closeout with measured shape, bytes, runtime, RSS, counters, warnings, and claim boundary |
+| [registries/synthetic_motor_fixture_result.v0.json](registries/synthetic_motor_fixture_result.v0.json) | machine-readable all-gates-pass work-order-3 receipt and no-real-data access ledger |
 | [docs/NEXT_20_LOOPS_TRACKER.md](docs/NEXT_20_LOOPS_TRACKER.md) | original 20-loop tracker, current post-roadmap gate, and planning-only Loops 25-44 summary |
 | [docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx](docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx) | ten-sheet visual tracker preserved at the last reviewed Stage A snapshot; use the Markdown tracker and machine roadmap for the current Stage B result because a prior workbook import reached 1.57 GiB peak RSS |
 | [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) | closed/current post-NeuroToken gates plus links to the next tranche |

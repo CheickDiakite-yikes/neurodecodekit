@@ -5106,3 +5106,35 @@ identity, leakage, causality, padding, hash, and resource checks.
 Scientific claim not established: no real EEG physiology, neural origin,
 decoding accuracy, generalization, end-to-end latency, device performance,
 home use, or clinical utility was established.
+
+## 2026-08-08 - Synthetic Motor Fixture Measured Closeout
+
+- Implementation commit `ad361c8` passed exact-SHA push CI `31279302969`
+  before the measured closeout: Base Python in 17 seconds and Optional Neuro
+  Readers in 52 seconds.
+- One CLI creation and one metadata-only inspection ran in an automatically
+  removed temporary directory. Both returned zero and their summaries matched.
+  The inspector opened zero arrays. There was no retry or post-result tuning.
+- The fixture used 1.20 seconds, 118,177,792-byte peak RSS, and 584,308 output
+  bytes: a 572,307-byte NPZ and 12,001-byte sidecar. Shape was `[96, 8, 256]`,
+  valid samples were 20,448, and padding fraction was `0.16796875`.
+- Every factor had 12 rows, partitions were 48/32/16 with pairs intact, the
+  fixture producer was causal with zero right context, and end-to-end latency
+  was not measured. The two generated files were removed after hashing.
+- All 18 acceptance gates passed. Exactly one measured synthetic payload was
+  generated. Raw-data, real-cache, real/protected, public-EEG, target, model,
+  training, inference, scoring, network, provider, stream, device, hardware,
+  and claim-upgrade counters were zero.
+- Thirty-seven focused closeout checks and the complete suite passed at 1,248
+  tests, three expected skips, and 469 subtests.
+- Work order 3 is complete. Work order 4 now begins with optional classical EEG
+  adapter contracts and leakage tests only; no package install or real adapter
+  execution follows automatically.
+
+Engineering capability added: NeuroDecodeKit now has a measured, bounded,
+deterministic synthetic motor-factor fixture surface for pre-evidence adapter
+and architecture testing.
+
+Scientific claim not established: no real EEG physiology, neural origin,
+decoding accuracy, generalization, end-to-end latency, device performance,
+home use, or clinical result was established.

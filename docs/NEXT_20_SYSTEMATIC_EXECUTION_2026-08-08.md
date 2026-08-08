@@ -13,8 +13,8 @@ decision after its own frozen packet and required remote-green evidence exist.
 |---:|---|---|---|---|
 | 1 | Recover Loop 54-A registration CI evidence | A | Preserve frozen artifacts, diagnose toolchain drift, obtain green descendant evidence | Complete |
 | 2 | Audit local EEG tool capabilities | A | Fixed zero-network probes, one thread, <=1 MiB output, all data/model counters zero | Complete |
-| 3 | Build synthetic physiology/confound fixtures | B | Deterministic motor, timing, ocular, line-noise, dropout, and corruption cases with no target leakage | In Progress: Implementation Awaiting Green |
-| 4 | Add classical EEG adapter contracts | B | Optional dependency boundaries, grouped-fit rules, leakage tests, no real execution | Queued |
+| 3 | Build synthetic physiology/confound fixtures | B | Deterministic motor, timing, ocular, line-noise, dropout, and corruption cases with no target leakage | Complete |
+| 4 | Add classical EEG adapter contracts | B | Optional dependency boundaries, grouped-fit rules, leakage tests, no real execution | In Progress |
 | 5 | Add a contact-aware ear-channel adapter | B | Synthetic contact/noise/missingness fixtures and exact channel-mask semantics only | Queued |
 | 6 | Freeze Loop 54-A decision and qualify parser | A/B then C decision | Recovery-bound exact packet, strict synthetic parser tests, green implementation before real access | Gated |
 | 7 | Execute Loop 54-A once | C | One 11,705-byte VHDR open; no sibling resolution; all 18 gates pass | Gated |
@@ -40,12 +40,11 @@ found NumPy `2.5.0` and SciPy `1.18.0` ready without adding dependencies. MNE
 MOABB, and Braindecode are absent. No broad install is justified before the
 synthetic fixture and adapter contracts show exactly what is needed.
 
-Work order 3's fixture-only contract is now frozen in
-`registries/synthetic_motor_fixture_contract.v0.json`. Its generator, strict
-loader, metadata-only inspector, mutation surface, two CLI commands, and 12
-focused tests are implemented locally. The implementation commit must be
-pushed and remotely green before one measured synthetic closeout; no generated
-array payload will be retained in Git.
+Work order 3 is complete. Contract commit `9238fd7` and implementation commit
+`ad361c8` were each remotely green before one measured synthetic closeout. The
+run used 1.20 seconds, 118,177,792-byte peak RSS, and 584,308 output bytes; all
+18 gates passed and the two generated files were removed. Work order 4 is now
+active at a contract-and-test-only boundary with no install or real execution.
 
 This queue never authorizes S20 interpretation, PhysioNet acquisition, target
 delivery, training, scoring, hardware, release, or a scientific claim by

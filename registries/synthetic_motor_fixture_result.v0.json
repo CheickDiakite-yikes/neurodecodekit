@@ -1,0 +1,157 @@
+{
+  "schema_name": "neurodecodekit.synthetic_motor_fixture_result",
+  "schema_version": "0.1.0",
+  "status": "complete_consumed_one_measured_synthetic_closeout",
+  "date": "2026-08-08",
+  "work_order": 3,
+  "contract_binding": {
+    "path": "registries/synthetic_motor_fixture_contract.v0.json",
+    "sha256": "0613f2d5df4b4b58b3e49d49cebe159550da7c1cb244f19a2de114cccc0bde27",
+    "registration_commit": "9238fd79433e849054f453c47f2aff9470ba6947",
+    "registration_push_CI_run_id": 31278502496,
+    "registration_push_CI_conclusion": "success"
+  },
+  "implementation_binding": {
+    "commit": "ad361c89d480d697d79c10733eeaea3855716424",
+    "push_CI_run_id": 31279302969,
+    "push_CI_conclusion": "success",
+    "base_python_job_seconds": 17,
+    "optional_neuro_readers_job_seconds": 52,
+    "implementation_registry": {
+      "path": "registries/synthetic_motor_fixture_implementation.v0.json",
+      "sha256": "fffd494473cb64f3a2b68b0184cc987b754408680fe7cce773acd02ab5e71c3d"
+    }
+  },
+  "execution_identity": {
+    "execution_count": 1,
+    "rerun_after_measured_closeout": false,
+    "seed": 5503,
+    "configured_numerical_threads": 1,
+    "worker_count": 1,
+    "create_command": "make-synthetic-motor-fixture",
+    "inspect_command": "inspect-synthetic-motor-fixture",
+    "create_return_code": 0,
+    "inspect_return_code": 0,
+    "create_and_inspect_summaries_equal": true,
+    "temporary_fixture_files_created_then_removed": 2,
+    "retained_generated_fixture_files": 0
+  },
+  "measurements": {
+    "input_contract_bytes": 9998,
+    "payload_bytes": 572307,
+    "payload_sha256": "32af9949516aecb4e78951087f8c720227f479d83babf39cea6b56e9bfac4c29",
+    "metadata_sidecar_bytes": 12001,
+    "metadata_sidecar_sha256": "3d17a1b6669f485720dba85e8d670a4073c6ff52886c16eeac681899617debb2",
+    "total_output_bytes": 584308,
+    "runtime_seconds": 1.2,
+    "peak_RSS_bytes": 118177792,
+    "signal_shape": [
+      96,
+      8,
+      256
+    ],
+    "valid_sample_count": 20448,
+    "padding_fraction": 0.16796875,
+    "producer_is_causal": true,
+    "required_right_context_samples": 0,
+    "end_to_end_latency_measured": false,
+    "array_members_opened_by_metadata_inspector": 0
+  },
+  "factor_counts": {
+    "potential_shape_signal": 12,
+    "mu_energy_signal": 12,
+    "beta_energy_signal": 12,
+    "mixed_potential_mu_beta_signal": 12,
+    "left_right_spatial_reversal": 12,
+    "timing_only_labels_without_signal_relation": 12,
+    "peripheral_like_common_mode_artifact": 12,
+    "pure_noise": 12
+  },
+  "partition_counts": {
+    "train": 48,
+    "check": 32,
+    "final": 16
+  },
+  "access_counters": {
+    "synthetic_fixture_payload_generations": 1,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "real_or_protected_data_reads": 0,
+    "public_EEG_payload_reads": 0,
+    "target_or_label_reads": 0,
+    "model_or_checkpoint_loads": 0,
+    "parameter_update_runs": 0,
+    "model_inference_runs": 0,
+    "training_runs": 0,
+    "scoring_or_selection_runs": 0,
+    "network_calls": 0,
+    "provider_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "acceptance_gates": {
+    "contract_commit_remote_green_before_implementation": true,
+    "implementation_commit_remote_green_before_measured_execution": true,
+    "byte_identical_seed_5503_replay_test_passed_without_measured_rerun": true,
+    "factor_pair_partition_inventory_passed": true,
+    "dtype_shape_mask_timestamp_padding_geometry_hash_validation_passed": true,
+    "analytic_factor_isolation_checks_passed": true,
+    "timing_only_and_pure_noise_pair_checks_passed": true,
+    "all_eight_mutations_passed": true,
+    "future_tail_prefix_invariance_passed": true,
+    "target_leakage_malformed_collision_and_cap_tests_passed": true,
+    "create_and_metadata_only_inspect_roundtrip_passed": true,
+    "runtime_under_60_seconds": true,
+    "peak_RSS_under_536870912_bytes": true,
+    "output_under_4194304_bytes": true,
+    "one_thread_one_worker": true,
+    "all_prohibited_access_counters_zero": true,
+    "full_tests_ruff_compile_JSON_help_and_diff_checks_passed": true,
+    "all_gates_passed": true
+  },
+  "verification": {
+    "preimplementation_tests_passed": 1225,
+    "preimplementation_tests_skipped": 3,
+    "focused_implementation_tests_passed": 12,
+    "combined_closeout_tests_before_result_tests": 31,
+    "complete_tests_passed_before_result_tests": 1242,
+    "result_receipt_tests_passed": 6,
+    "complete_closeout_tests_passed": 1248,
+    "complete_tests_skipped": 3,
+    "complete_subtests_passed": 469,
+    "complete_closeout_wall_seconds": 32.78,
+    "complete_closeout_peak_RSS_bytes": 650264576,
+    "ruff_passed": true,
+    "compileall_passed": true,
+    "all_registry_JSON_passed": true,
+    "CLI_root_and_two_command_help_passed": true,
+    "git_diff_check_passed": true
+  },
+  "warnings": [
+    "Generated motor-like factors are deliberately constructed and are not biological observations.",
+    "Synthetic left/right geometry is not an anatomical montage.",
+    "The timing-only family intentionally exposes a metadata shortcut for control testing.",
+    "The peripheral family is an ocular-like shortcut proxy, not a validated EOG model.",
+    "Passing fixture mechanics cannot qualify CML-v0 or any real EEG pipeline."
+  ],
+  "unavailable_fields": [
+    "real_EEG_or_MEG_quality",
+    "biological_neural_origin",
+    "decoding_accuracy",
+    "unseen_person_generalization",
+    "end_to_end_latency",
+    "device_or_home_performance",
+    "clinical_utility"
+  ],
+  "claim_boundary": {
+    "engineering_capability_added": "NeuroDecodeKit can deterministically generate validate inspect and mutate a bounded causal synthetic motor-factor fixture.",
+    "scientific_claim_not_established": "No real EEG physiology neural origin decoding accuracy generalization latency device home-use or clinical result was established."
+  },
+  "next_route": {
+    "work_order_3_complete": true,
+    "work_order_4": "Freeze optional classical EEG adapter contracts and leakage tests without real execution.",
+    "install_new_dependencies_now": false,
+    "real_data_action_authorized_by_this_result": false,
+    "model_training_or_scoring_authorized_by_this_result": false
+  }
+}

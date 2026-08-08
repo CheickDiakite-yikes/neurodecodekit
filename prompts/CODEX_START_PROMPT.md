@@ -72,6 +72,8 @@ requests, and these files:
 - `registries/synthetic_motor_fixture_contract.v0.json`
 - `docs/SYNTHETIC_MOTOR_FIXTURE_IMPLEMENTATION.md`
 - `registries/synthetic_motor_fixture_implementation.v0.json`
+- `docs/SYNTHETIC_MOTOR_FIXTURE_RESULT.md`
+- `registries/synthetic_motor_fixture_result.v0.json`
 - `docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md`
 - `registries/loop32_research_boundary.v0.json`
 - `docs/POST_20_ROADMAP.md`
@@ -122,10 +124,13 @@ Do not reset, revert, delete, or overwrite work already present.
   items, eight factors, 48/32/16 partitions, eight deterministic mutations,
   one thread/worker, 60 seconds, 512 MiB RSS, and 4 MiB output. The lazy
   NumPy/SciPy generator, validator, metadata-only inspector, mutation API, CLI,
-  and tests are locally qualified. Push that exact implementation, require
-  green CI, then perform one measured synthetic closeout. Do not implement
-  CML-v0 or run a model, fit, inference, score, download, S20 read, PhysioNet
-  read, provider call, stream, device, or hardware operation.
+  and tests passed one post-green measured closeout: 1.20 seconds,
+  118,177,792-byte peak RSS, 584,308 bytes, all 18 gates passed, zero retained
+  generated files. Work order 3 is complete. Continue only work order 4's
+  optional classical adapter contracts and leakage tests, without installing
+  or executing an adapter. Do not implement CML-v0 or run a model, fit,
+  inference, score, download, S20 read, PhysioNet read, provider call, stream,
+  device, or hardware operation.
 - RW1 closes metadata-only local intake. RW2 closes bounded, redacted signal
   reading and descriptive reporting on generated fixtures only: 38 readable
   sources pass and two malformed or unsafe layouts refuse exactly.
