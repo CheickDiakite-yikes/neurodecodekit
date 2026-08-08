@@ -3911,3 +3911,27 @@ this work order.
 
 Evidence: `docs/CLASSICAL_EEG_ADAPTER_PREREGISTRATION.md` and
 `registries/classical_eeg_adapter_contract.v0.json`.
+
+## 0113 - Implement Symbolic Adapter Plans Without Backends
+
+Decision: implement only the standard-library work-order-4 planning layer. A
+plan contains all three registered families, exact grouped identities, six fit
+scopes, dependency routes, target and causality firewalls, zero-access counters,
+warnings, claims, and a canonical hash.
+
+Reason: leakage and dependency-substitution failures can be qualified without
+an estimator or neural payload. This keeps the public positive-control choice
+unspent and prevents package availability from silently changing the selected
+scientific path.
+
+Gate: require exact-commit green CI before one measured symbolic plan creation
+and inspection. Retain only hashes and aggregate measurements. Any refusal,
+resource, or replay failure parks work order 4 without installing or running a
+backend.
+
+Scientific boundary: the plan layer is not a baseline result. Public or
+protected feature extraction, fit, inference, selection, and scoring remain
+Tier C.
+
+Evidence: `docs/CLASSICAL_EEG_ADAPTER_IMPLEMENTATION.md` and
+`registries/classical_eeg_adapter_implementation.v0.json`.

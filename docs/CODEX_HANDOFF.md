@@ -73,7 +73,10 @@
 > `docs/CLASSICAL_EEG_ADAPTER_PREREGISTRATION.md` plus
 > `registries/classical_eeg_adapter_contract.v0.json`: three unselected
 > families, train-only fits, pair/group isolation, twelve refusals, and no
-> optional import. Implementation is still `Not Started`. No architecture,
+> optional import. `docs/CLASSICAL_EEG_ADAPTER_IMPLEMENTATION.md` and its
+> registry now bind the locally qualified standard-library plan builder,
+> validator, hash, save/load/summary APIs, CLI, and 10 focused tests. Obtain
+> exact-SHA green CI before one measured symbolic closeout. No architecture,
 > model, fitting, inference, scoring, or real-data action is permitted.
 >
 > Current handoff, 2026-08-06 after Loop 54-A preregistration: registration

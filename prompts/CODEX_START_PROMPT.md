@@ -76,6 +76,8 @@ requests, and these files:
 - `registries/synthetic_motor_fixture_result.v0.json`
 - `docs/CLASSICAL_EEG_ADAPTER_PREREGISTRATION.md`
 - `registries/classical_eeg_adapter_contract.v0.json`
+- `docs/CLASSICAL_EEG_ADAPTER_IMPLEMENTATION.md`
+- `registries/classical_eeg_adapter_implementation.v0.json`
 - `docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md`
 - `registries/loop32_research_boundary.v0.json`
 - `docs/POST_20_ROADMAP.md`
@@ -138,8 +140,11 @@ Do not reset, revert, delete, or overwrite work already present.
   Riemannian MDM. Build only a standard-library symbolic plan/validator with
   train-group-only fits, pair/group isolation, target-blind check/final use,
   zero post-event context, canonical hashing, and twelve leakage refusals.
-  Do not install or import an optional backend, read arrays, fit, infer, select,
-  score, or access real/public data.
+  The standard-library plan builder, validator, hash, save/load/summary APIs,
+  CLI, and tests are locally qualified. Push the exact implementation, require
+  green CI, then run one measured symbolic closeout. Do not install or import
+  an optional backend, read arrays, fit, infer, select, score, or access
+  real/public data.
 - RW1 closes metadata-only local intake. RW2 closes bounded, redacted signal
   reading and descriptive reporting on generated fixtures only: 38 readable
   sources pass and two malformed or unsafe layouts refuse exactly.

@@ -141,7 +141,11 @@
    `docs/CLASSICAL_EEG_ADAPTER_PREREGISTRATION.md` and
    `registries/classical_eeg_adapter_contract.v0.json` for the frozen
    low-frequency shrinkage-LDA, causal CSP-LDA, Riemannian-MDM, grouped-fit,
-   twelve-refusal, no-import boundary. Implementation has not started.
+   twelve-refusal, no-import boundary. Then read
+   `docs/CLASSICAL_EEG_ADAPTER_IMPLEMENTATION.md` and its implementation
+   registry. The standard-library plan builder, validator, hash, save/load,
+   summary, CLI, and 10 focused tests are locally qualified. One measured
+   symbolic closeout waits for exact-commit green CI.
    Then read `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop55_eeg_neural_effect_research.v0.json`. Loop 55 planning
    separates a higher-power causal performed-hand endpoint from a harder

@@ -2672,6 +2672,40 @@ def _cmd_inspect_synthetic_motor_fixture(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_make_classical_eeg_adapter_plan(args: argparse.Namespace) -> int:
+    _set_loop25_thread_environment()
+    from neurodecodekit.models.classical_eeg_adapters import (
+        build_synthetic_classical_adapter_plan,
+        save_classical_adapter_plan,
+        summarize_classical_adapter_plan,
+    )
+
+    plan = build_synthetic_classical_adapter_plan(contract_path=args.contract)
+    save_classical_adapter_plan(
+        args.out,
+        plan,
+        contract_path=args.contract,
+        max_plan_bytes=int(args.max_output_mib * 1024 * 1024),
+    )
+    print(json.dumps(summarize_classical_adapter_plan(plan), indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_inspect_classical_eeg_adapter_plan(args: argparse.Namespace) -> int:
+    from neurodecodekit.models.classical_eeg_adapters import (
+        load_classical_adapter_plan,
+        summarize_classical_adapter_plan,
+    )
+
+    plan = load_classical_adapter_plan(
+        args.plan,
+        contract_path=args.contract,
+        max_plan_bytes=int(args.max_output_mib * 1024 * 1024),
+    )
+    print(json.dumps(summarize_classical_adapter_plan(plan), indent=2, sort_keys=True))
+    return 0
+
+
 def _print_selection_plan(selection: Any, *, heading: str) -> None:
     from neurodecodekit.datasets.selection import format_bytes
 
@@ -4951,6 +4985,47 @@ def build_parser() -> argparse.ArgumentParser:
         help="Validation cap in MiB, at most 4. Default: 4.",
     )
     p.set_defaults(func=_cmd_inspect_synthetic_motor_fixture)
+
+    p = sub.add_parser(
+        "make-classical-eeg-adapter-plan",
+        help="Create a target-free symbolic plan for the three classical EEG adapters.",
+        description=(
+            "Write one standard-library-only adapter plan with grouped split, train-only "
+            "fit, dependency, causality, and target-firewall contracts. No adapter backend "
+            "is imported and no feature, fit, inference, selection, or score is run."
+        ),
+    )
+    p.add_argument("--out", required=True, help="New JSON plan path; existing files are refused.")
+    p.add_argument(
+        "--contract",
+        default="registries/classical_eeg_adapter_contract.v0.json",
+        help="Exact registered work-order-4 contract. Substitutions fail closed.",
+    )
+    p.add_argument(
+        "--max-output-mib",
+        type=float,
+        default=1.0,
+        help="Plan output cap in MiB, at most 1. Default: 1.",
+    )
+    p.set_defaults(func=_cmd_make_classical_eeg_adapter_plan)
+
+    p = sub.add_parser(
+        "inspect-classical-eeg-adapter-plan",
+        help="Validate and summarize one symbolic adapter plan without backend imports.",
+    )
+    p.add_argument("--plan", required=True, help="Path to a saved adapter plan JSON.")
+    p.add_argument(
+        "--contract",
+        default="registries/classical_eeg_adapter_contract.v0.json",
+        help="Exact registered work-order-4 contract. Substitutions fail closed.",
+    )
+    p.add_argument(
+        "--max-output-mib",
+        type=float,
+        default=1.0,
+        help="Plan validation cap in MiB, at most 1. Default: 1.",
+    )
+    p.set_defaults(func=_cmd_inspect_classical_eeg_adapter_plan)
 
     return parser
 

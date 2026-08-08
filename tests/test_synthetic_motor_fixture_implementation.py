@@ -7,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = ROOT / "registries/synthetic_motor_fixture_implementation.v0.json"
 HISTORICAL_MUTABLE_BINDINGS = {
+    "CLI": "56ec2ae6822391196f3c782fbdfc2bb38325941b3193f92b3c5d9d7dd0893abb",
     "prior_result_regression_test": (
         "114db34f4a2b1108c5dbf4d84b296db4d4f914934a77816025a8d132c9bd2ea7"
     ),
@@ -44,7 +45,11 @@ class SyntheticMotorFixtureImplementationTests(unittest.TestCase):
             if name in HISTORICAL_MUTABLE_BINDINGS:
                 self.assertEqual(source["sha256"], HISTORICAL_MUTABLE_BINDINGS[name])
                 current_source = (ROOT / source["path"]).read_text(encoding="utf-8")
-                self.assertIn("LocalEegToolingResultTests", current_source)
+                if name == "CLI":
+                    self.assertIn("_cmd_make_synthetic_motor_fixture", current_source)
+                    self.assertIn('"make-synthetic-motor-fixture"', current_source)
+                else:
+                    self.assertIn("LocalEegToolingResultTests", current_source)
             else:
                 self.assertEqual(source["sha256"], sha256(ROOT / source["path"]), source["path"])
 

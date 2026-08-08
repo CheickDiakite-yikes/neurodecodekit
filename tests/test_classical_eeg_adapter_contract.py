@@ -119,7 +119,7 @@ class ClassicalEegAdapterContractTests(unittest.TestCase):
         self.assertIn("Engineering capability if all gates pass", document)
         self.assertIn("Scientific claim not established", document)
         row = next(line for line in queue.splitlines() if line.startswith("| 4 |"))
-        self.assertIn("In Progress: Contract Frozen", row)
+        self.assertIn("In Progress", row)
         self.assertIn("classical", row.lower())
         self.assertEqual(sum(line.startswith("| ") for line in queue.splitlines()), 21)
 

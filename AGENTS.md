@@ -181,21 +181,26 @@ Do not install a dependency or execute a real adapter. This result does not
 authorize CML-v0, training, inference, scoring, S20, PhysioNet, a model, or a
 scientific claim.
 
-Work order 4 is now preregistered but not implemented:
+Work order 4 is preregistered and locally implemented, but its measured
+symbolic closeout has not started:
 
 ```bash
 cat docs/CLASSICAL_EEG_ADAPTER_PREREGISTRATION.md
 python -m json.tool registries/classical_eeg_adapter_contract.v0.json >/dev/null
+cat docs/CLASSICAL_EEG_ADAPTER_IMPLEMENTATION.md
+python -m json.tool registries/classical_eeg_adapter_implementation.v0.json >/dev/null
 ```
 
 The contract registers low-frequency shrinkage LDA, causal 8-30 Hz CSP-LDA,
 and regularized Riemannian MDM without choosing or importing one. It freezes
 train-group-only fitting, pair/group isolation, target-blind check/final use,
 zero post-event context, twelve leakage refusals, one thread/worker, 15 seconds,
-256 MiB RSS, and 1 MiB output. Implement only the standard-library symbolic
-plan builder, validator, canonical hash, and synthetic tests after the contract
-commit is remotely green. Do not install or probe an optional backend, read an
-array payload, fit, infer, select, score, or open real/public data.
+256 MiB RSS, and 1 MiB output. The standard-library symbolic plan builder,
+validator, canonical hash, save/load/summary APIs, two CLI commands, and 10
+focused tests are locally qualified. Push the exact implementation and require
+green CI before one measured symbolic closeout. Do not install or probe an
+optional backend, read an array payload, fit, infer, select, score, or open
+real/public data.
 
 The additive architecture pass now selects `CML-v0` as the next hypothesis:
 

@@ -5171,3 +5171,30 @@ optional classical EEG adapter plans before installing or fitting them.
 Scientific claim not established: adapter specifications establish no real EEG
 effect, neural origin, decoding, generalization, latency, device performance,
 home use, or clinical result.
+
+## 2026-08-08 - Classical EEG Adapter Plan Implementation
+
+- Added a standard-library-only module that builds one deterministic 96-item,
+  48-group symbolic plan for all three unselected classical families. It never
+  imports NumPy, SciPy, MNE, scikit-learn, or pyRiemann.
+- Added strict contract/source, adapter, item, pair/group, partition, fit-scope,
+  target-firewall, causality, dependency-route, counter, warning, claim, and
+  canonical-hash validation plus bounded save/load/summary APIs.
+- All twelve registered malformed plans are deterministically constructed and
+  refused. Unknown fields, hash changes, contract substitution, output cap,
+  and collision paths also fail closed.
+- Ten focused implementation tests and 33 combined adapter, contract,
+  implementation-receipt, and prior-receipt checks pass. The complete suite
+  passes 1,273 tests with three expected skips and 469 subtests in 35.18
+  seconds wall time at 612,794,368-byte peak RSS.
+- A disposable development probe serialized 27,335 bytes at canonical hash
+  `66800348e76d03b9b994a460b2e78fbe569c450fdb289be5948cecbcea860bf1`.
+  No plan file was retained. Measured closeout waits for exact-commit green CI.
+
+Engineering capability added: the repository can construct, hash, validate,
+save, inspect, and reject leakage in optional classical EEG adapter plans
+without importing or fitting an adapter.
+
+Scientific claim not established: no real EEG effect, neural origin, decoding,
+generalization, latency, device performance, home use, or clinical result was
+established.

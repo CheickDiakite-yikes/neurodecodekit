@@ -1,0 +1,113 @@
+{
+  "schema_name": "neurodecodekit.classical_eeg_adapter_implementation",
+  "schema_version": "0.1.0",
+  "status": "implemented_locally_qualified_not_measured_pending_remote_green",
+  "date": "2026-08-08",
+  "work_order": 4,
+  "contract_binding": {
+    "path": "registries/classical_eeg_adapter_contract.v0.json",
+    "sha256": "ae1dc56d7610cb8a4a0bfb970e02c1466b53f5cff0391040eff51ac00084020d",
+    "registration_commit": "ea5fafda3e408972797e579f00d786ab6c8ee6bc",
+    "registration_push_CI_run_id": 31279856066,
+    "registration_push_CI_conclusion": "success"
+  },
+  "implementation_binding": {
+    "module": {
+      "path": "src/neurodecodekit/models/classical_eeg_adapters.py",
+            "sha256": "b9e08ea46bf88d2367dca35e57839b5d2cdbeb96b9cbd3aeeeac11df53d02315"
+    },
+    "CLI": {
+      "path": "src/neurodecodekit/cli.py",
+      "sha256": "6506aa364dbe753c55eff0842574d2c2cb5e80ed76e3f077c3fbc70272adbd67"
+    },
+    "tests": {
+      "path": "tests/test_classical_eeg_adapters.py",
+            "sha256": "4cedf05a0184e33f61a6d359d1bdfe661e597cbc79bc67b22d917254382b6bb8"
+    },
+    "documentation": {
+      "path": "docs/CLASSICAL_EEG_ADAPTER_IMPLEMENTATION.md",
+            "sha256": "5391a00c9f14e635057f90b3b89efc8fe9bacf2bd5a9fad26e2b55dd13679304"
+    }
+  },
+  "implemented_surfaces": {
+    "registered_contract_loader": true,
+    "adapter_specification_loader": true,
+    "deterministic_symbolic_plan_builder": true,
+    "strict_plan_validator": true,
+    "canonical_plan_hash": true,
+    "bounded_save_load_and_summary": true,
+    "twelve_refusal_mutation_builders": true,
+    "CLI_create_command": "make-classical-eeg-adapter-plan",
+    "CLI_inspect_command": "inspect-classical-eeg-adapter-plan",
+    "adapter_backend_or_feature_implementation": false,
+    "generated_plan_committed": false
+  },
+  "local_verification": {
+    "preimplementation_complete_tests_passed": 1255,
+    "preimplementation_complete_tests_skipped": 3,
+    "focused_implementation_tests_passed": 10,
+    "combined_focused_tests_passed": 33,
+    "complete_tests_passed": 1273,
+    "complete_tests_skipped": 3,
+    "complete_subtests_passed": 469,
+    "complete_test_wall_seconds": 35.18,
+    "complete_test_peak_RSS_bytes": 612794368,
+    "ruff_passed": true,
+    "diff_check_passed": true,
+    "measured_plan_execution_completed": false,
+    "note": "Complete-suite RSS is not the single-plan execution measurement."
+  },
+  "disposable_probe_observation": {
+    "scientific_evidence": false,
+    "plan_bytes": 27335,
+    "plan_sha256": "66800348e76d03b9b994a460b2e78fbe569c450fdb289be5948cecbcea860bf1",
+    "items": 96,
+    "groups": 48,
+    "retained_plan_files": 0
+  },
+  "execution_gate": {
+    "exact_implementation_commit_known": false,
+    "exact_implementation_commit_pushed": false,
+    "exact_implementation_commit_remote_green": false,
+    "one_measured_plan_roundtrip_started": false,
+    "one_measured_plan_roundtrip_completed": false,
+    "result_receipt_available": false
+  },
+  "resource_contract": {
+    "maximum_CPU_threads": 1,
+    "maximum_workers": 1,
+    "maximum_wall_seconds": 15,
+    "maximum_peak_RSS_bytes": 268435456,
+    "maximum_generated_output_bytes": 1048576,
+    "maximum_retained_plan_files": 1
+  },
+  "access_counters": {
+    "retained_symbolic_plan_files": 0,
+    "adapter_import_attempts": 0,
+    "optional_dependency_installs": 0,
+    "array_payload_reads": 0,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "public_EEG_payload_reads": 0,
+    "target_or_label_value_reads": 0,
+    "feature_extraction_runs": 0,
+    "parameter_update_runs": 0,
+    "model_inference_runs": 0,
+    "training_runs": 0,
+    "scoring_or_selection_runs": 0,
+    "network_calls": 0,
+    "provider_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "warnings": [
+    "The implementation constructs plans and refusals; it does not implement an EEG estimator.",
+    "No adapter family is selected and no optional backend is imported or installed.",
+    "The complete test-suite peak RSS is not the measured single-plan peak RSS.",
+    "Public and protected execution remain separately gated Tier C actions."
+  ],
+  "claim_boundary": {
+    "engineering_capability_added": "A standard-library layer can build hash validate save inspect and reject leakage in three optional classical EEG adapter plans.",
+    "scientific_claim_not_established": "No real EEG effect neural origin decoding accuracy generalization latency device home-use or clinical result was established."
+  }
+}
