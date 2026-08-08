@@ -89,8 +89,14 @@
 > `docs/CONTACT_AWARE_EAR_CHANNEL_IMPLEMENTATION.md` and its implementation
 > registry for the locally qualified generator, policy, strict validator,
 > metadata-only inspector, deterministic hashes, resource guards, refusal
-> matrix, and CLI. Do not run the one measured synthetic roundtrip before the
-> exact implementation commit is pushed and remotely green. No hardware,
+> matrix, and CLI. Exact implementation `76ccc63` passed CI `31282344300`
+> before one measured synthetic roundtrip. Read
+> `docs/CONTACT_AWARE_EAR_CHANNEL_RESULT.md` and its result registry. All 18
+> gates passed in 0.40 seconds at 55,394,304-byte peak RSS with 938,874 output
+> bytes and zero retained files. Work order 5 is complete. Continue work order
+> 6 only by preparing the recovery-bound Loop 54-A decision surface and
+> qualifying a parser on synthetic fixtures; the real S20 VHDR access remains
+> separately gated Tier C. No hardware,
 > physical electrode switching, architecture execution, model, fitting,
 > inference, scoring, or real-data action is permitted.
 >

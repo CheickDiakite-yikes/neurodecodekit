@@ -157,8 +157,13 @@
    Then read `docs/CONTACT_AWARE_EAR_CHANNEL_IMPLEMENTATION.md` and
    `registries/contact_aware_ear_channel_implementation.v0.json`. The
    lazy-NumPy fixture, validator, metadata-only inspector, hashes, resource
-   guards, refusal matrix, and CLI are locally qualified. Run no measured
-   roundtrip until the exact implementation commit is remotely green.
+   guards, refusal matrix, and CLI were locally qualified. Exact implementation
+   `76ccc63` passed CI `31282344300` before one measured roundtrip. Read
+   `docs/CONTACT_AWARE_EAR_CHANNEL_RESULT.md` and its result registry. All 18
+   gates passed in 0.40 seconds at 55,394,304-byte peak RSS with 938,874 output
+   bytes and zero retained generated files. Work order 5 is complete. Continue
+   work order 6 only at the recovery-bound decision and synthetic-parser
+   boundary; the real S20 VHDR read remains separately gated Tier C.
    Then read `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop55_eeg_neural_effect_research.v0.json`. Loop 55 planning
    separates a higher-power causal performed-hand endpoint from a harder

@@ -116,7 +116,7 @@ class ContactAwareEarChannelContractTests(unittest.TestCase):
         self.assertIn("Scientific claim not established", document)
         self.assertIn("does not control electrodes", " ".join(document.split()))
         row = next(line for line in queue.splitlines() if line.startswith("| 5 |"))
-        self.assertIn("In Progress: Implementation Awaiting Green", row)
+        self.assertIn("| Complete |", row)
         self.assertIn("ear-channel", row.lower())
         self.assertEqual(sum(line.startswith("| ") for line in queue.splitlines()), 21)
 

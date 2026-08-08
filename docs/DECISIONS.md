@@ -4022,3 +4022,30 @@ use, or clinical utility.
 
 Evidence: `docs/CONTACT_AWARE_EAR_CHANNEL_IMPLEMENTATION.md` and
 `registries/contact_aware_ear_channel_implementation.v0.json`.
+
+## 0117 - Close Synthetic Contact Semantics And Gate Loop 54-A
+
+Decision: accept the one post-green work-order-5 create/inspect roundtrip. All
+18 registered gates passed under the frozen time, memory, free-disk, output,
+file, causality, mask, provenance, refusal, and access limits. Retain only the
+aggregate receipt and remove both generated fixture files.
+
+Measured basis: exact implementation
+`76ccc63bdb62b7695dd12ead6ae629c3ab73bb53` passed CI `31282344300` before
+one 0.40-second execution at 55,394,304-byte peak RSS. The 923,980-byte payload
+and 14,894-byte sidecar replayed all registered hashes; 46,367,866,880 free
+bytes were available before execution, and zero generated files remain.
+
+Route: mark work order 5 complete. Activate work order 6 only to bind the
+immutable Loop 54-A registration, pinned green descendant, and remotely green
+recovery record into a new exact decision surface, then qualify a parser on
+synthetic fixtures after that decision. Do not open or stat S20, resolve its
+siblings, or infer real header readability from the synthetic interface.
+
+Scientific boundary: this result validates software representation and refusal
+mechanics only. It establishes no real ear EEG or S20 content quality, neural
+origin, decoding accuracy, generalization, latency, hardware capability, home
+use, or clinical utility.
+
+Evidence: `docs/CONTACT_AWARE_EAR_CHANNEL_RESULT.md` and
+`registries/contact_aware_ear_channel_result.v0.json`.

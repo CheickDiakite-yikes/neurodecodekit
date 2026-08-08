@@ -84,6 +84,8 @@ requests, and these files:
 - `registries/contact_aware_ear_channel_contract.v0.json`
 - `docs/CONTACT_AWARE_EAR_CHANNEL_IMPLEMENTATION.md`
 - `registries/contact_aware_ear_channel_implementation.v0.json`
+- `docs/CONTACT_AWARE_EAR_CHANNEL_RESULT.md`
+- `registries/contact_aware_ear_channel_result.v0.json`
 - `docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md`
 - `registries/loop32_research_boundary.v0.json`
 - `docs/POST_20_ROADMAP.md`
@@ -150,9 +152,13 @@ Do not reset, revert, delete, or overwrite work already present.
   channels, six masks, a fixed target-blind four-per-side policy, equal side
   weights, and 16 refusals. Contract commit `c6e216f` passed CI `31281290300`
   before the lazy-NumPy synthetic fixture, adapter, validator, inspector,
-  mutations, hashes, resource guards, and CLI were locally qualified. Commit,
-  push, and require exact-implementation green CI before one measured synthetic
-  roundtrip. Do not infer AirPods capability, implement physical switching,
+  mutations, hashes, resource guards, and CLI were locally qualified. Exact
+  implementation `76ccc63` passed CI `31282344300` before one measured
+  roundtrip. All 18 gates passed in 0.40 seconds at 55,394,304-byte peak RSS
+  with 938,874 output bytes and zero retained files. Work order 5 is complete.
+  Continue work order 6 only through the recovery-bound decision packet and
+  synthetic parser qualification. The real S20 VHDR read remains Tier C. Do
+  not infer AirPods capability, implement physical switching,
   install an optional backend, connect hardware, fit, infer, select, score, or
   access real/public data.
 - RW1 closes metadata-only local intake. RW2 closes bounded, redacted signal

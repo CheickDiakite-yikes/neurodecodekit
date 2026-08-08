@@ -5298,3 +5298,36 @@ transport-mask states in a bounded synthetic ear-channel interface.
 Scientific claim not established: no real ear EEG hardware signal, brain
 origin, decoding accuracy, generalization, latency, device performance,
 home-use, or clinical result was established.
+
+## 2026-08-08 - Contact-Aware Ear-Channel Measured Closeout
+
+- Exact implementation `76ccc63bdb62b7695dd12ead6ae629c3ab73bb53`
+  passed push CI `31282344300` before execution: Base Python in 16 seconds and
+  Optional Neuro Readers in 56 seconds.
+- Exactly one CLI creation and one metadata-only CLI inspection ran in an
+  automatically removed temporary directory. Both returned zero, their compact
+  summaries matched, and there was no retry or post-result change.
+- Runtime was 0.40 seconds, peak RSS was 55,394,304 bytes, free disk before
+  execution was 46,367,866,880 bytes, and the 15,789-byte contract produced a
+  923,980-byte NPZ plus a 14,894-byte sidecar under the 4 MiB cap.
+- The fixture held shape `[48,16,256]`, 168,192 observed source samples, 76,800
+  adapted-observed samples, 504 eligible and 300 selected channel instances,
+  and exact 150/150 left/right selected counts. Forty-two items passed; six
+  insufficient-bilateral items selected none.
+- All 18 gates passed. The explicit inspector opened zero arrays; both generated
+  files were removed. Every raw, real/public/protected, target, model, fit,
+  inference, training, score, network/provider, device/hardware, and claim
+  counter was zero.
+- Thirty-five focused closeout checks and the complete suite pass at 1,309
+  tests, three expected skips, and 469 subtests in 35.01 seconds external wall
+  time at 636,846,080-byte peak RSS.
+- Work order 5 is complete and consumed with no rerun. Work order 6 opens only
+  the recovery-bound Loop 54-A decision packet and synthetic parser route; real
+  S20 access remains separately gated Tier C.
+
+Engineering capability added: NeuroDecodeKit now has a measured, bounded,
+source-preserving contact and missingness interface for synthetic ear channels.
+
+Scientific claim not established: no real ear EEG hardware signal, brain
+origin, decoding accuracy, generalization, latency, device performance,
+home-use, or clinical result was established.
