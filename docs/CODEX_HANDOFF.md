@@ -18,20 +18,35 @@
 > `docs/FOUNDATION_MODEL_LIVE_SMOKE_AUTHORIZATION_DECISION.md`, and
 > `docs/FOUNDATION_MODEL_LIVE_SMOKE_IMPLEMENTATION.md`. Contract commit
 > `7db14d5` and exact-decision commit `04fc009` are remotely green. The local
-> implementation rebuilds all 12 blinded requests, totaling 18,399 bytes, in
-> 0.004586541 seconds at 33,832,960-byte peak RSS; focused tests pass and every
-> irreversible counter is still zero. The full post-decision baseline advances
+> implementation rebuilt all 12 blinded requests, totaling 18,399 bytes, in
+> 0.004586541 seconds at 33,832,960-byte peak RSS; focused tests pass. The full
+> post-decision baseline advances
 > from 1,176 to 1,193 passing tests with 3 expected skips; Ruff, compileall,
-> every registry JSON, CLI dry-run/help, and diff hygiene pass. Do not execute
-> until the exact
-> implementation commit is pushed and remotely green. Then consume only the
-> one authorized 12-call `gpt-5.6-terra` invocation, with no retry, protected
-> content, target, training, scoring, tuning, model substitution, or claim
-> upgrade. FM-1 can establish provider mechanics and descriptive synthetic
-> behavior only. FM-0 focused verification passes 35 tests;
+> every registry JSON, CLI dry-run/help, and diff hygiene pass. Implementation
+> commit `a1d7ccc` passed push CI `31269398670` before the one authorized live
+> invocation. FM-1 is now consumed and parked: 3 calls attempted, 2 strict
+> responses completed, and request index 2 returned non-completed provider
+> status. `FM-A00` abstained; CTC-only `FM-A01` returned `HELLO WURLD`; no
+> completed matched/deranged pair exists. Runtime was 8.406004375 seconds at
+> 39,337,984-byte peak RSS. Do not rerun, retry, substitute, tune, score, or
+> claim scientific evidence. Read `docs/FOUNDATION_MODEL_LIVE_SMOKE_RESULT.md`
+> and `registries/foundation_model_live_smoke_result.v0.json`. FM-0 focused
+> verification passes 35 tests;
 > the full baseline advances from 1,129 to 1,164 passing tests with the same 3
 > expected skips. Ruff, compileall, all registry JSON, CLI help/roundtrip, and
 > diff hygiene pass.
+>
+> Budget/tooling update, 2026-08-08: the user authorized a $50 aggregate AI
+> provider ceiling. Read `docs/AI_LOCAL_FIRST_R_AND_D_BUDGET_2026-08-08.md`
+> and `registries/ai_local_first_rd_budget.v0.json`. Reserve the full $0.50
+> FM-1 cap because third-attempt billing is unavailable. The remaining $49.50
+> is a portfolio of future ceilings, not a spend target. Synthetic/public
+> non-protected target-free calls still require a committed bounded packet;
+> targets, protected data, scientific scoring, raw/dense uploads, hardware,
+> large downloads, releases, and claims remain closed. Prefer MNE, MOABB,
+> pyRiemann, and compact Braindecode work locally. Apple application
+> `US20230225659A1` supports an ear-channel quality research direction but does
+> not prove shipping AirPods EEG or thought-to-text.
 >
 > Current handoff, 2026-08-06 after Loop 54-A preregistration: registration
 > commit `c114623` is pushed on `codex/loop-54a-vhdr-preregistration` and binds

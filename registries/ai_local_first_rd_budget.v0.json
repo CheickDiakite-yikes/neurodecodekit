@@ -1,0 +1,148 @@
+{
+  "schema_name": "neurodecodekit.ai_local_first_rd_budget",
+  "schema_version": "0.1.0",
+  "created_at": "2026-08-08",
+  "status": "standing_budget_ceiling_authorized_local_first_strategy_active",
+  "authorization_text": "you have a $50 total budget for ai right now spend and allocated wisely over the next few days to make progress. if .002 is cost you should have plenty of runway? way more than you may need",
+  "budget_currency": "USD",
+  "aggregate_provider_budget_ceiling": 50.0,
+  "budget_is_ceiling_not_spend_target": true,
+  "FM1_accounting": {
+    "completed_response_local_estimate_USD": 0.002394,
+    "third_attempt_usage_and_actual_charge_available": false,
+    "conservative_reserved_ceiling_USD": 0.5,
+    "FM1_rerun_authorized": false
+  },
+  "conservative_remaining_portfolio_ceiling_USD": 49.5,
+  "ceiling_allocations": [
+    {
+      "lane_id": "FM1_ACCOUNTING_RESERVE",
+      "ceiling_USD": 0.5,
+      "status": "reserved_pending_provider_accounting",
+      "release_condition": "actual provider billing reconciled",
+      "may_fund_FM1_rerun": false
+    },
+    {
+      "lane_id": "FM1B_INDEPENDENT_TRANSPORT_RECOVERY",
+      "ceiling_USD": 1.5,
+      "status": "prospective_not_started",
+      "release_condition": "new independent fixture and committed bounded contract",
+      "protected_or_target_data_allowed": false
+    },
+    {
+      "lane_id": "FM2S_SYNTHETIC_SOL_TERRA_CONTROLS",
+      "ceiling_USD": 3.0,
+      "status": "prospective_transport_recovery_dependent",
+      "release_condition": "clean independent transport recovery and same blinded control matrix",
+      "protected_or_target_data_allowed": false
+    },
+    {
+      "lane_id": "PUBLIC_TARGET_FREE_EVIDENCE_INTEGRATION",
+      "ceiling_USD": 5.0,
+      "status": "prospective_public_license_and_privacy_screen_dependent",
+      "release_condition": "public non-protected source and compact target-free evidence contract",
+      "target_or_scoring_allowed": false
+    },
+    {
+      "lane_id": "PUBLIC_TARGET_BEARING_FOUR_ARM_EVALUATION",
+      "ceiling_USD": 10.0,
+      "status": "reserved_separate_exact_target_decision_required",
+      "release_condition": "frozen predictions and separate exact target and scoring decision",
+      "authorized_now": false
+    },
+    {
+      "lane_id": "PROTECTED_SCIENTIFIC_EVALUATION",
+      "ceiling_USD": 20.0,
+      "status": "reserved_clean_neural_gate_and_exact_privacy_target_claim_decisions_required",
+      "release_condition": "upstream neural signal beats no-signal and corruption controls",
+      "authorized_now": false
+    },
+    {
+      "lane_id": "CONTINGENCY_UNALLOCATED",
+      "ceiling_USD": 10.0,
+      "status": "unallocated",
+      "release_condition": "additive ledger update before use",
+      "authorized_now": false
+    }
+  ],
+  "local_first_tools": [
+    {
+      "tool": "MNE-Python",
+      "role": "optional file metadata annotation geometry preprocessing quality and classical decoding substrate",
+      "base_dependency_added": false
+    },
+    {
+      "tool": "MOABB",
+      "role": "standardized public EEG dataset paradigm pipeline and grouped evaluation harness",
+      "download_authorized_now": false
+    },
+    {
+      "tool": "pyRiemann",
+      "role": "low-data covariance MDM and tangent-space baseline family",
+      "model_download_required": false
+    },
+    {
+      "tool": "Braindecode",
+      "role": "optional compact published model and training adapter after baseline qualification",
+      "pretrained_weight_download_authorized_now": false
+    },
+    {
+      "tool": "OpenBCI_cEEGrid",
+      "role": "future around-the-ear EEG hardware prospect and channel-contact research surface",
+      "purchase_SDK_connection_or_recording_authorized_now": false
+    }
+  ],
+  "earbud_patent_boundary": {
+    "publication": "US20230225659A1",
+    "applicant": "Apple Inc.",
+    "status_observed": "pending_application",
+    "publication_date": "2023-07-20",
+    "earbud_form_electrode_selection_described": true,
+    "EEG_named_as_possible_biosignal": true,
+    "AirPods_term_present": false,
+    "shipping_product_proven": false,
+    "thought_to_text_proven": false,
+    "freedom_to_operate_established": false
+  },
+  "standing_provider_scope": {
+    "synthetic_or_public_nonprotected_target_free_development_calls_under_committed_contract": true,
+    "fixed_model_call_cost_and_retry_caps_required": true,
+    "sanitized_receipt_required": true,
+    "protected_data_allowed": false,
+    "target_or_reference_delivery_allowed": false,
+    "raw_EEG_or_MEG_upload_allowed": false,
+    "dense_embedding_or_NeuroToken_upload_allowed": false,
+    "scientific_scoring_or_claim_upgrade_allowed": false,
+    "hardware_purchase_connection_or_recording_allowed": false,
+    "large_data_or_model_download_allowed": false,
+    "release_allowed": false
+  },
+  "next_sequence": [
+    "freeze_FM1_parked_closeout",
+    "audit_current_optional_local_tool_compatibility_without_download",
+    "build_synthetic_ear_channel_quality_and_subset_selection_fixtures",
+    "qualify_pyRiemann_and_one_compact_Braindecode_family_after_public_data_contract",
+    "prepare_FM1B_only_if_local_schema_work_cannot_answer_transport_question",
+    "retain_at_least_30_USD_until_real_upstream_neural_signal_beats_controls"
+  ],
+  "documentation_binding": {
+    "path": "docs/AI_LOCAL_FIRST_R_AND_D_BUDGET_2026-08-08.md",
+    "sha256": "e3520f8e225feca9889ee50f6fe6a016f94391ee5965f64df9ad1fd6c78e6cd2"
+  },
+  "new_operations_during_budget_record": {
+    "provider_calls": 0,
+    "API_credential_reads": 0,
+    "provider_spend_events": 0,
+    "data_downloads": 0,
+    "model_downloads": 0,
+    "real_or_protected_data_reads": 0,
+    "target_or_reference_reads": 0,
+    "training_runs": 0,
+    "scoring_runs": 0,
+    "hardware_operations": 0
+  },
+  "claim_boundary": {
+    "engineering_direction_added": "NeuroDecodeKit has a conservative AI budget portfolio and local-first tool path for reusable EEG processing baselines models and future ear-worn channel quality.",
+    "scientific_claim_not_established": "A budget patent toolbox catalog or hardware prospect establishes no thought reading neural advantage decoding result real-time operation portability home use or clinical utility."
+  }
+}

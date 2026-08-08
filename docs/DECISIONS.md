@@ -3713,3 +3713,71 @@ Evidence: `docs/FOUNDATION_MODEL_LIVE_SMOKE_PREREGISTRATION.md`,
 `registries/foundation_model_live_smoke_authorization_decision.v0.json`,
 `docs/FOUNDATION_MODEL_LIVE_SMOKE_IMPLEMENTATION.md`, and
 `registries/foundation_model_live_smoke_implementation.v0.json`.
+
+## 0106 - Park FM-1 After The First Non-Completed Matched Response
+
+Decision: classify the one FM-1 invocation as consumed and parked. Exact
+implementation commit `a1d7ccc` passed push CI `31269398670` before credential
+access. The runner then attempted three sequential Terra calls, accepted two
+completed strict responses, and stopped at request index 2 when the provider
+status was not completed. Do not rerun, retry only missing rows, increase the
+budget, substitute another model, or tune prompts from the observed outputs.
+
+Behavior record: language-only `FM-A00` abstained with empty text and
+`evidence_used=none`. CTC-only `FM-A01` returned `HELLO WURLD` with
+`evidence_used=ctc`. No matched `FM-A02` response completed and no `FM-A03`
+derangement response ran. Matched-versus-deranged behavior is unavailable.
+
+Measurement: three calls and spend events followed one credential read. The
+two completed responses reported 339 input, 143 output, and 62 reasoning
+tokens. Their local standard-price estimate is $0.002394. Third-attempt usage
+and actual total billing are unavailable. Runtime was 8.406004375 seconds,
+peak RSS was 39,337,984 bytes, wire request/response totals were 4,179/13,502
+bytes, and the sanitized receipt was 5,882 bytes.
+
+Failure boundary: preserve only terminal category
+`provider_response_not_completed`, request index, response byte count, and
+SHA-256. The receipt cannot distinguish token limit, capacity, policy, or
+another provider-side cause, so no root cause is selected.
+
+Scientific boundary: two synthetic strict responses and fail-closed parking
+are engineering evidence. The incomplete four-arm matrix, absent target, and
+absent real neural evidence support no decoding or neural claim.
+
+Evidence: `docs/FOUNDATION_MODEL_LIVE_SMOKE_RESULT.md` and
+`registries/foundation_model_live_smoke_result.v0.json`.
+
+## 0107 - Spend The $50 AI Ceiling Through Local-First Gates
+
+Decision: accept the user's $50 aggregate AI-provider budget as a ceiling, not
+a spending target. Reserve the full $0.50 FM-1 contract cap because the third
+attempt's provider billing is unavailable. Allocate the conservative $49.50
+remainder across independent transport recovery, synthetic Sol/Terra controls,
+public target-free integration, later target-bearing and protected evaluation,
+and contingency ceilings. Unused budget remains unspent.
+
+Standing scope: synthetic or public non-protected target-free provider calls
+may proceed only under a committed machine contract with fixed model, call,
+cost, retry, privacy, and receipt rules. This budget does not authorize an FM-1
+rerun, protected data, targets, raw EEG/MEG, dense embeddings, scientific
+scoring, hardware, purchases, large downloads, releases, or claim promotion.
+
+Local-first decision: reuse MNE for file/QC/preprocessing/decoding, MOABB for
+grouped public benchmarks, pyRiemann for serious low-data covariance baselines,
+and compact Braindecode architectures before buying more hosted inference.
+These remain optional dependencies and one-thread/bounded work where practical.
+
+Ear-worn decision: treat Apple application `US20230225659A1` as evidence that
+an earbud-form dynamic electrode-selection interface is technically relevant.
+It names EEG and contact-aware active/reference electrode selection, but it is
+a pending application, does not mention AirPods, and proves neither a shipping
+EEG product nor thought-to-text. Begin only with generic synthetic contact,
+noise, missingness, and channel-subset fixtures. Hardware and commercial
+freedom-to-operate remain separate.
+
+Scientific boundary: a budget allocation, patent application, toolbox, model
+catalog, or hardware prospect establishes no neural advantage or decoding
+result.
+
+Evidence: `docs/AI_LOCAL_FIRST_R_AND_D_BUDGET_2026-08-08.md` and
+`registries/ai_local_first_rd_budget.v0.json`.

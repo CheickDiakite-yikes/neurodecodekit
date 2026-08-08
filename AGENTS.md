@@ -156,6 +156,8 @@ cat docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md
 python -m json.tool registries/foundation_model_decoder_strategy.v0.json >/dev/null
 cat docs/FOUNDATION_MODEL_LIVE_SMOKE_IMPLEMENTATION.md
 python -m json.tool registries/foundation_model_live_smoke_implementation.v0.json >/dev/null
+cat docs/FOUNDATION_MODEL_LIVE_SMOKE_RESULT.md
+python -m json.tool registries/foundation_model_live_smoke_result.v0.json >/dev/null
 ```
 
 The intended product stack uses a compact causal sensor adapter followed by
@@ -169,15 +171,35 @@ compiler: the 7,327-byte fixture produces 12 request plans and 34,349 bytes in
 request. FM-1 is now separately preregistered and exactly authorized for one
 synthetic-only `gpt-5.6-terra` qualification. Contract commit `7db14d5` passed
 push CI `31267860543`; decision commit `04fc009` passed push CI `31268358553`.
-The dependency-free transport, strict receipt validator, and dry-run/inspect
-CLI are implemented locally. The zero-network dry run built exactly 12 wire
-requests totaling 18,399 bytes in 0.004586541 seconds at 33,832,960-byte peak
-RSS; every credential, network, model, spend, protected-read, target, training,
-fine-tuning, and scoring counter remains zero. Do not execute FM-1 until this
-exact implementation is committed, pushed, and remotely green. After that
-gate, consume exactly the one authorized invocation with no retry and preserve
-its sanitized result. Do not send protected content, expand the model/call
-matrix, rerun, tune from outputs, score targets, or promote a scientific claim.
+Implementation commit `a1d7ccc` passed push CI `31269398670` before the one
+authorized invocation. FM-1 is now consumed and parked: three calls were
+attempted, two completed with strict outputs, and request index 2 returned a
+non-completed provider status. `FM-A00` abstained; `FM-A01` returned
+`HELLO WURLD`; no matched `FM-A02` or deranged `FM-A03` comparison completed.
+Runtime was 8.406004375 seconds, peak RSS was 39,337,984 bytes, and the retained
+completed-response estimate was $0.002394; actual usage for the third attempt
+is unavailable. Credential reads were one; provider calls were three; every
+protected-read, target, raw/dense upload, training, fine-tuning, and scoring
+counter was zero. Do not rerun FM-1, retry missing conditions, change the
+budget, substitute a model, tune from outputs, or promote a scientific claim.
+
+The user has now authorized a $50 aggregate AI-provider R&D ceiling:
+
+```bash
+cat docs/AI_LOCAL_FIRST_R_AND_D_BUDGET_2026-08-08.md
+python -m json.tool registries/ai_local_first_rd_budget.v0.json >/dev/null
+```
+
+Reserve the full $0.50 FM-1 cap because third-attempt billing is unavailable;
+treat the remaining $49.50 as future ceilings, not a spend target. Synthetic or
+public non-protected target-free provider calls may proceed only under a
+committed bounded contract and receipt. Protected data, targets, raw/dense
+neural uploads, scientific scoring, hardware, large downloads, releases, and
+claims retain their exact gates. Prefer local MNE, MOABB, pyRiemann, and compact
+Braindecode work first. Apple application `US20230225659A1` supports an earbud
+electrode-selection research direction, not a claim that current AirPods expose
+EEG or decode thoughts. No hardware action or patented-device implementation is
+authorized from that source.
 
 Documentation-sync commit `b6785d7` passed push CI `29471589279` and PR #32
 CI `29471598364`; Base Python and Optional Neuro Readers passed in both.

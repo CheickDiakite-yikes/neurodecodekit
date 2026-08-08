@@ -157,10 +157,20 @@
 > synthetic `gpt-5.6-terra` provider qualification. Its local implementation
 > builds 12 blinded wire requests totaling 18,399 bytes in 0.004586541 seconds
 > at 33,832,960-byte peak RSS, with strict structured output, sanitized failure
-> receipts, and offline validation. It has not executed: provider calls,
-> credential reads, spend, protected rows, targets, scores, training, and
-> scientific claims remain zero. The exact implementation commit must be
-> pushed and remotely green before the one no-retry invocation can run.
+> receipts, and offline validation. Implementation commit `a1d7ccc` passed CI
+> before the one invocation. FM-1 is now consumed and parked: three calls were
+> attempted, two strict responses completed, and the first `FM-A02` response
+> had non-completed provider status. No `FM-A03` or matched-versus-deranged
+> comparison exists. Runtime was 8.406004375 seconds at 39,337,984-byte peak
+> RSS. Protected rows, targets, scores, training, and scientific claims remain
+> zero or unavailable; no rerun is authorized.
+> The standing AI-provider ceiling is now $50. The full $0.50 FM-1 cap is held
+> for unresolved billing, and the remaining $49.50 is allocated only as future
+> ceilings. Use MNE, MOABB, pyRiemann, compact Braindecode models, and synthetic
+> ear-channel quality fixtures before more provider spend. Apple application
+> `US20230225659A1` is an earbud electrode-selection design lead, not evidence
+> that current AirPods expose EEG or decode thought. Hardware, protected data,
+> target, score, large-download, and claim gates remain unchanged.
 > Loop 56 planning research now freezes five verdict classes, 12 capability
 > levels, 18
 > comparison dimensions, 16 claim fields, 28 gates, 34 refusals, and a 12-part

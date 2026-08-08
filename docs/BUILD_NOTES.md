@@ -4904,3 +4904,74 @@ remotely green implementation commit.
 Scientific claim not established: no provider output, real neural evidence,
 target, or score exists at this milestone, so no decoding or neural result was
 established.
+
+## 2026-08-08 - FM-1 Consumed Parked Result
+
+- Implementation commit `a1d7ccc` passed push CI `31269398670`: Base Python in
+  15 seconds and Optional Neuro Readers in 50 seconds.
+- Consumed the one authorized invocation with one credential read, three
+  sequential provider calls, and zero retries. Two responses completed and
+  validated; request index 2 returned provider status other than `completed`.
+- `FM-A00` abstained with empty text and no evidence. `FM-A01` returned
+  `HELLO WURLD` from CTC evidence. No matched `FM-A02` or deranged `FM-A03`
+  response pair exists, so descriptive evidence sensitivity is unavailable.
+- The two completed responses reported 339 input, 143 output, and 62 reasoning
+  tokens with no cached or cache-write tokens. Their local standard-price
+  estimate is $0.002394. Usage and actual billing for the third attempt are
+  unavailable; provider accounting remains authoritative.
+- Runtime was 8.406004375 seconds, peak RSS was 39,337,984 bytes, wire request
+  and response totals were 4,179 and 13,502 bytes, and the sanitized local
+  result was 5,882 bytes with SHA-256
+  `f1ff632c45bc0a6c60fcec865615bf7becf07589f5d3a3472f26492c2ee5756e`.
+- Terminal response content was not retained. Its 5,720 bytes are represented
+  only by SHA-256
+  `c13d1e7c5ff6dd9440564c63b7f69e6ad877b89b00e0dcfe91b7043eb4b503cf`.
+- Real/protected reads, target/reference reads, raw/dense neural uploads,
+  training, fine-tuning, and scoring all remained zero. FM-1 is consumed and
+  has no rerun.
+
+Engineering capability added: the live provider boundary returned two strict
+synthetic responses and produced an honest bounded receipt when the third did
+not complete.
+
+Scientific claim not established: the matrix is incomplete and contains no
+real neural evidence or target, so FM-1 establishes no decoding or neural
+result.
+
+## 2026-08-08 - $50 AI Budget And Local-First Tool Strategy
+
+- Recorded the user's $50 aggregate AI-provider ceiling. Conservatively held
+  the entire $0.50 FM-1 cap because third-attempt billing is unavailable,
+  leaving $49.50 in future lane ceilings rather than a spending target.
+- Reserved $1.50 for independent transport recovery, $3 for synthetic
+  Sol/Terra controls, $5 for public target-free integration, $10 for a future
+  separately gated public target-bearing evaluation, $20 for a future
+  separately gated protected evaluation, and $10 as unallocated contingency.
+- Selected MNE, MOABB, pyRiemann, and compact Braindecode models as the local
+  stack before further hosted inference. No dependency, dataset, checkpoint,
+  model, or hardware was installed, downloaded, loaded, trained, or run.
+- Verified Apple application `US20230225659A1`: it describes an earbud-form
+  device with multiple active/reference electrodes, dynamic quality-aware
+  selection or weighting, and EEG as a possible biosignal. It does not mention
+  AirPods, prove a shipping product, or report thought-to-text.
+- Added a generic future architecture for target-blind ear-channel contact,
+  noise, missingness, and subset metadata ahead of classical and compact model
+  comparisons. Hardware, SDKs, purchases, recording, protected data, targets,
+  scoring, large downloads, commercial implementation, and claims remain
+  separately gated.
+- This documentation/research pass made zero new provider calls, credential
+  reads, spend events, data/model downloads, protected reads, target reads,
+  training runs, scoring runs, or hardware operations.
+- Final closeout verification passed 1,201 tests with three expected skips in
+  29.476 seconds, up from the 1,193-test pre-closeout baseline after adding the
+  eight result and budget contract tests. Ruff, bytecode compilation, every
+  JSON registry, CLI help, offline FM-1 result inspection, and
+  `git diff --check` also passed. The complete-suite process used one configured
+  compute thread and peaked at 629,555,200-byte resident set size.
+
+Engineering direction added: NeuroDecodeKit now has a conservative provider
+budget ledger and a mature local-tool path toward public EEG and future
+contact-variable ear-worn sensing.
+
+Scientific claim not established: no new signal, target, model, or hardware
+evidence was produced, so no neural or decoding result follows.

@@ -1,0 +1,205 @@
+{
+  "schema_name": "neurodecodekit.foundation_model_live_smoke_closeout",
+  "schema_version": "0.1.0",
+  "created_at": "2026-08-08",
+  "stage_id": "FM-1",
+  "status": "consumed_parked_partial_provider_response",
+  "consumed": true,
+  "rerun_authorized": false,
+  "contract_binding": {
+    "path": "registries/foundation_model_live_smoke_contract.v0.json",
+    "sha256": "30dd5fc7475f4985e97f496166792a65d0f2e9353230652cb5c2526c74f86eae",
+    "commit": "7db14d51cbe8bde5a5d7ac43479b20e575e9ae7c",
+    "push_CI_run_id": 31267860543
+  },
+  "authorization_binding": {
+    "path": "registries/foundation_model_live_smoke_authorization_decision.v0.json",
+    "sha256": "01ba69b0fc1e1c3e372721076de4b75de9a9c92541d73fa4a95f8e56491b3295",
+    "commit": "04fc00987d2c68827054acaac32ab6edfae5430b",
+    "push_CI_run_id": 31268358553
+  },
+  "implementation_binding": {
+    "commit": "a1d7ccca514223cfc49bd37ef80c58c9cbc4596f",
+    "push_CI_run_id": 31269398670,
+    "base_Python_job_passed": true,
+    "optional_neuro_readers_job_passed": true,
+    "implementation_registry_path": "registries/foundation_model_live_smoke_implementation.v0.json"
+  },
+  "result_document_binding": {
+    "path": "docs/FOUNDATION_MODEL_LIVE_SMOKE_RESULT.md",
+    "sha256": "6d5f62abab88e7ccdc083d5efa577700da4595cabf539978ec2167baa0fe9150"
+  },
+  "local_sanitized_artifact": {
+    "committed": false,
+    "ignored_artifact_name": "fm1_terra_synthetic_result.v0.json",
+    "bytes": 5882,
+    "sha256": "f1ff632c45bc0a6c60fcec865615bf7becf07589f5d3a3472f26492c2ee5756e",
+    "contains_credential_or_authorization_header": false,
+    "contains_raw_provider_response_ID_or_headers": false
+  },
+  "provider_execution": {
+    "provider": "OpenAI",
+    "requested_model": "gpt-5.6-terra",
+    "provider_reported_models": [
+      "gpt-5.6-terra"
+    ],
+    "endpoint": "https://api.openai.com/v1/responses",
+    "reasoning_effort": "low",
+    "service_tier": "default",
+    "store": false,
+    "stream": false,
+    "tools": [],
+    "retry_count": 0,
+    "planned_request_count": 12,
+    "attempted_request_count": 3,
+    "completed_response_count": 2,
+    "schema_valid_response_count": 2,
+    "refusal_count": 0
+  },
+  "terminal_failure": {
+    "request_index": 2,
+    "condition_id": "FM-A02",
+    "item_id": "SYNTH-ITEM-00",
+    "category": "provider_response_not_completed",
+    "wire_response_bytes": 5720,
+    "provider_response_sha256": "c13d1e7c5ff6dd9440564c63b7f69e6ad877b89b00e0dcfe91b7043eb4b503cf",
+    "root_cause_available": false
+  },
+  "completed_response_summaries": [
+    {
+      "request_index": 0,
+      "condition_id": "FM-A00",
+      "item_id": "SYNTH-ITEM-00",
+      "abstained": true,
+      "decoded_text": "",
+      "evidence_used": "none",
+      "unsupported_content_warning": false,
+      "latency_seconds": 2.386448417,
+      "input_tokens": 150,
+      "output_tokens": 36,
+      "reasoning_tokens": 0
+    },
+    {
+      "request_index": 1,
+      "condition_id": "FM-A01",
+      "item_id": "SYNTH-ITEM-00",
+      "abstained": false,
+      "decoded_text": "HELLO WURLD",
+      "evidence_used": "ctc",
+      "unsupported_content_warning": false,
+      "latency_seconds": 2.260840833,
+      "input_tokens": 189,
+      "output_tokens": 107,
+      "reasoning_tokens": 62
+    }
+  ],
+  "condition_summaries": {
+    "FM-A00": {
+      "response_count": 1,
+      "schema_valid_count": 1,
+      "refusal_count": 0,
+      "abstained_count": 1,
+      "nonempty_decoded_text_count": 0
+    },
+    "FM-A01": {
+      "response_count": 1,
+      "schema_valid_count": 1,
+      "refusal_count": 0,
+      "abstained_count": 0,
+      "nonempty_decoded_text_count": 1
+    },
+    "FM-A02": {
+      "response_count": 0,
+      "schema_valid_count": 0,
+      "refusal_count": 0,
+      "abstained_count": 0,
+      "nonempty_decoded_text_count": 0
+    },
+    "FM-A03": {
+      "response_count": 0,
+      "schema_valid_count": 0,
+      "refusal_count": 0,
+      "abstained_count": 0,
+      "nonempty_decoded_text_count": 0
+    }
+  },
+  "descriptive_pairing": {
+    "CTC_only_vs_matched_comparable_items": 0,
+    "CTC_only_vs_matched_changed_text_items": 0,
+    "matched_vs_deranged_comparable_items": 0,
+    "matched_vs_deranged_changed_text_items": 0,
+    "interpretation": "unavailable because no matched or deranged response completed"
+  },
+  "usage_and_resources": {
+    "input_tokens_completed_responses": 339,
+    "cached_input_tokens_completed_responses": 0,
+    "cache_write_input_tokens_completed_responses": 0,
+    "output_tokens_completed_responses": 143,
+    "reasoning_tokens_completed_responses": 62,
+    "estimated_standard_cost_USD_completed_responses": 0.002394,
+    "third_attempt_usage_and_actual_provider_charge_available": false,
+    "wire_request_bytes": 4179,
+    "wire_response_bytes": 13502,
+    "runtime_seconds": 8.406004375,
+    "peak_RSS_bytes": 39337984,
+    "generated_result_bytes": 5882
+  },
+  "access_counters": {
+    "external_network_calls": 3,
+    "API_credential_reads": 1,
+    "provider_spend_events": 3,
+    "provider_model_calls": 3,
+    "real_or_protected_data_reads": 0,
+    "target_or_reference_reads": 0,
+    "raw_or_dense_neural_uploads": 0,
+    "training_runs": 0,
+    "fine_tuning_runs": 0,
+    "scoring_runs": 0
+  },
+  "gate_results": {
+    "contract_and_source_hashes": true,
+    "exact_implementation_remote_green": true,
+    "one_credential_read": true,
+    "fixed_provider_surface": true,
+    "twelve_sequential_requests_completed": false,
+    "strict_schema_for_completed_responses": true,
+    "all_four_conditions_complete": false,
+    "zero_retries": true,
+    "registered_resource_caps": true,
+    "privacy_and_forbidden_access": true,
+    "behavioral_pairing_available": false,
+    "scientific_claim_available": false
+  },
+  "warnings": [
+    "FM-1 is consumed and parked with no rerun",
+    "the local cost estimate excludes unavailable usage for the non-completed third response",
+    "only two synthetic responses completed",
+    "no matched-versus-deranged comparison is available",
+    "provider non-completion category is not a proven root cause",
+    "synthetic outputs have no target and cannot be scored"
+  ],
+  "unavailable_fields": [
+    "third_attempt_token_usage",
+    "complete_provider_charge",
+    "FM-A01_vs_FM-A02_pairing",
+    "FM-A02_vs_FM-A03_pairing",
+    "decoded_text_accuracy",
+    "CER",
+    "WER",
+    "neural_advantage",
+    "brain_specific_information",
+    "real_signal_latency",
+    "end_to_end_capture_latency",
+    "unseen_person_generalization"
+  ],
+  "route": {
+    "verdict": "park_FM1",
+    "reason": "the one-shot matrix stopped after a non-completed provider response on request index 2",
+    "next_action_under_this_contract": "none",
+    "new_contract_required_for_future_provider_qualification": true
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "NeuroDecodeKit demonstrated bounded live Terra transport and strict parsing for two synthetic requests plus honest fail-closed parking and receipt construction on the third.",
+    "scientific_claim_not_established": "No real neural evidence or target was used and the four-arm matrix did not complete, so FM-1 establishes no decoding or neural result."
+  }
+}

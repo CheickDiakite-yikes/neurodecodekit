@@ -411,22 +411,31 @@ An additive decoder strategy now assigns the hosted language role to frozen
 receive structured CTC and key evidence, not raw EEG or custom hidden
 embeddings. The future parity surface must preserve all four matched arms,
 including full `FM-A02` and fixed item-deranged `FM-A03`, under one model and
-prompt. FM-0 remains the deterministic no-call bridge. FM-1 is now separately
-preregistered and exactly authorized for one synthetic-only
-`gpt-5.6-terra` provider qualification, but it cannot execute until its exact
-implementation commit is pushed and remotely green. This does not authorize
-real replay, target delivery, scoring, training, tuning, or scientific claim
-promotion. See
+prompt. FM-0 remains the deterministic no-call bridge. FM-1's one separately
+authorized synthetic `gpt-5.6-terra` invocation is consumed and parked after
+three attempted calls, two strict completions, and a non-completed provider
+status on the first matched `FM-A02` response. No `FM-A03` or behavioral pair
+completed, and no rerun is open. This does not authorize real replay, target
+delivery, scoring, training, tuning, or scientific claim promotion. See
 `docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md` and
 `registries/foundation_model_decoder_strategy.v0.json`, plus
-`docs/FOUNDATION_MODEL_LIVE_SMOKE_IMPLEMENTATION.md`. FM-0 is locally
+`docs/FOUNDATION_MODEL_LIVE_SMOKE_RESULT.md`. FM-0 is locally
 implemented: 7,327 synthetic input bytes compiled into 12 plans and 34,349
 output bytes in 0.00275 seconds at about 21.5 MB peak RSS. The implementation
 now also includes the bounded FM-1 transport and strict result inspector. Its
-zero-network dry run compiled 12 blinded wire requests totaling 18,399 bytes
-in 0.004586541 seconds at 33,832,960-byte peak RSS. All provider, credential,
-spend, protected-read, target, training, and scoring counters remain zero, and
-Loop 57's real-integration status remains `Not Started`.
+zero-network dry run compiled 12 blinded wire requests totaling 18,399 bytes.
+The live partial run took 8.406004375 seconds at 39,337,984-byte peak RSS.
+Protected reads, targets, raw/dense uploads, training, fine-tuning, and scoring
+remained zero. Loop 57's real-integration status remains `Not Started`.
+
+The user has authorized a $50 aggregate AI-provider ceiling while preserving
+all data and claim gates. Reserve the complete $0.50 FM-1 cap and treat the
+remaining $49.50 as prospective lane ceilings. Local MNE, MOABB, pyRiemann,
+Braindecode, and synthetic contact-aware ear-channel work precede additional
+provider calls. Apple application `US20230225659A1` motivates a generic dynamic
+channel-quality interface only; it does not establish a shipping AirPods EEG
+surface or thought decoding. See
+`docs/AI_LOCAL_FIRST_R_AND_D_BUDGET_2026-08-08.md`.
 
 ### Loop 58 - Local Capture And Device Mechanics
 

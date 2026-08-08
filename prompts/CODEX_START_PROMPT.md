@@ -60,6 +60,10 @@ requests, and these files:
 - `docs/FOUNDATION_MODEL_LIVE_SMOKE_AUTHORIZATION_DECISION.md`
 - `docs/FOUNDATION_MODEL_LIVE_SMOKE_IMPLEMENTATION.md`
 - `registries/foundation_model_live_smoke_implementation.v0.json`
+- `docs/FOUNDATION_MODEL_LIVE_SMOKE_RESULT.md`
+- `registries/foundation_model_live_smoke_result.v0.json`
+- `docs/AI_LOCAL_FIRST_R_AND_D_BUDGET_2026-08-08.md`
+- `registries/ai_local_first_rd_budget.v0.json`
 - `docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md`
 - `registries/loop32_research_boundary.v0.json`
 - `docs/POST_20_ROADMAP.md`
@@ -88,13 +92,16 @@ Do not reset, revert, delete, or overwrite work already present.
   must eventually beat CTC-only and fixed item-deranged evidence under the
   same model before any neural interpretation. The FM-0 no-call bridge is
   implemented: 7,327
-  synthetic input bytes compile into 12 plans and 34,349 bytes. FM-1's
-  contract and exact authorization are remotely green, and the local transport
-  dry run builds 12 requests totaling 18,399 bytes without reading the key or
-  contacting the provider. Do not execute until the exact implementation
-  commit is pushed and remotely green. Then consume only the one authorized
-  no-retry synthetic run. Protected rows, targets, scoring, training,
-  fine-tuning, tuning from outputs, reruns, and claim upgrades remain closed.
+  synthetic input bytes compile into 12 plans and 34,349 bytes. FM-1 is
+  consumed and parked after one invocation: 3 calls attempted, 2 strict
+  responses completed, and the first matched `FM-A02` response returned
+  non-completed provider status. No `FM-A03` or matched behavioral pair exists.
+  Do not rerun, retry, substitute, or tune from FM-1. The standing AI-provider
+  budget ceiling is now $50, with the full $0.50 FM-1 cap conservatively
+  reserved and $49.50 allocated as future ceilings, not spend targets. Use
+  mature local MNE, MOABB, pyRiemann, and Braindecode paths first. Protected
+  rows, targets, scoring, training, fine-tuning, hardware, large downloads,
+  reruns, and claim upgrades retain their exact gates.
 - RW1 closes metadata-only local intake. RW2 closes bounded, redacted signal
   reading and descriptive reporting on generated fixtures only: 38 readable
   sources pass and two malformed or unsafe layouts refuse exactly.
