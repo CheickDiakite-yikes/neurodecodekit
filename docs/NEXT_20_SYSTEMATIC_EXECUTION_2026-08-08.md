@@ -18,7 +18,7 @@ decision after its own frozen packet and required remote-green evidence exist.
 | 5 | Add a contact-aware ear-channel adapter | B | Synthetic contact/noise/missingness fixtures and exact channel-mask semantics only | Complete |
 | 6 | Freeze Loop 54-A decision and qualify parser | A/B then C decision | Recovery-bound exact packet, strict synthetic parser tests, green implementation before real access | Complete |
 | 7 | Execute Loop 54-A once | C | One 11,705-byte VHDR open; no sibling resolution; all 18 gates pass | Consumed; Parked F11; No Rerun |
-| 8 | Acquire tiny PhysioNet motor slice | C | Exactly nine pinned EDF files, 23,248,224 bytes, isolated receipt, no substitutions | Registration Frozen; Tier C Decision Pending |
+| 8 | Acquire tiny PhysioNet motor slice | C | Exactly nine pinned EDF files, 23,248,224 bytes, isolated receipt, no substitutions | Exact Request Frozen; Tier C Decision Pending |
 | 9 | Run grouped public motor positive control | C | Participant/run grouping, fixed classical family, no-signal and corruption controls | Gated |
 | 10 | Execute Loop 54-B signal quality | C | Target-blind VHDR+EEG read, every channel retained, no transform, bounded aggregate output | Gated |
 | 11 | Execute Loop 54-C trial reconciliation | C | Isolated VMRK+MAT target-bearing stage, no plaintext protected public output | Gated |
@@ -88,6 +88,15 @@ opened. Every execution permission remains false until the registration is
 remotely green, a hash-bound request is separately green, the maintainer gives
 the exact Tier C decision, and a fixture-qualified implementation is remotely
 green. Work order 9 remains closed.
+
+Registration `2a7b4188553e221133d788a081b838dbbb9f41bb` passed Base Python
+job `93215490492` and Optional Neuro Readers job `93215490501` in CI
+`31301730612`. The additive authorization packet and all-false machine request
+now bind that immutable commit, the three registration artifact hashes, the
+one-invocation/no-retry limits, and one exact decision sentence. Preparing the
+request is not authorization. Its commit must be pushed and remotely green
+before the sentence is accepted, and no implementation or payload operation
+may begin from the packet alone.
 
 Work order 13 now has a frozen Tier B synthetic-only contract in
 `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md` and

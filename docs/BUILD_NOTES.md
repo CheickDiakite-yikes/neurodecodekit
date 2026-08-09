@@ -5583,3 +5583,46 @@ registration establishes no EDF readability, event correctness, signal
 quality, motor effect, neural advantage, model accuracy, generalization,
 real-time behavior, portable hardware, home use, assistive value, or clinical
 result.
+
+## 2026-08-09 - PhysioNet Motor Acquisition Exact Tier C Request
+
+- Confirmed registration `2a7b4188553e221133d788a081b838dbbb9f41bb`
+  passed Base Python job `93215490492` and Optional Neuro Readers job
+  `93215490501` in CI `31301730612` before preparing the request.
+- Added a human authorization packet, all-false machine request, and
+  self-hashing invariant test. They bind the registration commit and exact
+  SHA-256 and Git blob identities of the preregistration, contract, contract
+  test, packet, and request test without changing the registered contract.
+- Froze one exact user sentence with two later green gates: the separate
+  authorization-only decision must be remotely green before fixture-only
+  implementation, and the exact implementation must be remotely green before
+  one no-retry acquisition invocation.
+- Preserved the exact nine files, 23,248,224 bytes, nine official SHA-256
+  values, one opaque local hash pass per file, one thread and worker, 300
+  seconds, 256 MiB RSS, 1 MiB metadata network, 32 MiB EDF network, 64 MiB
+  incremental disk, 2 GiB minimum free disk, and 1 MiB receipt limits.
+- Every implementation, fixture qualification, metadata recheck, EDF payload,
+  local path, parse, sidecar, signal, target, cache, split, model, training,
+  inference, score, provider, hardware, rerun, work-order-9, and claim
+  authorization remains false in the request. Preparing it caused no new
+  metadata or payload operation, so the registration counters remain exact.
+- Twenty-two combined registration/request tests pass. The full one-thread
+  pytest suite advances from the 1,398-test registration baseline to 1,408
+  passed tests with three expected skips and 493 subtests in 40.27 seconds of
+  pytest runtime and 41.44 seconds external wall time at 677,740,544-byte
+  maximum suite RSS.
+- The CI-style unittest command passes 1,411 tests with three expected skips in
+  37.721 seconds internal and 38.63 seconds external wall time at
+  673,005,568-byte maximum suite RSS. These complete-suite measurements are
+  verification overhead, not future acquisition-execution measurements.
+- Repository-wide Ruff 0.15.20 and compileall pass. The packet, machine request,
+  and request test total 33,909 bytes. No payload, cache, fixture, inspection
+  output, execution receipt, or experiment artifact was generated or retained.
+
+Engineering capability proposed: NeuroDecodeKit now has a byte-bound,
+self-checking Tier C decision surface for one tiny public motor-EEG acquisition.
+
+Scientific claim not established: the request opened no EDF payload and
+establishes no readability, event correctness, signal quality, motor effect,
+neural advantage, model accuracy, generalization, real-time behavior,
+portable-hardware performance, home use, assistive value, or clinical result.

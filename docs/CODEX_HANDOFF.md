@@ -141,6 +141,25 @@
 > 54-B/C, or treat invented-factor accuracy as real EEG evidence. Preserve the
 > unrelated tracker inspection NDJSON.
 >
+> Current PhysioNet work-order-8 handoff, 2026-08-09: registration commit
+> `2a7b4188553e221133d788a081b838dbbb9f41bb` passed Base Python job
+> `93215490492` and Optional Neuro Readers job `93215490501` in CI
+> `31301730612`. Read
+> `docs/PHYSIONET_MOTOR_ACQUISITION_PREREGISTRATION.md`,
+> `registries/physionet_motor_acquisition_contract.v0.json`,
+> `docs/PHYSIONET_MOTOR_ACQUISITION_AUTHORIZATION_PACKET.md`, and
+> `registries/physionet_motor_acquisition_authorization_request.v0.json`.
+> The request binds exactly nine EEGMMIDB v1.0.0 EDF paths, 23,248,224 bytes,
+> nine official SHA-256 values, one no-retry invocation, one opaque local hash
+> pass per file, one thread/worker, 300 seconds, 256 MiB RSS, 32 MiB EDF
+> network, 64 MiB incremental disk, and 1 MiB receipts. Every implementation,
+> metadata recheck, payload, local-path, parse, split, model, execution, rerun,
+> and claim permission is false in the request. Verify the request commit is
+> pushed and remotely green before accepting its exact Tier C sentence. Do not
+> implement a downloader, touch a PhysioNet path, fetch an EDF or `.event`
+> payload, or enter work order 9 from the packet alone. Preserve the unrelated
+> tracker inspection NDJSON.
+>
 > Additive strategy refresh, 2026-08-06: read
 > `docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md` and
 > `registries/open_eeg_rd_strategy.v0.json`. Current open EEG benchmarks

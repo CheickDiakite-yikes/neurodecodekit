@@ -4251,3 +4251,40 @@ result.
 Evidence: `docs/PHYSIONET_MOTOR_ACQUISITION_PREREGISTRATION.md`,
 `registries/physionet_motor_acquisition_contract.v0.json`, and
 `tests/test_physionet_motor_acquisition_contract.py`.
+
+## 0124 - Bind The Public Motor Acquisition To One Exact Tier C Request
+
+Decision: after registration commit
+`2a7b4188553e221133d788a081b838dbbb9f41bb` passed both jobs in CI
+`31301730612`, create one additive authorization packet and all-false machine
+request. Bind the preregistration, contract, invariant test, packet, and request
+test by exact SHA-256 and Git blob identity without modifying the immutable
+registration.
+
+Requested scope: after a separate exact decision is remotely green, qualify a
+dependency-light implementation only with generated local fixtures and mocked
+network responses. After that exact implementation is also remotely green,
+allow one no-retry invocation for the nine registered EDF paths, one opaque
+local SHA-256 pass per file, one complete isolated 23,248,224-byte bundle, and
+bounded receipts. Preserve every registered thread, wall-time, RSS, network,
+disk, free-space, no-substitution, and no-overwrite limit.
+
+Evidence order: this request commit must first be pushed and remotely green.
+Only then may the maintainer's exact sentence be accepted into a separate
+authorization-only decision. That decision must become remotely green before
+implementation; implementation must become remotely green before acquisition.
+The request itself grants no implementation, metadata recheck, download,
+local-path, parse, model, rerun, or claim permission.
+
+Engineering capability proposed: NeuroDecodeKit has a byte-bound decision
+surface for one tiny public motor-EEG acquisition and can reject drift before
+any EDF payload is requested.
+
+Scientific claim not established: the request opened no EDF payload and
+establishes no readability, event correctness, signal quality, motor effect,
+neural advantage, model accuracy, generalization, real-time behavior,
+portable-hardware performance, home use, assistive value, or clinical result.
+
+Evidence: `docs/PHYSIONET_MOTOR_ACQUISITION_AUTHORIZATION_PACKET.md`,
+`registries/physionet_motor_acquisition_authorization_request.v0.json`, and
+`tests/test_physionet_motor_acquisition_authorization_request.py`.

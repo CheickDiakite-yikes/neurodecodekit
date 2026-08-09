@@ -279,6 +279,29 @@ It used 6.553 seconds, 398,737,408-byte peak RSS, and 37,371 output bytes. Do
 not rerun seed 5513, download either public prospect, touch S20, enter Loop
 54-B/C, or promote this synthetic mechanics result into a scientific claim.
 
+Work order 8 now has a remotely green acquisition-only registration and an
+additive exact Tier C request surface:
+
+```bash
+cat docs/PHYSIONET_MOTOR_ACQUISITION_PREREGISTRATION.md
+python -m json.tool registries/physionet_motor_acquisition_contract.v0.json >/dev/null
+cat docs/PHYSIONET_MOTOR_ACQUISITION_AUTHORIZATION_PACKET.md
+python -m json.tool registries/physionet_motor_acquisition_authorization_request.v0.json >/dev/null
+```
+
+Registration commit `2a7b4188553e221133d788a081b838dbbb9f41bb` passed Base
+Python job `93215490492` and Optional Neuro Readers job `93215490501` in CI
+`31301730612`. The request binds exactly nine PhysioNet EEGMMIDB v1.0.0 EDF
+paths totaling 23,248,224 bytes, nine official SHA-256 values, one no-retry
+invocation, one opaque local hash pass per file, one thread and worker, 300
+seconds, 256 MiB RSS, 32 MiB EDF network, 64 MiB incremental disk, and 1 MiB
+receipts. Every implementation, metadata-reverification, payload, local-path,
+parse, split, model, execution, rerun, and claim authorization remains false.
+The request commit must be pushed and remotely green before its exact Tier C
+sentence may be accepted into a separate decision. Do not implement a
+downloader, touch a local PhysioNet path, fetch an EDF or `.event` payload, or
+enter work order 9 from the registration or packet alone.
+
 The additive foundation-model decoder strategy is now explicit:
 
 ```bash
