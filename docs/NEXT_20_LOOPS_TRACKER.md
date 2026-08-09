@@ -118,10 +118,13 @@
 > immutable registration, pinned green anchor, and green recovery record while
 > retaining all-false permissions and zero S20 access counters in those
 > immutable snapshots. Request commit `19813a8` passed CI `31283297030`; the
-> exact Tier C decision is now separately recorded. Its commit and then the
-> synthetic parser implementation must each become green before the one real
-> VHDR open. Contract preparation, recovery, request preparation, and decision
-> recording performed zero S20 path stats or payload reads. Loop 55
+> exact Tier C decision is now separately recorded. Decision commit `2177b36`
+> passed CI `31286428489` before the strict standard-library parser and CLI
+> were implemented and adversarially qualified on generated synthetic VHDR
+> fixtures. Twenty-four tests and 24 mutation subchecks cover all 22 refusal
+> classes. This exact implementation commit must become green before the one
+> real VHDR open. Contract preparation, recovery, request, decision, and
+> implementation work performed zero S20 path stats or payload reads. Loop 55
 > planning research now separates a
 > causal performed-hand gate from a harder causal 29-key gate, uses performed
 > actions rather than corrected intended text as the primary targets, and
@@ -732,9 +735,11 @@ packets without changing those loop IDs or contracts. Work orders 1-5 are
 complete: registration recovery, local tooling audit, deterministic synthetic
 physiology/confound fixtures, classical adapter contracts, and contact-aware
 ear-channel semantics all passed their bounded gates. Work order 6 has recorded
-the recovery-bound exact Loop 54-A user decision and now waits for that commit's
-green CI before synthetic parser implementation. Every real-data, target,
-training, scoring, hardware, release, and claim row remains separately gated.
+the recovery-bound exact Loop 54-A user decision, passed its decision CI, and
+locally qualified the strict parser against all 22 refusal classes. It now waits
+for the exact implementation commit and both CI jobs to become green. Every
+real-data, target, training, scoring, hardware, release, and claim row remains
+separately gated.
 
 Loop 45 is complete at its target-free mechanics boundary. Loops 46 and 47 are
 parked after the one consumed S21 event failed the candidate-versus-prior and
@@ -806,6 +811,7 @@ needs a separately preregistered representation repair before another
 development-person intake can be considered; S25 remains final-only and
 sealed. No roadmap row authorizes an experiment.
 
-L54-A is the sole newly preregistered content stage. Its contract is not
-permission to stat or open S20; the exact authorization and green implementation
-must precede the one registered VHDR execution.
+L54-A is the sole newly preregistered content stage. Its exact authorization is
+green and its parser is locally synthetic-qualified, but the registered S20
+path remains unopened. The exact implementation and both CI jobs must become
+green before the one registered VHDR execution.

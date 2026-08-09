@@ -2490,6 +2490,59 @@ def _cmd_loop53_acquire_s20(args: argparse.Namespace) -> int:
     return 0 if outcome.passed else 1
 
 
+def _cmd_loop54_vhdr_ledger(args: argparse.Namespace) -> int:
+    from neurodecodekit.preprocess.vhdr_ledger import (
+        ExecutionEvidence,
+        execute_registered_vhdr,
+        registered_plan,
+        summarize_vhdr_ledger,
+    )
+
+    repo_root = Path.cwd()
+    if not args.execute:
+        print(json.dumps(registered_plan(repo_root), indent=2, sort_keys=True))
+        print("Safety default: dry-run only. No registered S20 path stat or content access occurred.")
+        return 0
+
+    missing = [
+        name
+        for name, value in (
+            ("--implementation-commit", args.implementation_commit),
+            ("--implementation-push-ci-run-id", args.implementation_push_ci_run_id),
+            ("--implementation-base-python-job-id", args.implementation_base_python_job_id),
+            (
+                "--implementation-optional-neuro-job-id",
+                args.implementation_optional_neuro_job_id,
+            ),
+        )
+        if value is None
+    ]
+    if missing:
+        raise ValueError(f"--execute requires: {', '.join(missing)}")
+    _set_loop25_thread_environment()
+    evidence = ExecutionEvidence(
+        implementation_commit=args.implementation_commit,
+        implementation_push_ci_run_id=args.implementation_push_ci_run_id,
+        implementation_base_python_job_id=args.implementation_base_python_job_id,
+        implementation_optional_neuro_job_id=args.implementation_optional_neuro_job_id,
+    )
+    outcome = execute_registered_vhdr(repo_root, evidence=evidence)
+    print(json.dumps(summarize_vhdr_ledger(outcome.ledger), indent=2, sort_keys=True))
+    print("Created the private target-free VHDR ledger and summary in the registered output root.")
+    return 0
+
+
+def _cmd_inspect_loop54_vhdr_ledger(args: argparse.Namespace) -> int:
+    from neurodecodekit.preprocess.vhdr_ledger import load_vhdr_ledger, summarize_vhdr_ledger
+
+    ledger = load_vhdr_ledger(
+        args.ledger,
+        maximum_bytes=int(args.max_input_mib * 1024 * 1024),
+    )
+    print(json.dumps(summarize_vhdr_ledger(ledger), indent=2, sort_keys=True))
+    return 0
+
+
 def _cmd_inspect_ai_research_policy(args: argparse.Namespace) -> int:
     from neurodecodekit.evaluation.ai_research_policy import (
         inspect_ai_research_policy,
@@ -4834,6 +4887,60 @@ def build_parser() -> argparse.ArgumentParser:
         help="Successful pull-request CI run ID for the implementation commit.",
     )
     p.set_defaults(func=_cmd_loop53_acquire_s20)
+
+    p = sub.add_parser(
+        "loop54-vhdr-ledger",
+        help="Dry-run or consume the one strict, sibling-blind Loop 54-A VHDR pass.",
+        description=(
+            "Default to a no-stat plan. Execution requires the exact remotely-green "
+            "implementation commit and both successful CI job identifiers, opens only "
+            "the registered VHDR once, and stops before Loop 54-B."
+        ),
+    )
+    mode = p.add_mutually_exclusive_group()
+    mode.add_argument(
+        "--execute",
+        action="store_true",
+        help="Consume the single registered VHDR execution after implementation CI is green.",
+    )
+    mode.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Print the frozen plan without statting the registered S20 path. This is the default.",
+    )
+    p.add_argument(
+        "--implementation-commit",
+        help="Full remotely-green implementation commit; must equal current HEAD.",
+    )
+    p.add_argument(
+        "--implementation-push-ci-run-id",
+        type=int,
+        help="Successful push CI run ID for the exact implementation commit.",
+    )
+    p.add_argument(
+        "--implementation-base-python-job-id",
+        type=int,
+        help="Successful Base Python job ID inside the implementation push CI run.",
+    )
+    p.add_argument(
+        "--implementation-optional-neuro-job-id",
+        type=int,
+        help="Successful Optional Neuro Readers job ID inside the implementation push CI run.",
+    )
+    p.set_defaults(func=_cmd_loop54_vhdr_ledger)
+
+    p = sub.add_parser(
+        "inspect-loop54-vhdr-ledger",
+        help="Inspect one bounded target-free Loop 54-A ledger.",
+    )
+    p.add_argument("--ledger", required=True, help="Path to the generated VHDR ledger JSON.")
+    p.add_argument(
+        "--max-input-mib",
+        type=float,
+        default=1.0,
+        help="Ledger input cap in MiB, at most 1. Default: 1.",
+    )
+    p.set_defaults(func=_cmd_inspect_loop54_vhdr_ledger)
 
     p = sub.add_parser(
         "inspect-ai-research-policy",

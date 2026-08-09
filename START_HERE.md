@@ -115,15 +115,21 @@
    `0.15.20` passed 1,095 tests with three skips. Then read
    `docs/LOOP_54_STAGE_A_RECOVERY_AUTHORIZATION_PACKET.md` and
    `registries/loop54_stage_a_recovery_authorization_request.v1.json`. This is
-   the current recovery-bound exact decision surface. Every authorization flag
-   remains false in those immutable snapshots. Request commit `19813a8` passed
-   CI `31283297030`; then read
+   the recovery-bound exact decision surface. Every authorization flag remains
+   false in those immutable snapshots. Request commit `19813a8` passed CI
+   `31283297030`; then read
    `docs/LOOP_54_STAGE_A_RECOVERY_AUTHORIZATION_DECISION.md` and
    `registries/loop54_stage_a_recovery_authorization_decision.v1.json`. The
-   exact user decision is recorded but must itself become remotely green before
-   synthetic parser implementation. The one real VHDR open remains conditional
-   on the implementation commit becoming green. No local S20 path or payload
-   was accessed during preregistration, recovery, request, or decision work.
+   exact user decision is recorded at commit `2177b36`, whose CI `31286428489`
+   passed both jobs before implementation. Then read
+   `docs/LOOP_54_STAGE_A_VHDR_IMPLEMENTATION.md` and
+   `registries/loop54_stage_a_vhdr_implementation.v0.json`. The strict
+   standard-library parser, dry-run-first CLI, metadata inspector, no-follow
+   source verifier, exclusive bounded outputs, and all 22 refusal classes are
+   synthetic-qualified. The one real VHDR open remains conditional on this
+   exact implementation commit becoming remotely green. No local S20 path or
+   payload was accessed during preregistration, recovery, request, decision, or
+   implementation work.
    Then read `docs/LOCAL_EEG_TOOLING_AUDIT_2026-08-08.md`,
    `registries/local_eeg_tooling_audit_result.v0.json`,
    `registries/local_eeg_tooling_audit_receipt.v0.json`, and

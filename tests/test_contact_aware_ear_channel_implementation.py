@@ -6,6 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = ROOT / "registries/contact_aware_ear_channel_implementation.v0.json"
+HISTORICAL_CLI_SHA256 = "16219ba1927513663f06bdb78a3dd0ab1d87f7f346ee1c6bbe5d487795ff5be7"
 
 
 def sha256(path: Path) -> str:
@@ -32,12 +33,18 @@ class ContactAwareEarChannelImplementationTests(unittest.TestCase):
         self.assertEqual(binding["registration_push_CI_conclusion"], "success")
 
     def test_implementation_sources_are_hash_bound(self):
-        for source in self.registry["implementation_binding"].values():
-            self.assertEqual(
-                source["sha256"],
-                sha256(ROOT / source["path"]),
-                source["path"],
-            )
+        for name, source in self.registry["implementation_binding"].items():
+            if name == "CLI":
+                self.assertEqual(source["sha256"], HISTORICAL_CLI_SHA256)
+                current = (ROOT / source["path"]).read_text(encoding="utf-8")
+                self.assertIn('"make-contact-aware-ear-fixture"', current)
+                self.assertIn('"inspect-contact-aware-ear-fixture"', current)
+            else:
+                self.assertEqual(
+                    source["sha256"],
+                    sha256(ROOT / source["path"]),
+                    source["path"],
+                )
 
     def test_surfaces_are_complete_but_measured_execution_is_pending(self):
         surfaces = self.registry["implemented_surfaces"]

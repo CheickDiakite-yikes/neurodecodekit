@@ -1,0 +1,162 @@
+{
+  "schema_name": "neurodecodekit.loop54_stage_a_vhdr_implementation",
+  "schema_version": "0.1.0",
+  "status": "implemented_synthetic_qualified_pending_exact_commit_remote_green",
+  "date": "2026-08-08",
+  "loop_id": 54,
+  "stage_id": "L54-A",
+  "proof_posture": "standard_library_parser_and_synthetic_adversarial_qualification_only_no_S20_access",
+  "contract_binding": {
+    "path": "registries/loop54_stage_a_vhdr_contract.v0.json",
+    "sha256": "a0a466d845bff79e9461646f76791a3583fe7c567aeb532b6e951e570411124e",
+    "registration_commit": "c1146233a6178ca5e1153b92565915abad029719",
+    "pinned_green_proof_commit": "223299381036217631374d096fc842add5f6baf7",
+    "pinned_green_proof_CI_run_id": 31132586790
+  },
+  "authorization_binding": {
+    "path": "registries/loop54_stage_a_recovery_authorization_decision.v1.json",
+    "sha256": "a0bdc88afd5e7205bd2c1410b1361e690174c593466e14ce0d3807be892c2d44",
+    "commit": "2177b36f56464361bc51b2656406da7575ff1a1f",
+    "push_CI_run_id": 31286428489,
+    "base_python_job_id": 93176025548,
+    "optional_neuro_readers_job_id": 93176025560,
+    "all_required_jobs_green_before_implementation": true
+  },
+  "implementation_binding": {
+    "module": {
+      "path": "src/neurodecodekit/preprocess/vhdr_ledger.py",
+      "sha256": "e0ff34b7b59da47dd3ccfd2b9f2e986f8fc25bca1e1c09076e36e2f77ba011d7"
+    },
+    "CLI": {
+      "path": "src/neurodecodekit/cli.py",
+      "sha256": "370b6b1d27e2e0cb3550c3fe7bba9c39ac02f5f08867f447ff54292277b4cf65"
+    },
+    "parser_and_refusal_tests": {
+      "path": "tests/test_vhdr_ledger.py",
+      "sha256": "c0ecffaaaf24deff0b96ba5a64d6f5172ed9ce94e6097cb2c288003f499730bd"
+    },
+    "historical_CLI_regression_repair": {
+      "path": "tests/test_contact_aware_ear_channel_implementation.py",
+      "sha256": "1fd2af68430bd65fd1b7b19ffec79e87d5c2d8a3860d7f62d3afd6490d58f5ee"
+    },
+    "documentation": {
+      "path": "docs/LOOP_54_STAGE_A_VHDR_IMPLEMENTATION.md",
+      "sha256": "9b503280f187d604d31c2e1ad616ac3ce3a9507569cbba0ddd20627c17be0350"
+    }
+  },
+  "implemented_surfaces": {
+    "bounded_exact_contract_loader": true,
+    "bounded_exact_authorization_loader": true,
+    "hash_bound_implementation_manifest_loader": true,
+    "strict_UTF8_BOM_and_explicit_windows_1252_decoder": true,
+    "required_section_and_key_parser": true,
+    "documented_BrainVision_escape_decoder": true,
+    "exact_inert_sibling_basename_guard": true,
+    "deterministic_decimal_sampling_rate": true,
+    "ordered_complete_channel_table_validator": true,
+    "no_follow_one_open_one_read_source_verifier": true,
+    "exclusive_summary_then_ledger_commit_marker": true,
+    "target_free_ledger_validator_and_inspector": true,
+    "twenty_two_refusal_classes": true,
+    "dry_run_default_CLI_command": "loop54-vhdr-ledger",
+    "metadata_only_inspection_CLI_command": "inspect-loop54-vhdr-ledger",
+    "base_dependencies_added": [],
+    "generated_payload_committed": false,
+    "real_registered_execution_completed": false
+  },
+  "synthetic_qualification": {
+    "focused_tests_passed": 24,
+    "mutation_subtests_passed": 24,
+    "registered_refusal_classes_covered": 22,
+    "strict_codepages_covered": [
+      "UTF-8",
+      "UTF-8 BOM",
+      "windows-1252"
+    ],
+    "synthetic_filesystem_roundtrips": 1,
+    "retained_synthetic_fixture_files": 0,
+    "retained_generated_bytes": 0,
+    "registered_S20_path_stats_or_reads": 0,
+    "real_or_protected_bytes_read": 0,
+    "heavy_dependency_imports": 0
+  },
+  "local_verification": {
+    "preimplementation_complete_tests_passed": 1324,
+    "preimplementation_complete_tests_skipped": 3,
+    "focused_parser_tests_passed": 24,
+    "focused_parser_mutation_subtests_passed": 24,
+    "combined_loop54_implementation_tests_passed": 61,
+    "complete_tests_passed": 1351,
+    "complete_tests_skipped": 3,
+    "complete_subtests_passed": 493,
+    "complete_test_wall_seconds": 35.10,
+    "complete_test_peak_RSS_bytes": 670728192,
+    "ruff_passed": true,
+    "compile_passed": true,
+    "registry_JSON_passed": true,
+    "registry_JSON_files_validated": 92,
+    "CLI_help_passed": true,
+    "dry_run_no_S20_stat_guard_passed": true,
+    "diff_check_passed": true,
+    "measured_registered_execution_completed": false,
+    "note": "Complete-suite resources are development measurements, not the future single-VHDR execution measurement."
+  },
+  "execution_gate": {
+    "exact_implementation_commit_known": false,
+    "exact_implementation_commit_pushed": false,
+    "implementation_push_CI_green": false,
+    "implementation_base_python_job_green": false,
+    "implementation_optional_neuro_readers_job_green": false,
+    "registered_S20_path_touched": false,
+    "one_registered_real_execution_started": false,
+    "one_registered_real_execution_completed": false,
+    "result_ledger_available": false,
+    "result_summary_available": false
+  },
+  "resource_contract": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "wall_time_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "registered_real_executions": 1,
+    "registered_VHDR_content_opens": 1,
+    "expected_input_bytes": 11705,
+    "maximum_read_bytes": 16384,
+    "maximum_generated_output_bytes": 1048576,
+    "network_bytes": 0,
+    "download_bytes": 0,
+    "new_payload_bytes": 0
+  },
+  "access_counters": {
+    "registered_S20_path_stats_or_resolutions": 0,
+    "registered_VHDR_content_opens": 0,
+    "registered_VHDR_hash_reads": 0,
+    "registered_VHDR_parse_runs": 0,
+    "VMRK_EEG_MAT_sibling_or_other_participant_stats_or_reads": 0,
+    "signal_marker_event_trial_response_key_sentence_label_or_target_reads": 0,
+    "cache_split_feature_or_representation_operations": 0,
+    "model_or_checkpoint_loads": 0,
+    "model_inference_runs": 0,
+    "training_or_parameter_update_runs": 0,
+    "scoring_or_selection_runs": 0,
+    "network_download_or_provider_operations": 0,
+    "language_model_runs": 0,
+    "RW3_stream_device_or_hardware_operations": 0,
+    "release_operations": 0,
+    "registered_real_executions": 0,
+    "reruns": 0,
+    "retained_generated_experiment_bytes": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "warnings": [
+    "The parser has been exercised only on generated synthetic VHDR fixtures at this milestone.",
+    "The registered S20 path remains physically unvalidated and unopened until the exact implementation is remotely green.",
+    "DataFile and MarkerFile remain inert strings; their sibling paths must never be resolved, statted, hashed, or opened in L54-A.",
+    "Channel names and declared references, resolutions, and units do not establish channel type, measured geometry, or signal quality.",
+    "A future clean registered pass can establish only L54-Q2 declared-header compatibility."
+  ],
+  "claim_boundary": {
+    "engineering_capability_added": "A strict bounded sibling-blind VHDR parser and one-shot target-free compatibility-ledger interface are locally synthetic-qualified.",
+    "scientific_claim_not_established": "No S20 content was opened and no EEG signal quality event or trial validity neural advantage decoding accuracy generalization latency portable hardware home-use or clinical result was established."
+  }
+}

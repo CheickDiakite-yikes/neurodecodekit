@@ -4108,3 +4108,36 @@ accuracy, generalization, latency, hardware, home-use, or clinical result.
 
 Evidence: `docs/LOOP_54_STAGE_A_RECOVERY_AUTHORIZATION_DECISION.md` and
 `registries/loop54_stage_a_recovery_authorization_decision.v1.json`.
+
+## 0120 - Qualify The Strict VHDR Parser Before Any S20 Access
+
+Decision: after exact authorization commit `2177b36` passed Base Python and
+Optional Neuro Readers in CI `31286428489`, implement the L54-A parser with the
+Python standard library and qualify it only on generated VHDR bytes and
+temporary synthetic filesystem layouts.
+
+Implementation boundary: require strict declared UTF-8, UTF-8 BOM, or explicit
+Windows-1252; reject replacement decoding, malformed or duplicate declarations,
+unsafe sibling references, incomplete or duplicate channels, invalid sampling,
+source drift, symlinks, output collisions, forbidden counters, reruns, and
+overclaims. Keep `DataFile` and `MarkerFile` as inert basenames. Precompute and
+cap both outputs, create the summary exclusively first, and create the canonical
+JSON ledger last as the no-overwrite commit marker. Add no base dependency.
+
+Evidence order: the exact implementation must be committed, pushed, and have
+both CI jobs green before the one registered 11,705-byte VHDR pass. The
+implementation milestone performs zero S20 path stats, VHDR opens, sibling
+operations, target reads, model runs, network operations, or retained fixture
+writes.
+
+Engineering capability added: NeuroDecodeKit now has a strict, bounded,
+sibling-blind VHDR compatibility interface that covers all 22 registered
+refusal classes on synthetic fixtures.
+
+Scientific claim not established: no S20 content was opened, so there is still
+no header-readability result, EEG signal-quality evidence, event or trial
+validation, neural advantage, decoding accuracy, generalization, latency,
+portable-hardware, home-use, or clinical result.
+
+Evidence: `docs/LOOP_54_STAGE_A_VHDR_IMPLEMENTATION.md` and
+`registries/loop54_stage_a_vhdr_implementation.v0.json`.

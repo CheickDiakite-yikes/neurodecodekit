@@ -149,7 +149,7 @@ class Loop54StageARecoveryAuthorizationRequestTests(unittest.TestCase):
         queue = QUEUE_PATH.read_text(encoding="utf-8")
         work_order_six = next(line for line in queue.splitlines() if line.startswith("| 6 |"))
         work_order_seven = next(line for line in queue.splitlines() if line.startswith("| 7 |"))
-        self.assertIn("Decision Recorded; CI Gate", work_order_six)
+        self.assertIn("Implementation Local; CI Gate", work_order_six)
         self.assertIn("| Gated |", work_order_seven)
 
     def test_local_verification_advances_the_complete_baseline(self):

@@ -160,9 +160,13 @@ Do not reset, revert, delete, or overwrite work already present.
   `docs/LOOP_54_STAGE_A_RECOVERY_AUTHORIZATION_PACKET.md` and
   `registries/loop54_stage_a_recovery_authorization_request.v1.json`, plus its
   separate decision doc and registry. Request commit `19813a8` passed CI
-  `31283297030`. Require the exact decision commit to be remotely green before
-  synthetic parser qualification. The real S20 VHDR read remains Tier C and
-  requires the implementation commit to become green first. Do
+  `31283297030`. Exact decision commit `2177b36` passed CI `31286428489`
+  before implementation. Read `docs/LOOP_54_STAGE_A_VHDR_IMPLEMENTATION.md`
+  and `registries/loop54_stage_a_vhdr_implementation.v0.json`. The strict
+  standard-library parser, dry-run CLI, ledger inspector, no-follow source
+  guard, and all 22 refusal classes are locally synthetic-qualified. The real
+  S20 VHDR read remains gated until this exact implementation commit and both
+  CI jobs are green. Do
   not infer AirPods capability, implement physical switching,
   install an optional backend, connect hardware, fit, infer, select, score, or
   access real/public data.

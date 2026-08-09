@@ -231,17 +231,21 @@ infer current AirPods capability, copy or implement patent claims, control
 physical electrodes, connect hardware, install a dependency, read real/public
 data, or run a model.
 
-Work order 6 now has the recovery-bound Loop 54-A exact user decision recorded.
-The current packet, request, and decision bind the immutable
-registration at `c114623`, green pinned-toolchain proof anchor `2232993`, and
-the remotely green additive recovery record. The historical draft request is
-non-actionable. Request commit `19813a8` passed CI `31283297030`. The separate
-decision commit must now be pushed and green before parser implementation under
-the frozen order, and parser
-implementation must become green before the one real VHDR open. Do not stat or
-read the S20 path, resolve siblings, or implement/execute the real parser from
-work order 5. CML-v0, S20, PhysioNet, targets, training, inference, scoring,
-hardware, and scientific claims remain separately gated.
+Work order 6 has passed its decision gate and is locally implementation-
+complete. Request commit `19813a8` passed CI `31283297030`; exact decision
+commit `2177b36` then passed CI `31286428489`, including Base Python job
+`93176025548` and Optional Neuro Readers job `93176025560`, before parser work
+began. Read `docs/LOOP_54_STAGE_A_VHDR_IMPLEMENTATION.md` and
+`registries/loop54_stage_a_vhdr_implementation.v0.json`. The standard-library
+parser, dry-run-first CLI, metadata inspector, no-follow one-open source
+verifier, exclusive bounded outputs, and all 22 refusal classes are qualified
+on generated synthetic fixtures. No fixture is retained, and every S20,
+sibling, target, model, network, hardware, and real-execution counter is zero.
+Commit and push this exact implementation, wait for both CI jobs to pass, and
+only then consume the one registered VHDR execution. Do not stat or read S20
+before that gate, rerun after it, or continue into Loop 54-B. CML-v0, PhysioNet,
+targets, training, inference, scoring, hardware, and scientific claims remain
+separately gated.
 
 The additive architecture pass now selects `CML-v0` as the next hypothesis:
 

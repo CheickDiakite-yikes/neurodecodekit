@@ -5399,3 +5399,47 @@ decision's green CI gate.
 Scientific claim not established: no parser ran and no S20 path or content was
 accessed, so there is no header-readability, EEG-quality, neural, decoding,
 generalization, latency, hardware, home-use, or clinical result.
+
+## 2026-08-08 - Loop 54-A Strict VHDR Parser Implementation
+
+- Confirmed exact decision commit `2177b36f56464361bc51b2656406da7575ff1a1f`
+  passed CI `31286428489`: Base Python job `93176025548` and Optional Neuro
+  Readers job `93176025560` both succeeded before implementation began.
+- Added a standard-library-only parser for strict declared UTF-8, UTF-8 BOM,
+  and explicit Windows-1252. It rejects replacement decoding, control
+  characters, missing or duplicate required declarations, unsafe sibling
+  references, channel-table drift, and invalid sampling intervals.
+- Added exact no-follow source validation, one descriptor open, one bounded
+  read, Git-blob verification, inert sibling basenames, deterministic decimal
+  sampling, ordered allowlisted channels, and explicit unavailable fields.
+- Added exclusive no-overwrite output: both payloads are finalized in memory,
+  the summary is created and fsynced first, and the canonical JSON ledger is
+  created and fsynced last as the commit marker. No rename or deletion path was
+  added.
+- Added `loop54-vhdr-ledger`, dry-run by default, and
+  `inspect-loop54-vhdr-ledger`. Execution requires the exact implementation
+  commit, push CI run, Base Python job, Optional Neuro Readers job, clean
+  tracked tree, and decision ancestry.
+- Twenty-four focused parser/filesystem tests and 24 mutation subchecks pass,
+  covering all 22 frozen refusal classes. Generated fixtures were temporary;
+  no fixture or inspection payload is retained or committed.
+- Sixty-one combined Loop 54 route and implementation tests pass with 33
+  subchecks. The complete one-thread suite passes 1,351 tests, three expected
+  skips, and 493 subtests in 35.10 seconds external wall time at
+  670,728,192-byte peak RSS.
+  Ruff, compileall, 92 registry JSON files, both command-help surfaces, the
+  guarded dry run, and diff hygiene pass. Complete-suite RSS is not the future
+  one-VHDR execution measurement.
+- Repaired Work Order 5's consumed shared-CLI test to preserve its historical
+  CLI hash while asserting its two owned commands remain in the additive CLI.
+- Every S20 path stat, VHDR open/hash/parse, sibling operation, signal/marker/
+  target read, model/training/inference/scoring run, network/provider/hardware
+  operation, real execution, rerun, and claim-upgrade counter remains zero.
+
+Engineering capability added: a strict, bounded, sibling-blind VHDR parser and
+one-shot compatibility-ledger interface are locally synthetic-qualified.
+
+Scientific claim not established: no S20 content was opened and no EEG signal
+quality, event or trial validity, neural advantage, decoding accuracy,
+generalization, latency, portable hardware, home-use, or clinical result was
+established.

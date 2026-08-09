@@ -83,7 +83,7 @@ class NextScientificLoopsTests(unittest.TestCase):
                 48: "Complete A/B; Stage C Consumed and Parked",
                 53: "Consumed; Acquisition Passed; No Rerun",
                 54: (
-                    "Stage A Authorized; Implementation Pending Decision CI"
+                    "Stage A Implementation Synthetic-Qualified; Pending Exact Commit CI"
                 ),
                 55: "Planning Research Complete; Loop 54 Dependent",
                 56: "Planning Research Complete; Loop 55 Result Dependent",

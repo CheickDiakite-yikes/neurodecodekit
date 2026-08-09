@@ -263,10 +263,10 @@ excluded.
 
 ### Loop 54 - EEG Trial Geometry And Confound Ledger
 
-**Status: planning research complete; acquisition passed; L54-A preregistered;
-exact authorization pending.**
-All content stages unauthorized until their exact decision and green
-implementation gates pass.
+**Status: planning research complete; acquisition passed; L54-A exactly
+authorized and locally synthetic-qualified; implementation CI pending.**
+The one VHDR execution remains ineligible until the exact implementation and
+both CI jobs are green. All later content stages unauthorized.
 `docs/LOOP_54_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop54_eeg_trial_geometry_research.v0.json` now replace the coarse
 "header then signal/target" idea with four ordered stages. L54-A parses exactly
@@ -303,13 +303,15 @@ Python selected Ruff `0.16.2` from the historical floating requirement and
 failed on 400 later lint findings. The three frozen artifacts are byte-identical
 at pinned commit `2232993`, whose CI `31132586790` passed both jobs; exact-tree
 local replay under Ruff `0.15.20` passed 1,095 tests with three skips. The
-additive recovery record does not authorize implementation or execution. The
+additive recovery record did not itself authorize implementation or execution. The
 recovery-bound v1 packet and machine request now bind that evidence while all
 permissions and S20 access counters remain false in those immutable snapshots.
 Request commit `19813a8` passed CI `31283297030`, and the exact Tier C decision
-is now separately recorded. Its commit must become green before synthetic
-parser implementation; the implementation must then become green before the
-one real VHDR open.
+is separately recorded at commit `2177b36`, whose CI `31286428489` passed both
+jobs before implementation. The strict standard-library parser and CLI now pass
+24 focused tests and 24 mutation subchecks covering all 22 refusal classes on
+generated fixtures. No S20 path was statted or opened. This exact
+implementation commit must become green before the one real VHDR open.
 
 ### Loop 55 - Fresh EEG Neural-Effect Gate
 

@@ -94,15 +94,17 @@
 > `docs/CONTACT_AWARE_EAR_CHANNEL_RESULT.md` and its result registry. All 18
 > gates passed in 0.40 seconds at 55,394,304-byte peak RSS with 938,874 output
 > bytes and zero retained files. Work order 5 is complete. Continue work order
-> 6 only through the current recovery-bound Loop 54-A packet in
+> 6 through the current recovery-bound Loop 54-A packet in
 > `docs/LOOP_54_STAGE_A_RECOVERY_AUTHORIZATION_PACKET.md` and
 > `registries/loop54_stage_a_recovery_authorization_request.v1.json`. Every
 > authorization flag remains false in those immutable snapshots. Request
-> commit `19813a8` passed CI `31283297030`; the exact Tier C decision is now
-> preserved in its separate human and machine records. Require that decision
-> commit to become remotely green before qualifying a parser on generated
-> synthetic fixtures. Require the implementation commit to become green before
-> the one real VHDR open. No hardware,
+> commit `19813a8` passed CI `31283297030`; exact Tier C decision commit
+> `2177b36` passed CI `31286428489` before implementation. Read
+> `docs/LOOP_54_STAGE_A_VHDR_IMPLEMENTATION.md` and its registry. The strict
+> parser, dry-run-first CLI, bounded ledger, and all 22 refusal classes are
+> locally qualified on generated synthetic fixtures with zero S20 path stats or
+> reads. Require this exact implementation commit and both CI jobs to become
+> green before the one real VHDR open. No hardware,
 > physical electrode switching, architecture execution, model, fitting,
 > inference, scoring, or real-data action is permitted.
 >
@@ -122,9 +124,10 @@
 > CI `31132586790` passed both jobs. Exact-tree local replay with Ruff `0.15.20`
 > passed 1,095 tests with 3 expected skips. Read the additive recovery record;
 > the old draft request remains non-actionable. The v1 recovery-bound packet
-> and request are the immutable decision surface. The exact decision is now
-> separately recorded and must become green before implementation. Zero S20 path stats,
-> header reads, sibling reads, targets, models, or experiment bytes occurred.
+> and request are the immutable decision surface. The exact decision is green,
+> and the synthetic-only implementation is locally complete pending its own
+> exact green commit. Zero S20 path stats, header reads, sibling reads, targets,
+> models, or retained experiment bytes occurred.
 > Preserve the unrelated tracker inspection NDJSON.
 >
 > Additive architecture research, 2026-08-06: read
