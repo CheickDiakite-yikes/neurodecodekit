@@ -18,7 +18,7 @@ decision after its own frozen packet and required remote-green evidence exist.
 | 5 | Add a contact-aware ear-channel adapter | B | Synthetic contact/noise/missingness fixtures and exact channel-mask semantics only | Complete |
 | 6 | Freeze Loop 54-A decision and qualify parser | A/B then C decision | Recovery-bound exact packet, strict synthetic parser tests, green implementation before real access | Complete |
 | 7 | Execute Loop 54-A once | C | One 11,705-byte VHDR open; no sibling resolution; all 18 gates pass | Consumed; Parked F11; No Rerun |
-| 8 | Acquire tiny PhysioNet motor slice | C | Exactly nine pinned EDF files, 23,248,224 bytes, isolated receipt, no substitutions | Gated |
+| 8 | Acquire tiny PhysioNet motor slice | C | Exactly nine pinned EDF files, 23,248,224 bytes, isolated receipt, no substitutions | Registration Frozen; Tier C Decision Pending |
 | 9 | Run grouped public motor positive control | C | Participant/run grouping, fixed classical family, no-signal and corruption controls | Gated |
 | 10 | Execute Loop 54-B signal quality | C | Target-blind VHDR+EEG read, every channel retained, no transform, bounded aggregate output | Gated |
 | 11 | Execute Loop 54-C trial reconciliation | C | Isolated VMRK+MAT target-bearing stage, no plaintext protected public output | Gated |
@@ -75,8 +75,19 @@ Source size, Git-blob identity, and strict decoding passed, but the frozen
 format preamble gate parked at `L54A-F11`. Runtime was 0.20 seconds at
 24,051,712-byte peak RSS; sibling, protected, model, network, and output
 counters stayed zero. Work orders 6 and 7 are closed. L54-Q2 failed, there is
-no rerun, and work orders 10-12 remain blocked. Work order 8 remains a separate
-gated Tier C acquisition and is not opened by this result.
+no rerun, and work orders 10-12 remain blocked.
+
+Work order 8 now has an acquisition-only preregistration and machine contract
+for PhysioNet EEGMMIDB v1.0.0. It freezes exactly nine EDF paths from subjects
+S001-S003 and motor-execution runs 03/07/11, totaling 23,248,224 bytes with
+official SHA-256 identities. A 2026-08-09 metadata pass made ten HTTP HEAD
+requests across those paths, including one repeated first-file probe; all
+reported HTTP 200 and transferred zero EDF body bytes. No EDF, `.event`,
+annotation, header, signal, target, split, model, or local PhysioNet path was
+opened. Every execution permission remains false until the registration is
+remotely green, a hash-bound request is separately green, the maintainer gives
+the exact Tier C decision, and a fixture-qualified implementation is remotely
+green. Work order 9 remains closed.
 
 Work order 13 now has a frozen Tier B synthetic-only contract in
 `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md` and

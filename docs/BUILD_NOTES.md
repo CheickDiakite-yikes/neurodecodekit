@@ -5532,3 +5532,54 @@ Scientific claim not established: no real or protected EEG was accessed, the
 synthetic conjunction failed, and no neural advantage, decoding accuracy,
 brain-specific origin, generalization, real-time, portable-hardware, home-use,
 assistive, or clinical result was established.
+
+## 2026-08-09 - Tiny PhysioNet Motor Acquisition Registration
+
+- Added an acquisition-only work-order-8 preregistration and strict machine
+  contract for PhysioNet EEGMMIDB v1.0.0. The selection is exactly nine EDF
+  paths from S001-S003 and runs 03/07/11, totaling 23,248,224 bytes and bound
+  to nine official SHA-256 values.
+- Reverified the official dataset page, checksum manifest, and MNE task mapping.
+  Ten HTTP HEAD requests were made across the nine selected paths, including
+  one repeated first-file probe. Every request reported HTTP 200 and transferred
+  zero EDF body bytes. Exact documentation and response-header transfer bytes
+  are unavailable from the research-tool receipts and are disclosed as such.
+- Froze dataset version, path, size, and SHA-256 as hard identities. ETag,
+  Last-Modified, and Content-Type are informational observations only. Runs
+  03/07 and 11 are prospective future fit and check roles, respectively; this
+  registration creates no split.
+- Froze one invocation, zero payload retries, one opaque local SHA-256 pass per
+  EDF, one thread and worker, 300 seconds, 268,435,456-byte peak RSS, 1,048,576
+  metadata-network bytes, 33,554,432 EDF-network bytes, 67,108,864 incremental
+  disk bytes, 2,147,483,648 minimum free disk bytes, and 1,048,576 combined
+  receipt bytes.
+- No EDF payload, `.event` file, local PhysioNet path, header, annotation,
+  signal, target, cache, split, model, checkpoint, training, inference, score,
+  provider, stream, device, or hardware surface was opened. Every execution
+  authorization remains false pending the separate exact Tier C sequence.
+- Twelve focused contract tests pass. The complete pytest suite advances from
+  the 1,386-test pre-change baseline to 1,398 passed tests with three expected
+  skips and 493 subtests in 40.41 seconds of pytest runtime and 41.79 seconds
+  external wall time at 677,920,768-byte maximum suite RSS.
+- The CI-style unittest command passes 1,401 tests with three expected skips in
+  37.594 seconds internal and 38.56 seconds external wall time at
+  666,697,728-byte maximum suite RSS. These suite-wide RSS values include the
+  complete historical test harness and are not acquisition-execution metrics.
+- Repository-wide Ruff 0.15.20, compileall, all 97 registry JSON files, and diff
+  hygiene pass. An initial file-targeted Ruff command mistakenly included the
+  JSON contract and therefore reported JSON booleans as undefined Python names;
+  the canonical repository-wide Ruff invocation passed without findings.
+- The three new source artifacts total 45,351 bytes. No payload, cache,
+  inspection output, fixture, or execution receipt was generated or retained.
+  The unrelated untracked tracker inspection NDJSON was not touched.
+
+Engineering capability proposed: NeuroDecodeKit can acquire and opaque-verify
+one tiny exact public motor-EEG bundle under deterministic identity, storage,
+network, access-order, and no-retry controls after the remaining green and
+authorization gates.
+
+Scientific claim not established: no EDF payload was opened, so this
+registration establishes no EDF readability, event correctness, signal
+quality, motor effect, neural advantage, model accuracy, generalization,
+real-time behavior, portable hardware, home use, assistive value, or clinical
+result.

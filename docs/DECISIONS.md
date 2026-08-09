@@ -4207,3 +4207,47 @@ assistive, or clinical result was established.
 
 Evidence: `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_RESULT.md` and
 `registries/causal_motor_lattice_synthetic_result.v0.json`.
+
+## 0123 - Freeze A Tiny Public Motor Acquisition Before Any EDF Read
+
+Decision: register work order 8 as one acquisition-only PhysioNet EEGMMIDB
+v1.0.0 gate. Bind exactly nine EDF paths from S001-S003 and runs 03/07/11,
+exactly 23,248,224 payload bytes, and the nine official SHA-256 values. Preserve
+runs 03/07 as prospective future fit candidates and run 11 as a prospective
+future check candidate without creating or activating a split.
+
+Registration evidence: official PhysioNet dataset and checksum metadata plus
+the official MNE task mapping were reverified on 2026-08-09. Ten HTTP HEAD
+requests were made across the nine selected paths, including one repeated
+first-file probe. All reported HTTP 200 and transferred zero EDF body bytes.
+ETag, Last-Modified, and Content-Type remain informational observations;
+version, path, exact bytes, and official SHA-256 are the hard identities.
+
+Prospective execution boundary: after a separate exact Tier C decision and a
+remotely green fixture-qualified implementation, allow at most one no-retry
+acquisition invocation, one opaque local SHA-256 pass per file, 300 seconds,
+one thread and worker, 256 MiB peak RSS, 1 MiB metadata network, 32 MiB EDF
+payload network, 64 MiB incremental disk, 2 GiB minimum free disk, and 1 MiB
+combined receipts. Do not parse EDF, fetch `.event` files, create a split, load
+a model, train, infer, score, substitute a path, or continue into work order 9.
+
+Evidence order: this registration commit must be pushed and remotely green
+before a hash-bound authorization packet and request are created. That request
+must independently become remotely green before the exact user decision. The
+decision must become remotely green before implementation, and the exact
+implementation must become remotely green before one acquisition. Every
+execution flag is currently false.
+
+Engineering capability proposed: NeuroDecodeKit can acquire and opaque-verify
+one tiny, exact public motor-EEG bundle under deterministic identity, storage,
+network, access-order, and no-retry controls.
+
+Scientific claim not established: no EDF payload was opened, so this
+registration establishes no EDF readability, event correctness, signal
+quality, motor effect, neural advantage, model accuracy, generalization,
+real-time behavior, portable hardware, home use, assistive value, or clinical
+result.
+
+Evidence: `docs/PHYSIONET_MOTOR_ACQUISITION_PREREGISTRATION.md`,
+`registries/physionet_motor_acquisition_contract.v0.json`, and
+`tests/test_physionet_motor_acquisition_contract.py`.
