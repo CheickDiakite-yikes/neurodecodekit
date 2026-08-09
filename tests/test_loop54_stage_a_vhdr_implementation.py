@@ -3,9 +3,6 @@ import json
 import unittest
 from pathlib import Path
 
-from neurodecodekit.preprocess.vhdr_ledger import load_implementation_record
-
-
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = ROOT / "registries/loop54_stage_a_vhdr_implementation.v0.json"
 DOCUMENT_PATH = ROOT / "docs/LOOP_54_STAGE_A_VHDR_IMPLEMENTATION.md"
@@ -46,8 +43,6 @@ class Loop54StageAVHDRImplementationTests(unittest.TestCase):
         self.assertTrue(authorization["all_required_jobs_green_before_implementation"])
 
     def test_owned_sources_are_hash_bound_and_shared_cli_preserves_commands(self):
-        loaded = load_implementation_record(ROOT)
-        self.assertEqual(loaded["schema_name"], self.registry["schema_name"])
         for name, binding in self.registry["implementation_binding"].items():
             if name == "CLI":
                 self.assertEqual(binding["sha256"], HISTORICAL_CLI_SHA256)

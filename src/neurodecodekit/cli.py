@@ -2725,6 +2725,49 @@ def _cmd_inspect_synthetic_motor_fixture(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_cml_v0_synthetic(args: argparse.Namespace) -> int:
+    _set_loop25_thread_environment()
+    from neurodecodekit.experiments.causal_motor_lattice_synthetic import (
+        build_cml_synthetic_execution_plan,
+        execute_cml_synthetic_gate,
+        summarize_cml_synthetic_result,
+    )
+
+    if not args.execute:
+        plan = build_cml_synthetic_execution_plan(contract_path=args.contract)
+        print(json.dumps(plan, indent=2, sort_keys=True))
+        return 0
+    if not args.implementation_commit or args.implementation_ci_run is None:
+        raise ValueError(
+            "--execute requires --implementation-commit and --implementation-ci-run"
+        )
+    report = execute_cml_synthetic_gate(
+        args.out_dir,
+        implementation_commit=args.implementation_commit,
+        implementation_ci_run=args.implementation_ci_run,
+        contract_path=args.contract,
+        implementation_registry_path=args.implementation_registry,
+        max_output_bytes=int(args.max_output_mib * 1024 * 1024),
+    )
+    print(json.dumps(summarize_cml_synthetic_result(report), indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_inspect_cml_v0_synthetic(args: argparse.Namespace) -> int:
+    from neurodecodekit.experiments.causal_motor_lattice_synthetic import (
+        load_cml_synthetic_result,
+        summarize_cml_synthetic_result,
+    )
+
+    report = load_cml_synthetic_result(
+        args.report,
+        contract_path=args.contract,
+        max_output_bytes=int(args.max_output_mib * 1024 * 1024),
+    )
+    print(json.dumps(summarize_cml_synthetic_result(report), indent=2, sort_keys=True))
+    return 0
+
+
 def _cmd_make_classical_eeg_adapter_plan(args: argparse.Namespace) -> int:
     _set_loop25_thread_environment()
     from neurodecodekit.models.classical_eeg_adapters import (
@@ -5123,6 +5166,72 @@ def build_parser() -> argparse.ArgumentParser:
         help="Validation cap in MiB, at most 4. Default: 4.",
     )
     p.set_defaults(func=_cmd_inspect_synthetic_motor_fixture)
+
+    p = sub.add_parser(
+        "cml-v0-synthetic",
+        help="Dry-run or execute the one registered synthetic CML-v0 factor gate.",
+        description=(
+            "Dry-run by default. --execute consumes one 4,535-parameter synthetic-only "
+            "training and check-before-final gate after an exact remotely green "
+            "implementation proof. No real or public EEG is opened."
+        ),
+    )
+    p.add_argument(
+        "--out-dir",
+        default="outputs/cml-v0-synthetic",
+        help="New two-file result directory if --execute is supplied.",
+    )
+    p.add_argument(
+        "--contract",
+        default="registries/causal_motor_lattice_synthetic_contract.v0.json",
+        help="Exact registered work-order-13 contract. Substitutions fail closed.",
+    )
+    p.add_argument(
+        "--implementation-registry",
+        default="registries/causal_motor_lattice_synthetic_implementation.v0.json",
+        help="Exact implementation qualification registry.",
+    )
+    p.add_argument(
+        "--implementation-commit",
+        default=None,
+        help="Exact 40-character remotely green implementation commit; required to execute.",
+    )
+    p.add_argument(
+        "--implementation-ci-run",
+        type=int,
+        default=None,
+        help="Successful remote CI run ID for the exact implementation commit.",
+    )
+    p.add_argument(
+        "--max-output-mib",
+        type=float,
+        default=4.0,
+        help="Combined checkpoint/report cap in MiB, at most 4. Default: 4.",
+    )
+    p.add_argument(
+        "--execute",
+        action="store_true",
+        help="Consume the one registered synthetic run after all proof gates pass.",
+    )
+    p.set_defaults(func=_cmd_cml_v0_synthetic)
+
+    p = sub.add_parser(
+        "inspect-cml-v0-synthetic",
+        help="Validate one CML-v0 aggregate report and checkpoint without loading arrays.",
+    )
+    p.add_argument("--report", required=True, help="Path to the bounded report.json.")
+    p.add_argument(
+        "--contract",
+        default="registries/causal_motor_lattice_synthetic_contract.v0.json",
+        help="Exact registered work-order-13 contract. Substitutions fail closed.",
+    )
+    p.add_argument(
+        "--max-output-mib",
+        type=float,
+        default=4.0,
+        help="Combined validation cap in MiB, at most 4. Default: 4.",
+    )
+    p.set_defaults(func=_cmd_inspect_cml_v0_synthetic)
 
     p = sub.add_parser(
         "make-classical-eeg-adapter-plan",

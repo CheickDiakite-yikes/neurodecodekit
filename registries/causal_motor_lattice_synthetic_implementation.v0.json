@@ -1,0 +1,214 @@
+{
+  "schema_name": "neurodecodekit.causal_motor_lattice_synthetic_implementation",
+  "schema_version": "0.1.0",
+  "status": "implementation_qualified_not_executed",
+  "date": "2026-08-09",
+  "work_order": 13,
+  "title": "Causal Motor Lattice v0 Synthetic Gate Implementation",
+  "proof_posture": "exact_synthetic_implementation_qualified_without_registered_training_or_scoring_execution",
+  "contract_binding": {
+    "path": "registries/causal_motor_lattice_synthetic_contract.v0.json",
+    "bytes": 27658,
+    "sha256": "4880c322d48611ed098182fe845e891150e8e53551c95c25c33a4914c7db0fd4",
+    "commit": "67709a3286a33f0947d57a97bf345a26d17dae45",
+    "push_CI_run": 31294479865,
+    "base_python_job": 93197194079,
+    "optional_neuro_readers_job": 93197194057,
+    "both_required_jobs_passed": true
+  },
+  "source_bindings": {
+    "model_module": {
+      "path": "src/neurodecodekit/models/causal_motor_lattice.py",
+      "sha256": "9fa2875a03e85acd7c0868f17974bfec97dcd36b94a0b5e84d4b5c7c419ceb2a"
+    },
+    "experiment_module": {
+      "path": "src/neurodecodekit/experiments/causal_motor_lattice_synthetic.py",
+      "sha256": "50772b097b81bced556d7cf8c791864baec35df91fe0acc4921ee23ca806e3e0"
+    },
+    "CLI_module": {
+      "path": "src/neurodecodekit/cli.py",
+      "sha256": "808fbc930db504e80cc7ecb0117e11115dc039b28505090abe545737b74bfc9e"
+    },
+    "implementation_tests": {
+      "path": "tests/test_causal_motor_lattice_synthetic.py",
+      "sha256": "5618118dadf780ccbc7ce4e410b7a5a96dee3105f4ef049a1a91e4679da7a880"
+    },
+    "implementation_registry_tests": {
+      "path": "tests/test_causal_motor_lattice_synthetic_implementation.py",
+      "sha256": "8295a47e4e4ab18f4603c517805aed4653a574e6ea34772e354565e112e97e42"
+    },
+    "implementation_document": {
+      "path": "docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md",
+      "sha256": "68fb59230cd87947c105a276094e525d92cf8b596afcf62724a4108d1772474d"
+    }
+  },
+  "architecture_qualification": {
+    "candidate_id": "CML-v0-synthetic-64x18",
+    "source_projection_shape": [
+      64,
+      8
+    ],
+    "projection_rank": 8,
+    "projection_sha256": "b377e42f75c6493fe44082c1dbcee278debf2cc5dfbaec3db954dede94ee4a50",
+    "input_shape": [
+      96,
+      64,
+      96
+    ],
+    "view_feature_shape": [
+      96,
+      3,
+      24
+    ],
+    "mu_filter_taps": 33,
+    "beta_filter_taps": 33,
+    "left_context_samples": 32,
+    "right_context_samples": 0,
+    "spatial_rank_per_view": 8,
+    "trainable_parameters": 4535,
+    "primitive_count": 18,
+    "key_count": 29,
+    "residual_gain": 0.25,
+    "independent_hand_head": false,
+    "exact_hand_marginal": true,
+    "producer_is_causal": true,
+    "geometry_used_or_invented": false
+  },
+  "adapter_qualification": {
+    "source_fixture_seed": 5503,
+    "experiment_seed": 5513,
+    "source_items": 96,
+    "source_channels": 8,
+    "source_bytes_generated_in_static_qualification": 1145152,
+    "pair_anchored_crop_samples": 96,
+    "timing_only_pair_crops_byte_identical": true,
+    "pure_noise_pair_crops_byte_identical": true,
+    "train_normalization_rows": 24,
+    "normalization_uses_labels": false,
+    "model_receives_length_timestamp_pair_factor_partition_or_class_metadata": false,
+    "source_or_projected_geometry_available": false
+  },
+  "execution_shell": {
+    "dry_run_default": true,
+    "execute_flag_required": true,
+    "exact_implementation_commit_required": true,
+    "positive_remote_CI_run_ID_required": true,
+    "tracked_worktree_clean_required": true,
+    "parameter_update_runs": 1,
+    "optimizer_steps": 600,
+    "parameter_update_rows": 24,
+    "gradient_ineligible_rows": 24,
+    "check_rows": 32,
+    "conditional_final_rows": 16,
+    "check_before_conditional_final": true,
+    "same_checkpoint_conditions_per_delivered_partition": 9,
+    "checkpoint_reloads": 1,
+    "second_training_run": false,
+    "early_stopping": false,
+    "checkpoint_selection": false,
+    "post_check_or_final_parameter_update": false,
+    "rerun_allowed": false
+  },
+  "output_and_inspection": {
+    "output_files": [
+      "checkpoint.npz",
+      "report.json"
+    ],
+    "maximum_files": 2,
+    "deterministic_NPZ_member_order_and_timestamps": true,
+    "checkpoint_reload_prediction_hash_replay": true,
+    "aggregate_report_only": true,
+    "per_item_target_label_prediction_identity_text_or_path_retained": false,
+    "metadata_only_inspector_opens_NPZ_array_members": false,
+    "overwrite_allowed": false,
+    "invocation_files_committed": false
+  },
+  "dependency_boundary": {
+    "base_dependencies_added": false,
+    "module_import_is_scientific_dependency_free": true,
+    "lazy_optional_dependencies": [
+      "numpy",
+      "scipy",
+      "torch"
+    ],
+    "dependency_install_performed_or_allowed": false,
+    "pretrained_weight_model_download_or_external_embedding_allowed": false
+  },
+  "resource_caps": {
+    "maximum_CPU_threads": 1,
+    "maximum_workers": 1,
+    "maximum_wall_seconds": 600,
+    "maximum_peak_RSS_bytes": 536870912,
+    "maximum_generated_output_bytes": 4194304,
+    "minimum_free_disk_bytes_before": 21474836480,
+    "maximum_network_bytes": 0,
+    "maximum_download_bytes": 0
+  },
+  "local_qualification": {
+    "focused_tests_passed": 24,
+    "focused_tests_failed": 0,
+    "complete_tests_passed": 1380,
+    "complete_tests_skipped": 3,
+    "complete_subtests_passed": 493,
+    "complete_test_wall_seconds": 39.26,
+    "pre_contract_complete_tests_passed": 1356,
+    "new_passing_tests_from_work_order_13": 24,
+    "registry_JSON_files_validated": 95,
+    "ruff_passed": true,
+    "compileall_passed": true,
+    "CLI_help_and_dry_run_passed": true,
+    "diff_check_passed": true,
+    "static_projection_filter_lattice_and_parameter_checks_passed": true,
+    "pair_anchor_and_shortcut_checks_passed": true,
+    "zero_update_shape_hand_marginal_common_mode_and_causal_mask_checks_passed": true,
+    "dry_run_and_proof_refusal_checks_passed": true,
+    "optimizer_steps": 0,
+    "parameter_update_runs": 0,
+    "scoring_events": 0,
+    "registered_check_or_final_target_deliveries": 0,
+    "retained_generated_files": 0,
+    "registered_execution_function_called": false
+  },
+  "registered_execution": {
+    "started": false,
+    "access_counters": {
+      "synthetic_fixture_generations": 0,
+      "synthetic_signal_bytes_generated": 0,
+      "model_or_checkpoint_loads": 0,
+      "parameter_update_runs": 0,
+      "optimizer_steps": 0,
+      "model_inference_stages": 0,
+      "prediction_sets": 0,
+      "check_scoring_events": 0,
+      "final_scoring_events": 0,
+      "real_or_public_data_reads": 0,
+      "protected_target_or_label_reads": 0,
+      "S20_path_stats_or_reads": 0,
+      "PhysioNet_downloads_or_reads": 0,
+      "network_calls": 0,
+      "provider_calls": 0,
+      "pretrained_weight_or_external_embedding_reads": 0,
+      "stream_device_or_hardware_operations": 0,
+      "release_operations": 0,
+      "scientific_claim_upgrades": 0
+    }
+  },
+  "next_gate": {
+    "exact_implementation_commit_remote_green_required": true,
+    "registered_execution_allowed_before_remote_green": false,
+    "one_execution_allowed_after_exact_remote_green": true,
+    "execution_must_supply_exact_commit_and_CI_run": true,
+    "failed_execution_is_retained_without_rerun": true,
+    "real_public_protected_network_hardware_release_or_claim_action_unlocked": false
+  },
+  "warnings": [
+    "Static and zero-update synthetic qualification does not predict the registered training outcome.",
+    "The implementation has not yet consumed its one training and scoring execution.",
+    "All channels and targets are synthetic design controls without anatomical or participant meaning.",
+    "Passing implementation tests cannot qualify real EEG or Loop 55."
+  ],
+  "claim_boundary": {
+    "engineering_capability_added": "NeuroDecodeKit has a fail-closed exact CML-v0 implementation and bounded execution shell that can be qualified before real evidence is spent.",
+    "scientific_claim_not_established": "No registered training or scoring run and no real EEG payload was used so this implementation establishes no EEG information neural advantage decoding result generalization real-time or portable behavior home use assistive value or clinical utility."
+  }
+}

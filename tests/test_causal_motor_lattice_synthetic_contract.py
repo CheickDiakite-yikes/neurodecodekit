@@ -176,7 +176,7 @@ class CausalMotorLatticeSyntheticContractTests(unittest.TestCase):
         self.assertIn("Scientific claim not established even if all gates pass", document)
         row = next(line for line in queue.splitlines() if line.startswith("| 13 |"))
         self.assertIn("Contract Frozen", row)
-        self.assertIn("Implementation Not Started", row)
+        self.assertIn("Implementation Qualified Locally", row)
         self.assertEqual(sum(line.startswith("| ") for line in queue.splitlines()), 21)
 
 
