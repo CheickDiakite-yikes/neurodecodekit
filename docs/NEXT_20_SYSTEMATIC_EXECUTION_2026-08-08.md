@@ -23,7 +23,7 @@ decision after its own frozen packet and required remote-green evidence exist.
 | 10 | Execute Loop 54-B signal quality | C | Target-blind VHDR+EEG read, every channel retained, no transform, bounded aggregate output | Gated |
 | 11 | Execute Loop 54-C trial reconciliation | C | Isolated VMRK+MAT target-bearing stage, no plaintext protected public output | Gated |
 | 12 | Close Loop 54-D eligibility ledger | A after C evidence | At least 48 unique performed trials or explicit park; confounds and missing geometry remain visible | Gated |
-| 13 | Implement CML-v0 synthetically | B | Exact 4,535-parameter 64-channel reference, causal controls, deterministic replay, no real data | Queued |
+| 13 | Implement CML-v0 synthetically | B | Exact 4,535-parameter 64-channel reference, causal controls, deterministic replay, no real data | Contract Frozen; Implementation Not Started |
 | 14 | Freeze measured Loop 55 contract | A then C decision | One <=10,000-parameter family, <=12 fits, fixed controls, resource and target order frozen | Gated |
 | 15 | Create opaque grouped trial split | C | Trial-level grouping, no key-window leakage, targets isolated by stage | Gated |
 | 16 | Run bounded Loop 55 training/selection | C | One thread, <=45 CPU minutes, <=1 GiB RSS, <=64 MiB output, no post-selection final access | Gated |
@@ -77,6 +77,16 @@ format preamble gate parked at `L54A-F11`. Runtime was 0.20 seconds at
 counters stayed zero. Work orders 6 and 7 are closed. L54-Q2 failed, there is
 no rerun, and work orders 10-12 remain blocked. Work order 8 remains a separate
 gated Tier C acquisition and is not opened by this result.
+
+Work order 13 now has a frozen Tier B synthetic-only contract in
+`docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md` and
+`registries/causal_motor_lattice_synthetic_contract.v0.json`. It binds the
+existing seed-5503 synthetic fixture to a new seed-5513 experiment, exact
+pair-anchored pre-event crops, fixed 64-channel projection and causal FIR
+hashes, one 4,535-parameter model, one 600-step fit, check-before-final gates,
+no rerun, and a 4 MiB output cap. Implementation cannot start until this exact
+contract commit is pushed and remotely green. The contract opens no real or
+public data and does not qualify Loop 55.
 
 This queue never authorizes S20 interpretation, PhysioNet acquisition, target
 delivery, training, scoring, hardware, release, or a scientific claim by

@@ -1,0 +1,850 @@
+{
+  "schema_name": "neurodecodekit.causal_motor_lattice_synthetic_contract",
+  "schema_version": "0.1.0",
+  "status": "preregistered_tier_B_synthetic_only_not_implemented_not_executed",
+  "date": "2026-08-09",
+  "work_order": 13,
+  "title": "Causal Motor Lattice v0 Synthetic Factor-Isolation Gate",
+  "scope": {
+    "exact_CML_v0_architecture_implementation": true,
+    "synthetic_fixture_replay": true,
+    "one_bounded_synthetic_parameter_update_run_after_green_implementation": true,
+    "synthetic_check_and_conditional_final_scoring": true,
+    "real_or_public_data_access": false,
+    "protected_target_access": false,
+    "scientific_scoring_or_claim_upgrade": false
+  },
+  "source_bindings": {
+    "CML_research_document": {
+      "path": "docs/LOOP_55_CAUSAL_MOTOR_LATTICE_ARCHITECTURE_RESEARCH.md",
+      "sha256": "ce50a5a140ef89a69421303a3e65eb623372c773935309daa6836e24cb6671eb"
+    },
+    "CML_research_registry": {
+      "path": "registries/loop55_causal_motor_lattice_research.v0.json",
+      "sha256": "9fd05f9c14858b2964f1e4a7317ee60b32bd262c5152471fa20c9710c260eb8f"
+    },
+    "synthetic_fixture_preregistration": {
+      "path": "docs/SYNTHETIC_MOTOR_FIXTURE_PREREGISTRATION.md",
+      "sha256": "b8d7d0497ff55e4618dcf0c3bc8ef9fe07ba1f9fb2e2fe2e8d08dc6452438e70"
+    },
+    "synthetic_fixture_contract": {
+      "path": "registries/synthetic_motor_fixture_contract.v0.json",
+      "sha256": "0613f2d5df4b4b58b3e49d49cebe159550da7c1cb244f19a2de114cccc0bde27"
+    },
+    "synthetic_fixture_implementation_module": {
+      "path": "src/neurodecodekit/training/synthetic_motor_fixture.py",
+      "sha256": "23f3b87a987c8f7354c749b7f67215ebdbab9f8e00afe52ac8623fbb8965cc2a"
+    },
+    "synthetic_fixture_result_document": {
+      "path": "docs/SYNTHETIC_MOTOR_FIXTURE_RESULT.md",
+      "sha256": "59e4a58271b43ea108bc5cb677d4c9fc01a68796645abcf6e4490c4d750dabad"
+    },
+    "synthetic_fixture_result_registry": {
+      "path": "registries/synthetic_motor_fixture_result.v0.json",
+      "sha256": "3a250ccaebdf29e89d52089391c8f10e28f7c5bb51ed96aba82dddfebd21600a"
+    },
+    "autonomy_charter": {
+      "path": "docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md",
+      "sha256": "c9381bfc729dfca4aaab03929a6623f23c3cf06eb33fbae5379b0517981dcb64"
+    },
+    "autonomy_decision_document": {
+      "path": "docs/RESEARCH_AUTONOMY_CHARTER_DECISION.md",
+      "sha256": "700d7243ff53b191c2bd262424efe45cc5a5e40200b115503a84d3563c93e7b7"
+    },
+    "autonomy_decision_registry": {
+      "path": "registries/research_autonomy_charter_decision.v0.json",
+      "sha256": "edb02e2be125650ac7fbc4dafd359e2e8462ead5a7b38673c323bd58ffb59de4"
+    }
+  },
+  "execution_order": {
+    "contract_commit_must_be_pushed_and_remotely_green_before_implementation": true,
+    "exact_implementation_commit_must_be_pushed_and_remotely_green_before_execution": true,
+    "check_targets_delivered_once_after_checkpoint_freeze": true,
+    "final_targets_delivered_only_if_every_check_gate_passes": true,
+    "failed_check_or_final_is_retained_without_rerun": true,
+    "post_outcome_tuning_selection_or_protocol_change": false
+  },
+  "source_fixture": {
+    "fixture_seed": 5503,
+    "experiment_seed": 5513,
+    "source_items": 96,
+    "source_channels": 8,
+    "source_sampling_rate_hz": 128,
+    "source_maximum_samples": 256,
+    "source_partition_counts": {
+      "train": 48,
+      "check": 32,
+      "final": 16
+    },
+    "source_generated_fresh_in_memory": true,
+    "retained_source_fixture_payload_read": false,
+    "source_identity_is_synthetic_not_anatomical": true,
+    "source_geometry_used_by_candidate": false
+  },
+  "pair_anchored_adapter": {
+    "pair_anchor_formula": "minimum_true_length_across_the_two_pair_members",
+    "crop_start_formula": "pair_anchor_minus_96",
+    "crop_stop_formula": "pair_anchor_exclusive",
+    "crop_samples": 96,
+    "left_filter_context_samples": 32,
+    "analysis_samples": 64,
+    "right_context_samples": 0,
+    "analysis_window_seconds": 0.5,
+    "total_pre_event_context_seconds": 0.75,
+    "same_crop_bounds_required_for_both_pair_members": true,
+    "model_input_fields": [
+      "projected_train_normalized_signal",
+      "valid_sample_mask"
+    ],
+    "forbidden_model_input_fields": [
+      "true_length",
+      "timestamp",
+      "pair_id",
+      "factor_id",
+      "partition_id",
+      "synthetic_hand_class",
+      "synthetic_key_class",
+      "event_position",
+      "peripheral_proxy"
+    ],
+    "timing_only_pair_crops_must_be_byte_identical": true,
+    "pure_noise_pair_crops_must_be_byte_identical": true
+  },
+  "synthetic_projection": {
+    "input_channels": 8,
+    "output_channels": 64,
+    "output_channel_names": [
+      "CML_SYN00",
+      "CML_SYN01",
+      "CML_SYN02",
+      "CML_SYN03",
+      "CML_SYN04",
+      "CML_SYN05",
+      "CML_SYN06",
+      "CML_SYN07",
+      "CML_SYN08",
+      "CML_SYN09",
+      "CML_SYN10",
+      "CML_SYN11",
+      "CML_SYN12",
+      "CML_SYN13",
+      "CML_SYN14",
+      "CML_SYN15",
+      "CML_SYN16",
+      "CML_SYN17",
+      "CML_SYN18",
+      "CML_SYN19",
+      "CML_SYN20",
+      "CML_SYN21",
+      "CML_SYN22",
+      "CML_SYN23",
+      "CML_SYN24",
+      "CML_SYN25",
+      "CML_SYN26",
+      "CML_SYN27",
+      "CML_SYN28",
+      "CML_SYN29",
+      "CML_SYN30",
+      "CML_SYN31",
+      "CML_SYN32",
+      "CML_SYN33",
+      "CML_SYN34",
+      "CML_SYN35",
+      "CML_SYN36",
+      "CML_SYN37",
+      "CML_SYN38",
+      "CML_SYN39",
+      "CML_SYN40",
+      "CML_SYN41",
+      "CML_SYN42",
+      "CML_SYN43",
+      "CML_SYN44",
+      "CML_SYN45",
+      "CML_SYN46",
+      "CML_SYN47",
+      "CML_SYN48",
+      "CML_SYN49",
+      "CML_SYN50",
+      "CML_SYN51",
+      "CML_SYN52",
+      "CML_SYN53",
+      "CML_SYN54",
+      "CML_SYN55",
+      "CML_SYN56",
+      "CML_SYN57",
+      "CML_SYN58",
+      "CML_SYN59",
+      "CML_SYN60",
+      "CML_SYN61",
+      "CML_SYN62",
+      "CML_SYN63"
+    ],
+    "formula": "row_o_has_1_at_o_mod_8_plus_0.05_times_alternating_group_sign_at_o_plus_1_mod_8_plus_0.01_times_group_minus_3.5_at_o_plus_4_mod_8_then_unit_L2_normalized",
+    "coefficient_dtype": "float32",
+    "coefficient_memory_order": "C",
+    "matrix_rank": 8,
+    "matrix_bytes": 2048,
+    "matrix_sha256": "b377e42f75c6493fe44082c1dbcee278debf2cc5dfbaec3db954dede94ee4a50",
+    "trainable_parameters": 0,
+    "target_or_label_dependent": false,
+    "geometry_available": false,
+    "geometry_invented": false
+  },
+  "normalization": {
+    "fit_partition": "train",
+    "fit_factor_ids": [
+      "potential_shape_signal",
+      "mu_energy_signal",
+      "beta_energy_signal",
+      "mixed_potential_mu_beta_signal"
+    ],
+    "fit_rows": 24,
+    "uses_targets_or_labels": false,
+    "location": "per_projected_channel_median_over_all_eligible_crop_samples",
+    "scale": "maximum_of_per_projected_channel_IQR_divided_by_1.349_and_0.0001",
+    "quantile_method": "linear",
+    "frozen_before_check_or_final": true,
+    "zero_view_neutral_after_normalization": 0.0
+  },
+  "causal_filter_bank": {
+    "sampling_rate_hz": 128,
+    "filter_order": 32,
+    "tap_count": 33,
+    "window": "Hamming",
+    "construction": "difference_of_ideal_lowpasses_normalized_to_unit_gain_at_band_center",
+    "application": "one_sided_valid_convolution_over_96_pre_event_samples",
+    "valid_output_samples": 64,
+    "nominal_group_delay_samples": 16,
+    "nominal_group_delay_milliseconds": 125.0,
+    "required_left_context_samples": 32,
+    "required_left_context_milliseconds": 250.0,
+    "downsampling_applied": false,
+    "anti_alias_response": "not_applicable_no_downsampling",
+    "temporal_cells_half_open": [
+      [
+        0,
+        21
+      ],
+      [
+        21,
+        42
+      ],
+      [
+        42,
+        64
+      ]
+    ],
+    "mu": {
+      "band_hz": [
+        8.0,
+        13.0
+      ],
+      "center_hz": 10.5,
+      "coefficients_float64": [
+        -0.0018463480056030324,
+        0.0007297855568902753,
+        0.005056120942195519,
+        0.011566631519334097,
+        0.018510119150378614,
+        0.02154433441717738,
+        0.015303178684127198,
+        -0.0034335004460857364,
+        -0.032566993979322806,
+        -0.06355197731864488,
+        -0.0836049280473671,
+        -0.08084478771357127,
+        -0.05020568623533856,
+        0.002836576750166863,
+        0.06295057513000514,
+        0.11025919698426637,
+        0.1281735633124443,
+        0.11025919698426637,
+        0.06295057513000514,
+        0.002836576750166863,
+        -0.05020568623533857,
+        -0.08084478771357127,
+        -0.08360492804736715,
+        -0.0635519773186449,
+        -0.03256699397932281,
+        -0.0034335004460857364,
+        0.015303178684127196,
+        0.0215443344171774,
+        0.018510119150378614,
+        0.011566631519334097,
+        0.005056120942195524,
+        0.0007297855568902757,
+        -0.0018463480056030324
+      ],
+      "little_endian_float64_sha256": "969bfdf722774885a410833c4c6bad89992eac497b8d5aab0467d3f0ea4aca68",
+      "response_amplitude_gates": {
+        "DC_maximum": 0.01,
+        "center_minimum": 0.999,
+        "20_Hz_maximum": 0.01,
+        "30_Hz_maximum": 0.01,
+        "40_Hz_maximum": 0.01,
+        "Nyquist_maximum": 0.01
+      }
+    },
+    "beta": {
+      "band_hz": [
+        13.0,
+        30.0
+      ],
+      "center_hz": 20.0,
+      "coefficients_float64": [
+        -0.00046440939859780254,
+        0.00009149151463487468,
+        0.001327085388846662,
+        -0.0023582203794294846,
+        -0.01080820309791983,
+        -0.009372286065691486,
+        0.008465527394724268,
+        0.018220930061893407,
+        0.004640129932061102,
+        0.005620799119223905,
+        0.045033733139555644,
+        0.04697539000196993,
+        -0.06436253810137128,
+        -0.18512392244943163,
+        -0.11656858883207226,
+        0.12556451413855232,
+        0.2646308667291208,
+        0.12556451413855232,
+        -0.11656858883207227,
+        -0.18512392244943163,
+        -0.0643625381013713,
+        0.04697539000196993,
+        0.045033733139555665,
+        0.005620799119223908,
+        0.004640129932061103,
+        0.018220930061893407,
+        0.008465527394724268,
+        -0.009372286065691493,
+        -0.010808203097919834,
+        -0.0023582203794294846,
+        0.0013270853888466632,
+        0.00009149151463487475,
+        -0.00046440939859780254
+      ],
+      "little_endian_float64_sha256": "e1bfa5602f0176d4e75513f314e1a62ac8fe95b413145c983dc5843d98546725",
+      "response_amplitude_gates": {
+        "DC_maximum": 0.01,
+        "4_Hz_maximum": 0.01,
+        "center_minimum": 0.99,
+        "40_Hz_maximum": 0.01,
+        "Nyquist_maximum": 0.01
+      }
+    },
+    "centered_filter_allowed": false,
+    "zero_phase_filter_allowed": false,
+    "reflected_future_padding_allowed": false,
+    "circular_padding_allowed": false,
+    "sample_at_or_after_event_allowed": false
+  },
+  "architecture": {
+    "candidate_id": "CML-v0-synthetic-64x18",
+    "input_channels": 64,
+    "views": [
+      {
+        "view_id": "CML-V0",
+        "name": "potential_shape",
+        "spatial_rank": 8,
+        "temporal_cells": 3,
+        "features": 24,
+        "aggregation": "piecewise_mean"
+      },
+      {
+        "view_id": "CML-V1",
+        "name": "mu_energy",
+        "spatial_rank": 8,
+        "temporal_cells": 3,
+        "features": 24,
+        "aggregation": "log1p_of_mean_squared_causal_filter_output"
+      },
+      {
+        "view_id": "CML-V2",
+        "name": "beta_energy",
+        "spatial_rank": 8,
+        "temporal_cells": 3,
+        "features": 24,
+        "aggregation": "log1p_of_mean_squared_causal_filter_output"
+      }
+    ],
+    "spatial_row_transform": "subtract_row_mean_then_divide_by_max_L2_norm_and_1e-8",
+    "fusion_input_features": 72,
+    "bottleneck_features": 24,
+    "fixed_activation": "tanh",
+    "primitive_count": 18,
+    "key_count": 29,
+    "residual_gain_rho": 0.25,
+    "residual_formula": "rho_times_tanh_of_direct_residual_logit",
+    "independent_hand_head": false,
+    "parameter_ledger": {
+      "three_spatial_mixers_with_bias": 1560,
+      "bottleneck_with_bias": 1752,
+      "layer_norm": 48,
+      "primitive_head_with_bias": 450,
+      "key_residual_head_with_bias": 725,
+      "total_trainable_parameters": 4535
+    },
+    "maximum_trainable_parameters": 4535,
+    "parameter_mismatch_action": "park_without_execution_or_expansion"
+  },
+  "synthetic_lattice": {
+    "key_ids": [
+      "SYNK00",
+      "SYNK01",
+      "SYNK02",
+      "SYNK03",
+      "SYNK04",
+      "SYNK05",
+      "SYNK06",
+      "SYNK07",
+      "SYNK08",
+      "SYNK09",
+      "SYNK10",
+      "SYNK11",
+      "SYNK12",
+      "SYNK13",
+      "SYNK14",
+      "SYNK15",
+      "SYNK16",
+      "SYNK17",
+      "SYNK18",
+      "SYNK19",
+      "SYNK20",
+      "SYNK21",
+      "SYNK22",
+      "SYNK23",
+      "SYNK24",
+      "SYNK25",
+      "SYNK26",
+      "SYNK27",
+      "SYNK28"
+    ],
+    "primitive_ids": [
+      "hand_left",
+      "hand_right",
+      "row_0",
+      "row_1",
+      "row_2",
+      "row_3",
+      "zone_0",
+      "zone_1",
+      "zone_2",
+      "zone_3",
+      "column_0",
+      "column_1",
+      "column_2",
+      "column_3",
+      "column_4",
+      "column_5",
+      "column_6",
+      "special"
+    ],
+    "left_hand_key_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "right_hand_key_indices": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "ambiguous_hand_key_indices": [
+      28
+    ],
+    "incidence_formula": "keys_0_to_27_use_hand_plus_row_2_plus_local_mod_4_plus_zone_6_plus_floor_local_div_4_mod_4_plus_column_10_plus_local_mod_7_where_local_is_key_mod_14_and_key_28_uses_only_special_17",
+    "incidence_dtype": "uint8",
+    "incidence_shape": [
+      29,
+      18
+    ],
+    "incidence_memory_order": "C",
+    "incidence_bytes": 522,
+    "incidence_sha256": "0d2451f4fe9354f9031ed59b007e8bc4c0aeae78a65494520abd970698c20309",
+    "lattice_key_logit": "mean_of_incident_primitive_logits_plus_0.25_times_tanh_of_residual_logit",
+    "hand_probability": "renormalized_sum_of_softmax_key_probability_over_left_and_right_sets",
+    "hand_key_consistency_tolerance": 1e-07,
+    "target_frequency_text_or_outcome_used": false
+  },
+  "synthetic_target_map": {
+    "potential_shape_signal": [
+      0,
+      14
+    ],
+    "mu_energy_signal": [
+      1,
+      15
+    ],
+    "beta_energy_signal": [
+      2,
+      16
+    ],
+    "mixed_potential_mu_beta_signal": [
+      3,
+      17
+    ],
+    "left_right_spatial_reversal": [
+      3,
+      17
+    ],
+    "timing_only_labels_without_signal_relation": [
+      0,
+      14
+    ],
+    "peripheral_like_common_mode_artifact": [
+      1,
+      15
+    ],
+    "pure_noise": [
+      2,
+      16
+    ],
+    "mapping_rule": "array_index_is_synthetic_hand_class_0_or_1",
+    "targets_are_synthetic_design_controls_not_participant_labels_or_text": true
+  },
+  "partition_and_target_protocol": {
+    "parameter_update_factor_ids": [
+      "potential_shape_signal",
+      "mu_energy_signal",
+      "beta_energy_signal",
+      "mixed_potential_mu_beta_signal"
+    ],
+    "parameter_update_rows": 24,
+    "gradient_ineligible_factor_ids": [
+      "left_right_spatial_reversal",
+      "timing_only_labels_without_signal_relation",
+      "peripheral_like_common_mode_artifact",
+      "pure_noise"
+    ],
+    "check_rows": 32,
+    "check_signal_bearing_rows": 16,
+    "check_diagnostic_rows": 16,
+    "final_rows": 16,
+    "final_signal_bearing_rows": 8,
+    "final_diagnostic_rows": 8,
+    "check_is_synthetic_development_only": true,
+    "final_is_synthetic_engineering_only_not_scientific_test": true,
+    "final_target_delivery_requires_all_check_gates": true,
+    "check_or_final_target_may_update_parameters": false,
+    "selection_from_check_or_final": false
+  },
+  "training_recipe": {
+    "parameter_update_runs": 1,
+    "random_seed": 5513,
+    "device": "CPU",
+    "dtype": "float32",
+    "deterministic_algorithms": true,
+    "optimizer": "AdamW",
+    "optimizer_steps": 600,
+    "batching": "full_batch_24_rows",
+    "learning_rate": 0.01,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "epsilon": 1e-08,
+    "weight_decay": 0.0001,
+    "maximum_gradient_norm": 5.0,
+    "early_stopping": false,
+    "checkpoint_selection": false,
+    "loss_weights": {
+      "key_cross_entropy": 1.0,
+      "hand_marginal_negative_log_likelihood": 0.5,
+      "primitive_multilabel_BCE": 0.25,
+      "matching_isolated_view_auxiliary": 0.5
+    },
+    "matched_view_auxiliary_factor_to_view": {
+      "potential_shape_signal": "CML-V0",
+      "mu_energy_signal": "CML-V1",
+      "beta_energy_signal": "CML-V2"
+    },
+    "matched_view_auxiliary_is_synthetic_only_and_not_transferable": true,
+    "optimizer_or_threshold_tuning_after_any_check_or_final_result": false,
+    "rerun_allowed": false
+  },
+  "same_checkpoint_conditions": [
+    "full",
+    "potential_muted",
+    "mu_muted",
+    "beta_muted",
+    "all_views_muted",
+    "channel_deranged",
+    "time_displaced",
+    "hemisphere_mirrored",
+    "peripheral_proxy_only"
+  ],
+  "mutation_contract": {
+    "channel_derangement_source_permutation": [
+      4,
+      5,
+      6,
+      7,
+      0,
+      1,
+      2,
+      3
+    ],
+    "hemisphere_mirror_source_permutation": [
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "time_displacement_samples": 16,
+    "time_displacement_operation": "nonwrapping_shift_toward_earlier_time_with_zero_fill",
+    "common_mode_amplitude": 0.5,
+    "common_mode_applied_after_train_normalization_identically_to_all_64_channels": true,
+    "causal_prefix_cutoffs_samples": [
+      48,
+      64,
+      80
+    ],
+    "future_tail_mutation_amplitude_by_source_channel": "0.25_times_one_based_source_channel_index",
+    "peripheral_proxy_only_uses_registered_fixture_mutation": true,
+    "padding_must_remain_exactly_zero": true
+  },
+  "check_acceptance_gates": {
+    "signal_bearing_hand_accuracy_minimum": 0.875,
+    "signal_bearing_key_accuracy_minimum": 0.75,
+    "all_views_muted_hand_accuracy_maximum": 0.625,
+    "full_minus_all_views_muted_hand_accuracy_minimum": 0.25,
+    "matching_branch_ablation_hand_NLL_increase_minimum": 0.02,
+    "matching_branch_ablation_must_be_no_smaller_than_each_nonmatching_single_branch_ablation": true,
+    "mixed_all_views_muted_hand_NLL_increase_minimum": 0.1,
+    "mirrored_spatial_reversal_hand_accuracy_minimum": 0.75,
+    "mirrored_minus_unmirrored_spatial_reversal_hand_accuracy_minimum": 0.25,
+    "timing_only_pair_hand_probability_maximum_difference": 1e-07,
+    "pure_noise_pair_hand_probability_maximum_difference": 1e-07,
+    "hand_key_marginal_maximum_error": 1e-07,
+    "common_mode_logit_maximum_error": 1e-06,
+    "causal_future_tail_prefix_logit_maximum_error": 1e-06,
+    "every_gate_required": true
+  },
+  "conditional_final_acceptance_gates": {
+    "signal_bearing_hand_accuracy_minimum": 0.875,
+    "signal_bearing_key_accuracy_minimum": 0.75,
+    "mirrored_spatial_reversal_hand_accuracy_minimum": 1.0,
+    "timing_only_pair_hand_probability_maximum_difference": 1e-07,
+    "pure_noise_pair_hand_probability_maximum_difference": 1e-07,
+    "hand_key_marginal_maximum_error": 1e-07,
+    "deterministic_replay_prediction_hash_match": true,
+    "every_gate_required": true
+  },
+  "replay_contract": {
+    "second_training_run_allowed": false,
+    "checkpoint_loads": 1,
+    "replayed_prediction_sets": [
+      "check_full",
+      "final_full_if_delivered"
+    ],
+    "prediction_hash_encoding": "little_endian_float32_C_order",
+    "byte_identical_prediction_hash_required": true
+  },
+  "operation_budget": {
+    "synthetic_fixture_generations": 1,
+    "parameter_update_runs": 1,
+    "optimizer_steps": 600,
+    "postfit_inference_stages_maximum": 3,
+    "same_checkpoint_condition_prediction_sets_maximum": 18,
+    "replay_prediction_sets_maximum": 2,
+    "check_scoring_events": 1,
+    "conditional_final_scoring_events_maximum": 1,
+    "real_or_public_payload_reads": 0,
+    "protected_target_reads": 0,
+    "network_calls": 0,
+    "provider_calls": 0,
+    "hardware_operations": 0
+  },
+  "required_measurements": [
+    "input_contract_bytes",
+    "synthetic_source_bytes_generated",
+    "checkpoint_bytes",
+    "report_bytes",
+    "total_generated_output_bytes",
+    "runtime_seconds",
+    "peak_RSS_bytes",
+    "free_disk_bytes_before",
+    "trainable_parameter_count",
+    "input_shape",
+    "view_feature_shape",
+    "valid_sample_count",
+    "padding_fraction",
+    "parameter_update_runs",
+    "optimizer_steps",
+    "inference_stages",
+    "prediction_sets",
+    "scoring_events",
+    "producer_is_causal",
+    "required_left_context_samples",
+    "required_right_context_samples",
+    "end_to_end_latency_measured",
+    "warnings",
+    "unavailable_fields",
+    "all_access_counters"
+  ],
+  "output_contract": {
+    "maximum_files": 2,
+    "checkpoint_filename": "checkpoint.npz",
+    "aggregate_report_filename": "report.json",
+    "per_item_targets_labels_predictions_or_identities_retained": false,
+    "plaintext_text_retained": false,
+    "local_paths_retained": false,
+    "aggregate_metrics_and_hashes_only": true,
+    "invocation_files_committed": false,
+    "invocation_files_removed_after_measured_closeout": true
+  },
+  "resource_caps": {
+    "maximum_CPU_threads": 1,
+    "maximum_workers": 1,
+    "maximum_concurrent_numerical_jobs": 1,
+    "maximum_wall_seconds": 600,
+    "maximum_peak_RSS_bytes": 536870912,
+    "maximum_generated_output_bytes": 4194304,
+    "minimum_free_disk_bytes_before": 21474836480,
+    "maximum_network_bytes": 0,
+    "maximum_download_bytes": 0
+  },
+  "dependency_contract": {
+    "base_dependencies_added": false,
+    "optional_runtime_dependencies": [
+      "numpy",
+      "scipy",
+      "torch"
+    ],
+    "imports_must_be_lazy": true,
+    "dependency_install_allowed": false,
+    "pretrained_weight_or_model_download_allowed": false
+  },
+  "required_refusal_matrix": [
+    "CML-SYN-F01-contract-hash-mismatch",
+    "CML-SYN-F02-source-fixture-hash-mismatch",
+    "CML-SYN-F03-source-shape-or-partition-mismatch",
+    "CML-SYN-F04-pair-anchor-or-crop-mismatch",
+    "CML-SYN-F05-timing-or-noise-pair-waveform-mismatch",
+    "CML-SYN-F06-projection-hash-or-rank-mismatch",
+    "CML-SYN-F07-filter-coefficient-or-response-mismatch",
+    "CML-SYN-F08-causal-context-or-padding-mismatch",
+    "CML-SYN-F09-lattice-incidence-hash-mismatch",
+    "CML-SYN-F10-parameter-count-mismatch",
+    "CML-SYN-F11-forbidden-model-input-field",
+    "CML-SYN-F12-gradient-ineligible-row-entered-loss",
+    "CML-SYN-F13-check-access-before-checkpoint-freeze",
+    "CML-SYN-F14-final-access-before-all-check-gates",
+    "CML-SYN-F15-post-check-or-final-parameter-update",
+    "CML-SYN-F16-rerun-or-checkpoint-selection",
+    "CML-SYN-F17-nonfinite-loss-logit-or-parameter",
+    "CML-SYN-F18-thread-worker-runtime-RSS-or-disk-cap",
+    "CML-SYN-F19-output-file-byte-or-schema-cap",
+    "CML-SYN-F20-output-contains-item-target-label-prediction-identity-or-path",
+    "CML-SYN-F21-real-public-protected-or-text-content-access",
+    "CML-SYN-F22-network-provider-pretrained-or-external-embedding-access",
+    "CML-SYN-F23-stream-device-hardware-or-release-operation",
+    "CML-SYN-F24-scientific-or-clinical-claim-upgrade"
+  ],
+  "acceptance_gates": [
+    "exact_source_hash_and_split_binding",
+    "exact_pair_anchored_96_sample_strictly_pre_event_adapter",
+    "exact_rank_8_projection_and_64_generic_channel_identity",
+    "exact_FIR_coefficients_frequency_response_context_and_causality",
+    "exact_4535_trainable_parameter_count",
+    "exact_29_key_18_primitive_lattice_and_hand_marginal",
+    "one_600_step_training_run_without_selection_or_rerun",
+    "all_check_gates_pass_before_conditional_final_target_delivery",
+    "all_conditional_final_gates_pass_without_post_outcome_change",
+    "same_checkpoint_ablation_spatial_timing_peripheral_and_noise_diagnostics",
+    "checkpoint_reload_prediction_hash_replay",
+    "mask_padding_provenance_counter_warning_and_unavailable_field_validation",
+    "runtime_RSS_disk_file_and_output_caps_pass",
+    "forbidden_content_and_every_real_network_model_download_hardware_counter_zero",
+    "focused_and_complete_tests_ruff_compile_JSON_CLI_help_diff_and_secret_scan_pass"
+  ],
+  "authorization": {
+    "tier_A_contract_tests_commit_push_and_CI_allowed_now": true,
+    "tier_B_exact_synthetic_implementation_allowed_only_after_contract_remote_green": true,
+    "tier_B_one_registered_execution_allowed_only_after_exact_implementation_remote_green": true,
+    "one_synthetic_parameter_update_run_allowed": true,
+    "synthetic_check_and_conditional_final_scoring_allowed": true,
+    "real_public_or_protected_data_access_allowed": false,
+    "S20_or_PhysioNet_access_allowed": false,
+    "download_network_or_provider_access_allowed": false,
+    "pretrained_model_language_model_or_external_embedding_allowed": false,
+    "stream_device_hardware_or_release_allowed": false,
+    "scientific_claim_upgrade_allowed": false,
+    "existing_loop54_or_loop55_artifact_amendment_allowed": false,
+    "every_future_tier_C_action_requires_separate_exact_decision": true
+  },
+  "current_access_counters": {
+    "synthetic_fixture_generations": 0,
+    "synthetic_signal_bytes_generated": 0,
+    "model_or_checkpoint_loads": 0,
+    "parameter_update_runs": 0,
+    "optimizer_steps": 0,
+    "model_inference_stages": 0,
+    "prediction_sets": 0,
+    "check_scoring_events": 0,
+    "final_scoring_events": 0,
+    "real_or_public_data_reads": 0,
+    "protected_target_or_label_reads": 0,
+    "S20_path_stats_or_reads": 0,
+    "PhysioNet_downloads_or_reads": 0,
+    "network_calls": 0,
+    "provider_calls": 0,
+    "pretrained_weight_or_external_embedding_reads": 0,
+    "stream_device_or_hardware_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "warnings": [
+    "Every signal target key channel and geometry identity in this gate is synthetic.",
+    "The 8-to-64 projection adds no information and represents no anatomical montage.",
+    "Matched-view auxiliary supervision is a synthetic mechanics device and is not a real-data recipe.",
+    "Branch ablations cannot prove cortical potential mu beta or brain-specific origin.",
+    "The peripheral proxy is a constructed shortcut and not validated EOG.",
+    "The synthetic final partition is an engineering stop gate and not scientific evidence.",
+    "Passing this gate does not reopen Loop 54 B or C, authorize PhysioNet, or qualify Loop 55."
+  ],
+  "unavailable_fields": [
+    "real_EEG_signal_quality",
+    "real_channel_names_reference_or_geometry",
+    "real_event_trial_or_key_ontology",
+    "biological_or_brain_specific_origin",
+    "real_decoding_accuracy_or_neural_advantage",
+    "unseen_person_or_cross_session_generalization",
+    "end_to_end_latency",
+    "portable_earbud_or_home_device_performance",
+    "assistive_diagnostic_or_clinical_utility"
+  ],
+  "claim_boundary": {
+    "engineering_capability_if_all_gates_pass": "NeuroDecodeKit can instantiate and deterministically replay the exact 4535-parameter CML-v0 interface route constructed potential mu beta spatial timing peripheral and noise failures and enforce causal and hand-key consistency controls.",
+    "scientific_claim_not_established_even_if_all_gates_pass": "Synthetic factors establish no real EEG information neural or brain-specific origin decoding accuracy neural advantage unseen-person generalization real-time behavior portable or earbud sensing home use assistive value or clinical utility."
+  }
+}
