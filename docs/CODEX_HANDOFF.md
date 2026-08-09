@@ -97,10 +97,12 @@
 > 6 only through the current recovery-bound Loop 54-A packet in
 > `docs/LOOP_54_STAGE_A_RECOVERY_AUTHORIZATION_PACKET.md` and
 > `registries/loop54_stage_a_recovery_authorization_request.v1.json`. Every
-> authorization flag remains false. Require that request commit to be remotely
-> green, then receive and preserve the exact Tier C decision before qualifying
-> a parser on generated synthetic fixtures. Require the implementation commit
-> to become green before the one real VHDR open. No hardware,
+> authorization flag remains false in those immutable snapshots. Request
+> commit `19813a8` passed CI `31283297030`; the exact Tier C decision is now
+> preserved in its separate human and machine records. Require that decision
+> commit to become remotely green before qualifying a parser on generated
+> synthetic fixtures. Require the implementation commit to become green before
+> the one real VHDR open. No hardware,
 > physical electrode switching, architecture execution, model, fitting,
 > inference, scoring, or real-data action is permitted.
 >
@@ -120,8 +122,8 @@
 > CI `31132586790` passed both jobs. Exact-tree local replay with Ruff `0.15.20`
 > passed 1,095 tests with 3 expected skips. Read the additive recovery record;
 > the old draft request remains non-actionable. The v1 recovery-bound packet
-> and request are now the sole current decision surface and must become green
-> before a Tier C decision. Zero S20 path stats,
+> and request are the immutable decision surface. The exact decision is now
+> separately recorded and must become green before implementation. Zero S20 path stats,
 > header reads, sibling reads, targets, models, or experiment bytes occurred.
 > Preserve the unrelated tracker inspection NDJSON.
 >

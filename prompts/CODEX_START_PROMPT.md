@@ -156,12 +156,13 @@ Do not reset, revert, delete, or overwrite work already present.
   implementation `76ccc63` passed CI `31282344300` before one measured
   roundtrip. All 18 gates passed in 0.40 seconds at 55,394,304-byte peak RSS
   with 938,874 output bytes and zero retained files. Work order 5 is complete.
-  Work order 6 now waits at the recovery-bound exact user decision in
+  Work order 6 now has the recovery-bound exact user decision recorded in
   `docs/LOOP_54_STAGE_A_RECOVERY_AUTHORIZATION_PACKET.md` and
-  `registries/loop54_stage_a_recovery_authorization_request.v1.json`. Require
-  that request commit and then the exact decision commit to be remotely green
-  before synthetic parser qualification. The real S20 VHDR read remains Tier C
-  and requires the implementation commit to become green first. Do
+  `registries/loop54_stage_a_recovery_authorization_request.v1.json`, plus its
+  separate decision doc and registry. Request commit `19813a8` passed CI
+  `31283297030`. Require the exact decision commit to be remotely green before
+  synthetic parser qualification. The real S20 VHDR read remains Tier C and
+  requires the implementation commit to become green first. Do
   not infer AirPods capability, implement physical switching,
   install an optional backend, connect hardware, fit, infer, select, score, or
   access real/public data.
@@ -482,13 +483,14 @@ requirement and failed on 400 later lint findings. Read
 `registries/loop54_stage_a_registration_ci_recovery.v0.json`. The frozen
 payload is byte-identical at pinned commit `2232993`, whose CI passed both
 jobs, and exact-tree Ruff `0.15.20` replay passed 1,095 tests with three skips.
-The current recovery-bound v1 packet and request bind those artifacts while
-keeping every authorization and S20-access field false. Their commit must be
-remotely green before the exact Tier C user decision is eligible. The decision
-must then become green before synthetic parser implementation, and that
+The recovery-bound v1 packet and request bind those artifacts while keeping
+every authorization and S20-access field false in those immutable snapshots.
+Request commit `19813a8` passed CI `31283297030`; the exact Tier C decision is
+now recorded separately. Its commit must become green before synthetic parser
+implementation, and that
 implementation must become green before the one real VHDR open. Do not stat the
 local path, implement the parser, or open S20 from the preregistration,
-recovery, or request alone.
+recovery, request, or ungreen decision alone.
 
 Loop 55 planning research is also complete and reviewable at:
 

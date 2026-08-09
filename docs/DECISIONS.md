@@ -4079,3 +4079,32 @@ or clinical result.
 
 Evidence: `docs/LOOP_54_STAGE_A_RECOVERY_AUTHORIZATION_PACKET.md` and
 `registries/loop54_stage_a_recovery_authorization_request.v1.json`.
+
+## 0119 - Record The Exact Recovery-Bound Loop 54-A Decision
+
+Decision: accept the maintainer's exact registered sentence after request
+commit `19813a8` passed both jobs in CI `31283297030`. Preserve the frozen
+request and contract as all-false snapshots; record authorization in separate
+human and machine decision artifacts.
+
+Stage order: after this authorization-only commit becomes remotely green,
+implement and adversarially qualify the strict standard-library parser using
+only generated synthetic VHDR fixtures. Keep every S20 path operation at zero.
+Only after the exact implementation commit becomes remotely green may the one
+registered 11,705-byte VHDR execution proceed.
+
+Boundary: the conditional real stage allows one no-follow content open, at most
+16,384 read bytes, strict allowlisted parsing, inert sibling basenames, and one
+target-free ledger plus summary under 1 MiB. VMRK, EEG, MAT, siblings, targets,
+models, training, scoring, network, hardware, rerun, and claims remain closed.
+
+Engineering capability authorized for testing: one strict standard-library
+parser may be qualified on generated synthetic fixtures and later used for one
+bounded compatibility check after both green gates.
+
+Scientific claim not established: this decision is not a parser or S20 result
+and establishes no header readability, EEG quality, neural advantage, decoding
+accuracy, generalization, latency, hardware, home-use, or clinical result.
+
+Evidence: `docs/LOOP_54_STAGE_A_RECOVERY_AUTHORIZATION_DECISION.md` and
+`registries/loop54_stage_a_recovery_authorization_decision.v1.json`.

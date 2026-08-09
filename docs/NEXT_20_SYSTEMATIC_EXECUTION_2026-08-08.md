@@ -16,7 +16,7 @@ decision after its own frozen packet and required remote-green evidence exist.
 | 3 | Build synthetic physiology/confound fixtures | B | Deterministic motor, timing, ocular, line-noise, dropout, and corruption cases with no target leakage | Complete |
 | 4 | Add classical EEG adapter contracts | B | Optional dependency boundaries, grouped-fit rules, leakage tests, no real execution | Complete |
 | 5 | Add a contact-aware ear-channel adapter | B | Synthetic contact/noise/missingness fixtures and exact channel-mask semantics only | Complete |
-| 6 | Freeze Loop 54-A decision and qualify parser | A/B then C decision | Recovery-bound exact packet, strict synthetic parser tests, green implementation before real access | In Progress: Awaiting Exact User Decision |
+| 6 | Freeze Loop 54-A decision and qualify parser | A/B then C decision | Recovery-bound exact packet, strict synthetic parser tests, green implementation before real access | In Progress: Decision Recorded; CI Gate |
 | 7 | Execute Loop 54-A once | C | One 11,705-byte VHDR open; no sibling resolution; all 18 gates pass | Gated |
 | 8 | Acquire tiny PhysioNet motor slice | C | Exactly nine pinned EDF files, 23,248,224 bytes, isolated receipt, no substitutions | Gated |
 | 9 | Run grouped public motor positive control | C | Participant/run grouping, fixed classical family, no-signal and corruption controls | Gated |
@@ -65,11 +65,11 @@ Both generated files were removed. Work order 5 is complete. Work order 6 now
 has a recovery-bound decision packet in
 `docs/LOOP_54_STAGE_A_RECOVERY_AUTHORIZATION_PACKET.md` and a machine request
 in `registries/loop54_stage_a_recovery_authorization_request.v1.json`. Every
-authorization flag and S20 access counter remains false. The packet's exact
-commit must be pushed and remotely green before the exact user decision is
-eligible; that decision must then be committed, pushed, and green before
-synthetic parser implementation. The real S20 VHDR read remains separately
-ordered after a green implementation commit.
+authorization flag and S20 access counter remains false in those immutable
+snapshots. Request commit `19813a8` passed CI `31283297030`, and the exact user
+decision is now preserved in separate human and machine records. Its commit
+must become remotely green before synthetic parser implementation. The real
+S20 VHDR read remains separately ordered after a green implementation commit.
 
 This queue never authorizes S20 interpretation, PhysioNet acquisition, target
 delivery, training, scoring, hardware, release, or a scientific claim by
