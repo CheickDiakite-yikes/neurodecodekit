@@ -126,10 +126,15 @@
    `registries/loop54_stage_a_vhdr_implementation.v0.json`. The strict
    standard-library parser, dry-run-first CLI, metadata inspector, no-follow
    source verifier, exclusive bounded outputs, and all 22 refusal classes are
-   synthetic-qualified. The one real VHDR open remains conditional on this
-   exact implementation commit becoming remotely green. No local S20 path or
-   payload was accessed during preregistration, recovery, request, decision, or
-   implementation work.
+   synthetic-qualified. Exact implementation `b486fdf` passed CI `31287819503`
+   before the one registered execution. Then read
+   `docs/LOOP_54_STAGE_A_VHDR_RESULT.md` and
+   `registries/loop54_stage_a_vhdr_result.v0.json`. The exact 11,705-byte VHDR
+   passed no-follow, size, Git-blob, and strict-decode checks, then parked at
+   `L54A-F11` because the frozen format preamble requirement failed. No raw
+   first line or header field was published, no sibling was touched, and no
+   registered output was written. L54-Q2 failed, the execution is consumed with
+   no rerun, and Loop 54-B/C remain blocked.
    Then read `docs/LOCAL_EEG_TOOLING_AUDIT_2026-08-08.md`,
    `registries/local_eeg_tooling_audit_result.v0.json`,
    `registries/local_eeg_tooling_audit_receipt.v0.json`, and

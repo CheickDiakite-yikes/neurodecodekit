@@ -4141,3 +4141,35 @@ portable-hardware, home-use, or clinical result.
 
 Evidence: `docs/LOOP_54_STAGE_A_VHDR_IMPLEMENTATION.md` and
 `registries/loop54_stage_a_vhdr_implementation.v0.json`.
+
+## 0121 - Park Loop 54-A At The Strict Preamble Gate
+
+Decision: preserve the one registered execution as consumed after exact
+implementation `b486fdf` passed Base Python and Optional Neuro Readers in CI
+`31287819503`. The invocation opened and read the exact 11,705-byte VHDR once,
+passed no-follow, regular-file, size, Git-blob, and strict-decoding checks, and
+then returned the registered `L54A-F11` refusal because the frozen format
+preamble requirement was not satisfied.
+
+Evidence boundary: the command returned `2` in 0.20 seconds external wall time
+at 24,051,712-byte peak RSS. It wrote zero registered output bytes and did not
+resolve, stat, hash, or open VMRK, EEG, MAT, or any sibling. It did not publish
+the raw first line or any header value. Every signal, marker, target, cache,
+split, model, training, inference, scoring, network, provider, device,
+hardware, release, rerun, and claim-upgrade counter remained zero.
+
+Route: L54-Q2 declared-header compatibility was not established. Do not rerun,
+amend the parser from the observed outcome, use a fallback reader, reopen S20,
+or start Loop 54-B/C. Those routes remain blocked or separately unauthorized.
+
+Engineering capability added: NeuroDecodeKit executed one exact, bounded,
+sibling-blind VHDR compatibility gate and preserved its failure without leaking
+raw or sibling content.
+
+Scientific claim not established: no EEG signal, event, trial, target, or model
+was accessed, so this result establishes no neural advantage, decoding
+accuracy, generalization, real-time, portable-hardware, home-use, or clinical
+result.
+
+Evidence: `docs/LOOP_54_STAGE_A_VHDR_RESULT.md` and
+`registries/loop54_stage_a_vhdr_result.v0.json`.

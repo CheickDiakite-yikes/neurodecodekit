@@ -231,8 +231,8 @@ infer current AirPods capability, copy or implement patent claims, control
 physical electrodes, connect hardware, install a dependency, read real/public
 data, or run a model.
 
-Work order 6 has passed its decision gate and is locally implementation-
-complete. Request commit `19813a8` passed CI `31283297030`; exact decision
+Work order 6 is complete and work order 7 is consumed and parked. Request
+commit `19813a8` passed CI `31283297030`; exact decision
 commit `2177b36` then passed CI `31286428489`, including Base Python job
 `93176025548` and Optional Neuro Readers job `93176025560`, before parser work
 began. Read `docs/LOOP_54_STAGE_A_VHDR_IMPLEMENTATION.md` and
@@ -241,11 +241,17 @@ parser, dry-run-first CLI, metadata inspector, no-follow one-open source
 verifier, exclusive bounded outputs, and all 22 refusal classes are qualified
 on generated synthetic fixtures. No fixture is retained, and every S20,
 sibling, target, model, network, hardware, and real-execution counter is zero.
-Commit and push this exact implementation, wait for both CI jobs to pass, and
-only then consume the one registered VHDR execution. Do not stat or read S20
-before that gate, rerun after it, or continue into Loop 54-B. CML-v0, PhysioNet,
-targets, training, inference, scoring, hardware, and scientific claims remain
-separately gated.
+Exact implementation `b486fdf` passed CI `31287819503` before the one registered
+execution. Read `docs/LOOP_54_STAGE_A_VHDR_RESULT.md` and
+`registries/loop54_stage_a_vhdr_result.v0.json`. The exact 11,705-byte VHDR
+passed no-follow, size, Git-blob, and strict-decode gates, then parked at
+`L54A-F11` because the frozen format preamble requirement failed. Runtime was
+0.20 seconds at 24,051,712-byte peak RSS. No raw first line or declared header
+field was published; every sibling, signal, target, model, network, and hardware
+counter stayed zero; registered output bytes were zero. L54-Q2 failed. Do not
+rerun, amend the parser from this result, inspect a sibling, or continue into
+Loop 54-B/C. CML-v0, PhysioNet, targets, training, inference, scoring, hardware,
+and scientific claims remain separately gated.
 
 The additive architecture pass now selects `CML-v0` as the next hypothesis:
 

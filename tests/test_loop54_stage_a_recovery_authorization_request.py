@@ -139,7 +139,7 @@ class Loop54StageARecoveryAuthorizationRequestTests(unittest.TestCase):
         self.assertEqual(resources["new_payload_bytes"], 0)
         self.assertTrue(all(value == 0 for value in self.request["current_access_counters"].values()))
 
-    def test_packet_and_public_route_stop_before_parser_or_S20(self):
+    def test_frozen_packet_and_current_public_route_preserve_stage_order(self):
         for phrase in (
             "not an authorization decision",
             "This packet did not stat, resolve, hash, or open that local path",
@@ -149,8 +149,8 @@ class Loop54StageARecoveryAuthorizationRequestTests(unittest.TestCase):
         queue = QUEUE_PATH.read_text(encoding="utf-8")
         work_order_six = next(line for line in queue.splitlines() if line.startswith("| 6 |"))
         work_order_seven = next(line for line in queue.splitlines() if line.startswith("| 7 |"))
-        self.assertIn("Implementation Local; CI Gate", work_order_six)
-        self.assertIn("| Gated |", work_order_seven)
+        self.assertIn("| Complete |", work_order_six)
+        self.assertIn("Consumed; Parked F11; No Rerun", work_order_seven)
 
     def test_local_verification_advances_the_complete_baseline(self):
         verification = self.request["request_local_verification"]

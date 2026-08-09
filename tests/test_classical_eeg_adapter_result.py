@@ -92,7 +92,7 @@ class ClassicalEegAdapterResultTests(unittest.TestCase):
         self.assertGreater(verification["complete_closeout_wall_seconds"], 0.0)
         self.assertGreater(verification["complete_closeout_peak_RSS_bytes"], 0)
 
-    def test_docs_close_work_order_four_and_open_only_synthetic_work_five(self):
+    def test_docs_preserve_work_order_four_as_queue_advances(self):
         document = DOC_PATH.read_text(encoding="utf-8")
         queue = QUEUE_PATH.read_text(encoding="utf-8")
         self.assertIn("Engineering capability added", document)
@@ -101,10 +101,12 @@ class ClassicalEegAdapterResultTests(unittest.TestCase):
         work_order_five = next(line for line in queue.splitlines() if line.startswith("| 5 |"))
         self.assertIn("| Complete |", work_order_four)
         work_order_six = next(line for line in queue.splitlines() if line.startswith("| 6 |"))
+        work_order_seven = next(line for line in queue.splitlines() if line.startswith("| 7 |"))
         self.assertIn("| Complete |", work_order_five)
-        self.assertIn("| In Progress", work_order_six)
-        self.assertEqual(queue.count("| Complete |"), 5)
-        self.assertEqual(sum("| In Progress" in line for line in queue.splitlines()), 1)
+        self.assertIn("| Complete |", work_order_six)
+        self.assertIn("Consumed; Parked F11; No Rerun", work_order_seven)
+        self.assertEqual(queue.count("| Complete |"), 6)
+        self.assertEqual(sum("| In Progress" in line for line in queue.splitlines()), 0)
         self.assertFalse(self.result["next_route"]["install_new_dependencies_now"])
         self.assertFalse(self.result["next_route"]["real_data_action_authorized_by_this_result"])
         self.assertFalse(self.result["next_route"]["hardware_action_authorized_by_this_result"])

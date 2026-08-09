@@ -5443,3 +5443,46 @@ Scientific claim not established: no S20 content was opened and no EEG signal
 quality, event or trial validity, neural advantage, decoding accuracy,
 generalization, latency, portable hardware, home-use, or clinical result was
 established.
+
+## 2026-08-08 - Loop 54-A Strict VHDR Consumed Result
+
+- Confirmed exact implementation `b486fdf13d8a2293432f9dca5f3fb8ba97527be0`
+  passed CI `31287819503`: Base Python job `93179736029` and Optional Neuro
+  Readers job `93179736035` were green before protected access.
+- Ran the one registered one-thread, one-worker invocation. It returned code
+  `2` after 0.20 seconds external wall time at 24,051,712-byte peak RSS.
+- Opened the exact registered VHDR once and read exactly 11,705 bytes. The
+  no-follow, regular-file, size, Git-blob, and strict-decode checks passed.
+- Parked at
+  `L54A-F11_missing_duplicate_or_malformed_required_section_or_key` with the
+  safe diagnostic `VHDR format preamble is missing`. The raw first line and
+  all header values remain unpublished and unavailable.
+- Wrote zero registered output files and zero registered output bytes. The
+  private output root remained absent.
+- Every VMRK, EEG, MAT, sibling, signal, marker, event, trial, response, key,
+  sentence, label, target, cache, split, feature, model, checkpoint, inference,
+  training, scoring, selection, network, download, provider, language-model,
+  RW3, stream, device, hardware, release, rerun, and claim-upgrade counter was
+  zero.
+- The 18-gate map records 12 passed or closeout-passed gates, one failed gate,
+  and five not-reached gates. L54-Q2 was not established; L54-A is consumed
+  with no rerun, and Loop 54-B/C remain blocked.
+- Eighty-three focused Loop 54 tests and 40 mutation subchecks pass. The final
+  CI-style unittest suite passes 1,359 tests with three expected skips in 33.11
+  seconds external wall time at 650,461,184-byte peak RSS.
+- The final pytest suite passes 1,356 tests with three expected skips and 493
+  subtests in 33.99 seconds external wall time at 658,030,592-byte peak RSS.
+  This is five passing tests above the exact implementation baseline with no
+  lost skip or subtest. The first full closeout pass exposed three stale queue
+  assertions; those documentation expectations were advanced before the final
+  pass, with no real-data rerun.
+- Repository-wide Ruff, compileall, all 93 registry JSON files, root and both
+  Loop 54-A CLI help surfaces, and diff hygiene pass.
+
+Engineering capability added: NeuroDecodeKit executed one exact, bounded,
+sibling-blind VHDR compatibility gate and retained a fail-closed evidence
+record.
+
+Scientific claim not established: no EEG signal, event, trial, target, or model
+was accessed, and no neural advantage, decoding accuracy, generalization,
+real-time, portable-hardware, home-use, or clinical result was established.

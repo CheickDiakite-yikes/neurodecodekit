@@ -122,9 +122,12 @@
 > passed CI `31286428489` before the strict standard-library parser and CLI
 > were implemented and adversarially qualified on generated synthetic VHDR
 > fixtures. Twenty-four tests and 24 mutation subchecks cover all 22 refusal
-> classes. This exact implementation commit must become green before the one
-> real VHDR open. Contract preparation, recovery, request, decision, and
-> implementation work performed zero S20 path stats or payload reads. Loop 55
+> classes. Exact implementation `b486fdf` passed CI `31287819503` before the
+> one real VHDR open. The exact source size, Git-blob, and strict decode checks
+> passed, but the frozen format preamble gate parked at `L54A-F11`. No raw
+> first line or header value was published; sibling, protected, model, network,
+> and output counters stayed zero. L54-Q2 failed, the one execution is consumed
+> with no rerun, and Loop 54-B/C remain blocked. Loop 55
 > planning research now separates a
 > causal performed-hand gate from a harder causal 29-key gate, uses performed
 > actions rather than corrected intended text as the primary targets, and
@@ -734,12 +737,12 @@ The additive execution overlay in
 packets without changing those loop IDs or contracts. Work orders 1-5 are
 complete: registration recovery, local tooling audit, deterministic synthetic
 physiology/confound fixtures, classical adapter contracts, and contact-aware
-ear-channel semantics all passed their bounded gates. Work order 6 has recorded
-the recovery-bound exact Loop 54-A user decision, passed its decision CI, and
-locally qualified the strict parser against all 22 refusal classes. It now waits
-for the exact implementation commit and both CI jobs to become green. Every
-real-data, target, training, scoring, hardware, release, and claim row remains
-separately gated.
+ear-channel semantics all passed their bounded gates. Work order 6 completed
+the recovery-bound decision and parser qualification. Work order 7 then
+consumed the one exact VHDR execution and parked at `F11` after source/decode
+checks passed but the preamble gate failed. L54-Q2 is unavailable, no rerun is
+open, and work orders 10-12 remain blocked. Every new real-data, target,
+training, scoring, hardware, release, and claim row remains separately gated.
 
 Loop 45 is complete at its target-free mechanics boundary. Loops 46 and 47 are
 parked after the one consumed S21 event failed the candidate-versus-prior and
@@ -811,7 +814,6 @@ needs a separately preregistered representation repair before another
 development-person intake can be considered; S25 remains final-only and
 sealed. No roadmap row authorizes an experiment.
 
-L54-A is the sole newly preregistered content stage. Its exact authorization is
-green and its parser is locally synthetic-qualified, but the registered S20
-path remains unopened. The exact implementation and both CI jobs must become
-green before the one registered VHDR execution.
+L54-A is the sole consumed content stage. Its one execution passed no-follow,
+size, source-identity, and strict-decode checks, then failed the frozen preamble
+gate at `F11`. Do not rerun, amend from the result, or open Loop 54-B/C.

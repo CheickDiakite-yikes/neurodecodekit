@@ -263,10 +263,9 @@ excluded.
 
 ### Loop 54 - EEG Trial Geometry And Confound Ledger
 
-**Status: planning research complete; acquisition passed; L54-A exactly
-authorized and locally synthetic-qualified; implementation CI pending.**
-The one VHDR execution remains ineligible until the exact implementation and
-both CI jobs are green. All later content stages unauthorized.
+**Status: L54-A consumed and parked at F11; L54-Q2 failed; no rerun.**
+The one VHDR execution is closed. Loop 54-B/C and all later content stages are
+blocked or unauthorized.
 `docs/LOOP_54_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop54_eeg_trial_geometry_research.v0.json` now replace the coarse
 "header then signal/target" idea with four ordered stages. L54-A parses exactly
@@ -310,8 +309,13 @@ Request commit `19813a8` passed CI `31283297030`, and the exact Tier C decision
 is separately recorded at commit `2177b36`, whose CI `31286428489` passed both
 jobs before implementation. The strict standard-library parser and CLI now pass
 24 focused tests and 24 mutation subchecks covering all 22 refusal classes on
-generated fixtures. No S20 path was statted or opened. This exact
-implementation commit must become green before the one real VHDR open.
+generated fixtures. Exact implementation `b486fdf` passed CI `31287819503`
+before the one execution opened and read 11,705 VHDR bytes. No-follow, size,
+Git-blob identity, and strict decoding passed, but the frozen format preamble
+gate parked at `L54A-F11`. Runtime was 0.20 seconds at 24,051,712-byte peak
+RSS. No raw first line or header value was published; every sibling, signal,
+target, model, network, and output counter remained zero. L54-Q2 was not
+established, no rerun is open, and Loop 54-B/C remain blocked.
 
 ### Loop 55 - Fresh EEG Neural-Effect Gate
 

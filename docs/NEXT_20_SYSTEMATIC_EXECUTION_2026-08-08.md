@@ -16,8 +16,8 @@ decision after its own frozen packet and required remote-green evidence exist.
 | 3 | Build synthetic physiology/confound fixtures | B | Deterministic motor, timing, ocular, line-noise, dropout, and corruption cases with no target leakage | Complete |
 | 4 | Add classical EEG adapter contracts | B | Optional dependency boundaries, grouped-fit rules, leakage tests, no real execution | Complete |
 | 5 | Add a contact-aware ear-channel adapter | B | Synthetic contact/noise/missingness fixtures and exact channel-mask semantics only | Complete |
-| 6 | Freeze Loop 54-A decision and qualify parser | A/B then C decision | Recovery-bound exact packet, strict synthetic parser tests, green implementation before real access | In Progress: Implementation Local; CI Gate |
-| 7 | Execute Loop 54-A once | C | One 11,705-byte VHDR open; no sibling resolution; all 18 gates pass | Gated |
+| 6 | Freeze Loop 54-A decision and qualify parser | A/B then C decision | Recovery-bound exact packet, strict synthetic parser tests, green implementation before real access | Complete |
+| 7 | Execute Loop 54-A once | C | One 11,705-byte VHDR open; no sibling resolution; all 18 gates pass | Consumed; Parked F11; No Rerun |
 | 8 | Acquire tiny PhysioNet motor slice | C | Exactly nine pinned EDF files, 23,248,224 bytes, isolated receipt, no substitutions | Gated |
 | 9 | Run grouped public motor positive control | C | Participant/run grouping, fixed classical family, no-signal and corruption controls | Gated |
 | 10 | Execute Loop 54-B signal quality | C | Target-blind VHDR+EEG read, every channel retained, no transform, bounded aggregate output | Gated |
@@ -34,24 +34,22 @@ decision after its own frozen packet and required remote-green evidence exist.
 
 ## Current Route
 
-Work orders 1 and 2 are complete. Work order 3 is next because the local audit
-found NumPy `2.5.0` and SciPy `1.18.0` ready without adding dependencies. MNE
-`1.12.1` exposes the BrainVision reader and ICA, while scikit-learn, pyRiemann,
-MOABB, and Braindecode are absent. No broad install is justified before the
-synthetic fixture and adapter contracts show exactly what is needed.
+Work orders 1 and 2 are complete. The local audit found NumPy `2.5.0` and SciPy
+`1.18.0` ready without adding dependencies. MNE `1.12.1` exposes the
+BrainVision reader and ICA, while scikit-learn, pyRiemann, MOABB, and
+Braindecode are absent. No broad install has been justified.
 
 Work order 3 is complete. Contract commit `9238fd7` and implementation commit
 `ad361c8` were each remotely green before one measured synthetic closeout. The
 run used 1.20 seconds, 118,177,792-byte peak RSS, and 584,308 output bytes; all
-18 gates passed and the two generated files were removed. Work order 4 is now
-active at a contract-and-test-only boundary with no install or real execution.
-Its frozen plan registers low-frequency shrinkage LDA, causal CSP-LDA, and
+18 gates passed and the two generated files were removed. Work order 4's
+frozen plan registers low-frequency shrinkage LDA, causal CSP-LDA, and
 Riemannian MDM without choosing or importing one, plus twelve fail-closed
 leakage mutations. Exact implementation `eefb7b0` passed CI `31280581308`
 before one measured roundtrip. All 18 gates passed in 0.12 seconds at
 22,822,912-byte peak RSS with a 27,335-byte plan that was removed. Work order 4
-is complete. Work order 5 is active only for synthetic contact-mask,
-channel-noise, and missing-channel semantics. Its frozen seed-5505 contract
+is complete. Work order 5 closed synthetic contact-mask, channel-noise, and
+missing-channel semantics. Its frozen seed-5505 contract
 defines 48 items, 16 generic bilateral channels, six explicit masks, a fixed
 four-per-side target-blind rule, 16 refusals, and no physical switching. It
 authorizes no hardware or real data. Contract commit `c6e216f` passed CI
@@ -71,9 +69,14 @@ decision is preserved in separate human and machine records. Decision commit
 `2177b36` passed CI `31286428489` before implementation. The strict
 standard-library parser and dry-run-first CLI now pass 24 focused tests and 24
 mutation subchecks covering all 22 refusal classes, with zero S20 path stats or
-reads and no retained fixture. Work order 6 remains in progress until this
-exact implementation commit passes both CI jobs. Work order 7 stays gated until
-then; its one real S20 VHDR read remains the next and only eligible execution.
+reads and no retained fixture. Exact implementation `b486fdf` passed CI
+`31287819503` before work order 7 consumed one VHDR open and 11,705 read bytes.
+Source size, Git-blob identity, and strict decoding passed, but the frozen
+format preamble gate parked at `L54A-F11`. Runtime was 0.20 seconds at
+24,051,712-byte peak RSS; sibling, protected, model, network, and output
+counters stayed zero. Work orders 6 and 7 are closed. L54-Q2 failed, there is
+no rerun, and work orders 10-12 remain blocked. Work order 8 remains a separate
+gated Tier C acquisition and is not opened by this result.
 
 This queue never authorizes S20 interpretation, PhysioNet acquisition, target
 delivery, training, scoring, hardware, release, or a scientific claim by

@@ -86,6 +86,8 @@ requests, and these files:
 - `registries/contact_aware_ear_channel_implementation.v0.json`
 - `docs/CONTACT_AWARE_EAR_CHANNEL_RESULT.md`
 - `registries/contact_aware_ear_channel_result.v0.json`
+- `docs/LOOP_54_STAGE_A_VHDR_RESULT.md`
+- `registries/loop54_stage_a_vhdr_result.v0.json`
 - `docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md`
 - `registries/loop32_research_boundary.v0.json`
 - `docs/POST_20_ROADMAP.md`
@@ -130,8 +132,8 @@ Do not reset, revert, delete, or overwrite work already present.
   MOABB, and Braindecode are absent. The audit used 14.52799025 seconds,
   173,211,648-byte maximum child RSS, and 9,416 retained bytes with every data,
   target, model, training, scoring, network, provider, and hardware counter at
-  zero. The active autonomous work is the NumPy/SciPy synthetic physiology and
-  confound fixture pack; no install or real-data action follows automatically.
+  zero. The NumPy/SciPy synthetic physiology and confound fixture pack later
+  completed; no install or real-data action follows from the audit.
 - Work order 3 is preregistered at a fixture-only boundary: seed 5503, 96 paired
   items, eight factors, 48/32/16 partitions, eight deterministic mutations,
   one thread/worker, 60 seconds, 512 MiB RSS, and 4 MiB output. The lazy
@@ -147,7 +149,7 @@ Do not reset, revert, delete, or overwrite work already present.
 - Work order 4 is complete. Its standard-library planner keeps low-frequency
   shrinkage LDA, causal CSP-LDA, and Riemannian MDM unselected, with train-only
   fits, pair/group isolation, target-blind check/final use, zero future context,
-  canonical hashing, and twelve leakage refusals. Continue only work order 5.
+  canonical hashing, and twelve leakage refusals. Work order 5 also completed.
   Its frozen synthetic contract uses seed 5505, 48 items, 16 generic bilateral
   channels, six masks, a fixed target-blind four-per-side policy, equal side
   weights, and 16 refusals. Contract commit `c6e216f` passed CI `31281290300`
@@ -156,7 +158,8 @@ Do not reset, revert, delete, or overwrite work already present.
   implementation `76ccc63` passed CI `31282344300` before one measured
   roundtrip. All 18 gates passed in 0.40 seconds at 55,394,304-byte peak RSS
   with 938,874 output bytes and zero retained files. Work order 5 is complete.
-  Work order 6 now has the recovery-bound exact user decision recorded in
+  Work order 6 completed the recovery-bound exact decision and strict parser
+  qualification recorded in
   `docs/LOOP_54_STAGE_A_RECOVERY_AUTHORIZATION_PACKET.md` and
   `registries/loop54_stage_a_recovery_authorization_request.v1.json`, plus its
   separate decision doc and registry. Request commit `19813a8` passed CI
@@ -164,10 +167,14 @@ Do not reset, revert, delete, or overwrite work already present.
   before implementation. Read `docs/LOOP_54_STAGE_A_VHDR_IMPLEMENTATION.md`
   and `registries/loop54_stage_a_vhdr_implementation.v0.json`. The strict
   standard-library parser, dry-run CLI, ledger inspector, no-follow source
-  guard, and all 22 refusal classes are locally synthetic-qualified. The real
-  S20 VHDR read remains gated until this exact implementation commit and both
-  CI jobs are green. Do
-  not infer AirPods capability, implement physical switching,
+  guard, and all 22 refusal classes are synthetic-qualified. Exact
+  implementation `b486fdf` passed CI `31287819503` before work order 7 consumed
+  the one registered execution. One 11,705-byte VHDR open passed no-follow,
+  size, Git-blob, and strict-decode checks, then parked at `L54A-F11` because
+  the frozen preamble gate failed. Runtime was 0.20 seconds at 24,051,712-byte
+  peak RSS; no sibling, protected, model, network, hardware, or output access
+  occurred. L54-Q2 failed, no rerun is open, and Loop 54-B/C are blocked. Do
+  not reopen S20, infer AirPods capability, implement physical switching,
   install an optional backend, connect hardware, fit, infer, select, score, or
   access real/public data.
 - RW1 closes metadata-only local intake. RW2 closes bounded, redacted signal
@@ -449,7 +456,8 @@ green before the one invocation. All four files and 96,090,264 bytes matched;
 runtime was 3.629499 seconds, peak RSS 63,225,856 bytes, peak incremental disk
 102,035,529 bytes, and every forbidden counter zero. The gate has no rerun.
 Do not reopen, parse, interpret, split, model, or score S20 from this result.
-Stop before any Loop 54 content stage.
+Loop 54-A later received its own exact decision and consumed result as recorded
+below; stop before every other Loop 54 content stage.
 
 Loop 54 planning research is complete and reviewable at:
 
@@ -465,13 +473,13 @@ trial rather than each key window as the future inference unit, and creates no
 split or model. The committed Loop 19 extractor remains historical evidence but
 is ineligible for this future claim path because it co-loads annotations, MAT,
 and signal, excludes EOG-named channels, and writes plaintext labels. Loop 53
-has completed cleanly; each real L54-A/B/C stage still needs a separate exact
-Tier C sequence. The newer L54-A contract freezes this order: green contract,
-green exact decision, synthetic-only implementation, green implementation, then
-one real execution. Do not implement or open any real Loop 54 stage from the
-older planning packet alone.
+completed cleanly. L54-A later completed its separate exact Tier C sequence;
+L54-B/C remain blocked and separately unauthorized. The L54-A contract froze
+this order: green contract, green exact decision, synthetic-only implementation,
+green implementation, then one real execution. Do not open any other real Loop
+54 stage from the older planning packet alone.
 
-L54-A is now prospectively frozen at registration commit `c114623` in:
+L54-A was prospectively frozen at registration commit `c114623` in:
 
 - `docs/LOOP_54_STAGE_A_VHDR_PREREGISTRATION.md`;
 - `registries/loop54_stage_a_vhdr_contract.v0.json`; and
@@ -489,12 +497,17 @@ payload is byte-identical at pinned commit `2232993`, whose CI passed both
 jobs, and exact-tree Ruff `0.15.20` replay passed 1,095 tests with three skips.
 The recovery-bound v1 packet and request bind those artifacts while keeping
 every authorization and S20-access field false in those immutable snapshots.
-Request commit `19813a8` passed CI `31283297030`; the exact Tier C decision is
-now recorded separately. Its commit must become green before synthetic parser
-implementation, and that
-implementation must become green before the one real VHDR open. Do not stat the
-local path, implement the parser, or open S20 from the preregistration,
-recovery, request, or ungreen decision alone.
+Request commit `19813a8` passed CI `31283297030`; exact decision `2177b36`
+passed CI `31286428489`; and exact implementation `b486fdf` passed CI
+`31287819503` before one execution. Read
+`docs/LOOP_54_STAGE_A_VHDR_RESULT.md` and
+`registries/loop54_stage_a_vhdr_result.v0.json`. The source passed no-follow,
+size, Git-blob, and strict-decoding checks but failed the frozen preamble gate
+at `L54A-F11`. One VHDR open and 11,705 read bytes were consumed in 0.20 seconds
+at 24,051,712-byte peak RSS. No raw first line or header field was published;
+all sibling, protected, model, network, hardware, and output counters stayed
+zero. L54-Q2 was not established. Do not rerun, amend from the result, use a
+fallback parser, reopen S20, or proceed to Loop 54-B/C.
 
 Loop 55 planning research is also complete and reviewable at:
 
@@ -611,8 +624,9 @@ preparation alone do not authorize RW3. The parked Loop 24 result and any Loop
    unopened and do not repurpose it. Loop 25 seeds 2501 and 2502 are consumed
    for the completed mechanics gate; do not reopen, rerun, or repurpose them.
    Loop 53 passed once and is consumed with no rerun.
-   Loop 54 planning is complete and L54-A is preregistered, but every real VHDR,
-   EEG, VMRK, and MAT content stage remains separately unauthorized. Loop 55
+   Loop 54-A is consumed and parked at F11 with no rerun. Its one VHDR read is
+   closed; every EEG, VMRK, MAT, sibling, and later content stage remains
+   blocked or separately unauthorized. Loop 55
    planning is complete but remains Loop 54 dependent and experimentally `Not
    Started`; it authorizes no split, target, model, training, inference, or
    score. Loop 56 planning is complete but its aggregate-only final verdict
@@ -692,7 +706,8 @@ preparation alone do not authorize RW3. The parked Loop 24 result and any Loop
    96,090,264-byte four-file pass, measured caps, zero forbidden counters,
    consumed no-rerun state, and uninterpreted-payload boundary consistent. Keep
    Loop 54's four-stage VHDR/EEG/VMRK+MAT firewall, 48-trial floor, 22 gates,
-   30 refusals, and zero real-stage access consistent. Keep Loop 55's ordered
+   30 refusals, one consumed VHDR open, failed L54-Q2 gate, zero sibling or
+   protected access, and blocked B/C route consistent. Keep Loop 55's ordered
    causal hand/key endpoints, performed-action target, noncausal centered
    diagnostic, twelve-condition control matrix, trial-level exact inference,
    at-most-12-fit and 10,000-parameter ceilings, one-shot target order, and

@@ -93,8 +93,8 @@
 > before one measured synthetic roundtrip. Read
 > `docs/CONTACT_AWARE_EAR_CHANNEL_RESULT.md` and its result registry. All 18
 > gates passed in 0.40 seconds at 55,394,304-byte peak RSS with 938,874 output
-> bytes and zero retained files. Work order 5 is complete. Continue work order
-> 6 through the current recovery-bound Loop 54-A packet in
+> bytes and zero retained files. Work order 5 is complete. Work order 6 then
+> completed the recovery-bound Loop 54-A decision and parser qualification in
 > `docs/LOOP_54_STAGE_A_RECOVERY_AUTHORIZATION_PACKET.md` and
 > `registries/loop54_stage_a_recovery_authorization_request.v1.json`. Every
 > authorization flag remains false in those immutable snapshots. Request
@@ -102,32 +102,24 @@
 > `2177b36` passed CI `31286428489` before implementation. Read
 > `docs/LOOP_54_STAGE_A_VHDR_IMPLEMENTATION.md` and its registry. The strict
 > parser, dry-run-first CLI, bounded ledger, and all 22 refusal classes are
-> locally qualified on generated synthetic fixtures with zero S20 path stats or
-> reads. Require this exact implementation commit and both CI jobs to become
-> green before the one real VHDR open. No hardware,
-> physical electrode switching, architecture execution, model, fitting,
-> inference, scoring, or real-data action is permitted.
+> qualified on generated synthetic fixtures. Exact implementation `b486fdf`
+> passed CI `31287819503` before work order 7 consumed the one registered
+> execution. Read `docs/LOOP_54_STAGE_A_VHDR_RESULT.md` and its result registry.
+> One 11,705-byte VHDR open passed no-follow, size, Git-blob, and strict-decode
+> checks, then parked at `L54A-F11` because the frozen preamble gate failed.
+> Runtime was 0.20 seconds at 24,051,712-byte peak RSS. No sibling, signal,
+> marker, MAT, target, model, network, hardware, or output access occurred.
+> L54-Q2 was not established, no rerun is open, and Loop 54-B/C are blocked.
 >
-> Current handoff, 2026-08-06 after Loop 54-A preregistration: registration
-> commit `c114623` is pushed on `codex/loop-54a-vhdr-preregistration` and binds
-> exactly one 11,705-byte S20 VHDR. The strict future parser may use only the
-> standard library, may open that file once, and may record EEG/VMRK references
-> only as inert basenames without resolving, statting, hashing, or opening any
-> sibling. The contract freezes 18 gates, 22 refusals, one thread/worker, 30
-> seconds, 256 MiB RSS, 1 MiB output, one execution, zero network bytes, and no
-> rerun. Local qualification passes 1,095 tests with 3 expected skips; GitHub
-> registration CI `31127199848` was retried at exact commit `c114623` on
-> 2026-08-08. Optional Neuro Readers passed in 48 seconds; Base Python installed
-> Ruff `0.16.2` from the historical floating declaration and stopped on 400
-> later repository-wide findings. The frozen preregistration, contract, and
-> invariant test are byte-identical at pinned-toolchain commit `2232993`, whose
-> CI `31132586790` passed both jobs. Exact-tree local replay with Ruff `0.15.20`
-> passed 1,095 tests with 3 expected skips. Read the additive recovery record;
-> the old draft request remains non-actionable. The v1 recovery-bound packet
-> and request are the immutable decision surface. The exact decision is green,
-> and the synthetic-only implementation is locally complete pending its own
-> exact green commit. Zero S20 path stats, header reads, sibling reads, targets,
-> models, or retained experiment bytes occurred.
+> Current handoff, 2026-08-08 after the consumed Loop 54-A execution: preserve
+> registration `c114623`, pinned-toolchain proof `2232993`, request `19813a8`,
+> decision `2177b36`, and implementation `b486fdf` as ordered evidence. The
+> all-gates conjunction failed only at the strict required-structure gate after
+> source identity and decoding passed. The raw first line and all header values
+> remain unpublished and unavailable. Do not reopen S20, retry with MNE or a
+> fallback parser, resolve a sibling, amend the parser from this outcome, start
+> Loop 54-B/C, or promote a scientific claim. Work order 8 remains an
+> independent, separately gated public-data acquisition route.
 > Preserve the unrelated tracker inspection NDJSON.
 >
 > Additive architecture research, 2026-08-06: read

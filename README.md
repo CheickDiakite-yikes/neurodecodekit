@@ -47,7 +47,7 @@ irreversible Tier C events.
 | Train-only failure discrimination | The consumed Stage B primary reached macro CER `0.953566` versus `0.822045` for its train-only prior; all six full-size causal/linear fits were finite and stable, but none cleared the prior | `H4` stable nonseparability is supported and fixed timing-offset `H3` has evidence against it; the exact `L50-R05` route parks S24 acquisition for this model family, with no neural advantage or rerun |
 | Temporal-representation repair | The consumed Stage C synthetic candidate reached CER `0.433333` and `1/8` exact versus ablation CER `1.000000`; its `0.566667` CER advantage passed, but the absolute `<=0.10` CER and `>=7/8` exact gates failed | Temporal context was usable on the purpose-built fixture, but Stage C is parked without rerun and establishes no real neural-decoding benefit |
 | Fresh EEG acquisition gate | Loop 53 acquired and opaque-verified the exact public S20 session-2 block-2 bundle: 4 files, `96,090,264` bytes, `3.629499s`, 63,225,856-byte peak RSS, and all 10 gates passed | Acquisition mechanics are proven and the one invocation is consumed; no header, marker, signal sample, MAT field, target, cache, split, or model was interpreted or run |
-| Fresh EEG qualification gate | Loop 54 separates strict VHDR-only metadata, target-blind VHDR+EEG quality, isolated target-bearing VMRK+MAT reconciliation, and aggregate closeout; L54-A binds one exact 11,705-byte header, 18 gates, 22 refusals, and a one-shot strict parser boundary | Decision `2177b36` and both CI jobs are green; the standard-library parser and CLI are synthetic-qualified with all 22 refusal classes covered, while S20 remains unopened until this exact implementation commit is green |
+| Fresh EEG qualification gate | Loop 54 separates strict VHDR-only metadata, target-blind VHDR+EEG quality, isolated target-bearing VMRK+MAT reconciliation, and aggregate closeout; L54-A bound one exact 11,705-byte header, 18 gates, 22 refusals, and a one-shot strict parser boundary | The one execution passed source size/hash and strict decoding but parked at `F11` because the format preamble did not match; L54-Q2 failed, no rerun is open, and stages B/C remain blocked |
 | Fresh EEG neural-effect design | Loop 55 now separates a causal pre-keypress performed-hand gate from a harder causal 29-key gate, with performed actions as primary targets, a post-keypress diagnostic, 12 matched conditions, exact trial-level tests, and one-shot target order | Planning research is complete and Loop 54 dependent; the S20 bundle is acquired but uninterpreted, the experiment is `Not Started`, and no target, model, prediction, score, neural advantage, or decoding result exists |
 | Bounded AI research guard | A dependency-free Loop 55 policy now validates and hashes strict synthetic AI recipe proposals, rejects target leakage, future context, LLMs, pretrained weights, unknown fields, model runs, and cap expansion, and reserves at most four future train-inner proposal rounds inside the existing 12-fit ceiling | The synthetic interface is implemented and measured; no AI proposal has accessed S20, trained a model, or produced neural evidence, and any future real proposal phase remains Loop 54 dependent and separately Tier C authorized |
 | Open EEG R&D strategy | Current 2025-2026 evidence supports the compact specialist path and adds a prospective 23,248,224-byte public motor positive control, an interpretable motor-physiology rung, classical EEG baselines, and local-first contributor receipts | Research and planning only: no public EEG payload, S20 content, model, target, or pretrained weight was opened, and every real execution remains separately Tier C gated |
@@ -151,7 +151,7 @@ reconcile, event windows may not masquerade as independent trials, and Loop 54
 creates no split or model. See `docs/LOOP_54_PRIMARY_SOURCE_RESEARCH.md` and
 `registries/loop54_eeg_trial_geometry_research.v0.json`.
 
-The first real-content stage is frozen and implemented, but not executed. L54-A
+The first real-content stage is now consumed and parked. L54-A
 binds exactly one 11,705-byte S20 VHDR and requires a strict standard-library
 parser that cannot resolve, stat, or open its EEG, VMRK, or MAT siblings. Its
 18 acceptance gates, 22 refusal classes, one-thread/worker limit, 30-second and
@@ -162,11 +162,16 @@ parser that cannot resolve, stat, or open its EEG, VMRK, or MAT siblings. Its
 supports declared UTF-8, UTF-8 BOM, and explicitly declared Windows-1252;
 rejects malformed sections, keys, channels, sampling, source hashes, paths,
 outputs, operations, and claims; and emits only allowlisted declarations. Its
-24 focused tests and 24 mutation subchecks cover all 22 refusal classes. The
-registered S20 path has still not been statted or opened: one execution becomes
-eligible only after this exact implementation commit and both CI jobs are
-green. See `docs/LOOP_54_STAGE_A_VHDR_IMPLEMENTATION.md` and
-`registries/loop54_stage_a_vhdr_implementation.v0.json`.
+24 focused tests and 24 mutation subchecks cover all 22 refusal classes.
+Implementation `b486fdf` passed CI `31287819503` before the one registered
+execution opened exactly 11,705 VHDR bytes once. Source size, Git-blob identity,
+and strict decoding passed; required-structure validation parked at
+`L54A-F11` because the format preamble was missing under the frozen contract.
+The command used 0.20 seconds and 24,051,712-byte peak RSS, touched no sibling,
+signal, marker, MAT, target, model, network, or hardware surface, and wrote no
+registered output. L54-Q2 was not established, no rerun is open, and Loop 54-B
+and 54-C remain blocked. See `docs/LOOP_54_STAGE_A_VHDR_RESULT.md` and
+`registries/loop54_stage_a_vhdr_result.v0.json`.
 
 Loop 55 planning research then defines the scientific question that becomes
 eligible only after Loop 54 reports at least 48 unambiguous performed trials.
@@ -570,12 +575,16 @@ Read this before interpreting any number in the repository.
   `docs/LOOP_54_STAGE_A_RECOVERY_AUTHORIZATION_DECISION.md` and its machine
   decision. Decision commit `2177b36` passed CI `31286428489`, including Base
   Python job `93176025548` and Optional Neuro Readers job `93176025560`, before
-  parser work began. The dependency-free implementation now validates strict
+  parser work began. The dependency-free implementation validates strict
   codepages, sections, inert sibling basenames, ordered channels, decimal
   sampling, no-follow source identity, bounded exclusive output, and all 22
   refusal classes on generated synthetic fixtures. No generated fixture was
-  retained. No S20 path was statted or opened, and real VHDR access still waits
-  for this exact implementation commit and both CI jobs to become green.
+  retained. Exact implementation `b486fdf` then passed CI `31287819503` before
+  the one execution. It opened and read the exact 11,705-byte VHDR once; source
+  size, Git-blob identity, and strict decoding passed, but the frozen format
+  preamble gate failed at `F11`. The raw first line was not published, sibling
+  and protected counters stayed zero, output bytes stayed zero, L54-Q2 did not
+  pass, and no rerun or Loop 54-B/C route is open.
 - **Local EEG tooling audit:** implementation commit `e1de855` passed exact-SHA
   push CI `31277731869` before one zero-network inventory. NumPy `2.5.0` and
   SciPy `1.18.0` expose the bounded array/signal core; MNE `1.12.1` exposes its
@@ -1482,6 +1491,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/contact_aware_ear_channel_result.v0.json](registries/contact_aware_ear_channel_result.v0.json) | machine-readable all-gates-pass work-order-5 receipt and gated route to Loop 54-A parser qualification |
 | [docs/LOOP_54_STAGE_A_VHDR_IMPLEMENTATION.md](docs/LOOP_54_STAGE_A_VHDR_IMPLEMENTATION.md) | green-decision-bound strict parser, synthetic adversarial qualification, one-shot filesystem order, CLI, resources, and no-S20-access boundary |
 | [registries/loop54_stage_a_vhdr_implementation.v0.json](registries/loop54_stage_a_vhdr_implementation.v0.json) | machine-readable parser source hashes, 22 refusal classes, zero real-access ledger, and pending exact-implementation-green gate |
+| [docs/LOOP_54_STAGE_A_VHDR_RESULT.md](docs/LOOP_54_STAGE_A_VHDR_RESULT.md) | consumed one-shot F11 park with passed source/decode gates, failed preamble gate, resource measurements, zero sibling/protected access, and no-rerun route |
+| [registries/loop54_stage_a_vhdr_result.v0.json](registries/loop54_stage_a_vhdr_result.v0.json) | machine-readable 18-gate result map, one-open access ledger, unavailable fields, blocked downstream route, and L54-Q1 claim ceiling |
 | [docs/NEXT_20_LOOPS_TRACKER.md](docs/NEXT_20_LOOPS_TRACKER.md) | original 20-loop tracker, current post-roadmap gate, and planning-only Loops 25-44 summary |
 | [docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx](docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx) | ten-sheet visual tracker preserved at the last reviewed Stage A snapshot; use the Markdown tracker and machine roadmap for the current Stage B result because a prior workbook import reached 1.57 GiB peak RSS |
 | [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) | closed/current post-NeuroToken gates plus links to the next tranche |

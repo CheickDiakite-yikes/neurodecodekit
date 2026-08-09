@@ -82,9 +82,7 @@ class NextScientificLoopsTests(unittest.TestCase):
                 47: "Parked; Shared Attribution Gate Failed",
                 48: "Complete A/B; Stage C Consumed and Parked",
                 53: "Consumed; Acquisition Passed; No Rerun",
-                54: (
-                    "Stage A Implementation Synthetic-Qualified; Pending Exact Commit CI"
-                ),
+                54: "Stage A Consumed and Parked F11; L54-Q2 Failed; No Rerun",
                 55: "Planning Research Complete; Loop 54 Dependent",
                 56: "Planning Research Complete; Loop 55 Result Dependent",
             }.get(row["loop_id"], "Not Started")
@@ -203,7 +201,8 @@ class NextScientificLoopsTests(unittest.TestCase):
         for loop_id in range(45, 65):
             self.assertIn(f"Loop {loop_id}", roadmap)
         self.assertIn("Loop 53 acquisition passed once with no rerun", roadmap)
-        self.assertIn("content stages unauthorized", roadmap)
+        self.assertIn("L54-A consumed and parked at F11", roadmap)
+        self.assertIn("Loop 54-B/C", roadmap)
         self.assertIn("unauthorized", roadmap)
         self.assertIn("S25 stays final-only", roadmap)
 
