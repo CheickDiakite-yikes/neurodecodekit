@@ -253,23 +253,31 @@ rerun, amend the parser from this result, inspect a sibling, or continue into
 Loop 54-B/C. CML-v0, PhysioNet, targets, training, inference, scoring, hardware,
 and scientific claims remain separately gated.
 
-The additive architecture pass now selects `CML-v0` as the next hypothesis:
+The additive architecture pass selected `CML-v0`, and work order 13 has now
+consumed its one bounded synthetic implementation gate:
 
 ```bash
 cat docs/LOOP_55_CAUSAL_MOTOR_LATTICE_ARCHITECTURE_RESEARCH.md
 python -m json.tool registries/loop55_causal_motor_lattice_research.v0.json >/dev/null
+cat docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_RESULT.md
+python -m json.tool registries/causal_motor_lattice_synthetic_result.v0.json >/dev/null
 ```
 
 It is a source-independent, failure-addressable research design with separate
 potential, mu, and beta views; rank-8 spatial mixers; three temporal cells per
 view; a 24-dimensional bottleneck; and a physical keyboard lattice whose hand
 probability is an exact marginal of the 29-key output. The maximum-primitive
-formula is `24C + 2,999`, or 4,535 parameters at 64 channels. It also corrects
-the public qualification ladder: PhysioNet left/right execution and a future
-EEG+EMG pre-movement-onset slice test different axes and need separate exact
-Tier C contracts. Synthetic implementation has not started. Do not implement
-or run CML-v0, download either public prospect, touch S20, amend frozen Loop
-54/55 artifacts, or promote a scientific claim from this research alone.
+formula is `24C + 2,999`, or 4,535 parameters at 64 channels. Contract commit
+`67709a3` and exact implementation `90fa467` were separately green before one
+seed-5513 run. It reached `1.0` hand and key accuracy on all 16 constructed
+signal-bearing check rows, localized the three branches, passed the causal and
+key/hand consistency controls, and replayed the checkpoint exactly. Eighteen of
+19 gates passed, but float32 common-mode logit error `1.9073486e-6` exceeded
+the frozen `1e-6` tolerance. The run is consumed and parked at `CML-R0`; final
+targets stayed closed and no rerun or post-outcome tolerance change is open.
+It used 6.553 seconds, 398,737,408-byte peak RSS, and 37,371 output bytes. Do
+not rerun seed 5513, download either public prospect, touch S20, enter Loop
+54-B/C, or promote this synthetic mechanics result into a scientific claim.
 
 The additive foundation-model decoder strategy is now explicit:
 

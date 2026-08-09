@@ -181,11 +181,10 @@
    `76ccc63` passed CI `31282344300` before one measured roundtrip. Read
    `docs/CONTACT_AWARE_EAR_CHANNEL_RESULT.md` and its result registry. All 18
    gates passed in 0.40 seconds at 55,394,304-byte peak RSS with 938,874 output
-   bytes and zero retained generated files. Work order 5 is complete. Continue
-   work order 6 only after the exact decision commit is remotely green. Then
-   qualify the parser on generated synthetic fixtures without touching S20;
-   that implementation must become green before the one real VHDR read, and
-   every sibling stays closed.
+   bytes and zero retained generated files. Work order 5 is complete. Work
+   orders 6 and 7 subsequently qualified the strict parser and consumed the one
+   real VHDR compatibility check described below; do not repeat either stage or
+   open a sibling.
    Then read `docs/LOOP_55_PRIMARY_SOURCE_RESEARCH.md` and
    `registries/loop55_eeg_neural_effect_research.v0.json`. Loop 55 planning
    separates a higher-power causal performed-hand endpoint from a harder
@@ -224,16 +223,20 @@
    local-first aggregate receipt for EEG contributors. This is additive
    planning only: no public EEG payload, S20 path, target, model, checkpoint,
    training, inference, score, or upload was accessed or authorized.
-   Then read
-   `docs/LOOP_55_CAUSAL_MOTOR_LATTICE_ARCHITECTURE_RESEARCH.md` and
-   `registries/loop55_causal_motor_lattice_research.v0.json`. The additive
-   `CML-v0` proposal separates potential, mu, and beta branches, derives hand
-   probabilities exactly from a physical key lattice, and uses 4,535 trainable
-   parameters in the 64-channel/18-primitive reference. It also separates the
-   public laterality and EEG+EMG pre-movement timing controls. This is
-   architecture research only: synthetic implementation, public downloads,
-   Loop 54 content, S20 modeling, and every scientific claim remain
-   unauthorized.
+   Then read the CML-v0 architecture research followed by
+   `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
+   `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and
+   `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_RESULT.md` with their matching
+   registries. Contract `67709a3` and implementation `90fa467` were each
+   remotely green before one seed-5513 run of the exact 4,535-parameter model.
+   It reached `1.0` hand/key accuracy on 16 constructed signal-bearing check
+   rows, localized all three branches, preserved causal future-tail behavior,
+   and replayed exactly. Eighteen of 19 gates passed. Float32 common-mode logit
+   error `1.9073486e-6` exceeded the frozen `1e-6` tolerance, so the run parked
+   at `CML-R0`; synthetic final stayed closed and there is no rerun. Runtime was
+   6.553 seconds at 398,737,408-byte peak RSS with 37,371 output bytes. Public
+   downloads, Loop 54-B/C, S20 modeling, protected targets, hardware, and every
+   scientific claim remain unauthorized.
    Then read `docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md` and
    `registries/foundation_model_decoder_strategy.v0.json`. The product
    architecture now treats the compact causal model as a sensor-to-evidence

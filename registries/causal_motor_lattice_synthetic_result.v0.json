@@ -1,0 +1,237 @@
+{
+  "schema_name": "neurodecodekit.causal_motor_lattice_synthetic_result",
+  "schema_version": "0.1.0",
+  "status": "consumed_parked_CML_R0_no_rerun_final_not_delivered",
+  "date": "2026-08-09",
+  "work_order": 13,
+  "title": "Causal Motor Lattice v0 Synthetic Factor-Isolation Result",
+  "proof_posture": "synthetic_architecture_mechanics_only_no_real_EEG_or_scientific_evidence",
+  "contract_binding": {
+    "path": "registries/causal_motor_lattice_synthetic_contract.v0.json",
+    "bytes": 27658,
+    "sha256": "4880c322d48611ed098182fe845e891150e8e53551c95c25c33a4914c7db0fd4",
+    "commit": "67709a3286a33f0947d57a97bf345a26d17dae45",
+    "push_CI_run": 31294479865
+  },
+  "implementation_binding": {
+    "path": "registries/causal_motor_lattice_synthetic_implementation.v0.json",
+    "bytes": 8251,
+    "sha256": "af24f4938d52cd6501d9ff1f51b1370d1416cc6bcb74030e986cce6f17887992",
+    "commit": "90fa467e5acf24a8a47eb8c96b1cb485a6a9076b",
+    "push_CI_run": 31295430105,
+    "base_python_job": 93199641141,
+    "optional_neuro_readers_job": 93199641193,
+    "both_required_jobs_passed_before_execution": true
+  },
+  "execution_identity": {
+    "fixture_seed": 5503,
+    "experiment_seed": 5513,
+    "registered_invocations": 1,
+    "registered_invocations_consumed": 1,
+    "rerun_allowed": false,
+    "post_outcome_tuning_or_protocol_change": false,
+    "candidate_id": "CML-v0-synthetic-64x18",
+    "input_shape": [
+      96,
+      64,
+      96
+    ],
+    "view_feature_shape": [
+      96,
+      3,
+      24
+    ],
+    "trainable_parameters": 4535,
+    "parameter_bytes_float32": 18140,
+    "primitive_count": 18,
+    "key_count": 29,
+    "residual_gain": 0.25,
+    "producer_is_causal": true,
+    "required_left_context_samples": 32,
+    "required_right_context_samples": 0,
+    "end_to_end_latency_measured": false
+  },
+  "decision": {
+    "status": "park",
+    "route": "CML-R0",
+    "check_gates_passed": 18,
+    "check_gates_total": 19,
+    "failed_check_gates": [
+      "common_mode_invariance"
+    ],
+    "check_passed": false,
+    "final_targets_delivered": false,
+    "final_scoring_events": 0,
+    "final_metrics_available": false,
+    "final_passed": false,
+    "scientific_claim_upgrade": false,
+    "failure_action": "park_without_tolerance_change_seed_change_tuning_or_rerun"
+  },
+  "failed_gate": {
+    "gate_id": "common_mode_invariance",
+    "metric": "maximum_absolute_key_logit_difference_after_uniform_common_mode_mutation",
+    "observed": 1.9073486328125e-06,
+    "maximum_allowed": 1e-06,
+    "excess_above_tolerance": 9.073486328125e-07,
+    "classification": "float32_numerical_invariant_failure",
+    "real_data_or_decoding_failure": false,
+    "may_be_waived_post_outcome": false,
+    "may_be_retested_under_this_contract": false
+  },
+  "check_metrics": {
+    "signal_bearing_rows": 16,
+    "signal_bearing_hand_accuracy": 1.0,
+    "signal_bearing_key_accuracy": 1.0,
+    "all_views_muted_hand_accuracy": 0.5,
+    "full_minus_all_views_muted_hand_accuracy": 0.5,
+    "potential_matching_ablation_hand_NLL_increase": 0.893310698796995,
+    "mu_matching_ablation_hand_NLL_increase": 0.340824578423053,
+    "beta_matching_ablation_hand_NLL_increase": 1.1720716443378478,
+    "mixed_full_hand_NLL": 0.00017032318282872438,
+    "mixed_all_views_muted_hand_NLL": 0.7433683276176453,
+    "spatial_reversal_unmirrored_hand_accuracy": 0.0,
+    "spatial_reversal_mirrored_hand_accuracy": 1.0,
+    "timing_only_pair_hand_probability_maximum_difference": 0.0,
+    "pure_noise_pair_hand_probability_maximum_difference": 0.0,
+    "hand_key_marginal_maximum_error": 5.960464477539063e-08,
+    "bounded_residual_maximum_absolute_value": 0.2499968707561493,
+    "causal_future_tail_prefix_logit_maximum_error": 0.0,
+    "peripheral_proxy_only_hand_accuracy": 1.0,
+    "channel_deranged_signal_bearing_hand_accuracy": 0.0,
+    "time_displaced_signal_bearing_hand_accuracy": 1.0
+  },
+  "branch_diagnostics": {
+    "potential": {
+      "full_hand_NLL": 0.00036975450348109007,
+      "matching_muted_hand_NLL": 0.8936804533004761,
+      "matching_ablation_is_largest": true
+    },
+    "mu": {
+      "full_hand_NLL": 0.004429276566952467,
+      "matching_muted_hand_NLL": 0.3452538549900055,
+      "matching_ablation_is_largest": true
+    },
+    "beta": {
+      "full_hand_NLL": 0.0033376726787537336,
+      "matching_muted_hand_NLL": 1.1754093170166016,
+      "matching_ablation_is_largest": true
+    },
+    "branch_ablation_proves_cortical_physiology": false
+  },
+  "causal_and_replay_controls": {
+    "causal_prefix_cutoff_errors": {
+      "48": 0.0,
+      "64": 0.0,
+      "80": 0.0
+    },
+    "common_mode_applied_after_train_normalization": true,
+    "future_tail_mutation_applied_only_after_declared_cutoff": true,
+    "checkpoint_loads": 1,
+    "second_training_run": false,
+    "check_prediction_SHA256": "5767de92fa31b3e454f191346113a89cc7ca882516a5904460bfd2962bcfe7ea",
+    "replayed_prediction_SHA256": "5767de92fa31b3e454f191346113a89cc7ca882516a5904460bfd2962bcfe7ea",
+    "replay_hash_match": true
+  },
+  "training": {
+    "parameter_update_runs": 1,
+    "optimizer": "AdamW",
+    "optimizer_steps": 600,
+    "training_rows": 24,
+    "gradient_ineligible_rows": 24,
+    "deterministic_algorithms": true,
+    "device": "CPU",
+    "dtype": "float32",
+    "early_stopping": false,
+    "checkpoint_selection": false,
+    "rerun_allowed": false,
+    "step_1_objective": 5.851936340332031,
+    "step_600_objective": 0.016010018065571785
+  },
+  "source_and_provenance": {
+    "synthetic_source_bytes_generated": 1145152,
+    "valid_sample_count": 9216,
+    "padding_fraction": 0.0,
+    "geometry_available": false,
+    "source_channel_identity": "synthetic_not_anatomical",
+    "projected_channel_identity": "generic_synthetic_not_anatomical",
+    "source_crop_sha256": "2e1b72aa283c205efb1c68e766ceacc15975f45b2449839dd8bea3e3f33c7d5e",
+    "normalized_signal_sha256": "fa16a422f6c2db55549b8e683299524312cc97ebbcf7261ac9f24a3fa6fd326c",
+    "projection_sha256": "b377e42f75c6493fe44082c1dbcee278debf2cc5dfbaec3db954dede94ee4a50",
+    "normalization_location_sha256": "9476f756480cde2d810e0c5bb88c8c214c8fbdd15dc9feffd9c159e7429b910a",
+    "normalization_scale_sha256": "0e5ff864be14c8a6bd2ec2d6fcf4e97af0f880448b66bd95b75aa2020970d2fb"
+  },
+  "resource_measurements": {
+    "runtime_seconds": 6.5530732499901205,
+    "peak_RSS_bytes": 398737408,
+    "free_disk_bytes_before": 43543154688,
+    "input_contract_bytes": 27658,
+    "checkpoint_bytes": 22952,
+    "report_bytes": 14419,
+    "total_generated_output_bytes": 37371,
+    "maximum_generated_output_bytes": 4194304,
+    "CPU_threads": 1,
+    "workers": 1,
+    "all_resource_gates_passed": true
+  },
+  "private_invocation_artifact_bindings": {
+    "checkpoint": {
+      "filename": "checkpoint.npz",
+      "bytes": 22952,
+      "sha256": "12b34f438c03629813cd6641815af33871e4b50d74188a45f145a27a18c10537"
+    },
+    "report": {
+      "filename": "report.json",
+      "bytes": 14419,
+      "sha256": "e4cd6d246e1a91975001d1a587488e3e87516c41082164286b8bac95699b582b"
+    },
+    "files_committed": false,
+    "files_removed_after_closeout": true,
+    "per_item_target_label_prediction_identity_text_or_path_committed": false
+  },
+  "access_counters": {
+    "synthetic_fixture_generations": 1,
+    "synthetic_signal_bytes_generated": 1145152,
+    "model_or_checkpoint_loads": 1,
+    "parameter_update_runs": 1,
+    "optimizer_steps": 600,
+    "model_inference_stages": 2,
+    "prediction_sets": 10,
+    "check_scoring_events": 1,
+    "final_scoring_events": 0,
+    "real_or_public_data_reads": 0,
+    "protected_target_or_label_reads": 0,
+    "S20_path_stats_or_reads": 0,
+    "PhysioNet_downloads_or_reads": 0,
+    "network_calls": 0,
+    "provider_calls": 0,
+    "pretrained_weight_or_external_embedding_reads": 0,
+    "stream_device_or_hardware_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "warnings": [
+    "Every signal target key channel and geometry identity in this gate is synthetic.",
+    "The sole failed check is a float32 numerical common-mode invariant not a real-data decoder result.",
+    "Perfect constructed-factor check accuracy does not imply that real EEG contains those factors.",
+    "The peripheral-only and time-displaced descriptive accuracies sharpen future controls but establish no real confound or robustness claim.",
+    "Synthetic final targets remained undelivered because every check gate was required.",
+    "Seed 5513 and this execution are consumed with no rerun or post-outcome tolerance change.",
+    "Loop 54 B and C PhysioNet and protected Loop 55 remain closed."
+  ],
+  "unavailable_fields": [
+    "synthetic_final_metrics",
+    "real_EEG_signal_quality",
+    "real_channel_names_reference_or_geometry",
+    "real_event_trial_or_key_ontology",
+    "biological_or_brain_specific_origin",
+    "real_decoding_accuracy_or_neural_advantage",
+    "unseen_person_or_cross_session_generalization",
+    "end_to_end_latency",
+    "portable_earbud_or_home_device_performance",
+    "assistive_diagnostic_or_clinical_utility"
+  ],
+  "claim_boundary": {
+    "engineering_capability_added": "The consumed run demonstrated that the exact 4535-parameter CML-v0 implementation can learn and localize constructed potential mu beta mixed spatial-reversal timing peripheral and noise behaviors while enforcing check-before-final isolation and deterministic checkpoint replay.",
+    "scientific_claim_not_established": "No real EEG or protected evidence was accessed and the synthetic gate parked so there is no EEG information neural advantage decoding accuracy brain-specific origin generalization real-time or portable-hardware result home-use result assistive result or clinical utility."
+  }
+}

@@ -51,7 +51,7 @@ irreversible Tier C events.
 | Fresh EEG neural-effect design | Loop 55 now separates a causal pre-keypress performed-hand gate from a harder causal 29-key gate, with performed actions as primary targets, a post-keypress diagnostic, 12 matched conditions, exact trial-level tests, and one-shot target order | Planning research is complete and Loop 54 dependent; the S20 bundle is acquired but uninterpreted, the experiment is `Not Started`, and no target, model, prediction, score, neural advantage, or decoding result exists |
 | Bounded AI research guard | A dependency-free Loop 55 policy now validates and hashes strict synthetic AI recipe proposals, rejects target leakage, future context, LLMs, pretrained weights, unknown fields, model runs, and cap expansion, and reserves at most four future train-inner proposal rounds inside the existing 12-fit ceiling | The synthetic interface is implemented and measured; no AI proposal has accessed S20, trained a model, or produced neural evidence, and any future real proposal phase remains Loop 54 dependent and separately Tier C authorized |
 | Open EEG R&D strategy | Current 2025-2026 evidence supports the compact specialist path and adds a prospective 23,248,224-byte public motor positive control, an interpretable motor-physiology rung, classical EEG baselines, and local-first contributor receipts | Research and planning only: no public EEG payload, S20 content, model, target, or pretrained weight was opened, and every real execution remains separately Tier C gated |
-| Causal Motor Lattice architecture | `CML-v0` assigns separate potential, mu, and beta views to rank-8 spatial mixers, fuses 72 features through a 24-value bottleneck, and derives hand probability exactly from a physical 29-key lattice; the 64-channel, 18-primitive reference has 4,535 parameters | Architecture research only: synthetic implementation is `Not Started`; PhysioNet laterality, EEG+EMG pre-movement timing, Loop 54, and protected S20 execution are separate unauthorized gates |
+| Causal Motor Lattice architecture | The exact 4,535-parameter `CML-v0` learned all constructed signal-bearing check rows at `1.0` hand/key accuracy, localized all three registered branches, passed hand/key marginal-consistency and causal future-tail checks, and replayed its checkpoint exactly | The one synthetic run passed 18/19 gates but parked at `CML-R0` when float32 common-mode error `1.9073486e-6` exceeded the frozen `1e-6` tolerance; final stayed closed, there is no rerun, and no real EEG or scientific result exists |
 | Foundation-model decoder bridge | FM-0 compiled all 12 synthetic plans; the one FM-1 Terra invocation then attempted 3 calls, returned 2 strict responses, and parked on a non-completed `FM-A02` response after 8.406 seconds at 39.3 MB peak RSS | Live bounded transport and fail-closed receipts worked, but the four-arm matrix did not complete and has no rerun; no real neural evidence or target was used, so no decoding or neural result exists |
 | AI budget and local-tool leverage | A $50 aggregate provider ceiling is split into conservative experiment caps while MNE, MOABB, pyRiemann, Braindecode, and future cEEGrid adapters carry local work first | The budget is not a spend target; $0.50 is reserved for incomplete FM-1 accounting, at least $30 stays behind future evidence gates, and a pending earbud-electrode patent is architecture context, not proof that AirPods read thoughts |
 | Local EEG tooling inventory | One green, zero-network audit found NumPy `2.5.0`, SciPy `1.18.0`, and MNE `1.12.1`; array/signal mechanics, BrainVision reading, and ICA are available in 14.53 seconds at 173.2 MB maximum child RSS, while scikit-learn, pyRiemann, MOABB, and Braindecode are absent | The next synthetic fixture work can proceed without an install; availability is engineering evidence only and establishes no dataset quality, neural effect, model accuracy, or device result |
@@ -225,24 +225,33 @@ support primary evidence. See
 `docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md` and
 `registries/open_eeg_rd_strategy.v0.json`.
 
-The architecture research now makes that specialist path concrete without
-opening a model stage. `CML-v0` separates slow potential shape, causal mu
-energy, and causal beta energy; each view has a rank-8 spatial mixer and three
-time cells. A 24-dimensional bottleneck feeds a fixed physical keyboard
-lattice plus a small 29-key residual. Hand probability is an exact marginal of
-the key distribution rather than a contradictory second head. The exact
-parameter formula is `24C + 2,549 + 25P`; at 64 channels and the maximum 18
-primitives it is 4,535 parameters. Same-checkpoint branch muting localizes
-failure but cannot prove cortical physiology.
+The architecture research made that specialist path concrete, and a separate
+bounded synthetic gate has now exercised it. `CML-v0` separates slow potential
+shape, causal mu energy, and causal beta energy; each view has a rank-8 spatial
+mixer and three time cells. A 24-dimensional bottleneck feeds a fixed physical
+keyboard lattice plus a small 29-key residual. Hand probability is an exact
+marginal of the key distribution rather than a contradictory second head. The
+exact parameter formula is `24C + 2,549 + 25P`; at 64 channels and the maximum
+18 primitives it is 4,535 parameters.
+
+The one synthetic run learned all 16 constructed signal-bearing check rows,
+routed each registered factor to its matching branch, preserved exact replay,
+and passed every resource and access gate. It nevertheless parked because the
+maximum float32 common-mode logit difference was `1.9073486e-6`, above the
+preregistered `1e-6` ceiling. That exact failure cannot be waived after seeing
+it; seed 5513 is consumed, final remained undelivered, and there is no rerun.
+Perfect performance on invented factors is software evidence only and cannot
+prove cortical physiology or neural decoding.
 
 The qualification ladder is now two-axis because one tiny public dataset does
 not test both questions. The existing 23,248,224-byte PhysioNet prospect tests
 left/right execution mechanics; a separately scoped 2026 EEG+EMG MRCP slice
 would test true pre-movement alignment against EMG onset. Both remain
 undownloaded and unauthorized, and both must pass independently before this
-architecture can become eligible for a future S20 freeze. See
-`docs/LOOP_55_CAUSAL_MOTOR_LATTICE_ARCHITECTURE_RESEARCH.md` and
-`registries/loop55_causal_motor_lattice_research.v0.json`.
+architecture can become eligible for a future S20 freeze. See the architecture
+research plus `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
+`docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and
+`docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_RESULT.md` with their matching registries.
 
 Loop 56 planning research defines how to report whatever survives those gates
 without pretending EEG and MEG are interchangeable. It freezes five classes:
@@ -656,14 +665,19 @@ Read this before interpreting any number in the repository.
   causal motor-physiology assay and the compact model. No public payload,
   protected content, model, checkpoint, target, or pretrained weight opened;
   the strategy is not an execution contract.
-- **Causal Motor Lattice architecture research:** `CML-v0` is the next compact
-  hypothesis, not an execution. Three causal physiological views, an exact
-  key-to-hand marginal, a fixed physical keyboard lattice, eight target-blind
-  same-checkpoint probes, and the formula `24C + 2,549 + 25P` make failures
-  localizable under the existing 10,000-parameter ceiling. The revised public
-  ladder separates PhysioNet left/right mechanics from an EEG+EMG pre-movement
-  timing check. Synthetic implementation, both public payload stages, Loop 54,
-  and S20 training/scoring remain `Not Started` or unauthorized.
+- **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
+  implementation `90fa467` were separately green before one seed-5513 run of
+  the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
+  all 16 constructed signal-bearing check rows, localized potential, mu, and
+  beta factors under matching branch ablations, passed key-to-hand marginal
+  consistency and zero-right-context future-tail checks, and replayed its
+  checkpoint hash exactly. Eighteen of 19 check gates passed. Float32
+  common-mode key-logit error was `1.9073486e-6`, above the frozen `1e-6`
+  tolerance, so the one run parked at `CML-R0`; synthetic final targets stayed
+  closed and no rerun is permitted. Runtime was 6.553 seconds at 398,737,408
+  bytes peak RSS with 37,371 generated bytes. PhysioNet, Loop 54-B/C, S20,
+  protected targets, model claims, hardware, and scientific promotion remain
+  closed.
 - **Foundation-model decoder strategy:** the product path now explicitly uses
   a compact causal sensor adapter as a bridge into frozen `gpt-5.6-sol`, not as
   the final language model. Hosted Sol receives only CTC n-best text and
@@ -1542,6 +1556,12 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/open_eeg_rd_strategy.v0.json](registries/open_eeg_rd_strategy.v0.json) | machine-readable source pins, tool decisions, nine-file public prospect, resource caps, authorization zeros, and claim boundary |
 | [docs/LOOP_55_CAUSAL_MOTOR_LATTICE_ARCHITECTURE_RESEARCH.md](docs/LOOP_55_CAUSAL_MOTOR_LATTICE_ARCHITECTURE_RESEARCH.md) | failure-addressable compact EEG architecture, physical key lattice, exact hand marginal, causal DSP rules, two-axis public qualification, and stop strategy |
 | [registries/loop55_causal_motor_lattice_research.v0.json](registries/loop55_causal_motor_lattice_research.v0.json) | machine-readable CML-v0 graph, parameter formula, source ceilings, branch escrow, public gates, authorization zeros, and nonclaims |
+| [docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md](docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md) | frozen work-order-13 synthetic factors, exact model, check-before-final order, one-run resource caps, stop routes, and no-real-data boundary |
+| [registries/causal_motor_lattice_synthetic_contract.v0.json](registries/causal_motor_lattice_synthetic_contract.v0.json) | machine-readable seed-5513 CML-v0 architecture, hashes, training schedule, 19 check gates, final firewall, resources, and refusals |
+| [docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md](docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md) | exact 4,535-parameter model, deterministic synthetic runner, dry-run and inspector CLI, adversarial qualification, and remote-green execution gate |
+| [registries/causal_motor_lattice_synthetic_implementation.v0.json](registries/causal_motor_lattice_synthetic_implementation.v0.json) | hash-bound source, implementation, fixture projection, lattice, resource, test, and zero-execution receipt |
+| [docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_RESULT.md](docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_RESULT.md) | consumed 18-of-19-gate synthetic result, constructed-factor diagnostics, exact common-mode failure, withheld final, resources, and no-rerun closeout |
+| [registries/causal_motor_lattice_synthetic_result.v0.json](registries/causal_motor_lattice_synthetic_result.v0.json) | machine-readable `CML-R0` result, checkpoint/report hashes, metrics, access counters, warnings, unavailable fields, and scientific claim ceiling |
 | [registries/loop53_fresh_eeg_acquisition_contract.v0.json](registries/loop53_fresh_eeg_acquisition_contract.v0.json) | machine-readable 96,090,264-byte S20 contract with pinned source hashes, no-overwrite paths, one-invocation cap, and every execution permission false |
 | [docs/LOOP_53_AUTHORIZATION_PACKET.md](docs/LOOP_53_AUTHORIZATION_PACKET.md) | plain-language exact Tier C sentence for implementation plus one bounded acquisition, with all interpretive and model work excluded |
 | [registries/loop53_authorization_request.v0.json](registries/loop53_authorization_request.v0.json) | immutable pre-decision request bound to green registration `bccd367` and both registration CI runs |

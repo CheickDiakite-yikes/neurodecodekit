@@ -88,6 +88,12 @@ requests, and these files:
 - `registries/contact_aware_ear_channel_result.v0.json`
 - `docs/LOOP_54_STAGE_A_VHDR_RESULT.md`
 - `registries/loop54_stage_a_vhdr_result.v0.json`
+- `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`
+- `registries/causal_motor_lattice_synthetic_contract.v0.json`
+- `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`
+- `registries/causal_motor_lattice_synthetic_implementation.v0.json`
+- `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_RESULT.md`
+- `registries/causal_motor_lattice_synthetic_result.v0.json`
 - `docs/LOOP_32_PRIMARY_SOURCE_RESEARCH.md`
 - `registries/loop32_research_boundary.v0.json`
 - `docs/POST_20_ROADMAP.md`
@@ -142,10 +148,10 @@ Do not reset, revert, delete, or overwrite work already present.
   118,177,792-byte peak RSS, 584,308 bytes, all 18 gates passed, zero retained
   generated files. Work order 3 is complete. Work order 4 also completed one
   post-green symbolic plan roundtrip: 0.12 seconds, 22,822,912-byte peak RSS,
-  27,335 bytes, all 18 gates passed, and zero retained plan files. Do not
-  implement CML-v0 or run a model, fit,
-  inference, score, download, S20 read, PhysioNet read, provider call, stream,
-  device, or hardware operation.
+  27,335 bytes, all 18 gates passed, and zero retained plan files. The later
+  CML-v0 synthetic gate is consumed as described below. Do not rerun it or
+  perform a download, S20 read, PhysioNet read, provider call, stream, device,
+  hardware operation, or protected model stage.
 - Work order 4 is complete. Its standard-library planner keeps low-frequency
   shrinkage LDA, causal CSP-LDA, and Riemannian MDM unselected, with train-only
   fits, pair/group isolation, target-blind check/final use, zero future context,
@@ -561,21 +567,27 @@ Foundation models and generative EEG imputation remain separate later lanes.
 The strategy is not a preregistration or Tier C decision; do not download the
 public prospect or change frozen Loop 54/55 artifacts from it alone.
 
-The additive `CML-v0` architecture research is in:
+The `CML-v0` architecture research and consumed synthetic gate are in:
 
 - `docs/LOOP_55_CAUSAL_MOTOR_LATTICE_ARCHITECTURE_RESEARCH.md`;
-- `registries/loop55_causal_motor_lattice_research.v0.json`; and
-- `tests/test_loop55_causal_motor_lattice_research.py`.
+- `registries/loop55_causal_motor_lattice_research.v0.json`;
+- `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`;
+- `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`;
+- `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_RESULT.md`; and
+- their matching registries and tests.
 
 It selects a source-independent compact hypothesis with potential, causal mu,
 and causal beta branches; rank-8 spatial mixers; a 24-dimensional bottleneck;
 and a physical 29-key lattice whose hand output is an exact probability
-marginal. The 64-channel/18-primitive reference has 4,535 parameters. The
-qualification ladder now separates PhysioNet laterality from a future EEG+EMG
-pre-movement timing control. This is architecture research only: synthetic
-implementation, public payload access, Loop 54 content, S20 model work, and
-claim promotion remain unauthorized. Do not infer execution permission from
-the selected hypothesis.
+marginal. The 64-channel/18-primitive reference has 4,535 parameters. Contract
+`67709a3` and implementation `90fa467` were green before one seed-5513 run.
+It reached `1.0` hand/key accuracy on 16 constructed signal-bearing check rows,
+localized all three branches, preserved exact replay and causal controls, and
+passed 18/19 gates. The frozen common-mode tolerance failed at
+`1.9073486e-6 > 1e-6`, so the run parked at `CML-R0`; final stayed closed and
+there is no rerun. Public payload access, Loop 54-B/C, S20 model work, and claim
+promotion remain unauthorized. This is synthetic software evidence, not EEG
+or neural-decoding evidence.
 
 Loop 56 cross-modality accessibility planning research is complete and
 reviewable at:

@@ -5486,3 +5486,49 @@ record.
 Scientific claim not established: no EEG signal, event, trial, target, or model
 was accessed, and no neural advantage, decoding accuracy, generalization,
 real-time, portable-hardware, home-use, or clinical result was established.
+
+## 2026-08-09 - CML-v0 Synthetic Gate Consumed At CML-R0
+
+- Preserved the work-order-13 evidence order: contract
+  `67709a3286a33f0947d57a97bf345a26d17dae45` passed CI `31294479865`, then
+  exact implementation `90fa467e5acf24a8a47eb8c96b1cb485a6a9076b` passed CI
+  `31295430105` before one seed-5513 execution.
+- The exact 4,535-parameter, 64-channel, 18-primitive CML-v0 completed one
+  600-step AdamW fit. All 16 constructed signal-bearing check rows reached
+  hand accuracy `1.0` and key accuracy `1.0`; potential, mu, and beta matching
+  ablations were each largest, the hand/key marginal error was
+  `5.960464477539063e-08`, future-tail causal error was zero, and checkpoint
+  replay hashes matched.
+- Eighteen of 19 check gates passed. The uniform common-mode mutation produced
+  maximum float32 key-logit error `1.9073486328125e-6`, exceeding the frozen
+  `1e-6` tolerance by `9.073486328125e-7`. The conjunction therefore parked at
+  `CML-R0`; the 16 synthetic final targets stayed closed, final scoring events
+  remained zero, and no rerun or post-outcome tolerance change is open.
+- Descriptive controls remain visible rather than optimized away:
+  peripheral-proxy-only hand accuracy was `1.0`, channel-deranged accuracy was
+  `0.0`, and nonwrapping time-displaced accuracy was `1.0`. These fixture
+  behaviors sharpen future controls but establish neither a real peripheral
+  shortcut nor timing robustness.
+- Runtime was 6.5530732499901205 seconds at 398,737,408-byte peak RSS with one
+  CPU thread and worker. The 22,952-byte checkpoint and 14,419-byte report
+  totaled 37,371 bytes under the 4 MiB cap. Their exact SHA-256 bindings were
+  recorded, then both generated files and their empty invocation directory
+  were removed.
+- Synthetic source generation, one parameter-update run, 600 optimizer steps,
+  two inference stages, ten prediction sets, and one check score are explicit.
+  Every real/public/protected read, S20 or PhysioNet operation, network/provider
+  call, pretrained-weight read, stream/device/hardware action, release, and
+  claim-upgrade counter is zero.
+- Thirty focused CML tests passed. The complete one-thread suite advanced from
+  the 1,380-test implementation baseline to 1,386 passed tests with three
+  expected skips and 493 subtests in 38.99 seconds of pytest runtime and 40.37
+  seconds external wall time at 705,822,720-byte maximum suite RSS.
+
+Engineering capability added: the exact compact CML-v0 implementation can fit,
+localize, causally probe, and deterministically replay the deliberately
+constructed factor suite under a strict check-before-final protocol.
+
+Scientific claim not established: no real or protected EEG was accessed, the
+synthetic conjunction failed, and no neural advantage, decoding accuracy,
+brain-specific origin, generalization, real-time, portable-hardware, home-use,
+assistive, or clinical result was established.

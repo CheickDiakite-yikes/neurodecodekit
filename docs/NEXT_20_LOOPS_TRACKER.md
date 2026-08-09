@@ -158,8 +158,14 @@
 > eight same-checkpoint failure-localization probes. Public qualification is
 > now two-axis because PhysioNet left/right execution does not establish strict
 > pre-movement timing; a separately scoped EEG+EMG MRCP slice would test that
-> second axis. No synthetic model, public payload, S20 content, training,
-> inference, or score was accessed, and all execution remains unauthorized.
+> second axis. Work order 13 separately implemented the exact synthetic model
+> after green contract and implementation commits. Its one seed-5513 run
+> reached `1.0` hand/key accuracy on the 16 constructed signal-bearing check
+> rows and passed 18/19 gates, but parked at `CML-R0` because float32
+> common-mode logit error `1.9073486e-6` exceeded the frozen `1e-6` ceiling.
+> Final stayed closed and no rerun is open. No public payload, S20 content,
+> protected target, or hardware operation was accessed, and no scientific
+> scoring occurred.
 > The additive foundation-model decoder strategy now separates the small
 > trained sensor adapter from the final language layer. The first hosted
 > candidate is frozen `gpt-5.6-sol`, receiving only structured CTC and causal
@@ -817,3 +823,8 @@ sealed. No roadmap row authorizes an experiment.
 L54-A is the sole consumed content stage. Its one execution passed no-follow,
 size, source-identity, and strict-decode checks, then failed the frozen preamble
 gate at `F11`. Do not rerun, amend from the result, or open Loop 54-B/C.
+
+Work order 13 is also consumed, but only at a synthetic mechanics boundary.
+The exact 4,535-parameter CML-v0 passed 18/19 check gates and parked at
+`CML-R0`; synthetic final targets were not delivered, seed 5513 has no rerun,
+and the result does not change Loop 55's real-evidence `Not Started` status.

@@ -23,7 +23,7 @@ decision after its own frozen packet and required remote-green evidence exist.
 | 10 | Execute Loop 54-B signal quality | C | Target-blind VHDR+EEG read, every channel retained, no transform, bounded aggregate output | Gated |
 | 11 | Execute Loop 54-C trial reconciliation | C | Isolated VMRK+MAT target-bearing stage, no plaintext protected public output | Gated |
 | 12 | Close Loop 54-D eligibility ledger | A after C evidence | At least 48 unique performed trials or explicit park; confounds and missing geometry remain visible | Gated |
-| 13 | Implement CML-v0 synthetically | B | Exact 4,535-parameter 64-channel reference, causal controls, deterministic replay, no real data | Contract Frozen; Implementation Qualified Locally; Execution Pending Remote Green |
+| 13 | Implement CML-v0 synthetically | B | Exact 4,535-parameter 64-channel reference, causal controls, deterministic replay, no real data | Consumed; Parked CML-R0; No Rerun; prior gates: Contract Frozen, Implementation Qualified Locally, Execution Pending Remote Green |
 | 14 | Freeze measured Loop 55 contract | A then C decision | One <=10,000-parameter family, <=12 fits, fixed controls, resource and target order frozen | Gated |
 | 15 | Create opaque grouped trial split | C | Trial-level grouping, no key-window leakage, targets isolated by stage | Gated |
 | 16 | Run bounded Loop 55 training/selection | C | One thread, <=45 CPU minutes, <=1 GiB RSS, <=64 MiB output, no post-selection final access | Gated |
@@ -85,12 +85,17 @@ existing seed-5503 synthetic fixture to a new seed-5513 experiment, exact
 pair-anchored pre-event crops, fixed 64-channel projection and causal FIR
 hashes, one 4,535-parameter model, one 600-step fit, check-before-final gates,
 no rerun, and a 4 MiB output cap. Contract commit `67709a3` passed exact push CI
-`31294479865` before implementation. The import-light model, execution shell,
-dry-run CLI, inspector, and adversarial tests are now qualified locally with
-zero registered training, scoring, or retained output. The one measured run
-cannot start until this exact implementation is committed, pushed, and
-remotely green. The contract opens no real or public data and does not qualify
-Loop 55.
+`31294479865` before implementation, and implementation commit `90fa467`
+passed exact push CI `31295430105` before the one run. The seed-5513 checkpoint
+reached `1.0` hand and key accuracy on 16 constructed signal-bearing check rows,
+correctly localized potential, mu, and beta ablations, and replayed exactly.
+Eighteen of 19 check gates passed. The common-mode key-logit error was
+`1.9073486e-6`, above the frozen `1e-6` tolerance, so the run parked at
+`CML-R0`; synthetic final targets stayed closed and there is no rerun. Runtime
+was 6.553 seconds, peak RSS was 398,737,408 bytes, and output was 37,371 bytes.
+Every real/public/protected, S20, PhysioNet, network, provider, hardware,
+release, and claim counter remained zero. This synthetic result does not
+qualify Loop 55.
 
 This queue never authorizes S20 interpretation, PhysioNet acquisition, target
 delivery, training, scoring, hardware, release, or a scientific claim by

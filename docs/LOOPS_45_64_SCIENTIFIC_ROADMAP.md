@@ -385,8 +385,11 @@ the registered scientific controls.
 The public ladder now has two noninterchangeable axes: the existing PhysioNet
 slice tests left/right execution mechanics, while a future bounded EEG+EMG MRCP
 slice would test strictly pre-movement timing against measured EMG onset. Both
-are unauthorized. Synthetic CML-v0 implementation is also `Not Started`; this
-research does not amend the frozen Loop 55 gate or authorize S20 work.
+are unauthorized. A separate bounded synthetic CML-v0 implementation has now
+consumed one seed-5513 run: 18/19 check gates passed, but the exact common-mode
+tolerance failed and route `CML-R0` parked without final delivery or rerun.
+That software result does not amend the frozen Loop 55 gate or authorize S20
+work.
 
 ### Loop 56 - Cross-Modality Accessibility Verdict
 
