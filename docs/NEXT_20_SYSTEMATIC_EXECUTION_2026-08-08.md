@@ -133,6 +133,20 @@ committed, pushed, and remotely green before implementation.
 It is deliberately outside the numbered 1-20 table so that the frozen
 execution overlay remains exactly 20 rows.
 
+IACKD-1 Cue-to-Action Reversal is the next active Tier A research branch. It
+uses the public OpenNeuro `ds006840` congruent/incongruent mapping to address
+WO9R's unresolved cue-versus-action source question directly: fit a fixed
+low-frequency model only where visual and hand directions agree, then score
+one frozen held-out conflict prediction set against both actual hand direction
+and the opposite visual target direction. The metadata-only inventory selects
+1,340 raw EEG, marker, event, EOG-bearing source, ball, and Leap Motion objects
+totaling 7,249,113,684 bytes while excluding published MATLAB derivatives.
+No IACKD payload content, channel table, event, kinematic sample, target,
+model, prediction, or score has been opened. The research record is complete;
+preregistration and a separate all-false Tier C packet are the next ordered
+work. This additive lane does not renumber work orders 10-20 and does not
+reopen WO9R.
+
 Registration `2a7b4188553e221133d788a081b838dbbb9f41bb` passed Base Python
 job `93215490492` and Optional Neuro Readers job `93215490501` in CI
 `31301730612`. The additive authorization packet and all-false machine request

@@ -1,0 +1,364 @@
+{
+  "schema_name": "neurodecodekit.iackd_cue_action_dissociation_research",
+  "schema_version": "0.0.0",
+  "research_id": "IACKD-1",
+  "created_at_local": "2026-08-10",
+  "status": "tier_a_research_complete_candidate_selected_not_preregistered_not_authorized_not_executed",
+  "proof_posture": "prospective_source_attribution_design_over_public_metadata_only",
+  "decision": "Use the IACKD congruent-to-incongruent mapping reversal to test whether a fixed pre-movement low-frequency EEG predictor follows measured hand direction or the opposite visual target direction.",
+  "scope": {
+    "tier_a_research_only": true,
+    "public_candidate_selected": true,
+    "metadata_only_inventory_created": true,
+    "primary_hypothesis_selected": true,
+    "preregistration_frozen": false,
+    "authorization_packet_created": false,
+    "real_data_acquisition_authorized": false,
+    "local_real_data_access_authorized": false,
+    "payload_content_parse_authorized": false,
+    "target_or_label_access_authorized": false,
+    "model_training_or_inference_authorized": false,
+    "prediction_freeze_authorized": false,
+    "sealed_target_delivery_or_scoring_authorized": false,
+    "scientific_claim_promotion_authorized": false,
+    "release_or_publication_authorized": false
+  },
+  "inherited_evidence": {
+    "wo9r_result_document": {
+      "path": "docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_RESULT.md",
+      "sha256": "19d0b283877eb95682a91c8d838553c6d5328a713a44498cfbcae8d309a0d015"
+    },
+    "wo9r_result_registry": {
+      "path": "registries/physionet_low_frequency_cohort_confirmation_result.v0.json",
+      "sha256": "d6cda8b4ce5f6da7add4a78ac8b1e74587cd8ab8eacf0dce8b806c076e85699a"
+    },
+    "wo9r_contract": {
+      "path": "registries/physionet_low_frequency_cohort_confirmation_contract.v0.json",
+      "sha256": "ce0dcf5e5ddd598fb69b5baa73f827bbc3f51c4aeab8578d2d2eebda87cd0935"
+    },
+    "consumed_lane": "WO9R",
+    "consumed_verdict": "WO9R-R3",
+    "execution_correct": 123,
+    "execution_final_event_count": 180,
+    "execution_pooled_balanced_accuracy": 0.680975,
+    "execution_macro_participant_balanced_accuracy": 0.682292,
+    "execution_participants_above_chance": 9,
+    "execution_one_sided_sign_flip_p": 0.0029296875,
+    "imagery_correct": 131,
+    "imagery_final_event_count": 180,
+    "imagery_pooled_balanced_accuracy": 0.728014,
+    "imagery_macro_participant_balanced_accuracy": 0.728423,
+    "imagery_participants_above_chance": 12,
+    "imagery_one_sided_sign_flip_p": 0.000244140625,
+    "central_sensorimotor_balanced_accuracy": 0.647575,
+    "frontal_proxy_balanced_accuracy": 0.671821,
+    "early_cue_balanced_accuracy": 0.762865,
+    "participants_following_registered_physiology_direction": 5,
+    "private_artifact_reuse_allowed": false,
+    "target_reopen_allowed": false,
+    "rerun_allowed": false,
+    "post_result_tuning_allowed": false
+  },
+  "primary_sources": [
+    {
+      "source_id": "iackd_scientific_data_2026",
+      "url": "https://doi.org/10.1038/s41597-026-07146-x",
+      "type": "primary_dataset_article",
+      "finding": "Fifteen participants contributed 7040 recorded trials with one second of pre-movement EEG, 32-channel EEG at 1024 Hz, synchronized Leap Motion hand kinematics, and explicit congruent versus incongruent visuomotor mappings.",
+      "design_use": "make actual hand direction and visual target direction disagree on a held-out condition"
+    },
+    {
+      "source_id": "openneuro_ds006840_v1",
+      "url": "https://openneuro.org/datasets/ds006840/versions/1.0.0",
+      "type": "official_dataset_record",
+      "finding": "The CC0 BIDS 1.7.0 release exposes raw BrainVision EEG and source ball and Leap Motion streams without requiring the published MATLAB derivatives.",
+      "design_use": "bind a raw-source-only acquisition under the existing 10 GB ceiling"
+    },
+    {
+      "source_id": "suwandjieff_visual_cue_2024",
+      "url": "https://doi.org/10.1016/j.jneumeth.2024.110241",
+      "type": "primary_research",
+      "finding": "Visual cue design can alter movement-related potential timing, topography, and classification behavior.",
+      "design_use": "treat cue-following as a falsifiable alternative rather than a nuisance footnote"
+    }
+  ],
+  "dataset_candidate": {
+    "name": "IACKD: Intention Action Conflict EEG-Hand Kinematics Dataset",
+    "provider": "OpenNeuro",
+    "accession": "ds006840",
+    "version": "1.0.0",
+    "dataset_doi": "10.18112/openneuro.ds006840.v1.0.0",
+    "license": "CC0",
+    "participant_ids": [
+      "sub-01",
+      "sub-02",
+      "sub-03",
+      "sub-04",
+      "sub-05",
+      "sub-06",
+      "sub-07",
+      "sub-08",
+      "sub-09",
+      "sub-10",
+      "sub-11",
+      "sub-12",
+      "sub-13",
+      "sub-14",
+      "sub-15"
+    ],
+    "participant_count": 15,
+    "participant_hand_unit_count": 30,
+    "recorded_trial_count_reported": 7040,
+    "valid_trial_count_reported": 6671,
+    "eeg_channel_count_reported": 32,
+    "eeg_sampling_rate_hz_reported": 1024,
+    "leap_sampling_rate_hz_approximate": 170,
+    "pre_movement_duration_seconds": 1.0,
+    "reported_cross_modal_alignment_fraction_within_30_ms": 0.99375,
+    "raw_EOG_names_reported": [
+      "HEOG",
+      "VEOG"
+    ],
+    "raw_EMG_available": false,
+    "moving_hand_entities": [
+      "left",
+      "right"
+    ],
+    "congruent_color": "red",
+    "incongruent_color": "yellow",
+    "congruent_mapping": "hand_direction_equals_visual_ball_direction",
+    "incongruent_mapping": "hand_direction_is_opposite_visual_ball_direction"
+  },
+  "metadata_inventory": {
+    "path": "registries/iackd_openneuro_metadata_inventory.v0.json",
+    "sha256": "aeaa4928192cca9086fcb0abf4711147c68a68ef5c5aacda2ebc67d162a1ef19",
+    "listed_object_count": 1679,
+    "listed_total_bytes": 7966799433,
+    "selected_object_count": 1340,
+    "selected_payload_bytes": 7249113684,
+    "selected_bids_run_count": 128,
+    "selected_eeg_signal_bytes": 6432882432,
+    "selected_ball_stream_bytes": 118562988,
+    "selected_leap_stream_bytes": 694715179,
+    "canonical_identity_sha256": "c30b518f9dafe3d46128849725e1f2f8fdce33239fbf6ade8603d66a64f0ffa5",
+    "published_derivative_bytes_excluded": 717671039,
+    "subject_scans_tsv_excluded": true,
+    "participant_demographics_excluded": true,
+    "published_matlab_derivatives_excluded": true
+  },
+  "primary_question": {
+    "plain_language": "When the visual target says one direction but the hand must move the other way, which direction does the frozen EEG predictor follow?",
+    "scientific_question": "Does a fixed low-frequency pre-movement EEG representation trained only where cue and action agree generalize to held-out conflict trials by measured action direction rather than by visual target direction?",
+    "null_or_failure_explanations": [
+      "the WO9R low-frequency effect was specific to EEGMMIDB",
+      "the representation follows a visual or ocular cue",
+      "the representation does not transfer across the visuomotor remapping",
+      "the apparent action signal is explained by synchronized EOG or timing",
+      "the compact fixed model lacks useful directional information"
+    ]
+  },
+  "prospective_partition": {
+    "unit": "participant_by_moving_hand",
+    "unit_count": 30,
+    "fit_run_rule": "all runs for a participant-hand except its highest numbered run",
+    "sealed_final_run_rule": "highest numbered run for each participant-hand",
+    "fit_condition": "congruent_red_trials_only",
+    "sealed_final_condition": "incongruent_yellow_trials_only",
+    "fit_target": "actual_hand_direction_equal_to_visual_direction_under_congruence",
+    "sealed_final_targets": [
+      "actual_hand_direction_confirmed_by_kinematic_displacement",
+      "visual_ball_or_target_direction"
+    ],
+    "same_frozen_predictions_scored_against_both_final_targets": true,
+    "row_random_split_allowed": false,
+    "cross_participant_fit_allowed": false,
+    "cross_hand_fit_allowed": false,
+    "final_condition_used_for_model_selection": false,
+    "target_derived_exclusion_allowed": false,
+    "maximum_expected_fit_congruent_trials_before_quality_control": 2680,
+    "maximum_expected_final_incongruent_trials_before_quality_control": 840,
+    "minimum_fit_trials_per_direction_per_unit": 24,
+    "minimum_final_trials_per_direction_per_unit": 8,
+    "all_15_participants_and_30_units_required": true
+  },
+  "frozen_model_recommendation": {
+    "family_id": "fixed_low_frequency_shrinkage_lda",
+    "relationship_to_WO9R": "same filter_feature_classifier_family_adapted_only_to_the_registered_one_second_pre_movement_interval",
+    "reference": "instantaneous_common_average_over_all_verified_EEG_channels_only",
+    "filter_design": "fourth_order_butterworth_bandpass_sos",
+    "passband_hz": [
+      0.5,
+      4.0
+    ],
+    "filter_application": "causal_continuous_run_scipy_signal_sosfilt_before_windowing",
+    "analysis_window_seconds_relative_to_registered_stop": [
+      -1.0,
+      0.0
+    ],
+    "time_bins": 4,
+    "bin_duration_seconds": 0.25,
+    "slopes_per_channel": 1,
+    "feature_dimension_formula": "5C",
+    "expected_feature_dimension_at_32_EEG_channels": 160,
+    "classifier": "participant_hand_specific_linear_discriminant_analysis",
+    "lda_solver": "lsqr",
+    "lda_shrinkage": 0.1,
+    "equal_class_priors": true,
+    "selection_candidate_count": 1,
+    "hyperparameter_search_runs": 0,
+    "larger_or_deep_model_allowed": false,
+    "right_context_seconds": 0.0,
+    "operational_causality": "offline_pre_movement_oracle_aligned_not_real_time",
+    "end_to_end_latency_measured": false
+  },
+  "kinematic_guard_recommendation": {
+    "purpose": "ensure predictive EEG samples precede measured hand movement without exposing movement direction to model code",
+    "onset_source": "absolute_Leap_speed_only",
+    "direction_sign_available_to_predictive_code": false,
+    "registered_stop_rule": "minimum_of_event_14_time_and_measured_kinematic_onset_minus_30_ms",
+    "window_is_half_open": true,
+    "minimum_motion_guard_ms": 30,
+    "kinematic_onset_estimator_must_be_frozen_on_generated_fixtures": true,
+    "failed_guard_action": "park_before_prediction_not_post_hoc_exclude",
+    "real_time_claim_allowed": false
+  },
+  "mandatory_parallel_conditions": [
+    "whole_head_EEG_action_primary",
+    "same_primary_predictions_scored_against_visual_target",
+    "central_C3_C4_Cz_EEG",
+    "HEOG_VEOG_only",
+    "fit_only_EOG_orthogonalized_whole_head_EEG",
+    "early_half_pre_movement_EEG",
+    "late_half_pre_movement_EEG",
+    "pre_window_baseline_EEG",
+    "event_index_and_timing_only",
+    "train_only_no_signal_prior",
+    "all_zero_final_signal",
+    "fixed_train_label_derangement",
+    "fixed_final_run_displacement",
+    "fixed_EEG_channel_derangement",
+    "fixed_moving_hand_entity_swap",
+    "kinematic_onset_guard_audit",
+    "readiness_potential_descriptive_assay",
+    "mu_beta_descriptive_assay"
+  ],
+  "prospective_gate_recommendations": {
+    "H1_action_over_cue_reversal": {
+      "minimum_pooled_action_balanced_accuracy": 0.6,
+      "minimum_macro_participant_action_balanced_accuracy": 0.6,
+      "minimum_participants_above_0_5_action_balanced_accuracy": 12,
+      "maximum_exact_participant_sign_flip_p": 0.01,
+      "minimum_macro_action_minus_visual_target_margin": 0.2,
+      "maximum_macro_visual_target_balanced_accuracy": 0.4,
+      "minimum_margin_over_train_only_no_signal_prior": 0.1,
+      "scoring_unit": "participant",
+      "pooled_trial_only_claim_allowed": false
+    },
+    "H2_recorded_peripheral_and_timing_controls": {
+      "minimum_primary_minus_EOG_only_macro_margin": 0.05,
+      "minimum_EOG_orthogonalized_macro_action_balanced_accuracy": 0.58,
+      "minimum_EOG_orthogonalized_macro_action_minus_visual_margin": 0.16,
+      "maximum_timing_only_macro_balanced_accuracy": 0.55,
+      "maximum_pre_window_macro_balanced_accuracy": 0.55,
+      "all_fixed_derangement_and_displacement_controls_must_fail_to_rescue": true,
+      "EOG_proxy_failure_proves_brain_specific_origin": false
+    },
+    "H3_motor_compatible_spatiotemporal_support": {
+      "minimum_C3_C4_Cz_macro_action_balanced_accuracy": 0.55,
+      "central_predictions_must_follow_action_not_visual_target": true,
+      "late_half_reported_separately_from_early_half": true,
+      "readiness_potential_and_mu_beta_are_nonselecting": true,
+      "physiology_can_rescue_failed_H1_or_H2": false
+    },
+    "H4_causal_and_integrity": {
+      "all_30_units_pass_kinematic_guard": true,
+      "final_direction_sign_visible_to_predictive_code_before_freeze": false,
+      "all_prediction_sets_frozen_before_either_final_target_view_opens": true,
+      "one_combined_target_delivery": true,
+      "post_target_updates": 0,
+      "reruns": 0
+    }
+  },
+  "ordered_future_router": [
+    {
+      "verdict": "IACKD-R0",
+      "condition": "integrity_or_H1_fails_without_reliable_cue_alignment",
+      "maximum_claim": "the_fixed_low_frequency_representation_did_not_generalize_to_the_conflict_test"
+    },
+    {
+      "verdict": "IACKD-R1",
+      "condition": "predictions_align_with_visual_target_more_than_actual_hand",
+      "maximum_claim": "the_test_localizes_the_representation_as_cue_bound_under_reversal"
+    },
+    {
+      "verdict": "IACKD-R2",
+      "condition": "H1_passes_but_recorded_peripheral_or_timing_controls_fail",
+      "maximum_claim": "action_aligned_task_information_with_source_unresolved"
+    },
+    {
+      "verdict": "IACKD-R3",
+      "condition": "H1_H2_and_H4_pass_but_H3_fails",
+      "maximum_claim": "pre_movement_action_aligned_EEG_information_survives_recorded_EOG_and_timing_controls_without_motor_localization"
+    },
+    {
+      "verdict": "IACKD-R4",
+      "condition": "H1_H2_H3_and_H4_all_pass",
+      "maximum_claim": "within_IACKD_pre_movement_motor_compatible_EEG_action_direction_effect_under_synchronized_EOG_and_kinematic_controls_not_brain_specific"
+    }
+  ],
+  "future_resource_envelope": {
+    "cpu_threads": 1,
+    "workers": 1,
+    "concurrent_numerical_jobs": 1,
+    "maximum_provider_payload_bytes": 10737418240,
+    "exact_selected_payload_bytes": 7249113684,
+    "maximum_incremental_disk_bytes": 9663676416,
+    "minimum_free_disk_bytes_before_acquisition": 21474836480,
+    "maximum_peak_rss_bytes": 2147483648,
+    "maximum_private_generated_bytes": 536870912,
+    "maximum_public_aggregate_bytes": 2097152,
+    "maximum_acquisition_seconds": 7200,
+    "maximum_analysis_seconds": 3600,
+    "downloaded_published_derivatives": 0,
+    "raw_file_duplication_allowed": false,
+    "retries": 0,
+    "reruns": 0,
+    "post_final_updates": 0
+  },
+  "future_ordered_work": [
+    "freeze_exact_preregistration_and_metadata_inventory_binding",
+    "prepare_all_false_packet_bound_Tier_C_request",
+    "record_one_exact_or_short_form_packet_bound_decision_after_green_request",
+    "qualify_acquisition_and_analysis_only_on_generated_fixtures_and_mocked_transport",
+    "require_green_exact_implementation_before_any_payload_request",
+    "acquire_only_the_1340_registered_raw_source_objects",
+    "create_target_firewalled_derivatives_and_freeze_all_prediction_sets",
+    "require_green_hash_only_freeze_before_one_combined_target_delivery",
+    "score_once_and_apply_the_ordered_IACKD_R0_through_R4_router"
+  ],
+  "current_access_counters": {
+    "retained_S3_listing_bodies": 2,
+    "retained_openneuro_root_metadata_bodies": 2,
+    "retained_primary_article_bodies": 1,
+    "selected_object_names_observed": 1340,
+    "payload_url_gets": 0,
+    "payload_bytes_transferred": 0,
+    "EEG_content_opens": 0,
+    "EOG_content_opens": 0,
+    "marker_content_opens": 0,
+    "event_content_opens": 0,
+    "kinematic_content_opens": 0,
+    "target_or_label_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scoring_runs": 0,
+    "downloads": 0
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "A metadata-bound prospective design now turns the cue-versus-action ambiguity into a direct reversal test with synchronized EOG and kinematic controls.",
+    "scientific_claim_not_established": "No IACKD payload content was opened and no prediction was made, so this research record establishes no new EEG effect, action decoding, brain-specific origin, unseen-person generalization, typing, language or thought decoding, real-time operation, portable hardware, home use, assistive benefit, or clinical utility.",
+    "maximum_future_IACKD_R4_claim": "A within-IACKD pre-movement motor-compatible EEG action-direction effect under synchronized EOG and kinematic controls, still without proof of brain-specific origin or external generalization."
+  }
+}
