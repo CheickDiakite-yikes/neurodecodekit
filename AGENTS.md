@@ -104,21 +104,27 @@ geometry, event, trajectory, target, derivative, fit, inference, prediction,
 freeze, or score followed. Do not reopen the private bundle, rerun, relax the
 parser, infer which channel predicate failed, or promote a scientific claim.
 
-The next active engineering lane is `IACKD-H1 Header Inventory Audit`. Read
+The active engineering lane is `IACKD-H1 Header Inventory Audit`. Read
 `docs/IACKD_CHANNEL_INVENTORY_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/iackd_channel_inventory_research.v0.json`,
 `docs/IACKD_CHANNEL_INVENTORY_PREREGISTRATION.md`, and
-`registries/iackd_channel_inventory_contract.v0.json`. The pinned article does
+`registries/iackd_channel_inventory_contract.v0.json`,
+`docs/IACKD_CHANNEL_INVENTORY_IMPLEMENTATION.md`, and
+`registries/iackd_channel_inventory_implementation.v0.json`. The pinned article does
 not establish an exact 36-channel BrainVision invariant; the authors' public
 premovement and execution scripts use different presence-based deletion lists,
 including HEO/VEO aliases and TRIGGER. The prospective audit covers all 128
 VHDR objects and 161,792 bytes, in memory and sequentially, with aggregate
-hash-only signatures and no sibling resolution. No real VHDR content has been
-opened. After this registration is committed, pushed, and remotely green, Tier
-B may implement only generated fixtures and mocked transport. Real header
-network access remains Tier C and needs a separate packet-bound decision after
-the exact implementation is remotely green. Never use or inspect the existing
-local IACKD bundle for this lane.
+hash-only signatures and no sibling resolution. Registration `0e52278` passed
+Base Python job `93534203368` and Optional Neuro Readers job `93534203385` in
+CI `31412667060` before implementation. The standard-library parser, strict
+mocked transport, signature router, bounded writer, module CLI, and 24 focused
+tests are assembled. One 128-header generated qualification took 0.037819
+seconds at 36,634,624-byte peak RSS and emitted 4,465 bytes; network and every
+real/protected counter stayed zero. Its synthetic `IACKDH-R1` has no claim
+value. Commit, push, and obtain both green jobs for this exact implementation
+before preparing one separate Tier C decision. Never use or inspect the
+existing local IACKD bundle for this lane.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

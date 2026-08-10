@@ -6487,3 +6487,38 @@ trajectory, target, model, prediction, or score was accessed, so this work
 establishes no neural effect, action decoding, brain-specific origin,
 generalization, real-time operation, hardware capability, assistive benefit, or
 clinical use.
+
+## 2026-08-10 - IACKD-H1 Synthetic Implementation
+
+- Registration `0e52278aaa1d15e70f4baab7b21ab1c96eb37f67` passed Base
+  Python job `93534203368` and Optional Neuro Readers job `93534203385` in CI
+  `31412667060` before implementation.
+- Added a standard-library strict VHDR parser, response validator, aggregate
+  signature builder, six-route replay, leakage validator, bounded atomic
+  writer, generated fixture transport, dry-run plan, loader, inspector, and
+  future exact-decision execution gate.
+- Preserved `src/neurodecodekit/cli.py` byte-for-byte because its current hash
+  is bound by consumed IACKD-1 evidence. The new CLI is
+  `python -m neurodecodekit.preprocess.iackd_header_inventory`.
+- Twenty-four core tests cover strict decode, malformed declarations, inert
+  siblings, channel tables, all routes, response identity, truncation,
+  compression, thread/RSS/output limits, overwrite, heavy imports, duplicate
+  JSON, deterministic replay, leakage, and network-free default behavior.
+- One isolated 128-header generated qualification processed 161,792 bytes with
+  128 hashes and 128 parses in 0.037818958 seconds at 36,634,624-byte peak RSS.
+  Its 4,465-byte output was automatically removed. Network, real IACKD, target,
+  model, score, dependency, provider, hardware, and claim counters stayed zero.
+- The constructed fixture routed `IACKDH-R1`; that is not a real result. The
+  exact implementation still needs remote-green CI before a separate Tier C
+  real-header decision can be prepared.
+
+Engineering capability added: NeuroDecodeKit now has a deterministic,
+sibling-blind, aggregate-only audit that can identify which file-contract
+assumption caused the consumed IACKD channel gate to fail without reopening
+the downloaded dataset.
+
+Scientific claim not established: no real IACKD header, EEG sample, event,
+trajectory, target, model, prediction, or score was accessed, so this work
+establishes no neural effect, action decoding, brain-specific origin,
+generalization, real-time operation, hardware capability, assistive benefit,
+or clinical use.

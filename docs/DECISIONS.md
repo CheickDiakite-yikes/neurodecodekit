@@ -5053,3 +5053,33 @@ Evidence: `docs/IACKD_CHANNEL_INVENTORY_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/iackd_channel_inventory_research.v0.json`,
 `docs/IACKD_CHANNEL_INVENTORY_PREREGISTRATION.md`, and
 `registries/iackd_channel_inventory_contract.v0.json`.
+
+## 0145 - Implement IACKD-H1 Without Rewriting Consumed CLI Evidence
+
+Decision: after registration `0e52278` passed both jobs in CI `31412667060`,
+implement the header audit under Tier B using generated VHDR bodies and mocked
+transport only. Expose it through a module CLI instead of changing the central
+`src/neurodecodekit/cli.py`, whose exact bytes remain bound by the consumed
+IACKD-1 implementation record.
+
+Design: require strict standard-library parsing, inert sibling basenames,
+status/URL/length/ETag/encoding response identity, one body hash and one parse,
+aggregate-only signatures, all six frozen routes, atomic exclusive output,
+one-thread resources, and a future real executor that cannot pass without a
+new exact decision file and green evidence.
+
+Qualification: 24 focused tests pass. One isolated generated roundtrip covered
+all 128 registered sizes and 161,792 bytes in 0.037818958 seconds at
+36,634,624-byte peak RSS, producing a 4,465-byte ledger. Every network,
+real-header, local-bundle, sibling, sample, event, trajectory, target, model,
+prediction, scoring, provider, device, and claim counter remained zero.
+
+Boundary: the synthetic `IACKDH-R1` route is fixture mechanics only. Commit,
+push, and obtain both green CI jobs for the exact implementation before
+preparing one separate Tier C request. No prior continuation authorizes that
+future real-header pass.
+
+Evidence: `docs/IACKD_CHANNEL_INVENTORY_IMPLEMENTATION.md`,
+`registries/iackd_channel_inventory_implementation.v0.json`,
+`src/neurodecodekit/preprocess/iackd_header_inventory.py`, and
+`tests/test_iackd_header_inventory.py`.

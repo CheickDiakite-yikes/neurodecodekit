@@ -1988,3 +1988,37 @@ only generated fixtures and mocked transport under Tier B. Commit, push, and
 obtain both green jobs for that exact implementation before preparing the sole
 Tier C real-header packet. Do not treat any older `continue` as a retroactive
 decision for that future packet, and never reopen the retained local bundle.
+
+## 2026-08-10 IACKD-H1 Synthetic Implementation
+
+Registration `0e52278aaa1d15e70f4baab7b21ab1c96eb37f67` passed Base Python
+job `93534203368` and Optional Neuro Readers job `93534203385` in CI
+`31412667060` before implementation.
+
+Read `docs/IACKD_CHANNEL_INVENTORY_IMPLEMENTATION.md`,
+`registries/iackd_channel_inventory_implementation.v0.json`,
+`src/neurodecodekit/preprocess/iackd_header_inventory.py`, and both
+`tests/test_iackd_header_inventory*.py` files. The dependency-free module now
+implements strict VHDR decoding, inert sibling validation, exact response
+identity, sequential one-pass hashing and parsing, aggregate-only signatures,
+all six frozen routes, bounded atomic output, a metadata-only inspector, and a
+future decision-gated real executor.
+
+Use the module CLI because the consumed IACKD-1 registry binds the unchanged
+central `src/neurodecodekit/cli.py`:
+
+```bash
+PYTHONPATH=src python -m neurodecodekit.preprocess.iackd_header_inventory
+```
+
+Twenty-four core tests pass. One isolated generated qualification exercised all
+128 registered sizes and 161,792 bytes in 0.037818958 seconds at 36,634,624-byte
+peak RSS, producing 4,465 temporary output bytes. Network and all real or
+protected counters were zero. The synthetic `IACKDH-R1` route has no real-data
+or claim value.
+
+Next gate: commit and push this exact implementation and require both CI jobs
+green. Then prepare one packet binding that exact implementation. Do not fetch
+a real header, touch the retained bundle, create a decision from old user
+words, or run `--execute` before the later packet-bound Tier C decision is
+committed, pushed, and remotely green.

@@ -364,13 +364,21 @@
    Next read `docs/IACKD_CHANNEL_INVENTORY_PRIMARY_SOURCE_RESEARCH.md`,
    `registries/iackd_channel_inventory_research.v0.json`,
    `docs/IACKD_CHANNEL_INVENTORY_PREREGISTRATION.md`, and
-   `registries/iackd_channel_inventory_contract.v0.json`. Public-source review
+   `registries/iackd_channel_inventory_contract.v0.json`, then
+   `docs/IACKD_CHANNEL_INVENTORY_IMPLEMENTATION.md` and its registry.
+   Public-source review
    found that the paper does not assert an exact 36-channel file invariant and
    the authors' two pinned MATLAB pipelines use different deletion vocabularies,
    including HEO/VEO aliases and TRIGGER. IACKD-H1 freezes a 128-header,
-   161,792-byte, sibling-blind aggregate audit. This registration opens no real
-   header and does not authorize the network stage; after remote green, only
-   generated fixtures and mocked transport are eligible under Tier B.
+   161,792-byte, sibling-blind aggregate audit. Registration `0e52278` passed
+   both jobs in CI `31412667060` before the standard-library parser, strict
+   response boundary, aggregate router, writer, and module CLI were built.
+   Twenty-four focused tests and one 128-header generated qualification pass;
+   the measured run used 0.037819 seconds, 36,634,624-byte peak RSS, and 4,465
+   output bytes with zero network or real-content access. This exact
+   implementation must still become remotely green. Real header access remains
+   Tier C and needs a later packet-bound decision; never use the retained local
+   bundle for this lane.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

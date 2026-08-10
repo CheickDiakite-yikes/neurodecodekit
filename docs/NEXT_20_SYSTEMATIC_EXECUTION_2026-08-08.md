@@ -160,17 +160,20 @@ score. The lane is parked with no rerun; the retained private bundle is not
 open for post-failure inspection. This additive lane does not renumber work
 orders 10-20 and does not reopen WO9R.
 
-IACKD-H1 Header Inventory Audit is now prospectively frozen as the smallest
-useful follow-up. The article does not establish the failed exact-36-channel
+IACKD-H1 Header Inventory Audit is now prospectively frozen and locally
+fixture-qualified as the smallest useful follow-up. The article does not establish the failed exact-36-channel
 assumption, and the authors' pinned public pipelines disagree on whether their
 presence-based deletion vocabularies include M1/M2 or HEO/VEO while both name
 TRIGGER. The contract selects all 128 committed VHDR metadata objects and only
 161,792 expected bytes. Its future output is aggregate and hash-bound; the
 existing local bundle, every sibling, sample, event, trajectory, target, model,
-and score remain closed. Registration authorizes no real header request. Only
-generated-fixture and mocked-transport implementation becomes Tier B eligible
-after this exact registration is remotely green; one real execution still
-requires a later packet-bound Tier C decision.
+and score remain closed. Registration `0e52278` passed both jobs in CI
+`31412667060` before the dependency-free implementation began. The parser,
+response gate, aggregate signature router, bounded writer, and module CLI now
+pass 24 focused tests and one measured 128-header generated roundtrip at
+36,634,624-byte peak RSS. This exact implementation must be committed, pushed,
+and remotely green next; one real execution still requires a later
+packet-bound Tier C decision.
 
 Registration `2a7b4188553e221133d788a081b838dbbb9f41bb` passed Base Python
 job `93215490492` and Optional Neuro Readers job `93215490501` in CI

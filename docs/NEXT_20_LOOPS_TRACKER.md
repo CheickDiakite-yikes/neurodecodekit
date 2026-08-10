@@ -895,7 +895,7 @@ failed. No sample, target, model, prediction, freeze, or score followed. The
 lane is consumed with no rerun, and no roadmap row authorizes post-failure
 inspection, expansion, release, or claim promotion.
 
-IACKD-H1 is the next bounded engineering gate. Primary-source review found
+IACKD-H1 is the active bounded engineering gate. Primary-source review found
 that the article reports a 32-channel cap but does not promise exactly 36
 BrainVision channels, while the authors' pinned premovement and execution
 scripts use different presence-based deletion vocabularies: M1/M2/HEOG/VEOG/
@@ -903,6 +903,11 @@ TRIGGER versus HEO/VEO/HEOG/VEOG/TRIGGER. The prospective contract selects
 all 128 VHDR objects from the existing committed inventory, totaling only
 161,792 bytes, and freezes a standard-library, in-memory, sibling-blind
 aggregate signature audit. No real header or local IACKD path was opened.
-After remote-green registration, Tier B may implement only generated fixtures
-and mocked transport. The one real 128-header execution remains Tier C and
-separately decision-gated; no corrected scientific analysis is implied.
+Registration `0e52278` passed both jobs in CI `31412667060` before a
+standard-library parser, strict mocked transport, aggregate router, bounded
+writer, and module CLI were implemented. Twenty-four focused tests pass. A
+128-header generated qualification used 0.037819 seconds, 36,634,624-byte peak
+RSS, and 4,465 output bytes with zero network or real-content operations.
+Commit and remotely green this exact implementation next. The one real
+128-header execution remains Tier C and separately decision-gated; no corrected
+scientific analysis is implied.

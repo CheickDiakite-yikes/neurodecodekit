@@ -811,7 +811,7 @@ Read this before interpreting any number in the repository.
   [frozen preregistration](docs/IACKD_CUE_ACTION_DISSOCIATION_PREREGISTRATION.md),
   [implementation record](docs/IACKD_CUE_ACTION_DISSOCIATION_IMPLEMENTATION.md),
   and [aggregate closeout](docs/IACKD_CUE_ACTION_DISSOCIATION_RESULT.md).
-- **Next engineering gate, IACKD-H1 Header Inventory Audit:** the published
+- **Active engineering gate, IACKD-H1 Header Inventory Audit:** the published
   article supports a 32-channel cap and separately names M1, M2, HEOG, and
   VEOG, but it never establishes an exact 36-channel BrainVision invariant.
   The authors' pinned public code also uses two different presence-based
@@ -820,11 +820,18 @@ Read this before interpreting any number in the repository.
   answers. The new prospective contract audits all **128 VHDR headers** and
   only **161,792 bytes** in canonical order, emits aggregate signature hashes
   and seven public-code alias flags, and forbids the retained 7.249 GB bundle,
-  siblings, samples, events, trajectories, targets, models, and scores. Tier B
-  synthetic implementation becomes eligible only after the registration is
-  remotely green; the one real header audit still requires a separate Tier C
-  decision. Read the [primary-source diagnosis](docs/IACKD_CHANNEL_INVENTORY_PRIMARY_SOURCE_RESEARCH.md)
-  and [frozen preregistration](docs/IACKD_CHANNEL_INVENTORY_PREREGISTRATION.md).
+  siblings, samples, events, trajectories, targets, models, and scores.
+  Registration `0e52278` passed both jobs in CI `31412667060` before Tier B
+  implementation. The dependency-free parser, mocked response validator,
+  signature router, bounded writer, and module CLI now pass 24 focused tests.
+  One isolated fixture qualification processed all 128 registered sizes in
+  0.037819 seconds at 36,634,624-byte peak RSS and emitted 4,465 bytes with
+  zero network or real-content operations. Its constructed `IACKDH-R1` has no
+  real-source meaning. The implementation still needs its own remote-green
+  commit; the one real header audit then requires a separate Tier C decision.
+  Read the [primary-source diagnosis](docs/IACKD_CHANNEL_INVENTORY_PRIMARY_SOURCE_RESEARCH.md),
+  [frozen preregistration](docs/IACKD_CHANNEL_INVENTORY_PREREGISTRATION.md), and
+  [implementation record](docs/IACKD_CHANNEL_INVENTORY_IMPLEMENTATION.md).
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
