@@ -258,6 +258,12 @@
    dependency import, derivative, split, fit, inference, freeze, or score. A
    separate hash-bound Tier C decision and green fixture-only implementation
    are still required.
+   Registration `3c00557` passed both jobs in CI `31346882592`. Read
+   `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_AUTHORIZATION_PACKET.md` and
+   `registries/physionet_motor_positive_control_authorization_request.v0.json`.
+   This all-false request is not authorization. Its own commit must be pushed
+   and remotely green before its exact sentence can be recorded in a separate
+   decision; implementation and real access remain closed.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

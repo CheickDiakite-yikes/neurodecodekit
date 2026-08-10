@@ -349,6 +349,16 @@ inference, freeze, or score. After the registration commit is pushed and
 remotely green, prepare a separate hash-bound Tier C request; do not implement
 or touch the payload before the exact decision is separately green.
 
+Registration `3c00557ecfb09c80e30843589ae295a09feec97c` is now remotely green:
+Base Python job `93330354031` and Optional Neuro Readers job `93330354047`
+passed in CI `31346882592`. The separate exact decision surface is prepared in
+`docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_AUTHORIZATION_PACKET.md` and
+`registries/physionet_motor_positive_control_authorization_request.v0.json`.
+Every authorization flag remains false. Commit, push, and obtain remote-green
+evidence for that request before accepting its exact sentence into a separate
+decision. Do not install the optional environment, implement the real reader,
+or touch a local PhysioNet path from the green registration or ungreen request.
+
 The additive foundation-model decoder strategy is now explicit:
 
 ```bash

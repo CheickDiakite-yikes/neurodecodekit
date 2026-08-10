@@ -206,6 +206,20 @@
 > and only after its green decision qualify an implementation on generated
 > fixtures. Preserve the unrelated tracker inspection NDJSON.
 >
+> Work-order-9 request update, 2026-08-09: registration `3c00557` passed Base
+> Python job `93330354031` and Optional Neuro Readers job `93330354047` in CI
+> `31346882592`. Read
+> `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_AUTHORIZATION_PACKET.md` and
+> `registries/physionet_motor_positive_control_authorization_request.v0.json`.
+> The packet conditionally requests a generated-fixture-only implementation,
+> one narrow isolated classical environment, one exact nine-EDF execution, a
+> remotely green hash-only prediction freeze, and one delivery/score of the
+> same 45 targets. Every current authorization field and operation counter is
+> false/zero. The request commit must be pushed and remotely green before its
+> exact sentence can become a separate decision. Do not implement, install,
+> stat/open the bundle, or accept broad permission as a substitute. Preserve
+> the unrelated tracker inspection NDJSON.
+>
 > Additive strategy refresh, 2026-08-06: read
 > `docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md` and
 > `registries/open_eeg_rd_strategy.v0.json`. Current open EEG benchmarks

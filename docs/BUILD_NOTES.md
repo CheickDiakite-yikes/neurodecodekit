@@ -5810,3 +5810,32 @@ motor positive control.
 Scientific claim not established: no EDF content or outcome was observed, so
 no motor-task EEG effect, physiology, neural advantage, generalization,
 decoding accuracy, latency, device, or human-benefit result exists yet.
+
+## 2026-08-09 - Work Order 9 Exact Tier C Request Prepared
+
+- Verified registration `3c00557ecfb09c80e30843589ae295a09feec97c` passed
+  Base Python job `93330354031` and Optional Neuro Readers job `93330354047` in
+  CI `31346882592` before creating the request.
+- Bound the primary-source research, preregistration, contract, invariant test,
+  commit, Git blobs, SHA-256 values, CI run, and both required job IDs.
+- Added one exact conditional sentence covering a fixture-only implementation,
+  a narrow isolated optional classical environment, one nine-EDF real
+  execution, one remotely green hash-only prediction freeze, and one final
+  target delivery/score.
+- Kept every authorization flag false and every local path, EDF, target,
+  dependency, derivative, fit, prediction, freeze, score, network, provider,
+  hardware, retry, and rerun counter at zero.
+- Added eight request tests for exact all-false posture, green proof identity,
+  artifact hashes and blobs, sentence identity, nonexpansion, ordered gates,
+  resource caps, and the `WO9-V3` ceiling. Seventeen combined work-order-9
+  registration/request tests pass.
+- The request must itself be committed, pushed, and remotely green before the
+  exact sentence can become a separate decision. No implementation or real
+  access may begin from this packet.
+
+Engineering capability added: NeuroDecodeKit now has an exact, reviewable
+decision surface for one bounded public EEG positive-control execution.
+
+Scientific claim not established: a permission request contains no EDF
+observation or result and establishes no motor-task, neural, generalization,
+decoding, latency, device, or human-benefit evidence.

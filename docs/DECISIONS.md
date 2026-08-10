@@ -4462,3 +4462,41 @@ Evidence: `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PRIMARY_SOURCE_RESEARCH.md`,
 `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PREREGISTRATION.md`,
 `registries/physionet_motor_positive_control_contract.v0.json`, and
 `tests/test_physionet_motor_positive_control_contract.py`.
+
+## 0129 - Request One Conditional Work Order 9 Execution
+
+Decision: after registration `3c00557ecfb09c80e30843589ae295a09feec97c`
+passed Base Python job `93330354031` and Optional Neuro Readers job
+`93330354047` in CI `31346882592`, prepare one separate exact Tier C request.
+The request itself authorizes nothing.
+
+Implementation request: after a separately green authorization-only decision,
+allow generated-fixture-only implementation and one narrow Git-ignored
+classical environment containing only the registered NumPy, SciPy, MNE,
+scikit-learn, and pyRiemann families. Keep the base install dependency-free and
+exclude Torch and broad EEG stacks. Require the exact implementation to be
+committed, pushed, and remotely green before local PhysioNet access.
+
+Execution request: one no-network pass over only the acquired nine EDFs, with
+one no-follow identity/hash pass and one semantic parse each; target-firewalled
+runs-03/07 fit data and run-11 signal/target isolation; at most 40 fits and 64
+target-blind prediction sets; then a hash-only prediction freeze committed,
+pushed, and remotely green before one delivery and one score of the same 45
+targets. Retain the frozen one-thread, 1,800-second, 768 MiB RSS, 64 MiB private
+output, zero-new-payload, no-retry, and no-rerun boundary.
+
+Claim decision: the ceiling remains `WO9-V3`, a three-person held-out-run
+motor-task EEG pilot with motor-compatible physiology under proxy controls.
+No sentence in the packet authorizes a replication cohort or upgrades the
+brain-specific, generalization, language, real-time, hardware, assistive, or
+clinical claims.
+
+Next evidence order: commit and push this request and require both CI jobs
+green. Only then may the exact sentence be accepted from the maintainer and
+recorded in separate decision artifacts. Until that sequence completes, every
+implementation, dependency, EDF, target, model, freeze, score, and claim flag
+remains false.
+
+Evidence: `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_AUTHORIZATION_PACKET.md`,
+`registries/physionet_motor_positive_control_authorization_request.v0.json`,
+and `tests/test_physionet_motor_positive_control_authorization_request.py`.

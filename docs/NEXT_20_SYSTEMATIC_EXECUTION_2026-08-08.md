@@ -19,7 +19,7 @@ decision after its own frozen packet and required remote-green evidence exist.
 | 6 | Freeze Loop 54-A decision and qualify parser | A/B then C decision | Recovery-bound exact packet, strict synthetic parser tests, green implementation before real access | Complete |
 | 7 | Execute Loop 54-A once | C | One 11,705-byte VHDR open; no sibling resolution; all 18 gates pass | Consumed; Parked F11; No Rerun |
 | 8 | Acquire tiny PhysioNet motor slice | C | Exactly nine pinned EDF files, 23,248,224 bytes, isolated receipt, no substitutions | Complete; Consumed; 12/12 Gates Passed; No Rerun |
-| 9 | Run grouped public motor positive control | C | Participant/run grouping, prediction + physiology + confound conjunction, remotely green prediction freeze | Gated; Registration Frozen; Exact Decision Required |
+| 9 | Run grouped public motor positive control | C | Participant/run grouping, prediction + physiology + confound conjunction, remotely green prediction freeze | Gated; Registration Green; Exact Authorization Requested |
 | 10 | Execute Loop 54-B signal quality | C | Target-blind VHDR+EEG read, every channel retained, no transform, bounded aggregate output | Gated |
 | 11 | Execute Loop 54-C trial reconciliation | C | Isolated VMRK+MAT target-bearing stage, no plaintext protected public output | Gated |
 | 12 | Close Loop 54-D eligibility ledger | A after C evidence | At least 48 unique performed trials or explicit park; confounds and missing geometry remain visible | Gated |
@@ -131,6 +131,14 @@ RSS, 64 MiB output, zero network, and no rerun are frozen. Registration does
 not authorize a local path stat, EDF read, dependency import, fit, prediction,
 or score. A separate hash-bound Tier C decision and green synthetic-only
 implementation remain mandatory.
+
+Registration `3c00557` passed Base Python job `93330354031` and Optional Neuro
+Readers job `93330354047` in CI `31346882592`. A separate hash-bound Tier C
+packet and all-false machine request now state the exact conditional sentence.
+The request adds no permission by itself: its own commit must be pushed and
+remotely green before the maintainer sentence can be accepted into a separate
+decision record. No implementation, optional dependency environment, local
+PhysioNet operation, fit, prediction, target delivery, or score has begun.
 
 Work order 13 now has a frozen Tier B synthetic-only contract in
 `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md` and
