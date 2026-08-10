@@ -2871,6 +2871,117 @@ def _cmd_inspect_contact_aware_ear_fixture(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_physionet_motor_positive_control(args: argparse.Namespace) -> int:
+    _set_loop25_thread_environment()
+    import os
+
+    from neurodecodekit.experiments.physionet_motor_positive_control import (
+        ImplementationEvidence,
+        registered_plan,
+        run_registered_prediction_execution,
+        run_synthetic_qualification,
+    )
+
+    repo_root = Path.cwd()
+    if args.fixture:
+        summary = run_synthetic_qualification(
+            args.fixture_out,
+            maximum_output_bytes=int(args.max_output_mib * 1024 * 1024),
+        )
+        print(json.dumps(summary, indent=2, sort_keys=True))
+        return 0
+    if not args.execute:
+        print(json.dumps(registered_plan(repo_root), indent=2, sort_keys=True))
+        print("Safety default: no local PhysioNet path stat, open, hash, or parse occurred.")
+        return 0
+    missing = [
+        name
+        for name, value in (
+            ("--implementation-commit", args.implementation_commit),
+            ("--implementation-ci-run-id", args.implementation_ci_run_id),
+            ("--base-python-job-id", args.base_python_job_id),
+            ("--optional-neuro-job-id", args.optional_neuro_job_id),
+        )
+        if value is None
+    ]
+    if missing:
+        raise ValueError(f"--execute requires: {', '.join(missing)}")
+    evidence = ImplementationEvidence(
+        implementation_commit=args.implementation_commit,
+        implementation_ci_run_id=args.implementation_ci_run_id,
+        base_python_job_id=args.base_python_job_id,
+        optional_neuro_job_id=args.optional_neuro_job_id,
+    )
+    report = run_registered_prediction_execution(
+        repo_root=repo_root,
+        evidence=evidence,
+        environ=os.environ,
+    )
+    public_summary = {
+        key: report[key]
+        for key in (
+            "status",
+            "selected_family",
+            "prediction_set_count",
+            "operation_counters",
+            "resources",
+            "runtime_seconds",
+            "peak_rss_bytes",
+            "generated_private_bytes",
+            "input_payload_bytes",
+            "final_target_deliveries",
+            "scoring_events",
+            "end_to_end_latency_measured",
+        )
+    }
+    print(json.dumps(public_summary, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_score_physionet_motor_positive_control(args: argparse.Namespace) -> int:
+    _set_loop25_thread_environment()
+    import os
+
+    from neurodecodekit.experiments.physionet_motor_positive_control import (
+        FreezeEvidence,
+        registered_plan,
+        score_registered_execution,
+    )
+
+    repo_root = Path.cwd()
+    if not args.execute:
+        plan = registered_plan(repo_root)
+        plan["mode"] = "dry_run_no_sealed_target_open_or_score"
+        plan["next_gate"] = "prediction_freeze_commit_must_be_remotely_green"
+        print(json.dumps(plan, indent=2, sort_keys=True))
+        print("Safety default: the sealed run-11 target file was not opened.")
+        return 0
+    missing = [
+        name
+        for name, value in (
+            ("--freeze-commit", args.freeze_commit),
+            ("--freeze-ci-run-id", args.freeze_ci_run_id),
+            ("--base-python-job-id", args.base_python_job_id),
+            ("--optional-neuro-job-id", args.optional_neuro_job_id),
+        )
+        if value is None
+    ]
+    if missing:
+        raise ValueError(f"--execute requires: {', '.join(missing)}")
+    result = score_registered_execution(
+        repo_root=repo_root,
+        evidence=FreezeEvidence(
+            freeze_commit=args.freeze_commit,
+            freeze_ci_run_id=args.freeze_ci_run_id,
+            base_python_job_id=args.base_python_job_id,
+            optional_neuro_job_id=args.optional_neuro_job_id,
+        ),
+        environ=os.environ,
+    )
+    print(json.dumps(result, indent=2, sort_keys=True))
+    return 0
+
+
 def _print_selection_plan(selection: Any, *, heading: str) -> None:
     from neurodecodekit.datasets.selection import format_bytes
 
@@ -5009,6 +5120,97 @@ def build_parser() -> argparse.ArgumentParser:
         help="Successful Optional Neuro Readers job ID from the implementation CI run.",
     )
     p.set_defaults(func=_cmd_physionet_motor_acquire)
+
+    p = sub.add_parser(
+        "physionet-motor-positive-control",
+        help="Plan, fixture-qualify, or run the frozen Work Order 9 prediction stage.",
+        description=(
+            "Defaults to a no-stat plan. --fixture uses generated arrays only. "
+            "--execute consumes the one registered nine-EDF execution through a "
+            "target-blind aggregate prediction freeze and requires exact green "
+            "implementation proof."
+        ),
+    )
+    mode = p.add_mutually_exclusive_group()
+    mode.add_argument(
+        "--execute",
+        action="store_true",
+        help="Consume the one real execution through target-blind prediction freeze.",
+    )
+    mode.add_argument(
+        "--fixture",
+        action="store_true",
+        help="Run the complete interface only on generated synthetic EEG arrays.",
+    )
+    p.add_argument(
+        "--fixture-out",
+        type=Path,
+        default=Path(
+            ".codex_work/physionet_motor_positive_control/fixture_qualification"
+        ),
+        help="Exclusive Git-ignored output root used only with --fixture.",
+    )
+    p.add_argument(
+        "--max-output-mib",
+        type=float,
+        default=64.0,
+        help="Fixture-only output cap, at most 64 MiB (default: 64).",
+    )
+    p.add_argument(
+        "--implementation-commit",
+        help="Full exact implementation commit, remotely green and current at HEAD.",
+    )
+    p.add_argument(
+        "--implementation-ci-run-id",
+        type=int,
+        help="Successful push CI run ID for the exact implementation commit.",
+    )
+    p.add_argument(
+        "--base-python-job-id",
+        type=int,
+        help="Successful Base Python job ID from the implementation CI run.",
+    )
+    p.add_argument(
+        "--optional-neuro-job-id",
+        type=int,
+        help="Successful Optional Neuro Readers job ID from the implementation CI run.",
+    )
+    p.set_defaults(func=_cmd_physionet_motor_positive_control)
+
+    p = sub.add_parser(
+        "score-physionet-motor-positive-control",
+        help="Dry-run or consume the one sealed Work Order 9 final score.",
+        description=(
+            "Defaults to a no-target plan. --execute requires the exact remotely "
+            "green prediction-freeze commit, opens the same 45 sealed targets once, "
+            "applies the frozen WO9-V0 through WO9-V3 router, and forbids rerun."
+        ),
+    )
+    p.add_argument(
+        "--execute",
+        action="store_true",
+        help="Consume the single sealed-target delivery and scoring event.",
+    )
+    p.add_argument(
+        "--freeze-commit",
+        help="Full remotely-green prediction-freeze commit; must equal current HEAD.",
+    )
+    p.add_argument(
+        "--freeze-ci-run-id",
+        type=int,
+        help="Successful push CI run ID for the exact prediction-freeze commit.",
+    )
+    p.add_argument(
+        "--base-python-job-id",
+        type=int,
+        help="Successful Base Python job ID from the prediction-freeze CI run.",
+    )
+    p.add_argument(
+        "--optional-neuro-job-id",
+        type=int,
+        help="Successful Optional Neuro Readers job ID from the freeze CI run.",
+    )
+    p.set_defaults(func=_cmd_score_physionet_motor_positive_control)
 
     p = sub.add_parser(
         "loop54-vhdr-ledger",

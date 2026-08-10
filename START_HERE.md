@@ -242,8 +242,8 @@
    event, target, model, training, inference, scoring, retry, rerun, or
    work-order-9 operations. Work order 8 is complete and consumed. The
    payload and private receipts remain Git-ignored. The separate 10 GB
-   allowance is future headroom, not an expansion of this invocation; work
-   order 9 remains closed.
+   allowance is future headroom, not an expansion of this invocation. Work
+   order 9's real execution remains separately gated.
    Then read
    `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PRIMARY_SOURCE_RESEARCH.md`,
    `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PREREGISTRATION.md`, and
@@ -254,20 +254,25 @@
    freeze in a pushed remotely green hash-only ledger before the 45 final
    targets open once. The maximum verdict is a three-person motor-compatible
    public EEG pilot, not brain-specific, typing, language, or generalization
-   proof. Registration itself authorizes no local PhysioNet operation,
-   dependency import, derivative, split, fit, inference, freeze, or score. A
-   separate hash-bound Tier C decision and green fixture-only implementation
-   are still required.
+   proof. Registration itself authorized no operation; the later exact Tier C
+   decision and generated-fixture implementation preserve those boundaries.
    Registration `3c00557` passed both jobs in CI `31346882592`. Read
    `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_AUTHORIZATION_PACKET.md` and
    `registries/physionet_motor_positive_control_authorization_request.v0.json`.
    Request `c62b10a` passed both jobs in CI `31347209691`. The maintainer then
    supplied the exact sentence, now recorded additively in
    `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_AUTHORIZATION_DECISION.md` and its
-   decision registry. The decision is effective only after its own commit is
-   pushed and both jobs are green. Until then, implementation, dependency
-   installation, local PhysioNet access, models, targets, and scoring remain
-   closed.
+   decision registry. Authorization-only commit `da9399c` passed both jobs in
+   CI `31348287824` before implementation. Now read
+   `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_IMPLEMENTATION.md` and
+   `registries/physionet_motor_positive_control_implementation.v0.json`. The
+   dry-run-first reader, exact split, target firewall, causal preprocessing,
+   fixed classical families, 12 controls and hashes, isolated scorer, and
+   resource guards passed the generated 135-event roundtrip with zero real or
+   network access. The exact implementation still must be committed, pushed,
+   and remotely green before one EDF is opened. A later successful prediction
+   freeze must separately become remotely green before the 45 targets open
+   once. Do not run either real command before its corresponding gate.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

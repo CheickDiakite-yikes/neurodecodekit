@@ -57,7 +57,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install neuro and development tools
-        run: python -m pip install -e '.[neuro,dev]'
+        run: python -m pip install -e '.[neuro,classical,dev]'
       - name: Focused RW2 suite
         run: PYTHONPATH=src python -m unittest discover -s tests -p 'test_signal_quality.py' -v
       - name: Complete neuro-enabled suite
@@ -68,3 +68,5 @@ jobs:
           neurodecode inspect-signal-quality-fixtures --help
           neurodecode inspect-signal-quality --help
           neurodecode inspect-signal-quality-report --help
+          neurodecode physionet-motor-positive-control --help
+          neurodecode score-physionet-motor-positive-control --help

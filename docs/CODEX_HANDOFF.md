@@ -234,6 +234,28 @@
 > model, prediction, or score operation occurred in the decision milestone.
 > Preserve the unrelated tracker inspection NDJSON.
 >
+> Work-order-9 implementation update, 2026-08-09: authorization-only commit
+> `da9399c4290fc2be81834ed1036a6bede5f52154` passed Base Python job
+> `93334251403` and Optional Neuro Readers job `93334251379` in CI
+> `31348287824` before implementation. Read
+> `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_IMPLEMENTATION.md`,
+> `registries/physionet_motor_positive_control_implementation.v0.json`, and
+> `src/neurodecodekit/experiments/physionet_motor_positive_control.py`. The
+> narrow isolated classical environment, sequential MNE reader, exact 90/45
+> split, function/artifact target firewall, causal preprocessing, fixed
+> CSP-LDA/Riemannian selection, 12 controls and per-condition hashes,
+> aggregate scorer, resource guards, and two dry-run-first CLI commands are
+> generated-fixture qualified. The final fixture used nine runs, 135 events,
+> 33 fits, 45 target-blind inferences, 12 prediction sets, 8.961233 seconds,
+> 327,647,232-byte peak RSS, and 20,825,424 bytes. All gates passed with zero
+> real-data, real-target, or network reads; the disposable output was removed.
+> Its synthetic `WO9-V2` has no claim value. The exact implementation must now
+> be committed, pushed, and remotely green before the one real no-network
+> execution. Do not stat or open the bundle before that gate. If the execution
+> succeeds, commit/push its aggregate freeze and wait for both green jobs before
+> opening the sealed 45-target file once. Never rerun either real stage.
+> Preserve the unrelated tracker inspection NDJSON.
+>
 > Additive strategy refresh, 2026-08-06: read
 > `docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md` and
 > `registries/open_eeg_rd_strategy.v0.json`. Current open EEG benchmarks

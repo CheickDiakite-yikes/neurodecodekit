@@ -19,7 +19,7 @@ decision after its own frozen packet and required remote-green evidence exist.
 | 6 | Freeze Loop 54-A decision and qualify parser | A/B then C decision | Recovery-bound exact packet, strict synthetic parser tests, green implementation before real access | Complete |
 | 7 | Execute Loop 54-A once | C | One 11,705-byte VHDR open; no sibling resolution; all 18 gates pass | Consumed; Parked F11; No Rerun |
 | 8 | Acquire tiny PhysioNet motor slice | C | Exactly nine pinned EDF files, 23,248,224 bytes, isolated receipt, no substitutions | Complete; Consumed; 12/12 Gates Passed; No Rerun |
-| 9 | Run grouped public motor positive control | C | Participant/run grouping, prediction + physiology + confound conjunction, remotely green prediction freeze | Gated; Registration Green; Exact Authorization Requested |
+| 9 | Run grouped public motor positive control | C | Participant/run grouping, prediction + physiology + confound conjunction, remotely green prediction freeze | Gated; Implementation Qualified Locally; Execution Pending Remote Green |
 | 10 | Execute Loop 54-B signal quality | C | Target-blind VHDR+EEG read, every channel retained, no transform, bounded aggregate output | Gated |
 | 11 | Execute Loop 54-C trial reconciliation | C | Isolated VMRK+MAT target-bearing stage, no plaintext protected public output | Gated |
 | 12 | Close Loop 54-D eligibility ledger | A after C evidence | At least 48 unique performed trials or explicit park; confounds and missing geometry remain visible | Gated |
@@ -80,13 +80,14 @@ no rerun, and work orders 10-12 remain blocked.
 Work order 8 now has an acquisition-only preregistration and machine contract
 for PhysioNet EEGMMIDB v1.0.0. It freezes exactly nine EDF paths from subjects
 S001-S003 and motor-execution runs 03/07/11, totaling 23,248,224 bytes with
-official SHA-256 identities. A 2026-08-09 metadata pass made ten HTTP HEAD
-requests across those paths, including one repeated first-file probe; all
-reported HTTP 200 and transferred zero EDF body bytes. No EDF, `.event`,
-annotation, header, signal, target, split, model, or local PhysioNet path was
-opened. Registration, request, and exact decision are now remotely green, and
-the fixture-qualified implementation is waiting for its own remote-green gate.
-Work order 9 remains closed.
+official SHA-256 identities. Its separately authorized one-shot acquisition
+later transferred and verified exactly those nine files and 23,248,224 bytes.
+All 12 acquisition gates passed, while every EDF parse, annotation, signal,
+target, split, model, training, inference, scoring, retry, rerun, and
+work-order-9 counter stayed zero. Work order 8 is complete and consumed.
+Work order 9 has now advanced through its own green authorization and local
+generated-fixture implementation, but real execution remains closed until the
+exact implementation commit is pushed and remotely green.
 
 Registration `2a7b4188553e221133d788a081b838dbbb9f41bb` passed Base Python
 job `93215490492` and Optional Neuro Readers job `93215490501` in CI
@@ -115,33 +116,43 @@ one-pass local SHA-256 values matched, and the complete bundle promoted in
 50.682373 seconds at 55,181,312-byte peak RSS and 28,327,635-byte peak disk.
 Every parser, event, target, model, training, inference, scoring, retry, rerun,
 and work-order-9 counter stayed zero. Work order 8 is complete and consumed;
-work order 9 remains gated. A later 10 GB data ceiling is available for a
+work order 9 is locally qualified but its real execution remains gated. A
+later 10 GB data ceiling is available for a
 separately contracted future stage; it did not enlarge this immutable
 23,248,224-byte inventory.
 
 Work order 9 now has a prospective primary-source research record and strict
 machine registration. It binds only the existing S001-S003 runs 03/07/11
-inventory. Runs 03 and 07 may eventually select between fixed CSP-LDA and
-Riemannian MDM; run 11 remains a sealed 45-event final set until every primary
+inventory. Runs 03 and 07 alone select between fixed CSP-LDA and Riemannian
+MDM; run 11 remains a sealed 45-event final set until every primary
 and control prediction hash is committed, pushed, and remotely green. The
 maximum pass requires held-out prediction, motor-compatible mu/beta physiology,
 and timing, pre-cue, label, displacement, channel, hemisphere, and
 frontal/occipital proxy controls together. One thread, 1,800 seconds, 768 MiB
-RSS, 64 MiB output, zero network, and no rerun are frozen. Registration does
-not authorize a local path stat, EDF read, dependency import, fit, prediction,
-or score. A separate hash-bound Tier C decision and green synthetic-only
-implementation remain mandatory.
+RSS, 64 MiB output, zero network, and no rerun are frozen. Registration alone
+authorized no operation. The exact Tier C decision is now remotely green and
+the synthetic-only implementation is locally qualified; the implementation's
+own remote-green gate remains mandatory before a local path stat or EDF read.
 
 Registration `3c00557` passed Base Python job `93330354031` and Optional Neuro
 Readers job `93330354047` in CI `31346882592`. A separate hash-bound Tier C
 packet and all-false machine request now state the exact conditional sentence.
 Request `c62b10a` passed Base Python job `93331241434` and Optional Neuro
 Readers job `93331241411` in CI `31347209691`. The maintainer then supplied the
-exact sentence. Its additive human and machine decision records are the active
-work-order-9 gate: they must be committed, pushed, and remotely green before
-fixture-only implementation or the isolated optional environment may begin.
-No implementation, dependency installation, local PhysioNet operation, fit,
-prediction, target delivery, or score has begun.
+exact sentence. Authorization-only commit `da9399c` passed Base Python job
+`93334251403` and Optional Neuro Readers job `93334251379` in CI
+`31348287824` before implementation began. The strict reader, target-firewalled
+derivatives, causal preprocessing, fixed CSP-LDA and Riemannian families, 12
+controls, per-condition hash freeze, isolated aggregate scorer, resource
+guards, and two dry-run-first CLI surfaces are now qualified on generated
+arrays. The final synthetic roundtrip used nine runs and 135 events, made 33
+fits and 45 target-blind model inferences, froze 12 prediction sets, and
+completed in 8.961233 seconds at 327,647,232-byte peak RSS with 20,825,424
+generated bytes. All gates passed; real-data, real-target, and network reads
+were zero, and the disposable artifacts were removed. The synthetic `WO9-V2`
+router output has no claim value. No local PhysioNet path, private receipt, EDF,
+real target, or real model operation has begun. The exact implementation must
+now be committed, pushed, and remotely green before the one real execution.
 
 Work order 13 now has a frozen Tier B synthetic-only contract in
 `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md` and

@@ -1,0 +1,277 @@
+{
+  "schema_name": "neurodecodekit.physionet_motor_positive_control_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "work-order-9-physionet-motor-positive-control-implementation-v0",
+  "prepared_at": "2026-08-09",
+  "status": "fixture_qualified_exact_implementation_requires_remote_green_before_real_access",
+  "proof_posture": "generated_fixture_only_zero_registered_physionet_private_manifest_edf_or_real_target_access",
+  "contract_path": "registries/physionet_motor_positive_control_contract.v0.json",
+  "contract_sha256": "4f00f8e2cb257e912a947b49268c1476554f3e671eb9322926592df4908b144e",
+  "authorization_decision_path": "registries/physionet_motor_positive_control_authorization_decision.v0.json",
+  "authorization_decision_sha256": "33c066ecc54953d7ec5fb17da894856a7622e66c1aadd4a5b709c79429e0a246",
+  "green_authorization_decision": {
+    "commit": "da9399c4290fc2be81834ed1036a6bede5f52154",
+    "push_ci_run_id": 31348287824,
+    "base_python_job_id": 93334251403,
+    "optional_neuro_job_id": 93334251379,
+    "both_required_jobs_green": true
+  },
+  "tracked_file_hashes": [
+    {
+      "path": "src/neurodecodekit/experiments/physionet_motor_positive_control.py",
+      "sha256": "b18a55cadb51dd340af6e251d2e87345abf48c01a5df222e59c0a8ff9adfd79a"
+    },
+    {
+      "path": "src/neurodecodekit/cli.py",
+      "sha256": "cbc61b66b952720606b5cf67d6c4cc0a187e69b3f2da644b351b00c9ec33fff7"
+    },
+    {
+      "path": "tests/test_physionet_motor_positive_control.py",
+      "sha256": "d7ee5842eda1a688fbc4c1ff8424ce59fd83dc6268428a94f47d5268718f4e46"
+    },
+    {
+      "path": "tests/test_physionet_motor_positive_control_implementation.py",
+      "sha256": "4b4ddfec594972e5e73ec77857586377807bb5c40cc4510917a5d8b9e4207e25"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "1e3c92c9aec796bbadadfe9797f049aa5c9a5d7803b68eb47445ea72ebf83e78"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "0f48b968d3837d797f3770a5ec8956864c11c0765c1a8c65eb6774629612f027"
+    },
+    {
+      "path": "docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_IMPLEMENTATION.md",
+      "sha256": "48475a98a813761e765c37e32058cfadbfbd3ca6c9c044e175fee674602bc8c9"
+    }
+  ],
+  "frozen_cli": {
+    "prediction_command": "physionet-motor-positive-control",
+    "prediction_default": "dry_run_no_local_physionet_stat_open_hash_or_parse",
+    "prediction_fixture_mode": "generated_arrays_only",
+    "prediction_real_mode_requires_explicit_execute": true,
+    "scoring_command": "score-physionet-motor-positive-control",
+    "scoring_default": "dry_run_no_target_open",
+    "scoring_real_mode_requires_explicit_execute": true,
+    "implementation_and_freeze_remote_green_proofs_required_in_order": true
+  },
+  "optional_environment": {
+    "path_kind": "isolated_git_ignored_virtual_environment",
+    "base_dependencies_added": [],
+    "extra_name": "classical",
+    "qualified_versions": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.0",
+      "mne": "1.12.1",
+      "scikit_learn": "1.9.0",
+      "pyriemann": "0.12"
+    },
+    "installer_workers": 1,
+    "installation_runtime_seconds": 7.24,
+    "installation_peak_rss_bytes": 55279616,
+    "download_bytes_upper_bound": 58720256,
+    "download_measurement": "displayed_package_download_sizes_summed_and_rounded_up_to_56_MiB",
+    "retained_disk_bytes": 210202624,
+    "installation_wall_cap_seconds": 900,
+    "network_transfer_cap_bytes": 268435456,
+    "incremental_disk_cap_bytes": 536870912
+  },
+  "reader_and_split": {
+    "registered_files": 9,
+    "registered_payload_bytes": 23248224,
+    "subjects": ["S001", "S002", "S003"],
+    "fit_and_selection_runs": ["03", "07"],
+    "sealed_final_run": "11",
+    "sequential_size_and_sha256_passes_per_edf": 1,
+    "sequential_semantic_mne_parses_per_edf": 1,
+    "sampling_rate_hz": 160,
+    "retained_eeg_channels": 64,
+    "montage": "standard_1005",
+    "annotation_allowlist": ["T0", "T1", "T2"],
+    "task_events_per_file": 15,
+    "fit_rows": 90,
+    "final_rows": 45,
+    "row_random_split": false,
+    "fit_and_final_event_ids_must_be_disjoint": true,
+    "event_sidecar_operations": 0
+  },
+  "target_firewall": {
+    "fit_target_rows": 90,
+    "target_free_prediction_rows": 45,
+    "sealed_target_rows": 45,
+    "run11_annotations_parsed_once_by_extraction_stage": true,
+    "sealed_target_values_printed_logged_or_returned": false,
+    "sealed_target_file_opened_by_model_stage": false,
+    "run11_targets_used_for_fit_selection_threshold_channel_or_parameter_choice": false,
+    "model_stage_reads_only_fit_and_target_free_prediction_derivatives": true,
+    "boundary_kind": "function_and_artifact_boundary_not_operating_system_sandbox",
+    "one_future_target_delivery_after_remote_green_freeze": true
+  },
+  "causal_preprocessing": {
+    "reference": "instantaneous_common_average_all_64_retained_channels",
+    "filter": "fourth_order_Butterworth_SOS_sosfilt_continuous_run",
+    "primary_passband_hz": [8.0, 30.0],
+    "primary_window_seconds_from_cue": [1.0, 3.0],
+    "pre_cue_control_window_seconds_from_cue": [-2.0, 0.0],
+    "right_context_seconds": 0.0,
+    "decision_latency_seconds_from_cue": 3.0,
+    "producer_is_causal": true,
+    "causal_claim": "cue_causal_only_not_pre_movement",
+    "end_to_end_latency_measured": false
+  },
+  "fixed_model_inventory": {
+    "selection_candidates": [
+      "fixed_8_to_30_hz_csp_lda",
+      "regularized_riemannian_mdm"
+    ],
+    "selection_partition": "runs_03_and_07_only",
+    "exact_tie_winner": "fixed_8_to_30_hz_csp_lda",
+    "fixed_comparator": "fixed_low_frequency_shrinkage_lda",
+    "classical_parameter_update_fits": 33,
+    "target_blind_model_inference_runs": 45,
+    "train_only_no_signal_prior_fits": 3,
+    "prediction_sets": 12,
+    "hyperparameter_search": false,
+    "fallback_or_substitution": false
+  },
+  "prediction_freeze": {
+    "prediction_set_count": 12,
+    "prediction_rows_per_set": 45,
+    "per_condition_sha256_required": true,
+    "private_prediction_payload_sha256_required": true,
+    "fit_prediction_and_sealed_derivative_sha256_required": true,
+    "source_manifest_sha256_required": true,
+    "code_split_configuration_and_payload_hashes_required": true,
+    "selected_family_and_dependency_versions_required": true,
+    "individual_predictions_probabilities_targets_or_participant_outcomes_allowed": false,
+    "commit_push_and_two_green_jobs_required_before_target_delivery": true
+  },
+  "aggregate_scorer": {
+    "sealed_final_events": 45,
+    "final_target_deliveries": 1,
+    "final_scoring_events": 1,
+    "published_output": "aggregate_conditions_only",
+    "individual_participant_metrics_published": false,
+    "ordered_verdicts": ["WO9-V0", "WO9-V1", "WO9-V2", "WO9-V3"],
+    "physiology_direction": "contralateral_minus_ipsilateral_is_negative",
+    "hemisphere_swap_must_fail_primary_for_WO9_V3": true,
+    "post_target_update": false
+  },
+  "fixture_qualification": {
+    "fixture_seed": 5509,
+    "fixture_kind": "nine_generated_64_channel_runs_with_exact_subject_run_event_and_geometry_contract",
+    "synthetic_runs": 9,
+    "synthetic_events": 135,
+    "selected_family": "fixed_8_to_30_hz_csp_lda",
+    "classical_parameter_update_fits": 33,
+    "target_blind_model_inference_runs": 45,
+    "prediction_sets": 12,
+    "synthetic_router_verdict": "WO9-V2",
+    "runtime_seconds": 8.961233,
+    "peak_rss_bytes": 327647232,
+    "generated_bytes": 20825424,
+    "real_data_reads": 0,
+    "real_target_reads": 0,
+    "network_bytes": 0,
+    "scientific_claim_upgrade": false,
+    "all_gates_passed": true,
+    "generated_output_removed": true,
+    "synthetic_router_verdict_has_claim_value": false
+  },
+  "verification": {
+    "focused_base_tests": 11,
+    "focused_base_skips_due_to_optional_classical_stack": 2,
+    "focused_optional_tests": 11,
+    "implementation_registry_tests": 8,
+    "complete_base_suite_total_tests": 1504,
+    "complete_base_suite_passed_tests": 1499,
+    "complete_base_suite_skips": 5,
+    "complete_base_suite_internal_runtime_seconds": 41.199,
+    "complete_base_suite_external_wall_seconds": 42.24,
+    "complete_base_suite_peak_rss_bytes": 639238144,
+    "complete_optional_suite_total_tests": 1489,
+    "complete_optional_suite_passed_tests": 1455,
+    "complete_optional_suite_skips": 34,
+    "complete_optional_suite_internal_runtime_seconds": 15.244,
+    "complete_optional_suite_external_wall_seconds": 17.55,
+    "complete_optional_suite_peak_rss_bytes": 500006912,
+    "focused_base_passed": true,
+    "focused_optional_passed": true,
+    "complete_base_suite_passed": true,
+    "complete_optional_suite_passed": true,
+    "ruff_passed": true,
+    "compileall_passed": true,
+    "registry_json_validation_passed": true,
+    "cli_help_and_dry_run_passed": true,
+    "git_diff_check_passed": true
+  },
+  "real_execution_caps": {
+    "registered_executions": 1,
+    "cpu_threads": 1,
+    "workers": 1,
+    "concurrent_numerical_jobs": 1,
+    "wall_time_seconds": 1800,
+    "peak_rss_bytes": 805306368,
+    "generated_private_output_bytes": 67108864,
+    "minimum_free_disk_bytes_before": 2147483648,
+    "network_bytes": 0,
+    "new_payload_bytes": 0,
+    "maximum_classical_parameter_update_fits": 40,
+    "maximum_target_blind_model_inference_runs": 64,
+    "retries": 0,
+    "reruns": 0
+  },
+  "implementation_access_counters": {
+    "registered_physionet_path_stats": 0,
+    "registered_physionet_path_opens": 0,
+    "private_acquisition_manifest_reads": 0,
+    "real_edf_sha256_passes": 0,
+    "real_edf_semantic_parses": 0,
+    "real_header_reads": 0,
+    "real_annotation_reads": 0,
+    "real_signal_reads": 0,
+    "real_target_rows_delivered": 0,
+    "real_derivative_creations": 0,
+    "real_parameter_update_fits": 0,
+    "real_model_inference_runs": 0,
+    "real_prediction_freezes": 0,
+    "real_scoring_events": 0,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "new_payload_bytes": 0,
+    "language_model_or_provider_operations": 0,
+    "RW3_stream_device_or_hardware_operations": 0,
+    "real_retries": 0,
+    "real_reruns": 0,
+    "retained_generated_experiment_bytes": 0
+  },
+  "execution_state": {
+    "implementation_commit": null,
+    "implementation_push_ci_run_id": null,
+    "implementation_base_python_job_id": null,
+    "implementation_optional_neuro_job_id": null,
+    "registered_execution_consumed": false,
+    "prediction_freeze_created": false,
+    "prediction_freeze_committed_pushed_and_remotely_green": false,
+    "final_targets_delivered": false,
+    "final_score_consumed": false
+  },
+  "warnings": [
+    "implementation_is_not_a_real_EEG_or_scientific_result",
+    "synthetic_WO9_V2_has_no_claim_value",
+    "the_target_firewall_is_a_function_and_artifact_boundary_not_an_OS_sandbox",
+    "run11_annotations_will_be_parsed_once_to_create_the_sealed_target_file",
+    "visual_cue_is_class_correlated",
+    "separate_EOG_EMG_and_actual_movement_onset_are_unavailable",
+    "end_to_end_latency_is_unmeasured",
+    "exact_implementation_commit_must_be_remotely_green_before_real_access",
+    "successful_prediction_freeze_must_be_remotely_green_before_one_score",
+    "no_retry_or_rerun_is_authorized"
+  ],
+  "claim_boundary": {
+    "engineering_capability_added": "NeuroDecodeKit can execute a strict resource-bounded target-firewalled held-out-run public EEG motor-task positive-control protocol with fixed classical models physiology and confound controls per-condition prediction hashes and an isolated aggregate scorer.",
+    "scientific_claim_not_established": "Generated-fixture qualification establishes no real EEG readability motor-task accuracy neural effect physiology brain-specific origin unseen-person generalization typing language or thought decoding end-to-end latency real-time operation portable hardware home use assistive benefit or clinical utility.",
+    "maximum_after_future_WO9_V3": "A three-person held-out-run motor-task EEG pilot with motor-compatible sensorimotor physiology under the registered proxy controls."
+  }
+}

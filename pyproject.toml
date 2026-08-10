@@ -44,6 +44,13 @@ Issues = "https://github.com/CheickDiakite-yikes/neurodecodekit/issues"
 hf = ["huggingface_hub>=0.24"]
 array = ["numpy>=1.26"]
 neuro = ["mne>=1.12,<1.13", "scipy>=1.11", "numpy>=1.26"]
+classical = [
+  "numpy>=1.26",
+  "scipy>=1.11",
+  "mne>=1.12,<1.13",
+  "scikit-learn>=1.4,<2",
+  "pyriemann==0.12",
+]
 cache = ["zarr>=3.0", "numcodecs>=0.13", "numpy>=1.26"]
 ml = ["numpy>=1.26", "scikit-learn>=1.4", "torch>=2.2"]
 demo = ["gradio>=6.20,<7"]
@@ -56,6 +63,7 @@ all = [
   "zarr>=3.0",
   "numcodecs>=0.13",
   "scikit-learn>=1.4",
+  "pyriemann==0.12",
   "torch>=2.2",
   "gradio>=6.20,<7",
   "pytest>=8.0",

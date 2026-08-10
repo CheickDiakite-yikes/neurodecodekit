@@ -4534,3 +4534,54 @@ result.
 Evidence: `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_AUTHORIZATION_DECISION.md`,
 `registries/physionet_motor_positive_control_authorization_decision.v0.json`,
 and `tests/test_physionet_motor_positive_control_authorization_decision.py`.
+
+## 0131 - Freeze The Exact Work Order 9 Implementation Before Real Access
+
+Decision: after authorization commit
+`da9399c4290fc2be81834ed1036a6bede5f52154` passed Base Python job
+`93334251403` and Optional Neuro Readers job `93334251379` in CI
+`31348287824`, implement only the generated-fixture and bounded environment
+surface allowed by that decision. Do not inspect the acquired bundle while
+building or qualifying it.
+
+Environment: retain an empty base dependency list and add one narrow optional
+`classical` extra for the registered NumPy, SciPy, MNE, scikit-learn, and
+pyRiemann families. Bind future execution to the exact qualified versions and
+one-thread environment. Do not add Torch, Braindecode, MOABB, a deep model, a
+foundation model, a checkpoint, or an alternate backend.
+
+Data boundary: future extraction may parse the exact run-11 T1/T2 annotations
+once to create the sealed target artifact, but the model stage opens only the
+runs-03/07 target-bearing fit derivative and target-free run-11 prediction
+derivative. Describe this honestly as a function and artifact firewall, not an
+operating-system sandbox. Run-11 targets cannot participate in fitting,
+selection, threshold, channel, parameter, prediction, or control operations.
+
+Evidence binding: require every one of the 12 45-row condition sets to have a
+separate SHA-256 in the public freeze. Also bind the private payload, three
+derivatives, source manifest, split protocol, configuration, implementation
+registry, tracked code hashes, selected family, dependency versions, operation
+counters, and resources. The scorer must recompute all condition hashes before
+opening the sealed artifact.
+
+Scientific routing: freeze the negative contralateral-minus-ipsilateral
+mu/beta direction and require the hemisphere-swap condition to fail the primary
+gate for `WO9-V3`. These are implementation clarifications made without real
+outcomes. Keep the preregistered `WO9-V0` through `WO9-V3` router and claim
+ceiling unchanged.
+
+Qualification: the final generated nine-run, 135-event roundtrip passed all
+implementation gates with 33 fits, 45 target-blind inferences, 12 prediction
+sets, 8.961233 seconds, 327,647,232-byte peak RSS, and 20,825,424 generated
+bytes. Real-data, real-target, and network counters were zero. The synthetic
+`WO9-V2` branch has no claim value and the generated artifacts were removed.
+
+Next evidence order: commit and push the implementation and require both CI
+jobs green at that exact commit. Only then may one real target-blind execution
+begin. Do not score even after a successful run until its aggregate freeze is
+separately committed, pushed, and remotely green.
+
+Evidence: `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_IMPLEMENTATION.md`,
+`registries/physionet_motor_positive_control_implementation.v0.json`,
+`src/neurodecodekit/experiments/physionet_motor_positive_control.py`, and the
+two Work Order 9 implementation test modules.
