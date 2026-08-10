@@ -1,0 +1,189 @@
+{
+  "schema_name": "neurodecodekit.iackd_channel_role_geometry_authorization_decision",
+  "schema_version": "0.1.0",
+  "decision_id": "IACKD-H2-channel-role-geometry-authorization-decision-v0",
+  "recorded_at_local": "2026-08-10",
+  "status": "packet_bound_authorized_effective_only_after_decision_remote_green_zero_real_operations_at_recording",
+  "proof_posture": "actual_maintainer_words_quote_green_request_hash_bound_scope_no_retroactive_or_inferred_expansion",
+  "authorization_parent_commit": "86174bc86123bc010bac2f40a9d72147dc8aef05",
+  "contract_sha256": "a5c1e18cf77c25a656b31bbcd30c65e2ad3b7076ea747ec7c7137a3ff919612b",
+  "effective_only_after_decision_commit_pushed_and_both_CI_jobs_green": true,
+  "green_request": {
+    "commit": "86174bc86123bc010bac2f40a9d72147dc8aef05",
+    "commit_subject": "Request IACKD role audit authorization",
+    "branch": "codex/loop-54a-vhdr-preregistration",
+    "push_CI_run_id": 31431064259,
+    "push_CI_url": "https://github.com/CheickDiakite-yikes/neurodecodekit/actions/runs/31431064259",
+    "base_python_job_id": 93594327147,
+    "base_python_job_conclusion": "success",
+    "optional_neuro_job_id": 93594327069,
+    "optional_neuro_job_conclusion": "success",
+    "both_required_jobs_green": true,
+    "verification_calls": 1
+  },
+  "green_registration": {
+    "commit": "228ccd03f5e0b5d02ba104e13b77b04f2032df78",
+    "push_CI_run_id": 31427931578,
+    "base_python_job_id": 93583989913,
+    "optional_neuro_job_id": 93583989996,
+    "both_required_jobs_green": true
+  },
+  "green_implementation": {
+    "commit": "9f6fef9540ae0a1fe52cbf24b17b0af89147beae",
+    "push_CI_run_id": 31430151368,
+    "base_python_job_id": 93591323731,
+    "optional_neuro_job_id": 93591323646,
+    "implementation_registry_sha256": "b3989d4489c2f3b95d4ca70b6caf0505a413b13e2bebdec6a6aad8b52d124acb",
+    "both_required_jobs_green": true
+  },
+  "bound_artifacts": {
+    "contract": {
+      "path": "registries/iackd_channel_role_geometry_contract.v0.json",
+      "sha256": "a5c1e18cf77c25a656b31bbcd30c65e2ad3b7076ea747ec7c7137a3ff919612b",
+      "git_blob_sha1": "efbb21d69b42dfba9ab0a94ec84ed5f05ec0551b"
+    },
+    "inventory": {
+      "path": "registries/iackd_openneuro_metadata_inventory.v0.json",
+      "sha256": "aeaa4928192cca9086fcb0abf4711147c68a68ef5c5aacda2ebc67d162a1ef19",
+      "git_blob_sha1": "74f57139029085c4e751035d443d949d33f564ea"
+    },
+    "implementation": {
+      "path": "registries/iackd_channel_role_geometry_implementation.v0.json",
+      "sha256": "b3989d4489c2f3b95d4ca70b6caf0505a413b13e2bebdec6a6aad8b52d124acb",
+      "git_blob_sha1": "085248801edb1a881706d999512f49a7f2bd228d"
+    },
+    "request": {
+      "path": "registries/iackd_channel_role_geometry_authorization_request.v0.json",
+      "sha256": "33fb3ac2c1a8be8487640e5c5cab11126c2d58b1ccf78201a23b3e9f4938398b",
+      "git_blob_sha1": "287049640a0a85529a919bc18de3fcb2075439bc"
+    },
+    "packet": {
+      "path": "docs/IACKD_CHANNEL_ROLE_GEOMETRY_AUTHORIZATION_PACKET.md",
+      "sha256": "a7a578c3248fd624f75d980c0faaa986ac89a133166eca651dd7c2b5743bb81d",
+      "git_blob_sha1": "1ac30e3d2f823f7af846474643b2cbd4afa9a516"
+    }
+  },
+  "maintainer_words": "continue :)",
+  "maintainer_words_sha256": "fbaebae0b7d5c8b15483b2c1075bcfcec3cc816b1ae38977dbd9ecfc20608cb0",
+  "user_authorization": {
+    "communication_mode": "short_form_packet_reference",
+    "actual_message_preserved_verbatim": true,
+    "sole_active_Tier_C_packet": "IACKD-H2",
+    "packet_commit_CI_scope_and_gate_identified_before_message": true,
+    "maintainer_unambiguously_directed_continue": true,
+    "long_form_sentence_claimed_as_user_utterance": false,
+    "procedural_recital_waived": true,
+    "substantive_registered_scope_unchanged": true,
+    "scope_expansion_by_inference": false,
+    "one_registered_execution_only": true
+  },
+  "authorization": {
+    "one_registered_public_metadata_audit": true,
+    "real_metadata_requests": 316,
+    "real_metadata_body_bytes": 457602,
+    "body_SHA256_passes": 316,
+    "semantic_parse_passes": 316,
+    "role_objects": {
+      "channels": 128,
+      "eeg_sidecar": 128,
+      "electrodes": 30,
+      "coordsystem": 30
+    },
+    "private_consumed_markers": 1,
+    "public_aggregate_ledgers": 1,
+    "raw_bodies_persisted": 0,
+    "individual_paths_participants_rows_coordinates_or_free_text_public": 0,
+    "existing_local_IACKD_bundle_operations": 0,
+    "VHDR_sibling_signal_event_trajectory_target_model_or_score_operations": 0,
+    "dependency_installs": 0,
+    "retries": 0,
+    "reruns": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "required_execution_order": [
+    "test_commit_push_and_obtain_green_CI_for_this_decision",
+    "verify_exact_decision_contract_inventory_implementation_request_and_green_evidence",
+    "verify_tracked_worktree_clean_and_registered_execution_ordinal_one",
+    "write_one_private_consumed_marker_before_the_first_request",
+    "issue_exactly_316_sequential_public_metadata_requests",
+    "validate_each_status_URL_Content_Length_ETag_and_identity_encoding",
+    "hash_parse_and_discard_each_body_before_the_next_request",
+    "pair_reconcile_aggregate_apply_the_frozen_router_and_validate_the_claim_boundary",
+    "emit_one_bounded_public_ledger_and_stop"
+  ],
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "concurrent_numerical_jobs": 1,
+    "wall_time_seconds": 180,
+    "peak_RSS_bytes": 268435456,
+    "requests": 316,
+    "expected_body_bytes": 457602,
+    "network_body_bytes": 2097152,
+    "maximum_bytes_read_per_object": 8192,
+    "incremental_disk_bytes": 4194304,
+    "public_generated_output_bytes": 2097152,
+    "minimum_free_disk_bytes": 2147483648,
+    "retries": 0,
+    "reruns": 0,
+    "producer_is_causal": null,
+    "end_to_end_latency_measured": false
+  },
+  "forbidden_operations": [
+    "operation_before_this_decision_commit_is_pushed_and_both_CI_jobs_are_green",
+    "existing_local_IACKD_bundle_stat_resolve_hash_open_move_or_delete",
+    "VHDR_VMRK_EEG_event_ball_Leap_or_unregistered_object_access",
+    "signal_event_trajectory_target_label_model_inference_training_or_scoring",
+    "additional_object_inventory_refresh_redirect_retry_resume_restart_or_rerun",
+    "raw_body_path_participant_coordinate_free_text_or_individual_output",
+    "MNE_neural_reader_dependency_install_or_tooling_network",
+    "S20_S21_S24_S25_SpanishBCBL_PhysioNet_raw_FIF_or_MAT_access",
+    "cache_split_feature_derivative_checkpoint_prediction_or_freeze_creation",
+    "foundation_language_model_provider_RW3_stream_device_or_hardware_operation",
+    "overwrite_or_cleanup_beyond_invocation_created_temporary_output",
+    "individual_protected_output_upload_publication_or_release",
+    "IACKD2_or_scientific_decoding_neural_realtime_hardware_assistive_or_clinical_claim_upgrade"
+  ],
+  "decision_only_access_counters": {
+    "GitHub_CI_verification_calls": 1,
+    "new_metadata_requests": 0,
+    "real_metadata_requests": 0,
+    "real_metadata_body_bytes": 0,
+    "real_metadata_parses": 0,
+    "VHDR_rereads": 0,
+    "local_IACKD_path_stats_or_opens": 0,
+    "sibling_resolutions_stats_hashes_or_opens": 0,
+    "signal_sample_reads": 0,
+    "marker_or_event_reads": 0,
+    "trajectory_reads": 0,
+    "target_or_label_reads": 0,
+    "cache_or_split_operations": 0,
+    "feature_or_derivative_creations": 0,
+    "model_or_checkpoint_loads": 0,
+    "training_or_parameter_update_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_sets_or_freezes": 0,
+    "target_deliveries": 0,
+    "scoring_runs": 0,
+    "dependency_installs_or_network_bytes": 0,
+    "provider_or_language_model_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "retries_or_reruns": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0,
+    "end_to_end_latency_measured": false
+  },
+  "next_gate": {
+    "decision_commit_required": true,
+    "decision_push_required": true,
+    "both_remote_CI_jobs_green_required": true,
+    "real_metadata_execution_may_begin_before_green": false,
+    "registered_execution_ordinal": 1,
+    "rerun_available": false
+  },
+  "claim_boundary": {
+    "engineering_capability_authorized_for_testing": "One exact resource-bounded public metadata audit may freeze whether a count-agnostic source-declared sensor-role and geometry contract is compatible with all registered IACKD files.",
+    "maximum_after_clean_execution": "A measured aggregate compatibility result for the 316 registered public IACKD BIDS metadata bodies.",
+    "scientific_claim_not_established": "This decision is not data or a result and establishes no neural effect action decoding brain-specific origin generalization real-time operation hardware capability assistive benefit or clinical use."
+  }
+}

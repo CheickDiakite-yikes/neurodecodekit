@@ -955,3 +955,10 @@ body, 4 MiB disk, 2 MiB output, and zero retry/rerun. Preparing it performed no
 request or parse and authorizes none. Its commit and both CI jobs must become
 green before it is identified as the sole active Tier C packet; a fresh
 maintainer decision is then still required.
+
+Request `86174bc` passed both jobs in CI `31431064259`, was identified as the
+sole active Tier C packet, and then received the fresh maintainer response
+`continue :)`. The separate decision record quotes that message and binds the
+unchanged 316-object scope. It remains ineffective until the decision commit
+is pushed and both CI jobs pass. Decision recording performed zero requests,
+local-bundle operations, signal/target reads, model runs, or scores.

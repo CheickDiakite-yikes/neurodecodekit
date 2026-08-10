@@ -219,6 +219,13 @@ retry/rerun. Every real-access flag remains false. Commit, push, and remotely
 green the packet, then identify its sole scope before requesting a fresh
 packet-bound maintainer decision. Do not issue a request from the packet.
 
+Request `86174bc` passed both jobs in CI `31431064259`. After the packet,
+proof, exact scope, and fresh-decision boundary were identified, the maintainer
+said `continue :)`. The separate decision preserves those words and leaves the
+316-request/457,602-byte scope unchanged. Commit, push, and remotely green the
+decision before the private consumed marker or first request; all current
+real-access counters remain zero.
+
 Registration `2a7b4188553e221133d788a081b838dbbb9f41bb` passed Base Python
 job `93215490492` and Optional Neuro Readers job `93215490501` in CI
 `31301730612`. The additive authorization packet and all-false machine request

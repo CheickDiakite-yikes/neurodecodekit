@@ -5281,3 +5281,29 @@ green decision commit can open the one execution.
 Evidence: `docs/IACKD_CHANNEL_ROLE_GEOMETRY_AUTHORIZATION_PACKET.md`,
 `registries/iackd_channel_role_geometry_authorization_request.v0.json`, and
 `tests/test_iackd_channel_role_geometry_authorization_request.py`.
+
+## 0153 - Bind The Fresh Maintainer Continuation To IACKD-H2
+
+Decision: record the maintainer's exact words `continue :)` as a short-form
+authorization for the sole remotely green IACKD-H2 packet. Do not fabricate
+the packet recital as maintainer language and do not expand its scope.
+
+Basis: request `86174bc86123bc010bac2f40a9d72147dc8aef05` passed Base Python
+job `93594327147` and Optional Neuro Readers job `93594327069` in CI
+`31431064259`. Codex then identified the packet, proof, exact 316-body and
+457,602-byte scope, and need for fresh words before the maintainer continued.
+
+Authorized after this decision is remotely green: one sequential public
+metadata audit, one hash and semantic parse per registered body, one private
+consumed marker, and one aggregate ledger under the frozen 180-second, 256 MiB
+RSS, 2 MiB network-body, 4 MiB disk, 2 MiB output, and zero-retry/rerun caps.
+
+Boundary: local IACKD files, VHDR/VMRK/EEG, signals, events, trajectories,
+targets, labels, derivatives, models, training, inference, scoring, additional
+objects, providers, hardware, releases, and claim upgrades remain forbidden.
+This record is ineffective until its exact commit is pushed and both CI jobs
+pass.
+
+Evidence: `docs/IACKD_CHANNEL_ROLE_GEOMETRY_AUTHORIZATION_DECISION.md`,
+`registries/iackd_channel_role_geometry_authorization_decision.v0.json`, and
+`tests/test_iackd_channel_role_geometry_authorization_decision.py`.

@@ -189,6 +189,14 @@ Only a fresh unambiguous packet-bound maintainer message after that
 identification may be recorded in a separate decision. Do not use the current
 or any earlier `continue` retroactively, and do not request a body from the
 packet alone.
+The maintainer has now supplied the fresh words `continue :)`. Read
+`docs/IACKD_CHANNEL_ROLE_GEOMETRY_AUTHORIZATION_DECISION.md` and
+`registries/iackd_channel_role_geometry_authorization_decision.v0.json`. The
+decision quotes those words exactly and binds request `86174bc`, CI
+`31431064259`, Base Python job `93594327147`, Optional Neuro Readers job
+`93594327069`, and the unchanged 316-object/457,602-byte scope. It remains
+ineffective until the decision itself is tested, committed, pushed, and both
+remote CI jobs are green. Do not issue an H2 request before that proof.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

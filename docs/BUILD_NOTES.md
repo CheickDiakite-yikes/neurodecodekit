@@ -6742,3 +6742,29 @@ with all registered IACKD files.
 Scientific claim not established: this request is not data or a result and
 adds no neural, decoding, localization, generalization, real-time, hardware,
 assistive, or clinical evidence.
+
+## 2026-08-10 - IACKD-H2 Packet-Bound Decision Recorded
+
+- Request `86174bc86123bc010bac2f40a9d72147dc8aef05` passed Base Python job
+  `93594327147` and Optional Neuro Readers job `93594327069` in CI
+  `31431064259` before the decision.
+- Codex identified IACKD-H2 as the sole active Tier C packet, including the
+  exact commit, green CI, 316-object/457,602-byte scope, and fresh-decision
+  boundary.
+- The maintainer then said `continue :)`. The decision record preserves those
+  exact words, incorporates the immutable packet by reference, and infers no
+  wider authorization.
+- Ten invariants verify the actual words and hash, green request evidence,
+  bound artifact SHA-256 and Git-blob identities, exact executor schema,
+  unchanged resource caps, ordered consumed marker, zero decision-only access
+  counters, and scientific ceiling.
+- The decision remains ineffective until its own exact commit is pushed and
+  both remote CI jobs pass. Recording it made zero metadata requests, local
+  bundle operations, signal/target reads, model runs, or scores.
+
+Engineering capability authorized for testing: one exact public-metadata
+audit may freeze a count-agnostic IACKD sensor-role and geometry contract.
+
+Scientific claim not established: the decision is not data or a result and
+adds no neural, decoding, localization, generalization, real-time, hardware,
+assistive, or clinical evidence.

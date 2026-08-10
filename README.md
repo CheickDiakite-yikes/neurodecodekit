@@ -888,6 +888,13 @@ Read this before interpreting any number in the repository.
   claim flag is false. Its own commit and both CI jobs must become green before
   it can be identified to the maintainer for one fresh short-form decision.
   Read the [authorization packet](docs/IACKD_CHANNEL_ROLE_GEOMETRY_AUTHORIZATION_PACKET.md).
+- **H2 decision recorded, not yet effective:** after the exact green packet was
+  identified, the maintainer replied `continue :)`. The separate
+  [decision record](docs/IACKD_CHANNEL_ROLE_GEOMETRY_AUTHORIZATION_DECISION.md)
+  preserves those words and binds request `86174bc`, CI `31431064259`, both
+  green job IDs, and the unchanged 316-object scope. The decision must itself
+  be committed, pushed, and remotely green before the single metadata audit;
+  recording it made zero metadata requests or local-bundle operations.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

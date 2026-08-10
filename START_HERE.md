@@ -424,6 +424,11 @@
    the maintainer. Only a fresh unambiguous response after that identification
    may become a separate decision record; earlier continuation is not
    retroactive authorization.
+   That fresh response is now `continue :)`, recorded verbatim in
+   `docs/IACKD_CHANNEL_ROLE_GEOMETRY_AUTHORIZATION_DECISION.md` and its
+   registry. The decision binds request `86174bc` and green CI `31431064259`
+   without expanding scope. It is not effective until its own commit is pushed
+   and both CI jobs pass; no H2 body may be fetched before that final gate.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

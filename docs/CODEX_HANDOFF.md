@@ -2179,3 +2179,24 @@ scope, and decision boundary to the maintainer. Only a fresh unambiguous
 `continue`, `approve`, or `proceed` after that identification may be quoted in
 a separate decision. Do not reuse the current continuation retroactively and
 do not run the audit from the packet alone.
+
+## 2026-08-10 IACKD-H2 Packet-Bound Decision Recorded
+
+Request `86174bc86123bc010bac2f40a9d72147dc8aef05` passed Base Python job
+`93594327147` and Optional Neuro Readers job `93594327069` in CI
+`31431064259`. After Codex identified it as the sole active Tier C packet and
+named the exact 316-body/457,602-byte scope, the maintainer replied
+`continue :)`.
+
+Read `docs/IACKD_CHANNEL_ROLE_GEOMETRY_AUTHORIZATION_DECISION.md`,
+`registries/iackd_channel_role_geometry_authorization_decision.v0.json`, and
+`tests/test_iackd_channel_role_geometry_authorization_decision.py`. The record
+quotes the actual words and binds the packet without widening it. All
+decision-only metadata, local-bundle, signal, target, model, score, retry,
+rerun, and claim counters remain zero.
+
+Next gate: run focused and complete verification, commit and push the exact
+decision, and require both remote CI jobs green. Only at that exact HEAD may
+the one registered execution write its private consumed marker and begin the
+316 sequential requests. Do not edit the implementation or make a request
+before that proof.
