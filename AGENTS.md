@@ -327,6 +327,28 @@ complete and consumed with no rerun. The payload and private receipts remain
 Git-ignored. A separately offered 10 GB future data ceiling did not amend this
 invocation. Do not parse an EDF or enter work order 9 without a new exact gate.
 
+Work order 9 is now prospectively specified but remains wholly unauthorized:
+
+```bash
+cat docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PRIMARY_SOURCE_RESEARCH.md
+cat docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PREREGISTRATION.md
+python -m json.tool registries/physionet_motor_positive_control_contract.v0.json >/dev/null
+```
+
+The frozen design reuses only S001-S003 runs 03/07/11. Runs 03/07 are the sole
+family-selection partition; all 12 run-11 primary/control prediction sets must
+enter a hash-only commit that is pushed and remotely green before the isolated
+scorer receives the same 45 final targets once. A maximum `WO9-V3` verdict
+requires held-out prediction, motor-compatible mu/beta physiology, and every
+timing, pre-cue, derangement, displacement, hemisphere, and
+frontal/occipital proxy control together. Accuracy alone cannot qualify. One
+thread, 1,800 seconds, 768 MiB RSS, 64 MiB private output, zero network, and no
+rerun are frozen. Registration does not authorize a local PhysioNet stat/open,
+EDF hash/parse, target read, dependency import, derivative, split, fit,
+inference, freeze, or score. After the registration commit is pushed and
+remotely green, prepare a separate hash-bound Tier C request; do not implement
+or touch the payload before the exact decision is separately green.
+
 The additive foundation-model decoder strategy is now explicit:
 
 ```bash

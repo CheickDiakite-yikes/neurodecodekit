@@ -19,7 +19,7 @@ decision after its own frozen packet and required remote-green evidence exist.
 | 6 | Freeze Loop 54-A decision and qualify parser | A/B then C decision | Recovery-bound exact packet, strict synthetic parser tests, green implementation before real access | Complete |
 | 7 | Execute Loop 54-A once | C | One 11,705-byte VHDR open; no sibling resolution; all 18 gates pass | Consumed; Parked F11; No Rerun |
 | 8 | Acquire tiny PhysioNet motor slice | C | Exactly nine pinned EDF files, 23,248,224 bytes, isolated receipt, no substitutions | Complete; Consumed; 12/12 Gates Passed; No Rerun |
-| 9 | Run grouped public motor positive control | C | Participant/run grouping, fixed classical family, no-signal and corruption controls | Gated |
+| 9 | Run grouped public motor positive control | C | Participant/run grouping, prediction + physiology + confound conjunction, remotely green prediction freeze | Gated; Registration Frozen; Exact Decision Required |
 | 10 | Execute Loop 54-B signal quality | C | Target-blind VHDR+EEG read, every channel retained, no transform, bounded aggregate output | Gated |
 | 11 | Execute Loop 54-C trial reconciliation | C | Isolated VMRK+MAT target-bearing stage, no plaintext protected public output | Gated |
 | 12 | Close Loop 54-D eligibility ledger | A after C evidence | At least 48 unique performed trials or explicit park; confounds and missing geometry remain visible | Gated |
@@ -118,6 +118,19 @@ and work-order-9 counter stayed zero. Work order 8 is complete and consumed;
 work order 9 remains gated. A later 10 GB data ceiling is available for a
 separately contracted future stage; it did not enlarge this immutable
 23,248,224-byte inventory.
+
+Work order 9 now has a prospective primary-source research record and strict
+machine registration. It binds only the existing S001-S003 runs 03/07/11
+inventory. Runs 03 and 07 may eventually select between fixed CSP-LDA and
+Riemannian MDM; run 11 remains a sealed 45-event final set until every primary
+and control prediction hash is committed, pushed, and remotely green. The
+maximum pass requires held-out prediction, motor-compatible mu/beta physiology,
+and timing, pre-cue, label, displacement, channel, hemisphere, and
+frontal/occipital proxy controls together. One thread, 1,800 seconds, 768 MiB
+RSS, 64 MiB output, zero network, and no rerun are frozen. Registration does
+not authorize a local path stat, EDF read, dependency import, fit, prediction,
+or score. A separate hash-bound Tier C decision and green synthetic-only
+implementation remain mandatory.
 
 Work order 13 now has a frozen Tier B synthetic-only contract in
 `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md` and

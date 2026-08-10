@@ -188,6 +188,24 @@
 > sanitized post-result suite passes 1,455 tests with 3 expected skips and 493
 > subtests. Preserve the unrelated tracker inspection NDJSON.
 >
+> Current PhysioNet work-order-9 registration handoff, 2026-08-09: read
+> `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PRIMARY_SOURCE_RESEARCH.md`,
+> `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PREREGISTRATION.md`, and
+> `registries/physionet_motor_positive_control_contract.v0.json`. The only
+> eligible inventory is the existing nine S001-S003 runs 03/07/11 EDFs. A
+> future exact execution would use runs 03/07 for grouped CSP-versus-Riemannian
+> selection and keep the 45 run-11 events sealed until all 12 primary/control
+> prediction sets are hash-frozen, committed, pushed, and remotely green. The
+> maximum `WO9-V3` verdict requires the predictive, motor-compatible mu/beta,
+> and confound conjunctions together; accuracy alone routes no higher than
+> `WO9-V2`. One thread, 1,800 seconds, 768 MiB RSS, 64 MiB private output, zero
+> network, one score, and no rerun are frozen. This registration authorizes no
+> local path stat/open, EDF hash/parse, target, dependency, derivative, split,
+> fit, inference, freeze, or score. First obtain green registration evidence,
+> then create a separate hash-bound authorization packet and exact decision,
+> and only after its green decision qualify an implementation on generated
+> fixtures. Preserve the unrelated tracker inspection NDJSON.
+>
 > Additive strategy refresh, 2026-08-06: read
 > `docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md` and
 > `registries/open_eeg_rd_strategy.v0.json`. Current open EEG benchmarks

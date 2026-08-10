@@ -1,0 +1,512 @@
+{
+  "schema_name": "neurodecodekit.physionet_motor_positive_control_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "work-order-9-physionet-motor-positive-control-v0",
+  "registered_at_local": "2026-08-09",
+  "status": "preregistered_tier_c_not_authorized_not_implemented_not_executed",
+  "proof_posture": "prospective_three_axis_public_motor_task_positive_control",
+  "primary_question": "Can one train-only-selected classical family recover left-versus-right motor-task information from held-out run 11 for S001-S003 while fixed sensorimotor physiology and confound controls pass together?",
+  "source_bindings": {
+    "primary_source_research": {
+      "path": "docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PRIMARY_SOURCE_RESEARCH.md",
+      "sha256": "e63047d70363fa34a68c0921913173b27e9a055aab2ea841eac82d374a738412"
+    },
+    "preregistration": {
+      "path": "docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PREREGISTRATION.md",
+      "sha256": "9e2b947e6e1a94458f55b809dd2b9c6cee0f62704d6159ed8572189b44f3a04a"
+    },
+    "acquisition_result": {
+      "path": "registries/physionet_motor_acquisition_result.v0.json",
+      "sha256": "582e42611074c603a0c1ab2ed24c089047cddc4f7dec3111d21a17d75bf66be8"
+    },
+    "acquisition_contract": {
+      "path": "registries/physionet_motor_acquisition_contract.v0.json",
+      "sha256": "6c81dac6a818f13c49f5df25c540e9d3ef65f21b56ecb1a5b5d15d4a3dc819d3"
+    },
+    "classical_adapter_contract": {
+      "path": "registries/classical_eeg_adapter_contract.v0.json",
+      "sha256": "ae1dc56d7610cb8a4a0bfb970e02c1466b53f5cff0391040eff51ac00084020d"
+    }
+  },
+  "scope": {
+    "planning_and_preregistration_only_now": true,
+    "local_physionet_path_operation_authorized_now": false,
+    "edf_hash_or_parse_authorized_now": false,
+    "header_annotation_signal_or_target_read_authorized_now": false,
+    "dependency_install_or_model_import_authorized_now": false,
+    "derivative_or_split_creation_authorized_now": false,
+    "training_or_parameter_update_authorized_now": false,
+    "model_inference_or_prediction_freeze_authorized_now": false,
+    "final_target_delivery_or_scoring_authorized_now": false,
+    "network_or_additional_download_authorized_now": false,
+    "rerun_or_retry_authorized_now": false,
+    "scientific_claim_upgrade_authorized_now": false,
+    "separate_exact_tier_c_decision_required": true
+  },
+  "dataset_binding": {
+    "provider": "PhysioNet",
+    "dataset_id": "eegmmidb",
+    "version": "1.0.0",
+    "doi": "10.13026/C28G6P",
+    "license_id": "ODC-By-1.0",
+    "modality": "EEG",
+    "subjects": [
+      "S001",
+      "S002",
+      "S003"
+    ],
+    "fit_and_selection_runs": [
+      "03",
+      "07"
+    ],
+    "sealed_final_run": "11",
+    "task": "executed_left_versus_right_fist_from_visual_cue",
+    "label_mapping": {
+      "T1": "left_fist",
+      "T2": "right_fist"
+    },
+    "file_count": 9,
+    "payload_bytes": 23248224,
+    "event_sidecars": 0,
+    "private_acquisition_manifest_sha256": "5ebe954a07ced8c2d0c549af0e22c5246ff563613d56cd5e0d0b91fb305d3902",
+    "payload_or_private_path_published": false
+  },
+  "selected_files": [
+    {
+      "path": "S001/S001R03.edf",
+      "subject": "S001",
+      "run": "03",
+      "role": "fit_and_selection",
+      "size_bytes": 2596896,
+      "sha256": "3427c8d01bff1380bc9ab9f27a35ece2af5dfadf3e291bbc05eb66e4dadbfe2e"
+    },
+    {
+      "path": "S001/S001R07.edf",
+      "subject": "S001",
+      "run": "07",
+      "role": "fit_and_selection",
+      "size_bytes": 2596896,
+      "sha256": "6320a941815eb7a0bc632e32c07c88b6e2281a0e2f177e8f49e2d0a16231145c"
+    },
+    {
+      "path": "S001/S001R11.edf",
+      "subject": "S001",
+      "run": "11",
+      "role": "sealed_final",
+      "size_bytes": 2596896,
+      "sha256": "d5296b9232b0ad88b7022155cbcde618df44d4b0db046ce3bec54f8f8644207a"
+    },
+    {
+      "path": "S002/S002R03.edf",
+      "subject": "S002",
+      "run": "03",
+      "role": "fit_and_selection",
+      "size_bytes": 2555616,
+      "sha256": "cbabe29620b19978454bc429f59976f6ee8f32f6392e4fcdf7e463981248072c"
+    },
+    {
+      "path": "S002/S002R07.edf",
+      "subject": "S002",
+      "run": "07",
+      "role": "fit_and_selection",
+      "size_bytes": 2555616,
+      "sha256": "cdba64ad60574903248aed651d393c148df3c611eebdc9694717a04e2e2deef3"
+    },
+    {
+      "path": "S002/S002R11.edf",
+      "subject": "S002",
+      "run": "11",
+      "role": "sealed_final",
+      "size_bytes": 2555616,
+      "sha256": "694bd9fbee1305dbc212ea4eecb8930750f5e08f8cc8ea45e2b94c92ac5f5a7d"
+    },
+    {
+      "path": "S003/S003R03.edf",
+      "subject": "S003",
+      "run": "03",
+      "role": "fit_and_selection",
+      "size_bytes": 2596896,
+      "sha256": "ebf184ea51d9aa3178190583f428db02f184e22412ff300a5f224776d1e8dbb4"
+    },
+    {
+      "path": "S003/S003R07.edf",
+      "subject": "S003",
+      "run": "07",
+      "role": "fit_and_selection",
+      "size_bytes": 2596896,
+      "sha256": "d8a610bf60a19c1d653a11633f7df40bd7b3eca976bebf2b525eb65017fdf044"
+    },
+    {
+      "path": "S003/S003R11.edf",
+      "subject": "S003",
+      "run": "11",
+      "role": "sealed_final",
+      "size_bytes": 2596896,
+      "sha256": "0563c2a26f759d849d6b99b3efb6047d1e1d288f80c0c16f5f07403bd0029271"
+    }
+  ],
+  "required_real_observations": {
+    "sampling_rate_hz": 160,
+    "eeg_channel_count": 64,
+    "annotation_allowlist": [
+      "T0",
+      "T1",
+      "T2"
+    ],
+    "task_events_per_file": 15,
+    "task_events_total": 135,
+    "fit_and_selection_task_events": 90,
+    "sealed_final_task_events": 45,
+    "nonfinite_sample_count": 0,
+    "duplicate_event_identity_count": 0,
+    "out_of_bounds_window_count": 0,
+    "group_cross_partition_count": 0,
+    "missing_registered_channel_count": 0,
+    "mismatch_action": "park_WO9_V0_without_exclusion_substitution_or_rerun"
+  },
+  "reader_and_derivative_contract": {
+    "reader": "mne.io.read_raw_edf",
+    "mne_version_family": ">=1.12,<1.13",
+    "sequential_file_processing": true,
+    "semantic_parses_per_edf": 1,
+    "new_sha256_passes_per_edf": 1,
+    "follow_symlinks": false,
+    "regular_files_only": true,
+    "standardize_eegbci_channel_names": true,
+    "montage": "standard_1005",
+    "retain_all_source_eeg_channels": true,
+    "bad_channel_deletion_or_interpolation": false,
+    "ica_or_artifact_component_removal": false,
+    "resampling": false,
+    "fit_derivative_contains_runs": [
+      "03",
+      "07"
+    ],
+    "prediction_derivative_contains_runs": [
+      "11"
+    ],
+    "prediction_derivative_contains_targets": false,
+    "sealed_scorer_input_contains_runs": [
+      "11"
+    ],
+    "sealed_target_values_printed_logged_or_committed": false,
+    "individual_predictions_probabilities_or_outcomes_committed": false
+  },
+  "causal_preprocessing": {
+    "reference": "instantaneous_common_average_all_64_retained_eeg_channels",
+    "filter_design": "fourth_order_butterworth_bandpass_sos",
+    "passband_hz": [
+      8.0,
+      30.0
+    ],
+    "application": "scipy.signal.sosfilt_on_continuous_run_in_time_order",
+    "primary_window_seconds_from_cue": [
+      1.0,
+      3.0
+    ],
+    "pre_cue_control_window_seconds_from_cue": [
+      -2.0,
+      0.0
+    ],
+    "right_context_seconds_relative_to_decision": 0.0,
+    "decision_latency_seconds_from_cue": 3.0,
+    "actual_movement_onset_available": false,
+    "causal_claim": "cue_causal_only_not_pre_movement"
+  },
+  "channel_sets": {
+    "sensorimotor_left": [
+      "FC5",
+      "FC3",
+      "FC1",
+      "C5",
+      "C3",
+      "C1",
+      "CP5",
+      "CP3",
+      "CP1"
+    ],
+    "sensorimotor_right": [
+      "FC6",
+      "FC4",
+      "FC2",
+      "C6",
+      "C4",
+      "C2",
+      "CP6",
+      "CP4",
+      "CP2"
+    ],
+    "frontal_occipital_proxy": [
+      "Fp1",
+      "Fpz",
+      "Fp2",
+      "AF7",
+      "AF3",
+      "AFz",
+      "AF4",
+      "AF8",
+      "PO7",
+      "PO3",
+      "POz",
+      "PO4",
+      "PO8",
+      "O1",
+      "Oz",
+      "O2"
+    ],
+    "hemisphere_swap_pairs": [
+      ["FC5", "FC6"],
+      ["FC3", "FC4"],
+      ["FC1", "FC2"],
+      ["C5", "C6"],
+      ["C3", "C4"],
+      ["C1", "C2"],
+      ["CP5", "CP6"],
+      ["CP3", "CP4"],
+      ["CP1", "CP2"]
+    ]
+  },
+  "candidate_families": [
+    {
+      "family_id": "fixed_8_to_30_hz_csp_lda",
+      "selection_order": 1,
+      "implementation": "mne_decoding_CSP_plus_sklearn_shrinkage_LDA",
+      "CSP_components": 4,
+      "CSP_covariance_regularization": 0.1,
+      "CSP_cov_est": "concat",
+      "CSP_transform": "log_average_power",
+      "CSP_norm_trace": false,
+      "LDA_solver": "lsqr",
+      "LDA_shrinkage": 0.1,
+      "class_priors": "equal_train_only"
+    },
+    {
+      "family_id": "regularized_riemannian_mdm",
+      "selection_order": 2,
+      "implementation": "pyriemann_0.12_Covariances_plus_MDM",
+      "covariance_estimator": "scm_plus_fixed_0.1_trace_regularization",
+      "metric": "riemann",
+      "class_centroids": "train_only",
+      "class_priors": "not_used"
+    }
+  ],
+  "fixed_comparator": {
+    "family_id": "fixed_low_frequency_shrinkage_lda",
+    "selection_candidate": false,
+    "passband_hz": [0.5, 4.0],
+    "time_bins": 4,
+    "slopes_per_channel": 1,
+    "feature_dimension_formula": "5C",
+    "LDA_shrinkage": 0.1
+  },
+  "dependency_contract": {
+    "base_dependencies_added": false,
+    "future_optional_versions": {
+      "numpy": ">=1.26",
+      "scipy": ">=1.11",
+      "mne": ">=1.12,<1.13",
+      "scikit_learn": ">=1.4,<2",
+      "pyriemann": "==0.12"
+    },
+    "silent_fallback_or_substitution": false,
+    "dependency_install_authorized_by_registration": false,
+    "dependency_import_authorized_by_registration": false
+  },
+  "split_and_selection": {
+    "participant_specific_models": true,
+    "row_random_split": false,
+    "selection_directions_per_subject": [
+      "03_to_07",
+      "07_to_03"
+    ],
+    "selection_metric": "macro_participant_balanced_accuracy_across_six_directional_check_sets",
+    "selection_candidates": [
+      "fixed_8_to_30_hz_csp_lda",
+      "regularized_riemannian_mdm"
+    ],
+    "exact_tie_winner": "fixed_8_to_30_hz_csp_lda",
+    "run_11_used_for_family_threshold_channel_or_parameter_selection": false,
+    "post_target_selection_or_update": false
+  },
+  "mandatory_final_prediction_sets": [
+    "selected_full_head_primary",
+    "low_frequency_shrinkage_lda_comparator",
+    "train_only_no_signal_prior",
+    "all_zero_final_signal",
+    "pre_cue_model",
+    "event_index_and_timing_only_model",
+    "fixed_train_label_derangement",
+    "fixed_one_trial_final_signal_displacement",
+    "fixed_validation_channel_derangement",
+    "fixed_left_right_hemisphere_swap",
+    "frontal_occipital_proxy_channel_model",
+    "central_sensorimotor_channel_model"
+  ],
+  "determinism": {
+    "seed": 5509,
+    "fixed_train_label_derangement": "within_subject_within_run_seed_5509_permutation",
+    "fixed_final_signal_displacement": "within_subject_run11_circular_shift_by_one_event",
+    "fixed_validation_channel_derangement": "seed_5509_nonidentity_permutation",
+    "permutation_test_draws": 32767,
+    "permutation_p_formula": "(1 + null_scores_at_least_observed) / (1 + draws)",
+    "replay_required": true
+  },
+  "prediction_freeze": {
+    "private_prediction_payloads_committed": false,
+    "public_hash_only_ledger_required": true,
+    "ledger_must_bind_all_prediction_payload_hashes": true,
+    "ledger_must_bind_selected_family_and_dependency_versions": true,
+    "ledger_must_bind_input_derivative_split_config_and_code_hashes": true,
+    "ledger_commit_must_be_pushed": true,
+    "base_python_and_optional_neuro_jobs_must_be_green": true,
+    "run_11_target_open_before_remote_green_freeze": false,
+    "final_target_deliveries": 1,
+    "final_scoring_events": 1
+  },
+  "primary_gate": {
+    "sealed_final_event_count": 45,
+    "minimum_correct_count": 30,
+    "minimum_pooled_balanced_accuracy": 0.65,
+    "minimum_macro_participant_balanced_accuracy": 0.6,
+    "minimum_participants_above_0_5_balanced_accuracy": 2,
+    "minimum_any_participant_balanced_accuracy": 0.4,
+    "maximum_one_sided_within_participant_permutation_p": 0.05,
+    "must_beat_train_only_no_signal_pooled": true,
+    "must_beat_train_only_no_signal_macro_participant": true
+  },
+  "physiology_gate": {
+    "mu_band_hz": [8.0, 13.0],
+    "beta_band_hz": [13.0, 30.0],
+    "baseline_window_seconds": [-1.0, 0.0],
+    "active_window_seconds": [1.0, 3.0],
+    "metric": "log_power_active_minus_baseline_and_contralateral_minus_ipsilateral",
+    "minimum_participants_with_registered_direction": 2,
+    "pooled_effect_registered_direction_required": true,
+    "maximum_fixed_seed_paired_sign_flip_p": 0.05,
+    "independent_of_model_selection": true
+  },
+  "confound_gate": {
+    "maximum_pre_cue_balanced_accuracy": 0.6,
+    "maximum_timing_only_balanced_accuracy": 0.6,
+    "maximum_train_label_deranged_balanced_accuracy": 0.6,
+    "maximum_one_trial_displaced_balanced_accuracy": 0.6,
+    "central_minus_frontal_occipital_minimum_balanced_accuracy_margin": 0.05,
+    "frontal_occipital_must_fail_primary_gate": true,
+    "validation_channel_derangement_must_fail_primary_gate": true,
+    "zero_and_no_signal_must_match_deterministic_expectation": true,
+    "hemisphere_swap_directional_control_required_for_WO9_V3": true,
+    "proxy_failure_proves_no_ocular_or_muscle_confound": false
+  },
+  "ordered_verdict_router": [
+    {
+      "verdict": "WO9-V0",
+      "condition": "any_input_integrity_event_split_resource_access_order_or_prediction_freeze_gate_fails",
+      "maximum_claim": "invalid_or_incomplete_registered_execution"
+    },
+    {
+      "verdict": "WO9-V1",
+      "condition": "primary_gate_fails",
+      "maximum_claim": "no_recoverable_held_out_motor_task_signal_under_registered_pipeline"
+    },
+    {
+      "verdict": "WO9-V2",
+      "condition": "primary_passes_but_physiology_or_confound_gate_fails",
+      "maximum_claim": "held_out_task_information_is_cue_or_confound_compatible"
+    },
+    {
+      "verdict": "WO9-V3",
+      "condition": "primary_physiology_and_confound_gates_all_pass",
+      "maximum_claim": "three_person_held_out_run_motor_task_EEG_pilot_with_motor_compatible_physiology"
+    }
+  ],
+  "resource_caps": {
+    "registered_executions": 1,
+    "cpu_threads": 1,
+    "workers": 1,
+    "concurrent_numerical_jobs": 1,
+    "wall_time_seconds": 1800,
+    "peak_rss_bytes": 805306368,
+    "generated_private_output_bytes": 67108864,
+    "minimum_free_disk_bytes_before": 2147483648,
+    "network_bytes": 0,
+    "new_payload_bytes": 0,
+    "edf_sha256_passes": 9,
+    "edf_semantic_parses": 9,
+    "event_sidecar_operations": 0,
+    "maximum_classical_parameter_update_fits": 40,
+    "maximum_prediction_sets": 64,
+    "final_target_deliveries": 1,
+    "final_scoring_events": 1,
+    "retries": 0,
+    "reruns": 0
+  },
+  "required_acceptance_gates": [
+    "registration_decision_and_implementation_committed_pushed_and_remotely_green_in_order",
+    "exact_acquisition_result_manifest_file_count_sizes_and_hashes_verified",
+    "no_symlink_no_substitution_no_event_sidecar_and_no_network",
+    "exact_headers_channels_sampling_annotations_and_task_event_counts",
+    "all_64_channels_retained_with_geometry_and_no_target_derived_rejection",
+    "participant_run_grouping_and_target_firewall_exact",
+    "causal_preprocessing_and_all_fit_state_train_only",
+    "family_selection_uses_only_runs_03_and_07",
+    "all_mandatory_final_prediction_sets_complete_and_deterministic",
+    "hash_only_prediction_freeze_pushed_and_remotely_green_before_final_targets",
+    "one_final_target_delivery_and_one_score_only",
+    "ordered_verdict_router_applied_without_post_target_change",
+    "runtime_RSS_output_disk_thread_worker_fit_prediction_and_access_caps",
+    "warnings_unavailable_fields_and_claim_ceiling_explicit"
+  ],
+  "forbidden_operations": [
+    "any_local_physionet_operation_before_exact_green_decision_and_green_implementation",
+    "event_sidecar_request_stat_open_or_read",
+    "additional_file_participant_run_dataset_or_download",
+    "S20_S21_S24_S25_SpanishBCBL_raw_FIF_or_MAT_access",
+    "row_random_split_or_group_crossing",
+    "run_11_target_use_for_fit_selection_threshold_channel_or_parameter_choice",
+    "evaluation_normalization_test_time_adaptation_or_post_target_update",
+    "target_derived_channel_epoch_or_participant_exclusion",
+    "silent_dependency_model_or_parameter_substitution",
+    "deep_CML_foundation_language_or_pretrained_model",
+    "augmentation_hyperparameter_search_restart_retry_or_rerun",
+    "individual_target_prediction_probability_or_participant_outcome_commit_upload_or_publication",
+    "RW3_stream_device_hardware_release_or_clinical_operation",
+    "scientific_claim_upgrade_beyond_WO9_V3"
+  ],
+  "current_access_counters": {
+    "local_physionet_path_stats": 0,
+    "local_physionet_path_opens": 0,
+    "edf_hash_passes": 0,
+    "edf_header_reads": 0,
+    "edf_annotation_or_event_reads": 0,
+    "edf_signal_sample_reads": 0,
+    "task_target_or_label_reads": 0,
+    "channel_geometry_sampling_or_quality_reads": 0,
+    "event_sidecar_operations": 0,
+    "derivative_or_split_operations": 0,
+    "dependency_installs_or_new_model_imports": 0,
+    "training_or_parameter_update_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_freezes": 0,
+    "final_target_deliveries": 0,
+    "scoring_events": 0,
+    "network_requests_or_bytes": 0,
+    "additional_payload_bytes": 0,
+    "language_model_or_provider_operations": 0,
+    "RW3_stream_device_or_hardware_operations": 0,
+    "reruns_or_retries": 0
+  },
+  "next_gate": {
+    "registration_commit_required": true,
+    "remote_green_registration_required": true,
+    "separate_hash_bound_authorization_packet_required": true,
+    "separate_exact_user_decision_required": true,
+    "green_exact_decision_required_before_implementation": true,
+    "green_exact_implementation_required_before_real_access": true,
+    "work_order_9_started": false
+  },
+  "claim_boundary": {
+    "engineering_capability_if_future_WO9_V3": "One leakage-resistant resource-bounded held-out-run public EEG motor positive control with a remotely green prediction freeze and prediction physiology confound triangulation.",
+    "maximum_scientific_claim_if_future_WO9_V3": "A three-person held-out-run motor-task EEG pilot with motor-compatible sensorimotor physiology under the registered proxy controls.",
+    "not_established_even_if_future_WO9_V3": "Brain-specific origin unseen-person generalization typing language or thought decoding real-time performance portable hardware home use assistive benefit and clinical utility remain unestablished."
+  }
+}

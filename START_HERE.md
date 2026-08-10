@@ -244,6 +244,20 @@
    payload and private receipts remain Git-ignored. The separate 10 GB
    allowance is future headroom, not an expansion of this invocation; work
    order 9 remains closed.
+   Then read
+   `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PRIMARY_SOURCE_RESEARCH.md`,
+   `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PREREGISTRATION.md`, and
+   `registries/physionet_motor_positive_control_contract.v0.json`. Work order
+   9 is now prospectively frozen as a prediction + physiology + confound
+   conjunction over only the existing nine EDFs. Runs 03/07 are the only
+   family-selection rows; all run-11 primary and control predictions must
+   freeze in a pushed remotely green hash-only ledger before the 45 final
+   targets open once. The maximum verdict is a three-person motor-compatible
+   public EEG pilot, not brain-specific, typing, language, or generalization
+   proof. Registration itself authorizes no local PhysioNet operation,
+   dependency import, derivative, split, fit, inference, freeze, or score. A
+   separate hash-bound Tier C decision and green fixture-only implementation
+   are still required.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

@@ -687,6 +687,25 @@ Read this before interpreting any number in the repository.
   10 GB allowance remains future headroom, and work order 9 is still closed.
   The post-result suite passes 1,455 tests with the same 3 expected skips and
   493 subtests.
+- **Next decisive experiment, now preregistered:** work order 9 is no longer a
+  generic "try a classifier" idea. Its prospective contract reuses only the
+  nine acquired EDFs and requires three evidence axes to pass together:
+  held-out run-11 prediction, motor-compatible central mu/beta physiology, and
+  fixed confound/leakage controls. Runs 03/07 alone may select between
+  four-component CSP plus shrinkage LDA and regularized Riemannian MDM. All 12
+  primary/control prediction sets must freeze in a hash-only commit that is
+  pushed and remotely green before the isolated scorer receives the same 45
+  run-11 targets once. The primary gate requires at least 30/45 correct,
+  pooled balanced accuracy at least 0.65, macro-participant balanced accuracy
+  at least 0.60, a one-sided fixed-seed permutation p-value at most 0.05, and a
+  win over the train-only no-signal prior. Pre-cue, timing-only, label-
+  deranged, trial-displaced, channel-deranged, hemisphere-swapped, central,
+  and frontal/occipital proxy results prevent an accuracy-only claim. Even a
+  complete pass is only a three-person motor-task EEG pilot; it is not typing,
+  language, thought reading, unseen-person generalization, or brain-specific
+  proof. Registration authorizes no EDF access or model operation. Read
+  [the primary-source rationale](docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PRIMARY_SOURCE_RESEARCH.md)
+  and [the preregistration](docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PREREGISTRATION.md).
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
@@ -1512,6 +1531,9 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/physionet_motor_acquisition_implementation.v0.json](registries/physionet_motor_acquisition_implementation.v0.json) | hash-bound implementation sources, green authorization parent, fixture metrics, resources, and zero-real-access ledger |
 | [docs/PHYSIONET_MOTOR_ACQUISITION_RESULT.md](docs/PHYSIONET_MOTOR_ACQUISITION_RESULT.md) | consumed 12-of-12 acquisition closeout with exact bytes, runtime, RSS, disk, zero forbidden counters, and scientific ceiling |
 | [registries/physionet_motor_acquisition_result.v0.json](registries/physionet_motor_acquisition_result.v0.json) | sanitized machine-readable nine-file identity result, private-receipt hashes, measurements, gates, and closed work-order-9 boundary |
+| [docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PRIMARY_SOURCE_RESEARCH.md](docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PRIMARY_SOURCE_RESEARCH.md) | work-order-9 method, cue/ocular/muscle caveats, prediction-physiology-confound triangulation, verdict ladder, and replication route |
+| [docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PREREGISTRATION.md](docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PREREGISTRATION.md) | frozen S001-S003 grouped split, causal views, models, controls, remote-green prediction freeze, thresholds, resources, and claim ceiling |
+| [registries/physionet_motor_positive_control_contract.v0.json](registries/physionet_motor_positive_control_contract.v0.json) | machine-readable 9-file, 135-event prospective contract with 12 final prediction sets, one sealed score, and all current permissions false |
 | [docs/SYNTHETIC_MOTOR_FIXTURE_PREREGISTRATION.md](docs/SYNTHETIC_MOTOR_FIXTURE_PREREGISTRATION.md) | frozen work-order-3 factor, pair, partition, mutation, resource, leakage, and no-model fixture boundary |
 | [registries/synthetic_motor_fixture_contract.v0.json](registries/synthetic_motor_fixture_contract.v0.json) | machine-readable seed-5503, 96-item, eight-family Tier B fixture contract with zero execution counters |
 | [docs/SYNTHETIC_MOTOR_FIXTURE_IMPLEMENTATION.md](docs/SYNTHETIC_MOTOR_FIXTURE_IMPLEMENTATION.md) | locally qualified deterministic generator, validator, inspector, mutation, CLI, and pre-execution boundary |

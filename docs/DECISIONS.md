@@ -4417,3 +4417,48 @@ value, or clinical result.
 Evidence: `docs/PHYSIONET_MOTOR_ACQUISITION_RESULT.md`,
 `registries/physionet_motor_acquisition_result.v0.json`, and
 `tests/test_physionet_motor_acquisition_result.py`.
+
+## 0128 - Make Work Order 9 A Three-Axis Falsification Gate
+
+Decision: the next evidence-producing step is one bounded public motor-task EEG
+positive control over the already acquired S001-S003 runs 03/07/11 inventory.
+Do not spend the separate 10 GiB headroom before the model family, causal view,
+controls, prediction freeze, scorer, and thresholds are fixed on this
+qualification cohort.
+
+Scientific design: require held-out run-11 prediction, fixed central mu/beta
+physiology, and confound/leakage controls together. Runs 03 and 07 alone may
+select between four-component CSP plus shrinkage LDA and regularized Riemannian
+MDM. Accuracy without the physiology and confound conjunction cannot exceed
+`WO9-V2` because the dataset's left/right class is coupled to a left/right
+visual target and it lacks separate EOG and EMG measurements.
+
+Evidence order: isolate run-11 targets during extraction; freeze every primary,
+comparator, no-signal, zero-signal, pre-cue, timing, label-deranged,
+trial-displaced, channel-deranged, hemisphere-swapped, frontal/occipital, and
+central prediction; commit and push a hash-only ledger; require both CI jobs
+green; then deliver and score the same 45 run-11 targets once. No individual
+target, prediction, probability, or participant result enters Git.
+
+Resource decision: no network or new payload, one thread/worker/job, 1,800
+seconds, 805,306,368-byte peak RSS, 67,108,864-byte private output, at most 40
+classical fits and 64 prediction sets, one final score, and no retry or rerun.
+
+Maximum result: `WO9-V3` is a three-person held-out-run motor-task EEG pilot
+with motor-compatible sensorimotor physiology under proxy controls. It is not
+brain-specific origin, unseen-person generalization, typing, language or
+thought decoding, real-time performance, portable hardware, home use,
+assistive benefit, or clinical utility. A clean pass prospectively routes to
+an unchanged larger-cohort replication; a failure routes to the frozen failure
+class without adding participants to hunt for a better result.
+
+Authorization boundary: this registration is Tier C planning only. It permits
+no local PhysioNet operation, EDF hash/parse, header, annotation, signal,
+target, dependency import, derivative, split, fit, inference, prediction
+freeze, score, or claim. A separate hash-bound exact decision and remotely
+green synthetic-only implementation remain mandatory.
+
+Evidence: `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PRIMARY_SOURCE_RESEARCH.md`,
+`docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PREREGISTRATION.md`,
+`registries/physionet_motor_positive_control_contract.v0.json`, and
+`tests/test_physionet_motor_positive_control_contract.py`.
