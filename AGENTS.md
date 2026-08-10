@@ -327,7 +327,9 @@ complete and consumed with no rerun. The payload and private receipts remain
 Git-ignored. A separately offered 10 GB future data ceiling did not amend this
 invocation. Do not parse an EDF or enter work order 9 without a new exact gate.
 
-Work order 9 is now prospectively specified but remains wholly unauthorized:
+Work order 9 is prospectively specified and has an exact conditional Tier C
+decision, but that decision is not effective until its own commit is remotely
+green:
 
 ```bash
 cat docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PRIMARY_SOURCE_RESEARCH.md
@@ -354,10 +356,17 @@ Base Python job `93330354031` and Optional Neuro Readers job `93330354047`
 passed in CI `31346882592`. The separate exact decision surface is prepared in
 `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_AUTHORIZATION_PACKET.md` and
 `registries/physionet_motor_positive_control_authorization_request.v0.json`.
-Every authorization flag remains false. Commit, push, and obtain remote-green
-evidence for that request before accepting its exact sentence into a separate
-decision. Do not install the optional environment, implement the real reader,
-or touch a local PhysioNet path from the green registration or ungreen request.
+Request `c62b10a6e9dae8d92e5ff54d17403e1054a0ac76` passed Base Python job
+`93331241434` and Optional Neuro Readers job `93331241411` in CI
+`31347209691`. The maintainer supplied the exact sentence, recorded in
+`docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_AUTHORIZATION_DECISION.md` and
+`registries/physionet_motor_positive_control_authorization_decision.v0.json`.
+Do not install the optional environment or begin implementation until that
+decision commit passes both jobs. Afterward, implementation is generated-
+fixture-only and must itself become remotely green before any local PhysioNet
+stat, open, hash, parse, signal read, target firewall, fit, or inference. Run-11
+targets remain sealed until the aggregate hash-only prediction freeze commit is
+remotely green.
 
 The additive foundation-model decoder strategy is now explicit:
 

@@ -135,10 +135,13 @@ implementation remain mandatory.
 Registration `3c00557` passed Base Python job `93330354031` and Optional Neuro
 Readers job `93330354047` in CI `31346882592`. A separate hash-bound Tier C
 packet and all-false machine request now state the exact conditional sentence.
-The request adds no permission by itself: its own commit must be pushed and
-remotely green before the maintainer sentence can be accepted into a separate
-decision record. No implementation, optional dependency environment, local
-PhysioNet operation, fit, prediction, target delivery, or score has begun.
+Request `c62b10a` passed Base Python job `93331241434` and Optional Neuro
+Readers job `93331241411` in CI `31347209691`. The maintainer then supplied the
+exact sentence. Its additive human and machine decision records are the active
+work-order-9 gate: they must be committed, pushed, and remotely green before
+fixture-only implementation or the isolated optional environment may begin.
+No implementation, dependency installation, local PhysioNet operation, fit,
+prediction, target delivery, or score has begun.
 
 Work order 13 now has a frozen Tier B synthetic-only contract in
 `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md` and

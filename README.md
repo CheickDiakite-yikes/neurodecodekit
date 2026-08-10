@@ -708,10 +708,14 @@ Read this before interpreting any number in the repository.
   and [the preregistration](docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PREREGISTRATION.md).
   Registration `3c00557` passed both jobs in CI `31346882592`. A separate
   [exact Tier C packet](docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_AUTHORIZATION_PACKET.md)
-  now binds that green snapshot; its machine request keeps every current
-  implementation, EDF, target, model, score, rerun, and claim permission false
-  until the request itself is remotely green and the maintainer supplies the
-  exact sentence into a separately green decision record.
+  binds that green snapshot. Request `c62b10a` then passed Base Python job
+  `93331241434` and Optional Neuro Readers job `93331241411` in CI
+  `31347209691`, after which the maintainer supplied the exact registered
+  sentence. The additive authorization decision now permits only the ordered
+  generated-fixture implementation, exact nine-EDF execution, remotely green
+  hash-only prediction freeze, and one final target delivery/score. It is not
+  effective until its own commit is pushed and both CI jobs are green; no
+  dependency, local PhysioNet, model, target, or score operation has begun.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
@@ -1542,6 +1546,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/physionet_motor_positive_control_contract.v0.json](registries/physionet_motor_positive_control_contract.v0.json) | machine-readable 9-file, 135-event prospective contract with 12 final prediction sets, one sealed score, and all current permissions false |
 | [docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_AUTHORIZATION_PACKET.md](docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_AUTHORIZATION_PACKET.md) | exact conditional work-order-9 implementation, dependency, EDF, prediction-freeze, scoring, resource, exclusion, and claim decision surface |
 | [registries/physionet_motor_positive_control_authorization_request.v0.json](registries/physionet_motor_positive_control_authorization_request.v0.json) | all-false request bound to green registration `3c00557`, CI `31346882592`, exact hashes, and one exact maintainer sentence |
+| [docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_AUTHORIZATION_DECISION.md](docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_AUTHORIZATION_DECISION.md) | exact maintainer decision, parent request proof, four remotely green gates, one-shot limits, and unchanged scientific ceiling |
+| [registries/physionet_motor_positive_control_authorization_decision.v0.json](registries/physionet_motor_positive_control_authorization_decision.v0.json) | machine-checkable work-order-9 authorization with conditional implementation, EDF, freeze, and scoring permissions plus explicit refusals |
 | [docs/SYNTHETIC_MOTOR_FIXTURE_PREREGISTRATION.md](docs/SYNTHETIC_MOTOR_FIXTURE_PREREGISTRATION.md) | frozen work-order-3 factor, pair, partition, mutation, resource, leakage, and no-model fixture boundary |
 | [registries/synthetic_motor_fixture_contract.v0.json](registries/synthetic_motor_fixture_contract.v0.json) | machine-readable seed-5503, 96-item, eight-family Tier B fixture contract with zero execution counters |
 | [docs/SYNTHETIC_MOTOR_FIXTURE_IMPLEMENTATION.md](docs/SYNTHETIC_MOTOR_FIXTURE_IMPLEMENTATION.md) | locally qualified deterministic generator, validator, inspector, mutation, CLI, and pre-execution boundary |

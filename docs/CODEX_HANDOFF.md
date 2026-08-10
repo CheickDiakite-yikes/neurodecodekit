@@ -220,6 +220,20 @@
 > stat/open the bundle, or accept broad permission as a substitute. Preserve
 > the unrelated tracker inspection NDJSON.
 >
+> Work-order-9 authorization decision update, 2026-08-09: request `c62b10a`
+> passed Base Python job `93331241434` and Optional Neuro Readers job
+> `93331241411` in CI `31347209691`. The maintainer supplied the exact frozen
+> sentence with `64 target-blind prediction sets`. Read
+> `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_AUTHORIZATION_DECISION.md` and
+> `registries/physionet_motor_positive_control_authorization_decision.v0.json`.
+> This decision is effective only after its own commit is pushed and both jobs
+> are green. Then and only then implement and qualify on generated fixtures;
+> the implementation must also become remotely green before any registered
+> local PhysioNet operation. Run-11 targets remain sealed until the hash-only
+> prediction freeze commit is remotely green. No dependency, EDF, target,
+> model, prediction, or score operation occurred in the decision milestone.
+> Preserve the unrelated tracker inspection NDJSON.
+>
 > Additive strategy refresh, 2026-08-06: read
 > `docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md` and
 > `registries/open_eeg_rd_strategy.v0.json`. Current open EEG benchmarks

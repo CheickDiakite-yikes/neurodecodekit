@@ -261,9 +261,13 @@
    Registration `3c00557` passed both jobs in CI `31346882592`. Read
    `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_AUTHORIZATION_PACKET.md` and
    `registries/physionet_motor_positive_control_authorization_request.v0.json`.
-   This all-false request is not authorization. Its own commit must be pushed
-   and remotely green before its exact sentence can be recorded in a separate
-   decision; implementation and real access remain closed.
+   Request `c62b10a` passed both jobs in CI `31347209691`. The maintainer then
+   supplied the exact sentence, now recorded additively in
+   `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_AUTHORIZATION_DECISION.md` and its
+   decision registry. The decision is effective only after its own commit is
+   pushed and both jobs are green. Until then, implementation, dependency
+   installation, local PhysioNet access, models, targets, and scoring remain
+   closed.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

@@ -5839,3 +5839,39 @@ decision surface for one bounded public EEG positive-control execution.
 Scientific claim not established: a permission request contains no EDF
 observation or result and establishes no motor-task, neural, generalization,
 decoding, latency, device, or human-benefit evidence.
+
+## 2026-08-09 - Work Order 9 Exact Tier C Decision Recorded
+
+- Verified request `c62b10a6e9dae8d92e5ff54d17403e1054a0ac76`
+  passed Base Python job `93331241434` and Optional Neuro Readers job
+  `93331241411` in CI `31347209691`.
+- Accepted the maintainer's exact registered sentence, including the frozen
+  limit of 64 target-blind prediction sets, into separate human and machine
+  authorization records. The preregistration, contract, packet, and all-false
+  request remain byte-identical historical snapshots.
+- Bound the parent commit, CI run and jobs, contract/request/packet SHA-256 and
+  Git-blob identities, exact nine-file inventory, four remote-green gates,
+  installation and execution resources, one score, no retry/rerun, and the
+  unchanged `WO9-V3` claim ceiling.
+- Added ten decision invariants covering exact sentence identity, green proof,
+  immutable prior snapshots, authorized and forbidden surfaces, dataset scope,
+  access order, resource parity, zero current operations, and claim limits.
+- This milestone made one GitHub CI verification call and performed zero
+  dependency installs, implementation operations, local PhysioNet stats,
+  opens, hashes, parses, EDF reads, derivative or split operations, fits,
+  inferences, freezes, target deliveries, scores, provider calls, or hardware
+  operations. The unrelated tracker inspection NDJSON remains untouched.
+
+Next gate: commit and push this exact decision and require both CI jobs green.
+Only then may generated-fixture-only implementation and the isolated optional
+environment begin. The implementation must separately become remotely green
+before any local PhysioNet operation.
+
+Engineering capability authorized for testing: one leakage-resistant,
+resource-bounded public EEG motor positive control may proceed through the
+ordered decision, implementation, prediction-freeze, and scoring gates.
+
+Scientific claim not established: this decision contains no EDF observation,
+physiology, prediction, or score and establishes no motor-task EEG effect,
+brain-specific origin, generalization, decoding, latency, device, or human-
+benefit result.
