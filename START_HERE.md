@@ -269,10 +269,14 @@
    dry-run-first reader, exact split, target firewall, causal preprocessing,
    fixed classical families, 12 controls and hashes, isolated scorer, and
    resource guards passed the generated 135-event roundtrip with zero real or
-   network access. The exact implementation still must be committed, pushed,
-   and remotely green before one EDF is opened. A later successful prediction
-   freeze must separately become remotely green before the 45 targets open
-   once. Do not run either real command before its corresponding gate.
+   network access. Exact implementation `52b9b15` then passed both jobs in CI
+   `31351728650` before the one target-blind execution. Read
+   `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PREDICTION_FREEZE.md` and its public
+   aggregate ledger. All nine EDF hashes/parses, 135 events, 33 fits, 45
+   target-blind inferences, and 12 prediction-set hashes completed within the
+   frozen caps. Final-target deliveries and scores remain zero. Do not run the
+   scorer until this exact freeze commit is pushed and both CI jobs are green;
+   then the same 45 sealed targets may open exactly once with no rerun.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

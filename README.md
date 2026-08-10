@@ -684,8 +684,8 @@ Read this before interpreting any number in the repository.
   counter stayed zero. This is an acquisition-integrity result, not an EEG or
   decoding result. Work order 8 is complete and consumed; the Git-ignored
   payload and private receipts must not be published or reopened. The later
-  10 GB allowance remains future headroom. Work order 9's real execution stays
-  closed until its exact implementation commit is remotely green.
+  10 GB allowance remains future headroom. Work order 9 later consumed its own
+  separately gated target-blind execution without adding data.
   The post-result suite passes 1,455 tests with the same 3 expected skips and
   493 subtests.
 - **Next decisive experiment, now preregistered:** work order 9 is no longer a
@@ -723,9 +723,17 @@ Read this before interpreting any number in the repository.
   data, real target, and network reads were zero, and the fixture output was
   removed. Its synthetic `WO9-V2` route has no claim value. Read the
   [implementation record](docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_IMPLEMENTATION.md).
-  The exact implementation must now be committed, pushed, and remotely green
-  before the one real nine-EDF execution; scoring remains separately blocked
-  behind a remotely green aggregate prediction freeze.
+  Exact implementation `52b9b15` then passed both jobs in CI `31351728650`
+  before the one real target-blind execution. All nine EDF hashes and semantic
+  parses passed; 135 events produced 90 fit rows and 45 target-free final
+  signal rows. CSP-LDA was selected from runs 03/07, 33 fits and 45 target-
+  blind inferences produced all 12 aggregate-hashed prediction sets, and the
+  model stage stopped with zero final-target deliveries or scores. Runtime was
+  3.054760 seconds, peak RSS was 460,734,464 bytes, private output was
+  20,852,059 bytes, and network/retry/rerun counters were zero. Read the
+  [aggregate freeze record](docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PREDICTION_FREEZE.md).
+  This is still not an accuracy or neural result: scoring remains blocked until
+  the exact freeze commit is pushed and both CI jobs are green.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

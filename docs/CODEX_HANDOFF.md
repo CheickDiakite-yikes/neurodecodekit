@@ -256,6 +256,26 @@
 > opening the sealed 45-target file once. Never rerun either real stage.
 > Preserve the unrelated tracker inspection NDJSON.
 >
+> Work-order-9 prediction-freeze update, 2026-08-09: exact implementation
+> `52b9b15a64972a285efbe630f49600727e836983` passed Base Python job
+> `93343718364` and Optional Neuro Readers job `93343718355` in CI
+> `31351728650` before one real target-blind execution. Read
+> `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PREDICTION_FREEZE.md` and
+> `registries/physionet_motor_positive_control_prediction_freeze.v0.json`.
+> All nine exact EDF hashes and semantic parses passed; 135 events yielded 90
+> fit rows and 45 target-free final signal rows. Runs 03/07 selected CSP-LDA;
+> 33 fits, 45 target-blind inferences, three priors, and 12 prediction sets
+> froze in 3.054760 seconds at 460,734,464-byte peak RSS with 20,852,059
+> private bytes. Network/new payload, final target, score, retry, and rerun
+> counters were zero. The aggregate freeze file SHA-256 is
+> `3c100daa8a6a2816ce4270c9e32cbdcc4cd30d70d1c255e37596c2ca6f665de4`
+> and contains no individual output. The private execution root remains
+> Git-ignored; do not inspect, stage, publish, or reopen it now. Commit/push the
+> aggregate freeze, tests, and docs, and require both CI jobs green. Only then
+> may the isolated scorer open the same sealed 45 targets once. No rerun or
+> post-target change is authorized. Preserve the unrelated tracker inspection
+> NDJSON.
+>
 > Additive strategy refresh, 2026-08-06: read
 > `docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md` and
 > `registries/open_eeg_rd_strategy.v0.json`. Current open EEG benchmarks

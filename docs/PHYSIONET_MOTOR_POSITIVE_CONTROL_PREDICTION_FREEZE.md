@@ -1,0 +1,160 @@
+# PhysioNet Motor Positive-Control Prediction Freeze
+
+Date: 2026-08-09
+
+Status: **One target-blind execution consumed successfully; aggregate freeze
+created; final targets remain sealed pending this exact freeze commit's remote-
+green CI**
+
+Public aggregate ledger:
+`registries/physionet_motor_positive_control_prediction_freeze.v0.json`
+
+Ledger file SHA-256:
+`3c100daa8a6a2816ce4270c9e32cbdcc4cd30d70d1c255e37596c2ca6f665de4`
+
+Internal canonical record SHA-256:
+`2b817b5273b6361d0636b7534f2744419b45a521e96fb94fdbe1ef4731f6292b`
+
+## Green Implementation Parent
+
+Exact implementation commit
+`52b9b15a64972a285efbe630f49600727e836983` passed Base Python job
+`93343718364` and Optional Neuro Readers job `93343718355` in CI
+`31351728650`. Both required jobs were green before the registered bundle,
+private acquisition manifest, or any EDF was touched by Work Order 9.
+
+The worktree contained only one unrelated untracked tracker-inspection NDJSON.
+The registered execution root and public freeze path were absent, and
+51,260,280 KiB of disk was free before execution. No output was replaced.
+
+## Consumed Target-Blind Execution
+
+The one authorized no-network execution completed successfully. It:
+
+1. Opened and verified the exact private acquisition manifest once.
+2. Verified exact nine-file membership without following symlinks.
+3. Made one new sequential size and SHA-256 pass over each EDF.
+4. Made one semantic MNE parse per EDF and read its header, T0/T1/T2
+   annotations, all 64 EEG channels, geometry, 160 Hz signal, and samples.
+5. Accepted exactly 15 task events per file and 135 total events with no
+   exclusion, substitution, or additional participant/run/file.
+6. Created 90 runs-03/07 fit rows, 45 target-free run-11 signal rows, and one
+   separately sealed 45-target scorer input.
+7. Selected CSP-LDA versus Riemannian MDM using runs 03/07 only.
+8. Produced all 12 registered run-11 prediction/control sets without opening
+   the sealed target file in the model stage.
+9. Wrote one aggregate hash-only freeze and stopped before scoring.
+
+No `.event` sidecar, additional dataset, download, network call, language
+model, checkpoint, deep model, CML-v0, device, stream, or hardware operation
+occurred.
+
+## Frozen Inventory
+
+```text
+input files / bytes:                         9 / 23,248,224
+private manifest opens:                      1
+EDF size+SHA-256 passes:                     9
+EDF semantic/header/annotation/signal reads: 9 / 9 / 9 / 9
+task events:                                 135
+fit target rows:                             90
+target-free final signal rows:               45
+final target rows delivered to model stage: 0
+selected family:                             fixed_8_to_30_hz_csp_lda
+classical parameter-update fits:             33
+target-blind model-inference runs:            45
+train-only no-signal prior fits:              3
+prediction sets frozen:                      12
+final target deliveries / scores:            0 / 0
+```
+
+The selected family is an engineering fact about train-only family selection,
+not a final accuracy result. No selection score, individual prediction, or
+participant outcome is published.
+
+## Hash Bindings
+
+The public ledger binds each of the 12 45-row condition sets with a separate
+SHA-256. It also binds:
+
+- the private prediction payload SHA-256 and byte count;
+- the fit, target-free prediction, and sealed-target derivative SHA-256 values;
+- the exact acquisition-manifest identity, source file count, and payload
+  bytes;
+- the split-protocol and complete configuration hashes;
+- the exact implementation commit, CI run, both job IDs, implementation
+  registry, and tracked-file-hash inventory;
+- the exact qualified dependency versions; and
+- access, fit, inference, target-firewall, runtime, RSS, output, thread,
+  worker, network, retry, and rerun counters.
+
+The zero-signal and train-only no-signal condition hashes are repeated in the
+determinism block. The freeze validator checks their equality and recomputes
+the canonical record hash. The future scorer must recompute every condition
+hash from the private payload before it may score.
+
+## Public Privacy Boundary
+
+The ledger contains no individual event ID, participant ID, prediction,
+probability, target, label, participant metric, or participant outcome. It
+contains aggregate hashes and counts only. The private prediction payload,
+fit derivative, target-free prediction derivative, sealed target file,
+extraction report, target-blind report, and consumed marker remain under the
+Git-ignored execution root. They are not staged, committed, printed, uploaded,
+or reopened during this freeze milestone.
+
+## Resources
+
+```text
+registered execution runtime:                3.054760 seconds
+runtime through freeze:                      3.049897 seconds
+target-blind model-stage runtime:             1.120788 seconds
+peak RSS:                                    460,734,464 bytes
+private generated bytes after report:         20,852,059
+private generated bytes before report:        20,849,980
+CPU threads / workers / numerical jobs:        1 / 1 / 1
+network bytes / new payload bytes:             0 / 0
+retries / reruns:                              0 / 0
+```
+
+All measured values are below the frozen 1,800-second,
+805,306,368-byte RSS, 67,108,864-byte private-output, 40-fit, and
+64-target-blind-inference caps. End-to-end acquisition latency was not
+measured. The producer is cue-causal with zero right context at the +3-second
+decision point, not pre-movement or real-time evidence.
+
+Freeze verification passed 27 focused Work Order 9 checks with two expected
+optional skips in the broad environment. The complete broad suite then ran
+1,512 tests with five expected skips, and the isolated registered-classical
+suite ran 1,497 tests with 34 expected skips. Ruff, compileall, JSON parsing,
+canonical freeze validation, and diff hygiene also passed. These verification
+runs opened no private prediction, derivative, or sealed-target artifact and
+performed no model inference or scoring.
+
+## Warnings And Unavailable Evidence
+
+- Left/right motor action is coupled to a left/right visual cue.
+- Separate EOG and EMG channels are unavailable.
+- Actual movement onset is unavailable.
+- The central/proxy, hemisphere, timing, displacement, derangement, zero, and
+  no-signal controls are frozen but still unscored.
+- No target-dependent predictive, physiology, or confound gate is known yet.
+- No individual result will be committed at scoring.
+
+## Next Gate
+
+Commit and push this exact aggregate ledger, document, invariant tests, and
+status updates. Both Base Python and Optional Neuro Readers jobs must pass at
+the exact freeze commit. Only then may the isolated scorer open the same sealed
+45-target artifact once, verify all private hashes, compute aggregate metrics,
+and apply the frozen `WO9-V0` through `WO9-V3` router. Any freeze or scoring
+failure consumes and parks the work order. No retry or rerun is authorized.
+
+Engineering capability added: the exact target-blind predictions, controls,
+inputs, code, split, configuration, dependencies, and resources are now bound
+in a public aggregate freeze without publishing individual protected output.
+
+Scientific claim not established: no final target has been delivered or
+scored, so this freeze establishes no motor-task accuracy, neural effect,
+motor-compatible physiology, brain-specific origin, generalization, decoding,
+real-time, portable-hardware, home-use, assistive, or clinical result.
