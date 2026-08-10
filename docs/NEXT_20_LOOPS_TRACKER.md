@@ -846,7 +846,9 @@ sizes, and official hashes are now frozen at green registration `716e543`:
 72 files totaling 184,252,032 bytes. The contract also freezes the target
 firewall, 144 fit ceilings, 18 conditions, 216 target-blind participant-
 condition prediction sets, and `WO9R-R0` through `WO9R-R4` router. Its metadata
-pass made zero EDF URL requests. The all-false Tier C request is prepared but
-is not a decision; implementation, acquisition, local payload access, model
-execution, prediction freeze, target delivery, scoring, and claims remain
-gated.
+pass made zero EDF URL requests. The all-false request passed CI at `580708f`.
+The maintainer's actual short-form approval is now recorded in a separate,
+packet-bound decision without fabricating the long recital. Implementation,
+acquisition, local payload access, model execution, prediction freeze, target
+delivery, scoring, and claims remain gated until that decision commit is
+remotely green.

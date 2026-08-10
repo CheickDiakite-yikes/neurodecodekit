@@ -1837,8 +1837,14 @@ requests or payload bytes.
 The all-false request is prepared in
 `docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_AUTHORIZATION_PACKET.md` and
 `registries/physionet_low_frequency_cohort_confirmation_authorization_request.v0.json`.
-Its next gate is commit, push, and both remote CI jobs green; only then may the
-maintainer's exact sentence be accepted into a separate decision-only commit.
-Do not implement, acquire, stat, open, hash, decode, model, deliver targets, or
-score from the preregistration or request. Preserve the unrelated untracked
-tracker inspection NDJSON.
+Request commit `580708fa1f24772a2f9d7cfd572a421b860a1f14` passed Base Python
+job `93353672957` and Optional Neuro Readers job `93353672996` in CI
+`31355270896`. The maintainer then explicitly declined further long-form
+recital and directed the currently presented WO9R packet to continue. Preserve
+the actual message and packet-bound interpretation in
+`docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_AUTHORIZATION_DECISION.md`
+and its machine registry; do not claim the maintainer typed the long packet
+sentence. The separate decision-only commit must become remotely green before
+fixture implementation. Until then do not acquire, stat, open, hash, decode,
+model, deliver targets, or score. Preserve the unrelated untracked tracker
+inspection NDJSON.

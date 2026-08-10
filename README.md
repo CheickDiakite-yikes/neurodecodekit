@@ -772,9 +772,14 @@ Read this before interpreting any number in the repository.
   boundary](docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PRIMARY_SOURCE_RESEARCH.md),
   then the [frozen preregistration](docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PREREGISTRATION.md).
   An [all-false authorization packet](docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_AUTHORIZATION_PACKET.md)
-  is prepared, but it authorizes nothing until its commit is remotely green
-  and the maintainer sends its exact Tier C sentence. Implementation,
-  acquisition, prediction freeze, target delivery, and scoring remain closed.
+  passed both CI jobs at request commit `580708f`. The maintainer then gave an
+  explicit short-form instruction to stop copying boilerplate and continue the
+  sole active packet. The [packet-bound decision](docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_AUTHORIZATION_DECISION.md)
+  records those actual words without attributing the packet's long sentence to
+  the maintainer. It changes only authorization ergonomics: implementation,
+  acquisition, prediction freeze, target delivery, and scoring remain closed
+  until the separate decision commit is remotely green, and every frozen
+  resource and claim boundary remains unchanged.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

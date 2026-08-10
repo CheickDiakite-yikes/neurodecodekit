@@ -33,6 +33,16 @@ hardware, destructive, release, and claim actions still require a separate
 exact decision. Existing narrower contracts continue to govern and cannot be
 silently loosened.
 
+The maintainer's 2026-08-10 short-form instruction removes repetitive
+authorization recital, not separate Tier C decisions. When exactly one named,
+remotely green packet is the active gate and the assistant has just identified
+its packet, commit, CI, and decision boundary, an unambiguous maintainer
+"approve", "continue", or "proceed" may incorporate that packet by reference.
+The decision artifact must quote the maintainer's actual words, bind every
+immutable scope hash, and become remotely green before implementation or
+access. Never fabricate the packet's long sentence as a user utterance, infer
+scope expansion, or use short form when multiple packets or ambiguity exist.
+
 ## Immediate next task
 
 Work order 9 is now complete and consumed at `WO9-V1`. The selected 8-30 Hz
@@ -62,10 +72,15 @@ metadata GETs totaling 340,703 retained body bytes; no EDF URL was requested.
 The additive all-false request is in
 `docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_AUTHORIZATION_PACKET.md` and
 `registries/physionet_low_frequency_cohort_confirmation_authorization_request.v0.json`.
-Its commit must be pushed and remotely green before its exact sentence may be
-accepted. Do not implement, acquire, stat, open, hash, decode, model, deliver a
-target, or score from the preregistration or request alone. Every Tier C flag is
-false until a separate exact decision is committed, pushed, and remotely green.
+Request commit `580708fa1f24772a2f9d7cfd572a421b860a1f14` passed Base Python
+job `93353672957` and Optional Neuro Readers job `93353672996` in CI
+`31355270896`. The maintainer then explicitly declined long-form recital and
+directed the sole active WO9R packet to continue. That actual short-form message
+is recorded without invented wording in
+`docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_AUTHORIZATION_DECISION.md`
+and its machine decision. Do not implement, acquire, stat, open, hash, decode,
+model, deliver a target, or score until this separate decision-only commit is
+pushed and remotely green.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

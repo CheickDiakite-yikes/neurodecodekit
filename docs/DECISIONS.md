@@ -4770,3 +4770,42 @@ Evidence:
 `registries/physionet_low_frequency_cohort_confirmation_authorization_request.v0.json`,
 and
 `tests/test_physionet_low_frequency_cohort_confirmation_authorization_request.py`.
+
+## 0136 - Accept Short-Form Approval Only As An Immutable Packet Reference
+
+Decision: honor the maintainer's explicit instruction, "i dont want to type
+out exact auth sentences anymore -- keep going, move the needle, continue, you
+approved to go on", as authorization for the sole currently presented WO9R
+packet. Preserve those actual words and do not claim the maintainer typed the
+long-form paragraph. The immediately preceding response named the packet,
+request commit `580708fa1f24772a2f9d7cfd572a421b860a1f14`, green CI
+`31355270896`, and the one remaining Tier C decision gate, so the reference is
+unambiguous.
+
+Scope rule: waive only repetitive recital. Incorporate the immutable green
+packet by reference, including all 72 file identities, 184,252,032 payload
+bytes, S004-S015 participants, runs, target firewall, fixed model, 18
+conditions, 144-fit and 216-inference limits, resources, no-retry/no-rerun
+rules, and claim ceiling. No extra data, dependency installation, model,
+selection, retry, release, hardware, or claim permission may be inferred from
+"continue".
+
+Prospective interface: short approval is acceptable only when exactly one
+green packet is the active Tier C gate, the assistant has just identified its
+packet/commit/CI/scope, the maintainer unambiguously approves continuation, and
+a separate decision quotes the real message and binds immutable hashes. That
+decision must itself become remotely green before implementation or access.
+Ambiguity, multiple packets, changed scope, or absent green evidence fails
+closed. Separate Tier C decisions remain required; boilerplate recital does
+not.
+
+Current evidence: the decision stage made one GitHub CI verification read and
+zero metadata, EDF, local-path, dependency, implementation, derivative, model,
+target, score, provider, stream, device, or hardware operations. The unrelated
+tracker inspection NDJSON remains untouched.
+
+Evidence:
+`docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_AUTHORIZATION_DECISION.md`,
+`registries/physionet_low_frequency_cohort_confirmation_authorization_decision.v0.json`,
+and
+`tests/test_physionet_low_frequency_cohort_confirmation_authorization_decision.py`.

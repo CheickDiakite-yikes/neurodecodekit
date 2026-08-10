@@ -303,10 +303,15 @@
    combined target firewall, and one-shot resources. Its metadata pass made no
    EDF URL request. Finally read
    `docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_AUTHORIZATION_PACKET.md`
-   and its matching request registry. That request is all-false and is not a
-   decision. Its commit must become remotely green before the exact sentence
-   may be accepted. Acquisition, implementation, payload access, fitting,
-   inference, target delivery, scoring, and claims remain unauthorized.
+   and its matching request registry. Request `580708f` passed both jobs in CI
+   `31355270896`. Then read
+   `docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_AUTHORIZATION_DECISION.md`
+   and its machine decision. It records the maintainer's actual short-form
+   instruction to stop repeating authorization boilerplate and continue the
+   sole active WO9R packet; it does not pretend the long packet sentence was
+   typed. Acquisition, implementation, payload access, fitting, inference,
+   target delivery, and scoring remain closed until that separate decision is
+   committed, pushed, and remotely green.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

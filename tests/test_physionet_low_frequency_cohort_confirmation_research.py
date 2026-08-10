@@ -176,7 +176,11 @@ class PhysioNetLowFrequencyCohortConfirmationResearchTests(unittest.TestCase):
         self.assertIn("Scientific claim not established", document)
         queue = QUEUE_PATH.read_text(encoding="utf-8")
         self.assertIn("Work order 9R", queue)
-        self.assertIn("Research and preregistration complete", queue)
+        self.assertIn(
+            "Research, preregistration, and green all-false request complete",
+            queue,
+        )
+        self.assertIn("short-form packet-bound decision prepared", queue)
         self.assertEqual(sum(line.startswith("| ") for line in queue.splitlines()), 21)
 
 

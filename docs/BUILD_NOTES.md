@@ -6133,3 +6133,49 @@ execution/imagery confirmation with a combined final-target firewall.
 Scientific claim not established: no selected EDF or target was opened and no
 model was run, so the request adds no cohort confirmation, brain-specific
 effect, generalization, decoding, latency, hardware, or human-benefit evidence.
+
+## 2026-08-10 - WO9R Short-Form Packet-Bound Decision Prepared
+
+- Verified request commit `580708fa1f24772a2f9d7cfd572a421b860a1f14`
+  remotely green in CI `31355270896`: Base Python job `93353672957` and
+  Optional Neuro Readers job `93353672996` both passed.
+- Recorded the maintainer's actual short-form instruction verbatim instead of
+  pretending the long packet sentence was typed. The message immediately
+  followed the named WO9R packet, commit, CI, and decision gate and therefore
+  incorporates only that immutable packet by reference.
+- Added a fail-closed short-form packet rule: exactly one active green packet,
+  immediate named context, unambiguous approval, actual-word preservation,
+  immutable hash binding, separate decision commit, and remote-green evidence
+  are all mandatory. Short form cannot expand scope.
+- Preserved every registered limit: 72 S004-S015 EDFs and 184,252,032 bytes,
+  exact runs and targets, fixed `0.5-4 Hz` participant-specific LDA, 18
+  conditions, at most 144 fits, exactly 216 target-blind inferences for a valid
+  freeze, one combined target delivery/score, one thread/worker/job, and zero
+  retry, rerun, or post-target update.
+- Eleven new decision invariants pass, including actual-message hash,
+  non-fabrication, immutable artifact hashes, green request proof, fail-closed
+  short-form conditions, exact scope/resources, ordered gates, zero operation
+  counters, and claim ceiling.
+- The complete dependency-light suite passes 1,499 tests with 168 expected
+  skips; the retained classical environment passes 1,555 tests with 34 expected
+  skips; and the broad optional environment passes 1,570 tests with five
+  expected skips when its registered forkserver test is run outside the macOS
+  sandbox. Each total is exactly 11 tests above the green request baseline.
+- This decision-only pass made no metadata or EDF request; statted or opened no
+  local PhysioNet path; read no header, annotation, sample, target, channel, or
+  geometry; and ran no installer, implementation, derivative, fit, inference,
+  freeze, score, provider, stream, device, or hardware operation. The unrelated
+  tracker inspection NDJSON remains untouched.
+
+Next gate: commit and push this decision-only milestone and require both CI jobs
+green. Only then may generated-fixture and mocked-transport implementation
+begin. Real acquisition remains closed until that exact implementation is also
+committed, pushed, and remotely green.
+
+Engineering capability authorized for testing: one exact, resource-bounded,
+target-firewalled twelve-person confirmation of the WO9 low-frequency lead may
+proceed through the registered green gates.
+
+Scientific claim not established: this decision contains no EEG observation,
+prediction, or score and establishes no new task effect, brain-specific origin,
+generalization, decoding, latency, hardware, or human-benefit result.

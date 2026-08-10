@@ -110,8 +110,9 @@ all-false authorization packet and machine request are prepared separately;
 they authorize nothing before their own remotely green commit and an exact
 maintainer decision.
 
-WO9R status: **Research and preregistration complete; all-false request
-prepared; exact decision, implementation, acquisition, and execution gated.**
+WO9R status: **Research, preregistration, and green all-false request complete;
+short-form packet-bound decision prepared; implementation, acquisition, and
+execution gated until that decision is remotely green.**
 It is deliberately outside the numbered 1-20 table so that the frozen
 execution overlay remains exactly 20 rows.
 
