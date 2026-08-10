@@ -4329,3 +4329,51 @@ behavior, portable hardware, home use, assistive value, or clinical result.
 Evidence: `docs/PHYSIONET_MOTOR_ACQUISITION_AUTHORIZATION_DECISION.md`,
 `registries/physionet_motor_acquisition_authorization_decision.v0.json`, and
 `tests/test_physionet_motor_acquisition_authorization_decision.py`.
+
+## 0126 - Qualify The Public Motor Acquirer Before Source Access
+
+Decision: after authorization decision `00b91edd213112fd186711d06369ae4f836b2243`
+passed Base Python job `93322699209` and Optional Neuro Readers job
+`93322699259` in CI `31344104565`, implement one separate standard-library
+executor and `physionet-motor-acquire` CLI. Keep dry-run as the default and
+require exact current implementation and remote-green evidence for execution.
+
+Metadata boundary: the future registered invocation may GET only the dataset
+page, checksum manifest, and MNE run mapping, then HEAD only the nine exact EDF
+URLs. Require exact version, DOI, public availability, license label, run
+mapping, path, size, and official SHA-256 before the first EDF body request.
+Reject every redirect, sidecar, wildcard, substitution, retry, extra member,
+collision, symlink, and unregistered host.
+
+Payload boundary: stream the nine opaque bytestrings into one isolated temporary
+tree, enforce all frozen resource caps, open each local EDF exactly once for
+size and SHA-256, atomically promote only a complete verified directory, and
+emit the two bounded private receipts. Expose no EDF parser or downstream
+stage. Cleanup is restricted to invocation-created temporary paths.
+
+Qualification evidence: 23 dedicated adversarial tests and 68 focused tests
+pass using generated invalid-UTF-8 bytes and mocked responses. The full
+one-thread suite passes 1,448 tests with three expected skips and 493 subtests.
+The consumed CML registry remains unchanged; its shared-CLI hash is preserved
+as historical evidence while current command presence remains tested.
+
+Execution order: commit and push this exact implementation, obtain green Base
+Python and Optional Neuro Readers jobs, and only then perform the one registered
+metadata/acquisition invocation. No source metadata, local PhysioNet path, EDF,
+sidecar, event, signal, target, split, model, training, inference, scoring,
+provider, hardware, work-order-9, or rerun operation occurred during this
+milestone. The separate 10 GB allowance remains unused future headroom.
+
+Engineering capability added: one strict standard-library path can reverify,
+acquire, opaque-hash, atomically promote, and privately receipt the exact
+registered nine-EDF bundle after the ordered remote-green gates.
+
+Scientific claim not established: fixture-only implementation establishes no
+EDF readability, event correctness, signal quality, motor effect, neural
+advantage, model accuracy, unseen-person generalization, real-time latency,
+portable hardware, home use, assistive value, or clinical result.
+
+Evidence: `docs/PHYSIONET_MOTOR_ACQUISITION_IMPLEMENTATION.md`,
+`registries/physionet_motor_acquisition_implementation.v0.json`,
+`src/neurodecodekit/datasets/physionet_motor_acquisition.py`, and
+`tests/test_physionet_motor_acquisition.py`.

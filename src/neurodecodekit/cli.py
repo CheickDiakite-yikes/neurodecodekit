@@ -2490,6 +2490,44 @@ def _cmd_loop53_acquire_s20(args: argparse.Namespace) -> int:
     return 0 if outcome.passed else 1
 
 
+def _cmd_physionet_motor_acquire(args: argparse.Namespace) -> int:
+    from neurodecodekit.datasets.physionet_motor_acquisition import (
+        ExecutionEvidence,
+        execute_registered_acquisition,
+        registered_plan,
+    )
+
+    repo_root = Path.cwd()
+    if not args.execute:
+        print(json.dumps(registered_plan(repo_root), indent=2, sort_keys=True))
+        print("Safety default: dry-run only. No registered path stat or network access occurred.")
+        return 0
+
+    missing = [
+        name
+        for name, value in (
+            ("--implementation-commit", args.implementation_commit),
+            ("--implementation-ci-run-id", args.implementation_ci_run_id),
+            ("--base-python-job-id", args.base_python_job_id),
+            ("--optional-neuro-job-id", args.optional_neuro_job_id),
+        )
+        if value is None
+    ]
+    if missing:
+        raise ValueError(f"--execute requires: {', '.join(missing)}")
+    evidence = ExecutionEvidence(
+        implementation_commit=args.implementation_commit,
+        implementation_ci_run_id=args.implementation_ci_run_id,
+        base_python_job_id=args.base_python_job_id,
+        optional_neuro_job_id=args.optional_neuro_job_id,
+    )
+    outcome = execute_registered_acquisition(repo_root, evidence=evidence)
+    print(json.dumps(outcome.manifest, indent=2, sort_keys=True))
+    print(f"Private machine manifest: {outcome.manifest_path}")
+    print(f"Private human receipt: {outcome.receipt_path}")
+    return 0 if outcome.passed else 1
+
+
 def _cmd_loop54_vhdr_ledger(args: argparse.Namespace) -> int:
     from neurodecodekit.preprocess.vhdr_ledger import (
         ExecutionEvidence,
@@ -4930,6 +4968,47 @@ def build_parser() -> argparse.ArgumentParser:
         help="Successful pull-request CI run ID for the implementation commit.",
     )
     p.set_defaults(func=_cmd_loop53_acquire_s20)
+
+    p = sub.add_parser(
+        "physionet-motor-acquire",
+        help="Dry-run or execute the one hash-bound nine-EDF PhysioNet acquisition.",
+        description=(
+            "Default to a no-stat, no-network plan. Execution requires the exact "
+            "remotely-green implementation commit and both successful CI job IDs, "
+            "then consumes the one no-retry acquisition invocation."
+        ),
+    )
+    mode = p.add_mutually_exclusive_group()
+    mode.add_argument(
+        "--execute",
+        action="store_true",
+        help="Consume the single registered acquisition invocation after remote-green gates.",
+    )
+    mode.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Print the frozen plan without path stats or network access. This is the default.",
+    )
+    p.add_argument(
+        "--implementation-commit",
+        help="Full remotely-green implementation commit; must equal current HEAD.",
+    )
+    p.add_argument(
+        "--implementation-ci-run-id",
+        type=int,
+        help="Successful CI run ID for the exact implementation commit.",
+    )
+    p.add_argument(
+        "--base-python-job-id",
+        type=int,
+        help="Successful Base Python job ID from the implementation CI run.",
+    )
+    p.add_argument(
+        "--optional-neuro-job-id",
+        type=int,
+        help="Successful Optional Neuro Readers job ID from the implementation CI run.",
+    )
+    p.set_defaults(func=_cmd_physionet_motor_acquire)
 
     p = sub.add_parser(
         "loop54-vhdr-ledger",

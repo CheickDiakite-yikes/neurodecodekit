@@ -5669,3 +5669,55 @@ Scientific claim not established: this decision is not an EDF or EEG result
 and establishes no readability, event correctness, signal quality, motor
 effect, neural advantage, model accuracy, generalization, real-time behavior,
 portable hardware, home use, assistive value, or clinical result.
+
+## 2026-08-09 - PhysioNet Motor Acquisition Fixture-Only Implementation
+
+- Verified authorization decision `00b91ed` passed Base Python job
+  `93322699209` and Optional Neuro Readers job `93322699259` in CI
+  `31344104565` before implementation began.
+- Added `src/neurodecodekit/datasets/physionet_motor_acquisition.py`, a
+  standard-library-only, fail-closed executor with no EDF reader and no heavy
+  dependency.
+- Added `neurodecode physionet-motor-acquire`. Its default plan verifies the
+  frozen contract and decision but performs no registered path stat and no
+  network request. `--execute` requires the exact current implementation
+  commit, CI run, and both successful job IDs.
+- Implemented exact three-document metadata GETs, nine EDF HEADs, no redirects,
+  no retries, strict version/DOI/license/task/path/size/checksum checks, bounded
+  binary transfer, one no-follow opaque local SHA-256 pass per EDF, exact
+  membership, atomic complete-bundle promotion, and bounded machine/human
+  receipts.
+- Added 23 dedicated adversarial executor tests. Fifty-five combined
+  registration/request/decision/executor tests and 68 focused implementation
+  plus compatibility checks pass. All payloads and responses are generated or
+  mocked; invalid UTF-8 proves that the transfer path does not decode content.
+- Repaired one historical CML test that treated the shared CLI as permanently
+  immutable. Its consumed registry and result were not changed; their old CLI
+  and registry-test hashes remain explicit historical evidence and the current
+  CML command is still asserted.
+- The first complete-suite run exposed that historical assertion and one
+  transient five-second isolated-worker timeout. The unchanged worker test
+  passed focused replay. The final full one-thread run passed 1,448 tests with
+  three expected skips and 493 subtests in 44.21 seconds internal and 45.73
+  seconds external wall time at 598,622,208-byte peak suite RSS.
+- The suite RSS includes optional ML imports and is not an acquisition metric.
+  The future standard-library executor independently enforces 300 seconds,
+  268,435,456-byte RSS, 1 MiB metadata, 32 MiB EDF network, 64 MiB disk, and
+  1 MiB receipt caps.
+- No source metadata, registered PhysioNet path, EDF payload, sidecar, header,
+  annotation, event, signal, task, target, label, channel, cache, split, model,
+  training, inference, scoring, provider, stream, device, hardware, release,
+  work-order-9, or rerun operation occurred. Retained generated experiment
+  bytes remain zero.
+- The user's 10 GB data allowance remains unused future headroom and does not
+  alter the exact 23,248,224-byte contract. The unrelated tracker inspection
+  NDJSON remains untouched.
+
+Engineering capability added: one strict standard-library path can reverify,
+acquire, opaque-hash, atomically promote, and privately receipt the exact
+registered nine-EDF bundle after the ordered remote-green gates.
+
+Scientific claim not established: fixture-only implementation establishes no
+EDF readability, event correctness, signal quality, motor effect, neural
+advantage, model accuracy, unseen-person generalization, real-time latency,
+portable hardware, home use, assistive value, or clinical result.

@@ -665,6 +665,21 @@ Read this before interpreting any number in the repository.
   causal motor-physiology assay and the compact model. No public payload,
   protected content, model, checkpoint, target, or pretrained weight opened;
   the strategy is not an execution contract.
+- **PhysioNet motor acquisition implementation:** registration `2a7b418` and
+  authorization decision `00b91ed` were remotely green before a separate
+  standard-library executor was built. `neurodecode physionet-motor-acquire`
+  defaults to a no-stat, no-network plan. Its gated mode allowlists three
+  metadata documents and nine EDF HEADs, refuses redirects and retries,
+  streams only the nine exact S001-S003 runs 03/07/11 files, hashes each local
+  file exactly once without parsing it, promotes only the complete directory,
+  and writes bounded private receipts. Twenty-three adversarial tests use only
+  generated invalid-UTF-8 bytes and mocked responses; the full suite passes
+  1,448 tests with 3 expected skips and 493 subtests. No PhysioNet metadata,
+  registered local path, or EDF payload was touched during implementation.
+  The exact implementation must be committed, pushed, and remotely green
+  before the one 23,248,224-byte acquisition. The later 10 GB allowance is
+  future headroom, not an expansion of this invocation, and work order 9 is
+  still closed.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

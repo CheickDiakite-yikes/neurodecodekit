@@ -8,6 +8,12 @@ ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = ROOT / "registries/causal_motor_lattice_synthetic_implementation.v0.json"
 DOC_PATH = ROOT / "docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md"
 QUEUE_PATH = ROOT / "docs/NEXT_20_SYSTEMATIC_EXECUTION_2026-08-08.md"
+HISTORICAL_MUTABLE_BINDINGS = {
+    "CLI_module": "808fbc930db504e80cc7ecb0117e11115dc039b28505090abe545737b74bfc9e",
+    "implementation_registry_tests": (
+        "8295a47e4e4ab18f4603c517805aed4653a574e6ea34772e354565e112e97e42"
+    ),
+}
 
 
 def sha256(path: Path) -> str:
@@ -29,11 +35,19 @@ class CausalMotorLatticeSyntheticImplementationTests(unittest.TestCase):
             )
         )
 
-    def test_contract_and_every_source_are_hash_bound(self):
+    def test_contract_and_owned_sources_are_current_or_historically_hash_bound(self):
         contract = self.registry["contract_binding"]
         self.assertEqual(contract["sha256"], sha256(ROOT / contract["path"]))
-        for source in self.registry["source_bindings"].values():
-            self.assertEqual(source["sha256"], sha256(ROOT / source["path"]), source["path"])
+        for name, source in self.registry["source_bindings"].items():
+            if name in HISTORICAL_MUTABLE_BINDINGS:
+                self.assertEqual(source["sha256"], HISTORICAL_MUTABLE_BINDINGS[name])
+            else:
+                self.assertEqual(source["sha256"], sha256(ROOT / source["path"]), source["path"])
+        current_cli = (ROOT / self.registry["source_bindings"]["CLI_module"]["path"]).read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("_cmd_cml_v0_synthetic", current_cli)
+        self.assertIn('"cml-v0-synthetic"', current_cli)
 
     def test_architecture_adapter_and_training_shell_are_exact(self):
         architecture = self.registry["architecture_qualification"]

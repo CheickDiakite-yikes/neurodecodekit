@@ -18,7 +18,7 @@ decision after its own frozen packet and required remote-green evidence exist.
 | 5 | Add a contact-aware ear-channel adapter | B | Synthetic contact/noise/missingness fixtures and exact channel-mask semantics only | Complete |
 | 6 | Freeze Loop 54-A decision and qualify parser | A/B then C decision | Recovery-bound exact packet, strict synthetic parser tests, green implementation before real access | Complete |
 | 7 | Execute Loop 54-A once | C | One 11,705-byte VHDR open; no sibling resolution; all 18 gates pass | Consumed; Parked F11; No Rerun |
-| 8 | Acquire tiny PhysioNet motor slice | C | Exactly nine pinned EDF files, 23,248,224 bytes, isolated receipt, no substitutions | Exact Decision Frozen; Decision CI Before Implementation |
+| 8 | Acquire tiny PhysioNet motor slice | C | Exactly nine pinned EDF files, 23,248,224 bytes, isolated receipt, no substitutions | Implementation Qualified Locally; Execution Pending Remote Green |
 | 9 | Run grouped public motor positive control | C | Participant/run grouping, fixed classical family, no-signal and corruption controls | Gated |
 | 10 | Execute Loop 54-B signal quality | C | Target-blind VHDR+EEG read, every channel retained, no transform, bounded aggregate output | Gated |
 | 11 | Execute Loop 54-C trial reconciliation | C | Isolated VMRK+MAT target-bearing stage, no plaintext protected public output | Gated |
@@ -84,10 +84,9 @@ official SHA-256 identities. A 2026-08-09 metadata pass made ten HTTP HEAD
 requests across those paths, including one repeated first-file probe; all
 reported HTTP 200 and transferred zero EDF body bytes. No EDF, `.event`,
 annotation, header, signal, target, split, model, or local PhysioNet path was
-opened. Every execution permission remains false until the registration is
-remotely green, a hash-bound request is separately green, the maintainer gives
-the exact Tier C decision, and a fixture-qualified implementation is remotely
-green. Work order 9 remains closed.
+opened. Registration, request, and exact decision are now remotely green, and
+the fixture-qualified implementation is waiting for its own remote-green gate.
+Work order 9 remains closed.
 
 Registration `2a7b4188553e221133d788a081b838dbbb9f41bb` passed Base Python
 job `93215490492` and Optional Neuro Readers job `93215490501` in CI
@@ -98,15 +97,20 @@ request is not authorization. Its commit must be pushed and remotely green
 before the sentence is accepted, and no implementation or payload operation
 may begin from the packet alone.
 
-The maintainer has now supplied the exact registered Tier C sentence after
-request `f6eb577` passed both jobs in CI `31302161647`. The separate human and
-machine decision records authorize fixture-only implementation after the
-decision commit becomes remotely green, then one exact acquisition only after
-the implementation commit becomes remotely green. At the decision boundary,
-source-metadata, EDF, local-PhysioNet-path, parse, split, model, and experiment
-counters remain zero. A later 10 GB data ceiling is available for a separately
-contracted future stage; it does not enlarge this immutable 23,248,224-byte
-inventory.
+The maintainer supplied the exact registered Tier C sentence after request
+`f6eb577` passed both jobs in CI `31302161647`. Decision `00b91ed` then passed
+both jobs in CI `31344104565` before implementation. The standard-library
+executor and dry-run-first CLI now pass 23 dedicated adversarial tests using
+only generated invalid-UTF-8 bytes and mocked responses. They enforce the exact
+three-document/nine-HEAD metadata allowlist, no redirect or retry, bounded
+streaming, one opaque local hash pass per EDF, exact membership, atomic
+promotion, bounded receipts, and no parser or work-order-9 interface. The full
+suite passes 1,448 tests with three expected skips and 493 subtests. Source
+metadata, EDF, local-PhysioNet-path, parse, split, model, and experiment
+counters remain zero. This exact implementation must be committed, pushed, and
+remotely green before the one registered invocation. A later 10 GB data
+ceiling is available for a separately contracted future stage; it does not
+enlarge this immutable 23,248,224-byte inventory.
 
 Work order 13 now has a frozen Tier B synthetic-only contract in
 `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md` and

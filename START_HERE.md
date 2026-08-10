@@ -223,6 +223,20 @@
    local-first aggregate receipt for EEG contributors. This is additive
    planning only: no public EEG payload, S20 path, target, model, checkpoint,
    training, inference, score, or upload was accessed or authorized.
+   Work order 8 then froze and separately authorized that tiny acquisition.
+   Read `docs/PHYSIONET_MOTOR_ACQUISITION_PREREGISTRATION.md`, its contract,
+   the authorization packet and decision, then
+   `docs/PHYSIONET_MOTOR_ACQUISITION_IMPLEMENTATION.md` and
+   `registries/physionet_motor_acquisition_implementation.v0.json`.
+   Authorization decision `00b91ed` passed both jobs in CI `31344104565`
+   before the standard-library executor was built. The no-stat/no-network
+   default CLI, exact metadata allowlist, no-redirect/no-retry transport,
+   one-pass opaque hashing, atomic promotion, bounded receipts, and 23
+   adversarial tests are fixture-qualified. No PhysioNet source metadata,
+   local path, or EDF payload was touched. The exact implementation must be
+   committed, pushed, and remotely green before the one nine-file,
+   23,248,224-byte acquisition. The separate 10 GB allowance is future
+   headroom, not an expansion of this invocation; work order 9 remains closed.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

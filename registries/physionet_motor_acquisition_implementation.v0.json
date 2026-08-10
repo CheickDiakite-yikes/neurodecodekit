@@ -1,0 +1,192 @@
+{
+  "schema_name": "neurodecodekit.physionet_motor_acquisition_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "work-order-8-physionet-motor-acquisition-v0",
+  "prepared_at": "2026-08-09",
+  "status": "implemented_locally_fixture_qualified_remote_green_pending_no_execution",
+  "proof_posture": "generated_fixture_and_mock_transport_only_zero_source_metadata_edf_or_local_physionet_access",
+  "authorization_binding": {
+    "authorization_commit": "00b91edd213112fd186711d06369ae4f836b2243",
+    "authorization_ci_run_id": 31344104565,
+    "authorization_base_python_job_id": 93322699209,
+    "authorization_optional_neuro_job_id": 93322699259,
+    "authorization_decision_path": "registries/physionet_motor_acquisition_authorization_decision.v0.json",
+    "authorization_decision_sha256": "5f232f174c67fae2f70f2cc26a779a82caee9176dc406ceccb182ad77d1bc304",
+    "contract_path": "registries/physionet_motor_acquisition_contract.v0.json",
+    "contract_sha256": "6c81dac6a818f13c49f5df25c540e9d3ef65f21b56ecb1a5b5d15d4a3dc819d3",
+    "both_required_authorization_jobs_green_before_implementation": true
+  },
+  "source_bindings": {
+    "executor": {
+      "path": "src/neurodecodekit/datasets/physionet_motor_acquisition.py",
+      "sha256": "9543db72a02f4216e94c680372ebf427859b10edf45d7bb8a9a510316257f7d4",
+      "owned_by_this_implementation": true
+    },
+    "cli_snapshot": {
+      "path": "src/neurodecodekit/cli.py",
+      "sha256": "efba51ab2674ed6a1111f15095d328dadc3f20bf7b5804cc6a8d9c0169e55fa2",
+      "owned_by_this_implementation": false,
+      "shared_file_may_receive_future_additive_commands": true
+    },
+    "executor_tests": {
+      "path": "tests/test_physionet_motor_acquisition.py",
+      "sha256": "38f4054af33682a234d4c992407be0fdebb09f3c7ff6375cbebf18a2e4d90e41",
+      "owned_by_this_implementation": true
+    },
+    "historical_cml_compatibility_test_snapshot": {
+      "path": "tests/test_causal_motor_lattice_synthetic_implementation.py",
+      "sha256": "680aabfd393658ff520c25ecac3429fab426e2ce2106498085e8a23261ef33c3",
+      "owned_by_this_implementation": false,
+      "shared_file_may_receive_future_evidence_preserving_repairs": true
+    },
+    "implementation_document": {
+      "path": "docs/PHYSIONET_MOTOR_ACQUISITION_IMPLEMENTATION.md",
+      "sha256": "df3233786266afee1065b5c29c64492f39721f084367394d08290c9602c152f9",
+      "owned_by_this_implementation": true
+    }
+  },
+  "frozen_interface": {
+    "cli_command": "physionet-motor-acquire",
+    "default_mode": "dry_run_no_registered_path_stat_no_network",
+    "execution_requires_explicit_flag": true,
+    "execution_requires_current_full_implementation_commit": true,
+    "execution_requires_ci_run_and_two_successful_job_ids": true,
+    "base_dependencies_added": [],
+    "edf_parser_exposed": false,
+    "event_sidecar_interface_exposed": false,
+    "stream_chunk_bytes": 1048576,
+    "atomic_promotion_unit": "complete_verified_nine_edf_directory",
+    "receipt_files": [
+      "physionet_motor_acquisition_manifest.v0.json",
+      "physionet_motor_acquisition_receipt.md"
+    ]
+  },
+  "enforced_identity": {
+    "provider": "PhysioNet",
+    "dataset_id": "eegmmidb",
+    "version": "1.0.0",
+    "doi": "10.13026/C28G6P",
+    "license_id": "ODC-By-1.0",
+    "subjects": [
+      "S001",
+      "S002",
+      "S003"
+    ],
+    "runs": [
+      "03",
+      "07",
+      "11"
+    ],
+    "file_count": 9,
+    "expected_payload_bytes": 23248224,
+    "substitution_allowed": false,
+    "event_sidecar_allowed": false
+  },
+  "metadata_reverification": {
+    "registered_document_get_requests": 3,
+    "registered_edf_head_requests": 9,
+    "registered_edf_body_requests_before_complete_metadata_match": 0,
+    "dataset_version_doi_license_and_public_availability_required": true,
+    "task_mapping_required": true,
+    "all_paths_sizes_and_official_sha256_required": true,
+    "redirects_allowed": false,
+    "maximum_response_body_bytes": 1048576,
+    "transport_header_bytes_measured": false
+  },
+  "enforced_resources": {
+    "cpu_threads": 1,
+    "workers": 1,
+    "concurrent_numerical_jobs": 1,
+    "wall_time_seconds": 300,
+    "peak_rss_bytes": 268435456,
+    "maximum_metadata_network_bytes": 1048576,
+    "maximum_edf_payload_network_bytes": 33554432,
+    "maximum_incremental_disk_bytes": 67108864,
+    "minimum_free_disk_bytes": 2147483648,
+    "maximum_manifest_and_receipt_bytes": 1048576,
+    "acquisition_invocations": 1,
+    "payload_retries": 0,
+    "opaque_local_hash_passes_per_edf": 1
+  },
+  "fixture_qualification": {
+    "fixture_kind": "nine_tiny_invalid_utf8_opaque_binary_streams_same_registered_path_topology",
+    "dedicated_executor_tests": 23,
+    "combined_work_order_8_tests_before_registry_tests": 55,
+    "implementation_registry_tests": 7,
+    "focused_tests_after_registry_tests": 62,
+    "complete_suite_prechange_passed_tests": 1418,
+    "complete_suite_expected_passed_tests": 1448,
+    "new_tests_since_prechange_baseline": 30,
+    "complete_suite_expected_skips": 3,
+    "complete_suite_expected_subtests": 493,
+    "complete_suite_internal_runtime_seconds": 44.21,
+    "complete_suite_external_wall_seconds": 45.73,
+    "complete_suite_external_peak_rss_bytes": 598622208,
+    "source_metadata_calls": 0,
+    "source_metadata_network_bytes": 0,
+    "edf_payload_requests": 0,
+    "edf_payload_network_bytes": 0,
+    "registered_physionet_path_stats_or_opens": 0,
+    "edf_header_annotation_signal_or_event_reads": 0,
+    "target_label_epoch_or_trial_reads": 0,
+    "cache_split_model_inference_training_or_scoring_runs": 0,
+    "persistent_generated_experiment_bytes": 0,
+    "complete_suite_passed": true,
+    "ruff_passed": true,
+    "compileall_passed": true,
+    "registry_json_validation_passed": true,
+    "cli_help_and_dry_run_passed": true,
+    "git_diff_check_passed": true,
+    "complete_suite_pending": false,
+    "implementation_commit_pending": true,
+    "implementation_push_pending": true,
+    "implementation_remote_green_pending": true
+  },
+  "failure_controls": [
+    "metadata_mismatch_aborts_before_first_edf_body_request",
+    "three_document_gets_and_nine_edf_heads_are_exact_and_bounded",
+    "redirects_unregistered_hosts_event_sidecars_wildcards_and_substitutions_refused",
+    "metadata_payload_runtime_rss_and_disk_caps_checked",
+    "short_transfer_short_write_file_size_and_sha256_fail_closed",
+    "each_edf_receives_exactly_one_opaque_local_hash_pass",
+    "partial_or_extra_member_bundle_never_promoted",
+    "cleanup_limited_to_invocation_created_temporary_paths",
+    "preexisting_and_symlink_paths_refused_without_follow_overwrite_delete_or_rename",
+    "receipt_or_output_root_prevents_second_invocation",
+    "all_forbidden_access_and_operation_counters_explicit"
+  ],
+  "compatibility_repair": {
+    "consumed_cml_registry_modified": false,
+    "consumed_cml_result_modified": false,
+    "historical_cml_cli_sha256_preserved": "808fbc930db504e80cc7ecb0117e11115dc039b28505090abe545737b74bfc9e",
+    "historical_cml_registry_test_sha256_preserved": "8295a47e4e4ab18f4603c517805aed4653a574e6ea34772e354565e112e97e42",
+    "current_cml_command_presence_still_tested": true
+  },
+  "execution_state": {
+    "implementation_commit": null,
+    "implementation_ci_run_id": null,
+    "implementation_base_python_job_id": null,
+    "implementation_optional_neuro_job_id": null,
+    "remote_metadata_calls": 0,
+    "metadata_network_bytes": 0,
+    "edf_payload_requests": 0,
+    "edf_payload_network_bytes": 0,
+    "local_edf_hash_passes": 0,
+    "bundle_created": false,
+    "manifest_or_receipt_created": false,
+    "registered_execution_consumed": false
+  },
+  "warnings": [
+    "implementation_is_not_an_acquisition_result",
+    "registered_execution_remains_blocked_until_this_exact_commit_is_remotely_green",
+    "metadata_network_bytes_measure_response_bodies_not_transport_headers",
+    "edf_content_has_no_parser_in_work_order_8",
+    "event_sidecars_remain_forbidden",
+    "ten_gigabyte_future_headroom_does_not_expand_this_23248224_byte_contract",
+    "one_future_invocation_has_no_retry_or_rerun"
+  ],
+  "claim_boundary": {
+    "engineering_capability_added": "One strict standard-library path can reverify, acquire, opaque-hash, atomically promote, and privately receipt the exact registered nine-EDF bundle after the ordered remote-green gates.",
+    "scientific_claim_not_established": "No real PhysioNet metadata or EDF operation occurred during implementation, so EDF readability, event correctness, signal quality, motor physiology, neural advantage, model accuracy, unseen-person generalization, end-to-end latency, typing or language decoding, portable hardware, home use, assistive value, and clinical utility remain unestablished."
+  }
+}
