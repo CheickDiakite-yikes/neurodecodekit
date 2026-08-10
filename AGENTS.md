@@ -41,16 +41,31 @@ held-out secondary result: 36/45, 0.800395 pooled balanced accuracy, and
 `p=0.000183`. Motor physiology and central-over-frontal/occipital localization
 failed, so preserve this as task-information evidence rather than a brain-
 specific motor claim. Do not reopen, rerun, or tune the private Work Order 9
-artifacts. Tier A WO9R planning is now complete in
+artifacts. Tier A WO9R planning is complete in
 `docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PRIMARY_SOURCE_RESEARCH.md`
 and
 `registries/physionet_low_frequency_cohort_confirmation_research.v0.json`.
 It selects the untouched S004-S015 cohort, execution and imagery runs, one
 unchanged `0.5-4 Hz` primary template, participant-level gates, and explicit
-cue, ocular, timing, transfer, and localization controls. The active next task
-is exact public-metadata inventory and preregistration preparation only. Do not
-request, stat, open, hash, decode, or model an EDF. Any acquisition, local real-
-data access, final target event, or execution needs a new exact Tier C decision.
+cue, ocular, timing, transfer, and localization controls. Exact preregistration
+is now frozen in
+`docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PREREGISTRATION.md` and
+`registries/physionet_low_frequency_cohort_confirmation_contract.v0.json` at
+commit `716e5432498052b78cb799c9f4e3bfbae68e3ad2`. CI `31354565966`
+passed Base Python job `93351737101` and Optional Neuro Readers job
+`93351737088`. The contract binds 72 exact S004-S015 EDF paths,
+184,252,032 bytes, 720 expected fit rows, 360 jointly sealed final rows, one
+fixed low-frequency family, 144 fit ceilings, 18 condition families, 216
+target-blind inference/prediction sets, a combined prediction freeze, and the
+`WO9R-R0` through `WO9R-R4` router. Registration used only 13 official public
+metadata GETs totaling 340,703 retained body bytes; no EDF URL was requested.
+The additive all-false request is in
+`docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_AUTHORIZATION_PACKET.md` and
+`registries/physionet_low_frequency_cohort_confirmation_authorization_request.v0.json`.
+Its commit must be pushed and remotely green before its exact sentence may be
+accepted. Do not implement, acquire, stat, open, hash, decode, model, deliver a
+target, or score from the preregistration or request alone. Every Tier C flag is
+false until a separate exact decision is committed, pushed, and remotely green.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

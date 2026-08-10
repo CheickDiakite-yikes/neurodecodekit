@@ -96,19 +96,24 @@ execution `03/07 -> 11` and imagery `04/08 -> 12`. The exact prespecified
 with native and bidirectional transfer questions, central/frontal/occipital
 views, an ocular-sensitive frontal asymmetry, early/pre-cue controls, timing,
 no-signal, label, displacement, channel, and hemisphere controls. The five-way
-router separates failed confirmation, cue-compatible confirmation,
+router separates failed confirmation, execution-only confirmation,
 execution/imagery robustness, and a maximum motor-compatible result. Even its
-maximum route cannot establish brain-specific origin. Research authorizes no
-metadata-bound acquisition contract, payload, split, model, target, score, or
+maximum route cannot establish brain-specific origin. Registration `716e543`
+passed both jobs in CI `31354565966` and now freezes the exact 72 files,
+184,252,032 bytes, target firewall, 144 fit ceilings, 18 conditions, 216
+target-blind participant-condition prediction sets, and one combined final
+target delivery. It authorizes no payload, split, model, target, score, or
 claim. Read
 `docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PRIMARY_SOURCE_RESEARCH.md`
-and its machine registry before preparing the separately gated exact
-inventory and preregistration.
+and its machine registry, then the frozen preregistration and contract. The
+all-false authorization packet and machine request are prepared separately;
+they authorize nothing before their own remotely green commit and an exact
+maintainer decision.
 
-WO9R status: **Research complete; exact inventory, preregistration,
-authorization, implementation, acquisition, and execution gated.** It is
-deliberately outside the numbered 1-20 table so that the frozen execution
-overlay remains exactly 20 rows.
+WO9R status: **Research and preregistration complete; all-false request
+prepared; exact decision, implementation, acquisition, and execution gated.**
+It is deliberately outside the numbered 1-20 table so that the frozen
+execution overlay remains exactly 20 rows.
 
 Registration `2a7b4188553e221133d788a081b838dbbb9f41bb` passed Base Python
 job `93215490492` and Optional Neuro Readers job `93215490501` in CI

@@ -747,9 +747,9 @@ Read this before interpreting any number in the repository.
   localization, not proof of brain-specific motor decoding. Read the
   [full result and condition breakdown](docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_RESULT.md).
   Work order 9 is complete and consumed with no rerun.
-- **WO9R low-frequency cohort-confirmation design:** the strongest WO9 lead is
+- **WO9R low-frequency cohort-confirmation gate:** the strongest WO9 lead is
   now converted into a prospective, falsifiable next study rather than a
-  retrospective model promotion. The planning-only design selects the
+  retrospective model promotion. The frozen design selects the
   contiguous untouched `S004-S015` cohort and pairs execution runs
   `03/07 -> 11` with imagery runs `04/08 -> 12`, for 12 participants, 72
   prospective EDFs, and 360 expected sealed-final events. The exact fixed
@@ -762,11 +762,19 @@ Read this before interpreting any number in the repository.
   confirmed task signal from a motor-compatible localized effect. The router
   spans `WO9R-R0` through `WO9R-R4`; even `R4` remains within-dataset,
   motor-compatible EEG evidence, not brain-specific origin or independent-team
-  replication. This Tier A result downloaded and opened no EDF and ran no
-  model. Read the [primary-source design and exact claim
-  boundary](docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PRIMARY_SOURCE_RESEARCH.md).
-  Exact file identities, a preregistration, Tier C permission, implementation,
-  acquisition, prediction freeze, and scoring all remain future gates.
+  replication. Registration commit `716e543` is remotely green in CI
+  `31354565966` and now binds all 72 paths and official SHA-256 values,
+  **184,252,032 bytes**, 144 fit ceilings, 18 condition families, 216
+  target-blind participant-condition prediction sets, and one combined
+  run-11/run-12 target freeze. Exact sizes came from 12 official public S3
+  object listings and checksums from the official manifest; no EDF URL or body
+  was requested. Read the [primary-source design and exact claim
+  boundary](docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PRIMARY_SOURCE_RESEARCH.md),
+  then the [frozen preregistration](docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PREREGISTRATION.md).
+  An [all-false authorization packet](docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_AUTHORIZATION_PACKET.md)
+  is prepared, but it authorizes nothing until its commit is remotely green
+  and the maintainer sends its exact Tier C sentence. Implementation,
+  acquisition, prediction freeze, target delivery, and scoring remain closed.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

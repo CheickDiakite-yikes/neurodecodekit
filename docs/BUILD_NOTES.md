@@ -6080,3 +6080,56 @@ cohort-confirmation/localization design for its strongest real EEG lead.
 Scientific claim not established: no new participant payload, target, model,
 prediction, or score was accessed, so no cohort replication or neural claim
 was added.
+
+## 2026-08-10 - WO9R Exact Preregistration Green And Request Prepared
+
+- Retrieved exact public metadata without requesting an EDF URL: twelve
+  official PhysioNet S3 `ListObjectsV2` bodies plus the official v1.0.0
+  checksum manifest. The 13 retained bodies total 340,703 bytes. EDF HEAD/GET
+  requests and EDF body bytes were zero.
+- Froze exactly 72 S004-S015 EDF paths for runs 03/04/07/08/11/12, totaling
+  184,252,032 bytes, with one official SHA-256 per file and canonical expanded
+  inventory hash
+  `41906e8c74cafdcaa99354baab8acd4927127a73e7454939429dbca2a8c03dad`.
+- Froze execution `03/07 -> 11`, imagery `04/08 -> 12`, 720 expected fit rows,
+  360 jointly sealed final rows, one exact `0.5-4 Hz` shrinkage-LDA primary,
+  144 participant-specific fit ceilings, 18 conditions, 216 target-blind
+  participant-condition prediction sets, literal controls, participant-level
+  exact tests, and `WO9R-R0` through `WO9R-R4`.
+- Documented the target firewall honestly: the reader will necessarily
+  materialize annotations, while the firewall isolates final labels from all
+  predictive, selection, threshold, channel, and normalization code. It is not
+  represented as a physical-never-opened or operating-system boundary.
+- Registration commit `716e5432498052b78cb799c9f4e3bfbae68e3ad2` passed
+  Base Python job `93351737101` and Optional Neuro Readers job `93351737088`
+  in CI `31354565966` before the all-false request was prepared.
+- Added a human authorization packet and machine request binding that exact
+  commit, CI proof, artifact hashes, 184,252,032-byte acquisition cap, existing
+  dependency identities, fixture-first implementation, one-shot acquisition,
+  one target-blind analysis, combined prediction freeze, and one combined
+  360-target score. Every implementation, dependency, metadata-reverification,
+  EDF, local path, model, target, cleanup, rerun, and claim flag remains false.
+- Thirty-eight focused WO9R checks pass. The complete dependency-light suite
+  passes 1,488 tests with 168 expected skips, and the retained classical
+  environment passes 1,544 tests with 34 expected skips. These are exact
+  12-test increases over the green registration baselines, with no prior test
+  lost. Ruff 0.15.20, compileall, all registry JSON parsing, and diff checks
+  pass.
+- No local PhysioNet path, private Work Order 9 artifact, EDF, header,
+  annotation, sample, target, channel, geometry, dependency installer,
+  derivative, fit, inference, prediction, score, provider, stream, device, or
+  hardware operation occurred. The unrelated tracker inspection NDJSON remains
+  untouched.
+
+Next gate: commit and push this all-false request and require both CI jobs green.
+Only then may the exact sentence in the packet be accepted into a separate
+authorization-only decision commit. Implementation and every Tier C operation
+remain closed until that decision also becomes remotely green.
+
+Engineering capability added: the project now has an exact, metadata-bound,
+resource-bounded authorization surface for one twelve-person low-frequency
+execution/imagery confirmation with a combined final-target firewall.
+
+Scientific claim not established: no selected EDF or target was opened and no
+model was run, so the request adds no cohort confirmation, brain-specific
+effect, generalization, decoding, latency, hardware, or human-benefit evidence.

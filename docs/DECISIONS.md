@@ -4717,3 +4717,56 @@ Evidence:
 `docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/physionet_low_frequency_cohort_confirmation_research.v0.json`, and
 `tests/test_physionet_low_frequency_cohort_confirmation_research.py`.
+
+## 0135 - Freeze WO9R Metadata, Experiment, And Combined Target Firewall
+
+Decision: convert the WO9R research design into one exact preregistration
+without opening or requesting an EDF. Registration commit
+`716e5432498052b78cb799c9f4e3bfbae68e3ad2` passed Base Python job
+`93351737101` and Optional Neuro Readers job `93351737088` in CI
+`31354565966`. Preserve that tree as the immutable experiment boundary.
+
+Metadata identity: use twelve public `ListObjectsV2` responses from
+PhysioNet's official `physionet-open` bucket for exact object paths and sizes,
+plus the official v1.0.0 checksum manifest for SHA-256 identities. The retained
+registration bodies are 340,703 bytes across 13 GETs. No request was sent to an
+EDF URL. Freeze exactly 72 S004-S015 files for runs 03/04/07/08/11/12 totaling
+184,252,032 bytes; no `.event` sidecar, wildcard, replacement, or extra file is
+allowed.
+
+Experiment: carry only the exact prespecified `0.5-4 Hz` shrinkage-LDA
+template. Bind execution 03/07 to sealed 11, imagery 04/08 to sealed 12, 720
+expected fit rows, 360 jointly sealed final rows, 144 participant-specific fit
+ceilings, 18 condition families, 216 target-blind inference/prediction sets,
+literal spatial/temporal/derangement controls, participant-level exact tests,
+and `WO9R-R0` through `WO9R-R4`. Both final target sets must freeze and open
+together; one cannot tune the other.
+
+Target reality: the future EDF reader will necessarily materialize annotation
+values. The firewall must immediately isolate final labels into a sealed scorer
+artifact and expose only target-free features and identities to predictive
+code. This is a function-and-artifact boundary, not a claim that target bytes
+remain physically unopened.
+
+Resources: acquisition remains one-shot at exactly 184,252,032 payload bytes,
+one thread/worker/job, 900 seconds, 256 MiB RSS, 384 MiB incremental disk, and
+at least 20 GiB free. Analysis remains one-shot at one thread/worker/job, 1,800
+seconds through freeze, 1 GiB RSS, 64 MiB private output, zero network/new
+payload, one final delivery/score, and zero retry/rerun/post-target update.
+
+Authorization posture: prepare a separate all-false request that binds the
+green registration proof and one exact sentence. The request is not a decision.
+No implementation, dependency installation, acquisition, local PhysioNet
+operation, fit, inference, target delivery, scoring, cleanup, rerun, or claim
+promotion is authorized before that request is committed, pushed, remotely
+green, and followed by a separate exact Tier C decision-only commit that also
+becomes remotely green.
+
+Evidence:
+`docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PREREGISTRATION.md`,
+`registries/physionet_low_frequency_cohort_confirmation_contract.v0.json`,
+`tests/test_physionet_low_frequency_cohort_confirmation_contract.py`,
+`docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_AUTHORIZATION_PACKET.md`,
+`registries/physionet_low_frequency_cohort_confirmation_authorization_request.v0.json`,
+and
+`tests/test_physionet_low_frequency_cohort_confirmation_authorization_request.py`.

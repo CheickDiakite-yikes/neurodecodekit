@@ -295,10 +295,18 @@
    execution/imagery transfer, central localization, ocular/visual proxy,
    early/pre-cue, timing, no-signal, derangement, and displacement questions.
    The maximum future route is a within-dataset motor-compatible task effect,
-   not brain-specific proof. No exact 72-file inventory, acquisition,
-   preregistration, authorization, implementation, payload, model, prediction,
-   target, or score exists yet. The next safe action is metadata-bound contract
-   preparation only.
+   not brain-specific proof. Then read
+   `docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PREREGISTRATION.md` and
+   `registries/physionet_low_frequency_cohort_confirmation_contract.v0.json`.
+   Registration `716e543` passed both jobs in CI `31354565966` and binds the
+   exact 72-file, 184,252,032-byte inventory, all model/control counts, the
+   combined target firewall, and one-shot resources. Its metadata pass made no
+   EDF URL request. Finally read
+   `docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_AUTHORIZATION_PACKET.md`
+   and its matching request registry. That request is all-false and is not a
+   decision. Its commit must become remotely green before the exact sentence
+   may be accepted. Acquisition, implementation, payload access, fitting,
+   inference, target delivery, scoring, and claims remain unauthorized.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

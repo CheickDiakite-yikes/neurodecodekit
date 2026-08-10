@@ -1823,10 +1823,22 @@ new-cohort task-information confirmation even if cue/localization gates fail;
 and all control gates. Even `R4` is not brain-specific because the dataset has
 no dedicated EOG/EMG or measured movement onset.
 
-The next safe step is public-metadata-only: freeze the exact 72 paths, sizes,
-official SHA-256 values, payload total, contracts, and all-false Tier C request.
-Do not request, stat, open, hash, decode, or model an EDF. Any acquisition,
-local payload operation, training/inference, final-target delivery, scoring,
-or claim promotion requires a new exact Tier C decision and the registered
-green evidence order. Preserve the unrelated untracked tracker inspection
-NDJSON.
+The exact metadata and preregistration step is now complete. Contract commit
+`716e5432498052b78cb799c9f4e3bfbae68e3ad2` passed Base Python job
+`93351737101` and Optional Neuro Readers job `93351737088` in CI
+`31354565966`. It freezes 72 exact paths and official SHA-256 values totaling
+184,252,032 bytes, 720 expected fit rows, 360 jointly sealed final rows, 144
+fit ceilings, 18 conditions, 216 target-blind participant-condition prediction
+sets, literal controls, participant-level gates, one combined target delivery,
+and no rerun. The registration read 13 public metadata bodies totaling 340,703
+bytes from the official S3 listings and checksum manifest, with zero EDF URL
+requests or payload bytes.
+
+The all-false request is prepared in
+`docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_AUTHORIZATION_PACKET.md` and
+`registries/physionet_low_frequency_cohort_confirmation_authorization_request.v0.json`.
+Its next gate is commit, push, and both remote CI jobs green; only then may the
+maintainer's exact sentence be accepted into a separate decision-only commit.
+Do not implement, acquire, stat, open, hash, decode, model, deliver targets, or
+score from the preregistration or request. Preserve the unrelated untracked
+tracker inspection NDJSON.

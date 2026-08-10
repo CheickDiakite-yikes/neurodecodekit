@@ -842,6 +842,11 @@ central sensors underperformed the frontal/occipital proxy. The additive WO9R
 Tier A research record now selects S004-S015 and paired execution/imagery runs
 for a new-cohort confirmation and localization test. It does not renumber the
 scientific loops or systematic work orders 10-20. Exact file identities,
-preregistration, authorization, implementation, acquisition, model execution,
-prediction freeze, and scoring remain gated, with every current real-data and
-model counter zero.
+sizes, and official hashes are now frozen at green registration `716e543`:
+72 files totaling 184,252,032 bytes. The contract also freezes the target
+firewall, 144 fit ceilings, 18 conditions, 216 target-blind participant-
+condition prediction sets, and `WO9R-R0` through `WO9R-R4` router. Its metadata
+pass made zero EDF URL requests. The all-false Tier C request is prepared but
+is not a decision; implementation, acquisition, local payload access, model
+execution, prediction freeze, target delivery, scoring, and claims remain
+gated.
