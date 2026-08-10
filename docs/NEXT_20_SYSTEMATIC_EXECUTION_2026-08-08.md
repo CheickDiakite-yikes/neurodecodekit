@@ -171,11 +171,12 @@ and score remain closed. Registration `0e52278` passed both jobs in CI
 `31412667060` before the dependency-free implementation began. Exact
 implementation `16621cc` passed both jobs in CI `31415213841` after one
 measured 128-header generated roundtrip at 36,634,624-byte peak RSS. The
-all-false request now freezes the smallest next irreversible step: one
-sequential public 128-header/161,792-byte audit, with no local-bundle, sibling,
-sample, target, model, score, retry, or rerun. Commit and remotely green the
-request next; only a later fresh packet-bound Tier C decision can authorize
-that single execution.
+all-false request freezes the smallest next irreversible step: one sequential
+public 128-header/161,792-byte audit, with no local-bundle, sibling, sample,
+target, model, score, retry, or rerun. Request `56531c6` passed both jobs in CI
+`31416489006`; the maintainer then supplied a fresh packet-bound `continue`,
+now quoted in a separate decision. Commit and remotely green that decision
+next; only then may the single audit execute.
 
 Registration `2a7b4188553e221133d788a081b838dbbb9f41bb` passed Base Python
 job `93215490492` and Optional Neuro Readers job `93215490501` in CI

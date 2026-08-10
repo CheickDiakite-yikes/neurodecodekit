@@ -828,15 +828,17 @@ Read this before interpreting any number in the repository.
   One isolated fixture qualification processed all 128 registered sizes in
   0.037819 seconds at 36,634,624-byte peak RSS and emitted 4,465 bytes with
   zero network or real-content operations. Its constructed `IACKDH-R1` has no
-  real-source meaning. The all-false authorization packet now requests one
-  128-header, 161,792-byte public audit only after its own commit and CI become
-  green and a fresh packet-bound maintainer decision is separately recorded.
-  It does not authorize real access, and it never permits the retained local
-  bundle, siblings, samples, targets, models, scoring, retry, or rerun.
+  real-source meaning. Request `56531c6` passed both jobs in CI `31416489006`;
+  the maintainer then supplied a fresh packet-bound `continue`, now preserved
+  verbatim in a separate decision. That decision still must be committed,
+  pushed, and remotely green before the one 128-header/161,792-byte public
+  audit can run. It never permits the retained local bundle, siblings, samples,
+  targets, models, scoring, retry, or rerun.
   Read the [primary-source diagnosis](docs/IACKD_CHANNEL_INVENTORY_PRIMARY_SOURCE_RESEARCH.md),
   [frozen preregistration](docs/IACKD_CHANNEL_INVENTORY_PREREGISTRATION.md),
-  [implementation record](docs/IACKD_CHANNEL_INVENTORY_IMPLEMENTATION.md), and
-  [authorization packet](docs/IACKD_CHANNEL_INVENTORY_AUTHORIZATION_PACKET.md).
+  [implementation record](docs/IACKD_CHANNEL_INVENTORY_IMPLEMENTATION.md),
+  [authorization packet](docs/IACKD_CHANNEL_INVENTORY_AUTHORIZATION_PACKET.md),
+  and [decision record](docs/IACKD_CHANNEL_INVENTORY_AUTHORIZATION_DECISION.md).
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

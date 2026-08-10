@@ -5111,3 +5111,26 @@ contract diagnosis, never a scientific or decoding result.
 Evidence: `docs/IACKD_CHANNEL_INVENTORY_AUTHORIZATION_PACKET.md`,
 `registries/iackd_channel_inventory_authorization_request.v0.json`, and
 `tests/test_iackd_header_inventory_authorization_request.py`.
+
+## 0147 - Bind The Fresh Maintainer Continue To IACKD-H1 Only
+
+Decision: accept the maintainer's fresh post-packet instruction as the short-
+form decision for the sole active IACKD-H1 Tier C packet. Preserve the complete
+actual message verbatim and do not fabricate the packet's long scope as a user
+utterance.
+
+Basis: request `56531c6` passed Base Python job `93546632359` and Optional
+Neuro Readers job `93546632280` in CI `31416489006`. Codex then identified the
+packet, commit, CI, sole 128-header/161,792-byte scope, and need for a new
+decision before the maintainer unambiguously said `continue`.
+
+Boundary: this record authorizes exactly one future sequential public VHDR
+audit under the frozen caps, no-retry/no-rerun rule, aggregate-only output, and
+zero local-bundle or sibling access. It is ineffective until its own commit is
+pushed and both CI jobs are green. No real header, local path, signal, event,
+trajectory, target, model, score, provider, hardware, release, or claim action
+occurs while recording it.
+
+Evidence: `docs/IACKD_CHANNEL_INVENTORY_AUTHORIZATION_DECISION.md`,
+`registries/iackd_channel_inventory_authorization_decision.v0.json`, and
+`tests/test_iackd_header_inventory_authorization_decision.py`.

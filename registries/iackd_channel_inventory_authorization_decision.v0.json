@@ -1,0 +1,160 @@
+{
+  "schema_name": "neurodecodekit.iackd_channel_inventory_authorization_decision",
+  "schema_version": "0.1.0",
+  "decision_id": "IACKD-H1-header-inventory-audit-authorization-decision-v0",
+  "recorded_at_local": "2026-08-10",
+  "status": "packet_bound_authorized_effective_only_after_decision_remote_green_zero_real_operations_at_recording",
+  "proof_posture": "actual_maintainer_words_quote_green_request_hash_bound_scope_no_retroactive_or_inferred_expansion",
+  "authorization_parent_commit": "56531c64b6733f93c9def80ad57125e0ee998fd8",
+  "contract_sha256": "d85ff8ca05c69ce707a52e44d503fc7ec6e5d2a05d1d191203f07820442647fd",
+  "effective_only_after_decision_commit_pushed_and_both_CI_jobs_green": true,
+  "green_request": {
+    "commit": "56531c64b6733f93c9def80ad57125e0ee998fd8",
+    "commit_subject": "Request IACKD public header audit authorization",
+    "branch": "codex/loop-54a-vhdr-preregistration",
+    "push_CI_run_id": 31416489006,
+    "push_CI_url": "https://github.com/CheickDiakite-yikes/neurodecodekit/actions/runs/31416489006",
+    "base_python_job_id": 93546632359,
+    "base_python_job_conclusion": "success",
+    "optional_neuro_job_id": 93546632280,
+    "optional_neuro_job_conclusion": "success",
+    "both_required_jobs_green": true,
+    "verification_calls": 1
+  },
+  "green_implementation": {
+    "commit": "16621cc484f4bec4a9474b9ac20d5b7d9314152f",
+    "push_CI_run_id": 31415213841,
+    "base_python_job_id": 93542494819,
+    "optional_neuro_job_id": 93542494839,
+    "implementation_registry_sha256": "2f9abb004d921088dc65ede3edcf4426d804d1016d8b0e1a0b3680f8e9965d64",
+    "both_required_jobs_green": true
+  },
+  "bound_artifacts": {
+    "contract": {
+      "path": "registries/iackd_channel_inventory_contract.v0.json",
+      "sha256": "d85ff8ca05c69ce707a52e44d503fc7ec6e5d2a05d1d191203f07820442647fd",
+      "git_blob_sha1": "e3937722ec8804414b42dd08027e2f5ffed4a282"
+    },
+    "implementation": {
+      "path": "registries/iackd_channel_inventory_implementation.v0.json",
+      "sha256": "2f9abb004d921088dc65ede3edcf4426d804d1016d8b0e1a0b3680f8e9965d64",
+      "git_blob_sha1": "131898342f2378758af5096fa35d5d73456540d8"
+    },
+    "request": {
+      "path": "registries/iackd_channel_inventory_authorization_request.v0.json",
+      "sha256": "b640b71ede8e37f05312117636fcc5aae328dee443bd878f84da0c40eed05548",
+      "git_blob_sha1": "ad6d24571d6dcbe7f3c4f4f3ec836d6272f432e1"
+    },
+    "packet": {
+      "path": "docs/IACKD_CHANNEL_INVENTORY_AUTHORIZATION_PACKET.md",
+      "sha256": "a1b756d8449507b0ec14e87f2a4266da6ae761a0e39129309ab15db7038dbba5",
+      "git_blob_sha1": "a0090b5884657b0a3fd9387ab02b5cd070e3a0be"
+    }
+  },
+  "maintainer_words": "not bad, that actually good research thank you, makes me feel a little better. keep going, move the needle, continue, you approved to go on",
+  "maintainer_words_sha256": "8f5f3b0245e665e2d37caf6782a1c4543fe014e978abda2a804b031405f9fc71",
+  "user_authorization": {
+    "communication_mode": "short_form_packet_reference",
+    "actual_message_preserved_verbatim": true,
+    "sole_active_Tier_C_packet": "IACKD-H1",
+    "packet_commit_CI_scope_and_gate_identified_before_message": true,
+    "maintainer_unambiguously_directed_continue": true,
+    "long_form_sentence_claimed_as_user_utterance": false,
+    "procedural_recital_waived": true,
+    "substantive_registered_scope_unchanged": true,
+    "scope_expansion_by_inference": false,
+    "one_registered_execution_only": true
+  },
+  "authorization": {
+    "one_registered_real_header_audit": true,
+    "real_VHDR_requests": 128,
+    "real_VHDR_body_bytes": 161792,
+    "body_SHA256_passes": 128,
+    "semantic_parse_passes": 128,
+    "private_consumed_markers": 1,
+    "public_aggregate_ledgers": 1,
+    "raw_bodies_persisted": 0,
+    "existing_local_IACKD_bundle_operations": 0,
+    "sibling_paths_constructed_resolved_statted_hashed_or_opened": 0,
+    "signal_event_trajectory_target_label_model_or_score_operations": 0,
+    "dependency_installs": 0,
+    "retries": 0,
+    "reruns": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "required_execution_order": [
+    "test_commit_push_and_obtain_green_CI_for_this_decision",
+    "verify_exact_decision_contract_inventory_implementation_request_and_green_evidence",
+    "verify_tracked_worktree_clean_and_registered_execution_ordinal_one",
+    "write_one_private_consumed_marker_before_the_first_request",
+    "issue_exactly_128_sequential_public_VHDR_requests",
+    "validate_each_status_URL_Content_Length_ETag_and_identity_encoding",
+    "hash_parse_and_discard_each_body_before_the_next_request",
+    "aggregate_signatures_apply_the_frozen_router_and_validate_the_claim_boundary",
+    "emit_one_bounded_public_ledger_and_stop"
+  ],
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "concurrent_numerical_jobs": 1,
+    "wall_time_seconds": 120,
+    "peak_RSS_bytes": 268435456,
+    "VHDR_requests": 128,
+    "expected_VHDR_body_bytes": 161792,
+    "network_body_bytes": 1048576,
+    "maximum_bytes_read_per_VHDR": 4096,
+    "incremental_disk_bytes": 2097152,
+    "public_generated_output_bytes": 1048576,
+    "minimum_free_disk_bytes": 2147483648,
+    "retries": 0,
+    "reruns": 0
+  },
+  "forbidden_operations": [
+    "operation_before_this_decision_commit_is_pushed_and_both_CI_jobs_are_green",
+    "existing_local_IACKD_bundle_stat_resolve_hash_open_move_or_delete",
+    "VMRK_EEG_channels_events_geometry_ball_Leap_or_other_sibling_access",
+    "signal_event_trajectory_target_label_model_inference_training_or_scoring",
+    "additional_object_metadata_refresh_redirect_retry_resume_restart_or_rerun",
+    "raw_VHDR_comment_unallowlisted_channel_name_path_or_participant_output",
+    "S20_S21_S24_S25_SpanishBCBL_PhysioNet_raw_FIF_or_MAT_access",
+    "dependency_foundation_language_model_provider_RW3_stream_device_or_hardware_operation",
+    "individual_protected_output_upload_publication_release_or_claim_upgrade"
+  ],
+  "decision_only_access_counters": {
+    "GitHub_CI_verification_calls": 1,
+    "new_metadata_requests": 0,
+    "real_VHDR_requests": 0,
+    "real_VHDR_body_bytes": 0,
+    "real_header_parses": 0,
+    "local_IACKD_path_stats_or_opens": 0,
+    "sibling_resolutions_stats_hashes_or_opens": 0,
+    "signal_sample_reads": 0,
+    "marker_or_event_reads": 0,
+    "trajectory_reads": 0,
+    "target_or_label_reads": 0,
+    "model_or_checkpoint_loads": 0,
+    "training_or_parameter_update_runs": 0,
+    "model_inference_runs": 0,
+    "scoring_runs": 0,
+    "dependency_installs_or_network_bytes": 0,
+    "provider_or_language_model_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "retries_or_reruns": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0,
+    "end_to_end_latency_measured": false
+  },
+  "next_gate": {
+    "decision_commit_required": true,
+    "decision_push_required": true,
+    "both_remote_CI_jobs_green_required": true,
+    "real_header_execution_may_begin_before_green": false,
+    "registered_execution_ordinal": 1,
+    "rerun_available": false
+  },
+  "claim_boundary": {
+    "engineering_capability_authorized_for_testing": "One exact resource-bounded sibling-blind public-header audit may replace a failed hard-coded channel assumption with a measured aggregate compatibility diagnosis.",
+    "maximum_after_clean_execution": "A measured aggregate compatibility diagnosis for the 128 registered IACKD BrainVision VHDR declarations.",
+    "scientific_claim_not_established": "This decision is not data or a result and establishes no neural effect action decoding brain-specific origin generalization real-time operation hardware capability assistive benefit or clinical use."
+  }
+}

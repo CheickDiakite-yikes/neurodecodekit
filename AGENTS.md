@@ -126,12 +126,16 @@ value. Exact implementation `16621cc` passed Base Python job `93542494819` and
 Optional Neuro Readers job `93542494839` in CI `31415213841` before the
 all-false Tier C request was prepared. Read
 `docs/IACKD_CHANNEL_INVENTORY_AUTHORIZATION_PACKET.md` and
-`registries/iackd_channel_inventory_authorization_request.v0.json`. That
-packet authorizes nothing. Commit, push, and obtain both green jobs for the
-request; then identify its exact commit, CI, and sole 128-header/161,792-byte
-scope before accepting a fresh packet-bound maintainer `continue`, `approve`,
-or `proceed` into a separate decision record. Never use or inspect the existing
-local IACKD bundle for this lane.
+`registries/iackd_channel_inventory_authorization_request.v0.json`. Request
+`56531c6` passed Base Python job `93546632359` and Optional Neuro Readers job
+`93546632280` in CI `31416489006`. After that packet, proof, scope, and gate
+were identified, the maintainer supplied a fresh packet-bound `continue` in
+the message recorded verbatim by
+`docs/IACKD_CHANNEL_INVENTORY_AUTHORIZATION_DECISION.md` and
+`registries/iackd_channel_inventory_authorization_decision.v0.json`. The
+decision is ineffective until its own commit is pushed and both CI jobs are
+green. Only then may the one 128-header/161,792-byte public audit execute.
+Never use or inspect the existing local IACKD bundle for this lane.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

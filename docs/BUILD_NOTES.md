@@ -6550,3 +6550,31 @@ Scientific claim not established: an all-false request is not data or a result
 and establishes no EEG effect, action decoding, brain-specific origin,
 generalization, real-time operation, hardware capability, assistive benefit, or
 clinical use.
+
+## 2026-08-10 - IACKD-H1 Packet-Bound Decision Recorded
+
+- Request `56531c64b6733f93c9def80ad57125e0ee998fd8` passed Base Python
+  job `93546632359` and Optional Neuro Readers job `93546632280` in CI
+  `31416489006`.
+- After Codex identified IACKD-H1 as the sole active packet and named the exact
+  commit, CI, scope, and decision gate, the maintainer supplied a fresh message
+  containing `continue`. The separate decision quotes that complete message
+  verbatim and never presents the packet recital as user-authored text.
+- The record binds the contract, implementation, request, packet, their
+  SHA-256 and Git-blob identities, green implementation evidence, and the exact
+  executor schema. Ten focused invariants pass.
+- Exactly one later 128-request, 161,792-byte public VHDR audit is conditionally
+  authorized. The decision itself must be committed, pushed, and pass both CI
+  jobs first.
+- Decision-only counters record one CI verification and zero real-header,
+  local-bundle, sibling, signal, event, trajectory, target, model, scoring,
+  dependency, provider, hardware, retry, rerun, release, or claim operations.
+
+Engineering capability authorized for testing: one exact, resource-bounded,
+sibling-blind public-header audit may produce a measured aggregate file-
+compatibility diagnosis.
+
+Scientific claim not established: this decision is not data or a result and
+establishes no EEG effect, action decoding, brain-specific origin,
+generalization, real-time operation, hardware capability, assistive benefit, or
+clinical use.

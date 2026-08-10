@@ -2045,3 +2045,23 @@ Only a fresh unambiguous `continue`, `approve`, or `proceed` after that
 identification may be quoted in a separate hash-bound decision. Do not use the
 earlier continuation retroactively, fabricate a long user sentence, create the
 decision early, or issue a real header request.
+
+## 2026-08-10 IACKD-H1 Packet-Bound Decision Recorded
+
+Request `56531c64b6733f93c9def80ad57125e0ee998fd8` passed Base Python
+job `93546632359` and Optional Neuro Readers job `93546632280` in CI
+`31416489006`. After Codex identified that sole packet, exact proof, scope, and
+gate, the maintainer supplied a fresh instruction containing `continue`.
+
+Read `docs/IACKD_CHANNEL_INVENTORY_AUTHORIZATION_DECISION.md`,
+`registries/iackd_channel_inventory_authorization_decision.v0.json`, and
+`tests/test_iackd_header_inventory_authorization_decision.py`. The decision
+quotes the complete actual message, binds the immutable contract,
+implementation, request, packet, and green evidence, and authorizes exactly
+one later 128-header/161,792-byte public audit with zero retry or rerun.
+
+No real operation occurred while recording the decision. Next gate: test,
+commit, push, and require both remote CI jobs green for the exact decision.
+Only then run the module CLI once with the exact decision SHA and green commit/
+job evidence. Never touch the retained local bundle, resolve a sibling, amend
+the parser, or infer a scientific result from a header diagnosis.
