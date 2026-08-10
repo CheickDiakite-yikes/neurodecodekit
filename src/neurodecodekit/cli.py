@@ -2982,6 +2982,157 @@ def _cmd_score_physionet_motor_positive_control(args: argparse.Namespace) -> int
     return 0
 
 
+def _cmd_physionet_low_frequency_acquire(args: argparse.Namespace) -> int:
+    _set_loop25_thread_environment()
+    import os
+
+    from neurodecodekit.datasets.physionet_low_frequency_acquisition import (
+        ImplementationEvidence,
+        execute_registered_acquisition,
+        registered_plan,
+    )
+
+    repo_root = Path.cwd()
+    if not args.execute:
+        print(json.dumps(registered_plan(repo_root), indent=2, sort_keys=True))
+        print("Safety default: no registered path stat or network access occurred.")
+        return 0
+    missing = [
+        name
+        for name, value in (
+            ("--implementation-commit", args.implementation_commit),
+            ("--implementation-ci-run-id", args.implementation_ci_run_id),
+            ("--base-python-job-id", args.base_python_job_id),
+            ("--optional-neuro-job-id", args.optional_neuro_job_id),
+        )
+        if value is None
+    ]
+    if missing:
+        raise ValueError(f"--execute requires: {', '.join(missing)}")
+    outcome = execute_registered_acquisition(
+        repo_root,
+        evidence=ImplementationEvidence(
+            implementation_commit=args.implementation_commit,
+            implementation_ci_run_id=args.implementation_ci_run_id,
+            base_python_job_id=args.base_python_job_id,
+            optional_neuro_job_id=args.optional_neuro_job_id,
+        ),
+        environ=os.environ,
+    )
+    print(json.dumps(outcome.manifest, indent=2, sort_keys=True))
+    print(f"Private machine manifest: {outcome.manifest_path}")
+    print(f"Private human receipt: {outcome.receipt_path}")
+    return 0 if outcome.passed else 1
+
+
+def _cmd_physionet_low_frequency_cohort(args: argparse.Namespace) -> int:
+    _set_loop25_thread_environment()
+    import os
+
+    from neurodecodekit.experiments.physionet_low_frequency_cohort_confirmation import (
+        ImplementationEvidence,
+        registered_plan,
+        run_registered_prediction_execution,
+        run_synthetic_qualification,
+    )
+
+    repo_root = Path.cwd()
+    if args.fixture:
+        summary = run_synthetic_qualification(
+            args.fixture_out,
+            maximum_output_bytes=int(args.max_output_mib * 1024 * 1024),
+        )
+        print(json.dumps(summary, indent=2, sort_keys=True))
+        return 0
+    if not args.execute:
+        print(json.dumps(registered_plan(repo_root), indent=2, sort_keys=True))
+        print("Safety default: no local PhysioNet path, EDF, target, or model was opened.")
+        return 0
+    missing = [
+        name
+        for name, value in (
+            ("--implementation-commit", args.implementation_commit),
+            ("--implementation-ci-run-id", args.implementation_ci_run_id),
+            ("--base-python-job-id", args.base_python_job_id),
+            ("--optional-neuro-job-id", args.optional_neuro_job_id),
+        )
+        if value is None
+    ]
+    if missing:
+        raise ValueError(f"--execute requires: {', '.join(missing)}")
+    report = run_registered_prediction_execution(
+        repo_root=repo_root,
+        evidence=ImplementationEvidence(
+            implementation_commit=args.implementation_commit,
+            implementation_ci_run_id=args.implementation_ci_run_id,
+            base_python_job_id=args.base_python_job_id,
+            optional_neuro_job_id=args.optional_neuro_job_id,
+        ),
+        environ=os.environ,
+    )
+    public_summary = {
+        key: report[key]
+        for key in (
+            "status",
+            "condition_count",
+            "participant_condition_prediction_sets",
+            "operation_counters",
+            "resources",
+            "runtime_seconds",
+            "peak_rss_bytes",
+            "generated_private_bytes",
+            "input_payload_bytes",
+            "end_to_end_latency_measured",
+        )
+    }
+    print(json.dumps(public_summary, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_score_physionet_low_frequency_cohort(args: argparse.Namespace) -> int:
+    _set_loop25_thread_environment()
+    import os
+
+    from neurodecodekit.experiments.physionet_low_frequency_cohort_confirmation import (
+        FreezeEvidence,
+        registered_plan,
+        score_registered_execution,
+    )
+
+    repo_root = Path.cwd()
+    if not args.execute:
+        plan = registered_plan(repo_root)
+        plan["mode"] = "dry_run_no_combined_final_target_open_or_score"
+        plan["next_gate"] = "combined_prediction_freeze_commit_must_be_remotely_green"
+        print(json.dumps(plan, indent=2, sort_keys=True))
+        print("Safety default: the 360 sealed final targets were not opened.")
+        return 0
+    missing = [
+        name
+        for name, value in (
+            ("--freeze-commit", args.freeze_commit),
+            ("--freeze-ci-run-id", args.freeze_ci_run_id),
+            ("--base-python-job-id", args.base_python_job_id),
+            ("--optional-neuro-job-id", args.optional_neuro_job_id),
+        )
+        if value is None
+    ]
+    if missing:
+        raise ValueError(f"--execute requires: {', '.join(missing)}")
+    result = score_registered_execution(
+        repo_root=repo_root,
+        evidence=FreezeEvidence(
+            freeze_commit=args.freeze_commit,
+            freeze_ci_run_id=args.freeze_ci_run_id,
+            base_python_job_id=args.base_python_job_id,
+            optional_neuro_job_id=args.optional_neuro_job_id,
+        ),
+        environ=os.environ,
+    )
+    print(json.dumps(result, indent=2, sort_keys=True))
+    return 0
+
+
 def _print_selection_plan(selection: Any, *, heading: str) -> None:
     from neurodecodekit.datasets.selection import format_bytes
 
@@ -5211,6 +5362,137 @@ def build_parser() -> argparse.ArgumentParser:
         help="Successful Optional Neuro Readers job ID from the freeze CI run.",
     )
     p.set_defaults(func=_cmd_score_physionet_motor_positive_control)
+
+    p = sub.add_parser(
+        "physionet-low-frequency-acquire",
+        help="Dry-run or execute the registered 72-EDF WO9R acquisition.",
+        description=(
+            "Defaults to a no-stat, no-network plan. --execute consumes the one "
+            "registered no-retry acquisition only after the exact implementation "
+            "commit and both required CI jobs are remotely green."
+        ),
+    )
+    mode = p.add_mutually_exclusive_group()
+    mode.add_argument(
+        "--execute",
+        action="store_true",
+        help="Consume the one metadata-bound 72-EDF acquisition invocation.",
+    )
+    mode.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Print the frozen plan without path stats or network access. This is the default.",
+    )
+    p.add_argument(
+        "--implementation-commit",
+        help="Full remotely-green implementation commit; must equal current HEAD.",
+    )
+    p.add_argument(
+        "--implementation-ci-run-id",
+        type=int,
+        help="Successful CI run ID for the exact implementation commit.",
+    )
+    p.add_argument(
+        "--base-python-job-id",
+        type=int,
+        help="Successful Base Python job ID from the implementation CI run.",
+    )
+    p.add_argument(
+        "--optional-neuro-job-id",
+        type=int,
+        help="Successful Optional Neuro Readers job ID from the implementation CI run.",
+    )
+    p.set_defaults(func=_cmd_physionet_low_frequency_acquire)
+
+    p = sub.add_parser(
+        "physionet-low-frequency-cohort",
+        help="Plan, fixture-qualify, or execute the frozen WO9R cohort analysis.",
+        description=(
+            "Defaults to a no-stat plan. --fixture uses generated EEG only. "
+            "--execute consumes the one registered target-firewalled analysis and "
+            "emits an aggregate hash-only combined prediction freeze."
+        ),
+    )
+    mode = p.add_mutually_exclusive_group()
+    mode.add_argument(
+        "--execute",
+        action="store_true",
+        help="Consume the one real target-blind analysis through combined prediction freeze.",
+    )
+    mode.add_argument(
+        "--fixture",
+        action="store_true",
+        help="Run all interfaces only on deterministic generated EEG arrays.",
+    )
+    p.add_argument(
+        "--fixture-out",
+        type=Path,
+        default=Path(
+            ".codex_work/physionet_low_frequency_cohort_confirmation/fixture_qualification"
+        ),
+        help="Exclusive Git-ignored output root used only with --fixture.",
+    )
+    p.add_argument(
+        "--max-output-mib",
+        type=float,
+        default=64.0,
+        help="Fixture-only output cap, at most 64 MiB (default: 64).",
+    )
+    p.add_argument(
+        "--implementation-commit",
+        help="Full exact implementation commit, remotely green and current at HEAD.",
+    )
+    p.add_argument(
+        "--implementation-ci-run-id",
+        type=int,
+        help="Successful push CI run ID for the exact implementation commit.",
+    )
+    p.add_argument(
+        "--base-python-job-id",
+        type=int,
+        help="Successful Base Python job ID from the implementation CI run.",
+    )
+    p.add_argument(
+        "--optional-neuro-job-id",
+        type=int,
+        help="Successful Optional Neuro Readers job ID from the implementation CI run.",
+    )
+    p.set_defaults(func=_cmd_physionet_low_frequency_cohort)
+
+    p = sub.add_parser(
+        "score-physionet-low-frequency-cohort",
+        help="Dry-run or consume the one combined WO9R final score.",
+        description=(
+            "Defaults to a no-target plan. --execute requires the exact remotely "
+            "green combined prediction-freeze commit, opens the same 360 sealed "
+            "targets once, applies the frozen WO9R-R0 through R4 router, and stops."
+        ),
+    )
+    p.add_argument(
+        "--execute",
+        action="store_true",
+        help="Consume the single combined sealed-target delivery and scoring event.",
+    )
+    p.add_argument(
+        "--freeze-commit",
+        help="Full remotely-green prediction-freeze commit; must equal current HEAD.",
+    )
+    p.add_argument(
+        "--freeze-ci-run-id",
+        type=int,
+        help="Successful push CI run ID for the exact prediction-freeze commit.",
+    )
+    p.add_argument(
+        "--base-python-job-id",
+        type=int,
+        help="Successful Base Python job ID from the prediction-freeze CI run.",
+    )
+    p.add_argument(
+        "--optional-neuro-job-id",
+        type=int,
+        help="Successful Optional Neuro Readers job ID from the freeze CI run.",
+    )
+    p.set_defaults(func=_cmd_score_physionet_low_frequency_cohort)
 
     p = sub.add_parser(
         "loop54-vhdr-ledger",

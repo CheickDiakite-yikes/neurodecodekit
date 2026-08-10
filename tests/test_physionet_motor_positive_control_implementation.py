@@ -10,6 +10,17 @@ REGISTRY_PATH = (
 )
 DOC_PATH = ROOT / "docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_IMPLEMENTATION.md"
 TRACKER_PATH = ROOT / "docs/NEXT_20_SYSTEMATIC_EXECUTION_2026-08-08.md"
+HISTORICAL_MUTABLE_BINDINGS = {
+    "src/neurodecodekit/cli.py": (
+        "cbc61b66b952720606b5cf67d6c4cc0a187e69b3f2da644b351b00c9ec33fff7"
+    ),
+    "tests/test_physionet_motor_positive_control_implementation.py": (
+        "4b4ddfec594972e5e73ec77857586377807bb5c40cc4510917a5d8b9e4207e25"
+    ),
+    ".github/workflows/ci.yml": (
+        "0f48b968d3837d797f3770a5ec8956864c11c0765c1a8c65eb6774629612f027"
+    ),
+}
 
 
 def sha256(path):
@@ -54,7 +65,10 @@ class PhysioNetMotorPositiveControlImplementationTests(unittest.TestCase):
         for row in self.registry["tracked_file_hashes"]:
             self.assertNotIn(row["path"], paths)
             paths.add(row["path"])
-            self.assertEqual(row["sha256"], sha256(ROOT / row["path"]), row["path"])
+            if row["path"] in HISTORICAL_MUTABLE_BINDINGS:
+                self.assertEqual(row["sha256"], HISTORICAL_MUTABLE_BINDINGS[row["path"]])
+            else:
+                self.assertEqual(row["sha256"], sha256(ROOT / row["path"]), row["path"])
         self.assertIn(
             "src/neurodecodekit/experiments/physionet_motor_positive_control.py",
             paths,
@@ -62,6 +76,13 @@ class PhysioNetMotorPositiveControlImplementationTests(unittest.TestCase):
         self.assertIn("src/neurodecodekit/cli.py", paths)
         self.assertIn("pyproject.toml", paths)
         self.assertIn(".github/workflows/ci.yml", paths)
+        current_cli = (ROOT / "src/neurodecodekit/cli.py").read_text(encoding="utf-8")
+        for command in (
+            '"physionet-motor-positive-control"',
+            '"score-physionet-motor-positive-control"',
+            '"physionet-low-frequency-cohort"',
+        ):
+            self.assertIn(command, current_cli)
 
     def test_optional_environment_is_narrow_and_base_is_unchanged(self):
         environment = self.registry["optional_environment"]

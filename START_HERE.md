@@ -309,9 +309,17 @@
    and its machine decision. It records the maintainer's actual short-form
    instruction to stop repeating authorization boilerplate and continue the
    sole active WO9R packet; it does not pretend the long packet sentence was
-   typed. Acquisition, implementation, payload access, fitting, inference,
-   target delivery, and scoring remain closed until that separate decision is
-   committed, pushed, and remotely green.
+   typed. Decision `1efeac7` is now remotely green in CI `31355944651`.
+   Then read
+   `docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_IMPLEMENTATION.md` and its
+   machine registry. The standard-library acquisition, compact causal
+   derivative, 144-fit/216-prediction-set target-blind path, combined hash
+   freeze, and isolated scorer are generated-fixture qualified. The measured
+   72-run fixture used 12.083017 seconds, 260,784,128-byte peak RSS, and
+   4,215,687 bytes with zero real or network access; its files were removed.
+   Real acquisition remains closed until this exact implementation commit is
+   pushed and both CI jobs are green. Final targets remain closed until a later
+   combined prediction-freeze commit is remotely green.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

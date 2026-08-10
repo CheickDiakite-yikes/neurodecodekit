@@ -70,3 +70,6 @@ jobs:
           neurodecode inspect-signal-quality-report --help
           neurodecode physionet-motor-positive-control --help
           neurodecode score-physionet-motor-positive-control --help
+          neurodecode physionet-low-frequency-acquire --help
+          neurodecode physionet-low-frequency-cohort --help
+          neurodecode score-physionet-low-frequency-cohort --help

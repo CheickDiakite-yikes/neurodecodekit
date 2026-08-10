@@ -1,0 +1,229 @@
+{
+  "schema_name": "neurodecodekit.physionet_low_frequency_cohort_confirmation_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "work-order-9R-low-frequency-cohort-confirmation-implementation-v0",
+  "recorded_at_local": "2026-08-10",
+  "status": "fixture_qualified_exact_implementation_requires_remote_green_before_real_access",
+  "proof_posture": "generated_fixture_and_mocked_transport_only_no_real_physionet_operation",
+  "contract_binding": {
+    "path": "registries/physionet_low_frequency_cohort_confirmation_contract.v0.json",
+    "sha256": "ce0dcf5e5ddd598fb69b5baa73f827bbc3f51c4aeab8578d2d2eebda87cd0935"
+  },
+  "authorization_decision_sha256": "8d87b57a825840c4b749dc628fa95871ba1832f5ffd0b4e8138a3de533756c9c",
+  "green_authorization_decision": {
+    "commit": "1efeac7f0b7b316bb94effb1a2eeeb1bbf99f50a",
+    "push_ci_run_id": 31355944651,
+    "base_python_job_id": 93355535398,
+    "optional_neuro_job_id": 93355535361,
+    "both_required_jobs_green": true
+  },
+  "tracked_file_hashes": [
+    {
+      "path": "src/neurodecodekit/datasets/physionet_low_frequency_acquisition.py",
+      "sha256": "190b4b9ac8fb6bf996c1926801d9a3634f52d114dfb77f73a4b12dcd9be25ce4"
+    },
+    {
+      "path": "src/neurodecodekit/experiments/physionet_low_frequency_cohort_confirmation.py",
+      "sha256": "76084e9a6b24e1310968420f7439d9c562bf083372e3aa21a7d26915290487a7"
+    },
+    {
+      "path": "src/neurodecodekit/cli.py",
+      "sha256": "f56d021b1ad5021a6906a5a3a5411170c0ef4a874c63772106c4aaa89cc5aa83"
+    },
+    {
+      "path": "tests/test_physionet_low_frequency_acquisition.py",
+      "sha256": "c4b2cb23b08fe8bcf7bc8dd3f218bbdd6a6b0523334855f7614850afdb1be2e2"
+    },
+    {
+      "path": "tests/test_physionet_low_frequency_cohort_confirmation.py",
+      "sha256": "dc52e7332af6f90ca7ffb5d9569e4fce549075a0e56d05d31551ae7cb0dbe473"
+    },
+    {
+      "path": "tests/test_physionet_low_frequency_cohort_confirmation_implementation.py",
+      "sha256": "08487e6787c1cb0131c963cca0cc63dd56acea01536caccf02b8feb6499b28df"
+    },
+    {
+      "path": "docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_IMPLEMENTATION.md",
+      "sha256": "b18c22de5f91cfdd082b8d770d479f641893eeb9dc23f94535fec4ef133255f9"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "fa8873023ab2f91c11615f283c3064ebaa62a90df143ab65c7ed61a507ff4a46"
+    }
+  ],
+  "registered_interface": {
+    "participants": 12,
+    "files": 72,
+    "input_payload_bytes": 184252032,
+    "fit_rows": 720,
+    "sealed_final_rows": 360,
+    "parameter_update_fits": 144,
+    "condition_families": 18,
+    "target_blind_inference_runs": 216,
+    "participant_condition_prediction_sets": 216,
+    "individual_private_predictions": 3240,
+    "final_target_deliveries": 1,
+    "scoring_events": 1,
+    "retries": 0,
+    "reruns": 0,
+    "post_target_updates": 0
+  },
+  "command_surfaces": {
+    "acquisition": "neurodecode physionet-low-frequency-acquire",
+    "analysis": "neurodecode physionet-low-frequency-cohort",
+    "scoring": "neurodecode score-physionet-low-frequency-cohort",
+    "dry_run_default": true,
+    "generated_fixture_flag": "--fixture",
+    "real_execution_flag": "--execute"
+  },
+  "acquisition_implementation": {
+    "standard_library_only": true,
+    "mne_or_edf_reader_imports": 0,
+    "registered_metadata_documents": 15,
+    "payload_requests": 72,
+    "sequential_transfer": true,
+    "redirects": 0,
+    "retries": 0,
+    "opaque_local_hash_passes_per_edf": 1,
+    "atomic_complete_bundle_promotion": true,
+    "invocation_temporary_cleanup_only": true,
+    "symlink_parent_refusal": true
+  },
+  "target_firewall": {
+    "fit_target_rows": 720,
+    "target_free_prediction_rows": 360,
+    "sealed_target_rows": 360,
+    "final_target_rows_available_to_model_stage": 0,
+    "prediction_derivative_contains_targets": false,
+    "combined_run11_and_run12_freeze": true,
+    "individual_outputs_in_public_freeze": false,
+    "one_combined_target_delivery_after_green_freeze": true
+  },
+  "access_order": {
+    "decision_green_before_implementation": true,
+    "implementation_green_required_before_acquisition": true,
+    "analysis_consumed_before_bundle_access": true,
+    "score_consumed_before_target_access": true,
+    "combined_prediction_freeze_green_required_before_target_delivery": true,
+    "integrity_failure_after_consumption_parks_without_retry": true
+  },
+  "fixture_qualification": {
+    "all_gates_passed": true,
+    "source": "deterministic_generated_EEG_only",
+    "seed": 5909,
+    "synthetic_runs": 72,
+    "synthetic_events": 1080,
+    "fit_rows": 720,
+    "final_rows": 360,
+    "parameter_update_fits": 144,
+    "target_blind_model_inference_runs": 216,
+    "participant_condition_prediction_sets": 216,
+    "individual_private_predictions": 3240,
+    "private_json_roundtrip_exact": true,
+    "prediction_hashes_complete": true,
+    "synthetic_router_verdict": "WO9R-R3",
+    "synthetic_router_has_scientific_meaning": false,
+    "runtime_seconds": 12.083017,
+    "peak_rss_bytes": 260784128,
+    "generated_bytes": 4215687,
+    "network_bytes": 0,
+    "real_data_reads": 0,
+    "real_target_reads": 0,
+    "scientific_claim_upgrade": false,
+    "retained_generated_files": 0
+  },
+  "qualified_dependencies": {
+    "numpy": "2.5.2",
+    "scipy": "1.18.0",
+    "mne": "1.12.1",
+    "scikit_learn": "1.9.0",
+    "pyriemann": "0.12",
+    "base_dependency_changes": 0,
+    "dependency_installs": 0,
+    "network_resolution_operations": 0
+  },
+  "resource_caps": {
+    "acquisition_wall_seconds": 900,
+    "acquisition_peak_rss_bytes": 268435456,
+    "acquisition_incremental_disk_bytes": 402653184,
+    "analysis_wall_seconds_through_freeze": 1800,
+    "analysis_peak_rss_bytes": 1073741824,
+    "analysis_private_generated_bytes": 67108864,
+    "public_freeze_and_result_bytes": 2097152,
+    "minimum_free_disk_bytes_before_acquisition": 21474836480,
+    "cpu_threads": 1,
+    "workers": 1,
+    "concurrent_numerical_jobs": 1
+  },
+  "verification": {
+    "focused_test_count": 29,
+    "complete_generated_fixture_roundtrip": true,
+    "deterministic_participant_replay": true,
+    "malformed_metadata_payload_cache_freeze_and_private_prediction_tests": true,
+    "dry_run_cli_tests": true,
+    "ruff_version": "0.15.20",
+    "dependency_free_tests": 1528,
+    "dependency_free_expected_skips": 177,
+    "dependency_free_runtime_seconds": 3.099,
+    "exact_classical_tests": 1584,
+    "exact_classical_expected_skips": 34,
+    "exact_classical_runtime_seconds": 21.313,
+    "broad_optional_tests": 1599,
+    "broad_optional_expected_skips": 8,
+    "broad_optional_runtime_seconds": 53.355,
+    "broad_forkserver_test_run_outside_sandbox": true,
+    "baseline_dependency_free_tests": 1499,
+    "baseline_exact_classical_tests": 1555,
+    "baseline_broad_optional_tests": 1570,
+    "net_new_tests": 29,
+    "compileall_passed": true,
+    "all_registry_json_parsed": true,
+    "git_diff_check_passed": true,
+    "three_cli_help_and_dry_run_surfaces_passed": true,
+    "complete_suite_pending_final_precommit_replay": false
+  },
+  "implementation_access_counters": {
+    "real_metadata_reverifications": 0,
+    "edf_url_requests": 0,
+    "edf_payload_bytes": 0,
+    "local_physionet_path_stats": 0,
+    "local_physionet_path_opens": 0,
+    "real_edf_hash_passes": 0,
+    "real_edf_semantic_parses": 0,
+    "real_header_reads": 0,
+    "real_annotation_reads": 0,
+    "real_signal_reads": 0,
+    "real_target_reads": 0,
+    "real_derivative_operations": 0,
+    "real_parameter_update_fits": 0,
+    "real_model_inference_runs": 0,
+    "real_prediction_freezes": 0,
+    "final_target_deliveries": 0,
+    "scoring_events": 0,
+    "retries": 0,
+    "reruns": 0,
+    "provider_calls": 0,
+    "RW3_stream_device_or_hardware_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "execution_state": {
+    "acquisition_consumed": false,
+    "real_analysis_consumed": false,
+    "prediction_freeze_created": false,
+    "final_targets_delivered": false,
+    "scoring_consumed": false,
+    "next_gate": "commit_push_and_require_both_CI_jobs_green_for_this_exact_implementation"
+  },
+  "warnings": [
+    "synthetic_fixture_is_interface_qualification_not_scientific_evidence",
+    "visual_cue_is_class_correlated",
+    "separate_EOG_EMG_and_movement_onset_are_unavailable",
+    "participant_specific_models_do_not_establish_unseen_person_generalization",
+    "even_WO9R_R4_does_not_establish_brain_specific_origin",
+    "end_to_end_latency_is_not_measured"
+  ],
+  "claim_boundary": {
+    "engineering_capability_added": "A fixture-qualified resource-bounded target-firewalled twelve-person low-frequency EEG cohort confirmation pipeline with aggregate-only one-shot scoring.",
+    "scientific_claim_not_established": "No real S004-S015 EDF or target was opened; cohort confirmation neural effect brain-specific origin generalization decoding latency hardware and human benefit remain unestablished."
+  }
+}

@@ -847,8 +847,13 @@ sizes, and official hashes are now frozen at green registration `716e543`:
 firewall, 144 fit ceilings, 18 conditions, 216 target-blind participant-
 condition prediction sets, and `WO9R-R0` through `WO9R-R4` router. Its metadata
 pass made zero EDF URL requests. The all-false request passed CI at `580708f`.
-The maintainer's actual short-form approval is now recorded in a separate,
-packet-bound decision without fabricating the long recital. Implementation,
-acquisition, local payload access, model execution, prediction freeze, target
-delivery, scoring, and claims remain gated until that decision commit is
-remotely green.
+The maintainer's actual short-form approval is recorded in a separate,
+packet-bound decision without fabricating the long recital. Decision `1efeac7`
+passed both jobs in CI `31355944651` before implementation. The exact WO9R
+acquisition, target firewall, 144-fit, 216-prediction-set, combined-freeze, and
+isolated-scorer implementation is generated-fixture qualified: 72 generated
+runs completed in 12.083017 seconds at 260,784,128-byte peak RSS with
+4,215,687 output bytes, zero network, and zero real reads. Generated files were
+removed. Acquisition and real analysis remain gated until the exact
+implementation commit is pushed and remotely green; final targets remain gated
+until the later combined freeze is remotely green.

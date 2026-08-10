@@ -111,8 +111,17 @@ they authorize nothing before their own remotely green commit and an exact
 maintainer decision.
 
 WO9R status: **Research, preregistration, and green all-false request complete;
-short-form packet-bound decision prepared; implementation, acquisition, and
-execution gated until that decision is remotely green.**
+packet-bound decision remotely green; exact implementation generated-fixture
+qualified and awaiting its own remote-green commit before the one acquisition
+or real analysis.**
+Decision `1efeac7` passed CI `31355944651`. The implementation completed one
+72-run generated roundtrip with 144 fits and 216 target-blind prediction sets
+in 12.083017 seconds at 260,784,128-byte peak RSS and 4,215,687 output bytes.
+No real EDF or target was opened, network bytes were zero, and generated files
+were removed. Read
+`docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_IMPLEMENTATION.md`.
+Audit label: **short-form packet-bound decision prepared**. It was then
+committed, pushed, and remotely green before implementation.
 It is deliberately outside the numbered 1-20 table so that the frozen
 execution overlay remains exactly 20 rows.
 
