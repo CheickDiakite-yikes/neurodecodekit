@@ -1,0 +1,2084 @@
+{
+  "schema_name": "neurodecodekit.physionet_low_frequency_cohort_confirmation_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "work-order-9R-physionet-low-frequency-cohort-confirmation-v0",
+  "registered_at_local": "2026-08-09",
+  "title": "PhysioNet low-frequency execution and imagery cohort confirmation",
+  "status": "frozen_preregistration_exact_tier_c_authorization_pending",
+  "proof_posture": "metadata_bound_prospective_confirmation_contract_only",
+  "lane": {
+    "id": "WO9R",
+    "additive_to_numbered_work_orders": true,
+    "reopens_work_order_9": false,
+    "unblocks_loop_54B": false
+  },
+  "scope": {
+    "preregistration_frozen": true,
+    "exact_metadata_inventory_frozen": true,
+    "acquisition_implementation_authorized_now": false,
+    "edf_payload_request_or_download_authorized_now": false,
+    "local_physionet_path_stat_open_hash_or_parse_authorized_now": false,
+    "header_annotation_event_signal_target_channel_or_geometry_read_authorized_now": false,
+    "dependency_install_authorized_now": false,
+    "derivative_or_target_firewall_creation_authorized_now": false,
+    "model_fit_or_parameter_update_authorized_now": false,
+    "model_inference_or_prediction_freeze_authorized_now": false,
+    "final_target_delivery_or_scoring_authorized_now": false,
+    "scientific_claim_upgrade_authorized_now": false,
+    "separate_exact_tier_c_decision_required": true
+  },
+  "source_bindings": {
+    "primary_source_research": {
+      "path": "docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PRIMARY_SOURCE_RESEARCH.md",
+      "sha256": "e9408f0ff2dc25ec492487ff1e7b9d0e25419196831c8c3a06ed820a2f0c769b"
+    },
+    "primary_source_research_registry": {
+      "path": "registries/physionet_low_frequency_cohort_confirmation_research.v0.json",
+      "sha256": "62ac2cb1433455ff200d26cbe3ac2bd3d9473787a601e41f63a38980ffcd3de6"
+    },
+    "consumed_work_order_9_result_document": {
+      "path": "docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_RESULT.md",
+      "sha256": "f7626fb0a3af23c223ca3c5e2fb3236e95bc28755b0f38030410d19467e0fc2f"
+    },
+    "consumed_work_order_9_result_registry": {
+      "path": "registries/physionet_motor_positive_control_result.v0.json",
+      "sha256": "017c62162774b5cd32a635f58bb4c503f903a8e901cb2b696efa0890a1040579"
+    },
+    "consumed_work_order_9_contract": {
+      "path": "registries/physionet_motor_positive_control_contract.v0.json",
+      "sha256": "4f00f8e2cb257e912a947b49268c1476554f3e671eb9322926592df4908b144e"
+    },
+    "preregistration_document": {
+      "path": "docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PREREGISTRATION.md",
+      "sha256": "dab1da6d3d9a45360aa502acd1b766b9db502548e639a3772da674a282e48002"
+    }
+  },
+  "metadata_registration": {
+    "method": "public_metadata_only_no_edf_url_request",
+    "checked_at_local": "2026-08-09",
+    "official_dataset_url": "https://physionet.org/content/eegmmidb/1.0.0/",
+    "official_file_root_url": "https://physionet.org/files/eegmmidb/1.0.0/",
+    "official_checksum_manifest_url": "https://physionet.org/files/eegmmidb/1.0.0/SHA256SUMS.txt",
+    "official_s3_bucket": "physionet-open",
+    "official_s3_prefix": "eegmmidb/1.0.0/",
+    "task_mapping_url": "https://mne.tools/stable/generated/mne.datasets.eegbci.load_data.html",
+    "retained_metadata_get_requests": 13,
+    "retained_metadata_body_bytes": 340703,
+    "retained_documents": [
+      {
+        "source_id": "official_s3_listing_S004",
+        "url": "https://physionet-open.s3.amazonaws.com/?list-type=2&prefix=eegmmidb/1.0.0/S004/",
+        "body_bytes": 6732,
+        "body_sha256": "5cc983adfae2a5f198cf4a9492221a52d8336be3d80029686db2384e0fdd09f7"
+      },
+      {
+        "source_id": "official_s3_listing_S005",
+        "url": "https://physionet-open.s3.amazonaws.com/?list-type=2&prefix=eegmmidb/1.0.0/S005/",
+        "body_bytes": 6732,
+        "body_sha256": "a1e407fbcf80f324ec987dee15f3c157c6bb24e0db070a1ef0f3de5915e5be17"
+      },
+      {
+        "source_id": "official_s3_listing_S006",
+        "url": "https://physionet-open.s3.amazonaws.com/?list-type=2&prefix=eegmmidb/1.0.0/S006/",
+        "body_bytes": 6732,
+        "body_sha256": "3c73f56942f4d48adc7fb2b7530358817b259634db41b9561741baea9af4e8ce"
+      },
+      {
+        "source_id": "official_s3_listing_S007",
+        "url": "https://physionet-open.s3.amazonaws.com/?list-type=2&prefix=eegmmidb/1.0.0/S007/",
+        "body_bytes": 6732,
+        "body_sha256": "ed1baa4ebb4fc0757a01fb414fddfd8c9aef3b4c151fa3410a430f3c7b4fcdea"
+      },
+      {
+        "source_id": "official_s3_listing_S008",
+        "url": "https://physionet-open.s3.amazonaws.com/?list-type=2&prefix=eegmmidb/1.0.0/S008/",
+        "body_bytes": 6732,
+        "body_sha256": "4d67719d104aa728b06c137aabc0836cbf5cfd90031dd7c136c1a7ba8c8dfb1a"
+      },
+      {
+        "source_id": "official_s3_listing_S009",
+        "url": "https://physionet-open.s3.amazonaws.com/?list-type=2&prefix=eegmmidb/1.0.0/S009/",
+        "body_bytes": 6732,
+        "body_sha256": "d553413c7e80b121c0027be42a9c7aa2cdf54d02c6faca763bddbc43923a27ad"
+      },
+      {
+        "source_id": "official_s3_listing_S010",
+        "url": "https://physionet-open.s3.amazonaws.com/?list-type=2&prefix=eegmmidb/1.0.0/S010/",
+        "body_bytes": 6732,
+        "body_sha256": "b5a8b895ac1edc8cbb9818ae5a4060304a0583b0e6d8c00abeb1b6a63a960e92"
+      },
+      {
+        "source_id": "official_s3_listing_S011",
+        "url": "https://physionet-open.s3.amazonaws.com/?list-type=2&prefix=eegmmidb/1.0.0/S011/",
+        "body_bytes": 6732,
+        "body_sha256": "72ca205c34bd14c2d90c7e975cd3045e0d7546fed94e6d986ee11e06b1c3d7a7"
+      },
+      {
+        "source_id": "official_s3_listing_S012",
+        "url": "https://physionet-open.s3.amazonaws.com/?list-type=2&prefix=eegmmidb/1.0.0/S012/",
+        "body_bytes": 6732,
+        "body_sha256": "ecfa5b5778f298c83d5dd21efbfe0091287454d7a82db5ad1e5a3318fa615bba"
+      },
+      {
+        "source_id": "official_s3_listing_S013",
+        "url": "https://physionet-open.s3.amazonaws.com/?list-type=2&prefix=eegmmidb/1.0.0/S013/",
+        "body_bytes": 6732,
+        "body_sha256": "1e1254432be5a63a55e1848b9e9c43de9d4d91498f268fa03564fd3b4a54ea8a"
+      },
+      {
+        "source_id": "official_s3_listing_S014",
+        "url": "https://physionet-open.s3.amazonaws.com/?list-type=2&prefix=eegmmidb/1.0.0/S014/",
+        "body_bytes": 6732,
+        "body_sha256": "47e845d4dd84d32a3c8650d4792a10b327b309a16a4469896e30179bf3c80dea"
+      },
+      {
+        "source_id": "official_s3_listing_S015",
+        "url": "https://physionet-open.s3.amazonaws.com/?list-type=2&prefix=eegmmidb/1.0.0/S015/",
+        "body_bytes": 6732,
+        "body_sha256": "1fd75e30e5c2ef1be37eb667462407c2766baf9af588333832c0a4d53e25b9ef"
+      },
+      {
+        "source_id": "official_sha256_manifest",
+        "url": "https://physionet.org/files/eegmmidb/1.0.0/SHA256SUMS.txt",
+        "body_bytes": 259919,
+        "body_sha256": "7f5d16957d8ee7bce86cc7ccba0e5994f63f33781607eb3f838392d49311a208"
+      }
+    ],
+    "edf_url_head_requests": 0,
+    "edf_url_get_requests": 0,
+    "edf_payload_body_bytes": 0,
+    "exploratory_research_tool_requests_measured": false,
+    "total_metadata_network_bytes_including_headers_available": false,
+    "hard_identity_fields": [
+      "dataset_version",
+      "path",
+      "size_bytes",
+      "official_sha256"
+    ],
+    "informational_fields_not_hard_identities": [
+      "s3_etag",
+      "s3_last_modified",
+      "http_headers"
+    ]
+  },
+  "dataset_binding": {
+    "provider": "PhysioNet",
+    "dataset_id": "eegmmidb",
+    "dataset_name": "EEG Motor Movement/Imagery Dataset",
+    "version": "1.0.0",
+    "doi": "10.13026/C28G6P",
+    "license_id": "ODC-By-1.0",
+    "modality": "EEG",
+    "source_sampling_rate_hz_expected_fail_closed": 160,
+    "participants": [
+      "S004",
+      "S005",
+      "S006",
+      "S007",
+      "S008",
+      "S009",
+      "S010",
+      "S011",
+      "S012",
+      "S013",
+      "S014",
+      "S015"
+    ],
+    "participant_count": 12,
+    "consumed_participants_excluded": [
+      "S001",
+      "S002",
+      "S003"
+    ],
+    "overlap_with_consumed_participants": [],
+    "execution_fit_runs": [
+      "03",
+      "07"
+    ],
+    "execution_sealed_final_run": "11",
+    "imagery_fit_runs": [
+      "04",
+      "08"
+    ],
+    "imagery_sealed_final_run": "12",
+    "run_task_mapping": {
+      "11": "executed_left_versus_right_fist",
+      "12": "imagined_left_versus_right_fist",
+      "03": "executed_left_versus_right_fist",
+      "04": "imagined_left_versus_right_fist",
+      "07": "executed_left_versus_right_fist",
+      "08": "imagined_left_versus_right_fist"
+    },
+    "label_mapping": {
+      "T1": "left_fist",
+      "T2": "right_fist"
+    },
+    "event_sidecars": 0,
+    "file_count": 72,
+    "fit_file_count": 48,
+    "sealed_final_file_count": 24,
+    "exact_payload_bytes": 184252032,
+    "fit_file_bytes": 122834688,
+    "sealed_final_file_bytes": 61417344,
+    "canonical_expanded_inventory_sha256": "41906e8c74cafdcaa99354baab8acd4927127a73e7454939429dbca2a8c03dad",
+    "canonical_inventory_algorithm": "sha256_utf8_json_sort_keys_compact_subject_then_run_records_with_path_subject_run_task_role_size_bytes_sha256",
+    "path_template": "{subject}/{subject}R{run}.edf",
+    "substitution_allowed": false
+  },
+  "selected_files": [
+    {
+      "path": "S004/S004R03.edf",
+      "subject": "S004",
+      "run": "03",
+      "task": "execution",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "b24e3ae9d302935be06c0905d1e925ad68a94b4a5b20dc659cbc63bb8481d503"
+    },
+    {
+      "path": "S004/S004R04.edf",
+      "subject": "S004",
+      "run": "04",
+      "task": "imagery",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "c9ddf0294961f0b877192a2479802b9c6c88403682a17b5ad679fd6485aa6f59"
+    },
+    {
+      "path": "S004/S004R07.edf",
+      "subject": "S004",
+      "run": "07",
+      "task": "execution",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "eb00bf6a816a6ded6f93e0b96d2a1c2ae8f6d13a59e39d475bf94d57fb842643"
+    },
+    {
+      "path": "S004/S004R08.edf",
+      "subject": "S004",
+      "run": "08",
+      "task": "imagery",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "1ab5909b183413283a7ea76e35311a68a4688558f0044b9faab3987291cbdb92"
+    },
+    {
+      "path": "S004/S004R11.edf",
+      "subject": "S004",
+      "run": "11",
+      "task": "execution",
+      "role": "sealed_final",
+      "size_bytes": 2555616,
+      "sha256": "a8b96b32782329f12accdc222331545707be4cd497f97f158de4c06e87235f8c"
+    },
+    {
+      "path": "S004/S004R12.edf",
+      "subject": "S004",
+      "run": "12",
+      "task": "imagery",
+      "role": "sealed_final",
+      "size_bytes": 2555616,
+      "sha256": "c44b7be0464d86be4d460ec66432869b7b3e8dcaa2067af02d6e772abf5c11de"
+    },
+    {
+      "path": "S005/S005R03.edf",
+      "subject": "S005",
+      "run": "03",
+      "task": "execution",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "3bf2695b66661a274bb099dd093c8f2eb4ede8a7068ec4bfd0a1fe9f4bfc0e18"
+    },
+    {
+      "path": "S005/S005R04.edf",
+      "subject": "S005",
+      "run": "04",
+      "task": "imagery",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "956d0857b17b040955fee9b2384f818f85bfb02248c387d9aa7930c42934ca0c"
+    },
+    {
+      "path": "S005/S005R07.edf",
+      "subject": "S005",
+      "run": "07",
+      "task": "execution",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "630fbaf27a7a962a4a8bd61396b6a1c4f56b44e85fa5e9400016ca19085ad1f9"
+    },
+    {
+      "path": "S005/S005R08.edf",
+      "subject": "S005",
+      "run": "08",
+      "task": "imagery",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "eeed6c328ee256dd2c20d1808e05819bed4ce56b8de1c57914ded00565b6b7bc"
+    },
+    {
+      "path": "S005/S005R11.edf",
+      "subject": "S005",
+      "run": "11",
+      "task": "execution",
+      "role": "sealed_final",
+      "size_bytes": 2555616,
+      "sha256": "a4d4111c206de3c094d23c9fbaf2b3fece74eff7a68a11073f29dad9800653d4"
+    },
+    {
+      "path": "S005/S005R12.edf",
+      "subject": "S005",
+      "run": "12",
+      "task": "imagery",
+      "role": "sealed_final",
+      "size_bytes": 2555616,
+      "sha256": "dfaf07c8ecc583b07363485596258e66a75fb33169496c62918c6dd0803814ce"
+    },
+    {
+      "path": "S006/S006R03.edf",
+      "subject": "S006",
+      "run": "03",
+      "task": "execution",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "1bedb6634f28af44942c14901aa82f420858bc367fd5830482b4e8cf7a28bbf1"
+    },
+    {
+      "path": "S006/S006R04.edf",
+      "subject": "S006",
+      "run": "04",
+      "task": "imagery",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "4bd532bb728e1f2ed2afc0a5c162830a07465b6a4a58e105d1316c6ff1921f3b"
+    },
+    {
+      "path": "S006/S006R07.edf",
+      "subject": "S006",
+      "run": "07",
+      "task": "execution",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "56b8c705b9c1406546ce90bee6373172f43ec8bb5437aa9772dc2512405e6a17"
+    },
+    {
+      "path": "S006/S006R08.edf",
+      "subject": "S006",
+      "run": "08",
+      "task": "imagery",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "006e55ec16590f5f5b9230ac53a2f8fd0660960fa7b4b512ff61f8f7e2f8714e"
+    },
+    {
+      "path": "S006/S006R11.edf",
+      "subject": "S006",
+      "run": "11",
+      "task": "execution",
+      "role": "sealed_final",
+      "size_bytes": 2555616,
+      "sha256": "ce5ef60e07d2b1db8492739786eec2bcc6bb9e85b05fa0c9f2851e3a0f3e9907"
+    },
+    {
+      "path": "S006/S006R12.edf",
+      "subject": "S006",
+      "run": "12",
+      "task": "imagery",
+      "role": "sealed_final",
+      "size_bytes": 2555616,
+      "sha256": "296b5cb14549098dc55ee047cc9ff63faccf480e432b94797ff73cc7209b7353"
+    },
+    {
+      "path": "S007/S007R03.edf",
+      "subject": "S007",
+      "run": "03",
+      "task": "execution",
+      "role": "fit",
+      "size_bytes": 2596896,
+      "sha256": "af7f2fe4fc8ae5b727a2cee5e41a58ad0aca7907f0da83b67a754ea7e94ff3a9"
+    },
+    {
+      "path": "S007/S007R04.edf",
+      "subject": "S007",
+      "run": "04",
+      "task": "imagery",
+      "role": "fit",
+      "size_bytes": 2596896,
+      "sha256": "3b31e50c4a5ebbb25459b1ebdf802b7ca86010857637580aacd53067350553a6"
+    },
+    {
+      "path": "S007/S007R07.edf",
+      "subject": "S007",
+      "run": "07",
+      "task": "execution",
+      "role": "fit",
+      "size_bytes": 2596896,
+      "sha256": "d801688adfc14ce87dd52f4308b0dbf72fffba30fc5d5b66a4c05a4f3b9310d6"
+    },
+    {
+      "path": "S007/S007R08.edf",
+      "subject": "S007",
+      "run": "08",
+      "task": "imagery",
+      "role": "fit",
+      "size_bytes": 2596896,
+      "sha256": "fa8cfc38727e908be4626cf82b19533f7a761f102319696e53e4ee2d61b1092b"
+    },
+    {
+      "path": "S007/S007R11.edf",
+      "subject": "S007",
+      "run": "11",
+      "task": "execution",
+      "role": "sealed_final",
+      "size_bytes": 2596896,
+      "sha256": "a2ec8339ddfd99168bfa0fdb6b94145fcf6e17abd9816f950d3182f888928b76"
+    },
+    {
+      "path": "S007/S007R12.edf",
+      "subject": "S007",
+      "run": "12",
+      "task": "imagery",
+      "role": "sealed_final",
+      "size_bytes": 2596896,
+      "sha256": "70cd3287d6b4821661521954206f86dde9f5e62904edd76cc0cf1d03fe112df3"
+    },
+    {
+      "path": "S008/S008R03.edf",
+      "subject": "S008",
+      "run": "03",
+      "task": "execution",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "ab3ea90d829e1e2e10bb6e551e828e66ac6262ec7bc24e2e17db6e1e350088fe"
+    },
+    {
+      "path": "S008/S008R04.edf",
+      "subject": "S008",
+      "run": "04",
+      "task": "imagery",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "034a26131e1425e6374a459e5887b1f831f7bfdb101a3658d2cd07620cf2c06b"
+    },
+    {
+      "path": "S008/S008R07.edf",
+      "subject": "S008",
+      "run": "07",
+      "task": "execution",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "9e05bf83ad067538667ab853081165b854b3d13ee334c4185ee5f40aa6b76a7e"
+    },
+    {
+      "path": "S008/S008R08.edf",
+      "subject": "S008",
+      "run": "08",
+      "task": "imagery",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "534c25b65a4fa68afe29a5c0272a686ac474e638c86521b177660d888401f374"
+    },
+    {
+      "path": "S008/S008R11.edf",
+      "subject": "S008",
+      "run": "11",
+      "task": "execution",
+      "role": "sealed_final",
+      "size_bytes": 2555616,
+      "sha256": "ef072b260a1d92c45d5d43a2a38c2affc8db37bc2da3df2d0962c44cdc449131"
+    },
+    {
+      "path": "S008/S008R12.edf",
+      "subject": "S008",
+      "run": "12",
+      "task": "imagery",
+      "role": "sealed_final",
+      "size_bytes": 2555616,
+      "sha256": "ddced4ba4dc801313554039823fa1826d0dd52648f87a5ee5ada8e9cdd0678c8"
+    },
+    {
+      "path": "S009/S009R03.edf",
+      "subject": "S009",
+      "run": "03",
+      "task": "execution",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "f5718a37aa5ea43c8f52dd01326ce09568a71f52e1b2750e0e8e2145e88b6e4a"
+    },
+    {
+      "path": "S009/S009R04.edf",
+      "subject": "S009",
+      "run": "04",
+      "task": "imagery",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "705f53460954e465e7a6ef45bd1f64e675548c08e9238dfb1f448713f9e559f8"
+    },
+    {
+      "path": "S009/S009R07.edf",
+      "subject": "S009",
+      "run": "07",
+      "task": "execution",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "9d737ae61e6b01feee5a8cd22c219cfa84e8c5f67210a04dd08ad08aa61d82ce"
+    },
+    {
+      "path": "S009/S009R08.edf",
+      "subject": "S009",
+      "run": "08",
+      "task": "imagery",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "a8121c688ffca3db1d3b1f61dd53d6636ac91763cd2269b39636c65dfc6e4fe2"
+    },
+    {
+      "path": "S009/S009R11.edf",
+      "subject": "S009",
+      "run": "11",
+      "task": "execution",
+      "role": "sealed_final",
+      "size_bytes": 2555616,
+      "sha256": "2e1eac06f72f940fe826ff9c6b963bc686c1c7357d2b860e351baa263684f66b"
+    },
+    {
+      "path": "S009/S009R12.edf",
+      "subject": "S009",
+      "run": "12",
+      "task": "imagery",
+      "role": "sealed_final",
+      "size_bytes": 2555616,
+      "sha256": "0c3f9700d6bfd8a8dd797803d61b80852688709011e5863f4e13e9ec3948191f"
+    },
+    {
+      "path": "S010/S010R03.edf",
+      "subject": "S010",
+      "run": "03",
+      "task": "execution",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "49016ed40a1c17164b7b56031d567ee96b00b0b3755fab072c1d78db9ccdab73"
+    },
+    {
+      "path": "S010/S010R04.edf",
+      "subject": "S010",
+      "run": "04",
+      "task": "imagery",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "8e68b22936cbcb7f84ed8ff037cb4a99f01064589d181c8056dbef06c1c7159b"
+    },
+    {
+      "path": "S010/S010R07.edf",
+      "subject": "S010",
+      "run": "07",
+      "task": "execution",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "cf59750f6f9576e106875f257673940cbaf2b0d62e1d3b1a45260dbc46c1981b"
+    },
+    {
+      "path": "S010/S010R08.edf",
+      "subject": "S010",
+      "run": "08",
+      "task": "imagery",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "b468e77d0c8a73377b4510220c6be95bdefd572f6ed5c4b5f539c9dc0bdef485"
+    },
+    {
+      "path": "S010/S010R11.edf",
+      "subject": "S010",
+      "run": "11",
+      "task": "execution",
+      "role": "sealed_final",
+      "size_bytes": 2555616,
+      "sha256": "4e8a3c50558c9dce96ab060d4883d19fbfe5e859989d7c633bf9f88a6a65d467"
+    },
+    {
+      "path": "S010/S010R12.edf",
+      "subject": "S010",
+      "run": "12",
+      "task": "imagery",
+      "role": "sealed_final",
+      "size_bytes": 2555616,
+      "sha256": "0983609a12e6fd9b3ae99fd6968938ec5a3b012948894602233a65b720ac3975"
+    },
+    {
+      "path": "S011/S011R03.edf",
+      "subject": "S011",
+      "run": "03",
+      "task": "execution",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "369bc902a59bf9a9d480c2bad2a4b165b83716c7cba5760c2ce0e6500f120443"
+    },
+    {
+      "path": "S011/S011R04.edf",
+      "subject": "S011",
+      "run": "04",
+      "task": "imagery",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "072b75496dd935be460bc8ac9c3bf2d1fdcdb62f32ffb552955319abcb24cfe9"
+    },
+    {
+      "path": "S011/S011R07.edf",
+      "subject": "S011",
+      "run": "07",
+      "task": "execution",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "ee5542027039bf28eb7fbb95826235f618e32c74b28857ad51df388256e8fda2"
+    },
+    {
+      "path": "S011/S011R08.edf",
+      "subject": "S011",
+      "run": "08",
+      "task": "imagery",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "70b05e696e9faff6566cabda58b9144e1cd8ca3b16e04178309b22ef7bb612b7"
+    },
+    {
+      "path": "S011/S011R11.edf",
+      "subject": "S011",
+      "run": "11",
+      "task": "execution",
+      "role": "sealed_final",
+      "size_bytes": 2555616,
+      "sha256": "4a6c375686a70b4d0d09c789f309d8e41b76bc660d4a20f2f136fedaac2ff1a4"
+    },
+    {
+      "path": "S011/S011R12.edf",
+      "subject": "S011",
+      "run": "12",
+      "task": "imagery",
+      "role": "sealed_final",
+      "size_bytes": 2555616,
+      "sha256": "9034d085bc01c1c738d80a48fdc43059f88c13d587b5de1c59d4a85ecd194ccb"
+    },
+    {
+      "path": "S012/S012R03.edf",
+      "subject": "S012",
+      "run": "03",
+      "task": "execution",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "d2af7bd93c37e741a77f8f0f611abe3b15baf1a3db65eced1bbd1011f3b193aa"
+    },
+    {
+      "path": "S012/S012R04.edf",
+      "subject": "S012",
+      "run": "04",
+      "task": "imagery",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "974d6c7558c8d8ee48449bf9a1f40cda596febb6365e69e8e65c2d952644017e"
+    },
+    {
+      "path": "S012/S012R07.edf",
+      "subject": "S012",
+      "run": "07",
+      "task": "execution",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "47e446122ad05c46d8c0e605c84641ab8a93ba2b8647f0eeceb86ee26ee9d9ab"
+    },
+    {
+      "path": "S012/S012R08.edf",
+      "subject": "S012",
+      "run": "08",
+      "task": "imagery",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "5d7d13ad211f615a21db64c3a4dbc8ff4ef10dc3f777b8e6441d8942e8d40336"
+    },
+    {
+      "path": "S012/S012R11.edf",
+      "subject": "S012",
+      "run": "11",
+      "task": "execution",
+      "role": "sealed_final",
+      "size_bytes": 2555616,
+      "sha256": "fd7bda82802bb91b4e04848ce1a8a9a3e5bee822a811d0bedcf812ea4acd273e"
+    },
+    {
+      "path": "S012/S012R12.edf",
+      "subject": "S012",
+      "run": "12",
+      "task": "imagery",
+      "role": "sealed_final",
+      "size_bytes": 2555616,
+      "sha256": "2b76c97a6cbc894a85a4f54385997b6aa07d3e9ec040ec1adf61a310b26f5caa"
+    },
+    {
+      "path": "S013/S013R03.edf",
+      "subject": "S013",
+      "run": "03",
+      "task": "execution",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "b3ccfde504fe3bc9377495c2b70feabcc415a2facdbea1ab0d33e4644f7fde66"
+    },
+    {
+      "path": "S013/S013R04.edf",
+      "subject": "S013",
+      "run": "04",
+      "task": "imagery",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "796eb8df7d12b32e6ebbfb6756e527217c7b59a282735eb782dd50f5f16c39c8"
+    },
+    {
+      "path": "S013/S013R07.edf",
+      "subject": "S013",
+      "run": "07",
+      "task": "execution",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "17a4e59d8c4fdd133f19b428ffe4927484814d1dbaad7df7e5623361fff769c5"
+    },
+    {
+      "path": "S013/S013R08.edf",
+      "subject": "S013",
+      "run": "08",
+      "task": "imagery",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "dac533ea38aaa6c7505565059a5a8e19825702e68f5d27f47edd11cff0035736"
+    },
+    {
+      "path": "S013/S013R11.edf",
+      "subject": "S013",
+      "run": "11",
+      "task": "execution",
+      "role": "sealed_final",
+      "size_bytes": 2555616,
+      "sha256": "261e6a4c8f81071cd6f1309ebd6deef79496601c6b77a8fe3bcc8c3b065626a4"
+    },
+    {
+      "path": "S013/S013R12.edf",
+      "subject": "S013",
+      "run": "12",
+      "task": "imagery",
+      "role": "sealed_final",
+      "size_bytes": 2555616,
+      "sha256": "5a4d97f54f5769fb61a64854d46108b2554f1013f0e664810746911f69ea241d"
+    },
+    {
+      "path": "S014/S014R03.edf",
+      "subject": "S014",
+      "run": "03",
+      "task": "execution",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "670c197481bd1761f1393c3f33e7c286f5966f483493cb6d2e05ff23de93c6a9"
+    },
+    {
+      "path": "S014/S014R04.edf",
+      "subject": "S014",
+      "run": "04",
+      "task": "imagery",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "7e443b4a4bb000506137ffd79eae9fd915a282f4c6c5aac71ad8b8612072227d"
+    },
+    {
+      "path": "S014/S014R07.edf",
+      "subject": "S014",
+      "run": "07",
+      "task": "execution",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "4fc8a7f723e8577d5f0a851ee416ccdd7511aed74ae3da6bcc4bd19a2dda0d1c"
+    },
+    {
+      "path": "S014/S014R08.edf",
+      "subject": "S014",
+      "run": "08",
+      "task": "imagery",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "a63bc896da7b0fa302c3c3b0ad53a4c54f1a35fd1f66bebb2cedc81cbabc9320"
+    },
+    {
+      "path": "S014/S014R11.edf",
+      "subject": "S014",
+      "run": "11",
+      "task": "execution",
+      "role": "sealed_final",
+      "size_bytes": 2555616,
+      "sha256": "d1d6a99dc4439690c820469616b6bc71d80be65340615246741c0d67efde59c4"
+    },
+    {
+      "path": "S014/S014R12.edf",
+      "subject": "S014",
+      "run": "12",
+      "task": "imagery",
+      "role": "sealed_final",
+      "size_bytes": 2555616,
+      "sha256": "e6ef184a364734f2cc0fce314c93ffa545660a89567475f56ddd979a2d0fbc39"
+    },
+    {
+      "path": "S015/S015R03.edf",
+      "subject": "S015",
+      "run": "03",
+      "task": "execution",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "9de915e373fc372b372cbe9c59692c7c961dc9d2ff12cbffcdc99190a1bac99d"
+    },
+    {
+      "path": "S015/S015R04.edf",
+      "subject": "S015",
+      "run": "04",
+      "task": "imagery",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "1721d4a066e0c28221877d0f9e7da2402bdd924a532f5f19261c429def061273"
+    },
+    {
+      "path": "S015/S015R07.edf",
+      "subject": "S015",
+      "run": "07",
+      "task": "execution",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "914f9c987bf66fdbc3183531bbc5ca97ba8afaabd8864811c438d8ddb38dfc3a"
+    },
+    {
+      "path": "S015/S015R08.edf",
+      "subject": "S015",
+      "run": "08",
+      "task": "imagery",
+      "role": "fit",
+      "size_bytes": 2555616,
+      "sha256": "70e4dcfa5bb501007b4a502fb1ac6975128fb316de67eb825f8eee00cba9377f"
+    },
+    {
+      "path": "S015/S015R11.edf",
+      "subject": "S015",
+      "run": "11",
+      "task": "execution",
+      "role": "sealed_final",
+      "size_bytes": 2555616,
+      "sha256": "5403967a07422bcce09d1d96dd78d0eef6f29344d8e0d388975b483b93d47341"
+    },
+    {
+      "path": "S015/S015R12.edf",
+      "subject": "S015",
+      "run": "12",
+      "task": "imagery",
+      "role": "sealed_final",
+      "size_bytes": 2555616,
+      "sha256": "a5e56adba75340447849c46eb049b39799ee98d68133357741c6980f8f60c54a"
+    }
+  ],
+  "acquisition_contract": {
+    "authorization_required": true,
+    "implementation_must_use_generated_fixtures_and_mocked_transport_before_real_access": true,
+    "implementation_commit_must_be_pushed_and_remotely_green_before_real_access": true,
+    "metadata_reverification_documents": 15,
+    "metadata_reverification_components": [
+      "official_dataset_page",
+      "official_task_mapping_page",
+      "official_checksum_manifest",
+      "twelve_exact_official_s3_subject_prefix_listings"
+    ],
+    "metadata_mismatch_aborts_before_edf_body_request": true,
+    "acquisition_invocations": 1,
+    "edf_payload_requests": 72,
+    "edf_payload_bytes": 184252032,
+    "opaque_local_sha256_passes": 72,
+    "edf_content_parses": 0,
+    "sequential_transfer": true,
+    "retries": 0,
+    "reruns": 0,
+    "payload_root": "data/physionet_motor/wo9r-eegmmidb-1.0.0",
+    "temporary_root": ".codex_work/physionet_low_frequency_cohort_confirmation/acquisition_tmp",
+    "receipt_root": ".codex_work/physionet_low_frequency_cohort_confirmation/acquisition_receipt",
+    "destination_must_be_absent_isolated_regular_and_non_symlinked": true,
+    "complete_bundle_promotion": "atomic_same_filesystem_rename_without_copy",
+    "cleanup_scope": "invocation_created_temporary_files_only",
+    "mne_or_edf_reader_imports": 0,
+    "receipt_files": [
+      "physionet_low_frequency_cohort_acquisition_manifest.v0.json",
+      "physionet_low_frequency_cohort_acquisition_receipt.md"
+    ]
+  },
+  "target_firewall_and_split": {
+    "participant_specific_models": true,
+    "cross_participant_fit": false,
+    "row_random_split": false,
+    "expected_task_events_per_edf": 15,
+    "expected_execution_fit_rows": 360,
+    "expected_imagery_fit_rows": 360,
+    "expected_total_fit_rows": 720,
+    "expected_execution_final_rows": 180,
+    "expected_imagery_final_rows": 180,
+    "expected_total_final_rows": 360,
+    "event_count_mismatch_policy": "park_without_exclusion_replacement_or_rerun",
+    "target_derived_exclusion_allowed": false,
+    "final_annotations_may_be_materialized_only_by_target_firewall": true,
+    "physical_never_opened_target_claim": false,
+    "sealed_target_artifact": "sealed_run11_and_run12_targets.v0.npz",
+    "final_targets_exposed_to_predictive_code": false,
+    "final_targets_exposed_to_selection_or_threshold_code": false,
+    "final_targets_exposed_to_public_prediction_freeze": false,
+    "both_final_target_sets_delivered_together": true,
+    "final_target_deliveries": 1,
+    "final_scoring_events": 1,
+    "one_final_set_may_open_to_update_other": false,
+    "post_target_fit_selection_threshold_channel_normalization_or_update": false
+  },
+  "reader_and_derivative_contract": {
+    "reader": "mne.io.read_raw_edf",
+    "mne_version": "1.12.1",
+    "no_follow_regular_files_only": true,
+    "acquisition_manifest_verification": true,
+    "execution_sha256_passes_per_edf": 1,
+    "semantic_parses_per_edf": 1,
+    "sequential_file_processing": true,
+    "standardized_channel_names": [
+      "FC5",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "FC6",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP5",
+      "CP3",
+      "CP1",
+      "CPz",
+      "CP2",
+      "CP4",
+      "CP6",
+      "Fp1",
+      "Fpz",
+      "Fp2",
+      "AF7",
+      "AF3",
+      "AFz",
+      "AF4",
+      "AF8",
+      "F7",
+      "F5",
+      "F3",
+      "F1",
+      "Fz",
+      "F2",
+      "F4",
+      "F6",
+      "F8",
+      "FT7",
+      "FT8",
+      "T7",
+      "T8",
+      "T9",
+      "T10",
+      "TP7",
+      "TP8",
+      "P7",
+      "P5",
+      "P3",
+      "P1",
+      "Pz",
+      "P2",
+      "P4",
+      "P6",
+      "P8",
+      "PO7",
+      "PO3",
+      "POz",
+      "PO4",
+      "PO8",
+      "O1",
+      "Oz",
+      "O2",
+      "Iz"
+    ],
+    "channel_count": 64,
+    "exact_channel_order_required": true,
+    "montage": "standard_1005",
+    "retain_all_source_eeg_channels": true,
+    "require_available_geometry": true,
+    "require_sampling_rate_hz": 160,
+    "allowed_annotations": [
+      "T0",
+      "T1",
+      "T2"
+    ],
+    "usable_target_annotations": [
+      "T1",
+      "T2"
+    ],
+    "resampling": false,
+    "bad_channel_deletion_or_interpolation": false,
+    "ica_or_artifact_component_removal": false,
+    "target_derived_epoch_rejection": false,
+    "evaluation_time_normalization": false,
+    "raw_window_persistence": false,
+    "compact_feature_streaming_only": true,
+    "fit_derivative_runs": [
+      "03",
+      "04",
+      "07",
+      "08"
+    ],
+    "target_blind_prediction_derivative_runs": [
+      "11",
+      "12"
+    ],
+    "target_blind_prediction_derivative_contains_targets": false,
+    "sealed_scorer_input_runs": [
+      "11",
+      "12"
+    ],
+    "individual_targets_predictions_probabilities_or_participant_outcomes_committed": false
+  },
+  "causal_preprocessing": {
+    "reference": "instantaneous_common_average_all_64_retained_eeg_channels",
+    "filter_design": "fourth_order_butterworth_bandpass_sos",
+    "passband_hz": [
+      0.5,
+      4
+    ],
+    "application": "scipy.signal.sosfilt_on_each_continuous_run_in_time_order_before_epoching",
+    "primary_window_seconds_from_cue": [
+      1,
+      3
+    ],
+    "primary_time_bins": 4,
+    "primary_bin_width_seconds": 0.5,
+    "slopes_per_channel": 1,
+    "feature_dimension_formula": "5C",
+    "whole_head_feature_dimension": 320,
+    "early_cue_window_seconds_from_cue": [
+      0,
+      1
+    ],
+    "early_cue_time_bins": 4,
+    "early_cue_bin_width_seconds": 0.25,
+    "pre_cue_window_seconds_from_cue": [
+      -2,
+      0
+    ],
+    "pre_cue_time_bins": 4,
+    "pre_cue_bin_width_seconds": 0.5,
+    "right_context_seconds_relative_to_decision": 0,
+    "decision_latency_seconds_from_cue": 3,
+    "actual_movement_onset_available": false,
+    "causal_claim": "cue_causal_only_not_pre_movement_asynchronous_or_end_to_end_realtime"
+  },
+  "channel_sets": {
+    "sensorimotor_left": [
+      "FC5",
+      "FC3",
+      "FC1",
+      "C5",
+      "C3",
+      "C1",
+      "CP5",
+      "CP3",
+      "CP1"
+    ],
+    "sensorimotor_right": [
+      "FC6",
+      "FC4",
+      "FC2",
+      "C6",
+      "C4",
+      "C2",
+      "CP6",
+      "CP4",
+      "CP2"
+    ],
+    "frontal_ocular_sensitive": [
+      "Fp1",
+      "Fpz",
+      "Fp2",
+      "AF7",
+      "AF3",
+      "AFz",
+      "AF4",
+      "AF8"
+    ],
+    "occipital_visual_sensitive": [
+      "PO7",
+      "PO3",
+      "POz",
+      "PO4",
+      "PO8",
+      "O1",
+      "Oz",
+      "O2"
+    ],
+    "frontal_asymmetry_left": [
+      "Fp1",
+      "AF7",
+      "AF3"
+    ],
+    "frontal_asymmetry_right": [
+      "Fp2",
+      "AF8",
+      "AF4"
+    ],
+    "hemisphere_swap_pairs": [
+      [
+        "FC5",
+        "FC6"
+      ],
+      [
+        "FC3",
+        "FC4"
+      ],
+      [
+        "FC1",
+        "FC2"
+      ],
+      [
+        "C5",
+        "C6"
+      ],
+      [
+        "C3",
+        "C4"
+      ],
+      [
+        "C1",
+        "C2"
+      ],
+      [
+        "CP5",
+        "CP6"
+      ],
+      [
+        "CP3",
+        "CP4"
+      ],
+      [
+        "CP1",
+        "CP2"
+      ]
+    ],
+    "proxy_models_are_not_measured_EOG_source_localization_or_confound_removal": true
+  },
+  "primary_model_template": {
+    "family_id": "fixed_low_frequency_shrinkage_lda",
+    "inherited_from_prespecified_work_order_9_comparator": true,
+    "selection_candidate_count": 1,
+    "hyperparameter_search_runs": 0,
+    "classifier": "sklearn.discriminant_analysis.LinearDiscriminantAnalysis",
+    "solver": "lsqr",
+    "shrinkage": 0.1,
+    "class_priors": [
+      0.5,
+      0.5
+    ],
+    "fit_scope": "participant_specific_designated_fit_runs_only",
+    "pretrained_checkpoint": false,
+    "deep_network": false,
+    "language_or_foundation_model": false
+  },
+  "parameter_update_contract": {
+    "model_ids_per_participant": [
+      "execution_primary",
+      "imagery_primary",
+      "execution_central",
+      "execution_frontal",
+      "execution_occipital",
+      "execution_frontal_asymmetry",
+      "execution_early_cue",
+      "execution_pre_cue",
+      "execution_timing_only",
+      "execution_no_signal_prior",
+      "imagery_no_signal_prior",
+      "execution_train_label_derangement"
+    ],
+    "parameter_update_fits_per_participant": 12,
+    "participant_count": 12,
+    "exact_parameter_update_fits": 144,
+    "cross_task_predictions_reuse_native_models_without_update": true,
+    "transformed_controls_reuse_execution_primary_or_central_without_update": true
+  },
+  "prediction_contract": {
+    "condition_family_count": 18,
+    "participant_prediction_sets_per_condition": 12,
+    "exact_participant_condition_prediction_sets": 216,
+    "exact_target_blind_model_inference_runs": 216,
+    "expected_predictions_per_participant_condition": 15,
+    "expected_individual_predictions": 3240,
+    "conditions": [
+      {
+        "condition_id": "execution_native_primary",
+        "model_id": "execution_primary",
+        "fit_runs": [
+          "03",
+          "07"
+        ],
+        "predict_run": "11",
+        "participants": [
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        "participant_prediction_sets": 12,
+        "expected_predictions_per_participant": 15,
+        "final_targets_available_to_predictor": false
+      },
+      {
+        "condition_id": "imagery_native",
+        "model_id": "imagery_primary",
+        "fit_runs": [
+          "04",
+          "08"
+        ],
+        "predict_run": "12",
+        "participants": [
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        "participant_prediction_sets": 12,
+        "expected_predictions_per_participant": 15,
+        "final_targets_available_to_predictor": false
+      },
+      {
+        "condition_id": "execution_to_imagery",
+        "model_id": "execution_primary",
+        "fit_runs": [
+          "03",
+          "07"
+        ],
+        "predict_run": "12",
+        "participants": [
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        "participant_prediction_sets": 12,
+        "expected_predictions_per_participant": 15,
+        "final_targets_available_to_predictor": false
+      },
+      {
+        "condition_id": "imagery_to_execution",
+        "model_id": "imagery_primary",
+        "fit_runs": [
+          "04",
+          "08"
+        ],
+        "predict_run": "11",
+        "participants": [
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        "participant_prediction_sets": 12,
+        "expected_predictions_per_participant": 15,
+        "final_targets_available_to_predictor": false
+      },
+      {
+        "condition_id": "execution_central_sensorimotor",
+        "model_id": "execution_central",
+        "fit_runs": [
+          "03",
+          "07"
+        ],
+        "predict_run": "11",
+        "participants": [
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        "participant_prediction_sets": 12,
+        "expected_predictions_per_participant": 15,
+        "final_targets_available_to_predictor": false
+      },
+      {
+        "condition_id": "execution_frontal_proxy",
+        "model_id": "execution_frontal",
+        "fit_runs": [
+          "03",
+          "07"
+        ],
+        "predict_run": "11",
+        "participants": [
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        "participant_prediction_sets": 12,
+        "expected_predictions_per_participant": 15,
+        "final_targets_available_to_predictor": false
+      },
+      {
+        "condition_id": "execution_occipital_proxy",
+        "model_id": "execution_occipital",
+        "fit_runs": [
+          "03",
+          "07"
+        ],
+        "predict_run": "11",
+        "participants": [
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        "participant_prediction_sets": 12,
+        "expected_predictions_per_participant": 15,
+        "final_targets_available_to_predictor": false
+      },
+      {
+        "condition_id": "execution_frontal_asymmetry",
+        "model_id": "execution_frontal_asymmetry",
+        "fit_runs": [
+          "03",
+          "07"
+        ],
+        "predict_run": "11",
+        "participants": [
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        "participant_prediction_sets": 12,
+        "expected_predictions_per_participant": 15,
+        "final_targets_available_to_predictor": false
+      },
+      {
+        "condition_id": "execution_early_cue",
+        "model_id": "execution_early_cue",
+        "fit_runs": [
+          "03",
+          "07"
+        ],
+        "predict_run": "11",
+        "participants": [
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        "participant_prediction_sets": 12,
+        "expected_predictions_per_participant": 15,
+        "final_targets_available_to_predictor": false
+      },
+      {
+        "condition_id": "execution_pre_cue",
+        "model_id": "execution_pre_cue",
+        "fit_runs": [
+          "03",
+          "07"
+        ],
+        "predict_run": "11",
+        "participants": [
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        "participant_prediction_sets": 12,
+        "expected_predictions_per_participant": 15,
+        "final_targets_available_to_predictor": false
+      },
+      {
+        "condition_id": "execution_timing_only",
+        "model_id": "execution_timing_only",
+        "fit_runs": [
+          "03",
+          "07"
+        ],
+        "predict_run": "11",
+        "participants": [
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        "participant_prediction_sets": 12,
+        "expected_predictions_per_participant": 15,
+        "final_targets_available_to_predictor": false
+      },
+      {
+        "condition_id": "execution_no_signal_prior",
+        "model_id": "execution_no_signal_prior",
+        "fit_runs": [
+          "03",
+          "07"
+        ],
+        "predict_run": "11",
+        "participants": [
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        "participant_prediction_sets": 12,
+        "expected_predictions_per_participant": 15,
+        "final_targets_available_to_predictor": false
+      },
+      {
+        "condition_id": "imagery_no_signal_prior",
+        "model_id": "imagery_no_signal_prior",
+        "fit_runs": [
+          "04",
+          "08"
+        ],
+        "predict_run": "12",
+        "participants": [
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        "participant_prediction_sets": 12,
+        "expected_predictions_per_participant": 15,
+        "final_targets_available_to_predictor": false
+      },
+      {
+        "condition_id": "execution_all_zero_final_signal",
+        "model_id": "execution_primary",
+        "fit_runs": [
+          "03",
+          "07"
+        ],
+        "predict_run": "11",
+        "participants": [
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        "participant_prediction_sets": 12,
+        "expected_predictions_per_participant": 15,
+        "final_targets_available_to_predictor": false
+      },
+      {
+        "condition_id": "execution_train_label_derangement",
+        "model_id": "execution_train_label_derangement",
+        "fit_runs": [
+          "03",
+          "07"
+        ],
+        "predict_run": "11",
+        "participants": [
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        "participant_prediction_sets": 12,
+        "expected_predictions_per_participant": 15,
+        "final_targets_available_to_predictor": false
+      },
+      {
+        "condition_id": "execution_one_trial_final_signal_displacement",
+        "model_id": "execution_primary",
+        "fit_runs": [
+          "03",
+          "07"
+        ],
+        "predict_run": "11",
+        "participants": [
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        "participant_prediction_sets": 12,
+        "expected_predictions_per_participant": 15,
+        "final_targets_available_to_predictor": false
+      },
+      {
+        "condition_id": "execution_channel_derangement",
+        "model_id": "execution_primary",
+        "fit_runs": [
+          "03",
+          "07"
+        ],
+        "predict_run": "11",
+        "participants": [
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        "participant_prediction_sets": 12,
+        "expected_predictions_per_participant": 15,
+        "final_targets_available_to_predictor": false
+      },
+      {
+        "condition_id": "execution_central_hemisphere_swap",
+        "model_id": "execution_central",
+        "fit_runs": [
+          "03",
+          "07"
+        ],
+        "predict_run": "11",
+        "participants": [
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        "participant_prediction_sets": 12,
+        "expected_predictions_per_participant": 15,
+        "final_targets_available_to_predictor": false
+      }
+    ],
+    "execution_to_imagery_and_imagery_to_execution_are_diagnostic_not_rescue": true
+  },
+  "control_contract": {
+    "timing_only_features": [
+      "event_ordinal_divided_by_14",
+      "seconds_since_run_start",
+      "previous_inter_event_interval_seconds_with_first_fixed_to_zero"
+    ],
+    "future_event_timing_used": false,
+    "no_signal_prior": "fit_run_majority_class_with_equal_class_tie_to_T1",
+    "all_zero_final_signal": "replace_execution_primary_final_feature_rows_with_exact_zero",
+    "train_label_derangement_indices": [
+      8,
+      9,
+      1,
+      13,
+      10,
+      4,
+      5,
+      7,
+      11,
+      14,
+      6,
+      0,
+      3,
+      2,
+      12
+    ],
+    "train_label_derangement_application": "separately_within_each_subject_and_each_fit_run",
+    "final_signal_displacement": "within_subject_run11_circular_shift_by_one_event",
+    "channel_derangement_indices": [
+      50,
+      54,
+      25,
+      44,
+      20,
+      21,
+      37,
+      41,
+      23,
+      24,
+      33,
+      11,
+      10,
+      36,
+      17,
+      18,
+      3,
+      26,
+      22,
+      6,
+      61,
+      14,
+      4,
+      13,
+      2,
+      39,
+      46,
+      1,
+      19,
+      53,
+      42,
+      8,
+      52,
+      59,
+      5,
+      47,
+      40,
+      63,
+      15,
+      43,
+      27,
+      38,
+      60,
+      55,
+      34,
+      12,
+      45,
+      7,
+      49,
+      32,
+      35,
+      62,
+      28,
+      0,
+      30,
+      57,
+      48,
+      51,
+      56,
+      9,
+      31,
+      16,
+      29,
+      58
+    ],
+    "channel_derangement_application": "apply_literal_permutation_to_run11_channel_axis_before_execution_primary_features",
+    "hemisphere_swap_application": "exchange_nine_registered_sensorimotor_pairs_in_run11_before_central_features",
+    "seed_provenance_label": 5909,
+    "final_target_used_to_construct_control": false
+  },
+  "physiology_assay": {
+    "signal_family": "low_frequency_lateralized_potential",
+    "passband_hz": [
+      0.5,
+      4
+    ],
+    "baseline_window_seconds_from_cue": [
+      -1,
+      0
+    ],
+    "active_window_seconds_from_cue": [
+      1,
+      3
+    ],
+    "channel_groups": "registered_left_and_right_sensorimotor_sets",
+    "contralateral_mapping": {
+      "left_fist_T1": "sensorimotor_right",
+      "right_fist_T2": "sensorimotor_left"
+    },
+    "statistic": "ipsilateral_active_minus_baseline_minus_contralateral_active_minus_baseline",
+    "registered_direction": "greater_than_zero_for_stronger_contralateral_negativity",
+    "minimum_participants_in_registered_direction": 8,
+    "maximum_exact_one_sided_participant_sign_flip_p": 0.05,
+    "computed_by_isolated_scorer_after_final_target_delivery": true,
+    "may_select_rescue_or_update_model": false
+  },
+  "statistical_contract": {
+    "participant_is_inference_unit": true,
+    "trial_independence_claim": false,
+    "balanced_accuracy_formula": "mean_of_T1_recall_and_T2_recall",
+    "macro_participant_balanced_accuracy": "arithmetic_mean_of_twelve_participant_balanced_accuracies",
+    "exact_sign_flip_method": "enumerate_all_4096_sign_assignments_over_twelve_participant_values_with_observed_included",
+    "one_sided_tail": "null_statistic_at_least_observed",
+    "zero_difference_handling": "retain_zero_under_both_signs",
+    "post_target_threshold_selection": false
+  },
+  "frozen_gates": {
+    "H1_execution_native_cohort_confirmation": {
+      "final_event_count": 180,
+      "minimum_correct_count": 117,
+      "minimum_pooled_balanced_accuracy": 0.65,
+      "minimum_macro_participant_balanced_accuracy": 0.625,
+      "minimum_participants_strictly_above_0_5_balanced_accuracy": 9,
+      "maximum_exact_one_sided_participant_sign_flip_p": 0.01,
+      "minimum_pooled_margin_over_execution_no_signal": 0.1,
+      "minimum_macro_margin_over_execution_no_signal": 0.1
+    },
+    "H2_imagery_native_task_mode_robustness": {
+      "final_event_count": 180,
+      "minimum_pooled_balanced_accuracy": 0.6,
+      "minimum_macro_participant_balanced_accuracy": 0.6,
+      "minimum_participants_strictly_above_0_5_balanced_accuracy": 8,
+      "maximum_exact_one_sided_participant_sign_flip_p": 0.05,
+      "cross_task_transfer_is_diagnostic_not_rescue": true
+    },
+    "H3_motor_compatible_localization": {
+      "minimum_central_pooled_balanced_accuracy": 0.6,
+      "minimum_central_macro_participant_balanced_accuracy": 0.6,
+      "minimum_central_minus_strongest_proxy_pooled_margin": 0.05,
+      "minimum_central_minus_strongest_proxy_macro_margin": 0.05,
+      "strongest_proxy_set": [
+        "execution_frontal_proxy",
+        "execution_occipital_proxy",
+        "execution_frontal_asymmetry"
+      ],
+      "maximum_exact_paired_participant_sign_flip_p": 0.05,
+      "minimum_lateralization_participants_in_registered_direction": 8,
+      "maximum_lateralization_exact_sign_flip_p": 0.05
+    },
+    "mandatory_control_ceilings": {
+      "maximum_pooled_and_macro_balanced_accuracy": 0.6,
+      "conditions": [
+        "execution_frontal_proxy",
+        "execution_occipital_proxy",
+        "execution_frontal_asymmetry",
+        "execution_early_cue",
+        "execution_pre_cue",
+        "execution_timing_only",
+        "execution_all_zero_final_signal",
+        "execution_train_label_derangement",
+        "execution_one_trial_final_signal_displacement",
+        "execution_channel_derangement"
+      ],
+      "central_hemisphere_swap_maximum_pooled_and_macro_balanced_accuracy": 0.6,
+      "minimum_unswapped_central_minus_swapped_pooled_and_macro_margin": 0.05,
+      "execution_and_imagery_no_signal_balanced_accuracy_required": 0.5,
+      "proxy_pass_proves_brain_specific_origin": false
+    }
+  },
+  "ordered_verdict_router": [
+    {
+      "verdict": "WO9R-R0",
+      "condition": "any_integrity_event_target_firewall_prediction_freeze_access_order_or_resource_gate_fails",
+      "maximum_claim": "invalid_or_incomplete_registered_execution"
+    },
+    {
+      "verdict": "WO9R-R1",
+      "condition": "H1_execution_native_cohort_confirmation_fails",
+      "maximum_claim": "three_person_low_frequency_effect_did_not_confirm_under_the_frozen_cohort_test"
+    },
+    {
+      "verdict": "WO9R-R2",
+      "condition": "H1_passes_and_H2_imagery_native_fails",
+      "maximum_claim": "execution_task_information_confirmed_in_a_new_cohort_without_imagery_robustness"
+    },
+    {
+      "verdict": "WO9R-R3",
+      "condition": "H1_and_H2_pass_but_H3_or_any_mandatory_confound_control_fails",
+      "maximum_claim": "low_frequency_task_information_robust_across_execution_and_imagery_but_motor_compatible_localization_unsupported"
+    },
+    {
+      "verdict": "WO9R-R4",
+      "condition": "H1_H2_H3_and_every_mandatory_control_pass",
+      "maximum_claim": "multi_person_held_out_motor_compatible_low_frequency_EEG_task_effect_within_EEGMMIDB_not_brain_specific"
+    }
+  ],
+  "prediction_freeze": {
+    "private_prediction_payloads_committed": false,
+    "aggregate_hash_only_ledger_required": true,
+    "ledger_binds_all_216_participant_condition_payload_hashes": true,
+    "ledger_binds_input_split_config_code_dependency_and_sealed_target_firewall_receipt_hashes": true,
+    "individual_prediction_probability_target_or_participant_outcome_in_ledger": false,
+    "run11_and_run12_predictions_freeze_together": true,
+    "freeze_commit_must_be_pushed": true,
+    "base_python_and_optional_neuro_jobs_must_be_green": true,
+    "final_targets_may_be_delivered_to_scorer_before_remote_green_freeze": false,
+    "final_target_deliveries": 1,
+    "final_scoring_events": 1
+  },
+  "dependency_contract": {
+    "base_dependency_changes": false,
+    "new_install_authorized_now": false,
+    "existing_git_ignored_environment": ".codex_work/physionet_motor_positive_control/.venv",
+    "exact_required_versions": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.0",
+      "mne": "1.12.1",
+      "scikit_learn": "1.9.0",
+      "pyriemann": "0.12"
+    },
+    "mismatch_policy": "park_without_install_fallback_or_substitution",
+    "network_for_dependency_resolution": false
+  },
+  "resource_caps": {
+    "acquisition": {
+      "invocations": 1,
+      "cpu_threads": 1,
+      "workers": 1,
+      "concurrent_numerical_jobs": 1,
+      "wall_time_seconds": 900,
+      "peak_rss_bytes": 268435456,
+      "metadata_body_bytes": 2097152,
+      "edf_payload_requests": 72,
+      "edf_payload_bytes": 184252032,
+      "peak_incremental_disk_bytes": 402653184,
+      "minimum_free_disk_bytes_before": 21474836480,
+      "receipt_bytes": 1048576,
+      "retries": 0,
+      "reruns": 0
+    },
+    "analysis_and_scoring": {
+      "registered_analysis_executions": 1,
+      "cpu_threads": 1,
+      "workers": 1,
+      "concurrent_numerical_jobs": 1,
+      "wall_time_seconds_through_prediction_freeze": 1800,
+      "peak_rss_bytes": 1073741824,
+      "private_generated_bytes": 67108864,
+      "public_freeze_and_result_bytes": 2097152,
+      "parameter_update_fits": 144,
+      "target_blind_model_inference_runs": 216,
+      "participant_condition_prediction_sets": 216,
+      "final_target_deliveries": 1,
+      "final_scoring_events": 1,
+      "network_bytes": 0,
+      "new_payload_bytes": 0,
+      "retries": 0,
+      "reruns": 0,
+      "post_target_updates": 0
+    }
+  },
+  "registered_access_order": [
+    "commit_push_and_remote_green_exact_preregistration_contract_and_invariant_tests",
+    "commit_push_and_remote_green_all_false_authorization_request",
+    "record_commit_push_and_remote_green_separate_exact_tier_c_decision",
+    "implement_and_fixture_qualify_with_generated_data_and_mocked_transport_only",
+    "commit_push_and_remote_green_exact_implementation",
+    "metadata_reverify_and_acquire_exact_72_file_bundle_once",
+    "execute_one_target_firewalled_target_blind_analysis_and_create_all_predictions",
+    "commit_push_and_remote_green_aggregate_hash_only_prediction_freeze",
+    "deliver_both_final_target_sets_together_once_score_once_apply_frozen_router_and_stop"
+  ],
+  "required_acceptance_gates": [
+    "registration_request_decision_implementation_and_freeze_commits_are_exact_pushed_and_remotely_green_in_order",
+    "exact_72_file_184252032_byte_inventory_and_official_sha256_values_match",
+    "no_symlink_substitution_event_sidecar_or_unregistered_file",
+    "exact_64_channels_geometry_160Hz_annotations_and_15_task_events_per_file",
+    "all_channels_and_trials_retained_without_target_derived_exclusion",
+    "participant_run_grouping_and_target_firewall_are_exact",
+    "causal_preprocessing_and_every_fit_state_use_fit_runs_only",
+    "exact_144_parameter_update_fits_216_inferences_and_216_prediction_sets",
+    "all_18_condition_families_are_complete_and_deterministic",
+    "run11_and_run12_predictions_freeze_together_before_either_final_target_delivery",
+    "one_combined_final_target_delivery_and_one_scoring_event_only",
+    "ordered_WO9R_R0_through_R4_router_applied_without_post_target_change",
+    "acquisition_and_analysis_resource_caps_all_pass",
+    "every_warning_unavailable_field_counter_and_claim_ceiling_is_explicit"
+  ],
+  "current_access_counters": {
+    "retained_public_metadata_get_requests": 13,
+    "retained_public_metadata_body_bytes": 340703,
+    "total_public_research_metadata_requests_or_bytes_exactly_measured": false,
+    "edf_url_head_requests": 0,
+    "edf_url_get_requests": 0,
+    "edf_payload_bytes": 0,
+    "local_physionet_path_stats": 0,
+    "local_physionet_path_opens": 0,
+    "edf_hash_passes": 0,
+    "edf_header_reads": 0,
+    "edf_annotation_or_event_reads": 0,
+    "edf_signal_sample_reads": 0,
+    "task_target_or_label_reads": 0,
+    "channel_geometry_sampling_or_quality_reads": 0,
+    "event_sidecar_operations": 0,
+    "derivative_or_target_firewall_operations": 0,
+    "dependency_installs": 0,
+    "training_or_parameter_update_runs": 0,
+    "target_blind_model_inference_runs": 0,
+    "prediction_freezes": 0,
+    "final_target_deliveries": 0,
+    "scoring_events": 0,
+    "language_model_or_provider_operations": 0,
+    "RW3_stream_device_or_hardware_operations": 0,
+    "reruns_or_retries": 0
+  },
+  "forbidden_operations": [
+    "any_EDF_url_request_or_local_PhysioNet_operation_before_exact_green_decision_and_green_implementation",
+    "any_event_sidecar_request_stat_open_hash_or_read",
+    "any_additional_file_participant_run_dataset_download_or_substitution",
+    "any_S20_S21_S24_S25_SpanishBCBL_raw_FIF_or_MAT_access",
+    "any_row_random_split_cross_participant_fit_or_group_crossing",
+    "any_run11_or_run12_target_delivery_to_predictive_selection_threshold_channel_or_normalization_code",
+    "any_target_derived_channel_epoch_trial_or_participant_exclusion",
+    "any_evaluation_time_fit_test_time_adaptation_or_post_target_update",
+    "any_filter_window_channel_classifier_threshold_or_hyperparameter_search",
+    "any_dependency_install_version_fallback_model_substitution_or_network_during_analysis",
+    "any_larger_deep_CML_pretrained_foundation_language_or_provider_model",
+    "any_individual_target_prediction_probability_or_participant_outcome_commit_upload_or_publication",
+    "any_retry_rerun_restart_post_outcome_amendment_or_second_final_target_delivery",
+    "any_RW3_stream_device_hardware_release_or_clinical_operation",
+    "any_scientific_claim_upgrade_beyond_WO9R_R4"
+  ],
+  "kill_or_park_rules": [
+    "metadata_path_size_checksum_version_doi_license_or_access_mismatch",
+    "destination_or_work_root_exists_is_symlinked_or_is_not_isolated",
+    "file_header_channel_geometry_sampling_annotation_event_count_or_finite_value_mismatch",
+    "target_firewall_split_condition_count_or_prediction_freeze_mismatch",
+    "dependency_resource_thread_worker_fit_inference_output_or_access_cap_breach",
+    "any_out_of_order_operation_or_forbidden_counter_above_zero",
+    "any_incomplete_prediction_condition_or_missing_participant",
+    "any_attempted_retry_rerun_substitution_or_post_target_update"
+  ],
+  "warnings": [
+    "left_right_motor_action_and_imagery_are_coupled_to_left_right_visual_targets",
+    "separate_EOG_and_EMG_are_unavailable",
+    "frontal_and_occipital_views_are_proxies_not_measured_confound_channels",
+    "proxy_failure_does_not_prove_absence_of_ocular_visual_or_muscle_confound",
+    "actual_movement_onset_is_unavailable",
+    "cue_causal_three_second_decision_is_not_pre_movement_asynchronous_or_end_to_end_latency",
+    "same_public_dataset_and_same_research_team_do_not_constitute_independent_replication",
+    "participant_specific_models_do_not_establish_unseen_person_generalization",
+    "metadata_registration_does_not_establish_EDF_readability_signal_quality_or_event_count"
+  ],
+  "unavailable_fields_now": [
+    "selected_EDF_headers",
+    "observed_channel_names_and_order",
+    "observed_geometry",
+    "observed_sampling_rate",
+    "observed_annotations_and_event_counts",
+    "target_balance",
+    "signal_quality_and_finite_sample_status",
+    "usable_trial_count",
+    "model_fit_success",
+    "individual_or_aggregate_predictions",
+    "accuracy_and_statistical_results",
+    "measured_analysis_runtime_peak_RSS_and_end_to_end_latency"
+  ],
+  "claim_boundary": {
+    "engineering_capability_if_future_execution_is_valid": "One exact metadata-bound resource-bounded target-firewalled twelve-person confirmation protocol with matched execution imagery transfer localization and confound routes.",
+    "maximum_scientific_claim_if_WO9R_R4": "A multi-person held-out motor-compatible low-frequency EEG task effect within EEGMMIDB under the registered proxy controls.",
+    "not_established_even_if_WO9R_R4": "Brain-specific origin independent-team replication unseen-person generalization typing language or thought decoding real-time operation portable hardware home use assistive benefit and clinical utility remain unestablished.",
+    "scientific_claim_established_now": false
+  }
+}
