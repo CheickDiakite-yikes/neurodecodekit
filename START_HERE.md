@@ -415,6 +415,15 @@
    and 1,822 optional tests pass locally. Next commit, push, and require both
    CI jobs green for the exact implementation; only then prepare a separate
    all-false Tier C request. Do not fetch public H2 content from this record.
+   Exact implementation `9f6fef9` passed both jobs in CI `31430151368`, and the
+   all-false request is now prepared in
+   `docs/IACKD_CHANNEL_ROLE_GEOMETRY_AUTHORIZATION_PACKET.md` and its registry.
+   It binds one possible later 316-request/457,602-byte public metadata audit,
+   but authorizes zero requests now. First commit, push, and remotely green the
+   packet. Then identify that sole packet, exact commit, CI, scope, and gate to
+   the maintainer. Only a fresh unambiguous response after that identification
+   may become a separate decision record; earlier continuation is not
+   retroactive authorization.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

@@ -5252,3 +5252,32 @@ Evidence: `docs/IACKD_CHANNEL_ROLE_GEOMETRY_IMPLEMENTATION.md`,
 `registries/iackd_channel_role_geometry_implementation.v0.json`,
 `src/neurodecodekit/preprocess/iackd_channel_roles.py`, and
 `tests/test_iackd_channel_roles.py`.
+
+## 0152 - Request One Public IACKD Role And Geometry Audit
+
+Decision: after exact implementation `9f6fef9` passed both required jobs in CI
+`31430151368`, prepare one all-false Tier C request for the smallest observation
+that can freeze a count-agnostic sensor-role map. Do not treat the packet or an
+earlier maintainer continuation as authorization.
+
+Requested scope: exactly 316 already inventoried OpenNeuro bodies totaling
+457,602 bytes: 128 channel tables, 128 EEG sidecars, 30 electrode tables, and
+30 coordinate-system files. Request them sequentially, validate exact response
+identity, hash and parse each once in memory, discard each before the next,
+pair only through private keys, and emit one aggregate compatibility ledger.
+
+Boundary: retain zero raw body, path, participant, per-run row, coordinate,
+free text, signal, event, trajectory, target, feature, model, prediction, or
+score. The retained bundle, VHDR/VMRK/EEG, every unregistered object, IACKD-2,
+dependencies, providers, hardware, retries, reruns, releases, and claim
+upgrades remain unauthorized.
+
+Sequence: the request must first be committed, pushed, and both CI jobs must
+pass. Codex must then identify that exact commit, CI, sole scope, and gate
+before a fresh unambiguous maintainer `continue`, `approve`, or `proceed` may
+bind it by reference in a separate decision quoting the actual words. Only a
+green decision commit can open the one execution.
+
+Evidence: `docs/IACKD_CHANNEL_ROLE_GEOMETRY_AUTHORIZATION_PACKET.md`,
+`registries/iackd_channel_role_geometry_authorization_request.v0.json`, and
+`tests/test_iackd_channel_role_geometry_authorization_request.py`.

@@ -947,3 +947,11 @@ focused, 1,751 base, and 1,822 optional tests pass locally. The exact
 implementation must be committed, pushed, and remotely green before the one
 all-false H2 public-body packet is prepared; no real H2 body or IACKD-2
 operation is open.
+
+Implementation `9f6fef9` passed both jobs in CI `31430151368`. The all-false
+packet now binds one possible later sequential audit of the exact 316 public
+metadata bodies and 457,602 bytes under 180 seconds, 256 MiB RSS, 2 MiB network
+body, 4 MiB disk, 2 MiB output, and zero retry/rerun. Preparing it performed no
+request or parse and authorizes none. Its commit and both CI jobs must become
+green before it is identified as the sole active Tier C packet; a fresh
+maintainer decision is then still required.

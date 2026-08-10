@@ -6716,3 +6716,29 @@ bounded aggregate interface without touching retained EEG data.
 Scientific claim not established: the clean R4 is generated-fixture behavior;
 no public H2 body, EEG sample, event, trajectory, target, model, prediction, or
 score was accessed, so there is no new neural or decoding evidence.
+
+## 2026-08-10 - IACKD-H2 All-False Authorization Request Prepared
+
+- Exact implementation `9f6fef9540ae0a1fe52cbf24b17b0af89147beae`
+  passed Base Python job `93591323731` and Optional Neuro Readers job
+  `93591323646` in CI `31430151368` before packet preparation.
+- The packet binds exactly 128 channel tables, 128 EEG sidecars, 30 electrode
+  tables, and 30 coordinate systems: 316 public bodies and 457,602 bytes.
+- It requests one future sequential pass, one SHA and one semantic parse per
+  body, one private consumed marker, one aggregate ledger, one thread, 180
+  seconds, 256 MiB RSS, 2 MiB network body, 4 MiB disk, 2 MiB output, and zero
+  retry/rerun.
+- All real request, parse, consumed-marker, output, local-bundle, VHDR/sibling,
+  signal, event, trajectory, target, model, score, dependency, provider,
+  hardware, release, IACKD-2, and claim authorization flags are false.
+- Ten invariants verify both green parent commits, every bound artifact hash,
+  exact scope/order/resources, future decision shape, zero counters, and claim
+  boundary.
+
+Engineering capability requested: one measured public metadata audit may
+freeze whether a count-agnostic source role and geometry contract is compatible
+with all registered IACKD files.
+
+Scientific claim not established: this request is not data or a result and
+adds no neural, decoding, localization, generalization, real-time, hardware,
+assistive, or clinical evidence.

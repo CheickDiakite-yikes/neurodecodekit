@@ -211,6 +211,14 @@ peak RSS with 8,282 output bytes. Constructed `IACKDR-R4` is not source
 evidence. Commit, push, and obtain both green CI jobs before preparing a
 separate all-false Tier C request; no H2 body or local bundle is open.
 
+Exact implementation `9f6fef9` passed both jobs in CI `31430151368`. Read the
+new all-false packet and machine request. They bind one possible later
+316-request/457,602-byte public metadata audit, one private consumed marker,
+one aggregate ledger, one thread, 180 seconds, 256 MiB RSS, and zero
+retry/rerun. Every real-access flag remains false. Commit, push, and remotely
+green the packet, then identify its sole scope before requesting a fresh
+packet-bound maintainer decision. Do not issue a request from the packet.
+
 Registration `2a7b4188553e221133d788a081b838dbbb9f41bb` passed Base Python
 job `93215490492` and Optional Neuro Readers job `93215490501` in CI
 `31301730612`. The additive authorization packet and all-false machine request

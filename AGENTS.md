@@ -177,6 +177,18 @@ constructed `IACKDR-R4`; it has no source or scientific meaning. Forty-seven
 focused, 1,751 base, and 1,822 optional tests pass locally. Commit, push, and
 obtain both green CI jobs for this exact implementation before preparing one
 all-false Tier C request. Never fetch an H2 body from the fixture result.
+Exact implementation `9f6fef9540ae0a1fe52cbf24b17b0af89147beae`
+passed Base Python job `93591323731` and Optional Neuro Readers job
+`93591323646` in CI `31430151368`. Read
+`docs/IACKD_CHANNEL_ROLE_GEOMETRY_AUTHORIZATION_PACKET.md` and
+`registries/iackd_channel_role_geometry_authorization_request.v0.json`. The
+request is all false and binds one possible later sequential audit of exactly
+316 public metadata bodies and 457,602 bytes. Its commit must be pushed and
+both CI jobs must pass before Codex identifies it as the sole Tier C packet.
+Only a fresh unambiguous packet-bound maintainer message after that
+identification may be recorded in a separate decision. Do not use the current
+or any earlier `continue` retroactively, and do not request a body from the
+packet alone.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
