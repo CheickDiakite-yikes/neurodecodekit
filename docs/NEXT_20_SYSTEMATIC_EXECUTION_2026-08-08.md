@@ -110,16 +110,20 @@ all-false authorization packet and machine request are prepared separately;
 they authorize nothing before their own remotely green commit and an exact
 maintainer decision.
 
-WO9R status: **Research, preregistration, and green all-false request complete;
-packet-bound decision remotely green; exact implementation generated-fixture
-qualified and awaiting its own remote-green commit before the one acquisition
-or real analysis.**
+WO9R status: **Research, registration, authorization, implementation,
+acquisition, and target-blind analysis complete; combined hash-only freeze
+awaiting its own remote-green commit before one final score.**
 Decision `1efeac7` passed CI `31355944651`. The implementation completed one
 72-run generated roundtrip with 144 fits and 216 target-blind prediction sets
 in 12.083017 seconds at 260,784,128-byte peak RSS and 4,215,687 output bytes.
 No real EDF or target was opened, network bytes were zero, and generated files
-were removed. Read
-`docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_IMPLEMENTATION.md`.
+were removed. Implementation `8242674` passed CI `31359548779` before one
+184,252,032-byte acquisition and one target-blind analysis. All 72 official
+hashes matched. The analysis accepted 1,080 events and completed 144 fits and
+216 prediction sets in 19.864386 seconds at 303,153,152-byte peak RSS. Zero
+final targets reached the model stage and no score exists. Read
+`docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_IMPLEMENTATION.md` and
+`docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PREDICTION_FREEZE.md`.
 Audit label: **short-form packet-bound decision prepared**. It was then
 committed, pushed, and remotely green before implementation.
 It is deliberately outside the numbered 1-20 table so that the frozen

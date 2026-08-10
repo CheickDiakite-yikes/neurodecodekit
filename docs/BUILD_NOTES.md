@@ -6242,3 +6242,48 @@ confirmation pipeline with aggregate-only one-shot scoring.
 Scientific claim not established: no real S004-S015 EDF or target was opened,
 so no cohort confirmation, neural effect, brain-specific origin,
 generalization, decoding, latency, hardware, or human-benefit result was added.
+
+## 2026-08-10 - WO9R Real Predictions Frozen Before Scoring
+
+- Verified exact implementation `8242674e5821b2c923c0c79baa3a6ea20a27d838`
+  remotely green in CI `31359548779`, including Base Python job `93365527795`
+  and Optional Neuro Readers job `93365527849`, before any registered real
+  operation.
+- Consumed the one no-retry acquisition. All 72 registered S004-S015 EDFs
+  matched their official SHA-256 values over exactly 184,252,032 payload bytes.
+  Runtime was 518.051205 seconds, peak RSS was 73,089,024 bytes, metadata bodies
+  totaled 522,962 bytes, and retained bundle plus receipts used 184,274,970
+  bytes. Acquisition parsed zero EDF headers, annotations, signals, or targets.
+- Consumed the one target-blind analysis. It accepted 1,080 task events,
+  created 720 labeled fit rows and 360 target-free final rows, completed exactly
+  144 participant-specific fits and 216 prediction sets across 18 conditions,
+  and exposed zero final targets to the model stage.
+- Analysis through freeze used 19.864386 seconds, 303,153,152-byte peak RSS,
+  4,206,464 private bytes, one CPU thread, one worker, zero network bytes, and
+  zero new payload bytes.
+- Wrote the 23,174-byte aggregate public freeze with SHA-256
+  `6a546ca32a92b35c9c3448cecb5831f926d02f519a563d2ad803944c8d1f487a`.
+  It binds all 216 prediction hashes plus source, code, split, configuration,
+  dependencies, derivatives, private payload, resources, and counters. It
+  contains no individual prediction, probability, target, or participant
+  outcome.
+- Added a public freeze document and five invariant tests. No private
+  prediction, derivative, sealed target, or individual outcome was committed.
+  The unrelated tracker inspection NDJSON remains untouched.
+- The complete dependency-free, exact-classical, and broad optional profiles
+  pass 1,533/1,589/1,604 tests with 177/34/8 expected skips, exactly five tests
+  above the implementation milestone in each profile.
+
+Next gate: commit and push this exact combined freeze and require both CI jobs
+green. Only then may the isolated scorer open the same sealed 360 targets once.
+No retry, rerun, or post-target update is open.
+
+Engineering capability added: the real cohort and every target-blind
+prediction set are now bound to the exact source, implementation, split,
+configuration, dependencies, and resources without publishing individual
+output.
+
+Scientific claim not established: no final target has been delivered or
+scored, so no task accuracy, neural effect, physiology, localization,
+brain-specific origin, generalization, decoding, latency, hardware, or
+human-benefit result is established.

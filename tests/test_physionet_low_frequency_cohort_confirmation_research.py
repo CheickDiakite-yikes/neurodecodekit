@@ -168,20 +168,23 @@ class PhysioNetLowFrequencyCohortConfirmationResearchTests(unittest.TestCase):
         self.assertEqual(resources["reruns"], 0)
         self.assertEqual(resources["post_final_updates"], 0)
 
-    def test_document_and_queue_preserve_the_planning_only_boundary(self):
+    def test_document_and_queue_preserve_the_evidence_boundary(self):
         document = DOC_PATH.read_text(encoding="utf-8")
         self.assertIn("Why This Is The Right Next Experiment", document)
         self.assertIn("S004-S015", document)
         self.assertIn("WO9R-R4", document)
         self.assertIn("Scientific claim not established", document)
-        queue = QUEUE_PATH.read_text(encoding="utf-8")
+        queue_raw = QUEUE_PATH.read_text(encoding="utf-8")
+        queue = " ".join(queue_raw.split())
         self.assertIn("Work order 9R", queue)
         self.assertIn(
-            "Research, preregistration, and green all-false request complete",
+            "acquisition, and target-blind analysis complete",
             queue,
         )
+        self.assertIn("combined hash-only freeze", queue)
+        self.assertIn("Zero final targets reached the model stage and no score exists", queue)
         self.assertIn("short-form packet-bound decision prepared", queue)
-        self.assertEqual(sum(line.startswith("| ") for line in queue.splitlines()), 21)
+        self.assertEqual(sum(line.startswith("| ") for line in queue_raw.splitlines()), 21)
 
 
 if __name__ == "__main__":

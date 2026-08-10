@@ -854,6 +854,10 @@ acquisition, target firewall, 144-fit, 216-prediction-set, combined-freeze, and
 isolated-scorer implementation is generated-fixture qualified: 72 generated
 runs completed in 12.083017 seconds at 260,784,128-byte peak RSS with
 4,215,687 output bytes, zero network, and zero real reads. Generated files were
-removed. Acquisition and real analysis remain gated until the exact
-implementation commit is pushed and remotely green; final targets remain gated
-until the later combined freeze is remotely green.
+removed. Implementation `8242674` passed both jobs in CI `31359548779` before
+one 72-file acquisition and one target-blind analysis. All official hashes
+matched over 184,252,032 bytes. The analysis accepted 1,080 events, completed
+144 fits and 216 prediction sets, and emitted one aggregate combined freeze in
+19.864386 seconds at 303,153,152-byte peak RSS. Zero final targets reached the
+model stage and no score exists. Final targets remain gated until this exact
+combined freeze commit is remotely green.

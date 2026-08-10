@@ -1871,9 +1871,19 @@ replay, malformed metadata/payload/cache/freeze/private predictions, target
 leakage, exact counts, output/resource caps, symlink refusal, dry-run CLIs, and
 both consumed-before-access invariants.
 
-Next gate: commit and push this exact implementation and require both CI jobs
-green at the same commit. Do not acquire, stat, open, hash, or parse the
-registered S004-S015 bundle before that green proof. Afterward consume only the
-one registered acquisition and target-blind analysis. Do not open either final
-target set until the combined prediction freeze is committed, pushed, and
-remotely green. Preserve the unrelated untracked tracker inspection NDJSON.
+Implementation `8242674e5821b2c923c0c79baa3a6ea20a27d838` passed Base
+Python job `93365527795` and Optional Neuro Readers job `93365527849` in CI
+`31359548779` before the one real acquisition and target-blind execution. All
+72 official EDF hashes matched over 184,252,032 bytes. Acquisition used
+518.051205 seconds and 73,089,024-byte peak RSS. The analysis accepted 1,080
+events, created 720 fit rows and 360 target-free final rows, completed 144 fits
+and 216 prediction sets, and emitted the combined aggregate freeze in
+19.864386 seconds at 303,153,152-byte peak RSS. No final target reached the
+model stage and no score exists.
+
+Read `docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PREDICTION_FREEZE.md`
+and its public ledger. Next gate: commit and push the exact freeze milestone
+and require both CI jobs green at that commit. Only then may the isolated
+scorer open the same sealed 360 targets once and apply the frozen router. No
+retry, rerun, post-target update, or broader claim is open. Preserve the
+unrelated untracked tracker inspection NDJSON.

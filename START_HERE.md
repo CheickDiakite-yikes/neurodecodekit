@@ -317,9 +317,14 @@
    freeze, and isolated scorer are generated-fixture qualified. The measured
    72-run fixture used 12.083017 seconds, 260,784,128-byte peak RSS, and
    4,215,687 bytes with zero real or network access; its files were removed.
-   Real acquisition remains closed until this exact implementation commit is
-   pushed and both CI jobs are green. Final targets remain closed until a later
-   combined prediction-freeze commit is remotely green.
+   Implementation `8242674` passed both jobs in CI `31359548779` before the one
+   real acquisition and target-blind run. Now read
+   `docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PREDICTION_FREEZE.md`.
+   All 72 official hashes matched over 184,252,032 bytes, and the analysis
+   froze 216 prediction sets after 144 fits while exposing zero final targets
+   to the model stage. This is a hash-bound engineering milestone, not a
+   scientific result. Final targets remain closed until this exact combined
+   freeze commit is remotely green.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

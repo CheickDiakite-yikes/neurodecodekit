@@ -4855,3 +4855,34 @@ Evidence:
 `src/neurodecodekit/experiments/physionet_low_frequency_cohort_confirmation.py`,
 `tests/test_physionet_low_frequency_acquisition.py`, and
 `tests/test_physionet_low_frequency_cohort_confirmation.py`.
+
+## 0138 - Freeze Execution And Imagery Together Before Any WO9R Score
+
+Decision: consume the single registered acquisition and target-blind analysis
+only after exact implementation `8242674` passed both required jobs in CI
+`31359548779`. Keep run-11 execution and run-12 imagery predictions in one
+combined freeze so neither final target set can influence the other arm,
+control interpretation, routing, or publication.
+
+Result: all 72 official hashes matched over 184,252,032 bytes. The analysis
+accepted 1,080 events, produced 720 fit rows and 360 target-free final rows,
+completed exactly 144 fits and 216 participant-condition prediction sets, and
+exposed zero final targets to the model stage. Runtime through freeze was
+19.864386 seconds at 303,153,152-byte peak RSS with 4,206,464 private bytes,
+one thread, and zero network or new payload bytes.
+
+Publication rule: commit only the aggregate 23,174-byte freeze. It may contain
+per-condition and per-participant prediction hashes, but no prediction,
+probability, target, participant metric, or participant outcome. Keep every
+private derivative and prediction under the Git-ignored execution root.
+
+Current boundary: the freeze is not a scientific result. The same combined 360
+targets may open exactly once only after this exact freeze commit is pushed and
+both CI jobs are remotely green. Scoring then applies the frozen router without
+any refit, selection, threshold, channel, control, or claim change.
+
+Evidence:
+`docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PREDICTION_FREEZE.md`,
+`registries/physionet_low_frequency_cohort_confirmation_prediction_freeze.v0.json`,
+and
+`tests/test_physionet_low_frequency_cohort_confirmation_prediction_freeze.py`.
