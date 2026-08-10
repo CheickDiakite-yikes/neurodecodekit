@@ -142,10 +142,14 @@ and the opposite visual target direction. The metadata-only inventory selects
 1,340 raw EEG, marker, event, EOG-bearing source, ball, and Leap Motion objects
 totaling 7,249,113,684 bytes while excluding published MATLAB derivatives.
 No IACKD payload content, channel table, event, kinematic sample, target,
-model, prediction, or score has been opened. The research record is complete;
-preregistration and a separate all-false Tier C packet are the next ordered
-work. This additive lane does not renumber work orders 10-20 and does not
-reopen WO9R.
+model, prediction, or score has been opened. Research commit `d6f955e` passed
+both jobs in CI `31399402403`. The exact preregistration now freezes the
+participant-hand split, 30 ms target-blind motion guard, fixed 0.5-4 Hz model,
+recorded HEOG/VEOG controls, 300-fit ceiling, 420 prediction sets, one combined
+target delivery, `IACKD-R0` through `IACKD-R4` router, and one-thread 10 GiB
+payload ceiling. A separate all-false Tier C packet is the next ordered work.
+This additive lane does not renumber work orders 10-20 and does not reopen
+WO9R.
 
 Registration `2a7b4188553e221133d788a081b838dbbb9f41bb` passed Base Python
 job `93215490492` and Optional Neuro Readers job `93215490501` in CI
