@@ -5982,3 +5982,59 @@ Scientific claim not established: no final target has opened or been scored,
 so this milestone establishes no motor-task accuracy, neural effect,
 motor-compatible physiology, brain-specific origin, generalization, decoding,
 latency, device, assistive, or clinical result.
+
+## 2026-08-09 - Work Order 9 Final Score Consumed
+
+- Verified freeze `01eeff6e9a5ead1790e0f91aa52a443402eb397c` passed Base
+  Python job `93345130576` and Optional Neuro Readers job `93345130569` in CI
+  `31352250838` before target access.
+- Opened the same sealed 45-target artifact once, verified every private
+  payload and per-condition prediction hash, computed aggregate-only metrics,
+  and applied the frozen router without changing a model, condition,
+  threshold, exclusion, or claim rule.
+- The selected 8-30 Hz CSP-LDA primary reached 27/45 correct, 0.603755 pooled
+  balanced accuracy, 0.592262 macro-participant balanced accuracy, and
+  `p=0.137390`. It beat the 0.500 no-signal prior but failed the 30-correct,
+  0.65 pooled, 0.60 macro, and `p<=0.05` conjunction. The registered verdict
+  is `WO9-V1`.
+- The prespecified non-selection 0.5-4 Hz shrinkage-LDA comparator reached
+  36/45, 0.800395 pooled balanced accuracy, 0.800595 macro-participant
+  balanced accuracy, minimum-participant 0.732143, all three participants
+  above chance, and `p=0.000183`.
+- The low-frequency result is valid held-out task-information evidence, not a
+  retrospectively promoted primary. The visually lateralized cue, unavailable
+  EOG/EMG, and failed localization/physiology conjunction leave cue, ocular,
+  movement, and distributed slow-potential explanations open.
+- Motor physiology had the registered negative direction in two participants
+  and pooled effect `-0.083918`, but failed at `p=0.108337`. Nine of ten
+  confound components passed; central-minus-frontal/occipital failed because
+  central BA was 0.534585 versus 0.624506 for the proxy.
+- Total registered runtime was 9.661659 seconds, peak RSS was 460,734,464
+  bytes, private output was 20,852,334 bytes, and public result output was
+  10,443 bytes. One target delivery and one score occurred; network/new
+  payload, retry, and rerun counts were zero. Every resource gate passed.
+- No individual prediction, probability, target, participant metric, or
+  participant outcome is public. The private execution root remains
+  Git-ignored and must not be reopened, committed, or published.
+- Forty-five focused checks passed with two expected optional skips. The final
+  complete broad suite ran 1,521 tests with five expected skips, and the
+  isolated classical suite ran 1,506 with 34 expected skips.
+
+Next route: preserve `WO9-V1` and the strong secondary low-frequency lead.
+Any new experiment must use untouched participants/runs, preregister the slow-
+potential hypothesis prospectively, add cue/ocular/localization controls, and
+obtain a separate real-data decision. Work order 9 itself has no rerun.
+
+Engineering capability added: NeuroDecodeKit completed one end-to-end,
+prediction-freeze-protected, aggregate-scored public EEG experiment under its
+exact resource and leakage contract.
+
+Scientific result established: the prespecified causal 0.5-4 Hz whole-head
+comparator recovered held-out left/right task information at 0.800 balanced
+accuracy and `p=0.000183` in this three-person dataset.
+
+Scientific claim not established: the selected primary, motor-physiology, and
+central-localization conjunctions failed, so brain-specific motor origin,
+unseen-person generalization, typing, language or thought decoding, real-time
+performance, portable hardware, home use, assistive benefit, and clinical
+utility remain unestablished.

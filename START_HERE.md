@@ -274,9 +274,16 @@
    `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PREDICTION_FREEZE.md` and its public
    aggregate ledger. All nine EDF hashes/parses, 135 events, 33 fits, 45
    target-blind inferences, and 12 prediction-set hashes completed within the
-   frozen caps. Final-target deliveries and scores remain zero. Do not run the
-   scorer until this exact freeze commit is pushed and both CI jobs are green;
-   then the same 45 sealed targets may open exactly once with no rerun.
+   frozen caps. Freeze `01eeff6` passed both jobs in CI `31352250838` before
+   one target delivery and score. Now read
+   `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_RESULT.md` and its aggregate result.
+   The selected 8-30 Hz primary failed at 27/45, 0.604 balanced accuracy, and
+   `p=0.137`, routing `WO9-V1`. The prespecified 0.5-4 Hz comparator reached
+   36/45, 0.800 balanced accuracy, and `p=0.000183`, a strong held-out task-
+   information result that remains cue/confound-compatible because motor
+   physiology and central-over-proxy localization failed. Work order 9 is
+   complete and consumed. Do not reopen, rerun, tune, or promote it into a
+   brain-specific, typing, language, real-time, or hardware claim.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

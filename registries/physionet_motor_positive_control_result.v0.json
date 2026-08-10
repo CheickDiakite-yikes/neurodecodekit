@@ -1,0 +1,252 @@
+{
+  "authorization_decision_sha256": "33c066ecc54953d7ec5fb17da894856a7622e66c1aadd4a5b709c79429e0a246",
+  "claim_boundary": {
+    "maximum_if_WO9_V3": "A three-person held-out-run motor-task EEG pilot with motor-compatible sensorimotor physiology under the registered proxy controls.",
+    "not_established": "Brain-specific origin unseen-person generalization typing language or thought decoding real-time performance portable hardware home use assistive benefit and clinical utility remain unestablished."
+  },
+  "condition_metrics": {
+    "all_zero_final_signal": {
+      "correct_count": 23,
+      "macro_participant_balanced_accuracy": 0.5,
+      "minimum_participant_balanced_accuracy": 0.5,
+      "one_sided_within_participant_permutation_p": 1.0,
+      "participants_above_0_5_balanced_accuracy": 0,
+      "permutation_draws": 32767,
+      "pooled_balanced_accuracy": 0.5148221343873518
+    },
+    "central_sensorimotor_channel_model": {
+      "correct_count": 24,
+      "macro_participant_balanced_accuracy": 0.5208333333333334,
+      "minimum_participant_balanced_accuracy": 0.2589285714285714,
+      "one_sided_within_participant_permutation_p": 0.508880615234375,
+      "participants_above_0_5_balanced_accuracy": 2,
+      "permutation_draws": 32767,
+      "pooled_balanced_accuracy": 0.5345849802371542
+    },
+    "event_index_and_timing_only_model": {
+      "correct_count": 21,
+      "macro_participant_balanced_accuracy": 0.4672619047619048,
+      "minimum_participant_balanced_accuracy": 0.4017857142857143,
+      "one_sided_within_participant_permutation_p": 0.76318359375,
+      "participants_above_0_5_balanced_accuracy": 1,
+      "permutation_draws": 32767,
+      "pooled_balanced_accuracy": 0.46739130434782605
+    },
+    "fixed_left_right_hemisphere_swap": {
+      "correct_count": 24,
+      "macro_participant_balanced_accuracy": 0.5416666666666666,
+      "minimum_participant_balanced_accuracy": 0.4375,
+      "one_sided_within_participant_permutation_p": 0.323028564453125,
+      "participants_above_0_5_balanced_accuracy": 1,
+      "permutation_draws": 32767,
+      "pooled_balanced_accuracy": 0.5424901185770751
+    },
+    "fixed_one_trial_final_signal_displacement": {
+      "correct_count": 25,
+      "macro_participant_balanced_accuracy": 0.5476190476190476,
+      "minimum_participant_balanced_accuracy": 0.4375,
+      "one_sided_within_participant_permutation_p": 0.343231201171875,
+      "participants_above_0_5_balanced_accuracy": 2,
+      "permutation_draws": 32767,
+      "pooled_balanced_accuracy": 0.5592885375494071
+    },
+    "fixed_train_label_derangement": {
+      "correct_count": 24,
+      "macro_participant_balanced_accuracy": 0.5357142857142857,
+      "minimum_participant_balanced_accuracy": 0.4464285714285714,
+      "one_sided_within_participant_permutation_p": 0.41766357421875,
+      "participants_above_0_5_balanced_accuracy": 2,
+      "permutation_draws": 32767,
+      "pooled_balanced_accuracy": 0.5385375494071146
+    },
+    "fixed_validation_channel_derangement": {
+      "correct_count": 21,
+      "macro_participant_balanced_accuracy": 0.48214285714285715,
+      "minimum_participant_balanced_accuracy": 0.4464285714285714,
+      "one_sided_within_participant_permutation_p": 0.876495361328125,
+      "participants_above_0_5_balanced_accuracy": 0,
+      "permutation_draws": 32767,
+      "pooled_balanced_accuracy": 0.4762845849802371
+    },
+    "frontal_occipital_proxy_channel_model": {
+      "correct_count": 28,
+      "macro_participant_balanced_accuracy": 0.6130952380952381,
+      "minimum_participant_balanced_accuracy": 0.5089285714285714,
+      "one_sided_within_participant_permutation_p": 0.09320068359375,
+      "participants_above_0_5_balanced_accuracy": 3,
+      "permutation_draws": 32767,
+      "pooled_balanced_accuracy": 0.6245059288537549
+    },
+    "low_frequency_shrinkage_lda_comparator": {
+      "correct_count": 36,
+      "macro_participant_balanced_accuracy": 0.8005952380952381,
+      "minimum_participant_balanced_accuracy": 0.7321428571428572,
+      "one_sided_within_participant_permutation_p": 0.00018310546875,
+      "participants_above_0_5_balanced_accuracy": 3,
+      "permutation_draws": 32767,
+      "pooled_balanced_accuracy": 0.8003952569169961
+    },
+    "pre_cue_model": {
+      "correct_count": 26,
+      "macro_participant_balanced_accuracy": 0.5863095238095238,
+      "minimum_participant_balanced_accuracy": 0.5535714285714286,
+      "one_sided_within_participant_permutation_p": 0.157867431640625,
+      "participants_above_0_5_balanced_accuracy": 3,
+      "permutation_draws": 32767,
+      "pooled_balanced_accuracy": 0.5760869565217391
+    },
+    "selected_full_head_primary": {
+      "correct_count": 27,
+      "macro_participant_balanced_accuracy": 0.5922619047619048,
+      "minimum_participant_balanced_accuracy": 0.4375,
+      "one_sided_within_participant_permutation_p": 0.13739013671875,
+      "participants_above_0_5_balanced_accuracy": 2,
+      "permutation_draws": 32767,
+      "pooled_balanced_accuracy": 0.6037549407114624
+    },
+    "train_only_no_signal_prior": {
+      "correct_count": 22,
+      "macro_participant_balanced_accuracy": 0.5,
+      "minimum_participant_balanced_accuracy": 0.5,
+      "one_sided_within_participant_permutation_p": 1.0,
+      "participants_above_0_5_balanced_accuracy": 0,
+      "permutation_draws": 32767,
+      "pooled_balanced_accuracy": 0.5
+    }
+  },
+  "confound_gate": {
+    "components": {
+      "central_minus_proxy_at_least_0_05": false,
+      "frontal_occipital_proxy_fails_primary": true,
+      "hemisphere_swap_fails_primary": true,
+      "no_signal_deterministic": true,
+      "one_trial_displaced_below_0_60": true,
+      "pre_cue_below_0_60": true,
+      "timing_only_below_0_60": true,
+      "train_label_deranged_below_0_60": true,
+      "validation_channel_derangement_fails_primary": true,
+      "zero_signal_deterministic": true
+    },
+    "passed": false
+  },
+  "contract_sha256": "4f00f8e2cb257e912a947b49268c1476554f3e671eb9322926592df4908b144e",
+  "implementation_commit": "52b9b15a64972a285efbe630f49600727e836983",
+  "individual_outputs": {
+    "participant_outcomes_published": false,
+    "predictions_published": false,
+    "probabilities_published": false,
+    "targets_published": false
+  },
+  "measurements": {
+    "classical_parameter_update_fits": 33,
+    "concurrent_numerical_jobs": 1,
+    "cpu_threads": 1,
+    "decision_latency_seconds_from_cue": 3.0,
+    "end_to_end_latency_measured": false,
+    "final_scoring_events": 1,
+    "final_target_deliveries": 1,
+    "generated_private_output_bytes": 20852334,
+    "input_payload_bytes": 23248224,
+    "network_bytes": 0,
+    "new_payload_bytes": 0,
+    "peak_rss_bytes": 460734464,
+    "prediction_sets": 12,
+    "producer_is_causal": true,
+    "public_result_bytes": 10443,
+    "raw_data_reads": 9,
+    "real_cache_reads": 0,
+    "reruns": 0,
+    "retries": 0,
+    "right_context_seconds": 0.0,
+    "runtime_seconds_through_freeze": 3.049897,
+    "scoring_runtime_seconds": 6.611857,
+    "target_blind_model_inference_runs": 45,
+    "total_runtime_seconds": 9.661659,
+    "workers": 1
+  },
+  "physiology_gate": {
+    "gate_passed": false,
+    "paired_event_sign_flip_p": 0.10833740234375,
+    "participants_with_registered_direction": 2,
+    "pooled_contralateral_minus_ipsilateral": -0.08391842076807846,
+    "registered_direction": "contralateral_minus_ipsilateral_is_negative",
+    "sign_flip_draws": 32767
+  },
+  "prediction_freeze": {
+    "base_python_job_id": 93345130576,
+    "ci_run_id": 31352250838,
+    "commit": "01eeff6e9a5ead1790e0f91aa52a443402eb397c",
+    "ledger_sha256": "3c100daa8a6a2816ce4270c9e32cbdcc4cd30d70d1c255e37596c2ca6f665de4",
+    "optional_neuro_job_id": 93345130569
+  },
+  "primary_gate": {
+    "beats_train_only_no_signal": true,
+    "metrics": {
+      "correct_count": 27,
+      "macro_participant_balanced_accuracy": 0.5922619047619048,
+      "minimum_participant_balanced_accuracy": 0.4375,
+      "one_sided_within_participant_permutation_p": 0.13739013671875,
+      "participants_above_0_5_balanced_accuracy": 2,
+      "permutation_draws": 32767,
+      "pooled_balanced_accuracy": 0.6037549407114624
+    },
+    "passed": false,
+    "threshold_components_passed": false,
+    "train_only_no_signal_metrics": {
+      "correct_count": 22,
+      "macro_participant_balanced_accuracy": 0.5,
+      "minimum_participant_balanced_accuracy": 0.5,
+      "one_sided_within_participant_permutation_p": 1.0,
+      "participants_above_0_5_balanced_accuracy": 0,
+      "permutation_draws": 32767,
+      "pooled_balanced_accuracy": 0.5
+    }
+  },
+  "proof_posture": "aggregate_three_axis_held_out_run_motor_task_EEG_pilot",
+  "resource_gates": {
+    "fits_within_40": true,
+    "one_target_delivery_and_score": true,
+    "one_thread_worker_and_numerical_job": true,
+    "peak_rss_within_805306368_bytes": true,
+    "private_output_within_67108864_bytes": true,
+    "runtime_within_1800_seconds": true,
+    "target_blind_inferences_within_64": true,
+    "zero_network_and_new_payload_bytes": true,
+    "zero_retry_and_rerun": true
+  },
+  "schema_name": "neurodecodekit.physionet_motor_positive_control_result",
+  "schema_version": "0.1.0",
+  "selected_family": "fixed_8_to_30_hz_csp_lda",
+  "source": {
+    "dataset": "PhysioNet EEGMMIDB 1.0.0",
+    "files": 9,
+    "fit_selection_runs": [
+      "03",
+      "07"
+    ],
+    "input_bytes": 23248224,
+    "scored_final_events": 45,
+    "sealed_final_run": "11",
+    "subjects": 3,
+    "task_events": 135
+  },
+  "status": "consumed_one_final_score_no_retry_no_rerun",
+  "unavailable_fields": {
+    "actual_movement_onset": "not provided by the registered dataset surface",
+    "brain_specific_origin": "not identifiable from this visually cued task",
+    "end_to_end_latency": "not measured",
+    "portable_or_home_hardware": "not tested",
+    "separate_EMG": "not present in the registered payload",
+    "separate_EOG": "not present in the registered 64-channel EEG payload",
+    "unseen_person_generalization": "not tested; all models are participant-specific"
+  },
+  "verdict": "WO9-V1",
+  "warnings": [
+    "left_right_motor_action_is_coupled_to_a_left_right_visual_cue",
+    "separate_EOG_and_EMG_are_unavailable",
+    "proxy_failure_does_not_prove_absence_of_ocular_or_muscle_confound",
+    "movement_onset_is_unavailable",
+    "result_is_held_out_run_not_unseen_person_generalization",
+    "end_to_end_latency_was_not_measured"
+  ]
+}

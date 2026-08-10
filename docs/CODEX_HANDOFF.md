@@ -276,6 +276,28 @@
 > post-target change is authorized. Preserve the unrelated tracker inspection
 > NDJSON.
 >
+> Work-order-9 result update, 2026-08-09: freeze
+> `01eeff6e9a5ead1790e0f91aa52a443402eb397c` passed Base Python job
+> `93345130576` and Optional Neuro Readers job `93345130569` in CI
+> `31352250838` before one target delivery and one score. Read
+> `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_RESULT.md` and
+> `registries/physionet_motor_positive_control_result.v0.json`. The selected
+> 8-30 Hz CSP-LDA primary reached 27/45, 0.603755 pooled BA, and `p=0.137390`
+> versus 0.500 for the prior; it failed the frozen primary conjunction and
+> routed `WO9-V1`. The prespecified 0.5-4 Hz comparator reached 36/45, 0.800395
+> pooled BA, 0.800595 macro-participant BA, all three participants above
+> chance, and `p=0.000183`. Preserve that as a strong held-out task-information
+> result, not a retrospectively promoted primary or brain-specific motor
+> claim. Motor physiology failed at `p=0.108337`, and central sensors
+> underperformed the frontal/occipital proxy. Total registered runtime was
+> 9.661659 seconds, peak RSS 460,734,464 bytes, private output 20,852,334
+> bytes, public output 10,443 bytes, and every resource gate passed. Work order
+> 9 is complete and consumed with no rerun. Do not reopen the private root,
+> tune on these outcomes, or publish individual output. A future independent
+> low-frequency replication/localization study needs untouched data, a new
+> preregistration, and separate Tier C authorization. Preserve the unrelated
+> tracker inspection NDJSON.
+>
 > Additive strategy refresh, 2026-08-06: read
 > `docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md` and
 > `registries/open_eeg_rd_strategy.v0.json`. Current open EEG benchmarks

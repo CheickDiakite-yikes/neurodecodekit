@@ -688,7 +688,7 @@ Read this before interpreting any number in the repository.
   separately gated target-blind execution without adding data.
   The post-result suite passes 1,455 tests with the same 3 expected skips and
   493 subtests.
-- **Next decisive experiment, now preregistered:** work order 9 is no longer a
+- **Public EEG positive-control result:** work order 9 is no longer a
   generic "try a classifier" idea. Its prospective contract reuses only the
   nine acquired EDFs and requires three evidence axes to pass together:
   held-out run-11 prediction, motor-compatible central mu/beta physiology, and
@@ -732,8 +732,21 @@ Read this before interpreting any number in the repository.
   3.054760 seconds, peak RSS was 460,734,464 bytes, private output was
   20,852,059 bytes, and network/retry/rerun counters were zero. Read the
   [aggregate freeze record](docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PREDICTION_FREEZE.md).
-  This is still not an accuracy or neural result: scoring remains blocked until
-  the exact freeze commit is pushed and both CI jobs are green.
+  Freeze `01eeff6` passed both jobs in CI `31352250838` before the same 45
+  targets opened once. The selected 8-30 Hz primary reached **27/45**, **0.604
+  balanced accuracy**, and `p=0.137`; it beat the 0.500 no-signal prior but
+  failed the frozen primary gate, so the registered verdict is **`WO9-V1`**.
+  The prespecified 0.5-4 Hz comparator delivered the strongest real result:
+  **36/45**, **0.800 balanced accuracy**, **3/3 participants above chance**,
+  and **`p=0.000183`** on held-out run 11. That is genuine task-information
+  evidence, but it is not retrospectively promoted to the primary result.
+  Motor-compatible physiology was directionally negative in 2/3 participants
+  but nonsignificant (`p=0.108`), and central sensors did not beat the
+  frontal/occipital proxy. The correct conclusion is a strong, compact
+  low-frequency lead that now deserves independent replication and confound
+  localization, not proof of brain-specific motor decoding. Read the
+  [full result and condition breakdown](docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_RESULT.md).
+  Work order 9 is complete and consumed with no rerun.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

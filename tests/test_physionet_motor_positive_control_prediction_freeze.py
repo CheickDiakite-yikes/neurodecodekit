@@ -129,8 +129,12 @@ class PhysioNetMotorPositiveControlPredictionFreezeTests(unittest.TestCase):
             ROOT / "docs/NEXT_20_SYSTEMATIC_EXECUTION_2026-08-08.md"
         ).read_text(encoding="utf-8")
         row = next(line for line in tracker.splitlines() if line.startswith("| 9 |"))
-        self.assertIn("Freeze Pending Remote Green", row)
-        self.assertNotIn("Complete", row)
+        if (ROOT / "registries/physionet_motor_positive_control_result.v0.json").exists():
+            self.assertIn("Complete", row)
+            self.assertIn("Consumed", row)
+        else:
+            self.assertIn("Freeze Pending Remote Green", row)
+            self.assertNotIn("Complete", row)
 
 
 if __name__ == "__main__":

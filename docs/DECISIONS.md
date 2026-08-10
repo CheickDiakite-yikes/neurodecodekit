@@ -4626,3 +4626,44 @@ retry, or rerun is permitted.
 Evidence: `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PREDICTION_FREEZE.md`,
 `registries/physionet_motor_positive_control_prediction_freeze.v0.json`, and
 `tests/test_physionet_motor_positive_control_prediction_freeze.py`.
+
+## 0133 - Close Work Order 9 At WO9-V1 And Preserve The Low-Frequency Lead
+
+Decision: after freeze `01eeff6e9a5ead1790e0f91aa52a443402eb397c`
+passed Base Python job `93345130576` and Optional Neuro Readers job
+`93345130569` in CI `31352250838`, deliver and score the same sealed 45 targets
+once. Apply the frozen router and make no post-target change.
+
+Primary verdict: the selected 8-30 Hz CSP-LDA reached 27/45 correct, 0.603755
+pooled balanced accuracy, 0.592262 macro-participant balanced accuracy, and
+`p=0.137390`. It beat the train-only no-signal prior but failed the frozen
+primary threshold conjunction. Route `WO9-V1` and do not retry, rerun, tune,
+or promote another arm to the registered primary.
+
+Secondary evidence: preserve the prespecified 0.5-4 Hz shrinkage-LDA result of
+36/45, 0.800395 pooled balanced accuracy, 0.800595 macro-participant balanced
+accuracy, minimum participant 0.732143, all three participants above chance,
+and `p=0.000183`. This is legitimate held-out task-information evidence
+because it was fixed, trained on runs 03/07, frozen, and scored once.
+
+Interpretation ceiling: do not call the low-frequency arm brain-specific motor
+decoding. The task has a lateralized visual cue, EOG/EMG are unavailable,
+motor-compatible mu/beta physiology failed at `p=0.108337`, and the central
+sensorimotor model underperformed the frontal/occipital proxy. The result
+supports a slow task-linked signal and a new localization hypothesis only.
+
+Resource closeout: one target delivery, one score, 9.661659 total seconds,
+460,734,464-byte peak RSS, 20,852,334 private bytes, 10,443 public bytes, one
+thread/worker/job, and zero network, new payload, retry, or rerun. Every
+resource gate passed and no individual protected output is public.
+
+Next decision: work order 9 is complete and consumed. Any independent slow-
+potential replication must use untouched participants or runs, prospectively
+freeze the low-frequency model and cue/ocular/localization controls, and obtain
+a new contract plus exact real-data authorization. These consumed targets
+cannot be used to select that future design beyond the aggregate hypothesis
+already recorded here.
+
+Evidence: `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_RESULT.md`,
+`registries/physionet_motor_positive_control_result.v0.json`, and
+`tests/test_physionet_motor_positive_control_result.py`.

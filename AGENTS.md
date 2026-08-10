@@ -35,6 +35,16 @@ silently loosened.
 
 ## Immediate next task
 
+Work order 9 is now complete and consumed at `WO9-V1`. The selected 8-30 Hz
+primary failed, while the prespecified 0.5-4 Hz comparator produced a strong
+held-out secondary result: 36/45, 0.800395 pooled balanced accuracy, and
+`p=0.000183`. Motor physiology and central-over-frontal/occipital localization
+failed, so preserve this as task-information evidence rather than a brain-
+specific motor claim. Do not reopen, rerun, or tune the private Work Order 9
+artifacts. The active next task is Tier A planning for an independent
+low-frequency replication/localization contract using untouched data; any real
+data access or execution needs a new exact Tier C decision.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in
@@ -327,8 +337,7 @@ complete and consumed with no rerun. The payload and private receipts remain
 Git-ignored. A separately offered 10 GB future data ceiling did not amend this
 invocation. Do not parse an EDF or enter work order 9 without a new exact gate.
 
-Work order 9 has now consumed its one target-blind execution successfully. Its
-aggregate freeze must become remotely green before the one sealed score:
+Work order 9 is complete and consumed at `WO9-V1` with no rerun:
 
 ```bash
 cat docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PRIMARY_SOURCE_RESEARCH.md
@@ -338,6 +347,8 @@ cat docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_IMPLEMENTATION.md
 python -m json.tool registries/physionet_motor_positive_control_implementation.v0.json >/dev/null
 cat docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_PREDICTION_FREEZE.md
 python -m json.tool registries/physionet_motor_positive_control_prediction_freeze.v0.json >/dev/null
+cat docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_RESULT.md
+python -m json.tool registries/physionet_motor_positive_control_result.v0.json >/dev/null
 ```
 
 The frozen design reuses only S001-S003 runs 03/07/11. Runs 03/07 are the sole
@@ -383,11 +394,20 @@ seconds at 460,734,464-byte peak RSS with 20,852,059 private bytes. Network,
 new-payload, final-target, score, retry, and rerun counters were zero. The
 public aggregate freeze SHA-256 is
 `3c100daa8a6a2816ce4270c9e32cbdcc4cd30d70d1c255e37596c2ca6f665de4`;
-it contains no individual output. Do not open the private prediction payload,
-derivatives, or sealed target now. Commit and push only the aggregate freeze,
-documentation, tests, and status updates, then require both CI jobs green.
-Only after that exact gate may the same sealed 45 targets open once for the
-aggregate scorer. No retry or rerun is authorized.
+it contains no individual output. Freeze `01eeff6e9a5ead1790e0f91aa52a443402eb397c`
+passed Base Python job `93345130576` and Optional Neuro Readers job
+`93345130569` in CI `31352250838` before one delivery and one aggregate score
+of the same 45 targets. The selected 8-30 Hz primary reached 27/45, 0.603755
+balanced accuracy, and `p=0.137390` versus 0.500 for the no-signal prior. It
+failed the frozen primary gate and routed `WO9-V1`. The prespecified 0.5-4 Hz
+comparator reached 36/45, 0.800395 balanced accuracy, all three participants
+above chance, and `p=0.000183`. Preserve that as real held-out task-information
+evidence, not as a retrospectively selected primary. Motor physiology was
+directionally compatible in two participants but failed at `p=0.108337`, and
+central sensors did not beat the frontal/occipital proxy. Do not reopen the
+private artifacts, rerun, tune, or upgrade to a brain-specific motor claim.
+Any independent low-frequency replication/localization study needs a new
+contract, untouched data, and separate real-data authorization.
 
 The additive foundation-model decoder strategy is now explicit:
 
