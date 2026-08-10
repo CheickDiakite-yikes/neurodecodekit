@@ -1,0 +1,203 @@
+{
+  "H1_execution_native_passed": true,
+  "H2_imagery_native_passed": true,
+  "H3_motor_compatible_localization_passed": false,
+  "base_python_job_id": 93369101655,
+  "claim_boundary": {
+    "maximum": "A multi-person held-out motor-compatible low-frequency EEG task effect within EEGMMIDB under the registered proxy controls.",
+    "not_established": "Brain-specific origin independent-team replication unseen-person generalization typing language or thought decoding real-time operation portable hardware home use assistive benefit and clinical utility remain unestablished."
+  },
+  "condition_metrics": {
+    "execution_all_zero_final_signal": {
+      "correct_count": 87,
+      "event_count": 180,
+      "exact_one_sided_participant_sign_flip_p": 1.0,
+      "macro_participant_balanced_accuracy": 0.5,
+      "participants_strictly_above_chance": 0,
+      "pooled_balanced_accuracy": 0.4870113805047006
+    },
+    "execution_central_hemisphere_swap": {
+      "correct_count": 62,
+      "event_count": 180,
+      "exact_one_sided_participant_sign_flip_p": 0.999755859375,
+      "macro_participant_balanced_accuracy": 0.3452380952380953,
+      "participants_strictly_above_chance": 1,
+      "pooled_balanced_accuracy": 0.3436417615042059
+    },
+    "execution_central_sensorimotor": {
+      "correct_count": 117,
+      "event_count": 180,
+      "exact_one_sided_participant_sign_flip_p": 0.00244140625,
+      "macro_participant_balanced_accuracy": 0.6495535714285714,
+      "participants_strictly_above_chance": 10,
+      "pooled_balanced_accuracy": 0.6475754576942108
+    },
+    "execution_channel_derangement": {
+      "correct_count": 91,
+      "event_count": 180,
+      "exact_one_sided_participant_sign_flip_p": 0.5,
+      "macro_participant_balanced_accuracy": 0.5007440476190476,
+      "participants_strictly_above_chance": 6,
+      "pooled_balanced_accuracy": 0.502350321622959
+    },
+    "execution_early_cue": {
+      "correct_count": 137,
+      "event_count": 180,
+      "exact_one_sided_participant_sign_flip_p": 0.00048828125,
+      "macro_participant_balanced_accuracy": 0.764136904761905,
+      "participants_strictly_above_chance": 11,
+      "pooled_balanced_accuracy": 0.7628649183572489
+    },
+    "execution_frontal_asymmetry": {
+      "correct_count": 119,
+      "event_count": 180,
+      "exact_one_sided_participant_sign_flip_p": 0.001708984375,
+      "macro_participant_balanced_accuracy": 0.6614583333333334,
+      "participants_strictly_above_chance": 10,
+      "pooled_balanced_accuracy": 0.6616773874319644
+    },
+    "execution_frontal_proxy": {
+      "correct_count": 121,
+      "event_count": 180,
+      "exact_one_sided_participant_sign_flip_p": 0.001220703125,
+      "macro_participant_balanced_accuracy": 0.6711309523809522,
+      "participants_strictly_above_chance": 11,
+      "pooled_balanced_accuracy": 0.6718208807521029
+    },
+    "execution_native_primary": {
+      "correct_count": 123,
+      "event_count": 180,
+      "exact_one_sided_participant_sign_flip_p": 0.0029296875,
+      "macro_participant_balanced_accuracy": 0.6822916666666666,
+      "participants_strictly_above_chance": 9,
+      "pooled_balanced_accuracy": 0.6809747649678377
+    },
+    "execution_no_signal_prior": {
+      "correct_count": 89,
+      "event_count": 180,
+      "exact_one_sided_participant_sign_flip_p": 1.0,
+      "macro_participant_balanced_accuracy": 0.5,
+      "participants_strictly_above_chance": 0,
+      "pooled_balanced_accuracy": 0.4907224146462148
+    },
+    "execution_occipital_proxy": {
+      "correct_count": 95,
+      "event_count": 180,
+      "exact_one_sided_participant_sign_flip_p": 0.155029296875,
+      "macro_participant_balanced_accuracy": 0.5319940476190477,
+      "participants_strictly_above_chance": 8,
+      "pooled_balanced_accuracy": 0.5310489856506679
+    },
+    "execution_one_trial_final_signal_displacement": {
+      "correct_count": 73,
+      "event_count": 180,
+      "exact_one_sided_participant_sign_flip_p": 0.989501953125,
+      "macro_participant_balanced_accuracy": 0.40327380952380953,
+      "participants_strictly_above_chance": 1,
+      "pooled_balanced_accuracy": 0.40264720435428003
+    },
+    "execution_pre_cue": {
+      "correct_count": 90,
+      "event_count": 180,
+      "exact_one_sided_participant_sign_flip_p": 0.584716796875,
+      "macro_participant_balanced_accuracy": 0.49553571428571425,
+      "participants_strictly_above_chance": 5,
+      "pooled_balanced_accuracy": 0.4985155863433943
+    },
+    "execution_timing_only": {
+      "correct_count": 89,
+      "event_count": 180,
+      "exact_one_sided_participant_sign_flip_p": 0.632568359375,
+      "macro_participant_balanced_accuracy": 0.49553571428571436,
+      "participants_strictly_above_chance": 6,
+      "pooled_balanced_accuracy": 0.4917120237506185
+    },
+    "execution_to_imagery": {
+      "correct_count": 131,
+      "event_count": 180,
+      "exact_one_sided_participant_sign_flip_p": 0.000244140625,
+      "macro_participant_balanced_accuracy": 0.7291666666666666,
+      "participants_strictly_above_chance": 12,
+      "pooled_balanced_accuracy": 0.7282608695652174
+    },
+    "execution_train_label_derangement": {
+      "correct_count": 92,
+      "event_count": 180,
+      "exact_one_sided_participant_sign_flip_p": 0.383056640625,
+      "macro_participant_balanced_accuracy": 0.5111607142857143,
+      "participants_strictly_above_chance": 7,
+      "pooled_balanced_accuracy": 0.5121227115289461
+    },
+    "imagery_native": {
+      "correct_count": 131,
+      "event_count": 180,
+      "exact_one_sided_participant_sign_flip_p": 0.000244140625,
+      "macro_participant_balanced_accuracy": 0.7284226190476191,
+      "participants_strictly_above_chance": 12,
+      "pooled_balanced_accuracy": 0.7280138339920948
+    },
+    "imagery_no_signal_prior": {
+      "correct_count": 92,
+      "event_count": 180,
+      "exact_one_sided_participant_sign_flip_p": 1.0,
+      "macro_participant_balanced_accuracy": 0.5,
+      "participants_strictly_above_chance": 0,
+      "pooled_balanced_accuracy": 0.5074110671936759
+    },
+    "imagery_to_execution": {
+      "correct_count": 125,
+      "event_count": 180,
+      "exact_one_sided_participant_sign_flip_p": 0.000732421875,
+      "macro_participant_balanced_accuracy": 0.6964285714285715,
+      "participants_strictly_above_chance": 11,
+      "pooled_balanced_accuracy": 0.6950766947055913
+    }
+  },
+  "control_components": {
+    "execution_all_zero_final_signal": true,
+    "execution_central_hemisphere_swap": true,
+    "execution_channel_derangement": true,
+    "execution_early_cue": false,
+    "execution_frontal_asymmetry": false,
+    "execution_frontal_proxy": false,
+    "execution_no_signal_prior": false,
+    "execution_occipital_proxy": true,
+    "execution_one_trial_final_signal_displacement": true,
+    "execution_pre_cue": true,
+    "execution_timing_only": true,
+    "execution_train_label_derangement": true,
+    "imagery_no_signal_prior": false
+  },
+  "final_target_deliveries": 1,
+  "freeze_ci_run_id": 31360781199,
+  "freeze_commit": "8cd45d74dfa3517ae53c1427a0eb06e27ad3c870",
+  "individual_participant_metrics_published": false,
+  "input_payload_bytes": 184252032,
+  "localization": {
+    "central_minus_strongest_proxy_macro_margin": -0.02157738095238082,
+    "central_minus_strongest_proxy_pooled_margin": -0.024245423057892124,
+    "exact_paired_participant_sign_flip_p": 0.7138671875
+  },
+  "mandatory_controls_passed": false,
+  "optional_neuro_job_id": 93369101696,
+  "physiology": {
+    "exact_one_sided_sign_flip_p": 0.706298828125,
+    "participant_count": 12,
+    "participants_in_registered_direction": 5,
+    "passed": false
+  },
+  "post_target_updates": 0,
+  "public_result_bytes": 8208,
+  "schema_name": "neurodecodekit.physionet_low_frequency_aggregate_score",
+  "schema_version": "0.1.0",
+  "scoring_events": 1,
+  "status": "scored_once_frozen_router_applied",
+  "verdict": "WO9R-R3",
+  "warnings": [
+    "visual_cue_is_class_correlated",
+    "separate_EOG_EMG_and_movement_onset_are_unavailable",
+    "proxy_controls_do_not_establish_brain_specific_origin",
+    "within_dataset_same_team_confirmation_not_independent_replication",
+    "end_to_end_latency_not_measured"
+  ]
+}

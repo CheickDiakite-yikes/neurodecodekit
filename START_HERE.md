@@ -322,9 +322,16 @@
    `docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PREDICTION_FREEZE.md`.
    All 72 official hashes matched over 184,252,032 bytes, and the analysis
    froze 216 prediction sets after 144 fits while exposing zero final targets
-   to the model stage. This is a hash-bound engineering milestone, not a
-   scientific result. Final targets remain closed until this exact combined
-   freeze commit is remotely green.
+   to the model stage. Freeze `8cd45d7` then passed both jobs in CI
+   `31360781199` before the same 360 targets opened once. Now read
+   `docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_RESULT.md` and its result
+   registry. Execution passed at 123/180, pooled balanced accuracy `0.680975`,
+   and `p=0.002930`; imagery passed at 131/180, `0.728014`, and `p=0.000244`.
+   Both cross-task directions were positive. The router stopped at `WO9R-R3`
+   because central-over-proxy localization, physiology, and mandatory cue/
+   frontal controls failed. Preserve the positive task-information result and
+   the equally important brain-specific limitation together. WO9R is consumed;
+   do not rerun, retune, or reopen its private artifacts.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

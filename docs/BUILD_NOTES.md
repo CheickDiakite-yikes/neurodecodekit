@@ -6287,3 +6287,47 @@ Scientific claim not established: no final target has been delivered or
 scored, so no task accuracy, neural effect, physiology, localization,
 brain-specific origin, generalization, decoding, latency, hardware, or
 human-benefit result is established.
+
+## 2026-08-10 - WO9R Cohort Confirmation Scored Once At R3
+
+- Verified combined freeze
+  `8cd45d74dfa3517ae53c1427a0eb06e27ad3c870` remotely green in CI
+  `31360781199`, including Base Python job `93369101655` and Optional Neuro
+  Readers job `93369101696`, before the isolated scorer opened any final
+  target.
+- Consumed exactly one delivery of the same 360 sealed targets and one scoring
+  event. Every private prediction hash and event, participant, and run identity
+  matched the frozen ledger. Post-target fits, selections, threshold changes,
+  channel changes, retries, and reruns are zero.
+- Execution passed every H1 gate at 123/180 correct, pooled balanced accuracy
+  `0.680975`, macro-participant balanced accuracy `0.682292`, 9/12 participants
+  above chance, and one-sided participant sign-flip `p=0.002930`. The no-signal
+  pooled and macro scores were `0.490722` and `0.500000`.
+- Imagery passed every H2 gate at 131/180 correct, pooled `0.728014`, macro
+  `0.728423`, 12/12 above chance, and `p=0.000244`. Execution-to-imagery and
+  imagery-to-execution transfer were also positive at pooled balanced
+  accuracies `0.728261` and `0.695077`.
+- H3 and the mandatory-control conjunction failed. Central sensorimotor pooled
+  balanced accuracy was `0.647575`, below the frontal proxy's `0.671821`;
+  central-minus-proxy margin was `-0.024245`; physiology followed the
+  registered direction in only 5/12 participants; and early-cue balanced
+  accuracy was `0.762865`, above its `0.600` ceiling.
+- The frozen router returned `WO9R-R3`. The 8,208-byte public aggregate result
+  has SHA-256
+  `d6cda8b4ce5f6da7add4a78ac8b1e74587cd8ab8eacf0dce8b806c076e85699a`.
+  No individual prediction, probability, target, participant metric, or
+  participant outcome is committed.
+
+Next gate: design a fresh cue-neutral or independently instrumented
+EOG/EMG-plus-movement-onset replication. Do not rerun WO9R or scale its
+classifier to answer the unresolved source question.
+
+Engineering capability added: NeuroDecodeKit completed a leakage-resistant,
+resource-bounded, multi-person public-EEG confirmation with a remotely green
+prediction freeze and one aggregate score.
+
+Scientific result established: the fixed low-frequency representation carries
+held-out left/right task information across twelve fresh participants and both
+execution and imagery. Brain-specific origin, motor-compatible localization,
+unseen-person generalization, typing or thought decoding, real-time operation,
+hardware, and human benefit were not established.

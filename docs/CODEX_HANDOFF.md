@@ -1879,11 +1879,30 @@ Python job `93365527795` and Optional Neuro Readers job `93365527849` in CI
 events, created 720 fit rows and 360 target-free final rows, completed 144 fits
 and 216 prediction sets, and emitted the combined aggregate freeze in
 19.864386 seconds at 303,153,152-byte peak RSS. No final target reached the
-model stage and no score exists.
+model stage.
 
 Read `docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PREDICTION_FREEZE.md`
-and its public ledger. Next gate: commit and push the exact freeze milestone
-and require both CI jobs green at that commit. Only then may the isolated
-scorer open the same sealed 360 targets once and apply the frozen router. No
-retry, rerun, post-target update, or broader claim is open. Preserve the
-unrelated untracked tracker inspection NDJSON.
+and its public ledger. Freeze commit
+`8cd45d74dfa3517ae53c1427a0eb06e27ad3c870` passed Base Python job
+`93369101655` and Optional Neuro Readers job `93369101696` in CI
+`31360781199` before the isolated scorer opened the same 360 targets once.
+
+Read `docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_RESULT.md` and
+`registries/physionet_low_frequency_cohort_confirmation_result.v0.json`.
+Execution passed H1 at 123/180, pooled balanced accuracy `0.680975`, macro
+`0.682292`, 9/12 participants above chance, and `p=0.002930`. Imagery passed H2
+at 131/180, pooled `0.728014`, macro `0.728423`, 12/12 above chance, and
+`p=0.000244`. Both cross-task transfer diagnostics were positive.
+
+The frozen verdict is `WO9R-R3`. Central-over-proxy localization failed,
+physiology was positive in only 5/12 participants, and early-cue, frontal, and
+frontal-asymmetry controls exceeded their ceilings. This is robust held-out
+task-information evidence across twelve fresh participants and two task modes,
+not brain-specific motor decoding. The target delivery and score are consumed;
+there is no retry, rerun, or post-target update. Preserve the unrelated
+untracked tracker inspection NDJSON and every Git-ignored private artifact.
+
+Next route: use Tier A research to specify a cue-neutral or independently
+instrumented replication with synchronized EOG/EMG and measured movement
+onset. Do not scale this classifier or reopen WO9R to answer the source-
+localization question.

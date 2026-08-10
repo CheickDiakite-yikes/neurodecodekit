@@ -110,9 +110,8 @@ all-false authorization packet and machine request are prepared separately;
 they authorize nothing before their own remotely green commit and an exact
 maintainer decision.
 
-WO9R status: **Research, registration, authorization, implementation,
-acquisition, and target-blind analysis complete; combined hash-only freeze
-awaiting its own remote-green commit before one final score.**
+WO9R status: **Complete and consumed at `WO9R-R3`; no rerun or post-target
+update.**
 Decision `1efeac7` passed CI `31355944651`. The implementation completed one
 72-run generated roundtrip with 144 fits and 216 target-blind prediction sets
 in 12.083017 seconds at 260,784,128-byte peak RSS and 4,215,687 output bytes.
@@ -121,9 +120,14 @@ were removed. Implementation `8242674` passed CI `31359548779` before one
 184,252,032-byte acquisition and one target-blind analysis. All 72 official
 hashes matched. The analysis accepted 1,080 events and completed 144 fits and
 216 prediction sets in 19.864386 seconds at 303,153,152-byte peak RSS. Zero
-final targets reached the model stage and no score exists. Read
+final targets reached the model stage. Freeze `8cd45d7` then passed both jobs
+in CI `31360781199` before the same 360 targets opened once. Execution passed
+all H1 gates at 123/180 and pooled balanced accuracy `0.680975`; imagery passed
+all H2 gates at 131/180 and `0.728014`; both transfer directions were positive.
+The frozen router returned `WO9R-R3`, not `WO9R-R4`, because motor-compatible
+localization, physiology, and mandatory cue/frontal controls failed. Read
 `docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_IMPLEMENTATION.md` and
-`docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PREDICTION_FREEZE.md`.
+`docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_RESULT.md`.
 Audit label: **short-form packet-bound decision prepared**. It was then
 committed, pushed, and remotely green before implementation.
 It is deliberately outside the numbered 1-20 table so that the frozen

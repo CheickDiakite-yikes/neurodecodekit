@@ -4886,3 +4886,37 @@ Evidence:
 `registries/physionet_low_frequency_cohort_confirmation_prediction_freeze.v0.json`,
 and
 `tests/test_physionet_low_frequency_cohort_confirmation_prediction_freeze.py`.
+
+## 0139 - Close WO9R At Robust Task Information Without Source Inflation
+
+Decision: after combined freeze
+`8cd45d74dfa3517ae53c1427a0eb06e27ad3c870` passed both required jobs in CI
+`31360781199`, deliver and score the same 360 sealed execution and imagery
+targets exactly once. Preserve the registered `WO9R-R0` through `WO9R-R4`
+router and every threshold, model, channel view, control, and participant-level
+test without post-target change.
+
+Result: execution passed H1 at 123/180 correct, pooled balanced accuracy
+`0.680975`, macro-participant balanced accuracy `0.682292`, 9/12 participants
+above chance, and one-sided participant sign-flip `p=0.002930`. Imagery passed
+H2 at 131/180, pooled `0.728014`, macro `0.728423`, 12/12 above chance, and
+`p=0.000244`. Both registered cross-task transfer directions were positive.
+
+Boundary: do not call the result brain-specific or motor-localized. Central
+sensorimotor balanced accuracy `0.647575` did not beat the frontal proxy at
+`0.671821`; early-cue accuracy reached `0.762865`; physiology followed the
+registered direction in only 5/12 participants; and the mandatory-control
+conjunction failed. The exact frozen route is `WO9R-R3`: robust low-frequency
+task information across execution and imagery, with motor-compatible
+localization unsupported.
+
+Disposition: WO9R is complete and consumed. Final-target deliveries and
+scoring events are one each; post-target updates, retries, and reruns are zero.
+The next evidence-bearing question requires a fresh cue-neutral or independently
+instrumented EOG/EMG-plus-movement-onset design, not a WO9R rerun or larger
+classifier.
+
+Evidence:
+`docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_RESULT.md`,
+`registries/physionet_low_frequency_cohort_confirmation_result.v0.json`, and
+`tests/test_physionet_low_frequency_cohort_confirmation_result.py`.

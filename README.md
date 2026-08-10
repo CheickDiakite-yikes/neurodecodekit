@@ -361,7 +361,7 @@ negative result and S25 is never repurposed for calibration.
 | Current Loop 48 Stage B verification | 63 focused Stage B tests; complete dependency-light suite 887 tests with 149 expected skips; complete optional-neuro suite 934 tests with 3 expected skips | Authorization `8d17342`, implementation `1d840e3`, freeze `00215b1`, and result closeout `ad4410c` passed both push and PR CI; closeout runs were `29464527230` / `29464529524` and added exactly 9 tests over the implementation baseline | Makes one-shot access order, target isolation, freeze binding, exact operation counts, hypothesis rules, outcome routing, tamper checks, and the no-rerun boundary executable and reviewable |
 | Current Loop 48 Stage C verification | 64 focused tests; 919 dependency-light tests with 156 expected skips; 966 optional-neuro tests with 3 expected skips | Research `9579be9`, implementation `59b30a3`, and correction `2836ecc` passed push and PR CI before one execution; result is consumed and no rerun is open | Makes synthetic selection, absolute-gate failure, replay, causal controls, resource accounting, zero protected access, and the parked disposition machine-checkable |
 | Current Loop 53 verification | 68 focused closeout tests; final full suite 1,062 tests with 3 expected skips in 44.090 sec and 581,648,384-byte external peak RSS; baseline was 1,056 tests, 3 skips, 30.623 sec, and 568,688,640 bytes | Authorization `2a47bbc` passed CI `29589212626` / `29589225113`; implementation `8ec5b1b` passed CI `29591387642` / `29591391286` before the single pass; workbook formula-error scan found 0 matches | Adds exactly 6 aggregate-result tests while making identity, green-gate order, no-overwrite behavior, caps, opaque hashing, counters, private receipt binding, no-rerun status, and claim ceiling machine-checkable |
-| Current WO9R prediction-freeze verification | 29 implementation tests plus 5 public-freeze invariants; 72 real EDFs; 1,080 events; 144 fits; 216 target-blind prediction sets | Implementation `8242674` passed CI `31359548779` before one 184,252,032-byte acquisition and one target-blind analysis; combined freeze awaits its own remote-green commit | Binds the real cohort, code, split, controls, private derivatives, and every prediction set without publishing individual output or opening the sealed final targets for scoring |
+| Current WO9R result verification | 29 implementation tests, 5 public-freeze invariants, and 7 aggregate-result invariants; 72 real EDFs; 1,080 events; 144 fits; 216 frozen prediction sets; one 360-target score | Implementation `8242674` passed CI `31359548779`; freeze `8cd45d7` passed CI `31360781199` before the one target delivery; result routed `WO9R-R3` with zero post-target updates or reruns | Makes the positive execution/imagery task-information result and the failed localization/confound conjunction independently checkable without publishing individual outputs |
 
 ### Real-Data Scientific Scorecard
 
@@ -372,6 +372,8 @@ negative result and S25 is never repurposed for calibration.
 | S7 EEG within-session key events | exact accuracy `0.91%` | exact accuracy `12.27%` | Neural template is materially worse; EEG bridge is mechanics only |
 | S21 session-1 reserved six-sentence gate | macro CER `0.938177` | macro CER `0.751235` | Fixed causal candidate is worse by `0.186942`; Loops 26/31/33 are consumed and parked |
 | S21 source-train 11-row diagnostic | macro CER `0.953566` | macro CER `0.822045` | Post-outcome Stage B supports stable nonseparability for this model family; these historically used rows are not fresh validation |
+| PhysioNet S004-S015 held-out execution | balanced accuracy `0.680975`; 123/180; 9/12 participants above chance; `p=0.002930` | balanced accuracy `0.490722` | Prespecified low-frequency task-information confirmation passed, but localization and confound gates failed |
+| PhysioNet S004-S015 held-out imagery | balanced accuracy `0.728014`; 131/180; 12/12 participants above chance; `p=0.000244` | balanced accuracy `0.507411` | Task-mode robustness passed; this remains cue/ocular-compatible and is not brain-specific proof |
 
 **Scientific headline:** the real MEG and EEG evaluations run so far do not
 show a reliable neural advantage. That negative result is preserved beside the
@@ -748,53 +750,33 @@ Read this before interpreting any number in the repository.
   localization, not proof of brain-specific motor decoding. Read the
   [full result and condition breakdown](docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_RESULT.md).
   Work order 9 is complete and consumed with no rerun.
-- **WO9R low-frequency cohort-confirmation gate:** the strongest WO9 lead is
-  now converted into a prospective, falsifiable next study rather than a
-  retrospective model promotion. The frozen design selects the
-  contiguous untouched `S004-S015` cohort and pairs execution runs
-  `03/07 -> 11` with imagery runs `04/08 -> 12`, for 12 participants, 72
-  prospective EDFs, and 360 expected sealed-final events. The exact fixed
-  `0.5-4 Hz` whole-head shrinkage-LDA recipe is the sole primary template; no
-  architecture or hyperparameter search is allowed. Native execution,
-  native imagery, and both transfer directions must freeze together before
-  either final target set opens. Central sensorimotor, frontal ocular-sensitive,
-  occipital visual-sensitive, early cue, pre-cue, timing, no-signal, label,
-  trial-displacement, channel, and hemisphere controls distinguish a cohort-
-  confirmed task signal from a motor-compatible localized effect. The router
-  spans `WO9R-R0` through `WO9R-R4`; even `R4` remains within-dataset,
-  motor-compatible EEG evidence, not brain-specific origin or independent-team
-  replication. Registration commit `716e543` is remotely green in CI
-  `31354565966` and now binds all 72 paths and official SHA-256 values,
-  **184,252,032 bytes**, 144 fit ceilings, 18 condition families, 216
-  target-blind participant-condition prediction sets, and one combined
-  run-11/run-12 target freeze. Exact sizes came from 12 official public S3
-  object listings and checksums from the official manifest; no EDF URL or body
-  was requested. Read the [primary-source design and exact claim
-  boundary](docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PRIMARY_SOURCE_RESEARCH.md),
-  then the [frozen preregistration](docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PREREGISTRATION.md).
-  An [all-false authorization packet](docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_AUTHORIZATION_PACKET.md)
-  passed both CI jobs at request commit `580708f`. The maintainer then gave an
-  explicit short-form instruction to stop copying boilerplate and continue the
-  sole active packet. The [packet-bound decision](docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_AUTHORIZATION_DECISION.md)
-  records those actual words without attributing the packet's long sentence to
-  the maintainer. Decision `1efeac7` passed both required jobs in CI
-  `31355944651` before implementation began. The [fixture-qualified
-  implementation](docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_IMPLEMENTATION.md)
-  now provides a standard-library 72-file acquisition layer, sequential EDF
-  reader, compact causal 5C feature stream, 720-row fit derivative, 360-row
-  target-free prediction derivative, separately sealed combined targets, 144
-  participant-specific fits, all 216 prediction sets, an aggregate hash-only
-  freeze, and a one-shot scorer. Its measured generated-only roundtrip used
-  12.083017 seconds, 260,784,128-byte peak RSS, and 4,215,687 output bytes;
-  network and real-data reads were zero, and the files were removed.
-  Implementation `8242674` then passed both jobs in CI `31359548779` before
-  the [one real acquisition and target-blind freeze](docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PREDICTION_FREEZE.md).
-  All 72 official hashes matched over 184,252,032 bytes. The analysis accepted
-  1,080 events, created 720 fit rows and 360 target-free final rows, completed
-  144 fits and 216 prediction sets, and emitted one combined aggregate freeze
-  in 19.864386 seconds at 303,153,152-byte peak RSS. No final target reached
-  the model stage and no scientific score exists. The same 360 targets remain
-  closed until this exact freeze commit is remotely green.
+- **WO9R low-frequency cohort-confirmation result:** the strongest WO9 lead
+  survived a prospective test in twelve untouched participants. The fixed
+  `0.5-4 Hz` whole-head shrinkage-LDA recipe was trained within participant on
+  runs 03/07 or 04/08, frozen across 216 participant-condition prediction sets,
+  and scored once on held-out execution run 11 and imagery run 12. Combined
+  freeze `8cd45d7` passed both jobs in CI `31360781199` before the 360 targets
+  opened. Execution passed all H1 gates at **123/180**, pooled balanced
+  accuracy **0.680975**, macro-participant balanced accuracy **0.682292**,
+  9/12 participants above chance, and **`p=0.002930`**. Imagery passed all H2
+  gates at **131/180**, pooled **0.728014**, macro **0.728423**, 12/12 above
+  chance, and **`p=0.000244`**. Execution-to-imagery and imagery-to-execution
+  transfer were also positive at pooled balanced accuracies **0.728261** and
+  **0.695077**. This is the project's clearest preregistered multi-person EEG
+  task-information result so far.
+
+  The maximum claim gate still failed. Central sensorimotor balanced accuracy
+  was **0.647575**, below the frontal proxy's **0.671821**; only 5/12
+  participants followed the registered physiology direction; and the early
+  cue window reached **0.762865**, stronger than the primary execution window.
+  Frontal and frontal-asymmetry controls also exceeded their ceilings. The
+  frozen router therefore returned **`WO9R-R3`**: robust task information
+  across execution and imagery, without motor-compatible localization. The
+  result does not establish brain-specific origin, unseen-person
+  generalization, typing, language or thought decoding, real-time operation,
+  portable hardware, or clinical utility. Read the [full aggregate result and
+  control breakdown](docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_RESULT.md).
+  WO9R is complete and consumed with no rerun or post-target tuning.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

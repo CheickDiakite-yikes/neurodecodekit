@@ -859,5 +859,14 @@ one 72-file acquisition and one target-blind analysis. All official hashes
 matched over 184,252,032 bytes. The analysis accepted 1,080 events, completed
 144 fits and 216 prediction sets, and emitted one aggregate combined freeze in
 19.864386 seconds at 303,153,152-byte peak RSS. Zero final targets reached the
-model stage and no score exists. Final targets remain gated until this exact
-combined freeze commit is remotely green.
+model stage. Combined freeze `8cd45d7` then passed both jobs in CI
+`31360781199` before the same 360 targets opened once. Execution passed all H1
+gates at 123/180 and pooled balanced accuracy `0.680975`; imagery passed all H2
+gates at 131/180 and `0.728014`; both cross-task directions were positive. The
+frozen router returned `WO9R-R3` because central-over-proxy localization,
+physiology, and the mandatory-control conjunction failed. Early-cue balanced
+accuracy `0.762865` and frontal balanced accuracy `0.671821` make a cue/ocular
+or broadly distributed task response a live explanation. WO9R is complete and
+consumed with no rerun. The next high-value research branch is a cue-neutral or
+independently instrumented replication with synchronized EOG/EMG and measured
+movement onset, not a larger classifier.

@@ -178,11 +178,12 @@ class PhysioNetLowFrequencyCohortConfirmationResearchTests(unittest.TestCase):
         queue = " ".join(queue_raw.split())
         self.assertIn("Work order 9R", queue)
         self.assertIn(
-            "acquisition, and target-blind analysis complete",
+            "Complete and consumed at `WO9R-R3`",
             queue,
         )
-        self.assertIn("combined hash-only freeze", queue)
-        self.assertIn("Zero final targets reached the model stage and no score exists", queue)
+        self.assertIn("Freeze `8cd45d7`", queue)
+        self.assertIn("Execution passed all H1 gates", queue)
+        self.assertIn("mandatory cue/frontal controls failed", queue)
         self.assertIn("short-form packet-bound decision prepared", queue)
         self.assertEqual(sum(line.startswith("| ") for line in queue_raw.splitlines()), 21)
 
