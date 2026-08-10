@@ -168,12 +168,14 @@ TRIGGER. The contract selects all 128 committed VHDR metadata objects and only
 161,792 expected bytes. Its future output is aggregate and hash-bound; the
 existing local bundle, every sibling, sample, event, trajectory, target, model,
 and score remain closed. Registration `0e52278` passed both jobs in CI
-`31412667060` before the dependency-free implementation began. The parser,
-response gate, aggregate signature router, bounded writer, and module CLI now
-pass 24 focused tests and one measured 128-header generated roundtrip at
-36,634,624-byte peak RSS. This exact implementation must be committed, pushed,
-and remotely green next; one real execution still requires a later
-packet-bound Tier C decision.
+`31412667060` before the dependency-free implementation began. Exact
+implementation `16621cc` passed both jobs in CI `31415213841` after one
+measured 128-header generated roundtrip at 36,634,624-byte peak RSS. The
+all-false request now freezes the smallest next irreversible step: one
+sequential public 128-header/161,792-byte audit, with no local-bundle, sibling,
+sample, target, model, score, retry, or rerun. Commit and remotely green the
+request next; only a later fresh packet-bound Tier C decision can authorize
+that single execution.
 
 Registration `2a7b4188553e221133d788a081b838dbbb9f41bb` passed Base Python
 job `93215490492` and Optional Neuro Readers job `93215490501` in CI

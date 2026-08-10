@@ -905,9 +905,11 @@ all 128 VHDR objects from the existing committed inventory, totaling only
 aggregate signature audit. No real header or local IACKD path was opened.
 Registration `0e52278` passed both jobs in CI `31412667060` before a
 standard-library parser, strict mocked transport, aggregate router, bounded
-writer, and module CLI were implemented. Twenty-four focused tests pass. A
-128-header generated qualification used 0.037819 seconds, 36,634,624-byte peak
-RSS, and 4,465 output bytes with zero network or real-content operations.
-Commit and remotely green this exact implementation next. The one real
-128-header execution remains Tier C and separately decision-gated; no corrected
-scientific analysis is implied.
+writer, and module CLI were implemented. Exact implementation `16621cc` then
+passed both jobs in CI `31415213841`. A 128-header generated qualification used
+0.037819 seconds, 36,634,624-byte peak RSS, and 4,465 output bytes with zero
+network or real-content operations. The all-false Tier C request now binds one
+future public 128-header/161,792-byte audit, zero retries/reruns, and zero local-
+bundle or sibling access. It must be committed, pushed, and remotely green
+before a fresh packet-bound maintainer decision can be separately recorded.
+No corrected scientific analysis is implied.

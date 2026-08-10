@@ -5083,3 +5083,31 @@ Evidence: `docs/IACKD_CHANNEL_INVENTORY_IMPLEMENTATION.md`,
 `registries/iackd_channel_inventory_implementation.v0.json`,
 `src/neurodecodekit/preprocess/iackd_header_inventory.py`, and
 `tests/test_iackd_header_inventory.py`.
+
+## 0146 - Request One Public IACKD Header Audit After Green Implementation
+
+Decision: after exact implementation `16621cc` passed Base Python job
+`93542494819` and Optional Neuro Readers job `93542494839` in CI
+`31415213841`, prepare one all-false Tier C request for the smallest useful
+real-content follow-up. Do not treat the request itself or any earlier
+maintainer continuation as authorization.
+
+Requested scope: one sequential HTTPS request for each of the 128 exact public
+VHDR objects already in the committed OpenNeuro inventory, totaling 161,792
+expected body bytes. Validate exact response identity, hash and strictly parse
+each body once in memory, discard it before the next request, and emit one
+aggregate-only compatibility ledger. Retain zero raw body, path, unallowlisted
+name, participant outcome, sibling, sample, event, trajectory, target, model,
+prediction, or score.
+
+Boundary: the request must first be committed, pushed, and remotely green.
+Codex must then identify that exact commit, CI, and sole scope before a fresh
+unambiguous maintainer `continue`, `approve`, or `proceed` can bind it by
+reference in a separate decision record quoting the maintainer's actual words.
+Only after that decision commit is remotely green may the one no-retry,
+no-rerun header audit start. Every possible route remains an engineering file-
+contract diagnosis, never a scientific or decoding result.
+
+Evidence: `docs/IACKD_CHANNEL_INVENTORY_AUTHORIZATION_PACKET.md`,
+`registries/iackd_channel_inventory_authorization_request.v0.json`, and
+`tests/test_iackd_header_inventory_authorization_request.py`.

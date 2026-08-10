@@ -118,13 +118,20 @@ VHDR objects and 161,792 bytes, in memory and sequentially, with aggregate
 hash-only signatures and no sibling resolution. Registration `0e52278` passed
 Base Python job `93534203368` and Optional Neuro Readers job `93534203385` in
 CI `31412667060` before implementation. The standard-library parser, strict
-mocked transport, signature router, bounded writer, module CLI, and 24 focused
-tests are assembled. One 128-header generated qualification took 0.037819
+mocked transport, signature router, bounded writer, and module CLI are
+qualified on generated fixtures. One 128-header qualification took 0.037819
 seconds at 36,634,624-byte peak RSS and emitted 4,465 bytes; network and every
 real/protected counter stayed zero. Its synthetic `IACKDH-R1` has no claim
-value. Commit, push, and obtain both green jobs for this exact implementation
-before preparing one separate Tier C decision. Never use or inspect the
-existing local IACKD bundle for this lane.
+value. Exact implementation `16621cc` passed Base Python job `93542494819` and
+Optional Neuro Readers job `93542494839` in CI `31415213841` before the
+all-false Tier C request was prepared. Read
+`docs/IACKD_CHANNEL_INVENTORY_AUTHORIZATION_PACKET.md` and
+`registries/iackd_channel_inventory_authorization_request.v0.json`. That
+packet authorizes nothing. Commit, push, and obtain both green jobs for the
+request; then identify its exact commit, CI, and sole 128-header/161,792-byte
+scope before accepting a fresh packet-bound maintainer `continue`, `approve`,
+or `proceed` into a separate decision record. Never use or inspect the existing
+local IACKD bundle for this lane.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

@@ -6522,3 +6522,31 @@ trajectory, target, model, prediction, or score was accessed, so this work
 establishes no neural effect, action decoding, brain-specific origin,
 generalization, real-time operation, hardware capability, assistive benefit,
 or clinical use.
+
+## 2026-08-10 - IACKD-H1 All-False Authorization Request Prepared
+
+- Exact implementation `16621cc484f4bec4a9474b9ac20d5b7d9314152f`
+  passed Base Python job `93542494819` and Optional Neuro Readers job
+  `93542494839` in CI `31415213841` before this request was prepared.
+- Added a human packet, machine request, and nine invariant tests binding the
+  exact green registration and implementation evidence, artifact hashes,
+  response contract, access order, resource caps, forbidden operations, future
+  decision shape, and all-zero access counters.
+- The sole requested execution would retrieve exactly 128 public VHDR bodies
+  and 161,792 expected bytes sequentially, hash and parse each once in memory,
+  discard raw content immediately, and retain one aggregate-only ledger.
+- The retained 7.249 GB IACKD bundle, every sibling, signal sample, event,
+  trajectory, target, model, prediction, score, provider, device, hardware,
+  retry, rerun, release, and claim operation remains unauthorized.
+- This packet authorizes nothing. It must be committed, pushed, and remotely
+  green before a fresh packet-bound maintainer decision can be separately
+  recorded using the maintainer's actual words.
+
+Engineering capability requested: one tiny, reproducible public-header audit
+can determine which frozen file-contract assumption failed while preserving
+the consumed analysis and all scientific firewalls.
+
+Scientific claim not established: an all-false request is not data or a result
+and establishes no EEG effect, action decoding, brain-specific origin,
+generalization, real-time operation, hardware capability, assistive benefit, or
+clinical use.

@@ -373,12 +373,16 @@
    161,792-byte, sibling-blind aggregate audit. Registration `0e52278` passed
    both jobs in CI `31412667060` before the standard-library parser, strict
    response boundary, aggregate router, writer, and module CLI were built.
-   Twenty-four focused tests and one 128-header generated qualification pass;
-   the measured run used 0.037819 seconds, 36,634,624-byte peak RSS, and 4,465
-   output bytes with zero network or real-content access. This exact
-   implementation must still become remotely green. Real header access remains
-   Tier C and needs a later packet-bound decision; never use the retained local
-   bundle for this lane.
+   One 128-header generated qualification used 0.037819 seconds,
+   36,634,624-byte peak RSS, and 4,465 output bytes with zero network or
+   real-content access. Exact implementation `16621cc` passed Base Python job
+   `93542494819` and Optional Neuro Readers job `93542494839` in CI
+   `31415213841`. Next read
+   `docs/IACKD_CHANNEL_INVENTORY_AUTHORIZATION_PACKET.md` and its all-false
+   request registry. They request, but do not authorize, one public
+   128-header/161,792-byte audit after the request itself is remotely green and
+   a fresh packet-bound maintainer decision is separately recorded. Never use
+   the retained local bundle for this lane.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

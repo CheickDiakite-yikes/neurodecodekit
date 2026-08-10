@@ -2022,3 +2022,26 @@ green. Then prepare one packet binding that exact implementation. Do not fetch
 a real header, touch the retained bundle, create a decision from old user
 words, or run `--execute` before the later packet-bound Tier C decision is
 committed, pushed, and remotely green.
+
+## 2026-08-10 IACKD-H1 Authorization Request Prepared
+
+Exact implementation `16621cc484f4bec4a9474b9ac20d5b7d9314152f`
+passed Base Python job `93542494819` and Optional Neuro Readers job
+`93542494839` in CI `31415213841`. The next files are
+`docs/IACKD_CHANNEL_INVENTORY_AUTHORIZATION_PACKET.md`,
+`registries/iackd_channel_inventory_authorization_request.v0.json`, and
+`tests/test_iackd_header_inventory_authorization_request.py`.
+
+The request is all false. It asks for one later sequential audit of exactly 128
+public OpenNeuro VHDR bodies and 161,792 bytes, with one SHA and one strict
+parse per body, aggregate-only output, one thread, 120 seconds, 256 MiB RSS,
+1 MiB network body, 2 MiB disk, 1 MiB output, and zero retry or rerun. It does
+not permit the retained local IACKD bundle, siblings, samples, events,
+trajectories, targets, models, inference, or scoring.
+
+Next gate: commit and push the request, require both CI jobs green, then
+identify that exact request commit, CI run, and sole scope to the maintainer.
+Only a fresh unambiguous `continue`, `approve`, or `proceed` after that
+identification may be quoted in a separate hash-bound decision. Do not use the
+earlier continuation retroactively, fabricate a long user sentence, create the
+decision early, or issue a real header request.
