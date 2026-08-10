@@ -41,9 +41,16 @@ held-out secondary result: 36/45, 0.800395 pooled balanced accuracy, and
 `p=0.000183`. Motor physiology and central-over-frontal/occipital localization
 failed, so preserve this as task-information evidence rather than a brain-
 specific motor claim. Do not reopen, rerun, or tune the private Work Order 9
-artifacts. The active next task is Tier A planning for an independent
-low-frequency replication/localization contract using untouched data; any real
-data access or execution needs a new exact Tier C decision.
+artifacts. Tier A WO9R planning is now complete in
+`docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PRIMARY_SOURCE_RESEARCH.md`
+and
+`registries/physionet_low_frequency_cohort_confirmation_research.v0.json`.
+It selects the untouched S004-S015 cohort, execution and imagery runs, one
+unchanged `0.5-4 Hz` primary template, participant-level gates, and explicit
+cue, ocular, timing, transfer, and localization controls. The active next task
+is exact public-metadata inventory and preregistration preparation only. Do not
+request, stat, open, hash, decode, or model an EDF. Any acquisition, local real-
+data access, final target event, or execution needs a new exact Tier C decision.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

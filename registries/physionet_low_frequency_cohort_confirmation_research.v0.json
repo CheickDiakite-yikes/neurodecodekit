@@ -1,0 +1,311 @@
+{
+  "schema_name": "neurodecodekit.physionet_low_frequency_cohort_confirmation_research",
+  "schema_version": "0.0.0",
+  "research_id": "WO9R",
+  "created_at_local": "2026-08-09",
+  "status": "tier_a_research_complete_not_preregistered_not_authorized_not_implemented_not_executed",
+  "proof_posture": "prospective_hypothesis_and_cohort_design_only",
+  "decision": "Test the exact prespecified Work Order 9 low-frequency comparator as a prospective primary on twelve untouched participants, pair execution and imagery, and route task confirmation separately from motor-compatible localization.",
+  "scope": {
+    "tier_a_research_only": true,
+    "additive_work_order_without_renumbering_10_through_20": true,
+    "cohort_selected_from_public_metadata": true,
+    "exact_acquisition_inventory_frozen": false,
+    "preregistration_frozen": false,
+    "authorization_packet_created": false,
+    "real_data_acquisition_authorized": false,
+    "local_real_data_access_authorized": false,
+    "model_training_or_inference_authorized": false,
+    "sealed_target_delivery_or_scoring_authorized": false,
+    "scientific_claim_promotion_authorized": false
+  },
+  "inherited_evidence": {
+    "work_order_9_result_document": {
+      "path": "docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_RESULT.md",
+      "sha256": "f7626fb0a3af23c223ca3c5e2fb3236e95bc28755b0f38030410d19467e0fc2f"
+    },
+    "work_order_9_result_registry": {
+      "path": "registries/physionet_motor_positive_control_result.v0.json",
+      "sha256": "017c62162774b5cd32a635f58bb4c503f903a8e901cb2b696efa0890a1040579"
+    },
+    "work_order_9_contract": {
+      "path": "registries/physionet_motor_positive_control_contract.v0.json",
+      "sha256": "4f00f8e2cb257e912a947b49268c1476554f3e671eb9322926592df4908b144e"
+    },
+    "consumed_development_cohort": ["S001", "S002", "S003"],
+    "consumed_verdict": "WO9-V1",
+    "secondary_family_id": "fixed_low_frequency_shrinkage_lda",
+    "secondary_correct": 36,
+    "secondary_final_event_count": 45,
+    "secondary_pooled_balanced_accuracy": 0.8003952569169961,
+    "secondary_macro_participant_balanced_accuracy": 0.8005952380952381,
+    "secondary_minimum_participant_balanced_accuracy": 0.7321428571428572,
+    "secondary_participants_above_chance": 3,
+    "secondary_one_sided_permutation_p": 0.00018310546875,
+    "central_sensorimotor_balanced_accuracy": 0.5345849802371542,
+    "frontal_occipital_proxy_balanced_accuracy": 0.6245059288537549,
+    "motor_physiology_p": 0.10833740234375,
+    "private_artifact_reuse_allowed": false,
+    "consumed_target_reopen_allowed": false,
+    "post_result_tuning_allowed": false
+  },
+  "primary_sources": [
+    {
+      "source_id": "physionet_eegmmidb_v1",
+      "url": "https://physionet.org/content/eegmmidb/1.0.0/",
+      "type": "official_dataset_record",
+      "finding": "The source provides 64-channel 160 Hz EDF+ recordings across execution and imagery tasks with left/right visual targets and T0/T1/T2 annotations.",
+      "design_use": "select a contiguous untouched cohort and pair unilateral execution and imagery runs"
+    },
+    {
+      "source_id": "li_mrcp_erd_2018",
+      "url": "https://doi.org/10.3389/fneur.2018.00822",
+      "type": "primary_research",
+      "finding": "Cued unilateral movement produced distinct MRCP and mu ERD patterns over C3, Cz, and C4 in 34 participants.",
+      "design_use": "register a separate central low-frequency lateralization assay"
+    },
+    {
+      "source_id": "suwandjieff_visual_cue_2024",
+      "url": "https://doi.org/10.1016/j.jneumeth.2024.110241",
+      "type": "primary_research",
+      "finding": "Visual cue design and cue versus movement alignment altered MRCP timing, topography, and classification behavior.",
+      "design_use": "make early-cue and topographic proxy controls mandatory"
+    },
+    {
+      "source_id": "mostert_eye_confounds_2018",
+      "url": "https://doi.org/10.1523/ENEURO.0401-17.2018",
+      "type": "primary_research",
+      "finding": "Small task-correlated eye movements contaminated an apparently meaningful multivariate neural decoding result.",
+      "design_use": "require ocular-sensitive proxies and preserve the no-dedicated-EOG ceiling"
+    },
+    {
+      "source_id": "gwon_motor_task_transfer_2024",
+      "url": "https://doi.org/10.1016/j.neuroimage.2024.120906",
+      "type": "primary_research",
+      "finding": "A 28-participant study found evidence that motor-execution-trained EEG models can transfer to motor imagery.",
+      "design_use": "register bidirectional execution-imagery transfer as a diagnostic rather than a rescue"
+    }
+  ],
+  "prospective_cohort": {
+    "dataset": "PhysioNet EEG Motor Movement/Imagery Dataset",
+    "version": "1.0.0",
+    "doi": "10.13026/C28G6P",
+    "selection_rule": "contiguous participant identifiers immediately after the consumed S001-S003 cohort",
+    "participants": ["S004", "S005", "S006", "S007", "S008", "S009", "S010", "S011", "S012", "S013", "S014", "S015"],
+    "participant_count": 12,
+    "overlap_with_consumed_cohort": [],
+    "execution_fit_runs": ["03", "07"],
+    "execution_sealed_final_run": "11",
+    "imagery_fit_runs": ["04", "08"],
+    "imagery_sealed_final_run": "12",
+    "prospective_edf_count": 72,
+    "event_sidecar_count": 0,
+    "expected_task_events_per_edf": 15,
+    "expected_fit_event_count": 720,
+    "expected_sealed_final_event_count": 360,
+    "exact_paths_sizes_and_sha256_required_before_authorization": true,
+    "substitution_participants_or_runs_allowed": false,
+    "target_derived_exclusion_allowed": false
+  },
+  "frozen_primary_model_template": {
+    "family_id": "fixed_low_frequency_shrinkage_lda",
+    "reference": "instantaneous_common_average_all_64_retained_eeg_channels",
+    "filter_design": "fourth_order_butterworth_bandpass_sos",
+    "passband_hz": [0.5, 4.0],
+    "filter_application": "scipy_signal_sosfilt_on_each_continuous_run_before_epoching",
+    "decision_window_seconds_from_cue": [1.0, 3.0],
+    "time_bins": 4,
+    "slopes_per_channel": 1,
+    "feature_dimension_formula": "5C",
+    "expected_feature_dimension_at_64_channels": 320,
+    "classifier": "participant_specific_linear_discriminant_analysis",
+    "lda_shrinkage": 0.1,
+    "selection_candidate_count": 1,
+    "hyperparameter_search_runs": 0,
+    "right_context_seconds_relative_to_decision": 0.0,
+    "decision_latency_seconds_from_cue": 3.0,
+    "causal_claim": "cue_causal_only_not_pre_movement_or_asynchronous"
+  },
+  "prediction_questions": [
+    {
+      "question_id": "execution_native_primary",
+      "fit_runs": ["03", "07"],
+      "predict_run": "11",
+      "role": "primary_confirmation"
+    },
+    {
+      "question_id": "imagery_native",
+      "fit_runs": ["04", "08"],
+      "predict_run": "12",
+      "role": "task_mode_confirmation"
+    },
+    {
+      "question_id": "execution_to_imagery",
+      "fit_runs": ["03", "07"],
+      "predict_run": "12",
+      "role": "cross_task_diagnostic"
+    },
+    {
+      "question_id": "imagery_to_execution",
+      "fit_runs": ["04", "08"],
+      "predict_run": "11",
+      "role": "cross_task_diagnostic"
+    }
+  ],
+  "mandatory_views_and_controls": [
+    "whole_head_execution_native_primary",
+    "whole_head_imagery_native",
+    "whole_head_execution_to_imagery",
+    "whole_head_imagery_to_execution",
+    "central_sensorimotor_only",
+    "frontal_polar_ocular_sensitive",
+    "occipital_visual_sensitive",
+    "left_minus_right_frontal_asymmetry",
+    "early_cue_window_whole_head",
+    "pre_cue_window",
+    "event_index_and_timing_only",
+    "train_only_no_signal_prior",
+    "all_zero_final_signal",
+    "fixed_train_label_derangement",
+    "fixed_one_trial_final_signal_displacement",
+    "fixed_channel_derangement",
+    "fixed_left_right_hemisphere_swap"
+  ],
+  "prospective_gates": {
+    "H1_execution_cohort_confirmation": {
+      "expected_final_event_count": 180,
+      "minimum_correct_count": 117,
+      "minimum_pooled_balanced_accuracy": 0.65,
+      "minimum_macro_participant_balanced_accuracy": 0.625,
+      "minimum_participants_above_0_5_balanced_accuracy": 9,
+      "maximum_exact_participant_sign_flip_p": 0.01,
+      "minimum_pooled_margin_over_no_signal": 0.1,
+      "minimum_macro_margin_over_no_signal": 0.1
+    },
+    "H2_task_mode_robustness": {
+      "minimum_imagery_native_pooled_balanced_accuracy": 0.6,
+      "minimum_imagery_native_macro_participant_balanced_accuracy": 0.6,
+      "minimum_imagery_participants_above_0_5_balanced_accuracy": 8,
+      "maximum_exact_participant_sign_flip_p": 0.05,
+      "bidirectional_transfer_is_diagnostic_not_rescue": true
+    },
+    "H3_motor_compatible_localization": {
+      "minimum_central_pooled_balanced_accuracy": 0.6,
+      "minimum_central_macro_participant_balanced_accuracy": 0.6,
+      "minimum_central_minus_strongest_proxy_margin": 0.05,
+      "maximum_exact_paired_participant_sign_flip_p": 0.05,
+      "minimum_participants_with_registered_central_lateralization_direction": 8,
+      "maximum_lateralization_sign_flip_p": 0.05,
+      "dedicated_EOG_available": false,
+      "dedicated_EMG_available": false,
+      "proxy_failure_proves_cortical_origin": false
+    }
+  },
+  "ordered_verdict_router": [
+    {
+      "verdict": "WO9R-R0",
+      "condition": "any_integrity_event_split_resource_access_order_or_prediction_freeze_gate_fails",
+      "maximum_claim": "invalid_or_incomplete_registered_execution"
+    },
+    {
+      "verdict": "WO9R-R1",
+      "condition": "H1_execution_cohort_confirmation_fails",
+      "maximum_claim": "three_person_low_frequency_effect_not_confirmed_under_this_frozen_cohort_test"
+    },
+    {
+      "verdict": "WO9R-R2",
+      "condition": "H1_passes_but_H2_or_localization_confound_conjunction_fails",
+      "maximum_claim": "low_frequency_left_right_task_information_confirmed_in_a_new_cohort_but_cue_or_confound_compatible"
+    },
+    {
+      "verdict": "WO9R-R3",
+      "condition": "H1_and_H2_pass_but_H3_fails",
+      "maximum_claim": "low_frequency_task_information_robust_across_execution_and_imagery_without_motor_localization"
+    },
+    {
+      "verdict": "WO9R-R4",
+      "condition": "H1_H2_H3_and_all_negative_controls_pass",
+      "maximum_claim": "multi_person_held_out_motor_compatible_low_frequency_EEG_task_effect_within_EEGMMIDB_not_brain_specific"
+    }
+  ],
+  "future_resource_envelope": {
+    "cpu_threads": 1,
+    "workers": 1,
+    "concurrent_numerical_jobs": 1,
+    "maximum_peak_rss_bytes": 1073741824,
+    "maximum_model_stage_runtime_seconds": 1800,
+    "maximum_private_generated_bytes": 67108864,
+    "minimum_free_disk_bytes_before_tier_c_operation": 21474836480,
+    "expected_payload_ceiling_bytes": 268435456,
+    "exact_payload_bytes_available_now": false,
+    "persistent_background_processes": 0,
+    "retries": 0,
+    "reruns": 0,
+    "post_final_updates": 0
+  },
+  "required_evidence_order": [
+    "freeze_exact_metadata_paths_sizes_sha256_and_acquisition_caps",
+    "commit_push_and_obtain_green_CI_for_all_false_Tier_C_request",
+    "obtain_exact_maintainer_decision",
+    "qualify_downloader_and_analysis_only_on_generated_fixtures_and_mocked_network",
+    "commit_push_and_obtain_green_CI_for_exact_implementation",
+    "acquire_and_opaque_verify_exact_absent_bundle_once",
+    "create_all_target_blind_native_transfer_localization_and_control_predictions",
+    "commit_push_and_obtain_green_CI_for_aggregate_hash_only_prediction_freeze",
+    "deliver_and_score_run_11_and_run_12_targets_once_and_apply_frozen_router"
+  ],
+  "forbidden_operations_now": [
+    "any_EDF_payload_request_download_stat_open_hash_decode_or_parse",
+    "any_local_PhysioNet_bundle_or_private_Work_Order_9_artifact_operation",
+    "any_EDF_header_annotation_event_signal_target_channel_or_geometry_read",
+    "any_split_derivative_cache_model_checkpoint_fit_inference_prediction_freeze_or_score",
+    "any_consumed_S001_S003_target_or_private_output_reuse",
+    "any_S20_S21_S24_S25_SpanishBCBL_raw_FIF_or_MAT_access",
+    "any_event_sidecar_access",
+    "any_participant_run_file_or_model_substitution",
+    "any_target_derived_exclusion_selection_threshold_or_update",
+    "any_deep_foundation_language_or_provider_model_use",
+    "any_retry_rerun_post_outcome_amendment_or_claim_promotion",
+    "any_stream_device_hardware_release_publication_or_clinical_operation"
+  ],
+  "current_access_counters": {
+    "local_physionet_path_operations": 0,
+    "private_work_order_9_artifact_operations": 0,
+    "edf_payload_get_requests": 0,
+    "edf_payload_network_bytes": 0,
+    "new_local_payload_bytes": 0,
+    "edf_header_reads": 0,
+    "edf_annotation_or_event_reads": 0,
+    "edf_signal_sample_reads": 0,
+    "task_target_or_label_reads": 0,
+    "channel_geometry_sampling_or_quality_reads": 0,
+    "event_sidecar_operations": 0,
+    "split_derivative_or_cache_operations": 0,
+    "dependency_installs": 0,
+    "model_or_checkpoint_loads": 0,
+    "training_or_parameter_update_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_freezes": 0,
+    "sealed_target_deliveries": 0,
+    "scoring_events": 0,
+    "provider_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "scientific_claim_upgrades": 0,
+    "generated_experiment_bytes": 0
+  },
+  "warnings": [
+    "The exact 72-file paths sizes and official SHA-256 inventory are not frozen by this research record.",
+    "Motor imagery is not a cue-only negative control and can contain genuine motor-related activity.",
+    "Frontal and occipital scalp subsets are proxies and cannot prove the presence or absence of ocular or cortical sources.",
+    "Cue onset is not measured movement onset; the model is cue-causal at a three-second decision latency, not pre-movement or asynchronous.",
+    "A same-team new-cohort result within one public dataset is cohort confirmation, not independent-team scientific replication.",
+    "Exact public research-tool HTML paper and checksum metadata transfer bytes are unavailable.",
+    "The 10 GiB user allowance is a ceiling and does not authorize or require spending it."
+  ],
+  "next_gate": "prepare_exact_metadata_bound_acquisition_and_experiment_preregistration_plus_all_false_Tier_C_authorization_packet_without_opening_payload",
+  "claim_boundary": {
+    "engineering_capability_added": "A falsifiable low-frequency cohort-confirmation and localization route now separates execution, imagery, task transfer, cue proxies, ocular proxies, timing controls, and central physiology under one bounded evidence order.",
+    "scientific_claim_not_established": "No new participant payload target model prediction or score was accessed, so there is no cohort confirmation brain-specific motor origin unseen-person decoder typing language thought real-time portable home assistive or clinical result.",
+    "maximum_future_WO9R_R4_claim": "Multi-person held-out motor-compatible low-frequency EEG task effect within EEGMMIDB, still without brain-specific origin or independent-team replication."
+  }
+}

@@ -88,6 +88,27 @@ work-order-9 counter stayed zero. Work order 8 is complete and consumed.
 Work order 9 advanced through its own green authorization and implementation,
 then consumed one successful target-blind execution and one final score after
 the exact aggregate freeze became remotely green. It is complete at `WO9-V1`.
+Work order 9R is an additive evidence-dependent branch, not a replacement for
+work order 10 and not a Work Order 9 rerun. Its Tier A research record selects
+the contiguous untouched S004-S015 cohort and six runs per participant:
+execution `03/07 -> 11` and imagery `04/08 -> 12`. The exact prespecified
+`0.5-4 Hz` shrinkage-LDA comparator becomes the one future primary template,
+with native and bidirectional transfer questions, central/frontal/occipital
+views, an ocular-sensitive frontal asymmetry, early/pre-cue controls, timing,
+no-signal, label, displacement, channel, and hemisphere controls. The five-way
+router separates failed confirmation, cue-compatible confirmation,
+execution/imagery robustness, and a maximum motor-compatible result. Even its
+maximum route cannot establish brain-specific origin. Research authorizes no
+metadata-bound acquisition contract, payload, split, model, target, score, or
+claim. Read
+`docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PRIMARY_SOURCE_RESEARCH.md`
+and its machine registry before preparing the separately gated exact
+inventory and preregistration.
+
+WO9R status: **Research complete; exact inventory, preregistration,
+authorization, implementation, acquisition, and execution gated.** It is
+deliberately outside the numbered 1-20 table so that the frozen execution
+overlay remains exactly 20 rows.
 
 Registration `2a7b4188553e221133d788a081b838dbbb9f41bb` passed Base Python
 job `93215490492` and Optional Neuro Readers job `93215490501` in CI

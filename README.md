@@ -747,6 +747,26 @@ Read this before interpreting any number in the repository.
   localization, not proof of brain-specific motor decoding. Read the
   [full result and condition breakdown](docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_RESULT.md).
   Work order 9 is complete and consumed with no rerun.
+- **WO9R low-frequency cohort-confirmation design:** the strongest WO9 lead is
+  now converted into a prospective, falsifiable next study rather than a
+  retrospective model promotion. The planning-only design selects the
+  contiguous untouched `S004-S015` cohort and pairs execution runs
+  `03/07 -> 11` with imagery runs `04/08 -> 12`, for 12 participants, 72
+  prospective EDFs, and 360 expected sealed-final events. The exact fixed
+  `0.5-4 Hz` whole-head shrinkage-LDA recipe is the sole primary template; no
+  architecture or hyperparameter search is allowed. Native execution,
+  native imagery, and both transfer directions must freeze together before
+  either final target set opens. Central sensorimotor, frontal ocular-sensitive,
+  occipital visual-sensitive, early cue, pre-cue, timing, no-signal, label,
+  trial-displacement, channel, and hemisphere controls distinguish a cohort-
+  confirmed task signal from a motor-compatible localized effect. The router
+  spans `WO9R-R0` through `WO9R-R4`; even `R4` remains within-dataset,
+  motor-compatible EEG evidence, not brain-specific origin or independent-team
+  replication. This Tier A result downloaded and opened no EDF and ran no
+  model. Read the [primary-source design and exact claim
+  boundary](docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PRIMARY_SOURCE_RESEARCH.md).
+  Exact file identities, a preregistration, Tier C permission, implementation,
+  acquisition, prediction freeze, and scoring all remain future gates.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

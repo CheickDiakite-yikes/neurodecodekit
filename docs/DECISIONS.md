@@ -4667,3 +4667,53 @@ already recorded here.
 Evidence: `docs/PHYSIONET_MOTOR_POSITIVE_CONTROL_RESULT.md`,
 `registries/physionet_motor_positive_control_result.v0.json`, and
 `tests/test_physionet_motor_positive_control_result.py`.
+
+## 0134 - Turn The Slow-Potential Lead Into WO9R Cohort Confirmation
+
+Decision: preserve the Work Order 9 `WO9-V1` verdict and consumed S001-S003
+boundary, while treating its prespecified `0.5-4 Hz` secondary result as a new
+prospective hypothesis. Do not promote that arm inside Work Order 9 or reopen
+its private artifacts. Use a separately named additive lane, `WO9R`, so work
+orders 10-20 and Loop 54 dependencies remain unchanged.
+
+Cohort: select the contiguous untouched S004-S015 range before payload access.
+Prospectively pair execution fit runs 03/07 with sealed run 11 and imagery fit
+runs 04/08 with sealed run 12. The candidate inventory is 12 participants and
+72 EDFs with no `.event` sidecars. Exact paths, sizes, and official SHA-256
+values remain a future metadata-bound contract; no substitution is allowed.
+
+Model: carry the existing prespecified comparator forward byte-for-behavior as
+the sole primary template: continuous causal fourth-order `0.5-4 Hz` SOS,
+common-average reference over all retained channels, a `+1` to `+3` second cue-
+aligned window, four temporal means plus one slope per channel, and fixed
+shrinkage-LDA `0.1`. No architecture, channel, threshold, hyperparameter, deep
+model, foundation model, or LLM selection belongs in this confirmation test.
+
+Falsification: freeze execution-native, imagery-native, and bidirectional
+transfer predictions together. Require participant-level statistics and fixed
+central, frontal ocular-sensitive, occipital visual-sensitive, frontal-
+asymmetry, early/pre-cue, timing, no-signal, label, displacement, channel, and
+hemisphere controls. Route `WO9R-R0` through `WO9R-R4`, with `R4` capped at a
+within-dataset, multi-person, motor-compatible low-frequency EEG task effect.
+Dedicated EOG/EMG, measured movement onset, cue neutrality, brain-specific
+origin, and independent-team replication remain unavailable.
+
+Safety: later contracts must use one thread/worker/job, at most 1 GiB RSS,
+1,800 seconds, 64 MiB private output, an expected payload below 256 MiB, at
+least 20 GiB free disk, and zero retry/rerun/post-final update. The user's
+10 GiB allowance is a ceiling, not a spending target.
+
+Current evidence: this Tier A pass read public documentation and committed
+aggregate evidence only. It performed zero local PhysioNet or private Work
+Order 9 operations, EDF payload requests, header/event/signal/target reads,
+splits, model runs, scores, provider calls, or hardware operations.
+
+Next gate: prepare an exact metadata-bound acquisition/experiment
+preregistration and all-false Tier C request. Do not touch a selected payload
+before that request, a separate exact decision, fixture-only implementation,
+and remote-green implementation evidence exist in order.
+
+Evidence:
+`docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/physionet_low_frequency_cohort_confirmation_research.v0.json`, and
+`tests/test_physionet_low_frequency_cohort_confirmation_research.py`.

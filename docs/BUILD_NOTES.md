@@ -6038,3 +6038,45 @@ central-localization conjunctions failed, so brain-specific motor origin,
 unseen-person generalization, typing, language or thought decoding, real-time
 performance, portable hardware, home use, assistive benefit, and clinical
 utility remain unestablished.
+
+## 2026-08-09 - WO9R Low-Frequency Confirmation Research Frozen
+
+- Converted the strong prespecified Work Order 9 `0.5-4 Hz` secondary result
+  into a new prospective hypothesis without reopening or rerunning S001-S003.
+- Selected the contiguous untouched S004-S015 cohort and six paired unilateral
+  runs per participant: execution `03/07 -> 11` and imagery `04/08 -> 12`.
+  The candidate inventory is 12 participants, 72 EDFs, 720 expected fit events,
+  and 360 expected sealed-final events; exact paths/sizes/hashes are not yet
+  frozen and no payload was requested.
+- Carried forward one unchanged primary template: causal continuous-run
+  `0.5-4 Hz` SOS, all-channel common-average reference, `+1` to `+3` second
+  decision window, four temporal means plus one slope per channel, and fixed
+  shrinkage-LDA `0.1`. No selection, larger model, foundation model, or LLM is
+  part of the study.
+- Added native execution, native imagery, bidirectional task transfer,
+  participant-level exact tests, central low-frequency lateralization, and
+  frontal/occipital/ocular-sensitive, early/pre-cue, timing, no-signal, label,
+  displacement, channel, and hemisphere controls.
+- Added a five-route `WO9R-R0` through `WO9R-R4` ceiling. Even the maximum route
+  remains a motor-compatible within-dataset EEG task effect, not brain-specific
+  origin or independent-team replication.
+- Added one machine research registry and ten invariants covering all-false
+  authorization/access counters, immutable inherited evidence, disjoint cohort
+  identity, exact model template, four prediction questions, controls,
+  participant-level gates, router, resources, and tracker synchronization.
+- This pass opened no local PhysioNet bundle or private Work Order 9 artifact,
+  downloaded no EDF, and performed zero header/event/signal/target reads,
+  splits, fits, inferences, scores, provider calls, or hardware operations.
+  Exact public web-research transfer bytes are unavailable; EDF payload bytes
+  are zero. The unrelated tracker inspection NDJSON remains untouched.
+
+Next gate: commit, push, and require both CI jobs green. Then prepare only the
+exact public-metadata inventory, preregistration, and all-false Tier C request.
+Real acquisition and execution remain unauthorized.
+
+Engineering capability added: the project now has a falsifiable and bounded
+cohort-confirmation/localization design for its strongest real EEG lead.
+
+Scientific claim not established: no new participant payload, target, model,
+prediction, or score was accessed, so no cohort replication or neural claim
+was added.

@@ -284,6 +284,21 @@
    physiology and central-over-proxy localization failed. Work order 9 is
    complete and consumed. Do not reopen, rerun, tune, or promote it into a
    brain-specific, typing, language, real-time, or hardware claim.
+   Then read
+   `docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_PRIMARY_SOURCE_RESEARCH.md`
+   and
+   `registries/physionet_low_frequency_cohort_confirmation_research.v0.json`.
+   This additive WO9R Tier A design selects twelve untouched participants,
+   `S004-S015`, and pairs execution `03/07 -> 11` with imagery
+   `04/08 -> 12`. It carries the exact fixed `0.5-4 Hz` shrinkage-LDA template
+   forward without model selection and freezes participant-level confirmation,
+   execution/imagery transfer, central localization, ocular/visual proxy,
+   early/pre-cue, timing, no-signal, derangement, and displacement questions.
+   The maximum future route is a within-dataset motor-compatible task effect,
+   not brain-specific proof. No exact 72-file inventory, acquisition,
+   preregistration, authorization, implementation, payload, model, prediction,
+   target, or score exists yet. The next safe action is metadata-bound contract
+   preparation only.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

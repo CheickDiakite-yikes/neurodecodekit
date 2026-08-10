@@ -833,3 +833,15 @@ Work order 13 is also consumed, but only at a synthetic mechanics boundary.
 The exact 4,535-parameter CML-v0 passed 18/19 check gates and parked at
 `CML-R0`; synthetic final targets were not delivered, seed 5513 has no rerun,
 and the result does not change Loop 55's real-evidence `Not Started` status.
+
+Work order 9 is now complete and consumed at `WO9-V1`. Its selected 8-30 Hz
+primary failed, while the prespecified `0.5-4 Hz` comparator reached 36/45,
+0.800395 balanced accuracy, and `p=0.000183`. That result is held-out task
+information, not brain-specific motor decoding: motor physiology failed and
+central sensors underperformed the frontal/occipital proxy. The additive WO9R
+Tier A research record now selects S004-S015 and paired execution/imagery runs
+for a new-cohort confirmation and localization test. It does not renumber the
+scientific loops or systematic work orders 10-20. Exact file identities,
+preregistration, authorization, implementation, acquisition, model execution,
+prediction freeze, and scoring remain gated, with every current real-data and
+model counter zero.
