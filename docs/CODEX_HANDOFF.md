@@ -1906,3 +1906,36 @@ Next route: use Tier A research to specify a cue-neutral or independently
 instrumented replication with synchronized EOG/EMG and measured movement
 onset. Do not scale this classifier or reopen WO9R to answer the source-
 localization question.
+
+## 2026-08-10 IACKD-1 Packet Gate
+
+WO9R is complete and consumed at `WO9R-R3`. Do not reopen its private outputs,
+targets, or models. The next source-attribution question is IACKD-1, not a
+WO9R rerun or a larger classifier.
+
+Read, in order:
+
+1. `docs/IACKD_CUE_ACTION_DISSOCIATION_PRIMARY_SOURCE_RESEARCH.md`
+2. `registries/iackd_openneuro_metadata_inventory.v0.json`
+3. `docs/IACKD_CUE_ACTION_DISSOCIATION_PREREGISTRATION.md`
+4. `registries/iackd_cue_action_dissociation_contract.v0.json`
+5. `docs/IACKD_CUE_ACTION_DISSOCIATION_AUTHORIZATION_PACKET.md`
+6. `registries/iackd_cue_action_dissociation_authorization_request.v0.json`
+
+Research `d6f955e` passed CI `31399402403`. Registration
+`e42b79961d1fafe5cf406beaf868388ecbcbfb09` passed Base Python
+`93493810963` and Optional Neuro Readers `93493811025` in CI `31400450392`.
+The frozen design binds 1,340 objects, 7,249,113,684 bytes, 30
+participant-hand units, congruent-to-incongruent reversal, direct EOG and Leap
+controls, one model family, 300 fits, 420 prediction sets, and one score after
+a green prediction freeze.
+
+The request is all-false. Its commit must be pushed and remotely green before
+a **new** `continue`, `approve`, or `proceed` can bind it as the sole Tier C
+packet. Earlier short-form messages and the 10 GB ceiling do not authorize
+IACKD. Record the user's actual words in a separate decision; require that
+decision commit green before implementation; require implementation green
+before acquisition; and require the target-free freeze green before targets.
+
+Do not touch the unrelated untracked
+`docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx.inspect.ndjson`.

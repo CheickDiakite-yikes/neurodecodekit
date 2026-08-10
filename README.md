@@ -777,6 +777,29 @@ Read this before interpreting any number in the repository.
   portable hardware, or clinical utility. Read the [full aggregate result and
   control breakdown](docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_RESULT.md).
   WO9R is complete and consumed with no rerun or post-target tuning.
+- **Next scientific gate, IACKD-1 Cue-to-Action Reversal:** WO9R's strongest
+  unresolved question is now a direct prospective test rather than another
+  classifier comparison. The public CC0 OpenNeuro `ds006840` release provides
+  15 participants, 32-channel 1,024 Hz EEG, raw HEOG/VEOG, synchronized Leap
+  Motion hand trajectories, and congruent/incongruent visuomotor mappings. The
+  frozen design fits the exact compact `0.5-4 Hz` shrinkage-LDA family only on
+  earlier congruent trials, then freezes one held-out incongruent run per
+  participant and moving hand. The isolated scorer applies actual hand
+  direction and the opposite visual target direction to the **same**
+  predictions. That cleanly distinguishes an action-following representation
+  from a cue-following one.
+
+  The metadata-only inventory binds 1,340 raw-source objects totaling exactly
+  **7,249,113,684 bytes**, under the approved 10 GiB ceiling, while excluding
+  published MATLAB derivatives, demographics, and scan tables. The contract
+  keeps one CPU thread, no dependency installation, a 300-fit ceiling, exactly
+  420 prediction sets, a 30 ms target-blind motion guard, direct EOG and timing
+  controls, one hash-only prediction freeze, and one combined target delivery.
+  Registration `e42b799` passed both jobs in CI `31400450392`. The separate
+  [authorization packet](docs/IACKD_CUE_ACTION_DISSOCIATION_AUTHORIZATION_PACKET.md)
+  and machine request are all-false: no IACKD payload content, model run,
+  target, or score has been accessed. Read the [primary-source research](docs/IACKD_CUE_ACTION_DISSOCIATION_PRIMARY_SOURCE_RESEARCH.md)
+  and [frozen preregistration](docs/IACKD_CUE_ACTION_DISSOCIATION_PREREGISTRATION.md).
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

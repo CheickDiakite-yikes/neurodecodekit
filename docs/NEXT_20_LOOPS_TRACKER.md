@@ -870,3 +870,20 @@ or broadly distributed task response a live explanation. WO9R is complete and
 consumed with no rerun. The next high-value research branch is a cue-neutral or
 independently instrumented replication with synchronized EOG/EMG and measured
 movement onset, not a larger classifier.
+
+IACKD-1 now implements that next design prospectively at the registration
+boundary. The CC0 OpenNeuro `ds006840` metadata inventory binds 1,340 raw-source
+objects and 7,249,113,684 bytes across 15 participants, 128 runs, both moving
+hands, raw HEOG/VEOG, ball trajectories, and Leap Motion trajectories. It
+excludes published derivatives and has opened zero payload content.
+
+Research `d6f955e` passed both jobs in CI `31399402403`. Registration
+`e42b799` passed both jobs in CI `31400450392` and freezes congruent earlier-run
+fit versus held-out incongruent reversal, the same predictions scored against
+actual and visual directions, a 30 ms motion guard, one fixed 0.5-4 Hz model,
+300 fits, 420 prediction sets, one combined target delivery, participant-level
+tests, synchronized EOG/kinematic controls, and `IACKD-R0` through
+`IACKD-R4`. The separate request remains all-false until its own remote-green
+commit and a new packet-bound maintainer decision. No roadmap row or earlier
+authorization opens IACKD implementation, acquisition, parsing, modeling,
+targets, scoring, rerun, release, or claim promotion.

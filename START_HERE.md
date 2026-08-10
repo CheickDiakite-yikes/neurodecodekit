@@ -332,6 +332,22 @@
    frontal controls failed. Preserve the positive task-information result and
    the equally important brain-specific limitation together. WO9R is consumed;
    do not rerun, retune, or reopen its private artifacts.
+   Then read
+   `docs/IACKD_CUE_ACTION_DISSOCIATION_PRIMARY_SOURCE_RESEARCH.md`,
+   `registries/iackd_openneuro_metadata_inventory.v0.json`, and
+   `registries/iackd_cue_action_dissociation_research.v0.json`. IACKD-1 turns
+   WO9R's cue-versus-action ambiguity into a reversal: congruent earlier runs
+   fit one fixed low-frequency model, while held-out incongruent runs force
+   measured hand direction and visual target direction to be opposites. Then
+   read `docs/IACKD_CUE_ACTION_DISSOCIATION_PREREGISTRATION.md` and its
+   contract. Registration `e42b799` passed Base Python job `93493810963` and
+   Optional Neuro Readers job `93493811025` in CI `31400450392`. It freezes
+   1,340 raw-source objects and 7,249,113,684 bytes, 30 participant-hand units,
+   a 30 ms motion guard, HEOG/VEOG controls, 300 fits, 420 prediction sets, one
+   combined target delivery, and an `IACKD-R0` through `IACKD-R4` router. The
+   authorization packet and request are all-false until their own commit is
+   remotely green and the maintainer supplies a new packet-bound decision.
+   Earlier `continue` messages do not authorize IACKD payload work.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

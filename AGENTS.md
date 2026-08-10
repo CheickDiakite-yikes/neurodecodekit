@@ -74,6 +74,30 @@ WO9R private artifacts or infer typing, language, thought decoding, unseen-
 person generalization, real-time operation, hardware, home-use, assistive, or
 clinical evidence.
 
+The next active evidence lane is `IACKD-1 Cue-to-Action Reversal`. Read
+`docs/IACKD_CUE_ACTION_DISSOCIATION_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/iackd_openneuro_metadata_inventory.v0.json`,
+`docs/IACKD_CUE_ACTION_DISSOCIATION_PREREGISTRATION.md`, and
+`registries/iackd_cue_action_dissociation_contract.v0.json`. Registration
+`e42b79961d1fafe5cf406beaf868388ecbcbfb09` passed Base Python job
+`93493810963` and Optional Neuro Readers job `93493811025` in CI
+`31400450392`. The contract freezes a 1,340-object, 7,249,113,684-byte raw
+OpenNeuro `ds006840` inventory, 30 participant-hand units, congruent fit versus
+held-out incongruent reversal, a 30 ms target-blind Leap guard, direct HEOG/
+VEOG controls, one fixed low-frequency model, 300 fits, 420 prediction sets,
+one remotely green freeze before one dual-target score, and an `IACKD-R1`
+cue-bound route distinct from generic failure.
+
+Read `docs/IACKD_CUE_ACTION_DISSOCIATION_AUTHORIZATION_PACKET.md` and
+`registries/iackd_cue_action_dissociation_authorization_request.v0.json`.
+They are all-false and authorize no implementation, local path, payload,
+content, dependency, model, target, score, cleanup, rerun, or claim operation.
+Their commit must be pushed and remotely green before a new unambiguous
+maintainer `continue`, `approve`, or `proceed` may bind the sole packet by
+reference. Earlier short-form instructions are not retroactive. The separate
+decision must quote the user's actual words and become remotely green before
+implementation. Do not touch IACKD until that order is complete.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

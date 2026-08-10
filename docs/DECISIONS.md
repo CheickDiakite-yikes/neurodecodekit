@@ -4920,3 +4920,53 @@ Evidence:
 `docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_RESULT.md`,
 `registries/physionet_low_frequency_cohort_confirmation_result.v0.json`, and
 `tests/test_physionet_low_frequency_cohort_confirmation_result.py`.
+
+## 0140 - Turn The WO9R Cue Ambiguity Into A Mapping Reversal
+
+Decision: select OpenNeuro IACKD `ds006840` version `1.0.0` as the next
+evidence-bearing public-EEG lane. Fit one fixed low-frequency family only on
+congruent trials where visual and hand directions agree. Freeze it on held-out
+incongruent runs where those directions are opposites, then score the same
+predictions against both target views.
+
+Reason: WO9R established robust task information but failed source
+localization; early-cue and frontal performance were stronger than the central
+motor view. A cue-to-action reversal tests that exact ambiguity more directly
+than a larger classifier, another EEGMMIDB split, or a retrospective proxy.
+
+Data decision: bind the 1,340 raw EEG, marker, event, ball, and Leap objects
+totaling 7,249,113,684 bytes. Exclude published MATLAB derivatives because
+they remove EOG, use zero-phase preprocessing, and package labels with
+features. Retain HEOG/VEOG and signed Leap/ball displacement behind a target
+firewall. Metadata observation is complete; payload acquisition is not
+authorized.
+
+Evidence:
+`docs/IACKD_CUE_ACTION_DISSOCIATION_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/iackd_cue_action_dissociation_research.v0.json`, and
+`registries/iackd_openneuro_metadata_inventory.v0.json`.
+
+## 0141 - Freeze IACKD-1 Before Any Real Content Operation
+
+Decision: freeze 30 participant-hand units, earlier congruent fit runs, one
+held-out incongruent run per unit, a target-blind 30 ms kinematic guard, one
+causal 0.5-4 Hz shrinkage-LDA family, direct HEOG/VEOG controls, 300 maximum
+fits, exactly 420 prediction sets, one combined target delivery, and one
+aggregate score. Route reliable visual alignment to `IACKD-R1` before generic
+null so a cue-bound result remains scientifically useful.
+
+Access order: preregistration `e42b799` passed both jobs in CI `31400450392`.
+The separate authorization request remains all-false. Its own commit and both
+CI jobs must become green before a new packet-bound user decision can be
+accepted. The decision commit must then become green before generated-fixture
+implementation; the implementation must become green before one 7.25 GB
+acquisition; and the prediction freeze must become green before targets open.
+
+Boundary: the user's earlier `continue` and 10 GB allowance are not
+retroactive authorization. No IACKD content, dependency, model, target, score,
+rerun, release, or claim operation exists from this decision record.
+
+Evidence:
+`docs/IACKD_CUE_ACTION_DISSOCIATION_PREREGISTRATION.md`,
+`registries/iackd_cue_action_dissociation_contract.v0.json`, and
+`docs/IACKD_CUE_ACTION_DISSOCIATION_AUTHORIZATION_PACKET.md`.

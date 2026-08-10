@@ -6331,3 +6331,41 @@ held-out left/right task information across twelve fresh participants and both
 execution and imagery. Brain-specific origin, motor-compatible localization,
 unseen-person generalization, typing or thought decoding, real-time operation,
 hardware, and human benefit were not established.
+
+## 2026-08-10 - IACKD Cue-to-Action Reversal Frozen
+
+- Completed a primary-source and public-metadata pass over OpenNeuro IACKD
+  `ds006840` v1.0.0 and its 2026 data descriptor.
+- Retained a 370,331-byte metadata inventory with 1,340 selected objects and
+  exact path, size, ETag, and modification-time identities. The selected raw
+  source totals 7,249,113,684 bytes; 717,671,039 bytes of published MATLAB
+  derivatives are excluded.
+- Froze a participant-hand split: 30 models, congruent earlier-run fitting,
+  one final incongruent run per unit, and both final target views applied to the
+  same prediction set.
+- Froze a causal-in-samples 0.5-4 Hz model, 30 ms Leap motion guard, direct
+  HEOG/VEOG and fit-only EOG projection controls, 300 maximum fits, exactly 420
+  prediction sets, participant-level exact inference, and `IACKD-R0` through
+  `IACKD-R4` routing.
+- Research `d6f955e` passed both jobs in CI `31399402403`. Registration
+  `e42b799` passed Base Python job `93493810963` and Optional Neuro Readers job
+  `93493811025` in CI `31400450392`.
+- Local registration verification passed 1,638 tests with eight expected
+  skips, Ruff 0.15.20, compileall, 117 registry JSON files, and diff checks.
+- The all-false authorization packet permits a future new short-form decision
+  only after its own commit is remotely green. Earlier instructions are not
+  retroactive.
+- IACKD payload, local path, EEG/EOG, marker, event, ball, Leap, target, model,
+  prediction, score, dependency, retry, rerun, and claim counters remain zero.
+
+Next gate: commit and push the all-false packet, require both CI jobs green,
+then identify that sole packet to the maintainer. No implementation or real
+operation may begin before a separate decision-only commit is remotely green.
+
+Engineering capability added: NeuroDecodeKit now has an exact, resource-
+bounded prospective experiment that can distinguish cue-following from
+action-following low-frequency EEG predictions under synchronized controls.
+
+Scientific claim not established: no IACKD payload was opened and no
+prediction was made, so no new EEG effect, action decoding, source,
+generalization, real-time, hardware, assistive, or clinical evidence exists.
