@@ -379,13 +379,17 @@
    `93542494819` and Optional Neuro Readers job `93542494839` in CI
    `31415213841`. Next read
    `docs/IACKD_CHANNEL_INVENTORY_AUTHORIZATION_PACKET.md` and its all-false
-   request registry. Request `56531c6` passed Base Python job `93546632359` and
-   Optional Neuro Readers job `93546632280` in CI `31416489006`. The maintainer
-   then supplied a fresh packet-bound `continue`, preserved verbatim in
-   `docs/IACKD_CHANNEL_INVENTORY_AUTHORIZATION_DECISION.md` and its registry.
-   That decision is ineffective until its own commit is pushed and both CI jobs
-   are green. Only then may the one public 128-header/161,792-byte audit run.
-   Never use the retained local bundle for this lane.
+   request registry. Request `56531c6` passed both jobs in CI `31416489006`,
+   and packet-bound decision `04f2706` passed both jobs in CI `31424361969`
+   before the sole audit. Next read `docs/IACKD_CHANNEL_INVENTORY_RESULT.md`
+   and its registry. All eleven gates passed over 128 headers and 161,792 bytes.
+   Route `IACKDH-R5` measured two declarations: 96 have 29 channels without
+   M1/M2, while 32 have 31 channels with M1/M2; all contain HEOG, VEOG, and
+   TRIGGER at 1024 Hz. This explains the consumed reader failure but is not an
+   EEG-signal or neural result. Local bundle, sibling, sample, event,
+   trajectory, target, model, and score counters were zero. IACKD-H1 is
+   consumed with no rerun; a corrected experiment needs a new prospective
+   contract and Tier C gate.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

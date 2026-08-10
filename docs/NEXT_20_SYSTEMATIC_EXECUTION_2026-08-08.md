@@ -171,12 +171,14 @@ and score remain closed. Registration `0e52278` passed both jobs in CI
 `31412667060` before the dependency-free implementation began. Exact
 implementation `16621cc` passed both jobs in CI `31415213841` after one
 measured 128-header generated roundtrip at 36,634,624-byte peak RSS. The
-all-false request freezes the smallest next irreversible step: one sequential
-public 128-header/161,792-byte audit, with no local-bundle, sibling, sample,
-target, model, score, retry, or rerun. Request `56531c6` passed both jobs in CI
-`31416489006`; the maintainer then supplied a fresh packet-bound `continue`,
-now quoted in a separate decision. Commit and remotely green that decision
-next; only then may the single audit execute.
+all-false request froze the smallest next irreversible step. Request `56531c6`
+passed both jobs in CI `31416489006`, and decision `04f2706` passed both jobs
+in CI `31424361969` before the sole 128-header/161,792-byte audit. All eleven
+gates passed at `IACKDH-R5`: the declarations split 96 at 29 channels without
+M1/M2 and 32 at 31 channels with M1/M2; all include HEOG, VEOG, and TRIGGER at
+1024 Hz. The old global exact-36 assumption is invalid. Every local-bundle,
+sibling, sample, event, target, model, and score counter remained zero. The
+lane is consumed with no rerun. A separately named prospective repair is next.
 
 Registration `2a7b4188553e221133d788a081b838dbbb9f41bb` passed Base Python
 job `93215490492` and Optional Neuro Readers job `93215490501` in CI

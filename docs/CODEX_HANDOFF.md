@@ -2065,3 +2065,29 @@ commit, push, and require both remote CI jobs green for the exact decision.
 Only then run the module CLI once with the exact decision SHA and green commit/
 job evidence. Never touch the retained local bundle, resolve a sibling, amend
 the parser, or infer a scientific result from a header diagnosis.
+
+## 2026-08-10 IACKD-H1 Consumed R5 Result
+
+Decision `04f2706b56315186fac0c9a82686e9a360dbaf1e` passed Base Python
+job `93572439094` and Optional Neuro Readers job `93572439047` in CI
+`31424361969` before the sole execution.
+
+Read `docs/IACKD_CHANNEL_INVENTORY_RESULT.md` and
+`registries/iackd_channel_inventory_result.v0.json`. All eleven gates passed.
+The audit made 128 public VHDR requests for 161,792 bytes, hashed and strictly
+parsed each response once, and retained only a 5,515-byte aggregate ledger and
+a 244-byte consumed marker. Runtime was 23.576352333 seconds and peak RSS was
+94,650,368 bytes.
+
+The result is `IACKDH-R5`: 96 headers declare 29 channels without M1/M2, and
+32 declare 31 channels with M1/M2. All 128 include HEOG, VEOG, and TRIGGER and
+declare 1024 Hz. The old exact-36 global invariant was wrong, and one global
+channel list cannot describe all runs. The 29/31 totals are declarations, not
+known EEG-channel counts.
+
+No retained local bundle, sibling, signal, marker, event, trajectory, target,
+feature, model, prediction, or score was accessed. The invocation is consumed
+with no retry or rerun. Preserve both ignored receipts and the unrelated
+tracker-inspection NDJSON. The next useful work is a separately named,
+prospective count-agnostic cue-versus-action design; no retained-bundle step is
+open without a new exact Tier C gate.

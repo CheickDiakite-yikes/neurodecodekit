@@ -6578,3 +6578,38 @@ Scientific claim not established: this decision is not data or a result and
 establishes no EEG effect, action decoding, brain-specific origin,
 generalization, real-time operation, hardware capability, assistive benefit, or
 clinical use.
+
+## 2026-08-10 - IACKD-H1 Public Header Audit Consumed
+
+- Decision `04f2706b56315186fac0c9a82686e9a360dbaf1e` passed Base Python
+  job `93572439094` and Optional Neuro Readers job `93572439047` in CI
+  `31424361969` before execution.
+- The clean-worktree preflight measured 43,131,187,200 free bytes. The executor
+  wrote its consumed marker before the first request and ran exactly once.
+- All eleven gates passed: 128 public VHDR bodies, 161,792 input/network bytes,
+  128 SHA-256 passes, 128 strict parses, 23.576352333 seconds, 94,650,368-byte
+  peak RSS, one thread/worker/job, and zero retries or reruns.
+- The 5,515-byte aggregate ledger has SHA-256
+  `f981597730a1cc813431cb83b3910d9f330fb54267d86911e9dea58ee9c620ed`;
+  the 244-byte consumed marker has SHA-256
+  `e84c68ebc0a862650b0241083684f4440ba8b99edf7ac3c55e95c84eb17c304a`.
+  Both remain Git-ignored.
+- Route `IACKDH-R5` measured two declaration signatures: 96 headers declare 29
+  channels without M1/M2; 32 declare 31 channels with M1/M2; all include HEOG,
+  VEOG, and TRIGGER at 1024 Hz. The old exact-36 global invariant was wrong.
+- The declared totals do not establish EEG-channel counts, channel types,
+  geometry, reference, bad-channel state, or signal quality.
+- Retained local bundle, sibling, signal, marker, event, trajectory, target,
+  feature, model, prediction, score, provider, hardware, release, and claim
+  counters remained zero. Producer causality was not applicable and end-to-end
+  decoding latency was not measured.
+
+Engineering capability added: NeuroDecodeKit measured the complete public
+IACKD header inventory and replaced the failed exact-36-channel assumption
+with a reproducible two-signature compatibility contract.
+
+Scientific claim not established: no EEG sample, event, trajectory, target,
+model, prediction, or score was accessed, so this result establishes no neural
+effect, action decoding, brain-specific origin, generalization, typing,
+language or thought decoding, real-time operation, hardware capability,
+assistive benefit, or clinical use.

@@ -5134,3 +5134,27 @@ occurs while recording it.
 Evidence: `docs/IACKD_CHANNEL_INVENTORY_AUTHORIZATION_DECISION.md`,
 `registries/iackd_channel_inventory_authorization_decision.v0.json`, and
 `tests/test_iackd_header_inventory_authorization_decision.py`.
+
+## 0148 - Close IACKD-H1 At Two Header Signatures
+
+Decision: accept the sole public-header audit as complete and consumed at
+`IACKDH-R5`. Replace the disproven exact-36 global declaration assumption with
+the measured two-signature compatibility fact; do not reopen, rerun, or amend
+the result.
+
+Result: all eleven gates passed over 128 public VHDR bodies and 161,792 bytes.
+Ninety-six declarations contain 29 channels without M1/M2, and 32 contain 31
+channels with M1/M2. Every declaration contains HEOG, VEOG, and TRIGGER and
+reports 1024 Hz. Runtime was 23.576352333 seconds, peak RSS was 94,650,368
+bytes, and retained generated output was 5,759 bytes. The declared totals are
+not established EEG-channel counts.
+
+Boundary: retained-bundle, sibling, sample, event, trajectory, target, feature,
+model, prediction, and score operations remained zero. This is a complete
+engineering diagnosis and no neural result. A future cue-versus-action study
+must prospectively freeze a count-agnostic, presence-based role policy and
+treat M1/M2 availability as a run property before a new exact Tier C decision.
+
+Evidence: `docs/IACKD_CHANNEL_INVENTORY_RESULT.md`,
+`registries/iackd_channel_inventory_result.v0.json`, and
+`tests/test_iackd_header_inventory_result.py`.

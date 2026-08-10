@@ -40,6 +40,7 @@ irreversible Tier C events.
 |---|---|---|
 | Trial identity | All 66 S21 session-1 trials and all 63 performed session-2 trials reconcile to MAT provenance; empty session-2 slots remain explicit | The real MEG evidence has exact trial identity instead of fuzzy sentence matching |
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |
+| IACKD source compatibility | One bounded audit parsed all 128 public VHDR declarations and found two signatures: 96 declare 29 channels without M1/M2, while 32 declare 31 channels with them; all include HEOG, VEOG, and TRIGGER at 1024 Hz | This resolves the consumed reader failure: the exact-36 global invariant was wrong. It is a source-format result only; no EEG sample, event, target, model, or score was accessed |
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
 | Full-path causality gate | Loop 25 v1 passed a dedicated causal anti-alias audit, 65,537 response points, 23 alias probes, 168 schedule checks, 240 resume checks, and 72 future-mutation controls across 24 target-free items | The exact 1000-to-100 Hz path is mechanically causal with zero right context; this is synthetic mechanics evidence, not proof that neural information survives |
 | Consumed S21 validation | The registered 2,908-parameter candidate reached macro CER `0.938177`; the train-only no-signal prior reached `0.751235`, so the candidate was worse by `0.186942` | Loop 26 is parked after one consumed six-target event; this is a clear negative result, not neural advantage |
@@ -811,7 +812,7 @@ Read this before interpreting any number in the repository.
   [frozen preregistration](docs/IACKD_CUE_ACTION_DISSOCIATION_PREREGISTRATION.md),
   [implementation record](docs/IACKD_CUE_ACTION_DISSOCIATION_IMPLEMENTATION.md),
   and [aggregate closeout](docs/IACKD_CUE_ACTION_DISSOCIATION_RESULT.md).
-- **Active engineering gate, IACKD-H1 Header Inventory Audit:** the published
+- **Completed engineering gate, IACKD-H1 Header Inventory Audit:** the published
   article supports a 32-channel cap and separately names M1, M2, HEOG, and
   VEOG, but it never establishes an exact 36-channel BrainVision invariant.
   The authors' pinned public code also uses two different presence-based
@@ -829,16 +830,19 @@ Read this before interpreting any number in the repository.
   0.037819 seconds at 36,634,624-byte peak RSS and emitted 4,465 bytes with
   zero network or real-content operations. Its constructed `IACKDH-R1` has no
   real-source meaning. Request `56531c6` passed both jobs in CI `31416489006`;
-  the maintainer then supplied a fresh packet-bound `continue`, now preserved
-  verbatim in a separate decision. That decision still must be committed,
-  pushed, and remotely green before the one 128-header/161,792-byte public
-  audit can run. It never permits the retained local bundle, siblings, samples,
-  targets, models, scoring, retry, or rerun.
+  decision `04f2706` then passed both jobs in CI `31424361969` before the sole
+  audit. All eleven gates passed over 128 requests and 161,792 bytes in
+  23.576352333 seconds at 94,650,368-byte peak RSS. Route `IACKDH-R5` measured
+  two signatures: 96 declarations have 29 channels without M1/M2, and 32 have
+  31 channels with M1/M2; all contain HEOG, VEOG, and TRIGGER at 1024 Hz. The
+  retained local bundle, siblings, samples, events, targets, models, and scores
+  stayed closed. The run is consumed with no retry or rerun.
   Read the [primary-source diagnosis](docs/IACKD_CHANNEL_INVENTORY_PRIMARY_SOURCE_RESEARCH.md),
   [frozen preregistration](docs/IACKD_CHANNEL_INVENTORY_PREREGISTRATION.md),
   [implementation record](docs/IACKD_CHANNEL_INVENTORY_IMPLEMENTATION.md),
   [authorization packet](docs/IACKD_CHANNEL_INVENTORY_AUTHORIZATION_PACKET.md),
-  and [decision record](docs/IACKD_CHANNEL_INVENTORY_AUTHORIZATION_DECISION.md).
+  [decision record](docs/IACKD_CHANNEL_INVENTORY_AUTHORIZATION_DECISION.md), and
+  [aggregate result](docs/IACKD_CHANNEL_INVENTORY_RESULT.md).
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

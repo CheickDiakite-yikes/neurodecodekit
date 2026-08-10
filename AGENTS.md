@@ -127,15 +127,20 @@ Optional Neuro Readers job `93542494839` in CI `31415213841` before the
 all-false Tier C request was prepared. Read
 `docs/IACKD_CHANNEL_INVENTORY_AUTHORIZATION_PACKET.md` and
 `registries/iackd_channel_inventory_authorization_request.v0.json`. Request
-`56531c6` passed Base Python job `93546632359` and Optional Neuro Readers job
-`93546632280` in CI `31416489006`. After that packet, proof, scope, and gate
-were identified, the maintainer supplied a fresh packet-bound `continue` in
-the message recorded verbatim by
-`docs/IACKD_CHANNEL_INVENTORY_AUTHORIZATION_DECISION.md` and
-`registries/iackd_channel_inventory_authorization_decision.v0.json`. The
-decision is ineffective until its own commit is pushed and both CI jobs are
-green. Only then may the one 128-header/161,792-byte public audit execute.
-Never use or inspect the existing local IACKD bundle for this lane.
+`56531c6` passed both jobs in CI `31416489006`; decision `04f2706` passed Base
+Python job `93572439094` and Optional Neuro Readers job `93572439047` in CI
+`31424361969` before the sole audit. Read
+`docs/IACKD_CHANNEL_INVENTORY_RESULT.md` and
+`registries/iackd_channel_inventory_result.v0.json`. All eleven gates passed:
+128 requests and 161,792 bytes produced two aggregate signatures. Ninety-six
+headers declare 29 channels without M1/M2; 32 declare 31 channels with M1/M2;
+all contain HEOG, VEOG, and TRIGGER at 1024 Hz. Route `IACKDH-R5` establishes
+that the old exact-36 global invariant was wrong and the declarations vary by
+run. Runtime was 23.576352333 seconds at 94,650,368-byte peak RSS. Local bundle,
+sibling, sample, event, trajectory, target, model, and score counters stayed
+zero. IACKD-H1 is consumed with no retry or rerun. A corrected neural
+experiment needs a separately named prospective contract and a new Tier C
+gate; never use or inspect the existing local IACKD bundle from this result.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

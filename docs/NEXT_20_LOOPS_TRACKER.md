@@ -908,9 +908,11 @@ standard-library parser, strict mocked transport, aggregate router, bounded
 writer, and module CLI were implemented. Exact implementation `16621cc` then
 passed both jobs in CI `31415213841`. A 128-header generated qualification used
 0.037819 seconds, 36,634,624-byte peak RSS, and 4,465 output bytes with zero
-network or real-content operations. The all-false Tier C request binds one
-future public 128-header/161,792-byte audit, zero retries/reruns, and zero local-
-bundle or sibling access. Request `56531c6` passed both jobs in CI
-`31416489006`; a later maintainer `continue` is now recorded verbatim in a
-separate decision. Commit, push, and remotely green that decision before the
-one audit. No corrected scientific analysis is implied.
+network or real-content operations. Request `56531c6` passed both jobs in CI
+`31416489006`, and decision `04f2706` passed both jobs in CI `31424361969`
+before the sole 128-header/161,792-byte audit. All eleven gates passed at
+`IACKDH-R5`: 96 declarations have 29 channels without M1/M2, while 32 have 31
+with M1/M2; all include HEOG, VEOG, and TRIGGER at 1024 Hz. The old exact-36
+global invariant is disproven as an engineering assumption. Local bundle,
+sibling, sample, event, target, model, and score counters remained zero. The
+lane is consumed with no rerun; no corrected scientific analysis is implied.
