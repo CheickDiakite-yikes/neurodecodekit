@@ -855,6 +855,17 @@ Read this before interpreting any number in the repository.
   weaker arm determines the participant statistic. This is a design, not a
   neural result; H2 real metadata and every IACKD-2 operation remain separately
   gated. Read the [role-aware dual-reversal research](docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_RESEARCH.md).
+- **Frozen next engineering gate, IACKD-H2 Channel Role and Geometry Audit:**
+  the exact prospective contract covers 128 `channels.tsv` files, 128 EEG
+  sidecars, 30 electrode tables, and 30 coordinate-system files: **316 public
+  metadata objects and 457,602 bytes total**. It selects predictive EEG by
+  source-declared BIDS type, keeps HEOG/VEOG and TRIGGER out of the predictive
+  set, treats M1/M2 as optional run properties, preserves missing reference or
+  geometry as unavailable, and publishes aggregate hashes and coverage only.
+  This registration authorizes generated fixtures only after its commit is
+  remotely green. It does not authorize the metadata fetch, retained bundle,
+  signal, target, model, or score and is not a neural result. Read the
+  [H2 preregistration](docs/IACKD_CHANNEL_ROLE_GEOMETRY_PREREGISTRATION.md).
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

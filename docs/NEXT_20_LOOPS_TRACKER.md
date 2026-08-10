@@ -895,7 +895,7 @@ failed. No sample, target, model, prediction, freeze, or score followed. The
 lane is consumed with no rerun, and no roadmap row authorizes post-failure
 inspection, expansion, release, or claim promotion.
 
-IACKD-H1 is the active bounded engineering gate. Primary-source review found
+IACKD-H1 is a completed and consumed bounded engineering gate. Primary-source review found
 that the article reports a 32-channel cap but does not promise exactly 36
 BrainVision channels, while the authors' pinned premovement and execution
 scripts use different presence-based deletion vocabularies: M1/M2/HEOG/VEOG/
@@ -927,5 +927,11 @@ coverage, optional M1/M2 policy, and one role-map hash. The future scientific
 design uses symmetric congruent-to-incongruent and incongruent-to-congruent
 arms; both must prefer action over a frozen exact-opposite cue surrogate, and
 the weaker participant margin is primary. Read
-`docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_RESEARCH.md`. H2 is not preregistered or
-authorized, and IACKD-2 has no open real-data or model gate.
+`docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_RESEARCH.md`. H2 is now prospectively
+frozen in `docs/IACKD_CHANNEL_ROLE_GEOMETRY_PREREGISTRATION.md`: exactly 316
+public metadata bodies and 457,602 bytes, strict source-declared roles,
+explicit unavailable reference/geometry, aggregate-only output, and routes
+`IACKDR-R0` through `IACKDR-R4`. Generated-fixture implementation is eligible
+only after the registration commit is pushed and both CI jobs are green. H2
+real bodies remain unauthorized, and IACKD-2 has no open real-data or model
+gate.

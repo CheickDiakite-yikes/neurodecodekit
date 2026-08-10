@@ -6647,3 +6647,39 @@ event, trajectory, target, model, prediction, or score was accessed, so this
 research establishes no new neural effect, action decoding, brain-specific
 origin, unseen-person generalization, typing, language or thought decoding,
 real-time operation, hardware capability, assistive benefit, or clinical use.
+
+## 2026-08-10 - IACKD-H2 Role And Geometry Registration Frozen
+
+- Bound the exact next metadata surface from the committed OpenNeuro inventory:
+  128 channel tables, 128 EEG sidecars, 30 electrode tables, and 30 coordinate
+  systems, totaling 316 objects and 457,602 bytes.
+- Froze strict standard-library UTF-8, TSV, and duplicate-key-free JSON
+  contracts; one-pass sequential transport; source-declared channel roles;
+  optional M1/M2 handling; explicit unavailable fields; geometry joins by
+  normalized name; aggregate-only output; and routes `IACKDR-R0` through
+  `IACKDR-R4`.
+- The role policy excludes TRIGGER and recorded EOG controls from predictive
+  EEG and does not infer a replacement channel count. Finite C3/C4/Cz geometry
+  is required for the strongest compatibility route; occipital coverage is
+  reported separately and cannot rescue it.
+- Fourteen invariants replay the exact 316-object identity, H1 reconciliation,
+  prior green anchors, parser policy, output firewall, resources, stage order,
+  zero counters, and claim boundary.
+- Local verification passed 1,718 dependency-free tests with 182 skips and
+  1,789 optional-neuro tests with 13 skips. Ruff, JSON validation, compilation,
+  and `git diff --check` also passed. The optional suite's first sandboxed
+  attempt was blocked only when an existing test tried to create a local
+  multiprocessing forkserver socket; the unchanged suite passed outside that
+  sandbox with network disabled.
+- No public H2 body or local IACKD path was requested, statted, resolved, or
+  opened. Generated-fixture implementation remains blocked until this exact
+  registration is committed, pushed, and both CI jobs pass; real execution
+  requires a later all-false packet and fresh green decision.
+
+Engineering capability proposed: a strict aggregate metadata audit can freeze
+a reproducible `SensorRoleMap` before any corrected IACKD sample reader exists.
+
+Scientific claim not established: no EEG sample, event, trajectory, target,
+model, prediction, or score was accessed, so this registration establishes no
+neural effect, action decoding, brain-specific origin, generalization,
+real-time operation, hardware capability, assistive benefit, or clinical use.

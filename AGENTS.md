@@ -104,7 +104,7 @@ geometry, event, trajectory, target, derivative, fit, inference, prediction,
 freeze, or score followed. Do not reopen the private bundle, rerun, relax the
 parser, infer which channel predicate failed, or promote a scientific claim.
 
-The active engineering lane is `IACKD-H1 Header Inventory Audit`. Read
+The latest completed engineering lane is `IACKD-H1 Header Inventory Audit`. Read
 `docs/IACKD_CHANNEL_INVENTORY_PRIMARY_SOURCE_RESEARCH.md`,
 `registries/iackd_channel_inventory_research.v0.json`,
 `docs/IACKD_CHANNEL_INVENTORY_PREREGISTRATION.md`, and
@@ -154,8 +154,15 @@ later role-map hash should bind every derivative. The improved IACKD-2 design
 uses both congruent-to-incongruent and incongruent-to-congruent arms and makes
 the weaker participant-level action-over-cue margin primary. This Tier A
 record authorizes no body fetch, local path, sample, event, trajectory, target,
-model, prediction, or score. Freeze and remotely green H2 separately before
-any implementation, packet, or real operation.
+model, prediction, or score. Read
+`docs/IACKD_CHANNEL_ROLE_GEOMETRY_PREREGISTRATION.md` and
+`registries/iackd_channel_role_geometry_contract.v0.json`. The frozen H2
+registration selects exactly 316 public BIDS metadata bodies and 457,602 bytes,
+requires source-declared roles and explicit unavailable values, and routes only
+aggregate compatibility outcomes. Its generated-fixture implementation is
+eligible only after this exact registration is committed, pushed, and both CI
+jobs are green. No H2 body, retained-bundle path, sibling, signal, target,
+model, score, or real execution is authorized.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

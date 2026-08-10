@@ -189,7 +189,14 @@ router on generated fixtures, then prepare a separate real-content packet.
 Only an aggregate H2 result may freeze IACKD-2. The later experiment requires
 both congruent-to-incongruent and incongruent-to-congruent action-over-cue
 reversal arms, using the weaker participant margin as the primary statistic.
-No H2 body, retained-bundle path, signal, target, model, or score is currently
+The exact H2 preregistration is now frozen in
+`docs/IACKD_CHANNEL_ROLE_GEOMETRY_PREREGISTRATION.md` and
+`registries/iackd_channel_role_geometry_contract.v0.json`. It binds all 316
+objects and 457,602 bytes, strict source-declared role parsing, explicit
+unavailable values, aggregate-only output, and ordered routes `IACKDR-R0`
+through `IACKDR-R4`. Generated-fixture implementation is eligible only after
+this registration is committed, pushed, and both CI jobs are green. No H2
+body, retained-bundle path, signal, target, model, or score is currently
 authorized.
 
 Registration `2a7b4188553e221133d788a081b838dbbb9f41bb` passed Base Python

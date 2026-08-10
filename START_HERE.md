@@ -393,12 +393,17 @@
    Then read `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_RESEARCH.md` and its
    registry. A target-free code audit shows that changing only the failed count
    would still treat TRIGGER as EEG and retain an invalid EEG-count contract.
-   The next proposed gate, IACKD-H2, is a 316-object/457,602-byte public BIDS
-   role-and-geometry audit with no local-bundle access. Its aggregate result
-   would freeze a role-map hash. Only after that can IACKD-2 preregister two
-   symmetric reversal arms, with the weaker action-over-cue margin determining
-   the result. This is Tier A design work only; no H2 body, signal, target,
-   model, or score is open.
+   Next read `docs/IACKD_CHANNEL_ROLE_GEOMETRY_PREREGISTRATION.md` and its
+   registry. IACKD-H2 is now frozen prospectively over exactly 316 public BIDS
+   role-and-geometry objects and 457,602 bytes, with no local-bundle access.
+   It fixes source-declared channel roles, explicit unavailable reference and
+   geometry states, aggregate-only output, and an ordered compatibility router.
+   Its generated-fixture implementation may begin only after this registration
+   is committed, pushed, and both CI jobs are green. A separate all-false Tier
+   C packet and fresh decision are still required before any public body is
+   fetched. Only a completed H2 aggregate may freeze IACKD-2's role-map hash
+   and symmetric reversal arms. No H2 body, signal, target, model, or score is
+   open.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

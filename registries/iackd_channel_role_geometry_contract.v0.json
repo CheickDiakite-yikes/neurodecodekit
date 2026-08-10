@@ -1,0 +1,581 @@
+{
+  "schema_name": "neurodecodekit.iackd_channel_role_geometry_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "IACKD-H2-channel-role-geometry-contract-v0",
+  "recorded_at_local": "2026-08-10",
+  "status": "frozen_prospective_registration_real_public_body_and_local_bundle_access_unauthorized",
+  "proof_posture": "committed_inventory_and_green_Tier_A_research_only_no_new_real_content_access",
+  "objective": "Measure source-declared BIDS channel roles reference and geometry coverage before any future count-agnostic IACKD signal reader.",
+  "bindings": {
+    "human_preregistration": {
+      "path": "docs/IACKD_CHANNEL_ROLE_GEOMETRY_PREREGISTRATION.md",
+      "sha256": "f44950c208617a8f945b2151f6b47ff97ed35a9f0734e62ed8f760c00c8310e5"
+    },
+    "invariant_test": {
+      "path": "tests/test_iackd_channel_role_geometry_contract.py",
+      "sha256": "08725b046f47cdd15b0da1a7d6d59c18c74f9c1cd8a76b36ef9cfd0c9710e3d3"
+    },
+    "green_research": {
+      "document_path": "docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_RESEARCH.md",
+      "document_sha256": "9b5b6c3c3a2cf7cfc120cc902dcc580fc5f9a465bd4be123272609a32237c848",
+      "registry_path": "registries/iackd_role_aware_dual_reversal_research.v0.json",
+      "registry_sha256": "6cfc6058f234ad1d60868d47e79f03a903d01c0b3e83b9a4917d332f868e1edc",
+      "invariant_test_path": "tests/test_iackd_role_aware_dual_reversal_research.py",
+      "invariant_test_sha256": "90bd0baa787bbdfd4ed47fbfa40a818a8d1f871274b3bab0797b730b76ea66f7",
+      "commit": "41ea1fcc6c31ebe67437ae4d381b4a57cf6cef54",
+      "push_CI_run_id": 31426772597,
+      "base_python_job_id": 93580219586,
+      "optional_neuro_readers_job_id": 93580219644,
+      "both_required_jobs_green": true
+    },
+    "consumed_H1_result": {
+      "path": "registries/iackd_channel_inventory_result.v0.json",
+      "sha256": "344d210f5a4dcb0a0b37088dc00cf6772a7ba797df66c952a12d51bac97e3c79",
+      "commit": "a6704898cfb09f6321bac5f15e27424f02614317",
+      "push_CI_run_id": 31425445891,
+      "base_python_job_id": 93575925675,
+      "optional_neuro_readers_job_id": 93575925695,
+      "both_required_jobs_green": true,
+      "route": "IACKDH-R5",
+      "consumed": true,
+      "rerun_allowed": false
+    },
+    "committed_openneuro_inventory": {
+      "path": "registries/iackd_openneuro_metadata_inventory.v0.json",
+      "sha256": "aeaa4928192cca9086fcb0abf4711147c68a68ef5c5aacda2ebc67d162a1ef19"
+    }
+  },
+  "source": {
+    "provider": "OpenNeuro",
+    "accession": "ds006840",
+    "version": "1.0.0",
+    "dataset_doi": "10.18112/openneuro.ds006840.v1.0.0",
+    "object_base_url": "https://s3.amazonaws.com/openneuro.org/ds006840/",
+    "selection_rule": "committed selected_objects with role in channels eeg_sidecar electrodes coordsystem sorted by path",
+    "selected_roles": [
+      "channels",
+      "eeg_sidecar",
+      "electrodes",
+      "coordsystem"
+    ],
+    "expected_object_count": 316,
+    "expected_total_body_bytes": 457602,
+    "canonical_identity_fields": [
+      "path",
+      "size_bytes",
+      "etag",
+      "last_modified"
+    ],
+    "canonical_identity_serialization": "utf8_json_sorted_keys_compact_array_sorted_by_path",
+    "canonical_identity_bytes": 53367,
+    "canonical_identity_sha256": "0a63b46395030cb967dbca05f37a1367cf2bb0bf1088befce378a3556eab2274",
+    "role_summaries": {
+      "channels": {
+        "objects": 128,
+        "bytes": 227904,
+        "minimum_object_bytes": 1752,
+        "maximum_object_bytes": 1866,
+        "size_groups": [
+          {
+            "size_bytes": 1752,
+            "occurrence_count": 96
+          },
+          {
+            "size_bytes": 1866,
+            "occurrence_count": 32
+          }
+        ]
+      },
+      "eeg_sidecar": {
+        "objects": 128,
+        "bytes": 173312,
+        "minimum_object_bytes": 1354,
+        "maximum_object_bytes": 1354
+      },
+      "electrodes": {
+        "objects": 30,
+        "bytes": 27316,
+        "minimum_object_bytes": 890,
+        "maximum_object_bytes": 967
+      },
+      "coordsystem": {
+        "objects": 30,
+        "bytes": 29070,
+        "minimum_object_bytes": 969,
+        "maximum_object_bytes": 969
+      }
+    },
+    "substitutions_allowed": false,
+    "additional_objects_allowed": false,
+    "VHDR_reread_allowed": false,
+    "existing_local_bundle_may_be_used": false
+  },
+  "H1_reconciliation_anchor": {
+    "header_count": 128,
+    "header_bytes": 161792,
+    "header_rereads": 0,
+    "declared_channel_count_groups": [
+      {
+        "declared_channel_count": 29,
+        "occurrence_count": 96,
+        "M1": false,
+        "M2": false,
+        "HEOG": true,
+        "VEOG": true,
+        "TRIGGER": true
+      },
+      {
+        "declared_channel_count": 31,
+        "occurrence_count": 32,
+        "M1": true,
+        "M2": true,
+        "HEOG": true,
+        "VEOG": true,
+        "TRIGGER": true
+      }
+    ],
+    "sampling_rate_hz": 1024,
+    "actual_EEG_count_inferred": false
+  },
+  "fetch_contract": {
+    "transport": "python_standard_library_https",
+    "canonical_path_order": true,
+    "sequential_requests_only": true,
+    "maximum_concurrent_requests": 1,
+    "requests": 316,
+    "redirects_allowed": false,
+    "retries_allowed": false,
+    "response_status": 200,
+    "response_URL_must_equal_registered_URL": true,
+    "content_length_must_equal_registered_size": true,
+    "ETag_must_equal_registered_ETag": true,
+    "content_encoding_allowed": "identity_only",
+    "maximum_bytes_read_per_object": 8192,
+    "exact_body_size_required": true,
+    "body_SHA256_passes_per_object": 1,
+    "semantic_parse_passes_per_object": 1,
+    "raw_body_persisted": false,
+    "raw_body_discarded_before_next_request": true,
+    "temporary_payload_files": 0,
+    "private_consumed_marker_before_first_request": true,
+    "atomic_public_output": true,
+    "overwrite_allowed": false
+  },
+  "shared_text_contract": {
+    "encoding": "strict_UTF8_optional_UTF8_BOM",
+    "replacement_decode_allowed": false,
+    "NUL_allowed": false,
+    "disallowed_control_characters_allowed": false,
+    "Unicode_normalization": "NFC",
+    "name_normalization": "NFC_trim_casefold_remove_non_alphanumeric",
+    "normalized_names_nonempty_and_unique": true
+  },
+  "channels_TSV_contract": {
+    "required_first_columns": [
+      "name",
+      "type",
+      "units"
+    ],
+    "duplicate_column_names_allowed": false,
+    "minimum_rows": 1,
+    "maximum_rows": 64,
+    "exact_row_width_required": true,
+    "registered_BIDS_types": [
+      "ADC",
+      "AUDIO",
+      "DAC",
+      "DBS",
+      "ECG",
+      "ECOG",
+      "EEG",
+      "EMG",
+      "EOG",
+      "EYEGAZE",
+      "FITERR",
+      "GSR",
+      "HEOG",
+      "HLU",
+      "MEGGRADAXIAL",
+      "MEGGRADPLANAR",
+      "MEGMAG",
+      "MEGOTHER",
+      "MEGREFGRADAXIAL",
+      "MEGREFGRADPLANAR",
+      "MEGREFMAG",
+      "MISC",
+      "OTHER",
+      "PD",
+      "PPG",
+      "PUPIL",
+      "REF",
+      "RESP",
+      "SEEG",
+      "SYSCLOCK",
+      "TEMP",
+      "TRIG",
+      "VEOG"
+    ],
+    "type_must_be_uppercase": true,
+    "unit_nonempty_or_exact_na": true,
+    "allowed_status_values": [
+      "good",
+      "bad",
+      "n/a"
+    ],
+    "optional_sampling_frequency": "positive_finite_or_exact_na",
+    "unknown_optional_columns": "column_names_hashed_values_not_published",
+    "description_values": "shape_and_control_checked_then_discarded",
+    "status_description_values": "shape_and_control_checked_then_discarded",
+    "source_order_preserved": true
+  },
+  "semantic_role_policy": {
+    "predictive_EEG_candidate": "type_EEG_excluding_exact_M1_M2_names",
+    "recorded_EOG_controls": {
+      "HEOG": [
+        "HEOG",
+        "EOG"
+      ],
+      "VEOG": [
+        "VEOG",
+        "EOG"
+      ]
+    },
+    "trigger": {
+      "name": "TRIGGER",
+      "compatible_types": [
+        "TRIG",
+        "MISC"
+      ],
+      "predictive": false
+    },
+    "optional_mastoid_or_reference_candidates": [
+      "M1",
+      "M2"
+    ],
+    "M1_M2_source_type_inferred": false,
+    "core_schema_comparison": "remove_only_exact_M1_M2_then_compare_ordered_name_type_units_across_128_runs",
+    "expected_core_EEG_count": null,
+    "name_count_unit_geometry_target_or_score_may_silently_override_type": false,
+    "MNE_inferred_type_authoritative": false
+  },
+  "eeg_sidecar_contract": {
+    "duplicate_JSON_keys_allowed": false,
+    "top_level_type": "object",
+    "required_fields": [
+      "TaskName",
+      "EEGReference",
+      "SamplingFrequency",
+      "PowerLineFrequency",
+      "SoftwareFilters"
+    ],
+    "sampling_frequency": "positive_finite",
+    "public_allowlisted_fields": [
+      "SamplingFrequency",
+      "EEGReference",
+      "PowerLineFrequency",
+      "RecordingType",
+      "EEGChannelCount",
+      "EOGChannelCount",
+      "ECGChannelCount",
+      "EMGChannelCount",
+      "MiscChannelCount",
+      "TriggerChannelCount"
+    ],
+    "software_filters_public": "canonical_SHA256_only",
+    "recommended_count_fields_may_be_missing": true,
+    "present_count_fields": "nonnegative_integer_and_reconciled_to_channels_TSV",
+    "free_text_public": false
+  },
+  "electrodes_TSV_contract": {
+    "required_first_columns": [
+      "name",
+      "x",
+      "y",
+      "z"
+    ],
+    "duplicate_column_names_allowed": false,
+    "exact_row_width_required": true,
+    "coordinate_value": "finite_number_or_exact_na",
+    "coordinate_values_public": false,
+    "unknown_optional_columns": "column_names_hashed_values_not_published"
+  },
+  "coordsystem_JSON_contract": {
+    "duplicate_JSON_keys_allowed": false,
+    "top_level_type": "object",
+    "required_fields": [
+      "EEGCoordinateSystem",
+      "EEGCoordinateUnits"
+    ],
+    "allowed_units": [
+      "m",
+      "cm",
+      "mm"
+    ],
+    "coordinate_system_nonempty": true,
+    "fiducial_anatomical_or_coordinate_values_public": false,
+    "free_text_public": false
+  },
+  "geometry_link_contract": {
+    "geometry_groups": 30,
+    "unit": "participant_hand_without_public_identity",
+    "channel_electrode_join": "exact_registered_name_normalization",
+    "equal_channel_and_electrode_row_counts_required": false,
+    "public_metrics": [
+      "electrode_count",
+      "finite_coordinate_count",
+      "predictive_EEG_geometry_coverage_count",
+      "finite_C3_C4_Cz_presence",
+      "finite_O1_Oz_O2_presence",
+      "channel_electrode_intersection_count",
+      "coordinate_system",
+      "coordinate_units",
+      "ordered_name_sha256",
+      "coordinate_bytes_sha256"
+    ],
+    "source_paths_public": false,
+    "participant_identity_public": false,
+    "coordinate_values_public": false
+  },
+  "cross_source_reconciliation": [
+    "channel_row_count_multiset_equals_H1_96_by_29_and_32_by_31",
+    "HEOG_VEOG_TRIGGER_M1_M2_presence_reconciles_with_H1",
+    "present_sidecar_type_counts_reconcile_with_channels_TSV",
+    "present_per_channel_sampling_reconciles_with_sidecar_sampling",
+    "all_sidecar_sampling_reconciles_with_H1_1024_Hz",
+    "core_schema_after_removing_only_M1_M2_is_compared_across_all_128_runs"
+  ],
+  "aggregate_contract": {
+    "canonical_serialization": "UTF8_JSON_sorted_keys_compact_separators_allow_nan_false_newline_terminated",
+    "hash_algorithm": "SHA-256",
+    "body_hash_set": "canonical_ordered_path_size_ETag_body_SHA256_rows",
+    "channel_schema_public": "unique_ordered_name_type_units_rows_with_occurrence_count",
+    "status_public": "aggregate_good_bad_na_counts_only",
+    "sidecar_public": "unique_allowlisted_value_groups_with_occurrence_count",
+    "role_map_candidate_public": true,
+    "role_map_hash_public": true,
+    "geometry_public": "aggregate_coverage_groups_without_coordinates_or_identity",
+    "individual_paths_public": false,
+    "individual_status_rows_public": false,
+    "participant_outcomes_public": false
+  },
+  "public_output_fields": [
+    "schema_name",
+    "schema_version",
+    "status",
+    "proof_posture",
+    "provenance",
+    "measurements",
+    "body_hash_set_SHA256",
+    "channel_schema_groups",
+    "aggregate_status_counts",
+    "sidecar_groups",
+    "role_map_candidate",
+    "geometry_groups",
+    "H1_reconciliation",
+    "access_counters",
+    "warnings",
+    "unavailable_fields",
+    "acceptance_gate_results",
+    "diagnostic_route",
+    "claim_boundary"
+  ],
+  "forbidden_public_fields": [
+    "raw_body",
+    "source_URL",
+    "source_path",
+    "local_path",
+    "description",
+    "status_description",
+    "TaskDescription",
+    "Instructions",
+    "InstitutionName",
+    "DeviceSerialNumber",
+    "fiducial_coordinates",
+    "anatomical_landmark_coordinates",
+    "electrode_coordinates",
+    "individual_status_row",
+    "participant_identifier",
+    "signal",
+    "event",
+    "trajectory",
+    "target",
+    "feature",
+    "model",
+    "prediction",
+    "participant_outcome"
+  ],
+  "diagnostic_router_order": [
+    {
+      "route": "IACKDR-R0",
+      "condition": "source_identity_response_parse_membership_resource_or_completeness_failure",
+      "meaning": "The metadata audit failed closed before a compatibility conclusion."
+    },
+    {
+      "route": "IACKDR-R1",
+      "condition": "H1_row_or_presence_BIDS_role_sidecar_count_or_sampling_contradiction",
+      "meaning": "Published metadata sources disagree and no role map is admissible."
+    },
+    {
+      "route": "IACKDR-R2",
+      "condition": "multiple_core_name_type_units_schemas_after_removing_only_M1_M2_or_retained_name_role_change",
+      "meaning": "Predictive scalp roles vary beyond the preregistered optional auxiliary set."
+    },
+    {
+      "route": "IACKDR-R3",
+      "condition": "stable_roles_but_reference_varies_or_unavailable_coordinate_metadata_invalid_or_any_group_lacks_finite_C3_C4_Cz",
+      "meaning": "Roles are stable but the reference or central geometry contract is incomplete."
+    },
+    {
+      "route": "IACKDR-R4",
+      "condition": "stable_roles_H1_and_sidecars_reconcile_reference_and_sampling_stable_and_all_30_groups_have_finite_C3_C4_Cz",
+      "meaning": "A count-agnostic role map is available for a separately preregistered future reader."
+    }
+  ],
+  "occipital_policy": {
+    "O1_Oz_O2_geometry_reported": true,
+    "gates_IACKDR_R4": false,
+    "complete_availability_required_for_future_IACKD2_occipital_proxy": true
+  },
+  "refusal_ids": [
+    "IACKDR-F00-registration-or-evidence-not-green",
+    "IACKDR-F01-real-decision-missing-or-mismatched",
+    "IACKDR-F02-execution-already-consumed",
+    "IACKDR-F03-inventory-or-version-drift",
+    "IACKDR-F04-path-URL-size-ETag-or-encoding-mismatch",
+    "IACKDR-F05-redirect-retry-or-concurrency",
+    "IACKDR-F06-body-size-or-resource-cap",
+    "IACKDR-F07-text-or-JSON-decode-failure",
+    "IACKDR-F08-TSV-schema-row-or-name-failure",
+    "IACKDR-F09-channel-type-unit-status-or-number-failure",
+    "IACKDR-F10-sidecar-required-field-or-number-failure",
+    "IACKDR-F11-electrode-or-coordinate-schema-failure",
+    "IACKDR-F12-geometry-pair-or-membership-failure",
+    "IACKDR-F13-forbidden-public-field",
+    "IACKDR-F14-output-exists-or-write-failure",
+    "IACKDR-F15-local-bundle-VHDR-sibling-signal-event-trajectory-target-model-or-score-access",
+    "IACKDR-F16-second-execution-retry-or-rerun"
+  ],
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "concurrent_numerical_jobs": 1,
+    "wall_time_seconds": 180,
+    "peak_RSS_bytes": 268435456,
+    "requests": 316,
+    "expected_body_bytes": 457602,
+    "network_body_bytes": 2097152,
+    "maximum_bytes_read_per_object": 8192,
+    "incremental_disk_bytes": 4194304,
+    "public_generated_output_bytes": 2097152,
+    "minimum_free_disk_bytes": 2147483648,
+    "retries": 0,
+    "reruns": 0,
+    "producer_is_causal": null,
+    "end_to_end_latency_measured": false
+  },
+  "ordered_stages": {
+    "stage_I": {
+      "name": "generated_fixture_and_mocked_transport_implementation",
+      "tier": "B",
+      "eligible_only_after_registration_commit_pushed_and_both_CI_jobs_green": true,
+      "generated_BIDS_metadata_fixtures_only": true,
+      "mocked_transport_only": true,
+      "real_or_local_IACKD_access": false,
+      "network_calls": 0,
+      "scientific_operations": 0
+    },
+    "stage_R": {
+      "name": "one_real_public_BIDS_role_and_geometry_audit",
+      "tier": "C",
+      "eligible_only_after_exact_implementation_commit_pushed_and_both_CI_jobs_green": true,
+      "separate_all_false_request_and_packet_bound_maintainer_decision_required": true,
+      "decision_commit_must_be_pushed_and_both_CI_jobs_green": true,
+      "currently_authorized": false,
+      "registered_execution_count": 1,
+      "retry_count": 0,
+      "rerun_count": 0
+    }
+  },
+  "acceptance_gates": [
+    "registration_implementation_request_and_decision_remote_green_before_real_access",
+    "exact_316_object_and_457602_byte_inventory",
+    "all_response_identity_and_one_hash_one_parse_gates_pass",
+    "all_128_channel_tables_and_sidecars_and_30_geometry_pairs_reconcile",
+    "aggregate_schemas_role_map_geometry_groups_and_router_replay_exactly",
+    "local_bundle_VHDR_sibling_sample_event_trajectory_target_model_prediction_and_score_counters_zero",
+    "all_resource_network_disk_thread_and_output_caps_pass",
+    "no_forbidden_public_field",
+    "metadata_only_claim_ceiling_preserved"
+  ],
+  "authorization": {
+    "tier_B_synthetic_implementation_eligible_after_registration_green": true,
+    "generated_fixture_creation": true,
+    "mocked_transport_qualification": true,
+    "real_OpenNeuro_metadata_request": false,
+    "real_channels_sidecar_electrodes_or_coordsystem_body_request": false,
+    "real_metadata_content_parse": false,
+    "VHDR_reread": false,
+    "existing_local_IACKD_path_stat_or_open": false,
+    "VMRK_EEG_or_other_sibling_access": false,
+    "signal_marker_event_trajectory_target_or_label_access": false,
+    "cache_split_or_feature_creation": false,
+    "model_checkpoint_training_inference_prediction_or_scoring": false,
+    "new_dependency_installation": false,
+    "provider_or_language_model": false,
+    "stream_device_or_hardware": false,
+    "deletion_move_upload_publication_or_release": false,
+    "retry_or_rerun": false,
+    "IACKD2_preregistration_or_execution": false,
+    "scientific_claim_upgrade": false
+  },
+  "current_access_counters": {
+    "real_metadata_requests": 0,
+    "real_metadata_body_bytes": 0,
+    "real_metadata_parses": 0,
+    "VHDR_rereads": 0,
+    "local_IACKD_path_stats_or_opens": 0,
+    "sibling_resolutions_stats_hashes_or_opens": 0,
+    "signal_sample_reads": 0,
+    "marker_or_event_reads": 0,
+    "trajectory_reads": 0,
+    "target_or_label_reads": 0,
+    "cache_or_split_operations": 0,
+    "feature_extraction_runs": 0,
+    "model_or_checkpoint_loads": 0,
+    "training_or_parameter_update_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "scoring_runs": 0,
+    "provider_or_language_model_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "unavailable_by_design": [
+    "channel_role_result_before_stage_R",
+    "actual_EEG_count_before_stage_R",
+    "reference_result_before_stage_R",
+    "geometry_coverage_before_stage_R",
+    "signal_values_or_quality",
+    "marker_and_event_content",
+    "trajectory_content",
+    "labels_and_targets",
+    "neural_effect",
+    "decoding_accuracy",
+    "brain_specific_origin",
+    "generalization",
+    "end_to_end_latency"
+  ],
+  "warnings": [
+    "The 29 and 31 H1 totals are declarations and not EEG-channel counts.",
+    "Matching 96 and 32 channel-table byte-size groups do not establish their contents.",
+    "BIDS channel and electrode tables must not be forced to equal membership.",
+    "MNE inferred types are not authoritative for this audit.",
+    "IACKDR-R4 would authorize nothing and would not be a neural result.",
+    "The retained IACKD bundle remains closed under every H2 route."
+  ],
+  "claim_boundary": {
+    "maximum_engineering_claim": "All registered public IACKD BIDS role and geometry declarations were or were not compatible with one count-agnostic source contract under a bounded aggregate audit.",
+    "scientific_claim_not_established": "No EEG sample event trajectory target model prediction or score is authorized so this contract cannot establish a neural effect action decoding brain-specific origin unseen-person generalization typing language or thought decoding real-time operation hardware capability assistive benefit or clinical use."
+  }
+}

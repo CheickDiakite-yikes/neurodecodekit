@@ -5188,3 +5188,34 @@ each retain their own prospective and Tier C sequence.
 Evidence: `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_RESEARCH.md`,
 `registries/iackd_role_aware_dual_reversal_research.v0.json`, and
 `tests/test_iackd_role_aware_dual_reversal_research.py`.
+
+## 0150 - Freeze IACKD-H2 Role And Geometry Audit
+
+Decision: freeze the smallest public metadata audit that can replace the
+disproven global channel count with a source-declared sensor-role contract.
+Select exactly 128 channel tables, 128 EEG sidecars, 30 electrode tables, and
+30 coordinate-system files from the committed OpenNeuro inventory: 316 objects
+and 457,602 expected bytes. Do not use or inspect the retained local bundle.
+
+Contract: parse BIDS channel roles strictly, exclude TRIGGER and recorded EOG
+controls from predictive EEG, treat M1/M2 as optional source-declared
+properties, preserve unavailable reference and geometry fields, and compare
+the ordered core schema after removing only exact M1/M2. Publish only aggregate
+schemas, counts, coverage, hashes, warnings, measures, and one ordered
+`IACKDR-R0` through `IACKDR-R4` route. Occipital coverage is reported but
+cannot rescue the central C3/C4/Cz geometry gate.
+
+Sequence: this exact registration must first be committed, pushed, and pass
+both CI jobs. Only then may Tier B generated-fixture parsers, mocked transport,
+resource guards, writer, inspector, and module CLI be implemented. A separate
+all-false packet, fresh packet-bound maintainer decision, and green decision
+commit remain mandatory before one no-retry, no-rerun public-body audit.
+
+Boundary: no H2 body, local IACKD path, sibling, signal, marker, event,
+trajectory, target, feature, model, prediction, score, provider, hardware,
+release, or claim operation is authorized by this registration. H2 is an
+engineering compatibility gate and cannot establish a neural effect.
+
+Evidence: `docs/IACKD_CHANNEL_ROLE_GEOMETRY_PREREGISTRATION.md`,
+`registries/iackd_channel_role_geometry_contract.v0.json`, and
+`tests/test_iackd_channel_role_geometry_contract.py`.

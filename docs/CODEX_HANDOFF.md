@@ -2111,5 +2111,26 @@ systems: 316 objects and 457,602 bytes total, no local bundle.
 The later IACKD-2 design is symmetric. `C2I` and `I2C` must both prefer actual
 hand direction over the cue surrogate induced by the fit mapping. The weaker
 participant-level arm margin is primary, so one arm cannot rescue the other.
-No H2 preregistration, implementation, public-body decision, local access, or
-IACKD-2 scientific gate exists yet.
+At that research commit, no H2 preregistration, implementation, public-body
+decision, local access, or IACKD-2 scientific gate existed. The next section
+supersedes only the H2 preregistration part of that status.
+
+## 2026-08-10 IACKD-H2 Role And Geometry Preregistered
+
+Read `docs/IACKD_CHANNEL_ROLE_GEOMETRY_PREREGISTRATION.md`,
+`registries/iackd_channel_role_geometry_contract.v0.json`, and
+`tests/test_iackd_channel_role_geometry_contract.py`.
+
+The prospective contract selects exactly 316 committed OpenNeuro BIDS metadata
+objects and 457,602 bytes: 128 channel tables, 128 EEG sidecars, 30 electrode
+tables, and 30 coordinate-system files. It freezes source-declared predictive
+EEG, EOG, trigger, optional M1/M2, reference, status, and geometry semantics;
+explicit unavailable values; one-pass bounded transport; aggregate-only
+output; and routes `IACKDR-R0` through `IACKDR-R4`.
+
+No H2 body or local IACKD path was opened. Next gate: test, commit, push, and
+require both CI jobs green for this exact registration. Only then implement
+the parser, mocked transport, router, resource guards, writer, inspector, and
+module CLI on generated fixtures. Do not prepare a Tier C decision or make a
+real request until that implementation is separately committed, pushed, and
+remotely green.
