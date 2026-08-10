@@ -345,9 +345,18 @@
    1,340 raw-source objects and 7,249,113,684 bytes, 30 participant-hand units,
    a 30 ms motion guard, HEOG/VEOG controls, 300 fits, 420 prediction sets, one
    combined target delivery, and an `IACKD-R0` through `IACKD-R4` router. The
-   authorization packet and request are all-false until their own commit is
-   remotely green and the maintainer supplies a new packet-bound decision.
-   Earlier `continue` messages do not authorize IACKD payload work.
+   Request `ef78c06` passed both jobs in CI `31401738032`; the maintainer's
+   actual packet-bound continuation is recorded in decision `1f48b30`, which
+   passed Base Python job `93502398308` and Optional Neuro Readers job
+   `93502398753` in CI `31403012709`. Now read
+   `docs/IACKD_CUE_ACTION_DISSOCIATION_IMPLEMENTATION.md` and its registry.
+   The standard-library acquisition, one-run-at-a-time BrainVision reader,
+   target firewall, 300-fit/420-prediction path, strict aggregate freeze, and
+   isolated scorer are generated-fixture qualified. The measured 128-run
+   fixture used 8.674020 seconds, 263,618,560-byte peak RSS, and 5,683,285
+   bytes, with zero real-data, target, dependency, or network operation; its
+   files were removed. Real IACKD acquisition remains closed until this exact
+   implementation commit is pushed and both required CI jobs are green.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

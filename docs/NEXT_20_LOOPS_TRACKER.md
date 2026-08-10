@@ -883,7 +883,12 @@ fit versus held-out incongruent reversal, the same predictions scored against
 actual and visual directions, a 30 ms motion guard, one fixed 0.5-4 Hz model,
 300 fits, 420 prediction sets, one combined target delivery, participant-level
 tests, synchronized EOG/kinematic controls, and `IACKD-R0` through
-`IACKD-R4`. The separate request remains all-false until its own remote-green
-commit and a new packet-bound maintainer decision. No roadmap row or earlier
-authorization opens IACKD implementation, acquisition, parsing, modeling,
-targets, scoring, rerun, release, or claim promotion.
+`IACKD-R4`. Request `ef78c06` passed both jobs in CI `31401738032`, and the
+maintainer's short-form packet decision `1f48b30` passed both jobs in CI
+`31403012709` before implementation. The generated-only implementation now
+passes the full 128-run, 300-fit, 420-prediction interface in 8.674020 seconds
+at 263,618,560-byte peak RSS with 5,683,285 bytes removed afterward and every
+real/network/target counter at zero. The next gate is remote-green exact
+implementation before one acquisition; final targets remain closed until the
+later freeze is remotely green. No roadmap row authorizes expansion, rerun,
+release, or claim promotion.

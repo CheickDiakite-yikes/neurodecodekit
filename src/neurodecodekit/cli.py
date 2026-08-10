@@ -2528,6 +2528,148 @@ def _cmd_physionet_motor_acquire(args: argparse.Namespace) -> int:
     return 0 if outcome.passed else 1
 
 
+def _cmd_iackd_acquire(args: argparse.Namespace) -> int:
+    _set_loop25_thread_environment()
+    import os
+
+    from neurodecodekit.datasets.iackd_cue_action_acquisition import (
+        ImplementationEvidence,
+        execute_registered_acquisition,
+        registered_plan,
+    )
+
+    repo_root = Path.cwd()
+    if not args.execute:
+        print(json.dumps(registered_plan(repo_root), indent=2, sort_keys=True))
+        print("Safety default: no registered IACKD path stat or network access occurred.")
+        return 0
+    missing = [
+        name
+        for name, value in (
+            ("--implementation-commit", args.implementation_commit),
+            ("--implementation-ci-run-id", args.implementation_ci_run_id),
+            ("--base-python-job-id", args.base_python_job_id),
+            ("--optional-neuro-job-id", args.optional_neuro_job_id),
+        )
+        if value is None
+    ]
+    if missing:
+        raise ValueError(f"--execute requires: {', '.join(missing)}")
+    evidence = ImplementationEvidence(
+        implementation_commit=args.implementation_commit,
+        implementation_ci_run_id=args.implementation_ci_run_id,
+        base_python_job_id=args.base_python_job_id,
+        optional_neuro_job_id=args.optional_neuro_job_id,
+    )
+    outcome = execute_registered_acquisition(
+        repo_root,
+        evidence=evidence,
+        environ=os.environ,
+    )
+    summary = {
+        "status": outcome.status,
+        "measurements": outcome.manifest["measurements"],
+        "warnings": outcome.manifest["warnings"],
+    }
+    print(json.dumps(summary, indent=2, sort_keys=True))
+    print(f"Private machine manifest: {outcome.manifest_path}")
+    print(f"Private human receipt: {outcome.receipt_path}")
+    return 0 if outcome.passed else 1
+
+
+def _cmd_iackd_cue_action(args: argparse.Namespace) -> int:
+    _set_loop25_thread_environment()
+    import os
+
+    from neurodecodekit.experiments.iackd_cue_action_dissociation import (
+        ImplementationEvidence,
+        registered_plan,
+        run_registered_prediction_execution,
+        run_synthetic_qualification,
+    )
+
+    repo_root = Path.cwd()
+    if args.fixture:
+        summary = run_synthetic_qualification(
+            args.fixture_out,
+            maximum_output_bytes=int(args.max_output_mib * 1024 * 1024),
+        )
+        print(json.dumps(summary, indent=2, sort_keys=True))
+        return 0
+    if not args.execute:
+        print(json.dumps(registered_plan(repo_root), indent=2, sort_keys=True))
+        print("Safety default: no local IACKD path stat, open, hash, parse, or model run occurred.")
+        return 0
+    missing = [
+        name
+        for name, value in (
+            ("--implementation-commit", args.implementation_commit),
+            ("--implementation-ci-run-id", args.implementation_ci_run_id),
+            ("--base-python-job-id", args.base_python_job_id),
+            ("--optional-neuro-job-id", args.optional_neuro_job_id),
+        )
+        if value is None
+    ]
+    if missing:
+        raise ValueError(f"--execute requires: {', '.join(missing)}")
+    report = run_registered_prediction_execution(
+        repo_root=repo_root,
+        evidence=ImplementationEvidence(
+            implementation_commit=args.implementation_commit,
+            implementation_ci_run_id=args.implementation_ci_run_id,
+            base_python_job_id=args.base_python_job_id,
+            optional_neuro_job_id=args.optional_neuro_job_id,
+        ),
+        environ=os.environ,
+    )
+    print(json.dumps(report, indent=2, sort_keys=True))
+    return 0
+
+
+def _cmd_score_iackd_cue_action(args: argparse.Namespace) -> int:
+    _set_loop25_thread_environment()
+    import os
+
+    from neurodecodekit.experiments.iackd_cue_action_dissociation import (
+        FreezeEvidence,
+        registered_plan,
+        score_registered_execution,
+    )
+
+    repo_root = Path.cwd()
+    if not args.execute:
+        plan = registered_plan(repo_root)
+        plan["mode"] = "dry_run_no_sealed_IACKD_target_open_or_score"
+        plan["next_gate"] = "prediction_freeze_commit_and_both_CI_jobs_must_be_green"
+        print(json.dumps(plan, indent=2, sort_keys=True))
+        print("Safety default: neither sealed IACKD target view was opened.")
+        return 0
+    missing = [
+        name
+        for name, value in (
+            ("--freeze-commit", args.freeze_commit),
+            ("--freeze-ci-run-id", args.freeze_ci_run_id),
+            ("--base-python-job-id", args.base_python_job_id),
+            ("--optional-neuro-job-id", args.optional_neuro_job_id),
+        )
+        if value is None
+    ]
+    if missing:
+        raise ValueError(f"--execute requires: {', '.join(missing)}")
+    result = score_registered_execution(
+        repo_root=repo_root,
+        evidence=FreezeEvidence(
+            freeze_commit=args.freeze_commit,
+            freeze_ci_run_id=args.freeze_ci_run_id,
+            base_python_job_id=args.base_python_job_id,
+            optional_neuro_job_id=args.optional_neuro_job_id,
+        ),
+        environ=os.environ,
+    )
+    print(json.dumps(result, indent=2, sort_keys=True))
+    return 0
+
+
 def _cmd_loop54_vhdr_ledger(args: argparse.Namespace) -> int:
     from neurodecodekit.preprocess.vhdr_ledger import (
         ExecutionEvidence,
@@ -5271,6 +5413,135 @@ def build_parser() -> argparse.ArgumentParser:
         help="Successful Optional Neuro Readers job ID from the implementation CI run.",
     )
     p.set_defaults(func=_cmd_physionet_motor_acquire)
+
+    p = sub.add_parser(
+        "iackd-acquire",
+        help="Dry-run or consume the one registered 1,340-object IACKD acquisition.",
+        description=(
+            "Defaults to a no-stat, no-network plan. --execute consumes the one "
+            "no-retry OpenNeuro acquisition only after exact remotely-green "
+            "implementation evidence is supplied."
+        ),
+    )
+    mode = p.add_mutually_exclusive_group()
+    mode.add_argument(
+        "--execute",
+        action="store_true",
+        help="Consume the one metadata-bound IACKD acquisition invocation.",
+    )
+    mode.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Print the frozen plan without path stats or network access. This is the default.",
+    )
+    p.add_argument(
+        "--implementation-commit",
+        help="Full remotely-green implementation commit; must equal current HEAD.",
+    )
+    p.add_argument(
+        "--implementation-ci-run-id",
+        type=int,
+        help="Successful push CI run ID for the exact implementation commit.",
+    )
+    p.add_argument(
+        "--base-python-job-id",
+        type=int,
+        help="Successful Base Python job ID from implementation CI.",
+    )
+    p.add_argument(
+        "--optional-neuro-job-id",
+        type=int,
+        help="Successful Optional Neuro Readers job ID from implementation CI.",
+    )
+    p.set_defaults(func=_cmd_iackd_acquire)
+
+    p = sub.add_parser(
+        "iackd-cue-action",
+        help="Plan, fixture-qualify, or execute the frozen IACKD reversal analysis.",
+        description=(
+            "Defaults to a no-stat plan. --fixture uses generated EEG and trajectories. "
+            "--execute consumes the one 128-run target-firewalled analysis and emits "
+            "the aggregate hash-only dual-target prediction freeze."
+        ),
+    )
+    mode = p.add_mutually_exclusive_group()
+    mode.add_argument(
+        "--execute",
+        action="store_true",
+        help="Consume the one real analysis through target-blind prediction freeze.",
+    )
+    mode.add_argument(
+        "--fixture",
+        action="store_true",
+        help="Run all interfaces only on deterministic generated EEG and trajectories.",
+    )
+    p.add_argument(
+        "--fixture-out",
+        type=Path,
+        default=Path(".codex_work/iackd_cue_action_dissociation/fixture_qualification"),
+        help="Exclusive Git-ignored output root used only with --fixture.",
+    )
+    p.add_argument(
+        "--max-output-mib",
+        type=float,
+        default=512.0,
+        help="Fixture-only output cap, at most 512 MiB (default: 512).",
+    )
+    p.add_argument(
+        "--implementation-commit",
+        help="Full remotely-green implementation commit; must equal current HEAD.",
+    )
+    p.add_argument(
+        "--implementation-ci-run-id",
+        type=int,
+        help="Successful push CI run ID for the exact implementation commit.",
+    )
+    p.add_argument(
+        "--base-python-job-id",
+        type=int,
+        help="Successful Base Python job ID from implementation CI.",
+    )
+    p.add_argument(
+        "--optional-neuro-job-id",
+        type=int,
+        help="Successful Optional Neuro Readers job ID from implementation CI.",
+    )
+    p.set_defaults(func=_cmd_iackd_cue_action)
+
+    p = sub.add_parser(
+        "score-iackd-cue-action",
+        help="Dry-run or consume the one sealed dual-target IACKD score.",
+        description=(
+            "Defaults to a no-target plan. --execute requires the exact remotely-green "
+            "prediction-freeze commit, opens both sealed target views together once, "
+            "applies the frozen IACKD-R1/R0/R2/R3/R4 router, and stops."
+        ),
+    )
+    p.add_argument(
+        "--execute",
+        action="store_true",
+        help="Consume the single dual-target delivery and aggregate scoring event.",
+    )
+    p.add_argument(
+        "--freeze-commit",
+        help="Full remotely-green prediction-freeze commit; must equal current HEAD.",
+    )
+    p.add_argument(
+        "--freeze-ci-run-id",
+        type=int,
+        help="Successful push CI run ID for the exact freeze commit.",
+    )
+    p.add_argument(
+        "--base-python-job-id",
+        type=int,
+        help="Successful Base Python job ID from freeze CI.",
+    )
+    p.add_argument(
+        "--optional-neuro-job-id",
+        type=int,
+        help="Successful Optional Neuro Readers job ID from freeze CI.",
+    )
+    p.set_defaults(func=_cmd_score_iackd_cue_action)
 
     p = sub.add_parser(
         "physionet-motor-positive-control",

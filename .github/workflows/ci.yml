@@ -46,6 +46,9 @@ jobs:
           neurodecode --help
           neurodecode inspect-recording --help
           neurodecode inspect-intake-report --help
+          neurodecode iackd-acquire --help
+          neurodecode iackd-cue-action --help
+          neurodecode score-iackd-cue-action --help
 
   neuro:
     name: Optional Neuro Readers
@@ -73,3 +76,6 @@ jobs:
           neurodecode physionet-low-frequency-acquire --help
           neurodecode physionet-low-frequency-cohort --help
           neurodecode score-physionet-low-frequency-cohort --help
+          neurodecode iackd-acquire --help
+          neurodecode iackd-cue-action --help
+          neurodecode score-iackd-cue-action --help
