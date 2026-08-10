@@ -673,13 +673,20 @@ Read this before interpreting any number in the repository.
   streams only the nine exact S001-S003 runs 03/07/11 files, hashes each local
   file exactly once without parsing it, promotes only the complete directory,
   and writes bounded private receipts. Twenty-three adversarial tests use only
-  generated invalid-UTF-8 bytes and mocked responses; the full suite passes
-  1,448 tests with 3 expected skips and 493 subtests. No PhysioNet metadata,
-  registered local path, or EDF payload was touched during implementation.
-  The exact implementation must be committed, pushed, and remotely green
-  before the one 23,248,224-byte acquisition. The later 10 GB allowance is
-  future headroom, not an expansion of this invocation, and work order 9 is
-  still closed.
+  generated invalid-UTF-8 bytes and mocked responses; the implementation suite
+  passed 1,448 tests with 3 expected skips and 493 subtests. Exact implementation
+  `92760ce` then passed both CI jobs before the one registered invocation. All
+  12 acquisition gates passed: nine requests transferred exactly 23,248,224
+  EDF bytes, every one-pass local SHA-256 matched, runtime was 50.682373
+  seconds, peak RSS was 55,181,312 bytes, and peak incremental disk was
+  28,327,635 bytes. Every header, annotation, event, signal, target, channel,
+  split, model, training, inference, scoring, retry, rerun, and work-order-9
+  counter stayed zero. This is an acquisition-integrity result, not an EEG or
+  decoding result. Work order 8 is complete and consumed; the Git-ignored
+  payload and private receipts must not be published or reopened. The later
+  10 GB allowance remains future headroom, and work order 9 is still closed.
+  The post-result suite passes 1,455 tests with the same 3 expected skips and
+  493 subtests.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
@@ -1500,6 +1507,11 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/local_eeg_tooling_audit_result.v0.json](registries/local_eeg_tooling_audit_result.v0.json) | raw bounded seven-tool capability report with sanitized warnings and zero access counters |
 | [registries/local_eeg_tooling_audit_receipt.v0.json](registries/local_eeg_tooling_audit_receipt.v0.json) | exact green-implementation, result-hash, resource, route, and claim receipt |
 | [docs/NEXT_20_SYSTEMATIC_EXECUTION_2026-08-08.md](docs/NEXT_20_SYSTEMATIC_EXECUTION_2026-08-08.md) | active 20-work-order execution overlay with Tier A/B autonomy and exact Tier C stops |
+| [docs/PHYSIONET_MOTOR_ACQUISITION_PREREGISTRATION.md](docs/PHYSIONET_MOTOR_ACQUISITION_PREREGISTRATION.md) | frozen nine-EDF work-order-8 identity, access order, resource caps, no-retry rule, and acquisition-only ceiling |
+| [docs/PHYSIONET_MOTOR_ACQUISITION_IMPLEMENTATION.md](docs/PHYSIONET_MOTOR_ACQUISITION_IMPLEMENTATION.md) | fixture-qualified standard-library metadata, transfer, one-pass hash, atomic promotion, receipt, CLI, and refusal implementation |
+| [registries/physionet_motor_acquisition_implementation.v0.json](registries/physionet_motor_acquisition_implementation.v0.json) | hash-bound implementation sources, green authorization parent, fixture metrics, resources, and zero-real-access ledger |
+| [docs/PHYSIONET_MOTOR_ACQUISITION_RESULT.md](docs/PHYSIONET_MOTOR_ACQUISITION_RESULT.md) | consumed 12-of-12 acquisition closeout with exact bytes, runtime, RSS, disk, zero forbidden counters, and scientific ceiling |
+| [registries/physionet_motor_acquisition_result.v0.json](registries/physionet_motor_acquisition_result.v0.json) | sanitized machine-readable nine-file identity result, private-receipt hashes, measurements, gates, and closed work-order-9 boundary |
 | [docs/SYNTHETIC_MOTOR_FIXTURE_PREREGISTRATION.md](docs/SYNTHETIC_MOTOR_FIXTURE_PREREGISTRATION.md) | frozen work-order-3 factor, pair, partition, mutation, resource, leakage, and no-model fixture boundary |
 | [registries/synthetic_motor_fixture_contract.v0.json](registries/synthetic_motor_fixture_contract.v0.json) | machine-readable seed-5503, 96-item, eight-family Tier B fixture contract with zero execution counters |
 | [docs/SYNTHETIC_MOTOR_FIXTURE_IMPLEMENTATION.md](docs/SYNTHETIC_MOTOR_FIXTURE_IMPLEMENTATION.md) | locally qualified deterministic generator, validator, inspector, mutation, CLI, and pre-execution boundary |

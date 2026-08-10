@@ -18,7 +18,7 @@ decision after its own frozen packet and required remote-green evidence exist.
 | 5 | Add a contact-aware ear-channel adapter | B | Synthetic contact/noise/missingness fixtures and exact channel-mask semantics only | Complete |
 | 6 | Freeze Loop 54-A decision and qualify parser | A/B then C decision | Recovery-bound exact packet, strict synthetic parser tests, green implementation before real access | Complete |
 | 7 | Execute Loop 54-A once | C | One 11,705-byte VHDR open; no sibling resolution; all 18 gates pass | Consumed; Parked F11; No Rerun |
-| 8 | Acquire tiny PhysioNet motor slice | C | Exactly nine pinned EDF files, 23,248,224 bytes, isolated receipt, no substitutions | Implementation Qualified Locally; Execution Pending Remote Green |
+| 8 | Acquire tiny PhysioNet motor slice | C | Exactly nine pinned EDF files, 23,248,224 bytes, isolated receipt, no substitutions | Complete; Consumed; 12/12 Gates Passed; No Rerun |
 | 9 | Run grouped public motor positive control | C | Participant/run grouping, fixed classical family, no-signal and corruption controls | Gated |
 | 10 | Execute Loop 54-B signal quality | C | Target-blind VHDR+EEG read, every channel retained, no transform, bounded aggregate output | Gated |
 | 11 | Execute Loop 54-C trial reconciliation | C | Isolated VMRK+MAT target-bearing stage, no plaintext protected public output | Gated |
@@ -107,10 +107,17 @@ streaming, one opaque local hash pass per EDF, exact membership, atomic
 promotion, bounded receipts, and no parser or work-order-9 interface. The full
 suite passes 1,448 tests with three expected skips and 493 subtests. Source
 metadata, EDF, local-PhysioNet-path, parse, split, model, and experiment
-counters remain zero. This exact implementation must be committed, pushed, and
-remotely green before the one registered invocation. A later 10 GB data
-ceiling is available for a separately contracted future stage; it does not
-enlarge this immutable 23,248,224-byte inventory.
+counters remained zero through implementation. Exact implementation `92760ce`
+then passed both jobs in CI `31345401581` before the one registered invocation.
+All 12 acquisition gates passed: 12 metadata requests used 442,178 response-
+body bytes, nine EDF requests transferred exactly 23,248,224 bytes, all nine
+one-pass local SHA-256 values matched, and the complete bundle promoted in
+50.682373 seconds at 55,181,312-byte peak RSS and 28,327,635-byte peak disk.
+Every parser, event, target, model, training, inference, scoring, retry, rerun,
+and work-order-9 counter stayed zero. Work order 8 is complete and consumed;
+work order 9 remains gated. A later 10 GB data ceiling is available for a
+separately contracted future stage; it did not enlarge this immutable
+23,248,224-byte inventory.
 
 Work order 13 now has a frozen Tier B synthetic-only contract in
 `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md` and

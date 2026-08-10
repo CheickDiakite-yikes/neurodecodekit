@@ -4377,3 +4377,43 @@ Evidence: `docs/PHYSIONET_MOTOR_ACQUISITION_IMPLEMENTATION.md`,
 `registries/physionet_motor_acquisition_implementation.v0.json`,
 `src/neurodecodekit/datasets/physionet_motor_acquisition.py`, and
 `tests/test_physionet_motor_acquisition.py`.
+
+## 0127 - Close The One Public Motor Acquisition At Engineering Evidence
+
+Decision: after exact implementation `92760ce7e3123058f15127b9afd8d5e4bae75321`
+passed Base Python job `93326279510` and Optional Neuro Readers job
+`93326279396` in CI `31345401581`, consume the one registered work-order-8
+invocation without retry or substitution.
+
+Result: all 12 gates passed. Twelve metadata requests consumed 442,178 response-
+body bytes. Nine EDF body requests transferred exactly 23,248,224 bytes. Each
+file received exactly one opaque local size/SHA-256 pass, all nine hashes
+matched the official identities, and the complete directory promoted. Runtime
+was 50.682373 seconds, peak RSS 55,181,312 bytes, incremental disk peak
+28,327,635 bytes, and combined private receipts 16,083 bytes.
+
+Access result: every EDF header, annotation, event, signal, task, target, label,
+channel, montage, reference, geometry, sampling, quality, cache, split, model,
+checkpoint, training, inference, scoring, provider, hardware, upload, retry,
+rerun, and work-order-9 counter remained zero. End-to-end latency was not
+measured. The payload and generated receipts remain Git-ignored and are bound
+only by aggregate receipt hashes in the sanitized closeout.
+
+Next gate: work order 8 is complete and consumed with no rerun. Work order 9
+remains separately gated; acquisition success does not authorize EDF parsing,
+annotation extraction, target delivery, model work, or scoring. The separate
+10 GB allowance remains future headroom and did not expand this invocation.
+
+Engineering capability added: NeuroDecodeKit acquired and opaque-verified one
+exact, isolated nine-file public EEGMMIDB bundle under the registered identity,
+access-order, network, runtime, memory, storage, and no-retry controls.
+
+Scientific claim not established: no EDF content was parsed and no event,
+signal, target, model, or score was produced, so this result establishes no
+motor-EEG effect, neural advantage, decoding accuracy, unseen-person
+generalization, real-time latency, portable hardware, home use, assistive
+value, or clinical result.
+
+Evidence: `docs/PHYSIONET_MOTOR_ACQUISITION_RESULT.md`,
+`registries/physionet_motor_acquisition_result.v0.json`, and
+`tests/test_physionet_motor_acquisition_result.py`.

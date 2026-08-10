@@ -125,8 +125,15 @@ class PhysioNetMotorAcquisitionImplementationTests(unittest.TestCase):
         self.assertIn("23,248,224-byte execution", document)
         tracker = TRACKER_PATH.read_text(encoding="utf-8")
         row = next(line for line in tracker.splitlines() if line.startswith("| 8 |"))
-        self.assertIn("Implementation Qualified Locally", row)
-        self.assertIn("Execution Pending Remote Green", row)
+        self.assertTrue(
+            "Implementation Qualified Locally" in row or "Complete" in row,
+            row,
+        )
+        if "Complete" in row:
+            self.assertIn("Consumed", row)
+            self.assertIn("No Rerun", row)
+        else:
+            self.assertIn("Execution Pending Remote Green", row)
 
 
 if __name__ == "__main__":

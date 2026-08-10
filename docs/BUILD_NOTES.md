@@ -5721,3 +5721,51 @@ Scientific claim not established: fixture-only implementation establishes no
 EDF readability, event correctness, signal quality, motor effect, neural
 advantage, model accuracy, unseen-person generalization, real-time latency,
 portable hardware, home use, assistive value, or clinical result.
+
+## 2026-08-09 - One PhysioNet Motor Acquisition Consumed And Passed
+
+- Verified exact implementation `92760ce7e3123058f15127b9afd8d5e4bae75321`
+  passed Base Python job `93326279510` and Optional Neuro Readers job
+  `93326279396` in CI `31345401581` before any registered local-path or source
+  operation.
+- Consumed the one no-retry invocation under one CPU thread, one worker, and
+  one numerical job. No restart, retry, substitution, wildcard, alternate
+  host, or additional file was used.
+- All 12 acceptance gates passed. Three registered document GETs plus nine EDF
+  HEADs consumed 442,178 response-body bytes and matched version, DOI, public
+  availability, license, run mapping, exact paths, exact sizes, and all nine
+  official SHA-256 values before payload transfer.
+- Nine EDF GETs transferred exactly 23,248,224 bytes. Each local file received
+  one and only one opaque sequential size/SHA-256 pass; all nine observed
+  hashes matched. The complete nine-file bundle promoted atomically.
+- Runtime was 50.682373 seconds, peak RSS 55,181,312 bytes, incremental disk
+  peak 28,327,635 bytes, free disk 65,470,033,920 bytes before and
+  65,443,667,968 after, and private receipt output 16,083 bytes. Every cap
+  passed.
+- Machine and human receipt hashes are recorded in the sanitized result
+  registry. The 10,141-byte machine manifest, 5,942-byte human receipt, and
+  23,248,224-byte EDF bundle remain Git-ignored and were not committed or
+  uploaded.
+- Every header, annotation, event, sidecar, signal, task, target, label,
+  channel, montage, reference, geometry, sampling, quality, cache, split,
+  model, checkpoint, training, inference, scoring, provider, stream, device,
+  hardware, publication, retry, rerun, and work-order-9 counter stayed zero.
+  End-to-end latency remains unmeasured.
+- Work order 8 is complete and consumed with no rerun. Work order 9 remains
+  gated. The user's 10 GB allowance remains future headroom and did not enlarge
+  this invocation. The unrelated tracker inspection NDJSON remains untouched.
+- Thirty-seven focused closeout tests pass. The complete post-result one-thread
+  suite passes 1,455 tests with three expected skips and 493 subtests in 50.76
+  seconds internal and 52.07 seconds external wall time at 665,387,008-byte
+  peak suite RSS. That suite RSS is optional-ML verification overhead, not the
+  measured acquisition RSS.
+
+Engineering capability added: NeuroDecodeKit acquired and opaque-verified one
+exact, isolated nine-file public EEGMMIDB bundle under the registered identity,
+access-order, network, runtime, memory, storage, and no-retry controls.
+
+Scientific claim not established: no EDF content was parsed and no event,
+signal, target, model, or score was produced, so this result establishes no
+motor-EEG effect, neural advantage, decoding accuracy, unseen-person
+generalization, real-time latency, portable hardware, home use, assistive
+value, or clinical result.

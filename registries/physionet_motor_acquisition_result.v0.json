@@ -1,0 +1,248 @@
+{
+  "schema_name": "neurodecodekit.physionet_motor_acquisition_result",
+  "schema_version": "0.1.0",
+  "result_id": "work-order-8-physionet-motor-acquisition-result-v0",
+  "recorded_at_local": "2026-08-09",
+  "status": "passed_consumed_no_retry_no_rerun",
+  "proof_posture": "acquisition_identity_and_mechanics_only_opaque_edf_no_interpretation",
+  "ordered_evidence": {
+    "registration_commit": "2a7b4188553e221133d788a081b838dbbb9f41bb",
+    "registration_ci_run_id": 31301730612,
+    "request_commit": "f6eb577fdd8c168a4af229248dc56960e3ba75d8",
+    "request_ci_run_id": 31302161647,
+    "authorization_commit": "00b91edd213112fd186711d06369ae4f836b2243",
+    "authorization_ci_run_id": 31344104565,
+    "implementation_commit": "92760ce7e3123058f15127b9afd8d5e4bae75321",
+    "implementation_ci_run_id": 31345401581,
+    "implementation_base_python_job_id": 93326279510,
+    "implementation_base_python_job_conclusion": "success",
+    "implementation_optional_neuro_job_id": 93326279396,
+    "implementation_optional_neuro_job_conclusion": "success",
+    "all_prior_gates_green_before_execution": true
+  },
+  "locked_bindings": {
+    "contract_path": "registries/physionet_motor_acquisition_contract.v0.json",
+    "contract_sha256": "6c81dac6a818f13c49f5df25c540e9d3ef65f21b56ecb1a5b5d15d4a3dc819d3",
+    "authorization_decision_path": "registries/physionet_motor_acquisition_authorization_decision.v0.json",
+    "authorization_decision_sha256": "5f232f174c67fae2f70f2cc26a779a82caee9176dc406ceccb182ad77d1bc304",
+    "implementation_path": "registries/physionet_motor_acquisition_implementation.v0.json",
+    "private_machine_manifest_sha256": "5ebe954a07ced8c2d0c549af0e22c5246ff563613d56cd5e0d0b91fb305d3902",
+    "private_human_receipt_sha256": "587d52cd69fa66e6c2dd195f396f91012205404e3a98139bc5f25e79e101e913",
+    "private_receipts_committed_or_uploaded": false,
+    "payload_committed_or_uploaded": false
+  },
+  "source_dataset": {
+    "provider": "PhysioNet",
+    "dataset_id": "eegmmidb",
+    "version": "1.0.0",
+    "doi": "10.13026/C28G6P",
+    "license_id": "ODC-By-1.0",
+    "license_label": "Open Data Commons Attribution License v1.0",
+    "modality": "EEG",
+    "subjects": [
+      "S001",
+      "S002",
+      "S003"
+    ],
+    "runs": [
+      "03",
+      "07",
+      "11"
+    ],
+    "file_count": 9,
+    "event_sidecars_acquired": 0
+  },
+  "file_identity_results": [
+    {
+      "path": "S001/S001R03.edf",
+      "size_bytes": 2596896,
+      "official_and_observed_sha256_equal": true,
+      "opaque_local_hash_pass_count": 1
+    },
+    {
+      "path": "S001/S001R07.edf",
+      "size_bytes": 2596896,
+      "official_and_observed_sha256_equal": true,
+      "opaque_local_hash_pass_count": 1
+    },
+    {
+      "path": "S001/S001R11.edf",
+      "size_bytes": 2596896,
+      "official_and_observed_sha256_equal": true,
+      "opaque_local_hash_pass_count": 1
+    },
+    {
+      "path": "S002/S002R03.edf",
+      "size_bytes": 2555616,
+      "official_and_observed_sha256_equal": true,
+      "opaque_local_hash_pass_count": 1
+    },
+    {
+      "path": "S002/S002R07.edf",
+      "size_bytes": 2555616,
+      "official_and_observed_sha256_equal": true,
+      "opaque_local_hash_pass_count": 1
+    },
+    {
+      "path": "S002/S002R11.edf",
+      "size_bytes": 2555616,
+      "official_and_observed_sha256_equal": true,
+      "opaque_local_hash_pass_count": 1
+    },
+    {
+      "path": "S003/S003R03.edf",
+      "size_bytes": 2596896,
+      "official_and_observed_sha256_equal": true,
+      "opaque_local_hash_pass_count": 1
+    },
+    {
+      "path": "S003/S003R07.edf",
+      "size_bytes": 2596896,
+      "official_and_observed_sha256_equal": true,
+      "opaque_local_hash_pass_count": 1
+    },
+    {
+      "path": "S003/S003R11.edf",
+      "size_bytes": 2596896,
+      "official_and_observed_sha256_equal": true,
+      "opaque_local_hash_pass_count": 1
+    }
+  ],
+  "execution": {
+    "started_at_utc": "2026-08-10T00:49:17.611951Z",
+    "finished_at_utc": "2026-08-10T00:50:08.295567Z",
+    "acquisition_invocation_count": 1,
+    "payload_retries": 0,
+    "reruns": 0,
+    "complete_bundle_promoted": true,
+    "partial_bundle_promoted": false,
+    "work_order_9_started": false
+  },
+  "measurements": {
+    "input_expected_bytes": 23248224,
+    "final_output_payload_bytes": 23248224,
+    "final_file_count": 9,
+    "metadata_request_count": 12,
+    "metadata_document_get_requests": 3,
+    "edf_head_requests": 9,
+    "metadata_response_body_bytes": 442178,
+    "edf_payload_request_count": 9,
+    "edf_payload_network_bytes": 23248224,
+    "total_measured_response_body_bytes": 23690402,
+    "opaque_local_hash_pass_count": 9,
+    "runtime_seconds": 50.682373,
+    "peak_rss_bytes": 55181312,
+    "incremental_disk_peak_bytes": 28327635,
+    "free_disk_before_bytes": 65470033920,
+    "free_disk_after_bytes": 65443667968,
+    "machine_manifest_bytes": 10141,
+    "human_receipt_bytes": 5942,
+    "combined_private_receipt_bytes": 16083,
+    "cpu_threads": 1,
+    "workers": 1,
+    "concurrent_numerical_jobs": 1,
+    "end_to_end_latency_measured": false
+  },
+  "registered_caps": {
+    "wall_time_seconds": 300,
+    "peak_rss_bytes": 268435456,
+    "maximum_metadata_network_bytes": 1048576,
+    "maximum_edf_payload_network_bytes": 33554432,
+    "maximum_incremental_disk_bytes": 67108864,
+    "minimum_free_disk_before_bytes": 2147483648,
+    "maximum_combined_receipt_bytes": 1048576,
+    "all_resource_caps_passed": true
+  },
+  "access_and_operation_counters": {
+    "edf_header_reads": 0,
+    "edf_annotation_or_event_reads": 0,
+    "event_sidecar_requests_or_reads": 0,
+    "signal_sample_reads": 0,
+    "task_target_label_epoch_trial_reads": 0,
+    "channel_montage_reference_geometry_sampling_quality_reads": 0,
+    "epoch_window_feature_cache_operations": 0,
+    "split_operations": 0,
+    "model_or_checkpoint_accesses": 0,
+    "model_inference_runs": 0,
+    "training_or_parameter_update_runs": 0,
+    "scoring_or_selection_runs": 0,
+    "other_real_dataset_operations": 0,
+    "additional_file_participant_run_or_substitution_requests": 0,
+    "language_model_or_provider_operations": 0,
+    "rw3_stream_device_or_hardware_operations": 0,
+    "payload_or_private_receipt_upload_publication_release_operations": 0,
+    "work_order_9_operations": 0
+  },
+  "acceptance_gate_results": {
+    "registration_authorization_and_implementation_remote_green": true,
+    "version_doi_public_availability_and_license_exact": true,
+    "nine_metadata_paths_and_sizes_exact": true,
+    "nine_official_sha256_entries_exact": true,
+    "output_roots_absent_isolated_and_non_symlinked": true,
+    "complete_nine_file_23248224_byte_bundle": true,
+    "one_opaque_size_and_sha256_pass_per_edf": true,
+    "metadata_payload_runtime_rss_disk_thread_worker_and_receipt_caps": true,
+    "all_forbidden_access_and_operation_counters_zero": true,
+    "no_preexisting_path_followed_overwritten_deleted_or_renamed": true,
+    "warnings_and_unavailable_fields_explicit_in_both_receipts": true,
+    "acquisition_only_claim_ceiling_and_stop_before_work_order_9": true
+  },
+  "unavailable_fields": [
+    "device_model",
+    "observed_channel_count",
+    "observed_channel_names",
+    "observed_units",
+    "observed_sampling_rate_hz",
+    "observed_montage",
+    "observed_reference",
+    "observed_sensor_geometry",
+    "observed_annotations",
+    "observed_event_count",
+    "observed_trial_count",
+    "observed_target_balance",
+    "observed_signal_quality",
+    "usable_epoch_count",
+    "model_accuracy",
+    "no_signal_comparison",
+    "neural_advantage",
+    "cross_person_generalization",
+    "end_to_end_latency"
+  ],
+  "warnings": [
+    "odc_by_1_0_attribution_boundary",
+    "edf_bytes_hashed_opaquely_without_header_annotation_signal_or_event_parsing",
+    "event_sidecars_were_not_requested_or_read",
+    "prospective_fit_and_check_roles_did_not_create_a_split",
+    "single_registered_invocation_consumed_no_retry_or_rerun_authorized",
+    "metadata_network_bytes_count_response_bodies_not_transport_headers",
+    "bundle_identity_does_not_establish_edf_readability_signal_quality_or_motor_physiology",
+    "no_scientific_decoding_neural_realtime_portable_home_assistive_or_clinical_claim_upgrade"
+  ],
+  "next_gate": {
+    "work_order_8_complete": true,
+    "work_order_8_consumed": true,
+    "work_order_8_rerun_allowed": false,
+    "work_order_9_authorized": false,
+    "edf_parse_or_annotation_read_authorized": false,
+    "split_model_training_inference_or_scoring_authorized": false,
+    "ten_gigabyte_future_headroom_used_to_expand_this_execution": false
+  },
+  "post_result_verification": {
+    "focused_closeout_tests_passed": 37,
+    "complete_suite_passed_tests": 1455,
+    "complete_suite_expected_skips": 3,
+    "complete_suite_subtests_passed": 493,
+    "complete_suite_internal_runtime_seconds": 50.76,
+    "complete_suite_external_wall_seconds": 52.07,
+    "complete_suite_external_peak_rss_bytes": 665387008,
+    "complete_suite_rss_is_acquisition_metric": false,
+    "ruff_passed": true,
+    "compileall_passed": true,
+    "registry_json_validation_passed": true,
+    "git_diff_check_passed": true
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "NeuroDecodeKit acquired and opaque-verified one exact isolated nine-file public EEGMMIDB bundle under the registered identity access-order network runtime memory storage and no-retry controls.",
+    "scientific_claim_not_established": "No EDF content was parsed and no event signal target model or score was produced, so this result establishes no motor-EEG effect neural advantage decoding accuracy unseen-person generalization real-time latency portable hardware home use assistive value or clinical utility."
+  }
+}

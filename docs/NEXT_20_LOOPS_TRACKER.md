@@ -148,9 +148,14 @@
 > nine PhysioNet left/right motor-execution EDF files, S001-S003 runs 3/7/11,
 > totaling 23,248,224 bytes. It also recommends one public-data-selected
 > classical family, a fixed causal motor-physiology assay, and local-first EEG
-> contributor receipts. No public payload was downloaded, and this research is
-> neither a preregistration nor authorization. Foundation models and
-> generative EEG imputation remain deferred from the protected Loop 55 path.
+> contributor receipts. Work order 8 subsequently preregistered, separately
+> authorized, fixture-qualified, and consumed that exact acquisition. All 12
+> gates passed: nine one-pass SHA-256 matches, 50.682373 seconds,
+> 55,181,312-byte peak RSS, and zero EDF parse, event, target, model, scoring,
+> retry, rerun, or work-order-9 operations. The payload remains opaque and
+> Git-ignored, so this is acquisition evidence rather than an EEG result.
+> Work order 9 remains separately gated. Foundation models and generative EEG
+> imputation remain deferred from the protected Loop 55 path.
 > The additive architecture pass selects `CML-v0` as the next bounded
 > hypothesis: separate potential/mu/beta views, rank-8 spatial mixers, a
 > 24-value bottleneck, and a physical 29-key lattice with an exact hand

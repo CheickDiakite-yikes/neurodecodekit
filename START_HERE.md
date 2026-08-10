@@ -233,10 +233,17 @@
    default CLI, exact metadata allowlist, no-redirect/no-retry transport,
    one-pass opaque hashing, atomic promotion, bounded receipts, and 23
    adversarial tests are fixture-qualified. No PhysioNet source metadata,
-   local path, or EDF payload was touched. The exact implementation must be
-   committed, pushed, and remotely green before the one nine-file,
-   23,248,224-byte acquisition. The separate 10 GB allowance is future
-   headroom, not an expansion of this invocation; work order 9 remains closed.
+   local path, or EDF payload was touched during implementation. Exact
+   implementation `92760ce` then passed both jobs in CI `31345401581` before
+   the one nine-file acquisition. Read
+   `docs/PHYSIONET_MOTOR_ACQUISITION_RESULT.md` and its result registry. All
+   12 gates passed: exactly 23,248,224 payload bytes, nine one-pass hash
+   matches, 50.682373 seconds, 55,181,312-byte peak RSS, and zero parser,
+   event, target, model, training, inference, scoring, retry, rerun, or
+   work-order-9 operations. Work order 8 is complete and consumed. The
+   payload and private receipts remain Git-ignored. The separate 10 GB
+   allowance is future headroom, not an expansion of this invocation; work
+   order 9 remains closed.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and
