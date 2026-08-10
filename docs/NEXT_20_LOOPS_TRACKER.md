@@ -885,10 +885,12 @@ actual and visual directions, a 30 ms motion guard, one fixed 0.5-4 Hz model,
 tests, synchronized EOG/kinematic controls, and `IACKD-R0` through
 `IACKD-R4`. Request `ef78c06` passed both jobs in CI `31401738032`, and the
 maintainer's short-form packet decision `1f48b30` passed both jobs in CI
-`31403012709` before implementation. The generated-only implementation now
-passes the full 128-run, 300-fit, 420-prediction interface in 8.674020 seconds
-at 263,618,560-byte peak RSS with 5,683,285 bytes removed afterward and every
-real/network/target counter at zero. The next gate is remote-green exact
-implementation before one acquisition; final targets remain closed until the
-later freeze is remotely green. No roadmap row authorizes expansion, rerun,
-release, or claim promotion.
+`31403012709` before implementation. The generated-only implementation passed
+the full 128-run, 300-fit, 420-prediction interface; exact implementation
+`f5c36ba` then passed both jobs in CI `31409141349`. The one acquisition passed
+all 1,340 object and 7,249,113,684-byte gates. The one analysis completed a
+second full object-hash pass and parked at `IACKD-F10` on the first lazy
+BrainVision parse because the frozen combined `32+4` channel inventory gate
+failed. No sample, target, model, prediction, freeze, or score followed. The
+lane is consumed with no rerun, and no roadmap row authorizes post-failure
+inspection, expansion, release, or claim promotion.

@@ -6414,3 +6414,41 @@ Scientific claim not established: no real IACKD payload or target was opened,
 so this implementation establishes no EEG effect, action decoding,
 brain-specific origin, generalization, typing, language or thought decoding,
 real-time operation, hardware capability, assistive benefit, or clinical use.
+
+## 2026-08-10 - IACKD Acquisition Passed; Analysis Parked At F10
+
+- Exact implementation `f5c36baffefc3889c006a515d06bc42cd2b5cb78`
+  passed Base Python job `93522699446` and Optional Neuro Readers job
+  `93522699599` in CI `31409141349` before real access.
+- The single no-retry acquisition passed every gate: four metadata requests,
+  1,340 selected requests, 7,249,113,684 payload bytes, 1,340 streaming hashes,
+  zero content parses, zero post-write opens, 679.749484 seconds,
+  126,205,952-byte peak RSS, and 41,882,632,192 free bytes after promotion.
+- The private acquisition manifest is 580,128 bytes with SHA-256
+  `99dcdf587cba202422e25b92082ff90add8512a2769902f59aab67dee52334e2`.
+  It and the complete bundle remain Git-ignored and uncommitted.
+- The one analysis wrote its no-rerun marker, verified exact membership and all
+  1,340 object hashes, then failed closed on the first lazy BrainVision reader
+  with `BrainVision channel inventory is not 32+4`, registered as
+  `IACKD-F10-channel_sampling_or_geometry_failure`.
+- The combined gate does not reveal whether the count, one or more required
+  names, or both differed. The actual count and names were not retained and are
+  recorded as unavailable rather than guessed.
+- The failure preceded signal materialization, channels TSV, geometry, event,
+  ball, Leap, signed direction, target, derivative, fit, inference, prediction,
+  freeze, and score operations. Every such counter is zero.
+- IACKD-1 is consumed and parked. No retry, rerun, parser relaxation,
+  post-failure local inspection, target delivery, post-target update, release,
+  or scientific claim upgrade is open. The unrelated tracker-inspection NDJSON
+  remains untouched.
+
+Engineering capability added: NeuroDecodeKit acquired and opaque-verified the
+exact 7.249 GB IACKD source under strict resource limits and demonstrated that
+the target-blind analysis fails closed at a preregistered channel contract
+instead of silently deleting, relabeling, or adapting channels.
+
+Scientific claim not established: no signal sample, target, model prediction,
+or score was produced, so this result establishes no EEG effect, action or cue
+alignment, brain-specific origin, generalization, typing, language or thought
+decoding, real-time operation, hardware capability, assistive benefit, or
+clinical use.

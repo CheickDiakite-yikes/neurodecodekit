@@ -4998,3 +4998,28 @@ Evidence: `docs/IACKD_CUE_ACTION_DISSOCIATION_IMPLEMENTATION.md`,
 `registries/iackd_cue_action_dissociation_implementation.v0.json`,
 `src/neurodecodekit/datasets/iackd_cue_action_acquisition.py`, and
 `src/neurodecodekit/experiments/iackd_cue_action_dissociation.py`.
+
+## 0143 - Park IACKD-1 At The Frozen Channel Gate
+
+Decision: preserve the successful one-shot acquisition, but consume and park
+the analysis at registered refusal `IACKD-F10` when the first lazy BrainVision
+reader does not satisfy the combined exact-36-channel and M1/M2/HEOG/VEOG-name
+gate. Do not relax aliases, inspect the channel list after failure, or rerun.
+
+Result: all 1,340 selected objects and 7,249,113,684 bytes passed metadata,
+response, streaming SHA-256, promotion, membership, and a second full local
+hash pass. Acquisition took 679.749484 seconds at 126,205,952-byte peak RSS.
+The failing analysis stopped before `raw.get_data()`, channels TSV, geometry,
+events, ball/Leap streams, targets, derivatives, fits, inferences, predictions,
+freeze, or score. The actual observed channel count and names were not retained
+and remain unavailable. No `IACKD-R0` through `IACKD-R4` route applies.
+
+Disposition: this is a useful integrity-contract failure, not a null neural
+result. IACKD-1 has no retry or rerun. Retain the private acquired bundle
+without reopening, moving, deleting, uploading, or publishing it. A future
+channel-inventory audit requires a new prospective, metadata-minimal Tier C
+gate.
+
+Evidence: `docs/IACKD_CUE_ACTION_DISSOCIATION_RESULT.md`,
+`registries/iackd_cue_action_dissociation_result.v0.json`, and
+`tests/test_iackd_cue_action_dissociation_result.py`.

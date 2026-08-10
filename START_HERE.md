@@ -352,11 +352,15 @@
    `docs/IACKD_CUE_ACTION_DISSOCIATION_IMPLEMENTATION.md` and its registry.
    The standard-library acquisition, one-run-at-a-time BrainVision reader,
    target firewall, 300-fit/420-prediction path, strict aggregate freeze, and
-   isolated scorer are generated-fixture qualified. The measured 128-run
-   fixture used 8.674020 seconds, 263,618,560-byte peak RSS, and 5,683,285
-   bytes, with zero real-data, target, dependency, or network operation; its
-   files were removed. Real IACKD acquisition remains closed until this exact
-   implementation commit is pushed and both required CI jobs are green.
+   isolated scorer were generated-fixture qualified. Exact implementation
+   `f5c36ba` passed both jobs in CI `31409141349` before real access. Now read
+   `docs/IACKD_CUE_ACTION_DISSOCIATION_RESULT.md` and its registry. The one
+   acquisition passed all gates over 1,340 objects and 7,249,113,684 bytes.
+   The one analysis then consumed and parked at `IACKD-F10`: its first lazy
+   BrainVision reader did not satisfy the frozen `32+4` channel gate. It
+   stopped before signal samples, channels TSV, geometry, events, kinematics,
+   targets, models, predictions, freeze, or score. IACKD-1 has no rerun. The
+   retained private bundle is not authorized for post-failure inspection.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and
