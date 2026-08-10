@@ -302,6 +302,16 @@ sentence may be accepted into a separate decision. Do not implement a
 downloader, touch a local PhysioNet path, fetch an EDF or `.event` payload, or
 enter work order 9 from the registration or packet alone.
 
+The maintainer has now supplied that exact sentence after request `f6eb577`
+passed Base Python job `93216583586` and Optional Neuro Readers job
+`93216583625` in CI `31302161647`. Read
+`docs/PHYSIONET_MOTOR_ACQUISITION_AUTHORIZATION_DECISION.md` and its registry.
+The decision commit must become remotely green before generated-fixture and
+mock-network implementation begins. The exact implementation must then become
+remotely green before any source metadata, local PhysioNet path, or EDF payload
+operation. A separately offered 10 GB future data ceiling does not amend this
+immutable nine-file, 23,248,224-byte contract. Do not enter work order 9.
+
 The additive foundation-model decoder strategy is now explicit:
 
 ```bash

@@ -4288,3 +4288,44 @@ portable-hardware performance, home use, assistive value, or clinical result.
 Evidence: `docs/PHYSIONET_MOTOR_ACQUISITION_AUTHORIZATION_PACKET.md`,
 `registries/physionet_motor_acquisition_authorization_request.v0.json`, and
 `tests/test_physionet_motor_acquisition_authorization_request.py`.
+
+## 0125 - Record The Exact Public Motor Acquisition Decision
+
+Decision: accept the maintainer's exact registered sentence after request
+commit `f6eb577fdd8c168a4af229248dc56960e3ba75d8` passed Base Python job
+`93216583586` and Optional Neuro Readers job `93216583625` in CI
+`31302161647`. Preserve the contract and request as immutable pending/all-false
+snapshots; record the later authorization in separate human and machine
+decision artifacts.
+
+Evidence order: this authorization-only commit must become remotely green
+before any implementation begins. Implementation may use only generated local
+fixture bytes and mocked network responses, with no source request or local
+PhysioNet path operation. That exact implementation must then become remotely
+green before metadata reverification and the single no-retry acquisition.
+
+Authorized boundary: exactly nine EEGMMIDB v1.0.0 EDF paths, 23,248,224 final
+bytes, one opaque local SHA-256 pass per file, one acquisition invocation, zero
+payload retries, one thread/worker/job, 300 seconds, 256 MiB RSS, 1 MiB metadata
+network, 32 MiB EDF network, 64 MiB incremental disk, 2 GiB minimum free disk,
+and 1 MiB combined receipts. EDF parsing, `.event` access, signals, targets,
+splits, models, training, inference, scoring, additional files, work order 9,
+reruns, release, and claims remain unauthorized.
+
+Storage clarification: the maintainer separately offered up to 10 GB for future
+data work. Treat that as unused prospective headroom, not an amendment to this
+immutable 23,248,224-byte scope. Any larger acquisition needs its own measured
+contract and applicable exact Tier C decision.
+
+Engineering capability authorized for testing: one dependency-light,
+hash-bound acquisition implementation and one exact public-data invocation may
+proceed through the two ordered green gates.
+
+Scientific claim not established: this authorization is not an EDF or EEG
+result and establishes no readability, event correctness, signal quality,
+motor effect, neural advantage, model accuracy, generalization, real-time
+behavior, portable hardware, home use, assistive value, or clinical result.
+
+Evidence: `docs/PHYSIONET_MOTOR_ACQUISITION_AUTHORIZATION_DECISION.md`,
+`registries/physionet_motor_acquisition_authorization_decision.v0.json`, and
+`tests/test_physionet_motor_acquisition_authorization_decision.py`.

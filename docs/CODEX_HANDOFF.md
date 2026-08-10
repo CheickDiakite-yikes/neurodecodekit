@@ -160,6 +160,18 @@
 > payload, or enter work order 9 from the packet alone. Preserve the unrelated
 > tracker inspection NDJSON.
 >
+> Work-order-8 authorization update, 2026-08-09: the maintainer supplied the
+> exact registered sentence after request `f6eb577` passed CI `31302161647`.
+> Read `docs/PHYSIONET_MOTOR_ACQUISITION_AUTHORIZATION_DECISION.md` and
+> `registries/physionet_motor_acquisition_authorization_decision.v0.json`.
+> The decision commit must become remotely green before fixture/mock
+> implementation. Implementation must make zero source-metadata, local
+> PhysioNet-path, or EDF operations and must itself become remotely green
+> before the one no-retry acquisition. The current inventory remains nine
+> files and 23,248,224 bytes. The user's later 10 GB ceiling is future unused
+> headroom, not permission to expand this contract. Preserve the unrelated
+> tracker inspection NDJSON.
+>
 > Additive strategy refresh, 2026-08-06: read
 > `docs/OPEN_EEG_R_AND_D_STRATEGY_2026-08-06.md` and
 > `registries/open_eeg_rd_strategy.v0.json`. Current open EEG benchmarks

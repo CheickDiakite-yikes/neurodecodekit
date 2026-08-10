@@ -5626,3 +5626,46 @@ Scientific claim not established: the request opened no EDF payload and
 establishes no readability, event correctness, signal quality, motor effect,
 neural advantage, model accuracy, generalization, real-time behavior,
 portable-hardware performance, home use, assistive value, or clinical result.
+
+## 2026-08-09 - PhysioNet Motor Acquisition Authorization Decision
+
+- Verified request `f6eb577fdd8c168a4af229248dc56960e3ba75d8`
+  is remotely green: Base Python job `93216583586` and Optional Neuro Readers
+  job `93216583625` passed in CI `31302161647`.
+- Recorded the maintainer's exact registered sentence in separate human and
+  machine decision artifacts without modifying the immutable contract,
+  preregistration, packet, or all-false request.
+- Bound request SHA-256
+  `77d2d1e7bd3560f2b60feb977c2826190b4ee7fd12144c7698beafb441626a76`
+  and contract SHA-256
+  `6c81dac6a818f13c49f5df25c540e9d3ef65f21b56ecb1a5b5d15d4a3dc819d3`.
+- Authorized fixture/mock implementation only after this decision commit is
+  remotely green, and the one real acquisition only after the exact
+  implementation commit is remotely green.
+- Preserved exactly nine files, 23,248,224 bytes, one no-retry invocation, one
+  opaque local hash pass per EDF, and all resource limits. No source metadata,
+  EDF, local PhysioNet path, parser, event, signal, target, split, model,
+  provider, or experiment operation occurred.
+- Ten focused decision checks pass. One GitHub Actions API read verified parent
+  CI; every source-dataset and experiment counter remains zero.
+- The maintainer's separate 10 GB future data ceiling was recorded as unused
+  prospective headroom and does not amend this acquisition.
+- Thirty-two combined registration, request, and decision checks pass. The
+  complete one-thread suite advances from the 1,408-test request baseline to
+  1,418 passed tests with three expected skips and 493 subtests in 68.42
+  seconds under the unrestricted local test lane.
+- The first complete-suite attempt reached 1,417 passing tests and one failure
+  because the managed sandbox denied Python's forkserver permission to bind a
+  temporary Unix socket. The same exact tree and command passed outside that
+  sandbox restriction; no code or test was changed from the failure.
+- Repository-wide Ruff 0.15.20 and all registry JSON validation pass before the
+  decision commit.
+
+Engineering capability authorized for testing: one dependency-light,
+hash-bound implementation and one exact public-data invocation may proceed
+through the ordered green gates.
+
+Scientific claim not established: this decision is not an EDF or EEG result
+and establishes no readability, event correctness, signal quality, motor
+effect, neural advantage, model accuracy, generalization, real-time behavior,
+portable hardware, home use, assistive value, or clinical result.
