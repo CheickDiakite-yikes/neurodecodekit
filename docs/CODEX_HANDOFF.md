@@ -2134,3 +2134,28 @@ the parser, mocked transport, router, resource guards, writer, inspector, and
 module CLI on generated fixtures. Do not prepare a Tier C decision or make a
 real request until that implementation is separately committed, pushed, and
 remotely green.
+
+## 2026-08-10 IACKD-H2 Synthetic Implementation Qualified
+
+Registration `228ccd03f5e0b5d02ba104e13b77b04f2032df78` passed Base
+Python job `93583989913` and Optional Neuro Readers job `93583989996` in CI
+`31427931578` before implementation.
+
+Read `docs/IACKD_CHANNEL_ROLE_GEOMETRY_IMPLEMENTATION.md`,
+`registries/iackd_channel_role_geometry_implementation.v0.json`,
+`src/neurodecodekit/preprocess/iackd_channel_roles.py`, and
+`tests/test_iackd_channel_roles.py`. The strict standard-library module now
+covers all four metadata roles, one-pass mocked responses, private run and
+geometry pairing, H1/sidecar reconciliation, aggregate role/geometry hashes,
+all five routes, resource guards, exclusive output, bounded inspection, and a
+dry-run-first module CLI.
+
+One final generated qualification processed all 316 registered sizes and
+457,602 bytes in 0.054679625 seconds at 34,996,224-byte peak RSS, emitting
+8,282 bytes. Constructed `IACKDR-R4` has no real-source or scientific meaning.
+Forty-seven focused, 1,751 base, and 1,822 optional tests pass locally.
+
+Next gate: finish static/CLI verification, commit and push the exact
+implementation, and require both remote CI jobs green. Only then prepare one
+all-false H2 Tier C request. Do not fetch any public H2 body, inspect the local
+bundle, or enter IACKD-2 before that later packet sequence.

@@ -162,7 +162,21 @@ requires source-declared roles and explicit unavailable values, and routes only
 aggregate compatibility outcomes. Its generated-fixture implementation is
 eligible only after this exact registration is committed, pushed, and both CI
 jobs are green. No H2 body, retained-bundle path, sibling, signal, target,
-model, score, or real execution is authorized.
+model, score, or real execution is authorized. Registration
+`228ccd03f5e0b5d02ba104e13b77b04f2032df78` passed Base Python job
+`93583989913` and Optional Neuro Readers job `93583989996` in CI
+`31427931578` before the isolated standard-library implementation began. Read
+`docs/IACKD_CHANNEL_ROLE_GEOMETRY_IMPLEMENTATION.md` and
+`registries/iackd_channel_role_geometry_implementation.v0.json`. The module
+strictly parses generated channel, sidecar, electrode, and coordinate fixtures,
+joins run and geometry membership privately, emits only aggregate role-map and
+coverage hashes, and implements all five routes. One final generated
+qualification traversed all 316 registered sizes and 457,602 bytes in
+0.054679625 seconds at 34,996,224-byte peak RSS, emitting 8,282 bytes and a
+constructed `IACKDR-R4`; it has no source or scientific meaning. Forty-seven
+focused, 1,751 base, and 1,822 optional tests pass locally. Commit, push, and
+obtain both green CI jobs for this exact implementation before preparing one
+all-false Tier C request. Never fetch an H2 body from the fixture result.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

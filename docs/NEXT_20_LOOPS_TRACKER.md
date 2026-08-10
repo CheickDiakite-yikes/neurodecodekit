@@ -935,3 +935,15 @@ explicit unavailable reference/geometry, aggregate-only output, and routes
 only after the registration commit is pushed and both CI jobs are green. H2
 real bodies remain unauthorized, and IACKD-2 has no open real-data or model
 gate.
+
+Registration `228ccd0` passed both jobs in CI `31427931578` before H2 Tier B
+implementation. The dependency-free module now covers strict TSV/JSON parsing,
+source-declared roles, private run/geometry joins, bounded mocked transport,
+aggregate leakage checks, all five routes, resource guards, and a dry-run-first
+module CLI. One final generated traversal processed all 316 exact sizes and
+457,602 bytes in 0.054680 seconds at 34,996,224-byte peak RSS and emitted 8,282
+bytes. Its `IACKDR-R4` is constructed fixture behavior only. Forty-seven
+focused, 1,751 base, and 1,822 optional tests pass locally. The exact
+implementation must be committed, pushed, and remotely green before the one
+all-false H2 public-body packet is prepared; no real H2 body or IACKD-2
+operation is open.

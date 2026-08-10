@@ -6683,3 +6683,36 @@ Scientific claim not established: no EEG sample, event, trajectory, target,
 model, prediction, or score was accessed, so this registration establishes no
 neural effect, action decoding, brain-specific origin, generalization,
 real-time operation, hardware capability, assistive benefit, or clinical use.
+
+## 2026-08-10 - IACKD-H2 Synthetic Implementation Qualified
+
+- Registration `228ccd03f5e0b5d02ba104e13b77b04f2032df78` passed Base
+  Python job `93583989913` and Optional Neuro Readers job `93583989996` in CI
+  `31427931578` before implementation began.
+- Added `neurodecodekit.preprocess.iackd_channel_roles` without changing the
+  central CLI or consumed IACKD-1 reader. The standard-library module exposes
+  dry-run, generated-fixture, bounded-inspect, and future exact-decision modes.
+- Implemented strict UTF-8/BOM, duplicate-key-free JSON, exact TSV, declared
+  BIDS type, sidecar count/sampling, electrode, coordinate-system, response,
+  pairing, leakage, resource, output, and one-shot evidence boundaries.
+- The aggregator uses private run and participant/hand keys but publishes no
+  path, participant, coordinate, free text, or individual row. It emits two
+  schema levels, status totals, sidecar groups, one role-map hash, geometry
+  groups, H1 reconciliation, measurements, and one R0-R4 route.
+- One final generated pass covered all 316 exact registered sizes and 457,602
+  bytes, 316 hashes, and 316 parses. It produced constructed `IACKDR-R4`, one
+  core schema after M1/M2 removal, 26 fixture predictive EEG roles, and 30
+  complete fixture central/occipital geometry groups.
+- Runtime was 0.054679625 seconds through return, peak RSS was 34,996,224
+  bytes, and output was 8,282 bytes. Network and every real/protected counter
+  were zero; the temporary output was removed.
+- Forty-seven focused tests, all 1,751 dependency-free tests with 182 skips,
+  and all 1,822 optional-neuro tests with 13 skips pass locally.
+
+Engineering capability added: NeuroDecodeKit can derive and validate a
+count-agnostic, source-declared, geometry-aware sensor-role contract through a
+bounded aggregate interface without touching retained EEG data.
+
+Scientific claim not established: the clean R4 is generated-fixture behavior;
+no public H2 body, EEG sample, event, trajectory, target, model, prediction, or
+score was accessed, so there is no new neural or decoding evidence.

@@ -199,6 +199,18 @@ this registration is committed, pushed, and both CI jobs are green. No H2
 body, retained-bundle path, signal, target, model, or score is currently
 authorized.
 
+Registration `228ccd0` passed Base Python job `93583989913` and Optional Neuro
+Readers job `93583989996` in CI `31427931578` before the exact H2 Tier B
+implementation. Read `docs/IACKD_CHANNEL_ROLE_GEOMETRY_IMPLEMENTATION.md` and
+its registry. The standard-library module now strictly parses all four
+generated metadata roles, pairs runs and geometry privately, reconciles H1 and
+sidecar declarations, emits one hashed aggregate role-map candidate, and
+implements all `IACKDR-R0` through `IACKDR-R4` routes. A final synthetic pass
+covered 316 bodies and 457,602 bytes in 0.054680 seconds at 34,996,224-byte
+peak RSS with 8,282 output bytes. Constructed `IACKDR-R4` is not source
+evidence. Commit, push, and obtain both green CI jobs before preparing a
+separate all-false Tier C request; no H2 body or local bundle is open.
+
 Registration `2a7b4188553e221133d788a081b838dbbb9f41bb` passed Base Python
 job `93215490492` and Optional Neuro Readers job `93215490501` in CI
 `31301730612`. The additive authorization packet and all-false machine request

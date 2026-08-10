@@ -404,6 +404,17 @@
    fetched. Only a completed H2 aggregate may freeze IACKD-2's role-map hash
    and symmetric reversal arms. No H2 body, signal, target, model, or score is
    open.
+   Registration `228ccd0` passed both jobs in CI `31427931578` before the
+   generated-fixture implementation began. Then read
+   `docs/IACKD_CHANNEL_ROLE_GEOMETRY_IMPLEMENTATION.md` and its registry. The
+   standard-library module now enforces strict role, sidecar, geometry,
+   transport, pairing, aggregate-output, resource, and five-route contracts.
+   Its final 316-body generated qualification used 457,602 bytes, 0.054680
+   seconds, 34,996,224-byte peak RSS, and 8,282 output bytes. Constructed
+   `IACKDR-R4` proves only fixture mechanics. Forty-seven focused, 1,751 base,
+   and 1,822 optional tests pass locally. Next commit, push, and require both
+   CI jobs green for the exact implementation; only then prepare a separate
+   all-false Tier C request. Do not fetch public H2 content from this record.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

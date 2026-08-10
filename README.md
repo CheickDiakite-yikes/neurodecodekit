@@ -866,6 +866,20 @@ Read this before interpreting any number in the repository.
   remotely green. It does not authorize the metadata fetch, retained bundle,
   signal, target, model, or score and is not a neural result. Read the
   [H2 preregistration](docs/IACKD_CHANNEL_ROLE_GEOMETRY_PREREGISTRATION.md).
+- **H2 implementation, generated-fixture qualified:** registration `228ccd0`
+  passed both jobs in CI `31427931578` before the dependency-free parser,
+  private run/geometry joins, response firewall, aggregate router, writer,
+  inspector, and module CLI were implemented. One final generated traversal
+  covered all 316 registered object sizes and 457,602 bytes in 0.054680 seconds
+  at 34,996,224-byte peak RSS, emitting 8,282 bytes. It produced two full
+  schemas but one core schema after removing optional M1/M2, 26 constructed
+  predictive EEG roles, and complete constructed C3/C4/Cz and O1/Oz/O2
+  geometry in all 30 groups, routing `IACKDR-R4`. Those are fixture mechanics,
+  not observations of the public data. Forty-seven focused, 1,751 base, and
+  1,822 optional tests pass locally. The implementation must still be
+  committed, pushed, and remotely green before an all-false real-content
+  packet can be prepared. Read the
+  [implementation record](docs/IACKD_CHANNEL_ROLE_GEOMETRY_IMPLEMENTATION.md).
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

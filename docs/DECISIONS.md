@@ -5219,3 +5219,36 @@ engineering compatibility gate and cannot establish a neural effect.
 Evidence: `docs/IACKD_CHANNEL_ROLE_GEOMETRY_PREREGISTRATION.md`,
 `registries/iackd_channel_role_geometry_contract.v0.json`, and
 `tests/test_iackd_channel_role_geometry_contract.py`.
+
+## 0151 - Implement IACKD-H2 As An Aggregate Role Audit
+
+Decision: after registration `228ccd0` passed both required jobs in CI
+`31427931578`, implement H2 under Tier B using only generated exact-size BIDS
+metadata and mocked responses. Keep the consumed IACKD-1 reader unchanged and
+preserve zero real metadata, local-bundle, sibling, signal, target, model, and
+score operations.
+
+Implementation: add one standard-library module with strict UTF-8, TSV, JSON,
+channel-role, sidecar-count, sampling, electrode, coordinate-system, response,
+resource, output, and one-shot decision boundaries. Pair channel/sidecar runs
+and electrode/coordinate groups using private keys, then publish only grouped
+schemas, aggregate status, allowlisted sidecar groups, one role-map hash,
+aggregate geometry, H1 reconciliation, measures, and routes R0-R4.
+
+Qualification: one final generated traversal processed all 316 registered
+sizes and 457,602 bytes, performed 316 hashes and 316 semantic parses, and
+emitted 8,282 bytes in 0.054679625 seconds at 34,996,224-byte peak RSS. It
+routed constructed `IACKDR-R4` with one core schema and 30 complete fixture
+geometry groups. Forty-seven focused, 1,751 base, and 1,822 optional tests pass
+locally.
+
+Boundary: the synthetic route has no real-source or scientific meaning. The
+exact implementation must be committed, pushed, and pass both CI jobs before
+one all-false Tier C packet may be prepared. No earlier maintainer message
+authorizes a public metadata request, retained-bundle operation, or IACKD-2
+experiment.
+
+Evidence: `docs/IACKD_CHANNEL_ROLE_GEOMETRY_IMPLEMENTATION.md`,
+`registries/iackd_channel_role_geometry_implementation.v0.json`,
+`src/neurodecodekit/preprocess/iackd_channel_roles.py`, and
+`tests/test_iackd_channel_roles.py`.
