@@ -777,7 +777,7 @@ Read this before interpreting any number in the repository.
   portable hardware, or clinical utility. Read the [full aggregate result and
   control breakdown](docs/PHYSIONET_LOW_FREQUENCY_COHORT_CONFIRMATION_RESULT.md).
   WO9R is complete and consumed with no rerun or post-target tuning.
-- **Next scientific gate, IACKD-1 Cue-to-Action Reversal:** WO9R's strongest
+- **IACKD-1 Cue-to-Action Reversal, consumed at its reader gate:** WO9R's strongest
   unresolved question is now a direct prospective test rather than another
   classifier comparison. The public CC0 OpenNeuro `ds006840` release provides
   15 participants, 32-channel 1,024 Hz EEG, raw HEOG/VEOG, synchronized Leap
@@ -811,6 +811,20 @@ Read this before interpreting any number in the repository.
   [frozen preregistration](docs/IACKD_CUE_ACTION_DISSOCIATION_PREREGISTRATION.md),
   [implementation record](docs/IACKD_CUE_ACTION_DISSOCIATION_IMPLEMENTATION.md),
   and [aggregate closeout](docs/IACKD_CUE_ACTION_DISSOCIATION_RESULT.md).
+- **Next engineering gate, IACKD-H1 Header Inventory Audit:** the published
+  article supports a 32-channel cap and separately names M1, M2, HEOG, and
+  VEOG, but it never establishes an exact 36-channel BrainVision invariant.
+  The authors' pinned public code also uses two different presence-based
+  deletion lists: one includes M1/M2/HEOG/VEOG/TRIGGER, while the other uses
+  HEO/VEO/HEOG/VEOG/TRIGGER. Those are testable explanations, not observed
+  answers. The new prospective contract audits all **128 VHDR headers** and
+  only **161,792 bytes** in canonical order, emits aggregate signature hashes
+  and seven public-code alias flags, and forbids the retained 7.249 GB bundle,
+  siblings, samples, events, trajectories, targets, models, and scores. Tier B
+  synthetic implementation becomes eligible only after the registration is
+  remotely green; the one real header audit still requires a separate Tier C
+  decision. Read the [primary-source diagnosis](docs/IACKD_CHANNEL_INVENTORY_PRIMARY_SOURCE_RESEARCH.md)
+  and [frozen preregistration](docs/IACKD_CHANNEL_INVENTORY_PREREGISTRATION.md).
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

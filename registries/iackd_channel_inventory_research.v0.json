@@ -1,0 +1,231 @@
+{
+  "schema_name": "neurodecodekit.iackd_channel_inventory_research",
+  "schema_version": "0.1.0",
+  "research_id": "IACKD-H1-header-inventory-audit-research-v0",
+  "recorded_at_local": "2026-08-10",
+  "status": "tier_a_research_complete_header_audit_recommended_no_real_header_access",
+  "proof_posture": "public_article_public_source_code_and_committed_metadata_only",
+  "decision": "Audit all 128 public IACKD VHDR objects without resolving any sibling so a measured channel contract can replace the unsupported exact-36-channel assumption.",
+  "bindings": {
+    "human_document": {
+      "path": "docs/IACKD_CHANNEL_INVENTORY_PRIMARY_SOURCE_RESEARCH.md",
+      "sha256": "656b6e9b8e35caf2c2060ea0f7f3333a4c36799c89531c762ea1c59351e01025"
+    },
+    "consumed_iackd_result": {
+      "document_path": "docs/IACKD_CUE_ACTION_DISSOCIATION_RESULT.md",
+      "document_sha256": "49be2d96453c499d10c406da749d0e057c808ae2eee887e97c2b1d81cd1b8fce",
+      "registry_path": "registries/iackd_cue_action_dissociation_result.v0.json",
+      "registry_sha256": "6af8b8e90d74a6c730f4d4585ad5caa194966f6a3642efed6b2a74809f9b790c",
+      "closeout_commit": "3a58fccb0db4f0c17e2521773ded248baff68e76",
+      "closeout_push_CI_run_id": 31411229793,
+      "base_python_job_id": 93529518866,
+      "optional_neuro_readers_job_id": 93529518946,
+      "both_required_jobs_green": true
+    },
+    "committed_openneuro_inventory": {
+      "path": "registries/iackd_openneuro_metadata_inventory.v0.json",
+      "sha256": "aeaa4928192cca9086fcb0abf4711147c68a68ef5c5aacda2ebc67d162a1ef19"
+    }
+  },
+  "consumed_failure": {
+    "lane": "IACKD-1",
+    "failure_id": "IACKD-F10-channel_sampling_or_geometry_failure",
+    "public_error": "BrainVision channel inventory is not 32+4",
+    "combined_predicates": [
+      "total_BrainVision_channel_count_equals_36",
+      "normalized_M1_M2_HEOG_VEOG_all_present"
+    ],
+    "observed_count_retained": false,
+    "observed_names_retained": false,
+    "which_predicate_failed_known": false,
+    "signal_sample_materializations": 0,
+    "target_reads": 0,
+    "model_runs": 0,
+    "prediction_sets": 0,
+    "scores": 0,
+    "rerun_allowed": false,
+    "local_bundle_reopen_allowed": false
+  },
+  "primary_sources": {
+    "article": {
+      "title": "Intention-Action Conflict EEG-Hand Kinematics Dataset for Unimanual Control under Congruent and Incongruent Conditions",
+      "doi": "10.1038/s41597-026-07146-x",
+      "version_of_record_date": "2026-06-23",
+      "findings": [
+        "The acquisition is described as a 32-channel Compumedics Neuroscan cap at 1024 Hz.",
+        "M1 M2 HEOG and VEOG are separately named as non-EEG channels removed during published preprocessing.",
+        "The article does not assert that every converted BrainVision run exposes exactly 36 channels or byte-identical non-EEG names."
+      ]
+    },
+    "upstream_code": {
+      "repository": "https://github.com/Boketto1/IACKD",
+      "commit": "c0b595de7571c7e04abae7477c61d0b92b5702cd",
+      "commit_time_UTC": "2026-01-28T15:01:53Z",
+      "files": [
+        {
+          "path": "code/scripts/matlab/preprocess_premove_55_14.m",
+          "git_blob_sha1": "9734b9d248ce5232bc09ec6aa055304d4d6c5b00",
+          "size_bytes": 13701,
+          "presence_based_deletion_allowlist": [
+            "M1",
+            "M2",
+            "HEOG",
+            "VEOG",
+            "TRIGGER"
+          ]
+        },
+        {
+          "path": "code/scripts/matlab/preprocess_eeg_pipeline.m",
+          "git_blob_sha1": "2f08fe319953f345994ad6ea5b3fae1e5e72cb3a",
+          "size_bytes": 10838,
+          "presence_based_deletion_allowlist": [
+            "HEO",
+            "VEO",
+            "TRIGGER",
+            "HEOG",
+            "VEOG"
+          ]
+        }
+      ],
+      "raw_channel_count_assertion_found": false,
+      "same_deletion_vocabulary_across_both_pipelines": false
+    },
+    "dataset": {
+      "provider": "OpenNeuro",
+      "accession": "ds006840",
+      "version": "1.0.0",
+      "dataset_doi": "10.18112/openneuro.ds006840.v1.0.0",
+      "object_base_url": "https://s3.amazonaws.com/openneuro.org/ds006840/"
+    }
+  },
+  "registered_header_surface": {
+    "derivation": "filter committed selected_objects by exact .vhdr suffix",
+    "object_count": 128,
+    "total_bytes": 161792,
+    "minimum_object_bytes": 1254,
+    "maximum_object_bytes": 1292,
+    "unique_object_sizes": [
+      1254,
+      1256,
+      1290,
+      1292
+    ],
+    "participant_count": 15,
+    "first_deterministic_object": {
+      "path": "sub-01/eeg/sub-01_task-ihc_acq-left_run-01_eeg.vhdr",
+      "size_bytes": 1254,
+      "etag": "14379d265eeae77af2670d63a7051151",
+      "last_modified": "2025-11-17T02:50:20.000Z"
+    },
+    "fraction_of_acquired_selected_payload": 0.000022318866423,
+    "existing_local_bundle_needed": false
+  },
+  "unresolved_hypotheses": [
+    {
+      "id": "H-count-trigger",
+      "hypothesis": "TRIGGER is an additional declared channel in one or more BrainVision exports.",
+      "supported_as_observed_result": false
+    },
+    {
+      "id": "H-count-definition",
+      "hypothesis": "The reported 32-channel cap count includes rather than precedes one or more reference channels.",
+      "supported_as_observed_result": false
+    },
+    {
+      "id": "H-name-alias",
+      "hypothesis": "One or more ocular channels use HEO or VEO instead of HEOG or VEOG.",
+      "supported_as_observed_result": false
+    },
+    {
+      "id": "H-run-heterogeneity",
+      "hypothesis": "The ordered channel inventory differs across runs.",
+      "supported_as_observed_result": false
+    }
+  ],
+  "recommended_design": {
+    "lane": "IACKD-H1",
+    "unit": "one_public_VHDR_object",
+    "registered_units": 128,
+    "sequential_in_memory_fetch_and_parse": true,
+    "raw_header_retention": false,
+    "sibling_resolution": false,
+    "public_output": "aggregate_hash_bound_signature_ledger",
+    "public_allowlisted_names": [
+      "M1",
+      "M2",
+      "HEOG",
+      "VEOG",
+      "HEO",
+      "VEO",
+      "TRIGGER"
+    ],
+    "unallowlisted_channel_names_public": false,
+    "individual_path_results_public": false,
+    "diagnostic_routes": [
+      "IACKDH-R0",
+      "IACKDH-R1",
+      "IACKDH-R2",
+      "IACKDH-R3",
+      "IACKDH-R4",
+      "IACKDH-R5"
+    ],
+    "automatically_authorizes_corrected_scientific_analysis": false
+  },
+  "proposed_resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "concurrent_numerical_jobs": 1,
+    "wall_time_seconds": 120,
+    "peak_RSS_bytes": 268435456,
+    "VHDR_requests": 128,
+    "expected_VHDR_body_bytes": 161792,
+    "network_body_bytes": 1048576,
+    "maximum_bytes_per_VHDR": 4096,
+    "incremental_disk_bytes": 2097152,
+    "public_output_bytes": 1048576,
+    "minimum_free_disk_bytes": 2147483648,
+    "retries": 0,
+    "reruns": 0
+  },
+  "current_access_counters": {
+    "OpenNeuro_VHDR_payload_requests": 0,
+    "OpenNeuro_VHDR_payload_bytes": 0,
+    "local_IACKD_path_stats_or_opens": 0,
+    "real_header_content_reads": 0,
+    "sibling_resolutions_stats_hashes_or_opens": 0,
+    "signal_sample_reads": 0,
+    "marker_or_event_reads": 0,
+    "trajectory_reads": 0,
+    "target_or_label_reads": 0,
+    "cache_or_split_operations": 0,
+    "model_or_checkpoint_loads": 0,
+    "training_or_parameter_update_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "scoring_runs": 0,
+    "provider_or_language_model_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "authorization_state": {
+    "research_complete": true,
+    "preregistration_frozen": false,
+    "synthetic_fixture_implementation_authorized": false,
+    "real_header_network_access_authorized": false,
+    "local_bundle_access_authorized": false,
+    "real_execution_authorized": false,
+    "rerun_authorized": false,
+    "scientific_claim_upgrade_authorized": false
+  },
+  "warnings": [
+    "Public code makes the failed exact-36 assumption questionable but does not reveal the observed first-run inventory.",
+    "The 128-header audit is real-content access and needs a separate Tier C decision after a green implementation.",
+    "A successful header audit cannot authorize or rescue the consumed IACKD-1 analysis.",
+    "Channel type geometry reference signal quality and brain-specific origin remain unavailable from VHDR declarations alone."
+  ],
+  "claim_boundary": {
+    "engineering_capability_proposed": "A bounded sibling-blind aggregate BrainVision header inventory that can diagnose an invalid channel contract without touching neural samples or target-bearing files.",
+    "scientific_claim_not_established": "No real header content EEG sample event trajectory target model prediction or score was accessed so this research establishes no neural effect action decoding brain-specific origin generalization real-time operation hardware capability assistive benefit or clinical use."
+  }
+}

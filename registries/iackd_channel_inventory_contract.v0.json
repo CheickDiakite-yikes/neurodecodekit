@@ -1,0 +1,350 @@
+{
+  "schema_name": "neurodecodekit.iackd_channel_inventory_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "IACKD-H1-header-inventory-audit-v0",
+  "recorded_at_local": "2026-08-10",
+  "status": "preregistered_tier_b_synthetic_implementation_pending_real_execution_unauthorized",
+  "proof_posture": "prospective_all_header_metadata_contract_no_real_content_access",
+  "bindings": {
+    "primary_source_research_document": {
+      "path": "docs/IACKD_CHANNEL_INVENTORY_PRIMARY_SOURCE_RESEARCH.md",
+      "sha256": "656b6e9b8e35caf2c2060ea0f7f3333a4c36799c89531c762ea1c59351e01025"
+    },
+    "primary_source_research_registry": {
+      "path": "registries/iackd_channel_inventory_research.v0.json",
+      "sha256": "2e88705f89b48e8e47cb2dd31876003b6ceebd1e3bee848e5fdeffd8e4c5add0"
+    },
+    "preregistration_document": {
+      "path": "docs/IACKD_CHANNEL_INVENTORY_PREREGISTRATION.md",
+      "sha256": "516f2ff9bbe0c4b33533121c9c611e49c912321dbb5b871a04f5eb0a2a8b6c5c"
+    },
+    "committed_openneuro_inventory": {
+      "path": "registries/iackd_openneuro_metadata_inventory.v0.json",
+      "sha256": "aeaa4928192cca9086fcb0abf4711147c68a68ef5c5aacda2ebc67d162a1ef19"
+    },
+    "consumed_iackd_result": {
+      "path": "registries/iackd_cue_action_dissociation_result.v0.json",
+      "sha256": "6af8b8e90d74a6c730f4d4585ad5caa194966f6a3642efed6b2a74809f9b790c",
+      "closeout_commit": "3a58fccb0db4f0c17e2521773ded248baff68e76",
+      "push_CI_run_id": 31411229793,
+      "base_python_job_id": 93529518866,
+      "optional_neuro_readers_job_id": 93529518946,
+      "both_required_jobs_green": true
+    }
+  },
+  "source": {
+    "provider": "OpenNeuro",
+    "accession": "ds006840",
+    "version": "1.0.0",
+    "dataset_doi": "10.18112/openneuro.ds006840.v1.0.0",
+    "object_base_url": "https://s3.amazonaws.com/openneuro.org/ds006840/",
+    "selection_rule": "committed selected_objects with exact .vhdr suffix sorted by path",
+    "expected_object_count": 128,
+    "expected_total_body_bytes": 161792,
+    "minimum_object_bytes": 1254,
+    "maximum_object_bytes": 1292,
+    "unique_object_sizes": [
+      1254,
+      1256,
+      1290,
+      1292
+    ],
+    "first_deterministic_object": {
+      "path": "sub-01/eeg/sub-01_task-ihc_acq-left_run-01_eeg.vhdr",
+      "size_bytes": 1254,
+      "etag": "14379d265eeae77af2670d63a7051151",
+      "last_modified": "2025-11-17T02:50:20.000Z"
+    },
+    "substitutions_allowed": false,
+    "additional_objects_allowed": false,
+    "existing_local_bundle_may_be_used": false
+  },
+  "ordered_stages": {
+    "stage_I": {
+      "name": "synthetic_fixture_implementation",
+      "tier": "B",
+      "eligible_only_after_registration_commit_pushed_and_both_CI_jobs_green": true,
+      "generated_VHDR_fixtures_only": true,
+      "mocked_transport_only": true,
+      "real_or_local_IACKD_access": false,
+      "network_calls": 0,
+      "scientific_operations": 0
+    },
+    "stage_R": {
+      "name": "one_real_public_header_audit",
+      "tier": "C",
+      "eligible_only_after_exact_implementation_commit_pushed_and_both_CI_jobs_green": true,
+      "separate_packet_bound_maintainer_decision_required": true,
+      "currently_authorized": false,
+      "registered_execution_count": 1,
+      "retry_count": 0,
+      "rerun_count": 0
+    }
+  },
+  "fetch_contract": {
+    "transport": "python_standard_library_https",
+    "canonical_path_order": true,
+    "sequential_requests_only": true,
+    "maximum_concurrent_requests": 1,
+    "requests": 128,
+    "redirects_allowed": false,
+    "retries_allowed": false,
+    "response_status": 200,
+    "response_URL_must_equal_registered_URL": true,
+    "content_length_must_equal_registered_size": true,
+    "ETag_must_equal_registered_ETag": true,
+    "content_encoding_allowed": "identity_only",
+    "maximum_bytes_read_per_object": 4096,
+    "exact_body_size_required": true,
+    "body_SHA256_passes_per_object": 1,
+    "semantic_parse_passes_per_object": 1,
+    "raw_body_persisted": false,
+    "raw_body_discarded_before_next_request": true,
+    "temporary_payload_files": 0,
+    "atomic_public_output": true,
+    "overwrite_allowed": false
+  },
+  "parser_contract": {
+    "base_dependencies_only": true,
+    "MNE_or_neural_reader": false,
+    "supported_codepages": [
+      "UTF-8",
+      "UTF-8-BOM",
+      "Windows-1252"
+    ],
+    "replacement_decode_allowed": false,
+    "NUL_or_disallowed_controls_allowed": false,
+    "format_preamble_required": "Brain Vision Data Exchange Header File Version 1.0",
+    "required_sections": [
+      "Common Infos",
+      "Binary Infos",
+      "Channel Infos"
+    ],
+    "required_common_keys": [
+      "DataFile",
+      "MarkerFile",
+      "DataFormat",
+      "DataOrientation",
+      "NumberOfChannels",
+      "SamplingInterval"
+    ],
+    "required_binary_keys": [
+      "BinaryFormat"
+    ],
+    "duplicate_required_sections_or_keys_allowed": false,
+    "data_and_marker_references_are_inert_basenames_only": true,
+    "sibling_path_construction_resolution_stat_hash_or_open": false,
+    "positive_finite_sampling_interval_required": true,
+    "channel_indices": "exact_contiguous_Ch1_through_ChN",
+    "channel_field_count": 4,
+    "brainvision_comma_escape": "\\1",
+    "channel_names_nonempty": true,
+    "channel_names_unique_after_normalization": true,
+    "name_normalization": "Unicode_NFC_then_trim",
+    "allowlist_comparison": "case_insensitive_after_registered_normalization",
+    "fuzzy_alias_inference": false,
+    "channel_type_inference": false,
+    "geometry_inference": false,
+    "reference_inference": false
+  },
+  "public_name_allowlist": [
+    "M1",
+    "M2",
+    "HEOG",
+    "VEOG",
+    "HEO",
+    "VEO",
+    "TRIGGER"
+  ],
+  "signature_contract": {
+    "signature_fields": [
+      "declared_channel_count",
+      "ordered_normalized_channel_names_sha256",
+      "sampling_interval_microseconds",
+      "sampling_rate_hz",
+      "allowlisted_name_presence"
+    ],
+    "canonical_serialization": "UTF-8 JSON sorted keys compact separators allow_nan false newline terminated",
+    "signature_algorithm": "SHA-256",
+    "body_hash_set_algorithm": "SHA-256 over canonical ordered path size ETag and body SHA-256 rows",
+    "groups_sorted_by_signature_id": true,
+    "individual_paths_in_public_output": false,
+    "unallowlisted_names_in_public_output": false,
+    "per_participant_outcomes_in_public_output": false,
+    "first_deterministic_signature_reported": true,
+    "all_headers_identical_reported": true
+  },
+  "public_output_fields": [
+    "schema_name",
+    "schema_version",
+    "status",
+    "proof_posture",
+    "provenance",
+    "measurements",
+    "signature_groups",
+    "first_header_diagnosis",
+    "all_headers_identical",
+    "access_counters",
+    "warnings",
+    "unavailable_fields",
+    "acceptance_gate_results",
+    "diagnostic_route",
+    "claim_boundary"
+  ],
+  "forbidden_public_fields": [
+    "raw_header_text",
+    "comments",
+    "unallowlisted_channel_names",
+    "DataFile_value",
+    "MarkerFile_value",
+    "individual_object_paths",
+    "local_paths",
+    "signals",
+    "events",
+    "trajectories",
+    "labels",
+    "targets",
+    "predictions",
+    "participant_outcomes"
+  ],
+  "diagnostic_router_order": [
+    {
+      "route": "IACKDH-R0",
+      "condition": "any_source_response_resource_decode_parse_output_or_completeness_gate_fails"
+    },
+    {
+      "route": "IACKDH-R5",
+      "condition": "more_than_one_channel_inventory_signature_exists"
+    },
+    {
+      "route": "IACKDH-R1",
+      "condition": "first_signature_count_36_and_M1_M2_HEOG_VEOG_all_present"
+    },
+    {
+      "route": "IACKDH-R4",
+      "condition": "first_signature_count_not_36_and_at_least_one_canonical_name_absent"
+    },
+    {
+      "route": "IACKDH-R2",
+      "condition": "first_signature_count_not_36_and_all_four_canonical_names_present"
+    },
+    {
+      "route": "IACKDH-R3",
+      "condition": "first_signature_count_36_and_at_least_one_canonical_name_absent"
+    }
+  ],
+  "acceptance_gates": [
+    "registration_and_implementation_remote_green_before_real_access",
+    "separate_exact_Tier_C_decision_remote_green_before_real_access",
+    "exact_128_object_and_161792_byte_inventory",
+    "all_paths_URLs_sizes_ETags_and_response_policies_match",
+    "one_SHA256_and_one_parse_per_body",
+    "all_declared_channel_tables_complete_and_internally_consistent",
+    "aggregate_signatures_and_first_header_diagnosis_replay_byte_exactly",
+    "no_existing_local_IACKD_path_stat_or_open",
+    "all_sibling_sample_event_trajectory_target_model_prediction_and_score_counters_zero",
+    "all_resource_network_disk_thread_and_output_caps_pass",
+    "metadata_compatibility_claim_ceiling_preserved"
+  ],
+  "refusal_ids": [
+    "IACKDH-F01_missing_exact_real_content_decision",
+    "IACKDH-F02_registration_implementation_inventory_or_green_proof_mismatch",
+    "IACKDH-F03_wrong_object_set_order_URL_or_source_version",
+    "IACKDH-F04_redirect_retry_substitution_or_rerun",
+    "IACKDH-F05_response_status_length_ETag_compression_or_size_mismatch",
+    "IACKDH-F06_decode_codepage_preamble_section_or_key_failure",
+    "IACKDH-F07_channel_count_index_name_or_uniqueness_failure",
+    "IACKDH-F08_unsafe_sibling_reference_or_attempted_sibling_resolution",
+    "IACKDH-F09_raw_comment_unallowlisted_name_path_or_protected_output",
+    "IACKDH-F10_local_bundle_companion_sample_event_trajectory_or_target_access",
+    "IACKDH-F11_cache_split_feature_model_inference_training_or_scoring_operation",
+    "IACKDH-F12_dependency_provider_language_model_stream_device_or_hardware_operation",
+    "IACKDH-F13_malformed_or_nondeterministic_signature_aggregation",
+    "IACKDH-F14_resource_thread_network_disk_or_output_cap_breach",
+    "IACKDH-F15_overwrite_retained_raw_payload_deletion_move_upload_or_release",
+    "IACKDH-F16_scientific_decoding_realtime_portable_assistive_or_clinical_overclaim"
+  ],
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "concurrent_numerical_jobs": 1,
+    "wall_time_seconds": 120,
+    "peak_RSS_bytes": 268435456,
+    "VHDR_requests": 128,
+    "expected_VHDR_body_bytes": 161792,
+    "network_body_bytes": 1048576,
+    "maximum_bytes_read_per_VHDR": 4096,
+    "incremental_disk_bytes": 2097152,
+    "public_generated_output_bytes": 1048576,
+    "minimum_free_disk_bytes": 2147483648,
+    "retries": 0,
+    "reruns": 0
+  },
+  "authorization": {
+    "tier_B_synthetic_implementation_eligible_after_registration_green": true,
+    "generated_fixture_creation": true,
+    "mocked_transport_qualification": true,
+    "real_OpenNeuro_metadata_request": false,
+    "real_OpenNeuro_VHDR_request": false,
+    "real_header_content_parse": false,
+    "existing_local_IACKD_path_stat_or_open": false,
+    "VMRK_or_EEG_companion_access": false,
+    "channels_events_geometry_ball_or_Leap_access": false,
+    "signal_marker_event_trajectory_target_or_label_access": false,
+    "cache_or_split_creation": false,
+    "model_checkpoint_training_inference_prediction_or_scoring": false,
+    "new_dependency_installation": false,
+    "provider_or_language_model": false,
+    "stream_device_or_hardware": false,
+    "deletion_move_upload_publication_or_release": false,
+    "retry_or_rerun": false,
+    "scientific_claim_upgrade": false
+  },
+  "current_access_counters": {
+    "real_VHDR_requests": 0,
+    "real_VHDR_body_bytes": 0,
+    "real_header_parses": 0,
+    "local_IACKD_path_stats_or_opens": 0,
+    "sibling_resolutions_stats_hashes_or_opens": 0,
+    "signal_sample_reads": 0,
+    "marker_or_event_reads": 0,
+    "trajectory_reads": 0,
+    "target_or_label_reads": 0,
+    "model_or_checkpoint_loads": 0,
+    "training_or_parameter_update_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "scoring_runs": 0,
+    "provider_or_language_model_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "unavailable_by_design": [
+    "actual_EEG_channel_count",
+    "channel_types",
+    "measured_geometry",
+    "acquisition_reference",
+    "bad_channel_status",
+    "signal_values_or_quality",
+    "marker_and_event_content",
+    "trial_count",
+    "trajectory_content",
+    "labels_and_targets",
+    "neural_effect",
+    "decoding_accuracy",
+    "brain_specific_origin",
+    "generalization",
+    "end_to_end_latency"
+  ],
+  "warnings": [
+    "The audit can diagnose the consumed combined channel gate but cannot reopen or rescue IACKD-1.",
+    "VHDR declarations alone cannot establish channel types geometry signal quality or neural origin.",
+    "The public source code supports alias hypotheses but no hypothesis is an observed result before Stage R.",
+    "A corrected scientific reader and experiment require a new prospective contract after this lane closes."
+  ],
+  "claim_boundary": {
+    "maximum_engineering_claim": "All registered IACKD VHDR declarations were or were not compatible with a measured aggregate channel inventory contract under a bounded sibling-blind audit.",
+    "scientific_claim_not_established": "No EEG sample event trajectory target model prediction or score is authorized so this contract cannot establish a neural effect action decoding brain-specific origin generalization real-time operation hardware capability assistive benefit or clinical use."
+  }
+}

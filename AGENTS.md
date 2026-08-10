@@ -74,7 +74,7 @@ WO9R private artifacts or infer typing, language, thought decoding, unseen-
 person generalization, real-time operation, hardware, home-use, assistive, or
 clinical evidence.
 
-The next active evidence lane is `IACKD-1 Cue-to-Action Reversal`. Read the
+The latest consumed evidence lane is `IACKD-1 Cue-to-Action Reversal`. Read the
 primary-source research, frozen preregistration, authorization packet and
 decision, then `docs/IACKD_CUE_ACTION_DISSOCIATION_IMPLEMENTATION.md` and
 `registries/iackd_cue_action_dissociation_implementation.v0.json`. Registration
@@ -103,8 +103,22 @@ The actual count and names were not retained. No signal sample, channels TSV,
 geometry, event, trajectory, target, derivative, fit, inference, prediction,
 freeze, or score followed. Do not reopen the private bundle, rerun, relax the
 parser, infer which channel predicate failed, or promote a scientific claim.
-The next safe work is Tier A public-source design for a separately gated,
-metadata-minimal channel inventory audit.
+
+The next active engineering lane is `IACKD-H1 Header Inventory Audit`. Read
+`docs/IACKD_CHANNEL_INVENTORY_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/iackd_channel_inventory_research.v0.json`,
+`docs/IACKD_CHANNEL_INVENTORY_PREREGISTRATION.md`, and
+`registries/iackd_channel_inventory_contract.v0.json`. The pinned article does
+not establish an exact 36-channel BrainVision invariant; the authors' public
+premovement and execution scripts use different presence-based deletion lists,
+including HEO/VEO aliases and TRIGGER. The prospective audit covers all 128
+VHDR objects and 161,792 bytes, in memory and sequentially, with aggregate
+hash-only signatures and no sibling resolution. No real VHDR content has been
+opened. After this registration is committed, pushed, and remotely green, Tier
+B may implement only generated fixtures and mocked transport. Real header
+network access remains Tier C and needs a separate packet-bound decision after
+the exact implementation is remotely green. Never use or inspect the existing
+local IACKD bundle for this lane.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

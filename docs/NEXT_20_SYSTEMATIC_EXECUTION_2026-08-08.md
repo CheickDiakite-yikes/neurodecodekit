@@ -133,7 +133,7 @@ committed, pushed, and remotely green before implementation.
 It is deliberately outside the numbered 1-20 table so that the frozen
 execution overlay remains exactly 20 rows.
 
-IACKD-1 Cue-to-Action Reversal is the next active Tier A research branch. It
+IACKD-1 Cue-to-Action Reversal was the next Tier A research branch. It
 uses the public OpenNeuro `ds006840` congruent/incongruent mapping to address
 WO9R's unresolved cue-versus-action source question directly: fit a fixed
 low-frequency model only where visual and hand directions agree, then score
@@ -159,6 +159,18 @@ hold. It stopped before samples, targets, models, predictions, freeze, or
 score. The lane is parked with no rerun; the retained private bundle is not
 open for post-failure inspection. This additive lane does not renumber work
 orders 10-20 and does not reopen WO9R.
+
+IACKD-H1 Header Inventory Audit is now prospectively frozen as the smallest
+useful follow-up. The article does not establish the failed exact-36-channel
+assumption, and the authors' pinned public pipelines disagree on whether their
+presence-based deletion vocabularies include M1/M2 or HEO/VEO while both name
+TRIGGER. The contract selects all 128 committed VHDR metadata objects and only
+161,792 expected bytes. Its future output is aggregate and hash-bound; the
+existing local bundle, every sibling, sample, event, trajectory, target, model,
+and score remain closed. Registration authorizes no real header request. Only
+generated-fixture and mocked-transport implementation becomes Tier B eligible
+after this exact registration is remotely green; one real execution still
+requires a later packet-bound Tier C decision.
 
 Registration `2a7b4188553e221133d788a081b838dbbb9f41bb` passed Base Python
 job `93215490492` and Optional Neuro Readers job `93215490501` in CI

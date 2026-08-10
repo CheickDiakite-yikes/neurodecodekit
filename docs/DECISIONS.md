@@ -5023,3 +5023,33 @@ gate.
 Evidence: `docs/IACKD_CUE_ACTION_DISSOCIATION_RESULT.md`,
 `registries/iackd_cue_action_dissociation_result.v0.json`, and
 `tests/test_iackd_cue_action_dissociation_result.py`.
+
+## 0144 - Measure The IACKD Header Contract Before Another Analysis
+
+Decision: do not guess which half of the consumed IACKD-1 `32+4` gate failed.
+Use a new IACKD-H1 metadata lane to audit every public VHDR declaration while
+keeping the retained local bundle and all linked content closed.
+
+Basis: the article reports a 32-channel cap and separately names M1, M2, HEOG,
+and VEOG, but does not establish an exact 36-channel file invariant. The
+authors' pinned public premovement pipeline deletes M1/M2/HEOG/VEOG/TRIGGER if
+present, while the execution pipeline deletes HEO/VEO/HEOG/VEOG/TRIGGER.
+Count, alias, and run-heterogeneity explanations are therefore plausible but
+remain unobserved hypotheses.
+
+Design: select the exact 128 VHDR members and 161,792 bytes already bound by
+the committed metadata inventory. Parse them sequentially in memory with the
+standard library, resolve no sibling, retain no raw header, and publish only
+aggregate signature hashes, counts, and seven public-code alias flags. The
+router must preserve contradiction, count-only, name-only, combined, and
+heterogeneous outcomes rather than forcing a correction.
+
+Boundary: after this registration is remotely green, generated-fixture and
+mocked-transport implementation may proceed under Tier B. Real header network
+access remains Tier C and requires a separate packet-bound decision after the
+implementation is remotely green. No route reopens or rescues IACKD-1.
+
+Evidence: `docs/IACKD_CHANNEL_INVENTORY_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/iackd_channel_inventory_research.v0.json`,
+`docs/IACKD_CHANNEL_INVENTORY_PREREGISTRATION.md`, and
+`registries/iackd_channel_inventory_contract.v0.json`.

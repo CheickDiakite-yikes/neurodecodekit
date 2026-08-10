@@ -361,6 +361,16 @@
    stopped before signal samples, channels TSV, geometry, events, kinematics,
    targets, models, predictions, freeze, or score. IACKD-1 has no rerun. The
    retained private bundle is not authorized for post-failure inspection.
+   Next read `docs/IACKD_CHANNEL_INVENTORY_PRIMARY_SOURCE_RESEARCH.md`,
+   `registries/iackd_channel_inventory_research.v0.json`,
+   `docs/IACKD_CHANNEL_INVENTORY_PREREGISTRATION.md`, and
+   `registries/iackd_channel_inventory_contract.v0.json`. Public-source review
+   found that the paper does not assert an exact 36-channel file invariant and
+   the authors' two pinned MATLAB pipelines use different deletion vocabularies,
+   including HEO/VEO aliases and TRIGGER. IACKD-H1 freezes a 128-header,
+   161,792-byte, sibling-blind aggregate audit. This registration opens no real
+   header and does not authorize the network stage; after remote green, only
+   generated fixtures and mocked transport are eligible under Tier B.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

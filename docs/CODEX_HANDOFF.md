@@ -1960,3 +1960,31 @@ tracker-inspection NDJSON; do not reopen, delete, move, relax, or infer.
 
 Do not touch the unrelated untracked
 `docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx.inspect.ndjson`.
+
+## 2026-08-10 IACKD-H1 Header Inventory Registration
+
+Read `docs/IACKD_CHANNEL_INVENTORY_PRIMARY_SOURCE_RESEARCH.md`,
+`registries/iackd_channel_inventory_research.v0.json`,
+`docs/IACKD_CHANNEL_INVENTORY_PREREGISTRATION.md`, and
+`registries/iackd_channel_inventory_contract.v0.json`.
+
+The published paper reports a 32-channel cap and separately names M1, M2,
+HEOG, and VEOG, but does not assert that every BrainVision file has exactly 36
+channels. At upstream commit `c0b595d`, the authors' premovement code deletes
+M1/M2/HEOG/VEOG/TRIGGER if present, while their execution code deletes
+HEO/VEO/HEOG/VEOG/TRIGGER. This supports count, alias, and heterogeneity
+hypotheses without establishing which one caused the consumed failure.
+
+The new prospective contract filters the committed metadata inventory to all
+128 VHDR objects and 161,792 bytes. It freezes sequential in-memory retrieval,
+strict standard-library parsing, no sibling resolution, seven allowlisted
+public-code name flags, aggregate signature hashes, six diagnostic routes, one
+thread, 256 MiB RSS, 1 MiB network body, 2 MiB disk, 1 MiB output, and zero
+retry or rerun. No real VHDR request, local bundle access, dependency, sample,
+event, trajectory, target, model, prediction, or score has occurred.
+
+After the registration commit is pushed and both CI jobs are green, implement
+only generated fixtures and mocked transport under Tier B. Commit, push, and
+obtain both green jobs for that exact implementation before preparing the sole
+Tier C real-header packet. Do not treat any older `continue` as a retroactive
+decision for that future packet, and never reopen the retained local bundle.

@@ -871,8 +871,8 @@ consumed with no rerun. The next high-value research branch is a cue-neutral or
 independently instrumented replication with synchronized EOG/EMG and measured
 movement onset, not a larger classifier.
 
-IACKD-1 now implements that next design prospectively at the registration
-boundary. The CC0 OpenNeuro `ds006840` metadata inventory binds 1,340 raw-source
+IACKD-1 was designed to implement that next test. The CC0 OpenNeuro `ds006840`
+metadata inventory binds 1,340 raw-source
 objects and 7,249,113,684 bytes across 15 participants, 128 runs, both moving
 hands, raw HEOG/VEOG, ball trajectories, and Leap Motion trajectories. It
 excludes published derivatives and has opened zero payload content.
@@ -894,3 +894,15 @@ BrainVision parse because the frozen combined `32+4` channel inventory gate
 failed. No sample, target, model, prediction, freeze, or score followed. The
 lane is consumed with no rerun, and no roadmap row authorizes post-failure
 inspection, expansion, release, or claim promotion.
+
+IACKD-H1 is the next bounded engineering gate. Primary-source review found
+that the article reports a 32-channel cap but does not promise exactly 36
+BrainVision channels, while the authors' pinned premovement and execution
+scripts use different presence-based deletion vocabularies: M1/M2/HEOG/VEOG/
+TRIGGER versus HEO/VEO/HEOG/VEOG/TRIGGER. The prospective contract selects
+all 128 VHDR objects from the existing committed inventory, totaling only
+161,792 bytes, and freezes a standard-library, in-memory, sibling-blind
+aggregate signature audit. No real header or local IACKD path was opened.
+After remote-green registration, Tier B may implement only generated fixtures
+and mocked transport. The one real 128-header execution remains Tier C and
+separately decision-gated; no corrected scientific analysis is implied.

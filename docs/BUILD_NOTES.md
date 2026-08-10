@@ -6452,3 +6452,38 @@ or score was produced, so this result establishes no EEG effect, action or cue
 alignment, brain-specific origin, generalization, typing, language or thought
 decoding, real-time operation, hardware capability, assistive benefit, or
 clinical use.
+
+## 2026-08-10 - IACKD-H1 Header Inventory Research And Registration
+
+- Confirmed closeout `3a58fcc` passed Base Python job `93529518866` and
+  Optional Neuro Readers job `93529518946` in CI `31411229793` before this
+  follow-up was frozen.
+- Read only the version-of-record article, the authors' public source at commit
+  `c0b595d`, and committed aggregate metadata. No OpenNeuro VHDR payload or
+  local IACKD path was requested, statted, or opened.
+- Found that the article does not state an exact 36-channel BrainVision file
+  invariant. The pinned premovement code deletes M1/M2/HEOG/VEOG/TRIGGER if
+  present; the execution code instead deletes HEO/VEO/HEOG/VEOG/TRIGGER.
+- Selected all 128 VHDR objects already present in the committed metadata
+  inventory: 161,792 total bytes, four observed object sizes from 1,254 to
+  1,292 bytes, and 15 participants.
+- Froze an aggregate-only diagnostic router that can preserve source failure,
+  contradiction, count-only mismatch, exact-name mismatch, combined mismatch,
+  or run heterogeneity without selecting an answer after inspection.
+- Froze one-thread caps of 120 seconds, 256 MiB RSS, 1 MiB network body, 2 MiB
+  disk, and 1 MiB public output. Raw VHDR retention, redirects, retries,
+  reruns, local-bundle access, siblings, samples, events, trajectories,
+  targets, models, providers, devices, and claims remain closed.
+- Eight invariant tests bind the prior failure, green closeout, exact header
+  surface, source-code hypotheses, stage ordering, parser/output policy,
+  diagnostic router, and resource caps.
+
+Engineering capability proposed: a deterministic all-run header compatibility
+audit that can replace a failed hard-coded channel assumption with a measured,
+hash-bound parser contract.
+
+Scientific claim not established: no real header content, EEG sample, event,
+trajectory, target, model, prediction, or score was accessed, so this work
+establishes no neural effect, action decoding, brain-specific origin,
+generalization, real-time operation, hardware capability, assistive benefit, or
+clinical use.
