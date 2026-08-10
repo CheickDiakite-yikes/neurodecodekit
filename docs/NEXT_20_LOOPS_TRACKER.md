@@ -916,3 +916,16 @@ with M1/M2; all include HEOG, VEOG, and TRIGGER at 1024 Hz. The old exact-36
 global invariant is disproven as an engineering assumption. Local bundle,
 sibling, sample, event, target, model, and score counters remained zero. The
 lane is consumed with no rerun; no corrected scientific analysis is implied.
+
+The next prospective lane is IACKD-H2 followed by IACKD-2. A target-free code
+audit found that a one-line count repair would still classify TRIGGER as EEG,
+accept an invalid 32/34 EEG-row count, and rely on a fixture without the real
+trigger role. The committed inventory already bounds a complete role audit at
+316 public BIDS metadata objects and 457,602 bytes, with no need to touch the
+retained bundle. H2 should freeze explicit channel types, reference, geometry
+coverage, optional M1/M2 policy, and one role-map hash. The future scientific
+design uses symmetric congruent-to-incongruent and incongruent-to-congruent
+arms; both must prefer action over a frozen exact-opposite cue surrogate, and
+the weaker participant margin is primary. Read
+`docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_RESEARCH.md`. H2 is not preregistered or
+authorized, and IACKD-2 has no open real-data or model gate.

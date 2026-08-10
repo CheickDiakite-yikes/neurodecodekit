@@ -6613,3 +6613,37 @@ model, prediction, or score was accessed, so this result establishes no neural
 effect, action decoding, brain-specific origin, generalization, typing,
 language or thought decoding, real-time operation, hardware capability,
 assistive benefit, or clinical use.
+
+## 2026-08-10 - IACKD Role-Aware Dual-Reversal Research
+
+- Confirmed H1 result commit `a6704898cfb09f6321bac5f15e27424f02614317`
+  passed Base Python job `93575925675` and Optional Neuro Readers job
+  `93575925695` in CI `31425445891` before this pass.
+- Audited the consumed reader without opening real content. Its source binds
+  four coupled fixture/role assumptions: exact total 36, 32/34 BIDS EEG rows,
+  TRIGGER falling through to EEG, and a 36-channel fixture without TRIGGER.
+- Derived the exact next public surface from the committed inventory: 128
+  channel tables, 128 EEG sidecars, 30 electrode tables, and 30 coordinate
+  systems, totaling 316 objects and 457,602 bytes. The canonical identity is
+  53,367 bytes with SHA-256
+  `0a63b46395030cb967dbca05f37a1367cf2bb0bf1088befce378a3556eab2274`.
+- Specified a role-first `SensorRoleMap` that selects EEG from frozen BIDS
+  types, isolates HEOG/VEOG, excludes TRIGGER, treats M1/M2 as an optional run
+  property, joins geometry by name, and binds every later artifact by hash.
+- Strengthened the scientific design to symmetric `C2I` and `I2C` reversal
+  arms. Both must prefer action over the exact-opposite cue surrogate; the
+  weaker participant-level margin is primary.
+- Thirteen invariants replay the green evidence, exact inventory surface,
+  code findings, role contract, reversal algebra, caps, zero counters, and
+  claim boundary. No H2 body, local bundle, signal, target, model, or score was
+  accessed or authorized.
+
+Engineering capability proposed: a role-first sensor contract and symmetric
+dual-reversal design can replace a brittle channel count and distinguish
+action alignment from transfer of a visual mapping in two opposing directions.
+
+Scientific claim not established: no new public metadata body, retained EEG,
+event, trajectory, target, model, prediction, or score was accessed, so this
+research establishes no new neural effect, action decoding, brain-specific
+origin, unseen-person generalization, typing, language or thought decoding,
+real-time operation, hardware capability, assistive benefit, or clinical use.

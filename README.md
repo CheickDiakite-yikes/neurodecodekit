@@ -843,6 +843,18 @@ Read this before interpreting any number in the repository.
   [authorization packet](docs/IACKD_CHANNEL_INVENTORY_AUTHORIZATION_PACKET.md),
   [decision record](docs/IACKD_CHANNEL_INVENTORY_AUTHORIZATION_DECISION.md), and
   [aggregate result](docs/IACKD_CHANNEL_INVENTORY_RESULT.md).
+- **Next design, role-aware dual reversal:** a target-free code audit found
+  that changing the failed `36` check alone would still misclassify TRIGGER as
+  EEG and retain an invalid 32/34-EEG-row assumption. The next smallest gate is
+  therefore IACKD-H2: **316 public BIDS metadata files totaling 457,602 bytes**
+  covering channel roles, EEG sidecars, electrodes, and coordinate systems.
+  It needs no local-bundle access and will freeze a `SensorRoleMap` before any
+  future sample read. The prospective IACKD-2 science is also stronger than
+  IACKD-1: congruent-to-incongruent and incongruent-to-congruent arms must both
+  prefer actual hand direction over the exact-opposite cue surrogate, and the
+  weaker arm determines the participant statistic. This is a design, not a
+  neural result; H2 real metadata and every IACKD-2 operation remain separately
+  gated. Read the [role-aware dual-reversal research](docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_RESEARCH.md).
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

@@ -390,6 +390,15 @@
    trajectory, target, model, and score counters were zero. IACKD-H1 is
    consumed with no rerun; a corrected experiment needs a new prospective
    contract and Tier C gate.
+   Then read `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_RESEARCH.md` and its
+   registry. A target-free code audit shows that changing only the failed count
+   would still treat TRIGGER as EEG and retain an invalid EEG-count contract.
+   The next proposed gate, IACKD-H2, is a 316-object/457,602-byte public BIDS
+   role-and-geometry audit with no local-bundle access. Its aggregate result
+   would freeze a role-map hash. Only after that can IACKD-2 preregister two
+   symmetric reversal arms, with the weaker action-over-cue margin determining
+   the result. This is Tier A design work only; no H2 body, signal, target,
+   model, or score is open.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

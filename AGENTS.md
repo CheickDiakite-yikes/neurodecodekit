@@ -142,6 +142,21 @@ zero. IACKD-H1 is consumed with no retry or rerun. A corrected neural
 experiment needs a separately named prospective contract and a new Tier C
 gate; never use or inspect the existing local IACKD bundle from this result.
 
+Read `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_RESEARCH.md` and
+`registries/iackd_role_aware_dual_reversal_research.v0.json`. The target-free
+audit found that replacing only the failed total-count check would still leave
+TRIGGER classified as EEG, a 32/34-EEG-row assertion, and a synthetic fixture
+without the real trigger role. The recommended IACKD-H2 gate is only 316
+public BIDS metadata bodies and 457,602 bytes: 128 channel tables, 128 EEG
+sidecars, 30 electrode tables, and 30 coordinate-system files. It must remain
+standard-library, aggregate-only, and independent of the retained bundle. A
+later role-map hash should bind every derivative. The improved IACKD-2 design
+uses both congruent-to-incongruent and incongruent-to-congruent arms and makes
+the weaker participant-level action-over-cue margin primary. This Tier A
+record authorizes no body fetch, local path, sample, event, trajectory, target,
+model, prediction, or score. Freeze and remotely green H2 separately before
+any implementation, packet, or real operation.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

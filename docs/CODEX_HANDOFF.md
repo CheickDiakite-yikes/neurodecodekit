@@ -2091,3 +2091,25 @@ with no retry or rerun. Preserve both ignored receipts and the unrelated
 tracker-inspection NDJSON. The next useful work is a separately named,
 prospective count-agnostic cue-versus-action design; no retained-bundle step is
 open without a new exact Tier C gate.
+
+## 2026-08-10 IACKD Role-Aware Dual-Reversal Research
+
+Read `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_RESEARCH.md` and
+`registries/iackd_role_aware_dual_reversal_research.v0.json`.
+
+H1 closeout `a6704898cfb09f6321bac5f15e27424f02614317` passed Base Python
+job `93575925675` and Optional Neuro Readers job `93575925695` in CI
+`31425445891` before this Tier A pass. The pass used only committed aggregates,
+the committed metadata inventory, public primary sources, and source code.
+
+The consumed reader has more than a bad total-count constant: its BIDS check
+expects 32/34 EEG rows, TRIGGER would fall through to EEG, and its fixture omits
+the real trigger role. Do not amend it. The next bounded lane is IACKD-H2 over
+128 channel tables, 128 EEG sidecars, 30 electrode tables, and 30 coordinate
+systems: 316 objects and 457,602 bytes total, no local bundle.
+
+The later IACKD-2 design is symmetric. `C2I` and `I2C` must both prefer actual
+hand direction over the cue surrogate induced by the fit mapping. The weaker
+participant-level arm margin is primary, so one arm cannot rescue the other.
+No H2 preregistration, implementation, public-body decision, local access, or
+IACKD-2 scientific gate exists yet.

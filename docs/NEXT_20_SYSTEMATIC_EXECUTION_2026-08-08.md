@@ -180,6 +180,18 @@ M1/M2 and 32 at 31 channels with M1/M2; all include HEOG, VEOG, and TRIGGER at
 sibling, sample, event, target, model, and score counter remained zero. The
 lane is consumed with no rerun. A separately named prospective repair is next.
 
+That prospective repair is now designed in
+`docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_RESEARCH.md`. Do not patch the consumed
+reader in place: its target-free audit found three additional role errors,
+including TRIGGER falling through to EEG. First freeze IACKD-H2 over exactly
+316 public BIDS metadata bodies and 457,602 bytes, then qualify its parser and
+router on generated fixtures, then prepare a separate real-content packet.
+Only an aggregate H2 result may freeze IACKD-2. The later experiment requires
+both congruent-to-incongruent and incongruent-to-congruent action-over-cue
+reversal arms, using the weaker participant margin as the primary statistic.
+No H2 body, retained-bundle path, signal, target, model, or score is currently
+authorized.
+
 Registration `2a7b4188553e221133d788a081b838dbbb9f41bb` passed Base Python
 job `93215490492` and Optional Neuro Readers job `93215490501` in CI
 `31301730612`. The additive authorization packet and all-false machine request

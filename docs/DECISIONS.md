@@ -5158,3 +5158,33 @@ treat M1/M2 availability as a run property before a new exact Tier C decision.
 Evidence: `docs/IACKD_CHANNEL_INVENTORY_RESULT.md`,
 `registries/iackd_channel_inventory_result.v0.json`, and
 `tests/test_iackd_header_inventory_result.py`.
+
+## 0149 - Measure Roles Before Rebuilding IACKD And Require Dual Reversal
+
+Decision: do not repair the consumed IACKD-1 reader by replacing its exact-36
+check. First measure the source-declared BIDS roles and geometry in a separate
+IACKD-H2 lane, then use that aggregate result to define a new role-map hash and
+a separately preregistered IACKD-2 experiment.
+
+Basis: H1 measured 29-channel and 31-channel declarations, all with HEOG,
+VEOG, and TRIGGER and only the latter group with M1/M2. The target-free source
+audit found that the consumed reader would also classify TRIGGER as EEG,
+expects 32/34 BIDS EEG rows, and validates a synthetic source without a
+trigger. BIDS makes channel role explicit and does not require channel and
+electrode tables to have equal membership; MNE's default type inference is not
+a substitute for that contract.
+
+Design: H2 covers exactly 316 committed public metadata objects and 457,602
+bytes without using the retained bundle. The future IACKD-2 design requires
+both congruent-to-incongruent and incongruent-to-congruent arms. Each arm's
+frozen prediction is scored against actual hand direction and the exact-
+opposite cue surrogate induced by its fit mapping. The weaker participant-level
+arm margin is the prospective primary statistic.
+
+Boundary: this Tier A record authorizes no H2 body, retained path, sibling,
+sample, event, trajectory, target, model, prediction, or score. H2 and IACKD-2
+each retain their own prospective and Tier C sequence.
+
+Evidence: `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_RESEARCH.md`,
+`registries/iackd_role_aware_dual_reversal_research.v0.json`, and
+`tests/test_iackd_role_aware_dual_reversal_research.py`.
