@@ -545,6 +545,17 @@
    derivative, model, freeze, delivery, and score counter stayed zero.
    IACKD-2R is parked at `IACKD2R-F05` with no retry or rerun. Do not fetch or
    parse the changed body under this contract.
+   Then read `docs/IACKD_SNAPSHOT_IDENTITY_RECOVERY_RESEARCH.md` and
+   `registries/iackd_snapshot_identity_recovery_research.v0.json`. IACKD-M1
+   replaces the mutable root-body identity assumption prospectively with four
+   independent gates: snapshot `hexsha`, recursive content-addressed file tree,
+   selected acquisition inventory, and critical Name/BIDSVersion/License/DOI
+   compatibility. Official pinned OpenNeuro source shows that public recursive
+   file rows include full paths, Git object IDs, sizes, annexed status, and S3
+   `versionId` URLs. No dataset-specific API response or local IACKD path was
+   accessed. Next implement only the generated canonicalizer after a frozen
+   contract; one later 2 MiB public metadata response remains separate Tier C
+   work. Never treat this research or an earlier `continue` as permission.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

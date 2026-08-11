@@ -1022,6 +1022,20 @@ Read this before interpreting any number in the repository.
   delivery, or score was reached. IACKD-2R is parked at `IACKD2R-F05` with no
   retry or rerun. This is a useful fail-closed content-drift result, not neural
   or decoding evidence.
+  The next architecture is now specified in
+  [IACKD-M1 snapshot identity research](docs/IACKD_SNAPSHOT_IDENTITY_RECOVERY_RESEARCH.md).
+  Official OpenNeuro API and pinned platform-source evidence show that a named
+  snapshot exposes a `hexsha` and a recursive content-addressed file tree with
+  full paths, Git object IDs, sizes, annexed status, and public S3 `versionId`
+  URLs. A future validator will bind that immutable snapshot layer separately
+  from the 1,340 selected acquisition objects and the critical
+  Name/BIDSVersion/License/DatasetDOI projection. Raw GraphQL bytes, HTTP
+  framing, ETag, and last-modified values are provenance only; they cannot
+  rescue snapshot, tree, selected-inventory, or critical-metadata drift. This
+  research made zero dataset-specific requests. The next bounded step is a
+  generated-only standard-library canonicalizer; any one-response 2 MiB public
+  audit remains a fresh Tier C gate and must pass before another 7.25 GB EEG
+  acquisition is considered.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

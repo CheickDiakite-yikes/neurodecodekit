@@ -1153,3 +1153,20 @@ The next prospective needle-moving task is not another decoder run. It is a
 separately named, metadata-only version-reverification design that can identify
 and freeze current public identity without touching EEG payloads or reopening
 IACKD-2R. Any execution remains a fresh Tier C gate.
+
+IACKD-M1 now specifies that design in
+`docs/IACKD_SNAPSHOT_IDENTITY_RECOVERY_RESEARCH.md` and
+`registries/iackd_snapshot_identity_recovery_research.v0.json`. The future
+identity is four-layered: exact snapshot `hexsha`, canonical recursive file
+tree, the historical 1,340-object/7,249,113,684-byte selected inventory, and a
+narrow Name/BIDSVersion/License/DatasetDOI compatibility projection. Public S3
+objects must come from snapshot-versioned URLs; raw response bytes, HTTP
+framing, ETag, and last-modified values remain provenance only. Twelve focused
+invariants pass with every dataset-specific, local-data, signal, target, model,
+score, retry, rerun, and claim counter at zero.
+
+Next: freeze a generated-fixture-only IACKD-M1 contract and implement its
+standard-library canonicalizer under Tier B. Only after that exact
+implementation is committed, pushed, and remotely green may an all-false Tier
+C packet be prepared for one public GraphQL response capped at 2 MiB. Do not
+move an EEG payload before the metadata identity route passes.

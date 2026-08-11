@@ -407,6 +407,19 @@ changed fields were not retained. IACKD-2R has no retry, rerun, resume,
 analysis, freeze, target delivery, or score. Do not request or inspect the
 changed body under this consumed contract or alter the new marker.
 
+Read `docs/IACKD_SNAPSHOT_IDENTITY_RECOVERY_RESEARCH.md` and
+`registries/iackd_snapshot_identity_recovery_research.v0.json`. IACKD-M1 is
+the prospective repair. It binds a named OpenNeuro snapshot `hexsha`, its
+recursive content-addressed file tree, the exact selected acquisition
+inventory, and critical Name/BIDSVersion/License/DatasetDOI compatibility as
+separate layers. Public acquisition rows must use snapshot-versioned S3 URLs.
+Raw response SHA, HTTP framing, ETag, and last-modified values are provenance
+and cannot replace snapshot identity. This research made zero dataset-specific
+requests and authorizes none. The next Tier B task is a frozen generated-only
+standard-library canonicalizer; any one-response 2 MiB public audit remains a
+fresh Tier C gate after green implementation. Never apply the current or any
+earlier `continue` retroactively.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

@@ -5763,3 +5763,33 @@ from this failure.
 Evidence: `docs/IACKD_TRANSPORT_STABLE_DUAL_REVERSAL_STREAM_RESULT.md`,
 `registries/iackd_transport_stable_dual_reversal_stream_failure_result.v0.json`,
 and `tests/test_iackd_transport_stable_dual_reversal_stream_failure_result.py`.
+
+## 0171 - Bind Future IACKD Access To A Versioned Snapshot Tree
+
+Decision: use a named OpenNeuro snapshot commit and its recursive
+content-addressed file tree as the primary identity for any future IACKD lane.
+Do not use the raw bytes, ETag, last-modified value, or `Content-Length` of one
+unversioned root metadata response as a substitute for snapshot identity.
+
+Reason: IACKD-2R observed an exact 1,178-byte response with a changed SHA-256,
+but its frozen order correctly prevented parsing. OpenNeuro's official API and
+pinned platform source expose a stronger prospective anchor: snapshot
+`hexsha`, full-path file IDs, sizes, annexed status, and S3 `versionId` URLs.
+Those fields identify the intended version without depending on JSON field
+order or HTTP framing.
+
+Compatibility boundary: separately gate the snapshot anchor, recursive tree,
+historical 1,340-object/7,249,113,684-byte selection, and the critical Name,
+BIDS version, CC0 license, and DOI projection. Snapshot, tree, selected
+inventory, or critical-field drift always parks. Noncritical descriptive drift
+may be recorded only after every identity and compatibility gate passes.
+
+Execution boundary: this is Tier A research only. No dataset-specific GraphQL
+response, S3 body, local IACKD path, EEG, target, model, score, retry, rerun, or
+claim operation is authorized. The smallest next real gate is one separately
+authorized, one-response, 2 MiB metadata audit after a green generated-only
+validator.
+
+Evidence: `docs/IACKD_SNAPSHOT_IDENTITY_RECOVERY_RESEARCH.md`,
+`registries/iackd_snapshot_identity_recovery_research.v0.json`, and
+`tests/test_iackd_snapshot_identity_recovery_research.py`.

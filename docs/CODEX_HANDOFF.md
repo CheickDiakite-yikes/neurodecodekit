@@ -2608,3 +2608,29 @@ analysis, freeze, delivery, or score. Do not request or parse the changed body,
 compute another hash, alter the marker, or amend the identity under this
 contract. Any future metadata-version diagnosis must be a separately named
 prospective lane with fresh identity and permission.
+
+## 2026-08-11 IACKD-M1 Snapshot-Scoped Identity Research
+
+Read `docs/IACKD_SNAPSHOT_IDENTITY_RECOVERY_RESEARCH.md`,
+`registries/iackd_snapshot_identity_recovery_research.v0.json`, and its
+invariant test.
+
+Official OpenNeuro documentation and pinned source commit
+`ead8d9394570c64ba4a62b94b85bc3f37a90e809` establish a better prospective
+identity surface. A named snapshot exposes `hexsha`; its recursive file tree is
+rooted at that revision and returns full relative paths, Git object IDs, sizes,
+annexed status, and public S3 URLs with `versionId`.
+
+The future validator must keep four gates separate: snapshot anchor, recursive
+tree, selected acquisition inventory, and critical scientific metadata. Raw
+GraphQL bytes, HTTP framing, ETag, and last-modified values are provenance and
+cannot replace snapshot identity. Compatibility still requires 15
+participants, 128 runs, 1,340 selected objects, 7,249,113,684 bytes, and exact
+Name/BIDSVersion/License/DatasetDOI values.
+
+This record made zero dataset-specific GraphQL or S3 requests and touched no
+local IACKD path. The next Tier B task is to freeze and implement a generated-
+only standard-library canonicalizer. A later real audit remains a separate
+Tier C gate: exactly one public GraphQL response, 2 MiB input, 1 MiB output,
+one thread, no retry, no EEG payload. Never reuse the consumed `continue` as
+permission for that future response.

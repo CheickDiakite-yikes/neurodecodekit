@@ -7257,3 +7257,32 @@ read and before semantic or EEG access.
 
 Scientific claim not established: the run reached no neural payload or model
 stage and establishes no neural effect or decoding result.
+
+## 2026-08-11 - IACKD-M1 Snapshot-Scoped Identity Research
+
+- Audited current official OpenNeuro API, retention, architecture, and pinned
+  server source without making a dataset-specific API or S3 request.
+- Confirmed that a named snapshot exposes a full `hexsha`; recursive file
+  traversal is rooted at that revision and returns full paths, Git object IDs,
+  sizes, annexed status, and public S3 URLs carrying `versionId`.
+- Localized why the consumed raw-body hash was too coarse for future reuse: it
+  mixed transport bytes, descriptive metadata, and scientific dataset identity
+  into one gate.
+- Specified four independent layers: snapshot anchor, recursive tree, selected
+  acquisition inventory, and critical scientific metadata. Raw response SHA is
+  retained as provenance only.
+- Preserved exact legacy compatibility at 15 participants, 128 runs, 1,340
+  selected objects, and 7,249,113,684 bytes. Any snapshot, tree, selected
+  inventory, or critical Name/BIDS/license/DOI drift parks.
+- Added 12 focused invariants. Every dataset-specific GraphQL, S3, local path,
+  signal, trajectory, target, model, prediction, score, retry, rerun, and claim
+  counter remains zero.
+- The smallest next evidence gate is a generated-only standard-library
+  validator followed, after separate Tier C permission, by one public GraphQL
+  response capped at 2 MiB. No EEG payload should move before that gate passes.
+
+Engineering capability added: future IACKD access now has a snapshot-scoped,
+content-addressed identity architecture rather than a mutable-root-file gate.
+
+Scientific claim not established: this was source and architecture research;
+no dataset-specific response or neural data was accessed.
