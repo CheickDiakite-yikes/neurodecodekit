@@ -5793,3 +5793,27 @@ validator.
 Evidence: `docs/IACKD_SNAPSHOT_IDENTITY_RECOVERY_RESEARCH.md`,
 `registries/iackd_snapshot_identity_recovery_research.v0.json`, and
 `tests/test_iackd_snapshot_identity_recovery_research.py`.
+
+## 0172 - Freeze One Exact Snapshot Identity Query Before Implementation
+
+Decision: register one exact GraphQL query over snapshot `ds006840:1.0.0` and
+permit only a generated-response canonicalizer after the registration commit
+passes both CI jobs. The query selects snapshot ID, tag, `hexsha`, five narrow
+description fields, and recursive file ID/path/size/annexed/URL fields.
+
+Canonicalization: require exactly 1,679 safe, unique, version-scoped file rows;
+derive the exact 1,340-object/7,249,113,684-byte acquisition selection; and
+hash snapshot, full tree, selected manifest, and critical metadata separately.
+The private selected manifest may exist only in a bounded Git-ignored future
+execution root. Public output contains aggregate hashes and counts, never
+individual paths, URLs, or S3 version IDs.
+
+Boundary: the generated implementation must expose no URL opener, socket, HTTP
+client, real endpoint, execute mode, or local IACKD path. A public GraphQL
+request remains Tier C and requires a later all-false packet, fresh decision,
+green real wrapper, and one no-retry invocation. The current `continue` is not
+retroactive.
+
+Evidence: `docs/IACKD_SNAPSHOT_IDENTITY_PREREGISTRATION.md`,
+`registries/iackd_snapshot_identity_contract.v0.json`, and
+`tests/test_iackd_snapshot_identity_contract.py`.

@@ -1170,3 +1170,15 @@ standard-library canonicalizer under Tier B. Only after that exact
 implementation is committed, pushed, and remotely green may an all-false Tier
 C packet be prepared for one public GraphQL response capped at 2 MiB. Do not
 move an EEG payload before the metadata identity route passes.
+
+The exact IACKD-M1 registration is now frozen in
+`docs/IACKD_SNAPSHOT_IDENTITY_PREREGISTRATION.md` and
+`registries/iackd_snapshot_identity_contract.v0.json`. It binds one 316-byte
+query, one 355-byte canonical request, 1,679 recursive rows, 1,340 selected
+rows, all twelve role summaries, strict versioned S3 URLs, 37 refusal classes,
+and aggregate-only output. Research `723c8e2` is green in CI `31480538821`.
+Current dataset-specific request and real-data counters remain zero.
+
+Next gate: commit, push, and green this exact contract. Only then implement the
+generated standard-library canonicalizer under Tier B. A public response,
+payload acquisition, local IACKD path, target, model, or score remains closed.

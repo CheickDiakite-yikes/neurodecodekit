@@ -2634,3 +2634,23 @@ only standard-library canonicalizer. A later real audit remains a separate
 Tier C gate: exactly one public GraphQL response, 2 MiB input, 1 MiB output,
 one thread, no retry, no EEG payload. Never reuse the consumed `continue` as
 permission for that future response.
+
+## 2026-08-11 IACKD-M1 Snapshot Identity Registration
+
+Research `723c8e2` is remotely green in CI `31480538821` with Base Python job
+`93744221145` and Optional Neuro Readers job `93744221059`.
+
+Read `docs/IACKD_SNAPSHOT_IDENTITY_PREREGISTRATION.md`,
+`registries/iackd_snapshot_identity_contract.v0.json`, and its test. The
+contract freezes one exact GraphQL POST body and strict semantic schema. A
+compatible generated response has exactly 1,679 content-addressed,
+snapshot-versioned rows totaling 7,966,799,433 bytes; the selected manifest
+has exactly 1,340 rows and 7,249,113,684 bytes with all twelve historical role
+summaries.
+
+The generated implementation is eligible only after this exact registration
+is committed, pushed, and both CI jobs are green. It must have no URL opener,
+socket, HTTP client, endpoint, execute mode, or local IACKD path. It may emit a
+bounded generated private manifest and public aggregate only. A real one-
+response audit is still Tier C and is not authorized by the current or any
+earlier `continue`.

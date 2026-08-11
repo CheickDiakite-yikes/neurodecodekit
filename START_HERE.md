@@ -556,6 +556,13 @@
    accessed. Next implement only the generated canonicalizer after a frozen
    contract; one later 2 MiB public metadata response remains separate Tier C
    work. Never treat this research or an earlier `continue` as permission.
+   Research `723c8e2` passed both jobs in CI `31480538821`. Now read
+   `docs/IACKD_SNAPSHOT_IDENTITY_PREREGISTRATION.md` and
+   `registries/iackd_snapshot_identity_contract.v0.json`. The exact query,
+   request hash, 1,679-row tree, 1,340-row selection, twelve role summaries,
+   critical metadata, private-manifest boundary, refusal matrix, and resource
+   caps are frozen. Next commit and green this registration; only then build
+   the generated-only canonicalizer. No public API or real-data access is open.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

@@ -1036,6 +1036,15 @@ Read this before interpreting any number in the repository.
   generated-only standard-library canonicalizer; any one-response 2 MiB public
   audit remains a fresh Tier C gate and must pass before another 7.25 GB EEG
   acquisition is considered.
+  The follow-on
+  [IACKD-M1 preregistration](docs/IACKD_SNAPSHOT_IDENTITY_PREREGISTRATION.md)
+  now freezes one exact 316-byte query and 355-byte request, strict
+  duplicate-free response schemas, 1,679 versioned file rows, all twelve
+  historical role summaries, a private-manifest/public-hash boundary, 37
+  adversarial refusals, and one-thread resource caps. Research `723c8e2`
+  passed both jobs in CI `31480538821`. The contract itself authorizes no
+  public call; its generated-only canonicalizer may be implemented only after
+  the registration is separately green.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

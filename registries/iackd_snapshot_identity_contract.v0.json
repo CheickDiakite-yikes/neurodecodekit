@@ -1,0 +1,478 @@
+{
+  "schema_name": "neurodecodekit.iackd_snapshot_identity_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "IACKD-M1-snapshot-identity-contract-v0",
+  "recorded_at_local": "2026-08-11",
+  "status": "frozen_prospective_registration_generated_fixture_only_after_green_public_GraphQL_unauthorized",
+  "objective": "Qualify a strict standard-library semantic canonicalizer that independently binds one OpenNeuro snapshot anchor recursive content-addressed tree selected acquisition manifest and critical scientific metadata projection.",
+  "proof_posture": "Tier_A_registration_only_zero_dataset_specific_response_zero_local_IACKD_path_zero_model_target_or_score",
+  "bindings": {
+    "research_document": {
+      "path": "docs/IACKD_SNAPSHOT_IDENTITY_RECOVERY_RESEARCH.md",
+      "sha256": "4dd6cbbcb4d67c2a04542b3b6c2a3586731e9a02c5b7b1c419eae49e671f9f6c"
+    },
+    "research_registry": {
+      "path": "registries/iackd_snapshot_identity_recovery_research.v0.json",
+      "sha256": "92acfb0cf2d440c02de3b66835c2e64d677c79af9afb93baf87a677e500f14b6"
+    },
+    "research_test": {
+      "path": "tests/test_iackd_snapshot_identity_recovery_research.py",
+      "sha256": "6e83c5884225a9f3e402a9497457dee286c8277c7da1bcb0061cfc2f66277fe6"
+    },
+    "human_preregistration": {
+      "path": "docs/IACKD_SNAPSHOT_IDENTITY_PREREGISTRATION.md",
+      "sha256": "b0c00141903c13162b5fc0f1e6417164c24213d5ea60c917becf5bce9ff40752"
+    },
+    "contract_test": {
+      "path": "tests/test_iackd_snapshot_identity_contract.py",
+      "sha256": "1501c9e2ad8603ece8658b6e89e25ed5e1105cbcb36450605b7a766bc56a1942"
+    },
+    "historical_openneuro_inventory": {
+      "path": "registries/iackd_openneuro_metadata_inventory.v0.json",
+      "sha256": "aeaa4928192cca9086fcb0abf4711147c68a68ef5c5aacda2ebc67d162a1ef19"
+    },
+    "consumed_IACKD2R_result": {
+      "path": "registries/iackd_transport_stable_dual_reversal_stream_failure_result.v0.json",
+      "sha256": "4d47e78eeb4793b05d52c71170973aef26f94857f8a9537085eba9a13c0d014f"
+    },
+    "consumed_IACKD2_result": {
+      "path": "registries/iackd_role_aware_dual_reversal_stream_failure_result.v0.json",
+      "sha256": "694f9909099cf63fed514830a68424002565b92c460a953275eafecf0de9509a"
+    }
+  },
+  "green_research_proof": {
+    "commit": "723c8e244ff5f414cb4859bd122d42cccfaa795f",
+    "CI_run_id": 31480538821,
+    "base_python_job_id": 93744221145,
+    "optional_neuro_job_id": 93744221059,
+    "both_required_jobs_green": true
+  },
+  "official_source_anchor": {
+    "provider": "OpenNeuro",
+    "platform_source_commit": "ead8d9394570c64ba4a62b94b85bc3f37a90e809",
+    "GraphQL_endpoint": "https://openneuro.org/crn/graphql",
+    "dataset_accession": "ds006840",
+    "snapshot_tag": "1.0.0",
+    "snapshot_id": "ds006840:1.0.0",
+    "dataset_DOI": "10.18112/openneuro.ds006840.v1.0.0"
+  },
+  "GraphQL_contract": {
+    "method_if_future_authorized": "POST",
+    "endpoint": "https://openneuro.org/crn/graphql",
+    "query_text": "query IackdSnapshotIdentity {\n  snapshot(datasetId: \"ds006840\", tag: \"1.0.0\") {\n    id\n    tag\n    hexsha\n    description {\n      id\n      Name\n      BIDSVersion\n      License\n      DatasetDOI\n    }\n    files(recursive: true) {\n      id\n      filename\n      size\n      directory\n      annexed\n      urls\n    }\n  }\n}\n",
+    "query_utf8_bytes": 316,
+    "query_sha256": "246db737c72bcd001c60191b6f31bef24d5bfc9a40ca5fa61b8ba215b30e3db0",
+    "request_body_serialization": "UTF8_JSON_sorted_keys_compact_allow_nan_false_newline_terminated",
+    "request_body_bytes": 355,
+    "request_body_sha256": "913b033e430cbbb28ae14850dd744a50bd0418ecb64206645f4367d32ddd8896",
+    "request_body_fields": [
+      "query"
+    ],
+    "requests_if_future_authorized": 1,
+    "variables_or_fallbacks_allowed": false,
+    "aliases_fragments_directives_or_introspection_allowed": false,
+    "mutations_allowed": false,
+    "authentication_or_provider_key_allowed": false
+  },
+  "transport_contract": {
+    "future_wrapper_outside_current_registration": true,
+    "HTTP_status": 200,
+    "final_URL_exact": true,
+    "redirects": 0,
+    "retries": 0,
+    "reruns": 0,
+    "substitutions": 0,
+    "accepted_framing_profiles": [
+      "fixed_length",
+      "chunked",
+      "close_delimited"
+    ],
+    "identity_content_encoding_only": true,
+    "response_body_cap_bytes": 2097152,
+    "read_call_limit_bytes": 2097153,
+    "read_calls": 1,
+    "raw_response_SHA_recorded": true,
+    "raw_response_SHA_is_acceptance_identity": false,
+    "Content_Length_recorded": true,
+    "Content_Length_is_scientific_identity": false,
+    "body_persisted": false,
+    "semantic_parse_after_transport_only": true
+  },
+  "strict_JSON_contract": {
+    "encoding": "strict_UTF8_without_BOM",
+    "duplicate_keys_allowed": false,
+    "nonfinite_numbers_allowed": false,
+    "NUL_or_disallowed_controls_allowed": false,
+    "top_level_exact_fields": [
+      "data"
+    ],
+    "data_exact_fields": [
+      "snapshot"
+    ],
+    "GraphQL_errors_field_allowed": false,
+    "null_data_or_snapshot_allowed": false,
+    "unknown_fields_allowed": false
+  },
+  "snapshot_anchor_contract": {
+    "exact_fields": [
+      "id",
+      "tag",
+      "hexsha",
+      "description",
+      "files"
+    ],
+    "id": "ds006840:1.0.0",
+    "tag": "1.0.0",
+    "hexsha": "lowercase_hex_40_or_64",
+    "description_exact_fields": [
+      "id",
+      "Name",
+      "BIDSVersion",
+      "License",
+      "DatasetDOI"
+    ],
+    "description_id_must_equal_hexsha": true,
+    "critical_description": {
+      "Name": "IACKD: Intention Action Conflict EEG-Hand Kinematics Dataset",
+      "BIDSVersion": "1.7.0",
+      "License": "CC0",
+      "DatasetDOI": "10.18112/openneuro.ds006840.v1.0.0"
+    },
+    "canonical_fields": [
+      "dataset_accession",
+      "snapshot_id",
+      "snapshot_tag",
+      "snapshot_hexsha"
+    ],
+    "canonical_serialization": "UTF8_JSON_sorted_keys_compact_allow_nan_false_newline_terminated",
+    "raw_response_order_is_identity": false
+  },
+  "recursive_tree_contract": {
+    "exact_file_fields": [
+      "id",
+      "filename",
+      "size",
+      "directory",
+      "annexed",
+      "urls"
+    ],
+    "file_count": 1679,
+    "total_bytes": 7966799433,
+    "file_ID": "lowercase_hex_40_or_64",
+    "full_relative_paths_unique_and_safe": true,
+    "path_Unicode_normalization": "NFC",
+    "absolute_dot_dotdot_backslash_repeated_separator_query_fragment_percent_ambiguity_allowed": false,
+    "size_input": "nonnegative_JSON_integer_or_canonical_unsigned_decimal_string",
+    "boolean_signed_whitespace_leading_zero_fraction_or_exponent_size_allowed": false,
+    "directory_required": false,
+    "annexed_type": "JSON_boolean",
+    "URLs_per_file": 1,
+    "public_S3_versionId_required": true,
+    "URL_scheme": "https",
+    "URL_host": "s3.amazonaws.com",
+    "URL_bucket": "openneuro.org",
+    "URL_key_rule": "ds006840_slash_exact_normalized_filename",
+    "URL_query": "exactly_one_nonempty_versionId_and_no_other_parameter",
+    "URL_userinfo_port_fragment_allowed": false,
+    "canonical_fields": [
+      "filename",
+      "git_object_id",
+      "size_bytes",
+      "annexed",
+      "s3_key",
+      "s3_version_id"
+    ],
+    "canonical_serialization": "UTF8_JSON_sorted_keys_compact_array_sorted_by_filename_newline_terminated",
+    "source_order_is_identity": false,
+    "individual_rows_public": false
+  },
+  "selected_inventory_contract": {
+    "selection_rule": "all files under sub-*/eeg/ and sub-*/sourcedata/beh/ excluding derivatives",
+    "participant_count": 15,
+    "participant_hand_units": 30,
+    "bids_run_count": 128,
+    "object_count": 1340,
+    "payload_bytes": 7249113684,
+    "historical_identity_sha256": "c30b518f9dafe3d46128849725e1f2f8fdce33239fbf6ade8603d66a64f0ffa5",
+    "historical_hash_is_compatibility_anchor_not_new_snapshot_manifest_hash": true,
+    "role_summaries": {
+      "ball_sidecar": {
+        "object_count": 128,
+        "size_bytes": 75008
+      },
+      "ball_stream": {
+        "object_count": 128,
+        "size_bytes": 118562988
+      },
+      "channels": {
+        "object_count": 128,
+        "size_bytes": 227904
+      },
+      "coordsystem": {
+        "object_count": 30,
+        "size_bytes": 29070
+      },
+      "eeg_header": {
+        "object_count": 128,
+        "size_bytes": 161792
+      },
+      "eeg_marker": {
+        "object_count": 128,
+        "size_bytes": 948590
+      },
+      "eeg_sidecar": {
+        "object_count": 128,
+        "size_bytes": 173312
+      },
+      "eeg_signal": {
+        "object_count": 128,
+        "size_bytes": 6432882432
+      },
+      "electrodes": {
+        "object_count": 30,
+        "size_bytes": 27316
+      },
+      "events": {
+        "object_count": 128,
+        "size_bytes": 1253901
+      },
+      "leap_sidecar": {
+        "object_count": 128,
+        "size_bytes": 56192
+      },
+      "leap_stream": {
+        "object_count": 128,
+        "size_bytes": 694715179
+      }
+    },
+    "canonical_fields": [
+      "filename",
+      "git_object_id",
+      "size_bytes",
+      "annexed",
+      "s3_key",
+      "s3_version_id",
+      "role"
+    ],
+    "private_manifest_allowed_if_future_authorized": true,
+    "private_manifest_git_ignored": true,
+    "private_manifest_hash_public": true,
+    "individual_path_URL_or_version_ID_public": false,
+    "legacy_unversioned_URL_fallback_allowed": false,
+    "old_retained_bundle_fallback_allowed": false
+  },
+  "generated_qualification_contract": {
+    "generated_response_bytes_only": true,
+    "constructed_file_rows": 1679,
+    "constructed_selected_rows": 1340,
+    "constructed_counts_and_bytes_equal_contract": true,
+    "real_response_body_reuse": false,
+    "signal_event_trajectory_target_label_prediction_or_outcome_content": false,
+    "URL_opener_socket_or_HTTP_client_allowed": false,
+    "real_endpoint_or_local_IACKD_path_allowed": false,
+    "execute_mode_allowed": false,
+    "deterministic_replays": 2,
+    "expected_route": "IACKDM-R1",
+    "required_refusals": [
+      "body_overflow",
+      "read_error_or_second_read",
+      "duplicate_JSON_key",
+      "invalid_UTF8_BOM_NUL_or_control",
+      "nonfinite_JSON_number",
+      "GraphQL_errors_present",
+      "null_data_or_snapshot",
+      "unknown_top_level_data_snapshot_description_or_file_field",
+      "missing_required_field",
+      "wrong_field_type",
+      "wrong_snapshot_ID",
+      "wrong_snapshot_tag",
+      "malformed_snapshot_hexsha",
+      "description_revision_mismatch",
+      "critical_Name_drift",
+      "critical_BIDSVersion_drift",
+      "critical_License_drift",
+      "critical_DatasetDOI_drift",
+      "duplicate_path",
+      "absolute_dot_dotdot_backslash_or_repeated_separator_path",
+      "non_NFC_or_percent_ambiguous_path",
+      "malformed_file_ID",
+      "boolean_negative_fractional_or_noncanonical_size",
+      "directory_true_or_annexed_wrong_type",
+      "missing_or_multiple_URL",
+      "non_HTTPS_alternate_host_bucket_or_key_mismatch",
+      "userinfo_port_fragment_extra_query_or_missing_versionId",
+      "all_tree_count_or_byte_drift",
+      "selected_count_or_byte_drift",
+      "participant_or_run_count_drift",
+      "role_count_or_byte_drift",
+      "missing_dataset_description_row",
+      "network_constructor_or_real_path_attempt",
+      "output_symlink_overwrite_or_cap",
+      "thread_runtime_or_RSS_cap",
+      "public_row_path_URL_or_version_ID_leak",
+      "deterministic_replay_mismatch"
+    ],
+    "aggregate_only_inspection": true,
+    "scientific_claim_value": false
+  },
+  "output_contract": {
+    "canonical_serialization": "UTF8_JSON_sorted_keys_compact_allow_nan_false_newline_terminated",
+    "public_report_fields": [
+      "schema_name",
+      "schema_version",
+      "status",
+      "proof_posture",
+      "green_registration",
+      "snapshot_anchor",
+      "tree_summary",
+      "selected_summary",
+      "critical_metadata",
+      "measurements",
+      "access_counters",
+      "acceptance_gates",
+      "route",
+      "warnings",
+      "unavailable_fields",
+      "claim_boundary"
+    ],
+    "public_individual_paths_URLs_version_IDs_or_rows": false,
+    "raw_response_body_or_headers_public": false,
+    "private_manifest_fields": [
+      "filename",
+      "git_object_id",
+      "size_bytes",
+      "annexed",
+      "s3_key",
+      "s3_version_id",
+      "role"
+    ],
+    "private_manifest_written_atomically": true,
+    "output_overwrite_or_symlink_allowed": false,
+    "combined_output_cap_bytes": 1048576
+  },
+  "router": {
+    "ordered_failure_routes": [
+      "IACKDM-F00-registration-source-query-or-green-proof-mismatch",
+      "IACKDM-F01-HTTP-redirect-compression-body-cap-or-GraphQL-error",
+      "IACKDM-F02-response-shape-duplicate-key-unknown-field-or-type-failure",
+      "IACKDM-F03-accession-tag-snapshot-ID-hexsha-or-description-revision-mismatch",
+      "IACKDM-F04-recursive-tree-path-object-ID-size-URL-or-version-ID-failure",
+      "IACKDM-F05-historical-participant-run-object-byte-or-role-count-incompatibility",
+      "IACKDM-F06-critical-Name-BIDSVersion-License-or-DOI-mismatch",
+      "IACKDM-F07-output-runtime-RSS-thread-retry-or-overwrite-failure"
+    ],
+    "success_route": "IACKDM-R1",
+    "success_meaning": "snapshot tree selected inventory and critical metadata are compatible and one fresh snapshot-scoped identity is frozen",
+    "success_is_scientific_result": false,
+    "success_authorizes_payload_acquisition": false
+  },
+  "resource_caps": {
+    "generated_qualifications": 1,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "wall_time_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "generated_response_bytes": 2097152,
+    "combined_generated_output_bytes": 1048576,
+    "network_bytes": 0,
+    "dataset_specific_response_reads": 0,
+    "local_IACKD_path_operations": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "inference_runs": 0,
+    "scoring_runs": 0
+  },
+  "future_public_audit_caps": {
+    "currently_authorized": false,
+    "GraphQL_requests": 1,
+    "response_body_cap_bytes": 2097152,
+    "combined_output_cap_bytes": 1048576,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "wall_time_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "retries": 0,
+    "reruns": 0,
+    "EEG_payload_requests": 0,
+    "local_IACKD_path_operations": 0
+  },
+  "ordered_stages": {
+    "registration": {
+      "tier": "A",
+      "status": "current",
+      "public_or_local_data_access": false
+    },
+    "generated_implementation": {
+      "tier": "B",
+      "requires_green_contract": true,
+      "generated_response_only": true,
+      "network_or_real_path_access": false
+    },
+    "tier_C_request": {
+      "requires_green_implementation": true,
+      "all_authorization_flags_false": true,
+      "authorizes_public_access": false
+    },
+    "tier_C_decision": {
+      "fresh_packet_bound_message_required": true,
+      "decision_must_be_committed_pushed_and_both_jobs_green": true,
+      "current_continue_is_retroactive": false
+    },
+    "real_wrapper": {
+      "requires_green_decision": true,
+      "generated_and_mocked_qualification_first": true,
+      "exact_wrapper_must_be_committed_pushed_and_both_jobs_green": true
+    },
+    "public_execution": {
+      "requires_green_exact_wrapper": true,
+      "fresh_private_consumed_marker_before_request": true,
+      "exactly_one_response": true,
+      "retry_or_rerun_allowed": false,
+      "authorized_now": false
+    }
+  },
+  "authorization_state": {
+    "generated_implementation_before_green_contract": false,
+    "public_GraphQL_request": false,
+    "ds006840_S3_request": false,
+    "local_IACKD_path_operation": false,
+    "old_retained_bundle_operation": false,
+    "payload_acquisition": false,
+    "EEG_event_or_trajectory_parse": false,
+    "target_or_label_access": false,
+    "model_training_inference_or_scoring": false,
+    "retry_rerun_resume_or_reopen": false,
+    "release_or_claim_upgrade": false
+  },
+  "access_counters": {
+    "dataset_specific_GraphQL_requests": 0,
+    "dataset_specific_GraphQL_response_bytes": 0,
+    "ds006840_S3_requests": 0,
+    "ds006840_S3_body_bytes": 0,
+    "local_IACKD_path_operations": 0,
+    "old_retained_bundle_operations": 0,
+    "signal_sample_reads": 0,
+    "event_or_trajectory_reads": 0,
+    "target_or_label_reads": 0,
+    "parameter_update_fits": 0,
+    "model_inference_calls": 0,
+    "prediction_sets": 0,
+    "prediction_freezes": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "retries_or_reruns": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "warnings": [
+    "This contract does not request or interpret the changed 1178-byte body from either consumed lane.",
+    "The historical S3 identity hash is a compatibility anchor and cannot substitute for the new snapshot tree or versioned selected-manifest hashes.",
+    "OpenNeuro description values are a compatibility projection because the resolver can repair some malformed or missing source values.",
+    "A constructed IACKDM-R1 fixture and any future real IACKDM-R1 metadata result have no neural or decoding claim value."
+  ],
+  "claim_boundary": {
+    "engineering_capability_proposed": "A strict generated canonicalizer can independently bind OpenNeuro snapshot tree selected-manifest and critical-metadata identity without conflating them with transport bytes.",
+    "scientific_claim_not_established": "No dataset-specific response EEG event trajectory target derivative model prediction or score was accessed so this registration establishes no neural effect or decoding result."
+  }
+}

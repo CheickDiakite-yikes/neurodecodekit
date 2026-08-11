@@ -420,6 +420,17 @@ standard-library canonicalizer; any one-response 2 MiB public audit remains a
 fresh Tier C gate after green implementation. Never apply the current or any
 earlier `continue` retroactively.
 
+Research `723c8e244ff5f414cb4859bd122d42cccfaa795f` passed Base Python job
+`93744221145` and Optional Neuro Readers job `93744221059` in CI
+`31480538821`. Read `docs/IACKD_SNAPSHOT_IDENTITY_PREREGISTRATION.md` and
+`registries/iackd_snapshot_identity_contract.v0.json`. The contract freezes one
+exact query, strict response shapes, 1,679 versioned file rows, the exact
+1,340-object selection, twelve role summaries, private-manifest/public-hash
+separation, 37 refusals, and one-thread caps. Generated-only implementation is
+eligible only after this exact registration is committed, pushed, and both CI
+jobs are green. Public GraphQL access remains a later Tier C gate and the
+current `continue` is not retroactive.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

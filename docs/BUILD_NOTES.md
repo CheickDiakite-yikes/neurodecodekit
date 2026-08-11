@@ -7286,3 +7286,31 @@ content-addressed identity architecture rather than a mutable-root-file gate.
 
 Scientific claim not established: this was source and architecture research;
 no dataset-specific response or neural data was accessed.
+
+## 2026-08-11 - IACKD-M1 Snapshot Identity Registration
+
+- Research commit `723c8e2` passed Base Python job `93744221145` and Optional
+  Neuro Readers job `93744221059` in CI `31480538821` before registration.
+- Froze one exact 316-byte GraphQL query and 355-byte canonical request body
+  for snapshot `ds006840:1.0.0`; variables, aliases, fragments, introspection,
+  authentication, mutation, fallback, and additional requests are closed.
+- Registered strict duplicate-free response shapes, full snapshot/description
+  identity, exactly 1,679 safe version-scoped file rows and 7,966,799,433
+  bytes, and the historical 1,340-object/7,249,113,684-byte selection.
+- Bound all twelve role count/byte summaries and the critical
+  Name/BIDSVersion/License/DatasetDOI projection.
+- Separated a future private Git-ignored selected manifest from aggregate
+  public hashes; individual paths, URLs, version IDs, and rows are forbidden
+  from public output.
+- Frozen 37 generated refusal classes, two deterministic replays, one thread,
+  30 seconds, 256 MiB RSS, 2 MiB generated input, 1 MiB combined output, and
+  zero network or real-path access.
+- Twenty-four combined research/contract invariants pass. Current public,
+  local-data, EEG, target, model, score, retry, rerun, and claim counters are
+  zero.
+
+Engineering capability proposed: a generated canonicalizer can now be built
+against an immutable, source-grounded snapshot identity contract.
+
+Scientific claim not established: registration made no dataset-specific
+request and accessed no neural data or model outcome.
