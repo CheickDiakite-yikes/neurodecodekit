@@ -471,6 +471,22 @@
    green freeze, one target delivery, and one score. It authorizes nothing.
    Commit, push, and require both CI jobs green before identifying it as the
    sole Tier C gate; only a fresh later maintainer `continue` may bind it.
+   Request `862141f` then passed both jobs in CI `31454131606`, the packet was
+   identified as the sole active Tier C gate, and the maintainer's fresh
+   `continue` was recorded verbatim. Read
+   `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_AUTHORIZATION_DECISION.md` and its
+   registry. Decision `2ce87fa` passed both jobs in CI `31456317734` before
+   the real executor was built. Now read
+   `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_REAL_IMPLEMENTATION.md` and its
+   registry. The exact executor streams one registered run group at a time,
+   validates 29/31 source semantics and available geometry, creates separate
+   target-free model, sealed scorer, and physiology derivatives, runs exactly
+   660 fits and 900 predictions, and refuses score access until its aggregate
+   freeze is remotely green. One generated qualification passed all 15 gates
+   in 5.604450 seconds at 270,745,600-byte peak RSS with 4,523 output bytes and
+   zero public, real-data, or old-bundle operations. This is still engineering
+   evidence only. Next commit and remotely green this exact implementation;
+   only then run the one fresh public stream. Never use the retained bundle.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

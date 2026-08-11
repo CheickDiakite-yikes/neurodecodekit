@@ -1042,3 +1042,27 @@ real-operation counter remains false. Next: verify, commit, push, and obtain
 both green CI jobs for this exact packet, then identify it as the sole Tier C
 gate. No public request, real executor, model run, target, or score opens from
 the packet alone.
+
+Request `862141f` passed both jobs in CI `31454131606`, was identified as the
+sole active Tier C gate, and received the fresh maintainer response `continue`.
+The separate decision quotes that word and preserves the packet unchanged.
+Decision `2ce87fa` passed both jobs in CI `31456317734` before real-executor
+implementation began.
+
+The real executor is now generated-fixture qualified. It adds a fresh exact-
+inventory stream, no-redirect/no-retry transport, one-run-at-a-time MNE reads,
+source-role and geometry validation, 30 ms target-blind motion guard, separate
+model/sealed/physiology derivatives, exact 660-fit/900-prediction execution,
+deterministic private prediction replay, aggregate freeze, and one isolated
+scorer. Twenty-six focused tests, 1,929 base tests, and 1,985 optional-neuro
+tests pass. The final qualification passed all 15 gates in 5.60445004189387
+seconds at 270,745,600-byte peak RSS with 4,523 output bytes. Public and real
+payload requests, old-bundle operations, real fits, target deliveries, and
+scores remained zero. Constructed `IACKD2-R5` has no scientific value.
+
+Next: commit, push, and obtain both green CI jobs for this exact implementation.
+Only then may the one registered public stream begin. Its aggregate receipt
+must be committed before the one target-blind analysis; that analysis must
+produce a committed and remotely green aggregate freeze before the single
+combined target delivery and score. No retry, rerun, second delivery, or
+post-target update is open.

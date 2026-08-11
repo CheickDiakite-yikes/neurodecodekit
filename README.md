@@ -949,10 +949,23 @@ Read this before interpreting any number in the repository.
   interface evidence only, not a neural result. The generated closeout is
   consumed with no rerun. The
   [all-false real-execution packet](docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_AUTHORIZATION_PACKET.md)
-  now freezes one possible 7.249 GB streaming public-EEG sequence, 660 fits,
-  900 target-blind predictions, one remotely green freeze, and one score. It
-  authorizes nothing; its exact commit and both CI jobs must become green
-  before a fresh packet-bound maintainer decision can open implementation.
+  froze one possible 7.249 GB streaming public-EEG sequence, 660 fits, 900
+  target-blind predictions, one remotely green freeze, and one score. Request
+  `862141f` passed both jobs in CI `31454131606`; the maintainer's fresh
+  `continue` was then bound without scope expansion, and decision `2ce87fa`
+  passed both jobs in CI `31456317734`. The new
+  [real-executor implementation](docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_REAL_IMPLEMENTATION.md)
+  uses exact metadata/object integrity checks, one-run-at-a-time MNE parsing,
+  explicit unavailable geometry handling, causal 0.5-4 Hz derivatives,
+  physically separate model and scorer shards, deterministic private
+  predictions, aggregate freeze validation, and a one-shot scorer. Its final
+  generated qualification passed all 15 gates: 660 fits, 900 predictions,
+  exact replay, 5.604450 seconds, 270,745,600-byte peak RSS, 4,523 output
+  bytes, and zero public, real-data, old-bundle, provider, or hardware
+  operations. The planted `IACKD2-R5` remains non-scientific. The exact
+  implementation must now be committed, pushed, and pass both CI jobs before
+  the first registered public request; the old retained bundle remains
+  forbidden.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

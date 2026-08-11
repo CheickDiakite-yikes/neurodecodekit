@@ -7020,3 +7020,47 @@ after successive remotely green gates, executed once.
 Scientific claim not established: this all-false request accessed no EEG,
 trajectory, target, model, or score and therefore adds no neural or decoding
 evidence.
+
+## 2026-08-11 - IACKD-2 Packet-Bound Authorization Decision
+
+- Request `862141f` passed both jobs in CI `31454131606` before it was
+  identified as the sole active Tier C packet.
+- Recorded the maintainer's actual fresh word, `continue`, without fabricating
+  the packet recital or expanding any scope.
+- Decision `2ce87fa` passed Base Python job `93670726013` and Optional Neuro
+  Readers job `93670725945` in CI `31456317734` before implementation began.
+- Decision recording made zero public/local payload, signal, target, model,
+  cleanup, provider, hardware, release, or claim operations.
+
+## 2026-08-11 - IACKD-2 Real Executor Implementation
+
+- Added a distinct dry-run-first real executor that cannot accept the old
+  retained bundle and requires exact green implementation evidence before any
+  public request.
+- Added pinned metadata reverification, strict no-redirect/no-retry transport,
+  one-pass object integrity, one-run-at-a-time MNE parsing, explicit source
+  semantics and geometry, and invocation-only cleanup.
+- Added causal 0.5-4 Hz whole, central, occipital, ocular, early, late,
+  pre-window, timing, and target-free physiology features with a 30 ms motion
+  guard.
+- Added physically separate model, sealed scorer, and physiology derivatives;
+  exact 660-fit/900-prediction execution; deterministic private prediction
+  replay; aggregate freeze validation; and one isolated scorer.
+- Hardened duplicate cross-arm identities, guaranteed MNE closure, explicit
+  unavailable geometry, re-hashed contract/CI/result tampering, counters,
+  resource limits, and public claim boundaries.
+- One generated qualification passed 15/15 gates in 5.60445004189387 seconds
+  at 270,745,600-byte peak RSS with 4,523 output bytes. It completed 660 fits,
+  900 predictions, exact replay, and generated route `IACKD2-R5` while every
+  public/real/old-bundle counter remained zero.
+- Verification passed 26 focused tests, 1,929 base tests, 1,985 optional-neuro
+  tests, Ruff 0.15.20, compilation, all 142 registries, CLI checks, and diff
+  whitespace validation.
+
+Engineering capability added: the authorized IACKD-2 lane now has a bounded,
+fresh-stream, target-firewalled executor ready for exact commit and CI proof.
+
+Scientific claim not established: implementation used generated fixtures only
+and therefore establishes no neural effect, action decoding, brain-specific
+origin, generalization, thought decoding, real-time operation, hardware,
+assistive, or clinical result.

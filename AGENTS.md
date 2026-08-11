@@ -292,6 +292,29 @@ current or an earlier message retroactively, implement the real executor,
 request a public object, touch the old bundle, or run a model from this packet
 alone.
 
+Request `862141f` passed Base Python job `93664349787` and Optional Neuro
+Readers job `93664349786` in CI `31454131606`. After it was identified as the
+sole active Tier C packet, the maintainer's fresh `continue` was recorded
+verbatim in `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_AUTHORIZATION_DECISION.md`
+and its registry. Decision `2ce87fa` passed Base Python job `93670726013` and
+Optional Neuro Readers job `93670725945` in CI `31456317734` before the
+separate real executor was implemented. Read
+`docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_REAL_IMPLEMENTATION.md`,
+`registries/iackd_role_aware_dual_reversal_real_implementation.v0.json`, and
+the two matching real-executor test modules. The fresh-stream executor now
+implements exact metadata and object integrity checks, one-run-at-a-time MNE
+parsing, source-role and geometry validation, causal derivatives, structural
+model/scorer target isolation, 660 fits, 900 predictions, aggregate freeze,
+and one isolated scorer. One final generated qualification passed all 15 gates
+in 5.60445004189387 seconds at 270,745,600-byte peak RSS with 4,523 output
+bytes and zero public, real-data, old-bundle, provider, or hardware operations.
+Constructed `IACKD2-R5` still has zero scientific value. Commit, push, and
+obtain both green CI jobs for this exact implementation before the first public
+metadata or payload request. Do not touch the old retained bundle. After green
+implementation, the only open sequence is the single registered stream,
+tracked aggregate receipt, one target-blind analysis, remotely green aggregate
+freeze, and one combined target delivery and score with no rerun.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

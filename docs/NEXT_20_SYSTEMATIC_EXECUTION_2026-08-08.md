@@ -423,3 +423,21 @@ Only then identify it as the sole Tier C gate. Public payload, the old bundle,
 real signals, targets, training, prediction, scoring, and scientific claims
 remain closed until a fresh later packet-bound decision and subsequent green
 implementation and freeze gates.
+
+That sequence has advanced through the implementation gate. Request `862141f`
+passed both jobs in CI `31454131606`; the fresh maintainer word `continue` was
+recorded in a separate decision, and decision `2ce87fa` passed both jobs in CI
+`31456317734` before implementation. The generated-qualified real executor now
+covers the exact fresh stream, source semantics, geometry, causal derivatives,
+target firewall, 660 fits, 900 predictions, aggregate freeze, and isolated
+scorer. All 26 focused tests, 1,929 base tests, and 1,985 optional-neuro tests
+pass. Its final fixture run passed 15/15 gates in 5.60445004189387 seconds at
+270,745,600-byte peak RSS with 4,523 output bytes and zero public/real/old-
+bundle operations.
+
+The next systematic work item is exact implementation proof: commit, push,
+and require both CI jobs green. Only then execute the single fresh 1,340-object
+stream. Commit its aggregate receipt, run the target-blind matrix once, commit
+and remotely green the aggregate freeze, deliver both target views together
+once, score once, and stop. The synthetic `IACKD2-R5` route is not evidence of
+a neural effect.

@@ -5538,3 +5538,52 @@ real-time operation, hardware capability, assistive benefit, or clinical use.
 Evidence: `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_AUTHORIZATION_PACKET.md`,
 `registries/iackd_role_aware_dual_reversal_authorization_request.v0.json`, and
 `tests/test_iackd_role_aware_dual_reversal_authorization_request.py`.
+
+## 0162 - Accept The Fresh Packet-Bound IACKD-2 Continuation
+
+Decision: bind the maintainer's actual fresh message, `continue`, to the sole
+green IACKD-2 request without inventing a long-form utterance or expanding the
+registered scope. Request `862141f` passed both jobs in CI `31454131606` before
+the response. Decision `2ce87fa` then passed both jobs in CI `31456317734`
+before implementation.
+
+Boundary: the decision opens only the packet's ordered sequence. The real
+executor must first qualify on generated fixtures and become remotely green.
+The public stream may then run once; the target-blind analysis may run once
+after complete derivatives; final targets may open only after the aggregate
+freeze is committed, pushed, and remotely green. The old bundle, retries,
+reruns, post-target updates, additional models/data, hardware, release, and
+claim expansion remain forbidden.
+
+Evidence: `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_AUTHORIZATION_DECISION.md`,
+`registries/iackd_role_aware_dual_reversal_authorization_decision.v0.json`,
+and its invariant test.
+
+## 0163 - Require Green Exact Proof For The IACKD-2 Real Executor
+
+Decision: accept the generated qualification as implementation evidence only
+and require the exact implementation commit plus both CI jobs to become green
+before the first public metadata or payload request.
+
+Basis: the distinct executor passed all 15 generated gates, including exact
+660-fit/900-prediction execution, deterministic replay, structural target
+isolation, aggregate freeze, isolated scorer, source-semantics variants,
+geometry handling, storage accounting, and strict refusals. Runtime was
+5.60445004189387 seconds, peak RSS was 270,745,600 bytes, retained output was
+4,523 bytes, and every real/public/old-bundle operation counter was zero.
+
+Sequence: after green implementation, run exactly one fresh 1,340-object
+stream and commit its aggregate receipt. Then run the target-blind analysis
+once and commit its aggregate freeze. Only after the freeze commit and both CI
+jobs are green may the same sealed target rows be delivered together and
+scored once. Stop after any consumed-stage failure; no retry or rerun exists.
+
+Boundary: generated `IACKD2-R5` is planted mechanics and has zero scientific
+value. No neural effect, action decoding, brain-specific origin, unseen-person
+generalization, language or thought decoding, real-time, hardware, assistive,
+home-use, or clinical result has been established.
+
+Evidence: `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_REAL_IMPLEMENTATION.md`,
+`registries/iackd_role_aware_dual_reversal_real_implementation.v0.json`,
+`src/neurodecodekit/experiments/iackd_role_aware_dual_reversal_real.py`, and
+the two matching test modules.
