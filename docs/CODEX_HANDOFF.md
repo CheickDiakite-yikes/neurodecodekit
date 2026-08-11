@@ -2820,3 +2820,29 @@ real paths, signals, events/onsets, labels/targets, derivatives, fits,
 inferences, predictions, freezes, deliveries, scores, and claim upgrades.
 The untracked workbook inspection sidecar predates this work and must remain
 untouched.
+
+## 2026-08-11 MARC-1 Generated Qualification Contract Handoff
+
+Read `docs/MARC_1_GENERATED_QUALIFICATION_PREREGISTRATION.md`,
+`registries/marc1_generated_qualification_contract.v0.json`, and
+`tests/test_marc1_generated_qualification_preregistration.py`.
+
+The contract freezes generated-only Tier B work. Its future module may expose
+only `plan`, `qualify --output-dir`, and aggregate-report `inspect`; it has no
+live URL, archive-path, participant, target, model, provider, or `execute`
+surface. The generated archive contains exactly 14 safe members and one forced
+ZIP64 member. It must be inventoried by `zipfile.ZipFile` through an
+instrumented seekable adapter with zero member-content or payload-interval
+reads.
+
+The generated multimodal plan keeps source type, functional control role, and
+model inclusion separate for Freewill-like EEG/EOG/acceleration/audio and
+Wrist-like EEG/EMG/encoder/trigger profiles. It freezes a past-only
+`[-1.5, -0.2)` interface window, physical fit/prediction/scorer separation,
+twelve comparator roles, 24 mutations, deterministic replay, 30-second and
+256-MiB caps, and one aggregate report plus one generated private manifest.
+
+All authorization flags are false and all access counters are zero. Commit,
+push, and require both CI jobs green before implementation. Generated success
+will not authorize a HEAD request, byte range, archive member, signal, event,
+onset, target, model, score, or scientific claim.

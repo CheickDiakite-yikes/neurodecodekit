@@ -521,10 +521,18 @@ It pairs licensed Freewill-23 EEG/EOG/acceleration with licensed Wrist-45
 EEG/EMG/encoder data and requires the same compact causal family to pass both;
 the weaker axis margin is primary. The 13,591,548,048-byte Freewill archive
 must never be downloaded whole. The next eligible work is generated-fixture-
-only ZIP range inventory and multimodal firewall qualification. A live HEAD,
-range, archive member, signal, onset, target, model, score, or claim upgrade
-requires a separately named Tier C packet after green implementation. The
-unlicensed Aalborg self-paced source remains parked.
+only ZIP range inventory and multimodal firewall qualification. Read
+`docs/MARC_1_GENERATED_QUALIFICATION_PREREGISTRATION.md` and
+`registries/marc1_generated_qualification_contract.v0.json`. The frozen
+contract permits only a generated standard-library implementation after its
+exact commit is pushed and both CI jobs are green. It fixes 14 safe generated
+ZIP members, an instrumented no-member-read range adapter, two generated
+modality profiles, a past-only `[-1.5, -0.2)` interface window, physical
+fit/prediction/scorer separation, twelve comparator roles, 24 mutations, and
+an aggregate-only report. A live HEAD, range, archive member, signal, onset,
+target, model, score, or claim upgrade requires a separately named Tier C
+packet after green implementation. The unlicensed Aalborg self-paced source
+remains parked.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

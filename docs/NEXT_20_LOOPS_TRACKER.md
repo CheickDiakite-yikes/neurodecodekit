@@ -1209,3 +1209,13 @@ The next ordered tasks are:
 Only tasks 1-2 are eligible under Tier B now. Tasks 3-5 require new exact Tier
 C decisions. The monolithic archive may never be downloaded whole, and the
 unlicensed Aalborg self-paced source remains parked.
+
+Tasks 1-2 are now prospectively frozen in
+`docs/MARC_1_GENERATED_QUALIFICATION_PREREGISTRATION.md` and
+`registries/marc1_generated_qualification_contract.v0.json`. The generated
+gate requires a standard-library ZIP inventory over an instrumented reader,
+zero member-content reads, two modality-role plans, a causal `[-1.5, -0.2)`
+interface window, three physically separate target roles, all twelve
+comparators, 24 mutation refusals, deterministic replay, one-thread caps, and
+zero public or real-data operations. Commit, push, and green this exact
+contract before implementation.

@@ -1142,8 +1142,10 @@ S25 remains sealed until a separate final-only zero-shot packet is complete.
 
 ## Current Next Scientific Lane: MARC-1
 
-Read `docs/MARC_1_MULTIMODAL_ARTIFACT_RESOLVED_MOVEMENT_RESEARCH.md` and
-`registries/marc1_multimodal_artifact_resolved_movement_research.v0.json`.
+Read `docs/MARC_1_MULTIMODAL_ARTIFACT_RESOLVED_MOVEMENT_RESEARCH.md`,
+`registries/marc1_multimodal_artifact_resolved_movement_research.v0.json`,
+`docs/MARC_1_GENERATED_QUALIFICATION_PREREGISTRATION.md`, and
+`registries/marc1_generated_qualification_contract.v0.json`.
 
 WO9R remains the strongest positive result: held-out low-frequency execution
 and imagery task information across twelve people. Its source interpretation
@@ -1157,7 +1159,11 @@ does not scale that classifier. It freezes a two-axis falsification design:
 
 The future top route requires both axes and uses the weaker margin. One-axis
 success cannot be promoted. The 13.59 GB Freewill ZIP is forbidden as a whole
-download; generated-only byte-range and target-firewall tooling is the next
-Tier B task. No real archive request, payload, signal, target, fit, prediction,
-or score is currently authorized. A separate exact Tier C metadata decision is
-required after the generated implementation is committed, pushed, and green.
+download. The next Tier B gate is now frozen as a dependency-free generated
+qualification: 14 safe ZIP members, no member-content reads, two modality-role
+profiles, past-only windows, physical target isolation, twelve comparators,
+and 24 adversarial refusals. Implementation may begin only after the exact
+contract commit is pushed and both required CI jobs are green. No real archive
+request, payload, signal, target, fit, prediction, or score is currently
+authorized. A separate exact Tier C metadata decision is required after the
+generated implementation is committed, pushed, and green.

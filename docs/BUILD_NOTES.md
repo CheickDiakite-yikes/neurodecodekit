@@ -7494,3 +7494,28 @@ context comparisons required for interpretation.
 
 Scientific claim not established: this milestone accessed no archive member or
 neural signal and therefore adds no new neural or decoding result.
+
+## 2026-08-11 - MARC-1 Generated Qualification Preregistration
+
+- Froze the dependency-free generated interface before implementation. Its CLI
+  is limited to `plan`, `qualify --output-dir`, and aggregate-report `inspect`;
+  no live or real-data argument exists.
+- Bound one deterministic 14-member ZIP fixture with a forced ZIP64 member,
+  standard-library parsing through an instrumented seekable adapter, zero
+  member-content reads, and explicit range, member, ratio, output, runtime, and
+  RSS caps.
+- Bound generated Freewill-like and Wrist-like source-role profiles, explicit
+  geometry and clock states, a past-only `[-1.5, -0.2)` interface window,
+  physical target isolation, twelve comparator roles, and 24 mutation
+  refusals.
+- Bound the green MARC-1 research anchor at `2abea3e`, CI `31500649830`, Base
+  Python job `93809446989`, and Optional Neuro Readers job `93809446709`.
+- Added 14 contract invariants. Every public, real-data, signal, event, target,
+  model, prediction, score, and claim counter remains zero.
+
+Engineering capability added: the generated qualification is prospectively
+specified with deterministic archive, modality, causal, split, privacy, and
+resource acceptance gates.
+
+Scientific claim not established: a frozen generated-only contract contains
+no human neural evidence and establishes no decoding or source attribution.
