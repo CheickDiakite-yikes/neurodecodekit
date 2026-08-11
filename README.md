@@ -974,6 +974,16 @@ Read this before interpreting any number in the repository.
   make immutable bounded body bytes and SHA-256 authoritative for metadata in
   any separately preregistered recovery, rather than treating a transport
   header as content evidence.
+  That lesson is now frozen prospectively in
+  [IACKD-T1 research](docs/IACKD_TRANSPORT_STABLE_RECOVERY_RESEARCH.md) and its
+  [strict contract](docs/IACKD_TRANSPORT_STABLE_RECOVERY_PREREGISTRATION.md).
+  The four small metadata bodies may use fixed-length, chunked, or clean
+  close-delimited framing, but exact observed bytes and registered SHA-256 are
+  still mandatory; all large-object and scientific gates remain unchanged.
+  This is registration-only engineering work with zero new dataset requests.
+  Generated-fixture implementation may begin only after the registration is
+  committed, pushed, and green in both CI jobs; a later public recovery still
+  requires a fresh Tier C packet and decision.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

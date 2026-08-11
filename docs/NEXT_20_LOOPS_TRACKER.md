@@ -1081,3 +1081,14 @@ may specify a separately named transport-stable lane in which bounded observed
 body bytes and SHA-256 establish metadata content identity and HTTP
 `Content-Length` is recorded rather than made authoritative. No new request or
 recovery execution is authorized by this tracker update.
+
+IACKD-T1 now freezes that separately named design in
+`docs/IACKD_TRANSPORT_STABLE_RECOVERY_PREREGISTRATION.md` and
+`registries/iackd_transport_stable_recovery_contract.v0.json`. The four small
+metadata bodies accept fixed-length, chunked, or clean close-delimited framing
+only when a cap-plus-one read yields the exact registered bytes and SHA-256.
+Large-object integrity, all 660 fits and 900 predictions, the target firewall,
+and the scientific router remain unchanged. Sixteen focused invariant tests
+pass. Next: green the exact registration, then build only the generated-body,
+mock-response validator. Public requests and real execution remain Tier C and
+unauthorized.

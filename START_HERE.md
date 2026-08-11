@@ -498,6 +498,16 @@
    was reached. IACKD-2 has no retry or rerun, and its downstream analysis is
    unreachable. Any transport-stable recovery must be a separately named
    prospective lane with fresh authorization.
+   Then read `docs/IACKD_TRANSPORT_STABLE_RECOVERY_RESEARCH.md`,
+   `registries/iackd_transport_stable_recovery_research.v0.json`,
+   `docs/IACKD_TRANSPORT_STABLE_RECOVERY_PREREGISTRATION.md`, and
+   `registries/iackd_transport_stable_recovery_contract.v0.json`. This new
+   IACKD-T1 registration changes only small-metadata framing: exact observed
+   bytes and SHA-256 remain authoritative, while valid fixed-length, chunked,
+   or close-delimited transport can be recorded. Large selected objects and
+   every IACKD-2 scientific field remain unchanged. No public request or real
+   executor is authorized. First green this registration, then implement only
+   generated bodies and mocked responses.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

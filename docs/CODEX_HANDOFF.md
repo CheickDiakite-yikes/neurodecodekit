@@ -2472,3 +2472,27 @@ metadata content identity should come from a bounded observed body length and
 SHA-256, while `Content-Length` should be recorded as transport metadata. Any
 recovery needs a separately named prospective contract, implementation proof,
 fresh Tier C decision, and new invocation identity.
+
+## 2026-08-11 IACKD-T1 Transport-Stable Registration
+
+Read `docs/IACKD_TRANSPORT_STABLE_RECOVERY_RESEARCH.md`,
+`registries/iackd_transport_stable_recovery_research.v0.json`,
+`docs/IACKD_TRANSPORT_STABLE_RECOVERY_PREREGISTRATION.md`, and
+`registries/iackd_transport_stable_recovery_contract.v0.json`.
+
+The new lane permits three standards-valid framing profiles for only the four
+small metadata bodies: fixed length, exact chunked transfer, and clean close-
+delimited response. `Content-Length` is optional advisory transport evidence.
+Acceptance still requires an exact `registered_bytes + 1` bounded read, exact
+observed byte count, and registered SHA-256 before one semantic parse. Both
+length and transfer coding, malformed or over-cap length, compression,
+redirect, underflow, overflow, read failure, or hash drift refuse.
+
+All 1,340 large objects retain exact length, ETag, observed-byte, and one-pass
+SHA-256 gates. All participant, split, source-role, causal preprocessing,
+control, model, freeze, target, scorer, router, and claim fields remain bound
+to the frozen IACKD-2 parent. Focused contract tests pass 16/16. Next: commit,
+push, and obtain both green CI jobs for this exact registration. Only then
+implement the dependency-free validator with generated bodies and mocked
+responses. No `ds006840` request, local IACKD path operation, old-root access,
+model run, target delivery, or score is open.

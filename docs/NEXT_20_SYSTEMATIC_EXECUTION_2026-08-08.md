@@ -455,3 +455,13 @@ separately named transport-stable metadata contract that keeps bounded body
 bytes and SHA-256 authoritative while recording `Content-Length` as
 non-authoritative transport evidence. Any public execution remains a new Tier
 C gate.
+
+That Tier A design is now frozen as `IACKD-T1 Transport-Stable Recovery`.
+Small metadata acceptance is based on exact observed bytes plus registered
+SHA-256 after one cap-plus-one read; fixed-length, chunked, and clean close-
+delimited framing are permitted and recorded. Large payloads retain exact
+length and ETag plus full-stream SHA-256, and the entire IACKD-2 scientific
+protocol remains unchanged. The next systematic work item is to commit, push,
+and green the registration, then qualify a zero-network standard-library
+validator on generated bodies and mocked responses. No public request, real
+executor, local IACKD path, model, target, or score is authorized.

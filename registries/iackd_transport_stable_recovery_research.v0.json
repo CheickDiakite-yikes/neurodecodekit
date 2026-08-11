@@ -1,0 +1,177 @@
+{
+  "schema_name": "neurodecodekit.iackd_transport_stable_recovery_research",
+  "schema_version": "0.1.0",
+  "research_id": "IACKD-T1-transport-stable-recovery-v0",
+  "recorded_at_local": "2026-08-11",
+  "status": "tier_A_protocol_research_complete_no_public_dataset_request_no_real_execution",
+  "objective": "Separate small-metadata HTTP framing from hash-verified content identity without changing the frozen IACKD-2 scientific design or loosening large-object controls.",
+  "proof_posture": {
+    "primary_source_protocol_research_only": true,
+    "public_or_real_dataset_body_requested": false,
+    "local_IACKD_path_operated": false,
+    "old_retained_bundle_accessed": false,
+    "model_or_target_operation": false,
+    "scientific_result": false
+  },
+  "artifact_bindings": {
+    "research_document": {
+      "path": "docs/IACKD_TRANSPORT_STABLE_RECOVERY_RESEARCH.md",
+      "sha256": "f41e237dd46815491778e3a64188f66607e673ddc9dbb1dde8b206cc7cb64915"
+    },
+    "invariant_test": {
+      "path": "tests/test_iackd_transport_stable_recovery_research.py",
+      "sha256": "464c4974d9d8b28759d4d3d1126171174756d9bfa8dd9b468d04a8f7d5d3fa73"
+    },
+    "frozen_IACKD2_contract": {
+      "path": "registries/iackd_role_aware_dual_reversal_contract.v0.json",
+      "sha256": "f3b38cb2c5bf0a55e0816072ef654cc87bd2e2f36bab50df19947d66d2abdb7f"
+    },
+    "openneuro_inventory": {
+      "path": "registries/iackd_openneuro_metadata_inventory.v0.json",
+      "sha256": "aeaa4928192cca9086fcb0abf4711147c68a68ef5c5aacda2ebc67d162a1ef19"
+    },
+    "consumed_stream_result": {
+      "path": "registries/iackd_role_aware_dual_reversal_stream_failure_result.v0.json",
+      "sha256": "694f9909099cf63fed514830a68424002565b92c460a953275eafecf0de9509a"
+    },
+    "consumed_stream_document": {
+      "path": "docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_STREAM_RESULT.md",
+      "sha256": "a775c594b6cde68e307a9d45c0826a0ce38b66e47e9cc6feba5ea269c1723ad3"
+    },
+    "consumed_real_executor": {
+      "path": "src/neurodecodekit/experiments/iackd_role_aware_dual_reversal_real.py",
+      "sha256": "7490896f799a2e576f24d1d612765141dc9bdb881ec1c87ffd2aca02c3c9b173"
+    }
+  },
+  "consumed_parent": {
+    "commit": "36aeccb76c7e277b9dd69792e9bfcffb018f1188",
+    "result_path": "registries/iackd_role_aware_dual_reversal_stream_failure_result.v0.json",
+    "result_sha256": "694f9909099cf63fed514830a68424002565b92c460a953275eafecf0de9509a",
+    "route": "IACKD2-F08-payload_size_ETag_SHA_or_run_group_cap_failure",
+    "green_implementation_commit": "dab5dd47ee47f285430311e4fe0f38f457d1118a",
+    "green_implementation_CI_run_id": 31461818620,
+    "base_python_job_id": 93686690177,
+    "optional_neuro_job_id": 93686690138,
+    "consumed": true,
+    "retry_or_rerun_allowed": false,
+    "body_read": false,
+    "scientific_observation": false
+  },
+  "primary_sources": {
+    "RFC9110": {
+      "url": "https://www.rfc-editor.org/rfc/rfc9110.html#section-8.6",
+      "finding": "Content-Length is representation-length and framing metadata rather than a cryptographic content identifier."
+    },
+    "RFC9112": {
+      "url": "https://www.rfc-editor.org/rfc/rfc9112.html#section-6.3",
+      "finding": "HTTP response bodies can be framed by Content-Length chunked transfer coding or connection close; ambiguous framing must be handled explicitly."
+    },
+    "python_http": {
+      "url": "https://docs.python.org/3/library/http.client.html#http.client.HTTPResponse.read",
+      "finding": "HTTPResponse.read with amt reads at most that many response-body bytes and supports a cap-plus-one guard."
+    },
+    "python_redirect": {
+      "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPRedirectHandler",
+      "finding": "A custom redirect handler can reject every redirect before final-URL acceptance."
+    },
+    "openneuro": {
+      "url": "https://docs.openneuro.org/policy/data_retention.html#content-integrity-assurance",
+      "finding": "Versioned OpenNeuro snapshots use content-addressed storage and S3 replication but still require bounded client-side identity checks."
+    },
+    "amazon_s3": {
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html",
+      "finding": "Explicit checksums provide content-integrity evidence and ETag is not universally a whole-object cryptographic digest."
+    }
+  },
+  "architectural_correction": {
+    "accepted_metadata_framing_profiles": [
+      "fixed_length",
+      "chunked",
+      "close_delimited"
+    ],
+    "metadata_Content_Length_is_content_identity": false,
+    "metadata_Content_Length_optional": true,
+    "metadata_Content_Length_if_present": "single_nonnegative_decimal_within_per_body_cap_recorded_as_exact_or_different",
+    "metadata_content_identity": [
+      "exact_observed_bytes",
+      "registered_SHA256"
+    ],
+    "metadata_read_limit": "registered_bytes_plus_one",
+    "ambiguous_Content_Length_plus_Transfer_Encoding_refused": true,
+    "non_chunked_Transfer_Encoding_refused": true,
+    "compressed_content_refused": true,
+    "payload_exact_Content_Length_retained": true,
+    "payload_exact_ETag_retained": true,
+    "payload_full_stream_SHA256_retained": true,
+    "redirects_retries_substitutions": 0
+  },
+  "metadata_surface": {
+    "documents": 4,
+    "registered_body_bytes": 595400,
+    "cap_plus_one_total_bytes": 595404,
+    "existing_network_cap_bytes": 8388608,
+    "semantic_parse_only_after_identity": true
+  },
+  "scientific_protocol": {
+    "parent_contract_id": "IACKD-2-role-aware-dual-reversal-contract-v0",
+    "all_parent_scientific_fields_unchanged": true,
+    "participant_hand_units": 30,
+    "arms": [
+      "C2I",
+      "I2C"
+    ],
+    "predictive_EEG_channels": 26,
+    "window_seconds": [
+      -1.0,
+      0.0
+    ],
+    "primary_passband_hz": [
+      0.5,
+      4.0
+    ],
+    "parameter_update_fits": 660,
+    "prediction_sets": 900,
+    "final_target_deliveries": 1,
+    "scoring_events": 1,
+    "router": "IACKD2-R0_through_IACKD2-R5"
+  },
+  "ordered_next_steps": [
+    "freeze_contract_and_obtain_both_green_CI_jobs",
+    "generated_fixture_only_transport_implementation",
+    "green_exact_implementation",
+    "all_false_Tier_C_request",
+    "green_request_and_explicit_packet_identification",
+    "fresh_packet_bound_decision",
+    "green_decision_before_distinct_real_executor_integration",
+    "green_real_executor_before_any_new_public_request"
+  ],
+  "access_counters": {
+    "ds006840_metadata_requests": 0,
+    "ds006840_payload_requests": 0,
+    "public_dataset_body_reads": 0,
+    "local_IACKD_path_operations": 0,
+    "old_retained_bundle_operations": 0,
+    "signal_sample_reads": 0,
+    "event_or_trajectory_reads": 0,
+    "target_or_label_reads": 0,
+    "parameter_update_fits": 0,
+    "model_inference_calls": 0,
+    "prediction_sets": 0,
+    "prediction_freezes": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "authorization_state": {
+    "tier_A_research_complete": true,
+    "tier_B_generated_contract_eligible_after_green_registration": true,
+    "tier_C_request_exists": false,
+    "current_continue_is_retroactive_Tier_C_permission": false,
+    "public_request_authorized": false,
+    "real_executor_integration_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "A primary-source-grounded transport and content identity separation is specified for a future bounded recovery.",
+    "scientific_claim_not_established": "No public dataset body EEG event trajectory target model prediction or score was accessed so this research establishes no neural effect or decoding result."
+  }
+}

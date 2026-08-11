@@ -5615,3 +5615,23 @@ does not authorize it.
 Evidence: `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_STREAM_RESULT.md`,
 `registries/iackd_role_aware_dual_reversal_stream_failure_result.v0.json`, and
 `tests/test_iackd_role_aware_dual_reversal_stream_failure_result.py`.
+
+## 0165 - Treat Small Metadata Framing As Transport Evidence
+
+Decision: in the prospective IACKD-T1 lane, do not use `Content-Length` as the
+cryptographic identity of a small metadata body. Permit one unambiguous HTTP
+framing profile, read at most the registered size plus one byte, and require
+the exact observed byte count and registered SHA-256 before semantic parsing.
+
+Reason: RFC 9112 permits fixed-length, chunked, and close-delimited response
+bodies. The consumed IACKD-2 stop observed only a failed header gate and read
+no body, so this correction is prospective and outcome-free.
+
+Boundary: large selected objects retain exact length and ETag plus observed
+bytes and full-stream SHA-256. No scientific design field changes, and no
+public request or real execution is authorized by this decision record.
+
+Evidence: `docs/IACKD_TRANSPORT_STABLE_RECOVERY_RESEARCH.md`,
+`registries/iackd_transport_stable_recovery_research.v0.json`,
+`docs/IACKD_TRANSPORT_STABLE_RECOVERY_PREREGISTRATION.md`, and
+`registries/iackd_transport_stable_recovery_contract.v0.json`.

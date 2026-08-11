@@ -332,6 +332,21 @@ private consumed marker, probe the URL again, amend the expected length, or
 reuse the implementation. A transport-stable metadata design may be specified
 only as a separately named prospective lane with a new Tier C decision.
 
+That prospective lane is now frozen as `IACKD-T1 Transport-Stable Recovery`.
+Read `docs/IACKD_TRANSPORT_STABLE_RECOVERY_RESEARCH.md`,
+`registries/iackd_transport_stable_recovery_research.v0.json`,
+`docs/IACKD_TRANSPORT_STABLE_RECOVERY_PREREGISTRATION.md`, and
+`registries/iackd_transport_stable_recovery_contract.v0.json`. It permits
+standard HTTP framing by exact length, chunked transfer, or clean connection
+close for the four small metadata bodies, but accepts content only after an
+exact cap-plus-one read, observed byte count, and registered SHA-256. Large
+selected objects retain exact `Content-Length`, ETag, observed-byte, and full-
+stream SHA-256 gates. Every scientific field remains bound to IACKD-2; this is
+not an amendment or rerun. Commit, push, and obtain both green CI jobs for the
+registration before implementing only generated bodies and mocked responses.
+No `ds006840` request, local IACKD path, old invocation root, retained bundle,
+model, target, or score is authorized.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

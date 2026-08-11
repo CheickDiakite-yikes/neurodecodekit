@@ -7093,3 +7093,20 @@ stop before protected content.
 
 Scientific claim not established: no EEG content or model outcome was reached,
 so the result adds no neural or decoding evidence.
+
+## 2026-08-11 - IACKD-T1 Transport-Stable Recovery Registration
+
+- Read RFC 9110/9112, Python standard-library HTTP/redirect documentation,
+  OpenNeuro integrity documentation, and Amazon S3 checksum guidance.
+- Localized the correction to one semantic delta: the four small metadata
+  response-framing rules. Exact observed bytes and SHA-256 remain mandatory.
+- Froze fixed-length, chunked, and clean close-delimited metadata profiles;
+  ambiguous or malformed framing, compression, redirect, overflow, underflow,
+  read error, and hash drift still refuse before parsing.
+- Preserved exact `Content-Length`, ETag, observed bytes, and one-pass SHA-256
+  for all 1,340 large objects and inherited every IACKD-2 scientific field.
+- Added two machine registries, two human records, and 16 focused invariant
+  tests. No `ds006840` request, local IACKD path, old root, signal, target,
+  model, prediction, or score was accessed.
+- Next gate: commit, push, and pass both CI jobs before generated-fixture-only
+  implementation.

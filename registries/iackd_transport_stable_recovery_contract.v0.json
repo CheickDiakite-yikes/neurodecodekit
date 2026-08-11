@@ -1,0 +1,343 @@
+{
+  "schema_name": "neurodecodekit.iackd_transport_stable_recovery_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "IACKD-T1-transport-stable-recovery-contract-v0",
+  "recorded_at_local": "2026-08-11",
+  "status": "frozen_prospective_registration_generated_fixture_only_after_green_public_requests_unauthorized",
+  "objective": "Qualify a strict standard-library transport validator that separates small-metadata response framing from exact observed-byte and SHA256 content identity while preserving the IACKD-2 payload and scientific contracts.",
+  "proof_posture": "Tier_A_registration_only_zero_ds006840_request_zero_local_IACKD_path_zero_model_target_or_score",
+  "bindings": {
+    "research_document": {
+      "path": "docs/IACKD_TRANSPORT_STABLE_RECOVERY_RESEARCH.md",
+      "sha256": "f41e237dd46815491778e3a64188f66607e673ddc9dbb1dde8b206cc7cb64915"
+    },
+    "research_registry": {
+      "path": "registries/iackd_transport_stable_recovery_research.v0.json",
+      "sha256": "06916559b4409c8a16adccf837e096bad033ca69164ccef82d6e4048f0ea9bb6"
+    },
+    "research_test": {
+      "path": "tests/test_iackd_transport_stable_recovery_research.py",
+      "sha256": "464c4974d9d8b28759d4d3d1126171174756d9bfa8dd9b468d04a8f7d5d3fa73"
+    },
+    "human_preregistration": {
+      "path": "docs/IACKD_TRANSPORT_STABLE_RECOVERY_PREREGISTRATION.md",
+      "sha256": "1173a9866d239cda0e8b9347fa7462876502c1f052632aedad285f517b93d560"
+    },
+    "contract_test": {
+      "path": "tests/test_iackd_transport_stable_recovery_contract.py",
+      "sha256": "bfd437bd9bcb189d664f071f208a0a8ffd7560394c01639763ab87db154a2dce"
+    },
+    "frozen_IACKD2_contract": {
+      "path": "registries/iackd_role_aware_dual_reversal_contract.v0.json",
+      "sha256": "f3b38cb2c5bf0a55e0816072ef654cc87bd2e2f36bab50df19947d66d2abdb7f"
+    },
+    "committed_openneuro_inventory": {
+      "path": "registries/iackd_openneuro_metadata_inventory.v0.json",
+      "sha256": "aeaa4928192cca9086fcb0abf4711147c68a68ef5c5aacda2ebc67d162a1ef19"
+    },
+    "consumed_stream_result": {
+      "path": "registries/iackd_role_aware_dual_reversal_stream_failure_result.v0.json",
+      "sha256": "694f9909099cf63fed514830a68424002565b92c460a953275eafecf0de9509a"
+    },
+    "consumed_stream_document": {
+      "path": "docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_STREAM_RESULT.md",
+      "sha256": "a775c594b6cde68e307a9d45c0826a0ce38b66e47e9cc6feba5ea269c1723ad3"
+    },
+    "consumed_real_executor": {
+      "path": "src/neurodecodekit/experiments/iackd_role_aware_dual_reversal_real.py",
+      "sha256": "7490896f799a2e576f24d1d612765141dc9bdb881ec1c87ffd2aca02c3c9b173"
+    }
+  },
+  "green_parent_proof": {
+    "consumed_result_commit": "36aeccb76c7e277b9dd69792e9bfcffb018f1188",
+    "consumed_result_CI_run_id": 31467335648,
+    "consumed_result_base_python_job_id": 93702877496,
+    "consumed_result_optional_neuro_job_id": 93702877514,
+    "both_required_jobs_green": true,
+    "real_executor_commit": "dab5dd47ee47f285430311e4fe0f38f457d1118a",
+    "real_executor_CI_run_id": 31461818620,
+    "real_executor_base_python_job_id": 93686690177,
+    "real_executor_optional_neuro_job_id": 93686690138,
+    "consumed_route": "IACKD2-F08-payload_size_ETag_SHA_or_run_group_cap_failure",
+    "response_bodies_read": 0,
+    "scientific_observations": 0,
+    "retry_or_rerun_allowed": false
+  },
+  "allowed_semantic_delta": [
+    "small_metadata_response_framing_policy"
+  ],
+  "metadata_contract": {
+    "request_count": 4,
+    "canonical_order": true,
+    "documents": [
+      {
+        "role": "dataset_description",
+        "registered_bytes": 1178,
+        "read_limit_bytes": 1179,
+        "registered_sha256": "275cf1d24f93832ed17fd32d46a589286453042f8d2788b4f3dc1933c6523d93"
+      },
+      {
+        "role": "changes",
+        "registered_bytes": 164,
+        "read_limit_bytes": 165,
+        "registered_sha256": "1a80dbb236a969a6006924fa4c19f9a120b00830c38f2a8b5d3a8de5b7252792"
+      },
+      {
+        "role": "listing_page_1",
+        "registered_bytes": 355831,
+        "read_limit_bytes": 355832,
+        "registered_sha256": "c4aa840256c6d91e9a24feccb71bc5e9ed8d1514d1568059d63003f79daeca78"
+      },
+      {
+        "role": "listing_page_2",
+        "registered_bytes": 238227,
+        "read_limit_bytes": 238228,
+        "registered_sha256": "612503c610851c7e52e5a5d3d5257f71b8b03d59c6eb090323aba199e122e5d8"
+      }
+    ],
+    "registered_body_bytes": 595400,
+    "cap_plus_one_total_bytes": 595404,
+    "accepted_framing_profiles": [
+      "fixed_length",
+      "chunked",
+      "close_delimited"
+    ],
+    "Content_Length_required": false,
+    "Content_Length_role": "advisory_transport_evidence",
+    "Content_Length_if_present": "single_ASCII_decimal_nonnegative_no_sign_no_whitespace_no_comma_within_per_body_cap",
+    "Content_Length_exact_or_different_recorded": true,
+    "Content_Length_difference_alone_is_content_failure": false,
+    "ambiguous_Content_Length_and_Transfer_Encoding_refused": true,
+    "allowed_Transfer_Encoding": [
+      null,
+      "chunked"
+    ],
+    "allowed_Content_Encoding": [
+      null,
+      "",
+      "identity"
+    ],
+    "status_required": 200,
+    "final_URL_must_equal_requested_URL": true,
+    "redirects": 0,
+    "retries": 0,
+    "substitutions": 0,
+    "read_algorithm": "one_read_registered_bytes_plus_one",
+    "content_identity_fields": [
+      "observed_body_bytes",
+      "body_SHA256"
+    ],
+    "exact_observed_body_bytes_required": true,
+    "exact_registered_SHA256_required": true,
+    "body_SHA256_passes_per_document": 1,
+    "semantic_parse_after_identity_passes": 1,
+    "semantic_parse_on_identity_failure": 0,
+    "raw_body_persisted": false,
+    "body_discarded_before_next_request": true,
+    "underlying_read_error_action": "refuse",
+    "raw_header_or_value_publication": false,
+    "aggregate_framing_profile_counts_allowed": true,
+    "aggregate_declared_length_state_counts_allowed": true
+  },
+  "payload_contract": {
+    "object_count": 1340,
+    "payload_bytes": 7249113684,
+    "canonical_inventory_sha256": "c30b518f9dafe3d46128849725e1f2f8fdce33239fbf6ade8603d66a64f0ffa5",
+    "run_groups": 128,
+    "objects_per_run_group": 10,
+    "geometry_objects": 60,
+    "exact_final_URL_required": true,
+    "status_required": 200,
+    "exact_Content_Length_required": true,
+    "exact_registered_ETag_required": true,
+    "ETag_is_universal_cryptographic_digest": false,
+    "exact_observed_bytes_required": true,
+    "full_stream_SHA256_passes_per_object": 1,
+    "Content_Encoding": "identity_only",
+    "Transfer_Encoding_allowed": false,
+    "redirects": 0,
+    "retries": 0,
+    "reruns": 0,
+    "substitutions": 0,
+    "maximum_concurrent_run_groups": 1,
+    "complete_raw_bundle_retained": false,
+    "old_retained_bundle_forbidden": true
+  },
+  "frozen_scientific_parent": {
+    "parent_contract_id": "IACKD-2-role-aware-dual-reversal-contract-v0",
+    "participant_count": 15,
+    "participant_hand_units": 30,
+    "arms": [
+      "C2I",
+      "I2C"
+    ],
+    "predictive_EEG_channels": 26,
+    "optional_M1_M2_predictive": false,
+    "HEOG_VEOG_Trigger_predictive": false,
+    "sampling_rate_hz": 1024,
+    "window_seconds": [
+      -1.0,
+      0.0
+    ],
+    "primary_passband_hz": [
+      0.5,
+      4.0
+    ],
+    "motion_guard_ms": 30,
+    "parameter_update_fits": 660,
+    "prediction_sets": 900,
+    "target_blind_inference_calls_maximum": 900,
+    "prediction_freezes": 1,
+    "final_target_deliveries": 1,
+    "scoring_events": 1,
+    "router": "IACKD2-R0_through_IACKD2-R5",
+    "all_other_scientific_fields_inherited_unchanged": true,
+    "post_result_tuning_or_update_allowed": false
+  },
+  "fixture_qualification_contract": {
+    "generated_bodies_only": true,
+    "mocked_responses_only": true,
+    "downloaded_source_body_reuse": false,
+    "network_constructor_patched_closed": true,
+    "real_or_public_URL_allowed": false,
+    "local_IACKD_path_allowed": false,
+    "required_acceptance_profiles": [
+      "fixed_length_exact",
+      "fixed_length_valid_different_with_exact_body",
+      "chunked",
+      "close_delimited"
+    ],
+    "required_refusals": [
+      "non_200_status",
+      "changed_final_URL",
+      "redirect",
+      "malformed_Content_Length",
+      "negative_Content_Length",
+      "comma_joined_Content_Length",
+      "over_cap_Content_Length",
+      "Content_Length_plus_Transfer_Encoding",
+      "unsupported_Transfer_Encoding",
+      "compressed_Content_Encoding",
+      "body_underflow",
+      "body_overflow",
+      "body_read_error",
+      "body_SHA256_drift",
+      "second_read",
+      "second_hash",
+      "parse_before_identity",
+      "payload_missing_or_different_Content_Length",
+      "payload_missing_or_different_ETag",
+      "unknown_mode_or_field",
+      "network_or_real_path_attempt",
+      "output_overwrite_or_cap"
+    ],
+    "deterministic_replays": 2,
+    "aggregate_only_inspection": true,
+    "scientific_claim_value": false
+  },
+  "resource_caps": {
+    "generated_qualification": {
+      "executions": 1,
+      "CPU_threads": 1,
+      "workers": 1,
+      "numerical_jobs": 1,
+      "wall_time_seconds": 30,
+      "peak_RSS_bytes": 268435456,
+      "generated_output_bytes": 1048576,
+      "network_bytes": 0,
+      "real_or_public_body_reads": 0,
+      "local_IACKD_path_operations": 0,
+      "model_runs": 0,
+      "training_runs": 0,
+      "inference_runs": 0,
+      "scoring_runs": 0
+    },
+    "future_real_stream_inherited_from_parent": {
+      "wall_time_seconds": 7200,
+      "peak_RSS_bytes": 2147483648,
+      "metadata_network_cap_bytes": 8388608,
+      "payload_bytes": 7249113684,
+      "peak_incremental_disk_bytes": 1073741824,
+      "minimum_free_disk_bytes": 10737418240,
+      "currently_authorized": false
+    }
+  },
+  "ordered_stages": {
+    "registration": {
+      "tier": "A",
+      "status": "current",
+      "public_or_local_data_access": false
+    },
+    "generated_implementation": {
+      "tier": "B",
+      "requires_green_registration": true,
+      "generated_fixtures_and_mocked_responses_only": true,
+      "network_bytes": 0
+    },
+    "tier_C_request": {
+      "requires_green_exact_implementation": true,
+      "all_authorization_flags_false": true
+    },
+    "tier_C_decision": {
+      "fresh_packet_bound_maintainer_message_required": true,
+      "decision_must_be_committed_pushed_and_both_jobs_green": true,
+      "current_continue_may_be_used_retroactively": false
+    },
+    "real_executor_integration": {
+      "requires_green_decision": true,
+      "generated_fixtures_and_mocked_responses_before_public_request": true,
+      "exact_executor_must_be_committed_pushed_and_both_jobs_green": true
+    },
+    "public_execution": {
+      "fresh_invocation_identity_required": true,
+      "new_private_consumed_marker_before_first_request": true,
+      "old_invocation_root_forbidden": true,
+      "old_retained_bundle_forbidden": true,
+      "authorized_now": false,
+      "current_continue_is_retroactive": false
+    }
+  },
+  "authorization_state": {
+    "research": true,
+    "registration": true,
+    "generated_fixture_implementation_after_green_registration": true,
+    "real_executor_integration": false,
+    "dependency_install": false,
+    "public_metadata_request": false,
+    "public_payload_request": false,
+    "local_IACKD_path_operation": false,
+    "signal_event_trajectory_or_target_read": false,
+    "model_training_inference_prediction_or_freeze": false,
+    "target_delivery_or_score": false,
+    "retry_rerun_restart_or_resume": false,
+    "release_or_claim_upgrade": false
+  },
+  "access_counters": {
+    "ds006840_metadata_requests": 0,
+    "ds006840_payload_requests": 0,
+    "public_dataset_body_reads": 0,
+    "local_IACKD_path_operations": 0,
+    "old_invocation_root_operations": 0,
+    "old_retained_bundle_operations": 0,
+    "signal_sample_reads": 0,
+    "event_or_trajectory_reads": 0,
+    "target_or_label_reads": 0,
+    "parameter_update_fits": 0,
+    "model_inference_calls": 0,
+    "prediction_sets": 0,
+    "prediction_freezes": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "warnings": [
+    "The consumed IACKD-2 Content-Length value remains unavailable and must not be inferred.",
+    "Accepting optional metadata Content-Length does not weaken exact observed byte-count or SHA256 identity.",
+    "Large payload responses retain exact Content-Length ETag observed-byte and full-stream SHA256 checks.",
+    "No current instruction authorizes a new public request or real executor integration."
+  ],
+  "claim_boundary": {
+    "engineering_capability_added": "A strict prospective contract distinguishes small-body framing evidence from exact observed-byte and SHA256 content identity without loosening large-object or scientific gates.",
+    "scientific_claim_not_established": "No public body EEG event trajectory target model prediction or score was accessed so this registration establishes no neural effect or decoding result."
+  }
+}
