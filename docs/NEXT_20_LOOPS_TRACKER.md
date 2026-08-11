@@ -1094,6 +1094,14 @@ generated-only validator was built. The standard-library module has no URL
 opener, local-path executor, or execute mode. Its final generated closeout
 passed 10 accepted validations, two deterministic replays, and all 22
 refusals in 0.001049624988809228 seconds at 20,332,544-byte peak RSS with
-5,540 output bytes and zero real/public/model operations. Next: green the exact
-implementation, then prepare only an all-false Tier C request. Public requests
-and real execution remain unauthorized.
+5,540 output bytes and zero real/public/model operations. Two failed optional-
+suite candidates preserve the RSS test-boundary diagnosis; final exact
+implementation `93a067c` passed both jobs in CI `31474412246`.
+
+The all-false IACKD-2R packet now specifies the next evidence-bearing path:
+one additive executor, one new four-metadata/1,340-object stream, unchanged
+660-fit/900-prediction science, one remotely green freeze, and one combined
+target delivery and score. A 10 GiB free-disk and per-logical-CPU load gate
+must pass before consumption. Next: commit, push, and green the request, then
+stop and identify it as the sole Tier C packet. The current `continue` is not
+retroactive; public requests and real execution remain unauthorized.

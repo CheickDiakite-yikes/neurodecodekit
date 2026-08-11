@@ -512,8 +512,16 @@
    `registries/iackd_transport_stable_recovery_implementation.v0.json`. The
    dependency-free module has no URL opener or execute mode, and its one final
    generated closeout passed 10 acceptance validations and 22 refusals with
-   zero real/public/model operations. Next green the exact implementation,
-   then prepare only an all-false Tier C request.
+   zero real/public/model operations. Exact implementation `93a067c` passed
+   Base Python job `93724709807` and Optional Neuro Readers job `93724709840`
+   in CI `31474412246`. Now read
+   `docs/IACKD_TRANSPORT_STABLE_RECOVERY_AUTHORIZATION_PACKET.md` and
+   `registries/iackd_transport_stable_recovery_authorization_request.v0.json`.
+   The all-false IACKD-2R request binds one future additive executor, one fresh
+   stream, the unchanged target-blind matrix, one green freeze, and one score,
+   with a new pre-consumption machine-load gate. It authorizes nothing. Commit,
+   push, and require both CI jobs green, then stop and identify it as the sole
+   Tier C packet. The current `continue` cannot bind it retroactively.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

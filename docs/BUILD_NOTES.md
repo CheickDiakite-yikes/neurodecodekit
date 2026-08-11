@@ -7135,3 +7135,32 @@ and adversarially tested without a data-access surface.
 
 Scientific claim not established: generated responses provide no neural or
 decoding evidence.
+
+## 2026-08-11 - IACKD-T1 Green Proof And IACKD-2R All-False Request
+
+- Preserved CI `31473610218` and `31474043386` as failed implementation
+  candidates. Both Base Python jobs passed; each Optional Neuro Readers job
+  localized the same RSS-test contamination from the dependency-loaded parent
+  process.
+- Repaired the test boundary without changing validator behavior: deterministic
+  injected monitors qualify unit resource logic, CLI dispatch is tested
+  separately, and the fresh-process generated closeout remains the measured
+  absolute RSS evidence.
+- Exact implementation `93a067c` passed Base Python job `93724709807` and
+  Optional Neuro Readers job `93724709840` in CI `31474412246`.
+- Added an all-false IACKD-2R authorization request binding the green transport
+  registration and implementation, consumed IACKD-2 failure, frozen science,
+  committed inventory, exact ordered execution, target firewall, resource
+  caps, and claim ceiling.
+- The request strengthens machine protection: at least 10 GiB free, one thread,
+  and one-minute load no greater than one runnable process per logical CPU
+  before the new consumed marker.
+- Added 11 packet invariants. Current public/local data, model, target, score,
+  retry, rerun, release, and claim counters remain zero.
+
+Engineering capability added: the transport correction is remotely qualified,
+and one exact recovery sequence can now be considered through a separately
+green Tier C decision.
+
+Scientific claim not established: the all-false request is not EEG data or a
+result and adds no neural or decoding evidence.

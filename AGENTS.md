@@ -351,9 +351,24 @@ standard-library module has no URL opener, local-path executor, or `--execute`
 mode; 41 focused tests pass. One final generated qualification passed 10
 acceptance validations and 22 refusals in 0.001049624988809228 seconds at
 20,332,544-byte peak RSS with 5,540 output bytes and every real/public/model
-counter zero. Commit, push, and green this exact implementation before an all-
-false Tier C request is prepared. No `ds006840` request, local IACKD path, old
-invocation root, retained bundle, model, target, or score is authorized.
+counter zero. Two intermediate candidates failed only the optional suite's
+RSS test boundary and remain preserved as ineligible evidence. Exact
+implementation `93a067c4dcdb89ea5e5d17db6e5adaca454a64d1` passed Base
+Python job `93724709807` and Optional Neuro Readers job `93724709840` in CI
+`31474412246`.
+
+Read `docs/IACKD_TRANSPORT_STABLE_RECOVERY_AUTHORIZATION_PACKET.md` and
+`registries/iackd_transport_stable_recovery_authorization_request.v0.json`.
+This IACKD-2R request is all false. It binds one possible future additive
+executor, one new no-retry 4-metadata/1,340-object stream, the unchanged 660
+fits and 900 target-blind predictions, one remotely green aggregate freeze,
+and one combined target delivery and score. It strengthens machine safety by
+requiring 10 GiB free, one numerical thread, and at most one runnable process
+per logical CPU before the consumed marker. The request must be committed,
+pushed, and both jobs green before it may be identified as the sole Tier C
+packet. The current `continue` is not retroactive. Do not implement the real
+executor, request `ds006840`, operate on any IACKD path or old root, run a
+model, open a target, or score from the packet alone.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

@@ -466,7 +466,15 @@ protocol remains unchanged. Registration `ee0f62a` passed both jobs in CI
 module has no URL opener or real execute path. Its final generated closeout
 passed 10 acceptance validations and all 22 refusals with deterministic replay,
 5,540 output bytes, 0.001049624988809228-second runtime, 20,332,544-byte peak
-RSS, and zero real/public/model operations. The next systematic item is exact
-implementation commit, push, and both green jobs, followed by an all-false
-Tier C request. No public request, real executor integration, local IACKD path,
-model, target, or score is authorized.
+RSS, and zero real/public/model operations. Two candidate CI runs preserved an
+RSS test-boundary failure; final exact implementation `93a067c` passed both
+jobs in CI `31474412246`.
+
+The next systematic item is the all-false IACKD-2R request in
+`docs/IACKD_TRANSPORT_STABLE_RECOVERY_AUTHORIZATION_PACKET.md`. It binds one
+future additive executor, one new storage-safe public stream, the unchanged
+660-fit/900-prediction firewall, one green freeze, and one score. It requires
+10 GiB free and a per-logical-CPU machine-load gate before consumption. The
+request itself authorizes nothing. Commit, push, green both jobs, identify the
+sole packet, and stop. No public request, real executor integration, local
+IACKD path, model, target, or score is currently authorized.

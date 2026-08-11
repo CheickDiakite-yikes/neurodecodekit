@@ -5653,3 +5653,31 @@ fresh packet-bound decision, and remotely green decision commit.
 Evidence: `docs/IACKD_TRANSPORT_STABLE_RECOVERY_IMPLEMENTATION.md`,
 `registries/iackd_transport_stable_recovery_implementation.v0.json`,
 `src/neurodecodekit/datasets/iackd_transport_stable.py`, and its tests.
+
+## 0167 - Separate IACKD-2R From The Consumed Invocation
+
+Decision: request one separately named IACKD-2R sequence instead of amending,
+reopening, or rerunning consumed IACKD-2. The future executor must be additive,
+use a new invocation identity and root, and inherit every scientific field
+unchanged. The only semantic correction is the four-body metadata framing
+policy qualified by IACKD-T1.
+
+Order: the all-false request must first be committed, pushed, and pass both CI
+jobs. A fresh packet-bound decision must then become remotely green before
+generated/mock-only executor integration. That exact executor must become
+remotely green before one public stream. One target-blind prediction freeze
+must become remotely green before the sole target delivery and score.
+
+Machine boundary: refuse before writing the new consumed marker unless at
+least 10 GiB is free, all numerical execution is single-threaded, and one-
+minute system load is no greater than one runnable process per logical CPU.
+This strengthens execution safety and changes no scientific field.
+
+Evidence boundary: this decision record and packet are all false. The current
+maintainer `continue` preceded the immutable packet and is not retroactive. No
+public body, local IACKD path, EEG, event, trajectory, target, model,
+prediction, freeze, score, retry, rerun, release, or claim operation is open.
+
+Evidence: `docs/IACKD_TRANSPORT_STABLE_RECOVERY_AUTHORIZATION_PACKET.md`,
+`registries/iackd_transport_stable_recovery_authorization_request.v0.json`,
+and `tests/test_iackd_transport_stable_recovery_authorization_request.py`.

@@ -985,9 +985,17 @@ Read this before interpreting any number in the repository.
   Its final generated run passed 10 acceptance validations, deterministic
   replay, and all 22 refusals in 0.00105 seconds at 20.3 MB peak RSS with a
   5,540-byte report. The module has no URL opener, local-path executor, or
-  `--execute` mode. This is engineering evidence only: the exact implementation
-  still needs remote green proof before an all-false Tier C packet, and any
-  public recovery still requires a fresh decision.
+  `--execute` mode. Two intermediate candidates exposed and preserved an
+  optional-suite RSS test-boundary issue; exact implementation `93a067c` then
+  passed Base Python job `93724709807` and Optional Neuro Readers job
+  `93724709840` in CI `31474412246`. The new
+  [all-false IACKD-2R request](docs/IACKD_TRANSPORT_STABLE_RECOVERY_AUTHORIZATION_PACKET.md)
+  binds one possible future additive executor, one fresh storage-safe stream,
+  the unchanged 660-fit/900-prediction target firewall, one green freeze, and
+  one score. It also refuses before consumption when free disk, one-thread
+  settings, or per-CPU machine load are unsafe. The packet authorizes nothing;
+  it must be committed, pushed, and remotely green before a fresh later
+  packet-bound maintainer decision can open any public operation.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

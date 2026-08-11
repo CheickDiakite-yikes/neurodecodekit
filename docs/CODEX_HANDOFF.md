@@ -2505,7 +2505,24 @@ refusal mutations. It used 848 generated input bytes, emitted 5,540 bytes, ran
 in 0.001049624988809228 seconds, and peaked at 20,332,544 bytes RSS. Every
 network, public/real, data, target, model, and score counter is zero.
 
-Next: commit, push, and obtain both green CI jobs for this exact
-implementation. Only then prepare and green an all-false Tier C request. No
+Two pushed candidates, `6b89b7d` and `8d7be6a`, each passed Base Python but
+failed Optional Neuro Readers because a CLI resource test inherited the
+dependency-loaded suite's RSS history. Both failures remain preserved and are
+ineligible as proof. The final repair separates deterministic resource
+monitoring from CLI dispatch. Exact implementation `93a067c` passed Base
+Python job `93724709807` and Optional Neuro Readers job `93724709840` in CI
+`31474412246`.
+
+Read `docs/IACKD_TRANSPORT_STABLE_RECOVERY_AUTHORIZATION_PACKET.md`,
+`registries/iackd_transport_stable_recovery_authorization_request.v0.json`,
+and its test. The IACKD-2R request is all false and binds one possible future
+additive executor, one new 4-metadata/1,340-object no-retry stream, unchanged
+660-fit/900-prediction science, one green aggregate freeze, and one combined
+target delivery and score. A new pre-consumption gate requires 10 GiB free,
+one numerical thread, and no more than one runnable process per logical CPU.
+
+Next: verify, commit, push, and obtain both green CI jobs for the all-false
+request, then stop and identify its exact commit and scope. The current
+maintainer `continue` preceded the packet and is not retroactive. No
 `ds006840` request, real-executor integration, local IACKD path operation,
 old-root access, model run, target delivery, or score is open.
