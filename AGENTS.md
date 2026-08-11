@@ -632,12 +632,21 @@ directory body no larger than 16 MiB, for 17,039,360 accepted body bytes total.
 It permits at most five request attempts because only the tail may follow up
 to two bodyless redirects; the directory must use the same terminal URL.
 
-Every authorization flag and current operation counter is false. The request
-must be committed, pushed, and both jobs green before Codex identifies it as
-the sole active Tier C packet. Only a fresh unambiguous maintainer message
-after that identification may be recorded in a separate decision. Do not use
-the current or an earlier message retroactively, implement the live wrapper,
-issue a request, touch a real path, or acquire a member from the packet alone.
+Every request-stage authorization flag and operation counter is false. Request
+`950796d123272a459eedf1e431ba99f22a0c582e` passed Base Python job
+`93853089748` and Optional Neuro Readers job `93853089786` in CI
+`31513578445`. After Codex identified it as the sole active Tier C packet, the
+maintainer supplied the fresh words `keep going, move the needle, continue,
+you approved to go on`. Read
+`docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_AUTHORIZATION_DECISION.md` and
+`registries/marc1_freewill_central_directory_authorization_decision.v0.json`.
+The separate decision quotes those exact 60 UTF-8 bytes and binds the green
+packet without scope expansion. It remains ineffective until its exact commit
+is tested, pushed, and both remote CI jobs are green. Before that proof, do
+not implement the live wrapper, issue a request, create a consumed marker,
+touch a real path, or acquire a member. After green decision proof, only
+generated/mock wrapper work is eligible; public access remains closed until
+that exact wrapper is separately remotely green.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

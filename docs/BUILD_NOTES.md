@@ -7783,3 +7783,41 @@ bytes without opening a member.
 
 Scientific claim not established: this all-false request is not data or a
 result and establishes no neural effect or decoding capability.
+
+## 2026-08-11 - MARC1-CD1A Packet-Bound Authorization Decision
+
+- Verified request commit `950796d123272a459eedf1e431ba99f22a0c582e`
+  against CI `31513578445`: Base Python job `93853089748` and Optional Neuro
+  Readers job `93853089786` both concluded successfully.
+- Recorded the maintainer's actual message `keep going, move the needle,
+  continue, you approved to go on` as exactly 60 UTF-8 bytes with SHA-256
+  `c97c7d04ef3fb6e70265325d4805026948a1474554de1725374ae47c64a19371`.
+- Bound the unchanged request, packet, contract, generated implementation,
+  generated result, parser, and request-test hashes and Git blob identities.
+  The frozen request was not rewritten.
+- Preserved the ordered gates: green this decision; implement and qualify one
+  generated/mock standard-library wrapper; green that exact wrapper; then run
+  at most one no-retry public metadata/tail/conditional-directory sequence.
+- Preserved all transport and machine caps, including three accepted bodies,
+  17,039,360 accepted body bytes, five HTTP attempts, two bodyless tail
+  redirects, zero directory redirects, 12 GiB free disk, one thread/worker/job,
+  120 seconds, 256 MiB RSS, and no whole or member download.
+- No wrapper implementation, public request, DNS query, marker, manifest,
+  report, real path, member, signal, event, target, model, score, cleanup,
+  release, or claim operation occurred while recording the decision.
+- Twelve decision invariants and all 23 request-plus-decision invariants pass.
+  The full MARC1-focused suite passes 168 tests in 0.439 seconds.
+- The comparable neuro-enabled repository suite passes 2,378 tests with 35
+  expected skips in 55.670 seconds, exactly 12 tests above the 2,366-test
+  pre-change baseline. The dependency-light interpreter separately passes
+  2,307 tests with 204 expected dependency skips in 17.732 seconds.
+- Ruff, compilation, JSON parsing, and `git diff --check` pass. External peak
+  RSS was 717,799,424 bytes for the complete optional-neuro suite; that suite
+  is repository verification, not the future 256 MiB live-executor process.
+
+Engineering capability authorized for testing: after two separate green
+milestones, one machine-gated wrapper may inventory the public ZIP without
+opening a member payload.
+
+Scientific claim not established: this authorization decision is not EEG data
+or a result and adds no neural or decoding evidence.

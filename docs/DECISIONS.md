@@ -6250,3 +6250,40 @@ Evidence: `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_AUTHORIZATION_PACKET.md`,
 `registries/marc1_freewill_central_directory_authorization_request.v0.json`,
 and
 `tests/test_marc1_freewill_central_directory_authorization_request.py`.
+
+## 0187 - Bind The Fresh Maintainer Continuation To MARC1-CD1A
+
+Decision: record the maintainer's actual words `keep going, move the needle,
+continue, you approved to go on` only after request `950796d` passed Base
+Python job `93853089748` and Optional Neuro Readers job `93853089786` in CI
+`31513578445`, and after Codex identified MARC1-CD1A as the sole active Tier C
+packet with its exact scope and remaining gate.
+
+Authenticity decision: preserve the exact 60 UTF-8 bytes and their SHA-256.
+Incorporate the immutable green packet by reference. Do not fabricate its long
+scope as a maintainer utterance, infer wider authority, amend the frozen
+request, or reuse the words for another packet.
+
+Staging decision: this decision is ineffective until its own exact commit is
+tested, pushed, and both remote CI jobs are green. Only after that proof may
+one additive standard-library wrapper be implemented and qualified using
+generated fixtures, injected DNS, and mocked HTTP responses. Require that
+exact wrapper commit to pass both jobs before one public invocation.
+
+Execution boundary: the later invocation remains exactly one bounded
+version-metadata body, one exact 131,072-byte tail with at most two bodyless
+HTTPS redirects, and one conditional central-directory body no larger than 16
+MiB without redirect. Keep the 17,039,360-byte accepted-body cap, five-attempt
+cap, private exact inventory, aggregate-only public report, one-thread limits,
+12 GiB free-space gate, no retry/rerun, no whole download, and no member
+access.
+
+Claim boundary: this record is permission routing, not data or a result. It
+adds no neural, decoding, brain-specific, language, real-time, hardware,
+assistive, home-use, or clinical evidence.
+
+Evidence:
+`docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_AUTHORIZATION_DECISION.md`,
+`registries/marc1_freewill_central_directory_authorization_decision.v0.json`,
+and
+`tests/test_marc1_freewill_central_directory_authorization_decision.py`.

@@ -3084,9 +3084,33 @@ Eleven request invariants pass; all 93 focused MARC1-CD1 tests pass; and the
 complete repository suite passes 2,366 tests with 35 expected skips in 54.936
 seconds.
 
-Immediate next gate: complete repository verification, commit and push the
-exact request, and require both CI jobs green. Only then identify its commit,
-CI, scope, and boundary as the sole active Tier C packet. Wait for a fresh
-unambiguous maintainer `continue`, `approve`, or `proceed`; do not use the
-current message retroactively or implement/request anything from the packet
-alone.
+Request `950796d123272a459eedf1e431ba99f22a0c582e` passed Base Python job
+`93853089748` and Optional Neuro Readers job `93853089786` in CI
+`31513578445`. Codex then identified MARC1-CD1A as the sole active Tier C
+packet and named its exact scope and remaining decision boundary.
+
+The maintainer's next message was exactly `keep going, move the needle,
+continue, you approved to go on`. Read
+`docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_AUTHORIZATION_DECISION.md`,
+`registries/marc1_freewill_central_directory_authorization_decision.v0.json`,
+and
+`tests/test_marc1_freewill_central_directory_authorization_decision.py`. The
+separate decision preserves those 60 UTF-8 bytes and binds the unchanged
+green request, packet, contract, generated implementation, generated result,
+and parser hashes. It does not fabricate the packet recital as user words or
+expand the scope.
+
+Immediate next gate: test, commit, push, and obtain both green CI jobs for the
+exact decision. Before that green proof, do not implement the live wrapper,
+issue a public request, create a consumed marker, download the monolith, or
+access a member. After green decision proof, only generated/mock wrapper work
+is eligible; the one public sequence remains closed until that exact wrapper
+is separately committed, pushed, and remotely green.
+
+Local decision verification is complete: 12 decision invariants, 23 combined
+request/decision invariants, and all 168 MARC1 tests pass. The comparable
+optional-neuro suite passes 2,378 tests with 35 expected skips, exactly 12
+tests above the 2,366-test request baseline. The dependency-light suite also
+passes 2,307 tests with 204 expected skips. Ruff, compilation, JSON parsing,
+and diff checks are clean. These local results do not activate the decision;
+both remote jobs are still mandatory.

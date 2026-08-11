@@ -1288,7 +1288,20 @@ that exact wrapper is remotely green, one live sequence with three accepted
 response bodies totaling no more than 17,039,360 bytes. It authorizes nothing
 now, and all current counters are zero.
 
-Next gate: test, commit, push, and green the exact request. Then identify its
-commit, CI, scope, and boundary as the sole active Tier C packet and wait for a
-fresh packet-bound maintainer decision. Do not implement the live wrapper or
-request a public byte from the packet alone.
+Request `950796d` passed both jobs in CI `31513578445`. Codex then identified
+it as the sole active Tier C packet, and the maintainer supplied the fresh
+words `keep going, move the needle, continue, you approved to go on`. The
+separate MARC1-CD1A decision quotes those words exactly and binds the unchanged
+green request by hash.
+
+Next gate: test, commit, push, and green the exact decision. Only after both
+remote jobs pass may generated/mock live-wrapper implementation begin. The
+one public metadata/tail/directory execution remains closed until the exact
+wrapper is also remotely green. Tasks 4-5, whole-archive or member access,
+participant selection, signals, targets, models, scoring, and scientific
+promotion remain closed.
+
+Local routing verification passes 12 decision invariants, 168 focused tests,
+and the complete comparable 2,378-test optional-neuro suite with 35 expected
+skips. This is exactly 12 tests above the request baseline and changes no
+evidence claim.

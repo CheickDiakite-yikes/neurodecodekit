@@ -1216,6 +1216,12 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   The all-false request binds one future generated/mock live-wrapper milestone
   and, only after that exact wrapper is remotely green, one metadata body, one
   exact 128-KiB tail, and one conditional directory body under a 17,039,360-
-  byte cap. It authorizes nothing now. Commit, push, and green the packet, then
-  identify it as the sole active Tier C gate before accepting a fresh packet-
-  bound maintainer decision. Do not use an earlier `continue` retroactively.
+  byte cap. Request `950796d` passed Base Python job `93853089748` and Optional
+  Neuro Readers job `93853089786` in CI `31513578445`, after which Codex named
+  it as the sole active Tier C gate. The maintainer's fresh words `keep going,
+  move the needle, continue, you approved to go on` are now quoted verbatim in
+  `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_AUTHORIZATION_DECISION.md` and its
+  machine registry. That decision remains ineffective until its own exact
+  commit is pushed and both CI jobs are green. Before that proof, do not
+  implement the live wrapper, request a public byte, or create a consumed
+  marker.
