@@ -6140,3 +6140,40 @@ upgrade.
 Evidence: `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_PREREGISTRATION.md`,
 `registries/marc1_freewill_central_directory_contract.v0.json`, and
 `tests/test_marc1_freewill_central_directory_preregistration.py`.
+
+## 0184 - Implement MARC1-CD1 Without A Live Archive Surface
+
+Decision: accept a dependency-free generated implementation only after
+contract `cf63043` passed both required CI jobs. The module exposes `plan`,
+generated `qualify`, and aggregate `inspect`, but no execute mode, network
+opener, DNS query, URL argument, local archive path, or member-content reader.
+
+Archive decision: represent the exact 13,591,548,048-byte identity with one
+128-KiB generated tail and one 148,910-byte generated central directory.
+Structurally parse a comment-embedded EOCD decoy, the classic EOCD, ZIP64
+locator, full ZIP64 EOCD, and all eighteen entries using `struct`. Materialize
+no local header or payload byte.
+
+Transport decision: exercise exact direct and two-bodyless-redirect response
+queues with injected destination resolution. Require terminal `206`, exact
+single-part ranges and lengths, identity encoding, body caps, safe HTTPS
+destinations, strict ordering, and no retry, exploratory range, or full-file
+fallback.
+
+Privacy and validation decision: keep names and offsets only in the generated
+private manifest. Permit aggregate counts, hashes, measurements, warnings,
+unavailable fields, and claim boundaries in public output. Require canonical
+replay, atomic no-overwrite output, and all 32 frozen refusal mutations. A
+development qualification can debug these mechanics but is not the one
+registered closeout.
+
+Boundary: commit, push, and require both remote CI jobs green for the exact
+implementation before one registered generated closeout. Do not prepare an
+all-false live packet from development output. Public metadata or archive
+ranges, member payloads, neural signals, events, targets, models, scores, and
+claim upgrades remain unauthorized.
+
+Evidence: `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_IMPLEMENTATION.md`,
+`registries/marc1_freewill_central_directory_implementation.v0.json`,
+`src/neurodecodekit/datasets/marc1_central_directory_audit.py`, and
+`tests/test_marc1_freewill_central_directory_implementation.py`.

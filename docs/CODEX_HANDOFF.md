@@ -2975,3 +2975,42 @@ and keep exact member inventory private. Commit and push this contract and
 require both CI jobs green before implementation. Public metadata, archive
 ranges, member acquisition, neural data, targets, models, and scores remain
 closed Tier C work.
+
+## 2026-08-11 MARC1-CD1 Generated Implementation Handoff
+
+Read `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_IMPLEMENTATION.md`,
+`registries/marc1_freewill_central_directory_implementation.v0.json`,
+`src/neurodecodekit/datasets/marc1_central_directory_audit.py`, and
+`tests/test_marc1_freewill_central_directory_implementation.py`.
+
+Contract `cf6304385f61fc7713ae7fd4526d86e45e4c03e5` passed Base Python
+job `93837415016` and Optional Neuro Readers job `93837415174` in CI
+`31508903399` before implementation. The module is standard-library and
+generated-only. Its CLI has only `plan`, `qualify --output-dir`, and aggregate
+`inspect`; there is no live opener, DNS query, real archive path, member-open
+surface, or execute mode.
+
+The fixture represents 13,591,548,048 virtual bytes with 280,249 materialized
+bytes: one 128-KiB tail and one 148,910-byte central directory. It includes an
+EOCD comment decoy, complete in-tail ZIP64 records, eighteen entries, methods
+0/8, one UTF-8 path, and one ZIP64 member. No local header or payload byte
+exists. The parser uses `struct`, enforces exact range and redirect semantics,
+strict path/file-kind/flag/extra-field validation, private exact inventory,
+aggregate-only output, deterministic replay, atomic no-overwrite output, and
+all 32 frozen refusals.
+
+The latest development-only qualification passed constructed `MARC1CDG-R1`
+in 0.00740712508559227 seconds at 26,181,632-byte peak RSS, emitted 11,573
+bytes, and removed its two exact temporary files and directory. It is not the
+registered closeout. Forty-two implementation tests pass; the complete suite
+passes 2,343 tests with 35 expected skips under one-thread limits.
+
+Immediate next gate: commit and push the exact implementation and require both
+CI jobs green. Then run one registered generated closeout exactly once, bind
+its aggregate measurements, remove its exact temporary outputs, and push that
+result. Only after the closeout is remotely green may an all-false Tier C
+packet be prepared. Do not issue a live request, download the monolith, read a
+member or signal, run a model, score, or call this scientific evidence.
+
+The unrelated untracked workbook inspection sidecar remains untouched at
+SHA-256 `b96bbea77ec93e59c0db7c4bcaeb4a9182f1f7cc7039d13fb223b65e0005beb6`.

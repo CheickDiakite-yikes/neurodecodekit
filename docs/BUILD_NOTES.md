@@ -7671,3 +7671,41 @@ archive inventory.
 
 Scientific claim not established: the contract contains only generated/mock
 metadata and establishes no neural effect or decoding result.
+
+## 2026-08-11 - MARC1-CD1 Generated Central-Directory Implementation
+
+- Began only after contract `cf63043` passed Base Python job `93837415016`
+  and Optional Neuro Readers job `93837415174` in CI `31508903399`.
+- Added the dependency-free
+  `neurodecodekit.datasets.marc1_central_directory_audit` module with only
+  `plan`, generated/mock `qualify`, and aggregate `inspect`. It contains no
+  network opener, DNS query, real archive path, member reader, or execute mode.
+- Represented the exact 13,591,548,048-byte identity with 280,249 generated
+  bytes: a 128-KiB tail, 148,910-byte central directory, EOCD decoy, complete
+  ZIP64 trailer, 18 entries, methods 0/8, one UTF-8 path, one ZIP64 member, and
+  zero local-header or payload bytes.
+- Implemented strict direct and two-bodyless-redirect response queues, exact
+  `206` and `Content-Range` checks, bounded body reads, injected destination
+  resolution, structural `struct` parsing, safe NFC POSIX paths, ZIP64 extra
+  ordering, file-kind checks, private/public separation, canonical replay,
+  atomic output, and 32 frozen refusal mutations.
+- The latest development-only run passed constructed `MARC1CDG-R1` in
+  0.00740712508559227 seconds at 26,181,632-byte peak RSS. It emitted 5,897
+  aggregate bytes plus 5,676 private-manifest bytes, and both exact files and
+  their temporary directory were removed.
+- Forty-two focused implementation tests pass. The complete dependency-light
+  suite passes 2,343 tests with 35 expected skips under one-thread limits.
+  Ruff is clean. Every public, network, real archive, payload, neural, target,
+  model, prediction, score, and claim counter remains zero.
+- The development run is not the registered closeout. Next gate: commit, push,
+  and green this exact implementation before one registered generated run.
+  The live audit remains a later all-false Tier C packet and fresh decision.
+
+Engineering capability added: bounded transport, EOCD/ZIP64, exact
+central-directory inventory, privacy, replay, refusal, output, and resource
+mechanics now have a dependency-free generated implementation that never
+materializes the 13.59 GB archive.
+
+Scientific claim not established: no public archive byte, member payload,
+human signal, event, target, model, prediction, or score was accessed, so this
+work adds no neural or decoding evidence.

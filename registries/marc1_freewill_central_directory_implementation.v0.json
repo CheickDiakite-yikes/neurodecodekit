@@ -1,0 +1,225 @@
+{
+  "schema_name": "neurodecodekit.marc1_freewill_central_directory_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "MARC1-CD1-generated-central-directory-implementation-v0",
+  "recorded_at_local": "2026-08-11",
+  "status": "generated_mock_implementation_complete_registered_closeout_not_executed",
+  "artifact_bindings": {
+    "research_document": {
+      "path": "docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_RESEARCH.md",
+      "sha256": "bb06cef14e96613215f01f9a260a45b4bdc8696c49e332e3565e8a32aa14baa5"
+    },
+    "research_registry": {
+      "path": "registries/marc1_freewill_central_directory_research.v0.json",
+      "sha256": "d8bc01406f319d6df8f5e18bd0fb724ef61c46a104d3962b7b59db129ee9f5f8"
+    },
+    "contract": {
+      "path": "registries/marc1_freewill_central_directory_contract.v0.json",
+      "sha256": "900417812d978030b7b92ad04befa4a7ce7f9e54fe479cd8c2c43ccfab1b8d69"
+    },
+    "preregistration_document": {
+      "path": "docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_PREREGISTRATION.md",
+      "sha256": "4558fe5e58829c1cae6998249f83b75f458e75cdc39624411d1c2d75fc1147b8"
+    },
+    "implementation_source": {
+      "path": "src/neurodecodekit/datasets/marc1_central_directory_audit.py",
+      "sha256": "db8b6975c81d4afe0a5ede0126956f4113159c98b3975cbded4ad322bce23de6"
+    },
+    "implementation_document": {
+      "path": "docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_IMPLEMENTATION.md",
+      "sha256": "9d09336257b250941fd421fb8afbb86b694e6e692a88d801b0a3401986477314"
+    },
+    "implementation_tests": {
+      "path": "tests/test_marc1_freewill_central_directory_implementation.py",
+      "sha256": "03e505e77f2496282f9baeb039ed1553210fa9efae0eca762f618128e7bd3eb9"
+    }
+  },
+  "green_contract_proof": {
+    "commit": "cf6304385f61fc7713ae7fd4526d86e45e4c03e5",
+    "CI_run_id": 31508903399,
+    "base_job_id": 93837415016,
+    "optional_neuro_job_id": 93837415174,
+    "both_required_jobs_green": true,
+    "contract_sha256": "900417812d978030b7b92ad04befa4a7ce7f9e54fe479cd8c2c43ccfab1b8d69"
+  },
+  "dependency_contract": {
+    "base_dependency_changes": [],
+    "implementation_dependencies": [
+      "python_standard_library"
+    ],
+    "structural_parser": "struct",
+    "zipfile_parser_used": false,
+    "network_client_present": false,
+    "DNS_client_present": false,
+    "real_archive_reader_present": false,
+    "member_content_reader_present": false,
+    "model_library_present": false
+  },
+  "interface": {
+    "module": "neurodecodekit.datasets.marc1_central_directory_audit",
+    "commands": [
+      "plan",
+      "qualify",
+      "inspect"
+    ],
+    "execute_command_available": false,
+    "URL_argument_available": false,
+    "host_argument_available": false,
+    "archive_path_argument_available": false,
+    "participant_argument_available": false,
+    "member_argument_available": false,
+    "target_argument_available": false,
+    "model_or_provider_argument_available": false,
+    "inspect_private_manifest_allowed": false
+  },
+  "virtual_archive_implementation": {
+    "registered_archive_bytes": 13591548048,
+    "materialized_generated_bytes": 280249,
+    "tail_bytes": 131072,
+    "central_directory_bytes": 148910,
+    "local_header_bytes": 0,
+    "member_payload_bytes": 0,
+    "entry_count": 18,
+    "directory_count": 4,
+    "regular_file_count": 14,
+    "ZIP64_extended_member_count": 1,
+    "UTF8_member_count": 1,
+    "compression_methods": [
+      0,
+      8
+    ],
+    "EOCD_decoy_in_comment": true,
+    "classic_EOCD_in_tail": true,
+    "ZIP64_locator_in_tail": true,
+    "complete_ZIP64_EOCD_in_tail": true,
+    "single_disk_only": true,
+    "safe_NFC_POSIX_relative_paths": true,
+    "exact_private_inventory_emitted": true,
+    "public_member_names_or_offsets_allowed": false
+  },
+  "transport_implementation": {
+    "transport": "injected_generated_response_queue",
+    "live_opener_present": false,
+    "direct_path_requests": 3,
+    "redirect_path_requests": 5,
+    "bodyless_redirects": 2,
+    "mock_body_bytes_per_path": 280249,
+    "terminal_status": 206,
+    "Content_Range_exact": true,
+    "Content_Length_exact": true,
+    "identity_encoding_required": true,
+    "multipart_forbidden": true,
+    "redirect_DNS_resolution_injected": true,
+    "actual_DNS_queries": 0,
+    "whole_download_path_present": false,
+    "exploratory_range_path_present": false,
+    "additional_ZIP64_probe_present": false,
+    "retry_or_rerun_path_present": false
+  },
+  "validation_implementation": {
+    "required_mutation_count": 32,
+    "acceptance_gate_count": 14,
+    "deterministic_fixture_builds": 2,
+    "deterministic_transport_paths": 2,
+    "canonical_report_replay_checked": true,
+    "strict_JSON_duplicate_key_rejection": true,
+    "strict_path_validation": true,
+    "strict_ZIP64_extra_order": true,
+    "strict_trailing_byte_rejection": true,
+    "aggregate_public_firewall": true,
+    "atomic_output_directory": true,
+    "output_overwrite_allowed": false,
+    "output_symlink_parent_allowed": false,
+    "registered_measured_closeout_runs": 0
+  },
+  "latest_development_qualification": {
+    "evidence_status": "development_only_not_registered_closeout",
+    "constructed_route": "MARC1CDG-R1",
+    "generated_input_bytes": 280249,
+    "generated_output_bytes": 11573,
+    "central_directory_bytes": 148910,
+    "entry_count": 18,
+    "ZIP64_extended_member_count": 1,
+    "mutation_refusals_passed": 32,
+    "acceptance_gates_passed": 14,
+    "runtime_seconds": 0.00740712508559227,
+    "peak_RSS_bytes": 26181632,
+    "aggregate_report": {
+      "bytes": 5897,
+      "sha256": "35e9f7100d993048bb22d6e871f3421396b29f8aab4aa32a5ae8e878f71061e0"
+    },
+    "generated_private_manifest": {
+      "bytes": 5676,
+      "sha256": "c38c0be784f19401b08da26bdd2d0dd6a43339c34202f6845c7ca7cb6b5c4bf0"
+    },
+    "temporary_outputs_removed": true
+  },
+  "resource_caps": {
+    "cpu_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "materialized_generated_fixture_bytes": 2097152,
+    "combined_output_bytes": 1048576,
+    "network_bytes": 0,
+    "real_payload_bytes": 0
+  },
+  "authorization_flags": {
+    "registered_measured_closeout_authorized_before_implementation_green": false,
+    "public_metadata_request_authorized": false,
+    "public_archive_range_request_authorized": false,
+    "real_archive_path_read_authorized": false,
+    "archive_member_content_read_authorized": false,
+    "real_signal_or_event_read_authorized": false,
+    "target_or_label_access_authorized": false,
+    "real_derivative_creation_authorized": false,
+    "model_training_inference_or_scoring_authorized": false,
+    "provider_or_language_model_authorized": false,
+    "release_or_claim_upgrade_authorized": false
+  },
+  "access_counters": {
+    "public_HTTP_requests": 0,
+    "DNS_queries": 0,
+    "network_bytes": 0,
+    "real_archive_path_operations": 0,
+    "archive_member_content_reads": 0,
+    "real_signal_sample_reads": 0,
+    "real_event_or_onset_reads": 0,
+    "target_or_label_reads": 0,
+    "real_derivative_rows": 0,
+    "parameter_update_fits": 0,
+    "model_inference_calls": 0,
+    "prediction_sets": 0,
+    "prediction_freezes": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "unavailable_fields": [
+    "whole_archive_MD5_verification",
+    "member_CRC_verification",
+    "local_header_reconciliation",
+    "member_payload_integrity",
+    "participant_selection",
+    "signal_quality",
+    "channel_inventory",
+    "event_inventory",
+    "target_inventory",
+    "model_result",
+    "score",
+    "end_to_end_latency",
+    "scientific_interpretation"
+  ],
+  "next_gate": {
+    "measured_generated_closeout_requires_this_implementation_green": true,
+    "public_access_eligible_now": false,
+    "public_metadata_requires_later_exact_Tier_C_decision": true,
+    "public_archive_range_requires_later_exact_Tier_C_decision": true,
+    "real_payload_eligible_after_generated_closeout": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "A dependency-free generated implementation validates bounded HTTP range semantics complete in-tail ZIP64 discovery strict central-directory structure private inventory separation deterministic replay refusals outputs and resource caps without materializing the 13.59 GB archive.",
+    "scientific_claim_not_established": "No public archive byte member payload human neural signal event target model prediction or score was accessed so this work establishes no neural effect movement decoding source attribution or scientific result."
+  }
+}

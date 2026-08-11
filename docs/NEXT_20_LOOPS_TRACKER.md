@@ -1254,6 +1254,18 @@ the 13.59 GB identity with only generated ranges, fixes 18 safe entries, direct
 and two-bodyless-redirect paths, complete in-tail ZIP64, private/public output
 separation, deterministic replay, 32 refusals, and no live surface.
 
-Next gate: commit, push, and green this exact contract; then implement and run
-one generated closeout under Tier B. Do not prepare the live packet from the
-contract alone.
+Contract `cf63043` passed both required jobs in CI `31508903399` before the
+dependency-free generated implementation began. The implementation now
+materializes only 280,249 bytes, validates both frozen transport paths,
+structurally reconciles the decoy-bearing EOCD and complete ZIP64 records,
+parses an 18-entry 148,910-byte directory, preserves the private/public split,
+replays canonically, and refuses all 32 mutations. Forty-two implementation
+tests pass. Its latest development run emitted 11,573 temporary bytes in
+0.007407 seconds at 26,181,632-byte peak RSS; those files were removed and the
+run is not registered evidence.
+
+Next gate: commit, push, and green this exact implementation; then execute one
+registered generated closeout under Tier B. Task 3 remains incomplete until
+that closeout is consumed. Do not prepare the live packet from a development
+run. Tasks 4-5, public responses, participant selection, payload acquisition,
+signals, targets, models, and scoring remain closed.
