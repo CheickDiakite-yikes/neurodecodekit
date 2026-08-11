@@ -2891,3 +2891,33 @@ The final pending harness uses an injected RSS probe for deterministic
 roundtrip/privacy tests, keeps a real subprocess qualification when its parent
 is below cap, skips only exact inherited-high-water `MARC1G-F06`, and directly
 tests over-cap refusal. Do not weaken the production 256-MiB guard.
+
+## 2026-08-11 MARC-1 Generated Result Handoff
+
+Read `docs/MARC_1_GENERATED_QUALIFICATION_RESULT.md`,
+`registries/marc1_generated_qualification_result.v0.json`, and
+`tests/test_marc1_generated_qualification_result.py`.
+
+Exact implementation `e35a58743766ba404ae16f63804481a5f51531c9`
+passed Base Python job `93826102571` and Optional Neuro Readers job
+`93826102044` in CI `31505555044` before the one closeout. The fresh generated
+run passed `MARC1G-R1` in 0.006588957970961928 seconds at 23,511,040-byte peak
+RSS. It used 81,139 generated input bytes, emitted 7,813 bytes, and made 14
+range calls returning 202,529 metadata bytes. Zero reads overlapped compressed
+member payloads.
+
+All 14 members, the forced ZIP64 record, two deterministic replays, both
+modality profiles, 18 channel records, the causal window, 4/4/4 target roles,
+twelve comparators, all 24 mutations, and all 14 acceptance gates passed. No
+network, real path, human signal, event, target, derivative, model, prediction,
+score, or claim operation occurred. The temporary report and generated private
+manifest were removed after their hashes were recorded.
+
+Twelve result invariants pass; the combined focused MARC-1 suite passes 51
+tests, and the complete repository suite passes 2,273 tests with 35 expected
+skips in 56.275 seconds.
+
+The result is consumed with no retry or rerun. Next safe work is Tier A design
+of a separately named metadata-only central-directory range audit for the
+13.59 GB Freewill archive. Do not issue a HEAD or range request from this
+result; live metadata remains a new exact Tier C decision.

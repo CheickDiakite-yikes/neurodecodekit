@@ -7575,3 +7575,38 @@ result.
   artifact tests inject only the RSS probe, and a separate over-cap assertion
   preserves the resource refusal. Production source and every cap are
   unchanged.
+
+## 2026-08-11 - MARC-1 Generated Qualification Closeout
+
+- Exact implementation `e35a587` passed Base Python job `93826102571` and
+  Optional Neuro Readers job `93826102044` in CI `31505555044` before the one
+  registered closeout.
+- Ran one fresh Python `-S` process with one thread, one worker, one numerical
+  job, no network surface, no real input path, and one new private temporary
+  output directory.
+- Passed `MARC1G-R1` over 81,139 generated input bytes in
+  0.006588957970961928 seconds at 23,511,040-byte peak RSS. The two outputs
+  totaled 7,813 bytes and were removed after their exact hashes were bound.
+- Inventoried the 67,916-byte 14-member ZIP with one forced ZIP64 record. Fourteen
+  range calls returned 202,529 metadata bytes across replay and adversarial
+  traversals, with zero member-content reads, extractions, or payload-overlap
+  bytes.
+- Validated 18 explicit channel records, both source profiles, the causal
+  interface window, 4/4/4 physical target roles, all twelve comparators, two
+  deterministic replays, all 24 mutations, and all 14 acceptance gates.
+- Every network, real archive, signal, event/onset, target, derivative, model,
+  prediction, freeze, delivery, score, and claim counter remained zero.
+- Added 12 aggregate-result invariants. All 51 focused MARC-1 tests pass, and
+  the complete suite passes 2,273 tests with 35 expected skips in 56.275
+  seconds, exactly 12 tests above the green implementation baseline.
+- The generated closeout is consumed with no retry or rerun. Only Tier A design
+  of a metadata-only range audit is now eligible; any live request is still a
+  separate Tier C decision.
+
+Engineering capability added: bounded random-access ZIP inventory and strict
+multimodal causal firewalls now have a measured, deterministic generated
+qualification under explicit privacy and resource caps.
+
+Scientific claim not established: the run used no human neural data and no
+model, so it establishes no neural effect, movement decoding, source
+attribution, thought decoding, or real-time capability.

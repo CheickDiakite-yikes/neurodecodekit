@@ -539,12 +539,18 @@ The generated MARC-1 implementation now exists in
 `docs/MARC_1_GENERATED_QUALIFICATION_IMPLEMENTATION.md` and
 `registries/marc1_generated_qualification_implementation.v0.json`. It has no
 network client, real archive reader, member-open surface, model, or live CLI
-option. Thirty-nine focused contract/implementation tests and the complete
-2,261-test dependency-light suite pass locally. The registered measured
-generated closeout remains unexecuted. Commit, push, and obtain both green CI
-jobs for this exact source, implementation record, and tests before running
-one closeout CLI qualification. A successful generated route will still not
-authorize public metadata or payload access.
+option. Exact implementation `e35a58743766ba404ae16f63804481a5f51531c9`
+passed Base Python job `93826102571` and Optional Neuro Readers job
+`93826102044` in CI `31505555044` before the one generated closeout. Read
+`docs/MARC_1_GENERATED_QUALIFICATION_RESULT.md` and
+`registries/marc1_generated_qualification_result.v0.json`. The one run passed
+`MARC1G-R1` in 0.006588957970961928 seconds at 23,511,040-byte peak RSS,
+inventoried all 14 members with zero payload overlap, validated both profiles,
+and refused all 24 mutations. Every public, real-data, model, score, and claim
+counter remained zero. Fifty-one focused MARC-1 tests and the complete
+2,273-test dependency-light suite pass. The closeout is consumed with no
+rerun. The next safe work is Tier A design of a metadata-only central-directory
+range audit; any live request remains a separately named Tier C decision.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

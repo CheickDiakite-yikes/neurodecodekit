@@ -1,0 +1,204 @@
+{
+  "schema_name": "neurodecodekit.marc1_generated_qualification_result",
+  "schema_version": "0.1.0",
+  "result_id": "MARC-1-generated-qualification-result-v0",
+  "recorded_at_local": "2026-08-11",
+  "status": "consumed_passed_generated_qualification_no_scientific_value",
+  "route": "MARC1G-R1",
+  "artifact_bindings": {
+    "contract": {
+      "path": "registries/marc1_generated_qualification_contract.v0.json",
+      "sha256": "17733537c6a5038eb0781098a4b2452d71526c47eb4314cebb19d1975f79a7ad"
+    },
+    "implementation_registry": {
+      "path": "registries/marc1_generated_qualification_implementation.v0.json",
+      "sha256": "88a08c797f9ac2c719e510fe822da2eee43963849334eed02ff37ed7b8ad93d2"
+    },
+    "implementation_source": {
+      "path": "src/neurodecodekit/datasets/marc1_generated_qualification.py",
+      "sha256": "172c033b1755df873d49331730552be6ca9737c4c08da4e164d80bb2cbe74d07"
+    },
+    "result_document": {
+      "path": "docs/MARC_1_GENERATED_QUALIFICATION_RESULT.md",
+      "sha256": "a0880201e843ad38fe714c155473161ef87977859ed713acfc169823b7bdcd98"
+    },
+    "result_tests": {
+      "path": "tests/test_marc1_generated_qualification_result.py",
+      "sha256": "5daacef6db8373a4ee4fedc2fa9bf479b5d973958947e1315f82e59dfdda5b94"
+    }
+  },
+  "green_implementation_proof": {
+    "commit": "e35a58743766ba404ae16f63804481a5f51531c9",
+    "CI_run_id": 31505555044,
+    "base_job_id": 93826102571,
+    "optional_neuro_job_id": 93826102044,
+    "both_required_jobs_green": true,
+    "implementation_registry_sha256": "88a08c797f9ac2c719e510fe822da2eee43963849334eed02ff37ed7b8ad93d2"
+  },
+  "execution_identity": {
+    "registered_runs": 1,
+    "process_start": "fresh_python_minus_S",
+    "generated_only": true,
+    "network_available_to_module": false,
+    "real_input_path_available_to_module": false,
+    "aggregate_inspection_runs": 1
+  },
+  "generated_output_artifacts": {
+    "aggregate_report": {
+      "bytes": 5018,
+      "sha256": "f7c4de84f7d80bee7461ae38e13c560e54f075a6a6df41faa1aa853a48599c70"
+    },
+    "private_manifest": {
+      "bytes": 2795,
+      "sha256": "008ae558bd0192bb853ddc0d8dafa873ba6f048dcc62b0ebaeb6104b0f1150cf"
+    },
+    "combined_bytes": 7813,
+    "temporary_output_directory_removed": true,
+    "generated_outputs_committed": false
+  },
+  "archive_summary": {
+    "archive_bytes": 67916,
+    "archive_sha256": "4058a3520ea3dece36fced09edf0b4e8183f145943e383fe29fcee8c5daf15ed",
+    "inventory_sha256": "8f76c98e3d057ff8f40cc51aa2dd044925cb5ab9bf15c5aa79a47d9895dd5d50",
+    "member_count": 14,
+    "root_metadata_member_count": 4,
+    "subject_count": 2,
+    "forced_ZIP64_member_count": 1,
+    "compression_method_counts": {
+      "0": 2,
+      "8": 12
+    },
+    "compressed_member_bytes": 329,
+    "uncompressed_member_bytes": 310,
+    "inventory_replays": 2,
+    "member_content_reads": 0,
+    "member_extractions": 0,
+    "payload_interval_read_bytes": 0
+  },
+  "multimodal_summary": {
+    "plan_sha256": "843ba53699ab024d915a8988887477285f93410f607a920e7dfa409856931c5e",
+    "source_profile_count": 2,
+    "channel_record_count": 18,
+    "source_type_counts": {
+      "ACCEL": 3,
+      "AUDIO": 1,
+      "EEG": 8,
+      "EMG": 2,
+      "ENCODER": 1,
+      "EOG": 2,
+      "TRIGGER": 1
+    },
+    "fit_row_count": 4,
+    "target_blind_prediction_row_count": 4,
+    "isolated_scorer_row_count": 4,
+    "comparator_role_count": 12,
+    "causal": true,
+    "future_context_samples": 0,
+    "end_to_end_latency_measured": false
+  },
+  "mutation_summary": {
+    "required_count": 24,
+    "passed_count": 24,
+    "route_counts": {
+      "MARC1G-F01": 3,
+      "MARC1G-F02": 9,
+      "MARC1G-F03": 6,
+      "MARC1G-F04": 2,
+      "MARC1G-F05": 3,
+      "MARC1G-F06": 1
+    }
+  },
+  "measurements": {
+    "generated_input_bytes": 81139,
+    "generated_output_bytes": 7813,
+    "runtime_seconds": 0.006588957970961928,
+    "peak_RSS_bytes": 23511040,
+    "range_read_calls": 14,
+    "range_bytes_returned": 202529,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "producer_is_causal": true,
+    "end_to_end_latency_measured": false,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0
+  },
+  "resource_caps": {
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "generated_archive_bytes": 8388608,
+    "range_bytes_returned": 8388608,
+    "range_read_calls": 256,
+    "combined_output_bytes": 1048576,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "network_bytes": 0,
+    "real_payload_bytes": 0
+  },
+  "acceptance_gates": {
+    "exact_14_member_inventory": true,
+    "forced_ZIP64_member_observed": true,
+    "zero_member_content_reads": true,
+    "zero_payload_interval_reads": true,
+    "range_and_archive_caps": true,
+    "safe_unique_regular_members": true,
+    "both_multimodal_profiles_valid": true,
+    "causal_window_valid": true,
+    "physical_target_firewall_valid": true,
+    "all_12_comparator_roles_represented": true,
+    "all_24_mutations_refused": true,
+    "two_byte_identical_replays": true,
+    "resource_and_output_caps": true,
+    "all_real_model_score_and_claim_counters_zero": true
+  },
+  "access_counters": {
+    "network_requests": 0,
+    "network_bytes": 0,
+    "real_archive_path_operations": 0,
+    "archive_member_content_reads": 0,
+    "real_signal_sample_reads": 0,
+    "real_event_or_onset_reads": 0,
+    "target_or_label_reads": 0,
+    "real_derivative_rows": 0,
+    "parameter_update_fits": 0,
+    "model_inference_calls": 0,
+    "prediction_sets": 0,
+    "prediction_freezes": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "warnings": [
+    "Generated fixtures contain no human neural data.",
+    "The generated causal window is an interface fixture, not a frozen real-data window.",
+    "Unavailable modality controls remain unavailable rather than being replaced with zeros.",
+    "End-to-end latency was not measured.",
+    "MARC1G-R1 does not authorize a public request or scientific claim."
+  ],
+  "unavailable_fields": [
+    "real participant identity",
+    "real channel geometry",
+    "human EEG EOG EMG acceleration or encoder samples",
+    "real event or movement-onset timestamps",
+    "held-out human targets",
+    "decoding accuracy",
+    "end-to-end latency"
+  ],
+  "disposition": {
+    "registered_generated_closeout_runs": 1,
+    "consumed": true,
+    "retry_or_rerun_authorized": false,
+    "public_metadata_access_authorized": false,
+    "real_payload_access_authorized": false,
+    "next_Tier_A_design_is_metadata_range_audit": true,
+    "next_public_operation_requires_new_exact_Tier_C_decision": true
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "A dependency-free generated qualification demonstrated bounded ZIP inventory deterministic multimodal causal firewalls strict target isolation comparator availability adversarial refusal output privacy and resource accounting without member payload reads.",
+    "scientific_claim_established": false,
+    "scientific_claim_not_established": "No human neural data or model was used so this result establishes no neural effect movement decoding source attribution thought decoding or real-time capability."
+  }
+}

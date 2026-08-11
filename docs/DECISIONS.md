@@ -6050,3 +6050,30 @@ Evidence: `docs/MARC_1_GENERATED_QUALIFICATION_IMPLEMENTATION.md`,
 `registries/marc1_generated_qualification_implementation.v0.json`,
 `src/neurodecodekit/datasets/marc1_generated_qualification.py`, and
 `tests/test_marc1_generated_qualification_implementation.py`.
+
+## 0181 - Consume MARC1G-R1 As Engineering Proof Only
+
+Decision: accept the one post-green generated closeout at `MARC1G-R1`. It
+demonstrates deterministic bounded ZIP metadata inventory and multimodal
+firewall mechanics, including 24/24 adversarial refusals, without reading a
+member payload.
+
+Resource decision: preserve the measured 0.006588957970961928-second runtime,
+23,511,040-byte peak RSS, 81,139 generated input bytes, 7,813 output bytes, 14
+range calls, and 202,529 returned metadata bytes. Preserve the failed CI
+attempts as test-harness history; they were not registered closeout runs and
+did not alter the production source or 256-MiB cap.
+
+Artifact decision: retain only aggregate measurements plus SHA-256 identities
+for the 5,018-byte aggregate report and 2,795-byte generated private manifest.
+Remove the exact invocation-created temporary directory. Do not commit either
+generated output as inspection debris.
+
+Boundary: consume the closeout with no retry or rerun. `MARC1G-R1` is not
+human-neural evidence and authorizes no public request. The next eligible work
+is Tier A metadata-range-audit design; one live request requires a separately
+named Tier C packet and exact maintainer decision.
+
+Evidence: `docs/MARC_1_GENERATED_QUALIFICATION_RESULT.md`,
+`registries/marc1_generated_qualification_result.v0.json`, and
+`tests/test_marc1_generated_qualification_result.py`.

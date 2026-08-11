@@ -1222,8 +1222,11 @@ contract before implementation.
 
 Contract `4494d57` passed Base Python job `93814507482` and Optional Neuro
 Readers job `93814507355` in CI `31502115918` before implementation. Tasks 1-2
-are now implemented locally with a no-live-surface module, atomic bounded
-outputs, all 24 mutations, 25 focused implementation tests, and a complete
-2,261-test dependency-light pass. The registered measured generated closeout
-is still pending the exact implementation commit, push, and two green jobs.
-Tasks 3-5 remain closed Tier C work.
+were implemented without a live surface. Exact implementation `e35a587` then
+passed both jobs in CI `31505555044` before one generated closeout. The run
+passed `MARC1G-R1` with 14 members, zero payload-overlap bytes, two validated
+profiles, twelve comparators, 24/24 refusals, 0.006588957970961928-second
+runtime, 23,511,040-byte peak RSS, and zero real/model/score operations. Tasks
+1-2 are complete and consumed with no rerun. Task 3 is now eligible for Tier A
+contract design only; its live metadata request and tasks 4-5 remain closed
+Tier C work.

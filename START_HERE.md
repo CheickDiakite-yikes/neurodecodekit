@@ -1145,7 +1145,11 @@ S25 remains sealed until a separate final-only zero-shot packet is complete.
 Read `docs/MARC_1_MULTIMODAL_ARTIFACT_RESOLVED_MOVEMENT_RESEARCH.md`,
 `registries/marc1_multimodal_artifact_resolved_movement_research.v0.json`,
 `docs/MARC_1_GENERATED_QUALIFICATION_PREREGISTRATION.md`, and
-`registries/marc1_generated_qualification_contract.v0.json`.
+`registries/marc1_generated_qualification_contract.v0.json`. Then read
+`docs/MARC_1_GENERATED_QUALIFICATION_IMPLEMENTATION.md`,
+`registries/marc1_generated_qualification_implementation.v0.json`,
+`docs/MARC_1_GENERATED_QUALIFICATION_RESULT.md`, and
+`registries/marc1_generated_qualification_result.v0.json`.
 
 WO9R remains the strongest positive result: held-out low-frequency execution
 and imagery task information across twelve people. Its source interpretation
@@ -1163,10 +1167,13 @@ download. The next Tier B gate is now frozen as a dependency-free generated
 qualification: 14 safe ZIP members, no member-content reads, two modality-role
 profiles, past-only windows, physical target isolation, twelve comparators,
 and 24 adversarial refusals. Contract `4494d57` passed both jobs in CI
-`31502115918`, and the generated-only module, implementation record, and 25
-focused implementation tests now exist locally. The registered measured
-closeout has not run; it requires this exact implementation commit to be
-pushed and both required CI jobs green first. No real archive request,
-payload, signal, target, fit, prediction, or score is currently authorized. A
-separate exact Tier C metadata decision is required after the generated
-implementation and closeout are green.
+`31502115918`. Exact implementation `e35a587` then passed both jobs in CI
+`31505555044` before one generated closeout. That run passed `MARC1G-R1` in
+0.006589 seconds at 23,511,040-byte peak RSS: 14 members, zero payload-overlap
+bytes, both modality plans, all twelve comparators, and all 24 refusals passed.
+The result is consumed and has no scientific value because every real-data,
+target, model, and score counter remained zero. Read
+`docs/MARC_1_GENERATED_QUALIFICATION_RESULT.md`. The next eligible task is
+Tier A design of a metadata-only central-directory range audit. No real
+archive request or payload is authorized; that remains a new exact Tier C
+decision.
