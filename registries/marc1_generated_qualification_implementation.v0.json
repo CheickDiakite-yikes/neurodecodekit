@@ -1,0 +1,187 @@
+{
+  "schema_name": "neurodecodekit.marc1_generated_qualification_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "MARC-1-generated-qualification-implementation-v0",
+  "recorded_at_local": "2026-08-11",
+  "status": "generated_implementation_complete_closeout_not_executed",
+  "artifact_bindings": {
+    "contract": {
+      "path": "registries/marc1_generated_qualification_contract.v0.json",
+      "sha256": "17733537c6a5038eb0781098a4b2452d71526c47eb4314cebb19d1975f79a7ad"
+    },
+    "preregistration_document": {
+      "path": "docs/MARC_1_GENERATED_QUALIFICATION_PREREGISTRATION.md",
+      "sha256": "57b2a922d3f420ee957d4b5b95e3928684f3634b029215fb798f4803990be9f7"
+    },
+    "implementation_source": {
+      "path": "src/neurodecodekit/datasets/marc1_generated_qualification.py",
+      "sha256": "172c033b1755df873d49331730552be6ca9737c4c08da4e164d80bb2cbe74d07"
+    },
+    "implementation_document": {
+      "path": "docs/MARC_1_GENERATED_QUALIFICATION_IMPLEMENTATION.md",
+      "sha256": "a6ac009ff5ffc5b3c5d5a093299a958e0417f21de9335b7cd99d2876c03c5828"
+    },
+    "implementation_tests": {
+      "path": "tests/test_marc1_generated_qualification_implementation.py",
+      "sha256": "b4331d33bc7f0c2878832cb74445bbe7b78a9d63200444baf598725508c6a601"
+    }
+  },
+  "green_contract_proof": {
+    "commit": "4494d57bd3853ebb2e198747861c908cdb2a0bb1",
+    "CI_run_id": 31502115918,
+    "base_job_id": 93814507482,
+    "optional_neuro_job_id": 93814507355,
+    "both_required_jobs_green": true,
+    "contract_sha256": "17733537c6a5038eb0781098a4b2452d71526c47eb4314cebb19d1975f79a7ad"
+  },
+  "dependency_contract": {
+    "base_dependency_changes": [],
+    "implementation_dependencies": [
+      "python_standard_library"
+    ],
+    "network_client_present": false,
+    "real_archive_reader_present": false,
+    "model_library_present": false
+  },
+  "interface": {
+    "module": "neurodecodekit.datasets.marc1_generated_qualification",
+    "commands": [
+      "plan",
+      "qualify",
+      "inspect"
+    ],
+    "execute_command_available": false,
+    "URL_argument_available": false,
+    "host_argument_available": false,
+    "archive_path_argument_available": false,
+    "participant_argument_available": false,
+    "target_argument_available": false,
+    "model_or_provider_argument_available": false,
+    "inspect_private_manifest_allowed": false
+  },
+  "archive_implementation": {
+    "construction": "deterministic_in_memory_zipfile",
+    "parser": "zipfile.ZipFile",
+    "reader": "instrumented_read_only_seekable_generated_range_adapter",
+    "member_count": 14,
+    "root_metadata_member_count": 4,
+    "subject_count": 2,
+    "members_per_subject": 5,
+    "force_ZIP64_writer_call_count": 1,
+    "maximum_comment_used_to_isolate_metadata_scan": true,
+    "writer_observed_payload_intervals": true,
+    "member_content_open_surface_present": false,
+    "member_extraction_surface_present": false,
+    "private_manifest_fields": [
+      "member_name",
+      "CRC32",
+      "compression_method",
+      "flag_bits",
+      "compressed_size",
+      "uncompressed_size",
+      "local_header_offset"
+    ],
+    "public_member_names_or_offsets_allowed": false
+  },
+  "multimodal_implementation": {
+    "source_profiles": [
+      "freewill_like",
+      "wrist_like"
+    ],
+    "channel_identity_layers": [
+      "source_type",
+      "functional_role",
+      "model_inclusion"
+    ],
+    "candidate_source_types": [
+      "EEG"
+    ],
+    "always_nonpredictive_source_types": [
+      "EOG",
+      "EMG",
+      "ACCEL",
+      "ENCODER",
+      "AUDIO",
+      "TRIGGER"
+    ],
+    "geometry_state_explicit": true,
+    "clock_state_explicit": true,
+    "synchronization_state_explicit": true,
+    "causal_window_seconds": [
+      -1.5,
+      -0.2
+    ],
+    "right_endpoint_exclusive": true,
+    "future_context_samples": 0,
+    "normalization": "fit_rows_only",
+    "physical_target_roles": [
+      "fit_rows",
+      "target_blind_prediction_rows",
+      "isolated_scorer_rows"
+    ],
+    "comparator_role_count": 12,
+    "model_implemented": false
+  },
+  "qualification_implementation": {
+    "required_mutation_count": 24,
+    "deterministic_replays": 2,
+    "atomic_output_directory": true,
+    "aggregate_report_count": 1,
+    "generated_private_manifest_count": 1,
+    "output_overwrite_allowed": false,
+    "output_symlink_parent_allowed": false,
+    "registered_measured_closeout_runs": 0
+  },
+  "resource_caps": {
+    "cpu_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "generated_archive_bytes": 8388608,
+    "range_bytes_returned": 8388608,
+    "range_read_calls": 256,
+    "combined_output_bytes": 1048576,
+    "network_bytes": 0,
+    "real_payload_bytes": 0
+  },
+  "authorization_flags": {
+    "registered_measured_closeout_authorized_before_implementation_green": false,
+    "public_metadata_or_archive_request_authorized": false,
+    "real_archive_path_read_authorized": false,
+    "archive_member_content_read_authorized": false,
+    "real_signal_or_event_read_authorized": false,
+    "target_or_label_access_authorized": false,
+    "real_derivative_creation_authorized": false,
+    "model_training_inference_or_scoring_authorized": false,
+    "provider_or_language_model_authorized": false,
+    "release_or_claim_upgrade_authorized": false
+  },
+  "access_counters": {
+    "network_requests": 0,
+    "network_bytes": 0,
+    "real_archive_path_operations": 0,
+    "archive_member_content_reads": 0,
+    "real_signal_sample_reads": 0,
+    "real_event_or_onset_reads": 0,
+    "target_or_label_reads": 0,
+    "real_derivative_rows": 0,
+    "parameter_update_fits": 0,
+    "model_inference_calls": 0,
+    "prediction_sets": 0,
+    "prediction_freezes": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "next_gate": {
+    "measured_generated_closeout_requires_this_implementation_green": true,
+    "public_access_eligible_now": false,
+    "public_metadata_requires_later_exact_Tier_C_decision": true,
+    "real_payload_eligible_after_generated_closeout": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "A dependency-free implementation enforces bounded ZIP inventory modality semantics causal windows split isolation target withholding comparator availability deterministic replay output privacy and resource caps on generated fixtures.",
+    "scientific_claim_not_established": "No public archive human neural signal event onset target model prediction or score was accessed so this work establishes no neural effect movement decoding or source attribution."
+  }
+}

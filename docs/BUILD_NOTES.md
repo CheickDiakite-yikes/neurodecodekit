@@ -7519,3 +7519,38 @@ resource acceptance gates.
 
 Scientific claim not established: a frozen generated-only contract contains
 no human neural evidence and establishes no decoding or source attribution.
+
+## 2026-08-11 - MARC-1 Generated Qualification Implementation
+
+- Waited for contract `4494d57` to pass Base Python job `93814507482` and
+  Optional Neuro Readers job `93814507355` in CI `31502115918` before editing
+  the implementation.
+- Added a dependency-free generated-only module with `plan`, `qualify`, and
+  aggregate `inspect` commands and no network, URL, real archive, participant,
+  target, model, provider, or live-execution surface.
+- Built a deterministic 14-member ZIP fixture with one forced ZIP64 local
+  record. Standard-library `zipfile` inventory runs through an instrumented
+  seekable adapter and must prove zero overlap with writer-recorded compressed
+  payload intervals.
+- Added strict modality-role-inclusion, geometry, clock, synchronization,
+  causal-window, split, target-firewall, and twelve-comparator validation for
+  generated Freewill-like and Wrist-like profiles.
+- Implemented all 24 frozen mutation refusals, deterministic replay, private
+  manifest/public report separation, atomic no-overwrite output, one-thread
+  checks, and runtime, RSS, range, archive, and output caps.
+- Added 25 focused implementation tests. The combined focused contract and
+  implementation suite passes 39 tests in 0.446 seconds. The complete suite
+  passes 2,261 tests with 35 expected skips in 56.908 seconds, exactly 25 tests
+  above the 2,236-test contract baseline.
+- The registered measured generated closeout remains unexecuted pending the
+  exact implementation commit, push, and both green CI jobs. All public,
+  real-data, target, model, score, and claim counters remain zero.
+
+Engineering capability added: generated archive metadata can be inventoried
+through bounded random access while multimodal causal, split, target, and
+comparator contracts are validated and adversarially tested without member
+payload reads.
+
+Scientific claim not established: no public archive or human neural data was
+accessed and no model or score ran, so there is no new neural or decoding
+result.

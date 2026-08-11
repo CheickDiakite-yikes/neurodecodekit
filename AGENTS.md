@@ -534,6 +534,18 @@ target, model, score, or claim upgrade requires a separately named Tier C
 packet after green implementation. The unlicensed Aalborg self-paced source
 remains parked.
 
+The generated MARC-1 implementation now exists in
+`src/neurodecodekit/datasets/marc1_generated_qualification.py`. Read
+`docs/MARC_1_GENERATED_QUALIFICATION_IMPLEMENTATION.md` and
+`registries/marc1_generated_qualification_implementation.v0.json`. It has no
+network client, real archive reader, member-open surface, model, or live CLI
+option. Thirty-nine focused contract/implementation tests and the complete
+2,261-test dependency-light suite pass locally. The registered measured
+generated closeout remains unexecuted. Commit, push, and obtain both green CI
+jobs for this exact source, implementation record, and tests before running
+one closeout CLI qualification. A successful generated route will still not
+authorize public metadata or payload access.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

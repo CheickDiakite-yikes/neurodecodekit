@@ -6021,3 +6021,32 @@ green.
 Evidence: `docs/MARC_1_GENERATED_QUALIFICATION_PREREGISTRATION.md`,
 `registries/marc1_generated_qualification_contract.v0.json`, and
 `tests/test_marc1_generated_qualification_preregistration.py`.
+
+## 0180 - Implement ZIP Inventory Without A Member-Content Surface
+
+Decision: implement MARC-1 generated qualification only after green contract
+`4494d57`. Use `zipfile.ZipFile` over a read-only seekable adapter and record
+payload intervals from the writer rather than inferring them from archive
+strings. Add a maximum-length deterministic ZIP comment so the standard
+library's EOCD search stays in archive metadata for the tiny fixture.
+
+Privacy decision: keep member names and local offsets only in the generated
+private manifest. The aggregate report may expose counts, bytes, methods,
+hashes, measurements, warnings, unavailable fields, refusal summaries, and
+claim boundaries. Aggregate `inspect` must refuse the private manifest.
+
+Scientific-interface decision: validate modality semantics and causal/target
+contracts as metadata only. Do not implement a classifier. Generated feature
+values are identity-derived and target-independent; peripheral streams remain
+nonpredictive controls, not EEG substitutes.
+
+Execution decision: development tests may exercise generated fixtures and
+temporary CLI outputs. The one registered measured closeout is a separate
+event and may occur only after this exact implementation commit is pushed and
+both CI jobs are green. Public archive access remains a later exact Tier C
+decision.
+
+Evidence: `docs/MARC_1_GENERATED_QUALIFICATION_IMPLEMENTATION.md`,
+`registries/marc1_generated_qualification_implementation.v0.json`,
+`src/neurodecodekit/datasets/marc1_generated_qualification.py`, and
+`tests/test_marc1_generated_qualification_implementation.py`.

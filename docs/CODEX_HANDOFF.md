@@ -2846,3 +2846,35 @@ All authorization flags are false and all access counters are zero. Commit,
 push, and require both CI jobs green before implementation. Generated success
 will not authorize a HEAD request, byte range, archive member, signal, event,
 onset, target, model, score, or scientific claim.
+
+## 2026-08-11 MARC-1 Generated Implementation Handoff
+
+Read `docs/MARC_1_GENERATED_QUALIFICATION_IMPLEMENTATION.md`,
+`registries/marc1_generated_qualification_implementation.v0.json`,
+`src/neurodecodekit/datasets/marc1_generated_qualification.py`, and
+`tests/test_marc1_generated_qualification_implementation.py`.
+
+Contract `4494d57bd3853ebb2e198747861c908cdb2a0bb1` passed Base Python
+job `93814507482` and Optional Neuro Readers job `93814507355` in CI
+`31502115918` before implementation. The new module remains dependency-free
+and generated-only. It has no URL opener, network client, real path, member
+content reader, participant selector, model, provider, or live execution mode.
+
+The archive fixture is 14 members with one forced ZIP64 local record. A
+maximum-length deterministic comment keeps `zipfile` EOCD reads in metadata;
+the writer records compressed-payload intervals independently, and the reader
+fails if any returned range intersects one. The implementation validates exact
+members, paths, types, flags, methods, sizes, ratios, range caps, private/public
+separation, two deterministic replays, and all 24 mutations.
+
+The multimodal plan separately validates source type, functional role, model
+inclusion, geometry, clocks, synchronization, the causal `[-1.5, -0.2)`
+interface window, fit-only normalization, physical target roles, strict split
+binding, and twelve comparator states. No model exists. Thirty-nine focused
+contract/implementation tests pass in 0.446 seconds; the complete suite passes
+2,261 tests with 35 expected skips in 56.908 seconds.
+
+Immediate next gate: commit and push this exact implementation and obtain both
+green CI jobs. Only then run one measured generated `qualify` roundtrip and
+record its aggregate closeout. Do not make a public request or treat generated
+`MARC1G-R1` as neural evidence.

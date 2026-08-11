@@ -1162,8 +1162,11 @@ success cannot be promoted. The 13.59 GB Freewill ZIP is forbidden as a whole
 download. The next Tier B gate is now frozen as a dependency-free generated
 qualification: 14 safe ZIP members, no member-content reads, two modality-role
 profiles, past-only windows, physical target isolation, twelve comparators,
-and 24 adversarial refusals. Implementation may begin only after the exact
-contract commit is pushed and both required CI jobs are green. No real archive
-request, payload, signal, target, fit, prediction, or score is currently
-authorized. A separate exact Tier C metadata decision is required after the
-generated implementation is committed, pushed, and green.
+and 24 adversarial refusals. Contract `4494d57` passed both jobs in CI
+`31502115918`, and the generated-only module, implementation record, and 25
+focused implementation tests now exist locally. The registered measured
+closeout has not run; it requires this exact implementation commit to be
+pushed and both required CI jobs green first. No real archive request,
+payload, signal, target, fit, prediction, or score is currently authorized. A
+separate exact Tier C metadata decision is required after the generated
+implementation and closeout are green.
