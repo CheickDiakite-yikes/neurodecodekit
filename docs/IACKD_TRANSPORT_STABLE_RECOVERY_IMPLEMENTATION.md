@@ -116,6 +116,17 @@ load is above 100. The exact implementation commit must instead pass the full
 Base Python and Optional Neuro Readers suites in remote CI before the next
 milestone.
 
+The first pushed implementation candidate, commit `6b89b7d`, ran in CI
+`31473610218`. Base Python job `93722204649` passed, while Optional Neuro
+Readers job `93722204707` failed one CLI test after the full suite had already
+loaded MNE and raised the parent test process peak RSS to 383,049,728 bytes.
+The standalone generated qualification measured 20,332,544 bytes; the failure
+therefore exposed test-process contamination, not a validator body, network,
+or identity failure. The repair invokes the resource-bounded CLI fixture and
+inspection paths in isolated subprocesses, which is also the actual command-
+line execution boundary. The failed run remains recorded and cannot serve as
+green implementation proof.
+
 ## Next Gate
 
 1. Commit and push this exact implementation.

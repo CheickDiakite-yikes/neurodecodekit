@@ -3,6 +3,8 @@ import copy
 import io
 import json
 import os
+import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -385,20 +387,43 @@ class IACKDTransportStableQualificationTests(unittest.TestCase):
 
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory) / "qualification.json"
-            prior = dict(os.environ)
-            try:
-                os.environ.update(THREAD_ENV)
-                with contextlib.redirect_stdout(io.StringIO()):
-                    self.assertEqual(
-                        transport.main(["--fixture", "--out", str(output)]),
-                        0,
-                    )
-                with contextlib.redirect_stdout(io.StringIO()) as inspected:
-                    self.assertEqual(transport.main(["--inspect", str(output)]), 0)
-                self.assertIn('"refusal_mutation_count": 22', inspected.getvalue())
-            finally:
-                os.environ.clear()
-                os.environ.update(prior)
+            environment = dict(os.environ)
+            environment.update(THREAD_ENV)
+            environment["PYTHONPATH"] = str(ROOT / "src")
+            fixture = subprocess.run(
+                [
+                    sys.executable,
+                    "-m",
+                    "neurodecodekit.datasets.iackd_transport_stable",
+                    "--fixture",
+                    "--out",
+                    str(output),
+                ],
+                cwd=ROOT,
+                env=environment,
+                capture_output=True,
+                text=True,
+                timeout=30,
+                check=False,
+            )
+            self.assertEqual(fixture.returncode, 0, fixture.stderr)
+            inspected = subprocess.run(
+                [
+                    sys.executable,
+                    "-m",
+                    "neurodecodekit.datasets.iackd_transport_stable",
+                    "--inspect",
+                    str(output),
+                ],
+                cwd=ROOT,
+                env=environment,
+                capture_output=True,
+                text=True,
+                timeout=30,
+                check=False,
+            )
+            self.assertEqual(inspected.returncode, 0, inspected.stderr)
+            self.assertIn('"refusal_mutation_count": 22', inspected.stdout)
 
     def test_module_has_no_public_executor_or_network_constructor(self):
         source = Path(transport.__file__).read_text(encoding="utf-8")
