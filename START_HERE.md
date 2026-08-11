@@ -453,11 +453,16 @@
    sets, a participant-level weaker-arm statistic, central/occipital/EOG/timing
    controls, one remote-green freeze, and one target delivery and score. Its
    storage-safe future path streams one registered run group at a time under a
-   1 GiB disk cap and forbids the existing private bundle. This registration
-   authorizes no payload or experiment. Only generated-fixture implementation
-   becomes eligible after the registration commit is pushed and both CI jobs
-   pass; a new packet-bound Tier C decision is still mandatory before real
-   access.
+   1 GiB disk cap and forbids the existing private bundle. Registration
+   `5bdab30` passed both jobs in CI `31448911258`; then read
+   `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_IMPLEMENTATION.md` and its registry.
+   The generated-only implementation separates model and scorer objects,
+   exercises the exact 660-fit/900-prediction matrix twice, and recomputes the
+   freeze before generated target delivery. A disposable roundtrip reached
+   constructed `IACKD2-R5` under resource caps, but that has no scientific
+   value. The exact implementation must now be committed, pushed, and remotely
+   green before one registered generated closeout. A new packet-bound Tier C
+   decision remains mandatory before real access.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

@@ -1016,6 +1016,16 @@ is forbidden, all 1,340 public objects retain their exact 7,249,113,684-byte
 identity, and only one of 128 ten-object run groups may exist in the temporary
 raw root at once. The largest group is 82,064,564 bytes; peak incremental disk
 is 1 GiB and at least 10 GiB free disk is required. This registration opens no
-payload or experiment. The next gate is complete verification, commit, push,
-and both green CI jobs; only then is generated-fixture Tier B implementation
-eligible. Real access still requires a fresh packet-bound Tier C decision.
+payload or experiment.
+
+Registration `5bdab30` passed both jobs in CI `31448911258` before the Tier B
+generated-only implementation began. The new strict module separates model
+and scorer objects, validates 29/31 source-semantic rows, causal dimensions,
+4,096/3,136/960 row inventories, exactly 660 fits and 900 prediction sets, a
+second exact replay, hash freeze, and all six routes. One disposable
+development roundtrip passed in 4.768072 seconds at 257,146,880-byte peak RSS
+with 30,169 output bytes and zero real/public/private/network access. Its
+constructed `IACKD2-R5` has no scientific value. The next gate is complete
+verification, commit, push, and both green CI jobs for this exact
+implementation, followed by one registered generated closeout. Real access
+still requires a fresh packet-bound Tier C decision.

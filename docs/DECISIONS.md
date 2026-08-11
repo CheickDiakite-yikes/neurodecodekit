@@ -5445,3 +5445,35 @@ unauthorized until their later exact gates.
 Evidence: `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_PREREGISTRATION.md`,
 `registries/iackd_role_aware_dual_reversal_contract.v0.json`, and
 `tests/test_iackd_role_aware_dual_reversal_contract.py`.
+
+## 0159 - Separate IACKD-2 Model Inputs From Generated Scorer Targets
+
+Decision: implement the remotely green IACKD-2 registration only on generated
+BrainVision fixtures, generated arrays, and mocked transport. Give the model
+stage a strict object containing fit labels and target-free final features;
+place generated final action and cue views in a separate scorer-stage object.
+
+Basis: registration `5bdab30` passed both jobs in CI `31448911258`. Merely
+avoiding a sealed-target key inside model code is weaker than preventing the
+model function from receiving the target-bearing container at all. The scorer
+must therefore recompute all 900 prediction-set hashes, the canonical private
+hash, split identity, and final-item binding before it may inspect generated
+target views.
+
+Qualification: use generated 29/31-row source declarations, causal future-tail
+checks, exact 4,096/3,136/960 row inventories, 660 fits, 900 target-blind
+prediction sets, one exact replay, all six routes, and strict malformed-input
+refusals. A disposable development roundtrip may debug the interface, but the
+one registered generated closeout remains held until the exact implementation
+commit is pushed and both CI jobs pass.
+
+Boundary: constructed `IACKD2-R5` has no scientific value. Do not access a
+public payload, the old retained bundle, signal, event, trajectory, real target,
+real model, prediction, or score. Any real sequence still requires a separate
+all-false packet, fresh Tier C decision, green implementation, green freeze,
+and one target delivery.
+
+Evidence: `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_IMPLEMENTATION.md`,
+`registries/iackd_role_aware_dual_reversal_implementation.v0.json`,
+`src/neurodecodekit/experiments/iackd_role_aware_dual_reversal.py`, and
+`tests/test_iackd_role_aware_dual_reversal.py`.

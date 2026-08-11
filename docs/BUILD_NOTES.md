@@ -6922,3 +6922,39 @@ strict participant-level and confound controls.
 Scientific claim not established: no payload, retained bundle, signal, event,
 trajectory, target, model prediction, or score was accessed, so this adds no
 neural or decoding evidence.
+
+## 2026-08-10 - IACKD-2 Generated-Only Implementation
+
+- Registration `5bdab30` passed Base Python job `93648969685` and Optional
+  Neuro Readers job `93648969711` in CI `31448911258` before implementation.
+- Added an immutable-plan, generated-qualification, and strict-inspect module
+  CLI with no network, real execute, or retained-bundle path.
+- Replayed the 1,340-object committed inventory into 128 ten-object groups
+  without opening a payload.
+- Added mocked path/status/redirect/size/ETag/SHA refusals and generated 29/31
+  BrainVision fixtures bound to source-declared roles and geometry.
+- Added causal 0.5-4 Hz preprocessing, future-tail invariance, and the frozen
+  130/15/15/10/78/78/130/4 dimensions.
+- Generated 4,096 source rows, 3,136 fit rows, and 960 target-free final rows
+  across both reversal arms.
+- Separated strict model-stage and scorer-stage objects. The scorer recomputes
+  all prediction and freeze hashes before accepting generated target views.
+- Exercised exactly 660 fits and 900 target-blind prediction sets, then replayed
+  the complete matrix exactly.
+- Added aggregate scoring, participant-level weaker-arm conjunctions, all six
+  ordered routes, nested target-key refusals, malformed-freeze refusals, output
+  path/cap guards, and deterministic tests.
+- One disposable development roundtrip passed in 4.768072 seconds at
+  257,146,880-byte peak RSS with 30,169 output bytes before removal. All real,
+  public, private-bundle, network, provider, hardware, release, and claim
+  counters remained zero.
+- Synthetic `IACKD2-R5` is constructed interface behavior only. The registered
+  closeout remains held until the exact implementation is remotely green.
+
+Engineering capability added: the frozen IACKD-2 design now has a generated,
+failure-addressable reader-to-freeze-to-scorer implementation with structural
+target isolation and exact replay.
+
+Scientific claim not established: no real or public payload, signal, event,
+trajectory, target, model outcome, or score was accessed, so this adds no
+neural, action-decoding, brain-origin, or thought-decoding evidence.

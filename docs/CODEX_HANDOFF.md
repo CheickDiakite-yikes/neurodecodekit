@@ -2305,10 +2305,30 @@ ten-object run groups at a time, whose measured maximum is 82,064,564 bytes,
 and may retain no second raw bundle. Peak incremental disk is 1 GiB and minimum
 free disk is 10 GiB. The existing Git-ignored bundle is explicitly forbidden.
 
-Current gate: run complete verification, commit and push this exact
-registration, and require both CI jobs green. Only then may Tier B generated
-fixtures and mocked transport be implemented. Do not access a public body,
-local IACKD path, signal, event, trajectory, target, model, prediction, or score
-from this registration. A future real sequence needs a separate all-false
-request, fresh packet-bound Tier C decision, green implementation, and green
-hash-only prediction freeze.
+Registration `5bdab30` passed Base Python job `93648969685` and Optional Neuro
+Readers job `93648969711` in CI `31448911258` before Tier B implementation.
+
+## 2026-08-10 IACKD-2 Generated-Only Implementation
+
+Read `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_IMPLEMENTATION.md`,
+`registries/iackd_role_aware_dual_reversal_implementation.v0.json`, and
+`tests/test_iackd_role_aware_dual_reversal.py`.
+
+The implementation has no real execute, network, or old-bundle path. It
+validates the immutable inventory, generated 29/31-row source semantics,
+causal features, exact split counts, 660 fits, 900 target-blind prediction
+sets, a second exact replay, a hash-only freeze, and all six routes. The model
+stage and generated scorer stage are separate objects; the scorer recomputes
+every prediction hash and final-item binding before generated target access.
+
+One disposable development roundtrip passed in 4.768072 seconds at
+257,146,880-byte peak RSS and emitted 30,169 bytes before removal. Every
+real/public/private/network counter stayed zero. Its constructed
+`IACKD2-R5` is interface mechanics only.
+
+Current gate: complete verification, commit and push this exact implementation,
+and require both CI jobs green. Only then run one registered generated-only
+closeout. Do not access a public body, old IACKD bundle, signal, event,
+trajectory, target, real model, prediction, or score. A future real sequence
+still needs a separate all-false request, fresh packet-bound Tier C decision,
+green real implementation, and green hash-only prediction freeze.

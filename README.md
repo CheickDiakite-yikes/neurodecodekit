@@ -935,10 +935,17 @@ Read this before interpreting any number in the repository.
   separately authorized run must stream one of 128 ten-object run groups at a
   time, never retain a second 7.25 GB raw bundle, and stay below 1 GiB peak
   incremental disk. The largest registered run group is 82,064,564 bytes. The
-  existing private bundle is forbidden. This is a preregistered design, not a
-  data access, model result, or neural claim; generated-fixture implementation
-  opens only after this exact registration is pushed and both CI jobs pass,
-  while every real stage still needs a fresh Tier C decision.
+  existing private bundle is forbidden. Registration `5bdab30` passed both
+  jobs in CI `31448911258` before the
+  [generated-only implementation](docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_IMPLEMENTATION.md).
+  It now exercises strict model/scorer isolation, 29/31-row source semantics,
+  causal features, exactly 660 fits and 900 target-blind prediction sets, a
+  recomputed hash freeze, exact replay, and all six routes. A disposable
+  development roundtrip passed in 4.77 seconds at 257 MB peak RSS with 30 KB
+  output and zero real/public/private/network access. Constructed
+  `IACKD2-R5` is interface evidence only, not a neural result. The exact
+  implementation must become remotely green before one registered synthetic
+  closeout; every real stage still needs a fresh Tier C decision.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

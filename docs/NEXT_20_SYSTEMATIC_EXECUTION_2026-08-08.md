@@ -400,8 +400,16 @@ raw files after derivative promotion. The committed inventory bounds the
 largest group at 82,064,564 bytes. Peak incremental disk is 1 GiB with 10 GiB
 free required.
 
-This work item is registration only. After complete verification, commit,
-push, and both green CI jobs, one generated-fixture and mocked-transport Tier B
-implementation may begin. Public payload, the old bundle, real signals,
-targets, training, prediction, scoring, and scientific claims remain behind a
-new exact Tier C sequence.
+Registration `5bdab30` passed both jobs in CI `31448911258` before Tier B
+implementation. The generated-only module now validates the 29/31-row
+source-semantics variants, causal dimensions, strict model/scorer firewall,
+660 fits, 900 prediction sets, exact replay, prediction freeze, and all six
+routes. One disposable development roundtrip took 4.768072 seconds at
+257,146,880-byte peak RSS and emitted 30,169 bytes before removal; every
+real/public/private/network counter was zero. Synthetic `IACKD2-R5` is a
+constructed interface check with no scientific value.
+
+Next: verify, commit, push, and obtain both green jobs for the exact
+implementation, then run one registered generated-only closeout. Public
+payload, the old bundle, real signals, targets, training, prediction, scoring,
+and scientific claims remain behind a new exact Tier C sequence.

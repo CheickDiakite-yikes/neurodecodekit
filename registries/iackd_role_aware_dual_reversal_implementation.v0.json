@@ -1,0 +1,300 @@
+{
+  "schema_name": "neurodecodekit.iackd_role_aware_dual_reversal_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "IACKD-2-role-aware-dual-reversal-generated-implementation-v0",
+  "prepared_at_local": "2026-08-10",
+  "status": "generated_fixture_qualified_exact_implementation_requires_remote_green_before_registered_synthetic_closeout",
+  "proof_posture": "generated_BrainVision_mocked_transport_and_constructed_arrays_only_zero_real_public_or_private_IACKD_access",
+  "contract_path": "registries/iackd_role_aware_dual_reversal_contract.v0.json",
+  "contract_sha256": "f3b38cb2c5bf0a55e0816072ef654cc87bd2e2f36bab50df19947d66d2abdb7f",
+  "green_registration": {
+    "commit": "5bdab3055a8a1c5200b5ec6c0037e401d8c817ce",
+    "push_ci_run_id": 31448911258,
+    "base_python_job_id": 93648969685,
+    "optional_neuro_job_id": 93648969711,
+    "both_required_jobs_green": true
+  },
+  "tracked_file_hashes": [
+    {
+      "path": "src/neurodecodekit/experiments/iackd_role_aware_dual_reversal.py",
+      "sha256": "61bffdc2a3f76282a73bb320deb9e5240d8e831997368361192bef69cd891ddd"
+    },
+    {
+      "path": "tests/test_iackd_role_aware_dual_reversal.py",
+      "sha256": "0d510238d7b292dcf6b05212c44daaabea4f7fb9053e055fd18a1099a9bdf0ea"
+    },
+    {
+      "path": "tests/test_iackd_role_aware_dual_reversal_implementation.py",
+      "sha256": "0721e83517069bed52127df2ae75234e1167233bf7c14f5d27091b22e748649b"
+    },
+    {
+      "path": "docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_IMPLEMENTATION.md",
+      "sha256": "7634ff899bbff04e801f9e736581a10ec5c246c54621215068515b180458785f"
+    },
+    {
+      "path": "docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_PREREGISTRATION.md",
+      "sha256": "328cf5d52f096204db5dcc5b02ec53ad2fac20a67d872b82c6f1c01eea31b28f"
+    },
+    {
+      "path": "registries/iackd_role_aware_dual_reversal_contract.v0.json",
+      "sha256": "f3b38cb2c5bf0a55e0816072ef654cc87bd2e2f36bab50df19947d66d2abdb7f"
+    },
+    {
+      "path": "src/neurodecodekit/preprocess/iackd_source_semantics.py",
+      "sha256": "7f4cb2ea90e3ea538ccbad7160622bf91d723e2cc568187b106232e99bd7331c"
+    },
+    {
+      "path": "registries/iackd_source_declared_control_policy_research.v0.json",
+      "sha256": "c3727d297e5f95f9a81de819b90a2048d1292810b646e2591e69412e8cb04ea7"
+    },
+    {
+      "path": "registries/iackd_openneuro_metadata_inventory.v0.json",
+      "sha256": "aeaa4928192cca9086fcb0abf4711147c68a68ef5c5aacda2ebc67d162a1ef19"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "1e3c92c9aec796bbadadfe9797f049aa5c9a5d7803b68eb47445ea72ebf83e78"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "b2dfcf8214b3b5d975e7a432e7c8ff0b6da9b0f1108fcef681cc22310ba50bba"
+    }
+  ],
+  "optional_environment": {
+    "path_kind": "existing_isolated_git_ignored_virtual_environment",
+    "qualified_versions": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.0",
+      "mne": "1.12.1",
+      "scikit_learn": "1.9.0"
+    },
+    "base_dependency_changes": false,
+    "dependency_installs": 0,
+    "dependency_resolutions": 0,
+    "dependency_download_bytes": 0,
+    "substitutions": 0
+  },
+  "registered_interface": {
+    "arms": 2,
+    "participant_hand_units": 30,
+    "generated_source_rows": 4096,
+    "fit_rows": 3136,
+    "final_target_free_rows": 960,
+    "primary_parameter_update_fits": 660,
+    "primary_target_blind_inference_calls": 900,
+    "primary_prediction_sets": 900,
+    "replay_parameter_update_fits": 660,
+    "replay_target_blind_inference_calls": 900,
+    "replay_prediction_sets": 900,
+    "generated_target_deliveries": 1,
+    "generated_scoring_runs": 1,
+    "real_target_deliveries": 0,
+    "real_scoring_runs": 0
+  },
+  "streaming_inventory_qualification": {
+    "committed_metadata_inventory_only": true,
+    "selected_objects": 1340,
+    "selected_payload_bytes": 7249113684,
+    "run_groups": 128,
+    "objects_per_run_group": 10,
+    "largest_run_group_bytes": 82064564,
+    "largest_individual_object_bytes": 73200640,
+    "geometry_objects": 60,
+    "geometry_bytes": 56386,
+    "payload_opens": 0,
+    "network_requests": 0
+  },
+  "generated_reader_and_preprocessing": {
+    "source_row_counts": [
+      29,
+      31
+    ],
+    "predictive_EEG_channels": 26,
+    "optional_M1_M2_source_typed_and_nonpredictive": true,
+    "HEOG_VEOG_and_trigger_source_typed_MISC_and_nonpredictive": true,
+    "MNE_inferred_types_authoritative": false,
+    "sampling_rate_hz": 1024,
+    "filter": "fourth_order_Butterworth_0.5_to_4_Hz_SOS_sosfilt",
+    "dimensions": [
+      130,
+      15,
+      15,
+      10,
+      78,
+      78,
+      130,
+      4
+    ],
+    "producer_is_causal_in_samples": true,
+    "right_context_seconds": 0.0,
+    "future_tail_invariance_passed": true,
+    "end_to_end_latency_measured": false,
+    "real_reader_validated": false
+  },
+  "target_firewall": {
+    "fit_labels_available_to_fit_stage_only": true,
+    "final_target_rows_visible_to_model_stage": 0,
+    "model_stage_schema_is_strict": true,
+    "model_and_scorer_stage_objects_are_separate": true,
+    "scorer_item_ids_bound_to_target_free_final_item_ids": true,
+    "same_predictions_scored_against_action_and_cue_views": true,
+    "target_views_required_to_be_exact_opposites": true,
+    "prediction_hashes_recomputed_before_generated_target_access": true,
+    "freeze_recomputed_before_generated_target_access": true,
+    "individual_predictions_published": false,
+    "individual_participant_metrics_published": false,
+    "boundary_kind": "function_and_artifact_boundary_not_operating_system_sandbox"
+  },
+  "model_and_control_matrix": {
+    "classifier": "participant_hand_arm_specific_shrinkage_LDA",
+    "solver": "lsqr",
+    "shrinkage": 0.1,
+    "class_priors": "equal",
+    "fit_conditions": 11,
+    "prediction_conditions": 15,
+    "selection_candidates": 1,
+    "hyperparameter_search_runs": 0,
+    "threshold_search_runs": 0,
+    "post_target_updates": 0,
+    "fixed_train_derangement_seed": 6841,
+    "fixed_final_channel_permutation_seed": 6842,
+    "derangement_balanced_within_run_and_source_class": true,
+    "full_matrix_deterministic_replay": true
+  },
+  "aggregate_scorer": {
+    "all_prediction_hashes_recomputed": true,
+    "participant_level_exact_sign_assignments": 32768,
+    "weaker_arm_conjunction_is_primary": true,
+    "individual_outcomes_published": false,
+    "ordered_routes": [
+      "IACKD2-R1",
+      "IACKD2-R2",
+      "IACKD2-R3",
+      "IACKD2-R4",
+      "IACKD2-R5",
+      "IACKD2-R0"
+    ],
+    "all_routes_reachable_on_pure_generated_flags": true,
+    "post_target_update": false
+  },
+  "frozen_module_cli": {
+    "module": "python -m neurodecodekit.experiments.iackd_role_aware_dual_reversal",
+    "default": "target_free_plan_no_output_write",
+    "qualify": "--qualify ABSOLUTE_NEW_REPORT_JSON",
+    "inspect": "--inspect EXISTING_REPORT_JSON",
+    "real_execute_mode_exists": false,
+    "old_bundle_path_argument_exists": false,
+    "network_argument_exists": false,
+    "output_cap_bytes": 8388608
+  },
+  "development_qualification": {
+    "kind": "disposable_precommit_generated_only_development_roundtrip_not_registered_closeout",
+    "status": "passed_generated_fixture_only_no_scientific_result",
+    "synthetic_route": "IACKD2-R5",
+    "primary_parameter_update_fits": 660,
+    "primary_prediction_sets": 900,
+    "replay_parameter_update_fits": 660,
+    "replay_prediction_sets": 900,
+    "runtime_seconds": 4.76807245798409,
+    "peak_RSS_bytes": 257146880,
+    "output_bytes": 30169,
+    "real_or_public_payload_reads": 0,
+    "network_bytes": 0,
+    "generated_output_removed": true,
+    "synthetic_route_has_scientific_value": false,
+    "all_gates_passed": true
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "concurrent_numerical_jobs": 1,
+    "wall_time_seconds": 120,
+    "peak_RSS_bytes": 536870912,
+    "generated_output_bytes": 8388608
+  },
+  "verification": {
+    "focused_base_total_tests": 14,
+    "focused_base_passed_tests": 8,
+    "focused_base_optional_skips": 6,
+    "focused_exact_stack_total_tests": 14,
+    "focused_exact_stack_passed_tests": 14,
+    "focused_exact_stack_runtime_seconds": 5.014,
+    "focused_lineage_exact_stack_total_tests": 51,
+    "focused_lineage_exact_stack_passed_tests": 51,
+    "pre_change_registration_base_total_tests": 1849,
+    "pre_change_registration_base_skips": 182,
+    "complete_base_total_tests": 1871,
+    "complete_base_skips": 188,
+    "complete_base_runtime_seconds": 4.679,
+    "pre_change_registration_exact_classical_total_tests": 1905,
+    "pre_change_registration_exact_classical_skips": 34,
+    "complete_exact_classical_total_tests": 1927,
+    "complete_exact_classical_skips": 34,
+    "complete_exact_classical_runtime_seconds": 38.157,
+    "pre_change_registration_standard_optional_total_tests": 1920,
+    "pre_change_registration_standard_optional_skips": 13,
+    "complete_standard_optional_total_tests": 1942,
+    "complete_standard_optional_skips": 19,
+    "complete_standard_optional_runtime_seconds": 41.534,
+    "standard_optional_first_sandbox_run_failed_only_on_forkserver_permission": true,
+    "standard_optional_outside_sandbox_replay_passed": true,
+    "pinned_ruff_passed": true,
+    "development_roundtrip_passed": true,
+    "complete_base_suite_passed": true,
+    "complete_exact_classical_suite_passed": true,
+    "complete_standard_optional_suite_passed": true,
+    "compileall_passed": true,
+    "registry_JSON_files_validated": 138,
+    "module_CLI_help_and_default_plan_passed": true,
+    "git_diff_check_passed": true
+  },
+  "implementation_access_counters": {
+    "real_openneuro_metadata_requests": 0,
+    "real_or_public_payload_requests": 0,
+    "real_or_public_payload_bytes": 0,
+    "old_retained_bundle_path_stats": 0,
+    "old_retained_bundle_path_opens": 0,
+    "old_retained_bundle_hash_passes": 0,
+    "real_BrainVision_parses": 0,
+    "real_signal_sample_reads": 0,
+    "real_event_or_trajectory_reads": 0,
+    "real_target_or_label_reads": 0,
+    "real_derivative_creations": 0,
+    "real_parameter_update_fits": 0,
+    "real_model_inference_calls": 0,
+    "real_prediction_sets": 0,
+    "real_prediction_freezes": 0,
+    "real_target_deliveries": 0,
+    "real_scoring_runs": 0,
+    "dependency_installs": 0,
+    "dependency_download_bytes": 0,
+    "provider_or_language_model_calls": 0,
+    "RW3_stream_device_or_hardware_operations": 0,
+    "release_operations": 0,
+    "retries_or_reruns": 0,
+    "post_target_updates": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "execution_state": {
+    "registered_synthetic_closeout_consumed": false,
+    "real_execution_authorized": false,
+    "real_execution_consumed": false,
+    "prediction_freeze_committed": false,
+    "real_targets_delivered": false,
+    "real_scoring_consumed": false,
+    "rerun_authorized": false,
+    "next_gate": "commit_push_and_both_required_CI_jobs_green_for_this_exact_generated_implementation"
+  },
+  "warnings": [
+    "all_signal_metadata_trajectory_label_and_outcome_values_are_generated",
+    "synthetic_IACKD2_R5_has_zero_scientific_value",
+    "real_MNE_reader_public_payload_and_old_private_bundle_remain_unvalidated_and_closed",
+    "generated_target_delivery_is_an_interface_test_not_a_scientific_score",
+    "target_firewall_is_a_function_and_artifact_boundary_not_an_operating_system_sandbox",
+    "end_to_end_latency_is_unavailable"
+  ],
+  "claim_boundary": {
+    "engineering_capability_added": "NeuroDecodeKit now has a strict generated-only dual-arm source-semantics causal preprocessing target firewall model matrix prediction freeze and aggregate scorer interface for the prospective IACKD-2 design.",
+    "scientific_claim_not_established": "No real or public IACKD payload signal event trajectory target or outcome was accessed so this implementation establishes no neural effect action decoding brain-specific origin generalization thought decoding real-time operation hardware capability assistive benefit or clinical result."
+  }
+}
