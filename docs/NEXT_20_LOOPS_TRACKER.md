@@ -1030,3 +1030,15 @@ zero, and the temporary report was removed. Constructed `IACKD2-R5` has no
 scientific value. The generated closeout is consumed with no rerun. Real access
 still requires a separate all-false request and fresh packet-bound Tier C
 decision.
+
+That all-false request is now prepared in
+`docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_AUTHORIZATION_PACKET.md` and
+`registries/iackd_role_aware_dual_reversal_authorization_request.v0.json`. It
+binds the green generated closeout, exact 1,340-object/7,249,113,684-byte public
+identity, 128 sequential run groups, one derivative build, 660 fits, 900
+target-blind prediction sets, one hash-only freeze, one target delivery, one
+score, zero retries, and zero reruns. Every authorization flag and current
+real-operation counter remains false. Next: verify, commit, push, and obtain
+both green CI jobs for this exact packet, then identify it as the sole Tier C
+gate. No public request, real executor, model run, target, or score opens from
+the packet alone.

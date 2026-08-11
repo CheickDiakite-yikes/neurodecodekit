@@ -278,9 +278,19 @@ gates passed in 5.024801 seconds at 257,130,496-byte peak RSS with 30,170
 output bytes; the exact 660-fit/900-prediction matrix replayed, every forbidden
 counter stayed zero, and the temporary report was removed. Synthetic
 `IACKD2-R5` has no scientific value. The generated closeout is consumed with
-no rerun. Any real operation still needs a later all-false request, fresh
-packet-bound Tier C decision, green implementation, and green prediction-freeze
-sequence.
+no rerun. Read
+`docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_AUTHORIZATION_PACKET.md` and
+`registries/iackd_role_aware_dual_reversal_authorization_request.v0.json`.
+The all-false request binds one future fresh 1,340-object stream, 7,249,113,684
+payload bytes, one-run-at-a-time derivative build, 660 fits, 900 target-blind
+prediction sets, one green freeze, one target delivery, and one score under
+the existing caps. Every authorization flag and real-operation counter is
+false. Its commit must be pushed and both CI jobs green before Codex identifies
+it as the sole Tier C packet. Only a fresh unambiguous maintainer message after
+that identification may be recorded in a separate decision. Do not use the
+current or an earlier message retroactively, implement the real executor,
+request a public object, touch the old bundle, or run a model from this packet
+alone.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

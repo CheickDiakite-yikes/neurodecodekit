@@ -464,8 +464,13 @@
    RSS with 30,170 output bytes. Read
    `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_SYNTHETIC_RESULT.md` and its registry.
    Constructed `IACKD2-R5` has no scientific value; the closeout is consumed
-   with no rerun. A new packet-bound Tier C decision remains mandatory before
-   real access.
+   with no rerun. Then read
+   `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_AUTHORIZATION_PACKET.md` and its
+   machine request. The all-false packet freezes one fresh 1,340-object stream,
+   one-run-at-a-time derivatives, 660 fits, 900 target-blind predictions, one
+   green freeze, one target delivery, and one score. It authorizes nothing.
+   Commit, push, and require both CI jobs green before identifying it as the
+   sole Tier C gate; only a fresh later maintainer `continue` may bind it.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

@@ -947,7 +947,12 @@ Read this before interpreting any number in the repository.
   30,170 output bytes. Every real/public/private/network counter stayed zero,
   and the temporary report was removed. Constructed `IACKD2-R5` is planted
   interface evidence only, not a neural result. The generated closeout is
-  consumed with no rerun; every real stage still needs a fresh Tier C decision.
+  consumed with no rerun. The
+  [all-false real-execution packet](docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_AUTHORIZATION_PACKET.md)
+  now freezes one possible 7.249 GB streaming public-EEG sequence, 660 fits,
+  900 target-blind predictions, one remotely green freeze, and one score. It
+  authorizes nothing; its exact commit and both CI jobs must become green
+  before a fresh packet-bound maintainer decision can open implementation.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

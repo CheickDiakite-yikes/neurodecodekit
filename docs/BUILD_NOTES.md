@@ -6989,3 +6989,34 @@ event, trajectory, target, participant outcome, or model result was accessed,
 so this establishes no neural effect, action decoding, brain-specific origin,
 generalization, language or thought decoding, real-time operation, hardware
 capability, assistive benefit, or clinical result.
+
+## 2026-08-10 - IACKD-2 All-False Real-Execution Request
+
+- Bound registration `5bdab30`, exact generated implementation `af7488a`, and
+  generated closeout `7bc45c9` with green CI `31452614232`.
+- Froze one future decision-only commit before any implementation or content
+  access and required a separate generated-fixture qualification of the real
+  executor before its exact implementation becomes remotely green.
+- Bound one fresh stream over exactly 1,340 OpenNeuro objects and
+  7,249,113,684 payload bytes, 128 sequential ten-object run groups, one raw
+  group at a time, and no complete retained raw bundle.
+- Capped peak incremental disk at 1 GiB, required 10 GiB free, limited private
+  derivatives to 512 MiB, and forbade every preexisting-path cleanup.
+- Bound one target-blind analysis with exactly 660 parameter-update fits, 900
+  prediction sets, one aggregate hash-only freeze, one target delivery, one
+  score, zero retries, zero reruns, and zero post-target updates.
+- Kept every implementation, environment-use, metadata, payload, local-path,
+  signal, trajectory, target, model, freeze, score, cleanup, release, and claim
+  authorization false. All current real-operation counters are zero.
+- Added 13 invariants for immutable hashes, proof commits, consumed generated
+  status, exact scope, role semantics, arm symmetry, stage order, transport,
+  storage, target isolation, resources, future decision shape, and claim
+  language.
+
+Engineering capability requested: one storage-safe, role-aware,
+target-firewalled public IACKD dual reversal can be implemented and, only
+after successive remotely green gates, executed once.
+
+Scientific claim not established: this all-false request accessed no EEG,
+trajectory, target, model, or score and therefore adds no neural or decoding
+evidence.

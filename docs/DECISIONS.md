@@ -5502,3 +5502,39 @@ prediction-freeze gates.
 Evidence: `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_SYNTHETIC_RESULT.md`,
 `registries/iackd_role_aware_dual_reversal_synthetic_result.v0.json`, and
 `tests/test_iackd_role_aware_dual_reversal_synthetic_result.py`.
+
+## 0161 - Request One Storage-Safe Real IACKD-2 Dual Reversal
+
+Decision: prepare an all-false Tier C request for the frozen real IACKD-2
+sequence. The request itself authorizes no implementation, environment use,
+public or local content operation, model execution, target delivery, score,
+cleanup, release, or claim change.
+
+Scope requested after a fresh green decision: qualify one separate real
+executor on generated fixtures; stream exactly 1,340 public objects and
+7,249,113,684 payload bytes in 128 one-at-a-time run groups; promote bounded
+private derivatives; complete 660 fits and 900 target-blind prediction sets;
+commit and remotely green one aggregate freeze; then deliver and score the two
+final target views once.
+
+Resource decision: use one thread, one worker, and one numerical job. Keep
+peak incremental disk at or below 1 GiB, require 10 GiB free, keep private
+derivatives and generated outputs at or below 512 MiB each, and permit zero
+retry, rerun, second delivery, second score, or post-target update. The old
+retained IACKD bundle and every preexisting path remain forbidden.
+
+Sequence: this request must first be committed, pushed, and pass both CI jobs.
+Codex must then identify the exact commit, CI, sole scope, and boundary. Only a
+fresh later maintainer `continue`, `approve`, or `proceed` may bind it by
+reference in a separate decision quoting the actual words. The current message
+cannot be used retroactively.
+
+Boundary: even future `IACKD2-R5` would establish only within-IACKD
+pre-movement action-direction information surviving symmetric cue reversals
+and registered controls with motor-compatible central support. It would not
+prove brain-specific origin, external replication, thought decoding,
+real-time operation, hardware capability, assistive benefit, or clinical use.
+
+Evidence: `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_AUTHORIZATION_PACKET.md`,
+`registries/iackd_role_aware_dual_reversal_authorization_request.v0.json`, and
+`tests/test_iackd_role_aware_dual_reversal_authorization_request.py`.

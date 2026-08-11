@@ -412,7 +412,14 @@ replayed exactly, every forbidden counter stayed zero, and the temporary report
 was removed. Synthetic `IACKD2-R5` is a constructed interface check with no
 scientific value. The generated closeout is consumed with no rerun.
 
-Next: preserve the consumed result and design the separate all-false Tier C
-request surface for any future real sequence. Public payload, the old bundle,
+The separate all-false Tier C request is now prepared. It binds one fresh
+1,340-object stream, 128 one-at-a-time run groups, one private derivative
+build, 660 fits, 900 target-blind predictions, one remotely green freeze, one
+target delivery, one score, zero retries, and zero reruns. Every authorization
+flag and current real-operation counter remains false.
+
+Next: verify, commit, push, and obtain both green CI jobs for the exact packet.
+Only then identify it as the sole Tier C gate. Public payload, the old bundle,
 real signals, targets, training, prediction, scoring, and scientific claims
-remain closed until a fresh packet-bound decision and later green gates.
+remain closed until a fresh later packet-bound decision and subsequent green
+implementation and freeze gates.

@@ -2357,3 +2357,29 @@ Read `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_SYNTHETIC_RESULT.md`,
 generated closeout is consumed and not rerunnable. No real operation opens
 without a separate all-false request, fresh packet-bound Tier C decision, and
 the later green implementation and prediction-freeze sequence.
+
+## 2026-08-10 IACKD-2 All-False Real-Execution Request Prepared
+
+Read `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_AUTHORIZATION_PACKET.md`,
+`registries/iackd_role_aware_dual_reversal_authorization_request.v0.json`, and
+`tests/test_iackd_role_aware_dual_reversal_authorization_request.py`.
+
+The request binds green registration `5bdab30`, green generated implementation
+`af7488a`, and green closeout `7bc45c9` with CI `31452614232`. It asks for one
+future ordered sequence: a separately green decision, generated qualification
+of a distinct real executor, one fresh 1,340-object/7,249,113,684-byte stream,
+one-run-at-a-time private derivatives, exactly 660 fits and 900 target-blind
+prediction sets, one remotely green aggregate freeze, and one combined target
+delivery and score.
+
+Peak incremental disk is 1 GiB with 10 GiB free required. Only one of 128 raw
+run groups may exist at once, the largest is 82,064,564 bytes, and only
+invocation-created temporary raw groups may be removed after derivative
+promotion. The old retained bundle and every preexisting path are forbidden.
+
+Every action authorization flag and current real-operation counter is false.
+Preparing the request made no network, local-data, signal, target, model,
+cleanup, release, or claim operation. Next gate: complete verification, commit
+and push the packet, and require both CI jobs green. Only after Codex identifies
+that exact commit and CI as the sole active Tier C packet may a fresh
+maintainer `continue`, `approve`, or `proceed` bind it by reference.
