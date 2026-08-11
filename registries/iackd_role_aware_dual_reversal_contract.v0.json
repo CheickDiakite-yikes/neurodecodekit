@@ -1,0 +1,851 @@
+{
+  "schema_name": "neurodecodekit.iackd_role_aware_dual_reversal_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "IACKD-2-role-aware-dual-reversal-contract-v0",
+  "created_at_local": "2026-08-10",
+  "status": "prospective_registration_frozen_real_execution_unauthorized",
+  "objective": "Test whether both opposing mapping transfers favor measured action direction over the exact cue-derived alternative under a fixed role-aware causal EEG model and participant-level conjunction.",
+  "proof_posture": {
+    "registration_only": true,
+    "generated_implementation_completed": false,
+    "real_or_public_payload_accessed": false,
+    "old_retained_bundle_accessed": false,
+    "signal_event_trajectory_or_target_accessed": false,
+    "training_inference_prediction_or_scoring_run": false,
+    "scientific_result": false
+  },
+  "bindings": {
+    "green_dual_reversal_research": {
+      "commit": "41ea1fcc6c31ebe67437ae4d381b4a57cf6cef54",
+      "CI_run_id": 31426772597,
+      "base_python_job_id": 93580219586,
+      "optional_neuro_job_id": 93580219644,
+      "both_required_jobs_green": true,
+      "path": "registries/iackd_role_aware_dual_reversal_research.v0.json",
+      "sha256": "6cfc6058f234ad1d60868d47e79f03a903d01c0b3e83b9a4917d332f868e1edc"
+    },
+    "green_dual_reversal_research_document": {
+      "path": "docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_RESEARCH.md",
+      "sha256": "9b5b6c3c3a2cf7cfc120cc902dcc580fc5f9a465bd4be123272609a32237c848"
+    },
+    "green_dual_reversal_research_test": {
+      "path": "tests/test_iackd_role_aware_dual_reversal_research.py",
+      "sha256": "90bd0baa787bbdfd4ed47fbfa40a818a8d1f871274b3bab0797b730b76ea66f7"
+    },
+    "consumed_IACKD1_result": {
+      "commit": "3a58fccb0db4f0c17e2521773ded248baff68e76",
+      "status": "acquisition_passed_analysis_consumed_parked_IACKD_F10_no_rerun",
+      "failure_id": "IACKD-F10-channel_sampling_or_geometry_failure",
+      "consumed": true,
+      "rerun_allowed": false,
+      "old_bundle_may_be_reopened": false,
+      "path": "registries/iackd_cue_action_dissociation_result.v0.json",
+      "sha256": "6af8b8e90d74a6c730f4d4585ad5caa194966f6a3642efed6b2a74809f9b790c"
+    },
+    "consumed_H2_role_geometry_result": {
+      "commit": "580f11fc60d2882a11bf4e765bb33b60ffc0bd04",
+      "CI_run_id": 31444931063,
+      "base_python_job_id": 93636960404,
+      "optional_neuro_job_id": 93636960360,
+      "both_required_jobs_green": true,
+      "route": "IACKDR-R1",
+      "consumed": true,
+      "rerun_allowed": false,
+      "path": "registries/iackd_channel_role_geometry_result.v0.json",
+      "sha256": "e6f0665aa5eb822f64c8575ea5931c2fdcebda1e85156e0971b0ff1387158715"
+    },
+    "generated_H3_source_semantics_result": {
+      "commit": "cff8d79208a8afa11b3da036f69626236c9664e2",
+      "CI_run_id": 31447418426,
+      "base_python_job_id": 93644506850,
+      "optional_neuro_job_id": 93644506878,
+      "both_required_jobs_green": true,
+      "real_reader_validated": false,
+      "path": "registries/iackd_source_semantics_result.v0.json",
+      "sha256": "dcac54651db80370d773fbeae9b23456ab60572b05868e53f7fca7ef308fb8fd"
+    },
+    "committed_openneuro_inventory": {
+      "path": "registries/iackd_openneuro_metadata_inventory.v0.json",
+      "sha256": "aeaa4928192cca9086fcb0abf4711147c68a68ef5c5aacda2ebc67d162a1ef19"
+    },
+    "human_preregistration": {
+      "path": "docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_PREREGISTRATION.md",
+      "sha256": "328cf5d52f096204db5dcc5b02ec53ad2fac20a67d872b82c6f1c01eea31b28f"
+    },
+    "invariant_test": {
+      "path": "tests/test_iackd_role_aware_dual_reversal_contract.py",
+      "sha256": "95bedf9295f24dff83e56b161c28c5bf917699418a72928e3660a4b6944d63e1"
+    }
+  },
+  "dataset_binding": {
+    "provider": "OpenNeuro",
+    "accession": "ds006840",
+    "version": "1.0.0",
+    "dataset_doi": "10.18112/openneuro.ds006840.v1.0.0",
+    "license": "CC0",
+    "bids_version": "1.7.0",
+    "participant_ids": [
+      "sub-01",
+      "sub-02",
+      "sub-03",
+      "sub-04",
+      "sub-05",
+      "sub-06",
+      "sub-07",
+      "sub-08",
+      "sub-09",
+      "sub-10",
+      "sub-11",
+      "sub-12",
+      "sub-13",
+      "sub-14",
+      "sub-15"
+    ],
+    "participant_count": 15,
+    "moving_hand_entities": [
+      "left",
+      "right"
+    ],
+    "participant_hand_unit_count": 30,
+    "bids_run_count": 128,
+    "selected_object_count": 1340,
+    "selected_payload_bytes": 7249113684,
+    "canonical_expanded_inventory_sha256": "c30b518f9dafe3d46128849725e1f2f8fdce33239fbf6ade8603d66a64f0ffa5",
+    "selected_role_counts": {
+      "eeg_signal": 128,
+      "eeg_header": 128,
+      "eeg_marker": 128,
+      "eeg_sidecar": 128,
+      "events": 128,
+      "channels": 128,
+      "coordsystem": 30,
+      "electrodes": 30,
+      "ball_stream": 128,
+      "ball_sidecar": 128,
+      "leap_stream": 128,
+      "leap_sidecar": 128
+    },
+    "published_derivative_objects_allowed": 0,
+    "participant_demographic_objects_allowed": 0,
+    "subject_scan_table_objects_allowed": 0,
+    "substitution_objects_allowed": 0
+  },
+  "metadata_reverification": {
+    "documents": [
+      "https://s3.amazonaws.com/openneuro.org/ds006840/dataset_description.json",
+      "https://s3.amazonaws.com/openneuro.org/ds006840/CHANGES"
+    ],
+    "list_objects_endpoint": "https://s3.amazonaws.com/openneuro.org",
+    "list_objects_query": "list-type=2&prefix=ds006840/&max-keys=1000",
+    "expected_listing_pages": 2,
+    "expected_listed_object_count": 1679,
+    "expected_listed_total_bytes": 7966799433,
+    "expected_selected_object_count": 1340,
+    "expected_selected_payload_bytes": 7249113684,
+    "canonical_identity_fields": [
+      "path",
+      "size_bytes",
+      "etag",
+      "last_modified"
+    ],
+    "canonical_identity_sha256": "c30b518f9dafe3d46128849725e1f2f8fdce33239fbf6ade8603d66a64f0ffa5",
+    "redirects": 0,
+    "retries": 0,
+    "payload_request_before_exact_match": false
+  },
+  "dependency_contract": {
+    "base_dependency_changes": false,
+    "dependency_install_authorized_now": false,
+    "future_reuse_only_if_exact": true,
+    "versions": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.0",
+      "mne": "1.12.1",
+      "scikit_learn": "1.9.0"
+    },
+    "network_for_dependency_resolution": false,
+    "missing_or_drifted_environment_action": "park_without_install_or_substitution"
+  },
+  "fresh_streaming_contract": {
+    "old_retained_IACKD_bundle_forbidden": true,
+    "new_invocation_created_root_required": true,
+    "run_group_count": 128,
+    "objects_per_run_group": 10,
+    "largest_run_group_bytes": 82064564,
+    "largest_run_group_key": "sub-08:right:01",
+    "largest_individual_object_bytes": 73200640,
+    "geometry_object_count": 60,
+    "geometry_bytes": 56386,
+    "canonical_path_order": true,
+    "sequential_run_groups_only": true,
+    "maximum_concurrent_run_groups": 1,
+    "body_SHA256_passes_per_object": 1,
+    "semantic_parse_passes_per_run": 1,
+    "raw_run_group_must_be_removed_after_derivative_promotion": true,
+    "cleanup_scope": "invocation_created_temporary_raw_run_group_only",
+    "preexisting_path_cleanup_allowed": false,
+    "complete_raw_bundle_retained": false,
+    "retry_allowed": false,
+    "rerun_allowed": false
+  },
+  "ordered_stages": {
+    "stage_R_registration": {
+      "tier": "A",
+      "status": "current",
+      "payload_or_local_path_access": false,
+      "training_inference_or_scoring": false
+    },
+    "stage_B_generated_implementation": {
+      "tier": "B",
+      "eligible_only_after_registration_commit_pushed_and_both_CI_jobs_green": true,
+      "generated_fixtures_and_mocked_transport_only": true,
+      "real_or_public_data_access": false,
+      "old_bundle_access": false,
+      "scientific_result": false
+    },
+    "stage_C_request_and_decision": {
+      "tier": "C",
+      "eligible_only_after_exact_implementation_commit_pushed_and_both_CI_jobs_green": true,
+      "all_false_request_required": true,
+      "fresh_packet_bound_maintainer_decision_required": true,
+      "decision_commit_must_be_pushed_and_both_CI_jobs_green": true,
+      "currently_authorized": false
+    },
+    "stage_C_execution": {
+      "tier": "C",
+      "fresh_public_stream_only": true,
+      "old_retained_bundle_forbidden": true,
+      "acquisition_invocations": 1,
+      "target_blind_analysis_executions": 1,
+      "prediction_freeze_commits": 1,
+      "combined_target_deliveries": 1,
+      "scoring_events": 1,
+      "currently_authorized": false
+    }
+  },
+  "source_semantics_contract": {
+    "policy_name": "IACKD-SourceSemanticsPolicy",
+    "policy_version": "0.1.0",
+    "policy_sha256": "1117c90d77971ee0ec2f5e138bdf9ea76eef412a4b5c44c1d2b88c31f88f39f4",
+    "semantic_layers_in_order": [
+      "source_type",
+      "functional_role",
+      "model_inclusion"
+    ],
+    "source_count_groups": [
+      {
+        "occurrence_count": 96,
+        "EEG": 26,
+        "MISC": 3,
+        "total_rows": 29,
+        "optional_M1_M2_present": false
+      },
+      {
+        "occurrence_count": 32,
+        "EEG": 28,
+        "MISC": 3,
+        "total_rows": 31,
+        "optional_M1_M2_present": true
+      }
+    ],
+    "predictive_EEG_names": [
+      "Fp1",
+      "Fp2",
+      "F7",
+      "F3",
+      "Fz",
+      "F4",
+      "F8",
+      "FC3",
+      "FCz",
+      "FC4",
+      "T7",
+      "C3",
+      "Cz",
+      "C4",
+      "T8",
+      "CP3",
+      "CPz",
+      "CP4",
+      "P7",
+      "P3",
+      "Pz",
+      "P4",
+      "P8",
+      "O1",
+      "Oz",
+      "O2"
+    ],
+    "optional_nonpredictive_EEG_names": [
+      "M1",
+      "M2"
+    ],
+    "ocular_control_names": [
+      "HEOG",
+      "VEOG"
+    ],
+    "trigger_control_names": [
+      "Trigger"
+    ],
+    "source_type_for_controls": "MISC",
+    "sampling_rate_hz": 1024,
+    "source_reference": "average",
+    "regional_views": {
+      "central": [
+        "C3",
+        "C4",
+        "Cz"
+      ],
+      "occipital": [
+        "O1",
+        "Oz",
+        "O2"
+      ]
+    },
+    "required_derivative_bindings": [
+      "dataset_BIDS_version",
+      "source_order_sha256",
+      "source_type_count_sha256",
+      "functional_role_sha256",
+      "model_inclusion_mask_sha256",
+      "geometry_available_mask_sha256",
+      "reference",
+      "sampling_frequency_hz",
+      "policy_name",
+      "policy_version",
+      "policy_sha256"
+    ],
+    "MNE_inferred_types_authoritative": false,
+    "unknown_channel_policy": "refuse_without_inference_or_alias_substitution"
+  },
+  "split_contract": {
+    "model_unit": "participant_by_moving_hand_by_arm",
+    "participant_hand_unit_count": 30,
+    "arm_count": 2,
+    "six_run_participants": [
+      "sub-04",
+      "sub-05"
+    ],
+    "six_run_fit_runs": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05"
+    ],
+    "six_run_sealed_final_run": "06",
+    "four_run_fit_runs": [
+      "01",
+      "02",
+      "03"
+    ],
+    "four_run_sealed_final_run": "04",
+    "arms": [
+      {
+        "arm_id": "C2I",
+        "fit_condition": "red_congruent",
+        "final_condition": "yellow_incongruent",
+        "fit_action_to_visual_sign": 1,
+        "final_action_to_visual_sign": -1,
+        "cue_surrogate_formula": "positive_visual_direction",
+        "cue_surrogate_is_exact_negative_action_on_final": true
+      },
+      {
+        "arm_id": "I2C",
+        "fit_condition": "yellow_incongruent",
+        "final_condition": "red_congruent",
+        "fit_action_to_visual_sign": -1,
+        "final_action_to_visual_sign": 1,
+        "cue_surrogate_formula": "negative_visual_direction",
+        "cue_surrogate_is_exact_negative_action_on_final": true
+      }
+    ],
+    "condition_rows_disjoint_between_arms_within_partition": true,
+    "both_arms_required": true,
+    "one_arm_may_rescue_other": false,
+    "maximum_pre_quality_control_counts": {
+      "per_arm_fit_rows": 2680,
+      "per_arm_final_rows": 840,
+      "both_arms_fit_rows": 5360,
+      "both_arms_final_rows": 1680,
+      "all_assigned_rows": 7040
+    },
+    "minimum_fit_rows_per_action_direction_per_unit_per_arm": 24,
+    "minimum_final_rows_per_action_direction_per_unit_per_arm": 8,
+    "all_participants_units_and_arms_required": true,
+    "row_random_split": false,
+    "cross_participant_fit": false,
+    "cross_hand_fit": false,
+    "cross_arm_fit": false,
+    "final_run_model_selection": false,
+    "target_derived_exclusion": false,
+    "participant_or_unit_replacement": false
+  },
+  "reader_and_trial_contract": {
+    "reader_family": "MNE_BrainVision_exact_dependency_family_after_generated_qualification",
+    "source_order_must_match_VHDR_and_channels_TSV": true,
+    "source_semantics_policy_applied_before_array_construction": true,
+    "allowed_source_row_counts": [
+      29,
+      31
+    ],
+    "exact_predictive_EEG_count": 26,
+    "optional_M1_M2_predictive": false,
+    "HEOG_VEOG_extracted_as_separate_controls": true,
+    "Trigger_predictive": false,
+    "required_sampling_rate_hz": 1024,
+    "required_source_reference": "average",
+    "required_geometry_views": [
+      "C3_C4_Cz",
+      "O1_Oz_O2"
+    ],
+    "one_run_parsed_at_a_time": true,
+    "raw_windows_persisted": false,
+    "ICA_runs": 0,
+    "interpolation_runs": 0,
+    "bad_channel_deletions": 0,
+    "amplitude_rejection_runs": 0,
+    "zero_phase_filter_runs": 0,
+    "target_derived_exclusions": 0
+  },
+  "kinematic_guard": {
+    "predictive_input": "absolute_three_dimensional_speed_and_onset_timestamp_only",
+    "signed_displacement_visible_to_predictive_code": false,
+    "speed_formula": "euclidean_first_difference_displacement_divided_by_delta_time",
+    "minimum_speed_threshold_mm_per_second": 20.0,
+    "adaptive_threshold": "baseline_median_plus_10_times_baseline_MAD",
+    "effective_threshold": "maximum_of_minimum_and_adaptive_threshold",
+    "persistence_native_samples": 3,
+    "motion_guard_ms": 30,
+    "registered_stop_rule": "minimum_of_event_14_and_detected_onset_minus_30_ms",
+    "analysis_window_seconds": [
+      -1.0,
+      0.0
+    ],
+    "window_half_open": true,
+    "operational_claim": "offline_oracle_aligned_causal_in_samples_not_real_time"
+  },
+  "target_firewall": {
+    "fit_labels_arm_and_fit_partition_only": true,
+    "fit_relation_verified_before_fit_label_delivery": true,
+    "final_actual_action_source": "signed_Leap_x_displacement",
+    "final_cue_surrogate_formula": "visual_direction_times_frozen_fit_action_to_visual_sign",
+    "same_final_prediction_scored_against_two_views": true,
+    "final_target_views_exact_opposites": true,
+    "all_predictions_frozen_before_target_delivery": true,
+    "combined_hash_only_freeze_required": true,
+    "remote_green_freeze_required_before_target_delivery": true,
+    "target_deliveries": 1,
+    "scoring_events": 1,
+    "visible_to_predictive_code_before_freeze": {
+      "arm_identity": true,
+      "opaque_trial_identity": true,
+      "provenance_hashes": true,
+      "condition_or_color": false,
+      "actual_action_direction": false,
+      "visual_direction": false,
+      "cue_surrogate": false,
+      "signed_kinematics": false,
+      "ball_coordinates": false,
+      "target": false,
+      "probability": false,
+      "score": false,
+      "participant_outcome": false
+    }
+  },
+  "isolated_target_builder": {
+    "actual_hand_direction_source": "signed_Leap_x_displacement",
+    "visual_direction_source": "signed_ball_x_displacement",
+    "displacement_summary": "median_final_20_percent_x_minus_median_initial_20_percent_x",
+    "minimum_absolute_hand_displacement_mm": 5.0,
+    "minimum_absolute_ball_displacement_pixels": 5.0,
+    "C2I_fit_relation": "equal_direction_signs",
+    "C2I_final_relation": "opposite_direction_signs",
+    "I2C_fit_relation": "opposite_direction_signs",
+    "I2C_final_relation": "equal_direction_signs",
+    "ball_move_direct_field_must_agree": true,
+    "ball_move_direct_field_is_sole_target_source": false,
+    "signed_values_visible_to_predictive_code": false
+  },
+  "model_contract": {
+    "family_id": "fixed_role_aware_low_frequency_shrinkage_LDA",
+    "predictive_EEG_count": 26,
+    "re_reference": "instantaneous_common_average_fixed_26_predictive_EEG",
+    "filter_design": "fourth_order_Butterworth_bandpass_SOS",
+    "passband_hz": [
+      0.5,
+      4.0
+    ],
+    "filter_application": "scipy_signal_sosfilt_continuous_run_before_windowing",
+    "primary_window_seconds": [
+      -1.0,
+      0.0
+    ],
+    "time_bins": 4,
+    "bin_duration_seconds": 0.25,
+    "slopes_per_channel": 1,
+    "primary_feature_dimension": 130,
+    "central_feature_dimension": 15,
+    "occipital_feature_dimension": 15,
+    "ocular_feature_dimension": 10,
+    "half_window_feature_dimension": 78,
+    "pre_window_feature_dimension": 130,
+    "timing_feature_dimension": 4,
+    "timing_features": [
+      "registered_run_ordinal",
+      "within_run_trial_ordinal",
+      "event_55_to_event_14_interval",
+      "event_55_to_registered_stop_interval"
+    ],
+    "classifier": "participant_hand_arm_specific_linear_discriminant_analysis",
+    "solver": "lsqr",
+    "shrinkage": 0.1,
+    "class_priors": "equal",
+    "fit_partition_only_state": true,
+    "selection_candidate_count": 1,
+    "hyperparameter_search_runs": 0,
+    "threshold_search_runs": 0,
+    "right_context_seconds": 0.0,
+    "producer_is_causal_in_samples": true,
+    "end_to_end_latency_measured": false,
+    "deep_networks": 0,
+    "foundation_or_language_models": 0,
+    "pretrained_checkpoints": 0,
+    "test_time_adaptation_runs": 0,
+    "post_target_updates": 0
+  },
+  "EOG_projection": {
+    "EEG_feature_dimension": 130,
+    "EOG_feature_dimension": 10,
+    "intercept": true,
+    "ridge_lambda": 0.001,
+    "fit_partition_and_arm_only": true,
+    "final_EOG_updates": 0,
+    "same_fixed_LDA_after_projection": true
+  },
+  "fit_inventory": {
+    "fits_per_unit_per_arm": 11,
+    "participant_hand_units": 30,
+    "arm_count": 2,
+    "required_parameter_update_fits": 660,
+    "families": [
+      "whole_head_primary",
+      "central_C3_C4_Cz",
+      "occipital_O1_Oz_O2",
+      "HEOG_VEOG_only",
+      "fit_only_EOG_orthogonalized_primary",
+      "early_half",
+      "late_half",
+      "pre_window_baseline",
+      "event_index_and_timing_only",
+      "fixed_train_label_derangement_seed_6841",
+      "train_only_no_signal_prior"
+    ]
+  },
+  "prediction_inventory": {
+    "sets_per_unit_per_arm": 15,
+    "participant_hand_units": 30,
+    "arm_count": 2,
+    "required_prediction_sets": 900,
+    "maximum_target_blind_inference_calls": 900,
+    "conditions": [
+      "whole_head_primary",
+      "central_C3_C4_Cz",
+      "occipital_O1_Oz_O2",
+      "HEOG_VEOG_only",
+      "fit_only_EOG_orthogonalized_primary",
+      "early_half",
+      "late_half",
+      "pre_window_baseline",
+      "event_index_and_timing_only",
+      "fixed_train_label_derangement_seed_6841",
+      "train_only_no_signal_prior",
+      "all_zero_final_EEG_through_primary",
+      "one_row_cyclic_final_feature_displacement",
+      "fixed_final_only_EEG_channel_permutation_seed_6842",
+      "opposite_hand_primary_without_adaptation"
+    ],
+    "primary_prediction_stored_once": true,
+    "target_views_per_primary_prediction": 2,
+    "second_target_view_creates_prediction_set": false
+  },
+  "statistical_contract": {
+    "inference_unit": "participant",
+    "participant_count": 15,
+    "hands_combined_within_participant_before_inference": true,
+    "arm_margin": "balanced_accuracy_actual_action_minus_balanced_accuracy_arm_specific_cue_surrogate",
+    "primary_participant_value": "minimum_of_C2I_and_I2C_action_minus_cue_balanced_accuracy_margins",
+    "test": "one_sided_exact_participant_sign_flip",
+    "exact_sign_assignments": 32768,
+    "arm_specific_exact_tests_reported": true,
+    "pooled_trial_substitution_allowed": false,
+    "missing_participant_imputation": false,
+    "one_arm_rescue": false
+  },
+  "physiology_inventory": {
+    "selects_model_channel_window_threshold_participant_or_trial": false,
+    "can_rescue_failed_predictive_or_control_gate": false,
+    "records": [
+      "C3_C4_Cz_readiness_potential_trace",
+      "central_8_to_13_Hz_causal_power",
+      "central_13_to_30_Hz_causal_power",
+      "early_vs_late_central_negativity",
+      "motion_guard_timing_distribution"
+    ],
+    "directional_sign_preregistered": false
+  },
+  "gates": {
+    "H0_integrity_causality_and_freeze": {
+      "required_participants": 15,
+      "required_participant_hand_units": 30,
+      "required_arms": 2,
+      "all_included_windows_pass_30_ms_guard": true,
+      "final_target_values_visible_to_predictive_code_before_freeze": 0,
+      "required_fit_count": 660,
+      "required_prediction_set_count": 900,
+      "combined_hash_only_freeze_required": true,
+      "remote_green_freeze_required_before_target_delivery": true,
+      "target_deliveries": 1,
+      "scores": 1,
+      "retries": 0,
+      "reruns": 0,
+      "post_target_updates": 0
+    },
+    "H1_symmetric_action_over_cue": {
+      "every_threshold_applies_to_each_arm": true,
+      "minimum_pooled_action_balanced_accuracy": 0.6,
+      "minimum_macro_participant_action_balanced_accuracy": 0.6,
+      "minimum_participants_above_0_5_action_balanced_accuracy": 12,
+      "maximum_arm_exact_sign_flip_p": 0.01,
+      "minimum_macro_action_minus_cue_margin": 0.2,
+      "maximum_macro_cue_surrogate_balanced_accuracy": 0.4,
+      "minimum_macro_action_margin_over_no_signal_prior": 0.1,
+      "minimum_mean_participant_minimum_arm_margin": 0.15,
+      "maximum_primary_minimum_arm_exact_sign_flip_p": 0.01,
+      "one_arm_may_rescue_other": false
+    },
+    "H2_recorded_peripheral_visual_and_timing_controls": {
+      "every_threshold_applies_to_each_arm": true,
+      "minimum_primary_minus_EOG_only_action_accuracy_each_arm": 0.05,
+      "minimum_primary_minus_occipital_action_accuracy_each_arm": 0.03,
+      "minimum_EOG_orthogonalized_action_accuracy_each_arm": 0.58,
+      "minimum_EOG_orthogonalized_action_minus_cue_margin_each_arm": 0.16,
+      "maximum_EOG_only_action_minus_cue_margin_each_arm": 0.1,
+      "maximum_occipital_action_minus_cue_margin_each_arm": 0.1,
+      "maximum_timing_only_action_accuracy_each_arm": 0.55,
+      "maximum_pre_window_action_accuracy_each_arm": 0.55,
+      "maximum_each_fixed_control_action_accuracy_each_arm": 0.55,
+      "maximum_each_fixed_control_action_minus_cue_margin_each_arm": 0.1,
+      "controls_prove_brain_specific_origin": false
+    },
+    "H3_motor_compatible_central_support": {
+      "every_threshold_applies_to_each_arm": true,
+      "minimum_central_macro_action_balanced_accuracy_each_arm": 0.55,
+      "minimum_central_action_minus_cue_margin_each_arm": 0.1,
+      "minimum_participants_above_0_5_central_action_accuracy_each_arm": 10,
+      "minimum_mean_participant_minimum_central_arm_margin": 0.08,
+      "early_and_late_reported_separately": true,
+      "physiology_complete_and_nonselecting": true,
+      "physiology_may_rescue_H1_or_H2": false
+    }
+  },
+  "ordered_router": [
+    {
+      "order": 1,
+      "route": "IACKD2-R1",
+      "condition": "H0_passes_and_both_arms_reliably_favor_exact_cue_surrogate",
+      "maximum_claim": "fixed_role_aware_representation_is_symmetrically_cue_bound"
+    },
+    {
+      "order": 2,
+      "route": "IACKD2-R2",
+      "condition": "H0_passes_and_exactly_one_arm_passes_H1",
+      "maximum_claim": "mapping_transfer_is_direction_asymmetric_and_dual_reversal_hypothesis_fails"
+    },
+    {
+      "order": 3,
+      "route": "IACKD2-R3",
+      "condition": "H0_and_both_arms_H1_pass_but_H2_fails",
+      "maximum_claim": "symmetric_action_alignment_with_source_unresolved_by_registered_controls"
+    },
+    {
+      "order": 4,
+      "route": "IACKD2-R4",
+      "condition": "H0_H2_and_both_arms_H1_pass_but_H3_fails",
+      "maximum_claim": "symmetric_action_alignment_survives_controls_without_motor_compatible_central_support"
+    },
+    {
+      "order": 5,
+      "route": "IACKD2-R5",
+      "condition": "H0_H2_H3_and_both_arms_H1_all_pass",
+      "maximum_claim": "within_IACKD_pre_movement_action_direction_information_survives_symmetric_cue_reversals_and_registered_controls_with_motor_compatible_central_support_not_brain_specific"
+    },
+    {
+      "order": 6,
+      "route": "IACKD2-R0",
+      "condition": "any_remaining_integrity_null_mixed_or_incomplete_outcome",
+      "evaluation": "final_catch_all",
+      "maximum_claim": "fixed_design_did_not_establish_coherent_symmetric_action_over_cue_transfer"
+    }
+  ],
+  "resource_caps": {
+    "future_generated_implementation": {
+      "CPU_threads": 1,
+      "workers": 1,
+      "concurrent_numerical_jobs": 1,
+      "wall_time_seconds": 120,
+      "peak_RSS_bytes": 536870912,
+      "generated_output_bytes": 8388608,
+      "real_public_or_local_payload_reads": 0,
+      "network_bytes": 0
+    },
+    "future_acquisition_and_derivative_build": {
+      "invocations": 1,
+      "CPU_threads": 1,
+      "workers": 1,
+      "concurrent_numerical_jobs": 1,
+      "wall_time_seconds": 7200,
+      "peak_RSS_bytes": 2147483648,
+      "metadata_body_bytes": 8388608,
+      "payload_requests": 1340,
+      "payload_bytes": 7249113684,
+      "largest_raw_run_group_bytes": 82064564,
+      "peak_incremental_disk_bytes": 1073741824,
+      "minimum_free_disk_bytes": 10737418240,
+      "private_derivative_bytes": 536870912,
+      "public_receipt_bytes": 4194304,
+      "private_receipt_bytes": 4194304,
+      "retries": 0,
+      "reruns": 0
+    },
+    "future_fit_freeze_and_score": {
+      "registered_executions": 1,
+      "CPU_threads": 1,
+      "workers": 1,
+      "concurrent_numerical_jobs": 1,
+      "wall_time_seconds_through_prediction_freeze": 10800,
+      "peak_RSS_bytes": 2147483648,
+      "private_generated_output_bytes": 536870912,
+      "public_freeze_and_result_bytes": 4194304,
+      "required_parameter_update_fits": 660,
+      "required_prediction_sets": 900,
+      "maximum_target_blind_inference_calls": 900,
+      "target_deliveries": 1,
+      "scoring_events": 1,
+      "network_bytes": 0,
+      "new_payload_bytes": 0,
+      "retries": 0,
+      "reruns": 0,
+      "post_target_updates": 0
+    }
+  },
+  "public_artifact_contract": {
+    "aggregate_acquisition_and_derivative_receipt": true,
+    "hash_only_prediction_freeze": true,
+    "aggregate_result": true,
+    "local_paths": false,
+    "raw_source_bodies_or_channel_traces": false,
+    "trial_rows": false,
+    "signed_kinematics": false,
+    "targets_predictions_probabilities_or_coefficients": false,
+    "participant_outcomes": false
+  },
+  "private_artifact_contract": {
+    "full_raw_bundle_retained": false,
+    "raw_run_group_after_derivative_promotion_retained": false,
+    "private_derivatives_Git_ignored": true,
+    "private_manifest_Git_ignored": true,
+    "sealed_final_targets_Git_ignored": true,
+    "individual_predictions_Git_ignored": true,
+    "preexisting_private_artifact_deletion_allowed": false
+  },
+  "refusal_ids": [
+    "IACKD2-F01-evidence_binding_or_green_gate_mismatch",
+    "IACKD2-F02-dependency_or_configuration_drift",
+    "IACKD2-F03-insufficient_free_disk",
+    "IACKD2-F04-old_retained_bundle_access_attempt",
+    "IACKD2-F05-metadata_identity_drift",
+    "IACKD2-F06-unregistered_object_redirect_retry_or_substitution",
+    "IACKD2-F07-path_link_overwrite_or_nonexclusive_root",
+    "IACKD2-F08-payload_size_ETag_SHA_or_run_group_cap_failure",
+    "IACKD2-F09-source_semantics_role_or_geometry_failure",
+    "IACKD2-F10-marker_stream_trial_or_arm_join_failure",
+    "IACKD2-F11-motion_guard_or_minimum_count_failure",
+    "IACKD2-F12-target_firewall_or_fit_final_partition_leak",
+    "IACKD2-F13-fit_or_prediction_inventory_incomplete",
+    "IACKD2-F14-resource_or_output_cap_breach",
+    "IACKD2-F15-freeze_hash_privacy_or_remote_green_failure",
+    "IACKD2-F16-second_delivery_retry_rerun_or_post_target_update",
+    "IACKD2-F17-preexisting_path_cleanup_attempt",
+    "IACKD2-F18-public_artifact_privacy_failure",
+    "IACKD2-F19-claim_boundary_breach"
+  ],
+  "forbidden_operations": [
+    "open_stat_hash_or_parse_the_old_retained_IACKD_bundle",
+    "payload_or_local_path_access_before_a_fresh_green_Tier_C_decision",
+    "published_derivative_use",
+    "participant_demographic_or_scan_table_access",
+    "row_random_split_or_cross_participant_hand_or_arm_fit",
+    "target_derived_quality_filtering",
+    "final_target_use_before_remote_green_prediction_freeze",
+    "model_threshold_seed_channel_window_or_cohort_selection_from_real_outcomes",
+    "larger_additional_deep_foundation_or_language_model",
+    "test_time_adaptation_or_post_target_update",
+    "retry_rerun_restart_or_substitution",
+    "preexisting_path_or_other_project_cleanup",
+    "individual_protected_output_publication",
+    "hardware_stream_device_release_or_claim_upgrade"
+  ],
+  "authorization": {
+    "Tier_B_generated_implementation_eligible_after_registration_green": true,
+    "generated_fixture_creation_after_registration_green": true,
+    "mocked_transport_qualification_after_registration_green": true,
+    "real_or_public_payload_access": false,
+    "old_retained_bundle_access": false,
+    "local_path_stat_hash_or_open": false,
+    "network_payload_transfer": false,
+    "signal_event_or_trajectory_read": false,
+    "target_or_label_read": false,
+    "training_inference_or_scoring": false,
+    "prediction_freeze": false,
+    "real_execution_cleanup": false,
+    "rerun_or_retry": false,
+    "scientific_claim_upgrade": false
+  },
+  "current_access_counters": {
+    "real_or_public_metadata_requests": 0,
+    "payload_requests": 0,
+    "network_bytes": 0,
+    "old_retained_bundle_stats_hashes_or_opens": 0,
+    "local_IACKD_path_operations": 0,
+    "signal_sample_reads": 0,
+    "marker_or_event_reads": 0,
+    "trajectory_reads": 0,
+    "target_or_label_reads": 0,
+    "derivative_builds": 0,
+    "feature_extraction_runs": 0,
+    "training_or_parameter_update_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "prediction_freezes": 0,
+    "target_deliveries": 0,
+    "scoring_runs": 0,
+    "provider_or_language_model_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "cleanup_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "claim_boundary": {
+    "engineering_capability_proposed": "A storage-safe role-aware target-firewalled dual-reversal experiment can test action alignment against the exact cue-derived alternative in both mapping directions with participant-level inference and registered confound controls.",
+    "scientific_claim_not_established": "This preregistration accessed no IACKD payload retained bundle signal event trajectory target model prediction or score and therefore establishes no neural effect action decoding brain-specific origin unseen-person generalization typing language or thought decoding real-time operation hardware capability assistive benefit or clinical use."
+  },
+  "warnings": [
+    "This is a registration and not an authorization or scientific result.",
+    "H3 qualified generated policy mechanics only and did not validate a real reader.",
+    "The old IACKD bundle is consumed and forbidden even if it still exists locally.",
+    "Both transfer arms must pass; one positive arm cannot rescue the other.",
+    "Recorded EOG and visual proxies cannot establish brain-specific origin without synchronized EMG and stronger independent instrumentation.",
+    "End-to-end latency is unavailable and no hardware or real-time claim is in scope."
+  ]
+}

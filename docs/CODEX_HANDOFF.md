@@ -2286,3 +2286,29 @@ H3 is complete as an engineering mechanics result. It does not validate a real
 reader, EEG effect, or decoding result. The next safe work is a separately
 named prospective IACKD experiment contract that binds the H3 policy hash; no
 payload or signal stage opens without a new Tier C decision.
+
+## 2026-08-10 IACKD-2 Prospective Registration
+
+Read `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_PREREGISTRATION.md`,
+`registries/iackd_role_aware_dual_reversal_contract.v0.json`, and
+`tests/test_iackd_role_aware_dual_reversal_contract.py`.
+
+The contract binds the green research record, consumed IACKD-1 and H2
+outcomes, generated-only H3 policy result, and committed OpenNeuro inventory.
+It requires both `C2I` and `I2C` arms to favor measured action over the exact
+cue-derived opposite. The participant's weaker arm margin is primary. The
+fixed matrix has 11 fits and 15 prediction sets per arm and participant-hand
+unit: 660 fits and 900 prediction sets total.
+
+The future storage path is new and sequential. It may process only one of 128
+ten-object run groups at a time, whose measured maximum is 82,064,564 bytes,
+and may retain no second raw bundle. Peak incremental disk is 1 GiB and minimum
+free disk is 10 GiB. The existing Git-ignored bundle is explicitly forbidden.
+
+Current gate: run complete verification, commit and push this exact
+registration, and require both CI jobs green. Only then may Tier B generated
+fixtures and mocked transport be implemented. Do not access a public body,
+local IACKD path, signal, event, trajectory, target, model, prediction, or score
+from this registration. A future real sequence needs a separate all-false
+request, fresh packet-bound Tier C decision, green implementation, and green
+hash-only prediction freeze.

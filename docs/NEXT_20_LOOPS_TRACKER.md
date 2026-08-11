@@ -1001,3 +1001,21 @@ counters stayed zero, and the temporary report was removed. H3 is complete as
 generated policy-mechanics evidence only. A separately named IACKD experiment
 contract and Tier C decision are required before any real reader, payload,
 signal, model, or score.
+
+IACKD-2 is now prospectively frozen as the next evidence-bearing lane. Its two
+disjoint arms reverse the mapping in opposite directions, require both arms to
+favor action over the exact cue surrogate, and make the weaker participant arm
+margin primary. The fixed matrix contains 660 fits and 900 target-blind
+prediction sets with central, occipital, EOG, timing, pre-window, derangement,
+displacement, permutation, and opposite-hand controls. A valid final sequence
+requires one aggregate prediction freeze committed, pushed, and green before
+one combined target delivery and score.
+
+The future data path is storage-safe by construction: the old private bundle
+is forbidden, all 1,340 public objects retain their exact 7,249,113,684-byte
+identity, and only one of 128 ten-object run groups may exist in the temporary
+raw root at once. The largest group is 82,064,564 bytes; peak incremental disk
+is 1 GiB and at least 10 GiB free disk is required. This registration opens no
+payload or experiment. The next gate is complete verification, commit, push,
+and both green CI jobs; only then is generated-fixture Tier B implementation
+eligible. Real access still requires a fresh packet-bound Tier C decision.

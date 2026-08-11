@@ -5409,3 +5409,39 @@ experiment needs a separately named prospective contract and Tier C decision.
 Evidence: `docs/IACKD_SOURCE_SEMANTICS_RESULT.md`,
 `registries/iackd_source_semantics_result.v0.json`, and
 `tests/test_iackd_source_semantics_result.py`.
+
+## 0158 - Freeze IACKD-2 As A Symmetric, Storage-Safe Dual Reversal
+
+Decision: preregister two disjoint mapping-transfer arms rather than repair or
+rerun IACKD-1. `C2I` fits congruent and predicts held-out incongruent rows;
+`I2C` fits incongruent and predicts held-out congruent rows. Both must favor
+action over the exact cue-derived opposite, and the weaker participant arm
+margin is primary.
+
+Sensor basis: bind H3 policy
+`1117c90d77971ee0ec2f5e138bdf9ea76eef412a4b5c44c1d2b88c31f88f39f4`,
+the fixed 26-channel predictive core, source-typed MISC ocular/trigger controls,
+optional nonpredictive M1/M2, 1024 Hz, average reference, and complete central
+and occipital views. MNE inference cannot replace source declarations.
+
+Evidence matrix: one fixed causal 0.5-4 Hz shrinkage-LDA family, 11 fits and 15
+prediction sets per arm and participant-hand unit, 660 exact fits, 900 exact
+prediction sets, participant-level sign flips, registered peripheral, visual,
+timing, displacement, permutation, derangement, hand-swap, and physiology
+controls, one green hash-only freeze, one target delivery, and one score.
+
+Storage decision: never reopen the consumed local bundle. A future separately
+authorized sequence must stream the exact 1,340 public objects once, process
+one ten-object run group at a time, retain no second raw bundle, remain under
+1 GiB incremental disk, and require 10 GiB free disk. The committed inventory
+measures the largest run group at 82,064,564 bytes.
+
+Boundary: this is registration only. Tier B generated-fixture implementation
+is conditional on the registration becoming remotely green. Public payload,
+local path, real reader, signal, event, trajectory, target, training,
+prediction, freeze, score, cleanup, rerun, and claim upgrade remain
+unauthorized until their later exact gates.
+
+Evidence: `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_PREREGISTRATION.md`,
+`registries/iackd_role_aware_dual_reversal_contract.v0.json`, and
+`tests/test_iackd_role_aware_dual_reversal_contract.py`.

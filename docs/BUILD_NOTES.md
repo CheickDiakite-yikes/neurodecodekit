@@ -6888,3 +6888,37 @@ fail-closed target firewall work on generated metadata.
 
 Scientific claim not established: H3 accessed no real signal or scientific
 outcome and therefore adds no neural or decoding evidence.
+
+## 2026-08-10 - IACKD-2 Role-Aware Dual-Reversal Preregistration
+
+- Bound green dual-reversal research, consumed IACKD-1 and H2 results, the H3
+  policy result, and the exact 1,340-object OpenNeuro inventory without reading
+  any private artifact or public body.
+- Recomputed 128 canonical ten-object run groups from the committed inventory.
+  The largest is 82,064,564 bytes, the largest object is 73,200,640 bytes, and
+  the 60 separate geometry objects total 56,386 bytes.
+- Froze a fresh one-run-at-a-time future path that forbids the old retained
+  bundle, caps peak incremental disk at 1 GiB, and requires 10 GiB free before
+  one exact 7,249,113,684-byte payload sequence.
+- Froze symmetric `C2I` and `I2C` arms. Both must favor action over the exact
+  cue-derived opposite; one arm cannot rescue the other and the participant's
+  weaker arm margin is primary.
+- Bound the fixed 26-channel H3 core, causal 0.5-4 Hz feature family, central,
+  occipital, EOG, pre-window, timing, physiology, and five fixed controls.
+- Registered exactly 660 fits, 900 target-blind prediction sets, one aggregate
+  freeze that must become remotely green, one combined target delivery, one
+  score, zero retries, zero reruns, and zero post-target updates.
+- Added 16 invariants that replay hashes, inventory geometry, arm symmetry,
+  target isolation, model dimensions, statistics, resources, router order,
+  and the Tier B/Tier C boundary.
+- This commit is registration only. Generated-fixture implementation is
+  conditional on remote-green registration; real payload and scientific
+  execution require a later separately green Tier C decision.
+
+Engineering capability proposed: a storage-safe role-aware dual-reversal
+experiment can distinguish symmetric action alignment from cue transfer under
+strict participant-level and confound controls.
+
+Scientific claim not established: no payload, retained bundle, signal, event,
+trajectory, target, model prediction, or score was accessed, so this adds no
+neural or decoding evidence.

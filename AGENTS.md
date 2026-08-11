@@ -249,6 +249,24 @@ report was removed. H3 is complete, but no real reader or scientific result is
 validated; IACKD-2 still requires a separate prospective contract and Tier C
 decision.
 
+That prospective experiment is now frozen in
+`docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_PREREGISTRATION.md` and
+`registries/iackd_role_aware_dual_reversal_contract.v0.json`. IACKD-2 requires
+both congruent-to-incongruent and incongruent-to-congruent arms to favor action
+over the exact cue-derived opposite; the weaker participant arm margin is
+primary. It binds the H3 policy hash, fixed 26-channel predictive core, central,
+occipital, EOG, timing, and derangement controls, 660 exact fits, 900 exact
+prediction sets, one remote-green hash freeze, and one combined target delivery
+and score. The future public path is a fresh one-run-at-a-time stream over the
+same 1,340-object/7,249,113,684-byte identity, with an 82,064,564-byte largest
+run group, 1 GiB peak incremental disk, and no second retained raw bundle. The
+old Git-ignored IACKD bundle is explicitly forbidden. This registration
+authorizes no payload, local path, signal, target, training, prediction, or
+score. Tier B generated-fixture implementation is eligible only after this
+exact registration commit is pushed and both CI jobs pass; any real operation
+still needs a later all-false request, fresh packet-bound Tier C decision, green
+implementation, and green prediction-freeze sequence.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

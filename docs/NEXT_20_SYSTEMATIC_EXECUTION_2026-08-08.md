@@ -377,3 +377,31 @@ data, signal, target, model, network, and score counter stayed zero. The
 temporary report was removed. H3 is complete as generated mechanics evidence;
 the next IACKD scientific lane needs a separate prospective contract and Tier
 C decision.
+
+## IACKD-2 - Role-Aware Dual Reversal
+
+The separate prospective contract is now frozen. It binds H3's exact
+source-type-first policy and fixed 26-channel predictive core, then tests two
+opposing transfer directions: congruent-to-incongruent and incongruent-to-
+congruent. Both arms must favor measured hand direction over the exact
+cue-derived opposite; one arm cannot rescue the other and the participant's
+weaker arm margin is primary.
+
+The matrix freezes 11 fits and 15 prediction sets per arm and
+participant-hand unit, totaling 660 fits and 900 target-blind prediction sets.
+Central, occipital, HEOG/VEOG, EOG-orthogonalized, early/late, pre-window,
+timing, no-signal, all-zero, derangement, displacement, channel-permutation,
+and opposite-hand conditions are fixed before data.
+
+The future acquisition path no longer requires another retained 7.25 GB
+bundle. It must stream the exact 1,340-object identity once, process one
+ten-object run group at a time, and remove only invocation-created temporary
+raw files after derivative promotion. The committed inventory bounds the
+largest group at 82,064,564 bytes. Peak incremental disk is 1 GiB with 10 GiB
+free required.
+
+This work item is registration only. After complete verification, commit,
+push, and both green CI jobs, one generated-fixture and mocked-transport Tier B
+implementation may begin. Public payload, the old bundle, real signals,
+targets, training, prediction, scoring, and scientific claims remain behind a
+new exact Tier C sequence.

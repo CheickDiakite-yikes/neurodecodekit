@@ -446,6 +446,18 @@
    before one measured generated closeout passed all gates. H3 validates policy
    mechanics, not a real reader or neural result; real data and IACKD-2 stay
    closed.
+   Next read `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_PREREGISTRATION.md` and its
+   machine contract. The prospective IACKD-2 design binds H3's fixed
+   26-channel semantics and requires both opposing mapping transfers to favor
+   action over the exact cue surrogate. It freezes 660 fits, 900 prediction
+   sets, a participant-level weaker-arm statistic, central/occipital/EOG/timing
+   controls, one remote-green freeze, and one target delivery and score. Its
+   storage-safe future path streams one registered run group at a time under a
+   1 GiB disk cap and forbids the existing private bundle. This registration
+   authorizes no payload or experiment. Only generated-fixture implementation
+   becomes eligible after the registration commit is pushed and both CI jobs
+   pass; a new packet-bound Tier C decision is still mandatory before real
+   access.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

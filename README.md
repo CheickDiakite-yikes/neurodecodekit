@@ -843,7 +843,7 @@ Read this before interpreting any number in the repository.
   [authorization packet](docs/IACKD_CHANNEL_INVENTORY_AUTHORIZATION_PACKET.md),
   [decision record](docs/IACKD_CHANNEL_INVENTORY_AUTHORIZATION_DECISION.md), and
   [aggregate result](docs/IACKD_CHANNEL_INVENTORY_RESULT.md).
-- **Next design, role-aware dual reversal:** a target-free code audit found
+- **Design history, role-aware dual reversal:** a target-free code audit found
   that changing the failed `36` check alone would still misclassify TRIGGER as
   EEG and retain an invalid 32/34-EEG-row assumption. The next smallest gate is
   therefore IACKD-H2: **316 public BIDS metadata files totaling 457,602 bytes**
@@ -922,6 +922,23 @@ Read this before interpreting any number in the repository.
   counter at zero. Read the [H3 result](docs/IACKD_SOURCE_SEMANTICS_RESULT.md).
   This validates policy mechanics only; no real reader or IACKD-2 execution is
   authorized.
+- **Frozen prospective IACKD-2 experiment:** the new
+  [dual-reversal preregistration](docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_PREREGISTRATION.md)
+  turns the repaired sensor semantics into a harder scientific test. Separate
+  congruent-to-incongruent and incongruent-to-congruent models must both favor
+  measured hand direction over the exact cue-derived opposite, and the weaker
+  participant-level arm margin is primary. The contract freezes the 26-channel
+  predictive core, central, occipital, EOG, pre-window, timing, displacement,
+  permutation, derangement, and opposite-hand controls; exactly 660 fits and
+  900 target-blind prediction sets; one remote-green aggregate freeze; and one
+  combined final target delivery and score. To protect storage, a future
+  separately authorized run must stream one of 128 ten-object run groups at a
+  time, never retain a second 7.25 GB raw bundle, and stay below 1 GiB peak
+  incremental disk. The largest registered run group is 82,064,564 bytes. The
+  existing private bundle is forbidden. This is a preregistered design, not a
+  data access, model result, or neural claim; generated-fixture implementation
+  opens only after this exact registration is pushed and both CI jobs pass,
+  while every real stage still needs a fresh Tier C decision.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
