@@ -5847,3 +5847,31 @@ Evidence: `docs/IACKD_SNAPSHOT_IDENTITY_IMPLEMENTATION.md`,
 `registries/iackd_snapshot_identity_implementation.v0.json`,
 `src/neurodecodekit/datasets/iackd_snapshot_identity.py`, and
 `tests/test_iackd_snapshot_identity.py`.
+
+## 0174 - Request One Public Snapshot Audit Without Payload Access
+
+Decision: prepare an all-false IACKD-M1A packet for one future public metadata
+audit. Bind one exact 355-byte GraphQL POST and one response capped at 2 MiB.
+Keep S3 payload requests, local IACKD paths, consumed roots, neural data,
+targets, derivatives, models, predictions, scores, retries, reruns, releases,
+and claim upgrades outside the packet.
+
+Ordering decision: a fresh packet-bound decision must become remotely green
+before generated/mock transport-wrapper implementation. That exact wrapper
+must then become remotely green before one machine gate, private consumed
+marker, and public request. A metadata success stops after one private manifest
+and one aggregate report; it does not cascade into EEG acquisition.
+
+Machine decision: refuse before consumption unless all thread values equal
+one, at least 2 GiB is free, normalized one-minute load is no greater than
+`1.0` per logical CPU, and every machine value is available. Limit the public
+stage to 30 seconds, 256 MiB RSS, and 1 MiB output.
+
+Boundary: the request authorizes nothing. Commit, push, and green the packet,
+then identify it as the sole active Tier C request. Only a fresh unambiguous
+maintainer message after that identification may be recorded in a separate
+decision; the current `continue` is not retroactive.
+
+Evidence: `docs/IACKD_SNAPSHOT_IDENTITY_AUTHORIZATION_PACKET.md`,
+`registries/iackd_snapshot_identity_authorization_request.v0.json`, and
+`tests/test_iackd_snapshot_identity_authorization_request.py`.

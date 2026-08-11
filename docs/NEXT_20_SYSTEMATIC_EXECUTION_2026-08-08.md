@@ -535,3 +535,16 @@ the exact 355-byte GraphQL POST and one response capped at 2 MiB. The request
 itself must authorize nothing; a fresh packet-bound maintainer message and a
 separately green real wrapper are still required before one no-retry response.
 No EEG payload is authorized by a metadata result.
+
+Exact canonicalizer `7b8f47b` passed Base Python job `93753325035` and Optional
+Neuro Readers job `93753324999` in CI `31483435801`. The next artifact is now
+the all-false IACKD-M1A request. It freezes one future additive standard-library
+transport wrapper, a 2 GiB free-disk and normalized-load machine gate, exactly
+one 355-byte POST, one response capped at 2 MiB, one private manifest, one
+aggregate report, zero S3 payload requests, and zero retries or reruns.
+
+The request authorizes nothing. Its next systematic item is packet proof:
+commit, push, and require both jobs green, then identify the exact commit, CI,
+scope, and boundary as the sole active Tier C packet. Stop for a fresh
+packet-bound maintainer decision. Do not implement the wrapper or open a public
+response from this packet or any earlier `continue`.

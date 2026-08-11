@@ -1055,6 +1055,15 @@ Read this before interpreting any number in the repository.
   neural result. Public GraphQL access remains closed until the exact
   implementation is remotely green and a new all-false Tier C request receives
   a fresh packet-bound decision.
+  Exact implementation `7b8f47b` is now green in CI `31483435801`. The
+  follow-on
+  [IACKD-M1A all-false packet](docs/IACKD_SNAPSHOT_IDENTITY_AUTHORIZATION_PACKET.md)
+  binds one possible standard-library transport wrapper, one exact 355-byte
+  GraphQL POST, one 2 MiB-capped response, a 2 GiB free-disk gate, and zero
+  payload requests. It authorizes nothing yet. The packet itself must become
+  remotely green and be identified as the sole Tier C request before a fresh
+  maintainer decision can unlock generated/mock wrapper work; public access
+  remains behind another green wrapper milestone.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

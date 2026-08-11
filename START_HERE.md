@@ -572,6 +572,15 @@
    implementation. Only afterward prepare an all-false Tier C request for one
    public response; no public API, EEG payload, target, model, or score access
    is currently open.
+   Exact implementation `7b8f47b` passed both jobs in CI `31483435801`. Now
+   read `docs/IACKD_SNAPSHOT_IDENTITY_AUTHORIZATION_PACKET.md` and
+   `registries/iackd_snapshot_identity_authorization_request.v0.json`. The
+   request is all false: it describes one future generated/mock transport
+   wrapper and, only after separate green proof, one exact 355-byte GraphQL
+   POST with one 2 MiB-capped response and zero payload requests. Next commit,
+   push, and green this packet, identify it as the sole Tier C request, and
+   stop for a fresh decision. Do not implement the wrapper or make a public
+   request from the packet or an earlier `continue`.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

@@ -7352,3 +7352,33 @@ aggregate-public outputs.
 
 Scientific claim not established: generated metadata and zero neural or target
 reads establish no neural effect or decoding result.
+
+## 2026-08-11 - IACKD-M1A All-False Public Metadata Request
+
+- Exact canonicalizer `7b8f47b` passed Base Python job `93753325035` and
+  Optional Neuro Readers job `93753324999` in CI `31483435801` before the
+  request was prepared.
+- Added an all-false Tier C packet binding the green research, registration,
+  canonicalizer, implementation receipt, exact GraphQL query/body, and every
+  source/test hash.
+- The possible later sequence is strictly ordered: green decision, generated
+  and mocked standard-library wrapper, green exact wrapper, machine gate and
+  private consumed marker, then one public request, one bounded response read,
+  one canonicalization, one private manifest, one aggregate report, and stop.
+- The future request is exactly 355 bytes; the one response is capped at
+  2,097,152 bytes, with one overflow-detection byte, 30 seconds, 256 MiB RSS,
+  one thread/worker/job, 1 MiB output, 2 GiB free disk, and normalized load no
+  greater than `1.0` per logical CPU.
+- S3 payload, local/retained IACKD, consumed-root, EEG, event, trajectory,
+  target, derivative, model, prediction, score, retry, rerun, release, and
+  claim authorization flags and counters are all false or zero.
+- Eleven request invariants pass. Next gate: commit, push, and green this exact
+  packet, then identify it as the sole active Tier C request and stop for a
+  fresh maintainer decision. The current `continue` is not retroactive.
+
+Engineering capability requested: one bounded transport wrapper can test the
+current public snapshot identity once without treating raw HTTP bytes as the
+snapshot, tree, selected-manifest, or critical-metadata identity.
+
+Scientific claim not established: this all-false request is not EEG data or a
+result and establishes no neural effect or decoding capability.

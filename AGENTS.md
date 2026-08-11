@@ -448,6 +448,21 @@ counter remains zero. Commit, push, and require both CI jobs green before
 preparing one all-false Tier C request for a single public response. The
 current `continue` does not authorize that response or an EEG payload.
 
+Exact implementation `7b8f47ba4b192953f4f60126521ba1839b828c85` passed Base
+Python job `93753325035` and Optional Neuro Readers job `93753324999` in CI
+`31483435801`. Read `docs/IACKD_SNAPSHOT_IDENTITY_AUTHORIZATION_PACKET.md`
+and `registries/iackd_snapshot_identity_authorization_request.v0.json`. The
+IACKD-M1A request is all false and binds one possible later standard-library
+transport wrapper followed, after separate green proof, by exactly one
+355-byte GraphQL POST and one response capped at 2 MiB. Payload requests,
+local IACKD paths, consumed roots, neural data, targets, models, scores,
+retries, reruns, and claim upgrades remain unauthorized. The request commit
+must be pushed and both CI jobs must pass before Codex identifies it as the
+sole Tier C packet. Only a fresh unambiguous packet-bound maintainer message
+after that identification may be recorded in a separate decision. Do not use
+the current or any earlier `continue` retroactively, implement the wrapper, or
+request a public body from the packet alone.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

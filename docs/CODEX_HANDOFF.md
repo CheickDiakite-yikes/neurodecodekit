@@ -2690,3 +2690,27 @@ both CI jobs green. Only then prepare an all-false Tier C request binding the
 one exact GraphQL body and one 2 MiB-capped response. A fresh packet-bound
 decision and a separately green real wrapper are still required; the current
 or any earlier `continue` authorizes neither that response nor an EEG payload.
+
+## 2026-08-11 IACKD-M1A All-False Public Metadata Request
+
+Exact canonicalizer `7b8f47ba4b192953f4f60126521ba1839b828c85` passed Base
+Python job `93753325035` and Optional Neuro Readers job `93753324999` in CI
+`31483435801`.
+
+Read `docs/IACKD_SNAPSHOT_IDENTITY_AUTHORIZATION_PACKET.md`,
+`registries/iackd_snapshot_identity_authorization_request.v0.json`, and its
+test. The request binds one possible future standard-library transport wrapper
+and, only after that exact wrapper is remotely green, one 355-byte OpenNeuro
+GraphQL POST with one response capped at 2 MiB. It requires a 2 GiB free-disk
+gate, normalized one-minute load at most `1.0` per logical CPU, one thread,
+30 seconds, 256 MiB RSS, and 1 MiB output.
+
+Every current implementation, network, public response, S3 payload, local
+IACKD, consumed-root, neural, target, model, score, retry, rerun, release, and
+claim authorization is false. The packet authorizes nothing.
+
+Immediate next gate: run complete verification, commit and push the exact
+packet, and require both CI jobs green. Only then identify its commit, CI,
+one-response scope, and boundary as the sole active Tier C packet and stop for
+a fresh maintainer decision. Do not implement the wrapper or access a public
+body from this packet or an earlier `continue`.
