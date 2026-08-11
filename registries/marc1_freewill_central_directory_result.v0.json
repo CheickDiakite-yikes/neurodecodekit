@@ -1,0 +1,219 @@
+{
+  "schema_name": "neurodecodekit.marc1_freewill_central_directory_result",
+  "schema_version": "0.1.0",
+  "result_id": "MARC1-CD1-generated-central-directory-result-v0",
+  "recorded_at_local": "2026-08-11",
+  "status": "consumed_passed_generated_mock_qualification_no_scientific_value",
+  "route": "MARC1CDG-R1",
+  "artifact_bindings": {
+    "contract": {
+      "path": "registries/marc1_freewill_central_directory_contract.v0.json",
+      "sha256": "900417812d978030b7b92ad04befa4a7ce7f9e54fe479cd8c2c43ccfab1b8d69"
+    },
+    "implementation_registry": {
+      "path": "registries/marc1_freewill_central_directory_implementation.v0.json",
+      "sha256": "9cd010cd7bae25bb43c01e25c46169439103c66bf20292485f80da2ee701ee7a"
+    },
+    "implementation_source": {
+      "path": "src/neurodecodekit/datasets/marc1_central_directory_audit.py",
+      "sha256": "db8b6975c81d4afe0a5ede0126956f4113159c98b3975cbded4ad322bce23de6"
+    },
+    "result_document": {
+      "path": "docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_RESULT.md",
+      "sha256": "702a3cb48d8ff5d8f8c1d3d0c617b6177d2d33bde662ddde2ca62ed72596e550"
+    },
+    "result_tests": {
+      "path": "tests/test_marc1_freewill_central_directory_result.py",
+      "sha256": "83ead8170bcea8c8b3f792944dcbc668df8c8d32c091209e3576e6af52500624"
+    }
+  },
+  "green_implementation_proof": {
+    "commit": "211fd78fba82a660c4730a586541819b2eb264fd",
+    "CI_run_id": 31511626051,
+    "base_job_id": 93846584402,
+    "optional_neuro_job_id": 93846584527,
+    "both_required_jobs_green": true,
+    "implementation_registry_sha256": "9cd010cd7bae25bb43c01e25c46169439103c66bf20292485f80da2ee701ee7a"
+  },
+  "execution_identity": {
+    "registered_runs": 1,
+    "process_start": "fresh_python_minus_S",
+    "generated_and_mock_only": true,
+    "network_client_available_to_module": false,
+    "DNS_client_available_to_module": false,
+    "real_input_path_available_to_module": false,
+    "aggregate_inspection_runs": 1
+  },
+  "generated_output_artifacts": {
+    "aggregate_report": {
+      "bytes": 5898,
+      "sha256": "a8bfc657ca77464292c7ab047e46a7a8cec1c66bb9876845a2ef30c7e4c355ab"
+    },
+    "private_manifest": {
+      "bytes": 5676,
+      "sha256": "c38c0be784f19401b08da26bdd2d0dd6a43339c34202f6845c7ca7cb6b5c4bf0"
+    },
+    "combined_bytes": 11574,
+    "temporary_output_directory_removed": true,
+    "generated_outputs_committed": false
+  },
+  "archive_summary": {
+    "virtual_archive_bytes": 13591548048,
+    "materialized_generated_bytes": 280249,
+    "tail_bytes": 131072,
+    "archive_comment_bytes": 27,
+    "central_directory_bytes": 148910,
+    "inventory_sha256": "e8e46341bfab793605bafec2def82b93cae8016c58cf1a26275d8ca2cffb2c8b",
+    "private_manifest_sha256": "c38c0be784f19401b08da26bdd2d0dd6a43339c34202f6845c7ca7cb6b5c4bf0",
+    "entry_count": 18,
+    "directory_count": 4,
+    "regular_file_count": 14,
+    "ZIP64_extended_member_count": 1,
+    "compression_method_counts": {
+      "0": 5,
+      "8": 13
+    },
+    "declared_compressed_member_bytes": 4300569216,
+    "declared_uncompressed_member_bytes": 5000886384,
+    "local_header_bytes": 0,
+    "member_payload_bytes": 0,
+    "whole_archive_MD5_verified": false
+  },
+  "transport_summary": {
+    "mock_only": true,
+    "direct_path_requests": 3,
+    "redirect_path_requests": 5,
+    "bodyless_redirects": 2,
+    "response_bodies_per_path": 3,
+    "body_bytes_per_path": 280249,
+    "body_read_calls_per_path": 9,
+    "terminal_status": 206,
+    "exact_Content_Range": true,
+    "exact_Content_Length": true,
+    "identity_encoding": true,
+    "single_part_framing": true,
+    "live_range_support_verified": false
+  },
+  "mutation_summary": {
+    "required_count": 32,
+    "passed_count": 32,
+    "route_counts": {
+      "MARC1CDG-F00-contract-artifact-or-green-proof-failure": 1,
+      "MARC1CDG-F02-metadata-identity-shape-or-download-URL-failure": 4,
+      "MARC1CDG-F03-redirect-request-status-range-framing-encoding-or-byte-count-failure": 8,
+      "MARC1CDG-F04-EOCD-ZIP64-disk-offset-size-or-directory-bound-failure": 8,
+      "MARC1CDG-F05-central-entry-path-flag-method-kind-ZIP64-extra-or-duplicate-failure": 9,
+      "MARC1CDG-F06-privacy-deterministic-replay-hash-or-output-failure": 2
+    },
+    "resource_refusal_MARC1CDG_F01_covered_by_implementation_tests": true
+  },
+  "measurements": {
+    "generated_input_bytes": 280249,
+    "generated_output_bytes": 11574,
+    "runtime_seconds": 0.006544457981362939,
+    "peak_RSS_bytes": 27131904,
+    "external_process_wall_seconds": 0.12,
+    "external_maximum_RSS_bytes": 27181056,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "producer_is_causal": "not_applicable_metadata_only",
+    "end_to_end_latency_measured": false,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0
+  },
+  "resource_caps": {
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "materialized_generated_fixture_bytes": 2097152,
+    "mock_response_body_bytes_per_path": 17039360,
+    "mock_response_bodies_per_path": 3,
+    "mock_redirect_responses_per_path": 2,
+    "mock_requests_per_path": 5,
+    "combined_output_bytes": 1048576,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "network_bytes": 0,
+    "real_payload_bytes": 0
+  },
+  "acceptance_gates": {
+    "aggregate_private_output_separation": true,
+    "all_32_mutations_refused": true,
+    "all_live_real_model_score_and_claim_counters_zero": true,
+    "complete_in_tail_ZIP64": true,
+    "decoy_resistant_EOCD": true,
+    "deterministic_replay_and_manifest_hashes": true,
+    "directory_range_derived_before_response": true,
+    "exact_18_entry_inventory": true,
+    "exact_generated_metadata_identity": true,
+    "exact_tail_and_virtual_total": true,
+    "resource_and_output_caps": true,
+    "safe_supported_member_classification": true,
+    "valid_direct_and_two_redirect_paths": true,
+    "zero_local_header_and_member_content_reads": true
+  },
+  "access_counters": {
+    "live_metadata_requests": 0,
+    "live_metadata_bytes": 0,
+    "archive_HEAD_requests": 0,
+    "archive_range_requests": 0,
+    "archive_range_bytes": 0,
+    "DNS_queries": 0,
+    "network_redirects": 0,
+    "whole_archive_downloads": 0,
+    "real_archive_path_operations": 0,
+    "member_local_header_reads": 0,
+    "member_payload_reads": 0,
+    "member_payload_bytes": 0,
+    "signal_sample_reads": 0,
+    "event_or_onset_reads": 0,
+    "target_or_label_reads": 0,
+    "real_derivative_rows": 0,
+    "parameter_update_fits": 0,
+    "model_inference_calls": 0,
+    "prediction_sets": 0,
+    "prediction_freezes": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "warnings": [
+    "Generated and mocked ranges contain no public or human data.",
+    "Live range support and final transport identity remain unavailable.",
+    "Whole-archive MD5 member CRC local headers and payload integrity remain unavailable.",
+    "End-to-end latency was not measured.",
+    "External process wall time is an engineering observation not end-to-end scientific latency.",
+    "MARC1CDG-R1 cannot authorize a live request member acquisition or scientific claim."
+  ],
+  "unavailable_fields": [
+    "live range support",
+    "live final host",
+    "live ETag and Last-Modified",
+    "real entry count and central-directory size",
+    "real member inventory",
+    "whole-archive MD5 verification",
+    "member CRC32 verification",
+    "local-header consistency",
+    "member payload integrity",
+    "human signal event target or model result",
+    "end-to-end latency"
+  ],
+  "disposition": {
+    "registered_generated_closeout_runs": 1,
+    "consumed": true,
+    "retry_or_rerun_authorized": false,
+    "public_metadata_access_authorized": false,
+    "public_archive_range_access_authorized": false,
+    "real_payload_access_authorized": false,
+    "next_gate_is_all_false_Tier_C_request": true,
+    "next_public_operation_requires_new_exact_Tier_C_decision": true
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "A measured dependency-free generated qualification demonstrated bounded range transport decoy-resistant EOCD and ZIP64 parsing exact central-directory inventory private-public separation deterministic replay refusal routing and resource accounting without materializing the 13.59 GB archive.",
+    "scientific_claim_established": false,
+    "scientific_claim_not_established": "No public archive byte member payload human neural signal event target model prediction or score was accessed so this result establishes no neural effect movement decoding source attribution or scientific result."
+  }
+}

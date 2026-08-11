@@ -599,10 +599,28 @@ bodyless-redirect paths, replays canonically, and refuses all 32 mutations.
 The latest development qualification passed constructed `MARC1CDG-R1` in
 0.00740712508559227 seconds at 26,181,632-byte peak RSS and emitted 11,573
 temporary bytes, which were removed. This is not the registered measured
-closeout and carries no evidence value. Commit, push, and obtain both green CI
-jobs for this exact implementation before one registered generated closeout.
-Do not prepare a live packet, request a public byte, or infer archive contents
-from the development fixture.
+closeout and carries no evidence value. Exact implementation
+`211fd78fba82a660c4730a586541819b2eb264fd` then passed Base Python job
+`93846584402` and Optional Neuro Readers job `93846584527` in CI
+`31511626051` before one registered generated closeout.
+
+Read `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_RESULT.md` and
+`registries/marc1_freewill_central_directory_result.v0.json`. The one fresh
+Python `-S` run passed `MARC1CDG-R1` over 280,249 generated input bytes in
+0.006544457981362939 seconds at 27,131,904-byte peak RSS. It inventoried all
+18 generated entries, reconciled both transport paths, refused all 32
+mutations, passed all 14 gates, and wrote 11,574 temporary bytes. The aggregate
+report was inspected once; both exact files and the invocation directory were
+removed. Every live, real archive, payload, signal, event, target, model,
+prediction, score, and claim counter remained zero. The closeout is consumed
+with no retry or rerun.
+
+The next eligible work is an all-false Tier C authorization request binding
+one possible future no-retry live metadata/tail/directory audit. That request
+must be committed, pushed, and both jobs green before it may be identified as
+the sole active packet. Do not apply the current or an earlier `continue`
+retroactively, request a public byte, download the monolith, or infer real
+archive contents from `MARC1CDG-R1`.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

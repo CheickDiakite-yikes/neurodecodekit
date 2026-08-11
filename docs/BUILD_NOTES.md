@@ -7709,3 +7709,40 @@ materializes the 13.59 GB archive.
 Scientific claim not established: no public archive byte, member payload,
 human signal, event, target, model, prediction, or score was accessed, so this
 work adds no neural or decoding evidence.
+
+## 2026-08-11 - MARC1-CD1 Generated Central-Directory Closeout
+
+- Exact implementation `211fd78` passed Base Python job `93846584402` and
+  Optional Neuro Readers job `93846584527` in CI `31511626051` before the one
+  registered closeout.
+- Ran one fresh Python `-S` process with one CPU thread, one worker, one
+  numerical job, no network client, no live endpoint, no real input path, and
+  one new private temporary output directory.
+- Passed `MARC1CDG-R1` over 280,249 generated input bytes in
+  0.006544457981362939 seconds at 27,131,904-byte reported peak RSS. External
+  process observation was 0.12 seconds wall and 27,181,056-byte maximum RSS.
+- Reconciled the fixed 128-KiB tail and complete ZIP64 records, parsed the
+  148,910-byte directory, inventoried all 18 generated entries, validated the
+  direct and two-bodyless-redirect paths, refused all 32 mutations, and passed
+  all 14 acceptance gates.
+- Wrote a 5,898-byte aggregate report and 5,676-byte generated private
+  manifest. Inspected the aggregate once, bound both hashes, then removed the
+  two exact files and their empty invocation directory. No generated output
+  was committed.
+- Every live metadata, archive HEAD/range, network, whole-download, real path,
+  local-header, payload, signal, event, target, derivative, model, prediction,
+  score, and claim counter remained zero. End-to-end latency was not measured.
+- Added 12 aggregate-result invariants. All 82 focused MARC1-CD1 tests pass,
+  and the complete suite passes 2,355 tests with 35 expected skips in 54.687
+  seconds, exactly 12 tests above the green implementation baseline. The
+  generated closeout is consumed with no retry or rerun. Next gate is an all-
+  false Tier C request; no public response is authorized by this result.
+
+Engineering capability added: bounded range transport, decoy-resistant EOCD
+and ZIP64 parsing, exact central-directory inventory, privacy, replay,
+refusal, output, and resource mechanics now have a measured generated
+qualification without materializing the 13.59 GB archive.
+
+Scientific claim not established: no public archive byte, member payload,
+human signal, event, target, model, prediction, or score was accessed, so the
+closeout adds no neural or decoding evidence.

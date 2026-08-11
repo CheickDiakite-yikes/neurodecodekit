@@ -6177,3 +6177,38 @@ Evidence: `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_IMPLEMENTATION.md`,
 `registries/marc1_freewill_central_directory_implementation.v0.json`,
 `src/neurodecodekit/datasets/marc1_central_directory_audit.py`, and
 `tests/test_marc1_freewill_central_directory_implementation.py`.
+
+## 0185 - Consume MARC1CDG-R1 As Archive-Mechanics Proof Only
+
+Decision: accept the one post-green generated closeout at `MARC1CDG-R1`.
+Exact implementation `211fd78` passed both jobs in CI `31511626051` before one
+fresh Python `-S` qualification. No development run substitutes for this
+registered execution.
+
+Result decision: record 280,249 generated input bytes, 11,574 generated output
+bytes, 0.006544457981362939-second runtime, 27,131,904-byte reported peak RSS,
+18 parsed entries, one ZIP64 member, both frozen transport paths, all 32
+refusals, and all 14 acceptance gates. Retain only aggregate measurements and
+SHA-256 identities for the 5,898-byte report and 5,676-byte generated private
+manifest.
+
+Cleanup decision: inspect the aggregate report once, remove only the two
+invocation-created files and their empty temporary directory, and commit no
+generated inventory. The exact generated member names and offsets remain
+absent from Git.
+
+Boundary: consume the closeout with no retry or rerun. `MARC1CDG-R1` proves
+generated transport and ZIP64 directory mechanics only. It does not prove live
+range support, the real archive inventory, whole-file MD5, member CRC or local
+headers, payload integrity, human signals, events, targets, models, scores, or
+any scientific claim.
+
+Next gate: prepare one all-false Tier C request for the frozen live metadata,
+tail, and central-directory sequence. The request must become remotely green
+before it may be identified as the sole active packet. Only a fresh packet-
+bound maintainer decision after that identification could authorize one live
+execution.
+
+Evidence: `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_RESULT.md`,
+`registries/marc1_freewill_central_directory_result.v0.json`, and
+`tests/test_marc1_freewill_central_directory_result.py`.
