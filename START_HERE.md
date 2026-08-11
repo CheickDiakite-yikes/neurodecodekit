@@ -1174,6 +1174,13 @@ bytes, both modality plans, all twelve comparators, and all 24 refusals passed.
 The result is consumed and has no scientific value because every real-data,
 target, model, and score counter remained zero. Read
 `docs/MARC_1_GENERATED_QUALIFICATION_RESULT.md`. The next eligible task is
-Tier A design of a metadata-only central-directory range audit. No real
-archive request or payload is authorized; that remains a new exact Tier C
-decision.
+the newly specified `MARC1-CD1` metadata-only central-directory range audit.
+Read `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_RESEARCH.md` and
+`registries/marc1_freewill_central_directory_research.v0.json`. The design
+allows a future maximum of three response bodies totaling 17,039,360 bytes:
+128 KiB of version metadata, the final 128 KiB of the archive, and at most 16
+MiB of central-directory metadata. It requires complete ZIP64 reconciliation
+inside the tail and has no whole-download or exploratory fallback. This is
+currently research only: no real metadata response, archive range, or payload
+is authorized, and the next step is generated/mock preregistration after the
+research commit is remotely green.

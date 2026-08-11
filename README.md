@@ -364,6 +364,7 @@ negative result and S25 is never repurposed for calibration.
 | Current Loop 53 verification | 68 focused closeout tests; final full suite 1,062 tests with 3 expected skips in 44.090 sec and 581,648,384-byte external peak RSS; baseline was 1,056 tests, 3 skips, 30.623 sec, and 568,688,640 bytes | Authorization `2a47bbc` passed CI `29589212626` / `29589225113`; implementation `8ec5b1b` passed CI `29591387642` / `29591391286` before the single pass; workbook formula-error scan found 0 matches | Adds exactly 6 aggregate-result tests while making identity, green-gate order, no-overwrite behavior, caps, opaque hashing, counters, private receipt binding, no-rerun status, and claim ceiling machine-checkable |
 | Current WO9R result verification | 29 implementation tests, 5 public-freeze invariants, and 7 aggregate-result invariants; 72 real EDFs; 1,080 events; 144 fits; 216 frozen prediction sets; one 360-target score | Implementation `8242674` passed CI `31359548779`; freeze `8cd45d7` passed CI `31360781199` before the one target delivery; result routed `WO9R-R3` with zero post-target updates or reruns | Makes the positive execution/imagery task-information result and the failed localization/confound conjunction independently checkable without publishing individual outputs |
 | MARC-1 next-effect research | 2 selected licensed axes; 14-member generated ZIP; 2 modality profiles; 12 comparators; 24/24 adversarial refusals; 51 focused tests; 2,273 complete-suite tests; 0 payload/model/score operations | Exact implementation `e35a587` passed CI `31505555044` before one generated closeout; `MARC1G-R1` passed in 0.006589 sec at 23.5 MB peak RSS and is consumed | Proves the bounded ZIP and multimodal firewall mechanics needed for the next experiment, while adding no human-neural or decoding evidence |
+| MARC1-CD1 storage-safe archive design | 13.59 GB bound ZIP; <=3 future response bodies; 128 KiB trailer; <=16 MiB central directory; 17,039,360-byte total cap; 14 invariant tests; 0 live requests | Tier A standards research complete; generated/mock preregistration is next; live audit remains Tier C | Makes exact participant/member selection possible without a whole download while preserving unavailable integrity fields and zero scientific claim value |
 
 ### Real-Data Scientific Scorecard
 
@@ -1119,6 +1120,16 @@ Read this before interpreting any number in the repository.
   unavailable. MARC-1 has opened no payload, signal, event, target, model, or
   score, so it is a better experiment design, not a new neural result. Read the
   [full source comparison and claim router](docs/MARC_1_MULTIMODAL_ARTIFACT_RESOLVED_MOVEMENT_RESEARCH.md).
+
+  The next storage gate is now designed as `MARC1-CD1`. A future audit may read
+  only one 128-KiB version-metadata body, one exact 128-KiB archive tail, and
+  one central-directory range capped at 16 MiB, for 17,039,360 response-body
+  bytes maximum. ZIP64 must reconcile fully inside the tail; otherwise the
+  lane parks with no exploratory request or whole-file fallback. Exact member
+  names remain private, and whole-archive MD5, member CRC verification, local
+  headers, payload content, and neural evidence remain unavailable. The
+  [central-directory research record](docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_RESEARCH.md)
+  authorizes no live response; generated/mock qualification comes first.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

@@ -7610,3 +7610,35 @@ qualification under explicit privacy and resource caps.
 Scientific claim not established: the run used no human neural data and no
 model, so it establishes no neural effect, movement decoding, source
 attribution, thought decoding, or real-time capability.
+
+## 2026-08-11 - MARC-1 Freewill Central-Directory Range Research
+
+- Bound the metadata lane to Figshare record `28632599` version 1, file
+  `57518986`, exact size `13,591,548,048`, and registered MD5
+  `3b7c3039c5c9fb6abf1429a830301711`.
+- Reviewed official Figshare file-download documentation, RFC 9110 byte-range
+  semantics, and PKWARE APPNOTE 6.3.10 ZIP/ZIP64 structures without requesting
+  a dataset-specific metadata body or archive byte.
+- Designed one conditional sequence with at most three response bodies: a
+  128-KiB versioned metadata response, an exact 128-KiB tail range, and one
+  central-directory range capped at 16 MiB. The total body cap is 17,039,360
+  bytes; a whole-file fallback, retry, or rerun is forbidden.
+- Required classic EOCD, ZIP64 locator, and complete ZIP64 EOCD reconciliation
+  inside the fixed tail before any directory request. Additional exploratory
+  ZIP64 requests, split/encrypted archives, uncertain bounds, and directories
+  above 16 MiB park the lane.
+- Separated a private exact-member manifest from aggregate output and marked
+  whole-archive MD5, member CRC verification, local-header consistency, and
+  member payload verification explicitly unavailable after a partial audit.
+- Added 14 invariant tests. The complete dependency-light suite passes 2,287
+  tests with 35 expected skips in 54.300 seconds. Ruff, JSON validation, and
+  `git diff --check` pass. Every live/public/real/model/score counter remains
+  zero.
+
+Engineering capability added: the repository now has a standards-bound,
+storage-safe plan for learning a 13.59 GB archive's exact inventory with no
+more than 17,039,360 response-body bytes and zero member-content reads.
+
+Scientific claim not established: no dataset-specific metadata body, archive
+range, member, signal, event, target, model, prediction, or score was accessed,
+so this research adds no neural or decoding evidence.

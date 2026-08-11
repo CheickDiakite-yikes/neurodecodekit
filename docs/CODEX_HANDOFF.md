@@ -2921,3 +2921,33 @@ The result is consumed with no retry or rerun. Next safe work is Tier A design
 of a separately named metadata-only central-directory range audit for the
 13.59 GB Freewill archive. Do not issue a HEAD or range request from this
 result; live metadata remains a new exact Tier C decision.
+
+## 2026-08-11 MARC-1 Freewill Central-Directory Research Handoff
+
+Read `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_RESEARCH.md`,
+`registries/marc1_freewill_central_directory_research.v0.json`, and
+`tests/test_marc1_freewill_central_directory_research.py`.
+
+`MARC1-CD1` is the next archive-mechanics lane. It is bound to Figshare record
+`28632599` version 1 and exact file `57518986`, size `13,591,548,048`, MD5
+`3b7c3039c5c9fb6abf1429a830301711`. It never permits a whole-archive fallback.
+
+The future conditional audit has at most three response bodies totaling at
+most 17,039,360 bytes: one 128-KiB versioned metadata response, one exact
+128-KiB final archive range, and one central-directory range capped at 16 MiB.
+The tail must contain a reconciled classic EOCD, ZIP64 locator, and complete
+ZIP64 EOCD. If not, park without an exploratory request. HTTP `206`, exact
+`Content-Range`, exact length, identity encoding, single-disk ZIP64 bounds,
+safe unique paths, supported file kinds/methods, and strict output privacy are
+mandatory.
+
+This Tier A record made no public request. The next eligible work is a frozen
+generated/mock-only preregistration, followed after green proof by a standard-
+library implementation with no live endpoint or `execute` mode. Do not prepare
+or bind a Tier C decision until that exact implementation is remotely green.
+Even a future `MARC1CD-R1` would inventory metadata only; whole-archive MD5,
+member CRC verification, local headers, payload content, and every neural
+claim would remain unavailable.
+
+The unrelated untracked workbook inspection sidecar remains untouched at
+SHA-256 `b96bbea77ec93e59c0db7c4bcaeb4a9182f1f7cc7039d13fb223b65e0005beb6`.

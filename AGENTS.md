@@ -552,6 +552,25 @@ counter remained zero. Fifty-one focused MARC-1 tests and the complete
 rerun. The next safe work is Tier A design of a metadata-only central-directory
 range audit; any live request remains a separately named Tier C decision.
 
+Read `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_RESEARCH.md` and
+`registries/marc1_freewill_central_directory_research.v0.json`. The next
+prospective lane is `MARC1-CD1`, a metadata-only audit bound to Figshare record
+`28632599` version 1, file `57518986`, size `13,591,548,048`, and MD5
+`3b7c3039c5c9fb6abf1429a830301711`. Its future live ceiling is three response
+bodies and 17,039,360 bytes: one 128-KiB versioned metadata response, one exact
+128-KiB tail range, and one conditional central-directory range capped at 16
+MiB. The classic EOCD, ZIP64 locator, and complete ZIP64 EOCD must reconcile
+inside the tail; no exploratory range or whole-archive fallback exists.
+
+This Tier A record made zero public requests and authorizes none. The next
+eligible step is a generated/mock-only preregistration and, after its own green
+proof, a standard-library implementation with no live URL or execute mode.
+Only after that exact implementation is remotely green may an all-false Tier C
+request be prepared. Do not apply any earlier `continue` retroactively. Even a
+future `MARC1CD-R1` would establish archive inventory only, leaving whole-file
+MD5, member CRC verification, local headers, payloads, signals, targets,
+models, scores, and neural claims unavailable.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

@@ -6077,3 +6077,37 @@ named Tier C packet and exact maintainer decision.
 Evidence: `docs/MARC_1_GENERATED_QUALIFICATION_RESULT.md`,
 `registries/marc1_generated_qualification_result.v0.json`, and
 `tests/test_marc1_generated_qualification_result.py`.
+
+## 0182 - Inventory The Freewill Monolith Through Three Bounded Bodies
+
+Decision: advance `MARC1-CD1` as a metadata-only range-audit lane. Do not
+download the 13,591,548,048-byte Freewill archive to discover its contents.
+Use one version-specific Figshare metadata response, one exact 131,072-byte
+tail range, and at most one exact central-directory range no larger than 16
+MiB.
+
+Archive decision: require the classic EOCD, ZIP64 locator, and complete ZIP64
+EOCD to reconcile inside the fixed tail before the central-directory request.
+Park if ZIP64 requires another exploratory read, the directory is larger than
+16 MiB, the archive is split or encrypted, range framing is not an exact
+single-part `206`, or any offset is not proven in bounds.
+
+Privacy decision: exact member names, offsets, and checksums belong only in a
+Git-ignored private manifest. Aggregate output may contain counts, byte totals,
+role summaries, canonical hashes, measurements, warnings, and unavailable
+states, but no member name, offset, download/redirect URL, response header, or
+per-member checksum.
+
+Integrity decision: a central-directory audit does not verify the registered
+whole-archive MD5, member CRC-32 values, local headers, or member payloads.
+Those states remain explicitly unavailable until a later separately frozen
+acquisition.
+
+Boundary: this Tier A design authorizes no public response or archive range.
+First freeze a generated/mock contract, implement it without a live endpoint,
+and require both CI jobs green. Only then may an all-false Tier C request be
+prepared for one no-retry audit capped at 17,039,360 response-body bytes.
+
+Evidence: `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_RESEARCH.md`,
+`registries/marc1_freewill_central_directory_research.v0.json`, and
+`tests/test_marc1_freewill_central_directory_research.py`.

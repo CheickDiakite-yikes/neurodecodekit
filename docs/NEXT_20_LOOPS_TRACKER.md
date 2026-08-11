@@ -1230,3 +1230,19 @@ runtime, 23,511,040-byte peak RSS, and zero real/model/score operations. Tasks
 1-2 are complete and consumed with no rerun. Task 3 is now eligible for Tier A
 contract design only; its live metadata request and tasks 4-5 remain closed
 Tier C work.
+
+Task 3 now has a Tier A transport/archive design in
+`docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_RESEARCH.md` and
+`registries/marc1_freewill_central_directory_research.v0.json`. `MARC1-CD1`
+limits a future audit to one 128-KiB versioned metadata response, one exact
+128-KiB archive-tail range, and one conditional central-directory range no
+larger than 16 MiB: 17,039,360 response-body bytes maximum. It requires the
+classic EOCD, ZIP64 locator, and complete ZIP64 EOCD to reconcile inside the
+tail and forbids a whole-file fallback, exploratory range, member-content
+read, retry, or rerun.
+
+Next gate: commit, push, and green this research record; then freeze and
+implement generated/mock HTTP-range mechanics under Tier B. The first live
+Figshare response remains closed until a later all-false packet, fresh exact
+decision, and green decision commit. Participant selection, payload
+acquisition, signals, targets, models, and scoring remain later tasks.
