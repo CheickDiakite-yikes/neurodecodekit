@@ -270,6 +270,7 @@ class Marc1GeneratedQualificationImplementationTests(unittest.TestCase):
             result = subprocess.run(
                 [
                     sys.executable,
+                    "-S",
                     "-m",
                     "neurodecodekit.datasets.marc1_generated_qualification",
                     "qualify",
@@ -294,6 +295,7 @@ class Marc1GeneratedQualificationImplementationTests(unittest.TestCase):
             qualify = subprocess.run(
                 [
                     sys.executable,
+                    "-S",
                     "-m",
                     "neurodecodekit.datasets.marc1_generated_qualification",
                     "qualify",
@@ -313,6 +315,7 @@ class Marc1GeneratedQualificationImplementationTests(unittest.TestCase):
             inspect = subprocess.run(
                 [
                     sys.executable,
+                    "-S",
                     "-m",
                     "neurodecodekit.datasets.marc1_generated_qualification",
                     "inspect",
@@ -334,6 +337,7 @@ class Marc1GeneratedQualificationImplementationTests(unittest.TestCase):
             result = subprocess.run(
                 [
                     sys.executable,
+                    "-S",
                     "-m",
                     "neurodecodekit.datasets.marc1_generated_qualification",
                     "qualify",
@@ -351,6 +355,7 @@ class Marc1GeneratedQualificationImplementationTests(unittest.TestCase):
             refused = subprocess.run(
                 [
                     sys.executable,
+                    "-S",
                     "-m",
                     "neurodecodekit.datasets.marc1_generated_qualification",
                     "inspect",
@@ -370,6 +375,7 @@ class Marc1GeneratedQualificationImplementationTests(unittest.TestCase):
         result = subprocess.run(
             [
                 sys.executable,
+                "-S",
                 "-m",
                 "neurodecodekit.datasets.marc1_generated_qualification",
                 "--help",
@@ -388,6 +394,7 @@ class Marc1GeneratedQualificationImplementationTests(unittest.TestCase):
         result = subprocess.run(
             [
                 sys.executable,
+                "-S",
                 "-m",
                 "neurodecodekit.datasets.marc1_generated_qualification",
                 "plan",

@@ -91,6 +91,14 @@ The registered measured closeout has not run. Development and unit-test
 fixtures have no scientific meaning. Commit and push this exact implementation
 and require both CI jobs green before one measured generated CLI qualification.
 
+The first implementation push `ff34a9e` passed Base Python but failed three
+optional-job CLI subprocess tests. Each child returned the module's own
+`MARC1G-F06` refusal; no report or closeout artifact was created. The focused
+test-harness correction starts every CLI probe with Python `-S`, isolating the
+standard-library module from optional site-package startup. It does not change
+the implementation source, resource caps, route logic, or scientific boundary.
+This corrected test hash must become remotely green before the closeout.
+
 ## Claim Boundary
 
 Engineering capability added: a dependency-free implementation now enforces

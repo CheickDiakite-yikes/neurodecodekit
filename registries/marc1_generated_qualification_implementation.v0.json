@@ -19,11 +19,11 @@
     },
     "implementation_document": {
       "path": "docs/MARC_1_GENERATED_QUALIFICATION_IMPLEMENTATION.md",
-      "sha256": "a6ac009ff5ffc5b3c5d5a093299a958e0417f21de9335b7cd99d2876c03c5828"
+      "sha256": "ea44e9516e352376d4e76a53ba76243f90b526fedf83ac8e9ba278be40e0aa17"
     },
     "implementation_tests": {
       "path": "tests/test_marc1_generated_qualification_implementation.py",
-      "sha256": "b4331d33bc7f0c2878832cb74445bbe7b78a9d63200444baf598725508c6a601"
+      "sha256": "82f4c3be4769801ef79003bcb5daf8b508dc21c459417885c00a73e4595ec91f"
     }
   },
   "green_contract_proof": {

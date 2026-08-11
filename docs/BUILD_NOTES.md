@@ -7554,3 +7554,16 @@ payload reads.
 Scientific claim not established: no public archive or human neural data was
 accessed and no model or score ran, so there is no new neural or decoding
 result.
+
+### Implementation CI correction
+
+- First implementation push `ff34a9e` passed Base Python job `93821044692`
+  but failed Optional Neuro Readers job `93821044782` in CI `31504059513`.
+- All archive, modality, causal, split, and mutation tests passed. Three CLI
+  subprocess tests returned the module's own `MARC1G-F06` refusal before
+  emitting a report in the optional environment.
+- Corrected only the test harness to invoke the dependency-free CLI with
+  Python `-S`, excluding optional site-package startup from its resource
+  measurement. Source behavior and all frozen caps remain unchanged.
+- No registered closeout, public request, real-data operation, model run, or
+  score occurred after the failed CI gate.

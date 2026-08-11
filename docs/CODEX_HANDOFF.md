@@ -2878,3 +2878,9 @@ Immediate next gate: commit and push this exact implementation and obtain both
 green CI jobs. Only then run one measured generated `qualify` roundtrip and
 record its aggregate closeout. Do not make a public request or treat generated
 `MARC1G-R1` as neural evidence.
+
+First push `ff34a9e` passed Base Python job `93821044692` but failed Optional
+Neuro Readers job `93821044782` in CI `31504059513`: only the three CLI child
+processes returned `MARC1G-F06`; no report was written. The pending correction
+runs those dependency-free child probes with Python `-S`. It changes no source
+logic or cap. Require both jobs green on the correction before closeout.
