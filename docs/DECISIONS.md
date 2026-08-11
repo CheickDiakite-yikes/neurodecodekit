@@ -5737,3 +5737,29 @@ Evidence: `docs/IACKD_TRANSPORT_STABLE_DUAL_REVERSAL_REAL_IMPLEMENTATION.md`,
 `registries/iackd_transport_stable_dual_reversal_real_implementation.v0.json`,
 `src/neurodecodekit/experiments/iackd_transport_stable_dual_reversal_real.py`,
 and `tests/test_iackd_transport_stable_dual_reversal_real.py`.
+
+## 0170 - Park IACKD-2R On Pinned Metadata Content Drift
+
+Decision: consume and park IACKD-2R at `IACKD2R-F05` after the sole invocation
+passed its machine gate but the first 1,178-byte metadata body failed the
+registered SHA-256 before semantic parsing.
+
+Reason: the transport correction deliberately makes observed body bytes and
+SHA-256 authoritative. A matching byte count cannot rescue a changed digest,
+and parsing changed content would violate the frozen identity contract. The
+validator therefore produced the correct fail-closed result.
+
+Boundary: do not retry, rerun, resume, re-request, hash, or parse the changed
+body; do not alter the consumed marker or amend the expected identity after the
+fact. No selected object, EEG, event, trajectory, target, derivative, model,
+prediction, freeze, delivery, or score was reached. Downstream IACKD-2R stages
+are unreachable.
+
+Next research option: only a separately named prospective metadata-version
+reverification lane may determine what changed and freeze a fresh public
+identity. It requires its own Tier C gate and cannot upgrade a scientific claim
+from this failure.
+
+Evidence: `docs/IACKD_TRANSPORT_STABLE_DUAL_REVERSAL_STREAM_RESULT.md`,
+`registries/iackd_transport_stable_dual_reversal_stream_failure_result.v0.json`,
+and `tests/test_iackd_transport_stable_dual_reversal_stream_failure_result.py`.

@@ -2578,3 +2578,33 @@ freeze tracked hashes, commit and push this exact additive implementation, and
 require both CI jobs green. Before that proof, do not request public metadata
 or payloads, inspect any local IACKD path, create real derivatives, fit a real
 model, freeze predictions, deliver targets, or score.
+
+## 2026-08-11 IACKD-2R Stream Consumed At Metadata Content Identity
+
+Exact additive implementation `b32dc25e94efc15bcb4288db9bb5a4c0d4172ed5`
+passed Base Python job `93736708777` and Optional Neuro Readers job
+`93736708868` in CI `31478167292` before the sole registered invocation.
+
+Read `docs/IACKD_TRANSPORT_STABLE_DUAL_REVERSAL_STREAM_RESULT.md`,
+`registries/iackd_transport_stable_dual_reversal_stream_failure_result.v0.json`,
+and its invariant test. The pre-consumption machine gate passed. The executor
+then wrote the new 268-byte marker at `2026-08-11T09:35:45.049689Z` and opened
+the first dataset-description response.
+
+Status, exact final URL, redirect, framing, identity encoding, and exact
+1,178-byte observed-length checks passed. One SHA-256 computation then differed
+from the pinned digest, so the executor refused at `IACKD2R-F05` with nested
+`IACKDT-F07` before semantic parsing. The raw body, observed digest, framing
+profile, `Content-Length` state, and changed fields were not retained.
+
+Exactly one metadata response was opened, one body and 1,178 bytes were read,
+and one hash was computed. No second metadata response, selected object, VHDR,
+VMRK, EEG, channel, geometry, event, signal, ball/Leap trajectory, target,
+derivative, fit, inference, prediction, freeze, target delivery, or score was
+reached. The new private root contains only the consumed marker.
+
+IACKD-2R is consumed and parked with no retry, rerun, resume, restart,
+analysis, freeze, delivery, or score. Do not request or parse the changed body,
+compute another hash, alter the marker, or amend the identity under this
+contract. Any future metadata-version diagnosis must be a separately named
+prospective lane with fresh identity and permission.

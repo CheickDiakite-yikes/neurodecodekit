@@ -1,0 +1,170 @@
+{
+  "schema_name": "neurodecodekit.iackd_transport_stable_dual_reversal_stream_failure_result",
+  "schema_version": "0.1.0",
+  "result_id": "IACKD-2R-transport-stable-dual-reversal-stream-failure-result-v0",
+  "recorded_at_local": "2026-08-11",
+  "status": "consumed_failed_closed_on_first_metadata_body_SHA256_before_parse_no_retry_or_rerun",
+  "route": "IACKD2R-F05",
+  "proof_posture": "one_registered_invocation_observed_traceback_and_new_consumed_marker_only_no_probe_retry_or_claim_upgrade",
+  "immutable_evidence": {
+    "scientific_contract": {
+      "path": "registries/iackd_role_aware_dual_reversal_contract.v0.json",
+      "sha256": "f3b38cb2c5bf0a55e0816072ef654cc87bd2e2f36bab50df19947d66d2abdb7f"
+    },
+    "inventory": {
+      "path": "registries/iackd_openneuro_metadata_inventory.v0.json",
+      "sha256": "aeaa4928192cca9086fcb0abf4711147c68a68ef5c5aacda2ebc67d162a1ef19"
+    },
+    "packet_bound_decision": {
+      "commit": "feef8f721c5441f98829099a63a20dd264c98204",
+      "push_CI_run_id": 31476158747,
+      "base_python_job_id": 93730242015,
+      "optional_neuro_job_id": 93730242090,
+      "both_required_jobs_green": true
+    },
+    "exact_additive_implementation": {
+      "commit": "b32dc25e94efc15bcb4288db9bb5a4c0d4172ed5",
+      "push_CI_run_id": 31478167292,
+      "base_python_job_id": 93736708777,
+      "optional_neuro_job_id": 93736708868,
+      "both_required_jobs_green": true,
+      "implementation_registry_sha256": "57c56523f16a4610be7d7edb55ab0dd296b4b1297836631b3b61b3ec2c2745ee"
+    },
+    "transport_implementation": {
+      "commit": "93a067c4dcdb89ea5e5d17db6e5adaca454a64d1",
+      "push_CI_run_id": 31474412246,
+      "both_required_jobs_green": true
+    }
+  },
+  "invocation": {
+    "registered_invocations": 1,
+    "started_at_UTC": "2026-08-11T09:35:45.049689Z",
+    "implementation_commit": "b32dc25e94efc15bcb4288db9bb5a4c0d4172ed5",
+    "machine_safety_passed_before_consumed_marker": true,
+    "machine_safety_exact_values_retained": false,
+    "consumed_marker_schema": "neurodecodekit.iackd2r_execution_consumed",
+    "consumed_marker_bytes": 268,
+    "consumed_marker_SHA256": "48523eebdbb9cb73d71341fb3691a5e2cde93a7a8300fc7f562a491749783d94",
+    "consumed": true,
+    "retry_allowed": false,
+    "rerun_allowed": false,
+    "resume_or_restart_allowed": false,
+    "observed_process_wall_time_seconds": 0.917392875,
+    "pipeline_runtime_seconds": null,
+    "peak_RSS_bytes": null
+  },
+  "failure_localization": {
+    "registered_refusal_id": "IACKD2R-F05-metadata_transport_or_identity_drift",
+    "nested_transport_refusal_id": "IACKDT-F07-body-SHA256-mismatch",
+    "stage": "first_registered_dataset_description_response",
+    "status_200_and_exact_final_URL_passed": true,
+    "redirect_refusal_passed": true,
+    "framing_and_content_encoding_checks_passed": true,
+    "exact_registered_observed_body_bytes_passed": true,
+    "registered_body_bytes": 1178,
+    "observed_body_bytes": 1178,
+    "expected_SHA256": "275cf1d24f93832ed17fd32d46a589286453042f8d2788b4f3dc1933c6523d93",
+    "observed_SHA256_retained": false,
+    "SHA256_computations": 1,
+    "SHA256_matches": 0,
+    "semantic_parse_calls": 0,
+    "framing_profile_retained": false,
+    "Content_Length_state_retained": false,
+    "raw_body_persisted": false,
+    "diagnostic_interpretation": "The public metadata body content no longer matches the pinned committed SHA256 even though its observed byte count matches. The invocation cannot establish which field changed because parsing was correctly blocked."
+  },
+  "measurements": {
+    "registered_payload_inventory_objects": 1340,
+    "registered_payload_inventory_bytes": 7249113684,
+    "metadata_response_opens": 1,
+    "metadata_body_reads": 1,
+    "metadata_body_bytes": 1178,
+    "metadata_body_hashes": 1,
+    "metadata_semantic_parses": 0,
+    "selected_payload_requests": 0,
+    "selected_payload_bytes": 0,
+    "private_generated_file_bytes": 268,
+    "public_generated_bytes_before_this_result": 0,
+    "producer_is_causal_in_samples": null,
+    "end_to_end_latency_measured": false
+  },
+  "access_counters": {
+    "preconsumption_machine_safety_checks": 1,
+    "public_metadata_response_opens": 1,
+    "public_metadata_body_reads": 1,
+    "public_payload_response_opens": 0,
+    "old_executor_calls": 0,
+    "old_invocation_root_operations": 0,
+    "old_retained_bundle_operations": 0,
+    "local_IACKD_payload_operations": 0,
+    "VHDR_or_VMRK_reads": 0,
+    "EEG_or_EOG_header_reads": 0,
+    "channel_or_geometry_reads": 0,
+    "marker_or_event_reads": 0,
+    "signal_sample_reads": 0,
+    "ball_or_Leap_trajectory_reads": 0,
+    "target_or_label_reads": 0,
+    "derivative_writes": 0,
+    "training_or_parameter_update_fits": 0,
+    "model_inference_calls": 0,
+    "prediction_sets": 0,
+    "prediction_freezes": 0,
+    "final_target_deliveries": 0,
+    "scoring_events": 0,
+    "post_target_updates": 0,
+    "retries": 0,
+    "reruns": 0,
+    "provider_or_language_model_calls": 0,
+    "RW3_stream_device_or_hardware_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "unavailable_fields": [
+    "exact_machine_safety_measurements",
+    "pipeline_peak_RSS",
+    "pipeline_runtime",
+    "wire_bytes_including_HTTP_headers",
+    "metadata_framing_profile",
+    "metadata_Content_Length_state",
+    "observed_metadata_SHA256",
+    "changed_metadata_fields",
+    "semantic_dataset_identity",
+    "signal_quality",
+    "retained_trial_count",
+    "model_metrics",
+    "scientific_route_IACKD2_R0_through_R5"
+  ],
+  "warnings": [
+    "The one IACKD-2R invocation is consumed and must not be retried rerun resumed or restarted.",
+    "Do not fetch or parse the changed metadata body to diagnose fields under this consumed contract.",
+    "A byte-count match is not a content-identity match; the registered SHA256 correctly failed closed.",
+    "No neural or decoding observation was reached."
+  ],
+  "execution_state": {
+    "public_stream_consumed": true,
+    "complete_derivatives_exist": false,
+    "target_blind_analysis_reachable": false,
+    "prediction_freeze_reachable": false,
+    "final_target_delivery_reachable": false,
+    "score_reachable": false,
+    "retry_or_rerun_available": false,
+    "next_evidence_action": "park_IACKD2R_and_use_only_a_new_prospective_metadata_version_reverification_lane_if_scientifically_warranted"
+  },
+  "verification": {
+    "focused_tests": 34,
+    "focused_skips_without_optional_stack": 8,
+    "complete_base_tests": 2035,
+    "complete_base_skips": 204,
+    "complete_optional_tests": 2091,
+    "complete_optional_skips": 34,
+    "ruff_version": "0.15.20",
+    "ruff_passed": true,
+    "compileall_passed": true,
+    "registry_JSON_files_valid": 150,
+    "git_diff_check_passed": true
+  },
+  "claim_boundary": {
+    "engineering_result": "The additive executor and transport validator failed closed on real public metadata content drift after one bounded read and before semantic parsing or payload access.",
+    "scientific_claim_not_established": "No EEG payload signal event trajectory target derivative model prediction freeze or score was reached, so IACKD-2R establishes no neural effect action decoding brain-specific origin unseen-person generalization language or thought decoding real-time operation hardware capability assistive benefit home use or clinical utility."
+  }
+}

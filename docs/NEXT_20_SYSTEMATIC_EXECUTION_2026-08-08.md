@@ -502,3 +502,14 @@ The next systematic item is exact additive implementation proof: finish the
 complete local suites and static checks, commit, push, and require both CI jobs
 green. Only then run the machine gate. If it passes, consume the one fresh
 stream; if it fails, stop before consumption and retain the attempt.
+
+Exact implementation `b32dc25` passed both jobs in CI `31478167292`. The one
+machine gate passed and the stream attempt became consumed, but the first
+1,178-byte metadata body failed its pinned SHA-256 before parsing. One response
+open, body read, and hash occurred; all selected-payload, EEG, target,
+derivative, model, freeze, delivery, and score counters stayed zero.
+
+IACKD-2R analysis and scoring are now unreachable, not pending. Do not retry or
+inspect changed fields under this contract. The next systematic item is Tier A
+design of an independent metadata-version reverification lane with no EEG or
+model access; any body fetch requires a new Tier C decision.

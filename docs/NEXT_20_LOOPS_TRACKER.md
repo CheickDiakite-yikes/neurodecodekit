@@ -1135,3 +1135,21 @@ stream begin. Any machine-gate failure occurs before consumption and leaves
 the one registered attempt unused. A successful stream must still be followed
 by one committed receipt, one target-blind analysis, one remotely green
 aggregate freeze, and only then one combined target delivery and score.
+
+Exact additive implementation `b32dc25` passed both jobs in CI `31478167292`
+before the sole invocation. The machine gate passed and the new 268-byte marker
+consumed IACKD-2R. The first metadata response passed status, URL, framing,
+encoding, and exact 1,178-byte observed length. Its one computed SHA-256 then
+differed from the pinned digest before parsing, routing to `IACKD2R-F05` with
+nested `IACKDT-F07`.
+
+The invocation opened one metadata response, read 1,178 bytes, computed one
+hash, and made zero semantic parses. No second metadata request, selected
+payload, EEG, event, trajectory, target, derivative, fit, prediction, freeze,
+delivery, or score occurred. IACKD-2R is consumed with no retry or rerun, so
+the planned analysis/freeze/score tasks are closed rather than pending.
+
+The next prospective needle-moving task is not another decoder run. It is a
+separately named, metadata-only version-reverification design that can identify
+and freeze current public identity without touching EEG payloads or reopening
+IACKD-2R. Any execution remains a fresh Tier C gate.

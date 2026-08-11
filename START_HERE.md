@@ -535,9 +535,16 @@
    deterministic replay, and 13 mutations in 4.939357 seconds at
    261,488,640-byte peak RSS with 5,825 output bytes and zero real/public
    operations. It also refuses before consumption unless at least 10 GiB is
-   free and normalized one-minute load is at most `1.0`. Next commit, push, and
-   green this exact additive implementation. Do not make any public request or
-   local IACKD operation first.
+   free and normalized one-minute load is at most `1.0`. Exact implementation
+   `b32dc25` passed both jobs in CI `31478167292` before the sole invocation.
+   Now read `docs/IACKD_TRANSPORT_STABLE_DUAL_REVERSAL_STREAM_RESULT.md` and
+   its registry. The machine gate passed and the new marker consumed IACKD-2R.
+   The first metadata body passed status, URL, framing, encoding, and its exact
+   1,178-byte count, then failed the pinned SHA-256 before parsing. One body was
+   read and hashed; every selected-payload, EEG, event, trajectory, target,
+   derivative, model, freeze, delivery, and score counter stayed zero.
+   IACKD-2R is parked at `IACKD2R-F05` with no retry or rerun. Do not fetch or
+   parse the changed body under this contract.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

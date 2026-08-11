@@ -1012,8 +1012,16 @@ Read this before interpreting any number in the repository.
   5,825 output bytes, all three metadata framing profiles, deterministic
   660-fit/900-prediction replay, 13 refusal mutations, and zero real, public,
   network, target, or claim operations. The planted `IACKD2-R5` is still only
-  synthetic mechanics. Public access remains closed until this exact additive
-  implementation commit is pushed and both CI jobs are green.
+  synthetic mechanics. Exact implementation `b32dc25` passed both jobs in CI
+  `31478167292` before the sole
+  [IACKD-2R stream](docs/IACKD_TRANSPORT_STABLE_DUAL_REVERSAL_STREAM_RESULT.md).
+  The machine gate passed and the new marker consumed the attempt. The first
+  metadata body passed status, URL, framing, encoding, and exact 1,178-byte
+  count, then its SHA-256 differed from the pinned digest before parsing. No
+  selected payload, EEG, event, trajectory, target, derivative, model, freeze,
+  delivery, or score was reached. IACKD-2R is parked at `IACKD2R-F05` with no
+  retry or rerun. This is a useful fail-closed content-drift result, not neural
+  or decoding evidence.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

@@ -391,9 +391,21 @@ qualification passed all 18 gates in 4.939357291907072 seconds at
 261,488,640-byte peak RSS with 5,825 output bytes; it exercised fixed,
 fixed-different, chunked, and close-delimited metadata, 660 fits, 900
 predictions, deterministic replay, and 13 mutations. Every real, public,
-network, target, and claim counter stayed zero. Commit and push this exact
-implementation and require both CI jobs green before any public request or
-local IACKD operation. A failed or ungreen implementation remains ineligible.
+network, target, and claim counter stayed zero. Exact implementation
+`b32dc25e94efc15bcb4288db9bb5a4c0d4172ed5` passed Base Python job
+`93736708777` and Optional Neuro Readers job `93736708868` in CI
+`31478167292` before the sole invocation. Read
+`docs/IACKD_TRANSPORT_STABLE_DUAL_REVERSAL_STREAM_RESULT.md` and
+`registries/iackd_transport_stable_dual_reversal_stream_failure_result.v0.json`.
+The machine gate passed and a new 268-byte marker consumed IACKD-2R. The first
+metadata response passed status, URL, framing, encoding, and exact 1,178-byte
+count, then failed the registered SHA-256 before semantic parsing at
+`IACKD2R-F05` / `IACKDT-F07`. One body was read and hashed; no second metadata
+request, selected object, EEG, event, trajectory, target, derivative, fit,
+prediction, freeze, delivery, or score occurred. The observed digest and
+changed fields were not retained. IACKD-2R has no retry, rerun, resume,
+analysis, freeze, target delivery, or score. Do not request or inspect the
+changed body under this consumed contract or alter the new marker.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

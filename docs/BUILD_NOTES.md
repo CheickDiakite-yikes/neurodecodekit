@@ -7227,3 +7227,33 @@ Scientific claim not established: generated fixtures establish no neural
 effect, action decoding, brain-specific origin, generalization, language or
 thought decoding, real-time behavior, hardware capability, assistive benefit,
 home use, or clinical utility.
+
+## 2026-08-11 - IACKD-2R Registered Stream Failure
+
+- Exact additive implementation `b32dc25` passed Base Python job `93736708777`
+  and Optional Neuro Readers job `93736708868` in CI `31478167292` before the
+  sole invocation.
+- The embedded machine gate passed, then the executor wrote the new 268-byte
+  no-retry marker at `2026-08-11T09:35:45.049689Z`.
+- The first dataset-description response passed status, final URL, redirect,
+  framing, identity encoding, and exact 1,178-byte observed-length checks.
+- One SHA-256 computation differed from the pinned digest. The executor stopped
+  at `IACKD2R-F05` / nested `IACKDT-F07` before semantic parsing.
+- One metadata response, one body read, 1,178 body bytes, and one hash were
+  consumed. No second metadata response or selected payload was requested.
+- The observed digest, framing profile, `Content-Length` state, changed fields,
+  exact machine values, pipeline runtime, and peak RSS were not retained. The
+  raw body was not persisted.
+- VHDR/VMRK, EEG/EOG, channel, geometry, event, signal, trajectory, target,
+  derivative, fit, inference, prediction, freeze, delivery, score, post-target
+  update, retry, rerun, provider, hardware, release, and claim counters are
+  zero. The new private root contains only the consumed marker.
+- IACKD-2R is parked with no retry, rerun, resume, analysis, freeze, delivery,
+  or score. A future metadata-version diagnosis requires a new prospective
+  lane and must not amend this result.
+
+Engineering result: real metadata content drift was rejected after one bounded
+read and before semantic or EEG access.
+
+Scientific claim not established: the run reached no neural payload or model
+stage and establishes no neural effect or decoding result.
