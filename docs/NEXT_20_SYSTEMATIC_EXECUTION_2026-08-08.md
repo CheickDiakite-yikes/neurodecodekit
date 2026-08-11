@@ -441,3 +441,17 @@ stream. Commit its aggregate receipt, run the target-blind matrix once, commit
 and remotely green the aggregate freeze, deliver both target views together
 once, score once, and stop. The synthetic `IACKD2-R5` route is not evidence of
 a neural effect.
+
+The exact implementation became green at `dab5dd4` in CI `31461818620`, then
+the one stream consumed and parked at `IACKD2-F08` before any body read. The
+first dataset-description response passed status and final URL but did not
+satisfy the exact registered `Content-Length` value of 1,178 bytes. The actual
+header was not retained. No metadata body, selected object, signal,
+trajectory, target, derivative, model, freeze, delivery, or score was reached.
+
+The IACKD-2 analysis and score steps are now unreachable, not pending. Do not
+rerun or amend this lane. The next systematic work item is Tier A design of a
+separately named transport-stable metadata contract that keeps bounded body
+bytes and SHA-256 authoritative while recording `Content-Length` as
+non-authoritative transport evidence. Any public execution remains a new Tier
+C gate.

@@ -487,6 +487,17 @@
    zero public, real-data, or old-bundle operations. This is still engineering
    evidence only. Next commit and remotely green this exact implementation;
    only then run the one fresh public stream. Never use the retained bundle.
+   Exact implementation `dab5dd4` passed both jobs in CI `31461818620` before
+   the sole stream. Now read
+   `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_STREAM_RESULT.md` and its registry.
+   The consumed invocation opened only the first registered metadata response
+   and parked at `IACKD2-F08` because its `Content-Length` did not satisfy the
+   exact 1,178-byte gate. The actual header value is unavailable; no body was
+   read, so the result does not establish whether content changed. No selected
+   object, EEG signal, target, derivative, model, freeze, delivery, or score
+   was reached. IACKD-2 has no retry or rerun, and its downstream analysis is
+   unreachable. Any transport-stable recovery must be a separately named
+   prospective lane with fresh authorization.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

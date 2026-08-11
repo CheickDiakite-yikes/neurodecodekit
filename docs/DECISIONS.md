@@ -5587,3 +5587,31 @@ Evidence: `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_REAL_IMPLEMENTATION.md`,
 `registries/iackd_role_aware_dual_reversal_real_implementation.v0.json`,
 `src/neurodecodekit/experiments/iackd_role_aware_dual_reversal_real.py`, and
 the two matching test modules.
+
+## 0164 - Consume IACKD-2 At The First Metadata Transport Failure
+
+Decision: classify the sole public stream as consumed and parked at
+`IACKD2-F08`. Exact implementation `dab5dd4` passed both jobs in CI
+`31461818620` before launch. The first response passed status and final URL but
+failed the frozen exact `Content-Length` check for 1,178 bytes.
+
+Evidence boundary: the actual header value was not retained, the response body
+was not read or hashed, and no second metadata response or selected object was
+requested. There were zero signal, trajectory, target, derivative, model,
+prediction, freeze, target-delivery, scoring, post-target, old-bundle,
+provider, hardware, release, and claim operations.
+
+Consequence: do not rerun, retry, resume, restart, delete or rename the consumed
+marker, probe the same URL, alter the expected byte count, or continue into
+analysis or score. Conditional downstream permissions are unreachable because
+no complete derivative exists.
+
+Future design: a separately named prospective lane may make bounded observed
+body length and SHA-256 authoritative for metadata content while recording
+`Content-Length` as transport metadata. It still requires a new registration,
+implementation proof, Tier C decision, and invocation identity. This decision
+does not authorize it.
+
+Evidence: `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_STREAM_RESULT.md`,
+`registries/iackd_role_aware_dual_reversal_stream_failure_result.v0.json`, and
+`tests/test_iackd_role_aware_dual_reversal_stream_failure_result.py`.

@@ -962,10 +962,18 @@ Read this before interpreting any number in the repository.
   generated qualification passed all 15 gates: 660 fits, 900 predictions,
   exact replay, 5.604450 seconds, 270,745,600-byte peak RSS, 4,523 output
   bytes, and zero public, real-data, old-bundle, provider, or hardware
-  operations. The planted `IACKD2-R5` remains non-scientific. The exact
-  implementation must now be committed, pushed, and pass both CI jobs before
-  the first registered public request; the old retained bundle remains
-  forbidden.
+  operations. The planted `IACKD2-R5` remains non-scientific. Exact
+  implementation `dab5dd4` then passed both jobs in CI `31461818620` before
+  the sole [registered stream](docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_STREAM_RESULT.md).
+  That invocation wrote its no-retry consumed marker, opened only the first
+  pinned metadata response, and parked at `IACKD2-F08` when its HTTP
+  `Content-Length` was absent or differed from the registered 1,178 bytes.
+  No response body, EEG object, signal, trajectory, target, derivative, model,
+  freeze, delivery, or score was reached. IACKD-2 is consumed with no rerun;
+  the old retained bundle remains forbidden. The engineering lesson is to
+  make immutable bounded body bytes and SHA-256 authoritative for metadata in
+  any separately preregistered recovery, rather than treating a transport
+  header as content evidence.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

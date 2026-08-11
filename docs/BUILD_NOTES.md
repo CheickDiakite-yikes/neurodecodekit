@@ -7064,3 +7064,32 @@ Scientific claim not established: implementation used generated fixtures only
 and therefore establishes no neural effect, action decoding, brain-specific
 origin, generalization, thought decoding, real-time operation, hardware,
 assistive, or clinical result.
+
+## 2026-08-11 - IACKD-2 Registered Stream Failure
+
+- Exact implementation `dab5dd4` passed Base Python job `93686690177` and
+  Optional Neuro Readers job `93686690138` in CI `31461818620` before the sole
+  stream invocation.
+- The executor wrote its 267-byte no-retry consumed marker before the first
+  request and created only four empty invocation-owned directories.
+- The first dataset-description response passed exact HTTP status and final
+  URL, then failed `IACKD2-F08` because `Content-Length` was absent or differed
+  from the frozen 1,178 bytes. The actual value was not retained.
+- The response body was not read or hashed. No second metadata response,
+  selected object, EEG payload, signal, trajectory, target, derivative, fit,
+  prediction, freeze, delivery, or score was reached.
+- Runtime, peak RSS, and wire bytes are explicitly unavailable. One public
+  metadata response was opened; every protected/model/target/claim counter is
+  zero.
+- IACKD-2 is consumed and parked with no retry or rerun. Its analysis and score
+  are unreachable because no complete derivative exists.
+- Localized the future design repair: use bounded observed metadata body bytes
+  plus SHA-256 for content identity and treat HTTP `Content-Length` as recorded
+  transport evidence. This does not authorize a new lane.
+
+Engineering capability added: the one-shot executor demonstrated its real
+pre-request evidence binding, consumed marker, transport refusal, and no-retry
+stop before protected content.
+
+Scientific claim not established: no EEG content or model outcome was reached,
+so the result adds no neural or decoding evidence.

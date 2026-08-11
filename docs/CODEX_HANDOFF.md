@@ -2442,3 +2442,33 @@ old retained bundle. After the stream, commit its aggregate receipt before the
 one target-blind analysis. After analysis, commit and remotely green the
 aggregate freeze before delivering and scoring both target views once. There
 is no retry or rerun.
+
+## 2026-08-11 IACKD-2 Stream Consumed At Metadata Transport Gate
+
+Exact implementation `dab5dd47ee47f285430311e4fe0f38f457d1118a`
+passed Base Python job `93686690177` and Optional Neuro Readers job
+`93686690138` in CI `31461818620` before the sole stream invocation.
+
+Read `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_STREAM_RESULT.md`,
+`registries/iackd_role_aware_dual_reversal_stream_failure_result.v0.json`, and
+its invariant test. The invocation wrote its 267-byte consumed marker at
+`2026-08-11T05:51:05.419830Z`, created only empty invocation-owned derivative
+and temporary directories, and opened the first registered dataset-description
+response. Exact HTTP status and final URL passed. The next guard refused
+because `Content-Length` was absent or did not equal the registered 1,178
+bytes. The actual header value was not retained.
+
+No body was read or hashed, no metadata JSON was parsed, no second metadata
+response or selected object was requested, and no VHDR, VMRK, EEG, events,
+channel, geometry, ball, Leap, signal, trajectory, target, derivative, model,
+prediction, freeze, delivery, or score was reached. Runtime, peak RSS, and wire
+bytes are unavailable. Public metadata response opens equal one; every
+protected/model/target/claim counter equals zero.
+
+IACKD-2 is consumed and parked at `IACKD2-F08`. Do not rerun, retry, resume,
+delete or rename its private marker, probe the URL, amend the expected length,
+or continue into analysis or scoring. The useful architecture lesson is that
+metadata content identity should come from a bounded observed body length and
+SHA-256, while `Content-Length` should be recorded as transport metadata. Any
+recovery needs a separately named prospective contract, implementation proof,
+fresh Tier C decision, and new invocation identity.

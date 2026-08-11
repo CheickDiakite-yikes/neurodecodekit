@@ -1066,3 +1066,18 @@ must be committed before the one target-blind analysis; that analysis must
 produce a committed and remotely green aggregate freeze before the single
 combined target delivery and score. No retry, rerun, second delivery, or
 post-target update is open.
+
+Exact implementation `dab5dd4` passed both jobs in CI `31461818620` before the
+sole stream invocation. That invocation consumed and parked immediately at
+`IACKD2-F08`: the first registered dataset-description response passed status
+and final-URL checks, then failed the exact 1,178-byte `Content-Length` gate.
+The observed header was not retained and the body was not read. Metadata body
+reads, selected-object requests, signal/trajectory/target reads, derivatives,
+fits, predictions, freezes, deliveries, and scores are all zero.
+
+IACKD-2 has no retry or rerun. The target-blind analysis and scorer are
+unreachable because complete derivatives do not exist. The next Tier A work
+may specify a separately named transport-stable lane in which bounded observed
+body bytes and SHA-256 establish metadata content identity and HTTP
+`Content-Length` is recorded rather than made authoritative. No new request or
+recovery execution is authorized by this tracker update.

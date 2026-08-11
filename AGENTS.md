@@ -315,6 +315,23 @@ implementation, the only open sequence is the single registered stream,
 tracked aggregate receipt, one target-blind analysis, remotely green aggregate
 freeze, and one combined target delivery and score with no rerun.
 
+Exact implementation `dab5dd47ee47f285430311e4fe0f38f457d1118a`
+passed Base Python job `93686690177` and Optional Neuro Readers job
+`93686690138` in CI `31461818620` before the sole public stream invocation.
+Read `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_STREAM_RESULT.md` and
+`registries/iackd_role_aware_dual_reversal_stream_failure_result.v0.json`.
+The executor wrote its consumed marker, opened only the first registered
+dataset-description response, passed exact status and final-URL checks, and
+parked at `IACKD2-F08` because `Content-Length` was absent or differed from
+the registered 1,178 bytes. The actual header value was not retained. No body
+was read or hashed, no second metadata response or selected object was
+requested, and every signal, trajectory, target, derivative, model, freeze,
+delivery, and score counter stayed zero. IACKD-2 is consumed with no retry,
+rerun, analysis, freeze, target delivery, or score. Do not delete or rename the
+private consumed marker, probe the URL again, amend the expected length, or
+reuse the implementation. A transport-stable metadata design may be specified
+only as a separately named prospective lane with a new Tier C decision.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in
