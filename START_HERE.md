@@ -1182,5 +1182,11 @@ allows a future maximum of three response bodies totaling 17,039,360 bytes:
 MiB of central-directory metadata. It requires complete ZIP64 reconciliation
 inside the tail and has no whole-download or exploratory fallback. This is
 currently research only: no real metadata response, archive range, or payload
-is authorized, and the next step is generated/mock preregistration after the
-research commit is remotely green.
+is authorized. Research `93faf36` is now remotely green, and the generated/mock
+contract is frozen in
+`docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_PREREGISTRATION.md` and
+`registries/marc1_freewill_central_directory_contract.v0.json`. It fixes a
+virtual 13.59 GB archive, an 18-entry generated directory, direct and bodyless-
+redirect transport paths, complete in-tail ZIP64, 32 refusal mutations, and no
+live endpoint. Commit and green that contract before implementation; a live
+response remains closed.

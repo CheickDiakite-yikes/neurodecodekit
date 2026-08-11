@@ -571,6 +571,19 @@ future `MARC1CD-R1` would establish archive inventory only, leaving whole-file
 MD5, member CRC verification, local headers, payloads, signals, targets,
 models, scores, and neural claims unavailable.
 
+Research `93faf368ed01dda418b836e794ba354d8f180794` passed Base Python
+job `93834276391` and Optional Neuro Readers job `93834276150` in CI
+`31507965329`. Read
+`docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_PREREGISTRATION.md` and
+`registries/marc1_freewill_central_directory_contract.v0.json`. The generated/
+mock-only contract fixes a virtual 13.59 GB identity with a 128-KiB tail,
+complete in-tail ZIP64, 18 central-directory entries, direct and two-bodyless-
+redirect paths, standard-library structural parsing, private exact inventory,
+aggregate inspection, deterministic replay, and 32 refusals. It has no live
+opener or execute surface. Commit, push, and obtain both green CI jobs for this
+exact contract before implementation. Do not prepare a live packet or request
+a public byte from the contract alone.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

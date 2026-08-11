@@ -6111,3 +6111,32 @@ prepared for one no-retry audit capped at 17,039,360 response-body bytes.
 Evidence: `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_RESEARCH.md`,
 `registries/marc1_freewill_central_directory_research.v0.json`, and
 `tests/test_marc1_freewill_central_directory_research.py`.
+
+## 0183 - Qualify MARC1-CD1 With A Virtual 13.59 GB Archive
+
+Decision: freeze a generated/mock-only contract before implementing any live
+transport. Represent the bound 13,591,548,048-byte archive with only a small
+metadata body, 128-KiB tail, and sub-1-MiB generated central directory. Never
+allocate a sparse or complete monolith for qualification.
+
+Transport decision: inject a strict mock transport and resolver. Exercise a
+direct terminal `206` and up to two bodyless HTTPS redirects under exact
+request ordering, range, encoding, framing, length, and cap-plus-one checks.
+The production module must contain no URL opener or `execute` command.
+
+Parser decision: use standard-library `struct` and bounded slices instead of
+`zipfile`, because the future live path will have only trailer and directory
+ranges. Freeze 18 generated entries, a comment-embedded EOCD decoy, complete
+in-tail ZIP64, safe directory/regular kinds, strict ZIP64 extras, private exact
+inventory, aggregate-only inspection, deterministic replay, and 32 mutation
+refusals.
+
+Boundary: contract success `MARC1CDG-R1` is generated engineering proof only.
+Implementation may start only after this contract commit passes both remote CI
+jobs. A later generated closeout still cannot authorize one live response,
+member acquisition, signal/event/target read, model operation, score, or claim
+upgrade.
+
+Evidence: `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_PREREGISTRATION.md`,
+`registries/marc1_freewill_central_directory_contract.v0.json`, and
+`tests/test_marc1_freewill_central_directory_preregistration.py`.

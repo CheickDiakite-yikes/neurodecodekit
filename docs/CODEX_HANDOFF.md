@@ -2951,3 +2951,27 @@ claim would remain unavailable.
 
 The unrelated untracked workbook inspection sidecar remains untouched at
 SHA-256 `b96bbea77ec93e59c0db7c4bcaeb4a9182f1f7cc7039d13fb223b65e0005beb6`.
+
+## 2026-08-11 MARC1-CD1 Generated Contract Handoff
+
+Read `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_PREREGISTRATION.md`,
+`registries/marc1_freewill_central_directory_contract.v0.json`, and
+`tests/test_marc1_freewill_central_directory_preregistration.py`.
+
+Research `93faf36` passed Base Python job `93834276391` and Optional Neuro
+Readers job `93834276150` in CI `31507965329` before the contract was frozen.
+The future module exposes only `plan`, generated/mock `qualify`, and aggregate
+`inspect`; it must contain no real URL opener or execute mode.
+
+The generated fixture represents the exact 13,591,548,048-byte archive with
+only metadata ranges. It has an exact 128-KiB tail, complete ZIP64 records, an
+EOCD decoy inside a comment, and an 18-entry central directory with four safe
+directories, fourteen regular files, UTF-8 and CP437 paths, methods 0/8, and
+one ZIP64 extended member. It contains zero local-header and payload bytes.
+
+Implementation must use injected mock transport plus standard-library
+`struct`, pass direct and two-bodyless-redirect paths, refuse all 32 mutations,
+and keep exact member inventory private. Commit and push this contract and
+require both CI jobs green before implementation. Public metadata, archive
+ranges, member acquisition, neural data, targets, models, and scores remain
+closed Tier C work.

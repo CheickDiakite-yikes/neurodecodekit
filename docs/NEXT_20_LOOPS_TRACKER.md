@@ -1246,3 +1246,14 @@ implement generated/mock HTTP-range mechanics under Tier B. The first live
 Figshare response remains closed until a later all-false packet, fresh exact
 decision, and green decision commit. Participant selection, payload
 acquisition, signals, targets, models, and scoring remain later tasks.
+
+The generated/mock task-3 contract is now frozen in
+`docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_PREREGISTRATION.md` and
+`registries/marc1_freewill_central_directory_contract.v0.json`. It represents
+the 13.59 GB identity with only generated ranges, fixes 18 safe entries, direct
+and two-bodyless-redirect paths, complete in-tail ZIP64, private/public output
+separation, deterministic replay, 32 refusals, and no live surface.
+
+Next gate: commit, push, and green this exact contract; then implement and run
+one generated closeout under Tier B. Do not prepare the live packet from the
+contract alone.

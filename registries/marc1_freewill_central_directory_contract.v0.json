@@ -1,0 +1,402 @@
+{
+  "schema_name": "neurodecodekit.marc1_freewill_central_directory_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "MARC-1-freewill-central-directory-generated-contract-v0",
+  "recorded_at_local": "2026-08-11",
+  "status": "generated_mock_only_contract_frozen_implementation_not_started",
+  "objective": "Qualify dependency-free mocked HTTP range and structural ZIP64 central-directory mechanics for a virtual 13.59 GB archive without any live or member-content access.",
+  "artifact_bindings": {
+    "research_registry": {
+      "path": "registries/marc1_freewill_central_directory_research.v0.json",
+      "sha256": "d8bc01406f319d6df8f5e18bd0fb724ef61c46a104d3962b7b59db129ee9f5f8"
+    },
+    "preregistration_document": {
+      "path": "docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_PREREGISTRATION.md",
+      "sha256": "4558fe5e58829c1cae6998249f83b75f458e75cdc39624411d1c2d75fc1147b8"
+    },
+    "invariant_test": {
+      "path": "tests/test_marc1_freewill_central_directory_preregistration.py",
+      "sha256": "9afdb04a9e5a4b7b49bfec82968c45fe3b153a325803899037541df241530bcd"
+    }
+  },
+  "green_research_proof": {
+    "commit": "93faf368ed01dda418b836e794ba354d8f180794",
+    "CI_run_id": 31507965329,
+    "base_job_id": 93834276391,
+    "optional_neuro_job_id": 93834276150,
+    "both_required_jobs_green": true
+  },
+  "interface": {
+    "module": "neurodecodekit.datasets.marc1_central_directory_audit",
+    "commands": [
+      "plan",
+      "qualify",
+      "inspect"
+    ],
+    "qualify_arguments": [
+      "--output-dir"
+    ],
+    "execute_command_available": false,
+    "URL_or_host_argument_available": false,
+    "HTTP_header_argument_available": false,
+    "real_archive_path_argument_available": false,
+    "participant_or_member_argument_available": false,
+    "target_model_or_provider_argument_available": false,
+    "network_opener_available": false
+  },
+  "bound_identity_fixture": {
+    "record_id": 28632599,
+    "version": 1,
+    "file_id": 57518986,
+    "archive_name": "Freewill_EEG_Reaching_Grasping.zip",
+    "archive_bytes": 13591548048,
+    "archive_md5": "3b7c3039c5c9fb6abf1429a830301711",
+    "metadata_endpoint": "https://api.figshare.com/v2/articles/28632599/versions/1/files",
+    "initial_download_URL": "https://ndownloader.figshare.com/files/57518986",
+    "whole_archive_materialized": false
+  },
+  "generated_virtual_archive": {
+    "construction": "generated_metadata_ranges_only",
+    "virtual_archive_bytes": 13591548048,
+    "materialized_whole_archive_bytes": 0,
+    "metadata_body_count": 1,
+    "tail_body_count": 1,
+    "central_directory_body_count": 1,
+    "tail_bytes": 131072,
+    "tail_start": 13591416976,
+    "tail_end": 13591548047,
+    "entry_count": 18,
+    "directory_count": 4,
+    "regular_file_count": 14,
+    "participant_prefix_count": 2,
+    "UTF8_flagged_member_count": 1,
+    "ZIP64_extended_member_count": 1,
+    "compression_methods": [
+      0,
+      8
+    ],
+    "central_directory_fixture_cap_bytes": 1048576,
+    "fictional_member_intervals_nonoverlapping": true,
+    "fictional_member_intervals_before_directory": true,
+    "local_header_fixture_bytes": 0,
+    "member_payload_fixture_bytes": 0,
+    "classic_EOCD_comment_nonempty": true,
+    "decoy_EOCD_signature_in_comment": true,
+    "ZIP64_locator_present": true,
+    "fixed_size_ZIP64_EOCD_present": true,
+    "ZIP64_extensible_sector_bytes": 0
+  },
+  "mock_transport": {
+    "dependency_injected": true,
+    "real_network_surface_available": false,
+    "metadata_status": 200,
+    "archive_terminal_status": 206,
+    "response_body_count": 3,
+    "maximum_redirect_count": 2,
+    "redirect_body_bytes": 0,
+    "manual_redirect_handling": true,
+    "redirect_scheme": "https",
+    "redirect_userinfo_or_fragment_allowed": false,
+    "redirect_port_states": [
+      "absent",
+      "443"
+    ],
+    "redirect_destination_requires_injected_global_address_set": true,
+    "request_methods": [
+      "GET"
+    ],
+    "range_header_required": true,
+    "Accept_Encoding_header": "identity",
+    "authorization_cookie_referrer_or_body_allowed": false,
+    "exact_request_order_required": true,
+    "unexpected_request_allowed": false,
+    "exact_Content_Range_required": true,
+    "exact_Content_Length_required": true,
+    "multipart_allowed": false,
+    "allowed_Content_Encoding_states": [
+      "absent",
+      "identity"
+    ],
+    "cap_plus_one_read_required": true,
+    "Accept_Ranges_is_required": false,
+    "ETag_or_Last_Modified_is_identity": false,
+    "request_and_body_read_counters_required": true,
+    "valid_paths": [
+      "direct_terminal_206",
+      "two_bodyless_HTTPS_redirects_then_terminal_206"
+    ]
+  },
+  "trailer_parser": {
+    "parser": "stdlib_struct_and_bounded_slices",
+    "zipfile_module_used": false,
+    "backward_EOCD_candidate_search": true,
+    "EOCD_must_end_at_virtual_archive_end": true,
+    "EOCD_comment_length_must_reconcile": true,
+    "decoy_signature_must_be_rejected": true,
+    "ZIP64_locator_immediately_before_EOCD": true,
+    "complete_ZIP64_record_inside_tail_required": true,
+    "ZIP64_record_must_end_at_locator": true,
+    "fixed_ZIP64_record_size_required": true,
+    "ZIP64_extensible_sector_allowed": false,
+    "additional_ZIP64_probe_available": false,
+    "single_disk_required": true,
+    "classic_non_sentinel_values_must_agree": true,
+    "minimum_entries": 1,
+    "maximum_entries": 250000,
+    "minimum_directory_bytes": 46,
+    "maximum_directory_bytes": 16777216,
+    "directory_must_end_at_or_before_ZIP64_EOCD": true,
+    "inclusive_directory_range_derived_before_request": true
+  },
+  "central_directory_parser": {
+    "parser": "stdlib_struct_and_bounded_slices",
+    "entry_signature_hex": "504b0102",
+    "minimum_entry_bytes": 46,
+    "maximum_bytes": 16777216,
+    "maximum_entries": 250000,
+    "sequential_exact_consumption_required": true,
+    "trailing_records_or_bytes_allowed": false,
+    "strict_variable_field_bounds": true,
+    "UTF8_flag_name_codec": "strict_UTF8",
+    "legacy_name_codec": "strict_CP437",
+    "NFC_normalization_required": true,
+    "ZIP64_extra_header_id": 1,
+    "ZIP64_values_follow_sentinel_order": true,
+    "duplicate_truncated_or_surplus_ZIP64_values_allowed": false,
+    "local_header_reads": 0,
+    "member_content_reads": 0,
+    "member_extractions": 0
+  },
+  "member_policy": {
+    "safe_POSIX_relative_NFC_names_required": true,
+    "forbidden_name_features": [
+      "NUL",
+      "control_character",
+      "backslash",
+      "absolute_prefix",
+      "drive_prefix",
+      "empty_component",
+      "repeated_separator",
+      "dot_component",
+      "parent_component"
+    ],
+    "normalized_names_unique": true,
+    "allowed_kinds": [
+      "regular_file",
+      "directory"
+    ],
+    "directory_requires_trailing_slash_zero_sizes_and_method_zero": true,
+    "symlink_device_socket_FIFO_or_unknown_kind_allowed": false,
+    "allowed_compression_methods": [
+      0,
+      8
+    ],
+    "allowed_general_purpose_bits": [
+      3,
+      11
+    ],
+    "encrypted_or_special_entries_allowed": false,
+    "data_descriptor_bit_may_be_inventoried_without_read": true,
+    "private_manifest_fields": [
+      "member_name",
+      "CRC32",
+      "compression_method",
+      "general_purpose_flags",
+      "compressed_size",
+      "uncompressed_size",
+      "local_header_offset",
+      "version_made_by",
+      "external_attributes",
+      "entry_kind",
+      "ZIP64_extra_used"
+    ],
+    "public_names_offsets_or_checksums_allowed": false
+  },
+  "output_contract": {
+    "aggregate_report_name": "marc1_central_directory_generated_report.v0.json",
+    "private_manifest_name": "marc1_central_directory_generated_private_manifest.v0.json",
+    "output_directory_must_not_exist": true,
+    "output_parent_must_be_real_non_symlink_directory": true,
+    "atomic_directory_creation": true,
+    "overwrite_allowed": false,
+    "aggregate_report_count": 1,
+    "generated_private_manifest_count": 1,
+    "aggregate_forbidden_fields": [
+      "member_name",
+      "local_header_offset",
+      "download_URL",
+      "redirect_URL",
+      "query_string",
+      "response_header_value",
+      "per_member_CRC32",
+      "private_manifest_body"
+    ],
+    "aggregate_allowed_classes": [
+      "counts",
+      "byte_totals",
+      "method_and_kind_summaries",
+      "domain_separated_canonical_hashes",
+      "transport_and_resource_measurements",
+      "mutation_routes",
+      "warnings",
+      "unavailable_fields",
+      "counters",
+      "claim_boundaries"
+    ],
+    "inspect_accepts_private_manifest": false,
+    "deterministic_replays": 2,
+    "replay_excluded_measurements": [
+      "runtime_seconds",
+      "peak_RSS_bytes"
+    ],
+    "private_manifest_hashes_must_match": true
+  },
+  "unavailable_fields_after_generated_success": [
+    "live_range_support",
+    "live_final_host",
+    "live_ETag",
+    "live_Last_Modified",
+    "real_entry_count",
+    "real_central_directory_size",
+    "real_member_inventory",
+    "whole_archive_MD5_verification",
+    "member_CRC32_verification",
+    "local_header_consistency",
+    "member_payload_integrity",
+    "signal_event_target_or_model_result",
+    "end_to_end_latency"
+  ],
+  "required_mutations": [
+    "contract_or_artifact_hash_mismatch",
+    "metadata_status_or_JSON_shape",
+    "metadata_missing_or_duplicate_selected_row",
+    "metadata_name_size_or_MD5_drift",
+    "metadata_link_only_or_download_URL",
+    "redirect_loop_limit_or_order",
+    "redirect_body_or_unsafe_destination",
+    "unexpected_method_URL_header_or_extra_request",
+    "archive_status_200_416_or_multipart",
+    "archive_content_encoding_or_Content_Range",
+    "archive_Content_Length_short_or_overlong_body",
+    "tail_range_or_virtual_total_mismatch",
+    "EOCD_missing_truncated_or_comment_mismatch",
+    "EOCD_decoy_or_ambiguous_candidate",
+    "ZIP64_locator_missing_misplaced_or_truncated",
+    "ZIP64_record_outside_tail_or_wrong_end",
+    "ZIP64_record_size_or_extensible_sector",
+    "ZIP64_multidisk_or_classic_disagreement",
+    "central_directory_zero_entry_or_size_cap",
+    "central_directory_offset_overlap_or_bounds",
+    "central_directory_status_range_or_length",
+    "central_entry_signature_count_or_trailing_bytes",
+    "duplicate_normalized_member_name",
+    "unsafe_absolute_parent_or_separator_path",
+    "invalid_UTF8_CP437_NFC_or_control_name",
+    "encrypted_patched_strong_or_masked_entry",
+    "unsupported_compression_or_flag",
+    "symlink_device_socket_FIFO_or_kind",
+    "invalid_directory_entry",
+    "ZIP64_extra_missing_duplicate_truncated_or_surplus",
+    "aggregate_privacy_leak_or_private_inspect",
+    "output_symlink_overwrite_cap_or_replay_mismatch"
+  ],
+  "router": {
+    "ordered_refusal_routes": [
+      "MARC1CDG-F00-contract-artifact-or-green-proof-failure",
+      "MARC1CDG-F01-machine-output-runtime-RSS-or-resource-failure",
+      "MARC1CDG-F02-metadata-identity-shape-or-download-URL-failure",
+      "MARC1CDG-F03-redirect-request-status-range-framing-encoding-or-byte-count-failure",
+      "MARC1CDG-F04-EOCD-ZIP64-disk-offset-size-or-directory-bound-failure",
+      "MARC1CDG-F05-central-entry-path-flag-method-kind-ZIP64-extra-or-duplicate-failure",
+      "MARC1CDG-F06-privacy-deterministic-replay-hash-or-output-failure"
+    ],
+    "success_route": "MARC1CDG-R1",
+    "success_meaning": "all generated direct redirect ZIP64 directory member privacy mutation and resource gates passed",
+    "success_is_scientific_result": false,
+    "success_authorizes_live_audit": false,
+    "success_authorizes_member_acquisition": false
+  },
+  "resource_caps": {
+    "cpu_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "generated_fixture_bytes": 2097152,
+    "mock_response_body_bytes_per_path": 17039360,
+    "mock_response_bodies_per_path": 3,
+    "mock_redirect_responses_per_path": 2,
+    "mock_requests_per_path": 5,
+    "combined_output_bytes": 1048576,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "real_archive_or_local_path_bytes": 0,
+    "local_header_or_member_reads": 0,
+    "signal_event_target_model_or_score_operations": 0
+  },
+  "acceptance_gates": [
+    "exact_generated_metadata_identity",
+    "valid_direct_and_two_redirect_paths",
+    "exact_tail_and_virtual_total",
+    "decoy_resistant_EOCD",
+    "complete_in_tail_ZIP64",
+    "directory_range_derived_before_response",
+    "exact_18_entry_inventory",
+    "safe_supported_member_classification",
+    "zero_local_header_and_member_content_reads",
+    "aggregate_private_output_separation",
+    "all_32_mutations_refused",
+    "deterministic_replay_and_manifest_hashes",
+    "resource_and_output_caps",
+    "all_live_real_model_score_and_claim_counters_zero"
+  ],
+  "authorization_flags": {
+    "generated_implementation_authorized_before_contract_green": false,
+    "live_metadata_request_authorized": false,
+    "live_archive_HEAD_or_range_authorized": false,
+    "real_URL_or_network_opener_authorized": false,
+    "real_archive_path_access_authorized": false,
+    "whole_archive_download_authorized": false,
+    "member_local_header_or_payload_access_authorized": false,
+    "signal_event_onset_target_or_label_access_authorized": false,
+    "real_derivative_creation_authorized": false,
+    "model_training_inference_prediction_or_scoring_authorized": false,
+    "provider_or_language_model_authorized": false,
+    "release_or_scientific_claim_upgrade_authorized": false
+  },
+  "access_counters": {
+    "live_metadata_requests": 0,
+    "live_metadata_bytes": 0,
+    "archive_HEAD_requests": 0,
+    "archive_range_requests": 0,
+    "archive_range_bytes": 0,
+    "network_redirects": 0,
+    "whole_archive_downloads": 0,
+    "real_archive_path_operations": 0,
+    "member_local_header_reads": 0,
+    "member_payload_reads": 0,
+    "member_payload_bytes": 0,
+    "signal_sample_reads": 0,
+    "event_or_onset_reads": 0,
+    "target_or_label_reads": 0,
+    "real_derivative_rows": 0,
+    "parameter_update_fits": 0,
+    "model_inference_calls": 0,
+    "prediction_sets": 0,
+    "prediction_freezes": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "next_gate": {
+    "generated_implementation_requires_contract_green": true,
+    "generated_closeout_requires_implementation_green": true,
+    "live_audit_requires_later_exact_Tier_C_decision": true,
+    "real_member_acquisition_eligible_after_generated_success": false,
+    "live_audit_success_requires_new_selection_preregistration": true
+  },
+  "claim_boundary": {
+    "engineering_capability_if_successful": "A dependency-free generated and mocked executor validates exact HTTP range and ZIP64 central-directory mechanics for a virtual 13.59 GB archive with zero member-content access.",
+    "scientific_claim_not_established": "Generated transport and archive metadata contain no human neural signal event target or model result and establish no neural effect or decoding capability."
+  }
+}

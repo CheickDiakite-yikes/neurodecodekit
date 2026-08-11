@@ -7642,3 +7642,32 @@ more than 17,039,360 response-body bytes and zero member-content reads.
 Scientific claim not established: no dataset-specific metadata body, archive
 range, member, signal, event, target, model, prediction, or score was accessed,
 so this research adds no neural or decoding evidence.
+
+## 2026-08-11 - MARC1-CD1 Generated/Mock Preregistration
+
+- Bound green research commit `93faf36`, CI `31507965329`, Base Python job
+  `93834276391`, and Optional Neuro Readers job `93834276150` before freezing
+  implementation behavior.
+- Specified a dependency-free module with only `plan`, generated/mock
+  `qualify --output-dir`, and aggregate `inspect`. There is no live opener,
+  URL/host/header/path option, credential, participant, member, target, model,
+  provider, or execute surface.
+- Defined a metadata-range-only virtual 13.59 GB archive: one generated JSON
+  body, one 128-KiB tail, one sub-1-MiB central directory, 18 entries, one
+  UTF-8 name, one ZIP64-extra member, a nonempty EOCD comment, and an embedded
+  decoy signature. No local header or payload byte exists.
+- Froze strict direct and two-bodyless-redirect mock paths, structural EOCD and
+  ZIP64 parsing with `struct`, exact request/response framing, safe member
+  classification, private/public separation, deterministic replay, 32 mutation
+  refusals, and one-thread resource caps.
+- Added 14 contract invariants. The combined research/contract suite passes 28
+  tests, and the complete dependency-light suite passes 2,301 tests with 35
+  expected skips in 55.125 seconds. All authority flags and every live,
+  real-data, signal, target, model, score, and claim counter remain zero.
+
+Engineering capability added: exact generated requirements now cover the HTTP,
+ZIP64, member, privacy, replay, and resource mechanics needed for a bounded
+archive inventory.
+
+Scientific claim not established: the contract contains only generated/mock
+metadata and establishes no neural effect or decoding result.
