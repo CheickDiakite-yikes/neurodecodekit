@@ -2738,3 +2738,29 @@ and claim upgrades remain unauthorized.
 
 Immediate next gate: complete decision verification, commit, push, and require
 both CI jobs green. Do not implement or access from the ungreen decision.
+
+## 2026-08-11 IACKD-M1A Generated/Mock Public Wrapper
+
+Decision `4165c24cdad9768c7e36b5e4893602d02434be50` is remotely green in
+CI `31485359989`, with Base Python job `93759373384` and Optional Neuro Readers
+job `93759373333`.
+
+Read `docs/IACKD_SNAPSHOT_IDENTITY_PUBLIC_IMPLEMENTATION.md`,
+`registries/iackd_snapshot_identity_public_implementation.v0.json`,
+`src/neurodecodekit/datasets/iackd_snapshot_identity_public.py`, and both new
+tests. The standard-library wrapper binds the exact request and decision,
+requires clean exact green-wrapper evidence for execution, checks computer
+load before consumption, rejects redirects/compression/framing drift, reads
+one capped response once, and separates private rows from aggregate output.
+
+One generated/mock qualification passed 20 wrapper refusals and two semantic
+replays in 0.09886470879428089 seconds at 46,563,328-byte peak RSS. It emitted
+429,430 bytes and made zero public GraphQL or S3 requests. All local IACKD,
+old-root, neural, target, model, score, retry, rerun, and claim counters remain
+zero.
+
+Immediate next gate: finish complete local tests and static checks, commit and
+push the exact wrapper, and require both CI jobs green. Do not run `execute`
+before that proof. After green wrapper, apply the pre-consumption machine gate
+and make at most the one registered metadata request; stop without payload
+acquisition or scientific promotion.

@@ -5901,3 +5901,34 @@ must stop without acquisition.
 Evidence: `docs/IACKD_SNAPSHOT_IDENTITY_AUTHORIZATION_DECISION.md`,
 `registries/iackd_snapshot_identity_authorization_decision.v0.json`, and
 `tests/test_iackd_snapshot_identity_authorization_decision.py`.
+
+## 0176 - Separate Public Transport From Snapshot Identity
+
+Decision: implement IACKD-M1A as an additive standard-library wrapper around
+the immutable green canonicalizer. Treat HTTP status, final URL, framing,
+Content-Length, body bytes, and raw response hash as transport provenance;
+require snapshot anchor, recursive tree, selected inventory, and critical
+metadata as separate semantic gates.
+
+Safety decision: require all one-thread values, 2 GiB free disk, available CPU
+and load metrics, normalized one-minute load at most `1.0`, and RSS below 256
+MiB before writing the consumed marker. After the marker, one request and one
+body read are terminal. Emit an aggregate refusal if possible and never retry.
+
+Privacy decision: retain 1,340 object rows only in a Git-ignored private
+manifest. Publish no individual path, object ID, S3 URL, or version ID. Keep
+the raw response in memory only through one canonicalization.
+
+Qualification decision: generated/mock `IACKDMP-R0` must pass all three
+framing profiles, 20 wrapper refusal mutations, two semantic replays, strict
+output limits, and zero public, neural, target, model, or score counters. The
+measured run passed in 0.09886470879428089 seconds at 46,563,328-byte peak RSS
+with 429,430 output bytes.
+
+Boundary: this exact wrapper must be committed, pushed, and remotely green
+before one public request. Metadata compatibility cannot authorize an EEG
+payload or establish a scientific or decoding result.
+
+Evidence: `docs/IACKD_SNAPSHOT_IDENTITY_PUBLIC_IMPLEMENTATION.md`,
+`registries/iackd_snapshot_identity_public_implementation.v0.json`, and the
+two `test_iackd_snapshot_identity_public*.py` files.

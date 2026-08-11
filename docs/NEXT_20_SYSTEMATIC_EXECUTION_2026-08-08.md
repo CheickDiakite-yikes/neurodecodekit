@@ -560,3 +560,21 @@ both CI jobs green. Only then implement the generated/mock standard-library
 wrapper. Public access remains closed until that exact wrapper is also
 committed, pushed, and green. The decision does not authorize an EEG payload,
 model, target, score, retry, rerun, or claim upgrade.
+
+Decision `4165c24` passed Base Python job `93759373384` and Optional Neuro
+Readers job `93759373333` in CI `31485359989`. The generated/mock wrapper is
+now implemented without a public request. It freezes the exact query and body,
+one no-redirect response open and body read, fixed/chunked/close-delimited
+framing, a pre-marker machine gate, exclusive outputs, aggregate failure
+reporting, and zero payload interfaces.
+
+One formal generated qualification passed 20 wrapper refusals and two semantic
+replays in 0.09886470879428089 seconds at 46,563,328-byte peak RSS. It emitted
+429,430 bytes; public GraphQL, S3, local IACKD, old-root, signal, target, model,
+score, retry, rerun, and claim counters stayed zero.
+
+The next systematic item is exact wrapper proof: finish complete local
+verification, commit, push, and require both CI jobs green. Only then apply the
+live machine gate and, if it passes before consumption, make the one registered
+metadata request. Stop after its aggregate result. No EEG payload or scientific
+claim is authorized by metadata compatibility.

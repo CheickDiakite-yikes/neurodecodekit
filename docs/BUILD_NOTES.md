@@ -7188,6 +7188,37 @@ transport before any public operation.
 
 Scientific claim not established: authorization is not EEG data or a result.
 
+## 2026-08-11 - IACKD-M1A Generated/Mock Public Wrapper
+
+- Decision `4165c24` passed Base Python job `93759373384` and Optional Neuro
+  Readers job `93759373333` in CI `31485359989` before implementation.
+- Added a standard-library-only wrapper around the immutable green
+  canonicalizer. It binds the 316-byte query and 355-byte body, exact endpoint,
+  zero credentials, no redirects, one response open/read, three framing
+  profiles, a 2 MiB body cap, and zero retries or reruns.
+- Added pre-consumption one-thread, free-disk, logical-CPU, normalized-load, and
+  RSS gates; an exclusive isolated marker; a private selected manifest; an
+  aggregate-only report; and sanitized consumed-failure reporting.
+- Seventeen core tests exercise all transport profiles, 20 forced wrapper
+  refusals, marker-before-request order, machine failure before consumption,
+  strict privacy, a consumed semantic failure, and rerun refusal. Nine receipt
+  tests bind source hashes, measurements, counters, and the next gate.
+- One formal generated/mock qualification processed 531,067 bytes in
+  0.09886470879428089 seconds at 46,563,328-byte peak RSS. Its 6,151-byte
+  report and 423,279-byte private manifest total 429,430 bytes.
+- Public GraphQL, S3, local IACKD, old-root, signal, event, trajectory, target,
+  model, prediction, score, dependency, retry, rerun, and claim counters remain
+  zero. The generated output is untracked under `/private/tmp`.
+- Next gate: complete repository verification, commit, push, and require both
+  CI jobs green. The one public request remains closed until that exact proof.
+
+Engineering capability added: one bounded wrapper can separate HTTP
+provenance from snapshot, tree, selected-inventory, and critical-metadata
+identities while keeping individual object rows private.
+
+Scientific claim not established: generated metadata and zero neural reads
+establish no neural effect or decoding result.
+
 ## 2026-08-11 - IACKD-2R Additive Executor Implementation
 
 - Decision `feef8f7` passed Base Python job `93730242015` and Optional Neuro

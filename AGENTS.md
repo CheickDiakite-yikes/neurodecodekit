@@ -478,6 +478,23 @@ remains closed until that exact wrapper is also remotely green. EEG payload,
 local IACKD, consumed roots, models, targets, scores, retries, reruns, and
 claim upgrades remain unauthorized throughout this decision milestone.
 
+Decision `4165c24cdad9768c7e36b5e4893602d02434be50` then passed Base
+Python job `93759373384` and Optional Neuro Readers job `93759373333` in CI
+`31485359989` before wrapper work began. Read
+`docs/IACKD_SNAPSHOT_IDENTITY_PUBLIC_IMPLEMENTATION.md`,
+`registries/iackd_snapshot_identity_public_implementation.v0.json`, and the
+two matching tests. The additive standard-library wrapper reconstructs the
+exact 355-byte request, enforces no-redirect one-read transport, all three
+registered framing profiles, the pre-consumption machine gate, one exclusive
+private marker, private selected rows, aggregate-only output, and consumed
+failure reporting. One generated/mock qualification passed 20 wrapper
+refusals and two semantic replays in 0.09886470879428089 seconds at
+46,563,328-byte peak RSS with 429,430 output bytes. Public GraphQL, S3, local
+IACKD, consumed-root, signal, target, model, score, retry, rerun, and claim
+counters remain zero. The exact wrapper commit must be pushed and both CI jobs
+must be green before the one public request. Do not execute from an ungreen
+wrapper, request an EEG payload, or infer scientific evidence.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

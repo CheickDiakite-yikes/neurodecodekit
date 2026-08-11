@@ -585,10 +585,14 @@
    approved to go on`. Read
    `docs/IACKD_SNAPSHOT_IDENTITY_AUTHORIZATION_DECISION.md` and its registry.
    The decision quotes that exact message and binds only green request
-   `ce84738`; it is ineffective until its own commit and both CI jobs are
-   green. Next green this decision. Only afterward implement and qualify the
-   generated/mock wrapper. Do not make a public request until that exact
-   wrapper is separately green, and do not request an EEG payload at all.
+   `ce84738`. Decision `4165c24` passed both jobs in CI `31485359989` before
+   wrapper work began. Now read
+   `docs/IACKD_SNAPSHOT_IDENTITY_PUBLIC_IMPLEMENTATION.md` and its registry.
+   Its standard-library wrapper passed one generated/mock qualification with
+   20 wrapper refusals, two replays, 429,430 output bytes, zero public requests,
+   and zero neural or target operations. Next commit, push, and green this
+   exact wrapper. Do not make the one public request before both jobs pass,
+   and do not request an EEG payload at all.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and
