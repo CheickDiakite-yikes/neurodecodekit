@@ -566,8 +566,9 @@ This Tier A record made zero public requests and authorizes none. The next
 eligible step is a generated/mock-only preregistration and, after its own green
 proof, a standard-library implementation with no live URL or execute mode.
 Only after that exact implementation is remotely green may an all-false Tier C
-request be prepared. Do not apply any earlier `continue` retroactively. Even a
-future `MARC1CD-R1` would establish archive inventory only, leaving whole-file
+request be prepared. Do not apply any earlier `continue` retroactively. At
+this stage, even a later `MARC1CD-R1` could establish archive inventory only,
+leaving whole-file
 MD5, member CRC verification, local headers, payloads, signals, targets,
 models, scores, and neural claims unavailable.
 
@@ -666,10 +667,25 @@ bytes in 0.006050459109246731 seconds at 40,763,392-byte peak RSS. All 14
 gates, 32 inherited parser refusals, and 8 wrapper refusals passed; 5,995
 aggregate plus 6,187 private bytes were hash-bound and removed. Network-client
 calls and every public, member, neural, model, score, and claim counter stayed
-zero. The generated closeout has no scientific value. Commit, push, and
-require both CI jobs green for this exact implementation before invoking its
-fixed live route. Until then, do not issue a Figshare request or create the
-private live consumed marker.
+zero. The generated closeout has no scientific value. Exact implementation
+`5dfa3c4c8cd7f0e990b7b1db7b35c4df8694171f` passed Base Python job
+`93879378282` and Optional Neuro Readers job `93879378362` in CI
+`31521510374` before the sole live invocation.
+
+Read `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_LIVE_RESULT.md` and
+`registries/marc1_freewill_central_directory_live_result.v0.json`. The one
+invocation passed `MARC1CD-R1` in 2.7274372498504817 seconds at 43,974,656-
+byte peak RSS. It accepted one 304-byte metadata body, one 131,072-byte tail,
+and one 175,382-byte central-directory body, then inventoried 1,227 entries in
+the 13,591,548,048-byte public archive. Whole-archive and member payload bytes
+were zero. The private mode-`0600` inventory is retained only under the
+Git-ignored live root; the committed result exposes aggregate counts and
+hashes only. All 14 gates passed. MARC1-CD1A is consumed with no retry or
+rerun. Do not inspect the private member rows, reopen the public route, alter
+the consumed marker, download the archive, or open a member. A future member-
+selection lane requires a separately frozen prospective contract and Tier C
+decision. This metadata result establishes no neural effect or decoding
+capability.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

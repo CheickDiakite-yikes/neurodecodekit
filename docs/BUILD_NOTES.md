@@ -7875,3 +7875,50 @@ member payload.
 Scientific claim not established: generated archive mechanics contain no
 human neural signal, target, model result, or score and establish no neural
 effect or decoding capability.
+
+## 2026-08-11 - MARC1-CD1A Live Archive Inventory
+
+- Confirmed exact wrapper `5dfa3c4c8cd7f0e990b7b1db7b35c4df8694171f`
+  passed Base Python job `93879378282` and Optional Neuro Readers job
+  `93879378362` in CI `31521510374` before the one public invocation.
+- The pre-consumption machine gate passed with five one-thread values, 12
+  logical CPUs, 23,095,480,320 free bytes, normalized one-minute load
+  `0.70361328125`, and 32,833,536-byte pre-consumption RSS.
+- Wrote the private mode-`0600` consumed marker before the first request. The
+  one invocation is consumed with no retry or rerun.
+- Passed `MARC1CD-R1` after four HTTP attempts and one bodyless HTTPS redirect.
+  Three accepted bodies totaled 306,758 bytes: 304 metadata bytes, the exact
+  131,072-byte tail, and the exact 175,382-byte central directory.
+- Inventoried the current 13,591,548,048-byte virtual ZIP as 1,227 entries:
+  1,025 regular files, 202 directories, 202 stored entries, 1,025 deflated
+  entries, and 796 entries using ZIP64 extra fields. Aggregate compressed and
+  uncompressed member sizes were 13,591,200,154 and 17,362,624,734 bytes.
+- Downloaded zero whole-archive bytes and requested zero local headers or
+  member payloads. Whole-file MD5, member CRC, local-header consistency,
+  decompression, and payload integrity remain unverified.
+- Runtime was 2.7274372498504817 seconds at 43,974,656-byte reported peak RSS;
+  external observation was 2.95 seconds and 45,301,760-byte maximum RSS.
+- Wrote a 6,118-byte aggregate public result, 418,755-byte private manifest,
+  and 450-byte marker, for 425,323 incremental bytes. This stayed far below
+  the 32-MiB disk and 8-MiB combined-output caps.
+- Public result SHA-256 is
+  `fee969818b4e3e2ef7aee86096ad676c9bd70f80d19f2fd6dbe0e8069175257b`.
+  Private manifest and marker SHA-256 values are
+  `2a2e48b88ee59332a199d926554bb6921222fff92046a0fc9b07cf73fd6c3031`
+  and `421cec0380b23d87d78aadf97adea20625af39e874b15d39cadd844b672087c1`.
+- All 11 immutable-result tests and all 209 MARC1 tests pass. The complete
+  dependency-light suite passes 2,348 tests with 204 expected skips in 17.523
+  seconds; the optional-neuro suite passes 2,419 tests with 35 expected skips
+  in 54.354 seconds. Both are exactly 11 tests above their pre-result
+  baselines.
+- Every participant, signal, event, target, derivative, model, prediction,
+  score, provider-model, release, retry/rerun, and claim counter remained zero.
+  End-to-end neural latency was not measured.
+
+Engineering capability added: NeuroDecodeKit can safely inventory the current
+13.59 GB public Freewill ZIP from 306,758 bounded metadata bytes without
+downloading the archive or opening a member.
+
+Scientific claim not established: archive metadata contain no neural signal,
+event, target, model prediction, or score, so this result establishes no
+neural effect or decoding capability.

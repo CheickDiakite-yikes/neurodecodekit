@@ -3143,14 +3143,53 @@ plus 6,187 private bytes. The output hashes are bound in the implementation
 registry, and the exact temporary files were removed. Network-client calls and
 all public, member, neural, model, score, and claim counters were zero.
 
-Thirty wrapper/registry tests and all 198 MARC1 tests pass locally. Immediate
-The dependency-light suite passes 2,337 tests with 204 expected skips in
+Thirty wrapper/registry tests and all 198 MARC1 tests pass locally. The
+dependency-light suite passes 2,337 tests with 204 expected skips in
 16.718 seconds. The comparable optional-neuro suite passes 2,408 tests with 35
 expected skips in 54.949 seconds, exactly 30 tests above the green decision
 baseline. Ruff, compile, JSON, CLI help, and diff checks pass.
 
-Immediate next gate: commit and push the exact implementation; require both CI
-jobs green; then independently bind the exact commit, CI, jobs, and registry
-hash. Do not invoke the live route before that proof. After green, only one
-machine-gated, no-retry public sequence is open. It may consume and fail; no
-rerun or whole-download fallback exists.
+## 2026-08-11 MARC1-CD1A Live Archive Inventory Handoff
+
+Exact wrapper `5dfa3c4c8cd7f0e990b7b1db7b35c4df8694171f` passed Base Python
+job `93879378282` and Optional Neuro Readers job `93879378362` in CI
+`31521510374` before the one registered invocation. Read
+`docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_LIVE_RESULT.md`,
+`registries/marc1_freewill_central_directory_live_result.v0.json`, and
+`tests/test_marc1_freewill_central_directory_live_result.py`.
+
+The invocation passed `MARC1CD-R1` in 2.7274372498504817 seconds at
+43,974,656-byte reported peak RSS. It made four HTTP attempts with one
+bodyless HTTPS redirect and accepted exactly three bodies: 304 metadata bytes,
+the exact 131,072-byte tail, and the exact 175,382-byte central directory.
+From those 306,758 bytes it inventoried 1,227 entries in the current
+13,591,548,048-byte public ZIP. Whole-archive downloads, local-header requests,
+member requests, and member payload bytes were all zero.
+
+The exact 418,755-byte member inventory and 450-byte consumed marker remain
+private under `.codex_work/marc1_central_directory/live_audit_v0/`, both mode
+`0600`. Do not inspect member rows, publish either private file, alter the
+marker, or rerun the lane. The committed 6,118-byte result exposes only
+aggregate counts, hashes, warnings, and unavailable fields. Its SHA-256 is
+`fee969818b4e3e2ef7aee86096ad676c9bd70f80d19f2fd6dbe0e8069175257b`.
+
+All 11 result invariants and all 209 MARC1 tests pass. The dependency-light
+suite passes 2,348 tests with 204 expected skips; the optional-neuro suite
+passes 2,419 tests with 35 expected skips. Both add exactly 11 tests over the
+green wrapper baseline.
+
+MARC-1 Task 3 is complete as metadata-only archive inventory. The next
+scientifically useful step is a separately frozen Task 4 design that selects a
+small, representative Freewill pilot without exposing private member rows or
+moving the monolith. That design must become a new Tier C packet before any
+private-inventory inspection, member access, local-header read, payload
+acquisition, participant selection, signal processing, model run, or score.
+The current lane is consumed and cannot supply that authority.
+
+Engineering capability added: NeuroDecodeKit can safely inventory the current
+13.59 GB public Freewill ZIP from 306,758 bounded metadata bytes without
+downloading the archive or opening a member.
+
+Scientific claim not established: archive metadata contain no neural signal,
+event, target, model prediction, or score, so this result establishes no
+neural effect or decoding capability.

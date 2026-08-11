@@ -1238,6 +1238,16 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   `python -S` closeout passed `MARC1CDL-G1` in 0.006050 seconds at 40,763,392-
   byte peak RSS with 14/14 gates, 32 inherited and 8 wrapper refusals, 12,182
   output bytes, and zero network or forbidden counters. Its temporary files
-  were removed. Commit, push, and require both CI jobs green for this exact
-  wrapper before one public request is eligible. Do not download the archive,
-  open a member, or infer neural evidence from the generated qualification.
+  were removed. Exact wrapper `5dfa3c4c8cd7f0e990b7b1db7b35c4df8694171f`
+  then passed Base Python job `93879378282` and Optional Neuro Readers job
+  `93879378362` in CI `31521510374` before the one registered live invocation.
+  Read `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_LIVE_RESULT.md` and
+  `registries/marc1_freewill_central_directory_live_result.v0.json`.
+  `MARC1CD-R1` inventoried all 1,227 entries in the current
+  13,591,548,048-byte public ZIP from 306,758 accepted metadata bytes without
+  downloading the archive or opening a member. All 14 gates passed in
+  2.727437 seconds at 43,974,656-byte peak RSS. The private exact manifest is
+  Git-ignored; the public result contains only aggregate counts and hashes.
+  MARC1-CD1A is consumed with no retry or rerun. Any member-level selection or
+  access requires a new prospective contract and Tier C decision; no neural
+  or decoding evidence was produced.

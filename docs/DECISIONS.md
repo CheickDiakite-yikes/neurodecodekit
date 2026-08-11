@@ -6328,3 +6328,40 @@ Evidence: `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_LIVE_IMPLEMENTATION.md`,
 `registries/marc1_freewill_central_directory_live_implementation.v0.json`,
 `src/neurodecodekit/datasets/marc1_central_directory_live.py`, and the two
 matching test modules.
+
+## 0189 - Consume MARC1-CD1A As Aggregate Archive-Inventory Evidence
+
+Decision: accept one `MARC1CD-R1` result only because exact wrapper
+`5dfa3c4c8cd7f0e990b7b1db7b35c4df8694171f` passed Base Python job
+`93879378282` and Optional Neuro Readers job `93879378362` in CI
+`31521510374` before execution, and the executor then passed all 14 frozen
+gates without opening the whole archive or a member.
+
+Evidence decision: record that four HTTP attempts yielded exactly three
+accepted bodies totaling 306,758 bytes: 304 bytes of version metadata, the
+exact 131,072-byte archive tail, and a 175,382-byte central directory. Accept
+the aggregate inventory of 1,227 entries, including 1,025 regular files and
+202 directories, for the 13,591,548,048-byte virtual archive. Do not treat the
+registered whole-file MD5, member CRCs, local headers, decompression, or member
+payload integrity as verified.
+
+Privacy and lifecycle decision: retain exact member rows only in the
+Git-ignored mode-`0600` private manifest and commit only aggregate counts,
+hashes, warnings, and unavailable fields. Preserve the private consumed marker
+and manifest without publishing, deleting, renaming, or inspecting their
+member rows. The one invocation is consumed with no retry or rerun.
+
+Next-step decision: this result completes MARC-1 Task 3 as storage-safe
+metadata inventory. It does not authorize Task 4. Any member-level eligibility
+analysis, selection, local-header read, payload acquisition, or downstream
+experiment requires a separately named prospective contract and Tier C
+decision before the private inventory is inspected or any archive member is
+accessed.
+
+Claim boundary: this is a real public-archive engineering result, not a neural
+or decoding result. Archive metadata contain no participant signal, event,
+target, model prediction, or score and cannot establish a neural effect.
+
+Evidence: `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_LIVE_RESULT.md`,
+`registries/marc1_freewill_central_directory_live_result.v0.json`, and
+`tests/test_marc1_freewill_central_directory_live_result.py`.
