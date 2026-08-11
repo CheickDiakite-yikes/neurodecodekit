@@ -2266,3 +2266,23 @@ and require both remote CI jobs green. Then run one measured generated-fixture
 closeout under 30 seconds, 256 MiB RSS, and 2 MiB output. Do not touch a public
 body, the retained bundle, signals, events, targets, models, scores, or
 IACKD-2.
+
+## 2026-08-10 IACKD-H3 Measured Result
+
+Implementation `8c5784ad3e664f816899e2f1139600b2c66a8232` passed Base
+Python job `93642969190` and Optional Neuro Readers job `93642969143` in CI
+`31446902756` before the closeout.
+
+Read `docs/IACKD_SOURCE_SEMANTICS_RESULT.md`,
+`registries/iackd_source_semantics_result.v0.json`, and
+`tests/test_iackd_source_semantics_result.py`. One preflight refused a symlink
+output parent before policy or fixture access. One semantic qualification then
+passed all 13 gates: 6,093 generated input bytes, 6,834 output bytes,
+0.007473916979506612 seconds, 20,250,624-byte peak RSS, 13 mutations, and 12
+distinct refusal classes. Every real/public/local-data, signal, target, model,
+network, and score counter stayed zero. The temporary report was removed.
+
+H3 is complete as an engineering mechanics result. It does not validate a real
+reader, EEG effect, or decoding result. The next safe work is a separately
+named prospective IACKD experiment contract that binds the H3 policy hash; no
+payload or signal stage opens without a new Tier C decision.

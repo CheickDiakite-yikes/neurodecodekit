@@ -365,3 +365,15 @@ plan/fixture/inspect module CLI with no real executor. Complete local
 verification, commit, push, and both green jobs are the next gate; only then
 run one measured generated closeout. Every real/public/local data and IACKD-2
 counter stays closed.
+
+Exact implementation `8c5784a` passed both jobs in CI `31446902756` before the
+measured closeout. One output-parent preflight refused safely before policy or
+fixture access. One semantic qualification then passed all 13 gates over 6,093
+generated input bytes and 6,834 output bytes in 0.007473916979506612 seconds at
+20,250,624-byte peak RSS. Both source-count groups, the fixed 26-channel
+predictive core, five derivative hashes, deterministic replay, target
+firewall, 13 mutations, and 12 refusal classes passed; every real/public/local
+data, signal, target, model, network, and score counter stayed zero. The
+temporary report was removed. H3 is complete as generated mechanics evidence;
+the next IACKD scientific lane needs a separate prospective contract and Tier
+C decision.

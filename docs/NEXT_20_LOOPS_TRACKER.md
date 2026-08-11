@@ -990,3 +990,14 @@ emits separate source-order/count, role, model-mask, and geometry-mask hashes,
 and exercises 13 mutations covering 12 refusal classes. It has no real execute
 surface. One measured generated closeout is held until the exact implementation
 commit is remotely green; public/local IACKD data and IACKD-2 remain closed.
+
+Implementation `8c5784a` passed both jobs in CI `31446902756` before the H3
+closeout. One symlink-parent output preflight refused before policy or fixture
+access; one semantic qualification then passed all 13 gates. It processed
+6,093 generated input bytes and emitted 6,834 bytes in 0.007473916979506612
+seconds at 20,250,624-byte peak RSS, covering 13 mutations and 12 distinct
+refusals. All real/public/local-data, signal, target, model, network, and score
+counters stayed zero, and the temporary report was removed. H3 is complete as
+generated policy-mechanics evidence only. A separately named IACKD experiment
+contract and Tier C decision are required before any real reader, payload,
+signal, model, or score.

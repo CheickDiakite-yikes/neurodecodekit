@@ -6860,3 +6860,31 @@ functional role, or model inclusion.
 Scientific claim not established: no real or public body, local bundle,
 signal, event, target, model, prediction, or score was accessed, so this adds
 no neural or decoding evidence.
+
+## 2026-08-10 - IACKD-H3 Measured Generated Closeout
+
+- Exact implementation `8c5784a` passed both jobs in CI `31446902756` before
+  the closeout.
+- One output-parent preflight correctly refused a symbolic link at
+  `IACKDS-F14` before the policy was read, a fixture was built, or output was
+  created.
+- One later semantic qualification completed with no retry or rerun after
+  fixture access.
+- The 29-row and 31-row fixtures preserved 26/28 EEG plus three MISC source
+  counts while both kept exactly 26 predictive EEG channels.
+- All five derivative hashes, deterministic replay, target firewall, 13
+  mutations, 12 distinct refusal classes, resource caps, and output cap passed.
+- Measured 6,093 input bytes, 6,834 output bytes, 60 generated rows, four
+  semantic passes, 0.007473916979506612 seconds, and 20,250,624-byte peak RSS.
+- Every real/public metadata, Git-ignored, local bundle, sibling, signal,
+  event, trajectory, target, derivative, feature, model, training, inference,
+  prediction, score, provider, hardware, release, and claim counter was zero.
+- The temporary report was inspected, SHA-256 verified, cross-checked against
+  the aggregate result registry, and removed.
+
+Engineering capability added: H3 now has measured evidence that the
+source-type-first policy, five derivative bindings, deterministic replay, and
+fail-closed target firewall work on generated metadata.
+
+Scientific claim not established: H3 accessed no real signal or scientific
+outcome and therefore adds no neural or decoding evidence.

@@ -5382,3 +5382,30 @@ Evidence: `docs/IACKD_SOURCE_SEMANTICS_IMPLEMENTATION.md`,
 `registries/iackd_source_semantics_implementation.v0.json`,
 `src/neurodecodekit/preprocess/iackd_source_semantics.py`, and
 `tests/test_iackd_source_semantics.py`.
+
+## 0157 - Close H3 As Generated Policy Mechanics
+
+Decision: accept the one measured generated qualification after exact
+implementation `8c5784a` passed both jobs in CI `31446902756`. Close H3 as an
+engineering mechanics result without promoting a real-reader or scientific
+claim.
+
+Preflight: one symbolic-link output parent refused at `IACKDS-F14` before a
+policy read, fixture build, semantic pass, or output. One qualification then
+completed; there was no retry or rerun after fixture access.
+
+Result: both 29/31-row groups, one 26-channel predictive core, five derivative
+hashes, deterministic replay, target firewall, 13 mutations spanning 12
+refusal classes, all forbidden counters, resources, and output passed. Runtime
+was 0.007473916979506612 seconds at 20,250,624-byte peak RSS over 6,093 input
+and 6,834 output bytes.
+
+Boundary: generated order hashes are mechanics evidence only. H2 remains
+`IACKDR-R1`; its candidate hash remains inadmissible. No real reader, public or
+local payload, signal, event, trajectory, target, derivative, model, score,
+IACKD-2 execution, or scientific claim is opened. Any next evidence-bearing
+experiment needs a separately named prospective contract and Tier C decision.
+
+Evidence: `docs/IACKD_SOURCE_SEMANTICS_RESULT.md`,
+`registries/iackd_source_semantics_result.v0.json`, and
+`tests/test_iackd_source_semantics_result.py`.

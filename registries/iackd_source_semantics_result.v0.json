@@ -1,0 +1,254 @@
+{
+  "schema_name": "neurodecodekit.iackd_source_semantics_result",
+  "schema_version": "0.1.0",
+  "result_id": "IACKD-H3-source-semantics-generated-result-v0",
+  "recorded_at_local": "2026-08-10",
+  "status": "complete_generated_policy_mechanics_passed_no_real_reader_or_scientific_result",
+  "proof_posture": "one_successful_generated_target_free_metadata_qualification_after_green_implementation_zero_real_public_local_bundle_signal_target_model_or_score_access",
+  "green_proof_chain": {
+    "research": {
+      "commit": "ed5ce8292c2c1dc842898023cfe8cb608e9d4476",
+      "CI_run_id": 31445790741,
+      "base_python_job_id": 93639606343,
+      "optional_neuro_job_id": 93639606403,
+      "both_required_jobs_green": true
+    },
+    "implementation": {
+      "commit": "8c5784ad3e664f816899e2f1139600b2c66a8232",
+      "CI_run_id": 31446902756,
+      "base_python_job_id": 93642969190,
+      "optional_neuro_job_id": 93642969143,
+      "both_required_jobs_green": true,
+      "registry_path": "registries/iackd_source_semantics_implementation.v0.json",
+      "registry_sha256": "7162c756fac870d0de6764c99a3e2e07d934781cdea356ff96bad77b460cfbe4"
+    }
+  },
+  "policy_binding": {
+    "policy_name": "IACKD-SourceSemanticsPolicy",
+    "policy_version": "0.1.0",
+    "policy_sha256": "1117c90d77971ee0ec2f5e138bdf9ea76eef412a4b5c44c1d2b88c31f88f39f4",
+    "dataset_BIDS_version": "1.7.0",
+    "version_specific_misc_count_field": "MiscChannelCount"
+  },
+  "preflight": {
+    "refused_invocations": 1,
+    "refusal_id": "IACKDS-F14-output-path-write-or-resource-cap",
+    "safe_reason": "symbolic_link_output_parent_refused",
+    "policy_registry_reads": 0,
+    "generated_fixture_builds": 0,
+    "semantic_validation_passes": 0,
+    "output_files_created": 0,
+    "real_public_or_local_operations": 0,
+    "consumed_semantic_qualification": false
+  },
+  "execution": {
+    "successful_semantic_qualifications": 1,
+    "semantic_qualification_runs_after_first_fixture_build": 1,
+    "retry_or_rerun_after_semantic_execution": 0,
+    "inspect_runs": 1,
+    "report_SHA256_passes": 1,
+    "report_byte_count_passes": 1,
+    "report_retained": false,
+    "report_committed": false,
+    "only_closeout_generated_file_removed": true,
+    "post_result_parameter_or_policy_updates": 0
+  },
+  "measurements": {
+    "generated_fixture_count": 2,
+    "generated_fixture_input_bytes": 6093,
+    "generated_output_bytes": 6834,
+    "generated_channel_rows": 60,
+    "semantic_validation_passes": 4,
+    "mutation_attempts": 13,
+    "distinct_refusal_classes": 12,
+    "runtime_seconds_through_report_build": 0.007473916979506612,
+    "peak_RSS_bytes_through_report_build": 20250624,
+    "CPU_threads": 1,
+    "workers": 1,
+    "concurrent_numerical_jobs": 1,
+    "producer_is_causal": null,
+    "end_to_end_latency_measured": false,
+    "temporary_report_sha256": "2efe33591838f1434a3bcc8d65f3e91dd7eaf6cbba10c66ddf741c98ad75d8c2",
+    "summary_set_sha256": "8e0532571cec9fa17b30549342d3cd03b2ea299d4c19fa5d758ac993f845900e"
+  },
+  "fixture_groups": [
+    {
+      "fixture_id": "generated-29-row-v0",
+      "row_count": 29,
+      "source_EEG_count": 26,
+      "source_MISC_count": 3,
+      "optional_M1_M2_present": false,
+      "predictive_EEG_count": 26,
+      "geometry_available_count": 26,
+      "bindings": {
+        "source_order_sha256": "a0169290a0df1856086a7b2a488b2528b9ec580f21bc99d075f0a5ea06038c3f",
+        "source_type_count_sha256": "4dc4ed5145c485dcc5b2ac8bd8a028741728471cc9f9c15fd53b807dab5fc6d6",
+        "functional_role_sha256": "51ef19f3b6d9ce584164398e127791b68932525cded2f06dff0542e9175c720a",
+        "model_inclusion_mask_sha256": "f4e99e0efd6496a61016ead2ff8d9681b88896ce6d4e8a0a806d85bfe94be34c",
+        "geometry_available_mask_sha256": "f4e99e0efd6496a61016ead2ff8d9681b88896ce6d4e8a0a806d85bfe94be34c"
+      }
+    },
+    {
+      "fixture_id": "generated-31-row-v0",
+      "row_count": 31,
+      "source_EEG_count": 28,
+      "source_MISC_count": 3,
+      "optional_M1_M2_present": true,
+      "predictive_EEG_count": 26,
+      "geometry_available_count": 28,
+      "bindings": {
+        "source_order_sha256": "fa86f0e258e5f6826b0a8d10ea16b9ecc9e83708e174252b93a3580c33e18daa",
+        "source_type_count_sha256": "fbeb5b5405322290968c5db00cb89deec2a9f4ea9f9944742672173ded8238f4",
+        "functional_role_sha256": "11ffccd8ef3588d647a44f35138c43c66eb917bfad178a760615e0d21b50f054",
+        "model_inclusion_mask_sha256": "297acc1bf316847c2c8fcdbde1158aff8922778065012020eee28c483bc5a687",
+        "geometry_available_mask_sha256": "e3cbdde1386d3eb3d5139203d5b9350a0406202a1f3dd7f68cab89999cae5f8c"
+      }
+    }
+  ],
+  "mutation_results": [
+    {
+      "mutation": "BIDS_version",
+      "refusal_id": "IACKDS-F01-BIDS-version-or-count-field-mismatch"
+    },
+    {
+      "mutation": "count_spelling",
+      "refusal_id": "IACKDS-F01-BIDS-version-or-count-field-mismatch"
+    },
+    {
+      "mutation": "fixture_schema",
+      "refusal_id": "IACKDS-F02-fixture-schema-or-value-malformed"
+    },
+    {
+      "mutation": "source_order",
+      "refusal_id": "IACKDS-F03-source-index-or-order-mismatch"
+    },
+    {
+      "mutation": "duplicate_channel",
+      "refusal_id": "IACKDS-F04-duplicate-unknown-or-missing-channel"
+    },
+    {
+      "mutation": "source_type",
+      "refusal_id": "IACKDS-F05-source-type-mismatch"
+    },
+    {
+      "mutation": "sidecar_count",
+      "refusal_id": "IACKDS-F06-source-or-sidecar-count-mismatch"
+    },
+    {
+      "mutation": "reference",
+      "refusal_id": "IACKDS-F07-sampling-or-reference-mismatch"
+    },
+    {
+      "mutation": "geometry",
+      "refusal_id": "IACKDS-F10-required-geometry-invalid"
+    },
+    {
+      "mutation": "binding",
+      "refusal_id": "IACKDS-F11-derivative-binding-hash-mismatch"
+    },
+    {
+      "mutation": "target_firewall",
+      "refusal_id": "IACKDS-F12-forbidden-target-or-outcome-field"
+    },
+    {
+      "mutation": "functional_role_overlap",
+      "refusal_id": "IACKDS-F08-functional-role-overlap-or-gap"
+    },
+    {
+      "mutation": "predictive_model_mask",
+      "refusal_id": "IACKDS-F09-predictive-set-or-model-mask-mismatch"
+    }
+  ],
+  "acceptance_gate_results": {
+    "green_research_bound": true,
+    "green_implementation_bound": true,
+    "policy_hash_exact": true,
+    "BIDS_version_and_count_field_exact": true,
+    "29_and_31_row_groups_pass": true,
+    "predictive_core_is_26_in_both": true,
+    "source_role_model_layers_separate": true,
+    "derivative_bindings_complete": true,
+    "deterministic_replay_passed": true,
+    "twelve_distinct_refusals_passed": true,
+    "target_firewall_passed": true,
+    "forbidden_access_counters_zero": true,
+    "resource_caps_passed": true,
+    "output_cap_passed": true
+  },
+  "access_counters": {
+    "policy_registry_reads": 1,
+    "generated_fixture_builds": 2,
+    "generated_fixture_semantic_parses": 4,
+    "generated_mutation_attempts": 13,
+    "real_or_public_metadata_requests": 0,
+    "network_bytes": 0,
+    "Git_ignored_execution_artifact_reads": 0,
+    "local_IACKD_path_stats_or_opens": 0,
+    "VHDR_or_sibling_operations": 0,
+    "signal_sample_reads": 0,
+    "marker_or_event_reads": 0,
+    "trajectory_reads": 0,
+    "target_or_label_reads": 0,
+    "cache_split_or_derivative_operations": 0,
+    "feature_extraction_runs": 0,
+    "model_or_checkpoint_loads": 0,
+    "training_or_parameter_update_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_sets_or_scoring_runs": 0,
+    "provider_or_language_model_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "warnings": [
+    "All channel rows and geometry were generated and have no source or scientific meaning.",
+    "Source-order hashes qualify binding mechanics only; no real IACKD source order was asserted.",
+    "The policy remains prospective and does not amend the consumed H2 result.",
+    "One symlink-parent output preflight refused before policy or fixture access; one later semantic qualification completed."
+  ],
+  "unavailable_fields": [
+    "real_source_order_validation",
+    "real_reader_validation",
+    "signal_or_event_validation",
+    "target_or_model_validation",
+    "producer_causality_not_applicable",
+    "end_to_end_latency_not_measured"
+  ],
+  "disposition": {
+    "H3_generated_qualification_complete": true,
+    "H2_route_changed": false,
+    "H2_candidate_hash_admissible": false,
+    "real_reader_validated": false,
+    "IACKD2_authorized": false,
+    "next_step": "separately_named_prospective_IACKD_experiment_contract_binding_H3_policy_before_any_Tier_C_payload_or_signal_access"
+  },
+  "verification": {
+    "focused_H3_tests": 52,
+    "focused_passed": true,
+    "complete_base_tests": 1833,
+    "complete_base_skips": 182,
+    "complete_base_suite_passed": true,
+    "complete_optional_tests": 1904,
+    "complete_optional_skips": 13,
+    "complete_optional_suite_passed": true,
+    "ruff_version": "0.15.20",
+    "ruff_passed": true,
+    "compileall_passed": true,
+    "registry_JSON_files_valid": 136,
+    "result_registry_cross_checked_against_temporary_report": true,
+    "module_CLI_inspect_passed": true,
+    "git_diff_check_passed": true
+  },
+  "public_artifact_bindings": {
+    "document_path": "docs/IACKD_SOURCE_SEMANTICS_RESULT.md",
+    "document_sha256": "fe584294dcf1957d229feb26c5a018d3ce5c1360e6294e372c7094f905cd5fa3",
+    "invariant_test_path": "tests/test_iackd_source_semantics_result.py",
+    "invariant_test_sha256": "80b75fb59a0b49357698281b3c088014ab0bcc7f54cca7ffe4c9641cb3688a5e",
+    "contains_local_path_or_individual_identity": false,
+    "contains_real_signal_target_model_prediction_or_score": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "NeuroDecodeKit now has a measured deterministic version-aware source-semantics validator that preserves BIDS source counts before functional-role and model-mask assignment and fails closed across twelve generated error classes.",
+    "scientific_claim_not_established": "No real or public IACKD body local bundle signal event trajectory target model prediction or score was accessed so H3 establishes no neural effect action decoding brain-specific origin generalization typing language or thought decoding real-time operation hardware capability assistive benefit or clinical use."
+  }
+}

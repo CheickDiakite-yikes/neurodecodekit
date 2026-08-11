@@ -236,6 +236,18 @@ covering 12 refusal classes, and exposes only plan, fixture, and inspect module
 CLI modes. There is no real executor. Commit, push, and obtain both green jobs
 for this exact implementation before one measured generated closeout. Do not
 read a public body or local bundle, enter IACKD-2, or infer a neural result.
+Implementation `8c5784a` passed Base Python job `93642969190` and Optional
+Neuro Readers job `93642969143` in CI `31446902756` before the measured H3
+closeout. Read `docs/IACKD_SOURCE_SEMANTICS_RESULT.md` and
+`registries/iackd_source_semantics_result.v0.json`. One semantic qualification
+passed all 13 gates over 6,093 generated input bytes and 6,834 output bytes in
+0.007473916979506612 seconds at 20,250,624-byte peak RSS. It exercised 13
+mutations spanning 12 distinct refusals; all real/public/local-data, signal,
+target, model, network, and score counters stayed zero. One earlier symlink-
+parent output preflight refused before policy or fixture access. The temporary
+report was removed. H3 is complete, but no real reader or scientific result is
+validated; IACKD-2 still requires a separate prospective contract and Tier C
+decision.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

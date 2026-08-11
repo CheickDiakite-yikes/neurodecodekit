@@ -441,9 +441,11 @@
    1.7.0 source counts before assigning functional roles. Its candidate policy
    is not a validated reader. Research `ed5ce82` is remotely green; now read
    `docs/IACKD_SOURCE_SEMANTICS_IMPLEMENTATION.md` and its registry. The module
-   has only plan, generated-fixture, and inspect modes. One measured synthetic
-   closeout waits for the exact implementation to become green; real data and
-   IACKD-2 stay closed.
+   has only plan, generated-fixture, and inspect modes. Then read
+   `docs/IACKD_SOURCE_SEMANTICS_RESULT.md`: implementation `8c5784a` was green
+   before one measured generated closeout passed all gates. H3 validates policy
+   mechanics, not a real reader or neural result; real data and IACKD-2 stay
+   closed.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and
