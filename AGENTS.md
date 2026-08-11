@@ -370,6 +370,18 @@ packet. The current `continue` is not retroactive. Do not implement the real
 executor, request `ds006840`, operate on any IACKD path or old root, run a
 model, open a target, or score from the packet alone.
 
+Request `525e97e64d04c64aa3243f94790dd70db5fd30e7` passed Base Python
+job `93727674791` and Optional Neuro Readers job `93727674875` in CI
+`31475356506`. Codex then identified it as the sole active Tier C packet, and
+the maintainer supplied a fresh `continue`. Read
+`docs/IACKD_TRANSPORT_STABLE_RECOVERY_AUTHORIZATION_DECISION.md` and
+`registries/iackd_transport_stable_recovery_authorization_decision.v0.json`.
+The additive decision quotes that word exactly and binds the green request
+without scope expansion. Its commit must be pushed and both CI jobs must pass
+before the new generated/mock-only executor is implemented. No public request,
+local IACKD operation, model run, target access, or score may occur from an
+uncommitted or ungreen decision.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

@@ -5681,3 +5681,25 @@ prediction, freeze, score, retry, rerun, release, or claim operation is open.
 Evidence: `docs/IACKD_TRANSPORT_STABLE_RECOVERY_AUTHORIZATION_PACKET.md`,
 `registries/iackd_transport_stable_recovery_authorization_request.v0.json`,
 and `tests/test_iackd_transport_stable_recovery_authorization_request.py`.
+
+## 0168 - Bind The Fresh Maintainer Continue To IACKD-2R
+
+Decision: preserve the maintainer's exact word `continue` as a short-form
+packet-bound Tier C decision for the sole active IACKD-2R request at
+`525e97e`, green in both jobs under CI `31475356506`.
+
+Reason: Codex identified the immutable packet, commit, CI proof, exact scope,
+machine-safety boundary, and fresh-decision gate immediately before the
+maintainer's unambiguous instruction. The approved charter permits this
+short-form reference when one green packet is active.
+
+Boundary: do not claim that the maintainer typed the packet's long recital,
+and infer no expansion. This decision is ineffective until its own commit and
+both CI jobs are green. Only generated/mock-only additive executor work opens
+then; public access waits for a second green implementation gate. Release,
+hardware, destructive work, scientific claim upgrades, retries, reruns, and
+operations on old roots or other projects remain forbidden.
+
+Evidence: `docs/IACKD_TRANSPORT_STABLE_RECOVERY_AUTHORIZATION_DECISION.md`,
+`registries/iackd_transport_stable_recovery_authorization_decision.v0.json`,
+and `tests/test_iackd_transport_stable_recovery_authorization_decision.py`.

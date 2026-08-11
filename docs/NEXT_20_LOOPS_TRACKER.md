@@ -1105,3 +1105,10 @@ target delivery and score. A 10 GiB free-disk and per-logical-CPU load gate
 must pass before consumption. Next: commit, push, and green the request, then
 stop and identify it as the sole Tier C packet. The current `continue` is not
 retroactive; public requests and real execution remain unauthorized.
+
+Request `525e97e` passed both jobs in CI `31475356506`. After the packet was
+identified, the maintainer supplied a fresh `continue`; the additive decision
+quotes it exactly and binds the frozen request. Next: commit, push, and green
+that decision, then implement only the generated/mock-qualified additive
+executor. No public request or local IACKD operation may precede green
+decision and green executor proof.

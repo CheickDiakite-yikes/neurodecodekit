@@ -995,7 +995,13 @@ Read this before interpreting any number in the repository.
   one score. It also refuses before consumption when free disk, one-thread
   settings, or per-CPU machine load are unsafe. The packet authorizes nothing;
   it must be committed, pushed, and remotely green before a fresh later
-  packet-bound maintainer decision can open any public operation.
+  packet-bound maintainer decision can open any public operation. Request
+  `525e97e` passed both jobs in CI `31475356506`; after Codex identified it as
+  the sole packet, the maintainer's fresh `continue` was recorded verbatim in
+  the additive
+  [decision](docs/IACKD_TRANSPORT_STABLE_RECOVERY_AUTHORIZATION_DECISION.md).
+  That decision must itself be committed, pushed, and remotely green before
+  generated/mock-only executor integration. Public access remains closed.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

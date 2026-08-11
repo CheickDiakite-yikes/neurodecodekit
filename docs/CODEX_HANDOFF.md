@@ -2526,3 +2526,14 @@ request, then stop and identify its exact commit and scope. The current
 maintainer `continue` preceded the packet and is not retroactive. No
 `ds006840` request, real-executor integration, local IACKD path operation,
 old-root access, model run, target delivery, or score is open.
+
+Request `525e97e` then passed Base Python job `93727674791` and Optional Neuro
+Readers job `93727674875` in CI `31475356506`. Codex identified IACKD-2R as the
+sole active Tier C packet with its exact scope and gate. The maintainer's next
+message was exactly `continue`. Read
+`docs/IACKD_TRANSPORT_STABLE_RECOVERY_AUTHORIZATION_DECISION.md`, its registry,
+and test. The additive decision binds the green request and preserves the
+actual word without fabricating a recital. Next: commit, push, and require both
+decision CI jobs green. Generated/mock-only executor implementation remains
+closed until then; all public, local-data, model, target, and score operations
+remain zero.

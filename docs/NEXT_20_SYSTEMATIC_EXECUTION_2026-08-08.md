@@ -478,3 +478,10 @@ future additive executor, one new storage-safe public stream, the unchanged
 request itself authorizes nothing. Commit, push, green both jobs, identify the
 sole packet, and stop. No public request, real executor integration, local
 IACKD path, model, target, or score is currently authorized.
+
+Request `525e97e` passed both jobs in CI `31475356506`, and the maintainer's
+fresh packet-bound `continue` is now preserved in a separate additive decision.
+The next systematic item is exact decision proof: commit, push, and require
+both CI jobs green. Only then may the new additive executor be implemented and
+qualified with generated fixtures and mocked transport. Public access remains
+closed until that exact executor is also remotely green.

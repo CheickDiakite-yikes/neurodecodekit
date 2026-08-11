@@ -7164,3 +7164,26 @@ green Tier C decision.
 
 Scientific claim not established: the all-false request is not EEG data or a
 result and adds no neural or decoding evidence.
+
+## 2026-08-11 - IACKD-2R Packet-Bound Decision
+
+- Reverified request `525e97e` and CI `31475356506`: Base Python job
+  `93727674791` and Optional Neuro Readers job `93727674875` are green.
+- The prior response identified IACKD-2R as the sole active Tier C packet,
+  named its commit, CI, exact 7.249 GB stream, 660-fit/900-prediction sequence,
+  machine-safety gate, and fresh-decision boundary.
+- The maintainer's next message was exactly `continue`. Added a separate human
+  and machine decision that quotes this word and incorporates the immutable
+  packet by reference without claiming a fabricated long recital.
+- Added 11 invariant tests covering packet hashes, green proof, actual-message
+  identity, conditional authorization, the sole metadata-framing delta,
+  resource parity, ordered green gates, zero operations, and claim ceiling.
+- The decision remains ineffective until its own commit is pushed and both CI
+  jobs pass. Executor, network, local-data, model, target, and score counters
+  remain zero.
+
+Engineering capability authorized after green decision: implement and qualify
+one new additive IACKD-2R executor using generated fixtures and mocked
+transport before any public operation.
+
+Scientific claim not established: authorization is not EEG data or a result.

@@ -521,7 +521,12 @@
    stream, the unchanged target-blind matrix, one green freeze, and one score,
    with a new pre-consumption machine-load gate. It authorizes nothing. Commit,
    push, and require both CI jobs green, then stop and identify it as the sole
-   Tier C packet. The current `continue` cannot bind it retroactively.
+   Tier C packet. Request `525e97e` passed both jobs in CI `31475356506`; the
+   maintainer then supplied a fresh `continue`. Read
+   `docs/IACKD_TRANSPORT_STABLE_RECOVERY_AUTHORIZATION_DECISION.md` and its
+   registry. This additive record quotes the actual word and binds the packet
+   without expansion. Next commit, push, and green this exact decision. No
+   executor implementation or public/local IACKD operation may begin first.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and
