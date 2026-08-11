@@ -2884,3 +2884,10 @@ Neuro Readers job `93821044782` in CI `31504059513`: only the three CLI child
 processes returned `MARC1G-F06`; no report was written. The pending correction
 runs those dependency-free child probes with Python `-S`. It changes no source
 logic or cap. Require both jobs green on the correction before closeout.
+
+Correction `fdc55ec` still failed those three children because the Linux
+optional parent had already reached a 401,321,984-byte RSS high-water mark.
+The final pending harness uses an injected RSS probe for deterministic
+roundtrip/privacy tests, keeps a real subprocess qualification when its parent
+is below cap, skips only exact inherited-high-water `MARC1G-F06`, and directly
+tests over-cap refusal. Do not weaken the production 256-MiB guard.

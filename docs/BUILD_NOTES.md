@@ -7567,3 +7567,11 @@ result.
   measurement. Source behavior and all frozen caps remain unchanged.
 - No registered closeout, public request, real-data operation, model run, or
   score occurred after the failed CI gate.
+- Correction `fdc55ec` still failed the same three optional CLI children. The
+  optional parent reported a 401,321,984-byte peak, above the 256-MiB MARC-1
+  cap; `-S` cannot erase a forked process's inherited RSS high-water history.
+- Final harness design keeps one real CLI run when the parent is below cap and
+  skips only exact `MARC1G-F06` under an already-over-cap parent. Deterministic
+  artifact tests inject only the RSS probe, and a separate over-cap assertion
+  preserves the resource refusal. Production source and every cap are
+  unchanged.

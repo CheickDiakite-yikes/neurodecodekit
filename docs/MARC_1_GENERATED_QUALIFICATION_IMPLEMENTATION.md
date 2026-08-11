@@ -99,6 +99,21 @@ standard-library module from optional site-package startup. It does not change
 the implementation source, resource caps, route logic, or scientific boundary.
 This corrected test hash must become remotely green before the closeout.
 
+Correction `fdc55ec` proved that `-S` alone was insufficient on the Linux
+optional runner. Its parent test process had already reached 401,321,984 bytes,
+and the three forked qualification children again returned `MARC1G-F06` while
+all non-CLI tests passed. Linux preserves the process RSS high-water history
+across this child launch, so the tests were measuring prior optional-suite
+imports rather than qualification allocation.
+
+The final harness keeps one real CLI qualification test. It passes under a
+fresh parent and skips only when the child returns exact `MARC1G-F06` while the
+parent's own high-water mark is already above 256 MiB. Deterministic output and
+privacy tests inject only the RSS probe; they still execute every archive,
+range, mutation, modality, causal, split, target, output, and report gate. A
+separate assertion proves that an over-cap RSS value refuses. Production
+source and the 256-MiB cap remain unchanged.
+
 ## Claim Boundary
 
 Engineering capability added: a dependency-free implementation now enforces

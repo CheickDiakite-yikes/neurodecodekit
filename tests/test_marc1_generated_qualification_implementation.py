@@ -1,5 +1,6 @@
 import copy
 import hashlib
+import io
 import json
 import os
 import subprocess
@@ -7,7 +8,9 @@ import sys
 import tempfile
 import unittest
 import zipfile
+from contextlib import redirect_stderr
 from pathlib import Path
+from unittest import mock
 
 from neurodecodekit.datasets import marc1_generated_qualification as marc1
 
@@ -248,6 +251,12 @@ class Marc1GeneratedQualificationImplementationTests(unittest.TestCase):
     def test_output_cap_and_existing_destination_refuse(self):
         with self.assertRaisesRegex(marc1.Marc1GeneratedRefusal, "MARC1G-F06"):
             marc1._bounded_output_bytes(b"x" * (marc1.MAX_OUTPUT_BYTES + 1), b"")
+        with self.assertRaisesRegex(marc1.Marc1GeneratedRefusal, "MARC1G-F06"):
+            marc1._assert_resources(
+                0.0,
+                marc1.MAX_PEAK_RSS_BYTES + 1,
+                marc1._RangeBudget(),
+            )
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory) / "existing"
             output.mkdir()
@@ -267,24 +276,9 @@ class Marc1GeneratedQualificationImplementationTests(unittest.TestCase):
     def test_public_report_rejects_private_member_fields(self):
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory) / "qualification"
-            result = subprocess.run(
-                [
-                    sys.executable,
-                    "-S",
-                    "-m",
-                    "neurodecodekit.datasets.marc1_generated_qualification",
-                    "qualify",
-                    "--output-dir",
-                    str(output),
-                ],
-                cwd=ROOT,
-                env=one_thread_env(),
-                check=True,
-                capture_output=True,
-                text=True,
-            )
-            payload = json.loads(result.stdout)
-            report = json.loads(Path(payload["report"]).read_text(encoding="utf-8"))
+            with mock.patch.object(marc1, "_peak_rss_bytes", return_value=1):
+                outcome = marc1.qualify_generated_marc1(output)
+            report = json.loads(outcome.report_path.read_text(encoding="utf-8"))
             report["archive_summary"]["member_name"] = "private"
             with self.assertRaisesRegex(marc1.Marc1GeneratedRefusal, "MARC1G-F06"):
                 marc1.validate_public_report(report)
@@ -304,10 +298,19 @@ class Marc1GeneratedQualificationImplementationTests(unittest.TestCase):
                 ],
                 cwd=ROOT,
                 env=one_thread_env(),
-                check=True,
+                check=False,
                 capture_output=True,
                 text=True,
             )
+            if qualify.returncode != 0:
+                refusal = json.loads(qualify.stderr)
+                inherited_high_water = marc1._peak_rss_bytes() > marc1.MAX_PEAK_RSS_BYTES
+                if (
+                    refusal.get("refusal_id") == marc1.REFUSAL_IDS[6]
+                    and inherited_high_water
+                ):
+                    self.skipTest("forked child inherited an over-cap parent RSS high-water mark")
+                self.fail(f"qualification CLI refused unexpectedly: {refusal}")
             result = json.loads(qualify.stdout)
             self.assertEqual(result["route"], "MARC1G-R1")
             self.assertLessEqual(result["generated_output_bytes"], marc1.MAX_OUTPUT_BYTES)
@@ -334,42 +337,18 @@ class Marc1GeneratedQualificationImplementationTests(unittest.TestCase):
     def test_inspect_refuses_private_manifest(self):
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory) / "qualification"
-            result = subprocess.run(
-                [
-                    sys.executable,
-                    "-S",
-                    "-m",
-                    "neurodecodekit.datasets.marc1_generated_qualification",
-                    "qualify",
-                    "--output-dir",
-                    str(output),
-                ],
-                cwd=ROOT,
-                env=one_thread_env(),
-                check=True,
-                capture_output=True,
-                text=True,
-            )
-            payload = json.loads(result.stdout)
+            with mock.patch.object(marc1, "_peak_rss_bytes", return_value=1):
+                outcome = marc1.qualify_generated_marc1(output)
             manifest = output / "marc1_generated_manifest.private.v0.json"
-            refused = subprocess.run(
-                [
-                    sys.executable,
-                    "-S",
-                    "-m",
-                    "neurodecodekit.datasets.marc1_generated_qualification",
-                    "inspect",
-                    str(manifest),
-                ],
-                cwd=ROOT,
-                env=one_thread_env(),
-                check=False,
-                capture_output=True,
-                text=True,
+            stderr = io.StringIO()
+            with redirect_stderr(stderr):
+                return_code = marc1.main(["inspect", str(manifest)])
+            self.assertEqual(return_code, 2)
+            self.assertEqual(
+                json.loads(stderr.getvalue())["refusal_id"],
+                "MARC1G-F06-output-privacy-overwrite-runtime-RSS-or-cap-failure",
             )
-            self.assertEqual(refused.returncode, 2)
-            self.assertEqual(json.loads(refused.stderr)["refusal_id"], "MARC1G-F06-output-privacy-overwrite-runtime-RSS-or-cap-failure")
-            self.assertEqual(payload["route"], "MARC1G-R1")
+            self.assertEqual(outcome.report["route"], "MARC1G-R1")
 
     def test_cli_help_has_no_live_surface(self):
         result = subprocess.run(
