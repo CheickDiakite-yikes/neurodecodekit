@@ -2326,9 +2326,34 @@ One disposable development roundtrip passed in 4.768072 seconds at
 real/public/private/network counter stayed zero. Its constructed
 `IACKD2-R5` is interface mechanics only.
 
-Current gate: complete verification, commit and push this exact implementation,
-and require both CI jobs green. Only then run one registered generated-only
-closeout. Do not access a public body, old IACKD bundle, signal, event,
-trajectory, target, real model, prediction, or score. A future real sequence
-still needs a separate all-false request, fresh packet-bound Tier C decision,
-green real implementation, and green hash-only prediction freeze.
+Gate at this implementation record, now superseded by the closeout below:
+complete verification, commit and push the exact implementation, require both
+CI jobs green, and only then run one registered generated-only closeout. A
+future real sequence still needs a separate all-false request, fresh
+packet-bound Tier C decision, green real implementation, and green hash-only
+prediction freeze.
+
+## 2026-08-10 IACKD-2 Registered Generated Closeout
+
+The first implementation push `25a569216db805db068265744b12e84df9fd7b64`
+failed CI `31451058136` only because a new test hardcoded macOS `/private/tmp`.
+Ruff and compile passed, and no registered closeout followed that failure.
+Portability correction `af7488ab1e8f49854733425a96bbdc9c222ef02b`
+then passed Base Python job `93655939217` and Optional Neuro Readers job
+`93655939167` in CI `31451262840`.
+
+Only after that green proof, one registered generated closeout passed all 15
+gates in 5.024801375111565 seconds at 257,130,496-byte peak RSS with 30,170
+output bytes. It completed the 660-fit/900-prediction primary matrix and exact
+replay, causal future-tail check, structural target firewall, hash freeze,
+aggregate scorer, 19 mutation attempts, and all six routes. Every real/public/
+private-data, network, provider, hardware, release, and claim counter stayed
+zero. The aggregate report was inspected once and removed.
+
+Read `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_SYNTHETIC_RESULT.md`,
+`registries/iackd_role_aware_dual_reversal_synthetic_result.v0.json`, and
+`tests/test_iackd_role_aware_dual_reversal_synthetic_result.py`. Constructed
+`IACKD2-R5` is planted interface behavior with zero scientific value. The
+generated closeout is consumed and not rerunnable. No real operation opens
+without a separate all-false request, fresh packet-bound Tier C decision, and
+the later green implementation and prediction-freeze sequence.

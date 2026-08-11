@@ -404,12 +404,15 @@ Registration `5bdab30` passed both jobs in CI `31448911258` before Tier B
 implementation. The generated-only module now validates the 29/31-row
 source-semantics variants, causal dimensions, strict model/scorer firewall,
 660 fits, 900 prediction sets, exact replay, prediction freeze, and all six
-routes. One disposable development roundtrip took 4.768072 seconds at
-257,146,880-byte peak RSS and emitted 30,169 bytes before removal; every
-real/public/private/network counter was zero. Synthetic `IACKD2-R5` is a
-constructed interface check with no scientific value.
+routes. The first push `25a5692` failed only Linux test portability and did not
+open the closeout. Correction `af7488a` passed both jobs in CI `31451262840`
+before the one registered generated closeout. All 15 gates passed in 5.024801
+seconds at 257,130,496-byte peak RSS with 30,170 output bytes; the full matrix
+replayed exactly, every forbidden counter stayed zero, and the temporary report
+was removed. Synthetic `IACKD2-R5` is a constructed interface check with no
+scientific value. The generated closeout is consumed with no rerun.
 
-Next: verify, commit, push, and obtain both green jobs for the exact
-implementation, then run one registered generated-only closeout. Public
-payload, the old bundle, real signals, targets, training, prediction, scoring,
-and scientific claims remain behind a new exact Tier C sequence.
+Next: preserve the consumed result and design the separate all-false Tier C
+request surface for any future real sequence. Public payload, the old bundle,
+real signals, targets, training, prediction, scoring, and scientific claims
+remain closed until a fresh packet-bound decision and later green gates.

@@ -1022,10 +1022,11 @@ Registration `5bdab30` passed both jobs in CI `31448911258` before the Tier B
 generated-only implementation began. The new strict module separates model
 and scorer objects, validates 29/31 source-semantic rows, causal dimensions,
 4,096/3,136/960 row inventories, exactly 660 fits and 900 prediction sets, a
-second exact replay, hash freeze, and all six routes. One disposable
-development roundtrip passed in 4.768072 seconds at 257,146,880-byte peak RSS
-with 30,169 output bytes and zero real/public/private/network access. Its
-constructed `IACKD2-R5` has no scientific value. The next gate is complete
-verification, commit, push, and both green CI jobs for this exact
-implementation, followed by one registered generated closeout. Real access
-still requires a fresh packet-bound Tier C decision.
+second exact replay, hash freeze, and all six routes. Correction `af7488a`
+passed both jobs in CI `31451262840` before the one registered generated
+closeout. All 15 gates passed in 5.024801 seconds at 257,130,496-byte peak RSS
+with 30,170 output bytes. Every real/public/private/network counter stayed
+zero, and the temporary report was removed. Constructed `IACKD2-R5` has no
+scientific value. The generated closeout is consumed with no rerun. Real access
+still requires a separate all-false request and fresh packet-bound Tier C
+decision.

@@ -940,12 +940,14 @@ Read this before interpreting any number in the repository.
   [generated-only implementation](docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_IMPLEMENTATION.md).
   It now exercises strict model/scorer isolation, 29/31-row source semantics,
   causal features, exactly 660 fits and 900 target-blind prediction sets, a
-  recomputed hash freeze, exact replay, and all six routes. A disposable
-  development roundtrip passed in 4.77 seconds at 257 MB peak RSS with 30 KB
-  output and zero real/public/private/network access. Constructed
-  `IACKD2-R5` is interface evidence only, not a neural result. The exact
-  implementation must become remotely green before one registered synthetic
-  closeout; every real stage still needs a fresh Tier C decision.
+  recomputed hash freeze, exact replay, and all six routes. Portability
+  correction `af7488a` passed both jobs in CI `31451262840` before the one
+  [registered generated closeout](docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_SYNTHETIC_RESULT.md).
+  All 15 gates passed in 5.024801 seconds at 257,130,496-byte peak RSS with
+  30,170 output bytes. Every real/public/private/network counter stayed zero,
+  and the temporary report was removed. Constructed `IACKD2-R5` is planted
+  interface evidence only, not a neural result. The generated closeout is
+  consumed with no rerun; every real stage still needs a fresh Tier C decision.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

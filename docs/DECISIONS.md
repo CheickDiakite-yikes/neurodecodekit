@@ -5477,3 +5477,28 @@ Evidence: `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_IMPLEMENTATION.md`,
 `registries/iackd_role_aware_dual_reversal_implementation.v0.json`,
 `src/neurodecodekit/experiments/iackd_role_aware_dual_reversal.py`, and
 `tests/test_iackd_role_aware_dual_reversal.py`.
+
+## 0160 - Close IACKD-2 Generated Mechanics Without A Scientific Upgrade
+
+Decision: accept the one registered generated closeout as deterministic
+interface-mechanics evidence and consume its no-rerun gate. The first
+implementation push `25a5692` failed only a nonportable test path and did not
+open the closeout. Correction `af7488a` passed both jobs in CI `31451262840`
+before the sole qualification ran.
+
+Result: all 15 gates passed in 5.024801375111565 seconds at 257,130,496-byte
+peak RSS with 30,170 output bytes. The 660-fit/900-prediction matrix replayed
+exactly, the model/scorer target firewall and freeze checks held, all six
+routes were reachable, and every forbidden counter remained zero. The
+temporary report was inspected and removed.
+
+Boundary: constructed `IACKD2-R5`, balanced accuracies, margins, and generated
+sign-flip value are planted fixture properties with zero scientific meaning.
+Do not rerun or tune this closeout, access public or retained IACKD data, or
+promote a neural claim. Any real sequence requires a separate all-false Tier C
+request, fresh packet-bound decision, and later green implementation and
+prediction-freeze gates.
+
+Evidence: `docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_SYNTHETIC_RESULT.md`,
+`registries/iackd_role_aware_dual_reversal_synthetic_result.v0.json`, and
+`tests/test_iackd_role_aware_dual_reversal_synthetic_result.py`.

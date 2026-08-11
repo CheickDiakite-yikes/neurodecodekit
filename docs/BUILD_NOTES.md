@@ -6948,8 +6948,9 @@ neural or decoding evidence.
   257,146,880-byte peak RSS with 30,169 output bytes before removal. All real,
   public, private-bundle, network, provider, hardware, release, and claim
   counters remained zero.
-- Synthetic `IACKD2-R5` is constructed interface behavior only. The registered
-  closeout remains held until the exact implementation is remotely green.
+- Synthetic `IACKD2-R5` is constructed interface behavior only. At this
+  implementation record, the closeout remained held pending remote-green
+  proof; the registered closeout section below supersedes that gate status.
 
 Engineering capability added: the frozen IACKD-2 design now has a generated,
 failure-addressable reader-to-freeze-to-scorer implementation with structural
@@ -6958,3 +6959,33 @@ target isolation and exact replay.
 Scientific claim not established: no real or public payload, signal, event,
 trajectory, target, model outcome, or score was accessed, so this adds no
 neural, action-decoding, brain-origin, or thought-decoding evidence.
+
+## 2026-08-10 - IACKD-2 Registered Generated Closeout
+
+- First implementation `25a5692` failed both jobs in CI `31451058136` only
+  because one test hardcoded macOS `/private/tmp`; no closeout followed.
+- Portability correction `af7488a` passed Base Python job `93655939217` and
+  Optional Neuro Readers job `93655939167` in CI `31451262840` before the one
+  registered closeout.
+- The one-thread execution passed all 15 gates in 5.024801375111565 seconds at
+  257,130,496-byte peak RSS with 30,170 output bytes.
+- The exact 660-fit/900-prediction primary matrix and its exact replay passed,
+  along with causal future-tail invariance, structural model/scorer isolation,
+  a recomputed freeze, 19 malformed-input attempts, and all six routes.
+- Every real/public/private-data, network, provider, hardware, release, and
+  scientific-claim counter stayed zero. The report was inspected and removed;
+  no generated artifact remains.
+- The generated closeout is consumed with no rerun. Constructed `IACKD2-R5`
+  is planted fixture behavior with zero scientific value.
+
+Engineering capability added: NeuroDecodeKit now has measured generated proof
+that the role-aware dual-reversal reader, causal preprocessing, strict
+model/scorer target firewall, 660-fit/900-prediction matrix, hash freeze,
+aggregate scorer, and six-route decision tree execute deterministically under
+the registered resource caps.
+
+Scientific claim not established: no real or public IACKD payload, signal,
+event, trajectory, target, participant outcome, or model result was accessed,
+so this establishes no neural effect, action decoding, brain-specific origin,
+generalization, language or thought decoding, real-time operation, hardware
+capability, assistive benefit, or clinical result.

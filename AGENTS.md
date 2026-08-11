@@ -267,14 +267,20 @@ passed Base Python job `93648969685` and Optional Neuro Readers job
 `registries/iackd_role_aware_dual_reversal_implementation.v0.json`. The
 generated-only module now separates model and scorer objects, validates 29/31
 source-semantic rows, exercises causal features, 660 fits, 900 target-blind
-prediction sets, exact replay, hash freeze, six routes, and strict refusals. A
-disposable development roundtrip passed in 4.768072 seconds at 257,146,880-byte
-peak RSS with 30,169 output bytes and every real/public/private/network counter
-zero. Its synthetic `IACKD2-R5` has no scientific value. Commit, push, and
-obtain both green jobs for this exact implementation before one registered
-generated closeout. Any real operation still needs a later all-false request,
-fresh packet-bound Tier C decision, green implementation, and green
-prediction-freeze sequence.
+prediction sets, exact replay, hash freeze, six routes, and strict refusals.
+The first implementation push `25a5692` failed only a nonportable test path;
+no closeout followed. Portability correction `af7488a` passed Base Python job
+`93655939217` and Optional Neuro Readers job `93655939167` in CI
+`31451262840` before the one registered generated closeout. Read
+`docs/IACKD_ROLE_AWARE_DUAL_REVERSAL_SYNTHETIC_RESULT.md` and
+`registries/iackd_role_aware_dual_reversal_synthetic_result.v0.json`. All 15
+gates passed in 5.024801 seconds at 257,130,496-byte peak RSS with 30,170
+output bytes; the exact 660-fit/900-prediction matrix replayed, every forbidden
+counter stayed zero, and the temporary report was removed. Synthetic
+`IACKD2-R5` has no scientific value. The generated closeout is consumed with
+no rerun. Any real operation still needs a later all-false request, fresh
+packet-bound Tier C decision, green implementation, and green prediction-freeze
+sequence.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
