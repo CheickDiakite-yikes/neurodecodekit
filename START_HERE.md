@@ -436,6 +436,11 @@
    Trigger are all source-typed `MISC`, while count, sampling, 26-channel core,
    average reference, and geometry are stable. There is no rerun or admissible
    H2 role-map hash, and the retained bundle remains closed.
+   Then read `docs/IACKD_SOURCE_DECLARED_CONTROL_POLICY_RESEARCH.md` and its
+   registry. H3 is a separately named artifact-only repair that preserves BIDS
+   1.7.0 source counts before assigning functional roles. Its candidate policy
+   is not a validated reader; after remote green, only a generated-fixture Tier
+   B qualification is open.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

@@ -6800,3 +6800,31 @@ control-taxonomy mismatch.
 Scientific claim not established: no EEG sample, event, trajectory, target,
 model, prediction, or score was accessed, so there is no neural or decoding
 evidence.
+
+## 2026-08-10 - IACKD-H3 Source Semantics Policy Research
+
+- Used only committed H2 result registry `e6f0665` after closeout `580f11f`
+  passed both jobs in CI `31444931063`; no Git-ignored H2 artifact or source
+  body was read.
+- Rechecked dataset-pinned BIDS 1.7.0 against current BIDS 1.11.1. Both keep
+  MISC, HEOG, VEOG, and TRIG distinct channel types, while the sidecar MISC
+  count field spelling evolved. The adapter must bind dataset version rather
+  than silently applying the latest schema.
+- Candidate `IACKD-SourceSemanticsPolicy` hash
+  `1117c90d77971ee0ec2f5e138bdf9ea76eef412a4b5c44c1d2b88c31f88f39f4`
+  separates source type, functional role, and model inclusion.
+- It preserves the observed 26/28 EEG plus three MISC source counts, fixes one
+  26-name predictive core, treats M1/M2 as optional nonpredictive EEG, and
+  assigns HEOG/VEOG/Trigger nonpredictive control roles without moving them out
+  of their source MISC bucket.
+- Ten invariants freeze canonical hash, role separation, count groups,
+  geometry/reference requirements, zero access counters, and a one-thread,
+  30-second, 256 MiB, 2 MiB generated-fixture-only next qualification.
+- This does not amend H2, approve its inadmissible hash, implement a reader,
+  access real data, or authorize IACKD-2.
+
+Engineering capability proposed: version-aware source semantics can remove the
+exact control-taxonomy bug while preserving BIDS truth and model isolation.
+
+Scientific claim not established: this planning artifact accessed no signal,
+event, target, model, prediction, or score and adds no neural evidence.

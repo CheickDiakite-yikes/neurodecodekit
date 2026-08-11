@@ -1,0 +1,267 @@
+{
+  "schema_name": "neurodecodekit.iackd_source_declared_control_policy_research",
+  "schema_version": "0.1.0",
+  "research_id": "IACKD-H3-source-declared-control-policy-research-v0",
+  "recorded_at_local": "2026-08-10",
+  "lane_id": "IACKD-H3",
+  "status": "planning_complete_artifact_only_prospective_policy_no_real_execution",
+  "proof_posture": "committed_H2_aggregate_and_primary_standards_only_zero_ignored_output_network_local_bundle_signal_target_model_or_score_access",
+  "evidence_inputs": {
+    "H2_result_commit": "580f11fc60d2882a11bf4e765bb33b60ffc0bd04",
+    "H2_result_CI_run_id": 31444931063,
+    "H2_result_base_python_job_id": 93636960404,
+    "H2_result_optional_neuro_job_id": 93636960360,
+    "H2_result_both_required_jobs_green": true,
+    "H2_result_registry_path": "registries/iackd_channel_role_geometry_result.v0.json",
+    "H2_result_registry_sha256": "e6f0665aa5eb822f64c8575ea5931c2fdcebda1e85156e0971b0ff1387158715",
+    "H2_result_document_sha256": "eb8a13ff20d0df46cef05a0f05853fd1972f9dd11775b0733eb5960040ffeeb9",
+    "Git_ignored_execution_artifacts_read": 0,
+    "real_or_public_source_bodies_read": 0
+  },
+  "primary_sources": [
+    {
+      "name": "BIDS EEG specification 1.7.0",
+      "url": "https://bids-specification.readthedocs.io/en/v1.7.0/04-modality-specific-files/03-electroencephalography.html",
+      "use": "dataset-pinned channel types sidecar count spelling channel-electrode distinction and geometry semantics"
+    },
+    {
+      "name": "BIDS EEG specification 1.11.1",
+      "url": "https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html",
+      "use": "current channel type and MISCChannelCount migration context without overriding the dataset-pinned version"
+    },
+    {
+      "name": "IACKD data descriptor",
+      "url": "https://doi.org/10.1038/s41597-026-07146-x",
+      "use": "public dataset and acquisition context only"
+    },
+    {
+      "name": "OpenNeuro ds006840 version 1.0.0",
+      "url": "https://openneuro.org/datasets/ds006840/versions/1.0.0",
+      "use": "pinned public release identity and BIDS version"
+    }
+  ],
+  "research_findings": [
+    "H2 failed because it conflated source type with functional role and then changed sidecar count buckets by channel name.",
+    "BIDS 1.7.0 source count reconciliation must operate on the exact declared channel type before any functional mapping.",
+    "A familiar HEOG VEOG or Trigger name may assign a nonpredictive functional role without rewriting a source MISC declaration.",
+    "The dataset-pinned BIDS version controls sidecar field spelling; a newer specification cannot be applied silently.",
+    "The stable 26-channel EEG core and complete geometry can support one future prospective reader after synthetic qualification and a new real-content gate."
+  ],
+  "candidate_policy": {
+    "policy_name": "IACKD-SourceSemanticsPolicy",
+    "policy_version": "0.1.0",
+    "dataset_BIDS_version": "1.7.0",
+    "version_specific_misc_count_field": "MiscChannelCount",
+    "current_BIDS_migration_field": "MISCChannelCount",
+    "newer_field_spelling_may_be_applied_silently": false,
+    "semantic_layers": [
+      "source_type",
+      "functional_role",
+      "model_inclusion"
+    ],
+    "name_normalization": {
+      "unicode": "NFC",
+      "strip_outer_whitespace": true,
+      "casefold_for_match": true,
+      "preserve_source_display_spelling": true,
+      "preserve_source_order": true
+    },
+    "source_count_reconciliation": "count_exact_source_type_before_functional_role_assignment",
+    "functional_role_may_rewrite_source_type_count": false,
+    "source_count_groups": [
+      {
+        "occurrence_count": 96,
+        "EEG": 26,
+        "MISC": 3,
+        "EOG": 0,
+        "TRIG": 0,
+        "total_rows": 29,
+        "optional_M1_M2_present": false
+      },
+      {
+        "occurrence_count": 32,
+        "EEG": 28,
+        "MISC": 3,
+        "EOG": 0,
+        "TRIG": 0,
+        "total_rows": 31,
+        "optional_M1_M2_present": true
+      }
+    ],
+    "role_rules": [
+      {
+        "priority": 1,
+        "source_names": [
+          "Fp1",
+          "Fp2",
+          "F7",
+          "F3",
+          "Fz",
+          "F4",
+          "F8",
+          "FC3",
+          "FCz",
+          "FC4",
+          "T7",
+          "C3",
+          "Cz",
+          "C4",
+          "T8",
+          "CP3",
+          "CPz",
+          "CP4",
+          "P7",
+          "P3",
+          "Pz",
+          "P4",
+          "P8",
+          "O1",
+          "Oz",
+          "O2"
+        ],
+        "source_type": "EEG",
+        "functional_role": "predictive_eeg",
+        "model_inclusion": true,
+        "required_across_runs": true,
+        "geometry_requirement": "finite_required"
+      },
+      {
+        "priority": 2,
+        "source_names": [
+          "M1",
+          "M2"
+        ],
+        "source_type": "EEG",
+        "functional_role": "optional_reference_eeg",
+        "model_inclusion": false,
+        "required_across_runs": false,
+        "geometry_requirement": "finite_if_present"
+      },
+      {
+        "priority": 3,
+        "source_names": [
+          "HEOG",
+          "VEOG"
+        ],
+        "source_type": "MISC",
+        "functional_role": "ocular_control",
+        "model_inclusion": false,
+        "required_across_runs": true,
+        "geometry_requirement": "unavailable_allowed"
+      },
+      {
+        "priority": 4,
+        "source_names": [
+          "Trigger"
+        ],
+        "source_type": "MISC",
+        "functional_role": "trigger_control",
+        "model_inclusion": false,
+        "required_across_runs": true,
+        "geometry_requirement": "unavailable_allowed"
+      }
+    ],
+    "unknown_channel_policy": "refuse_without_type_or_role_inference",
+    "trigger_source_count_bucket": "MISC",
+    "predictive_EEG_count": 26,
+    "sampling_frequency_hz": 1024,
+    "reference": "average",
+    "coordinate_system": "CapTrak",
+    "coordinate_units": "m",
+    "required_regional_views": {
+      "central": [
+        "C3",
+        "C4",
+        "Cz"
+      ],
+      "occipital": [
+        "O1",
+        "Oz",
+        "O2"
+      ]
+    },
+    "derivative_binding_fields": [
+      "dataset_BIDS_version",
+      "source_order_sha256",
+      "source_type_count_sha256",
+      "functional_role_sha256",
+      "model_inclusion_mask_sha256",
+      "geometry_available_mask_sha256",
+      "reference",
+      "sampling_frequency_hz",
+      "policy_name",
+      "policy_version",
+      "policy_sha256"
+    ]
+  },
+  "candidate_policy_sha256": "1117c90d77971ee0ec2f5e138bdf9ea76eef412a4b5c44c1d2b88c31f88f39f4",
+  "consumed_H2_candidate": {
+    "sha256": "435352a007a0def493f90a99550a1943ba7debbf0f4b0e75316ac480b908822d",
+    "admissible": false,
+    "may_be_relabelled_or_approved": false
+  },
+  "next_bounded_qualification": {
+    "tier": "B",
+    "generated_fixtures_only": true,
+    "fixture_families": [
+      "29_row_source_signature",
+      "31_row_source_signature",
+      "BIDS_version_and_count_field_mutations",
+      "source_type_functional_role_and_geometry_mutations"
+    ],
+    "minimum_refusal_classes": 12,
+    "real_or_public_data_reads": 0,
+    "network_requests": 0,
+    "local_IACKD_bundle_operations": 0,
+    "signal_event_trajectory_target_model_or_score_operations": 0,
+    "CPU_threads": 1,
+    "workers": 1,
+    "wall_time_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "generated_output_bytes": 2097152,
+    "dependency_installs": 0
+  },
+  "authorization": {
+    "synthetic_policy_qualification_may_proceed_under_Tier_B_after_green_research_commit": true,
+    "real_reader_authorized": false,
+    "public_or_local_source_body_access_authorized": false,
+    "existing_local_IACKD_bundle_access_authorized": false,
+    "signal_event_trajectory_target_or_label_access_authorized": false,
+    "cache_split_derivative_or_feature_creation_authorized": false,
+    "model_training_inference_prediction_or_scoring_authorized": false,
+    "IACKD2_authorized": false,
+    "provider_stream_device_hardware_release_or_claim_upgrade_authorized": false
+  },
+  "access_counters": {
+    "Git_ignored_execution_artifact_reads": 0,
+    "real_or_public_metadata_requests": 0,
+    "network_bytes": 0,
+    "local_IACKD_path_stats_or_opens": 0,
+    "VHDR_or_sibling_operations": 0,
+    "signal_sample_reads": 0,
+    "marker_or_event_reads": 0,
+    "trajectory_reads": 0,
+    "target_or_label_reads": 0,
+    "cache_split_or_derivative_operations": 0,
+    "model_or_checkpoint_loads": 0,
+    "training_or_parameter_update_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_sets_or_scoring_runs": 0,
+    "provider_or_language_model_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "public_artifact_bindings": {
+    "document_path": "docs/IACKD_SOURCE_DECLARED_CONTROL_POLICY_RESEARCH.md",
+    "document_sha256": "9e46f4109d1443d21686afebcf06ec863030441ca96fe9f5137979b2c11e9ecd",
+    "invariant_test_path": "tests/test_iackd_source_declared_control_policy_research.py",
+        "invariant_test_sha256": "d36f40eb227c448c59b401d31fb19439365960a8b450a5768683f8faed664565",
+    "contains_local_path_or_individual_identity": false,
+    "contains_signal_target_model_prediction_or_score": false
+  },
+  "claim_boundary": {
+    "engineering_capability_proposed": "A version-aware sensor policy can preserve source BIDS truth while assigning separate functional and model-inclusion roles, removing the exact taxonomy error that stopped H2.",
+    "scientific_claim_not_established": "This artifact-only policy research accessed no EEG signal event trajectory target model prediction or score and therefore establishes no neural effect action decoding brain-specific origin generalization typing language or thought decoding real-time operation hardware capability assistive benefit or clinical use."
+  }
+}

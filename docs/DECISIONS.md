@@ -5333,3 +5333,25 @@ result, but it must be frozen before any signal or scientific outcome access.
 Evidence: `docs/IACKD_CHANNEL_ROLE_GEOMETRY_RESULT.md`,
 `registries/iackd_channel_role_geometry_result.v0.json`, and
 `tests/test_iackd_channel_role_geometry_result.py`.
+
+## 0155 - Separate Source Type From Functional Sensor Role
+
+Decision: create a new artifact-only `IACKD-H3` policy instead of amending the
+consumed H2 parser or router. Reconcile BIDS counts from exact source types
+first; only then assign functional roles and model-inclusion masks.
+
+Basis: the dataset pins BIDS 1.7.0; the H2 aggregate reports 26/28 EEG plus
+three MISC rows; controls can be functional while remaining source-typed MISC;
+M1/M2 are optional and nonpredictive; and the fixed 26-channel EEG core is the
+only prospective predictive set.
+
+Policy hash:
+`1117c90d77971ee0ec2f5e138bdf9ea76eef412a4b5c44c1d2b88c31f88f39f4`.
+
+Boundary: do not amend H2, approve its old candidate hash, read source or local
+data, implement a real reader, or enter IACKD-2. One generated-fixture Tier B
+qualification may follow only after this research commit is remotely green.
+
+Evidence: `docs/IACKD_SOURCE_DECLARED_CONTROL_POLICY_RESEARCH.md`,
+`registries/iackd_source_declared_control_policy_research.v0.json`, and
+`tests/test_iackd_source_declared_control_policy_research.py`.

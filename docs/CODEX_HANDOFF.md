@@ -2225,3 +2225,24 @@ Do not rerun H2, amend its parser/router, approve its candidate role-map hash,
 or open the existing local bundle. The next safe research step is a new
 prospective source-type-first control policy, using only this aggregate result
 and frozen before any signal, event, target, model, or outcome access.
+
+## 2026-08-10 IACKD-H3 Source Semantics Research
+
+Read `docs/IACKD_SOURCE_DECLARED_CONTROL_POLICY_RESEARCH.md`,
+`registries/iackd_source_declared_control_policy_research.v0.json`, and
+`tests/test_iackd_source_declared_control_policy_research.py`. The policy uses
+only the committed H2 aggregate after `580f11f` passed CI `31444931063`; all
+Git-ignored, network, local-bundle, signal, target, model, and score counters
+are zero.
+
+Candidate hash
+`1117c90d77971ee0ec2f5e138bdf9ea76eef412a4b5c44c1d2b88c31f88f39f4`
+keeps source type, functional role, and model inclusion separate. It reconciles
+sidecar counts by exact BIDS 1.7.0 source type first, preserving 26/28 EEG and
+three MISC rows, then assigns the fixed 26 EEG core as predictive, M1/M2 as
+optional nonpredictive EEG, and HEOG/VEOG/Trigger as nonpredictive controls.
+
+Next gate after this research commit is remotely green: implement one bounded
+standard-library generated-fixture qualification under 30 seconds, 256 MiB
+RSS, and 2 MiB output. Do not read a public body or local bundle, implement a
+real reader, or enter IACKD-2 from this research record.

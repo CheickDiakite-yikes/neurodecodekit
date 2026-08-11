@@ -971,3 +971,14 @@ stable. The frozen contract's EOG and sidecar predicates mishandled the
 source's consistent three-`MISC` control taxonomy. No H2 rerun or role-map
 approval is open; next design a separately named source-type-first policy from
 aggregate evidence only.
+
+IACKD-H3 now freezes that prospective policy without reopening H2. Candidate
+`IACKD-SourceSemanticsPolicy` hash
+`1117c90d77971ee0ec2f5e138bdf9ea76eef412a4b5c44c1d2b88c31f88f39f4`
+reconciles exact BIDS 1.7.0 source types before assigning functional roles and
+model inclusion. It preserves 26/28 EEG plus three MISC rows, fixes one
+26-channel predictive EEG core, keeps M1/M2 optional and nonpredictive, and
+maps HEOG/VEOG/Trigger to nonpredictive controls without rewriting their MISC
+source type. After this research commit is remotely green, only a bounded
+generated-fixture qualification is open. Public or local IACKD content,
+signals, targets, models, scoring, and IACKD-2 remain closed.

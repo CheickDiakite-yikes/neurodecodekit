@@ -905,6 +905,15 @@ Read this before interpreting any number in the repository.
   HEOG/VEOG and separated the named trigger from the sidecar's three-MISC
   count. Read the [aggregate result](docs/IACKD_CHANNEL_ROLE_GEOMETRY_RESULT.md).
   H2 has no rerun and establishes no neural or decoding result.
+- **Prospective H3 source-semantics repair:** a new artifact-only policy now
+  separates dataset-pinned BIDS source type, functional control role, and model
+  inclusion. It preserves the two exact source count groups, keeps one fixed
+  26-channel predictive EEG core, treats M1/M2 as optional nonpredictive EEG,
+  and gives HEOG/VEOG/Trigger nonpredictive roles without moving them out of
+  their declared MISC count. Read the
+  [policy research](docs/IACKD_SOURCE_DECLARED_CONTROL_POLICY_RESEARCH.md).
+  This is prospective engineering only; generated-fixture qualification is
+  next, and no real reader or IACKD-2 execution is authorized.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

@@ -335,3 +335,23 @@ qualify Loop 55.
 This queue never authorizes S20 interpretation, PhysioNet acquisition, target
 delivery, training, scoring, hardware, release, or a scientific claim by
 implication.
+
+## IACKD-H3 - Source-Declared Control Policy
+
+The consumed H2 aggregate showed that the remaining failure is a frozen
+taxonomy error, not missing sensor declarations: one stable 26-channel EEG
+core, optional M1/M2, three source-typed MISC controls, 1024 Hz, average
+reference, and complete central/occipital geometry all reconciled. H3 therefore
+freezes source type and source counts first, functional role second, and model
+inclusion third. Candidate policy hash
+`1117c90d77971ee0ec2f5e138bdf9ea76eef412a4b5c44c1d2b88c31f88f39f4`
+keeps the fixed 26 EEG channels predictive, M1/M2 optional and nonpredictive,
+and HEOG/VEOG/Trigger nonpredictive without changing their source MISC bucket.
+
+After the exact H3 research commit is pushed and both CI jobs pass, the next
+systematic work item is one standard-library generated-fixture qualification:
+29-row and 31-row signatures, BIDS-version count-field mutations, at least 12
+refusal classes, one thread and worker, 30 seconds, 256 MiB RSS, and less than
+2 MiB output. Network, public or local data, retained-bundle access, signals,
+events, trajectories, targets, derivatives, models, scoring, and IACKD-2 stay
+at zero.

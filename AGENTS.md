@@ -213,6 +213,19 @@ H2 is consumed with no retry, rerun, parser amendment, or admissible role-map
 hash. Do not open the retained bundle from this result. The next safe work is a
 separately named prospective source-type-first control policy frozen before any
 signal, event, target, model, or outcome access.
+That Tier A policy is now specified in
+`docs/IACKD_SOURCE_DECLARED_CONTROL_POLICY_RESEARCH.md` and
+`registries/iackd_source_declared_control_policy_research.v0.json`. Candidate
+`IACKD-SourceSemanticsPolicy` hash
+`1117c90d77971ee0ec2f5e138bdf9ea76eef412a4b5c44c1d2b88c31f88f39f4`
+separates exact BIDS 1.7.0 source type, functional control role, and model
+inclusion. It preserves 26/28 EEG plus three MISC source counts, keeps the
+26-name core predictive, makes M1/M2 optional and nonpredictive, and assigns
+HEOG/VEOG/Trigger nonpredictive roles without rewriting their MISC counts. It
+is artifact-only planning, not an H2 amendment or validated reader. After this
+research commit is remotely green, one bounded generated-fixture-only Tier B
+qualification may proceed; real/public data, the retained bundle, signals,
+targets, models, scores, and IACKD-2 remain unauthorized.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
