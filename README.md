@@ -980,10 +980,14 @@ Read this before interpreting any number in the repository.
   The four small metadata bodies may use fixed-length, chunked, or clean
   close-delimited framing, but exact observed bytes and registered SHA-256 are
   still mandatory; all large-object and scientific gates remain unchanged.
-  This is registration-only engineering work with zero new dataset requests.
-  Generated-fixture implementation may begin only after the registration is
-  committed, pushed, and green in both CI jobs; a later public recovery still
-  requires a fresh Tier C packet and decision.
+  Registration `ee0f62a` passed both jobs in CI `31472269070` before the
+  [zero-network implementation](docs/IACKD_TRANSPORT_STABLE_RECOVERY_IMPLEMENTATION.md).
+  Its final generated run passed 10 acceptance validations, deterministic
+  replay, and all 22 refusals in 0.00105 seconds at 20.3 MB peak RSS with a
+  5,540-byte report. The module has no URL opener, local-path executor, or
+  `--execute` mode. This is engineering evidence only: the exact implementation
+  still needs remote green proof before an all-false Tier C packet, and any
+  public recovery still requires a fresh decision.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

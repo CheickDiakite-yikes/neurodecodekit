@@ -461,7 +461,12 @@ Small metadata acceptance is based on exact observed bytes plus registered
 SHA-256 after one cap-plus-one read; fixed-length, chunked, and clean close-
 delimited framing are permitted and recorded. Large payloads retain exact
 length and ETag plus full-stream SHA-256, and the entire IACKD-2 scientific
-protocol remains unchanged. The next systematic work item is to commit, push,
-and green the registration, then qualify a zero-network standard-library
-validator on generated bodies and mocked responses. No public request, real
-executor, local IACKD path, model, target, or score is authorized.
+protocol remains unchanged. Registration `ee0f62a` passed both jobs in CI
+`31472269070` before a zero-network standard-library validator was built. The
+module has no URL opener or real execute path. Its final generated closeout
+passed 10 acceptance validations and all 22 refusals with deterministic replay,
+5,540 output bytes, 0.001049624988809228-second runtime, 20,332,544-byte peak
+RSS, and zero real/public/model operations. The next systematic item is exact
+implementation commit, push, and both green jobs, followed by an all-false
+Tier C request. No public request, real executor integration, local IACKD path,
+model, target, or score is authorized.

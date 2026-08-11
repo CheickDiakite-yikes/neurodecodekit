@@ -342,10 +342,18 @@ close for the four small metadata bodies, but accepts content only after an
 exact cap-plus-one read, observed byte count, and registered SHA-256. Large
 selected objects retain exact `Content-Length`, ETag, observed-byte, and full-
 stream SHA-256 gates. Every scientific field remains bound to IACKD-2; this is
-not an amendment or rerun. Commit, push, and obtain both green CI jobs for the
-registration before implementing only generated bodies and mocked responses.
-No `ds006840` request, local IACKD path, old invocation root, retained bundle,
-model, target, or score is authorized.
+not an amendment or rerun. Registration `ee0f62a` passed Base Python job
+`93717995481` and Optional Neuro Readers job `93717995427` in CI
+`31472269070` before the zero-network implementation began. Read
+`docs/IACKD_TRANSPORT_STABLE_RECOVERY_IMPLEMENTATION.md` and
+`registries/iackd_transport_stable_recovery_implementation.v0.json`. The
+standard-library module has no URL opener, local-path executor, or `--execute`
+mode; 41 focused tests pass. One final generated qualification passed 10
+acceptance validations and 22 refusals in 0.001049624988809228 seconds at
+20,332,544-byte peak RSS with 5,540 output bytes and every real/public/model
+counter zero. Commit, push, and green this exact implementation before an all-
+false Tier C request is prepared. No `ds006840` request, local IACKD path, old
+invocation root, retained bundle, model, target, or score is authorized.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

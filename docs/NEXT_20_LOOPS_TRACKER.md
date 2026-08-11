@@ -1089,6 +1089,11 @@ metadata bodies accept fixed-length, chunked, or clean close-delimited framing
 only when a cap-plus-one read yields the exact registered bytes and SHA-256.
 Large-object integrity, all 660 fits and 900 predictions, the target firewall,
 and the scientific router remain unchanged. Sixteen focused invariant tests
-pass. Next: green the exact registration, then build only the generated-body,
-mock-response validator. Public requests and real execution remain Tier C and
-unauthorized.
+pass. Registration `ee0f62a` passed both jobs in CI `31472269070` before the
+generated-only validator was built. The standard-library module has no URL
+opener, local-path executor, or execute mode. Its final generated closeout
+passed 10 accepted validations, two deterministic replays, and all 22
+refusals in 0.001049624988809228 seconds at 20,332,544-byte peak RSS with
+5,540 output bytes and zero real/public/model operations. Next: green the exact
+implementation, then prepare only an all-false Tier C request. Public requests
+and real execution remain unauthorized.

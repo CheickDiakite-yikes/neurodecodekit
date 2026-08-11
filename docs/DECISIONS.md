@@ -5635,3 +5635,21 @@ Evidence: `docs/IACKD_TRANSPORT_STABLE_RECOVERY_RESEARCH.md`,
 `registries/iackd_transport_stable_recovery_research.v0.json`,
 `docs/IACKD_TRANSPORT_STABLE_RECOVERY_PREREGISTRATION.md`, and
 `registries/iackd_transport_stable_recovery_contract.v0.json`.
+
+## 0166 - Keep The Transport Validator Incapable Of Real Access
+
+Decision: implement IACKD-T1 as a standalone standard-library validator with
+generated response objects, no URL opener, no local IACKD path, and no
+`--execute` CLI mode.
+
+Reason: the registration can qualify framing, body caps, hashing, ordering,
+payload strictness, replay, and aggregate outputs without making public access
+possible before a separate Tier C decision.
+
+Boundary: the generated closeout has no scientific value. A future real
+executor must be separately integrated only after an exact all-false packet,
+fresh packet-bound decision, and remotely green decision commit.
+
+Evidence: `docs/IACKD_TRANSPORT_STABLE_RECOVERY_IMPLEMENTATION.md`,
+`registries/iackd_transport_stable_recovery_implementation.v0.json`,
+`src/neurodecodekit/datasets/iackd_transport_stable.py`, and its tests.

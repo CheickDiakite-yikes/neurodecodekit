@@ -506,8 +506,14 @@
    bytes and SHA-256 remain authoritative, while valid fixed-length, chunked,
    or close-delimited transport can be recorded. Large selected objects and
    every IACKD-2 scientific field remain unchanged. No public request or real
-   executor is authorized. First green this registration, then implement only
-   generated bodies and mocked responses.
+   executor is authorized. Registration `ee0f62a` passed both jobs in CI
+   `31472269070`; now read
+   `docs/IACKD_TRANSPORT_STABLE_RECOVERY_IMPLEMENTATION.md` and
+   `registries/iackd_transport_stable_recovery_implementation.v0.json`. The
+   dependency-free module has no URL opener or execute mode, and its one final
+   generated closeout passed 10 acceptance validations and 22 refusals with
+   zero real/public/model operations. Next green the exact implementation,
+   then prepare only an all-false Tier C request.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and
