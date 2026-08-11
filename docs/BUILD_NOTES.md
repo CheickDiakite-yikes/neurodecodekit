@@ -7188,37 +7188,6 @@ transport before any public operation.
 
 Scientific claim not established: authorization is not EEG data or a result.
 
-## 2026-08-11 - IACKD-M1A Generated/Mock Public Wrapper
-
-- Decision `4165c24` passed Base Python job `93759373384` and Optional Neuro
-  Readers job `93759373333` in CI `31485359989` before implementation.
-- Added a standard-library-only wrapper around the immutable green
-  canonicalizer. It binds the 316-byte query and 355-byte body, exact endpoint,
-  zero credentials, no redirects, one response open/read, three framing
-  profiles, a 2 MiB body cap, and zero retries or reruns.
-- Added pre-consumption one-thread, free-disk, logical-CPU, normalized-load, and
-  RSS gates; an exclusive isolated marker; a private selected manifest; an
-  aggregate-only report; and sanitized consumed-failure reporting.
-- Seventeen core tests exercise all transport profiles, 20 forced wrapper
-  refusals, marker-before-request order, machine failure before consumption,
-  strict privacy, a consumed semantic failure, and rerun refusal. Nine receipt
-  tests bind source hashes, measurements, counters, and the next gate.
-- One formal generated/mock qualification processed 531,067 bytes in
-  0.09886470879428089 seconds at 46,563,328-byte peak RSS. Its 6,151-byte
-  report and 423,279-byte private manifest total 429,430 bytes.
-- Public GraphQL, S3, local IACKD, old-root, signal, event, trajectory, target,
-  model, prediction, score, dependency, retry, rerun, and claim counters remain
-  zero. The generated output is untracked under `/private/tmp`.
-- Next gate: complete repository verification, commit, push, and require both
-  CI jobs green. The one public request remains closed until that exact proof.
-
-Engineering capability added: one bounded wrapper can separate HTTP
-provenance from snapshot, tree, selected-inventory, and critical-metadata
-identities while keeping individual object rows private.
-
-Scientific claim not established: generated metadata and zero neural reads
-establish no neural effect or decoding result.
-
 ## 2026-08-11 - IACKD-2R Additive Executor Implementation
 
 - Decision `feef8f7` passed Base Python job `93730242015` and Optional Neuro
@@ -7437,3 +7406,62 @@ one exact generated/mock standard-library wrapper, then require its own green
 proof before one public metadata response.
 
 Scientific claim not established: authorization is not EEG data or a result.
+
+## 2026-08-11 - IACKD-M1A Generated/Mock Public Wrapper
+
+- Decision `4165c24` passed Base Python job `93759373384` and Optional Neuro
+  Readers job `93759373333` in CI `31485359989` before implementation.
+- Added a standard-library-only wrapper around the immutable green
+  canonicalizer. It binds the 316-byte query and 355-byte body, exact endpoint,
+  zero credentials, no redirects, one response open/read, three framing
+  profiles, a 2 MiB body cap, and zero retries or reruns.
+- Added pre-consumption one-thread, free-disk, logical-CPU, normalized-load, and
+  RSS gates; an exclusive isolated marker; a private selected manifest; an
+  aggregate-only report; and sanitized consumed-failure reporting.
+- Seventeen core tests exercise all transport profiles, 20 forced wrapper
+  refusals, marker-before-request order, machine failure before consumption,
+  strict privacy, a consumed semantic failure, and rerun refusal. Nine receipt
+  tests bind source hashes, measurements, counters, and the next gate.
+- One formal generated/mock qualification processed 531,067 bytes in
+  0.09886470879428089 seconds at 46,563,328-byte peak RSS. Its 6,151-byte
+  report and 423,279-byte private manifest total 429,430 bytes.
+- Public GraphQL, S3, local IACKD, old-root, signal, event, trajectory, target,
+  model, prediction, score, dependency, retry, rerun, and claim counters remain
+  zero. The generated output is untracked under `/private/tmp`.
+- Next gate: complete repository verification, commit, push, and require both
+  CI jobs green. The one public request remains closed until that exact proof.
+
+Engineering capability added: one bounded wrapper can separate HTTP
+provenance from snapshot, tree, selected-inventory, and critical-metadata
+identities while keeping individual object rows private.
+
+Scientific claim not established: generated metadata and zero neural reads
+establish no neural effect or decoding result.
+
+## 2026-08-11 - IACKD-M1A Public Snapshot Audit Consumed
+
+- Exact wrapper `406bff8` passed Base Python job `93765145883` and Optional
+  Neuro Readers job `93765145952` in CI `31487183289` before execution.
+- The pre-consumption gate passed with 25,554,214,912 free bytes, 12 logical
+  CPUs, one-minute load `5.4765625`, normalized load `0.4563802083333333`, and
+  every thread/worker/job value equal to one.
+- The executor wrote one 374-byte marker, sent one 355-byte POST, opened one
+  response, read 595,082 bytes once, computed one hash, and entered semantic
+  canonicalization.
+- The exact top-level `{data}` field-set gate failed at `IACKDMP-F05`. The raw
+  body was not persisted, so the unknown additional field cannot be identified
+  or inferred from this run.
+- One 4,352-byte aggregate failure result was written. No private selected
+  manifest, S3 request, local IACKD access, old-root operation, signal, event,
+  target, model, prediction, score, retry, rerun, or claim upgrade occurred.
+- The failure serializer did not retain the computed response hash or framing
+  evidence; both are unavailable. A reporting-only CLI `TypeError` occurred
+  after the result was already written. The consumed executor remains
+  unchanged.
+- IACKD-M1A is parked with no retry, rerun, amendment, or post-result patch.
+
+Engineering capability added: the green wrapper localized a live public
+metadata-envelope incompatibility and failed closed before payload access.
+
+Scientific claim not established: no neural payload or model was accessed, so
+there is no neural or decoding result.

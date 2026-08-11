@@ -5932,3 +5932,32 @@ payload or establish a scientific or decoding result.
 Evidence: `docs/IACKD_SNAPSHOT_IDENTITY_PUBLIC_IMPLEMENTATION.md`,
 `registries/iackd_snapshot_identity_public_implementation.v0.json`, and the
 two `test_iackd_snapshot_identity_public*.py` files.
+
+## 0177 - Park IACKD-M1A At The Exact Response Envelope
+
+Decision: classify the one consumed public request as
+`IACKDMP-F05-snapshot-semantic-canonicalization-failure`. The response passed
+the transport stage, but its root field set was not exact `{data}`. Because the
+raw body was discarded, do not guess the additional field or recover it from
+an unregistered source.
+
+Evidence decision: preserve the 4,352-byte aggregate result and 374-byte
+private marker. Record one request, open, read, and hash over a 595,082-byte
+response. Also record that the failure serializer omitted the computed hash
+and framing profile, making those fields unavailable rather than silently
+reconstructing them.
+
+Execution decision: no retry, rerun, source amendment, serializer repair, or
+post-result executor patch is allowed in IACKD-M1A. The CLI reporting
+`TypeError` occurred after result creation and does not justify another
+request.
+
+Boundary: zero S3 payload, local IACKD, signal, event, trajectory, target,
+model, prediction, and score operations occurred. The result is an
+engineering envelope incompatibility, not snapshot compatibility or a neural
+or decoding result. A future diagnosis needs a new prospective contract and
+Tier C decision.
+
+Evidence: `docs/IACKD_SNAPSHOT_IDENTITY_PUBLIC_RESULT.md`,
+`registries/iackd_snapshot_identity_public_result.v0.json`, and
+`tests/test_iackd_snapshot_identity_public_result.py`.

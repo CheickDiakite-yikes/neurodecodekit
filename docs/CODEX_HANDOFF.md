@@ -2764,3 +2764,26 @@ push the exact wrapper, and require both CI jobs green. Do not run `execute`
 before that proof. After green wrapper, apply the pre-consumption machine gate
 and make at most the one registered metadata request; stop without payload
 acquisition or scientific promotion.
+
+## 2026-08-11 IACKD-M1A Public Snapshot Audit Result
+
+Exact wrapper `406bff8bbcfce7b635b0ee4d95096a24288a13e2` passed CI
+`31487183289`, including Base Python `93765145883` and Optional Neuro Readers
+`93765145952`, before the one registered request.
+
+Read `docs/IACKD_SNAPSHOT_IDENTITY_PUBLIC_RESULT.md` and
+`registries/iackd_snapshot_identity_public_result.v0.json`. The machine gate
+passed. One private marker, one 355-byte POST, one 595,082-byte response read,
+and one response hash occurred. Strict semantic processing then refused at
+`IACKDMP-F05` because the root field set differed from exact `{data}`.
+
+The raw body was discarded. Do not infer the additional root field. No private
+selected manifest, S3 payload, local IACKD, old consumed root, signal, event,
+target, model, prediction, or score operation followed. The aggregate result
+is 4,352 bytes and the marker is 374 bytes. The failure serializer did not
+retain the computed response hash or real framing; they are unavailable.
+
+The CLI raised a reporting-only `TypeError` after the aggregate result was
+written. Do not patch or rerun the consumed executor. IACKD-M1A is terminal.
+The next eligible work is Tier A design of a separately named metadata-envelope
+diagnostic. Any new public response or EEG payload remains a new Tier C gate.

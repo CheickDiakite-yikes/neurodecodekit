@@ -578,3 +578,21 @@ verification, commit, push, and require both CI jobs green. Only then apply the
 live machine gate and, if it passes before consumption, make the one registered
 metadata request. Stop after its aggregate result. No EEG payload or scientific
 claim is authorized by metadata compatibility.
+
+Exact wrapper `406bff8` passed Base Python job `93765145883` and Optional
+Neuro Readers job `93765145952` in CI `31487183289`. The live machine gate
+passed at 25,554,214,912 free bytes and normalized load `0.4563802083333333`.
+The one request then consumed IACKD-M1A: 355 request bytes, 595,082 response
+bytes, one open/read/hash, and a strict top-level response-field refusal at
+`IACKDMP-F05`.
+
+The raw body was discarded and no private selected manifest, S3 payload,
+local IACKD operation, signal, target, model, or score followed. The 4,352-byte
+aggregate result and 374-byte private marker are terminal. Response SHA and
+real framing were not retained in the failure report and are unavailable; no
+post-result recovery or rerun is open.
+
+The next systematic item is Tier A research for a separately named public
+metadata-envelope diagnosis that does not reuse this consumed request or infer
+the unknown field. Any new response requires a new immutable contract and
+Tier C decision. EEG payload access remains closed.

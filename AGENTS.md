@@ -495,6 +495,24 @@ counters remain zero. The exact wrapper commit must be pushed and both CI jobs
 must be green before the one public request. Do not execute from an ungreen
 wrapper, request an EEG payload, or infer scientific evidence.
 
+Exact wrapper `406bff8bbcfce7b635b0ee4d95096a24288a13e2` passed Base
+Python job `93765145883` and Optional Neuro Readers job `93765145952` in CI
+`31487183289` before the one registered request. Read
+`docs/IACKD_SNAPSHOT_IDENTITY_PUBLIC_RESULT.md` and
+`registries/iackd_snapshot_identity_public_result.v0.json`. The live machine
+gate passed, the 374-byte private marker was written, and one 355-byte POST
+returned 595,082 bytes. One open, read, and hash occurred. Strict
+canonicalization then parked at `IACKDMP-F05` because the top-level response
+field set differed from exact `{data}`. The raw body was discarded, so do not
+guess the unknown field. No private selected manifest, S3 payload, local
+IACKD, old-root, signal, event, target, model, or score operation followed.
+The aggregate result is 4,352 bytes. The computed response hash and real
+framing were not retained by the failure serializer and are unavailable. The
+CLI then hit a reporting-only `TypeError` after writing the result; preserve
+the consumed executor exactly. IACKD-M1A has no retry, rerun, amendment, or
+post-result patch. Any future envelope diagnosis requires a new prospective
+contract and Tier C decision.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

@@ -1078,7 +1078,15 @@ Read this before interpreting any number in the repository.
   peak RSS, emitting 429,430 bytes with zero public requests or neural,
   target, model, and score operations. The single public response remains
   closed until this exact wrapper commit passes both CI jobs; EEG payload
-  access remains out of scope.
+  access remains out of scope. Exact wrapper `406bff8` then passed both jobs
+  in CI `31487183289` before the
+  [one public snapshot audit](docs/IACKD_SNAPSHOT_IDENTITY_PUBLIC_RESULT.md).
+  The machine gate passed and one 355-byte POST returned 595,082 bytes, but
+  strict canonicalization refused the response's top-level field set at
+  `IACKDMP-F05`. The lane is consumed with no retry: no selected manifest,
+  payload request, neural read, target, model, or score followed. This is a
+  precise metadata-envelope failure, not public-snapshot compatibility or a
+  scientific result.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

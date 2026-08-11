@@ -592,7 +592,14 @@
    20 wrapper refusals, two replays, 429,430 output bytes, zero public requests,
    and zero neural or target operations. Next commit, push, and green this
    exact wrapper. Do not make the one public request before both jobs pass,
-   and do not request an EEG payload at all.
+   and do not request an EEG payload at all. Wrapper `406bff8` then passed
+   both jobs in CI `31487183289` before the one registered request. Read
+   `docs/IACKD_SNAPSHOT_IDENTITY_PUBLIC_RESULT.md` and its result registry.
+   The 595,082-byte response failed the exact top-level `{data}` field-set
+   gate at `IACKDMP-F05`; the raw body was discarded, no private selected
+   manifest or payload operation followed, and the lane is consumed with no
+   retry or rerun. Do not infer the unknown response field or patch the
+   consumed executor.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and
