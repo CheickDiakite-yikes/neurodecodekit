@@ -7465,3 +7465,32 @@ metadata-envelope incompatibility and failed closed before payload access.
 
 Scientific claim not established: no neural payload or model was accessed, so
 there is no neural or decoding result.
+
+## 2026-08-11 - MARC-1 Two-Axis Positive-Control Research
+
+- Preserved WO9R at its exact ceiling: execution `0.680975` and imagery
+  `0.728014` pooled balanced accuracy are real held-out task-information
+  results, while the stronger `0.762865` early-cue condition, failed central
+  localization, and 5/12 physiology direction prevent a brain-specific claim.
+- Compared current public movement datasets by cue structure, EOG, EMG,
+  kinematics, license, file granularity, and incremental storage cost.
+- Selected Freewill-23 as the cue-reduced EOG/accelerometer axis and Wrist-45
+  as the EMG/encoder axis. Both are CC BY 4.0. The future primary effect is the
+  weaker of the two control-adjusted margins; one-axis success cannot promote
+  the claim.
+- Bound the official Freewill archive identity at 13,591,548,048 bytes and
+  explicitly forbade downloading it whole. Bound Wrist-45 v3 at 3,683,416,050
+  bytes and its 33,690,749-byte `sub-01.zip` example.
+- Parked the Aalborg self-paced EEG/EOG/EMG source despite attractive 3.7-12.6
+  MB file granularity because the dataset license is unavailable.
+- Added one Tier A research document, one machine registry, and 12 focused
+  invariants. All real payload, signal, event, onset, target, derivative,
+  model, prediction, score, and claim counters remain zero.
+
+Engineering capability added: the next positive-control lane now has a
+licensed, storage-aware, two-axis design that names the no-signal, timing,
+ocular, muscle, kinematic, spatial-proxy, onset-shift, derangement, and future
+context comparisons required for interpretation.
+
+Scientific claim not established: this milestone accessed no archive member or
+neural signal and therefore adds no new neural or decoding result.

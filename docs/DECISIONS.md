@@ -5961,3 +5961,35 @@ Tier C decision.
 Evidence: `docs/IACKD_SNAPSHOT_IDENTITY_PUBLIC_RESULT.md`,
 `registries/iackd_snapshot_identity_public_result.v0.json`, and
 `tests/test_iackd_snapshot_identity_public_result.py`.
+
+## 0178 - Replace The Next Larger Model With A Two-Axis Artifact Test
+
+Decision: select MARC-1 as the next scientific effect lane. Preserve WO9R as
+positive held-out task-information evidence, but do not upgrade its source
+interpretation while early cue and frontal proxy controls remain stronger than
+the registered motor-localization conjunction.
+
+Source decision: pair two complementary licensed public datasets. Freewill-23
+provides self-selected target and movement timing, four EOG channels, and
+synchronized wrist acceleration. Wrist-45 provides eight forearm EMG channels,
+synchronized robotic encoders, and participant-level archives. Require both
+axes to pass with one compact causal low-frequency family; make the weaker
+axis margin primary.
+
+License decision: park the scientifically attractive Aalborg self-paced
+EEG/EOG/EMG source. Its public repository declares no license and its paper
+says data are available on request. Public visibility does not authorize reuse.
+
+Storage decision: forbid a whole download of the 13,591,548,048-byte
+Freewill-23 ZIP. Any future execution must first prove bounded byte-range ZIP
+inventory, select only exact participant members, remain below an 8 GiB
+incremental payload ceiling, and preserve at least 12 GiB free disk.
+
+Boundary: this Tier A record authorizes generated-fixture development only. It
+does not authorize a live archive HEAD or range, payload member, signal, event,
+onset, target, derivative, model, prediction, score, rerun, release, or claim
+upgrade.
+
+Evidence: `docs/MARC_1_MULTIMODAL_ARTIFACT_RESOLVED_MOVEMENT_RESEARCH.md`,
+`registries/marc1_multimodal_artifact_resolved_movement_research.v0.json`, and
+`tests/test_marc1_multimodal_artifact_resolved_movement_research.py`.

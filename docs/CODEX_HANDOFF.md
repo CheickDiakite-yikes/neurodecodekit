@@ -2787,3 +2787,36 @@ The CLI raised a reporting-only `TypeError` after the aggregate result was
 written. Do not patch or rerun the consumed executor. IACKD-M1A is terminal.
 The next eligible work is Tier A design of a separately named metadata-envelope
 diagnostic. Any new public response or EEG payload remains a new Tier C gate.
+
+## 2026-08-11 MARC-1 Multimodal Artifact-Resolved Movement Handoff
+
+Read `docs/MARC_1_MULTIMODAL_ARTIFACT_RESOLVED_MOVEMENT_RESEARCH.md`,
+`registries/marc1_multimodal_artifact_resolved_movement_research.v0.json`, and
+`tests/test_marc1_multimodal_artifact_resolved_movement_research.py`.
+
+MARC-1 is the current prospective scientific lane. It answers the central
+WO9R ambiguity with two complementary licensed sources rather than a larger
+classifier. Freewill-23 contributes self-selected target/onset timing, 31 EEG,
+four EOG, and three synchronized accelerometer channels. Wrist-45 contributes
+eight central EEG, eight forearm EMG, and synchronized robotic encoders. The
+same compact causal `0.5-4 Hz` shrinkage-LDA family must beat every available
+non-EEG comparator on both axes, and the weaker axis margin is primary.
+
+The official Freewill-23 ZIP is 13,591,548,048 bytes and exceeds the user
+ceiling. Never download it whole. The next eligible Tier B work is a
+standard-library generated-fixture ZIP range inventory plus multimodal role,
+causal-window, target-firewall, and comparator-interface qualification with no
+live opener. A later exact Tier C packet may propose one bounded central-
+directory range inventory only after that implementation is committed, pushed,
+and green.
+
+The Aalborg self-paced hand source is scientifically attractive and highly
+granular, but its dataset license is unavailable. Keep it parked unless an
+explicit license or written permission is preserved. Do not infer reuse rights
+from the public Drive link or the article's CC BY license.
+
+Current counters are zero for archive payload requests, member opens, local
+real paths, signals, events/onsets, labels/targets, derivatives, fits,
+inferences, predictions, freezes, deliveries, scores, and claim upgrades.
+The untracked workbook inspection sidecar predates this work and must remain
+untouched.

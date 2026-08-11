@@ -363,6 +363,7 @@ negative result and S25 is never repurposed for calibration.
 | Current Loop 48 Stage C verification | 64 focused tests; 919 dependency-light tests with 156 expected skips; 966 optional-neuro tests with 3 expected skips | Research `9579be9`, implementation `59b30a3`, and correction `2836ecc` passed push and PR CI before one execution; result is consumed and no rerun is open | Makes synthetic selection, absolute-gate failure, replay, causal controls, resource accounting, zero protected access, and the parked disposition machine-checkable |
 | Current Loop 53 verification | 68 focused closeout tests; final full suite 1,062 tests with 3 expected skips in 44.090 sec and 581,648,384-byte external peak RSS; baseline was 1,056 tests, 3 skips, 30.623 sec, and 568,688,640 bytes | Authorization `2a47bbc` passed CI `29589212626` / `29589225113`; implementation `8ec5b1b` passed CI `29591387642` / `29591391286` before the single pass; workbook formula-error scan found 0 matches | Adds exactly 6 aggregate-result tests while making identity, green-gate order, no-overwrite behavior, caps, opaque hashing, counters, private receipt binding, no-rerun status, and claim ceiling machine-checkable |
 | Current WO9R result verification | 29 implementation tests, 5 public-freeze invariants, and 7 aggregate-result invariants; 72 real EDFs; 1,080 events; 144 fits; 216 frozen prediction sets; one 360-target score | Implementation `8242674` passed CI `31359548779`; freeze `8cd45d7` passed CI `31360781199` before the one target delivery; result routed `WO9R-R3` with zero post-target updates or reruns | Makes the positive execution/imagery task-information result and the failed localization/confound conjunction independently checkable without publishing individual outputs |
+| MARC-1 next-effect research | 2 selected licensed axes; 23-person EEG/EOG/acceleration source; 45-person EEG/EMG/encoder source; 12 invariants; 0 payload/model/score operations | Tier A research only; the 13.59 GB monolith is forbidden as a whole download and the stronger unlicensed self-paced source is parked | Makes the next positive result answer "better than what?" by requiring the weaker of two cue/ocular and muscle/kinematic control margins to pass |
 
 ### Real-Data Scientific Scorecard
 
@@ -1087,6 +1088,26 @@ Read this before interpreting any number in the repository.
   payload request, neural read, target, model, or score followed. This is a
   precise metadata-envelope failure, not public-snapshot compatibility or a
   scientific result.
+- **MARC-1 is the next scientific effect lane:** WO9R is a real positive
+  task-information result, but its stronger early-cue score and failed central
+  localization leave cue, ocular, and peripheral explanations alive. MARC-1
+  therefore freezes one common compact causal `0.5-4 Hz` shrinkage-LDA family
+  across two complementary licensed sources. Freewill-23 supplies 23 people,
+  self-selected target and onset timing, four EOG channels, and synchronized
+  wrist acceleration. Wrist-45 supplies 45 people, eight forearm EMG channels,
+  and synchronized encoder kinematics in participant-level archives as small
+  as 33,690,749 bytes. The top route requires both axes to beat no-signal,
+  timing, and every available non-EEG comparator; the weaker axis margin is
+  primary.
+
+  This is also storage-aware. The 13,591,548,048-byte Freewill archive may
+  never be downloaded whole; a later separately authorized metadata gate must
+  prove exact byte-range member selection first, and all future selected
+  payloads remain capped below 8 GiB. A scientifically attractive ten-person
+  self-paced EEG/EOG/EMG source remains parked because its dataset license is
+  unavailable. MARC-1 has opened no payload, signal, event, target, model, or
+  score, so it is a better experiment design, not a new neural result. Read the
+  [full source comparison and claim router](docs/MARC_1_MULTIMODAL_ARTIFACT_RESOLVED_MOVEMENT_RESEARCH.md).
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

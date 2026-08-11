@@ -1139,3 +1139,25 @@ packet, but that contract is not content-access permission.
 Loop 55's synthetic AI proposal guard is implemented, but this does not change
 the real experiment status or authorize a model operation.
 S25 remains sealed until a separate final-only zero-shot packet is complete.
+
+## Current Next Scientific Lane: MARC-1
+
+Read `docs/MARC_1_MULTIMODAL_ARTIFACT_RESOLVED_MOVEMENT_RESEARCH.md` and
+`registries/marc1_multimodal_artifact_resolved_movement_research.v0.json`.
+
+WO9R remains the strongest positive result: held-out low-frequency execution
+and imagery task information across twelve people. Its source interpretation
+did not pass because early-cue and frontal controls remained strong. MARC-1
+does not scale that classifier. It freezes a two-axis falsification design:
+
+- Freewill-23 tests self-selected movement timing with EEG, four EOG channels,
+  and synchronized wrist acceleration.
+- Wrist-45 tests the same causal EEG family against eight EMG channels and
+  synchronized robotic encoder kinematics.
+
+The future top route requires both axes and uses the weaker margin. One-axis
+success cannot be promoted. The 13.59 GB Freewill ZIP is forbidden as a whole
+download; generated-only byte-range and target-firewall tooling is the next
+Tier B task. No real archive request, payload, signal, target, fit, prediction,
+or score is currently authorized. A separate exact Tier C metadata decision is
+required after the generated implementation is committed, pushed, and green.

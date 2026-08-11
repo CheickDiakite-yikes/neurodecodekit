@@ -513,6 +513,19 @@ the consumed executor exactly. IACKD-M1A has no retry, rerun, amendment, or
 post-result patch. Any future envelope diagnosis requires a new prospective
 contract and Tier C decision.
 
+The current prospective scientific lane is `MARC-1 Multimodal
+Artifact-Resolved Causal Movement Qualification`. Read
+`docs/MARC_1_MULTIMODAL_ARTIFACT_RESOLVED_MOVEMENT_RESEARCH.md` and
+`registries/marc1_multimodal_artifact_resolved_movement_research.v0.json`.
+It pairs licensed Freewill-23 EEG/EOG/acceleration with licensed Wrist-45
+EEG/EMG/encoder data and requires the same compact causal family to pass both;
+the weaker axis margin is primary. The 13,591,548,048-byte Freewill archive
+must never be downloaded whole. The next eligible work is generated-fixture-
+only ZIP range inventory and multimodal firewall qualification. A live HEAD,
+range, archive member, signal, onset, target, model, score, or claim upgrade
+requires a separately named Tier C packet after green implementation. The
+unlicensed Aalborg self-paced source remains parked.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

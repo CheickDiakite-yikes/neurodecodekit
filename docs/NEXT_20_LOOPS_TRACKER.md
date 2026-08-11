@@ -1182,3 +1182,30 @@ Current dataset-specific request and real-data counters remain zero.
 Next gate: commit, push, and green this exact contract. Only then implement the
 generated standard-library canonicalizer under Tier B. A public response,
 payload acquisition, local IACKD path, target, model, or score remains closed.
+
+## MARC-1 Additive Successor: Compare Against The Confounds
+
+The later IACKD-M1A public audit is now consumed at a strict response-envelope
+failure; no payload, signal, target, or model operation followed. MARC-1 is the
+current prospective scientific successor to WO9R. It does not renumber or
+reopen the existing 20-loop roadmaps.
+
+The Tier A record selects two licensed public axes: Freewill-23 for
+self-selected timing plus synchronized EOG/acceleration, and Wrist-45 for
+synchronized EMG/robotic kinematics. One compact causal low-frequency family
+must pass both, and the weaker control-adjusted margin is primary. Passing only
+one axis routes a diagnostic result and cannot upgrade the claim.
+
+The next ordered tasks are:
+
+1. generated-only ZIP range inventory and member-selection qualification;
+2. generated multimodal role, clock, causal-window, and target-firewall
+   qualification;
+3. a separately gated metadata-only range audit of the 13.59 GB monolith;
+4. a frozen participant/member/split/resource preregistration below 8 GiB;
+5. one target-firewalled two-axis analysis, one remotely green prediction
+   freeze, and one score with no rerun.
+
+Only tasks 1-2 are eligible under Tier B now. Tasks 3-5 require new exact Tier
+C decisions. The monolithic archive may never be downloaded whole, and the
+unlicensed Aalborg self-paced source remains parked.
