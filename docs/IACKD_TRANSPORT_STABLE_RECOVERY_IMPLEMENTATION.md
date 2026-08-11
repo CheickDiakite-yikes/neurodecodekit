@@ -122,10 +122,16 @@ Readers job `93722204707` failed one CLI test after the full suite had already
 loaded MNE and raised the parent test process peak RSS to 383,049,728 bytes.
 The standalone generated qualification measured 20,332,544 bytes; the failure
 therefore exposed test-process contamination, not a validator body, network,
-or identity failure. The repair invokes the resource-bounded CLI fixture and
-inspection paths in isolated subprocesses, which is also the actual command-
-line execution boundary. The failed run remains recorded and cannot serve as
-green implementation proof.
+or identity failure.
+
+The first repair candidate, commit `8d7be6a`, ran in CI `31474043386`. Base
+Python job `93723535823` passed, while Optional Neuro Readers job `93723535798`
+showed that a child created from the dependency-loaded test process could still
+cross the frozen absolute RSS ceiling before its command-line module started.
+The final repair therefore keeps deterministic injected resource monitors in
+the unit path, tests command-line dispatch separately, and leaves absolute
+peak RSS to the already completed fresh-process qualification. Neither failed
+run can serve as green implementation proof.
 
 ## Next Gate
 

@@ -25,6 +25,17 @@
     "failure_classification": "in_process_CLI_test_inherited_full_suite_peak_RSS_after_optional_dependency_load",
     "eligible_as_green_implementation_proof": false
   },
+  "second_remote_implementation_candidate": {
+    "commit": "8d7be6ae387aed84e4a69340e3fccd0a98e2101a",
+    "push_CI_run_id": 31474043386,
+    "base_python_job_id": 93723535823,
+    "base_python_passed": true,
+    "optional_neuro_job_id": 93723535798,
+    "optional_neuro_passed": false,
+    "both_required_jobs_green": false,
+    "failure_classification": "fork_launched_CLI_child_crossed_absolute_RSS_cap_from_dependency_loaded_parent",
+    "eligible_as_green_implementation_proof": false
+  },
   "tracked_file_hashes": [
     {
       "path": "src/neurodecodekit/datasets/iackd_transport_stable.py",
@@ -32,11 +43,11 @@
     },
     {
       "path": "tests/test_iackd_transport_stable.py",
-      "sha256": "cea4e608d5f3271e233725a460beef74c7c4b95dcde653f903fe594b8d0e81b2"
+      "sha256": "e6555bec1170a9b87fdb204291ce95e1893aab98f2d43e9d287aa8d28ad14d90"
     },
     {
       "path": "docs/IACKD_TRANSPORT_STABLE_RECOVERY_IMPLEMENTATION.md",
-      "sha256": "dc4c7f6f1e6d058a883d87cc64c8118a1fbb2751dd324b5bff85a596132fb08a"
+      "sha256": "cbcfd7366298c5849f5b99c93909f1097d0f2c2628b5eed48cb4a5a986f3a32e"
     },
     {
       "path": "tests/test_iackd_transport_stable_recovery_implementation.py",

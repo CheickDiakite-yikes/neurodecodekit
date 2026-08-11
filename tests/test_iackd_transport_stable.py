@@ -2,12 +2,10 @@ import contextlib
 import copy
 import io
 import json
-import os
-import subprocess
-import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 from neurodecodekit.datasets import iackd_transport_stable as transport
 from neurodecodekit.datasets.iackd_transport_stable import (
@@ -387,43 +385,27 @@ class IACKDTransportStableQualificationTests(unittest.TestCase):
 
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory) / "qualification.json"
-            environment = dict(os.environ)
-            environment.update(THREAD_ENV)
-            environment["PYTHONPATH"] = str(ROOT / "src")
-            fixture = subprocess.run(
-                [
-                    sys.executable,
-                    "-m",
-                    "neurodecodekit.datasets.iackd_transport_stable",
-                    "--fixture",
-                    "--out",
-                    str(output),
-                ],
-                cwd=ROOT,
-                env=environment,
-                capture_output=True,
-                text=True,
-                timeout=30,
-                check=False,
+            outcome = self.run_qualification(output)
+            fixture_output = Path(directory) / "cli-fixture.json"
+            with mock.patch.object(
+                transport,
+                "run_synthetic_qualification",
+                return_value=outcome,
+            ) as qualify:
+                with contextlib.redirect_stdout(io.StringIO()):
+                    self.assertEqual(
+                        transport.main(["--fixture", "--out", str(fixture_output)]),
+                        0,
+                    )
+            qualify.assert_called_once()
+            self.assertEqual(qualify.call_args.args, (str(fixture_output),))
+            cli_environ = qualify.call_args.kwargs["environ"]
+            self.assertTrue(
+                all(cli_environ[key] == "1" for key in transport.THREAD_ENV_KEYS)
             )
-            self.assertEqual(fixture.returncode, 0, fixture.stderr)
-            inspected = subprocess.run(
-                [
-                    sys.executable,
-                    "-m",
-                    "neurodecodekit.datasets.iackd_transport_stable",
-                    "--inspect",
-                    str(output),
-                ],
-                cwd=ROOT,
-                env=environment,
-                capture_output=True,
-                text=True,
-                timeout=30,
-                check=False,
-            )
-            self.assertEqual(inspected.returncode, 0, inspected.stderr)
-            self.assertIn('"refusal_mutation_count": 22', inspected.stdout)
+            with contextlib.redirect_stdout(io.StringIO()) as inspected:
+                self.assertEqual(transport.main(["--inspect", str(output)]), 0)
+            self.assertIn('"refusal_mutation_count": 22', inspected.getvalue())
 
     def test_module_has_no_public_executor_or_network_constructor(self):
         source = Path(transport.__file__).read_text(encoding="utf-8")
