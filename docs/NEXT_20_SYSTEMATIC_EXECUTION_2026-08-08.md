@@ -485,3 +485,20 @@ The next systematic item is exact decision proof: commit, push, and require
 both CI jobs green. Only then may the new additive executor be implemented and
 qualified with generated fixtures and mocked transport. Public access remains
 closed until that exact executor is also remotely green.
+
+Decision `feef8f7` passed both jobs in CI `31476158747`, so the generated-only
+implementation item proceeded. The new additive module is isolated from the
+consumed executor and old root, accepts only the registered metadata transport
+delta, preserves strict payload and scientific contracts, and measures free
+disk plus normalized one-minute load before any consumed marker.
+
+Its one measured generated qualification passed 18/18 gates in 4.939357291907072
+seconds at 261,488,640-byte peak RSS with 5,825 report bytes. It exercised all
+three framing profiles, exact 4/4/4 read/hash/parse ordering, deterministic
+660-fit/900-prediction replay, and 13 mutations. Every real, public, network,
+target, score, and claim counter remained zero.
+
+The next systematic item is exact additive implementation proof: finish the
+complete local suites and static checks, commit, push, and require both CI jobs
+green. Only then run the machine gate. If it passes, consume the one fresh
+stream; if it fails, stop before consumption and retain the attempt.

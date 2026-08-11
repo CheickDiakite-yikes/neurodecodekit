@@ -377,10 +377,23 @@ the maintainer supplied a fresh `continue`. Read
 `docs/IACKD_TRANSPORT_STABLE_RECOVERY_AUTHORIZATION_DECISION.md` and
 `registries/iackd_transport_stable_recovery_authorization_decision.v0.json`.
 The additive decision quotes that word exactly and binds the green request
-without scope expansion. Its commit must be pushed and both CI jobs must pass
-before the new generated/mock-only executor is implemented. No public request,
-local IACKD operation, model run, target access, or score may occur from an
-uncommitted or ungreen decision.
+without scope expansion. Decision
+`feef8f721c5441f98829099a63a20dd264c98204` passed Base Python job
+`93730242015` and Optional Neuro Readers job `93730242090` in CI
+`31476158747` before implementation. Read
+`docs/IACKD_TRANSPORT_STABLE_DUAL_REVERSAL_REAL_IMPLEMENTATION.md` and
+`registries/iackd_transport_stable_dual_reversal_real_implementation.v0.json`.
+The additive module does not import, call, modify, or expose an old-root
+interface to the consumed executor. It integrates the green transport validator,
+retains strict payload integrity, and checks 10 GiB free plus normalized
+one-minute load before any new consumed marker. One measured generated
+qualification passed all 18 gates in 4.939357291907072 seconds at
+261,488,640-byte peak RSS with 5,825 output bytes; it exercised fixed,
+fixed-different, chunked, and close-delimited metadata, 660 fits, 900
+predictions, deterministic replay, and 13 mutations. Every real, public,
+network, target, and claim counter stayed zero. Commit and push this exact
+implementation and require both CI jobs green before any public request or
+local IACKD operation. A failed or ungreen implementation remains ineligible.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

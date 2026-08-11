@@ -525,8 +525,19 @@
    maintainer then supplied a fresh `continue`. Read
    `docs/IACKD_TRANSPORT_STABLE_RECOVERY_AUTHORIZATION_DECISION.md` and its
    registry. This additive record quotes the actual word and binds the packet
-   without expansion. Next commit, push, and green this exact decision. No
-   executor implementation or public/local IACKD operation may begin first.
+   without expansion. Decision `feef8f7` passed Base Python job `93730242015`
+   and Optional Neuro Readers job `93730242090` in CI `31476158747`. Now read
+   `docs/IACKD_TRANSPORT_STABLE_DUAL_REVERSAL_REAL_IMPLEMENTATION.md` and
+   `registries/iackd_transport_stable_dual_reversal_real_implementation.v0.json`.
+   The additive module has a new isolated root and no consumed-executor import,
+   call, or old-root argument. Its generated qualification passed 18/18 gates,
+   all three metadata framing profiles, 660 fits, 900 predictions,
+   deterministic replay, and 13 mutations in 4.939357 seconds at
+   261,488,640-byte peak RSS with 5,825 output bytes and zero real/public
+   operations. It also refuses before consumption unless at least 10 GiB is
+   free and normalized one-minute load is at most `1.0`. Next commit, push, and
+   green this exact additive implementation. Do not make any public request or
+   local IACKD operation first.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

@@ -1000,8 +1000,20 @@ Read this before interpreting any number in the repository.
   the sole packet, the maintainer's fresh `continue` was recorded verbatim in
   the additive
   [decision](docs/IACKD_TRANSPORT_STABLE_RECOVERY_AUTHORIZATION_DECISION.md).
-  That decision must itself be committed, pushed, and remotely green before
-  generated/mock-only executor integration. Public access remains closed.
+  Decision `feef8f7` passed Base Python job `93730242015` and Optional Neuro
+  Readers job `93730242090` in CI `31476158747` before the new
+  [additive executor](docs/IACKD_TRANSPORT_STABLE_DUAL_REVERSAL_REAL_IMPLEMENTATION.md)
+  was implemented. The module neither imports nor calls the consumed executor,
+  has a new isolated root, integrates the green metadata validator, and keeps
+  exact fixed-length/ETag/byte/SHA-256 payload checks. Its machine gate refuses
+  before consumption below 10 GiB free, above normalized one-minute load
+  `1.0`, or when load is unavailable. One measured generated qualification
+  passed 18/18 gates in 4.939357 seconds at 261,488,640-byte peak RSS with
+  5,825 output bytes, all three metadata framing profiles, deterministic
+  660-fit/900-prediction replay, 13 refusal mutations, and zero real, public,
+  network, target, or claim operations. The planted `IACKD2-R5` is still only
+  synthetic mechanics. Public access remains closed until this exact additive
+  implementation commit is pushed and both CI jobs are green.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

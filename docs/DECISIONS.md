@@ -5703,3 +5703,37 @@ operations on old roots or other projects remain forbidden.
 Evidence: `docs/IACKD_TRANSPORT_STABLE_RECOVERY_AUTHORIZATION_DECISION.md`,
 `registries/iackd_transport_stable_recovery_authorization_decision.v0.json`,
 and `tests/test_iackd_transport_stable_recovery_authorization_decision.py`.
+
+## 0169 - Isolate IACKD-2R And Gate Consumption On Machine State
+
+Decision: implement IACKD-2R as one self-contained additive executor. Do not
+import, call, modify, or expose an interface to the consumed IACKD-2 executor.
+Use a new private root and new receipt, freeze, and result identities.
+
+Transport decision: pass the four small metadata response streams through the
+remotely green IACKD-T1 validator after independently checking their real
+status and final URL. Accept fixed-length, valid chunked, and clean close-
+delimited framing only when one bounded read yields the exact registered byte
+count and SHA-256 before parsing. Preserve strict fixed-length, ETag, byte, and
+full-stream SHA-256 checks for all 1,340 payload objects.
+
+Machine decision: validate exact green implementation evidence before the
+real mode can open a URL. Then measure one-thread configuration, free disk,
+logical CPU count, and one-minute load before invoking the streaming builder.
+Refuse before the consumed marker below 10 GiB free, above load/logical CPU
+`1.0`, or when a load metric is unavailable.
+
+Reason: this fixes the observed transport assumption without changing the
+frozen scientific design and makes the user's computer state an explicit
+pre-consumption condition. Keeping the old executor immutable prevents an
+accidental rerun of consumed evidence.
+
+Evidence boundary: one generated qualification passed 18/18 gates with all
+three framing profiles, deterministic 660-fit/900-prediction replay, 13
+mutations, 4.939357 seconds runtime, 261,488,640-byte peak RSS, and zero real,
+public, network, target, or claim operations. It is engineering evidence only.
+
+Evidence: `docs/IACKD_TRANSPORT_STABLE_DUAL_REVERSAL_REAL_IMPLEMENTATION.md`,
+`registries/iackd_transport_stable_dual_reversal_real_implementation.v0.json`,
+`src/neurodecodekit/experiments/iackd_transport_stable_dual_reversal_real.py`,
+and `tests/test_iackd_transport_stable_dual_reversal_real.py`.

@@ -1112,3 +1112,26 @@ quotes it exactly and binds the frozen request. Next: commit, push, and green
 that decision, then implement only the generated/mock-qualified additive
 executor. No public request or local IACKD operation may precede green
 decision and green executor proof.
+
+Decision `feef8f7` passed both jobs in CI `31476158747` before the additive
+executor was implemented. The new module is isolated from the consumed
+executor, uses a new private root and artifact identities, integrates the green
+transport validator for the four metadata bodies, and leaves the 1,340-object
+payload and all scientific gates unchanged. Its production wrapper checks
+exact green implementation evidence and then refuses before consumption unless
+at least 10 GiB is free, all numerical settings are one, logical CPU count is
+available, and one-minute load per logical CPU is at most `1.0`.
+
+One measured generated qualification passed 18/18 gates in 4.939357291907072
+seconds at 261,488,640-byte peak RSS with 5,825 output bytes. It exercised
+fixed-exact, fixed-different, chunked, and close-delimited metadata; four reads,
+four hashes, and four parses; deterministic 660-fit/900-prediction replay; and
+13 refusal mutations. All real, public, network, old-root, target, score,
+provider, hardware, release, retry, rerun, and claim counters stayed zero.
+
+Next: finish complete verification, commit and push this exact additive
+implementation, and require both CI jobs green. Only then may the one fresh
+stream begin. Any machine-gate failure occurs before consumption and leaves
+the one registered attempt unused. A successful stream must still be followed
+by one committed receipt, one target-blind analysis, one remotely green
+aggregate freeze, and only then one combined target delivery and score.

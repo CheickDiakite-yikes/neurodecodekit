@@ -7187,3 +7187,43 @@ one new additive IACKD-2R executor using generated fixtures and mocked
 transport before any public operation.
 
 Scientific claim not established: authorization is not EEG data or a result.
+
+## 2026-08-11 - IACKD-2R Additive Executor Implementation
+
+- Decision `feef8f7` passed Base Python job `93730242015` and Optional Neuro
+  Readers job `93730242090` in CI `31476158747` before implementation.
+- Added
+  `src/neurodecodekit/experiments/iackd_transport_stable_dual_reversal_real.py`
+  as an independent executor. The consumed executor remains byte-identical and
+  is neither imported nor called; no old-root or retained-bundle path is
+  accepted.
+- Integrated the green transport validator for four small metadata responses.
+  Fixed-length, chunked, and clean close-delimited framing are accepted only
+  after exact observed bytes and registered SHA-256; payload integrity remains
+  strict fixed-length plus ETag, bytes, and full-stream SHA-256.
+- Added a production pre-consumption gate for 10 GiB free, five one-thread
+  environment settings, valid logical CPU count, and normalized one-minute
+  load at most `1.0`. Low disk, excessive load, or unavailable load refuses
+  before the streaming builder and consumed marker.
+- One measured generated qualification passed 18/18 gates in
+  4.939357291907072 seconds at 261,488,640-byte peak RSS with 3,257,217 input
+  bytes, 328,606 peak temporary bytes, 192,358 private-prediction bytes, and
+  5,825 report bytes. It exercised 4/4/4 metadata read/hash/parse calls,
+  deterministic 660-fit/900-prediction replay, and 13 mutations.
+- Public metadata requests, payload requests, network bytes, local IACKD path
+  operations, real signal/event/trajectory/target reads, real fits,
+  predictions, freezes, deliveries, scores, provider calls, hardware actions,
+  releases, retries, reruns, and claim upgrades all remained zero. The
+  temporary qualification report was removed.
+- Next gate: complete both local suites, Ruff, compile, CLI, JSON, and diff
+  verification; commit and push the exact implementation; then require both CI
+  jobs green before the one registered public stream.
+
+Engineering capability added: an additive, transport-stable, machine-gated
+executor can preserve the frozen IACKD-2R scientific and target-firewall
+contracts without touching the consumed executor.
+
+Scientific claim not established: generated fixtures establish no neural
+effect, action decoding, brain-specific origin, generalization, language or
+thought decoding, real-time behavior, hardware capability, assistive benefit,
+home use, or clinical utility.

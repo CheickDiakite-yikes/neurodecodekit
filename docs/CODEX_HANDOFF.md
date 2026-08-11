@@ -2537,3 +2537,44 @@ actual word without fabricating a recital. Next: commit, push, and require both
 decision CI jobs green. Generated/mock-only executor implementation remains
 closed until then; all public, local-data, model, target, and score operations
 remain zero.
+
+## 2026-08-11 IACKD-2R Additive Executor Generated Qualification
+
+Decision `feef8f721c5441f98829099a63a20dd264c98204` passed Base Python job
+`93730242015` and Optional Neuro Readers job `93730242090` in CI
+`31476158747` before implementation began.
+
+Read `docs/IACKD_TRANSPORT_STABLE_DUAL_REVERSAL_REAL_IMPLEMENTATION.md`,
+`registries/iackd_transport_stable_dual_reversal_real_implementation.v0.json`,
+`src/neurodecodekit/experiments/iackd_transport_stable_dual_reversal_real.py`,
+and `tests/test_iackd_transport_stable_dual_reversal_real.py`.
+
+The executor is additive and self-contained. It does not import, call, or
+modify `iackd_role_aware_dual_reversal_real.py`, whose SHA-256 remains
+`7490896f799a2e576f24d1d612765141dc9bdb881ec1c87ffd2aca02c3c9b173`.
+It exposes no old-root or retained-bundle argument and names a new isolated
+Git-ignored root. The four metadata bodies use the green transport validator
+after an independent real final-URL/status check. Payload objects retain exact
+fixed-length, ETag, observed-byte, and full-stream SHA-256 checks.
+
+The production stream wrapper validates exact green implementation evidence,
+then measures the five one-thread environment values, free disk, logical CPUs,
+and one-minute load. It refuses before calling the streaming builder or writing
+a consumed marker unless at least 10,737,418,240 bytes are free and normalized
+load is at most `1.0`; unavailable load also refuses.
+
+One measured generated qualification passed all 18 gates in
+4.939357291907072 seconds at 261,488,640-byte peak RSS. It processed 3,257,217
+generated input bytes, emitted 5,825 report bytes, accepted fixed-exact,
+fixed-different, chunked, and close-delimited metadata, completed 4/4/4
+metadata read/hash/parse calls, replayed 660 fits and 900 predictions exactly,
+and refused 13 mutations. Every public, real, network, old-root, target,
+provider, hardware, release, and claim counter remained zero. Its synthetic
+`IACKD2-R5` route has no scientific value, and the temporary report was
+removed.
+
+Immediate next gate: finish complete base and optional-suite verification,
+freeze tracked hashes, commit and push this exact additive implementation, and
+require both CI jobs green. Before that proof, do not request public metadata
+or payloads, inspect any local IACKD path, create real derivatives, fit a real
+model, freeze predictions, deliver targets, or score.
