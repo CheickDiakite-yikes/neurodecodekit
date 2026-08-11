@@ -14,6 +14,19 @@
     "optional_neuro_job_id": 93648969711,
     "both_required_jobs_green": true
   },
+  "first_pushed_implementation_CI": {
+    "commit": "25a569216db805db068265744b12e84df9fd7b64",
+    "push_ci_run_id": 31451058136,
+    "base_python_job_id": 93655331596,
+    "base_python_conclusion": "failure",
+    "optional_neuro_job_id": 93655331670,
+    "optional_neuro_conclusion": "failure",
+    "failure_stage": "unit_tests",
+    "failure_reason": "test_only_nonportable_private_tmp_path_absent_on_Linux",
+    "ruff_and_compile_passed_before_failure": true,
+    "registered_synthetic_closeout_executed": false,
+    "real_or_public_access_after_failure": false
+  },
   "tracked_file_hashes": [
     {
       "path": "src/neurodecodekit/experiments/iackd_role_aware_dual_reversal.py",
@@ -21,7 +34,7 @@
     },
     {
       "path": "tests/test_iackd_role_aware_dual_reversal.py",
-      "sha256": "0d510238d7b292dcf6b05212c44daaabea4f7fb9053e055fd18a1099a9bdf0ea"
+      "sha256": "27c84eed0215b35ff267327ef6fcaefb7e46827d648a5a07a5768c6fa53047c2"
     },
     {
       "path": "tests/test_iackd_role_aware_dual_reversal_implementation.py",
@@ -238,6 +251,7 @@
     "complete_standard_optional_runtime_seconds": 41.534,
     "standard_optional_first_sandbox_run_failed_only_on_forkserver_permission": true,
     "standard_optional_outside_sandbox_replay_passed": true,
+    "first_pushed_implementation_CI_failed_only_on_test_temp_path_portability": true,
     "pinned_ruff_passed": true,
     "development_roundtrip_passed": true,
     "complete_base_suite_passed": true,

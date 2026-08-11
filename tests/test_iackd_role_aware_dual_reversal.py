@@ -118,7 +118,8 @@ class IACKD2BaseTests(unittest.TestCase):
                     iackd2._assert_target_free({"nested": {key: [0, 1]}})
 
     def test_output_path_and_cap_refuse_existing_relative_and_symlink_paths(self) -> None:
-        with tempfile.TemporaryDirectory(dir="/private/tmp") as temporary:
+        regular_temp_root = Path(tempfile.gettempdir()).resolve()
+        with tempfile.TemporaryDirectory(dir=regular_temp_root) as temporary:
             root = Path(temporary)
             valid = root / "new.json"
             iackd2._ensure_output_preflight(valid, 1024)
