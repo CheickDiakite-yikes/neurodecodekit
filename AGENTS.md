@@ -648,6 +648,29 @@ touch a real path, or acquire a member. After green decision proof, only
 generated/mock wrapper work is eligible; public access remains closed until
 that exact wrapper is separately remotely green.
 
+Decision `624cc4e99a4aa600b68a333c1bcd84e6cebb9dcd` passed Base Python
+job `93871192638` and Optional Neuro Readers job `93871192713` in CI
+`31519016891` before generated/mock wrapper implementation. Read
+`docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_LIVE_IMPLEMENTATION.md`,
+`registries/marc1_freewill_central_directory_live_implementation.v0.json`,
+`src/neurodecodekit/datasets/marc1_central_directory_live.py`, and the two
+matching test modules. The additive standard-library wrapper validates the
+exact green proof, one-thread/12-GiB/load gate, manual bodyless redirect path,
+three capped bodies, unchanged ZIP64 parser, private inventory, aggregate
+result, consumed marker, and no-rerun behavior. It exposes no whole-download,
+member, participant, signal, target, model, score, credential, alternate URL,
+retry, or rerun interface.
+
+One fresh `python -S` generated closeout passed `MARC1CDL-G1` over 280,249
+bytes in 0.006050459109246731 seconds at 40,763,392-byte peak RSS. All 14
+gates, 32 inherited parser refusals, and 8 wrapper refusals passed; 5,995
+aggregate plus 6,187 private bytes were hash-bound and removed. Network-client
+calls and every public, member, neural, model, score, and claim counter stayed
+zero. The generated closeout has no scientific value. Commit, push, and
+require both CI jobs green for this exact implementation before invoking its
+fixed live route. Until then, do not issue a Figshare request or create the
+private live consumed marker.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

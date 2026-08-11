@@ -1225,3 +1225,19 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   commit is pushed and both CI jobs are green. Before that proof, do not
   implement the live wrapper, request a public byte, or create a consumed
   marker.
+
+  Decision `624cc4e99a4aa600b68a333c1bcd84e6cebb9dcd` then passed Base
+  Python job `93871192638` and Optional Neuro Readers job `93871192713` in CI
+  `31519016891` before wrapper work began. Read
+  `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_LIVE_IMPLEMENTATION.md` and
+  `registries/marc1_freewill_central_directory_live_implementation.v0.json`.
+  The additive standard-library wrapper now qualifies exact proof loading,
+  machine gating, bounded manual redirects, three-body transport, reuse of the
+  green ZIP64 parser, private exact inventory, aggregate output, and consumed
+  failure behavior using generated fixtures and mocked HTTP only. One fresh
+  `python -S` closeout passed `MARC1CDL-G1` in 0.006050 seconds at 40,763,392-
+  byte peak RSS with 14/14 gates, 32 inherited and 8 wrapper refusals, 12,182
+  output bytes, and zero network or forbidden counters. Its temporary files
+  were removed. Commit, push, and require both CI jobs green for this exact
+  wrapper before one public request is eligible. Do not download the archive,
+  open a member, or infer neural evidence from the generated qualification.

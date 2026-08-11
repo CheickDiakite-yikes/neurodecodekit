@@ -6287,3 +6287,44 @@ Evidence:
 `registries/marc1_freewill_central_directory_authorization_decision.v0.json`,
 and
 `tests/test_marc1_freewill_central_directory_authorization_decision.py`.
+
+## 0188 - Implement MARC1-CD1A As A Proof-Gated Range Wrapper
+
+Decision: after packet-bound decision `624cc4e` passed both jobs in CI
+`31519016891`, implement one additive standard-library wrapper around the
+unchanged green central-directory parser. Expose only fixed `plan`, generated
+`qualify`, aggregate `inspect`, and proof-gated `execute` modes. Add no base
+dependency and no user-selected provider, URL, file, range, credential, or
+archive path.
+
+Transport decision: disable automatic redirects and proxies; manually permit
+at most two bodyless HTTPS tail redirects after loop and globally-routable DNS
+checks; permit no directory redirect. Require exact critical framing, identity
+encoding, bounded cap-plus-one reads, exact ranges, at most five attempts,
+exactly three accepted bodies, and no more than 17,039,360 accepted bytes.
+
+Machine and output decision: verify the exact green decision, request, parser,
+implementation registry, clean HEAD, and externally supplied wrapper CI proof
+before the machine gate. Require five one-thread values, 12 GiB free disk,
+normalized one-minute load no greater than one, 256 MiB executor RSS, a private
+pre-request consumed marker, mode-`0600` exact inventory, aggregate-only public
+result, and exclusive no-overwrite writes.
+
+Failure decision: after the marker, emit one aggregate route if possible and
+consume the invocation. Do not provide retry, rerun, resume, alternate range,
+whole-download, local-header, member, extraction, participant, neural, target,
+model, or score interfaces.
+
+Qualification decision: accept generated `MARC1CDL-G1` only as implementation
+proof. The one registered closeout passed 14/14 gates, all 40 refusal checks,
+and zero public or forbidden counters in 0.006050 seconds at 40,763,392-byte
+peak RSS. Its 12,182 temporary output bytes were hash-bound and removed.
+
+Boundary: commit, push, and require both jobs green for this exact wrapper
+before one public request is eligible. The generated result adds no archive-
+content, human-neural, or decoding evidence.
+
+Evidence: `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_LIVE_IMPLEMENTATION.md`,
+`registries/marc1_freewill_central_directory_live_implementation.v0.json`,
+`src/neurodecodekit/datasets/marc1_central_directory_live.py`, and the two
+matching test modules.
