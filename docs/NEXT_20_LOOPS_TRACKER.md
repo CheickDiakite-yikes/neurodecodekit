@@ -1279,3 +1279,16 @@ Only a fresh packet-bound maintainer decision after that identification may
 authorize one live execution. Tasks 4-5, participant selection, payload
 acquisition, signals, targets, models, scoring, and scientific promotion
 remain closed.
+
+That all-false request is now specified in
+`docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_AUTHORIZATION_PACKET.md` and
+`registries/marc1_freewill_central_directory_authorization_request.v0.json`.
+It binds one future generated/mock standard-library wrapper and, only after
+that exact wrapper is remotely green, one live sequence with three accepted
+response bodies totaling no more than 17,039,360 bytes. It authorizes nothing
+now, and all current counters are zero.
+
+Next gate: test, commit, push, and green the exact request. Then identify its
+commit, CI, scope, and boundary as the sole active Tier C packet and wait for a
+fresh packet-bound maintainer decision. Do not implement the live wrapper or
+request a public byte from the packet alone.

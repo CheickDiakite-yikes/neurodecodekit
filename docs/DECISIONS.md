@@ -6212,3 +6212,41 @@ execution.
 Evidence: `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_RESULT.md`,
 `registries/marc1_freewill_central_directory_result.v0.json`, and
 `tests/test_marc1_freewill_central_directory_result.py`.
+
+## 0186 - Request One Three-Body MARC1-CD1A Live Audit
+
+Decision: prepare an all-false Tier C request only after generated result
+`431ee8d` passed both jobs in CI `31512598915`. The request itself authorizes
+nothing and cannot incorporate the maintainer's earlier `continue`
+retroactively.
+
+Staging decision: after a fresh packet-bound decision becomes remotely green,
+permit only generated/mock development of one additive standard-library live
+wrapper. Require the exact wrapper commit to pass both remote jobs before any
+public request.
+
+Transport decision: the possible future live invocation may accept one
+bounded version-files metadata body, one exact 131,072-byte archive tail, and
+one conditional central-directory body no larger than 16 MiB. Cap accepted
+body bytes at 17,039,360 and request attempts at five. Only the tail may follow
+up to two bodyless HTTPS redirects; the directory must reuse the terminal URL
+without redirect. Forbid HEAD, retry, rerun, exploratory range, fallback, and
+whole-file download.
+
+Privacy and resource decision: keep exact inventory only in a Git-ignored
+private manifest and public output aggregate-only. Require one thread, one
+worker, one numerical job, 120 seconds, 256 MiB RSS, 12 GiB free disk, 32 MiB
+incremental disk, and 8 MiB combined output. A success remains archive
+inventory evidence only and cannot authorize member acquisition.
+
+Boundary: commit, push, and require both jobs green for this exact request.
+Only then may Codex identify it as the sole active Tier C packet and accept a
+fresh unambiguous maintainer short form by reference. Before a separate green
+decision, do not implement the live wrapper, issue a public request, create a
+consumed marker, write a private manifest, perform cleanup, touch a real path,
+read a member or signal, run a model, score, or upgrade a claim.
+
+Evidence: `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_AUTHORIZATION_PACKET.md`,
+`registries/marc1_freewill_central_directory_authorization_request.v0.json`,
+and
+`tests/test_marc1_freewill_central_directory_authorization_request.py`.

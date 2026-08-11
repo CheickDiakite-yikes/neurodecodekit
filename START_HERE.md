@@ -1210,5 +1210,12 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   refusals, 14/14 gates, and zero live, real-data, model, score, or claim
   operations. Its exact outputs were hash-bound and removed. The generated
   closeout is consumed with no rerun. A live response remains closed Tier C
-  work; the next eligible step is an all-false authorization packet, not a
-  public request.
+  work. Read `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_AUTHORIZATION_PACKET.md`
+  and
+  `registries/marc1_freewill_central_directory_authorization_request.v0.json`.
+  The all-false request binds one future generated/mock live-wrapper milestone
+  and, only after that exact wrapper is remotely green, one metadata body, one
+  exact 128-KiB tail, and one conditional directory body under a 17,039,360-
+  byte cap. It authorizes nothing now. Commit, push, and green the packet, then
+  identify it as the sole active Tier C gate before accepting a fresh packet-
+  bound maintainer decision. Do not use an earlier `continue` retroactively.

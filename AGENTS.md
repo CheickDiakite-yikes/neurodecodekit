@@ -622,6 +622,23 @@ the sole active packet. Do not apply the current or an earlier `continue`
 retroactively, request a public byte, download the monolith, or infer real
 archive contents from `MARC1CDG-R1`.
 
+Read `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_AUTHORIZATION_PACKET.md` and
+`registries/marc1_freewill_central_directory_authorization_request.v0.json`.
+The all-false `MARC1-CD1A` request binds one possible future additive
+standard-library live wrapper, followed only after the exact wrapper is
+remotely green by one no-retry execution. That execution may accept one
+bounded version-metadata body, one exact 131,072-byte tail, and one conditional
+directory body no larger than 16 MiB, for 17,039,360 accepted body bytes total.
+It permits at most five request attempts because only the tail may follow up
+to two bodyless redirects; the directory must use the same terminal URL.
+
+Every authorization flag and current operation counter is false. The request
+must be committed, pushed, and both jobs green before Codex identifies it as
+the sole active Tier C packet. Only a fresh unambiguous maintainer message
+after that identification may be recorded in a separate decision. Do not use
+the current or an earlier message retroactively, implement the live wrapper,
+issue a request, touch a real path, or acquire a member from the packet alone.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

@@ -7746,3 +7746,40 @@ qualification without materializing the 13.59 GB archive.
 Scientific claim not established: no public archive byte, member payload,
 human signal, event, target, model, prediction, or score was accessed, so the
 closeout adds no neural or decoding evidence.
+
+## 2026-08-11 - MARC1-CD1A Live-Audit Authorization Request
+
+- Prepared only after generated result `431ee8d` passed Base Python job
+  `93849853477` and Optional Neuro Readers job `93849853538` in CI
+  `31512598915`.
+- Bound one possible future additive standard-library live wrapper. The
+  wrapper may use only generated fixtures and mocked responses until its exact
+  implementation is committed, pushed, and both jobs are green.
+- Bound one later no-retry invocation to Figshare record `28632599` version 1,
+  file `57518986`, exact size `13,591,548,048`, registered MD5
+  `3b7c3039c5c9fb6abf1429a830301711`, and CC BY 4.0 license.
+- Limited the future live sequence to one bounded metadata body, one exact
+  131,072-byte tail, and one conditional central-directory body no larger than
+  16 MiB. Accepted response bodies total at most 17,039,360 bytes; only the
+  tail may follow up to two bodyless redirects, and the directory may not
+  redirect.
+- Preserved one thread/worker/job, 120 seconds, 256 MiB RSS, 12 GiB free disk,
+  32 MiB incremental disk, 8 MiB combined output, zero retry/rerun, and no
+  whole-download or member-payload fallback.
+- Kept member inventory private and aggregate output free of names, offsets,
+  URLs, raw headers/bodies, and per-member checksums. Whole-file MD5, member
+  CRC, local headers, payload integrity, neural data, targets, models, scores,
+  and scientific interpretation remain unavailable.
+- Added 11 request invariants. All 93 focused MARC1-CD1 tests pass, and the
+  complete suite passes 2,366 tests with 35 expected skips in 54.936 seconds,
+  exactly 11 tests above the green result baseline. Every current
+  implementation, public access, local access, member, neural, target, model,
+  score, cleanup, release, and claim authorization flag and operation counter
+  is false.
+
+Engineering capability requested: one machine-gated wrapper can inventory the
+13.59 GB public ZIP through no more than 17,039,360 accepted response-body
+bytes without opening a member.
+
+Scientific claim not established: this all-false request is not data or a
+result and establishes no neural effect or decoding capability.

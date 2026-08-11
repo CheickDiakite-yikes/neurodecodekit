@@ -3052,3 +3052,41 @@ both jobs green before identifying it as the sole active packet. Only a fresh
 packet-bound maintainer decision after that identification could authorize a
 live response. Do not use an earlier `continue`, issue a request, download the
 monolith, select participants, read signals, or run a model from this result.
+
+## 2026-08-11 MARC1-CD1A Live-Audit Request Handoff
+
+Read `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_AUTHORIZATION_PACKET.md`,
+`registries/marc1_freewill_central_directory_authorization_request.v0.json`,
+and
+`tests/test_marc1_freewill_central_directory_authorization_request.py`.
+
+Generated result `431ee8dc14118e4de5f5a3a9ae6e34a202cc238e`
+passed Base Python job `93849853477` and Optional Neuro Readers job
+`93849853538` in CI `31512598915` before the all-false request was prepared.
+The request binds the complete research, contract, implementation, result,
+packet, and test hashes. Eleven request invariants pass.
+
+The possible future sequence is deliberately staged: a fresh decision must
+be remotely green before generated/mock live-wrapper implementation; the exact
+wrapper must then be committed, pushed, and remotely green before one public
+invocation. That invocation may accept exactly one bounded version-metadata
+body, one exact 131,072-byte tail, and one conditional central-directory body
+no larger than 16 MiB. Accepted body bytes are capped at 17,039,360, request
+attempts at five, and bodyless tail redirects at two. There is no HEAD, retry,
+rerun, exploratory range, whole download, or member access.
+
+Every current authorization flag and operation counter is false. Preparing
+the packet made no network, public-body, local-path, member, signal, event,
+target, model, score, cleanup, release, or claim operation. The packet itself
+authorizes nothing.
+
+Eleven request invariants pass; all 93 focused MARC1-CD1 tests pass; and the
+complete repository suite passes 2,366 tests with 35 expected skips in 54.936
+seconds.
+
+Immediate next gate: complete repository verification, commit and push the
+exact request, and require both CI jobs green. Only then identify its commit,
+CI, scope, and boundary as the sole active Tier C packet. Wait for a fresh
+unambiguous maintainer `continue`, `approve`, or `proceed`; do not use the
+current message retroactively or implement/request anything from the packet
+alone.

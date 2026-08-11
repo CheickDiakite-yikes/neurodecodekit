@@ -1155,7 +1155,13 @@ Read this before interpreting any number in the repository.
   [generated result](docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_RESULT.md). The
   closeout is consumed with no rerun. The next eligible artifact is an
   all-false Tier C request for one live metadata/range audit; no public request
-  is authorized yet.
+  is authorized yet. That request is now specified in the
+  [live-audit authorization packet](docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_AUTHORIZATION_PACKET.md).
+  It binds one future standard-library wrapper, one metadata body, one exact
+  128-KiB tail, and one conditional directory body under a 17,039,360-byte
+  accepted-response cap. Every authorization flag is false. The packet must be
+  committed, pushed, and remotely green, then receive a fresh packet-bound
+  maintainer decision before wrapper work or a public request may begin.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
