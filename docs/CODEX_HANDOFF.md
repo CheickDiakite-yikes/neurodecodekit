@@ -2714,3 +2714,27 @@ packet, and require both CI jobs green. Only then identify its commit, CI,
 one-response scope, and boundary as the sole active Tier C packet and stop for
 a fresh maintainer decision. Do not implement the wrapper or access a public
 body from this packet or an earlier `continue`.
+
+## 2026-08-11 IACKD-M1A Packet-Bound Decision
+
+Request `ce847383ab1e327523cbc172bb6d3be417b46a11` is remotely green in CI
+`31484273623`, with Base Python job `93755977352` and Optional Neuro Readers
+job `93755977235`.
+
+After Codex identified IACKD-M1A as the sole active Tier C packet and named its
+one-wrapper/one-response scope, the maintainer said exactly `keep going, move
+the needle, continue, you approved to go on`. Read
+`docs/IACKD_SNAPSHOT_IDENTITY_AUTHORIZATION_DECISION.md`,
+`registries/iackd_snapshot_identity_authorization_decision.v0.json`, and its
+test. The decision quotes all 60 UTF-8 bytes and binds only the immutable green
+request and packet by hash.
+
+The decision is ineffective until its own commit is pushed and both CI jobs
+pass. Before that proof, wrapper implementation and OpenNeuro access remain
+closed. After green decision, only generated/mock wrapper work may begin; the
+one public response remains gated on a separately green exact wrapper. EEG
+payload, local IACKD, consumed roots, targets, models, scores, retries, reruns,
+and claim upgrades remain unauthorized.
+
+Immediate next gate: complete decision verification, commit, push, and require
+both CI jobs green. Do not implement or access from the ungreen decision.

@@ -5875,3 +5875,29 @@ decision; the current `continue` is not retroactive.
 Evidence: `docs/IACKD_SNAPSHOT_IDENTITY_AUTHORIZATION_PACKET.md`,
 `registries/iackd_snapshot_identity_authorization_request.v0.json`, and
 `tests/test_iackd_snapshot_identity_authorization_request.py`.
+
+## 0175 - Bind The Fresh Maintainer Continue To IACKD-M1A
+
+Decision: accept the maintainer's exact message `keep going, move the needle,
+continue, you approved to go on` as the fresh packet-bound Tier C decision for
+the sole active IACKD-M1A request at `ce84738`, not as a fabricated recital of
+the packet's long scope.
+
+Reason: the request and packet were already committed, pushed, and green in
+both CI jobs; Codex had identified the exact commit, CI, one-wrapper/
+one-response scope, 2 MiB cap, zero-payload boundary, and fresh-decision gate.
+The new message unambiguously directs that named work to continue. The
+separate decision quotes all 60 bytes and binds the request and packet hashes.
+
+Ordering: the decision must first become remotely green. Only then may the
+generated/mock wrapper be implemented. That exact wrapper must separately
+become remotely green before one machine-gated public metadata response.
+
+Boundary: do not infer an EEG payload, local IACKD operation, consumed-root
+fallback, model, target, score, dependency install, retry, rerun, release,
+hardware, destructive action, or scientific claim upgrade. A metadata success
+must stop without acquisition.
+
+Evidence: `docs/IACKD_SNAPSHOT_IDENTITY_AUTHORIZATION_DECISION.md`,
+`registries/iackd_snapshot_identity_authorization_decision.v0.json`, and
+`tests/test_iackd_snapshot_identity_authorization_decision.py`.

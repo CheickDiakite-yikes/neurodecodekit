@@ -581,6 +581,14 @@
    push, and green this packet, identify it as the sole Tier C request, and
    stop for a fresh decision. Do not implement the wrapper or make a public
    request from the packet or an earlier `continue`.
+   The maintainer then said `keep going, move the needle, continue, you
+   approved to go on`. Read
+   `docs/IACKD_SNAPSHOT_IDENTITY_AUTHORIZATION_DECISION.md` and its registry.
+   The decision quotes that exact message and binds only green request
+   `ce84738`; it is ineffective until its own commit and both CI jobs are
+   green. Next green this decision. Only afterward implement and qualify the
+   generated/mock wrapper. Do not make a public request until that exact
+   wrapper is separately green, and do not request an EEG payload at all.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

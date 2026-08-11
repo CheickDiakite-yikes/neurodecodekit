@@ -1064,6 +1064,13 @@ Read this before interpreting any number in the repository.
   remotely green and be identified as the sole Tier C request before a fresh
   maintainer decision can unlock generated/mock wrapper work; public access
   remains behind another green wrapper milestone.
+  The maintainer then said `keep going, move the needle, continue, you
+  approved to go on`. The separate
+  [packet-bound decision](docs/IACKD_SNAPSHOT_IDENTITY_AUTHORIZATION_DECISION.md)
+  preserves that exact message and binds only request `ce84738` and its hash.
+  It must itself become remotely green before generated/mock wrapper work may
+  begin. Even then, the single public response remains closed until the exact
+  wrapper passes both CI jobs; EEG payload access remains out of scope.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

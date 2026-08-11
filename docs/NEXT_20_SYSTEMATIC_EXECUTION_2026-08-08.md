@@ -548,3 +548,15 @@ commit, push, and require both jobs green, then identify the exact commit, CI,
 scope, and boundary as the sole active Tier C packet. Stop for a fresh
 packet-bound maintainer decision. Do not implement the wrapper or open a public
 response from this packet or any earlier `continue`.
+
+Request `ce84738` passed Base Python job `93755977352` and Optional Neuro
+Readers job `93755977235` in CI `31484273623`. After Codex identified it as
+the sole active Tier C packet, the maintainer said `keep going, move the
+needle, continue, you approved to go on`. A separate decision now quotes those
+exact words and incorporates only the immutable packet by reference.
+
+The next systematic item is decision proof: test, commit, push, and require
+both CI jobs green. Only then implement the generated/mock standard-library
+wrapper. Public access remains closed until that exact wrapper is also
+committed, pushed, and green. The decision does not authorize an EEG payload,
+model, target, score, retry, rerun, or claim upgrade.

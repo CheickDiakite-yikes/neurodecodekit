@@ -7382,3 +7382,27 @@ snapshot, tree, selected-manifest, or critical-metadata identity.
 
 Scientific claim not established: this all-false request is not EEG data or a
 result and establishes no neural effect or decoding capability.
+
+## 2026-08-11 - IACKD-M1A Packet-Bound Decision
+
+- Reverified request `ce84738` and CI `31484273623`: Base Python job
+  `93755977352` and Optional Neuro Readers job `93755977235` are green.
+- The prior response identified IACKD-M1A as the sole active Tier C packet,
+  named its commit, CI, one-wrapper/one-response scope, 2 MiB cap,
+  zero-payload boundary, and fresh-decision requirement.
+- The maintainer's next message was exactly `keep going, move the needle,
+  continue, you approved to go on`. Added a separate human and machine
+  decision quoting all 60 UTF-8 bytes and their SHA-256.
+- The longer packet scope is incorporated only by immutable request and packet
+  hashes. No fabricated recital, scope expansion, model, score, release,
+  hardware, destructive action, or claim permission is inferred.
+- Eleven decision invariants pass. The decision remains ineffective until its
+  own commit is pushed and both CI jobs pass. OpenNeuro, local IACKD, payload,
+  neural, target, model, prediction, score, retry, rerun, and claim counters
+  remain zero.
+
+Engineering capability authorized after green decision: implement and qualify
+one exact generated/mock standard-library wrapper, then require its own green
+proof before one public metadata response.
+
+Scientific claim not established: authorization is not EEG data or a result.
