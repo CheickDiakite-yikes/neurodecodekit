@@ -431,6 +431,23 @@ eligible only after this exact registration is committed, pushed, and both CI
 jobs are green. Public GraphQL access remains a later Tier C gate and the
 current `continue` is not retroactive.
 
+Registration `1667e302e262ad23695f204a88d5a0997ac38270` passed Base Python
+job `93746523491` and Optional Neuro Readers job `93746523322` in CI
+`31481270697` before implementation. Read
+`docs/IACKD_SNAPSHOT_IDENTITY_IMPLEMENTATION.md` and
+`registries/iackd_snapshot_identity_implementation.v0.json`. The additive
+standard-library module has no network client, real endpoint, execute mode, or
+local IACKD path. It strictly canonicalizes generated snapshot/tree/selected/
+critical identities, separates a private manifest from aggregate public
+output, reconciles the exact 1,340 historical selected paths, and covers 37
+refusals. One final generated closeout produced `IACKDM-R1` from 531,067 input
+bytes in 0.8887734590098262 seconds at 38,436,864-byte peak RSS with 426,792
+output bytes. Forty-nine focused, 2,084 base, and 2,155 optional tests pass.
+Every public, real, neural, target, model, score, retry, rerun, and claim
+counter remains zero. Commit, push, and require both CI jobs green before
+preparing one all-false Tier C request for a single public response. The
+current `continue` does not authorize that response or an EEG payload.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

@@ -561,8 +561,17 @@
    `registries/iackd_snapshot_identity_contract.v0.json`. The exact query,
    request hash, 1,679-row tree, 1,340-row selection, twelve role summaries,
    critical metadata, private-manifest boundary, refusal matrix, and resource
-   caps are frozen. Next commit and green this registration; only then build
-   the generated-only canonicalizer. No public API or real-data access is open.
+   caps are frozen. Registration `1667e30` passed both jobs in CI
+   `31481270697`. Then read
+   `docs/IACKD_SNAPSHOT_IDENTITY_IMPLEMENTATION.md` and its registry. The
+   generated-only standard-library canonicalizer now passes 49 focused, 2,084
+   base, and 2,155 optional tests. Its final constructed roundtrip passed all
+   37 refusals and two replays in 0.888773 seconds at 38,436,864-byte peak RSS
+   with 426,792 output bytes. It has no network client, execute mode, real
+   endpoint, or local IACKD path. Next commit, push, and green this exact
+   implementation. Only afterward prepare an all-false Tier C request for one
+   public response; no public API, EEG payload, target, model, or score access
+   is currently open.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

@@ -5817,3 +5817,33 @@ retroactive.
 Evidence: `docs/IACKD_SNAPSHOT_IDENTITY_PREREGISTRATION.md`,
 `registries/iackd_snapshot_identity_contract.v0.json`, and
 `tests/test_iackd_snapshot_identity_contract.py`.
+
+## 0173 - Keep Snapshot Identity Canonicalization Generated And Layered
+
+Decision: implement IACKD-M1 as a standard-library generated-response
+canonicalizer with four independent identities: snapshot anchor, recursive
+tree, selected acquisition manifest, and critical metadata. Do not add a
+network client, real endpoint, execute mode, local IACKD path, or integration
+with either consumed executor.
+
+Privacy decision: keep all 1,340 individual selected paths, object IDs, S3
+keys, and version IDs in a bounded private manifest. Publish only aggregate
+counts, role summaries, and canonical hashes. Reject any row-level path, URL,
+or version-ID leakage from the public report.
+
+Qualification decision: require exact historical selected-path compatibility,
+two canonical replays, all 37 registered refusals, exclusive atomic output,
+one-thread controls, and the frozen time/RSS/input/output caps. The final
+generated route `IACKDM-R1` passed those gates in 0.8887734590098262 seconds at
+38,436,864-byte peak RSS with 531,067 input and 426,792 output bytes.
+
+Boundary: this is engineering evidence only. After the exact implementation is
+committed, pushed, and both CI jobs are green, the next allowed artifact is an
+all-false Tier C request. A public GraphQL response still requires a fresh
+packet-bound decision and a separately green wrapper; metadata success would
+not authorize an EEG payload or scientific claim.
+
+Evidence: `docs/IACKD_SNAPSHOT_IDENTITY_IMPLEMENTATION.md`,
+`registries/iackd_snapshot_identity_implementation.v0.json`,
+`src/neurodecodekit/datasets/iackd_snapshot_identity.py`, and
+`tests/test_iackd_snapshot_identity.py`.

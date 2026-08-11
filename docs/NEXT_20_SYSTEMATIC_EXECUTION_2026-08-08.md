@@ -513,3 +513,25 @@ IACKD-2R analysis and scoring are now unreachable, not pending. Do not retry or
 inspect changed fields under this contract. The next systematic item is Tier A
 design of an independent metadata-version reverification lane with no EEG or
 model access; any body fetch requires a new Tier C decision.
+
+That research now selects a snapshot-scoped repair. Named snapshot `hexsha`,
+recursive content-addressed tree, selected acquisition manifest, and critical
+Name/BIDSVersion/License/DOI compatibility are independent gates. Research
+`723c8e2` passed both jobs in CI `31480538821`; the exact IACKD-M1 registration
+`1667e30` then passed both jobs in CI `31481270697`.
+
+The generated-only standard-library canonicalizer is now implemented. It has
+no network client, real endpoint, execute mode, or local IACKD path. The final
+constructed roundtrip reconciled 1,679 tree rows, all 1,340 historical selected
+paths, 128 runs, and twelve role summaries. It passed 37 refusals and two
+replays in 0.8887734590098262 seconds at 38,436,864-byte peak RSS with 531,067
+input bytes and 426,792 output bytes. Forty-nine focused, 2,084 base, and 2,155
+optional tests pass; every public, real, neural, target, model, score, retry,
+rerun, and claim counter remains zero.
+
+The next systematic item is exact implementation proof: commit, push, and
+require both CI jobs green. Only then prepare one all-false Tier C request for
+the exact 355-byte GraphQL POST and one response capped at 2 MiB. The request
+itself must authorize nothing; a fresh packet-bound maintainer message and a
+separately green real wrapper are still required before one no-retry response.
+No EEG payload is authorized by a metadata result.

@@ -2654,3 +2654,39 @@ socket, HTTP client, endpoint, execute mode, or local IACKD path. It may emit a
 bounded generated private manifest and public aggregate only. A real one-
 response audit is still Tier C and is not authorized by the current or any
 earlier `continue`.
+
+## 2026-08-11 IACKD-M1 Generated Snapshot Canonicalizer
+
+Registration `1667e302e262ad23695f204a88d5a0997ac38270` is remotely green in
+CI `31481270697`, with Base Python job `93746523491` and Optional Neuro Readers
+job `93746523322`.
+
+Read `docs/IACKD_SNAPSHOT_IDENTITY_IMPLEMENTATION.md`,
+`registries/iackd_snapshot_identity_implementation.v0.json`,
+`src/neurodecodekit/datasets/iackd_snapshot_identity.py`, and both matching
+tests. The module is standard-library only and exposes generated `qualify` and
+aggregate `inspect` commands. It has no network opener, real endpoint,
+`--execute` mode, provider key, local IACKD path, or consumed-executor import.
+
+The strict canonicalizer separates snapshot anchor, recursive tree, selected
+manifest, and critical metadata identities. It accepts only safe NFC paths,
+canonical object IDs and sizes, and exact versioned public S3 keys. It keeps
+1,340 individual rows in a private bounded manifest while the public report is
+aggregate-only. The generated selected path set exactly equals the committed
+historical set.
+
+One final generated closeout passed `IACKDM-R1`, all 37 refusals, and two
+deterministic replays. It processed 531,067 bytes and emitted 426,792 bytes in
+0.8887734590098262 seconds at 38,436,864-byte peak RSS. Forty-nine focused,
+2,084 base, and 2,155 optional tests pass, as do Ruff, compileall, all 153
+registries, CLI help/roundtrip, and diff checks. Every public, real, neural,
+target, model, score, retry, rerun, and claim counter remains zero.
+Two untracked generated-only outputs totaling 853,584 bytes remain in OS
+temporary storage because cleanup was not approved; they contain no real or
+protected data.
+
+Immediate next gate: commit and push this exact implementation and require
+both CI jobs green. Only then prepare an all-false Tier C request binding the
+one exact GraphQL body and one 2 MiB-capped response. A fresh packet-bound
+decision and a separately green real wrapper are still required; the current
+or any earlier `continue` authorizes neither that response nor an EEG payload.

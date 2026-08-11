@@ -7314,3 +7314,41 @@ against an immutable, source-grounded snapshot identity contract.
 
 Scientific claim not established: registration made no dataset-specific
 request and accessed no neural data or model outcome.
+
+## 2026-08-11 - IACKD-M1 Generated Snapshot Canonicalizer
+
+- Registration `1667e30` passed Base Python job `93746523491` and Optional
+  Neuro Readers job `93746523322` in CI `31481270697` before implementation.
+- Added a standard-library generated-response canonicalizer with strict UTF-8,
+  duplicate-key, finite-number, schema, path, object-ID, size, S3-version URL,
+  snapshot, tree, selected-inventory, and critical-metadata validation.
+- Kept individual paths, URLs, and version IDs in a bounded private manifest;
+  the public report contains only aggregate counts and canonical hashes.
+- The generated selected set exactly matches all 1,340 historical committed
+  paths and reconciles 15 participants, 30 participant-hand units, 128 runs,
+  and all twelve role count/byte summaries.
+- Added 37 fail-closed mutations, including overflowed JSON numbers, unsafe
+  paths, URL ambiguity, inventory drift, output collision/symlink/cap,
+  resource limits, leakage, and replay mismatch.
+- One final generated qualification passed `IACKDM-R1` with two deterministic
+  replays: 531,067 input bytes, 426,792 output bytes, 0.8887734590098262-second
+  runtime, and 38,436,864-byte peak RSS.
+- Forty-nine focused tests, 2,084 base tests with 204 skips, and 2,155 optional
+  tests with 35 skips pass. Ruff 0.15.20, compileall, 153 registry JSON files,
+  module help, bounded qualify/inspect, and diff checks pass.
+- Dataset-specific GraphQL, S3, local IACKD, old bundle, signal, event,
+  trajectory, target, model, prediction, freeze, score, retry, rerun, and claim
+  counters remain zero. Two untracked generated-only temp outputs totaling
+  853,584 bytes remain because cleanup was not approved; no real or protected
+  data is present.
+- Next gate: commit and push the exact implementation, require both CI jobs
+  green, then prepare one all-false Tier C request. No public response or EEG
+  payload is currently authorized.
+
+Engineering capability added: a dependency-free canonicalizer can reduce a
+generated OpenNeuro snapshot response into separately hashed snapshot, tree,
+selected-manifest, and critical-metadata identities with bounded private and
+aggregate-public outputs.
+
+Scientific claim not established: generated metadata and zero neural or target
+reads establish no neural effect or decoding result.

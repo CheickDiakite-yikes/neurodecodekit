@@ -1042,9 +1042,19 @@ Read this before interpreting any number in the repository.
   duplicate-free response schemas, 1,679 versioned file rows, all twelve
   historical role summaries, a private-manifest/public-hash boundary, 37
   adversarial refusals, and one-thread resource caps. Research `723c8e2`
-  passed both jobs in CI `31480538821`. The contract itself authorizes no
-  public call; its generated-only canonicalizer may be implemented only after
-  the registration is separately green.
+  passed both jobs in CI `31480538821`; registration `1667e30` then passed
+  both jobs in CI `31481270697`. The generated-only
+  [IACKD-M1 implementation](docs/IACKD_SNAPSHOT_IDENTITY_IMPLEMENTATION.md)
+  is now complete locally. Its standard-library module has no network client,
+  real endpoint, execute mode, or local IACKD path. One final constructed
+  roundtrip reconciled all 1,679 tree rows and the exact 1,340 historical
+  selected paths, passed 37 refusal mutations and two deterministic replays,
+  and emitted 426,792 bytes in 0.888773 seconds at 38,436,864-byte peak RSS.
+  Forty-nine focused, 2,084 base, and 2,155 optional tests pass. This proves a
+  bounded identity interface, not current public-snapshot compatibility or a
+  neural result. Public GraphQL access remains closed until the exact
+  implementation is remotely green and a new all-false Tier C request receives
+  a fresh packet-bound decision.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
