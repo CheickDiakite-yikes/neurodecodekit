@@ -1,0 +1,291 @@
+{
+  "schema_name": "neurodecodekit.iackd_channel_role_geometry_result",
+  "schema_version": "0.1.0",
+  "result_id": "IACKD-H2-channel-role-geometry-audit-result-v0",
+  "recorded_at_local": "2026-08-10",
+  "status": "complete_consumed_IACKDR_R1_control_taxonomy_mismatch_no_rerun",
+  "proof_posture": "authorized_public_BIDS_metadata_aggregate_only_no_local_bundle_VHDR_sibling_signal_event_trajectory_target_model_or_score_access",
+  "contract": {
+    "path": "registries/iackd_channel_role_geometry_contract.v0.json",
+    "sha256": "a5c1e18cf77c25a656b31bbcd30c65e2ad3b7076ea747ec7c7137a3ff919612b"
+  },
+  "inventory": {
+    "path": "registries/iackd_openneuro_metadata_inventory.v0.json",
+    "sha256": "aeaa4928192cca9086fcb0abf4711147c68a68ef5c5aacda2ebc67d162a1ef19"
+  },
+  "implementation": {
+    "path": "registries/iackd_channel_role_geometry_implementation.v0.json",
+    "sha256": "b3989d4489c2f3b95d4ca70b6caf0505a413b13e2bebdec6a6aad8b52d124acb"
+  },
+  "authorization_decision": {
+    "path": "registries/iackd_channel_role_geometry_authorization_decision.v0.json",
+    "sha256": "14d71f3998b6c5428d9883e0e9b46e16ecc2a36912f570e5ba7427d84830620f"
+  },
+  "green_proof_chain": {
+    "registration": {
+      "commit": "228ccd03f5e0b5d02ba104e13b77b04f2032df78",
+      "push_CI_run_id": 31427931578,
+      "base_python_job_id": 93583989913,
+      "optional_neuro_job_id": 93583989996,
+      "both_required_jobs_green": true
+    },
+    "implementation": {
+      "commit": "9f6fef9540ae0a1fe52cbf24b17b0af89147beae",
+      "push_CI_run_id": 31430151368,
+      "base_python_job_id": 93591323731,
+      "optional_neuro_job_id": 93591323646,
+      "both_required_jobs_green": true
+    },
+    "request": {
+      "commit": "86174bc86123bc010bac2f40a9d72147dc8aef05",
+      "push_CI_run_id": 31431064259,
+      "base_python_job_id": 93594327147,
+      "optional_neuro_job_id": 93594327069,
+      "both_required_jobs_green": true
+    },
+    "decision": {
+      "commit": "f6eb5ab650a0232a17d2f8f56c582c90bf0cf420",
+      "push_CI_run_id": 31444154297,
+      "base_python_job_id": 93634720183,
+      "optional_neuro_job_id": 93634720191,
+      "both_required_jobs_green": true
+    }
+  },
+  "execution": {
+    "registered_execution_ordinal": 1,
+    "status": "completed_with_registered_R1_incompatibility",
+    "consumed": true,
+    "consumed_before_first_network_request": true,
+    "retry_allowed": false,
+    "rerun_allowed": false,
+    "post_result_parser_or_router_update_allowed": false
+  },
+  "private_execution_bindings": {
+    "aggregate_ledger_bytes": 9779,
+    "aggregate_ledger_sha256": "ec78870f976e47acc7f0c325275e2a8d58cb5ad5514ee20c3e5965225ac3a7e6",
+    "consumed_marker_bytes": 248,
+    "consumed_marker_sha256": "baa9181f574a49fedd76308ab66a4e0f28a987d7a40ea1d2951a64493307c11a",
+    "retained_under_Git_ignored_execution_root": true,
+    "raw_source_bodies_retained": false,
+    "committed_or_published": false
+  },
+  "measurements": {
+    "input_objects": 316,
+    "input_bytes": 457602,
+    "network_body_bytes": 457602,
+    "role_object_counts": {
+      "channels": 128,
+      "eeg_sidecar": 128,
+      "electrodes": 30,
+      "coordsystem": 30
+    },
+    "role_input_bytes": {
+      "channels": 227904,
+      "eeg_sidecar": 173312,
+      "electrodes": 27316,
+      "coordsystem": 29070
+    },
+    "body_SHA256_passes": 316,
+    "semantic_parse_passes": 316,
+    "runtime_seconds": 55.592999708,
+    "peak_RSS_bytes": 86769664,
+    "generated_output_bytes": 9779,
+    "private_consumed_marker_bytes": 248,
+    "retained_generated_bytes": 10027,
+    "peak_incremental_disk_bytes": null,
+    "peak_incremental_disk_unavailable_reason": "not_separately_sampled_exact_retained_bytes_reported_and_registered_disk_output_gate_passed",
+    "free_disk_before_human_readable": "22 GiB",
+    "CPU_threads": 1,
+    "workers": 1,
+    "concurrent_numerical_jobs": 1,
+    "producer_is_causal": null,
+    "end_to_end_latency_measured": false,
+    "retries": 0,
+    "reruns": 0
+  },
+  "diagnosis": {
+    "diagnostic_route": "IACKDR-R1",
+    "body_hash_set_SHA256": "b1ecbad02b3b573da6e01d7e58983b86751f1265c5a50be22707987b311f7e5e",
+    "predictive_EEG_count": 26,
+    "core_schema_count": 1,
+    "reference_values": [
+      "average"
+    ],
+    "channel_schema_groups": [
+      {
+        "occurrence_count": 96,
+        "row_count": 29,
+        "predictive_EEG_count": 26,
+        "optional_M1_present": false,
+        "optional_M2_present": false,
+        "control_source_types": {
+          "HEOG": "MISC",
+          "VEOG": "MISC",
+          "Trigger": "MISC"
+        },
+        "required_control_roles_valid": false
+      },
+      {
+        "occurrence_count": 32,
+        "row_count": 31,
+        "predictive_EEG_count": 26,
+        "optional_M1_present": true,
+        "optional_M2_present": true,
+        "control_source_types": {
+          "HEOG": "MISC",
+          "VEOG": "MISC",
+          "Trigger": "MISC"
+        },
+        "required_control_roles_valid": false
+      }
+    ],
+    "sidecar_groups": [
+      {
+        "occurrence_count": 96,
+        "EEGChannelCount": 26,
+        "EOGChannelCount": 0,
+        "MiscChannelCount": 3,
+        "TriggerChannelCount": 0,
+        "SamplingFrequency": 1024,
+        "EEGReference": "average"
+      },
+      {
+        "occurrence_count": 32,
+        "EEGChannelCount": 28,
+        "EOGChannelCount": 0,
+        "MiscChannelCount": 3,
+        "TriggerChannelCount": 0,
+        "SamplingFrequency": 1024,
+        "EEGReference": "average"
+      }
+    ],
+    "H1_reconciliation": {
+      "all_sidecar_sampling_matches_H1_1024_Hz": true,
+      "all_source_agreement_checks_pass": false,
+      "allowlisted_presence_matches_H1": true,
+      "channel_row_count_multiset_matches_H1": true,
+      "core_schema_count_after_removing_only_M1_M2": 1,
+      "present_channel_sampling_reconciles": true,
+      "present_sidecar_type_counts_reconcile": false,
+      "required_control_BIDS_roles_valid": false
+    },
+    "control_taxonomy": {
+      "source_types": {
+        "HEOG": "MISC",
+        "VEOG": "MISC",
+        "Trigger": "MISC"
+      },
+      "sidecar_counts": {
+        "EOGChannelCount": 0,
+        "MiscChannelCount": 3,
+        "TriggerChannelCount": 0
+      },
+      "frozen_EOG_control_rule_allowed_MISC": false,
+      "frozen_trigger_role_compatible": true,
+      "frozen_reconciler_separated_named_trigger_from_MISC": true,
+      "source_declarations_mutually_inconsistent": false,
+      "frozen_role_map_candidate_admissible": false,
+      "inadmissible_candidate_role_map_SHA256": "435352a007a0def493f90a99550a1943ba7debbf0f4b0e75316ac480b908822d"
+    },
+    "geometry": {
+      "groups_total": 30,
+      "central_groups_complete": 30,
+      "occipital_groups_complete": 30,
+      "predictive_EEG_geometry_coverage_count": 26,
+      "coordinate_system": "CapTrak",
+      "coordinate_units": "m",
+      "signature_groups": [
+        {
+          "occurrence_count": 22,
+          "electrode_count": 29,
+          "finite_coordinate_count": 26,
+          "channel_electrode_intersection_count": 29
+        },
+        {
+          "occurrence_count": 8,
+          "electrode_count": 31,
+          "finite_coordinate_count": 28,
+          "channel_electrode_intersection_count": 31
+        }
+      ]
+    }
+  },
+  "acceptance_gate_results": {
+    "registration_implementation_request_and_decision_remote_green_before_real_access": true,
+    "exact_316_object_and_457602_byte_inventory": true,
+    "all_response_identity_and_one_hash_one_parse_gates_pass": true,
+    "all_128_channel_tables_and_sidecars_and_30_geometry_pairs_reconcile": false,
+    "aggregate_schemas_role_map_geometry_groups_and_router_replay_exactly": true,
+    "no_forbidden_public_field": true,
+    "all_resource_network_disk_thread_and_output_caps_pass": true,
+    "local_bundle_VHDR_sibling_sample_event_trajectory_target_model_prediction_and_score_counters_zero": true,
+    "metadata_only_claim_ceiling_preserved": true
+  },
+  "access_counters": {
+    "real_metadata_requests": 316,
+    "real_metadata_body_bytes": 457602,
+    "real_metadata_parses": 316,
+    "synthetic_metadata_requests": 0,
+    "synthetic_mode": 0,
+    "VHDR_rereads": 0,
+    "local_IACKD_path_stats_or_opens": 0,
+    "sibling_resolutions_stats_hashes_or_opens": 0,
+    "signal_sample_reads": 0,
+    "marker_or_event_reads": 0,
+    "trajectory_reads": 0,
+    "target_or_label_reads": 0,
+    "cache_or_split_operations": 0,
+    "feature_extraction_runs": 0,
+    "model_or_checkpoint_loads": 0,
+    "training_or_parameter_update_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "scoring_runs": 0,
+    "provider_or_language_model_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "unavailable_fields": [
+    "validated_role_map",
+    "signal_values_or_quality",
+    "marker_and_event_content",
+    "trajectory_content",
+    "labels_and_targets",
+    "neural_effect",
+    "decoding_accuracy",
+    "brain_specific_origin",
+    "generalization",
+    "end_to_end_latency",
+    "peak_incremental_disk_bytes"
+  ],
+  "warnings": [
+    "IACKDR-R1 rejects the frozen role-map candidate even though count sampling core EEG reference and geometry declarations are stable.",
+    "The source consistently classifies HEOG VEOG and Trigger as MISC; this is a contract taxonomy mismatch and not evidence that source files are malformed.",
+    "The inadmissible candidate hash is retained only for deterministic replay and must not be described as a validated role map.",
+    "The retained IACKD bundle remains closed and no scientific experiment has run."
+  ],
+  "disposition": {
+    "lane": "IACKD-H2",
+    "consumed": true,
+    "complete": true,
+    "retry_or_rerun_open": false,
+    "current_router_or_parser_may_be_amended_from_result": false,
+    "existing_local_IACKD_bundle_may_be_opened_from_this_result": false,
+    "next_safe_research_step": "new_prospective_source_declared_MISC_control_policy_frozen_before_any_signal_or_outcome_access",
+    "new_real_content_gate_required": true
+  },
+  "public_artifact_bindings": {
+    "document_path": "docs/IACKD_CHANNEL_ROLE_GEOMETRY_RESULT.md",
+    "document_sha256": "eb8a13ff20d0df46cef05a0f05853fd1972f9dd11775b0733eb5960040ffeeb9",
+    "invariant_test_path": "tests/test_iackd_channel_role_geometry_result.py",
+    "invariant_test_sha256": "b6efcc4741a0aea45e0b93707cc9a9dc9c3a8e13376c2cb0ad8efdfe6cd411bd",
+    "contains_local_path": false,
+    "contains_raw_source_body": false,
+    "contains_individual_identity_or_outcome": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "NeuroDecodeKit measured the complete public IACKD BIDS role and geometry inventory and isolated the remaining reader failure to a reproducible MISC control-taxonomy mismatch rather than channel count sampling reference core EEG membership or central geometry.",
+    "scientific_claim_not_established": "No EEG sample event trajectory target model prediction or score was accessed so this result establishes no neural effect action decoding brain-specific origin generalization typing language or thought decoding real-time operation hardware capability assistive benefit or clinical use."
+  }
+}

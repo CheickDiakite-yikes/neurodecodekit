@@ -197,6 +197,22 @@ decision quotes those words exactly and binds request `86174bc`, CI
 `93594327069`, and the unchanged 316-object/457,602-byte scope. It remains
 ineffective until the decision itself is tested, committed, pushed, and both
 remote CI jobs are green. Do not issue an H2 request before that proof.
+Decision `f6eb5ab650a0232a17d2f8f56c582c90bf0cf420` then passed Base
+Python job `93634720183` and Optional Neuro Readers job `93634720191` in CI
+`31444154297` before the sole execution. Read
+`docs/IACKD_CHANNEL_ROLE_GEOMETRY_RESULT.md` and
+`registries/iackd_channel_role_geometry_result.v0.json`. The executor consumed
+its one run, requested and parsed all 316 bodies and 457,602 bytes once, and
+routed `IACKDR-R1` in 55.592999708 seconds at 86,769,664-byte peak RSS. Counts,
+1024 Hz sampling, one 26-channel EEG core, average reference, and all 30 central
+and occipital geometry groups reconciled. The frozen contract failed because
+HEOG, VEOG, and Trigger are source-typed `MISC`, while its EOG compatibility
+and trigger-separated sidecar count rules expected another taxonomy. This is
+an aggregate engineering diagnosis, not a malformed-source or neural result.
+H2 is consumed with no retry, rerun, parser amendment, or admissible role-map
+hash. Do not open the retained bundle from this result. The next safe work is a
+separately named prospective source-type-first control policy frozen before any
+signal, event, target, model, or outcome access.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

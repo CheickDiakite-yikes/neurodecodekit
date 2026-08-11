@@ -40,7 +40,7 @@ irreversible Tier C events.
 |---|---|---|
 | Trial identity | All 66 S21 session-1 trials and all 63 performed session-2 trials reconcile to MAT provenance; empty session-2 slots remain explicit | The real MEG evidence has exact trial identity instead of fuzzy sentence matching |
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |
-| IACKD source compatibility | One bounded audit parsed all 128 public VHDR declarations and found two signatures: 96 declare 29 channels without M1/M2, while 32 declare 31 channels with them; all include HEOG, VEOG, and TRIGGER at 1024 Hz | This resolves the consumed reader failure: the exact-36 global invariant was wrong. It is a source-format result only; no EEG sample, event, target, model, or score was accessed |
+| IACKD source compatibility | H1 found 96 29-row and 32 31-row headers. H2 then parsed all 316 public BIDS metadata bodies and confirmed one 26-channel predictive EEG core, 1024 Hz sampling, average reference, and complete central/occipital geometry in all 30 groups | The exact-36 reader assumption was wrong, but H2 still routed `IACKDR-R1`: HEOG, VEOG, and Trigger are source-typed `MISC`, exposing a frozen control-taxonomy bug before any EEG sample, event, target, model, or score was accessed |
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
 | Full-path causality gate | Loop 25 v1 passed a dedicated causal anti-alias audit, 65,537 response points, 23 alias probes, 168 schedule checks, 240 resume checks, and 72 future-mutation controls across 24 target-free items | The exact 1000-to-100 Hz path is mechanically causal with zero right context; this is synthetic mechanics evidence, not proof that neural information survives |
 | Consumed S21 validation | The registered 2,908-parameter candidate reached macro CER `0.938177`; the train-only no-signal prior reached `0.751235`, so the candidate was worse by `0.186942` | Loop 26 is parked after one consumed six-target event; this is a clear negative result, not neural advantage |
@@ -895,6 +895,16 @@ Read this before interpreting any number in the repository.
   green job IDs, and the unchanged 316-object scope. The decision must itself
   be committed, pushed, and remotely green before the single metadata audit;
   recording it made zero metadata requests or local-bundle operations.
+- **H2 measured result, consumed at `IACKDR-R1`:** decision `f6eb5ab` passed
+  both jobs in CI `31444154297` before one 316-request, 457,602-byte audit.
+  Response, parsing, privacy, geometry, resource, and replay gates passed in
+  `55.592999708s` at 86,769,664-byte peak RSS. The metadata consistently shows
+  26 predictive EEG channels, three `MISC` controls, 1024 Hz, average reference,
+  and complete central/occipital geometry across all 30 groups. The frozen
+  contract rejected its own candidate because it did not accept `MISC` for
+  HEOG/VEOG and separated the named trigger from the sidecar's three-MISC
+  count. Read the [aggregate result](docs/IACKD_CHANNEL_ROLE_GEOMETRY_RESULT.md).
+  H2 has no rerun and establishes no neural or decoding result.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

@@ -226,6 +226,15 @@ said `continue :)`. The separate decision preserves those words and leaves the
 decision before the private consumed marker or first request; all current
 real-access counters remain zero.
 
+Decision `f6eb5ab` passed both jobs in CI `31444154297` before the sole audit.
+H2 is consumed at `IACKDR-R1` after exactly 316 requests and 457,602 bytes in
+55.592999708 seconds at 86,769,664-byte peak RSS. The source has one stable
+26-channel EEG core, 1024 Hz, average reference, and complete central and
+occipital geometry across 30 groups. The frozen contract mishandled HEOG,
+VEOG, and Trigger because all are source-typed and sidecar-counted as `MISC`.
+No sample, event, target, model, prediction, or score was accessed. Do not
+rerun or amend H2; specify a new source-type-first policy prospectively.
+
 Registration `2a7b4188553e221133d788a081b838dbbb9f41bb` passed Base Python
 job `93215490492` and Optional Neuro Readers job `93215490501` in CI
 `31301730612`. The additive authorization packet and all-false machine request

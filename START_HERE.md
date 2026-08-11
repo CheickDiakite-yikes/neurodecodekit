@@ -429,6 +429,13 @@
    registry. The decision binds request `86174bc` and green CI `31431064259`
    without expanding scope. It is not effective until its own commit is pushed
    and both CI jobs pass; no H2 body may be fetched before that final gate.
+   Decision `f6eb5ab` passed both jobs in CI `31444154297`, then the sole audit
+   completed and consumed all 316 bodies. Read
+   `docs/IACKD_CHANNEL_ROLE_GEOMETRY_RESULT.md` and its registry. Route
+   `IACKDR-R1` records a frozen control-taxonomy mismatch: HEOG, VEOG, and
+   Trigger are all source-typed `MISC`, while count, sampling, 26-channel core,
+   average reference, and geometry are stable. There is no rerun or admissible
+   H2 role-map hash, and the retained bundle remains closed.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

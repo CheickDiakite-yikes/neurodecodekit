@@ -5307,3 +5307,29 @@ pass.
 Evidence: `docs/IACKD_CHANNEL_ROLE_GEOMETRY_AUTHORIZATION_DECISION.md`,
 `registries/iackd_channel_role_geometry_authorization_decision.v0.json`, and
 `tests/test_iackd_channel_role_geometry_authorization_decision.py`.
+
+## 0154 - Consume H2 At The Frozen Control-Taxonomy Mismatch
+
+Decision: preserve the completed execution and route `IACKDR-R1` without a
+retry, rerun, parser change, router change, or role-map approval.
+
+Evidence: decision `f6eb5ab650a0232a17d2f8f56c582c90bf0cf420` passed both
+jobs in CI `31444154297` before one 316-request/457,602-byte execution. Every
+response, hash, parse, resource, privacy, output, and aggregate replay gate
+passed. Runtime was 55.592999708 seconds at 86,769,664-byte peak RSS.
+
+Diagnosis: all 128 tables share one 26-channel predictive EEG core after
+optional M1/M2 removal; sampling is 1024 Hz; reference is average; and all 30
+geometry groups cover finite central and occipital sensors. The frozen contract
+still fails because HEOG, VEOG, and Trigger are source-typed `MISC`: its EOG
+predicate rejects the first two, and its trigger-separated count disagrees
+with sidecars that report all three as MISC.
+
+Interpretation: this is a prospective role-taxonomy error, not evidence that
+the source is malformed. The candidate role-map hash is inadmissible under R1.
+A separately named source-type-first policy may be designed from the aggregate
+result, but it must be frozen before any signal or scientific outcome access.
+
+Evidence: `docs/IACKD_CHANNEL_ROLE_GEOMETRY_RESULT.md`,
+`registries/iackd_channel_role_geometry_result.v0.json`, and
+`tests/test_iackd_channel_role_geometry_result.py`.

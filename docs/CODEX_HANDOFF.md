@@ -2200,3 +2200,28 @@ decision, and require both remote CI jobs green. Only at that exact HEAD may
 the one registered execution write its private consumed marker and begin the
 316 sequential requests. Do not edit the implementation or make a request
 before that proof.
+
+## 2026-08-10 IACKD-H2 Consumed Result
+
+Decision `f6eb5ab650a0232a17d2f8f56c582c90bf0cf420` passed Base Python
+job `93634720183` and Optional Neuro Readers job `93634720191` in CI
+`31444154297` before the one execution.
+
+Read `docs/IACKD_CHANNEL_ROLE_GEOMETRY_RESULT.md`,
+`registries/iackd_channel_role_geometry_result.v0.json`, and
+`tests/test_iackd_channel_role_geometry_result.py`. All 316 registered bodies
+and 457,602 bytes passed response identity, one-hash, one-parse, resource,
+privacy, and aggregate replay gates. Runtime was 55.592999708 seconds at
+86,769,664-byte peak RSS; retained output is 10,027 bytes.
+
+The consumed route is `IACKDR-R1`. There is one stable 26-channel EEG core,
+1024 Hz sampling, average reference, and complete C3/C4/Cz and O1/Oz/O2
+geometry in all 30 groups. The frozen contract rejected HEOG and VEOG because
+the source types both as `MISC`, then disagreed with sidecars by counting the
+`MISC` Trigger separately from their three-MISC total. The source declarations
+are mutually consistent; the frozen role taxonomy is not.
+
+Do not rerun H2, amend its parser/router, approve its candidate role-map hash,
+or open the existing local bundle. The next safe research step is a new
+prospective source-type-first control policy, using only this aggregate result
+and frozen before any signal, event, target, model, or outcome access.

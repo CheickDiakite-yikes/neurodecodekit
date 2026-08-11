@@ -962,3 +962,12 @@ sole active Tier C packet, and then received the fresh maintainer response
 unchanged 316-object scope. It remains ineffective until the decision commit
 is pushed and both CI jobs pass. Decision recording performed zero requests,
 local-bundle operations, signal/target reads, model runs, or scores.
+
+Decision `f6eb5ab` passed both jobs in CI `31444154297`, and the sole H2 audit
+is now consumed at `IACKDR-R1`: 316 bodies, 457,602 bytes, 55.592999708 seconds,
+86,769,664-byte peak RSS, and zero forbidden counters. One 26-channel EEG core,
+1024 Hz, average reference, and all 30 central/occipital geometry groups are
+stable. The frozen contract's EOG and sidecar predicates mishandled the
+source's consistent three-`MISC` control taxonomy. No H2 rerun or role-map
+approval is open; next design a separately named source-type-first policy from
+aggregate evidence only.
