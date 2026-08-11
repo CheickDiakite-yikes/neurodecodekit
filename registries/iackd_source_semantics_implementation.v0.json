@@ -1,0 +1,173 @@
+{
+  "schema_name": "neurodecodekit.iackd_source_semantics_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "IACKD-H3-source-semantics-generated-implementation-v0",
+  "recorded_at_local": "2026-08-10",
+  "status": "generated_fixture_qualified_pending_exact_implementation_remote_green_before_measured_closeout",
+  "proof_posture": "standard_library_generated_target_free_metadata_only_zero_real_public_local_bundle_signal_target_model_or_score_access",
+  "green_research": {
+    "commit": "ed5ce8292c2c1dc842898023cfe8cb608e9d4476",
+    "push_CI_run_id": 31445790741,
+    "base_python_job_id": 93639606343,
+    "optional_neuro_job_id": 93639606403,
+    "both_required_jobs_green": true
+  },
+  "policy_binding": {
+    "registry_path": "registries/iackd_source_declared_control_policy_research.v0.json",
+    "registry_sha256": "c3727d297e5f95f9a81de819b90a2048d1292810b646e2591e69412e8cb04ea7",
+    "policy_name": "IACKD-SourceSemanticsPolicy",
+    "policy_version": "0.1.0",
+    "policy_sha256": "1117c90d77971ee0ec2f5e138bdf9ea76eef412a4b5c44c1d2b88c31f88f39f4",
+    "dataset_BIDS_version": "1.7.0",
+    "dataset_misc_count_field": "MiscChannelCount",
+    "current_BIDS_migration_field": "MISCChannelCount"
+  },
+  "tracked_file_hashes": [
+    {
+      "path": "src/neurodecodekit/preprocess/iackd_source_semantics.py",
+      "sha256": "7f4cb2ea90e3ea538ccbad7160622bf91d723e2cc568187b106232e99bd7331c"
+    },
+    {
+      "path": "tests/test_iackd_source_semantics.py",
+      "sha256": "bc5d3812c7cec7b0cf621955c19d91cc91997d5c5aad78273042139d4a2ef011"
+    },
+    {
+      "path": "docs/IACKD_SOURCE_SEMANTICS_IMPLEMENTATION.md",
+      "sha256": "4a828f2e9bb94448e2182b521873390d54eb86ae44eff372f1c07ab84ab898df"
+    },
+    {
+      "path": "tests/test_iackd_source_semantics_implementation.py",
+      "sha256": "ef29487898028715e861fd323eeea3165ad54c566fe6d4d68140e5f5396afeb0"
+    }
+  ],
+  "implemented_interface": {
+    "standard_library_only": true,
+    "dry_run_default": true,
+    "generated_fixture_mode": true,
+    "bounded_inspection_mode": true,
+    "real_execute_mode_exists": false,
+    "top_level_CLI_integration_added": false,
+    "module_CLI": "python -m neurodecodekit.preprocess.iackd_source_semantics",
+    "fixture_row_counts": [
+      29,
+      31
+    ],
+    "predictive_EEG_count_per_fixture": 26,
+    "source_semantic_layers": [
+      "source_type",
+      "functional_role",
+      "model_inclusion"
+    ],
+    "derivative_binding_hashes": [
+      "source_order_sha256",
+      "source_type_count_sha256",
+      "functional_role_sha256",
+      "model_inclusion_mask_sha256",
+      "geometry_available_mask_sha256"
+    ],
+    "target_firewall_recursive": true,
+    "exclusive_output_write": true,
+    "strict_load_validate_summary_APIs": true,
+    "raw_fixture_rows_in_report": false,
+    "generated_coordinates_in_report": false,
+    "dependency_installation": false
+  },
+  "adversarial_coverage": {
+    "generated_mutation_attempts": 13,
+    "distinct_refusal_classes": 12,
+    "registered_refusal_classes": 16,
+    "mutation_names": [
+      "BIDS_version",
+      "count_spelling",
+      "fixture_schema",
+      "source_order",
+      "duplicate_channel",
+      "source_type",
+      "sidecar_count",
+      "reference",
+      "geometry",
+      "binding",
+      "target_firewall",
+      "functional_role_overlap",
+      "predictive_model_mask"
+    ],
+    "additional_qualified_conditions": [
+      "unknown_channel",
+      "missing_channel",
+      "sampling_drift",
+      "nonfinite_geometry",
+      "optional_reference_geometry_missing",
+      "normalized_name_with_preserved_display_spelling",
+      "rewritten_indices_after_source_order_mutation",
+      "policy_hash_drift",
+      "wrong_thread_environment",
+      "output_collision",
+      "small_output_cap",
+      "malformed_report",
+      "forbidden_access_counter",
+      "new_heavy_import",
+      "fixed_monitor_byte_replay",
+      "module_CLI_roundtrip"
+    ]
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "concurrent_numerical_jobs": 1,
+    "wall_time_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "generated_output_bytes": 2097152,
+    "network_bytes": 0,
+    "real_or_public_metadata_bodies": 0,
+    "local_IACKD_bundle_operations": 0,
+    "dependency_installs": 0
+  },
+  "verification": {
+    "focused_research_and_implementation_tests": 43,
+    "focused_passed": true,
+    "complete_base_tests": 1824,
+    "complete_base_skips": 182,
+    "complete_base_suite_passed": true,
+    "complete_optional_tests": 1895,
+    "complete_optional_skips": 13,
+    "complete_optional_suite_passed": true,
+    "ruff_version": "0.15.20",
+    "ruff_passed": true,
+    "compileall_passed": true,
+    "registry_JSON_files_valid": 135,
+    "module_CLI_help_default_fixture_inspect_passed": true,
+    "git_diff_check_passed": true
+  },
+  "implementation_access_counters": {
+    "Git_ignored_execution_artifact_reads": 0,
+    "real_or_public_metadata_requests": 0,
+    "network_bytes": 0,
+    "local_IACKD_path_stats_or_opens": 0,
+    "VHDR_or_sibling_operations": 0,
+    "signal_sample_reads": 0,
+    "marker_or_event_reads": 0,
+    "trajectory_reads": 0,
+    "target_or_label_reads": 0,
+    "cache_split_or_derivative_operations": 0,
+    "feature_extraction_runs": 0,
+    "model_or_checkpoint_loads": 0,
+    "training_or_parameter_update_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_sets_or_scoring_runs": 0,
+    "provider_or_language_model_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "execution_state": {
+    "implementation_commit_remote_green": false,
+    "measured_generated_closeout_executed": false,
+    "real_reader_authorized": false,
+    "public_or_local_source_body_access_authorized": false,
+    "IACKD2_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "NeuroDecodeKit now has a deterministic version-aware policy validator that preserves source BIDS counts before assigning functional roles and model inclusion with strict derivative hashes and fail-closed synthetic qualification.",
+    "scientific_claim_not_established": "No real or public IACKD body local bundle signal event trajectory target model prediction or score was accessed so this implementation establishes no neural effect action decoding brain-specific origin generalization typing language or thought decoding real-time operation hardware capability assistive benefit or clinical use."
+  }
+}

@@ -2246,3 +2246,23 @@ Next gate after this research commit is remotely green: implement one bounded
 standard-library generated-fixture qualification under 30 seconds, 256 MiB
 RSS, and 2 MiB output. Do not read a public body or local bundle, implement a
 real reader, or enter IACKD-2 from this research record.
+
+## 2026-08-10 IACKD-H3 Generated-Fixture Implementation
+
+Research `ed5ce8292c2c1dc842898023cfe8cb608e9d4476` passed Base Python
+job `93639606343` and Optional Neuro Readers job `93639606403` in CI
+`31445790741` before implementation.
+
+Read `docs/IACKD_SOURCE_SEMANTICS_IMPLEMENTATION.md`,
+`registries/iackd_source_semantics_implementation.v0.json`,
+`src/neurodecodekit/preprocess/iackd_source_semantics.py`, and the two H3
+implementation test files. The module is standard-library only, has no real
+executor, and validates generated 29/31-row signatures with a fixed 26-channel
+predictive core, five derivative hashes, deterministic replay, a target
+firewall, and 13 mutations covering 12 refusal classes.
+
+Next gate: complete verification, commit and push the exact implementation,
+and require both remote CI jobs green. Then run one measured generated-fixture
+closeout under 30 seconds, 256 MiB RSS, and 2 MiB output. Do not touch a public
+body, the retained bundle, signals, events, targets, models, scores, or
+IACKD-2.

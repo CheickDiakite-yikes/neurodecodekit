@@ -912,8 +912,12 @@ Read this before interpreting any number in the repository.
   and gives HEOG/VEOG/Trigger nonpredictive roles without moving them out of
   their declared MISC count. Read the
   [policy research](docs/IACKD_SOURCE_DECLARED_CONTROL_POLICY_RESEARCH.md).
-  This is prospective engineering only; generated-fixture qualification is
-  next, and no real reader or IACKD-2 execution is authorized.
+  The [dependency-free implementation](docs/IACKD_SOURCE_SEMANTICS_IMPLEMENTATION.md)
+  now qualifies 29-row and 31-row generated fixtures, five separate derivative
+  hashes, deterministic replay, target leakage refusal, and 13 adversarial
+  mutations spanning 12 fail-closed classes. It has no real-data executor; one
+  measured generated closeout waits for this exact implementation to pass both
+  remote CI jobs, and IACKD-2 remains unauthorized.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

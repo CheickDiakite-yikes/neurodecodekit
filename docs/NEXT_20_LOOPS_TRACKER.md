@@ -982,3 +982,11 @@ maps HEOG/VEOG/Trigger to nonpredictive controls without rewriting their MISC
 source type. After this research commit is remotely green, only a bounded
 generated-fixture qualification is open. Public or local IACKD content,
 signals, targets, models, scoring, and IACKD-2 remain closed.
+
+Research `ed5ce82` passed both jobs in CI `31445790741` before H3
+implementation. The dependency-free module now validates deterministic 29-row
+and 31-row target-free fixtures, keeps the 26-channel predictive matrix fixed,
+emits separate source-order/count, role, model-mask, and geometry-mask hashes,
+and exercises 13 mutations covering 12 refusal classes. It has no real execute
+surface. One measured generated closeout is held until the exact implementation
+commit is remotely green; public/local IACKD data and IACKD-2 remain closed.

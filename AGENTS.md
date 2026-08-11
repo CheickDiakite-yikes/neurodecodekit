@@ -226,6 +226,16 @@ is artifact-only planning, not an H2 amendment or validated reader. After this
 research commit is remotely green, one bounded generated-fixture-only Tier B
 qualification may proceed; real/public data, the retained bundle, signals,
 targets, models, scores, and IACKD-2 remain unauthorized.
+Research `ed5ce82` passed Base Python job `93639606343` and Optional Neuro
+Readers job `93639606403` in CI `31445790741` before the dependency-free H3
+validator was implemented. Read `docs/IACKD_SOURCE_SEMANTICS_IMPLEMENTATION.md`
+and `registries/iackd_source_semantics_implementation.v0.json`. The module
+creates 29-row and 31-row target-free fixtures, preserves source counts before
+role mapping, emits five separate derivative hashes, exercises 13 mutations
+covering 12 refusal classes, and exposes only plan, fixture, and inspect module
+CLI modes. There is no real executor. Commit, push, and obtain both green jobs
+for this exact implementation before one measured generated closeout. Do not
+read a public body or local bundle, enter IACKD-2, or infer a neural result.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

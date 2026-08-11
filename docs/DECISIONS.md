@@ -5355,3 +5355,30 @@ qualification may follow only after this research commit is remotely green.
 Evidence: `docs/IACKD_SOURCE_DECLARED_CONTROL_POLICY_RESEARCH.md`,
 `registries/iackd_source_declared_control_policy_research.v0.json`, and
 `tests/test_iackd_source_declared_control_policy_research.py`.
+
+## 0156 - Qualify H3 On Generated Metadata Before Any Reader
+
+Decision: implement the H3 policy as a dependency-free generated-fixture
+validator with no real-data executor. Hold one measured closeout until this
+exact implementation is committed, pushed, and both CI jobs pass.
+
+Basis: research `ed5ce82` passed both jobs in CI `31445790741`. The H2
+aggregate did not publish an exact real source order, so generated source-order
+hashes qualify binding mechanics only and cannot be represented as observed
+source evidence.
+
+Interface: validate 29-row and 31-row target-free signatures, preserve exact
+source counts before assigning roles, keep one 26-channel predictive output
+order, emit five separate derivative hashes, replay deterministically, reject
+target fields, and exercise at least twelve distinct refusal classes. Expose
+only plan, generated-fixture, and inspect module CLI modes.
+
+Boundary: no public or local IACKD body, retained bundle, real reader, signal,
+event, trajectory, target, derivative, model, prediction, score, provider,
+hardware, release, IACKD-2 entry, or claim upgrade. A green implementation may
+open only one measured generated closeout under the registered caps.
+
+Evidence: `docs/IACKD_SOURCE_SEMANTICS_IMPLEMENTATION.md`,
+`registries/iackd_source_semantics_implementation.v0.json`,
+`src/neurodecodekit/preprocess/iackd_source_semantics.py`, and
+`tests/test_iackd_source_semantics.py`.

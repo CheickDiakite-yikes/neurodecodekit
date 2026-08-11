@@ -439,8 +439,11 @@
    Then read `docs/IACKD_SOURCE_DECLARED_CONTROL_POLICY_RESEARCH.md` and its
    registry. H3 is a separately named artifact-only repair that preserves BIDS
    1.7.0 source counts before assigning functional roles. Its candidate policy
-   is not a validated reader; after remote green, only a generated-fixture Tier
-   B qualification is open.
+   is not a validated reader. Research `ed5ce82` is remotely green; now read
+   `docs/IACKD_SOURCE_SEMANTICS_IMPLEMENTATION.md` and its registry. The module
+   has only plan, generated-fixture, and inspect modes. One measured synthetic
+   closeout waits for the exact implementation to become green; real data and
+   IACKD-2 stay closed.
    Then read the CML-v0 architecture research followed by
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_PREREGISTRATION.md`,
    `docs/CAUSAL_MOTOR_LATTICE_SYNTHETIC_IMPLEMENTATION.md`, and

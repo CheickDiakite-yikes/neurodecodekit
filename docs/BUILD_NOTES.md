@@ -6828,3 +6828,35 @@ exact control-taxonomy bug while preserving BIDS truth and model isolation.
 
 Scientific claim not established: this planning artifact accessed no signal,
 event, target, model, prediction, or score and adds no neural evidence.
+
+## 2026-08-10 - IACKD-H3 Generated-Fixture Implementation
+
+- Research `ed5ce82` passed both required jobs in CI `31445790741` before
+  implementation.
+- Added a standard-library policy loader and validator bound to candidate hash
+  `1117c90d77971ee0ec2f5e138bdf9ea76eef412a4b5c44c1d2b88c31f88f39f4`.
+- Added deterministic 29-row and 31-row target-free fixtures that preserve
+  26/28 EEG plus three MISC source counts while holding one 26-channel
+  predictive output order.
+- Added separate source-order, source-count, functional-role, model-mask, and
+  geometry-mask hashes, plus strict source index, sampling, reference, and
+  geometry validation.
+- Added 13 generated mutations spanning 12 distinct refusal classes, including
+  BIDS version and count spelling, role overlap, model-mask drift, binding
+  drift, and target leakage.
+- Added exclusive bounded output, load/validate/summary APIs, fixed-monitor
+  byte replay, heavy-import and access-counter firewalls, and a module CLI with
+  no real execute mode.
+- Forty-three focused research and implementation invariants pass. Complete
+  base, optional-neuro, lint, compile, registry, CLI, and diff verification are
+  required before the implementation commit.
+- No measured closeout has executed. It remains held until the exact
+  implementation commit is pushed and both remote CI jobs pass.
+
+Engineering capability added: the prospective H3 policy is now executable and
+failure-addressable on generated metadata without conflating source type,
+functional role, or model inclusion.
+
+Scientific claim not established: no real or public body, local bundle,
+signal, event, target, model, prediction, or score was accessed, so this adds
+no neural or decoding evidence.

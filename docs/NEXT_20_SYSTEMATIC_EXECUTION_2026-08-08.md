@@ -355,3 +355,13 @@ refusal classes, one thread and worker, 30 seconds, 256 MiB RSS, and less than
 2 MiB output. Network, public or local data, retained-bundle access, signals,
 events, trajectories, targets, derivatives, models, scoring, and IACKD-2 stay
 at zero.
+
+Research `ed5ce82` is now remotely green in CI `31445790741`, and the bounded
+standard-library validator is implemented. It provides generated 29/31-row
+fixtures, version-specific MISC count handling, source-before-role
+reconciliation, one fixed 26-channel predictive output, five derivative
+hashes, 13 mutations covering 12 refusal classes, strict reports, and a
+plan/fixture/inspect module CLI with no real executor. Complete local
+verification, commit, push, and both green jobs are the next gate; only then
+run one measured generated closeout. Every real/public/local data and IACKD-2
+counter stays closed.
