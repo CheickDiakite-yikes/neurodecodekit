@@ -3358,3 +3358,39 @@ then implement the generated/mock real selector. Do not touch the retained
 Freewill manifest or Wrist endpoint until that exact implementation is also
 remotely green. After both green milestones, the one registered metadata
 selection may run with no retry and no payload access.
+
+## 2026-08-12 MARC1-P1A Live Selector Implementation Handoff
+
+Decision `9726d07ab08e9c2815dbe68398659f454693be5e` passed Base Python
+job `94044627592` and Optional Neuro Readers job `94044627647` in CI
+`31574870204` before implementation. Read
+`docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_LIVE_IMPLEMENTATION.md`,
+`registries/marc1_privacy_preserving_pilot_selection_live_implementation.v0.json`,
+`src/neurodecodekit/datasets/marc1_pilot_selection_live.py`, and the two
+matching live-selector test modules.
+
+The additive standard-library wrapper freezes the exact private input and one
+public Figshare v3 endpoint. It requires one no-follow/open/read/hash/parse of
+the 418,755-byte mode-`0600` Freewill manifest, exactly 55 seven-field Wrist
+rows totaling 3,683,416,050 bytes, `sub-01.zip` through `sub-45.zip`, and the
+known public `sub-01` identity anchor. It refuses target-like fields, automatic
+or private-address redirects, malformed framing, alternate sources, fallback,
+retry, and rerun. Its private marker precedes every real input.
+
+Final generated `MARC1PSL-G1` passed all 15 gates and 26 refusals over 866,578
+input bytes in 0.1832679167855531 seconds at 50,905,088-byte reported peak
+RSS. It selected the exact 12+12 cohorts and 300 private rows, reserved
+1,223,853,749 future payload bytes, emitted 214,553 temporary bytes, and made
+zero real or network operations. The outputs were removed. Thirty-one focused,
+329 MARC, 2,468 dependency-light, and 2,539 optional-neuro tests pass with no
+new skips.
+
+Immediate next gate: commit and push this exact implementation, then require
+both remote CI jobs green. Do not touch the retained Freewill manifest or the
+Wrist endpoint before that proof. After green proof, only the single registered
+metadata selection may run; it has no retry and cannot acquire a payload.
+Payload acquisition requires a new prospective Tier C packet and decision.
+
+This is the same thought-to-text path. MARC1-P1A makes the next confound-
+resolved positive-control cohort reproducible; it does not itself add a neural
+or language result.

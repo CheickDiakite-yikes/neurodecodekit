@@ -6525,3 +6525,42 @@ Evidence:
 `docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_AUTHORIZATION_DECISION.md`,
 `registries/marc1_privacy_preserving_pilot_selection_authorization_decision.v0.json`,
 and `tests/test_marc1_pilot_selection_authorization_decision.py`.
+
+## 0195 - Freeze The Real Metadata Selector Before Opening Either Source
+
+Evidence-order decision: implement the additive live selector only after
+decision `9726d07ab08e9c2815dbe68398659f454693be5e` passed both jobs in CI
+`31574870204`. Keep the retained 418,755-byte Freewill manifest and public
+Wrist endpoint unavailable during implementation and generated qualification.
+
+Source decision: freeze Wrist participants as exactly `sub-01.zip` through
+`sub-45.zip`, with public `sub-01` file ID `62570743`, size `33,690,749`, and
+MD5 `6b01cf5bd30de0c670d2837d112a17fa` as an independent anchor. Accept only the
+seven source fields `id`, `name`, `size`, `is_link_only`, `download_url`,
+`supplied_md5`, and `computed_md5`. Any schema or naming mismatch parks; no
+post-response fallback or parser amendment is allowed.
+
+Firewall decision: refuse target-like fields; disable automatic redirects;
+require globally routable HTTPS redirect destinations; accept one terminal
+JSON body; and create a private consumed marker before any real input. Reuse
+the frozen generated selector's rank, split, completeness, privacy, and byte-
+cap rules without modifying it. Expose no payload, event, signal, target,
+model, score, alternate source, retry, or rerun interface.
+
+Qualification decision: accept generated `MARC1PSL-G1` only as engineering
+proof after exact 12+12 cohort selection, 300 private rows, deterministic
+replay, 26/26 refusals, 15/15 gates, 866,578 generated input bytes, 214,553
+temporary output bytes, 0.183268-second runtime, 50,905,088-byte reported peak
+RSS, and zero real/scientific counters. Remove the generated outputs.
+
+Next-step decision: commit, push, and green this exact wrapper before the one
+registered metadata invocation. A future `MARC1PS-R1` may establish only that
+the frozen source identities exist and fit the caps. Payload acquisition and a
+controlled neural effect remain later gates; language decoding and thought-to-
+text remain later still on the same research path.
+
+Evidence:
+`docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_LIVE_IMPLEMENTATION.md`,
+`registries/marc1_privacy_preserving_pilot_selection_live_implementation.v0.json`,
+`src/neurodecodekit/datasets/marc1_pilot_selection_live.py`, and the two
+matching test modules.

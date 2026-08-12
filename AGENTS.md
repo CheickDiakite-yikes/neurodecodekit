@@ -754,12 +754,34 @@ packet. The aspiration to reach a scientific thought-to-text result does not
 predeclare an outcome or authorize payload, signal, target, model, score, or
 claim operations.
 
-Commit, push, and require both jobs green for that exact decision. Only then
-implement and qualify the generated/mock real selector. Do not inspect the
-sealed manifest or request Wrist metadata until that exact implementation is
-also remotely green. MARC1-P1 is a confound-resolution rung on the same
-thought-to-text path, not a pivot or a replacement for the later language-
-specific held-out experiment.
+Decision `9726d07ab08e9c2815dbe68398659f454693be5e` passed Base Python
+job `94044627592` and Optional Neuro Readers job `94044627647` in CI
+`31574870204` before implementation. Read
+`docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_LIVE_IMPLEMENTATION.md`,
+`registries/marc1_privacy_preserving_pilot_selection_live_implementation.v0.json`,
+and the two matching tests. The additive standard-library wrapper freezes the
+exact one-read private source, seven-field Wrist schema, `sub-01.zip` through
+`sub-45.zip` participant rule, public `sub-01` anchor, target-field firewall,
+manual global-only redirect policy, machine gate, consumed marker, and private/
+public output split. It has no payload, signal, target, model, scorer, override,
+retry, or fallback interface.
+
+One final generated/mock qualification passed `MARC1PSL-G1` over 866,578 input
+bytes with 300 private rows, exact 12+12 cohorts, all 26 refusals, and all 15
+gates in 0.1832679167855531 seconds at 50,905,088-byte reported peak RSS. It
+emitted 214,553 temporary bytes, which were removed. Every real, network,
+payload, neural, target, model, score, and claim counter stayed zero. Thirty-
+one focused, 329 MARC, 2,468 dependency-light, and 2,539 optional-neuro tests
+pass with no new skips.
+
+Commit, push, and require both jobs green for this exact wrapper before the
+single registered metadata selection. Until then, do not inspect the sealed
+manifest or request Wrist metadata. After green proof, the only eligible real
+sequence remains one private-manifest read, one public metadata body, one
+target-free selection, and one result, with no retry. Payload acquisition,
+signals, targets, models, scores, releases, and claims remain closed. MARC1-P1
+is a confound-resolution rung on the same thought-to-text path, not a pivot or
+a replacement for the later language-specific held-out experiment.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

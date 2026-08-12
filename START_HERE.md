@@ -1308,8 +1308,30 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   unchanged packet by hash, treats the scientific result as an objective
   rather than a predeclared outcome, and authorizes zero payload bytes.
 
-  Immediate next gate: test, commit, push, and green this exact decision. Only
-  then may generated/mock real-selector implementation begin. The retained
-  Freewill manifest and Wrist endpoint remain closed until that exact
-  implementation is also remotely green. This is the same thought-to-text
-  path, not a pivot, and movement evidence is not language evidence.
+  Decision `9726d07ab08e9c2815dbe68398659f454693be5e` passed Base Python
+  job `94044627592` and Optional Neuro Readers job `94044627647` in CI
+  `31574870204` before implementation. Read
+  `docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_LIVE_IMPLEMENTATION.md`,
+  `registries/marc1_privacy_preserving_pilot_selection_live_implementation.v0.json`,
+  and the two matching live-selector test modules. The additive standard-
+  library wrapper now freezes the exact private source, seven-field Wrist
+  schema, `sub-01.zip` through `sub-45.zip` participant rule, known `sub-01`
+  anchor, target-field firewall, global-only redirect policy, one-shot marker,
+  machine gate, and private/public outputs. It has no payload, signal, target,
+  model, scorer, override, retry, or fallback interface.
+
+  One final generated/mock qualification passed `MARC1PSL-G1` with 866,578
+  input bytes, 214,553 output bytes, 300 private rows, the exact 12+12 cohorts,
+  all 26 refusals, and all 15 gates in 0.183268 seconds at 50,905,088-byte
+  reported peak RSS. All real, network, payload, neural, target, model, score,
+  and claim counters stayed zero; the temporary outputs were removed. Thirty-
+  one focused, 329 MARC, 2,468 dependency-light, and 2,539 optional-neuro tests
+  pass with no new skips.
+
+  Immediate next gate: commit, push, and require both remote CI jobs green for
+  this exact wrapper. Only then may its one registered metadata selection open
+  the sealed Freewill manifest once and accept one Wrist metadata body. Do not
+  access either real input before that proof. Payload acquisition, signal,
+  target, model, score, release, and claim upgrades remain separate future
+  gates. This is the same thought-to-text path, not a pivot, and movement
+  evidence is not language evidence.

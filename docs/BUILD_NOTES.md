@@ -8115,3 +8115,41 @@ its exact implementation is remotely green.
 Scientific claim not established: authorization is not evidence. The stated
 thought-to-text destination remains the same, but a positive result is not
 predeclared and must be earned by later held-out neural evidence.
+
+## 2026-08-12 - MARC1-P1A Generated/Mock Live Selector
+
+- Confirmed decision `9726d07ab08e9c2815dbe68398659f454693be5e`
+  green in CI `31574870204`: Base Python job `94044627592` and Optional Neuro
+  Readers job `94044627647` both passed before implementation.
+- Added one standard-library wrapper with no user-selected path, endpoint,
+  provider, credential, payload, signal, target, model, scorer, retry, or
+  fallback interface. The frozen generated selector remains byte-identical.
+- Implemented exact proof loading, clean-HEAD binding, one-thread/load/disk/RSS
+  preflight, a one-open no-follow private reader, strict seven-field Figshare
+  rows, the `sub-01.zip` through `sub-45.zip` rule, the public `sub-01` anchor,
+  a target-like-field firewall, manual global-only redirects, one accepted
+  body, a pre-input consumed marker, and private/public output separation.
+- Final generated `MARC1PSL-G1` processed 866,578 input bytes, selected the
+  exact 12+12 cohorts and 300 private rows, reserved 1,223,853,749 future
+  payload bytes, passed 26/26 refusals and 15/15 gates, and emitted 214,553
+  temporary bytes in 0.1832679167855531 seconds at 50,905,088-byte reported
+  peak RSS. External wall/RSS were 0.36 seconds and 50,987,008 bytes.
+- The aggregate and private output SHA-256 values are
+  `7d6ae39addfab24b74fbf7af2769d02acf92682b7985bbe94efd1db81a96538d`
+  and `70570ff568d54acee9fafd3d5df08498977c09fde82646b3689da3b567305f08`.
+  Both temporary outputs were removed and are not tracked.
+- Thirty-one focused tests, all 329 MARC tests, 2,468 dependency-light tests
+  with 204 expected skips, and 2,539 optional-neuro tests with 35 expected
+  skips pass. The complete suites add exactly 31 tests and zero skips over the
+  green decision baseline. External maximum RSS was 271,728,640 and
+  765,165,568 bytes, respectively.
+- Every real private/public input, network, payload, neural, target, model,
+  score, release, cleanup, other-project, and claim counter remained zero.
+
+Engineering capability added: the exact one-shot target-free real-metadata
+selector is locally qualified under strict storage, privacy, provenance, and
+machine protections.
+
+Scientific claim not established: no human neural payload, target,
+prediction, or score was accessed, so this adds no neural effect, language
+decoding, or thought-to-text evidence.

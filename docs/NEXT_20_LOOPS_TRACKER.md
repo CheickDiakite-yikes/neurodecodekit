@@ -1383,9 +1383,25 @@ The separate MARC1-P1A decision quotes that message exactly and binds only the
 unchanged green packet. The scientific objective is preserved but no positive
 outcome is predeclared.
 
-Next gate: test, commit, push, and green the exact decision. Only then may the
-generated/mock real-selector implementation begin. The sealed Freewill
-inventory and Wrist metadata remain unopened until that exact implementation
-is also remotely green. This is the same path toward a confound-resistant
-neural result and later language-specific thought-to-text evidence, not a
-pivot; movement evidence cannot itself establish language decoding.
+Decision `9726d07` passed both jobs in CI `31574870204` before the additive
+generated/mock live-selector implementation began. The wrapper now freezes one
+exact no-follow Freewill-manifest read, the seven-field Figshare Wrist schema,
+`sub-01.zip` through `sub-45.zip`, the known `sub-01` identity anchor, a target-
+field firewall, manual global-only redirects, the machine gate, consumed
+failure, and private/public output separation. It has no payload or model
+interface.
+
+Generated `MARC1PSL-G1` passed all 15 gates and 26 refusals over 866,578 input
+bytes in 0.183268 seconds at 50,905,088-byte reported peak RSS. It selected the
+frozen 12+12 cohorts and 300 private rows, reserved 1,223,853,749 future
+payload bytes, emitted 214,553 temporary bytes, and performed zero real,
+network, payload, neural, target, model, score, or claim operations. The
+outputs were removed. Thirty-one focused, 329 MARC, 2,468 dependency-light,
+and 2,539 optional-neuro tests pass with no new skips.
+
+Next gate: commit, push, and green this exact implementation. Only then may
+the single registered real metadata selection run. Passing that gate would
+complete Task 4 at the metadata layer and make a separately authorized Task 5
+payload-acquisition packet eligible; it would not itself add neural evidence.
+The path remains MARC-1 confound resolution followed by a controlled neural
+positive control and then language-specific held-out decoding, not a pivot.

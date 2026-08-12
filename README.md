@@ -368,7 +368,7 @@ negative result and S25 is never repurposed for calibration.
 | MARC1-CD1A decision routing | 12 decision invariants; 168 focused tests; 2,378 optional-neuro tests with 35 expected skips; 0 public requests | Request `950796d` passed CI `31513578445`; decision `624cc4e` passed CI `31519016891` before wrapper work | Authorized only the staged wrapper-then-one-audit sequence after two green milestones; added no archive-content or neural evidence |
 | MARC1-CD1A live archive inventory | 13.59 GB virtual ZIP; 306,758 accepted metadata bytes; 1,227 entries; 1,025 files; 202 directories; 14/14 gates; 0 archive/member payload bytes | Exact wrapper `5dfa3c4` passed CI `31521510374` before one invocation; `MARC1CD-R1` passed in 2.727 sec at 43,974,656-byte peak RSS and is consumed | Adds a real, storage-safe map of the public archive without downloading it; member selection, neural data, models, scores, and scientific claims remain closed |
 | MARC1-P1 generated pilot selector | 1,227 + 55 generated rows; 12 preregistered participants per axis; 72 Freewill bundles/288 members; 12 Wrist archives; 36/36 refusals; 15/15 gates; 0 real operations | Exact implementation `0c0a698` passed CI `31571668853` before the one closeout; `MARC1PSG-R1` used 873,348 input and 182,564 output bytes in 0.227 sec at 32.4 MB reported RSS and is consumed | Proves deterministic, private, size-independent pilot selection mechanics under an 8-GiB ceiling; adds no neural or thought-to-text evidence |
-| MARC1-P1A real-selection request | 1 future 418,755-byte private-manifest read; 1 future Wrist metadata body capped at 2 MiB; 12+12 frozen participants; 0 payload bytes; every current authorization flag/counter false | Green result `fd24629` passed CI `31572950727`; all-false request awaits commit, push, green CI, identification, and a fresh packet-bound decision | Makes the next real metadata gate exact without opening either source; authorizes no operation and adds no neural or language evidence |
+| MARC1-P1A live-selector qualification | 866,578 generated input bytes; 12+12 frozen participants; 300 private rows; 26/26 refusals; 15/15 gates; 0 real/network/payload operations | Request `7f1ba09` and decision `9726d07` are green; the exact standard-library wrapper passed 31 focused tests and one `MARC1PSL-G1` qualification in 0.183 sec at 50.9 MB reported RSS, and now awaits its own commit/push/green proof | Makes the one-shot real metadata selector executable without opening either source; real selection, payloads, neural evidence, and language claims remain closed |
 
 ### Real-Data Scientific Scorecard
 
@@ -1211,19 +1211,33 @@ Read this before interpreting any number in the repository.
   model, score, and claim counters stayed zero. The generated lane is consumed;
   real metadata selection remains a later Tier C gate. The
   [MARC1-P1A authorization packet](docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_AUTHORIZATION_PACKET.md)
-  now freezes a future staged wrapper and one selection over exactly one
-  418,755-byte sealed Freewill-manifest read plus one Wrist metadata body
-  capped at 2 MiB. Its machine request is all false: it must be committed,
-  pushed, remotely green, identified as the sole active Tier C packet, and
-  followed by a fresh packet-bound maintainer decision before implementation
-  or access. Request `7f1ba09` passed both jobs in CI `31573969646`, and the
-  maintainer's fresh words `approved, continue, achieve a scientific claim,
-  achieve thought to text 😎` are now preserved verbatim in the
+  freezes one staged wrapper and one selection over exactly one 418,755-byte
+  sealed Freewill-manifest read plus one Wrist metadata body capped at 2 MiB.
+  Request `7f1ba09` passed both jobs in CI `31573969646`, and the maintainer's
+  fresh words `approved, continue, achieve a scientific claim, achieve thought
+  to text 😎` are preserved verbatim in the
   [MARC1-P1A decision](docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_AUTHORIZATION_DECISION.md).
-  That decision remains ineffective until its own commit is remotely green;
-  it does not predeclare a result or authorize payload bytes. MARC-1 is a
-  confound-resolution rung on the same thought-to-text path, not a pivot, and
-  movement evidence is not language evidence.
+  Decision `9726d07` passed Base Python job `94044627592` and Optional Neuro
+  Readers job `94044627647` in CI `31574870204` before wrapper work began.
+  Read the
+  [live-selector implementation](docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_LIVE_IMPLEMENTATION.md)
+  and its
+  [machine record](registries/marc1_privacy_preserving_pilot_selection_live_implementation.v0.json).
+  The additive standard-library wrapper freezes `sub-01.zip` through
+  `sub-45.zip`, the known public `sub-01` identity anchor, strict seven-field
+  Figshare rows, a target-field firewall, one no-follow private-manifest read,
+  manual global-only redirects, a pre-input machine gate, consumed failure,
+  and private/public output separation. Generated `MARC1PSL-G1` selected the
+  exact 12+12 cohorts and 300 private rows, passed 26/26 refusals and 15/15
+  gates over 866,578 input bytes, and emitted 214,553 temporary bytes in 0.183
+  seconds at 50,905,088-byte reported peak RSS. All real, network, payload,
+  neural, target, model, score, and claim counters stayed zero, and the
+  temporary outputs were removed. The exact wrapper must now be committed,
+  pushed, and pass both CI jobs before the single real metadata selection may
+  begin. That future pass still moves zero payload bytes and cannot establish
+  a scientific result. MARC-1 is a confound-resolution rung on the same
+  thought-to-text path, not a pivot, and movement evidence is not language
+  evidence.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
