@@ -1594,3 +1594,15 @@ Next gate: commit, push, and green the research, then freeze a generated-only
 MARC1-OP1 contract. Implementation, registered output-path access, another
 generated closeout, live metadata, and payload work remain closed. Task 4 stays
 on the same control-attribution to held-out-language path.
+
+Research `d02830b` passed both required jobs in CI `31595996923` before the
+generated-only MARC1-OP1 contract was frozen. It binds six accepted cases, 32
+refusals, ten routes, 20 gates, one exact `/private/tmp` path-only probe, and
+one qualifier only after `MARC1OP-P0`. The future wrapper must acquire a held
+parent capability first and may defer-import only pure hash-bound helpers; the
+consumed qualifier and source modification are forbidden.
+
+Next gate: commit, push, and green the contract, then implement only the
+generated/mock wrapper. Registered-path access, another generated closeout,
+live metadata, payload, and scientific claims remain closed. Task 4 remains on
+the same control-attribution to held-out-language path.

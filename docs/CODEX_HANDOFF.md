@@ -3739,3 +3739,22 @@ registered-path, network, private, payload, signal, target, model, and score
 operations were zero. Immediate next gate: verify, commit, push, and green this
 research. Only then freeze a generated-only MARC1-OP1 contract. Do not rerun
 MARC1-PG1 or prepare a live packet. This remains the same thought-to-text path.
+
+## 2026-08-12 MARC1-OP1 Generated Contract Handoff
+
+Research `d02830b95c76bc428a297c6415db933452af5cbb` passed Base Python
+job `94111539407` and Optional Neuro Readers job `94111539431` in CI
+`31595996923` before this contract. Read
+`docs/MARC_1_OUTPUT_CAPABILITY_RECOVERY_PREREGISTRATION.md`,
+`registries/marc1_output_capability_recovery_contract.v0.json`, and its test.
+
+The frozen design has six accepted cases, 32 refusals, ten routes, and 20
+gates. It allows one future path-only probe at the exact `/private/tmp` output
+path, then one qualifier only after `MARC1OP-P0`. Capability acquisition is
+first; all writes are parent-relative and exclusive; the consumed qualifier
+and source modification are forbidden.
+
+Immediate next gate: verify, commit, push, and green this exact contract. Only
+then implement the generated/mock wrapper. Do not stat the registered path,
+run a probe, import the consumed module eagerly, contact a dataset endpoint, or
+access any payload. The scientific objective and claim boundary are unchanged.

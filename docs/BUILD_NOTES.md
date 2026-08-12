@@ -8613,3 +8613,41 @@ future operation and later writes remain bound to one verified parent identity.
 Scientific claim not established: this research contains no live metadata,
 neural signal, target, prediction, score, language decoding, or thought-to-text
 evidence.
+
+## 2026-08-12 - MARC1-OP1 Generated Recovery Contract
+
+- Began only after research `d02830b` passed Base Python job `94111539407`
+  and Optional Neuro Readers job `94111539431` in CI `31595996923`.
+- Froze one additive standard-library surface with `plan`, `preflight`,
+  `qualify`, and `inspect`; module-scope consumed-pagination imports and calls
+  to its qualifier, output guard, or CLI are forbidden.
+- Bound one process-local held directory capability, all-ancestor no-follow
+  checks, device/inode/type revalidation, child absence twice, and exactly two
+  parent-relative exclusive output files.
+- Froze six accepted cases, 32 refusal mutations, eight failure routes, one
+  preflight success route, one generated success route, and 20 acceptance
+  gates.
+- Bound one exact `/private/tmp` path-only probe and one qualifier only after
+  `MARC1OP-P0`. Any probe or post-capability failure parks without retry or
+  substitution.
+- Preserved exact `page=1&page_size=1000`, 55-row inventory, 12+12 target-free
+  selection, split identity, resource caps, and zero real/private access.
+- Twelve focused contract invariants and all 551 MARC tests pass. The
+  dependency-light suite passes 2,690 tests with 204 expected skips in 21.616
+  seconds at 254,148,608-byte external peak RSS; the optional-neuro suite
+  passes 2,761 tests with 35 expected skips in 60.171 seconds at 771,571,712-
+  byte external peak RSS. Both add exactly twelve tests and zero skips.
+- A first optional-neuro invocation exceeded two older process-wide peak-RSS
+  rehearsal assertions at 813,596,672-byte external peak RSS. Those two tests
+  passed together in a fresh process, and the complete clean second invocation
+  passed as measured above; no production code was changed to mask the event.
+- Repository-wide Ruff, compilation, all 190 registry JSON parses, artifact
+  hash replay, and `git diff --check` pass. No registered-path, qualifier,
+  fixture, consumed-source, network, private, payload, signal, target, model,
+  score, provider, hardware, or other-project operation occurred.
+
+Engineering capability proposed: the generated wrapper can prove output
+authority before work and bind all writes to the held parent capability.
+
+Scientific claim not established: this contract opens no live metadata,
+payload, neural signal, target, model, prediction, score, or language result.

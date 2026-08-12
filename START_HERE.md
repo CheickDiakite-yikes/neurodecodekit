@@ -1516,3 +1516,17 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   introspection and zero fixture, source, network, private, payload, signal,
   target, model, or score operations. Next: green this research before freezing
   the generated-only MARC1-OP1 contract. The scientific path is unchanged.
+
+  Research `d02830b95c76bc428a297c6415db933452af5cbb` passed Base
+  Python job `94111539407` and Optional Neuro Readers job `94111539431` in CI
+  `31595996923` before the
+  [generated recovery contract](docs/MARC_1_OUTPUT_CAPABILITY_RECOVERY_PREREGISTRATION.md)
+  was frozen. It requires six accepted cases, 32 refusals across ten routes,
+  and 20 gates. One future path-only probe must reach `MARC1OP-P0` before one
+  qualifier can seek `MARC1OP-G1` at the exact `/private/tmp` destination.
+
+  The future module may defer-import hash-bound pure pagination helpers only
+  after capability acquisition. It cannot call the consumed qualifier, modify
+  its source, use absolute-path writes, contact a source, or expose payload,
+  target, model, or score behavior. Next: green this exact contract before
+  implementation. No scientific evidence changed.

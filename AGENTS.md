@@ -1021,6 +1021,22 @@ request live metadata, open a private root, or access payload, signal, target,
 model, prediction, or score. The research stays on the same thought-to-text
 path and establishes no scientific result.
 
+Research `d02830b95c76bc428a297c6415db933452af5cbb` passed Base Python
+job `94111539407` and Optional Neuro Readers job `94111539431` in CI
+`31595996923` before the generated-only MARC1-OP1 contract was frozen. Read
+`docs/MARC_1_OUTPUT_CAPABILITY_RECOVERY_PREREGISTRATION.md` and
+`registries/marc1_output_capability_recovery_contract.v0.json`. It binds six
+accepted cases, 32 refusals, ten routes, 20 gates, exact path
+`/private/tmp/neurodecodekit-marc1op1-registered-closeout-20260812`, one future
+path-only probe, and one qualifier only after `MARC1OP-P0`.
+
+Do not implement before both contract CI jobs are green. The future module may
+defer-import only hash-bound pure helpers after capability acquisition; it may
+not call `qualify_generated_pagination`, `_assert_new_output_directory`, or
+`main`, modify the consumed source, perform an absolute-path write, or expose a
+source/payload/model interface. Registered-path access remains closed until an
+exact generated implementation is separately green.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

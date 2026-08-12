@@ -378,6 +378,7 @@ negative result and S25 is never repurposed for calibration.
 | MARC1-HT1A packet-bound decision | Exact 76-byte maintainer message; one green packet; one future generated/mock wrapper; one future metadata-only attempt; 0 current data/model operations | Request `27f39ae` passed CI `31586256906`; decision records the fresh approval but is ineffective until its own CI is green | Preserves thought-to-text as the objective without predeclaring an outcome or expanding the zero-payload metadata scope |
 | MARC1-PG1 generated pagination lane | Development: 4/4 accepted cases, 41/41 refusals, 18/18 gates. Registered closeout: route `MARC1PG-F07`, 0 output bytes, 0 real/network bytes | Exact implementation `2c98a2a` passed CI `31593790492`; the sole closeout then refused a symlink output parent in 0.17 sec at 30,064,640-byte external peak RSS and is consumed without retry | Preserves a real process defect: output preflight happened after fixture construction. A new generated recovery must move it first; no live pagination or scientific result exists |
 | MARC1-OP1 output-capability research | One 672-byte candidate policy; held parent descriptor; device/inode binding; ancestor no-follow checks; parent-relative create/write/cleanup; 19 required pre-capability refusals; 0 fixture/network/real operations | Green consumed result `a4dcaea` / CI `31594881048` precedes this artifact-only design | Makes safe output authority the first future operation and refuses platforms that cannot enforce it; implementation and another generated run remain closed until their own green milestones |
+| MARC1-OP1 generated recovery contract | 6 accepted cases; 32 refusals; 10 routes; 20 gates; one exact `/private/tmp` path probe; one conditional generated qualifier; 0 current operations | Green research `d02830b` / CI `31595996923` precedes the frozen contract | Requires capability acquisition before any repository/fixture work, bans the consumed qualifier, and preserves exact pagination/cohort identity; implementation remains closed until contract CI |
 
 ### Real-Data Scientific Scorecard
 
@@ -1363,6 +1364,13 @@ Read this before interpreting any number in the repository.
   This research made zero fixture, network, private, payload, signal, target,
   model, or score operations. Its next gate is research commit, push, and both
   CI jobs green before a generated-only contract may be frozen.
+  Research `d02830b` passed Base Python job `94111539407` and Optional Neuro
+  Readers job `94111539431` in CI `31595996923` before the
+  [MARC1-OP1 contract](docs/MARC_1_OUTPUT_CAPABILITY_RECOVERY_PREREGISTRATION.md)
+  was frozen. It binds six accepted cases, 32 refusals, ten routes, 20 gates,
+  one exact path-only probe, and one conditional qualifier. The future wrapper
+  cannot import the consumed pagination module eagerly, call its qualifier, or
+  modify it. Every current access and authorization flag remains zero/false.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

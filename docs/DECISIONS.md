@@ -7025,3 +7025,35 @@ Evidence:
 `docs/MARC_1_OUTPUT_CAPABILITY_RECOVERY_RESEARCH.md`,
 `registries/marc1_output_capability_recovery_research.v0.json`, and
 `tests/test_marc1_output_capability_recovery_research.py`.
+
+## 0210 - Freeze A Probe-Then-Qualify Capability Sequence
+
+Evidence-order decision: freeze MARC1-OP1 only after research `d02830b` passed
+Base Python job `94111539407` and Optional Neuro Readers job `94111539431` in
+CI `31595996923`.
+
+Surface decision: allow only an additive standard-library `plan`, `preflight`,
+`qualify`, and `inspect` module. Ban eager consumed-pagination imports, calls to
+its qualifier/output guard/CLI, source modification, network, private input,
+payload, model, and absolute-path writes.
+
+Capability decision: require all-ancestor no-follow checks, a held parent
+descriptor, device/inode/type binding, child absence at acquisition and
+pre-write, and parent-relative exclusive creation of exactly two files.
+
+Sequence decision: after implementation green, run one exact path-only probe.
+Only `MARC1OP-P0` opens one qualifier. A failed probe or any post-capability
+failure parks without retry, rerun, substitution, or amendment.
+
+Qualification decision: require six accepted cases, 32 refusals, ten routes,
+20 gates, deterministic replay, unchanged pagination/selection identity,
+resource caps, zero forbidden counters, and exact cleanup.
+
+Path decision: this remains generated process recovery on the same route to a
+controlled neural effect and held-out language decoding. It is not scientific
+evidence.
+
+Evidence:
+`docs/MARC_1_OUTPUT_CAPABILITY_RECOVERY_PREREGISTRATION.md`,
+`registries/marc1_output_capability_recovery_contract.v0.json`, and
+`tests/test_marc1_output_capability_recovery_contract.py`.
