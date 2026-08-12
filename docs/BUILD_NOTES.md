@@ -8438,3 +8438,39 @@ uncoded HTTP metadata and fails closed at a deeper semantic identity boundary.
 Scientific claim not established: no neural payload, signal, target, model, or
 score was reached, so there is no neural, language-decoding, or thought-to-text
 result.
+
+## 2026-08-12 - MARC1-PG1 Versioned Pagination Recovery Research
+
+- Began only after consumed-result commit `1337a91` passed Base Python job
+  `94091696454` and Optional Neuro Readers job `94091696340` in CI
+  `31589739739`.
+- Added a Tier A research record and machine registry using only the committed
+  aggregate refusal, committed wrapper source, and pinned official Figshare
+  OpenAPI source. No dataset-specific endpoint, private path, payload, signal,
+  target, model, or score was accessed.
+- Bound official documentation commit
+  `751101d87c8fcea45556492bc627499ff49b0f2b` and two exact source bodies
+  totaling 196,169 bytes. The version-files operation specifies page size 1
+  through 1,000 with default 10; embedded `ArticleComplete.files` is capped at
+  ten and is not a complete inventory surface.
+- Recorded omitted pagination as the leading explanation for
+  `MARC1HTL-F04`, while retaining version-inventory drift and deployed-provider
+  divergence as alternatives. The actual consumed row count was not retained
+  and is not inferred to be 10.
+- Froze the prospective request identity to one exact
+  `page=1&page_size=1000` response and retained the unchanged 55-row,
+  45-participant, 10-supplementary, and 3,683,416,050-byte semantic identity.
+  A second page, fallback, partial cohort, or changed expectation refuses.
+- Added 11 dependency-light invariants covering local hashes, green anchors,
+  source facts, uncertainty, request identity, semantic identity, zero access,
+  resources, routing, and the claim boundary.
+- All 478 MARC tests pass in 5.689 seconds. The complete dependency-light suite
+  passes 2,617 tests with 204 expected skips in 20.441 seconds at 250,560,512-
+  byte external peak RSS; the optional-neuro suite passes 2,688 tests with 35
+  expected skips in 57.612 seconds at 753,532,928-byte external peak RSS.
+  Each complete suite adds exactly 11 tests and zero skips over the prior green
+  baseline. Ruff, compilation, all 185 registry JSON parses, CLI help, and
+  `git diff --check` pass.
+- Next: green this research milestone, then freeze a generated-only contract.
+  No new live body or scientific operation is authorized. This is the same
+  control-attribution to held-out-language path, not a pivot.

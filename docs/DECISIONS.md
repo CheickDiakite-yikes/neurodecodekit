@@ -6851,3 +6851,40 @@ Evidence:
 `docs/MARC_1_HTTP_IDENTITY_LIVE_RESULT.md`,
 `registries/marc1_http_identity_live_result.v0.json`, and
 `tests/test_marc1_http_identity_live_result.py`.
+
+## 0205 - Make Pagination Part Of Version Identity
+
+Evidence-order decision: begin MARC1-PG1 only after consumed-result commit
+`1337a91` passed Base Python job `94091696454` and Optional Neuro Readers job
+`94091696340` in CI `31589739739`. Use only committed aggregate evidence,
+committed source, and pinned official documentation; do not reopen either
+private root or request the dataset endpoint.
+
+Diagnosis decision: omitted pagination is the leading engineering hypothesis
+for `MARC1HTL-F04` because the consumed URL supplied neither supported
+pagination pair and official Figshare OpenAPI commit `751101d` gives
+`page_size` a default of 10. This is not proof that the consumed response held
+10 rows. Preserve version-inventory drift and deployed-provider divergence as
+live alternatives.
+
+Identity decision: the smallest prospective request is exactly one
+version-specific response with `page=1&page_size=1000`. Preserve the frozen
+55 rows, 45 participant archives, 10 supplementary rows, declared byte sum,
+and `sub-01` anchor. Refuse a second page, alternate pagination pair, article-
+details fallback, current-version substitution, partial cohort, or changed
+expectation.
+
+Sequencing decision: green this Tier A record before freezing a generated-only
+contract. Then require a separately green generated implementation and one
+registered generated closeout before an all-false Tier C live-wrapper packet.
+The research authorizes no new dataset-specific body, private input, payload,
+signal, target, model, score, retry, rerun, or claim action.
+
+Path decision: pagination recovery is a metadata control on the same MARC-1
+route to a cue-resistant neural positive control and later held-out language
+decoding. It is not a pivot and establishes no scientific result.
+
+Evidence:
+`docs/MARC_1_VERSIONED_PAGINATION_RECOVERY_RESEARCH.md`,
+`registries/marc1_versioned_pagination_recovery_research.v0.json`, and
+`tests/test_marc1_versioned_pagination_recovery_research.py`.

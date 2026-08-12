@@ -1435,3 +1435,22 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   and opened zero payload bytes; all signal, target, model, prediction, score,
   and claim counters remain zero. Any metadata-snapshot repair is a separately
   named prospective lane and any new public body is a new Tier C event.
+
+  Result `1337a91ca2dd1f988ddcfc36631b7a1a8d832b0f` passed Base Python
+  job `94091696454` and Optional Neuro Readers job `94091696340` in CI
+  `31589739739` before the zero-access
+  [MARC1-PG1 research](docs/MARC_1_VERSIONED_PAGINATION_RECOVERY_RESEARCH.md).
+  Pinned official Figshare OpenAPI source identifies the version-files endpoint
+  as paginated, with a default page size of 10 and maximum of 1,000. The
+  consumed wrapper omitted pagination, so partial first-page delivery is the
+  leading hypothesis for `MARC1HTL-F04`; it is not proven because the actual
+  row count was deliberately not retained.
+
+  The smallest prospective repair fixes the request identity to
+  `page=1&page_size=1000`, requires the unchanged exact 55-row semantic
+  inventory, and refuses a second page, fallback, partial cohort, or updated
+  expectation. The next gate is to commit, push, and green this Tier A record,
+  then freeze and qualify a generated-only pagination harness. No new live
+  body, payload, signal, target, model, score, or claim action is authorized.
+  This remains the same path toward cue-resistant neural evidence and later
+  held-out language decoding, not a pivot.

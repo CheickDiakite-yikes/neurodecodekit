@@ -3606,3 +3606,35 @@ Afterward, design only a separately named metadata-snapshot identity recovery
 from aggregate evidence. Do not inspect the retained private root or request
 another public body under this consumed lane. The work remains on the same
 thought-to-text path and has not established a scientific result.
+
+## 2026-08-12 MARC1-PG1 Pagination Recovery Research Handoff
+
+Consumed-result commit `1337a91ca2dd1f988ddcfc36631b7a1a8d832b0f`
+passed Base Python job `94091696454` and Optional Neuro Readers job
+`94091696340` in CI `31589739739` before this Tier A research. Read
+`docs/MARC_1_VERSIONED_PAGINATION_RECOVERY_RESEARCH.md`,
+`registries/marc1_versioned_pagination_recovery_research.v0.json`, and its
+matching test.
+
+Pinned official Figshare OpenAPI commit
+`751101d87c8fcea45556492bc627499ff49b0f2b` defines the version-files
+operation with `page_size` default 10 and maximum 1,000. The consumed wrapper
+omitted pagination, so an API-default partial page is the leading engineering
+hypothesis for the 55-row refusal. It is not proven: the actual live count and
+rows were not retained and must not be inferred as 10. Inventory drift and
+deployed-provider divergence remain explicit alternatives.
+
+The smallest prospective repair binds exactly
+`GET /v2/articles/29666735/versions/3/files?page=1&page_size=1000` and
+retains the complete 55-row semantic identity. It forbids a second page,
+fallback, version substitution, partial cohort, and post-result expectation
+change. Research access was limited to the committed aggregate result,
+committed wrapper source, and 196,169 bytes of pinned official OpenAPI source;
+dataset-specific, private, payload, neural, target, model, and score counters
+are zero.
+
+Immediate next gate: test, commit, push, and green this exact research record.
+Only then freeze a generated-only pagination contract and qualify a harness
+with no URL opener or execute mode. A new live body remains a later separate
+Tier C decision. This is the same thought-to-text path, not a pivot, and no
+scientific result has changed.

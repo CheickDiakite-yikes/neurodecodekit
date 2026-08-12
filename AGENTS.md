@@ -935,6 +935,27 @@ again under this lane. The next safe work is a separately named prospective
 metadata-snapshot identity design based only on the aggregate failure; a new
 public body remains Tier C. This is still the same thought-to-text path.
 
+Result `1337a91ca2dd1f988ddcfc36631b7a1a8d832b0f` passed Base Python
+job `94091696454` and Optional Neuro Readers job `94091696340` in CI
+`31589739739` before `MARC1-PG1` Tier A research. Read
+`docs/MARC_1_VERSIONED_PAGINATION_RECOVERY_RESEARCH.md` and
+`registries/marc1_versioned_pagination_recovery_research.v0.json`. Pinned
+official Figshare OpenAPI source says `article_version_files` defaults
+`page_size` to 10 and permits 1 through 1,000. Because the consumed request
+omitted pagination, a partial default page is the leading engineering
+hypothesis, but it is not proven: the actual live row count and rows were not
+retained and must not be inferred to be 10.
+
+The prospective identity is one exact version-scoped request with
+`page=1&page_size=1000`, followed by the unchanged exact 55-row, 45-participant,
+10-supplementary, 3,683,416,050-byte semantic gate. A second page, fallback,
+current-version substitution, partial cohort, and changed expected count all
+refuse. First green this research record, then freeze a generated-only
+contract, implementation, and registered closeout. Do not request another
+dataset-specific body, open any private root, or access a payload, signal,
+target, model, prediction, or score. MARC1-PG1 is the same thought-to-text path,
+not a pivot, and has no scientific claim value.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

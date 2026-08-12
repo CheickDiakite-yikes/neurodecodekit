@@ -1528,3 +1528,20 @@ Next gate: commit, push, and green the consumed aggregate result. Then specify
 only a new prospective metadata-snapshot identity lane; do not request another
 body or acquire a payload from the result itself. Task 4 remains incomplete on
 the same MARC-1 control path.
+
+Result `1337a91` passed both required jobs in CI `31589739739` before the
+zero-access `MARC1-PG1` pagination-recovery research was written. The pinned
+official Figshare OpenAPI defines `article_version_files` pagination with
+`page_size` default 10 and maximum 1,000. The consumed URL supplied neither
+pagination pair, making default-page truncation the leading hypothesis for
+`MARC1HTL-F04`; the actual live count was not retained, so that explanation is
+not yet proven and the count must not be claimed as 10.
+
+Next gate: commit, push, and green the exact `MARC1-PG1` research record. Then
+freeze a generated-only contract for one exact
+`page=1&page_size=1000` request identity and the unchanged 55-row semantic
+gate, followed by a generated implementation and registered closeout. A second
+page, fallback, partial cohort, expectation change, private-root read, live
+body, payload, signal, target, model, score, retry, rerun, and claim upgrade
+remain closed. This is the same control-attribution to neural-positive-control
+to held-out-language path, not a pivot.

@@ -1,0 +1,221 @@
+{
+  "schema_name": "neurodecodekit.marc1_versioned_pagination_recovery_research",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC1-PG1",
+  "research_id": "MARC1-versioned-pagination-recovery-v0",
+  "created_at_local": "2026-08-12",
+  "status": "tier_A_pagination_recovery_research_complete_zero_dataset_specific_requests",
+  "proof_posture": "committed_aggregate_result_and_pinned_official_source_research_only",
+  "authorized_now": false,
+  "artifact_bindings": {
+    "research_document": {
+      "path": "docs/MARC_1_VERSIONED_PAGINATION_RECOVERY_RESEARCH.md",
+      "sha256": "55263a2ad42237167a1aa0504325e5763240e6029a52233ad2c1872d57ee957c"
+    },
+    "research_test": {
+      "path": "tests/test_marc1_versioned_pagination_recovery_research.py",
+      "sha256": "3e31468e86dc0678f869861d96a8c0e24ad21a60e509409de2abfcf4e25a08ed"
+    },
+    "consumed_result": {
+      "path": "registries/marc1_http_identity_live_result.v0.json",
+      "sha256": "50a1bd4e97e6149db91d528aa0fce79e6aa5d3cedf79acdb12f03bf4a2d041f2"
+    },
+    "consumed_wrapper_source": {
+      "path": "src/neurodecodekit/datasets/marc1_http_identity_live.py",
+      "sha256": "96de586882a6b1223f5bcd90ecbe157c62b05a0b09a03354f70ed26904aeaabc"
+    }
+  },
+  "green_consumed_result": {
+    "commit": "1337a91ca2dd1f988ddcfc36631b7a1a8d832b0f",
+    "push_CI_run_id": 31589739739,
+    "base_python_job_id": 94091696454,
+    "base_python_conclusion": "success",
+    "optional_neuro_job_id": 94091696340,
+    "optional_neuro_conclusion": "success",
+    "both_required_jobs_green": true,
+    "route": "MARC1HTL-F04",
+    "accepted_response_bytes": 2917,
+    "consumed_no_retry_or_rerun": true,
+    "private_or_consumed_root_operations_in_research": 0
+  },
+  "official_Figshare_OpenAPI": {
+    "repository": "https://github.com/digital-science/figshare-user-documentation",
+    "commit": "751101d87c8fcea45556492bc627499ff49b0f2b",
+    "version_files_path": "/articles/{article_id}/versions/{version_id}/files",
+    "version_files_operation_id": "article_version_files",
+    "response_schema": "array_of_PublicFile",
+    "page_minimum": 1,
+    "page_maximum": 5000,
+    "page_size_minimum": 1,
+    "page_size_default": 10,
+    "page_size_maximum": 1000,
+    "limit_and_offset_are_separate_alternative_parameters": true,
+    "ArticleComplete_embedded_files_maximum": 10,
+    "source_files": [
+      {
+        "path": "swagger_documentation/docs/paths/v2.0/articles.yaml",
+        "bytes": 72752,
+        "sha256": "55bd0cb16d68a3413237bccc56df4f2d4fa2da096192940231c10a9d6c68c8db",
+        "git_blob_sha1": "c09381022c95dbc4dfd9aa116dc19f417f64ceb7"
+      },
+      {
+        "path": "swagger_documentation/docs/components/v2.0/schemas.yaml",
+        "bytes": 123417,
+        "sha256": "ec1b5e74a9103aa5821f748727590025862f088d3db90a6b3bd705e8a44463ae",
+        "git_blob_sha1": "42d2048b0f5d943c0a32b24f858e3864e40b3696"
+      }
+    ],
+    "source_bytes": 196169,
+    "dataset_specific_requests": 0
+  },
+  "failure_hypotheses": {
+    "H1": {
+      "name": "omitted_pagination",
+      "leading_engineering_hypothesis": true,
+      "support": "The consumed URL omitted both supported pagination pairs while the pinned official OpenAPI gives page_size a default of 10.",
+      "proven_by_consumed_result": false
+    },
+    "H2": {
+      "name": "version_inventory_drift",
+      "leading_engineering_hypothesis": false,
+      "support": "The live version-scoped inventory may differ from the frozen 55-row identity.",
+      "proven_by_consumed_result": false
+    },
+    "H3": {
+      "name": "deployed_provider_behavior_differs_from_pinned_OpenAPI",
+      "leading_engineering_hypothesis": false,
+      "support": "The deployed endpoint may cap ignore or reject the documented pagination parameters.",
+      "proven_by_consumed_result": false
+    }
+  },
+  "inference_firewall": {
+    "actual_live_row_count_known": false,
+    "actual_live_row_count_is_10": false,
+    "actual_live_rows_retained": false,
+    "actual_live_names_ids_checksums_or_URLs_retained": false,
+    "changed_field_inferred": false,
+    "consumed_body_reopened": false
+  },
+  "prospective_request_identity": {
+    "method": "GET",
+    "scheme": "https",
+    "host": "api.figshare.com",
+    "article_id": 29666735,
+    "version_id": 3,
+    "path": "/v2/articles/29666735/versions/3/files",
+    "query": "page=1&page_size=1000",
+    "page": 1,
+    "page_size": 1000,
+    "Accept": "application/json",
+    "Accept_Encoding": "identity",
+    "request_body": null,
+    "credentials_or_cookies": false,
+    "response_body_count": 1,
+    "second_page_requests": 0,
+    "fallback_requests": 0,
+    "payload_requests": 0,
+    "query_order_is_identity_bound": true
+  },
+  "semantic_identity": {
+    "record_id": 29666735,
+    "version_id": 3,
+    "version_DOI": "10.6084/m9.figshare.29666735.v3",
+    "exact_file_rows": 55,
+    "participant_archives": 45,
+    "supplementary_rows": 10,
+    "participant_name_range": "sub-01.zip_through_sub-45.zip_exactly_once",
+    "declared_record_bytes": 3683416050,
+    "sub_01_file_id": 62570743,
+    "sub_01_bytes": 33690749,
+    "sub_01_MD5": "6b01cf5bd30de0c670d2837d112a17fa",
+    "strict_row_fields": 7,
+    "target_like_extra_fields_refused": true,
+    "partial_page_or_partial_cohort_accepted": false,
+    "canonical_row_order_independent_hash_required": true
+  },
+  "smallest_next_evidence_sequence": [
+    "green_this_research_record",
+    "freeze_generated_only_pagination_contract",
+    "green_generated_implementation",
+    "green_registered_generated_closeout",
+    "prepare_all_false_additive_live_wrapper_request",
+    "fresh_Tier_C_decision_before_any_new_live_body"
+  ],
+  "prospective_router": {
+    "ordered_failure_routes": [
+      "MARC1PG-F00",
+      "MARC1PG-F01",
+      "MARC1PG-F02",
+      "MARC1PG-F03",
+      "MARC1PG-F04",
+      "MARC1PG-F05",
+      "MARC1PG-F06",
+      "MARC1PG-F07"
+    ],
+    "generated_success_route": "MARC1PG-G1",
+    "success_is_scientific_result": false
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "generated_input_bytes": 2097152,
+    "generated_output_bytes": 2097152,
+    "network_bytes": 0,
+    "private_input_bytes": 0
+  },
+  "authorization_flags": {
+    "generated_implementation_before_green_contract": false,
+    "dataset_specific_Figshare_request": false,
+    "private_Freewill_manifest_operation": false,
+    "consumed_private_root_operation": false,
+    "new_private_root_creation": false,
+    "payload_request_or_acquisition": false,
+    "signal_event_target_or_quality_read": false,
+    "cache_split_epoch_window_or_feature_creation": false,
+    "training_or_parameter_update": false,
+    "model_inference_prediction_or_freeze": false,
+    "target_delivery_or_scoring": false,
+    "provider_or_language_model_call": false,
+    "dependency_install": false,
+    "stream_device_or_hardware": false,
+    "retry_rerun_resume_or_substitution": false,
+    "release_or_publication": false,
+    "scientific_claim_upgrade": false
+  },
+  "access_counters": {
+    "committed_aggregate_result_reads": 1,
+    "committed_wrapper_source_reads": 1,
+    "official_OpenAPI_source_bodies_read": 2,
+    "official_OpenAPI_source_bytes": 196169,
+    "dataset_specific_Figshare_requests": 0,
+    "dataset_specific_response_bytes": 0,
+    "private_Freewill_manifest_operations": 0,
+    "consumed_private_root_operations": 0,
+    "payload_requests": 0,
+    "payload_bytes": 0,
+    "signal_sample_reads": 0,
+    "target_or_label_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "scoring_events": 0,
+    "scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "warnings": [
+    "Omitted pagination is the leading engineering hypothesis but is not proven by the consumed aggregate result.",
+    "The actual live row count was not retained and must not be inferred to be 10.",
+    "The official OpenAPI source is pinned independently from the dataset version identity.",
+    "ArticleComplete.files is capped at ten and is not an admissible complete inventory source.",
+    "A generated qualification would establish no source or scientific result.",
+    "A new dataset-specific response remains a future separate Tier C gate."
+  ],
+  "claim_boundary": {
+    "same_thought_to_text_path": true,
+    "is_pivot": false,
+    "engineering_capability_proposed": "An explicit version-scoped one-page request can distinguish a partial default API page from a true frozen inventory mismatch without weakening selector or payload controls.",
+    "scientific_claim_not_established": "No dataset-specific body neural payload signal target model prediction or score was accessed so this research establishes no neural effect language decoding or thought-to-text result."
+  }
+}

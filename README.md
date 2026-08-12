@@ -1299,6 +1299,26 @@ Read this before interpreting any number in the repository.
   [MARC1-HT1A decision](docs/MARC_1_HTTP_IDENTITY_LIVE_RECOVERY_AUTHORIZATION_DECISION.md).
   That decision is ineffective until its own commit is pushed and both CI jobs
   are green; no implementation or real-input operation has begun.
+  Decision `9c7bd48` and exact wrapper `68ade0d` subsequently passed both
+  required CI jobs before the single metadata-only invocation. The corrected
+  transport accepted and parsed one 2,917-byte uncoded response, then the
+  selector consumed at `MARC1HTL-F04` because its row count differed from the
+  frozen 55-row identity. The actual count and rows were not retained. Zero
+  participants were selected and zero payload, signal, target, model,
+  prediction, or score operations followed. Read the
+  [consumed result](docs/MARC_1_HTTP_IDENTITY_LIVE_RESULT.md).
+  Result `1337a91` then passed Base Python job `94091696454` and Optional
+  Neuro Readers job `94091696340` in CI `31589739739` before the
+  [MARC1-PG1 pagination research](docs/MARC_1_VERSIONED_PAGINATION_RECOVERY_RESEARCH.md)
+  was recorded. Pinned official Figshare OpenAPI source says the version-files
+  operation defaults `page_size` to 10 and permits up to 1,000. Omitted
+  pagination is therefore the leading engineering hypothesis, not a proven
+  description of the consumed response. The prospective request binds exactly
+  `page=1&page_size=1000`, still requires all 55 frozen rows, and forbids a
+  second page, fallback, partial cohort, or live request before generated-only
+  contract, implementation, and closeout milestones are independently green.
+  This is the same confound-control to neural-positive-control to held-out-
+  language path, not a pivot; it establishes no new scientific result.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
