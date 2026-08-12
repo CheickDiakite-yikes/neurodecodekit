@@ -1081,6 +1081,28 @@ neural signal, target, model, score, provider, hardware, release, and claim
 actions remain closed. This is the same thought-to-text path and no scientific
 result was added.
 
+Aggregate result `ca4679a95e3567a5d47094cc4282a63fa6986959` passed Base
+Python job `94129199903` and Optional Neuro Readers job `94129199993` in CI
+`31601329375` before the all-false next request was prepared. Read
+`docs/MARC_1_PAGINATED_LIVE_METADATA_AUTHORIZATION_PACKET.md` and
+`registries/marc1_paginated_live_metadata_authorization_request.v0.json`.
+`MARC1-LM1` proposes one additive generated/mock standard-library wrapper and,
+only after that exact implementation is remotely green, one no-retry GET to
+the Figshare version-3 files endpoint with exact query
+`page=1&page_size=1000`. It caps the sole body at 2 MiB, preserves one tiny
+target-free private inventory, and stops before every archive or neural
+payload.
+
+Every authorization flag and real-operation counter in the request is false.
+Commit, push, and require both CI jobs green for this exact packet before
+identifying it as the sole Tier C gate. Only a fresh unambiguous maintainer
+message after that identification may be recorded in a separate decision. The
+current and earlier messages are not retroactive. Do not implement the live
+wrapper, contact Figshare, touch a private or consumed path, access payload,
+signal, target, model, or score, or upgrade a claim from this packet alone.
+This is the next bounded cohort-integrity step on the same route to a cue-
+resistant neural positive control and held-out language decoding, not a pivot.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

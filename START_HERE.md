@@ -1552,3 +1552,16 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   passed and both invocations are consumed. Next: green the result, then
   prepare only an all-false Tier C request for one bounded live metadata body.
   This generated result adds engineering trust, not neural evidence.
+
+  Result `ca4679a` passed Base Python job `94129199903` and Optional Neuro
+  Readers job `94129199993` in CI `31601329375` before the
+  [MARC1-LM1 authorization packet](docs/MARC_1_PAGINATED_LIVE_METADATA_AUTHORIZATION_PACKET.md)
+  was prepared. Every permission remains false. The packet proposes one
+  additive generated/mock wrapper and, only after its exact implementation is
+  separately green, one no-retry request to the immutable Figshare version-3
+  files endpoint with exact query `page=1&page_size=1000`. It allows one body
+  capped at 2 MiB and a tiny target-free private inventory; it allows no EEG
+  payload, target, model, score, or claim. Commit, push, and green this exact
+  packet before identifying it as the sole Tier C gate. A fresh maintainer
+  message is required after that identification. This remains the same
+  thought-to-text research path.

@@ -1635,3 +1635,23 @@ prepare one all-false Tier C request for a single bounded live metadata body.
 Task 4 remains incomplete on the same path: live inventory compatibility,
 payload eligibility, controlled neural evidence, and held-out language
 decoding remain unproven.
+
+Aggregate result `ca4679a` passed both required jobs in CI `31601329375`
+before the all-false `MARC1-LM1` request was prepared. The packet proposes one
+future additive generated/mock standard-library wrapper and, only after its
+exact implementation is remotely green, one exact no-retry Figshare GET with
+query `page=1&page_size=1000`. The body is capped at 2 MiB; output at 4 MiB;
+CPU threads, workers, and numerical jobs remain one; payload bytes remain zero.
+
+The frozen success identity is 55 rows, 45 participant archives, ten
+supplementary rows, 3,683,416,050 declared bytes, and the unchanged target-free
+12-subject Wrist split. Any mismatch consumes and parks without another page,
+request, fallback, or cohort update. Thirteen focused, 612 MARC, 2,751 base,
+and 2,822 optional tests pass locally.
+
+Next gate: commit, push, and green the exact request. Then identify its commit,
+CI, one-response scope, and no-payload boundary as the sole Tier C packet. Only
+a fresh packet-bound maintainer message may open a separate decision. Task 4
+remains on the same route to a trustworthy multimodal cohort, cue-resistant
+neural evidence, and held-out language decoding; no scientific result was
+added by the request.

@@ -8717,3 +8717,34 @@ selection path has now passed one registered sequence with exact cleanup.
 
 Scientific claim not established: no live metadata, neural signal, target,
 prediction, score, language decoding, or thought-to-text evidence was added.
+
+## 2026-08-12 - MARC1-LM1 Paginated Live-Metadata Request
+
+- Aggregate capability result `ca4679a` passed Base Python job `94129199903`
+  and Optional Neuro Readers job `94129199993` in CI `31601329375` before this
+  packet was prepared.
+- Added an all-false Tier C packet for one future additive standard-library
+  wrapper and, only after its exact implementation is remotely green, one
+  exact no-retry Figshare GET with `page=1&page_size=1000`.
+- The future response is capped at 2 MiB and must validate exactly 55 rows, 45
+  participant ZIPs, ten supplementary rows, 3,683,416,050 declared bytes, and
+  the frozen target-free 12-subject Wrist split.
+- The future lane may retain only one mode-`0600` consumed marker, one small
+  Git-ignored private metadata manifest, and one aggregate report under a
+  4 MiB incremental-disk cap. Payload requests and bytes remain zero.
+- Thirteen focused request tests and all 612 MARC tests pass. Across two final
+  passes, complete base is 2,751 tests/204 skips with maxima of 22.595 seconds
+  and 256,131,072-byte external RSS; optional is 2,822 tests/35 skips with
+  maxima of 61.051 seconds and 813,072,384 bytes. Ruff, compilation, 193
+  registry parses, artifact replay, and diff hygiene pass.
+- Packet preparation made zero private-path, network, payload, neural, target,
+  model, score, cleanup, or claim operations. It authorizes nothing until its
+  own commit and both CI jobs are green and a fresh packet-bound maintainer
+  decision is separately recorded and green.
+
+Engineering capability requested: bind the complete immutable Wrist metadata
+inventory through one exact paginated request and preserve its target-free
+identity for later payload work.
+
+Scientific claim not established: this all-false request accessed no neural
+signal and added no decoding, language, or thought-to-text evidence.

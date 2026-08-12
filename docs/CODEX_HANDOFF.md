@@ -3803,3 +3803,31 @@ next gate: verify, commit, push, and green this aggregate result. Only then
 prepare one all-false Tier C request for a bounded live metadata response. The
 request itself cannot contact Figshare, and a live call still needs a fresh
 packet-bound maintainer decision. This remains the same scientific path.
+
+## 2026-08-12 MARC1-LM1 Paginated Live-Metadata Request Handoff
+
+Capability result `ca4679a` is remotely green in CI `31601329375` with Base
+Python job `94129199903` and Optional Neuro Readers job `94129199993`.
+
+Read `docs/MARC_1_PAGINATED_LIVE_METADATA_AUTHORIZATION_PACKET.md`,
+`registries/marc1_paginated_live_metadata_authorization_request.v0.json`, and
+`tests/test_marc1_paginated_live_metadata_authorization_request.py`. The new
+request is all false. It proposes one future additive generated/mock wrapper
+and, only after that implementation is committed, pushed, and both jobs are
+green, one exact no-retry Figshare request for
+`page=1&page_size=1000`. The sole body is capped at 2 MiB; payload bytes are
+zero; outputs are capped at 4 MiB incremental disk.
+
+Thirteen focused, 612 MARC, 2,751 base, and 2,822 optional tests pass locally.
+Packet preparation made no private, network, payload, neural, target, model,
+score, deletion, or claim operation.
+
+Next: commit and push this exact request and wait for both CI jobs. Then
+identify its commit, CI, one-response scope, and no-payload boundary as the
+sole Tier C gate. Only a fresh unambiguous maintainer message after that
+identification may be recorded in a separate authorization decision. Do not
+use any earlier `continue` retroactively and do not implement or contact
+Figshare from the request alone.
+
+This is a cohort-integrity step on the same path to a cue-resistant neural
+positive control and held-out language decoding, not a pivot.

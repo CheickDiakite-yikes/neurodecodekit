@@ -7117,3 +7117,38 @@ Evidence:
 `docs/MARC_1_OUTPUT_CAPABILITY_RECOVERY_RESULT.md`,
 `registries/marc1_output_capability_recovery_result.v0.json`, and
 `tests/test_marc1_output_capability_recovery_result.py`.
+
+## 0213 - Request One Exact Paginated Live-Metadata Response
+
+Evidence-order decision: prepare the request only after capability result
+`ca4679a` passed Base Python job `94129199903` and Optional Neuro Readers job
+`94129199993` in CI `31601329375`.
+
+Scope decision: request one future additive standard-library wrapper and, only
+after its exact implementation is remotely green, one no-retry GET to the
+Figshare version-3 files endpoint with byte-for-byte query
+`page=1&page_size=1000`. Permit one response body capped at 2 MiB and zero
+payload requests.
+
+Identity decision: retain the frozen exact 55 rows, 45 participant archives,
+ten supplementary rows, 3,683,416,050 declared bytes, 12-subject Wrist cohort,
+and runs 1-6 fit versus runs 7-8 held out. Park rather than amend on mismatch.
+
+Output decision: acquire a held no-follow output capability before work,
+create one consumed marker, one mode-`0600` private inventory, and one
+aggregate report through exclusive relative writes, and touch no preexisting
+path. Keep incremental disk under 4 MiB.
+
+Authorization decision: this packet is all false and authorizes nothing. Green
+its exact commit first, identify it as the sole Tier C gate, and require a
+fresh packet-bound maintainer message before a separate decision may open
+implementation. Current and prior messages are not retroactive.
+
+Path decision: this is the next cohort-integrity rung on the same route to a
+cue-resistant neural positive control and held-out language decoding. Metadata
+success would still not be neural or language evidence.
+
+Evidence:
+`docs/MARC_1_PAGINATED_LIVE_METADATA_AUTHORIZATION_PACKET.md`,
+`registries/marc1_paginated_live_metadata_authorization_request.v0.json`, and
+`tests/test_marc1_paginated_live_metadata_authorization_request.py`.

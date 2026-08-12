@@ -381,6 +381,7 @@ negative result and S25 is never repurposed for calibration.
 | MARC1-OP1 generated recovery contract | 6 accepted cases; 32 refusals; 10 routes; 20 gates; one exact `/private/tmp` path probe; one conditional generated qualifier; 0 current operations | Green research `d02830b` / CI `31595996923` precedes the frozen contract | Requires capability acquisition before any repository/fixture work, bans the consumed qualifier, and preserves exact pagination/cohort identity; implementation remains closed until contract CI |
 | MARC1-OP1 output-capability implementation | 1,019,776 generated input bytes; 184,173 temporary output bytes; 6/6 accepted cases; 32/32 refusals; 20/20 gates; exact cleanup; 0 real/network bytes | Green contract `baade51` / CI `31597291352` preceded development `MARC1OP-G1`, which ran in 0.096 sec at 33.8 MB reported RSS; 36 new tests | Proves generated pagination and selection can run only after held output authority and leave no artifact; the registered probe awaits implementation CI and no neural/language claim changed |
 | MARC1-OP1 registered generated result | `MARC1OP-P0` preflight then `MARC1OP-G1`; 1,019,776 generated input bytes; 184,173 temporary output bytes; exact cleanup; 0 live/network bytes | Exact implementation `fcedcc3` passed CI `31600085119` before the one 0.098-sec qualifier at 33.9 MB reported RSS; both invocations consumed | Establishes the capability-first generated stack under registered controls; a live metadata request remains a separate Tier C gate and no scientific claim changed |
+| MARC1-LM1 paginated live-metadata request | One future exact `page=1&page_size=1000` GET; one body capped at 2 MiB; one 55-row target-free inventory; 0 payload bytes; all current permissions false | Green capability result `ca4679a` / CI `31601329375` precedes the packet; 13 focused, 612 MARC, 2,751 base, and 2,822 optional tests pass locally | Proposes one additive wrapper and one no-retry metadata check on the same thought-to-text path; the packet itself performs no operation and establishes no scientific result |
 
 ### Real-Data Scientific Scorecard
 
@@ -1391,6 +1392,18 @@ Read this before interpreting any number in the repository.
   seconds at 33,882,112-byte reported RSS and removed all 184,173 temporary
   bytes. Both invocations are consumed. Current live inventory compatibility
   and every neural, language, and thought-to-text claim remain unestablished.
+- **MARC1-LM1 paginated live-metadata gate:** exact result `ca4679a` passed Base
+  Python job `94129199903` and Optional Neuro Readers job `94129199993` in CI
+  `31601329375` before the
+  [all-false packet](docs/MARC_1_PAGINATED_LIVE_METADATA_AUTHORIZATION_PACKET.md).
+  The proposed sequence adds one generated/mock standard-library wrapper and,
+  only after its own green proof, one exact no-retry Figshare request for
+  `page=1&page_size=1000`. The response is capped at 2 MiB and may create only
+  a consumed marker, a small Git-ignored 55-row private manifest, and one
+  aggregate report. No payload, signal, target, model, prediction, score, or
+  scientific claim is authorized. This is the next cohort-integrity step on
+  the same route to cue-resistant neural evidence and held-out language
+  decoding.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
