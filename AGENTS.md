@@ -972,6 +972,25 @@ retry, fallback, `execute`, payload, neural, target, model, or scorer surface.
 Do not implement it before both jobs are green. A new dataset-specific body
 remains Tier C and payload acquisition remains ineligible.
 
+Contract `ccb3ba8a839b3e6fc6844ad867ab0d5d295e20fb` passed Base Python
+job `94098410925` and Optional Neuro Readers job `94098410868` in CI
+`31591853349` before the additive generated-only module was implemented. Read
+`docs/MARC_1_VERSIONED_PAGINATION_IMPLEMENTATION.md`,
+`registries/marc1_versioned_pagination_implementation.v0.json`,
+`src/neurodecodekit/datasets/marc1_versioned_pagination.py`, and its two test
+modules. Development `MARC1PG-G1` passes four accepted response-order/encoding
+cases, 41 refusals across all eight routes, all 18 gates, exact 55-row semantic
+identity, and exact 12+12 target-free selection replay. It processed 1,019,776
+generated input bytes in 0.08925708406604826 seconds at 40,091,648-byte
+reported peak RSS and removed its 183,355 temporary output bytes.
+
+Commit, push, and obtain both green CI jobs for this exact implementation
+before one registered generated closeout. Do not make a dataset-specific
+request, open any private root, acquire a payload, or access a signal, target,
+model, prediction, or score. A future live pagination check remains a new Tier
+C event. This metadata repair remains on the same thought-to-text path and has
+no scientific claim value.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

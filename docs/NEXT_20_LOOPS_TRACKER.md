@@ -1557,3 +1557,18 @@ Next gate: commit, push, and green the exact contract. Only afterward implement
 the additive generated-only harness and run its separate verification. No
 dataset request, private input, payload, signal, target, model, score, or claim
 action is open, and generated `MARC1PG-G1` would not be scientific evidence.
+
+Contract `ccb3ba8` passed both required jobs in CI `31591853349` before the
+generated-only `MARC1-PG1` harness was implemented. Development `MARC1PG-G1`
+passes four equivalent generated response cases, all 41 refusals across eight
+routes, all 18 gates, the unchanged 55-row semantic identity, and the exact
+12+12 target-free cohort and split replay. It used 1,019,776 generated input
+bytes, 183,355 temporary output bytes, 0.089257 seconds, and 40,091,648-byte
+reported peak RSS; all temporary outputs were removed and every real/private,
+payload, signal, target, model, score, and claim counter remained zero.
+
+Next gate: commit, push, and green the exact implementation, then perform one
+registered generated closeout. Only a separately green result may precede a
+new all-false Tier C live-pagination packet. Task 4 remains incomplete and on
+the same control-attribution to held-out-language path; no scientific result
+was added.

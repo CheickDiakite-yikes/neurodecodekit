@@ -8499,3 +8499,40 @@ result.
   CLI help, bound hashes, canonical policy hash, and diff checks pass.
 - Next: green this exact contract before implementing the generated harness.
   Real/private access and scientific operations remain zero and unauthorized.
+
+## 2026-08-12 - MARC1-PG1 Generated Pagination Implementation
+
+- Began only after contract `ccb3ba8a839b3e6fc6844ad867ab0d5d295e20fb`
+  passed Base Python job `94098410925` and Optional Neuro Readers job
+  `94098410868` in CI `31591853349`.
+- Added a dependency-free `plan`/`qualify`/`inspect` module with no network
+  client, URL or local-source argument, private-root name, `execute`, automatic
+  pagination, retry, fallback, decoder, payload, neural, model, or scorer
+  surface.
+- Development `MARC1PG-G1` passed 4/4 equivalent response cases, 41/41
+  refusals across all eight routes, and 18/18 acceptance gates. The exact
+  serialized request is 154 bytes with query `page=1&page_size=1000`.
+- Replayed the unchanged 55-row Wrist identity, 45 participant archives, ten
+  supplementary rows, 3,683,416,050 declared bytes, 12+12 target-free cohorts,
+  72 Freewill run bundles, and zero fit/held-out overlap.
+- Processed 1,019,776 generated input bytes in 0.08925708406604826 seconds at
+  40,091,648-byte reported peak RSS. The 7,681-byte aggregate and 175,674-byte
+  private manifest totaled 183,355 temporary bytes; both were inspected,
+  hash-bound, and removed.
+- Twenty-nine focused tests and all 518 MARC tests pass. The dependency-light
+  suite passes 2,657 tests with 204 expected skips in 21.555 seconds at
+  245,956,608-byte external peak RSS; the optional-neuro suite passes 2,728
+  tests with 35 expected skips in 60.160 seconds at 804,732,928-byte external
+  peak RSS. Both add exactly 29 tests and zero skips over the green contract.
+- Repository-wide Ruff, compilation, all 187 registry JSON parses, module CLI
+  help/plan, one disposable qualify/inspect roundtrip, and `git diff --check`
+  pass. The disposable outputs were removed.
+- Next: commit, push, and green the exact implementation, then run one
+  registered generated closeout. Real/private metadata and all payload,
+  signal, target, model, score, and claim actions remain closed.
+
+Engineering capability added: exact explicit-page metadata semantics now
+compose deterministically with the frozen target-free cohort selector.
+
+Scientific claim not established: generated metadata qualification provides
+no human neural, language-decoding, or thought-to-text evidence.

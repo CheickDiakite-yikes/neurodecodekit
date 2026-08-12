@@ -6922,3 +6922,36 @@ Evidence:
 `docs/MARC_1_VERSIONED_PAGINATION_RECOVERY_PREREGISTRATION.md`,
 `registries/marc1_versioned_pagination_recovery_contract.v0.json`, and
 `tests/test_marc1_versioned_pagination_recovery_contract.py`.
+
+## 0207 - Qualify Pagination Mechanics Before Another Live Attempt
+
+Evidence-order decision: begin implementation only after exact contract
+`ccb3ba8` passed Base Python job `94098410925` and Optional Neuro Readers job
+`94098410868` in CI `31591853349`.
+
+Implementation decision: keep the module additive and standard-library-only.
+Expose only `plan`, `qualify`, and `inspect`; provide no URL, local-source,
+private-root, `execute`, automatic-pagination, retry, fallback, decoder,
+payload, signal, target, model, or scorer interface.
+
+Qualification decision: require all four equivalent generated response cases,
+41 adversarial refusals across all eight routes, 18 acceptance gates, exact
+55-row semantic identity, exact 12+12 target-free selection replay, private/
+public output separation, deterministic fixed-measurement replay, and the
+frozen one-thread resource envelope.
+
+Sequencing decision: the implementation must be committed, pushed, and both
+CI jobs green before one registered generated closeout. That closeout must
+also become remotely green before an all-false Tier C packet may propose one
+new live metadata response. No current source contact or payload operation is
+authorized.
+
+Path decision: this is a metadata prerequisite on the same cue-resistant
+neural-positive-control to held-out-language path. It is not a pivot and adds
+no scientific evidence.
+
+Evidence:
+`docs/MARC_1_VERSIONED_PAGINATION_IMPLEMENTATION.md`,
+`registries/marc1_versioned_pagination_implementation.v0.json`,
+`src/neurodecodekit/datasets/marc1_versioned_pagination.py`, and the two
+matching test modules.

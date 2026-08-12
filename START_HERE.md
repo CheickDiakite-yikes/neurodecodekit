@@ -1470,3 +1470,21 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   target, model, or scoring surface. The next gate is contract commit, push,
   and both green CI jobs. Generated success would still add no scientific
   evidence.
+
+  Contract `ccb3ba8a839b3e6fc6844ad867ab0d5d295e20fb` passed Base
+  Python job `94098410925` and Optional Neuro Readers job `94098410868` in CI
+  `31591853349` before the additive
+  [MARC1-PG1 implementation](docs/MARC_1_VERSIONED_PAGINATION_IMPLEMENTATION.md)
+  was built. The standard-library module exposes only `plan`, `qualify`, and
+  `inspect`. Development `MARC1PG-G1` passed 4/4 accepted cases, 41/41
+  refusals, and 18/18 gates while preserving the exact 55-row semantic identity
+  and target-free 12+12 selection. It processed 1,019,776 generated input bytes
+  in 0.089257 seconds at 40,091,648-byte reported peak RSS and removed all
+  183,355 temporary output bytes.
+
+  The next gate is to commit, push, and green this exact implementation, then
+  run one registered generated closeout. A new dataset-specific response still
+  requires a separate Tier C packet and decision; payload, signal, target,
+  model, and score work remains closed. MARC1-PG1 is a metadata prerequisite
+  on the same cue-resistance to neural-positive-control to held-out-language
+  path, not a pivot, and adds no scientific evidence.

@@ -3666,3 +3666,28 @@ Immediate next gate: commit, push, and obtain both green CI jobs for this exact
 contract. Only then implement the generated-only harness. A new dataset body
 remains a later Tier C action; generated `MARC1PG-G1` would establish no neural
 or language result. This remains the same thought-to-text path.
+
+## 2026-08-12 MARC1-PG1 Generated Implementation Handoff
+
+Exact contract `ccb3ba8a839b3e6fc6844ad867ab0d5d295e20fb` passed Base
+Python job `94098410925` and Optional Neuro Readers job `94098410868` in CI
+`31591853349` before implementation. Read
+`docs/MARC_1_VERSIONED_PAGINATION_IMPLEMENTATION.md`,
+`registries/marc1_versioned_pagination_implementation.v0.json`,
+`src/neurodecodekit/datasets/marc1_versioned_pagination.py`, and both matching
+test modules.
+
+Generated `MARC1PG-G1` passes 4/4 accepted cases, all 41 refusals across eight
+routes, and all 18 gates. It preserves the exact 55-row semantic inventory and
+12+12 target-free selection across response order and safe JSON encoding
+variation. One measured development run processed 1,019,776 generated input
+bytes in 0.08925708406604826 seconds at 40,091,648-byte reported peak RSS,
+emitted 183,355 temporary bytes, and removed both outputs. All real, network,
+private-source, payload, signal, target, model, score, claim, and other-project
+counters stayed zero.
+
+Immediate next gate: finish repository verification, commit and push this exact
+implementation, and require both CI jobs green. Only then run the one
+registered generated closeout. A new live metadata response remains a later
+all-false Tier C packet and fresh decision; payload acquisition remains closed.
+This is the same thought-to-text path, not a pivot.
