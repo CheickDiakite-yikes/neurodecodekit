@@ -741,14 +741,25 @@ metadata selection over a single no-follow/open/hash/parse of the exact
 418,755-byte sealed Freewill manifest plus one Wrist Figshare v3 metadata body
 capped at 2 MiB. It authorizes nothing now; every current counter is zero.
 
-Commit, push, and require both jobs green for that exact request, then identify
-it as the sole active Tier C gate and stop. Do not inspect the sealed manifest,
-request Wrist metadata, access a payload, implement the wrapper, or record a
-decision without a fresh packet-bound maintainer message after that
-identification. Current and earlier continuations are not retroactive Tier C
-authority. MARC1-P1 is a confound-resolution rung on the same thought-to-text
-path, not a pivot or a replacement for the later language-specific held-out
-experiment.
+Request `7f1ba0936e4e0266c0210648aa641feab63cd0eb` passed Base Python
+job `94041819046` and Optional Neuro Readers job `94041819022` in CI
+`31573969646`. After it was identified as the sole active Tier C packet, the
+maintainer supplied the fresh words `approved, continue, achieve a scientific
+claim, achieve thought to text 😎`. Read
+`docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_AUTHORIZATION_DECISION.md`
+and
+`registries/marc1_privacy_preserving_pilot_selection_authorization_decision.v0.json`.
+The decision quotes all 76 UTF-8 bytes and incorporates only the unchanged
+packet. The aspiration to reach a scientific thought-to-text result does not
+predeclare an outcome or authorize payload, signal, target, model, score, or
+claim operations.
+
+Commit, push, and require both jobs green for that exact decision. Only then
+implement and qualify the generated/mock real selector. Do not inspect the
+sealed manifest or request Wrist metadata until that exact implementation is
+also remotely green. MARC1-P1 is a confound-resolution rung on the same
+thought-to-text path, not a pivot or a replacement for the later language-
+specific held-out experiment.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

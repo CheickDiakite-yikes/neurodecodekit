@@ -8081,3 +8081,37 @@ Scientific claim not established: an all-false metadata request is not a
 neural experiment and establishes no neural effect, movement decoding,
 language decoding, or thought-to-text capability. This remains the same
 research path, not a pivot.
+
+## 2026-08-12 - MARC1-P1A Packet-Bound Authorization Decision
+
+- Reverified request commit `7f1ba0936e4e0266c0210648aa641feab63cd0eb`
+  green in CI `31573969646`: Base Python job `94041819046` and Optional Neuro
+  Readers job `94041819022` both passed before recording the decision.
+- Preserved the maintainer's exact 76 UTF-8 bytes: `approved, continue,
+  achieve a scientific claim, achieve thought to text 😎`; SHA-256
+  `aedb564a57be18493fc20376676ef404794ca169d02985228aa8424cd7f7e6e8`.
+- Bound request SHA-256
+  `8eebf5f34294bc266e81552d31ff376cb81240d2ee18b2fc6857600fbd3aba85`
+  and packet SHA-256
+  `ba0943a28e155a6eaf505f2e214c8a89fe02c3917d7f4f99057b74a5622f31eb`
+  without rewriting either immutable artifact.
+- Authorized only the staged packet after this decision is remotely green:
+  generated/mock wrapper, separate green proof, then one private-manifest plus
+  one public-metadata selection. Payload, neural, target, model, score, retry,
+  rerun, and claim authority remains zero.
+- Added 12 decision invariants plus 48 hash/scope subtests. At recording, every
+  real/private/public data, selection, output, payload, neural, target, model,
+  score, cleanup, release, and claim counter remains zero.
+- All 298 MARC tests plus 256 subtests, 2,437 dependency-light tests with 204
+  expected skips, and 2,508 optional-neuro tests with 35 expected skips pass.
+  Both complete suites add exactly 12 tests and zero skips over the green
+  request baseline. External maximum RSS was 266,387,456 and 770,998,272
+  bytes, respectively.
+
+Engineering capability authorized for testing: one bounded real-metadata
+selector may be built and qualified without touching either real input until
+its exact implementation is remotely green.
+
+Scientific claim not established: authorization is not evidence. The stated
+thought-to-text destination remains the same, but a positive result is not
+predeclared and must be earned by later held-out neural evidence.

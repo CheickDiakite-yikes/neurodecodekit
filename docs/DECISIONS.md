@@ -6498,3 +6498,30 @@ Evidence:
 `docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_AUTHORIZATION_PACKET.md`,
 `registries/marc1_privacy_preserving_pilot_selection_authorization_request.v0.json`,
 and `tests/test_marc1_pilot_selection_authorization_request.py`.
+
+## 0194 - Bind The Fresh Approval Without Predeclaring A Result
+
+Decision: record the maintainer's exact words `approved, continue, achieve a
+scientific claim, achieve thought to text 😎` only after all-false request
+`7f1ba0936e4e0266c0210648aa641feab63cd0eb` passed both jobs in CI
+`31573969646` and Codex identified MARC1-P1A as the sole active Tier C packet.
+Incorporate the immutable packet by reference; do not fabricate its long scope
+as user speech.
+
+Scope decision: after this exact decision is remotely green, permit one
+generated/mock-only additive real-selector implementation. Only after that
+exact implementation is separately remotely green may one invocation read the
+418,755-byte sealed Freewill manifest once and accept one Wrist metadata body
+under 2 MiB. Payload, signal, event, target, model, score, retry, rerun, and
+claim operations remain forbidden.
+
+Epistemic decision: preserve thought-to-text as the full research objective,
+but do not convert that objective into a promised scientific outcome.
+Metadata selection can establish only that the frozen pilot exists and fits
+the caps. A scientific claim still requires neural payloads, controls,
+preregistered held-out scoring, and a positive observed result.
+
+Evidence:
+`docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_AUTHORIZATION_DECISION.md`,
+`registries/marc1_privacy_preserving_pilot_selection_authorization_decision.v0.json`,
+and `tests/test_marc1_pilot_selection_authorization_decision.py`.

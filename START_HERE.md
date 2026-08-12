@@ -1298,9 +1298,18 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   metadata body capped at 2 MiB. Payload, signal, target, model, score, retry,
   rerun, and claim operations remain zero and unauthorized.
 
-  Immediate next gate: test, commit, push, and green this exact request, then
-  identify it as the sole active Tier C packet and stop. A fresh packet-bound
-  maintainer decision after that identification is required before real-
-  selector implementation. No current or earlier `continue` is retroactive.
-  This is a confound-resolution rung on the same thought-to-text path, not a
-  pivot, and movement evidence is not language evidence.
+  Request `7f1ba0936e4e0266c0210648aa641feab63cd0eb` passed Base Python
+  job `94041819046` and Optional Neuro Readers job `94041819022` in CI
+  `31573969646`. After it was identified as the sole active Tier C packet, the
+  maintainer supplied the fresh words `approved, continue, achieve a
+  scientific claim, achieve thought to text 😎`. Read
+  `docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_AUTHORIZATION_DECISION.md`
+  and its machine registry. The decision quotes the actual message, binds the
+  unchanged packet by hash, treats the scientific result as an objective
+  rather than a predeclared outcome, and authorizes zero payload bytes.
+
+  Immediate next gate: test, commit, push, and green this exact decision. Only
+  then may generated/mock real-selector implementation begin. The retained
+  Freewill manifest and Wrist endpoint remain closed until that exact
+  implementation is also remotely green. This is the same thought-to-text
+  path, not a pivot, and movement evidence is not language evidence.

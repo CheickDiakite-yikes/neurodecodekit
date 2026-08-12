@@ -1216,8 +1216,14 @@ Read this before interpreting any number in the repository.
   capped at 2 MiB. Its machine request is all false: it must be committed,
   pushed, remotely green, identified as the sole active Tier C packet, and
   followed by a fresh packet-bound maintainer decision before implementation
-  or access. MARC-1 is a confound-resolution rung on the same thought-to-text
-  path, not a pivot, and movement evidence is not language evidence.
+  or access. Request `7f1ba09` passed both jobs in CI `31573969646`, and the
+  maintainer's fresh words `approved, continue, achieve a scientific claim,
+  achieve thought to text 😎` are now preserved verbatim in the
+  [MARC1-P1A decision](docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_AUTHORIZATION_DECISION.md).
+  That decision remains ineffective until its own commit is remotely green;
+  it does not predeclare a result or authorize payload bytes. MARC-1 is a
+  confound-resolution rung on the same thought-to-text path, not a pivot, and
+  movement evidence is not language evidence.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

@@ -1376,9 +1376,16 @@ exactly one 418,755-byte sealed Freewill-manifest content open and one Wrist
 metadata body capped at 2 MiB. It permits zero payload bytes and currently
 authorizes nothing.
 
-Next gate: test, commit, push, and green that exact request, then identify it
-as the sole active Tier C gate and stop. The sealed Freewill inventory and
-Wrist metadata remain unopened, and no current or earlier `continue` is
-retroactive authority. This is the same path toward a confound-resistant
+Request `7f1ba09` passed both jobs in CI `31573969646` and was identified as
+the sole active Tier C packet. The maintainer then supplied the fresh words
+`approved, continue, achieve a scientific claim, achieve thought to text 😎`.
+The separate MARC1-P1A decision quotes that message exactly and binds only the
+unchanged green packet. The scientific objective is preserved but no positive
+outcome is predeclared.
+
+Next gate: test, commit, push, and green the exact decision. Only then may the
+generated/mock real-selector implementation begin. The sealed Freewill
+inventory and Wrist metadata remain unopened until that exact implementation
+is also remotely green. This is the same path toward a confound-resistant
 neural result and later language-specific thought-to-text evidence, not a
 pivot; movement evidence cannot itself establish language decoding.

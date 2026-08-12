@@ -3333,3 +3333,28 @@ request Wrist metadata, or acquire a payload from this request alone.
 
 MARC1-P1A remains a control and attribution step on the same thought-to-text
 path, not a pivot. It produces no movement or language evidence.
+
+## 2026-08-12 MARC1-P1A Authorization Decision Handoff
+
+Request `7f1ba0936e4e0266c0210648aa641feab63cd0eb` passed Base Python
+job `94041819046` and Optional Neuro Readers job `94041819022` in CI
+`31573969646` before the maintainer supplied the fresh words `approved,
+continue, achieve a scientific claim, achieve thought to text 😎`. Read
+`docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_AUTHORIZATION_DECISION.md`,
+its machine registry, and the matching decision test.
+
+The decision quotes the actual 76-byte message and binds only request
+`8eebf5f34294bc266e81552d31ff376cb81240d2ee18b2fc6857600fbd3aba85`.
+It preserves the final scientific objective without treating it as an observed
+result. Twelve decision tests plus 48 subtests pass; all decision-only real,
+payload, neural, target, model, score, and claim counters remain zero.
+
+All 298 MARC tests, 2,437 dependency-light tests with 204 expected skips, and
+2,508 optional-neuro tests with 35 expected skips pass. Each complete suite
+adds exactly 12 tests and zero skips over the green request baseline.
+
+Immediate next gate: test, commit, push, and green this exact decision. Only
+then implement the generated/mock real selector. Do not touch the retained
+Freewill manifest or Wrist endpoint until that exact implementation is also
+remotely green. After both green milestones, the one registered metadata
+selection may run with no retry and no payload access.
