@@ -6992,3 +6992,36 @@ Evidence:
 `docs/MARC_1_VERSIONED_PAGINATION_GENERATED_RESULT.md`,
 `registries/marc1_versioned_pagination_failure_result.v0.json`, and
 `tests/test_marc1_versioned_pagination_failure_result.py`.
+
+## 0209 - Make Safe Output Authority The First Operation
+
+Evidence-order decision: begin MARC1-OP1 only after consumed result `a4dcaea`
+passed Base Python job `94107907276` and Optional Neuro Readers job
+`94107907246` in CI `31594881048`.
+
+Root-cause decision: classify MARC1-PG1 as a guard-ordering defect. The guard
+worked, but only after generated experiment operations began. Preserve the
+consumed result and do not amend or rerun it.
+
+Architecture decision: replace string-only repeated path trust with a held
+parent-directory capability. Validate every ancestor, refuse symlinks, open the
+parent no-follow, bind device/inode/type, require output absence, and retain the
+descriptor. Acquire it before any repository read, contract load, deferred
+pagination import, fixture, or selection.
+
+Write decision: revalidate the held descriptor, create the output directory
+and files parent-relatively with exclusive no-follow operations, and clean up
+only allowlisted generated objects through held descriptors. Missing primitive
+support must refuse; no fallback is permitted.
+
+Sequencing decision: green this research before freezing a generated-only
+contract. Then require separate green contract, implementation, and one
+registered generated result before considering a Tier C metadata packet.
+
+Path decision: this is process hardening on the same neural-positive-control
+to held-out-language route, not a scientific pivot or result.
+
+Evidence:
+`docs/MARC_1_OUTPUT_CAPABILITY_RECOVERY_RESEARCH.md`,
+`registries/marc1_output_capability_recovery_research.v0.json`, and
+`tests/test_marc1_output_capability_recovery_research.py`.

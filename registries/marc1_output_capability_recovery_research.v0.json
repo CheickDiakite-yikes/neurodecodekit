@@ -1,0 +1,269 @@
+{
+  "schema_name": "neurodecodekit.marc1_output_capability_recovery_research",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC1-OP1",
+  "research_id": "MARC1-OP1-output-capability-first-recovery-research-v0",
+  "created_at_local": "2026-08-12",
+  "status": "artifact_only_recovery_design_no_implementation_or_execution",
+  "proof_posture": "committed_aggregate_source_and_local_runtime_metadata_only",
+  "artifact_bindings": [
+    {
+      "path": "docs/MARC_1_OUTPUT_CAPABILITY_RECOVERY_RESEARCH.md",
+      "bytes": 8770,
+      "sha256": "04b5886ee164f55b361eb1fb3520cabd013ca7b2ec2a8b5e168055c9909089ac"
+    },
+    {
+      "path": "registries/marc1_versioned_pagination_failure_result.v0.json",
+      "bytes": 8122,
+      "sha256": "b99be5d82e1f49f064cf17e4a7b2d6a21e36d89cebc78b133136b181fb4bdcf2"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/marc1_versioned_pagination.py",
+      "bytes": 63368,
+      "sha256": "3dc5f4fdf5792040f153797d708cf27cd8ece8e4dc40b3a0eeaba86071724228"
+    }
+  ],
+  "green_failure_result_proof": {
+    "commit": "a4dcaea784f4c3a62547fd4f73bb3e2a5528100a",
+    "CI_run_id": 31594881048,
+    "base_python_job_id": 94107907276,
+    "base_python_conclusion": "success",
+    "optional_neuro_job_id": 94107907246,
+    "optional_neuro_conclusion": "success",
+    "both_required_jobs_green_before_research": true
+  },
+  "consumed_boundary": {
+    "consumed_lane": "MARC1-PG1",
+    "consumed_route": "MARC1PG-F07",
+    "registered_invocations": 1,
+    "retry_or_rerun_available": false,
+    "corrected_path_invocation_available": false,
+    "post_result_implementation_amendment_available": false,
+    "live_metadata_packet_eligible": false,
+    "generated_operations_preceded_failed_preflight": true,
+    "generated_output_files": 0,
+    "network_bytes": 0,
+    "real_or_private_input_bytes": 0
+  },
+  "root_cause": {
+    "failed_guard_was_missing": false,
+    "failed_guard_was_too_late": true,
+    "old_order": [
+      "contract_load",
+      "generated_inventory_construction",
+      "four_accepted_selections",
+      "generated_private_manifest_construction",
+      "output_path_preflight"
+    ],
+    "required_new_order": [
+      "output_capability_acquisition",
+      "contract_load",
+      "deferred_pagination_import",
+      "generated_inventory_construction",
+      "selection",
+      "output_capability_revalidation",
+      "parent_relative_exclusive_write"
+    ]
+  },
+  "candidate_policy": {
+    "schema": "marc1.output_capability_policy",
+    "version": "0.1.0",
+    "canonical_bytes": 672,
+    "sha256": "6412dd0cdfabf2b96d0c5ebf2d1e2dadb4fc3e8fe5eed6ac762524a5c9881054",
+    "preflight_order": [
+      "validate_lexical_path",
+      "lstat_every_ancestor",
+      "open_parent_no_follow",
+      "bind_parent_device_inode",
+      "require_output_absent"
+    ],
+    "before_any": [
+      "repository_read",
+      "contract_load",
+      "deferred_pagination_import",
+      "fixture_construction",
+      "selection",
+      "output_write"
+    ],
+    "write_order": [
+      "revalidate_parent_capability",
+      "require_output_absent_again",
+      "mkdirat_output",
+      "open_output_no_follow",
+      "exclusive_relative_writes",
+      "measure_inspect_hash",
+      "relative_cleanup"
+    ],
+    "registered_output_path": "/private/tmp/neurodecodekit-marc1op1-registered-closeout-20260812",
+    "retries": 0,
+    "network_bytes": 0,
+    "real_private_input_bytes": 0
+  },
+  "output_capability": {
+    "process_local_only": true,
+    "serialized": false,
+    "fields": [
+      "open_parent_directory_descriptor",
+      "parent_device",
+      "parent_inode",
+      "parent_mode",
+      "normalized_output_basename",
+      "allowlisted_output_filenames"
+    ],
+    "all_ancestors_lstat_checked": true,
+    "all_symlink_ancestors_refused": true,
+    "parent_open_flags": [
+      "O_RDONLY",
+      "O_DIRECTORY",
+      "O_NOFOLLOW"
+    ],
+    "parent_identity_rechecked_before_write": true,
+    "output_absence_rechecked_before_mkdir": true,
+    "directory_creation_uses_dir_fd": true,
+    "file_creation_uses_dir_fd_and_O_EXCL": true,
+    "cleanup_uses_held_directory_descriptors": true,
+    "silent_string_only_fallback_allowed": false
+  },
+  "local_standard_library_observation": {
+    "python_version": "3.14.6",
+    "O_DIRECTORY": 1048576,
+    "O_NOFOLLOW": 256,
+    "dir_fd_supported_functions": [
+      "open",
+      "mkdir",
+      "stat",
+      "unlink",
+      "rmdir"
+    ],
+    "observation_is_portability_guarantee": false,
+    "future_missing_primitive_policy": "refuse_before_repository_or_fixture_access"
+  },
+  "required_future_accepted_cases": [
+    "regular_absolute_parent_absent_output_child",
+    "deeper_all_regular_ancestor_chain",
+    "deterministic_replay_same_lexical_path_shape",
+    "unchanged_pagination_and_selection_after_capability_acquisition"
+  ],
+  "required_future_pre_capability_refusals": [
+    "relative_path",
+    "empty_path_or_basename",
+    "root_destination",
+    "dot_or_dotdot_component",
+    "non_normalized_path",
+    "missing_parent",
+    "non_directory_parent",
+    "immediate_parent_symlink",
+    "earlier_ancestor_symlink",
+    "existing_output_file",
+    "existing_output_directory",
+    "existing_output_symlink",
+    "dangling_output_symlink",
+    "missing_required_standard_library_primitive",
+    "lstat_open_device_or_inode_disagreement",
+    "closed_replaced_or_retyped_parent_descriptor",
+    "output_appears_after_capability_acquisition",
+    "parent_relative_mkdir_or_child_open_disagreement",
+    "repository_contract_import_fixture_selection_or_output_operation_before_capability"
+  ],
+  "unchanged_pagination_and_selection_identity": {
+    "request_query": "page=1&page_size=1000",
+    "Wrist_rows": 55,
+    "Wrist_participant_archives": 45,
+    "Wrist_supplementary_rows": 10,
+    "Wrist_declared_record_bytes": 3683416050,
+    "selected_subjects_per_axis": 12,
+    "Freewill_run_bundles": 72,
+    "Freewill_core_members": 288,
+    "private_selection_rows": 300,
+    "fit_heldout_overlap": 0,
+    "target_quality_size_checksum_and_outcome_free": true
+  },
+  "prospective_resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "generated_input_bytes": 2097152,
+    "combined_output_bytes": 2097152,
+    "incremental_disk_bytes": 4194304,
+    "network_bytes": 0,
+    "real_or_private_input_bytes": 0
+  },
+  "research_access_counters": {
+    "local_standard_library_introspections": 1,
+    "qualify_command_invocations": 0,
+    "generated_fixture_runs": 0,
+    "registered_output_path_stats_or_creations": 0,
+    "dataset_specific_Figshare_requests": 0,
+    "dataset_specific_response_bytes": 0,
+    "private_Freewill_manifest_operations": 0,
+    "consumed_private_root_operations": 0,
+    "payload_requests": 0,
+    "payload_bytes": 0,
+    "signal_sample_reads": 0,
+    "target_or_label_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "scoring_events": 0,
+    "provider_or_language_model_calls": 0,
+    "hardware_operations": 0,
+    "operations_on_other_projects": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "authorization_flags": {
+    "generated_contract_frozen_now": false,
+    "generated_implementation_authorized_before_research_green": false,
+    "generated_closeout_authorized_now": false,
+    "dataset_specific_response_authorized_now": false,
+    "private_manifest_operation_authorized_now": false,
+    "payload_acquisition_authorized_now": false,
+    "signal_target_model_or_score_operation_authorized_now": false,
+    "retry_or_rerun_of_MARC1_PG1_authorized_now": false,
+    "live_Tier_C_packet_open_now": false,
+    "scientific_claim_upgrade_authorized_now": false
+  },
+  "next_gate": {
+    "research_commit_push_both_CI_jobs_green_first": true,
+    "then_freeze_generated_only_MARC1_OP1_contract": true,
+    "then_green_contract_before_implementation": true,
+    "then_green_implementation_before_one_registered_generated_run": true,
+    "future_live_response_remains_separate_Tier_C": true
+  },
+  "verification": {
+    "focused_research_tests": 11,
+    "final_MARC1_tests": 539,
+    "dependency_light_tests": 2678,
+    "dependency_light_expected_skips": 204,
+    "dependency_light_runtime_seconds": 21.491,
+    "dependency_light_external_peak_RSS_bytes": 235159552,
+    "optional_neuro_tests": 2749,
+    "optional_neuro_expected_skips": 35,
+    "optional_neuro_runtime_seconds": 59.776,
+    "optional_neuro_external_peak_RSS_bytes": 765181952,
+    "tests_added_over_green_consumed_result": 11,
+    "additional_skips": 0,
+    "ruff_passed": true,
+    "compile_passed": true,
+    "registry_JSON_files_parsed": 189,
+    "candidate_policy_hash_replayed": true,
+    "artifact_hashes_passed": true,
+    "git_diff_check_passed": true,
+    "qualify_or_fixture_operation_during_verification": false,
+    "prospective_output_path_operation_during_verification": false
+  },
+  "warnings": [
+    "The exact prospective output path was not statted created or reserved by this research.",
+    "Local dir_fd and no-follow availability is not a cross-platform guarantee.",
+    "MARC1-PG1 remains consumed and may not be retried through this research.",
+    "No live metadata or payload action is open.",
+    "Output safety engineering cannot establish a neural or language-decoding result."
+  ],
+  "claim_boundary": {
+    "same_thought_to_text_path": true,
+    "is_pivot": false,
+    "engineering_capability_proposed": "A held directory capability can make safe output authority the first prerequisite and bind later writes to the same verified parent identity.",
+    "scientific_claim_not_established": "This artifact-only research accessed no dataset response neural signal target prediction score language decoding or thought-to-text evidence."
+  }
+}

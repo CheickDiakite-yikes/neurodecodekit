@@ -8576,3 +8576,40 @@ without creating output or touching a real source.
 
 Scientific claim not established: live pagination, neural signal, targets,
 predictions, scores, language decoding, and thought-to-text remain untested.
+
+## 2026-08-12 - MARC1-OP1 Output-Capability Recovery Research
+
+- Began only after consumed result `a4dcaea` passed Base Python job
+  `94107907276` and Optional Neuro Readers job `94107907246` in CI
+  `31594881048`.
+- Diagnosed ordering, not absence, as the guard defect: generated contract,
+  inventory, selection, and private-manifest work preceded path preflight.
+- Froze candidate policy SHA-256
+  `6412dd0cdfabf2b96d0c5ebf2d1e2dadb4fc3e8fe5eed6ac762524a5c9881054`
+  over 672 canonical bytes.
+- Proposed a process-local held parent-directory capability with all-ancestor
+  `lstat`, `O_DIRECTORY | O_NOFOLLOW`, device/inode binding, pre-write
+  revalidation, and parent-relative exclusive create/write/cleanup.
+- Required 19 pre-capability refusal classes and forbade silent string-only
+  fallback when the host lacks a required primitive.
+- Local Python 3.14.6 exposes `dir_fd` support for open, mkdir, stat, unlink,
+  and rmdir plus `O_DIRECTORY` and `O_NOFOLLOW`. This is an observation, not a
+  cross-platform guarantee.
+- One runtime introspection occurred. Fixture, qualify, registered-path,
+  network, private, payload, signal, target, model, and score operations were
+  zero.
+- Eleven focused research invariants and all 539 MARC tests pass. The
+  dependency-light suite passes 2,678 tests with 204 expected skips in 21.491
+  seconds at 235,159,552-byte external peak RSS; the optional-neuro suite
+  passes 2,749 tests with 35 expected skips in 59.776 seconds at 765,181,952-
+  byte external peak RSS. Both add exactly eleven tests and zero skips.
+- Repository-wide Ruff, compilation, all 189 registry JSON parses, policy and
+  artifact hash replay, and `git diff --check` pass. No qualifier, fixture, or
+  prospective output-path operation occurred during verification.
+
+Engineering capability proposed: safe output authority becomes the first
+future operation and later writes remain bound to one verified parent identity.
+
+Scientific claim not established: this research contains no live metadata,
+neural signal, target, prediction, score, language decoding, or thought-to-text
+evidence.

@@ -3719,3 +3719,23 @@ result. Then specify a separately named generated recovery whose path preflight
 precedes contract and fixture work. Do not rerun MARC1-PG1, use `/private/tmp`
 as a substitution, prepare a live packet, or access any payload. This remains
 the same thought-to-text path, not a pivot, and no scientific result changed.
+
+## 2026-08-12 MARC1-OP1 Output-Capability Research Handoff
+
+Consumed result `a4dcaea784f4c3a62547fd4f73bb3e2a5528100a` passed Base
+Python job `94107907276` and Optional Neuro Readers job `94107907246` in CI
+`31594881048` before this research. Read
+`docs/MARC_1_OUTPUT_CAPABILITY_RECOVERY_RESEARCH.md`,
+`registries/marc1_output_capability_recovery_research.v0.json`, and its test.
+
+The root cause is operation order: MARC1-PG1 checked output safety only after
+generated inventories, four selections, and private-manifest construction. The
+candidate recovery obtains a held no-follow parent-directory capability first,
+binds device/inode identity, refuses every symlink ancestor, then uses
+parent-relative exclusive creation and cleanup. Missing primitives fail closed.
+
+One local standard-library introspection occurred; fixture, qualify,
+registered-path, network, private, payload, signal, target, model, and score
+operations were zero. Immediate next gate: verify, commit, push, and green this
+research. Only then freeze a generated-only MARC1-OP1 contract. Do not rerun
+MARC1-PG1 or prepare a live packet. This remains the same thought-to-text path.

@@ -1500,3 +1500,19 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   and score work remains closed. MARC1-PG1 is consumed on the same cue-
   resistance to neural-positive-control to held-out-language path, not a
   pivot, and adds no scientific evidence.
+
+  Consumed result `a4dcaea784f4c3a62547fd4f73bb3e2a5528100a` passed Base
+  Python job `94107907276` and Optional Neuro Readers job `94107907246` in CI
+  `31594881048` before the artifact-only
+  [MARC1-OP1 recovery research](docs/MARC_1_OUTPUT_CAPABILITY_RECOVERY_RESEARCH.md).
+  Its candidate design makes a held no-follow parent-directory capability the
+  first operation, before repository read, contract load, pagination import,
+  fixture construction, or selection. Device/inode binding and parent-relative
+  creation keep later writes attached to the verified parent identity.
+
+  The local Python runtime exposes the required `dir_fd`, `O_DIRECTORY`, and
+  `O_NOFOLLOW` primitives, but this is not a portability claim: missing support
+  must refuse before generated work. The research performed one local runtime
+  introspection and zero fixture, source, network, private, payload, signal,
+  target, model, or score operations. Next: green this research before freezing
+  the generated-only MARC1-OP1 contract. The scientific path is unchanged.

@@ -377,6 +377,7 @@ negative result and S25 is never repurposed for calibration.
 | MARC1-HT1A live-recovery request | One future 418,755-byte sealed-manifest read; one future Wrist body capped at 2 MiB; one new isolated root; 0 payload bytes; all current permissions false | Binds green result `5344d73` / CI `31584662864`, the frozen selector, and the consumed `MARC1PS-F03` boundary; requires its own green CI before any decision | Proposes one additive wrapper and one metadata-only attempt on the same thought-to-text path; the packet itself performs no operation and establishes no scientific result |
 | MARC1-HT1A packet-bound decision | Exact 76-byte maintainer message; one green packet; one future generated/mock wrapper; one future metadata-only attempt; 0 current data/model operations | Request `27f39ae` passed CI `31586256906`; decision records the fresh approval but is ineffective until its own CI is green | Preserves thought-to-text as the objective without predeclaring an outcome or expanding the zero-payload metadata scope |
 | MARC1-PG1 generated pagination lane | Development: 4/4 accepted cases, 41/41 refusals, 18/18 gates. Registered closeout: route `MARC1PG-F07`, 0 output bytes, 0 real/network bytes | Exact implementation `2c98a2a` passed CI `31593790492`; the sole closeout then refused a symlink output parent in 0.17 sec at 30,064,640-byte external peak RSS and is consumed without retry | Preserves a real process defect: output preflight happened after fixture construction. A new generated recovery must move it first; no live pagination or scientific result exists |
+| MARC1-OP1 output-capability research | One 672-byte candidate policy; held parent descriptor; device/inode binding; ancestor no-follow checks; parent-relative create/write/cleanup; 19 required pre-capability refusals; 0 fixture/network/real operations | Green consumed result `a4dcaea` / CI `31594881048` precedes this artifact-only design | Makes safe output authority the first future operation and refuses platforms that cannot enforce it; implementation and another generated run remain closed until their own green milestones |
 
 ### Real-Data Scientific Scorecard
 
@@ -1350,6 +1351,18 @@ Read this before interpreting any number in the repository.
   No live request, payload, signal, target, model, score, or claim operation is
   open. This remains the same path to cue-resistant neural evidence and held-
   out language decoding; it is not a pivot.
+  Result `a4dcaea` passed Base Python job `94107907276` and Optional Neuro
+  Readers job `94107907246` in CI `31594881048` before the artifact-only
+  [MARC1-OP1 research](docs/MARC_1_OUTPUT_CAPABILITY_RECOVERY_RESEARCH.md).
+  The candidate architecture obtains and holds a no-follow parent-directory
+  capability, binds device/inode identity, and requires parent-relative
+  exclusive writes. That capability must exist before any repository read,
+  contract load, deferred pagination import, fixture, or selection. The local
+  runtime supports the needed `dir_fd` primitives, but a future implementation
+  must feature-detect and refuse rather than downgrade on another platform.
+  This research made zero fixture, network, private, payload, signal, target,
+  model, or score operations. Its next gate is research commit, push, and both
+  CI jobs green before a generated-only contract may be frozen.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

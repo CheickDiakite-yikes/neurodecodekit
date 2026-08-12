@@ -1581,3 +1581,16 @@ before all contract and fixture operations. Only its independently green
 contract, implementation, and closeout could support a later all-false Tier C
 packet. Task 4 remains incomplete on the same control-attribution to held-out-
 language path; no scientific result was added.
+
+Consumed result `a4dcaea` passed both required jobs in CI `31594881048` before
+the artifact-only `MARC1-OP1` recovery research. Its candidate design makes a
+held no-follow parent-directory capability the first operation, binds
+device/inode identity, refuses symlinks in every ancestor, and performs later
+create/write/cleanup parent-relatively. Nineteen pre-capability refusal classes
+cover path shape, ancestor identity, output races, missing primitives, and any
+repository, contract, import, fixture, or selection operation occurring early.
+
+Next gate: commit, push, and green the research, then freeze a generated-only
+MARC1-OP1 contract. Implementation, registered output-path access, another
+generated closeout, live metadata, and payload work remain closed. Task 4 stays
+on the same control-attribution to held-out-language path.

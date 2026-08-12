@@ -1003,6 +1003,24 @@ fixture operations. A future live pagination check remains a new Tier C event.
 This process failure remains on the same thought-to-text path and has no
 scientific claim value.
 
+Consumed result `a4dcaea784f4c3a62547fd4f73bb3e2a5528100a` passed Base
+Python job `94107907276` and Optional Neuro Readers job `94107907246` in CI
+`31594881048` before artifact-only MARC1-OP1 research. Read
+`docs/MARC_1_OUTPUT_CAPABILITY_RECOVERY_RESEARCH.md` and
+`registries/marc1_output_capability_recovery_research.v0.json`. The candidate
+architecture acquires and holds a no-follow parent-directory descriptor,
+binds device/inode identity, refuses symlinks in every ancestor, and uses
+parent-relative create/write/cleanup. Capability acquisition must precede any
+repository read, contract load, deferred pagination import, fixture, or
+selection. Missing standard-library primitives refuse without fallback.
+
+Commit, push, and obtain both green jobs for this research before freezing a
+generated-only MARC1-OP1 contract. Do not implement from the research alone,
+stat or reserve its exact future output path, call the consumed qualifier,
+request live metadata, open a private root, or access payload, signal, target,
+model, prediction, or score. The research stays on the same thought-to-text
+path and establishes no scientific result.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in
