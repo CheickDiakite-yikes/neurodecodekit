@@ -1510,3 +1510,21 @@ wrapper, and require Base Python and Optional Neuro Readers CI to pass. Only
 then run the one registered metadata-only selection. Payload acquisition is
 still ineligible. MARC-1 remains Task 4 on the same control-attribution to
 language-decoding path, not a pivot.
+
+Exact wrapper `68ade0d` passed both jobs in CI `31588920988` before the single
+registered metadata attempt. The standards repair passed live transport: one
+2,917-byte body with absent `Content-Encoding` was accepted, length-checked,
+hashed, and parsed with zero decoding or decompression. Selection then consumed
+at `MARC1HTL-F04` because the live file-list row count differed from the frozen
+55-row rule. The actual count and rows were not retained.
+
+The run read the 418,755-byte sealed Freewill inventory once, selected zero
+participants, opened zero payload bytes, and performed zero signal, target,
+model, prediction, score, or claim operations. Runtime was 0.539666 seconds at
+38,223,872-byte reported peak RSS, with 421,672 input bytes and a 5,006-byte
+aggregate result. No retry or rerun is open.
+
+Next gate: commit, push, and green the consumed aggregate result. Then specify
+only a new prospective metadata-snapshot identity lane; do not request another
+body or acquire a payload from the result itself. Task 4 remains incomplete on
+the same MARC-1 control path.

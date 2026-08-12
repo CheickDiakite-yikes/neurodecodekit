@@ -916,12 +916,24 @@ selection identities. The 8,951-byte aggregate and 206,509-byte private
 manifest were temporary and removed; every real, network, payload, signal,
 target, model, score, and claim counter stayed zero.
 
-Commit, push, and obtain both green CI jobs for this exact implementation
-before the sole metadata invocation. Only after that proof may the executor
-read the sealed upstream manifest once and accept one bounded Wrist metadata
-body in the new root. Do not access a payload, signal, target, model, score,
-the consumed executor, or the old root. This remains the same thought-to-text
-research path and is not itself a scientific result.
+Exact wrapper `68ade0d4f6a58c19dbaae954a608080bdc6f128a` passed Base Python
+job `94089099869` and Optional Neuro Readers job `94089099850` in CI
+`31588920988` before the sole invocation. Read
+`docs/MARC_1_HTTP_IDENTITY_LIVE_RESULT.md` and
+`registries/marc1_http_identity_live_result.v0.json`. The corrected transport
+accepted one 2,917-byte body with absent `Content-Encoding`, one matching
+`Content-Length`, and zero decoding/decompression operations. It then consumed
+at `MARC1HTL-F04` because the strict Wrist file-list row count differed from
+55. The actual row count and rows were not retained and must not be inferred.
+
+The run read the exact 418,755-byte sealed Freewill manifest once and the one
+Wrist body once. It selected zero participants and made zero payload, signal,
+target, derivative, model, prediction, score, release, or claim operations.
+MARC1-HT1A has no retry, rerun, resume, or amendment. Do not inspect its new
+private root, reopen the upstream inventory, or request the Wrist endpoint
+again under this lane. The next safe work is a separately named prospective
+metadata-snapshot identity design based only on the aggregate failure; a new
+public body remains Tier C. This is still the same thought-to-text path.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

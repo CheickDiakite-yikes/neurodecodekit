@@ -1421,3 +1421,17 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   be pushed and both required CI jobs must pass before the one metadata-only
   attempt may run. This is the same confound-control to neural-positive-control
   to held-out-language path, not a pivot. Payload acquisition remains closed.
+
+  Exact wrapper `68ade0d4f6a58c19dbaae954a608080bdc6f128a` then passed Base
+  Python job `94089099869` and Optional Neuro Readers job `94089099850` in CI
+  `31588920988` before the sole invocation. Read
+  [the consumed result](docs/MARC_1_HTTP_IDENTITY_LIVE_RESULT.md) and its
+  machine registry. The standards repair worked: one 2,917-byte uncoded Wrist
+  body with absent `Content-Encoding` passed transport and strict JSON parsing.
+  Selection then parked at `MARC1HTL-F04` because the live row count differed
+  from the frozen 55-row contract. The actual count and rows were not retained.
+
+  MARC1-HT1A is consumed with no retry or rerun. It selected zero participants
+  and opened zero payload bytes; all signal, target, model, prediction, score,
+  and claim counters remain zero. Any metadata-snapshot repair is a separately
+  named prospective lane and any new public body is a new Tier C event.

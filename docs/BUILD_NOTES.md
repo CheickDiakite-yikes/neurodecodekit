@@ -8399,3 +8399,42 @@ and consumed-root isolation gates.
 
 Scientific claim not established: generated wrapper qualification adds no
 human EEG, neural effect, language-decoding, or thought-to-text evidence.
+
+## 2026-08-12 - MARC1-HT1A Consumed Live Result
+
+- Exact wrapper `68ade0d` passed Base Python job `94089099869` and Optional
+  Neuro Readers job `94089099850` in CI `31588920988` before the sole live
+  invocation.
+- The machine gate passed with 17,704,779,776 free bytes, one-thread settings,
+  and normalized one-minute load `0.59765625` before the consumed marker.
+- Read, hashed, and parsed the exact 418,755-byte sealed Freewill manifest once.
+- Accepted one 2,917-byte Wrist body with absent `Content-Encoding`, matching
+  `Content-Length`, no redirects, and zero decoder/decompressor operations.
+  This confirms that the MARC1-HT1 standards repair resolved the earlier
+  transport refusal.
+- Consumed at `MARC1HTL-F04` because the strict live file-list row count
+  differed from 55. The actual count, rows, names, IDs, checksums, URLs, and
+  changed fields were not retained and were not inferred.
+- Selected zero participants and opened zero payload bytes. Every signal,
+  target, derivative, training, inference, prediction, freeze, score, retry,
+  rerun, release, claim, and other-project counter remained zero.
+- Runtime was 0.5396664168220013 seconds at 38,223,872-byte reported peak RSS;
+  external wall/RSS were 0.70 seconds and 38,305,792 bytes. Input totaled
+  421,672 bytes; the 5,006-byte public result plus marker used 5,458 bytes.
+- Result SHA-256 is
+  `50a1bd4e97e6149db91d528aa0fce79e6aa5d3cedf79acdb12f03bf4a2d041f2`.
+  MARC1-HT1A is consumed with no retry or rerun.
+- Ten result tests and all 467 MARC tests pass. The dependency-light suite
+  passes 2,606 tests with 204 expected skips in 22.685 seconds at 280,395,776-
+  byte external peak RSS; the optional-neuro suite passes 2,677 tests with 35
+  expected skips in 58.662 seconds at 761,479,168-byte external peak RSS.
+  Both add ten tests and zero skips over the green wrapper baseline.
+- Ruff, compilation, all 184 registry JSON parses, aggregate inspection, and
+  `git diff --check` pass.
+
+Engineering capability added: the live wrapper now handles standards-compliant
+uncoded HTTP metadata and fails closed at a deeper semantic identity boundary.
+
+Scientific claim not established: no neural payload, signal, target, model, or
+score was reached, so there is no neural, language-decoding, or thought-to-text
+result.

@@ -3577,3 +3577,32 @@ wrapper, and require both CI jobs green. Only afterward may the one registered
 metadata attempt read the sealed upstream inventory once and accept one Wrist
 body capped at 2 MiB. Do not open payloads or the old root. This is the same
 thought-to-text path, not a pivot, and no scientific result has changed.
+
+## 2026-08-12 MARC1-HT1A Consumed Result Handoff
+
+Exact wrapper `68ade0d4f6a58c19dbaae954a608080bdc6f128a` passed Base Python
+job `94089099869` and Optional Neuro Readers job `94089099850` in CI
+`31588920988` before the one registered invocation. Read
+`docs/MARC_1_HTTP_IDENTITY_LIVE_RESULT.md`,
+`registries/marc1_http_identity_live_result.v0.json`, and the matching result
+test.
+
+The corrected HTTP predicate accepted one 2,917-byte Wrist body with absent
+`Content-Encoding`, matching `Content-Length`, no redirects, and zero decoding
+or decompression. This resolves the prior explicit-identity transport blocker.
+The strict parser then routed `MARC1HTL-F04` because the live file-list row
+count differed from the frozen 55-row contract. The actual row count and rows
+were not retained or published.
+
+The invocation read the exact 418,755-byte sealed Freewill inventory once,
+selected zero participants, opened zero payload bytes, and performed zero
+signal, target, derivative, model, prediction, score, retry, rerun, or claim
+operations. Internal runtime was 0.5396664168220013 seconds at 38,223,872-byte
+reported peak RSS. The 5,006-byte public result has SHA-256
+`50a1bd4e97e6149db91d528aa0fce79e6aa5d3cedf79acdb12f03bf4a2d041f2`.
+
+Immediate next gate: verify, commit, push, and green this aggregate result.
+Afterward, design only a separately named metadata-snapshot identity recovery
+from aggregate evidence. Do not inspect the retained private root or request
+another public body under this consumed lane. The work remains on the same
+thought-to-text path and has not established a scientific result.

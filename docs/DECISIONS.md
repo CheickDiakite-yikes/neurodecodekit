@@ -6815,3 +6815,39 @@ Evidence:
 `registries/marc1_http_identity_live_implementation.v0.json`,
 `src/neurodecodekit/datasets/marc1_http_identity_live.py`, and the two matching
 tests.
+
+## 0204 - Preserve The Deeper Semantic Failure Without Rerun
+
+Execution decision: run the one metadata-only `MARC1-HT1A` invocation only
+after exact wrapper `68ade0d` passed both jobs in CI `31588920988`. Treat the
+attempt as consumed regardless of success or failure.
+
+Transport result decision: the correction passed its live boundary. One
+2,917-byte body with absent `Content-Encoding` was accepted under exact length,
+JSON, cap, and privacy rules with zero decoding/decompression operations. This
+resolves the previous explicit-identity transport blocker.
+
+Semantic result decision: preserve `MARC1HTL-F04` as a strict row-count
+identity refusal. The live file list differs from the frozen 55-row contract.
+Do not retain or infer the actual count or rows, fall back to another version,
+select a partial cohort, or amend the rule after observing the failure.
+
+Consumption decision: the lane has no retry, rerun, resume, restart, parser
+amendment, or second source operation. Do not inspect the new private root,
+reopen the sealed upstream manifest, or request the endpoint again under this
+contract.
+
+Scientific decision: selected participants, payload bytes, signals, targets,
+models, predictions, and scores all remain zero. The result diagnoses metadata
+snapshot drift, not the MARC-1 neural hypothesis. It adds no scientific claim.
+
+Next-step decision: first green the exact aggregate result. A later Tier A
+record may specify a separately named metadata-snapshot identity recovery using
+only aggregate evidence. Any new public response remains a new Tier C event;
+payload acquisition is still ineligible. This is the same thought-to-text path,
+not a pivot.
+
+Evidence:
+`docs/MARC_1_HTTP_IDENTITY_LIVE_RESULT.md`,
+`registries/marc1_http_identity_live_result.v0.json`, and
+`tests/test_marc1_http_identity_live_result.py`.
