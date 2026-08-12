@@ -1677,13 +1677,20 @@ mutations, passed all 20 gates, and replayed the exact 55-row inventory,
 12-subject cohort, and runs 1-6 fit versus runs 7-8 held out.
 
 The qualification read 184,466 generated response bytes, created and removed
-exactly 19,030 temporary output bytes, ran in 0.029389 seconds at 42,123,264-
+exactly 19,030 temporary output bytes, ran in 0.030280 seconds at 43,057,152-
 byte reported RSS, and made zero registered-path, real-network, archive,
 payload, signal, target, model, prediction, score, provider, hardware, retry,
 rerun, other-project, or claim operations. Twenty-one behavior tests and 12
 implementation-record tests pass. All 658 MARC tests pass; complete base is
-2,797 tests/204 skips and canonical optional is 2,868 tests/35 skips, exactly
-33 new tests and zero new skips on both surfaces.
+2,797 tests/204 skips and the corrected isolated optional environment is 2,853
+tests/34 skips. Two canonical optional attempts exposed only older late-process
+mechanical rehearsal sensitivity; each affected test passes in isolation and
+no unrelated gate changed. Fresh remote jobs remain decisive.
+
+First push `8f67af2` failed both CI jobs only because seven generated tests
+used macOS `/private/tmp`, absent on Linux. The portability correction uses the
+canonical real system temporary parent for generated/tests only. No registered
+path or real operation occurred, and the real one-shot path is unchanged.
 
 Next gate: commit, push, and green the exact implementation. Then spend the
 single registered metadata invocation. A post-marker failure consumes and

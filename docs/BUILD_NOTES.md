@@ -8788,18 +8788,27 @@ exact future implementation is separately remotely green.
   marker. Generated cleanup removes only the three invocation-created files.
 - Final nonregistered `MARC1LM-G1` passed four accepted cases, 36 refusals, and
   20 gates. It read 184,466 generated response bytes and emitted 19,030
-  temporary bytes in 0.029389458941295743 seconds at 42,123,264-byte reported
-  RSS; external wall was 0.11 seconds at 42,221,568-byte peak RSS. Exact
+  temporary bytes in 0.030280291102826595 seconds at 43,057,152-byte reported
+  RSS; external wall was 0.11 seconds at 43,089,920-byte peak RSS. Exact
   cleanup passed.
 - Twenty-one behavior tests and 12 implementation-record tests pass. Real
   network, registered-path, participant archive, payload, signal, target,
   model, prediction, score, provider, hardware, other-project, retry, rerun,
   and claim operations were zero.
-- All 658 MARC tests pass. Complete dependency-light verification is 2,797
-  tests/204 skips in 25.066 seconds at 317,571,072-byte external peak RSS;
-  canonical optional verification is 2,868 tests/35 skips in 62.112 seconds at
-  746,782,720 bytes. Both add exactly 33 tests and zero skips over the green
-  decision baseline.
+- All 658 MARC tests pass. Corrected dependency-light verification is 2,797
+  tests/204 skips in 25.003 seconds at 315,179,008-byte external peak RSS. The
+  corrected isolated optional environment passes 2,853 tests/34 skips in
+  70.327 seconds at 717,783,040 bytes.
+- Two corrected canonical optional attempts exposed one and then two older
+  late-process mechanical rehearsal misses; each affected test passed in a
+  fresh process. No unrelated code or gate changed. Fresh remote Base Python
+  and Optional Neuro Readers jobs remain required for exact cross-platform
+  eligibility.
+- First implementation push `8f67af2` failed Base Python job `94153342511`
+  and Optional Neuro Readers job `94153342668` in CI `31608450681`: seven
+  generated tests assumed macOS `/private/tmp`, absent on Linux. No real
+  operation occurred. The correction canonicalizes only generated/test
+  temporary parents and leaves the registered execution path unchanged.
 - The exact implementation still requires commit, push, and both green CI jobs
   before the single registered metadata invocation. No participant ZIP or
   neural operation becomes eligible on metadata success.

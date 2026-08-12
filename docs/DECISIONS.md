@@ -7209,3 +7209,20 @@ Evidence:
 `registries/marc1_paginated_live_metadata_implementation.v0.json`,
 `tests/test_marc1_paginated_live_metadata.py`, and
 `tests/test_marc1_paginated_live_metadata_implementation.py`.
+
+## 0216 - Repair Generated Temporary-Parent Portability
+
+Failure decision: do not treat implementation push `8f67af2` as eligible for
+live access. Base Python job `94153342511` and Optional Neuro Readers job
+`94153342668` both failed in CI `31608450681` because seven generated tests
+assumed macOS `/private/tmp`, which is absent on the Linux runner.
+
+Scope decision: change only generated and test temporary-parent selection to
+the canonical real path of the platform's `tempfile.gettempdir()`. Preserve the
+exact registered `/private/tmp/neurodecodekit-marc1lm1-live-metadata-20260812`
+path and every request, payload, resource, privacy, and no-rerun boundary.
+
+Evidence decision: record zero registered-path, network, source, payload,
+signal, target, model, prediction, score, retry, rerun, and claim operations
+for the failed push. Requalify generated behavior and require a new commit and
+both green jobs before the one live request.

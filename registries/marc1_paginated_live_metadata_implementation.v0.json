@@ -144,10 +144,10 @@
       "consumed_marker_bytes": 220,
       "combined_output_bytes": 19030,
       "incremental_disk_bytes": 19030,
-      "reported_runtime_seconds": 0.029389458941295743,
+      "reported_runtime_seconds": 0.030280291102826595,
       "external_wall_seconds": 0.11,
-      "reported_peak_RSS_bytes": 42123264,
-      "external_peak_RSS_bytes": 42221568,
+      "reported_peak_RSS_bytes": 43057152,
+      "external_peak_RSS_bytes": 43089920,
       "temporary_output_removed": true
     },
     "domain_separated_hashes": {
@@ -156,7 +156,7 @@
       "response_body": "b2dbca16be6bf148e0c31af17a8fe77cb693e483340eb522bc039ab6185f6b0f",
       "private_manifest": "35fe721c6ca99049dd10a39adbf5c9d974b124df1727d22f88b0e3d4140c9865",
       "consumed_marker": "83ed4d5f6baa9b7ddaba16e7f7be695e102265b94128348f6dc61c947c24ba81",
-      "public_report": "73d3c4743cf188989856a3466d4323786d66b48cf580de8ed6bac611e7af76ed"
+      "public_report": "9304c18050a0ea5beaa1a7f30b0dd0021c61628108e115ec841fc9a74fab99d2"
     },
     "final_access_counters": {
       "capability_acquisitions": 1,
@@ -199,12 +199,25 @@
     "MARC_tests": 658,
     "dependency_light_tests": 2797,
     "dependency_light_skips": 204,
-    "dependency_light_runtime_seconds": 25.066,
-    "dependency_light_external_peak_RSS_bytes": 317571072,
-    "canonical_optional_tests": 2868,
-    "canonical_optional_skips": 35,
-    "canonical_optional_runtime_seconds": 62.112,
-    "canonical_optional_external_peak_RSS_bytes": 746782720,
+    "dependency_light_runtime_seconds": 25.003,
+    "dependency_light_external_peak_RSS_bytes": 315179008,
+    "pre_portability_canonical_optional_tests": 2868,
+    "pre_portability_canonical_optional_skips": 35,
+    "corrected_isolated_optional_tests": 2853,
+    "corrected_isolated_optional_skips": 34,
+    "corrected_isolated_optional_runtime_seconds": 70.327,
+    "corrected_isolated_optional_external_peak_RSS_bytes": 717783040,
+    "corrected_canonical_optional_attempts_green": 0,
+    "corrected_canonical_optional_attempt_1_failures": [
+      "test_tiny_causal_encoder_gate.TinyCausalEncoderGateTests.test_nonregistered_rehearsal_passes_mechanics_and_opens_test_once"
+    ],
+    "corrected_canonical_optional_attempt_2_failures": [
+      "test_streaming_ctc_gate.StreamingCTCGateTests.test_mechanical_pass_opens_test_once_and_preserves_access_order",
+      "test_tiny_causal_encoder_gate.TinyCausalEncoderGateTests.test_nonregistered_rehearsal_passes_mechanics_and_opens_test_once"
+    ],
+    "affected_legacy_tests_pass_in_fresh_process": true,
+    "unrelated_gate_or_code_changed": false,
+    "fresh_remote_jobs_required": true,
     "prechange_MARC_tests": 625,
     "prechange_dependency_light_tests": 2764,
     "prechange_optional_tests": 2835,
@@ -214,7 +227,21 @@
     "compile_passed": true,
     "CLI_help_plan_qualify_and_inspect_passed": true,
     "all_registry_JSON_parsed": true,
-    "git_diff_check_passed": true
+    "git_diff_check_passed": true,
+    "first_push_remote_CI": {
+      "commit": "8f67af223fd32ab30cc309a800bd829281db5719",
+      "CI_run_id": 31608450681,
+      "base_python_job_id": 94153342511,
+      "optional_neuro_job_id": 94153342668,
+      "both_required_jobs_green": false,
+      "failure_class": "generated_test_temporary_parent_not_portable_to_Linux",
+      "real_or_registered_operations": 0
+    },
+    "portability_correction": {
+      "generated_and_test_parent": "canonical_real_system_temporary_directory",
+      "registered_execution_path_changed": false,
+      "real_or_registered_operations": 0
+    }
   },
   "resource_caps": {
     "minimum_free_disk_bytes_before_consumption": 10737418240,
@@ -234,18 +261,18 @@
   "tracked_file_hashes": [
     {
       "path": "src/neurodecodekit/datasets/marc1_paginated_live_metadata.py",
-      "bytes": 81999,
-      "sha256": "2b8c24abd70dfdf871ea75276a034ae2f3ca164f404395f387eeadd11a7c3069"
+      "bytes": 82099,
+      "sha256": "525a3524b7f0a50c86e63487f0a025c6a242b5943e6ee48a520a078ea3d9f2b4"
     },
     {
       "path": "tests/test_marc1_paginated_live_metadata.py",
-      "bytes": 17981,
-      "sha256": "078df39951c0e64f57d224740d08b5139106c6d726cbf696aca6b3f8e71e4270"
+      "bytes": 18077,
+      "sha256": "f7962634cef855a29dc5f73c600e0ff8018741cf0dcca97ab3f9eeebbf13fa7e"
     },
     {
       "path": "docs/MARC_1_PAGINATED_LIVE_METADATA_IMPLEMENTATION.md",
-      "bytes": 8765,
-      "sha256": "a4b9fefe93a84b08376877ec521bf552bf9f30904bd92971964bc2c4a1fd75f4"
+      "bytes": 9795,
+      "sha256": "bc40aacef962500c7202a43d8ef274b39fe01de093dd773b1173921dd7abb58b"
     },
     {
       "path": "registries/marc1_paginated_live_metadata_authorization_decision.v0.json",

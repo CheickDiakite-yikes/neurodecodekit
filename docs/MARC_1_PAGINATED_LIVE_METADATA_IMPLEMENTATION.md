@@ -119,10 +119,10 @@ The final generated measurement was:
 | Generated response bytes read | 184,466 | 2,097,152 per response |
 | Transient combined output | 19,030 | 2,097,152 |
 | Incremental disk | 19,030 | 4,194,304 |
-| Reported runtime | 0.029389458941295743 sec | 30 sec |
+| Reported runtime | 0.030280291102826595 sec | 30 sec |
 | External wall time | 0.11 sec | 30 sec |
-| Reported peak RSS | 42,123,264 bytes | 268,435,456 |
-| External peak RSS | 42,221,568 bytes | 268,435,456 |
+| Reported peak RSS | 43,057,152 bytes | 268,435,456 |
+| External peak RSS | 43,089,920 bytes | 268,435,456 |
 | Output files created / removed | 3 / 3 | 3 / exact cleanup |
 | Public inspections | 1 | 1 |
 
@@ -142,7 +142,7 @@ The final generated identities are domain-separated:
 - generated response body: `b2dbca16be6bf148e0c31af17a8fe77cb693e483340eb522bc039ab6185f6b0f`
 - generated private manifest: `35fe721c6ca99049dd10a39adbf5c9d974b124df1727d22f88b0e3d4140c9865`
 - generated consumed marker: `83ed4d5f6baa9b7ddaba16e7f7be695e102265b94128348f6dc61c947c24ba81`
-- generated public report: `73d3c4743cf188989856a3466d4323786d66b48cf580de8ed6bac611e7af76ed`
+- generated public report: `9304c18050a0ea5beaa1a7f30b0dd0021c61628108e115ec841fc9a74fab99d2`
 
 These generated identities prove deterministic interface behavior only. They
 are not hashes of a live Figshare response or participant payload.
@@ -160,13 +160,29 @@ process-wide peak cannot falsely fail this lane; the standalone measurement
 above uses the real process clock and peak-RSS reader.
 
 Final local verification passes 21 behavior tests, 12 implementation-record
-tests, and all 658 MARC tests. The dependency-light suite passes 2,797 tests
-with 204 expected skips in 25.066 seconds at 317,571,072-byte external peak
-RSS. The canonical optional suite passes 2,868 tests with 35 expected skips in
-62.112 seconds at 746,782,720-byte external peak RSS. Relative to the green
-decision baseline, both complete suites add exactly 33 tests and zero skips.
-The complete-suite RSS values describe the whole long-lived test process, not
-this lane's standalone execution.
+tests, and all 658 MARC tests. The corrected dependency-light suite passes
+2,797 tests with 204 expected skips in 25.003 seconds at 315,179,008-byte
+external peak RSS. The corrected isolated optional environment passes 2,853
+tests with 34 expected skips in 70.327 seconds at 717,783,040-byte external
+peak RSS. Before the portability correction, the canonical optional
+environment passed 2,868 tests with 35 expected skips.
+
+Two canonical optional reruns after the correction reached all 2,868 tests but
+failed one and then two older late-process mechanical rehearsals. The same
+`tiny_causal_encoder_gate` and `streaming_ctc_gate` tests passed immediately in
+fresh isolated processes, and the exact corrected source passed the complete
+isolated optional environment. No unrelated gate was relaxed or changed. Fresh
+remote Base Python and Optional Neuro Readers jobs remain the decisive
+cross-platform gate. Complete-suite RSS describes the whole long-lived test
+process, not this lane's standalone execution.
+
+The first implementation push, `8f67af2`, failed Base Python job
+`94153342511` and Optional Neuro Readers job `94153342668` in CI
+`31608450681` because seven generated tests assumed macOS `/private/tmp`,
+which does not exist on the Linux runner. No registered path, network, source,
+payload, neural, target, model, or score operation occurred. The correction
+uses the canonical real path of `tempfile.gettempdir()` only for generated and
+test temporary parents. The exact registered real-execution path is unchanged.
 
 Next, commit and push this exact implementation and require both CI jobs to be
 green. Only then may the one registered `/private/tmp` output and one Figshare

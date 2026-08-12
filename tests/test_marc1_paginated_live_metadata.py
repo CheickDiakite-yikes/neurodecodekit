@@ -29,7 +29,7 @@ class MARC1PaginatedLiveMetadataTests(unittest.TestCase):
         cls.body = live._canonical_json_bytes(cls.rows)
 
     def temporary_directory(self):
-        return tempfile.TemporaryDirectory(dir="/private/tmp")
+        return tempfile.TemporaryDirectory(dir=live._canonical_temp_parent())
 
     def qualify(self, output: Path) -> live.QualificationOutcome:
         ticks = iter((100.0, 100.125))
@@ -272,14 +272,15 @@ class MARC1PaginatedLiveMetadataTests(unittest.TestCase):
                 capability.close()
 
     def test_inspector_rejects_private_name_before_any_file_read(self) -> None:
+        private_path = Path(live._canonical_temp_parent()) / live.PRIVATE_NAME
         with mock.patch.object(live.os, "lstat", side_effect=AssertionError("read")) as lstat:
             with self.assertRaisesRegex(live.PaginatedMetadataRefusal, "MARC1LM-F06"):
-                live.inspect_public_result(Path("/private/tmp") / live.PRIVATE_NAME)
+                live.inspect_public_result(private_path)
         lstat.assert_not_called()
 
     def test_machine_gate_enforces_threads_disk_load_and_RSS(self) -> None:
         report = live.preconsumption_machine_gate(
-            "/private/tmp",
+            live._canonical_temp_parent(),
             environ=THREAD_ENV,
             disk_usage_reader=lambda _path: _Disk(),
             cpu_count_reader=lambda: 8,
@@ -298,7 +299,7 @@ class MARC1PaginatedLiveMetadataTests(unittest.TestCase):
                 live.PaginatedMetadataRefusal, "MARC1LM-F01"
             ):
                 live.preconsumption_machine_gate(
-                    "/private/tmp",
+                    live._canonical_temp_parent(),
                     environ=environ,
                     disk_usage_reader=lambda _path, value=free: type(
                         "Disk", (), {"free": value}

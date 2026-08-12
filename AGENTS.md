@@ -1126,16 +1126,25 @@ and can write an aggregate failure receipt after a consumed marker.
 
 Final generated `MARC1LM-G1` passed all four accepted cases, 36 refusals, and
 20 gates over 184,466 generated response bytes. It created and removed exactly
-19,030 temporary output bytes in 0.029389458941295743 seconds at 42,123,264-byte
-reported RSS; external wall was 0.11 seconds at 42,221,568-byte peak RSS.
+19,030 temporary output bytes in 0.030280291102826595 seconds at 43,057,152-byte
+reported RSS; external wall was 0.11 seconds at 43,089,920-byte peak RSS.
 Every registered-path, real-network, participant-archive, payload, signal,
 target, model, prediction, score, provider, hardware, other-project, retry,
 rerun, and claim counter stayed zero.
 
 Twenty-one behavior, 12 implementation-record, and all 658 MARC tests pass.
-Complete dependency-light verification is 2,797 tests with 204 expected skips;
-canonical optional verification is 2,868 tests with 35 expected skips. Both
-add exactly 33 tests and zero skips over the green decision baseline.
+Corrected dependency-light verification is 2,797 tests with 204 expected
+skips; the corrected isolated optional environment passes 2,853 tests with 34
+skips. Two canonical optional attempts exposed only older late-process
+mechanical rehearsal sensitivity; each affected test passes in a fresh
+process. No unrelated gate was relaxed. Fresh remote Base Python and Optional
+Neuro Readers jobs remain required.
+
+First implementation push `8f67af2` failed Base Python job `94153342511` and
+Optional Neuro Readers job `94153342668` in CI `31608450681` because seven
+generated tests hard-coded macOS `/private/tmp`, absent on Linux. No real
+operation occurred. The correction uses the canonical real system temporary
+parent only for generated/tests; the registered one-shot path is unchanged.
 
 Commit, push, and obtain both green CI jobs for this exact implementation
 before touching the registered output path or contacting Figshare. Only then

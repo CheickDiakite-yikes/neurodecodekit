@@ -1582,10 +1582,15 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   private manifest from an aggregate report, and emits an aggregate failure
   receipt after a consumed marker. Final generated route `MARC1LM-G1` passed
   four accepted transport forms, 36 refusals, and 20 gates using 184,466
-  generated input bytes and 19,030 temporary output bytes in 0.029389 seconds
-  at 42,123,264-byte reported RSS. Exact cleanup passed. Real network,
+  generated input bytes and 19,030 temporary output bytes in 0.030280 seconds
+  at 43,057,152-byte reported RSS. Exact cleanup passed. Real network,
   participant ZIP, payload, signal, target, model, prediction, score, and claim
   counters stayed zero.
+
+  First implementation push `8f67af2` failed both CI jobs because seven
+  generated tests assumed macOS `/private/tmp`, absent on Linux. The corrected
+  generated/test parent is the canonical real system temporary directory; the
+  registered one-shot path is unchanged and was not touched.
 
   Next: commit, push, and green this exact implementation. Only then execute
   the one registered metadata request; any post-marker failure consumes and

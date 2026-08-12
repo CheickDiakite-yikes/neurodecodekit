@@ -11,7 +11,7 @@ from neurodecodekit.datasets import marc1_paginated_live_metadata as live
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = ROOT / "registries/marc1_paginated_live_metadata_implementation.v0.json"
 DOCUMENT_PATH = ROOT / "docs/MARC_1_PAGINATED_LIVE_METADATA_IMPLEMENTATION.md"
-REGISTRY_SHA256 = "083fe060ccd466380dd990e5478594408ad55a97fcb5417851e9ee2f671291f6"
+REGISTRY_SHA256 = "1943fbfdb90a2b8ae455db277e39434f38e0aa6bbc279c443c47355213a498a2"
 
 
 def _sha256(path: Path) -> str:
@@ -26,7 +26,7 @@ class MARC1PaginatedLiveMetadataImplementationTests(unittest.TestCase):
 
     def test_registry_identity_hash_and_status_are_exact(self) -> None:
         self.assertEqual(hashlib.sha256(self.registry_bytes).hexdigest(), REGISTRY_SHA256)
-        self.assertEqual(len(self.registry_bytes), 12265)
+        self.assertEqual(len(self.registry_bytes), 13698)
         self.assertEqual(
             self.record["schema_name"],
             "neurodecodekit.marc1_paginated_live_metadata_implementation",
@@ -130,11 +130,23 @@ class MARC1PaginatedLiveMetadataImplementationTests(unittest.TestCase):
         verification = self.record["qualification_tests"]
         self.assertEqual(verification["MARC_tests"], 658)
         self.assertEqual(verification["dependency_light_tests"], 2797)
-        self.assertEqual(verification["canonical_optional_tests"], 2868)
+        self.assertEqual(verification["pre_portability_canonical_optional_tests"], 2868)
+        self.assertEqual(verification["corrected_isolated_optional_tests"], 2853)
+        self.assertEqual(verification["corrected_canonical_optional_attempts_green"], 0)
+        self.assertTrue(verification["affected_legacy_tests_pass_in_fresh_process"])
+        self.assertFalse(verification["unrelated_gate_or_code_changed"])
+        self.assertTrue(verification["fresh_remote_jobs_required"])
         self.assertEqual(verification["test_delta"], 33)
         self.assertEqual(verification["skip_delta"], 0)
         self.assertTrue(verification["ruff_passed"])
         self.assertTrue(verification["compile_passed"])
+        failed = verification["first_push_remote_CI"]
+        self.assertEqual(failed["commit"], "8f67af223fd32ab30cc309a800bd829281db5719")
+        self.assertFalse(failed["both_required_jobs_green"])
+        self.assertEqual(failed["real_or_registered_operations"], 0)
+        correction = verification["portability_correction"]
+        self.assertFalse(correction["registered_execution_path_changed"])
+        self.assertEqual(correction["real_or_registered_operations"], 0)
 
     def test_access_ledger_matches_measured_output_and_forbidden_zeroes(self) -> None:
         qualification = self.record["generated_qualification"]

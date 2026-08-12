@@ -394,6 +394,10 @@ def _repo_root() -> Path:
     return Path(__file__).resolve().parents[3]
 
 
+def _canonical_temp_parent() -> str:
+    return os.path.realpath(tempfile.gettempdir())
+
+
 def _canonical_json_bytes(value: Any) -> bytes:
     return (
         json.dumps(
@@ -1317,7 +1321,7 @@ def run_required_mutations(
         ),
         routes=("MARC1LM-F06",),
     )
-    with tempfile.TemporaryDirectory(dir="/private/tmp") as temporary:
+    with tempfile.TemporaryDirectory(dir=_canonical_temp_parent()) as temporary:
         ledger = AccessLedger()
         capability = acquire_output_capability(Path(temporary) / "race", ledger=ledger)
         try:

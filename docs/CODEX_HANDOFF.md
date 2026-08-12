@@ -3869,12 +3869,19 @@ replays the frozen 12-subject split, separates private rows from aggregate
 output, and emits an aggregate failure receipt after a consumed marker. Final
 generated `MARC1LM-G1` passed four transport cases, 36 refusals, and 20 gates
 over 184,466 generated response bytes. It created and removed 19,030 temporary
-bytes in 0.029389 seconds at 42,123,264-byte reported RSS. Every real, payload,
+bytes in 0.030280 seconds at 43,057,152-byte reported RSS. Every real, payload,
 neural, target, model, score, retry, and claim counter remained zero.
 
-Twenty-one behavior, 12 implementation-record, 658 MARC, 2,797 base, and 2,868
-optional tests pass; the two complete suites add exactly 33 tests and no skips
-over the green decision baseline.
+First push `8f67af2` failed both jobs in CI `31608450681` because generated
+tests used macOS `/private/tmp`, absent on Linux. The corrected generated/test
+parent is canonical and portable; the registered real path remains unchanged
+and untouched.
+
+Twenty-one behavior, 12 implementation-record, 658 MARC, and 2,797 corrected
+base tests pass. The corrected isolated optional environment passes 2,853
+tests/34 skips. Two canonical optional attempts exposed only older
+late-process mechanical rehearsal sensitivity; each affected test passes in a
+fresh process, and no unrelated gate changed.
 
 Immediate next gate: commit, push, and obtain both green CI jobs for this exact
 implementation. Only then run the one registered metadata invocation. Any
