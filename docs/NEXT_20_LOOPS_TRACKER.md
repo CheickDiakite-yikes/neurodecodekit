@@ -1360,10 +1360,19 @@ all 36 refusal mutations. Development `MARC1PSG-R1` passed 15 gates in
 bytes, 182,563 output bytes, and zero real/neural/model/score operations. The
 temporary outputs were removed.
 
-Next gate: commit, push, and green this exact implementation; then consume one
-registered generated closeout and record it. Only after that result is itself
-remotely green may an all-false Tier C real-selection packet be prepared. The
-sealed Freewill inventory and Wrist metadata remain unopened, and no current
-or earlier `continue` is retroactive authority. This remains the same research
-path toward a confound-resistant neural result and later language-specific
-thought-to-text evidence.
+Exact implementation `0c0a698` passed both jobs in CI `31571668853` before the
+one registered generated closeout. `MARC1PSG-R1` passed all 15 gates and 36
+refusals over 873,348 generated input bytes in 0.227334 seconds at 32,374,784-
+byte reported peak RSS. The 6,946-byte aggregate report and mode-`0600`
+175,618-byte private manifest were hash-bound, inspected once, and removed.
+Every real, neural, model, score, and claim counter stayed zero. The generated
+closeout is consumed with no retry or rerun.
+
+Next gate: prepare, test, commit, push, and green one all-false Tier C request
+for a future single 418,755-byte sealed Freewill-manifest read and one Wrist
+metadata body capped at 2 MiB. Stop once that exact packet is remotely green
+and identified as the sole active Tier C gate. The sealed Freewill inventory
+and Wrist metadata remain unopened, and no current or earlier `continue` is
+retroactive authority. This is the same path toward a confound-resistant
+neural result and later language-specific thought-to-text evidence, not a
+pivot; movement evidence cannot itself establish language decoding.

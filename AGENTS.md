@@ -720,13 +720,27 @@ development run passed constructed `MARC1PSG-R1` over 873,348 input bytes in
 0.226802 seconds at 32,833,536-byte reported peak RSS, emitted 182,563 bytes,
 and was removed. It has no scientific value.
 
-Commit, push, and require both jobs green for this exact implementation before
-one registered generated closeout. Do not run that closeout from an ungreen
-implementation, inspect the sealed Freewill manifest, request Wrist metadata,
-or prepare/activate a real-selection decision yet. The current and earlier
-maintainer continuations are not retroactive Tier C authority. MARC1-P1 is a
-confound-resolution rung on the same thought-to-text path, not a replacement
-for the later language-specific experiment.
+Exact implementation `0c0a6982c6b9c65d6c51413d1baa8b577e00a194`
+passed Base Python job `94034790262` and Optional Neuro Readers job
+`94034790315` in CI `31571668853` before the one registered closeout. Read
+`docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_RESULT.md` and
+`registries/marc1_privacy_preserving_pilot_selection_result.v0.json`.
+`MARC1PSG-R1` passed all 15 gates and 36 refusals over 873,348 generated input
+bytes in 0.22733404207974672 seconds at 32,374,784-byte reported peak RSS.
+The 6,946-byte aggregate report and mode-`0600` 175,618-byte private manifest
+were hash-bound, inspected once, and removed. Every real, network, payload,
+neural, target, model, score, and claim counter stayed zero. The registered
+generated closeout is consumed with no retry or rerun.
+
+The next Tier A task is one all-false Tier C request for a future single read
+of the sealed 418,755-byte Freewill manifest and one Wrist metadata body capped
+at 2 MiB. Commit, push, and require both jobs green for that exact request,
+then identify it as the sole active Tier C gate and stop. Do not inspect the
+sealed manifest, request Wrist metadata, access a payload, or record a decision
+without a fresh packet-bound maintainer message after that identification.
+Current and earlier continuations are not retroactive Tier C authority.
+MARC1-P1 is a confound-resolution rung on the same thought-to-text path, not a
+pivot or a replacement for the later language-specific held-out experiment.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

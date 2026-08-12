@@ -3264,3 +3264,40 @@ its remote-green proof, and a fresh packet-bound maintainer decision.
 
 This remains a supporting rung on the thought-to-text path, not a pivot. No
 movement result may be promoted into a language-decoding claim.
+
+## 2026-08-12 MARC1-P1 Generated Result Handoff
+
+Exact implementation `0c0a6982c6b9c65d6c51413d1baa8b577e00a194`
+passed Base Python job `94034790262` and Optional Neuro Readers job
+`94034790315` in CI `31571668853` before the one registered closeout. Read
+`docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_RESULT.md`,
+`registries/marc1_privacy_preserving_pilot_selection_result.v0.json`, and
+`tests/test_marc1_pilot_selection_result.py`.
+
+The sole generated run passed `MARC1PSG-R1` over 873,348 input bytes in
+0.22733404207974672 seconds at 32,374,784-byte reported peak RSS. It replayed
+the exact two 12-person ranks, 72 Freewill bundles/288 opaque members, 12
+Wrist archives, 300 private rows, fixed held-out splits, all 36 refusals, and
+all 15 acceptance gates. Every real, neural, model, score, and claim counter
+stayed zero.
+
+The 6,946-byte aggregate report and mode-`0600` 175,618-byte private manifest
+were hash-bound, inspected once, and removed with their invocation directory.
+The registered generated closeout is consumed with no retry or rerun.
+
+Eleven result invariants and all 274 MARC tests pass. The dependency-light
+suite passes 2,413 tests with 204 expected skips; the locally comparable
+optional-neuro suite passes 2,484 tests with 35 expected skips. Both add
+exactly 11 tests and zero skips over the green implementation baseline.
+
+Immediate next gate: prepare one all-false Tier C request binding a future
+single read of the exact 418,755-byte sealed Freewill inventory and one Wrist
+metadata body capped at 2 MiB. Test, commit, push, and green that request, then
+identify it as the sole active Tier C packet and stop. Do not open the sealed
+inventory, request Wrist metadata, access a payload, or infer authorization
+from any current or earlier continuation. A fresh packet-bound maintainer
+message is required for a separate decision.
+
+This is the same thought-to-text research path. MARC-1 resolves attribution
+and positive-control risk before a later language-specific held-out experiment;
+movement evidence itself is not language evidence.

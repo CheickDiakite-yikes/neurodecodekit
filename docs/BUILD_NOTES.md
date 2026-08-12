@@ -8002,3 +8002,46 @@ metadata without using target, signal, quality, or outcome information.
 Scientific claim not established: no real participant metadata, payload,
 human neural signal, target, model prediction, or score was accessed, so this
 implementation establishes no neural effect or thought-to-text capability.
+
+## 2026-08-12 - MARC1-P1 Registered Generated Closeout
+
+- Verified exact implementation commit
+  `0c0a6982c6b9c65d6c51413d1baa8b577e00a194` remotely green in CI
+  `31571668853`: Base Python job `94034790262` and Optional Neuro Readers job
+  `94034790315` both passed before execution.
+- Ran exactly one fresh Python `-S` generated qualification with all numerical
+  thread variables fixed to one and a new output directory. No network or real
+  input interface existed.
+- `MARC1PSG-R1` passed all 15 gates and all 36 registered refusals. It selected
+  12 preregistered fixture participants per axis, 72 Freewill run bundles/288
+  core members, 12 Wrist archives, and 300 private rows while preserving the
+  exact session/run splits and a 1,228,139,402-byte joint reservation.
+- Measured 873,348 generated input bytes, 182,564 output bytes, 0.2273340421
+  seconds, and 32,374,784-byte reported peak RSS. External `/usr/bin/time`
+  measured 0.34 seconds and 32,423,936-byte maximum RSS.
+- The aggregate report was 6,946 bytes with SHA-256
+  `e76b2ff0c8d74c3d298c0ff83e9ee093e08f3f02e02e1d264543fad749e3890d`.
+  The mode-`0600` generated private manifest was 175,618 bytes with SHA-256
+  `e1b2db1506f94efcc7f85081d9df901349498a8b9a681156d5d37121a887e831`.
+- Inspected the aggregate report once through the registered CLI, then removed
+  both exact files and the invocation-created directory. No closeout artifact
+  was committed and no rerun remains open.
+- Recorded strict aggregate result invariants and updated the public state.
+  Every real metadata, payload, signal, event, target, quality, derivative,
+  model, prediction, score, provider, hardware, retry, and claim counter is
+  zero.
+- Eleven result invariants, 274 MARC tests, 2,413 dependency-light tests with
+  204 expected skips, and 2,484 locally comparable optional-neuro tests with
+  35 expected skips pass. The two complete comparable suites each add exactly
+  11 tests and zero skips over the green implementation baseline. External
+  maximum RSS was 215,089,152 and 719,716,352 bytes, respectively.
+
+Engineering capability added: NeuroDecodeKit can bind the frozen two-axis
+pilot deterministically at full generated metadata scale without outcome-
+dependent selection and within conservative CPU, memory, output, and storage
+caps.
+
+Scientific claim not established: generated metadata contain no human neural
+signal or model result and establish no neural effect, source attribution,
+movement decoding, or thought-to-text capability. MARC-1 remains a control
+rung on the same thought-to-text path, not a pivot.

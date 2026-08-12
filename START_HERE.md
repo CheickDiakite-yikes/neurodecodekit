@@ -1277,8 +1277,24 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   in 0.226802 seconds at 32,833,536-byte reported RSS and emitted 182,563
   temporary bytes, all removed. It read no real metadata or neural content.
 
-  Immediate next gate: commit, push, and green this exact implementation, then
-  run one registered generated closeout. Private inventory, Wrist metadata,
-  payload acquisition, signal/event/target access, training, inference,
-  scoring, and scientific promotion remain closed. This is a supporting rung
-  on the thought-to-text path, not a movement-to-text pivot.
+  Exact implementation `0c0a6982c6b9c65d6c51413d1baa8b577e00a194`
+  passed Base Python job `94034790262` and Optional Neuro Readers job
+  `94034790315` in CI `31571668853` before the one registered generated
+  closeout. Read
+  `docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_RESULT.md` and
+  `registries/marc1_privacy_preserving_pilot_selection_result.v0.json`.
+  `MARC1PSG-R1` passed all 15 gates and 36 refusals in 0.227334 seconds at
+  32,374,784-byte reported peak RSS. Its 182,564 output bytes were
+  hash-bound, inspected once, and removed. Every real metadata, payload,
+  neural, target, model, score, and claim counter stayed zero. The generated
+  closeout is consumed with no retry or rerun.
+
+  Immediate next gate: prepare, test, commit, push, and green one all-false
+  Tier C packet for a future single 418,755-byte sealed Freewill-manifest read
+  and one bounded Wrist metadata body. Stop after identifying that packet as
+  the sole active Tier C gate; a fresh packet-bound maintainer decision is
+  required before either real metadata operation. Payload acquisition,
+  signal/event/target access, training, inference, scoring, and scientific
+  promotion remain closed. This is a confound-resolution rung on the same
+  thought-to-text path, not a pivot, and movement evidence is not language
+  evidence.

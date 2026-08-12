@@ -6436,3 +6436,35 @@ Evidence:
 `registries/marc1_privacy_preserving_pilot_selection_implementation.v0.json`,
 `src/neurodecodekit/datasets/marc1_pilot_selection.py`, and the two matching
 test modules.
+
+## 0192 - Consume The Generated Pilot Selection Before Any Real Metadata
+
+Evidence-order decision: accept the one registered generated closeout only
+after exact implementation `0c0a6982c6b9c65d6c51413d1baa8b577e00a194`
+passed both required jobs in CI `31571668853`. Record `MARC1PSG-R1` as the
+consumed generated result: 873,348 input bytes, 182,564 output bytes, 0.227334
+seconds, 32,374,784-byte reported peak RSS, 15 passed gates, 36 passed
+refusals, and zero real or scientific operations.
+
+Privacy and lifecycle decision: retain only the aggregate measurements and
+SHA-256 identities. Remove the 6,946-byte aggregate report and mode-`0600`
+175,618-byte generated private manifest after one registered inspection. Do
+not commit, retry, or rerun either output.
+
+Research-path decision: MARC1-P1 remains a confound-resolution and positive-
+control rung on the same thought-to-text path. It is not a pivot. Its purpose
+is to make a later neural attribution claim harder to fool before returning to
+language-specific held-out evaluation. Movement evidence remains insufficient
+for thought-to-text and cannot replace no-signal or language-model-only
+controls.
+
+Next-step decision: one all-false Tier C request may now be prepared for a
+future single read of the exact 418,755-byte sealed Freewill manifest and one
+Wrist metadata body capped at 2 MiB. The packet itself authorizes nothing. It
+must become remotely green and be identified as the sole active Tier C gate
+before a fresh maintainer message may be recorded in a separate decision.
+
+Evidence:
+`docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_RESULT.md`,
+`registries/marc1_privacy_preserving_pilot_selection_result.v0.json`, and
+`tests/test_marc1_pilot_selection_result.py`.
