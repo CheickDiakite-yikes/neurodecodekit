@@ -368,7 +368,7 @@ negative result and S25 is never repurposed for calibration.
 | MARC1-CD1A decision routing | 12 decision invariants; 168 focused tests; 2,378 optional-neuro tests with 35 expected skips; 0 public requests | Request `950796d` passed CI `31513578445`; decision `624cc4e` passed CI `31519016891` before wrapper work | Authorized only the staged wrapper-then-one-audit sequence after two green milestones; added no archive-content or neural evidence |
 | MARC1-CD1A live archive inventory | 13.59 GB virtual ZIP; 306,758 accepted metadata bytes; 1,227 entries; 1,025 files; 202 directories; 14/14 gates; 0 archive/member payload bytes | Exact wrapper `5dfa3c4` passed CI `31521510374` before one invocation; `MARC1CD-R1` passed in 2.727 sec at 43,974,656-byte peak RSS and is consumed | Adds a real, storage-safe map of the public archive without downloading it; member selection, neural data, models, scores, and scientific claims remain closed |
 | MARC1-P1 generated pilot selector | 1,227 + 55 generated rows; 12 preregistered participants per axis; 72 Freewill bundles/288 members; 12 Wrist archives; 36/36 refusals; 15/15 gates; 0 real operations | Exact implementation `0c0a698` passed CI `31571668853` before the one closeout; `MARC1PSG-R1` used 873,348 input and 182,564 output bytes in 0.227 sec at 32.4 MB reported RSS and is consumed | Proves deterministic, private, size-independent pilot selection mechanics under an 8-GiB ceiling; adds no neural or thought-to-text evidence |
-| MARC1-P1A live-selector qualification | 866,578 generated input bytes; 12+12 frozen participants; 300 private rows; 26/26 refusals; 15/15 gates; 0 real/network/payload operations | Request `7f1ba09` and decision `9726d07` are green; the exact standard-library wrapper passed 31 focused tests and one `MARC1PSL-G1` qualification in 0.183 sec at 50.9 MB reported RSS, and now awaits its own commit/push/green proof | Makes the one-shot real metadata selector executable without opening either source; real selection, payloads, neural evidence, and language claims remain closed |
+| MARC1-P1A live metadata attempt | 418,755 private metadata bytes read once; 1 Wrist response opened; 0 public-body or payload bytes; 0 selected participants; route `MARC1PS-F03` | Exact wrapper `702e613` passed CI `31578614616` before the sole attempt; it failed the explicit identity-encoding gate in 0.532 sec at 37.3 MB reported RSS and is consumed | Proves one-shot fail-closed audit behavior; the cohort was not selected and no neural or language evidence was produced |
 
 ### Real-Data Scientific Scorecard
 
@@ -1232,12 +1232,19 @@ Read this before interpreting any number in the repository.
   gates over 866,578 input bytes, and emitted 214,553 temporary bytes in 0.183
   seconds at 50,905,088-byte reported peak RSS. All real, network, payload,
   neural, target, model, score, and claim counters stayed zero, and the
-  temporary outputs were removed. The exact wrapper must now be committed,
-  pushed, and pass both CI jobs before the single real metadata selection may
-  begin. That future pass still moves zero payload bytes and cannot establish
-  a scientific result. MARC-1 is a confound-resolution rung on the same
-  thought-to-text path, not a pivot, and movement evidence is not language
-  evidence.
+  temporary outputs were removed. Exact wrapper `702e613` then passed Base
+  Python job `94056321843` and Optional Neuro Readers job `94056321914` in CI
+  `31578614616` before the
+  [one live metadata attempt](docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_LIVE_RESULT.md).
+  The executor read and verified the 418,755-byte private inventory exactly
+  once, opened one Wrist response, and failed closed at `MARC1PS-F03` because
+  the response did not meet the frozen explicit identity-encoding rule. It
+  accepted zero public-body bytes, selected zero participants, and opened zero
+  archive payload, signal, target, model, or score data. The attempt is
+  consumed with no retry or rerun. A separately named transport-semantics
+  recovery must be frozen and reauthorized before another real metadata
+  request. MARC-1 remains a confound-resolution rung on the same thought-to-
+  text path, not a pivot, and movement evidence is not language evidence.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

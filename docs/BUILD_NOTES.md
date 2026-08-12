@@ -8153,3 +8153,39 @@ machine protections.
 Scientific claim not established: no human neural payload, target,
 prediction, or score was accessed, so this adds no neural effect, language
 decoding, or thought-to-text evidence.
+
+## 2026-08-12 - MARC1-P1A Consumed Live Metadata Attempt
+
+- Exact selector commit `702e61377d41fd1d95939d5e4047be59e4631d4d`
+  passed Base Python job `94056321843` and Optional Neuro Readers job
+  `94056321914` in CI `31578614616` before the sole invocation.
+- The machine gate passed with 16,802,996,224 free bytes, normalized load
+  `0.6029052734375`, and 32,342,016-byte pre-consumption peak RSS.
+- The executor created its private consumed marker, then performed exactly one
+  no-follow/open/read/hash/parse of the 418,755-byte Freewill inventory.
+- One Wrist request and response open followed. The executor refused at
+  `MARC1PS-F03` before reading the body because the terminal response did not
+  satisfy the frozen explicit identity-encoding rule. The observed raw header
+  was not retained or published.
+- No participant or private row was selected. Public-body, archive-payload,
+  signal, event, target, derivative, training, inference, prediction, score,
+  provider, hardware, retry, rerun, release, and claim counters stayed zero.
+- Internal runtime/RSS were 0.5323725419584662 seconds and 37,289,984 bytes;
+  external wall/RSS were 0.74 seconds and 37,371,904 bytes. The public result
+  is 4,706 bytes, total incremental disk is 5,159 bytes, and its SHA-256 is
+  `3c526ac52f8185f3fe29b8f3843fd808cd9646b5011e9638d6bf55f5a459153a`.
+- MARC1-P1A is consumed with no retry or rerun. Task 4 remains incomplete;
+  payload acquisition is not eligible. A separately named transport-semantics
+  recovery and new Tier C decision are required before another real input.
+- Ten result tests, all 339 MARC tests, 2,478 dependency-light tests with 204
+  expected skips, and 2,549 optional-neuro tests with 35 expected skips pass.
+  The complete suites add exactly ten tests and zero skips over the green
+  selector baseline. External maximum RSS was 267,026,432 and 731,791,360
+  bytes, respectively.
+
+Engineering capability added: the selector failed closed after one bounded,
+privacy-preserving metadata attempt and retained an aggregate audit record.
+
+Scientific claim not established: no neural payload, target, prediction, or
+score was accessed, so this adds no neural effect, language decoding, or
+thought-to-text evidence.

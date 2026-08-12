@@ -774,14 +774,24 @@ payload, neural, target, model, score, and claim counter stayed zero. Thirty-
 one focused, 329 MARC, 2,468 dependency-light, and 2,539 optional-neuro tests
 pass with no new skips.
 
-Commit, push, and require both jobs green for this exact wrapper before the
-single registered metadata selection. Until then, do not inspect the sealed
-manifest or request Wrist metadata. After green proof, the only eligible real
-sequence remains one private-manifest read, one public metadata body, one
-target-free selection, and one result, with no retry. Payload acquisition,
-signals, targets, models, scores, releases, and claims remain closed. MARC1-P1
-is a confound-resolution rung on the same thought-to-text path, not a pivot or
-a replacement for the later language-specific held-out experiment.
+Exact wrapper `702e61377d41fd1d95939d5e4047be59e4631d4d` passed Base
+Python job `94056321843` and Optional Neuro Readers job `94056321914` in CI
+`31578614616` before the one real metadata invocation. Read
+`docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_LIVE_RESULT.md` and
+`registries/marc1_privacy_preserving_pilot_selection_live_result.v0.json`.
+The executor read and verified the exact 418,755-byte private inventory once,
+opened one Wrist response, then consumed at `MARC1PS-F03` because the terminal
+response did not satisfy the frozen explicit identity-encoding rule. It read
+zero public-body or payload bytes, selected zero participants, and performed
+zero signal, target, model, score, release, or claim operations. Do not retry,
+rerun, resume, amend, or reopen MARC1-P1A or its retained private material.
+
+Task 4 remains incomplete and payload acquisition is not eligible. The next
+safe work is a separately named prospective transport-semantics recovery,
+qualified first on generated and mocked responses. Any second real metadata
+request or private-inventory read requires a new Tier C packet and decision.
+MARC1-P1 remains a confound-resolution rung on the same thought-to-text path,
+not a pivot or replacement for the later language-specific held-out experiment.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

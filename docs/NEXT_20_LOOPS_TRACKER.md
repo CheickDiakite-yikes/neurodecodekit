@@ -1399,9 +1399,17 @@ network, payload, neural, target, model, score, or claim operations. The
 outputs were removed. Thirty-one focused, 329 MARC, 2,468 dependency-light,
 and 2,539 optional-neuro tests pass with no new skips.
 
-Next gate: commit, push, and green this exact implementation. Only then may
-the single registered real metadata selection run. Passing that gate would
-complete Task 4 at the metadata layer and make a separately authorized Task 5
-payload-acquisition packet eligible; it would not itself add neural evidence.
-The path remains MARC-1 confound resolution followed by a controlled neural
-positive control and then language-specific held-out decoding, not a pivot.
+Exact implementation `702e613` passed both jobs in CI `31578614616` before the
+single registered metadata attempt. The executor read and verified the
+418,755-byte private inventory once, opened one Wrist response, and consumed
+at `MARC1PS-F03` because the response did not satisfy the frozen explicit
+identity-encoding rule. It accepted zero public-body or payload bytes, selected
+zero participants, and performed zero neural, target, model, or score work.
+
+Next gate: Task 4 remains incomplete. Specify a separately named
+transport-semantics recovery that distinguishes absent and explicit identity
+encoding from actual content coding, qualify it entirely on generated and
+mocked responses, and require a new Tier C decision before another real input.
+Payload acquisition is not yet eligible. The path remains MARC-1 confound
+resolution followed by a controlled neural positive control and then
+language-specific held-out decoding, not a pivot.

@@ -6564,3 +6564,29 @@ Evidence:
 `registries/marc1_privacy_preserving_pilot_selection_live_implementation.v0.json`,
 `src/neurodecodekit/datasets/marc1_pilot_selection_live.py`, and the two
 matching test modules.
+
+## 0196 - Preserve The Consumed Transport Refusal As Evidence
+
+Execution decision: run the one MARC1-P1A metadata invocation only after exact
+selector `702e61377d41fd1d95939d5e4047be59e4631d4d` passed both jobs in CI
+`31578614616`. Treat the attempt as consumed immediately after its private
+marker, regardless of success or failure.
+
+Result decision: route `MARC1PS-F03` is a transport-contract refusal. The
+executor read and verified the 418,755-byte private inventory exactly once,
+opened one Wrist response, accepted zero public-body bytes, and selected zero
+participants. It performed zero payload, signal, target, model, score, retry,
+rerun, or claim operations. Do not interpret this as evidence for or against a
+neural effect or the preregistered cohort.
+
+Recovery decision: do not amend or reopen MARC1-P1A. A separately named
+prospective lane must define and adversarially qualify absent versus explicit
+identity content-encoding semantics before a new Tier C decision can authorize
+another private read or public request. Payload acquisition remains ineligible.
+This preserves MARC-1 as a confound-resolution rung on the same thought-to-text
+path rather than a pivot.
+
+Evidence:
+`docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_LIVE_RESULT.md`,
+`registries/marc1_privacy_preserving_pilot_selection_live_result.v0.json`, and
+`tests/test_marc1_pilot_selection_live_result.py`.

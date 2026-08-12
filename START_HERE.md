@@ -1328,10 +1328,16 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   one focused, 329 MARC, 2,468 dependency-light, and 2,539 optional-neuro tests
   pass with no new skips.
 
-  Immediate next gate: commit, push, and require both remote CI jobs green for
-  this exact wrapper. Only then may its one registered metadata selection open
-  the sealed Freewill manifest once and accept one Wrist metadata body. Do not
-  access either real input before that proof. Payload acquisition, signal,
-  target, model, score, release, and claim upgrades remain separate future
-  gates. This is the same thought-to-text path, not a pivot, and movement
-  evidence is not language evidence.
+  Exact wrapper `702e61377d41fd1d95939d5e4047be59e4631d4d` passed Base
+  Python job `94056321843` and Optional Neuro Readers job `94056321914` in CI
+  `31578614616` before the sole metadata invocation. Read
+  `docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_LIVE_RESULT.md` and its
+  machine result. The executor verified the 418,755-byte private inventory
+  exactly once, opened one Wrist response, and failed closed at `MARC1PS-F03`
+  because the frozen explicit identity-encoding rule was not met. It read zero
+  public-body or payload bytes, selected zero participants, and performed zero
+  signal, target, model, or score operations. MARC1-P1A is consumed with no
+  retry or rerun. The next prospective gate is a separately named transport-
+  semantics recovery, followed by a new Tier C decision before any real input.
+  This is the same thought-to-text path, not a pivot, and movement evidence is
+  not language evidence.

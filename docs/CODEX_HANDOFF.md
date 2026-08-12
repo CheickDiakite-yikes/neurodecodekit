@@ -3385,12 +3385,28 @@ zero real or network operations. The outputs were removed. Thirty-one focused,
 329 MARC, 2,468 dependency-light, and 2,539 optional-neuro tests pass with no
 new skips.
 
-Immediate next gate: commit and push this exact implementation, then require
-both remote CI jobs green. Do not touch the retained Freewill manifest or the
-Wrist endpoint before that proof. After green proof, only the single registered
-metadata selection may run; it has no retry and cannot acquire a payload.
-Payload acquisition requires a new prospective Tier C packet and decision.
+## 2026-08-12 MARC1-P1A Consumed Result Handoff
 
-This is the same thought-to-text path. MARC1-P1A makes the next confound-
-resolved positive-control cohort reproducible; it does not itself add a neural
-or language result.
+Exact selector `702e61377d41fd1d95939d5e4047be59e4631d4d` passed Base
+Python job `94056321843` and Optional Neuro Readers job `94056321914` in CI
+`31578614616` before the one registered invocation. Read
+`docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_LIVE_RESULT.md`,
+`registries/marc1_privacy_preserving_pilot_selection_live_result.v0.json`, and
+the matching result test.
+
+The executor passed its machine gate, wrote the private consumed marker, and
+read/hashed/parsed the exact 418,755-byte Freewill inventory once. It opened
+one Wrist response and failed closed at `MARC1PS-F03` before reading its body
+because the frozen explicit identity-encoding condition was not met. The
+public result is 4,706 bytes with SHA-256
+`3c526ac52f8185f3fe29b8f3843fd808cd9646b5011e9638d6bf55f5a459153a`.
+
+No participant, bundle, archive, or private selection row was selected. No
+public body, archive payload, signal, event, target, model, prediction, score,
+or claim operation occurred. MARC1-P1A is consumed with no retry, rerun,
+resume, or amendment. Do not inspect the retained private material.
+
+Immediate next gate: specify and remotely green a separately named generated/
+mocked transport-semantics recovery. Another real metadata request or private-
+inventory read requires a new Tier C decision; payload acquisition is not yet
+eligible. This is still the same thought-to-text research path, not a pivot.
