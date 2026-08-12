@@ -1462,3 +1462,20 @@ Next gate: test, commit, push, and green the aggregate result. Only then prepare
 one all-false Tier C packet for a new additive live wrapper and one metadata
 attempt. That packet opens nothing by itself. Payload acquisition remains
 ineligible, and the old consumed private root remains forbidden.
+
+Result `5344d73` passed both jobs in CI `31584662864`. Task 4's next gate is
+now frozen as the all-false `MARC1-HT1A` request in
+`docs/MARC_1_HTTP_IDENTITY_LIVE_RECOVERY_AUTHORIZATION_PACKET.md` and
+`registries/marc1_http_identity_live_recovery_authorization_request.v0.json`.
+It binds the green selector and HTTP-semantics stack, one future no-follow read
+of the exact 418,755-byte upstream Freewill manifest, one future Wrist body
+capped at 2 MiB, a new isolated root, zero payload bytes, and no retry or rerun.
+The consumed `MARC1-P1A` executor and root are explicitly forbidden.
+
+Twelve focused request tests, all 412 MARC tests, 2,551 dependency-light tests,
+and 2,622 optional-neuro tests pass with no new skips. Next gate: commit and
+push this request and require both remote jobs green. Only then may Codex
+identify it as the sole active Tier C packet and await a fresh packet-bound
+maintainer message. The packet itself authorizes nothing. This remains the same
+confound-control to neural-positive-control to language-decoding path, not a
+pivot.

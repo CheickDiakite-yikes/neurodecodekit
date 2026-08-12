@@ -1381,3 +1381,15 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   zero real/network operations. Its two temporary outputs were removed and no
   rerun is open. The result must be committed, pushed, and green before an
   all-false Tier C request may propose a new live metadata wrapper and attempt.
+
+  Result `5344d73bb74431e9bba05e3608c2a1523a84cd00` passed Base Python
+  job `94075586323` and Optional Neuro Readers job `94075586171` in CI
+  `31584662864`. Read the all-false
+  [MARC1-HT1A packet](docs/MARC_1_HTTP_IDENTITY_LIVE_RECOVERY_AUTHORIZATION_PACKET.md)
+  and its machine request. It proposes one additive generated/mock wrapper
+  followed, only after separate green decision and implementation milestones,
+  by one metadata-only selection attempt. Every current authorization flag is
+  false. The sealed upstream 418,755-byte inventory is distinct from the
+  forbidden consumed `MARC1-P1A` root; no payload, signal, target, model, score,
+  or claim operation is open. MARC1-HT1A is the same path toward a controlled
+  neural positive control and held-out language decoding, not a pivot.

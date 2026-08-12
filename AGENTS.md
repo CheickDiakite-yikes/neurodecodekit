@@ -861,6 +861,27 @@ and one new metadata attempt; it authorizes no operation. The old consumed root,
 payload acquisition, EEG reads, models, scores, and scientific claims remain
 closed. This stays on the same thought-to-text path.
 
+Result `5344d73bb74431e9bba05e3608c2a1523a84cd00` passed Base Python
+job `94075586323` and Optional Neuro Readers job `94075586171` in CI
+`31584662864`. Read
+`docs/MARC_1_HTTP_IDENTITY_LIVE_RECOVERY_AUTHORIZATION_PACKET.md` and
+`registries/marc1_http_identity_live_recovery_authorization_request.v0.json`.
+The all-false `MARC1-HT1A` request proposes one future additive
+standard-library wrapper and, only after separate green decision and wrapper
+milestones, one new metadata-only attempt. It binds one exact no-follow read of
+the sealed 418,755-byte upstream Freewill inventory, one Wrist body capped at
+2 MiB, one new isolated root, and zero payload bytes. It forbids importing or
+reusing the consumed `MARC1-P1A` executor and forbids opening its old root.
+
+Commit, push, and obtain both green CI jobs for this exact request before
+identifying it as the sole active Tier C packet. Only a fresh unambiguous
+maintainer message after that identification may be recorded in a separate
+decision. Do not use the current or an earlier message retroactively,
+implement the wrapper, touch either metadata source, create a consumed marker,
+or access a payload from this packet alone. This remains the same path toward a
+controlled neural positive control and held-out language decoding, not a
+pivot; no scientific claim has changed.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

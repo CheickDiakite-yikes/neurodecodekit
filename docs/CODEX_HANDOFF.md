@@ -3502,3 +3502,29 @@ then prepare one all-false Tier C request for a new live wrapper and one new
 metadata attempt. Do not implement that wrapper, touch the old root, request a
 source, or acquire a payload from this result. This is the same thought-to-text
 path and remains engineering evidence only.
+
+## 2026-08-12 MARC1-HT1A Live Recovery Request Handoff
+
+Generated result `5344d73bb74431e9bba05e3608c2a1523a84cd00` passed Base
+Python job `94075586323` and Optional Neuro Readers job `94075586171` in CI
+`31584662864` before this all-false request was prepared. Read
+`docs/MARC_1_HTTP_IDENTITY_LIVE_RECOVERY_AUTHORIZATION_PACKET.md`,
+`registries/marc1_http_identity_live_recovery_authorization_request.v0.json`,
+and its matching request test.
+
+The request proposes one additive standard-library wrapper, generated/mock
+qualification, an independently green implementation, and then one fresh
+metadata-only attempt. The future attempt is bounded to one exact no-follow
+read of the 418,755-byte upstream Freewill inventory and one Wrist response
+capped at 2 MiB in a new isolated root. It forbids importing or reusing the
+consumed `MARC1-P1A` executor, opening its old root, acquiring a payload,
+reading signal or targets, or running a model or score. All current permissions
+are false and every current operation counter is zero.
+
+Twelve focused request tests, all 412 MARC tests, 2,551 dependency-light tests,
+and 2,622 optional-neuro tests pass with no new skips. Immediate next gate:
+commit, push, and require both CI jobs green. Then identify MARC1-HT1A as the
+sole active Tier C packet and wait for a fresh packet-bound maintainer message.
+Do not use the current or an earlier `continue` retroactively. This is the same
+path toward a controlled neural positive control and held-out language
+decoding, not a pivot, and it establishes no scientific result.

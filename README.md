@@ -373,6 +373,7 @@ negative result and S25 is never repurposed for calibration.
 | MARC1-HT1 generated recovery contract | 1,227 + 55 generated rows; 4 accepted forms; 20 refusals; 16 gates; 5 refusal routes; 0 real/network bytes | Green research `f515b36` / CI `31580575669` precedes the frozen contract | Allows only a new `plan`/`qualify`/`inspect` harness after contract CI; real metadata, payload, neural work, and claims remain closed |
 | MARC1-HT1 generated recovery implementation | 923,052 generated input bytes; 4/4 accepted forms; 20/20 refusals; 16/16 gates; exact 12+12 cohort and split replay; 0 real/network bytes | Development `MARC1HT-G1` passed in 0.109 sec at 32.7 MB external peak RSS; 29 new tests; registered closeout awaits implementation CI | Proves the standards-aligned uncoded-response predicate and frozen selector compose deterministically; live-source compatibility and all neural/language claims remain untested |
 | MARC1-HT1 registered generated closeout | 923,052 generated input bytes; 182,681 temporary output bytes; 4/4 forms; 20/20 refusals; 16/16 gates; 0 real/network bytes | Exact implementation `b2cb48c` passed CI `31583931303` before one 0.112-sec closeout at 33.1 MB external peak RSS; consumed with no rerun | Confirms the repaired transport/selector/privacy stack end to end on fixtures; a new live attempt still needs a separate Tier C sequence and no scientific claim changed |
+| MARC1-HT1A live-recovery request | One future 418,755-byte sealed-manifest read; one future Wrist body capped at 2 MiB; one new isolated root; 0 payload bytes; all current permissions false | Binds green result `5344d73` / CI `31584662864`, the frozen selector, and the consumed `MARC1PS-F03` boundary; requires its own green CI before any decision | Proposes one additive wrapper and one metadata-only attempt on the same thought-to-text path; the packet itself performs no operation and establishes no scientific result |
 
 ### Real-Data Scientific Scorecard
 
@@ -1282,6 +1283,14 @@ Read this before interpreting any number in the repository.
   Its aggregate was inspected once, both temporary outputs were hashed and
   removed, and the closeout is consumed with no rerun. This remains generated
   engineering evidence only; another live metadata attempt is not yet open.
+  The next gate is now specified in the all-false
+  [MARC1-HT1A authorization packet](docs/MARC_1_HTTP_IDENTITY_LIVE_RECOVERY_AUTHORIZATION_PACKET.md).
+  It proposes a new additive wrapper and, only after separate green decision
+  and implementation milestones, one metadata-only attempt using the sealed
+  418,755-byte upstream inventory and one Wrist response capped at 2 MiB. It
+  forbids the consumed `MARC1-P1A` root, all payload bytes, signals, targets,
+  models, and scores. The packet authorizes nothing and is explicitly a
+  control checkpoint on the same path toward held-out language decoding.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

@@ -6704,3 +6704,39 @@ Evidence:
 `docs/MARC_1_HTTP_IDENTITY_SEMANTICS_RESULT.md`,
 `registries/marc1_http_identity_semantics_result.v0.json`, and
 `tests/test_marc1_http_identity_semantics_result.py`.
+
+## 0201 - Require A Fresh Root And A New Green Wrapper For Live Recovery
+
+Recovery decision: after generated result `5344d73` passed both jobs in CI
+`31584662864`, prepare one all-false `MARC1-HT1A` request. The packet may
+propose an additive standards-aligned live wrapper and one later metadata-only
+attempt, but it authorizes no operation by itself.
+
+Isolation decision: the retained 418,755-byte `MARC1CD-R1` upstream inventory
+is a separately bound sealed artifact. A future decision may permit exactly one
+new no-follow read of it. The consumed `MARC1-P1A` wrapper, invocation root,
+and retained private material remain forbidden and cannot be reopened, reused,
+or treated as the new attempt.
+
+Evidence-order decision: first green this request. Then identify its commit,
+CI, exact two-input scope, and claim boundary as the sole active Tier C packet.
+Only a fresh maintainer message after that identification may be recorded in a
+separate decision. If that decision becomes remotely green, only generated and
+mocked wrapper implementation is eligible. Real input remains closed until the
+exact additive wrapper also passes both remote jobs.
+
+Scope decision: a later live invocation may read one exact private manifest,
+accept one Wrist metadata body under the green absent-or-identity semantics,
+run the frozen target-free selector, write one private manifest and one
+aggregate result, and stop. Payload, signal, target, model, prediction, score,
+retry, rerun, release, and claim operations remain forbidden.
+
+Path decision: this is a control and attribution checkpoint on the same route
+to a controlled neural positive control and held-out language decoding. It is
+not a pivot and establishes no neural effect, language decoding, or
+thought-to-text result.
+
+Evidence:
+`docs/MARC_1_HTTP_IDENTITY_LIVE_RECOVERY_AUTHORIZATION_PACKET.md`,
+`registries/marc1_http_identity_live_recovery_authorization_request.v0.json`,
+and `tests/test_marc1_http_identity_live_recovery_authorization_request.py`.

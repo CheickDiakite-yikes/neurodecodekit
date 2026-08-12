@@ -8247,3 +8247,90 @@ HTTP predicate repair without changing cohort selection or safety behavior.
 
 Scientific claim not established: preregistration is not execution and adds
 no real neural, language-decoding, or thought-to-text evidence.
+
+## 2026-08-12 - MARC1-HT1 Generated Recovery Implementation
+
+- Implemented the additive standard-library
+  `marc1_http_identity_semantics.py` module after contract `1f99d0a` passed
+  both jobs in CI `31581395690`.
+- Exposed only `plan`, `qualify`, and `inspect`. The module has no network
+  client, DNS resolver, private path, consumed-executor import, decoder,
+  decompressor, neural interface, target surface, model, scorer, or retry.
+- Accepted exactly four absent/identity response-envelope forms and refused
+  all 20 registered coded, duplicated, malformed, leaking, overflow, and
+  second-invocation cases under five fixed routes.
+- Replayed the exact 12+12 target-free cohorts, 72 Freewill bundles, 288
+  members, 12 Wrist archives, and frozen fit/held-out splits across row-order
+  changes and fixed-measurement byte-identical output.
+- Development `MARC1HT-G1` processed 923,052 generated input bytes and emitted
+  182,682 temporary bytes in 0.10857224999926984 seconds at 32,440,320-byte
+  reported peak RSS. External wall/RSS were 0.22 seconds and 32,669,696 bytes.
+  Every real, network, payload, neural, target, model, score, and claim counter
+  was zero; outputs were inspected and removed.
+- Twenty-nine focused implementation tests, all 389 MARC tests, 2,528
+  dependency-light tests with 204 skips, and 2,599 optional-neuro tests with
+  35 skips passed. Exact implementation `b2cb48c` then passed both jobs in CI
+  `31583931303`.
+
+Engineering capability added: the standards-aligned HTTP predicate, frozen
+selector, privacy boundary, and resource accounting compose deterministically
+on generated inputs.
+
+Scientific claim not established: generated implementation adds no live-source
+compatibility, neural effect, language decoding, or thought-to-text evidence.
+
+## 2026-08-12 - MARC1-HT1 Registered Generated Result
+
+- Ran exactly one registered generated closeout only after implementation
+  `b2cb48c` was remotely green; no retry or rerun is open.
+- `MARC1HT-G1` passed four accepted response forms, all 20 refusals, all 16
+  gates, exact target-free cohort and split replay, output privacy, and every
+  resource cap.
+- The run processed 923,052 generated input bytes in 0.1119600001256913
+  seconds at 33,079,296-byte reported peak RSS. External wall/RSS were 0.24
+  seconds and 33,095,680 bytes.
+- The 7,063-byte aggregate report and mode-`0600` 175,618-byte private manifest
+  totaled 182,681 bytes, were inspected and SHA-256 bound, and were removed.
+  No generated output was committed.
+- Every private, public, network, payload, neural, target, model, score,
+  provider, hardware, release, and claim counter remained zero.
+- Eleven result tests, all 400 MARC tests, 2,539 dependency-light tests with
+  204 skips, and 2,610 optional-neuro tests with 35 skips passed. Result
+  `5344d73` then passed both jobs in CI `31584662864`.
+
+Engineering capability added: one registered generated run confirmed the
+transport repair and selector stack end to end under its frozen gates.
+
+Scientific claim not established: the closeout used no live metadata or EEG
+and produced no neural, language-decoding, or thought-to-text result.
+
+## 2026-08-12 - MARC1-HT1A Live Metadata Recovery Request
+
+- Bound green generated-semantics result `5344d73` / CI `31584662864`, the
+  frozen target-free selector, the sealed upstream Freewill-manifest identity,
+  and consumed live result `8d9cae1` without touching a private path.
+- Proposed a new additive standard-library wrapper that may use the green
+  selector and HTTP-semantics module but cannot import, call, alter, or expose
+  the consumed `MARC1-P1A` live executor.
+- Proposed one future metadata-only attempt in a new isolated root: one exact
+  418,755-byte no-follow private-manifest read and one public Wrist response
+  capped at 2 MiB, followed by a private selection manifest, one aggregate
+  report, and stop.
+- Preserved one CPU thread, one worker, one numerical job, 30-second and
+  256-MiB caps, at least 12 GiB free disk, no retry or rerun, 4 MiB incremental
+  disk, and zero payload bytes.
+- Every current authorization flag is false and every operation counter is
+  zero. The current and earlier maintainer messages are not retroactive Tier C
+  decisions.
+- Twelve focused request tests, all 412 MARC tests, 2,551 dependency-light
+  tests with 204 expected skips, and 2,622 optional-neuro tests with 35
+  expected skips pass. The full-suite external maximum RSS values were
+  280,821,760 and 778,092,544 bytes. Ruff, compilation, 181 registry JSON
+  parses, and `git diff --check` also pass.
+
+Engineering capability requested: compose the green standards-aligned HTTP
+predicate and frozen selector against one bounded real metadata response.
+
+Scientific claim not established: this all-false packet performs no neural
+experiment and adds no neural effect, language-decoding, or thought-to-text
+evidence.
