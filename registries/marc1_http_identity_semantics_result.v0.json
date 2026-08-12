@@ -1,0 +1,217 @@
+{
+  "schema_name": "neurodecodekit.marc1_http_identity_semantics_result",
+  "schema_version": "0.1.0",
+  "result_id": "MARC1-HT1-registered-generated-closeout-result-v0",
+  "lane_id": "MARC1-HT1",
+  "recorded_at_local": "2026-08-12",
+  "status": "passed_registered_generated_closeout_consumed_no_rerun",
+  "route": "MARC1HT-G1",
+  "proof_posture": "consumed_generated_engineering_result_no_source_or_scientific_value",
+  "green_implementation_proof": {
+    "commit": "b2cb48cc1c630cf2d22186732e8258619db0a930",
+    "CI_run_id": 31583931303,
+    "base_python_job_id": 94073234688,
+    "optional_neuro_job_id": 94073234607,
+    "both_required_jobs_green": true,
+    "implementation_registry_sha256": "86d05b0212e4562b150e743fd35e4438db4442a1b144abe9313bb9923e5184eb"
+  },
+  "artifact_bindings": [
+    {
+      "path": "registries/marc1_http_identity_semantics_implementation.v0.json",
+      "sha256": "86d05b0212e4562b150e743fd35e4438db4442a1b144abe9313bb9923e5184eb"
+    },
+    {
+      "path": "docs/MARC_1_HTTP_IDENTITY_SEMANTICS_IMPLEMENTATION.md",
+      "sha256": "36afa8573e26fc7627b180b2a06e2ea827078d40b4a7f80754abb89506c42158"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/marc1_http_identity_semantics.py",
+      "sha256": "6ef6369244f1620af610d2bc3ff5ee4aaa5b16aba2facce428c7bc8f1690abff"
+    },
+    {
+      "path": "tests/test_marc1_http_identity_semantics.py",
+      "sha256": "2f76b2c78f851633bb7b9eac1cf8a9cb3960f9a3cbcbe00aa4dff7f981a98b72"
+    },
+    {
+      "path": "tests/test_marc1_http_identity_semantics_implementation.py",
+      "sha256": "98f5034d6176fb27d6b6af99053240e0c9e3bf17c220fc97faac55286c1b9874"
+    },
+    {
+      "path": "docs/MARC_1_HTTP_IDENTITY_SEMANTICS_RESULT.md",
+      "sha256": "f0a6bac2e35b9cbbe85aa939ed76a3ef2cd69026093ed0e5f830deacae565f3d"
+    },
+    {
+      "path": "tests/test_marc1_http_identity_semantics_result.py",
+      "sha256": "e9b2e00f155123e6f2ebae9f22c221e8f31c9c86012b19a4f2c44c00801e2617"
+    }
+  ],
+  "registered_execution": {
+    "registered_runs": 1,
+    "completed_runs": 1,
+    "accepted_response_cases": 4,
+    "accepted_response_cases_passed": 4,
+    "refusal_cases": 20,
+    "refusal_cases_passed": 20,
+    "acceptance_gates": 16,
+    "acceptance_gates_passed": 16,
+    "generated_fixture_runs": 1,
+    "generated_mock_response_validations": 25,
+    "generated_selection_runs": 5,
+    "aggregate_report_inspections": 1,
+    "decompression_or_decoding_operations": 0,
+    "retries": 0,
+    "reruns": 0
+  },
+  "selection_summary": {
+    "selected_subjects_per_axis": 12,
+    "Freewill_run_bundles": 72,
+    "Freewill_core_members": 288,
+    "Wrist_archives": 12,
+    "private_rows": 300,
+    "fit_heldout_overlap": 0,
+    "row_order_replay_exact": true,
+    "target_quality_size_CRC_and_outcome_free": true,
+    "frozen_selector_modified_after_green": false
+  },
+  "output_receipt": {
+    "aggregate_report_bytes": 7063,
+    "private_manifest_bytes": 175618,
+    "combined_output_bytes": 182681,
+    "incremental_disk_bytes": 182681,
+    "aggregate_report_mode": "0644",
+    "private_manifest_mode": "0600",
+    "aggregate_report_sha256": "865e69d4b263dd311c48ad301e29dadc2050962f871bf87405193aa77c394299",
+    "private_manifest_sha256": "e1b2db1506f94efcc7f85081d9df901349498a8b9a681156d5d37121a887e831",
+    "aggregate_report_inspections": 1,
+    "temporary_outputs_removed": true,
+    "generated_outputs_committed": false
+  },
+  "measurements": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "generated_input_bytes": 923052,
+    "combined_output_bytes": 182681,
+    "incremental_disk_bytes": 182681,
+    "runtime_seconds": 0.1119600001256913,
+    "reported_peak_RSS_bytes": 33079296,
+    "external_wall_seconds": 0.24,
+    "external_maximum_RSS_bytes": 33095680,
+    "network_bytes": 0,
+    "real_or_private_input_bytes": 0,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "producer_is_causal": "not_applicable_metadata_transport_only",
+    "end_to_end_latency_measured": false
+  },
+  "acceptance_gates": {
+    "green_research_proof_identity": true,
+    "exact_contract_identity": true,
+    "exact_candidate_policy_hash": true,
+    "all_four_accepted_forms_pass": true,
+    "accepted_forms_have_identical_body_and_selection_hashes": true,
+    "all_twenty_mutations_refuse_under_registered_routes": true,
+    "row_order_replay_exact": true,
+    "exact_12_plus_12_participant_identities": true,
+    "exact_72_bundle_288_member_12_archive_selection": true,
+    "exact_split_binding_and_zero_overlap": true,
+    "target_quality_size_CRC_and_outcome_free_selection": true,
+    "private_public_output_separation": true,
+    "source_has_no_network_decoder_real_executor_or_neural_interface": true,
+    "all_real_payload_neural_target_model_score_and_claim_counters_zero": true,
+    "resource_and_output_caps": true,
+    "deterministic_aggregate_and_private_output_hashes": true
+  },
+  "access_counters": {
+    "private_Freewill_manifest_reads": 0,
+    "private_Freewill_manifest_bytes": 0,
+    "public_Wrist_metadata_requests": 0,
+    "public_Wrist_metadata_bytes": 0,
+    "DNS_queries": 0,
+    "network_requests": 0,
+    "network_body_bytes": 0,
+    "real_participant_selections": 0,
+    "payload_requests": 0,
+    "payload_bytes": 0,
+    "signal_sample_reads": 0,
+    "event_or_quality_reads": 0,
+    "target_reads": 0,
+    "cache_split_epoch_window_or_feature_operations": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "scoring_events": 0,
+    "provider_or_language_model_calls": 0,
+    "hardware_operations": 0,
+    "retry_or_rerun_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "qualification_tests": {
+    "result_tests": 11,
+    "final_MARC1_tests": 400,
+    "dependency_light_tests": 2539,
+    "dependency_light_expected_skips": 204,
+    "dependency_light_runtime_seconds": 21.592,
+    "dependency_light_external_maximum_RSS_bytes": 278380544,
+    "optional_neuro_tests": 2610,
+    "optional_neuro_expected_skips": 35,
+    "optional_neuro_runtime_seconds": 57.182,
+    "optional_neuro_external_maximum_RSS_bytes": 773505024,
+    "green_implementation_dependency_light_tests": 2528,
+    "green_implementation_dependency_light_expected_skips": 204,
+    "green_implementation_optional_neuro_tests": 2599,
+    "green_implementation_optional_neuro_expected_skips": 35,
+    "test_delta": 11,
+    "additional_skips": 0,
+    "ruff_passed": true,
+    "compile_passed": true,
+    "JSON_validation_passed": true,
+    "registry_JSON_files_parsed": 180,
+    "git_diff_check_passed": true
+  },
+  "authorization_flags": {
+    "new_live_wrapper_implementation_authorized_now": false,
+    "private_or_public_metadata_read_authorized_now": false,
+    "old_consumed_root_access_authorized_now": false,
+    "payload_request_or_acquisition_authorized_now": false,
+    "signal_event_target_or_quality_read_authorized_now": false,
+    "cache_split_epoch_window_or_feature_authorized_now": false,
+    "training_inference_prediction_freeze_or_score_authorized_now": false,
+    "provider_language_model_or_hardware_authorized_now": false,
+    "retry_rerun_resume_fallback_or_substitution_authorized_now": false,
+    "release_or_scientific_claim_upgrade_authorized_now": false
+  },
+  "consumption_and_next_gate": {
+    "registered_generated_closeout_consumed": true,
+    "retries": 0,
+    "reruns": 0,
+    "real_metadata_wrapper_may_be_implemented": false,
+    "private_or_public_metadata_may_be_read": false,
+    "payload_acquisition_or_analysis_may_begin": false,
+    "result_must_be_remotely_green_before_Tier_C_request": true,
+    "future_Tier_C_request_must_be_all_false": true,
+    "future_live_attempt_requires_fresh_packet_bound_decision": true
+  },
+  "warnings": [
+    "This result uses generated metadata and mocked HTTP responses only.",
+    "The consumed MARC1-P1A live header remains unavailable and was not inferred.",
+    "A passing generated predicate does not prove a future live response will pass.",
+    "No EEG payload neural signal target model prediction or score was accessed.",
+    "Payload acquisition remains ineligible."
+  ],
+  "unavailable_fields": [
+    "live response acceptance",
+    "completed real pilot selection",
+    "selected payload availability and integrity",
+    "EEG channel geometry signal quality event target prediction and score",
+    "language decoding and thought-to-text evidence"
+  ],
+  "claim_boundary": {
+    "engineering_capability_added": "The registered generated closeout proves that the repaired uncoded-response predicate frozen target-free selector strict privacy boundary and resource caps replay together end to end.",
+    "scientific_claim_not_established": "No live metadata EEG payload neural signal target prediction score language decoding or thought-to-text result was produced."
+  }
+}

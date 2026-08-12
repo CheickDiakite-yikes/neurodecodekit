@@ -3479,3 +3479,26 @@ then run the one registered generated closeout, remove its outputs, and record
 and green the aggregate result. Do not open any real/private source or prepare
 a live executor from this implementation milestone. A later live attempt is a
 new Tier C sequence. This is the same thought-to-text path, not a pivot.
+
+## 2026-08-12 MARC1-HT1 Consumed Generated Result Handoff
+
+Exact implementation `b2cb48cc1c630cf2d22186732e8258619db0a930` passed
+Base Python job `94073234688` and Optional Neuro Readers job `94073234607` in
+CI `31583931303` before the one registered closeout. Read
+`docs/MARC_1_HTTP_IDENTITY_SEMANTICS_RESULT.md`,
+`registries/marc1_http_identity_semantics_result.v0.json`, and its matching
+result test.
+
+The closeout passed `MARC1HT-G1` with four accepted response forms, all 20
+refusals, all 16 gates, exact 12+12 target-free cohort and split replay, and
+zero live or network operations. It used 923,052 generated input bytes in
+0.1119600001256913 seconds at 33,079,296-byte reported peak RSS. The 7,063-byte
+aggregate report and 175,618-byte private manifest were inspected/hash-bound
+and removed. The closeout is consumed with no retry or rerun.
+
+All 400 MARC, 2,539 dependency-light, and 2,610 optional-neuro tests pass with
+no new skips. Immediate next gate: commit, push, and green this result. Only
+then prepare one all-false Tier C request for a new live wrapper and one new
+metadata attempt. Do not implement that wrapper, touch the old root, request a
+source, or acquire a payload from this result. This is the same thought-to-text
+path and remains engineering evidence only.

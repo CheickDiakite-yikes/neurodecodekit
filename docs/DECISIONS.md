@@ -6675,3 +6675,32 @@ Evidence:
 `registries/marc1_http_identity_semantics_implementation.v0.json`,
 `src/neurodecodekit/datasets/marc1_http_identity_semantics.py`, and the two
 matching implementation tests.
+
+## 0200 - Consume One Generated Closeout Before A New Live Gate
+
+Execution decision: after exact implementation `b2cb48c` passed both required
+jobs in CI `31583931303`, run the one registered MARC1-HT1 generated closeout
+with one thread, zero network bytes, a new temporary directory, one aggregate
+inspection, and no retry or rerun.
+
+Result decision: `MARC1HT-G1` passed all four accepted forms, 20 refusals, 16
+gates, exact 12+12 cohort and split replay, output privacy, and resource caps.
+It processed 923,052 generated input bytes in 0.1119600001256913 seconds at
+33,079,296-byte reported peak RSS. Both 182,681 temporary output bytes were
+hash-bound and removed. Every real, payload, neural, target, model, score, and
+claim counter remained zero.
+
+Consumption decision: the registered generated closeout is consumed with no
+retry or rerun. Require this result to become remotely green before preparing
+one all-false Tier C request. That later packet may propose, but cannot itself
+authorize, a new live wrapper and one new metadata attempt. The old consumed
+root and payload acquisition remain forbidden.
+
+Path decision: passing the generated transport stack is necessary cleanup on
+the same positive-control-to-language path. It proves no live compatibility,
+neural effect, language decoding, or thought-to-text result.
+
+Evidence:
+`docs/MARC_1_HTTP_IDENTITY_SEMANTICS_RESULT.md`,
+`registries/marc1_http_identity_semantics_result.v0.json`, and
+`tests/test_marc1_http_identity_semantics_result.py`.

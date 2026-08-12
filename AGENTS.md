@@ -842,6 +842,25 @@ request, payload, EEG, model, or score remains closed and later requires a new
 all-false Tier C packet plus fresh decision. MARC1-HT1 remains on the same
 thought-to-text path and establishes no scientific result.
 
+Exact implementation `b2cb48cc1c630cf2d22186732e8258619db0a930` passed
+Base Python job `94073234688` and Optional Neuro Readers job `94073234607` in
+CI `31583931303` before the one registered generated closeout. Read
+`docs/MARC_1_HTTP_IDENTITY_SEMANTICS_RESULT.md` and
+`registries/marc1_http_identity_semantics_result.v0.json`. The one
+`MARC1HT-G1` run passed four accepted forms, 20 refusals, all 16 gates, exact
+12+12 cohort/split replay, and output privacy over 923,052 generated input
+bytes in 0.1119600001256913 seconds at 33,079,296-byte reported peak RSS. Its
+7,063-byte aggregate and mode-`0600` 175,618-byte private manifest were
+inspected/hash-bound and removed. Every real, network, payload, neural, target,
+model, score, and claim counter stayed zero. The generated closeout is consumed
+with no retry or rerun.
+
+Test, commit, push, and green this exact result before preparing one all-false
+Tier C request. That future request may only propose an additive live wrapper
+and one new metadata attempt; it authorizes no operation. The old consumed root,
+payload acquisition, EEG reads, models, scores, and scientific claims remain
+closed. This stays on the same thought-to-text path.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

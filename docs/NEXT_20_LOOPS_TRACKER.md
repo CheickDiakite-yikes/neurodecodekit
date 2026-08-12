@@ -1449,3 +1449,16 @@ registered generated closeout and green its aggregate result. Only after that
 may an all-false Tier C packet propose a new live metadata wrapper and attempt.
 Payload acquisition remains ineligible. This is Task 4 transport recovery on
 the same confound-control-to-language path, not a pivot.
+
+Implementation `b2cb48c` passed both jobs in CI `31583931303` before the one
+registered generated closeout. `MARC1HT-G1` passed all four response forms, 20
+refusals, 16 gates, exact cohort/split replay, and privacy/resource checks over
+923,052 generated input bytes. Runtime was 0.112 seconds at 33.1 MB external
+peak RSS; all 182,681 temporary output bytes were inspected/hash-bound and
+removed. Every real, payload, neural, target, model, score, and claim counter
+remained zero. The closeout is consumed with no rerun.
+
+Next gate: test, commit, push, and green the aggregate result. Only then prepare
+one all-false Tier C packet for a new additive live wrapper and one metadata
+attempt. That packet opens nothing by itself. Payload acquisition remains
+ineligible, and the old consumed private root remains forbidden.

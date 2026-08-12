@@ -1371,3 +1371,13 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   push, and both green CI jobs, followed by one registered generated closeout.
   No live metadata, payload, EEG, target, model, score, or claim action is open.
   This remains the same thought-to-text research path.
+
+  Exact implementation `b2cb48cc1c630cf2d22186732e8258619db0a930`
+  passed Base Python job `94073234688` and Optional Neuro Readers job
+  `94073234607` in CI `31583931303` before the
+  [registered generated result](docs/MARC_1_HTTP_IDENTITY_SEMANTICS_RESULT.md).
+  The one closeout passed `MARC1HT-G1`: 4/4 forms, 20/20 refusals, 16/16 gates,
+  923,052 generated input bytes, 0.112 seconds, 33.1 MB external peak RSS, and
+  zero real/network operations. Its two temporary outputs were removed and no
+  rerun is open. The result must be committed, pushed, and green before an
+  all-false Tier C request may propose a new live metadata wrapper and attempt.

@@ -372,6 +372,7 @@ negative result and S25 is never repurposed for calibration.
 | MARC1-HT1 HTTP identity research | RFC 9110 Sections 8.4 and 12.5.3; 4 future acceptance cases; 20 future refusals; 17 false authorization flags; 0 real operations | Artifact-only standards review after green consumed result `8d9cae1`; candidate policy hash `ac1b98ee...` | Separates absent content coding from actual coding without inferring the unretained live header; implementation and real access remain closed |
 | MARC1-HT1 generated recovery contract | 1,227 + 55 generated rows; 4 accepted forms; 20 refusals; 16 gates; 5 refusal routes; 0 real/network bytes | Green research `f515b36` / CI `31580575669` precedes the frozen contract | Allows only a new `plan`/`qualify`/`inspect` harness after contract CI; real metadata, payload, neural work, and claims remain closed |
 | MARC1-HT1 generated recovery implementation | 923,052 generated input bytes; 4/4 accepted forms; 20/20 refusals; 16/16 gates; exact 12+12 cohort and split replay; 0 real/network bytes | Development `MARC1HT-G1` passed in 0.109 sec at 32.7 MB external peak RSS; 29 new tests; registered closeout awaits implementation CI | Proves the standards-aligned uncoded-response predicate and frozen selector compose deterministically; live-source compatibility and all neural/language claims remain untested |
+| MARC1-HT1 registered generated closeout | 923,052 generated input bytes; 182,681 temporary output bytes; 4/4 forms; 20/20 refusals; 16/16 gates; 0 real/network bytes | Exact implementation `b2cb48c` passed CI `31583931303` before one 0.112-sec closeout at 33.1 MB external peak RSS; consumed with no rerun | Confirms the repaired transport/selector/privacy stack end to end on fixtures; a new live attempt still needs a separate Tier C sequence and no scientific claim changed |
 
 ### Real-Data Scientific Scorecard
 
@@ -1274,6 +1275,13 @@ Read this before interpreting any number in the repository.
   was accessed. The exact implementation must be committed, pushed, and green
   before its one registered generated closeout. This is a transport repair on
   the same positive-control-to-language path, not a scientific pivot.
+  Exact implementation `b2cb48c` then passed Base Python job `94073234688`
+  and Optional Neuro Readers job `94073234607` in CI `31583931303` before the
+  [one registered generated closeout](docs/MARC_1_HTTP_IDENTITY_SEMANTICS_RESULT.md).
+  `MARC1HT-G1` passed all gates in 0.112 seconds at 33.1 MB external peak RSS.
+  Its aggregate was inspected once, both temporary outputs were hashed and
+  removed, and the closeout is consumed with no rerun. This remains generated
+  engineering evidence only; another live metadata attempt is not yet open.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
