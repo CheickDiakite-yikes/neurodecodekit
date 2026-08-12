@@ -8932,3 +8932,51 @@ source-aware inventory localization before another one-shot metadata decision.
 Scientific claim not established: no real metadata, neural payload, target,
 model, prediction, score, language decoding, or thought-to-text result was
 accessed or established.
+
+## 2026-08-12 - MARC1-SA1 Generated Implementation
+
+- Began only after contract `8f64ccb` passed Base Python job `94180673330`
+  and Optional Neuro Readers job `94180673125` in CI `31616551270`.
+- Added a self-contained standard-library `plan`/`qualify`/`inspect` module
+  with no URL opener, execute mode, live path, archive, payload, signal,
+  target, model, prediction, or score surface and no consumed-wrapper import.
+- Implemented the five-field source core, optional agreeing MD5 provenance,
+  recursive target firewall, 21 aggregate predicates, seven separated hashes,
+  frozen historical comparison, target-free selection, and routes R1-R4.
+- Added held-parent, no-follow, exclusive mode-`0600` private/public writes,
+  aggregate-public leakage checks, one inspection, deterministic replay, and
+  exact two-file cleanup.
+- Final development `MARC1SA-G1` passed six semantic families, 52 refusals,
+  and 25 acceptance gates over 732,811 generated input bytes. It produced
+  95,392 private and 14,197 public bytes, 109,589 combined, then removed both
+  files and the directory.
+- Runtime was 0.052419791 seconds at 27,426,816-byte reported and external
+  peak RSS; external wall was 0.14 seconds. Network and payload bytes were
+  zero.
+- Twenty-one behavior tests with 28 subtests and eight implementation-record
+  tests with five subtests pass. The combined contract/behavior/record slice
+  passes 42 tests and 36 subtests; all MARC tests pass 722 tests and 801
+  subtests.
+- The first complete installed-suite attempt correctly exposed a test-harness
+  process-order issue: the late in-process CLI inherited an approximately
+  800-MiB suite high-water mark and refused the frozen 256-MiB producer cap.
+  No production cap changed. The CLI test now injects a bounded RSS probe,
+  while a separate fresh subprocess qualification still exercises the real
+  monitor and passes at 27,394,048-byte peak RSS.
+- The corrected complete dependency-light suite passes 2,897 tests with 35
+  expected skips and 1,614 subtests in 68.40 seconds of pytest runtime and
+  69.95 seconds external wall time at 659,668,992-byte maximum suite RSS.
+  The isolated optional-neuro suite passes 2,885 tests with 47 expected skips
+  and 1,621 subtests in 86.22 seconds of pytest runtime and 87.07 seconds
+  external wall time at 448,299,008-byte maximum suite RSS.
+- Dataset-specific request, response, private/consumed path, archive, payload,
+  signal, target, model, training, prediction, score, provider, hardware,
+  other-project, retry, rerun, and claim counters are zero.
+
+Engineering capability added: generated source-aware attestation can localize
+safe inventory drift while separating source, cohort, and payload-integrity
+evidence.
+
+Scientific claim not established: no real metadata, neural signal, target,
+model, score, language decoding, or thought-to-text capability was accessed or
+established.

@@ -3968,3 +3968,35 @@ request a dataset body, or access payload, signal, target, model, prediction,
 or score. A future live response remains a new Tier C sequence. This is the
 same path to cue-resistant neural evidence and held-out language decoding, not
 a pivot.
+
+## 2026-08-12 MARC1-SA1 Generated Implementation Handoff
+
+Contract `8f64ccb6dd33df8c81382a9dafd2e84590f50061` passed Base Python
+job `94180673330` and Optional Neuro Readers job `94180673125` in CI
+`31616551270` before implementation. Read
+`docs/MARC_1_SOURCE_AWARE_INVENTORY_ATTESTATION_IMPLEMENTATION.md`, its
+registry, source module, and two implementation test modules.
+
+The dependency-free module exposes only `plan`, `qualify`, and `inspect`. It
+implements strict source-core and optional-MD5 semantics, target rejection,
+21 predicates, seven identity layers, six family routes, 52 refusals,
+capability-held private/public output, deterministic replay, and exact cleanup.
+
+Final development `MARC1SA-G1` passed all 25 gates using 732,811 generated
+input and 109,589 temporary output bytes in 0.052419791 seconds at
+27,426,816-byte peak RSS. All forbidden counters stayed zero. Twenty-nine
+focused tests and 33 subtests pass. The complete dependency-light suite passes
+2,897 tests with 35 skips and 1,614 subtests; the isolated optional-neuro suite
+passes 2,885 tests with 47 skips and 1,621 subtests. Their measured maximum RSS
+was 659,668,992 and 448,299,008 bytes respectively. A late in-process CLI test
+initially inherited the complete suite's high-water RSS and correctly refused
+the producer cap; the test now uses an injected bounded probe, while a separate
+fresh-process qualification passes the real monitor at 27,394,048-byte peak
+RSS. No production limit was weakened.
+
+Immediate next gate: run complete verification, commit, push, and obtain both
+green CI jobs for this exact implementation. Only then run one registered
+generated closeout. Do not contact Figshare, inspect the consumed root, or
+access any archive, payload, signal, target, model, prediction, or score. A
+future live response remains a new Tier C packet and decision. The research
+path is unchanged.

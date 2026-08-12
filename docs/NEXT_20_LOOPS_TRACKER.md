@@ -1731,3 +1731,15 @@ dependency-free generated harness. Live metadata and participant payload stay
 closed pending a new Tier C sequence. Task 4 remains active on the same path:
 trustworthy multimodal cohort, cue-resistant neural positive control, held-out
 language decoding, then progressively stronger thought-to-text evidence.
+
+Contract `8f64ccb` passed both required jobs in CI `31616551270` before the
+additive source-aware attestor was implemented. Final development
+`MARC1SA-G1` passed all six family routes, 52 refusal cases, and 25 acceptance
+gates. It used 732,811 generated input bytes, created and removed 109,589
+temporary bytes, and ran in 0.052419791 seconds at 27,426,816-byte peak RSS.
+
+The implementation has only `plan`, `qualify`, and `inspect`; it cannot open a
+URL, dataset path, archive, payload, signal, target, model, or score. Next gate:
+commit, push, and green this exact implementation before one registered
+generated closeout. Task 4 remains active on the same path, and a later public
+metadata response remains a separate Tier C decision.

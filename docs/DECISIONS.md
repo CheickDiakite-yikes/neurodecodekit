@@ -7308,3 +7308,35 @@ Evidence:
 `docs/MARC_1_SOURCE_AWARE_INVENTORY_ATTESTATION_PREREGISTRATION.md`,
 `registries/marc1_source_aware_inventory_attestation_contract.v0.json`, and
 `tests/test_marc1_source_aware_inventory_attestation_contract.py`.
+
+## 0220 - Implement Source-Aware Attestation Without A Live Surface
+
+Evidence-order decision: begin only after contract `8f64ccb` passed Base
+Python job `94180673330` and Optional Neuro Readers job `94180673125` in CI
+`31616551270`.
+
+Architecture decision: use one self-contained standard-library module with
+capability-first output, strict JSON and target firewalls, a five-field public
+core, optional agreeing MD5 provenance, 21 aggregate predicates, seven
+domain-separated hashes, private selection, and aggregate public output. Do
+not import or call the consumed live wrapper.
+
+Qualification decision: accept development `MARC1SA-G1` after six semantic
+families, 52 refusals, 25 gates, row/key-order replay, public/private privacy,
+resource caps, one public inspection, and exact cleanup pass. The final
+candidate used 732,811 input and 109,589 output bytes in 0.052419791 seconds at
+27,426,816-byte peak RSS.
+
+Next-gate decision: commit, push, and require both CI jobs green before one
+registered generated closeout. A live metadata body remains closed behind a
+new Tier C packet and decision after any generated result.
+
+Path decision: source-aware cohort identity is still the current step on the
+same route to cue-resistant neural evidence, held-out language decoding, and
+progressively stronger thought-to-text evidence. It is not a pivot.
+
+Evidence:
+`src/neurodecodekit/datasets/marc1_source_aware_inventory_attestation.py`,
+`docs/MARC_1_SOURCE_AWARE_INVENTORY_ATTESTATION_IMPLEMENTATION.md`,
+`registries/marc1_source_aware_inventory_attestation_implementation.v0.json`,
+and the two matching implementation test modules.

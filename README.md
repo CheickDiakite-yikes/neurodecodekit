@@ -387,6 +387,7 @@ negative result and S25 is never repurposed for calibration.
 | MARC1-LM1 consumed live metadata | One 15,652-byte version-3 metadata body; strict JSON parse; `MARC1LM-F04` at the frozen inventory validator; 0 selected subjects and 0 payload bytes | Exact implementation `f9a1ece` passed CI `31611639130` before the sole request; 1.095 sec, 33,996,800-byte peak RSS, 4,207 output bytes; no retry | Proves bounded live fail-closed behavior and invalidates use of the frozen inventory as a payload gate; it does not identify the changed predicate or add neural, language, or thought-to-text evidence |
 | MARC1-SA1 source-aware attestation research | Five-field official public core; two optional MD5 extensions; 21 aggregate predicates; seven domain-separated identity hashes; 0 real operations | Green consumed result `d859509` / CI `31612923903` anchors a Tier A design with 12 invariant tests | Separates source schema, cohort identity, and later byte-level integrity so the next one-shot check can localize drift without weakening privacy or changing the scientific path |
 | MARC1-SA1 generated-only contract | Six semantic fixture families; 21 predicates; seven identity domains; 52 refusals; 25 gates; exactly `plan`/`qualify`/`inspect`; 0 live or payload operations | Research `aa80503` passed CI `31614330447` before the strict versioned contract was frozen; 13 focused tests pass | Freezes a source-aware attestor before implementation while keeping every live, neural, target, model, and claim boundary closed; this remains cohort-integrity work on the same thought-to-text path |
+| MARC1-SA1 generated implementation | Six family routes; 52/52 refusals; 25/25 gates; 732,811 generated input bytes; 109,589 temporary output bytes; exact cleanup | Green contract `8f64ccb` / CI `31616551270` preceded development `MARC1SA-G1`; 0.0524 sec at 27,426,816-byte peak RSS; 29 focused tests pass | Adds deterministic aggregate drift localization and optional-MD5 handling without a network or payload surface; implementation CI is still required and no neural/language claim changed |
 
 ### Real-Data Scientific Scorecard
 
@@ -1454,6 +1455,15 @@ Read this before interpreting any number in the repository.
   surface is only `plan`, `qualify`, and `inspect`; it has no network client,
   live path, payload reader, signal, target, model, prediction, or score. The
   exact contract must now pass both CI jobs before implementation begins.
+- **MARC1-SA1 generated implementation:** contract `8f64ccb` passed both jobs
+  in CI `31616551270` before the standard-library attestor was built. Final
+  development route `MARC1SA-G1` passed six semantic families, 52 refusals,
+  and 25 gates using 732,811 generated input and 109,589 temporary output
+  bytes in 0.0524 seconds at 27,426,816-byte peak RSS. Output capability was
+  acquired first, public/private schemas stayed separate, and both files were
+  removed. The exact implementation must now pass both CI jobs before one
+  registered generated closeout; no live metadata, payload, target, model, or
+  scientific evidence was accessed.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

@@ -1199,6 +1199,24 @@ this contract to inspect the consumed root or to infer the failed
 identity through cue-resistant neural evidence and held-out language decoding
 to progressively stronger thought-to-text evidence.
 
+Contract `8f64ccb6dd33df8c81382a9dafd2e84590f50061` passed Base Python
+job `94180673330` and Optional Neuro Readers job `94180673125` in CI
+`31616551270` before implementation. Read
+`docs/MARC_1_SOURCE_AWARE_INVENTORY_ATTESTATION_IMPLEMENTATION.md` and
+`registries/marc1_source_aware_inventory_attestation_implementation.v0.json`.
+The additive standard-library module exposes only `plan`, `qualify`, and
+`inspect`; it has no network, execute, dataset, private-path, archive, payload,
+signal, target, model, prediction, or score surface.
+
+The final development candidate reached `MARC1SA-G1`: all six semantic
+families, 52 refusals, and 25 gates passed over 732,811 generated input bytes.
+It created and removed 109,589 temporary output bytes in 0.052419791 seconds
+at 27,426,816-byte peak RSS. All real, private, payload, neural, model, score,
+retry, and claim counters stayed zero. Commit, push, and obtain both green CI
+jobs for this exact implementation before one registered generated closeout.
+Do not contact a source or touch the consumed root. A future live response
+remains a new Tier C packet and decision.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

@@ -1,0 +1,227 @@
+{
+  "schema_name": "neurodecodekit.marc1_source_aware_inventory_attestation_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "MARC-1-source-aware-inventory-attestation-implementation-v0",
+  "lane_id": "MARC1-SA1",
+  "implemented_at_local": "2026-08-12",
+  "status": "generated_implementation_requires_green_before_registered_closeout",
+  "objective": "Implement and adversarially qualify a dependency-free generated attestor that separates public source schema optional checksum provenance target-free cohort identity and later payload integrity.",
+  "artifact_bindings": {
+    "implementation_source": {
+      "path": "src/neurodecodekit/datasets/marc1_source_aware_inventory_attestation.py",
+      "bytes": 72882,
+      "sha256": "36a06958009f3ac42af6eb69d464a61db6f004bc51fa4f3b73420538cf29a482"
+    },
+    "behavior_test": {
+      "path": "tests/test_marc1_source_aware_inventory_attestation.py",
+      "bytes": 18574,
+      "sha256": "a25cefecfde594f398ecea32bacf2ef9bd8102e3b41eb7fe503cb082a7ff2cd0"
+    },
+    "implementation_document": {
+      "path": "docs/MARC_1_SOURCE_AWARE_INVENTORY_ATTESTATION_IMPLEMENTATION.md",
+      "bytes": 7305,
+      "sha256": "b395d30c1735b067ec011c895288d82d7638ae2bfae7ed0dfd6278eec45ba3c0"
+    },
+    "implementation_test": {
+      "path": "tests/test_marc1_source_aware_inventory_attestation_implementation.py",
+      "bytes": 5364,
+      "sha256": "7dbb2f4b7ad4ca8c124db01819a3d81df8e6553a1c82d45ec748a5716882775f"
+    },
+    "green_contract": {
+      "path": "registries/marc1_source_aware_inventory_attestation_contract.v0.json",
+      "bytes": 14048,
+      "sha256": "7c405520a3c2039d8ff202f8e34f228627b5b2f5b97cd74e2fe9b42b83de8bec"
+    }
+  },
+  "green_contract_proof": {
+    "commit": "8f64ccb6dd33df8c81382a9dafd2e84590f50061",
+    "CI_run_id": 31616551270,
+    "base_python_job_id": 94180673330,
+    "optional_neuro_job_id": 94180673125,
+    "both_required_jobs_green": true,
+    "implementation_started_after_green": true
+  },
+  "implementation_surface": {
+    "module": "neurodecodekit.datasets.marc1_source_aware_inventory_attestation",
+    "commands": [
+      "plan",
+      "qualify",
+      "inspect"
+    ],
+    "standard_library_only": true,
+    "base_dependency_delta": 0,
+    "network_client_or_URL_opener": false,
+    "execute_command": false,
+    "dataset_specific_fixture_or_body": false,
+    "registered_or_consumed_path_interface": false,
+    "participant_archive_interface": false,
+    "payload_signal_target_model_or_score_interface": false,
+    "consumed_executor_import_call_or_modification": false
+  },
+  "source_semantics": {
+    "required_public_core_fields": [
+      "id",
+      "name",
+      "size",
+      "is_link_only",
+      "download_url"
+    ],
+    "known_optional_extension_fields": [
+      "supplied_md5",
+      "computed_md5"
+    ],
+    "absent_MD5_is_unavailable_not_failure": true,
+    "present_MD5_format": "lowercase_32_hex",
+    "present_pair_must_agree": true,
+    "unknown_non_target_values_retained": false,
+    "unknown_non_target_extensions_block_selection": true,
+    "target_like_keys_recursively_forbidden": true,
+    "duplicate_JSON_keys_forbidden": true,
+    "nonfinite_JSON_constants_forbidden": true,
+    "safe_NFC_basenames_required": true,
+    "positive_unique_IDs_and_sizes_required": true,
+    "link_only_files_allowed": false,
+    "exact_downloader_URL_required": true
+  },
+  "identity_layers": {
+    "predicate_fields": 21,
+    "hash_domains": 7,
+    "transport_hash_is_provenance_only": true,
+    "semantic_hashes_replay_under_row_and_key_reorder": true,
+    "unavailable_selection_hash_is_JSON_null": true,
+    "unavailable_selection_reason_required": true,
+    "provider_MD5_substitutes_for_observed_payload_SHA256": false
+  },
+  "output_safety": {
+    "output_root": "new_nonregistered_path_under_real_system_temporary_tree",
+    "capability_acquired_before_repository_or_fixture_work": true,
+    "held_parent_device_and_inode": true,
+    "ancestor_symlinks_allowed": false,
+    "exclusive_parent_relative_writes": true,
+    "file_count": 2,
+    "file_mode": "0600",
+    "private_basename": "marc1_source_aware_inventory.private.v0.json",
+    "public_basename": "marc1_source_aware_inventory_result.v0.json",
+    "raw_response_persisted": false,
+    "unknown_extension_name_or_value_persisted": false,
+    "public_filenames_IDs_URLs_MD5_rows_subjects_or_outcomes": false,
+    "public_inspections": 1,
+    "exact_cleanup": true
+  },
+  "development_qualification": {
+    "registered_execution": false,
+    "overall_route": "MARC1SA-G1",
+    "semantic_families_passed": 6,
+    "semantic_families_required": 6,
+    "predicate_fields": 21,
+    "identity_hash_domains": 7,
+    "refusals_passed": 52,
+    "refusals_required": 52,
+    "acceptance_gates_passed": 25,
+    "acceptance_gates_required": 25,
+    "family_routes": {
+      "documented_public_core_exact": "MARC1SA-R2",
+      "observed_extension_exact": "MARC1SA-R1",
+      "partial_optional_extension_exact": "MARC1SA-R2",
+      "single_historical_drift": "MARC1SA-R3",
+      "multiple_historical_drifts": "MARC1SA-R3",
+      "unknown_non_target_extension": "MARC1SA-R4"
+    },
+    "refusal_route_counts": {
+      "MARC1SA-F00": 6,
+      "MARC1SA-F01": 0,
+      "MARC1SA-F02": 6,
+      "MARC1SA-F03": 34,
+      "MARC1SA-F04": 6
+    },
+    "partial_MD5_counts": {
+      "supplied_present": 36,
+      "computed_present": 27,
+      "agreeing_pairs": 18
+    },
+    "measurements": {
+      "generated_input_bytes": 732811,
+      "private_output_bytes": 95392,
+      "public_output_bytes": 14197,
+      "combined_output_bytes": 109589,
+      "incremental_disk_bytes": 109589,
+      "runtime_seconds": 0.052419791,
+      "peak_RSS_bytes": 27426816,
+      "external_wall_seconds": 0.14,
+      "external_peak_RSS_bytes": 27426816,
+      "network_bytes": 0,
+      "payload_bytes": 0,
+      "public_SHA256": "97bec694d0cb93e1b295edd2dbb95700629ec388000114d0e19d4422d3bc4866",
+      "private_SHA256": "dd267efdce39ae20002d4e251f19cac439ce316c61c7f9c1bda2bd9e41e2a7c5",
+      "exact_cleanup": true,
+      "retained_output_files": 0,
+      "end_to_end_latency_measured": false
+    }
+  },
+  "test_evidence_before_registry": {
+    "behavior_tests_passed": 21,
+    "behavior_subtests_passed": 28,
+    "behavior_test_failures": 0,
+    "ruff_passed": true,
+    "source_compiled": true
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "generated_input_bytes": 2097152,
+    "combined_output_bytes": 2097152,
+    "incremental_disk_bytes": 4194304,
+    "network_bytes": 0,
+    "payload_bytes": 0
+  },
+  "authorization_flags": {
+    "registered_generated_closeout_authorized_now": false,
+    "dataset_specific_request_authorized": false,
+    "private_or_consumed_path_operation_authorized": false,
+    "participant_archive_request_authorized": false,
+    "payload_authorized": false,
+    "signal_or_target_read_authorized": false,
+    "model_training_prediction_or_score_authorized": false,
+    "retry_or_rerun_authorized": false,
+    "release_authorized": false,
+    "scientific_claim_upgrade_authorized": false
+  },
+  "forbidden_counters": {
+    "dataset_specific_requests": 0,
+    "dataset_specific_response_bodies": 0,
+    "private_or_consumed_path_operations": 0,
+    "participant_archive_requests": 0,
+    "payload_bytes": 0,
+    "signal_reads": 0,
+    "target_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "scoring_events": 0,
+    "provider_model_calls": 0,
+    "hardware_operations": 0,
+    "operations_on_other_projects": 0,
+    "retries": 0,
+    "reruns": 0,
+    "claim_upgrades": 0
+  },
+  "next_gate": {
+    "commit_push_and_green_this_exact_implementation": true,
+    "green_implementation_before_registered_generated_closeout": true,
+    "registered_generated_closeout_authorized_now": false,
+    "new_Tier_C_packet_and_decision_before_future_live_request": true,
+    "live_request_authorized": false,
+    "payload_authorized": false
+  },
+  "claim_boundary": {
+    "same_thought_to_text_path": true,
+    "is_pivot": false,
+    "engineering_capability_added": "A deterministic generated harness now separates source schema optional checksum provenance target-free cohort identity and later payload integrity while localizing safe inventory drift.",
+    "scientific_claim_not_established": "No real metadata neural signal target model prediction decoding score language result or thought-to-text capability was accessed or established.",
+    "scientific_claim_established": false,
+    "language_or_thought_to_text_established": false
+  }
+}
