@@ -706,6 +706,28 @@ for a fresh packet-bound decision. Movement evidence may establish a bounded
 sensor-level claim but never thought-to-text; the latter remains a separate
 language-specific evidence target.
 
+Contract `d1218066e64dea502d263acf0c096ed7eab55a11` passed Base Python job
+`94028013357` and Optional Neuro Readers job `94028013230` in CI
+`31569417204` before implementation. Read
+`docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_IMPLEMENTATION.md`,
+`registries/marc1_privacy_preserving_pilot_selection_implementation.v0.json`,
+and the two matching tests. The standard-library generated-only module now
+builds all 1,227 Freewill-style rows and 55 Wrist-style rows, replays both
+frozen cohorts under reversed order, binds 72 Freewill bundles/288 members and
+12 Wrist archives, keeps 300 exact rows private, passes all 36 refusals, and
+exposes only `plan`, `qualify`, and aggregate `inspect`. A disposable
+development run passed constructed `MARC1PSG-R1` over 873,348 input bytes in
+0.226802 seconds at 32,833,536-byte reported peak RSS, emitted 182,563 bytes,
+and was removed. It has no scientific value.
+
+Commit, push, and require both jobs green for this exact implementation before
+one registered generated closeout. Do not run that closeout from an ungreen
+implementation, inspect the sealed Freewill manifest, request Wrist metadata,
+or prepare/activate a real-selection decision yet. The current and earlier
+maintainer continuations are not retroactive Tier C authority. MARC1-P1 is a
+confound-resolution rung on the same thought-to-text path, not a replacement
+for the later language-specific experiment.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

@@ -6402,3 +6402,37 @@ Evidence:
 `docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_PREREGISTRATION.md`,
 `registries/marc1_privacy_preserving_pilot_selection_contract.v0.json`, and
 `tests/test_marc1_privacy_preserving_pilot_selection_preregistration.py`.
+
+## 0191 - Implement The Full-Scale Generated Selector Before Metadata Access
+
+Decision: accept a standard-library generated-only implementation after exact
+contract `d1218066e64dea502d263acf0c096ed7eab55a11` passed both jobs in CI
+`31569417204`. Keep the interface limited to `plan`, generated `qualify`, and
+aggregate `inspect`; do not add an execute command, network client, real input
+path, override, archive reader, event/signal/target reader, model, or scorer.
+
+Qualification decision: require 1,227 generated Freewill-style rows and 55
+generated Wrist-style rows, both frozen DOI-bound ranks, exact bundle/run
+splits, conservative byte reservations, 300 private rows mode `0600`, complete
+input-order replay, and all 36 refusal mutations. Accept development
+`MARC1PSG-R1` only as implementation evidence: 873,348 generated input bytes,
+182,563 output bytes, 0.226802 seconds, 32,833,536-byte reported peak RSS, 15
+passed gates, and zero real, neural, model, score, or claim operations.
+
+Lifecycle decision: remove the development outputs and do not call them the
+registered closeout. Commit, push, and green this exact implementation before
+one fresh registered generated closeout. A green generated result may support
+one later all-false Tier C request but cannot authorize the sealed Freewill
+manifest read, Wrist metadata request, payload acquisition, analysis, or
+scientific promotion.
+
+Research-path decision: MARC1-P1 remains a confound-resolution rung toward the
+same thought-to-text objective. Movement evidence cannot itself establish
+thought-to-text and must not replace the later language-specific held-out
+experiment and its no-signal and language-model controls.
+
+Evidence:
+`docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_IMPLEMENTATION.md`,
+`registries/marc1_privacy_preserving_pilot_selection_implementation.v0.json`,
+`src/neurodecodekit/datasets/marc1_pilot_selection.py`, and the two matching
+test modules.

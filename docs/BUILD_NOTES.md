@@ -7958,3 +7958,47 @@ without using signal quality or outcome information.
 Scientific claim not established: this frozen selector contains no human
 neural signal, prediction, or score and establishes neither a neural effect
 nor thought-to-text.
+
+## 2026-08-12 - MARC1-P1 Generated Pilot Selector Implementation
+
+- Confirmed exact contract `d1218066e64dea502d263acf0c096ed7eab55a11`
+  passed Base Python job `94028013357` and Optional Neuro Readers job
+  `94028013230` in CI `31569417204` before implementation.
+- Added a dependency-free `marc1_pilot_selection` module with only `plan`,
+  generated `qualify`, and aggregate `inspect`; there is no execute, network,
+  real-path, override, archive, signal, target, model, or score surface.
+- Generated and strictly validated 1,227 Freewill-style central-directory rows
+  and 55 Wrist-style metadata rows. The selector recomputes both frozen
+  12-person ranks, binds 72 Freewill bundles/288 members and 12 Wrist archives,
+  and writes 300 exact rows only to a private mode-`0600` manifest.
+- Selection replays byte-identically under complete input-order reversal.
+  Within-cap size and CRC changes alter provenance but not cohort/run/split
+  identity; source or joint cap excess refuses without fallback.
+- All 36 registered mutations refuse in the exact 1/5/9/13/2/2/4 route-count
+  distribution. All 15 acceptance gates pass and every real, network, neural,
+  target, model, score, hardware, rerun, release, and claim counter is zero.
+- One disposable development qualification passed constructed `MARC1PSG-R1`
+  over 873,348 generated input bytes in 0.2268019998446107 seconds at
+  32,833,536-byte reported peak RSS. It emitted a 6,945-byte aggregate report
+  and 175,618-byte private manifest, 182,563 bytes combined.
+- Aggregate/private hashes were
+  `c9613c308fc4ce3cbb2901297e3c3a6de39ba7ceebb41c58524369ca60bc9c39`
+  and `e1b2db1506f94efcc7f85081d9df901349498a8b9a681156d5d37121a887e831`.
+  The report was inspected and both outputs and invocation directories were
+  removed.
+- All 37 implementation/record tests and 263 MARC tests pass. The full
+  dependency-light suite passes 2,402 tests with 204 expected skips in 19.915
+  seconds at 225,837,056-byte external maximum RSS. The optional-neuro suite
+  passes 2,473 tests with 35 expected skips in 55.729 seconds at
+  724,615,168-byte external maximum RSS. Both add exactly 37 tests and zero
+  skips over the green contract baseline.
+- Ruff, compilation, 171 registry JSON parses, CLI help/plan/roundtrip, and
+  `git diff --check` pass. The one registered generated closeout has not run.
+
+Engineering capability added: NeuroDecodeKit can deterministically select a
+privacy-preserving, storage-capped two-axis pilot from full-scale generated
+metadata without using target, signal, quality, or outcome information.
+
+Scientific claim not established: no real participant metadata, payload,
+human neural signal, target, model prediction, or score was accessed, so this
+implementation establishes no neural effect or thought-to-text capability.

@@ -1264,3 +1264,21 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   gate is generated implementation only after this exact contract is remotely
   green; the sealed inventory, Wrist metadata, payloads, signals, targets,
   models, and scores remain closed.
+
+  Contract `d1218066e64dea502d263acf0c096ed7eab55a11` passed Base Python job
+  `94028013357` and Optional Neuro Readers job `94028013230` in CI
+  `31569417204` before the generated implementation began. Read
+  `docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_IMPLEMENTATION.md` and
+  `registries/marc1_privacy_preserving_pilot_selection_implementation.v0.json`.
+  The module has only `plan`, `qualify`, and aggregate `inspect`; it builds
+  1,227 + 55 generated rows, selects the exact frozen cohorts and splits,
+  writes 300 private rows mode `0600`, replays under reversed input order, and
+  refuses all 36 mutations. Development `MARC1PSG-R1` processed 873,348 bytes
+  in 0.226802 seconds at 32,833,536-byte reported RSS and emitted 182,563
+  temporary bytes, all removed. It read no real metadata or neural content.
+
+  Immediate next gate: commit, push, and green this exact implementation, then
+  run one registered generated closeout. Private inventory, Wrist metadata,
+  payload acquisition, signal/event/target access, training, inference,
+  scoring, and scientific promotion remain closed. This is a supporting rung
+  on the thought-to-text path, not a movement-to-text pivot.

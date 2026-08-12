@@ -1347,3 +1347,23 @@ qualify only a generated 1,227-row Freewill inventory plus 55-row Wrist
 metadata fixture under 36 refusals. Real selection still requires a later
 all-false Tier C packet and fresh decision. No target, quality, outcome,
 private member row, payload, signal, model, or score may be used at this stage.
+
+Contract `d121806` passed both jobs in CI `31569417204` before the generated
+Task 4 implementation began. Read
+`docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_IMPLEMENTATION.md` and
+`registries/marc1_privacy_preserving_pilot_selection_implementation.v0.json`.
+The dependency-free module exercises 1,227 Freewill-style and 55 Wrist-style
+rows, exact DOI-bound ranks, 72/288 Freewill bundles/members, 12 Wrist
+archives, private mode-`0600` output, row-order replay, source/joint caps, and
+all 36 refusal mutations. Development `MARC1PSG-R1` passed 15 gates in
+0.226802 seconds at 32,833,536-byte reported RSS with 873,348 generated input
+bytes, 182,563 output bytes, and zero real/neural/model/score operations. The
+temporary outputs were removed.
+
+Next gate: commit, push, and green this exact implementation; then consume one
+registered generated closeout and record it. Only after that result is itself
+remotely green may an all-false Tier C real-selection packet be prepared. The
+sealed Freewill inventory and Wrist metadata remain unopened, and no current
+or earlier `continue` is retroactive authority. This remains the same research
+path toward a confound-resistant neural result and later language-specific
+thought-to-text evidence.
