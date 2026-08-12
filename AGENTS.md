@@ -899,6 +899,30 @@ closed until that exact wrapper is independently committed, pushed, and green.
 Do not import or reuse the consumed `MARC1-P1A` executor, touch its old root,
 access a payload, or infer a scientific result from the decision.
 
+Decision `9c7bd48541fbcebabcb9a783cb9047c7f2a2f57a` passed Base Python
+job `94083644849` and Optional Neuro Readers job `94083644932` in CI
+`31587195405` before wrapper work began. Read
+`docs/MARC_1_HTTP_IDENTITY_LIVE_IMPLEMENTATION.md`,
+`registries/marc1_http_identity_live_implementation.v0.json`,
+`src/neurodecodekit/datasets/marc1_http_identity_live.py`, and the two matching
+tests. The additive module composes the green HTTP semantics and frozen
+target-free selector, while an AST audit forbids importing the consumed
+executor and a lexical gate forbids its old private root without statting it.
+
+Generated `MARC1HTL-G1` passed all 21 gates and 31 refusals over 892,922 input
+bytes in 0.2482517089229077 seconds at 52,117,504-byte reported peak RSS. Four
+accepted absent/case-insensitive identity response forms produced identical
+selection identities. The 8,951-byte aggregate and 206,509-byte private
+manifest were temporary and removed; every real, network, payload, signal,
+target, model, score, and claim counter stayed zero.
+
+Commit, push, and obtain both green CI jobs for this exact implementation
+before the sole metadata invocation. Only after that proof may the executor
+read the sealed upstream manifest once and accept one bounded Wrist metadata
+body in the new root. Do not access a payload, signal, target, model, score,
+the consumed executor, or the old root. This remains the same thought-to-text
+research path and is not itself a scientific result.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

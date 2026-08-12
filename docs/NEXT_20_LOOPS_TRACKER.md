@@ -1491,3 +1491,22 @@ Next gate: test, commit, push, and green the exact decision. Only afterward may
 the additive generated/mock wrapper be implemented. Real input remains closed
 until that wrapper independently passes both remote jobs. Payload acquisition,
 signals, targets, models, scores, and claim upgrades remain ineligible.
+
+Decision `9c7bd48` passed both jobs in CI `31587195405` before the new additive
+wrapper was built. `MARC1HTL-G1` now passes all 21 generated gates and all 31
+adversarial refusals. It accepts an absent response `Content-Encoding` or one
+case-insensitive identity token, refuses every actual coding, performs zero
+decoding/decompression operations, and reproduces one identical 300-row
+target-free selection across four accepted transport forms. AST and private-
+root checks keep the consumed executor and old root unreachable.
+
+The measured generated run processed 892,922 input bytes in 0.248252 seconds
+at 52,117,504-byte reported peak RSS and emitted 215,460 temporary bytes, all
+removed. Every real, public-network, payload, signal, target, model, score, and
+claim counter stayed zero.
+
+Next gate: complete repository verification, commit and push this exact
+wrapper, and require Base Python and Optional Neuro Readers CI to pass. Only
+then run the one registered metadata-only selection. Payload acquisition is
+still ineligible. MARC-1 remains Task 4 on the same control-attribution to
+language-decoding path, not a pivot.

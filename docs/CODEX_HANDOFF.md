@@ -3547,3 +3547,33 @@ Immediate next gate: test, commit, push, and obtain both green CI jobs for the
 decision. Only then implement and qualify the new additive wrapper on generated
 and mocked inputs. Do not touch the sealed inventory, public endpoint, consumed
 executor, old root, or payload before the exact wrapper is also remotely green.
+
+## 2026-08-12 MARC1-HT1A Additive Wrapper Handoff
+
+Decision `9c7bd48541fbcebabcb9a783cb9047c7f2a2f57a` passed Base Python
+job `94083644849` and Optional Neuro Readers job `94083644932` in CI
+`31587195405` before implementation. Read
+`docs/MARC_1_HTTP_IDENTITY_LIVE_IMPLEMENTATION.md`,
+`registries/marc1_http_identity_live_implementation.v0.json`,
+`src/neurodecodekit/datasets/marc1_http_identity_live.py`, and both matching
+test modules.
+
+The new wrapper is additive and standard-library-only. It composes the green
+HTTP-identity semantics and frozen target-free selector, uses AST inspection
+to forbid the consumed executor import, and lexically refuses the old consumed
+root without statting or opening it. It accepts absent response encoding or
+one case-insensitive identity token, refuses every actual coding, duplicate,
+list, empty value, and transfer coding, and exposes no decoder, decompressor,
+payload, signal, target, model, scorer, retry, or alternate-source interface.
+
+Measured generated `MARC1HTL-G1` passed 21/21 gates and 31/31 refusals across
+four accepted transport forms. It processed 892,922 generated input bytes in
+0.2482517089229077 seconds at 52,117,504-byte reported peak RSS and produced
+an 8,951-byte aggregate plus a 206,509-byte private manifest. The outputs were
+removed, and every real/network/forbidden counter remained zero.
+
+Immediate next gate: finish full local verification, commit and push the exact
+wrapper, and require both CI jobs green. Only afterward may the one registered
+metadata attempt read the sealed upstream inventory once and accept one Wrist
+body capped at 2 MiB. Do not open payloads or the old root. This is the same
+thought-to-text path, not a pivot, and no scientific result has changed.

@@ -1403,3 +1403,21 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   remotely green. Thought-to-text remains the objective, not a predeclared
   outcome. No wrapper, private read, public request, or payload action has yet
   occurred under this decision.
+
+  Decision `9c7bd48541fbcebabcb9a783cb9047c7f2a2f57a` then passed Base
+  Python job `94083644849` and Optional Neuro Readers job `94083644932` in CI
+  `31587195405` before wrapper implementation. Read
+  [the additive implementation](docs/MARC_1_HTTP_IDENTITY_LIVE_IMPLEMENTATION.md),
+  its machine registry, and the two matching test modules. Generated
+  `MARC1HTL-G1` accepts absent or one case-insensitive identity encoding,
+  refuses all actual codings and 31/31 registered mutations, replays the exact
+  12+12 target-free cohorts, and cannot import the consumed executor or touch
+  its old root. All 21 generated gates passed in 0.248252 seconds at
+  52,117,504-byte reported peak RSS with 215,460 temporary output bytes and
+  zero real, network, payload, signal, target, model, score, or claim
+  operations. The temporary outputs were removed.
+
+  The wrapper is not yet live-eligible. Its exact implementation commit must
+  be pushed and both required CI jobs must pass before the one metadata-only
+  attempt may run. This is the same confound-control to neural-positive-control
+  to held-out-language path, not a pivot. Payload acquisition remains closed.

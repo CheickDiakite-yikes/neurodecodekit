@@ -6774,3 +6774,44 @@ Evidence:
 `docs/MARC_1_HTTP_IDENTITY_LIVE_RECOVERY_AUTHORIZATION_DECISION.md`,
 `registries/marc1_http_identity_live_recovery_authorization_decision.v0.json`,
 and `tests/test_marc1_http_identity_live_recovery_authorization_decision.py`.
+
+## 0203 - Apply The Standards Repair Without Changing The Research Path
+
+Implementation decision: after decision `9c7bd48` passed both jobs in CI
+`31587195405`, implement a new additive wrapper. Compose only the green HTTP-
+identity semantics module and frozen target-free selector. Do not import, call,
+modify, or expose the consumed `MARC1-P1A` executor.
+
+Transport decision: accept an uncoded response only when `Content-Encoding` is
+absent or is one case-insensitive identity token. Refuse empty, duplicate,
+list, transfer-coded, and actually coded responses. Perform no decoding or
+decompression and retain every existing status, redirect, host, body-cap,
+schema, target-firewall, privacy, and output rule.
+
+Isolation decision: use only the new
+`.codex_work/marc1_http_identity/live_recovery_v0` invocation root. Refuse the
+old consumed root lexically without statting or opening it. A future marker
+must precede the first real input, and any post-marker outcome consumes the
+sole attempt.
+
+Qualification decision: accept generated `MARC1HTL-G1` only as implementation
+evidence. All four accepted response forms replayed one identical target-free
+selection; all 21 gates and 31 refusals passed under the 30-second, 256-MiB,
+2-MiB output, one-thread, and zero-real-operation boundary.
+
+Evidence-order decision: complete all local verification, then commit, push,
+and require both remote jobs green. Only that exact green wrapper may use the
+already-recorded decision for one metadata-only attempt. No payload, signal,
+target, model, prediction, score, retry, rerun, release, or claim operation is
+eligible.
+
+Path decision: MARC-1 is a control and attribution rung on the same route to a
+controlled neural positive control, held-out language decoding, and the
+long-term thought-to-text objective. It is not a pivot. Generated qualification
+establishes no scientific result.
+
+Evidence:
+`docs/MARC_1_HTTP_IDENTITY_LIVE_IMPLEMENTATION.md`,
+`registries/marc1_http_identity_live_implementation.v0.json`,
+`src/neurodecodekit/datasets/marc1_http_identity_live.py`, and the two matching
+tests.

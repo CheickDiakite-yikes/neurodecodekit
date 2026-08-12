@@ -8363,3 +8363,39 @@ qualified after this exact decision is remotely green.
 
 Scientific claim not established: authorization is not data or a result and
 adds no neural, language-decoding, or thought-to-text evidence.
+
+## 2026-08-12 - MARC1-HT1A Additive Live Wrapper
+
+- Began only after decision `9c7bd48` passed Base Python job `94083644849`
+  and Optional Neuro Readers job `94083644932` in CI `31587195405`.
+- Added the independent standard-library `marc1_http_identity_live.py` module.
+  It composes the green HTTP-semantics module and frozen target-free selector,
+  while AST inspection refuses an import of the consumed executor.
+- Added a fresh private root and lexical old-root refusal. The implementation
+  does not stat, open, import, call, modify, or reuse consumed `MARC1-P1A`
+  material.
+- Accepted absent `Content-Encoding` and one case-insensitive identity token;
+  refused every actual coding, empty value, list, duplicate, transfer coding,
+  private redirect, overflow, target leak, and output privacy breach. Decoder
+  and decompressor operations remain zero.
+- Generated `MARC1HTL-G1` passed 21 gates and 31 mutations over 892,922 input
+  bytes in 0.2482517089229077 seconds at 52,117,504-byte reported peak RSS.
+  Its 8,951-byte aggregate and 206,509-byte private manifest totaled 215,460
+  temporary bytes and were removed.
+- Thirty-three focused behavior/implementation tests plus 23 subtests pass,
+  as do all 457 MARC tests. The dependency-light suite passes 2,596 tests with
+  204 expected skips in 22.559 seconds at 297,320,448-byte external peak RSS;
+  the optional-neuro suite passes 2,667 tests with 35 expected skips in 59.423
+  seconds at 797,769,728-byte external peak RSS. Both add exactly 33 tests and
+  zero skips over the green decision baseline.
+- Repository-wide Ruff, compilation, all 183 registry JSON parses, module CLI
+  help, one generated qualify/inspect roundtrip, and `git diff --check` pass.
+  Every real, network, payload, signal, target, model, score, claim, and other-
+  project counter is zero.
+
+Engineering capability added: the corrected HTTP identity policy is now
+composed with the same frozen MARC-1 selection under proof, privacy, resource,
+and consumed-root isolation gates.
+
+Scientific claim not established: generated wrapper qualification adds no
+human EEG, neural effect, language-decoding, or thought-to-text evidence.
