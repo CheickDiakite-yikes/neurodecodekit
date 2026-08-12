@@ -1705,3 +1705,16 @@ predicate is unavailable and must not be inferred. Task 4 remains active on
 the same path. Its next safe unit is a separately named prospective current-
 inventory identity lane; a new public body or payload remains a new Tier C
 decision.
+
+The next Task 4 substep is now designed as `MARC1-SA1`. It separates the
+official five-field public source core, optional observed MD5 extensions,
+target-free cohort identity, and later payload SHA-256. A future attestor will
+emit a 21-field aggregate predicate vector and seven domain-separated hashes,
+so schema, count, participant, byte-total, anchor, URL, and checksum drift can
+be distinguished without publishing rows or opening an archive.
+
+Current status is Tier A research only. Twelve invariants pass and every
+dataset-specific, private-path, payload, signal, target, model, score, retry,
+and claim counter is zero. Next gate: green this research, then freeze and
+green a generated-only contract before implementation. No live request is
+open.

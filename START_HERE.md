@@ -1612,3 +1612,12 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   response or payload decision. This is still the same path from trustworthy
   cohort identity to cue-resistant neural evidence to held-out language
   decoding and progressively stronger thought-to-text evidence.
+
+  Read the next same-path design,
+  [MARC1-SA1 source-aware inventory attestation](docs/MARC_1_SOURCE_AWARE_INVENTORY_ATTESTATION_RESEARCH.md).
+  Official Figshare surfaces document a five-field public file core while also
+  showing MD5 fields on some public metadata examples. The design therefore
+  separates public core, optional provenance extensions, target-free cohort
+  identity, and later acquired-byte SHA-256. Its 21 aggregate predicates and
+  seven hashes can localize a future one-shot mismatch without publishing
+  rows. No new dataset response or payload is authorized or accessed.

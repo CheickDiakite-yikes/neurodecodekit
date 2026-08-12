@@ -7251,3 +7251,31 @@ progressively stronger thought-to-text evidence. This is not a pivot.
 Evidence: `docs/MARC_1_PAGINATED_LIVE_METADATA_RESULT.md`,
 `registries/marc1_paginated_live_metadata_failure_result.v0.json`, and
 `tests/test_marc1_paginated_live_metadata_failure_result.py`.
+
+## 0218 - Separate Public Source, Cohort, And Payload Integrity
+
+Research decision: advance `MARC1-SA1` after consumed result `d859509` passed
+both jobs in CI `31612923903`. Use only the committed aggregate result and
+official Figshare documentation; do not request the dataset endpoint again.
+
+Schema decision: require the documented five-field public file core. Treat
+`supplied_md5` and `computed_md5` as known optional extensions that must be
+valid and agree when present. Their absence is unavailable provenance, not a
+public-core schema failure.
+
+Evidence decision: evaluate all safe inventory predicates independently after
+structural and target-firewall gates. Publish only aggregate counts, booleans,
+and domain-separated hashes; keep names, IDs, URLs, checksums, rows, and
+participant-level results private.
+
+Integrity decision: no metadata checksum substitutes for SHA-256 over bytes
+from a later separately authorized acquisition. Metadata attestation and
+cohort selection do not authorize payload.
+
+Path decision: this is the next cohort-identity repair on the unchanged route
+to cue-resistant neural evidence, held-out language decoding, and progressively
+stronger thought-to-text evidence. It is not a pivot.
+
+Evidence: `docs/MARC_1_SOURCE_AWARE_INVENTORY_ATTESTATION_RESEARCH.md`,
+`registries/marc1_source_aware_inventory_attestation_research.v0.json`, and
+`tests/test_marc1_source_aware_inventory_attestation_research.py`.

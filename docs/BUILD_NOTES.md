@@ -8858,3 +8858,39 @@ consumed receipt.
 
 Scientific claim not established: no neural effect, decoding accuracy,
 language decoding, or thought-to-text capability was established.
+
+## 2026-08-12 - MARC1-SA1 Source-Aware Inventory Attestation Research
+
+- Began only after consumed result `d859509` passed Base Python job
+  `94168528552` and Optional Neuro Readers job `94168528522` in CI
+  `31612923903`.
+- Rechecked current official Figshare API, pagination, public-file presenter,
+  and API usage guidance without requesting MARC-1 record `29666735` or any
+  dataset-specific body.
+- Found a source-contract coupling: official surfaces guarantee a five-field
+  public core and inconsistently expose MD5 extensions, while the frozen
+  helper requires exact seven-field equality. This does not identify the
+  consumed failure predicate.
+- Designed a three-rung provenance ladder: public source identity, target-free
+  cohort identity, and later observed payload SHA-256. Provider MD5 is optional
+  provenance and never substitutes for acquired-byte SHA-256.
+- Designed a 21-field aggregate predicate vector and seven domain-separated
+  hashes. A future one-shot result can distinguish safe schema, count,
+  participant, byte-total, anchor, URL, and checksum drift without publishing
+  names, IDs, URLs, checksums, rows, or participant-level outcomes.
+- Defined five refusal routes, four aggregate engineering routes, and one
+  generated route. No route is scientific or authorizes payload.
+- Twelve focused research invariants and all 680 MARC tests pass. Complete
+  dependency-light verification is 2,819 tests/204 skips in 23.971 seconds at
+  219,365,376-byte external peak RSS; isolated optional-neuro verification is
+  2,875 tests/34 skips in 115.768 seconds at 541,999,104 bytes. Dataset-
+  specific requests, private paths, archives, payload, signal, target, model,
+  training, prediction, score, provider-model, hardware, other-project, retry,
+  rerun, and claim operations are zero.
+
+Engineering capability added: the next metadata gate now separates source,
+selection, and byte-integrity evidence while retaining one-shot privacy.
+
+Scientific claim not established: no dataset-specific body or neural/model
+operation occurred, so no neural, language-decoding, or thought-to-text result
+was added.

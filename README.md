@@ -385,6 +385,7 @@ negative result and S25 is never repurposed for calibration.
 | MARC1-LM1 packet-bound decision | Exact 76-byte maintainer approval; one immutable green request; one conditional generated wrapper and one later metadata response; 0 decision-time data/model operations | Request `4d3eb19` passed CI `31603530015`; decision `060a365` passed CI `31604608307` before implementation | Preserves thought-to-text as the objective while binding only the registered metadata scope and refusing to predeclare a scientific outcome |
 | MARC1-LM1 generated/mock implementation | 4/4 transport forms; 36/36 refusals; 20/20 gates; exact 55/45/10 inventory and frozen 12-subject split; 184,466 generated input bytes; 19,030 temporary output bytes | Corrected development `MARC1LM-G1` ran in 0.0303 sec at 43,057,152-byte reported RSS; first push `8f67af2` failed only Linux temp-parent portability and performed zero real operations | Adds a capability-first, target-firewalled, aggregate-safe one-response wrapper on the same path; generated metadata work is not neural, decoding, language, or thought-to-text evidence |
 | MARC1-LM1 consumed live metadata | One 15,652-byte version-3 metadata body; strict JSON parse; `MARC1LM-F04` at the frozen inventory validator; 0 selected subjects and 0 payload bytes | Exact implementation `f9a1ece` passed CI `31611639130` before the sole request; 1.095 sec, 33,996,800-byte peak RSS, 4,207 output bytes; no retry | Proves bounded live fail-closed behavior and invalidates use of the frozen inventory as a payload gate; it does not identify the changed predicate or add neural, language, or thought-to-text evidence |
+| MARC1-SA1 source-aware attestation research | Five-field official public core; two optional MD5 extensions; 21 aggregate predicates; seven domain-separated identity hashes; 0 real operations | Green consumed result `d859509` / CI `31612923903` anchors a Tier A design with 12 invariant tests | Separates source schema, cohort identity, and later byte-level integrity so the next one-shot check can localize drift without weakening privacy or changing the scientific path |
 
 ### Real-Data Scientific Scorecard
 
@@ -1437,6 +1438,14 @@ Read this before interpreting any number in the repository.
   signal, target, model, prediction, and score counters remained zero. The
   consumed lane has no retry. The next gate is a separately named prospective
   current-inventory identity design on the same research path.
+- **MARC1-SA1 source-aware inventory design:** current official Figshare
+  surfaces do not give one stable cross-surface guarantee for MD5 fields. The
+  new architecture treats five public fields as source core, two MD5 fields as
+  validated optional provenance, and acquired-byte SHA-256 as a later payload
+  integrity gate. A 21-field aggregate predicate vector can distinguish schema,
+  count, participant, byte-total, anchor, URL, and checksum classes without
+  publishing rows. This is Tier A design only: zero dataset requests and zero
+  neural or model work.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

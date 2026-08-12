@@ -3911,3 +3911,30 @@ or any participant payload requires a new Tier C decision. The research path
 is unchanged: trustworthy multimodal cohort, cue-resistant neural evidence,
 held-out language decoding, then progressively stronger thought-to-text
 evidence.
+
+## 2026-08-12 MARC1-SA1 Source-Aware Attestation Research Handoff
+
+Consumed result `d859509` passed Base Python job `94168528552` and Optional
+Neuro Readers job `94168528522` in CI `31612923903` before this Tier A work.
+Read `docs/MARC_1_SOURCE_AWARE_INVENTORY_ATTESTATION_RESEARCH.md` and its
+registry and test.
+
+The source pass found that official Figshare surfaces document a five-field
+public file core but show MD5 fields on some public full-metadata examples.
+The current frozen helper instead requires exact seven-field set equality.
+This is a proven contract coupling, not proof that MD5 shape caused the
+consumed `MARC1LM-F04` result.
+
+`MARC1-SA1` separates public source identity, target-free cohort identity, and
+later acquired-byte integrity. It proposes 21 independently evaluated
+aggregate predicates and seven domain-separated hashes. Names, IDs, URLs,
+checksums, rows, and participant-level outcomes remain private.
+
+Immediate next gate: commit, push, and green this exact research. Then freeze
+a generated-only, standard-library preregistration. No URL opener, execute
+mode, new metadata response, private path, archive, payload, model, or score is
+authorized by this research.
+
+Twelve focused, 680 MARC, 2,819 dependency-light, and 2,875 isolated optional-
+neuro tests pass. The complete suites retain one-thread operation and add 12
+tests without changing skip counts.

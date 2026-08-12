@@ -1166,6 +1166,20 @@ decision. This remains the same path: trustworthy cohort, cue-resistant neural
 positive control, held-out language decoding, then progressively stronger
 thought-to-text evidence. There is no pivot.
 
+Read `docs/MARC_1_SOURCE_AWARE_INVENTORY_ATTESTATION_RESEARCH.md` and
+`registries/marc1_source_aware_inventory_attestation_research.v0.json`.
+`MARC1-SA1` separates the five-field officially documented public file core,
+optional observed MD5 extensions, target-free cohort identity, and later
+observed payload SHA-256. It proposes an aggregate 21-field predicate vector
+and seven domain-separated hashes so one future response can localize safe
+schema or inventory drift without publishing rows.
+
+This Tier A research made zero dataset-specific, private-path, archive,
+payload, signal, target, model, score, retry, or claim operations. Commit,
+push, and green this exact research before freezing a generated-only contract.
+Do not implement a URL opener or execute mode, request another public body, or
+touch a payload from the research record.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in
