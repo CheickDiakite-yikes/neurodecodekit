@@ -7226,3 +7226,28 @@ Evidence decision: record zero registered-path, network, source, payload,
 signal, target, model, prediction, score, retry, rerun, and claim operations
 for the failed push. Requalify generated behavior and require a new commit and
 both green jobs before the one live request.
+
+## 0217 - Consume MARC1-LM1 At Frozen Inventory Validation
+
+Evidence-order decision: treat corrected implementation `f9a1ece` as eligible
+only because Base Python job `94164152160` and Optional Neuro Readers job
+`94164152302` were green in CI `31611639130` before the sole request.
+
+Result decision: record one accepted and parsed 15,652-byte metadata body and
+route `MARC1LM-F04` with safe reason `frozen inventory validation refused`.
+Do not narrow that aggregate failure to a row-count, filename, ID, URL,
+checksum, byte-total, or schema change because the exact predicate is not
+available on the public evidence surface.
+
+Disposition decision: consume and park `MARC1-LM1` without retry, rerun,
+resume, private-manifest inspection, parser amendment, participant archive, or
+payload. Specify any current-inventory recovery prospectively under a new lane
+and a new Tier C decision before another public response.
+
+Path decision: cohort identity remains the current gate on the same route to a
+cue-resistant neural positive control, held-out language decoding, and
+progressively stronger thought-to-text evidence. This is not a pivot.
+
+Evidence: `docs/MARC_1_PAGINATED_LIVE_METADATA_RESULT.md`,
+`registries/marc1_paginated_live_metadata_failure_result.v0.json`, and
+`tests/test_marc1_paginated_live_metadata_failure_result.py`.

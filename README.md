@@ -384,6 +384,7 @@ negative result and S25 is never repurposed for calibration.
 | MARC1-LM1 paginated live-metadata request | One future exact `page=1&page_size=1000` GET; one body capped at 2 MiB; one 55-row target-free inventory; 0 payload bytes; all current permissions false | Green capability result `ca4679a` / CI `31601329375` precedes the packet; 13 focused, 612 MARC, 2,751 base, and 2,822 optional tests pass locally | Proposes one additive wrapper and one no-retry metadata check on the same thought-to-text path; the packet itself performs no operation and establishes no scientific result |
 | MARC1-LM1 packet-bound decision | Exact 76-byte maintainer approval; one immutable green request; one conditional generated wrapper and one later metadata response; 0 decision-time data/model operations | Request `4d3eb19` passed CI `31603530015`; decision `060a365` passed CI `31604608307` before implementation | Preserves thought-to-text as the objective while binding only the registered metadata scope and refusing to predeclare a scientific outcome |
 | MARC1-LM1 generated/mock implementation | 4/4 transport forms; 36/36 refusals; 20/20 gates; exact 55/45/10 inventory and frozen 12-subject split; 184,466 generated input bytes; 19,030 temporary output bytes | Corrected development `MARC1LM-G1` ran in 0.0303 sec at 43,057,152-byte reported RSS; first push `8f67af2` failed only Linux temp-parent portability and performed zero real operations | Adds a capability-first, target-firewalled, aggregate-safe one-response wrapper on the same path; generated metadata work is not neural, decoding, language, or thought-to-text evidence |
+| MARC1-LM1 consumed live metadata | One 15,652-byte version-3 metadata body; strict JSON parse; `MARC1LM-F04` at the frozen inventory validator; 0 selected subjects and 0 payload bytes | Exact implementation `f9a1ece` passed CI `31611639130` before the sole request; 1.095 sec, 33,996,800-byte peak RSS, 4,207 output bytes; no retry | Proves bounded live fail-closed behavior and invalidates use of the frozen inventory as a payload gate; it does not identify the changed predicate or add neural, language, or thought-to-text evidence |
 
 ### Real-Data Scientific Scorecard
 
@@ -1427,6 +1428,15 @@ Read this before interpreting any number in the repository.
   First push `8f67af2` failed both CI jobs only because generated tests used a
   macOS-only temporary parent; the correction uses the platform's canonical
   real temporary parent and leaves the registered execution path unchanged.
+- **MARC1-LM1 consumed live metadata result:** corrected implementation
+  `f9a1ece` passed Base Python job `94164152160` and Optional Neuro Readers job
+  `94164152302` in CI `31611639130` before the sole request. One 15,652-byte
+  metadata body passed transport and strict JSON parsing, then the frozen
+  inventory validator refused at `MARC1LM-F04`. The actual failed predicate is
+  unavailable; no cohort was selected and participant archive, payload,
+  signal, target, model, prediction, and score counters remained zero. The
+  consumed lane has no retry. The next gate is a separately named prospective
+  current-inventory identity design on the same research path.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

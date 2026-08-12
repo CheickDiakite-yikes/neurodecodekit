@@ -1692,8 +1692,16 @@ used macOS `/private/tmp`, absent on Linux. The portability correction uses the
 canonical real system temporary parent for generated/tests only. No registered
 path or real operation occurred, and the real one-shot path is unchanged.
 
-Next gate: commit, push, and green the exact implementation. Then spend the
-single registered metadata invocation. A post-marker failure consumes and
-parks; success proves only live inventory compatibility and stops before every
-participant ZIP. Task 4 remains incomplete on the same trustworthy-cohort to
-cue-resistant-neural-positive-control to held-out-language path.
+Corrected implementation `f9a1ece` passed both required jobs in CI
+`31611639130` before the single registered invocation. One 15,652-byte body
+passed bounded transport and strict JSON parsing, then the frozen inventory
+validator refused at `MARC1LM-F04`. Runtime was 1.094504 seconds at 33,996,800-
+byte peak RSS with 4,207 output bytes. No cohort was selected; participant
+archive, payload, signal, target, model, prediction, and score operations were
+zero.
+
+`MARC1-LM1` is consumed with no retry or rerun. The exact failed inventory
+predicate is unavailable and must not be inferred. Task 4 remains active on
+the same path. Its next safe unit is a separately named prospective current-
+inventory identity lane; a new public body or payload remains a new Tier C
+decision.

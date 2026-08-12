@@ -1146,13 +1146,25 @@ generated tests hard-coded macOS `/private/tmp`, absent on Linux. No real
 operation occurred. The correction uses the canonical real system temporary
 parent only for generated/tests; the registered one-shot path is unchanged.
 
-Commit, push, and obtain both green CI jobs for this exact implementation
-before touching the registered output path or contacting Figshare. Only then
-run the one registered metadata invocation. Any post-marker outcome consumes;
-there is no retry, rerun, resume, substitution, fallback, second page, or
-amendment. Success stops before every participant ZIP and neural operation.
-The user's scientific aspiration preserves the destination but does not
-authorize payload, neural, model, score, or claim expansion under this lane.
+Corrected implementation `f9a1eceb8ee432e57e19c6af2db355aadd53b1e3`
+passed Base Python job `94164152160` and Optional Neuro Readers job
+`94164152302` in CI `31611639130` before the sole request. Read
+`docs/MARC_1_PAGINATED_LIVE_METADATA_RESULT.md` and
+`registries/marc1_paginated_live_metadata_failure_result.v0.json`. One exact
+Figshare request returned one 15,652-byte body. Transport and strict JSON-list
+parsing passed, then the frozen inventory validator refused at
+`MARC1LM-F04`. The aggregate receipt does not expose which inventory predicate
+failed. No cohort was selected, and participant archive, payload, signal,
+target, model, prediction, score, provider-model, hardware, other-project,
+retry, rerun, and claim counters remained zero.
+
+`MARC1-LM1` is consumed. Do not retry, rerun, resume, amend its parser, inspect
+its private manifest, probe its registered root, or request a participant ZIP.
+The next Tier A work is a separately named prospective current-inventory
+identity design. Any new public metadata response or payload is a new Tier C
+decision. This remains the same path: trustworthy cohort, cue-resistant neural
+positive control, held-out language decoding, then progressively stronger
+thought-to-text evidence. There is no pivot.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

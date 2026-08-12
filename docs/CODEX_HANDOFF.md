@@ -3887,3 +3887,27 @@ Immediate next gate: commit, push, and obtain both green CI jobs for this exact
 implementation. Only then run the one registered metadata invocation. Any
 post-marker failure consumes and parks; success stops before every participant
 ZIP and adds no scientific result.
+
+## 2026-08-12 MARC1-LM1 Consumed Live-Metadata Result Handoff
+
+Corrected implementation `f9a1eceb8ee432e57e19c6af2db355aadd53b1e3`
+passed Base Python job `94164152160` and Optional Neuro Readers job
+`94164152302` in CI `31611639130` before the one registered request.
+
+The request accepted and parsed one 15,652-byte Figshare metadata body, then
+the frozen inventory validator refused at `MARC1LM-F04`. Runtime was
+1.0945040830411017 seconds at 33,996,800-byte peak RSS; combined output was
+4,207 bytes. Only the aggregate report was inspected once. The private
+manifest was not opened after execution. No cohort, participant archive,
+payload, signal, target, model, prediction, score, or claim was reached.
+
+The exact failed inventory predicate is unavailable. Do not infer row-count,
+filename, ID, URL, checksum, byte-total, or schema drift from the response size
+or broad route. `MARC1-LM1` is consumed with no retry or rerun.
+
+Immediate next safe task: specify a separately named prospective current-
+inventory identity lane using only the aggregate result. Another public body
+or any participant payload requires a new Tier C decision. The research path
+is unchanged: trustworthy multimodal cohort, cue-resistant neural evidence,
+held-out language decoding, then progressively stronger thought-to-text
+evidence.

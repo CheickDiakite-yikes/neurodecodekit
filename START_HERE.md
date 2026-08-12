@@ -1597,3 +1597,18 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   parks, and success stops before payload. Thought-to-text remains the
   objective, not a predeclared outcome or permission to skip the controlled
   neural and held-out language gates.
+
+  Corrected implementation `f9a1ece` then passed Base Python job
+  `94164152160` and Optional Neuro Readers job `94164152302` in CI
+  `31611639130` before the sole registered metadata request. Read the
+  [consumed result](docs/MARC_1_PAGINATED_LIVE_METADATA_RESULT.md). One
+  15,652-byte body passed bounded transport and strict JSON parsing, then the
+  frozen inventory validator refused at `MARC1LM-F04`. The aggregate receipt
+  does not identify the failed inventory predicate. No cohort, participant
+  archive, EEG payload, target, model, prediction, or score was reached.
+
+  `MARC1-LM1` is consumed with no retry or rerun. Next: specify a separately
+  named prospective current-inventory identity lane before any new public
+  response or payload decision. This is still the same path from trustworthy
+  cohort identity to cue-resistant neural evidence to held-out language
+  decoding and progressively stronger thought-to-text evidence.

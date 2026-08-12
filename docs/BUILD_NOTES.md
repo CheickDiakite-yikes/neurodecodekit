@@ -8820,3 +8820,41 @@ inventory and frozen cohort with deterministic aggregate receipts.
 Scientific claim not established: this generated/mock implementation contains
 no live metadata, neural signal, target, prediction, decoding score, language
 result, or thought-to-text evidence.
+
+## 2026-08-12 - MARC1-LM1 Consumed Live-Metadata Result
+
+- Corrected implementation `f9a1ece` passed Base Python job `94164152160` and
+  Optional Neuro Readers job `94164152302` in CI `31611639130` before the one
+  registered request.
+- The pre-consumption machine gate passed with 24,907,935,744 free bytes,
+  0.421997 normalized one-minute load, one CPU thread, one worker, and one
+  numerical job.
+- Exactly one Figshare response was opened and read once. Its 15,652-byte body
+  passed bounded transport and strict JSON-list parsing. One metadata parse
+  reached the frozen inventory validator and refused at `MARC1LM-F04`.
+- The public aggregate does not expose the exact failed inventory predicate,
+  actual row count, raw rows, names, IDs, URLs, checksums, or byte totals. No
+  narrower cause is inferred.
+- Runtime was 1.0945040830411017 seconds at 33,996,800-byte peak RSS. Public
+  output was 3,948 bytes and combined incremental output was 4,207 bytes.
+- Participant archive requests, payload bytes, selections, signal reads,
+  target reads, training, model runs, predictions, scores, provider-model
+  calls, hardware operations, other-project operations, claim upgrades,
+  retries, and reruns were zero.
+- Only the aggregate result was inspected once. The private manifest was not
+  opened after execution, and the isolated consumed root was not committed,
+  deleted, or renamed.
+- Ten focused result tests, all 668 MARC tests, 2,807 dependency-light tests
+  with 204 expected skips, and 2,863 isolated optional-neuro tests with 34
+  expected skips pass. Complete-suite runtimes were 23.265 and 73.726 seconds;
+  external peak RSS was 262,340,608 and 464,617,472 bytes.
+- `MARC1-LM1` is consumed with no retry or rerun. The next safe work is a new
+  prospective current-inventory identity lane. Any public response or payload
+  is a new Tier C event.
+
+Engineering capability added: one bounded live metadata body was accepted and
+parsed before strict inventory incompatibility failed closed into an aggregate
+consumed receipt.
+
+Scientific claim not established: no neural effect, decoding accuracy,
+language decoding, or thought-to-text capability was established.
