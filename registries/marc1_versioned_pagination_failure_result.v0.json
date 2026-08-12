@@ -1,0 +1,198 @@
+{
+  "schema_name": "neurodecodekit.marc1_versioned_pagination_failure_result",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC1-PG1",
+  "result_id": "MARC1-PG1-generated-closeout-output-preflight-failure-v0",
+  "executed_at_local": "2026-08-12",
+  "status": "consumed_at_MARC1PG_F07_output_parent_symlink_no_retry_or_rerun",
+  "proof_posture": "generated_process_failure_no_source_or_scientific_value",
+  "artifact_bindings": [
+    {
+      "path": "docs/MARC_1_VERSIONED_PAGINATION_GENERATED_RESULT.md",
+      "bytes": 5682,
+      "sha256": "e56d6f805ecfddb1490210ef7f1609f389d6bde081e9917a9b77b493d817e60e"
+    },
+    {
+      "path": "registries/marc1_versioned_pagination_implementation.v0.json",
+      "bytes": 7254,
+      "sha256": "f2c40d2b059a8a3761230c9c1aa6de3d60bcea395f0d75fe9047e277645f227d"
+    },
+    {
+      "path": "registries/marc1_versioned_pagination_recovery_contract.v0.json",
+      "bytes": 11283,
+      "sha256": "22f7e3ba36f0c92af600d5a00a90581c44338609de19105cf6be374b5fad7a9b"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/marc1_versioned_pagination.py",
+      "bytes": 63368,
+      "sha256": "3dc5f4fdf5792040f153797d708cf27cd8ece8e4dc40b3a0eeaba86071724228"
+    }
+  ],
+  "green_implementation_proof": {
+    "commit": "2c98a2ad4b3972de5c2a398b85c0cf8735db89d4",
+    "CI_run_id": 31593790492,
+    "base_python_job_id": 94104455930,
+    "base_python_conclusion": "success",
+    "optional_neuro_job_id": 94104455857,
+    "optional_neuro_conclusion": "success",
+    "both_required_jobs_green_before_invocation": true
+  },
+  "green_contract_proof": {
+    "commit": "ccb3ba8a839b3e6fc6844ad867ab0d5d295e20fb",
+    "CI_run_id": 31591853349,
+    "both_required_jobs_green_before_implementation": true
+  },
+  "registered_invocation": {
+    "registered_runs": 1,
+    "invocations_attempted": 1,
+    "successful_closeouts": 0,
+    "retries_after_refusal": 0,
+    "reruns_after_refusal": 0,
+    "route": "MARC1PG-F07",
+    "safe_reason": "output parent is a symlink",
+    "requested_output_path": "/tmp/neurodecodekit-marc1pg-registered-closeout-20260812",
+    "requested_output_parent": "/tmp",
+    "observed_parent_kind": "symbolic_link",
+    "observed_parent_link_text": "private/tmp",
+    "resolved_parent_content_or_child_traversal": false,
+    "requested_output_path_created": false,
+    "generated_output_files_created": 0,
+    "public_report_inspections": 0,
+    "aggregate_success_route_reached": false,
+    "contract_consumed": true
+  },
+  "pre_refusal_generated_operations": {
+    "registered_contract_loads": 1,
+    "green_constant_checks": 1,
+    "canonical_requests_constructed": 1,
+    "canonical_request_bytes": 154,
+    "Freewill_inventory_rows_constructed": 1227,
+    "Wrist_inventory_rows_constructed": 55,
+    "accepted_mock_cases_constructed_and_validated": 4,
+    "accepted_case_target_free_selections": 4,
+    "accepted_case_selection_hash_equality_checked": true,
+    "generated_private_manifest_rows_constructed_in_memory": 300,
+    "generated_private_manifest_written": false,
+    "refusal_matrix_cases_run": 0,
+    "public_report_assembled": false,
+    "output_hashes_available": false
+  },
+  "failure_ordering": {
+    "output_preflight_before_contract_load": false,
+    "output_preflight_before_fixture_construction": false,
+    "output_preflight_before_accepted_case_validation": false,
+    "output_preflight_before_refusal_matrix": true,
+    "output_preflight_before_file_write": true,
+    "eligible_as_unspent_preflight_under_existing_precedent": false,
+    "reason": "Generated inventories selections and a private manifest were already constructed in memory before the output-parent refusal."
+  },
+  "resources": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "external_wall_seconds": 0.17,
+    "external_maximum_RSS_bytes": 30064640,
+    "generated_output_bytes": 0,
+    "incremental_disk_bytes": 0,
+    "network_bytes": 0,
+    "real_or_private_input_bytes": 0,
+    "internal_runtime_seconds": null,
+    "generated_input_bytes": null,
+    "unavailable_measurement_reason": "Refusal occurred before the implementation computed report measurements."
+  },
+  "access_counters": {
+    "dataset_specific_Figshare_requests": 0,
+    "dataset_specific_response_bytes": 0,
+    "private_Freewill_manifest_operations": 0,
+    "consumed_private_root_operations": 0,
+    "payload_requests": 0,
+    "payload_bytes": 0,
+    "signal_sample_reads": 0,
+    "target_or_label_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "scoring_events": 0,
+    "provider_or_language_model_calls": 0,
+    "hardware_operations": 0,
+    "operations_on_other_projects": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "acceptance_gate_summary": {
+    "registered_acceptance_gates": 18,
+    "aggregate_acceptance_decision_computed": false,
+    "MARC1PG_G1_reached": false,
+    "all_41_refusals_run": false,
+    "deterministic_output_replay_run": false,
+    "output_path_safety_refusal_passed": true,
+    "closeout_passed": false
+  },
+  "consumption_and_authorization": {
+    "MARC1_PG1_consumed": true,
+    "retry_or_rerun_authorized_now": false,
+    "corrected_path_invocation_authorized_now": false,
+    "post_result_implementation_amendment_authorized_now": false,
+    "live_metadata_packet_eligible_now": false,
+    "dataset_specific_response_authorized_now": false,
+    "payload_acquisition_authorized_now": false,
+    "signal_target_model_or_score_operation_authorized_now": false,
+    "scientific_claim_upgrade_authorized_now": false
+  },
+  "prospective_recovery_requirements": {
+    "separately_named_lane_required": true,
+    "new_frozen_generated_contract_required": true,
+    "output_path_preflight_must_precede_contract_and_fixture_operations": true,
+    "real_non_symlink_parent_must_be_bound": true,
+    "new_implementation_must_be_remotely_green": true,
+    "new_registered_generated_run_required": true,
+    "future_live_response_remains_separate_Tier_C": true
+  },
+  "closeout_verification": {
+    "focused_pagination_tests": 39,
+    "final_MARC1_tests": 528,
+    "dependency_light_tests": 2667,
+    "dependency_light_expected_skips": 204,
+    "dependency_light_runtime_seconds": 21.601,
+    "dependency_light_external_peak_RSS_bytes": 253607936,
+    "optional_neuro_tests": 2738,
+    "optional_neuro_expected_skips": 35,
+    "optional_neuro_runtime_seconds": 59.915,
+    "optional_neuro_external_peak_RSS_bytes": 800735232,
+    "tests_added_over_green_implementation": 10,
+    "additional_skips": 0,
+    "ruff_passed": true,
+    "compile_passed": true,
+    "registry_JSON_files_parsed": 188,
+    "artifact_hashes_passed": true,
+    "git_diff_check_passed": true,
+    "qualify_command_rerun_during_verification": false,
+    "new_generated_fixture_runs_during_verification": 0
+  },
+  "unavailable_fields": [
+    "successful_generated_closeout_report",
+    "generated_closeout_output_hashes",
+    "generated_closeout_internal_runtime",
+    "generated_closeout_input_bytes",
+    "current_live_version_inventory",
+    "actual_consumed_live_row_count",
+    "neural_signal",
+    "target_or_label",
+    "model_prediction",
+    "scientific_score",
+    "end_to_end_latency"
+  ],
+  "warnings": [
+    "The registered generated closeout was consumed by a path-preflight failure after generated fixture operations had begun.",
+    "Do not retry with a corrected output path under MARC1-PG1.",
+    "No output file or directory was created.",
+    "The live pagination hypothesis remains untested.",
+    "A generated or metadata result cannot establish a neural or language-decoding claim."
+  ],
+  "disposition": {
+    "same_thought_to_text_path": true,
+    "is_pivot": false,
+    "route": "park_MARC1_PG1_and_design_separate_generated_output_preflight_recovery",
+    "engineering_capability_added": "The strict writer demonstrated that it refuses a symlink output parent without creating files or touching any real source.",
+    "scientific_claim_not_established": "The pagination hypothesis was not tested against a live response and no neural signal target prediction score language decoding or thought-to-text result was produced."
+  }
+}

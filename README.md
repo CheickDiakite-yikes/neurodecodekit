@@ -41,7 +41,7 @@ irreversible Tier C events.
 | Trial identity | All 66 S21 session-1 trials and all 63 performed session-2 trials reconcile to MAT provenance; empty session-2 slots remain explicit | The real MEG evidence has exact trial identity instead of fuzzy sentence matching |
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |
 | IACKD source compatibility | H1 found 96 29-row and 32 31-row headers. H2 then parsed all 316 public BIDS metadata bodies and confirmed one 26-channel predictive EEG core, 1024 Hz sampling, average reference, and complete central/occipital geometry in all 30 groups | The exact-36 reader assumption was wrong, but H2 still routed `IACKDR-R1`: HEOG, VEOG, and Trigger are source-typed `MISC`, exposing a frozen control-taxonomy bug before any EEG sample, event, target, model, or score was accessed |
-| MARC-1 positive-control preparation | The standards-aligned `MARC1-HT1A` wrapper accepted one live 2,917-byte uncoded metadata body, then parked on the frozen 55-row identity. Official-source research identified omitted pagination as the leading hypothesis, and the new generated-only `MARC1-PG1` harness passes 4/4 accepted cases, 41/41 refusals, and 18/18 gates for exact `page=1&page_size=1000` replay | The actual consumed rows/count were not retained, so pagination is not yet proven against the live source. No participant payload, signal, target, model, score, or scientific claim exists from this lane. This is a confound-control prerequisite on the same path to cue-resistant neural evidence and held-out language decoding, not a pivot |
+| MARC-1 positive-control preparation | The development harness passed exact `page=1&page_size=1000` replay, but its one registered generated closeout consumed at `MARC1PG-F07`: `/tmp` was a symlink parent, after four generated accepted cases had already run in memory | Zero files, network bytes, participant payloads, signals, targets, models, or scores were produced. Pagination remains untested against the live source, and a separately frozen output-preflight recovery is required. This is the same confound-control path toward cue-resistant neural evidence and held-out language decoding, not a pivot |
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
 | Full-path causality gate | Loop 25 v1 passed a dedicated causal anti-alias audit, 65,537 response points, 23 alias probes, 168 schedule checks, 240 resume checks, and 72 future-mutation controls across 24 target-free items | The exact 1000-to-100 Hz path is mechanically causal with zero right context; this is synthetic mechanics evidence, not proof that neural information survives |
 | Consumed S21 validation | The registered 2,908-parameter candidate reached macro CER `0.938177`; the train-only no-signal prior reached `0.751235`, so the candidate was worse by `0.186942` | Loop 26 is parked after one consumed six-target event; this is a clear negative result, not neural advantage |
@@ -376,7 +376,7 @@ negative result and S25 is never repurposed for calibration.
 | MARC1-HT1 registered generated closeout | 923,052 generated input bytes; 182,681 temporary output bytes; 4/4 forms; 20/20 refusals; 16/16 gates; 0 real/network bytes | Exact implementation `b2cb48c` passed CI `31583931303` before one 0.112-sec closeout at 33.1 MB external peak RSS; consumed with no rerun | Confirms the repaired transport/selector/privacy stack end to end on fixtures; a new live attempt still needs a separate Tier C sequence and no scientific claim changed |
 | MARC1-HT1A live-recovery request | One future 418,755-byte sealed-manifest read; one future Wrist body capped at 2 MiB; one new isolated root; 0 payload bytes; all current permissions false | Binds green result `5344d73` / CI `31584662864`, the frozen selector, and the consumed `MARC1PS-F03` boundary; requires its own green CI before any decision | Proposes one additive wrapper and one metadata-only attempt on the same thought-to-text path; the packet itself performs no operation and establishes no scientific result |
 | MARC1-HT1A packet-bound decision | Exact 76-byte maintainer message; one green packet; one future generated/mock wrapper; one future metadata-only attempt; 0 current data/model operations | Request `27f39ae` passed CI `31586256906`; decision records the fresh approval but is ineffective until its own CI is green | Preserves thought-to-text as the objective without predeclaring an outcome or expanding the zero-payload metadata scope |
-| MARC1-PG1 generated pagination implementation | 1,019,776 generated input bytes; 4/4 accepted cases; 41/41 refusals; 18/18 gates; exact 55-row and 12+12 selector replay; 183,355 temporary output bytes; 0 real/network bytes | Green contract `ccb3ba8` / CI `31591853349` preceded development `MARC1PG-G1`, which passed in 0.089 sec at 40.1 MB reported RSS; implementation CI and the registered generated closeout remain next | Proves the explicit-page request, strict semantic identity, target firewall, private/public separation, and selector compose deterministically on fixtures; it adds no neural or language evidence |
+| MARC1-PG1 generated pagination lane | Development: 4/4 accepted cases, 41/41 refusals, 18/18 gates. Registered closeout: route `MARC1PG-F07`, 0 output bytes, 0 real/network bytes | Exact implementation `2c98a2a` passed CI `31593790492`; the sole closeout then refused a symlink output parent in 0.17 sec at 30,064,640-byte external peak RSS and is consumed without retry | Preserves a real process defect: output preflight happened after fixture construction. A new generated recovery must move it first; no live pagination or scientific result exists |
 
 ### Real-Data Scientific Scorecard
 
@@ -1337,11 +1337,19 @@ Read this before interpreting any number in the repository.
   55-row identity and 12+12 target-free selection from 1,019,776 generated
   input bytes in 0.089257 seconds at 40,091,648-byte reported peak RSS. Its
   183,355 temporary output bytes were inspected, hash-bound, and removed.
-  The exact implementation must still be committed, pushed, and remotely green
-  before one registered generated closeout. No live request, payload, signal,
-  target, model, score, or claim operation is open. This metadata repair is on
-  the same path to cue-resistant neural evidence and held-out language
-  decoding; it is not a pivot.
+  Exact implementation `2c98a2a` passed Base Python job `94104455930` and
+  Optional Neuro Readers job `94104455857` in CI `31593790492` before the one
+  [registered closeout](docs/MARC_1_VERSIONED_PAGINATION_GENERATED_RESULT.md).
+  That invocation consumed at `MARC1PG-F07` because `/tmp` was a symlink
+  output parent. Contract loading, both generated inventories, four accepted
+  cases, and target-free selection had already run in memory, so this is not
+  an unspent preflight and no corrected invocation is allowed. It created zero
+  files and used zero real/private or network bytes.
+  A separately named generated recovery must move output preflight before all
+  fixture operations and become green before another registered generated run.
+  No live request, payload, signal, target, model, score, or claim operation is
+  open. This remains the same path to cue-resistant neural evidence and held-
+  out language decoding; it is not a pivot.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

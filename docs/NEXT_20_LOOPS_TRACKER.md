@@ -1567,8 +1567,17 @@ bytes, 183,355 temporary output bytes, 0.089257 seconds, and 40,091,648-byte
 reported peak RSS; all temporary outputs were removed and every real/private,
 payload, signal, target, model, score, and claim counter remained zero.
 
-Next gate: commit, push, and green the exact implementation, then perform one
-registered generated closeout. Only a separately green result may precede a
-new all-false Tier C live-pagination packet. Task 4 remains incomplete and on
-the same control-attribution to held-out-language path; no scientific result
-was added.
+Exact implementation `2c98a2a` passed both required jobs in CI `31593790492`
+before the sole registered closeout. That invocation consumed at
+`MARC1PG-F07`: `/tmp` was a symlink output parent, and the writer refused it
+after both generated inventories, four accepted selections, and the generated
+private manifest had already been constructed in memory. Zero output,
+network, or real/private bytes were produced. No corrected-path invocation,
+retry, or rerun is open.
+
+Next gate: green the aggregate failure result, then freeze a separately named
+generated output-preflight recovery that validates a real non-symlink parent
+before all contract and fixture operations. Only its independently green
+contract, implementation, and closeout could support a later all-false Tier C
+packet. Task 4 remains incomplete on the same control-attribution to held-out-
+language path; no scientific result was added.

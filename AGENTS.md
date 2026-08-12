@@ -984,12 +984,24 @@ identity, and exact 12+12 target-free selection replay. It processed 1,019,776
 generated input bytes in 0.08925708406604826 seconds at 40,091,648-byte
 reported peak RSS and removed its 183,355 temporary output bytes.
 
-Commit, push, and obtain both green CI jobs for this exact implementation
-before one registered generated closeout. Do not make a dataset-specific
-request, open any private root, acquire a payload, or access a signal, target,
-model, prediction, or score. A future live pagination check remains a new Tier
-C event. This metadata repair remains on the same thought-to-text path and has
-no scientific claim value.
+Exact implementation `2c98a2ad4b3972de5c2a398b85c0cf8735db89d4`
+passed Base Python job `94104455930` and Optional Neuro Readers job
+`94104455857` in CI `31593790492` before the one registered generated
+closeout. Read `docs/MARC_1_VERSIONED_PAGINATION_GENERATED_RESULT.md` and
+`registries/marc1_versioned_pagination_failure_result.v0.json`. The invocation
+consumed at `MARC1PG-F07` because `/tmp` was a symlink output parent. Contract
+and fixture work, all four accepted cases and selections, and in-memory private
+manifest construction had already occurred, so this is not an unspent
+preflight. No output was created and no corrected invocation is allowed.
+
+Do not rerun MARC1-PG1, substitute `/private/tmp`, modify its implementation,
+prepare a live packet, make a dataset-specific request, open any private root,
+or access a payload, signal, target, model, prediction, or score. The next safe
+work is a separately named generated output-preflight recovery frozen before
+implementation. It must validate a real non-symlink parent before contract or
+fixture operations. A future live pagination check remains a new Tier C event.
+This process failure remains on the same thought-to-text path and has no
+scientific claim value.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

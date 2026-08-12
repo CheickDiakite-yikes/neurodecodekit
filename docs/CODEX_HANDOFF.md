@@ -3691,3 +3691,31 @@ implementation, and require both CI jobs green. Only then run the one
 registered generated closeout. A new live metadata response remains a later
 all-false Tier C packet and fresh decision; payload acquisition remains closed.
 This is the same thought-to-text path, not a pivot.
+
+## 2026-08-12 MARC1-PG1 Consumed Closeout Handoff
+
+Exact implementation `2c98a2ad4b3972de5c2a398b85c0cf8735db89d4`
+passed Base Python job `94104455930` and Optional Neuro Readers job
+`94104455857` in CI `31593790492` before the one registered generated
+invocation. Read `docs/MARC_1_VERSIONED_PAGINATION_GENERATED_RESULT.md`,
+`registries/marc1_versioned_pagination_failure_result.v0.json`, and its
+matching result test.
+
+The command requested
+`/tmp/neurodecodekit-marc1pg-registered-closeout-20260812`; `/tmp` is a symlink
+to `private/tmp` on this host. The strict writer refused `MARC1PG-F07` with
+`output parent is a symlink`. Contract loading, both generated inventories,
+four accepted cases and selections, selection-hash equality, and generated
+private-manifest construction had already run in memory. The registered run is
+therefore consumed with no retry or corrected-path invocation.
+
+No output path or file was created. External wall time was 0.17 seconds and
+external peak RSS was 30,064,640 bytes. Generated output, incremental disk,
+network, real/private input, payload, signal, target, model, score, and claim
+bytes or operations were zero.
+
+Immediate next gate: verify, commit, push, and green this aggregate failure
+result. Then specify a separately named generated recovery whose path preflight
+precedes contract and fixture work. Do not rerun MARC1-PG1, use `/private/tmp`
+as a substitution, prepare a live packet, or access any payload. This remains
+the same thought-to-text path, not a pivot, and no scientific result changed.

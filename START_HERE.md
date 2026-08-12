@@ -1482,9 +1482,21 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   in 0.089257 seconds at 40,091,648-byte reported peak RSS and removed all
   183,355 temporary output bytes.
 
-  The next gate is to commit, push, and green this exact implementation, then
-  run one registered generated closeout. A new dataset-specific response still
-  requires a separate Tier C packet and decision; payload, signal, target,
-  model, and score work remains closed. MARC1-PG1 is a metadata prerequisite
-  on the same cue-resistance to neural-positive-control to held-out-language
-  path, not a pivot, and adds no scientific evidence.
+  Exact implementation `2c98a2ad4b3972de5c2a398b85c0cf8735db89d4`
+  then passed Base Python job `94104455930` and Optional Neuro Readers job
+  `94104455857` in CI `31593790492` before the one
+  [registered generated closeout](docs/MARC_1_VERSIONED_PAGINATION_GENERATED_RESULT.md).
+  It consumed at `MARC1PG-F07` because its requested output parent `/tmp` is a
+  symlink on macOS. The implementation had already loaded the contract, built
+  both generated inventories, completed four accepted cases and selections,
+  and constructed the generated private manifest in memory. No retry or
+  corrected-path invocation is available.
+
+  The refusal created zero files and used zero real/private or network bytes.
+  The next prospective gate is a separately named generated recovery that
+  moves output-path preflight ahead of every contract and fixture operation.
+  Only its own frozen contract, green implementation, and registered result
+  could precede a later all-false Tier C packet. Payload, signal, target, model,
+  and score work remains closed. MARC1-PG1 is consumed on the same cue-
+  resistance to neural-positive-control to held-out-language path, not a
+  pivot, and adds no scientific evidence.

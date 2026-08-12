@@ -8536,3 +8536,43 @@ compose deterministically with the frozen target-free cohort selector.
 
 Scientific claim not established: generated metadata qualification provides
 no human neural, language-decoding, or thought-to-text evidence.
+
+## 2026-08-12 - MARC1-PG1 Consumed Generated Closeout Failure
+
+- Exact implementation `2c98a2ad4b3972de5c2a398b85c0cf8735db89d4`
+  passed Base Python job `94104455930` and Optional Neuro Readers job
+  `94104455857` in CI `31593790492` before the registered invocation.
+- The invocation requested
+  `/tmp/neurodecodekit-marc1pg-registered-closeout-20260812`. macOS exposes
+  `/tmp` as a symlink to `private/tmp`, so the strict output writer refused at
+  `MARC1PG-F07` with `output parent is a symlink`.
+- Source-order review confirms contract loading, the 1,227-row and 55-row
+  generated inventories, four accepted cases and selections, selection-hash
+  equality, and the 300-row generated private manifest construction occurred
+  in memory before output preflight. The 41-case refusal matrix did not run.
+- The one registered run is consumed with zero retry or rerun. No corrected
+  `/private/tmp` invocation, implementation amendment, or direct live packet is
+  eligible under MARC1-PG1.
+- External wall time was 0.17 seconds and external peak RSS was 30,064,640
+  bytes. The refused path remained absent; generated output, incremental disk,
+  network, and real/private input bytes were all zero.
+- Ten focused result invariants preserve the green proof, exact path refusal,
+  source ordering, partial operation ledger, zero access counters, consumption,
+  recovery boundary, and claim ceiling.
+- Thirty-nine focused pagination tests and all 528 MARC tests pass. The
+  dependency-light suite passes 2,667 tests with 204 expected skips in 21.601
+  seconds at 253,607,936-byte external peak RSS; the optional-neuro suite
+  passes 2,738 tests with 35 expected skips in 59.915 seconds at 800,735,232-
+  byte external peak RSS. Both add exactly ten tests and zero skips.
+- Repository-wide Ruff, compilation, all 188 registry JSON parses, artifact
+  hashes, and `git diff --check` pass. Verification did not rerun `qualify` or
+  construct another fixture.
+- Next: green this aggregate failure result, then specify a separately named
+  generated recovery that moves path validation before all contract and fixture
+  operations. No real metadata or payload work is open.
+
+Engineering capability added: the strict writer refused a symlink parent
+without creating output or touching a real source.
+
+Scientific claim not established: live pagination, neural signal, targets,
+predictions, scores, language decoding, and thought-to-text remain untested.

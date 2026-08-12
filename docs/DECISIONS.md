@@ -6955,3 +6955,40 @@ Evidence:
 `registries/marc1_versioned_pagination_implementation.v0.json`,
 `src/neurodecodekit/datasets/marc1_versioned_pagination.py`, and the two
 matching test modules.
+
+## 0208 - Consume The Closeout At The Output-Path Failure
+
+Evidence-order decision: invoke the one registered closeout only after exact
+implementation `2c98a2a` passed Base Python job `94104455930` and Optional
+Neuro Readers job `94104455857` in CI `31593790492`.
+
+Failure decision: preserve `MARC1PG-F07` exactly. The requested output parent
+`/tmp` is a symlink on this macOS host, and the strict writer refused it. Do not
+reinterpret safe file refusal as successful qualification.
+
+Consumption decision: this invocation spent the registered run because output
+preflight occurs after contract loading, both generated inventory builds, four
+accepted-case validations and selections, selection-hash equality, and private
+manifest construction. Existing precedent for an unspent path preflight does
+not apply. Do not retry under `/private/tmp`, substitute a path, amend the
+implementation, or run the 41-case matrix after the fact.
+
+Evidence decision: record external wall time 0.17 seconds, peak RSS 30,064,640
+bytes, zero emitted/incremental/network/real-private bytes, zero files, and all
+real, neural, target, model, score, and claim counters at zero. Internal
+runtime, generated-input bytes, and output hashes are unavailable because
+report measurement never began.
+
+Next-step decision: green this aggregate result, then design a separately
+named generated output-preflight recovery. Its output path check must happen
+before contract loading or fixture construction. No live metadata request or
+payload action is eligible from this result.
+
+Path decision: this is a process failure on the same cue-resistant neural-
+positive-control to held-out-language path, not a pivot and not scientific
+evidence.
+
+Evidence:
+`docs/MARC_1_VERSIONED_PAGINATION_GENERATED_RESULT.md`,
+`registries/marc1_versioned_pagination_failure_result.v0.json`, and
+`tests/test_marc1_versioned_pagination_failure_result.py`.
