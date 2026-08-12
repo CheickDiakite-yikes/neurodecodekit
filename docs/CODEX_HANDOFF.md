@@ -3430,3 +3430,22 @@ Immediate next gate: commit, push, and green this artifact-only research.
 Afterward, freeze a separate generated-only contract. Do not implement a real
 executor, access either metadata source, touch the consumed private root, or
 acquire a payload from this research record.
+
+## 2026-08-12 MARC1-HT1 Contract Handoff
+
+Research `f515b36cfdd2b297bcbba9885af92e59ead066a7` passed Base Python
+job `94062432262` and Optional Neuro Readers job `94062432241` in CI
+`31580575669` before the generated recovery contract was frozen. Read
+`docs/MARC_1_HTTP_IDENTITY_SEMANTICS_RECOVERY_PREREGISTRATION.md`,
+`registries/marc1_http_identity_semantics_recovery_contract.v0.json`, and its
+matching contract test.
+
+The contract permits only a future additive standard-library
+`plan`/`qualify`/`inspect` module. It binds four accepted uncoded forms, 20
+refusals, five routes, 16 gates, 1,227 + 55 generated rows, exact 12+12 cohort
+replay, no network/private bytes, and no decompressor or real executor.
+
+Immediate next gate: commit, push, and green this exact contract. Only then
+implement and measure the generated/mock harness. Real metadata, the old
+private root, payloads, signals, targets, models, scores, and Tier C execution
+remain closed.

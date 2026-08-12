@@ -1425,3 +1425,13 @@ the unavailable live header.
 Next gate: commit, push, and green MARC1-HT1 research. Then freeze a separate
 generated-only contract and implementation. No private read, public request,
 payload, signal, target, model, or score is authorized at the research stage.
+
+Research `f515b36` passed both jobs in CI `31580575669` before the MARC1-HT1
+generated recovery contract was frozen. The contract binds four accepted
+uncoded forms, 20 refusals, 16 gates, five refusal routes, 1,227 + 55 generated
+rows, exact 12+12 cohort replay, zero network/private bytes, and no `execute`
+surface.
+
+Next gate: commit, push, and green the exact MARC1-HT1 contract. Only then
+implement and close out the additive generated/mock harness. Real metadata and
+payload access remain closed and require later independent Tier C sequencing.

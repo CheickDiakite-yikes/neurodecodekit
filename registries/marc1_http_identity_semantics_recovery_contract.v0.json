@@ -1,0 +1,221 @@
+{
+  "schema_name": "neurodecodekit.marc1_http_identity_semantics_recovery_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "MARC1-HT1-generated-http-identity-semantics-v0",
+  "created_at_local": "2026-08-12",
+  "status": "frozen_generated_mock_contract_real_inputs_and_execution_unauthorized",
+  "proof_posture": "prospective_generated_only_no_source_or_scientific_value",
+  "green_research_anchor": {
+    "commit": "f515b36cfdd2b297bcbba9885af92e59ead066a7",
+    "CI_run_id": 31580575669,
+    "base_python_job_id": 94062432262,
+    "base_python_conclusion": "success",
+    "optional_neuro_job_id": 94062432241,
+    "optional_neuro_conclusion": "success",
+    "both_required_jobs_green": true,
+    "research_document": {
+      "path": "docs/MARC_1_HTTP_IDENTITY_SEMANTICS_RECOVERY_RESEARCH.md",
+      "SHA256": "6b93d476085771d6ab8c5a4f8a994e39733468d09780a07e7da1af4987949343"
+    },
+    "research_registry": {
+      "path": "registries/marc1_http_identity_semantics_recovery_research.v0.json",
+      "SHA256": "521beacac5f4629382ccab0f1a415efd0fab177a225101ad2474d5e65bc44610"
+    }
+  },
+  "frozen_source_bindings": {
+    "consumed_live_result": {
+      "path": "registries/marc1_privacy_preserving_pilot_selection_live_result.v0.json",
+      "SHA256": "3c526ac52f8185f3fe29b8f3843fd808cd9646b5011e9638d6bf55f5a459153a",
+      "route": "MARC1PS-F03",
+      "retry_or_rerun": false
+    },
+    "generated_selector": {
+      "path": "src/neurodecodekit/datasets/marc1_pilot_selection.py",
+      "SHA256": "072b9877bff0496ed10b10e4dbccc6751f357ec072390ce406342cc038359374",
+      "modification_authorized": false
+    },
+    "candidate_transport_policy_SHA256": "ac1b98eed57af7e545b925f1529ebf38de72b4277ea54a473ae1d6f7fe0cd3a6"
+  },
+  "implementation_surface": {
+    "module": "src/neurodecodekit/datasets/marc1_http_identity_semantics.py",
+    "commands": [
+      "plan",
+      "qualify",
+      "inspect"
+    ],
+    "execute_command": false,
+    "standard_library_only": true,
+    "base_dependency_delta": 0,
+    "network_client_imports": 0,
+    "DNS_resolver_imports": 0,
+    "decompressor_or_decoder_imports": 0,
+    "private_source_paths": 0,
+    "consumed_root_paths": 0,
+    "real_endpoint_requests": 0,
+    "retry_rerun_resume_fallback_or_substitution_interfaces": 0,
+    "signal_event_target_model_or_score_interfaces": 0
+  },
+  "candidate_transport_policy": {
+    "request_Accept_Encoding": "identity",
+    "terminal_Content_Encoding": {
+      "header_absent": "accept_as_no_content_coding",
+      "single_identity_token_case_insensitive": "accept_as_narrow_compatibility_tolerance",
+      "all_other_present_values": "refuse"
+    },
+    "Transfer_Encoding": "refuse_if_present",
+    "automatic_redirects": false,
+    "manual_bodyless_redirect_cap": 2,
+    "HTTP_attempt_cap": 3,
+    "terminal_status": 200,
+    "terminal_Content_Type": "application/json",
+    "terminal_body_cap_bytes": 2097152,
+    "terminal_body_reads": 1,
+    "decompression_or_decoding_operations": 0,
+    "raw_header_publication": false,
+    "raw_body_persistence": false
+  },
+  "generated_inputs": {
+    "Freewill_rows": 1227,
+    "Wrist_rows": 55,
+    "selected_participants_per_axis": 12,
+    "Freewill_run_bundles": 72,
+    "Freewill_core_members": 288,
+    "Wrist_archives": 12,
+    "private_selection_rows": 300,
+    "real_or_private_input_bytes": 0,
+    "network_bytes": 0
+  },
+  "accepted_response_cases": [
+    "Content_Encoding_absent",
+    "Content_Encoding_identity_lowercase",
+    "Content_Encoding_IDENTITY_uppercase",
+    "Content_Encoding_IdEnTiTy_mixed_case"
+  ],
+  "refusal_cases": [
+    "Content_Encoding_present_empty",
+    "Content_Encoding_whitespace_only",
+    "Content_Encoding_gzip",
+    "Content_Encoding_br",
+    "Content_Encoding_deflate",
+    "Content_Encoding_compress",
+    "Content_Encoding_unknown_token",
+    "Content_Encoding_identity_plus_gzip",
+    "Content_Encoding_parameterized_identity",
+    "duplicate_Content_Encoding",
+    "Transfer_Encoding_present",
+    "non_JSON_Content_Type",
+    "malformed_Content_Length",
+    "body_overflow",
+    "automatic_redirect",
+    "private_or_nonglobal_redirect",
+    "alternate_endpoint",
+    "target_like_public_field",
+    "output_cap",
+    "second_invocation"
+  ],
+  "failure_routes": {
+    "MARC1HT-F01": "proof_or_contract_identity",
+    "MARC1HT-F02": "content_encoding_semantics",
+    "MARC1HT-F03": "unchanged_HTTP_envelope_or_source_schema",
+    "MARC1HT-F04": "resource_output_privacy_or_replay_boundary",
+    "MARC1HT-F05": "forbidden_operation_or_second_invocation"
+  },
+  "acceptance_route": "MARC1HT-G1",
+  "acceptance_gates": [
+    "green_research_proof_identity",
+    "exact_contract_identity",
+    "exact_candidate_policy_hash",
+    "all_four_accepted_forms_pass",
+    "accepted_forms_have_identical_body_and_selection_hashes",
+    "all_twenty_mutations_refuse_under_registered_routes",
+    "row_order_replay_exact",
+    "exact_12_plus_12_participant_identities",
+    "exact_72_bundle_288_member_12_archive_selection",
+    "exact_split_binding_and_zero_overlap",
+    "target_quality_size_CRC_and_outcome_free_selection",
+    "private_public_output_separation",
+    "source_has_no_network_decoder_real_executor_or_neural_interface",
+    "all_real_payload_neural_target_model_score_and_claim_counters_zero",
+    "resource_and_output_caps",
+    "deterministic_aggregate_and_private_output_hashes"
+  ],
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "generated_input_bytes": 2097152,
+    "public_output_bytes": 1048576,
+    "combined_output_bytes": 2097152,
+    "incremental_disk_bytes": 4194304,
+    "network_bytes": 0,
+    "real_or_private_input_bytes": 0
+  },
+  "generated_closeout_policy": {
+    "registered_runs": 1,
+    "retries": 0,
+    "reruns": 0,
+    "temporary_new_output_directory": true,
+    "aggregate_report_inspections": 1,
+    "temporary_outputs_removed_after_measurement": true,
+    "generated_outputs_committed": false,
+    "source_or_scientific_value": false
+  },
+  "evidence_order": [
+    "contract_commit_push_both_CI_jobs_green",
+    "generated_mock_implementation_only",
+    "implementation_commit_push_both_CI_jobs_green",
+    "one_generated_closeout",
+    "generated_result_commit_push_both_CI_jobs_green",
+    "all_false_Tier_C_request_only_after_generated_result_green"
+  ],
+  "authorization_flags": {
+    "generated_mock_implementation_authorized_before_contract_green": false,
+    "real_or_private_metadata_read_authorized_now": false,
+    "public_Wrist_request_authorized_now": false,
+    "old_private_root_access_authorized_now": false,
+    "new_private_root_creation_authorized_now": false,
+    "payload_request_or_acquisition_authorized_now": false,
+    "signal_event_target_or_quality_read_authorized_now": false,
+    "cache_split_epoch_window_or_feature_authorized_now": false,
+    "training_or_parameter_update_authorized_now": false,
+    "model_inference_prediction_or_freeze_authorized_now": false,
+    "target_delivery_or_scoring_authorized_now": false,
+    "provider_or_language_model_call_authorized_now": false,
+    "download_or_dependency_install_authorized_now": false,
+    "stream_device_or_hardware_authorized_now": false,
+    "retry_rerun_resume_or_substitution_authorized_now": false,
+    "release_or_publication_authorized_now": false,
+    "scientific_claim_upgrade_authorized_now": false
+  },
+  "current_access_counters": {
+    "generated_fixture_runs": 0,
+    "private_Freewill_manifest_reads": 0,
+    "public_Wrist_metadata_requests": 0,
+    "network_body_bytes": 0,
+    "payload_requests": 0,
+    "payload_bytes": 0,
+    "signal_sample_reads": 0,
+    "target_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "scoring_events": 0,
+    "provider_or_language_model_calls": 0,
+    "hardware_operations": 0,
+    "retry_or_rerun_operations": 0,
+    "scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "warnings": [
+    "This contract authorizes no implementation before its exact commit is remotely green.",
+    "The actual MARC1-P1A live Content-Encoding field remains unavailable and must not be inferred.",
+    "Generated MARC1HT-G1 would have no source or scientific value.",
+    "A new live metadata attempt remains a separate Tier C action.",
+    "Payload acquisition remains ineligible."
+  ],
+  "claim_boundary": {
+    "engineering_capability_proposed": "A deterministic generated harness can prove that the repaired HTTP predicate accepts only uncoded representations while leaving cohort selection and all safety boundaries unchanged.",
+    "scientific_claim_not_established": "This contract authorizes no real data neural signal target prediction score language decoding or thought-to-text claim."
+  }
+}

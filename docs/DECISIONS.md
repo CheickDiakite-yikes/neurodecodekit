@@ -6617,3 +6617,31 @@ Evidence:
 `docs/MARC_1_HTTP_IDENTITY_SEMANTICS_RECOVERY_RESEARCH.md`,
 `registries/marc1_http_identity_semantics_recovery_research.v0.json`, and
 `tests/test_marc1_http_identity_semantics_research.py`.
+
+## 0198 - Freeze One Predicate Change And Nothing Else
+
+Contract decision: after MARC1-HT1 research `f515b36` passed both jobs in CI
+`31580575669`, freeze one semantic delta only: absent `Content-Encoding` is an
+uncoded representation; one identity token is a compatibility tolerance; all
+other present values refuse. The request still advertises identity, and no
+decompressor or decoder may exist.
+
+Surface decision: a future generated module may expose only `plan`, `qualify`,
+and `inspect`. It may not import a network client or the consumed executor,
+name a private path or old root, expose `execute`, or alter the frozen
+generated selector.
+
+Qualification decision: require four accepted response cases, 20 refusals,
+five failure classes, 16 gates, exact 12+12 cohort and split replay, zero
+network/private bytes, and all forbidden counters zero under one thread and
+small output caps.
+
+Evidence-order decision: the exact contract must be remotely green before
+generated implementation. The exact generated implementation and closeout
+must then be independently green before an all-false Tier C request can be
+prepared. Real metadata and payload acquisition remain closed.
+
+Evidence:
+`docs/MARC_1_HTTP_IDENTITY_SEMANTICS_RECOVERY_PREREGISTRATION.md`,
+`registries/marc1_http_identity_semantics_recovery_contract.v0.json`, and
+`tests/test_marc1_http_identity_semantics_contract.py`.

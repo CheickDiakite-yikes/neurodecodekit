@@ -1350,3 +1350,13 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   coding. The live header value remains unavailable and must not be inferred.
   Commit, push, and green this research before freezing a generated-only
   contract; no implementation or real input is authorized by the research.
+
+  Research `f515b36cfdd2b297bcbba9885af92e59ead066a7` passed Base Python
+  job `94062432262` and Optional Neuro Readers job `94062432241` in CI
+  `31580575669` before the generated-only MARC1-HT1 contract was frozen. Read
+  `docs/MARC_1_HTTP_IDENTITY_SEMANTICS_RECOVERY_PREREGISTRATION.md` and
+  `registries/marc1_http_identity_semantics_recovery_contract.v0.json`. The
+  contract permits only a future zero-network `plan`/`qualify`/`inspect`
+  harness after this exact contract is remotely green. It freezes four
+  accepted forms, 20 refusals, 16 gates, five refusal routes, and exact
+  generated cohort replay. It authorizes no real/private input or payload.

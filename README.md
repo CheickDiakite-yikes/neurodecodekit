@@ -370,6 +370,7 @@ negative result and S25 is never repurposed for calibration.
 | MARC1-P1 generated pilot selector | 1,227 + 55 generated rows; 12 preregistered participants per axis; 72 Freewill bundles/288 members; 12 Wrist archives; 36/36 refusals; 15/15 gates; 0 real operations | Exact implementation `0c0a698` passed CI `31571668853` before the one closeout; `MARC1PSG-R1` used 873,348 input and 182,564 output bytes in 0.227 sec at 32.4 MB reported RSS and is consumed | Proves deterministic, private, size-independent pilot selection mechanics under an 8-GiB ceiling; adds no neural or thought-to-text evidence |
 | MARC1-P1A live metadata attempt | 418,755 private metadata bytes read once; 1 Wrist response opened; 0 public-body or payload bytes; 0 selected participants; route `MARC1PS-F03` | Exact wrapper `702e613` passed CI `31578614616` before the sole attempt; it failed the explicit identity-encoding gate in 0.532 sec at 37.3 MB reported RSS and is consumed | Proves one-shot fail-closed audit behavior; the cohort was not selected and no neural or language evidence was produced |
 | MARC1-HT1 HTTP identity research | RFC 9110 Sections 8.4 and 12.5.3; 4 future acceptance cases; 20 future refusals; 17 false authorization flags; 0 real operations | Artifact-only standards review after green consumed result `8d9cae1`; candidate policy hash `ac1b98ee...` | Separates absent content coding from actual coding without inferring the unretained live header; implementation and real access remain closed |
+| MARC1-HT1 generated recovery contract | 1,227 + 55 generated rows; 4 accepted forms; 20 refusals; 16 gates; 5 refusal routes; 0 real/network bytes | Green research `f515b36` / CI `31580575669` precedes the frozen contract | Allows only a new `plan`/`qualify`/`inspect` harness after contract CI; real metadata, payload, neural work, and claims remain closed |
 
 ### Real-Data Scientific Scorecard
 
@@ -1256,6 +1257,14 @@ Read this before interpreting any number in the repository.
   header was not retained and must not be inferred. MARC1-HT1 is artifact-only
   research: it authorizes no implementation, private read, public request, or
   payload operation.
+  The follow-on
+  [generated recovery contract](docs/MARC_1_HTTP_IDENTITY_SEMANTICS_RECOVERY_PREREGISTRATION.md)
+  freezes four accepted response forms, 20 refusals, 16 acceptance gates, five
+  refusal routes, exact replay of the 12+12 generated cohorts, zero network or
+  private bytes, and no `execute` command. Only after this exact contract is
+  committed, pushed, and green may the additive generated/mock harness be
+  implemented. A live request remains Tier C and payload acquisition remains
+  ineligible.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

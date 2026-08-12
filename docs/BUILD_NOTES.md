@@ -8220,3 +8220,30 @@ existing safety boundaries.
 
 Scientific claim not established: artifact-only transport research adds no
 neural effect, language decoding, or thought-to-text evidence.
+
+## 2026-08-12 - MARC1-HT1 Generated Recovery Contract
+
+- Bound green research `f515b36cfdd2b297bcbba9885af92e59ead066a7`,
+  CI `31580575669`, Base Python job `94062432262`, and Optional Neuro Readers
+  job `94062432241` before freezing the contract.
+- Froze one additive standard-library module with only `plan`, `qualify`, and
+  `inspect`; no network client, DNS resolver, decompressor, private path, old
+  consumed root, real executor, retry, or neural/model surface is permitted.
+- Bound 1,227 + 55 generated source rows, exact 12+12 cohort replay, four
+  accepted content-encoding forms, 20 refusals, five failure routes, and 16
+  acceptance gates.
+- Retained the 30-second, 256-MiB RSS, 2-MiB generated-input, 4-MiB disk,
+  one-thread, zero-network, and zero-real-input caps.
+- All 17 current authorization flags and all 16 current operation counters are
+  false or zero. No generated run has occurred yet.
+- Eleven focused contract tests, all 360 MARC tests, 2,499 dependency-light
+  tests with 204 expected skips, and 2,570 optional-neuro tests with 35
+  expected skips pass. Both complete suites add exactly eleven tests and zero
+  skips over the green research baseline. External maximum RSS was 269,434,880
+  and 772,472,832 bytes, respectively.
+
+Engineering capability proposed: the generated contract can prove the narrow
+HTTP predicate repair without changing cohort selection or safety behavior.
+
+Scientific claim not established: preregistration is not execution and adds
+no real neural, language-decoding, or thought-to-text evidence.

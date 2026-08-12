@@ -808,6 +808,19 @@ private path, public request, payload, neural data, target, model, score, retry,
 or claim. A future real metadata attempt remains a new Tier C action after a
 separately green contract, generated implementation, request, and decision.
 
+Research `f515b36cfdd2b297bcbba9885af92e59ead066a7` passed Base Python
+job `94062432262` and Optional Neuro Readers job `94062432241` in CI
+`31580575669`. Read
+`docs/MARC_1_HTTP_IDENTITY_SEMANTICS_RECOVERY_PREREGISTRATION.md` and
+`registries/marc1_http_identity_semantics_recovery_contract.v0.json`. The
+generated-only contract freezes four accepted encoding states, 20 refusals,
+16 acceptance gates, five routes, exact generated cohort replay, no network or
+private bytes, and only `plan`, `qualify`, and `inspect`. Commit, push, and
+green this exact contract before implementing the additive generated harness.
+Do not add a real executor, touch either metadata source or consumed root, or
+prepare a Tier C request before the generated implementation and closeout are
+separately green.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in
