@@ -100,8 +100,9 @@ The retained Freewill inventory and private consumed marker must not be opened
 again under this lane. No payload-acquisition packet is eligible because the
 joint pilot selection did not complete.
 
-The next prospective step is a separately named metadata transport-semantics
-recovery. It must freeze, on generated and mocked responses, whether an absent
+The next prospective step is now specified as MARC1-HT1 in
+`docs/MARC_1_HTTP_IDENTITY_SEMANTICS_RECOVERY_RESEARCH.md`. It must freeze, on
+generated and mocked responses, whether an absent
 `Content-Encoding` and an explicit `identity` value are equivalent unencoded
 representations while continuing to reject every actual content coding,
 duplicate critical header, automatic redirect, private destination, oversized

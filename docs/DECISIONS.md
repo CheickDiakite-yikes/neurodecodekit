@@ -6590,3 +6590,30 @@ Evidence:
 `docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_LIVE_RESULT.md`,
 `registries/marc1_privacy_preserving_pilot_selection_live_result.v0.json`, and
 `tests/test_marc1_pilot_selection_live_result.py`.
+
+## 0197 - Repair The Predicate Without Inventing The Live Header
+
+Standards decision: use RFC 9110 Sections 8.4 and 12.5.3 to separate response
+content codings from request-side identity preference. A future terminal
+predicate may accept an absent `Content-Encoding` as uncoded and one lone
+case-insensitive identity token as a narrow compatibility tolerance. Refuse
+every other present value and perform no decompression or decoding.
+
+Epistemic decision: the MARC1-P1A raw header was not retained. Do not claim it
+was absent, coded, malformed, or changed. The standards mismatch exists in the
+old predicate independently of that unavailable observation.
+
+Scope decision: preserve every existing source, redirect, size, schema,
+target-firewall, privacy, output, machine, consumed-marker, no-rerun, and
+payload prohibition. MARC1-HT1 is artifact-only research with all 17 current
+authorization flags false. It must be remotely green before a separate
+generated-only contract is frozen; a future real request remains Tier C.
+
+Path decision: this is a transport repair on the existing MARC-1 positive-
+control path toward later held-out language decoding, not a pivot and not a
+scientific result.
+
+Evidence:
+`docs/MARC_1_HTTP_IDENTITY_SEMANTICS_RECOVERY_RESEARCH.md`,
+`registries/marc1_http_identity_semantics_recovery_research.v0.json`, and
+`tests/test_marc1_http_identity_semantics_research.py`.

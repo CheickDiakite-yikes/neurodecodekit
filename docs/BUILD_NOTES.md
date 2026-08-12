@@ -8189,3 +8189,34 @@ privacy-preserving metadata attempt and retained an aggregate audit record.
 Scientific claim not established: no neural payload, target, prediction, or
 score was accessed, so this adds no neural effect, language decoding, or
 thought-to-text evidence.
+
+## 2026-08-12 - MARC1-HT1 HTTP Identity Semantics Research
+
+- Reviewed RFC 9110 Sections 8.4 and 12.5.3 after green consumed result
+  `8d9cae1` / CI `31579626846`.
+- Separated `Accept-Encoding: identity` as a request preference from response
+  `Content-Encoding`, which lists codings actually applied. The standard says
+  identity is reserved for `Accept-Encoding` and should not be emitted in
+  `Content-Encoding`.
+- Froze candidate policy hash
+  `ac1b98eed57af7e545b925f1529ebf38de72b4277ea54a473ae1d6f7fe0cd3a6`:
+  accept a missing field as uncoded; tolerate one case-insensitive identity
+  token; refuse every other present value and perform zero decoding.
+- Preserved 10 protection classes, four future acceptance fixtures, 20 future
+  refusal fixtures, seven proof stages, 17 false authorization flags, and all
+  zero real/scientific counters.
+- The unretained live header remains unknown and was not inferred. No private
+  input, Wrist endpoint, payload, signal, target, model, score, retry, rerun,
+  or claim operation occurred.
+- Ten focused research tests, all 349 MARC tests, 2,488 dependency-light tests
+  with 204 expected skips, and 2,559 optional-neuro tests with 35 expected
+  skips pass. Both complete suites add ten tests and zero skips over the green
+  consumed-result baseline. External maximum RSS was 281,296,896 and
+  771,407,872 bytes, respectively.
+
+Engineering capability proposed: a standards-aligned predicate can accept an
+uncoded response without enabling content decoding or weakening the selector's
+existing safety boundaries.
+
+Scientific claim not established: artifact-only transport research adds no
+neural effect, language decoding, or thought-to-text evidence.

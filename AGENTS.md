@@ -793,6 +793,21 @@ request or private-inventory read requires a new Tier C packet and decision.
 MARC1-P1 remains a confound-resolution rung on the same thought-to-text path,
 not a pivot or replacement for the later language-specific held-out experiment.
 
+Read `docs/MARC_1_HTTP_IDENTITY_SEMANTICS_RECOVERY_RESEARCH.md` and
+`registries/marc1_http_identity_semantics_recovery_research.v0.json`.
+MARC1-HT1 is artifact-only primary-source research grounded in RFC 9110
+Sections 8.4 and 12.5.3. The candidate terminal predicate accepts an absent
+`Content-Encoding` or one case-insensitive `identity` compatibility token and
+refuses every other present value. It preserves every source, redirect, body,
+privacy, output, machine, no-rerun, and payload firewall from MARC1-P1A. The
+actual live header was not retained and must not be inferred.
+
+Commit, push, and require both jobs green for this research before freezing a
+separate generated-only contract. This research authorizes no implementation,
+private path, public request, payload, neural data, target, model, score, retry,
+or claim. A future real metadata attempt remains a new Tier C action after a
+separately green contract, generated implementation, request, and decision.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

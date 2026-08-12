@@ -3410,3 +3410,23 @@ Immediate next gate: specify and remotely green a separately named generated/
 mocked transport-semantics recovery. Another real metadata request or private-
 inventory read requires a new Tier C decision; payload acquisition is not yet
 eligible. This is still the same thought-to-text research path, not a pivot.
+
+## 2026-08-12 MARC1-HT1 Research Handoff
+
+Read `docs/MARC_1_HTTP_IDENTITY_SEMANTICS_RECOVERY_RESEARCH.md`,
+`registries/marc1_http_identity_semantics_recovery_research.v0.json`, and the
+matching research test. The primary-source review uses RFC 9110 Sections 8.4
+and 12.5.3 to separate absent response content coding from the request-side
+identity token.
+
+Candidate policy
+`ac1b98eed57af7e545b925f1529ebf38de72b4277ea54a473ae1d6f7fe0cd3a6`
+accepts an absent `Content-Encoding` or one case-insensitive identity token and
+refuses every other present value. It preserves all existing redirect, body,
+schema, privacy, output, machine, consumed-marker, and payload firewalls. The
+actual live header was not retained and must not be inferred.
+
+Immediate next gate: commit, push, and green this artifact-only research.
+Afterward, freeze a separate generated-only contract. Do not implement a real
+executor, access either metadata source, touch the consumed private root, or
+acquire a payload from this research record.

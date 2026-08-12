@@ -1341,3 +1341,12 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   semantics recovery, followed by a new Tier C decision before any real input.
   This is the same thought-to-text path, not a pivot, and movement evidence is
   not language evidence.
+
+  Read `docs/MARC_1_HTTP_IDENTITY_SEMANTICS_RECOVERY_RESEARCH.md` and
+  `registries/marc1_http_identity_semantics_recovery_research.v0.json` for the
+  zero-access MARC1-HT1 diagnosis. RFC 9110 separates request-side `identity`
+  from response-side applied content codings. The candidate policy accepts an
+  absent response field or one inert identity token and refuses every actual
+  coding. The live header value remains unavailable and must not be inferred.
+  Commit, push, and green this research before freezing a generated-only
+  contract; no implementation or real input is authorized by the research.

@@ -1,0 +1,186 @@
+{
+  "schema_name": "neurodecodekit.marc1_http_identity_semantics_recovery_research",
+  "schema_version": "0.1.0",
+  "research_id": "MARC1-HT1-http-identity-semantics-recovery-v0",
+  "created_at_local": "2026-08-12",
+  "status": "artifact_only_research_complete_no_implementation_or_real_access_authorized",
+  "proof_posture": "public_committed_artifact_and_primary_source_research_only",
+  "same_path_statement": "MARC1_HT1_is_a_transport_repair_on_the_existing_thought_to_text_research_path_not_a_pivot",
+  "green_consumed_result_anchor": {
+    "commit": "8d9cae1f1b5e43e0871ccfb63b4ea3afd1e09eaa",
+    "CI_run_id": 31579626846,
+    "base_python_job_id": 94059509924,
+    "base_python_conclusion": "success",
+    "optional_neuro_job_id": 94059509836,
+    "optional_neuro_conclusion": "success",
+    "both_required_jobs_green": true,
+    "result_path": "registries/marc1_privacy_preserving_pilot_selection_live_result.v0.json",
+    "result_SHA256": "3c526ac52f8185f3fe29b8f3843fd808cd9646b5011e9638d6bf55f5a459153a",
+    "result_route": "MARC1PS-F03",
+    "result_consumed": true,
+    "retry_or_rerun_available": false
+  },
+  "observed_evidence": {
+    "private_Freewill_manifest_reads": 1,
+    "private_Freewill_manifest_bytes": 418755,
+    "public_Wrist_metadata_requests": 1,
+    "public_Wrist_response_opens": 1,
+    "public_Wrist_body_reads": 0,
+    "public_Wrist_body_bytes": 0,
+    "selected_participants": 0,
+    "selected_private_rows": 0,
+    "payload_bytes": 0,
+    "signal_target_model_or_score_operations": 0,
+    "raw_terminal_content_encoding_value_retained": false,
+    "actual_live_header_value_inferred": false
+  },
+  "primary_sources": [
+    {
+      "title": "RFC 9110 HTTP Semantics Section 8.4 Content-Encoding",
+      "URL": "https://www.rfc-editor.org/rfc/rfc9110.html#section-8.4",
+      "publisher": "RFC Editor",
+      "relevance": "Content_Encoding_lists_content_codings_applied_to_the_representation_and_identity_is_reserved_for_Accept_Encoding"
+    },
+    {
+      "title": "RFC 9110 HTTP Semantics Section 12.5.3 Accept-Encoding",
+      "URL": "https://www.rfc-editor.org/rfc/rfc9110.html#section-12.5.3",
+      "publisher": "RFC Editor",
+      "relevance": "identity_means_no_encoding_in_Accept_Encoding_and_an_uncoded_representation_is_acceptable_by_default"
+    }
+  ],
+  "diagnosis": {
+    "old_terminal_predicate": "require_exact_single_Content_Encoding_identity",
+    "standards_mismatch": "identity_is_not_the_preferred_Content_Encoding_representation_of_no_coding",
+    "prospective_repair": "accept_absent_Content_Encoding_or_one_case_insensitive_identity_compatibility_token_and_refuse_every_other_present_value",
+    "diagnosis_is_independent_of_unretained_live_header_value": true,
+    "consumed_lane_amended_or_reinterpreted": false
+  },
+  "candidate_transport_policy": {
+    "request_Accept_Encoding": "identity",
+    "terminal_Content_Encoding": {
+      "header_absent": "accept_as_no_content_coding",
+      "single_identity_token_case_insensitive": "accept_as_narrow_compatibility_tolerance",
+      "all_other_present_values": "refuse"
+    },
+    "Transfer_Encoding": "refuse_if_present",
+    "automatic_redirects": false,
+    "manual_bodyless_redirect_cap": 2,
+    "HTTP_attempt_cap": 3,
+    "terminal_status": 200,
+    "terminal_Content_Type": "application/json",
+    "terminal_body_cap_bytes": 2097152,
+    "terminal_body_reads": 1,
+    "decompression_or_decoding_operations": 0,
+    "raw_header_publication": false,
+    "raw_body_persistence": false
+  },
+  "candidate_transport_policy_SHA256": "ac1b98eed57af7e545b925f1529ebf38de72b4277ea54a473ae1d6f7fe0cd3a6",
+  "unchanged_protection_classes": [
+    "source_record_version_endpoint_and_schema_identity",
+    "participant_name_and_sub01_anchor",
+    "strict_UTF8_JSON_and_exact_row_validation",
+    "target_like_field_firewall",
+    "manual_global_only_HTTPS_redirects",
+    "body_length_and_output_caps",
+    "one_shot_consumed_marker_and_no_rerun",
+    "private_public_output_separation",
+    "machine_resource_gate",
+    "payload_signal_target_model_score_and_claim_firewall"
+  ],
+  "future_generated_acceptance_cases": [
+    "Content_Encoding_absent",
+    "Content_Encoding_identity_lowercase",
+    "Content_Encoding_IDENTITY_uppercase",
+    "Content_Encoding_IdEnTiTy_mixed_case"
+  ],
+  "future_generated_refusal_cases": [
+    "Content_Encoding_present_empty",
+    "Content_Encoding_whitespace_only",
+    "Content_Encoding_gzip",
+    "Content_Encoding_br",
+    "Content_Encoding_deflate",
+    "Content_Encoding_compress",
+    "Content_Encoding_unknown_token",
+    "Content_Encoding_identity_plus_gzip",
+    "Content_Encoding_parameterized_identity",
+    "duplicate_Content_Encoding",
+    "Transfer_Encoding_present",
+    "non_JSON_Content_Type",
+    "malformed_Content_Length",
+    "body_overflow",
+    "automatic_redirect",
+    "private_or_nonglobal_redirect",
+    "alternate_endpoint",
+    "target_like_public_field",
+    "output_cap",
+    "second_invocation"
+  ],
+  "prospective_sequence": [
+    "research_commit_push_both_CI_jobs_green",
+    "separate_contract_commit_push_both_CI_jobs_green",
+    "generated_mock_implementation_and_closeout_commit_push_both_CI_jobs_green",
+    "all_false_Tier_C_request_commit_push_both_CI_jobs_green",
+    "fresh_packet_bound_decision_commit_push_both_CI_jobs_green",
+    "one_new_private_root_real_metadata_invocation",
+    "aggregate_result_commit_push_both_CI_jobs_green"
+  ],
+  "resource_ceiling_for_future_generated_work": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "generated_output_bytes": 1048576,
+    "network_bytes": 0,
+    "private_input_bytes": 0
+  },
+  "authorization_flags": {
+    "generated_fixture_implementation_authorized_now": false,
+    "real_or_private_metadata_read_authorized_now": false,
+    "public_Wrist_request_authorized_now": false,
+    "old_private_root_access_authorized_now": false,
+    "new_private_root_creation_authorized_now": false,
+    "payload_request_or_acquisition_authorized_now": false,
+    "signal_event_target_or_quality_read_authorized_now": false,
+    "cache_split_epoch_window_or_feature_authorized_now": false,
+    "training_or_parameter_update_authorized_now": false,
+    "model_inference_prediction_or_freeze_authorized_now": false,
+    "target_delivery_or_scoring_authorized_now": false,
+    "provider_or_language_model_call_authorized_now": false,
+    "download_or_dependency_install_authorized_now": false,
+    "stream_device_or_hardware_authorized_now": false,
+    "retry_rerun_resume_or_substitution_authorized_now": false,
+    "release_or_publication_authorized_now": false,
+    "scientific_claim_upgrade_authorized_now": false
+  },
+  "research_access_counters": {
+    "committed_public_result_reads": 1,
+    "primary_source_page_reads": 2,
+    "private_Freewill_manifest_reads": 0,
+    "public_Wrist_metadata_requests": 0,
+    "network_body_bytes": 0,
+    "payload_requests": 0,
+    "payload_bytes": 0,
+    "signal_sample_reads": 0,
+    "target_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "scoring_events": 0,
+    "provider_or_language_model_calls": 0,
+    "hardware_operations": 0,
+    "retry_or_rerun_operations": 0,
+    "scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "warnings": [
+    "The actual live Content-Encoding field value was not retained and must not be inferred.",
+    "The candidate predicate has not been implemented or qualified.",
+    "A generated qualification would have no source or scientific value.",
+    "A new real metadata attempt requires a separate Tier C packet and decision.",
+    "Payload acquisition remains ineligible because the joint pilot selection did not complete."
+  ],
+  "claim_boundary": {
+    "engineering_capability_proposed": "A standards-aligned fail-closed predicate can distinguish an unencoded HTTP representation from every declared content coding without weakening existing metadata privacy or machine gates.",
+    "scientific_claim_not_established": "Artifact-only transport research reads no neural signal target prediction or score and establishes no neural effect language decoding or thought-to-text capability."
+  }
+}

@@ -1413,3 +1413,15 @@ mocked responses, and require a new Tier C decision before another real input.
 Payload acquisition is not yet eligible. The path remains MARC-1 confound
 resolution followed by a controlled neural positive control and then
 language-specific held-out decoding, not a pivot.
+
+MARC1-HT1 now records the zero-access primary-source diagnosis in
+`docs/MARC_1_HTTP_IDENTITY_SEMANTICS_RECOVERY_RESEARCH.md` and
+`registries/marc1_http_identity_semantics_recovery_research.v0.json`. The
+candidate accepts absent `Content-Encoding` or one case-insensitive identity
+token and refuses all other present values, while preserving every source,
+redirect, size, privacy, machine, payload, and no-rerun gate. It does not infer
+the unavailable live header.
+
+Next gate: commit, push, and green MARC1-HT1 research. Then freeze a separate
+generated-only contract and implementation. No private read, public request,
+payload, signal, target, model, or score is authorized at the research stage.
