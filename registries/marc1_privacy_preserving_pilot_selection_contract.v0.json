@@ -1,0 +1,339 @@
+{
+  "schema_name": "neurodecodekit.marc1_privacy_preserving_pilot_selection_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "MARC-1-P1-privacy-preserving-pilot-selection-generated-contract-v0",
+  "recorded_at_local": "2026-08-12",
+  "status": "generated_fixture_only_contract_frozen_implementation_not_started",
+  "objective": "Select a 12-person pilot on each MARC-1 axis deterministically before any private member row target event signal quality value or outcome is inspected.",
+  "artifact_bindings": {
+    "marc1_research_registry": {
+      "path": "registries/marc1_multimodal_artifact_resolved_movement_research.v0.json",
+      "sha256": "63e3a495fa192f271540227e4216ec40fba40458d699857ae8a658c1fe559564"
+    },
+    "freewill_live_result": {
+      "path": "registries/marc1_freewill_central_directory_live_result.v0.json",
+      "sha256": "fee969818b4e3e2ef7aee86096ad676c9bd70f80d19f2fd6dbe0e8069175257b"
+    },
+    "preregistration_document": {
+      "path": "docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_PREREGISTRATION.md",
+      "sha256": "5a04a5a7979e8babacf8a66f8722cdc2f254eb773e00cc7ed6a396c9b1962d95"
+    },
+    "invariant_test": {
+      "path": "tests/test_marc1_privacy_preserving_pilot_selection_preregistration.py",
+      "sha256": "0f1b5c8e1533b2b072a328837933aa29b0547526987a107c00dd4c61a6433e2d"
+    }
+  },
+  "green_inventory_proof": {
+    "commit": "7aee1287d1b5e4c91fde206e5a86cdee30df7ebf",
+    "CI_run_id": 31522799476,
+    "base_job_id": 93883797813,
+    "optional_neuro_job_id": 93883797816,
+    "both_required_jobs_green": true,
+    "live_result_route": "MARC1CD-R1",
+    "live_result_consumed": true,
+    "freewill_archive_bytes": 13591548048,
+    "freewill_inventory_entries": 1227,
+    "freewill_private_manifest_bytes": 418755,
+    "freewill_private_manifest_sha256": "2a2e48b88ee59332a199d926554bb6921222fff92046a0fc9b07cf73fd6c3031",
+    "freewill_inventory_sha256": "da0270a2d8f86106fe25e2246c1b969be448084b1a40c492c885580992c48d69",
+    "whole_archive_or_member_payload_bytes": 0
+  },
+  "rank_algorithm": {
+    "digest": "SHA-256",
+    "input": "UTF8(selection_seed) || 0x00 || UTF8(subject_id)",
+    "sort": "lowercase_hex_digest_then_subject_id",
+    "selected_count_per_source": 12,
+    "size_CRC_signal_event_target_or_outcome_may_affect_rank": false,
+    "post_hoc_replacement_allowed": false
+  },
+  "freewill_axis": {
+    "doi": "10.6084/m9.figshare.28632599.v1",
+    "license": "CC BY 4.0",
+    "published_participants": 23,
+    "published_sessions": 49,
+    "published_runs": 238,
+    "published_trials": 6808,
+    "selection_seed": "MARC1-P1|10.6084/m9.figshare.28632599.v1|participant-rank-v0",
+    "eligibility": {
+      "sampling_rate_hz": 250,
+      "minimum_sessions": 2,
+      "fit_session": "ses-01",
+      "heldout_session": "ses-02",
+      "minimum_runs_each_selected_session": 3,
+      "single_session_exclusions": ["sub-02", "sub-17"],
+      "sampling_tier_exclusions": ["sub-13", "sub-15"],
+      "eligible_subject_ids": [
+        "sub-01", "sub-03", "sub-04", "sub-05", "sub-06", "sub-07",
+        "sub-08", "sub-09", "sub-10", "sub-11", "sub-12", "sub-14",
+        "sub-16", "sub-18", "sub-19", "sub-20", "sub-21", "sub-22",
+        "sub-23"
+      ],
+      "published_session_1_2_run_counts": {
+        "sub-01": [6, 7], "sub-03": [6, 6], "sub-04": [4, 7],
+        "sub-05": [4, 4], "sub-06": [5, 6], "sub-07": [3, 3],
+        "sub-08": [3, 4], "sub-09": [4, 6], "sub-10": [3, 4],
+        "sub-11": [6, 7], "sub-12": [5, 7], "sub-14": [6, 7],
+        "sub-16": [6, 6], "sub-18": [5, 6], "sub-19": [3, 4],
+        "sub-20": [6, 5], "sub-21": [6, 6], "sub-22": [4, 3],
+        "sub-23": [6, 6]
+      }
+    },
+    "selected_subject_ids_in_rank_order": [
+      "sub-08", "sub-10", "sub-07", "sub-22", "sub-19", "sub-16",
+      "sub-14", "sub-04", "sub-05", "sub-03", "sub-09", "sub-11"
+    ],
+    "run_bundle": {
+      "selection": "first_three_numerically_ordered_complete_run_bundles_per_selected_session",
+      "required_suffixes": ["_eeg.eeg", "_eeg.vhdr", "_eeg.vmrk", "_events.tsv"],
+      "members_per_bundle": 4,
+      "fit_run_bundles": 36,
+      "heldout_run_bundles": 36,
+      "selected_run_bundles": 72,
+      "selected_core_members": 288,
+      "sessions_after_ses_02_used": false,
+      "missing_companion_backfill_allowed": false,
+      "member_size_or_CRC_may_change_run_selection": false
+    },
+    "selector_reads": {
+      "private_central_directory_manifest": true,
+      "ZIP_local_headers": false,
+      "member_payloads": false,
+      "VHDR_VMRK_EEG_or_events_content": false,
+      "targets_trials_comments_or_movement_onsets": false
+    }
+  },
+  "wrist_axis": {
+    "doi": "10.6084/m9.figshare.29666735.v3",
+    "license": "CC BY 4.0",
+    "published_participants": 45,
+    "published_runs_per_participant": 8,
+    "published_trials_per_run": 40,
+    "published_trials_per_target_per_run": 10,
+    "selection_seed": "MARC1-P1|10.6084/m9.figshare.29666735.v3|participant-rank-v0",
+    "eligible_subject_ids": [
+      "sub-01", "sub-02", "sub-03", "sub-04", "sub-05", "sub-06",
+      "sub-07", "sub-08", "sub-09", "sub-10", "sub-11", "sub-12",
+      "sub-13", "sub-14", "sub-15", "sub-16", "sub-17", "sub-18",
+      "sub-19", "sub-20", "sub-21", "sub-22", "sub-23", "sub-24",
+      "sub-25", "sub-26", "sub-27", "sub-28", "sub-29", "sub-30",
+      "sub-31", "sub-32", "sub-33", "sub-34", "sub-35", "sub-36",
+      "sub-37", "sub-38", "sub-39", "sub-40", "sub-41", "sub-42",
+      "sub-43", "sub-44", "sub-45"
+    ],
+    "selected_subject_ids_in_rank_order": [
+      "sub-08", "sub-11", "sub-09", "sub-23", "sub-20", "sub-16",
+      "sub-42", "sub-38", "sub-36", "sub-30", "sub-45", "sub-21"
+    ],
+    "participant_archive_selection": {
+      "archives": 12,
+      "one_archive_per_selected_subject": true,
+      "missing_duplicate_or_malformed_archive_refuses": true,
+      "substitution_allowed": false,
+      "metadata_body_reads": 1,
+      "metadata_body_cap_bytes": 2097152
+    },
+    "later_split": {
+      "fit_runs": [1, 2, 3, 4, 5, 6],
+      "heldout_runs": [7, 8],
+      "fit_runs_total": 72,
+      "heldout_runs_total": 24,
+      "expected_fit_trials": 2880,
+      "expected_heldout_trials": 960,
+      "expected_fit_trials_per_target_per_participant": 60,
+      "expected_heldout_trials_per_target_per_participant": 20,
+      "row_random_split_allowed": false
+    }
+  },
+  "target_firewall": {
+    "selection_stage_is_target_free": true,
+    "selection_stage_has_event_parser": false,
+    "selection_stage_has_neuro_reader": false,
+    "selection_stage_has_archive_extractor": false,
+    "selection_stage_has_model_or_scorer": false,
+    "forbidden_selection_inputs": [
+      "event_content", "event_count", "target", "label", "bad_trial_flag",
+      "movement_onset", "signal_sample", "signal_quality", "technical_validation_outcome"
+    ],
+    "future_physical_roles": [
+      "fit_signals_and_targets",
+      "target_blind_heldout_signals",
+      "hash_frozen_predictions",
+      "isolated_post_green_heldout_targets_and_controls"
+    ],
+    "post_target_update_or_rerun_allowed": false
+  },
+  "resource_caps": {
+    "generated_CPU_threads": 1,
+    "generated_workers": 1,
+    "generated_numerical_jobs": 1,
+    "generated_runtime_seconds": 30,
+    "generated_peak_RSS_bytes": 268435456,
+    "generated_combined_output_bytes": 2097152,
+    "generated_public_output_bytes": 1048576,
+    "future_private_manifest_reads": 1,
+    "future_private_manifest_bytes": 418755,
+    "future_Wrist_metadata_bodies": 1,
+    "future_Wrist_metadata_body_bytes": 2097152,
+    "future_Freewill_network_payload_bytes": 6442450944,
+    "future_Wrist_network_payload_bytes": 2147483648,
+    "future_combined_network_payload_bytes": 8589934592,
+    "future_incremental_disk_bytes": 8589934592,
+    "future_minimum_free_disk_bytes": 12884901888,
+    "future_private_derivative_bytes": 67108864,
+    "freewill_local_header_reserve_formula": "compressed_size + 30 + UTF8_member_name_bytes + 65535",
+    "fallback_cohort_reduction_or_budget_increase_allowed": false
+  },
+  "generated_fixture_contract": {
+    "Freewill_inventory_rows": 1227,
+    "Wrist_metadata_rows": 55,
+    "Freewill_eligible_subjects": 19,
+    "Wrist_eligible_subjects": 45,
+    "selected_subjects_per_source": 12,
+    "selected_Freewill_run_bundles": 72,
+    "selected_Freewill_core_members": 288,
+    "selected_Wrist_archives": 12,
+    "irrelevant_row_order_replays": 2,
+    "real_path_or_network_operations": 0,
+    "event_target_signal_model_or_score_operations": 0
+  },
+  "privacy_contract": {
+    "private_output_mode": "0600",
+    "private_output_fields": [
+      "source_id", "subject_id", "session_id", "run_id", "split_role",
+      "member_or_archive_name", "file_id_if_available", "local_header_offset_if_available",
+      "CRC32_if_available", "compressed_size", "uncompressed_size", "source_hashes"
+    ],
+    "public_selected_subject_ids_allowed": true,
+    "public_counts_bytes_split_totals_and_hashes_allowed": true,
+    "public_Freewill_member_names_offsets_or_CRC_allowed": false,
+    "public_Wrist_file_ids_archive_names_or_URLs_allowed": false,
+    "public_local_paths_raw_bodies_or_raw_headers_allowed": false,
+    "inspect_accepts_private_manifest": false,
+    "overwrite_allowed": false
+  },
+  "interface": {
+    "future_module": "neurodecodekit.datasets.marc1_pilot_selection",
+    "generated_commands": ["plan", "qualify", "inspect"],
+    "execute_command_available": false,
+    "real_path_URL_host_or_credential_argument_available": false,
+    "participant_seed_size_or_split_override_available": false,
+    "archive_open_target_model_or_score_argument_available": false
+  },
+  "required_mutations": [
+    "contract_or_artifact_hash_mismatch",
+    "private_inventory_hash_mismatch",
+    "private_inventory_row_count_mismatch",
+    "private_inventory_unknown_field",
+    "private_inventory_duplicate_member",
+    "private_inventory_symlink_or_wrong_mode",
+    "unsafe_or_non_NFC_member_path",
+    "encrypted_or_unsupported_member",
+    "directory_masquerading_as_regular_member",
+    "malformed_Freewill_BIDS_path",
+    "Freewill_path_filename_identity_mismatch",
+    "Freewill_session_ineligible",
+    "Freewill_run_bundle_incomplete",
+    "Freewill_duplicate_companion_suffix",
+    "Freewill_cross_subject_or_cross_run_companion",
+    "Freewill_sampling_tier_ineligible",
+    "Freewill_single_session_participant_selected",
+    "Freewill_selected_participant_count_drift",
+    "Freewill_participant_hash_rank_drift",
+    "participant_chosen_by_member_size_or_CRC",
+    "run_chosen_by_member_size_or_CRC",
+    "Freewill_run_count_drift",
+    "Freewill_fit_heldout_overlap",
+    "Freewill_session_role_reversal",
+    "Freewill_unregistered_third_session_used",
+    "Freewill_source_or_joint_cap_exceeded",
+    "Wrist_metadata_identity_or_count_mismatch",
+    "Wrist_selected_archive_missing_duplicate_or_malformed",
+    "Wrist_participant_hash_rank_drift",
+    "Wrist_run_split_or_trial_count_drift",
+    "Wrist_source_or_joint_cap_exceeded",
+    "event_target_or_quality_content_read_attempt",
+    "local_header_member_payload_or_archive_open_attempt",
+    "public_Freewill_member_field_leak",
+    "public_Wrist_file_field_or_local_path_leak",
+    "output_symlink_overwrite_cap_or_replay_mismatch"
+  ],
+  "router": {
+    "ordered_refusal_routes": [
+      "MARC1PSG-F00-contract-artifact-or-green-proof-mismatch",
+      "MARC1PSG-F01-private-inventory-identity-schema-count-or-mode-failure",
+      "MARC1PSG-F02-path-member-or-run-bundle-failure",
+      "MARC1PSG-F03-eligibility-rank-participant-run-or-split-failure",
+      "MARC1PSG-F04-source-or-joint-byte-cap-failure",
+      "MARC1PSG-F05-Wrist-metadata-or-participant-archive-failure",
+      "MARC1PSG-F06-privacy-output-overwrite-resource-or-replay-failure"
+    ],
+    "success_route": "MARC1PSG-R1",
+    "success_is_scientific_result": false,
+    "success_authorizes_private_inventory_or_Wrist_metadata_access": false,
+    "success_authorizes_member_acquisition_or_analysis": false
+  },
+  "acceptance_gates": [
+    "green_MARC1CD_R1_identity",
+    "exact_DOI_bound_participant_ranks",
+    "exact_1227_Freewill_and_55_Wrist_rows",
+    "exact_12_subjects_per_source",
+    "exact_72_Freewill_bundles_and_288_members",
+    "exact_cross_day_and_run_heldout_splits",
+    "irrelevant_row_order_invariance",
+    "size_and_CRC_independent_selection",
+    "zero_event_target_local_header_payload_and_signal_reads",
+    "source_and_joint_caps",
+    "private_and_public_output_separation",
+    "all_36_mutations_refused",
+    "byte_identical_deterministic_replay",
+    "resource_and_output_caps",
+    "all_real_neural_model_score_and_claim_counters_zero"
+  ],
+  "authorization_flags": {
+    "generated_implementation_authorized_before_green_contract": false,
+    "real_private_Freewill_manifest_read_authorized": false,
+    "public_Wrist_metadata_request_authorized": false,
+    "real_participant_or_member_selection_authorized": false,
+    "local_header_or_member_payload_read_authorized": false,
+    "payload_acquisition_authorized": false,
+    "signal_event_target_or_quality_read_authorized": false,
+    "derivative_or_split_creation_authorized": false,
+    "model_training_inference_prediction_or_score_authorized": false,
+    "provider_language_model_or_hardware_authorized": false,
+    "release_or_scientific_claim_upgrade_authorized": false
+  },
+  "access_counters": {
+    "private_Freewill_manifest_reads": 0,
+    "private_Freewill_manifest_bytes": 0,
+    "public_Wrist_metadata_requests": 0,
+    "public_Wrist_metadata_bytes": 0,
+    "real_participant_selections": 0,
+    "real_member_or_archive_selections": 0,
+    "local_header_reads": 0,
+    "member_or_archive_payload_reads": 0,
+    "network_payload_bytes": 0,
+    "signal_sample_reads": 0,
+    "event_target_label_quality_or_onset_reads": 0,
+    "real_derivative_rows": 0,
+    "training_or_parameter_update_fits": 0,
+    "model_inference_calls": 0,
+    "prediction_sets_or_freezes": 0,
+    "target_deliveries_or_scores": 0,
+    "provider_or_language_model_calls": 0,
+    "hardware_operations": 0,
+    "retries_or_reruns": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "next_gate": {
+    "generated_implementation_requires_this_contract_green": true,
+    "generated_closeout_requires_exact_implementation_green": true,
+    "real_selection_requires_later_all_false_Tier_C_packet": true,
+    "real_selection_requires_fresh_packet_bound_decision": true,
+    "member_acquisition_eligible_after_generated_success": false,
+    "current_maintainer_message_is_retroactive_real_selection_authority": false
+  },
+  "claim_boundary": {
+    "engineering_capability_if_successful": "A deterministic target-free selector can choose a scientifically meaningful two-axis pilot under an eight-GiB ceiling without using signal quality or outcome information.",
+    "scientific_claim_not_established": "Generated selection metadata contain no human neural signal model prediction or score and establish no neural effect or decoding capability."
+  }
+}

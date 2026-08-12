@@ -7922,3 +7922,39 @@ downloading the archive or opening a member.
 Scientific claim not established: archive metadata contain no neural signal,
 event, target, model prediction, or score, so this result establishes no
 neural effect or decoding capability.
+
+## 2026-08-12 - MARC1-P1 Pilot Selection Preregistration
+
+- Bound the contract to green `MARC1CD-R1` commit `7aee128`, CI
+  `31522799476`, Base Python job `93883797813`, Optional Neuro Readers job
+  `93883797816`, and the exact public/private inventory hashes.
+- Froze 12 participants per axis using a NUL-separated DOI-bound SHA-256 rank.
+  Size, CRC, signal quality, event count, target, and outcome data cannot
+  affect cohort or run selection.
+- Froze Freewill session 1 as fit and session 2 as held out, using the first
+  three complete numeric run bundles in each: 72 bundles and 288 opaque core
+  members across 12 people.
+- Froze Wrist runs 1-6 as fit and 7-8 as held out across 12 participant
+  archives: 2,880 expected fit and 960 expected held-out trials.
+- Capped future network and incremental disk at 8 GiB, with a 6/2-GiB source
+  allocation, 12-GiB free-space floor, 64-MiB derivative cap, and no cohort or
+  budget fallback.
+- Froze a 1,227-row Freewill plus 55-row Wrist generated qualification, 36
+  refusal mutations, private/public output separation, and zero real/neural/
+  target/model/score counters.
+- Added 17 contract invariants. The dependency-light suite passes 2,365 tests
+  with 204 expected skips in 18.273 seconds and 248,332,288-byte external
+  maximum RSS. The optional-neuro suite passes 2,436 tests with 35 expected
+  skips in 54.977 seconds and 696,320,000-byte external maximum RSS. Both are
+  exactly 17 tests above the green live-inventory baseline with no new skip.
+- Ruff over all source and test files, compilation, all 170 registry JSON
+  parses, and `git diff --check` pass. No private manifest, public dataset
+  metadata, member, signal, event, target, model, or score was accessed.
+
+Engineering capability specified: a deterministic target-free selector can
+choose a scientifically meaningful two-axis pilot under an eight-GiB ceiling
+without using signal quality or outcome information.
+
+Scientific claim not established: this frozen selector contains no human
+neural signal, prediction, or score and establishes neither a neural effect
+nor thought-to-text.

@@ -1251,3 +1251,16 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   MARC1-CD1A is consumed with no retry or rerun. Any member-level selection or
   access requires a new prospective contract and Tier C decision; no neural
   or decoding evidence was produced.
+
+  That next prospective contract is now
+  `docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_PREREGISTRATION.md` with
+  machine registry
+  `registries/marc1_privacy_preserving_pilot_selection_contract.v0.json`.
+  `MARC1-P1` freezes 12 participants per source by DOI-bound SHA-256 rank,
+  72 Freewill run bundles and 288 opaque core members, 12 Wrist participant
+  archives, a Freewill session-1/session-2 cross-day split, a Wrist runs-1-6/
+  runs-7-8 split, and an 8-GiB joint ceiling. Selection may not use member
+  size, CRC, event count, target, quality, or outcome information. The current
+  gate is generated implementation only after this exact contract is remotely
+  green; the sealed inventory, Wrist metadata, payloads, signals, targets,
+  models, and scores remain closed.

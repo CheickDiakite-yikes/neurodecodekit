@@ -687,6 +687,25 @@ selection lane requires a separately frozen prospective contract and Tier C
 decision. This metadata result establishes no neural effect or decoding
 capability.
 
+Read `docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_PREREGISTRATION.md`
+and `registries/marc1_privacy_preserving_pilot_selection_contract.v0.json`.
+`MARC1-P1` is the prospective Task 4 selector. It freezes 12 participants per
+axis using a NUL-separated DOI-bound SHA-256 rank before any private member row
+or Wrist metadata is inspected. Freewill selects the first three complete run
+bundles from `ses-01` as fit and `ses-02` as held out: 72 bundles and 288 core
+members total. Wrist selects 12 participant archives, with runs 1-6 fit and
+7-8 held out. The joint future network and disk ceilings are 8 GiB. Size, CRC,
+event count, target, quality, and outcome information cannot affect selection.
+
+The exact contract must be committed, pushed, and both jobs green before a
+generated-only `plan`/`qualify`/`inspect` implementation may begin. Real
+private-manifest reads, Wrist metadata, participant/member selection, local
+headers, payloads, signals, events, targets, models, and scores remain closed.
+After a green generated closeout, prepare one all-false Tier C packet and stop
+for a fresh packet-bound decision. Movement evidence may establish a bounded
+sensor-level claim but never thought-to-text; the latter remains a separate
+language-specific evidence target.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

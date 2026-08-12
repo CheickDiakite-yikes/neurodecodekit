@@ -3193,3 +3193,37 @@ downloading the archive or opening a member.
 Scientific claim not established: archive metadata contain no neural signal,
 event, target, model prediction, or score, so this result establishes no
 neural effect or decoding capability.
+
+## 2026-08-12 MARC1-P1 Pilot Selection Contract Handoff
+
+Read `docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_PREREGISTRATION.md`,
+`registries/marc1_privacy_preserving_pilot_selection_contract.v0.json`, and
+`tests/test_marc1_privacy_preserving_pilot_selection_preregistration.py`.
+
+The contract is anchored to green `MARC1CD-R1` commit `7aee128` and freezes a
+12-person cohort on each axis using DOI-bound SHA-256 ranks. Freewill uses the
+first three complete session-1 bundles as fit and session-2 bundles as held
+out: 72 bundles and 288 opaque members. Wrist uses runs 1-6 as fit and 7-8 as
+held out across 12 participant archives. Joint future network and disk are
+capped at 8 GiB with no substitution or budget fallback.
+
+Selection is forbidden from using size or CRC except for refusal after the
+cohort and runs are fixed. It cannot read an event, target, bad-trial flag,
+movement onset, signal, quality value, or outcome. Exact member/archive fields
+stay private; preregistered subject IDs and aggregate hashes/counts may be
+public.
+
+Seventeen contract invariants pass. The complete dependency-light suite passes
+2,365 tests with 204 expected skips in 18.273 seconds and 248,332,288-byte
+external maximum RSS. The optional-neuro suite passes 2,436 tests with 35
+expected skips in 54.977 seconds and 696,320,000-byte external maximum RSS.
+Ruff, compilation, 170 registry parses, and diff checks pass.
+
+Immediate next gate: commit and push the exact contract and require both CI
+jobs green. Only then implement `marc1_pilot_selection` with generated fixtures
+and `plan`, `qualify`, and aggregate `inspect` commands. Do not read the sealed
+Freewill inventory or request Wrist metadata. A later all-false Tier C packet
+and fresh decision are mandatory before either real metadata operation.
+
+This lane targets a first confound-resistant EEG effect. Thought-to-text is a
+separate language-specific goal and must not be inferred from movement data.

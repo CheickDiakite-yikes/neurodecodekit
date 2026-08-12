@@ -6365,3 +6365,40 @@ target, model prediction, or score and cannot establish a neural effect.
 Evidence: `docs/MARC_1_FREEWILL_CENTRAL_DIRECTORY_LIVE_RESULT.md`,
 `registries/marc1_freewill_central_directory_live_result.v0.json`, and
 `tests/test_marc1_freewill_central_directory_live_result.py`.
+
+## 0190 - Freeze A Twelve-Person Two-Axis Pilot Before Inventory Inspection
+
+Decision: use 12 participants per MARC-1 axis, selected by a NUL-separated
+DOI-bound SHA-256 rank before any private archive row, Wrist metadata row,
+event, target, signal-quality value, or outcome is inspected. Twelve supports
+an exhaustive 4,096-assignment participant sign-flip analysis and matches the
+WO9R confirmation cohort without approaching the full source archives.
+
+Split decision: for Freewill, use the first three complete numeric run bundles
+from session 1 as fit and session 2 as held out, yielding 36 fit and 36 held-
+out bundles across 12 people. For Wrist, use runs 1-6 as fit and 7-8 as held
+out, yielding 72 fit and 24 held-out runs. Forbid row-random splits,
+substitution, backfill, post-hoc cohort reduction, and participant or run
+selection by size or CRC.
+
+Storage decision: cap later Freewill and Wrist network allocations at 6 GiB
+and 2 GiB, with 8 GiB combined network and incremental disk, 12 GiB minimum
+free space, one thread/worker/job, and no fallback budget expansion. Metadata-
+only selection must remain below 2 MiB private and 1 MiB public output.
+
+Privacy decision: generated and future real selectors keep exact member and
+archive identities private and publish only preregistered participant IDs,
+aggregate counts, byte totals, split totals, hashes, warnings, and route. The
+selector has no event parser, neuro reader, extractor, target, model, or
+scorer.
+
+Boundary: commit, push, and green this exact contract before generated-only
+implementation. A generated success does not authorize the sealed Freewill
+inventory read, Wrist metadata request, payload acquisition, signal/event/
+target access, training, inference, scoring, or a scientific claim. Movement
+evidence cannot establish thought-to-text.
+
+Evidence:
+`docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_PREREGISTRATION.md`,
+`registries/marc1_privacy_preserving_pilot_selection_contract.v0.json`, and
+`tests/test_marc1_privacy_preserving_pilot_selection_preregistration.py`.

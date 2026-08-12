@@ -1331,3 +1331,19 @@ private inventory is inspected or any member is accessed. Every signal,
 target, model, score, replication, and scientific-promotion step remains
 closed. This result is a cheaper path to a future experiment, not neural
 evidence.
+
+Task 4 is now prospectively frozen as `MARC1-P1` in
+`docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_PREREGISTRATION.md` and
+`registries/marc1_privacy_preserving_pilot_selection_contract.v0.json`.
+Twelve participants per axis are selected by a NUL-separated DOI-bound
+SHA-256 rank before private inventory or Wrist metadata access. Freewill uses
+the first three complete runs in session 1 for fit and session 2 for held-out
+cross-day evaluation, yielding 72 run bundles and 288 opaque core members.
+Wrist uses runs 1-6 for fit and 7-8 for held-out evaluation across 12
+participant archives. The joint future network and disk caps are 8 GiB.
+
+Next gate: commit, push, and green the exact contract; then implement and
+qualify only a generated 1,227-row Freewill inventory plus 55-row Wrist
+metadata fixture under 36 refusals. Real selection still requires a later
+all-false Tier C packet and fresh decision. No target, quality, outcome,
+private member row, payload, signal, model, or score may be used at this stage.
