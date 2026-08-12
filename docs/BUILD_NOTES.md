@@ -8651,3 +8651,36 @@ authority before work and bind all writes to the held parent capability.
 
 Scientific claim not established: this contract opens no live metadata,
 payload, neural signal, target, model, prediction, score, or language result.
+
+## 2026-08-12 - MARC1-OP1 Output-Capability Implementation
+
+- Began only after contract `baade51` passed Base Python job `94115807028`
+  and Optional Neuro Readers job `94115807008` in CI `31597291352`.
+- Added one dependency-free `plan`/`preflight`/`qualify`/`inspect` module.
+  Capability acquisition is the first call in both operational commands; the
+  consumed pagination module is hash-verified and defer-imported afterward.
+- Bound every ancestor and held parent device/inode/type, rechecked output
+  absence twice, wrote exactly two allowlisted files parent-relatively with
+  `O_EXCL | O_NOFOLLOW`, inspected only the public file, and cleaned up through
+  held descriptors.
+- The consumed qualifier, old output guard, CLI, and source modification all
+  remained at zero. Exact source SHA-256 stayed
+  `3dc5f4fdf5792040f153797d708cf27cd8ece8e4dc40b3a0eeaba86071724228`.
+- Final nonregistered `MARC1OP-G1` passed six accepted cases, 32 refusals, and
+  all 20 gates using 1,019,776 generated input bytes and 184,173 temporary
+  output bytes in 0.095795 seconds at 33,767,424-byte reported peak RSS. Exact
+  cleanup passed.
+- Twenty-four behavior tests, twelve implementation-record tests, and all 587
+  MARC tests pass. Complete base is 2,726 tests/204 skips in 22.538 seconds at
+  254,607,360-byte peak RSS; optional is 2,797 tests/35 skips in 61.192 seconds
+  at 738,394,112-byte external peak RSS. The delta is 36 tests and zero skips.
+- Ruff, compilation, all 191 registry parses, CLI help and four commands,
+  artifact replay, and `git diff --check` pass. The registered closeout path
+  was not operated on; all live/private, neural, target, model, score, provider,
+  hardware, retry, other-project, and claim counters remain zero.
+
+Engineering capability added: safe output authority now precedes generated
+experiment work and binds every temporary write and cleanup to one held parent.
+
+Scientific claim not established: no live metadata, neural signal, target,
+prediction, score, language decoding, or thought-to-text evidence was added.

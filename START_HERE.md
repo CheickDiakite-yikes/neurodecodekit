@@ -1530,3 +1530,15 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   its source, use absolute-path writes, contact a source, or expose payload,
   target, model, or score behavior. Next: green this exact contract before
   implementation. No scientific evidence changed.
+
+  Contract `baade51` passed Base Python job `94115807028` and Optional Neuro
+  Readers job `94115807008` in CI `31597291352` before the
+  [output-capability implementation](docs/MARC_1_OUTPUT_CAPABILITY_RECOVERY_IMPLEMENTATION.md).
+  The additive standard-library wrapper acquires a held, no-follow parent
+  capability before any repository or fixture work, then uses only relative
+  exclusive writes and relative cleanup. Development `MARC1OP-G1` passed all
+  six accepted cases, 32 refusals, and 20 gates in 0.096 seconds at 33,767,424-
+  byte reported RSS; all 184,173 temporary output bytes were removed. The
+  registered path remains untouched until implementation CI is green. No live
+  metadata, neural signal, target, model, score, or claim changed; this is the
+  same route toward cue-resistant neural evidence and held-out language.

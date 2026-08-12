@@ -3758,3 +3758,26 @@ Immediate next gate: verify, commit, push, and green this exact contract. Only
 then implement the generated/mock wrapper. Do not stat the registered path,
 run a probe, import the consumed module eagerly, contact a dataset endpoint, or
 access any payload. The scientific objective and claim boundary are unchanged.
+
+## 2026-08-12 MARC1-OP1 Generated Implementation Handoff
+
+Contract `baade51146309bd3b3fa6c1750a36482669a0ff2` passed Base Python
+job `94115807028` and Optional Neuro Readers job `94115807008` in CI
+`31597291352` before implementation. Read
+`docs/MARC_1_OUTPUT_CAPABILITY_RECOVERY_IMPLEMENTATION.md`,
+`registries/marc1_output_capability_recovery_implementation.v0.json`, and its
+two implementation test modules.
+
+The additive dependency-free wrapper acquires the output capability first,
+holds and revalidates parent device/inode/type, defer-imports only hash-bound
+pure pagination helpers, writes two files exclusively through held directory
+descriptors, inspects only the public file, and cleans up exactly. Development
+`MARC1OP-G1` passed six accepted cases, 32 refusals, and 20 gates in 0.095795
+seconds at 33,767,424-byte reported RSS with 184,173 temporary bytes and zero
+real/private or neural/model operations. Thirty-six new tests pass.
+
+Immediate next gate: commit, push, and obtain both green CI jobs for this exact
+implementation. Only then operate once on the exact registered `/private/tmp`
+path: one path-only preflight, followed only after `MARC1OP-P0` by one generated
+qualifier. Any refusal parks without retry. Do not contact Figshare, open a
+private root or payload, or infer a scientific result. This is the same path.

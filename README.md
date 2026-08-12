@@ -379,6 +379,7 @@ negative result and S25 is never repurposed for calibration.
 | MARC1-PG1 generated pagination lane | Development: 4/4 accepted cases, 41/41 refusals, 18/18 gates. Registered closeout: route `MARC1PG-F07`, 0 output bytes, 0 real/network bytes | Exact implementation `2c98a2a` passed CI `31593790492`; the sole closeout then refused a symlink output parent in 0.17 sec at 30,064,640-byte external peak RSS and is consumed without retry | Preserves a real process defect: output preflight happened after fixture construction. A new generated recovery must move it first; no live pagination or scientific result exists |
 | MARC1-OP1 output-capability research | One 672-byte candidate policy; held parent descriptor; device/inode binding; ancestor no-follow checks; parent-relative create/write/cleanup; 19 required pre-capability refusals; 0 fixture/network/real operations | Green consumed result `a4dcaea` / CI `31594881048` precedes this artifact-only design | Makes safe output authority the first future operation and refuses platforms that cannot enforce it; implementation and another generated run remain closed until their own green milestones |
 | MARC1-OP1 generated recovery contract | 6 accepted cases; 32 refusals; 10 routes; 20 gates; one exact `/private/tmp` path probe; one conditional generated qualifier; 0 current operations | Green research `d02830b` / CI `31595996923` precedes the frozen contract | Requires capability acquisition before any repository/fixture work, bans the consumed qualifier, and preserves exact pagination/cohort identity; implementation remains closed until contract CI |
+| MARC1-OP1 output-capability implementation | 1,019,776 generated input bytes; 184,173 temporary output bytes; 6/6 accepted cases; 32/32 refusals; 20/20 gates; exact cleanup; 0 real/network bytes | Green contract `baade51` / CI `31597291352` preceded development `MARC1OP-G1`, which ran in 0.096 sec at 33.8 MB reported RSS; 36 new tests | Proves generated pagination and selection can run only after held output authority and leave no artifact; the registered probe awaits implementation CI and no neural/language claim changed |
 
 ### Real-Data Scientific Scorecard
 
@@ -1371,6 +1372,16 @@ Read this before interpreting any number in the repository.
   one exact path-only probe, and one conditional qualifier. The future wrapper
   cannot import the consumed pagination module eagerly, call its qualifier, or
   modify it. Every current access and authorization flag remains zero/false.
+  Contract `baade51` passed Base Python job `94115807028` and Optional Neuro
+  Readers job `94115807008` in CI `31597291352` before the
+  [MARC1-OP1 implementation](docs/MARC_1_OUTPUT_CAPABILITY_RECOVERY_IMPLEMENTATION.md).
+  Its capability acquisition is the first call in `preflight` and `qualify`;
+  it holds parent device/inode identity through two exclusive relative writes,
+  one public-only inspection, and exact cleanup. Development `MARC1OP-G1`
+  passed six accepted cases, 32 refusals, and 20 gates using 184,173 temporary
+  bytes and zero live/private, neural, target, model, or score operations. The
+  exact registered path remains untouched until this implementation is pushed
+  and both CI jobs are green. This remains the same scientific path.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

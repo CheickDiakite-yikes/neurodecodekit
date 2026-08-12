@@ -1037,6 +1037,29 @@ not call `qualify_generated_pagination`, `_assert_new_output_directory`, or
 source/payload/model interface. Registered-path access remains closed until an
 exact generated implementation is separately green.
 
+Contract `baade51146309bd3b3fa6c1750a36482669a0ff2` passed Base Python
+job `94115807028` and Optional Neuro Readers job `94115807008` in CI
+`31597291352` before implementation. Read
+`docs/MARC_1_OUTPUT_CAPABILITY_RECOVERY_IMPLEMENTATION.md` and
+`registries/marc1_output_capability_recovery_implementation.v0.json`. The
+additive standard-library wrapper acquires and holds output authority before
+repository or fixture work, exercises six accepted cases and 32 refusals,
+preserves the exact pagination/selection identity, writes exactly two files
+through held descriptors, inspects only the public file, and cleans up exactly.
+Final development `MARC1OP-G1` used 1,019,776 generated input bytes and 184,173
+temporary output bytes in 0.095795 seconds at 33,767,424-byte reported RSS;
+all 20 gates and 36 new tests pass, and every real/private/neural/model counter
+is zero.
+
+Commit, push, and obtain both green CI jobs for this exact implementation
+before touching the registered output path. After green proof, run exactly one
+path-only preflight at
+`/private/tmp/neurodecodekit-marc1op1-registered-closeout-20260812`; only
+`MARC1OP-P0` opens exactly one generated qualifier. Any refusal consumes and
+parks the lane. Do not contact Figshare, access payload/signal/target/model, or
+prepare a Tier C live packet before a green generated result. This remains the
+same thought-to-text path, not a pivot.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

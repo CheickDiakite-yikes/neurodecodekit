@@ -1606,3 +1606,18 @@ Next gate: commit, push, and green the contract, then implement only the
 generated/mock wrapper. Registered-path access, another generated closeout,
 live metadata, payload, and scientific claims remain closed. Task 4 remains on
 the same control-attribution to held-out-language path.
+
+Contract `baade51` passed both required jobs in CI `31597291352` before the
+MARC1-OP1 wrapper was implemented. Development `MARC1OP-G1` now passes six
+accepted cases, 32 refusals, and 20 gates while preserving the exact 55-row
+inventory, 12+12 target-free selection, split identity, and consumed source.
+It used 1,019,776 generated input bytes and 184,173 temporary output bytes in
+0.095795 seconds at 33,767,424-byte reported RSS, then removed both files and
+the output directory. Thirty-six new tests pass and every live/private,
+payload, signal, target, model, score, retry, and claim counter is zero.
+
+Next gate: commit, push, and green the exact implementation. Then run one
+registered path-only probe and, only after `MARC1OP-P0`, one registered
+generated qualifier. Task 4 remains incomplete on the same route to a cue-
+resistant neural positive control and held-out language decoding; no scientific
+result was added.

@@ -7057,3 +7057,34 @@ Evidence:
 `docs/MARC_1_OUTPUT_CAPABILITY_RECOVERY_PREREGISTRATION.md`,
 `registries/marc1_output_capability_recovery_contract.v0.json`, and
 `tests/test_marc1_output_capability_recovery_contract.py`.
+
+## 0211 - Implement Capability-First Generated Recovery
+
+Evidence-order decision: begin implementation only after frozen contract
+`baade51` passed Base Python job `94115807028` and Optional Neuro Readers job
+`94115807008` in CI `31597291352`.
+
+Composition decision: add a new standard-library wrapper and leave consumed
+MARC1-PG1 byte-identical. Defer-import its hash-bound pure helpers only after
+capability acquisition; never call its qualifier, output guard, or CLI.
+
+Capability decision: make acquisition the first call in `preflight` and
+`qualify`, attach zero-work snapshots to refusals, hold and revalidate parent
+device/inode/type, and permit only two parent-relative exclusive no-follow
+writes followed by public-only inspection and exact relative cleanup.
+
+Qualification decision: accept development `MARC1OP-G1` only after all six
+accepted cases, 32 refusals, 20 gates, deterministic replay, unchanged 55-row
+and 12+12 selection identity, resource caps, and zero forbidden counters pass.
+
+Sequence decision: green the exact implementation before one registered path-
+only probe. Only `MARC1OP-P0` opens one registered generated qualifier; any
+failure parks without retry. Live metadata remains a later Tier C decision.
+
+Path decision: this is another engineering rung on the same path to controlled
+neural attribution and held-out language decoding, not a pivot or result.
+
+Evidence:
+`docs/MARC_1_OUTPUT_CAPABILITY_RECOVERY_IMPLEMENTATION.md`,
+`registries/marc1_output_capability_recovery_implementation.v0.json`, and the
+two matching implementation test modules.
