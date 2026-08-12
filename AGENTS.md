@@ -1217,6 +1217,19 @@ jobs for this exact implementation before one registered generated closeout.
 Do not contact a source or touch the consumed root. A future live response
 remains a new Tier C packet and decision.
 
+Exact implementation `feb3b839e879d2a9edcdcfe664c68b3c4ba236d6` then
+passed Base Python job `94188922905` and Optional Neuro Readers job
+`94188922771` in CI `31619037335` before the sole registered generated
+closeout. Read `docs/MARC_1_SOURCE_AWARE_INVENTORY_ATTESTATION_RESULT.md` and
+`registries/marc1_source_aware_inventory_attestation_result.v0.json`.
+`MARC1SA-G1` passed all six routes, 52 refusals, and 25 gates over 732,811
+generated input bytes in 0.053358083 seconds at 27,885,568-byte reported peak
+RSS. It created and removed 109,589 temporary bytes; every real, private,
+payload, neural, target, model, score, retry, rerun, and claim counter stayed
+zero. The closeout is consumed. Green this result before an all-false Tier C
+request; do not contact Figshare, touch the consumed root, or access an archive
+or EEG payload. This remains the same thought-to-text research path.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

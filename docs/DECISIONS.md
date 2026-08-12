@@ -7340,3 +7340,34 @@ Evidence:
 `docs/MARC_1_SOURCE_AWARE_INVENTORY_ATTESTATION_IMPLEMENTATION.md`,
 `registries/marc1_source_aware_inventory_attestation_implementation.v0.json`,
 and the two matching implementation test modules.
+
+## 0221 - Consume Source-Aware Generated Attestation Before A Live Request
+
+Evidence-order decision: run the sole registered generated closeout only after
+exact implementation `feb3b839e879d2a9edcdcfe664c68b3c4ba236d6` passed
+Base Python job `94188922905` and Optional Neuro Readers job `94188922771` in
+CI `31619037335`.
+
+Result decision: accept `MARC1SA-G1` after all six semantic families, 21
+aggregate predicates, seven identity domains, 52 refusals, 25 gates, privacy
+checks, resource caps, one public inspection, and exact cleanup passed. The
+one run used 732,811 generated input and 109,589 temporary output bytes in
+0.053358083 seconds at 27,885,568-byte reported peak RSS.
+
+Honesty decision: record the ephemeral public report SHA-256 as unavailable
+because the minimal CLI did not emit it before exact cleanup. Do not rerun or
+reconstruct it. The deterministic private hash remains bound, and all real,
+private, payload, neural, model, score, retry, and claim counters remain zero.
+
+Consumption decision: the generated closeout is consumed with no retry or
+rerun. Require this aggregate result to become remotely green before preparing
+one all-false Tier C packet for a separately implemented source-aware live
+wrapper. The packet itself cannot authorize a request or payload.
+
+Path decision: this remains the same route from trustworthy multimodal cohort
+through cue-resistant neural evidence and held-out language decoding to
+progressively stronger thought-to-text evidence. It is not a pivot.
+
+Evidence: `docs/MARC_1_SOURCE_AWARE_INVENTORY_ATTESTATION_RESULT.md`,
+`registries/marc1_source_aware_inventory_attestation_result.v0.json`, and
+`tests/test_marc1_source_aware_inventory_attestation_result.py`.

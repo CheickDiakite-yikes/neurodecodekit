@@ -1743,3 +1743,18 @@ URL, dataset path, archive, payload, signal, target, model, or score. Next gate:
 commit, push, and green this exact implementation before one registered
 generated closeout. Task 4 remains active on the same path, and a later public
 metadata response remains a separate Tier C decision.
+
+Exact implementation `feb3b83` passed both required jobs in CI `31619037335`
+before the one registered generated closeout. `MARC1SA-G1` passed all six
+semantic routes, 21 predicates, seven identity domains, 52 refusal cases, and
+25 gates over 732,811 generated input bytes. It created and removed 109,589
+temporary output bytes in 0.053358083 seconds at 27,885,568-byte reported peak
+RSS. Network, payload, real/private input, neural, target, model, score, retry,
+rerun, and claim counters were zero.
+
+The generated closeout is consumed. Next gate: green its aggregate result,
+then prepare one all-false Tier C packet for a new source-aware live metadata
+wrapper and one bounded response. Payload acquisition remains closed. Task 4
+continues on the same path to a cue-resistant neural positive control and
+held-out language decoding; no scientific result was added by this fixture
+closeout.

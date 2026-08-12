@@ -8980,3 +8980,41 @@ evidence.
 Scientific claim not established: no real metadata, neural signal, target,
 model, score, language decoding, or thought-to-text capability was accessed or
 established.
+
+## 2026-08-12 - MARC1-SA1 Registered Generated Closeout
+
+- Exact implementation `feb3b839e879d2a9edcdcfe664c68b3c4ba236d6`
+  passed Base Python job `94188922905` and Optional Neuro Readers job
+  `94188922771` in CI `31619037335` before execution.
+- Consumed exactly one fresh-process, fixture-only qualification under one CPU
+  thread, one worker, one numerical job, zero network, and zero payload bytes.
+- `MARC1SA-G1` passed all six semantic families, 21 predicates, seven identity
+  domains, 52 refusals, and 25 acceptance gates over 732,811 generated input
+  bytes.
+- The module created 95,392 private and 14,197 public bytes, inspected the
+  aggregate once, and removed both mode-`0600` files plus its directory. The
+  caller removed its empty invocation parent; retained output files are zero.
+- Runtime was 0.053358083 seconds at 27,885,568-byte reported peak RSS;
+  external wall was 0.13 seconds at 27,983,872-byte maximum RSS. Generated
+  output was 109,589 bytes against the 2-MiB combined and 4-MiB disk caps.
+- The CLI did not emit the ephemeral public report SHA-256 before exact
+  cleanup. It is recorded as unavailable and was not reconstructed by rerun.
+- Dataset, network, private/consumed root, archive, payload, signal, channel,
+  event, target, model, training, prediction, score, provider, hardware,
+  other-project, retry, rerun, release, and claim counters are zero.
+- Eleven result tests pass. The focused source-aware slice passes 53 tests and
+  36 subtests; all MARC tests pass 733 tests and 801 subtests. The complete
+  dependency-light suite passes 2,908 tests with 35 skips and 1,614 subtests
+  in 70.37 seconds at 701,775,872-byte external maximum RSS. The isolated
+  optional-neuro suite passes 2,896 tests with 47 skips and 1,621 subtests in
+  77.47 seconds at 589,152,256-byte external maximum RSS. Both comparable
+  complete suites add exactly 11 result tests and zero skips over the green
+  implementation baseline.
+
+Engineering capability added: the registered generated closeout proves that
+source-aware schema handling, optional checksum provenance, aggregate drift
+localization, privacy controls, and resource caps replay together end to end.
+
+Scientific claim not established: no live metadata, EEG payload, neural
+signal, target, model prediction, score, language decoding, or thought-to-text
+result was produced.

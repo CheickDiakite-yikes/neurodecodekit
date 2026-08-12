@@ -1640,3 +1640,13 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   created then removed 109,589 output bytes in 0.052419791 seconds at
   27,426,816-byte peak RSS. Next: green this exact implementation before one
   registered generated closeout. Live metadata and payload remain closed.
+
+  Exact implementation `feb3b83` then passed Base Python job `94188922905`
+  and Optional Neuro Readers job `94188922771` in CI `31619037335` before the
+  [registered MARC1-SA1 generated closeout](docs/MARC_1_SOURCE_AWARE_INVENTORY_ATTESTATION_RESULT.md).
+  Its one `MARC1SA-G1` run passed all six family routes, 52 refusals, and 25
+  gates in 0.053358083 seconds at 27,885,568-byte reported peak RSS. It used
+  732,811 generated input bytes, created and removed 109,589 temporary bytes,
+  and accessed zero real metadata, payload, signal, target, model, or score.
+  The generated closeout is consumed. A new source-aware live wrapper and one
+  response require a separately green all-false Tier C packet and decision.

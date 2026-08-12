@@ -4000,3 +4000,30 @@ generated closeout. Do not contact Figshare, inspect the consumed root, or
 access any archive, payload, signal, target, model, prediction, or score. A
 future live response remains a new Tier C packet and decision. The research
 path is unchanged.
+
+## 2026-08-12 MARC1-SA1 Registered Generated Result Handoff
+
+Implementation `feb3b839e879d2a9edcdcfe664c68b3c4ba236d6` passed Base
+Python job `94188922905` and Optional Neuro Readers job `94188922771` in CI
+`31619037335` before the sole generated closeout. Read
+`docs/MARC_1_SOURCE_AWARE_INVENTORY_ATTESTATION_RESULT.md`, its result
+registry, and result test.
+
+The one fresh-process `MARC1SA-G1` run passed six family routes, 21 predicates,
+seven hashes, 52 refusals, and 25 gates. It consumed 732,811 generated input
+bytes and 109,589 temporary output bytes in 0.053358083 seconds at 27,885,568-
+byte reported peak RSS. Both mode-`0600` outputs and the invocation directory
+were removed. The closeout is consumed with no retry or rerun. Every live,
+private, payload, neural, target, model, score, and claim counter is zero.
+
+Eleven result tests, 53 focused tests plus 36 subtests, and all 733 MARC tests
+plus 801 subtests pass. The complete dependency-light suite passes 2,908 tests
+with 35 skips; the isolated optional-neuro suite passes 2,896 with 47 skips.
+
+Immediate next gate: test, commit, push, and green this aggregate result. Only
+after that proof may Tier A work prepare one all-false Tier C packet for a new
+source-aware live wrapper and one bounded public metadata response. Do not
+contact Figshare, touch the consumed root, or access an archive or EEG payload
+from this result. The path remains cohort integrity, cue-resistant neural
+positive control, held-out language decoding, then stronger thought-to-text
+evidence.
