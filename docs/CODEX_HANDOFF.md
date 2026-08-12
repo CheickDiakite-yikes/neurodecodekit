@@ -3831,3 +3831,25 @@ Figshare from the request alone.
 
 This is a cohort-integrity step on the same path to a cue-resistant neural
 positive control and held-out language decoding, not a pivot.
+
+## 2026-08-12 MARC1-LM1 Packet-Bound Decision Handoff
+
+Green request `4d3eb19` passed CI `31603530015` with Base Python job
+`94136577454` and Optional Neuro Readers job `94136577639`. The maintainer then
+sent the exact 76-byte instruction `approved, continue, achieve a scientific
+claim, achieve thought to text 😎`.
+
+Read `docs/MARC_1_PAGINATED_LIVE_METADATA_AUTHORIZATION_DECISION.md`,
+`registries/marc1_paginated_live_metadata_authorization_decision.v0.json`, and
+its test. The decision binds only the green packet's one-response, 2 MiB,
+zero-payload scope. It is ineffective until its own commit is pushed and both
+CI jobs are green.
+
+Thirteen decision, 26 combined, 625 MARC, 2,764 base, and 2,835 optional tests
+pass locally. Every real/private/network/neural/target/model/score/claim
+counter is zero.
+
+Next: commit, push, and green the decision. Then implement only the additive
+generated/mock wrapper. Commit, push, and green that exact wrapper before one
+registered path or Figshare operation. Do not infer payload access or a
+scientific outcome from the user's aspirational wording.

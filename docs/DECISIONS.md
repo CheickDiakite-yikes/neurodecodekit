@@ -7152,3 +7152,29 @@ Evidence:
 `docs/MARC_1_PAGINATED_LIVE_METADATA_AUTHORIZATION_PACKET.md`,
 `registries/marc1_paginated_live_metadata_authorization_request.v0.json`, and
 `tests/test_marc1_paginated_live_metadata_authorization_request.py`.
+
+## 0214 - Bind The Fresh MARC1-LM1 Short Approval
+
+Eligibility decision: accept short form only because `MARC1-LM1` was the sole
+active Tier C packet, request `4d3eb19` passed both jobs in CI `31603530015`,
+and Codex identified its exact one-response, 2 MiB, zero-payload boundary before
+the maintainer replied.
+
+Quotation decision: preserve the exact 76-byte instruction `approved,
+continue, achieve a scientific claim, achieve thought to text 😎` and its
+SHA-256. Do not fabricate the packet's long scope as a user utterance.
+
+Scope decision: authorize generated/mock wrapper implementation only after
+this decision is remotely green, and one live metadata invocation only after
+that exact wrapper is separately green. Do not infer payload, neural, target,
+model, score, release, or claim authority.
+
+Evidence decision: treat the scientific aspiration as the persistent research
+objective, not a positive result. The path remains cohort integrity, controlled
+neural evidence, held-out language decoding, then stronger thought-to-text
+evidence.
+
+Evidence:
+`docs/MARC_1_PAGINATED_LIVE_METADATA_AUTHORIZATION_DECISION.md`,
+`registries/marc1_paginated_live_metadata_authorization_decision.v0.json`, and
+`tests/test_marc1_paginated_live_metadata_authorization_decision.py`.

@@ -1565,3 +1565,13 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   packet before identifying it as the sole Tier C gate. A fresh maintainer
   message is required after that identification. This remains the same
   thought-to-text research path.
+
+  After that identification, the maintainer supplied the exact words
+  `approved, continue, achieve a scientific claim, achieve thought to text 😎`.
+  Read the
+  [MARC1-LM1 decision](docs/MARC_1_PAGINATED_LIVE_METADATA_AUTHORIZATION_DECISION.md).
+  It binds only green request `4d3eb19`, CI `31603530015`, one future
+  generated/mock wrapper, and one later metadata response with zero payload.
+  The decision must itself be committed, pushed, and pass both CI jobs before
+  implementation. Thought-to-text remains the objective, not a predeclared
+  outcome or permission to skip the neural and held-out language gates.

@@ -8748,3 +8748,26 @@ identity for later payload work.
 
 Scientific claim not established: this all-false request accessed no neural
 signal and added no decoding, language, or thought-to-text evidence.
+
+## 2026-08-12 - MARC1-LM1 Packet-Bound Decision
+
+- Request `4d3eb19` passed Base Python job `94136577454` and Optional Neuro
+  Readers job `94136577639` in CI `31603530015` before the maintainer's fresh
+  message.
+- Recorded the exact 76-byte instruction `approved, continue, achieve a
+  scientific claim, achieve thought to text 😎` with SHA-256
+  `aedb564a57be18493fc20376676ef404794ca169d02985228aa8424cd7f7e6e8`.
+- The short form binds the immutable request by reference. It does not
+  fabricate a long user recital, widen the one-response metadata scope,
+  authorize payload access, or predeclare a positive result.
+- Thirteen decision tests, 26 combined request/decision tests, and all 625
+  MARC tests pass. Complete base is 2,764 tests/204 skips in 22.590 seconds at
+  259,768,320-byte peak RSS; optional is 2,835 tests/35 skips in 60.790 seconds
+  at 726,024,192 bytes. Ruff, compilation, 194 registry parses, artifact
+  replay, and diff hygiene pass.
+- Every decision-only private, network, payload, neural, target, model, score,
+  cleanup, hardware, other-project, and claim counter is zero.
+
+Next: commit, push, and green this exact decision. Only then may generated and
+mocked wrapper implementation begin. Live metadata remains closed until that
+exact future implementation is separately remotely green.

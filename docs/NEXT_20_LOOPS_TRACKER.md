@@ -1655,3 +1655,16 @@ a fresh packet-bound maintainer message may open a separate decision. Task 4
 remains on the same route to a trustworthy multimodal cohort, cue-resistant
 neural evidence, and held-out language decoding; no scientific result was
 added by the request.
+
+Request `4d3eb19` passed both required jobs in CI `31603530015` before the
+maintainer supplied the exact 76-byte instruction `approved, continue, achieve
+a scientific claim, achieve thought to text 😎`. The separate `MARC1-LM1`
+decision binds those words only to the immutable one-response, 2 MiB,
+zero-payload packet. It preserves thought-to-text as the destination without
+predeclaring an outcome.
+
+Next gate: commit, push, and green the exact decision. Then implement and
+qualify only the additive generated/mock wrapper; commit, push, and green that
+implementation before one registered path or Figshare operation. Task 4 stays
+on the same path and still requires real payload, controlled neural evidence,
+and held-out language decoding after this metadata gate.

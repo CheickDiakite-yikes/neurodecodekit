@@ -1103,6 +1103,24 @@ signal, target, model, or score, or upgrade a claim from this packet alone.
 This is the next bounded cohort-integrity step on the same route to a cue-
 resistant neural positive control and held-out language decoding, not a pivot.
 
+The maintainer then supplied the exact 76-byte message `approved, continue,
+achieve a scientific claim, achieve thought to text 😎`. Read
+`docs/MARC_1_PAGINATED_LIVE_METADATA_AUTHORIZATION_DECISION.md` and
+`registries/marc1_paginated_live_metadata_authorization_decision.v0.json`.
+The decision quotes those words and binds only green request
+`4d3eb19690676d48ce42ed16c5c00cc041d8bb4b`, CI `31603530015`, Base
+Python job `94136577454`, Optional Neuro Readers job `94136577639`, and the
+unchanged one-response, 2 MiB, zero-payload scope. It is ineffective until its
+own commit is pushed and both CI jobs are green.
+
+After green decision proof, implement and qualify only the additive generated/
+mock wrapper. Do not open the registered output path or contact Figshare until
+that exact wrapper is separately committed, pushed, and both jobs are green.
+The one live invocation then consumes on any post-marker outcome and cannot
+retry. The user's scientific aspiration preserves the destination; it does
+not authorize a payload, neural operation, model, score, or claim upgrade
+under this metadata decision.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

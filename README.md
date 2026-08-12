@@ -382,6 +382,7 @@ negative result and S25 is never repurposed for calibration.
 | MARC1-OP1 output-capability implementation | 1,019,776 generated input bytes; 184,173 temporary output bytes; 6/6 accepted cases; 32/32 refusals; 20/20 gates; exact cleanup; 0 real/network bytes | Green contract `baade51` / CI `31597291352` preceded development `MARC1OP-G1`, which ran in 0.096 sec at 33.8 MB reported RSS; 36 new tests | Proves generated pagination and selection can run only after held output authority and leave no artifact; the registered probe awaits implementation CI and no neural/language claim changed |
 | MARC1-OP1 registered generated result | `MARC1OP-P0` preflight then `MARC1OP-G1`; 1,019,776 generated input bytes; 184,173 temporary output bytes; exact cleanup; 0 live/network bytes | Exact implementation `fcedcc3` passed CI `31600085119` before the one 0.098-sec qualifier at 33.9 MB reported RSS; both invocations consumed | Establishes the capability-first generated stack under registered controls; a live metadata request remains a separate Tier C gate and no scientific claim changed |
 | MARC1-LM1 paginated live-metadata request | One future exact `page=1&page_size=1000` GET; one body capped at 2 MiB; one 55-row target-free inventory; 0 payload bytes; all current permissions false | Green capability result `ca4679a` / CI `31601329375` precedes the packet; 13 focused, 612 MARC, 2,751 base, and 2,822 optional tests pass locally | Proposes one additive wrapper and one no-retry metadata check on the same thought-to-text path; the packet itself performs no operation and establishes no scientific result |
+| MARC1-LM1 packet-bound decision | Exact 76-byte maintainer approval; one immutable green request; one conditional generated wrapper and one later metadata response; 0 current data/model operations | Request `4d3eb19` passed CI `31603530015`; this decision remains ineffective until its own push CI is green | Preserves thought-to-text as the objective while binding only the registered metadata scope and refusing to predeclare a scientific outcome |
 
 ### Real-Data Scientific Scorecard
 
@@ -1404,6 +1405,14 @@ Read this before interpreting any number in the repository.
   scientific claim is authorized. This is the next cohort-integrity step on
   the same route to cue-resistant neural evidence and held-out language
   decoding.
+  The maintainer then supplied the exact 76-byte instruction `approved,
+  continue, achieve a scientific claim, achieve thought to text 😎` after the
+  packet was identified. The
+  [separate decision](docs/MARC_1_PAGINATED_LIVE_METADATA_AUTHORIZATION_DECISION.md)
+  quotes those words and binds only request `4d3eb19`, CI `31603530015`, and
+  the unchanged one-response, zero-payload scope. It remains ineffective until
+  its own commit passes both CI jobs. The research objective is unchanged; no
+  result is predeclared.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
