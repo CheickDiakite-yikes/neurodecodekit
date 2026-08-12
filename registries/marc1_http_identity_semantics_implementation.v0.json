@@ -1,0 +1,237 @@
+{
+  "schema_name": "neurodecodekit.marc1_http_identity_semantics_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "MARC1-HT1-generated-http-identity-semantics-implementation-v0",
+  "lane_id": "MARC1-HT1",
+  "recorded_at_local": "2026-08-12",
+  "status": "generated_only_implementation_qualified_registered_closeout_not_executed",
+  "proof_posture": "generated_metadata_and_mock_responses_only_no_source_or_scientific_value",
+  "artifact_bindings": [
+    {
+      "path": "registries/marc1_http_identity_semantics_recovery_contract.v0.json",
+      "sha256": "a8b86c56b2ea540715dc09a4a34e0de93f969e3e30dd0ea2d055d366d0c5e73d"
+    },
+    {
+      "path": "docs/MARC_1_HTTP_IDENTITY_SEMANTICS_RECOVERY_PREREGISTRATION.md",
+      "sha256": "13c414dc2dc07b2b0ea8ab64d2a750c1c84224d4c32dcf60961411e787421089"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/marc1_http_identity_semantics.py",
+      "sha256": "6ef6369244f1620af610d2bc3ff5ee4aaa5b16aba2facce428c7bc8f1690abff"
+    },
+    {
+      "path": "tests/test_marc1_http_identity_semantics.py",
+      "sha256": "2f76b2c78f851633bb7b9eac1cf8a9cb3960f9a3cbcbe00aa4dff7f981a98b72"
+    },
+    {
+      "path": "tests/test_marc1_http_identity_semantics_implementation.py",
+      "sha256": "98f5034d6176fb27d6b6af99053240e0c9e3bf17c220fc97faac55286c1b9874"
+    },
+    {
+      "path": "docs/MARC_1_HTTP_IDENTITY_SEMANTICS_IMPLEMENTATION.md",
+      "sha256": "36afa8573e26fc7627b180b2a06e2ea827078d40b4a7f80754abb89506c42158"
+    }
+  ],
+  "green_contract_proof": {
+    "commit": "1f99d0a8c5609dae992fa0e245f179c2f417038f",
+    "CI_run_id": 31581395690,
+    "base_python_job_id": 94065047494,
+    "optional_neuro_job_id": 94065047277,
+    "both_required_jobs_green": true,
+    "contract_sha256": "a8b86c56b2ea540715dc09a4a34e0de93f969e3e30dd0ea2d055d366d0c5e73d",
+    "candidate_policy_sha256": "ac1b98eed57af7e545b925f1529ebf38de72b4277ea54a473ae1d6f7fe0cd3a6"
+  },
+  "implementation_surface": {
+    "module": "neurodecodekit.datasets.marc1_http_identity_semantics",
+    "standard_library_only": true,
+    "python_S_compatible": true,
+    "base_dependency_delta": 0,
+    "commands": [
+      "plan",
+      "qualify",
+      "inspect"
+    ],
+    "execute_command": false,
+    "network_client": false,
+    "DNS_resolver": false,
+    "decompressor_or_decoder": false,
+    "private_or_consumed_input_path": false,
+    "signal_event_target_model_or_score_interface": false,
+    "retry_rerun_resume_fallback_or_substitution_interface": false
+  },
+  "transport_qualification": {
+    "request_Accept_Encoding": "identity",
+    "accepted_cases": 4,
+    "accepted_cases_passed": 4,
+    "absent_Content_Encoding_accepted_as_uncoded": true,
+    "single_identity_token_case_insensitive": true,
+    "all_other_present_Content_Encoding_values_refused": true,
+    "Transfer_Encoding_refused": true,
+    "strict_ASCII_Content_Length": true,
+    "strict_UTF8_and_duplicate_free_JSON": true,
+    "target_like_field_firewall": true,
+    "refusal_cases": 20,
+    "refusal_cases_passed": 20,
+    "route_counts": {
+      "MARC1HT-F01": 0,
+      "MARC1HT-F02": 10,
+      "MARC1HT-F03": 8,
+      "MARC1HT-F04": 1,
+      "MARC1HT-F05": 1
+    },
+    "decompression_or_decoding_operations": 0,
+    "raw_header_or_body_publication": false
+  },
+  "generated_selection": {
+    "Freewill_rows": 1227,
+    "Wrist_rows": 55,
+    "selected_subjects_per_axis": 12,
+    "Freewill_run_bundles": 72,
+    "Freewill_core_members": 288,
+    "Wrist_archives": 12,
+    "private_rows": 300,
+    "fit_heldout_overlap": 0,
+    "target_quality_size_CRC_and_outcome_free": true,
+    "row_order_replay_exact": true,
+    "fixed_measurement_output_replay_byte_identical": true,
+    "frozen_selector_modified": false
+  },
+  "privacy_and_output_contract": {
+    "private_manifest_mode": "0600",
+    "aggregate_report_mode": "0644",
+    "output_directory_mode": "0700",
+    "no_follow_bound_artifact_and_report_reads": true,
+    "exclusive_non_overwriting_writes": true,
+    "recursive_public_private_field_firewall": true,
+    "aggregate_inspector_accepts_private_manifest": false,
+    "aggregate_output_reconciles_own_byte_measurement": true,
+    "generated_outputs_committed": false
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "generated_input_bytes": 2097152,
+    "public_output_bytes": 1048576,
+    "combined_output_bytes": 2097152,
+    "incremental_disk_bytes": 4194304,
+    "network_bytes": 0,
+    "real_or_private_input_bytes": 0
+  },
+  "development_qualification": {
+    "route": "MARC1HT-G1",
+    "all_gates_passed": true,
+    "acceptance_gates_passed": 16,
+    "acceptance_gate_count": 16,
+    "generated_input_bytes": 923052,
+    "aggregate_report_bytes": 7064,
+    "private_manifest_bytes": 175618,
+    "combined_output_bytes": 182682,
+    "incremental_disk_bytes": 182682,
+    "runtime_seconds": 0.10857224999926984,
+    "reported_peak_RSS_bytes": 32440320,
+    "external_wall_seconds": 0.22,
+    "external_maximum_RSS_bytes": 32669696,
+    "aggregate_report_sha256": "adbe2ffd269edbaaaf82113924df361de0e62f45e9fb4a481ecbae7bb0e39beb",
+    "private_manifest_sha256": "e1b2db1506f94efcc7f85081d9df901349498a8b9a681156d5d37121a887e831",
+    "aggregate_inspect_passed": true,
+    "temporary_outputs_removed": true,
+    "generated_artifacts_committed": false,
+    "network_bytes": 0,
+    "real_or_private_input_bytes": 0,
+    "scientific_value": false
+  },
+  "qualification_tests": {
+    "focused_implementation_tests": 18,
+    "implementation_record_tests": 11,
+    "final_MARC1_tests": 389,
+    "dependency_light_tests": 2528,
+    "dependency_light_expected_skips": 204,
+    "dependency_light_runtime_seconds": 20.780,
+    "dependency_light_external_maximum_RSS_bytes": 288702464,
+    "optional_neuro_tests": 2599,
+    "optional_neuro_expected_skips": 35,
+    "optional_neuro_runtime_seconds": 58.044,
+    "optional_neuro_external_maximum_RSS_bytes": 771457024,
+    "prechange_dependency_light_tests": 2499,
+    "prechange_dependency_light_expected_skips": 204,
+    "prechange_optional_neuro_tests": 2570,
+    "prechange_optional_neuro_expected_skips": 35,
+    "test_delta": 29,
+    "additional_skips": 0,
+    "ruff_passed": true,
+    "compile_passed": true,
+    "JSON_validation_passed": true,
+    "registry_JSON_files_parsed": 179,
+    "CLI_help_and_roundtrip_passed": true,
+    "git_diff_check_passed": true
+  },
+  "implementation_access_counters": {
+    "private_Freewill_manifest_reads": 0,
+    "private_Freewill_manifest_bytes": 0,
+    "public_Wrist_metadata_requests": 0,
+    "public_Wrist_metadata_bytes": 0,
+    "DNS_queries": 0,
+    "network_requests": 0,
+    "network_body_bytes": 0,
+    "real_participant_selections": 0,
+    "payload_requests": 0,
+    "payload_bytes": 0,
+    "signal_sample_reads": 0,
+    "event_target_label_quality_or_onset_reads": 0,
+    "real_derivative_rows": 0,
+    "training_or_parameter_update_fits": 0,
+    "model_inference_calls": 0,
+    "prediction_sets_or_freezes": 0,
+    "target_deliveries_or_scores": 0,
+    "provider_or_language_model_calls": 0,
+    "hardware_operations": 0,
+    "retries_or_reruns": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "authorization_flags": {
+    "registered_generated_closeout_authorized_before_green_implementation": false,
+    "real_or_private_metadata_read_authorized": false,
+    "public_metadata_request_authorized": false,
+    "consumed_root_access_authorized": false,
+    "payload_request_or_acquisition_authorized": false,
+    "signal_event_target_quality_or_onset_read_authorized": false,
+    "derivative_split_cache_or_feature_creation_authorized": false,
+    "training_inference_prediction_freeze_or_score_authorized": false,
+    "provider_language_model_or_hardware_authorized": false,
+    "retry_rerun_resume_fallback_or_substitution_authorized": false,
+    "release_or_scientific_claim_upgrade_authorized": false
+  },
+  "warnings": [
+    "All metadata rows and HTTP responses used here were generated locally.",
+    "The consumed MARC1-P1A live header remains unavailable and was not inferred.",
+    "Generated MARC1HT-G1 has no source or scientific value.",
+    "A future live metadata attempt remains a separate Tier C action.",
+    "Payload acquisition remains ineligible."
+  ],
+  "unavailable_fields": [
+    "live response acceptance",
+    "completed real pilot selection",
+    "selected payload integrity",
+    "EEG channel geometry signal quality event target prediction and score",
+    "language decoding and thought-to-text evidence"
+  ],
+  "next_gate": {
+    "exact_implementation_must_be_remotely_green": true,
+    "registered_generated_closeout_executed": false,
+    "real_or_private_metadata_may_be_read": false,
+    "public_metadata_may_be_requested": false,
+    "payload_acquisition_or_analysis_may_begin": false,
+    "later_real_attempt_requires_new_Tier_C_packet": true,
+    "later_real_attempt_requires_fresh_packet_bound_decision": true,
+    "current_or_earlier_maintainer_continue_is_retroactive_authority": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "NeuroDecodeKit can deterministically validate the standards-aligned uncoded HTTP response predicate while preserving the frozen target-free pilot selection and every safety boundary.",
+    "scientific_claim_not_established": "No live metadata EEG payload neural signal target prediction score language decoding or thought-to-text result was produced."
+  }
+}

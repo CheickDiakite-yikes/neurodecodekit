@@ -1435,3 +1435,17 @@ surface.
 Next gate: commit, push, and green the exact MARC1-HT1 contract. Only then
 implement and close out the additive generated/mock harness. Real metadata and
 payload access remain closed and require later independent Tier C sequencing.
+
+Contract `1f99d0a` passed both jobs in CI `31581395690` before the generated
+MARC1-HT1 harness was implemented. Development `MARC1HT-G1` passed four
+accepted forms, all 20 refusals, all 16 gates, exact 12+12 cohort and split
+replay, and byte-identical fixed-measurement output replay. It used 923,052
+generated input bytes, emitted 182,682 temporary bytes, ran in 0.109 seconds at
+32.7 MB external peak RSS, and kept every real, network, payload, neural,
+target, model, score, and claim counter at zero.
+
+Next gate: commit, push, and green the exact implementation, then run the one
+registered generated closeout and green its aggregate result. Only after that
+may an all-false Tier C packet propose a new live metadata wrapper and attempt.
+Payload acquisition remains ineligible. This is Task 4 transport recovery on
+the same confound-control-to-language path, not a pivot.

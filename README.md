@@ -371,6 +371,7 @@ negative result and S25 is never repurposed for calibration.
 | MARC1-P1A live metadata attempt | 418,755 private metadata bytes read once; 1 Wrist response opened; 0 public-body or payload bytes; 0 selected participants; route `MARC1PS-F03` | Exact wrapper `702e613` passed CI `31578614616` before the sole attempt; it failed the explicit identity-encoding gate in 0.532 sec at 37.3 MB reported RSS and is consumed | Proves one-shot fail-closed audit behavior; the cohort was not selected and no neural or language evidence was produced |
 | MARC1-HT1 HTTP identity research | RFC 9110 Sections 8.4 and 12.5.3; 4 future acceptance cases; 20 future refusals; 17 false authorization flags; 0 real operations | Artifact-only standards review after green consumed result `8d9cae1`; candidate policy hash `ac1b98ee...` | Separates absent content coding from actual coding without inferring the unretained live header; implementation and real access remain closed |
 | MARC1-HT1 generated recovery contract | 1,227 + 55 generated rows; 4 accepted forms; 20 refusals; 16 gates; 5 refusal routes; 0 real/network bytes | Green research `f515b36` / CI `31580575669` precedes the frozen contract | Allows only a new `plan`/`qualify`/`inspect` harness after contract CI; real metadata, payload, neural work, and claims remain closed |
+| MARC1-HT1 generated recovery implementation | 923,052 generated input bytes; 4/4 accepted forms; 20/20 refusals; 16/16 gates; exact 12+12 cohort and split replay; 0 real/network bytes | Development `MARC1HT-G1` passed in 0.109 sec at 32.7 MB external peak RSS; 29 new tests; registered closeout awaits implementation CI | Proves the standards-aligned uncoded-response predicate and frozen selector compose deterministically; live-source compatibility and all neural/language claims remain untested |
 
 ### Real-Data Scientific Scorecard
 
@@ -1265,6 +1266,14 @@ Read this before interpreting any number in the repository.
   committed, pushed, and green may the additive generated/mock harness be
   implemented. A live request remains Tier C and payload acquisition remains
   ineligible.
+  The [generated recovery implementation](docs/MARC_1_HTTP_IDENTITY_SEMANTICS_IMPLEMENTATION.md)
+  now accepts exactly the four frozen uncoded forms, refuses all 20 mutations,
+  replays the exact 12+12 target-free cohorts, and passes all 16 gates over
+  923,052 generated input bytes. Its 182,682-byte output was inspected and
+  removed; no live metadata, network body, payload, EEG, target, model, or score
+  was accessed. The exact implementation must be committed, pushed, and green
+  before its one registered generated closeout. This is a transport repair on
+  the same positive-control-to-language path, not a scientific pivot.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

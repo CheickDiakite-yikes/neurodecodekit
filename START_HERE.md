@@ -1360,3 +1360,14 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   harness after this exact contract is remotely green. It freezes four
   accepted forms, 20 refusals, 16 gates, five refusal routes, and exact
   generated cohort replay. It authorizes no real/private input or payload.
+
+  Contract `1f99d0a8c5609dae992fa0e245f179c2f417038f` passed Base
+  Python job `94065047494` and Optional Neuro Readers job `94065047277` in CI
+  `31581395690` before the additive
+  [MARC1-HT1 implementation](docs/MARC_1_HTTP_IDENTITY_SEMANTICS_IMPLEMENTATION.md)
+  was built. Development `MARC1HT-G1` passed all 16 gates with four accepted
+  forms, 20 refusals, exact 12+12 cohort replay, 923,052 generated input bytes,
+  and zero real or network bytes. The next gate is implementation commit,
+  push, and both green CI jobs, followed by one registered generated closeout.
+  No live metadata, payload, EEG, target, model, score, or claim action is open.
+  This remains the same thought-to-text research path.

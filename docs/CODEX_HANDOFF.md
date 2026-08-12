@@ -3449,3 +3449,33 @@ Immediate next gate: commit, push, and green this exact contract. Only then
 implement and measure the generated/mock harness. Real metadata, the old
 private root, payloads, signals, targets, models, scores, and Tier C execution
 remain closed.
+
+## 2026-08-12 MARC1-HT1 Generated Implementation Handoff
+
+Contract `1f99d0a8c5609dae992fa0e245f179c2f417038f` passed Base Python
+job `94065047494` and Optional Neuro Readers job `94065047277` in CI
+`31581395690` before implementation. Read
+`docs/MARC_1_HTTP_IDENTITY_SEMANTICS_IMPLEMENTATION.md`,
+`registries/marc1_http_identity_semantics_implementation.v0.json`,
+`src/neurodecodekit/datasets/marc1_http_identity_semantics.py`, and the two
+matching tests.
+
+The standard-library module exposes only `plan`, `qualify`, and `inspect`. It
+accepts absent `Content-Encoding` as uncoded and one case-insensitive identity
+token as a narrow compatibility form. Every actual coding, list, duplicate,
+empty field, transfer coding, malformed envelope, target-like field, output
+breach, or second invocation refuses. It contains no network client, private
+path, consumed executor, decoder, neural interface, model, scorer, or retry.
+
+Development `MARC1HT-G1` passed four accepted forms, 20 refusals, 16 gates,
+exact 12+12 target-free cohort and split replay, and deterministic output
+replay. It processed 923,052 generated input bytes in 0.10857224999926984
+seconds at 32,440,320-byte reported peak RSS and emitted 182,682 temporary
+bytes. The output was inspected once and removed. All 389 MARC, 2,528 base,
+and 2,599 optional-neuro tests pass with no new skips.
+
+Immediate next gate: commit, push, and green this exact implementation. Only
+then run the one registered generated closeout, remove its outputs, and record
+and green the aggregate result. Do not open any real/private source or prepare
+a live executor from this implementation milestone. A later live attempt is a
+new Tier C sequence. This is the same thought-to-text path, not a pivot.

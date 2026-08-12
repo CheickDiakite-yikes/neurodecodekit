@@ -821,6 +821,27 @@ Do not add a real executor, touch either metadata source or consumed root, or
 prepare a Tier C request before the generated implementation and closeout are
 separately green.
 
+Contract `1f99d0a8c5609dae992fa0e245f179c2f417038f` passed Base Python
+job `94065047494` and Optional Neuro Readers job `94065047277` in CI
+`31581395690` before implementation. Read
+`docs/MARC_1_HTTP_IDENTITY_SEMANTICS_IMPLEMENTATION.md`,
+`registries/marc1_http_identity_semantics_implementation.v0.json`, and the two
+matching implementation test modules. The additive standard-library harness
+has only `plan`, `qualify`, and `inspect`; no network, private path, decoder,
+real executor, neural, target, model, or score surface exists. Development
+`MARC1HT-G1` passed all 16 gates over 923,052 generated input bytes in
+0.10857224999926984 seconds at 32,440,320-byte reported peak RSS. Four accepted
+forms, 20 refusals, exact 12+12 cohorts, row-order replay, and byte-identical
+fixed-measurement output replay passed. Every real and scientific counter
+stayed zero and all temporary outputs were removed.
+
+Commit, push, and obtain both green CI jobs for this exact implementation
+before the one registered generated closeout. Do not treat development output
+as that closeout. A real metadata wrapper, private inventory read, public
+request, payload, EEG, model, or score remains closed and later requires a new
+all-false Tier C packet plus fresh decision. MARC1-HT1 remains on the same
+thought-to-text path and establishes no scientific result.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

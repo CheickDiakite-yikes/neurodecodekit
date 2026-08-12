@@ -6645,3 +6645,33 @@ Evidence:
 `docs/MARC_1_HTTP_IDENTITY_SEMANTICS_RECOVERY_PREREGISTRATION.md`,
 `registries/marc1_http_identity_semantics_recovery_contract.v0.json`, and
 `tests/test_marc1_http_identity_semantics_contract.py`.
+
+## 0199 - Prove The Predicate In Memory Before Reopening A Source
+
+Implementation decision: after contract `1f99d0a` passed both required jobs in
+CI `31581395690`, implement only the additive standard-library MARC1-HT1
+`plan`/`qualify`/`inspect` surface. Bind every upstream artifact by no-follow
+SHA-256, keep the frozen selector unchanged, and expose no network, private
+path, consumed executor, decoder, neural interface, model, scorer, or retry.
+
+Qualification decision: accept the four registered absent/identity forms,
+refuse all 20 registered mutations, enforce exact cohort and split replay,
+strict aggregate privacy, one-thread resource caps, and byte-identical outputs
+under fixed measurements. Development `MARC1HT-G1` passed all 16 gates over
+923,052 generated input bytes and emitted 182,682 temporary bytes; every live,
+payload, neural, target, model, score, and claim counter remained zero.
+
+Evidence-order decision: this development run is not the one registered
+generated closeout. Commit, push, and green the exact implementation first;
+only then run and remove one closeout output. A real metadata wrapper or request
+remains a new Tier C sequence after the generated result is remotely green.
+
+Path decision: this is a fail-closed transport repair on the same
+positive-control-to-language path, not a pivot. It establishes no live-source
+compatibility, neural effect, language decoding, or thought-to-text result.
+
+Evidence:
+`docs/MARC_1_HTTP_IDENTITY_SEMANTICS_IMPLEMENTATION.md`,
+`registries/marc1_http_identity_semantics_implementation.v0.json`,
+`src/neurodecodekit/datasets/marc1_http_identity_semantics.py`, and the two
+matching implementation tests.
