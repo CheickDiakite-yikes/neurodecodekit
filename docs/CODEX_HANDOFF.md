@@ -3528,3 +3528,22 @@ sole active Tier C packet and wait for a fresh packet-bound maintainer message.
 Do not use the current or an earlier `continue` retroactively. This is the same
 path toward a controlled neural positive control and held-out language
 decoding, not a pivot, and it establishes no scientific result.
+
+## 2026-08-12 MARC1-HT1A Authorization Decision Handoff
+
+Request `27f39aee5f056eafc81b615cec4a178a41a6c5d2` passed Base Python
+job `94080678529` and Optional Neuro Readers job `94080678738` in CI
+`31586256906`. After Codex identified it as the sole active Tier C packet, the
+maintainer supplied the fresh words `approved, continue, achieve a scientific
+claim, achieve thought to text 😎`.
+
+Read `docs/MARC_1_HTTP_IDENTITY_LIVE_RECOVERY_AUTHORIZATION_DECISION.md`,
+`registries/marc1_http_identity_live_recovery_authorization_decision.v0.json`,
+and its matching test. The record quotes the actual 76-byte message and binds
+the unchanged packet. It interprets the scientific language as the enduring
+objective, not a predeclared result or permission to widen scope.
+
+Immediate next gate: test, commit, push, and obtain both green CI jobs for the
+decision. Only then implement and qualify the new additive wrapper on generated
+and mocked inputs. Do not touch the sealed inventory, public endpoint, consumed
+executor, old root, or payload before the exact wrapper is also remotely green.

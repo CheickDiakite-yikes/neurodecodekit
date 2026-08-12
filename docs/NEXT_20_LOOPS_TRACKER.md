@@ -1479,3 +1479,15 @@ identify it as the sole active Tier C packet and await a fresh packet-bound
 maintainer message. The packet itself authorizes nothing. This remains the same
 confound-control to neural-positive-control to language-decoding path, not a
 pivot.
+
+Request `27f39ae` passed both jobs in CI `31586256906` and was identified as
+the sole active Tier C packet. The maintainer then supplied the fresh words
+`approved, continue, achieve a scientific claim, achieve thought to text 😎`.
+The separate `MARC1-HT1A` decision quotes those exact 76 UTF-8 bytes and binds
+only the green packet; the scientific objective does not predeclare an
+outcome or expand the metadata-only scope.
+
+Next gate: test, commit, push, and green the exact decision. Only afterward may
+the additive generated/mock wrapper be implemented. Real input remains closed
+until that wrapper independently passes both remote jobs. Payload acquisition,
+signals, targets, models, scores, and claim upgrades remain ineligible.

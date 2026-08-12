@@ -6740,3 +6740,37 @@ Evidence:
 `docs/MARC_1_HTTP_IDENTITY_LIVE_RECOVERY_AUTHORIZATION_PACKET.md`,
 `registries/marc1_http_identity_live_recovery_authorization_request.v0.json`,
 and `tests/test_marc1_http_identity_live_recovery_authorization_request.py`.
+
+## 0202 - Bind The Fresh Approval Without Predeclaring The Result
+
+Authorization decision: request `27f39ae` passed both required jobs in CI
+`31586256906` and was identified as the sole active Tier C packet before the
+maintainer supplied `approved, continue, achieve a scientific claim, achieve
+thought to text 😎`. Record those exact words and incorporate only the green
+`MARC1-HT1A` packet by reference.
+
+Interpretation decision: treat achieving a scientific claim and thought-to-
+text as the persistent research objective. Do not interpret it as evidence,
+predeclare a positive result, weaken a comparator, skip a held-out gate, or
+authorize any operation omitted by the packet.
+
+Evidence-order decision: this exact decision must be committed, pushed, and
+pass both CI jobs before additive wrapper work. The exact wrapper must then be
+committed, pushed, and pass both jobs before one real metadata input is
+eligible. No private read, network request, or consumed marker is authorized
+before those proofs.
+
+Isolation decision: the new wrapper may compose the green HTTP-semantics module
+and target-free selector but cannot import, call, modify, or expose the
+consumed `MARC1-P1A` executor. The future attempt must use only the new
+`marc1_http_identity/live_recovery_v0` root; the old root remains forbidden.
+
+Scope decision: the authorization stops after one sealed-manifest read, one
+bounded Wrist metadata response, one target-free selection, one private
+manifest, and one aggregate result. It permits zero payload, signal, target,
+model, prediction, score, retry, rerun, release, or claim operations.
+
+Evidence:
+`docs/MARC_1_HTTP_IDENTITY_LIVE_RECOVERY_AUTHORIZATION_DECISION.md`,
+`registries/marc1_http_identity_live_recovery_authorization_decision.v0.json`,
+and `tests/test_marc1_http_identity_live_recovery_authorization_decision.py`.

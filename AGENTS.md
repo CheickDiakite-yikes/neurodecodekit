@@ -882,6 +882,23 @@ or access a payload from this packet alone. This remains the same path toward a
 controlled neural positive control and held-out language decoding, not a
 pivot; no scientific claim has changed.
 
+Request `27f39aee5f056eafc81b615cec4a178a41a6c5d2` passed Base Python
+job `94080678529` and Optional Neuro Readers job `94080678738` in CI
+`31586256906`. After it was identified as the sole active Tier C packet, the
+maintainer supplied `approved, continue, achieve a scientific claim, achieve
+thought to text 😎`. Read
+`docs/MARC_1_HTTP_IDENTITY_LIVE_RECOVERY_AUTHORIZATION_DECISION.md` and
+`registries/marc1_http_identity_live_recovery_authorization_decision.v0.json`.
+The separate decision quotes those exact 76 UTF-8 bytes and binds only the
+green packet. The scientific language is the persistent objective, not a
+predeclared result or scope expansion.
+
+Commit, push, and obtain both green CI jobs for this exact decision before
+implementing the additive generated/mock wrapper. Real/private input remains
+closed until that exact wrapper is independently committed, pushed, and green.
+Do not import or reuse the consumed `MARC1-P1A` executor, touch its old root,
+access a payload, or infer a scientific result from the decision.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

@@ -8334,3 +8334,32 @@ predicate and frozen selector against one bounded real metadata response.
 Scientific claim not established: this all-false packet performs no neural
 experiment and adds no neural effect, language-decoding, or thought-to-text
 evidence.
+
+## 2026-08-12 - MARC1-HT1A Packet-Bound Authorization Decision
+
+- Verified request commit `27f39ae`, SHA-256
+  `9d2249005a9cfe3437c0914f471cdc830c2967da25291964cc29357c8d5091f8`,
+  Base Python job `94080678529`, Optional Neuro Readers job `94080678738`,
+  and green CI `31586256906` before recording a decision.
+- Preserved the maintainer's actual 76-byte message: `approved, continue,
+  achieve a scientific claim, achieve thought to text 😎`.
+- Bound only the immutable `MARC1-HT1A` packet. The scientific objective does
+  not predeclare a result, authorize payload bytes, or convert movement
+  metadata into language evidence.
+- Ordered the work as decision green, generated/mock additive wrapper, wrapper
+  green, one machine-gated metadata attempt in a new root, one aggregate
+  result, and stop.
+- Kept the consumed `MARC1-P1A` executor and old root forbidden. Every private,
+  public, payload, signal, target, model, score, release, and claim operation
+  counter remained zero while recording the decision.
+- Twelve decision tests, 24 combined request/decision tests, all 424 MARC
+  tests, 2,563 dependency-light tests with 204 expected skips, and 2,634
+  optional-neuro tests with 35 expected skips pass. External maximum RSS was
+  277,233,664 and 736,804,864 bytes for the complete suites. Ruff,
+  compilation, 182 registry JSON parses, and `git diff --check` pass.
+
+Engineering capability authorized for testing: a new additive wrapper may be
+qualified after this exact decision is remotely green.
+
+Scientific claim not established: authorization is not data or a result and
+adds no neural, language-decoding, or thought-to-text evidence.

@@ -1393,3 +1393,13 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   forbidden consumed `MARC1-P1A` root; no payload, signal, target, model, score,
   or claim operation is open. MARC1-HT1A is the same path toward a controlled
   neural positive control and held-out language decoding, not a pivot.
+
+  Request `27f39aee5f056eafc81b615cec4a178a41a6c5d2` passed Base
+  Python job `94080678529` and Optional Neuro Readers job `94080678738` in CI
+  `31586256906`. Read the separate
+  [packet-bound decision](docs/MARC_1_HTTP_IDENTITY_LIVE_RECOVERY_AUTHORIZATION_DECISION.md).
+  It quotes the maintainer's fresh approval exactly and authorizes the staged
+  wrapper-then-one-attempt sequence only after the decision itself becomes
+  remotely green. Thought-to-text remains the objective, not a predeclared
+  outcome. No wrapper, private read, public request, or payload action has yet
+  occurred under this decision.

@@ -374,6 +374,7 @@ negative result and S25 is never repurposed for calibration.
 | MARC1-HT1 generated recovery implementation | 923,052 generated input bytes; 4/4 accepted forms; 20/20 refusals; 16/16 gates; exact 12+12 cohort and split replay; 0 real/network bytes | Development `MARC1HT-G1` passed in 0.109 sec at 32.7 MB external peak RSS; 29 new tests; registered closeout awaits implementation CI | Proves the standards-aligned uncoded-response predicate and frozen selector compose deterministically; live-source compatibility and all neural/language claims remain untested |
 | MARC1-HT1 registered generated closeout | 923,052 generated input bytes; 182,681 temporary output bytes; 4/4 forms; 20/20 refusals; 16/16 gates; 0 real/network bytes | Exact implementation `b2cb48c` passed CI `31583931303` before one 0.112-sec closeout at 33.1 MB external peak RSS; consumed with no rerun | Confirms the repaired transport/selector/privacy stack end to end on fixtures; a new live attempt still needs a separate Tier C sequence and no scientific claim changed |
 | MARC1-HT1A live-recovery request | One future 418,755-byte sealed-manifest read; one future Wrist body capped at 2 MiB; one new isolated root; 0 payload bytes; all current permissions false | Binds green result `5344d73` / CI `31584662864`, the frozen selector, and the consumed `MARC1PS-F03` boundary; requires its own green CI before any decision | Proposes one additive wrapper and one metadata-only attempt on the same thought-to-text path; the packet itself performs no operation and establishes no scientific result |
+| MARC1-HT1A packet-bound decision | Exact 76-byte maintainer message; one green packet; one future generated/mock wrapper; one future metadata-only attempt; 0 current data/model operations | Request `27f39ae` passed CI `31586256906`; decision records the fresh approval but is ineffective until its own CI is green | Preserves thought-to-text as the objective without predeclaring an outcome or expanding the zero-payload metadata scope |
 
 ### Real-Data Scientific Scorecard
 
@@ -1291,6 +1292,12 @@ Read this before interpreting any number in the repository.
   forbids the consumed `MARC1-P1A` root, all payload bytes, signals, targets,
   models, and scores. The packet authorizes nothing and is explicitly a
   control checkpoint on the same path toward held-out language decoding.
+  Request `27f39ae` passed Base Python job `94080678529` and Optional Neuro
+  Readers job `94080678738` in CI `31586256906`. The fresh maintainer approval
+  is now quoted in the separate
+  [MARC1-HT1A decision](docs/MARC_1_HTTP_IDENTITY_LIVE_RECOVERY_AUTHORIZATION_DECISION.md).
+  That decision is ineffective until its own commit is pushed and both CI jobs
+  are green; no implementation or real-input operation has begun.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
