@@ -1180,6 +1180,25 @@ push, and green this exact research before freezing a generated-only contract.
 Do not implement a URL opener or execute mode, request another public body, or
 touch a payload from the research record.
 
+Research `aa805038cc28c64ad75ddcb0e14768fdcb3cd96e` passed Base Python
+job `94173234952` and Optional Neuro Readers job `94173234944` in CI
+`31614330447` before the generated-only `MARC1-SA1` contract was frozen. Read
+`docs/MARC_1_SOURCE_AWARE_INVENTORY_ATTESTATION_PREREGISTRATION.md` and
+`registries/marc1_source_aware_inventory_attestation_contract.v0.json`. The
+contract fixes six semantic fixture families, 21 aggregate predicates, seven
+domain-separated hashes, 52 named refusals, 25 acceptance gates, and exactly
+the `plan`, `qualify`, and `inspect` commands. It has no URL opener, execute
+mode, dataset-specific body, registered or consumed path, archive, payload,
+signal, target, model, prediction, or score interface.
+
+Commit, push, and obtain both green CI jobs for this exact contract before
+generated-only implementation. A future live request still requires a new
+Tier C packet and decision after a separately green implementation. Do not use
+this contract to inspect the consumed root or to infer the failed
+`MARC1LM-F04` predicate. This is still the same path from trustworthy cohort
+identity through cue-resistant neural evidence and held-out language decoding
+to progressively stronger thought-to-text evidence.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

@@ -3938,3 +3938,33 @@ authorized by this research.
 Twelve focused, 680 MARC, 2,819 dependency-light, and 2,875 isolated optional-
 neuro tests pass. The complete suites retain one-thread operation and add 12
 tests without changing skip counts.
+
+## 2026-08-12 MARC1-SA1 Generated-Only Contract Handoff
+
+Research `aa805038cc28c64ad75ddcb0e14768fdcb3cd96e` passed Base
+Python job `94173234952` and Optional Neuro Readers job `94173234944` in CI
+`31614330447` before registration. Read
+`docs/MARC_1_SOURCE_AWARE_INVENTORY_ATTESTATION_PREREGISTRATION.md`,
+`registries/marc1_source_aware_inventory_attestation_contract.v0.json`, and
+its contract test.
+
+The frozen contract requires six generated semantic families, 21 aggregate
+predicates, seven domain-separated hashes, 52 refusals, 25 gates, deterministic
+row/key reorder replay, strict private/public separation, and exact cleanup.
+Allowed commands are exactly `plan`, `qualify`, and `inspect` under one thread,
+30 seconds, 256 MiB peak RSS, 2 MiB input/output caps, and zero network bytes.
+
+Thirteen focused and all 693 MARC tests pass. The complete locally installed
+suite passes 2,868 tests/35 skips; a clean narrow optional-neuro stack passes
+2,856/47. A broader merged environment triggered only historical
+process-global RSS self-checks after collection; the first five affected tests
+pass together in a fresh 64,520,192-byte process. Treat fresh remote Base
+Python and Optional Neuro Readers jobs as the cross-platform eligibility gate.
+
+Immediate next gate: commit, push, and obtain both green CI jobs for this exact
+contract. Then implement only the additive standard-library generated harness.
+Do not add a URL opener or execute mode, touch a registered/consumed path,
+request a dataset body, or access payload, signal, target, model, prediction,
+or score. A future live response remains a new Tier C sequence. This is the
+same path to cue-resistant neural evidence and held-out language decoding, not
+a pivot.

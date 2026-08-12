@@ -1621,3 +1621,13 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   identity, and later acquired-byte SHA-256. Its 21 aggregate predicates and
   seven hashes can localize a future one-shot mismatch without publishing
   rows. No new dataset response or payload is authorized or accessed.
+
+  Research `aa80503` passed Base Python job `94173234952` and Optional Neuro
+  Readers job `94173234944` in CI `31614330447` before the
+  [MARC1-SA1 generated-only preregistration](docs/MARC_1_SOURCE_AWARE_INVENTORY_ATTESTATION_PREREGISTRATION.md)
+  was frozen. It binds six semantic fixture families, 21 aggregate predicates,
+  seven domain-separated hashes, 52 refusals, and 25 acceptance gates. The
+  only future commands are `plan`, `qualify`, and `inspect`; there is no URL
+  opener, execute mode, live path, payload, target, model, or score surface.
+  Next: commit, push, and green this exact contract before generated-only
+  implementation. A new live response remains a separate Tier C decision.

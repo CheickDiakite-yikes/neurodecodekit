@@ -8894,3 +8894,41 @@ selection, and byte-integrity evidence while retaining one-shot privacy.
 Scientific claim not established: no dataset-specific body or neural/model
 operation occurred, so no neural, language-decoding, or thought-to-text result
 was added.
+
+## 2026-08-12 - MARC1-SA1 Generated-Only Preregistration
+
+- Began only after research `aa80503` passed Base Python job `94173234952`
+  and Optional Neuro Readers job `94173234944` in CI `31614330447`.
+- Froze six generated semantic families spanning documented five-field core,
+  full and partial optional MD5 provenance, one and multiple historical
+  mismatches, and an unknown non-target extension that blocks selection.
+- Froze exactly 21 aggregate predicates, seven domain-separated identity
+  hashes, 52 adversarial refusals, five refusal routes, four aggregate result
+  routes, and 25 acceptance gates.
+- The implementation surface is exactly `plan`, `qualify`, and `inspect` with
+  no network client, URL opener, execute command, dataset-specific body,
+  registered or consumed path, archive, payload, signal, target, model,
+  prediction, or score interface.
+- Resource ceilings are one CPU thread, one worker, one numerical job, 30
+  seconds, 256 MiB peak RSS, 2 MiB generated input, 2 MiB combined output,
+  4 MiB incremental disk, and zero network or payload bytes.
+- Thirteen focused contract tests pass with three subtests, and all 693 MARC
+  tests pass with 768 subtests. The complete locally installed suite passes
+  2,868 tests with 35 skips and 1,581 subtests in 65.82 seconds at
+  832,126,976-byte external peak RSS. A clean narrow optional-neuro stack
+  passes 2,856 tests with 47 skips and 1,588 subtests in 75.44 seconds at
+  696,745,984 bytes.
+- One broader merged-environment attempt was not accepted because historical
+  tests that measure process-global peak RSS inherited memory from collection;
+  the five first affected causal-replay tests pass together in a fresh process
+  at 64,520,192-byte external peak RSS. Fresh remote Base Python and Optional
+  Neuro Readers jobs remain decisive for the exact registration.
+- Every authorization flag is false and every real/private/neural/model/claim
+  counter is zero.
+
+Engineering capability proposed: a deterministic generated harness can test
+source-aware inventory localization before another one-shot metadata decision.
+
+Scientific claim not established: no real metadata, neural payload, target,
+model, prediction, score, language decoding, or thought-to-text result was
+accessed or established.

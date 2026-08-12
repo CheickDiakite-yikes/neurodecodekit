@@ -1718,3 +1718,16 @@ dataset-specific, private-path, payload, signal, target, model, score, retry,
 and claim counter is zero. Next gate: green this research, then freeze and
 green a generated-only contract before implementation. No live request is
 open.
+
+Research `aa80503` passed both required jobs in CI `31614330447` before the
+`MARC1-SA1` generated-only contract was frozen. The registration fixes six
+semantic fixture families, 21 public aggregate predicates, seven distinct
+identity domains, 52 named refusals, 25 acceptance gates, two temporary files,
+and exactly the `plan`, `qualify`, and `inspect` commands under one thread and
+small byte caps.
+
+Next gate: commit, push, and green this exact contract, then implement only the
+dependency-free generated harness. Live metadata and participant payload stay
+closed pending a new Tier C sequence. Task 4 remains active on the same path:
+trustworthy multimodal cohort, cue-resistant neural positive control, held-out
+language decoding, then progressively stronger thought-to-text evidence.

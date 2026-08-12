@@ -7279,3 +7279,32 @@ stronger thought-to-text evidence. It is not a pivot.
 Evidence: `docs/MARC_1_SOURCE_AWARE_INVENTORY_ATTESTATION_RESEARCH.md`,
 `registries/marc1_source_aware_inventory_attestation_research.v0.json`, and
 `tests/test_marc1_source_aware_inventory_attestation_research.py`.
+
+## 0219 - Freeze Source-Aware Attestation Before Implementation
+
+Evidence-order decision: freeze `MARC1-SA1` only after research `aa80503`
+passed Base Python job `94173234952` and Optional Neuro Readers job
+`94173234944` in CI `31614330447`.
+
+Contract decision: bind six generated semantic families, the exact 21-field
+aggregate predicate vector, seven distinct hash domains, 52 named refusals,
+25 acceptance gates, deterministic reorder replay, strict private/public
+separation, and exact cleanup under one-thread and small-byte caps.
+
+Boundary decision: expose only `plan`, `qualify`, and `inspect`. A future
+implementation may have no URL opener, execute mode, dataset-specific body,
+registered or consumed path, archive, payload, signal, target, model,
+prediction, or score interface.
+
+Next-gate decision: commit, push, and require both CI jobs green before Tier B
+generated-only implementation. A live metadata response remains a separately
+named Tier C packet and decision after a green implementation.
+
+Path decision: this is prospective cohort-integrity work on the same route to
+cue-resistant neural evidence, held-out language decoding, and progressively
+stronger thought-to-text evidence. It is not a pivot.
+
+Evidence:
+`docs/MARC_1_SOURCE_AWARE_INVENTORY_ATTESTATION_PREREGISTRATION.md`,
+`registries/marc1_source_aware_inventory_attestation_contract.v0.json`, and
+`tests/test_marc1_source_aware_inventory_attestation_contract.py`.

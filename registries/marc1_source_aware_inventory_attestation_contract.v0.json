@@ -1,0 +1,384 @@
+{
+  "schema_name": "neurodecodekit.marc1_source_aware_inventory_attestation_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "MARC-1-source-aware-inventory-attestation-contract-v0",
+  "lane_id": "MARC1-SA1",
+  "registered_at_local": "2026-08-12",
+  "status": "frozen_generated_only_requires_green_before_implementation",
+  "objective": "Qualify a generated-only source-aware attestor that independently binds public source schema optional checksum provenance target-free cohort identity and later payload-integrity availability.",
+  "artifact_bindings": {
+    "preregistration_document": {
+      "path": "docs/MARC_1_SOURCE_AWARE_INVENTORY_ATTESTATION_PREREGISTRATION.md",
+      "bytes": 11866,
+      "sha256": "2a4137efde7149b052bda74da3f4cb17c89c8610207c73a560dab866419cdeaa"
+    },
+    "contract_test": {
+      "path": "tests/test_marc1_source_aware_inventory_attestation_contract.py",
+      "bytes": 6544,
+      "sha256": "cce8d465204cbd18e792d89301dda6e0fb55cd5b8ed54705409c1f598e937139"
+    },
+    "green_research_registry": {
+      "path": "registries/marc1_source_aware_inventory_attestation_research.v0.json",
+      "bytes": 13353,
+      "sha256": "1125b2b77ff8597ead053319a0ecbf75eefe04ede130e6bf8eac7e943d8b6063"
+    }
+  },
+  "green_research_proof": {
+    "commit": "aa805038cc28c64ad75ddcb0e14768fdcb3cd96e",
+    "CI_run_id": 31614330447,
+    "base_python_job_id": 94173234952,
+    "optional_neuro_job_id": 94173234944,
+    "both_required_jobs_green": true,
+    "research_dataset_specific_requests": 0,
+    "research_payload_bytes": 0,
+    "research_scientific_claims": 0
+  },
+  "implementation_surface": {
+    "commands": [
+      "plan",
+      "qualify",
+      "inspect"
+    ],
+    "standard_library_only": true,
+    "base_dependency_delta": 0,
+    "network_client_or_URL_opener": false,
+    "execute_command": false,
+    "dataset_specific_fixture_or_body": false,
+    "registered_or_consumed_path_interface": false,
+    "payload_signal_target_model_or_score_interface": false,
+    "consumed_executor_import_call_or_modification": false
+  },
+  "source_schema": {
+    "required_public_core_fields": [
+      "id",
+      "name",
+      "size",
+      "is_link_only",
+      "download_url"
+    ],
+    "known_optional_extension_fields": [
+      "supplied_md5",
+      "computed_md5"
+    ],
+    "present_MD5_format": "lowercase_32_hex",
+    "both_present_MD5_values_must_agree": true,
+    "partial_optional_extension_allowed": true,
+    "absent_MD5_state": "unavailable_not_schema_failure",
+    "unknown_non_target_extension_route": "MARC1SA-R4",
+    "unknown_extension_values_retained": false,
+    "unknown_extensions_allow_selection": false,
+    "target_like_keys_recursively_forbidden": true,
+    "duplicate_JSON_keys_forbidden": true,
+    "nonfinite_JSON_constants_forbidden": true,
+    "safe_NFC_basename_required": true,
+    "positive_unique_non_boolean_ID_required": true,
+    "positive_non_boolean_size_required": true,
+    "is_link_only_required_value": false,
+    "download_URL_template": "https://ndownloader.figshare.com/files/{id}"
+  },
+  "historical_comparison": {
+    "parser_axiom": false,
+    "ordinary_mismatch_route": "MARC1SA-R3",
+    "rows": 55,
+    "participant_archives": 45,
+    "supplementary_rows": 10,
+    "participant_name_range": "sub-01.zip_through_sub-45.zip_exactly_once",
+    "declared_bytes": 3683416050,
+    "sub_01_file_ID": 62570743,
+    "sub_01_bytes": 33690749,
+    "sub_01_MD5_when_present": "6b01cf5bd30de0c670d2837d112a17fa",
+    "mismatch_updates_frozen_values": false,
+    "mismatch_authorizes_selection_or_payload": false
+  },
+  "generated_semantic_families": {
+    "documented_public_core_exact": {
+      "rows": 55,
+      "field_shape": "five_public_core_fields",
+      "historical_predicates_match": true,
+      "supplied_MD5_present": 0,
+      "computed_MD5_present": 0,
+      "route": "MARC1SA-R2"
+    },
+    "observed_extension_exact": {
+      "rows": 55,
+      "field_shape": "five_public_core_plus_two_MD5_extensions",
+      "historical_predicates_match": true,
+      "supplied_MD5_present": 55,
+      "computed_MD5_present": 55,
+      "agreeing_pairs": 55,
+      "route": "MARC1SA-R1"
+    },
+    "partial_optional_extension_exact": {
+      "rows": 55,
+      "both_MD5_fields": 18,
+      "supplied_only": 18,
+      "computed_only": 9,
+      "neither": 10,
+      "supplied_present_total": 36,
+      "computed_present_total": 27,
+      "agreeing_pairs": 18,
+      "historical_predicates_match": true,
+      "route": "MARC1SA-R2"
+    },
+    "single_historical_drift": {
+      "rows": 55,
+      "mutation": "add_one_byte_to_last_supplementary_row",
+      "expected_failed_historical_predicates": [
+        "historical_declared_bytes_match"
+      ],
+      "route": "MARC1SA-R3"
+    },
+    "multiple_historical_drifts": {
+      "rows": 55,
+      "mutation": "replace_sub_45_with_safe_supplementary_basename_and_change_size",
+      "expected_failed_historical_predicates": [
+        "historical_participant_count_matches",
+        "historical_supplementary_count_matches",
+        "historical_participant_name_identity_matches",
+        "historical_declared_bytes_match"
+      ],
+      "all_expected_mismatches_reported_in_one_pass": true,
+      "route": "MARC1SA-R3"
+    },
+    "unknown_non_target_extension": {
+      "rows": 55,
+      "unknown_field": "storage_location",
+      "rows_with_unknown_field": 1,
+      "unknown_value_retained": false,
+      "selection_blocked": true,
+      "route": "MARC1SA-R4"
+    }
+  },
+  "predicate_vector_fields": [
+    "public_core_fields_present_all",
+    "known_optional_MD5_keysets_only",
+    "unknown_extra_field_rows",
+    "row_count",
+    "unique_ID_count",
+    "unique_name_count",
+    "safe_filename_count",
+    "valid_downloader_URL_count",
+    "non_link_only_count",
+    "participant_archive_count",
+    "supplementary_row_count",
+    "declared_byte_total",
+    "historical_row_count_matches",
+    "historical_participant_count_matches",
+    "historical_supplementary_count_matches",
+    "historical_declared_bytes_match",
+    "historical_sub01_anchor_matches",
+    "supplied_MD5_present_count",
+    "computed_MD5_present_count",
+    "MD5_pair_agreement_count",
+    "target_like_field_count"
+  ],
+  "predicate_policy": {
+    "ordinary_mismatches_do_not_short_circuit": true,
+    "unsafe_structure_or_target_leakage_refuses": true,
+    "aggregate_counts_and_booleans_public": true,
+    "filenames_IDs_URLs_checksums_rows_or_participant_outcomes_public": false
+  },
+  "identity_domains": {
+    "transport_body_sha256": "neurodecodekit:MARC1-SA1:transport-body:v0",
+    "public_core_sha256": "neurodecodekit:MARC1-SA1:public-core:v0",
+    "optional_extension_sha256": "neurodecodekit:MARC1-SA1:optional-extension:v0",
+    "row_shape_sha256": "neurodecodekit:MARC1-SA1:row-shape:v0",
+    "classification_sha256": "neurodecodekit:MARC1-SA1:classification:v0",
+    "selection_sha256": "neurodecodekit:MARC1-SA1:selection:v0",
+    "predicate_vector_sha256": "neurodecodekit:MARC1-SA1:predicate-vector:v0"
+  },
+  "determinism_policy": {
+    "reverse_row_order_preserves_semantic_outputs": true,
+    "reverse_object_key_order_preserves_semantic_outputs": true,
+    "transport_body_hash_excluded_from_semantic_replay_equality": true,
+    "unavailable_selection_hash_representation": null,
+    "unavailable_selection_reason_required": true,
+    "private_and_public_hash_replay_required": true
+  },
+  "output_policy": {
+    "directory": "new_nonregistered_generated_temporary_directory",
+    "private_basename": "marc1_source_aware_inventory.private.v0.json",
+    "public_basename": "marc1_source_aware_inventory_result.v0.json",
+    "maximum_files": 2,
+    "file_mode": "0600",
+    "exclusive_no_follow_parent_relative_writes": true,
+    "private_contains_only_allowlisted_values": true,
+    "unknown_values_in_private": false,
+    "protected_row_values_allowed_in_public": false,
+    "raw_response_persisted": false,
+    "inspect_accepts_only_public_basename": true,
+    "public_inspections": 1,
+    "exact_cleanup_required": true,
+    "partial_artifact_after_refusal_allowed": false
+  },
+  "refusal_matrix": {
+    "proof_and_boundary": [
+      "research_commit_drift",
+      "research_registry_drift",
+      "contract_registry_drift",
+      "consumed_result_binding_drift",
+      "consumed_executor_import",
+      "URL_opener_or_execute_surface"
+    ],
+    "JSON_and_target_firewall": [
+      "malformed_UTF8",
+      "malformed_JSON",
+      "duplicate_JSON_key",
+      "nonfinite_JSON_constant",
+      "non_list_root",
+      "non_object_row",
+      "target_key_direct",
+      "target_key_nested_object",
+      "target_key_nested_list",
+      "target_key_normalized_variant"
+    ],
+    "core_fields_and_types": [
+      "missing_id",
+      "missing_name",
+      "missing_size",
+      "missing_is_link_only",
+      "missing_download_url",
+      "boolean_id",
+      "zero_id",
+      "boolean_size",
+      "zero_size",
+      "non_boolean_link_state",
+      "link_only_true",
+      "name_non_string"
+    ],
+    "filename_and_identity": [
+      "empty_name",
+      "dot_name",
+      "parent_name",
+      "slash_name",
+      "backslash_name",
+      "NUL_name",
+      "non_NFC_name",
+      "control_character_name",
+      "duplicate_file_ID",
+      "duplicate_filename"
+    ],
+    "URL_and_MD5": [
+      "HTTP_download_URL",
+      "wrong_download_host",
+      "download_path_ID_mismatch",
+      "download_URL_query",
+      "download_URL_fragment",
+      "malformed_supplied_MD5",
+      "malformed_computed_MD5",
+      "MD5_pair_disagreement"
+    ],
+    "output_and_resources": [
+      "symlink_output_parent",
+      "existing_output_directory",
+      "combined_output_cap",
+      "runtime_cap",
+      "peak_RSS_cap",
+      "thread_environment_mismatch"
+    ]
+  },
+  "refusal_routes": {
+    "MARC1SA-F00": "proof_contract_source_or_output_identity_failure",
+    "MARC1SA-F01": "transport_redirect_encoding_body_cap_or_timeout_failure",
+    "MARC1SA-F02": "malformed_JSON_duplicate_key_or_container_shape_failure",
+    "MARC1SA-F03": "target_unsafe_name_invalid_type_duplicate_URL_or_MD5_failure",
+    "MARC1SA-F04": "output_privacy_hash_replay_overwrite_cleanup_or_resource_failure"
+  },
+  "acceptance_gates": [
+    "green_research_identity_exact",
+    "standard_library_only",
+    "network_and_URL_opener_absent",
+    "command_surface_exactly_plan_qualify_inspect",
+    "six_semantic_families_reach_registered_routes",
+    "predicate_vector_exactly_21_fields",
+    "all_safe_predicates_evaluated_after_structural_gate",
+    "five_field_documented_core_passes",
+    "seven_field_observed_extension_passes",
+    "partial_optional_MD5_routes_R2",
+    "unknown_values_excluded_and_selection_blocked_R4",
+    "nested_target_like_keys_refuse",
+    "single_drift_localization_exact",
+    "multi_drift_localization_complete",
+    "row_and_key_reorder_preserve_semantic_identity",
+    "seven_hash_domains_exact_and_distinct",
+    "private_and_public_schemas_disjoint",
+    "public_output_contains_no_protected_row_field_or_value",
+    "raw_response_bytes_never_persisted",
+    "writes_exclusive_no_follow_and_parent_relative",
+    "public_inspection_exactly_once",
+    "exact_cleanup_removes_two_files_and_directory",
+    "all_52_refusals_pass",
+    "runtime_RSS_input_output_and_thread_caps_pass",
+    "every_real_private_payload_neural_target_model_score_retry_and_claim_counter_zero"
+  ],
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "generated_input_bytes": 2097152,
+    "combined_output_bytes": 2097152,
+    "incremental_disk_bytes": 4194304,
+    "base_dependency_delta": 0,
+    "network_bytes": 0,
+    "payload_bytes": 0
+  },
+  "authorization_flags": {
+    "generated_implementation_authorized_before_green_contract": false,
+    "registered_generated_closeout_authorized": false,
+    "dataset_specific_request_authorized": false,
+    "private_or_consumed_path_operation_authorized": false,
+    "participant_archive_request_authorized": false,
+    "payload_authorized": false,
+    "signal_or_target_read_authorized": false,
+    "model_training_prediction_or_score_authorized": false,
+    "retry_or_rerun_authorized": false,
+    "release_authorized": false,
+    "scientific_claim_upgrade_authorized": false
+  },
+  "access_counters": {
+    "generated_qualifications": 0,
+    "dataset_specific_requests": 0,
+    "dataset_specific_response_bodies": 0,
+    "private_or_consumed_path_operations": 0,
+    "participant_archive_requests": 0,
+    "payload_bytes": 0,
+    "signal_reads": 0,
+    "target_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "scoring_events": 0,
+    "provider_model_calls": 0,
+    "hardware_operations": 0,
+    "operations_on_other_projects": 0,
+    "retries": 0,
+    "reruns": 0,
+    "claim_upgrades": 0
+  },
+  "next_gate": {
+    "commit_push_and_green_this_exact_contract": true,
+    "green_contract_before_generated_implementation": true,
+    "green_implementation_before_registered_generated_closeout": true,
+    "new_Tier_C_packet_and_decision_before_future_live_request": true,
+    "live_request_authorized": false,
+    "payload_authorized": false
+  },
+  "same_research_path": {
+    "same_thought_to_text_path": true,
+    "is_pivot": false,
+    "sequence": [
+      "trustworthy_multimodal_cohort",
+      "cue_resistant_neural_positive_control",
+      "held_out_language_decoding",
+      "progressively_stronger_thought_to_text_evidence"
+    ]
+  },
+  "claim_boundary": {
+    "engineering_capability_proposed": "A deterministic source-aware attestor can localize safe metadata drift through aggregate predicates while separating source identity cohort identity and later acquired-byte integrity.",
+    "scientific_claim_not_established": "This contract accesses no real metadata neural payload signal target model prediction or score and adds no neural language-decoding or thought-to-text evidence.",
+    "scientific_claim_established": false,
+    "language_or_thought_to_text_established": false
+  }
+}
