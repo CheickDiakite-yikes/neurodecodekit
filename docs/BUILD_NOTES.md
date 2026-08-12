@@ -8045,3 +8045,39 @@ Scientific claim not established: generated metadata contain no human neural
 signal or model result and establish no neural effect, source attribution,
 movement decoding, or thought-to-text capability. MARC-1 remains a control
 rung on the same thought-to-text path, not a pivot.
+
+## 2026-08-12 - MARC1-P1A Real Metadata Selection Request
+
+- Prepared one all-false Tier C request only after generated-result commit
+  `fd246294db3defecdc11460e41945f64794b21cf` passed Base Python job
+  `94038664052` and Optional Neuro Readers job `94038664104` in CI
+  `31572950727`.
+- Bound a future two-stage sequence: generated/mock-only real-selector wrapper
+  implementation, its separate remote-green proof, then one real metadata
+  selection.
+- The future real operation is limited to one no-follow/content-open/read/hash/
+  parse of the exact 418,755-byte mode-`0600` sealed Freewill inventory and one
+  accepted Wrist Figshare v3 metadata body capped at 2,097,152 bytes.
+- Frozen 12-person ranks, Freewill session-1/session-2 split, Wrist runs-1-6/
+  runs-7-8 split, 6/2/8-GiB future payload ceilings, one-thread controls, 30-
+  second runtime, 256-MiB RSS, 4-MiB incremental disk, and 12-GiB free-space
+  floor remain exact. No payload acquisition is requested.
+- The Wrist participant-name parser must be fixed in the remotely green
+  implementation before any public request. Real mismatch consumes and parks
+  without fallback, substitution, amendment, retry, or rerun.
+- All 12 request tests and 38 subtests, 286 MARC tests plus 208 subtests, 2,425
+  dependency-light tests with 204 expected skips, and 2,496 optional-neuro
+  tests with 35 expected skips pass. The complete suites each add exactly 12
+  tests and zero skips over the green result baseline. External maximum RSS
+  was 214,335,488 and 720,027,648 bytes, respectively. Every current private/
+  public, payload, neural, target, model, score, release, deletion, and claim
+  counter and authorization flag remains zero or false.
+
+Engineering capability requested: one proof-gated standard-library wrapper
+can bind the exact real two-axis pilot from no more than 2,515,907 input bytes
+without opening a neural payload.
+
+Scientific claim not established: an all-false metadata request is not a
+neural experiment and establishes no neural effect, movement decoding,
+language decoding, or thought-to-text capability. This remains the same
+research path, not a pivot.

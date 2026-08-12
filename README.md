@@ -368,6 +368,7 @@ negative result and S25 is never repurposed for calibration.
 | MARC1-CD1A decision routing | 12 decision invariants; 168 focused tests; 2,378 optional-neuro tests with 35 expected skips; 0 public requests | Request `950796d` passed CI `31513578445`; decision `624cc4e` passed CI `31519016891` before wrapper work | Authorized only the staged wrapper-then-one-audit sequence after two green milestones; added no archive-content or neural evidence |
 | MARC1-CD1A live archive inventory | 13.59 GB virtual ZIP; 306,758 accepted metadata bytes; 1,227 entries; 1,025 files; 202 directories; 14/14 gates; 0 archive/member payload bytes | Exact wrapper `5dfa3c4` passed CI `31521510374` before one invocation; `MARC1CD-R1` passed in 2.727 sec at 43,974,656-byte peak RSS and is consumed | Adds a real, storage-safe map of the public archive without downloading it; member selection, neural data, models, scores, and scientific claims remain closed |
 | MARC1-P1 generated pilot selector | 1,227 + 55 generated rows; 12 preregistered participants per axis; 72 Freewill bundles/288 members; 12 Wrist archives; 36/36 refusals; 15/15 gates; 0 real operations | Exact implementation `0c0a698` passed CI `31571668853` before the one closeout; `MARC1PSG-R1` used 873,348 input and 182,564 output bytes in 0.227 sec at 32.4 MB reported RSS and is consumed | Proves deterministic, private, size-independent pilot selection mechanics under an 8-GiB ceiling; adds no neural or thought-to-text evidence |
+| MARC1-P1A real-selection request | 1 future 418,755-byte private-manifest read; 1 future Wrist metadata body capped at 2 MiB; 12+12 frozen participants; 0 payload bytes; every current authorization flag/counter false | Green result `fd24629` passed CI `31572950727`; all-false request awaits commit, push, green CI, identification, and a fresh packet-bound decision | Makes the next real metadata gate exact without opening either source; authorizes no operation and adds no neural or language evidence |
 
 ### Real-Data Scientific Scorecard
 
@@ -1208,9 +1209,15 @@ Read this before interpreting any number in the repository.
   aggregate report and mode-`0600` 175,618-byte private manifest were
   hash-bound, inspected once, and removed. All real, network, signal, target,
   model, score, and claim counters stayed zero. The generated lane is consumed;
-  real metadata selection remains a later Tier C gate. MARC-1 is a
-  confound-resolution rung on the same thought-to-text path, not a pivot, and
-  movement evidence is not language evidence.
+  real metadata selection remains a later Tier C gate. The
+  [MARC1-P1A authorization packet](docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_AUTHORIZATION_PACKET.md)
+  now freezes a future staged wrapper and one selection over exactly one
+  418,755-byte sealed Freewill-manifest read plus one Wrist metadata body
+  capped at 2 MiB. Its machine request is all false: it must be committed,
+  pushed, remotely green, identified as the sole active Tier C packet, and
+  followed by a fresh packet-bound maintainer decision before implementation
+  or access. MARC-1 is a confound-resolution rung on the same thought-to-text
+  path, not a pivot, and movement evidence is not language evidence.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

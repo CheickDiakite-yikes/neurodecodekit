@@ -3301,3 +3301,35 @@ message is required for a separate decision.
 This is the same thought-to-text research path. MARC-1 resolves attribution
 and positive-control risk before a later language-specific held-out experiment;
 movement evidence itself is not language evidence.
+
+## 2026-08-12 MARC1-P1A Real Metadata Request Handoff
+
+Generated-result commit `fd246294db3defecdc11460e41945f64794b21cf`
+passed Base Python job `94038664052` and Optional Neuro Readers job
+`94038664104` in CI `31572950727`. Read
+`docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_AUTHORIZATION_PACKET.md`,
+`registries/marc1_privacy_preserving_pilot_selection_authorization_request.v0.json`,
+and `tests/test_marc1_pilot_selection_authorization_request.py`.
+
+The request is all false. It binds one future generated/mock-only real-selector
+implementation and, only after that exact implementation is remotely green,
+one selection from a single 418,755-byte sealed Freewill-manifest content open
+plus one Wrist metadata body capped at 2 MiB. It authorizes no operation now,
+permits no payload bytes, and does not expose the retained inventory.
+
+All 12 request tests and 38 subtests, 286 MARC tests, 2,425 dependency-light
+tests with 204 expected skips, and 2,496 optional-neuro tests with 35 expected
+skips pass. Both complete suites add exactly 12 tests and zero skips over the
+green result baseline. Exact source identities, participant ranks, splits,
+no-follow/private modes, transport, parser freeze, privacy, machine caps,
+no-rerun behavior, and zero counters are machine-checkable.
+
+Immediate next gate: commit and push this exact request, require Base Python
+and Optional Neuro Readers green, identify it as the sole active Tier C packet,
+and stop. Only a fresh unambiguous maintainer message after that identification
+may be recorded in a separate decision. Current and earlier continuations are
+not retroactive. Do not implement the wrapper, open the sealed manifest,
+request Wrist metadata, or acquire a payload from this request alone.
+
+MARC1-P1A remains a control and attribution step on the same thought-to-text
+path, not a pivot. It produces no movement or language evidence.

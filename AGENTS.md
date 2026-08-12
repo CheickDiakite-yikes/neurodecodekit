@@ -732,15 +732,23 @@ were hash-bound, inspected once, and removed. Every real, network, payload,
 neural, target, model, score, and claim counter stayed zero. The registered
 generated closeout is consumed with no retry or rerun.
 
-The next Tier A task is one all-false Tier C request for a future single read
-of the sealed 418,755-byte Freewill manifest and one Wrist metadata body capped
-at 2 MiB. Commit, push, and require both jobs green for that exact request,
-then identify it as the sole active Tier C gate and stop. Do not inspect the
-sealed manifest, request Wrist metadata, access a payload, or record a decision
-without a fresh packet-bound maintainer message after that identification.
-Current and earlier continuations are not retroactive Tier C authority.
-MARC1-P1 is a confound-resolution rung on the same thought-to-text path, not a
-pivot or a replacement for the later language-specific held-out experiment.
+Read
+`docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_AUTHORIZATION_PACKET.md` and
+`registries/marc1_privacy_preserving_pilot_selection_authorization_request.v0.json`.
+The all-false `MARC1-P1A` request binds a future additive generated/mock
+wrapper and, only after that exact wrapper is remotely green, one real
+metadata selection over a single no-follow/open/hash/parse of the exact
+418,755-byte sealed Freewill manifest plus one Wrist Figshare v3 metadata body
+capped at 2 MiB. It authorizes nothing now; every current counter is zero.
+
+Commit, push, and require both jobs green for that exact request, then identify
+it as the sole active Tier C gate and stop. Do not inspect the sealed manifest,
+request Wrist metadata, access a payload, implement the wrapper, or record a
+decision without a fresh packet-bound maintainer message after that
+identification. Current and earlier continuations are not retroactive Tier C
+authority. MARC1-P1 is a confound-resolution rung on the same thought-to-text
+path, not a pivot or a replacement for the later language-specific held-out
+experiment.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

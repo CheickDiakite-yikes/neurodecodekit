@@ -6468,3 +6468,33 @@ Evidence:
 `docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_RESULT.md`,
 `registries/marc1_privacy_preserving_pilot_selection_result.v0.json`, and
 `tests/test_marc1_pilot_selection_result.py`.
+
+## 0193 - Request One Real Metadata Selection Without Payload Access
+
+Decision: prepare one all-false `MARC1-P1A` Tier C request only after consumed
+generated result `fd246294db3defecdc11460e41945f64794b21cf` passed both jobs
+in CI `31572950727`. The request itself authorizes no implementation, private
+path, public request, selection, output, payload, neural, target, model, score,
+or claim operation.
+
+Scope decision: bind a future staged standard-library wrapper followed, only
+after that exact wrapper is committed, pushed, and remotely green, by one
+no-follow/content-open/hash/parse of the exact 418,755-byte mode-`0600`
+Freewill inventory and one Figshare Wrist v3 metadata body capped at 2 MiB.
+Require exact frozen participant ranks and splits, zero payload bytes, 30
+seconds, 256 MiB peak RSS, 4 MiB incremental disk, one thread/worker/job, 12
+GiB free disk, and no retry or rerun.
+
+Failure decision: freeze the Wrist participant-name parser before public
+access. A source mismatch parks the sole run; it cannot trigger a fallback,
+post-response parser change, participant substitution, or budget expansion.
+
+Research-path decision: this is not a pivot. The metadata gate reduces
+selection and confound-attribution risk on the same thought-to-text path, but
+movement metadata and any later movement result remain insufficient as
+language evidence.
+
+Evidence:
+`docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_AUTHORIZATION_PACKET.md`,
+`registries/marc1_privacy_preserving_pilot_selection_authorization_request.v0.json`,
+and `tests/test_marc1_pilot_selection_authorization_request.py`.

@@ -1289,12 +1289,18 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   neural, target, model, score, and claim counter stayed zero. The generated
   closeout is consumed with no retry or rerun.
 
-  Immediate next gate: prepare, test, commit, push, and green one all-false
-  Tier C packet for a future single 418,755-byte sealed Freewill-manifest read
-  and one bounded Wrist metadata body. Stop after identifying that packet as
-  the sole active Tier C gate; a fresh packet-bound maintainer decision is
-  required before either real metadata operation. Payload acquisition,
-  signal/event/target access, training, inference, scoring, and scientific
-  promotion remain closed. This is a confound-resolution rung on the same
-  thought-to-text path, not a pivot, and movement evidence is not language
-  evidence.
+  Read
+  `docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_AUTHORIZATION_PACKET.md` and
+  `registries/marc1_privacy_preserving_pilot_selection_authorization_request.v0.json`.
+  The all-false `MARC1-P1A` request freezes a future generated/mock wrapper and,
+  only after that exact wrapper is remotely green, one real metadata selection
+  over a single 418,755-byte no-follow Freewill-manifest read plus one Wrist
+  metadata body capped at 2 MiB. Payload, signal, target, model, score, retry,
+  rerun, and claim operations remain zero and unauthorized.
+
+  Immediate next gate: test, commit, push, and green this exact request, then
+  identify it as the sole active Tier C packet and stop. A fresh packet-bound
+  maintainer decision after that identification is required before real-
+  selector implementation. No current or earlier `continue` is retroactive.
+  This is a confound-resolution rung on the same thought-to-text path, not a
+  pivot, and movement evidence is not language evidence.

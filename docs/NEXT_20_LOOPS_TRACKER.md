@@ -1368,11 +1368,17 @@ byte reported peak RSS. The 6,946-byte aggregate report and mode-`0600`
 Every real, neural, model, score, and claim counter stayed zero. The generated
 closeout is consumed with no retry or rerun.
 
-Next gate: prepare, test, commit, push, and green one all-false Tier C request
-for a future single 418,755-byte sealed Freewill-manifest read and one Wrist
-metadata body capped at 2 MiB. Stop once that exact packet is remotely green
-and identified as the sole active Tier C gate. The sealed Freewill inventory
-and Wrist metadata remain unopened, and no current or earlier `continue` is
+The all-false `MARC1-P1A` request is now specified in
+`docs/MARC_1_PRIVACY_PRESERVING_PILOT_SELECTION_AUTHORIZATION_PACKET.md` and
+`registries/marc1_privacy_preserving_pilot_selection_authorization_request.v0.json`.
+It freezes a generated/mock wrapper before one future real selection using
+exactly one 418,755-byte sealed Freewill-manifest content open and one Wrist
+metadata body capped at 2 MiB. It permits zero payload bytes and currently
+authorizes nothing.
+
+Next gate: test, commit, push, and green that exact request, then identify it
+as the sole active Tier C gate and stop. The sealed Freewill inventory and
+Wrist metadata remain unopened, and no current or earlier `continue` is
 retroactive authority. This is the same path toward a confound-resistant
 neural result and later language-specific thought-to-text evidence, not a
 pivot; movement evidence cannot itself establish language decoding.
