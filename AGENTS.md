@@ -956,6 +956,22 @@ dataset-specific body, open any private root, or access a payload, signal,
 target, model, prediction, or score. MARC1-PG1 is the same thought-to-text path,
 not a pivot, and has no scientific claim value.
 
+Research `7a7883abda094eb9f202215b8b138a17cdff022e` passed Base Python
+job `94095736694` and Optional Neuro Readers job `94095736770` in CI
+`31591022429` before the generated-only `MARC1-PG1` contract was frozen. Read
+`docs/MARC_1_VERSIONED_PAGINATION_RECOVERY_PREREGISTRATION.md` and
+`registries/marc1_versioned_pagination_recovery_contract.v0.json`. It binds
+the exact query, four equivalent generated cases, 41 refusals, eight routes,
+18 gates, unchanged selector semantics, strict private/public separation, and
+one-thread resource caps.
+
+The only eligible next action after this contract's own remote-green proof is
+an additive standard-library `plan`/`qualify`/`inspect` module with no network
+client, URL or local-source argument, private-root name, automatic pagination,
+retry, fallback, `execute`, payload, neural, target, model, or scorer surface.
+Do not implement it before both jobs are green. A new dataset-specific body
+remains Tier C and payload acquisition remains ineligible.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

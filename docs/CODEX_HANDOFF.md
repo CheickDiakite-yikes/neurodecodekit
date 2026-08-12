@@ -3638,3 +3638,31 @@ Only then freeze a generated-only pagination contract and qualify a harness
 with no URL opener or execute mode. A new live body remains a later separate
 Tier C decision. This is the same thought-to-text path, not a pivot, and no
 scientific result has changed.
+
+## 2026-08-12 MARC1-PG1 Generated Contract Handoff
+
+Research `7a7883abda094eb9f202215b8b138a17cdff022e` passed Base Python
+job `94095736694` and Optional Neuro Readers job `94095736770` in CI
+`31591022429` before this contract. Read
+`docs/MARC_1_VERSIONED_PAGINATION_RECOVERY_PREREGISTRATION.md`,
+`registries/marc1_versioned_pagination_recovery_contract.v0.json`, and its
+matching test.
+
+The contract freezes exact request serialization for
+`page=1&page_size=1000`, four equivalent generated row-order/encoding cases,
+41 mutations, eight refusal routes, 18 acceptance gates, and the unchanged
+55-row semantic identity. It composes only the frozen generated selector and
+HTTP-semantics source after hash verification. The future module is limited to
+`plan`, `qualify`, and `inspect`; it cannot expose a network opener, URL or
+local-source argument, `execute`, private-root name, automatic pagination,
+fallback, payload, signal, target, model, or score interface.
+
+Eleven focused contract tests, all 489 MARC tests, 2,628 dependency-light
+tests with 204 expected skips, and 2,699 optional-neuro tests with 35 expected
+skips pass. Ruff, compile, 186 registry JSON parses, CLI help, hash replay,
+policy replay, and diff checks pass.
+
+Immediate next gate: commit, push, and obtain both green CI jobs for this exact
+contract. Only then implement the generated-only harness. A new dataset body
+remains a later Tier C action; generated `MARC1PG-G1` would establish no neural
+or language result. This remains the same thought-to-text path.

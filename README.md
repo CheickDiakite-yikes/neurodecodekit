@@ -1319,6 +1319,15 @@ Read this before interpreting any number in the repository.
   contract, implementation, and closeout milestones are independently green.
   This is the same confound-control to neural-positive-control to held-out-
   language path, not a pivot; it establishes no new scientific result.
+  Research `7a7883a` passed Base Python job `94095736694` and Optional Neuro
+  Readers job `94095736770` in CI `31591022429` before the
+  [MARC1-PG1 generated contract](docs/MARC_1_VERSIONED_PAGINATION_RECOVERY_PREREGISTRATION.md)
+  was frozen. The contract permits only a future `plan`/`qualify`/`inspect`
+  harness after its own commit is green. It binds four equivalent generated
+  replay cases, 41 refusals, 18 gates, exact request serialization, unchanged
+  selection and split identities, private/public output separation, one-thread
+  resource caps, zero network/private bytes, and no `execute` command. A live
+  request and payload acquisition remain closed.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

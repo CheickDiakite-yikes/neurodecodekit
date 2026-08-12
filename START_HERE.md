@@ -1454,3 +1454,19 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   body, payload, signal, target, model, score, or claim action is authorized.
   This remains the same path toward cue-resistant neural evidence and later
   held-out language decoding, not a pivot.
+
+  Research `7a7883abda094eb9f202215b8b138a17cdff022e` passed Base
+  Python job `94095736694` and Optional Neuro Readers job `94095736770` in CI
+  `31591022429` before the
+  [generated pagination contract](docs/MARC_1_VERSIONED_PAGINATION_RECOVERY_PREREGISTRATION.md)
+  was frozen. It permits only a future zero-network `plan`/`qualify`/`inspect`
+  module after this exact contract is remotely green. Four accepted replay
+  cases must share semantic and selection hashes; all 41 mutations must refuse
+  across eight routes; all 18 acceptance gates must pass.
+
+  The contract retains exact `page=1&page_size=1000` serialization and the
+  unchanged 55-row identity. It has no `execute` command, URL or local-input
+  argument, private-root name, automatic pagination, fallback, payload, signal,
+  target, model, or scoring surface. The next gate is contract commit, push,
+  and both green CI jobs. Generated success would still add no scientific
+  evidence.

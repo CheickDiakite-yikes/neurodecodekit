@@ -1545,3 +1545,15 @@ page, fallback, partial cohort, expectation change, private-root read, live
 body, payload, signal, target, model, score, retry, rerun, and claim upgrade
 remain closed. This is the same control-attribution to neural-positive-control
 to held-out-language path, not a pivot.
+
+Research `7a7883a` passed both required jobs in CI `31591022429` before the
+generated-only `MARC1-PG1` contract was frozen. It fixes one canonical
+`page=1&page_size=1000` request, four equivalent generated replay cases, 41
+refusals, eight routes, 18 gates, unchanged 55-row selection identity, private/
+public output separation, and one-thread caps. It exposes no `execute` or live-
+input surface.
+
+Next gate: commit, push, and green the exact contract. Only afterward implement
+the additive generated-only harness and run its separate verification. No
+dataset request, private input, payload, signal, target, model, score, or claim
+action is open, and generated `MARC1PG-G1` would not be scientific evidence.

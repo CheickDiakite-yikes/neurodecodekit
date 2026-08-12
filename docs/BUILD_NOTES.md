@@ -8474,3 +8474,28 @@ result.
 - Next: green this research milestone, then freeze a generated-only contract.
   No new live body or scientific operation is authorized. This is the same
   control-attribution to held-out-language path, not a pivot.
+
+## 2026-08-12 - MARC1-PG1 Generated Pagination Contract
+
+- Began only after research `7a7883a` passed Base Python job `94095736694`
+  and Optional Neuro Readers job `94095736770` in CI `31591022429`.
+- Froze exact byte-for-byte request identity for
+  `page=1&page_size=1000`, including method, versioned path, query ordering,
+  headers, one body, zero second pages, and zero fallbacks.
+- Bound four equivalent generated row-order/encoding cases, 41 adversarial
+  refusals, eight failure routes, 18 acceptance gates, and canonical policy
+  SHA-256 `c4e80a99e782ac61d5e5b32e371c9cbb40580254376f518e9820a507402b1624`.
+- Preserved the exact 55-row, 45-participant, 10-supplementary,
+  3,683,416,050-byte identity and the existing 12+12 selection and split
+  contracts. Partial pages and adaptive expectation changes refuse.
+- Limited the future module to standard-library `plan`/`qualify`/`inspect`
+  with no network, URL/local-input, private-root, automatic-pagination,
+  fallback, payload, neural, model, scorer, or `execute` surface.
+- Eleven focused contract tests and all 489 MARC tests pass. The complete
+  dependency-light suite passes 2,628 tests with 204 expected skips in 20.743
+  seconds at 250,806,272-byte external peak RSS. The optional-neuro suite
+  passes 2,699 tests with 35 expected skips in 59.124 seconds at 809,107,456-
+  byte external peak RSS. Ruff, compilation, all 186 registry JSON parses,
+  CLI help, bound hashes, canonical policy hash, and diff checks pass.
+- Next: green this exact contract before implementing the generated harness.
+  Real/private access and scientific operations remain zero and unauthorized.

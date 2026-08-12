@@ -6888,3 +6888,37 @@ Evidence:
 `docs/MARC_1_VERSIONED_PAGINATION_RECOVERY_RESEARCH.md`,
 `registries/marc1_versioned_pagination_recovery_research.v0.json`, and
 `tests/test_marc1_versioned_pagination_recovery_research.py`.
+
+## 0206 - Freeze One Explicit Page Before Any New Source Contact
+
+Evidence-order decision: after research `7a7883a` passed Base Python job
+`94095736694` and Optional Neuro Readers job `94095736770` in CI
+`31591022429`, freeze a generated-only MARC1-PG1 contract. Do not implement
+from an ungreen contract and do not contact the dataset source.
+
+Request decision: bind method, versioned path, exact ordered query
+`page=1&page_size=1000`, request headers, one response body, zero second pages,
+and zero fallbacks. Refuse missing, default-sized, oversized, duplicate,
+reordered, mixed-style, or hidden pagination controls.
+
+Semantic decision: preserve all 55 rows, 45 participant archives, ten
+supplementary rows, declared byte sum, `sub-01` anchor, target firewall,
+canonical source identity, 12+12 selection, and splits. Response order is not
+identity; a partial page or changed expected count is not acceptable.
+
+Qualification decision: require four equivalent generated cases, all 41
+mutations, eight routes, 18 gates, deterministic output replay, private/public
+separation, source-surface audit, and one-thread resource caps. The only future
+commands are `plan`, `qualify`, and `inspect`; no `execute` surface exists.
+
+Scope decision: every real, private, payload, signal, target, model, score,
+retry, rerun, release, and claim authorization remains false. A generated pass
+would qualify mechanics only. A new dataset-specific body remains Tier C.
+
+Path decision: this is a metadata control on the same cue-resistance to neural-
+positive-control to held-out-language route, not a pivot.
+
+Evidence:
+`docs/MARC_1_VERSIONED_PAGINATION_RECOVERY_PREREGISTRATION.md`,
+`registries/marc1_versioned_pagination_recovery_contract.v0.json`, and
+`tests/test_marc1_versioned_pagination_recovery_contract.py`.
