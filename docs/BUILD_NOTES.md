@@ -9018,3 +9018,38 @@ localization, privacy controls, and resource caps replay together end to end.
 Scientific claim not established: no live metadata, EEG payload, neural
 signal, target, model prediction, score, language decoding, or thought-to-text
 result was produced.
+
+## 2026-08-12 - MARC1-SA1A Source-Aware Live-Metadata Request
+
+- Prepared only after generated result `094b6cb` passed Base Python job
+  `94193898391` and Optional Neuro Readers job `94193898482` in CI
+  `31620515340`.
+- Bound one future additive standard-library wrapper and one exact Figshare
+  version-3 files GET with one request, zero redirects, one accepted body
+  capped at 2 MiB, and zero payload bytes.
+- Froze the five-field public core, optional agreeing MD5 provenance, strict
+  target firewall, and exact green attestor hash. R1/R2 permit only the frozen
+  target-free cohort; R3/R4 block selection and retain aggregate diagnosis.
+- Froze a new absent Git-ignored root, capability-first mode-`0600` output,
+  30-second/256-MiB caps, one CPU thread, 4-MiB incremental disk, and a 10-GiB
+  free-space precondition.
+- The future wrapper may not import, call, modify, probe, or expose the
+  consumed `MARC1-LM1` wrapper or root. Every route stops before archive or
+  payload access and consumes the lane with no retry or rerun.
+- All current implementation, output, network, selection, payload, neural,
+  target, model, score, cleanup, release, other-project, and claim permissions
+  are false. Current operation counters are zero.
+- Fourteen request tests and all 747 MARC tests plus 801 subtests pass. The
+  complete dependency-light suite passes 2,922 tests with 35 skips and 1,614
+  subtests in 92.87 seconds at 622,968,832-byte external maximum RSS. The
+  isolated optional-neuro suite passes 2,910 tests with 47 skips and 1,621
+  subtests in 89.73 seconds at 681,934,848-byte external maximum RSS. Each
+  comparable suite adds exactly 14 tests and zero skips over the green result.
+
+Engineering capability requested: one proof-gated source-aware wrapper can
+turn a single bounded public metadata response into a privacy-preserving,
+failure-localized cohort identity without weakening payload integrity.
+
+Scientific claim not established by this request: this all-false packet reads
+no neural signal and establishes no neural effect, decoding accuracy, language
+decoding, or thought-to-text capability.

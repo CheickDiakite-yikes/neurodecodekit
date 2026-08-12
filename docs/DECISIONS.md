@@ -7371,3 +7371,37 @@ progressively stronger thought-to-text evidence. It is not a pivot.
 Evidence: `docs/MARC_1_SOURCE_AWARE_INVENTORY_ATTESTATION_RESULT.md`,
 `registries/marc1_source_aware_inventory_attestation_result.v0.json`, and
 `tests/test_marc1_source_aware_inventory_attestation_result.py`.
+
+## 0222 - Request One Source-Aware Metadata Response Without Payload Authority
+
+Eligibility decision: prepare `MARC1-SA1A` only after generated result
+`094b6cb` passed Base Python job `94193898391` and Optional Neuro Readers job
+`94193898482` in CI `31620515340`.
+
+Scope decision: request one future additive standard-library wrapper and one
+exact Figshare version-3 files GET with one request, zero redirects, one body
+capped at 2 MiB, one private canonical manifest, one aggregate report, and
+zero participant archive or payload bytes.
+
+Source decision: bind the exact green five-field-core and optional-MD5
+attestor. R1/R2 may retain only the frozen target-free cohort. Historical drift
+or unknown extensions route R3/R4 and block selection. Provider MD5 never
+substitutes for SHA-256 over later acquired payload bytes.
+
+Isolation decision: use a new absent root, acquire output authority first,
+refuse any import or operation on the consumed live wrapper/root, use one
+thread under small metadata caps, and consume every result or failure without
+retry, rerun, parser amendment, or payload continuation.
+
+Authorization decision: this request is all false and authorizes no
+implementation or operation. Commit, push, and require both CI jobs green;
+then identify it as the sole active Tier C packet and require fresh unambiguous
+packet-bound maintainer words. Current and prior messages are not retroactive.
+
+Path decision: this is the next cohort-integrity gate on the same route to
+cue-resistant neural evidence, held-out language decoding, and progressively
+stronger thought-to-text evidence. It is not a pivot.
+
+Evidence: `docs/MARC_1_SOURCE_AWARE_LIVE_METADATA_AUTHORIZATION_PACKET.md`,
+`registries/marc1_source_aware_live_metadata_authorization_request.v0.json`,
+and `tests/test_marc1_source_aware_live_metadata_authorization_request.py`.

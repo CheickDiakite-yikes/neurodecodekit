@@ -389,6 +389,7 @@ negative result and S25 is never repurposed for calibration.
 | MARC1-SA1 generated-only contract | Six semantic fixture families; 21 predicates; seven identity domains; 52 refusals; 25 gates; exactly `plan`/`qualify`/`inspect`; 0 live or payload operations | Research `aa80503` passed CI `31614330447` before the strict versioned contract was frozen; 13 focused tests pass | Freezes a source-aware attestor before implementation while keeping every live, neural, target, model, and claim boundary closed; this remains cohort-integrity work on the same thought-to-text path |
 | MARC1-SA1 generated implementation | Six family routes; 52/52 refusals; 25/25 gates; 732,811 generated input bytes; 109,589 temporary output bytes; exact cleanup | Green contract `8f64ccb` / CI `31616551270` preceded development `MARC1SA-G1`; exact implementation `feb3b83` later passed CI `31619037335` | Adds deterministic aggregate drift localization and optional-MD5 handling without a network or payload surface; no neural/language claim changed |
 | MARC1-SA1 registered generated closeout | Six family routes; 21 predicates; seven identity domains; 52/52 refusals; 25/25 gates; 732,811 generated input and 109,589 temporary output bytes; exact cleanup | Exact implementation `feb3b83` passed CI `31619037335` before the one 0.0534-sec closeout at 27,885,568-byte reported peak RSS; consumed with no rerun | Confirms source-aware schema, optional checksum, aggregate drift, privacy, and resource mechanics compose on fixtures; live metadata and every neural/language claim remain closed |
+| MARC1-SA1A live-metadata request | One future exact GET; one body capped at 2 MiB; source-aware R1-R4 routing; 0 payload bytes; all current permissions false | Green generated result `094b6cb` / CI `31620515340` anchors the immutable packet; 14 request invariants pass | Proposes one additive wrapper and one metadata-only attempt after a fresh packet-bound decision; the packet performs no operation and preserves the same thought-to-text path |
 
 ### Real-Data Scientific Scorecard
 
@@ -1473,6 +1474,14 @@ Read this before interpreting any number in the repository.
   27,885,568-byte reported peak RSS. Both files and the invocation directory
   were removed. The closeout is consumed; a live metadata response remains a
   new Tier C sequence, and no EEG or language evidence changed.
+- **MARC1-SA1A all-false live-metadata request:** green result `094b6cb` / CI
+  `31620515340` now anchors one possible future source-aware wrapper and one
+  exact 2-MiB-capped metadata GET. R1/R2 may retain the frozen target-free
+  cohort; R3/R4 must block selection and publish only aggregate diagnosis.
+  Every current implementation, network, output, payload, neural, target,
+  model, score, and claim permission is false. The packet must become remotely
+  green and receive a fresh packet-bound maintainer decision before wrapper
+  implementation or source access.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

@@ -1650,3 +1650,13 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   and accessed zero real metadata, payload, signal, target, model, or score.
   The generated closeout is consumed. A new source-aware live wrapper and one
   response require a separately green all-false Tier C packet and decision.
+
+  That all-false proposal is now frozen in the
+  [MARC1-SA1A source-aware live-metadata packet](docs/MARC_1_SOURCE_AWARE_LIVE_METADATA_AUTHORIZATION_PACKET.md).
+  It binds one future additive standard-library wrapper and one exact
+  `page=1&page_size=1000` response capped at 2 MiB. Green R1/R2 semantics may
+  retain the frozen target-free cohort; historical drift or unknown extensions
+  route R3/R4 and block selection. The request currently authorizes nothing,
+  including wrapper implementation, network access, output writes, archives,
+  payloads, EEG, targets, models, or scores. Next: green the packet, identify
+  its exact commit/CI/scope, and wait for fresh packet-bound maintainer words.

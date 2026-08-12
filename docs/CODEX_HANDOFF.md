@@ -4027,3 +4027,27 @@ contact Figshare, touch the consumed root, or access an archive or EEG payload
 from this result. The path remains cohort integrity, cue-resistant neural
 positive control, held-out language decoding, then stronger thought-to-text
 evidence.
+
+## 2026-08-12 MARC1-SA1A All-False Request Handoff
+
+Generated result `094b6cb7358c5d44b6d8c2ce7a087e16ec4e17c3` passed Base
+Python job `94193898391` and Optional Neuro Readers job `94193898482` in CI
+`31620515340` before packet preparation. Read
+`docs/MARC_1_SOURCE_AWARE_LIVE_METADATA_AUTHORIZATION_PACKET.md`, its request
+registry, and request test.
+
+The packet binds one future additive standard-library wrapper, one exact
+version-3 Figshare GET, one response capped at 2 MiB, one private canonical
+manifest, one aggregate report, and zero archive or payload bytes. Exact green
+source-aware routes R1/R2 may expose only the frozen target-free cohort; R3/R4
+block selection. The old wrapper and root remain forbidden. One thread,
+30 seconds, 256 MiB RSS, 4 MiB disk, and a 10-GiB free-space precondition are
+frozen.
+
+Every current permission and real-operation counter is false or zero. The
+current and earlier maintainer messages are not retroactive authorization.
+Fourteen request tests, all 747 MARC tests, 2,922 dependency-light tests with
+35 skips, and 2,910 optional-neuro tests with 47 skips pass locally.
+Immediate next gate: test, commit, push, and green this request. Only then
+identify its commit, CI, exact scope, and claim boundary as the sole active
+Tier C packet and wait for fresh packet-bound words.

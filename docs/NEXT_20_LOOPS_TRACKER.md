@@ -1758,3 +1758,18 @@ wrapper and one bounded response. Payload acquisition remains closed. Task 4
 continues on the same path to a cue-resistant neural positive control and
 held-out language decoding; no scientific result was added by this fixture
 closeout.
+
+Generated result `094b6cb` passed both required jobs in CI `31620515340`
+before the all-false `MARC1-SA1A` packet was prepared. The packet binds one
+future additive standard-library wrapper and one exact version-3 Figshare
+metadata response capped at 2 MiB. Exact source-aware R1/R2 semantics may
+retain only the frozen target-free cohort; historical drift or unknown
+extensions route R3/R4 and block selection. Every result stops before archive
+or payload access.
+
+Current implementation, network, path, output, archive, payload, signal,
+target, model, score, retry, rerun, and claim permissions remain false. Next
+gate: commit, push, and green the request, then identify its immutable scope as
+the sole Tier C packet and require fresh packet-bound maintainer words. Task 4
+continues on the same thought-to-text path; this packet adds no scientific
+result.

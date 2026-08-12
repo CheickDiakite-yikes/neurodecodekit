@@ -1230,6 +1230,20 @@ zero. The closeout is consumed. Green this result before an all-false Tier C
 request; do not contact Figshare, touch the consumed root, or access an archive
 or EEG payload. This remains the same thought-to-text research path.
 
+Result `094b6cb7358c5d44b6d8c2ce7a087e16ec4e17c3` passed Base Python
+job `94193898391` and Optional Neuro Readers job `94193898482` in CI
+`31620515340` before the all-false `MARC1-SA1A` request was prepared. Read
+`docs/MARC_1_SOURCE_AWARE_LIVE_METADATA_AUTHORIZATION_PACKET.md` and
+`registries/marc1_source_aware_live_metadata_authorization_request.v0.json`.
+It proposes one future additive wrapper and one exact 2-MiB-capped public
+metadata response. R1/R2 may retain only the frozen target-free cohort; R3/R4
+block selection. It authorizes no current implementation, path, network,
+output, archive, payload, neural, target, model, score, or claim operation.
+Commit, push, and require both jobs green before identifying it as the sole
+Tier C packet. Only fresh packet-bound maintainer words after that
+identification may authorize a decision record. Do not use the current or an
+earlier message retroactively.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in
