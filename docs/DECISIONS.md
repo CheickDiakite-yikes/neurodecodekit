@@ -7178,3 +7178,34 @@ Evidence:
 `docs/MARC_1_PAGINATED_LIVE_METADATA_AUTHORIZATION_DECISION.md`,
 `registries/marc1_paginated_live_metadata_authorization_decision.v0.json`, and
 `tests/test_marc1_paginated_live_metadata_authorization_decision.py`.
+
+## 0215 - Qualify The Capability-First MARC1-LM1 Wrapper
+
+Evidence-order decision: begin only after packet-bound decision `060a365`
+passed both required jobs in CI `31604608307`; keep the registered path and
+Figshare closed until the exact implementation is separately green.
+
+Architecture decision: use one additive standard-library module with held
+parent capability, exact request serialization, bounded no-redirect transport,
+strict JSON and target firewalls, deterministic private inventory, aggregate
+public output, and one post-marker failure receipt. Import only hash-bound pure
+pagination helpers after capability acquisition and never call a consumed
+entrypoint.
+
+Qualification decision: accept `MARC1LM-G1` after all four transport forms, 36
+refusals, and 20 gates pass with exact 55/45/10 inventory, frozen 12-subject
+cohort, zero split overlap, deterministic hashes, bounded resources, public-
+only inspection, and exact cleanup.
+
+Next-gate decision: commit, push, and green this exact implementation before
+one registered metadata request. Any post-marker outcome consumes. Metadata
+success stops before payload and cannot upgrade a scientific claim.
+
+Path decision: this is cohort-integrity work on the same controlled-neural-
+effect to held-out-language to thought-to-text route, not a pivot.
+
+Evidence:
+`docs/MARC_1_PAGINATED_LIVE_METADATA_IMPLEMENTATION.md`,
+`registries/marc1_paginated_live_metadata_implementation.v0.json`,
+`tests/test_marc1_paginated_live_metadata.py`, and
+`tests/test_marc1_paginated_live_metadata_implementation.py`.

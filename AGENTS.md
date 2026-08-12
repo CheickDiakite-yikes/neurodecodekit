@@ -1110,16 +1110,40 @@ achieve a scientific claim, achieve thought to text 😎`. Read
 The decision quotes those words and binds only green request
 `4d3eb19690676d48ce42ed16c5c00cc041d8bb4b`, CI `31603530015`, Base
 Python job `94136577454`, Optional Neuro Readers job `94136577639`, and the
-unchanged one-response, 2 MiB, zero-payload scope. It is ineffective until its
-own commit is pushed and both CI jobs are green.
+unchanged one-response, 2 MiB, zero-payload scope. Decision
+`060a365a24e75da4297a5c4a3422ff730467ec36` passed Base Python job
+`94140250333` and Optional Neuro Readers job `94140250412` in CI
+`31604608307` before implementation.
 
-After green decision proof, implement and qualify only the additive generated/
-mock wrapper. Do not open the registered output path or contact Figshare until
-that exact wrapper is separately committed, pushed, and both jobs are green.
-The one live invocation then consumes on any post-marker outcome and cannot
-retry. The user's scientific aspiration preserves the destination; it does
-not authorize a payload, neural operation, model, score, or claim upgrade
-under this metadata decision.
+Read `docs/MARC_1_PAGINATED_LIVE_METADATA_IMPLEMENTATION.md`,
+`registries/marc1_paginated_live_metadata_implementation.v0.json`, and its two
+test modules. The additive standard-library wrapper acquires output authority
+first, rejects the registered path during generated qualification without
+touching it, validates four bounded HTTP framing cases, rejects 36 adversarial
+mutations, enforces a target-like-field firewall, binds the exact 55-row
+inventory and frozen 12-subject split, separates private and aggregate output,
+and can write an aggregate failure receipt after a consumed marker.
+
+Final generated `MARC1LM-G1` passed all four accepted cases, 36 refusals, and
+20 gates over 184,466 generated response bytes. It created and removed exactly
+19,030 temporary output bytes in 0.029389458941295743 seconds at 42,123,264-byte
+reported RSS; external wall was 0.11 seconds at 42,221,568-byte peak RSS.
+Every registered-path, real-network, participant-archive, payload, signal,
+target, model, prediction, score, provider, hardware, other-project, retry,
+rerun, and claim counter stayed zero.
+
+Twenty-one behavior, 12 implementation-record, and all 658 MARC tests pass.
+Complete dependency-light verification is 2,797 tests with 204 expected skips;
+canonical optional verification is 2,868 tests with 35 expected skips. Both
+add exactly 33 tests and zero skips over the green decision baseline.
+
+Commit, push, and obtain both green CI jobs for this exact implementation
+before touching the registered output path or contacting Figshare. Only then
+run the one registered metadata invocation. Any post-marker outcome consumes;
+there is no retry, rerun, resume, substitution, fallback, second page, or
+amendment. Success stops before every participant ZIP and neural operation.
+The user's scientific aspiration preserves the destination but does not
+authorize payload, neural, model, score, or claim expansion under this lane.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

@@ -8771,3 +8771,43 @@ signal and added no decoding, language, or thought-to-text evidence.
 Next: commit, push, and green this exact decision. Only then may generated and
 mocked wrapper implementation begin. Live metadata remains closed until that
 exact future implementation is separately remotely green.
+
+## 2026-08-12 - MARC1-LM1 Generated/Mock Live-Metadata Implementation
+
+- Began only after decision `060a365` passed Base Python job `94140250333`
+  and Optional Neuro Readers job `94140250412` in CI `31604608307`.
+- Added one dependency-free `plan`/`qualify`/`inspect`/`execute` module. The
+  generated path refuses the registered destination without touching it; all
+  operational paths acquire and hold output authority before later work.
+- Bound exact GET identity, no redirects, a 2 MiB cap-plus-one read, four
+  accepted framing forms, strict duplicate-key JSON, target-field refusal,
+  exact 55/45/10 inventory identity, the frozen target-free 12-subject cohort,
+  and runs 1-6 fit versus runs 7-8 held out.
+- Added parent-relative exclusive writes for one marker, one private manifest,
+  and one aggregate report, plus an aggregate failure receipt after a consumed
+  marker. Generated cleanup removes only the three invocation-created files.
+- Final nonregistered `MARC1LM-G1` passed four accepted cases, 36 refusals, and
+  20 gates. It read 184,466 generated response bytes and emitted 19,030
+  temporary bytes in 0.029389458941295743 seconds at 42,123,264-byte reported
+  RSS; external wall was 0.11 seconds at 42,221,568-byte peak RSS. Exact
+  cleanup passed.
+- Twenty-one behavior tests and 12 implementation-record tests pass. Real
+  network, registered-path, participant archive, payload, signal, target,
+  model, prediction, score, provider, hardware, other-project, retry, rerun,
+  and claim operations were zero.
+- All 658 MARC tests pass. Complete dependency-light verification is 2,797
+  tests/204 skips in 25.066 seconds at 317,571,072-byte external peak RSS;
+  canonical optional verification is 2,868 tests/35 skips in 62.112 seconds at
+  746,782,720 bytes. Both add exactly 33 tests and zero skips over the green
+  decision baseline.
+- The exact implementation still requires commit, push, and both green CI jobs
+  before the single registered metadata invocation. No participant ZIP or
+  neural operation becomes eligible on metadata success.
+
+Engineering capability added: a capability-first, target-firewalled,
+privacy-preserving wrapper can validate and bind one complete Wrist metadata
+inventory and frozen cohort with deterministic aggregate receipts.
+
+Scientific claim not established: this generated/mock implementation contains
+no live metadata, neural signal, target, prediction, decoding score, language
+result, or thought-to-text evidence.

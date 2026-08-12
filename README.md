@@ -382,7 +382,8 @@ negative result and S25 is never repurposed for calibration.
 | MARC1-OP1 output-capability implementation | 1,019,776 generated input bytes; 184,173 temporary output bytes; 6/6 accepted cases; 32/32 refusals; 20/20 gates; exact cleanup; 0 real/network bytes | Green contract `baade51` / CI `31597291352` preceded development `MARC1OP-G1`, which ran in 0.096 sec at 33.8 MB reported RSS; 36 new tests | Proves generated pagination and selection can run only after held output authority and leave no artifact; the registered probe awaits implementation CI and no neural/language claim changed |
 | MARC1-OP1 registered generated result | `MARC1OP-P0` preflight then `MARC1OP-G1`; 1,019,776 generated input bytes; 184,173 temporary output bytes; exact cleanup; 0 live/network bytes | Exact implementation `fcedcc3` passed CI `31600085119` before the one 0.098-sec qualifier at 33.9 MB reported RSS; both invocations consumed | Establishes the capability-first generated stack under registered controls; a live metadata request remains a separate Tier C gate and no scientific claim changed |
 | MARC1-LM1 paginated live-metadata request | One future exact `page=1&page_size=1000` GET; one body capped at 2 MiB; one 55-row target-free inventory; 0 payload bytes; all current permissions false | Green capability result `ca4679a` / CI `31601329375` precedes the packet; 13 focused, 612 MARC, 2,751 base, and 2,822 optional tests pass locally | Proposes one additive wrapper and one no-retry metadata check on the same thought-to-text path; the packet itself performs no operation and establishes no scientific result |
-| MARC1-LM1 packet-bound decision | Exact 76-byte maintainer approval; one immutable green request; one conditional generated wrapper and one later metadata response; 0 current data/model operations | Request `4d3eb19` passed CI `31603530015`; this decision remains ineffective until its own push CI is green | Preserves thought-to-text as the objective while binding only the registered metadata scope and refusing to predeclare a scientific outcome |
+| MARC1-LM1 packet-bound decision | Exact 76-byte maintainer approval; one immutable green request; one conditional generated wrapper and one later metadata response; 0 decision-time data/model operations | Request `4d3eb19` passed CI `31603530015`; decision `060a365` passed CI `31604608307` before implementation | Preserves thought-to-text as the objective while binding only the registered metadata scope and refusing to predeclare a scientific outcome |
+| MARC1-LM1 generated/mock implementation | 4/4 transport forms; 36/36 refusals; 20/20 gates; exact 55/45/10 inventory and frozen 12-subject split; 184,466 generated input bytes; 19,030 temporary output bytes | Development `MARC1LM-G1` ran in 0.0294 sec at 42,123,264-byte reported RSS; 21 behavior and 12 record tests pass; real request remains unopened until exact implementation CI | Adds a capability-first, target-firewalled, aggregate-safe one-response wrapper on the same path; generated metadata work is not neural, decoding, language, or thought-to-text evidence |
 
 ### Real-Data Scientific Scorecard
 
@@ -1410,9 +1411,19 @@ Read this before interpreting any number in the repository.
   packet was identified. The
   [separate decision](docs/MARC_1_PAGINATED_LIVE_METADATA_AUTHORIZATION_DECISION.md)
   quotes those words and binds only request `4d3eb19`, CI `31603530015`, and
-  the unchanged one-response, zero-payload scope. It remains ineffective until
-  its own commit passes both CI jobs. The research objective is unchanged; no
-  result is predeclared.
+  the unchanged one-response, zero-payload scope. Decision `060a365` passed
+  Base Python job `94140250333` and Optional Neuro Readers job `94140250412`
+  in CI `31604608307` before the
+  [generated/mock implementation](docs/MARC_1_PAGINATED_LIVE_METADATA_IMPLEMENTATION.md).
+  Development `MARC1LM-G1` accepted all four transport forms, refused all 36
+  adversarial mutations, and passed all 20 gates while replaying the exact
+  55-row inventory and frozen 12-subject split. It read 184,466 generated
+  response bytes, created and removed exactly 19,030 temporary output bytes,
+  ran in 0.0294 seconds at 42,123,264-byte reported RSS, and made zero real
+  network, payload, signal, target, model, score, retry, or claim operations.
+  The exact implementation must now be committed, pushed, and pass both CI
+  jobs before the registered path or Figshare may be touched once. The
+  research objective is unchanged and no result is predeclared.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

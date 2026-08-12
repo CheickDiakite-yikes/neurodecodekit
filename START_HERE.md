@@ -1572,6 +1572,23 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   [MARC1-LM1 decision](docs/MARC_1_PAGINATED_LIVE_METADATA_AUTHORIZATION_DECISION.md).
   It binds only green request `4d3eb19`, CI `31603530015`, one future
   generated/mock wrapper, and one later metadata response with zero payload.
-  The decision must itself be committed, pushed, and pass both CI jobs before
-  implementation. Thought-to-text remains the objective, not a predeclared
-  outcome or permission to skip the neural and held-out language gates.
+  Decision `060a365` passed Base Python job `94140250333` and Optional Neuro
+  Readers job `94140250412` in CI `31604608307` before the
+  [MARC1-LM1 implementation](docs/MARC_1_PAGINATED_LIVE_METADATA_IMPLEMENTATION.md).
+
+  The additive standard-library wrapper now acquires output authority first,
+  validates the exact request and bounded transport, rejects target-like
+  fields, binds the 55-row inventory and frozen 12-subject split, separates a
+  private manifest from an aggregate report, and emits an aggregate failure
+  receipt after a consumed marker. Final generated route `MARC1LM-G1` passed
+  four accepted transport forms, 36 refusals, and 20 gates using 184,466
+  generated input bytes and 19,030 temporary output bytes in 0.029389 seconds
+  at 42,123,264-byte reported RSS. Exact cleanup passed. Real network,
+  participant ZIP, payload, signal, target, model, prediction, score, and claim
+  counters stayed zero.
+
+  Next: commit, push, and green this exact implementation. Only then execute
+  the one registered metadata request; any post-marker failure consumes and
+  parks, and success stops before payload. Thought-to-text remains the
+  objective, not a predeclared outcome or permission to skip the controlled
+  neural and held-out language gates.

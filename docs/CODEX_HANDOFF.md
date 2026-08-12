@@ -3853,3 +3853,30 @@ Next: commit, push, and green the decision. Then implement only the additive
 generated/mock wrapper. Commit, push, and green that exact wrapper before one
 registered path or Figshare operation. Do not infer payload access or a
 scientific outcome from the user's aspirational wording.
+
+## 2026-08-12 MARC1-LM1 Generated Implementation Handoff
+
+Decision `060a365a24e75da4297a5c4a3422ff730467ec36` passed Base Python
+job `94140250333` and Optional Neuro Readers job `94140250412` in CI
+`31604608307` before implementation. Read
+`docs/MARC_1_PAGINATED_LIVE_METADATA_IMPLEMENTATION.md`,
+`registries/marc1_paginated_live_metadata_implementation.v0.json`, and its two
+test modules.
+
+The additive dependency-free wrapper now holds output authority first,
+validates the exact one-response transport and 55-row target-free inventory,
+replays the frozen 12-subject split, separates private rows from aggregate
+output, and emits an aggregate failure receipt after a consumed marker. Final
+generated `MARC1LM-G1` passed four transport cases, 36 refusals, and 20 gates
+over 184,466 generated response bytes. It created and removed 19,030 temporary
+bytes in 0.029389 seconds at 42,123,264-byte reported RSS. Every real, payload,
+neural, target, model, score, retry, and claim counter remained zero.
+
+Twenty-one behavior, 12 implementation-record, 658 MARC, 2,797 base, and 2,868
+optional tests pass; the two complete suites add exactly 33 tests and no skips
+over the green decision baseline.
+
+Immediate next gate: commit, push, and obtain both green CI jobs for this exact
+implementation. Only then run the one registered metadata invocation. Any
+post-marker failure consumes and parks; success stops before every participant
+ZIP and adds no scientific result.

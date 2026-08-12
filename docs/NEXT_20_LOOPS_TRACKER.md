@@ -1668,3 +1668,25 @@ qualify only the additive generated/mock wrapper; commit, push, and green that
 implementation before one registered path or Figshare operation. Task 4 stays
 on the same path and still requires real payload, controlled neural evidence,
 and held-out language decoding after this metadata gate.
+
+Decision `060a365` passed both required jobs in CI `31604608307` before the
+additive `MARC1-LM1` wrapper was implemented. Generated route `MARC1LM-G1`
+accepted all four registered transport forms, refused all 36 adversarial
+mutations, passed all 20 gates, and replayed the exact 55-row inventory,
+45-participant/ten-supplementary split, 3,683,416,050 declared bytes, frozen
+12-subject cohort, and runs 1-6 fit versus runs 7-8 held out.
+
+The qualification read 184,466 generated response bytes, created and removed
+exactly 19,030 temporary output bytes, ran in 0.029389 seconds at 42,123,264-
+byte reported RSS, and made zero registered-path, real-network, archive,
+payload, signal, target, model, prediction, score, provider, hardware, retry,
+rerun, other-project, or claim operations. Twenty-one behavior tests and 12
+implementation-record tests pass. All 658 MARC tests pass; complete base is
+2,797 tests/204 skips and canonical optional is 2,868 tests/35 skips, exactly
+33 new tests and zero new skips on both surfaces.
+
+Next gate: commit, push, and green the exact implementation. Then spend the
+single registered metadata invocation. A post-marker failure consumes and
+parks; success proves only live inventory compatibility and stops before every
+participant ZIP. Task 4 remains incomplete on the same trustworthy-cohort to
+cue-resistant-neural-positive-control to held-out-language path.
