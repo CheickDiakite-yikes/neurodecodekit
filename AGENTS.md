@@ -1060,6 +1060,27 @@ parks the lane. Do not contact Figshare, access payload/signal/target/model, or
 prepare a Tier C live packet before a green generated result. This remains the
 same thought-to-text path, not a pivot.
 
+Exact implementation `fcedcc308c1038c765605571c19ba24eb4f7603f`
+passed Base Python job `94125013790` and Optional Neuro Readers job
+`94125013956` in CI `31600085119` before the one registered sequence. Read
+`docs/MARC_1_OUTPUT_CAPABILITY_RECOVERY_RESULT.md` and
+`registries/marc1_output_capability_recovery_result.v0.json`. The sole path-
+only preflight reached `MARC1OP-P0` with every experiment-work counter zero.
+The sole conditional qualifier reached `MARC1OP-G1`: six accepted cases, 32
+refusals, and all 20 gates passed with 1,019,776 generated input bytes and
+184,173 temporary output bytes in 0.097943 seconds at 33,882,112-byte reported
+RSS. Only the aggregate public file was inspected, and both files and the
+directory were removed before return.
+
+Both registered invocations are consumed with no retry, rerun, resume,
+substitution, or amendment. Commit, push, and green the aggregate result before
+preparing one all-false Tier C request for one bounded live metadata response.
+The request itself cannot contact Figshare; a live call needs a fresh packet-
+bound maintainer decision after green request proof. Payload, private input,
+neural signal, target, model, score, provider, hardware, release, and claim
+actions remain closed. This is the same thought-to-text path and no scientific
+result was added.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

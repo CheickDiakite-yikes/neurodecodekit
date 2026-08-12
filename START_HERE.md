@@ -1542,3 +1542,13 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   registered path remains untouched until implementation CI is green. No live
   metadata, neural signal, target, model, score, or claim changed; this is the
   same route toward cue-resistant neural evidence and held-out language.
+
+  Exact implementation `fcedcc3` passed Base Python job `94125013790` and
+  Optional Neuro Readers job `94125013956` in CI `31600085119` before the
+  [registered result](docs/MARC_1_OUTPUT_CAPABILITY_RECOVERY_RESULT.md). The
+  sole path-only preflight reached `MARC1OP-P0` with zero experiment work, and
+  the sole conditional qualifier reached `MARC1OP-G1` using 184,173 temporary
+  bytes in 0.097943 seconds at 33,882,112-byte reported RSS. Exact cleanup
+  passed and both invocations are consumed. Next: green the result, then
+  prepare only an all-false Tier C request for one bounded live metadata body.
+  This generated result adds engineering trust, not neural evidence.

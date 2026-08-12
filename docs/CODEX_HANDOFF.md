@@ -3781,3 +3781,25 @@ implementation. Only then operate once on the exact registered `/private/tmp`
 path: one path-only preflight, followed only after `MARC1OP-P0` by one generated
 qualifier. Any refusal parks without retry. Do not contact Figshare, open a
 private root or payload, or infer a scientific result. This is the same path.
+
+## 2026-08-12 MARC1-OP1 Registered Result Handoff
+
+Exact implementation `fcedcc308c1038c765605571c19ba24eb4f7603f`
+passed Base Python job `94125013790` and Optional Neuro Readers job
+`94125013956` in CI `31600085119` before the registered sequence. Read
+`docs/MARC_1_OUTPUT_CAPABILITY_RECOVERY_RESULT.md`,
+`registries/marc1_output_capability_recovery_result.v0.json`, and its test.
+
+The sole path-only preflight reached `MARC1OP-P0` in 0.10 external seconds at
+25,280,512-byte peak RSS with every experiment-work counter zero. The sole
+conditional qualifier then reached `MARC1OP-G1` in 0.097943 reported seconds
+at 33,882,112-byte reported RSS. All six accepted cases, 32 refusals, and 20
+gates passed; 184,173 temporary bytes were written, publicly inspected once,
+and removed exactly. Network, live/private, neural, target, model, score, and
+claim operations were zero.
+
+Both registered invocations are consumed with no retry or rerun. Immediate
+next gate: verify, commit, push, and green this aggregate result. Only then
+prepare one all-false Tier C request for a bounded live metadata response. The
+request itself cannot contact Figshare, and a live call still needs a fresh
+packet-bound maintainer decision. This remains the same scientific path.

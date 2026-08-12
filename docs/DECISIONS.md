@@ -7088,3 +7088,32 @@ Evidence:
 `docs/MARC_1_OUTPUT_CAPABILITY_RECOVERY_IMPLEMENTATION.md`,
 `registries/marc1_output_capability_recovery_implementation.v0.json`, and the
 two matching implementation test modules.
+
+## 0212 - Consume MARC1-OP1 At The Registered Generated Pass
+
+Evidence-order decision: touch the exact registered path only after
+implementation `fcedcc3` passed Base Python job `94125013790` and Optional
+Neuro Readers job `94125013956` in CI `31600085119`.
+
+Sequence decision: spend one path-only preflight first. Its `MARC1OP-P0` result
+with seven zero experiment-work counters opened exactly one generated
+qualifier. No path substitution or extra probe was permitted.
+
+Result decision: accept `MARC1OP-G1` after six accepted cases, 32 refusals, 20
+gates, exact semantic/split replay, parent-relative exclusive writes, public-
+only inspection, resource caps, zero forbidden counters, and cleanup passed.
+
+Consumption decision: close both registered invocations permanently. Do not
+rerun, retry, resume, substitute, or amend MARC1-OP1.
+
+Next-gate decision: green the aggregate result before preparing one all-false
+Tier C live-metadata request. A request is not permission to contact Figshare;
+the live response requires a fresh packet-bound maintainer decision.
+
+Path decision: this successful process gate advances the same controlled-
+neural-effect to held-out-language path but adds no scientific evidence.
+
+Evidence:
+`docs/MARC_1_OUTPUT_CAPABILITY_RECOVERY_RESULT.md`,
+`registries/marc1_output_capability_recovery_result.v0.json`, and
+`tests/test_marc1_output_capability_recovery_result.py`.

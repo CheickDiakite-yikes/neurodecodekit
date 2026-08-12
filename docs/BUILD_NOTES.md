@@ -8684,3 +8684,36 @@ experiment work and binds every temporary write and cleanup to one held parent.
 
 Scientific claim not established: no live metadata, neural signal, target,
 prediction, score, language decoding, or thought-to-text evidence was added.
+
+## 2026-08-12 - MARC1-OP1 Registered Generated Result
+
+- Exact implementation `fcedcc3` passed Base Python job `94125013790` and
+  Optional Neuro Readers job `94125013956` in CI `31600085119` before either
+  registered path operation.
+- The one exact path-only preflight reached `MARC1OP-P0` with one capability
+  acquisition and zero repository, contract, import, fixture, row, selection,
+  output, network, or real/private-input operations. External wall time was
+  0.10 seconds at 25,280,512-byte peak RSS.
+- The one conditional qualifier reached `MARC1OP-G1`: six accepted cases, 32
+  refusals, and all 20 gates passed. It used 1,019,776 generated input bytes
+  and 184,173 temporary output bytes in 0.097943 seconds at 33,882,112-byte
+  reported RSS; external wall was 0.24 seconds at 33,914,880 bytes.
+- Aggregate public SHA-256 was
+  `15e822309d89aafdeda06a89ffa8e6430d45abb2388bd17aeee0fac78376c711`;
+  private replay SHA-256 was
+  `e835e41a2494268c7795ca72e2e6ef9f01d0494767c9c70b4e76c382c6e609b4`.
+  Only the public report was inspected; both files and the directory were
+  removed before return.
+- Both invocations are consumed with no retry, rerun, resume, substitution, or
+  amendment. Live/private, payload, signal, target, model, score, provider,
+  hardware, other-project, and claim counters were zero.
+- Twelve focused result tests and all 599 MARC tests pass. Complete base is
+  2,738 tests/204 skips in 22.533 seconds at 245,284,864-byte peak RSS;
+  optional is 2,809 tests/35 skips in 60.996 seconds at 731,545,600-byte peak
+  RSS. Ruff, compilation, 192 registry parses, and diff hygiene pass.
+
+Engineering capability added: the capability-first generated pagination and
+selection path has now passed one registered sequence with exact cleanup.
+
+Scientific claim not established: no live metadata, neural signal, target,
+prediction, score, language decoding, or thought-to-text evidence was added.

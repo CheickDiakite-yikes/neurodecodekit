@@ -1621,3 +1621,17 @@ registered path-only probe and, only after `MARC1OP-P0`, one registered
 generated qualifier. Task 4 remains incomplete on the same route to a cue-
 resistant neural positive control and held-out language decoding; no scientific
 result was added.
+
+Exact implementation `fcedcc3` passed both required jobs in CI `31600085119`
+before the registered sequence. The one path-only probe reached `MARC1OP-P0`
+with every experiment-work counter zero. The one conditional qualifier then
+reached `MARC1OP-G1`: six accepted cases, 32 refusals, and all 20 gates passed
+using 1,019,776 generated input and 184,173 temporary output bytes in 0.097943
+seconds at 33,882,112-byte reported RSS. The public result was inspected once,
+the private peer was not inspected, and exact cleanup passed.
+
+Both invocations are consumed. Next gate: green the aggregate result, then
+prepare one all-false Tier C request for a single bounded live metadata body.
+Task 4 remains incomplete on the same path: live inventory compatibility,
+payload eligibility, controlled neural evidence, and held-out language
+decoding remain unproven.
