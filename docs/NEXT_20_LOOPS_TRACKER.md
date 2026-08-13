@@ -1847,3 +1847,18 @@ path, dataset, payload, signal, target, model, score, provider, and claim
 counter is zero. Next gate: green this research, then freeze and green only the
 generated/mock `MARC2-FW1` selector contract. Its later private-manifest read
 remains a new Tier C decision.
+
+MARC-2 research `ae4d43a` passed both required jobs in CI `31675452031` before
+the `MARC2-FW1` generated-only contract was frozen. The selector preserves the
+old DOI-bound 19-person rank and original 12-person floor, then takes the
+largest contiguous prefix whose six-run-per-person reservation remains at or
+below 8 GiB. It may not skip a nonfitting participant, substitute a later one,
+or use event, quality, signal, target, model, or outcome information.
+
+The main fixture must select 16 participants, 96 bundles, and 384 members, and
+the implementation must also pass floor-12, all-19, exact-cap, cap-plus-one,
+40-refusal, privacy, cleanup, replay, and resource gates. Current status is a
+frozen contract with 17 passing invariants and zero private or real operations.
+Next gate: green this contract, then implement only generated `plan`, `qualify`,
+and aggregate `inspect`. The one private inventory read remains a later Tier C
+decision, and `MARC2-FW2` remains closed.

@@ -1309,6 +1309,22 @@ mock `MARC2-FW1` selector contract is eligible. Its later private inventory
 read and every payload, neural, target, scoring, replication, or language
 operation require a new exact Tier C gate.
 
+MARC-2 research commit `ae4d43aabbbe058658c1d77057431f7de331c958`
+passed Base Python job `94368928633` and Optional Neuro Readers job
+`94368928658` in CI `31675452031` before `MARC2-FW1` was frozen. Read
+`docs/MARC_2_FREEWILL_PREFIX_SELECTION_PREREGISTRATION.md` and
+`registries/marc2_freewill_prefix_selection_contract.v0.json`. The contract
+preserves the old DOI-bound 19-person rank and 12-person floor, then selects
+only the maximal contiguous participant prefix whose exact six-run member
+reservation stays within 8 GiB. The generated main fixture must select 16
+participants, 96 bundles, and 384 members and pass 40 refusals plus four byte
+boundaries. No skip, substitution, size reorder, later-session backfill,
+event/quality/outcome input, or cap increase is allowed. Commit, push, and
+obtain both green jobs for this exact contract before generated implementation.
+Even after generated success, do not open the retained private inventory,
+touch an old consumed root, request an archive member, access payload/signal/
+target data, run a model, score, or enter `MARC2-FW2` without a new exact gate.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

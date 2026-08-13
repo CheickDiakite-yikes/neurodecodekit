@@ -7530,3 +7530,33 @@ replication, language, and provider operations remain separately gated.
 Evidence: `docs/MARC_2_CONFOUND_TRIANGULATION_RESEARCH.md`,
 `registries/marc2_confound_triangulation_research.v0.json`, and
 `tests/test_marc2_confound_triangulation_research.py`.
+
+## 0227 - Maximize Freewill Participant Power With A Frozen Contiguous Prefix
+
+Prerequisite decision: begin only after MARC-2 research commit
+`ae4d43aabbbe058658c1d77057431f7de331c958` passed both required jobs in CI
+`31675452031`.
+
+Rank decision: preserve the exact `MARC1-P1` Freewill DOI seed and all 19
+publicly eligible participant ranks. Do not invent a new seed after metadata
+history or permit private rows to alter eligibility or rank.
+
+Power decision: keep the old first 12 as a hard floor, then admit participants
+13 through 19 only as the maximal contiguous rank prefix whose exact six-run
+bundle reservation stays at or below 8 GiB. Stop at the first nonfit. Never
+skip, substitute, solve a size knapsack, drop a companion, change a run, or
+increase the cap.
+
+Split decision: use the first three numerically ordered complete bundles in
+`ses-01` for fit and `ses-02` for held-out data. Member metadata may enforce
+structure and storage only. Event, target, timing, channel, signal, quality,
+model, and outcome values remain forbidden.
+
+Proof decision: require a 16-participant generated main case, four explicit
+byte boundaries, 40 refusals, private/public separation, deterministic replay,
+one-thread resource caps, and zero real-operation counters before any later
+private-read packet can be prepared.
+
+Evidence: `docs/MARC_2_FREEWILL_PREFIX_SELECTION_PREREGISTRATION.md`,
+`registries/marc2_freewill_prefix_selection_contract.v0.json`, and
+`tests/test_marc2_freewill_prefix_selection_preregistration.py`.

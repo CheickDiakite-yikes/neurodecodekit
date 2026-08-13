@@ -9201,3 +9201,43 @@ may receive frozen neural evidence.
 Scientific claim not established: this target-free research accessed no neural
 signal and establishes no new neural effect, decoding accuracy, language
 decoding, or thought-to-text capability.
+
+## 2026-08-13 - MARC2-FW1 Freewill Prefix Selection Contract
+
+- Began only after MARC-2 research commit
+  `ae4d43aabbbe058658c1d77057431f7de331c958` passed Base Python job
+  `94368928633`, Optional Neuro Readers job `94368928658`, and CI
+  `31675452031`.
+- Preserved the exact earlier Freewill DOI seed and full 19-person public
+  eligibility rank. The first 12 participants remain byte-identical to the
+  old preregistration; private metadata cannot reorder or replace them.
+- Replaced a fixed convenience count with a maximal contiguous prefix. The
+  selector requires at least 12 participants and may admit up to all 19 only
+  while all six complete session-held-out run bundles per person fit an exact
+  8-GiB reservation. It stops at the first nonfitting participant and cannot
+  skip ahead, solve a knapsack, substitute, or increase the cap.
+- Froze the reservation per member as compressed size plus the fixed ZIP local-
+  header prefix, UTF-8 name bytes, and the maximum 65,535-byte extra field.
+  This is a conservative future byte allowance, not payload permission.
+- The generated main fixture uses 505,000,000 declared compressed bytes per
+  participant and must select exactly 16 participants, 96 run bundles, and 384
+  members. Floor-12, all-19, exact-cap, and cap-plus-one boundaries are also
+  required.
+- Bound 40 adversarial mutations, six refusal classes, 15 acceptance gates,
+  mode-`0600` private output, aggregate privacy, deterministic replay, one
+  thread, 30 seconds, 256 MiB RSS, and 2 MiB combined output.
+- All 17 contract invariants pass. Current private-manifest, old-root, network,
+  archive, local-header, payload, signal, event, target, derivative, model,
+  prediction, score, provider, hardware, retry, and claim counters are zero.
+- The complete dependency-light suite passes 2,946 tests with 204 expected
+  optional skips, exactly 17 above the green research baseline. The complete
+  optional-neuro suite passes 3,017 tests with 35 skips, also exactly 17 above
+  baseline. Ruff, JSON parsing, artifact hashes, and diff hygiene pass.
+
+Engineering capability frozen for implementation: a generated selector can
+test whether a deterministic session-held-out participant prefix maximizes
+participant power under an exact storage ceiling without outcome selection.
+
+Scientific claim not established: a frozen generated-data contract accesses no
+human neural signal and establishes no neural effect, decoding accuracy,
+language decoding, or thought-to-text capability.

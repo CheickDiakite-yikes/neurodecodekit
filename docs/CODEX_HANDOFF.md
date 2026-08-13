@@ -4158,3 +4158,25 @@ After that, freeze a generated/mock-only `MARC2-FW1` selector contract. Do not
 open the retained private inventory, request an archive member, download a
 payload, access signal or targets, run a model, score, or call a provider
 without the later exact gate.
+
+## 2026-08-13 MARC2-FW1 Contract Handoff
+
+MARC-2 research `ae4d43aabbbe058658c1d77057431f7de331c958` passed Base
+Python job `94368928633` and Optional Neuro Readers job `94368928658` in CI
+`31675452031` before this generated-only contract was frozen. Read
+`docs/MARC_2_FREEWILL_PREFIX_SELECTION_PREREGISTRATION.md`, its registry, and
+contract test.
+
+The contract preserves the earlier DOI-bound rank, holds the original 12
+participants as a hard floor, and permits expansion only as the maximal
+contiguous prefix under an exact 8-GiB reservation. It stops at the first
+nonfitting participant; no size-based reorder, skip, substitution, later-
+session backfill, quality filter, event read, or outcome use is allowed. The
+main generated case must select 16 participants, 96 bundles, and 384 members.
+
+Immediate next gate: commit, push, and require both CI jobs green for this
+exact contract. Only then implement `plan`, generated `qualify`, and aggregate
+`inspect` with no `execute` surface. Do not open the retained 418,755-byte
+private inventory, touch an old consumed root, make a network request, open an
+archive/local header/member, access neural or target data, run a model, or
+score under this contract.
