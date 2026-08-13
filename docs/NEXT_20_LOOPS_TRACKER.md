@@ -1773,3 +1773,16 @@ gate: commit, push, and green the request, then identify its immutable scope as
 the sole Tier C packet and require fresh packet-bound maintainer words. Task 4
 continues on the same thought-to-text path; this packet adds no scientific
 result.
+
+Request `b077550` passed both required jobs in CI `31621794066` before the
+maintainer's fresh 31-byte instruction was recorded in the additive
+`MARC1-SA1A` decision. The decision binds only the one generated/mock wrapper
+and, after a separately green wrapper, one bounded source-aware metadata
+response. It does not authorize archives, payloads, neural data, targets,
+models, scoring, replication, or language decoding.
+
+Next gate: commit, push, and green this exact decision, then implement and
+qualify the wrapper only on generated inventories and mocked transport. Task 4
+remains active. The route after the one metadata result is conditional: R1/R2
+may support a separately preregistered selective-acquisition packet; R3/R4
+must block selection and preserve only aggregate diagnosis.

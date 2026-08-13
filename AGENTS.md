@@ -1244,6 +1244,18 @@ Tier C packet. Only fresh packet-bound maintainer words after that
 identification may authorize a decision record. Do not use the current or an
 earlier message retroactively.
 
+Request `b0775501e8d7dc5b28b81692dbc7fb02d423be95` passed Base Python
+job `94198174069` and Optional Neuro Readers job `94198173901` in CI
+`31621794066`. Read
+`docs/MARC_1_SOURCE_AWARE_LIVE_METADATA_AUTHORIZATION_DECISION.md` and
+`registries/marc1_source_aware_live_metadata_authorization_decision.v0.json`.
+The separate decision quotes the maintainer's fresh 31-byte instruction
+exactly and binds only the green metadata packet. It is ineffective until its
+own commit is pushed and both CI jobs are green. Before that proof, do not
+implement the wrapper or contact Figshare. Selective acquisition, payload,
+neural, target, model, score, replication, language, release, and claim work
+remain unauthorized by this decision.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

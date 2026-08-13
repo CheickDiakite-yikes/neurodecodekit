@@ -9053,3 +9053,40 @@ failure-localized cohort identity without weakening payload integrity.
 Scientific claim not established by this request: this all-false packet reads
 no neural signal and establishes no neural effect, decoding accuracy, language
 decoding, or thought-to-text capability.
+
+## 2026-08-13 - MARC1-SA1A Packet-Bound Authorization Decision
+
+- Verified request `b0775501e8d7dc5b28b81692dbc7fb02d423be95`, request
+  SHA-256 `f5421681fe5ceb6a4b154de692bff81619c87338c832e4e04640bfcad9ca4659`,
+  Base Python job `94198174069`, Optional Neuro Readers job `94198173901`,
+  and green CI `31621794066` before recording the decision.
+- Preserved the maintainer's actual message, `let’s do those 5 systemically`,
+  as 31 UTF-8 bytes with SHA-256
+  `0c3c79426ed20b5720db1b09ca50280dff0033e75024297a394a92a8c1c66185`.
+- Bound only the immutable `MARC1-SA1A` sequence: a generated/mock additive
+  wrapper after this decision is green, then one 2-MiB-capped metadata GET
+  after the exact wrapper is green, with zero archive or payload bytes.
+- Explicitly declined to infer authority for the remaining research steps:
+  selective acquisition, neural experiments, target delivery, scoring,
+  replication, and language decoding remain behind future contracts.
+- Thirteen decision tests and 27 combined request/decision tests pass. All
+  760 MARC tests plus 856 subtests pass in 9.18 seconds at 115,490,816-byte
+  external maximum RSS.
+- The CI-equivalent dependency-light suite passes 2,874 tests with 204 skips
+  in 22.623 seconds at 260,112,384-byte maximum RSS. The CI-equivalent
+  optional-neuro suite passes 2,945 tests with 35 skips in 57.030 seconds at
+  797,638,656-byte maximum RSS.
+- One pytest-order diagnostic reached 2,933 passes before two rehearsal tests
+  inherited process high-water RSS; both pass together in a fresh isolated
+  process, and the exact CI `unittest` surface passes. No production resource
+  gate or historical test was weakened.
+- Decision-time network, path, output, payload, signal, target, model, score,
+  cleanup, other-project, release, and claim counters remain zero.
+
+Engineering capability authorized for testing: one source-aware live-metadata
+wrapper may now be built on generated and mocked inputs after this exact
+decision is remotely green.
+
+Scientific claim not established: this decision accessed no neural signal and
+establishes no neural effect, decoding accuracy, language decoding, or
+thought-to-text capability.

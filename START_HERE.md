@@ -1660,3 +1660,12 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   including wrapper implementation, network access, output writes, archives,
   payloads, EEG, targets, models, or scores. Next: green the packet, identify
   its exact commit/CI/scope, and wait for fresh packet-bound maintainer words.
+
+  Request `b077550` then passed Base Python job `94198174069` and Optional
+  Neuro Readers job `94198173901` in CI `31621794066`. The maintainer's fresh
+  instruction is now quoted byte-for-byte in the
+  [MARC1-SA1A authorization decision](docs/MARC_1_SOURCE_AWARE_LIVE_METADATA_AUTHORIZATION_DECISION.md).
+  It authorizes only the packeted metadata sequence: first green this decision,
+  then build and green the generated/mock wrapper, then make the one bounded
+  response check. Selective payload acquisition, neural experiments, scoring,
+  replication, and language decoding remain closed behind later contracts.

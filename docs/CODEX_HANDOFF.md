@@ -4051,3 +4051,24 @@ Fourteen request tests, all 747 MARC tests, 2,922 dependency-light tests with
 Immediate next gate: test, commit, push, and green this request. Only then
 identify its commit, CI, exact scope, and claim boundary as the sole active
 Tier C packet and wait for fresh packet-bound words.
+
+## 2026-08-13 MARC1-SA1A Packet-Bound Decision Handoff
+
+Request `b0775501e8d7dc5b28b81692dbc7fb02d423be95` passed Base Python
+job `94198174069` and Optional Neuro Readers job `94198173901` in CI
+`31621794066`. Read
+`docs/MARC_1_SOURCE_AWARE_LIVE_METADATA_AUTHORIZATION_DECISION.md`, its
+decision registry, and decision test.
+
+The decision quotes the maintainer's exact 31-byte instruction and binds only
+the immutable `MARC1-SA1A` packet. Thirteen decision tests, 27 combined
+request/decision tests, 760 MARC tests plus 856 subtests, 2,874 dependency-light
+CI-style tests with 204 skips, and 2,945 optional-neuro CI-style tests with 35
+skips pass. Every decision-time real-operation counter remains zero.
+
+Immediate next gate: commit, push, and require both remote CI jobs green for
+this exact decision. Only then implement the additive wrapper using generated
+inventories and mocked transport. Do not contact Figshare until that exact
+wrapper also becomes remotely green. Do not acquire an archive, access a
+payload, run a neural model, deliver a target, score, replicate, or begin
+language work under this decision.

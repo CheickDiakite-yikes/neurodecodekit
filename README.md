@@ -390,6 +390,7 @@ negative result and S25 is never repurposed for calibration.
 | MARC1-SA1 generated implementation | Six family routes; 52/52 refusals; 25/25 gates; 732,811 generated input bytes; 109,589 temporary output bytes; exact cleanup | Green contract `8f64ccb` / CI `31616551270` preceded development `MARC1SA-G1`; exact implementation `feb3b83` later passed CI `31619037335` | Adds deterministic aggregate drift localization and optional-MD5 handling without a network or payload surface; no neural/language claim changed |
 | MARC1-SA1 registered generated closeout | Six family routes; 21 predicates; seven identity domains; 52/52 refusals; 25/25 gates; 732,811 generated input and 109,589 temporary output bytes; exact cleanup | Exact implementation `feb3b83` passed CI `31619037335` before the one 0.0534-sec closeout at 27,885,568-byte reported peak RSS; consumed with no rerun | Confirms source-aware schema, optional checksum, aggregate drift, privacy, and resource mechanics compose on fixtures; live metadata and every neural/language claim remain closed |
 | MARC1-SA1A live-metadata request | One future exact GET; one body capped at 2 MiB; source-aware R1-R4 routing; 0 payload bytes; all current permissions false | Green generated result `094b6cb` / CI `31620515340` anchors the immutable packet; 14 request invariants pass | Proposes one additive wrapper and one metadata-only attempt after a fresh packet-bound decision; the packet performs no operation and preserves the same thought-to-text path |
+| MARC1-SA1A packet-bound decision | Exact 31-byte maintainer instruction; one immutable green request; one conditional generated/mock wrapper and one later metadata response; 0 decision-time data/model operations | Request `b077550` passed CI `31621794066`; this decision remains ineffective until its own commit passes both CI jobs | Authorizes only the identified metadata sequence; selective acquisition, neural experiments, scoring, replication, and language work remain separately gated |
 
 ### Real-Data Scientific Scorecard
 
@@ -1482,6 +1483,14 @@ Read this before interpreting any number in the repository.
   model, score, and claim permission is false. The packet must become remotely
   green and receive a fresh packet-bound maintainer decision before wrapper
   implementation or source access.
+- **MARC1-SA1A packet-bound decision:** request `b077550` passed Base Python
+  job `94198174069` and Optional Neuro Readers job `94198173901` in CI
+  `31621794066` before the maintainer's exact 31-byte instruction was
+  recorded. The decision binds only one generated/mock wrapper followed,
+  after separate green proof, by one 2-MiB-capped metadata response and zero
+  payload bytes. It must itself become remotely green before implementation.
+  Later acquisition, neural analysis, target delivery, scoring, replication,
+  and language decoding remain separately gated; no scientific result changed.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
