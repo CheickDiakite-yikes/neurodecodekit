@@ -1355,6 +1355,20 @@ Do not open the retained inventory, select real members, request an archive
 byte, enter MARC2-FW2, or access neural data, targets, models, scores, or
 language providers under this generated result.
 
+Read `docs/MARC_2_FREEWILL_PRIVATE_SELECTION_AUTHORIZATION_PACKET.md` and
+`registries/marc2_freewill_private_selection_authorization_request.v0.json`.
+`MARC2-FW1A` is an all-false request binding one future generated/mock wrapper
+and, only after that exact wrapper is separately green, one no-follow read of
+the exact 418,755-byte, mode-`0600`, 1,227-entry retained private inventory.
+The future route stops after target-free prefix selection and has zero archive
+local-header/member/payload authority. All current authorization flags and
+operation counters are false or zero. Commit, push, and obtain both green jobs
+for this exact request before identifying it as the sole active Tier C packet.
+Only fresh packet-bound maintainer words after that identification may be
+recorded in a separate decision. Do not implement the wrapper, stat, resolve,
+open, hash, or parse the retained path, enter MARC2-FW2, or access payload,
+signal, target, model, score, or provider under the all-false request alone.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

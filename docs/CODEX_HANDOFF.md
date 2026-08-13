@@ -4222,3 +4222,28 @@ prepare one all-false Tier C packet for one exact read of the retained private
 inventory. Do not perform that read, select real members, request an archive
 byte, enter MARC2-FW2, or access neural data, targets, models, scores, or
 language providers until the later packet itself is green and freshly approved.
+
+## 2026-08-13 MARC2-FW1A Private Selection Request Handoff
+
+Generated result `a9a759aa5626a41812afe546f03aa324db7a534e` passed Base
+Python job `94378074196` and Optional Neuro Readers job `94378074181` in CI
+`31678418324` before the all-false request was prepared. Read
+`docs/MARC_2_FREEWILL_PRIVATE_SELECTION_AUTHORIZATION_PACKET.md`, its registry,
+and its request test.
+
+The request binds one future generated/mock wrapper and, only after that exact
+wrapper is separately green, one no-follow read of the pinned 418,755-byte,
+mode-`0600`, 1,227-entry private manifest. It fixes a new output root, one-shot
+consumption, 58 total refusal probes, a 2-MiB output cap, zero network bytes,
+and zero archive/member payload bytes. Even future route `MARC2FWS-R1` stops at
+target-free selection and cannot enter acquisition or neural analysis.
+
+Every current authorization flag is false and every operation counter is zero;
+the retained path was not touched while preparing this packet. Fifteen focused,
+3,017 dependency-light, and 3,088 optional-neuro tests pass locally; Ruff,
+compilation, all 209 registry JSON documents, artifact bindings, and diff
+hygiene are clean. Immediate next gate: commit, push, and require both CI jobs
+green. Then identify this exact request as the sole active Tier C packet and
+wait for fresh packet-bound maintainer words. Do not implement the wrapper,
+inspect the private manifest, or enter MARC2-FW2 from this all-false request
+alone.

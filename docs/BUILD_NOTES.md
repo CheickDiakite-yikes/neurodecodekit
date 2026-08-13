@@ -9318,3 +9318,41 @@ scale generated inventory and cleaned its outputs exactly.
 Scientific claim not established: the closeout used no human neural data,
 prediction, or score and establishes no neural effect, decoding accuracy,
 language decoding, or thought-to-text result.
+
+## 2026-08-13 - MARC2-FW1A Private Selection Authorization Request
+
+- Prepared only after generated-result commit
+  `a9a759aa5626a41812afe546f03aa324db7a534e` passed Base Python job
+  `94378074196`, Optional Neuro Readers job `94378074181`, and CI
+  `31678418324`.
+- Bound one possible future no-follow read of the exact 418,755-byte,
+  mode-`0600`, SHA-256-pinned, 1,227-entry Freewill central-directory private
+  manifest. Preparing this packet did not stat, resolve, open, hash, or parse
+  that retained file.
+- Split the future sequence into two separately proven stages: first an
+  additive standard-library wrapper qualified only on generated manifests and
+  mocked filesystem facts; then, only after that exact wrapper is remotely
+  green, one private target-free selection execution.
+- The wrapper must preserve the frozen DOI rank, 12-person floor, maximal
+  contiguous prefix, six bundles and 24 members per participant, and 8-GiB
+  reservation. It must pass the inherited 40 selector mutations plus 18 new
+  proof, path, no-follow, privacy, output, and one-shot refusals.
+- Froze a new isolated output root with at most one consumed marker, one
+  mode-`0600` private selection, and one aggregate report under 2 MiB combined.
+  Network, archive local-header, archive member, and payload bytes remain zero.
+- Fifteen focused request invariants pass. Every authorization flag is false
+  and every private, real, network, payload, neural, target, model, scoring,
+  provider, hardware, retry, release, and claim counter is zero.
+- The complete dependency-light suite passes 3,017 tests with 204 expected
+  optional skips, exactly 15 above the green generated-result baseline. The
+  complete optional-neuro suite passes 3,088 tests with 35 skips, also exactly
+  15 above baseline. Ruff, compilation, all 209 registry JSON documents,
+  artifact bindings, and diff hygiene pass.
+
+Engineering capability requested: one proof-gated wrapper can convert one
+exact private ZIP-directory manifest into a deterministic, storage-bounded,
+target-free participant selection with separate private and aggregate outputs.
+
+Scientific claim not established: this all-false request reads no human neural
+data and establishes no neural effect, decoding accuracy, language decoding,
+or thought-to-text result.

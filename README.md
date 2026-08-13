@@ -1550,7 +1550,8 @@ Read this before interpreting any number in the repository.
   generated input bytes and 221,068 output bytes. It exposes only `plan`,
   generated `qualify`, and aggregate `inspect`; there is no `execute`, network,
   archive, signal, target, model, or score surface. A registered generated
-  closeout waits for this exact implementation to be remotely green.
+  closeout was permitted only after this exact implementation became remotely
+  green.
 - **MARC2-FW1 consumed generated result:** exact implementation `36f8775`
   passed both CI jobs before one registered closeout routed `MARC2FWG-R1` in
   0.211 seconds at 32.0 MB reported peak RSS. It emitted and removed 221,068
@@ -1558,6 +1559,14 @@ Read this before interpreting any number in the repository.
   4 boundaries and 40 refusals, and left every private/real counter at zero.
   This closes generated qualification; the next gate is an all-false packet
   for one exact private-inventory read, not payload acquisition or science.
+- **MARC2-FW1A private-selection request:** the repository now binds an all-
+  false Tier C packet to the exact 418,755-byte, mode-`0600`, 1,227-row private
+  central-directory manifest and a new isolated output root. A future additive
+  wrapper must pass the inherited 40 selector mutations plus 18 filesystem,
+  proof, privacy, and one-shot refusals before one no-follow read can occur.
+  Even a successful future selection stops before every archive local header,
+  member payload, neural sample, event, target, model, prediction, and score.
+  The packet itself performs zero private operations and grants no authority.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

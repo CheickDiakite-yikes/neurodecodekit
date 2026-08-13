@@ -7560,3 +7560,35 @@ private-read packet can be prepared.
 Evidence: `docs/MARC_2_FREEWILL_PREFIX_SELECTION_PREREGISTRATION.md`,
 `registries/marc2_freewill_prefix_selection_contract.v0.json`, and
 `tests/test_marc2_freewill_prefix_selection_preregistration.py`.
+
+## 0228 - Separate Private Selection From Every Archive And Neural Operation
+
+Prerequisite decision: prepare the request only after generated-result commit
+`a9a759aa5626a41812afe546f03aa324db7a534e` passed both required jobs in CI
+`31678418324`. Treat `MARC2FWG-R1` as consumed and do not rerun its generated
+closeout.
+
+Boundary decision: bind one exact retained private manifest identity without
+touching it. A future target-free selection may read that file only after a
+separate packet-bound authorization decision and a separately green additive
+wrapper. It may never open an archive local header or member payload.
+
+Implementation decision: require the future wrapper to be standard-library,
+proof-disabled by default, fixed to one source and one absent output root, and
+qualified on generated manifests plus mocked filesystem facts. Preserve the
+40 selector refusals and add 18 proof, path, no-follow, privacy, output, and
+one-shot refusals.
+
+Evidence-boundary decision: a successful private selection establishes only
+which frozen-rank participant prefix fits the storage cap. It does not qualify
+payloads, signals, events, targets, models, scores, language decoding, or any
+scientific claim, and it does not authorize `MARC2-FW2`.
+
+Authorization decision: this request is all false. Commit, push, and green it,
+then identify it as the sole active Tier C packet and require fresh maintainer
+words before recording a separate decision. The current systematic-work
+instruction and every earlier continuation are not retroactive authority.
+
+Evidence: `docs/MARC_2_FREEWILL_PRIVATE_SELECTION_AUTHORIZATION_PACKET.md`,
+`registries/marc2_freewill_private_selection_authorization_request.v0.json`,
+and `tests/test_marc2_freewill_private_selection_authorization_request.py`.

@@ -1,0 +1,278 @@
+{
+  "schema_name": "neurodecodekit.marc2_freewill_private_selection_authorization_request",
+  "schema_version": "0.1.0",
+  "request_id": "MARC-2-FW1A-private-selection-authorization-request-v0",
+  "recorded_at_local": "2026-08-13",
+  "status": "all_false_request_not_authorized",
+  "authorized": false,
+  "objective": "Request one proof-gated additive wrapper and one later no-retry target-free read of the exact retained Freewill central-directory private manifest stopping before every archive member and neural operation.",
+  "artifact_bindings": {
+    "green_generated_result": {
+      "path": "registries/marc2_freewill_prefix_selection_synthetic_result.v0.json",
+      "sha256": "f659f17e2dd717350ca1b0c80e87de4d9d3a869150f18b986e50cd3880e5f3c1"
+    },
+    "frozen_selector_contract": {
+      "path": "registries/marc2_freewill_prefix_selection_contract.v0.json",
+      "sha256": "dfe614cd7ec27c54c4f03848e3878c714222db043f501b9b07e57c7dc9f5f702"
+    },
+    "authorization_packet": {
+      "path": "docs/MARC_2_FREEWILL_PRIVATE_SELECTION_AUTHORIZATION_PACKET.md",
+      "sha256": "94437f2dad9d3d9b9b1c84ca68c9a12848e9dba7e1fcd3f0a902c5e657870f98"
+    },
+    "request_test": {
+      "path": "tests/test_marc2_freewill_private_selection_authorization_request.py",
+      "sha256": "f507f31e5fa70612bd90358027c2ecb2523f166ac2cb3300f6ed196ea49f3201"
+    }
+  },
+  "green_result_proof": {
+    "commit": "a9a759aa5626a41812afe546f03aa324db7a534e",
+    "CI_run_id": 31678418324,
+    "base_job_id": 94378074196,
+    "optional_neuro_job_id": 94378074181,
+    "both_required_jobs_green": true,
+    "result_registry_sha256": "f659f17e2dd717350ca1b0c80e87de4d9d3a869150f18b986e50cd3880e5f3c1",
+    "result_route": "MARC2FWG-R1",
+    "result_consumed": true,
+    "result_registered_executions": 1,
+    "result_private_or_real_operations": 0
+  },
+  "proposed_sequence": [
+    {
+      "ordinal": 1,
+      "stage_id": "MARC2-FW1A-wrapper",
+      "scope": "generated_and_mocked_filesystem_wrapper_implementation_only",
+      "decision_must_be_remotely_green_first": true,
+      "currently_authorized": false,
+      "private_path_operations": 0,
+      "network_or_payload_operations": 0
+    },
+    {
+      "ordinal": 2,
+      "stage_id": "MARC2-FW1A-private-execution",
+      "scope": "one_exact_private_manifest_read_target_free_selection_and_aggregate_receipt",
+      "exact_wrapper_must_be_remotely_green_first": true,
+      "currently_authorized": false,
+      "execution_limit": 1,
+      "retry_or_rerun_limit": 0
+    }
+  ],
+  "private_source": {
+    "path": ".codex_work/marc1_central_directory/live_audit_v0/member_inventory.private.v0.json",
+    "bytes": 418755,
+    "mode": "0600",
+    "sha256": "2a2e48b88ee59332a199d926554bb6921222fff92046a0fc9b07cf73fd6c3031",
+    "schema_name": "neurodecodekit.marc1_central_directory_private_manifest",
+    "schema_version": "0.1.0",
+    "entries": 1227,
+    "regular_entries": 1025,
+    "directory_entries": 202,
+    "path_stat_resolve_or_open_currently_authorized": false,
+    "sibling_inspection_authorized": false,
+    "old_selector_or_consumed_root_reuse_authorized": false
+  },
+  "future_path_protocol": {
+    "resolve_glob_listdir_or_sibling_access_allowed": false,
+    "no_follow_parent_and_final_checks_required": true,
+    "O_NOFOLLOW_required": true,
+    "owner_mode_size_and_regular_file_checks_required": true,
+    "content_opens": 1,
+    "sequential_reads": 1,
+    "SHA256_passes": 1,
+    "strict_JSON_parses": 1,
+    "open_fstat_identity_reconciliation_required": true,
+    "second_open_retry_rerun_or_resume_allowed": false
+  },
+  "future_output_contract": {
+    "root": ".codex_work/marc2_freewill_prefix/live_selection_v0",
+    "root_must_be_absent_and_non_symlink": true,
+    "maximum_files": 3,
+    "files": [
+      "consumed_marker",
+      "private_selection_manifest",
+      "aggregate_report"
+    ],
+    "consumed_marker_written_before_private_content_open": true,
+    "consumed_marker_mode": "0600",
+    "private_selection_mode": "0600",
+    "aggregate_report_contains_private_rows": false,
+    "aggregate_inspect_accepts_private_schema": false,
+    "overwrite_allowed": false,
+    "symlink_output_allowed": false,
+    "cleanup_scope": "invocation_created_temporary_files_only"
+  },
+  "frozen_selection_rule": {
+    "public_eligible_subjects": 19,
+    "minimum_subjects": 12,
+    "maximum_subjects": 19,
+    "selection_seed": "MARC1-P1|10.6084/m9.figshare.28632599.v1|participant-rank-v0",
+    "fit_session": "ses-01",
+    "heldout_session": "ses-02",
+    "selected_runs_each_session": [1, 2, 3],
+    "required_companions": [
+      "_eeg.eeg",
+      "_eeg.vhdr",
+      "_eeg.vmrk",
+      "_events.tsv"
+    ],
+    "run_bundles_per_subject": 6,
+    "members_per_subject": 24,
+    "reservation_formula": "compressed_size + 30 + UTF8_member_name_bytes + 65535",
+    "reservation_cap_bytes": 8589934592,
+    "maximal_contiguous_prefix_required": true,
+    "stop_at_first_nonfitting_subject": true,
+    "skip_substitute_backfill_or_cap_change_allowed": false,
+    "event_target_quality_signal_or_outcome_input_allowed": false,
+    "member_content_or_local_header_input_allowed": false,
+    "real_selected_subject_count_known_before_execution": false
+  },
+  "allowed_private_fields": [
+    "member_name",
+    "CRC32",
+    "compression_method",
+    "general_purpose_flags",
+    "compressed_size",
+    "uncompressed_size",
+    "local_header_offset",
+    "version_made_by",
+    "external_attributes",
+    "entry_kind",
+    "ZIP64_extra_used"
+  ],
+  "future_wrapper_qualification": {
+    "dependency_policy": "standard_library_only",
+    "commands": [
+      "plan",
+      "qualify",
+      "inspect",
+      "execute"
+    ],
+    "execute_proof_disabled_until_green": true,
+    "generic_source_path_URL_credential_subject_seed_cap_split_or_member_override_available": false,
+    "inherited_selector_mutations": 40,
+    "wrapper_specific_mutations": 18,
+    "total_mutations": 58,
+    "wrapper_specific_refusals": [
+      "implementation_proof_commit_mismatch",
+      "implementation_proof_CI_or_job_mismatch",
+      "dirty_tracked_worktree_or_HEAD_mismatch",
+      "output_root_differs",
+      "output_root_exists",
+      "symlink_output_parent_or_destination",
+      "insufficient_free_disk",
+      "load_worker_thread_runtime_or_RSS_preflight_failure",
+      "retained_path_component_symlink",
+      "retained_final_path_symlink_or_non_regular_file",
+      "retained_owner_mode_mismatch",
+      "retained_size_mismatch",
+      "retained_SHA256_mismatch",
+      "no_follow_open_fstat_identity_race",
+      "strict_JSON_duplicate_encoding_control_or_schema_failure",
+      "private_aggregate_field_leak_or_schema_confusion",
+      "output_cap_mode_overwrite_atomic_write_or_cleanup_failure",
+      "retry_rerun_resume_old_root_network_archive_or_payload_attempt"
+    ],
+    "generated_only_before_exact_wrapper_green": true,
+    "private_source_operations_during_qualification": 0
+  },
+  "router": {
+    "ordered_refusal_routes": [
+      "MARC2FWS-F00-packet-decision-implementation-artifact-HEAD-or-green-proof-mismatch",
+      "MARC2FWS-F01-machine-load-disk-path-output-marker-symlink-mode-or-no-follow-preflight-failure",
+      "MARC2FWS-F02-private-source-size-hash-open-fstat-JSON-schema-source-field-count-or-canonical-failure",
+      "MARC2FWS-F03-path-ZIP-BIDS-companion-or-bundle-failure",
+      "MARC2FWS-F04-eligibility-rank-participant-run-session-split-or-prefix-order-failure",
+      "MARC2FWS-F05-floor-cap-reservation-maximal-prefix-or-selected-count-failure",
+      "MARC2FWS-F06-privacy-output-mode-overwrite-cap-resource-cleanup-replay-or-forbidden-operation-failure"
+    ],
+    "success_route": "MARC2FWS-R1",
+    "every_route_consumes_invocation": true,
+    "success_authorizes_archive_or_member_access": false,
+    "success_authorizes_MARC2_FW2_or_scientific_analysis": false,
+    "success_is_scientific_result": false
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "maximum_normalized_one_minute_load": 1.0,
+    "private_input_opens": 1,
+    "private_input_bytes": 418755,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "archive_local_header_or_member_bytes": 0,
+    "combined_output_bytes": 2097152,
+    "incremental_disk_bytes": 4194304,
+    "minimum_free_disk_bytes": 16106127360,
+    "selected_future_reservation_bytes": 8589934592
+  },
+  "explicit_exclusions": {
+    "operation_before_green_decision": true,
+    "unregistered_private_path_or_sibling": true,
+    "second_open_retry_rerun_resume_repair_or_fallback": true,
+    "old_consumed_root_marker_report_or_output": true,
+    "network_or_download": true,
+    "archive_local_header_member_or_payload": true,
+    "signal_event_target_quality_or_channel": true,
+    "derivative_feature_cache_or_model_input": true,
+    "training_inference_prediction_freeze_delivery_or_score": true,
+    "MARC2_FW2_CIL1_ORTH1_or_NDK_LANG1": true,
+    "provider_language_model_stream_device_or_hardware": true,
+    "release_publication_or_claim_upgrade": true,
+    "neural_decoding_language_thought_to_text_realtime_portable_home_assistive_medical_or_clinical_claim": true
+  },
+  "authorization_flags": {
+    "wrapper_implementation_authorized": false,
+    "generated_wrapper_qualification_authorized": false,
+    "registered_output_root_creation_authorized": false,
+    "retained_private_path_stat_or_open_authorized": false,
+    "private_manifest_read_hash_or_parse_authorized": false,
+    "real_participant_or_member_selection_authorized": false,
+    "private_or_aggregate_result_write_authorized": false,
+    "network_archive_local_header_or_member_payload_authorized": false,
+    "signal_event_target_quality_onset_or_channel_authorized": false,
+    "derivative_cache_feature_or_split_payload_authorized": false,
+    "model_training_inference_prediction_freeze_delivery_or_score_authorized": false,
+    "MARC2_FW2_CIL1_ORTH1_or_NDK_LANG1_authorized": false,
+    "provider_language_model_stream_device_or_hardware_authorized": false,
+    "retry_rerun_resume_repair_cleanup_or_old_root_authorized": false,
+    "release_publication_or_scientific_claim_upgrade_authorized": false
+  },
+  "access_counters": {
+    "registered_output_root_operations": 0,
+    "retained_private_path_operations": 0,
+    "retained_private_inventory_opens": 0,
+    "retained_private_inventory_bytes": 0,
+    "old_consumed_root_operations": 0,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "archive_local_header_or_member_payload_reads": 0,
+    "real_participant_selections": 0,
+    "real_member_selections": 0,
+    "private_or_aggregate_live_outputs": 0,
+    "signal_sample_reads": 0,
+    "event_target_label_quality_onset_or_channel_reads": 0,
+    "real_derivative_rows": 0,
+    "training_or_parameter_update_fits": 0,
+    "model_inference_or_prediction_sets": 0,
+    "prediction_freezes_target_deliveries_or_scores": 0,
+    "provider_or_language_model_calls": 0,
+    "hardware_operations": 0,
+    "retries_reruns_or_resumes": 0,
+    "release_or_publication_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "decision_gate": {
+    "packet_commit_push_and_both_jobs_green_required": true,
+    "sole_active_Tier_C_packet_identification_required": true,
+    "fresh_unambiguous_maintainer_words_required": true,
+    "separate_decision_commit_push_and_green_required": true,
+    "exact_wrapper_commit_push_and_green_before_private_read_required": true,
+    "current_or_earlier_message_is_retroactive_authority": false
+  },
+  "claim_boundary": {
+    "engineering_capability_requested": "One proof-gated wrapper can turn one exact private ZIP-directory manifest into a deterministic storage-bounded target-free selection with separate private and aggregate outputs.",
+    "scientific_claim_not_established": "This all-false request reads no human neural data and establishes no neural effect decoding accuracy language decoding or thought-to-text result."
+  }
+}

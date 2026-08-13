@@ -1888,3 +1888,17 @@ retry or rerun. Next gate: green the aggregate result, then prepare one all-
 false Tier C packet for one bound 418,755-byte private-inventory read. Real
 selection, archive/member access, MARC2-FW2, neural data, targets, models,
 scoring, and language work remain closed.
+
+Generated-result commit `a9a759aa` passed both required jobs in CI
+`31678418324` before the all-false `MARC2-FW1A` request was prepared. The
+packet binds one future generated/mock wrapper and, only after a separately
+green wrapper, one exact 418,755-byte no-follow private-manifest read. The
+future success route stops after target-free prefix selection; archive local
+headers, members, payloads, signals, targets, models, predictions, and scores
+remain out of scope.
+
+Current status is request preparation only: all authorization flags are false,
+all operation counters are zero, and the retained private path was not touched.
+Next gate: commit, push, and green this request, identify it as the sole active
+Tier C packet, and require fresh packet-bound maintainer words. `MARC2-FW2`
+and every scientific operation remain closed.
