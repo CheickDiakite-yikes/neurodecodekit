@@ -4180,3 +4180,24 @@ exact contract. Only then implement `plan`, generated `qualify`, and aggregate
 private inventory, touch an old consumed root, make a network request, open an
 archive/local header/member, access neural or target data, run a model, or
 score under this contract.
+
+## 2026-08-13 MARC2-FW1 Implementation Handoff
+
+Contract `a12edebdab8b1252be546600d37fdb04503394d6` passed Base Python
+job `94371385720` and Optional Neuro Readers job `94371385628` in CI
+`31676261134` before the standalone generated-only selector was implemented.
+Read `docs/MARC_2_FREEWILL_PREFIX_SELECTION_IMPLEMENTATION.md`, its registry,
+module, and two implementation test modules.
+
+The main fixture selects 16 frozen-rank participants, 96 bundles, and 384
+members at 8,105,207,776 reserved bytes. All four byte profiles and all 40
+refusals pass. A measured qualification ran in 0.21431241699974635 seconds at
+30,883,840-byte reported peak RSS and emitted 221,068 temporary bytes. Thirty
+functional and 14 registry tests pass. Every private/real operation counter is
+zero.
+
+Immediate next gate: commit, push, and require both jobs green for this exact
+implementation. Only then execute one registered generated closeout, delete
+only its invocation-created temporary outputs, and record the aggregate result.
+Do not open the retained private inventory or enter real selection, MARC2-FW2,
+payload, neural, target, model, scoring, or language work.

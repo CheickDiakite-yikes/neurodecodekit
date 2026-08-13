@@ -9241,3 +9241,44 @@ participant power under an exact storage ceiling without outcome selection.
 Scientific claim not established: a frozen generated-data contract accesses no
 human neural signal and establishes no neural effect, decoding accuracy,
 language decoding, or thought-to-text capability.
+
+## 2026-08-13 - MARC2-FW1 Generated Selector Implementation
+
+- Began only after contract `a12edebdab8b1252be546600d37fdb04503394d6`
+  passed Base Python job `94371385720`, Optional Neuro Readers job
+  `94371385628`, and CI `31676261134`.
+- Added a standalone dependency-free module; it does not import or call the
+  consumed MARC1 selector. Its parser accepts only generated private-manifest
+  schema and has no retained path, URL, credential, network client, archive
+  reader, event/neuro reader, model, trainer, predictor, scorer, or `execute`.
+- Generated all 1,227 inventory rows, 195 source bundles, and 114 candidate
+  bundles. The main selector produced the exact 16-person frozen rank prefix,
+  48 fit and 48 held-out bundles, 384 members, and an 8,105,207,776-byte
+  reservation. The next participant required 506,575,486 bytes against only
+  484,726,816 remaining, so selection stopped without inspecting later IDs for
+  admission.
+- All four storage profiles passed: floor 12, all 19, exact 8-GiB cap, and
+  cap-plus-one refusal. All 40 adversarial cases routed to their exact six
+  refusal classes.
+- One measured generated qualification used 846,690 input bytes, emitted a
+  7,580-byte aggregate report and 213,488-byte mode-`0600` private fixture,
+  ran in 0.21431241699974635 seconds at 30,883,840-byte reported peak RSS, and
+  removed its invocation-created temporary directory.
+- Thirty functional tests plus 14 implementation-registry tests pass. Ruff,
+  contract and artifact hashes, strict JSON, CLI help/plan, output preflight,
+  deterministic replay, and privacy checks pass.
+- The complete dependency-light suite passes 2,990 tests with 204 expected
+  optional skips, exactly 44 above the green contract baseline. The complete
+  optional-neuro suite passes 3,061 tests with 35 skips, also exactly 44 above
+  baseline. Compile/import behavior, all registry JSON, and diff hygiene pass.
+- Private inventory, old-root, network, archive, local-header, payload, signal,
+  event, target, derivative, model, prediction, score, provider, hardware,
+  retry, and claim counters remain zero.
+
+Engineering capability added: NeuroDecodeKit now has a strict generated-only
+selector that maximizes a session-held-out participant prefix under an exact
+storage ceiling without target, quality, or outcome selection.
+
+Scientific claim not established: generated ZIP-directory metadata contain no
+human neural signal, prediction, or score and establish no neural effect,
+decoding accuracy, language decoding, or thought-to-text result.

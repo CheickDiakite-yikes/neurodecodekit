@@ -13,11 +13,13 @@
 4. Read `docs/MARC_2_CONFOUND_TRIANGULATION_RESEARCH.md`, its registry,
    `docs/MARC_2_FREEWILL_PREFIX_SELECTION_PREREGISTRATION.md`, and its registry
    for the current five-work-order scientific path and first frozen contract.
-   The prior Wrist branch is consumed and blocked. `MARC2-FW1` generated/mock
-   implementation is eligible only after the exact contract is remotely green.
-   No private Freewill manifest read, archive member, payload, signal, target,
-   model, score, language dataset, or provider call is currently authorized.
-   Then read `docs/CODEX_HANDOFF.md` for the exact handoff state.
+   Then read `docs/MARC_2_FREEWILL_PREFIX_SELECTION_IMPLEMENTATION.md` and its
+   registry for the generated-only selector. The prior Wrist branch is consumed
+   and blocked. One registered generated closeout is eligible only after the
+   exact implementation is remotely green. No private Freewill manifest read,
+   archive member, payload, signal, target, model, score, language dataset, or
+   provider call is currently authorized. Then read `docs/CODEX_HANDOFF.md` for
+   the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
    result, then use its preregistration and authorization documents for audit.
 6. Read `docs/LOOP_25_CAUSAL_PREPROCESSING_RESULT.md` and

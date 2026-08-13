@@ -1325,6 +1325,21 @@ Even after generated success, do not open the retained private inventory,
 touch an old consumed root, request an archive member, access payload/signal/
 target data, run a model, score, or enter `MARC2-FW2` without a new exact gate.
 
+Contract `a12edebdab8b1252be546600d37fdb04503394d6` passed Base Python
+job `94371385720` and Optional Neuro Readers job `94371385628` in CI
+`31676261134` before the generated-only selector was implemented. Read
+`docs/MARC_2_FREEWILL_PREFIX_SELECTION_IMPLEMENTATION.md`,
+`registries/marc2_freewill_prefix_selection_implementation.v0.json`, the new
+module, and its two implementation tests. The main fixture selects 16 frozen-
+rank participants, 96 bundles, and 384 members at 8,105,207,776 reserved bytes;
+all four storage profiles and 40 refusal probes pass. One development
+qualification ran in 0.21431241699974635 seconds at 30,883,840-byte reported
+peak RSS with 221,068 temporary output bytes. All private and real-operation
+counters are zero. Commit, push, and obtain both green jobs for this exact
+implementation before one registered generated closeout. Do not open the
+retained inventory, use an old root, make a network request, access a payload,
+signal, event, target, model or score, or enter MARC2-FW2 from this result.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

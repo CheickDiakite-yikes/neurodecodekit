@@ -1862,3 +1862,17 @@ frozen contract with 17 passing invariants and zero private or real operations.
 Next gate: green this contract, then implement only generated `plan`, `qualify`,
 and aggregate `inspect`. The one private inventory read remains a later Tier C
 decision, and `MARC2-FW2` remains closed.
+
+Contract `a12edeb` passed both jobs in CI `31676261134` before the standalone
+generated-only `MARC2-FW1` selector was implemented. The main case now selects
+the exact first 16 frozen-rank participants, 96 run bundles, and 384 members at
+8,105,207,776 reserved bytes. The next participant does not fit, so neither
+later participant is considered for admission.
+
+All four storage boundaries and all 40 refusal probes pass. One measured run
+used 846,690 generated input bytes and 221,068 output bytes in 0.214312417
+seconds at 30,883,840-byte reported peak RSS. The module has only `plan`,
+generated `qualify`, and aggregate `inspect`; all private/real counters are
+zero. Next gate: green this exact implementation, then record one registered
+generated closeout. A private inventory read remains a later Tier C decision;
+MARC2-FW2 remains closed.

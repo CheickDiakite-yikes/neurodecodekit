@@ -42,7 +42,7 @@ irreversible Tier C events.
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |
 | IACKD source compatibility | H1 found 96 29-row and 32 31-row headers. H2 then parsed all 316 public BIDS metadata bodies and confirmed one 26-channel predictive EEG core, 1024 Hz sampling, average reference, and complete central/occipital geometry in all 30 groups | The exact-36 reader assumption was wrong, but H2 still routed `IACKDR-R1`: HEOG, VEOG, and Trigger are source-typed `MISC`, exposing a frozen control-taxonomy bug before any EEG sample, event, target, model, or score was accessed |
 | MARC-1 source eligibility | The Freewill central-directory inventory passed without payload, but the one source-aware Wrist metadata check later routed `MARC1SAL-R2` with zero selected subjects and zero payload bytes | The Wrist branch is consumed and blocked before acquisition; the private source route remains unavailable and is not inferred or repaired |
-| MARC-2 confound triangulation | Five ordered work orders now test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | `MARC2-FW1` now freezes a generated-only maximal-prefix selector: preserve the DOI rank, require at least 12, and admit up to all 19 only as one contiguous prefix under 8 GiB. The private inventory and every payload remain closed |
+| MARC-2 confound triangulation | Five ordered work orders now test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | `MARC2-FW1` now implements the generated-only maximal-prefix selector: its main fixture expands 12 to 16 participants, 96 bundles, and 384 members at an 8.105 GB reservation under 8 GiB. The private inventory and every payload remain closed |
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
 | Full-path causality gate | Loop 25 v1 passed a dedicated causal anti-alias audit, 65,537 response points, 23 alias probes, 168 schedule checks, 240 resume checks, and 72 future-mutation controls across 24 target-free items | The exact 1000-to-100 Hz path is mechanically causal with zero right context; this is synthetic mechanics evidence, not proof that neural information survives |
 | Consumed S21 validation | The registered 2,908-parameter candidate reached macro CER `0.938177`; the train-only no-signal prior reached `0.751235`, so the candidate was worse by `0.186942` | Loop 26 is parked after one consumed six-target event; this is a clear negative result, not neural advantage |
@@ -1542,6 +1542,15 @@ Read this before interpreting any number in the repository.
   and 384 members, plus pass floor, all-19, exact-cap, cap-plus-one, privacy,
   replay, and 40-refusal gates. This is a frozen fixture contract, not a real
   private-inventory read or a scientific result.
+- **MARC2-FW1 generated implementation:** the new dependency-free module
+  validates 1,227 generated ZIP-directory rows, replays the frozen rank, forms
+  exact session-held-out bundles, and writes separate private and aggregate
+  outputs. One local qualification passed 4/4 storage boundaries and 40/40
+  refusal probes in 0.214 seconds at 30.9 MB reported peak RSS, with 846,690
+  generated input bytes and 221,068 output bytes. It exposes only `plan`,
+  generated `qualify`, and aggregate `inspect`; there is no `execute`, network,
+  archive, signal, target, model, or score surface. A registered generated
+  closeout waits for this exact implementation to be remotely green.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

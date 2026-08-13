@@ -1,0 +1,210 @@
+{
+  "schema_name": "neurodecodekit.marc2_freewill_prefix_selection_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "MARC-2-FW1-freewill-prefix-selection-generated-implementation-v0",
+  "recorded_at_local": "2026-08-13",
+  "status": "generated_mock_implementation_complete_locally_qualified_remote_green_required",
+  "objective": "Implement and qualify a dependency-free maximal contiguous Freewill participant-prefix selector entirely on generated ZIP-directory metadata under an exact eight-GiB reservation.",
+  "artifact_bindings": {
+    "contract": {
+      "path": "registries/marc2_freewill_prefix_selection_contract.v0.json",
+      "sha256": "dfe614cd7ec27c54c4f03848e3878c714222db043f501b9b07e57c7dc9f5f702"
+    },
+    "implementation_document": {
+      "path": "docs/MARC_2_FREEWILL_PREFIX_SELECTION_IMPLEMENTATION.md",
+      "sha256": "c1a04f7552b77277eb25cfff535ca5947d0c83486a4bd599d54f13ec70f9f7af"
+    },
+    "module": {
+      "path": "src/neurodecodekit/datasets/marc2_freewill_prefix_selection.py",
+      "sha256": "86fa30fbd1caed735f0fb2e627144482a2bb8e033567bb3794e3f05508005c97"
+    },
+    "implementation_test": {
+      "path": "tests/test_marc2_freewill_prefix_selection.py",
+      "sha256": "abd1373d7d0640fd6e38980945699b35a273b8b4e076f4705fa4c6284d3b34fa"
+    },
+    "implementation_registry_test": {
+      "path": "tests/test_marc2_freewill_prefix_selection_implementation.py",
+      "sha256": "888a8dd9e790cf029890578bb916e36167c7c382a73de33139c02f1ef44ac803"
+    }
+  },
+  "green_contract_proof": {
+    "commit": "a12edebdab8b1252be546600d37fdb04503394d6",
+    "CI_run_id": 31676261134,
+    "base_job_id": 94371385720,
+    "optional_neuro_job_id": 94371385628,
+    "both_required_jobs_green": true,
+    "contract_sha256": "dfe614cd7ec27c54c4f03848e3878c714222db043f501b9b07e57c7dc9f5f702"
+  },
+  "implementation_surface": {
+    "module": "neurodecodekit.datasets.marc2_freewill_prefix_selection",
+    "commands": [
+      "plan",
+      "qualify",
+      "inspect"
+    ],
+    "execute_command_available": false,
+    "network_client_available": false,
+    "real_path_or_credential_argument_available": false,
+    "archive_or_member_reader_available": false,
+    "event_or_neuro_reader_available": false,
+    "target_model_predictor_trainer_or_scorer_available": false,
+    "heavy_dependency_imports": 0
+  },
+  "generated_fixture": {
+    "schema": "neurodecodekit.marc1_central_directory_private_manifest",
+    "rows": 1227,
+    "regular_rows": 1025,
+    "directory_rows": 202,
+    "source_run_bundles": 195,
+    "eligible_subjects": 19,
+    "candidate_run_bundles": 114,
+    "candidate_core_members": 456,
+    "main_compressed_bytes_per_subject": 505000000,
+    "contains_human_content": false,
+    "contains_target_or_label": false
+  },
+  "main_selection_result": {
+    "route": "MARC2FWG-R1",
+    "selected_subject_ids": [
+      "sub-08",
+      "sub-10",
+      "sub-07",
+      "sub-22",
+      "sub-19",
+      "sub-16",
+      "sub-14",
+      "sub-04",
+      "sub-05",
+      "sub-03",
+      "sub-09",
+      "sub-11",
+      "sub-12",
+      "sub-23",
+      "sub-20",
+      "sub-01"
+    ],
+    "selected_subjects": 16,
+    "first_nonfitting_subject_id": "sub-18",
+    "candidate_subjects_examined": 17,
+    "fit_run_bundles": 48,
+    "heldout_run_bundles": 48,
+    "selected_run_bundles": 96,
+    "selected_core_members": 384,
+    "selected_reservation_bytes": 8105207776,
+    "remaining_reservation_bytes": 484726816,
+    "first_nonfitting_subject_reservation_bytes": 506575486,
+    "reservation_cap_bytes": 8589934592,
+    "selection_is_maximal_contiguous_prefix": true,
+    "fallback_skip_substitution_or_budget_increase_used": false
+  },
+  "boundary_results": {
+    "floor_12": {
+      "selected_subjects": 12,
+      "selected_reservation_bytes": 8418905832,
+      "passed": true
+    },
+    "all_19": {
+      "selected_subjects": 19,
+      "selected_reservation_bytes": 7629934234,
+      "passed": true
+    },
+    "exact_cap": {
+      "selected_subjects": 12,
+      "selected_reservation_bytes": 8589934592,
+      "passed": true
+    },
+    "cap_plus_one": {
+      "refusal_route": "MARC2FWG-F04-floor-cap-reservation-maximal-prefix-or-boundary-failure",
+      "passed": true
+    }
+  },
+  "mutation_results": {
+    "required": 40,
+    "passed": 40,
+    "route_counts": {
+      "MARC2FWG-F00-contract-artifact-or-green-proof-mismatch": 3,
+      "MARC2FWG-F01-generated-inventory-identity-schema-field-count-or-source-mismatch": 5,
+      "MARC2FWG-F02-path-ZIP-BIDS-or-run-bundle-failure": 12,
+      "MARC2FWG-F03-eligibility-rank-participant-run-session-split-or-prefix-order-failure": 12,
+      "MARC2FWG-F04-floor-cap-reservation-maximal-prefix-or-boundary-failure": 4,
+      "MARC2FWG-F05-privacy-output-overwrite-resource-cleanup-or-replay-failure": 4
+    }
+  },
+  "measured_development_qualification": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "generated_input_bytes": 846690,
+    "aggregate_report_bytes": 7580,
+    "private_output_bytes": 213488,
+    "combined_output_bytes": 221068,
+    "internal_runtime_seconds": 0.21431241699974635,
+    "reported_peak_RSS_bytes": 30883840,
+    "external_wall_seconds": 0.28,
+    "external_maximum_RSS_bytes": 30932992,
+    "temporary_output_removed": true,
+    "end_to_end_latency_measured": false,
+    "producer_is_causal": "not_applicable_metadata_only"
+  },
+  "verification": {
+    "focused_implementation_tests": 30,
+    "ruff_passed": true,
+    "contract_hash_passed": true,
+    "row_order_replay_passed": true,
+    "private_mode_0600_passed": true,
+    "aggregate_privacy_walk_passed": true,
+    "CLI_help_and_plan_passed": true,
+    "focused_registry_tests": 14,
+    "complete_base_tests": 2990,
+    "complete_base_skips": 204,
+    "complete_optional_tests": 3061,
+    "complete_optional_skips": 35,
+    "complete_base_suite_pending": false,
+    "complete_optional_suite_pending": false,
+    "remote_CI_pending": true
+  },
+  "authorization_flags": {
+    "registered_generated_closeout_authorized_before_green_implementation": false,
+    "real_private_inventory_read_authorized": false,
+    "real_participant_or_member_selection_authorized": false,
+    "archive_local_header_or_member_payload_access_authorized": false,
+    "signal_event_target_quality_or_onset_access_authorized": false,
+    "derivative_cache_split_or_feature_creation_authorized": false,
+    "model_training_inference_prediction_or_score_authorized": false,
+    "provider_language_model_or_hardware_authorized": false,
+    "retry_rerun_resume_or_old_root_access_authorized": false,
+    "release_publication_or_scientific_claim_upgrade_authorized": false
+  },
+  "access_counters": {
+    "private_inventory_path_operations": 0,
+    "private_inventory_opens": 0,
+    "private_inventory_bytes": 0,
+    "old_consumed_root_operations": 0,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "archive_local_header_or_member_payload_reads": 0,
+    "real_participant_selections": 0,
+    "real_member_selections": 0,
+    "signal_sample_reads": 0,
+    "event_target_label_quality_onset_or_channel_reads": 0,
+    "real_derivative_rows": 0,
+    "training_or_parameter_update_fits": 0,
+    "model_inference_or_prediction_sets": 0,
+    "prediction_freezes_target_deliveries_or_scores": 0,
+    "provider_or_language_model_calls": 0,
+    "hardware_operations": 0,
+    "retries_reruns_or_resumes": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "next_gate": {
+    "commit_push_and_remote_green_exact_implementation_required": true,
+    "one_registered_generated_closeout_after_green_implementation": true,
+    "private_read_packet_only_after_green_generated_result": true,
+    "private_inventory_read_requires_fresh_packet_bound_Tier_C_decision": true,
+    "member_acquisition_or_MARC2_FW2_eligible": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "NeuroDecodeKit has a strict generated-only selector that maximizes a session-held-out participant prefix under an exact storage ceiling without target quality or outcome selection.",
+    "scientific_claim_not_established": "Generated ZIP-directory metadata contain no human neural signal prediction or score and establish no neural effect decoding accuracy language decoding or thought-to-text result."
+  }
+}
