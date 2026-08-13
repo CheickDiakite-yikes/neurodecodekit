@@ -4201,3 +4201,24 @@ implementation. Only then execute one registered generated closeout, delete
 only its invocation-created temporary outputs, and record the aggregate result.
 Do not open the retained private inventory or enter real selection, MARC2-FW2,
 payload, neural, target, model, scoring, or language work.
+
+## 2026-08-13 MARC2-FW1 Generated Result Handoff
+
+Exact implementation `36f87759967f03dd7ac5d543f6f5a24afb571365`
+passed Base Python job `94375991713` and Optional Neuro Readers job
+`94375991770` in CI `31677757466` before one registered closeout. Read
+`docs/MARC_2_FREEWILL_PREFIX_SELECTION_SYNTHETIC_RESULT.md`, its registry, and
+result test.
+
+The closeout passed `MARC2FWG-R1`: 16 participants, 96 bundles, 384 members,
+8,105,207,776 reserved bytes, 4/4 storage boundaries, and 40/40 refusals. It
+ran in 0.21099908299947856 seconds at 32,047,104-byte reported peak RSS. The
+221,068-byte generated output was hashed, its aggregate side was inspected,
+and the invocation-owned temporary root was removed. Every real/private access
+counter is zero. The closeout is consumed with no rerun.
+
+Immediate next gate: commit, push, and green this aggregate result. Only then
+prepare one all-false Tier C packet for one exact read of the retained private
+inventory. Do not perform that read, select real members, request an archive
+byte, enter MARC2-FW2, or access neural data, targets, models, scores, or
+language providers until the later packet itself is green and freshly approved.

@@ -1876,3 +1876,15 @@ generated `qualify`, and aggregate `inspect`; all private/real counters are
 zero. Next gate: green this exact implementation, then record one registered
 generated closeout. A private inventory read remains a later Tier C decision;
 MARC2-FW2 remains closed.
+
+Exact implementation `36f8775` passed both jobs in CI `31677757466` before the
+one registered generated `MARC2-FW1` closeout. It passed `MARC2FWG-R1` with 16
+participants, 96 bundles, 384 members, an 8,105,207,776-byte reservation, all
+four byte boundaries, all 40 refusals, and zero private/real accesses.
+
+The run took 0.210999083 seconds at 32,047,104-byte reported peak RSS and
+created then removed 221,068 generated output bytes. It is consumed with no
+retry or rerun. Next gate: green the aggregate result, then prepare one all-
+false Tier C packet for one bound 418,755-byte private-inventory read. Real
+selection, archive/member access, MARC2-FW2, neural data, targets, models,
+scoring, and language work remain closed.

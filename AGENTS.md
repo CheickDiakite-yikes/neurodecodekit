@@ -1340,6 +1340,21 @@ implementation before one registered generated closeout. Do not open the
 retained inventory, use an old root, make a network request, access a payload,
 signal, event, target, model or score, or enter MARC2-FW2 from this result.
 
+Exact implementation `36f87759967f03dd7ac5d543f6f5a24afb571365`
+passed Base Python job `94375991713` and Optional Neuro Readers job
+`94375991770` in CI `31677757466` before the one registered generated
+closeout. Read `docs/MARC_2_FREEWILL_PREFIX_SELECTION_SYNTHETIC_RESULT.md`
+and `registries/marc2_freewill_prefix_selection_synthetic_result.v0.json`.
+The closeout passed `MARC2FWG-R1` with 16 participants, 96 bundles, 384
+members, 8,105,207,776 reserved bytes, four boundaries, 40 refusals, and zero
+private or real accesses. Runtime was 0.21099908299947856 seconds at
+32,047,104-byte reported peak RSS. Its 221,068-byte generated output was
+removed. The result is consumed with no rerun. Commit, push, and green this
+aggregate result before preparing one all-false Tier C private-read packet.
+Do not open the retained inventory, select real members, request an archive
+byte, enter MARC2-FW2, or access neural data, targets, models, scores, or
+language providers under this generated result.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

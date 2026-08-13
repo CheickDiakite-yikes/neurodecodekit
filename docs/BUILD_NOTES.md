@@ -9282,3 +9282,39 @@ storage ceiling without target, quality, or outcome selection.
 Scientific claim not established: generated ZIP-directory metadata contain no
 human neural signal, prediction, or score and establish no neural effect,
 decoding accuracy, language decoding, or thought-to-text result.
+
+## 2026-08-13 - MARC2-FW1 Registered Generated Closeout
+
+- Exact implementation `36f87759967f03dd7ac5d543f6f5a24afb571365`
+  passed Base Python job `94375991713`, Optional Neuro Readers job
+  `94375991770`, and CI `31677757466` before the one registered closeout.
+- The closeout routed `MARC2FWG-R1` with the exact 16-person prefix, 48 fit and
+  48 held-out bundles, 384 members, and 8,105,207,776 reserved bytes. The next
+  complete participant exceeded the remaining cap by 21,848,670 bytes.
+- All four byte profiles and all 40 frozen refusal probes passed. Canonical and
+  reverse-row fixtures replayed byte-identically.
+- The run consumed 846,690 generated input bytes and emitted a 7,580-byte
+  aggregate report plus a 213,488-byte mode-`0600` private fixture. Internal
+  runtime was 0.21099908299947856 seconds at 32,047,104-byte reported peak RSS;
+  external wall was 0.27 seconds at 32,096,256-byte maximum RSS.
+- The private fixture was hashed opaquely, the aggregate report was inspected,
+  and the invocation-owned temporary root was removed. Neither output is
+  retained.
+- Twelve result invariants pass. The closeout is consumed with no retry, rerun,
+  resume, fixture tuning, rank change, cap change, or real authority.
+- The complete dependency-light suite passes 3,002 tests with 204 expected
+  optional skips, exactly 12 above the green implementation baseline. The
+  complete optional-neuro suite passes 3,073 tests with 35 skips, also exactly
+  12 above baseline. Ruff, compilation, all 208 registry JSON documents,
+  artifact hashes, and diff hygiene pass without rerunning the closeout.
+- Retained-private, old-root, network, archive, local-header, payload, signal,
+  event, target, derivative, model, prediction, score, provider, hardware,
+  retry, and claim counters remain zero.
+
+Engineering capability added: NeuroDecodeKit demonstrated deterministic,
+storage-bounded, privacy-preserving participant-prefix selection on a full-
+scale generated inventory and cleaned its outputs exactly.
+
+Scientific claim not established: the closeout used no human neural data,
+prediction, or score and establishes no neural effect, decoding accuracy,
+language decoding, or thought-to-text result.
