@@ -41,7 +41,8 @@ irreversible Tier C events.
 | Trial identity | All 66 S21 session-1 trials and all 63 performed session-2 trials reconcile to MAT provenance; empty session-2 slots remain explicit | The real MEG evidence has exact trial identity instead of fuzzy sentence matching |
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |
 | IACKD source compatibility | H1 found 96 29-row and 32 31-row headers. H2 then parsed all 316 public BIDS metadata bodies and confirmed one 26-channel predictive EEG core, 1024 Hz sampling, average reference, and complete central/occipital geometry in all 30 groups | The exact-36 reader assumption was wrong, but H2 still routed `IACKDR-R1`: HEOG, VEOG, and Trigger are source-typed `MISC`, exposing a frozen control-taxonomy bug before any EEG sample, event, target, model, or score was accessed |
-| MARC-1 positive-control preparation | The development harness passed exact `page=1&page_size=1000` replay, but its one registered generated closeout consumed at `MARC1PG-F07`: `/tmp` was a symlink parent, after four generated accepted cases had already run in memory | Zero files, network bytes, participant payloads, signals, targets, models, or scores were produced. Pagination remains untested against the live source, and a separately frozen output-preflight recovery is required. This is the same confound-control path toward cue-resistant neural evidence and held-out language decoding, not a pivot |
+| MARC-1 source eligibility | The Freewill central-directory inventory passed without payload, but the one source-aware Wrist metadata check later routed `MARC1SAL-R2` with zero selected subjects and zero payload bytes | The Wrist branch is consumed and blocked before acquisition; the private source route remains unavailable and is not inferred or repaired |
+| MARC-2 confound triangulation | Five ordered work orders now test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | Tier A research only: no private manifest, archive member, payload, signal, target, model, score, or provider call was made; `MARC2-FW1` generated selector design is the next gate |
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
 | Full-path causality gate | Loop 25 v1 passed a dedicated causal anti-alias audit, 65,537 response points, 23 alias probes, 168 schedule checks, 240 resume checks, and 72 future-mutation controls across 24 target-free items | The exact 1000-to-100 Hz path is mechanically causal with zero right context; this is synthetic mechanics evidence, not proof that neural information survives |
 | Consumed S21 validation | The registered 2,908-parameter candidate reached macro CER `0.938177`; the train-only no-signal prior reached `0.751235`, so the candidate was worse by `0.186942` | Loop 26 is parked after one consumed six-target event; this is a clear negative result, not neural advantage |
@@ -1519,6 +1520,18 @@ Read this before interpreting any number in the repository.
   private R3-versus-R4 source route, historical differences and body size are
   recorded as unavailable rather than inferred. This Wrist lane is consumed;
   acquisition and the remaining experiments do not proceed against it.
+- **MARC-2 conditional-information route:** the replacement architecture keeps
+  Freewill-23 as the cue-reduced primary axis, ranks Biomed-SPC-9 and a bounded
+  PhysioNet Gait-59 subset for one later peripheral-control cohort, and reserves
+  OpenNeuro `ds003626-v2.1.0` for a Spanish inner-speech control experiment.
+  Its primary endpoint is participant-macro held-out log-loss gain from adding
+  EEG after the strongest available timing/EOG/EMG/kinematic model. Three
+  compact causal families are registered as separate hypotheses rather than a
+  final-target model search. Any hosted LLM remains downstream of a remotely
+  green neural freeze and must beat both LLM-only and item-deranged-neural
+  conditions. This milestone read public primary-source pages only; all
+  dataset, private-path, payload, signal, target, model, score, provider, and
+  claim counters remain zero.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

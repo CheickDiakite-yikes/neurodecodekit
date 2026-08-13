@@ -1819,3 +1819,31 @@ Task 4 remains the needle-moving objective, but its Wrist branch is blocked.
 The next safe substep is target-free comparison of independent cue-resistant
 datasets and synchronized EOG/EMG designs. Acquisition, neural experiments,
 target delivery, scoring, replication, and language work remain new gates.
+
+The Task 4 successor is now designed as `MARC-2 Confound Triangulation`.
+Freewill-23 remains the cue-reduced primary axis; Biomed-SPC-9 and a bounded
+PhysioNet Gait-59 subset compete under a future target-free utility-per-byte
+rule for one orthogonal peripheral-control cohort; OpenNeuro
+`ds003626-v2.1.0` is reserved for a later Spanish inner-speech control ladder.
+
+The primary scientific endpoint is participant-macro held-out conditional
+log-loss gain from adding causal EEG after the strongest available cue,
+timing, EOG, EMG, and kinematic model. Raw above-chance accuracy is not enough.
+The exact work-order sequence is:
+
+1. `MARC2-FW1`: generated/mock selector, then one separately gated target-free
+   read of the bound private Freewill central-directory inventory.
+2. `MARC2-FW2`: exact range/member acquisition and semantic qualification;
+   never materialize the 13.59 GB archive.
+3. `MARC2-CIL1`: one target-firewalled four-target Freewill experiment using
+   the frozen conditional-information ladder.
+4. `MARC2-ORTH1`: one metadata-selected synchronized peripheral-control cohort.
+5. `NDK-LANG1`: one controlled Spanish inner-speech command ladder, with any
+   LLM downstream of a green neural freeze and matched against LLM-only and
+   deranged-neural controls.
+
+Current status is Tier A research only. Fifteen invariants pass; every private-
+path, dataset, payload, signal, target, model, score, provider, and claim
+counter is zero. Next gate: green this research, then freeze and green only the
+generated/mock `MARC2-FW1` selector contract. Its later private-manifest read
+remains a new Tier C decision.

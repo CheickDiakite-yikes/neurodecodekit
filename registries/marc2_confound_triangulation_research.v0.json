@@ -1,0 +1,488 @@
+{
+  "schema_name": "neurodecodekit.marc2_confound_triangulation_research",
+  "schema_version": "0.1.0",
+  "research_id": "MARC-2-confound-triangulation-and-language-bridge-research-v0",
+  "recorded_at_local": "2026-08-13",
+  "status": "tier_A_primary_source_research_complete_zero_dataset_operations",
+  "objective": "Test whether causal scalp EEG adds held-out information beyond measured cue timing ocular muscle and kinematic controls before any language model is allowed to consume neural evidence.",
+  "artifact_bindings": {
+    "research_document": {
+      "path": "docs/MARC_2_CONFOUND_TRIANGULATION_RESEARCH.md",
+      "sha256": "a68fd57566834dfbac5c1c3f4840cc6365792d52fbfed488c54dfb9f53d7c20e"
+    },
+    "invariant_test": {
+      "path": "tests/test_marc2_confound_triangulation_research.py",
+      "sha256": "f7c2eb9625ab7b7b334f273d8c0176a30f977c570aeb1a186dedc055028d7a22"
+    },
+    "blocked_wrist_result": {
+      "path": "registries/marc1_source_aware_live_metadata_result.v0.json",
+      "sha256": "c5412aa6018006f0bc8c05642ce8f04dce4c0379599f3426cf694f3da34a1662"
+    },
+    "freewill_inventory_result": {
+      "path": "registries/marc1_freewill_central_directory_live_result.v0.json",
+      "sha256": "fee969818b4e3e2ef7aee86096ad676c9bd70f80d19f2fd6dbe0e8069175257b"
+    },
+    "WO9R_result": {
+      "path": "registries/physionet_low_frequency_cohort_confirmation_result.v0.json",
+      "sha256": "d6cda8b4ce5f6da7add4a78ac8b1e74587cd8ab8eacf0dce8b806c076e85699a"
+    }
+  },
+  "blocked_predecessor": {
+    "lane_id": "MARC1-SA1A",
+    "route": "MARC1SAL-R2",
+    "consumed": true,
+    "selected_cohort_available": false,
+    "selected_subjects": 0,
+    "payload_bytes": 0,
+    "source_route_available": false,
+    "private_route_candidates": [
+      "R3",
+      "R4"
+    ],
+    "allowed_operations": {
+      "retry": false,
+      "rerun": false,
+      "resume": false,
+      "repair": false,
+      "route_around": false
+    }
+  },
+  "prior_evidence_boundary": {
+    "WO9R_execution_balanced_accuracy": 0.680975,
+    "WO9R_imagery_balanced_accuracy": 0.728014,
+    "WO9R_early_cue_balanced_accuracy": 0.762865,
+    "WO9R_central_balanced_accuracy": 0.647575,
+    "WO9R_frontal_proxy_balanced_accuracy": 0.671821,
+    "WO9R_participants_following_physiology_direction": 5,
+    "WO9R_participants": 12,
+    "supported_claim": "reproducible low-frequency EEG task information",
+    "unsupported_claim": "brain-specific motor-cortical origin"
+  },
+  "source_matrix": {
+    "freewill_23": {
+      "role": "primary_cue_reduced_axis",
+      "article_url": "https://www.nature.com/articles/s41597-025-06039-9",
+      "repository_record_id": 28632599,
+      "doi": "10.6084/m9.figshare.28632599.v1",
+      "license": "CC BY 4.0",
+      "participants": 23,
+      "recordings": 49,
+      "trials": 6808,
+      "target_classes": 4,
+      "EEG_channels": 31,
+      "EOG_channels": 4,
+      "accelerometer_axes": 3,
+      "EMG_available": false,
+      "generic_trial_cue": true,
+      "target_specific_cue": false,
+      "movement_onset_specified_by_cue": false,
+      "reviewed_acceleration_onsets_available": true,
+      "sampling_rates_hz": [
+        250,
+        1000
+      ],
+      "archive_bytes": 13591548048,
+      "archive_entries": 1227,
+      "whole_archive_eligible": false,
+      "retained_private_manifest_path": ".codex_work/marc1_central_directory/live_audit_v0/member_inventory.private.v0.json",
+      "retained_private_manifest_bytes": 418755,
+      "retained_private_manifest_sha256": "2a2e48b88ee59332a199d926554bb6921222fff92046a0fc9b07cf73fd6c3031",
+      "private_manifest_read_authorized": false,
+      "payload_authorized": false
+    },
+    "biomed_spc_9": {
+      "role": "complete_peripheral_control_candidate",
+      "repository_url": "https://data.mendeley.com/datasets/zmrbzpnggr/1",
+      "doi": "10.17632/zmrbzpnggr.1",
+      "license": "CC BY 4.0",
+      "participants": 9,
+      "movement_classes": 2,
+      "EEG_channels": 28,
+      "EOG_channels": 4,
+      "EMG_channels": 32,
+      "EOG_available": true,
+      "EMG_available": true,
+      "kinematics_available": true,
+      "EEG_sampling_rate_hz": 250,
+      "EMG_sampling_rate_hz": 2000,
+      "IMU_sampling_rate_hz": 100,
+      "target_specific_cue": true,
+      "repository_display_size": "3.35 GB",
+      "exact_payload_bytes_available": false,
+      "payload_authorized": false
+    },
+    "physionet_gait_59": {
+      "role": "held_out_person_scale_reserve",
+      "repository_url": "https://www.physionet.org/content/multimodal-gait-dataset/1.0.0/",
+      "license": "CC BY 4.0",
+      "participants": 59,
+      "conditions": 3,
+      "EEG_channels": 19,
+      "EMG_channels": 12,
+      "IMU_sensors": 17,
+      "EOG_available": false,
+      "EMG_available": true,
+      "kinematics_available": true,
+      "force_available": true,
+      "EEG_sampling_rate_hz": 300,
+      "IMU_sampling_rate_hz": 60,
+      "compressed_display_size": "4.5 GB",
+      "uncompressed_display_size": "6.5 GB",
+      "participant_level_files_available": true,
+      "continuous_motion_confound": true,
+      "payload_authorized": false
+    },
+    "way_eeg_gal_reference": {
+      "role": "external_peripheral_dominance_warning",
+      "data_descriptor_url": "https://www.nature.com/articles/sdata201447",
+      "analysis_url": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2026.1874302/full",
+      "participants": 12,
+      "usable_trials": 3528,
+      "EEG_channels": 32,
+      "EMG_channels": 5,
+      "reported_EEG_only_result": "near_chance",
+      "reported_dominant_modality": "EMG",
+      "execution_candidate": false,
+      "payload_authorized": false
+    },
+    "voluntary_finger_tapping_14": {
+      "role": "causally_limited_diagnostic_reference",
+      "repository_url": "https://researchdata.reading.ac.uk/117/",
+      "doi": "10.17864/1947.117",
+      "license": "CC BY 4.0",
+      "participants": 14,
+      "trials_per_participant": 120,
+      "EEG_channels": 19,
+      "tap_device_channels": 2,
+      "archive_display_size": "721 MB",
+      "continuous_raw_data_confirmed": false,
+      "preprocessing_includes_ICA": true,
+      "causal_top_route_eligible": false,
+      "payload_authorized": false
+    },
+    "inner_speech_10": {
+      "role": "future_language_control_source",
+      "article_url": "https://www.nature.com/articles/s41597-022-01147-2",
+      "openneuro_snapshot": "ds003626-v2.1.0",
+      "participants": 10,
+      "trials": 5640,
+      "recording_hours_more_than": 9,
+      "EEG_channels": 128,
+      "external_channels": 8,
+      "EOG_channels": 4,
+      "oral_EMG_channels": 2,
+      "reference_channels": 2,
+      "source_sampling_rate_hz": 1024,
+      "command_classes": 4,
+      "conditions": [
+        "inner_speech",
+        "pronounced_speech",
+        "visualized_direction"
+      ],
+      "raw_continuous_recordings_available": true,
+      "visual_class_cue_present": true,
+      "dataset_license_reverified_in_this_record": false,
+      "payload_authorized": false
+    },
+    "future_language_reserves": {
+      "chisco": {
+        "participants": 3,
+        "sentence_level": true,
+        "selected": false
+      },
+      "tesscco": {
+        "native_spanish_participants": 21,
+        "additional_non_native_participants": 3,
+        "bilingual_command_classes": 5,
+        "selected": false,
+        "dataset_identity_license_and_storage_qualified": false
+      }
+    }
+  },
+  "conditional_information_ladder": {
+    "name": "CIL-v0",
+    "ordered_conditions": [
+      "B0",
+      "B1",
+      "P",
+      "E",
+      "P_plus_E",
+      "P_plus_deranged_E"
+    ],
+    "condition_meanings": {
+      "B0": "no_signal_prevalence_or_class_prior",
+      "B1": "cue_elapsed_time_trial_phase_and_schedule",
+      "P": "available_non_EEG_peripheral_streams",
+      "E": "EEG_only_candidate",
+      "P_plus_E": "peripheral_model_augmented_with_EEG",
+      "P_plus_deranged_E": "peripheral_model_augmented_with_frozen_deranged_EEG"
+    },
+    "primary_endpoint": "participant_macro_log_loss_P_minus_P_plus_E",
+    "positive_conditional_gain_required": true,
+    "participant_level_paired_inference_required": true,
+    "pooled_trial_accuracy_primary": false,
+    "secondary_metrics": [
+      "balanced_accuracy",
+      "macro_F1",
+      "calibration_error",
+      "confusion_matrix"
+    ],
+    "future_contract_must_freeze": [
+      "minimum_meaningful_effect",
+      "participant_consistency_floor",
+      "paired_randomization_test",
+      "multiplicity_policy"
+    ]
+  },
+  "candidate_families": {
+    "H_LF": {
+      "description": "causal_low_frequency_potential_features_with_shrinkage_LDA",
+      "frequency_band_hz": [
+        0.5,
+        4.0
+      ],
+      "causal": true,
+      "pretrained_model_allowed": false,
+      "final_target_family_selection_allowed": false
+    },
+    "H_SMR": {
+      "description": "causal_train_only_mu_beta_covariance_with_regularized_linear_or_Riemannian_head",
+      "frequency_band_hz": [
+        8.0,
+        30.0
+      ],
+      "causal": true,
+      "pretrained_model_allowed": false,
+      "final_target_family_selection_allowed": false
+    },
+    "H_CML": {
+      "description": "compact_fixed_potential_mu_beta_CML_v0",
+      "causal": true,
+      "parameter_ceiling": 10000,
+      "pretrained_model_allowed": false,
+      "final_target_family_selection_allowed": false
+    }
+  },
+  "five_work_orders": [
+    {
+      "ordinal": 1,
+      "work_order_id": "MARC2-FW1",
+      "name": "Freewill-only target-free selection",
+      "current_eligibility": "contract_design_only",
+      "next_allowed_scope": "generated_and_mock_fixtures_after_green_contract",
+      "real_operation_requires_new_Tier_C_decision": true
+    },
+    {
+      "ordinal": 2,
+      "work_order_id": "MARC2-FW2",
+      "name": "Bounded Freewill member acquisition and semantic qualification",
+      "current_eligibility": "closed",
+      "depends_on": "MARC2-FW1_passed_and_remotely_green",
+      "real_operation_requires_new_Tier_C_decision": true
+    },
+    {
+      "ordinal": 3,
+      "work_order_id": "MARC2-CIL1",
+      "name": "One target-firewalled Freewill conditional-information experiment",
+      "current_eligibility": "closed",
+      "depends_on": "MARC2-FW2_passed_and_exact_experiment_preregistered",
+      "real_operation_requires_new_Tier_C_decision": true
+    },
+    {
+      "ordinal": 4,
+      "work_order_id": "MARC2-ORTH1",
+      "name": "One metadata-selected orthogonal peripheral-control cohort",
+      "current_eligibility": "closed",
+      "depends_on": "MARC2-CIL1_conditional_information_gate_passed",
+      "real_operation_requires_new_Tier_C_decision": true
+    },
+    {
+      "ordinal": 5,
+      "work_order_id": "NDK-LANG1",
+      "name": "Spanish inner-speech control ladder and optional frozen LLM reranking",
+      "current_eligibility": "closed",
+      "depends_on": "movement_conditional_information_and_orthogonal_control_gates_passed",
+      "real_operation_requires_new_Tier_C_decision": true
+    }
+  ],
+  "freewill_experiment_candidate": {
+    "task": "four_way_self_selected_target_prediction",
+    "fit_partition": "session_1",
+    "held_out_partition": "session_2_within_participant",
+    "prediction_mode": "continuous_target_blind_probabilities",
+    "provisional_pre_movement_guard_ms": 200,
+    "exact_window_frozen_now": false,
+    "candidate_receives_EOG": false,
+    "candidate_receives_acceleration": false,
+    "candidate_receives_target_or_onset": false,
+    "scorer_only_held_out_onset_and_target": true,
+    "required_controls": [
+      "B0_no_signal",
+      "B1_cue_and_elapsed_time",
+      "EOG_only",
+      "frontal_EEG",
+      "occipital_EEG",
+      "central_EEG",
+      "train_only_EOG_residualized_EEG",
+      "onset_shift",
+      "label_derangement",
+      "temporal_reversal",
+      "future_context_sentinel"
+    ]
+  },
+  "orthogonal_router_policy": {
+    "eligible_only_after_Freewill_pass": true,
+    "candidates": [
+      "biomed_spc_9",
+      "physionet_gait_59"
+    ],
+    "selection_inputs": [
+      "license",
+      "participant_granularity",
+      "synchronized_control_completeness",
+      "cue_ambiguity",
+      "raw_and_causal_compatibility",
+      "expected_payload_bytes",
+      "held_out_person_support"
+    ],
+    "target_or_outcome_input_allowed": false,
+    "maximum_selected_sources": 1,
+    "selection_frozen_before_payload": true
+  },
+  "target_firewall": {
+    "physical_deliveries": [
+      "fit_signals_controls_onsets_and_targets",
+      "held_out_target_blind_signals",
+      "held_out_target_blind_timing_and_controls",
+      "one_final_held_out_target_delivery"
+    ],
+    "remote_green_prediction_freeze_required": true,
+    "window_random_split_allowed": false,
+    "final_target_can_affect_preprocessing": false,
+    "final_target_can_affect_thresholds": false,
+    "final_target_can_affect_family_selection": false,
+    "final_target_deliveries": 1,
+    "post_target_updates": 0,
+    "reruns_after_scoring": 0
+  },
+  "language_bridge_policy": {
+    "eligible_now": false,
+    "source": "inner_speech_10",
+    "first_task": "four_command_inner_speech_control_adjusted_classification",
+    "neural_prediction_freeze_first": true,
+    "raw_EEG_to_provider_allowed": false,
+    "participant_identity_to_provider_allowed": false,
+    "reference_text_to_provider_allowed": false,
+    "matched_conditions": [
+      "neural_only",
+      "language_model_only",
+      "language_model_plus_neural",
+      "language_model_plus_item_deranged_neural"
+    ],
+    "must_beat_language_model_only": true,
+    "must_beat_deranged_neural": true,
+    "fine_tuning_allowed": false,
+    "four_command_result_is_thought_to_text": false,
+    "open_vocabulary_CER_or_WER_requires_later_contract": true
+  },
+  "prospective_router": {
+    "ordered_routes": [
+      "MARC2-F00-source-license-identity-private-capability-or-green-proof-failure",
+      "MARC2-F01-member-range-checksum-size-clock-role-or-output-cap-failure",
+      "MARC2-F02-split-causal-replay-target-firewall-or-future-sentinel-failure",
+      "MARC2-R0-mechanics-valid-no_EEG_gain_over_simple_controls",
+      "MARC2-R1-EEG_beats_simple_controls_but_not_peripheral_model",
+      "MARC2-R2-Freewill_conditional_information_pass",
+      "MARC2-R3-Freewill_pass_orthogonal_cohort_not_consistent",
+      "MARC2-R4-consistent_incremental_movement_scalp_sensor_effect",
+      "MARC2-R5-separate_inner_speech_command_conjunction_pass"
+    ],
+    "movement_top_route": "MARC2-R4",
+    "language_top_route": "MARC2-R5",
+    "any_route_is_free_form_thought_to_text": false
+  },
+  "resource_policy": {
+    "maximum_incremental_payload_bytes": 8589934592,
+    "minimum_free_disk_bytes": 16106127360,
+    "private_derivative_cap_bytes": 67108864,
+    "aggregate_output_cap_bytes": 1048576,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "provider_budget_USD": 0.0,
+    "whole_Freewill_archive_download_allowed": false,
+    "duplicate_raw_bundle_allowed": false,
+    "large_checkpoint_download_allowed": false,
+    "future_acquisition_cap_must_equal_or_shrink_to_selected_bytes": true,
+    "temporary_cleanup_scope": "invocation_created_files_only"
+  },
+  "current_next_gate": {
+    "work_order_id": "MARC2-FW1",
+    "research_commit_must_be_remotely_green_first": true,
+    "generated_contract_design_allowed": true,
+    "generated_implementation_allowed_before_green_contract": false,
+    "private_manifest_read_allowed": false,
+    "future_private_read_requires_all_false_packet_and_fresh_decision": true
+  },
+  "authorization_flags": {
+    "generated_MARC2_FW1_implementation_authorized_now": false,
+    "retained_private_Freewill_manifest_path_operation_authorized": false,
+    "retained_private_Freewill_manifest_content_read_authorized": false,
+    "public_metadata_request_authorized": false,
+    "archive_member_request_authorized": false,
+    "payload_download_authorized": false,
+    "real_signal_or_control_parse_authorized": false,
+    "real_event_onset_or_target_read_authorized": false,
+    "real_derivative_or_split_creation_authorized": false,
+    "training_or_parameter_update_authorized": false,
+    "model_inference_or_prediction_freeze_authorized": false,
+    "target_delivery_or_scoring_authorized": false,
+    "orthogonal_cohort_operation_authorized": false,
+    "language_dataset_operation_authorized": false,
+    "provider_or_language_model_call_authorized": false,
+    "release_or_scientific_claim_upgrade_authorized": false
+  },
+  "access_counters": {
+    "dataset_metadata_requests": 0,
+    "private_path_operations": 0,
+    "private_manifest_content_reads": 0,
+    "archive_member_requests": 0,
+    "payload_bytes": 0,
+    "signal_sample_reads": 0,
+    "control_stream_reads": 0,
+    "event_or_onset_reads": 0,
+    "target_or_label_reads": 0,
+    "real_derivative_rows": 0,
+    "parameter_update_fits": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "prediction_freezes": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "provider_calls": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "research_operations": {
+    "public_primary_source_pages_reviewed": 11,
+    "dataset_payload_or_metadata_API_bodies_read": 0,
+    "generated_artifact_bytes": 0,
+    "network_payload_bytes": 0,
+    "model_or_provider_operations": 0
+  },
+  "warnings": [
+    "Freewill-23 lacks dedicated EMG so a positive result remains incremental scalp-sensor evidence rather than brain-specific proof.",
+    "Biomed-SPC-9 is class-cued and PhysioNet Gait-59 lacks EOG so neither can replace the cue-reduced Freewill axis.",
+    "WAY-EEG-GAL evidence shows that fused EEG-EMG performance can be predominantly peripheral.",
+    "Voluntary Finger Tapping-14 is not eligible for a causal top route unless raw continuous causal provenance is independently established.",
+    "Inner Speech-10 is visually cued and closed-set; command classification is not free-form thought-to-text.",
+    "The retained Freewill private manifest is consumed evidence from an earlier lane and may be read only under a separately frozen Tier C decision."
+  ],
+  "claim_boundary": {
+    "engineering_capability_added": "A five-work-order storage-bounded architecture now measures EEG conditional contribution beyond cue timing ocular muscle and kinematic controls before any language model is credited.",
+    "scientific_claim_not_established": "No new neural signal target model prediction or score was accessed so this research establishes no new neural or language result.",
+    "future_movement_ceiling": "Incremental pre-movement scalp-sensor information beyond the measured controls in complementary held-out cohorts.",
+    "future_language_ceiling": "Closed-set inner-speech command sensor information beyond matched cue EOG oral-EMG and deranged-neural controls.",
+    "free_form_thought_to_text_established": false,
+    "forbidden_claims": "brain-specific origin free-form thought-to-text unseen-person generalization real-time decoding portable hardware home use assistive utility clinical utility"
+  }
+}

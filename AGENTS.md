@@ -1291,6 +1291,24 @@ synchronized EOG/EMG designs. Any new metadata request, archive, payload,
 neural experiment, target delivery, score, replication, or language work
 requires its own prospective gate.
 
+Read `docs/MARC_2_CONFOUND_TRIANGULATION_RESEARCH.md` and
+`registries/marc2_confound_triangulation_research.v0.json`. The prospective
+replacement is `MARC-2`: `MARC2-FW1`, `MARC2-FW2`, `MARC2-CIL1`,
+`MARC2-ORTH1`, then `NDK-LANG1`. Its primary endpoint is participant-macro
+held-out conditional log-loss gain from adding causal EEG after the strongest
+available cue, timing, EOG, EMG, and kinematic model. Freewill-23 remains the
+cue-reduced primary axis; one later target-free utility-per-byte gate may choose
+Biomed-SPC-9 or a bounded PhysioNet Gait-59 subset for orthogonal attribution;
+OpenNeuro `ds003626-v2.1.0` is reserved for a Spanish inner-speech control
+ladder. The three compact families are separate hypotheses, not a final-target
+model search. Any LLM remains downstream of a remotely green neural freeze and
+must beat LLM-only and item-deranged-neural controls. This Tier A record opened
+no private manifest, dataset body, archive member, signal, target, model,
+score, or provider. After this research is remotely green, only a generated/
+mock `MARC2-FW1` selector contract is eligible. Its later private inventory
+read and every payload, neural, target, scoring, replication, or language
+operation require a new exact Tier C gate.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

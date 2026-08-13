@@ -4129,3 +4129,32 @@ next gate: commit, push, and green this closeout. Afterward, Task 4 remains a
 research objective but this Wrist branch is closed. Compare independent cue-
 resistant cohorts and synchronized EOG/EMG designs without requesting data;
 any new real operation requires a separately green Tier C packet.
+
+## 2026-08-13 MARC-2 Confound Triangulation Handoff
+
+The consumed `MARC1SAL-R2` Wrist result is now replaced prospectively, not
+reopened, by the five-work-order design in
+`docs/MARC_2_CONFOUND_TRIANGULATION_RESEARCH.md` and
+`registries/marc2_confound_triangulation_research.v0.json`. The retained Wrist
+outputs and the retained private Freewill inventory were not touched.
+
+`CIL-v0` makes participant-macro held-out conditional log-loss gain the
+primary endpoint: EEG receives credit only if `P+E` improves over the strongest
+available cue, timing, EOG, EMG, and kinematic model `P`, while also surviving
+deranged-EEG and causal controls. The compact low-frequency, mu/beta covariance,
+and `CML-v0` families remain separate hypotheses with no final-target winner
+selection.
+
+The exact order is `MARC2-FW1` target-free Freewill selection, `MARC2-FW2`
+bounded range acquisition and semantic qualification, `MARC2-CIL1` one
+target-firewalled Freewill experiment, `MARC2-ORTH1` one independently selected
+peripheral-control cohort, and `NDK-LANG1` one Spanish inner-speech control
+ladder. No LLM may receive neural evidence before a remotely green neural
+prediction freeze, and it must beat both LLM-only and item-deranged-neural
+conditions.
+
+Immediate next gate: test, commit, push, and green this Tier A research record.
+After that, freeze a generated/mock-only `MARC2-FW1` selector contract. Do not
+open the retained private inventory, request an archive member, download a
+payload, access signal or targets, run a model, score, or call a provider
+without the later exact gate.

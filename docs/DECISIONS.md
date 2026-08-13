@@ -7499,3 +7499,34 @@ its own frozen scope and Tier C decision.
 Evidence: `docs/MARC_1_SOURCE_AWARE_LIVE_METADATA_RESULT.md`,
 `registries/marc1_source_aware_live_metadata_result.v0.json`, and
 `tests/test_marc1_source_aware_live_metadata_result.py`.
+
+## 0226 - Replace The Failed Wrist Conjunction With Conditional-Information Triangulation
+
+Predecessor decision: preserve `MARC1SAL-R2` as the consumed Wrist
+source-eligibility result. Do not reopen its retained outputs, infer R3 versus
+R4, retry, repair, or route around the failed source.
+
+Scientific decision: make participant-macro held-out conditional log-loss gain
+the primary endpoint. A fused system counts as EEG evidence only when adding
+EEG improves over the strongest available cue, timing, EOG, EMG, and kinematic
+model. Raw accuracy above chance is insufficient.
+
+Source decision: keep Freewill-23 as the cue-reduced primary axis. Rank
+Biomed-SPC-9 and a bounded PhysioNet Gait-59 subset by a future target-free
+utility-per-byte rule for exactly one orthogonal cohort. Reserve OpenNeuro
+`ds003626-v2.1.0` for a later Spanish inner-speech command-control experiment.
+
+Architecture decision: permit three compact causal hypotheses, low-frequency
+LDA, mu/beta covariance, and `CML-v0`, as separately registered families with
+no final-target winner selection. Keep any hosted language model downstream of
+a remotely green neural freeze and require it to beat both language-model-only
+and item-deranged-neural conditions.
+
+Sequence decision: order the work as `MARC2-FW1`, `MARC2-FW2`, `MARC2-CIL1`,
+`MARC2-ORTH1`, and `NDK-LANG1`. Only Tier A design of the first selector is
+eligible now. Real private, metadata, payload, neural, target, score,
+replication, language, and provider operations remain separately gated.
+
+Evidence: `docs/MARC_2_CONFOUND_TRIANGULATION_RESEARCH.md`,
+`registries/marc2_confound_triangulation_research.v0.json`, and
+`tests/test_marc2_confound_triangulation_research.py`.

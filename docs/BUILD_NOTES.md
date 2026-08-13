@@ -9159,3 +9159,45 @@ blocked an ineligible cohort before every payload operation.
 Scientific claim not established: no neural payload, target, model,
 prediction, score, language decoding, or thought-to-text capability was
 accessed or established.
+
+## 2026-08-13 - MARC-2 Confound Triangulation Research
+
+- Preserved `MARC1SAL-R2` as the consumed Wrist source-eligibility result.
+  The private R3-versus-R4 route remains unavailable; no retained output was
+  reopened, no cause was inferred, and no retry or repair was attempted.
+- Rechecked primary-source fit for six public research directions. Freewill-23
+  remains the cue-reduced primary axis. Biomed-SPC-9 and a bounded PhysioNet
+  Gait-59 subset are the two candidates for one later synchronized peripheral-
+  control cohort. WAY-EEG-GAL is retained as a peripheral-dominance warning,
+  Voluntary Finger Tapping-14 as a causally limited reference, and OpenNeuro
+  `ds003626-v2.1.0` as a future Spanish inner-speech control source.
+- Replaced raw above-chance accuracy with `CIL-v0`. Its primary endpoint is
+  participant-macro held-out `log_loss(P) - log_loss(P+E)`, where `P` is the
+  strongest available cue, timing, EOG, EMG, and kinematic model and `E` is
+  causal EEG. A fused system cannot receive EEG credit unless EEG improves the
+  proper score beyond peripheral controls and a deranged-EEG condition.
+- Kept three compact hypotheses separate: causal 0.5-4 Hz shrinkage LDA,
+  causal train-only 8-30 Hz covariance features, and `CML-v0` under 10,000
+  parameters. Final targets may not select a winner.
+- Ordered the continuation as `MARC2-FW1`, `MARC2-FW2`, `MARC2-CIL1`,
+  `MARC2-ORTH1`, and `NDK-LANG1`. Only generated/mock contract design for the
+  first selector is currently eligible.
+- Fifteen invariants bind the source roles, five-work-order order, conditional-
+  information ladder, target firewall, language-model controls, resource caps,
+  zero authority, zero access, and claim boundary.
+- The complete dependency-light suite passes 2,929 tests with 204 expected
+  optional skips, exactly 15 tests above the 2,914-test pre-change baseline.
+  The complete optional-neuro suite passes 3,000 tests with 35 skips. Ruff,
+  registry parsing, artifact-hash validation, and diff hygiene pass.
+- No private manifest, metadata body, archive member, payload, signal, event,
+  target, model, prediction, score, download, or provider call occurred. The
+  current incremental payload allowance is at most 8 GiB with at least 15 GiB
+  free, but this research milestone moved zero payload bytes.
+
+Engineering capability added: a machine-checkable five-work-order research
+architecture now tests conditional EEG contribution before any language model
+may receive frozen neural evidence.
+
+Scientific claim not established: this target-free research accessed no neural
+signal and establishes no new neural effect, decoding accuracy, language
+decoding, or thought-to-text capability.

@@ -10,7 +10,13 @@
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.
 3. Read `AGENTS.md` for coding-agent rules.
-4. Read `docs/CODEX_HANDOFF.md` for the next three work orders.
+4. Read `docs/MARC_2_CONFOUND_TRIANGULATION_RESEARCH.md` and
+   `registries/marc2_confound_triangulation_research.v0.json` for the current
+   five-work-order scientific path. The prior Wrist branch is consumed and
+   blocked; `MARC2-FW1` generated/mock selector design is next. No private
+   Freewill manifest read, archive member, payload, signal, target, model,
+   score, language dataset, or provider call is currently authorized. Then
+   read `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
    result, then use its preregistration and authorization documents for audit.
 6. Read `docs/LOOP_25_CAUSAL_PREPROCESSING_RESULT.md` and
