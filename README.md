@@ -391,7 +391,8 @@ negative result and S25 is never repurposed for calibration.
 | MARC1-SA1 registered generated closeout | Six family routes; 21 predicates; seven identity domains; 52/52 refusals; 25/25 gates; 732,811 generated input and 109,589 temporary output bytes; exact cleanup | Exact implementation `feb3b83` passed CI `31619037335` before the one 0.0534-sec closeout at 27,885,568-byte reported peak RSS; consumed with no rerun | Confirms source-aware schema, optional checksum, aggregate drift, privacy, and resource mechanics compose on fixtures; live metadata and every neural/language claim remain closed |
 | MARC1-SA1A live-metadata request | One future exact GET; one body capped at 2 MiB; source-aware R1-R4 routing; 0 payload bytes; all current permissions false | Green generated result `094b6cb` / CI `31620515340` anchors the immutable packet; 14 request invariants pass | Proposes one additive wrapper and one metadata-only attempt after a fresh packet-bound decision; the packet performs no operation and preserves the same thought-to-text path |
 | MARC1-SA1A packet-bound decision | Exact 31-byte maintainer instruction; one immutable green request; one conditional generated/mock wrapper and one later metadata response; 0 decision-time data/model operations | Request `b077550` passed CI `31621794066`; this decision remains ineffective until its own commit passes both CI jobs | Authorizes only the identified metadata sequence; selective acquisition, neural experiments, scoring, replication, and language work remain separately gated |
-| MARC1-SA1A source-aware wrapper | Six source-schema families; three HTTP framing forms; 31 refusals; 20 gates; 84,422 generated response bytes; 24,064 transient output bytes; 0 real requests and 0 payload bytes | Decision `ef9ab91` passed CI `31670457497` before development `MARC1SAL-G1`; 30 focused and 765 MARC tests pass; exact wrapper CI is the next gate | Adds a capability-first, privacy-separated one-response implementation that can retain an eligible cohort or block on localized drift; generated metadata is not neural or language evidence |
+| MARC1-SA1A source-aware wrapper | Six source-schema families; three HTTP framing forms; 31 refusals; 20 gates; 84,422 generated response bytes; 24,064 transient output bytes; 0 development-time real requests or payload bytes | Decision `ef9ab91` passed CI `31670457497` before development `MARC1SAL-G1`; exact wrapper `74aff21` then passed CI `31672761644` before the sole request | Adds a capability-first, privacy-separated one-response implementation that can retain an eligible cohort or block on localized drift; generated metadata is not neural or language evidence |
+| MARC1-SA1A consumed source-aware metadata | One bounded metadata response; wrapper route `MARC1SAL-R2`; 0 selected subjects; 0 archive requests; 0 payload bytes; 23,112 retained bytes | Exact wrapper `74aff21` passed both CI jobs before the one 0.697-sec request at 33,439,744-byte peak RSS; lane consumed with no retry | The source-aware gate correctly blocked the frozen Wrist cohort before payload. R3 versus R4 details remain unavailable; this is an engineering stop, not neural or thought-to-text evidence |
 
 ### Real-Data Scientific Scorecard
 
@@ -1506,9 +1507,18 @@ Read this before interpreting any number in the repository.
   Thirty focused, 765 MARC, and 2,904 dependency-light tests pass. One old
   optional rehearsal inherited a process-wide RSS high-water in the full local
   optional run but passes alone; fresh remote Base and Optional jobs remain the
-  exact eligibility gate. Only after both are green may the one registered
-  metadata check run. Success still stops before payload and failure consumes
-  the lane.
+  exact eligibility gate. Exact wrapper `74aff21` then passed both jobs in CI
+  `31672761644` before the one registered request.
+- **MARC1-SA1A consumed source-aware result:** the one request completed in
+  0.6967 seconds at 33,439,744-byte peak RSS and routed `MARC1SAL-R2`.
+  That is the preregistered blocked-selection branch: zero subjects became
+  eligible, no participant archive opened, and payload, signal, target, model,
+  prediction, score, retry, and rerun counts remained zero. The three retained
+  private/aggregate files total 23,112 bytes. Because the executor had already
+  performed the allowed aggregate inspection and its CLI did not emit the
+  private R3-versus-R4 source route, historical differences and body size are
+  recorded as unavailable rather than inferred. This Wrist lane is consumed;
+  acquisition and the remaining experiments do not proceed against it.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

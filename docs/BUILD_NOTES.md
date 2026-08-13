@@ -9127,3 +9127,35 @@ aggregate failure diagnosis without opening neural payload.
 Scientific claim not established: generated and mocked metadata work contains
 no neural signal, target, prediction, score, language result, or thought-to-
 text evidence.
+
+## 2026-08-13 - MARC1-SA1A Consumed Source-Aware Metadata Result
+
+- Exact wrapper `74aff21bde6495436066c1538e229eb7be5059cc` passed Base
+  Python job `94360721568`, Optional Neuro Readers job `94360722170`, and CI
+  `31672761644` before the sole registered invocation.
+- The tracked worktree and exact HEAD proof passed. The machine gate passed
+  with one thread, more than 10 GiB free, normalized load below `1.0`, and RSS
+  below 256 MiB before the consumed marker.
+- One fixed metadata response completed source-aware attestation and routed
+  `MARC1SAL-R2`, the frozen blocked-selection branch. Selected subjects,
+  participant archive requests, and payload bytes are all zero.
+- Runtime was 0.6966645420015993 seconds at 33,439,744-byte peak RSS. Three
+  retained Git-ignored outputs total 23,112 bytes. The CLI emitted exact marker,
+  private-manifest, and aggregate-report SHA-256 values.
+- The executor inspected the aggregate report once. Neither that content nor
+  the private manifest was reopened afterward. Since the CLI did not emit the
+  private R3-versus-R4 source route, response-body bytes, or historical
+  differences, those fields remain unavailable and no cause is inferred.
+- Ten result tests, all 775 MARC tests, and all 2,914 dependency-light tests
+  with 204 expected optional skips pass. Ruff, compilation, JSON parsing, and
+  diff hygiene pass; fresh result-commit CI remains required.
+- Payload, signal, event, target, model, training, prediction, score, provider,
+  hardware, other-project, retry, rerun, and claim counters are zero.
+
+Engineering capability added: the proof-gated wrapper consumed one bounded
+live metadata response, completed source-aware attestation, and correctly
+blocked an ineligible cohort before every payload operation.
+
+Scientific claim not established: no neural payload, target, model,
+prediction, score, language decoding, or thought-to-text capability was
+accessed or established.

@@ -4103,3 +4103,29 @@ both jobs green. Only afterward run the sole registered metadata check once,
 without retry. Do not inspect the private manifest after execution. Read only
 the aggregate result, stop before payload, and route R1/R2 to a new all-false
 selective-acquisition packet or R3/R4/failure to a blocked diagnosis.
+
+## 2026-08-13 MARC1-SA1A Consumed Result Handoff
+
+Exact wrapper `74aff21bde6495436066c1538e229eb7be5059cc` passed Base
+Python job `94360721568` and Optional Neuro Readers job `94360722170` in CI
+`31672761644` before the sole request. Read
+`docs/MARC_1_SOURCE_AWARE_LIVE_METADATA_RESULT.md`, its registry, and result
+test.
+
+The one request completed source-aware attestation and returned
+`MARC1SAL-R2`, so the frozen Wrist cohort is unavailable. Runtime was
+0.6966645420015993 seconds at 33,439,744-byte peak RSS with 23,112 retained
+Git-ignored bytes. Selected subjects, archive requests, payload bytes, signal
+reads, targets, fits, predictions, and scores were zero.
+
+The executor already performed the one aggregate inspection. Do not open the
+aggregate report or private manifest now. The CLI did not expose whether the
+source route was R3 or R4, nor body bytes or historical differences; preserve
+those as unavailable. Do not probe the retained root, retry, amend the parser,
+or use the output as acquisition authority.
+
+Ten result, 775 MARC, and 2,914 dependency-light tests pass locally. Immediate
+next gate: commit, push, and green this closeout. Afterward, Task 4 remains a
+research objective but this Wrist branch is closed. Compare independent cue-
+resistant cohorts and synchronized EOG/EMG designs without requesting data;
+any new real operation requires a separately green Tier C packet.

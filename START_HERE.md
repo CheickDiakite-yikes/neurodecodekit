@@ -1685,3 +1685,18 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   the frozen target-free cohort for a separately authorized acquisition packet;
   R3/R4 or any failure consumes and blocks the lane. Do not open an archive or
   infer a neural or language result from metadata compatibility.
+
+  Exact wrapper `74aff21` passed Base Python job `94360721568` and Optional
+  Neuro Readers job `94360722170` in CI `31672761644` before the
+  [one source-aware metadata result](docs/MARC_1_SOURCE_AWARE_LIVE_METADATA_RESULT.md).
+  The request completed at `MARC1SAL-R2` in 0.696664542 seconds at 33,439,744-
+  byte peak RSS. It retained 23,112 bytes but selected zero subjects and opened
+  zero participant archives. Payload, signal, target, model, prediction,
+  scoring, retry, rerun, and claim counters remained zero.
+
+  `MARC1-SA1A` is consumed. The CLI did not expose the private R3-versus-R4
+  source route, and the already-inspected aggregate report plus private
+  manifest were not reopened. Do not infer the specific difference, amend the
+  source expectation, retry, or continue to Wrist payload acquisition. Next:
+  close this cohort lane and compare independent cue-resistant datasets or
+  prospective designs under new gates.

@@ -1273,6 +1273,24 @@ R1/R2 may support only a new all-false selective-acquisition packet; R3/R4 or
 failure consumes and blocks the lane. Do not open the private manifest after
 execution or infer a neural or language result from source compatibility.
 
+Exact wrapper `74aff21bde6495436066c1538e229eb7be5059cc` passed Base
+Python job `94360721568` and Optional Neuro Readers job `94360722170` in CI
+`31672761644` before the sole registered request. Read
+`docs/MARC_1_SOURCE_AWARE_LIVE_METADATA_RESULT.md` and
+`registries/marc1_source_aware_live_metadata_result.v0.json`. The request
+completed source-aware attestation and returned `MARC1SAL-R2` in
+0.6966645420015993 seconds at 33,439,744-byte peak RSS with 23,112 retained
+Git-ignored bytes. The frozen Wrist cohort is blocked: selected subjects,
+archive requests, payload bytes, signals, targets, models, predictions, and
+scores are zero. The executor already performed the one aggregate inspection.
+Do not reopen the aggregate report or private manifest, probe the retained
+root, infer whether the private route was R3 or R4, retry, rerun, amend the
+parser, or use this result as payload authority. MARC1-SA1A is consumed. The
+next safe work is Tier A comparison of independent cue-resistant datasets and
+synchronized EOG/EMG designs. Any new metadata request, archive, payload,
+neural experiment, target delivery, score, replication, or language work
+requires its own prospective gate.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

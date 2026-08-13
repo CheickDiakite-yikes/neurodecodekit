@@ -1803,3 +1803,19 @@ run the single registered metadata request once. Task 4 remains active. R1/R2
 may only support a separately authorized selective-acquisition packet; R3/R4
 or failure blocks the cohort. No payload or scientific result is available
 from wrapper qualification.
+
+Exact wrapper `74aff21` passed both required jobs in CI `31672761644` before
+the one registered request. The source-aware attestation completed and routed
+`MARC1SAL-R2` in 0.696664542 seconds at 33,439,744-byte peak RSS with 23,112
+retained bytes. Zero subjects were selected; archive, payload, signal, target,
+model, prediction, and score counters remained zero.
+
+`MARC1-SA1A` is consumed with no retry or rerun. The private R3-versus-R4
+source route and historical differences were not emitted by the CLI and remain
+unavailable because the aggregate report was already inspected once. Do not
+infer the cause or reopen the retained files.
+
+Task 4 remains the needle-moving objective, but its Wrist branch is blocked.
+The next safe substep is target-free comparison of independent cue-resistant
+datasets and synchronized EOG/EMG designs. Acquisition, neural experiments,
+target delivery, scoring, replication, and language work remain new gates.

@@ -7470,3 +7470,32 @@ Evidence: `src/neurodecodekit/datasets/marc1_source_aware_live_metadata.py`,
 `docs/MARC_1_SOURCE_AWARE_LIVE_METADATA_IMPLEMENTATION.md`,
 `registries/marc1_source_aware_live_metadata_implementation.v0.json`, and the
 two matching implementation test modules.
+
+## 0225 - Block The Wrist Cohort After The Consumed Source-Aware Result
+
+Evidence-order decision: execute only after exact wrapper `74aff21` passed
+Base Python job `94360721568` and Optional Neuro Readers job `94360722170` in
+CI `31672761644`.
+
+Result decision: accept `MARC1SAL-R2` as the frozen blocked-selection outcome.
+One metadata response completed attestation in 0.696664542 seconds at
+33,439,744-byte peak RSS with 23,112 retained bytes. Zero subjects, archives,
+payload bytes, signals, targets, models, predictions, or scores followed.
+
+Unavailability decision: do not reopen the internally inspected aggregate
+report or private manifest. The CLI did not emit the private R3-versus-R4
+route, body byte count, predicate vector, or historical differences. Preserve
+those values as unavailable and do not infer a source-change explanation.
+
+Consumption decision: close `MARC1-SA1A` with no retry, rerun, resume, parser
+amendment, expectation change, or Wrist acquisition. The later steps in the
+five-part objective are not executable against an ineligible cohort.
+
+Next-work decision: use Tier A work to compare independent cue-resistant
+datasets and prospective synchronized EOG/EMG designs. Any new metadata
+request, archive, payload, neural experiment, target delivery, or score needs
+its own frozen scope and Tier C decision.
+
+Evidence: `docs/MARC_1_SOURCE_AWARE_LIVE_METADATA_RESULT.md`,
+`registries/marc1_source_aware_live_metadata_result.v0.json`, and
+`tests/test_marc1_source_aware_live_metadata_result.py`.
