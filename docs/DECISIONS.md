@@ -7435,3 +7435,38 @@ Evidence:
 `docs/MARC_1_SOURCE_AWARE_LIVE_METADATA_AUTHORIZATION_DECISION.md`,
 `registries/marc1_source_aware_live_metadata_authorization_decision.v0.json`,
 and `tests/test_marc1_source_aware_live_metadata_authorization_decision.py`.
+
+## 0224 - Implement The Source-Aware Wrapper Before Its One Metadata Check
+
+Evidence-order decision: begin only after authorization decision `ef9ab91`
+passed Base Python job `94353799568` and Optional Neuro Readers job
+`94353799602` in CI `31670457497`.
+
+Architecture decision: use one additive dependency-light wrapper that imports
+only the green source-aware attestor. Require capability-first output, exact
+green commit/CI/registry proof, a clean tracked worktree, one fixed request,
+bounded uncoded transport, strict JSON and target firewalls, private/public
+separation, and one-shot consumption. Expose no archive or neural payload
+interface.
+
+Qualification decision: accept development `MARC1SAL-G1` after six semantic
+families, three transport forms, 31 refusals, 20 gates, deterministic semantic
+replay, exact cleanup, and resource checks pass. The final measured candidate
+used 84,422 generated response bytes and 24,064 transient output bytes in
+0.009288083 seconds at 37,552,128-byte reported peak RSS.
+
+Verification decision: preserve the local optional-suite high-water finding
+without weakening an old test or resource cap. The exact old rehearsal passes
+fresh; require both remote Linux jobs to pass this exact wrapper before any
+registered output or public request.
+
+Next-gate decision: after exact commit, push, and both green CI jobs, allow
+only the one packeted metadata check. R1/R2 stops with a target-free cohort
+identity; R3/R4 or failure blocks selection. Archive acquisition, neural
+analysis, targets, scoring, replication, and language decoding remain later
+prospective gates.
+
+Evidence: `src/neurodecodekit/datasets/marc1_source_aware_live_metadata.py`,
+`docs/MARC_1_SOURCE_AWARE_LIVE_METADATA_IMPLEMENTATION.md`,
+`registries/marc1_source_aware_live_metadata_implementation.v0.json`, and the
+two matching implementation test modules.

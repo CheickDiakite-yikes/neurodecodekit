@@ -1786,3 +1786,20 @@ qualify the wrapper only on generated inventories and mocked transport. Task 4
 remains active. The route after the one metadata result is conditional: R1/R2
 may support a separately preregistered selective-acquisition packet; R3/R4
 must block selection and preserve only aggregate diagnosis.
+
+Decision `ef9ab91` passed both required jobs in CI `31670457497` before the
+additive `MARC1-SA1A` source-aware wrapper was implemented. Development
+`MARC1SAL-G1` passed six semantic families, exact-length/chunked/clean-close
+transport, 31 refusal cases, 20 acceptance gates, deterministic replay,
+private/public separation, and exact cleanup.
+
+The qualification accepted 84,422 generated response bytes and created then
+removed 24,064 transient bytes in 0.009288083 seconds at 37,552,128-byte
+reported peak RSS. Real network, registered path, archive, payload, neural,
+target, model, prediction, score, retry, rerun, and claim counters stayed zero.
+
+Next gate: commit, push, and green this exact wrapper in both remote jobs, then
+run the single registered metadata request once. Task 4 remains active. R1/R2
+may only support a separately authorized selective-acquisition packet; R3/R4
+or failure blocks the cohort. No payload or scientific result is available
+from wrapper qualification.

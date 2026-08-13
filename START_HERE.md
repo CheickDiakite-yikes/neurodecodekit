@@ -1669,3 +1669,19 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   then build and green the generated/mock wrapper, then make the one bounded
   response check. Selective payload acquisition, neural experiments, scoring,
   replication, and language decoding remain closed behind later contracts.
+
+  Decision `ef9ab91` then passed Base Python job `94353799568` and Optional
+  Neuro Readers job `94353799602` in CI `31670457497` before the
+  [MARC1-SA1A source-aware wrapper](docs/MARC_1_SOURCE_AWARE_LIVE_METADATA_IMPLEMENTATION.md)
+  was implemented. Generated `MARC1SAL-G1` passed six source-schema families,
+  all three accepted framing forms, 31 refusals, and 20 gates. It used 84,422
+  generated response bytes, created and removed 24,064 transient output bytes,
+  and ran in 0.009288083 seconds at 37,552,128-byte reported peak RSS. Real
+  metadata requests, archives, payload bytes, signals, targets, models,
+  predictions, scores, retries, and claim upgrades stayed zero.
+
+  Next: commit, push, and green this exact wrapper in both CI jobs. Only then
+  may its one fixed, 2-MiB-capped metadata request run. R1/R2 may expose only
+  the frozen target-free cohort for a separately authorized acquisition packet;
+  R3/R4 or any failure consumes and blocks the lane. Do not open an archive or
+  infer a neural or language result from metadata compatibility.

@@ -4072,3 +4072,34 @@ inventories and mocked transport. Do not contact Figshare until that exact
 wrapper also becomes remotely green. Do not acquire an archive, access a
 payload, run a neural model, deliver a target, score, replicate, or begin
 language work under this decision.
+
+## 2026-08-13 MARC1-SA1A Source-Aware Wrapper Handoff
+
+Decision `ef9ab91b38ad48ef5e832b993d4ca338d889bc04` passed Base Python
+job `94353799568` and Optional Neuro Readers job `94353799602` in CI
+`31670457497` before implementation. Read
+`docs/MARC_1_SOURCE_AWARE_LIVE_METADATA_IMPLEMENTATION.md`, its registry,
+source module, and two implementation test modules.
+
+The additive dependency-light wrapper exposes `plan`, `qualify`, `inspect`,
+and a strict `execute` command. Live execution requires externally supplied
+green proof for a clean exact HEAD. It can make only one fixed 2-MiB-capped
+metadata request, route the green attestor's R1-R4 result, write one private
+manifest plus aggregate receipt, and stop before participant archives.
+
+Generated `MARC1SAL-G1` passed all six semantic families, three framing forms,
+31 refusals, and 20 gates over 84,422 generated response bytes. It created and
+removed 24,064 transient bytes in 0.009288083 seconds at 37,552,128-byte
+reported peak RSS. All real, payload, neural, target, model, score, retry,
+rerun, and claim counters stayed zero.
+
+Thirty focused, 765 MARC, and 2,904 dependency-light tests pass. One old
+tiny-encoder rehearsal failed only its process-global RSS reading late in the
+2,975-test local optional process and passes alone. Do not alter that gate;
+fresh remote Base Python and Optional Neuro Readers jobs decide eligibility.
+
+Immediate next gate: commit and push this exact implementation, then require
+both jobs green. Only afterward run the sole registered metadata check once,
+without retry. Do not inspect the private manifest after execution. Read only
+the aggregate result, stop before payload, and route R1/R2 to a new all-false
+selective-acquisition packet or R3/R4/failure to a blocked diagnosis.

@@ -9090,3 +9090,40 @@ decision is remotely green.
 Scientific claim not established: this decision accessed no neural signal and
 establishes no neural effect, decoding accuracy, language decoding, or
 thought-to-text capability.
+
+## 2026-08-13 - MARC1-SA1A Source-Aware Live-Metadata Wrapper
+
+- Began only after decision `ef9ab91b38ad48ef5e832b993d4ca338d889bc04`
+  passed Base Python job `94353799568`, Optional Neuro Readers job
+  `94353799602`, and CI `31670457497`.
+- Added one dependency-light module with `plan`, `qualify`, `inspect`, and a
+  proof-disabled-until-green `execute` command. It does not import or call the
+  consumed live executor and has no archive, payload, EEG, target, model,
+  prediction, training, or scoring interface.
+- Bound one fixed unauthenticated Figshare GET, one body capped at 2 MiB, no
+  redirect or retry, exact-length/chunked/clean-close framing, strict JSON and
+  target rejection, the five-field public core, and optional agreeing MD5
+  provenance.
+- Bound output authority before proof or source work, an absent Git-ignored
+  root, three allowlisted files, mode-`0600` marker/private output, aggregate-
+  only public output, exact generated cleanup, and one-shot consumption.
+- Generated `MARC1SAL-G1` passed six semantic families, three framing forms,
+  31 adversarial cases, and 20 gates over 84,422 generated response bytes.
+  It created and removed 24,064 bytes in 0.009288083 seconds at 37,552,128-
+  byte reported peak RSS; external wall was 0.10 seconds at 37,617,664 bytes.
+- Thirty focused, 765 MARC, and 2,904 dependency-light tests pass. The local
+  optional corpus executed 2,975 tests with 35 skips; one historical
+  tiny-encoder rehearsal inherited process-global RSS high-water and failed
+  its 768-MiB self-check, while the exact test passes fresh and the wrapper
+  slice peaks at 50,495,488 bytes. No historical or production cap changed.
+- Real network, registered output, participant archive, payload, signal,
+  target, model, training, prediction, score, provider, hardware, other-
+  project, retry, rerun, and claim counters remain zero.
+
+Engineering capability added: a capability-first source-aware wrapper can
+turn one bounded metadata response into a private cohort identity or an
+aggregate failure diagnosis without opening neural payload.
+
+Scientific claim not established: generated and mocked metadata work contains
+no neural signal, target, prediction, score, language result, or thought-to-
+text evidence.

@@ -1256,6 +1256,23 @@ implement the wrapper or contact Figshare. Selective acquisition, payload,
 neural, target, model, score, replication, language, release, and claim work
 remain unauthorized by this decision.
 
+Decision `ef9ab91b38ad48ef5e832b993d4ca338d889bc04` passed Base Python
+job `94353799568` and Optional Neuro Readers job `94353799602` in CI
+`31670457497` before the additive source-aware wrapper was implemented. Read
+`docs/MARC_1_SOURCE_AWARE_LIVE_METADATA_IMPLEMENTATION.md`,
+`registries/marc1_source_aware_live_metadata_implementation.v0.json`, and the
+two matching test modules. Generated `MARC1SAL-G1` passed six semantic
+families, three framing forms, 31 refusals, and 20 gates over 84,422 generated
+response bytes. It created and removed 24,064 transient bytes in 0.009288083
+seconds at 37,552,128-byte reported peak RSS. Real request, registered path,
+archive, payload, neural, target, model, score, retry, rerun, and claim counters
+remain zero. Commit, push, and obtain both green CI jobs for this exact wrapper
+before its sole registered metadata request. After green proof, invoke once
+without retry, inspect only the aggregate report, and stop before payload.
+R1/R2 may support only a new all-false selective-acquisition packet; R3/R4 or
+failure consumes and blocks the lane. Do not open the private manifest after
+execution or infer a neural or language result from source compatibility.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in
