@@ -1944,3 +1944,24 @@ authorized private-manifest selection once, inspect only its aggregate report,
 and record the consumed result. Archive members, payload, `MARC2-FW2`, neural
 analysis, targets, models, scoring, language work, and scientific claims remain
 closed.
+
+Exact wrapper `d9a3853` passed Base Python job `94661484721`, Optional Neuro
+Readers job `94661484713`, and CI `31765857313` before the sole registered
+`MARC2-FW1A` invocation. The executor then failed closed at `MARC2FWS-F00`
+with `implementation record differs` after 8.5260585 external wall seconds.
+
+The refusal occurred in committed implementation-record validation before the
+in-executor machine gate, retained source path, consumed marker, content open,
+read, hash, parse, selection, or output writer. A later tracked-artifact-only
+comparison found that the implementation registry omitted the required top-
+level `lane_id: MARC2-FW1A`. It accessed no retained/private artifact.
+
+All private-path checks, opens, bytes, hashes, parses, real selections,
+outputs, network, archive-member, signal, target, model, score, provider,
+retry, and claim counters are zero. Peak RSS and in-executor runtime are
+unavailable because no report was created. The output root remains absent.
+
+Current status is consumed failure with no retry, rerun, resume, or repair.
+`MARC2-FW2` remains closed. The next eligible work is a separately named
+prospective registry-identity recovery that proves the exact verifier entry
+point on generated artifacts before preparing a new all-false Tier C packet.

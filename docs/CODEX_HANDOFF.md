@@ -4303,3 +4303,29 @@ manifest selection once. Inspect only its aggregate result and record the
 consumed route; never inspect the private output or rerun. `MARC2-FW2`, archive
 members, EEG samples, events, targets, models, scores, language work, and
 scientific claims remain closed.
+
+## 2026-08-13 MARC2-FW1A Consumed Failure Handoff
+
+Exact wrapper `d9a38530974ceab8e7f79b1f7a79b8fff57069e9` passed Base
+Python job `94661484721` and Optional Neuro Readers job `94661484713` in CI
+`31765857313` before the sole invocation. Read
+`docs/MARC_2_FREEWILL_PRIVATE_SELECTION_RESULT.md`, its failure-result
+registry, and result test.
+
+The executor exited at `MARC2FWS-F00: implementation record differs` after
+8.5260585 external wall seconds. Proof validation preceded the in-executor
+machine gate and stopped before any retained path, marker, source content,
+selection, or output operation. A tracked-artifact-only comparison localized
+the defect: the committed implementation registry has no top-level `lane_id`,
+while the green validator requires `MARC2-FW1A`.
+
+The registered output root remains absent. Private path checks, opens, bytes,
+hashes, parses, real selections, archive-member reads, neural/target/model/
+score operations, and generated outputs are all zero. Peak RSS and in-executor
+runtime are unavailable. Do not inspect the retained manifest, add the missing
+field to the consumed implementation, or retry it.
+
+Immediate next gate: test, commit, push, and green this closeout. Then design a
+separately named prospective registry-identity recovery using generated
+verifier qualification. Any later private access requires a new all-false Tier
+C packet and fresh packet-bound decision. `MARC2-FW2` remains closed.

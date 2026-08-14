@@ -7648,3 +7648,31 @@ Evidence: `docs/MARC_2_FREEWILL_PRIVATE_SELECTION_IMPLEMENTATION.md`,
 `registries/marc2_freewill_private_selection_implementation.v0.json`,
 `src/neurodecodekit/datasets/marc2_freewill_private_selection.py`, and the two
 matching implementation test modules.
+
+## 0231 - Consume MARC2-FW1A At Its Pre-Private Proof Refusal
+
+Evidence-order decision: execute only after exact wrapper `d9a3853` passed
+Base Python job `94661484721`, Optional Neuro Readers job `94661484713`, and CI
+`31765857313`.
+
+Route decision: accept `MARC2FWS-F00` as the final registered outcome. The
+executor refused the committed implementation record before the machine gate,
+retained source path, consumed marker, content open, hash, parse, selection, or
+output writer.
+
+Diagnosis decision: record the tracked-artifact-only finding that the
+implementation registry omitted required top-level `lane_id: MARC2-FW1A`.
+This is an engineering registration defect. It is not a private-data,
+dataset-quality, neural, or scientific result.
+
+Consumption decision: treat the sole invocation as consumed even though no
+marker or output root was created. Do not add the missing field to the consumed
+implementation, retry, rerun, resume, repair, substitute, or route around it.
+
+Next-work decision: keep `MARC2-FW2` closed. Any recovery must be separately
+named, prospectively freeze and test the verifier/record identity on generated
+artifacts, and use a new all-false Tier C packet before private access.
+
+Evidence: `docs/MARC_2_FREEWILL_PRIVATE_SELECTION_RESULT.md`,
+`registries/marc2_freewill_private_selection_failure_result.v0.json`, and
+`tests/test_marc2_freewill_private_selection_result.py`.

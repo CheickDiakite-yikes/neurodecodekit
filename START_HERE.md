@@ -24,11 +24,16 @@
    `docs/MARC_2_FREEWILL_PRIVATE_SELECTION_IMPLEMENTATION.md` and
    `registries/marc2_freewill_private_selection_implementation.v0.json`. The
    generated/mock wrapper passes all 58 refusal checks and the complete local
-   suites with zero retained-private operations. Its one exact private-
-   manifest selection remains proof-disabled until this implementation commit
-   passes both remote jobs. Archive members, payloads, signals, targets,
-   models, scores, language datasets, provider calls, and `MARC2-FW2` remain
-   unauthorized. Then read
+   suites with zero retained-private operations. Exact implementation
+   `d9a3853` passed both remote jobs before its sole execution. Then read
+   `docs/MARC_2_FREEWILL_PRIVATE_SELECTION_RESULT.md` and
+   `registries/marc2_freewill_private_selection_failure_result.v0.json`.
+   Execution failed closed at `MARC2FWS-F00` because the committed
+   implementation registry omitted its required top-level `lane_id`. The
+   failure occurred before any retained path check, marker, source open, read,
+   hash, parse, selection, or output. `MARC2-FW1A` is consumed without rerun.
+   Archive members, payloads, signals, targets, models, scores, language
+   datasets, provider calls, and `MARC2-FW2` remain unauthorized. Then read
    `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
    result, then use its preregistration and authorization documents for audit.

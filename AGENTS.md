@@ -1402,6 +1402,23 @@ that exact selection once and inspect only its aggregate report. Do not inspect
 the private output, retry, open an archive local header/member/payload, access
 signal or targets, run a model or score, or enter `MARC2-FW2`.
 
+Exact wrapper `d9a38530974ceab8e7f79b1f7a79b8fff57069e9` passed Base
+Python job `94661484721` and Optional Neuro Readers job `94661484713` in CI
+`31765857313` before the sole registered invocation. Read
+`docs/MARC_2_FREEWILL_PRIVATE_SELECTION_RESULT.md` and
+`registries/marc2_freewill_private_selection_failure_result.v0.json`. The
+executor parked at `MARC2FWS-F00` with `implementation record differs` before
+the in-executor machine gate, retained source path, consumed marker, source
+open, read, hash, parse, selection, or output writer. An artifact-only
+comparison found the implementation registry omitted required top-level
+`lane_id: MARC2-FW1A`; no retained/private artifact was accessed to diagnose
+it. Every private, payload, neural, target, model, score, provider, retry, and
+claim counter remains zero. `MARC2-FW1A` is consumed with no repair or rerun,
+and `MARC2-FW2` is closed. The next safe work is a separately named prospective
+registry-identity recovery with generated verifier qualification and a new
+all-false Tier C packet before any private access. Never add the field to the
+consumed implementation and reuse its execution.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

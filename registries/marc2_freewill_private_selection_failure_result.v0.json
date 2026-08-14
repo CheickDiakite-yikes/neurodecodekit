@@ -1,0 +1,172 @@
+{
+  "schema_name": "neurodecodekit.marc2_freewill_private_selection_failure_result",
+  "schema_version": "0.1.0",
+  "result_id": "MARC-2-FW1A-private-selection-consumed-failure-v0",
+  "lane_id": "MARC2-FW1A",
+  "recorded_at_local": "2026-08-13",
+  "status": "consumed_failed_before_private_path_at_implementation_record_proof",
+  "route": "MARC2FWS-F00",
+  "objective": "Record the sole registered private-selection invocation after its proof gate refused before every retained-path and private-content operation.",
+  "artifact_bindings": {
+    "result_document": {
+      "path": "docs/MARC_2_FREEWILL_PRIVATE_SELECTION_RESULT.md",
+      "sha256": "5fe0f28879e5e5a0d2753a078b1bde5c04602f04b595d287b3c5309ecd61d043"
+    },
+    "result_test": {
+      "path": "tests/test_marc2_freewill_private_selection_result.py",
+      "sha256": "eb81e741ba5fa9fee4a10dae627c42902e8236eb30f35f0b852bf7cd475c0024"
+    },
+    "implementation_registry": {
+      "path": "registries/marc2_freewill_private_selection_implementation.v0.json",
+      "sha256": "68bcfba4d1ceca2612756118c6087046b3ac8e469a637d43c6f5d6ebe7966895"
+    },
+    "implementation_module": {
+      "path": "src/neurodecodekit/datasets/marc2_freewill_private_selection.py",
+      "sha256": "d6cbf37bc8c67f585674f3e44bce7a3dee95028adddee568fadab7375fed34bc"
+    },
+    "implementation_test": {
+      "path": "tests/test_marc2_freewill_private_selection.py",
+      "sha256": "cdbd9aa6beb89e89addb3087b33b58e2e6e5776e85805f893a62a6241a26e7f0"
+    },
+    "implementation_document": {
+      "path": "docs/MARC_2_FREEWILL_PRIVATE_SELECTION_IMPLEMENTATION.md",
+      "sha256": "cd60b95b99cb9b4e45d9d7e382467da67697612264025aa9db60dd31cbce4f2b"
+    }
+  },
+  "green_implementation_proof": {
+    "commit": "d9a38530974ceab8e7f79b1f7a79b8fff57069e9",
+    "CI_run_id": 31765857313,
+    "base_job_id": 94661484721,
+    "optional_neuro_job_id": 94661484713,
+    "both_required_jobs_green": true,
+    "implementation_registry_sha256": "68bcfba4d1ceca2612756118c6087046b3ac8e469a637d43c6f5d6ebe7966895"
+  },
+  "pre_invocation_snapshot": {
+    "tracked_worktree_clean": true,
+    "registered_output_root_absent": true,
+    "free_disk_bytes": 40852090880,
+    "logical_CPUs": 12,
+    "one_minute_load": 6.49,
+    "one_minute_load_per_logical_CPU": 0.5408333333333334,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "snapshot_is_not_in_executor_machine_gate": true
+  },
+  "registered_invocation": {
+    "execution_ordinal": 1,
+    "execution_limit": 1,
+    "attempted": true,
+    "consumed": true,
+    "CLI_exit_code": 2,
+    "CLI_output": "MARC2FWS-F00: implementation record differs",
+    "external_wall_seconds": 8.5260585,
+    "in_executor_runtime_seconds": null,
+    "peak_RSS_bytes": null,
+    "in_executor_machine_gate_reached": false,
+    "registered_source_path_logic_reached": false,
+    "consumed_marker_created": false,
+    "private_selection_created": false,
+    "aggregate_execution_report_created": false,
+    "registered_output_root_exists_after_failure": false,
+    "retry_rerun_resume_repair_or_fallback_available": false
+  },
+  "artifact_only_diagnosis": {
+    "performed_after_invocation": true,
+    "inputs": [
+      "committed_implementation_registry",
+      "committed_implementation_validator_constants"
+    ],
+    "retained_private_path_or_content_access": false,
+    "required_top_level_field": "lane_id",
+    "required_value": "MARC2-FW1A",
+    "observed_value": null,
+    "failure_condition": "top_level_lane_id_absent",
+    "other_checked_identity_fields_match": true,
+    "diagnosis_authorizes_repair_or_rerun": false
+  },
+  "access_counters": {
+    "tracked_proof_validation_attempts": 1,
+    "registered_private_path_component_checks": 0,
+    "registered_private_final_lstats": 0,
+    "private_manifest_content_opens": 0,
+    "private_manifest_body_reads": 0,
+    "private_manifest_bytes": 0,
+    "private_manifest_hashes": 0,
+    "private_manifest_parses": 0,
+    "real_participant_selections": 0,
+    "real_member_selections": 0,
+    "consumed_markers": 0,
+    "private_selection_manifests": 0,
+    "aggregate_execution_reports": 0,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "archive_local_header_or_member_payload_reads": 0,
+    "signal_sample_reads": 0,
+    "event_target_label_quality_onset_or_channel_reads": 0,
+    "real_derivative_rows": 0,
+    "training_or_parameter_update_fits": 0,
+    "model_inference_or_prediction_sets": 0,
+    "prediction_freezes_target_deliveries_or_scores": 0,
+    "provider_or_language_model_calls": 0,
+    "hardware_operations": 0,
+    "old_consumed_root_operations": 0,
+    "retries_reruns_or_resumes": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "acceptance_gates": {
+    "green_implementation_preceded_invocation": true,
+    "proof_mismatch_refused_before_private_path": true,
+    "zero_private_content_access": true,
+    "zero_archive_member_or_payload_access": true,
+    "zero_neural_target_model_or_score_access": true,
+    "stable_aggregate_route_recorded": true,
+    "exact_failure_cause_localized_from_tracked_artifacts_only": true,
+    "no_retry_rerun_or_repair": true,
+    "claim_boundary_preserved": true
+  },
+  "warnings": [
+    "The sole MARC2-FW1A invocation is consumed at F00 despite creating no consumed marker.",
+    "Peak RSS and in-executor runtime are unavailable because proof validation refused before report creation.",
+    "The missing lane_id is a committed engineering-record defect, not a neural or dataset result.",
+    "The retained private manifest remains untouched and MARC2-FW2 remains closed."
+  ],
+  "unavailable_fields": [
+    "in-executor machine-gate measurements",
+    "in-executor runtime and peak RSS",
+    "private source schema or row observations",
+    "selected participants members splits reservations or hashes",
+    "archive local-header member or payload integrity",
+    "EEG signal event target prediction or score"
+  ],
+  "verification": {
+    "focused_result_tests": 12,
+    "complete_base_tests": 3083,
+    "complete_base_skips": 204,
+    "complete_optional_tests": 3154,
+    "complete_optional_skips": 35,
+    "optional_A_M_tests": 2641,
+    "optional_A_M_skips": 28,
+    "optional_N_Z_tests": 513,
+    "optional_N_Z_skips": 7,
+    "ruff_passed": true,
+    "compile_passed": true,
+    "JSON_validation_passed": true,
+    "artifact_hashes_passed": true,
+    "git_diff_check_passed": true,
+    "remote_CI_pending": true
+  },
+  "disposition": {
+    "MARC2_FW1A_consumed": true,
+    "old_implementation_may_be_modified_and_reused": false,
+    "old_execution_may_be_retried_or_resumed": false,
+    "private_manifest_access_authorized_now": false,
+    "MARC2_FW2_eligible": false,
+    "next_safe_work": "separately_named_prospective_registry_identity_recovery",
+    "future_private_access_requires_new_all_false_Tier_C_packet_and_decision": true
+  },
+  "claim_boundary": {
+    "engineering_capability_demonstrated": "The remote-green executor failed closed on a committed proof-record mismatch before any private source or payload access.",
+    "scientific_claim_not_established": "No human EEG event target prediction or score was accessed so this result establishes no neural effect decoding accuracy language decoding or thought-to-text capability."
+  }
+}

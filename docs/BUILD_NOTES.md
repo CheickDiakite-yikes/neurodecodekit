@@ -9429,3 +9429,33 @@ deterministic storage-bounded target-free participant selection.
 Scientific claim not established: generated structural metadata contain no
 human neural signal, prediction, or score and establish no neural effect,
 decoding accuracy, language decoding, or thought-to-text result.
+
+## 2026-08-13 - MARC2-FW1A Consumed Proof Failure
+
+- Exact wrapper `d9a38530974ceab8e7f79b1f7a79b8fff57069e9` passed Base
+  Python job `94661484721`, Optional Neuro Readers job `94661484713`, and CI
+  `31765857313` before the one registered invocation.
+- A non-private precheck observed a clean tracked worktree, absent output root,
+  40,852,090,880 free bytes, 12 logical CPUs, and 0.540833 normalized load.
+- The executor exited `2` at `MARC2FWS-F00: implementation record differs`
+  after 8.5260585 external wall seconds. It stopped before its machine gate,
+  retained source path, marker, source open, read, hash, parse, selection, and
+  output writers.
+- A committed-artifact-only comparison found the implementation registry
+  omitted its required top-level `lane_id: MARC2-FW1A`. The comparison touched
+  no retained/private path or output.
+- Private path checks, opens, bytes, hashes, parses, real participant/member
+  selections, outputs, network, archive-member, signal, target, model,
+  prediction, score, provider, hardware, retry, and claim operations are zero.
+  Peak RSS and in-executor runtime are explicitly unavailable.
+- The invocation is consumed without retry, rerun, resume, repair, or reuse.
+  `MARC2-FW2` remains closed. Recovery must use a separately named prospective
+  verifier-identity lane and a new all-false Tier C packet.
+
+Engineering capability demonstrated: the remote-green executor failed closed
+on a committed proof-record mismatch before any private source or payload
+access.
+
+Scientific claim not established: no human EEG, event, target, prediction, or
+score was accessed, so this result establishes no neural effect, decoding
+accuracy, language decoding, or thought-to-text capability.
