@@ -1,0 +1,354 @@
+{
+  "schema_name": "neurodecodekit.marc2_live_selection_recovery_authorization_request",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC2-FW1C",
+  "request_id": "MARC-2-FW1C-live-selection-recovery-authorization-request-v0",
+  "recorded_at_local": "2026-08-14",
+  "status": "all_false_request_not_authorized",
+  "authorized": false,
+  "objective": "Request one proof-gated additive wrapper and one later no-retry target-free read of the exact retained Freewill central-directory private manifest, stopping before every archive member, neural payload, target, model, and score operation.",
+  "artifact_bindings": {
+    "authorization_packet": {
+      "path": "docs/MARC_2_LIVE_SELECTION_RECOVERY_AUTHORIZATION_PACKET.md",
+      "sha256": "f517f0b4d88f1adcb181e1f8ae1896747f45e416497e269aea80c492614bd84d"
+    },
+    "authorization_request_test": {
+      "path": "tests/test_marc2_live_selection_recovery_authorization_request.py",
+      "sha256": "f114d6eb560f6789d5ee9f9dc261485b162e06d165411486fe1a1ce639cc5ed5"
+    },
+    "green_shared_validator_registry": {
+      "path": "registries/marc2_proof_record_recovery_implementation.v0.json",
+      "sha256": "2b1ff6c9d41d7bae14686cbf16a2aa129d702842622ca990468a3263f68e66b6"
+    },
+    "green_shared_validator_module": {
+      "path": "src/neurodecodekit/datasets/marc2_proof_record_recovery.py",
+      "sha256": "c22948ca9047f07908d3768a17caea56b96fa8219ccf0bb9895d766373903a2c"
+    },
+    "frozen_proof_contract": {
+      "path": "registries/marc2_proof_record_recovery_contract.v0.json",
+      "sha256": "0ec54f915289fd66983696bd28c2eb799c59703d1d5ccebece628f83da8b1e4b"
+    },
+    "green_selector_module": {
+      "path": "src/neurodecodekit/datasets/marc2_freewill_prefix_selection.py",
+      "sha256": "86fa30fbd1caed735f0fb2e627144482a2bb8e033567bb3794e3f05508005c97"
+    },
+    "green_selector_registry": {
+      "path": "registries/marc2_freewill_prefix_selection_implementation.v0.json",
+      "sha256": "eef9daf1fd647f654563c5f46c390a09001720934b3a6bfdaad0fbdce7727d03"
+    },
+    "green_selector_result": {
+      "path": "registries/marc2_freewill_prefix_selection_synthetic_result.v0.json",
+      "sha256": "f659f17e2dd717350ca1b0c80e87de4d9d3a869150f18b986e50cd3880e5f3c1"
+    },
+    "consumed_FW1A_result": {
+      "path": "registries/marc2_freewill_private_selection_failure_result.v0.json",
+      "sha256": "56ccc534ce682b45a3dcea6f4e301261a060ccf0ebd6f8f34a7dbed9071899c5"
+    }
+  },
+  "green_shared_validator_implementation": {
+    "commit": "6f613b339dfe8a7bd2df69a48c1ac32b72554f7b",
+    "commit_subject": "Implement MARC2-FW1B proof validator",
+    "branch": "codex/loop-54a-vhdr-preregistration",
+    "CI_run_id": 31768593977,
+    "CI_run_url": "https://github.com/CheickDiakite-yikes/neurodecodekit/actions/runs/31768593977",
+    "base_python_job_id": 94669566174,
+    "optional_neuro_job_id": 94669566187,
+    "both_required_jobs_green": true,
+    "implementation_registry_sha256": "2b1ff6c9d41d7bae14686cbf16a2aa129d702842622ca990468a3263f68e66b6",
+    "focused_tests": 51,
+    "complete_base_tests": 3134,
+    "complete_base_skipped": 204,
+    "complete_optional_tests": 3205,
+    "complete_optional_skipped": 35,
+    "generated_route": "MARC2FWR-G1",
+    "generated_replays": 2,
+    "generated_mutations": 32,
+    "validator_calls": 34,
+    "private_or_real_operation_sum": 0
+  },
+  "consumed_and_generated_boundaries": {
+    "MARC2_FW1A_consumed": true,
+    "MARC2_FW1A_consumed_route": "MARC2FWS-F00",
+    "MARC2_FW1A_retry_repair_or_reuse": false,
+    "MARC2_FW1B_generated_only": true,
+    "MARC2_FW1B_private_execution_limit": 0,
+    "MARC2_FW1C_currently_authorized": false,
+    "MARC2_FW2_eligible": false,
+    "old_consumed_output_root_allowed": false,
+    "current_private_source_operation_sum": 0
+  },
+  "proposed_sequence": [
+    {
+      "ordinal": 1,
+      "stage_id": "MARC2-FW1C-wrapper",
+      "scope": "generated_and_mocked_filesystem_wrapper_implementation_only",
+      "green_decision_required_first": true,
+      "currently_authorized": false,
+      "private_path_operations": 0,
+      "network_archive_or_payload_operations": 0
+    },
+    {
+      "ordinal": 2,
+      "stage_id": "MARC2-FW1C-private-selection",
+      "scope": "one_exact_private_manifest_read_target_free_selection_and_aggregate_receipt",
+      "green_wrapper_required_first": true,
+      "currently_authorized": false,
+      "registered_executions": 1,
+      "retry_or_rerun_limit": 0
+    }
+  ],
+  "future_proof_certificate": {
+    "certificate_schema_lane": "MARC2-FW1B",
+    "native_wrapper_registry_lane": "MARC2-FW1C",
+    "shared_validator_module": "neurodecodekit.datasets.marc2_proof_record_recovery",
+    "shared_validator_symbol": "validate_implementation_record",
+    "certificate_binds_wrapper_module_and_registry": true,
+    "certificate_binds_generated_tests_decision_validator_and_selector": true,
+    "expected_and_observed_proofs_bind_wrapper_HEAD": true,
+    "older_validator_HEAD_substituted_for_wrapper_HEAD": false,
+    "copied_forked_aliased_or_weaker_validator_allowed": false,
+    "certificate_self_hash_allowed": false,
+    "certificate_must_be_a_distinct_hashed_validator_input": true
+  },
+  "future_wrapper_surface": {
+    "module": "neurodecodekit.datasets.marc2_freewill_private_selection_recovery",
+    "commands": [
+      "plan",
+      "qualify",
+      "inspect",
+      "execute"
+    ],
+    "standard_library_only": true,
+    "shared_validator_import_required": true,
+    "green_selector_import_required": true,
+    "consumed_FW1A_import_call_or_edit_allowed": false,
+    "generic_source_or_output_override_available": false,
+    "URL_credential_subject_seed_cap_split_or_member_override_available": false,
+    "execute_fail_closed_until_green_proof": true,
+    "private_operation_during_generated_qualification": false
+  },
+  "private_source": {
+    "path": ".codex_work/marc1_central_directory/live_audit_v0/member_inventory.private.v0.json",
+    "bytes": 418755,
+    "mode": "0600",
+    "sha256": "2a2e48b88ee59332a199d926554bb6921222fff92046a0fc9b07cf73fd6c3031",
+    "schema_name": "neurodecodekit.marc1_central_directory_private_manifest",
+    "schema_version": "0.1.0",
+    "entries": 1227,
+    "regular_entries": 1025,
+    "directory_entries": 202,
+    "path_stat_resolve_open_hash_or_parse_authorized_now": false,
+    "sibling_or_directory_inspection_authorized_now": false,
+    "archive_body_or_member_access_authorized_now": false
+  },
+  "future_path_protocol": {
+    "resolve_glob_listdir_or_sibling_access_allowed": false,
+    "no_follow_component_and_final_checks_required": true,
+    "O_NOFOLLOW_required": true,
+    "owner_mode_size_and_regular_file_checks_required": true,
+    "content_opens": 1,
+    "sequential_reads": 1,
+    "SHA256_passes": 1,
+    "strict_JSON_parses": 1,
+    "open_fstat_identity_reconciliation_required": true,
+    "second_open_retry_rerun_or_resume_allowed": false
+  },
+  "future_output_contract": {
+    "root": ".codex_work/marc2_freewill_prefix/live_selection_recovery_v1",
+    "forbidden_consumed_v0_root": ".codex_work/marc2_freewill_prefix/live_selection_v0",
+    "root_must_be_absent_and_non_symlink_at_execution": true,
+    "root_stat_create_or_reserve_authorized_now": false,
+    "maximum_files": 3,
+    "files": [
+      "consumed_marker",
+      "private_selection_manifest",
+      "aggregate_report"
+    ],
+    "consumed_marker_written_before_private_content_open": true,
+    "consumed_marker_mode": "0600",
+    "private_selection_mode": "0600",
+    "aggregate_report_contains_private_rows_or_paths": false,
+    "aggregate_inspect_accepts_private_schema": false,
+    "overwrite_allowed": false,
+    "symlink_output_allowed": false,
+    "cleanup_scope": "invocation_created_temporary_files_only"
+  },
+  "frozen_selection_rule": {
+    "public_eligible_subjects": 19,
+    "minimum_subjects": 12,
+    "maximum_subjects": 19,
+    "selection_seed": "MARC1-P1|10.6084/m9.figshare.28632599.v1|participant-rank-v0",
+    "fit_session": "ses-01",
+    "heldout_session": "ses-02",
+    "selected_runs_each_session": [
+      1,
+      2,
+      3
+    ],
+    "required_companions": [
+      "_eeg.eeg",
+      "_eeg.vhdr",
+      "_eeg.vmrk",
+      "_events.tsv"
+    ],
+    "run_bundles_per_subject": 6,
+    "members_per_subject": 24,
+    "reservation_formula": "compressed_size + 30 + UTF8_member_name_bytes + 65535",
+    "reservation_cap_bytes": 8589934592,
+    "maximal_contiguous_prefix_required": true,
+    "stop_at_first_nonfitting_subject": true,
+    "skip_substitute_backfill_seed_or_cap_change_allowed": false,
+    "target_label_event_quality_signal_or_outcome_input_allowed": false,
+    "member_content_or_local_header_input_allowed": false,
+    "real_selected_subject_count_known_before_execution": false
+  },
+  "allowed_private_fields": [
+    "member_name",
+    "CRC32",
+    "compression_method",
+    "general_purpose_flags",
+    "compressed_size",
+    "uncompressed_size",
+    "local_header_offset",
+    "version_made_by",
+    "external_attributes",
+    "entry_kind",
+    "ZIP64_extra_used"
+  ],
+  "future_wrapper_qualification": {
+    "dependency_policy": "standard_library_only",
+    "proof_record_mutations": 32,
+    "selector_mutations": 40,
+    "wrapper_mutations": 18,
+    "total_mutations": 90,
+    "actual_native_registry_must_pass_own_loader": true,
+    "actual_certificate_must_pass_shared_validator": true,
+    "exact_replay_required": true,
+    "every_mutation_must_refuse_before_source_operation": true,
+    "generated_and_mocked_only_before_green_wrapper_commit": true,
+    "private_source_operations": 0,
+    "network_archive_payload_neural_target_model_or_score_operations": 0
+  },
+  "router": {
+    "ordered_refusal_routes": [
+      "MARC2FWC-F00-packet-decision-shared-certificate-native-registry-artifact-HEAD-or-green-proof-mismatch",
+      "MARC2FWC-F01-machine-load-disk-output-path-marker-symlink-mode-or-no-follow-preflight-failure",
+      "MARC2FWC-F02-source-size-hash-open-fstat-JSON-schema-field-or-count-failure",
+      "MARC2FWC-F03-ZIP-declaration-BIDS-identity-companion-or-bundle-failure",
+      "MARC2FWC-F04-eligibility-rank-participant-run-session-split-or-prefix-order-failure",
+      "MARC2FWC-F05-floor-cap-reservation-maximal-prefix-or-selected-count-failure",
+      "MARC2FWC-F06-privacy-output-mode-overwrite-cap-resource-cleanup-replay-or-forbidden-operation-failure"
+    ],
+    "success_route": "MARC2FWC-R1",
+    "every_route_consumes_invocation": true,
+    "success_authorizes_archive_member_or_payload": false,
+    "success_authorizes_MARC2_FW2": false,
+    "success_is_scientific_result": false
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "maximum_normalized_one_minute_load": 1.0,
+    "private_input_opens": 1,
+    "private_input_bytes": 418755,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "archive_local_header_or_member_bytes": 0,
+    "combined_output_bytes": 2097152,
+    "incremental_disk_bytes": 4194304,
+    "minimum_free_disk_bytes": 16106127360,
+    "selected_future_reservation_cap_bytes": 8589934592
+  },
+  "explicit_exclusions": {
+    "operation_before_green_decision_or_green_wrapper": true,
+    "unregistered_private_path_sibling_or_directory": true,
+    "second_open_retry_rerun_resume_repair_or_fallback": true,
+    "old_consumed_root_marker_report_module_or_output": true,
+    "network_or_download": true,
+    "archive_local_header_member_or_payload": true,
+    "signal_event_target_quality_or_channel": true,
+    "derivative_cache_feature_split_or_neurotoken": true,
+    "training_inference_prediction_freeze_delivery_or_score": true,
+    "MARC2_FW2_CIL1_ORTH1_or_NDK_LANG1": true,
+    "provider_language_model_stream_device_or_hardware": true,
+    "release_publication_or_claim_upgrade": true,
+    "neural_decoding_language_thought_to_text_realtime_portable_home_assistive_medical_or_clinical_claim": true
+  },
+  "authorization_flags": {
+    "packet_bound_decision_authorized": false,
+    "wrapper_implementation_authorized": false,
+    "generated_wrapper_qualification_authorized": false,
+    "proof_certificate_creation_authorized": false,
+    "registered_output_root_creation_authorized": false,
+    "retained_private_path_stat_resolve_or_open_authorized": false,
+    "private_manifest_read_hash_or_parse_authorized": false,
+    "real_participant_or_member_selection_authorized": false,
+    "private_or_aggregate_result_write_authorized": false,
+    "network_archive_local_header_or_member_payload_authorized": false,
+    "signal_event_target_quality_onset_or_channel_authorized": false,
+    "derivative_cache_feature_split_or_neurotoken_authorized": false,
+    "model_training_inference_prediction_freeze_delivery_or_score_authorized": false,
+    "MARC2_FW2_CIL1_ORTH1_or_NDK_LANG1_authorized": false,
+    "provider_language_model_stream_device_or_hardware_authorized": false,
+    "retry_rerun_resume_repair_cleanup_or_old_root_authorized": false,
+    "release_publication_or_scientific_claim_upgrade_authorized": false
+  },
+  "access_counters": {
+    "registered_output_root_operations": 0,
+    "retained_private_path_operations": 0,
+    "retained_private_inventory_opens": 0,
+    "retained_private_inventory_bytes": 0,
+    "old_consumed_root_operations": 0,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "archive_local_header_or_member_payload_reads": 0,
+    "real_participant_selections": 0,
+    "real_member_selections": 0,
+    "private_or_aggregate_live_outputs": 0,
+    "signal_sample_reads": 0,
+    "event_target_label_quality_onset_or_channel_reads": 0,
+    "real_derivative_rows": 0,
+    "training_or_parameter_update_fits": 0,
+    "model_inference_or_prediction_sets": 0,
+    "prediction_freezes_target_deliveries_or_scores": 0,
+    "provider_or_language_model_calls": 0,
+    "hardware_operations": 0,
+    "retries_reruns_or_resumes": 0,
+    "release_or_publication_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "local_verification": {
+    "request_tests": 18,
+    "focused_request_and_shared_proof_tests": 69,
+    "complete_base_tests": 3152,
+    "complete_base_skipped": 204,
+    "complete_optional_tests": 3223,
+    "complete_optional_skipped": 35,
+    "optional_A_through_M_tests": 2710,
+    "optional_A_through_M_skipped": 28,
+    "optional_N_through_Z_tests": 513,
+    "optional_N_through_Z_skipped": 7,
+    "ruff_passed": true,
+    "compileall_passed": true,
+    "registry_JSON_files_valid": 215,
+    "artifact_bindings_passed": true,
+    "git_diff_check_passed": true
+  },
+  "decision_gate": {
+    "packet_commit_push_and_both_jobs_green_required": true,
+    "sole_active_Tier_C_packet_identification_required": true,
+    "fresh_unambiguous_maintainer_words_required": true,
+    "separate_decision_commit_push_and_green_required": true,
+    "wrapper_commit_push_and_green_before_private_read_required": true,
+    "actual_maintainer_words_must_be_quoted_verbatim": true,
+    "packet_and_registry_hashes_must_be_bound": true,
+    "current_or_earlier_message_is_retroactive_authority": false
+  },
+  "claim_boundary": {
+    "engineering_capability_requested": "One newly proven wrapper may convert one exact private structural manifest into a deterministic storage-bounded target-free selection through the shared proof validator.",
+    "scientific_claim_not_established": "This all-false request reads no human neural data and establishes no neural effect decoding accuracy language decoding or thought-to-text capability."
+  }
+}

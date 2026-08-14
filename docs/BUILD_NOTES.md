@@ -9530,3 +9530,38 @@ live gate.
 Scientific claim not established: no human neural data, target, prediction, or
 score was accessed, so this establishes no neural effect, decoding accuracy,
 language decoding, or thought-to-text capability.
+
+## 2026-08-14 - MARC2-FW1C Live Selection Recovery Request
+
+- Exact shared-validator implementation
+  `6f613b339dfe8a7bd2df69a48c1ac32b72554f7b` passed Base Python job
+  `94669566174`, Optional Neuro Readers job `94669566187`, and CI
+  `31768593977` before this request was prepared.
+- Added an all-false packet for separately named `MARC2-FW1C`. Stage 1 would be
+  a generated/mock standard-library wrapper; Stage 2 would be one target-free
+  private structural-manifest selection only after the exact wrapper is also
+  remotely green.
+- Resolved the future-HEAD proof issue prospectively: the wrapper would retain
+  a native `MARC2-FW1C` registry and issue a distinct FW1B-format certificate
+  whose expected and observed proof envelopes bind the future wrapper commit,
+  CI jobs, actual HEAD, clean state, and green decision ancestor.
+- The future qualification combines all 32 proof-record mutations, 40 frozen
+  selector mutations, and 18 wrapper mutations. The sole possible live read is
+  capped at 418,755 bytes, one open, one thread, 30 seconds, 256 MiB RSS, 2 MiB
+  output, 4 MiB disk, zero network, and zero archive-member bytes.
+- Eighteen focused request tests pass. Every authorization flag is false and
+  every retained-path, output-root, private, real, network, archive, neural,
+  target, model, score, provider, hardware, retry, and claim counter is zero.
+- The final local gate passes 69 focused request/proof tests, 3,152 complete
+  dependency-light tests with 204 expected skips, and 3,223 optional-neuro
+  tests with 35 skips across fresh A-M/N-Z processes: 2,710 with 28 skips and
+  513 with seven skips. Ruff, compilation, all 215 registries, artifact hashes,
+  and diff hygiene pass.
+
+Engineering capability requested: one future proof-gated wrapper may convert
+one exact private structural manifest into a deterministic storage-bounded
+target-free selection.
+
+Scientific claim not established: this request reads no human neural data and
+establishes no neural effect, decoding accuracy, language decoding, or
+thought-to-text capability.

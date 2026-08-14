@@ -1995,7 +1995,28 @@ byte peak RSS. All 3,134 dependency-light and 3,205 optional-neuro tests pass.
 Every private, real, network, archive, neural, target, model, score, provider,
 hardware, retry, and claim counter remains zero.
 
-Current status is implementation remote proof pending. Commit, push, and
-require both jobs green. Only then prepare a new all-false Tier C request for
-an additive live wrapper and one possible later private selection. Do not touch
-the retained path or enter `MARC2-FW2` from this implementation.
+Exact implementation `6f613b339dfe8a7bd2df69a48c1ac32b72554f7b`
+passed Base Python job `94669566174`, Optional Neuro Readers job
+`94669566187`, and CI `31768593977` before the new request was prepared.
+
+Read `docs/MARC_2_LIVE_SELECTION_RECOVERY_AUTHORIZATION_PACKET.md`,
+`registries/marc2_live_selection_recovery_authorization_request.v0.json`, and
+the matching request test. Separately named `MARC2-FW1C` proposes a two-stage
+recovery: first a generated/mock wrapper that proves its own future HEAD using
+the exact shared validator, then, only after that wrapper is remotely green,
+one no-retry target-free read of the exact 418,755-byte structural manifest.
+The future wrapper qualification combines 32 proof-record, 40 selector, and 18
+wrapper mutations. The future live ceiling is one thread, 30 seconds, 256 MiB
+RSS, 2 MiB output, 4 MiB incremental disk, and zero network or archive-member
+bytes.
+
+The local gate passes 69 focused request/proof tests, all 3,152 dependency-light
+tests with 204 expected skips, and all 3,223 optional-neuro tests with 35 skips.
+Ruff, compilation, 215-registry parsing, artifact hashes, and diff hygiene pass.
+
+Current status is all-false request prepared, not authorized. Every private,
+real, network, payload, neural, target, model, score, retry, and claim counter
+is zero. Commit, push, and require both CI jobs green for the request. Only
+then may Codex identify it as the sole Tier C packet and await fresh maintainer
+words. Do not touch the retained path, create the new root, implement the live
+wrapper, or enter `MARC2-FW2` from this packet alone.

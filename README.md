@@ -42,7 +42,7 @@ irreversible Tier C events.
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |
 | IACKD source compatibility | H1 found 96 29-row and 32 31-row headers. H2 then parsed all 316 public BIDS metadata bodies and confirmed one 26-channel predictive EEG core, 1024 Hz sampling, average reference, and complete central/occipital geometry in all 30 groups | The exact-36 reader assumption was wrong, but H2 still routed `IACKDR-R1`: HEOG, VEOG, and Trigger are source-typed `MISC`, exposing a frozen control-taxonomy bug before any EEG sample, event, target, model, or score was accessed |
 | MARC-1 source eligibility | The Freewill central-directory inventory passed without payload, but the one source-aware Wrist metadata check later routed `MARC1SAL-R2` with zero selected subjects and zero payload bytes | The Wrist branch is consumed and blocked before acquisition; the private source route remains unavailable and is not inferred or repaired |
-| MARC-2 confound triangulation | Five ordered work orders now test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | The consumed `MARC2-FW1A` execution failed closed before private access because its registry omitted `lane_id`. Generated-only `MARC2-FW1B` now validates the complete replacement record twice, rejects all 32 registered defects through one shared future-live code path, and keeps private execution at zero; its exact implementation still needs remote-green proof before a new all-false packet |
+| MARC-2 confound triangulation | Five ordered work orders now test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | The consumed `MARC2-FW1A` execution failed closed before private access because its registry omitted `lane_id`. Generated-only `MARC2-FW1B` is now remotely green: it validates the complete replacement record twice and rejects all 32 registered defects through one shared future-live code path. The new `MARC2-FW1C` packet is all false and requests, but does not authorize, a separately green wrapper followed by one target-free private-manifest selection |
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
 | Full-path causality gate | Loop 25 v1 passed a dedicated causal anti-alias audit, 65,537 response points, 23 alias probes, 168 schedule checks, 240 resume checks, and 72 future-mutation controls across 24 target-free items | The exact 1000-to-100 Hz path is mechanically causal with zero right context; this is synthetic mechanics evidence, not proof that neural information survives |
 | Consumed S21 validation | The registered 2,908-parameter candidate reached macro CER `0.938177`; the train-only no-signal prior reached `0.751235`, so the candidate was worse by `0.186942` | Loop 26 is parked after one consumed six-target event; this is a clear negative result, not neural advantage |
@@ -1617,8 +1617,18 @@ Read this before interpreting any number in the repository.
   0.016927 seconds at 27,099,136-byte peak RSS, and used one thread. All 3,134
   base and 3,205 optional-neuro tests pass locally. Real/private, network,
   archive, EEG, target, model, score, provider, and hardware counters remain
-  zero. The implementation must now pass both remote jobs before an all-false
-  Tier C request is eligible; no private access is authorized yet.
+  zero. Exact commit `6f613b3` passed Base Python job `94669566174`, Optional
+  Neuro Readers job `94669566187`, and CI `31768593977` before the next packet
+  was prepared.
+- **MARC2-FW1C all-false live-recovery request:** the new packet proposes two
+  separately gated stages: a standard-library generated/mock wrapper that must
+  prove its own future HEAD through the exact shared validator, then one
+  no-retry target-free read of the exact 418,755-byte structural manifest. It
+  names a new output root, caps live output at 2 MiB, requires 15 GiB free, and
+  stops before every archive member, EEG sample, target, model, or score. Every
+  authorization flag is false and every operation counter is zero. The packet
+  must be committed, pushed, and remotely green before it can be identified as
+  the sole Tier C gate; the current or any earlier `continue` is not authority.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

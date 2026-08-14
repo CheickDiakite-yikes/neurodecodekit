@@ -44,8 +44,15 @@
    canonical validations and all 32 refusal cases through one shared validator
    in 0.016927 seconds at 27,099,136-byte peak RSS. Private execution limit and
    every private, real, network, neural, target, model, and score counter remain
-   zero. The exact implementation must be pushed and pass both remote jobs
-   before a new all-false Tier C request is prepared.
+   zero. Exact implementation `6f613b3` passed both remote jobs in CI
+   `31768593977`. Then read
+   `docs/MARC_2_LIVE_SELECTION_RECOVERY_AUTHORIZATION_PACKET.md`,
+   `registries/marc2_live_selection_recovery_authorization_request.v0.json`,
+   and its request test. `MARC2-FW1C` proposes a generated/mock wrapper followed
+   only after separate green proof by one target-free structural-manifest
+   selection. The packet is all false and authorizes neither stage. It must be
+   committed, pushed, and pass both jobs before Codex may identify it as the
+   sole Tier C gate and await fresh packet-bound maintainer words.
    Archive members, payloads, signals, targets, models, scores, language
    datasets, provider calls, and `MARC2-FW2` remain unauthorized. Then read
    `docs/CODEX_HANDOFF.md` for the exact handoff state.

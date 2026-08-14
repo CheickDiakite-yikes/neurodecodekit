@@ -4376,3 +4376,33 @@ Immediate next gate: commit, push, and require both CI jobs green for this exact
 implementation. Only afterward prepare a new all-false Tier C request for an
 additive live wrapper and one possible later private selection. Do not inspect
 the retained path, create a live output, or enter `MARC2-FW2`.
+
+## 2026-08-14 MARC2-FW1C All-False Request Handoff
+
+Exact validator implementation `6f613b339dfe8a7bd2df69a48c1ac32b72554f7b`
+passed Base Python job `94669566174`, Optional Neuro Readers job
+`94669566187`, and CI `31768593977` before this request was prepared. Read
+`docs/MARC_2_LIVE_SELECTION_RECOVERY_AUTHORIZATION_PACKET.md`, its registry,
+and the matching request test.
+
+The request names a new `MARC2-FW1C` lane and a new v1 output root. Its future
+wrapper would have a native FW1C registry and a distinct FW1B-format certificate
+validated against the future wrapper HEAD. Generated qualification must pass
+32 proof-record, 40 selector, and 18 wrapper mutations before remote proof.
+Only afterward could one separately gated, no-retry read of the exact
+418,755-byte structural manifest occur. It stops before archive members, EEG,
+targets, models, and scores.
+
+Every authorization flag is false and every operation counter is zero. The
+retained source and both old and proposed output roots were not statted,
+resolved, opened, created, or inspected. Eighteen focused request tests pass.
+The complete dependency-light suite passes 3,152 tests with 204 expected skips;
+the optional-neuro inventory passes 3,223 tests with 35 skips across fresh A-M
+and N-Z processes. Ruff, compilation, all 215 registries, artifact hashes, and
+diff hygiene pass.
+
+Immediate next gate: run complete local verification, commit and push this
+exact request, and require both CI jobs green. Then identify it as the sole
+active Tier C packet and stop for fresh packet-bound maintainer words. The
+current and every earlier `continue` are not retroactive. Do not implement the
+wrapper, touch the retained path, create an output root, or enter `MARC2-FW2`.

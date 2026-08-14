@@ -7737,3 +7737,35 @@ Evidence: `docs/MARC_2_PROOF_RECORD_RECOVERY_IMPLEMENTATION.md`,
 `registries/marc2_proof_record_recovery_implementation.v0.json`,
 `src/neurodecodekit/datasets/marc2_proof_record_recovery.py`, and the two
 matching implementation tests.
+
+## 0234 - Prepare MARC2-FW1C As An All-False Two-Stage Recovery
+
+Lane decision: do not reopen or repair consumed `MARC2-FW1A`, and do not turn
+generated-only `MARC2-FW1B` into a live executor. Name the possible replacement
+wrapper and selection `MARC2-FW1C`.
+
+Proof decision: require a native `MARC2-FW1C` wrapper registry plus a distinct
+FW1B-format proof certificate supplied to the exact green shared validator.
+Both expected and observed proof envelopes must bind the future wrapper HEAD;
+the older validator commit cannot be substituted as current HEAD.
+
+Sequence decision: permit no work from this all-false request. A future
+packet-bound decision must become remotely green before generated/mock wrapper
+implementation. That exact wrapper must then become remotely green before one
+no-retry, target-free read of the exact 418,755-byte structural manifest.
+
+Safety decision: use a new absent output root, one no-follow open, 15 GiB free
+disk, one thread, 30 seconds, 256 MiB RSS, 2 MiB output, 4 MiB incremental disk,
+and zero network or archive-member bytes. Preserve 32 proof, 40 selector, and
+18 wrapper refusal mutations. Keep every current authority flag false and
+every operation counter zero.
+
+Authority decision: require this request commit, push, and both remote jobs to
+be green before identifying it as the sole active Tier C packet. The current
+or any earlier `continue` is not retroactive authority. `MARC2-FW2`, payload,
+neural, target, model, score, provider, hardware, release, and claim work stay
+closed.
+
+Evidence: `docs/MARC_2_LIVE_SELECTION_RECOVERY_AUTHORIZATION_PACKET.md`,
+`registries/marc2_live_selection_recovery_authorization_request.v0.json`, and
+`tests/test_marc2_live_selection_recovery_authorization_request.py`.
