@@ -1915,3 +1915,32 @@ all private or scientific operation counters remain zero. Next gate: commit,
 push, and green the exact decision, then implement and qualify the wrapper on
 generated manifests and mocked filesystem facts. Real private access remains
 closed until that wrapper is also remotely green.
+
+Decision `ad1e406` then passed Base Python job `94656172494`, Optional Neuro
+Readers job `94656172528`, and CI `31764052451` before the additive
+`MARC2-FW1A` wrapper was implemented. Read
+`docs/MARC_2_FREEWILL_PRIVATE_SELECTION_IMPLEMENTATION.md`, its registry, the
+module, and both implementation test modules.
+
+The standard-library wrapper binds one exact source and output root, requires
+clean remote-green implementation proof, performs no-follow path and
+owner/mode/size/hash/schema checks, supports short reads in one bounded pass,
+writes a consumed marker before content access, and retains aggregate-only
+success or failure evidence. It imports no consumed MARC1 executor and exposes
+no source, subject, seed, cap, split, URL, credential, member, payload, model,
+or target override.
+
+One final generated qualification passed all 40 inherited selector refusals
+and all 18 wrapper refusals. It selected 16 fixture participants, 96 bundles,
+384 members, and 8,105,207,776 reservation bytes from 846,712 generated input
+bytes, emitted 296,659 bytes, and ran in 0.267915459 seconds at 36,126,720-byte
+peak RSS. All 3,071 dependency-light and 3,142 optional-neuro tests pass. Every
+retained-private, network, archive-member, signal, target, model, score,
+provider, retry, and claim counter remains zero.
+
+Current status is exact-wrapper remote proof pending. Commit and push this
+implementation and require both jobs green. Only then perform the one already
+authorized private-manifest selection once, inspect only its aggregate report,
+and record the consumed result. Archive members, payload, `MARC2-FW2`, neural
+analysis, targets, models, scoring, language work, and scientific claims remain
+closed.

@@ -20,12 +20,15 @@
    `docs/MARC_2_FREEWILL_PRIVATE_SELECTION_AUTHORIZATION_PACKET.md` and its
    registry, then read
    `docs/MARC_2_FREEWILL_PRIVATE_SELECTION_AUTHORIZATION_DECISION.md` and its
-   registry. The decision records the maintainer's exact fresh `continue` and
-   binds only the packet's generated-wrapper plus one private-selection
-   sequence. It is ineffective until its own commit is pushed and both CI jobs
-   are green; private access additionally waits for the exact wrapper to become
-   green. Archive members, payloads, signals, targets, models, scores, language
-   datasets, and provider calls remain unauthorized. Then read
+   registry. Decision `ad1e406` is remotely green. Then read
+   `docs/MARC_2_FREEWILL_PRIVATE_SELECTION_IMPLEMENTATION.md` and
+   `registries/marc2_freewill_private_selection_implementation.v0.json`. The
+   generated/mock wrapper passes all 58 refusal checks and the complete local
+   suites with zero retained-private operations. Its one exact private-
+   manifest selection remains proof-disabled until this implementation commit
+   passes both remote jobs. Archive members, payloads, signals, targets,
+   models, scores, language datasets, provider calls, and `MARC2-FW2` remain
+   unauthorized. Then read
    `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
    result, then use its preregistration and authorization documents for audit.

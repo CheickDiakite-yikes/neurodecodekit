@@ -9390,3 +9390,42 @@ target-free private selection.
 Scientific claim not established: an authorization record is not neural data
 or a result and establishes no neural effect, decoding accuracy, language
 decoding, or thought-to-text capability.
+
+## 2026-08-13 - MARC2-FW1A Private Selection Wrapper
+
+- Packet-bound decision `ad1e4064256f963b2d03daeb27e4a4779b32415f`
+  passed Base Python job `94656172494`, Optional Neuro Readers job
+  `94656172528`, and CI `31764052451` before implementation.
+- Added one dependency-free wrapper with only fixed `plan`, generated
+  `qualify`, aggregate `inspect`, and exact-proof `execute` commands. It has no
+  network client, archive-member reader, neural reader, model, scorer, or
+  generic private/source/subject/seed/cap/split/member override.
+- Added exact clean-HEAD and green-proof binding, one-thread load/RSS/disk
+  gates, literal no-follow path checks, owner/mode/size/hash/schema validation,
+  bounded short-read support, one-pass hashing/parsing, and a pre-content
+  consumed marker.
+- Added separate private and aggregate outputs plus an aggregate-only failure
+  receipt after a consumed refusal. No retry, rerun, resume, repair, fallback,
+  old-root, network, archive, or payload path exists.
+- The final generated qualification passed all 40 inherited selector refusals
+  and all 18 wrapper refusals. It selected 16 fixture participants, 96 bundles,
+  and 384 members at 8,105,207,776 reservation bytes from 846,712 input bytes.
+  Runtime was 0.2679154590005055 seconds at 36,126,720-byte peak RSS with
+  296,659 output bytes.
+- Forty focused implementation tests pass. The complete dependency-light
+  suite passes 3,071 tests with 204 expected skips. The complete optional-neuro
+  inventory passes 3,142 tests with 35 skips across fresh A-M and N-Z shards;
+  A-M required sandbox permission only for a legacy local forkserver socket.
+  Ruff, compilation, strict JSON, artifact hashes, CLI help/roundtrip, and diff
+  hygiene pass.
+- The retained 418,755-byte private manifest was not statted, opened, read,
+  hashed, or parsed. Network, archive-member, signal, event, target, model,
+  prediction, score, provider, hardware, retry, and claim counters remain zero.
+
+Engineering capability added: NeuroDecodeKit now has a proof-gated one-shot
+wrapper that can convert one exact private ZIP-directory manifest into a
+deterministic storage-bounded target-free participant selection.
+
+Scientific claim not established: generated structural metadata contain no
+human neural signal, prediction, or score and establish no neural effect,
+decoding accuracy, language decoding, or thought-to-text result.

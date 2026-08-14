@@ -4272,3 +4272,34 @@ Locally, 3,031 dependency-light tests pass, and all 3,102 optional tests pass
 across two fresh-process shards. The monolithic optional process tripped two
 legacy resource gates only after process-wide RSS carryover; those eight module
 tests pass fresh, and no historical test or cap changed.
+
+## 2026-08-13 MARC2-FW1A Wrapper Handoff
+
+Decision `ad1e4064256f963b2d03daeb27e4a4779b32415f` passed Base Python
+job `94656172494` and Optional Neuro Readers job `94656172528` in CI
+`31764052451` before implementation. Read
+`docs/MARC_2_FREEWILL_PRIVATE_SELECTION_IMPLEMENTATION.md`, its registry,
+module, and two implementation tests.
+
+The additive standard-library wrapper binds the exact 418,755-byte retained
+manifest identity but has not statted or opened it. It exposes only fixed
+`plan`, generated `qualify`, aggregate `inspect`, and exact-proof `execute`.
+The live path requires clean green HEAD proof, one-thread machine gates,
+literal no-follow owner/mode/size/hash/schema validation, one bounded read/hash/
+parse pass, a pre-content consumed marker, private/public output separation,
+and an aggregate-only consumed failure receipt. It cannot retry, use an old
+root, access a sibling, contact a network, or open an archive member.
+
+Generated `MARC2FWS-G1` passed all 40 inherited and 18 wrapper refusals. It
+selected 16 fixture participants, 96 bundles, and 384 members at
+8,105,207,776 reservation bytes in 0.2679154590005055 seconds at 36,126,720-
+byte peak RSS, emitting 296,659 bytes. Forty focused, 3,071 base, and 3,142
+optional-neuro tests pass. Every retained-private, payload, neural, target,
+model, score, provider, retry, and claim counter is zero.
+
+Immediate next gate: commit and push this exact wrapper, then require both
+remote jobs green. Only afterward perform the one already authorized private-
+manifest selection once. Inspect only its aggregate result and record the
+consumed route; never inspect the private output or rerun. `MARC2-FW2`, archive
+members, EEG samples, events, targets, models, scores, language work, and
+scientific claims remain closed.

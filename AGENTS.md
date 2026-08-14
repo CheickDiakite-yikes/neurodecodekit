@@ -1383,6 +1383,25 @@ closed until that exact wrapper is also remotely green. Archive members,
 payloads, signals, targets, models, scores, providers, `MARC2-FW2`, retries,
 reruns, and claim upgrades remain unauthorized throughout this milestone.
 
+Decision `ad1e4064256f963b2d03daeb27e4a4779b32415f` passed Base Python
+job `94656172494` and Optional Neuro Readers job `94656172528` in CI
+`31764052451` before wrapper implementation. Read
+`docs/MARC_2_FREEWILL_PRIVATE_SELECTION_IMPLEMENTATION.md`,
+`registries/marc2_freewill_private_selection_implementation.v0.json`, and the
+two matching implementation tests. The additive standard-library module
+exposes only fixed `plan`, `qualify`, `inspect`, and proof-gated `execute`
+commands. Its generated qualification passed 40 inherited and 18 wrapper
+refusals over 846,712 generated input bytes in 0.267915459 seconds at
+36,126,720-byte peak RSS, emitting 296,659 bytes and selecting the same
+16-person, 96-bundle, 384-member fixture prefix. All 3,071 base and 3,142
+optional-neuro tests pass locally. Every retained-private, network, payload,
+neural, target, model, score, provider, retry, and claim counter remains zero.
+Commit, push, and obtain both green jobs for this exact implementation before
+the one already authorized private-manifest selection. After green proof, run
+that exact selection once and inspect only its aggregate report. Do not inspect
+the private output, retry, open an archive local header/member/payload, access
+signal or targets, run a model or score, or enter `MARC2-FW2`.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

@@ -7616,3 +7616,35 @@ rerun, release, and scientific-claim operations closed.
 Evidence: `docs/MARC_2_FREEWILL_PRIVATE_SELECTION_AUTHORIZATION_DECISION.md`,
 `registries/marc2_freewill_private_selection_authorization_decision.v0.json`,
 and `tests/test_marc2_freewill_private_selection_authorization_decision.py`.
+
+## 0230 - Prove The Private Selector Wrapper Before One Manifest Read
+
+Prerequisite decision: begin only after packet-bound decision `ad1e406` passed
+Base Python job `94656172494`, Optional Neuro Readers job `94656172528`, and CI
+`31764052451`.
+
+Interface decision: expose only fixed `plan`, generated `qualify`, aggregate
+`inspect`, and exact-proof `execute` commands. Do not expose source, subject,
+seed, cap, split, member, URL, credential, payload, target, or model overrides,
+and do not import a consumed MARC1 executor.
+
+Safety decision: require clean remote-green implementation proof, one-thread
+machine gates, literal no-follow path checks, exact owner/mode/size/hash/schema,
+one bounded sequential content pass, a pre-content consumed marker, separate
+private/aggregate outputs, and an aggregate-only failure receipt after
+consumption. Preserve zero retries, reruns, resumes, repairs, or fallbacks.
+
+Qualification decision: accept the final generated route `MARC2FWS-G1` after
+all 40 inherited selector refusals and all 18 wrapper refusals pass. The
+fixture-selected 16 participants, 96 bundles, 384 members, and 8,105,207,776
+reservation bytes remain synthetic interface evidence only.
+
+Evidence-boundary decision: require this exact wrapper commit to pass both
+remote jobs before one already authorized private-manifest read. Even a future
+`MARC2FWS-R1` success stops before archive local headers, members, payloads,
+signals, targets, models, scores, `MARC2-FW2`, or a scientific claim.
+
+Evidence: `docs/MARC_2_FREEWILL_PRIVATE_SELECTION_IMPLEMENTATION.md`,
+`registries/marc2_freewill_private_selection_implementation.v0.json`,
+`src/neurodecodekit/datasets/marc2_freewill_private_selection.py`, and the two
+matching implementation test modules.

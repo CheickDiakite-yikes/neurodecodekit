@@ -42,7 +42,7 @@ irreversible Tier C events.
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |
 | IACKD source compatibility | H1 found 96 29-row and 32 31-row headers. H2 then parsed all 316 public BIDS metadata bodies and confirmed one 26-channel predictive EEG core, 1024 Hz sampling, average reference, and complete central/occipital geometry in all 30 groups | The exact-36 reader assumption was wrong, but H2 still routed `IACKDR-R1`: HEOG, VEOG, and Trigger are source-typed `MISC`, exposing a frozen control-taxonomy bug before any EEG sample, event, target, model, or score was accessed |
 | MARC-1 source eligibility | The Freewill central-directory inventory passed without payload, but the one source-aware Wrist metadata check later routed `MARC1SAL-R2` with zero selected subjects and zero payload bytes | The Wrist branch is consumed and blocked before acquisition; the private source route remains unavailable and is not inferred or repaired |
-| MARC-2 confound triangulation | Five ordered work orders now test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | The one `MARC2-FW1` generated closeout passed and is consumed: 16 participants, 96 bundles, 384 members, 4/4 byte boundaries, and 40/40 refusals at zero real accesses. The private inventory and every payload remain closed |
+| MARC-2 confound triangulation | Five ordered work orders now test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | The consumed `MARC2-FW1` fixture selected 16 participants, 96 bundles, and 384 members. The proof-gated `MARC2-FW1A` wrapper now passes all 58 selector/filesystem refusals at zero private accesses; its exact commit must become remotely green before the one authorized private selection, and every payload remains closed |
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
 | Full-path causality gate | Loop 25 v1 passed a dedicated causal anti-alias audit, 65,537 response points, 23 alias probes, 168 schedule checks, 240 resume checks, and 72 future-mutation controls across 24 target-free items | The exact 1000-to-100 Hz path is mechanically causal with zero right context; this is synthetic mechanics evidence, not proof that neural information survives |
 | Consumed S21 validation | The registered 2,908-parameter candidate reached macro CER `0.938177`; the train-only no-signal prior reached `0.751235`, so the candidate was worse by `0.186942` | Loop 26 is parked after one consumed six-target event; this is a clear negative result, not neural advantage |
@@ -1574,6 +1574,21 @@ Read this before interpreting any number in the repository.
   private-manifest selection after that wrapper is separately green. It does
   not authorize an archive member, EEG payload, neural analysis, target,
   model, score, provider, `MARC2-FW2`, or scientific claim.
+- **MARC2-FW1A proof-gated wrapper:** decision `ad1e406` passed Base Python job
+  `94656172494`, Optional Neuro Readers job `94656172528`, and CI
+  `31764052451` before implementation. The additive standard-library wrapper
+  has fixed `plan`, `qualify`, `inspect`, and proof-disabled `execute`
+  commands; exact no-follow owner/mode/size/hash/schema gates; bounded
+  short-read handling; a pre-content consumed marker; separate private and
+  aggregate outputs; and an aggregate-only consumed failure receipt. Its final
+  generated run passed all 40 inherited selector refusals and 18 wrapper
+  refusals, selecting the same 16-person/384-member fixture prefix at
+  8,105,207,776 reservation bytes in 0.268 seconds at 36.1 MB peak RSS. All
+  3,071 base and 3,142 optional-neuro tests pass. Retained-private, network,
+  archive-member, neural, target, model, and score counters remain zero. The
+  one real private selection remains proof-disabled until this exact wrapper
+  commit passes both remote jobs, and success still cannot enter payload or
+  `MARC2-FW2` work.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
