@@ -9492,3 +9492,41 @@ will guard both generated qualification and any separately approved live gate.
 Scientific claim not established: this contract contains no human neural data,
 target, prediction, or score and establishes no neural effect, decoding
 accuracy, language decoding, or thought-to-text capability.
+
+## 2026-08-13 - MARC2-FW1B Shared Proof Validator
+
+- Contract `b86aa940d47a232535ee1e72fb22ad58ea5c2729` passed Base Python
+  job `94665902722`, Optional Neuro Readers job `94665902761`, and CI
+  `31767373647` before implementation.
+- Added one standard-library `validate_implementation_record` function that
+  accepts strict record bytes plus separate expected and observed green-proof
+  envelopes. It requires exact registry bytes, HEAD, clean-worktree, ancestor,
+  CI/job, artifact, schema, authority, and access-state agreement.
+- The actual implementation registry has all 15 frozen top-level fields,
+  including `lane_id: MARC2-FW1B`, and is itself accepted by the shared
+  validator. It binds six non-circular tracked artifacts.
+- Fixed one generated CLI portability issue found before final qualification:
+  `python -m` uses runtime `__main__`, so the proof record now uses the canonical
+  package module identity in both CLI and import modes. The refusal happened
+  before candidate construction or output and had zero real/private access.
+- Final generated `MARC2FWR-G1` made 34 calls through one public validator: two
+  replay-identical canonical calls and 32 registered refusal calls. It used
+  84,701 generated input bytes, emitted and removed 6,711 bytes, and ran in
+  0.01692712500516791 seconds at 27,099,136-byte peak RSS.
+- Fifty-one focused tests pass. The dependency-light suite passes 3,134 tests
+  with 204 skips. The optional-neuro inventory passes 3,205 tests with 35 skips
+  across fresh A-M/N-Z processes: 2,692 with 28 skips and 513 with seven skips.
+  Ruff, compilation, all 214 registries, CLI help/plan/roundtrip, artifact
+  hashes, cleanup, and diff hygiene pass.
+- The module exposes no `execute`, private path, URL, network client, archive
+  reader, neural reader, target, model, or scorer. Every private, real, network,
+  payload, neural, target, model, score, provider, hardware, retry, and claim
+  counter remains zero.
+
+Engineering capability added: the complete generated implementation record is
+now checked by one shared validator reserved for any separately approved future
+live gate.
+
+Scientific claim not established: no human neural data, target, prediction, or
+score was accessed, so this establishes no neural effect, decoding accuracy,
+language decoding, or thought-to-text capability.

@@ -37,7 +37,15 @@
    named `MARC2-FW1B` lane freezes a generated-only shared validator, 15 exact
    implementation-record fields, and 32 refusal cases. It has no `execute`
    command and a private execution limit of zero. The contract must be pushed
-   and pass both remote jobs before its generated implementation begins.
+   and pass both remote jobs before its generated implementation begins. Exact
+   contract `b86aa94` passed both jobs in CI `31767373647`. Then read
+   `docs/MARC_2_PROOF_RECORD_RECOVERY_IMPLEMENTATION.md`, its registry, module,
+   and two implementation test files. Generated `MARC2FWR-G1` passed two exact
+   canonical validations and all 32 refusal cases through one shared validator
+   in 0.016927 seconds at 27,099,136-byte peak RSS. Private execution limit and
+   every private, real, network, neural, target, model, and score counter remain
+   zero. The exact implementation must be pushed and pass both remote jobs
+   before a new all-false Tier C request is prepared.
    Archive members, payloads, signals, targets, models, scores, language
    datasets, provider calls, and `MARC2-FW2` remain unauthorized. Then read
    `docs/CODEX_HANDOFF.md` for the exact handoff state.

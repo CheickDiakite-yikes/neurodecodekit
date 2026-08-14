@@ -1432,6 +1432,22 @@ Tier C packet and fresh packet-bound decision remain mandatory before any
 retained-path operation. The current `continue` is not retroactive, and
 `MARC2-FW2` remains closed.
 
+Contract `b86aa940d47a232535ee1e72fb22ad58ea5c2729` passed Base Python
+job `94665902722` and Optional Neuro Readers job `94665902761` in CI
+`31767373647` before implementation. Read
+`docs/MARC_2_PROOF_RECORD_RECOVERY_IMPLEMENTATION.md`,
+`registries/marc2_proof_record_recovery_implementation.v0.json`, the module,
+and both implementation tests. The dependency-free shared validator now
+accepts the complete 15-field registry itself, separates expected and observed
+remote proof, and exposes only `plan`, `qualify`, and `inspect`. Generated
+`MARC2FWR-G1` made two replay-identical canonical calls and 32 registered
+refusal calls in 0.016927125 seconds at 27,099,136-byte peak RSS, using 84,701
+input and 6,711 removed output bytes. All 3,134 base and 3,205 optional-neuro
+tests pass locally. Commit, push, and obtain both green jobs for this exact
+implementation before preparing a new all-false Tier C request. Private access,
+the retained path, a live wrapper, `MARC2-FW2`, payloads, neural work, models,
+scores, and claim upgrades remain closed.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

@@ -1980,3 +1980,22 @@ jobs green before implementing the generated validator. A later live wrapper
 and one new private selection require a new all-false Tier C packet and fresh
 packet-bound decision. The old or current `continue` is not retroactive;
 `MARC2-FW2` remains closed.
+
+Contract `b86aa940d47a232535ee1e72fb22ad58ea5c2729` passed Base Python
+job `94665902722` and Optional Neuro Readers job `94665902761` in CI
+`31767373647` before the generated-only shared validator was implemented. Read
+`docs/MARC_2_PROOF_RECORD_RECOVERY_IMPLEMENTATION.md`, its registry, module,
+and matching tests.
+
+Generated `MARC2FWR-G1` validated the complete implementation-record shape
+twice with byte-identical summaries and rejected all 32 malformed variants on
+their frozen routes. The fresh run used 84,701 generated input bytes, emitted
+and removed 6,711 output bytes, and ran in 0.016927125 seconds at 27,099,136-
+byte peak RSS. All 3,134 dependency-light and 3,205 optional-neuro tests pass.
+Every private, real, network, archive, neural, target, model, score, provider,
+hardware, retry, and claim counter remains zero.
+
+Current status is implementation remote proof pending. Commit, push, and
+require both jobs green. Only then prepare a new all-false Tier C request for
+an additive live wrapper and one possible later private selection. Do not touch
+the retained path or enter `MARC2-FW2` from this implementation.

@@ -7705,3 +7705,35 @@ green. `MARC2-FW2` remains closed.
 Evidence: `docs/MARC_2_PROOF_RECORD_RECOVERY_PREREGISTRATION.md`,
 `registries/marc2_proof_record_recovery_contract.v0.json`, and
 `tests/test_marc2_proof_record_recovery_contract.py`.
+
+## 0233 - Qualify One Shared MARC2-FW1B Proof Validator
+
+Proof-separation decision: make expected implementation proof and observed
+repository proof separate immutable inputs to one public validator. Require
+their exact agreement, observed HEAD equality, clean tracked state, green
+ancestor, positive CI/job identities, and the actual registry-byte hash.
+
+Record decision: validate the actual implementation registry, not only a
+fixture shaped like it. Require all 15 fields, top-level `lane_id`, six exact
+non-self bindings, all-false authority, zero access counters, zero private
+execution limit, and an explicit non-scientific claim boundary.
+
+Portability decision: use the canonical package module identity rather than
+runtime `__name__`, because `python -m` legitimately runs as `__main__`. Treat
+the pre-fix generated CLI refusal as development evidence only; it accessed no
+private or real input and created no output.
+
+Qualification decision: accept generated `MARC2FWR-G1` after two canonical
+summaries replay byte-identically and all 32 registered mutations refuse on
+their exact routes. Record 84,701 input bytes, 6,711 removed output bytes,
+0.016927125 seconds, and 27,099,136-byte peak RSS.
+
+Authority decision: require the exact implementation commit to pass both
+remote jobs before preparing a new all-false Tier C request. Do not infer live
+wrapper authority, retained-path authority, `MARC2-FW2` eligibility, or any
+scientific result from generated validation.
+
+Evidence: `docs/MARC_2_PROOF_RECORD_RECOVERY_IMPLEMENTATION.md`,
+`registries/marc2_proof_record_recovery_implementation.v0.json`,
+`src/neurodecodekit/datasets/marc2_proof_record_recovery.py`, and the two
+matching implementation tests.
