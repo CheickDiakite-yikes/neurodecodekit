@@ -9459,3 +9459,36 @@ access.
 Scientific claim not established: no human EEG, event, target, prediction, or
 score was accessed, so this result establishes no neural effect, decoding
 accuracy, language decoding, or thought-to-text capability.
+
+## 2026-08-13 - MARC2-FW1B Proof-Record Recovery Contract
+
+- Added a separately named generated-only recovery after the consumed
+  `MARC2-FW1A` proof refusal. It binds green result commit `4f08553`, CI
+  `31766526262`, both required job IDs, and the exact result-registry hash.
+- Froze 15 required implementation-record fields, including top-level
+  `lane_id: MARC2-FW1B`, and strict rejection of unknown fields, duplicate
+  keys, BOM/NUL encodings, non-finite values, and non-object roots.
+- Added unique normalized repository-relative artifact bindings with explicit
+  anti-self-binding. The future implementation registry is a separately hashed
+  validator input and cannot include a circular hash of itself.
+- Froze one shared `validate_implementation_record` symbol for generated
+  qualification and any future additive live wrapper, deterministic replay,
+  32 ordered mutations, six failure routes, and generated success
+  `MARC2FWR-G1`.
+- Preserved one thread, one worker, 30 seconds, 256 MiB peak RSS, 1 MiB input,
+  1 MiB output, zero network bytes, zero private bytes, and zero private
+  execution limit. Fifteen focused contract tests pass. The complete
+  dependency-light suite passes 3,098 tests with 204 expected skips, and the
+  complete optional-neuro inventory passes 3,169 tests with 35 skips across
+  fresh A-M and N-Z processes: 2,656 with 28 skips and 513 with seven skips.
+  Ruff, compilation, strict JSON across 213 registries, artifact hashes, and
+  diff hygiene pass locally.
+- No private path, output root, network, archive member, EEG, target, model,
+  score, or old consumed executor was accessed or authorized.
+
+Engineering capability specified: one strict reusable proof-record validator
+will guard both generated qualification and any separately approved live gate.
+
+Scientific claim not established: this contract contains no human neural data,
+target, prediction, or score and establishes no neural effect, decoding
+accuracy, language decoding, or thought-to-text capability.

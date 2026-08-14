@@ -42,7 +42,7 @@ irreversible Tier C events.
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |
 | IACKD source compatibility | H1 found 96 29-row and 32 31-row headers. H2 then parsed all 316 public BIDS metadata bodies and confirmed one 26-channel predictive EEG core, 1024 Hz sampling, average reference, and complete central/occipital geometry in all 30 groups | The exact-36 reader assumption was wrong, but H2 still routed `IACKDR-R1`: HEOG, VEOG, and Trigger are source-typed `MISC`, exposing a frozen control-taxonomy bug before any EEG sample, event, target, model, or score was accessed |
 | MARC-1 source eligibility | The Freewill central-directory inventory passed without payload, but the one source-aware Wrist metadata check later routed `MARC1SAL-R2` with zero selected subjects and zero payload bytes | The Wrist branch is consumed and blocked before acquisition; the private source route remains unavailable and is not inferred or repaired |
-| MARC-2 confound triangulation | Five ordered work orders now test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | The consumed `MARC2-FW1` fixture selected 16 participants, 96 bundles, and 384 members. The later `MARC2-FW1A` wrapper passed all 58 checks, but its sole green execution failed closed at `F00` because the implementation registry omitted `lane_id`; no private path or payload was touched, the lane is consumed, and `MARC2-FW2` remains closed |
+| MARC-2 confound triangulation | Five ordered work orders now test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | The consumed `MARC2-FW1` fixture selected 16 participants, 96 bundles, and 384 members. The later `MARC2-FW1A` wrapper passed all 58 checks, but its sole green execution failed closed at `F00` because the implementation registry omitted `lane_id`; no private path or payload was touched. Generated-only `MARC2-FW1B` now freezes the proof-record repair, while private access and `MARC2-FW2` remain closed |
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
 | Full-path causality gate | Loop 25 v1 passed a dedicated causal anti-alias audit, 65,537 response points, 23 alias probes, 168 schedule checks, 240 resume checks, and 72 future-mutation controls across 24 target-free items | The exact 1000-to-100 Hz path is mechanically causal with zero right context; this is synthetic mechanics evidence, not proof that neural information survives |
 | Consumed S21 validation | The registered 2,908-parameter candidate reached macro CER `0.938177`; the train-only no-signal prior reached `0.751235`, so the candidate was worse by `0.186942` | Loop 26 is parked after one consumed six-target event; this is a clear negative result, not neural advantage |
@@ -1599,6 +1599,15 @@ Read this before interpreting any number in the repository.
   all remained zero. The invocation is consumed without repair or rerun.
   `MARC2-FW2` remains ineligible; any recovery must be separately named,
   generated-qualified, and newly gated before private access.
+- **MARC2-FW1B generated proof-record recovery:** the new frozen contract makes
+  the implementation record itself a strict interface. It requires
+  `lane_id: MARC2-FW1B` among 15 exact top-level fields, unique non-self
+  artifact bindings, one shared `validate_implementation_record` entry point,
+  deterministic replay, and 32 ordered malformed-record refusals under a
+  30-second, 256-MiB, one-thread envelope. This milestone authorizes only a
+  generated validator implementation after both CI jobs are green. Its private
+  execution limit is zero; the retained manifest, archive members, EEG,
+  targets, models, scores, `MARC2-FW2`, and scientific claims remain closed.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

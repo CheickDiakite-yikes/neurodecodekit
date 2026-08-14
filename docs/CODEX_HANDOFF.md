@@ -4329,3 +4329,23 @@ Immediate next gate: test, commit, push, and green this closeout. Then design a
 separately named prospective registry-identity recovery using generated
 verifier qualification. Any later private access requires a new all-false Tier
 C packet and fresh packet-bound decision. `MARC2-FW2` remains closed.
+
+## 2026-08-13 MARC2-FW1B Contract Handoff
+
+The consumed closeout commit `4f08553eaa27c83e3f9ace9226dce64d933be1d4`
+passed Base Python job `94663482811` and Optional Neuro Readers job
+`94663482786` in CI `31766526262`. Read
+`docs/MARC_2_PROOF_RECORD_RECOVERY_PREREGISTRATION.md`, its registry, and the
+matching contract test.
+
+The separately named generated-only lane freezes 15 exact candidate fields,
+including `lane_id: MARC2-FW1B`, strict non-circular artifact bindings, one
+shared validator symbol, canonical replay, and 32 ordered refusals. It has only
+future `plan`, `qualify`, and `inspect` commands. Private execution limit,
+private bytes, and network bytes are zero.
+
+Immediate next gate: commit, push, and require both CI jobs green for this
+contract. Then implement and qualify only the generated shared validator. Do
+not inspect the retained path, create a live output root, prepare a decision,
+or enter `MARC2-FW2`. A future private selection needs a new all-false Tier C
+packet after the exact generated implementation is remotely green.

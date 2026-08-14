@@ -7676,3 +7676,32 @@ artifacts, and use a new all-false Tier C packet before private access.
 Evidence: `docs/MARC_2_FREEWILL_PRIVATE_SELECTION_RESULT.md`,
 `registries/marc2_freewill_private_selection_failure_result.v0.json`, and
 `tests/test_marc2_freewill_private_selection_result.py`.
+
+## 0232 - Freeze MARC2-FW1B As Generated Proof-Record Recovery
+
+Recovery decision: create a separately named lane and do not edit, import,
+call, retry, or route around the consumed `MARC2-FW1A` implementation.
+
+Schema decision: require `lane_id: MARC2-FW1B` among 15 exact top-level fields,
+strict JSON, unique normalized repository-relative artifact bindings, and an
+explicit prohibition on a candidate registry binding its own digest.
+
+Closure decision: designate
+`neurodecodekit.datasets.marc2_proof_record_recovery.validate_implementation_record`
+as the single future proof authority. Generated qualification must call that
+exact symbol, and any later additive live wrapper must do the same without a
+copy, fork, alias, or weaker reimplementation.
+
+Qualification decision: require canonical pass plus byte-identical replay and
+32 ordered malformed-record refusals under six failure routes. Keep all work
+generated-only, dependency-free, one-threaded, and within 30 seconds, 256 MiB
+RSS, and 1 MiB input/output caps.
+
+Authority decision: set private execution limit to zero. A future live wrapper
+and one new private selection require a new all-false Tier C packet and fresh
+packet-bound decision after the exact generated implementation is remotely
+green. `MARC2-FW2` remains closed.
+
+Evidence: `docs/MARC_2_PROOF_RECORD_RECOVERY_PREREGISTRATION.md`,
+`registries/marc2_proof_record_recovery_contract.v0.json`, and
+`tests/test_marc2_proof_record_recovery_contract.py`.

@@ -32,6 +32,12 @@
    implementation registry omitted its required top-level `lane_id`. The
    failure occurred before any retained path check, marker, source open, read,
    hash, parse, selection, or output. `MARC2-FW1A` is consumed without rerun.
+   Then read `docs/MARC_2_PROOF_RECORD_RECOVERY_PREREGISTRATION.md` and
+   `registries/marc2_proof_record_recovery_contract.v0.json`. The separately
+   named `MARC2-FW1B` lane freezes a generated-only shared validator, 15 exact
+   implementation-record fields, and 32 refusal cases. It has no `execute`
+   command and a private execution limit of zero. The contract must be pushed
+   and pass both remote jobs before its generated implementation begins.
    Archive members, payloads, signals, targets, models, scores, language
    datasets, provider calls, and `MARC2-FW2` remain unauthorized. Then read
    `docs/CODEX_HANDOFF.md` for the exact handoff state.

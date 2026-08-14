@@ -1419,6 +1419,19 @@ registry-identity recovery with generated verifier qualification and a new
 all-false Tier C packet before any private access. Never add the field to the
 consumed implementation and reuse its execution.
 
+That recovery is now frozen in
+`docs/MARC_2_PROOF_RECORD_RECOVERY_PREREGISTRATION.md` and
+`registries/marc2_proof_record_recovery_contract.v0.json`. `MARC2-FW1B` is
+generated-only and binds 15 exact candidate fields including top-level
+`lane_id`, unique normalized non-self artifact hashes, one shared
+`validate_implementation_record` symbol, canonical replay, and 32 ordered
+refusals. It exposes no live or private executor and sets private execution
+limit to zero. Commit, push, and obtain both green CI jobs for this exact
+contract before implementing only the generated validator. A new all-false
+Tier C packet and fresh packet-bound decision remain mandatory before any
+retained-path operation. The current `continue` is not retroactive, and
+`MARC2-FW2` remains closed.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

@@ -1965,3 +1965,18 @@ Current status is consumed failure with no retry, rerun, resume, or repair.
 `MARC2-FW2` remains closed. The next eligible work is a separately named
 prospective registry-identity recovery that proves the exact verifier entry
 point on generated artifacts before preparing a new all-false Tier C packet.
+
+That prospective recovery is now frozen as `MARC2-FW1B Proof-Record
+Recovery`. Read `docs/MARC_2_PROOF_RECORD_RECOVERY_PREREGISTRATION.md` and
+`registries/marc2_proof_record_recovery_contract.v0.json`. The generated-only
+contract requires 15 exact implementation-record fields including `lane_id`,
+unique normalized non-self artifact bindings, one shared validator entry point,
+deterministic replay, 32 ordered refusal cases, and zero private execution
+authority. Its caps are one thread, one worker, 30 seconds, 256 MiB peak RSS,
+1 MiB generated input, 1 MiB output, and zero network or private bytes.
+
+Current status is frozen contract only. Commit, push, and require both remote
+jobs green before implementing the generated validator. A later live wrapper
+and one new private selection require a new all-false Tier C packet and fresh
+packet-bound decision. The old or current `continue` is not retroactive;
+`MARC2-FW2` remains closed.
