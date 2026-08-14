@@ -1902,3 +1902,16 @@ all operation counters are zero, and the retained private path was not touched.
 Next gate: commit, push, and green this request, identify it as the sole active
 Tier C packet, and require fresh packet-bound maintainer words. `MARC2-FW2`
 and every scientific operation remain closed.
+
+Request `d0a6eaa` passed both required jobs in CI `31679428199` before the
+maintainer's fresh exact `continue` was recorded in the additive `MARC2-FW1A`
+decision. The decision binds only one generated/mock wrapper and, after that
+exact wrapper is separately green, one no-follow target-free private-manifest
+selection. It does not open archive members, EEG payloads, signals, targets,
+models, scores, providers, or `MARC2-FW2`.
+
+Current status is decision preparation only: one CI verification occurred and
+all private or scientific operation counters remain zero. Next gate: commit,
+push, and green the exact decision, then implement and qualify the wrapper on
+generated manifests and mocked filesystem facts. Real private access remains
+closed until that wrapper is also remotely green.

@@ -1369,6 +1369,20 @@ recorded in a separate decision. Do not implement the wrapper, stat, resolve,
 open, hash, or parse the retained path, enter MARC2-FW2, or access payload,
 signal, target, model, score, or provider under the all-false request alone.
 
+The maintainer has now supplied the fresh exact message `continue`. Read
+`docs/MARC_2_FREEWILL_PRIVATE_SELECTION_AUTHORIZATION_DECISION.md` and
+`registries/marc2_freewill_private_selection_authorization_decision.v0.json`.
+The additive decision quotes those eight bytes and binds only request
+`d0a6eaa391b12f04da35bf277f6409f2750d40df`, CI `31679428199`, Base
+Python job `94381244828`, Optional Neuro Readers job `94381244902`, and the
+unchanged target-free packet. It is ineffective until its own commit is pushed
+and both jobs are green. Before that proof, do not implement the wrapper or
+operate on the retained path. After decision green, only generated/mock
+wrapper implementation is eligible; the one private-manifest selection remains
+closed until that exact wrapper is also remotely green. Archive members,
+payloads, signals, targets, models, scores, providers, `MARC2-FW2`, retries,
+reruns, and claim upgrades remain unauthorized throughout this milestone.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

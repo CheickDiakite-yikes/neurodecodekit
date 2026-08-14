@@ -18,11 +18,15 @@
    registries. The prior Wrist branch is consumed and blocked, and the one
    generated `MARC2-FW1` closeout is also consumed. Then read
    `docs/MARC_2_FREEWILL_PRIVATE_SELECTION_AUTHORIZATION_PACKET.md` and its
-   registry. `MARC2-FW1A` is an all-false request for one future proof-gated
-   wrapper and one exact private-inventory read; it grants no authority. No
-   private Freewill manifest read, archive member, payload, signal, target,
-   model, score, language dataset, or provider call is currently authorized.
-   Then read `docs/CODEX_HANDOFF.md` for the exact handoff state.
+   registry, then read
+   `docs/MARC_2_FREEWILL_PRIVATE_SELECTION_AUTHORIZATION_DECISION.md` and its
+   registry. The decision records the maintainer's exact fresh `continue` and
+   binds only the packet's generated-wrapper plus one private-selection
+   sequence. It is ineffective until its own commit is pushed and both CI jobs
+   are green; private access additionally waits for the exact wrapper to become
+   green. Archive members, payloads, signals, targets, models, scores, language
+   datasets, and provider calls remain unauthorized. Then read
+   `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
    result, then use its preregistration and authorization documents for audit.
 6. Read `docs/LOOP_25_CAUSAL_PREPROCESSING_RESULT.md` and

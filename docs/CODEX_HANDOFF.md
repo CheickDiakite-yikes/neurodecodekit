@@ -4247,3 +4247,28 @@ green. Then identify this exact request as the sole active Tier C packet and
 wait for fresh packet-bound maintainer words. Do not implement the wrapper,
 inspect the private manifest, or enter MARC2-FW2 from this all-false request
 alone.
+
+## 2026-08-13 MARC2-FW1A Authorization Decision Handoff
+
+Request `d0a6eaa391b12f04da35bf277f6409f2750d40df` passed Base Python
+job `94381244828` and Optional Neuro Readers job `94381244902` in CI
+`31679428199`. After Codex identified it as the sole active Tier C packet, the
+maintainer supplied the fresh exact message `continue`. Read
+`docs/MARC_2_FREEWILL_PRIVATE_SELECTION_AUTHORIZATION_DECISION.md`, its
+registry, and decision test.
+
+The additive decision binds only the green packet. It permits generated/mock
+wrapper work after this decision is remotely green, and one private-manifest
+selection only after that exact wrapper is separately remotely green. It does
+not authorize archive members, payloads, signals, targets, models, scores,
+providers, or `MARC2-FW2`. At decision recording, one CI verification occurred
+and every private or scientific operation counter remained zero.
+
+Immediate next gate: test, commit, push, and require both CI jobs green for
+this exact decision. Only then implement the wrapper and its 58-refusal
+qualification using generated manifests and mocked filesystem facts. Do not
+operate on the retained path before the exact wrapper commit is also green.
+Locally, 3,031 dependency-light tests pass, and all 3,102 optional tests pass
+across two fresh-process shards. The monolithic optional process tripped two
+legacy resource gates only after process-wide RSS carryover; those eight module
+tests pass fresh, and no historical test or cap changed.

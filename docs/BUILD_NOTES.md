@@ -9356,3 +9356,37 @@ target-free participant selection with separate private and aggregate outputs.
 Scientific claim not established: this all-false request reads no human neural
 data and establishes no neural effect, decoding accuracy, language decoding,
 or thought-to-text result.
+
+## 2026-08-13 - MARC2-FW1A Packet-Bound Authorization Decision
+
+- Confirmed request commit `d0a6eaa391b12f04da35bf277f6409f2750d40df`
+  at green CI `31679428199`, Base Python job `94381244828`, and Optional Neuro
+  Readers job `94381244902` before recording the decision.
+- Preserved the maintainer's exact fresh eight-byte message `continue` and its
+  SHA-256. The record does not fabricate the packet's long sentence as a user
+  utterance or infer permission beyond the immutable request.
+- Authorized the packet's ordered two-stage sequence only after this decision
+  becomes remotely green: generated/mock wrapper implementation first, then
+  one exact private-manifest selection only after that wrapper is separately
+  remotely green.
+- Kept `MARC2-FW2`, network, archive local-header/member/payload, signal,
+  event, target, model, prediction, score, provider, hardware, release, retry,
+  rerun, and claim authority closed.
+- Fourteen focused decision invariants pass. One GitHub CI verification was
+  performed; every private, real, neural, payload, model, scoring, provider,
+  hardware, release, and claim counter remains zero.
+- The dependency-light suite passes 3,031 tests with 204 expected skips. The
+  full 3,102-test optional inventory passes in two fresh-process shards:
+  2,589 tests with 28 skips and 513 tests with seven skips. A monolithic local
+  optional process crossed the process-wide RSS high-water after importing all
+  optional stacks and tripped two legacy mechanical gates; both modules pass
+  all eight tests in a fresh process. No historical test or cap was changed;
+  remote Linux CI remains the final decision gate.
+
+Engineering capability authorized for testing: one proof-gated additive
+wrapper may be qualified and later perform one deterministic, storage-bounded,
+target-free private selection.
+
+Scientific claim not established: an authorization record is not neural data
+or a result and establishes no neural effect, decoding accuracy, language
+decoding, or thought-to-text capability.

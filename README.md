@@ -1567,6 +1567,13 @@ Read this before interpreting any number in the repository.
   Even a successful future selection stops before every archive local header,
   member payload, neural sample, event, target, model, prediction, and score.
   The packet itself performs zero private operations and grants no authority.
+- **MARC2-FW1A packet-bound decision:** after the all-false request became
+  remotely green and was identified as the sole Tier C gate, the maintainer's
+  exact fresh `continue` was recorded additively. The decision authorizes only
+  a generated/mock wrapper after the decision itself is green and one exact
+  private-manifest selection after that wrapper is separately green. It does
+  not authorize an archive member, EEG payload, neural analysis, target,
+  model, score, provider, `MARC2-FW2`, or scientific claim.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

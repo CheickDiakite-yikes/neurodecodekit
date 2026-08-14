@@ -7592,3 +7592,27 @@ instruction and every earlier continuation are not retroactive authority.
 Evidence: `docs/MARC_2_FREEWILL_PRIVATE_SELECTION_AUTHORIZATION_PACKET.md`,
 `registries/marc2_freewill_private_selection_authorization_request.v0.json`,
 and `tests/test_marc2_freewill_private_selection_authorization_request.py`.
+
+## 0229 - Bind The Fresh Continue Only To MARC2-FW1A
+
+Proof decision: verify request `d0a6eaa391b12f04da35bf277f6409f2750d40df`
+at successful CI `31679428199`, Base Python job `94381244828`, and Optional
+Neuro Readers job `94381244902` before recording permission.
+
+Communication decision: preserve the maintainer's exact eight-byte message
+`continue`. Incorporate only the already identified, immutable, remotely green
+packet by reference; do not fabricate a long-form utterance or infer broader
+payload or scientific authority.
+
+Order decision: make this decision ineffective until its exact commit passes
+both remote jobs. Then permit generated/mock wrapper implementation. Require
+that exact wrapper to become remotely green before one private-manifest read
+or target-free selection.
+
+Scope decision: keep all archive local-header/member/payload, network, EEG,
+signal, event, target, model, prediction, score, provider, `MARC2-FW2`, retry,
+rerun, release, and scientific-claim operations closed.
+
+Evidence: `docs/MARC_2_FREEWILL_PRIVATE_SELECTION_AUTHORIZATION_DECISION.md`,
+`registries/marc2_freewill_private_selection_authorization_decision.v0.json`,
+and `tests/test_marc2_freewill_private_selection_authorization_decision.py`.
