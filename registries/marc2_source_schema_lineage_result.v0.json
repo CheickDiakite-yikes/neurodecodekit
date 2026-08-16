@@ -29,11 +29,11 @@
     },
     {
       "path": "tests/test_marc2_source_schema_lineage.py",
-      "sha256": "6afa3f2df7943de86056ae82507753f765b4586055e4c05b3b90a57d2373a017"
+      "sha256": "1fd55227e2fdbace79f3eb8234f41f3ec69f03c3e0a8c0f415d6e7d6a2d4f9ed"
     },
     {
       "path": "docs/MARC_2_SOURCE_SCHEMA_LINEAGE_AUDIT.md",
-      "sha256": "5bb2d0aa724799286adfb9715dceccdf3db9cc4c876454875eb37d9582289164"
+      "sha256": "1f3991e305d85d30660173004245aabf01ca3fa86bdc131d2e5cde3fb5ba484e"
     },
     {
       "path": "registries/marc2_source_schema_lineage_contract.v0.json",
@@ -144,9 +144,9 @@
     "scientific_claim_upgrades": 0
   },
   "verification": {
-    "focused_auditor_tests": 16,
+    "focused_auditor_tests": 17,
     "focused_result_tests": 12,
-    "focused_tests": 28,
+    "focused_tests": 29,
     "contract_hash_passed": true,
     "all_fixed_artifact_hashes_passed": true,
     "strict_JSON_and_AST_anchors_passed": true,
@@ -154,11 +154,13 @@
     "duplicate_JSON_key_and_transport_key_refusals_tested": true,
     "symlink_refusal_tested": true,
     "fresh_one_thread_subprocess_tested": true,
-    "complete_base_tests": 3254,
+    "loaded_Linux_harness_inherited_RSS_refusal_tested": true,
+    "isolated_low_RSS_success_path_tested": true,
+    "complete_base_tests": 3255,
     "complete_base_skips": 204,
-    "complete_optional_tests": 3325,
+    "complete_optional_tests": 3326,
     "complete_optional_skips": 35,
-    "optional_A_M_tests": 2812,
+    "optional_A_M_tests": 2813,
     "optional_A_M_skips": 28,
     "optional_N_Z_tests": 513,
     "optional_N_Z_skips": 7,

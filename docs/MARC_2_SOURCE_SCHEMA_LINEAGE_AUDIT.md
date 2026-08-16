@@ -92,17 +92,23 @@ counters.
 ## Verification
 
 ```text
-focused auditor/result tests:       28
-dependency-light tests:             3,254 passed / 204 skipped
-optional-neuro A-M tests:            2,812 passed / 28 skipped
+focused auditor/result tests:       29
+dependency-light tests:             3,255 passed / 204 skipped
+optional-neuro A-M tests:            2,813 passed / 28 skipped
 optional-neuro N-Z tests:            513 passed / 7 skipped
-optional-neuro combined:             3,325 passed / 35 skipped
+optional-neuro combined:             3,326 passed / 35 skipped
 registry JSON files validated:       221
 Ruff:                                passed
 compileall:                          passed
 CLI help / plan / audit:             passed
 git diff --check:                    passed
 ```
+
+Linux CI preserves the loaded parent test process's RSS high-water mark across
+the child launch. The subprocess replay therefore may correctly stop at the
+128 MiB resource gate even though a standalone audit uses about 36 MiB. Tests
+accept only that exact fail-closed route and separately exercise the complete
+successful audit with the measured isolated baseline.
 
 ## Prospective Repair
 

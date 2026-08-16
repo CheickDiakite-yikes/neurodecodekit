@@ -9705,10 +9705,17 @@ effect, decoding accuracy, language decoding, or thought-to-text capability.
 - The frozen prospective design validates source-native keys first and then
   maps `directory` to `central_directory` exactly once without changing any
   hash value. It is not implemented and authorizes no private read.
-- Twenty-eight focused tests pass. The complete dependency-light suite passes
-  3,254 tests with 204 skips; optional A-M and N-Z pass 2,812 with 28 skips and
+- Twenty-nine focused tests pass. The complete dependency-light suite passes
+  3,255 tests with 204 skips; optional A-M and N-Z pass 2,813 with 28 skips and
   513 with seven skips, respectively. Ruff, compilation, all 221 registries,
   CLI help/plan/audit, tracked hashes, and diff hygiene pass.
+- Initial CI `31931550039` and diagnostic CI `31931773236` failed only because
+  Linux preserved the loaded test harness's greater-than-128-MiB RSS high-water
+  mark in the child audit process. The second trace exposed exact refusal
+  `MARC2SL-F01: resource cap exceeded`. The corrected test accepts only this
+  fail-closed replay route and separately proves the successful bound audit
+  under the isolated measured 35,717,120-byte baseline. No evidence input or
+  audit result was rerun or changed.
 
 Engineering capability added: NeuroDecodeKit can statically reconcile exact
 producer and consumer schemas and diagnose an integration failure without

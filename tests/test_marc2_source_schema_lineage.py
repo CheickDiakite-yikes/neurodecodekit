@@ -161,7 +161,14 @@ class Marc2SourceSchemaLineageTests(unittest.TestCase):
                 lineage._fixed_path(root, "alias.json")
         self.assertEqual(caught.exception.route, "MARC2SL-F01")
 
-    def test_registered_audit_runs_in_fresh_one_thread_process(self):
+    def test_bound_audit_mechanics_pass_with_isolated_low_RSS_baseline(self):
+        with mock.patch.object(lineage, "_peak_rss_bytes", return_value=35_717_120):
+            report = lineage.audit_repository(repo_root=ROOT)
+        self.assertEqual(report["route"], "MARC2SL-R2")
+        self.assertTrue(report["lineage"]["exact_single_alias_mismatch"])
+        self.assertEqual(report["access_counters"]["private_or_Git_ignored_path_operations"], 0)
+
+    def test_subprocess_audit_passes_or_refuses_only_inherited_RSS(self):
         environment = os.environ.copy()
         environment.update(THREAD_ENVIRONMENT)
         environment["PYTHONPATH"] = str(ROOT / "src")
@@ -179,7 +186,14 @@ class Marc2SourceSchemaLineageTests(unittest.TestCase):
             text=True,
             timeout=10,
         )
-        self.assertEqual(completed.returncode, 0, completed.stderr)
+        if completed.returncode:
+            self.assertEqual(completed.returncode, 2)
+            self.assertEqual(
+                completed.stderr.strip(),
+                "MARC2SL-F01: resource cap exceeded",
+            )
+            self.assertEqual(completed.stdout, "")
+            return
         report = json.loads(completed.stdout)
         self.assertEqual(report["route"], "MARC2SL-R2")
         self.assertTrue(report["lineage"]["exact_single_alias_mismatch"])

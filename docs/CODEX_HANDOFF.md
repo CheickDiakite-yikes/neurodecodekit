@@ -4517,9 +4517,13 @@ no generated output. Private, Git-ignored, marker, output-root, archive, signal,
 target, model, score, network, provider, hardware, retry, FW2, and claim
 counters are zero.
 
-Twenty-eight focused, 3,254 dependency-light, and 3,325 optional-neuro tests
+Twenty-nine focused, 3,255 dependency-light, and 3,326 optional-neuro tests
 pass. Ruff, compilation, all 221 registries, CLI help/plan/audit, tracked
-hashes, and diff hygiene pass.
+hashes, and diff hygiene pass. CI `31931550039` and `31931773236` exposed one
+test-harness portability issue: Linux carried the loaded parent's RSS
+high-water mark into the child audit, which correctly refused the 128 MiB cap.
+The corrected test permits only that exact F01 replay and separately proves
+the complete successful audit under an injected isolated measured baseline.
 
 Immediate next safe task: freeze and generated-qualify a separately named
 source-native-to-selector adapter. It must validate `directory`, `metadata`,
