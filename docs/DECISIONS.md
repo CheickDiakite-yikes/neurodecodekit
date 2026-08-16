@@ -8796,3 +8796,28 @@ Evidence boundary: no private route became available and no real cohort,
 archive payload, neural value, target, model, prediction, score, FW2/CIL1
 execution, or scientific claim exists. A private structural pass remains a
 fresh packet-bound Tier C action.
+
+## 0271 - Prepare VR7P As A New Dynamic Private-Recovery Request
+
+Lane decision: do not amend or reuse consumed VR4P. Define `MARC2-VR7P` with a
+new readiness path, output root, marker, future implementation, and proof
+record. Forbid any operation on named consumed paths.
+
+Selection decision: bind exact green VR6 and accept only a measured maximal
+contiguous 12-19-subject prefix. Generated subject count, reservation bytes,
+and selection hash are not live expected values.
+
+Sequence decision: request a generated/mock wrapper only after a separate
+green decision. Request one private structural pass only after that exact
+implementation is committed, pushed, and both jobs are green. Freeze one
+readiness invocation, one marker-before-open, one 418,755-byte read, one strict
+parse, one VR6 call, no retry/rerun/resume/fallback, and bounded outputs.
+
+Authority decision: keep every requested authorization flag false and every
+current counter zero. The packet must be committed, pushed, and both jobs green
+before it is identified as the sole Tier C gate. The current `continue` is not
+retroactive authority.
+
+Evidence: `docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_AUTHORIZATION_PACKET.md`,
+`registries/marc2_dynamic_private_selection_recovery_authorization_request.v0.json`,
+and its focused test.

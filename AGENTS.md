@@ -79,9 +79,15 @@ Read `docs/MARC_2_DYNAMIC_LIVE_SELECTION_IMPLEMENTATION.md`,
 and retains zero output. Exact implementation
 `482dad55e91e2abf48b6a59a417ebca191c0cd68` passed Base Python job
 `95234487830`, Optional Neuro Readers job `95234487789`, and CI `31975600088`.
-Tier A/B may now specify a separately named private wrapper and all-false Tier C
-request. This work authorizes no private read, cohort, archive member, neural
-payload, target, model, score, FW2, or CIL1 operation.
+That request is now specified as `MARC2-VR7P`. Read
+`docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_AUTHORIZATION_PACKET.md` and
+`registries/marc2_dynamic_private_selection_recovery_authorization_request.v0.json`.
+It proposes a generated/mock fixed-path wrapper after a fresh green decision,
+then one 418,755-byte structural pass only after the exact future implementation
+is remotely green. Every authorization field and current counter is false/zero.
+Commit, push, and require both CI jobs green before identifying it as the sole
+Tier C packet. This work authorizes no private read, cohort, archive member,
+neural payload, target, model, score, FW2, or CIL1 operation.
 Do not touch ignored MARC2 paths, consumed roots, certificates, markers,
 retained sources, archive members, neural data, targets, models, predictions,
 or scores. Any future private read remains a new Tier C packet and fresh
@@ -3240,9 +3246,12 @@ module, and tests. Local `MARC2VR6-G1` accepts measured maximal contiguous
 12-19-subject prefixes under the unchanged cap, emits live source semantics,
 preserves only the nested route code, and passes 34 direct refusals across all
 eight route classes. Exact implementation `482dad5` passed both jobs in CI
-`31975600088`. Generated VR6 is complete. A later private read remains a new
-Tier C packet and fresh packet-bound decision; the current `continue` is not
-retroactive authority.
+`31975600088`. Generated VR6 is complete. The all-false `MARC2-VR7P` request
+now specifies new fixed paths, dynamic outcomes, one future open, and one VR6
+call, but grants zero authority. Its packet commit must be pushed and pass both
+jobs before it is the sole active Tier C gate. A later private read still needs
+a fresh packet-bound decision; the current `continue` is not retroactive
+authority.
 Do not touch ignored MARC2 paths, consumed roots, certificates, markers,
 retained sources, archive members, neural data, targets, models, predictions,
 or scores. Any future private read remains a new Tier C packet and fresh

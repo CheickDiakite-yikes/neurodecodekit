@@ -10774,3 +10774,31 @@ fixture-identical outputs.
 Scientific claim not established: every path was generated metadata, so VR6
 establishes no real cohort, neural effect, decoding accuracy, brain-specific
 origin, language decoding, or thought-to-text capability.
+
+## 2026-08-16 - MARC2-VR7P Dynamic Private Selection Request
+
+- Bound green VR6 implementation `482dad5`, CI `31975600088`, and green
+  closeout `5b4dde3`, CI `31975867040`, before defining a new lane.
+- Created an all-false Tier C packet for a future generated/mock wrapper and,
+  only after its exact implementation is remotely green, one no-retry private
+  structural pass.
+- Chose a new readiness certificate path and output root. Named consumed paths
+  are forbidden from stat, resolve, read, hash, alteration, deletion, or reuse.
+- Replaced all generated expected outcomes with measured 12-19-subject maximal
+  prefix, split, reservation, source-semantics, and identity invariants.
+- Froze one future 418,755-byte source open, one strict parse, one VR6 call, one
+  private manifest, one aggregate report, zero network/archive bytes, and a
+  4 MiB incremental-output ceiling.
+- Required five generated profile boundaries in both row orders and at least 72
+  direct mutations before any future real operation.
+- Eleven packet tests and nine artifact-hash subtests pass. Every authorization
+  field is false and every current operation counter is zero.
+- The complete primary process reports 3,905 passes and 35 skips plus the same
+  three known process-state failures; all three pass under their required fresh
+  or non-sandboxed process conditions. New failures versus baseline are zero.
+
+Engineering capability requested: one new proof-gated structural pass can
+freeze a dynamically measured cohort without fixture-identical live outcomes.
+
+Scientific claim not established: the packet reads no neural payload, target,
+prediction, or score and establishes no neural effect or decoding result.

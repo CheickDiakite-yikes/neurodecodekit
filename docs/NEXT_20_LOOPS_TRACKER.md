@@ -2607,3 +2607,26 @@ all-false Tier C request for one new structural pass. No private read, real
 cohort, archive payload, neural data, target, model, prediction, score, FW2,
 CIL1, or scientific claim is authorized. The current `continue` cannot serve
 as the future packet-bound decision.
+
+### MARC2-VR7P - Dynamic Private Selection Recovery (All-False Request)
+
+VR6 implementation `482dad5` passed both jobs in CI `31975600088`; closeout
+`5b4dde3` passed Base job `95235147054`, Optional job `95235147047`, and CI
+`31975867040` before VR7P was specified.
+
+The request proposes a new fixed-path wrapper after a separate green decision,
+then one private structural pass only after the exact future implementation is
+remotely green. It uses a new readiness certificate path, new output root, and
+new consumed marker; every named consumed path is forbidden from any operation.
+
+The future generated matrix spans 12/14/16/18/19 subjects in both row orders
+and at least 72 direct mutations. The future real path allows one readiness
+invocation, one 418,755-byte source open, one strict JSON parse, one VR6 call,
+one private manifest, and one aggregate report. It accepts only dynamic
+maximal-prefix, split, cap, source-semantics, and hash invariants.
+
+Current status: all authorization flags false, all current counters zero, 11
+tests and 9 artifact-binding subtests pass. Commit, push, and require both CI
+jobs green. Only then identify VR7P as the sole Tier C packet and wait for fresh
+packet-bound maintainer words. Do not implement, inspect private paths, run
+readiness, read the source, freeze a cohort, or enter FW2/CIL1 from this request.

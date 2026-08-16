@@ -1926,6 +1926,14 @@ Read this before interpreting any number in the repository.
   `31975600088`. No private, real-cohort, neural, target, model, score, FW2, or
   CIL1 operation is authorized; a future structural read remains a new Tier C
   packet and decision.
+- **MARC2-VR7P all-false dynamic private-recovery packet:** proposes one future
+  two-stage sequence only after a fresh decision: generated/mock qualification
+  of a new fixed-path wrapper, then one structural read only after that exact
+  implementation is remotely green. It uses new readiness and output roots,
+  calls VR6 once, accepts measured 12-19-subject maximal prefixes, and forbids
+  every consumed path, archive member, neural value, target, model, score,
+  retry, and rerun. All authorization fields and current operation counters are
+  false/zero; the packet itself performs no private operation.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
@@ -2770,6 +2778,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/MARC_2_DYNAMIC_LIVE_SELECTION_IMPLEMENTATION.md](docs/MARC_2_DYNAMIC_LIVE_SELECTION_IMPLEMENTATION.md) | generated-only VR6 module, five measured selection boundaries, 34 refusals, resources, verification, and next evidence gate |
 | [registries/marc2_dynamic_live_selection_implementation.v0.json](registries/marc2_dynamic_live_selection_implementation.v0.json) | hash-bound module surface, dynamic invariants, measured qualification, zero-access counters, and exact green implementation proof |
 | [registries/marc2_dynamic_live_selection_result.v0.json](registries/marc2_dynamic_live_selection_result.v0.json) | machine-readable `MARC2VR6-G1` replay profiles, refusal coverage, resources, warnings, unavailable fields, and no-science ceiling |
+| [docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_AUTHORIZATION_PACKET.md](docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_AUTHORIZATION_PACKET.md) | all-false VR7P two-stage request, new fixed paths, dynamic cohort invariants, one-open boundary, resources, prohibitions, and claim ceiling |
+| [registries/marc2_dynamic_private_selection_recovery_authorization_request.v0.json](registries/marc2_dynamic_private_selection_recovery_authorization_request.v0.json) | machine-readable VR7P green predecessors, fixed artifacts, future state machine, zero counters, and fresh-decision requirement |
 | [docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md](docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md) | frozen generated-only 238-bundle repair design, filter-before-count order, aggregate predicates, mutations, resources, and claim boundary |
 | [registries/marc2_source_validity_eligibility_repair_contract.v0.json](registries/marc2_source_validity_eligibility_repair_contract.v0.json) | machine-readable `MARC2-VR1` source-validity and eligibility contract with 43 generated adversary bundles and all authority flags false |
 | [docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md](docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md) | generated-only full-source validator, eligibility-first selection order, refusal coverage, local verification, and exact remote-proof gate |

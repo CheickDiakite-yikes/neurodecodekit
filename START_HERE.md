@@ -34,10 +34,14 @@ job `95234487789`, and CI `31975600088`.
 Do not touch any ignored MARC2 path, consumed marker, certificate, output root,
 or retained source. No new private read, real cohort freeze, archive member,
 neural payload, target, model, prediction, score, FW2, or CIL1 work is
-authorized by VR6. Immediate safe work is Tier A/B specification of a
-separately named no-retry fixed-path wrapper and all-false Tier C request. A
-future private structural pass still requires that packet to become remotely
-green and a fresh packet-bound decision; this `continue` cannot be reused.
+authorized by VR6. That next gate is now specified as `MARC2-VR7P` in
+`docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_AUTHORIZATION_PACKET.md` and
+its registry. It binds new readiness/output paths, one future 418,755-byte
+structural open, one VR6 call, dynamic 12-19-subject outcomes, and 72 generated
+refusals. Every authorization field and current counter is false/zero.
+Commit, push, and obtain both green jobs for the packet, then identify it as the
+sole Tier C gate. A future private structural pass still requires a fresh
+packet-bound decision; this `continue` cannot be reused.
 
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.

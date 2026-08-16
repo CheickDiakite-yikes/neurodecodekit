@@ -10,6 +10,13 @@
 > no private source, ignored path, cohort, archive member, neural payload,
 > target, model, score, FW2, or CIL1 operation.
 
+> Current MARC2-VR7P gate, 2026-08-16: the all-false dynamic private-selection
+> request binds new readiness/output paths, one future 418,755-byte structural
+> open, one VR6 call, measured 12-19-subject outcomes, at least 72 generated
+> refusals, and zero retry/rerun. Every authorization flag and current counter
+> is false/zero. Commit, push, and require both CI jobs green before identifying
+> it as the sole Tier C packet. The current `continue` is not retroactive.
+
 > Current MARC2-VR5A gate, 2026-08-16: registration `926e1ba` passed Base
 > Python job `95226555204`, Optional Neuro Readers job `95226555153`, and CI
 > `31972332778` before the artifact-only implementation. The measured audit
@@ -5350,3 +5357,32 @@ ignored MARC2 paths, certificates, markers, consumed roots, retained source,
 archive members, neural data, targets, models, predictions, or scores. The
 maintainer's current `continue` was consumed by VR6 generated work and is not a
 future private-access decision.
+
+## 2026-08-16 MARC2-VR7P All-False Packet Handoff
+
+Generated VR6 implementation `482dad5` passed both jobs in CI `31975600088`;
+closeout `5b4dde3` passed Base job `95235147054`, Optional job `95235147047`,
+and CI `31975867040` before VR7P packet preparation.
+
+VR7P proposes one future two-stage sequence: after a fresh green decision,
+implement and qualify a generated/mock fixed-path wrapper; after that exact
+implementation is remotely green, run one target-free private structural pass.
+It introduces a fresh readiness certificate path and output root, forbids all
+named consumed paths even from statting, places a mode-0600 marker immediately
+before one source open, calls VR6 once, and accepts only dynamically measured
+12-19-subject maximal prefixes.
+
+The future generated matrix spans five subject counts in two row orders and at
+least 72 direct mutations. The future real command remains capped at one
+thread, 650 seconds, less than 256 MiB RSS, at least 15 GiB free disk, 418,755
+private structural bytes, 4 MiB incremental output, zero network bytes, and
+zero archive-member bytes.
+
+Current state: all authorization fields false, every operation counter zero,
+11 focused tests and 9 hash-binding subtests pass. The complete primary process
+reports 3,905 passes and 35 skips plus the same three baseline process-state
+failures; all three pass under their required process conditions. Do not
+implement the wrapper, inspect a `.codex_work` path, invoke readiness, create a
+marker, read the source, freeze a cohort, or enter FW2/CIL1. Commit, push, and
+obtain both green jobs; then identify VR7P as the sole Tier C packet and wait
+for fresh maintainer words.
