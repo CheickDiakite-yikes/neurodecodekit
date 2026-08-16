@@ -1643,6 +1643,19 @@ packet-bound maintainer decision. Result commit
 `95157101038`, Optional Neuro Readers job `95157100988`, and CI
 `31943963317`, completing the remote closeout proof.
 
+The next generated repair is frozen as `MARC2-VR2`. Read
+`docs/MARC_2_LIVE_DOMAIN_ELIGIBILITY_ADAPTER_PREREGISTRATION.md`,
+`registries/marc2_live_domain_eligibility_adapter_contract.v0.json`, and its
+registration test. It removes VR1's constructed `12/24/7` ineligible
+breakdown from live acceptance while preserving the exact 238 total, 195
+eligible, and 43 ineligible bundle invariants and the public participant
+taxonomy. Four generated distributions in canonical and reversed order must
+all replay the same 16-subject, 96-run, 384-member, 8,105,207,776-byte
+selection. Commit, push, and require both CI jobs green before generated-only
+implementation. Do not access a private path, consumed root, archive payload,
+neural value, target, model, score, network, FW2, or claim surface. The
+maintainer's current `continue to eureka` is not retroactive Tier C authority.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

@@ -4863,3 +4863,28 @@ model, score, network, LA2, FW2, and claim counter is zero. This is engineering
 evidence only. A future private structural attempt requires a new prospective
 contract, generated-qualified one-shot executor, Tier C request, and fresh
 packet-bound maintainer decision after the necessary proofs are remotely green.
+
+## 2026-08-16 MARC2-VR2 Registration Handoff
+
+Read `docs/MARC_2_LIVE_DOMAIN_ELIGIBILITY_ADAPTER_PREREGISTRATION.md`,
+`registries/marc2_live_domain_eligibility_adapter_contract.v0.json`, and
+`tests/test_marc2_live_domain_eligibility_adapter_preregistration.py`.
+
+The generated-only contract prevents VR1's constructed `12/24/7` ineligible
+distribution from becoming a live-data assumption. It freezes the exact
+live-shaped 1,227-row envelope, 238 complete bundles, 23 known participants,
+195 exact eligible session-1/2 bundles, and 43 valid ineligible bundles. The
+single-session, sampling-tier, and extra-session counts may vary, but every
+bundle must classify exactly once.
+
+Four generated profiles in canonical and reversed order must all reproduce 16
+selected subjects, 96 runs, 384 members, 8,105,207,776 reserved bytes, and the
+same selection identity with zero ineligible candidates. The contract requires
+at least 44 mutations across eight refusal routes and has no execute, path,
+network, private-root, archive, neural, target, model, or score surface.
+
+Immediate gate: complete repository verification, commit and push this exact
+registration, and require both CI jobs green. Only then implement and qualify
+the generated-only adapter. Do not touch either consumed root, inspect the
+private manifest, enter FW2, or treat `continue to eureka` as retroactive
+authority for a future Tier C operation.

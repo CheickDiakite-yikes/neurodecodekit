@@ -148,7 +148,17 @@
    `31943963317`. The generated closeout is consumed with no rerun. Every
    private or scientific operation remains closed behind a new prospective
    contract and fresh Tier C decision. Then read
-   `docs/CODEX_HANDOFF.md` for the exact handoff state.
+   `docs/MARC_2_LIVE_DOMAIN_ELIGIBILITY_ADAPTER_PREREGISTRATION.md` and
+   `registries/marc2_live_domain_eligibility_adapter_contract.v0.json`.
+   `MARC2-VR2` prospectively removes VR1's constructed `12/24/7` ineligible
+   breakdown from live acceptance. It freezes only the exact 238 total
+   bundles, 195 eligible bundles, 43 ineligible bundles, public participant
+   taxonomy, and unchanged target-free selection. Four generated breakdowns
+   in two row orders must all produce the same selection identity. The
+   registration is generated-only and implementation must wait for its own
+   remotely green commit; no private path, archive payload, neural data,
+   target, model, score, network operation, or FW2 work is authorized. Then
+   read `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
    result, then use its preregistration and authorization documents for audit.
 6. Read `docs/LOOP_25_CAUSAL_PREPROCESSING_RESULT.md` and

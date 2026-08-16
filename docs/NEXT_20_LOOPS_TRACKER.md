@@ -2320,3 +2320,30 @@ signal, target, model, score, network, release, and scientific-claim authority
 remains false. A future private structural attempt requires a separately named
 prospective contract, generated-qualified executor, Tier C request, and fresh
 packet-bound decision.
+
+### MARC2-VR2 - Live-Domain Eligibility Adapter (Registration Frozen)
+
+VR1 deliberately assigned its 43 generated ineligible bundles as `12/24/7`
+across single-session, sampling-tier, and extra-session predicates. That mix
+qualified the validation order, but it is not a recovered private or published
+assignment and must not become a live acceptance invariant.
+
+VR2 freezes the live-shaped 1,227-row envelope, 238 complete bundles, 23 known
+participants, exact 195 eligible session-1/2 bundles, 43 valid ineligible
+bundles, and the public participant taxonomy. Each noneligible bundle must be
+classified exactly once, but the three exclusion counts may vary. Four
+generated profiles (`12/24/7`, `8/20/15`, `16/12/15`, and `4/4/35`) in
+canonical and reversed row order must all reproduce the same 16-subject,
+96-run, 384-member, 8,105,207,776-byte selection identity with zero ineligible
+candidates.
+
+The contract requires at least 44 named mutations across eight refusal routes,
+one thread, 30 seconds, 256 MiB peak RSS, 16 MiB generated input, 2 MiB
+aggregate output, zero retained output, and zero network or private bytes. Its
+surface is limited to `plan`, `qualify`, and `inspect`.
+
+Current status: registration frozen locally; generated implementation is
+ineligible until this exact registration is committed, pushed, and both CI
+jobs are green. LA2 remains consumed, FW2 remains closed, and any future
+private structural read still requires a separately named generated-qualified
+executor, all-false Tier C request, and fresh packet-bound maintainer decision.

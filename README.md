@@ -1747,6 +1747,17 @@ Read this before interpreting any number in the repository.
   it authorizes no private read, archive payload, neural data, target, model,
   score, FW2 work, or scientific claim. Result commit `05fc2b5` passed both
   remote jobs in CI `31943963317`.
+- **MARC2-VR2 live-domain eligibility adapter registration:** the next
+  generated-only contract removes VR1's constructed `12/24/7` ineligible
+  breakdown from future live acceptance. It freezes the exact 238 total, 195
+  eligible, and 43 ineligible bundles plus the public participant taxonomy,
+  but allows the three valid exclusion counts to vary. Four deterministic
+  distributions in canonical and reversed order must all reproduce the same
+  16-subject, 96-run, 384-member, 8,105,207,776-byte target-free selection.
+  The implementation remains closed until this exact registration is pushed
+  and both CI jobs are green. No private path, archive payload, neural data,
+  target, model, score, network operation, FW2 work, or scientific claim is
+  authorized.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

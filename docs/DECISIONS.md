@@ -8242,3 +8242,34 @@ result registry, and result-record test.
 Proof update: result commit `05fc2b529df54cf9a94d5957402f2136bdf3bbe4`
 passed Base Python job `95157101038`, Optional Neuro Readers job
 `95157100988`, and CI `31943963317`.
+
+## 0252 - Do Not Freeze A Synthetic Exclusion Mix Into Live Acceptance
+
+Order decision: require the remotely green VR1 proof addendum
+`f70d54923c5a0443ee179d6d580aafde94250589`, Base Python job
+`95157571747`, Optional Neuro Readers job `95157571692`, and CI
+`31944164607` before registering the live-domain adapter. Require this exact
+VR2 registration to become remotely green before implementation.
+
+Architecture decision: preserve source validation before eligibility
+filtering, but freeze only live-supported invariants: 238 complete bundles,
+195 exact eligible session-1/2 bundles, 43 valid ineligible bundles, and the
+public 23-participant taxonomy. Classify every noneligible bundle exactly once
+without requiring VR1's constructed `12/24/7` predicate split.
+
+Qualification decision: require four generated ineligible distributions in
+canonical and reversed order. Every path must reproduce the unchanged
+16-subject, 96-run, 384-member, 8,105,207,776-byte selection identity. At
+least 44 mutations must cover unknown and overlapping taxonomy, count drift,
+exact-breakdown overconstraint, prefilter equality, selection drift, leakage,
+and resource boundaries.
+
+Boundary decision: this registration is generated-only and all authority
+flags remain false. It permits no private or Git-ignored path, consumed-root
+operation, archive member, neural value, target, model, score, network access,
+FW2 entry, release, or claim upgrade. The current `continue to eureka` is not
+retroactive Tier C authority for a later private attempt.
+
+Evidence: `docs/MARC_2_LIVE_DOMAIN_ELIGIBILITY_ADAPTER_PREREGISTRATION.md`,
+`registries/marc2_live_domain_eligibility_adapter_contract.v0.json`, and its
+registration test.

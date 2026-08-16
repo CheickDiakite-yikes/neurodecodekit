@@ -9759,6 +9759,41 @@ Scientific claim not established: this registration contains no neural
 payload, target, prediction, or score and establishes no neural effect,
 decoding accuracy, language decoding, or thought-to-text capability.
 
+## 2026-08-16 - MARC2-VR2 Live-Domain Eligibility Adapter Registration
+
+- Bound the remotely green VR1 proof addendum
+  `f70d54923c5a0443ee179d6d580aafde94250589`, Base Python job
+  `95157571747`, Optional Neuro Readers job `95157571692`, and CI
+  `31944164607`.
+- Froze the exact live-shaped 1,227-row envelope, 238 complete bundles, 23
+  known participants, 195 eligible session-1/2 bundles, and 43 valid
+  ineligible bundles without freezing VR1's constructed `12/24/7` exclusion
+  mix.
+- Required four deterministic ineligible distributions in canonical and
+  reversed order. All eight paths must preserve the exact 16-subject, 96-run,
+  384-member, 8,105,207,776-byte target-free selection identity.
+- Froze at least 44 named mutations across eight refusal routes, aggregate-only
+  output, one thread, 30 seconds, 256 MiB RSS, 16 MiB generated input, 2 MiB
+  output, zero retention, zero network, and zero private bytes.
+- Ten focused contract tests pass. The dependency-light suite passes 3,553
+  tests with 204 skips; fresh optional A-M/N-Z processes pass 3,111 tests with
+  28 skips and 513 with seven skips, for 3,624 optional-enabled tests with 35
+  skips. Ruff, compilation, all 239 registry JSON documents, and diff hygiene
+  pass. A monolithic optional replay was rejected as evidence after the known
+  sandbox forkserver refusal and two pre-existing late-run state/RSS-sensitive
+  failures; the established fresh-process lanes pass without a code change.
+- Every implementation, private-path, consumed-root, archive, neural, target,
+  model, score, network, FW2, release, and claim authorization remains false.
+  Generated implementation begins only after both remote jobs are green.
+
+Engineering capability specified: a live-shaped structural adapter can accept
+any valid distribution of the 43 excluded bundles while preserving the exact
+eligible inventory and frozen target-free prefix.
+
+Scientific claim not established: this registration contains no neural
+payload, target, prediction, or score and establishes no neural effect or
+decoding result.
+
 ## 2026-08-16 - MARC2-VR1 Generated Full-Domain Result
 
 - Exact implementation `4d587df` passed Base Python job `95155811373`,
