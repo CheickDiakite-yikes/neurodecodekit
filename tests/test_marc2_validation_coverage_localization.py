@@ -236,13 +236,19 @@ class Marc2ValidationCoverageLocalizationTests(unittest.TestCase):
         environment = os.environ.copy()
         environment.update(THREAD_ENVIRONMENT)
         environment["PYTHONPATH"] = str(ROOT / "src")
+        # Linux may retain the parent test runner's ru_maxrss across fork/exec.
+        # Inject RSS here; separate tests exercise both sides of the real cap.
+        script = (
+            "import json\n"
+            "from pathlib import Path\n"
+            "from neurodecodekit.datasets."
+            "marc2_validation_coverage_localization import audit_repository\n"
+            "report = audit_repository("
+            "repo_root=Path.cwd(), rss_reader=lambda: 40_386_560)\n"
+            "print(json.dumps(report, sort_keys=True, separators=(',', ':')))\n"
+        )
         completed = subprocess.run(
-            [
-                sys.executable,
-                "-m",
-                "neurodecodekit.datasets.marc2_validation_coverage_localization",
-                "audit",
-            ],
+            [sys.executable, "-c", script],
             cwd=ROOT,
             env=environment,
             capture_output=True,

@@ -32,7 +32,7 @@
     },
     {
       "path": "tests/test_marc2_validation_coverage_localization.py",
-      "sha256": "e8017089a64454732d191da4f1c965def1b0e63cdef65e25bf63513dbfd85aa8"
+      "sha256": "850e21f4f6dd5044cc8608526074df2a9579e3b170061d26d68ba569be8f6212"
     },
     {
       "path": "docs/MARC_2_VALIDATION_COVERAGE_LOCALIZATION.md",
