@@ -1,0 +1,172 @@
+{
+  "schema_name": "neurodecodekit.marc2_validation_coverage_localization_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "MARC-2-live-validation-coverage-artifact-audit-v0",
+  "lane_id": "MARC2-VL1",
+  "recorded_at_local": "2026-08-16",
+  "status": "frozen_artifact_only_validation_coverage_localization_no_private_or_scientific_operation",
+  "objective": "Determine whether the generated MARC2 selector fixture represents the complete published Freewill run domain accepted by the live validator, using only exact committed code and aggregate artifacts.",
+  "upstream_consumed_result_proof": {
+    "commit": "b19a6e253c7d52aff9a6ec22e314a09e8017d644",
+    "CI_run_id": 31939990034,
+    "base_python_job_id": 95147662770,
+    "optional_neuro_job_id": 95147662795,
+    "both_required_jobs_green_before_localization": true,
+    "consumed_route": "MARC2LAR-F02",
+    "consumed_stage": "live_adapter_and_frozen_selector",
+    "aggregate_safe_reason": "LA1 adapter refused source",
+    "exact_private_predicate_available": false,
+    "retry_rerun_or_private_reinspection_allowed": false
+  },
+  "fixed_inputs": [
+    {
+      "role": "producer_parser_module",
+      "path": "src/neurodecodekit/datasets/marc1_central_directory_audit.py",
+      "sha256": "db8b6975c81d4afe0a5ede0126956f4113159c98b3975cbded4ad322bce23de6"
+    },
+    {
+      "role": "producer_live_module",
+      "path": "src/neurodecodekit/datasets/marc1_central_directory_live.py",
+      "sha256": "f25464be139a0f4dad813f255be6d91eb803f35a50b045baea4aa7b27e5549d5"
+    },
+    {
+      "role": "producer_public_result",
+      "path": "registries/marc1_freewill_central_directory_live_result.v0.json",
+      "sha256": "fee969818b4e3e2ef7aee86096ad676c9bd70f80d19f2fd6dbe0e8069175257b"
+    },
+    {
+      "role": "selector_module",
+      "path": "src/neurodecodekit/datasets/marc2_freewill_prefix_selection.py",
+      "sha256": "86fa30fbd1caed735f0fb2e627144482a2bb8e033567bb3794e3f05508005c97"
+    },
+    {
+      "role": "selector_contract",
+      "path": "registries/marc2_freewill_prefix_selection_contract.v0.json",
+      "sha256": "dfe614cd7ec27c54c4f03848e3878c714222db043f501b9b07e57c7dc9f5f702"
+    },
+    {
+      "role": "live_adapter_module",
+      "path": "src/neurodecodekit/datasets/marc2_live_schema_adapter.py",
+      "sha256": "adcd345855e4a99794c2435f9e8e592a8818d170f7b8a7fcddc52ba009faba8d"
+    },
+    {
+      "role": "live_adapter_contract",
+      "path": "registries/marc2_live_schema_adapter_contract.v0.json",
+      "sha256": "e06fbb1401326d4f788bfdd50162c07bf88652b0c1dc4b11cef46cbec6e41e05"
+    },
+    {
+      "role": "recovery_module",
+      "path": "src/neurodecodekit/datasets/marc2_live_schema_adapter_recovery.py",
+      "sha256": "009bf97a46d9977e17ed590c51bf9e2a97377ea38864c65b61a5b2588d1aa2d9"
+    },
+    {
+      "role": "recovery_failure_result",
+      "path": "registries/marc2_live_adapter_recovery_failure_result.v0.json",
+      "sha256": "e1b727ada3622eb49acc2cf34567d8947e9b80055bd8cb8044c62bc5addd528f"
+    }
+  ],
+  "registered_facts": {
+    "source_inventory_rows": 1227,
+    "source_regular_file_rows": 1025,
+    "source_directory_rows": 202,
+    "published_participants": 23,
+    "published_runs": 238,
+    "eligible_participants": 19,
+    "eligible_session_1_2_runs": 195,
+    "published_minus_eligible_participants": 4,
+    "published_minus_eligible_runs": 43,
+    "required_companions_per_run": 4,
+    "generated_eligible_core_rows": 780,
+    "published_space_companion_slots": 952,
+    "generated_coverage_gap_companion_slots": 172,
+    "generated_auxiliary_regular_rows": 245,
+    "generated_fixture_uses_only_eligible_session_1_2_count_map": true,
+    "generated_fixture_represents_noneligible_or_extra_runs_as_Freewill_shaped_rows": false,
+    "live_validator_requires_all_matched_run_groups_to_equal_eligible_run_total_before_eligibility_counting": true,
+    "outer_F02_maps_to_LA1_source_envelope_or_entry_class": true,
+    "transport_bridge_adapter_and_selector_execution_reached": false
+  },
+  "ordered_routes": [
+    {
+      "route": "MARC2VL-R1",
+      "meaning": "generated source domain covers the published source domain and the live validator filters eligibility before exact eligible-count checks"
+    },
+    {
+      "route": "MARC2VL-R2",
+      "meaning": "generated fixture omits published valid run space while the live validator applies a global exact eligible-run total before filtering; this is a sufficient coverage blind spot consistent with the consumed F02 class but not proof of the exact private predicate"
+    },
+    {
+      "route": "MARC2VL-R3",
+      "meaning": "committed counts or validator structure differ and no single coverage classification is supported"
+    },
+    {
+      "route": "MARC2VL-F01",
+      "meaning": "contract artifact path hash JSON identity or source binding differs"
+    },
+    {
+      "route": "MARC2VL-F02",
+      "meaning": "required Python AST constant function route or ordering anchor is unavailable or ambiguous"
+    },
+    {
+      "route": "MARC2VL-F03",
+      "meaning": "privacy resource output or one-thread boundary differs"
+    }
+  ],
+  "candidate_leaf_boundary": {
+    "exact_private_predicate_identified": false,
+    "excluded_by_committed_route_and_aggregate_evidence": [
+      "source file size SHA-256 open-fstat identity and strict JSON parse",
+      "transport alias or digest class",
+      "identity bridge copy or alias class",
+      "green transport adapter and frozen selector execution class"
+    ],
+    "remaining_source_domain_candidates": [
+      "member path exceeds the live adapter length ceiling",
+      "suffix-bearing path or task fails the frozen Freewill BIDS grammar",
+      "multiple source rows collapse to one logical run companion identity",
+      "all matched run groups differ from the exact 195 eligible-run total",
+      "eligible participant session run counts differ from the frozen public count map"
+    ],
+    "highest_priority_design_defect": "The generated fixture contains only the 195 eligible session-1/2 run bundles and fills its remaining regular-file rows with generic auxiliary names, so it never tests whether the live validator tolerates valid excluded-participant or extra-session Freewill rows.",
+    "private_source_malformed_inferred": false
+  },
+  "prospective_repair_design": {
+    "separate_source_validity_from_selection_eligibility": true,
+    "validate_general_ZIP_and_BIDS_safety_for_every_row": true,
+    "filter_eligibility_before_exact_195_run_comparison": true,
+    "permit_valid_excluded_participant_extra_session_and_later_run_rows_without_selection": true,
+    "represent_all_43_omitted_published_run_slots_as_Freewill_shaped_generated_adversaries": true,
+    "preserve_target_free_rank_split_cap_and_reservation_rules": true,
+    "emit_preregistered_aggregate_safe_predicate_codes_without_private_values": true,
+    "patch_retry_or_reuse_consumed_LA2": false,
+    "future_private_read_requires_new_contract_and_Tier_C_decision": true
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 10,
+    "peak_RSS_bytes": 134217728,
+    "per_artifact_bytes": 2097152,
+    "total_input_bytes": 4194304,
+    "generated_output_bytes": 1048576,
+    "retained_generated_output_bytes": 0,
+    "network_bytes": 0,
+    "private_or_Git_ignored_bytes": 0
+  },
+  "forbidden_operations": {
+    "private_manifest_consumed_marker_or_output_root_stat_list_open_hash_parse_or_probe": true,
+    "archive_local_header_member_or_payload_access": true,
+    "signal_event_target_label_quality_channel_or_geometry_access": true,
+    "derivative_cache_feature_split_or_neurotoken_creation": true,
+    "training_inference_prediction_freeze_delivery_or_score": true,
+    "network_download_provider_language_model_stream_device_or_hardware": true,
+    "consumed_executor_patch_retry_rerun_resume_repair_or_substitution": true,
+    "MARC2_FW2_entry": true,
+    "release_publication_or_scientific_claim_upgrade": true
+  },
+  "claim_boundary": {
+    "engineering_claim_if_R2": "The committed generated fixture omits 43 published run slots while the live validator requires all matched run groups to equal the 195-run eligible subset before filtering, exposing a source-domain coverage blind spot consistent with the consumed F02 class.",
+    "scientific_claim_not_established": "No private manifest neural payload target prediction or score is accessed, so this audit establishes no neural effect decoding accuracy language decoding or thought-to-text capability."
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "schema_name": "neurodecodekit.marc2_validation_coverage_localization_result",
+  "schema_version": "0.1.0",
+  "result_id": "MARC-2-live-validation-coverage-artifact-audit-result-v0",
+  "lane_id": "MARC2-VL1",
+  "recorded_at_local": "2026-08-16",
+  "status": "completed_artifact_only_validation_coverage_localization",
+  "route": "MARC2VL-R2",
+  "proof_posture": "fixed_committed_code_and_aggregate_artifacts_only_no_private_or_scientific_value",
+  "upstream_consumed_result_proof": {
+    "commit": "b19a6e253c7d52aff9a6ec22e314a09e8017d644",
+    "CI_run_id": 31939990034,
+    "base_python_job_id": 95147662770,
+    "optional_neuro_job_id": 95147662795,
+    "both_required_jobs_green_before_localization": true,
+    "consumed_route": "MARC2LAR-F02",
+    "consumed_stage": "live_adapter_and_frozen_selector",
+    "aggregate_safe_reason": "LA1 adapter refused source",
+    "exact_private_predicate_available": false,
+    "retry_rerun_or_private_reinspection_allowed": false
+  },
+  "contract": {
+    "path": "registries/marc2_validation_coverage_localization_contract.v0.json",
+    "sha256": "39fe2c2c99a824f6baf1d59294f68e5e021ecf9eca1e6a3dec14ef8e7ef6d277",
+    "fixed_input_artifacts": 9,
+    "private_or_Git_ignored_input_artifacts": 0
+  },
+  "tracked_file_hashes": [
+    {
+      "path": "src/neurodecodekit/datasets/marc2_validation_coverage_localization.py",
+      "sha256": "c371c480d9a6d0ce794b06909be50c353b37664d0129f105124f6dff860fd2ee"
+    },
+    {
+      "path": "tests/test_marc2_validation_coverage_localization.py",
+      "sha256": "e8017089a64454732d191da4f1c965def1b0e63cdef65e25bf63513dbfd85aa8"
+    },
+    {
+      "path": "docs/MARC_2_VALIDATION_COVERAGE_LOCALIZATION.md",
+      "sha256": "a0576593d5f72f8346a372a941b27c9fb8f057ff2f6ca93245cfc883f016fbc1"
+    }
+  ],
+  "route_class_localization": {
+    "observed_outer_route": "MARC2LAR-F02",
+    "observed_stage": "live_adapter_and_frozen_selector",
+    "LA1_F02_maps_to_outer_failure_index": 2,
+    "source_envelope_or_entry_class_consistent": true,
+    "transport_or_digest_class_reached": false,
+    "identity_bridge_class_reached": false,
+    "green_adapter_or_selector_execution_reached": false,
+    "exact_private_predicate_identified": false
+  },
+  "public_source_space": {
+    "inventory_rows": 1227,
+    "regular_file_rows": 1025,
+    "directory_rows": 202,
+    "published_participants": 23,
+    "published_runs": 238,
+    "eligible_participants": 19,
+    "eligible_session_1_2_runs": 195
+  },
+  "generated_fixture_coverage": {
+    "uses_only_eligible_session_1_2_count_map": true,
+    "fills_remaining_regular_rows_with_generic_auxiliary_names": true,
+    "published_minus_eligible_participants": 4,
+    "published_minus_eligible_runs": 43,
+    "required_companions_per_run": 4,
+    "generated_eligible_core_rows": 780,
+    "published_space_companion_slots": 952,
+    "generated_coverage_gap_companion_slots": 172,
+    "generated_auxiliary_regular_rows": 245,
+    "source_domain_coverage_blind_spot": true
+  },
+  "validator_order": {
+    "global_group_total_line": 398,
+    "eligibility_lookup_line": 404,
+    "global_exact_group_total_precedes_eligibility_counting": true
+  },
+  "producer_guarantees": {
+    "duplicate_full_member_names_refused": true,
+    "row_fields_are_emitted_by_the_parser": true,
+    "live_envelope_is_added_by_the_exact_producer": true
+  },
+  "root_cause": {
+    "class": "generated_fixture_source_domain_undercoverage_and_pre_filter_global_equality",
+    "generated_fixture_scope": "195 eligible session-1/2 run bundles",
+    "published_source_space": "238 runs across 23 participants",
+    "omitted_published_run_slots": 43,
+    "omitted_four_companion_slots": 172,
+    "why_generated_tests_passed": "The fixture replaced all noneligible or extra Freewill-shaped source space with generic auxiliary rows, so the global 195-group equality was never challenged.",
+    "why_live_F02_is_consistent": "The live validator groups every Freewill-shaped row and requires the global group count to equal the eligible 195-run subset before consulting eligibility.",
+    "exact_private_predicate_proven": false,
+    "private_source_malformed_inferred": false,
+    "data_or_scientific_failure": false
+  },
+  "candidate_leaf_boundary": {
+    "excluded_by_committed_route_and_aggregate_evidence": [
+      "source file size SHA-256 open-fstat identity and strict JSON parse",
+      "transport alias or digest class",
+      "identity bridge copy or alias class",
+      "green transport adapter and frozen selector execution class"
+    ],
+    "remaining_source_domain_candidates": [
+      "member path exceeds the live adapter length ceiling",
+      "suffix-bearing path or task fails the frozen Freewill BIDS grammar",
+      "multiple source rows collapse to one logical run companion identity",
+      "all matched run groups differ from the exact 195 eligible-run total",
+      "eligible participant session run counts differ from the frozen public count map"
+    ],
+    "highest_priority_design_defect": "The generated fixture never tests whether the live validator tolerates valid excluded-participant extra-session or later-run Freewill rows.",
+    "exact_private_predicate_identified": false
+  },
+  "prospective_repair_design": {
+    "separate_source_validity_from_selection_eligibility": true,
+    "validate_general_ZIP_and_BIDS_safety_for_every_row": true,
+    "filter_eligibility_before_exact_195_run_comparison": true,
+    "permit_valid_excluded_participant_extra_session_and_later_run_rows_without_selection": true,
+    "represent_all_43_omitted_published_run_slots_as_Freewill_shaped_generated_adversaries": true,
+    "preserve_target_free_rank_split_cap_and_reservation_rules": true,
+    "emit_preregistered_aggregate_safe_predicate_codes_without_private_values": true,
+    "patch_retry_or_reuse_consumed_LA2": false,
+    "future_private_read_requires_new_contract_and_Tier_C_decision": true
+  },
+  "measurements": {
+    "input_artifact_count": 10,
+    "input_bytes": 411305,
+    "Python_AST_parses": 5,
+    "strict_JSON_parses": 5,
+    "runtime_seconds": 0.04988154199963901,
+    "peak_RSS_bytes": 44875776,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "aggregate_output_bytes": 6764,
+    "retained_generated_output_bytes": 0,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "producer_is_causal": "not_applicable_artifact_only",
+    "end_to_end_latency_measured": false
+  },
+  "access_counters": {
+    "committed_contract_and_artifact_reads": 10,
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_marker_or_output_root_operations": 0,
+    "archive_local_header_or_member_payload_reads": 0,
+    "signal_event_target_label_quality_channel_or_geometry_reads": 0,
+    "derivative_cache_feature_split_or_neurotoken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "network_download_provider_or_language_model_operations": 0,
+    "stream_device_or_hardware_operations": 0,
+    "consumed_executor_patch_retry_rerun_resume_or_repair_operations": 0,
+    "MARC2_FW2_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "acceptance_gates": {
+    "all_fixed_artifact_hashes_passed": true,
+    "exact_outer_to_LA1_route_class_mapping": true,
+    "producer_envelope_and_row_guarantees_anchored": true,
+    "public_and_generated_count_arithmetic_reconciled": true,
+    "generated_fixture_coverage_hole_localized": true,
+    "global_run_total_precedes_eligibility_filter": true,
+    "exact_private_predicate_left_unresolved": true,
+    "one_thread_runtime_RSS_and_output_caps": true,
+    "zero_private_archive_neural_target_model_score_network_operations": true
+  },
+  "verification": {
+    "focused_auditor_tests": 20,
+    "focused_result_tests": 14,
+    "complete_base_tests": 3496,
+    "complete_base_skips": 204,
+    "optional_A_M_tests": 3054,
+    "optional_A_M_skips": 28,
+    "optional_N_Z_tests": 513,
+    "optional_N_Z_skips": 7,
+    "complete_optional_tests": 3567,
+    "complete_optional_skips": 35,
+    "ruff_compile_registry_JSON_CLI_and_diff_hygiene_passed": true,
+    "complete_suite_pending": false,
+    "remote_CI_pending": true
+  },
+  "disposition": {
+    "artifact_only_diagnosis_complete": true,
+    "MARC2_LA2_consumed": true,
+    "consumed_executor_may_be_modified_reused_retried_or_resumed": false,
+    "private_source_or_output_reinspection_allowed": false,
+    "MARC2_FW2_eligible": false,
+    "next_safe_work": "freeze and generated-qualify a separately named source-validity and eligibility-separated adapter with full published-domain adversaries",
+    "future_private_access_requires_new_contract_and_Tier_C_decision": true
+  },
+  "warnings": [
+    "This audit localizes a generated-fixture and validator-domain blind spot; it does not identify the exact private refusal predicate.",
+    "Published run totals are aggregate source-space facts, not a publication of private archive row identities.",
+    "The prospective repair is generated-only and authorizes no private read or MARC2-FW2 work."
+  ],
+  "unavailable_fields": [
+    "exact private LA1 predicate and source row identities",
+    "actual excluded-run or extra-session archive membership",
+    "archive member payload integrity signals events targets and quality",
+    "neural features predictions scores and causal latency"
+  ],
+  "claim_boundary": {
+    "engineering_capability_added": "NeuroDecodeKit can detect that a generated selection fixture omits 43 published run slots while its live validator applies an exact eligible-run total to the unfiltered source domain.",
+    "scientific_claim_not_established": "No private manifest neural payload target prediction or score was accessed so this audit establishes no neural effect decoding accuracy language decoding or thought-to-text capability."
+  }
+}

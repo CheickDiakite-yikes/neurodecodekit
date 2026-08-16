@@ -122,6 +122,16 @@
    selected. The exact nested LA1 predicate is unavailable without forbidden
    reinspection. No archive, neural, target, model, score, or network operation
    occurred. LA2 has no retry; `MARC2-FW2` remains ineligible. Then read
+   `docs/MARC_2_VALIDATION_COVERAGE_LOCALIZATION.md` and
+   `registries/marc2_validation_coverage_localization_result.v0.json`. The
+   fixed artifact-only audit found that the generated fixture represented only
+   195 eligible runs while the published source space contains 238, leaving 43
+   run slots and 172 companion slots untested as Freewill-shaped rows. LA1
+   applies its exact 195-run equality before eligibility filtering. This is a
+   concrete generated-coverage defect consistent with the F02 class, not the
+   exact private predicate and not neural evidence. The next safe work is a
+   separately named generated-only validity/eligibility repair; any private
+   read still requires a fresh Tier C decision. Then read
    `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
    result, then use its preregistration and authorization documents for audit.

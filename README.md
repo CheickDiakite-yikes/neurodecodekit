@@ -42,7 +42,7 @@ irreversible Tier C events.
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |
 | IACKD source compatibility | H1 found 96 29-row and 32 31-row headers. H2 then parsed all 316 public BIDS metadata bodies and confirmed one 26-channel predictive EEG core, 1024 Hz sampling, average reference, and complete central/occipital geometry in all 30 groups | The exact-36 reader assumption was wrong, but H2 still routed `IACKDR-R1`: HEOG, VEOG, and Trigger are source-typed `MISC`, exposing a frozen control-taxonomy bug before any EEG sample, event, target, model, or score was accessed |
 | MARC-1 source eligibility | The Freewill central-directory inventory passed without payload, but the one source-aware Wrist metadata check later routed `MARC1SAL-R2` with zero selected subjects and zero payload bytes | The Wrist branch is consumed and blocked before acquisition; the private source route remains unavailable and is not inferred or repaired |
-| MARC-2 confound triangulation | Five ordered work orders test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | Generated adapters replayed a 16-subject, 96-run, 384-member prefix after localizing the first transport-key mismatch. Exact LA2 commit `5390e06` then passed both CI jobs before one real structural pass read and verified 418,755 metadata bytes. LA1 still refused the source at `MARC2LAR-F02`, so zero people or members were selected and archive, neural, target, model, and score access stayed zero. The run is consumed; the exact nested predicate is unavailable without forbidden reinspection |
+| MARC-2 confound triangulation | Five ordered work orders test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | Generated adapters replayed a 16-subject, 96-run, 384-member prefix after localizing the first transport-key mismatch. Exact LA2 commit `5390e06` then passed both CI jobs before one real structural pass verified 418,755 metadata bytes and stopped safely at `MARC2LAR-F02`, with zero people or members selected. The follow-up artifact audit found the deeper coverage defect: the fixture modeled only 195 eligible runs while the published source space contains 238, leaving 43 run slots and 172 four-file companion slots untested as Freewill-shaped rows. The exact private predicate remains unavailable, and archive, neural, target, model, and score access stayed zero |
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
 | Full-path causality gate | Loop 25 v1 passed a dedicated causal anti-alias audit, 65,537 response points, 23 alias probes, 168 schedule checks, 240 resume checks, and 72 future-mutation controls across 24 target-free items | The exact 1000-to-100 Hz path is mechanically causal with zero right context; this is synthetic mechanics evidence, not proof that neural information survives |
 | Consumed S21 validation | The registered 2,908-parameter candidate reached macro CER `0.938177`; the train-only no-signal prior reached `0.751235`, so the candidate was worse by `0.186942` | Loop 26 is parked after one consumed six-target event; this is a clear negative result, not neural advantage |
@@ -1707,16 +1707,24 @@ Read this before interpreting any number in the repository.
   closeout `52eabc6` then passed both jobs in CI `31936399968`; no live/private
   read is authorized, and this remains engineering evidence rather than a
   decoding result.
-- **MARC2-LA2 packet-bound recovery decision:** request `f9f24a3` passed Base
-  job `95140483613`, Optional job `95140483638`, and CI `31937038394` before
-  the maintainer supplied the fresh exact word `continue`. The separate
-  decision binds only that green packet: after the decision itself is remotely
-  green, one new standard-library executor may be qualified on generated/mock
-  inputs under 56 direct mutations. Only after that exact executor is also
-  remotely green may one no-retry read of the 418,755-byte structural manifest
-  call LA1 and the frozen selector. The decision currently has no effect;
-  executor, private, archive, neural, target, model, score, and claim counters
-  remain zero.
+- **MARC2-LA2 consumed live-adapter recovery:** request `f9f24a3`, decision
+  `b445df2`, and exact executor `5390e06` each passed both remote jobs in the
+  required order before one no-retry structural pass. That pass verified and
+  strict-parsed 418,755 bytes once, then stopped at `MARC2LAR-F02` because LA1
+  refused the source. No selector call, participant, member, reservation,
+  archive payload, neural value, target, model, prediction, or score followed.
+  LA2 is consumed and cannot be retried, repaired, or reinspected.
+- **MARC2-VL1 validation-coverage localization:** a fixed AST/JSON audit over
+  ten committed artifacts found that the generated fixture contains only the
+  19-subject, 195-run eligible subset, or 780 core companion rows, and fills
+  its remaining 245 regular rows with generic auxiliaries. The public source
+  space contains 23 participants and 238 runs, leaving 43 run slots and 172
+  four-file companion slots absent from the Freewill-shaped fixture domain.
+  LA1 requires all matched runs to equal 195 before eligibility filtering, so
+  this is a concrete validation blind spot consistent with F02. The audit ran
+  in 0.0499 seconds at 44,875,776-byte peak RSS with zero private, payload,
+  neural, target, model, network, or score operations. It does not identify the
+  exact private predicate or establish a decoding result.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
@@ -2544,6 +2552,13 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/marc2_live_adapter_recovery_authorization_request.v0.json](registries/marc2_live_adapter_recovery_authorization_request.v0.json) | machine-readable all-false LA2 request binding green LA1, consumed FW1C, one literal private source, zero authority, and the fresh-decision gate |
 | [docs/MARC_2_LIVE_ADAPTER_RECOVERY_AUTHORIZATION_DECISION.md](docs/MARC_2_LIVE_ADAPTER_RECOVERY_AUTHORIZATION_DECISION.md) | exact short-form maintainer decision bound to green LA2 request proof, two remote-green barriers, one-shot scope, resources, and claim ceiling |
 | [registries/marc2_live_adapter_recovery_authorization_decision.v0.json](registries/marc2_live_adapter_recovery_authorization_decision.v0.json) | machine-readable eight-byte decision quote, artifact hashes, conditional authority, zero operation counters, and delayed-effect gate |
+| [docs/MARC_2_LIVE_ADAPTER_RECOVERY_IMPLEMENTATION.md](docs/MARC_2_LIVE_ADAPTER_RECOVERY_IMPLEMENTATION.md) | additive one-shot executor design, generated proof qualification, exact remote-green barrier, resource measurements, and closed payload boundary |
+| [registries/marc2_live_adapter_recovery_implementation.v0.json](registries/marc2_live_adapter_recovery_implementation.v0.json) | hash-bound LA2 implementation identity, 24 executor refusals, zero-access counters, and exact generated replay |
+| [docs/MARC_2_LIVE_ADAPTER_RECOVERY_RESULT.md](docs/MARC_2_LIVE_ADAPTER_RECOVERY_RESULT.md) | consumed 418,755-byte structural pass, aggregate F02 refusal, zero-selection result, measured resources, and no-rerun boundary |
+| [registries/marc2_live_adapter_recovery_failure_result.v0.json](registries/marc2_live_adapter_recovery_failure_result.v0.json) | machine-readable consumed LA2 result, green proof, one-open counters, unavailable predicate, and closed FW2 disposition |
+| [docs/MARC_2_VALIDATION_COVERAGE_LOCALIZATION.md](docs/MARC_2_VALIDATION_COVERAGE_LOCALIZATION.md) | artifact-only explanation of the 43-run and 172-companion fixture gap, validator ordering defect, remaining unknowns, and prospective repair |
+| [registries/marc2_validation_coverage_localization_contract.v0.json](registries/marc2_validation_coverage_localization_contract.v0.json) | fixed nine-input VL1 audit contract, route logic, resource caps, candidate boundary, and zero private authority |
+| [registries/marc2_validation_coverage_localization_result.v0.json](registries/marc2_validation_coverage_localization_result.v0.json) | machine-readable `MARC2VL-R2` result, exact coverage arithmetic, AST anchors, zero forbidden counters, and claim ceiling |
 | [docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md](docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md) | layered compact-adapter plus GPT-Sol architecture, four matched conditions, and staged authorization boundary |
 | [docs/FOUNDATION_MODEL_BRIDGE_V0.md](docs/FOUNDATION_MODEL_BRIDGE_V0.md) | implemented FM-0 synthetic no-call schemas, CLI, strict refusals, hashes, and measured roundtrip |
 | [docs/FOUNDATION_MODEL_LIVE_SMOKE_PREREGISTRATION.md](docs/FOUNDATION_MODEL_LIVE_SMOKE_PREREGISTRATION.md) | frozen one-shot FM-1 Terra matrix, privacy boundary, provider settings, resource caps, and no-science ceiling |

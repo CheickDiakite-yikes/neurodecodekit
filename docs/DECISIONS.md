@@ -8119,3 +8119,37 @@ artifacts is eligible; any private read needs a new prospective Tier C gate.
 Evidence: `docs/MARC_2_LIVE_ADAPTER_RECOVERY_RESULT.md`,
 `registries/marc2_live_adapter_recovery_failure_result.v0.json`, and its result
 test.
+
+## 0248 - Localize The Generated Source-Domain Coverage Blind Spot
+
+Order decision: require green LA2 closeout `b19a6e2`, Base job `95147662770`,
+Optional job `95147662795`, and CI `31939990034` before interpreting its
+aggregate refusal through committed artifacts. Do not touch the retained
+manifest, marker, or output root.
+
+Evidence decision: accept artifact-only `MARC2VL-R2`. The public source registry
+binds 23 participants and 238 runs, while the eligibility map contains 19
+participants and 195 session-1/2 runs. The generated fixture creates only those
+195 Freewill-shaped bundles, or 780 required companion rows, then fills its
+remaining 245 regular rows with generic auxiliaries. It therefore omits 43
+published run slots and 172 four-companion slots from the source-shaped test
+domain.
+
+Architecture decision: the live validator's global exact 195-group check occurs
+before eligibility lookup. Separate future source validity from selection
+eligibility: validate every row safely, filter eligible participants/sessions,
+then compare the 195-run eligible inventory. Generated qualification must
+represent all 43 omitted published run slots as Freewill-shaped adversaries.
+
+Inference decision: the exact private LA1 predicate remains unavailable. The
+coverage defect is consistent with the F02 class and sufficient to explain why
+generated certification was incomplete; it does not prove which private leaf
+fired or that private source data are malformed.
+
+Boundary decision: VL1 authorizes no LA2 patch, retry, rerun, resume, private
+read, archive payload, neural data, target, model, score, network operation,
+FW2 entry, release, or claim upgrade. A separately named generated-only repair
+is eligible under Tier B; any future private read remains Tier C.
+
+Evidence: `docs/MARC_2_VALIDATION_COVERAGE_LOCALIZATION.md`, its contract,
+result, module, and two focused tests.
