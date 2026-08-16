@@ -2456,3 +2456,13 @@ derivative, training, prediction, target, scoring, provider, hardware, release,
 and claim flags are false and counters are zero. Next: remotely qualify this
 research, freeze a generated-only VR4 contract, and do not enter FW2 or CIL1
 until the preceding real gates pass.
+
+The generated-only VR4 contract is now frozen. It requires three consecutive
+passing machine samples at least five seconds apart, at most 600 seconds and
+121 samples, exact load/RSS/disk diagnostics, a 300-second certificate expiry,
+one thread, 256 MiB RSS, 15 GiB free disk, and 64 KiB output. Thirty-six
+mutations cover six refusal routes. Its surface has no execute command or
+private source constant. A readiness timeout consumes no future private open;
+the later irreversible boundary remains a separate marker immediately before
+one content open. Current gate: commit and remotely qualify this registration,
+then implement and qualify only the generated/readiness certificate surface.

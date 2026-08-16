@@ -22,6 +22,11 @@
 > CIL1 signal/derangement/timing/no-signal inference. This record is Tier A
 > research only; it authorizes none of those operations.
 
+> Current implementation gate: read
+> `docs/MARC_2_MACHINE_STABLE_STRUCTURAL_RECOVERY_PREREGISTRATION.md` and its
+> contract. VR4 currently has no execute or private-path interface. Commit and
+> remotely qualify the registration before generated readiness implementation.
+
 > Additive foundation-model decision, 2026-08-06: read
 > `docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md` and
 > `registries/foundation_model_decoder_strategy.v0.json`. The intended product
@@ -5092,3 +5097,30 @@ Immediate gate: commit and remotely qualify the Tier A research record, then
 freeze a generated-only VR4 contract. Do not implement a private executor,
 request a member, read signal or targets, train, predict, score, or infer a
 scientific result from this research milestone.
+
+## 2026-08-16 MARC2-VR4 Readiness Contract Handoff
+
+The generated-only contract binds green research commit
+`4c0b0dc5acf56cff5089992a8bcd9954aa532fe5`, Base Python job
+`95209752585`, Optional Neuro Readers job `95209752567`, and CI
+`31965424149`. It also preserves green consumed VR3 proof and zero private
+input.
+
+The Stage A surface is `plan`, `qualify`, `inspect`, and `readiness`; there is
+no execute command or private source constant. Readiness requires three
+consecutive samples at least five seconds apart, up to 600 seconds and 121
+samples, normalized load at most 1.0, RSS below 256 MiB, 15 GiB free disk, and
+all numerical thread variables set to one. The fixed mode-0600 certificate is
+at most 64 KiB and expires after 300 seconds. All exact values and refusal
+reasons must be emitted.
+
+Thirty-six ordered mutations span `MARC2RDY-F00` through `MARC2RDY-F05`.
+A generated `ready=true` certificate grants no private authority. A future
+executor is separately named and Tier C gated; it verifies readiness and puts
+its irreversible marker immediately before one private open, with no second
+opaque load gate.
+
+Immediate gate: commit, push, and obtain both green jobs for this exact
+registration. Then implement only the generated/readiness certificate module.
+Do not prepare a private executor request, access the manifest, enter FW2 or
+CIL1, train, predict, open targets, score, or promote a claim from the contract.

@@ -8501,3 +8501,26 @@ Evidence:
 `docs/MARC_2_MACHINE_STABLE_COHORT_AND_NEURAL_CONTROL_RESEARCH.md`,
 `registries/marc2_machine_stable_cohort_and_neural_control_research.v0.json`,
 and its focused research test.
+
+## 0260 - Freeze A Nonconsuming Machine-Readiness Contract
+
+Contract decision: implement readiness separately from a future private
+executor. Freeze three consecutive passing samples, five-second minimum sample
+interval, 600-second maximum wait, 121-sample maximum, normalized load at most
+1.0, process RSS below 256 MiB, 15 GiB free disk, and all numerical thread
+variables set to one.
+
+Certificate decision: write only one fixed mode-0600 certificate under 64 KiB,
+bind implementation commit and contract hash, report every exact safe value and
+threshold, and expire after 300 seconds. A generated or machine-only
+`ready=true` result grants no private authority.
+
+Boundary decision: expose no execute command or private source constant in
+Stage A. Keep the future executor behind a separate all-false Tier C packet and
+fresh decision. Its eventual marker, not machine polling, begins the one-shot
+private operation. Do not add a second opaque normalized-load consuming gate.
+
+Evidence:
+`docs/MARC_2_MACHINE_STABLE_STRUCTURAL_RECOVERY_PREREGISTRATION.md`,
+`registries/marc2_machine_stable_structural_recovery_contract.v0.json`, and its
+focused contract test.

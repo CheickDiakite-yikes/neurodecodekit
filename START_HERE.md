@@ -204,7 +204,13 @@
    controls. Signal, target-independent derangement, timing, and no-signal are
    explicit, but candidate effect thresholds are not preregistered and every
    private, payload, training, target, scoring, and claim authority remains
-   false.
+   false. Then read
+   `docs/MARC_2_MACHINE_STABLE_STRUCTURAL_RECOVERY_PREREGISTRATION.md` and its
+   contract. VR4 freezes a generated-only readiness certificate with three
+   passing samples, exact diagnostics, 600-second wait, 300-second expiry, 36
+   mutations, and no execute/private-path interface. Registration must pass
+   both remote jobs before implementation; the future private open remains a
+   separate Tier C gate.
    Then
    read `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked

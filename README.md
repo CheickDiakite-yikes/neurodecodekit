@@ -1823,6 +1823,14 @@ Read this before interpreting any number in the repository.
   Held-out models emit continuous target-blind probabilities before one frozen
   onset/target score. This is architecture research, not a preregistration,
   payload authorization, model result, or neural claim.
+- **MARC2-VR4 machine-stable recovery contract:** a frozen generated-only
+  contract now defines three consecutive readiness samples, a 600-second wait,
+  exact load/RSS/disk diagnostics, a 300-second certificate expiry, and 36
+  mutations across six refusal routes. The implementation surface has no
+  execute command or private path. A future private executor remains a separate
+  Tier C packet whose irreversible boundary is the marker immediately before
+  one content open. Registration must become remotely green before generated
+  implementation; FW2 and CIL1 remain closed.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

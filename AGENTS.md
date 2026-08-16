@@ -1720,6 +1720,19 @@ remains ineligible. The next safe work is a separately named machine-stable
 structural recovery plus target-free FW2 architecture research; any new
 private pass remains a fresh Tier C gate.
 
+Read `docs/MARC_2_MACHINE_STABLE_STRUCTURAL_RECOVERY_PREREGISTRATION.md` and
+`registries/marc2_machine_stable_structural_recovery_contract.v0.json`. The
+frozen generated-only `MARC2-VR4` contract has no execute command or private
+source constant. It qualifies a fixed machine readiness certificate using
+three consecutive samples at least five seconds apart, at most 600 seconds and
+121 samples, exact diagnostic values, a 300-second expiry, one thread, 256 MiB
+RSS, 15 GiB free disk, and 64 KiB output. Thirty-six mutations span six refusal
+routes. A machine-only timeout consumes no future private content open. The
+future private executor remains separately gated at a mode-0600 marker before
+one content open and may not add a second opaque load gate. Registration must
+be committed, pushed, and both jobs green before generated implementation.
+Private access, FW2, CIL1, training, targets, scoring, and claims remain false.
+
 Read `docs/MARC_2_MACHINE_STABLE_COHORT_AND_NEURAL_CONTROL_RESEARCH.md` and
 `registries/marc2_machine_stable_cohort_and_neural_control_research.v0.json`.
 VR3 result commit `a186486fcb3dfb2b6d3a743f180b7ac2fa0b4dd3` passed Base

@@ -9759,6 +9759,35 @@ Scientific claim not established: this registration contains no neural
 payload, target, prediction, or score and establishes no neural effect,
 decoding accuracy, language decoding, or thought-to-text capability.
 
+## 2026-08-16 - MARC2-VR4 Machine-Stable Recovery Registration
+
+- Bound green machine-stable research commit
+  `4c0b0dc5acf56cff5089992a8bcd9954aa532fe5`, Base Python job
+  `95209752585`, Optional Neuro Readers job `95209752567`, and CI
+  `31965424149`, plus the green consumed VR3 result.
+- Froze a generated-only readiness surface with `plan`, `qualify`, `inspect`,
+  and `readiness`; there is no execute command, private source constant,
+  consumed executor, network, archive, neural, target, model, or score
+  interface.
+- Required three consecutive passing samples at least five seconds apart, at
+  most 600 seconds and 121 samples, normalized load at most 1.0, RSS below 256
+  MiB, 15 GiB free disk, exact diagnostic values, and a 300-second certificate
+  expiry.
+- Froze 36 ordered mutations across six refusal routes, 64 KiB certificate,
+  1 MiB disk, one thread, zero network/private/archive bytes, and deterministic
+  generated replay.
+- Preserved the later private boundary as a separately gated mode-0600 marker
+  immediately before one content open, with no second opaque load gate.
+- Thirteen focused contract tests pass. Every authority flag is false and every
+  operation counter is zero.
+
+Engineering capability specified: machine readiness can be qualified and
+diagnosed without consuming or even exposing a future private executor.
+
+Scientific claim not established: this registration contains no neural
+payload, target, prediction, or score and establishes no neural effect or
+decoding result.
+
 ## 2026-08-16 - MARC2 Machine-Stable Cohort And Neural-Control Research
 
 - Bound green VR3 result commit `a186486fcb3dfb2b6d3a743f180b7ac2fa0b4dd3`,
