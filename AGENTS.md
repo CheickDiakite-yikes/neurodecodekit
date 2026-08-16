@@ -1651,10 +1651,16 @@ breakdown from live acceptance while preserving the exact 238 total, 195
 eligible, and 43 ineligible bundle invariants and the public participant
 taxonomy. Four generated distributions in canonical and reversed order must
 all replay the same 16-subject, 96-run, 384-member, 8,105,207,776-byte
-selection. Commit, push, and require both CI jobs green before generated-only
-implementation. Do not access a private path, consumed root, archive payload,
-neural value, target, model, score, network, FW2, or claim surface. The
-maintainer's current `continue to eureka` is not retroactive Tier C authority.
+selection. Registration `384373e0ffcfe999ae0ae188087f7e84f09720ca`
+passed Base Python job `95159734989`, Optional Neuro Readers job
+`95159734967`, and CI `31945086852` before implementation. Read
+`docs/MARC_2_LIVE_DOMAIN_ELIGIBILITY_ADAPTER_IMPLEMENTATION.md`, its registry,
+module, and two tests. The generated adapter passes all eight success paths and
+58 refusals while retaining zero output. Commit, push, and require both remote
+jobs green before the one measured generated closeout. Do not access a private
+path, consumed root, archive payload, neural value, target, model, score,
+network, FW2, or claim surface. The maintainer's current `continue to eureka`
+is not retroactive Tier C authority.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

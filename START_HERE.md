@@ -156,8 +156,15 @@
    taxonomy, and unchanged target-free selection. Four generated breakdowns
    in two row orders must all produce the same selection identity. The
    registration is generated-only and implementation must wait for its own
-   remotely green commit; no private path, archive payload, neural data,
-   target, model, score, network operation, or FW2 work is authorized. Then
+   remotely green commit. Registration `384373e` passed Base job
+   `95159734989`, Optional job `95159734967`, and CI `31945086852` before the
+   generated-only implementation began. Read
+   `docs/MARC_2_LIVE_DOMAIN_ELIGIBILITY_ADAPTER_IMPLEMENTATION.md` and its
+   implementation registry. All eight profile/order paths preserve the same
+   target-free selection and all 58 mutations refuse; the exact implementation
+   is awaiting its own remote proof before one measured generated closeout.
+   No private path, archive payload, neural data, target, model, score, network
+   operation, or FW2 work is authorized. Then
    read `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
    result, then use its preregistration and authorization documents for audit.
