@@ -141,12 +141,14 @@ skips. Fresh optional A-M and N-Z processes pass 3,144 tests with 28 skips and
 35 skips.
 
 Ruff, compilation, 241 registry parses, CLI help/plan/inspect, tracked hashes,
-and diff hygiene pass locally. The exact result commit and both remote jobs are
-pending; this document must receive a separate proof update after remote green.
+and diff hygiene pass locally. Result commit
+`7b6899b987dbd64401494ff2901ade1444f1bf60` passed Base Python job
+`95164134927`, Optional Neuro Readers job `95164134941`, and CI
+`31946852669`, completing the remote closeout proof.
 
 ## Disposition
 
-`MARC2-VR2` is complete locally at `MARC2VR2-G1`. Its one measured generated
+`MARC2-VR2` is complete at `MARC2VR2-G1`. Its one measured generated
 closeout is consumed with no retry or rerun.
 
 LA2 remains consumed. This result does not authorize operating on either
@@ -154,11 +156,10 @@ consumed root, retained manifest, marker, or executor. It also does not
 authorize a new private source, archive member, payload, neural value, event,
 target, model, score, network operation, release, or `MARC2-FW2`.
 
-After this exact result record is remotely green, the next safe work is a
-separately named generated-qualified one-shot private structural recovery
-packet. That packet must be all false until a fresh packet-bound maintainer
-decision becomes remotely green. The current `continue to eureka` is not
-retroactive Tier C authority.
+The next safe work is a separately named generated-qualified one-shot private
+structural recovery packet. That packet must be all false until a fresh
+packet-bound maintainer decision becomes remotely green. The current
+`continue to eureka` is not retroactive Tier C authority.
 
 ## Boundary
 

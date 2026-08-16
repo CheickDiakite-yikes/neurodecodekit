@@ -4,7 +4,7 @@
   "result_id": "MARC-2-live-domain-variable-ineligible-eligibility-adapter-generated-result-v0",
   "lane_id": "MARC2-VR2",
   "recorded_at_local": "2026-08-16",
-  "status": "completed_generated_only_qualification_consumed_no_rerun_remote_proof_pending",
+  "status": "completed_generated_only_qualification_consumed_no_rerun_remote_green",
   "route": "MARC2VR2-G1",
   "proof_posture": "generated_live_shaped_structural_metadata_only_no_scientific_value",
   "green_implementation_proof": {
@@ -17,12 +17,12 @@
     "implementation_registry_sha256": "9d975652566616b43c255389bc17e027760772bf86307c58cd51858312528096"
   },
   "closeout_remote_proof": {
-    "result_commit": null,
-    "CI_run_id": null,
-    "base_python_job_id": null,
-    "optional_neuro_job_id": null,
-    "both_required_jobs_green": false,
-    "pending": true
+    "result_commit": "7b6899b987dbd64401494ff2901ade1444f1bf60",
+    "CI_run_id": 31946852669,
+    "base_python_job_id": 95164134927,
+    "optional_neuro_job_id": 95164134941,
+    "both_required_jobs_green": true,
+    "pending": false
   },
   "tracked_input_hashes": [
     {
@@ -71,7 +71,7 @@
     },
     {
       "path": "docs/MARC_2_LIVE_DOMAIN_ELIGIBILITY_ADAPTER_RESULT.md",
-      "sha256": "f4eb8c0ef6966e566f4d79efc38ec67b86e134f6cb880ab105b72d758289c346"
+      "sha256": "b663f4366d80ad2fed1d86ca4b60961598a0c75ec38ac689edfce1aba6e9f850"
     }
   ],
   "registered_execution": {
@@ -255,10 +255,10 @@
     "ruff_compile_CLI_hash_and_diff_hygiene_passed": true,
     "result_record_tests_pending": false,
     "complete_closeout_suite_pending": false,
-    "remote_closeout_CI_pending": true,
-    "remote_closeout_CI_run_id": null,
-    "remote_closeout_base_python_job_id": null,
-    "remote_closeout_optional_neuro_job_id": null
+    "remote_closeout_CI_pending": false,
+    "remote_closeout_CI_run_id": 31946852669,
+    "remote_closeout_base_python_job_id": 95164134927,
+    "remote_closeout_optional_neuro_job_id": 95164134941
   },
   "disposition": {
     "generated_closeout_complete": true,
@@ -268,7 +268,7 @@
     "private_read_or_real_executor_allowed": false,
     "MARC2_FW2_allowed": false,
     "future_private_read_requires_new_contract_generated_qualification_Tier_C_request_and_fresh_decision": true,
-    "next_safe_work": "After this exact result record is remotely green, prospectively specify a separately named one-shot private structural recovery without touching LA2 or entering MARC2-FW2."
+    "next_safe_work": "Prospectively specify a separately named one-shot private structural recovery without touching LA2 or entering MARC2-FW2."
   },
   "warnings": [
     "Every source row and run identity used here is generated.",

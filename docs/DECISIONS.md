@@ -8338,4 +8338,8 @@ packet-bound decision. LA2 and `MARC2-FW2` remain closed, and `continue to
 eureka` is not retroactive authority for that future packet.
 
 Evidence: `docs/MARC_2_LIVE_DOMAIN_ELIGIBILITY_ADAPTER_RESULT.md`, its result
-registry, and result-record test. Exact result remote proof is pending.
+registry, and result-record test.
+
+Proof update: result commit `7b6899b987dbd64401494ff2901ade1444f1bf60`
+passed Base Python job `95164134927`, Optional Neuro Readers job
+`95164134941`, and CI `31946852669`.

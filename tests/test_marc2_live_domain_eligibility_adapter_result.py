@@ -30,7 +30,7 @@ class Marc2LiveDomainEligibilityAdapterResultTests(unittest.TestCase):
         self.assertEqual(self.result["route"], "MARC2VR2-G1")
         self.assertEqual(
             self.result["status"],
-            "completed_generated_only_qualification_consumed_no_rerun_remote_proof_pending",
+            "completed_generated_only_qualification_consumed_no_rerun_remote_green",
         )
 
     def test_green_implementation_proof_is_exact(self):
@@ -44,9 +44,15 @@ class Marc2LiveDomainEligibilityAdapterResultTests(unittest.TestCase):
         self.assertEqual(proof["optional_neuro_job_id"], 95_162_220_159)
         self.assertTrue(proof["both_required_jobs_green_before_registered_closeout"])
         closeout = self.result["closeout_remote_proof"]
-        self.assertIsNone(closeout["result_commit"])
-        self.assertFalse(closeout["both_required_jobs_green"])
-        self.assertTrue(closeout["pending"])
+        self.assertEqual(
+            closeout["result_commit"],
+            "7b6899b987dbd64401494ff2901ade1444f1bf60",
+        )
+        self.assertEqual(closeout["CI_run_id"], 31_946_852_669)
+        self.assertEqual(closeout["base_python_job_id"], 95_164_134_927)
+        self.assertEqual(closeout["optional_neuro_job_id"], 95_164_134_941)
+        self.assertTrue(closeout["both_required_jobs_green"])
+        self.assertFalse(closeout["pending"])
 
     def test_every_tracked_input_hash_is_current(self):
         for binding in self.result["tracked_input_hashes"]:

@@ -2354,7 +2354,10 @@ bytes, ran in 0.5122641660127556 seconds at 32,620,544-byte peak RSS, and
 retained zero output. Every private, archive, neural, target, model, network,
 score, LA2, FW2, and claim counter remained zero.
 
-Current status: generated result consumed with no retry or rerun; exact result
-remote proof pending. LA2 remains consumed, FW2 remains closed, and any future
-private structural read still requires a separately named generated-qualified
-executor, all-false Tier C request, and fresh packet-bound maintainer decision.
+Result commit `7b6899b` passed Base Python job `95164134927`, Optional Neuro
+Readers job `95164134941`, and CI `31946852669`, completing remote proof.
+
+Current status: generated result consumed with no retry or rerun. LA2 remains
+consumed, FW2 remains closed, and any future private structural read still
+requires a separately named generated-qualified executor, all-false Tier C
+request, and fresh packet-bound maintainer decision.

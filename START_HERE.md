@@ -168,10 +168,10 @@
    registry. `MARC2VR2-G1` passed all eight profile/order paths and 58
    refusals in 0.5122641660127556 seconds at 32,620,544-byte peak RSS, with
    zero retained output and every private, neural, target, model, network, and
-   score counter at zero. The generated closeout is consumed with no rerun;
-   result remote proof is pending. No private path, archive payload, neural
-   data, target, model, score, network operation, or FW2 work is authorized.
-   Then
+   score counter at zero. The generated closeout is consumed with no rerun.
+   Result commit `7b6899b` passed both required jobs in CI `31946852669`,
+   completing remote proof. No private path, archive payload, neural data,
+   target, model, score, network operation, or FW2 work is authorized. Then
    read `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
    result, then use its preregistration and authorization documents for audit.

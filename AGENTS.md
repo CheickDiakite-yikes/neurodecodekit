@@ -1666,10 +1666,13 @@ module, and two tests. The generated adapter passes all eight success paths and
 0.5122641660127556 seconds at 32,620,544-byte peak RSS, emitted 4,748
 aggregate stdout bytes, and retained zero output. Every private, archive,
 neural, target, model, score, network, LA2, FW2, and claim counter is zero.
-The generated closeout is consumed with no rerun; exact result remote proof is
-pending. Do not access a private path, consumed root, archive payload, neural
-value, target, model, score, network, FW2, or claim surface. The maintainer's
-current `continue to eureka` is not retroactive Tier C authority.
+The generated closeout is consumed with no rerun. Result commit
+`7b6899b987dbd64401494ff2901ade1444f1bf60` passed Base Python job
+`95164134927`, Optional Neuro Readers job `95164134941`, and CI
+`31946852669`, completing remote proof. Do not access a private path, consumed
+root, archive payload, neural value, target, model, score, network, FW2, or
+claim surface. The maintainer's current `continue to eureka` is not retroactive
+Tier C authority.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

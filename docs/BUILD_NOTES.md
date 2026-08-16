@@ -9853,7 +9853,9 @@ neural effect or decoding result.
   tests with 204 skips; optional A-M/N-Z pass 3,144 tests with 28 skips and 513
   with seven skips, for 3,657 optional-enabled tests with 35 skips. Ruff,
   compilation, 241 registry parses, CLI checks, hashes, and diff hygiene pass.
-  Exact result remote proof remains pending.
+- Result commit `7b6899b987dbd64401494ff2901ade1444f1bf60` passed Base
+  Python job `95164134927`, Optional Neuro Readers job `95164134941`, and CI
+  `31946852669`, completing remote proof.
 
 Engineering capability added: NeuroDecodeKit now validates a live-shaped full
 source domain without freezing a synthetic exclusion distribution and

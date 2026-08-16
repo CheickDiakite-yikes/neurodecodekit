@@ -4940,11 +4940,14 @@ hash.
 Forty-three focused tests pass. The full base suite passes 3,586 tests with 204
 skips; optional A-M/N-Z pass 3,144 tests with 28 skips and 513 with seven
 skips. Ruff, compilation, 241 registry parses, CLI checks, hashes, and diff
-hygiene pass locally. Exact result commit and remote proof remain pending.
+hygiene pass locally. Result commit
+`7b6899b987dbd64401494ff2901ade1444f1bf60` passed Base Python job
+`95164134927`, Optional Neuro Readers job `95164134941`, and CI
+`31946852669`, completing remote proof.
 
 VR2 is consumed with no retry or rerun. Every private, archive, neural, target,
 model, score, network, LA2, FW2, and claim counter is zero. This is engineering
-evidence only. After the exact result record is remotely green, prepare only a
-separately named all-false Tier C packet for a new generated-qualified one-shot
-private structural recovery. Do not touch either consumed root or reuse the
-maintainer's earlier `continue to eureka` as retroactive authorization.
+evidence only. The next safe work is a separately named all-false Tier C
+packet for a new generated-qualified one-shot private structural recovery. Do
+not touch either consumed root or reuse the maintainer's earlier `continue to
+eureka` as retroactive authorization.
