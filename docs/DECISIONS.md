@@ -8827,3 +8827,24 @@ Remote proof: immutable request
 `95236917861`, Optional Neuro Readers job `95236917836`, and CI `31976595268`.
 VR7P is now the sole active Tier C packet. Every authorization flag remains
 false; only fresh packet-bound maintainer words may become a decision.
+
+## 0272 - Bind Fresh Continue Only To The Green VR7P Packet
+
+Eligibility decision: accept the maintainer's exact fresh word `continue` only
+because VR7P was the sole active Tier C packet, immutable request `9d42bac`
+passed both jobs in CI `31976595268`, proof closeout `ecaa2ab` passed both jobs
+in CI `31976872160`, and Codex had identified the scope and fresh-decision gate.
+
+Scope decision: quote only the actual eight UTF-8 bytes and incorporate the
+green packet by reference. Do not fabricate a long maintainer utterance or
+infer FW2, CIL1, archive payload, neural data, training, prediction, scoring,
+live operation, or claim authority.
+
+Ordering decision: this decision must be committed, pushed, and pass both CI
+jobs before generated wrapper implementation. The exact wrapper must then be
+committed, pushed, and pass both jobs before one readiness invocation or
+private structural operation.
+
+Evidence: `docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_AUTHORIZATION_DECISION.md`,
+`registries/marc2_dynamic_private_selection_recovery_authorization_decision.v0.json`,
+and its focused test.

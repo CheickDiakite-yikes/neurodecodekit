@@ -2628,6 +2628,14 @@ maximal-prefix, split, cap, source-semantics, and hash invariants.
 Current status: all authorization flags false, all current counters zero, 11
 tests and 9 artifact-binding subtests pass. Immutable request `9d42bac` passed
 Base job `95236917861`, Optional job `95236917836`, and CI `31976595268`.
-VR7P is the sole active Tier C packet; wait for fresh packet-bound maintainer
-words. Do not implement, inspect private paths, run readiness, read the source,
-freeze a cohort, or enter FW2/CIL1 from this request.
+VR7P then became the sole active Tier C packet. At that request-only boundary,
+no wrapper, private path, readiness, source, cohort, FW2, or CIL1 operation was
+authorized.
+
+The maintainer's next exact message was `continue`. The separate VR7P decision
+quotes those eight bytes and binds only the remotely green packet. Current
+decision-stage counters remain zero. Commit, push, and require both CI jobs
+green for that exact decision before generated wrapper implementation; then
+require both jobs green for the exact wrapper before one structural pass.
+Archive payload, neural data, training, prediction, score, FW2, CIL1, and live
+decoding remain closed.

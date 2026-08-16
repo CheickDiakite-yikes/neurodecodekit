@@ -16,8 +16,10 @@
 > refusals, and zero retry/rerun. Every authorization flag and current counter
 > is false/zero. Request `9d42bac` passed Base job `95236917861`, Optional job
 > `95236917836`, and CI `31976595268`; VR7P is the sole active Tier C packet.
-> Only fresh packet-bound maintainer words can authorize a decision. The current
-> `continue` is not retroactive.
+> The maintainer's next exact word was `continue`, now bound in a separate
+> decision to VR7P only. That decision remains ineffective until its own commit
+> is pushed and both CI jobs pass. Do not implement or touch a private path
+> before that proof; neural payload, FW2, and CIL1 remain closed.
 
 > Current MARC2-VR5A gate, 2026-08-16: registration `926e1ba` passed Base
 > Python job `95226555204`, Optional Neuro Readers job `95226555153`, and CI
@@ -5387,5 +5389,25 @@ failures; all three pass under their required process conditions. Do not
 implement the wrapper, inspect a `.codex_work` path, invoke readiness, create a
 marker, read the source, freeze a cohort, or enter FW2/CIL1. Immutable request
 `9d42bac29b695a97639c4a197812865f0ac4f7d5` passed Base job `95236917861`,
-Optional job `95236917836`, and CI `31976595268`. VR7P is the sole active Tier C
-packet; wait for fresh packet-bound maintainer words.
+Optional job `95236917836`, and CI `31976595268`. VR7P then became the sole
+active Tier C packet; no operation occurred at that request-only boundary.
+
+## 2026-08-16 MARC2-VR7P Decision Handoff
+
+The maintainer supplied the exact fresh word `continue` only after VR7P request
+`9d42bac`, CI `31976595268`, and proof closeout `ecaa2ab`, CI `31976872160`,
+were remotely green and VR7P was identified as the sole active Tier C packet.
+
+The decision document and registry bind those actual eight UTF-8 bytes to the
+unchanged two-stage packet. They authorize generated/mock wrapper work only
+after the decision itself is remotely green. They authorize one structural
+pass only after that exact wrapper implementation is separately remotely green.
+
+All readiness, `.codex_work`, private-source, output-root, marker, structural,
+cohort, archive, neural, target, model, prediction, score, provider, hardware,
+cleanup, and claim counters remain zero at decision recording. Twenty-five
+focused tests pass. The complete inventory ran 3,932 tests with 3,896 passes,
+35 skips, and only the established sandbox forkserver error; that test passed
+outside the sandbox. New failures are zero. Do not implement or perform a
+private operation until the decision commit and both jobs are green. Do not
+enter FW2/CIL1 from this decision.

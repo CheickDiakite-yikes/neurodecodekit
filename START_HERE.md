@@ -41,8 +41,11 @@ structural open, one VR6 call, dynamic 12-19-subject outcomes, and 72 generated
 refusals. Immutable request `9d42bac29b695a97639c4a197812865f0ac4f7d5`
 passed Base Python job `95236917861`, Optional Neuro Readers job `95236917836`,
 and CI `31976595268`. It is the sole active Tier C gate, but every authorization
-field and current counter remains false/zero. A future private structural pass
-still requires a fresh packet-bound decision; this `continue` cannot be reused.
+field and current counter remains false/zero. The maintainer's next exact word
+was `continue`, now recorded in the separate VR7P decision document and
+registry. That decision remains ineffective until its own commit is pushed and
+both CI jobs are green. Do not implement the wrapper or inspect a private path
+before that proof; FW2 and CIL1 remain unauthorized.
 
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.

@@ -88,9 +88,15 @@ is remotely green. Immutable request
 `9d42bac29b695a97639c4a197812865f0ac4f7d5` passed Base Python job
 `95236917861`, Optional Neuro Readers job `95236917836`, and CI `31976595268`.
 It is the sole active Tier C packet, but every authorization field and current
-counter remains false/zero. Only fresh packet-bound maintainer words may be
-recorded as a decision. This work authorizes no private read, cohort, archive
-member, neural payload, target, model, score, FW2, or CIL1 operation.
+counter remains false/zero. The maintainer's next exact message was `continue`.
+Read `docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_AUTHORIZATION_DECISION.md`
+and
+`registries/marc2_dynamic_private_selection_recovery_authorization_decision.v0.json`.
+The decision quotes those eight bytes and binds only the green VR7P packet. It
+is ineffective until its own commit is pushed and both CI jobs pass. Before
+that proof, do not implement the wrapper or perform any private operation. This
+work authorizes no archive member, neural payload, target, model, score, FW2,
+or CIL1 operation.
 Do not touch ignored MARC2 paths, consumed roots, certificates, markers,
 retained sources, archive members, neural data, targets, models, predictions,
 or scores. Any future private read remains a new Tier C packet and fresh
@@ -3252,9 +3258,10 @@ eight route classes. Exact implementation `482dad5` passed both jobs in CI
 `31975600088`. Generated VR6 is complete. The all-false `MARC2-VR7P` request
 now specifies new fixed paths, dynamic outcomes, one future open, and one VR6
 call, but grants zero authority. Request `9d42bac` passed both jobs in CI
-`31976595268` and is the sole active Tier C gate. A later private read still
-needs a fresh packet-bound decision; the current `continue` is not retroactive
-authority.
+`31976595268` and became the sole active Tier C gate. The maintainer then sent
+the fresh word `continue`; the separate VR7P decision binds that word only to
+this packet and remains ineffective until its own commit is remotely green. A
+later private read may occur only after the separately green generated wrapper.
 Do not touch ignored MARC2 paths, consumed roots, certificates, markers,
 retained sources, archive members, neural data, targets, models, predictions,
 or scores. Any future private read remains a new Tier C packet and fresh

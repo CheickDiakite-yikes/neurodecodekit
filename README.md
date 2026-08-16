@@ -1935,7 +1935,9 @@ Read this before interpreting any number in the repository.
   retry, and rerun. All authorization fields and current operation counters are
   false/zero; the packet itself performs no private operation. Immutable
   request `9d42bac` passed both jobs in CI `31976595268` and is the sole active
-  Tier C gate pending fresh packet-bound maintainer words.
+  Tier C gate. The maintainer's fresh word `continue` is now recorded in a
+  separate packet-bound decision that remains ineffective until its own commit
+  is pushed and both CI jobs pass. Neural payloads and FW2 remain closed.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
@@ -2782,6 +2784,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/marc2_dynamic_live_selection_result.v0.json](registries/marc2_dynamic_live_selection_result.v0.json) | machine-readable `MARC2VR6-G1` replay profiles, refusal coverage, resources, warnings, unavailable fields, and no-science ceiling |
 | [docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_AUTHORIZATION_PACKET.md](docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_AUTHORIZATION_PACKET.md) | all-false VR7P two-stage request, new fixed paths, dynamic cohort invariants, one-open boundary, resources, prohibitions, and claim ceiling |
 | [registries/marc2_dynamic_private_selection_recovery_authorization_request.v0.json](registries/marc2_dynamic_private_selection_recovery_authorization_request.v0.json) | machine-readable VR7P green predecessors, fixed artifacts, future state machine, zero counters, and fresh-decision requirement |
+| [docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_AUTHORIZATION_DECISION.md](docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_AUTHORIZATION_DECISION.md) | packet-bound VR7P short-form decision, delayed effect, exact two-stage order, dynamic cohort boundary, resources, and no-neural ceiling |
+| [registries/marc2_dynamic_private_selection_recovery_authorization_decision.v0.json](registries/marc2_dynamic_private_selection_recovery_authorization_decision.v0.json) | machine-readable fresh `continue`, immutable request/proof bindings, conditional authority, zero decision counters, and next remote-green gate |
 | [docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md](docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md) | frozen generated-only 238-bundle repair design, filter-before-count order, aggregate predicates, mutations, resources, and claim boundary |
 | [registries/marc2_source_validity_eligibility_repair_contract.v0.json](registries/marc2_source_validity_eligibility_repair_contract.v0.json) | machine-readable `MARC2-VR1` source-validity and eligibility contract with 43 generated adversary bundles and all authority flags false |
 | [docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md](docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md) | generated-only full-source validator, eligibility-first selection order, refusal coverage, local verification, and exact remote-proof gate |

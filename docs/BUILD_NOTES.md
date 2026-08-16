@@ -10808,3 +10808,31 @@ freeze a dynamically measured cohort without fixture-identical live outcomes.
 
 Scientific claim not established: the packet reads no neural payload, target,
 prediction, or score and establishes no neural effect or decoding result.
+
+## 2026-08-16 - MARC2-VR7P Packet-Bound Decision Recorded
+
+- Reverified immutable request `9d42bac`, CI `31976595268`, and proof closeout
+  `ecaa2ab`, CI `31976872160`, with both required jobs green for each commit.
+- After VR7P was identified as the sole active Tier C packet, the maintainer's
+  next exact message was `continue`.
+- Preserved those eight UTF-8 bytes and SHA-256 without fabricating the packet's
+  long scope as a maintainer utterance.
+- Bound only the registered two-stage sequence: generated/mock fixed-path
+  wrapper after this decision is remotely green, then one structural pass only
+  after the exact wrapper is remotely green.
+- Kept every readiness, private-source, output-root, marker, cohort, archive,
+  neural, target, model, prediction, score, provider, hardware, cleanup, and
+  claim counter at zero while recording the decision.
+- Twenty-five focused request/decision tests pass. The canonical dependency-
+  light inventory ran 3,932 tests: 3,896 passed, 35 skipped, and the sole error
+  was the established sandbox forkserver-socket denial. That exact test passed
+  outside the sandbox in 2.08 seconds. Fourteen tests were added and new
+  failures versus the parent are zero. Remote CI remains required before
+  wrapper implementation may begin.
+
+Engineering capability authorized after green decision: a newly qualified
+wrapper may freeze a dynamically measured target-free real cohort from the one
+registered structural source.
+
+Scientific claim not established: this decision accessed no neural data and
+establishes no decoding performance, neural effect, or live decoding result.
