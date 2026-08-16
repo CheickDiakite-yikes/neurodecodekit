@@ -175,13 +175,17 @@
    read
    `docs/MARC_2_VARIABLE_DOMAIN_PRIVATE_RECOVERY_AUTHORIZATION_PACKET.md` and
    `registries/marc2_variable_domain_private_recovery_authorization_request.v0.json`.
-   `MARC2-VR3` is an all-false request for a new generated/mock-only wrapper
-   and, only after separate green decision and implementation proofs, one
-   exact no-retry structural-manifest read through VR2. Packet preparation
-   authorizes no implementation, private-path operation, archive member,
-   neural byte, target, model, score, or FW2 work. It must be committed,
-   pushed, and pass both CI jobs before it may be identified as the sole active
-   Tier C gate. The current `continue to eureka` is not retroactive authority.
+   Request commit `328faa8` passed Base Python job `95166799271`, Optional
+   Neuro Readers job `95166799305`, and CI `31947928896`. Then read
+   `docs/MARC_2_VARIABLE_DOMAIN_PRIVATE_RECOVERY_AUTHORIZATION_DECISION.md`
+   and its decision registry. The maintainer's fresh three-line instruction is
+   preserved verbatim and binds only the green `MARC2-VR3` packet. The
+   decision itself must be committed, pushed, and pass both CI jobs before a
+   generated/mock wrapper may be implemented. Only after that exact wrapper is
+   separately remotely green may one no-retry structural-manifest pass occur.
+   The requested FW2 experiment may be preregistered after a successful cohort
+   freeze, but this decision does not authorize archive-member access, neural
+   training, prediction freezing, target delivery, scoring, or a claim.
    Then
    read `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked

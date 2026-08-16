@@ -2362,7 +2362,7 @@ consumed, FW2 remains closed, and any future private structural read still
 requires a separately named generated-qualified executor, all-false Tier C
 request, and fresh packet-bound maintainer decision.
 
-### MARC2-VR3 - Variable-Domain Private Recovery (All-False Packet)
+### MARC2-VR3 - Variable-Domain Private Recovery (Decision Pending Green)
 
 The next prospective lane binds proof addendum `bdd34d9`, CI `31947198122`,
 the green VR2 adapter/result, the consumed LA2 failure boundary, and one exact
@@ -2385,7 +2385,16 @@ invocation with no retry or rerun. Success would establish only a real
 structural cohort manifest and would not authorize FW2, neural payload access,
 training, scoring, or a scientific claim.
 
-Current status: all authorization flags false. Commit, push, and require both
-packet CI jobs green before identifying VR3 as the sole active Tier C gate.
-Only fresh maintainer words after that identification may be recorded in a
-separate decision; `continue to eureka` is not retroactive authority.
+Request commit `328faa8` passed Base Python job `95166799271`, Optional Neuro
+Readers job `95166799305`, and CI `31947928896`. The maintainer's next
+three-line instruction authorizes the exact VR3 sequence by reference and is
+preserved verbatim in a separate decision. That decision explicitly treats
+the later FW2 sentences as requested design direction, not authority for an
+undefined neural execution.
+
+Current status: decision recorded locally but ineffective until its exact
+commit is pushed and both CI jobs are green. Wrapper implementation and every
+private-path operation remain closed. After a successful structural freeze,
+the next tracker item is a bounded FW2 preregistration with signal,
+derangement, timing-only, and no-signal controls plus a separate all-false
+Tier C request.

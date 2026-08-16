@@ -1,5 +1,20 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2 handoff, 2026-08-16: request commit `328faa8` passed Base
+> Python job `95166799271`, Optional Neuro Readers job `95166799305`, and CI
+> `31947928896`. Read
+> `docs/MARC_2_VARIABLE_DOMAIN_PRIVATE_RECOVERY_AUTHORIZATION_DECISION.md` and
+> its registry. The maintainer's fresh three-line message is quoted verbatim
+> and authorizes only the exact `MARC2-VR3` two-stage sequence. The decision is
+> ineffective until committed, pushed, and both jobs are green. After that,
+> implement and generated-qualify the new wrapper without touching a retained
+> path; only after the exact wrapper is separately remotely green may one
+> no-retry 418,755-byte structural-manifest pass freeze the real cohort. The
+> requested FW2 design may be preregistered after successful selection, but
+> archive members, neural data, training, prediction freeze, target delivery,
+> score, and claims require a new packet and fresh decision. Never touch the
+> consumed LA2 root or the unrelated tracker inspection NDJSON.
+
 > Additive foundation-model decision, 2026-08-06: read
 > `docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md` and
 > `registries/foundation_model_decoder_strategy.v0.json`. The intended product

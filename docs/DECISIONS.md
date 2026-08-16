@@ -8386,3 +8386,29 @@ Evidence:
 `docs/MARC_2_VARIABLE_DOMAIN_PRIVATE_RECOVERY_AUTHORIZATION_PACKET.md`,
 `registries/marc2_variable_domain_private_recovery_authorization_request.v0.json`,
 and its request test.
+
+## 0256 - Record The Packet-Bound MARC2-VR3 Decision
+
+Authorization decision: preserve the maintainer's actual three-line message,
+240 UTF-8 bytes with SHA-256
+`b104fe21f692a84f6b9aef74f5d7b0f80f025ea2d5b103798efec4246eff618f`.
+Bind its fresh `continue` and structural-manifest direction only to green
+request `328faa8`, CI `31947928896`, Base Python job `95166799271`, Optional
+Neuro Readers job `95166799305`, and the exact request/packet hashes.
+
+Scope decision: authorize Stage 1 generated/mock wrapper work only after this
+decision is remotely green, and one no-retry structural-manifest pass only
+after that exact wrapper is separately remotely green. Preserve the requested
+FW2 signal, derangement, timing-only, and no-signal experiment as the next
+Tier A preregistration after successful cohort freeze.
+
+Boundary decision: the current message cannot authorize real FW2 execution
+because no immutable FW2 cohort identity, model matrix, target firewall,
+prediction-freeze protocol, score boundary, or resource cap exists yet. Do not
+open an archive member, neural value, target, or consumed root; do not train,
+predict, freeze, score, rerun, clean up, or promote a claim from this decision.
+
+Evidence:
+`docs/MARC_2_VARIABLE_DOMAIN_PRIVATE_RECOVERY_AUTHORIZATION_DECISION.md`,
+`registries/marc2_variable_domain_private_recovery_authorization_decision.v0.json`,
+and its focused decision test.

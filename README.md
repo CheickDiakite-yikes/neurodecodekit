@@ -1783,17 +1783,19 @@ Read this before interpreting any number in the repository.
   `31946852669`, completing remote proof. This proves the live-domain adapter
   is not tied to a synthetic exclusion mix. It proves no neural effect or
   decoding result and authorizes no private read or FW2 work.
-- **MARC2-VR3 variable-domain private recovery packet:** the next prospective
-  lane is now specified as an all-false Tier C request. It binds the green VR2
-  proof, the exact previously registered 418,755-byte structural manifest
-  identity, a brand-new generated/mock-only proof-gated wrapper, and one later
-  no-retry private structural read only after that exact wrapper is remotely
-  green. The wrapper must call `adapt_live_domain_source` once, validate all
-  238 bundles before filtering to `195 + 43`, preserve the frozen selector,
-  and stop before every archive member and neural byte. No implementation,
-  path, output-root, private read, FW2 work, or scientific claim is authorized
-  by the packet. The current `continue to eureka` is not retroactive Tier C
-  permission.
+- **MARC2-VR3 variable-domain private recovery decision:** request commit
+  `328faa8` passed Base Python job `95166799271`, Optional Neuro Readers job
+  `95166799305`, and CI `31947928896`. The maintainer's fresh three-line
+  instruction is preserved verbatim in the separate decision and binds only
+  the green VR3 packet. That decision must itself be committed, pushed, and
+  remotely green before a new generated/mock-only wrapper may be built. Only
+  after the exact wrapper is separately green may one no-retry pass read the
+  registered 418,755-byte structural manifest, validate all 238 bundles before
+  filtering to `195 + 43`, and freeze a target-free real cohort. The requested
+  FW2 signal/derangement/timing/no-signal experiment may be preregistered after
+  a successful freeze, but no archive member, neural training, prediction
+  freeze, target delivery, score, or scientific claim is authorized by this
+  decision.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

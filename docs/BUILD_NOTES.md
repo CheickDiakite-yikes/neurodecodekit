@@ -9759,6 +9759,37 @@ Scientific claim not established: this registration contains no neural
 payload, target, prediction, or score and establishes no neural effect,
 decoding accuracy, language decoding, or thought-to-text capability.
 
+## 2026-08-16 - MARC2-VR3 Packet-Bound Authorization Decision
+
+- Reverified request commit `328faa845d894459a658b6ad62d078a00f539e9e`
+  against origin and GitHub CI `31947928896`; Base Python job `95166799271`
+  and Optional Neuro Readers job `95166799305` both succeeded.
+- Preserved the maintainer's actual three-line message as 240 UTF-8 bytes with
+  SHA-256 `b104fe21f692a84f6b9aef74f5d7b0f80f025ea2d5b103798efec4246eff618f`.
+- Bound only the exact green `MARC2-VR3` two-stage scope. The requested future
+  FW2 experiment is recorded as a design directive, not retroactive authority
+  for archive-member access, neural training, prediction freezing, target
+  delivery, or scoring.
+- The decision remains ineffective until its exact commit is pushed and both
+  remote jobs are green. No wrapper, output root, retained path, private byte,
+  archive member, neural value, target, model, score, network, cleanup, or
+  claim operation occurred while recording it.
+- Thirty-four focused decision/request tests pass. The complete optional-
+  enabled inventory passes in the established fresh-process split: 3,178 A-M
+  tests with 28 skips and 513 N-Z tests with seven skips, for 3,691 passing
+  tests and 35 skips. Project-pinned Ruff, compilation, all registry JSON, and
+  diff hygiene pass. A monolithic local replay reproduced the known sandboxed
+  forkserver refusal plus two late order-sensitive mechanical gates after
+  process-wide RSS accumulation; all three pass in fresh processes, and no
+  decision test failed.
+
+Engineering capability authorized only after green proof: a new generated-
+qualified wrapper may perform one exact target-free structural cohort freeze.
+
+Scientific claim not established: this decision is not neural data or a
+result and establishes no neural effect, decoding accuracy, language decoding,
+or thought-to-text capability.
+
 ## 2026-08-16 - MARC2-VR2 Live-Domain Eligibility Adapter Registration
 
 - Bound the remotely green VR1 proof addendum
