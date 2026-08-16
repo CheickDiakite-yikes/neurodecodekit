@@ -9682,3 +9682,38 @@ result.
 Scientific claim not established: no neural payload, target, prediction, or
 score was accessed, so this metadata identity failure establishes no neural
 effect, decoding accuracy, language decoding, or thought-to-text capability.
+
+## 2026-08-16 - MARC2-SL1 Exact Source-Schema Lineage Diagnosis
+
+- Consumed-result commit `512b84b17893762bb60275b29e9d5da875c8a4e0`
+  passed Base Python job `95124886816`, Optional Neuro Readers job
+  `95124886768`, and CI `31930686034` before the artifact-only closeout.
+- Added a fixed-path standard-library auditor that hash-checks nine committed
+  inputs, parses three Python modules with `ast`, parses seven JSON artifacts
+  including its contract with duplicate-key rejection, and exposes only
+  `plan` and `audit` module commands.
+- Route `MARC2SL-R2` identifies one exact key mismatch. The producer forwards
+  `directory`, `metadata`, and `tail`; generated fixture and both consumer
+  validators require `central_directory`, `metadata`, and `tail`.
+- This explains why generated tests passed while live source validation failed:
+  the generated and consumer surfaces agreed with each other but did not match
+  the source producer's vocabulary.
+- Measured audit: 310,015 input bytes, 0.02764545800164342 seconds,
+  35,717,120-byte peak RSS, 5,454 output bytes, one thread/worker/job, and zero
+  private, archive, neural, target, model, score, network, retry, or claim
+  operations. No generated output was retained.
+- The frozen prospective design validates source-native keys first and then
+  maps `directory` to `central_directory` exactly once without changing any
+  hash value. It is not implemented and authorizes no private read.
+- Twenty-eight focused tests pass. The complete dependency-light suite passes
+  3,254 tests with 204 skips; optional A-M and N-Z pass 2,812 with 28 skips and
+  513 with seven skips, respectively. Ruff, compilation, all 221 registries,
+  CLI help/plan/audit, tracked hashes, and diff hygiene pass.
+
+Engineering capability added: NeuroDecodeKit can statically reconcile exact
+producer and consumer schemas and diagnose an integration failure without
+private reinspection.
+
+Scientific claim not established: no neural payload, target, prediction, or
+score was accessed, so this audit establishes no neural effect, decoding
+accuracy, language decoding, or thought-to-text capability.

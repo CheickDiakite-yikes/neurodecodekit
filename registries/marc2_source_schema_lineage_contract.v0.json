@@ -1,0 +1,170 @@
+{
+  "schema_name": "neurodecodekit.marc2_source_schema_lineage_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "MARC-2-source-schema-lineage-artifact-audit-v0",
+  "lane_id": "MARC2-SL1",
+  "recorded_at_local": "2026-08-16",
+  "status": "frozen_artifact_only_engineering_diagnosis_no_private_or_scientific_operation",
+  "objective": "Determine whether the exact committed MARC-1 producer and MARC-2 consumer disagree on a structural manifest vocabulary using only hash-bound public repository artifacts.",
+  "fixed_inputs": [
+    {
+      "role": "producer_live_module",
+      "path": "src/neurodecodekit/datasets/marc1_central_directory_live.py",
+      "sha256": "f25464be139a0f4dad813f255be6d91eb803f35a50b045baea4aa7b27e5549d5"
+    },
+    {
+      "role": "producer_implementation_registry",
+      "path": "registries/marc1_freewill_central_directory_live_implementation.v0.json",
+      "sha256": "b0e2c0fe20a20b142fa53c387ffd4fe467aff9898ecd1ab1eadc3a441f8405b0"
+    },
+    {
+      "role": "producer_public_live_result",
+      "path": "registries/marc1_freewill_central_directory_live_result.v0.json",
+      "sha256": "fee969818b4e3e2ef7aee86096ad676c9bd70f80d19f2fd6dbe0e8069175257b"
+    },
+    {
+      "role": "selector_module",
+      "path": "src/neurodecodekit/datasets/marc2_freewill_prefix_selection.py",
+      "sha256": "86fa30fbd1caed735f0fb2e627144482a2bb8e033567bb3794e3f05508005c97"
+    },
+    {
+      "role": "selector_contract",
+      "path": "registries/marc2_freewill_prefix_selection_contract.v0.json",
+      "sha256": "dfe614cd7ec27c54c4f03848e3878c714222db043f501b9b07e57c7dc9f5f702"
+    },
+    {
+      "role": "selector_implementation_registry",
+      "path": "registries/marc2_freewill_prefix_selection_implementation.v0.json",
+      "sha256": "eef9daf1fd647f654563c5f46c390a09001720934b3a6bfdaad0fbdce7727d03"
+    },
+    {
+      "role": "recovery_module",
+      "path": "src/neurodecodekit/datasets/marc2_freewill_private_selection_recovery.py",
+      "sha256": "44d37dcc854e2857e98bcff3dd7f46580c75e32de5d74c94bbe474c8e3ab7c64"
+    },
+    {
+      "role": "recovery_implementation_registry",
+      "path": "registries/marc2_live_selection_recovery_implementation.v0.json",
+      "sha256": "dcd95616ad65b1b44b13f3116e6a63ea77d958705f4e9bcfad12d8b74a841edc"
+    },
+    {
+      "role": "recovery_failure_result",
+      "path": "registries/marc2_live_selection_recovery_failure_result.v0.json",
+      "sha256": "be4c260d5798dbf76fb8b6f12d78f383ec63fc6f2f78fb3119f648d56c6c8c0d"
+    }
+  ],
+  "registered_lineage": {
+    "private_manifest_schema_name": "neurodecodekit.marc1_central_directory_private_manifest",
+    "private_manifest_schema_version": "0.1.0",
+    "private_manifest_bytes": 418755,
+    "private_manifest_sha256": "2a2e48b88ee59332a199d926554bb6921222fff92046a0fc9b07cf73fd6c3031",
+    "producer_manifest_function": "_private_manifest",
+    "producer_forwarded_field": "transport_body_sha256",
+    "producer_forwarded_source_field": "response_body_sha256",
+    "producer_public_transport_keys": [
+      "directory",
+      "metadata",
+      "tail"
+    ],
+    "selector_fixture_function": "build_generated_manifest",
+    "selector_fixture_transport_keys": [
+      "central_directory",
+      "metadata",
+      "tail"
+    ],
+    "selector_validator_function": "_validate_manifest",
+    "selector_validator_transport_keys": [
+      "central_directory",
+      "metadata",
+      "tail"
+    ],
+    "recovery_validator_function": "_validate_live_source_identity",
+    "recovery_validator_transport_keys": [
+      "central_directory",
+      "metadata",
+      "tail"
+    ],
+    "expected_shared_transport_keys": [
+      "metadata",
+      "tail"
+    ],
+    "expected_producer_only_transport_keys": [
+      "directory"
+    ],
+    "expected_consumer_only_transport_keys": [
+      "central_directory"
+    ],
+    "observed_consumed_route": "MARC2FWC-F02",
+    "observed_consumed_stage": "target_free_prefix_selection",
+    "observed_safe_reason": "live source identity differs"
+  },
+  "ordered_routes": [
+    {
+      "route": "MARC2SL-R1",
+      "meaning": "producer and consumer transport vocabularies are exactly compatible"
+    },
+    {
+      "route": "MARC2SL-R2",
+      "meaning": "one exact producer-to-consumer transport-key alias mismatch is sufficient to explain the consumed structural refusal"
+    },
+    {
+      "route": "MARC2SL-R3",
+      "meaning": "multiple or different committed schema mismatches require a new diagnosis"
+    },
+    {
+      "route": "MARC2SL-F01",
+      "meaning": "a fixed artifact path hash JSON identity or Python syntax differs"
+    },
+    {
+      "route": "MARC2SL-F02",
+      "meaning": "the required producer forwarding or consumer key-set AST anchor is unavailable or ambiguous"
+    }
+  ],
+  "prospective_adapter_design": {
+    "source_validation_vocabulary": [
+      "directory",
+      "metadata",
+      "tail"
+    ],
+    "selector_internal_vocabulary": [
+      "central_directory",
+      "metadata",
+      "tail"
+    ],
+    "single_allowed_alias": {
+      "source_key": "directory",
+      "selector_key": "central_directory"
+    },
+    "validation_before_adaptation_required": true,
+    "missing_duplicate_or_both_aliases_refused": true,
+    "transport_hash_values_must_be_preserved_byte_for_byte": true,
+    "consumed_executor_patch_or_reuse_allowed": false,
+    "future_live_access_requires_new_contract_and_Tier_C_decision": true
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 10,
+    "peak_RSS_bytes": 134217728,
+    "generated_output_bytes": 1048576,
+    "network_bytes": 0,
+    "private_or_Git_ignored_bytes": 0
+  },
+  "forbidden_operations": {
+    "private_manifest_path_stat_open_hash_parse_or_probe": true,
+    "consumed_marker_or_output_root_access": true,
+    "archive_local_header_member_or_payload_access": true,
+    "signal_event_target_label_quality_channel_or_geometry_access": true,
+    "derivative_cache_feature_split_or_neurotoken_creation": true,
+    "training_inference_prediction_freeze_delivery_or_score": true,
+    "network_download_provider_language_model_stream_device_or_hardware": true,
+    "consumed_executor_patch_retry_rerun_resume_repair_or_substitution": true,
+    "MARC2_FW2_entry": true,
+    "release_publication_or_scientific_claim_upgrade": true
+  },
+  "claim_boundary": {
+    "engineering_claim_if_R2": "The committed producer and consumer schemas contain one exact transport-key vocabulary mismatch that is sufficient to explain the consumed structural refusal without private reinspection.",
+    "scientific_claim_not_established": "Committed code and aggregate registries contain no neural payload target prediction or score and establish no neural effect decoding accuracy language decoding or thought-to-text capability."
+  }
+}

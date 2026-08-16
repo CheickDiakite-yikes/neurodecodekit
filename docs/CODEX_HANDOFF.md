@@ -4495,3 +4495,34 @@ lineage audit over committed producer code, contracts, and aggregate records.
 Do not infer a private-field diagnosis. Any future live recovery needs a fresh
 generated contract and Tier C sequence. `MARC2-FW2`, payloads, neural work,
 targets, models, scores, providers, hardware, and claim upgrades remain closed.
+
+## 2026-08-16 MARC2-SL1 Schema-Lineage Handoff
+
+Consumed-result commit `512b84b17893762bb60275b29e9d5da875c8a4e0`
+passed Base Python job `95124886816`, Optional Neuro Readers job
+`95124886768`, and CI `31930686034`. Read
+`docs/MARC_2_SOURCE_SCHEMA_LINEAGE_AUDIT.md`, its contract/result registries,
+the standard-library auditor, and both tests.
+
+The fixed artifact-only audit routed `MARC2SL-R2`. Exact producer code forwards
+public transport hashes under `directory`, `metadata`, and `tail`. The
+generated selector fixture, selector validator, and FW1C validator all require
+`central_directory`, `metadata`, and `tail`. Their exact one-key alias mismatch
+is sufficient to explain F02. The shared source hash and byte identity match
+across committed records; no private field value was observed or inferred.
+
+The measured audit read 310,015 committed bytes, ran in 0.02764545800164342
+seconds at 35,717,120-byte peak RSS, emitted 5,454 aggregate bytes, and retained
+no generated output. Private, Git-ignored, marker, output-root, archive, signal,
+target, model, score, network, provider, hardware, retry, FW2, and claim
+counters are zero.
+
+Twenty-eight focused, 3,254 dependency-light, and 3,325 optional-neuro tests
+pass. Ruff, compilation, all 221 registries, CLI help/plan/audit, tracked
+hashes, and diff hygiene pass.
+
+Immediate next safe task: freeze and generated-qualify a separately named
+source-native-to-selector adapter. It must validate `directory`, `metadata`,
+and `tail` first, then map `directory` to `central_directory` exactly once
+without changing a hash value. Do not patch or reuse consumed FW1C. No private
+read or `MARC2-FW2` work is authorized.

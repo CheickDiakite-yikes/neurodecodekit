@@ -1489,7 +1489,17 @@ selection, and performed zero archive, signal, target, model, or score work.
 Do not retry, reopen or probe the private source, inspect the consumed marker,
 list either output root, or enter `MARC2-FW2`. The next safe work is a new
 artifact-only committed-schema lineage audit; any future live read requires a
-separately frozen generated design and fresh Tier C gate.
+separately frozen generated design and fresh Tier C gate. Read
+`docs/MARC_2_SOURCE_SCHEMA_LINEAGE_AUDIT.md` and
+`registries/marc2_source_schema_lineage_result.v0.json`. `MARC2-SL1` parsed
+three exact modules and seven strict JSON artifacts and routed `MARC2SL-R2`:
+the producer forwards `directory`, `metadata`, and `tail`, while the generated
+fixture, selector validator, and FW1C validator require `central_directory`,
+`metadata`, and `tail`. The one-key alias mismatch is sufficient to explain
+F02; no private value was observed. A future adapter must validate the
+source-native keys before a one-way `directory` to `central_directory` map.
+Do not patch or reuse FW1C. Generated adapter qualification is the next safe
+task; live access and `MARC2-FW2` remain separately gated.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

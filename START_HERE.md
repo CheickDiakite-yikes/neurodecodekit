@@ -70,7 +70,13 @@
    result test. One exact 418,755-byte structural read passed size, hash, and
    strict JSON, then consumed at `MARC2FWC-F02` because strict live source
    identity differed. Zero participants or members were selected, no private
-   selection was written, no retry is open, and `MARC2-FW2` is ineligible.
+   selection was written, no retry is open, and `MARC2-FW2` is ineligible. Then
+   read `docs/MARC_2_SOURCE_SCHEMA_LINEAGE_AUDIT.md` and its result registry.
+   Artifact-only `MARC2-SL1` found the exact integration defect: the producer
+   emits transport key `directory`, while the generated fixture and both
+   consumer validators require `central_directory`. This explains F02 without
+   private reinspection. The next safe task is generated-only qualification of
+   a new source-native-to-selector adapter; no live read is authorized.
    Archive members, payloads, signals, targets, models, scores, language
    datasets, provider calls, and `MARC2-FW2` remain unauthorized. Then read
    `docs/CODEX_HANDOFF.md` for the exact handoff state.

@@ -1,0 +1,197 @@
+{
+  "schema_name": "neurodecodekit.marc2_source_schema_lineage_result",
+  "schema_version": "0.1.0",
+  "result_id": "MARC-2-source-schema-lineage-artifact-audit-result-v0",
+  "lane_id": "MARC2-SL1",
+  "recorded_at_local": "2026-08-16",
+  "status": "completed_exact_committed_transport_key_lineage_diagnosis",
+  "route": "MARC2SL-R2",
+  "proof_posture": "post_failure_artifact_only_engineering_diagnosis_no_private_or_scientific_value",
+  "upstream_consumed_result_proof": {
+    "commit": "512b84b17893762bb60275b29e9d5da875c8a4e0",
+    "CI_run_id": 31930686034,
+    "base_python_job_id": 95124886816,
+    "optional_neuro_job_id": 95124886768,
+    "both_required_jobs_green_before_lineage_closeout": true,
+    "consumed_route": "MARC2FWC-F02",
+    "consumed_result_registry_sha256": "be4c260d5798dbf76fb8b6f12d78f383ec63fc6f2f78fb3119f648d56c6c8c0d"
+  },
+  "contract": {
+    "path": "registries/marc2_source_schema_lineage_contract.v0.json",
+    "sha256": "1ef2f481219a002318acddeca02b0dccf2b54b636c93b712defce82b9e7ff1ce",
+    "fixed_committed_input_artifacts": 9,
+    "private_or_Git_ignored_input_artifacts": 0
+  },
+  "tracked_file_hashes": [
+    {
+      "path": "src/neurodecodekit/datasets/marc2_source_schema_lineage.py",
+      "sha256": "9abab6355157aa43aac65bb8e4cbb1e50fdaad76cf494ff837a5c936e9a633f9"
+    },
+    {
+      "path": "tests/test_marc2_source_schema_lineage.py",
+      "sha256": "7f6c27a7e0cc7762df8ba757efb03dca2bf2c9b2c4b4f3ac1401d8d42c3f1710"
+    },
+    {
+      "path": "docs/MARC_2_SOURCE_SCHEMA_LINEAGE_AUDIT.md",
+      "sha256": "5bb2d0aa724799286adfb9715dceccdf3db9cc4c876454875eb37d9582289164"
+    },
+    {
+      "path": "registries/marc2_source_schema_lineage_contract.v0.json",
+      "sha256": "1ef2f481219a002318acddeca02b0dccf2b54b636c93b712defce82b9e7ff1ce"
+    }
+  ],
+  "lineage": {
+    "producer_manifest_forwarding_verified_by_AST": true,
+    "producer_public_transport_keys": [
+      "directory",
+      "metadata",
+      "tail"
+    ],
+    "selector_fixture_transport_keys": [
+      "central_directory",
+      "metadata",
+      "tail"
+    ],
+    "selector_validator_transport_keys": [
+      "central_directory",
+      "metadata",
+      "tail"
+    ],
+    "recovery_validator_transport_keys": [
+      "central_directory",
+      "metadata",
+      "tail"
+    ],
+    "shared_transport_keys": [
+      "metadata",
+      "tail"
+    ],
+    "producer_only_transport_keys": [
+      "directory"
+    ],
+    "consumer_only_transport_keys": [
+      "central_directory"
+    ],
+    "consumer_internal_consistent": true,
+    "exact_single_alias_mismatch": true,
+    "source_binding_hash_and_bytes_match_across_committed_records": true,
+    "observed_failure_identity_matches": true,
+    "sufficient_to_explain_observed_structural_refusal": true,
+    "actual_private_field_or_value_observed": false,
+    "private_source_malformed_inferred": false
+  },
+  "root_cause": {
+    "class": "generated_fixture_and_consumer_validator_shared_non_source_native_transport_key",
+    "producer_key": "directory",
+    "consumer_key": "central_directory",
+    "why_generated_tests_passed": "The generated fixture selector validator and recovery validator used the same consumer-only key and therefore proved internal consistency without producer compatibility.",
+    "why_live_selection_refused": "The exact producer forwards its public response_body_sha256 map unchanged while the live consumer requires a different exact key set before selection.",
+    "data_or_scientific_failure": false
+  },
+  "prospective_adapter_design": {
+    "source_validation_vocabulary": [
+      "directory",
+      "metadata",
+      "tail"
+    ],
+    "selector_internal_vocabulary": [
+      "central_directory",
+      "metadata",
+      "tail"
+    ],
+    "single_allowed_alias": {
+      "source_key": "directory",
+      "selector_key": "central_directory"
+    },
+    "validation_before_adaptation_required": true,
+    "missing_duplicate_or_both_aliases_refused": true,
+    "transport_hash_values_must_be_preserved_byte_for_byte": true,
+    "producer_to_adapter_to_selector_fixture_required": true,
+    "consumed_executor_patch_or_reuse_allowed": false,
+    "future_live_access_requires_new_contract_and_Tier_C_decision": true
+  },
+  "measurements": {
+    "input_artifact_count": 10,
+    "input_bytes": 310015,
+    "Python_AST_parses": 3,
+    "strict_JSON_parses": 7,
+    "runtime_seconds": 0.02764545800164342,
+    "peak_RSS_bytes": 35717120,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "aggregate_output_bytes": 5454,
+    "retained_generated_output_bytes": 0,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "producer_is_causal": "not_applicable_artifact_only",
+    "end_to_end_latency_measured": false
+  },
+  "access_counters": {
+    "committed_public_artifact_reads": 10,
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_marker_or_output_root_operations": 0,
+    "archive_local_header_or_member_payload_reads": 0,
+    "signal_event_target_label_quality_channel_or_geometry_reads": 0,
+    "derivative_cache_feature_split_or_neurotoken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "network_download_provider_or_language_model_operations": 0,
+    "stream_device_or_hardware_operations": 0,
+    "consumed_executor_patch_retry_rerun_resume_or_repair_operations": 0,
+    "MARC2_FW2_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "verification": {
+    "focused_auditor_tests": 16,
+    "focused_result_tests": 12,
+    "focused_tests": 28,
+    "contract_hash_passed": true,
+    "all_fixed_artifact_hashes_passed": true,
+    "strict_JSON_and_AST_anchors_passed": true,
+    "exact_R1_R2_R3_routing_tested": true,
+    "duplicate_JSON_key_and_transport_key_refusals_tested": true,
+    "symlink_refusal_tested": true,
+    "fresh_one_thread_subprocess_tested": true,
+    "complete_base_tests": 3254,
+    "complete_base_skips": 204,
+    "complete_optional_tests": 3325,
+    "complete_optional_skips": 35,
+    "optional_A_M_tests": 2812,
+    "optional_A_M_skips": 28,
+    "optional_N_Z_tests": 513,
+    "optional_N_Z_skips": 7,
+    "ruff_passed": true,
+    "compile_passed": true,
+    "JSON_validation_passed": true,
+    "CLI_help_plan_and_audit_passed": true,
+    "artifact_hashes_passed": true,
+    "git_diff_check_passed": true,
+    "complete_suite_pending": false,
+    "remote_CI_pending": true
+  },
+  "disposition": {
+    "artifact_only_diagnosis_complete": true,
+    "MARC2_FW1C_consumed": true,
+    "consumed_executor_may_be_modified_reused_retried_or_resumed": false,
+    "private_source_or_output_reinspection_allowed": false,
+    "MARC2_FW2_eligible": false,
+    "next_safe_work": "freeze_and_generate_qualify_a_separately_named_source_native_to_selector_adapter_without_private_access",
+    "future_private_access_requires_new_all_false_Tier_C_packet_and_decision": true
+  },
+  "warnings": [
+    "This is a post-failure engineering diagnosis over committed public artifacts.",
+    "No private manifest field or value was inspected or inferred from private content.",
+    "The future adapter is a design only and authorizes no live read or MARC2-FW2 work."
+  ],
+  "unavailable_fields": [
+    "private manifest field values beyond committed aggregate identities",
+    "archive local headers member payload integrity signals events targets and quality",
+    "neural features predictions scores and causal latency"
+  ],
+  "claim_boundary": {
+    "engineering_capability_added": "NeuroDecodeKit can statically reconcile an exact producer schema with generated fixtures and live validators and identified one deterministic transport-key alias mismatch without private reinspection.",
+    "scientific_claim_not_established": "No neural payload target prediction or score was accessed so this audit establishes no neural effect decoding accuracy language decoding or thought-to-text capability."
+  }
+}

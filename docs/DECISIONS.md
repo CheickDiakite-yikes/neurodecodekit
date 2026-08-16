@@ -7855,3 +7855,31 @@ request, and packet-bound decision.
 Evidence: `docs/MARC_2_LIVE_SELECTION_RECOVERY_RESULT.md`,
 `registries/marc2_live_selection_recovery_failure_result.v0.json`, and
 `tests/test_marc2_live_selection_recovery_result.py`.
+
+## 0238 - Diagnose MARC2-FW1C With Committed Schema Lineage Only
+
+Audit decision: use only fixed, hash-bound producer code, selector code,
+consumer code, contracts, and aggregate registries. Do not inspect the private
+manifest, consumed marker, output root, archive, neural data, target, model, or
+score.
+
+Diagnosis decision: accept `MARC2SL-R2`. The producer's exact forwarded
+transport map uses `directory`, `metadata`, and `tail`; the generated fixture
+and both validators use `central_directory`, `metadata`, and `tail`. This
+single alias mismatch is sufficient to explain the consumed F02 structural
+refusal and does not imply malformed source data.
+
+Repair-design decision: preserve the producer schema. A future adapter must
+validate source-native keys first, then map `directory` to
+`central_directory` exactly once while preserving values and refusing missing,
+duplicate, dual-alias, extra-key, or value mutation cases.
+
+Disposition decision: do not patch, retry, resume, or reuse FW1C. Generated
+adapter qualification may proceed under bounded development authority. Any
+future private read or `MARC2-FW2` entry requires a new Tier C packet and
+decision.
+
+Evidence: `docs/MARC_2_SOURCE_SCHEMA_LINEAGE_AUDIT.md`,
+`registries/marc2_source_schema_lineage_contract.v0.json`,
+`registries/marc2_source_schema_lineage_result.v0.json`, the auditor module,
+and its two test modules.

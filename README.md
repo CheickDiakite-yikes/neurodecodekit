@@ -42,7 +42,7 @@ irreversible Tier C events.
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |
 | IACKD source compatibility | H1 found 96 29-row and 32 31-row headers. H2 then parsed all 316 public BIDS metadata bodies and confirmed one 26-channel predictive EEG core, 1024 Hz sampling, average reference, and complete central/occipital geometry in all 30 groups | The exact-36 reader assumption was wrong, but H2 still routed `IACKDR-R1`: HEOG, VEOG, and Trigger are source-typed `MISC`, exposing a frozen control-taxonomy bug before any EEG sample, event, target, model, or score was accessed |
 | MARC-1 source eligibility | The Freewill central-directory inventory passed without payload, but the one source-aware Wrist metadata check later routed `MARC1SAL-R2` with zero selected subjects and zero payload bytes | The Wrist branch is consumed and blocked before acquisition; the private source route remains unavailable and is not inferred or repaired |
-| MARC-2 confound triangulation | Five ordered work orders now test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | `MARC2-FW1A` failed before private access, generated-only `MARC2-FW1B` proved the shared validator, and exact `MARC2-FW1C` became remotely green before one structural read. FW1C then consumed at `MARC2FWC-F02`: one 418,755-byte size/hash/strict-JSON pass reached target-free selection but failed strict live source identity, selecting zero people or members and accessing zero archive, neural, target, model, or score bytes |
+| MARC-2 confound triangulation | Five ordered work orders now test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | `MARC2-FW1C` consumed at `MARC2FWC-F02` after one structural read and zero selections. Artifact-only `MARC2-SL1` then found the exact integration defect: MARC-1 emits transport key `directory`, while the generated fixture and both MARC-2 validators require `central_directory`. This explains the refusal without reopening private data; archive, neural, target, model, and score access remain zero |
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
 | Full-path causality gate | Loop 25 v1 passed a dedicated causal anti-alias audit, 65,537 response points, 23 alias probes, 168 schedule checks, 240 resume checks, and 72 future-mutation controls across 24 target-free items | The exact 1000-to-100 Hz path is mechanically causal with zero right context; this is synthetic mechanics evidence, not proof that neural information survives |
 | Consumed S21 validation | The registered 2,908-parameter candidate reached macro CER `0.938177`; the train-only no-signal prior reached `0.751235`, so the candidate was worse by `0.186942` | Loop 26 is parked after one consumed six-target event; this is a clear negative result, not neural advantage |
@@ -1660,6 +1660,17 @@ Read this before interpreting any number in the repository.
   RSS with 6,944 total output bytes. The aggregate does not retain which
   private field differed. The invocation is consumed without retry, no
   selection result exists, and `MARC2-FW2` remains ineligible.
+- **MARC2-SL1 exact schema-lineage diagnosis:** a fixed artifact-only AST/JSON
+  audit reconciled the exact producer, generated fixture, selector validator,
+  and FW1C validator. MARC-1 forwards keys `directory`, `metadata`, and `tail`;
+  every consumer-side artifact instead requires `central_directory`,
+  `metadata`, and `tail`. That one alias mismatch is sufficient to explain
+  `MARC2FWC-F02`. Generated tests missed it because fixture and validators were
+  internally consistent with each other but not source compatible. The audit
+  read 310,015 committed bytes in 0.027645 seconds at 35,717,120-byte peak RSS
+  and performed zero private, archive, neural, target, model, or network work.
+  A future repair must validate the producer-native vocabulary first, then map
+  `directory` to `central_directory` exactly once in a new adapter.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
@@ -2471,6 +2482,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/marc2_live_selection_recovery_proof_certificate.v0.json](registries/marc2_live_selection_recovery_proof_certificate.v0.json) | distinct 15-field FW1B-format certificate binding the recovery wrapper, native registry, tests, decision, shared validator, and selector |
 | [docs/MARC_2_LIVE_SELECTION_RECOVERY_RESULT.md](docs/MARC_2_LIVE_SELECTION_RECOVERY_RESULT.md) | consumed one-read source-identity failure, exact resources and counters, unavailable private detail, no-rerun disposition, and claim boundary |
 | [registries/marc2_live_selection_recovery_failure_result.v0.json](registries/marc2_live_selection_recovery_failure_result.v0.json) | aggregate machine result binding green proof, report identity, one-open counters, `MARC2FWC-F02`, zero forbidden operations, and closed FW2 authority |
+| [docs/MARC_2_SOURCE_SCHEMA_LINEAGE_AUDIT.md](docs/MARC_2_SOURCE_SCHEMA_LINEAGE_AUDIT.md) | exact producer-versus-consumer transport-key diagnosis, why generated tests missed it, measured artifact-only audit, and prospective one-way adapter design |
+| [registries/marc2_source_schema_lineage_result.v0.json](registries/marc2_source_schema_lineage_result.v0.json) | machine-readable `MARC2SL-R2` result, exact key sets, source-binding proof, zero forbidden counters, and closed live/FW2 boundary |
 | [docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md](docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md) | layered compact-adapter plus GPT-Sol architecture, four matched conditions, and staged authorization boundary |
 | [docs/FOUNDATION_MODEL_BRIDGE_V0.md](docs/FOUNDATION_MODEL_BRIDGE_V0.md) | implemented FM-0 synthetic no-call schemas, CLI, strict refusals, hashes, and measured roundtrip |
 | [docs/FOUNDATION_MODEL_LIVE_SMOKE_PREREGISTRATION.md](docs/FOUNDATION_MODEL_LIVE_SMOKE_PREREGISTRATION.md) | frozen one-shot FM-1 Terra matrix, privacy boundary, provider settings, resource caps, and no-science ceiling |

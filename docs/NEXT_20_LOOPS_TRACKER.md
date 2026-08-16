@@ -2090,3 +2090,31 @@ Current status is consumed failure with no retry, rerun, resume, repair, or
 committed-schema lineage audit. A later live read requires a fresh frozen
 generated contract, remotely green implementation, all-false Tier C request,
 and packet-bound decision.
+
+### MARC2-SL1 - Source-Schema Lineage Audit (Complete)
+
+Artifact-only `MARC2-SL1` read ten fixed committed artifacts totaling 310,015
+bytes, parsed three Python modules with `ast` and seven registries with strict
+JSON, and routed `MARC2SL-R2`. The exact MARC-1 producer forwards transport
+keys `directory`, `metadata`, and `tail`; the generated selector fixture,
+selector validator, and FW1C live validator all require `central_directory`,
+`metadata`, and `tail`.
+
+The shared source hash and 418,755-byte identity reconcile across the producer,
+selector contract, FW1C implementation, and consumed result. The exact
+`directory` versus `central_directory` alias mismatch is sufficient to explain
+`MARC2FWC-F02` without reopening the private source or observing a private
+field value. Generated tests missed it because the fixture and consumers were
+internally consistent but did not test producer compatibility.
+
+Measured runtime was 0.027645458 seconds at 35,717,120-byte peak RSS with 5,454
+aggregate output bytes, one thread/worker/job, and zero private, archive,
+signal, target, model, score, network, provider, hardware, retry, or claim
+operations.
+
+Next safe task: freeze and generated-qualify a separately named adapter that
+validates producer-native keys first, maps `directory` to
+`central_directory` exactly once while preserving values, and refuses missing,
+duplicate, dual-alias, extra-key, or value mutation cases. The consumed FW1C
+executor cannot be patched or reused. Any future live read and `MARC2-FW2`
+remain behind a new all-false Tier C packet and decision.
