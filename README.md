@@ -1787,15 +1787,24 @@ Read this before interpreting any number in the repository.
   `328faa8` passed Base Python job `95166799271`, Optional Neuro Readers job
   `95166799305`, and CI `31947928896`. The maintainer's fresh three-line
   instruction is preserved verbatim in the separate decision and binds only
-  the green VR3 packet. That decision must itself be committed, pushed, and
-  remotely green before a new generated/mock-only wrapper may be built. Only
-  after the exact wrapper is separately green may one no-retry pass read the
-  registered 418,755-byte structural manifest, validate all 238 bundles before
-  filtering to `195 + 43`, and freeze a target-free real cohort. The requested
-  FW2 signal/derangement/timing/no-signal experiment may be preregistered after
-  a successful freeze, but no archive member, neural training, prediction
-  freeze, target delivery, score, or scientific claim is authorized by this
-  decision.
+  the green VR3 packet. Decision commit `944b6e8` passed Base Python job
+  `95202667384`, Optional Neuro Readers job `95202667483`, and CI
+  `31962561043` before implementation. The requested FW2 experiment remains a
+  design direction, not retroactive payload, training, target, or scoring
+  authority.
+- **MARC2-VR3 generated private-recovery wrapper:** the new standard-library
+  module composes the exact shared proof validator and VR2 adapter, fixes its
+  source and output identities, performs one future no-follow content open,
+  and exposes no archive, neural, target, model, or score interface. Generated
+  qualification passed eight profile/order paths and 64 direct refusal
+  mutations in 1.850114875 seconds at 38,322,176-byte peak RSS, processing
+  3,445,032 bytes and emitting 4,464 aggregate bytes. The same 16-subject,
+  96-bundle, 384-member prefix replayed in every path; all private and
+  scientific counters stayed zero. This exact implementation must still be
+  committed, pushed, and pass both CI jobs before one registered 418,755-byte
+  structural-manifest pass. That pass can freeze only a target-free cohort;
+  it cannot read an archive member, train, freeze predictions, open targets,
+  score, or establish a neural result.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

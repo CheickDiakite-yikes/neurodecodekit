@@ -1,19 +1,21 @@
 # Codex Handoff - NeuroDecodeKit
 
-> Current MARC2 handoff, 2026-08-16: request commit `328faa8` passed Base
-> Python job `95166799271`, Optional Neuro Readers job `95166799305`, and CI
-> `31947928896`. Read
-> `docs/MARC_2_VARIABLE_DOMAIN_PRIVATE_RECOVERY_AUTHORIZATION_DECISION.md` and
-> its registry. The maintainer's fresh three-line message is quoted verbatim
-> and authorizes only the exact `MARC2-VR3` two-stage sequence. The decision is
-> ineffective until committed, pushed, and both jobs are green. After that,
-> implement and generated-qualify the new wrapper without touching a retained
-> path; only after the exact wrapper is separately remotely green may one
-> no-retry 418,755-byte structural-manifest pass freeze the real cohort. The
-> requested FW2 design may be preregistered after successful selection, but
-> archive members, neural data, training, prediction freeze, target delivery,
-> score, and claims require a new packet and fresh decision. Never touch the
-> consumed LA2 root or the unrelated tracker inspection NDJSON.
+> Current MARC2 handoff, 2026-08-16: packet-bound decision commit `944b6e8`
+> passed Base Python job `95202667384`, Optional Neuro Readers job
+> `95202667483`, and CI `31962561043` before the generated-only `MARC2-VR3`
+> wrapper was implemented. Read
+> `docs/MARC_2_VARIABLE_DOMAIN_PRIVATE_RECOVERY_IMPLEMENTATION.md`, its native
+> registry, distinct FW1B proof certificate, module, and two tests. The wrapper
+> passed eight profile/order paths, 64 direct mutations, and 41 focused tests;
+> its measured qualification took 1.850114875 seconds at 38,322,176-byte peak
+> RSS and emitted 4,464 bytes with every private and scientific counter zero.
+> The private manifest remains untouched. Commit, push, and require both jobs
+> green for this exact implementation before one no-retry 418,755-byte
+> structural-manifest pass. A success freezes only a target-free cohort; a
+> failure parks VR3. FW2 payload access, training, prediction freeze, target
+> delivery, scoring, and claims require a separately frozen packet and fresh
+> decision. Never touch the consumed LA2 root or the unrelated tracker
+> inspection NDJSON.
 
 > Additive foundation-model decision, 2026-08-06: read
 > `docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md` and
@@ -5002,3 +5004,32 @@ remote jobs green. Only then identify VR3 as the sole active Tier C packet and
 wait for fresh maintainer words. Do not use the current `continue to eureka`
 retroactively, implement the wrapper, access a private path, create an output
 root, or enter FW2 from packet preparation.
+
+## 2026-08-16 MARC2-VR3 Generated Wrapper Handoff
+
+Decision `944b6e8af434c2a6820435e0f18fe9490bf44248` passed Base Python
+job `95202667384`, Optional Neuro Readers job `95202667483`, and CI
+`31962561043` before implementation. The new additive module imports the exact
+shared FW1B proof validator and VR2 adapter and exposes only `plan`, `qualify`,
+`inspect`, and proof-argument-only `execute`. It has no generic source/output
+override, consumed-executor interface, network client, archive reader, neural
+reader, trainer, predictor, target opener, or scorer.
+
+Generated qualification passed four exclusion profiles in both row orders,
+the fixed 16-subject/96-bundle/384-member selection, 32 proof-certificate
+mutations, and 32 wrapper mutations. It processed 3,445,032 generated input
+bytes in 1.850114875 seconds at 38,322,176-byte peak RSS and emitted 4,464
+aggregate bytes. The implementation now uses a second order-preserving
+fingerprint so an in-place row reorder cannot hide behind the canonical sorted
+source digest. Forty-one focused tests pass. Optional A-M/N-Z cover 3,716 tests
+with 35 skips; the only sandbox forkserver refusal passed in an exact isolated
+outside-sandbox process.
+
+Immediate gate: stage only the wrapper milestone, excluding
+`docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx.inspect.ndjson`; commit, push, and
+require both remote jobs green. Do not change tracked HEAD after green. Run the
+one fixed private pass with that exact commit and its CI/job IDs. Do not rerun
+on any route. On success, inspect only the aggregate output and record a
+closeout; never open the private cohort file. Then preregister FW2 and prepare
+an all-false Tier C packet. No archive member, neural payload, target, model,
+prediction, freeze, score, or claim is authorized by this implementation.

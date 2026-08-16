@@ -1686,15 +1686,28 @@ and
 The maintainer's fresh three-line instruction is quoted verbatim and binds
 only the immutable green VR3 packet. The requested future FW2 work is preserved
 as research direction, not retroactive authority for an experiment that has
-not yet been frozen. This decision is ineffective until its exact commit is
-pushed and both CI jobs are green. After that proof, implement and generated-
-qualify only the new additive wrapper; do not inspect the retained manifest.
-Only after the exact wrapper is separately committed, pushed, and remotely
-green may one no-retry read of the registered 418,755-byte structural manifest
-validate all 1,227 rows and 238 bundles, dynamically reconcile `195 + 43`, and
-derive one target-free selection. Do not use either consumed executor or root,
-open an archive member or neural value, train, predict, freeze, deliver a
-target, score, enter FW2, or promote a claim from this decision milestone.
+not yet been frozen. Decision commit
+`944b6e8af434c2a6820435e0f18fe9490bf44248` passed Base Python job
+`95202667384`, Optional Neuro Readers job `95202667483`, and CI
+`31962561043` before implementation.
+
+Read `docs/MARC_2_VARIABLE_DOMAIN_PRIVATE_RECOVERY_IMPLEMENTATION.md`,
+`registries/marc2_variable_domain_private_recovery_implementation.v0.json`,
+and its distinct FW1B proof certificate. The additive wrapper uses the exact
+shared proof validator and VR2 adapter, has no generic source/output override,
+and refuses source mutation with both deterministic and order-preserving
+fingerprints. One generated qualification passed eight profile/order paths
+and 64 direct mutations in 1.850114875 seconds at 38,322,176-byte peak RSS,
+emitting 4,464 bytes with every private, archive, neural, target, model, score,
+network, and claim counter at zero. Forty-one focused and 3,716 complete
+optional-enabled tests are covered, with 35 skips and one exact forkserver
+case passing outside the sandbox socket restriction. The private manifest is
+still untouched. Commit, push, and require both CI jobs green for this exact
+implementation before one no-retry read of the registered 418,755-byte
+structural manifest. Success may freeze only a target-free cohort; failure
+parks the lane. Do not use either consumed executor or root, open an archive
+member or neural value, train, predict, freeze, deliver a target, score, enter
+FW2, or promote a claim from this implementation milestone.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

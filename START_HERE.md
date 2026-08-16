@@ -180,12 +180,18 @@
    `docs/MARC_2_VARIABLE_DOMAIN_PRIVATE_RECOVERY_AUTHORIZATION_DECISION.md`
    and its decision registry. The maintainer's fresh three-line instruction is
    preserved verbatim and binds only the green `MARC2-VR3` packet. The
-   decision itself must be committed, pushed, and pass both CI jobs before a
-   generated/mock wrapper may be implemented. Only after that exact wrapper is
-   separately remotely green may one no-retry structural-manifest pass occur.
-   The requested FW2 experiment may be preregistered after a successful cohort
-   freeze, but this decision does not authorize archive-member access, neural
-   training, prediction freezing, target delivery, scoring, or a claim.
+   decision commit `944b6e8` passed Base job `95202667384`, Optional job
+   `95202667483`, and CI `31962561043` before implementation. Then read
+   `docs/MARC_2_VARIABLE_DOMAIN_PRIVATE_RECOVERY_IMPLEMENTATION.md`, the native
+   implementation registry, and the distinct FW1B proof certificate. The
+   generated wrapper passed eight profile/order paths and 64 direct mutations
+   in 1.850114875 seconds at 38,322,176-byte peak RSS and emitted 4,464 bytes;
+   every private, payload, neural, target, model, score, and claim counter was
+   zero. The registered private manifest is still untouched. Commit and push
+   this exact wrapper and require both CI jobs green before its one no-retry
+   structural pass. A successful pass may freeze a target-free cohort and
+   permit FW2 preregistration, but it does not authorize archive-member access,
+   neural training, prediction freezing, target delivery, scoring, or a claim.
    Then
    read `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked

@@ -8412,3 +8412,36 @@ Evidence:
 `docs/MARC_2_VARIABLE_DOMAIN_PRIVATE_RECOVERY_AUTHORIZATION_DECISION.md`,
 `registries/marc2_variable_domain_private_recovery_authorization_decision.v0.json`,
 and its focused decision test.
+
+## 0257 - Require Exact Remote Proof Before The VR3 Structural Pass
+
+Implementation decision: add a new standard-library wrapper that composes the
+exact shared FW1B proof validator and green VR2 adapter. Keep native VR3 and
+FW1B proof records distinct, fix the private source and output root in code,
+and expose no generic path, URL, archive, neural, target, model, prediction, or
+score interface.
+
+Integrity decision: preserve both a deterministic sorted source digest and an
+order-preserving structural fingerprint. Reject any in-place mutation, mutable
+alias, adapter call-count change, dynamic `195 + 43` arithmetic drift, split
+drift, aggregate private-field leak, resource breach, or nonzero forbidden
+counter. Require the exact implementation HEAD, clean tracked state, decision
+ancestry, certificate identity, and both green CI jobs before path preflight.
+
+Execution decision: after remote proof, permit exactly one no-follow open and
+sequential strict parse of the registered 418,755-byte structural manifest.
+Write the consumed marker first, produce at most one private cohort file and
+one aggregate report, and allow no retry or rerun. A success freezes only the
+target-free cohort; a refusal parks VR3.
+
+Boundary decision: the generated implementation performed zero private,
+archive, neural, target, model, prediction, score, or claim operations. A
+successful VR3 closeout may support FW2 preregistration, but it cannot authorize
+FW2 payload access, training, prediction freezing, target delivery, scoring,
+or scientific promotion.
+
+Evidence:
+`docs/MARC_2_VARIABLE_DOMAIN_PRIVATE_RECOVERY_IMPLEMENTATION.md`,
+`registries/marc2_variable_domain_private_recovery_implementation.v0.json`,
+`registries/marc2_variable_domain_private_recovery_proof_certificate.v0.json`,
+the additive module, and its two focused tests.

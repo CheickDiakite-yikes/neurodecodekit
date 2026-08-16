@@ -9759,6 +9759,44 @@ Scientific claim not established: this registration contains no neural
 payload, target, prediction, or score and establishes no neural effect,
 decoding accuracy, language decoding, or thought-to-text capability.
 
+## 2026-08-16 - MARC2-VR3 Generated Private-Recovery Wrapper
+
+- Decision `944b6e8af434c2a6820435e0f18fe9490bf44248` passed Base Python
+  job `95202667384`, Optional Neuro Readers job `95202667483`, and CI
+  `31962561043` before implementation.
+- Added a standard-library wrapper with fixed `plan`, `qualify`, `inspect`, and
+  proof-argument-only `execute` commands. It imports the exact shared proof
+  validator and VR2 adapter and exposes no source/output override, consumed
+  executor, network, archive, neural, target, training, prediction, or scoring
+  interface.
+- Added distinct native VR3 and FW1B proof records. The shared validator checks
+  the certificate twice on canonical replay and once for each of 32 malformed
+  certificate cases; tracked identity drift, dirty HEAD, stale decision
+  ancestry, or validator substitution refuses before private access.
+- Added an order-preserving source fingerprint alongside the deterministic
+  sorted source digest after a focused test showed that row reversal could be
+  semantically hidden by canonical sorting. Mutation and mutable-alias checks
+  now both fail closed.
+- One generated qualification passed eight profile/order paths and 64 direct
+  mutations, processing 3,445,032 bytes in 1.850114875 seconds at 38,322,176-
+  byte peak RSS and emitting 4,464 aggregate bytes. The same 16-subject,
+  96-bundle, 384-member prefix replayed in every path.
+- Forty-one focused tests pass. Optional A-M covered 3,203 tests with 28 skips;
+  its one sandbox-blocked forkserver test passed outside that local-socket
+  restriction. N-Z passed 513 tests with seven skips. Ruff, compilation, every
+  registry JSON, CLI help/qualification, and tracked hashes pass.
+- Every private, retained-root, archive, neural, target, model, prediction,
+  score, network, provider, hardware, retry, release, and claim counter is
+  zero. The registered 418,755-byte manifest remains untouched until the exact
+  implementation commit passes both remote jobs.
+
+Engineering capability added: a proof-gated one-open wrapper can freeze the
+registered structural cohort after exact remote qualification.
+
+Scientific claim not established: generated qualification contains no human
+neural payload, target, prediction, or score and establishes no neural effect,
+decoding accuracy, language decoding, or thought-to-text capability.
+
 ## 2026-08-16 - MARC2-VR3 Packet-Bound Authorization Decision
 
 - Reverified request commit `328faa845d894459a658b6ad62d078a00f539e9e`

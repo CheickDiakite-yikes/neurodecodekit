@@ -2362,7 +2362,7 @@ consumed, FW2 remains closed, and any future private structural read still
 requires a separately named generated-qualified executor, all-false Tier C
 request, and fresh packet-bound maintainer decision.
 
-### MARC2-VR3 - Variable-Domain Private Recovery (Decision Pending Green)
+### MARC2-VR3 - Variable-Domain Private Recovery (Implementation Pending Green)
 
 The next prospective lane binds proof addendum `bdd34d9`, CI `31947198122`,
 the green VR2 adapter/result, the consumed LA2 failure boundary, and one exact
@@ -2392,9 +2392,21 @@ preserved verbatim in a separate decision. That decision explicitly treats
 the later FW2 sentences as requested design direction, not authority for an
 undefined neural execution.
 
-Current status: decision recorded locally but ineffective until its exact
-commit is pushed and both CI jobs are green. Wrapper implementation and every
-private-path operation remain closed. After a successful structural freeze,
+Decision `944b6e8` passed Base Python job `95202667384`, Optional Neuro
+Readers job `95202667483`, and CI `31962561043` before Stage 1. The additive
+wrapper and distinct proof certificate now pass eight generated profile/order
+paths, 64 direct mutations, and 41 focused tests. Its measured generated pass
+processed 3,445,032 bytes in 1.850114875 seconds at 38,322,176-byte peak RSS,
+emitted 4,464 aggregate bytes, and performed zero private, archive, neural,
+target, model, score, network, or claim operations. The full optional inventory
+covers 3,716 tests with 35 skips; one forkserver case passed outside the
+sandbox's local-socket restriction.
+
+Current status: Stage 1 exact implementation is locally qualified but not yet
+committed or remotely green, and the private manifest remains untouched. Only
+after this exact HEAD passes both remote jobs may Stage 2 perform its one
+registered no-retry structural pass. After a successful structural freeze,
 the next tracker item is a bounded FW2 preregistration with signal,
 derangement, timing-only, and no-signal controls plus a separate all-false
-Tier C request.
+Tier C request. No FW2 payload, training, prediction freeze, target opening,
+score, or scientific claim is open now.
