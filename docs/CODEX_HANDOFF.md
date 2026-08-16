@@ -4854,6 +4854,10 @@ skips; optional A-M/N-Z pass 3,101 tests with 28 skips and 513 with seven
 skips. Ruff, compilation, 238 registry parses, CLI checks, hashes, and diff
 hygiene pass locally.
 
+Result commit `05fc2b529df54cf9a94d5957402f2136bdf3bbe4` passed Base
+Python job `95157101038`, Optional Neuro Readers job `95157100988`, and CI
+`31943963317`, completing the remote closeout proof.
+
 VR1 is consumed with no retry or rerun. Every private, archive, neural, target,
 model, score, network, LA2, FW2, and claim counter is zero. This is engineering
 evidence only. A future private structural attempt requires a new prospective

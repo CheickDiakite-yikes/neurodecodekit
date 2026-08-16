@@ -8238,3 +8238,7 @@ request, and fresh packet-bound decision. LA2 and `MARC2-FW2` remain closed.
 
 Evidence: `docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_RESULT.md`, its
 result registry, and result-record test.
+
+Proof update: result commit `05fc2b529df54cf9a94d5957402f2136bdf3bbe4`
+passed Base Python job `95157101038`, Optional Neuro Readers job
+`95157100988`, and CI `31943963317`.

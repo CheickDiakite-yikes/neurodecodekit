@@ -143,8 +143,10 @@ skips. Fresh optional A-M and N-Z processes pass 3,101 tests with 28 skips and
 35 skips.
 
 Ruff, compilation, 238 registry parses, CLI help/plan/inspect, tracked hashes,
-and diff hygiene pass locally. The closeout commit still requires both remote
-CI jobs before the proof record is complete.
+and diff hygiene pass locally. Result commit
+`05fc2b529df54cf9a94d5957402f2136bdf3bbe4` passed Base Python job
+`95157101038`, Optional Neuro Readers job `95157100988`, and CI
+`31943963317`, completing the remote proof record.
 
 ## Disposition
 

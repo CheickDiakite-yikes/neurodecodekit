@@ -4,7 +4,7 @@
   "result_id": "MARC-2-source-validity-selection-eligibility-repair-generated-result-v0",
   "lane_id": "MARC2-VR1",
   "recorded_at_local": "2026-08-16",
-  "status": "completed_generated_only_qualification_consumed_no_rerun",
+  "status": "completed_generated_only_qualification_consumed_no_rerun_remote_green",
   "route": "MARC2VR-G1",
   "proof_posture": "generated_structural_metadata_only_no_scientific_value",
   "green_implementation_proof": {
@@ -15,6 +15,13 @@
     "both_required_jobs_green_before_registered_closeout": true,
     "module_sha256": "cef7bb738ceee86847067cec788e442aa5022c8f573a814638ef3d48b6ec3587",
     "implementation_registry_sha256": "671ff93ceea53acf630062c0211f9836fd1b25c2a48879066907689437e2ab24"
+  },
+  "closeout_remote_proof": {
+    "result_commit": "05fc2b529df54cf9a94d5957402f2136bdf3bbe4",
+    "CI_run_id": 31943963317,
+    "base_python_job_id": 95157101038,
+    "optional_neuro_job_id": 95157100988,
+    "both_required_jobs_green": true
   },
   "tracked_input_hashes": [
     {
@@ -43,7 +50,7 @@
     },
     {
       "path": "docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_RESULT.md",
-      "sha256": "43aea49b1bc9842ad647354df19d35bd2e93ead6542f09b964903ddd335e1c0d"
+      "sha256": "cd3553aedc8fd6b5241642eac31b8f7b0752ac3f666b9b611b927fcce101b471"
     }
   ],
   "registered_execution": {
@@ -208,7 +215,10 @@
     "ruff_compile_CLI_hash_and_diff_hygiene_passed": true,
     "result_record_tests_pending": false,
     "complete_closeout_suite_pending": false,
-    "remote_closeout_CI_pending": true
+    "remote_closeout_CI_pending": false,
+    "remote_closeout_CI_run_id": 31943963317,
+    "remote_closeout_base_python_job_id": 95157101038,
+    "remote_closeout_optional_neuro_job_id": 95157100988
   },
   "disposition": {
     "generated_closeout_complete": true,

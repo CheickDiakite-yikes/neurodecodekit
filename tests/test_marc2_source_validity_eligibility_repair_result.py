@@ -34,7 +34,7 @@ class Marc2SourceValidityEligibilityRepairResultTests(unittest.TestCase):
         self.assertEqual(self.result["route"], "MARC2VR-G1")
         self.assertEqual(
             self.result["status"],
-            "completed_generated_only_qualification_consumed_no_rerun",
+            "completed_generated_only_qualification_consumed_no_rerun_remote_green",
         )
 
     def test_green_implementation_proof_is_exact(self):
@@ -47,6 +47,15 @@ class Marc2SourceValidityEligibilityRepairResultTests(unittest.TestCase):
         self.assertEqual(proof["base_python_job_id"], 95_155_811_373)
         self.assertEqual(proof["optional_neuro_job_id"], 95_155_811_384)
         self.assertTrue(proof["both_required_jobs_green_before_registered_closeout"])
+        closeout = self.result["closeout_remote_proof"]
+        self.assertEqual(
+            closeout["result_commit"],
+            "05fc2b529df54cf9a94d5957402f2136bdf3bbe4",
+        )
+        self.assertEqual(closeout["CI_run_id"], 31_943_963_317)
+        self.assertEqual(closeout["base_python_job_id"], 95_157_101_038)
+        self.assertEqual(closeout["optional_neuro_job_id"], 95_157_100_988)
+        self.assertTrue(closeout["both_required_jobs_green"])
 
     def test_every_tracked_input_hash_is_current(self):
         for binding in self.result["tracked_input_hashes"]:

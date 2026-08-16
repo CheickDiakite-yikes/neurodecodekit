@@ -9783,6 +9783,9 @@ decoding accuracy, language decoding, or thought-to-text capability.
   tests with 204 skips; optional A-M/N-Z pass 3,101 tests with 28 skips and 513
   with seven skips, for 3,614 optional-enabled tests with 35 skips. Ruff,
   compilation, 238 registry parses, CLI checks, hashes, and diff hygiene pass.
+- Result commit `05fc2b5` passed Base Python job `95157101038`, Optional Neuro
+  Readers job `95157100988`, and CI `31943963317`, completing the remote
+  closeout proof.
 
 Engineering capability added: NeuroDecodeKit now validates a full generated
 238-bundle source domain, separates source validity from selection eligibility,

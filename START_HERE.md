@@ -144,9 +144,10 @@
    CI `31943437003` before one measured generated qualification passed at
    `MARC2VR-G1`. Read
    `docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_RESULT.md` and its result
-   registry. The generated closeout is consumed with no rerun. Every private
-   or scientific operation remains closed behind a new prospective contract
-   and fresh Tier C decision. Then read
+   registry. Result commit `05fc2b5` passed both remote jobs in CI
+   `31943963317`. The generated closeout is consumed with no rerun. Every
+   private or scientific operation remains closed behind a new prospective
+   contract and fresh Tier C decision. Then read
    `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
    result, then use its preregistration and authorization documents for audit.

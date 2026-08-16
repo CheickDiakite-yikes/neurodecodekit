@@ -1638,7 +1638,10 @@ zero. The generated closeout is consumed with no rerun. Do not operate on a
 private or consumed path, reuse LA2, enter FW2, or infer a scientific result.
 A future private structural attempt requires a new prospective contract,
 generated-qualified one-shot executor, all-false Tier C request, and fresh
-packet-bound maintainer decision.
+packet-bound maintainer decision. Result commit
+`05fc2b529df54cf9a94d5957402f2136bdf3bbe4` passed Base Python job
+`95157101038`, Optional Neuro Readers job `95157100988`, and CI
+`31943963317`, completing the remote closeout proof.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
