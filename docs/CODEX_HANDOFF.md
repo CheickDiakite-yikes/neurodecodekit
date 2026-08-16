@@ -1,20 +1,21 @@
 # Codex Handoff - NeuroDecodeKit
 
-> Current MARC2-VR4P decision gate, 2026-08-16: request
-> `a5b73d6859c71054a1f20ab6c1c500341539efea` passed Base Python job
-> `95215825208`, Optional Neuro Readers job `95215825263`, and CI
-> `31967933217`. After it was named as the sole active Tier C packet, the
-> maintainer supplied the fresh word `continue`. Read
-> `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_AUTHORIZATION_DECISION.md` and
-> its registry. The decision preserves those exact eight bytes and binds only
-> the green packet. It is ineffective until committed, pushed, and both jobs
-> are green. Before that proof, do not implement the executor or operate on the
-> expired certificate, retained private manifest, or future root. After green
-> decision, implement and qualify only on generated/mock fixtures. The one real
-> certificate cleanup, fresh readiness, and structural pass remain closed
-> until the exact executor is separately green. Never touch consumed roots or
-> the unrelated tracker inspection NDJSON. Archive payload, neural, training,
-> target, prediction, scoring, FW2/CIL1 execution, and claims remain closed.
+> Current MARC2-VR4P implementation gate, 2026-08-16: packet-bound decision
+> `eac37262dcf7cd4167475b7cc9145e3698d6dd9b` passed Base Python job
+> `95218521665`, Optional Neuro Readers job `95218521647`, and CI
+> `31969063955`. Read
+> `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_IMPLEMENTATION.md` and its
+> implementation/proof registries. The additive fixed-path executor passes two
+> generated replays and 27 direct refusals in 0.107 seconds at 36,864,000-byte
+> peak RSS, with 433,847 generated input bytes, 222,279 generated output bytes,
+> zero retention, and zero real/private operations. Its 4 MiB accounting
+> includes the fresh certificate. Immediate gate: complete repository
+> verification, commit and push the exact implementation, and require both CI
+> jobs green. Only then may the sole expired-certificate cleanup, fresh
+> readiness, and 418,755-byte structural pass run. Never touch consumed roots
+> or the unrelated tracker inspection NDJSON. Archive payload, neural,
+> training, target, prediction, scoring, FW2/CIL1 execution, and claims remain
+> closed.
 
 > Current MARC2 handoff, 2026-08-16: exact VR3 implementation `2467876` passed
 > Base Python job `95207398015`, Optional Neuro Readers job `95207398092`, and

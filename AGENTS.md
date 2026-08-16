@@ -1794,14 +1794,21 @@ maintainer supplied the fresh word `continue`. Read
 `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_AUTHORIZATION_DECISION.md` and
 `registries/marc2_machine_stable_private_recovery_authorization_decision.v0.json`.
 The decision quotes those exact eight UTF-8 bytes and binds only the green
-`MARC2-VR4P` packet without scope expansion. It is ineffective until this
-decision is committed, pushed, and both required jobs are green. Before that
-proof, do not implement the executor or inspect, read, unlink, stat, resolve,
-or otherwise operate on the expired readiness certificate, retained private
-manifest, or future output root. After green decision, only additive executor
-implementation and generated/mock qualification are eligible. The one real
-certificate cleanup, fresh readiness sequence, and structural pass remain
-closed until that exact executor implementation is also remotely green.
+`MARC2-VR4P` packet without scope expansion. Decision
+`eac37262dcf7cd4167475b7cc9145e3698d6dd9b` passed Base Python job
+`95218521665`, Optional Neuro Readers job `95218521647`, and CI
+`31969063955` before implementation. Read
+`docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_IMPLEMENTATION.md` and the two
+matching implementation/proof registries. The additive standard-library
+executor is qualified only on generated/mock fixtures: two deterministic
+replays and 27 direct refusals completed in `0.10705108400725294` seconds at
+36,864,000-byte peak RSS, processing 433,847 generated input bytes and 222,279
+generated output bytes with zero retained bytes and zero real/private
+operations. Its full incremental-output check includes the fresh certificate,
+marker, private manifest, and aggregate report. Commit, push, and require both
+CI jobs green for this exact implementation before any real operation. The one
+real certificate cleanup, fresh readiness sequence, and structural pass remain
+closed until that proof.
 Archive payload, neural values, FW2/CIL1 execution, training, targets,
 prediction freezing, scoring, and claim upgrades remain unauthorized.
 

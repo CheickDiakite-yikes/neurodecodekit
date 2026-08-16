@@ -2502,11 +2502,15 @@ the request itself.
 Request `a5b73d6` passed Base job `95215825208`, Optional job `95215825263`,
 and CI `31967933217`. The maintainer's fresh `continue` is now captured exactly
 in a separate `MARC2-VR4P` decision. It binds only the registered two-stage
-sequence and remains ineffective until the decision commit is pushed and both
-jobs are green. After that proof, the next systematic task is the additive
-executor plus generated/mock qualification. Only after that exact executor is
-remotely green may the one expired-certificate cleanup, fresh readiness, and
-418,755-byte structural cohort pass occur. FW2 becomes preregistration-eligible
-only after a successful cohort freeze; archive payload, neural training,
-prediction freeze, target delivery, and scoring still require a separate Tier
-C packet and fresh decision.
+sequence. Decision `eac3726` passed Base job `95218521665`, Optional job
+`95218521647`, and CI `31969063955` before the additive executor was built.
+The generated implementation now passes two byte-identical replays and 27
+direct refusal cases in 0.107 seconds at 36,864,000-byte peak RSS. Its 222,279
+output bytes include the fresh certificate, marker, private manifest, and
+aggregate report; every real/private/scientific counter remains zero. Current
+gate: commit, push, and remotely green this exact executor. Only then may the
+one expired-certificate cleanup, fresh readiness, and 418,755-byte structural
+cohort pass occur. FW2 becomes preregistration-eligible only after a successful
+cohort freeze; archive payload, neural training, prediction freeze, target
+delivery, and scoring still require a separate Tier C packet and fresh
+decision.

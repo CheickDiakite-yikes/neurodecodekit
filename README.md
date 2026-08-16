@@ -1869,10 +1869,21 @@ Read this before interpreting any number in the repository.
   first build and qualify an additive executor entirely on generated/mock
   fixtures, then, only after that exact implementation is remotely green,
   verify and remove the one expired readiness certificate, obtain fresh
-  readiness, and perform one 418,755-byte structural pass. The decision itself
-  still needs its commit and both remote jobs green before implementation.
+  readiness, and perform one 418,755-byte structural pass. Decision `eac3726`
+  passed Base job `95218521665`, Optional job `95218521647`, and CI
+  `31969063955` before implementation.
   Archive payloads, neural data, models, targets, prediction freezes, scores,
   and scientific claims remain closed.
+- **MARC2-VR4P generated executor:** a new dependency-free, fixed-path executor
+  validates the green decision and a distinct shared proof record, removes only
+  the exact expired certificate, obtains fresh proof-bound readiness, and puts
+  a mode-0600 marker immediately before one structural open. Two generated
+  replays and 27 direct refusals completed in 0.107 seconds at 36,864,000-byte
+  peak RSS, with 433,847 input bytes, 222,279 output bytes, zero retention, and
+  zero real/private operations. The fresh certificate is included in the 4 MiB
+  incremental-output accounting. This exact implementation still needs its
+  commit and both CI jobs green before the sole real structural pass; it has
+  not read neural data, trained a model, opened targets, or produced a score.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

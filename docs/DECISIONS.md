@@ -8639,3 +8639,31 @@ Evidence:
 `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_AUTHORIZATION_DECISION.md`,
 `registries/marc2_machine_stable_private_recovery_authorization_decision.v0.json`,
 and its focused decision test.
+
+## 0265 - Count The Fresh Certificate In The Recovery Output Cap
+
+Implementation decision: after decision `eac3726` passed both required jobs in
+CI `31969063955`, implement the authorized executor additively and exercise the
+entire sequence only on generated/mock fixtures. Keep all real certificate,
+private source, output-root, archive, neural, target, model, and score counters
+at zero until the exact implementation is remotely green.
+
+Accounting decision: interpret the 4 MiB incremental-output ceiling
+conservatively. Count the freshly written readiness certificate together with
+the consumed marker, private selection manifest, and aggregate report. Require
+the report's own byte count to converge before any private or aggregate output
+is written.
+
+Safety decision: preserve exact fixed paths, no-follow identities, owner/mode/
+size/hash/inode checks, one source open, marker-before-open ordering, one VR2
+call, zero retry/rerun/resume/fallback, and the no-override CLI. Do not import or
+operate on a consumed executor or root.
+
+Evidence boundary: generated `MARC2MSP-R1` is interface and refusal evidence
+only. The exact implementation must be committed, pushed, and green in both
+jobs before the sole real structural pass. FW2 payload access and CIL1 neural
+training/scoring remain separate Tier C decisions.
+
+Evidence: `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_IMPLEMENTATION.md`,
+`registries/marc2_machine_stable_private_recovery_implementation.v0.json`, the
+distinct proof registry, implementation module, and two focused test modules.

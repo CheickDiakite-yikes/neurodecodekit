@@ -239,12 +239,15 @@
    `95215825263`, and CI `31967933217`. Read
    `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_AUTHORIZATION_DECISION.md` and
    its decision registry. The maintainer's fresh `continue` is recorded
-   verbatim and binds only that green packet. The decision is ineffective
-   until its own commit is pushed and both jobs pass. After green decision,
-   implement and generated-qualify the additive executor; do not inspect or
-   remove the expired certificate or touch the retained manifest until that
-   exact executor is also remotely green. Payload, neural, training, target,
-   prediction, scoring, FW2/CIL1 execution, and claim surfaces remain closed.
+   verbatim and binds only that green packet. Decision `eac3726` passed Base
+   job `95218521665`, Optional job `95218521647`, and CI `31969063955`. Then
+   read `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_IMPLEMENTATION.md` and its
+   implementation/proof registries. The fixed-path executor has passed two
+   generated replays and 27 refusal cases without touching the expired
+   certificate or retained manifest. Commit, push, and green that exact
+   implementation before its sole real structural pass. Payload, neural,
+   training, target, prediction, scoring, FW2/CIL1 execution, and claim
+   surfaces remain closed.
    Then
    read `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked

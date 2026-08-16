@@ -9759,6 +9759,38 @@ Scientific claim not established: this registration contains no neural
 payload, target, prediction, or score and establishes no neural effect,
 decoding accuracy, language decoding, or thought-to-text capability.
 
+## 2026-08-16 - MARC2-VR4P Generated Executor Implementation
+
+- Decision `eac37262dcf7cd4167475b7cc9145e3698d6dd9b` passed Base Python
+  job `95218521665`, Optional Neuro Readers job `95218521647`, and CI
+  `31969063955` before implementation.
+- Added one dependency-free fixed-path executor with `plan`, `qualify`,
+  `inspect`, and proof-identifier-only `execute` commands. There is no path,
+  root, URL, cleanup, threshold, dataset, participant, or model override.
+- The generated state machine validates the decision and shared proof record,
+  removes only an exact generated expired certificate, obtains fresh readiness,
+  writes a marker immediately before one generated structural open, calls VR2
+  once, and emits private plus aggregate outputs under strict modes and caps.
+- Two byte-identical replays and 27 direct refusals completed in
+  `0.10705108400725294` seconds at 36,864,000-byte peak RSS. They processed
+  433,847 generated input bytes, emitted 222,279 output bytes, retained zero
+  bytes, and performed zero real/private/archive/neural/target/model/score
+  operations. The 4 MiB accounting includes the fresh certificate.
+- Focused verification passes 61 tests and 35 subtests. The complete pytest
+  process passes 3,827 tests with 35 skips and 2,117 subtests; CI-shaped
+  unittest runs 3,840 tests with 35 skips. Both monolithic commands expose the
+  same three established process-state failures, and all three exact tests pass
+  in fresh processes; the forkserver case requires permission for its local
+  Unix socket. Ruff, compilation, all 254 registry parses, CLI surfaces, and
+  diff hygiene pass. Remote clean-process CI remains the acceptance gate.
+
+Engineering capability added: a proof-gated generated executor now enforces
+the complete machine-stable structural-freeze sequence and resource boundary.
+
+Scientific claim not established: no real private manifest, archive payload,
+neural value, target, prediction, or score was accessed, so this implementation
+establishes no neural effect or decoding performance.
+
 ## 2026-08-16 - MARC2-VR4P Packet-Bound Authorization Decision
 
 - Verified request `a5b73d6859c71054a1f20ab6c1c500341539efea`
