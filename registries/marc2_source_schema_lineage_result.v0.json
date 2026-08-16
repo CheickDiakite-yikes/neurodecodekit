@@ -29,7 +29,7 @@
     },
     {
       "path": "tests/test_marc2_source_schema_lineage.py",
-      "sha256": "7f6c27a7e0cc7762df8ba757efb03dca2bf2c9b2c4b4f3ac1401d8d42c3f1710"
+      "sha256": "6afa3f2df7943de86056ae82507753f765b4586055e4c05b3b90a57d2373a017"
     },
     {
       "path": "docs/MARC_2_SOURCE_SCHEMA_LINEAGE_AUDIT.md",

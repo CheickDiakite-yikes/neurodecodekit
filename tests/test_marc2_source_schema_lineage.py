@@ -175,10 +175,11 @@ class Marc2SourceSchemaLineageTests(unittest.TestCase):
             cwd=ROOT,
             env=environment,
             capture_output=True,
-            check=True,
+            check=False,
             text=True,
             timeout=10,
         )
+        self.assertEqual(completed.returncode, 0, completed.stderr)
         report = json.loads(completed.stdout)
         self.assertEqual(report["route"], "MARC2SL-R2")
         self.assertTrue(report["lineage"]["exact_single_alias_mismatch"])
