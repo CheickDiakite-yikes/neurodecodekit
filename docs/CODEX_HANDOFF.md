@@ -4462,3 +4462,36 @@ with the exact green commit, CI/job IDs, native registry SHA, certificate SHA,
 one-thread environment, new v1 output root, and no retry. Do not touch the old
 v0 root. Stop before archive members, payload, neural analysis, targets,
 models, scores, or `MARC2-FW2` regardless of the selection route.
+
+## 2026-08-16 MARC2-FW1C Consumed Result Handoff
+
+Exact wrapper `7b924bee1f10217bccf911ccb4e380485226d50c`
+passed Base Python job `95123374369`, Optional Neuro Readers job
+`95123374211`, and CI `31930051249` before the sole registered Stage 2
+invocation. Read `docs/MARC_2_LIVE_SELECTION_RECOVERY_RESULT.md`, its result
+registry, and the result test.
+
+The executor passed decision/certificate/native/Git proof, machine and output
+preflight, no-follow identity, exact size and SHA-256, and strict JSON. It
+opened and read exactly 418,755 structural bytes once, then consumed at
+`MARC2FWC-F02` with `live source identity differs` during target-free prefix
+selection. Runtime was 0.09137429200200131 seconds at 25,280,512-byte peak RSS
+with 6,944 combined output bytes.
+
+Zero participants and members were selected. No private selection manifest was
+created. Network, archive-member, signal, event, target, model, prediction,
+score, provider, hardware, old-root, retry, and claim counters are zero. The
+aggregate does not retain which private field or value differed. Do not inspect
+the consumed marker, reopen or probe the private source, list either output
+root, or rerun the lane.
+
+Post-result verification passes 56 focused recovery tests, 3,226
+dependency-light tests with 204 skips, and 3,297 optional-neuro tests with 35
+skips. Ruff, compilation, all 219 registries, and diff hygiene pass. None of
+these checks reopened a private or consumed artifact.
+
+Immediate next task: perform only a separately named artifact-only schema
+lineage audit over committed producer code, contracts, and aggregate records.
+Do not infer a private-field diagnosis. Any future live recovery needs a fresh
+generated contract and Tier C sequence. `MARC2-FW2`, payloads, neural work,
+targets, models, scores, providers, hardware, and claim upgrades remain closed.

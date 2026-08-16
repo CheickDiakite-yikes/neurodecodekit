@@ -63,8 +63,14 @@
    additive module, and both recovery tests. The native FW1C registry and
    distinct FW1B certificate pass the exact shared validator; the generated
    closeout passed all 90 proof/selector/wrapper mutations in 0.374161 seconds
-   at 38,666,240-byte peak RSS with zero private operations. Stage 2 remains
-   closed until this exact wrapper commit is pushed and both jobs are green.
+   at 38,666,240-byte peak RSS with zero private operations. Exact wrapper
+   `7b924be` passed both jobs in CI `31930051249` before its sole Stage 2
+   invocation. Then read `docs/MARC_2_LIVE_SELECTION_RECOVERY_RESULT.md`,
+   `registries/marc2_live_selection_recovery_failure_result.v0.json`, and the
+   result test. One exact 418,755-byte structural read passed size, hash, and
+   strict JSON, then consumed at `MARC2FWC-F02` because strict live source
+   identity differed. Zero participants or members were selected, no private
+   selection was written, no retry is open, and `MARC2-FW2` is ineligible.
    Archive members, payloads, signals, targets, models, scores, language
    datasets, provider calls, and `MARC2-FW2` remain unauthorized. Then read
    `docs/CODEX_HANDOFF.md` for the exact handoff state.

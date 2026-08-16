@@ -7829,3 +7829,29 @@ Evidence: `docs/MARC_2_LIVE_SELECTION_RECOVERY_IMPLEMENTATION.md`,
 `registries/marc2_live_selection_recovery_implementation.v0.json`,
 `registries/marc2_live_selection_recovery_proof_certificate.v0.json`, the
 additive module, and its two test modules.
+
+## 0237 - Consume MARC2-FW1C At Strict Live Source Identity
+
+Execution decision: accept exact remote-green wrapper `7b924be` as satisfying
+the Stage 2 gate, then invoke the one registered structural selection exactly
+once with the frozen native registry and FW1B certificate hashes.
+
+Result decision: route `MARC2FWC-F02` is final after one exact 418,755-byte
+open/read/hash/strict parse reached target-free selection and the strict live
+source identity differed. Retain only aggregate stage, counters, resources,
+warnings, and unavailable fields; do not retain or infer the differing private
+field or value.
+
+Disposition decision: consume the lane with zero selected participants or
+members, no private selection manifest, no retry/rerun/resume/repair, and no
+`MARC2-FW2` eligibility. Do not inspect the consumed marker, probe the private
+source, list the output root, or use the failure for tuning.
+
+Next-design decision: permit only a separately named artifact-only
+committed-schema lineage audit under routine authority. Any future live read
+requires a fresh generated contract, green implementation, all-false Tier C
+request, and packet-bound decision.
+
+Evidence: `docs/MARC_2_LIVE_SELECTION_RECOVERY_RESULT.md`,
+`registries/marc2_live_selection_recovery_failure_result.v0.json`, and
+`tests/test_marc2_live_selection_recovery_result.py`.

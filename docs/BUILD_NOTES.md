@@ -9645,3 +9645,40 @@ selection through one exact shared validator.
 Scientific claim not established: generated structural metadata contain no
 human neural signal, target, prediction, or score and establish no neural
 effect, decoding accuracy, language decoding, or thought-to-text capability.
+
+## 2026-08-16 - MARC2-FW1C Consumed Live Source-Identity Failure
+
+- Exact wrapper `7b924bee1f10217bccf911ccb4e380485226d50c`
+  passed Base Python job `95123374369`, Optional Neuro Readers job
+  `95123374211`, and CI `31930051249` before the sole Stage 2 invocation.
+- The executor validated the packet-bound decision, distinct FW1B certificate,
+  native FW1C registry, clean exact HEAD, machine caps, new output root, and
+  registered no-follow source preflight before consumption.
+- One content open/read/hash/strict parse processed exactly 418,755 bytes. The
+  invocation then routed `MARC2FWC-F02` with `live source identity differs` at
+  `target_free_prefix_selection`. The aggregate intentionally retained no
+  differing private field or value.
+- Measured runtime was 0.09137429200200131 seconds at 25,280,512-byte peak RSS,
+  with 167,501,524,992 free bytes, normalized load 0.4368489583333333, one
+  thread/worker/job, and 6,944 combined output bytes. The 6,540-byte aggregate
+  report SHA-256 is
+  `f3c9d1d8a10de32975824422a809f8d408e0924f65916bf3b92ed513e29af8fc`.
+- The executor created one consumed marker and one aggregate report. It created
+  no private selection manifest and selected zero participants or members.
+  Network, archive-member, signal, target, derivative, model, prediction,
+  score, provider, hardware, old-root, retry, and claim counters are zero.
+- `MARC2-FW1C` is consumed without retry, rerun, resume, repair, or
+  `MARC2-FW2` eligibility. Do not inspect the marker, probe the private source,
+  list the output root, or use the aggregate for tuning.
+- Post-result verification passes 56 focused recovery tests, 3,226
+  dependency-light tests with 204 skips, and 3,297 optional-neuro tests with
+  35 skips. Ruff, compilation, all 219 registry JSON files, and diff hygiene
+  pass without reopening any private or consumed artifact.
+
+Engineering capability added: the remotely qualified one-shot wrapper failed
+closed with an aggregate, resource-measured, privacy-preserving consumed
+result.
+
+Scientific claim not established: no neural payload, target, prediction, or
+score was accessed, so this metadata identity failure establishes no neural
+effect, decoding accuracy, language decoding, or thought-to-text capability.

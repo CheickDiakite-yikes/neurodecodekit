@@ -42,7 +42,7 @@ irreversible Tier C events.
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |
 | IACKD source compatibility | H1 found 96 29-row and 32 31-row headers. H2 then parsed all 316 public BIDS metadata bodies and confirmed one 26-channel predictive EEG core, 1024 Hz sampling, average reference, and complete central/occipital geometry in all 30 groups | The exact-36 reader assumption was wrong, but H2 still routed `IACKDR-R1`: HEOG, VEOG, and Trigger are source-typed `MISC`, exposing a frozen control-taxonomy bug before any EEG sample, event, target, model, or score was accessed |
 | MARC-1 source eligibility | The Freewill central-directory inventory passed without payload, but the one source-aware Wrist metadata check later routed `MARC1SAL-R2` with zero selected subjects and zero payload bytes | The Wrist branch is consumed and blocked before acquisition; the private source route remains unavailable and is not inferred or repaired |
-| MARC-2 confound triangulation | Five ordered work orders now test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | The consumed `MARC2-FW1A` execution failed closed before private access because its registry omitted `lane_id`. Generated-only `MARC2-FW1B` is remotely green and rejects all 32 registered proof defects through one shared path. The packet-bound `MARC2-FW1C` decision is now remotely green, and its additive wrapper locally passed all 90 proof/selector/filesystem mutations with zero private operations; the exact wrapper still must become remotely green before one target-free private-manifest read |
+| MARC-2 confound triangulation | Five ordered work orders now test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | `MARC2-FW1A` failed before private access, generated-only `MARC2-FW1B` proved the shared validator, and exact `MARC2-FW1C` became remotely green before one structural read. FW1C then consumed at `MARC2FWC-F02`: one 418,755-byte size/hash/strict-JSON pass reached target-free selection but failed strict live source identity, selecting zero people or members and accessing zero archive, neural, target, model, or score bytes |
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
 | Full-path causality gate | Loop 25 v1 passed a dedicated causal anti-alias audit, 65,537 response points, 23 alias probes, 168 schedule checks, 240 resume checks, and 72 future-mutation controls across 24 target-free items | The exact 1000-to-100 Hz path is mechanically causal with zero right context; this is synthetic mechanics evidence, not proof that neural information survives |
 | Consumed S21 validation | The registered 2,908-parameter candidate reached macro CER `0.938177`; the train-only no-signal prior reached `0.751235`, so the candidate was worse by `0.186942` | Loop 26 is parked after one consumed six-target event; this is a clear negative result, not neural advantage |
@@ -1648,8 +1648,18 @@ Read this before interpreting any number in the repository.
   bytes in 0.374161 seconds at 38,666,240-byte peak RSS. All 3,214 base and
   3,285 optional-neuro tests pass; every private, network, archive, neural,
   target, model, score, retry, and claim counter is zero. The temporary output
-  was removed. This exact wrapper must still be committed, pushed, and pass
-  both remote jobs before its one registered structural-manifest selection.
+  was removed. Exact wrapper `7b924be` then passed Base Python job
+  `95123374369`, Optional Neuro Readers job `95123374211`, and CI
+  `31930051249` before its one registered structural-manifest selection.
+- **MARC2-FW1C consumed source-identity failure:** the sole invocation opened,
+  read, hashed, and strictly parsed exactly 418,755 structural bytes once, then
+  routed `MARC2FWC-F02` because strict live source identity differed. It
+  selected zero participants and zero members, wrote no private selection, and
+  performed zero network, archive-member, signal, target, model, prediction,
+  or score operations. Runtime was 0.091374 seconds at 25,280,512-byte peak
+  RSS with 6,944 total output bytes. The aggregate does not retain which
+  private field differed. The invocation is consumed without retry, no
+  selection result exists, and `MARC2-FW2` remains ineligible.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
@@ -2459,6 +2469,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/MARC_2_LIVE_SELECTION_RECOVERY_IMPLEMENTATION.md](docs/MARC_2_LIVE_SELECTION_RECOVERY_IMPLEMENTATION.md) | native FW1C wrapper, distinct FW1B certificate, exact shared-validator chain, 90-mutation qualification, resources, and closed private/scientific boundary |
 | [registries/marc2_live_selection_recovery_implementation.v0.json](registries/marc2_live_selection_recovery_implementation.v0.json) | machine-readable native FW1C implementation, frozen source/output identity, qualification metrics, zero access counters, and remote-green next gate |
 | [registries/marc2_live_selection_recovery_proof_certificate.v0.json](registries/marc2_live_selection_recovery_proof_certificate.v0.json) | distinct 15-field FW1B-format certificate binding the recovery wrapper, native registry, tests, decision, shared validator, and selector |
+| [docs/MARC_2_LIVE_SELECTION_RECOVERY_RESULT.md](docs/MARC_2_LIVE_SELECTION_RECOVERY_RESULT.md) | consumed one-read source-identity failure, exact resources and counters, unavailable private detail, no-rerun disposition, and claim boundary |
+| [registries/marc2_live_selection_recovery_failure_result.v0.json](registries/marc2_live_selection_recovery_failure_result.v0.json) | aggregate machine result binding green proof, report identity, one-open counters, `MARC2FWC-F02`, zero forbidden operations, and closed FW2 authority |
 | [docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md](docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md) | layered compact-adapter plus GPT-Sol architecture, four matched conditions, and staged authorization boundary |
 | [docs/FOUNDATION_MODEL_BRIDGE_V0.md](docs/FOUNDATION_MODEL_BRIDGE_V0.md) | implemented FM-0 synthetic no-call schemas, CLI, strict refusals, hashes, and measured roundtrip |
 | [docs/FOUNDATION_MODEL_LIVE_SMOKE_PREREGISTRATION.md](docs/FOUNDATION_MODEL_LIVE_SMOKE_PREREGISTRATION.md) | frozen one-shot FM-1 Terra matrix, privacy boundary, provider settings, resource caps, and no-science ceiling |

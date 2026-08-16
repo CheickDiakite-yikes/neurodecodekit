@@ -2066,3 +2066,27 @@ this exact implementation and require both jobs green. Only then may the one
 registered target-free structural selection run once. `MARC2-FW2`, archive
 members, neural payloads, targets, models, scores, retries, and claim upgrades
 remain closed regardless of Stage 1 success.
+
+Exact wrapper `7b924bee1f10217bccf911ccb4e380485226d50c` passed Base
+Python job `95123374369`, Optional Neuro Readers job `95123374211`, and CI
+`31930051249` before the sole registered Stage 2 invocation. Read
+`docs/MARC_2_LIVE_SELECTION_RECOVERY_RESULT.md`, its aggregate registry, and
+the result test.
+
+The executor passed green proof, machine, new-output, no-follow, owner/mode,
+size, SHA-256, and strict JSON gates, reading exactly 418,755 structural bytes
+once. It then consumed at `MARC2FWC-F02` with `live source identity differs`
+at the target-free selection stage. Runtime was 0.091374292 seconds at
+25,280,512-byte peak RSS with 6,944 combined output bytes. Zero participants
+and members were selected; no private selection manifest was written.
+
+Network, archive-member, signal, event, target, derivative, model, prediction,
+score, provider, hardware, old-root, retry, and claim counters are all zero.
+The aggregate intentionally does not identify which private field or value
+differed.
+
+Current status is consumed failure with no retry, rerun, resume, repair, or
+`MARC2-FW2` eligibility. The next safe work is a separately named artifact-only
+committed-schema lineage audit. A later live read requires a fresh frozen
+generated contract, remotely green implementation, all-false Tier C request,
+and packet-bound decision.

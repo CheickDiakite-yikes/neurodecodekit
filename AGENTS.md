@@ -1477,10 +1477,19 @@ The final generated run preserved the 16-person/384-row prefix and
 8,105,207,776-byte future reservation in 0.3741613749953103 seconds at
 38,666,240-byte peak RSS. Forty-four focused, 3,214 base, and 3,285 optional
 tests pass; every private/real/network/payload/neural/target/model/score
-counter is zero. Commit, push, and obtain both green jobs for this exact
-wrapper before inspecting the retained path or creating the live output. The
-consumed FW1A module/root, archive members, payload, targets, models, scores,
-`MARC2-FW2`, retries, claim upgrades, and other projects remain closed.
+counter is zero. Exact wrapper
+`7b924bee1f10217bccf911ccb4e380485226d50c` passed Base Python job
+`95123374369` and Optional Neuro Readers job `95123374211` in CI
+`31930051249` before the sole Stage 2 invocation. Read
+`docs/MARC_2_LIVE_SELECTION_RECOVERY_RESULT.md`, its registry, and result test.
+The executor opened/read/hashed/strictly parsed exactly 418,755 structural
+bytes once, then consumed at `MARC2FWC-F02` because live source identity
+differed. It selected zero participants and members, wrote no private
+selection, and performed zero archive, signal, target, model, or score work.
+Do not retry, reopen or probe the private source, inspect the consumed marker,
+list either output root, or enter `MARC2-FW2`. The next safe work is a new
+artifact-only committed-schema lineage audit; any future live read requires a
+separately frozen generated design and fresh Tier C gate.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
