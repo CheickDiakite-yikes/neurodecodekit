@@ -9604,3 +9604,44 @@ target-free selection.
 Scientific claim not established: this decision is not neural data or a result
 and establishes no neural effect, decoding accuracy, brain-specific origin,
 language decoding, or thought-to-text capability.
+
+## 2026-08-16 - MARC2-FW1C Shared-Proof Recovery Wrapper
+
+- Packet-bound decision `b0466e56602d9694d5941a92203a456f7994f514`
+  passed Base Python job `95120011473`, Optional Neuro Readers job
+  `95120011519`, and CI `31928627432` before Stage 1 implementation.
+- Added one dependency-free recovery module with fixed `plan`, `qualify`,
+  aggregate `inspect`, and proof-disabled-until-green `execute` commands. It
+  imports the frozen selector and exact shared validator, but not the consumed
+  FW1A wrapper or v0 output root.
+- Added a native `MARC2-FW1C` implementation registry and distinct FW1B-format
+  certificate. The certificate hash-binds nine artifacts without self-hashing;
+  future green evidence independently binds the native registry and
+  certificate.
+- The final generated closeout passed 32 proof-record, 40 selector, and 18
+  wrapper mutations. It selected the deterministic 16-person, 96-bundle,
+  384-row fixture prefix at 8,105,207,776 future reservation bytes from
+  846,712 generated input bytes.
+- Measured final qualification: 0.3741613749953103 seconds, 38,666,240-byte
+  peak RSS, 298,059 temporary output bytes, one thread/worker/job, no
+  end-to-end latency measurement, and metadata-only causality not applicable.
+  Aggregate report SHA-256 was
+  `d84ee84fb420a0e65ba3b182198323208c0295725c50993477438875668fd440`;
+  the temporary output was removed.
+- Forty-four focused tests pass. The complete dependency-light suite passes
+  3,214 tests with 204 skips. Fresh optional A-M/N-Z processes pass 2,772 with
+  28 skips and 513 with seven skips, respectively. Ruff, compilation, all 218
+  registry JSON files, CLI help/plan/qualify/inspect, artifact hashes, and
+  generated cleanup pass.
+- Every registered private path/output, network, archive-member, payload,
+  neural, target, derivative, model, score, provider, hardware, retry,
+  other-project, and claim counter remains zero. The retained manifest was not
+  statted, opened, hashed, or parsed.
+
+Engineering capability added: a native FW1C wrapper and distinct FW1B proof
+certificate now guard a deterministic storage-bounded target-free structural
+selection through one exact shared validator.
+
+Scientific claim not established: generated structural metadata contain no
+human neural signal, target, prediction, or score and establish no neural
+effect, decoding accuracy, language decoding, or thought-to-text capability.

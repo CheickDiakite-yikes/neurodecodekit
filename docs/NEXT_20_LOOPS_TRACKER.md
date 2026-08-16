@@ -2039,3 +2039,30 @@ generated/mock wrapper implementation begin. The retained manifest and new
 output root remain closed until the exact wrapper is separately remotely green.
 Do not enter `MARC2-FW2`, access archive members or payload, run a model, score,
 or upgrade a claim from this decision.
+
+Decision `b0466e56602d9694d5941a92203a456f7994f514` passed Base Python
+job `95120011473`, Optional Neuro Readers job `95120011519`, and CI
+`31928627432` before Stage 1 implementation. Read
+`docs/MARC_2_LIVE_SELECTION_RECOVERY_IMPLEMENTATION.md`, the native FW1C
+registry, distinct FW1B certificate, additive module, and both recovery test
+modules.
+
+The exact shared validator now checks the certificate twice canonically and
+routes all 32 proof-record mutations. The pure selector routes all 40 frozen
+mutations, and the wrapper routes all 18 proof/filesystem/privacy mutations.
+The final 90/90 generated closeout selected the unchanged 16-participant,
+96-bundle, 384-row prefix with 8,105,207,776 future reservation bytes. It used
+846,712 generated input bytes, 298,059 temporary output bytes, 0.374161375
+seconds, 38,666,240-byte peak RSS, and one thread. The temporary output was
+removed.
+
+Forty-four focused, 3,214 dependency-light, and 3,285 optional-neuro tests pass.
+Every registered-private, live-output, network, archive-member, payload,
+neural, target, model, score, provider, hardware, retry, other-project, and
+claim counter remains zero.
+
+Current status is exact Stage 1 wrapper remote proof pending. Commit and push
+this exact implementation and require both jobs green. Only then may the one
+registered target-free structural selection run once. `MARC2-FW2`, archive
+members, neural payloads, targets, models, scores, retries, and claim upgrades
+remain closed regardless of Stage 1 success.

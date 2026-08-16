@@ -7801,3 +7801,31 @@ provider, hardware, release, and claim counter is zero.
 Evidence: `docs/MARC_2_LIVE_SELECTION_RECOVERY_AUTHORIZATION_DECISION.md`,
 `registries/marc2_live_selection_recovery_authorization_decision.v0.json`, and
 `tests/test_marc2_live_selection_recovery_authorization_decision.py`.
+
+## 0236 - Implement MARC2-FW1C With Two Non-Circular Proof Records
+
+Implementation decision: add a new standard-library recovery module without
+importing, calling, editing, or exposing the consumed FW1A wrapper or v0 output
+root.
+
+Proof decision: keep the native `MARC2-FW1C` implementation registry separate
+from the strict FW1B-format certificate consumed by the already-green shared
+validator. The native registry does not hash the certificate; future green
+evidence binds both independent hashes and the exact wrapper commit, CI jobs,
+HEAD, clean tracked state, and decision ancestry.
+
+Qualification decision: accept generated `MARC2FWC-G1` after the shared
+validator accepts the exact certificate twice with identical summaries and all
+32 proof-record, 40 selector, and 18 wrapper mutations pass. Record 846,712
+generated input bytes, 298,059 removed temporary output bytes,
+0.3741613749953103 seconds, and 38,666,240-byte peak RSS.
+
+Authority decision: require the exact implementation commit to pass both
+remote jobs before the one registered target-free structural selection. Do not
+infer archive-member, neural payload, target, model, score, `MARC2-FW2`, retry,
+release, or claim authority from generated qualification.
+
+Evidence: `docs/MARC_2_LIVE_SELECTION_RECOVERY_IMPLEMENTATION.md`,
+`registries/marc2_live_selection_recovery_implementation.v0.json`,
+`registries/marc2_live_selection_recovery_proof_certificate.v0.json`, the
+additive module, and its two test modules.

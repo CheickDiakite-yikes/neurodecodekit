@@ -55,10 +55,16 @@
    `docs/MARC_2_LIVE_SELECTION_RECOVERY_AUTHORIZATION_DECISION.md`,
    `registries/marc2_live_selection_recovery_authorization_decision.v0.json`,
    and its decision test. The decision quotes the maintainer's fresh exact
-   `continue`, binds only the packet, and remains ineffective until its own
-   commit is pushed and both jobs are green. Stage 1 is generated/mock only;
-   the retained manifest remains closed until the exact wrapper is separately
-   remotely green.
+   `continue` and binds only the packet. Exact decision `b0466e5` passed both
+   jobs in CI `31928627432`, opening generated/mock Stage 1 only. Then read
+   `docs/MARC_2_LIVE_SELECTION_RECOVERY_IMPLEMENTATION.md`,
+   `registries/marc2_live_selection_recovery_implementation.v0.json`,
+   `registries/marc2_live_selection_recovery_proof_certificate.v0.json`, the
+   additive module, and both recovery tests. The native FW1C registry and
+   distinct FW1B certificate pass the exact shared validator; the generated
+   closeout passed all 90 proof/selector/wrapper mutations in 0.374161 seconds
+   at 38,666,240-byte peak RSS with zero private operations. Stage 2 remains
+   closed until this exact wrapper commit is pushed and both jobs are green.
    Archive members, payloads, signals, targets, models, scores, language
    datasets, provider calls, and `MARC2-FW2` remain unauthorized. Then read
    `docs/CODEX_HANDOFF.md` for the exact handoff state.

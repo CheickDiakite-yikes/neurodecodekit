@@ -1465,16 +1465,22 @@ The maintainer's next message was the fresh exact word `continue`. Read
 `registries/marc2_live_selection_recovery_authorization_decision.v0.json`, and
 its test. The decision quotes those actual eight UTF-8 bytes and binds only the
 green `MARC2-FW1C` packet. It authorizes generated/mock wrapper work only after
-the exact decision is committed, pushed, and both jobs are green. The wrapper
-must use a native FW1C registry plus a distinct FW1B-format certificate whose
-expected and observed proofs bind the future wrapper HEAD. Its 90-mutation
-qualification remains a future wrapper gate. The decision's 18 tests and the
-complete suites pass locally, but local proof is not remote authority. Do not
-implement the wrapper before decision green. Even afterward, do not inspect
-the retained path or create the live output until the exact
-wrapper is separately committed, pushed, and remotely green. Archive members,
-payload, neural work, targets, models, scores, `MARC2-FW2`, retries, claim
-upgrades, and other projects remain closed.
+the exact decision is committed, pushed, and both jobs are green. Decision
+`b0466e56602d9694d5941a92203a456f7994f514` passed Base Python job
+`95120011473` and Optional Neuro Readers job `95120011519` in CI
+`31928627432` before implementation began. Read
+`docs/MARC_2_LIVE_SELECTION_RECOVERY_IMPLEMENTATION.md`, the native registry,
+the distinct FW1B proof certificate, additive module, and matching tests. The
+exact shared validator accepts the current certificate twice and all 32 proof
+mutations refuse; the frozen selector passes 40 mutations and the wrapper 18.
+The final generated run preserved the 16-person/384-row prefix and
+8,105,207,776-byte future reservation in 0.3741613749953103 seconds at
+38,666,240-byte peak RSS. Forty-four focused, 3,214 base, and 3,285 optional
+tests pass; every private/real/network/payload/neural/target/model/score
+counter is zero. Commit, push, and obtain both green jobs for this exact
+wrapper before inspecting the retained path or creating the live output. The
+consumed FW1A module/root, archive members, payload, targets, models, scores,
+`MARC2-FW2`, retries, claim upgrades, and other projects remain closed.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
