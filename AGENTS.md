@@ -1731,7 +1731,25 @@ routes. A machine-only timeout consumes no future private content open. The
 future private executor remains separately gated at a mode-0600 marker before
 one content open and may not add a second opaque load gate. Registration must
 be committed, pushed, and both jobs green before generated implementation.
-Private access, FW2, CIL1, training, targets, scoring, and claims remain false.
+Registration `3af2e3d654b91c13aefce76e74b38ae19b2a3d6f` passed Base
+Python job `95210732393`, Optional Neuro Readers job `95210732329`, and CI
+`31965823863` before implementation.
+
+Read `docs/MARC_2_MACHINE_STABLE_STRUCTURAL_RECOVERY_IMPLEMENTATION.md`,
+`registries/marc2_machine_stable_structural_recovery_implementation.v0.json`,
+the module, and its two focused implementation tests. The standard-library
+surface has only `plan`, `qualify`, `inspect`, and `readiness`; there is no
+private source/output constant, execute command, network client, archive or
+neural reader, target interface, derivative builder, trainer, predictor,
+freezer, or scorer. One final generated qualification covered three success
+paths, one non-ready timeout shape, byte-identical replay, and all 36 frozen
+mutations in 0.007058667004457675 seconds at 19,038,208-byte peak RSS. It used
+18,474 generated input bytes, emitted a 5,184-byte aggregate report, retained
+zero generated output, and kept every private, neural, target, model, score,
+network, and claim counter at zero. Exact implementation must be committed,
+pushed, and both jobs green before one measured machine-only readiness
+closeout. Do not run `readiness` before that proof. Private access, FW2, CIL1,
+training, targets, scoring, and claims remain false.
 
 Read `docs/MARC_2_MACHINE_STABLE_COHORT_AND_NEURAL_CONTROL_RESEARCH.md` and
 `registries/marc2_machine_stable_cohort_and_neural_control_research.v0.json`.

@@ -208,9 +208,18 @@
    `docs/MARC_2_MACHINE_STABLE_STRUCTURAL_RECOVERY_PREREGISTRATION.md` and its
    contract. VR4 freezes a generated-only readiness certificate with three
    passing samples, exact diagnostics, 600-second wait, 300-second expiry, 36
-   mutations, and no execute/private-path interface. Registration must pass
-   both remote jobs before implementation; the future private open remains a
-   separate Tier C gate.
+   mutations, and no execute/private-path interface. Registration `3af2e3d`
+   passed Base job `95210732393`, Optional job `95210732329`, and CI
+   `31965823863` before implementation. Then read
+   `docs/MARC_2_MACHINE_STABLE_STRUCTURAL_RECOVERY_IMPLEMENTATION.md`, its
+   implementation registry, module, and two focused tests. The generated
+   qualification passed three success paths, one non-ready timeout shape,
+   deterministic replay, and all 36 mutations in 0.007058667 seconds at
+   19,038,208-byte peak RSS, retaining zero output and performing zero private
+   or scientific operations. The exact implementation must be committed,
+   pushed, and both remote jobs green before one machine-only readiness
+   closeout. The future private open remains a separate Tier C gate; a real
+   cohort, FW2, CIL1, training, targets, scoring, and claims remain closed.
    Then
    read `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked

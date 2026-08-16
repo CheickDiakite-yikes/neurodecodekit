@@ -2464,5 +2464,17 @@ one thread, 256 MiB RSS, 15 GiB free disk, and 64 KiB output. Thirty-six
 mutations cover six refusal routes. Its surface has no execute command or
 private source constant. A readiness timeout consumes no future private open;
 the later irreversible boundary remains a separate marker immediately before
-one content open. Current gate: commit and remotely qualify this registration,
-then implement and qualify only the generated/readiness certificate surface.
+one content open. Registration `3af2e3d` passed both jobs in CI `31965823863`
+before implementation.
+
+The generated/readiness certificate implementation is now complete locally.
+Its standard-library surface passes three success scenarios, one non-ready
+timeout shape, byte-identical replay, and all 36 mutations. The final measured
+qualification used 18,474 generated input bytes, 0.007058667 seconds,
+19,038,208-byte peak RSS, and a 5,184-byte report, with zero retained output
+and every private, neural, target, model, prediction, score, network, and claim
+counter at zero. Current gate: commit and remotely qualify this exact
+implementation, then run one machine-only readiness closeout. Do not prepare
+or run the private structural pass until that closeout is remotely green and a
+separate all-false Tier C packet receives a fresh decision. FW2 and CIL1 remain
+ineligible until a real cohort identity exists.

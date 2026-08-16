@@ -1829,8 +1829,20 @@ Read this before interpreting any number in the repository.
   mutations across six refusal routes. The implementation surface has no
   execute command or private path. A future private executor remains a separate
   Tier C packet whose irreversible boundary is the marker immediately before
-  one content open. Registration must become remotely green before generated
-  implementation; FW2 and CIL1 remain closed.
+  one content open. Registration `3af2e3d` passed Base Python job
+  `95210732393`, Optional Neuro Readers job `95210732329`, and CI
+  `31965823863` before generated implementation; FW2 and CIL1 remain closed.
+- **MARC2-VR4 deterministic readiness implementation:** the new
+  standard-library module exposes only `plan`, `qualify`, `inspect`, and
+  `readiness`. It has no private cohort path, archive or neural reader, target
+  interface, derivative builder, trainer, predictor, freezer, or scorer. One
+  final generated qualification passed three success scenarios, a non-ready
+  timeout shape, deterministic replay, and all 36 frozen mutations in
+  0.007059 seconds at 19,038,208-byte peak RSS. It processed 18,474 generated
+  bytes, emitted a 5,184-byte report, retained zero output, and kept all real,
+  private, neural, target, model, score, and claim counters at zero. This exact
+  implementation still needs its commit and both remote jobs green before one
+  machine-only readiness closeout. It has not frozen a real cohort or run FW2.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

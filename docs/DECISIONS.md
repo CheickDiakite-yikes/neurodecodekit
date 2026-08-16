@@ -8524,3 +8524,29 @@ Evidence:
 `docs/MARC_2_MACHINE_STABLE_STRUCTURAL_RECOVERY_PREREGISTRATION.md`,
 `registries/marc2_machine_stable_structural_recovery_contract.v0.json`, and its
 focused contract test.
+
+## 0261 - Implement Readiness Without Opening A Private Surface
+
+Implementation decision: expose only `plan`, `qualify`, `inspect`, and
+`readiness` in a standard-library module. Fix the certificate path, thresholds,
+interval, sample count, wait, expiry, mode, and output cap in code. Resolve the
+current Git commit without a network call and refuse alternate paths, symlinks,
+existing destinations, malformed samples, stale certificates, counter leaks,
+and claim upgrades.
+
+Qualification decision: require three generated success scenarios, an
+explicit non-ready timeout shape, canonical deterministic replay, strict file
+inspection, and all 36 ordered mutations on their six frozen routes. Preserve
+exact load/RSS/disk values and refusal reasons in every sample.
+
+Boundary decision: the implementation contains no private source or output
+root, execute command, archive or neural reader, target interface, derivative
+builder, trainer, predictor, freezer, or scorer. Its exact commit and both CI
+jobs must be green before one measured machine-only readiness closeout. A
+private structural pass still requires a later all-false Tier C packet and
+fresh packet-bound decision; FW2 and CIL1 remain ineligible.
+
+Evidence:
+`docs/MARC_2_MACHINE_STABLE_STRUCTURAL_RECOVERY_IMPLEMENTATION.md`,
+`registries/marc2_machine_stable_structural_recovery_implementation.v0.json`,
+the dependency-free module, and its two focused implementation tests.

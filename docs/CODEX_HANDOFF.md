@@ -5124,3 +5124,33 @@ Immediate gate: commit, push, and obtain both green jobs for this exact
 registration. Then implement only the generated/readiness certificate module.
 Do not prepare a private executor request, access the manifest, enter FW2 or
 CIL1, train, predict, open targets, score, or promote a claim from the contract.
+
+## 2026-08-16 MARC2-VR4 Readiness Implementation Handoff
+
+Registration `3af2e3d654b91c13aefce76e74b38ae19b2a3d6f` passed Base
+Python job `95210732393`, Optional Neuro Readers job `95210732329`, and CI
+`31965823863` before implementation.
+
+The new standard-library module implements the fixed VR4 Stage A certificate.
+Its only commands are `plan`, `qualify`, `inspect`, and `readiness`. It has no
+private path, execute command, network client, archive or neural reader, target
+surface, derivative builder, trainer, predictor, freezer, or scorer. The
+machine command has no path/root/threshold/interval/sample/wait/cap override
+and can create only the fixed mode-0600 certificate.
+
+One final generated qualification passed three success scenarios, a non-ready
+timeout certificate, deterministic replay, strict file checks, and all 36
+ordered mutations. It processed 18,474 generated input bytes in
+0.007058667004457675 seconds at 19,038,208-byte peak RSS, emitted a 5,184-byte
+aggregate report, retained zero output, and kept every private, neural, target,
+model, score, network, hardware, other-project, and claim counter at zero.
+Sixty focused research/contract/implementation tests and Ruff pass. Fresh
+A-M/N-Z complete shards pass 3,786 tests with 35 expected skips.
+
+Immediate gate: commit and push this exact implementation and require both CI
+jobs green. Only then run one measured machine-only `readiness` closeout under
+the all-one thread environment. Do not inspect a private path or create a
+structural executor from this milestone. A successful machine certificate is
+not a cohort freeze; the later private pass requires a separate all-false Tier
+C packet and fresh packet-bound maintainer decision. FW2 training, prediction
+freezing, target delivery, scoring, and scientific claims remain closed.

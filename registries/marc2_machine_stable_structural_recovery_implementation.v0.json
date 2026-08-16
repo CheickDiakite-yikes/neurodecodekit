@@ -1,0 +1,145 @@
+{
+  "schema_name": "neurodecodekit.marc2_machine_stable_structural_recovery_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "MARC-2-VR4-machine-stable-structural-recovery-implementation-v0",
+  "lane_id": "MARC2-VR4",
+  "recorded_at_local": "2026-08-16",
+  "status": "generated_and_machine_only_implementation_complete_remote_green_pending",
+  "green_registration": {
+    "commit": "3af2e3d654b91c13aefce76e74b38ae19b2a3d6f",
+    "CI_run_id": 31965823863,
+    "base_python_job_id": 95210732393,
+    "optional_neuro_job_id": 95210732329,
+    "both_required_jobs_green": true,
+    "contract_sha256": "93d63b273809f05608aaa18f9a52611d6073110e74b3c62ae5cf08d756b6b191",
+    "document_sha256": "c09b354df7ec28665a10c05edb685529313b65f5c829cb89ba771a8b9ba64e81"
+  },
+  "implementation_files": {
+    "module": {
+      "path": "src/neurodecodekit/datasets/marc2_machine_readiness.py",
+      "sha256": "7773b070dc0b819d7a680789fe6d998293ed17c94776af703034576e773dafa0"
+    },
+    "focused_test": {
+      "path": "tests/test_marc2_machine_readiness.py",
+      "sha256": "bb409c755b631dca9f5e5c128ec800891e4e44a78f3ee09a131bcbac22b3ab2b"
+    }
+  },
+  "implemented_surface": {
+    "module": "neurodecodekit.datasets.marc2_machine_readiness",
+    "commands": [
+      "plan",
+      "qualify",
+      "inspect",
+      "readiness"
+    ],
+    "execute_command": false,
+    "generic_override": false,
+    "fixed_certificate_path": ".codex_work/marc2_machine_readiness/vr4/readiness.v0.json",
+    "private_source_or_output_root_constant": false,
+    "consumed_executor_import_call_or_alias": false,
+    "network_archive_neural_target_model_prediction_or_score_interface": false,
+    "standard_library_only": true,
+    "base_dependency_delta": 0
+  },
+  "certificate_contract": {
+    "schema_name": "neurodecodekit.marc2_machine_readiness_certificate",
+    "schema_version": "0.1.0",
+    "mode": "0600",
+    "maximum_bytes": 65536,
+    "canonical_JSON": true,
+    "deterministic_generated_replay": true,
+    "implementation_commit_bound": true,
+    "contract_sha256_bound": true,
+    "expires_after_seconds": 300,
+    "symlink_alternate_path_or_existing_destination_refused": true,
+    "generated_ready_grants_private_authority": false
+  },
+  "readiness_algorithm": {
+    "thread_environment_all_one": true,
+    "logical_CPUs_minimum": 1,
+    "normalized_one_minute_load_maximum": 1.0,
+    "process_peak_RSS_bytes_maximum_exclusive": 268435456,
+    "free_disk_bytes_minimum": 16106127360,
+    "consecutive_passing_samples": 3,
+    "minimum_sample_interval_seconds": 5,
+    "maximum_wait_seconds": 600,
+    "maximum_samples": 121,
+    "every_exact_value_threshold_timestamp_check_and_safe_reason_emitted": true,
+    "machine_only_refusal_consumes_private_content_open": false
+  },
+  "generated_qualification": {
+    "route": "MARC2RDY-G1",
+    "success_scenarios_passed": 3,
+    "success_scenarios_total": 3,
+    "timeout_ready": false,
+    "deterministic_replay": true,
+    "ordered_mutations_refused": 36,
+    "ordered_mutations_total": 36,
+    "generated_machine_samples": 13,
+    "generated_certificates": 4,
+    "generated_input_bytes": 18474,
+    "retained_generated_output_bytes": 0,
+    "report_bytes": 5184,
+    "runtime_seconds": 0.007058667004457675,
+    "peak_RSS_bytes": 19038208,
+    "temporary_generated_output_removed": true
+  },
+  "focused_verification": {
+    "tests_passed": 60,
+    "tests_failed": 0,
+    "ruff_passed": true,
+    "complete_A_through_M_tests_passed": 3273,
+    "complete_A_through_M_tests_skipped": 28,
+    "complete_N_through_Z_tests_passed": 513,
+    "complete_N_through_Z_tests_skipped": 7,
+    "complete_fresh_process_tests_passed": 3786,
+    "complete_fresh_process_tests_skipped": 35
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "generated_runtime_seconds": 30,
+    "real_readiness_maximum_wait_seconds": 600,
+    "peak_RSS_bytes_exclusive": 268435456,
+    "certificate_bytes": 65536,
+    "incremental_disk_bytes": 1048576,
+    "network_bytes": 0,
+    "private_bytes": 0,
+    "archive_member_bytes": 0
+  },
+  "access_counters": {
+    "machine_readiness_checks": 0,
+    "readiness_certificates": 0,
+    "private_path_operations": 0,
+    "private_content_opens": 0,
+    "private_input_bytes": 0,
+    "private_output_root_operations": 0,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "archive_member_reads": 0,
+    "signal_sample_reads": 0,
+    "event_target_label_onset_channel_or_geometry_reads": 0,
+    "real_derivative_rows": 0,
+    "training_or_parameter_update_fits": 0,
+    "model_inference_or_prediction_sets": 0,
+    "prediction_freezes_target_deliveries_or_scores": 0,
+    "provider_or_language_model_calls": 0,
+    "hardware_operations": 0,
+    "scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "next_gate": {
+    "exact_implementation_commit_push_and_both_jobs_green_required": true,
+    "one_measured_machine_only_readiness_closeout_after_green": true,
+    "private_executor_implemented_or_authorized": false,
+    "separate_all_false_Tier_C_packet_after_green_closeout": true,
+    "fresh_packet_bound_decision_required": true,
+    "real_cohort_identity_available": false,
+    "FW2_or_neural_experiment_eligible": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "NeuroDecodeKit can generate and strictly validate a deterministic expiring machine-readiness certificate without touching private or neural data.",
+    "scientific_claim_not_established": "No neural payload target prediction or score was accessed so this implementation establishes no neural effect or decoding result."
+  }
+}

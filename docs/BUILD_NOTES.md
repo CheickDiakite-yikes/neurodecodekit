@@ -9759,6 +9759,46 @@ Scientific claim not established: this registration contains no neural
 payload, target, prediction, or score and establishes no neural effect,
 decoding accuracy, language decoding, or thought-to-text capability.
 
+## 2026-08-16 - MARC2-VR4 Machine-Readiness Implementation
+
+- Registration `3af2e3d654b91c13aefce76e74b38ae19b2a3d6f` passed Base
+  Python job `95210732393`, Optional Neuro Readers job `95210732329`, and CI
+  `31965823863` before implementation.
+- Added a standard-library `marc2_machine_readiness` module with only `plan`,
+  `qualify`, `inspect`, and `readiness`. It has no private source or output
+  root, execute command, network client, archive or neural reader, target
+  surface, derivative builder, trainer, predictor, freezer, or scorer.
+- Implemented exact all-one thread checks, logical CPU availability,
+  normalized one-minute load at most 1.0, RSS below 256 MiB, free disk at least
+  15 GiB, three consecutive samples at least five seconds apart, 121 samples
+  and 600 seconds maximum, and a 300-second certificate expiry.
+- The canonical certificate binds the current Git commit and frozen contract
+  hash, records every exact sample value/threshold/check/refusal reason, writes
+  only the fixed mode-0600 path, and refuses symlinks, alternate paths,
+  existing destinations, mode drift, malformed JSON, expiry, output cap drift,
+  counter leaks, and claim upgrades.
+- One final generated qualification passed three success scenarios, one
+  non-ready timeout shape, byte-identical replay, and all 36 ordered mutations
+  on the six frozen routes. It used 18,474 generated input bytes,
+  0.007058667004457675 seconds, 19,038,208-byte peak RSS, and a 5,184-byte
+  report; retained generated output was zero.
+- Sixty focused implementation/contract/research tests pass. Fresh A-M and
+  N-Z complete shards pass 3,273 tests with 28 skips and 513 tests with seven
+  skips, respectively, for 3,786 tests with 35 skips. Ruff is clean. Every
+  private, neural, target, model, prediction, score, network,
+  hardware, other-project, and claim counter remains zero.
+- The exact implementation must be committed, pushed, and both jobs green
+  before one machine-only readiness closeout. No private structural pass, FW2,
+  CIL1, target delivery, training, score, or claim is open.
+
+Engineering capability added: NeuroDecodeKit can generate and strictly
+validate a deterministic, expiring machine-readiness certificate without
+touching private or neural data.
+
+Scientific claim not established: no neural payload, target, prediction, or
+score was accessed, so this implementation establishes no neural effect or
+decoding result.
+
 ## 2026-08-16 - MARC2-VR4 Machine-Stable Recovery Registration
 
 - Bound green machine-stable research commit
