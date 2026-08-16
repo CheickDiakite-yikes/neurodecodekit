@@ -1862,6 +1862,17 @@ Read this before interpreting any number in the repository.
   bundles / 384 members` identity. It authorizes nothing yet and permits zero
   network or archive-payload bytes, neural samples, targets, models,
   predictions, or scores. A fresh packet-bound maintainer decision is required.
+- **MARC2-VR4P packet-bound decision:** request `a5b73d6` passed Base job
+  `95215825208`, Optional job `95215825263`, and CI `31967933217` before the
+  maintainer's fresh eight-byte `continue`. The decision preserves that exact
+  message and authorizes only the registered two-stage sequence by reference:
+  first build and qualify an additive executor entirely on generated/mock
+  fixtures, then, only after that exact implementation is remotely green,
+  verify and remove the one expired readiness certificate, obtain fresh
+  readiness, and perform one 418,755-byte structural pass. The decision itself
+  still needs its commit and both remote jobs green before implementation.
+  Archive payloads, neural data, models, targets, prediction freezes, scores,
+  and scientific claims remain closed.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

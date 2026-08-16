@@ -9759,6 +9759,42 @@ Scientific claim not established: this registration contains no neural
 payload, target, prediction, or score and establishes no neural effect,
 decoding accuracy, language decoding, or thought-to-text capability.
 
+## 2026-08-16 - MARC2-VR4P Packet-Bound Authorization Decision
+
+- Verified request `a5b73d6859c71054a1f20ab6c1c500341539efea`
+  against CI `31967933217`, Base Python job `95215825208`, and Optional Neuro
+  Readers job `95215825263`; both jobs succeeded for the exact request commit.
+- Recorded the maintainer's actual message `continue` as eight UTF-8 bytes with
+  SHA-256
+  `e256ee8e7aff6957a781d8328f0f68e26996564c81fa458da59fbca2305138ad`.
+  The decision incorporates the green packet by reference and does not
+  fabricate or expand the maintainer's words.
+- Authorized, only after this decision is remotely green, additive executor
+  implementation and generated/mock qualification. The real expired
+  certificate and retained manifest remain untouched until that exact executor
+  is separately committed, pushed, and green.
+- Preserved the exact one-shot sequence: one registered certificate read and
+  unlink, fresh three-sample readiness, marker immediately before one
+  418,755-byte structural read, one VR2 adapter call, and the structural cohort
+  freeze under 4 MiB output and one-thread limits.
+- Recorded zero expired-certificate, private-path, output-root, archive,
+  neural, target, derivative, model, prediction, score, network, hardware,
+  other-project cleanup, release, and claim operations while creating the
+  decision.
+- Twenty-three focused tests plus three subtests pass. The complete inventory
+  produced 3,803 passes, 35 expected skips, 2,096 subtests, and the three known
+  process-environment failures; all three passed in fresh processes, including
+  the forkserver case outside the sandbox's local-socket restriction, for
+  3,806 effective passes. Ruff, compilation, all 252 registry JSON documents,
+  and diff hygiene pass.
+
+Engineering capability authorized after green decision: one newly proven,
+machine-stable wrapper may freeze a real target-free cohort identity from one
+exact structural manifest without opening an archive member.
+
+Scientific claim not established: this decision is not neural data or a result
+and establishes no neural effect or decoding performance.
+
 ## 2026-08-16 - MARC2-VR4P All-False Structural Recovery Packet
 
 - Bound green readiness result `0a4a7fbe43238465ebd3ebbd97a20801e42f76c8`,

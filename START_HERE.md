@@ -235,6 +235,16 @@
    read. It must be committed, pushed, and remotely green before it can be
    identified as the sole Tier C packet; no current or earlier `continue` is
    retroactive authority.
+   Request `a5b73d6` then passed Base job `95215825208`, Optional job
+   `95215825263`, and CI `31967933217`. Read
+   `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_AUTHORIZATION_DECISION.md` and
+   its decision registry. The maintainer's fresh `continue` is recorded
+   verbatim and binds only that green packet. The decision is ineffective
+   until its own commit is pushed and both jobs pass. After green decision,
+   implement and generated-qualify the additive executor; do not inspect or
+   remove the expired certificate or touch the retained manifest until that
+   exact executor is also remotely green. Payload, neural, training, target,
+   prediction, scoring, FW2/CIL1 execution, and claim surfaces remain closed.
    Then
    read `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked

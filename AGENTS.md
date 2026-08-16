@@ -1787,6 +1787,24 @@ identifying it as the sole Tier C packet. The current or any earlier
 unlink the expired certificate, touch the private source, or enter FW2/CIL1
 from the request alone.
 
+Request `a5b73d6859c71054a1f20ab6c1c500341539efea` passed Base Python
+job `95215825208`, Optional Neuro Readers job `95215825263`, and CI
+`31967933217`. After Codex identified it as the sole active Tier C packet, the
+maintainer supplied the fresh word `continue`. Read
+`docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_AUTHORIZATION_DECISION.md` and
+`registries/marc2_machine_stable_private_recovery_authorization_decision.v0.json`.
+The decision quotes those exact eight UTF-8 bytes and binds only the green
+`MARC2-VR4P` packet without scope expansion. It is ineffective until this
+decision is committed, pushed, and both required jobs are green. Before that
+proof, do not implement the executor or inspect, read, unlink, stat, resolve,
+or otherwise operate on the expired readiness certificate, retained private
+manifest, or future output root. After green decision, only additive executor
+implementation and generated/mock qualification are eligible. The one real
+certificate cleanup, fresh readiness sequence, and structural pass remain
+closed until that exact executor implementation is also remotely green.
+Archive payload, neural values, FW2/CIL1 execution, training, targets,
+prediction freezing, scoring, and claim upgrades remain unauthorized.
+
 Read `docs/MARC_2_MACHINE_STABLE_COHORT_AND_NEURAL_CONTROL_RESEARCH.md` and
 `registries/marc2_machine_stable_cohort_and_neural_control_research.v0.json`.
 VR3 result commit `a186486fcb3dfb2b6d3a743f180b7ac2fa0b4dd3` passed Base

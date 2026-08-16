@@ -8606,3 +8606,36 @@ Evidence:
 `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_AUTHORIZATION_PACKET.md`,
 `registries/marc2_machine_stable_private_recovery_authorization_request.v0.json`,
 and its focused request test.
+
+## 0264 - Bind Fresh Short-Form Approval Only To MARC2-VR4P
+
+Authorization decision: after request `a5b73d6` passed Base Python job
+`95215825208`, Optional Neuro Readers job `95215825263`, and CI `31967933217`,
+and after Codex named it as the sole active Tier C packet, preserve the
+maintainer's next message exactly as `continue`. Bind its eight UTF-8 bytes and
+SHA-256 to the immutable request and packet hashes. Do not claim the long
+packet text as a user utterance and do not infer broader authority.
+
+Delayed-effect decision: this decision grants no immediate implementation or
+private operation. Require the decision itself to be tested, committed,
+pushed, and green in both required jobs before additive executor work. Require
+that exact executor implementation to be separately committed, pushed, and
+green before any expired-certificate or retained-manifest operation.
+
+Execution-order decision: preserve one exact registered sequence: validate and
+unlink only the known expired certificate, obtain fresh proof-bound readiness,
+create the new marker immediately before one 418,755-byte structural content
+open, call VR2 once, and write one private cohort manifest plus one
+aggregate-safe report. Preserve zero retry/rerun, one thread, 256 MiB RSS, 15
+GiB free disk, 4 MiB output, and zero network/archive-payload boundaries.
+
+Evidence-boundary decision: this decision does not authorize archive payload,
+neural values, derivatives, training, inference, prediction freeze, target
+delivery, scoring, FW2/CIL1 execution, release, or claim upgrade. A successful
+structural result may make an all-false FW2 preregistration eligible; it is not
+a scientific result.
+
+Evidence:
+`docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_AUTHORIZATION_DECISION.md`,
+`registries/marc2_machine_stable_private_recovery_authorization_decision.v0.json`,
+and its focused decision test.

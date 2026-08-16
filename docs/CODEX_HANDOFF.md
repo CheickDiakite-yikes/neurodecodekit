@@ -1,5 +1,21 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR4P decision gate, 2026-08-16: request
+> `a5b73d6859c71054a1f20ab6c1c500341539efea` passed Base Python job
+> `95215825208`, Optional Neuro Readers job `95215825263`, and CI
+> `31967933217`. After it was named as the sole active Tier C packet, the
+> maintainer supplied the fresh word `continue`. Read
+> `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_AUTHORIZATION_DECISION.md` and
+> its registry. The decision preserves those exact eight bytes and binds only
+> the green packet. It is ineffective until committed, pushed, and both jobs
+> are green. Before that proof, do not implement the executor or operate on the
+> expired certificate, retained private manifest, or future root. After green
+> decision, implement and qualify only on generated/mock fixtures. The one real
+> certificate cleanup, fresh readiness, and structural pass remain closed
+> until the exact executor is separately green. Never touch consumed roots or
+> the unrelated tracker inspection NDJSON. Archive payload, neural, training,
+> target, prediction, scoring, FW2/CIL1 execution, and claims remain closed.
+
 > Current MARC2 handoff, 2026-08-16: exact VR3 implementation `2467876` passed
 > Base Python job `95207398015`, Optional Neuro Readers job `95207398092`, and
 > CI `31964473405` before the sole registered invocation. Read

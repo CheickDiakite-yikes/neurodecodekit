@@ -2498,3 +2498,15 @@ combined output is at most 4 MiB. Current gate: commit and remotely qualify the
 request, identify it as the sole Tier C packet, and obtain a fresh packet-bound
 maintainer decision. No implementation or private operation is authorized by
 the request itself.
+
+Request `a5b73d6` passed Base job `95215825208`, Optional job `95215825263`,
+and CI `31967933217`. The maintainer's fresh `continue` is now captured exactly
+in a separate `MARC2-VR4P` decision. It binds only the registered two-stage
+sequence and remains ineffective until the decision commit is pushed and both
+jobs are green. After that proof, the next systematic task is the additive
+executor plus generated/mock qualification. Only after that exact executor is
+remotely green may the one expired-certificate cleanup, fresh readiness, and
+418,755-byte structural cohort pass occur. FW2 becomes preregistration-eligible
+only after a successful cohort freeze; archive payload, neural training,
+prediction freeze, target delivery, and scoring still require a separate Tier
+C packet and fresh decision.
