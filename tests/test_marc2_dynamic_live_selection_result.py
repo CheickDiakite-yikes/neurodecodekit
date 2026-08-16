@@ -18,7 +18,7 @@ class Marc2DynamicLiveSelectionResultTests(unittest.TestCase):
         self.assertEqual(self.result["route"], "MARC2VR6-G1")
         self.assertEqual(
             self.result["status"],
-            "completed_generated_only_dynamic_selection_qualification_pending_remote_green",
+            "completed_generated_only_dynamic_selection_qualification_remotely_green",
         )
         proof = self.result["green_registration_proof"]
         self.assertEqual(
@@ -26,6 +26,15 @@ class Marc2DynamicLiveSelectionResultTests(unittest.TestCase):
         )
         self.assertEqual(proof["CI_run_id"], 31974405202)
         self.assertTrue(proof["both_required_jobs_green_before_implementation"])
+        implementation = self.result["green_implementation_proof"]
+        self.assertEqual(
+            implementation["commit"],
+            "482dad55e91e2abf48b6a59a417ebca191c0cd68",
+        )
+        self.assertEqual(implementation["CI_run_id"], 31975600088)
+        self.assertEqual(implementation["base_python_job_id"], 95234487830)
+        self.assertEqual(implementation["optional_neuro_job_id"], 95234487789)
+        self.assertTrue(implementation["both_required_jobs_green"])
 
     def test_every_bound_artifact_hash_matches(self):
         for binding in self.result["artifact_bindings"]:
@@ -105,6 +114,8 @@ class Marc2DynamicLiveSelectionResultTests(unittest.TestCase):
         self.assertTrue(
             verification["ruff_compile_registry_JSON_CLI_and_diff_hygiene_passed"]
         )
+        self.assertFalse(verification["remote_CI_pending"])
+        self.assertTrue(verification["remote_CI_passed"])
 
     def test_claim_and_next_gate_remain_closed(self):
         claim = self.result["claim_boundary"]
@@ -113,6 +124,10 @@ class Marc2DynamicLiveSelectionResultTests(unittest.TestCase):
         self.assertFalse(claim["neural_effect"])
         self.assertFalse(claim["decoding_accuracy"])
         gate = self.result["next_gate"]
+        self.assertTrue(
+            gate["exact_implementation_commit_is_pushed_and_remotely_green"]
+        )
+        self.assertTrue(gate["Tier_A_or_B_private_wrapper_specification_eligible"])
         self.assertFalse(gate["private_read_authorized"])
         self.assertFalse(gate["MARC2_FW2_or_CIL1_authorized"])
         self.assertTrue(

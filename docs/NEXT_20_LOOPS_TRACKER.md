@@ -11,10 +11,11 @@
 > `MARC2-VR6` registration `71d7cec` passed both jobs in CI `31974405202`
 > before implementation. Local `MARC2VR6-G1` now passes ten generated paths
 > across 12/14/16/18/19-subject boundaries and 34 direct refusal cases, with
-> zero private or scientific operations. Its exact implementation/result must
-> be remotely green before a private wrapper can be specified; FW2/CIL1,
-> archive payload, neural, target, model, and scoring work remain closed until
-> a real cohort is frozen under a new Tier C packet.
+> zero private or scientific operations. Exact implementation `482dad5` passed
+> both jobs in CI `31975600088`. Tier A/B may specify a separately named
+> private wrapper and all-false request; FW2/CIL1, archive payload, neural,
+> target, model, and scoring work remain closed until a real cohort is frozen
+> under a new Tier C packet.
 
 > **Scope:** the 20-row table and its KPI describe the original roadmap. Loop
 > numbers 21-24 and the Loop 23.5 calibration gate are post-roadmap extensions,
@@ -2571,7 +2572,7 @@ archive, neural, target, model, prediction, score, network, FW2, CIL1, and claim
 counter stayed zero. VR5A is complete; another blind private attempt under the
 same selector is ruled out.
 
-### MARC2-VR6 - Dynamic Live Selection (Generated Result Pending Remote Green)
+### MARC2-VR6 - Dynamic Live Selection (Generated Result Remotely Green)
 
 The frozen VR6 contract treats selected subject count, reservation bytes, and
 selection identity as measured outputs. It requires full-source validation,
@@ -2598,8 +2599,11 @@ process produced 3,894 passes and 35 skips plus the same three process-state
 failures as the pre-change baseline; all three pass under their required fresh
 or non-sandboxed process conditions. No new regression is observed.
 
-Current gate: commit, push, and obtain both remote-green jobs for the exact VR6
-implementation/result, then record the closeout. Only then may Tier A/B specify
-a separately named fixed-path wrapper and all-false Tier C request for one new
-structural pass. No private read, real cohort, archive payload, neural data,
-target, model, prediction, score, FW2, CIL1, or scientific claim is authorized.
+Exact implementation `482dad55e91e2abf48b6a59a417ebca191c0cd68` passed Base
+job `95234487830`, Optional job `95234487789`, and CI `31975600088`.
+
+Current gate: Tier A/B may specify a separately named fixed-path wrapper and
+all-false Tier C request for one new structural pass. No private read, real
+cohort, archive payload, neural data, target, model, prediction, score, FW2,
+CIL1, or scientific claim is authorized. The current `continue` cannot serve
+as the future packet-bound decision.

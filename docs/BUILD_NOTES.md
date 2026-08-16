@@ -10763,6 +10763,9 @@ establishes no neural effect or decoding result.
   as the pre-change baseline. The two state-sensitive gates pass in a fresh
   process and the forkserver gate passes outside the sandbox. Ruff,
   compilation, all registry JSON, CLI help/plan/qualify, and diff hygiene pass.
+- Exact implementation `482dad55e91e2abf48b6a59a417ebca191c0cd68` passed
+  Base Python job `95234487830`, Optional Neuro Readers job `95234487789`, and
+  CI `31975600088`. Generated VR6 is remotely green.
 
 Engineering capability added: live-shaped target-free selections can now be
 accepted by measured invariants across variable cohort sizes without requiring

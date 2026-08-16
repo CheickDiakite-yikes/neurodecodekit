@@ -3,7 +3,7 @@
   "schema_version": "0.1.0",
   "lane_id": "MARC2-VR6",
   "implementation_id": "MARC2-VR6-I1",
-  "status": "completed_generated_only_implementation_and_qualification_pending_remote_green",
+  "status": "completed_generated_only_implementation_and_qualification_remotely_green",
   "recorded_at_local": "2026-08-16",
   "green_registration_proof": {
     "commit": "71d7cec63ff3c57122aec1ffa02fbec02de5f9dd",
@@ -12,6 +12,13 @@
     "optional_neuro_job_id": 95231605469,
     "both_required_jobs_green_before_implementation": true,
     "contract_sha256": "cadb9b512c0d072ced2bb4219f6c7f2ac962c230ecff7ff56841f00b824c0d58"
+  },
+  "green_implementation_proof": {
+    "commit": "482dad55e91e2abf48b6a59a417ebca191c0cd68",
+    "CI_run_id": 31975600088,
+    "base_python_job_id": 95234487830,
+    "optional_neuro_job_id": 95234487789,
+    "both_required_jobs_green": true
   },
   "implementation_surface": {
     "module": "src/neurodecodekit/datasets/marc2_dynamic_live_selection.py",
@@ -121,7 +128,8 @@
     "fresh_process_state_sensitive_reruns_passed": 2,
     "outside_sandbox_forkserver_reruns_passed": 1,
     "new_failures_vs_pre_change_baseline": 0,
-    "remote_CI_pending": true
+    "remote_CI_pending": false,
+    "remote_CI_passed": true
   },
   "access_counters": {
     "private_or_Git_ignored_path_operations": 0,
@@ -139,8 +147,8 @@
     "operations_on_other_projects": 0
   },
   "next_gate": {
-    "exact_implementation_commit_must_be_pushed": true,
-    "base_and_optional_CI_must_be_green": true,
+    "exact_implementation_commit_is_pushed_and_remotely_green": true,
+    "Tier_A_or_B_private_wrapper_specification_eligible": true,
     "then_separately_name_private_wrapper_and_all_false_Tier_C_packet": true,
     "private_read_authorized": false,
     "real_cohort_freeze_authorized": false,

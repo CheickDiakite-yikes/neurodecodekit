@@ -8780,3 +8780,19 @@ and fresh decision; FW2/CIL1 remain ineligible until a real cohort is frozen.
 Evidence: `docs/MARC_2_DYNAMIC_LIVE_SELECTION_IMPLEMENTATION.md`,
 `registries/marc2_dynamic_live_selection_implementation.v0.json`,
 `registries/marc2_dynamic_live_selection_result.v0.json`, module, and tests.
+
+## 0270 - Close VR6 After Exact Remote Proof
+
+Proof decision: exact implementation
+`482dad55e91e2abf48b6a59a417ebca191c0cd68` passed Base Python job
+`95234487830`, Optional Neuro Readers job `95234487789`, and CI `31975600088`.
+Promote only the generated engineering result to remotely green.
+
+Disposition decision: close VR6 at `MARC2VR6-G1`. Tier A/B may specify a
+separately named fixed-path wrapper and all-false Tier C request. Do not reuse
+the maintainer's current `continue` for the later private decision.
+
+Evidence boundary: no private route became available and no real cohort,
+archive payload, neural value, target, model, prediction, score, FW2/CIL1
+execution, or scientific claim exists. A private structural pass remains a
+fresh packet-bound Tier C action.

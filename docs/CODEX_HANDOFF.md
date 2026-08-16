@@ -4,10 +4,11 @@
 > Python job `95231605521`, Optional Neuro Readers job `95231605469`, and CI
 > `31974405202` before implementation. Local `MARC2VR6-G1` passes ten generated
 > profile/order paths across 12/14/16/18/19 subjects and all 34 direct
-> refusals. Commit, push, and require both jobs green for the exact
-> implementation/result before preparing any private wrapper. It authorizes no
-> private source, ignored path, cohort, archive member, neural payload, target,
-> model, score, FW2, or CIL1 operation.
+> refusals. Exact implementation `482dad5` passed Base job `95234487830`,
+> Optional job `95234487789`, and CI `31975600088`. Tier A/B may now specify a
+> separately named private wrapper and all-false Tier C request. It authorizes
+> no private source, ignored path, cohort, archive member, neural payload,
+> target, model, score, FW2, or CIL1 operation.
 
 > Current MARC2-VR5A gate, 2026-08-16: registration `926e1ba` passed Base
 > Python job `95226555204`, Optional Neuro Readers job `95226555153`, and CI
@@ -5324,8 +5325,28 @@ the pre-change baseline; two passed together in a fresh process and the
 forkserver case passed outside the sandbox. Ruff, compilation, JSON parsing,
 CLI help/plan/qualify, and diff hygiene pass.
 
-Immediate gate: commit and push the exact implementation/result, require both
-remote jobs green, then record a closeout. Only after that proof may Tier A/B
-specify a separately named fixed-path private wrapper and all-false Tier C
-request. This handoff authorizes no private read, cohort freeze, archive member,
-neural payload, target, model, prediction, score, FW2, or CIL1 operation.
+Exact implementation `482dad55e91e2abf48b6a59a417ebca191c0cd68` passed Base
+job `95234487830`, Optional job `95234487789`, and CI `31975600088`. Tier A/B
+may now specify a separately named fixed-path private wrapper and all-false
+Tier C request. This handoff authorizes no private read, cohort freeze, archive
+member, neural payload, target, model, prediction, score, FW2, or CIL1
+operation. A later private pass needs a fresh packet-bound maintainer decision.
+
+## 2026-08-16 MARC2-VR6 Remote Proof Closeout
+
+Exact implementation `482dad55e91e2abf48b6a59a417ebca191c0cd68` passed Base
+Python job `95234487830`, Optional Neuro Readers job `95234487789`, and CI
+`31975600088`. The generated `MARC2VR6-G1` result is now remotely green.
+
+VR6 closes the known fixture-identity defect at the interface level: variable
+12-19-subject maximal prefixes, split arithmetic, reservation accounting, live
+source semantics, recomputed hashes, code-only upstream routing, and 34
+refusals are all qualified. It does not reveal the consumed private route or
+freeze a real cohort.
+
+Next safe work is a separately named generated/mock fixed-path wrapper and
+all-false Tier C request. Do not touch the protected tracker inspection,
+ignored MARC2 paths, certificates, markers, consumed roots, retained source,
+archive members, neural data, targets, models, predictions, or scores. The
+maintainer's current `continue` was consumed by VR6 generated work and is not a
+future private-access decision.

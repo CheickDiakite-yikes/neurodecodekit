@@ -28,14 +28,16 @@ an allowlisted nested route code, recomputes live selection identities, and
 passes 34 direct refusal cases. The measured pass used 4,291,124 generated
 input bytes, 9,954 aggregate output bytes, 1.003502375 seconds, and 40,435,712
 bytes peak RSS, with zero retention and every private or scientific counter at
-zero. Immediate work is to commit, push, and obtain both green jobs for this
-exact implementation and result.
+zero. Exact implementation `482dad5` passed Base job `95234487830`, Optional
+job `95234487789`, and CI `31975600088`.
 
 Do not touch any ignored MARC2 path, consumed marker, certificate, output root,
 or retained source. No new private read, real cohort freeze, archive member,
 neural payload, target, model, prediction, score, FW2, or CIL1 work is
-authorized by VR6. A future private structural pass remains a separate Tier C
-packet and fresh decision after the implementation is remotely green.
+authorized by VR6. Immediate safe work is Tier A/B specification of a
+separately named no-retry fixed-path wrapper and all-false Tier C request. A
+future private structural pass still requires that packet to become remotely
+green and a fresh packet-bound decision; this `continue` cannot be reused.
 
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.

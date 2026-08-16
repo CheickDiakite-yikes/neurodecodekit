@@ -5,11 +5,16 @@ Date: 2026-08-16
 Lane: `MARC2-VR6`
 
 Status: **Generated-only implementation and measured qualification complete;
-remote proof pending**
+exact implementation remotely green**
 
 Registration `71d7cec63ff3c57122aec1ffa02fbec02de5f9dd` passed Base
 Python job `95231605521`, Optional Neuro Readers job `95231605469`, and CI
 `31974405202` before implementation began.
+
+Exact implementation `482dad55e91e2abf48b6a59a417ebca191c0cd68` passed Base
+Python job `95234487830`, Optional Neuro Readers job `95234487789`, and CI
+`31975600088`. Both required jobs completed before this closeout promoted the
+generated result from local qualification to remotely green engineering proof.
 
 ## Additive Surface
 
@@ -136,17 +141,17 @@ other-project, FW2, CIL1, retry, release, and claim counter stayed zero.
   gates passed together in a fresh process; the isolated timing-worker test
   passed outside the sandbox, where its forkserver Unix socket is permitted.
   Thus all 3,897 executed tests pass under their required process conditions.
-- Both GitHub CI jobs are required on the exact implementation commit before
-  any later private-wrapper registration.
+- Exact implementation `482dad5` passed both GitHub CI jobs. No new regression
+  appeared relative to the pre-change baseline.
 
 ## Next Boundary
 
-After this exact implementation is remotely green, Tier A/B work may specify a
-separately named, no-retry private structural wrapper and all-false Tier C
-packet. No private source may be read until that packet is itself remotely
-green and a fresh packet-bound maintainer decision is recorded. A successful
-future structural pass would freeze a cohort only; FW2 neural work would still
-remain separately gated.
+Tier A/B work may now specify a separately named, no-retry private structural
+wrapper and all-false Tier C packet. No private source may be read until that
+packet is itself remotely green and a fresh packet-bound maintainer decision is
+recorded. This `continue` authorized VR6 generated work only and cannot be
+reused for that future decision. A successful future structural pass would
+freeze a cohort only; FW2 neural work would still remain separately gated.
 
 Engineering capability added: NeuroDecodeKit can now validate dynamic,
 target-free maximal prefixes and preserve an aggregate upstream route without

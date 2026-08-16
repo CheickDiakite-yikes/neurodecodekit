@@ -3,7 +3,7 @@
   "schema_version": "0.1.0",
   "lane_id": "MARC2-VR6",
   "result_id": "MARC2-VR6-R1",
-  "status": "completed_generated_only_dynamic_selection_qualification_pending_remote_green",
+  "status": "completed_generated_only_dynamic_selection_qualification_remotely_green",
   "recorded_at_local": "2026-08-16",
   "route": "MARC2VR6-G1",
   "proof_posture": "generated_live_shaped_structural_selection_only_no_private_or_scientific_value",
@@ -14,6 +14,13 @@
     "optional_neuro_job_id": 95231605469,
     "both_required_jobs_green_before_implementation": true,
     "contract_sha256": "cadb9b512c0d072ced2bb4219f6c7f2ac962c230ecff7ff56841f00b824c0d58"
+  },
+  "green_implementation_proof": {
+    "commit": "482dad55e91e2abf48b6a59a417ebca191c0cd68",
+    "CI_run_id": 31975600088,
+    "base_python_job_id": 95234487830,
+    "optional_neuro_job_id": 95234487789,
+    "both_required_jobs_green": true
   },
   "artifact_bindings": [
     {
@@ -26,7 +33,7 @@
     },
     {
       "path": "registries/marc2_dynamic_live_selection_implementation.v0.json",
-      "sha256": "cde97e9642203791ae4decff44305da7b0d4a8234829fb792789d1e0633af3e4"
+      "sha256": "0a08caa40d3bb46f6bea1ef8c32b6451d8066dab40935274b7ab1692dee78fdc"
     },
     {
       "path": "docs/MARC_2_DYNAMIC_LIVE_SELECTION_PREREGISTRATION.md",
@@ -34,7 +41,7 @@
     },
     {
       "path": "docs/MARC_2_DYNAMIC_LIVE_SELECTION_IMPLEMENTATION.md",
-      "sha256": "845a35ff5805a37e5107b18ac2d1900f63313c379b74aab2df197a9fd4caf25a"
+      "sha256": "8214c161cc1abfd3daec3cb3dafb00e485919918c4d7312abe8c56c651e77f0f"
     },
     {
       "path": "tests/test_marc2_dynamic_live_selection_contract.py",
@@ -216,7 +223,8 @@
     "outside_sandbox_forkserver_reruns_passed": 1,
     "new_failures_vs_pre_change_baseline": 0,
     "ruff_compile_registry_JSON_CLI_and_diff_hygiene_passed": true,
-    "remote_CI_pending": true
+    "remote_CI_pending": false,
+    "remote_CI_passed": true
   },
   "warnings": [
     "All sources and selections in this qualification are generated fixtures.",
@@ -231,8 +239,8 @@
     "model predictions scores and end-to-end neural decoding latency"
   ],
   "next_gate": {
-    "exact_implementation_commit_must_be_pushed": true,
-    "base_and_optional_CI_must_be_green": true,
+    "exact_implementation_commit_is_pushed_and_remotely_green": true,
+    "Tier_A_or_B_private_wrapper_specification_eligible": true,
     "then_separately_name_private_wrapper_and_all_false_Tier_C_packet": true,
     "private_read_authorized": false,
     "real_cohort_freeze_authorized": false,
