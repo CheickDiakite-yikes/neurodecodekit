@@ -90,7 +90,14 @@
    `MARC2-LA1` freezes the next generated/mock composition: validate the exact
    live-shaped envelope, bridge only four identity values into TA1, call its
    green public adapter once, and replay the frozen selector under 30
-   mutations. No live/private authority exists. Then read
+   mutations. Registration `62e465e` passed CI `31934737967` before the
+   generated implementation. Then read
+   `docs/MARC_2_LIVE_SCHEMA_ADAPTER_IMPLEMENTATION.md` and both result
+   registries. One `MARC2LA-G1` run passed all mutations in 0.488921 seconds at
+   38,387,712-byte peak RSS; its 5,366-byte report was removed and all
+   private/neural/model counters stayed zero. The exact implementation still
+   needs commit, push, and both remote jobs green. No live/private authority
+   exists. Then read
    `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
    result, then use its preregistration and authorization documents for audit.

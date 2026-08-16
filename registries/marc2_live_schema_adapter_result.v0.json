@@ -1,0 +1,153 @@
+{
+  "schema_name": "neurodecodekit.marc2_live_schema_adapter_result",
+  "schema_version": "0.1.0",
+  "result_id": "MARC-2-generated-live-schema-adapter-composition-result-v0",
+  "lane_id": "MARC2-LA1",
+  "recorded_at_local": "2026-08-16",
+  "status": "generated_qualification_complete_consumed_remote_green_pending",
+  "route": "MARC2LA-G1",
+  "full_route": "MARC2LA-G1-generated_live_schema_adapter_selector_composition_passed",
+  "proof_posture": {
+    "kind": "generated_live_envelope_adapter_selector_composition_only",
+    "scientific_value": false,
+    "real_or_private_data_used": false
+  },
+  "green_registration_proof": {
+    "commit": "62e465e0600622444b0868d5dcf19678504d20c4",
+    "CI_run_id": 31934737967,
+    "base_python_job_id": 95134785476,
+    "optional_neuro_job_id": 95134785489,
+    "both_required_jobs_green_before_implementation_and_qualification": true
+  },
+  "implementation_remote_proof": {
+    "commit": null,
+    "CI_run_id": null,
+    "base_python_job_id": null,
+    "optional_neuro_job_id": null,
+    "both_required_jobs_green": false,
+    "measured_module_SHA256": "adcd345855e4a99794c2435f9e8e592a8818d170f7b8a7fcddc52ba009faba8d"
+  },
+  "artifact_bindings": [
+    {"path": "registries/marc2_live_schema_adapter_contract.v0.json", "sha256": "e06fbb1401326d4f788bfdd50162c07bf88652b0c1dc4b11cef46cbec6e41e05"},
+    {"path": "registries/marc2_live_schema_adapter_implementation.v0.json", "sha256": "f22c348f0676aa7904eeafa50da37667e6bce1d64b94272a83d30a3c35907ab7"},
+    {"path": "src/neurodecodekit/datasets/marc2_live_schema_adapter.py", "sha256": "adcd345855e4a99794c2435f9e8e592a8818d170f7b8a7fcddc52ba009faba8d"},
+    {"path": "docs/MARC_2_LIVE_SCHEMA_ADAPTER_IMPLEMENTATION.md", "sha256": "1158ac3fc0db2d162956a44f291716fdfdfe714c771f7b40433f15f8b7bbfbf2"},
+    {"path": "tests/test_marc2_live_schema_adapter.py", "sha256": "13c7b7c50b10a05a54891f1642f2bfd4ac23440e47c8baa73c02b9ef58b7a8c6"},
+    {"path": "tests/test_marc2_live_schema_adapter_implementation.py", "sha256": "dee296e9b9f82c3c1a2bb5dd221e1cd339892c1bb264b410a2546dbc04f0d66f"}
+  ],
+  "composition_result": {
+    "source_transport_keys": ["directory", "metadata", "tail"],
+    "selector_transport_keys": ["central_directory", "metadata", "tail"],
+    "live_envelope_validated_before_copy_or_bridge": true,
+    "all_entries_validated_before_copy_or_bridge": true,
+    "identity_values_changed": ["proof_posture", "source_identity.provider", "source_identity.file_id", "source_identity.registered_MD5"],
+    "source_mutated": false,
+    "mutable_alias_detected": false,
+    "green_public_adapter_calls_per_success_path": 1,
+    "all_transport_values_preserved": true,
+    "transport_hash_multiset_preserved": true,
+    "direct_live_shaped_selector_refused": true
+  },
+  "generated_source_result": {
+    "entries": 1227,
+    "regular_file_entries": 1025,
+    "directory_entries": 202,
+    "source_run_bundles": 195,
+    "canonical_source_SHA256": "a6e1a44c2b55ecada851155a242d96f300a78147a84947407f68d9a035fd60e2",
+    "contains_human_content": false,
+    "contains_private_path": false,
+    "contains_real_or_private_bytes": false
+  },
+  "selector_result": {
+    "selected_subjects": 16,
+    "selected_run_bundles": 96,
+    "selected_core_members": 384,
+    "selected_reservation_bytes": 8105207776,
+    "selection_identity_SHA256": "dee065bfdb5f8439fe711042eaadbea0dca3d83f8be0d6b7b9d1637e84d9f641",
+    "existing_generated_identity_matched": true,
+    "canonical_and_reversed_orders_matched": true
+  },
+  "mutation_result": {
+    "required": 30,
+    "passed": 30,
+    "route_counts": {
+      "MARC2LA-F02-live_source_envelope_or_entry_schema": 17,
+      "MARC2LA-F03-source_transport_alias_or_digest": 9,
+      "MARC2LA-F04-identity_bridge_copy_or_value_integrity": 2,
+      "MARC2LA-F05-green_adapter_selector_or_replay_integration": 1,
+      "MARC2LA-F06-private_target_model_network_or_claim_boundary": 1
+    }
+  },
+  "acceptance_gates_required": 16,
+  "acceptance_gates_passed": 16,
+  "measurements": {
+    "generated_input_bytes": 846696,
+    "generated_output_bytes": 5366,
+    "runtime_seconds": 0.4889211250047083,
+    "peak_RSS_bytes": 38387712,
+    "external_wall_seconds": 0.57,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "registered_success_source_orders_validated": 2,
+    "green_adapter_success_calls": 2,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "producer_is_causal": "not_applicable_metadata_adapter",
+    "end_to_end_latency_measured": false,
+    "report_mode": "0600",
+    "report_SHA256": "8353c641634cc628663f40932140805bbb2f051fd83ba917695e9cf20a457df7",
+    "temporary_output_retained": false
+  },
+  "access_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_marker_or_output_root_operations": 0,
+    "archive_local_header_or_member_payload_reads": 0,
+    "signal_event_target_label_quality_channel_or_geometry_reads": 0,
+    "derivative_cache_feature_split_or_neurotoken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "network_download_provider_or_language_model_operations": 0,
+    "stream_device_or_hardware_operations": 0,
+    "consumed_executor_patch_retry_rerun_resume_or_repair_operations": 0,
+    "MARC2_FW2_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "verification": {
+    "focused_tests": 53,
+    "complete_base_tests": 3360,
+    "complete_base_skips": 204,
+    "optional_A_M_tests": 2918,
+    "optional_A_M_skips": 28,
+    "optional_N_Z_tests": 513,
+    "optional_N_Z_skips": 7,
+    "complete_optional_tests": 3431,
+    "complete_optional_skips": 35,
+    "ruff_compile_registry_JSON_CLI_and_diff_hygiene_passed": true,
+    "remote_CI_pending": true
+  },
+  "warnings": [
+    "The live-shaped source entries and transport digests are generated fixtures.",
+    "The four-value bridge is generated interface composition and not evidence conversion.",
+    "No live executor private read archive member neural payload target model score or MARC2-FW2 operation is authorized."
+  ],
+  "unavailable_fields": [
+    "real private manifest and archive member content",
+    "signals events targets labels channels geometry and quality",
+    "neural features predictions scores and end-to-end latency"
+  ],
+  "disposition": {
+    "generated_qualification_consumed": true,
+    "temporary_aggregate_removed": true,
+    "implementation_remote_green": false,
+    "all_false_Tier_C_request_eligible": false,
+    "live_executor_or_private_read_allowed": false,
+    "MARC2_FW2_eligible": false,
+    "next_safe_work": "commit push and require both CI jobs green before preparing one all-false Tier C request"
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "NeuroDecodeKit now has a generated-only composition that validates an exact live-shaped envelope before a four-value identity bridge and the remotely green one-key adapter reaches the frozen selector.",
+    "scientific_claim_not_established": "No neural payload target prediction or score was accessed so this result establishes no neural effect decoding accuracy language decoding or thought-to-text capability."
+  }
+}

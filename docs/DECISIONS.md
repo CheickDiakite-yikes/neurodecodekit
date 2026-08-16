@@ -7962,3 +7962,28 @@ retroactive authority for a private read or live executor.
 Evidence: `docs/MARC_2_LIVE_SCHEMA_ADAPTER_PREREGISTRATION.md`,
 `registries/marc2_live_schema_adapter_contract.v0.json`, and
 `tests/test_marc2_live_schema_adapter_contract.py`.
+
+## 0242 - Accept The Generated Live-Schema Composition Locally
+
+Implementation decision: validate the exact live-shaped envelope, all 1,227
+entry schemas, run bundles, public run counts, and transport digests before any
+copy. Deep-copy and change only the four registered identity values, then call
+TA1's exact green public adapter once per success path.
+
+Evidence decision: accept local `MARC2LA-G1`. All 30 mutations and 16 gates
+passed; canonical/reversed entry orders reproduced the frozen 16-subject,
+96-bundle, 384-member, 8,105,207,776-byte generated selection identity. The
+0.4889211250047083-second run used 38,387,712-byte peak RSS and emitted a
+5,366-byte mode-0600 aggregate that was removed.
+
+Verification decision: accept 53 focused, 3,360 dependency-free, and 3,431
+optional-enabled tests plus Ruff, compilation, 227 registry parses, CLI
+checks, tracked hashes, and diff hygiene as the local gate.
+
+Authority decision: the implementation is not remotely green yet. Require its
+exact commit to pass both CI jobs before preparing an all-false Tier C request.
+No private read, live executor, archive member, neural payload, target, model,
+score, network operation, FW2 entry, or claim upgrade is open.
+
+Evidence: `docs/MARC_2_LIVE_SCHEMA_ADAPTER_IMPLEMENTATION.md`, both LA1
+implementation/result registries, the additive module, and its four tests.

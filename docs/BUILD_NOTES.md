@@ -9759,6 +9759,46 @@ Scientific claim not established: this registration contains no neural
 payload, target, prediction, or score and establishes no neural effect,
 decoding accuracy, language decoding, or thought-to-text capability.
 
+## 2026-08-16 - MARC2-LA1 Generated Implementation And Result
+
+- Registration `62e465e0600622444b0868d5dcf19678504d20c4` passed Base
+  Python job `95134785476`, Optional Neuro Readers job `95134785489`, and CI
+  `31934737967` before implementation.
+- Added a standard-library generated/mock module with only `plan`, `qualify`,
+  and `inspect`. It has no execute command, path/URL input, private root,
+  archive reader, neural interface, target, trainer, predictor, scorer, or
+  network client.
+- The module validates the exact live envelope, all 1,227 rows, 1,025 files,
+  202 directories, 195 run bundles, public run counts, and transport digests
+  before copying. Its bridge changes only proof posture, provider, file ID, and
+  registered MD5, then calls green TA1 once per success path.
+- All 30 mutations refused in the registered classes: 17 live schema, nine
+  transport, two bridge integrity, one direct-selector bypass, and one
+  forbidden-operation case. Canonical/reversed orders replayed the frozen
+  16-subject, 96-bundle, 384-member, 8,105,207,776-byte identity.
+- Final `MARC2LA-G1`: 846,696 generated input bytes, 5,366 aggregate output
+  bytes, 0.4889211250047083 seconds, 38,387,712-byte peak RSS, one
+  thread/worker/job, report mode 0600, and report SHA-256
+  `8353c641634cc628663f40932140805bbb2f051fd83ba917695e9cf20a457df7`.
+  The report was inspected and removed.
+- Every private, Git-ignored, consumed-root, archive, signal, event, target,
+  label, channel, geometry, derivative, model, prediction, score, network,
+  provider, hardware, retry, FW2, and claim counter is zero.
+- Fifty-three focused tests pass. The dependency-free suite passes 3,360 with
+  204 skips; optional A-M/N-Z pass 2,918 with 28 skips and 513 with seven
+  skips, for 3,431 with 35 skips. Ruff, compilation, 227 registry parses,
+  strict new-registry parsing, CLI checks, hashes, and diff hygiene pass.
+- Commit, push, and both remote jobs remain pending. No all-false Tier C packet
+  or live/private execution authority exists from this local result.
+
+Engineering capability added: an exact live-shaped producer envelope now
+crosses a strict generated identity bridge and the green one-key adapter to the
+frozen selector without source mutation or digest drift.
+
+Scientific claim not established: no neural payload, target, prediction, or
+score was accessed, so this result establishes no neural effect, decoding
+accuracy, language decoding, or thought-to-text capability.
+
 ## 2026-08-16 - MARC2-TA1 Generated Adapter Implementation And Result
 
 - Registration commit `0c0e1c8a08ff7e68d0e4432a64dde8a85fb0274f`

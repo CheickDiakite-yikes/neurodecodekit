@@ -2156,7 +2156,7 @@ path, execute command, FW1C reuse, archive, neural, target, model, score,
 network, or `MARC2-FW2` operation is allowed. A future live adapter remains a
 separately frozen Tier C event.
 
-### MARC2-LA1 - Generated Live-Schema Adapter Composition (Registered)
+### MARC2-LA1 - Generated Live-Schema Adapter Composition (Implementation Qualified; Remote Green Pending)
 
 This additive lane binds the remotely green TA1 module, contract,
 implementation, and result plus the frozen selector and consumed FW1C/SL1
@@ -2176,3 +2176,17 @@ bytes, and zero live authority are frozen. Commit and push this registration
 and require both remote jobs green before generated implementation. A live
 executor or private read remains closed until a later all-false Tier C packet
 is remotely green and the maintainer supplies fresh packet-bound authority.
+
+Registration `62e465e0600622444b0868d5dcf19678504d20c4` passed Base
+Python job `95134785476`, Optional Neuro Readers job `95134785489`, and CI
+`31934737967` before implementation. The generated-only module now validates
+the complete live envelope and all 1,227 entries before the four-value bridge,
+then calls TA1's green public adapter exactly once per success path.
+
+One final `MARC2LA-G1` qualification passed all 30 mutations and 16 gates,
+replayed the frozen 16-subject/384-member identity, used 846,696 generated
+input bytes and 5,366 output bytes, and ran in 0.4889211250047083 seconds at
+38,387,712-byte peak RSS. The mode-0600 report was inspected, hashed, and
+removed. Fifty-three focused, 3,360 dependency-free, and 3,431 optional-neuro
+tests pass locally. Commit, push, and both remote jobs remain required; no
+all-false packet or live/private authority exists yet.

@@ -1525,6 +1525,23 @@ score, network, or FW2 work is authorized. Only after a separately green
 generated implementation may an all-false Tier C packet be prepared, and the
 current `continue` is not retroactive authority for that later live gate.
 
+Registration `62e465e0600622444b0868d5dcf19678504d20c4` passed Base job
+`95134785476`, Optional job `95134785489`, and CI `31934737967` before the
+generated implementation. Read
+`docs/MARC_2_LIVE_SCHEMA_ADAPTER_IMPLEMENTATION.md` and both LA1
+implementation/result registries. The module validates the exact live envelope
+and every generated row before changing only four identity values in a deep
+copy and calling TA1 once. All 30 mutations and both entry orders passed. One
+final run used 846,696 input bytes, 5,366 output bytes, 0.4889211250047083
+seconds, and 38,387,712-byte peak RSS; the report was removed and every
+forbidden counter stayed zero. Fifty-three focused, 3,360 dependency-free, and
+3,431 optional-neuro tests pass locally. Commit, push, and require both remote
+jobs green for exact module hash
+`adcd345855e4a99794c2435f9e8e592a8818d170f7b8a7fcddc52ba009faba8d`
+before preparing one all-false Tier C request. No live executor, private read,
+FW1C reuse, FW2 entry, archive, neural, target, model, score, or network work is
+open.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in
