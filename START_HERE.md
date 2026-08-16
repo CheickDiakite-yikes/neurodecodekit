@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR5A
+## Current Frontier: MARC2-VR6
 
 Read `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`, then
 `docs/MARC_2_VR2_REFUSAL_LOCALIZATION_PREREGISTRATION.md` and
@@ -21,14 +21,21 @@ private route remains unavailable and must not be inferred as F06.
 Exact implementation `d9fa443` passed Base job `95229811925`, Optional job
 `95229811955`, and CI `31973656275`.
 
-Immediate work is the frozen `MARC2-VR6` generated-only live-selection
-invariant repair. Its registration covers 12, 14, 16, 18, and 19-subject
-maximal prefixes and aggregate nested-route preservation. Commit, push, and
-obtain both green jobs for that exact registration before implementation. Do
-not touch any ignored MARC2 path, consumed marker,
-certificate, output root, or retained source. No new private read, archive
-member, neural payload, target, model, prediction, score, FW2, or CIL1 work is
-authorized by VR5A.
+Registration `71d7cec` passed both jobs in CI `31974405202` before the
+generated-only implementation began. Local `MARC2VR6-G1` now validates maximal
+prefixes of 12, 14, 16, 18, and 19 subjects in both row orders, preserves only
+an allowlisted nested route code, recomputes live selection identities, and
+passes 34 direct refusal cases. The measured pass used 4,291,124 generated
+input bytes, 9,954 aggregate output bytes, 1.003502375 seconds, and 40,435,712
+bytes peak RSS, with zero retention and every private or scientific counter at
+zero. Immediate work is to commit, push, and obtain both green jobs for this
+exact implementation and result.
+
+Do not touch any ignored MARC2 path, consumed marker, certificate, output root,
+or retained source. No new private read, real cohort freeze, archive member,
+neural payload, target, model, prediction, score, FW2, or CIL1 work is
+authorized by VR6. A future private structural pass remains a separate Tier C
+packet and fresh decision after the implementation is remotely green.
 
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.

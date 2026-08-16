@@ -8747,3 +8747,36 @@ rows must use live source semantics. Consumed executors remain immutable.
 Evidence: `docs/MARC_2_DYNAMIC_LIVE_SELECTION_PREREGISTRATION.md`,
 `registries/marc2_dynamic_live_selection_contract.v0.json`, and its contract
 test.
+
+## 0269 - Qualify Dynamic Selection Across Measured Cohort Boundaries
+
+Implementation decision: after registration `71d7cec` passed both required
+jobs in CI `31974405202`, implement VR6 as an additive generated-only module.
+Expose only `plan` and `qualify`; do not add a private path, URL, output root,
+network client, archive reader, neural reader, model, or score interface.
+
+Acceptance decision: validate the complete source before selection, omit the
+fixture-exact result assertion, and accept only a measured maximal contiguous
+12-19-subject rank prefix. Recompute bundle/member arithmetic, every row's
+reservation, the aggregate byte cap, live source hashes, selection identity,
+and private-manifest hash. Require either the exact next ranked subject to
+overflow the remaining cap or all 19 subjects to fit.
+
+Privacy decision: normalize live-derived rows into a deep-copied manifest,
+retain only an allowlisted upstream route code, and discard the upstream reason
+and private value. Refuse target, label, quality, outcome, neural, prediction,
+or score fields and every aggregate private identifier.
+
+Qualification decision: require five subject-count boundaries in two row
+orders and at least 24 direct mutations. The measured run passed ten replay
+paths and 34 mutations under one thread with zero retained output and zero
+private or scientific operations.
+
+Evidence boundary: generated `MARC2VR6-G1` is interface evidence only. Require
+the exact implementation/result commit and both CI jobs green before specifying
+a separate private wrapper. A future private read remains a new Tier C packet
+and fresh decision; FW2/CIL1 remain ineligible until a real cohort is frozen.
+
+Evidence: `docs/MARC_2_DYNAMIC_LIVE_SELECTION_IMPLEMENTATION.md`,
+`registries/marc2_dynamic_live_selection_implementation.v0.json`,
+`registries/marc2_dynamic_live_selection_result.v0.json`, module, and tests.

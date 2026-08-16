@@ -8,11 +8,13 @@
 > outputs and generated source labels. The exact private predicate remains
 > unavailable. Exact implementation `d9fa443` passed both jobs in CI
 > `31973656275`; closeout `0c347ad` passed both jobs in CI `31973927757`.
-> `MARC2-VR6` now freezes a generated-only dynamic live-selection repair across
-> 12/14/16/18/19-subject boundaries. Its exact registration must be remotely
-> green before implementation; FW2/CIL1, archive payload, neural, target, model, and
-> scoring work remain closed until a real cohort is frozen under a new Tier C
-> packet.
+> `MARC2-VR6` registration `71d7cec` passed both jobs in CI `31974405202`
+> before implementation. Local `MARC2VR6-G1` now passes ten generated paths
+> across 12/14/16/18/19-subject boundaries and 34 direct refusal cases, with
+> zero private or scientific operations. Its exact implementation/result must
+> be remotely green before a private wrapper can be specified; FW2/CIL1,
+> archive payload, neural, target, model, and scoring work remain closed until
+> a real cohort is frozen under a new Tier C packet.
 
 > **Scope:** the 20-row table and its KPI describe the original roadmap. Loop
 > numbers 21-24 and the Loop 23.5 calibration gate are post-roadmap extensions,
@@ -2547,3 +2549,57 @@ Failure result `6fa6865` passed Base job `95224622453`, Optional job
 named artifact-only mismatch localization lane. It may read only committed
 code, contracts, result artifacts, and generated fixtures; ignored MARC2
 paths, private outputs, payloads, models, and targets remain closed.
+
+### MARC2-VR5A - Artifact-Only Refusal Localization (Completed At R2)
+
+VR5A registration `926e1ba` passed Base job `95226555204`, Optional job
+`95226555153`, and CI `31972332778` before the fixed AST/JSON audit. Exact
+implementation `d9fa443` then passed Base job `95229811925`, Optional job
+`95229811955`, and CI `31973656275`; closeout `0c347ad` passed both jobs in CI
+`31973927757`.
+
+Route `MARC2VR5-R2` proved two implementation defects without reopening the
+private source. VR4P discarded the nested VR2 route, collapsing eight safe
+diagnostic classes into one outer F07. VR2 also required nine exact generated
+selection outputs on its nominal live path and emitted generated source
+semantics. The consumed private nested route remains unavailable; VR5A does not
+prove that F06 fired.
+
+The audit read 400,289 committed bytes in 1.592949458 seconds at 39,698,432-byte
+peak RSS, emitted 8,706 aggregate bytes, and retained zero. Every private,
+archive, neural, target, model, prediction, score, network, FW2, CIL1, and claim
+counter stayed zero. VR5A is complete; another blind private attempt under the
+same selector is ruled out.
+
+### MARC2-VR6 - Dynamic Live Selection (Generated Result Pending Remote Green)
+
+The frozen VR6 contract treats selected subject count, reservation bytes, and
+selection identity as measured outputs. It requires full-source validation,
+the frozen contiguous rank, 12-19 subjects, three fit plus three heldout run
+bundles per subject, four companions per bundle, zero split overlap, exact row
+reservation arithmetic, the unchanged 8 GiB cap, and either exact next-subject
+overflow or all 19 subjects fitting.
+
+Registration `71d7cec63ff3c57122aec1ffa02fbec02de5f9dd` passed Base job
+`95231605521`, Optional job `95231605469`, and CI `31974405202` before the
+generated-only implementation. The module validates five profiles in canonical
+and reversed row order, replaces generated source vocabulary with live
+semantics, recomputes identities and hashes, and preserves only one allowlisted
+upstream route code.
+
+Local route `MARC2VR6-G1` passed ten replay paths and all 34 direct mutations.
+Profiles selected 12/14/16/18/19 subjects, 72/84/96/108/114 run bundles, and
+288/336/384/432/456 core members. The measured one-thread run processed
+4,291,124 generated input bytes, emitted 9,954 aggregate bytes, completed in
+1.003502375 seconds at 40,435,712-byte peak RSS, and retained zero.
+
+Twenty-nine focused tests and 19 subtests pass. The repository-wide primary
+process produced 3,894 passes and 35 skips plus the same three process-state
+failures as the pre-change baseline; all three pass under their required fresh
+or non-sandboxed process conditions. No new regression is observed.
+
+Current gate: commit, push, and obtain both remote-green jobs for the exact VR6
+implementation/result, then record the closeout. Only then may Tier A/B specify
+a separately named fixed-path wrapper and all-false Tier C request for one new
+structural pass. No private read, real cohort, archive payload, neural data,
+target, model, prediction, score, FW2, CIL1, or scientific claim is authorized.

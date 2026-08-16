@@ -10738,3 +10738,36 @@ outputs.
 
 Scientific claim not established: registration is not neural execution and
 establishes no neural effect or decoding result.
+
+## 2026-08-16 - MARC2-VR6 Dynamic Selection Implementation
+
+- Confirmed registration `71d7cec63ff3c57122aec1ffa02fbec02de5f9dd`
+  passed Base Python job `95231605521`, Optional Neuro Readers job
+  `95231605469`, and CI `31974405202` before implementation.
+- Added a standard-library generated-only module with `plan` and `qualify`
+  commands and no execute, path, URL, output, network, archive, neural, target,
+  model, prediction, or score surface.
+- Replaced exact fixture outcome matching with measured rank, split, cap,
+  maximality, row-reservation, identity-hash, and live-source invariants.
+- Passed ten canonical/reversed paths across 12, 14, 16, 18, and 19 selected
+  subjects. The corresponding run-bundle counts are 72, 84, 96, 108, and 114;
+  core-member counts are 288, 336, 384, 432, and 456.
+- Passed 34 direct mutations across every `MARC2VR6-F01` through F08 route.
+  Aggregate upstream diagnostics retain only one allowlisted VR2 route code.
+- Measured 4,291,124 generated input bytes, 9,954 aggregate output bytes,
+  1.003502375 seconds, 40,435,712-byte peak RSS, one thread, and zero retained
+  output. Every private, ignored-path, archive, neural, target, model, score,
+  network, other-project, FW2, CIL1, and claim counter stayed zero.
+- Twenty-nine focused tests and 19 subtests pass. The complete primary process
+  produced 3,894 passes and 35 skips plus the same three process-state failures
+  as the pre-change baseline. The two state-sensitive gates pass in a fresh
+  process and the forkserver gate passes outside the sandbox. Ruff,
+  compilation, all registry JSON, CLI help/plan/qualify, and diff hygiene pass.
+
+Engineering capability added: live-shaped target-free selections can now be
+accepted by measured invariants across variable cohort sizes without requiring
+fixture-identical outputs.
+
+Scientific claim not established: every path was generated metadata, so VR6
+establishes no real cohort, neural effect, decoding accuracy, brain-specific
+origin, language decoding, or thought-to-text capability.

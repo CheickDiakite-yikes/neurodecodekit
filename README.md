@@ -42,7 +42,7 @@ irreversible Tier C events.
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |
 | IACKD source compatibility | H1 found 96 29-row and 32 31-row headers. H2 then parsed all 316 public BIDS metadata bodies and confirmed one 26-channel predictive EEG core, 1024 Hz sampling, average reference, and complete central/occipital geometry in all 30 groups | The exact-36 reader assumption was wrong, but H2 still routed `IACKDR-R1`: HEOG, VEOG, and Trigger are source-typed `MISC`, exposing a frozen control-taxonomy bug before any EEG sample, event, target, model, or score was accessed |
 | MARC-1 source eligibility | The Freewill central-directory inventory passed without payload, but the one source-aware Wrist metadata check later routed `MARC1SAL-R2` with zero selected subjects and zero payload bytes | The Wrist branch is consumed and blocked before acquisition; the private source route remains unavailable and is not inferred or repaired |
-| MARC-2 confound triangulation | Five ordered work orders test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | The machine-stable VR4P pass verified and strict-parsed the exact 418,755-byte structural manifest, then stopped safely when VR2 refused before cohort creation. Artifact-only VR5A now explains why another blind pass would be wasteful: the wrapper collapsed eight safe VR2 failure classes into one, while the nominal live selector still requires nine exact generated-fixture outputs, including 16 subjects, 8,105,207,776 reserved bytes, and a generated identity hash, and labels live rows as generated. The hidden private route remains unavailable, no cohort is frozen, and archive, neural, target, model, and score access stayed zero |
+| MARC-2 confound triangulation | Five ordered work orders test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | VR5A localized the wrapper's eight-to-one route collapse and fixture-identical live-selection bug without reopening private data. Generated-only VR6 now validates measured maximal prefixes of 12, 14, 16, 18, and 19 subjects across both row orders, recomputes live identities, and passes 34 refusals. The hidden private route remains unavailable, no real cohort is frozen, and archive, neural, target, model, and score access stayed zero |
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
 | Full-path causality gate | Loop 25 v1 passed a dedicated causal anti-alias audit, 65,537 response points, 23 alias probes, 168 schedule checks, 240 resume checks, and 72 future-mutation controls across 24 target-free items | The exact 1000-to-100 Hz path is mechanically causal with zero right context; this is synthetic mechanics evidence, not proof that neural information survives |
 | Consumed S21 validation | The registered 2,908-parameter candidate reached macro CER `0.938177`; the train-only no-signal prior reached `0.751235`, so the candidate was worse by `0.186942` | Loop 26 is parked after one consumed six-target event; this is a clear negative result, not neural advantage |
@@ -1911,15 +1911,19 @@ Read this before interpreting any number in the repository.
   neural value, target, model, prediction, or score was accessed. The next
   safe step is a separately named generated-only live-selection invariant
   repair, not another private attempt.
-- **MARC2-VR6 dynamic live-selection preregistration:** freezes generated
+- **MARC2-VR6 dynamic live-selection implementation:** registration `71d7cec`
+  passed Base job `95231605521`, Optional job `95231605469`, and CI
+  `31974405202` before implementation. The generated qualification spans
   prefixes of 12, 14, 16, 18, and all 19 eligible participants across both row
   orders. Real selected count, reservation bytes, and identity hash are
   measured outputs rather than generated expected constants. The contract
   preserves only an allowlisted upstream route code, enforces exact split and
   maximal-prefix arithmetic under the unchanged 8 GiB cap, and requires live
-  source semantics. This is generated-only registration; implementation must
-  wait for its exact commit and both CI jobs to turn green, and no private,
-  neural, target, model, score, FW2, or CIL1 operation is authorized.
+  source semantics. Route `MARC2VR6-G1` passed ten replay paths and 34 direct
+  refusals in 1.003502375 seconds at 40,435,712-byte peak RSS, processing
+  4,291,124 generated bytes and retaining zero. The exact implementation and
+  result are pending remote green proof. No private, real-cohort, neural,
+  target, model, score, FW2, or CIL1 operation is authorized.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
@@ -2761,6 +2765,9 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/marc2_vr2_refusal_localization_result.v0.json](registries/marc2_vr2_refusal_localization_result.v0.json) | machine-readable route collapse and generated-selection diagnosis with exact measurements and no scientific promotion |
 | [docs/MARC_2_DYNAMIC_LIVE_SELECTION_PREREGISTRATION.md](docs/MARC_2_DYNAMIC_LIVE_SELECTION_PREREGISTRATION.md) | frozen VR6 dynamic-prefix hypothesis, five generated reservation regimes, aggregate route preservation, resource caps, and private-access boundary |
 | [registries/marc2_dynamic_live_selection_contract.v0.json](registries/marc2_dynamic_live_selection_contract.v0.json) | hash-bound generated-only VR6 policy for dynamic measured outputs, live source semantics, ten replay paths, and at least 24 mutations |
+| [docs/MARC_2_DYNAMIC_LIVE_SELECTION_IMPLEMENTATION.md](docs/MARC_2_DYNAMIC_LIVE_SELECTION_IMPLEMENTATION.md) | generated-only VR6 module, five measured selection boundaries, 34 refusals, resources, verification, and next evidence gate |
+| [registries/marc2_dynamic_live_selection_implementation.v0.json](registries/marc2_dynamic_live_selection_implementation.v0.json) | hash-bound module surface, dynamic invariants, measured qualification, zero-access counters, and remote-proof requirement |
+| [registries/marc2_dynamic_live_selection_result.v0.json](registries/marc2_dynamic_live_selection_result.v0.json) | machine-readable `MARC2VR6-G1` replay profiles, refusal coverage, resources, warnings, unavailable fields, and no-science ceiling |
 | [docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md](docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md) | frozen generated-only 238-bundle repair design, filter-before-count order, aggregate predicates, mutations, resources, and claim boundary |
 | [registries/marc2_source_validity_eligibility_repair_contract.v0.json](registries/marc2_source_validity_eligibility_repair_contract.v0.json) | machine-readable `MARC2-VR1` source-validity and eligibility contract with 43 generated adversary bundles and all authority flags false |
 | [docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md](docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md) | generated-only full-source validator, eligibility-first selection order, refusal coverage, local verification, and exact remote-proof gate |
