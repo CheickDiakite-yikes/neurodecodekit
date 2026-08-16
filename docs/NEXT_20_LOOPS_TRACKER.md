@@ -2361,3 +2361,31 @@ Current status: generated result consumed with no retry or rerun. LA2 remains
 consumed, FW2 remains closed, and any future private structural read still
 requires a separately named generated-qualified executor, all-false Tier C
 request, and fresh packet-bound maintainer decision.
+
+### MARC2-VR3 - Variable-Domain Private Recovery (All-False Packet)
+
+The next prospective lane binds proof addendum `bdd34d9`, CI `31947198122`,
+the green VR2 adapter/result, the consumed LA2 failure boundary, and one exact
+previously registered 418,755-byte structural-manifest identity. Packet
+preparation performs zero path operations and grants zero authority.
+
+After a future packet-bound decision becomes remotely green, Stage 1 may
+implement only a new standard-library generated/mock wrapper. It must reuse
+the exact shared proof validator and `adapt_live_domain_source`, refuse every
+consumed executor/root, cover at least 64 direct mutations, and remain private
+free. Only after that exact wrapper is committed, pushed, and both jobs are
+green may Stage 2 perform one no-follow content open, sequential read, SHA-256
+pass, strict JSON parse, dynamic `238 -> 195 + 43` classification, and frozen
+target-free selection.
+
+The future run is capped at one thread, 30 seconds per stage, 256 MiB peak RSS,
+418,755 private input bytes, 2 MiB combined output, 4 MiB incremental disk,
+zero network bytes, and zero archive-member bytes. Every route consumes the
+invocation with no retry or rerun. Success would establish only a real
+structural cohort manifest and would not authorize FW2, neural payload access,
+training, scoring, or a scientific claim.
+
+Current status: all authorization flags false. Commit, push, and require both
+packet CI jobs green before identifying VR3 as the sole active Tier C gate.
+Only fresh maintainer words after that identification may be recorded in a
+separate decision; `continue to eureka` is not retroactive authority.

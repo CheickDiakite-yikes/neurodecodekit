@@ -1674,6 +1674,23 @@ root, archive payload, neural value, target, model, score, network, FW2, or
 claim surface. The maintainer's current `continue to eureka` is not retroactive
 Tier C authority.
 
+Read `docs/MARC_2_VARIABLE_DOMAIN_PRIVATE_RECOVERY_AUTHORIZATION_PACKET.md`
+and
+`registries/marc2_variable_domain_private_recovery_authorization_request.v0.json`.
+`MARC2-VR3` is the next prospective lane. Its all-false request binds the
+green VR2 adapter and one possible future additive proof-gated executor,
+followed only after that executor is remotely green by one exact no-retry read
+of the registered 418,755-byte structural manifest. The future wrapper must
+validate all 1,227 rows and 238 bundles, dynamically reconcile `195 + 43`, and
+derive one target-free selection without opening an archive member. The packet
+does not authorize a decision, implementation, qualification, path operation,
+output root, private read, old executor/root reuse, archive, neural data,
+target, model, score, network, FW2, release, or claim. Commit, push, and obtain
+both green packet jobs before identifying it as the sole Tier C gate. Only a
+fresh unambiguous maintainer message after that identification may be recorded
+in a separate decision. Do not reuse `continue to eureka` retroactively or
+operate on either consumed root.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

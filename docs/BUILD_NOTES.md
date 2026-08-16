@@ -9866,6 +9866,45 @@ Scientific claim not established: no private archive, neural payload, target,
 prediction, or score was accessed, so this result establishes no neural
 effect, decoding accuracy, language decoding, or thought-to-text capability.
 
+## 2026-08-16 - MARC2-VR3 All-False Private Recovery Packet
+
+- Bound green VR2 proof addendum
+  `bdd34d92eb7abe743597f1a1001e4b6a296225af`, Base Python job
+  `95164988627`, Optional Neuro Readers job `95164988647`, and CI
+  `31947198122` before packet preparation.
+- Added a separately named all-false request for one future additive
+  standard-library executor and one later no-retry structural-manifest read.
+  No executor, output root, private-path operation, or real run exists now.
+- Bound the previously registered 418,755-byte mode-`0600` structural manifest
+  identity without statting, resolving, listing, opening, hashing, parsing,
+  deleting, renaming, or inspecting its path or siblings.
+- Froze the future validator order as proof and machine gates, one new consumed
+  marker, one no-follow content open, strict source identity, all 1,227 rows
+  and 238 bundles before classification, exact `195 + 43`, then the unchanged
+  target-free selection returned by VR2.
+- Forbade the consumed LA2 module, proof certificate, output root, marker, and
+  every earlier consumed executor/root. The new root is a distinct uncreated
+  path and has no generic override.
+- Froze at least 64 generated mutations, four profiles in two row orders, one
+  thread, 30 seconds per stage, 256 MiB RSS, 2 MiB output, 4 MiB incremental
+  disk, zero network, and zero archive-member bytes.
+- Eighteen request tests pass. The complete base inventory passes 3,604 tests
+  with 204 skips; optional A-M/N-Z processes pass 3,162 with 28 skips and 513
+  with seven skips, for 3,675 optional-enabled tests with 35 skips. Ruff,
+  compilation, 242 registry parses, artifact hashes, and diff hygiene pass.
+- Every authorization flag is false and every private, archive, neural,
+  target, model, score, network, retry, FW2, release, and claim counter is
+  zero. Fresh packet-bound maintainer words remain required after remote green.
+
+Engineering capability requested: one newly proven additive executor may
+apply the exact green variable-domain adapter to one exact private structural
+manifest and derive a frozen target-free selection without opening an archive
+member.
+
+Scientific claim not established: this all-false packet reads no neural data
+and establishes no neural effect, decoding accuracy, language decoding, or
+thought-to-text capability.
+
 ## 2026-08-16 - MARC2-VR1 Generated Full-Domain Result
 
 - Exact implementation `4d587df` passed Base Python job `95155811373`,

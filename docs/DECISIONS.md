@@ -8343,3 +8343,46 @@ registry, and result-record test.
 Proof update: result commit `7b6899b987dbd64401494ff2901ade1444f1bf60`
 passed Base Python job `95164134927`, Optional Neuro Readers job
 `95164134941`, and CI `31946852669`.
+
+## 0255 - Request A New Variable-Domain Private Structural Recovery
+
+Order decision: require green VR2 proof addendum
+`bdd34d92eb7abe743597f1a1001e4b6a296225af`, Base Python job
+`95164988627`, Optional Neuro Readers job `95164988647`, and CI
+`31947198122` before preparing this request. Require this exact packet to be
+committed, pushed, and both jobs green before it may be identified as the sole
+active Tier C gate.
+
+Architecture decision: create a separately named `MARC2-VR3` sequence rather
+than patching LA2. After a future green packet-bound decision, Stage 1 may
+implement only a new generated/mock standard-library wrapper around the exact
+shared proof validator and VR2 `adapt_live_domain_source`. It must refuse all
+consumed executors and roots. Only after the exact wrapper is remotely green
+may Stage 2 perform one no-follow read of the already registered 418,755-byte
+structural manifest.
+
+Validation decision: require all 1,227 rows and 238 complete bundles to pass
+before dynamic eligibility classification, require exactly 195 eligible plus
+43 valid ineligible bundles without an exact predicate split, and accept only
+the unchanged target-free selector result returned by VR2. Generated wrapper
+qualification must cover at least 32 proof mutations, 32 wrapper mutations,
+four profiles, two row orders, exact one-call integration, no-follow failures,
+output privacy, caps, and consumed-dependency refusals.
+
+Safety decision: write a new consumed marker before the one content open, cap
+the future sequence at one thread, 30 seconds per stage, 256 MiB peak RSS,
+418,755 private input bytes, 2 MiB output, 4 MiB incremental disk, zero network
+bytes, and zero archive-member bytes. Every route consumes the invocation.
+There is no retry, rerun, resume, repair, substitution, fallback, old-root
+operation, or FW2 authority.
+
+Boundary decision: every current authorization flag is false and every real
+operation counter is zero. The current `continue to eureka` is not retroactive
+Tier C authority. Only fresh maintainer words after the remotely green packet
+is identified may be quoted in a separate decision. The request has no neural
+or scientific value.
+
+Evidence:
+`docs/MARC_2_VARIABLE_DOMAIN_PRIVATE_RECOVERY_AUTHORIZATION_PACKET.md`,
+`registries/marc2_variable_domain_private_recovery_authorization_request.v0.json`,
+and its request test.

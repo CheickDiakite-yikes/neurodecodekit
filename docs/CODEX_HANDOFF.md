@@ -4951,3 +4951,39 @@ evidence only. The next safe work is a separately named all-false Tier C
 packet for a new generated-qualified one-shot private structural recovery. Do
 not touch either consumed root or reuse the maintainer's earlier `continue to
 eureka` as retroactive authorization.
+
+## 2026-08-16 MARC2-VR3 Authorization Packet Handoff
+
+Read `docs/MARC_2_VARIABLE_DOMAIN_PRIVATE_RECOVERY_AUTHORIZATION_PACKET.md`,
+`registries/marc2_variable_domain_private_recovery_authorization_request.v0.json`,
+and its request test.
+
+The all-false request binds green VR2 proof addendum
+`bdd34d92eb7abe743597f1a1001e4b6a296225af`, Base Python job
+`95164988627`, Optional Neuro Readers job `95164988647`, and CI
+`31947198122`. It does not touch the registered private path or either consumed
+root.
+
+The future sequence has two proof barriers. After a separate packet-bound
+decision is remotely green, Stage 1 may implement only a new generated/mock
+standard-library wrapper using the exact shared proof validator and
+`adapt_live_domain_source`. It must not import, call, copy, edit, or expose LA2
+or another consumed executor. Only after that exact wrapper is remotely green
+may Stage 2 perform one no-follow read and strict parse of the registered
+418,755-byte structural manifest.
+
+The future processing order is all 1,227 rows and 238 complete bundles,
+dynamic `195 + 43` classification without an exact predicate split, then the
+unchanged target-free VR2 selection. One thread, 30 seconds per stage, 256 MiB
+RSS, 2 MiB output, 4 MiB incremental disk, zero network, and zero
+archive-member bytes are frozen. Every route consumes the invocation and no
+retry or rerun exists.
+
+Eighteen request tests pass. The full base suite passes 3,604 tests with 204
+skips; optional A-M/N-Z pass 3,162 tests with 28 skips and 513 with seven
+skips. Ruff, compilation, 242 registry parses, artifact hashes, and diff
+hygiene pass. Immediate gate: commit and push the packet, and require both
+remote jobs green. Only then identify VR3 as the sole active Tier C packet and
+wait for fresh maintainer words. Do not use the current `continue to eureka`
+retroactively, implement the wrapper, access a private path, create an output
+root, or enter FW2 from packet preparation.

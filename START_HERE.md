@@ -172,6 +172,17 @@
    Result commit `7b6899b` passed both required jobs in CI `31946852669`,
    completing remote proof. No private path, archive payload, neural data,
    target, model, score, network operation, or FW2 work is authorized. Then
+   read
+   `docs/MARC_2_VARIABLE_DOMAIN_PRIVATE_RECOVERY_AUTHORIZATION_PACKET.md` and
+   `registries/marc2_variable_domain_private_recovery_authorization_request.v0.json`.
+   `MARC2-VR3` is an all-false request for a new generated/mock-only wrapper
+   and, only after separate green decision and implementation proofs, one
+   exact no-retry structural-manifest read through VR2. Packet preparation
+   authorizes no implementation, private-path operation, archive member,
+   neural byte, target, model, score, or FW2 work. It must be committed,
+   pushed, and pass both CI jobs before it may be identified as the sole active
+   Tier C gate. The current `continue to eureka` is not retroactive authority.
+   Then
    read `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
    result, then use its preregistration and authorization documents for audit.
