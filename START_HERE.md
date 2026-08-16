@@ -98,11 +98,14 @@
    private/neural/model counters stayed zero. Exact implementation `3e3f8b8`
    passed Base job `95137289730`, Optional job `95137289704`, and CI
    `31935754822`; proof closeout `52eabc6` passed CI `31936399968`. Then read
-   `docs/MARC_2_LIVE_ADAPTER_RECOVERY_AUTHORIZATION_PACKET.md` and its request
-   registry. `MARC2-LA2` is an all-false proposal for a new executor and one
-   exact 418,755-byte structural read. Its commit, push, remote green proof,
-   and a fresh packet-bound maintainer decision are still required. No
-   live/private authority exists. Then read
+   `docs/MARC_2_LIVE_ADAPTER_RECOVERY_AUTHORIZATION_PACKET.md`, its request,
+   and the separate authorization decision. Request `f9f24a3` passed Base job
+   `95140483613`, Optional job `95140483638`, and CI `31937038394` before the
+   maintainer supplied the fresh exact word `continue`. The decision binds
+   only that green packet and is ineffective until its own commit, push, and
+   both remote jobs are green. No executor or live/private operation may begin
+   before that proof; the later one-read stage remains closed until the exact
+   executor is separately green. Then read
    `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
    result, then use its preregistration and authorization documents for audit.

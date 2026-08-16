@@ -2194,7 +2194,7 @@ complete and consumed. Proof closeout `52eabc6` passed Base job `95138912293`,
 Optional job `95138912287`, and CI `31936399968`. No live/private authority
 exists from LA1.
 
-### MARC2-LA2 - Live Adapter Recovery (All-False Packet; Remote Green Pending)
+### MARC2-LA2 - Live Adapter Recovery (Decision Recorded; Decision Green Pending)
 
 This packet binds exact green LA1, the shared proof validator, the frozen
 selector, consumed FW1C route `MARC2FWC-F02`, and one literal 418,755-byte
@@ -2202,10 +2202,18 @@ mode-`0600` structural source identity. It proposes a new additive
 standard-library executor, 56 direct generated mutations, and one later
 no-retry structural read through LA1 and the selector.
 
-The future real stage is capped at one content open, zero network and archive
-payload bytes, 30 seconds, 256 MiB peak RSS, 2 MiB output, and 4 MiB
-incremental disk under one thread. The new v2 root is distinct from both
-consumed roots. All authority flags and counters are false. Nineteen request
-tests, the 72-test packet-plus-LA1 set, 3,379 dependency-free tests, and 3,450
-optional-neuro tests pass locally. Packet commit, push, and both remote jobs
-are required before it may be identified for a fresh maintainer decision.
+The packet commit `f9f24a3` passed Base job `95140483613`, Optional job
+`95140483638`, and CI `31937038394`. After Codex identified it as the sole
+active Tier C gate, the maintainer's next exact message was `continue`. A
+separate decision preserves those eight bytes and binds only the immutable
+green packet. It remains ineffective until its own commit, push, and both
+remote jobs are green.
+
+Seventeen decision tests pass. The complete dependency-free suite passes
+3,396 tests with 204 skips; fresh optional A-M and N-Z processes pass 2,954
+with 28 skips and 513 with seven skips, respectively, for 3,467
+optional-enabled tests with 35 skips. No executor, private path, output root,
+archive member, neural payload, target, model, score, network operation, or
+claim upgrade occurred. After the decision is remotely green, only generated
+Stage 1 implementation opens. The one-read Stage 2 remains closed until that
+exact executor is separately remotely green.

@@ -4654,3 +4654,28 @@ active Tier C packet, and stop for fresh packet-bound maintainer words. Do not
 use the current `continue` retroactively, implement LA2, inspect a private path,
 touch either consumed root, or perform archive, neural, target, model, score,
 network, provider, hardware, release, or claim work.
+
+## 2026-08-16 MARC2-LA2 Authorization Decision Handoff
+
+Packet commit `f9f24a37d840e3408c19dc00830096f6c24b8e03` passed Base job
+`95140483613`, Optional job `95140483638`, and CI `31937038394`. After Codex
+identified that immutable packet as the sole active Tier C gate, the
+maintainer's next exact message was `continue`.
+
+Read `docs/MARC_2_LIVE_ADAPTER_RECOVERY_AUTHORIZATION_DECISION.md`, its
+registry, and decision test. The record quotes the actual eight UTF-8 bytes,
+binds the green request and packet hashes, and preserves two distinct remote-
+green barriers. It is ineffective until this decision itself is committed,
+pushed, and both CI jobs are green. Before that proof, do not implement the
+executor or inspect any private path.
+
+Seventeen focused, 3,396 dependency-free, and 3,467 optional-enabled tests
+pass; optional verification used fresh A-M/N-Z processes at 2,954 and 513 to
+avoid the known process-wide RSS contamination. All 229 registries parse. No
+executor, output-root, private, archive, neural, target, model, score, network,
+provider, hardware, cleanup, release, or claim operation occurred.
+
+After green decision, implement and qualify only the new additive generated/
+mock executor. Commit, push, and require both jobs green for that exact code
+before the one registered no-retry structural read. Even successful structural
+selection stops before archive payloads and `MARC2-FW2`.

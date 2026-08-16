@@ -8031,3 +8031,28 @@ a separate decision. The current `continue` is not retroactive authority.
 Evidence: `docs/MARC_2_LIVE_ADAPTER_RECOVERY_AUTHORIZATION_PACKET.md`,
 `registries/marc2_live_adapter_recovery_authorization_request.v0.json`, and
 `tests/test_marc2_live_adapter_recovery_authorization_request.py`.
+
+## 0245 - Bind Fresh Short-Form Authority To The Green LA2 Packet
+
+Authorization decision: request
+`f9f24a37d840e3408c19dc00830096f6c24b8e03` passed Base Python job
+`95140483613`, Optional Neuro Readers job `95140483638`, and CI
+`31937038394` before the maintainer supplied the fresh exact message
+`continue`. Preserve those actual eight UTF-8 bytes and their SHA-256; do not
+fabricate the packet's long scope as the maintainer's words or infer expansion.
+
+Order decision: this record is ineffective until committed, pushed, and both
+remote jobs are green. Only then may generated/mock Stage 1 implementation
+begin. One retained-manifest read and structural selection remain closed until
+that exact executor is separately committed, pushed, and remotely green.
+
+Boundary decision: bind one new additive executor, 56 direct generated
+mutations, one later no-retry 418,755-byte structural read, the new v2 output
+root, one thread, zero network/archive payload bytes, and the existing resource
+and route ceilings. Stop before archive members, neural signals, targets,
+models, scores, FW2, release, or claim work. Current operation counters are
+zero except one request-CI verification.
+
+Evidence: `docs/MARC_2_LIVE_ADAPTER_RECOVERY_AUTHORIZATION_DECISION.md`,
+`registries/marc2_live_adapter_recovery_authorization_decision.v0.json`, and
+`tests/test_marc2_live_adapter_recovery_authorization_decision.py`.

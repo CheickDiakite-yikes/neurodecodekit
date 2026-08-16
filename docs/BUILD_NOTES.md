@@ -9759,6 +9759,40 @@ Scientific claim not established: this registration contains no neural
 payload, target, prediction, or score and establishes no neural effect,
 decoding accuracy, language decoding, or thought-to-text capability.
 
+## 2026-08-16 - MARC2-LA2 Packet-Bound Authorization Decision
+
+- Request `f9f24a37d840e3408c19dc00830096f6c24b8e03` passed Base Python
+  job `95140483613`, Optional Neuro Readers job `95140483638`, and CI
+  `31937038394` before the maintainer supplied the fresh exact word
+  `continue`.
+- Added a separate decision document, machine registry, and 17-test contract.
+  The record preserves the actual eight UTF-8 bytes and binds the immutable
+  packet/request hashes without claiming a fabricated long authorization
+  recital or broader authority.
+- The decision is ineffective until its own commit, push, and both remote jobs
+  are green. After that proof, Stage 1 may implement only the new additive
+  executor on generated/mock inputs. Stage 2 remains closed until the exact
+  executor is independently remotely green.
+- The dependency-free suite passes 3,396 tests with 204 skips. Fresh optional
+  A-M and N-Z processes pass 2,954 with 28 skips and 513 with seven skips,
+  respectively, for 3,467 optional-enabled tests with 35 skips. The initial
+  monolithic optional run reproduced the known forkserver sandbox refusal and
+  two order-sensitive RSS gates; the established fresh-process lanes passed
+  without a code change.
+- All 229 registries parse. Ruff, compilation, artifact hashes, exact message
+  hash, and diff hygiene pass. No executor, private-path, output-root, archive,
+  neural, target, model, score, provider, hardware, retry, cleanup, release, or
+  claim operation occurred.
+
+Engineering capability conditionally authorized after green decision: one
+proof-gated additive executor may be generated-qualified and, only after its
+own green proof, apply LA1 and the frozen selector to one exact structural
+manifest without opening an archive member.
+
+Scientific claim not established: this decision is not neural data or a result
+and establishes no neural effect, decoding accuracy, language decoding, or
+thought-to-text capability.
+
 ## 2026-08-16 - MARC2-LA2 All-False Live Adapter Recovery Packet
 
 - Bound green LA1 implementation `3e3f8b8`, CI `31935754822`, and proof

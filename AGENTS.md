@@ -1543,18 +1543,23 @@ passed Base job `95137289730`, Optional job `95137289704`, and CI
 `52eabc63751aa692536cec5fe602fe05aa879eae` passed Base job `95138912293`,
 Optional job `95138912287`, and CI `31936399968`.
 
-Read `docs/MARC_2_LIVE_ADAPTER_RECOVERY_AUTHORIZATION_PACKET.md` and
-`registries/marc2_live_adapter_recovery_authorization_request.v0.json`.
-`MARC2-LA2` is an all-false proposal for a new additive standard-library
-executor, generated/mock qualification, and one later no-retry read of the
-exact 418,755-byte structural manifest. Every authorization flag and operation
-counter is false. Commit, push, and require both packet jobs green, then
-identify this as the sole active Tier C packet and stop for fresh packet-bound
-maintainer words. The current `continue` is not retroactive authority. Do not
-implement the executor, inspect a private path or consumed root, enter FW2, or
-perform archive, neural, target, model, score, network, provider, or hardware
-work from the packet alone. Nineteen request, 72 packet-plus-LA1, 3,379
-dependency-free, and 3,450 optional-neuro tests pass locally.
+Read `docs/MARC_2_LIVE_ADAPTER_RECOVERY_AUTHORIZATION_PACKET.md`, its request,
+`docs/MARC_2_LIVE_ADAPTER_RECOVERY_AUTHORIZATION_DECISION.md`, and the decision
+registry. Request `f9f24a37d840e3408c19dc00830096f6c24b8e03` passed Base job
+`95140483613`, Optional job `95140483638`, and CI `31937038394` before the
+maintainer supplied the fresh exact word `continue`. The separate decision
+preserves those eight bytes and binds only that immutable packet. It is
+ineffective until its own commit, push, and both required jobs are green.
+
+Seventeen decision, 3,396 dependency-free, and 3,467 optional-enabled tests
+pass locally. Before the decision is remotely green, do not implement the
+executor or inspect a private path. After green decision, only generated/mock
+implementation of `marc2_live_schema_adapter_recovery` is eligible. The one
+registered 418,755-byte structural read remains closed until that exact
+executor is independently committed, pushed, and remotely green. Never touch
+either consumed root, archive members, neural data, targets, models, scores,
+network, providers, hardware, FW2, release, or claim work from this decision
+milestone alone.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
