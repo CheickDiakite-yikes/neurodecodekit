@@ -9759,6 +9759,40 @@ Scientific claim not established: this registration contains no neural
 payload, target, prediction, or score and establishes no neural effect,
 decoding accuracy, language decoding, or thought-to-text capability.
 
+## 2026-08-16 - MARC2-VR1 Generated Full-Domain Result
+
+- Exact implementation `4d587df` passed Base Python job `95155811373`,
+  Optional Neuro Readers job `95155811384`, and CI `31943437003` before the
+  sole measured closeout.
+- Route `MARC2VR-G1` validated all 1,227 generated rows and 238 complete
+  source-shaped bundles before classifying counts `195/12/24/7` and filtering
+  43 source-valid adversaries.
+- The frozen selection replayed 16 subjects, 96 runs, 384 members, and
+  8,105,207,776 reserved bytes with zero ineligible candidates and zero use of
+  target, quality, or outcome.
+- Canonical/reversed source orders agreed. All 36 mutations refused across all
+  eight registered routes.
+- One one-thread invocation used 858,844 generated input bytes, emitted 4,680
+  aggregate stdout bytes, ran in 0.20698016599635594 seconds at 32,391,168-byte
+  peak RSS, and retained zero output. The stdout hash is unavailable by design;
+  the consumed qualification will not be rerun to reconstruct it.
+- Every private, consumed-root, archive, neural, target, derivative, model,
+  prediction, score, network, provider, hardware, retry, FW2, release, and
+  claim counter is zero.
+- Forty-seven focused tests pass. The full dependency-free suite passes 3,543
+  tests with 204 skips; optional A-M/N-Z pass 3,101 tests with 28 skips and 513
+  with seven skips, for 3,614 optional-enabled tests with 35 skips. Ruff,
+  compilation, 238 registry parses, CLI checks, hashes, and diff hygiene pass.
+
+Engineering capability added: NeuroDecodeKit now validates a full generated
+238-bundle source domain, separates source validity from selection eligibility,
+and preserves the frozen target-free prefix without admitting excluded
+bundles.
+
+Scientific claim not established: no private archive, neural payload, target,
+prediction, or score was accessed, so this result establishes no neural
+effect, decoding accuracy, language decoding, or thought-to-text capability.
+
 ## 2026-08-16 - MARC2-VR1 Generated Repair Implementation
 
 - Registration `9dedfe6` passed Base Python job `95153164447`, Optional Neuro
@@ -9781,9 +9815,10 @@ decoding accuracy, language decoding, or thought-to-text capability.
   seven skips, for 3,603 optional-enabled tests with 35 skips. Ruff,
   compilation, 237 registry parses, CLI help/plan/inspect, and diff hygiene
   pass.
-- The exact implementation commit and both remote jobs remain pending. The one
-  registered measured generated closeout has not run. Every private, archive,
-  neural, target, model, score, network, LA2, FW2, and claim counter is zero.
+- Exact implementation `4d587df` later passed both jobs in CI `31943437003`
+  before the one registered measured generated closeout. Every private,
+  archive, neural, target, model, score, network, LA2, FW2, and claim counter
+  remained zero.
 
 Engineering capability added: the generated adapter separates complete source
 validity from selection eligibility and preserves the frozen target-free

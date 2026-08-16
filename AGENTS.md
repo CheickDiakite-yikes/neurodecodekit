@@ -1624,9 +1624,21 @@ validates all 1,227 generated rows and 238 complete bundles before
 classification, filters to 195 eligible bundles, and replays 16 subjects, 96
 runs, 384 companions, and 8,105,207,776 reserved bytes with zero ineligible
 candidates. All 36 generated mutations refuse across all eight routes. This
-exact implementation must be committed, pushed, and pass both CI jobs before
-the one measured generated closeout. Do not operate on a private or consumed
-path, reuse LA2, enter FW2, or infer a scientific result.
+exact implementation was committed as
+`4d587dfc552f4a034d38444634cb87e22483bc54` and passed Base Python job
+`95155811373`, Optional Neuro Readers job `95155811384`, and CI
+`31943437003` before the one measured generated closeout. Read
+`docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_RESULT.md` and
+`registries/marc2_source_validity_eligibility_repair_result.v0.json`.
+`MARC2VR-G1` validated all 238 bundles, filtered 43 generated adversaries,
+replayed the frozen selection, and refused all 36 mutations in
+0.20698016599635594 seconds at 32,391,168-byte peak RSS. Every private,
+archive, neural, target, model, score, network, LA2, FW2, and claim counter is
+zero. The generated closeout is consumed with no rerun. Do not operate on a
+private or consumed path, reuse LA2, enter FW2, or infer a scientific result.
+A future private structural attempt requires a new prospective contract,
+generated-qualified one-shot executor, all-false Tier C request, and fresh
+packet-bound maintainer decision.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

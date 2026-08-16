@@ -8210,3 +8210,31 @@ and `MARC2-FW2` remains closed.
 
 Evidence: `docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md`,
 its implementation registry, module, and two implementation tests.
+
+## 0251 - Consume VR1 At Generated Full-Domain Success
+
+Order decision: accept exact implementation `4d587df`, Base Python job
+`95155811373`, Optional Neuro Readers job `95155811384`, and CI `31943437003`
+as the completed remote barrier before the registered closeout.
+
+Evidence decision: accept `MARC2VR-G1`. All 1,227 rows and 238 complete bundles
+passed source validation before aggregate classification. Counts
+`195/12/24/7` reconciled, 43 generated adversaries remained ineligible, and
+the frozen 16-subject, 96-run, 384-member, 8,105,207,776-byte selection replayed
+with zero ineligible candidates. All 36 mutations refused across all eight
+routes.
+
+Measurement decision: record 858,844 generated input bytes, 4,680 aggregate
+stdout bytes, 0.20698016599635594 seconds, and 32,391,168-byte peak RSS under
+one thread. Retained output, network bytes, private bytes, raw reads, caches,
+models, and training are zero. Do not rerun merely to reconstruct the
+deliberately unretained stdout SHA-256.
+
+Boundary decision: VR1 closes the generated validator blind spot only. It does
+not prove that a private source passes and establishes no neural or decoding
+result. The closeout is consumed with no rerun. A future private attempt needs
+a separately named prospective contract, green one-shot executor, Tier C
+request, and fresh packet-bound decision. LA2 and `MARC2-FW2` remain closed.
+
+Evidence: `docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_RESULT.md`, its
+result registry, and result-record test.

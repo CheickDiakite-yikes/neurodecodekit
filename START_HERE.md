@@ -140,10 +140,13 @@
    registration/behavior/record tests and preserves the frozen selection with
    zero ineligible candidates. Read
    `docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md` and its
-   implementation registry next. The exact implementation still requires its
-   own remote-green proof before the one measured generated closeout. Every
-   private or scientific operation remains closed behind a fresh Tier C
-   decision. Then read
+   implementation registry next. Exact implementation `4d587df` then passed
+   CI `31943437003` before one measured generated qualification passed at
+   `MARC2VR-G1`. Read
+   `docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_RESULT.md` and its result
+   registry. The generated closeout is consumed with no rerun. Every private
+   or scientific operation remains closed behind a new prospective contract
+   and fresh Tier C decision. Then read
    `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
    result, then use its preregistration and authorization documents for audit.
