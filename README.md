@@ -1884,6 +1884,15 @@ Read this before interpreting any number in the repository.
   incremental-output accounting. This exact implementation still needs its
   commit and both CI jobs green before the sole real structural pass; it has
   not read neural data, trained a model, opened targets, or produced a score.
+- **MARC2-VR4P consumed structural result:** exact implementation `24f7379`
+  passed Base job `95223010696`, Optional job `95223010631`, and CI
+  `31970865212` before the one registered pass. Fresh readiness and exact
+  418,755-byte source integrity succeeded, but the frozen VR2 adapter refused
+  at `MARC2MSP-F07` before returning a cohort. The underlying predicate was not
+  emitted and will not be reconstructed from private data. No archive member,
+  neural sample, target, model, prediction, or score was touched. The attempt
+  is consumed with no rerun; FW2 and CIL1 remain closed while an artifact-only
+  prospective mismatch analysis is designed.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

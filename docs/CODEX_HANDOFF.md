@@ -1,21 +1,20 @@
 # Codex Handoff - NeuroDecodeKit
 
-> Current MARC2-VR4P implementation gate, 2026-08-16: packet-bound decision
-> `eac37262dcf7cd4167475b7cc9145e3698d6dd9b` passed Base Python job
-> `95218521665`, Optional Neuro Readers job `95218521647`, and CI
-> `31969063955`. Read
-> `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_IMPLEMENTATION.md` and its
-> implementation/proof registries. The additive fixed-path executor passes two
-> generated replays and 27 direct refusals in 0.107 seconds at 36,864,000-byte
-> peak RSS, with 433,847 generated input bytes, 222,279 generated output bytes,
-> zero retention, and zero real/private operations. Its 4 MiB accounting
-> includes the fresh certificate. Immediate gate: complete repository
-> verification, commit and push the exact implementation, and require both CI
-> jobs green. Only then may the sole expired-certificate cleanup, fresh
-> readiness, and 418,755-byte structural pass run. Never touch consumed roots
-> or the unrelated tracker inspection NDJSON. Archive payload, neural,
-> training, target, prediction, scoring, FW2/CIL1 execution, and claims remain
-> closed.
+> Current MARC2-VR4P result gate, 2026-08-16: exact implementation
+> `24f7379301b03c8f5eff796afb3398b11e58ece9` passed Base Python job
+> `95223010696`, Optional Neuro Readers job `95223010631`, and CI
+> `31970865212` before the sole invocation. Read
+> `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md` and its failure
+> registry. The attempt consumed at `MARC2MSP-F07`: exact expired-certificate
+> cleanup, fresh readiness, marker-before-open, one 418,755-byte source read,
+> registered SHA-256, and strict JSON parse passed; the frozen VR2 adapter then
+> refused before returning a cohort. Its deeper predicate was not emitted and
+> is unavailable. There is no retry, no private selection manifest, no cohort,
+> and no FW2/CIL1 eligibility. Never inspect, alter, delete, or reuse the fresh
+> certificate, output root, marker, retained source, consumed roots, or the
+> unrelated tracker inspection NDJSON. Immediate gate: test, commit, push, and
+> remotely green the aggregate failure result, then use only committed
+> artifacts and generated fixtures for a separately named mismatch analysis.
 
 > Current MARC2 handoff, 2026-08-16: exact VR3 implementation `2467876` passed
 > Base Python job `95207398015`, Optional Neuro Readers job `95207398092`, and

@@ -8667,3 +8667,32 @@ training/scoring remain separate Tier C decisions.
 Evidence: `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_IMPLEMENTATION.md`,
 `registries/marc2_machine_stable_private_recovery_implementation.v0.json`, the
 distinct proof registry, implementation module, and two focused test modules.
+
+## 0266 - Consume VR4P At The Frozen VR2 Adapter Boundary
+
+Execution decision: after exact implementation `24f7379` passed both jobs in
+CI `31970865212`, invoke the registered fixed-path command once under the
+all-one thread environment. Permit no retry, rerun, parallel research process,
+or post-result private inspection.
+
+Result decision: accept `MARC2MSP-F07`. Proof validation, old-certificate
+cleanup, fresh readiness, pre-marker machine checks, marker-before-open order,
+one 418,755-byte source read, registered SHA-256, and strict JSON parse all
+completed. The frozen VR2 adapter refused before returning a valid cohort.
+
+Epistemic decision: retain only the aggregate-safe reason. The underlying
+adapter route, predicate, and any intermediate candidate selection were not
+emitted and must not be inferred from a later private read. Record internal
+runtime, RSS, readiness samples, load/disk values, and retained output bytes as
+unavailable rather than reconstructing them from the fresh certificate or
+consumed root.
+
+Boundary decision: freeze zero real cohorts and keep FW2/CIL1 ineligible. Do
+not open, inspect, alter, delete, or reuse the fresh certificate, marker,
+output root, or retained source under this lane. Permit only separately named
+artifact-only mismatch localization until a new immutable Tier C packet and
+fresh decision authorize any private operation.
+
+Evidence: `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`,
+`registries/marc2_machine_stable_private_recovery_failure_result.v0.json`, and
+its focused result test.

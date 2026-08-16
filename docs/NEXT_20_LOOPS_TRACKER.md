@@ -2514,3 +2514,16 @@ cohort pass occur. FW2 becomes preregistration-eligible only after a successful
 cohort freeze; archive payload, neural training, prediction freeze, target
 delivery, and scoring still require a separate Tier C packet and fresh
 decision.
+
+Exact implementation `24f7379` passed Base job `95223010696`, Optional job
+`95223010631`, and CI `31970865212` before the sole structural invocation. The
+machine-stable path succeeded through expired-certificate cleanup, fresh
+readiness, marker creation, one 418,755-byte source open, registered SHA-256,
+and strict JSON parsing. It then consumed at `MARC2MSP-F07` because the frozen
+VR2 adapter refused before returning a valid cohort. The deeper predicate and
+any intermediate candidate selection were not emitted and are unavailable.
+There is no retry or rerun, no private selection manifest, no cohort freeze,
+and no FW2/CIL1 eligibility. Current gate: commit and remotely green the
+aggregate failure result, then perform only separately named artifact-only
+mismatch localization. Any new private read or neural experiment remains a
+fresh Tier C boundary.

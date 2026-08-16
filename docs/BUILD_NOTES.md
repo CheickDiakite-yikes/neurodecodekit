@@ -9791,6 +9791,37 @@ Scientific claim not established: no real private manifest, archive payload,
 neural value, target, prediction, or score was accessed, so this implementation
 establishes no neural effect or decoding performance.
 
+## 2026-08-16 - MARC2-VR4P Consumed VR2 Adapter Refusal
+
+- Exact implementation `24f7379301b03c8f5eff796afb3398b11e58ece9`
+  passed Base Python job `95223010696`, Optional Neuro Readers job
+  `95223010631`, and CI `31970865212` before one fixed invocation.
+- The invocation passed proof validation, exact cleanup of the old 4,551-byte
+  certificate, fresh `ready=true` machine qualification, the pre-marker machine
+  recheck, exact source preflight, marker-before-open ordering, one 418,755-byte
+  content read, registered SHA-256, and strict JSON parsing.
+- The frozen VR2 adapter then refused at `MARC2MSP-F07`. Its underlying route,
+  predicate, and any intermediate candidate selection were not emitted or
+  retained. No post-hoc private reinspection was performed.
+- External observed wall time was approximately 220.676 seconds. Internal
+  runtime, peak RSS, readiness samples, load/disk values, and retained output
+  bytes are unavailable because no aggregate report was reached.
+- Private selection manifests, aggregate reports, and cohort freezes are zero.
+  Network/archive payload, signal, event, target, derivative, model,
+  prediction, score, provider, hardware, other-project, and claim counters are
+  zero. Ten focused result tests and seven hash subtests pass.
+- The lane is consumed with zero retry/rerun/resume/fallback. FW2 and CIL1
+  remain ineligible. Next work is artifact-only mismatch localization; any new
+  private read requires a new packet and fresh Tier C decision.
+
+Engineering capability added: the green executor safely crossed machine
+readiness and one integrity-checked structural open, then failed closed at the
+frozen adapter boundary.
+
+Scientific claim not established: no neural payload, target, prediction, or
+score was accessed, so this result establishes no neural effect or decoding
+accuracy.
+
 ## 2026-08-16 - MARC2-VR4P Packet-Bound Authorization Decision
 
 - Verified request `a5b73d6859c71054a1f20ab6c1c500341539efea`

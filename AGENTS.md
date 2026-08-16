@@ -1812,6 +1812,24 @@ closed until that proof.
 Archive payload, neural values, FW2/CIL1 execution, training, targets,
 prediction freezing, scoring, and claim upgrades remain unauthorized.
 
+Exact implementation `24f7379301b03c8f5eff796afb3398b11e58ece9`
+passed Base Python job `95223010696`, Optional Neuro Readers job
+`95223010631`, and CI `31970865212` before the sole invocation. Read
+`docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md` and
+`registries/marc2_machine_stable_private_recovery_failure_result.v0.json`.
+The invocation consumed at `MARC2MSP-F07`: exact expired-certificate cleanup
+and fresh readiness passed, the marker preceded one exact 418,755-byte
+structural open, size/SHA-256/strict JSON integrity passed, and the frozen VR2
+adapter then refused. The underlying adapter predicate and any intermediate
+candidate selection were not emitted and are unavailable. No private selection
+manifest, aggregate result, or real cohort was produced. Do not reopen, inspect,
+hash, parse, rename, delete, overwrite, reuse, retry, or rerun the fresh
+certificate, output root, marker, or retained private source under this lane.
+FW2 and CIL1 remain ineligible. The next safe work is separately named
+artifact-only mismatch localization using committed code/contracts, generated
+fixtures, and this aggregate route; any new private read requires a new Tier C
+packet and fresh decision.
+
 Read `docs/MARC_2_MACHINE_STABLE_COHORT_AND_NEURAL_CONTROL_RESEARCH.md` and
 `registries/marc2_machine_stable_cohort_and_neural_control_research.v0.json`.
 VR3 result commit `a186486fcb3dfb2b6d3a743f180b7ac2fa0b4dd3` passed Base

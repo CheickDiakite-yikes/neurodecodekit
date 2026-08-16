@@ -248,6 +248,14 @@
    implementation before its sole real structural pass. Payload, neural,
    training, target, prediction, scoring, FW2/CIL1 execution, and claim
    surfaces remain closed.
+   Implementation `24f7379` then passed Base job `95223010696`, Optional job
+   `95223010631`, and CI `31970865212`. Read
+   `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md` and its failure
+   registry. The one pass consumed at `MARC2MSP-F07` after fresh readiness,
+   marker creation, one exact 418,755-byte structural open, and strict JSON
+   integrity; the frozen VR2 adapter refused before a cohort was returned. Do
+   not reopen or alter the fresh certificate, marker, output root, or retained
+   source. There is no retry, no real cohort, and no FW2/CIL1 eligibility.
    Then
    read `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
