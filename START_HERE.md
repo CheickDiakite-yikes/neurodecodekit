@@ -102,10 +102,20 @@
    and the separate authorization decision. Request `f9f24a3` passed Base job
    `95140483613`, Optional job `95140483638`, and CI `31937038394` before the
    maintainer supplied the fresh exact word `continue`. The decision binds
-   only that green packet and is ineffective until its own commit, push, and
-   both remote jobs are green. No executor or live/private operation may begin
-   before that proof; the later one-read stage remains closed until the exact
-   executor is separately green. Then read
+   only that green packet. Decision `b445df2` then passed Base job
+   `95142233426`, Optional job `95142233335`, and CI `31937743296` before the
+   additive executor was implemented. Then read
+   `docs/MARC_2_LIVE_ADAPTER_RECOVERY_IMPLEMENTATION.md`, its native
+   implementation registry, distinct FW1B proof certificate, module, and three
+   tests. Generated `MARC2LAR-G1` passed all 32 proof-certificate and 24
+   executor refusals, replaying the 16-subject, 96-run, 384-member structural
+   prefix in 0.273685 seconds at 37,978,112-byte peak RSS. Every retained-path,
+   archive, neural, target, model, score, network, and claim counter stayed
+   zero, and the generated output was removed. The exact implementation is not
+   yet remotely green, so the retained 418,755-byte manifest remains unopened.
+   Commit, push, and both green jobs are required before its one registered
+   structural selection. Even success stops before archive members and
+   `MARC2-FW2`. Then read
    `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
    result, then use its preregistration and authorization documents for audit.

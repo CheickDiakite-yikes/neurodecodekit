@@ -9759,6 +9759,46 @@ Scientific claim not established: this registration contains no neural
 payload, target, prediction, or score and establishes no neural effect,
 decoding accuracy, language decoding, or thought-to-text capability.
 
+## 2026-08-16 - MARC2-LA2 Generated Executor Implementation
+
+- Decision `b445df2ccadc3902d247fa19f5155a006ec5bfe5` passed Base Python
+  job `95142233426`, Optional Neuro Readers job `95142233335`, and CI
+  `31937743296` before implementation.
+- Added a new standard-library executor with fixed `plan`, `qualify`, `inspect`,
+  and proof-gated `execute` commands. It has no generic source/output override,
+  network client, archive member reader, neural interface, target, model,
+  trainer, predictor, scorer, or consumed-executor import.
+- Bound a native LA2 implementation record separately from the FW1B shared-
+  validator certificate. The future one-shot path requires exact clean Git and
+  green-CI evidence before source preflight, then one consumed marker, one
+  no-follow open, one sequential size/hash/read/strict-JSON pass, one LA1 call,
+  and one selector call.
+- Generated `MARC2LAR-G1` passed all 32 proof-certificate and 24 executor
+  mutations plus ten gates. Both input orders reproduced 16 subjects, 96 run
+  bundles, 384 members, and 8,105,207,776 reserved bytes.
+- The measured one-thread qualification used 846,696 input bytes, 221,863
+  output bytes, 0.27368504100013524 seconds, and 37,978,112-byte peak RSS. The
+  8,083-byte aggregate and mode-0600 private generated fixture were inspected,
+  hashed, and removed.
+- Every retained-private, archive, payload, signal, event, target, label,
+  channel, quality, derivative, model, training, prediction, score, network,
+  provider, hardware, retry, cross-project, FW2, and claim counter stayed zero.
+- Thirty-two functional, fifteen implementation, and nine result tests are
+  bound. The complete local gate targets 3,452 dependency-free tests with 204
+  skips and 3,523 optional-enabled tests with 35 skips, plus Ruff, compilation,
+  registry parsing, CLI checks, hashes, and diff hygiene.
+- The exact executor remains ineligible for private access until committed,
+  pushed, and green in both remote jobs. After that proof, one target-free
+  418,755-byte structural selection may run once; archive members and
+  `MARC2-FW2` remain closed.
+
+Engineering capability added: one additive proof-gated executor can compose
+the exact LA1 adapter and selector behind a one-open structural firewall.
+
+Scientific claim not established: generated metadata contain no human neural
+signal, target, prediction, or score and establish no neural effect, decoding
+accuracy, language decoding, or thought-to-text capability.
+
 ## 2026-08-16 - MARC2-LA2 Packet-Bound Authorization Decision
 
 - Request `f9f24a37d840e3408c19dc00830096f6c24b8e03` passed Base Python

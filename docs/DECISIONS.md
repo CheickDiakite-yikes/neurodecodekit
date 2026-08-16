@@ -8056,3 +8056,33 @@ zero except one request-CI verification.
 Evidence: `docs/MARC_2_LIVE_ADAPTER_RECOVERY_AUTHORIZATION_DECISION.md`,
 `registries/marc2_live_adapter_recovery_authorization_decision.v0.json`, and
 `tests/test_marc2_live_adapter_recovery_authorization_decision.py`.
+
+## 0246 - Qualify The Additive LA2 Executor Before Private Use
+
+Order decision: accept green authorization decision `b445df2`, CI
+`31937743296`, as the prerequisite for generated/mock implementation only.
+Preserve the second barrier: the exact executor itself must be committed,
+pushed, and pass both remote jobs before any retained-path operation.
+
+Architecture decision: use a new standard-library module that composes the
+exact shared proof validator, LA1 adapter, and frozen selector. Do not import,
+call, copy, edit, or expose either consumed executor or root. Bind one literal
+private source, one new v2 output root, one consumed marker, one no-follow
+content open, one LA1 call, one selector call, and no retry or fallback.
+
+Evidence decision: accept generated `MARC2LAR-G1`. All 32 proof-certificate and
+24 executor mutations plus ten gates passed. Canonical/reversed fixtures
+replayed 16 subjects, 96 runs, 384 members, and 8,105,207,776 reserved bytes in
+0.27368504100013524 seconds at 37,978,112-byte peak RSS. The 221,863 generated
+output bytes were inspected, hashed, and removed. Every private, archive,
+neural, target, model, score, network, retry, and claim counter remained zero.
+
+Boundary decision: generated composition is engineering evidence only. Before
+remote green, do not stat, resolve, list, open, hash, or parse the retained
+418,755-byte manifest. After green, permit exactly one target-free structural
+selection; stop regardless of route before archive members, payloads, neural
+data, targets, models, scores, `MARC2-FW2`, release, or claim work.
+
+Evidence: `docs/MARC_2_LIVE_ADAPTER_RECOVERY_IMPLEMENTATION.md`, both LA2
+implementation/result registries, the distinct FW1B proof certificate, the
+additive module, and its three tests.

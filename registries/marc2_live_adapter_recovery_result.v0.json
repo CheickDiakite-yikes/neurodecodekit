@@ -1,0 +1,208 @@
+{
+  "schema_name": "neurodecodekit.marc2_live_adapter_recovery_closeout",
+  "schema_version": "0.1.0",
+  "result_id": "MARC-2-LA2-generated-live-adapter-recovery-result-v0",
+  "lane_id": "MARC2-LA2",
+  "recorded_at_local": "2026-08-16",
+  "status": "generated_qualification_complete_consumed_remote_green_pending",
+  "route": "MARC2LAR-G1",
+  "full_route": "MARC2LAR-G1-generated_proof_adapter_selector_executor_qualification_passed",
+  "proof_posture": {
+    "kind": "generated_and_mocked_executor_qualification_only",
+    "scientific_value": false,
+    "real_or_private_data_used": false,
+    "future_private_stage_authorized_only_after_exact_executor_remote_green": true
+  },
+  "green_decision_proof": {
+    "commit": "b445df2ccadc3902d247fa19f5155a006ec5bfe5",
+    "CI_run_id": 31937743296,
+    "base_python_job_id": 95142233426,
+    "optional_neuro_job_id": 95142233335,
+    "both_required_jobs_green_before_implementation": true
+  },
+  "local_implementation_snapshot": {
+    "implementation_registry_sha256": "cefb8709b97add38b736d54f54e8ac10d84c161cba138053db645b5b4da79aa5",
+    "proof_certificate_sha256": "6c7df6c7b46436d6e45481d092f3bd7641f7de9862f555dd5acdd934786c3acf",
+    "module_sha256": "009bf97a46d9977e17ed590c51bf9e2a97377ea38864c65b61a5b2588d1aa2d9",
+    "remote_CI_pending": true
+  },
+  "artifact_bindings": [
+    {
+      "path": "src/neurodecodekit/datasets/marc2_live_schema_adapter_recovery.py",
+      "sha256": "009bf97a46d9977e17ed590c51bf9e2a97377ea38864c65b61a5b2588d1aa2d9"
+    },
+    {
+      "path": "registries/marc2_live_adapter_recovery_implementation.v0.json",
+      "sha256": "cefb8709b97add38b736d54f54e8ac10d84c161cba138053db645b5b4da79aa5"
+    },
+    {
+      "path": "registries/marc2_live_adapter_recovery_proof_certificate.v0.json",
+      "sha256": "6c7df6c7b46436d6e45481d092f3bd7641f7de9862f555dd5acdd934786c3acf"
+    },
+    {
+      "path": "registries/marc2_live_adapter_recovery_authorization_decision.v0.json",
+      "sha256": "7d4f20f92fe501c97d150f40c9174c4e6d03f52de420a5f6acbea306e7a1313e"
+    },
+    {
+      "path": "docs/MARC_2_LIVE_ADAPTER_RECOVERY_IMPLEMENTATION.md",
+      "sha256": "dcff175297cad6a0f887b634944ea90990398ae1c2e7ffc46bb620d71cac625c"
+    },
+    {
+      "path": "tests/test_marc2_live_adapter_recovery.py",
+      "sha256": "89ea47d0aac50674380032aa9b412562778ce471fccf977d01a181a6a6d84deb"
+    },
+    {
+      "path": "tests/test_marc2_live_adapter_recovery_implementation.py",
+      "sha256": "8e078b2f9e79d9b85e5afea01f0ba0a14be0b3b45aa3dbf3999bee3734d61501"
+    },
+    {
+      "path": "tests/test_marc2_live_adapter_recovery_result.py",
+      "sha256": "df7f061e757a54689b164029b11b6c489501f3aabf9073cf84850a84d938de9b"
+    }
+  ],
+  "composition_result": {
+    "shared_proof_validator_exact": true,
+    "native_registry_and_FW1B_certificate_distinct": true,
+    "LA1_adapter_exact": true,
+    "selector_exact": true,
+    "LA1_calls_per_success": 1,
+    "selector_calls_per_success": 1,
+    "source_mutated_or_aliased": false,
+    "canonical_and_reversed_replay": true,
+    "consumed_executor_import_call_edit_copy_or_expose": false
+  },
+  "generated_selection": {
+    "selected_subjects": 16,
+    "selected_subject_ids": [
+      "sub-08",
+      "sub-10",
+      "sub-07",
+      "sub-22",
+      "sub-19",
+      "sub-16",
+      "sub-14",
+      "sub-04",
+      "sub-05",
+      "sub-03",
+      "sub-09",
+      "sub-11",
+      "sub-12",
+      "sub-23",
+      "sub-20",
+      "sub-01"
+    ],
+    "selected_run_bundles": 96,
+    "selected_core_members": 384,
+    "selected_reservation_bytes": 8105207776,
+    "reservation_cap_bytes": 8589934592,
+    "selection_identity_sha256": "dee065bfdb5f8439fe711042eaadbea0dca3d83f8be0d6b7b9d1637e84d9f641",
+    "target_quality_and_outcome_free": true
+  },
+  "mutation_result": {
+    "proof_certificate_required": 32,
+    "proof_certificate_passed": 32,
+    "executor_required": 24,
+    "executor_passed": 24,
+    "total_direct_required": 56,
+    "total_direct_passed": 56,
+    "executor_route_counts": {
+      "MARC2LAR-F00": 5,
+      "MARC2LAR-F01": 8,
+      "MARC2LAR-F02": 5,
+      "MARC2LAR-F03": 1,
+      "MARC2LAR-F04": 1,
+      "MARC2LAR-F05": 2,
+      "MARC2LAR-F06": 2
+    }
+  },
+  "acceptance_gates_required": 10,
+  "acceptance_gates_passed": 10,
+  "measurements": {
+    "generated_input_bytes": 846696,
+    "aggregate_report_bytes": 8083,
+    "private_generated_fixture_bytes": 213780,
+    "combined_output_bytes": 221863,
+    "runtime_seconds": 0.27368504100013524,
+    "peak_RSS_bytes": 37978112,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "producer_is_causal": "not_applicable_metadata_only",
+    "end_to_end_latency_measured": false,
+    "aggregate_report_mode": "0644",
+    "private_generated_fixture_mode": "0600",
+    "aggregate_report_sha256": "cc9fd833b315f2f761a76d2ac511eed7edcb8dea18db06b7b026cc457109ba98",
+    "private_generated_fixture_sha256": "bc84340e1ddb323060cc7ed3d58205d41f49cbaaa117b030e51edb51434fc378",
+    "temporary_output_retained": false
+  },
+  "access_counters": {
+    "registered_private_path_component_checks": 0,
+    "registered_private_final_lstats": 0,
+    "private_manifest_content_opens": 0,
+    "private_manifest_body_reads": 0,
+    "private_manifest_bytes": 0,
+    "private_manifest_hashes": 0,
+    "private_manifest_parses": 0,
+    "real_participant_or_member_selections": 0,
+    "registered_output_root_operations": 0,
+    "consumed_markers": 0,
+    "archive_local_header_or_member_payload_reads": 0,
+    "signal_event_target_label_quality_onset_or_channel_reads": 0,
+    "real_derivative_rows": 0,
+    "training_or_parameter_update_fits": 0,
+    "model_inference_or_prediction_sets": 0,
+    "prediction_freezes_target_deliveries_or_scores": 0,
+    "network_requests_or_bytes": 0,
+    "provider_or_language_model_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "retries_reruns_or_resumes": 0,
+    "operations_on_other_projects": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "verification": {
+    "focused_functional_tests": 32,
+    "focused_implementation_tests": 15,
+    "focused_result_tests": 9,
+    "complete_base_tests": 3452,
+    "complete_base_skips": 204,
+    "optional_A_M_tests": 3010,
+    "optional_A_M_skips": 28,
+    "optional_N_Z_tests": 513,
+    "optional_N_Z_skips": 7,
+    "complete_optional_tests": 3523,
+    "complete_optional_skips": 35,
+    "ruff_compile_registry_JSON_CLI_and_diff_hygiene_passed": true,
+    "remote_CI_pending": true
+  },
+  "warnings": [
+    "The selected subjects runs members and bytes come from generated structural metadata only.",
+    "The generated private fixture is synthetic and was removed after inspection.",
+    "The retained structural manifest remains unopened until this exact executor is remotely green.",
+    "A successful future structural selection still authorizes no archive member or neural payload access."
+  ],
+  "unavailable_fields": [
+    "real private structural selection",
+    "archive member payload",
+    "EEG signal events targets labels channels geometry and quality",
+    "neural features predictions decoding scores and end-to-end latency"
+  ],
+  "disposition": {
+    "generated_qualification_consumed": true,
+    "temporary_output_removed": true,
+    "implementation_remote_green_pending": true,
+    "private_selection_executed": false,
+    "registered_private_execution_limit_after_green": 1,
+    "retry_rerun_or_resume_limit": 0,
+    "archive_member_or_payload_allowed": false,
+    "MARC2_FW2_eligible": false,
+    "next_safe_work": "commit push and require both remote CI jobs green for this exact executor before one registered private structural selection"
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "A proof-gated additive executor now composes the exact LA1 adapter and frozen selector behind one no-follow one-open target-free structural protocol.",
+    "scientific_claim_not_established": "The qualification accessed no human neural signal target prediction or score and establishes no neural effect decoding accuracy language decoding or thought-to-text capability."
+  }
+}

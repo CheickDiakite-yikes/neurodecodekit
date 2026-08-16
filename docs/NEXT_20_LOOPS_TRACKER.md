@@ -2194,7 +2194,7 @@ complete and consumed. Proof closeout `52eabc6` passed Base job `95138912293`,
 Optional job `95138912287`, and CI `31936399968`. No live/private authority
 exists from LA1.
 
-### MARC2-LA2 - Live Adapter Recovery (Decision Recorded; Decision Green Pending)
+### MARC2-LA2 - Live Adapter Recovery (Generated Executor Qualified; Remote Green Pending)
 
 This packet binds exact green LA1, the shared proof validator, the frozen
 selector, consumed FW1C route `MARC2FWC-F02`, and one literal 418,755-byte
@@ -2204,16 +2204,29 @@ no-retry structural read through LA1 and the selector.
 
 The packet commit `f9f24a3` passed Base job `95140483613`, Optional job
 `95140483638`, and CI `31937038394`. After Codex identified it as the sole
-active Tier C gate, the maintainer's next exact message was `continue`. A
-separate decision preserves those eight bytes and binds only the immutable
-green packet. It remains ineffective until its own commit, push, and both
-remote jobs are green.
+active Tier C gate, the maintainer's next exact message was `continue`.
+Decision `b445df2` preserves those eight bytes and passed Base job
+`95142233426`, Optional job `95142233335`, and CI `31937743296` before the
+additive executor was implemented.
 
-Seventeen decision tests pass. The complete dependency-free suite passes
-3,396 tests with 204 skips; fresh optional A-M and N-Z processes pass 2,954
-with 28 skips and 513 with seven skips, respectively, for 3,467
-optional-enabled tests with 35 skips. No executor, private path, output root,
-archive member, neural payload, target, model, score, network operation, or
-claim upgrade occurred. After the decision is remotely green, only generated
-Stage 1 implementation opens. The one-read Stage 2 remains closed until that
-exact executor is separately remotely green.
+The standard-library module has no generic source/output override and no
+consumed-executor import. It binds the exact native registry, a distinct FW1B
+certificate, clean green Git evidence, one no-follow source identity, one
+consumed marker, one content open, one LA1 call, and one selector call. Its
+generated `MARC2LAR-G1` closeout passed 32 proof-certificate and 24 executor
+refusals plus all ten acceptance gates. Canonical/reversed sources replayed 16
+subjects, 96 runs, 384 members, and 8,105,207,776 reserved bytes.
+
+The measured run used 846,696 generated input bytes, 221,863 output bytes,
+0.27368504100013524 seconds, and 37,978,112-byte peak RSS under one
+thread/worker/job. Its 8,083-byte aggregate and mode-0600 private generated
+fixture were inspected, hashed, and removed. Every retained-private, archive,
+payload, neural, target, model, training, score, network, provider, hardware,
+retry, cross-project, and claim counter remained zero.
+
+Thirty-two functional, fifteen implementation, and nine result tests are bound
+to the final local gate. The exact implementation must now be committed,
+pushed, and pass both remote jobs. Until that proof, do not stat, open, hash, or
+parse the retained 418,755-byte manifest. After green proof, exactly one
+structural selection may run without retry; archive members, payloads,
+`MARC2-FW2`, and every scientific operation remain closed.

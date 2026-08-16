@@ -1548,18 +1548,30 @@ Read `docs/MARC_2_LIVE_ADAPTER_RECOVERY_AUTHORIZATION_PACKET.md`, its request,
 registry. Request `f9f24a37d840e3408c19dc00830096f6c24b8e03` passed Base job
 `95140483613`, Optional job `95140483638`, and CI `31937038394` before the
 maintainer supplied the fresh exact word `continue`. The separate decision
-preserves those eight bytes and binds only that immutable packet. It is
-ineffective until its own commit, push, and both required jobs are green.
+preserves those eight bytes and binds only that immutable packet. Decision
+`b445df2ccadc3902d247fa19f5155a006ec5bfe5` passed Base job `95142233426`,
+Optional job `95142233335`, and CI `31937743296` before implementation.
 
-Seventeen decision, 3,396 dependency-free, and 3,467 optional-enabled tests
-pass locally. Before the decision is remotely green, do not implement the
-executor or inspect a private path. After green decision, only generated/mock
-implementation of `marc2_live_schema_adapter_recovery` is eligible. The one
-registered 418,755-byte structural read remains closed until that exact
-executor is independently committed, pushed, and remotely green. Never touch
-either consumed root, archive members, neural data, targets, models, scores,
-network, providers, hardware, FW2, release, or claim work from this decision
-milestone alone.
+Read `docs/MARC_2_LIVE_ADAPTER_RECOVERY_IMPLEMENTATION.md`,
+`registries/marc2_live_adapter_recovery_implementation.v0.json`, the distinct
+`registries/marc2_live_adapter_recovery_proof_certificate.v0.json`, the new
+additive module, and its three tests. Generated `MARC2LAR-G1` passed all 32
+proof-certificate and 24 executor refusals plus ten gates, replaying 16
+subjects, 96 runs, 384 members, and 8,105,207,776 reserved bytes. One measured
+qualification used 846,696 input bytes, 221,863 output bytes,
+0.27368504100013524 seconds, and 37,978,112-byte peak RSS under one thread. Its
+temporary aggregate and private generated fixture were removed. Every real,
+private, archive, payload, neural, target, model, training, score, network,
+provider, hardware, retry, cross-project, and claim counter stayed zero.
+
+The exact executor is not yet remotely green. Commit, push, and require both CI
+jobs green before any operation on the retained path. Only after that proof may
+the executor create one new consumed marker, open and read the exact
+418,755-byte mode-0600 structural manifest once, call LA1 and the selector once,
+and write bounded structural outputs. Never touch either consumed root, open an
+archive member, access neural data or targets, run a model or score, use a
+network/provider/device, retry/rerun, enter `MARC2-FW2`, release, or upgrade a
+claim regardless of the structural route.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

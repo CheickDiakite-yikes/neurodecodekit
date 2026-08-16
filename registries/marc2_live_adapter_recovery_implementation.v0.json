@@ -1,0 +1,350 @@
+{
+  "schema_name": "neurodecodekit.marc2_live_adapter_recovery_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "MARC-2-LA2-live-adapter-recovery-implementation-v0",
+  "lane_id": "MARC2-LA2",
+  "recorded_at_local": "2026-08-16",
+  "status": "generated_mock_live_adapter_recovery_qualified_requires_remote_green_before_private_selection",
+  "green_decision": {
+    "commit": "b445df2ccadc3902d247fa19f5155a006ec5bfe5",
+    "CI_run_id": 31937743296,
+    "base_job_id": 95142233426,
+    "optional_neuro_job_id": 95142233335,
+    "both_required_jobs_green": true,
+    "decision_registry_sha256": "7d4f20f92fe501c97d150f40c9174c4e6d03f52de420a5f6acbea306e7a1313e"
+  },
+  "proof_certificate": {
+    "path": "registries/marc2_live_adapter_recovery_proof_certificate.v0.json",
+    "lane_id": "MARC2-FW1B",
+    "native_registry_lane_id": "MARC2-LA2",
+    "shared_validator_module": "neurodecodekit.datasets.marc2_proof_record_recovery",
+    "shared_validator_symbol": "validate_implementation_record",
+    "sha256_bound_by_green_evidence": true,
+    "certificate_distinct_from_native_registry": true,
+    "certificate_self_hash": false
+  },
+  "tracked_file_hashes": [
+        {
+            "path": "src/neurodecodekit/datasets/marc2_live_schema_adapter_recovery.py",
+            "sha256": "009bf97a46d9977e17ed590c51bf9e2a97377ea38864c65b61a5b2588d1aa2d9"
+        },
+    {
+      "path": "tests/test_marc2_live_adapter_recovery.py",
+      "sha256": "89ea47d0aac50674380032aa9b412562778ce471fccf977d01a181a6a6d84deb"
+    },
+        {
+            "path": "tests/test_marc2_live_adapter_recovery_implementation.py",
+            "sha256": "8e078b2f9e79d9b85e5afea01f0ba0a14be0b3b45aa3dbf3999bee3734d61501"
+        },
+    {
+      "path": "registries/marc2_live_adapter_recovery_authorization_decision.v0.json",
+      "sha256": "7d4f20f92fe501c97d150f40c9174c4e6d03f52de420a5f6acbea306e7a1313e"
+    },
+    {
+      "path": "docs/MARC_2_LIVE_ADAPTER_RECOVERY_AUTHORIZATION_DECISION.md",
+      "sha256": "4311266e265bc97824f21d08bd7bb201f5a16e892f4534d8d4fbae0fa8a48c20"
+    },
+    {
+      "path": "registries/marc2_live_adapter_recovery_authorization_request.v0.json",
+      "sha256": "770b3525c549f7d28cfb278ac7af9d166f6ddcf17a54c4fc1625b9e60c2a2fe0"
+    },
+    {
+      "path": "docs/MARC_2_LIVE_ADAPTER_RECOVERY_AUTHORIZATION_PACKET.md",
+      "sha256": "8df6efb504e54c3d7ca96f0fda982c0c1e3443eb140df1d0babbc3b91fd7cda6"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/marc2_live_schema_adapter.py",
+      "sha256": "adcd345855e4a99794c2435f9e8e592a8818d170f7b8a7fcddc52ba009faba8d"
+    },
+    {
+      "path": "registries/marc2_live_schema_adapter_contract.v0.json",
+      "sha256": "e06fbb1401326d4f788bfdd50162c07bf88652b0c1dc4b11cef46cbec6e41e05"
+    },
+    {
+      "path": "registries/marc2_live_schema_adapter_implementation.v0.json",
+      "sha256": "e793760dae223565de0c6e22bdbcd5f40cf8857f47377b62ecb37119a5186d04"
+    },
+    {
+      "path": "registries/marc2_live_schema_adapter_result.v0.json",
+      "sha256": "8a0e937c34363c1f379f7e171dbd315d9caee683195c974e7a9b197c6e46d6d1"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/marc2_proof_record_recovery.py",
+      "sha256": "c22948ca9047f07908d3768a17caea56b96fa8219ccf0bb9895d766373903a2c"
+    },
+    {
+      "path": "registries/marc2_proof_record_recovery_contract.v0.json",
+      "sha256": "0ec54f915289fd66983696bd28c2eb799c59703d1d5ccebece628f83da8b1e4b"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/marc2_freewill_prefix_selection.py",
+      "sha256": "86fa30fbd1caed735f0fb2e627144482a2bb8e033567bb3794e3f05508005c97"
+    },
+    {
+      "path": "registries/marc2_freewill_prefix_selection_contract.v0.json",
+      "sha256": "dfe614cd7ec27c54c4f03848e3878c714222db043f501b9b07e57c7dc9f5f702"
+    },
+    {
+      "path": "registries/marc2_freewill_prefix_selection_implementation.v0.json",
+      "sha256": "eef9daf1fd647f654563c5f46c390a09001720934b3a6bfdaad0fbdce7727d03"
+    }
+  ],
+  "implementation_surface": {
+    "module": "neurodecodekit.datasets.marc2_live_schema_adapter_recovery",
+    "commands": [
+      "plan",
+      "qualify",
+      "inspect",
+      "execute"
+    ],
+    "execute_requires_exact_remote_green_proof": true,
+    "exact_shared_validator_import_and_call": true,
+    "exact_LA1_adapter_import_and_call": true,
+    "exact_selector_import_and_call": true,
+    "native_and_certificate_lane_ids_are_distinct": true,
+    "standard_library_only": true,
+    "heavy_dependency_imports": 0,
+    "generic_source_or_output_override": false,
+    "consumed_executor_import_call_edit_copy_or_expose": false,
+    "network_client_available": false,
+    "archive_local_header_or_member_reader_available": false,
+    "signal_event_target_label_quality_or_channel_reader_available": false,
+    "model_training_inference_prediction_or_score_interface_available": false
+  },
+  "private_source_binding": {
+    "path": ".codex_work/marc1_central_directory/live_audit_v0/member_inventory.private.v0.json",
+    "bytes": 418755,
+    "mode": "0600",
+    "sha256": "2a2e48b88ee59332a199d926554bb6921222fff92046a0fc9b07cf73fd6c3031",
+    "schema_name": "neurodecodekit.marc1_central_directory_private_manifest",
+    "schema_version": "0.1.0",
+    "entries": 1227,
+    "path_stat_open_hash_or_parse_during_implementation": false
+  },
+  "private_protocol": {
+    "output_root": ".codex_work/marc2_freewill_prefix/live_alias_recovery_v2",
+    "content_opens": 1,
+    "sequential_read_passes": 1,
+    "SHA256_passes": 1,
+    "strict_JSON_parses": 1,
+    "short_reads_supported_without_reopen": true,
+    "consumed_marker_before_private_content_open": true,
+    "aggregate_failure_receipt_after_consumed_marker": true,
+    "retry_rerun_resume_repair_or_fallback_available": false,
+    "network_bytes": 0,
+    "archive_local_header_or_member_bytes": 0,
+    "payload_signal_target_model_or_score_operations": 0
+  },
+  "generated_qualification": {
+    "route": "MARC2LAR-G1",
+    "all_gates_passed": true,
+    "selected_subjects": 16,
+    "selected_subject_ids": [
+      "sub-08",
+      "sub-10",
+      "sub-07",
+      "sub-22",
+      "sub-19",
+      "sub-16",
+      "sub-14",
+      "sub-04",
+      "sub-05",
+      "sub-03",
+      "sub-09",
+      "sub-11",
+      "sub-12",
+      "sub-23",
+      "sub-20",
+      "sub-01"
+    ],
+    "selected_run_bundles": 96,
+    "selected_core_members": 384,
+    "selected_reservation_bytes": 8105207776,
+    "reservation_cap_bytes": 8589934592,
+    "proof_certificate_mutations_passed": 32,
+    "proof_certificate_mutation_order": [
+      "schema_name_missing",
+      "schema_name_wrong",
+      "schema_version_wrong",
+      "lane_id_missing",
+      "lane_id_wrong",
+      "implementation_id_wrong",
+      "status_wrong",
+      "predecessor_commit_wrong",
+      "predecessor_CI_or_job_wrong",
+      "predecessor_result_hash_wrong",
+      "tracked_files_empty",
+      "tracked_path_absolute",
+      "tracked_path_traversal",
+      "tracked_path_duplicate",
+      "tracked_hash_malformed",
+      "tracked_hash_mismatch",
+      "registry_self_binding",
+      "qualification_all_gates_false",
+      "qualification_selector_count_wrong",
+      "qualification_wrapper_count_wrong",
+      "qualification_mutation_order_wrong",
+      "execution_already_consumed",
+      "execution_limit_wrong",
+      "retry_limit_nonzero",
+      "access_counter_nonzero",
+      "private_authority_enabled",
+      "payload_or_MARC2_FW2_authority_enabled",
+      "next_gate_wrong",
+      "claim_boundary_missing",
+      "proof_commit_malformed_or_HEAD_mismatch",
+      "proof_CI_job_or_registry_hash_mismatch",
+      "generated_closure_uses_different_validator"
+    ],
+    "executor_mutations_passed": 24,
+    "total_direct_mutations_passed": 56,
+    "executor_mutation_routes": {
+      "decision_or_packet_hash_mismatch": "MARC2LAR-F00",
+      "proof_certificate_hash_or_lane_mismatch": "MARC2LAR-F00",
+      "native_registry_hash_or_lane_mismatch": "MARC2LAR-F00",
+      "copied_or_aliased_validator_or_adapter": "MARC2LAR-F00",
+      "dirty_HEAD_or_decision_ancestry_mismatch": "MARC2LAR-F00",
+      "output_root_differs": "MARC2LAR-F01",
+      "output_root_exists": "MARC2LAR-F01",
+      "symlink_output_parent_or_destination": "MARC2LAR-F01",
+      "insufficient_free_disk": "MARC2LAR-F01",
+      "thread_load_runtime_or_RSS_preflight_failure": "MARC2LAR-F01",
+      "retained_path_component_symlink": "MARC2LAR-F01",
+      "retained_final_symlink_or_nonregular": "MARC2LAR-F01",
+      "retained_owner_or_mode_mismatch": "MARC2LAR-F01",
+      "retained_size_mismatch": "MARC2LAR-F02",
+      "retained_SHA256_mismatch": "MARC2LAR-F02",
+      "no_follow_open_fstat_identity_race": "MARC2LAR-F02",
+      "strict_JSON_duplicate_control_or_schema_failure": "MARC2LAR-F02",
+      "LA1_validation_or_bridge_refusal": "MARC2LAR-F02",
+      "LA1_source_mutation_alias_or_call_count_failure": "MARC2LAR-F03",
+      "TA1_mapping_transport_or_digest_failure": "MARC2LAR-F04",
+      "selector_eligibility_rank_split_or_cap_refusal": "MARC2LAR-F05",
+      "prefix_determinism_or_selector_call_count_failure": "MARC2LAR-F05",
+      "private_aggregate_schema_or_field_leak": "MARC2LAR-F06",
+      "output_cap_mode_replay_or_forbidden_operation": "MARC2LAR-F06"
+    },
+    "executor_route_counts": {
+      "MARC2LAR-F00": 5,
+      "MARC2LAR-F01": 8,
+      "MARC2LAR-F02": 5,
+      "MARC2LAR-F03": 1,
+      "MARC2LAR-F04": 1,
+      "MARC2LAR-F05": 2,
+      "MARC2LAR-F06": 2
+    },
+    "canonical_shared_validator_calls": 2,
+    "shared_validator_total_calls_with_mutations": 34,
+    "exact_LA1_calls_per_success": 1,
+    "exact_selector_calls_per_success": 1,
+    "canonical_and_reversed_selection_replay": true,
+    "generated_input_bytes": 846696,
+    "combined_output_bytes": 221863,
+    "aggregate_report_bytes": 8083,
+    "private_selection_fixture_bytes": 213780,
+    "aggregate_report_sha256": "cc9fd833b315f2f761a76d2ac511eed7edcb8dea18db06b7b026cc457109ba98",
+    "private_selection_fixture_sha256": "bc84340e1ddb323060cc7ed3d58205d41f49cbaaa117b030e51edb51434fc378",
+    "internal_runtime_seconds": 0.27368504100013524,
+    "reported_peak_RSS_bytes": 37978112,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "end_to_end_latency_measured": false,
+    "producer_is_causal": "not_applicable_metadata_only",
+    "private_real_network_payload_neural_target_model_score_counters_zero": true,
+    "temporary_output_removed": true
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds_per_stage": 30,
+    "peak_RSS_bytes": 268435456,
+    "private_input_opens": 1,
+    "private_input_bytes": 418755,
+    "network_bytes": 0,
+    "archive_local_header_or_member_bytes": 0,
+    "combined_output_bytes": 2097152,
+    "incremental_disk_bytes": 4194304,
+    "minimum_free_disk_bytes": 16106127360,
+    "selected_future_reservation_cap_bytes": 8589934592
+  },
+  "verification": {
+    "focused_functional_tests": 32,
+    "focused_registry_tests": 15,
+    "complete_base_tests": 3452,
+    "complete_base_skips": 204,
+    "complete_optional_tests": 3523,
+    "complete_optional_skips": 35,
+    "optional_A_through_M_tests": 3010,
+    "optional_A_through_M_skips": 28,
+    "optional_N_through_Z_tests": 513,
+    "optional_N_through_Z_skips": 7,
+    "ruff_passed": true,
+    "compile_passed": true,
+    "consumed_failure_receipt_test_passed": true,
+    "remote_CI_pending": true
+  },
+  "execution_state": {
+    "registered_private_execution_consumed": false,
+    "registered_execution_limit": 1,
+    "retry_rerun_or_resume_limit": 0,
+    "private_selection_result_available": false,
+    "MARC2_FW2_eligible": false
+  },
+  "authorization_flags": {
+    "one_private_selection_after_exact_executor_remote_green": true,
+    "private_selection_before_exact_executor_remote_green": false,
+    "consumed_executor_import_call_reuse_or_output_access": false,
+    "archive_local_header_member_or_payload": false,
+    "signal_event_target_quality_or_channel": false,
+    "derivative_cache_feature_split_or_neurotoken": false,
+    "training_inference_prediction_freeze_delivery_or_score": false,
+    "MARC2_FW2_CIL1_ORTH1_or_NDK_LANG1": false,
+    "network_download_provider_language_model_stream_device_or_hardware": false,
+    "retry_rerun_resume_substitution_fallback_or_amendment": false,
+    "release_publication_or_scientific_claim_upgrade": false
+  },
+  "implementation_access_counters": {
+    "registered_private_path_component_checks": 0,
+    "registered_private_final_lstats": 0,
+    "private_manifest_content_opens": 0,
+    "private_manifest_body_reads": 0,
+    "private_manifest_bytes": 0,
+    "private_manifest_hashes": 0,
+    "private_manifest_parses": 0,
+    "live_adapter_calls_over_private_data": 0,
+    "selector_calls_over_private_data": 0,
+    "real_participant_selections": 0,
+    "real_member_selections": 0,
+    "registered_output_root_operations": 0,
+    "consumed_markers": 0,
+    "private_selection_manifests": 0,
+    "aggregate_reports": 0,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "archive_local_header_or_member_payload_reads": 0,
+    "signal_sample_reads": 0,
+    "event_target_label_quality_onset_or_channel_reads": 0,
+    "real_derivative_rows": 0,
+    "training_or_parameter_update_fits": 0,
+    "model_inference_or_prediction_sets": 0,
+    "prediction_freezes_target_deliveries_or_scores": 0,
+    "provider_or_language_model_calls": 0,
+    "hardware_operations": 0,
+    "retries_reruns_or_resumes": 0,
+    "scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "next_gate": {
+    "commit_push_and_remote_green_exact_executor_required": true,
+    "one_registered_private_selection_after_green_executor": true,
+    "inspect_aggregate_result_only": true,
+    "archive_member_or_payload_access_after_success": false,
+    "MARC2_FW2_requires_new_all_false_packet_and_Tier_C_decision": true
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "A proof-gated additive LA2 executor composes exact LA1 and selector functions before one target-free structural selection.",
+    "scientific_claim_not_established": "The generated qualification reads no human neural signal target prediction or score and establishes no neural effect decoding accuracy language decoding or thought-to-text capability."
+  }
+}

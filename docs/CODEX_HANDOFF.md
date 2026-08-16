@@ -4679,3 +4679,34 @@ After green decision, implement and qualify only the new additive generated/
 mock executor. Commit, push, and require both jobs green for that exact code
 before the one registered no-retry structural read. Even successful structural
 selection stops before archive payloads and `MARC2-FW2`.
+
+## 2026-08-16 MARC2-LA2 Generated Executor Handoff
+
+Decision `b445df2ccadc3902d247fa19f5155a006ec5bfe5` passed Base job
+`95142233426`, Optional job `95142233335`, and CI `31937743296` before the
+additive executor was implemented. Read the LA2 implementation document,
+native registry, distinct FW1B certificate, module, and three matching tests.
+
+The module uses only the standard library and exact public symbols from the
+shared proof validator, LA1 adapter, and frozen selector. It does not import,
+call, copy, edit, or expose either consumed executor or root. Its real command
+has no generic path override and requires exact green implementation evidence,
+clean Git ancestry, one-thread machine gates, one new v2 root, a consumed
+marker before content access, no-follow source identity, one content open, one
+LA1 call, and one selector call.
+
+Generated `MARC2LAR-G1` passed all 32 proof-certificate mutations, all 24
+executor mutations, and all ten acceptance gates. Canonical/reversed fixtures
+replayed 16 subjects, 96 run bundles, 384 members, and 8,105,207,776 reserved
+bytes. One measured qualification used 846,696 generated input bytes, 221,863
+output bytes, 0.27368504100013524 seconds, and 37,978,112-byte peak RSS. The
+temporary outputs were inspected, hashed, and removed; every private, archive,
+payload, neural, target, model, score, network, retry, cross-project, and claim
+counter remained zero.
+
+Immediate gate: commit, push, and obtain both green CI jobs for this exact
+executor. Before that proof, do not stat, resolve, list, open, hash, or parse the
+retained 418,755-byte manifest and do not create the registered v2 root. After
+green proof, one and only one no-retry structural selection is open. Regardless
+of route, stop before archive members, payloads, signals, targets, models,
+scores, network, `MARC2-FW2`, release, or claim work.
