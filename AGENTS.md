@@ -1720,6 +1720,23 @@ remains ineligible. The next safe work is a separately named machine-stable
 structural recovery plus target-free FW2 architecture research; any new
 private pass remains a fresh Tier C gate.
 
+Read `docs/MARC_2_MACHINE_STABLE_COHORT_AND_NEURAL_CONTROL_RESEARCH.md` and
+`registries/marc2_machine_stable_cohort_and_neural_control_research.v0.json`.
+VR3 result commit `a186486fcb3dfb2b6d3a743f180b7ac2fa0b4dd3` passed Base
+Python job `95208692240`, Optional Neuro Readers job `95208692213`, and CI
+`31964995980` before this Tier A architecture record. The prospective sequence
+is `MARC2-VR4 -> MARC2-FW2 -> MARC2-CIL1`. VR4 separates a reversible,
+diagnostic, up-to-600-second machine wait from the marker that begins the one
+irreversible private pass. FW2 remains selected-member range acquisition and
+semantic qualification under a 10 GiB ceiling; CIL1 is the actual neural
+experiment. Its required anchors are `P+E` signal, target-independent
+`P+D(E)` derangement, `B1` timing, and `B0` no-signal, with continuous held-out
+target-blind probabilities and one post-freeze onset/target delivery. Candidate
+effect thresholds are not yet preregistered. Every new authority flag and real
+operation counter is zero. After this research is remotely green, freeze a
+generated-only VR4 contract; do not access a private path, payload, target,
+model, or score from the research record.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

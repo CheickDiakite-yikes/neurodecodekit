@@ -195,7 +195,16 @@
    output, cohort, payload, model, and score counters are zero. The exact failed
    load/disk/RSS predicate was not emitted and must not be inferred. VR3 has no
    retry or rerun, no real cohort exists, and FW2 remains ineligible pending a
-   separately named structural recovery and fresh Tier C decision.
+   separately named structural recovery and fresh Tier C decision. Result
+   commit `a186486` passed Base job `95208692240`, Optional job `95208692213`,
+   and CI `31964995980`. Then read
+   `docs/MARC_2_MACHINE_STABLE_COHORT_AND_NEURAL_CONTROL_RESEARCH.md` and its
+   registry. The prospective order is VR4 machine-stable cohort freeze, FW2
+   bounded member/semantic qualification, then CIL1 target-firewalled neural
+   controls. Signal, target-independent derangement, timing, and no-signal are
+   explicit, but candidate effect thresholds are not preregistered and every
+   private, payload, training, target, scoring, and claim authority remains
+   false.
    Then
    read `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked

@@ -9759,6 +9759,38 @@ Scientific claim not established: this registration contains no neural
 payload, target, prediction, or score and establishes no neural effect,
 decoding accuracy, language decoding, or thought-to-text capability.
 
+## 2026-08-16 - MARC2 Machine-Stable Cohort And Neural-Control Research
+
+- Bound green VR3 result commit `a186486fcb3dfb2b6d3a743f180b7ac2fa0b4dd3`,
+  Base Python job `95208692240`, Optional Neuro Readers job `95208692213`, and
+  CI `31964995980` without reopening its consumed lane.
+- Specified `MARC2-VR4 -> MARC2-FW2 -> MARC2-CIL1` as the ordered path. VR4
+  makes transient machine readiness reversible and diagnostic and moves the
+  irreversible boundary to the marker immediately before one private open.
+- Preserved the exact 418,755-byte source, 1,227 rows, 238 bundles, dynamic
+  `195 + 43`, VR2 adapter, one-thread, privacy, and no-payload invariants.
+- Bounded FW2 to selected-member range streaming under 10 GiB network and peak
+  disk, with whole-archive download forbidden and exact compressed,
+  uncompressed, CRC, SHA-256, clock, role, and session bindings required.
+- Defined CIL1's matched anchors as `P+E` signal, target-independent
+  no-fixed-point `P+D(E)` derangement, `B1` timing, and `B0` no-signal. Held-out
+  models emit continuous target-blind probabilities before one post-freeze
+  onset/target delivery to an isolated scorer.
+- Kept causal 0.5-4 Hz linear decoding primary and one causal mu/beta family
+  secondary. Candidate effect thresholds are documented but explicitly not
+  preregistered until real cohort and semantic counts exist.
+- Fourteen focused research tests pass. Every private, payload, derivative,
+  model, prediction, target, score, provider, hardware, release, and claim
+  authority flag is false and every access counter is zero.
+
+Engineering capability specified: machine readiness and one-shot evidence
+consumption now have separate prospective boundaries, followed by a compact
+target-firewalled control ladder.
+
+Scientific claim not established: architecture research contains no neural
+payload, target, prediction, or score and establishes no neural effect or
+decoding result.
+
 ## 2026-08-16 - MARC2-VR3 Consumed Machine-Preflight Result
 
 - Exact implementation `24678760106b6a5a9ea035c14f628ec909755e61` passed

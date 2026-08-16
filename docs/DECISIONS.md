@@ -8471,3 +8471,33 @@ Evidence:
 `docs/MARC_2_VARIABLE_DOMAIN_PRIVATE_RECOVERY_RESULT.md`,
 `registries/marc2_variable_domain_private_recovery_failure_result.v0.json`,
 and its focused result test.
+
+## 0259 - Separate Machine Readiness From Scientific Consumption
+
+Architecture decision: use `MARC2-VR4 -> MARC2-FW2 -> MARC2-CIL1`. Treat
+machine-only load, RSS, disk, and thread checks as reversible readiness, not as
+private data access or scientific evidence. Begin irreversible consumption only
+at the marker immediately before one private content open. Require exact safe
+measurements and a specific refusal reason rather than another opaque aggregate
+machine route.
+
+Acquisition decision: after a real cohort hash is remotely green, permit only a
+future exact selected-member range design under 10 GiB network and peak-disk
+ceilings. Keep whole-archive download forbidden. Freeze member identity,
+compressed/uncompressed totals, CRC, SHA-256, roles, clocks, sessions, generic
+cues, reviewed onsets, and target cardinality before neural inference.
+
+Scientific design decision: use causal 0.5-4 Hz linear features as primary and
+one causal mu/beta family as multiplicity-controlled secondary. Require matched
+`P+E` signal, target-independent `P+D(E)` derangement, `B1` timing, and `B0`
+no-signal conditions. Freeze continuous held-out target-blind predictions
+before one isolated onset/target delivery and participant-level score.
+
+Boundary decision: candidate effect thresholds remain research values, not a
+preregistration. The record grants no private, archive, neural, target, model,
+prediction, scoring, provider, hardware, release, or claim authority.
+
+Evidence:
+`docs/MARC_2_MACHINE_STABLE_COHORT_AND_NEURAL_CONTROL_RESEARCH.md`,
+`registries/marc2_machine_stable_cohort_and_neural_control_research.v0.json`,
+and its focused research test.

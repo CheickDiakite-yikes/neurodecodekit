@@ -15,6 +15,13 @@
 > through a fresh Tier C decision. Never touch consumed roots or the unrelated
 > tracker inspection NDJSON.
 
+> Current design gate: read
+> `docs/MARC_2_MACHINE_STABLE_COHORT_AND_NEURAL_CONTROL_RESEARCH.md` and its
+> registry. The prospective order is VR4 reversible machine readiness plus one
+> structural open, FW2 selected-member acquisition/semantics under 10 GiB, then
+> CIL1 signal/derangement/timing/no-signal inference. This record is Tier A
+> research only; it authorizes none of those operations.
+
 > Additive foundation-model decision, 2026-08-06: read
 > `docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md` and
 > `registries/foundation_model_decoder_strategy.v0.json`. The intended product
@@ -5056,3 +5063,32 @@ safe work is Tier A design for a separately named machine-stable cohort freeze
 and target-free FW2 architecture research. Any new private read requires a new
 all-false request, fresh packet-bound maintainer decision, exact implementation
 proof, and one new registered execution.
+
+## 2026-08-16 MARC2 Machine-Stable Neural-Control Research Handoff
+
+VR3 result `a186486fcb3dfb2b6d3a743f180b7ac2fa0b4dd3` passed Base Python
+job `95208692240`, Optional Neuro Readers job `95208692213`, and CI
+`31964995980`. Read the machine-stable cohort and neural-control research doc,
+registry, and test before preparing another contract.
+
+The prospective order is strict. VR4 separates up to 600 seconds of reversible
+machine-only readiness polling from the marker that begins the single private
+open. It preserves the 418,755-byte source, full `238 -> 195 + 43` validation,
+VR2 selection, one thread, and zero payload boundary. FW2 follows only after a
+real cohort hash is green and may stream selected archive members under a 10
+GiB ceiling; whole-archive download remains forbidden. CIL1 follows only after
+semantic qualification.
+
+CIL1's primary family is causal 0.5-4 Hz linear decoding; causal mu/beta is one
+multiplicity-controlled secondary. Its matched anchors are `P+E` signal,
+target-independent no-fixed-point `P+D(E)` derangement, `B1` timing, and `B0`
+no-signal. Session-2 models emit continuous target-blind probability streams.
+The isolated scorer receives held-out onsets and targets once, only after the
+aggregate prediction freeze is committed and remotely green. Candidate effect
+thresholds remain unregistered until the actual cohort and semantic counts are
+known.
+
+Immediate gate: commit and remotely qualify the Tier A research record, then
+freeze a generated-only VR4 contract. Do not implement a private executor,
+request a member, read signal or targets, train, predict, score, or infer a
+scientific result from this research milestone.

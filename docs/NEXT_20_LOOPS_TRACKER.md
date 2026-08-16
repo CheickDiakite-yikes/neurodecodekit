@@ -2420,3 +2420,39 @@ separately named machine-stable structural recovery, followed only after a
 successful freeze by the bounded FW2 preregistration and its separate all-false
 Tier C request. FW2 payload, training, prediction freeze, target opening,
 score, and scientific claim surfaces remain closed.
+
+### MARC2-VR4 / FW2 / CIL1 - Machine-Stable Neural-Control Path (Research)
+
+VR3 result commit `a186486fcb3dfb2b6d3a743f180b7ac2fa0b4dd3` passed Base
+Python job `95208692240`, Optional Neuro Readers job `95208692213`, and CI
+`31964995980`. The replacement architecture keeps the same hypothesis and
+changes the consumption boundary.
+
+VR4 makes machine readiness reversible and diagnostic: it may wait up to 600
+seconds, sample no faster than every five seconds, require three consecutive
+passing values, and emit the exact safe load/RSS/disk measurement. No output
+root or private path is touched until readiness passes. The one irreversible
+pass begins at the mode-0600 marker immediately before one private content
+open. All source, dynamic `195 + 43`, selector, one-thread, storage, and privacy
+invariants remain unchanged.
+
+After a real cohort freeze, FW2 may bind and stream only selected member ranges
+under 10 GiB network and peak-disk ceilings; whole-archive materialization stays
+forbidden. Semantic qualification must freeze channel roles, clocks, generic
+cues, reviewed movement onsets, and target cardinality before a neural
+preregistration.
+
+CIL1 then tests within-person session-2 held-out four-choice prediction with a
+primary causal 0.5-4 Hz linear family and one causal mu/beta secondary. The
+required matched anchors are `P+E` signal, target-independent no-fixed-point
+`P+D(E)` derangement, `B1` timing, and `B0` no-signal. Models emit continuous
+target-blind probabilities; held-out onsets and targets open once only after a
+remotely green aggregate prediction freeze. Participant-macro conditional log
+loss is primary. Candidate thresholds remain explicitly unregistered until the
+real cohort and semantic counts exist.
+
+Current status: Tier A architecture research only. All private, payload,
+derivative, training, prediction, target, scoring, provider, hardware, release,
+and claim flags are false and counters are zero. Next: remotely qualify this
+research, freeze a generated-only VR4 contract, and do not enter FW2 or CIL1
+until the preceding real gates pass.

@@ -155,7 +155,14 @@
   "verification": {
     "focused_failure_result_tests": 10,
     "ruff_compile_registry_JSON_and_diff_hygiene_passed": true,
-    "remote_CI_pending": true
+    "remote_CI_pending": false,
+    "remote_proof": {
+      "commit": "a186486fcb3dfb2b6d3a743f180b7ac2fa0b4dd3",
+      "CI_run_id": 31964995980,
+      "base_python_job_id": 95208692240,
+      "optional_neuro_job_id": 95208692213,
+      "both_required_jobs_green": true
+    }
   },
   "warnings": [
     "The one registered invocation is consumed with no retry, rerun, or resume.",

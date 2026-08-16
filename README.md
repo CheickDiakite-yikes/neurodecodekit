@@ -1812,6 +1812,17 @@ Read this before interpreting any number in the repository.
   emitted and is unavailable; the lane has no retry or rerun. No real cohort
   was frozen, so FW2 remains ineligible. This is a safety result, not neural or
   decoding evidence.
+- **MARC2 machine-stable recovery and neural-control architecture:** VR3 result
+  commit `a186486` passed Base Python job `95208692240`, Optional Neuro Readers
+  job `95208692213`, and CI `31964995980`. The next design separates reversible
+  machine readiness from the marker that begins a one-shot private pass, so a
+  transient load timeout is diagnostic rather than a consumed scientific
+  attempt. After a real cohort freeze, FW2 may stream only selected archive
+  members under a 10 GiB cap; CIL1 then tests `P+E` signal against
+  target-independent `P+D(E)` derangement, `B1` timing, and `B0` no-signal.
+  Held-out models emit continuous target-blind probabilities before one frozen
+  onset/target score. This is architecture research, not a preregistration,
+  payload authorization, model result, or neural claim.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
