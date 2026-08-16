@@ -220,6 +220,14 @@
    pushed, and both remote jobs green before one machine-only readiness
    closeout. The future private open remains a separate Tier C gate; a real
    cohort, FW2, CIL1, training, targets, scoring, and claims remain closed.
+   Exact implementation `9fdda31` then passed Base job `95213934048`, Optional
+   job `95213934126`, and CI `31967145837`. Read
+   `docs/MARC_2_MACHINE_READINESS_RESULT.md` and its result registry. One
+   machine-only closeout passed three samples and wrote a 4,551-byte mode-0600
+   certificate while every private and scientific counter remained zero. The
+   certificate is transient, no real cohort identity exists, and FW2/CIL1 are
+   still ineligible. The result must become remotely green before one separate
+   all-false Tier C structural packet is prepared.
    Then
    read `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked

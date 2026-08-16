@@ -8550,3 +8550,28 @@ Evidence:
 `docs/MARC_2_MACHINE_STABLE_STRUCTURAL_RECOVERY_IMPLEMENTATION.md`,
 `registries/marc2_machine_stable_structural_recovery_implementation.v0.json`,
 the dependency-free module, and its two focused implementation tests.
+
+## 0262 - Close Machine Readiness Without Advancing The Evidence Boundary
+
+Execution decision: after exact implementation `9fdda31` passed both required
+jobs in CI `31967145837`, run one fixed `readiness` command under the all-one
+thread environment. Record all three exact load, RSS, disk, and timing samples
+and one fixed certificate identity.
+
+Result decision: accept `MARC2RDY-G1`. Three consecutive samples passed, the
+maximum normalized load was `0.5420735677083334`, peak RSS was 18,055,168
+bytes, and minimum free disk was 158,861,668,352 bytes. The mode-0600
+certificate is 4,551 bytes with SHA-256
+`5c268ffaefe6e557ace92214c6ec3bab6db29d0a89dee4c83ebd94dbf07b522e`.
+
+Boundary decision: machine readiness is engineering evidence only. Record zero
+private path operations, content opens, archive reads, neural samples, target
+operations, derivatives, model fits, predictions, freezes, deliveries, and
+scores. The transient certificate grants no later private authority. Require a
+separate all-false Tier C structural packet and fresh packet-bound decision,
+including exact safe handling of the expired certificate, before one private
+content open. Keep FW2 and CIL1 ineligible.
+
+Evidence: `docs/MARC_2_MACHINE_READINESS_RESULT.md`,
+`registries/marc2_machine_readiness_result.v0.json`, and its focused result
+test.

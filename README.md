@@ -1843,6 +1843,16 @@ Read this before interpreting any number in the repository.
   private, neural, target, model, score, and claim counters at zero. This exact
   implementation still needs its commit and both remote jobs green before one
   machine-only readiness closeout. It has not frozen a real cohort or run FW2.
+- **MARC2-VR4 real machine-readiness result:** exact implementation `9fdda31`
+  passed Base job `95213934048`, Optional job `95213934126`, and CI
+  `31967145837` before one machine-only invocation. Three samples passed with
+  normalized loads `0.5421`, `0.5253`, and `0.4833`, 18,055,168-byte peak RSS,
+  and at least 158.86 GB free disk. The command wrote one 4,551-byte mode-0600
+  certificate and performed zero private path checks, content opens, archive
+  reads, neural sample reads, target operations, model runs, predictions, or
+  scores. This proves the bounded readiness mechanism works on the current
+  machine. It did not inspect or freeze a cohort, and its expiring certificate
+  is not authority for a later private executor; FW2 and CIL1 remain closed.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

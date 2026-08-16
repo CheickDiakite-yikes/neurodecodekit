@@ -1,0 +1,171 @@
+{
+  "schema_name": "neurodecodekit.marc2_machine_readiness_result",
+  "schema_version": "0.1.0",
+  "result_id": "MARC-2-VR4-machine-readiness-result-v0",
+  "lane_id": "MARC2-VR4",
+  "recorded_at_local": "2026-08-16",
+  "status": "machine_only_closeout_complete_transient_certificate_no_private_authority",
+  "route": "MARC2RDY-G1",
+  "green_implementation_proof": {
+    "commit": "9fdda316441fef4f245544c90dc0a373993140e0",
+    "CI_run_id": 31967145837,
+    "base_python_job_id": 95213934048,
+    "optional_neuro_job_id": 95213934126,
+    "both_required_jobs_green": true
+  },
+  "green_registration_proof": {
+    "commit": "3af2e3d654b91c13aefce76e74b38ae19b2a3d6f",
+    "CI_run_id": 31965823863,
+    "base_python_job_id": 95210732393,
+    "optional_neuro_job_id": 95210732329,
+    "both_required_jobs_green": true,
+    "contract_sha256": "93d63b273809f05608aaa18f9a52611d6073110e74b3c62ae5cf08d756b6b191"
+  },
+  "invocation": {
+    "command": "python -m neurodecodekit.datasets.marc2_machine_readiness readiness",
+    "registered_invocations": 1,
+    "retries": 0,
+    "reruns": 0,
+    "resumes": 0,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    }
+  },
+  "certificate": {
+    "path": ".codex_work/marc2_machine_readiness/vr4/readiness.v0.json",
+    "mode": "0600",
+    "bytes": 4551,
+    "sha256": "5c268ffaefe6e557ace92214c6ec3bab6db29d0a89dee4c83ebd94dbf07b522e",
+    "implementation_commit": "9fdda316441fef4f245544c90dc0a373993140e0",
+    "contract_sha256": "93d63b273809f05608aaa18f9a52611d6073110e74b3c62ae5cf08d756b6b191",
+    "started_at_UTC": "2026-08-16T19:20:51.919303Z",
+    "finished_at_UTC": "2026-08-16T19:21:01.928507Z",
+    "expires_at_UTC": "2026-08-16T19:26:01.928507Z",
+    "ready_at_closeout": true,
+    "transient_not_future_private_authority": true
+  },
+  "thresholds": {
+    "normalized_one_minute_load_maximum": 1.0,
+    "process_peak_RSS_bytes_maximum_exclusive": 268435456,
+    "free_disk_bytes_minimum": 16106127360,
+    "consecutive_passing_samples": 3,
+    "minimum_sample_interval_seconds": 5,
+    "maximum_wait_seconds": 600,
+    "maximum_samples": 121,
+    "certificate_validity_seconds": 300
+  },
+  "samples": [
+    {
+      "sequence": 1,
+      "observed_at_UTC": "2026-08-16T19:20:51.919303Z",
+      "logical_CPUs": 12,
+      "one_minute_load": 6.5048828125,
+      "normalized_one_minute_load": 0.5420735677083334,
+      "process_peak_RSS_bytes": 18055168,
+      "free_disk_bytes": 158862835712,
+      "passing": true,
+      "refusal_reasons": []
+    },
+    {
+      "sequence": 2,
+      "observed_at_UTC": "2026-08-16T19:20:56.924653Z",
+      "logical_CPUs": 12,
+      "one_minute_load": 6.30419921875,
+      "normalized_one_minute_load": 0.5253499348958334,
+      "process_peak_RSS_bytes": 18055168,
+      "free_disk_bytes": 158862741504,
+      "passing": true,
+      "refusal_reasons": []
+    },
+    {
+      "sequence": 3,
+      "observed_at_UTC": "2026-08-16T19:21:01.928507Z",
+      "logical_CPUs": 12,
+      "one_minute_load": 5.79931640625,
+      "normalized_one_minute_load": 0.4832763671875,
+      "process_peak_RSS_bytes": 18055168,
+      "free_disk_bytes": 158861668352,
+      "passing": true,
+      "refusal_reasons": []
+    }
+  ],
+  "measurements": {
+    "sample_count": 3,
+    "consecutive_passing_tail": 3,
+    "sampling_wait_seconds": 10.009114207990933,
+    "process_peak_RSS_bytes": 18055168,
+    "minimum_free_disk_bytes_observed": 158861668352,
+    "maximum_normalized_one_minute_load_observed": 0.5420735677083334,
+    "certificate_output_bytes": 4551,
+    "incremental_disk_bytes": 4551,
+    "private_input_bytes": 0,
+    "network_bytes": 0,
+    "end_to_end_command_runtime_seconds": null
+  },
+  "acceptance_gates": {
+    "exact_implementation_remotely_green_before_invocation": true,
+    "all_thread_variables_one": true,
+    "three_consecutive_samples_passed": true,
+    "sample_intervals_passed": true,
+    "normalized_load_passed": true,
+    "peak_RSS_passed": true,
+    "free_disk_passed": true,
+    "certificate_identity_mode_size_and_hash_passed": true,
+    "private_and_scientific_counters_zero": true
+  },
+  "access_counters": {
+    "machine_readiness_checks": 3,
+    "readiness_certificates": 1,
+    "private_path_operations": 0,
+    "private_content_opens": 0,
+    "private_input_bytes": 0,
+    "private_output_root_operations": 0,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "archive_member_reads": 0,
+    "signal_sample_reads": 0,
+    "event_target_label_onset_channel_or_geometry_reads": 0,
+    "real_derivative_rows": 0,
+    "training_or_parameter_update_fits": 0,
+    "model_inference_or_prediction_sets": 0,
+    "prediction_freezes_target_deliveries_or_scores": 0,
+    "provider_or_language_model_calls": 0,
+    "hardware_operations": 0,
+    "scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "warnings": [
+    "The readiness certificate is transient machine state and grants no private-data authority.",
+    "No real cohort identity exists.",
+    "FW2 and CIL1 remain ineligible.",
+    "A later packet must bind safe handling of this exact expired certificate before requesting a fresh certificate."
+  ],
+  "unavailable_fields": [
+    "end_to_end_command_runtime_seconds",
+    "private_source_path",
+    "cohort_identity",
+    "archive_member_identity",
+    "neural_payload",
+    "event_or_target",
+    "model_or_prediction",
+    "scientific_score"
+  ],
+  "next_gate": {
+    "result_commit_push_and_both_jobs_green_required": true,
+    "separate_all_false_Tier_C_structural_packet_after_green": true,
+    "fresh_packet_bound_maintainer_decision_required": true,
+    "fresh_readiness_certificate_required_for_private_executor": true,
+    "safe_exact_expired_certificate_handling_must_be_bound": true,
+    "private_structural_pass_authorized": false,
+    "real_cohort_identity_available": false,
+    "FW2_or_CIL1_eligible": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "The exact VR4 implementation produced a deterministic bounded expiring machine-readiness certificate after three stable real machine samples.",
+    "scientific_claim_not_established": "No neural payload target prediction or score was accessed so this result establishes no neural effect or decoding performance."
+  }
+}

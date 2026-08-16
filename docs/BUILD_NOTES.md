@@ -9759,6 +9759,37 @@ Scientific claim not established: this registration contains no neural
 payload, target, prediction, or score and establishes no neural effect,
 decoding accuracy, language decoding, or thought-to-text capability.
 
+## 2026-08-16 - MARC2-VR4 Machine-Readiness Result
+
+- Exact implementation `9fdda316441fef4f245544c90dc0a373993140e0`
+  passed Base Python job `95213934048`, Optional Neuro Readers job
+  `95213934126`, and CI `31967145837` before the one machine-only invocation.
+- Three samples passed over 10.009114208 seconds. Normalized load declined from
+  `0.5420735677083334` through `0.5253499348958334` to `0.4832763671875`;
+  process peak RSS was 18,055,168 bytes; minimum free disk was
+  158,861,668,352 bytes.
+- The command wrote one fixed mode-0600, 4,551-byte certificate with SHA-256
+  `5c268ffaefe6e557ace92214c6ec3bab6db29d0a89dee4c83ebd94dbf07b522e`.
+  The certificate is transient and grants no future private authority.
+- Every private path/content/output-root, network, archive, signal, event,
+  target, derivative, model, prediction, freeze, score, provider, hardware,
+  other-project, and claim counter is zero. No structural selector ran and no
+  cohort identity exists.
+- Seven focused result tests pass. The result still requires commit, push, and
+  both remote jobs green before an all-false Tier C structural packet may be
+  prepared.
+- The future packet must explicitly bind safe handling of this exact expired
+  readiness artifact before requesting a fresh certificate. It must not widen
+  cleanup to another file, project, or consumed root.
+
+Engineering capability added: the exact VR4 implementation produced a
+deterministic, bounded, expiring machine-readiness certificate after three
+stable real machine samples.
+
+Scientific claim not established: no neural payload, target, prediction, or
+score was accessed, so this result establishes no neural effect or decoding
+performance.
+
 ## 2026-08-16 - MARC2-VR4 Machine-Readiness Implementation
 
 - Registration `3af2e3d654b91c13aefce76e74b38ae19b2a3d6f` passed Base

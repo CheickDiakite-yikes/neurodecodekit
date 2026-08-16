@@ -5154,3 +5154,29 @@ structural executor from this milestone. A successful machine certificate is
 not a cohort freeze; the later private pass requires a separate all-false Tier
 C packet and fresh packet-bound maintainer decision. FW2 training, prediction
 freezing, target delivery, scoring, and scientific claims remain closed.
+
+## 2026-08-16 MARC2-VR4 Machine-Readiness Result Handoff
+
+Exact implementation `9fdda316441fef4f245544c90dc0a373993140e0`
+passed Base Python job `95213934048`, Optional Neuro Readers job
+`95213934126`, and CI `31967145837` before one fixed machine-only invocation.
+
+The invocation passed `MARC2RDY-G1` after three samples over 10.009114208
+seconds. Normalized loads were `0.5420735677083334`, `0.5253499348958334`, and
+`0.4832763671875`; peak RSS was 18,055,168 bytes; minimum free disk was
+158,861,668,352 bytes. The fixed certificate is mode 0600, 4,551 bytes, and
+SHA-256 `5c268ffaefe6e557ace92214c6ec3bab6db29d0a89dee4c83ebd94dbf07b522e`.
+
+All private path, content, archive, signal, event, target, derivative, model,
+prediction, freeze, delivery, score, network, provider, hardware,
+other-project, and claim counters are zero. No cohort identity exists. The
+certificate is transient and cannot be reused as future private authority.
+
+Immediate gate: commit, push, and obtain both green jobs for the result. Then
+prepare one separate all-false Tier C structural packet. It must bind safe
+handling of this exact expired certificate before one fresh readiness command,
+then preserve the irreversible marker immediately before one private content
+open. Do not use the current or any earlier `continue` retroactively. Do not
+access a private path, archive member, neural payload, target, model,
+prediction, or score until its later packet is green and receives a fresh
+packet-bound maintainer decision.

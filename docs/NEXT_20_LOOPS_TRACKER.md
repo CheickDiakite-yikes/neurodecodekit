@@ -2478,3 +2478,13 @@ implementation, then run one machine-only readiness closeout. Do not prepare
 or run the private structural pass until that closeout is remotely green and a
 separate all-false Tier C packet receives a fresh decision. FW2 and CIL1 remain
 ineligible until a real cohort identity exists.
+
+Exact implementation `9fdda31` passed Base job `95213934048`, Optional job
+`95213934126`, and CI `31967145837` before one machine-only closeout. All three
+samples passed at normalized load at most `0.542074`, peak RSS 18,055,168
+bytes, and free disk at least 158,861,668,352 bytes. The resulting mode-0600
+certificate is 4,551 bytes; all private, archive, neural, target, model,
+prediction, score, network, and claim counters are zero. Current gate: commit
+and remotely qualify this result, then prepare one separate all-false Tier C
+structural packet. The certificate is transient and must not be reused as
+future private authority. Real cohort, FW2, and CIL1 remain incomplete.

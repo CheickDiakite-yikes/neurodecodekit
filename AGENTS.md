@@ -1751,6 +1751,23 @@ pushed, and both jobs green before one measured machine-only readiness
 closeout. Do not run `readiness` before that proof. Private access, FW2, CIL1,
 training, targets, scoring, and claims remain false.
 
+Exact implementation `9fdda316441fef4f245544c90dc0a373993140e0`
+passed Base Python job `95213934048`, Optional Neuro Readers job
+`95213934126`, and CI `31967145837` before one machine-only closeout. Read
+`docs/MARC_2_MACHINE_READINESS_RESULT.md` and
+`registries/marc2_machine_readiness_result.v0.json`. Three samples passed at
+normalized loads `0.542074`, `0.525350`, and `0.483276`, 18,055,168-byte peak
+RSS, and at least 158,861,668,352 free bytes. The mode-0600 certificate is
+4,551 bytes with SHA-256
+`5c268ffaefe6e557ace92214c6ec3bab6db29d0a89dee4c83ebd94dbf07b522e`.
+Every private, archive, neural, target, model, prediction, score, network, and
+claim counter is zero. The certificate is transient and cannot authorize a
+later private executor. After this result is committed, pushed, and both jobs
+green, prepare one separate all-false Tier C structural packet that explicitly
+binds safe handling of the exact expired readiness artifact and requires a
+fresh certificate. Do not access a private path, freeze a cohort, enter FW2 or
+CIL1, train, predict, open targets, or score from this result.
+
 Read `docs/MARC_2_MACHINE_STABLE_COHORT_AND_NEURAL_CONTROL_RESEARCH.md` and
 `registries/marc2_machine_stable_cohort_and_neural_control_research.v0.json`.
 VR3 result commit `a186486fcb3dfb2b6d3a743f180b7ac2fa0b4dd3` passed Base
