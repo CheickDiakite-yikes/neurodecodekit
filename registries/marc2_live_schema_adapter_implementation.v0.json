@@ -4,7 +4,7 @@
   "implementation_id": "MARC-2-generated-live-schema-adapter-composition-implementation-v0",
   "lane_id": "MARC2-LA1",
   "recorded_at_local": "2026-08-16",
-  "status": "generated_implementation_and_qualification_complete_remote_green_pending",
+  "status": "generated_implementation_and_qualification_complete_remote_green",
   "objective": "Validate a generated exact live-shaped envelope before a four-value identity bridge, call the remotely green TA1 public adapter exactly once per success path, and replay the frozen selector without private or neural access.",
   "green_registration_proof": {
     "commit": "62e465e0600622444b0868d5dcf19678504d20c4",
@@ -15,11 +15,11 @@
     "contract_sha256": "e06fbb1401326d4f788bfdd50162c07bf88652b0c1dc4b11cef46cbec6e41e05"
   },
   "implementation_remote_proof": {
-    "commit": null,
-    "CI_run_id": null,
-    "base_python_job_id": null,
-    "optional_neuro_job_id": null,
-    "both_required_jobs_green": false,
+    "commit": "3e3f8b86cfb8ac6f23730fb2fcc9fc5da549aac7",
+    "CI_run_id": 31935754822,
+    "base_python_job_id": 95137289730,
+    "optional_neuro_job_id": 95137289704,
+    "both_required_jobs_green": true,
     "measured_module_SHA256": "adcd345855e4a99794c2435f9e8e592a8818d170f7b8a7fcddc52ba009faba8d"
   },
   "tracked_file_hashes": [
@@ -27,7 +27,7 @@
     {"path": "src/neurodecodekit/datasets/marc2_live_schema_adapter.py", "sha256": "adcd345855e4a99794c2435f9e8e592a8818d170f7b8a7fcddc52ba009faba8d"},
     {"path": "tests/test_marc2_live_schema_adapter.py", "sha256": "13c7b7c50b10a05a54891f1642f2bfd4ac23440e47c8baa73c02b9ef58b7a8c6"},
     {"path": "tests/test_marc2_live_schema_adapter_contract.py", "sha256": "1ddb25e362f386bfeeb0a5e0cfb9758a6a0d2904b93a8161ae22d89ca5a4a14c"},
-    {"path": "docs/MARC_2_LIVE_SCHEMA_ADAPTER_IMPLEMENTATION.md", "sha256": "1158ac3fc0db2d162956a44f291716fdfdfe714c771f7b40433f15f8b7bbfbf2"},
+    {"path": "docs/MARC_2_LIVE_SCHEMA_ADAPTER_IMPLEMENTATION.md", "sha256": "43a0e026c6e49935f1a8397db594185b6f47414f8056a0e95db900a824dfc1e1"},
     {"path": "src/neurodecodekit/datasets/marc2_transport_alias_adapter.py", "sha256": "f4da58dac4723dd024912c842e2ecf849e17a4bc1906897b32b4a287f4a7bbf2"},
     {"path": "src/neurodecodekit/datasets/marc2_freewill_prefix_selection.py", "sha256": "86fa30fbd1caed735f0fb2e627144482a2bb8e033567bb3794e3f05508005c97"}
   ],
@@ -140,7 +140,10 @@
     "git_diff_check_passed": true,
     "complete_base_suite_pending": false,
     "complete_optional_suite_pending": false,
-    "remote_CI_pending": true
+    "remote_CI_pending": false,
+    "remote_CI_run_id": 31935754822,
+    "remote_base_python_job_id": 95137289730,
+    "remote_optional_neuro_job_id": 95137289704
   },
   "access_counters": {
     "private_or_Git_ignored_path_operations": 0,
@@ -167,9 +170,11 @@
     "release_publication_or_scientific_claim_upgrade": false
   },
   "next_gate": {
-    "commit_push_and_both_remote_jobs_green_required": true,
+    "commit_push_and_both_remote_jobs_green_required": false,
+    "exact_implementation_both_remote_jobs_green": true,
     "generated_qualification_consumed_without_retained_output": true,
-    "all_false_Tier_C_request_allowed_before_green_implementation": false,
+    "all_false_Tier_C_request_allowed_after_green_implementation": true,
+    "proof_record_closeout_must_be_remote_green_before_request": true,
     "live_executor_or_private_read_allowed": false
   },
   "claim_boundary": {

@@ -5,7 +5,7 @@ Date: 2026-08-16
 Lane: `MARC2-LA1`
 
 Status: **Generated/mock implementation and one qualification complete;
-remote green pending**
+exact implementation remotely green**
 
 Contract:
 `registries/marc2_live_schema_adapter_contract.v0.json`
@@ -121,8 +121,10 @@ tests with 35 skips.
 
 Ruff, compilation, strict parsing of the new registries, standard parsing of
 all 227 registry documents, CLI help/plan/qualify/inspect, tracked hashes, and
-diff hygiene pass locally. Commit, push, and both remote jobs remain acceptance
-gates before this implementation can be called remotely green.
+diff hygiene pass locally. Exact implementation commit
+`3e3f8b86cfb8ac6f23730fb2fcc9fc5da549aac7` passed Base Python job
+`95137289730`, Optional Neuro Readers job `95137289704`, and CI
+`31935754822`.
 
 ## Boundary
 
@@ -136,6 +138,7 @@ neural payload, target, prediction, or score and establish no neural effect,
 decoding accuracy, language decoding, or thought-to-text capability.
 
 The generated qualification is consumed. A private read, live executor, or
-`MARC2-FW2` entry remains closed. After this exact implementation is committed,
-pushed, and both jobs are green, the next eligible work is one all-false Tier C
-request, not live access.
+`MARC2-FW2` entry remains closed. The next eligible work is one all-false Tier C
+request for a separately implemented additive executor and one exact private
+structural read after this proof-record closeout is remotely green; that
+request itself grants no live access.

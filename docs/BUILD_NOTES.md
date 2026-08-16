@@ -9788,8 +9788,11 @@ decoding accuracy, language decoding, or thought-to-text capability.
   204 skips; optional A-M/N-Z pass 2,918 with 28 skips and 513 with seven
   skips, for 3,431 with 35 skips. Ruff, compilation, 227 registry parses,
   strict new-registry parsing, CLI checks, hashes, and diff hygiene pass.
-- Commit, push, and both remote jobs remain pending. No all-false Tier C packet
-  or live/private execution authority exists from this local result.
+- Exact implementation `3e3f8b86cfb8ac6f23730fb2fcc9fc5da549aac7`
+  passed Base job `95137289730`, Optional job `95137289704`, and CI
+  `31935754822`. Once this proof-record closeout is remotely green, one
+  all-false Tier C packet may be prepared, but no live/private execution
+  authority exists from this generated result.
 
 Engineering capability added: an exact live-shaped producer envelope now
 crosses a strict generated identity bridge and the green one-key adapter to the

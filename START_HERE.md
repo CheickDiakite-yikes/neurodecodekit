@@ -95,8 +95,10 @@
    `docs/MARC_2_LIVE_SCHEMA_ADAPTER_IMPLEMENTATION.md` and both result
    registries. One `MARC2LA-G1` run passed all mutations in 0.488921 seconds at
    38,387,712-byte peak RSS; its 5,366-byte report was removed and all
-   private/neural/model counters stayed zero. The exact implementation still
-   needs commit, push, and both remote jobs green. No live/private authority
+   private/neural/model counters stayed zero. Exact implementation `3e3f8b8`
+   passed Base job `95137289730`, Optional job `95137289704`, and CI
+   `31935754822`. Once this proof-record closeout is remotely green, one
+   all-false Tier C request may be prepared, but no live/private authority
    exists. Then read
    `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked

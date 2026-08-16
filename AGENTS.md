@@ -1535,12 +1535,13 @@ copy and calling TA1 once. All 30 mutations and both entry orders passed. One
 final run used 846,696 input bytes, 5,366 output bytes, 0.4889211250047083
 seconds, and 38,387,712-byte peak RSS; the report was removed and every
 forbidden counter stayed zero. Fifty-three focused, 3,360 dependency-free, and
-3,431 optional-neuro tests pass locally. Commit, push, and require both remote
-jobs green for exact module hash
-`adcd345855e4a99794c2435f9e8e592a8818d170f7b8a7fcddc52ba009faba8d`
-before preparing one all-false Tier C request. No live executor, private read,
-FW1C reuse, FW2 entry, archive, neural, target, model, score, or network work is
-open.
+3,431 optional-neuro tests pass locally. Exact implementation
+`3e3f8b86cfb8ac6f23730fb2fcc9fc5da549aac7`, with module hash
+`adcd345855e4a99794c2435f9e8e592a8818d170f7b8a7fcddc52ba009faba8d`,
+passed Base job `95137289730`, Optional job `95137289704`, and CI
+`31935754822`. Once this proof-record closeout is remotely green, one all-false
+Tier C request may be prepared. No live executor, private read, FW1C reuse,
+FW2 entry, archive, neural, target, model, score, or network work is open.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

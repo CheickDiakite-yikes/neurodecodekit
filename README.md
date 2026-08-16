@@ -1702,9 +1702,11 @@ Read this before interpreting any number in the repository.
   8,105,207,776 reservation bytes. The measured run used 846,696 generated
   input bytes, 5,366 output bytes, 0.488921 seconds, and 38,387,712-byte peak
   RSS. The report was removed and every private, neural, target, model, score,
-  and network counter is zero. The implementation still requires remote green
-  before any all-false request can be prepared; this is engineering evidence,
-  not a decoding result.
+  and network counter is zero. Exact implementation `3e3f8b8` passed Base job
+  `95137289730`, Optional job `95137289704`, and CI `31935754822`. Once this
+  proof-record closeout is also remotely green, an all-false request may be
+  prepared, but no live/private read is authorized; this is engineering
+  evidence, not a decoding result.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
@@ -2526,7 +2528,7 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/MARC_2_LIVE_SCHEMA_ADAPTER_PREREGISTRATION.md](docs/MARC_2_LIVE_SCHEMA_ADAPTER_PREREGISTRATION.md) | frozen generated/mock live-envelope composition, four-value bridge, 30-mutation matrix, resources, and closed private boundary |
 | [registries/marc2_live_schema_adapter_contract.v0.json](registries/marc2_live_schema_adapter_contract.v0.json) | machine-readable `MARC2-LA1` contract binding green TA1, exact live identity, generated-only surface, and zero authority flags |
 | [docs/MARC_2_LIVE_SCHEMA_ADAPTER_IMPLEMENTATION.md](docs/MARC_2_LIVE_SCHEMA_ADAPTER_IMPLEMENTATION.md) | generated composition implementation, validation order, one-call green adapter proof, measured qualification, verification, and claim ceiling |
-| [registries/marc2_live_schema_adapter_implementation.v0.json](registries/marc2_live_schema_adapter_implementation.v0.json) | hash-bound module/tests, 30 refusal results, resources, zero access counters, and pending remote-green gate |
+| [registries/marc2_live_schema_adapter_implementation.v0.json](registries/marc2_live_schema_adapter_implementation.v0.json) | hash-bound module/tests, 30 refusal results, resources, zero access counters, and exact remote-green proof |
 | [registries/marc2_live_schema_adapter_result.v0.json](registries/marc2_live_schema_adapter_result.v0.json) | consumed generated `MARC2LA-G1` result, exact selector replay, measurements, unavailable fields, and closed live/FW2 disposition |
 | [docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md](docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md) | layered compact-adapter plus GPT-Sol architecture, four matched conditions, and staged authorization boundary |
 | [docs/FOUNDATION_MODEL_BRIDGE_V0.md](docs/FOUNDATION_MODEL_BRIDGE_V0.md) | implemented FM-0 synthetic no-call schemas, CLI, strict refusals, hashes, and measured roundtrip |

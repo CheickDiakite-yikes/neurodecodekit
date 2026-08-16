@@ -17,11 +17,11 @@ class Marc2LiveSchemaAdapterImplementationTests(unittest.TestCase):
     def setUpClass(cls):
         cls.registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
 
-    def test_identity_and_pending_remote_status_are_exact(self):
+    def test_identity_and_green_remote_status_are_exact(self):
         self.assertEqual(self.registry["schema_name"], "neurodecodekit.marc2_live_schema_adapter_implementation")
         self.assertEqual(self.registry["schema_version"], "0.1.0")
         self.assertEqual(self.registry["lane_id"], "MARC2-LA1")
-        self.assertEqual(self.registry["status"], "generated_implementation_and_qualification_complete_remote_green_pending")
+        self.assertEqual(self.registry["status"], "generated_implementation_and_qualification_complete_remote_green")
 
     def test_green_registration_proof_is_exact(self):
         proof = self.registry["green_registration_proof"]
@@ -31,8 +31,11 @@ class Marc2LiveSchemaAdapterImplementationTests(unittest.TestCase):
         self.assertEqual(proof["optional_neuro_job_id"], 95_134_785_489)
         self.assertTrue(proof["both_required_jobs_green_before_implementation"])
         remote = self.registry["implementation_remote_proof"]
-        self.assertIsNone(remote["commit"])
-        self.assertFalse(remote["both_required_jobs_green"])
+        self.assertEqual(remote["commit"], "3e3f8b86cfb8ac6f23730fb2fcc9fc5da549aac7")
+        self.assertEqual(remote["CI_run_id"], 31_935_754_822)
+        self.assertEqual(remote["base_python_job_id"], 95_137_289_730)
+        self.assertEqual(remote["optional_neuro_job_id"], 95_137_289_704)
+        self.assertTrue(remote["both_required_jobs_green"])
 
     def test_every_tracked_file_hash_is_current(self):
         for binding in self.registry["tracked_file_hashes"]:
@@ -79,7 +82,9 @@ class Marc2LiveSchemaAdapterImplementationTests(unittest.TestCase):
         self.assertTrue(all(value == 0 for value in self.registry["access_counters"].values()))
         self.assertTrue(all(not value for value in self.registry["authorization_state"].values()))
         gate = self.registry["next_gate"]
-        self.assertTrue(gate["commit_push_and_both_remote_jobs_green_required"])
+        self.assertFalse(gate["commit_push_and_both_remote_jobs_green_required"])
+        self.assertTrue(gate["all_false_Tier_C_request_allowed_after_green_implementation"])
+        self.assertTrue(gate["proof_record_closeout_must_be_remote_green_before_request"])
         self.assertFalse(gate["live_executor_or_private_read_allowed"])
 
     def test_claim_boundary_remains_scientifically_empty(self):

@@ -4,7 +4,7 @@
   "result_id": "MARC-2-generated-live-schema-adapter-composition-result-v0",
   "lane_id": "MARC2-LA1",
   "recorded_at_local": "2026-08-16",
-  "status": "generated_qualification_complete_consumed_remote_green_pending",
+  "status": "generated_qualification_complete_consumed_remote_green",
   "route": "MARC2LA-G1",
   "full_route": "MARC2LA-G1-generated_live_schema_adapter_selector_composition_passed",
   "proof_posture": {
@@ -20,20 +20,20 @@
     "both_required_jobs_green_before_implementation_and_qualification": true
   },
   "implementation_remote_proof": {
-    "commit": null,
-    "CI_run_id": null,
-    "base_python_job_id": null,
-    "optional_neuro_job_id": null,
-    "both_required_jobs_green": false,
+    "commit": "3e3f8b86cfb8ac6f23730fb2fcc9fc5da549aac7",
+    "CI_run_id": 31935754822,
+    "base_python_job_id": 95137289730,
+    "optional_neuro_job_id": 95137289704,
+    "both_required_jobs_green": true,
     "measured_module_SHA256": "adcd345855e4a99794c2435f9e8e592a8818d170f7b8a7fcddc52ba009faba8d"
   },
   "artifact_bindings": [
     {"path": "registries/marc2_live_schema_adapter_contract.v0.json", "sha256": "e06fbb1401326d4f788bfdd50162c07bf88652b0c1dc4b11cef46cbec6e41e05"},
-    {"path": "registries/marc2_live_schema_adapter_implementation.v0.json", "sha256": "f22c348f0676aa7904eeafa50da37667e6bce1d64b94272a83d30a3c35907ab7"},
+    {"path": "registries/marc2_live_schema_adapter_implementation.v0.json", "sha256": "e793760dae223565de0c6e22bdbcd5f40cf8857f47377b62ecb37119a5186d04"},
     {"path": "src/neurodecodekit/datasets/marc2_live_schema_adapter.py", "sha256": "adcd345855e4a99794c2435f9e8e592a8818d170f7b8a7fcddc52ba009faba8d"},
-    {"path": "docs/MARC_2_LIVE_SCHEMA_ADAPTER_IMPLEMENTATION.md", "sha256": "1158ac3fc0db2d162956a44f291716fdfdfe714c771f7b40433f15f8b7bbfbf2"},
+    {"path": "docs/MARC_2_LIVE_SCHEMA_ADAPTER_IMPLEMENTATION.md", "sha256": "43a0e026c6e49935f1a8397db594185b6f47414f8056a0e95db900a824dfc1e1"},
     {"path": "tests/test_marc2_live_schema_adapter.py", "sha256": "13c7b7c50b10a05a54891f1642f2bfd4ac23440e47c8baa73c02b9ef58b7a8c6"},
-    {"path": "tests/test_marc2_live_schema_adapter_implementation.py", "sha256": "dee296e9b9f82c3c1a2bb5dd221e1cd339892c1bb264b410a2546dbc04f0d66f"}
+    {"path": "tests/test_marc2_live_schema_adapter_implementation.py", "sha256": "2c7196394edba355189589c8e973d9e40539a097e7a57aa011dffb02ab8d83d9"}
   ],
   "composition_result": {
     "source_transport_keys": ["directory", "metadata", "tail"],
@@ -125,7 +125,10 @@
     "complete_optional_tests": 3431,
     "complete_optional_skips": 35,
     "ruff_compile_registry_JSON_CLI_and_diff_hygiene_passed": true,
-    "remote_CI_pending": true
+    "remote_CI_pending": false,
+    "remote_CI_run_id": 31935754822,
+    "remote_base_python_job_id": 95137289730,
+    "remote_optional_neuro_job_id": 95137289704
   },
   "warnings": [
     "The live-shaped source entries and transport digests are generated fixtures.",
@@ -140,11 +143,12 @@
   "disposition": {
     "generated_qualification_consumed": true,
     "temporary_aggregate_removed": true,
-    "implementation_remote_green": false,
-    "all_false_Tier_C_request_eligible": false,
+    "implementation_remote_green": true,
+    "all_false_Tier_C_request_eligible": true,
+    "proof_record_closeout_remote_green_required_before_request": true,
     "live_executor_or_private_read_allowed": false,
     "MARC2_FW2_eligible": false,
-    "next_safe_work": "commit push and require both CI jobs green before preparing one all-false Tier C request"
+    "next_safe_work": "commit push and require both CI jobs green for this proof-record closeout before preparing one all-false Tier C request"
   },
   "claim_boundary": {
     "engineering_capability_added": "NeuroDecodeKit now has a generated-only composition that validates an exact live-shaped envelope before a four-value identity bridge and the remotely green one-key adapter reaches the frozen selector.",

@@ -17,14 +17,19 @@ class Marc2LiveSchemaAdapterResultTests(unittest.TestCase):
     def setUpClass(cls):
         cls.result = json.loads(RESULT_PATH.read_text(encoding="utf-8"))
 
-    def test_result_identity_is_generated_only_consumed_and_pending_green(self):
+    def test_result_identity_is_generated_only_consumed_and_green(self):
         self.assertEqual(self.result["schema_name"], "neurodecodekit.marc2_live_schema_adapter_result")
         self.assertEqual(self.result["schema_version"], "0.1.0")
         self.assertEqual(self.result["lane_id"], "MARC2-LA1")
         self.assertEqual(self.result["route"], "MARC2LA-G1")
-        self.assertEqual(self.result["status"], "generated_qualification_complete_consumed_remote_green_pending")
+        self.assertEqual(self.result["status"], "generated_qualification_complete_consumed_remote_green")
         self.assertFalse(self.result["proof_posture"]["scientific_value"])
-        self.assertFalse(self.result["implementation_remote_proof"]["both_required_jobs_green"])
+        proof = self.result["implementation_remote_proof"]
+        self.assertEqual(proof["commit"], "3e3f8b86cfb8ac6f23730fb2fcc9fc5da549aac7")
+        self.assertEqual(proof["CI_run_id"], 31_935_754_822)
+        self.assertEqual(proof["base_python_job_id"], 95_137_289_730)
+        self.assertEqual(proof["optional_neuro_job_id"], 95_137_289_704)
+        self.assertTrue(proof["both_required_jobs_green"])
 
     def test_all_artifact_bindings_are_current(self):
         for binding in self.result["artifact_bindings"]:
@@ -76,12 +81,13 @@ class Marc2LiveSchemaAdapterResultTests(unittest.TestCase):
         self.assertEqual(measured["training_runs"], 0)
         self.assertFalse(measured["end_to_end_latency_measured"])
 
-    def test_live_boundary_remains_closed_until_remote_green(self):
+    def test_live_boundary_remains_closed_after_remote_green(self):
         disposition = self.result["disposition"]
         self.assertTrue(disposition["generated_qualification_consumed"])
         self.assertTrue(disposition["temporary_aggregate_removed"])
-        self.assertFalse(disposition["implementation_remote_green"])
-        self.assertFalse(disposition["all_false_Tier_C_request_eligible"])
+        self.assertTrue(disposition["implementation_remote_green"])
+        self.assertTrue(disposition["all_false_Tier_C_request_eligible"])
+        self.assertTrue(disposition["proof_record_closeout_remote_green_required_before_request"])
         self.assertFalse(disposition["live_executor_or_private_read_allowed"])
         self.assertFalse(disposition["MARC2_FW2_eligible"])
 

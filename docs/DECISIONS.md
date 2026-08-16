@@ -7980,10 +7980,28 @@ Verification decision: accept 53 focused, 3,360 dependency-free, and 3,431
 optional-enabled tests plus Ruff, compilation, 227 registry parses, CLI
 checks, tracked hashes, and diff hygiene as the local gate.
 
-Authority decision: the implementation is not remotely green yet. Require its
-exact commit to pass both CI jobs before preparing an all-false Tier C request.
-No private read, live executor, archive member, neural payload, target, model,
-score, network operation, FW2 entry, or claim upgrade is open.
+Authority decision at this local checkpoint: the implementation was not yet
+remotely green. Decision 0243 records the later exact green proof. No private
+read, live executor, archive member, neural payload, target, model, score,
+network operation, FW2 entry, or claim upgrade opened at either checkpoint.
 
 Evidence: `docs/MARC_2_LIVE_SCHEMA_ADAPTER_IMPLEMENTATION.md`, both LA1
 implementation/result registries, the additive module, and its four tests.
+
+## 0243 - Accept The Remote-Green Live-Schema Composition
+
+Proof decision: exact implementation
+`3e3f8b86cfb8ac6f23730fb2fcc9fc5da549aac7` passed Base Python job
+`95137289730`, Optional Neuro Readers job `95137289704`, and CI
+`31935754822`. Accept `MARC2-LA1` as complete and consumed.
+
+Boundary decision: remote green proves the generated composition and its
+refusals, not a private source or scientific result. Every private, archive,
+neural, target, model, score, network, FW2, and claim authority remains false.
+
+Next-gate decision: permit Tier A preparation of one all-false Tier C packet
+for a new additive executor and one exact private structural read only after
+this proof-record closeout is remotely green. The packet must then become
+remotely green and receive fresh packet-bound maintainer authority before
+implementation or access; the current `continue` is not retroactive authority
+for that later event.

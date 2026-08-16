@@ -2156,7 +2156,7 @@ path, execute command, FW1C reuse, archive, neural, target, model, score,
 network, or `MARC2-FW2` operation is allowed. A future live adapter remains a
 separately frozen Tier C event.
 
-### MARC2-LA1 - Generated Live-Schema Adapter Composition (Implementation Qualified; Remote Green Pending)
+### MARC2-LA1 - Generated Live-Schema Adapter Composition (Complete And Consumed)
 
 This additive lane binds the remotely green TA1 module, contract,
 implementation, and result plus the frozen selector and consumed FW1C/SL1
@@ -2188,5 +2188,7 @@ replayed the frozen 16-subject/384-member identity, used 846,696 generated
 input bytes and 5,366 output bytes, and ran in 0.4889211250047083 seconds at
 38,387,712-byte peak RSS. The mode-0600 report was inspected, hashed, and
 removed. Fifty-three focused, 3,360 dependency-free, and 3,431 optional-neuro
-tests pass locally. Commit, push, and both remote jobs remain required; no
-all-false packet or live/private authority exists yet.
+tests pass locally. Exact implementation `3e3f8b8` passed Base job
+`95137289730`, Optional job `95137289704`, and CI `31935754822`. LA1 is
+complete and consumed. Once this proof-record closeout is remotely green, one
+all-false Tier C request may be prepared; no live/private authority exists yet.
