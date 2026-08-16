@@ -1,21 +1,19 @@
 # Codex Handoff - NeuroDecodeKit
 
-> Current MARC2 handoff, 2026-08-16: packet-bound decision commit `944b6e8`
-> passed Base Python job `95202667384`, Optional Neuro Readers job
-> `95202667483`, and CI `31962561043` before the generated-only `MARC2-VR3`
-> wrapper was implemented. Read
-> `docs/MARC_2_VARIABLE_DOMAIN_PRIVATE_RECOVERY_IMPLEMENTATION.md`, its native
-> registry, distinct FW1B proof certificate, module, and two tests. The wrapper
-> passed eight profile/order paths, 64 direct mutations, and 41 focused tests;
-> its measured qualification took 1.850114875 seconds at 38,322,176-byte peak
-> RSS and emitted 4,464 bytes with every private and scientific counter zero.
-> The private manifest remains untouched. Commit, push, and require both jobs
-> green for this exact implementation before one no-retry 418,755-byte
-> structural-manifest pass. A success freezes only a target-free cohort; a
-> failure parks VR3. FW2 payload access, training, prediction freeze, target
-> delivery, scoring, and claims require a separately frozen packet and fresh
-> decision. Never touch the consumed LA2 root or the unrelated tracker
-> inspection NDJSON.
+> Current MARC2 handoff, 2026-08-16: exact VR3 implementation `2467876` passed
+> Base Python job `95207398015`, Optional Neuro Readers job `95207398092`, and
+> CI `31964473405` before the sole registered invocation. Read
+> `docs/MARC_2_VARIABLE_DOMAIN_PRIVATE_RECOVERY_RESULT.md` and its failure
+> registry. The invocation consumed at `MARC2VDR-F01` because aggregate machine
+> resource preflight refused after proof validation but before any output-root
+> or private-path operation. Private input, markers, outputs, adapter calls,
+> real cohort selections, archive reads, neural values, targets, models,
+> predictions, scores, and claims are all zero. The exact failed load/disk/RSS
+> predicate was not emitted and must not be inferred. VR3 has no retry or
+> rerun, no real cohort exists, and FW2 remains ineligible. Next: specify a
+> separately named machine-stable structural recovery, then bind any real pass
+> through a fresh Tier C decision. Never touch consumed roots or the unrelated
+> tracker inspection NDJSON.
 
 > Additive foundation-model decision, 2026-08-06: read
 > `docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md` and
@@ -5033,3 +5031,28 @@ on any route. On success, inspect only the aggregate output and record a
 closeout; never open the private cohort file. Then preregister FW2 and prepare
 an all-false Tier C packet. No archive member, neural payload, target, model,
 prediction, freeze, score, or claim is authorized by this implementation.
+
+## 2026-08-16 MARC2-VR3 Consumed F01 Result Handoff
+
+Implementation `24678760106b6a5a9ea035c14f628ec909755e61` passed Base
+Python job `95207398015`, Optional Neuro Readers job `95207398092`, and CI
+`31964473405`. The one command was then invoked with all five thread variables
+set to one and only the registered proof arguments.
+
+It returned `MARC2VDR-F01: machine resource preflight refused` in 1.166707792
+external wall seconds. Code order proves exact proof validation completed, but
+the refusal preceded `_prepare_output_root` and retained-path preflight. There
+were zero output-root operations, source component checks, content opens,
+private bytes, hashes, parses, markers, adapter calls, selections, output
+files, payload reads, targets, models, scores, retries, or claim upgrades. The
+combined gate did not emit whether normalized load, free disk, or process RSS
+failed; preserve that value as unavailable.
+
+VR3 is consumed. Do not rerun, resume, patch, delete, rename, reuse, or inspect
+a VR3 root or the registered private manifest. A post-hoc machine snapshot is
+not execution evidence. No real cohort identity exists, so do not preregister
+FW2 as though its split were frozen and do not open neural payloads. The next
+safe work is Tier A design for a separately named machine-stable cohort freeze
+and target-free FW2 architecture research. Any new private read requires a new
+all-false request, fresh packet-bound maintainer decision, exact implementation
+proof, and one new registered execution.

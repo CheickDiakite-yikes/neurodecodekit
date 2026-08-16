@@ -9759,6 +9759,35 @@ Scientific claim not established: this registration contains no neural
 payload, target, prediction, or score and establishes no neural effect,
 decoding accuracy, language decoding, or thought-to-text capability.
 
+## 2026-08-16 - MARC2-VR3 Consumed Machine-Preflight Result
+
+- Exact implementation `24678760106b6a5a9ea035c14f628ec909755e61` passed
+  Base Python job `95207398015`, Optional Neuro Readers job `95207398092`, and
+  CI `31964473405` before the sole invocation.
+- Invoked once with all numerical thread variables set to one and no source,
+  output, participant, split, cap, or fallback override.
+- The command returned `MARC2VDR-F01: machine resource preflight refused` in
+  1.166707792 external wall seconds. Exact proof validation passed, but the
+  refusal preceded output-root preparation and retained-path preflight.
+- The combined machine gate did not emit whether normalized one-minute load,
+  free disk, or process RSS failed. The exact predicate and value are
+  unavailable and were not reconstructed from a later snapshot.
+- Private path checks, content opens, input bytes, hashes, parses, output-root
+  operations, markers, adapter calls, real selections, generated files,
+  archive reads, neural reads, targets, models, predictions, scores, retries,
+  and claim upgrades are all zero.
+- VR3 is consumed with no retry, rerun, resume, repair, fallback, or root reuse.
+  No real cohort identity exists, so FW2 remains ineligible. The next safe
+  work is a separately named machine-stable structural recovery and target-free
+  FW2 architecture research.
+
+Engineering capability added: the exact green wrapper failed closed before
+any private-path or output-root operation when its machine safety gate refused.
+
+Scientific claim not established: no neural payload, target, prediction, or
+score was accessed, so this result establishes no neural effect, decoding
+accuracy, language decoding, or thought-to-text capability.
+
 ## 2026-08-16 - MARC2-VR3 Generated Private-Recovery Wrapper
 
 - Decision `944b6e8af434c2a6820435e0f18fe9490bf44248` passed Base Python

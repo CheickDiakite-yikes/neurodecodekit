@@ -1701,13 +1701,24 @@ and 64 direct mutations in 1.850114875 seconds at 38,322,176-byte peak RSS,
 emitting 4,464 bytes with every private, archive, neural, target, model, score,
 network, and claim counter at zero. Forty-one focused and 3,716 complete
 optional-enabled tests are covered, with 35 skips and one exact forkserver
-case passing outside the sandbox socket restriction. The private manifest is
-still untouched. Commit, push, and require both CI jobs green for this exact
-implementation before one no-retry read of the registered 418,755-byte
-structural manifest. Success may freeze only a target-free cohort; failure
-parks the lane. Do not use either consumed executor or root, open an archive
-member or neural value, train, predict, freeze, deliver a target, score, enter
-FW2, or promote a claim from this implementation milestone.
+case passing outside the sandbox socket restriction. Exact implementation
+`24678760106b6a5a9ea035c14f628ec909755e61` then passed Base Python job
+`95207398015`, Optional Neuro Readers job `95207398092`, and CI
+`31964473405` before the sole invocation.
+
+Read `docs/MARC_2_VARIABLE_DOMAIN_PRIVATE_RECOVERY_RESULT.md` and
+`registries/marc2_variable_domain_private_recovery_failure_result.v0.json`.
+The one registered execution consumed at `MARC2VDR-F01` because the aggregate
+machine resource preflight refused. Exact proof passed first, but the refusal
+occurred before output-root or retained-path preflight: zero private path
+checks, content opens, input bytes, markers, output files, adapter calls, real
+selections, archive reads, neural values, targets, models, predictions, scores,
+or claim operations occurred. The exact failed machine predicate and value
+were not emitted and must not be inferred post hoc. VR3 has no retry, rerun,
+resume, repair, or fallback. No real cohort identity exists and `MARC2-FW2`
+remains ineligible. The next safe work is a separately named machine-stable
+structural recovery plus target-free FW2 architecture research; any new
+private pass remains a fresh Tier C gate.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

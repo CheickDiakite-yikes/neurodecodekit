@@ -8445,3 +8445,29 @@ Evidence:
 `registries/marc2_variable_domain_private_recovery_implementation.v0.json`,
 `registries/marc2_variable_domain_private_recovery_proof_certificate.v0.json`,
 the additive module, and its two focused tests.
+
+## 0258 - Consume VR3 At Machine Resource Preflight
+
+Result decision: record `MARC2VDR-F01` as the final route for the sole VR3
+invocation. Exact implementation proof passed, but aggregate machine resource
+preflight refused before output-root preparation or retained-path preflight.
+Preserve normalized load, free disk, process RSS, and the exact failed
+predicate as unavailable because the executor emitted only the aggregate safe
+reason.
+
+Access decision: record zero output-root operations, private path checks,
+content opens, private input bytes, hashes, parses, markers, adapter calls, real
+cohort selections, output files, archive reads, neural values, targets, models,
+predictions, freezes, scores, retries, and claim upgrades. Do not infer a real
+cohort from generated VR2 replay.
+
+Disposition decision: consume VR3 with no retry, rerun, resume, repair,
+fallback, alternate path, or root reuse. Keep FW2 ineligible because no real
+cohort identity exists. The next safe work is a separately named machine-stable
+structural recovery and target-free FW2 architecture research; any new private
+pass remains a fresh Tier C decision.
+
+Evidence:
+`docs/MARC_2_VARIABLE_DOMAIN_PRIVATE_RECOVERY_RESULT.md`,
+`registries/marc2_variable_domain_private_recovery_failure_result.v0.json`,
+and its focused result test.

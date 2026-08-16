@@ -187,11 +187,15 @@
    generated wrapper passed eight profile/order paths and 64 direct mutations
    in 1.850114875 seconds at 38,322,176-byte peak RSS and emitted 4,464 bytes;
    every private, payload, neural, target, model, score, and claim counter was
-   zero. The registered private manifest is still untouched. Commit and push
-   this exact wrapper and require both CI jobs green before its one no-retry
-   structural pass. A successful pass may freeze a target-free cohort and
-   permit FW2 preregistration, but it does not authorize archive-member access,
-   neural training, prediction freezing, target delivery, scoring, or a claim.
+   zero. Exact implementation `2467876` passed Base job `95207398015`, Optional
+   job `95207398092`, and CI `31964473405` before its sole invocation. Then
+   read `docs/MARC_2_VARIABLE_DOMAIN_PRIVATE_RECOVERY_RESULT.md` and its failure
+   registry. The invocation consumed at `MARC2VDR-F01` during aggregate machine
+   preflight, before any output-root or private-path operation. Private input,
+   output, cohort, payload, model, and score counters are zero. The exact failed
+   load/disk/RSS predicate was not emitted and must not be inferred. VR3 has no
+   retry or rerun, no real cohort exists, and FW2 remains ineligible pending a
+   separately named structural recovery and fresh Tier C decision.
    Then
    read `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked

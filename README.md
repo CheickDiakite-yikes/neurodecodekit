@@ -1800,11 +1800,18 @@ Read this before interpreting any number in the repository.
   mutations in 1.850114875 seconds at 38,322,176-byte peak RSS, processing
   3,445,032 bytes and emitting 4,464 aggregate bytes. The same 16-subject,
   96-bundle, 384-member prefix replayed in every path; all private and
-  scientific counters stayed zero. This exact implementation must still be
-  committed, pushed, and pass both CI jobs before one registered 418,755-byte
-  structural-manifest pass. That pass can freeze only a target-free cohort;
-  it cannot read an archive member, train, freeze predictions, open targets,
-  score, or establish a neural result.
+  scientific counters stayed zero. Exact implementation `2467876` passed Base
+  Python job `95207398015`, Optional Neuro Readers job `95207398092`, and CI
+  `31964473405` before the one registered invocation.
+- **MARC2-VR3 consumed machine-preflight result:** the sole invocation stopped
+  at `MARC2VDR-F01` because its aggregate machine resource preflight refused.
+  Exact implementation proof passed, but no output-root or private-path check,
+  content open, manifest byte, marker, adapter call, real cohort selection,
+  archive read, neural value, target, model, prediction, score, or claim
+  operation followed. The exact failing load/disk/RSS predicate was not
+  emitted and is unavailable; the lane has no retry or rerun. No real cohort
+  was frozen, so FW2 remains ineligible. This is a safety result, not neural or
+  decoding evidence.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

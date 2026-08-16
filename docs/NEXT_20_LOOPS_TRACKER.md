@@ -2362,7 +2362,7 @@ consumed, FW2 remains closed, and any future private structural read still
 requires a separately named generated-qualified executor, all-false Tier C
 request, and fresh packet-bound maintainer decision.
 
-### MARC2-VR3 - Variable-Domain Private Recovery (Implementation Pending Green)
+### MARC2-VR3 - Variable-Domain Private Recovery (Consumed At F01)
 
 The next prospective lane binds proof addendum `bdd34d9`, CI `31947198122`,
 the green VR2 adapter/result, the consumed LA2 failure boundary, and one exact
@@ -2402,11 +2402,21 @@ target, model, score, network, or claim operations. The full optional inventory
 covers 3,716 tests with 35 skips; one forkserver case passed outside the
 sandbox's local-socket restriction.
 
-Current status: Stage 1 exact implementation is locally qualified but not yet
-committed or remotely green, and the private manifest remains untouched. Only
-after this exact HEAD passes both remote jobs may Stage 2 perform its one
-registered no-retry structural pass. After a successful structural freeze,
-the next tracker item is a bounded FW2 preregistration with signal,
-derangement, timing-only, and no-signal controls plus a separate all-false
-Tier C request. No FW2 payload, training, prediction freeze, target opening,
-score, or scientific claim is open now.
+Exact implementation `24678760106b6a5a9ea035c14f628ec909755e61` passed Base
+Python job `95207398015`, Optional Neuro Readers job `95207398092`, and CI
+`31964473405` before the sole Stage 2 invocation. The invocation consumed at
+`MARC2VDR-F01`: aggregate machine resource preflight refused after exact proof
+validation but before output-root or private-path preflight. It performed zero
+private path checks, content opens, private input bytes, marker writes, output
+files, adapter calls, real selections, archive reads, neural reads, target
+opens, model runs, prediction freezes, scores, or claim upgrades. The exact
+failed load/disk/RSS predicate and value are unavailable and cannot be
+reconstructed post hoc.
+
+Current status: VR3 is consumed with no retry, rerun, resume, repair, or
+fallback. No real cohort identity exists, so FW2 remains ineligible and cannot
+be preregistered against a purported real split. The next tracker item is a
+separately named machine-stable structural recovery, followed only after a
+successful freeze by the bounded FW2 preregistration and its separate all-false
+Tier C request. FW2 payload, training, prediction freeze, target opening,
+score, and scientific claim surfaces remain closed.
