@@ -9759,6 +9759,36 @@ Scientific claim not established: this registration contains no neural
 payload, target, prediction, or score and establishes no neural effect,
 decoding accuracy, language decoding, or thought-to-text capability.
 
+## 2026-08-16 - MARC2-VR1 Source-Validity / Eligibility Registration
+
+- Bound the remotely green `MARC2-VL1` localization at head `953692f`, Base
+  Python job `95151661005`, Optional Neuro Readers job `95151660910`, and CI
+  `31941668496`.
+- Froze one generated-only 1,227-row qualification domain with 238 complete
+  Freewill-shaped run bundles, 952 companion rows, and 73 generic auxiliary
+  files.
+- Preserved the exact 195 eligible session-1/2 bundles while constructing 43
+  valid-but-ineligible adversaries: 12 single-session-exclusion, 24
+  sampling-tier-exclusion, and seven extra-session bundles.
+- Required every row and companion set to pass source safety before aggregate
+  eligibility classification; the exact 195-run assertion occurs only after
+  filtering.
+- Bound the unchanged 16-subject, 96-run, 384-member, 8,105,207,776-byte
+  selection identity, canonical/reversed replay, 36 mutations, eight refusal
+  routes, aggregate-only predicate output, one thread, 256 MiB RSS, and zero
+  retained bytes.
+- All authorization flags remain false. Generated implementation is pending
+  this registration's remote-green proof; private data, LA2 reuse, FW2,
+  signals, targets, models, scores, and claim promotion remain closed.
+
+Engineering capability specified: a generated full-domain validator can
+separate structural source validity from frozen selection eligibility without
+admitting excluded bundles into the candidate set.
+
+Scientific claim not established: this registration contains no real neural
+payload, target, prediction, or score and establishes no neural or decoding
+result.
+
 ## 2026-08-16 - MARC2-VL1 Validation-Coverage Localization
 
 - Closed LA2 remote proof first: result commit `b19a6e2` passed Base Python job

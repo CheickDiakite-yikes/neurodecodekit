@@ -8153,3 +8153,33 @@ is eligible under Tier B; any future private read remains Tier C.
 
 Evidence: `docs/MARC_2_VALIDATION_COVERAGE_LOCALIZATION.md`, its contract,
 result, module, and two focused tests.
+
+## 0249 - Freeze Source Validity Before Selection Eligibility
+
+Order decision: require green localization head `953692f`, Base Python job
+`95151661005`, Optional Neuro Readers job `95151660910`, and CI `31941668496`
+before registering the prospective repair. The registration itself must be
+committed, pushed, and pass both remote jobs before implementation begins.
+
+Architecture decision: validate all 1,227 generated structural rows and 238
+complete Freewill-shaped run bundles before classification. Treat 195 bundles
+as eligible and 43 constructed bundles as source-valid but ineligible. Filter
+participants and sessions before asserting the exact eligible inventory, then
+apply the unchanged rank, session split, reservation formula, contiguous
+prefix, and 8 GiB cap.
+
+Qualification decision: represent all 43 omitted source slots through three
+generated predicate families: 12 single-session-exclusion bundles, 24
+sampling-tier-exclusion bundles, and seven extra-session bundles. Require
+canonical/reversed replay, 36 refusal mutations, aggregate-only predicate
+counts, and the frozen 16-subject, 96-run, 384-member selection identity.
+
+Boundary decision: this registration has every authorization flag false. It
+permits no generated implementation before remote green, and never permits a
+private path, consumed root, archive member, neural value, target, model,
+score, network operation, LA2 reuse, FW2 entry, release, or claim upgrade. Any
+future private read remains a separately named Tier C decision.
+
+Evidence: `docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md`,
+`registries/marc2_source_validity_eligibility_repair_contract.v0.json`, and its
+registration test.

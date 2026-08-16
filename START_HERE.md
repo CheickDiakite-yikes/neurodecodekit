@@ -129,9 +129,15 @@
    run slots and 172 companion slots untested as Freewill-shaped rows. LA1
    applies its exact 195-run equality before eligibility filtering. This is a
    concrete generated-coverage defect consistent with the F02 class, not the
-   exact private predicate and not neural evidence. The next safe work is a
-   separately named generated-only validity/eligibility repair; any private
-   read still requires a fresh Tier C decision. Then read
+   exact private predicate and not neural evidence. Then read
+   `docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md` and
+   `registries/marc2_source_validity_eligibility_repair_contract.v0.json`.
+   `MARC2-VR1` freezes a generated 238-bundle source domain containing the 195
+   eligible bundles plus all 43 omitted slots as source-shaped adversaries.
+   It requires source validation, eligibility classification, filtering, and
+   only then the exact 195-bundle assertion. All authorization flags remain
+   false until the registration is remotely green; any private read still
+   requires a fresh Tier C decision. Then read
    `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
    result, then use its preregistration and authorization documents for audit.

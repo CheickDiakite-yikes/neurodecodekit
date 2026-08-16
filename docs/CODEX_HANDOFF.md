@@ -4779,3 +4779,26 @@ separates source validity from selection eligibility, filters before the exact
 Freewill-shaped adversaries. Do not patch or reuse LA2, access any private root,
 or enter FW2. Any future private read requires a fresh Tier C packet and
 decision.
+
+## 2026-08-16 MARC2-VR1 Registration Handoff
+
+Read `docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md`,
+`registries/marc2_source_validity_eligibility_repair_contract.v0.json`, and
+`tests/test_marc2_source_validity_eligibility_repair_preregistration.py`.
+
+The contract is generated-only and freezes a 1,227-row source with 238 complete
+Freewill-shaped run bundles. The 195 eligible session-1/2 bundles retain the
+published per-subject map. Forty-three constructed valid-but-ineligible bundles
+exercise 12 single-session exclusion, 24 sampling-tier exclusion, and seven
+extra-session cases. These values are generated adversaries, not recovered
+private identities.
+
+The implementation order must validate every row and complete companion group,
+classify aggregate eligibility, filter, and only then compare the exact 195
+eligible bundles. Selection must replay 16 subjects, 96 runs, 384 companions,
+and 8,105,207,776 reserved bytes with no ineligible candidate.
+
+Every authorization flag is false. Push this registration and obtain both
+green CI jobs before implementation. Do not inspect or reuse LA2, touch a
+private or Git-ignored path, enter FW2, access neural or target data, run a
+model, score, use network/provider/hardware, or upgrade a claim.

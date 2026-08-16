@@ -1725,6 +1725,15 @@ Read this before interpreting any number in the repository.
   in 0.0499 seconds at 44,875,776-byte peak RSS with zero private, payload,
   neural, target, model, network, or score operations. It does not identify the
   exact private predicate or establish a decoding result.
+- **MARC2-VR1 source-validity/eligibility repair registration:** the next
+  generated-only contract now represents all 238 source-space run slots as
+  complete Freewill-shaped bundles. It freezes 195 eligible bundles and 43
+  constructed valid-but-ineligible adversaries across single-session,
+  sampling-tier, and extra-session predicates. The implementation must validate
+  all rows first, filter eligibility before the exact 195-run comparison, and
+  replay the unchanged 16-subject/96-run selector identity. Registration is not
+  implementation or private-data authority; every authorization flag remains
+  false pending remote-green proof.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
@@ -2559,6 +2568,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/MARC_2_VALIDATION_COVERAGE_LOCALIZATION.md](docs/MARC_2_VALIDATION_COVERAGE_LOCALIZATION.md) | artifact-only explanation of the 43-run and 172-companion fixture gap, validator ordering defect, remaining unknowns, and prospective repair |
 | [registries/marc2_validation_coverage_localization_contract.v0.json](registries/marc2_validation_coverage_localization_contract.v0.json) | fixed nine-input VL1 audit contract, route logic, resource caps, candidate boundary, and zero private authority |
 | [registries/marc2_validation_coverage_localization_result.v0.json](registries/marc2_validation_coverage_localization_result.v0.json) | machine-readable `MARC2VL-R2` result, exact coverage arithmetic, AST anchors, zero forbidden counters, and claim ceiling |
+| [docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md](docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md) | frozen generated-only 238-bundle repair design, filter-before-count order, aggregate predicates, mutations, resources, and claim boundary |
+| [registries/marc2_source_validity_eligibility_repair_contract.v0.json](registries/marc2_source_validity_eligibility_repair_contract.v0.json) | machine-readable `MARC2-VR1` source-validity and eligibility contract with 43 generated adversary bundles and all authority flags false |
 | [docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md](docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md) | layered compact-adapter plus GPT-Sol architecture, four matched conditions, and staged authorization boundary |
 | [docs/FOUNDATION_MODEL_BRIDGE_V0.md](docs/FOUNDATION_MODEL_BRIDGE_V0.md) | implemented FM-0 synthetic no-call schemas, CLI, strict refusals, hashes, and measured roundtrip |
 | [docs/FOUNDATION_MODEL_LIVE_SMOKE_PREREGISTRATION.md](docs/FOUNDATION_MODEL_LIVE_SMOKE_PREREGISTRATION.md) | frozen one-shot FM-1 Terra matrix, privacy boundary, provider settings, resource caps, and no-science ceiling |

@@ -1600,6 +1600,20 @@ source-validity/selection-eligibility repair with all 43 omitted published run
 slots represented as Freewill-shaped adversaries. Any private read remains a
 fresh Tier C gate.
 
+That repair is now prospectively frozen as `MARC2-VR1`. Read
+`docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md`,
+`registries/marc2_source_validity_eligibility_repair_contract.v0.json`, and its
+registration test. The generated domain contains 238 complete run bundles:
+195 eligible bundles plus 43 constructed source-valid adversaries split across
+12 single-session-exclusion, 24 sampling-tier-exclusion, and seven extra-session
+cases. Validation must process all 1,227 rows and complete companion sets,
+classify eligibility, filter, and only then assert the exact 195 eligible
+bundles. The frozen selection must remain 16 subjects, 96 runs, 384 companions,
+and 8,105,207,776 reserved bytes. Every authorization flag is false. Generated
+implementation becomes eligible only after this exact registration commit is
+pushed and both CI jobs are green. Do not implement before that proof, access a
+private path, reuse LA2, enter FW2, or infer a scientific result.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

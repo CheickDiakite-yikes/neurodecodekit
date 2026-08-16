@@ -2281,3 +2281,27 @@ that filters before exact eligible-count checks and represents all 43 omitted
 published run slots as Freewill-shaped adversaries. LA2 remains consumed;
 `MARC2-FW2` and every private operation remain closed behind a fresh Tier C
 decision.
+
+### MARC2-VR1 - Source-Validity / Eligibility Repair (Registered; Proof Pending)
+
+The generated-only registration expands the qualification domain to all 238
+source-space run slots while preserving the 1,227-row structural envelope. It
+contains 195 eligible bundles plus 43 constructed source-valid but ineligible
+bundles, each with all four required companions. Only 73 generic auxiliary
+regular-file rows remain.
+
+The validator order is frozen as full row safety, complete companion grouping,
+aggregate eligibility classification, eligibility filtering, exact 195-bundle
+comparison, then unchanged target-free selection. Global comparison of the
+unfiltered source domain with 195 is forbidden.
+
+Generated success requires predicate counts `195/12/24/7`, zero ineligible
+selection rows, canonical/reversed replay, and the original 16-subject,
+96-run, 384-member, 8,105,207,776-byte selection. Thirty-six mutations and
+eight refusal routes cover envelope, path, companion, eligibility, selection,
+privacy, resource, and cleanup drift.
+
+All authority flags are false. Implementation may start only after this exact
+registration is pushed and both remote jobs are green. Private data, LA2 reuse,
+FW2, signals, targets, models, scores, network operations, and scientific
+claims remain closed.
