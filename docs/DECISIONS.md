@@ -7769,3 +7769,35 @@ closed.
 Evidence: `docs/MARC_2_LIVE_SELECTION_RECOVERY_AUTHORIZATION_PACKET.md`,
 `registries/marc2_live_selection_recovery_authorization_request.v0.json`, and
 `tests/test_marc2_live_selection_recovery_authorization_request.py`.
+
+## 0235 - Bind The Fresh Continue Only To MARC2-FW1C
+
+Message decision: preserve the maintainer's actual fresh word `continue` as
+eight UTF-8 bytes and its SHA-256. Do not fabricate the packet's long sentence
+as a maintainer utterance.
+
+Scope decision: incorporate only remotely green request `7804c3e`, CI
+`31769518851`, Base Python job `94672387003`, Optional Neuro Readers job
+`94672386941`, packet SHA `f517f0b...`, and request SHA `2dfd45c...` by
+reference. Infer no `MARC2-FW2`, payload, neural, model, score, provider,
+hardware, release, or claim authority.
+
+Proof decision: keep a native future `MARC2-FW1C` registry distinct from its
+FW1B-format certificate. Require the exact shared validator to compare expected
+and observed proof against the future wrapper HEAD, not the older validator
+HEAD. Preserve all 32 proof, 40 selector, and 18 wrapper mutations.
+
+Order decision: make this decision ineffective until committed, pushed, and
+both jobs are green. Only then may generated/mock wrapper implementation begin.
+Keep the registered private source and new output root closed until that exact
+wrapper is separately committed, pushed, and remotely green.
+
+Safety decision: retain one no-follow private open, 418,755 exact input bytes,
+one thread, 30 seconds, 256 MiB RSS, 2 MiB output, 4 MiB incremental disk, 15
+GiB free disk, zero network, zero archive-member bytes, and no retry or rerun.
+At decision recording, every private, payload, neural, target, model, score,
+provider, hardware, release, and claim counter is zero.
+
+Evidence: `docs/MARC_2_LIVE_SELECTION_RECOVERY_AUTHORIZATION_DECISION.md`,
+`registries/marc2_live_selection_recovery_authorization_decision.v0.json`, and
+`tests/test_marc2_live_selection_recovery_authorization_decision.py`.

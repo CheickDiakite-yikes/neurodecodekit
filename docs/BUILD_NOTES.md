@@ -9565,3 +9565,42 @@ target-free selection.
 Scientific claim not established: this request reads no human neural data and
 establishes no neural effect, decoding accuracy, language decoding, or
 thought-to-text capability.
+
+## 2026-08-16 - MARC2-FW1C Packet-Bound Authorization Decision
+
+- Exact all-false request `7804c3e87a26574a93c5dfda831e44e9d06806ca`
+  passed Base Python job `94672387003`, Optional Neuro Readers job
+  `94672386941`, and CI `31769518851` before it was identified as the sole
+  active Tier C packet.
+- Recorded the maintainer's fresh actual message `continue` as eight UTF-8
+  bytes with SHA-256
+  `e256ee8e7aff6957a781d8328f0f68e26996564c81fa458da59fbca2305138ad`.
+  The decision incorporates the green packet by hash-bound reference and does
+  not fabricate a long authorization utterance.
+- Preserved both delayed barriers: generated/mock wrapper implementation may
+  begin only after this decision is remotely green; the one target-free
+  private-manifest selection remains closed until that exact wrapper is also
+  remotely green.
+- Bound the native `MARC2-FW1C` registry and distinct FW1B-format certificate
+  design, future wrapper HEAD proof, 90 future mutations, exact 418,755-byte
+  structural source identity, new v1 output root, one-open limit, 15 GiB free
+  disk, 30 seconds, 256 MiB RSS, 2 MiB output, and zero network or archive-
+  member bytes.
+- Eighteen decision tests and 87 focused request/proof/decision checks pass.
+  The dependency-light suite passes 3,170 tests with 204 expected skips. The
+  optional-neuro inventory passes 3,241 tests with 35 skips across fresh A-M
+  and N-Z processes: 2,728 with 28 skips and 513 with seven skips. Ruff,
+  compilation, all 216 registries, artifact bindings, and diff hygiene pass.
+- At decision recording, only one GitHub proof query occurred. Every wrapper,
+  output-root, private, network, archive, payload, neural, target, derivative,
+  model, score, provider, hardware, retry, cleanup, release, and claim counter
+  remains zero.
+
+Engineering capability authorized after green decision: one exact additive
+wrapper may be generated-qualified and, only after its own green proof, convert
+one exact private structural manifest into a deterministic storage-bounded
+target-free selection.
+
+Scientific claim not established: this decision is not neural data or a result
+and establishes no neural effect, decoding accuracy, brain-specific origin,
+language decoding, or thought-to-text capability.

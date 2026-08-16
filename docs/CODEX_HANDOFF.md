@@ -4406,3 +4406,29 @@ exact request, and require both CI jobs green. Then identify it as the sole
 active Tier C packet and stop for fresh packet-bound maintainer words. The
 current and every earlier `continue` are not retroactive. Do not implement the
 wrapper, touch the retained path, create an output root, or enter `MARC2-FW2`.
+
+## 2026-08-16 MARC2-FW1C Authorization Decision Handoff
+
+Exact request `7804c3e87a26574a93c5dfda831e44e9d06806ca` passed Base
+Python job `94672387003`, Optional Neuro Readers job `94672386941`, and CI
+`31769518851`. After Codex identified it as the sole active Tier C packet and
+named the fresh-decision boundary, the maintainer's next message was exactly
+`continue`.
+
+Read `docs/MARC_2_LIVE_SELECTION_RECOVERY_AUTHORIZATION_DECISION.md`, its
+registry, and the matching decision test. The record quotes only those actual
+eight UTF-8 bytes and binds the immutable green packet by reference. It keeps a
+native future FW1C registry distinct from the FW1B-format proof certificate and
+requires the certificate to bind the future wrapper HEAD.
+
+The decision's 18 tests, 87 focused checks, 3,170 dependency-light tests, and
+3,241 optional-neuro tests pass. Ruff, compilation, all 216 registries,
+artifact bindings, and diff hygiene pass. No wrapper, output-root, private,
+archive, payload, neural, target, model, score, retry, or claim operation
+occurred.
+
+Immediate next gate: commit and push this exact decision and require both CI
+jobs green. Only then implement and qualify Stage 1 with generated/mock inputs.
+Do not touch the retained manifest or new live output root until the exact
+wrapper is separately committed, pushed, and green. Do not enter `MARC2-FW2`,
+access archive members or payload, run a model, score, or upgrade a claim.

@@ -50,9 +50,15 @@
    `registries/marc2_live_selection_recovery_authorization_request.v0.json`,
    and its request test. `MARC2-FW1C` proposes a generated/mock wrapper followed
    only after separate green proof by one target-free structural-manifest
-   selection. The packet is all false and authorizes neither stage. It must be
-   committed, pushed, and pass both jobs before Codex may identify it as the
-   sole Tier C gate and await fresh packet-bound maintainer words.
+   selection. Exact request `7804c3e` passed both jobs in CI `31769518851` and
+   was identified as the sole Tier C gate. Then read
+   `docs/MARC_2_LIVE_SELECTION_RECOVERY_AUTHORIZATION_DECISION.md`,
+   `registries/marc2_live_selection_recovery_authorization_decision.v0.json`,
+   and its decision test. The decision quotes the maintainer's fresh exact
+   `continue`, binds only the packet, and remains ineffective until its own
+   commit is pushed and both jobs are green. Stage 1 is generated/mock only;
+   the retained manifest remains closed until the exact wrapper is separately
+   remotely green.
    Archive members, payloads, signals, targets, models, scores, language
    datasets, provider calls, and `MARC2-FW2` remain unauthorized. Then read
    `docs/CODEX_HANDOFF.md` for the exact handoff state.

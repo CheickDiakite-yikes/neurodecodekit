@@ -2014,9 +2014,28 @@ The local gate passes 69 focused request/proof tests, all 3,152 dependency-light
 tests with 204 expected skips, and all 3,223 optional-neuro tests with 35 skips.
 Ruff, compilation, 215-registry parsing, artifact hashes, and diff hygiene pass.
 
-Current status is all-false request prepared, not authorized. Every private,
-real, network, payload, neural, target, model, score, retry, and claim counter
-is zero. Commit, push, and require both CI jobs green for the request. Only
-then may Codex identify it as the sole Tier C packet and await fresh maintainer
-words. Do not touch the retained path, create the new root, implement the live
-wrapper, or enter `MARC2-FW2` from this packet alone.
+Exact request `7804c3e87a26574a93c5dfda831e44e9d06806ca` passed Base
+Python job `94672387003`, Optional Neuro Readers job `94672386941`, and CI
+`31769518851`. Codex then identified it as the sole Tier C packet and stated
+that one fresh packet-bound maintainer instruction was required.
+
+The maintainer's next message was exactly `continue`. Read
+`docs/MARC_2_LIVE_SELECTION_RECOVERY_AUTHORIZATION_DECISION.md`,
+`registries/marc2_live_selection_recovery_authorization_decision.v0.json`, and
+the matching decision test. The record preserves those actual eight UTF-8
+bytes, binds the immutable green request and both stage barriers, and does not
+claim the packet's long scope was typed by the maintainer.
+
+The local decision gate passes 18 decision tests, 87 combined request/proof/
+decision checks, all 3,170 dependency-light tests with 204 expected skips, and
+all 3,241 optional-neuro tests with 35 skips. Ruff, compilation, 216-registry
+parsing, artifact bindings, and diff hygiene pass. Every private, real,
+network, payload, neural, target, model, score, retry, and claim counter is
+zero.
+
+Current status is packet-bound decision prepared but ineffective until its own
+commit, push, and both remote jobs are green. Only after that proof may Stage 1
+generated/mock wrapper implementation begin. The retained manifest and new
+output root remain closed until the exact wrapper is separately remotely green.
+Do not enter `MARC2-FW2`, access archive members or payload, run a model, score,
+or upgrade a claim from this decision.
