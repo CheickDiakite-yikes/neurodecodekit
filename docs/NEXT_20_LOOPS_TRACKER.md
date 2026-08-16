@@ -2527,3 +2527,9 @@ and no FW2/CIL1 eligibility. Current gate: commit and remotely green the
 aggregate failure result, then perform only separately named artifact-only
 mismatch localization. Any new private read or neural experiment remains a
 fresh Tier C boundary.
+
+Failure result `6fa6865` passed Base job `95224622453`, Optional job
+`95224622466`, and CI `31971526419`. The next open task is now the separately
+named artifact-only mismatch localization lane. It may read only committed
+code, contracts, result artifacts, and generated fixtures; ignored MARC2
+paths, private outputs, payloads, models, and targets remain closed.

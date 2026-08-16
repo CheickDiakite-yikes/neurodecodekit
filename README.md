@@ -1892,7 +1892,8 @@ Read this before interpreting any number in the repository.
   emitted and will not be reconstructed from private data. No archive member,
   neural sample, target, model, prediction, or score was touched. The attempt
   is consumed with no rerun; FW2 and CIL1 remain closed while an artifact-only
-  prospective mismatch analysis is designed.
+  prospective mismatch analysis is designed. Failure result `6fa6865` passed
+  both jobs in CI `31971526419`.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

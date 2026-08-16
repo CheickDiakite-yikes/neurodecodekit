@@ -15,6 +15,10 @@
 > unrelated tracker inspection NDJSON. Immediate gate: test, commit, push, and
 > remotely green the aggregate failure result, then use only committed
 > artifacts and generated fixtures for a separately named mismatch analysis.
+> Failure result `6fa68653779ca86c9c9320ab0cd36e4028c160a5` passed Base
+> Python job `95224622453`, Optional Neuro Readers job `95224622466`, and CI
+> `31971526419`. The artifact-only mismatch lane is now eligible; no ignored
+> MARC2 path or private result may be inspected.
 
 > Current MARC2 handoff, 2026-08-16: exact VR3 implementation `2467876` passed
 > Base Python job `95207398015`, Optional Neuro Readers job `95207398092`, and

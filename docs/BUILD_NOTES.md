@@ -9813,6 +9813,10 @@ establishes no neural effect or decoding performance.
 - The lane is consumed with zero retry/rerun/resume/fallback. FW2 and CIL1
   remain ineligible. Next work is artifact-only mismatch localization; any new
   private read requires a new packet and fresh Tier C decision.
+- Failure result `6fa68653779ca86c9c9320ab0cd36e4028c160a5` passed Base
+  Python job `95224622453`, Optional Neuro Readers job `95224622466`, and CI
+  `31971526419`. This closes the consumed-result record and opens only the
+  artifact-only localization lane.
 
 Engineering capability added: the green executor safely crossed machine
 readiness and one integrity-checked structural open, then failed closed at the

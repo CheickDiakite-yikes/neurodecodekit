@@ -1830,6 +1830,12 @@ artifact-only mismatch localization using committed code/contracts, generated
 fixtures, and this aggregate route; any new private read requires a new Tier C
 packet and fresh decision.
 
+Failure result `6fa68653779ca86c9c9320ab0cd36e4028c160a5` passed Base
+Python job `95224622453`, Optional Neuro Readers job `95224622466`, and CI
+`31971526419`. Artifact-only mismatch localization is now eligible under Tier
+A/B. It must not inspect any ignored MARC2 path or reconstruct the missing
+adapter predicate from private state.
+
 Read `docs/MARC_2_MACHINE_STABLE_COHORT_AND_NEURAL_CONTROL_RESEARCH.md` and
 `registries/marc2_machine_stable_cohort_and_neural_control_research.v0.json`.
 VR3 result commit `a186486fcb3dfb2b6d3a743f180b7ac2fa0b4dd3` passed Base

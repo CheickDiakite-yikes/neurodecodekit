@@ -256,6 +256,9 @@
    integrity; the frozen VR2 adapter refused before a cohort was returned. Do
    not reopen or alter the fresh certificate, marker, output root, or retained
    source. There is no retry, no real cohort, and no FW2/CIL1 eligibility.
+   Failure result `6fa6865` passed Base job `95224622453`, Optional job
+   `95224622466`, and CI `31971526419`. Continue only with artifact-only
+   mismatch localization; a new private read remains Tier C.
    Then
    read `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
