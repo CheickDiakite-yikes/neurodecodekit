@@ -2118,3 +2118,27 @@ validates producer-native keys first, maps `directory` to
 duplicate, dual-alias, extra-key, or value mutation cases. The consumed FW1C
 executor cannot be patched or reused. Any future live read and `MARC2-FW2`
 remain behind a new all-false Tier C packet and decision.
+
+### MARC2-TA1 - Generated Transport Alias Adapter (Registered)
+
+The frozen contract binds green lineage commit
+`8c7494812fcfbfa6ea6fd79c1fa119b865df3cb7`, CI `31932081970`, Base Python
+job `95128350133`, and Optional Neuro Readers job `95128350179`.
+
+The future generated-only adapter must validate producer-native transport keys
+`directory`, `metadata`, and `tail`, deep-copy the manifest, map only
+`directory` to `central_directory`, preserve every digest value, and then call
+the unchanged selector. It must replay the existing 16-person, 96-bundle,
+384-member, 8,105,207,776-byte generated result in canonical and reversed
+source-entry orders.
+
+Qualification requires 26 named mutations covering schema drift, missing,
+extra, consumer-only, and dual aliases, malformed digests, object/value
+mutation, aliasing, entry drift, direct unadapted selector refusal, selector
+result drift, replay drift, and forbidden counters.
+
+Current status: registration only. Push this exact contract and require both
+jobs green before implementation. The future module may expose only `plan`,
+`qualify`, and `inspect`. No live/private path, execute command, FW1C reuse,
+archive, neural, target, model, score, network, or `MARC2-FW2` operation is
+allowed.

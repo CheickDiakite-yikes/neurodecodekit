@@ -76,7 +76,10 @@
    emits transport key `directory`, while the generated fixture and both
    consumer validators require `central_directory`. This explains F02 without
    private reinspection. The next safe task is generated-only qualification of
-   a new source-native-to-selector adapter; no live read is authorized.
+   a new source-native-to-selector adapter; no live read is authorized. Read
+   `docs/MARC_2_TRANSPORT_ALIAS_ADAPTER_PREREGISTRATION.md` and its contract.
+   `MARC2-TA1` is frozen but unimplemented: first push this exact registration
+   and require both CI jobs green, then implement only the generated adapter.
    Archive members, payloads, signals, targets, models, scores, language
    datasets, provider calls, and `MARC2-FW2` remain unauthorized. Then read
    `docs/CODEX_HANDOFF.md` for the exact handoff state.

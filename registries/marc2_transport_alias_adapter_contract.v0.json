@@ -1,0 +1,186 @@
+{
+  "schema_name": "neurodecodekit.marc2_transport_alias_adapter_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "MARC-2-generated-source-native-transport-alias-adapter-v0",
+  "lane_id": "MARC2-TA1",
+  "recorded_at_local": "2026-08-16",
+  "status": "frozen_generated_only_adapter_contract_implementation_pending",
+  "objective": "Prove that one explicit source-native directory to selector-internal central_directory mapping can preserve transport hashes and restore generated producer-to-selector compatibility without any private or neural access.",
+  "green_lineage_proof": {
+    "commit": "8c7494812fcfbfa6ea6fd79c1fa119b865df3cb7",
+    "CI_run_id": 31932081970,
+    "base_python_job_id": 95128350133,
+    "optional_neuro_job_id": 95128350179,
+    "both_required_jobs_green_before_registration": true,
+    "lineage_route": "MARC2SL-R2",
+    "lineage_contract_sha256": "1ef2f481219a002318acddeca02b0dccf2b54b636c93b712defce82b9e7ff1ce",
+    "lineage_result_sha256": "f2290fc7a1a3d9afa9fc4b25a2e190350555578440b95d0b3c907de7c2e40476"
+  },
+  "fixed_inputs": [
+    {
+      "role": "lineage_contract",
+      "path": "registries/marc2_source_schema_lineage_contract.v0.json",
+      "sha256": "1ef2f481219a002318acddeca02b0dccf2b54b636c93b712defce82b9e7ff1ce"
+    },
+    {
+      "role": "lineage_result",
+      "path": "registries/marc2_source_schema_lineage_result.v0.json",
+      "sha256": "f2290fc7a1a3d9afa9fc4b25a2e190350555578440b95d0b3c907de7c2e40476"
+    },
+    {
+      "role": "selector_contract",
+      "path": "registries/marc2_freewill_prefix_selection_contract.v0.json",
+      "sha256": "dfe614cd7ec27c54c4f03848e3878c714222db043f501b9b07e57c7dc9f5f702"
+    },
+    {
+      "role": "selector_module",
+      "path": "src/neurodecodekit/datasets/marc2_freewill_prefix_selection.py",
+      "sha256": "86fa30fbd1caed735f0fb2e627144482a2bb8e033567bb3794e3f05508005c97"
+    }
+  ],
+  "generated_source_manifest": {
+    "schema_name": "neurodecodekit.marc1_central_directory_private_manifest",
+    "schema_version": "0.1.0",
+    "proof_posture": "generated_producer_native_private_metadata_only",
+    "source_provider": "generated_producer_fixture",
+    "transport_keys": [
+      "directory",
+      "metadata",
+      "tail"
+    ],
+    "entries": 1227,
+    "regular_file_entries": 1025,
+    "directory_entries": 202,
+    "contains_human_content": false,
+    "contains_private_path": false,
+    "contains_signal_event_target_label_quality_or_channel": false
+  },
+  "adapter_contract": {
+    "source_transport_keys": [
+      "directory",
+      "metadata",
+      "tail"
+    ],
+    "selector_transport_keys": [
+      "central_directory",
+      "metadata",
+      "tail"
+    ],
+    "single_alias": {
+      "source_key": "directory",
+      "selector_key": "central_directory"
+    },
+    "source_manifest_validated_before_copy_or_mapping": true,
+    "source_object_mutation_allowed": false,
+    "source_and_adapted_objects_must_not_alias": true,
+    "metadata_hash_preserved": true,
+    "tail_hash_preserved": true,
+    "directory_hash_preserved_as_central_directory": true,
+    "transport_hash_multiset_preserved": true,
+    "missing_extra_duplicate_or_both_aliases_refused": true,
+    "unknown_top_level_source_or_entry_field_refused": true,
+    "selector_called_only_after_adapter_validation": true,
+    "direct_source_native_manifest_to_selector_must_refuse": true,
+    "deterministic_replay_required": true
+  },
+  "expected_selector_result": {
+    "route": "MARC2FWG-R1",
+    "selected_subjects": 16,
+    "selected_run_bundles": 96,
+    "selected_core_members": 384,
+    "selected_reservation_bytes": 8105207776,
+    "selection_identity_must_match_existing_generated_selector": true,
+    "scientific_value": false
+  },
+  "qualification": {
+    "required_mutations": [
+      "source_top_level_missing_field",
+      "source_top_level_extra_field",
+      "source_schema_name_drift",
+      "source_schema_version_drift",
+      "source_proof_posture_drift",
+      "source_provider_drift",
+      "source_identity_missing_field",
+      "source_identity_extra_field",
+      "transport_missing_directory",
+      "transport_missing_metadata",
+      "transport_missing_tail",
+      "transport_extra_key",
+      "transport_central_directory_without_directory",
+      "transport_directory_and_central_directory_both_present",
+      "transport_nonstring_digest",
+      "transport_short_digest",
+      "transport_uppercase_digest",
+      "transport_value_mutated_during_mapping",
+      "source_object_mutated_during_mapping",
+      "source_and_adapted_object_alias",
+      "entry_count_drift",
+      "entry_schema_drift",
+      "direct_unadapted_selector_call",
+      "adapted_selector_result_drift",
+      "nondeterministic_replay",
+      "forbidden_private_target_model_or_network_counter"
+    ],
+    "required_mutation_count": 26,
+    "required_success_paths": [
+      "canonical_source_order",
+      "reversed_source_entry_order"
+    ],
+    "generated_output_retained": false
+  },
+  "future_implementation_surface": {
+    "module": "neurodecodekit.datasets.marc2_transport_alias_adapter",
+    "commands": [
+      "plan",
+      "qualify",
+      "inspect"
+    ],
+    "execute_command_allowed": false,
+    "generic_source_path_or_URL_argument_allowed": false,
+    "private_root_or_consumed_executor_import_allowed": false,
+    "network_archive_neural_target_model_or_score_interface_allowed": false,
+    "base_dependency_delta": 0,
+    "standard_library_only": true
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "generated_output_bytes": 2097152,
+    "incremental_disk_bytes": 2097152,
+    "network_bytes": 0,
+    "private_or_Git_ignored_bytes": 0
+  },
+  "ordered_routes": [
+    "MARC2TA-G1-generated_producer_adapter_selector_integration_passed",
+    "MARC2TA-F01-contract_or_artifact_identity",
+    "MARC2TA-F02-source_manifest_schema",
+    "MARC2TA-F03-transport_alias_or_digest",
+    "MARC2TA-F04-copy_value_or_replay_integrity",
+    "MARC2TA-F05-selector_integration_or_result",
+    "MARC2TA-F06-private_target_model_network_or_claim_boundary",
+    "MARC2TA-F07-resource_or_output_cap"
+  ],
+  "authorization_state": {
+    "private_manifest_or_Git_ignored_path_access": false,
+    "consumed_marker_output_root_or_FW1C_reuse": false,
+    "archive_local_header_or_member_payload_access": false,
+    "signal_event_target_label_quality_channel_or_geometry_access": false,
+    "derivative_cache_feature_split_or_neurotoken_creation": false,
+    "training_inference_prediction_freeze_delivery_or_score": false,
+    "network_download_provider_language_model_stream_device_or_hardware": false,
+    "MARC2_FW2_entry": false,
+    "release_publication_or_scientific_claim_upgrade": false
+  },
+  "next_gate": {
+    "generated_only_implementation_allowed_after_this_registration_is_remotely_green": true,
+    "future_live_adapter_or_private_read_allowed": false,
+    "future_live_attempt_requires_separate_all_false_Tier_C_packet_and_decision": true
+  },
+  "claim_boundary": {
+    "engineering_claim_if_successful": "A generated producer-native manifest can cross one explicit value-preserving schema adapter and reach the frozen selector without weakening source validation.",
+    "scientific_claim_not_established": "Generated archive metadata contain no neural payload target prediction or score and establish no neural effect decoding accuracy language decoding or thought-to-text capability."
+  }
+}

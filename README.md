@@ -1671,6 +1671,13 @@ Read this before interpreting any number in the repository.
   and performed zero private, archive, neural, target, model, or network work.
   A future repair must validate the producer-native vocabulary first, then map
   `directory` to `central_directory` exactly once in a new adapter.
+- **MARC2-TA1 generated adapter registration:** the frozen next contract binds
+  that one-way map before implementation. It requires producer-native
+  validation, deep-copy isolation, byte-for-byte preservation of all transport
+  hashes, 26 refusal mutations, two replay orders, and the unchanged generated
+  16-person/384-member selector result. The future surface has only `plan`,
+  `qualify`, and `inspect`; no live path, execute command, private input,
+  archive reader, neural data, target, model, score, or network client exists.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
@@ -2484,6 +2491,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/marc2_live_selection_recovery_failure_result.v0.json](registries/marc2_live_selection_recovery_failure_result.v0.json) | aggregate machine result binding green proof, report identity, one-open counters, `MARC2FWC-F02`, zero forbidden operations, and closed FW2 authority |
 | [docs/MARC_2_SOURCE_SCHEMA_LINEAGE_AUDIT.md](docs/MARC_2_SOURCE_SCHEMA_LINEAGE_AUDIT.md) | exact producer-versus-consumer transport-key diagnosis, why generated tests missed it, measured artifact-only audit, and prospective one-way adapter design |
 | [registries/marc2_source_schema_lineage_result.v0.json](registries/marc2_source_schema_lineage_result.v0.json) | machine-readable `MARC2SL-R2` result, exact key sets, source-binding proof, zero forbidden counters, and closed live/FW2 boundary |
+| [docs/MARC_2_TRANSPORT_ALIAS_ADAPTER_PREREGISTRATION.md](docs/MARC_2_TRANSPORT_ALIAS_ADAPTER_PREREGISTRATION.md) | frozen generated-only producer-native adapter design, mutation matrix, selector integration target, resources, and closed live boundary |
+| [registries/marc2_transport_alias_adapter_contract.v0.json](registries/marc2_transport_alias_adapter_contract.v0.json) | machine-readable `MARC2-TA1` contract binding green lineage proof, exact vocabularies, 26 mutations, three-command surface, and zero live authority |
 | [docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md](docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md) | layered compact-adapter plus GPT-Sol architecture, four matched conditions, and staged authorization boundary |
 | [docs/FOUNDATION_MODEL_BRIDGE_V0.md](docs/FOUNDATION_MODEL_BRIDGE_V0.md) | implemented FM-0 synthetic no-call schemas, CLI, strict refusals, hashes, and measured roundtrip |
 | [docs/FOUNDATION_MODEL_LIVE_SMOKE_PREREGISTRATION.md](docs/FOUNDATION_MODEL_LIVE_SMOKE_PREREGISTRATION.md) | frozen one-shot FM-1 Terra matrix, privacy boundary, provider settings, resource caps, and no-science ceiling |

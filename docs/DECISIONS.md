@@ -7883,3 +7883,26 @@ Evidence: `docs/MARC_2_SOURCE_SCHEMA_LINEAGE_AUDIT.md`,
 `registries/marc2_source_schema_lineage_contract.v0.json`,
 `registries/marc2_source_schema_lineage_result.v0.json`, the auditor module,
 and its two test modules.
+
+## 0239 - Freeze A Generated Producer-Native Transport Adapter
+
+Design decision: preserve the source producer's `directory` vocabulary and the
+selector's existing `central_directory` vocabulary as separate schemas. Allow
+one explicit value-preserving map only after exact source validation.
+
+Integrity decision: require deep-copy object independence, unchanged digest
+values, direct unadapted selector refusal, exact existing selection replay, 26
+mutations, and canonical/reversed entry-order success paths.
+
+Scope decision: registration and later generated qualification are Tier B.
+The future module has no execute command, generic path, network client, private
+root, consumed FW1C import, archive reader, neural input, target, model, or
+score interface.
+
+Gate decision: commit and push this registration and require both CI jobs green
+before implementation. A live adapter, private read, or `MARC2-FW2` entry
+remains a separately named Tier C event.
+
+Evidence: `docs/MARC_2_TRANSPORT_ALIAS_ADAPTER_PREREGISTRATION.md`,
+`registries/marc2_transport_alias_adapter_contract.v0.json`, and
+`tests/test_marc2_transport_alias_adapter_contract.py`.

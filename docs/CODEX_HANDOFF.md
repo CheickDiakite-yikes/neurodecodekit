@@ -4530,3 +4530,22 @@ source-native-to-selector adapter. It must validate `directory`, `metadata`,
 and `tail` first, then map `directory` to `central_directory` exactly once
 without changing a hash value. Do not patch or reuse consumed FW1C. No private
 read or `MARC2-FW2` work is authorized.
+
+## 2026-08-16 MARC2-TA1 Registration Handoff
+
+Read `docs/MARC_2_TRANSPORT_ALIAS_ADAPTER_PREREGISTRATION.md`, its contract,
+and contract test. The registration binds green lineage commit
+`8c7494812fcfbfa6ea6fd79c1fa119b865df3cb7`, CI `31932081970`, Base job
+`95128350133`, and Optional job `95128350179`.
+
+The future generated-only module must validate producer-native keys, deep-copy
+the source, map only `directory` to `central_directory`, preserve all values,
+and replay the unchanged generated selector result. Twenty-six mutations and
+two source-entry orders are frozen. Eleven focused, 3,266 dependency-light,
+and 3,337 optional-neuro tests pass. Ruff, compilation, all 222 registries,
+and diff hygiene pass.
+
+Immediate gate: commit and push this exact registration and require both jobs
+green. Only then implement `plan`, `qualify`, and `inspect`. Do not add
+`execute`, read a private path, import or reuse consumed FW1C, enter FW2, or
+access archive, neural, target, model, score, network, provider, or hardware.

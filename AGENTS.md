@@ -1499,7 +1499,13 @@ fixture, selector validator, and FW1C validator require `central_directory`,
 F02; no private value was observed. A future adapter must validate the
 source-native keys before a one-way `directory` to `central_directory` map.
 Do not patch or reuse FW1C. Generated adapter qualification is the next safe
-task; live access and `MARC2-FW2` remain separately gated.
+task; live access and `MARC2-FW2` remain separately gated. Read
+`docs/MARC_2_TRANSPORT_ALIAS_ADAPTER_PREREGISTRATION.md` and
+`registries/marc2_transport_alias_adapter_contract.v0.json`. `MARC2-TA1`
+freezes a generated producer-native fixture, one value-preserving alias, 26
+mutations, two replay orders, and the unchanged 16-person/384-member selector
+result. It has no implementation or execute surface yet. Commit, push, and
+obtain both green jobs for this exact registration before implementation.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

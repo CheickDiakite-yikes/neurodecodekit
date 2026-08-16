@@ -9724,3 +9724,37 @@ private reinspection.
 Scientific claim not established: no neural payload, target, prediction, or
 score was accessed, so this audit establishes no neural effect, decoding
 accuracy, language decoding, or thought-to-text capability.
+
+## 2026-08-16 - MARC2-TA1 Generated Adapter Registration
+
+- Bound green lineage commit `8c7494812fcfbfa6ea6fd79c1fa119b865df3cb7`,
+  CI `31932081970`, Base Python job `95128350133`, and Optional Neuro Readers
+  job `95128350179` before freezing the adapter contract.
+- Froze exact producer-native and selector-internal transport vocabularies with
+  one allowed `directory` to `central_directory` mapping after source
+  validation.
+- Required deep-copy isolation, byte-for-byte hash preservation, no source
+  mutation, direct unadapted selector refusal, deterministic replay, 26 named
+  mutations, two entry orders, and the unchanged 16-person/384-member generated
+  result.
+- Future resources are one thread/worker/job, 30 seconds, 256 MiB RSS, 2 MiB
+  output/disk, and zero network or private bytes. The surface is limited to
+  `plan`, `qualify`, and `inspect` with no base dependency delta.
+- Eleven focused contract tests pass. The complete dependency-light suite
+  passes 3,266 tests with 204 expected skips. Optional-neuro A-M and N-Z pass
+  2,824 tests with 28 skips and 513 tests with seven skips, respectively, for
+  3,337 optional-enabled tests with 35 skips. Ruff, compilation, all 222
+  registries, and diff hygiene pass.
+- The optional A-M lane required an outside-sandbox replay because an existing
+  timing test creates a local forkserver socket; the sandboxed refusal was
+  `PermissionError: [Errno 1] Operation not permitted`. The unchanged lane
+  passed in a fresh permitted process. No implementation, generated execution,
+  private path, consumed root, archive, neural, target, model, score, provider,
+  hardware, FW2, or claim operation occurred.
+
+Engineering capability specified: one explicit generated producer-to-selector
+schema adapter can be tested without weakening source validation.
+
+Scientific claim not established: this registration contains no neural
+payload, target, prediction, or score and establishes no neural effect,
+decoding accuracy, language decoding, or thought-to-text capability.
