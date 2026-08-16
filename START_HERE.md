@@ -227,7 +227,14 @@
    certificate while every private and scientific counter remained zero. The
    certificate is transient, no real cohort identity exists, and FW2/CIL1 are
    still ineligible. The result must become remotely green before one separate
-   all-false Tier C structural packet is prepared.
+   all-false Tier C structural packet is prepared. Result `0a4a7fb` passed Base
+   job `95214802865`, Optional job `95214802846`, and CI `31967501519`. Then
+   read `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_AUTHORIZATION_PACKET.md`
+   and its request registry. `MARC2-VR4P` is all false and requests only one
+   future generated/mock implementation plus one later proof-gated structural
+   read. It must be committed, pushed, and remotely green before it can be
+   identified as the sole Tier C packet; no current or earlier `continue` is
+   retroactive authority.
    Then
    read `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked

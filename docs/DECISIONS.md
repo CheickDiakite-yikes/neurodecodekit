@@ -8575,3 +8575,34 @@ content open. Keep FW2 and CIL1 ineligible.
 Evidence: `docs/MARC_2_MACHINE_READINESS_RESULT.md`,
 `registries/marc2_machine_readiness_result.v0.json`, and its focused result
 test.
+
+## 0263 - Request One Machine-Stable Target-Free Structural Pass
+
+Packet decision: after readiness result `0a4a7fb` passed both jobs in CI
+`31967501519`, freeze one all-false `MARC2-VR4P` request. Separate a future
+generated/mock implementation from one later real invocation, and require the
+exact implementation to be remotely green before the real sequence.
+
+Artifact decision: limit cleanup to the exact expired mode-0600, 4,551-byte
+readiness certificate and its SHA-256. Require no-follow identity validation,
+one machine-only content read, and one unlink before a fresh certificate. Bind
+the fresh certificate to the future exact proof record rather than ambient
+branch HEAD. Authorize no other deletion, rename, overwrite, copy, path, root,
+project, or consumed artifact.
+
+Structural decision: after fresh readiness, place a new marker immediately
+before one 418,755-byte source open. Preserve 1,227 rows, 238 bundles, dynamic
+`195 + 43`, one VR2 call, and the target-free 16-subject/96-bundle/384-member
+selection. Treat 8,105,207,776 selected bytes as reservation metadata only;
+network, archive-member, payload, signal, target, model, prediction, and score
+limits remain zero.
+
+Authority decision: keep every request flag false. Require the request itself
+to be committed, pushed, and remotely green, then require a fresh
+packet-bound maintainer message and separate green decision. The current and
+earlier `continue` messages do not authorize implementation or access.
+
+Evidence:
+`docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_AUTHORIZATION_PACKET.md`,
+`registries/marc2_machine_stable_private_recovery_authorization_request.v0.json`,
+and its focused request test.

@@ -1768,6 +1768,25 @@ binds safe handling of the exact expired readiness artifact and requires a
 fresh certificate. Do not access a private path, freeze a cohort, enter FW2 or
 CIL1, train, predict, open targets, or score from this result.
 
+Result `0a4a7fbe43238465ebd3ebbd97a20801e42f76c8` passed Base
+Python job `95214802865`, Optional Neuro Readers job `95214802846`, and CI
+`31967501519`. Read
+`docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_AUTHORIZATION_PACKET.md` and
+`registries/marc2_machine_stable_private_recovery_authorization_request.v0.json`.
+The all-false `MARC2-VR4P` request binds one future generated/mock wrapper and,
+only after its exact implementation is remotely green, one structural pass.
+It limits deletion to the exact expired 4,551-byte readiness certificate,
+requires a fresh proof-bound readiness certificate before private path work,
+then places a new marker immediately before one 418,755-byte source open. The
+unchanged target-free result is 238 bundles classified as `195 + 43`, then 16
+subjects, 96 bundles, and 384 members selected as metadata only. Network,
+archive member, payload, signal, target, model, prediction, and score limits
+remain zero. Commit, push, and obtain both green jobs for this request before
+identifying it as the sole Tier C packet. The current or any earlier
+`continue` is not retroactive. Do not implement the real wrapper, inspect or
+unlink the expired certificate, touch the private source, or enter FW2/CIL1
+from the request alone.
+
 Read `docs/MARC_2_MACHINE_STABLE_COHORT_AND_NEURAL_CONTROL_RESEARCH.md` and
 `registries/marc2_machine_stable_cohort_and_neural_control_research.v0.json`.
 VR3 result commit `a186486fcb3dfb2b6d3a743f180b7ac2fa0b4dd3` passed Base

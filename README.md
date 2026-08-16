@@ -1853,6 +1853,15 @@ Read this before interpreting any number in the repository.
   scores. This proves the bounded readiness mechanism works on the current
   machine. It did not inspect or freeze a cohort, and its expiring certificate
   is not authority for a later private executor; FW2 and CIL1 remain closed.
+- **MARC2-VR4P structural-pass request:** readiness result `0a4a7fb` passed
+  both jobs in CI `31967501519`. A new all-false Tier C packet now proposes one
+  generated/mock implementation followed, only after its own green proof, by
+  one 418,755-byte target-free structural read. It may safely remove only the
+  exact expired 4,551-byte readiness certificate, obtain a fresh certificate,
+  place a marker, and freeze the existing `238 -> 195 + 43 -> 16 subjects / 96
+  bundles / 384 members` identity. It authorizes nothing yet and permits zero
+  network or archive-payload bytes, neural samples, targets, models,
+  predictions, or scores. A fresh packet-bound maintainer decision is required.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

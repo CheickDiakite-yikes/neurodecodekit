@@ -5180,3 +5180,26 @@ open. Do not use the current or any earlier `continue` retroactively. Do not
 access a private path, archive member, neural payload, target, model,
 prediction, or score until its later packet is green and receives a fresh
 packet-bound maintainer decision.
+
+## 2026-08-16 MARC2-VR4P Structural Packet Handoff
+
+Readiness result `0a4a7fbe43238465ebd3ebbd97a20801e42f76c8`
+passed Base Python job `95214802865`, Optional Neuro Readers job
+`95214802846`, and CI `31967501519` before the all-false request was prepared.
+
+The request proposes one generated/mock wrapper and, only after its exact
+implementation is remotely green, one target-free real pass. It binds safe
+cleanup of only the exact expired 4,551-byte readiness certificate, a fresh
+three-pass proof-bound certificate, a new absent output root, a mode-0600
+marker immediately before one 418,755-byte private source open, and one VR2
+adapter call. Expected cohort metadata remains `238 -> 195 + 43 -> 16
+subjects / 96 bundles / 384 members`. Network and archive-payload bytes are
+zero; output is capped at 4 MiB.
+
+Every authorization flag and current access counter is false/zero. Immediate
+gate: commit, push, and obtain both green jobs for the packet. Only then
+identify it as the sole Tier C packet and ask for a fresh packet-bound
+maintainer `continue`, `approve`, or `proceed`. Do not use the current or any
+earlier message retroactively. Do not inspect or unlink the readiness artifact,
+implement the wrapper, touch the private source/output root, freeze a cohort,
+or enter FW2/CIL1 from this request alone.

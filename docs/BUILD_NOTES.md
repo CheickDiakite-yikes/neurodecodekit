@@ -9759,6 +9759,39 @@ Scientific claim not established: this registration contains no neural
 payload, target, prediction, or score and establishes no neural effect,
 decoding accuracy, language decoding, or thought-to-text capability.
 
+## 2026-08-16 - MARC2-VR4P All-False Structural Recovery Packet
+
+- Bound green readiness result `0a4a7fbe43238465ebd3ebbd97a20801e42f76c8`,
+  Base Python job `95214802865`, Optional Neuro Readers job `95214802846`, and
+  CI `31967501519`.
+- Requested a future two-stage sequence: generated/mock wrapper implementation
+  after a separate green decision, then one real target-free structural pass
+  only after the exact implementation is remotely green.
+- Limited cleanup to the exact expired mode-0600, 4,551-byte readiness
+  certificate with SHA-256
+  `5c268ffaefe6e557ace92214c6ec3bab6db29d0a89dee4c83ebd94dbf07b522e`.
+  Other file, project, cache, consumed-root, rename, copy, and overwrite limits
+  are zero.
+- Required one fresh proof-bound readiness certificate before any private-path
+  operation, then a mode-0600 marker immediately before one 418,755-byte source
+  open and one VR2 adapter call.
+- Preserved 1,227 rows, 238 bundles, dynamic `195 + 43`, and the target-free
+  16-subject/96-bundle/384-member selection. Network and archive-member bytes
+  remain zero; combined output is capped at 4 MiB.
+- All 22 requested authorization fields are false and all 29 current access
+  counters are zero. Nine focused packet tests pass.
+- The request must be committed, pushed, and both jobs green before it can be
+  identified as the sole Tier C packet. No current or earlier `continue` is
+  retroactive authority.
+
+Engineering capability requested: one proof-gated, machine-stable,
+target-free structural manifest pass that freezes a real cohort without
+opening archive or neural payloads.
+
+Scientific claim not established: even a successful structural cohort freeze
+would access no neural payload, target, prediction, or score and would
+establish no neural effect or decoding result.
+
 ## 2026-08-16 - MARC2-VR4 Machine-Readiness Result
 
 - Exact implementation `9fdda316441fef4f245544c90dc0a373993140e0`

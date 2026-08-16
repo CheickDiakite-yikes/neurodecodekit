@@ -2488,3 +2488,13 @@ prediction, score, network, and claim counters are zero. Current gate: commit
 and remotely qualify this result, then prepare one separate all-false Tier C
 structural packet. The certificate is transient and must not be reused as
 future private authority. Real cohort, FW2, and CIL1 remain incomplete.
+
+Readiness result `0a4a7fb` passed both jobs in CI `31967501519`. The all-false
+`MARC2-VR4P` request now freezes the next exact boundary: verify and remove only
+the known expired 4,551-byte certificate, obtain fresh proof-bound readiness,
+create a marker, open exactly 418,755 structural bytes once, call VR2 once, and
+freeze the target-free cohort. Network and archive-payload bytes remain zero;
+combined output is at most 4 MiB. Current gate: commit and remotely qualify the
+request, identify it as the sole Tier C packet, and obtain a fresh packet-bound
+maintainer decision. No implementation or private operation is authorized by
+the request itself.
