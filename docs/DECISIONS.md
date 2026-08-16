@@ -8821,3 +8821,9 @@ retroactive authority.
 Evidence: `docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_AUTHORIZATION_PACKET.md`,
 `registries/marc2_dynamic_private_selection_recovery_authorization_request.v0.json`,
 and its focused test.
+
+Remote proof: immutable request
+`9d42bac29b695a97639c4a197812865f0ac4f7d5` passed Base Python job
+`95236917861`, Optional Neuro Readers job `95236917836`, and CI `31976595268`.
+VR7P is now the sole active Tier C packet. Every authorization flag remains
+false; only fresh packet-bound maintainer words may become a decision.

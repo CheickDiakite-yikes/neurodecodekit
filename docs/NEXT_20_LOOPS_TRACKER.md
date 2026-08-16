@@ -2626,7 +2626,8 @@ one private manifest, and one aggregate report. It accepts only dynamic
 maximal-prefix, split, cap, source-semantics, and hash invariants.
 
 Current status: all authorization flags false, all current counters zero, 11
-tests and 9 artifact-binding subtests pass. Commit, push, and require both CI
-jobs green. Only then identify VR7P as the sole Tier C packet and wait for fresh
-packet-bound maintainer words. Do not implement, inspect private paths, run
-readiness, read the source, freeze a cohort, or enter FW2/CIL1 from this request.
+tests and 9 artifact-binding subtests pass. Immutable request `9d42bac` passed
+Base job `95236917861`, Optional job `95236917836`, and CI `31976595268`.
+VR7P is the sole active Tier C packet; wait for fresh packet-bound maintainer
+words. Do not implement, inspect private paths, run readiness, read the source,
+freeze a cohort, or enter FW2/CIL1 from this request.

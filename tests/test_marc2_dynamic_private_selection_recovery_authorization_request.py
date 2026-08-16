@@ -153,10 +153,21 @@ class Marc2DynamicPrivateSelectionRecoveryAuthorizationRequestTests(
         self.assertEqual(verification["complete_suite_primary_passes"], 3905)
         self.assertEqual(verification["complete_suite_skips"], 35)
         self.assertEqual(verification["new_failures_vs_pre_change_baseline"], 0)
-        self.assertTrue(verification["remote_CI_pending"])
+        self.assertFalse(verification["remote_CI_pending"])
+        proof = self.request["remote_green_request_proof"]
+        self.assertEqual(
+            proof["request_commit"],
+            "9d42bac29b695a97639c4a197812865f0ac4f7d5",
+        )
+        self.assertEqual(proof["CI_run_id"], 31976595268)
+        self.assertEqual(proof["base_python_job_id"], 95236917861)
+        self.assertEqual(proof["optional_neuro_job_id"], 95236917836)
+        self.assertTrue(proof["both_required_jobs_green"])
+        self.assertFalse(proof["scope_changed_by_proof_record"])
         self.assertTrue(all(self.request["decision_requirements"].values()))
         gate = self.request["next_gate"]
         self.assertEqual(gate["current_authority"], "none_request_only")
+        self.assertFalse(gate["request_remote_green_required"])
         self.assertFalse(gate["generated_wrapper_implementation_authorized"])
         self.assertFalse(gate["private_structural_pass_authorized"])
         self.assertFalse(gate["FW2_preregistration_eligible"])

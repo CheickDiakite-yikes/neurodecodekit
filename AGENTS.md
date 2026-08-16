@@ -84,10 +84,13 @@ That request is now specified as `MARC2-VR7P`. Read
 `registries/marc2_dynamic_private_selection_recovery_authorization_request.v0.json`.
 It proposes a generated/mock fixed-path wrapper after a fresh green decision,
 then one 418,755-byte structural pass only after the exact future implementation
-is remotely green. Every authorization field and current counter is false/zero.
-Commit, push, and require both CI jobs green before identifying it as the sole
-Tier C packet. This work authorizes no private read, cohort, archive member,
-neural payload, target, model, score, FW2, or CIL1 operation.
+is remotely green. Immutable request
+`9d42bac29b695a97639c4a197812865f0ac4f7d5` passed Base Python job
+`95236917861`, Optional Neuro Readers job `95236917836`, and CI `31976595268`.
+It is the sole active Tier C packet, but every authorization field and current
+counter remains false/zero. Only fresh packet-bound maintainer words may be
+recorded as a decision. This work authorizes no private read, cohort, archive
+member, neural payload, target, model, score, FW2, or CIL1 operation.
 Do not touch ignored MARC2 paths, consumed roots, certificates, markers,
 retained sources, archive members, neural data, targets, models, predictions,
 or scores. Any future private read remains a new Tier C packet and fresh
@@ -3248,9 +3251,9 @@ preserves only the nested route code, and passes 34 direct refusals across all
 eight route classes. Exact implementation `482dad5` passed both jobs in CI
 `31975600088`. Generated VR6 is complete. The all-false `MARC2-VR7P` request
 now specifies new fixed paths, dynamic outcomes, one future open, and one VR6
-call, but grants zero authority. Its packet commit must be pushed and pass both
-jobs before it is the sole active Tier C gate. A later private read still needs
-a fresh packet-bound decision; the current `continue` is not retroactive
+call, but grants zero authority. Request `9d42bac` passed both jobs in CI
+`31976595268` and is the sole active Tier C gate. A later private read still
+needs a fresh packet-bound decision; the current `continue` is not retroactive
 authority.
 Do not touch ignored MARC2 paths, consumed roots, certificates, markers,
 retained sources, archive members, neural data, targets, models, predictions,

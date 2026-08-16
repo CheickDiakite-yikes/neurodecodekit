@@ -10796,6 +10796,12 @@ origin, language decoding, or thought-to-text capability.
 - The complete primary process reports 3,905 passes and 35 skips plus the same
   three known process-state failures; all three pass under their required fresh
   or non-sandboxed process conditions. New failures versus baseline are zero.
+- Immutable request `9d42bac29b695a97639c4a197812865f0ac4f7d5`
+  passed Base Python job `95236917861`, Optional Neuro Readers job
+  `95236917836`, and CI `31976595268`. The proof record changes no scope and
+  leaves every authority flag false.
+- VR7P is the sole active Tier C packet. The next gate is a fresh unambiguous
+  packet-bound maintainer message, not reuse of the current `continue`.
 
 Engineering capability requested: one new proof-gated structural pass can
 freeze a dynamically measured cohort without fixture-identical live outcomes.

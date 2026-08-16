@@ -4,7 +4,7 @@
   "request_id": "MARC-2-VR7P-dynamic-private-selection-recovery-authorization-request-v0",
   "lane_id": "MARC2-VR7P",
   "recorded_at_local": "2026-08-16",
-  "status": "all_false_Tier_C_request_pending_commit_push_remote_green_and_fresh_decision",
+  "status": "all_false_Tier_C_request_remotely_green_pending_fresh_decision",
   "proof_posture": "request_only_no_private_or_real_operation_authorized",
   "green_predecessor_proof": {
     "VR6_registration": {
@@ -244,7 +244,18 @@
     "ruff": "passed",
     "registry_JSON": "passed",
     "diff_hygiene": "passed",
-    "remote_CI_pending": true
+    "remote_CI_pending": false
+  },
+  "remote_green_request_proof": {
+    "request_commit": "9d42bac29b695a97639c4a197812865f0ac4f7d5",
+    "CI_run_id": 31976595268,
+    "base_python_job_id": 95236917861,
+    "optional_neuro_job_id": 95236917836,
+    "both_required_jobs_green": true,
+    "request_document_sha256_at_request_commit": "83653276478af80a9a749a825dcf50fb210820f2d7f231e0c1a14b6d250709cc",
+    "request_registry_sha256_at_request_commit": "0fbd77afffec65d4a38bca7b73b76f0fdf4c324762540fca850e760a67a79530",
+    "request_test_sha256_at_request_commit": "f585c1780a9fd591dfc0aedc9e45d15a46f8fcd2f23e426af2e696a1ffdab401",
+    "scope_changed_by_proof_record": false
   },
   "requested_authorization_flags": {
     "authorization_decision_recorded": false,
@@ -320,7 +331,7 @@
   },
   "next_gate": {
     "current_authority": "none_request_only",
-    "request_remote_green_required": true,
+    "request_remote_green_required": false,
     "fresh_packet_bound_decision_required": true,
     "generated_wrapper_implementation_authorized": false,
     "private_structural_pass_authorized": false,

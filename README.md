@@ -1933,7 +1933,9 @@ Read this before interpreting any number in the repository.
   calls VR6 once, accepts measured 12-19-subject maximal prefixes, and forbids
   every consumed path, archive member, neural value, target, model, score,
   retry, and rerun. All authorization fields and current operation counters are
-  false/zero; the packet itself performs no private operation.
+  false/zero; the packet itself performs no private operation. Immutable
+  request `9d42bac` passed both jobs in CI `31976595268` and is the sole active
+  Tier C gate pending fresh packet-bound maintainer words.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

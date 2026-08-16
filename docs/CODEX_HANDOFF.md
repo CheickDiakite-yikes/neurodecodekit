@@ -14,8 +14,10 @@
 > request binds new readiness/output paths, one future 418,755-byte structural
 > open, one VR6 call, measured 12-19-subject outcomes, at least 72 generated
 > refusals, and zero retry/rerun. Every authorization flag and current counter
-> is false/zero. Commit, push, and require both CI jobs green before identifying
-> it as the sole Tier C packet. The current `continue` is not retroactive.
+> is false/zero. Request `9d42bac` passed Base job `95236917861`, Optional job
+> `95236917836`, and CI `31976595268`; VR7P is the sole active Tier C packet.
+> Only fresh packet-bound maintainer words can authorize a decision. The current
+> `continue` is not retroactive.
 
 > Current MARC2-VR5A gate, 2026-08-16: registration `926e1ba` passed Base
 > Python job `95226555204`, Optional Neuro Readers job `95226555153`, and CI
@@ -5383,6 +5385,7 @@ Current state: all authorization fields false, every operation counter zero,
 reports 3,905 passes and 35 skips plus the same three baseline process-state
 failures; all three pass under their required process conditions. Do not
 implement the wrapper, inspect a `.codex_work` path, invoke readiness, create a
-marker, read the source, freeze a cohort, or enter FW2/CIL1. Commit, push, and
-obtain both green jobs; then identify VR7P as the sole Tier C packet and wait
-for fresh maintainer words.
+marker, read the source, freeze a cohort, or enter FW2/CIL1. Immutable request
+`9d42bac29b695a97639c4a197812865f0ac4f7d5` passed Base job `95236917861`,
+Optional job `95236917836`, and CI `31976595268`. VR7P is the sole active Tier C
+packet; wait for fresh packet-bound maintainer words.

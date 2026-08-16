@@ -4,8 +4,9 @@ Date: 2026-08-16
 
 Lane: `MARC2-VR7P`
 
-Status: **All authorization fields false; no implementation, private path,
-readiness invocation, output root, marker, structural read, cohort freeze,
+Status: **Request commit `9d42bac29b695a97639c4a197812865f0ac4f7d5`
+is remotely green. All authorization fields false; no implementation, private
+path, readiness invocation, output root, marker, structural read, cohort freeze,
 payload, target, model, prediction, or score is authorized**
 
 Request:
@@ -13,8 +14,10 @@ Request:
 
 ## Decision Requested
 
-After this exact packet is committed, pushed, and both required CI jobs are
-green, request one future two-stage sequence:
+The immutable request passed Base Python job `95236917861`, Optional Neuro
+Readers job `95236917836`, and CI `31976595268`. After this additive proof
+record is also remotely green and the packet is identified as the sole Tier C
+gate, request one future two-stage sequence:
 
 1. implement and qualify a new additive generated/mock-only fixed-path wrapper;
    and
@@ -162,6 +165,9 @@ This packet does not request:
   timing-worker gate passes outside the sandbox, where its forkserver Unix
   socket is permitted.
 - Ruff, all registry JSON parsing, and diff hygiene pass.
+- Immutable request commit `9d42bac29b695a97639c4a197812865f0ac4f7d5`
+  passed both required jobs in CI `31976595268`; this proof record does not
+  change the request scope.
 - No private path, readiness, source, output, archive, neural, target, model, or
   score operation occurred during packet preparation or verification.
 
