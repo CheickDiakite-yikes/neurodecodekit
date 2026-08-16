@@ -27,9 +27,15 @@ class Marc2TransportAliasAdapterResultTests(unittest.TestCase):
         self.assertEqual(self.result["route"], "MARC2TA-G1")
         self.assertEqual(
             self.result["status"],
-            "generated_qualification_complete_consumed_remote_green_required",
+            "generated_qualification_complete_consumed_remote_green",
         )
         self.assertFalse(self.result["proof_posture"]["scientific_value"])
+        proof = self.result["green_implementation_proof"]
+        self.assertEqual(
+            proof["commit"], "108b869a6199b6d3aa2d87f8a59b6d8bee0c847b"
+        )
+        self.assertEqual(proof["CI_run_id"], 31_933_692_066)
+        self.assertTrue(proof["both_required_jobs_green"])
 
     def test_all_artifact_bindings_are_current(self):
         for binding in self.result["artifact_bindings"]:

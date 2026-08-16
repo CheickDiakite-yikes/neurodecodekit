@@ -7924,10 +7924,12 @@ RSS qualification as generated engineering evidence only. Its 4,931-byte
 aggregate was removed, every forbidden counter is zero, and no neural payload,
 target, prediction, or score was accessed.
 
-Gate decision: require the exact implementation/result commit and both remote
-jobs green. Even after that proof, do not patch or reuse FW1C, read a private
-manifest, access an archive member, or enter `MARC2-FW2`. Any live adapter is a
-new Tier C lane with its own all-false packet and fresh packet-bound decision.
+Gate decision: exact implementation/result
+`108b869a6199b6d3aa2d87f8a59b6d8bee0c847b` passed both jobs in CI
+`31933692066`. Treat generated `MARC2-TA1` as complete and consumed. Do not
+patch or reuse FW1C, read a private manifest, access an archive member, or enter
+`MARC2-FW2`. Any live adapter is a new Tier C lane with its own all-false
+packet and fresh packet-bound decision.
 
 Evidence: `docs/MARC_2_TRANSPORT_ALIAS_ADAPTER_IMPLEMENTATION.md`,
 `registries/marc2_transport_alias_adapter_implementation.v0.json`,

@@ -1507,10 +1507,10 @@ producer-native source before deep-copying and mapping only `directory` to
 unchanged selector identity replayed. One measured qualification used 846,708
 input bytes, 4,931 output bytes, 0.4533158749982249 seconds, and 39,108,608-byte
 peak RSS. Its temporary report was removed and every live/private, archive,
-neural, target, model, score, network, FW2, and claim counter was zero. Commit,
-push, and obtain both green jobs for this exact implementation/result. Even
-after that proof, live access and `MARC2-FW2` remain separately gated Tier C
-work.
+neural, target, model, score, network, FW2, and claim counter was zero. Exact
+implementation/result `108b869a6199b6d3aa2d87f8a59b6d8bee0c847b` passed
+Base job `95132260089`, Optional job `95132260076`, and CI `31933692066`.
+Live access and `MARC2-FW2` remain separately gated Tier C work.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

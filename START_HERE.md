@@ -80,12 +80,13 @@
    registration commit `0c0e1c8` preceded the generated-only adapter. One
    measured qualification passed all 26 mutations and replayed the unchanged
    16-subject/384-member generated selector identity in 0.453316 seconds at
-   39,108,608-byte peak RSS. No temporary output, live/private read, neural
-   payload, target, model, score, or network operation remains. Commit, push,
-   and require both jobs green for this exact implementation/result before any
-   next lane. Archive members, payloads, signals, targets, models, scores,
-   language datasets, provider calls, and `MARC2-FW2` remain unauthorized.
-   Then read `docs/CODEX_HANDOFF.md` for the exact handoff state.
+   39,108,608-byte peak RSS. Exact implementation/result commit `108b869`
+   passed Base job `95132260089`, Optional job `95132260076`, and CI
+   `31933692066`. No temporary output, live/private read, neural payload,
+   target, model, score, or network operation remains. Archive members,
+   payloads, signals, targets, models, scores, language datasets, provider
+   calls, and `MARC2-FW2` remain unauthorized. Then read
+   `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
    result, then use its preregistration and authorization documents for audit.
 6. Read `docs/LOOP_25_CAUSAL_PREPROCESSING_RESULT.md` and

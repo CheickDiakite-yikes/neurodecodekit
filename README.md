@@ -1674,7 +1674,8 @@ Read this before interpreting any number in the repository.
 - **MARC2-TA1 generated adapter result:** after registration commit `0c0e1c8`
   passed CI `31932701989`, the standard-library adapter validated all 1,227
   producer-native generated rows before deep-copying and mapping only
-  `directory` to `central_directory`. All 26 refusal mutations and both entry
+  `directory` to `central_directory`. Exact implementation `108b869` then
+  passed both jobs in CI `31933692066`. All 26 refusal mutations and both entry
   orders passed, every transport digest replayed byte for byte, and the
   unchanged selector reproduced 16 generated subject identities, 96 bundles,
   384 members, and 8,105,207,776 reserved bytes. The one measured run used

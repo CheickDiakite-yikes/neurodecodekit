@@ -4,7 +4,7 @@ Date: 2026-08-16
 
 Lane: `MARC2-TA1`
 
-Status: **Generated implementation and one qualification complete; remote green required**
+Status: **Generated implementation and one qualification complete; remotely green**
 
 Contract:
 `registries/marc2_transport_alias_adapter_contract.v0.json`
@@ -22,6 +22,11 @@ Implementation began only after registration commit
 No private path, retained output root, archive member, neural payload, target,
 model, network, provider, device, hardware, or `MARC2-FW2` operation was opened
 by that proof or this implementation.
+
+Exact implementation/result commit
+`108b869a6199b6d3aa2d87f8a59b6d8bee0c847b` subsequently passed Base Python
+job `95132260089`, Optional Neuro Readers job `95132260076`, and CI
+`31933692066` without changing the measured adapter module.
 
 ## Implementation
 
@@ -133,7 +138,6 @@ Scientific claim not established: generated archive metadata contain no neural
 payload, target, prediction, or score and establish no neural effect, decoding
 accuracy, language decoding, or thought-to-text capability.
 
-The next gate is commit, push, and two green remote jobs for this exact
-implementation and result. A live adapter, private read, or `MARC2-FW2` entry
-would still require a separately frozen all-false Tier C packet and a fresh
-packet-bound decision.
+The exact implementation and result are remotely green. A live adapter,
+private read, or `MARC2-FW2` entry still requires a separately frozen all-false
+Tier C packet and a fresh packet-bound decision.

@@ -28,7 +28,7 @@ class Marc2TransportAliasAdapterImplementationTests(unittest.TestCase):
         self.assertEqual(self.registry["lane_id"], "MARC2-TA1")
         self.assertEqual(
             self.registry["status"],
-            "generated_implementation_and_qualification_complete_remote_green_required",
+            "generated_implementation_and_qualification_complete_remote_green",
         )
 
     def test_green_registration_proof_is_exact(self):
@@ -40,6 +40,17 @@ class Marc2TransportAliasAdapterImplementationTests(unittest.TestCase):
         self.assertEqual(proof["base_python_job_id"], 95_129_832_134)
         self.assertEqual(proof["optional_neuro_job_id"], 95_129_832_169)
         self.assertTrue(proof["both_required_jobs_green_before_implementation"])
+        implementation = self.registry["green_implementation_proof"]
+        self.assertEqual(
+            implementation["commit"],
+            "108b869a6199b6d3aa2d87f8a59b6d8bee0c847b",
+        )
+        self.assertEqual(implementation["CI_run_id"], 31_933_692_066)
+        self.assertEqual(implementation["base_python_job_id"], 95_132_260_089)
+        self.assertEqual(
+            implementation["optional_neuro_job_id"], 95_132_260_076
+        )
+        self.assertTrue(implementation["both_required_jobs_green"])
 
     def test_every_tracked_file_hash_is_current(self):
         for binding in self.registry["tracked_file_hashes"]:

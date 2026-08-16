@@ -4,7 +4,7 @@
   "implementation_id": "MARC-2-generated-source-native-transport-alias-adapter-implementation-v0",
   "lane_id": "MARC2-TA1",
   "recorded_at_local": "2026-08-16",
-  "status": "generated_implementation_and_qualification_complete_remote_green_required",
+  "status": "generated_implementation_and_qualification_complete_remote_green",
   "objective": "Validate a generated producer-native manifest before deep-copying and mapping only directory to central_directory, then prove exact compatibility with the frozen selector under adversarial and resource gates.",
   "green_registration_proof": {
     "commit": "0c0e1c8a08ff7e68d0e4432a64dde8a85fb0274f",
@@ -13,6 +13,14 @@
     "optional_neuro_job_id": 95129832169,
     "both_required_jobs_green_before_implementation": true,
     "contract_sha256": "020b6f60234869cee446f732ed070ded4f98c4bd3ea495e4734e77f6a31405aa"
+  },
+  "green_implementation_proof": {
+    "commit": "108b869a6199b6d3aa2d87f8a59b6d8bee0c847b",
+    "CI_run_id": 31933692066,
+    "base_python_job_id": 95132260089,
+    "optional_neuro_job_id": 95132260076,
+    "both_required_jobs_green": true,
+    "measured_module_SHA256": "f4da58dac4723dd024912c842e2ecf849e17a4bc1906897b32b4a287f4a7bbf2"
   },
   "tracked_file_hashes": [
     {
@@ -29,11 +37,11 @@
     },
     {
       "path": "tests/test_marc2_transport_alias_adapter_implementation.py",
-      "sha256": "b65859dc3065523635015c4226d00519110001e6873777cc7f47705666ff87b0"
+      "sha256": "96b8f7a058365a42c0fadac62530c8de86e1fda7ff042341ce22e24f5524f7ac"
     },
     {
       "path": "docs/MARC_2_TRANSPORT_ALIAS_ADAPTER_IMPLEMENTATION.md",
-      "sha256": "7aec2e4b618ca043897ada2cca941d485e0fd3eaac25b4e75451a583ef75aa76"
+      "sha256": "b096844a7698b8b54cdc30c21687437850bb54a4f9d17c238bd507c4234de75f"
     },
     {
       "path": "src/neurodecodekit/datasets/marc2_freewill_prefix_selection.py",
@@ -160,7 +168,10 @@
     "git_diff_check_passed": true,
     "complete_base_suite_pending": false,
     "complete_optional_suite_pending": false,
-    "remote_CI_pending": true
+    "remote_CI_pending": false,
+    "remote_CI_run_id": 31933692066,
+    "remote_base_python_job_id": 95132260089,
+    "remote_optional_neuro_job_id": 95132260076
   },
   "access_counters": {
     "private_or_Git_ignored_path_operations": 0,
@@ -187,7 +198,8 @@
     "release_publication_or_scientific_claim_upgrade": false
   },
   "next_gate": {
-    "commit_push_and_both_remote_jobs_green_required": true,
+    "commit_push_and_both_remote_jobs_green_required": false,
+    "exact_implementation_and_result_both_remote_jobs_green": true,
     "generated_qualification_consumed_without_retained_output": true,
     "future_live_adapter_or_private_read_allowed": false,
     "future_live_attempt_requires_separate_all_false_Tier_C_packet_and_decision": true

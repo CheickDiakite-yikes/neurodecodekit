@@ -2119,7 +2119,7 @@ duplicate, dual-alias, extra-key, or value mutation cases. The consumed FW1C
 executor cannot be patched or reused. Any future live read and `MARC2-FW2`
 remain behind a new all-false Tier C packet and decision.
 
-### MARC2-TA1 - Generated Transport Alias Adapter (Locally Complete)
+### MARC2-TA1 - Generated Transport Alias Adapter (Remotely Green)
 
 The frozen contract binds green lineage commit
 `8c7494812fcfbfa6ea6fd79c1fa119b865df3cb7`, CI `31932081970`, Base Python
@@ -2149,7 +2149,9 @@ aggregate output bytes. The temporary report was removed. Fifty-two focused,
 3,307 dependency-light, and 3,378 optional-neuro tests pass; Ruff, compilation,
 224 registry parses, CLI checks, hashes, and diff hygiene pass.
 
-Current gate: commit, push, and require both remote jobs green for the exact
-implementation/result. No live/private path, execute command, FW1C reuse,
-archive, neural, target, model, score, network, or `MARC2-FW2` operation is
-allowed. A future live adapter remains a separately frozen Tier C event.
+Exact implementation/result `108b869a6199b6d3aa2d87f8a59b6d8bee0c847b`
+passed Base Python job `95132260089`, Optional Neuro Readers job `95132260076`,
+and CI `31933692066`. `MARC2-TA1` is complete and consumed. No live/private
+path, execute command, FW1C reuse, archive, neural, target, model, score,
+network, or `MARC2-FW2` operation is allowed. A future live adapter remains a
+separately frozen Tier C event.

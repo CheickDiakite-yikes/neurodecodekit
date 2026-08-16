@@ -9790,6 +9790,12 @@ decoding accuracy, language decoding, or thought-to-text capability.
   3,307 tests with 204 skips; optional A-M and N-Z pass 2,865 with 28 skips and
   513 with seven skips, respectively. Ruff, compilation, all 224 registries,
   CLI help/plan/qualify/inspect, tracked hashes, and diff hygiene pass.
+- Exact implementation/result
+  `108b869a6199b6d3aa2d87f8a59b6d8bee0c847b` passed Base Python job
+  `95132260089`, Optional Neuro Readers job `95132260076`, and CI
+  `31933692066`. The measured adapter module hash remained
+  `f4da58dac4723dd024912c842e2ecf849e17a4bc1906897b32b4a287f4a7bbf2`.
+  This closes generated `MARC2-TA1`; it does not open live/private work.
 
 Engineering capability added: NeuroDecodeKit now has a generated-only,
 value-preserving source-schema adapter that reaches the frozen selector without

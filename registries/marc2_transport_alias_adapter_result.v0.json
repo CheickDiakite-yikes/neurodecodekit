@@ -4,7 +4,7 @@
   "result_id": "MARC-2-generated-source-native-transport-alias-adapter-result-v0",
   "lane_id": "MARC2-TA1",
   "recorded_at_local": "2026-08-16",
-  "status": "generated_qualification_complete_consumed_remote_green_required",
+  "status": "generated_qualification_complete_consumed_remote_green",
   "route": "MARC2TA-G1",
   "full_route": "MARC2TA-G1-generated_producer_adapter_selector_integration_passed",
   "proof_posture": {
@@ -19,6 +19,14 @@
     "optional_neuro_job_id": 95129832169,
     "both_required_jobs_green_before_implementation_and_qualification": true
   },
+  "green_implementation_proof": {
+    "commit": "108b869a6199b6d3aa2d87f8a59b6d8bee0c847b",
+    "CI_run_id": 31933692066,
+    "base_python_job_id": 95132260089,
+    "optional_neuro_job_id": 95132260076,
+    "both_required_jobs_green": true,
+    "measured_module_SHA256": "f4da58dac4723dd024912c842e2ecf849e17a4bc1906897b32b4a287f4a7bbf2"
+  },
   "artifact_bindings": [
     {
       "path": "registries/marc2_transport_alias_adapter_contract.v0.json",
@@ -26,7 +34,7 @@
     },
     {
       "path": "registries/marc2_transport_alias_adapter_implementation.v0.json",
-      "sha256": "affeaf184cddb2c76f318fc87c2d8ba7fa5621a43aac962d79630aec8a73bb8d"
+      "sha256": "7ea3b48ad5a019353aab7612633b64ab99f9ff2c97a061dbbc1b1b10ed2af7ba"
     },
     {
       "path": "src/neurodecodekit/datasets/marc2_transport_alias_adapter.py",
@@ -34,11 +42,11 @@
     },
     {
       "path": "docs/MARC_2_TRANSPORT_ALIAS_ADAPTER_IMPLEMENTATION.md",
-      "sha256": "7aec2e4b618ca043897ada2cca941d485e0fd3eaac25b4e75451a583ef75aa76"
+      "sha256": "b096844a7698b8b54cdc30c21687437850bb54a4f9d17c238bd507c4234de75f"
     },
     {
       "path": "tests/test_marc2_transport_alias_adapter_result.py",
-      "sha256": "21d09ef144281b57a31df48d216d73b578027e4dd04b117a8300ff46fb3c385b"
+      "sha256": "609bd4158d3e27d13ea1bc29e0a46f4ac0a7f7ac3c98793e93fe9862c6a672c0"
     }
   ],
   "adapter_result": {
@@ -140,7 +148,10 @@
     "complete_optional_tests": 3378,
     "complete_optional_skips": 35,
     "ruff_compile_registry_JSON_CLI_and_diff_hygiene_passed": true,
-    "remote_CI_pending": true
+    "remote_CI_pending": false,
+    "remote_CI_run_id": 31933692066,
+    "remote_base_python_job_id": 95132260089,
+    "remote_optional_neuro_job_id": 95132260076
   },
   "warnings": [
     "The source manifest entries selection and hashes are generated integration fixtures.",
@@ -159,7 +170,7 @@
     "live_adapter_or_private_read_allowed": false,
     "MARC2_FW2_eligible": false,
     "future_live_attempt_requires_new_Tier_C_packet_and_decision": true,
-    "next_safe_work": "commit push and require both remote jobs green then stop before any live or private operation"
+    "next_safe_work": "stop before live or private operation; any future adapter requires a new Tier C packet and decision"
   },
   "claim_boundary": {
     "engineering_capability_added": "NeuroDecodeKit now has a generated-only value-preserving schema adapter that validates producer-native transport metadata before reaching the frozen selector.",

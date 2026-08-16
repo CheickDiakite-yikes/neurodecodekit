@@ -4573,7 +4573,9 @@ and was removed. Every forbidden counter is zero. Fifty-two focused, 3,307
 dependency-light, and 3,378 optional-neuro tests pass; all 224 registries,
 Ruff, compilation, CLI checks, hashes, and diff hygiene pass.
 
-Immediate gate: commit, push, and require both jobs green for the exact
-implementation/result. Do not open a private source, restore the removed
-report, patch consumed FW1C, enter FW2, or infer neural or decoding evidence.
-A future live adapter requires a new all-false Tier C packet and fresh decision.
+Exact implementation/result `108b869a6199b6d3aa2d87f8a59b6d8bee0c847b`
+passed Base Python job `95132260089`, Optional Neuro Readers job `95132260076`,
+and CI `31933692066`. `MARC2-TA1` is complete and consumed. Do not open a
+private source, restore the removed report, patch consumed FW1C, enter FW2, or
+infer neural or decoding evidence. A future live adapter requires a new
+all-false Tier C packet and fresh decision.
