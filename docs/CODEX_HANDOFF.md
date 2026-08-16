@@ -4632,3 +4632,25 @@ and one exact private structural read and stop for fresh packet-bound
 maintainer authority. Do not read a private path, implement that executor,
 touch consumed FW1C, enter FW2, or access archive, neural, target, model,
 score, network, provider, or hardware surfaces from LA1 proof alone.
+
+## 2026-08-16 MARC2-LA2 All-False Packet Handoff
+
+LA1 proof closeout `52eabc63751aa692536cec5fe602fe05aa879eae` passed Base job
+`95138912293`, Optional job `95138912287`, and CI `31936399968`. Read the LA2
+authorization packet, machine request, and request test.
+
+The packet proposes a new additive module
+`neurodecodekit.datasets.marc2_live_schema_adapter_recovery`. After a separate
+green decision, Stage 1 would qualify only generated manifests and mocked
+filesystem facts. Only after the exact executor is separately green would
+Stage 2 permit one no-follow open and 418,755-byte structural read from the
+literal retained manifest, one LA1 call, one frozen selector call, and bounded
+private/aggregate structural outputs.
+
+All 18 authority flags and all operation counters are false. Nineteen request,
+72 packet-plus-LA1, 3,379 dependency-free, and 3,450 optional-neuro tests pass.
+Immediate gate: commit, push, and green this packet, identify it as the sole
+active Tier C packet, and stop for fresh packet-bound maintainer words. Do not
+use the current `continue` retroactively, implement LA2, inspect a private path,
+touch either consumed root, or perform archive, neural, target, model, score,
+network, provider, hardware, release, or claim work.

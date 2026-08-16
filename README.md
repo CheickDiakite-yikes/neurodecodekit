@@ -1703,10 +1703,17 @@ Read this before interpreting any number in the repository.
   input bytes, 5,366 output bytes, 0.488921 seconds, and 38,387,712-byte peak
   RSS. The report was removed and every private, neural, target, model, score,
   and network counter is zero. Exact implementation `3e3f8b8` passed Base job
-  `95137289730`, Optional job `95137289704`, and CI `31935754822`. Once this
-  proof-record closeout is also remotely green, an all-false request may be
-  prepared, but no live/private read is authorized; this is engineering
-  evidence, not a decoding result.
+  `95137289730`, Optional job `95137289704`, and CI `31935754822`. Proof
+  closeout `52eabc6` then passed both jobs in CI `31936399968`; no live/private
+  read is authorized, and this remains engineering evidence rather than a
+  decoding result.
+- **MARC2-LA2 all-false live-adapter recovery request:** a new packet proposes
+  a fresh standard-library executor, generated/mock qualification, and then one
+  no-retry read of the exact 418,755-byte structural manifest. The future path
+  would call LA1 once, preserve every row and digest, apply the frozen selector,
+  and stop before archive members or neural data. All authority flags and
+  operation counters are false; packet commit/push/remote-green proof and a
+  fresh packet-bound maintainer decision are still required.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
@@ -2530,6 +2537,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/MARC_2_LIVE_SCHEMA_ADAPTER_IMPLEMENTATION.md](docs/MARC_2_LIVE_SCHEMA_ADAPTER_IMPLEMENTATION.md) | generated composition implementation, validation order, one-call green adapter proof, measured qualification, verification, and claim ceiling |
 | [registries/marc2_live_schema_adapter_implementation.v0.json](registries/marc2_live_schema_adapter_implementation.v0.json) | hash-bound module/tests, 30 refusal results, resources, zero access counters, and exact remote-green proof |
 | [registries/marc2_live_schema_adapter_result.v0.json](registries/marc2_live_schema_adapter_result.v0.json) | consumed generated `MARC2LA-G1` result, exact selector replay, measurements, unavailable fields, and closed live/FW2 disposition |
+| [docs/MARC_2_LIVE_ADAPTER_RECOVERY_AUTHORIZATION_PACKET.md](docs/MARC_2_LIVE_ADAPTER_RECOVERY_AUTHORIZATION_PACKET.md) | all-false `MARC2-LA2` proposal for one additive executor and one exact structural read, with proof order, resources, routes, and explicit exclusions |
+| [registries/marc2_live_adapter_recovery_authorization_request.v0.json](registries/marc2_live_adapter_recovery_authorization_request.v0.json) | machine-readable all-false LA2 request binding green LA1, consumed FW1C, one literal private source, zero authority, and the fresh-decision gate |
 | [docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md](docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md) | layered compact-adapter plus GPT-Sol architecture, four matched conditions, and staged authorization boundary |
 | [docs/FOUNDATION_MODEL_BRIDGE_V0.md](docs/FOUNDATION_MODEL_BRIDGE_V0.md) | implemented FM-0 synthetic no-call schemas, CLI, strict refusals, hashes, and measured roundtrip |
 | [docs/FOUNDATION_MODEL_LIVE_SMOKE_PREREGISTRATION.md](docs/FOUNDATION_MODEL_LIVE_SMOKE_PREREGISTRATION.md) | frozen one-shot FM-1 Terra matrix, privacy boundary, provider settings, resource caps, and no-science ceiling |

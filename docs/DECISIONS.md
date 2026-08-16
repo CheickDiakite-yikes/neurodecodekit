@@ -8005,3 +8005,29 @@ this proof-record closeout is remotely green. The packet must then become
 remotely green and receive fresh packet-bound maintainer authority before
 implementation or access; the current `continue` is not retroactive authority
 for that later event.
+
+## 0244 - Prepare An All-False Live Adapter Recovery Packet
+
+Architecture decision: name the prospective recovery `MARC2-LA2` and require a
+new additive standard-library executor. It may call exact public functions from
+the green proof validator, LA1 adapter, and frozen selector, but it may not
+import, edit, call, copy, or inspect either consumed private executor or root.
+
+Scope decision: propose only generated/mock Stage 1 qualification followed,
+after separate green proof, by one no-retry read of the exact 418,755-byte
+structural manifest. Stop before archive local headers, members, payloads,
+signals, events, targets, models, scores, network, FW2, or claim work.
+
+Safety decision: use one thread, one open, a new v2 output root, 30 seconds per
+stage, 256 MiB RSS, 2 MiB output, 4 MiB incremental disk, zero network bytes,
+and at least 15 GiB free disk. Write the consumed marker before content access;
+every route is final.
+
+Authority decision: preserve this request as all false. Require packet commit,
+push, and both remote jobs green, then identify it as the sole active Tier C
+gate. Only fresh maintainer words after that identification may be recorded in
+a separate decision. The current `continue` is not retroactive authority.
+
+Evidence: `docs/MARC_2_LIVE_ADAPTER_RECOVERY_AUTHORIZATION_PACKET.md`,
+`registries/marc2_live_adapter_recovery_authorization_request.v0.json`, and
+`tests/test_marc2_live_adapter_recovery_authorization_request.py`.

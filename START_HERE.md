@@ -97,9 +97,12 @@
    38,387,712-byte peak RSS; its 5,366-byte report was removed and all
    private/neural/model counters stayed zero. Exact implementation `3e3f8b8`
    passed Base job `95137289730`, Optional job `95137289704`, and CI
-   `31935754822`. Once this proof-record closeout is remotely green, one
-   all-false Tier C request may be prepared, but no live/private authority
-   exists. Then read
+   `31935754822`; proof closeout `52eabc6` passed CI `31936399968`. Then read
+   `docs/MARC_2_LIVE_ADAPTER_RECOVERY_AUTHORIZATION_PACKET.md` and its request
+   registry. `MARC2-LA2` is an all-false proposal for a new executor and one
+   exact 418,755-byte structural read. Its commit, push, remote green proof,
+   and a fresh packet-bound maintainer decision are still required. No
+   live/private authority exists. Then read
    `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
    result, then use its preregistration and authorization documents for audit.

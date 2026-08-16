@@ -9759,6 +9759,35 @@ Scientific claim not established: this registration contains no neural
 payload, target, prediction, or score and establishes no neural effect,
 decoding accuracy, language decoding, or thought-to-text capability.
 
+## 2026-08-16 - MARC2-LA2 All-False Live Adapter Recovery Packet
+
+- Bound green LA1 implementation `3e3f8b8`, CI `31935754822`, and proof
+  closeout `52eabc6`, CI `31936399968`, before preparing a new request.
+- Added an all-false machine request and human packet for one future additive
+  standard-library executor and one later no-retry structural read. No
+  executor, private path, output root, or real operation exists now.
+- Bound the exact 418,755-byte mode-`0600` source identity without statting,
+  resolving, listing, opening, hashing, or parsing the retained path.
+- Frozen future resources are one thread, 30 seconds per stage, 256 MiB RSS,
+  zero network and archive payload bytes, 2 MiB combined output, 4 MiB
+  incremental disk, and at least 15 GiB free disk.
+- The future wrapper must call the exact green LA1 adapter and selector once,
+  preserve rows and digests, avoid both consumed executors and roots, and stop
+  before every archive member and neural byte.
+- Nineteen request tests and the 72-test packet-plus-LA1 set pass. The complete
+  dependency-free suite passes 3,379 tests with 204 skips; optional A-M and N-Z
+  pass 2,937 with 28 skips and 513 with seven skips, respectively, for 3,450
+  with 35 skips. Ruff, compilation, 228 registry parses, hashes, and diff
+  hygiene pass.
+
+Engineering capability requested: one proof-gated additive executor may apply
+the exact live-schema adapter to one private structural manifest without
+opening an archive member.
+
+Scientific claim not established: this all-false packet reads no neural data
+and establishes no neural effect, decoding accuracy, language decoding, or
+thought-to-text capability.
+
 ## 2026-08-16 - MARC2-LA1 Generated Implementation And Result
 
 - Registration `62e465e0600622444b0868d5dcf19678504d20c4` passed Base
