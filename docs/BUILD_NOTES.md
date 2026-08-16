@@ -9804,3 +9804,40 @@ weakening source validation.
 Scientific claim not established: no neural payload, target, prediction, or
 score was accessed, so this result establishes no neural effect, decoding
 accuracy, language decoding, or thought-to-text capability.
+
+## 2026-08-16 - MARC2-LA1 Generated Live-Schema Adapter Registration
+
+- Bound green TA1 implementation/result commit
+  `108b869a6199b6d3aa2d87f8a59b6d8bee0c847b`, CI `31933692066`, Base
+  Python job `95132260089`, and Optional Neuro Readers job `95132260076`.
+- Froze one generated 1,227-row live-shaped source envelope with exact public
+  Figshare identity and producer-native `directory`, `metadata`, and `tail`
+  transport keys, but no private or real bytes.
+- Required validation before a deep-copy bridge that changes only proof
+  posture, provider, file ID, and registered MD5, then calls the remotely green
+  TA1 public adapter exactly once.
+- Preserved all entries, record/version identity, declared bytes, safety flags,
+  transport digests, source immutability, and mutable-object independence.
+- Froze 30 mutations, canonical/reversed replay, the unchanged
+  16-subject/384-member generated result, one thread, 30 seconds, 256 MiB RSS,
+  2 MiB output/disk, zero network/private bytes, and no base dependency delta.
+- Registration authorizes no private path, output root, consumed executor,
+  archive member, neural data, target, model, score, network, FW2, or claim
+  operation. Generated implementation begins only after both remote jobs pass.
+- Eleven focused contract tests pass. The complete dependency-free suite passes
+  3,318 tests with 204 skips. Fresh optional A-M and N-Z processes pass 2,876
+  tests with 28 skips and 513 tests with seven skips, respectively, for 3,389
+  optional-enabled tests with 35 skips. Ruff, compilation, all 225 registry
+  JSON documents, strict parsing of the new contract, and diff hygiene pass.
+- The first monolithic optional replay encountered the known sandboxed
+  forkserver-socket refusal. A permitted monolithic replay then exposed two
+  pre-existing order-sensitive fixture gates after process-wide RSS
+  contamination. The established fresh A-M/N-Z sequence passed without a code
+  change; no evidence or generated qualification ran.
+
+Engineering capability specified: an exact live-shaped source envelope can be
+qualified through the green one-key adapter without another private read.
+
+Scientific claim not established: this registration contains no neural
+payload, target, prediction, or score and establishes no neural effect,
+decoding accuracy, language decoding, or thought-to-text capability.

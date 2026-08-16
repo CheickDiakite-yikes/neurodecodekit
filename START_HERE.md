@@ -86,6 +86,11 @@
    target, model, score, or network operation remains. Archive members,
    payloads, signals, targets, models, scores, language datasets, provider
    calls, and `MARC2-FW2` remain unauthorized. Then read
+   `docs/MARC_2_LIVE_SCHEMA_ADAPTER_PREREGISTRATION.md` and its contract.
+   `MARC2-LA1` freezes the next generated/mock composition: validate the exact
+   live-shaped envelope, bridge only four identity values into TA1, call its
+   green public adapter once, and replay the frozen selector under 30
+   mutations. No live/private authority exists. Then read
    `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
    result, then use its preregistration and authorization documents for audit.

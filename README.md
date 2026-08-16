@@ -1684,6 +1684,15 @@ Read this before interpreting any number in the repository.
   and the temporary report was removed. This fixes a generated integration
   boundary; it is not neural or decoding evidence. Live/private use remains a
   separate Tier C decision.
+- **MARC2-LA1 live-schema composition registration:** the next generated/mock
+  gate now binds the exact green TA1 artifacts and the committed live producer
+  envelope. It requires live-envelope validation before a four-value identity
+  bridge, one call through TA1's green public adapter, unchanged entries and
+  digests, 30 adversarial refusals, and exact selector replay. Its CLI is
+  limited to `plan`, `qualify`, and `inspect`; no file path, execute command,
+  private data, archive member, neural payload, target, model, score, network,
+  or FW2 authority exists. A later private read remains behind a new remotely
+  green all-false Tier C packet and fresh packet-bound maintainer decision.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

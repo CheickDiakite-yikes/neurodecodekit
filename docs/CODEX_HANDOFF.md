@@ -4579,3 +4579,27 @@ and CI `31933692066`. `MARC2-TA1` is complete and consumed. Do not open a
 private source, restore the removed report, patch consumed FW1C, enter FW2, or
 infer neural or decoding evidence. A future live adapter requires a new
 all-false Tier C packet and fresh decision.
+
+## 2026-08-16 MARC2-LA1 Registration Handoff
+
+Read `docs/MARC_2_LIVE_SCHEMA_ADAPTER_PREREGISTRATION.md`, its contract, and
+contract test. `MARC2-LA1` binds green TA1 implementation/result `108b869`, CI
+`31933692066`, Base job `95132260089`, and Optional job `95132260076`.
+
+The future generated/mock module must construct the exact live-shaped envelope
+without real bytes, validate it before copying, bridge only proof posture,
+provider, file ID, and MD5 into TA1's generated identity, then call the green
+public adapter once. All entries and transport digests remain unchanged.
+Thirty mutations and canonical/reversed exact selector replay are frozen.
+
+Eleven focused, 3,318 dependency-free, and 3,389 optional-enabled tests pass;
+Ruff, compilation, 225 registry parses, strict new-contract parsing, and diff
+hygiene pass. Optional verification used the established fresh A-M/N-Z split
+to avoid process-wide RSS contamination from a monolithic test order.
+
+Immediate gate: commit, push, and require both remote jobs green. Only then
+implement `plan`, `qualify`, and `inspect`. Do not add `execute`, access a file
+or URL, touch a private/consumed root, enter FW2, or perform archive, neural,
+target, model, score, network, provider, hardware, release, or claim work. A
+later all-false Tier C packet and fresh post-identification maintainer message
+are required before any live executor or private read.

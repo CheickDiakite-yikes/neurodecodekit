@@ -7935,3 +7935,30 @@ Evidence: `docs/MARC_2_TRANSPORT_ALIAS_ADAPTER_IMPLEMENTATION.md`,
 `registries/marc2_transport_alias_adapter_implementation.v0.json`,
 `registries/marc2_transport_alias_adapter_result.v0.json`, the adapter module,
 and its behavior, implementation, and result tests.
+
+## 0241 - Freeze The Generated Live-Schema Adapter Composition
+
+Architecture decision: add `MARC2-LA1` as a generated/mock composition instead
+of patching or importing the consumed FW1C executor. Validate the exact
+committed live envelope first, then deep-copy and bridge only proof posture,
+provider, file ID, and registered MD5 into TA1's exact generated input.
+
+Integrity decision: require the remotely green public
+`adapt_generated_source` call exactly once per success path. Preserve entries,
+record/version identity, declared bytes, safety flags, source transport keys,
+all digest values, source immutability, and mutable-object independence. Require
+canonical/reversed replay of the existing frozen selector result and 30 named
+refusals.
+
+Scope decision: keep the future surface at `plan`, `qualify`, and `inspect`,
+with zero private, Git-ignored, archive, neural, target, model, network, score,
+or FW2 authority and no base dependency delta.
+
+Gate decision: require this exact registration to pass both remote jobs before
+generated implementation. Only after that implementation is separately green
+may an all-false Tier C request be prepared. The current `continue` is not
+retroactive authority for a private read or live executor.
+
+Evidence: `docs/MARC_2_LIVE_SCHEMA_ADAPTER_PREREGISTRATION.md`,
+`registries/marc2_live_schema_adapter_contract.v0.json`, and
+`tests/test_marc2_live_schema_adapter_contract.py`.

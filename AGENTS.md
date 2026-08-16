@@ -1512,6 +1512,19 @@ implementation/result `108b869a6199b6d3aa2d87f8a59b6d8bee0c847b` passed
 Base job `95132260089`, Optional job `95132260076`, and CI `31933692066`.
 Live access and `MARC2-FW2` remain separately gated Tier C work.
 
+Read `docs/MARC_2_LIVE_SCHEMA_ADAPTER_PREREGISTRATION.md` and
+`registries/marc2_live_schema_adapter_contract.v0.json`. `MARC2-LA1` freezes a
+generated/mock live-envelope composition over the exact green TA1 public
+adapter. The future module must validate the live-shaped source first, bridge
+only proof posture, provider, file ID, and MD5 in a deep copy, preserve every
+entry and transport digest, and replay the exact selector result in two entry
+orders under 30 mutations. Commit, push, and require both jobs green before
+implementation. It may expose only `plan`, `qualify`, and `inspect`; no file,
+URL, execute command, private root, archive member, neural data, target, model,
+score, network, or FW2 work is authorized. Only after a separately green
+generated implementation may an all-false Tier C packet be prepared, and the
+current `continue` is not retroactive authority for that later live gate.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

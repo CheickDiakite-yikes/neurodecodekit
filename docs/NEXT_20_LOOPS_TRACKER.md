@@ -2155,3 +2155,24 @@ and CI `31933692066`. `MARC2-TA1` is complete and consumed. No live/private
 path, execute command, FW1C reuse, archive, neural, target, model, score,
 network, or `MARC2-FW2` operation is allowed. A future live adapter remains a
 separately frozen Tier C event.
+
+### MARC2-LA1 - Generated Live-Schema Adapter Composition (Registered)
+
+This additive lane binds the remotely green TA1 module, contract,
+implementation, and result plus the frozen selector and consumed FW1C/SL1
+diagnosis. It freezes a generated 1,227-row source with the exact live envelope
+and source-native `directory`, `metadata`, and `tail` transport vocabulary.
+
+The future generated/mock implementation must validate that live envelope
+first, deep-copy it, bridge only proof posture, provider, file ID, and MD5 into
+TA1's exact generated identity, and call the green public adapter once. Entries,
+declared bytes, record/version identity, safety flags, transport keys, and every
+digest must remain unchanged before TA1 performs its one-key map. Canonical and
+reversed entry orders must reproduce the existing 16-subject, 96-bundle,
+384-member, 8,105,207,776-byte generated selection.
+
+Thirty mutations, a three-command CLI, one-thread resources, zero private
+bytes, and zero live authority are frozen. Commit and push this registration
+and require both remote jobs green before generated implementation. A live
+executor or private read remains closed until a later all-false Tier C packet
+is remotely green and the maintainer supplies fresh packet-bound authority.
