@@ -5,9 +5,10 @@
 > `31972332778` before the artifact-only implementation. The measured audit
 > routed `MARC2VR5-R2`, proving both eight-to-one nested-route collapse and
 > nine-field generated-selection overconstraint, while keeping the consumed
-> private route unavailable. Commit, push, and remotely green this exact
-> implementation/result before freezing a separately named generated-only
-> dynamic live-selection repair. Never touch the ignored tracker inspection,
+> private route unavailable. Exact implementation `d9fa443` passed Base job
+> `95229811925`, Optional job `95229811955`, and CI `31973656275`. Freeze a
+> separately named generated-only dynamic live-selection repair next. Never
+> touch the ignored tracker inspection,
 > ignored MARC2 paths, consumed roots, certificates, markers, retained source,
 > archive members, neural values, targets, models, predictions, or scores.
 
@@ -5241,6 +5242,10 @@ VR4P closeout `0618fc3` passed Base job `95225078285`, Optional job
 `926e1ba` then passed Base job `95226555204`, Optional job `95226555153`, and
 CI `31972332778` before implementation.
 
+Exact implementation `d9fa44399df81a215e0234be1b9ef86c0f2b138e` then
+passed Base job `95229811925`, Optional job `95229811955`, and CI
+`31973656275`.
+
 The fixed auditor reaches `MARC2VR5-R2`. It proves that VR4P discarded
 `exc.route`, collapsing eight aggregate-safe VR2 classes into one outer F07.
 It separately proves that VR2's live path enforces nine exact generated
@@ -5255,8 +5260,7 @@ CIL1, and claim counter stayed zero.
 
 Do not claim the consumed attempt reached F06. Its nested route and real
 selection remain unavailable. Do not inspect any ignored MARC2 path or reuse
-VR4P. After this exact implementation is committed, pushed, and both jobs are
-green, freeze a separately named generated-only repair that preserves only the
+VR4P. Freeze a separately named generated-only repair that preserves only the
 nested route code, validates dynamic 12-19-subject maximal prefixes, emits
 live source semantics, and tests variable reservation boundaries. A future
 private read remains a new Tier C packet and decision.

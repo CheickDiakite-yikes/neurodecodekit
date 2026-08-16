@@ -3,7 +3,7 @@
   "schema_version": "0.1.0",
   "lane_id": "MARC2-VR5A",
   "result_id": "MARC2-VR5A-R1",
-  "status": "completed_artifact_only_VR2_refusal_localization_pending_remote_green",
+  "status": "completed_artifact_only_VR2_refusal_localization_remotely_green",
   "recorded_at_local": "2026-08-16",
   "route": "MARC2VR5-R2",
   "proof_posture": "fixed_committed_code_and_aggregate_results_only_no_private_or_scientific_value",
@@ -25,7 +25,7 @@
     },
     {
       "path": "registries/marc2_vr2_refusal_localization_implementation.v0.json",
-      "sha256": "7fdce71e503e5f42e2ab277c13600589345c1395f12bec8be37962e57270d5be"
+      "sha256": "485a3566c1f609e93808db616784f5176c70352fdb24dc3bafc3dd0729da4926"
     },
     {
       "path": "docs/MARC_2_VR2_REFUSAL_LOCALIZATION_PREREGISTRATION.md",
@@ -33,7 +33,7 @@
     },
     {
       "path": "docs/MARC_2_VR2_REFUSAL_LOCALIZATION_IMPLEMENTATION.md",
-      "sha256": "6272c6db2639af8eab7808235e5ef1146c7526a5e3738c060b668c31932a901c"
+      "sha256": "757f37739cf2c3674801ae6da3d2cbe9774b1b538697c4d92e58eef0901b8088"
     },
     {
       "path": "tests/test_marc2_vr2_refusal_localization_contract.py",
@@ -200,7 +200,14 @@
     "fresh_process_state_reruns_passed": 2,
     "outside_sandbox_forkserver_reruns_passed": 1,
     "ruff_compile_registry_JSON_CLI_and_diff_hygiene_passed": true,
-    "remote_CI_pending": true
+    "remote_CI_pending": false,
+    "remote_proof": {
+      "commit": "d9fa44399df81a215e0234be1b9ef86c0f2b138e",
+      "CI_run_id": 31973656275,
+      "base_python_job_id": 95229811925,
+      "optional_neuro_job_id": 95229811955,
+      "both_required_jobs_green": true
+    }
   },
   "warnings": [
     "The consumed private VR2 route was not retained and remains unavailable.",

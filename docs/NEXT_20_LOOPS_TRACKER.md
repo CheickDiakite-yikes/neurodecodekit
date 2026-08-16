@@ -6,7 +6,8 @@
 > VR5A then routed `MARC2VR5-R2`: the wrapper erased seven of eight diagnostic
 > classes, and the nominal live selector still requires nine exact generated
 > outputs and generated source labels. The exact private predicate remains
-> unavailable. The next task is a separately named generated-only dynamic
+> unavailable. Exact implementation `d9fa443` passed both jobs in CI
+> `31973656275`. The next task is a separately named generated-only dynamic
 > live-selection repair; FW2/CIL1, archive payload, neural, target, model, and
 > scoring work remain closed until a real cohort is frozen under a new Tier C
 > packet.

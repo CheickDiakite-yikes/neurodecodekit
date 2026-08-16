@@ -55,12 +55,14 @@ route was not retained and must not be inferred. VR5A registration
 `95226555204`, Optional Neuro Readers job `95226555153`, and CI
 `31972332778` before the artifact-only implementation.
 
-VR5A proves that the wrapper discarded `exc.route`, reducing eight safe
+Exact implementation `d9fa44399df81a215e0234be1b9ef86c0f2b138e` passed
+Base Python job `95229811925`, Optional Neuro Readers job `95229811955`, and CI
+`31973656275`. VR5A proves that the wrapper discarded `exc.route`, reducing eight safe
 diagnostic classes to one, and that VR2's live path still requires nine exact
 generated selection outputs and emits generated source semantics. It does not
 prove that the consumed run reached F06. No real cohort exists and FW2/CIL1
-remain ineligible. The next safe task is to commit and remotely qualify VR5A,
-then freeze a separately named generated-only dynamic live-selection repair.
+remain ineligible. The next safe task is to freeze a separately named
+generated-only dynamic live-selection repair.
 Do not touch ignored MARC2 paths, consumed roots, certificates, markers,
 retained sources, archive members, neural data, targets, models, predictions,
 or scores. Any future private read remains a new Tier C packet and fresh
@@ -3204,14 +3206,15 @@ VR5A registration `926e1ba1189c86f4f7bde8019c64395c086c9327` passed CI
 implementation. Read the VR5A preregistration, implementation/result document,
 three registries, module, and tests.
 
-VR5A proves two engineering defects only. VR4P discarded `exc.route`, reducing
+Exact implementation `d9fa443` passed Base job `95229811925`, Optional job
+`95229811955`, and CI `31973656275`. VR5A proves two engineering defects only.
+VR4P discarded `exc.route`, reducing
 eight nested diagnostic classes to one. VR2 also requires nine exact generated
 selection outputs and emits generated source identity/proof/hash vocabulary on
 its live path. It does not prove that the private run reached F06. No real
 cohort exists and FW2/CIL1 remain ineligible.
 
-Next, commit and remotely qualify the exact VR5A implementation/result, then
-freeze a separately named generated-only dynamic live-selection repair. It
+Next, freeze a separately named generated-only dynamic live-selection repair. It
 must preserve only the nested route code, accept a measured maximal contiguous
 12-19-subject prefix under the unchanged cap, and emit real source semantics.
 Do not touch ignored MARC2 paths, consumed roots, certificates, markers,

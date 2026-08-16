@@ -10703,6 +10703,9 @@ decoding accuracy, language decoding, or thought-to-text capability.
 - Preserved the evidence ceiling: this does not identify the consumed nested
   route, prove F06 fired, inspect a private row, freeze a cohort, or establish
   neural information.
+- Committed exact implementation `d9fa44399df81a215e0234be1b9ef86c0f2b138e`;
+  Base job `95229811925`, Optional job `95229811955`, and CI `31973656275`
+  passed before any subsequent repair work.
 
 Engineering capability added: the repository can now distinguish a lost
 one-shot diagnostic from a generated-fixture/live-selection contract defect.

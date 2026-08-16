@@ -3,7 +3,7 @@
   "schema_version": "0.1.0",
   "lane_id": "MARC2-VR5A",
   "implementation_id": "MARC2-VR5A-I1",
-  "status": "completed_artifact_only_implementation_and_measured_audit_pending_remote_green",
+  "status": "completed_artifact_only_implementation_and_measured_audit_remotely_green",
   "recorded_at_local": "2026-08-16",
   "green_registration_proof": {
     "commit": "926e1ba1189c86f4f7bde8019c64395c086c9327",
@@ -93,7 +93,14 @@
     "thread_and_resource_refusals": true,
     "aggregate_privacy_walker": true,
     "ruff": "passed",
-    "remote_CI_pending": true
+    "remote_CI_pending": false,
+    "remote_proof": {
+      "commit": "d9fa44399df81a215e0234be1b9ef86c0f2b138e",
+      "CI_run_id": 31973656275,
+      "base_python_job_id": 95229811925,
+      "optional_neuro_job_id": 95229811955,
+      "both_required_jobs_green": true
+    }
   },
   "access_counters": {
     "private_or_Git_ignored_path_operations": 0,

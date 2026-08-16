@@ -4,12 +4,15 @@ Date: 2026-08-16
 
 Lane: `MARC2-VR5A`
 
-Status: **Artifact-only implementation and measured audit complete; remote
-proof pending**
+Status: **Artifact-only implementation and measured audit remotely green**
 
 Registration commit `926e1ba1189c86f4f7bde8019c64395c086c9327`
 passed Base Python job `95226555204`, Optional Neuro Readers job
 `95226555153`, and CI `31972332778` before implementation began.
+
+Exact implementation `d9fa44399df81a215e0234be1b9ef86c0f2b138e`
+subsequently passed Base Python job `95229811925`, Optional Neuro Readers job
+`95229811955`, and CI `31973656275`.
 
 ## Implementation
 
@@ -140,7 +143,7 @@ The next lane should be generated-only and additive. It should:
    request.
 
 The consumed VR4P executor remains immutable and cannot be patched or reused.
-After this exact implementation is remotely green, the repair needs its own
+This exact implementation is remotely green. The repair now needs its own
 frozen contract and generated qualification. A later private pass remains a
 new Tier C action with a separate all-false packet and fresh maintainer
 decision.

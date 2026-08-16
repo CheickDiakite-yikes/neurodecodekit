@@ -1896,7 +1896,9 @@ Read this before interpreting any number in the repository.
   both jobs in CI `31971526419`.
 - **MARC2-VR5A artifact-only refusal localization:** registration `926e1ba`
   passed Base job `95226555204`, Optional job `95226555153`, and CI
-  `31972332778` before the fixed AST/JSON audit. `MARC2VR5-R2` proves that the
+  `31972332778` before the fixed AST/JSON audit. Exact implementation `d9fa443`
+  then passed Base job `95229811925`, Optional job `95229811955`, and CI
+  `31973656275`. `MARC2VR5-R2` proves that the
   VR4P catch discarded the nested VR2 route, reducing eight aggregate-safe
   diagnostic classes to one. It also proves that VR2 compares a live
   selection against nine exact generated outputs, including a fixed

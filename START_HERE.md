@@ -18,6 +18,8 @@ VR5A then proved that the wrapper collapsed eight safe nested VR2 routes into
 one outer `MARC2MSP-F07`, and that the live selection path still enforces nine
 exact generated-fixture outputs and generated source semantics. The hidden
 private route remains unavailable and must not be inferred as F06.
+Exact implementation `d9fa443` passed Base job `95229811925`, Optional job
+`95229811955`, and CI `31973656275`.
 
 Immediate work is a separately named generated-only live-selection invariant
 repair with dynamic 12-19-subject maximal-prefix checks and aggregate nested

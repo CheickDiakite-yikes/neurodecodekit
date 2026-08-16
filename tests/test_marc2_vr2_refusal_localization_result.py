@@ -18,8 +18,14 @@ class Marc2Vr2RefusalLocalizationResultTests(unittest.TestCase):
         self.assertEqual(self.result["route"], "MARC2VR5-R2")
         self.assertEqual(
             self.result["status"],
-            "completed_artifact_only_VR2_refusal_localization_pending_remote_green",
+            "completed_artifact_only_VR2_refusal_localization_remotely_green",
         )
+        proof = self.result["verification"]["remote_proof"]
+        self.assertEqual(
+            proof["commit"], "d9fa44399df81a215e0234be1b9ef86c0f2b138e"
+        )
+        self.assertEqual(proof["CI_run_id"], 31973656275)
+        self.assertTrue(proof["both_required_jobs_green"])
 
     def test_every_bound_artifact_hash_matches(self):
         for binding in self.result["artifact_bindings"]:
