@@ -1,0 +1,193 @@
+{
+  "schema_name": "neurodecodekit.marc2_live_adapter_recovery_failure_result",
+  "schema_version": "0.1.0",
+  "result_id": "MARC-2-LA2-consumed-live-adapter-recovery-failure-result-v0",
+  "lane_id": "MARC2-LA2",
+  "recorded_at_local": "2026-08-16",
+  "status": "consumed_failed_LA1_source_refusal_no_retry_or_rerun",
+  "route": "MARC2LAR-F02",
+  "full_route": "MARC2LAR-F02-LA1_validation_or_bridge_refusal",
+  "proof_posture": {
+    "kind": "one_consumed_target_free_private_structural_attempt",
+    "scientific_value": false,
+    "real_private_structural_manifest_read": true,
+    "archive_member_or_payload_read": false,
+    "target_model_or_score_operation": false
+  },
+  "green_implementation_proof": {
+    "commit": "5390e068bff24beaf878ac1facff7708c5449249",
+    "CI_run_id": 31939483560,
+    "base_python_job_id": 95146470514,
+    "optional_neuro_job_id": 95146470539,
+    "both_required_jobs_green_before_execution": true,
+    "implementation_registry_sha256": "cefb8709b97add38b736d54f54e8ac10d84c161cba138053db645b5b4da79aa5",
+    "proof_certificate_sha256": "6c7df6c7b46436d6e45481d092f3bd7641f7de9862f555dd5acdd934786c3acf"
+  },
+  "artifact_bindings": [
+    {
+      "path": "src/neurodecodekit/datasets/marc2_live_schema_adapter_recovery.py",
+      "sha256": "009bf97a46d9977e17ed590c51bf9e2a97377ea38864c65b61a5b2588d1aa2d9"
+    },
+    {
+      "path": "registries/marc2_live_adapter_recovery_implementation.v0.json",
+      "sha256": "cefb8709b97add38b736d54f54e8ac10d84c161cba138053db645b5b4da79aa5"
+    },
+    {
+      "path": "registries/marc2_live_adapter_recovery_proof_certificate.v0.json",
+      "sha256": "6c7df6c7b46436d6e45481d092f3bd7641f7de9862f555dd5acdd934786c3acf"
+    },
+    {
+      "path": "registries/marc2_live_adapter_recovery_authorization_decision.v0.json",
+      "sha256": "7d4f20f92fe501c97d150f40c9174c4e6d03f52de420a5f6acbea306e7a1313e"
+    },
+    {
+      "path": "docs/MARC_2_LIVE_ADAPTER_RECOVERY_IMPLEMENTATION.md",
+      "sha256": "dcff175297cad6a0f887b634944ea90990398ae1c2e7ffc46bb620d71cac625c"
+    },
+    {
+      "path": "docs/MARC_2_LIVE_ADAPTER_RECOVERY_RESULT.md",
+      "sha256": "bb4dbee85f2360d96aa56b755d281485e7341e0eba951985cd98488c59e8dee2"
+    },
+    {
+      "path": "tests/test_marc2_live_adapter_recovery_failure_result.py",
+      "sha256": "209dafbebd6f46abd960d88fe0c99179a874405410734be959fe292db5a67abd"
+    }
+  ],
+  "private_execution": {
+    "registered_private_path_component_checks": 3,
+    "registered_private_final_lstats": 1,
+    "private_manifest_bytes": 418755,
+    "content_opens": 1,
+    "body_reads": 1,
+    "SHA256_passes": 1,
+    "strict_JSON_parses": 1,
+    "registered_size_and_SHA256_passed": true,
+    "strict_duplicate_key_control_passed": true,
+    "consumed_marker_preceded_content_open": true,
+    "registered_output_root_operations": 1,
+    "consumed_markers": 1,
+    "aggregate_reports": 1,
+    "private_selection_manifests": 0
+  },
+  "stop_result": {
+    "stage": "live_adapter_and_frozen_selector",
+    "aggregate_safe_reason": "LA1 adapter refused source",
+    "nested_LA1_predicate_available": false,
+    "nested_predicate_not_inferred": true,
+    "LA1_success_calls": 0,
+    "selector_calls": 0,
+    "retry_or_fallback_attempted": false
+  },
+  "selection_result": {
+    "selected_subjects": 0,
+    "selected_run_bundles": 0,
+    "selected_core_members": 0,
+    "selected_reservation_bytes": 0,
+    "private_selection_manifests": 0
+  },
+  "acceptance_gate_result": {
+    "required": 10,
+    "passed": 9,
+    "failed": [
+      "canonical_replay"
+    ],
+    "passed_names": [
+      "all_32_proof_certificate_refusals",
+      "all_24_executor_refusals",
+      "exact_LA1_call_count",
+      "exact_selector_call_count",
+      "target_free_selection",
+      "source_immutable_and_unaliased",
+      "one_thread_and_resource_caps",
+      "aggregate_privacy",
+      "zero_archive_payload_neural_target_model_score_operations"
+    ]
+  },
+  "measurements": {
+    "runtime_seconds": 0.06782554200617597,
+    "peak_RSS_bytes": 29425664,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "free_disk_bytes_before_consumption": 168321097728,
+    "logical_CPUs": 12,
+    "one_minute_load": 1.79345703125,
+    "one_minute_load_per_logical_CPU": 0.14945475260416666,
+    "peak_RSS_bytes_before_consumption": 26902528,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "producer_is_causal": "not_applicable_metadata_only",
+    "end_to_end_latency_measured": false,
+    "aggregate_receipt_observed_bytes": 5695,
+    "aggregate_receipt_mode": "0644",
+    "aggregate_receipt_sha256": "22900982d87a5d6565da2734011358fc6ef137cfc2fc002ddc9c4cb26c7a9f90",
+    "receipt_reported_output_bytes": 6096,
+    "output_measurement_difference_bytes": 401,
+    "consumed_marker_bytes_inspected": false,
+    "total_invocation_created_bytes_available": false
+  },
+  "forbidden_operation_counters": {
+    "archive_local_header_or_member_payload_reads": 0,
+    "signal_sample_reads": 0,
+    "event_target_label_quality_onset_or_channel_reads": 0,
+    "real_derivative_rows": 0,
+    "training_or_parameter_update_fits": 0,
+    "model_inference_or_prediction_sets": 0,
+    "prediction_freezes_target_deliveries_or_scores": 0,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "provider_or_language_model_calls": 0,
+    "hardware_operations": 0,
+    "retries_reruns_or_resumes": 0,
+    "operations_on_other_projects": 0,
+    "scientific_claim_upgrades": 0,
+    "real_participant_selections": 0,
+    "real_member_selections": 0,
+    "private_selection_manifests": 0,
+    "MARC2_FW2_operations": 0
+  },
+  "verification": {
+    "focused_failure_result_tests": 10,
+    "complete_base_tests": 3462,
+    "complete_base_skips": 204,
+    "optional_A_M_tests": 3020,
+    "optional_A_M_skips": 28,
+    "optional_N_Z_tests": 513,
+    "optional_N_Z_skips": 7,
+    "complete_optional_tests": 3533,
+    "complete_optional_skips": 35,
+    "aggregate_receipt_validated_by_exact_inspector": true,
+    "ruff_compile_registry_JSON_and_diff_hygiene_passed": true,
+    "remote_CI_pending": true
+  },
+  "warnings": [
+    "The nested LA1 refusal predicate was not retained and is unavailable without a forbidden reinspection or rerun.",
+    "The aggregate receipt's internal output byte count differs from the observed final aggregate file size by 401 bytes.",
+    "The consumed marker was not inspected, so total invocation-created bytes are unavailable.",
+    "No real cohort was selected and the generated 16-subject prefix remains interface evidence only."
+  ],
+  "unavailable_fields": [
+    "nested LA1 refusal predicate",
+    "selected cohort and private selection",
+    "consumed marker byte size and total invocation-created bytes",
+    "archive member payload signal events targets labels channels geometry and quality",
+    "neural features predictions scores and end-to-end latency"
+  ],
+  "disposition": {
+    "registered_execution_consumed": true,
+    "retry_rerun_or_resume_limit": 0,
+    "private_reinspection_allowed": false,
+    "consumed_root_patch_delete_rename_or_reuse_allowed": false,
+    "private_selection_available": false,
+    "archive_member_or_payload_allowed": false,
+    "MARC2_FW2_eligible": false,
+    "new_Tier_C_decision_required_for_any_private_read": true,
+    "next_safe_work": "separately named artifact-only failure localization over fixed committed code and this aggregate result"
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "The proof-gated executor completed one exact integrity-checked structural pass and failed closed before selection or archive access when LA1 rejected the source.",
+    "scientific_claim_not_established": "No neural payload target prediction or score was accessed so this result establishes no neural effect decoding accuracy language decoding or thought-to-text capability."
+  }
+}

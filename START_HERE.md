@@ -111,11 +111,17 @@
    executor refusals, replaying the 16-subject, 96-run, 384-member structural
    prefix in 0.273685 seconds at 37,978,112-byte peak RSS. Every retained-path,
    archive, neural, target, model, score, network, and claim counter stayed
-   zero, and the generated output was removed. The exact implementation is not
-   yet remotely green, so the retained 418,755-byte manifest remains unopened.
-   Commit, push, and both green jobs are required before its one registered
-   structural selection. Even success stops before archive members and
-   `MARC2-FW2`. Then read
+   zero, and the generated output was removed. Exact implementation `5390e06`
+   then passed Base job `95146470514`, Optional job `95146470539`, and CI
+   `31939483560` before its sole structural execution. Read
+   `docs/MARC_2_LIVE_ADAPTER_RECOVERY_RESULT.md` and
+   `registries/marc2_live_adapter_recovery_failure_result.v0.json`. One
+   no-follow pass opened, read, hashed, and strict-parsed exactly 418,755 bytes,
+   then consumed at `MARC2LAR-F02` because LA1 refused the source. LA1 recorded
+   no success, the selector was never called, and zero subjects or members were
+   selected. The exact nested LA1 predicate is unavailable without forbidden
+   reinspection. No archive, neural, target, model, score, or network operation
+   occurred. LA2 has no retry; `MARC2-FW2` remains ineligible. Then read
    `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
    result, then use its preregistration and authorization documents for audit.

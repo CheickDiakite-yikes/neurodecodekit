@@ -8086,3 +8086,36 @@ data, targets, models, scores, `MARC2-FW2`, release, or claim work.
 Evidence: `docs/MARC_2_LIVE_ADAPTER_RECOVERY_IMPLEMENTATION.md`, both LA2
 implementation/result registries, the distinct FW1B proof certificate, the
 additive module, and its three tests.
+
+## 0247 - Consume LA2 At The First LA1 Refusal
+
+Order decision: accept exact implementation `5390e06`, Base job `95146470514`,
+Optional job `95146470539`, and CI `31939483560` as the completed second green
+barrier before private access.
+
+Execution decision: record one consumed invocation. It passed the machine and
+proof gates, wrote one consumed marker, checked the exact path and source
+identity, then opened, read, hashed, and strict-parsed 418,755 structural bytes
+once. LA1 refused the source at `live_adapter_and_frozen_selector`; route
+`MARC2LAR-F02` is final.
+
+Evidence decision: selected subjects, runs, members, reservation bytes, and
+private selections are zero. No LA1 success or selector call occurred. Runtime
+was 0.06782554200617597 seconds at 29,425,664-byte peak RSS. Preserve both the
+5,695-byte observed aggregate and its 6,096-byte internal output measurement;
+do not inspect the marker to resolve the 401-byte discrepancy.
+
+Inference decision: the retained aggregate-safe reason is only `LA1 adapter
+refused source`. Do not infer the nested predicate from that reason, reopen the
+private manifest, or reinterpret the generated 16-subject prefix as a real
+selection.
+
+Boundary decision: LA2 has no retry, rerun, resume, repair, fallback, private
+reinspection, or root operation. `MARC2-FW2` remains ineligible. Archive,
+payload, neural, target, model, score, network, release, and claim work remain
+closed. A new artifact-only diagnosis over committed code and aggregate
+artifacts is eligible; any private read needs a new prospective Tier C gate.
+
+Evidence: `docs/MARC_2_LIVE_ADAPTER_RECOVERY_RESULT.md`,
+`registries/marc2_live_adapter_recovery_failure_result.v0.json`, and its result
+test.

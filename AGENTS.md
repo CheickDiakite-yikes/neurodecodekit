@@ -1564,14 +1564,27 @@ temporary aggregate and private generated fixture were removed. Every real,
 private, archive, payload, neural, target, model, training, score, network,
 provider, hardware, retry, cross-project, and claim counter stayed zero.
 
-The exact executor is not yet remotely green. Commit, push, and require both CI
-jobs green before any operation on the retained path. Only after that proof may
-the executor create one new consumed marker, open and read the exact
-418,755-byte mode-0600 structural manifest once, call LA1 and the selector once,
-and write bounded structural outputs. Never touch either consumed root, open an
+Exact executor `5390e068bff24beaf878ac1facff7708c5449249` passed Base job
+`95146470514`, Optional job `95146470539`, and CI `31939483560` before the sole
+private structural invocation. Read
+`docs/MARC_2_LIVE_ADAPTER_RECOVERY_RESULT.md` and
+`registries/marc2_live_adapter_recovery_failure_result.v0.json`. The executor
+passed its machine and proof gates, created one consumed marker, checked three
+path components and the final source identity, then opened, read, hashed, and
+strict-parsed exactly 418,755 bytes once. It consumed at `MARC2LAR-F02` during
+`live_adapter_and_frozen_selector` because `LA1 adapter refused source`.
+
+No LA1 success or selector call was recorded; zero subjects, runs, members, or
+bytes were selected. Runtime was 0.06782554200617597 seconds at 29,425,664-byte
+peak RSS. The observed aggregate is 5,695 bytes while its internal measurement
+reports 6,096; preserve the 401-byte discrepancy and do not inspect the marker
+to fill the unavailable total. The nested LA1 predicate was not retained and
+must not be inferred. LA2 is consumed with no retry, rerun, resume, repair,
+fallback, private reinspection, root operation, or selection. Never open an
 archive member, access neural data or targets, run a model or score, use a
-network/provider/device, retry/rerun, enter `MARC2-FW2`, release, or upgrade a
-claim regardless of the structural route.
+network/provider/device, enter `MARC2-FW2`, release, or upgrade a claim. The
+next safe work is a separately named artifact-only diagnosis over fixed
+committed code and this aggregate result.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

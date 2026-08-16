@@ -9799,6 +9799,42 @@ Scientific claim not established: generated metadata contain no human neural
 signal, target, prediction, or score and establish no neural effect, decoding
 accuracy, language decoding, or thought-to-text capability.
 
+## 2026-08-16 - MARC2-LA2 Consumed Structural Failure
+
+- Exact executor `5390e068bff24beaf878ac1facff7708c5449249` passed Base
+  Python job `95146470514`, Optional Neuro Readers job `95146470539`, and CI
+  `31939483560` before the sole private invocation.
+- The machine gate passed at 168,321,097,728 free bytes, 12 logical CPUs,
+  one-minute load `1.79345703125`, normalized load `0.14945475260416666`, and
+  26,902,528-byte preconsumption peak RSS.
+- The executor created one consumed marker, performed three path-component
+  checks and one final lstat, then opened, read, hashed, and strict-parsed the
+  exact 418,755-byte structural manifest once.
+- LA1 refused the source at stage `live_adapter_and_frozen_selector`, routing
+  `MARC2LAR-F02`. The nested predicate was intentionally not retained and is
+  unavailable without a forbidden reinspection or rerun.
+- No LA1 success or selector call was recorded. Selected subjects, runs,
+  members, reservation bytes, and private selection manifests are all zero.
+- Runtime was 0.06782554200617597 seconds at 29,425,664-byte peak RSS. The
+  observed 5,695-byte aggregate hashes to
+  `22900982d87a5d6565da2734011358fc6ef137cfc2fc002ddc9c4cb26c7a9f90`.
+  Its internal 6,096-byte output measure differs by 401 bytes; the marker size
+  and total invocation-created bytes remain uninspected and unavailable.
+- Every archive, payload, signal, event, target, label, channel, quality,
+  derivative, model, fit, prediction, score, network, provider, hardware,
+  retry, cross-project, FW2, and claim counter is zero.
+- LA2 is consumed without retry, rerun, resume, repair, fallback, private
+  reinspection, or root operation. `MARC2-FW2` remains ineligible. Only a new
+  artifact-only committed-code diagnosis is safe without another Tier C gate.
+
+Engineering capability added: the exact executor completed one integrity-
+checked private structural pass and failed closed before selection or archive
+access when LA1 rejected the source.
+
+Scientific claim not established: no neural payload, target, prediction, or
+score was accessed, so this result establishes no neural effect, decoding
+accuracy, language decoding, or thought-to-text capability.
+
 ## 2026-08-16 - MARC2-LA2 Packet-Bound Authorization Decision
 
 - Request `f9f24a37d840e3408c19dc00830096f6c24b8e03` passed Base Python

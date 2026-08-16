@@ -2194,7 +2194,7 @@ complete and consumed. Proof closeout `52eabc6` passed Base job `95138912293`,
 Optional job `95138912287`, and CI `31936399968`. No live/private authority
 exists from LA1.
 
-### MARC2-LA2 - Live Adapter Recovery (Generated Executor Qualified; Remote Green Pending)
+### MARC2-LA2 - Live Adapter Recovery (Consumed And Parked At F02)
 
 This packet binds exact green LA1, the shared proof validator, the frozen
 selector, consumed FW1C route `MARC2FWC-F02`, and one literal 418,755-byte
@@ -2224,9 +2224,27 @@ fixture were inspected, hashed, and removed. Every retained-private, archive,
 payload, neural, target, model, training, score, network, provider, hardware,
 retry, cross-project, and claim counter remained zero.
 
-Thirty-two functional, fifteen implementation, and nine result tests are bound
-to the final local gate. The exact implementation must now be committed,
-pushed, and pass both remote jobs. Until that proof, do not stat, open, hash, or
-parse the retained 418,755-byte manifest. After green proof, exactly one
-structural selection may run without retry; archive members, payloads,
-`MARC2-FW2`, and every scientific operation remain closed.
+Thirty-two functional, fifteen implementation, and nine generated-result tests
+passed locally. Exact implementation `5390e06` then passed Base job
+`95146470514`, Optional job `95146470539`, and CI `31939483560` before the one
+registered structural invocation.
+
+The machine gate passed with 168,321,097,728 free bytes and normalized load
+`0.149455`. The executor created one consumed marker, checked three path
+components and one final identity, opened the manifest once, read 418,755 bytes
+once, hashed once, and strict-parsed once. It then routed `MARC2LAR-F02` at
+`live_adapter_and_frozen_selector` because `LA1 adapter refused source`.
+
+No LA1 success or selector call was recorded. Zero subjects, runs, members, or
+reserved bytes were selected. Runtime was 0.06782554200617597 seconds at
+29,425,664-byte peak RSS. The 5,695-byte aggregate receipt hashed to
+`22900982d87a5d6565da2734011358fc6ef137cfc2fc002ddc9c4cb26c7a9f90`;
+its internal 6,096-byte output measurement differs by 401 bytes and is
+preserved as an engineering discrepancy. The marker size remains uninspected.
+
+LA2 is consumed without retry, rerun, repair, fallback, or private
+reinspection. The nested LA1 predicate is unavailable and must not be inferred.
+Archive members, payloads, signals, events, targets, models, predictions,
+scores, network operations, and claims remain zero. `MARC2-FW2` is ineligible;
+the next safe work is a separately named artifact-only diagnosis over fixed
+committed code and this aggregate result.

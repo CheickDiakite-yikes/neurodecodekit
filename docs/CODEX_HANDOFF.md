@@ -4710,3 +4710,32 @@ retained 418,755-byte manifest and do not create the registered v2 root. After
 green proof, one and only one no-retry structural selection is open. Regardless
 of route, stop before archive members, payloads, signals, targets, models,
 scores, network, `MARC2-FW2`, release, or claim work.
+
+## 2026-08-16 MARC2-LA2 Consumed Result Handoff
+
+Exact executor `5390e068bff24beaf878ac1facff7708c5449249` passed Base job
+`95146470514`, Optional job `95146470539`, and CI `31939483560` before its
+sole private structural invocation. Read the LA2 result document and failure
+result registry first.
+
+The machine gate passed with 168,321,097,728 free bytes and normalized load
+`0.149455`. The executor created the v2 consumed marker, performed three path-
+component checks and one final lstat, then opened, read, hashed, and strict-
+parsed exactly 418,755 structural bytes once. It reached
+`live_adapter_and_frozen_selector` and consumed at `MARC2LAR-F02` with the only
+retained safe reason `LA1 adapter refused source`.
+
+LA1 recorded zero successful calls and the selector recorded zero calls. Zero
+participants, run bundles, members, reservation bytes, or private selections
+were produced. Runtime was 0.06782554200617597 seconds at 29,425,664-byte peak
+RSS. The 5,695-byte aggregate receipt hashes to
+`22900982d87a5d6565da2734011358fc6ef137cfc2fc002ddc9c4cb26c7a9f90`.
+It internally reports 6,096 output bytes; preserve that 401-byte discrepancy.
+The marker was not inspected, so total invocation-created bytes are unavailable.
+
+Do not inspect or operate on the retained manifest, consumed marker, or private
+v2 root. Do not infer the nested LA1 predicate, rerun, resume, repair, relax, or
+substitute the execution. `MARC2-FW2` remains ineligible. The only eligible
+next work is a separately named artifact-only analysis over fixed committed
+code and the committed aggregate result; any private access requires a new
+prospective contract and Tier C decision.
