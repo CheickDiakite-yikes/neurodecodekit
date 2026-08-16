@@ -1,0 +1,227 @@
+{
+  "schema_name": "neurodecodekit.marc2_vr2_refusal_localization_result",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC2-VR5A",
+  "result_id": "MARC2-VR5A-R1",
+  "status": "completed_artifact_only_VR2_refusal_localization_pending_remote_green",
+  "recorded_at_local": "2026-08-16",
+  "route": "MARC2VR5-R2",
+  "proof_posture": "fixed_committed_code_and_aggregate_results_only_no_private_or_scientific_value",
+  "green_registration_proof": {
+    "commit": "926e1ba1189c86f4f7bde8019c64395c086c9327",
+    "CI_run_id": 31972332778,
+    "base_python_job_id": 95226555204,
+    "optional_neuro_job_id": 95226555153,
+    "both_required_jobs_green_before_implementation": true
+  },
+  "artifact_bindings": [
+    {
+      "path": "registries/marc2_vr2_refusal_localization_contract.v0.json",
+      "sha256": "268545b9bf1d517edd9b25960f4148f3c5ce17beac9c25ce6a9a8ea1f12c7fea"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/marc2_vr2_refusal_localization.py",
+      "sha256": "67a42a48b0fc33f18ea6a4683632074fd204c44e85b9d7d15af5547f485f5668"
+    },
+    {
+      "path": "registries/marc2_vr2_refusal_localization_implementation.v0.json",
+      "sha256": "7fdce71e503e5f42e2ab277c13600589345c1395f12bec8be37962e57270d5be"
+    },
+    {
+      "path": "docs/MARC_2_VR2_REFUSAL_LOCALIZATION_PREREGISTRATION.md",
+      "sha256": "fd7b665e5da2bca7c0bf191075d71898e2a5b5c24e790f74a71205167ac4e181"
+    },
+    {
+      "path": "docs/MARC_2_VR2_REFUSAL_LOCALIZATION_IMPLEMENTATION.md",
+      "sha256": "6272c6db2639af8eab7808235e5ef1146c7526a5e3738c060b668c31932a901c"
+    },
+    {
+      "path": "tests/test_marc2_vr2_refusal_localization_contract.py",
+      "sha256": "5106d95dddde04a02c3866d4763c8cadede1192b21b617c3308f52195bd5b9cd"
+    },
+    {
+      "path": "tests/test_marc2_vr2_refusal_localization.py",
+      "sha256": "5d2fbd1ae7d66859a505b5eba7ce4f08f390a72c6ac76356d2f0c3193b14fcce"
+    }
+  ],
+  "upstream_consumed_result": {
+    "route": "MARC2MSP-F07",
+    "stage": "VR2_structural_adapter",
+    "VR2_adapter_calls": 1,
+    "VR2_adapter_successes": 0,
+    "underlying_VR2_route_available": false,
+    "private_reinspection_allowed": false
+  },
+  "wrapper_diagnostic": {
+    "VR2_exception_catches": 1,
+    "diagnostic_classes_before_catch": 8,
+    "diagnostic_classes_after_catch": 1,
+    "diagnostic_class_reduction": 7,
+    "nested_route_preserved": false,
+    "nested_reason_preserved": false,
+    "outer_route": "MARC2MSP-F07",
+    "collapse_proven": true
+  },
+  "route_accounting": {
+    "nested_routes_accounted_for": 8,
+    "contract_or_green_proof_routes": [
+      "MARC2VR2-F01",
+      "MARC2VR2-F05"
+    ],
+    "source_or_selection_routes_remaining_unresolved": [
+      "MARC2VR2-F02",
+      "MARC2VR2-F03",
+      "MARC2VR2-F04",
+      "MARC2VR2-F06",
+      "MARC2VR2-F07"
+    ],
+    "qualification_only_route_not_called_by_adapter": "MARC2VR2-F08",
+    "observed_nested_route_available": false,
+    "observed_nested_route_inferred": false
+  },
+  "producer_lineage": {
+    "producer_schema_and_proof_posture_anchored": true,
+    "producer_source_identity_matches_VR2_contract": true,
+    "producer_transport_hashes_match_VR2_contract": true,
+    "producer_row_and_kind_counts_match_VR2_contract": true,
+    "consumed_source_registered_hash_passed": true,
+    "consumed_source_strict_JSON_passed": true,
+    "F02_lineage_consistent": true,
+    "F02_formally_identified_or_excluded_as_observed_route": false,
+    "private_field_or_row_inspected": false
+  },
+  "selection_contract_diagnostic": {
+    "exact_generated_fields_required_of_every_selection": [
+      "selected_subjects",
+      "selected_run_bundles",
+      "selected_core_members",
+      "fit_run_bundles",
+      "heldout_run_bundles",
+      "fit_heldout_overlap",
+      "selected_reservation_bytes",
+      "reservation_cap_bytes",
+      "selection_identity_sha256"
+    ],
+    "exact_generated_field_count": 9,
+    "generated_selected_subjects": 16,
+    "generated_selected_reservation_bytes": 8105207776,
+    "generated_selection_identity_sha256": "dee065bfdb5f8439fe711042eaadbea0dca3d83f8be0d6b7b9d1637e84d9f641",
+    "generated_profiles": 4,
+    "generated_success_paths": 8,
+    "all_generated_selection_identities_equal": true,
+    "dynamic_live_subject_count_accepted": false,
+    "dynamic_live_reservation_bytes_accepted": false,
+    "measured_live_selection_hash_accepted_before_freeze": false,
+    "live_selection_overconstraint_proven": true,
+    "hardcoded_row_source_id": "freewill_23_generated",
+    "hardcoded_private_proof_posture": "generated_fixture_selection_only_no_scientific_value",
+    "hardcoded_source_hash_key": "generated_inventory_sha256",
+    "live_source_semantics_preserved": false
+  },
+  "root_cause": {
+    "class": "aggregate_route_collapse_plus_generated_selection_identity_overconstraint",
+    "why_the_failure_is_opaque": "VR4P maps every LiveDomainEligibilityRefusal to one outer F07 without retaining exc.route",
+    "why_generated_VR2_passed": "all eight generated success paths intentionally reproduce one generated selection count reservation total and identity hash",
+    "why_VR2_is_not_yet_live_selection_compatible": "the live path compares measured selection outputs against those exact generated values and emits generated source semantics",
+    "exact_private_predicate_proven": false,
+    "observed_nested_route_inferred": false,
+    "private_source_malformed_inferred": false,
+    "data_or_scientific_failure": false
+  },
+  "measurements": {
+    "input_artifact_count": 12,
+    "input_bytes": 400289,
+    "Python_AST_parses": 5,
+    "strict_JSON_parses": 7,
+    "runtime_seconds": 1.5929494580050232,
+    "peak_RSS_bytes": 39698432,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "aggregate_output_bytes": 8706,
+    "retained_generated_output_bytes": 0,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "producer_is_causal": "not_applicable_artifact_only",
+    "end_to_end_latency_measured": false
+  },
+  "access_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_marker_certificate_output_or_source_operations": 0,
+    "archive_local_header_or_member_payload_reads": 0,
+    "signal_event_target_label_quality_channel_or_geometry_reads": 0,
+    "derivative_cache_feature_split_or_neurotoken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "network_download_provider_or_language_model_operations": 0,
+    "stream_device_or_hardware_operations": 0,
+    "consumed_executor_patch_retry_rerun_resume_or_repair_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "acceptance_gates": {
+    "green_registration_preceded_implementation": true,
+    "all_fixed_artifact_hashes_passed": true,
+    "outer_wrapper_route_collapse_proven": true,
+    "all_eight_nested_routes_accounted_for": true,
+    "producer_envelope_lineage_reconciled": true,
+    "exact_generated_selection_assertions_enumerated": true,
+    "live_selection_overconstraint_proven": true,
+    "generated_source_semantics_on_live_path_proven": true,
+    "exact_private_predicate_left_unresolved": true,
+    "one_thread_runtime_RSS_input_and_output_caps": true,
+    "zero_private_archive_neural_target_model_score_network_operations": true
+  },
+  "prospective_repair": {
+    "new_lane_required": true,
+    "patch_or_reuse_consumed_VR4P": false,
+    "preserve_nested_VR2_route_in_aggregate_failure": true,
+    "preserve_nested_reason_or_private_value": false,
+    "validate_source_before_selection": true,
+    "real_selection_subject_count_may_vary_within_frozen_12_to_19_bounds": true,
+    "real_selection_must_be_maximal_contiguous_rank_prefix": true,
+    "selected_reservation_must_be_measured_and_at_or_below_cap": true,
+    "generated_selected_subject_count_reservation_or_hash_may_be_required_of_real_source": false,
+    "freeze_measured_real_selection_hash_only_after_success": true,
+    "real_source_id_and_proof_posture_required": true,
+    "generated_success_profiles_must_cover_variable_reservation_boundaries": true,
+    "private_rows_or_values_in_aggregate_output": false,
+    "future_private_read_requires_new_Tier_C_packet_and_decision": true
+  },
+  "verification": {
+    "focused_tests": 28,
+    "focused_subtests": 18,
+    "complete_suite_collected": 3903,
+    "complete_suite_passed": 3865,
+    "complete_suite_skipped": 35,
+    "complete_suite_known_process_state_failures": 3,
+    "fresh_process_state_reruns_passed": 2,
+    "outside_sandbox_forkserver_reruns_passed": 1,
+    "ruff_compile_registry_JSON_CLI_and_diff_hygiene_passed": true,
+    "remote_CI_pending": true
+  },
+  "warnings": [
+    "The consumed private VR2 route was not retained and remains unavailable.",
+    "F06 is a proven compatibility hazard, not a claim that the consumed attempt reached F06.",
+    "Producer-envelope consistency constrains F02 but does not identify or exclude the observed nested route.",
+    "No private source ignored path consumed output archive member neural value target model or score was accessed."
+  ],
+  "unavailable_fields": [
+    "observed nested VR2 route reason predicate and value",
+    "private source rows and real selected cohort identity",
+    "real selected reservation bytes subject count and selection hash",
+    "archive member payload integrity signals events targets and quality",
+    "neural features predictions scores and causal latency"
+  ],
+  "claim_boundary": {
+    "engineering_ceiling": "artifact_only_localization_of_diagnostic_and_live_selection_contract_defects",
+    "scientific_ceiling": "none",
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "real_time_portable_home_assistive_or_clinical_result": false
+  }
+}

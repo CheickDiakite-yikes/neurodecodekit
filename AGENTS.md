@@ -45,6 +45,27 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
+The latest completed local diagnosis is `MARC2-VR5A`. Read
+`docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`,
+`docs/MARC_2_VR2_REFUSAL_LOCALIZATION_PREREGISTRATION.md`, and
+`docs/MARC_2_VR2_REFUSAL_LOCALIZATION_IMPLEMENTATION.md` with their
+registries. VR4P is consumed at outer `MARC2MSP-F07`; its exact nested VR2
+route was not retained and must not be inferred. VR5A registration
+`926e1ba1189c86f4f7bde8019c64395c086c9327` passed Base Python job
+`95226555204`, Optional Neuro Readers job `95226555153`, and CI
+`31972332778` before the artifact-only implementation.
+
+VR5A proves that the wrapper discarded `exc.route`, reducing eight safe
+diagnostic classes to one, and that VR2's live path still requires nine exact
+generated selection outputs and emits generated source semantics. It does not
+prove that the consumed run reached F06. No real cohort exists and FW2/CIL1
+remain ineligible. The next safe task is to commit and remotely qualify VR5A,
+then freeze a separately named generated-only dynamic live-selection repair.
+Do not touch ignored MARC2 paths, consumed roots, certificates, markers,
+retained sources, archive members, neural data, targets, models, predictions,
+or scores. Any future private read remains a new Tier C packet and fresh
+packet-bound decision.
+
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-
 blind analysis over 72 S004-S015 EDFs. The analysis accepted 1,080 events,
@@ -3173,6 +3194,30 @@ authorization boundary.
   decoding accuracy, end-to-end latency, transfer, or device performance.
 - Resource, privacy, access, timestamp, anomaly, hash, and claim boundaries stay
   explicit and machine-checkable.
+
+## Latest MARC2-VR5A Boundary
+
+VR4P is consumed at outer `MARC2MSP-F07`; its nested VR2 route was not retained
+and must not be reconstructed from ignored/private artifacts. Artifact-only
+VR5A registration `926e1ba1189c86f4f7bde8019c64395c086c9327` passed CI
+`31972332778`, Base job `95226555204`, and Optional job `95226555153` before
+implementation. Read the VR5A preregistration, implementation/result document,
+three registries, module, and tests.
+
+VR5A proves two engineering defects only. VR4P discarded `exc.route`, reducing
+eight nested diagnostic classes to one. VR2 also requires nine exact generated
+selection outputs and emits generated source identity/proof/hash vocabulary on
+its live path. It does not prove that the private run reached F06. No real
+cohort exists and FW2/CIL1 remain ineligible.
+
+Next, commit and remotely qualify the exact VR5A implementation/result, then
+freeze a separately named generated-only dynamic live-selection repair. It
+must preserve only the nested route code, accept a measured maximal contiguous
+12-19-subject prefix under the unchanged cap, and emit real source semantics.
+Do not touch ignored MARC2 paths, consumed roots, certificates, markers,
+retained sources, archive members, neural data, targets, models, predictions,
+or scores. Any future private read remains a new Tier C packet and fresh
+packet-bound decision.
 
 ## Style
 

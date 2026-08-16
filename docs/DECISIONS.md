@@ -8696,3 +8696,30 @@ fresh decision authorize any private operation.
 Evidence: `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`,
 `registries/marc2_machine_stable_private_recovery_failure_result.v0.json`, and
 its focused result test.
+## 0267 - Localize VR2 Without Reopening The Consumed Source
+
+Execution decision: after the VR4P aggregate result and closeout were remotely
+green, freeze one artifact-only audit over exact committed code, contracts,
+generated results, prior diagnoses, and the aggregate consumed result. Permit
+zero ignored/private path operations, network, archive payload, neural values,
+targets, models, scores, or retained output.
+
+Diagnostic decision: classify the VR4P catch as defective because it maps all
+eight `LiveDomainEligibilityRefusal` routes to outer `MARC2MSP-F07` without
+retaining the aggregate-safe nested route. Preserve the nested reason and all
+private values as unavailable.
+
+Selection decision: reject exact generated outcome values as live invariants.
+The current path requires nine generated outputs, including fixed subject
+count, reservation bytes, and identity hash, and emits generated source
+semantics. A future live-compatible contract must instead validate a measured
+maximal contiguous rank prefix within frozen bounds and freeze its identity
+only after success.
+
+Epistemic decision: do not infer that the consumed attempt reached F06. The
+exact nested route remains unavailable; F02/F03/F04 or another source-reachable
+route may have fired earlier. Treat VR5A as engineering diagnosis only.
+
+Evidence: `docs/MARC_2_VR2_REFUSAL_LOCALIZATION_PREREGISTRATION.md`,
+`docs/MARC_2_VR2_REFUSAL_LOCALIZATION_IMPLEMENTATION.md`, their three
+registries, module, and focused tests.

@@ -10681,3 +10681,31 @@ qualified through the green one-key adapter without another private read.
 Scientific claim not established: this registration contains no neural
 payload, target, prediction, or score and establishes no neural effect,
 decoding accuracy, language decoding, or thought-to-text capability.
+## 2026-08-16 - MARC2-VR5A Refusal Localization
+
+- Confirmed VR4P closeout `0618fc3` passed Base Python job `95225078285`,
+  Optional Neuro Readers job `95225078127`, and CI `31971716473`.
+- Froze artifact-only VR5A at commit `926e1ba`; Base job `95226555204`,
+  Optional job `95226555153`, and CI `31972332778` passed before
+  implementation.
+- Added a standard-library AST/JSON auditor with only `plan` and `audit`. It
+  reads eleven hash-bound committed inputs plus its contract and has no path,
+  URL, private root, execute, archive, neural, target, model, or score surface.
+- Measured `MARC2VR5-R2`: 400,289 input bytes, five AST parses, seven strict
+  JSON parses, 8,706 output bytes, 1.592949458 seconds, 39,698,432-byte peak
+  RSS, one thread, and zero retention.
+- Proved that VR4P reduces eight nested VR2 routes to one outer route by never
+  retaining `exc.route`.
+- Proved that VR2 requires nine exact generated selection outputs on the live
+  path, including 16 subjects, 8,105,207,776 reservation bytes, and one
+  generated selection hash. It also emits generated source ID, proof posture,
+  and source-hash vocabulary for live-derived rows.
+- Preserved the evidence ceiling: this does not identify the consumed nested
+  route, prove F06 fired, inspect a private row, freeze a cohort, or establish
+  neural information.
+
+Engineering capability added: the repository can now distinguish a lost
+one-shot diagnostic from a generated-fixture/live-selection contract defect.
+
+Scientific claim not established: no neural payload, target, prediction, or
+score was accessed, so VR5A establishes no neural effect or decoding result.

@@ -7,6 +7,25 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
+## Current Frontier: MARC2-VR5A
+
+Read `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`, then
+`docs/MARC_2_VR2_REFUSAL_LOCALIZATION_PREREGISTRATION.md` and
+`docs/MARC_2_VR2_REFUSAL_LOCALIZATION_IMPLEMENTATION.md` with their registries.
+The sole VR4P pass is consumed: it verified and strict-parsed exactly 418,755
+private structural bytes, called VR2 once, and returned no cohort. Artifact-only
+VR5A then proved that the wrapper collapsed eight safe nested VR2 routes into
+one outer `MARC2MSP-F07`, and that the live selection path still enforces nine
+exact generated-fixture outputs and generated source semantics. The hidden
+private route remains unavailable and must not be inferred as F06.
+
+Immediate work is a separately named generated-only live-selection invariant
+repair with dynamic 12-19-subject maximal-prefix checks and aggregate nested
+route preservation. Do not touch any ignored MARC2 path, consumed marker,
+certificate, output root, or retained source. No new private read, archive
+member, neural payload, target, model, prediction, score, FW2, or CIL1 work is
+authorized by VR5A.
+
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.
 3. Read `AGENTS.md` for coding-agent rules.

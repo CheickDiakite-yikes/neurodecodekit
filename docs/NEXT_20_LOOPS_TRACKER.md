@@ -1,5 +1,16 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
+> **Current MARC2 frontier (2026-08-16):** VR4P consumed one target-free
+> structural attempt after exact remote proof. The source size, SHA-256, and
+> strict JSON passed, but VR2 refused before cohort creation. Artifact-only
+> VR5A then routed `MARC2VR5-R2`: the wrapper erased seven of eight diagnostic
+> classes, and the nominal live selector still requires nine exact generated
+> outputs and generated source labels. The exact private predicate remains
+> unavailable. The next task is a separately named generated-only dynamic
+> live-selection repair; FW2/CIL1, archive payload, neural, target, model, and
+> scoring work remain closed until a real cohort is frozen under a new Tier C
+> packet.
+
 > **Scope:** the 20-row table and its KPI describe the original roadmap. Loop
 > numbers 21-24 and the Loop 23.5 calibration gate are post-roadmap extensions,
 > so “20 loops” and “Loop 24 parked” are both true but refer to different

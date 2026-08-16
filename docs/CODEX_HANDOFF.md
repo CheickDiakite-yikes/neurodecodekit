@@ -1,5 +1,16 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR5A gate, 2026-08-16: registration `926e1ba` passed Base
+> Python job `95226555204`, Optional Neuro Readers job `95226555153`, and CI
+> `31972332778` before the artifact-only implementation. The measured audit
+> routed `MARC2VR5-R2`, proving both eight-to-one nested-route collapse and
+> nine-field generated-selection overconstraint, while keeping the consumed
+> private route unavailable. Commit, push, and remotely green this exact
+> implementation/result before freezing a separately named generated-only
+> dynamic live-selection repair. Never touch the ignored tracker inspection,
+> ignored MARC2 paths, consumed roots, certificates, markers, retained source,
+> archive members, neural values, targets, models, predictions, or scores.
+
 > Current MARC2-VR4P result gate, 2026-08-16: exact implementation
 > `24f7379301b03c8f5eff796afb3398b11e58ece9` passed Base Python job
 > `95223010696`, Optional Neuro Readers job `95223010631`, and CI
@@ -5223,3 +5234,29 @@ maintainer `continue`, `approve`, or `proceed`. Do not use the current or any
 earlier message retroactively. Do not inspect or unlink the readiness artifact,
 implement the wrapper, touch the private source/output root, freeze a cohort,
 or enter FW2/CIL1 from this request alone.
+## 2026-08-16 MARC2-VR5A Refusal Localization Handoff
+
+VR4P closeout `0618fc3` passed Base job `95225078285`, Optional job
+`95225078127`, and CI `31971716473`. Artifact-only VR5A registration
+`926e1ba` then passed Base job `95226555204`, Optional job `95226555153`, and
+CI `31972332778` before implementation.
+
+The fixed auditor reaches `MARC2VR5-R2`. It proves that VR4P discarded
+`exc.route`, collapsing eight aggregate-safe VR2 classes into one outer F07.
+It separately proves that VR2's live path enforces nine exact generated
+selection outputs, including 16 subjects, 8,105,207,776 reservation bytes,
+and generated identity hash, and emits generated source semantics.
+
+The measured pass read 400,289 committed bytes in 1.592949458 seconds at
+39,698,432-byte peak RSS, emitted 8,706 aggregate bytes, and retained zero.
+Every private, ignored-path, consumed-root, archive, neural, target,
+derivative, model, prediction, score, network, hardware, other-project, FW2,
+CIL1, and claim counter stayed zero.
+
+Do not claim the consumed attempt reached F06. Its nested route and real
+selection remain unavailable. Do not inspect any ignored MARC2 path or reuse
+VR4P. After this exact implementation is committed, pushed, and both jobs are
+green, freeze a separately named generated-only repair that preserves only the
+nested route code, validates dynamic 12-19-subject maximal prefixes, emits
+live source semantics, and tests variable reservation boundaries. A future
+private read remains a new Tier C packet and decision.
