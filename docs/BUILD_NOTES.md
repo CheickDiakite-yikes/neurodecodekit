@@ -9758,3 +9758,43 @@ schema adapter can be tested without weakening source validation.
 Scientific claim not established: this registration contains no neural
 payload, target, prediction, or score and establishes no neural effect,
 decoding accuracy, language decoding, or thought-to-text capability.
+
+## 2026-08-16 - MARC2-TA1 Generated Adapter Implementation And Result
+
+- Registration commit `0c0e1c8a08ff7e68d0e4432a64dde8a85fb0274f`
+  passed Base Python job `95129832134`, Optional Neuro Readers job
+  `95129832169`, and CI `31932701989` before implementation.
+- Added a dependency-free generated-only adapter with `plan`, `qualify`, and
+  `inspect`; there is no execute command, source path, URL, private root,
+  archive reader, neural interface, target, trainer, predictor, or scorer.
+- The source's 1,227 rows, 1,025 files, 202 directories, 195 run bundles,
+  source identity, and transport digests are validated before any copy or map.
+  A deep copy then maps only `directory` to `central_directory`, preserves all
+  digest values and their multiset, and proves zero mutable aliasing or source
+  mutation before calling the unchanged selector.
+- All 26 mutations refused: 10 source schema, nine transport, four copy/replay,
+  two selector integration, and one forbidden-operation case. Canonical and
+  reversed source orders reproduced the existing generated 16-subject,
+  96-bundle, 384-member, 8,105,207,776-byte selector identity.
+- One measured `MARC2TA-G1` qualification used 846,708 generated input bytes,
+  4,931 aggregate output bytes, 0.4533158749982249 seconds, and 39,108,608-byte
+  peak RSS under one thread/worker/job. Report mode was 0600 and SHA-256 was
+  `40303300d396415cf6833707330303b8cbf60b1576bbe6c7b9a70825ff0af28a`.
+  The temporary report was removed.
+- All private, Git-ignored, consumed-root, archive, signal, event, target,
+  label, channel, geometry, derivative, model, prediction, score, network,
+  provider, hardware, retry, FW2, and claim counters are zero. External maximum
+  RSS was unavailable because the sandbox denied the timing wrapper's sysctl;
+  direct `resource.getrusage` RSS remained available and passed.
+- Fifty-two focused tests pass. The complete dependency-light suite passes
+  3,307 tests with 204 skips; optional A-M and N-Z pass 2,865 with 28 skips and
+  513 with seven skips, respectively. Ruff, compilation, all 224 registries,
+  CLI help/plan/qualify/inspect, tracked hashes, and diff hygiene pass.
+
+Engineering capability added: NeuroDecodeKit now has a generated-only,
+value-preserving source-schema adapter that reaches the frozen selector without
+weakening source validation.
+
+Scientific claim not established: no neural payload, target, prediction, or
+score was accessed, so this result establishes no neural effect, decoding
+accuracy, language decoding, or thought-to-text capability.

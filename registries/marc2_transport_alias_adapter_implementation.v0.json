@@ -1,0 +1,199 @@
+{
+  "schema_name": "neurodecodekit.marc2_transport_alias_adapter_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "MARC-2-generated-source-native-transport-alias-adapter-implementation-v0",
+  "lane_id": "MARC2-TA1",
+  "recorded_at_local": "2026-08-16",
+  "status": "generated_implementation_and_qualification_complete_remote_green_required",
+  "objective": "Validate a generated producer-native manifest before deep-copying and mapping only directory to central_directory, then prove exact compatibility with the frozen selector under adversarial and resource gates.",
+  "green_registration_proof": {
+    "commit": "0c0e1c8a08ff7e68d0e4432a64dde8a85fb0274f",
+    "CI_run_id": 31932701989,
+    "base_python_job_id": 95129832134,
+    "optional_neuro_job_id": 95129832169,
+    "both_required_jobs_green_before_implementation": true,
+    "contract_sha256": "020b6f60234869cee446f732ed070ded4f98c4bd3ea495e4734e77f6a31405aa"
+  },
+  "tracked_file_hashes": [
+    {
+      "path": "registries/marc2_transport_alias_adapter_contract.v0.json",
+      "sha256": "020b6f60234869cee446f732ed070ded4f98c4bd3ea495e4734e77f6a31405aa"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/marc2_transport_alias_adapter.py",
+      "sha256": "f4da58dac4723dd024912c842e2ecf849e17a4bc1906897b32b4a287f4a7bbf2"
+    },
+    {
+      "path": "tests/test_marc2_transport_alias_adapter.py",
+      "sha256": "6f074909fb6d528ed199845b6c9a0234684c7a0cc647bbcc450afca4e6b8a395"
+    },
+    {
+      "path": "tests/test_marc2_transport_alias_adapter_implementation.py",
+      "sha256": "b65859dc3065523635015c4226d00519110001e6873777cc7f47705666ff87b0"
+    },
+    {
+      "path": "docs/MARC_2_TRANSPORT_ALIAS_ADAPTER_IMPLEMENTATION.md",
+      "sha256": "7aec2e4b618ca043897ada2cca941d485e0fd3eaac25b4e75451a583ef75aa76"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/marc2_freewill_prefix_selection.py",
+      "sha256": "86fa30fbd1caed735f0fb2e627144482a2bb8e033567bb3794e3f05508005c97"
+    }
+  ],
+  "implementation_surface": {
+    "module": "neurodecodekit.datasets.marc2_transport_alias_adapter",
+    "commands": [
+      "plan",
+      "qualify",
+      "inspect"
+    ],
+    "execute_command_available": false,
+    "generic_source_path_or_URL_available": false,
+    "private_or_consumed_root_interface_available": false,
+    "network_or_archive_reader_available": false,
+    "neural_target_model_or_score_interface_available": false,
+    "standard_library_only": true,
+    "base_dependency_delta": 0
+  },
+  "adapter_result": {
+    "source_transport_keys": [
+      "directory",
+      "metadata",
+      "tail"
+    ],
+    "selector_transport_keys": [
+      "central_directory",
+      "metadata",
+      "tail"
+    ],
+    "single_mapping": {
+      "source_key": "directory",
+      "selector_key": "central_directory"
+    },
+    "source_validated_before_copy_or_mapping": true,
+    "source_mutated": false,
+    "mutable_alias_detected": false,
+    "transport_values_preserved": true,
+    "transport_hash_multiset_preserved": true,
+    "direct_unadapted_selector_refused": true,
+    "canonical_and_reversed_source_order_replayed": true
+  },
+  "generated_fixture": {
+    "schema_name": "neurodecodekit.marc1_central_directory_private_manifest",
+    "provider": "generated_producer_fixture",
+    "entries": 1227,
+    "regular_file_entries": 1025,
+    "directory_entries": 202,
+    "source_run_bundles": 195,
+    "canonical_source_sha256": "75471edb9e3ed2e0f65d5087fbe0ddd9488202c7e8faf58b2fb47e809cc4ce92",
+    "contains_human_content": false,
+    "contains_private_path": false,
+    "contains_signal_event_target_label_quality_or_channel": false
+  },
+  "generated_qualification": {
+    "route": "MARC2TA-G1",
+    "full_route": "MARC2TA-G1-generated_producer_adapter_selector_integration_passed",
+    "selected_subjects": 16,
+    "selected_run_bundles": 96,
+    "selected_core_members": 384,
+    "selected_reservation_bytes": 8105207776,
+    "selection_identity_sha256": "dee065bfdb5f8439fe711042eaadbea0dca3d83f8be0d6b7b9d1637e84d9f641",
+    "generated_private_selection_manifest_sha256": "da772ea045520a24c11b144af27d341115e7b082861b9c28299981fccd4a2bba",
+    "required_mutations": 26,
+    "passed_mutations": 26,
+    "mutation_route_counts": {
+      "MARC2TA-F02-source_manifest_schema": 10,
+      "MARC2TA-F03-transport_alias_or_digest": 9,
+      "MARC2TA-F04-copy_value_or_replay_integrity": 4,
+      "MARC2TA-F05-selector_integration_or_result": 2,
+      "MARC2TA-F06-private_target_model_network_or_claim_boundary": 1
+    },
+    "scientific_value": false
+  },
+  "measurements": {
+    "generated_input_bytes": 846708,
+    "generated_output_bytes": 4931,
+    "runtime_seconds": 0.4533158749982249,
+    "peak_RSS_bytes": 39108608,
+    "external_wall_seconds": 0.52,
+    "external_maximum_RSS_available": false,
+    "external_maximum_RSS_unavailable_reason": "sandbox denied the timing wrapper sysctl kern.clockrate probe",
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "registered_success_source_orders_validated": 2,
+    "generated_selector_success_runs": 4,
+    "generated_direct_selector_refusals": 2,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "producer_is_causal": "not_applicable_metadata_adapter",
+    "end_to_end_latency_measured": false,
+    "report_mode": "0600",
+    "report_SHA256": "40303300d396415cf6833707330303b8cbf60b1576bbe6c7b9a70825ff0af28a",
+    "temporary_output_retained": false
+  },
+  "verification": {
+    "focused_behavior_tests": 23,
+    "focused_registration_tests": 11,
+    "focused_implementation_registry_tests": 9,
+    "focused_result_registry_tests": 9,
+    "focused_tests": 52,
+    "all_26_mutations_refused": true,
+    "source_validation_before_mapping_tested": true,
+    "target_and_label_leakage_refused": true,
+    "canonical_and_reversed_replay_tested": true,
+    "output_overwrite_and_symlink_refusal_tested": true,
+    "CLI_help_plan_qualify_and_inspect_tested": true,
+    "complete_base_tests": 3307,
+    "complete_base_skips": 204,
+    "optional_A_M_tests": 2865,
+    "optional_A_M_skips": 28,
+    "optional_N_Z_tests": 513,
+    "optional_N_Z_skips": 7,
+    "complete_optional_tests": 3378,
+    "complete_optional_skips": 35,
+    "ruff_passed": true,
+    "compile_passed": true,
+    "registry_JSON_validation_passed": true,
+    "git_diff_check_passed": true,
+    "complete_base_suite_pending": false,
+    "complete_optional_suite_pending": false,
+    "remote_CI_pending": true
+  },
+  "access_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_marker_or_output_root_operations": 0,
+    "archive_local_header_or_member_payload_reads": 0,
+    "signal_event_target_label_quality_channel_or_geometry_reads": 0,
+    "derivative_cache_feature_split_or_neurotoken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "network_download_provider_or_language_model_operations": 0,
+    "stream_device_or_hardware_operations": 0,
+    "consumed_executor_patch_retry_rerun_resume_or_repair_operations": 0,
+    "MARC2_FW2_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "authorization_state": {
+    "live_adapter_or_private_manifest_access": false,
+    "consumed_FW1C_root_or_executor_access": false,
+    "archive_member_header_or_payload_access": false,
+    "signal_event_target_label_channel_or_geometry_access": false,
+    "derivative_cache_feature_split_or_neurotoken_creation": false,
+    "training_inference_prediction_freeze_delivery_or_score": false,
+    "network_download_provider_language_model_stream_device_or_hardware": false,
+    "MARC2_FW2_entry": false,
+    "release_publication_or_scientific_claim_upgrade": false
+  },
+  "next_gate": {
+    "commit_push_and_both_remote_jobs_green_required": true,
+    "generated_qualification_consumed_without_retained_output": true,
+    "future_live_adapter_or_private_read_allowed": false,
+    "future_live_attempt_requires_separate_all_false_Tier_C_packet_and_decision": true
+  },
+  "claim_boundary": {
+    "engineering": "A generated producer-native manifest can cross one explicit value-preserving schema adapter and reach the frozen selector without weakening source validation.",
+    "scientific_not_established": "Generated archive metadata contain no neural payload target prediction or score and establish no neural effect decoding accuracy language decoding or thought-to-text capability."
+  }
+}

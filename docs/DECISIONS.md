@@ -7906,3 +7906,30 @@ remains a separately named Tier C event.
 Evidence: `docs/MARC_2_TRANSPORT_ALIAS_ADAPTER_PREREGISTRATION.md`,
 `registries/marc2_transport_alias_adapter_contract.v0.json`, and
 `tests/test_marc2_transport_alias_adapter_contract.py`.
+
+## 0240 - Accept The Generated Alias Adapter And Keep Live Use Closed
+
+Implementation decision: validate the complete producer-native generated
+manifest before any copy or alias map. Preserve the producer's `directory`
+vocabulary and the frozen selector's `central_directory` vocabulary, with one
+explicit deep-copy translation between them.
+
+Integrity decision: accept `MARC2TA-G1`. All 26 frozen mutations, both entry
+orders, transport-value preservation, source immutability, mutable-object
+independence, direct unadapted refusal, and exact existing selector identity
+replay passed.
+
+Evidence decision: treat the 0.4533158749982249-second, 39,108,608-byte peak
+RSS qualification as generated engineering evidence only. Its 4,931-byte
+aggregate was removed, every forbidden counter is zero, and no neural payload,
+target, prediction, or score was accessed.
+
+Gate decision: require the exact implementation/result commit and both remote
+jobs green. Even after that proof, do not patch or reuse FW1C, read a private
+manifest, access an archive member, or enter `MARC2-FW2`. Any live adapter is a
+new Tier C lane with its own all-false packet and fresh packet-bound decision.
+
+Evidence: `docs/MARC_2_TRANSPORT_ALIAS_ADAPTER_IMPLEMENTATION.md`,
+`registries/marc2_transport_alias_adapter_implementation.v0.json`,
+`registries/marc2_transport_alias_adapter_result.v0.json`, the adapter module,
+and its behavior, implementation, and result tests.

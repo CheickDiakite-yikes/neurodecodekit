@@ -4549,3 +4549,31 @@ Immediate gate: commit and push this exact registration and require both jobs
 green. Only then implement `plan`, `qualify`, and `inspect`. Do not add
 `execute`, read a private path, import or reuse consumed FW1C, enter FW2, or
 access archive, neural, target, model, score, network, provider, or hardware.
+
+## 2026-08-16 MARC2-TA1 Implementation And Result Handoff
+
+Registration `0c0e1c8a08ff7e68d0e4432a64dde8a85fb0274f` passed Base
+Python job `95129832134`, Optional Neuro Readers job `95129832169`, and CI
+`31932701989` before implementation. Read the adapter implementation document,
+implementation registry, result registry, module, and three matching test
+modules.
+
+The generated-only adapter validates producer-native keys and all 1,227 rows
+before deep-copying. It maps only `directory` to `central_directory`, preserves
+every transport digest, proves source immutability and mutable-object
+independence, and calls the unchanged selector. All 26 mutations and canonical
+and reversed entry orders pass. The exact existing generated 16-subject,
+96-bundle, 384-member, 8,105,207,776-byte selection identity replays.
+
+One final qualification routed `MARC2TA-G1` over 846,708 generated input bytes
+in 0.4533158749982249 seconds at 39,108,608-byte peak RSS. Its 4,931-byte
+mode-0600 report hashed to
+`40303300d396415cf6833707330303b8cbf60b1576bbe6c7b9a70825ff0af28a`
+and was removed. Every forbidden counter is zero. Fifty-two focused, 3,307
+dependency-light, and 3,378 optional-neuro tests pass; all 224 registries,
+Ruff, compilation, CLI checks, hashes, and diff hygiene pass.
+
+Immediate gate: commit, push, and require both jobs green for the exact
+implementation/result. Do not open a private source, restore the removed
+report, patch consumed FW1C, enter FW2, or infer neural or decoding evidence.
+A future live adapter requires a new all-false Tier C packet and fresh decision.

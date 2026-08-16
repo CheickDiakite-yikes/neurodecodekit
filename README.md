@@ -1671,13 +1671,18 @@ Read this before interpreting any number in the repository.
   and performed zero private, archive, neural, target, model, or network work.
   A future repair must validate the producer-native vocabulary first, then map
   `directory` to `central_directory` exactly once in a new adapter.
-- **MARC2-TA1 generated adapter registration:** the frozen next contract binds
-  that one-way map before implementation. It requires producer-native
-  validation, deep-copy isolation, byte-for-byte preservation of all transport
-  hashes, 26 refusal mutations, two replay orders, and the unchanged generated
-  16-person/384-member selector result. The future surface has only `plan`,
-  `qualify`, and `inspect`; no live path, execute command, private input,
-  archive reader, neural data, target, model, score, or network client exists.
+- **MARC2-TA1 generated adapter result:** after registration commit `0c0e1c8`
+  passed CI `31932701989`, the standard-library adapter validated all 1,227
+  producer-native generated rows before deep-copying and mapping only
+  `directory` to `central_directory`. All 26 refusal mutations and both entry
+  orders passed, every transport digest replayed byte for byte, and the
+  unchanged selector reproduced 16 generated subject identities, 96 bundles,
+  384 members, and 8,105,207,776 reserved bytes. The one measured run used
+  846,708 input bytes, 4,931 output bytes, 0.453316 seconds, and 39,108,608-byte
+  peak RSS; every private, neural, target, model, and network counter was zero
+  and the temporary report was removed. This fixes a generated integration
+  boundary; it is not neural or decoding evidence. Live/private use remains a
+  separate Tier C decision.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
@@ -2493,6 +2498,9 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/marc2_source_schema_lineage_result.v0.json](registries/marc2_source_schema_lineage_result.v0.json) | machine-readable `MARC2SL-R2` result, exact key sets, source-binding proof, zero forbidden counters, and closed live/FW2 boundary |
 | [docs/MARC_2_TRANSPORT_ALIAS_ADAPTER_PREREGISTRATION.md](docs/MARC_2_TRANSPORT_ALIAS_ADAPTER_PREREGISTRATION.md) | frozen generated-only producer-native adapter design, mutation matrix, selector integration target, resources, and closed live boundary |
 | [registries/marc2_transport_alias_adapter_contract.v0.json](registries/marc2_transport_alias_adapter_contract.v0.json) | machine-readable `MARC2-TA1` contract binding green lineage proof, exact vocabularies, 26 mutations, three-command surface, and zero live authority |
+| [docs/MARC_2_TRANSPORT_ALIAS_ADAPTER_IMPLEMENTATION.md](docs/MARC_2_TRANSPORT_ALIAS_ADAPTER_IMPLEMENTATION.md) | generated-only adapter implementation, validation order, exact selector replay, measured qualification, verification, and scientific boundary |
+| [registries/marc2_transport_alias_adapter_implementation.v0.json](registries/marc2_transport_alias_adapter_implementation.v0.json) | hash-bound adapter code, tests, generated result, resources, zero forbidden counters, and remote-green gate |
+| [registries/marc2_transport_alias_adapter_result.v0.json](registries/marc2_transport_alias_adapter_result.v0.json) | machine-readable consumed `MARC2TA-G1` result, 26 mutation routes, exact measurements, unavailable fields, and closed live/FW2 disposition |
 | [docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md](docs/FOUNDATION_MODEL_DECODER_STRATEGY_2026-08-06.md) | layered compact-adapter plus GPT-Sol architecture, four matched conditions, and staged authorization boundary |
 | [docs/FOUNDATION_MODEL_BRIDGE_V0.md](docs/FOUNDATION_MODEL_BRIDGE_V0.md) | implemented FM-0 synthetic no-call schemas, CLI, strict refusals, hashes, and measured roundtrip |
 | [docs/FOUNDATION_MODEL_LIVE_SMOKE_PREREGISTRATION.md](docs/FOUNDATION_MODEL_LIVE_SMOKE_PREREGISTRATION.md) | frozen one-shot FM-1 Terra matrix, privacy boundary, provider settings, resource caps, and no-science ceiling |

@@ -2119,7 +2119,7 @@ duplicate, dual-alias, extra-key, or value mutation cases. The consumed FW1C
 executor cannot be patched or reused. Any future live read and `MARC2-FW2`
 remain behind a new all-false Tier C packet and decision.
 
-### MARC2-TA1 - Generated Transport Alias Adapter (Registered)
+### MARC2-TA1 - Generated Transport Alias Adapter (Locally Complete)
 
 The frozen contract binds green lineage commit
 `8c7494812fcfbfa6ea6fd79c1fa119b865df3cb7`, CI `31932081970`, Base Python
@@ -2137,8 +2137,19 @@ extra, consumer-only, and dual aliases, malformed digests, object/value
 mutation, aliasing, entry drift, direct unadapted selector refusal, selector
 result drift, replay drift, and forbidden counters.
 
-Current status: registration only. Push this exact contract and require both
-jobs green before implementation. The future module may expose only `plan`,
-`qualify`, and `inspect`. No live/private path, execute command, FW1C reuse,
+Registration commit `0c0e1c8a08ff7e68d0e4432a64dde8a85fb0274f` passed CI
+`31932701989` before implementation. The generated-only module now exposes
+only `plan`, `qualify`, and `inspect`; it validates all 1,227 source rows before
+deep-copying and mapping the one alias. All 26 mutations, both entry orders,
+and exact selector identity replay pass.
+
+One measured qualification routed `MARC2TA-G1` in 0.4533158749982249 seconds
+at 39,108,608-byte peak RSS using 846,708 generated input bytes and 4,931
+aggregate output bytes. The temporary report was removed. Fifty-two focused,
+3,307 dependency-light, and 3,378 optional-neuro tests pass; Ruff, compilation,
+224 registry parses, CLI checks, hashes, and diff hygiene pass.
+
+Current gate: commit, push, and require both remote jobs green for the exact
+implementation/result. No live/private path, execute command, FW1C reuse,
 archive, neural, target, model, score, network, or `MARC2-FW2` operation is
-allowed.
+allowed. A future live adapter remains a separately frozen Tier C event.

@@ -75,14 +75,17 @@
    Artifact-only `MARC2-SL1` found the exact integration defect: the producer
    emits transport key `directory`, while the generated fixture and both
    consumer validators require `central_directory`. This explains F02 without
-   private reinspection. The next safe task is generated-only qualification of
-   a new source-native-to-selector adapter; no live read is authorized. Read
-   `docs/MARC_2_TRANSPORT_ALIAS_ADAPTER_PREREGISTRATION.md` and its contract.
-   `MARC2-TA1` is frozen but unimplemented: first push this exact registration
-   and require both CI jobs green, then implement only the generated adapter.
-   Archive members, payloads, signals, targets, models, scores, language
-   datasets, provider calls, and `MARC2-FW2` remain unauthorized. Then read
-   `docs/CODEX_HANDOFF.md` for the exact handoff state.
+   private reinspection. Then read the `MARC2-TA1` preregistration,
+   implementation document, and two implementation/result registries. Green
+   registration commit `0c0e1c8` preceded the generated-only adapter. One
+   measured qualification passed all 26 mutations and replayed the unchanged
+   16-subject/384-member generated selector identity in 0.453316 seconds at
+   39,108,608-byte peak RSS. No temporary output, live/private read, neural
+   payload, target, model, score, or network operation remains. Commit, push,
+   and require both jobs green for this exact implementation/result before any
+   next lane. Archive members, payloads, signals, targets, models, scores,
+   language datasets, provider calls, and `MARC2-FW2` remain unauthorized.
+   Then read `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
    result, then use its preregistration and authorization documents for audit.
 6. Read `docs/LOOP_25_CAUSAL_PREPROCESSING_RESULT.md` and

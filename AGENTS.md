@@ -1498,14 +1498,19 @@ fixture, selector validator, and FW1C validator require `central_directory`,
 `metadata`, and `tail`. The one-key alias mismatch is sufficient to explain
 F02; no private value was observed. A future adapter must validate the
 source-native keys before a one-way `directory` to `central_directory` map.
-Do not patch or reuse FW1C. Generated adapter qualification is the next safe
-task; live access and `MARC2-FW2` remain separately gated. Read
-`docs/MARC_2_TRANSPORT_ALIAS_ADAPTER_PREREGISTRATION.md` and
-`registries/marc2_transport_alias_adapter_contract.v0.json`. `MARC2-TA1`
-freezes a generated producer-native fixture, one value-preserving alias, 26
-mutations, two replay orders, and the unchanged 16-person/384-member selector
-result. It has no implementation or execute surface yet. Commit, push, and
-obtain both green jobs for this exact registration before implementation.
+Do not patch or reuse FW1C. Read the `MARC2-TA1` preregistration,
+`docs/MARC_2_TRANSPORT_ALIAS_ADAPTER_IMPLEMENTATION.md`, and the matching
+implementation/result registries. Registration `0c0e1c8` passed CI
+`31932701989` before implementation. The generated-only adapter validates the
+producer-native source before deep-copying and mapping only `directory` to
+`central_directory`; all 26 mutations and both entry orders passed, and the
+unchanged selector identity replayed. One measured qualification used 846,708
+input bytes, 4,931 output bytes, 0.4533158749982249 seconds, and 39,108,608-byte
+peak RSS. Its temporary report was removed and every live/private, archive,
+neural, target, model, score, network, FW2, and claim counter was zero. Commit,
+push, and obtain both green jobs for this exact implementation/result. Even
+after that proof, live access and `MARC2-FW2` remain separately gated Tier C
+work.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
