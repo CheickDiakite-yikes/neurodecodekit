@@ -4802,3 +4802,30 @@ Every authorization flag is false. Push this registration and obtain both
 green CI jobs before implementation. Do not inspect or reuse LA2, touch a
 private or Git-ignored path, enter FW2, access neural or target data, run a
 model, score, use network/provider/hardware, or upgrade a claim.
+
+## 2026-08-16 MARC2-VR1 Implementation Handoff
+
+Registration `9dedfe6f649b7f8044598c7047ddeadcd9bfab76` passed Base
+Python job `95153164447`, Optional Neuro Readers job `95153164463`, and CI
+`31942316544` before the generated-only implementation began. Read
+`docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md`, its
+implementation registry, module, and two tests.
+
+The standard-library adapter creates the full 1,227-row generated source by
+replacing 172 generic auxiliary rows with 43 complete source-shaped adversary
+bundles. It validates all 238 companion groups, classifies counts
+`195/12/24/7`, filters to eligibility, and only then applies the exact 195-run
+assertion and frozen selector mechanics. Canonical/reversed replay preserves
+16 subjects, 96 runs, 384 members, and 8,105,207,776 reserved bytes with zero
+ineligible candidates.
+
+All 36 registered mutations refuse across all eight route classes. Thirty-six
+focused tests pass. The full base suite passes 3,532 tests with 204 skips;
+fresh optional A-M/N-Z processes pass 3,090 tests with 28 skips and 513 with
+seven skips. The implementation has no execute command or private, archive,
+neural, target, model, score, network, provider, or hardware interface.
+
+Immediate gate: run the complete local optional and hygiene checks, commit and
+push this exact implementation, and require both remote jobs green. Only then
+run the single measured generated closeout. Do not touch LA2 or another private
+path, enter FW2, or infer a scientific result.

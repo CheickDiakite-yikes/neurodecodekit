@@ -1614,6 +1614,20 @@ implementation becomes eligible only after this exact registration commit is
 pushed and both CI jobs are green. Do not implement before that proof, access a
 private path, reuse LA2, enter FW2, or infer a scientific result.
 
+Registration `9dedfe6f649b7f8044598c7047ddeadcd9bfab76` passed Base
+Python job `95153164447`, Optional Neuro Readers job `95153164463`, and CI
+`31942316544` before implementation. Read
+`docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md`,
+`registries/marc2_source_validity_eligibility_repair_implementation.v0.json`,
+and the two implementation tests. The additive standard-library module now
+validates all 1,227 generated rows and 238 complete bundles before
+classification, filters to 195 eligible bundles, and replays 16 subjects, 96
+runs, 384 companions, and 8,105,207,776 reserved bytes with zero ineligible
+candidates. All 36 generated mutations refuse across all eight routes. This
+exact implementation must be committed, pushed, and pass both CI jobs before
+the one measured generated closeout. Do not operate on a private or consumed
+path, reuse LA2, enter FW2, or infer a scientific result.
+
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also
 consumed after one bounded synthetic execution recorded in

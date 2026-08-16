@@ -9759,6 +9759,40 @@ Scientific claim not established: this registration contains no neural
 payload, target, prediction, or score and establishes no neural effect,
 decoding accuracy, language decoding, or thought-to-text capability.
 
+## 2026-08-16 - MARC2-VR1 Generated Repair Implementation
+
+- Registration `9dedfe6` passed Base Python job `95153164447`, Optional Neuro
+  Readers job `95153164463`, and CI `31942316544` before implementation.
+- Added a standard-library generated-only adapter with `plan`, `qualify`, and
+  `inspect`; there is no execute, path, URL, private-root, archive-reader,
+  neural, target, model, score, provider, or hardware interface.
+- Replaced 172 generic fixture rows with 43 complete generated adversary
+  bundles, producing 238 complete source-shaped bundles and 73 remaining
+  generic auxiliary files within the unchanged 1,227-row envelope.
+- Validated every row and companion group before aggregate classification,
+  filtered to the exact 195 eligible bundles, then reproduced 16 selected
+  subjects, 96 runs, 384 members, and 8,105,207,776 reserved bytes with zero
+  ineligible candidates.
+- All 36 registered mutations refuse across all eight route classes. Canonical
+  and reversed source order replay the same source and selection identities.
+- Thirty-six focused registration, behavior, and implementation-record tests
+  pass. The full dependency-free suite passes 3,532 tests with 204 skips;
+  fresh optional A-M/N-Z processes pass 3,090 tests with 28 skips and 513 with
+  seven skips, for 3,603 optional-enabled tests with 35 skips. Ruff,
+  compilation, 237 registry parses, CLI help/plan/inspect, and diff hygiene
+  pass.
+- The exact implementation commit and both remote jobs remain pending. The one
+  registered measured generated closeout has not run. Every private, archive,
+  neural, target, model, score, network, LA2, FW2, and claim counter is zero.
+
+Engineering capability added: the generated adapter separates complete source
+validity from selection eligibility and preserves the frozen target-free
+selection across a full 238-bundle adversarial domain.
+
+Scientific claim not established: no private archive, neural payload, target,
+prediction, or score was accessed, so this implementation establishes no
+neural or decoding result.
+
 ## 2026-08-16 - MARC2-VR1 Source-Validity / Eligibility Registration
 
 - Bound the remotely green `MARC2-VL1` localization at head `953692f`, Base

@@ -2282,7 +2282,7 @@ published run slots as Freewill-shaped adversaries. LA2 remains consumed;
 `MARC2-FW2` and every private operation remain closed behind a fresh Tier C
 decision.
 
-### MARC2-VR1 - Source-Validity / Eligibility Repair (Registered; Proof Pending)
+### MARC2-VR1 - Source-Validity / Eligibility Repair (Implementation Ready; Remote Proof Pending)
 
 The generated-only registration expands the qualification domain to all 238
 source-space run slots while preserving the 1,227-row structural envelope. It
@@ -2301,7 +2301,13 @@ selection rows, canonical/reversed replay, and the original 16-subject,
 eight refusal routes cover envelope, path, companion, eligibility, selection,
 privacy, resource, and cleanup drift.
 
-All authority flags are false. Implementation may start only after this exact
-registration is pushed and both remote jobs are green. Private data, LA2 reuse,
-FW2, signals, targets, models, scores, network operations, and scientific
-claims remain closed.
+Registration `9dedfe6` passed both required jobs in CI `31942316544` before the
+standard-library implementation began. The adapter now passes 36 focused
+registration, behavior, and implementation-record tests. It validates the
+full source before filtering, exercises all 36 mutations across eight refusal
+routes, and reproduces the frozen selection with zero ineligible candidates.
+
+Next gate: commit and push the exact implementation and obtain both remote
+green jobs, then run the single measured generated closeout. All authority
+flags remain false. Private data, LA2 reuse, FW2, signals, targets, models,
+scores, network operations, and scientific claims remain closed.

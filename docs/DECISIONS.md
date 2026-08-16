@@ -8183,3 +8183,30 @@ future private read remains a separately named Tier C decision.
 Evidence: `docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md`,
 `registries/marc2_source_validity_eligibility_repair_contract.v0.json`, and its
 registration test.
+
+## 0250 - Separate Implementation Proof From The Measured VR1 Closeout
+
+Order decision: accept registration `9dedfe6`, Base Python job `95153164447`,
+Optional Neuro Readers job `95153164463`, and CI `31942316544` as the green
+barrier before implementation. Require the exact implementation commit to pass
+both remote jobs before the one registered measured generated closeout.
+
+Architecture decision: start from the frozen 1,227-row selector fixture and
+replace exactly 172 generic auxiliary rows with 43 complete generated
+Freewill-shaped adversary bundles. Validate all 238 bundles before
+classification, filter to the exact 195 eligible bundles, then apply the
+frozen rank, split, reservation, and contiguous-prefix mechanics.
+
+Evidence decision: accept local generated preflight only. It reproduces 16
+subjects, 96 runs, 384 members, and 8,105,207,776 reserved bytes with zero
+ineligible candidates. All 36 mutations refuse and all eight route classes are
+exercised. This is not yet the registered measured closeout.
+
+Boundary decision: the implementation has no execute command, private root,
+archive reader, neural interface, target, model, score, network, provider, or
+hardware surface. Remote proof and a generated closeout cannot authorize a
+private read; that remains a separately named Tier C decision. LA2 is consumed
+and `MARC2-FW2` remains closed.
+
+Evidence: `docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md`,
+its implementation registry, module, and two implementation tests.

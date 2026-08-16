@@ -135,9 +135,15 @@
    `MARC2-VR1` freezes a generated 238-bundle source domain containing the 195
    eligible bundles plus all 43 omitted slots as source-shaped adversaries.
    It requires source validation, eligibility classification, filtering, and
-   only then the exact 195-bundle assertion. All authorization flags remain
-   false until the registration is remotely green; any private read still
-   requires a fresh Tier C decision. Then read
+   only then the exact 195-bundle assertion. Registration `9dedfe6` passed CI
+   `31942316544`; the standard-library implementation now passes its 36 focused
+   registration/behavior/record tests and preserves the frozen selection with
+   zero ineligible candidates. Read
+   `docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md` and its
+   implementation registry next. The exact implementation still requires its
+   own remote-green proof before the one measured generated closeout. Every
+   private or scientific operation remains closed behind a fresh Tier C
+   decision. Then read
    `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
    result, then use its preregistration and authorization documents for audit.
