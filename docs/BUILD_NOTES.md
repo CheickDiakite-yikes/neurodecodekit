@@ -9829,6 +9829,41 @@ Scientific claim not established: no private archive, neural payload, target,
 prediction, or score was accessed, so this implementation establishes no
 neural effect or decoding result.
 
+## 2026-08-16 - MARC2-VR2 Generated Variable-Domain Result
+
+- Exact implementation `f62a3f5b9966967c569e734552cbc3f11d009401`
+  passed Base Python job `95162220059`, Optional Neuro Readers job
+  `95162220159`, and CI `31946112252` before the sole measured closeout.
+- Route `MARC2VR2-G1` validated all 1,227 generated rows and 238 complete
+  bundles across four distinct ineligible distributions and canonical/reversed
+  row order. All eight paths reconciled exactly 195 eligible and 43 valid
+  ineligible bundles without a profile input or exact live breakdown.
+- Every path reproduced 16 subjects, 96 runs, 384 members, and 8,105,207,776
+  reserved bytes with zero ineligible candidates and zero target, quality, or
+  outcome use.
+- All 58 mutations refused across all eight registered routes.
+- The one-thread invocation used 3,435,280 generated input bytes, emitted
+  4,748 aggregate stdout bytes, ran in 0.5122641660127556 seconds at
+  32,620,544-byte peak RSS, and retained zero output. The stdout hash is
+  unavailable by design; the consumed qualification will not be rerun.
+- Every private, consumed-root, archive, neural, target, derivative, model,
+  prediction, score, network, provider, hardware, retry, FW2, release, and
+  claim counter is zero.
+- Forty-three focused tests pass. The full dependency-free suite passes 3,586
+  tests with 204 skips; optional A-M/N-Z pass 3,144 tests with 28 skips and 513
+  with seven skips, for 3,657 optional-enabled tests with 35 skips. Ruff,
+  compilation, 241 registry parses, CLI checks, hashes, and diff hygiene pass.
+  Exact result remote proof remains pending.
+
+Engineering capability added: NeuroDecodeKit now validates a live-shaped full
+source domain without freezing a synthetic exclusion distribution and
+preserves the exact target-free eligible selection across variable valid
+ineligible layouts.
+
+Scientific claim not established: no private archive, neural payload, target,
+prediction, or score was accessed, so this result establishes no neural
+effect, decoding accuracy, language decoding, or thought-to-text capability.
+
 ## 2026-08-16 - MARC2-VR1 Generated Full-Domain Result
 
 - Exact implementation `4d587df` passed Base Python job `95155811373`,

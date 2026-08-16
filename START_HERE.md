@@ -161,10 +161,17 @@
    generated-only implementation began. Read
    `docs/MARC_2_LIVE_DOMAIN_ELIGIBILITY_ADAPTER_IMPLEMENTATION.md` and its
    implementation registry. All eight profile/order paths preserve the same
-   target-free selection and all 58 mutations refuse; the exact implementation
-   is awaiting its own remote proof before one measured generated closeout.
-   No private path, archive payload, neural data, target, model, score, network
-   operation, or FW2 work is authorized. Then
+   target-free selection and all 58 mutations refuse. Exact implementation
+   `f62a3f5` passed Base job `95162220059`, Optional job `95162220159`, and CI
+   `31946112252` before one registered generated closeout. Read
+   `docs/MARC_2_LIVE_DOMAIN_ELIGIBILITY_ADAPTER_RESULT.md` and its result
+   registry. `MARC2VR2-G1` passed all eight profile/order paths and 58
+   refusals in 0.5122641660127556 seconds at 32,620,544-byte peak RSS, with
+   zero retained output and every private, neural, target, model, network, and
+   score counter at zero. The generated closeout is consumed with no rerun;
+   result remote proof is pending. No private path, archive payload, neural
+   data, target, model, score, network operation, or FW2 work is authorized.
+   Then
    read `docs/CODEX_HANDOFF.md` for the exact handoff state.
 5. Read `docs/LOOP_24_LOCAL_PRECISION_RUNTIME.md` for the measured parked
    result, then use its preregistration and authorization documents for audit.

@@ -1656,11 +1656,20 @@ passed Base Python job `95159734989`, Optional Neuro Readers job
 `95159734967`, and CI `31945086852` before implementation. Read
 `docs/MARC_2_LIVE_DOMAIN_ELIGIBILITY_ADAPTER_IMPLEMENTATION.md`, its registry,
 module, and two tests. The generated adapter passes all eight success paths and
-58 refusals while retaining zero output. Commit, push, and require both remote
-jobs green before the one measured generated closeout. Do not access a private
-path, consumed root, archive payload, neural value, target, model, score,
-network, FW2, or claim surface. The maintainer's current `continue to eureka`
-is not retroactive Tier C authority.
+58 refusals while retaining zero output. Exact implementation
+`f62a3f5b9966967c569e734552cbc3f11d009401` passed Base Python job
+`95162220059`, Optional Neuro Readers job `95162220159`, and CI
+`31946112252` before the sole measured closeout. Read
+`docs/MARC_2_LIVE_DOMAIN_ELIGIBILITY_ADAPTER_RESULT.md` and
+`registries/marc2_live_domain_eligibility_adapter_result.v0.json`.
+`MARC2VR2-G1` exercised all eight profile/order paths and 58 refusals in
+0.5122641660127556 seconds at 32,620,544-byte peak RSS, emitted 4,748
+aggregate stdout bytes, and retained zero output. Every private, archive,
+neural, target, model, score, network, LA2, FW2, and claim counter is zero.
+The generated closeout is consumed with no rerun; exact result remote proof is
+pending. Do not access a private path, consumed root, archive payload, neural
+value, target, model, score, network, FW2, or claim surface. The maintainer's
+current `continue to eureka` is not retroactive Tier C authority.
 
 Loop 48 Stage B is consumed at `H4` stable nonseparability, and the frozen
 `L50-R05` route parks S24 acquisition for this model family. Stage C is also

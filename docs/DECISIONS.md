@@ -8308,3 +8308,34 @@ C packet and fresh decision.
 Evidence: `docs/MARC_2_LIVE_DOMAIN_ELIGIBILITY_ADAPTER_IMPLEMENTATION.md`,
 `registries/marc2_live_domain_eligibility_adapter_implementation.v0.json`, the
 additive module, and its two implementation tests.
+
+## 0254 - Consume VR2 At Generated Variable-Domain Success
+
+Order decision: accept exact implementation
+`f62a3f5b9966967c569e734552cbc3f11d009401`, Base Python job
+`95162220059`, Optional Neuro Readers job `95162220159`, and CI
+`31946112252` as the completed remote barrier before the registered closeout.
+
+Evidence decision: accept `MARC2VR2-G1`. Four distinct valid distributions of
+the 43 ineligible bundles, each in canonical and reversed order, validated the
+full 1,227-row and 238-bundle source before classification. Every path
+reconciled `195 + 43` and replayed the same 16-subject, 96-run, 384-member,
+8,105,207,776-byte target-free selection with zero ineligible candidates. All
+58 mutations refused across all eight routes.
+
+Measurement decision: record 3,435,280 generated input bytes, 4,748 aggregate
+stdout bytes, 0.5122641660127556 seconds, and 32,620,544-byte peak RSS under
+one thread. Retained output, network bytes, private bytes, raw reads, caches,
+models, and training are zero. Do not rerun merely to reconstruct the
+deliberately unretained stdout SHA-256.
+
+Boundary decision: VR2 proves that generated live-domain acceptance does not
+depend on VR1's constructed `12/24/7` exclusion mix. It does not prove that a
+private source passes and establishes no neural or decoding result. The
+closeout is consumed with no rerun. A future private attempt needs a separately
+named prospective contract, green one-shot executor, Tier C request, and fresh
+packet-bound decision. LA2 and `MARC2-FW2` remain closed, and `continue to
+eureka` is not retroactive authority for that future packet.
+
+Evidence: `docs/MARC_2_LIVE_DOMAIN_ELIGIBILITY_ADAPTER_RESULT.md`, its result
+registry, and result-record test. Exact result remote proof is pending.
