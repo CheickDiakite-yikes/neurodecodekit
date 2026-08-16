@@ -1911,6 +1911,15 @@ Read this before interpreting any number in the repository.
   neural value, target, model, prediction, or score was accessed. The next
   safe step is a separately named generated-only live-selection invariant
   repair, not another private attempt.
+- **MARC2-VR6 dynamic live-selection preregistration:** freezes generated
+  prefixes of 12, 14, 16, 18, and all 19 eligible participants across both row
+  orders. Real selected count, reservation bytes, and identity hash are
+  measured outputs rather than generated expected constants. The contract
+  preserves only an allowlisted upstream route code, enforces exact split and
+  maximal-prefix arithmetic under the unchanged 8 GiB cap, and requires live
+  source semantics. This is generated-only registration; implementation must
+  wait for its exact commit and both CI jobs to turn green, and no private,
+  neural, target, model, score, FW2, or CIL1 operation is authorized.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
@@ -2750,6 +2759,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/MARC_2_VR2_REFUSAL_LOCALIZATION_IMPLEMENTATION.md](docs/MARC_2_VR2_REFUSAL_LOCALIZATION_IMPLEMENTATION.md) | measured `MARC2VR5-R2` audit, wrapper diagnostic loss, live-selection overconstraint, unavailable private predicate, and smallest repair |
 | [registries/marc2_vr2_refusal_localization_implementation.v0.json](registries/marc2_vr2_refusal_localization_implementation.v0.json) | standard-library module surface, exact AST/JSON measurements, zero forbidden counters, and remote-proof gate |
 | [registries/marc2_vr2_refusal_localization_result.v0.json](registries/marc2_vr2_refusal_localization_result.v0.json) | machine-readable route collapse and generated-selection diagnosis with exact measurements and no scientific promotion |
+| [docs/MARC_2_DYNAMIC_LIVE_SELECTION_PREREGISTRATION.md](docs/MARC_2_DYNAMIC_LIVE_SELECTION_PREREGISTRATION.md) | frozen VR6 dynamic-prefix hypothesis, five generated reservation regimes, aggregate route preservation, resource caps, and private-access boundary |
+| [registries/marc2_dynamic_live_selection_contract.v0.json](registries/marc2_dynamic_live_selection_contract.v0.json) | hash-bound generated-only VR6 policy for dynamic measured outputs, live source semantics, ten replay paths, and at least 24 mutations |
 | [docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md](docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md) | frozen generated-only 238-bundle repair design, filter-before-count order, aggregate predicates, mutations, resources, and claim boundary |
 | [registries/marc2_source_validity_eligibility_repair_contract.v0.json](registries/marc2_source_validity_eligibility_repair_contract.v0.json) | machine-readable `MARC2-VR1` source-validity and eligibility contract with 43 generated adversary bundles and all authority flags false |
 | [docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md](docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md) | generated-only full-source validator, eligibility-first selection order, refusal coverage, local verification, and exact remote-proof gate |

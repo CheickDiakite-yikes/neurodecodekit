@@ -21,9 +21,11 @@ private route remains unavailable and must not be inferred as F06.
 Exact implementation `d9fa443` passed Base job `95229811925`, Optional job
 `95229811955`, and CI `31973656275`.
 
-Immediate work is a separately named generated-only live-selection invariant
-repair with dynamic 12-19-subject maximal-prefix checks and aggregate nested
-route preservation. Do not touch any ignored MARC2 path, consumed marker,
+Immediate work is the frozen `MARC2-VR6` generated-only live-selection
+invariant repair. Its registration covers 12, 14, 16, 18, and 19-subject
+maximal prefixes and aggregate nested-route preservation. Commit, push, and
+obtain both green jobs for that exact registration before implementation. Do
+not touch any ignored MARC2 path, consumed marker,
 certificate, output root, or retained source. No new private read, archive
 member, neural payload, target, model, prediction, score, FW2, or CIL1 work is
 authorized by VR5A.

@@ -62,7 +62,14 @@ diagnostic classes to one, and that VR2's live path still requires nine exact
 generated selection outputs and emits generated source semantics. It does not
 prove that the consumed run reached F06. No real cohort exists and FW2/CIL1
 remain ineligible. The next safe task is to freeze a separately named
-generated-only dynamic live-selection repair.
+generated-only dynamic live-selection repair. That repair is now specified in
+`docs/MARC_2_DYNAMIC_LIVE_SELECTION_PREREGISTRATION.md` and
+`registries/marc2_dynamic_live_selection_contract.v0.json`. It freezes five
+generated reservation profiles selecting 12, 14, 16, 18, and 19 subjects,
+dynamic rank/split/cap invariants, live source semantics, and aggregate nested
+route preservation. Commit, push, and obtain both green jobs for this exact
+registration before implementation. It authorizes no private read, cohort,
+archive member, neural payload, target, model, score, FW2, or CIL1 operation.
 Do not touch ignored MARC2 paths, consumed roots, certificates, markers,
 retained sources, archive members, neural data, targets, models, predictions,
 or scores. Any future private read remains a new Tier C packet and fresh
@@ -3214,9 +3221,11 @@ selection outputs and emits generated source identity/proof/hash vocabulary on
 its live path. It does not prove that the private run reached F06. No real
 cohort exists and FW2/CIL1 remain ineligible.
 
-Next, freeze a separately named generated-only dynamic live-selection repair. It
-must preserve only the nested route code, accept a measured maximal contiguous
-12-19-subject prefix under the unchanged cap, and emit real source semantics.
+That separately named repair is now frozen as `MARC2-VR6`. Read its
+preregistration and contract. It must preserve only the nested route code,
+accept a measured maximal contiguous 12-19-subject prefix under the unchanged
+cap, and emit real source semantics. The registration must be committed,
+pushed, and both jobs green before generated-only implementation.
 Do not touch ignored MARC2 paths, consumed roots, certificates, markers,
 retained sources, archive members, neural data, targets, models, predictions,
 or scores. Any future private read remains a new Tier C packet and fresh

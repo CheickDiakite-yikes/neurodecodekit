@@ -7,8 +7,10 @@
 > classes, and the nominal live selector still requires nine exact generated
 > outputs and generated source labels. The exact private predicate remains
 > unavailable. Exact implementation `d9fa443` passed both jobs in CI
-> `31973656275`. The next task is a separately named generated-only dynamic
-> live-selection repair; FW2/CIL1, archive payload, neural, target, model, and
+> `31973656275`; closeout `0c347ad` passed both jobs in CI `31973927757`.
+> `MARC2-VR6` now freezes a generated-only dynamic live-selection repair across
+> 12/14/16/18/19-subject boundaries. Its exact registration must be remotely
+> green before implementation; FW2/CIL1, archive payload, neural, target, model, and
 > scoring work remain closed until a real cohort is frozen under a new Tier C
 > packet.
 

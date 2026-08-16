@@ -10712,3 +10712,29 @@ one-shot diagnostic from a generated-fixture/live-selection contract defect.
 
 Scientific claim not established: no neural payload, target, prediction, or
 score was accessed, so VR5A establishes no neural effect or decoding result.
+
+## 2026-08-16 - MARC2-VR6 Dynamic Selection Preregistration
+
+- Bound VR5A implementation `d9fa443` and green closeout `0c347ad`, including
+  both CI lanes, before defining the repair.
+- Froze five generated reservation regimes selecting 12, 14, 16, 18, and 19
+  participants in canonical and reversed row order.
+- Replaced exact generated count, reservation, and identity expectations with
+  measured-output invariants: rank prefix, 12-19 bounds, split arithmetic,
+  maximality, the unchanged 8 GiB cap, and next-participant overflow or all-19
+  completion.
+- Required live source ID, target-free proof posture, and live source-hash
+  vocabulary for live-derived rows.
+- Limited upstream diagnostic retention to the allowlisted VR2 route code;
+  reasons, predicate values, paths, member identities, and private context
+  remain unavailable.
+- Eight contract tests and seven binding subtests pass. This milestone creates
+  no implementation, private read, output artifact, cohort, neural operation,
+  model run, or score.
+
+Engineering capability specified: a generated qualification can prove dynamic
+live-selection invariants without requiring a real source to reproduce fixture
+outputs.
+
+Scientific claim not established: registration is not neural execution and
+establishes no neural effect or decoding result.

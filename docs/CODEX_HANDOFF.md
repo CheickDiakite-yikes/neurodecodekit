@@ -1,5 +1,14 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR6 gate, 2026-08-16: VR5A closeout `0c347ad` passed Base
+> Python job `95230456921`, Optional Neuro Readers job `95230456860`, and CI
+> `31973927757`. VR6 now freezes a generated-only dynamic-selection repair over
+> five 12/14/16/18/19-subject reservation regimes, two row orders, live source
+> semantics, and code-only upstream route preservation. Commit and push the
+> exact preregistration and require both jobs green before implementation. It
+> authorizes no private source, ignored path, cohort, archive member, neural
+> payload, target, model, score, FW2, or CIL1 operation.
+
 > Current MARC2-VR5A gate, 2026-08-16: registration `926e1ba` passed Base
 > Python job `95226555204`, Optional Neuro Readers job `95226555153`, and CI
 > `31972332778` before the artifact-only implementation. The measured audit
@@ -5264,3 +5273,27 @@ VR4P. Freeze a separately named generated-only repair that preserves only the
 nested route code, validates dynamic 12-19-subject maximal prefixes, emits
 live source semantics, and tests variable reservation boundaries. A future
 private read remains a new Tier C packet and decision.
+
+## 2026-08-16 MARC2-VR6 Dynamic Selection Registration Handoff
+
+VR5A closeout `0c347adea910e42ef479e4f95e22603e3366683c` passed Base job
+`95230456921`, Optional job `95230456860`, and CI `31973927757` before
+VR6 registration work.
+
+The VR6 contract removes fixture identity from the live acceptance rule. It
+treats selected count, selected reservation, and selection hash as measured
+outputs; requires a 12-19-subject maximal contiguous rank prefix; derives six
+run bundles and 24 core members per subject; keeps fit and heldout disjoint;
+and requires either a measured nonfitting next participant or all 19 fitting.
+
+Generated qualification is frozen over five subject counts and two row
+orders, for ten success paths and at least 24 direct mutations. Upstream VR2
+refusals may preserve only an allowlisted route code, never the reason or a
+private value. Live rows must use live source ID, proof posture, and hash
+vocabulary.
+
+Commit, push, and require both CI jobs green before writing the generated-only
+implementation. Do not touch the protected tracker inspection, ignored MARC2
+paths, consumed roots, certificates, markers, retained source, archive
+members, neural data, targets, models, predictions, or scores. A future
+private pass remains a separate Tier C packet and fresh decision.

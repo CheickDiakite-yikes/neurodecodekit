@@ -8723,3 +8723,27 @@ route may have fired earlier. Treat VR5A as engineering diagnosis only.
 Evidence: `docs/MARC_2_VR2_REFUSAL_LOCALIZATION_PREREGISTRATION.md`,
 `docs/MARC_2_VR2_REFUSAL_LOCALIZATION_IMPLEMENTATION.md`, their three
 registries, module, and focused tests.
+
+## 0268 - Make Live Selection Invariant-Based, Not Fixture-Identical
+
+Design decision: selected participant count, reservation bytes, and selection
+identity are measured outputs. A live source must not reproduce the generated
+16-subject fixture or its exact byte total and hash.
+
+Acceptance decision: preserve the frozen rank, full-source validation, 12-19
+subject bounds, six run bundles and 24 core members per subject, disjoint
+fit/heldout sessions, unchanged 8 GiB cap, and maximal-prefix proof. Accept
+either all 19 participants or the exact next ranked participant failing the
+cap.
+
+Diagnostic decision: propagate only an allowlisted upstream VR2 route code.
+Discard the reason and every private predicate value. Unknown routes fail
+closed.
+
+Qualification decision: require generated 12/14/16/18/19-subject boundaries
+in two row orders and at least 24 mutations before any private request. Live
+rows must use live source semantics. Consumed executors remain immutable.
+
+Evidence: `docs/MARC_2_DYNAMIC_LIVE_SELECTION_PREREGISTRATION.md`,
+`registries/marc2_dynamic_live_selection_contract.v0.json`, and its contract
+test.
