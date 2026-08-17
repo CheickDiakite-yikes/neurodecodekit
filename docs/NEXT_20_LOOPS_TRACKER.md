@@ -2911,3 +2911,31 @@ then implement and measure the generated-only discriminator. Private access,
 VR9P reuse, FW2/CIL1, neural payloads, targets, models, scores, and scientific
 claims remain closed; any later private invocation requires a new Tier C packet
 and fresh decision after exact generated proof.
+
+### MARC2-VR10B - F03 Five-Route Discriminator (Generated Result Passed Locally)
+
+Registration `d642eae` passed Base Python job `95308775711`, Optional Neuro
+Readers job `95308775577`, and CI `32003674374` before implementation. The
+dependency-free classifier preserves frozen first-match order and exposes only
+G1/R1-R5; it has no local-path, private-executor, network, model, or scorer
+surface.
+
+One generated clean control and all five exact VR10A witnesses traversed the
+parser, producer, VR2, and VR6 in canonical and reversed order across two
+replays. Each of G1 and R1-R5 appeared exactly four times. The matrix completed
+24 parser/producer paths, 24 VR6 calls, 24 discriminator calls, and 29,448
+parser-entry visits with exact replay and source immutability.
+
+The measured pass processed 6,979,708 generated input bytes, emitted 7,515
+aggregate bytes, retained zero, ran in 2.725759166991338 seconds, and peaked at
+44,564,480 bytes RSS. Sixty direct refusals passed. Thirty-two focused and all
+4,074 base tests pass with 204 expected skips; full Ruff, compilation, registry
+JSON, CLI help/plan, and diff checks pass locally. Every private, archive,
+neural, target, model, score, FW2/CIL1, network, provider, hardware, retry,
+other-project, release, and claim counter is zero.
+
+Next gate: commit, push, and obtain both green CI jobs for the exact
+implementation and result. The generated matrix distinguishes the five
+remaining engineering classes but does not identify the private cause or
+establish a neural or decoding result. Any private invocation remains a new
+Tier C packet and fresh decision after exact remote proof.

@@ -11289,3 +11289,34 @@ Next gate: commit, push, and obtain both green CI jobs for this exact
 registration. Only then may Tier B implement the generated-only discriminator.
 Any private invocation remains a separately frozen Tier C packet and fresh
 decision after exact implementation and generated-result proof.
+
+## 2026-08-17 - MARC2-VR10B Generated Five-Route Result
+
+- Registration `d642eae988bdf5200429fb992e7ff25d778ce949` passed Base Python
+  job `95308775711`, Optional Neuro Readers job `95308775577`, and CI
+  `32003674374` before implementation.
+- Added a standard-library ordered first-match classifier over the five frozen
+  P03, P15, P16, P18, and P19 mechanisms. It exposes only G1/R1-R5 and has no
+  local-path, private-executor, network, model, or scorer surface.
+- Replayed one clean control and all five exact VR10A witnesses in canonical
+  and reversed order across two runs. Each of G1 and R1-R5 appeared exactly
+  four times across 24 parser/producer paths, 24 VR6 calls, 24 discriminator
+  calls, and 29,448 parser-entry visits.
+- Passed 60 direct refusals covering contract identity, route order, route
+  shape, source immutability, replay, output privacy, counters, thread binding,
+  and resource caps.
+- Measured `MARC2VR10B-G1` at 2.725759166991338 seconds and 44,564,480-byte
+  peak RSS over 6,979,708 generated input bytes. Aggregate output was 7,515
+  bytes and retained output was zero.
+- Thirty-two focused tests and the complete 4,074-test base suite pass with 204
+  expected skips and zero failures in 64.504 seconds. Full Ruff, compilation,
+  strict registry JSON, CLI help/plan, and diff checks pass.
+- Every private, consumed-VR9P, archive, neural, target, model, prediction,
+  score, network, FW2/CIL1, provider, hardware, other-project, retry, release,
+  and claim counter remained zero.
+
+Next gate: stage only the exact VR10B implementation/result and public handoff
+files, commit, push, and obtain both green CI jobs. Generated route separation
+does not identify the consumed private cause and establishes no neural or
+decoding result. Any private invocation remains a new Tier C packet and fresh
+decision after exact remote proof.

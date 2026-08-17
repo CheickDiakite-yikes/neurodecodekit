@@ -9305,3 +9305,36 @@ neural data, target, model, prediction, score, FW2/CIL1, network, hardware,
 release, or scientific claim is authorized. Any future private discriminator
 requires exact generated implementation/result proof followed by a new frozen
 Tier C packet and fresh decision.
+
+## 0287 - Accept Generated Five-Route Separation Without Inferring Private Cause
+
+Eligibility decision: begin only after VR10B registration
+`d642eae988bdf5200429fb992e7ff25d778ce949` passed Base Python job
+`95308775711`, Optional Neuro Readers job `95308775577`, and CI `32003674374`.
+
+Architecture decision: use a standard-library classifier at the exact
+generated parser/producer boundary, preserve registered first-match order, and
+expose only G1/R1-R5. Do not add a local-path argument, private wrapper,
+network client, model, scorer, or execute mode.
+
+Evidence decision: accept local `MARC2VR10B-G1`. Each of G1 and R1-R5 appears
+exactly four times across six cases, two orders, and two replays. The matrix
+completed 24 parser/producer paths, 24 VR6 calls, 24 discriminator calls, and
+29,448 parser-entry visits with exact replay and source immutability.
+
+Resource decision: accept 6,979,708 generated input bytes, 7,515 aggregate
+output bytes, zero retained output, 2.725759166991338 seconds, 44,564,480-byte
+peak RSS, and 60 direct refusals under one thread, one worker, and one numerical
+job.
+
+Verification decision: require 32 focused tests, the complete 4,074-test base
+suite with 204 expected skips, full Ruff, compilation, strict registry JSON,
+CLI help/plan, and diff hygiene before commit. Remote proof remains pending
+until both CI jobs pass the exact implementation/result commit.
+
+Boundary decision: the result proves generated route separability only. It
+does not identify the consumed private F03 cause and opens no private,
+consumed-state, archive, neural, target, model, prediction, score, FW2/CIL1,
+network, provider, hardware, release, or scientific authority. A future
+private discriminator requires a new green Tier C packet and fresh decision
+after exact generated implementation/result proof.

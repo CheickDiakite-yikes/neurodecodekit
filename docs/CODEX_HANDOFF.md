@@ -5663,3 +5663,35 @@ private or ignored path, consumed VR9P state, archive member, signal, event,
 target, model, prediction, score, FW2/CIL1, provider, hardware, or another
 project. A future private discriminator remains a new Tier C packet and fresh
 decision after exact generated proof.
+
+## 2026-08-17 MARC2-VR10B Generated Result Handoff
+
+Registration `d642eae988bdf5200429fb992e7ff25d778ce949` passed Base Python
+job `95308775711`, Optional Neuro Readers job `95308775577`, and CI
+`32003674374` before implementation. Read
+`docs/MARC_2_F03_FIVE_ROUTE_DISCRIMINATOR_IMPLEMENTATION.md`,
+`docs/MARC_2_F03_FIVE_ROUTE_DISCRIMINATOR_RESULT.md`, their two machine
+registries, and the implementation/result test modules.
+
+The dependency-free classifier preserves frozen validator order and maps P03,
+P15, P16, P18, and P19 to R1-R5. G1 remains generated-control only. The six
+exact generated cases traversed the parser, producer, VR2, and VR6 in two
+orders and two replays. Each of G1 and R1-R5 appeared four times across 24
+parser/producer paths, 24 VR6 calls, 24 discriminator calls, and 29,448 parser-
+entry visits. Sixty direct refusals passed and source objects remained
+unchanged.
+
+Measured resources were 6,979,708 generated input bytes, 7,515 aggregate
+bytes, zero retained bytes, 2.725759166991338 seconds, and 44,564,480-byte peak
+RSS. Thirty-two focused and 4,074 complete base tests pass with 204 expected
+skips. Full Ruff, compilation, registry JSON, CLI help/plan, and diff checks
+pass locally.
+
+Immediate gate: stage only the exact VR10B implementation/result and public
+handoff files, commit, push, and require both remote jobs green. Keep the
+unrelated tracker inspection NDJSON untouched. Do not access or modify any
+VR9P private source, certificate, marker, output root, ignored MARC2 path,
+archive payload, neural sample, target, model, prediction, score, FW2/CIL1,
+provider, hardware, or another project. The generated routes do not reveal the
+private cause. Any eventual private discriminator remains a new Tier C packet
+and fresh decision after exact remote proof.

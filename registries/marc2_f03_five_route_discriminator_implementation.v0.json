@@ -1,0 +1,169 @@
+{
+  "schema_name": "neurodecodekit.marc2_f03_five_route_discriminator_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "MARC-2-VR10B-F03-five-route-discriminator-implementation-v0",
+  "lane_id": "MARC2-VR10B",
+  "recorded_at_local": "2026-08-17",
+  "status": "exact_generated_implementation_qualified_locally_remote_proof_pending",
+  "proof_posture": "artifact_only_tracked_code_and_generated_structural_interface_no_private_or_scientific_value",
+  "green_registration_proof": {
+    "commit": "d642eae988bdf5200429fb992e7ff25d778ce949",
+    "CI_run_id": 32003674374,
+    "base_python_job_id": 95308775711,
+    "optional_neuro_job_id": 95308775577,
+    "both_required_jobs_green_before_implementation": true,
+    "contract_sha256": "465032260d1e07c7302645e4106ddceb6e755b68b7061b71e9b9d13c7ac0bfc7"
+  },
+  "tracked_implementation_artifacts": [
+    {
+      "role": "implementation_module",
+      "path": "src/neurodecodekit/datasets/marc2_f03_five_route_discriminator.py",
+      "bytes": 51491,
+      "sha256": "f0e5db7e56ef5a6d27cfc84c637aea7da4ed5fe61ae6bb8fd387c0c3236d32d4"
+    },
+    {
+      "role": "behavior_test",
+      "path": "tests/test_marc2_f03_five_route_discriminator.py",
+      "bytes": 10607,
+      "sha256": "348c4ea95215db6ed91bccb6e78052c7520cbb5875bbce6f87c2da325175f48f"
+    },
+    {
+      "role": "implementation_document",
+      "path": "docs/MARC_2_F03_FIVE_ROUTE_DISCRIMINATOR_IMPLEMENTATION.md",
+      "bytes": 4668,
+      "sha256": "e01487299bcc7c10b7de50115c28157125fc876f1035043c9c565b43870ff6bd"
+    },
+    {
+      "role": "result_document",
+      "path": "docs/MARC_2_F03_FIVE_ROUTE_DISCRIMINATOR_RESULT.md",
+      "bytes": 3212,
+      "sha256": "2fdac4d73d48e792298a1c4b7c3219c54c21c3f04ec945e33bdbcda5698acccf"
+    }
+  ],
+  "implementation_surface": {
+    "module": "neurodecodekit.datasets.marc2_f03_five_route_discriminator",
+    "standard_library_only": true,
+    "generated_fixture_only": true,
+    "decision_fields": [
+      "route"
+    ],
+    "ordered_result_routes": [
+      "MARC2VR10B-R1",
+      "MARC2VR10B-R2",
+      "MARC2VR10B-R3",
+      "MARC2VR10B-R4",
+      "MARC2VR10B-R5"
+    ],
+    "generated_control_route": "MARC2VR10B-G1",
+    "CLI_commands": [
+      "plan",
+      "qualify"
+    ],
+    "path_argument_present": false,
+    "output_argument_present": false,
+    "execute_mode_present": false,
+    "private_executor_present": false,
+    "network_client_present": false,
+    "archive_payload_reader_present": false,
+    "model_or_scorer_present": false
+  },
+  "generated_qualification": {
+    "route": "MARC2VR10B-G1",
+    "generated_cases": 6,
+    "source_orders": 2,
+    "exact_replays": 2,
+    "exact_paths": 24,
+    "exact_parser_entry_visits": 29448,
+    "exact_VR6_calls": 24,
+    "exact_discriminator_calls": 24,
+    "broad_VR6_success_paths": 4,
+    "broad_outer_F02_nested_F03_paths": 20,
+    "route_counts": {
+      "MARC2VR10B-G1": 4,
+      "MARC2VR10B-R1": 4,
+      "MARC2VR10B-R2": 4,
+      "MARC2VR10B-R3": 4,
+      "MARC2VR10B-R4": 4,
+      "MARC2VR10B-R5": 4
+    },
+    "internal_matrix_digest_sha256": "e2c184bbe53c6a1d298cfcd4fef86f0910450b2557e906404816c1175b5a21df",
+    "source_mutations": 0,
+    "failed_values_retained": 0,
+    "per_item_outcomes_retained": 0,
+    "direct_refusals_passed": 60
+  },
+  "measured_qualification": {
+    "fixed_artifact_count": 13,
+    "fixed_artifact_bytes": 417533,
+    "generated_input_bytes": 6979708,
+    "aggregate_output_bytes": 7515,
+    "retained_generated_output_bytes": 0,
+    "runtime_seconds": 2.725759166991338,
+    "peak_RSS_bytes": 44564480,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "producer_is_causal": "not_applicable_structural_metadata_only",
+    "end_to_end_latency_measured": false
+  },
+  "local_verification": {
+    "focused_tests": 32,
+    "focused_tests_passed": true,
+    "focused_runtime_seconds": 5.831,
+    "complete_base_tests": 4074,
+    "complete_expected_skips": 204,
+    "complete_failures": 0,
+    "complete_runtime_seconds": 64.504,
+    "complete_base_suite_passed": true,
+    "new_files_Ruff_0_15_20_passed": true,
+    "new_files_compile_passed": true,
+    "full_repository_Ruff_passed": true,
+    "all_registry_JSON_passed": true,
+    "diff_check_passed": true,
+    "CLI_help_and_plan_passed": true,
+    "remote_CI_pending": true
+  },
+  "remote_implementation_proof": {
+    "commit": null,
+    "CI_run_id": null,
+    "base_python_job_id": null,
+    "optional_neuro_job_id": null,
+    "both_required_jobs_green": false
+  },
+  "access_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_VR9P_path_or_output_operations": 0,
+    "network_or_public_request_operations": 0,
+    "archive_local_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "derivative_cache_feature_split_or_NeuroToken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "provider_language_model_stream_device_or_hardware_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "retry_rerun_release_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "next_gate": {
+    "full_local_static_and_artifact_checks_satisfied_before_commit": true,
+    "exact_implementation_and_result_commit_push_and_both_jobs_green_required": true,
+    "future_private_discriminator_authorized": false,
+    "future_private_discriminator_requires_new_Tier_C_packet_and_fresh_decision": true,
+    "consumed_VR9P_reuse_allowed": false,
+    "F03_rule_relaxation_allowed": false,
+    "MARC2_FW2_or_CIL1_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_ceiling": "artifact_only_generated_five_route_structural_classifier",
+    "scientific_ceiling": "none",
+    "private_cause_identified": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "real_time_portable_home_assistive_or_clinical_result": false
+  }
+}
