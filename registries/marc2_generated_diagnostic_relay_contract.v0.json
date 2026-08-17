@@ -1,0 +1,307 @@
+{
+  "schema_name": "neurodecodekit.marc2_generated_diagnostic_relay_contract",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC2-VR8B",
+  "contract_id": "MARC-2-full-scale-generated-parser-producer-diagnostic-relay-contract-v0",
+  "recorded_at_local": "2026-08-16",
+  "status": "frozen_generated_only_diagnostic_relay_contract_implementation_pending",
+  "proof_posture": "generated_structural_interface_qualification_only_no_private_or_scientific_value",
+  "objective": "Qualify a full-scale generated exact-parser and live-manifest path through VR2 and VR6 while preserving only the outer VR6 and nested allowlisted VR2 route codes.",
+  "green_VR8A_closeout_proof": {
+    "commit": "8bbb8e36406a5043fdbf1a2e285b070d1bdfc0db",
+    "CI_run_id": 31986401715,
+    "base_python_job_id": 95262067116,
+    "optional_neuro_job_id": 95262067131,
+    "both_required_jobs_green": true,
+    "VR8A_route": "MARC2VR8A-R1",
+    "remaining_compatible_private_routes": [
+      "MARC2VR2-F03",
+      "MARC2VR2-F04"
+    ],
+    "private_route_available": false
+  },
+  "fixed_inputs": [
+    {
+      "role": "green_VR8A_result",
+      "path": "registries/marc2_vr6_vr2_boundary_localization_result.v0.json",
+      "bytes": 8990,
+      "sha256": "9dcb677e9d563c0c52f00f0808d84d4ee568836de5198cc17be4567cefa37334"
+    },
+    {
+      "role": "green_VR8A_module",
+      "path": "src/neurodecodekit/datasets/marc2_vr6_vr2_boundary_localization.py",
+      "bytes": 42853,
+      "sha256": "29a2eaa1a97efff5e9dc8e4a853be02f86c294851027d5db355660adb1669956"
+    },
+    {
+      "role": "VR6_adapter_module",
+      "path": "src/neurodecodekit/datasets/marc2_dynamic_live_selection.py",
+      "bytes": 55659,
+      "sha256": "c3b0d056891f7708b87e8027d36ebd14830055cdeac8e652a681dd4592b4a104"
+    },
+    {
+      "role": "VR6_contract",
+      "path": "registries/marc2_dynamic_live_selection_contract.v0.json",
+      "bytes": 9414,
+      "sha256": "cadb9b512c0d072ced2bb4219f6c7f2ac962c230ecff7ff56841f00b824c0d58"
+    },
+    {
+      "role": "VR6_implementation_record",
+      "path": "registries/marc2_dynamic_live_selection_implementation.v0.json",
+      "bytes": 6463,
+      "sha256": "0a08caa40d3bb46f6bea1ef8c32b6451d8066dab40935274b7ab1692dee78fdc"
+    },
+    {
+      "role": "VR2_validator_module",
+      "path": "src/neurodecodekit/datasets/marc2_live_domain_eligibility_adapter.py",
+      "bytes": 57528,
+      "sha256": "061b893180e01116dbd962826384b4071d9e952b78b593b4743f8c301e1cbbc3"
+    },
+    {
+      "role": "VR2_contract",
+      "path": "registries/marc2_live_domain_eligibility_adapter_contract.v0.json",
+      "bytes": 15306,
+      "sha256": "c7c94406c7b3f483bb2ecbbb42b131756d178f288eedc31ce48e9383180a0a33"
+    },
+    {
+      "role": "VR2_implementation_record",
+      "path": "registries/marc2_live_domain_eligibility_adapter_implementation.v0.json",
+      "bytes": 9361,
+      "sha256": "9d975652566616b43c255389bc17e027760772bf86307c58cd51858312528096"
+    },
+    {
+      "role": "exact_central_directory_parser_module",
+      "path": "src/neurodecodekit/datasets/marc1_central_directory_audit.py",
+      "bytes": 79296,
+      "sha256": "db8b6975c81d4afe0a5ede0126956f4113159c98b3975cbded4ad322bce23de6"
+    },
+    {
+      "role": "exact_parser_implementation_record",
+      "path": "registries/marc1_freewill_central_directory_implementation.v0.json",
+      "bytes": 8576,
+      "sha256": "9cd010cd7bae25bb43c01e25c46169439103c66bf20292485f80da2ee701ee7a"
+    },
+    {
+      "role": "exact_live_manifest_producer_module",
+      "path": "src/neurodecodekit/datasets/marc1_central_directory_live.py",
+      "bytes": 74328,
+      "sha256": "f25464be139a0f4dad813f255be6d91eb803f35a50b045baea4aa7b27e5549d5"
+    },
+    {
+      "role": "exact_live_producer_implementation_record",
+      "path": "registries/marc1_freewill_central_directory_live_implementation.v0.json",
+      "bytes": 14970,
+      "sha256": "b0e2c0fe20a20b142fa53c387ffd4fe467aff9898ecd1ab1eadc3a441f8405b0"
+    },
+    {
+      "role": "frozen_selector_module",
+      "path": "src/neurodecodekit/datasets/marc2_freewill_prefix_selection.py",
+      "bytes": 72691,
+      "sha256": "86fa30fbd1caed735f0fb2e627144482a2bb8e033567bb3794e3f05508005c97"
+    },
+    {
+      "role": "frozen_selector_contract",
+      "path": "registries/marc2_freewill_prefix_selection_contract.v0.json",
+      "bytes": 15821,
+      "sha256": "dfe614cd7ec27c54c4f03848e3878c714222db043f501b9b07e57c7dc9f5f702"
+    },
+    {
+      "role": "VR1_source_repair_module",
+      "path": "src/neurodecodekit/datasets/marc2_source_validity_eligibility_repair.py",
+      "bytes": 55503,
+      "sha256": "cef7bb738ceee86847067cec788e442aa5022c8f573a814638ef3d48b6ec3587"
+    },
+    {
+      "role": "VR1_source_repair_contract",
+      "path": "registries/marc2_source_validity_eligibility_repair_contract.v0.json",
+      "bytes": 13285,
+      "sha256": "84f44f8bc43a4ee56e256a1546cbc1fae3252f2f320db7064602fe72b44463e9"
+    },
+    {
+      "role": "consumed_VR7P_module_for_forbidden_import_check_only",
+      "path": "src/neurodecodekit/datasets/marc2_dynamic_private_selection_recovery.py",
+      "bytes": 82945,
+      "sha256": "a200bdc50c79044dd5636859183432f629038343ee2d1e117cc4cd48c4cdbb42"
+    }
+  ],
+  "registration_artifacts": {
+    "document_path": "docs/MARC_2_GENERATED_DIAGNOSTIC_RELAY_PREREGISTRATION.md",
+    "document_sha256": "f3e5c103342774189717c90498e062edf6d4ccedcae4bc43c5fcca2958af2945",
+    "test_path": "tests/test_marc2_generated_diagnostic_relay_contract.py",
+    "test_sha256": "7447f6082df9dbff4d4b0c5d006512e9ec7a2df19ca9a828e69a606a3648b2c8"
+  },
+  "generated_composition": {
+    "inventory_rows": 1227,
+    "regular_file_rows": 1025,
+    "directory_rows": 202,
+    "complete_run_bundles": 238,
+    "eligible_run_bundles": 195,
+    "valid_ineligible_run_bundles": 43,
+    "exact_central_directory_parser_required": true,
+    "exact_live_manifest_composer_required": true,
+    "source_blueprint": "registered_VR2_profile_A_generated_source",
+    "entry_comments_bytes_each": 0,
+    "deterministic_nonoverlapping_intervals_required": true,
+    "ZIP64_only_where_required_by_size_or_offset": true,
+    "synthetic_live_normalization_fields": [
+      "transport_body_sha256"
+    ],
+    "normalization_may_change_entries_schema_version_posture_or_identity": false,
+    "member_local_headers_materialized": false,
+    "member_payloads_materialized": false,
+    "consumed_VR7P_may_be_imported_or_called": false
+  },
+  "route_matrix": [
+    {
+      "case": "success",
+      "mutation_stage": "none",
+      "expected_disposition": "VR6_success",
+      "expected_outer_VR6_route": null,
+      "expected_nested_VR2_route": null
+    },
+    {
+      "case": "F02",
+      "mutation_stage": "post_composition_live_envelope_identity",
+      "expected_disposition": "aggregate_refusal",
+      "expected_outer_VR6_route": "MARC2VR6-F02",
+      "expected_nested_VR2_route": "MARC2VR2-F02"
+    },
+    {
+      "case": "F03",
+      "mutation_stage": "pre_parser_suffix_bearing_task_token",
+      "expected_disposition": "aggregate_refusal",
+      "expected_outer_VR6_route": "MARC2VR6-F02",
+      "expected_nested_VR2_route": "MARC2VR2-F03"
+    },
+    {
+      "case": "F04",
+      "mutation_stage": "pre_parser_complete_bundle_unknown_participant",
+      "expected_disposition": "aggregate_refusal",
+      "expected_outer_VR6_route": "MARC2VR6-F02",
+      "expected_nested_VR2_route": "MARC2VR2-F04"
+    }
+  ],
+  "replay_policy": {
+    "central_directory_orders": [
+      "canonical",
+      "reversed"
+    ],
+    "matrix_paths_per_replay": 8,
+    "exact_replays": 2,
+    "canonical_public_report_replay_required": true,
+    "normalized_success_selection_identity_equal_across_orders": true
+  },
+  "relay_contract": {
+    "published_refusal_fields": [
+      "case",
+      "disposition",
+      "outer_VR6_route",
+      "nested_VR2_route"
+    ],
+    "allowlisted_outer_VR6_routes": [
+      "MARC2VR6-F02"
+    ],
+    "allowlisted_nested_VR2_routes": [
+      "MARC2VR2-F02",
+      "MARC2VR2-F03",
+      "MARC2VR2-F04"
+    ],
+    "exception_text_or_reason_published": false,
+    "member_person_session_run_or_value_published": false,
+    "unknown_or_missing_nested_route_refused": true,
+    "source_object_mutation_allowed": false
+  },
+  "qualification": {
+    "minimum_direct_refusals": 24,
+    "required_refusal_classes": [
+      "contract or artifact hash drift",
+      "unknown or missing outer route",
+      "unknown or missing nested route",
+      "exception reason leakage",
+      "member or person path leakage",
+      "parser entry count or kind drift",
+      "local interval overlap or boundary drift",
+      "synthetic normalization field drift",
+      "matrix route mismatch",
+      "deterministic replay mismatch",
+      "thread binding drift",
+      "runtime or RSS cap drift",
+      "generated input or output cap drift",
+      "forbidden operation counter drift"
+    ],
+    "acceptance_gate_count": 16,
+    "commands": [
+      "plan",
+      "qualify"
+    ],
+    "retained_output_writer_allowed": false,
+    "heavy_or_new_base_dependency_allowed": false
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "materialized_generated_input_bytes": 8388608,
+    "aggregate_output_bytes": 1048576,
+    "retained_generated_output_bytes": 0,
+    "network_bytes": 0,
+    "real_or_private_bytes": 0
+  },
+  "authorization_flags": {
+    "private_or_Git_ignored_path_access_authorized": false,
+    "consumed_VR7P_path_or_module_execution_authorized": false,
+    "public_metadata_or_network_access_authorized": false,
+    "local_archive_or_member_payload_access_authorized": false,
+    "real_signal_event_channel_geometry_or_target_access_authorized": false,
+    "derivative_cache_feature_split_or_NeuroToken_authorized": false,
+    "training_inference_prediction_freeze_delivery_or_score_authorized": false,
+    "provider_language_model_stream_device_or_hardware_authorized": false,
+    "MARC2_FW2_or_CIL1_authorized": false,
+    "retry_rerun_release_or_claim_upgrade_authorized": false
+  },
+  "operation_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_VR7P_path_or_executor_operations": 0,
+    "network_or_public_request_operations": 0,
+    "local_archive_header_or_member_payload_operations": 0,
+    "real_signal_event_channel_geometry_target_or_label_operations": 0,
+    "derivative_cache_feature_split_or_NeuroToken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "provider_language_model_stream_device_or_hardware_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "retry_rerun_release_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "next_gate": {
+    "registration_commit_push_and_both_jobs_green_required": true,
+    "generated_implementation_after_registration_green": true,
+    "exact_generated_implementation_commit_push_and_both_jobs_green_required": true,
+    "private_diagnostic_execution_authorized": false,
+    "future_private_read_requires_new_Tier_C_packet": true,
+    "future_private_read_requires_new_Tier_C_decision": true,
+    "F03_or_F04_relaxation_allowed_before_observed_route": false,
+    "FW2_CIL1_payload_model_target_or_score_work_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_ceiling": "generated_full_scale_parser_producer_route_relay_qualification",
+    "scientific_ceiling": "none",
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "real_time_portable_home_assistive_or_clinical_result": false
+  },
+  "warnings": [
+    "Synthetic transport digest normalization is an explicit interface fixture and is not evidence about the live archive.",
+    "The consumed F03 versus F04 route remains unavailable throughout VR8B.",
+    "No generated success or refusal has scientific value."
+  ],
+  "unavailable_fields": [
+    "consumed nested VR2 route reason predicate and value",
+    "private member names participant session and run identities",
+    "real cohort reservation bytes and selection identity",
+    "archive member payload signals events targets predictions and scores"
+  ]
+}

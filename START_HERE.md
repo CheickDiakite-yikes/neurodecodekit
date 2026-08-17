@@ -75,11 +75,16 @@ only 18 rows. The exact private F03/F04 route remains unavailable.
 Exact implementation/result `1addd5d` passed Base job `95261271737`, Optional
 job `95261271709`, and CI `31986089529`.
 
-The next safe work is a separately named generated-only diagnostic relay that
-preserves the outer VR6 code and nested allowlisted VR2 code, but no reason or
-private context. Do not relax F03 or F04. Any new private structural read or
-real cohort freeze remains a fresh Tier C packet and decision; FW2, CIL1,
-neural payload access, training, scoring, and live decoding remain closed.
+The next safe work is frozen as `MARC2-VR8B`. Read
+`docs/MARC_2_GENERATED_DIAGNOSTIC_RELAY_PREREGISTRATION.md` and
+`registries/marc2_generated_diagnostic_relay_contract.v0.json`. It requires a
+1,227-row synthetic central directory to traverse the exact parser and live
+manifest composer before VR2/VR6 success and F02/F03/F04 route cases. Only the
+outer and nested allowlisted codes may survive. Test, commit, push, and require
+both CI jobs green for this exact registration before implementation. Do not
+relax F03 or F04. Any new private structural read or real cohort freeze remains
+a fresh Tier C packet and decision; FW2, CIL1, neural payload access, training,
+scoring, and live decoding remain closed.
 
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.

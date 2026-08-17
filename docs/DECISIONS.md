@@ -8978,3 +8978,30 @@ Remote proof: exact implementation/result
 `1addd5df9fdccda6e716f71f9e6624f199677713` passed Base Python job
 `95261271737`, Optional Neuro Readers job `95261271709`, and CI
 `31986089529`.
+
+## 0277 - Freeze VR8B As A Full-Scale Generated Diagnostic Relay
+
+Eligibility decision: begin registration only after VR8A proof closeout
+`8bbb8e36406a5043fdbf1a2e285b070d1bdfc0db` passed Base Python job
+`95262067116`, Optional Neuro Readers job `95262067131`, and CI
+`31986401715`.
+
+Architecture decision: require all 1,227 generated live-shaped entries to
+traverse the exact central-directory parser and live manifest composer before
+VR2/VR6. Permit one explicit synthetic normalization of only the three
+registered transport digests; entries, schema, version, posture, and source
+identity may not change.
+
+Diagnostic decision: run canonical and reversed success plus F02, F03, and F04
+cases. Preserve only the outer VR6 and nested allowlisted VR2 codes. Discard
+exception text, reasons, rows, paths, person/session/run identities, and values.
+Do not import, call, patch, or reuse consumed VR7P.
+
+Evidence decision: cap generated input at 8 MiB, output at 1 MiB, runtime at 30
+seconds, and RSS at 256 MiB under one thread with zero retention. No private,
+network, archive-payload, neural, target, model, score, FW2, CIL1, retry, or
+claim operation is authorized.
+
+Prospective decision: implementation may begin only after this exact
+registration is committed, pushed, and both jobs are green. A later private
+diagnostic remains a separate all-false Tier C packet and fresh decision.

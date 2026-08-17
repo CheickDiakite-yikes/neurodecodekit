@@ -1951,6 +1951,14 @@ Read this before interpreting any number in the repository.
   target, model, score, network, FW2, or CIL1 operation. The exact F03/F04
   private route remains unavailable and must not be inferred. Exact
   implementation/result `1addd5d` passed both jobs in CI `31986089529`.
+- **MARC2-VR8B generated diagnostic relay registration:** the next Tier B
+  contract binds 17 tracked artifacts totaling 622,989 bytes and requires a
+  1,227-entry synthetic ZIP64 directory to traverse the exact parser, live
+  manifest composer, VR2, and VR6. Canonical and reversed success plus forced
+  F02/F03/F04 cases must retain only the outer and nested allowlisted codes.
+  Materialized generated input is capped at 8 MiB with zero retention, network,
+  private data, payload, model, or score access. This is a frozen interface
+  qualification, not evidence about the consumed F03/F04 route.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
@@ -2809,6 +2817,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/MARC_2_VR6_VR2_BOUNDARY_LOCALIZATION_IMPLEMENTATION.md](docs/MARC_2_VR6_VR2_BOUNDARY_LOCALIZATION_IMPLEMENTATION.md) | measured `MARC2VR8A-R1` audit, F02 exclusion, remaining F03/F04 boundary, relay-loss trace, fixture gap, and next repair |
 | [registries/marc2_vr6_vr2_boundary_localization_implementation.v0.json](registries/marc2_vr6_vr2_boundary_localization_implementation.v0.json) | machine-readable fixed reader surface, measured resources, localization facts, zero counters, and remote-proof gate |
 | [registries/marc2_vr6_vr2_boundary_localization_result.v0.json](registries/marc2_vr6_vr2_boundary_localization_result.v0.json) | machine-readable R1 result, exact artifact bindings, F03/F04 uncertainty, warnings, and no-science ceiling |
+| [docs/MARC_2_GENERATED_DIAGNOSTIC_RELAY_PREREGISTRATION.md](docs/MARC_2_GENERATED_DIAGNOSTIC_RELAY_PREREGISTRATION.md) | frozen VR8B full-scale generated parser/producer relay, F02/F03/F04 matrix, privacy firewall, caps, and private-access boundary |
+| [registries/marc2_generated_diagnostic_relay_contract.v0.json](registries/marc2_generated_diagnostic_relay_contract.v0.json) | hash-bound 17-input VR8B contract, exact route relay, replay/mutation gates, all-false authority, and no-science ceiling |
 | [docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md](docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md) | frozen generated-only 238-bundle repair design, filter-before-count order, aggregate predicates, mutations, resources, and claim boundary |
 | [registries/marc2_source_validity_eligibility_repair_contract.v0.json](registries/marc2_source_validity_eligibility_repair_contract.v0.json) | machine-readable `MARC2-VR1` source-validity and eligibility contract with 43 generated adversary bundles and all authority flags false |
 | [docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md](docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md) | generated-only full-source validator, eligibility-first selection order, refusal coverage, local verification, and exact remote-proof gate |

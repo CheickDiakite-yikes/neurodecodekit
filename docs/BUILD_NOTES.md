@@ -10986,3 +10986,27 @@ validation boundary to F03 versus F04 without reopening private data.
 Scientific claim not established: no neural payload, target, prediction, or
 score was accessed, so the result establishes no neural effect or decoding
 performance.
+
+## 2026-08-16 - MARC2-VR8B Generated Diagnostic Relay Registration
+
+- Bound remotely green VR8A proof closeout `8bbb8e3`, CI `31986401715`, Base
+  job `95262067116`, and Optional job `95262067131`.
+- Froze 17 tracked inputs totaling 622,989 bytes; no ignored or private path is
+  present.
+- Required a 1,227-entry generated ZIP64 directory to traverse the exact
+  parser and live manifest composer before VR2 and VR6.
+- Froze canonical/reversed success plus F02/F03/F04 cases and two complete
+  replays. Only case, disposition, outer VR6 code, and nested VR2 code may be
+  public.
+- Allowed synthetic normalization of only the three registered transport-body
+  digests; entries, schema, version, posture, and identity may not change.
+- Capped materialized generated input at 8 MiB, output at 1 MiB, runtime at 30
+  seconds, and RSS at 256 MiB under one thread with zero retention.
+- Kept private, network, payload, neural, target, model, score, provider,
+  hardware, FW2, CIL1, retry, and claim authority at false/zero.
+
+Engineering capability specified: a generated full-scale parser/producer relay
+can qualify safe two-layer diagnostics before another irreversible read.
+
+Scientific claim not established: this registration uses no real/private
+neural data and establishes no neural effect or decoding performance.

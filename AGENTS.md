@@ -113,11 +113,14 @@ identity, and value remain unavailable.
 Exact implementation/result `1addd5d` passed Base Python job `95261271737`,
 Optional Neuro Readers job `95261271709`, and CI `31986089529`.
 
-Next safe work is a separately named generated-only diagnostic relay carrying
-the outer VR6 and nested allowlisted VR2 codes while discarding reason text and
-private context. Do not relax F03 or F04. No private, ignored, archive, neural,
-target, model, score, FW2, or CIL1 operation is authorized; another structural
-read remains a fresh Tier C packet and packet-bound decision.
+Next safe work is frozen as `MARC2-VR8B`. Read
+`docs/MARC_2_GENERATED_DIAGNOSTIC_RELAY_PREREGISTRATION.md` and its contract.
+The generated-only lane requires a 1,227-entry exact parser/producer path,
+canonical/reversed success, F02/F03/F04 route cases, and an outer-plus-nested
+code-only relay. Registration must be committed, pushed, and both jobs green
+before implementation. Do not relax F03 or F04. No private, ignored, archive,
+neural, target, model, score, FW2, or CIL1 operation is authorized; another
+structural read remains a fresh Tier C packet and packet-bound decision.
 
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-
@@ -3289,8 +3292,9 @@ the fixed artifact audit. Route `MARC2VR8A-R1` excludes F02 and narrows the
 unknown to F03 versus F04, proves that VR7P dropped VR6's nested route field,
 and identifies the missing full-scale producer-to-VR2 fixture. It accessed no
 private path or neural data. Exact implementation/result `1addd5d` passed both
-jobs in CI `31986089529`. Freeze and remotely qualify a generated-only
-diagnostic relay next; do not infer the hidden F03/F04 route or reopen VR7P.
+jobs in CI `31986089529`. VR8B now freezes the generated-only full-scale
+parser/producer diagnostic relay. Require its registration to pass both jobs
+before implementation; do not infer the hidden F03/F04 route or reopen VR7P.
 
 ## Style
 

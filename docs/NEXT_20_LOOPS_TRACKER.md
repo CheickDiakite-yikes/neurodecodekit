@@ -2718,3 +2718,24 @@ job `95261271709`, and CI `31986089529`. VR8A is complete. Next freeze a
 separately named generated-only diagnostic relay preserving only the outer VR6
 and nested allowlisted VR2 codes. Do not relax F03 or F04. A new private
 structural read remains a separate Tier C packet and decision.
+
+### MARC2-VR8B - Full-Scale Generated Diagnostic Relay (Registration Frozen)
+
+VR8B binds 17 tracked artifacts totaling 622,989 bytes. It must convert all
+1,227 generated live-shaped rows into deterministic exact-parser entries,
+traverse the central-directory parser and live manifest composer, and then run
+VR2/VR6 in memory. The consumed VR7P module is a forbidden-import check only.
+
+The frozen matrix contains success, F02 envelope, F03 path/companion, and F04
+bundle/taxonomy cases in canonical and reversed directory order, replayed
+twice. Refusals may publish only case, disposition, outer VR6 route, and nested
+VR2 route. Reasons, rows, paths, identities, and values remain forbidden.
+
+Generated materialization is capped at 8 MiB, output at 1 MiB, runtime at 30
+seconds, and RSS at 256 MiB under one thread with zero retention. All private,
+network, member-payload, neural, target, model, score, FW2, CIL1, retry, and
+claim authority remains false.
+
+Current gate: test, commit, push, and require both jobs green for the exact
+registration before implementation. A later private diagnostic remains a new
+Tier C packet and decision.
