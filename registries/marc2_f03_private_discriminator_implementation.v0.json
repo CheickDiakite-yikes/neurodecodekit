@@ -23,8 +23,8 @@
     {
       "role": "behavior_test",
       "path": "tests/test_marc2_f03_private_discriminator.py",
-      "bytes": 12227,
-      "sha256": "d7595c59329bde884c57e84711e74f5e73b272fc771766685bc701d649c3ff6e"
+      "bytes": 12612,
+      "sha256": "5d32ca1e88653810d78ef6eef438510c9d42e26969b2f833a27e36f5850f771a"
     },
     {
       "role": "implementation_document",

@@ -27,14 +27,16 @@ class Marc2F03PrivateDiscriminatorTests(unittest.TestCase):
             environment=THREAD_ENV,
         )
 
-    def test_plan_is_fixed_and_private_execution_is_pending(self):
+    def test_plan_is_fixed_and_private_gate_matches_proof_state(self):
         plan = private.build_plan_summary()
         self.assertEqual(plan["lane_id"], "MARC2-VR11P")
         self.assertEqual(plan["generated_cases"], 6)
         self.assertEqual(plan["required_paths"], 24)
         self.assertGreaterEqual(plan["minimum_direct_refusals"], 70)
-        self.assertFalse(plan["private_execution_proof_green"])
-        self.assertFalse(plan["private_execution_allowed_now"])
+        self.assertEqual(
+            plan["private_execution_allowed_now"],
+            plan["private_execution_proof_green"],
+        )
         self.assertEqual(plan["network_bytes"], 0)
         self.assertEqual(plan["archive_member_signal_or_target_bytes"], 0)
         self.assertFalse(plan["FW2_or_CIL1_authorized"])
@@ -161,12 +163,20 @@ class Marc2F03PrivateDiscriminatorTests(unittest.TestCase):
         ):
             self.assertNotIn(forbidden, lowered)
 
-    def test_execute_refuses_before_private_sequence_while_proof_is_pending(self):
+    def test_execute_gate_refuses_pending_and_dispatches_only_when_green(self):
+        root = Path(private.__file__).resolve().parents[3]
+        record = json.loads((root / private.IMPLEMENTATION_RELATIVE_PATH).read_text())
         with mock.patch.object(private, "_run_private_sequence") as run:
-            with self.assertRaises(private.F03PrivateDiscriminatorRefusal) as refusal:
+            if record["remote_implementation_proof"] is None:
+                with self.assertRaises(
+                    private.F03PrivateDiscriminatorRefusal
+                ) as refusal:
+                    private.execute_registered()
+                self.assertEqual(refusal.exception.route, "MARC2VR11P-F01")
+                run.assert_not_called()
+            else:
                 private.execute_registered()
-        self.assertEqual(refusal.exception.route, "MARC2VR11P-F01")
-        run.assert_not_called()
+                run.assert_called_once()
 
     def test_cli_has_no_generic_path_or_execution_override(self):
         parser = private._build_parser()
