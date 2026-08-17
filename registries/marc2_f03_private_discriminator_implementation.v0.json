@@ -17,8 +17,8 @@
     {
       "role": "implementation_module",
       "path": "src/neurodecodekit/datasets/marc2_f03_private_discriminator.py",
-      "bytes": 52644,
-      "sha256": "b8419da5f121c8234facf012706bb3662bedac724726bf0f9debe72bb95ef5ff"
+      "bytes": 52887,
+      "sha256": "5ea9b833f7408ea1b92c48a842ffee13a6e9e2a2c73c223ebbbfd0e31898617c"
     },
     {
       "role": "behavior_test",

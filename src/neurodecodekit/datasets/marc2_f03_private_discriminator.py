@@ -446,6 +446,12 @@ def _run_wrapper_refusals(
 ) -> dict[str, str]:
     checks: list[tuple[str, str, Callable[[], Any]]] = []
 
+    def pending_implementation_proof() -> None:
+        pending = copy.deepcopy(implementation)
+        pending["remote_implementation_proof"] = None
+        pending["next_gate"]["private_execution_allowed_now"] = False
+        _require_green_implementation(pending)
+
     def changed_report(path: Sequence[str], value: Any) -> Callable[[], None]:
         def action() -> None:
             changed = copy.deepcopy(report)
@@ -553,7 +559,7 @@ def _run_wrapper_refusals(
             (
                 "implementation_proof_pending",
                 REFUSAL_ROUTES[0],
-                lambda: _require_green_implementation(implementation),
+                pending_implementation_proof,
             ),
         ]
     )
