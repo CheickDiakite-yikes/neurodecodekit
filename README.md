@@ -1936,7 +1936,8 @@ Read this before interpreting any number in the repository.
   VR2 route, private predicate/value, candidate selection, and cohort were not
   retained and must not be inferred. VR7P is consumed with no retry or rerun;
   no archive member, neural payload, target, model, prediction, score, FW2,
-  live decoding, or scientific claim was reached.
+  live decoding, or scientific claim was reached. Initial result record
+  `ae75423` passed both jobs in CI `31983281390` without a second execution.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

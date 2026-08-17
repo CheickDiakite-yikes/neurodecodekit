@@ -57,7 +57,9 @@ once. It consumed at `MARC2VR7P-F07`, preserving only upstream VR6 route
 nested VR2 route, failed private predicate/value, intermediate selection, and
 real cohort were not retained. Do not reopen or alter the new readiness path,
 output root, marker, or source, and do not rerun VR7P. FW2, CIL1, neural
-payload access, training, scoring, and live decoding remain closed.
+payload access, training, scoring, and live decoding remain closed. Initial
+result record `ae75423` passed both jobs in CI `31983281390`; that was test and
+record proof only, not a second private execution.
 
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.

@@ -18,6 +18,12 @@ Exact implementation commit
 `95252133987`, Optional Neuro Readers job `95252133958`, and CI
 `31982672176` before execution.
 
+The initial aggregate result record was then committed as
+`ae75423ce9e60c08599ba31fc40f3a6ea584d70e`. It passed Base Python job
+`95253771315`, Optional Neuro Readers job `95253771324`, and CI
+`31983281390`. That proof validates the committed failure record and full test
+suites; it is not a second execution or private reinspection.
+
 The command was invoked once with all five numerical-thread variables fixed to
 one and only the four registered proof identifiers. It exposed no path, root,
 source, output, cleanup, threshold, retry, dataset, participant, or model

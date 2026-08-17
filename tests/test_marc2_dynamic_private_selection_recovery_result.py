@@ -43,6 +43,16 @@ class Marc2DynamicPrivateSelectionRecoveryResultTests(unittest.TestCase):
         self.assertEqual(proof["base_python_job_id"], 95_252_133_987)
         self.assertEqual(proof["optional_neuro_job_id"], 95_252_133_958)
         self.assertTrue(proof["both_required_jobs_green_before_execution"])
+        result_proof = self.record["verification"]["remote_proof"]
+        self.assertFalse(self.record["verification"]["remote_CI_pending"])
+        self.assertEqual(
+            result_proof["commit"],
+            "ae75423ce9e60c08599ba31fc40f3a6ea584d70e",
+        )
+        self.assertEqual(result_proof["CI_run_id"], 31_983_281_390)
+        self.assertEqual(result_proof["base_python_job_id"], 95_253_771_315)
+        self.assertEqual(result_proof["optional_neuro_job_id"], 95_253_771_324)
+        self.assertTrue(result_proof["both_required_jobs_green"])
 
     def test_bound_public_artifact_hashes_match(self):
         seen = set()

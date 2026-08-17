@@ -21,7 +21,8 @@
 > route, private predicate/value, candidate selection, and cohort were not
 > retained. Never reopen or alter the readiness path, output root, marker,
 > retained source, or ignored tracker inspection. Retry, archive payload, FW2,
-> CIL1, training, scoring, and live decoding remain closed.
+> CIL1, training, scoring, and live decoding remain closed. Initial result
+> record `ae75423` passed both jobs in CI `31983281390` without another run.
 
 > Current MARC2-VR5A gate, 2026-08-16: registration `926e1ba` passed Base
 > Python job `95226555204`, Optional Neuro Readers job `95226555153`, and CI

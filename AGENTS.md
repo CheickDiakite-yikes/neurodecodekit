@@ -92,7 +92,8 @@ once, strict-parsed once, and called VR6 once. It consumed at
 VR2 validation refusal. The nested VR2 route, failed private predicate/value,
 candidate selection, and real cohort were not retained and must not be
 inferred. VR7P has no retry, rerun, resume, repair, fallback, or private
-reinspection. FW2 and CIL1 remain ineligible.
+reinspection. Initial result record `ae75423` passed both jobs in CI
+`31983281390` without another execution. FW2 and CIL1 remain ineligible.
 Do not touch ignored MARC2 paths, consumed roots, certificates, markers,
 retained sources, archive members, neural data, targets, models, predictions,
 or scores. Any future private read remains a new Tier C packet and fresh

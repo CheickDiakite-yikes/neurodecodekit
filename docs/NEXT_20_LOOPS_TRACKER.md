@@ -2687,3 +2687,5 @@ Current gate: VR7P is consumed with no retry, rerun, resume, repair, fallback,
 or private reinspection. FW2 and CIL1 remain ineligible. The next safe work is
 a separately named artifact-only VR6-to-VR2 boundary analysis using committed
 code, contracts, generated fixtures, and the two allowlisted route codes only.
+Initial result record `ae75423` passed Base job `95253771315`, Optional job
+`95253771324`, and CI `31983281390`; no second execution occurred.

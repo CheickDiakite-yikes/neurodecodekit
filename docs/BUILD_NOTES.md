@@ -10908,6 +10908,10 @@ capability.
 - Added a target-free result document, machine failure registry, and ten
   focused result tests. VR7P is consumed with no retry, rerun, resume, repair,
   fallback, or private reinspection; FW2 and CIL1 remain ineligible.
+- Initial result commit `ae75423ce9e60c08599ba31fc40f3a6ea584d70e`
+  passed Base Python job `95253771315`, Optional Neuro Readers job
+  `95253771324`, and CI `31983281390`. This was record and full-suite proof,
+  not another execution.
 
 Engineering capability added: the remotely green wrapper crossed machine
 readiness and one integrity-checked structural open, preserved the allowlisted

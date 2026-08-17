@@ -8908,3 +8908,8 @@ or scientific claim was reached.
 Evidence: `docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_RESULT.md`,
 `registries/marc2_dynamic_private_selection_recovery_failure_result.v0.json`,
 and its focused test.
+
+Remote proof: initial result commit `ae75423ce9e60c08599ba31fc40f3a6ea584d70e`
+passed Base Python job `95253771315`, Optional Neuro Readers job
+`95253771324`, and CI `31983281390`. This verified the committed aggregate
+record and full suites; it performed no second execution or private operation.
