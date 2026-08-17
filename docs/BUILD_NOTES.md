@@ -11392,3 +11392,31 @@ retroactive authority.
 - Preserved the second barrier: this proof-closeout commit must itself be pushed
   and both jobs must pass before VR11P can be identified as the sole active
   Tier C packet for a fresh maintainer decision.
+
+Proof closeout `136f7b999d3514bd8d62f8dc9e7d7c01b89662f7` passed Base
+Python job `95330380822`, Optional Neuro Readers job `95330380918`, and CI
+`32011020786`. No private or generated qualification was repeated.
+
+## 2026-08-17 - MARC2-VR11P Packet-Bound Authorization Decision
+
+- Recorded the maintainer's exact post-identification message
+  `okay lets continue`: 18 UTF-8 bytes with SHA-256
+  `19f24839ccfed02765fd956171b6a3c0bbeea7ba140ca1e130e7d846f0efe436`.
+- Bound request `6e72c8f` / CI `32009557248` and proof closeout `136f7b9` /
+  CI `32011020786`, including both required job IDs and separate request-time
+  versus proof-snapshot artifact identities.
+- Preserved the packet's exact two-stage order: generated/mock wrapper only
+  after this decision is remotely green; one 418,755-byte target-free
+  structural read only after the exact implementation is remotely green.
+- All private, ignored-path, readiness, output, consumed-VR9P, archive, neural,
+  target, model, prediction, score, FW2/CIL1, network, hardware, other-project,
+  retry, release, and claim counters are zero.
+- Fourteen focused decision tests and 27 combined request/decision tests pass
+  locally. The complete clean Python 3.12 dependency-light suite passes 4,101
+  tests with 204 expected skips and zero failures in 99.593 seconds. The
+  decision is ineffective until its exact commit is pushed and both required
+  CI jobs pass.
+
+Next gate: verify, commit, and push only the decision milestone, then require
+both remote jobs green. Do not begin wrapper implementation or any path check
+before that proof.

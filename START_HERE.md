@@ -191,12 +191,16 @@ structural read, one VR6 call, one VR10B call, and one aggregate R1-R5 route.
 Every authority flag is false and every operation counter is zero. The request
 commit `6e72c8f797201359777454a750b1dea9704665c0` passed Base Python
 job `95326004060`, Optional Neuro Readers job `95326004145`, and CI
-`32009557248`. Its scope-neutral proof closeout must still be committed, pushed,
-and remotely green before VR11P may be identified as the sole active Tier C
-gate. The current and every earlier `continue` is not retroactive authority;
-no implementation, private path, readiness state, archive member, neural
-payload, target, model, prediction, score, FW2/CIL1, or scientific action is
-open.
+`32009557248`. Proof closeout `136f7b9` then passed Base Python job
+`95330380822`, Optional Neuro Readers job `95330380918`, and CI
+`32011020786`. After Codex identified VR11P as the sole active Tier C packet,
+the maintainer's next message was exactly `okay lets continue`. Read
+`docs/MARC_2_F03_PRIVATE_DISCRIMINATOR_AUTHORIZATION_DECISION.md`, its registry,
+and its test. The decision quotes those 18 UTF-8 bytes and binds only the
+unchanged two-stage packet. It is ineffective until its exact commit is pushed
+and both remote jobs are green. No implementation, private path, readiness
+state, archive member, neural payload, target, model, prediction, score,
+FW2/CIL1, or scientific action is open before that proof.
 
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.

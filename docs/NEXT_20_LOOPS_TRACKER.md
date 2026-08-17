@@ -2951,7 +2951,7 @@ no real cohort identity exists. Any private discriminator remains a separately
 frozen Tier C packet and fresh decision; no private read, neural payload,
 target, model, score, release, or scientific claim is open.
 
-### MARC2-VR11P - Private F03 Five-Route Discriminator (Request Green; Proof Closeout Pending)
+### MARC2-VR11P - Private F03 Five-Route Discriminator (Decision Pending Remote Proof)
 
 VR10B implementation `61bb801` passed both jobs in CI `32007641751`; proof
 closeout `808e8ed` then passed Base Python job `95322252607`, Optional Neuro
@@ -2978,8 +2978,17 @@ expected skips. Two unchanged process-wide RSS gates reached their ceilings in
 one monolithic optional-enabled diagnostic and both pass in fresh isolation;
 remote Optional Neuro Readers proof remains mandatory.
 
-Next gate: commit, push, and green this exact proof-only closeout in both jobs.
-Before that second barrier passes, VR11P cannot be identified as the sole
-active Tier C packet and no decision, wrapper, private path, FW2/CIL1, neural
-payload, target, model, score, release, or scientific claim is open. The
-current and every earlier `continue` is not retroactive authority.
+Proof closeout `136f7b9` passed Base Python job `95330380822`, Optional Neuro
+Readers job `95330380918`, and CI `32011020786`. Codex then identified VR11P as
+the sole active Tier C packet. The maintainer's next exact message was
+`okay lets continue`, 18 UTF-8 bytes with SHA-256
+`19f24839ccfed02765fd956171b6a3c0bbeea7ba140ca1e130e7d846f0efe436`.
+
+The separate decision binds only the unchanged two-stage packet. Fourteen
+focused decision tests, 27 combined request/decision tests, and all 4,101 clean
+dependency-light tests pass with 204 expected skips. Every implementation,
+private, neural, model, FW2/CIL1, other-project, and claim counter remains zero.
+Next gate: commit, push, and green this exact decision in both jobs. Before
+that proof, no wrapper, readiness state, private path, structural read, archive
+payload, neural data, target, model, score, release, or scientific claim is
+open.

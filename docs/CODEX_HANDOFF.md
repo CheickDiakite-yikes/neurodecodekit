@@ -5752,3 +5752,27 @@ After this exact proof-closeout commit is pushed and both required jobs pass,
 VR11P may be identified as the sole active Tier C packet. Only a fresh,
 unambiguous packet-bound maintainer message sent after that identification may
 be recorded in separate decision artifacts. No earlier `continue` may be used.
+
+Proof closeout `136f7b999d3514bd8d62f8dc9e7d7c01b89662f7` passed Base
+Python job `95330380822`, Optional Neuro Readers job `95330380918`, and CI
+`32011020786`. VR11P was then identified as the sole active Tier C packet.
+
+## 2026-08-17 MARC2-VR11P Authorization Decision Handoff
+
+Read `docs/MARC_2_F03_PRIVATE_DISCRIMINATOR_AUTHORIZATION_DECISION.md`,
+`registries/marc2_f03_private_discriminator_authorization_decision.v0.json`,
+and `tests/test_marc2_f03_private_discriminator_authorization_decision.py`.
+
+The maintainer's next message after packet identification was exactly
+`okay lets continue`. The decision preserves those 18 UTF-8 bytes and their
+SHA-256, binds the green request and proof-closeout commits and both required
+jobs, and incorporates only the unchanged two-stage VR11P scope. Fourteen
+focused decision tests, 27 combined request/decision tests, and all 4,101 clean
+dependency-light tests pass with 204 expected skips.
+
+Immediate gate: commit and push only this decision milestone and require both
+remote jobs green. Before that proof, do not implement the wrapper, touch a
+private or ignored path, create readiness/output state, or access consumed VR9P
+surfaces. FW2, CIL1, archive payload, neural data, targets, models, scores,
+release, and claims remain closed. Keep the unrelated tracker inspection
+NDJSON untouched.

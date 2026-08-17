@@ -9409,3 +9409,30 @@ state, touch any private or ignored path, inspect consumed VR9P state, access an
 archive member or neural payload, use a target, run a model, predict, score,
 open FW2/CIL1, contact a provider or device, release, or upgrade a scientific
 claim.
+
+## 0291 - Bind Fresh Short Form To VR11P Without Scope Expansion
+
+Eligibility decision: proof closeout
+`136f7b999d3514bd8d62f8dc9e7d7c01b89662f7` passed Base Python job
+`95330380822`, Optional Neuro Readers job `95330380918`, and CI
+`32011020786` after request `6e72c8f` and CI `32009557248` were already green.
+Codex then identified VR11P as the sole active Tier C packet and stated that a
+fresh short-form message was required.
+
+Authorization decision: preserve the maintainer's next exact message,
+`okay lets continue`, as 18 UTF-8 bytes with SHA-256
+`19f24839ccfed02765fd956171b6a3c0bbeea7ba140ca1e130e7d846f0efe436`.
+Bind it only to the unchanged packet by reference; do not fabricate a long-form
+utterance or infer FW2, CIL1, archive, neural, model, score, hardware, release,
+or claim authority.
+
+Order decision: after this exact decision is committed, pushed, and both jobs
+are green, Stage 1 may implement and generated-qualify one fixed-path wrapper.
+Only after that exact implementation is remotely green may Stage 2 perform one
+418,755-byte target-free structural read, one VR6 call, one VR10B call, and one
+aggregate R1-R5 report.
+
+Boundary decision: recording this decision performs zero implementation,
+readiness, private-path, consumed-state, archive, neural, target, model,
+prediction, score, network, hardware, other-project, retry, release, or claim
+operations. The decision is ineffective until both remote jobs pass.

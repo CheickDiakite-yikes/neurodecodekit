@@ -245,11 +245,16 @@ one VR6 consistency call, one VR10B discriminator call, and one R1-R5 aggregate
 route. Every authorization flag is false and every operation counter is zero.
 Request commit `6e72c8f797201359777454a750b1dea9704665c0` passed Base
 Python job `95326004060`, Optional Neuro Readers job `95326004145`, and CI
-`32009557248`. A scope-neutral proof closeout is pending its own commit, push,
-and both green jobs. The current and every earlier `continue` is not
-retroactive authority. Do not implement, inspect a private or ignored path,
-create readiness/output state, or identify VR11P as the sole active Tier C gate
-before that proof closeout is remotely green.
+`32009557248`. Proof closeout `136f7b999d3514bd8d62f8dc9e7d7c01b89662f7`
+then passed Base Python job `95330380822`, Optional Neuro Readers job
+`95330380918`, and CI `32011020786`. After Codex identified VR11P as the sole
+active Tier C packet, the maintainer's next exact message was
+`okay lets continue`. Read
+`docs/MARC_2_F03_PRIVATE_DISCRIMINATOR_AUTHORIZATION_DECISION.md` and its
+registry. The decision quotes those 18 UTF-8 bytes and binds only the unchanged
+two-stage packet. It is ineffective until the decision itself is committed,
+pushed, and both required jobs are green. Before that proof, do not implement,
+inspect a private or ignored path, or create readiness/output state.
 
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-
