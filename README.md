@@ -42,7 +42,7 @@ irreversible Tier C events.
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |
 | IACKD source compatibility | H1 found 96 29-row and 32 31-row headers. H2 then parsed all 316 public BIDS metadata bodies and confirmed one 26-channel predictive EEG core, 1024 Hz sampling, average reference, and complete central/occipital geometry in all 30 groups | The exact-36 reader assumption was wrong, but H2 still routed `IACKDR-R1`: HEOG, VEOG, and Trigger are source-typed `MISC`, exposing a frozen control-taxonomy bug before any EEG sample, event, target, model, or score was accessed |
 | MARC-1 source eligibility | The Freewill central-directory inventory passed without payload, but the one source-aware Wrist metadata check later routed `MARC1SAL-R2` with zero selected subjects and zero payload bytes | The Wrist branch is consumed and blocked before acquisition; the private source route remains unavailable and is not inferred or repaired |
-| MARC-2 confound triangulation | Five ordered work orders test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | VR9P localized the live blocker to nested `MARC2VR2-F03` rather than F04. VR10A now freezes the 20-leaf F03 partition: 15 predicates are excluded by committed invariants, while five source-dependent mechanisms remain for generated witness coverage. No failed private value, cohort, neural payload, target, model, or score was exposed; FW2 remains closed |
+| MARC-2 confound triangulation | Five ordered work orders test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | VR9P localized the live blocker to nested `MARC2VR2-F03` rather than F04. VR10A froze and generated-qualified the 20-leaf partition: 15 predicates are excluded and five remain source-dependent. VR10B now preregisters one aggregate-safe route for each of those five classes, but no private invocation, cohort, neural payload, target, model, or score is open; FW2 remains closed |
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
 | Full-path causality gate | Loop 25 v1 passed a dedicated causal anti-alias audit, 65,537 response points, 23 alias probes, 168 schedule checks, 240 resume checks, and 72 future-mutation controls across 24 target-free items | The exact 1000-to-100 Hz path is mechanically causal with zero right context; this is synthetic mechanics evidence, not proof that neural information survives |
 | Consumed S21 validation | The registered 2,908-parameter candidate reached macro CER `0.938177`; the train-only no-signal prior reached `0.751235`, so the candidate was worse by `0.186942` | Loop 26 is parked after one consumed six-target event; this is a clear negative result, not neural advantage |
@@ -2021,6 +2021,19 @@ Read this before interpreting any number in the repository.
   It authorizes no
   private read, consumed-state reuse, archive payload, neural signal, target,
   model, prediction, score, FW2/CIL1, or scientific claim.
+- **MARC2-VR10B five-route discriminator registration:** exact green VR10A
+  proof now supports a frozen first-match decision tree over P03, P15, P16,
+  P18, and P19. The only class routes are `MARC2VR10B-R1` through
+  `MARC2VR10B-R5`; `MARC2VR10B-G1` is generated-control only. The registered
+  qualification reuses all six exact-parser witnesses in canonical and
+  reversed order across two replays, requiring 24 parser/producer paths, 24
+  VR6 calls, 24 discriminator calls, four copies of every result route, four
+  clean controls, at least 45 direct refusals, zero retained output, and a
+  recursive privacy firewall. This registration performs no private read and
+  has no executor for one. Implementation remains blocked until this exact
+  contract is committed, pushed, and both CI jobs are green. Even a future
+  generated pass would establish route mechanics only, not the private cause,
+  a neural effect, or decoding performance.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
@@ -2897,9 +2910,11 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/MARC_2_F03_PREDICATE_DECOMPOSITION_PREREGISTRATION.md](docs/MARC_2_F03_PREDICATE_DECOMPOSITION_PREREGISTRATION.md) | frozen VR10A 20-leaf F03 partition, five unresolved source-dependent predicates, six-case generated witness matrix, caps, and no-science boundary |
 | [registries/marc2_f03_predicate_decomposition_contract.v0.json](registries/marc2_f03_predicate_decomposition_contract.v0.json) | hash-bound 14-input VR10A contract, exact 15/5 partition, 24 generated paths, 12 acceptance gates, all-false authority, and next proof boundary |
 | [docs/MARC_2_F03_PREDICATE_DECOMPOSITION_IMPLEMENTATION.md](docs/MARC_2_F03_PREDICATE_DECOMPOSITION_IMPLEMENTATION.md) | AST-bound implementation, exact pre-parser witness path, 47 refusals, measured resources, CLI surface, and remote-proof boundary |
-| [registries/marc2_f03_predicate_decomposition_implementation.v0.json](registries/marc2_f03_predicate_decomposition_implementation.v0.json) | machine-readable implementation hashes, green registration proof, 20-leaf inventory, 24-path qualification, local verification, zero counters, and pending remote proof |
+| [registries/marc2_f03_predicate_decomposition_implementation.v0.json](registries/marc2_f03_predicate_decomposition_implementation.v0.json) | machine-readable implementation hashes, green registration and implementation proofs, 20-leaf inventory, 24-path qualification, local verification, and zero counters |
 | [docs/MARC_2_F03_PREDICATE_DECOMPOSITION_RESULT.md](docs/MARC_2_F03_PREDICATE_DECOMPOSITION_RESULT.md) | generated `MARC2VR10A-G1` result, exact 15/5 partition, five witness outcomes, measurements, explicit unknowns, and no-science ceiling |
 | [registries/marc2_f03_predicate_decomposition_result.v0.json](registries/marc2_f03_predicate_decomposition_result.v0.json) | machine-readable predicate inventory, witness matrix, replay mechanics, 47 refusal routes, resources, zero counters, and next gate |
+| [docs/MARC_2_F03_FIVE_ROUTE_DISCRIMINATOR_PREREGISTRATION.md](docs/MARC_2_F03_FIVE_ROUTE_DISCRIMINATOR_PREREGISTRATION.md) | frozen VR10B ordered P03/P15/P16/P18/P19 classifier, six-case exact-parser replay, output firewall, resources, and no-science boundary |
+| [registries/marc2_f03_five_route_discriminator_contract.v0.json](registries/marc2_f03_five_route_discriminator_contract.v0.json) | hash-bound ten-input VR10B contract, exact G1/R1-R5 routes, 24-call qualification, 14 acceptance gates, all-false authority, and next proof boundary |
 | [docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md](docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md) | frozen generated-only 238-bundle repair design, filter-before-count order, aggregate predicates, mutations, resources, and claim boundary |
 | [registries/marc2_source_validity_eligibility_repair_contract.v0.json](registries/marc2_source_validity_eligibility_repair_contract.v0.json) | machine-readable `MARC2-VR1` source-validity and eligibility contract with 43 generated adversary bundles and all authority flags false |
 | [docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md](docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md) | generated-only full-source validator, eligibility-first selection order, refusal coverage, local verification, and exact remote-proof gate |

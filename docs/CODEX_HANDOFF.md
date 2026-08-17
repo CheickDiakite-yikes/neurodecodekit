@@ -5637,3 +5637,29 @@ not emit a reason, value, row, path, identity, selection, or cohort, and it may
 not access VR9P or any private/ignored path. Any eventual private execution is
 a new Tier C packet and fresh decision after the discriminator implementation
 and generated result are remotely green.
+
+## 2026-08-17 MARC2-VR10B Registration Handoff
+
+Read `docs/MARC_2_F03_FIVE_ROUTE_DISCRIMINATOR_PREREGISTRATION.md`,
+`registries/marc2_f03_five_route_discriminator_contract.v0.json`, and
+`tests/test_marc2_f03_five_route_discriminator_contract.py`.
+
+VR10B binds ten tracked inputs totaling 390,842 bytes and freezes a deterministic
+first-match tree: R1=P03 length, R2=P15 BIDS identity, R3=P16 task token,
+R4=P18 logical-companion uniqueness, and R5=P19 four-companion completeness.
+G1 is generated-control only. A decision may contain one coarse route code and
+must not contain a failed value, row, path, identity, position, or per-item
+count.
+
+The generated-only qualification is frozen at six cases, two orders, and two
+replays: 24 exact parser/producer paths, 24 VR6 calls, 24 discriminator calls,
+four paths per result route, four G1 controls, at least 45 direct refusals,
+zero retention, and one-thread caps. Eleven contract tests pass locally.
+
+Immediate gate: stage only this preregistration, contract, test, and public
+handoff updates; commit, push, and require Base Python plus Optional Neuro
+Readers green. Only then implement the generated-only module. Do not access a
+private or ignored path, consumed VR9P state, archive member, signal, event,
+target, model, prediction, score, FW2/CIL1, provider, hardware, or another
+project. A future private discriminator remains a new Tier C packet and fresh
+decision after exact generated proof.

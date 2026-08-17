@@ -211,8 +211,15 @@ passed 47 direct refusals. Thirty-one focused and 4,042 complete local tests
 pass with 204 expected skips. Exact implementation
 `84103a5fab86b7c7c8d3cf3af00c9efe3457470c` passed Base Python job
 `95295212461`, Optional Neuro Readers job `95295212440`, and CI `31998811585`.
-Tier A/B may now freeze a separately named generated-only five-route
-discriminator, but no private invocation is authorized.
+Read `docs/MARC_2_F03_FIVE_ROUTE_DISCRIMINATOR_PREREGISTRATION.md` and
+`registries/marc2_f03_five_route_discriminator_contract.v0.json`. VR10B now
+freezes a first-match P03/P15/P16/P18/P19 decision tree with aggregate routes
+`MARC2VR10B-R1` through `MARC2VR10B-R5` and generated-control route
+`MARC2VR10B-G1`. Its six-case, two-order, two-replay qualification requires 24
+exact parser/producer paths, 24 VR6 calls, 24 discriminator calls, at least 45
+direct refusals, zero retention, and one-thread resource caps. Implementation
+may begin only after this exact registration is committed, pushed, and both CI
+jobs are green. No private executor or invocation is authorized.
 VR10A authorizes no private read, consumed-state reuse, archive payload,
 signal, event, target, model, training, prediction, score, FW2/CIL1, network,
 provider, hardware, release, or scientific claim. The five generated witnesses

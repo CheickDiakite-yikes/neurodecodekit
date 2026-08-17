@@ -9274,3 +9274,34 @@ causation or science. No private invocation, F03 relaxation, VR9P reuse, FW2,
 CIL1, neural payload, target, model, score, release, or claim is authorized.
 Any future private discriminator requires a new green Tier C packet and fresh
 decision after the generated discriminator itself is remotely green.
+
+## 0286 - Freeze One Coarse Route For Each Remaining F03 Mechanism
+
+Eligibility decision: begin only after VR10A implementation `84103a5` passed
+Base Python job `95295212461`, Optional Neuro Readers job `95295212440`, and CI
+`31998811585`, and proof closeout `92d0281` passed Base Python job
+`95302164129`, Optional Neuro Readers job `95302164150`, and CI `32001355120`.
+
+Architecture decision: preserve exact validator order and stop at the first
+matching unresolved predicate. Bind P03, P15, P16, P18, and P19 to aggregate
+routes `MARC2VR10B-R1` through `MARC2VR10B-R5`. Reserve
+`MARC2VR10B-G1` for generated clean controls only. Unsupported drift or
+ambiguous state refuses instead of publishing another route or a reason.
+
+Qualification decision: after this registration is remotely green, reuse the
+six exact VR10A pre-parser cases in canonical and reversed order across two
+replays. Require 24 exact parser/producer paths, 24 VR6 calls, 24 discriminator
+calls, four copies of every result route, four controls, exact replay, source
+immutability, and at least 45 direct refusals.
+
+Privacy decision: output at most one coarse class code plus approved aggregate
+hashes, counts, resources, warnings, acceptance gates, and zero counters. Never
+emit a value, path, row, row index, subject, session, run, suffix, identity,
+selection, cohort, exception text, or per-item outcome.
+
+Boundary decision: VR10B registration is artifact-only and generated-only.
+No private executor, consumed-state reuse, F03 relaxation, archive payload,
+neural data, target, model, prediction, score, FW2/CIL1, network, hardware,
+release, or scientific claim is authorized. Any future private discriminator
+requires exact generated implementation/result proof followed by a new frozen
+Tier C packet and fresh decision.

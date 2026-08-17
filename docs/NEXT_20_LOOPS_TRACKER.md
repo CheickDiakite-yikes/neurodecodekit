@@ -2890,3 +2890,24 @@ discriminator that maps the exact witnesses to P03, P15, P16, P18, or P19
 without publishing values, rows, paths, identities, selections, or cohorts.
 Private access remains closed until a later exact implementation is remotely
 green and a new Tier C packet receives a fresh decision.
+
+### MARC2-VR10B - F03 Five-Route Discriminator (Preregistered)
+
+Exact VR10A implementation `84103a5` passed both jobs in CI `31998811585`;
+proof closeout `92d0281` then passed Base Python job `95302164129`, Optional
+Neuro Readers job `95302164150`, and CI `32001355120`. VR10B binds ten tracked
+inputs totaling 390,842 bytes and freezes ordered first-match routes R1-R5 for
+P03, P15, P16, P18, and P19. G1 is generated-control only.
+
+The future generated qualification reuses one clean case plus all five exact
+VR10A witnesses in canonical and reversed order across two replays. It requires
+24 parser/producer paths, 24 VR6 calls, 24 discriminator calls, four copies of
+each result route, four clean controls, source immutability, exact replay, at
+least 45 direct refusals, zero retained output, and one-thread caps. Eleven
+focused contract tests pass locally.
+
+Next gate: commit, push, and green this exact registration in both jobs. Only
+then implement and measure the generated-only discriminator. Private access,
+VR9P reuse, FW2/CIL1, neural payloads, targets, models, scores, and scientific
+claims remain closed; any later private invocation requires a new Tier C packet
+and fresh decision after exact generated proof.

@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR10A F03 Predicate Decomposition
+## Current Frontier: MARC2-VR10B F03 Five-Route Discriminator
 
 Read `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`, then
 `docs/MARC_2_VR2_REFUSAL_LOCALIZATION_PREREGISTRATION.md` and
@@ -159,6 +159,19 @@ Exact implementation `84103a5` passed Base job `95295212461`, Optional job
 hypothesis set but does not identify the private cause or establish neural or
 decoding evidence. The next safe work is a separately frozen generated-only
 five-route discriminator; a private invocation remains closed.
+
+That discriminator is now preregistered as `MARC2-VR10B`. Read
+`docs/MARC_2_F03_FIVE_ROUTE_DISCRIMINATOR_PREREGISTRATION.md` and
+`registries/marc2_f03_five_route_discriminator_contract.v0.json`. It freezes
+ordered first-match routes R1 through R5 for P03, P15, P16, P18, and P19, plus
+G1 for the generated clean control only. Its future generated qualification
+requires the same six exact-parser cases in two orders and two replays: 24
+parser/producer paths, 24 VR6 calls, 24 discriminator calls, at least 45 direct
+refusals, zero retained output, and one-thread resource caps. Eleven focused
+contract tests pass locally. Do not implement until this exact registration is
+committed, pushed, and both CI jobs are green. No private executor, private
+read, FW2/CIL1 action, neural payload, target, model, prediction, score, or
+scientific claim is authorized.
 
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.

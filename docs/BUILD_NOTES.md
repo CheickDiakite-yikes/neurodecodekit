@@ -11260,3 +11260,32 @@ five-route discriminator that distinguishes P03, P15, P16, P18, and P19 while
 publishing no value, row, path, identity, selection, or cohort. Any later
 private invocation remains a fresh Tier C packet and decision after that exact
 implementation is remotely green.
+
+## 2026-08-17 - MARC2-VR10B Five-Route Discriminator Registration
+
+- Began only after VR10A implementation `84103a5` passed both jobs in CI
+  `31998811585` and proof closeout `92d0281` passed Base Python job
+  `95302164129`, Optional Neuro Readers job `95302164150`, and CI
+  `32001355120`.
+- Bound ten exact tracked inputs totaling 390,842 bytes. The registration
+  contains no private path, source identity, failed value, or per-item output.
+- Froze ordered first-match routes R1 through R5 for the remaining P03, P15,
+  P16, P18, and P19 structural classes. G1 is reserved for the generated clean
+  control and is not an admissible future private result under this contract.
+- Froze the six exact VR10A cases across canonical and reversed order and two
+  complete replays: 24 parser/producer paths, 24 VR6 calls, and 24 discriminator
+  calls. Each result route must appear exactly four times.
+- Required source immutability, deterministic replay, recursive output-key
+  filtering, at least 45 direct refusals, zero retained output, and all private
+  and scientific counters at zero.
+- Capped future generated qualification at one thread, one worker, one
+  numerical job, 45 seconds, less than 256 MiB peak RSS, 16 MiB generated
+  input, and 1 MiB aggregate output.
+- Eleven focused registration tests pass. This milestone made no private,
+  archive, neural, target, model, training, prediction, score, network,
+  provider, hardware, FW2/CIL1, release, or claim operation.
+
+Next gate: commit, push, and obtain both green CI jobs for this exact
+registration. Only then may Tier B implement the generated-only discriminator.
+Any private invocation remains a separately frozen Tier C packet and fresh
+decision after exact implementation and generated-result proof.
