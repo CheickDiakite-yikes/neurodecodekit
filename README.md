@@ -42,7 +42,7 @@ irreversible Tier C events.
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |
 | IACKD source compatibility | H1 found 96 29-row and 32 31-row headers. H2 then parsed all 316 public BIDS metadata bodies and confirmed one 26-channel predictive EEG core, 1024 Hz sampling, average reference, and complete central/occipital geometry in all 30 groups | The exact-36 reader assumption was wrong, but H2 still routed `IACKDR-R1`: HEOG, VEOG, and Trigger are source-typed `MISC`, exposing a frozen control-taxonomy bug before any EEG sample, event, target, model, or score was accessed |
 | MARC-1 source eligibility | The Freewill central-directory inventory passed without payload, but the one source-aware Wrist metadata check later routed `MARC1SAL-R2` with zero selected subjects and zero payload bytes | The Wrist branch is consumed and blocked before acquisition; the private source route remains unavailable and is not inferred or repaired |
-| MARC-2 confound triangulation | Five ordered work orders test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | VR8B passes a full-scale 1,227-entry generated parser/producer relay across success and exact F02/F03/F04 routes. VR9P is now an all-false request for one future target-free structural diagnostic that may reveal only whether the consumed source reaches F03 or F04. It authorizes no private read now, and no real cohort or neural payload has been opened |
+| MARC-2 confound triangulation | Five ordered work orders test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | VR8B passes a full-scale 1,227-entry generated parser/producer relay across success and exact F02/F03/F04 routes. The all-false VR9P request is remotely green and proposes one future target-free diagnostic that may reveal only F03 versus F04. Its additive proof record is still pending remote proof; it authorizes no private read now, and no real cohort or neural payload has been opened |
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
 | Full-path causality gate | Loop 25 v1 passed a dedicated causal anti-alias audit, 65,537 response points, 23 alias probes, 168 schedule checks, 240 resume checks, and 72 future-mutation controls across 24 target-free items | The exact 1000-to-100 Hz path is mechanically causal with zero right context; this is synthetic mechanics evidence, not proof that neural information survives |
 | Consumed S21 validation | The registered 2,908-parameter candidate reached macro CER `0.938177`; the train-only no-signal prior reached `0.751235`, so the candidate was worse by `0.186942` | Loop 26 is parked after one consumed six-target event; this is a clear negative result, not neural advantage |
@@ -1978,12 +1978,13 @@ Read this before interpreting any number in the repository.
   and retain only outer `MARC2VR6-F02` plus nested `MARC2VR2-F03` or
   `MARC2VR2-F04`. Reasons, source rows, paths, private identities, failed values,
   candidate selections, and cohort output are forbidden. All current authority
-  flags are false and all operation counters are zero. The request must be
-  committed, pushed, remotely green, named as the sole active Tier C packet,
-  and followed by a fresh packet-bound maintainer decision before any wrapper
-  implementation or private path access. Even the future diagnostic would not
-  open an archive member or neural payload and could establish no neural effect
-  or decoding performance.
+  flags are false and all operation counters are zero. Request `de8e6dc` passed
+  Base job `95277554517`, Optional job `95277554619`, and CI `31992178980`.
+  Its additive proof record must also become remotely green before VR9P is
+  named as the sole active Tier C packet; only a fresh packet-bound maintainer
+  decision after that point could permit wrapper work. Even the future
+  diagnostic would not open an archive member or neural payload and could
+  establish no neural effect or decoding performance.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

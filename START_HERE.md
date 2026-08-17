@@ -110,9 +110,11 @@ Only outer `MARC2VR6-F02` plus nested `MARC2VR2-F03` or `MARC2VR2-F04` may be
 retained. No reason, row, path, private identity, failed value, candidate
 selection, or cohort may leave the process. Every current authorization flag is
 false and every operation counter is zero. The current `continue` is not
-retroactive authority: first green the request and identify it as the sole Tier
-C packet, then wait for a fresh packet-bound maintainer message. Until then, do
-not implement the wrapper or touch `.codex_work`.
+retroactive authority. Request `de8e6dc` passed Base job `95277554517`, Optional
+job `95277554619`, and CI `31992178980`. First green the additive proof record
+and identify VR9P as the sole Tier C packet, then wait for a fresh packet-bound
+maintainer message. Until then, do not implement the wrapper or touch
+`.codex_work`.
 
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.

@@ -9084,10 +9084,16 @@ substitutions remain zero.
 
 Authority decision: every request flag is false and every current operation
 counter is zero. The current and every earlier `continue` is not retroactive.
-Commit, push, and green the request before naming it as the sole active Tier C
-packet; only a fresh message after that identification may be recorded in a
+Only a fresh message after sole-packet identification may be recorded in a
 separate decision. No wrapper, private path, cohort, FW2, CIL1, or claim action
 is authorized now.
+
+Proof decision: immutable request
+`de8e6dcfb60d78b52429d32c6bdd5f9656ab2d58` passed Base Python job
+`95277554517`, Optional Neuro Readers job `95277554619`, and CI `31992178980`.
+The request scope is unchanged and every authority flag and operation counter
+remains false/zero. Commit, push, and green this additive proof record before
+naming VR9P as the sole active Tier C packet.
 
 Claim decision: the request itself performs no private read. Even the future
 diagnostic would open no archive member or neural payload and would establish

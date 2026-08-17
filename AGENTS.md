@@ -151,10 +151,12 @@ manifest. The only retainable private observation would be outer
 paths, identities, values, hashes, candidate selections, and cohort output are
 forbidden. VR6 success, F02, an unknown route, source drift, or leakage consumes
 and parks the lane. The current and every earlier `continue` is not retroactive
-authority for this new packet. Commit, push, and obtain both green request jobs
-before identifying it as the sole Tier C gate. Do not record a decision or
-touch `.codex_work` until a fresh packet-bound maintainer message follows that
-identification.
+authority for this new packet. Immutable request
+`de8e6dcfb60d78b52429d32c6bdd5f9656ab2d58` passed Base Python job
+`95277554517`, Optional Neuro Readers job `95277554619`, and CI `31992178980`.
+Commit, push, and green the additive proof record before identifying VR9P as
+the sole Tier C gate. Do not record a decision or touch `.codex_work` until a
+fresh packet-bound maintainer message follows that identification.
 
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-

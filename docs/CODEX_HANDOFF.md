@@ -5494,6 +5494,8 @@ Repository-pinned Ruff `0.15.20`, compilation, 273 registry JSON files, and
 diff hygiene pass. Do not stage the unrelated untracked tracker inspection
 NDJSON. Do not touch `.codex_work`, any consumed marker/root/certificate,
 retained source, archive member, neural payload, target, model, prediction,
-score, FW2, or CIL1. After both request jobs are green, identify VR9P as the
-sole active Tier C packet and wait for a fresh packet-bound maintainer message.
-Do not reuse the current `continue` retroactively.
+score, FW2, or CIL1. Request `de8e6dc` passed Base job `95277554517`, Optional
+job `95277554619`, and CI `31992178980`; the clean optional runner passed the
+unchanged timing gate. Commit, push, and green the additive proof record, then
+identify VR9P as the sole active Tier C packet and wait for a fresh packet-bound
+maintainer message. Do not reuse the current `continue` retroactively.

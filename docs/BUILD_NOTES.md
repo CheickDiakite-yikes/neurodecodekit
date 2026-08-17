@@ -11089,10 +11089,14 @@ or decoding performance.
 - Repository-pinned Ruff `0.15.20`, compilation, all 273 registry JSON files,
   and diff hygiene pass. An unpinned `uvx ruff` resolved newer Ruff `0.16.3`
   and surfaced pre-existing extended-rule findings, so it is not the CI-shaped
-  lint result. Both remote jobs remain mandatory on a clean runner.
+  lint result.
+- Immutable request `de8e6dcfb60d78b52429d32c6bdd5f9656ab2d58`
+  passed Base Python job `95277554517`, Optional Neuro Readers job
+  `95277554619`, and CI `31992178980`. The clean optional runner therefore
+  resolved the local host-load exception without changing the timing gate.
 
-Next gate: commit and push this exact all-false request and require both CI jobs
-green, including the optional wall-clock test on a clean runner. Then identify VR9P as the sole active
-Tier C packet. The current and every earlier `continue` is not retroactive;
-wrapper implementation and private access remain closed until a fresh
-packet-bound maintainer decision is separately recorded and remotely green.
+Next gate: commit, push, and green this additive proof record, then identify
+VR9P as the sole active Tier C packet. The current and every earlier `continue`
+is not retroactive; wrapper implementation and private access remain closed
+until a fresh packet-bound maintainer decision is separately recorded and
+remotely green.

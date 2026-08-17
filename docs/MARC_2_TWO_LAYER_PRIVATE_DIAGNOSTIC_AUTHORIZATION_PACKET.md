@@ -4,16 +4,19 @@ Date: 2026-08-16
 
 Lane: `MARC2-VR9P`
 
-Status: **All authorization fields false; local request pending commit, push,
-both remote CI jobs, and a fresh packet-bound maintainer decision**
+Status: **Request commit `de8e6dcfb60d78b52429d32c6bdd5f9656ab2d58`
+is remotely green. All authorization fields remain false; a fresh packet-bound
+maintainer decision is still required**
 
 Request:
 `registries/marc2_two_layer_private_diagnostic_authorization_request.v0.json`
 
 ## Decision Requested
 
-After this exact request is committed, pushed, remotely green, and identified
-as the sole active Tier C packet, request one future two-stage sequence:
+The immutable request passed Base Python job `95277554517`, Optional Neuro
+Readers job `95277554619`, and CI `31992178980`. After this additive proof
+record is also remotely green and the packet is identified as the sole active
+Tier C gate, request one future two-stage sequence:
 
 1. implement and qualify a new additive generated/mock-only fixed-path wrapper;
    and
@@ -180,7 +183,9 @@ FW2 and CIL1 remain ineligible because no real cohort has been frozen.
   semantics, and the scientific ceiling.
 - No `.codex_work` path, private source, archive, payload, neural value, target,
   model, prediction, or score is accessed while preparing this packet.
-- Remote CI proof for this request remains pending.
+- Immutable request commit `de8e6dcfb60d78b52429d32c6bdd5f9656ab2d58`
+  passed both required jobs in CI `31992178980`; this additive proof record does
+  not change the request scope or authorize an operation.
 
 Engineering capability requested: one proof-gated target-free structural open
 can preserve the exact nested F03 or F04 route through VR6 without retaining

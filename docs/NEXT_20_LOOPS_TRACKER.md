@@ -2776,9 +2776,10 @@ Twelve focused and 3,961 dependency-light tests pass; optional N-Z passes all
 513 tests. Optional A-M completed 3,519 tests with one unchanged five-second
 timing-gate error under host load near 46 to 50 on 12 logical CPUs, including
 one isolated replay. Pinned Ruff, compilation, all registries, and diff hygiene
-pass. Next gate: commit and push the exact request, require both CI jobs green
-on a clean runner, and identify VR9P as the sole active Tier C packet. A fresh
-maintainer message is required only after that identification. The current
-`continue` cannot be applied retroactively. FW2, CIL1, archive payload, neural
-data, targets, models, predictions, scores, and scientific claims remain
-closed.
+pass. Request `de8e6dc` passed Base job `95277554517`, Optional job
+`95277554619`, and CI `31992178980`; the clean optional runner passed the
+unchanged timing gate. Next gate: commit, push, and green the additive proof
+record, then identify VR9P as the sole active Tier C packet. A fresh maintainer
+message is required only after that identification. The current `continue`
+cannot be applied retroactively. FW2, CIL1, archive payload, neural data,
+targets, models, predictions, scores, and scientific claims remain closed.

@@ -47,6 +47,27 @@ class Marc2TwoLayerPrivateDiagnosticAuthorizationRequestTests(unittest.TestCase)
         self.assertEqual(closeout["optional_neuro_job_id"], 95_272_232_926)
         self.assertTrue(closeout["both_required_jobs_green"])
 
+    def test_remote_green_request_proof_is_exact_and_scope_unchanged(self):
+        proof = self.request["remote_green_request_proof"]
+        self.assertEqual(
+            proof["request_commit"],
+            "de8e6dcfb60d78b52429d32c6bdd5f9656ab2d58",
+        )
+        self.assertEqual(proof["CI_run_id"], 31_992_178_980)
+        self.assertEqual(proof["base_python_job_id"], 95_277_554_517)
+        self.assertEqual(proof["optional_neuro_job_id"], 95_277_554_619)
+        self.assertTrue(proof["both_required_jobs_green"])
+        self.assertFalse(proof["scope_changed_by_proof_record"])
+        self.assertEqual(proof["private_real_or_scientific_operation_sum"], 0)
+        self.assertTrue(
+            proof["proof_record_remote_green_required_before_packet_identification"]
+        )
+        self.assertFalse(
+            self.request["next_gate"][
+                "exact_request_commit_push_and_both_jobs_green_required"
+            ]
+        )
+
     def test_all_fixed_artifacts_are_current_and_tracked(self):
         artifacts = self.request["fixed_committed_artifacts"]
         self.assertEqual(len(artifacts), 17)

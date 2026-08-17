@@ -4,18 +4,18 @@
   "request_id": "MARC-2-VR9P-two-layer-private-diagnostic-authorization-request-v0",
   "lane_id": "MARC2-VR9P",
   "recorded_at_local": "2026-08-16",
-  "status": "all_false_Tier_C_request_local_pending_commit_push_remote_green_and_fresh_decision",
+  "status": "all_false_Tier_C_request_remotely_green_pending_fresh_decision",
   "proof_posture": "request_only_no_private_real_or_scientific_operation_authorized",
   "request_artifacts": {
     "authorization_packet": {
       "path": "docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_AUTHORIZATION_PACKET.md",
-      "bytes": 9011,
-      "sha256": "4dbab9f24f63c3ed2007133e007148b9c02e7b1aef67cd3dc7a250753ded8716"
+      "bytes": 9338,
+      "sha256": "e89da84ee3f615ec9e2739220ac2bc2cf68b195be38dac1c605482cd020e9ba4"
     },
     "authorization_request_test": {
       "path": "tests/test_marc2_two_layer_private_diagnostic_authorization_request.py",
-      "bytes": 10745,
-      "sha256": "aa7e5e66837b74a5f23bc9eaf1349d7c141d30ec089bb32a00cc9cb860d3ab70"
+      "bytes": 11699,
+      "sha256": "5f5ff1075c960a3ad3688e18e2b1d56bf87655d20ea13754e74ac58137db57d1"
     }
   },
   "green_predecessor_proof": {
@@ -43,6 +43,22 @@
       "implementation_registry_sha256": "a466109f7558f879b87eb77abafad1d2c2890d6d06cc24f859b91ab5b4ace12e",
       "result_registry_sha256": "b0e39cb127c3f96d11e606370f807ab2d96fbef03a74e2fed8637a668f60795c"
     }
+  },
+  "remote_green_request_proof": {
+    "request_commit": "de8e6dcfb60d78b52429d32c6bdd5f9656ab2d58",
+    "CI_run_id": 31992178980,
+    "base_python_job_id": 95277554517,
+    "optional_neuro_job_id": 95277554619,
+    "both_required_jobs_green": true,
+    "request_document_bytes_at_request_commit": 9011,
+    "request_document_sha256_at_request_commit": "4dbab9f24f63c3ed2007133e007148b9c02e7b1aef67cd3dc7a250753ded8716",
+    "request_registry_bytes_at_request_commit": 18500,
+    "request_registry_sha256_at_request_commit": "7bde6c4e3e50b022ac20880a6ab3beee6941b80ac8605ae75b072c91bcad8d87",
+    "request_test_bytes_at_request_commit": 10745,
+    "request_test_sha256_at_request_commit": "aa7e5e66837b74a5f23bc9eaf1349d7c141d30ec089bb32a00cc9cb860d3ab70",
+    "scope_changed_by_proof_record": false,
+    "private_real_or_scientific_operation_sum": 0,
+    "proof_record_remote_green_required_before_packet_identification": true
   },
   "fixed_committed_artifacts": [
     {
@@ -384,7 +400,7 @@
     "MARC2_CIL1_eligibility_after_diagnostic": false
   },
   "next_gate": {
-    "exact_request_commit_push_and_both_jobs_green_required": true,
+    "exact_request_commit_push_and_both_jobs_green_required": false,
     "fresh_packet_bound_decision_required_after_green": true,
     "generated_implementation_allowed_now": false,
     "private_structural_diagnostic_allowed_now": false,
