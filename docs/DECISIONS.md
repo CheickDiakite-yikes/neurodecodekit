@@ -9056,3 +9056,40 @@ green and receives a fresh packet-bound decision.
 Claim decision: this is generated integration evidence only. It establishes
 no real cohort, neural effect, decoding accuracy, language decoding, live
 decoding, or thought-to-text capability.
+
+## 0279 - Freeze VR9P As An All-False Two-Layer Private Diagnostic Request
+
+Eligibility decision: prepare the request only after exact VR8B implementation
+`d7ce48baca29547ff2385ffe53d247563139439f` passed Base Python job
+`95271230358`, Optional Neuro Readers job `95271230485`, and CI `31989817593`,
+and proof closeout `1d2ac3a3fb15ebdc01d8aaa23ae8dc74372b85b8` passed Base job
+`95272233005`, Optional job `95272232926`, and CI `31990197181`.
+
+Scope decision: bind one future two-stage sequence. A separately green
+packet-bound decision must precede generated/mock wrapper work. That exact
+wrapper must then be committed, pushed, and green in both jobs before one
+target-free read of the registered 418,755-byte structural manifest.
+
+Diagnostic decision: preserve only outer `MARC2VR6-F02` and nested
+`MARC2VR2-F03` or `MARC2VR2-F04`. Reject and consume on success, F02, missing
+or unknown nested route, source drift, leakage, or another route. Never retain
+the reason, row, path, identity, value, private hash, candidate selection, or
+cohort.
+
+Resource decision: cap the future command at one thread, one worker, one
+numerical job, 650 seconds, less than 256 MiB RSS, at least 15 GiB free disk,
+418,755 source bytes, 1 MiB combined output, and zero network, archive-member,
+signal, or target bytes. Retries, reruns, resumes, repairs, fallbacks, and
+substitutions remain zero.
+
+Authority decision: every request flag is false and every current operation
+counter is zero. The current and every earlier `continue` is not retroactive.
+Commit, push, and green the request before naming it as the sole active Tier C
+packet; only a fresh message after that identification may be recorded in a
+separate decision. No wrapper, private path, cohort, FW2, CIL1, or claim action
+is authorized now.
+
+Claim decision: the request itself performs no private read. Even the future
+diagnostic would open no archive member or neural payload and would establish
+no neural effect, decoding accuracy, language decoding, live decoding, or
+thought-to-text capability.

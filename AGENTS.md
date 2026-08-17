@@ -139,6 +139,23 @@ Do not relax F03 or F04, infer the consumed private branch, or touch any
 private/ignored source. FW2, CIL1, archive payload, neural, target, model,
 prediction, and score work remain closed.
 
+That request is now prepared as `MARC2-VR9P`. Read
+`docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_AUTHORIZATION_PACKET.md` and
+`registries/marc2_two_layer_private_diagnostic_authorization_request.v0.json`.
+Every authorization flag is false and every current operation counter is zero.
+The proposed two-stage sequence first requires a separately green decision,
+then a generated/mock-only fixed-path wrapper, then green proof for that exact
+wrapper before one target-free read of the registered 418,755-byte structural
+manifest. The only retainable private observation would be outer
+`MARC2VR6-F02` plus nested `MARC2VR2-F03` or `MARC2VR2-F04`; reasons, rows,
+paths, identities, values, hashes, candidate selections, and cohort output are
+forbidden. VR6 success, F02, an unknown route, source drift, or leakage consumes
+and parks the lane. The current and every earlier `continue` is not retroactive
+authority for this new packet. Commit, push, and obtain both green request jobs
+before identifying it as the sole Tier C gate. Do not record a decision or
+touch `.codex_work` until a fresh packet-bound maintainer message follows that
+identification.
+
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-
 blind analysis over 72 S004-S015 EDFs. The analysis accepted 1,080 events,

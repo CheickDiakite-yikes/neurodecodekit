@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR8B
+## Current Frontier: MARC2-VR9P Request
 
 Read `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`, then
 `docs/MARC_2_VR2_REFUSAL_LOCALIZATION_PREREGISTRATION.md` and
@@ -98,6 +98,21 @@ whether the consumed private source reached F03 or F04 and do not relax either
 class. Any new private structural read or real cohort freeze remains a fresh
 Tier C packet and decision; FW2, CIL1, neural payload access, training, scoring,
 and live decoding remain closed.
+
+That all-false packet is now prepared in
+`docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_AUTHORIZATION_PACKET.md` and
+`registries/marc2_two_layer_private_diagnostic_authorization_request.v0.json`.
+VR9P binds 17 green predecessor artifacts totaling 328,581 bytes and proposes
+one future two-stage diagnostic. A separately green decision must precede a
+generated/mock fixed-path wrapper; that exact wrapper must then become remotely
+green before one target-free read of the same 418,755-byte structural manifest.
+Only outer `MARC2VR6-F02` plus nested `MARC2VR2-F03` or `MARC2VR2-F04` may be
+retained. No reason, row, path, private identity, failed value, candidate
+selection, or cohort may leave the process. Every current authorization flag is
+false and every operation counter is zero. The current `continue` is not
+retroactive authority: first green the request and identify it as the sole Tier
+C packet, then wait for a fresh packet-bound maintainer message. Until then, do
+not implement the wrapper or touch `.codex_work`.
 
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.

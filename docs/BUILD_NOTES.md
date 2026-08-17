@@ -11058,3 +11058,41 @@ normalized cohort identity.
 Scientific claim not established: no private or neural payload, target, model,
 prediction, or score was accessed, so the result establishes no neural effect
 or decoding performance.
+
+## 2026-08-16 - MARC2-VR9P All-False Two-Layer Diagnostic Request
+
+- Prepared a new request only after VR8B implementation `d7ce48b` passed both
+  jobs in CI `31989817593` and proof closeout `1d2ac3a` passed both jobs in CI
+  `31990197181`.
+- Bound 17 committed predecessor artifacts totaling 328,581 bytes by exact
+  path, size, and SHA-256. The packet and its test are separately hash-bound.
+- Copied the immutable 418,755-byte structural-manifest identity only from
+  committed records. Packet preparation performed zero path checks, stats,
+  hashes, opens, reads, or parses against `.codex_work`.
+- Froze a two-stage future sequence: a separate green decision, then a
+  generated/mock fixed-path wrapper; only after that exact wrapper is remotely
+  green may one target-free source read and one VR6 call occur.
+- Froze the only acceptable observations as outer `MARC2VR6-F02` plus nested
+  `MARC2VR2-F03` or `MARC2VR2-F04`. Reasons, rows, paths, identities, values,
+  hashes, candidate selections, and cohort output are forbidden.
+- Set one thread, one worker, one numerical job, less than 256 MiB peak RSS,
+  15 GiB minimum free disk, 650 seconds, 418,755 source bytes, 1 MiB output,
+  and zero network, archive-member, signal, or target bytes.
+- All authorization fields remain false and every current operation counter is
+  zero. Twelve focused request tests and 3,961 dependency-light tests pass with
+  204 skips. Optional N-Z passes 513 tests with seven skips. Optional A-M ran
+  all 3,519 tests with 28 skips and one error in the unchanged
+  `test_real_isolated_worker_runs_timer_without_file_reopens`: its worker
+  exceeded the frozen five-second wall-clock cap while host load averaged
+  45.60 to 50.17 across 12 logical CPUs, and the immediate isolated replay
+  encountered the same host-load failure. No gate was relaxed or edited.
+- Repository-pinned Ruff `0.15.20`, compilation, all 273 registry JSON files,
+  and diff hygiene pass. An unpinned `uvx ruff` resolved newer Ruff `0.16.3`
+  and surfaced pre-existing extended-rule findings, so it is not the CI-shaped
+  lint result. Both remote jobs remain mandatory on a clean runner.
+
+Next gate: commit and push this exact all-false request and require both CI jobs
+green, including the optional wall-clock test on a clean runner. Then identify VR9P as the sole active
+Tier C packet. The current and every earlier `continue` is not retroactive;
+wrapper implementation and private access remain closed until a fresh
+packet-bound maintainer decision is separately recorded and remotely green.

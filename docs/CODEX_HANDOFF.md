@@ -5468,3 +5468,32 @@ marker/root, retained source, archive member, neural payload, target, model,
 prediction, score, FW2, or CIL1. The private F03/F04 branch is still
 unavailable; any future structural diagnostic requires that new request to
 become green and receive a fresh packet-bound decision.
+
+## 2026-08-16 MARC2-VR9P All-False Request Handoff
+
+VR8B implementation `d7ce48b` and proof closeout `1d2ac3a` are remotely green
+in CI `31989817593` and `31990197181`. The next request is frozen in
+`docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_AUTHORIZATION_PACKET.md` and
+`registries/marc2_two_layer_private_diagnostic_authorization_request.v0.json`.
+
+VR9P binds 17 exact predecessor artifacts totaling 328,581 bytes and the
+committed identity of one 418,755-byte target-free structural manifest. It
+proposes a new generated/mock wrapper only after a separate green decision and
+one source read only after that exact wrapper is also remotely green. The
+future aggregate may retain only outer `MARC2VR6-F02` and nested F03 or F04.
+It may not retain reasons, rows, paths, identities, values, private hashes,
+candidate selections, or a cohort.
+
+Current state: all authorization fields are false and every operation counter
+is zero. Twelve focused and 3,961 dependency-light tests pass; optional N-Z
+passes 513 tests. Optional A-M completed 3,519 tests with one unchanged timing
+gate error because its isolated worker exceeded five seconds while host load
+was roughly 46 to 50 on 12 logical CPUs; the immediate isolated replay also
+timed out, so the gate remains unchanged and clean-run CI is required.
+Repository-pinned Ruff `0.15.20`, compilation, 273 registry JSON files, and
+diff hygiene pass. Do not stage the unrelated untracked tracker inspection
+NDJSON. Do not touch `.codex_work`, any consumed marker/root/certificate,
+retained source, archive member, neural payload, target, model, prediction,
+score, FW2, or CIL1. After both request jobs are green, identify VR9P as the
+sole active Tier C packet and wait for a fresh packet-bound maintainer message.
+Do not reuse the current `continue` retroactively.

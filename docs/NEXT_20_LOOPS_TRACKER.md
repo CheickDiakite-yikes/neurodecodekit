@@ -2754,3 +2754,31 @@ one future private diagnostic, but the request grants no private authority. The
 consumed F03/F04 branch remains unavailable, neither route may be relaxed, and
 any private read remains a new Tier C packet plus a fresh decision after green
 packet proof.
+
+### MARC2-VR9P - Two-Layer Private Diagnostic (All-False Request Prepared)
+
+VR9P binds 17 remotely green predecessor artifacts totaling 328,581 bytes,
+including the exact VR8B parser/producer relay and the consumed VR7P result. It
+copies the registered identity of the 418,755-byte target-free structural
+manifest from committed records without checking, statting, hashing, opening,
+reading, or parsing that private path.
+
+The prospective sequence has two barriers. First, after a separately green
+packet-bound decision, implement and generated-qualify a new fixed-path relay.
+Second, only after that exact implementation is committed, pushed, and green in
+both jobs, run one no-retry structural diagnostic. The only retainable outcome
+is outer `MARC2VR6-F02` plus nested `MARC2VR2-F03` or `MARC2VR2-F04`; all
+reasons, rows, paths, identities, values, private hashes, candidate selections,
+and cohort output remain forbidden.
+
+Current status: all authorization fields false and all operation counters zero.
+Twelve focused and 3,961 dependency-light tests pass; optional N-Z passes all
+513 tests. Optional A-M completed 3,519 tests with one unchanged five-second
+timing-gate error under host load near 46 to 50 on 12 logical CPUs, including
+one isolated replay. Pinned Ruff, compilation, all registries, and diff hygiene
+pass. Next gate: commit and push the exact request, require both CI jobs green
+on a clean runner, and identify VR9P as the sole active Tier C packet. A fresh
+maintainer message is required only after that identification. The current
+`continue` cannot be applied retroactively. FW2, CIL1, archive payload, neural
+data, targets, models, predictions, scores, and scientific claims remain
+closed.
