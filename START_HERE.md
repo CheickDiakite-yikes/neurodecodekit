@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR11P Generated Implementation Pending Remote Proof
+## Current Frontier: MARC2-VR11P Consumed At Structural Route R2
 
 Read `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`, then
 `docs/MARC_2_VR2_REFUSAL_LOCALIZATION_PREREGISTRATION.md` and
@@ -214,10 +214,20 @@ now binds that exact proof without rerunning qualification or touching a
 private path. This proof-only closeout must itself be committed, pushed, and
 green in both jobs before `execute` may be used.
 
-After closeout proof, run only the one already-authorized Stage 2 structural
-diagnostic under its exact machine/resource gate. FW2, CIL1, archive payload,
-neural data, target, model, prediction, score, live decoding, and scientific
-claims remain closed regardless of its R1-R5 outcome.
+Proof-only closeout `e569bcc` passed Base job `95422480212`, Optional job
+`95422480363`, and CI `32041863346` before the sole Stage 2 invocation. Read
+`docs/MARC_2_F03_PRIVATE_DISCRIMINATOR_RESULT.md` and its result registry. The
+run crossed readiness, read exactly 418,755 target-free structural bytes once,
+called VR6 once and VR10B once, and consumed at `MARC2VR11P-R2`. Under the
+frozen route table, R2 means only that the manifest reaches P15, the suffix-
+bearing BIDS identity structural class. Runtime was 10.041579 seconds at
+34,701,312-byte peak RSS; no archive member, neural payload, target, model,
+prediction, or score was accessed.
+
+VR11P has no retry, rerun, resume, repair, fallback, substitution, or private
+reinspection. The next safe work is a separately frozen artifact-only and
+generated-only P15 repair design. FW2, CIL1, neural-data access, training,
+scoring, live decoding, and scientific claims remain closed.
 
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.

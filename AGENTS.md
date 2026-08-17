@@ -275,12 +275,23 @@ After proof-state hardening, exact implementation
 rerunning qualification or touching a private path. This proof-only closeout
 must itself be committed, pushed, and both jobs green before Stage 2.
 
-Immediate next gate: green the proof-only closeout, then perform the one
-already-authorized registered structural discriminator under the exact machine
-and resource gates. Do not inspect the fixed private source, create real
-readiness/output state, or run Stage 2 before closeout proof. FW2, CIL1, archive
-payload, neural data, targets, models, scores, release, and scientific claims
-remain closed.
+Proof-only closeout `e569bcccfde9bcf5e1116de1b892fed79373c137` passed Base
+Python job `95422480212`, Optional Neuro Readers job `95422480363`, and CI
+`32041863346` before the sole Stage 2 invocation. Read
+`docs/MARC_2_F03_PRIVATE_DISCRIMINATOR_RESULT.md` and
+`registries/marc2_f03_private_discriminator_result.v0.json`. The run crossed
+readiness, read and strict-parsed exactly 418,755 target-free structural bytes
+once, called VR6 once and VR10B once, and consumed at `MARC2VR11P-R2`. The
+frozen ceiling maps R2 to P15, the suffix-bearing BIDS identity structural
+class. Runtime was 10.041579249984352 seconds at 34,701,312-byte peak RSS; all
+archive, neural, target, model, prediction, score, network, hardware,
+other-project, and claim counters were zero.
+
+VR11P is consumed with no retry, rerun, resume, repair, fallback, substitution,
+or private reinspection. The next safe task is a separately frozen artifact-
+only and generated-only P15 repair design. Do not infer the failed value, row,
+path, person, selection, or cohort. FW2, CIL1, archive payload, neural data,
+targets, models, scores, release, and scientific claims remain closed.
 
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-

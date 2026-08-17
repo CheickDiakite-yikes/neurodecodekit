@@ -9481,3 +9481,26 @@ Boundary decision: proof binding performs zero readiness, ignored-path,
 private-source, consumed-VR9P, archive, neural, target, model, prediction,
 score, network, hardware, other-project, release, or claim operations. FW2 and
 CIL1 remain closed.
+
+## 0294 - Consume VR11P At R2 Without Opening Neural Work
+
+Eligibility decision: proof closeout
+`e569bcccfde9bcf5e1116de1b892fed79373c137` passed Base Python job
+`95422480212`, Optional Neuro Readers job `95422480363`, and CI
+`32041863346` after exact implementation `2093ad5` was already green.
+
+Execution decision: perform the registered Stage 2 command exactly once under
+the one-thread, readiness, 256 MiB RSS, 15 GiB free-disk, 650-second, one-read,
+and 1 MiB output gates. No retry, rerun, resume, repair, fallback, or
+substitution is permitted.
+
+Result decision: record only aggregate route `MARC2VR11P-R2`. Apply the frozen
+maximum meaning that R2 reaches F03 class P15, the suffix-bearing BIDS identity
+class. Do not retain or infer the failed private value, source row, path,
+person, candidate selection, or cohort.
+
+Boundary decision: R2 is a structural engineering result. It opens no archive
+member, neural payload, target, model, prediction, score, FW2/CIL1, network,
+hardware, release, or scientific claim. A future P15 repair requires a new
+prospective artifact-only/generated-only contract before any implementation or
+another private read.

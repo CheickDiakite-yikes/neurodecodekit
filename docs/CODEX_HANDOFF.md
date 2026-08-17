@@ -5832,3 +5832,32 @@ closeout. Only after that proof may the one registered Stage 2 command run.
 Keep the unrelated tracker-inspection NDJSON untouched. FW2, CIL1, archive
 payload, neural data, target, model, score, release, and scientific claims
 remain closed.
+
+Proof closeout `e569bcccfde9bcf5e1116de1b892fed79373c137` passed Base
+Python job `95422480212`, Optional Neuro Readers job `95422480363`, and CI
+`32041863346` before the sole invocation.
+
+## 2026-08-17 MARC2-VR11P Consumed Result Handoff
+
+Read `docs/MARC_2_F03_PRIVATE_DISCRIMINATOR_RESULT.md`,
+`registries/marc2_f03_private_discriminator_result.v0.json`, and
+`tests/test_marc2_f03_private_discriminator_result.py`.
+
+The one command crossed readiness, read and strict-parsed exactly 418,755
+target-free structural bytes once, called VR6 once and VR10B once, and
+consumed at `MARC2VR11P-R2`. Under the frozen table, R2 reaches P15, the
+suffix-bearing BIDS identity structural class. Runtime was
+10.041579249984352 seconds at 34,701,312-byte peak RSS; output totaled 3,582
+bytes. Every archive, neural, target, model, prediction, score, network,
+hardware, other-project, and claim counter is zero.
+
+Closeout verification passes 52 focused VR11P tests and all 4,126 clean Python
+3.12 base tests with 204 expected skips and zero failures. Full Ruff, all 287
+registry JSON files, and diff hygiene pass.
+
+Do not rerun, reopen the private source, inspect the ignored result, relax P15,
+or infer a failed value, person, candidate, or cohort. The next safe task is a
+separately frozen artifact-only and generated-only P15 repair design. Keep the
+unrelated tracker-inspection NDJSON untouched. FW2, CIL1, archive payload,
+neural data, targets, models, scores, release, and scientific claims remain
+closed.

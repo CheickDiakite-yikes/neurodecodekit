@@ -2951,7 +2951,7 @@ no real cohort identity exists. Any private discriminator remains a separately
 frozen Tier C packet and fresh decision; no private read, neural payload,
 target, model, score, release, or scientific claim is open.
 
-### MARC2-VR11P - Private F03 Five-Route Discriminator (Stage 1 Locally Qualified)
+### MARC2-VR11P - Private F03 Five-Route Discriminator (Consumed At R2)
 
 VR10B implementation `61bb801` passed both jobs in CI `32007641751`; proof
 closeout `808e8ed` then passed Base Python job `95322252607`, Optional Neuro
@@ -2997,10 +2997,16 @@ emitted 7,268 aggregate bytes, retained zero, and kept all forbidden counters
 at zero. The clean dependency-light suite passes 4,117 tests with 204 expected
 skips, 16 above the pre-change baseline.
 
-After proof-state hardening, exact implementation `2093ad5` passed Base job
-`95421634020`, Optional job `95421633971`, and CI `32041540553`. The registry
-now binds that exact proof without rerunning qualification or touching a
-private path. Next gate: commit, push, and green this proof-only closeout in
-both jobs, then perform the single registered structural diagnostic. No
-archive payload, neural data, target, model, score, FW2/CIL1, release, or
-scientific claim is opened by the proof or by an R1-R5 structural result.
+After proof-state hardening, exact implementation `2093ad5` passed both jobs in
+CI `32041540553`. Proof-only closeout `e569bcc` then passed Base job
+`95422480212`, Optional job `95422480363`, and CI `32041863346` before the sole
+registered invocation. The run crossed readiness, read exactly 418,755 target-
+free structural bytes once, called VR6 once and VR10B once, and consumed at
+`MARC2VR11P-R2`. The frozen ceiling maps R2 to P15, the suffix-bearing BIDS
+identity structural class. Runtime was 10.041579 seconds at 34,701,312-byte
+peak RSS with 3,582 output bytes and every neural/model/claim counter at zero.
+
+VR11P has no rerun or private reinspection. Next gate: specify a separately
+frozen artifact-only and generated-only P15 repair design. No archive payload,
+neural data, target, model, score, FW2/CIL1, release, or scientific claim is
+open.

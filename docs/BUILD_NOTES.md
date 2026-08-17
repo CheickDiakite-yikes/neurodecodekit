@@ -11473,3 +11473,29 @@ CI `32040989994` and `32041283973`. Final proof-state-stable implementation
 Immediate gate: commit, push, and green this proof-only closeout in both jobs.
 Only then may the already-authorized one-shot Stage 2 structural diagnostic
 run.
+
+Proof closeout `e569bcccfde9bcf5e1116de1b892fed79373c137` passed Base
+Python job `95422480212`, Optional Neuro Readers job `95422480363`, and CI
+`32041863346` before Stage 2.
+
+## 2026-08-17 - MARC2-VR11P Consumed Structural Result
+
+- Ran the registered command exactly once after all green barriers.
+- Three readiness samples passed; the command created one certificate and one
+  consumed marker, opened and strict-parsed exactly 418,755 target-free
+  structural bytes once, called VR6 once and VR10B once, and retained R2.
+- R2 maps only to frozen class P15, the suffix-bearing BIDS identity structural
+  class. No failed private value, row, path, person, candidate, or cohort was
+  retained.
+- Runtime was 10.041579249984352 seconds at 34,701,312-byte peak RSS. Combined
+  output was 3,582 bytes. All archive, signal, target, model, training,
+  prediction, score, network, hardware, other-project, and claim counters were
+  zero.
+- Closeout uses captured aggregate stdout only; private-source and aggregate-
+  report reopens are zero.
+- Fifty-two focused VR11P tests and all 4,126 clean Python 3.12 base tests pass
+  with 204 expected skips and zero failures. Full Ruff, all 287 registry JSON
+  files, and diff hygiene pass.
+
+VR11P is consumed with no retry or rerun. Next safe task: freeze an artifact-
+only and generated-only P15 repair design. FW2 and CIL1 remain closed.
