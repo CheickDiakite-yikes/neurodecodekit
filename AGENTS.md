@@ -243,10 +243,13 @@ future two-stage sequence: generated/mock fixed-path wrapper qualification,
 then only after exact green proof one 418,755-byte target-free structural read,
 one VR6 consistency call, one VR10B discriminator call, and one R1-R5 aggregate
 route. Every authorization flag is false and every operation counter is zero.
-The request is local and pending remote proof. The current and every earlier
-`continue` is not retroactive authority. Do not implement, inspect a private or
-ignored path, create readiness/output state, or identify this as an actionable
-Tier C gate before the request and its proof closeout are remotely green.
+Request commit `6e72c8f797201359777454a750b1dea9704665c0` passed Base
+Python job `95326004060`, Optional Neuro Readers job `95326004145`, and CI
+`32009557248`. A scope-neutral proof closeout is pending its own commit, push,
+and both green jobs. The current and every earlier `continue` is not
+retroactive authority. Do not implement, inspect a private or ignored path,
+create readiness/output state, or identify VR11P as the sole active Tier C gate
+before that proof closeout is remotely green.
 
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-

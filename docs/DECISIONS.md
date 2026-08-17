@@ -9384,3 +9384,28 @@ archive payload, neural data, target, model, prediction, score, FW2/CIL1,
 release, or claim operation opens. The request and a separate proof closeout
 must both become remotely green before the packet may be identified as the
 sole Tier C gate. The current and every earlier `continue` is not retroactive.
+
+## 0290 - Record VR11P Request Proof Without Opening Authority
+
+Evidence decision: exact all-false request commit
+`6e72c8f797201359777454a750b1dea9704665c0` passed Base Python job
+`95326004060`, Optional Neuro Readers job `95326004145`, and CI
+`32009557248`. Bind the request-time packet, registry, and test sizes and
+SHA-256 values in the request registry.
+
+Scope decision: this is a proof-only metadata update. It changes no requested
+path, byte count, route, resource cap, refusal, privacy rule, or future
+sequence. All 17 authorization flags remain false and all 18 operation counters
+remain zero.
+
+Barrier decision: this proof-closeout commit must itself be pushed and both
+required CI jobs must pass before VR11P may be identified as the sole active
+Tier C packet. Only a fresh, unambiguous packet-bound maintainer message after
+that identification may support separate decision artifacts. The current and
+every earlier `continue` remains nonretroactive.
+
+Boundary decision: do not implement the wrapper, create readiness or output
+state, touch any private or ignored path, inspect consumed VR9P state, access an
+archive member or neural payload, use a target, run a model, predict, score,
+open FW2/CIL1, contact a provider or device, release, or upgrade a scientific
+claim.

@@ -189,10 +189,14 @@ and proposes one future generated/mock wrapper followed, only after separate
 green decision and implementation barriers, by one 418,755-byte target-free
 structural read, one VR6 call, one VR10B call, and one aggregate R1-R5 route.
 Every authority flag is false and every operation counter is zero. The request
-is pending remote proof. The current and every earlier `continue` is not
-retroactive authority; no implementation, private path, readiness state,
-archive member, neural payload, target, model, prediction, score, FW2/CIL1, or
-scientific action is open.
+commit `6e72c8f797201359777454a750b1dea9704665c0` passed Base Python
+job `95326004060`, Optional Neuro Readers job `95326004145`, and CI
+`32009557248`. Its scope-neutral proof closeout must still be committed, pushed,
+and remotely green before VR11P may be identified as the sole active Tier C
+gate. The current and every earlier `continue` is not retroactive authority;
+no implementation, private path, readiness state, archive member, neural
+payload, target, model, prediction, score, FW2/CIL1, or scientific action is
+open.
 
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.

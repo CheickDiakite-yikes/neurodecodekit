@@ -2043,10 +2043,12 @@ Read this before interpreting any number in the repository.
   structural read, one VR6 consistency call, one VR10B classifier call, and
   one aggregate R1-R5 route. Fresh readiness/output paths, one-thread and 256
   MiB caps, zero retries, and a recursive privacy ceiling are frozen. The
-  request is pending remote proof; all authority flags remain false, all
-  operation counters remain zero, and the current or any earlier `continue`
-  cannot authorize it. No private source, archive member, neural payload,
-  target, model, prediction, or score was accessed.
+  exact request `6e72c8f` passed both jobs in CI `32009557248`; a scope-neutral
+  proof closeout must still be committed, pushed, and remotely green before the
+  packet may be identified as the sole active Tier C gate. All authority flags
+  remain false, all operation counters remain zero, and the current or any
+  earlier `continue` cannot authorize it. No private source, archive member,
+  neural payload, target, model, prediction, or score was accessed.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

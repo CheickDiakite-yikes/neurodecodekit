@@ -4,18 +4,18 @@
   "request_id": "MARC-2-VR11P-F03-private-discriminator-authorization-request-v0",
   "lane_id": "MARC2-VR11P",
   "recorded_at_local": "2026-08-17",
-  "status": "all_false_Tier_C_request_local_pending_remote_proof_and_fresh_decision",
+  "status": "all_false_Tier_C_request_remotely_green_pending_proof_closeout_and_fresh_decision",
   "proof_posture": "request_only_no_private_real_or_scientific_operation_authorized",
   "request_artifacts": {
     "authorization_packet": {
       "path": "docs/MARC_2_F03_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md",
-      "bytes": 9454,
-      "sha256": "346820e35bf4bb7b4cf7372a3f857e3ff1c636f4c30a09a8622284d12dfcc70b"
+      "bytes": 9866,
+      "sha256": "6157d8bc2ccd8c432f56b46296e1a8b91f8c19870f974385e2d7caa17a0696c8"
     },
     "authorization_request_test": {
       "path": "tests/test_marc2_f03_private_discriminator_authorization_request.py",
-      "bytes": 10944,
-      "sha256": "7fd927afb920b725cc5a0df73e861d883ee6ca7792561af13429b3b29eb85499"
+      "bytes": 12728,
+      "sha256": "72425c620826689fc393774168ea4669e86bcc05aa60745299b73630303a600d"
     }
   },
   "green_predecessor_proof": {
@@ -45,11 +45,17 @@
     }
   },
   "remote_green_request_proof": {
-    "request_commit": null,
-    "CI_run_id": null,
-    "base_python_job_id": null,
-    "optional_neuro_job_id": null,
-    "both_required_jobs_green": false,
+    "request_commit": "6e72c8f797201359777454a750b1dea9704665c0",
+    "CI_run_id": 32009557248,
+    "base_python_job_id": 95326004060,
+    "optional_neuro_job_id": 95326004145,
+    "both_required_jobs_green": true,
+    "request_document_bytes_at_request_commit": 9454,
+    "request_document_sha256_at_request_commit": "346820e35bf4bb7b4cf7372a3f857e3ff1c636f4c30a09a8622284d12dfcc70b",
+    "request_registry_bytes_at_request_commit": 19456,
+    "request_registry_sha256_at_request_commit": "c1a201472ab81f73e22b5fc5d3eedaadf62a49dc1791001d9c17e7374296b3bb",
+    "request_test_bytes_at_request_commit": 10944,
+    "request_test_sha256_at_request_commit": "7fd927afb920b725cc5a0df73e861d883ee6ca7792561af13429b3b29eb85499",
     "scope_changed_by_proof_record": false,
     "private_real_or_scientific_operation_sum": 0,
     "proof_closeout_remote_green_required_before_packet_identification": true
@@ -403,7 +409,7 @@
     "MARC2_CIL1_eligibility_after_diagnostic": false
   },
   "next_gate": {
-    "exact_request_commit_push_and_both_jobs_green_required": true,
+    "exact_request_commit_push_and_both_jobs_green_required": false,
     "proof_closeout_commit_push_and_both_jobs_green_required": true,
     "fresh_packet_bound_decision_required_after_green": true,
     "generated_implementation_allowed_now": false,

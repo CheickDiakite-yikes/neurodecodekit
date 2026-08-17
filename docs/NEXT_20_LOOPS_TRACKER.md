@@ -2951,7 +2951,7 @@ no real cohort identity exists. Any private discriminator remains a separately
 frozen Tier C packet and fresh decision; no private read, neural payload,
 target, model, score, release, or scientific claim is open.
 
-### MARC2-VR11P - Private F03 Five-Route Discriminator (Request Prepared)
+### MARC2-VR11P - Private F03 Five-Route Discriminator (Request Green; Proof Closeout Pending)
 
 VR10B implementation `61bb801` passed both jobs in CI `32007641751`; proof
 closeout `808e8ed` then passed Base Python job `95322252607`, Optional Neuro
@@ -2966,9 +2966,20 @@ paths, one-thread and 256 MiB caps, 15 GiB minimum free disk, 1 MiB output,
 zero payload/signal/target/network bytes, and no retry or rerun are frozen.
 
 Every authority flag is false and every operation counter is zero. Twelve
-focused request tests and all 4,086 base tests pass locally with 204 expected
-skips. Next gate: commit, push, and green the exact request in both jobs, then
-add and green a proof-only closeout. Before both barriers pass, no decision,
-wrapper, private path, FW2/CIL1, neural payload, target, model, score, release,
-or scientific claim is open. The current and every earlier `continue` is not
-retroactive authority.
+focused request tests and all 4,086 base tests passed locally with 204 expected
+skips. Exact request commit `6e72c8f797201359777454a750b1dea9704665c0`
+then passed Base Python job `95326004060`, Optional Neuro Readers job
+`95326004145`, and CI `32009557248`.
+
+The request registry now binds that remote proof and the request-time packet,
+registry, and test identities without changing scope. Thirteen focused tests
+plus 18 subtests and all 4,087 clean dependency-light tests pass with 204
+expected skips. Two unchanged process-wide RSS gates reached their ceilings in
+one monolithic optional-enabled diagnostic and both pass in fresh isolation;
+remote Optional Neuro Readers proof remains mandatory.
+
+Next gate: commit, push, and green this exact proof-only closeout in both jobs.
+Before that second barrier passes, VR11P cannot be identified as the sole
+active Tier C packet and no decision, wrapper, private path, FW2/CIL1, neural
+payload, target, model, score, release, or scientific claim is open. The
+current and every earlier `continue` is not retroactive authority.

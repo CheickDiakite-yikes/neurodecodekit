@@ -11360,8 +11360,35 @@ requires a separately frozen Tier C packet and fresh decision.
   Twelve focused request tests pass locally. The complete base suite passes
   4,086 tests with 204 expected skips and zero failures in 64.292 seconds.
 
-Next gate: commit, push, and obtain both green CI jobs for this exact all-false
-request, then add a proof-only closeout and green that exact commit. Before
-both barriers pass, do not identify VR11P as actionable, record a decision,
-implement a wrapper, or touch any private/ignored path. The current and every
-earlier `continue` is not retroactive authority.
+Request commit `6e72c8f797201359777454a750b1dea9704665c0` passed Base
+Python job `95326004060`, Optional Neuro Readers job `95326004145`, and CI
+`32009557248` with no scope change and no private, real, or scientific
+operation.
+
+Next gate: commit, push, and obtain both green CI jobs for this exact proof-only
+closeout. Before that second barrier passes, do not identify VR11P as the sole
+active Tier C packet, record a maintainer decision, implement a wrapper, or
+touch any private/ignored path. The current and every earlier `continue` is not
+retroactive authority.
+
+## 2026-08-17 - MARC2-VR11P Request Remote Proof Record
+
+- Verified request commit `6e72c8f797201359777454a750b1dea9704665c0`
+  against CI `32009557248`, Base Python job `95326004060`, and Optional Neuro
+  Readers job `95326004145`; both required jobs passed.
+- Bound the request-time packet, registry, and test sizes and SHA-256 values in
+  the request registry so later proof text cannot silently change the frozen
+  scope.
+- Added one focused proof assertion. The request remains all false, all 18
+  operation counters remain zero, and the proof record performs no private,
+  real-data, model, scoring, provider, hardware, or claim operation.
+- Thirteen focused tests plus 18 subtests pass. The clean Python 3.12
+  dependency-light suite passes 4,087 tests with 204 expected skips and zero
+  failures in 84.475 seconds, exactly one test above the request baseline.
+- A monolithic optional-enabled diagnostic reached two unchanged process-wide
+  RSS gates after loading the full scientific stack; both affected tests pass
+  in fresh isolation. The required remote Optional Neuro Readers job remains
+  the authoritative full optional proof for this closeout.
+- Preserved the second barrier: this proof-closeout commit must itself be pushed
+  and both jobs must pass before VR11P can be identified as the sole active
+  Tier C packet for a fresh maintainer decision.

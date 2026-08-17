@@ -5723,9 +5723,32 @@ zero retries, and strict nonpublication fields are frozen.
 
 All authorization flags are false and every operation counter is zero. Twelve
 focused request tests and all 4,086 base tests pass with 204 expected skips.
-Immediate gate: commit and push only the packet, registry, test, and public
-handoff files; require both CI jobs green; then add and green a proof-only
-closeout. Until both commits are remotely green, do not identify the packet as
-actionable, record a decision, implement a wrapper, or touch any private/
-ignored path. The current and every earlier `continue` is not retroactive
-authority. Keep the unrelated tracker inspection NDJSON untouched.
+Exact request commit `6e72c8f797201359777454a750b1dea9704665c0`
+passed Base Python job `95326004060`, Optional Neuro Readers job
+`95326004145`, and CI `32009557248`.
+
+Immediate gate: commit and push only the scope-neutral proof record and public
+handoff files, then require both CI jobs green. Until that proof closeout is
+remotely green, do not identify VR11P as the sole active Tier C packet, record a
+maintainer decision, implement a wrapper, or touch any private/ignored path.
+The current and every earlier `continue` is not retroactive authority. Keep the
+unrelated tracker inspection NDJSON untouched.
+
+## 2026-08-17 MARC2-VR11P Request Proof Handoff
+
+The request-time packet, registry, and test byte sizes and SHA-256 values are
+now bound alongside green request commit `6e72c8f`, CI `32009557248`, Base
+Python job `95326004060`, and Optional Neuro Readers job `95326004145`. The
+proof update changes no requested scope, grants no authority, and records zero
+private, real, or scientific operations.
+
+Current local proof verification passes 13 focused tests plus 18 subtests and
+all 4,087 clean Python 3.12 dependency-light tests with 204 expected skips. A
+monolithic optional-enabled diagnostic reached two unchanged process-wide RSS
+gates; both tests pass in fresh isolation, so the remote Optional Neuro Readers
+job remains mandatory rather than being inferred green from the local run.
+
+After this exact proof-closeout commit is pushed and both required jobs pass,
+VR11P may be identified as the sole active Tier C packet. Only a fresh,
+unambiguous packet-bound maintainer message sent after that identification may
+be recorded in separate decision artifacts. No earlier `continue` may be used.

@@ -4,17 +4,20 @@ Date: 2026-08-17
 
 Lane: `MARC2-VR11P`
 
-Status: **All-false Tier C request prepared locally; remote proof and a fresh
-packet-bound maintainer decision are required**
+Status: **Request commit `6e72c8f797201359777454a750b1dea9704665c0`
+is remotely green. All authorization fields remain false; this proof closeout
+must also become remotely green before a fresh packet-bound decision**
 
 Request:
 `registries/marc2_f03_private_discriminator_authorization_request.v0.json`
 
 ## Decision Requested
 
-After this exact request is committed, pushed, and both required CI jobs are
-green, and only after it is identified as the sole active Tier C gate, request
-one future two-stage sequence:
+Request commit `6e72c8f797201359777454a750b1dea9704665c0` passed Base
+Python job `95326004060`, Optional Neuro Readers job `95326004145`, and CI
+`32009557248`. After this non-scope-changing proof closeout is also remotely
+green, and only after the packet is identified as the sole active Tier C gate,
+request one future two-stage sequence:
 
 1. implement and generated-qualify a new additive fixed-path wrapper; and
 2. only after that exact implementation is committed, pushed, and both CI jobs
@@ -187,9 +190,11 @@ CIL1 remain ineligible because no real cohort has been frozen.
   semantics, and the scientific ceiling.
 - No `.codex_work` path, private source, archive, payload, neural value, target,
   model, prediction, or score is accessed while preparing this packet.
-- Remote request proof is pending. Until both jobs and a separate proof
-  closeout are green, this packet must not be identified as an actionable Tier
-  C gate.
+- Exact request commit `6e72c8f797201359777454a750b1dea9704665c0`
+  passed both required jobs in CI `32009557248`. This proof closeout changes no
+  requested scope and performs no private, real, or scientific operation. It
+  must itself become remotely green before the packet may be identified as the
+  sole active Tier C gate.
 
 Engineering capability requested: one proof-gated target-free structural open
 can distinguish the five remaining F03 classes while retaining only one coarse

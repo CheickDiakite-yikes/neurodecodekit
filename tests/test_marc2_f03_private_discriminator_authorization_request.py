@@ -16,7 +16,7 @@ class Marc2F03PrivateDiscriminatorAuthorizationRequestTests(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.request = json.loads(REQUEST_PATH.read_text(encoding="utf-8"))
 
-    def test_identity_is_all_false_request_pending_remote_proof_and_decision(self):
+    def test_identity_is_green_request_pending_proof_closeout_and_decision(self):
         self.assertEqual(
             self.request["schema_name"],
             "neurodecodekit.marc2_f03_private_discriminator_authorization_request",
@@ -24,7 +24,7 @@ class Marc2F03PrivateDiscriminatorAuthorizationRequestTests(unittest.TestCase):
         self.assertEqual(self.request["schema_version"], "0.1.0")
         self.assertEqual(self.request["lane_id"], "MARC2-VR11P")
         self.assertIn("all_false_Tier_C_request", self.request["status"])
-        self.assertIn("pending_remote_proof", self.request["status"])
+        self.assertIn("remotely_green_pending_proof_closeout", self.request["status"])
         self.assertIn("no_private_real_or_scientific", self.request["proof_posture"])
 
     def test_green_VR10B_implementation_and_closeout_are_exact(self):
@@ -47,6 +47,44 @@ class Marc2F03PrivateDiscriminatorAuthorizationRequestTests(unittest.TestCase):
         self.assertEqual(closeout["base_python_job_id"], 95_322_252_607)
         self.assertEqual(closeout["optional_neuro_job_id"], 95_322_252_650)
         self.assertTrue(closeout["both_required_jobs_green"])
+
+    def test_remote_green_request_proof_is_exact_and_scope_unchanged(self):
+        proof = self.request["remote_green_request_proof"]
+        self.assertEqual(
+            proof["request_commit"],
+            "6e72c8f797201359777454a750b1dea9704665c0",
+        )
+        self.assertEqual(proof["CI_run_id"], 32_009_557_248)
+        self.assertEqual(proof["base_python_job_id"], 95_326_004_060)
+        self.assertEqual(proof["optional_neuro_job_id"], 95_326_004_145)
+        self.assertTrue(proof["both_required_jobs_green"])
+        self.assertEqual(proof["request_document_bytes_at_request_commit"], 9_454)
+        self.assertEqual(
+            proof["request_document_sha256_at_request_commit"],
+            "346820e35bf4bb7b4cf7372a3f857e3ff1c636f4c30a09a8622284d12dfcc70b",
+        )
+        self.assertEqual(proof["request_registry_bytes_at_request_commit"], 19_456)
+        self.assertEqual(
+            proof["request_registry_sha256_at_request_commit"],
+            "c1a201472ab81f73e22b5fc5d3eedaadf62a49dc1791001d9c17e7374296b3bb",
+        )
+        self.assertEqual(proof["request_test_bytes_at_request_commit"], 10_944)
+        self.assertEqual(
+            proof["request_test_sha256_at_request_commit"],
+            "7fd927afb920b725cc5a0df73e861d883ee6ca7792561af13429b3b29eb85499",
+        )
+        self.assertFalse(proof["scope_changed_by_proof_record"])
+        self.assertEqual(proof["private_real_or_scientific_operation_sum"], 0)
+        self.assertTrue(
+            proof[
+                "proof_closeout_remote_green_required_before_packet_identification"
+            ]
+        )
+        self.assertFalse(
+            self.request["next_gate"][
+                "exact_request_commit_push_and_both_jobs_green_required"
+            ]
+        )
 
     def test_all_fixed_artifacts_are_current_tracked_and_private_free(self):
         artifacts = self.request["fixed_committed_artifacts"]
