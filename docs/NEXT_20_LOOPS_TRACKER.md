@@ -2755,7 +2755,7 @@ consumed F03/F04 branch remains unavailable, neither route may be relaxed, and
 any private read remains a new Tier C packet plus a fresh decision after green
 packet proof.
 
-### MARC2-VR9P - Two-Layer Private Diagnostic (All-False Request Prepared)
+### MARC2-VR9P - Two-Layer Private Diagnostic (Decision Recorded, Green Pending)
 
 VR9P binds 17 remotely green predecessor artifacts totaling 328,581 bytes,
 including the exact VR8B parser/producer relay and the consumed VR7P result. It
@@ -2771,7 +2771,8 @@ is outer `MARC2VR6-F02` plus nested `MARC2VR2-F03` or `MARC2VR2-F04`; all
 reasons, rows, paths, identities, values, private hashes, candidate selections,
 and cohort output remain forbidden.
 
-Current status: all authorization fields false and all operation counters zero.
+Request-stage status: all authorization fields were false and all operation
+counters were zero.
 Twelve focused and 3,961 dependency-light tests pass; optional N-Z passes all
 513 tests. Optional A-M completed 3,519 tests with one unchanged five-second
 timing-gate error under host load near 46 to 50 on 12 logical CPUs, including
@@ -2779,7 +2780,17 @@ one isolated replay. Pinned Ruff, compilation, all registries, and diff hygiene
 pass. Request `de8e6dc` passed Base job `95277554517`, Optional job
 `95277554619`, and CI `31992178980`; the clean optional runner passed the
 unchanged timing gate. Next gate: commit, push, and green the additive proof
-record, then identify VR9P as the sole active Tier C packet. A fresh maintainer
-message is required only after that identification. The current `continue`
-cannot be applied retroactively. FW2, CIL1, archive payload, neural data,
-targets, models, predictions, scores, and scientific claims remain closed.
+record, then identify VR9P as the sole active Tier C packet.
+
+Proof closeout `ddc5e85` then passed Base job `95278576871`, Optional job
+`95278576905`, and CI `31992563746`. After sole-packet identification, the
+maintainer supplied the fresh exact word `continue`. The separate decision
+quotes those eight UTF-8 bytes, binds only the unchanged packet, and authorizes
+generated/mock wrapper work only after the decision itself is committed,
+pushed, and green in both jobs. Twenty-seven focused request/decision tests
+pass; recording performed zero private or scientific operations.
+
+Next gate: green the exact decision, implement and generated-qualify the fixed-
+path wrapper, then green that exact wrapper before the one registered private
+structural diagnosis. FW2, CIL1, archive payload, neural data, targets, models,
+predictions, scores, and scientific claims remain closed.

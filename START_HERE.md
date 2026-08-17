@@ -103,18 +103,22 @@ That all-false packet is now prepared in
 `docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_AUTHORIZATION_PACKET.md` and
 `registries/marc2_two_layer_private_diagnostic_authorization_request.v0.json`.
 VR9P binds 17 green predecessor artifacts totaling 328,581 bytes and proposes
-one future two-stage diagnostic. A separately green decision must precede a
-generated/mock fixed-path wrapper; that exact wrapper must then become remotely
-green before one target-free read of the same 418,755-byte structural manifest.
+one future two-stage diagnostic. Request `de8e6dc` passed Base job
+`95277554517`, Optional job `95277554619`, and CI `31992178980`; proof closeout
+`ddc5e85` passed Base job `95278576871`, Optional job `95278576905`, and CI
+`31992563746`. After Codex identified VR9P as the sole active Tier C packet, the
+maintainer supplied the exact message `continue`. Read
+`docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_AUTHORIZATION_DECISION.md` and its
+registry. That decision is ineffective until its own commit is pushed and both
+CI jobs are green. Only then may the generated/mock fixed-path wrapper be
+implemented; that exact wrapper must then become remotely green before one
+target-free read of the same 418,755-byte structural manifest.
 Only outer `MARC2VR6-F02` plus nested `MARC2VR2-F03` or `MARC2VR2-F04` may be
 retained. No reason, row, path, private identity, failed value, candidate
-selection, or cohort may leave the process. Every current authorization flag is
-false and every operation counter is zero. The current `continue` is not
-retroactive authority. Request `de8e6dc` passed Base job `95277554517`, Optional
-job `95277554619`, and CI `31992178980`. First green the additive proof record
-and identify VR9P as the sole Tier C packet, then wait for a fresh packet-bound
-maintainer message. Until then, do not implement the wrapper or touch
-`.codex_work`.
+selection, private manifest, or cohort may leave the process. Decision
+recording performed zero private, archive, neural, target, model, prediction,
+or score operations. Until the decision itself is remotely green, do not
+implement the wrapper or touch `.codex_work`.
 
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.

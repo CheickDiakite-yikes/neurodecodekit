@@ -11100,3 +11100,30 @@ VR9P as the sole active Tier C packet. The current and every earlier `continue`
 is not retroactive; wrapper implementation and private access remain closed
 until a fresh packet-bound maintainer decision is separately recorded and
 remotely green.
+
+## 2026-08-17 - MARC2-VR9P Packet-Bound Authorization Decision
+
+- Verified immutable request `de8e6dc` under CI `31992178980` and additive
+  proof closeout `ddc5e85` under CI `31992563746`; both Base Python and Optional
+  Neuro Readers jobs passed before the decision message.
+- After VR9P was identified as the sole active Tier C packet, preserved the
+  maintainer's exact message `continue` as eight UTF-8 bytes with SHA-256
+  `e256ee8e7aff6957a781d8328f0f68e26996564c81fa458da59fbca2305138ad`.
+  The packet's long scope is incorporated by reference and is not fabricated as
+  maintainer speech.
+- Bound the three original request artifacts separately from their additive
+  proof-snapshot versions, including exact sizes, SHA-256 values, and Git blob
+  identities.
+- Authorized only a delayed two-stage sequence: generated/mock wrapper work
+  after this decision is remotely green, then one 418,755-byte target-free
+  structural diagnosis after that exact wrapper is also remotely green.
+- Preserved only F03/F04 aggregate route output. Reasons, rows, paths, private
+  identities, failed values, selections, private manifests, cohorts, archive
+  members, signals, targets, models, predictions, and scores remain forbidden.
+- Twenty-seven focused request/decision tests pass. Decision recording made
+  zero readiness, `.codex_work`, private-source, output-root, archive, neural,
+  target, model, score, provider, hardware, release, or claim operations.
+
+Next gate: commit, push, and require both remote CI jobs green for this exact
+decision. Do not implement the generated wrapper or touch `.codex_work` before
+that proof.

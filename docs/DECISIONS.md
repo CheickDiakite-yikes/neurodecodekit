@@ -9099,3 +9099,33 @@ Claim decision: the request itself performs no private read. Even the future
 diagnostic would open no archive member or neural payload and would establish
 no neural effect, decoding accuracy, language decoding, live decoding, or
 thought-to-text capability.
+
+## 0280 - Bind Fresh Continue Only To The Green VR9P Packet
+
+Eligibility decision: accept the maintainer's exact fresh word `continue` only
+because VR9P was the sole active Tier C packet, immutable request `de8e6dc`
+passed both jobs in CI `31992178980`, proof closeout `ddc5e85` passed both jobs
+in CI `31992563746`, and Codex had identified the exact scope and fresh-decision
+gate.
+
+Authenticity decision: preserve the actual eight UTF-8 bytes and SHA-256
+`e256ee8e7aff6957a781d8328f0f68e26996564c81fa458da59fbca2305138ad`.
+Incorporate the green packet by reference. Do not claim the packet's long text
+as a maintainer utterance or infer any broader authority.
+
+Delayed-effect decision: no implementation or private access opens from this
+record alone. First commit, push, and green this exact decision in both jobs.
+Then generated/mock fixed-path wrapper work may begin. Only after that exact
+wrapper is committed, pushed, and green in both jobs may one registered
+418,755-byte target-free structural read and one VR6 call occur.
+
+Privacy decision: retain only outer `MARC2VR6-F02` and nested
+`MARC2VR2-F03` or `MARC2VR2-F04`. Never retain reason, exception, predicate,
+failed value, source row, path, identity, private hash, candidate selection,
+private manifest, or cohort. F02, success, missing/unknown nested route, drift,
+or leakage consumes and parks the lane.
+
+Boundary decision: no archive member, neural payload, target, derivative,
+model, training, prediction, freeze, score, provider, hardware, FW2, CIL1,
+release, or scientific claim is authorized. Decision recording performed zero
+private or scientific operations.

@@ -139,24 +139,30 @@ Do not relax F03 or F04, infer the consumed private branch, or touch any
 private/ignored source. FW2, CIL1, archive payload, neural, target, model,
 prediction, and score work remain closed.
 
-That request is now prepared as `MARC2-VR9P`. Read
+That request is now authorized by fresh short form as `MARC2-VR9P`. Read
 `docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_AUTHORIZATION_PACKET.md` and
-`registries/marc2_two_layer_private_diagnostic_authorization_request.v0.json`.
-Every authorization flag is false and every current operation counter is zero.
-The proposed two-stage sequence first requires a separately green decision,
-then a generated/mock-only fixed-path wrapper, then green proof for that exact
-wrapper before one target-free read of the registered 418,755-byte structural
-manifest. The only retainable private observation would be outer
+`registries/marc2_two_layer_private_diagnostic_authorization_request.v0.json`,
+then `docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_AUTHORIZATION_DECISION.md` and
+its registry. Immutable request `de8e6dcfb60d78b52429d32c6bdd5f9656ab2d58`
+passed Base Python job `95277554517`, Optional Neuro Readers job `95277554619`,
+and CI `31992178980`. Proof closeout
+`ddc5e8529f86d05d9f3edefb4595106e3959477f` passed Base job `95278576871`,
+Optional job `95278576905`, and CI `31992563746` before Codex identified VR9P
+as the sole active Tier C gate. The maintainer's next exact message was
+`continue`; the separate decision quotes those eight UTF-8 bytes and binds only
+the unchanged green packet.
+
+The decision is ineffective until its own commit is pushed and both CI jobs are
+green. After that proof, only a generated/mock fixed-path wrapper is eligible.
+That exact wrapper must then become remotely green before one target-free read
+of the registered 418,755-byte structural manifest. The only retainable private
+observation is outer
 `MARC2VR6-F02` plus nested `MARC2VR2-F03` or `MARC2VR2-F04`; reasons, rows,
 paths, identities, values, hashes, candidate selections, and cohort output are
 forbidden. VR6 success, F02, an unknown route, source drift, or leakage consumes
-and parks the lane. The current and every earlier `continue` is not retroactive
-authority for this new packet. Immutable request
-`de8e6dcfb60d78b52429d32c6bdd5f9656ab2d58` passed Base Python job
-`95277554517`, Optional Neuro Readers job `95277554619`, and CI `31992178980`.
-Commit, push, and green the additive proof record before identifying VR9P as
-the sole Tier C gate. Do not record a decision or touch `.codex_work` until a
-fresh packet-bound maintainer message follows that identification.
+and parks the lane. Recording the decision performed zero private, archive,
+neural, target, model, prediction, or score operations. Do not implement the
+wrapper or touch `.codex_work` until this exact decision is remotely green.
 
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-

@@ -5499,3 +5499,26 @@ job `95277554619`, and CI `31992178980`; the clean optional runner passed the
 unchanged timing gate. Commit, push, and green the additive proof record, then
 identify VR9P as the sole active Tier C packet and wait for a fresh packet-bound
 maintainer message. Do not reuse the current `continue` retroactively.
+
+## 2026-08-17 MARC2-VR9P Authorization Decision Handoff
+
+Request `de8e6dc` passed Base Python job `95277554517`, Optional Neuro Readers
+job `95277554619`, and CI `31992178980`. Proof closeout `ddc5e85` passed Base
+job `95278576871`, Optional job `95278576905`, and CI `31992563746`. Only after
+those proofs and sole-packet identification, the maintainer's next message was
+exactly `continue`.
+
+Read `docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_AUTHORIZATION_DECISION.md`, its
+machine registry, and decision test. The record binds the actual eight UTF-8
+bytes to VR9P without expanding scope. It is ineffective until this decision
+commit is pushed and both CI jobs are green. Before that proof, do not
+implement the wrapper or touch `.codex_work`.
+
+After green decision, only generated/mock fixed-path implementation is open.
+After that exact wrapper is separately green, one command may create the new
+readiness certificate and output root, read the exact 418,755-byte target-free
+manifest once, call VR6 once, and retain only outer F02 plus nested F03 or F04.
+No reason, private context, selection, manifest, or cohort may be retained. No
+archive member, neural payload, target, model, prediction, score, FW2, CIL1,
+release, or scientific claim is authorized. Keep the unrelated untracked
+tracker inspection NDJSON untouched.
