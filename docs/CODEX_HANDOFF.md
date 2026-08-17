@@ -5811,3 +5811,24 @@ one proof-only registry closeout before the already-authorized one-shot Stage
 or real readiness/output state before then. Keep the unrelated tracker
 inspection NDJSON untouched. FW2, CIL1, archive payload, neural data, targets,
 models, scores, release, and scientific claims remain closed.
+
+Implementation `1002362` passed both jobs in CI `32040655693`. Two small
+proof-transition hardening commits also passed both jobs, and final exact
+implementation `2093ad542d5043c97e2a3b0cabb605009e66600e` passed Base
+Python job `95421634020`, Optional Neuro Readers job `95421633971`, and CI
+`32041540553`.
+
+## 2026-08-17 MARC2-VR11P Implementation Proof Handoff
+
+The implementation registry now binds exact green implementation `2093ad5`
+and both required job IDs. This closeout changes no wrapper code, behavior
+test, tracked implementation document, route, path, cap, or authority. It did
+not repeat qualification or touch readiness, ignored paths, the private
+source, consumed VR9P, archive payload, neural data, targets, models, scores,
+network, hardware, another project, or claims.
+
+Immediate gate: commit, push, and require both jobs green for this proof-only
+closeout. Only after that proof may the one registered Stage 2 command run.
+Keep the unrelated tracker-inspection NDJSON untouched. FW2, CIL1, archive
+payload, neural data, target, model, score, release, and scientific claims
+remain closed.

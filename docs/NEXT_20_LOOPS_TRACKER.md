@@ -2997,8 +2997,10 @@ emitted 7,268 aggregate bytes, retained zero, and kept all forbidden counters
 at zero. The clean dependency-light suite passes 4,117 tests with 204 expected
 skips, 16 above the pre-change baseline.
 
-The remote implementation proof remains null and `execute` refuses at F01
-before readiness or private access. Next gate: commit, push, and green this
-exact implementation in both jobs, then make one proof-only registry closeout.
-No structural source read, archive payload, neural data, target, model, score,
-FW2/CIL1, release, or scientific claim is open before that proof.
+After proof-state hardening, exact implementation `2093ad5` passed Base job
+`95421634020`, Optional job `95421633971`, and CI `32041540553`. The registry
+now binds that exact proof without rerunning qualification or touching a
+private path. Next gate: commit, push, and green this proof-only closeout in
+both jobs, then perform the single registered structural diagnostic. No
+archive payload, neural data, target, model, score, FW2/CIL1, release, or
+scientific claim is opened by the proof or by an R1-R5 structural result.

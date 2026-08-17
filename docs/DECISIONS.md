@@ -9460,3 +9460,24 @@ source access, archive member, neural payload, target, model, prediction,
 score, FW2/CIL1, network, hardware, release, or scientific claim. Stage 2 may
 proceed only after the separate implementation-proof barrier already required
 by decision 0291.
+
+## 0293 - Bind Exact Green VR11P Implementation Before Stage 2
+
+Proof decision: bind final exact implementation
+`2093ad542d5043c97e2a3b0cabb605009e66600e`, CI `32041540553`, Base Python
+job `95421634020`, and Optional Neuro Readers job `95421633971`. Both jobs are
+green, including full base and neuro-enabled suites.
+
+Closeout decision: update only the implementation registry and public handoff
+surfaces. Do not rerun generated qualification or alter the module, behavior
+test, tracked implementation document, route map, fixed paths, resource caps,
+or authorization scope.
+
+Order decision: this proof-only closeout must itself be committed, pushed, and
+both jobs green before the one registered Stage 2 structural command. Stage 2
+has no retry, rerun, resume, repair, fallback, or substitution.
+
+Boundary decision: proof binding performs zero readiness, ignored-path,
+private-source, consumed-VR9P, archive, neural, target, model, prediction,
+score, network, hardware, other-project, release, or claim operations. FW2 and
+CIL1 remain closed.

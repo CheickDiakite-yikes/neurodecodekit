@@ -4,7 +4,7 @@
   "implementation_id": "MARC-2-VR11P-F03-private-discriminator-implementation-v0",
   "lane_id": "MARC2-VR11P",
   "recorded_at_local": "2026-08-17",
-  "status": "generated_mock_implementation_locally_qualified_private_execution_proof_pending",
+  "status": "exact_implementation_remotely_green_proof_closeout_pending_remote_green",
   "proof_posture": "generated_and_mock_fixed_path_qualification_only_no_private_or_scientific_value",
   "green_decision_proof": {
     "commit": "4fa277121f24dde3f6f7c917ef6c2bb7506134d6",
@@ -135,9 +135,16 @@
     "diff_check_passed": true,
     "CLI_help_and_plan_passed": true,
     "generated_qualification_passed": true,
-    "remote_CI_pending": true
+    "remote_CI_pending": false,
+    "proof_closeout_remote_CI_pending": true
   },
-  "remote_implementation_proof": null,
+  "remote_implementation_proof": {
+    "commit": "2093ad542d5043c97e2a3b0cabb605009e66600e",
+    "CI_run_id": 32041540553,
+    "base_python_job_id": 95421634020,
+    "optional_neuro_job_id": 95421633971,
+    "both_required_jobs_green": true
+  },
   "access_counters": {
     "real_readiness_operations": 0,
     "private_or_Git_ignored_path_operations": 0,
@@ -157,11 +164,12 @@
     "operations_on_other_projects": 0
   },
   "next_gate": {
-    "implementation_commit_required": true,
-    "implementation_push_required": true,
-    "both_remote_CI_jobs_green_required": true,
-    "proof_only_closeout_required": true,
-    "private_execution_allowed_now": false,
+    "implementation_commit_required": false,
+    "implementation_push_required": false,
+    "both_remote_CI_jobs_green_required": false,
+    "proof_only_closeout_required": false,
+    "proof_closeout_commit_push_and_both_jobs_green_required_before_execution": true,
+    "private_execution_allowed_now": true,
     "consumed_VR9P_reuse_allowed": false,
     "MARC2_FW2_or_CIL1_authorized": false
   },

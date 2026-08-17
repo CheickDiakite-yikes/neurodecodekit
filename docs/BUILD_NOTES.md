@@ -11452,3 +11452,24 @@ job `95414004791`, Optional Neuro Readers job `95414004814`, and CI
 `MARC2VR11P-F01` before readiness, ignored-path, or private-source access.
 Immediate gate: commit, push, and green this exact implementation in both jobs,
 then make one proof-only registry closeout before Stage 2.
+
+Implementation milestone `1002362` passed both jobs in CI `32040655693`.
+Proof-transition test commits `0a23025` and `3024a1b` also passed both jobs in
+CI `32040989994` and `32041283973`. Final proof-state-stable implementation
+`2093ad542d5043c97e2a3b0cabb605009e66600e` passed Base Python job
+`95421634020`, Optional Neuro Readers job `95421633971`, and CI
+`32041540553`.
+
+## 2026-08-17 - MARC2-VR11P Implementation Proof Closeout
+
+- Bound exact implementation `2093ad5` and both green job IDs in the
+  implementation registry.
+- Changed no module, behavior test, tracked implementation document, route,
+  path, resource cap, or authorization boundary.
+- Did not rerun generated qualification and performed zero readiness, ignored-
+  path, private-source, archive, neural, target, model, score, network,
+  hardware, other-project, or claim operations.
+
+Immediate gate: commit, push, and green this proof-only closeout in both jobs.
+Only then may the already-authorized one-shot Stage 2 structural diagnostic
+run.

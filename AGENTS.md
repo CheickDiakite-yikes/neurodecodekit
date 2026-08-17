@@ -268,12 +268,19 @@ and kept every forbidden counter at zero. The clean base suite passes 4,117
 tests with 204 expected skips. `remote_implementation_proof` remains null, so
 `execute` refuses at F01 before readiness or private-path access.
 
-Immediate next gate: commit and push this exact implementation and require both
-remote CI jobs green. Then make one proof-only registry closeout before the
-already-authorized Stage 2 structural read. Do not inspect the fixed private
-source, create real readiness/output state, or run Stage 2 before that proof.
-FW2, CIL1, archive payload, neural data, targets, models, scores, release, and
-scientific claims remain closed.
+After proof-state hardening, exact implementation
+`2093ad542d5043c97e2a3b0cabb605009e66600e` passed Base Python job
+`95421634020`, Optional Neuro Readers job `95421633971`, and CI
+`32041540553`. The implementation registry now binds that proof without
+rerunning qualification or touching a private path. This proof-only closeout
+must itself be committed, pushed, and both jobs green before Stage 2.
+
+Immediate next gate: green the proof-only closeout, then perform the one
+already-authorized registered structural discriminator under the exact machine
+and resource gates. Do not inspect the fixed private source, create real
+readiness/output state, or run Stage 2 before closeout proof. FW2, CIL1, archive
+payload, neural data, targets, models, scores, release, and scientific claims
+remain closed.
 
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-
