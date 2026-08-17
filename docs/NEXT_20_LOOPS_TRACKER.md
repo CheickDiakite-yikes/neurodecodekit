@@ -2825,3 +2825,31 @@ or private reinspection. FW2 and CIL1 remain closed because no real cohort
 identity exists. Next: one separately named artifact-only F03 predicate-
 decomposition and generated-coverage lane, followed only if justified by a new
 all-false Tier C packet for another aggregate-safe structural discriminator.
+
+### MARC2-VR10A - F03 Predicate Decomposition (Preregistered)
+
+VR10A binds 14 exact tracked source, contract, and aggregate-result artifacts
+totaling 453,477 bytes. It performs no private-path operation. The exact VR2
+F03 validator is frozen as 20 leaf predicate classes. Fifteen are excluded by
+committed producer guarantees or the live aggregate count record; five remain
+source-dependent: the 1,024-byte member-name ceiling, suffix-bearing BIDS
+identity, exact lowercase task token, logical companion uniqueness across
+different parent prefixes, and complete four-companion grouping.
+
+The generated-only qualification is frozen at six full-scale cases: one
+success control and one witness for each unresolved class. Canonical and
+reversed order across two complete replays require 24 exact parser/producer/
+VR2/VR6 paths and 29,448 parser-entry visits. Mutations occur before the exact
+parser, refused sources remain unchanged, at least 40 direct refusals must
+pass, and generated output retention is zero.
+
+Ten focused contract tests pass. The future qualification is capped at one
+thread, one worker, one numerical job, 30 seconds, less than 256 MiB peak RSS,
+16 MiB generated input, and 1 MiB aggregate output. All private, archive,
+neural, target, model, score, FW2/CIL1, network, provider, hardware, release,
+retry, and claim authorities remain false.
+
+Next gate: commit, push, and obtain both green CI jobs for this exact
+registration. Only then may Tier B implement and measure the generated witness
+matrix. A new private discriminator remains a separate Tier C packet and fresh
+decision after exact generated implementation and result proof.

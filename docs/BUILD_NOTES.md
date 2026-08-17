@@ -11185,3 +11185,31 @@ Next gate: commit, push, and green the aggregate result record. Then perform
 only separately named artifact-only F03 predicate decomposition and generated
 coverage. VR9P is consumed; no retry, rerun, private reinspection, cohort,
 archive payload, neural, target, model, or score work is open.
+
+## 2026-08-17 - MARC2-VR10A F03 Predicate-Decomposition Registration
+
+- Bound 14 exact committed source, contract, and aggregate-result inputs
+  totaling 453,477 bytes. No private path or private source hash is copied into
+  the registration.
+- Partitioned the exact VR2 F03 validator into 20 leaf predicate classes.
+  Committed producer invariants and the exact 1,025-file/202-directory live
+  counts exclude 15 classes without another private read.
+- Preserved five source-dependent unknowns: member-name UTF-8 length at or
+  below 1,024 bytes, suffix-bearing BIDS identity, exact lowercase task token,
+  unique logical run companion, and complete four-companion run group.
+- Froze six full-scale generated cases: one success control plus one witness
+  per unresolved class. Canonical and reversed order across two complete
+  replays require exactly 24 VR6 calls and 29,448 parser-entry visits.
+- Required mutations before the exact parser only, exact parser and producer
+  traversal, source immutability on refusal, at least 40 direct refusals, zero
+  retained generated output, and all private/scientific counters at zero.
+- Capped the future generated qualification at one thread, one worker, one
+  numerical job, 30 seconds, less than 256 MiB peak RSS, 16 MiB generated
+  input, and 1 MiB aggregate output.
+- Ten focused registration tests pass. This registration made no private,
+  archive, neural, target, model, training, prediction, score, network,
+  provider, hardware, FW2/CIL1, release, or claim operation.
+
+Next gate: commit, push, and obtain both green CI jobs for this exact
+registration. Only then may the generated-only Tier B implementation begin.
+Any new private read remains a separately frozen Tier C packet and decision.

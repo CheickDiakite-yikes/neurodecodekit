@@ -1,0 +1,367 @@
+{
+  "schema_name": "neurodecodekit.marc2_f03_predicate_decomposition_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "MARC-2-VR10A-F03-predicate-decomposition-generated-coverage-v0",
+  "lane_id": "MARC2-VR10A",
+  "recorded_at_local": "2026-08-17",
+  "status": "preregistered_artifact_only_generated_only_no_private_access",
+  "objective": "Decompose the observed aggregate VR2 F03 class into exact committed-code leaf predicates, exclude only leaves guaranteed by committed producer or aggregate evidence, and generated-qualify every remaining source-dependent class through the exact parser producer VR2 and VR6 path.",
+  "fixed_inputs": [
+    {
+      "role": "central_directory_parser_module",
+      "path": "src/neurodecodekit/datasets/marc1_central_directory_audit.py",
+      "bytes": 79296,
+      "sha256": "db8b6975c81d4afe0a5ede0126956f4113159c98b3975cbded4ad322bce23de6"
+    },
+    {
+      "role": "central_directory_live_aggregate_result",
+      "path": "registries/marc1_freewill_central_directory_live_result.v0.json",
+      "bytes": 6118,
+      "sha256": "fee969818b4e3e2ef7aee86096ad676c9bd70f80d19f2fd6dbe0e8069175257b"
+    },
+    {
+      "role": "freewill_selector_module",
+      "path": "src/neurodecodekit/datasets/marc2_freewill_prefix_selection.py",
+      "bytes": 72691,
+      "sha256": "86fa30fbd1caed735f0fb2e627144482a2bb8e033567bb3794e3f05508005c97"
+    },
+    {
+      "role": "freewill_selector_contract",
+      "path": "registries/marc2_freewill_prefix_selection_contract.v0.json",
+      "bytes": 15821,
+      "sha256": "dfe614cd7ec27c54c4f03848e3878c714222db043f501b9b07e57c7dc9f5f702"
+    },
+    {
+      "role": "source_validity_module",
+      "path": "src/neurodecodekit/datasets/marc2_source_validity_eligibility_repair.py",
+      "bytes": 55503,
+      "sha256": "cef7bb738ceee86847067cec788e442aa5022c8f573a814638ef3d48b6ec3587"
+    },
+    {
+      "role": "source_validity_contract",
+      "path": "registries/marc2_source_validity_eligibility_repair_contract.v0.json",
+      "bytes": 13285,
+      "sha256": "84f44f8bc43a4ee56e256a1546cbc1fae3252f2f320db7064602fe72b44463e9"
+    },
+    {
+      "role": "VR2_validator_module",
+      "path": "src/neurodecodekit/datasets/marc2_live_domain_eligibility_adapter.py",
+      "bytes": 57528,
+      "sha256": "061b893180e01116dbd962826384b4071d9e952b78b593b4743f8c301e1cbbc3"
+    },
+    {
+      "role": "VR2_contract",
+      "path": "registries/marc2_live_domain_eligibility_adapter_contract.v0.json",
+      "bytes": 15306,
+      "sha256": "c7c94406c7b3f483bb2ecbbb42b131756d178f288eedc31ce48e9383180a0a33"
+    },
+    {
+      "role": "VR6_relay_module",
+      "path": "src/neurodecodekit/datasets/marc2_dynamic_live_selection.py",
+      "bytes": 55659,
+      "sha256": "c3b0d056891f7708b87e8027d36ebd14830055cdeac8e652a681dd4592b4a104"
+    },
+    {
+      "role": "VR6_implementation_record",
+      "path": "registries/marc2_dynamic_live_selection_implementation.v0.json",
+      "bytes": 6463,
+      "sha256": "0a08caa40d3bb46f6bea1ef8c32b6451d8066dab40935274b7ab1692dee78fdc"
+    },
+    {
+      "role": "VR8B_exact_generated_relay_module",
+      "path": "src/neurodecodekit/datasets/marc2_generated_diagnostic_relay.py",
+      "bytes": 51618,
+      "sha256": "162c5b15b0a4583001520fd6d70ade9ec4c64421f8c0f46f28607129ae94cc77"
+    },
+    {
+      "role": "VR8B_result_record",
+      "path": "registries/marc2_generated_diagnostic_relay_result.v0.json",
+      "bytes": 10429,
+      "sha256": "b0e39cb127c3f96d11e606370f807ab2d96fbef03a74e2fed8637a668f60795c"
+    },
+    {
+      "role": "VR9P_result_document",
+      "path": "docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_RESULT.md",
+      "bytes": 5162,
+      "sha256": "03ae471e5fb75db862837b995a506d26f777c8bb15361bf7d19ce913d5d896ab"
+    },
+    {
+      "role": "VR9P_result_record",
+      "path": "registries/marc2_two_layer_private_diagnostic_result.v0.json",
+      "bytes": 8598,
+      "sha256": "af5561535a917958b7279afa05581f904908c824ccbacfd4cc4d1c4d0365f29f"
+    }
+  ],
+  "fixed_input_count": 14,
+  "fixed_input_bytes": 453477,
+  "observed_route_binding": {
+    "VR9P_route": "MARC2VR9P-R1",
+    "outer_VR6_route": "MARC2VR6-F02",
+    "nested_VR2_route": "MARC2VR2-F03",
+    "exact_failed_predicate_available": false,
+    "failed_private_value_available": false,
+    "private_row_path_identity_candidate_selection_or_cohort_available": false,
+    "private_result_reinspection_allowed": false
+  },
+  "F03_leaf_predicates": [
+    {
+      "predicate_id": "F03P01_row_object_and_exact_field_set",
+      "status": "excluded_by_committed_evidence",
+      "evidence": "The exact central-directory producer emits one fixed eleven-field record shape consumed unchanged by VR2.",
+      "private_observation": false
+    },
+    {
+      "predicate_id": "F03P02_member_name_string_and_nonempty",
+      "status": "excluded_by_committed_evidence",
+      "evidence": "The exact parser requires nonzero name bytes and strict decoding before constructing the producer record.",
+      "private_observation": false
+    },
+    {
+      "predicate_id": "F03P03_member_name_UTF8_length_at_most_1024",
+      "status": "unresolved_source_dependent",
+      "evidence": "The exact parser accepts ZIP names above 1024 bytes while the selector imposes a 1024-byte UTF-8 ceiling; no committed aggregate maximum is available.",
+      "private_observation": false
+    },
+    {
+      "predicate_id": "F03P04_member_name_NFC",
+      "status": "excluded_by_committed_evidence",
+      "evidence": "The exact parser rejects every non-NFC member name before producer output.",
+      "private_observation": false
+    },
+    {
+      "predicate_id": "F03P05_safe_relative_prefix_and_separators",
+      "status": "excluded_by_committed_evidence",
+      "evidence": "The exact parser rejects absolute, drive-prefixed, backslash, and repeated-separator paths.",
+      "private_observation": false
+    },
+    {
+      "predicate_id": "F03P06_no_control_characters",
+      "status": "excluded_by_committed_evidence",
+      "evidence": "The exact parser rejects Unicode control-category characters before producer output.",
+      "private_observation": false
+    },
+    {
+      "predicate_id": "F03P07_no_empty_dot_or_parent_components",
+      "status": "excluded_by_committed_evidence",
+      "evidence": "The exact parser compares raw POSIX components and rejects empty, dot, and parent components.",
+      "private_observation": false
+    },
+    {
+      "predicate_id": "F03P08_lowercase_eight_hex_CRC",
+      "status": "excluded_by_committed_evidence",
+      "evidence": "The producer formats the parsed unsigned CRC as exactly eight lowercase hexadecimal characters.",
+      "private_observation": false
+    },
+    {
+      "predicate_id": "F03P09_nonboolean_integer_fields",
+      "status": "excluded_by_committed_evidence",
+      "evidence": "All integer fields originate from binary struct unpacking or integer arithmetic in the exact parser.",
+      "private_observation": false
+    },
+    {
+      "predicate_id": "F03P10_nonnegative_sizes",
+      "status": "excluded_by_committed_evidence",
+      "evidence": "Compressed and uncompressed sizes originate from unsigned ZIP fields and bounded ZIP64 decoding.",
+      "private_observation": false
+    },
+    {
+      "predicate_id": "F03P11_boolean_ZIP64_declaration",
+      "status": "excluded_by_committed_evidence",
+      "evidence": "The exact parser emits the ZIP64-used value as a Boolean returned by its resolver.",
+      "private_observation": false
+    },
+    {
+      "predicate_id": "F03P12_unencrypted_method_zero_or_eight",
+      "status": "excluded_by_committed_evidence",
+      "evidence": "The exact parser rejects encryption and any compression method other than zero or eight.",
+      "private_observation": false
+    },
+    {
+      "predicate_id": "F03P13_exact_directory_shape",
+      "status": "excluded_by_committed_evidence",
+      "evidence": "The exact parser requires directory slash, zero sizes, and stored method before emitting a directory row.",
+      "private_observation": false
+    },
+    {
+      "predicate_id": "F03P14_exact_regular_file_shape",
+      "status": "excluded_by_committed_evidence",
+      "evidence": "The exact parser classifies supported regular files and rejects a regular member ending in slash.",
+      "private_observation": false
+    },
+    {
+      "predicate_id": "F03P15_suffix_bearing_BIDS_identity",
+      "status": "unresolved_source_dependent",
+      "evidence": "The parser validates generic safe POSIX paths but does not require selector-specific subject session filename run or suffix agreement.",
+      "private_observation": false
+    },
+    {
+      "predicate_id": "F03P16_exact_freewill_task_token",
+      "status": "unresolved_source_dependent",
+      "evidence": "The parser does not constrain task entity spelling or case; VR2 requires the exact lowercase freewill token.",
+      "private_observation": false
+    },
+    {
+      "predicate_id": "F03P17_unique_full_member_name",
+      "status": "excluded_by_committed_evidence",
+      "evidence": "The exact parser rejects a repeated normalized full member name and the live central-directory result passed.",
+      "private_observation": false
+    },
+    {
+      "predicate_id": "F03P18_unique_logical_run_companion",
+      "status": "unresolved_source_dependent",
+      "evidence": "Distinct full paths under different parent prefixes can map to the same selector subject session run and suffix key.",
+      "private_observation": false
+    },
+    {
+      "predicate_id": "F03P19_complete_four_companion_set",
+      "status": "unresolved_source_dependent",
+      "evidence": "The committed aggregate counts do not disclose whether every selector-recognized run has exactly all four required suffixes.",
+      "private_observation": false
+    },
+    {
+      "predicate_id": "F03P20_exact_regular_and_directory_counts",
+      "status": "excluded_by_committed_evidence",
+      "evidence": "The green live aggregate records exactly 1025 regular files and 202 directories, matching the exact VR2 contract.",
+      "private_observation": false
+    }
+  ],
+  "partition_summary": {
+    "leaf_predicates": 20,
+    "excluded_by_committed_evidence": 15,
+    "unresolved_source_dependent": 5,
+    "private_observations": 0,
+    "causal_claims": 0
+  },
+  "generated_witness_matrix": {
+    "cases": [
+      {
+        "case": "control_success",
+        "expected_outer_route": "VR6_success",
+        "expected_nested_route": null
+      },
+      {
+        "case": "overlong_member_name",
+        "predicate_id": "F03P03_member_name_UTF8_length_at_most_1024",
+        "expected_outer_route": "MARC2VR6-F02",
+        "expected_nested_route": "MARC2VR2-F03"
+      },
+      {
+        "case": "suffix_bearing_BIDS_identity",
+        "predicate_id": "F03P15_suffix_bearing_BIDS_identity",
+        "expected_outer_route": "MARC2VR6-F02",
+        "expected_nested_route": "MARC2VR2-F03"
+      },
+      {
+        "case": "task_token_case",
+        "predicate_id": "F03P16_exact_freewill_task_token",
+        "expected_outer_route": "MARC2VR6-F02",
+        "expected_nested_route": "MARC2VR2-F03"
+      },
+      {
+        "case": "logical_companion_alias",
+        "predicate_id": "F03P18_unique_logical_run_companion",
+        "expected_outer_route": "MARC2VR6-F02",
+        "expected_nested_route": "MARC2VR2-F03"
+      },
+      {
+        "case": "incomplete_companion_set",
+        "predicate_id": "F03P19_complete_four_companion_set",
+        "expected_outer_route": "MARC2VR6-F02",
+        "expected_nested_route": "MARC2VR2-F03"
+      }
+    ],
+    "orders": [
+      "canonical",
+      "reversed"
+    ],
+    "replays": 2,
+    "required_paths": 24,
+    "required_exact_parser_entry_visits": 29448,
+    "required_VR6_calls": 24,
+    "control_success_paths": 4,
+    "nested_F03_paths": 20,
+    "mutation_before_exact_parser_required": true,
+    "mutation_after_parser_or_producer_allowed": false,
+    "refused_source_immutability_required": true,
+    "deterministic_replay_required": true
+  },
+  "acceptance_gates": [
+    "all_fixed_inputs_match_size_and_SHA256",
+    "AST_inventory_finds_exactly_20_F03_leaf_predicates",
+    "exactly_15_leaf_predicates_excluded_by_committed_evidence",
+    "exactly_five_frozen_source_dependent_predicates_remain",
+    "all_24_exact_parser_producer_paths_replay_identically",
+    "four_control_paths_succeed_and_20_witness_paths_relay_outer_F02_nested_F03",
+    "all_witness_mutations_precede_exact_parser",
+    "refused_VR6_calls_do_not_mutate_source",
+    "at_least_40_direct_refusals_pass",
+    "retained_generated_output_is_zero",
+    "runtime_RSS_input_and_output_caps_pass",
+    "all_private_scientific_other_project_retry_and_claim_counters_are_zero"
+  ],
+  "direct_refusal_minimum": 40,
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "generated_input_bytes": 16777216,
+    "aggregate_output_bytes": 1048576,
+    "retained_generated_output_bytes": 0,
+    "network_bytes": 0,
+    "private_or_Git_ignored_bytes": 0
+  },
+  "aggregate_output_firewall": {
+    "case_predicate_status_route_digest_count_resource_warning_and_zero_counter_allowed": true,
+    "reason_exception_failed_value_source_row_member_path_identity_private_hash_candidate_selection_or_cohort_allowed": false,
+    "signal_event_target_label_response_quality_channel_geometry_prediction_or_score_allowed": false
+  },
+  "authorization_state": {
+    "private_manifest_or_consumed_root_access_authorized_now": false,
+    "archive_header_member_or_payload_access_authorized_now": false,
+    "signal_event_target_label_or_human_content_access_authorized_now": false,
+    "training_inference_prediction_freeze_delivery_or_score_authorized_now": false,
+    "network_download_provider_or_language_model_authorized_now": false,
+    "stream_device_or_hardware_authorized_now": false,
+    "F03_rule_relaxation_or_private_value_inference_authorized_now": false,
+    "MARC2_FW2_or_CIL1_authorized_now": false,
+    "release_publication_or_claim_upgrade_authorized_now": false
+  },
+  "operation_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_VR9P_path_or_output_operations": 0,
+    "network_or_public_request_operations": 0,
+    "archive_local_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "derivative_cache_feature_split_or_NeuroToken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "provider_language_model_stream_device_or_hardware_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "retry_rerun_release_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "registration_artifacts": {
+    "document_path": "docs/MARC_2_F03_PREDICATE_DECOMPOSITION_PREREGISTRATION.md",
+    "document_sha256": "ed8935541af739696d55b6e6588afcaf4f36f950aa38f3a638a7ee6e243019c6",
+    "test_path": "tests/test_marc2_f03_predicate_decomposition_contract.py",
+    "test_sha256": "fa97a529ee20c4a4ae0455513677cf2b0ad6804904767480403bb8715d77264e"
+  },
+  "next_gate": {
+    "generated_implementation_allowed_after_registration_green_under_Tier_B": true,
+    "implementation_and_result_must_be_remote_green_before_new_Tier_C_request": true,
+    "private_read_or_real_executor_allowed": false,
+    "future_private_read_requires_new_frozen_packet_and_fresh_Tier_C_decision": true,
+    "consumed_VR9P_reuse_allowed": false,
+    "MARC2_FW2_or_CIL1_allowed": false
+  },
+  "claim_boundary": {
+    "engineering_capability_sought": "Distinguish all still-plausible F03 structural mechanisms with full-scale exact-parser generated witnesses before choosing a prospective repair or aggregate discriminator.",
+    "scientific_claim_not_established": "Artifact-only code analysis and generated ZIP metadata establish no neural effect decoding accuracy language decoding live decoding or thought-to-text capability."
+  },
+  "warnings": [
+    "The 15 excluded predicates are code and aggregate implications, not private row observations.",
+    "The five unresolved classes are a complete frozen hypothesis set, not claims about which class caused VR9P F03.",
+    "Generated witnesses may qualify a future aggregate discriminator but cannot authorize or substitute for private evidence."
+  ]
+}

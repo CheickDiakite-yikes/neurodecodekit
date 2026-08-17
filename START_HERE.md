@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR9P Consumed F03 Diagnosis
+## Current Frontier: MARC2-VR10A F03 Predicate Decomposition
 
 Read `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`, then
 `docs/MARC_2_VR2_REFUSAL_LOCALIZATION_PREREGISTRATION.md` and
@@ -131,6 +131,18 @@ VR9P is consumed with no retry or private reinspection. FW2 and CIL1 remain
 closed because no cohort exists. Next perform only a separately named
 artifact-only F03 predicate-decomposition and generated-coverage pass. Any
 further private read needs a new immutable packet and fresh Tier C decision.
+
+That pass is now preregistered as `MARC2-VR10A`. Read
+`docs/MARC_2_F03_PREDICATE_DECOMPOSITION_PREREGISTRATION.md` and its contract.
+The exact F03 class contains 20 leaf predicates. Fifteen are excluded by
+committed producer invariants or the live aggregate counts; five remain
+unresolved: maximum path length, suffix-bearing BIDS identity, exact task
+token, logical companion uniqueness, and four-companion completeness. The
+contract freezes a six-case full-scale generated witness matrix, canonical and
+reversed order, two exact replays, 24 VR6 calls, 29,448 parser-entry visits,
+and at least 40 refusals. It is artifact-only and generated-only. No unresolved
+predicate is asserted to be the private cause, and no private, archive, neural,
+target, model, score, FW2/CIL1, or scientific operation is authorized.
 
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.

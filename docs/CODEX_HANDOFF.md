@@ -5572,3 +5572,29 @@ CIL1 remain ineligible because no cohort exists. Immediate next safe task:
 commit, push, and green this aggregate closeout, then freeze a separately named
 artifact-only F03 predicate-decomposition and generated-coverage lane. Any new
 private read requires another immutable Tier C packet and fresh decision.
+
+## 2026-08-17 MARC2-VR10A Registration Handoff
+
+Read `docs/MARC_2_F03_PREDICATE_DECOMPOSITION_PREREGISTRATION.md`,
+`registries/marc2_f03_predicate_decomposition_contract.v0.json`, and
+`tests/test_marc2_f03_predicate_decomposition_contract.py`.
+
+VR10A binds 14 tracked inputs totaling 453,477 bytes and decomposes F03 into
+exactly 20 leaf predicate classes. Fifteen are excluded by committed producer
+guarantees or the exact live aggregate counts. Five remain source-dependent:
+the 1,024-byte path ceiling, suffix-bearing BIDS identity, exact lowercase task
+token, logical companion uniqueness across distinct parent prefixes, and
+four-companion completeness. They are unresolved possibilities, not private
+cause findings.
+
+The future generated qualification is frozen at six full-scale cases in two
+orders and two replays: 24 exact parser/producer/VR2/VR6 paths, 29,448 parser
+entry visits, at least 40 direct refusals, zero retained output, and one-thread
+resource caps. Ten focused contract tests pass.
+
+Immediate gate: commit, push, and require Base Python and Optional Neuro
+Readers green for this exact registration. Only then implement the
+dependency-free generated witness matrix. Do not touch any VR9P private source,
+certificate, marker, output root, ignored MARC2 path, archive member, signal,
+event, target, model, prediction, score, FW2/CIL1, provider, hardware, or other
+project. Any later private discriminator remains a fresh Tier C packet.

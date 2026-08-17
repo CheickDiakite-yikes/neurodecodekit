@@ -9188,3 +9188,35 @@ Claim decision: this is an engineering failure-localization result only. No
 neural payload, target, model, prediction, or score was accessed, so it proves
 no neural effect, decoding accuracy, language decoding, live decoding, or
 thought-to-text capability.
+
+## 0283 - Freeze F03 Into Twenty Leaf Predicates Before Any Repair
+
+Eligibility decision: begin only after VR9P result closeout `e7883d4` passed
+Base Python job `95288426925`, Optional Neuro Readers job `95288426850`, and CI
+`31996295214`. Treat VR9P and all of its private state as consumed.
+
+Evidence decision: bind 14 exact committed inputs totaling 453,477 bytes and
+derive only logical implications from tracked code and aggregate records. Do
+not open, stat, hash, parse, or infer from a private or ignored path.
+
+Taxonomy decision: freeze exactly 20 F03 leaf predicates. Mark 15 excluded by
+committed producer guarantees or exact live entry-kind counts. Preserve five
+as unresolved: maximum UTF-8 member-name length, suffix-bearing BIDS identity,
+exact lowercase task token, logical companion uniqueness, and four-companion
+completeness. Unresolved does not mean observed cause.
+
+Qualification decision: after this registration is remotely green, require a
+six-case full-scale generated matrix through the exact parser, producer, VR2,
+and VR6 paths. Run canonical and reversed order across two complete replays for
+24 calls and 29,448 parser-entry visits, with at least 40 direct refusals and
+zero retained generated output.
+
+Resource decision: cap the future generated pass at one thread, one worker,
+one numerical job, 30 seconds, less than 256 MiB peak RSS, 16 MiB generated
+input, and 1 MiB aggregate output.
+
+Boundary decision: VR10A is artifact-only and generated-only. It authorizes no
+private access, consumed-state reuse, archive payload, signal, event, target,
+model, training, prediction, score, FW2/CIL1, network, provider, hardware,
+release, or scientific claim. Any later private discriminator requires a new
+green packet and fresh Tier C decision.

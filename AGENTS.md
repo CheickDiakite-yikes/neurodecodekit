@@ -45,8 +45,8 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
-The latest consumed evidence lane is `MARC2-VR7P`; its result is summarized
-below. For the predecessor diagnosis, read
+The latest consumed evidence lane is `MARC2-VR9P`; its result is summarized
+near the end of this frontier. To reconstruct its predecessors, read
 `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`,
 `docs/MARC_2_VR2_REFUSAL_LOCALIZATION_PREREGISTRATION.md`, and
 `docs/MARC_2_VR2_REFUSAL_LOCALIZATION_IMPLEMENTATION.md` with their
@@ -183,6 +183,22 @@ payload, target, model, prediction, or score was accessed; FW2 and CIL1 remain
 ineligible. The next safe task is a separately named artifact-only F03
 predicate-decomposition and generated-coverage lane. Any further private read
 requires a new frozen packet and fresh Tier C decision.
+
+That next lane is now frozen as `MARC2-VR10A`. Read
+`docs/MARC_2_F03_PREDICATE_DECOMPOSITION_PREREGISTRATION.md` and
+`registries/marc2_f03_predicate_decomposition_contract.v0.json`. Static
+analysis partitions the exact F03 validator into 20 leaf predicate classes.
+Committed producer guarantees and the live aggregate count record exclude 15;
+five remain source-dependent: the 1,024-byte path ceiling, suffix-bearing BIDS
+identity, exact lowercase task token, logical companion uniqueness across
+distinct parent prefixes, and four-companion completeness. These are possible
+mechanisms, not claims about the consumed private source. After this exact
+registration is committed, pushed, and both CI jobs are green, Tier B may
+implement one dependency-free six-case generated matrix through the exact
+parser, producer, VR2, and VR6 paths. Until then, implementation is closed.
+VR10A authorizes no private read, consumed-state reuse, archive payload,
+signal, event, target, model, training, prediction, score, FW2/CIL1, network,
+provider, hardware, release, or scientific claim.
 
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-
