@@ -9252,3 +9252,25 @@ selection, or cohort from generated behavior. No private, archive, neural,
 target, model, prediction, score, FW2/CIL1, network, hardware, release, or
 scientific authority opens. A future aggregate-safe discriminator may be
 designed only after this exact implementation/result is remotely green.
+
+## 0285 - Close VR10A On Remote Proof And Keep Private Access Closed
+
+Proof decision: accept exact implementation
+`84103a5fab86b7c7c8d3cf3af00c9efe3457470c` after Base Python job
+`95295212461`, Optional Neuro Readers job `95295212440`, and CI `31998811585`
+all passed.
+
+Non-reexecution decision: record remote proof without repeating the generated
+qualification or touching any private, ignored, consumed, archive, neural,
+target, model, prediction, score, network, hardware, or other-project surface.
+
+Next-design decision: Tier A/B may freeze and generated-qualify a separately
+named aggregate-safe five-route discriminator over the exact P03, P15, P16,
+P18, and P19 witnesses. Its output ceiling is one predicate-class code plus
+aggregate counts, digests, resources, warnings, and zero counters.
+
+Boundary decision: remote green proves implementation integrity, not private
+causation or science. No private invocation, F03 relaxation, VR9P reuse, FW2,
+CIL1, neural payload, target, model, score, release, or claim is authorized.
+Any future private discriminator requires a new green Tier C packet and fresh
+decision after the generated discriminator itself is remotely green.

@@ -4,7 +4,7 @@
   "implementation_id": "MARC-2-VR10A-F03-predicate-decomposition-implementation-v0",
   "lane_id": "MARC2-VR10A",
   "recorded_at_local": "2026-08-17",
-  "status": "exact_generated_implementation_qualified_locally_remote_proof_pending",
+  "status": "exact_generated_implementation_and_result_remotely_green",
   "proof_posture": "artifact_only_tracked_code_and_generated_structural_interface_no_private_or_scientific_value",
   "green_registration_proof": {
     "commit": "80175a7e6483a6d156b23a24f9503a9ae32e7201",
@@ -30,14 +30,14 @@
     {
       "role": "implementation_document",
       "path": "docs/MARC_2_F03_PREDICATE_DECOMPOSITION_IMPLEMENTATION.md",
-      "bytes": 5035,
-      "sha256": "36b900e246cbfd5775df268bf3235ef52a61be9e693b31d1002bffd20c9994a9"
+      "bytes": 5242,
+      "sha256": "dd4439acd8f22ab56f1b35e02bf97a36ab616c66f0fc4a1b8a106cf2c0b88000"
     },
     {
       "role": "result_document",
       "path": "docs/MARC_2_F03_PREDICATE_DECOMPOSITION_RESULT.md",
-      "bytes": 3599,
-      "sha256": "f7f727e4b9a669c37b179da98d52ec7e0e6a71ab0ab7e7014e6a3405fb630c65"
+      "bytes": 3657,
+      "sha256": "da313cdb1c9afa2504c41a8c2745861cdb75f98225eddf94f266680c4ef5d510"
     }
   ],
   "implementation_surface": {
@@ -125,14 +125,14 @@
     "complete_local_runtime_seconds": 178.505,
     "complete_local_suite_passed": true,
     "complete_local_suite_pending": false,
-    "remote_CI_pending": true
+    "remote_CI_pending": false
   },
   "remote_implementation_proof": {
-    "commit": null,
-    "CI_run_id": null,
-    "base_python_job_id": null,
-    "optional_neuro_job_id": null,
-    "both_required_jobs_green": false
+    "commit": "84103a5fab86b7c7c8d3cf3af00c9efe3457470c",
+    "CI_run_id": 31998811585,
+    "base_python_job_id": 95295212461,
+    "optional_neuro_job_id": 95295212440,
+    "both_required_jobs_green": true
   },
   "access_counters": {
     "private_or_Git_ignored_path_operations": 0,
@@ -148,7 +148,7 @@
     "operations_on_other_projects": 0
   },
   "next_gate": {
-    "exact_implementation_and_result_commit_push_and_both_jobs_green_required": true,
+    "exact_implementation_and_result_commit_push_and_both_jobs_green_satisfied": true,
     "future_aggregate_safe_five_route_discriminator_design_allowed_after_green": true,
     "future_private_discriminator_authorized": false,
     "future_private_read_requires_new_Tier_C_packet_and_fresh_decision": true,

@@ -11242,3 +11242,21 @@ Next gate: commit, push, and obtain both green CI jobs for this exact
 implementation and result. Only after that proof may Tier A/B freeze a new
 aggregate-safe five-route discriminator. Any private invocation remains a new
 Tier C packet and fresh decision.
+
+## 2026-08-17 - MARC2-VR10A Remote Proof Closeout
+
+- Exact implementation `84103a5fab86b7c7c8d3cf3af00c9efe3457470c`
+  passed Base Python job `95295212461`, Optional Neuro Readers job
+  `95295212440`, and CI `31998811585`.
+- No generated qualification, private read, archive operation, model run,
+  target access, score, or other-project operation was repeated for proof
+  closeout.
+- Updated only proof state and public handoff records. The measured
+  `MARC2VR10A-G1` route, five-witness matrix, resources, and zero counters are
+  unchanged.
+
+Next safe work: freeze a separately named artifact-only and generated-only
+five-route discriminator that distinguishes P03, P15, P16, P18, and P19 while
+publishing no value, row, path, identity, selection, or cohort. Any later
+private invocation remains a fresh Tier C packet and decision after that exact
+implementation is remotely green.

@@ -2879,3 +2879,14 @@ implementation and result. After green proof, freeze a separately named
 aggregate-safe five-route discriminator. The generated matrix does not identify
 the private cause, and any private invocation remains a new Tier C packet and
 fresh decision.
+
+Exact implementation `84103a5` then passed Base Python job `95295212461`,
+Optional Neuro Readers job `95295212440`, and CI `31998811585`. VR10A is
+complete as an artifact-only generated engineering lane. No qualification or
+private operation was repeated for proof closeout.
+
+Next: preregister and generated-qualify a separately named five-route
+discriminator that maps the exact witnesses to P03, P15, P16, P18, or P19
+without publishing values, rows, paths, identities, selections, or cohorts.
+Private access remains closed until a later exact implementation is remotely
+green and a new Tier C packet receives a fresh decision.

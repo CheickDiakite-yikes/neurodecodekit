@@ -29,7 +29,7 @@ class Marc2F03PredicateDecompositionResultTests(unittest.TestCase):
             IMPLEMENTATION_PATH.read_text(encoding="utf-8")
         )
 
-    def test_result_identity_and_remote_pending_status_are_honest(self):
+    def test_result_identity_and_remote_green_status_are_honest(self):
         self.assertEqual(
             self.result["schema_name"],
             "neurodecodekit.marc2_f03_predicate_decomposition_result",
@@ -39,14 +39,17 @@ class Marc2F03PredicateDecompositionResultTests(unittest.TestCase):
         self.assertEqual(self.result["route"], "MARC2VR10A-G1")
         self.assertEqual(
             self.result["status"],
-            "completed_artifact_only_generated_F03_decomposition_remote_proof_pending",
+            "completed_artifact_only_generated_F03_decomposition_remotely_green",
         )
-        self.assertTrue(self.result["verification"]["remote_CI_pending"])
-        self.assertFalse(
-            self.implementation["remote_implementation_proof"][
-                "both_required_jobs_green"
-            ]
+        self.assertFalse(self.result["verification"]["remote_CI_pending"])
+        proof = self.implementation["remote_implementation_proof"]
+        self.assertEqual(
+            proof["commit"], "84103a5fab86b7c7c8d3cf3af00c9efe3457470c"
         )
+        self.assertEqual(proof["CI_run_id"], 31_998_811_585)
+        self.assertEqual(proof["base_python_job_id"], 95_295_212_461)
+        self.assertEqual(proof["optional_neuro_job_id"], 95_295_212_440)
+        self.assertTrue(proof["both_required_jobs_green"])
 
     def test_green_registration_precedes_implementation(self):
         proof = self.result["green_registration_proof"]
@@ -143,7 +146,7 @@ class Marc2F03PredicateDecompositionResultTests(unittest.TestCase):
         self.assertIn("Five remain source-dependent", result_text)
         self.assertIn("does not identify which of the five", result_text)
         self.assertIn("Scientific claim not established", result_text)
-        self.assertIn("remote implementation proof pending", implementation_text)
+        self.assertIn("remotely green", implementation_text)
         self.assertIn("No private path", implementation_text)
         self.assertIn("Scientific claim not established", implementation_text)
 

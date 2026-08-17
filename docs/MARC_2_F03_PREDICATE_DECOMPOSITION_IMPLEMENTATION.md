@@ -4,8 +4,7 @@ Date: 2026-08-17
 
 Lane: `MARC2-VR10A`
 
-Status: **Exact artifact-only generated implementation qualified locally;
-remote implementation proof pending**
+Status: **Exact artifact-only generated implementation remotely green**
 
 Machine implementation record:
 `registries/marc2_f03_predicate_decomposition_implementation.v0.json`
@@ -99,6 +98,10 @@ isolation, thread/resource drift, and the no-path CLI surface. The complete
 local suite passes 4,042 tests with 204 expected skips and zero failures in
 178.505 seconds under the one-thread environment.
 
+Exact implementation `84103a5fab86b7c7c8d3cf3af00c9efe3457470c`
+subsequently passed Base Python job `95295212461`, Optional Neuro Readers job
+`95295212440`, and CI `31998811585` without another generated qualification.
+
 ## Claim Boundary
 
 Engineering capability added: NeuroDecodeKit can now enumerate and generated-
@@ -111,8 +114,8 @@ language decoding, live decoding, or thought-to-text capability.
 
 ## Next Gate
 
-Commit and push this exact implementation and result, then require Base Python
-and Optional Neuro Readers green. Only after that proof may Tier A/B freeze a
-new aggregate-safe five-route discriminator. Any private read remains a
-separately named all-false Tier C packet and fresh decision. VR9P remains
-consumed and must not be reused or inspected.
+The exact implementation and result are remotely green. Tier A/B may freeze a
+new aggregate-safe five-route discriminator and qualify it on the existing
+generated witnesses. Any private read remains a separately named all-false
+Tier C packet and fresh decision after that new implementation is itself
+remotely green. VR9P remains consumed and must not be reused or inspected.

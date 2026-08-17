@@ -4,8 +4,7 @@ Date: 2026-08-17
 
 Route: `MARC2VR10A-G1`
 
-Status: **Artifact-only and generated-only qualification passed locally;
-remote implementation proof pending**
+Status: **Artifact-only and generated-only qualification remotely green**
 
 Machine result:
 `registries/marc2_f03_predicate_decomposition_result.v0.json`
@@ -72,11 +71,13 @@ closed because no real cohort identity exists.
 
 ## Disposition
 
-Commit, push, and remotely green this exact implementation and result. The
-next safe engineering lane is a separately frozen aggregate-safe discriminator
-that emits one of the five predicate-class routes without values or identities.
-Any later private invocation still requires a new immutable Tier C packet and
-fresh decision; this result grants no such authority.
+Exact implementation `84103a5fab86b7c7c8d3cf3af00c9efe3457470c` passed Base
+Python job `95295212461`, Optional Neuro Readers job `95295212440`, and CI
+`31998811585`. The next safe engineering lane is a separately frozen
+aggregate-safe discriminator that emits one of the five predicate-class routes
+without values or identities. Any later private invocation still requires a
+new immutable Tier C packet and fresh decision; this result grants no such
+authority.
 
 Engineering capability added: every still-plausible F03 mechanism now has an
 exact full-scale generated witness and deterministic two-layer route proof.

@@ -5624,3 +5624,16 @@ which predicate caused private F03, and it authorizes no consumed-state reuse,
 private path, archive payload, neural signal, target, model, prediction, score,
 FW2/CIL1, provider, hardware, release, or claim upgrade. Keep the unrelated
 tracker inspection NDJSON untouched.
+
+Remote proof is now complete. Exact implementation
+`84103a5fab86b7c7c8d3cf3af00c9efe3457470c` passed Base Python job
+`95295212461`, Optional Neuro Readers job `95295212440`, and CI `31998811585`.
+No generated or private operation was repeated for this proof record.
+
+Immediate next safe task: preregister a separately named artifact-only and
+generated-only five-route discriminator over the green VR10A witnesses. It may
+publish only one predicate-class code plus aggregate counts and digests. It may
+not emit a reason, value, row, path, identity, selection, or cohort, and it may
+not access VR9P or any private/ignored path. Any eventual private execution is
+a new Tier C packet and fresh decision after the discriminator implementation
+and generated result are remotely green.
