@@ -1,0 +1,177 @@
+{
+  "schema_name": "neurodecodekit.marc2_generated_diagnostic_relay_implementation",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC2-VR8B",
+  "implementation_id": "MARC-2-VR8B-full-scale-generated-diagnostic-relay-implementation-v0",
+  "recorded_at_local": "2026-08-16",
+  "status": "generated_only_implementation_and_measured_qualification_complete_remote_proof_pending",
+  "proof_posture": "generated_structural_interface_qualification_only_no_private_or_scientific_value",
+  "green_registration_proof": {
+    "commit": "5607fe895faaacce80bdd14474d211b09d1656d4",
+    "CI_run_id": 31987093865,
+    "base_python_job_id": 95263869003,
+    "optional_neuro_job_id": 95263869149,
+    "both_required_jobs_green_before_implementation": true,
+    "contract_sha256": "1ac4eecef15621fb3c97a9a26794641564f0c34ed2ba6f012d3ee6e6c89674db"
+  },
+  "tracked_implementation_artifacts": [
+    {
+      "path": "src/neurodecodekit/datasets/marc2_generated_diagnostic_relay.py",
+      "bytes": 51618,
+      "sha256": "162c5b15b0a4583001520fd6d70ade9ec4c64421f8c0f46f28607129ae94cc77"
+    },
+    {
+      "path": "tests/test_marc2_generated_diagnostic_relay.py",
+      "bytes": 11758,
+      "sha256": "d3e2983f7f226decd8b651cac51e4e8a66ac6a92dda9d82b2bbb49d2b38af2fe"
+    },
+    {
+      "path": "tests/test_marc2_generated_diagnostic_relay_contract.py",
+      "bytes": 6636,
+      "sha256": "7447f6082df9dbff4d4b0c5d006512e9ec7a2df19ca9a828e69a606a3648b2c8"
+    },
+    {
+      "path": "docs/MARC_2_GENERATED_DIAGNOSTIC_RELAY_PREREGISTRATION.md",
+      "bytes": 6547,
+      "sha256": "f3e5c103342774189717c90498e062edf6d4ccedcae4bc43c5fcca2958af2945"
+    },
+    {
+      "path": "registries/marc2_generated_diagnostic_relay_contract.v0.json",
+      "bytes": 12260,
+      "sha256": "1ac4eecef15621fb3c97a9a26794641564f0c34ed2ba6f012d3ee6e6c89674db"
+    }
+  ],
+  "implementation_surface": {
+    "module": "neurodecodekit.datasets.marc2_generated_diagnostic_relay",
+    "commands": [
+      "plan",
+      "qualify"
+    ],
+    "standard_library_only": true,
+    "base_dependency_delta": 0,
+    "generic_path_URL_output_threshold_retry_or_execute_argument": false,
+    "private_root_consumed_executor_archive_neural_target_model_or_score_interface": false,
+    "network_client_or_provider_interface": false,
+    "retained_output_writer": false
+  },
+  "composition": {
+    "generated_inventory_rows_per_path": 1227,
+    "regular_file_rows_per_path": 1025,
+    "directory_rows_per_path": 202,
+    "exact_parser_required": true,
+    "exact_live_manifest_producer_required": true,
+    "VR6_and_VR2_required": true,
+    "synthetic_normalization_fields": [
+      "transport_body_sha256"
+    ],
+    "member_local_headers_materialized": false,
+    "member_payloads_materialized": false,
+    "consumed_VR7P_imported_called_or_modified": false
+  },
+  "diagnostic_relay": {
+    "cases": [
+      "success",
+      "F02",
+      "F03",
+      "F04"
+    ],
+    "central_directory_orders": [
+      "canonical",
+      "reversed"
+    ],
+    "matrix_paths_per_replay": 8,
+    "exact_replays": 2,
+    "outer_refusal_route": "MARC2VR6-F02",
+    "nested_refusal_routes": [
+      "MARC2VR2-F02",
+      "MARC2VR2-F03",
+      "MARC2VR2-F04"
+    ],
+    "exception_reason_or_private_context_retained": false
+  },
+  "order_identity_finding": {
+    "canonical_and_reversed_selected_subjects": 16,
+    "canonical_and_reversed_selected_run_bundles": 96,
+    "upstream_VR6_selection_identity_is_transport_order_sensitive": true,
+    "upstream_VR6_hash_changed_or_redefined": false,
+    "separate_order_neutral_generated_cohort_identity_added": true,
+    "normalized_selection_identity_sha256": "812ecbe8f402ae49eab22f166964390b8024639e0afc8b793f9fe89105f20923"
+  },
+  "measured_qualification": {
+    "route": "MARC2VR8B-G1",
+    "fixed_artifact_count": 20,
+    "fixed_artifact_bytes": 648432,
+    "generated_input_bytes": 4650480,
+    "exact_parser_entry_visits": 19632,
+    "runtime_seconds": 2.421215000009397,
+    "peak_RSS_bytes": 59310080,
+    "aggregate_output_bytes": 6101,
+    "retained_generated_output_bytes": 0,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "producer_is_causal": "not_applicable_structural_metadata_only",
+    "end_to_end_latency_measured": false
+  },
+  "qualification": {
+    "acceptance_gates_passed": 16,
+    "direct_refusal_mutations_passed": 29,
+    "focused_contract_behavior_and_result_tests": 29,
+    "tests_added_after_green_registration": 21,
+    "exact_parser_producer_manifest_and_VR6_call_spies": true,
+    "deterministic_replay_tested": true,
+    "order_neutral_identity_tested": true,
+    "public_output_firewall_tested": true,
+    "thread_and_resource_refusals_tested": true,
+    "CLI_surface_tested": true,
+    "forbidden_import_and_consumed_executor_surface_tested": true,
+    "dependency_light_tests": 3948,
+    "dependency_light_skips": 204,
+    "dependency_light_runtime_seconds": 79.768,
+    "registration_baseline_dependency_light_tests": 3927,
+    "optional_A_through_M_tests": 3506,
+    "optional_A_through_M_skips": 28,
+    "optional_A_through_M_runtime_seconds": 164.615,
+    "optional_N_through_Z_tests": 513,
+    "optional_N_through_Z_skips": 7,
+    "optional_N_through_Z_runtime_seconds": 250.834,
+    "complete_optional_tests": 4019,
+    "complete_optional_skips": 35,
+    "registration_baseline_optional_tests": 3998,
+    "complete_repository_fresh_process_split_passed": true,
+    "monolithic_optional_known_sandbox_forkserver_errors": 1,
+    "monolithic_optional_known_process_state_failures": 2,
+    "all_three_exact_isolated_reruns_passed": true,
+    "new_failures_versus_registration_baseline": 0,
+    "complete_local_suites_pending": false,
+    "remote_CI_pending": true
+  },
+  "access_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_VR7P_path_or_executor_operations": 0,
+    "network_or_public_request_operations": 0,
+    "local_archive_header_or_member_payload_operations": 0,
+    "real_signal_event_channel_geometry_target_or_label_operations": 0,
+    "derivative_cache_feature_split_or_NeuroToken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "provider_language_model_stream_device_or_hardware_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "retry_rerun_release_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "next_gate": {
+    "exact_implementation_commit_push_and_both_jobs_green_required": true,
+    "future_private_diagnostic_authorized": false,
+    "future_private_read_requires_new_Tier_C_packet_and_decision": true,
+    "F03_or_F04_relaxation_before_observed_route_allowed": false,
+    "FW2_CIL1_payload_training_target_or_score_work_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "NeuroDecodeKit now has a full-scale generated parser-to-producer-to-VR2-and-VR6 relay that preserves aggregate two-layer failure codes and separates transport provenance from normalized cohort identity.",
+    "scientific_claim_not_established": "No private or neural payload target prediction model or score was used so this qualification establishes no neural effect decoding accuracy language decoding live decoding or thought-to-text capability."
+  }
+}

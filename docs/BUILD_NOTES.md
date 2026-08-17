@@ -11010,3 +11010,48 @@ can qualify safe two-layer diagnostics before another irreversible read.
 
 Scientific claim not established: this registration uses no real/private
 neural data and establishes no neural effect or decoding performance.
+
+## 2026-08-16 - MARC2-VR8B Full-Scale Generated Diagnostic Relay
+
+- Began implementation only after registration `5607fe8` passed Base Python
+  job `95263869003`, Optional Neuro Readers job `95263869149`, and CI
+  `31987093865`.
+- Added a dependency-free module with only `plan` and `qualify`. It exposes no
+  generic path, URL, output, threshold, retry, or execute surface, writes no
+  retained artifact, and does not import or call consumed VR7P.
+- Converted the complete 1,227-row generated profile into exact parser entries
+  for every path. ZIP64 is used where required; generated local intervals are
+  nonoverlapping and remain below the synthetic central-directory boundary.
+- Traversed the exact central-directory parser, live manifest producer, VR2,
+  and VR6 for success and forced F02/F03/F04 cases in canonical and reversed
+  order. Two complete replays account for 19,632 parser entry visits.
+- Preserved outer `MARC2VR6-F02` plus exact nested `MARC2VR2-F02`, F03, or F04
+  while dropping exception text, reasons, source rows, paths, identities, and
+  values.
+- Found and documented that VR6's provenance identity changes with source row
+  order even when the selected 16-subject/96-bundle cohort is identical. VR8B
+  leaves that upstream hash unchanged and records a separate order-neutral
+  generated-cohort digest.
+- Measured route `MARC2VR8B-G1`: 4,650,480 generated input bytes, 2.421215000
+  seconds, 59,310,080-byte peak RSS, 6,101 aggregate output bytes, one thread,
+  and zero retained output.
+- All 16 gates and 29 direct refusal mutations passed. Every private, ignored-
+  path, network, payload, neural, target, derivative, model, prediction, score,
+  provider, hardware, FW2, CIL1, retry, other-project, and claim counter stayed
+  zero.
+- Twenty-nine focused contract, behavior, and result tests pass. The
+  dependency-light suite passes 3,948 tests with 204 skips. Fresh optional A-M
+  and N-Z processes pass 3,506 and 513 tests with 35 skips combined, for 4,019
+  optional tests. Both inventories are exactly 21 tests above the green
+  registration baseline with zero new failures. The monolithic optional run's
+  one sandboxed forkserver denial and two late process-state gates all pass in
+  their established isolated conditions. Exact implementation remote CI is the
+  remaining closeout gate.
+
+Engineering capability added: a full-scale generated parser/producer relay now
+preserves aggregate two-layer diagnostics and separates source provenance from
+normalized cohort identity.
+
+Scientific claim not established: no private or neural payload, target, model,
+prediction, or score was accessed, so the result establishes no neural effect
+or decoding performance.
