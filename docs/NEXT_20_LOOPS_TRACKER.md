@@ -2939,3 +2939,14 @@ implementation and result. The generated matrix distinguishes the five
 remaining engineering classes but does not identify the private cause or
 establish a neural or decoding result. Any private invocation remains a new
 Tier C packet and fresh decision after exact remote proof.
+
+Exact implementation/result `61bb801` then passed Base Python job
+`95320325187`, Optional Neuro Readers job `95320325136`, and CI
+`32007641751`. VR10B is complete as an artifact-only generated engineering
+lane. No qualification or private operation was repeated for proof closeout.
+
+The five deterministic aggregate routes are now remotely proven, but the
+consumed private F03 cause remains unknown. FW2 and CIL1 remain closed because
+no real cohort identity exists. Any private discriminator remains a separately
+frozen Tier C packet and fresh decision; no private read, neural payload,
+target, model, score, release, or scientific claim is open.

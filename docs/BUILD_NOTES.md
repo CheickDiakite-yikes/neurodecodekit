@@ -11320,3 +11320,22 @@ files, commit, push, and obtain both green CI jobs. Generated route separation
 does not identify the consumed private cause and establishes no neural or
 decoding result. Any private invocation remains a new Tier C packet and fresh
 decision after exact remote proof.
+
+## 2026-08-17 - MARC2-VR10B Remote Proof Closeout
+
+- Exact implementation/result
+  `61bb801689eb2885b1e96aa4b56c86658dc3b333` passed Base Python job
+  `95320325187`, Optional Neuro Readers job `95320325136`, and CI
+  `32007641751`.
+- No generated qualification, private read, consumed-state operation, archive
+  operation, model run, target access, score, or other-project operation was
+  repeated for proof closeout.
+- Updated only proof state, tracked document hashes, tests, and public handoff
+  records. The measured G1/R1-R5 matrix, 60 refusals, resources, replay digest,
+  and zero counters are unchanged.
+
+VR10B is complete as an artifact-only generated engineering lane. It proves
+that the five remaining structural classes can be separated with one coarse
+aggregate-safe route; it does not identify the consumed private cause or
+establish neural or decoding performance. Any future private discriminator
+requires a separately frozen Tier C packet and fresh decision.

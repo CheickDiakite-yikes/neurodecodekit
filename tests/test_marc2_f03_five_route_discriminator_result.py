@@ -33,7 +33,7 @@ class Marc2F03FiveRouteDiscriminatorResultTests(unittest.TestCase):
             IMPLEMENTATION_PATH.read_text(encoding="utf-8")
         )
 
-    def test_result_identity_and_local_status_are_honest(self):
+    def test_result_identity_and_remote_green_status_are_honest(self):
         self.assertEqual(
             self.result["schema_name"],
             "neurodecodekit.marc2_f03_five_route_discriminator_result",
@@ -43,12 +43,36 @@ class Marc2F03FiveRouteDiscriminatorResultTests(unittest.TestCase):
         self.assertEqual(self.result["route"], "MARC2VR10B-G1")
         self.assertEqual(
             self.result["status"],
-            "completed_artifact_only_generated_five_route_qualification",
+            "completed_artifact_only_generated_five_route_qualification_remotely_green",
         )
-        self.assertTrue(self.implementation["local_verification"]["remote_CI_pending"])
         self.assertFalse(
-            self.implementation["remote_implementation_proof"][
-                "both_required_jobs_green"
+            self.implementation["local_verification"]["remote_CI_pending"]
+        )
+        proof = self.implementation["remote_implementation_proof"]
+        self.assertEqual(
+            proof["commit"], "61bb801689eb2885b1e96aa4b56c86658dc3b333"
+        )
+        self.assertEqual(proof["CI_run_id"], 32_007_641_751)
+        self.assertEqual(proof["base_python_job_id"], 95_320_325_187)
+        self.assertEqual(proof["optional_neuro_job_id"], 95_320_325_136)
+        self.assertTrue(proof["both_required_jobs_green"])
+        self.assertEqual(proof, {
+            key: value
+            for key, value in self.result["remote_implementation_proof"].items()
+            if key
+            not in {
+                "generated_qualification_repeated_for_proof_closeout",
+                "private_operation_repeated_for_proof_closeout",
+            }
+        })
+        self.assertFalse(
+            self.result["remote_implementation_proof"][
+                "generated_qualification_repeated_for_proof_closeout"
+            ]
+        )
+        self.assertFalse(
+            self.result["remote_implementation_proof"][
+                "private_operation_repeated_for_proof_closeout"
             ]
         )
 
@@ -144,6 +168,7 @@ class Marc2F03FiveRouteDiscriminatorResultTests(unittest.TestCase):
         self.assertIn("cleanly separated all five", result_text)
         self.assertIn("does not identify the cause", result_text)
         self.assertIn("Scientific claim not established", result_text)
+        self.assertIn("remotely green", implementation_text)
         self.assertIn("No private path", implementation_text)
         self.assertIn("Scientific claim not established", implementation_text)
 
@@ -151,7 +176,7 @@ class Marc2F03FiveRouteDiscriminatorResultTests(unittest.TestCase):
         gate = self.result["next_gate"]
         self.assertTrue(
             gate[
-                "exact_implementation_and_result_commit_push_and_both_jobs_green_required"
+                "exact_implementation_and_result_commit_push_and_both_jobs_green_satisfied"
             ]
         )
         self.assertFalse(gate["future_private_discriminator_authorized"])

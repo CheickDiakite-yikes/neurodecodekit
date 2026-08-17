@@ -5695,3 +5695,15 @@ archive payload, neural sample, target, model, prediction, score, FW2/CIL1,
 provider, hardware, or another project. The generated routes do not reveal the
 private cause. Any eventual private discriminator remains a new Tier C packet
 and fresh decision after exact remote proof.
+
+Remote proof is now complete. Exact implementation/result
+`61bb801689eb2885b1e96aa4b56c86658dc3b333` passed Base Python job
+`95320325187`, Optional Neuro Readers job `95320325136`, and CI
+`32007641751`. No generated qualification or private operation was repeated.
+
+VR10B is closed as an artifact-only generated engineering lane. Its six
+aggregate-safe routes are remotely proven, but the consumed private F03 cause
+remains unknown and FW2/CIL1 remain closed. Keep every VR9P private/ignored
+surface and the unrelated tracker inspection NDJSON untouched. A private
+discriminator can open only through a separately frozen Tier C packet and
+fresh maintainer decision.

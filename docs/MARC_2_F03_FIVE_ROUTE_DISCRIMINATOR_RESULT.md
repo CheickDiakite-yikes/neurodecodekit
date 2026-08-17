@@ -4,8 +4,7 @@ Date: 2026-08-17
 
 Route: `MARC2VR10B-G1`
 
-Status: **Artifact-only and generated-only qualification passed locally;
-remote proof pending**
+Status: **Artifact-only and generated-only qualification remotely green**
 
 Machine result:
 `registries/marc2_f03_five_route_discriminator_result.v0.json`
@@ -58,15 +57,18 @@ No cohort, neural sample, event, channel, geometry, target, label, derivative,
 model, prediction, or score was accessed.
 
 FW2 and CIL1 remain closed because no real cohort identity has been recovered.
-A future private invocation would require this exact implementation and result
-to become remotely green, followed by a new immutable Tier C packet and fresh
-decision.
+Exact implementation/result commit
+`61bb801689eb2885b1e96aa4b56c86658dc3b333` passed Base Python job
+`95320325187`, Optional Neuro Readers job `95320325136`, and CI
+`32007641751`. No generated qualification or private operation was repeated
+for proof closeout. A future private invocation still requires a new immutable
+Tier C packet and fresh decision.
 
 ## Verification
 
 Thirty-two focused tests and all 4,074 base tests pass, with 204 expected
-skips and zero failures. Full static checks pass. Remote proof remains pending
-until the implementation/result commit passes both required CI jobs.
+skips and zero failures. Full static checks pass. Exact implementation/result
+commit `61bb801` is remotely green in both required jobs.
 
 Engineering capability added: the broad generated F03 class now has five
 deterministic aggregate-safe routes with exact parser and replay proof.

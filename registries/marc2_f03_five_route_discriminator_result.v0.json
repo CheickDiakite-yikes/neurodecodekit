@@ -2,7 +2,7 @@
   "schema_name": "neurodecodekit.marc2_f03_five_route_discriminator_result",
   "schema_version": "0.1.0",
   "lane_id": "MARC2-VR10B",
-  "status": "completed_artifact_only_generated_five_route_qualification",
+  "status": "completed_artifact_only_generated_five_route_qualification_remotely_green",
   "proof_posture": "tracked_code_and_generated_structural_interface_only_no_private_or_scientific_value",
   "route": "MARC2VR10B-G1",
   "green_registration_proof": {
@@ -12,6 +12,15 @@
     "optional_neuro_job_id": 95308775577,
     "both_required_jobs_green_before_implementation": true,
     "contract_sha256": "465032260d1e07c7302645e4106ddceb6e755b68b7061b71e9b9d13c7ac0bfc7"
+  },
+  "remote_implementation_proof": {
+    "commit": "61bb801689eb2885b1e96aa4b56c86658dc3b333",
+    "CI_run_id": 32007641751,
+    "base_python_job_id": 95320325187,
+    "optional_neuro_job_id": 95320325136,
+    "both_required_jobs_green": true,
+    "generated_qualification_repeated_for_proof_closeout": false,
+    "private_operation_repeated_for_proof_closeout": false
   },
   "tracked_artifact_summary": {
     "count": 13,
@@ -191,7 +200,7 @@
     "archive payload neural signal event target model prediction and score"
   ],
   "next_gate": {
-    "exact_implementation_and_result_commit_push_and_both_jobs_green_required": true,
+    "exact_implementation_and_result_commit_push_and_both_jobs_green_satisfied": true,
     "future_private_discriminator_authorized": false,
     "future_private_discriminator_requires_new_Tier_C_packet_and_fresh_decision": true,
     "consumed_VR9P_reuse_allowed": false,

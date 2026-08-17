@@ -4,8 +4,7 @@ Date: 2026-08-17
 
 Lane: `MARC2-VR10B`
 
-Status: **Exact generated-only implementation qualified locally; remote proof
-pending**
+Status: **Exact generated-only implementation and result remotely green**
 
 Machine implementation record:
 `registries/marc2_f03_five_route_discriminator_implementation.v0.json`
@@ -17,6 +16,12 @@ passed Base Python job `95308775711`, Optional Neuro Readers job
 `95308775577`, and CI `32003674374` before implementation began. The module
 binds contract SHA-256
 `465032260d1e07c7302645e4106ddceb6e755b68b7061b71e9b9d13c7ac0bfc7`.
+
+Exact implementation/result commit
+`61bb801689eb2885b1e96aa4b56c86658dc3b333` then passed Base Python job
+`95320325187`, Optional Neuro Readers job `95320325136`, and CI
+`32007641751`. No generated qualification or private operation was repeated
+for this proof closeout.
 
 ## Added Surface
 
@@ -95,7 +100,7 @@ metadata classification, not a decoder.
 - Pinned Ruff 0.15.20 passes the full repository.
 - Python compilation, every registry JSON file, diff hygiene, and CLI help/plan
   pass.
-- Remote CI remains required before closeout.
+- Exact implementation/result commit `61bb801` passed both required CI jobs.
 
 ## Boundary
 
