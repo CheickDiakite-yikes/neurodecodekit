@@ -10836,3 +10836,48 @@ registered structural source.
 
 Scientific claim not established: this decision accessed no neural data and
 establishes no decoding performance, neural effect, or live decoding result.
+
+## 2026-08-16 - MARC2-VR7P Generated Wrapper Implementation
+
+- Confirmed packet-bound decision `a318521cf9adb057617e839ead0003d89c3cab84`
+  passed Base Python job `95244335512`, Optional Neuro Readers job
+  `95244335508`, and CI `31979669507` before implementation.
+- Added a dependency-free fixed-path wrapper with `plan`, `qualify`, `inspect`,
+  and proof-gated `execute` commands. It does not import or modify consumed
+  VR4P and exposes no generic path, URL, retry, resume, fallback, or cleanup
+  control.
+- Implemented a fresh three-sample readiness certificate at the new VR7P path,
+  one-thread/RSS/disk recheck, no-follow owner/mode/size/hash/race source
+  validation, new-root creation, marker-before-open, one strict JSON parse, one
+  dynamic VR6 call, exact output modes, and aggregate privacy validation.
+- Passed ten generated paths spanning 12/14/16/18/19 subjects and both row
+  orders. Each exact path replayed byte-identically; raw row-order hashes stay
+  distinct while normalized private cohort identities match within profiles.
+- Passed 85 direct refusal mutations: 34 VR6 and 51 wrapper cases covering
+  proof certificates, machine state, strict JSON, file identity, output state,
+  aggregate leakage, counters, claims, and resource caps.
+- Measured 4,291,134 generated input bytes, 2,681,772 generated sequence output
+  bytes, 5.951104625 seconds, 54,280,192-byte peak RSS, one thread, and zero
+  retained output. Raw-data, real-cache, model, and training runs were all zero;
+  end-to-end latency was not measured because this stage is structural only.
+- Fourteen behavior tests and seven implementation/proof tests pass locally.
+  The complete inventory ran 3,953 tests: 3,916 passed in the primary process,
+  35 skipped, one causal gate was process-state sensitive, and one forkserver
+  worker hit the established sandbox socket denial. All five causal tests pass
+  fresh and the exact worker passes outside the sandbox in 3.67 seconds. All
+  3,918 non-skipped tests therefore pass under their required contexts, exactly
+  21 above the pre-change inventory with zero new regression.
+- Ruff, compilation, registry/proof JSON, CLI plan/inspect/qualify, and diff
+  hygiene pass. Remote evidence remains the final gate before the private
+  command.
+- No real or consumed `.codex_work` path was inspected or changed. The one real
+  sequence remains unconsumed until this exact implementation is remotely
+  green.
+
+Engineering capability added: a generated-qualified fixed-path wrapper can
+freeze a dynamically measured target-free cohort after exact green proof.
+
+Scientific claim not established: this implementation used generated
+structural metadata only and establishes no real cohort, neural effect,
+decoding performance, language decoding, live decoding, or thought-to-text
+capability.

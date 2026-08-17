@@ -10,16 +10,19 @@
 > no private source, ignored path, cohort, archive member, neural payload,
 > target, model, score, FW2, or CIL1 operation.
 
-> Current MARC2-VR7P gate, 2026-08-16: the all-false dynamic private-selection
-> request binds new readiness/output paths, one future 418,755-byte structural
-> open, one VR6 call, measured 12-19-subject outcomes, at least 72 generated
-> refusals, and zero retry/rerun. Every authorization flag and current counter
-> is false/zero. Request `9d42bac` passed Base job `95236917861`, Optional job
-> `95236917836`, and CI `31976595268`; VR7P is the sole active Tier C packet.
-> The maintainer's next exact word was `continue`, now bound in a separate
-> decision to VR7P only. That decision remains ineffective until its own commit
-> is pushed and both CI jobs pass. Do not implement or touch a private path
-> before that proof; neural payload, FW2, and CIL1 remain closed.
+> Current MARC2-VR7P gate, 2026-08-16: request `9d42bac` and proof closeout
+> `ecaa2ab` were green before the maintainer's fresh `continue`; packet-bound
+> decision `a318521` then passed Base job `95244335512`, Optional job
+> `95244335508`, and CI `31979669507` before implementation. Read
+> `docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_IMPLEMENTATION.md` and its
+> registries. The additive wrapper passes ten generated 12/14/16/18/19-subject
+> profile/order paths, 20 deterministic replays, and 85 direct refusals in
+> 5.951104625 seconds at 54,280,192-byte peak RSS. Real/private/neural/model
+> counters remain zero. Commit, push, and require both CI jobs green for this
+> exact implementation before one fresh readiness invocation or the sole
+> 418,755-byte structural open. Never touch a consumed root or the ignored
+> tracker inspection. Archive payload, FW2, training, scoring, and live
+> decoding remain closed.
 
 > Current MARC2-VR5A gate, 2026-08-16: registration `926e1ba` passed Base
 > Python job `95226555204`, Optional Neuro Readers job `95226555153`, and CI

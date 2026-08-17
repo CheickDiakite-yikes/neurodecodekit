@@ -2639,3 +2639,29 @@ green for that exact decision before generated wrapper implementation; then
 require both jobs green for the exact wrapper before one structural pass.
 Archive payload, neural data, training, prediction, score, FW2, CIL1, and live
 decoding remain closed.
+
+### MARC2-VR7P - Generated Wrapper Implementation (Local Complete; Remote Gate Open)
+
+Packet-bound decision `a318521cf9adb057617e839ead0003d89c3cab84` passed Base
+job `95244335512`, Optional job `95244335508`, and CI `31979669507` before the
+additive implementation began.
+
+The new standard-library wrapper independently implements fresh readiness,
+fixed no-follow source checks, new-root and marker-before-open sequencing,
+strict JSON, one VR6 call, private/aggregate writers, route allowlisting,
+resource monitors, and proof validation. It imports no consumed executor and
+has no generic source, output, URL, retry, resume, fallback, or cleanup option.
+
+Generated route `MARC2VR7P-R1` passed ten paths across 12/14/16/18/19 subjects
+and both row orders, with 20 deterministic replays. It passed 85 direct
+refusals: 34 VR6 and 51 wrapper mutations. Runtime was 5.951104625 seconds at
+54,280,192-byte peak RSS over 4,291,134 generated input bytes and 2,681,772
+generated output bytes, retaining zero. Every real/private/neural/model/score
+counter stayed zero.
+
+Current gate: run complete local verification, commit and push only the new
+implementation artifacts plus public documentation, and require Base Python
+and Optional Neuro Readers green for that exact commit. Before those two green
+jobs, do not invoke readiness or touch the registered source/output paths. A
+successful future structural result makes bounded FW2 preregistration eligible;
+it does not itself authorize or prove neural decoding.

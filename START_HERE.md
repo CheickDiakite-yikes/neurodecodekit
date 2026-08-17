@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR6
+## Current Frontier: MARC2-VR7P
 
 Read `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`, then
 `docs/MARC_2_VR2_REFUSAL_LOCALIZATION_PREREGISTRATION.md` and
@@ -41,11 +41,22 @@ structural open, one VR6 call, dynamic 12-19-subject outcomes, and 72 generated
 refusals. Immutable request `9d42bac29b695a97639c4a197812865f0ac4f7d5`
 passed Base Python job `95236917861`, Optional Neuro Readers job `95236917836`,
 and CI `31976595268`. It is the sole active Tier C gate, but every authorization
-field and current counter remains false/zero. The maintainer's next exact word
-was `continue`, now recorded in the separate VR7P decision document and
-registry. That decision remains ineffective until its own commit is pushed and
-both CI jobs are green. Do not implement the wrapper or inspect a private path
-before that proof; FW2 and CIL1 remain unauthorized.
+field and request-stage counter was false/zero. The maintainer's next exact
+word was `continue`, recorded in the separate VR7P decision. Decision
+`a318521` passed Base job `95244335512`, Optional job `95244335508`, and CI
+`31979669507` before implementation began.
+
+Read `docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_IMPLEMENTATION.md` and
+its implementation/proof registries. The new additive wrapper does not import
+the consumed VR4P executor. Generated `MARC2VR7P-R1` passed ten dynamic
+profile/order paths, 20 exact replays, and 85 direct refusals in 5.951104625
+seconds at 54,280,192-byte peak RSS, with 4,291,134 generated input bytes,
+2,681,772 generated sequence output bytes, zero retention, and every real,
+private, neural, target, model, score, network, hardware, and claim counter at
+zero. The exact implementation must now be committed, pushed, and pass both CI
+jobs before the one registered readiness invocation or structural source open.
+Do not touch any real or consumed `.codex_work` path before that proof. FW2,
+neural payload access, training, scoring, and live decoding remain closed.
 
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.
