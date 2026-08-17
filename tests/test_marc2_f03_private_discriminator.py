@@ -260,12 +260,29 @@ class Marc2F03PrivateDiscriminatorTests(unittest.TestCase):
             private._validate_private_report(report)
         self.assertEqual(refusal.exception.route, "MARC2VR11P-F07")
 
-    def test_registry_is_pending_remote_implementation_proof(self):
+    def test_registry_proof_state_and_private_gate_move_together(self):
         root = Path(private.__file__).resolve().parents[3]
         record = json.loads((root / private.IMPLEMENTATION_RELATIVE_PATH).read_text())
-        self.assertIsNone(record["remote_implementation_proof"])
-        self.assertFalse(record["next_gate"]["private_execution_allowed_now"])
-        self.assertTrue(record["next_gate"]["implementation_commit_required"])
+        proof = record["remote_implementation_proof"]
+        allowed = record["next_gate"]["private_execution_allowed_now"]
+        if proof is None:
+            self.assertFalse(allowed)
+            self.assertTrue(record["next_gate"]["implementation_commit_required"])
+        else:
+            self.assertEqual(
+                set(proof),
+                {
+                    "commit",
+                    "CI_run_id",
+                    "base_python_job_id",
+                    "optional_neuro_job_id",
+                    "both_required_jobs_green",
+                },
+            )
+            self.assertEqual(len(proof["commit"]), 40)
+            self.assertTrue(proof["both_required_jobs_green"])
+            self.assertTrue(allowed)
+            self.assertFalse(record["next_gate"]["implementation_commit_required"])
 
 
 if __name__ == "__main__":
