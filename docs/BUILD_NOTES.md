@@ -11045,8 +11045,11 @@ neural data and establishes no neural effect or decoding performance.
   optional tests. Both inventories are exactly 21 tests above the green
   registration baseline with zero new failures. The monolithic optional run's
   one sandboxed forkserver denial and two late process-state gates all pass in
-  their established isolated conditions. Exact implementation remote CI is the
-  remaining closeout gate.
+  their established isolated conditions.
+- Exact implementation `d7ce48baca29547ff2385ffe53d247563139439f`
+  passed Base Python job `95271230358`, Optional Neuro Readers job
+  `95271230485`, and CI `31989817593`. The generated closeout is remotely green;
+  no private-read authority was created.
 
 Engineering capability added: a full-scale generated parser/producer relay now
 preserves aggregate two-layer diagnostics and separates source provenance from

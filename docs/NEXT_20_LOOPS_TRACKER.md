@@ -12,10 +12,10 @@
 > retention and forbidden operations. The generated 16-subject/96-bundle
 > cohort is order-invariant, while VR6's source-provenance hash remains
 > order-sensitive; VR8B records a separate normalized cohort digest. Exact
-> implementation remote proof is pending. The consumed private F03/F04 route
-> remains unavailable, no real cohort exists, and FW2/CIL1, archive payload,
-> neural, target, model, prediction, and scoring work remain closed behind a
-> future Tier C packet and fresh decision.
+> implementation `d7ce48b` passed both jobs in CI `31989817593`. The consumed
+> private F03/F04 route remains unavailable, no real cohort exists, and
+> FW2/CIL1, archive payload, neural, target, model, prediction, and scoring work
+> remain closed behind a future Tier C packet and fresh decision.
 
 > **Scope:** the 20-row table and its KPI describe the original roadmap. Loop
 > numbers 21-24 and the Loop 23.5 calibration gate are post-roadmap extensions,
@@ -2719,7 +2719,7 @@ separately named generated-only diagnostic relay preserving only the outer VR6
 and nested allowlisted VR2 codes. Do not relax F03 or F04. A new private
 structural read remains a separate Tier C packet and decision.
 
-### MARC2-VR8B - Full-Scale Generated Diagnostic Relay (Local G1 Complete)
+### MARC2-VR8B - Full-Scale Generated Diagnostic Relay (Remotely Green)
 
 VR8B binds 17 tracked artifacts totaling 622,989 bytes. Registration `5607fe8`
 passed Base job `95263869003`, Optional job `95263869149`, and CI
@@ -2747,9 +2747,10 @@ counters remain zero.
 
 Local verification passes 3,948 dependency-light tests with 204 skips and
 4,019 optional tests with 35 skips in the established fresh-process split,
-exactly 21 tests above registration with zero new failures. Current gate:
-commit and push the exact implementation/result and require both jobs green.
-Only then may Tier A/B prepare a separately named all-false request for one
-future private diagnostic. The consumed F03/F04 branch remains unavailable,
-neither route may be relaxed, and any private read remains a new Tier C packet
-and fresh decision.
+exactly 21 tests above registration with zero new failures. Exact implementation
+`d7ce48b` passed Base job `95271230358`, Optional job `95271230485`, and CI
+`31989817593`. Tier A/B may now prepare a separately named all-false request for
+one future private diagnostic, but the request grants no private authority. The
+consumed F03/F04 branch remains unavailable, neither route may be relaxed, and
+any private read remains a new Tier C packet plus a fresh decision after green
+packet proof.

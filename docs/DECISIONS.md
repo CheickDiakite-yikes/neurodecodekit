@@ -9046,6 +9046,13 @@ relax the consumed F03/F04 branch. Another private read remains a new Tier C
 request and fresh packet-bound decision; FW2 and CIL1 remain closed until a
 real cohort is frozen.
 
+Proof decision: exact implementation
+`d7ce48baca29547ff2385ffe53d247563139439f` passed Base Python job
+`95271230358`, Optional Neuro Readers job `95271230485`, and CI `31989817593`.
+The generated implementation gate is satisfied. Tier A/B may prepare a new
+all-false packet, but no private access exists until that packet is remotely
+green and receives a fresh packet-bound decision.
+
 Claim decision: this is generated integration evidence only. It establishes
 no real cohort, neural effect, decoding accuracy, language decoding, live
 decoding, or thought-to-text capability.

@@ -1964,9 +1964,11 @@ Read this before interpreting any number in the repository.
   cohort digest without changing VR6. Local verification passes 3,948
   dependency-light tests with 204 skips and the complete 4,019-test optional
   inventory with 35 skips in fresh processes, exactly 21 tests above the green
-  registration baseline and with zero new failures. Exact implementation remote
-  proof is pending. The consumed private F03/F04 route, cohort, neural payload,
-  target, model, and score remain unavailable.
+  registration baseline and with zero new failures. Exact implementation
+  `d7ce48b` passed Base job `95271230358`, Optional job `95271230485`, and CI
+  `31989817593`. The consumed private F03/F04 route, cohort, neural payload,
+  target, model, and score remain unavailable; another private read still needs
+  a new green Tier C packet and fresh decision.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

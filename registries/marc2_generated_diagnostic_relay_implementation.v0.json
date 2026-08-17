@@ -4,7 +4,7 @@
   "lane_id": "MARC2-VR8B",
   "implementation_id": "MARC-2-VR8B-full-scale-generated-diagnostic-relay-implementation-v0",
   "recorded_at_local": "2026-08-16",
-  "status": "generated_only_implementation_and_measured_qualification_complete_remote_proof_pending",
+  "status": "generated_only_implementation_and_measured_qualification_remotely_green",
   "proof_posture": "generated_structural_interface_qualification_only_no_private_or_scientific_value",
   "green_registration_proof": {
     "commit": "5607fe895faaacce80bdd14474d211b09d1656d4",
@@ -148,7 +148,14 @@
     "all_three_exact_isolated_reruns_passed": true,
     "new_failures_versus_registration_baseline": 0,
     "complete_local_suites_pending": false,
-    "remote_CI_pending": true
+    "remote_CI_pending": false
+  },
+  "remote_implementation_proof": {
+    "commit": "d7ce48baca29547ff2385ffe53d247563139439f",
+    "CI_run_id": 31989817593,
+    "base_python_job_id": 95271230358,
+    "optional_neuro_job_id": 95271230485,
+    "both_required_jobs_green": true
   },
   "access_counters": {
     "private_or_Git_ignored_path_operations": 0,
@@ -164,7 +171,7 @@
     "operations_on_other_projects": 0
   },
   "next_gate": {
-    "exact_implementation_commit_push_and_both_jobs_green_required": true,
+    "exact_implementation_commit_push_and_both_jobs_green_satisfied": true,
     "future_private_diagnostic_authorized": false,
     "future_private_read_requires_new_Tier_C_packet_and_decision": true,
     "F03_or_F04_relaxation_before_observed_route_allowed": false,

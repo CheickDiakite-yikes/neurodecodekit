@@ -4,8 +4,8 @@ Date: 2026-08-16
 
 Lane: `MARC2-VR8B`
 
-Status: **Generated-only implementation and measured qualification complete;
-remote proof pending**
+Status: **Generated-only implementation and measured qualification remotely
+green**
 
 Registration `5607fe895faaacce80bdd14474d211b09d1656d4` passed Base
 Python job `95263869003`, Optional Neuro Readers job `95263869149`, and CI
@@ -133,15 +133,17 @@ zero.
 - Repository-pinned Ruff 0.15.20, compilation, CLI plan/qualification, JSON
   validation, focused tests, and diff hygiene pass.
 
-Remote CI is the remaining implementation-closeout gate. No private diagnostic
-may begin from this local result.
+Exact implementation `d7ce48baca29547ff2385ffe53d247563139439f` passed Base
+Python job `95271230358`, Optional Neuro Readers job `95271230485`, and CI
+`31989817593`. No private diagnostic may begin from this generated result.
 
 ## Next Gate
 
-Commit and push this exact implementation, result, tests, and documentation,
-then require both GitHub jobs green. Only after that proof may an all-false
-Tier C packet propose one new 418,755-byte structural diagnostic that preserves
-the nested F03/F04 code. F03 and F04 must not be relaxed before that observed
+The implementation proof gate is satisfied. Tier A/B may now prepare an
+all-false Tier C packet proposing one new 418,755-byte structural diagnostic
+that preserves the nested F03/F04 code. The packet alone grants no private
+access; it must become remotely green and receive a fresh packet-bound decision
+before any source open. F03 and F04 must not be relaxed before that observed
 safe route. FW2 and CIL1 remain closed until a real cohort exists.
 
 ## Boundary

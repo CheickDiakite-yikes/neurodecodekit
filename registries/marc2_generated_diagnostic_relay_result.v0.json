@@ -3,7 +3,7 @@
   "schema_version": "0.1.0",
   "lane_id": "MARC2-VR8B",
   "result_id": "MARC2VR8B-G1",
-  "status": "completed_generated_only_full_scale_diagnostic_relay_remote_proof_pending",
+  "status": "completed_generated_only_full_scale_diagnostic_relay_remotely_green",
   "recorded_at_local": "2026-08-16",
   "route": "MARC2VR8B-G1",
   "proof_posture": "generated_structural_interface_qualification_only_no_private_or_scientific_value",
@@ -43,18 +43,18 @@
     },
     {
       "path": "docs/MARC_2_GENERATED_DIAGNOSTIC_RELAY_IMPLEMENTATION.md",
-      "bytes": 6905,
-      "sha256": "0d331676c6b89df3967ac1258375764511ca25cc6ed97912a37c2f5c2f710bfe"
+      "bytes": 7072,
+      "sha256": "75fbb54c6f1d373121d6931728d429cc158fb5e82826c478f2521c7f8f3766b1"
     },
     {
       "path": "registries/marc2_generated_diagnostic_relay_implementation.v0.json",
-      "bytes": 7329,
-      "sha256": "fda7123940937c9fa2ec15d9ab3bb5ee522a3f457e7700b4918ac922b99ecf41"
+      "bytes": 7562,
+      "sha256": "a466109f7558f879b87eb77abafad1d2c2890d6d06cc24f859b91ab5b4ace12e"
     },
     {
       "path": "docs/MARC_2_GENERATED_DIAGNOSTIC_RELAY_RESULT.md",
-      "bytes": 4974,
-      "sha256": "ab1eb70164f904a152f7056a64b1095a9470e1e8af34aa1bcf1132331d7ccc50"
+      "bytes": 5232,
+      "sha256": "dde94b911f55b9b3cab064682ac48e747734b4e5b9f96c2a43f1aaafef36cb34"
     }
   ],
   "route_matrix": [
@@ -225,8 +225,14 @@
     "all_three_exact_isolated_reruns_passed": true,
     "new_failures_versus_registration_baseline": 0,
     "complete_local_suites_pending": false,
-    "remote_CI_pending": true,
-    "remote_proof": null
+    "remote_CI_pending": false,
+    "remote_proof": {
+      "commit": "d7ce48baca29547ff2385ffe53d247563139439f",
+      "CI_run_id": 31989817593,
+      "base_python_job_id": 95271230358,
+      "optional_neuro_job_id": 95271230485,
+      "both_required_jobs_green": true
+    }
   },
   "access_counters": {
     "private_or_Git_ignored_path_operations": 0,
@@ -253,7 +259,7 @@
     "archive payload signals events targets predictions and scores"
   ],
   "next_gate": {
-    "exact_implementation_commit_push_and_both_jobs_green_required": true,
+    "exact_implementation_commit_push_and_both_jobs_green_satisfied": true,
     "future_private_diagnostic_authorized": false,
     "future_private_read_requires_new_Tier_C_packet_and_decision": true,
     "F03_or_F04_relaxation_before_observed_route": false,

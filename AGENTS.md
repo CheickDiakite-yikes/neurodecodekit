@@ -130,11 +130,14 @@ VR6's original provenance hash remains order-sensitive; VR8B records a
 separate normalized cohort digest without changing VR6. Exact implementation
 local verification passes 3,948 dependency-light tests with 204 skips and
 4,019 optional tests with 35 skips in the established fresh-process split,
-with zero new failures versus the registration baseline. Remote proof is now
-required. Do not relax F03 or F04, infer the consumed private branch, or touch
-any private/ignored source. A later private diagnostic requires a separately
-frozen all-false Tier C packet and fresh decision. FW2, CIL1, archive payload,
-neural, target, model, prediction, and score work remain closed.
+with zero new failures versus the registration baseline. Exact implementation
+`d7ce48baca29547ff2385ffe53d247563139439f` passed Base Python job
+`95271230358`, Optional Neuro Readers job `95271230485`, and CI `31989817593`.
+Tier A/B may prepare a separately frozen all-false Tier C packet, but no private
+access is authorized until that packet is green and receives a fresh decision.
+Do not relax F03 or F04, infer the consumed private branch, or touch any
+private/ignored source. FW2, CIL1, archive payload, neural, target, model,
+prediction, and score work remain closed.
 
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-

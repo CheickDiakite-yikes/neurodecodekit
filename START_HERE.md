@@ -90,13 +90,14 @@ retention and zero forbidden operations.
 The generated 16-subject/96-bundle selection is identical across source
 orders, while VR6's existing provenance hash correctly differs because it
 binds ordered source rows. VR8B therefore records a separate order-neutral
-cohort digest without changing VR6. Exact implementation remote proof is the
-current gate after 3,948 dependency-light and 4,019 optional tests pass with
-zero new failures versus the registration baseline. Do not infer whether the
-consumed private source reached F03 or F04, and do not relax either class. Any
-new private structural read or real cohort freeze remains a fresh Tier C packet
-and decision; FW2, CIL1, neural payload access, training, scoring, and live
-decoding remain closed.
+cohort digest without changing VR6. After 3,948 dependency-light and 4,019
+optional tests pass with zero new failures, exact implementation `d7ce48b`
+passed Base job `95271230358`, Optional job `95271230485`, and CI
+`31989817593`. Tier A/B may prepare the next all-false packet, but do not infer
+whether the consumed private source reached F03 or F04 and do not relax either
+class. Any new private structural read or real cohort freeze remains a fresh
+Tier C packet and decision; FW2, CIL1, neural payload access, training, scoring,
+and live decoding remain closed.
 
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.

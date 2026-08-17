@@ -12,11 +12,11 @@
 > zero forbidden operations. Canonical and reversed sources select the same
 > 16-subject/96-bundle cohort but retain distinct upstream provenance hashes;
 > VR8B adds a separate order-neutral cohort digest without changing VR6.
-> Exact implementation remote proof is pending. The consumed private F03/F04
-> route remains unavailable. Do not touch a consumed or ignored path, retained
-> source, archive member, neural payload, target, model, score, FW2, or CIL1
-> surface. A future private diagnostic remains a new Tier C packet and fresh
-> decision.
+> Exact implementation `d7ce48b` passed Base job `95271230358`, Optional job
+> `95271230485`, and CI `31989817593`. The consumed private F03/F04 route remains
+> unavailable. Do not touch a consumed or ignored path, retained source, archive
+> member, neural payload, target, model, score, FW2, or CIL1 surface. A future
+> private diagnostic remains a new Tier C packet and fresh decision.
 
 > Current MARC2-VR6 gate, 2026-08-16: registration `71d7cec` passed Base
 > Python job `95231605521`, Optional Neuro Readers job `95231605469`, and CI
@@ -5458,11 +5458,13 @@ interface evidence only.
 
 Local verification is complete: 3,948 dependency-light tests pass with 204
 skips, and fresh optional A-M/N-Z processes pass 4,019 tests with 35 skips,
-exactly 21 above the registration baseline with zero new failures. Immediate
-gate: commit and push only the intended VR8B/public-doc files, then require Base
-Python and Optional Neuro Readers green. The unrelated untracked tracker
+exactly 21 above the registration baseline with zero new failures. Exact
+implementation `d7ce48baca29547ff2385ffe53d247563139439f` passed Base Python
+job `95271230358`, Optional Neuro Readers job `95271230485`, and CI
+`31989817593`. Tier A/B may now prepare a separately frozen all-false request;
+the request itself authorizes no private access. The unrelated untracked tracker
 inspection NDJSON must remain untouched. Do not touch `.codex_work`, a consumed
 marker/root, retained source, archive member, neural payload, target, model,
 prediction, score, FW2, or CIL1. The private F03/F04 branch is still
-unavailable; any future structural diagnostic requires a separately frozen
-all-false Tier C packet and fresh decision.
+unavailable; any future structural diagnostic requires that new request to
+become green and receive a fresh packet-bound decision.

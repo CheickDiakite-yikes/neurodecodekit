@@ -5,7 +5,7 @@ Date: 2026-08-16
 Lane: `MARC2-VR8B`
 
 Status: **Generated qualification complete at `MARC2VR8B-G1`; exact
-implementation remote proof pending**
+implementation remotely green**
 
 ## Result
 
@@ -90,6 +90,11 @@ monolithic optional replay reproduced the repository's known sandboxed
 forkserver denial and two late process-state/RSS-sensitive gates; those exact
 three tests pass under their required fresh or non-sandboxed process
 conditions. New failures versus baseline are zero.
+
+Exact implementation `d7ce48baca29547ff2385ffe53d247563139439f` passed Base
+Python job `95271230358`, Optional Neuro Readers job `95271230485`, and CI
+`31989817593`. This closes the generated implementation gate only; it does not
+authorize a private source open.
 
 ## What Remains Unknown
 

@@ -131,7 +131,17 @@ class Marc2GeneratedDiagnosticRelayResultTests(unittest.TestCase):
             proof = verification["remote_proof"]
             self.assertIsInstance(proof, dict)
             self.assertTrue(proof["both_required_jobs_green"])
+            self.assertEqual(
+                proof["commit"],
+                "d7ce48baca29547ff2385ffe53d247563139439f",
+            )
+            self.assertEqual(proof["CI_run_id"], 31_989_817_593)
+            self.assertEqual(proof["base_python_job_id"], 95_271_230_358)
+            self.assertEqual(proof["optional_neuro_job_id"], 95_271_230_485)
             self.assertFalse(implementation["remote_CI_pending"])
+            self.assertEqual(
+                self.implementation["remote_implementation_proof"], proof
+            )
 
     def test_complete_local_suites_add_exactly_twenty_one_tests(self):
         verification = self.result["verification"]
