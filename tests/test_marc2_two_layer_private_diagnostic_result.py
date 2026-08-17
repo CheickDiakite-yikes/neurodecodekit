@@ -48,6 +48,17 @@ class Marc2TwoLayerPrivateDiagnosticResultTests(unittest.TestCase):
             proof["proof_record_sha256"],
             "681239756ff301c92fb2fee95f30693d53ce4c418597223a9371b568d28bb265",
         )
+        verification = self.record["verification"]
+        self.assertFalse(verification["remote_CI_pending"])
+        result_proof = verification["remote_proof"]
+        self.assertEqual(
+            result_proof["commit"],
+            "0ad7823db88c03a6332c3edd45263efde7075bd9",
+        )
+        self.assertEqual(result_proof["CI_run_id"], 31_996_019_447)
+        self.assertEqual(result_proof["base_python_job_id"], 95_287_690_602)
+        self.assertEqual(result_proof["optional_neuro_job_id"], 95_287_690_653)
+        self.assertTrue(result_proof["both_required_jobs_green"])
 
     def test_bound_public_artifact_hashes_match(self):
         seen = set()

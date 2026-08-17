@@ -43,11 +43,11 @@
     },
     {
       "path": "docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_RESULT.md",
-      "sha256": "de20303b6eeac372edcdb879ca29fb718ad4022e00c7e1479a63068343b27be9"
+      "sha256": "03ae471e5fb75db862837b995a506d26f777c8bb15361bf7d19ce913d5d896ab"
     },
     {
       "path": "tests/test_marc2_two_layer_private_diagnostic_result.py",
-      "sha256": "1aab9f4fd781c50cfcdbaf90c9c9e96302f7af3054df78ad347455830322e866"
+      "sha256": "4eb45968091bf5275104aab8857e6774472cee7c4a9c3998abf949f5515f0575"
     }
   ],
   "private_execution": {
@@ -151,8 +151,15 @@
   "verification": {
     "focused_result_tests": 10,
     "ruff_compile_registry_JSON_and_diff_hygiene_required": true,
-    "remote_CI_pending": true,
-    "remote_proof": null
+    "remote_CI_pending": false,
+    "remote_proof": {
+      "commit": "0ad7823db88c03a6332c3edd45263efde7075bd9",
+      "CI_run_id": 31996019447,
+      "base_python_job_id": 95287690602,
+      "optional_neuro_job_id": 95287690653,
+      "both_required_jobs_green": true,
+      "proof_scope": "initial aggregate result record and complete test suites with no second private execution or reinspection"
+    }
   },
   "warnings": [
     "The one registered invocation is consumed with no retry, rerun, resume, repair, fallback, or substitution.",
