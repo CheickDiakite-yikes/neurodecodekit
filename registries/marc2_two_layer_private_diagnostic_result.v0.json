@@ -1,0 +1,186 @@
+{
+  "schema_name": "neurodecodekit.marc2_two_layer_private_diagnostic_result",
+  "schema_version": "0.1.0",
+  "result_id": "MARC-2-VR9P-consumed-two-layer-F03-structural-class-result-v0",
+  "lane_id": "MARC2-VR9P",
+  "recorded_at_local": "2026-08-17",
+  "status": "consumed_completed_target_free_two_layer_F03_structural_diagnostic_no_cohort_no_retry_or_rerun",
+  "route": "MARC2VR9P-R1",
+  "outer_VR6_route": "MARC2VR6-F02",
+  "nested_VR2_route": "MARC2VR2-F03",
+  "proof_posture": {
+    "kind": "one_consumed_target_free_private_structural_diagnostic",
+    "scientific_value": false,
+    "real_private_structural_manifest_read": true,
+    "archive_member_or_payload_read": false,
+    "neural_target_model_or_score_operation": false
+  },
+  "green_implementation_proof": {
+    "commit": "0dd113a9a0259b6192e3997eae62369b9cc5a85b",
+    "CI_run_id": 31995078475,
+    "base_python_job_id": 95285174846,
+    "optional_neuro_job_id": 95285174911,
+    "both_required_jobs_green_before_execution": true,
+    "implementation_registry_sha256": "f2d5929823df9bbd022930c76c5bd8ed310c2a4646c72acdd15d9ba36a6fb677",
+    "proof_record_sha256": "681239756ff301c92fb2fee95f30693d53ce4c418597223a9371b568d28bb265"
+  },
+  "artifact_bindings": [
+    {
+      "path": "src/neurodecodekit/datasets/marc2_two_layer_private_diagnostic.py",
+      "sha256": "bfcbedc2508599a90d987ecd891a169353f1cfd96ade041a4119b665874ba038"
+    },
+    {
+      "path": "registries/marc2_two_layer_private_diagnostic_implementation.v0.json",
+      "sha256": "f2d5929823df9bbd022930c76c5bd8ed310c2a4646c72acdd15d9ba36a6fb677"
+    },
+    {
+      "path": "registries/marc2_two_layer_private_diagnostic_proof.v0.json",
+      "sha256": "681239756ff301c92fb2fee95f30693d53ce4c418597223a9371b568d28bb265"
+    },
+    {
+      "path": "registries/marc2_two_layer_private_diagnostic_authorization_decision.v0.json",
+      "sha256": "a62ee8463b384aefbe8b562da47a3c7e53644c2a2b066932bcbaff3e3db12571"
+    },
+    {
+      "path": "docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_RESULT.md",
+      "sha256": "de20303b6eeac372edcdb879ca29fb718ad4022e00c7e1479a63068343b27be9"
+    },
+    {
+      "path": "tests/test_marc2_two_layer_private_diagnostic_result.py",
+      "sha256": "1aab9f4fd781c50cfcdbaf90c9c9e96302f7af3054df78ad347455830322e866"
+    }
+  ],
+  "private_execution": {
+    "invocations": 1,
+    "exact_remote_proof_validation_passed": true,
+    "fresh_readiness_invocations": 1,
+    "fresh_readiness_passed": true,
+    "fresh_readiness_samples": 3,
+    "fresh_readiness_certificates_written": 1,
+    "pre_marker_thread_RSS_and_disk_recheck_passed": true,
+    "registered_private_source_preflights": 1,
+    "registered_output_root_creations": 1,
+    "consumed_markers": 1,
+    "marker_immediately_before_source_open": true,
+    "private_structural_content_opens": 1,
+    "private_structural_bytes": 418755,
+    "private_structural_integrity_matched": true,
+    "strict_JSON_parses": 1,
+    "VR6_adapter_calls": 1,
+    "VR2_validation_calls": 1,
+    "aggregate_reports": 1,
+    "private_selection_manifests": 0,
+    "real_cohort_freezes": 0
+  },
+  "localization_result": {
+    "stage": "VR6_upstream_VR2_validation",
+    "aggregate_class": "row_path_ZIP_BIDS_run_companion_or_structural_grouping",
+    "F03_observed_for_exact_execution": true,
+    "F04_excluded_for_exact_execution": true,
+    "exact_failed_predicate_available": false,
+    "failed_private_value_available": false,
+    "source_row_or_path_available": false,
+    "candidate_selection_or_cohort_available": false,
+    "predicate_value_row_path_selection_or_cohort_not_inferred": true,
+    "post_hoc_private_reinspection_is_not_execution_evidence": true,
+    "retry_or_fallback_attempted": false
+  },
+  "acceptance_gate_result": {
+    "required": 12,
+    "passed": 12,
+    "failed": [],
+    "passed_names": [
+      "exact_remote_green_implementation_proof",
+      "one_thread_environment",
+      "three_consecutive_machine_readiness_samples",
+      "pre_marker_machine_recheck",
+      "registered_source_no_follow_preflight",
+      "fresh_output_root_and_consumed_marker",
+      "marker_before_one_source_content_open",
+      "source_size_integrity_and_strict_JSON",
+      "exactly_one_VR6_adapter_call",
+      "allowlisted_outer_VR6_route",
+      "allowlisted_nested_VR2_route",
+      "aggregate_firewall_resources_and_output_caps"
+    ]
+  },
+  "measurements": {
+    "runtime_seconds": 10.044833040999947,
+    "peak_RSS_bytes": 39075840,
+    "fresh_readiness_samples": 3,
+    "fresh_readiness_wait_seconds": 10.017769999991287,
+    "maximum_normalized_one_minute_load": 0.9684244791666666,
+    "minimum_free_disk_bytes": 146429759488,
+    "fresh_readiness_certificate_bytes": 3237,
+    "consumed_marker_bytes": 426,
+    "aggregate_report_bytes": 3011,
+    "combined_output_bytes": 6674,
+    "source_input_bytes": 418755,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "network_bytes": 0,
+    "archive_member_or_payload_bytes": 0,
+    "signal_sample_reads": 0,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "producer_is_causal": "not_applicable_structural_metadata_only",
+    "end_to_end_latency_measured": false
+  },
+  "forbidden_operation_counters": {
+    "consumed_path_or_executor_operations": 0,
+    "post_result_private_reinspection_operations": 0,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "archive_local_header_or_member_payload_reads": 0,
+    "signal_sample_reads": 0,
+    "event_onset_channel_geometry_target_label_or_quality_reads": 0,
+    "derivative_cache_feature_split_or_NeuroToken_operations": 0,
+    "training_or_parameter_update_fits": 0,
+    "model_inference_or_prediction_sets": 0,
+    "prediction_freezes_target_deliveries_or_scores": 0,
+    "provider_or_language_model_calls": 0,
+    "RW3_stream_device_or_hardware_operations": 0,
+    "retries_reruns_resumes_repairs_fallbacks_or_substitutions": 0,
+    "release_publication_or_scientific_claim_upgrades": 0,
+    "other_project_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0
+  },
+  "verification": {
+    "focused_result_tests": 10,
+    "ruff_compile_registry_JSON_and_diff_hygiene_required": true,
+    "remote_CI_pending": true,
+    "remote_proof": null
+  },
+  "warnings": [
+    "The one registered invocation is consumed with no retry, rerun, resume, repair, fallback, or substitution.",
+    "F03 is an aggregate structural class and does not disclose a failed predicate, value, row, path, identity, candidate, selection, or cohort.",
+    "Do not reopen or alter the fresh certificate, consumed marker, output root, or retained structural source under this lane.",
+    "No cohort was frozen and no archive member or neural payload was opened."
+  ],
+  "unavailable_fields": [
+    "exact F03 predicate and failed private value",
+    "source rows member names paths offsets CRCs and private identities",
+    "participant session run candidate selection and cohort identities",
+    "archive member payload neural signal events targets labels channels geometry and quality",
+    "neural features checkpoints predictions scores and end-to-end latency"
+  ],
+  "disposition": {
+    "registered_execution_consumed": true,
+    "retry_rerun_or_resume_limit": 0,
+    "private_reinspection_allowed": false,
+    "fresh_certificate_marker_output_root_or_source_patch_delete_rename_or_reuse_allowed": false,
+    "real_cohort_identity_available": false,
+    "archive_member_or_payload_allowed": false,
+    "MARC2_FW2_eligible": false,
+    "MARC2_CIL1_eligible": false,
+    "new_Tier_C_decision_required_for_any_private_read": true,
+    "next_safe_work": "separately named artifact-only F03 predicate decomposition and generated coverage using committed code contracts and generated fixtures"
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "The remotely green wrapper safely distinguished the private source's nested F03 structural class from F04 while retaining no private row path identity value candidate selection or cohort output.",
+    "scientific_claim_not_established": "No neural payload target model prediction or score was accessed so this result establishes no neural effect decoding accuracy language decoding live decoding or thought-to-text capability."
+  }
+}

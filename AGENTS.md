@@ -164,15 +164,25 @@ refusals across eight paths in 1.2402790839987574 seconds at 63,799,296-byte
 peak RSS, with 3,407,792 generated source bytes and zero retained output or
 real/private operations.
 
-Commit, push, and obtain both green CI jobs for this exact implementation
-before any `.codex_work` operation. Only after that proof may one target-free
-read of the registered 418,755-byte structural manifest occur. The only
-retainable private observation is outer
-`MARC2VR6-F02` plus nested `MARC2VR2-F03` or `MARC2VR2-F04`; reasons, rows,
-paths, identities, values, hashes, candidate selections, and cohort output are
-forbidden. VR6 success, F02, an unknown route, source drift, or leakage consumes
-and parks the lane. Generated qualification established no real route, cohort,
-neural effect, or decoding result.
+Exact implementation `0dd113a9a0259b6192e3997eae62369b9cc5a85b` passed Base
+Python job `95285174846`, Optional Neuro Readers job `95285174911`, and CI
+`31995078475` before the sole invocation. Read
+`docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_RESULT.md` and
+`registries/marc2_two_layer_private_diagnostic_result.v0.json`. The run passed
+three readiness samples, read and strict-parsed exactly 418,755 target-free
+structural bytes once, called VR6 once, and retained outer `MARC2VR6-F02` plus
+nested `MARC2VR2-F03` as aggregate route `MARC2VR9P-R1`. This localizes the
+blocker to VR2's row-path, ZIP/BIDS, run-companion, or structural-grouping
+class and excludes F04 for this exact execution. It does not identify the
+failed predicate, value, row, path, identity, candidate, selection, or cohort.
+
+VR9P is consumed with no retry, rerun, resume, repair, fallback, substitution,
+or private reinspection. Do not touch its private source, readiness
+certificate, consumed marker, or output root. No archive member, neural
+payload, target, model, prediction, or score was accessed; FW2 and CIL1 remain
+ineligible. The next safe task is a separately named artifact-only F03
+predicate-decomposition and generated-coverage lane. Any further private read
+requires a new frozen packet and fresh Tier C decision.
 
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-

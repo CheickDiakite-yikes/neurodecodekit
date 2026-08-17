@@ -2802,3 +2802,26 @@ Next gate: commit, push, and green the exact implementation in both jobs before
 the one registered private structural diagnosis. FW2, CIL1, archive payload,
 neural data, targets, models, predictions, scores, and scientific claims remain
 closed.
+
+### MARC2-VR9P - Two-Layer Private Diagnostic (Consumed At F03)
+
+Exact implementation `0dd113a` passed Base job `95285174846`, Optional job
+`95285174911`, and CI `31995078475` before the sole target-free private
+invocation. Three consecutive readiness samples passed. The command read and
+strict-parsed exactly 418,755 structural bytes once, called VR6 once, and
+retained only `MARC2VR9P-R1`, outer `MARC2VR6-F02`, and nested
+`MARC2VR2-F03`.
+
+F03 localizes the blocker to row-path, ZIP/BIDS, run-companion, or structural
+grouping and excludes F04 taxonomy arithmetic for this exact execution. No
+failed predicate, value, row, path, identity, candidate, selection, private
+manifest, or cohort was retained. Runtime was 10.044833040999947 seconds at
+39,075,840-byte peak RSS with 6,674 combined output bytes. Every archive,
+signal, target, model, training, prediction, score, network, provider,
+hardware, FW2/CIL1, retry, other-project, release, and claim counter was zero.
+
+VR9P is consumed with no retry, rerun, resume, repair, fallback, substitution,
+or private reinspection. FW2 and CIL1 remain closed because no real cohort
+identity exists. Next: one separately named artifact-only F03 predicate-
+decomposition and generated-coverage lane, followed only if justified by a new
+all-false Tier C packet for another aggregate-safe structural discriminator.

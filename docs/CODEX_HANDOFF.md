@@ -5543,3 +5543,32 @@ VR9P readiness certificate and output root, read exactly 418,755 structural
 bytes once, call VR6 once, and retain only outer F02 plus nested F03 or F04.
 There is no private manifest or cohort output. Keep the unrelated untracked
 tracker inspection NDJSON untouched.
+
+## 2026-08-17 MARC2-VR9P Consumed F03 Result Handoff
+
+Exact wrapper `0dd113a9a0259b6192e3997eae62369b9cc5a85b` passed Base Python
+job `95285174846`, Optional Neuro Readers job `95285174911`, and CI
+`31995078475` before the one registered invocation.
+
+Read `docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_RESULT.md` and
+`registries/marc2_two_layer_private_diagnostic_result.v0.json`. The command
+passed three machine-readiness samples, created one consumed marker, read and
+strict-parsed exactly 418,755 target-free structural bytes once, and called VR6
+once. The only retained diagnosis is `MARC2VR9P-R1`, outer `MARC2VR6-F02`, and
+nested `MARC2VR2-F03`.
+
+F03 identifies the row-path, ZIP/BIDS, run-companion, or structural-grouping
+class. It excludes F04 taxonomy/arithmetic for this exact execution but does
+not reveal which predicate failed or any value, row, path, identity, candidate,
+selection, or cohort. Runtime was 10.044833040999947 seconds at 39,075,840-byte
+peak RSS with 6,674 combined output bytes. All archive, neural, target, model,
+training, prediction, score, network, other-project, retry, and claim counters
+were zero.
+
+VR9P is consumed. Do not reopen, inspect, hash, parse, rename, delete,
+overwrite, or reuse its private source, readiness certificate, marker, or
+output root. Keep the unrelated tracker inspection NDJSON untouched. FW2 and
+CIL1 remain ineligible because no cohort exists. Immediate next safe task:
+commit, push, and green this aggregate closeout, then freeze a separately named
+artifact-only F03 predicate-decomposition and generated-coverage lane. Any new
+private read requires another immutable Tier C packet and fresh decision.

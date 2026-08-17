@@ -9159,3 +9159,32 @@ Boundary decision: generated qualification is interface evidence only. It
 establishes no real structural route, cohort, neural effect, decoding accuracy,
 language decoding, live decoding, or thought-to-text capability. The exact
 implementation must pass both remote jobs before one private structural read.
+
+## 0282 - Accept VR9P F03 Localization And Consume The Lane
+
+Execution decision: run only after exact implementation `0dd113a` passed Base
+Python job `95285174846`, Optional Neuro Readers job `95285174911`, and CI
+`31995078475`. Wait outside the executor until machine load was below the
+registered ceiling; do not stop or alter unrelated processes.
+
+Evidence decision: accept aggregate route `MARC2VR9P-R1`, outer
+`MARC2VR6-F02`, and nested `MARC2VR2-F03` after one 418,755-byte integrity-
+checked strict JSON read and one VR6 call. Interpret F03 only as the committed
+row-path/ZIP-BIDS/run-companion/structural-grouping class. Exclude F04 for this
+exact execution, but do not infer the failed predicate, value, row, path,
+identity, candidate, selection, or cohort.
+
+Resource decision: accept three passing readiness samples, 10.044833040999947
+seconds runtime, 39,075,840-byte peak RSS, 6,674 combined output bytes, one
+thread, one worker, one numerical job, and zero network or archive payload.
+
+Disposition decision: consume VR9P with no retry, rerun, resume, repair,
+fallback, substitution, private reinspection, or output-root reuse. FW2 and
+CIL1 remain ineligible. The next safe work is a separately named artifact-only
+F03 predicate-decomposition and generated-coverage lane; any new private read
+requires a new immutable packet and fresh Tier C decision.
+
+Claim decision: this is an engineering failure-localization result only. No
+neural payload, target, model, prediction, or score was accessed, so it proves
+no neural effect, decoding accuracy, language decoding, live decoding, or
+thought-to-text capability.

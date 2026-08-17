@@ -42,7 +42,7 @@ irreversible Tier C events.
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |
 | IACKD source compatibility | H1 found 96 29-row and 32 31-row headers. H2 then parsed all 316 public BIDS metadata bodies and confirmed one 26-channel predictive EEG core, 1024 Hz sampling, average reference, and complete central/occipital geometry in all 30 groups | The exact-36 reader assumption was wrong, but H2 still routed `IACKDR-R1`: HEOG, VEOG, and Trigger are source-typed `MISC`, exposing a frozen control-taxonomy bug before any EEG sample, event, target, model, or score was accessed |
 | MARC-1 source eligibility | The Freewill central-directory inventory passed without payload, but the one source-aware Wrist metadata check later routed `MARC1SAL-R2` with zero selected subjects and zero payload bytes | The Wrist branch is consumed and blocked before acquisition; the private source route remains unavailable and is not inferred or repaired |
-| MARC-2 confound triangulation | Five ordered work orders test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | VR8B passes a full-scale 1,227-entry generated parser/producer relay. VR9P's packet-bound decision is remotely green, and its new fixed-path wrapper passes an eight-path F03/F04 replay plus 70 refusal mutations. That exact wrapper still must pass both CI jobs before one private structural read; no real route, cohort, or neural payload has been opened |
+| MARC-2 confound triangulation | Five ordered work orders test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | VR9P completed one proof-gated target-free structural read and localized the live blocker to nested `MARC2VR2-F03`, the row-path/run-companion/grouping class, rather than F04 taxonomy arithmetic. No failed value, cohort, archive member, neural payload, target, model, or score was exposed; FW2 remains closed |
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
 | Full-path causality gate | Loop 25 v1 passed a dedicated causal anti-alias audit, 65,537 response points, 23 alias probes, 168 schedule checks, 240 resume checks, and 72 future-mutation controls across 24 target-free items | The exact 1000-to-100 Hz path is mechanically causal with zero right context; this is synthetic mechanics evidence, not proof that neural information survives |
 | Consumed S21 validation | The registered 2,908-parameter candidate reached macro CER `0.938177`; the train-only no-signal prior reached `0.751235`, so the candidate was worse by `0.186942` | Loop 26 is parked after one consumed six-target event; this is a clear negative result, not neural advantage |
@@ -1969,7 +1969,7 @@ Read this before interpreting any number in the repository.
   `31989817593`. The consumed private F03/F04 route, cohort, neural payload,
   target, model, and score remain unavailable; another private read still needs
   a new green Tier C packet and fresh decision.
-- **MARC2-VR9P two-layer diagnostic implementation:** the all-false packet binds
+- **MARC2-VR9P two-layer diagnostic result:** the all-false packet binds
   17 remotely green predecessor artifacts totaling 328,581 bytes, the exact
   418,755-byte structural-manifest identity copied from committed records, one
   fresh readiness path, and one new output root. Request `de8e6dc` passed Base
@@ -1984,16 +1984,20 @@ Read this before interpreting any number in the repository.
   F03 and F04 in canonical and reversed order twice, makes exactly eight VR6
   calls, and passes 70 direct refusal mutations. One measured run processed
   3,407,792 generated source bytes in 1.2403 seconds at 63,799,296-byte peak
-  RSS, emitted 6,541 aggregate bytes, and retained zero output. The exact
-  implementation still must be committed, pushed, and green in both jobs.
-  Only then may one target-free manifest read occur and retain outer
-  `MARC2VR6-F02` plus nested `MARC2VR2-F03` or
-  `MARC2VR2-F04`. Reasons, source rows, paths, private identities, failed values,
-  candidate selections, private manifests, and cohort output are forbidden.
-  Generated implementation made zero real readiness, private-path, archive,
-  neural, target, model, prediction, or score operations. Even the future
-  diagnostic would open no archive member or neural payload and could establish
-  no neural effect or decoding performance.
+  RSS, emitted 6,541 aggregate bytes, and retained zero output. Exact
+  implementation `0dd113a` passed Base job `95285174846`, Optional job
+  `95285174911`, and CI `31995078475` before the sole private invocation. The
+  run passed three readiness samples, read and strict-parsed 418,755 target-free
+  structural bytes once, called VR6 once, and returned aggregate route
+  `MARC2VR9P-R1`: outer `MARC2VR6-F02`, nested `MARC2VR2-F03`. That localizes
+  the blocker to row-path, ZIP/BIDS, run-companion, or structural grouping and
+  excludes F04 taxonomy/arithmetic for this exact execution. It does not reveal
+  a predicate, value, row, path, identity, candidate, selection, or cohort.
+  Runtime was 10.0448 seconds at 39,075,840-byte peak RSS with 6,674 combined
+  output bytes; neural, target, model, training, prediction, score, network, and
+  other-project counters were zero. VR9P is consumed with no retry or private
+  reinspection. FW2 and CIL1 remain ineligible, and no neural effect or decoding
+  performance was tested.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
@@ -2865,6 +2869,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_IMPLEMENTATION.md](docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_IMPLEMENTATION.md) | generated-qualified fixed-path wrapper, measured F03/F04 replay, route-only firewall, private state machine, resources, and exact green gate |
 | [registries/marc2_two_layer_private_diagnostic_implementation.v0.json](registries/marc2_two_layer_private_diagnostic_implementation.v0.json) | machine-readable VR9P implementation surface, artifact hashes, generated metrics, fixed identities, zero counters, and private-access boundary |
 | [registries/marc2_two_layer_private_diagnostic_proof.v0.json](registries/marc2_two_layer_private_diagnostic_proof.v0.json) | shared-validator proof record over 22 exact tracked artifacts with all private and scientific authority false |
+| [docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_RESULT.md](docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_RESULT.md) | consumed `MARC2VR9P-R1` result, F03 localization, measured one-read boundary, explicit unknowns, no-rerun disposition, and no-science ceiling |
+| [registries/marc2_two_layer_private_diagnostic_result.v0.json](registries/marc2_two_layer_private_diagnostic_result.v0.json) | machine-readable outer F02 plus nested F03 route, one-read counters, resource measurements, privacy firewall, and closed FW2/CIL1 gates |
 | [docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md](docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md) | frozen generated-only 238-bundle repair design, filter-before-count order, aggregate predicates, mutations, resources, and claim boundary |
 | [registries/marc2_source_validity_eligibility_repair_contract.v0.json](registries/marc2_source_validity_eligibility_repair_contract.v0.json) | machine-readable `MARC2-VR1` source-validity and eligibility contract with 43 generated adversary bundles and all authority flags false |
 | [docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md](docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md) | generated-only full-source validator, eligibility-first selection order, refusal coverage, local verification, and exact remote-proof gate |

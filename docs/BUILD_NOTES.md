@@ -11156,3 +11156,32 @@ that proof.
 Next gate: commit, push, and obtain both remote CI jobs for the exact generated
 implementation. The one private structural diagnostic remains closed until
 that proof.
+
+## 2026-08-17 - MARC2-VR9P Consumed Two-Layer Private Diagnostic
+
+- Exact implementation `0dd113a9a0259b6192e3997eae62369b9cc5a85b` passed Base
+  Python job `95285174846`, Optional Neuro Readers job `95285174911`, and CI
+  `31995078475` before execution.
+- Waited outside the executor while host load exceeded the frozen 12-logical-
+  CPU ceiling. No process was stopped or modified. The sole invocation began
+  only after public machine health settled below threshold with about 136 GiB
+  free disk.
+- The fresh readiness certificate recorded three passing samples with maximum
+  normalized load `0.9684244791666666`, minimum free disk 146,429,759,488
+  bytes, and a 10.017769999991287-second wait.
+- The fixed command created one consumed marker, opened and strict-parsed
+  exactly 418,755 target-free structural bytes once, and called VR6 once.
+- The aggregate result is `MARC2VR9P-R1`: outer `MARC2VR6-F02`, nested
+  `MARC2VR2-F03`. This distinguishes the row-path/ZIP-BIDS/run-companion/
+  grouping class from F04 taxonomy arithmetic without retaining the predicate,
+  value, row, path, identity, candidate, selection, or cohort.
+- Runtime was 10.044833040999947 seconds at 39,075,840-byte peak RSS. The
+  readiness certificate, marker, and aggregate report totaled 6,674 bytes.
+- Every archive, signal, event, target, derivative, model, training,
+  prediction, score, network, provider, hardware, FW2/CIL1, retry,
+  other-project, release, and claim counter stayed zero.
+
+Next gate: commit, push, and green the aggregate result record. Then perform
+only separately named artifact-only F03 predicate decomposition and generated
+coverage. VR9P is consumed; no retry, rerun, private reinspection, cohort,
+archive payload, neural, target, model, or score work is open.

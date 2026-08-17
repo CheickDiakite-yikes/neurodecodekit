@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR9P Request
+## Current Frontier: MARC2-VR9P Consumed F03 Diagnosis
 
 Read `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`, then
 `docs/MARC_2_VR2_REFUSAL_LOCALIZATION_PREREGISTRATION.md` and
@@ -114,13 +114,23 @@ registry. Decision `4cdd3d3` passed Base job `95280728093`, Optional job
 `docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_IMPLEMENTATION.md`, its registry,
 proof record, and tests. The generated/mock fixed-path wrapper passes F03/F04
 in both orders across two exact replays, eight VR6 calls, and 70 direct
-refusals. It retained zero output and made zero real/private operations. That
-exact implementation must become remotely green before one target-free read of
-the same 418,755-byte structural manifest.
-Only outer `MARC2VR6-F02` plus nested `MARC2VR2-F03` or `MARC2VR2-F04` may be
-retained. No reason, row, path, private identity, failed value, candidate
-selection, private manifest, or cohort may leave the process. Until the exact
-implementation is remotely green, do not touch `.codex_work`.
+refusals. Exact implementation `0dd113a` passed Base job `95285174846`,
+Optional job `95285174911`, and CI `31995078475` before the sole execution.
+
+Read `docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_RESULT.md` and its registry.
+The one run crossed three passing readiness samples, read and strict-parsed
+exactly 418,755 target-free structural bytes once, and called VR6 once. It
+retained aggregate route `MARC2VR9P-R1`, outer `MARC2VR6-F02`, and nested
+`MARC2VR2-F03`. This distinguishes F03 path/companion/grouping structure from
+F04 taxonomy/arithmetic, but reveals no failed predicate, value, row, path,
+identity, candidate, selection, or cohort. Runtime was 10.044833041 seconds at
+39,075,840-byte peak RSS; all neural, target, model, training, prediction,
+score, network, and other-project counters were zero.
+
+VR9P is consumed with no retry or private reinspection. FW2 and CIL1 remain
+closed because no cohort exists. Next perform only a separately named
+artifact-only F03 predicate-decomposition and generated-coverage pass. Any
+further private read needs a new immutable packet and fresh Tier C decision.
 
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.
