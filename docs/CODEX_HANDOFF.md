@@ -10,19 +10,18 @@
 > no private source, ignored path, cohort, archive member, neural payload,
 > target, model, score, FW2, or CIL1 operation.
 
-> Current MARC2-VR7P gate, 2026-08-16: request `9d42bac` and proof closeout
-> `ecaa2ab` were green before the maintainer's fresh `continue`; packet-bound
-> decision `a318521` then passed Base job `95244335512`, Optional job
-> `95244335508`, and CI `31979669507` before implementation. Read
-> `docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_IMPLEMENTATION.md` and its
-> registries. The additive wrapper passes ten generated 12/14/16/18/19-subject
-> profile/order paths, 20 deterministic replays, and 85 direct refusals in
-> 5.951104625 seconds at 54,280,192-byte peak RSS. Real/private/neural/model
-> counters remain zero. Commit, push, and require both CI jobs green for this
-> exact implementation before one fresh readiness invocation or the sole
-> 418,755-byte structural open. Never touch a consumed root or the ignored
-> tracker inspection. Archive payload, FW2, training, scoring, and live
-> decoding remain closed.
+> Current MARC2-VR7P result, 2026-08-16: exact wrapper `154852c` passed Base
+> job `95252133987`, Optional job `95252133958`, and CI `31982672176` before
+> the sole invocation. Read
+> `docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_RESULT.md` and its failure
+> registry. The run crossed readiness, wrote one consumed marker, read and
+> verified exactly 418,755 structural bytes once, strict-parsed once, then
+> consumed at wrapper `MARC2VR7P-F07` with upstream VR6 `MARC2VR6-F02`.
+> That code identifies VR6's upstream VR2-validation branch; the nested VR2
+> route, private predicate/value, candidate selection, and cohort were not
+> retained. Never reopen or alter the readiness path, output root, marker,
+> retained source, or ignored tracker inspection. Retry, archive payload, FW2,
+> CIL1, training, scoring, and live decoding remain closed.
 
 > Current MARC2-VR5A gate, 2026-08-16: registration `926e1ba` passed Base
 > Python job `95226555204`, Optional Neuro Readers job `95226555153`, and CI

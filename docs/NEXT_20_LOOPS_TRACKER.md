@@ -2665,3 +2665,25 @@ and Optional Neuro Readers green for that exact commit. Before those two green
 jobs, do not invoke readiness or touch the registered source/output paths. A
 successful future structural result makes bounded FW2 preregistration eligible;
 it does not itself authorize or prove neural decoding.
+
+### MARC2-VR7P - Consumed Structural Refusal (Complete; FW2 Closed)
+
+Exact implementation `154852c58af080904087a2e4cef71991dcb6179d` passed Base
+job `95252133987`, Optional job `95252133958`, and CI `31982672176` before the
+sole registered invocation.
+
+The command crossed fresh readiness, passed its pre-marker machine recheck,
+preflighted the exact source, wrote one consumed marker, opened and verified
+418,755 target-free structural bytes once, strict-parsed one JSON object, and
+called VR6 once. It then failed closed at `MARC2VR7P-F07`, preserving upstream
+VR6 route `MARC2VR6-F02`, the branch for upstream VR2 validation refusal.
+
+The nested VR2 code, failed predicate/value, intermediate selection, and real
+cohort were intentionally unavailable. No private selection manifest or
+aggregate report was written, and no archive member, signal, target,
+derivative, model, prediction, freeze, score, or live operation occurred.
+
+Current gate: VR7P is consumed with no retry, rerun, resume, repair, fallback,
+or private reinspection. FW2 and CIL1 remain ineligible. The next safe work is
+a separately named artifact-only VR6-to-VR2 boundary analysis using committed
+code, contracts, generated fixtures, and the two allowlisted route codes only.

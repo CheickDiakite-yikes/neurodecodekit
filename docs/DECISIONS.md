@@ -8882,3 +8882,29 @@ prediction, target delivery, scoring, live decoding, and claims remain closed.
 Evidence: `docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_IMPLEMENTATION.md`,
 `registries/marc2_dynamic_private_selection_recovery_implementation.v0.json`,
 the distinct proof record, module, and focused tests.
+
+## 0274 - Consume VR7P At The Preserved Upstream-Validation Route
+
+Execution decision: invoke the registered command once only after exact
+implementation `154852c58af080904087a2e4cef71991dcb6179d` passed Base Python
+job `95252133987`, Optional Neuro Readers job `95252133958`, and CI
+`31982672176`.
+
+Evidence decision: retain only wrapper `MARC2VR7P-F07` and allowlisted upstream
+VR6 `MARC2VR6-F02`. The latter identifies VR6's upstream VR2-validation branch
+but does not reveal the nested VR2 route, failed predicate/value, or candidate
+selection. Do not infer those unavailable private facts.
+
+Consumption decision: the route followed one readiness pass, marker, exact
+418,755-byte integrity-checked structural open, strict parse, and VR6 call.
+Consume the lane with no retry, rerun, resume, repair, fallback, output-root
+inspection, or source reinspection. No cohort was frozen, so FW2 and CIL1
+remain ineligible.
+
+Claim decision: this is a target-free structural engineering refusal. No
+archive member, neural payload, target, model, prediction, score, live decoder,
+or scientific claim was reached.
+
+Evidence: `docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_RESULT.md`,
+`registries/marc2_dynamic_private_selection_recovery_failure_result.v0.json`,
+and its focused test.

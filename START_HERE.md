@@ -46,17 +46,18 @@ word was `continue`, recorded in the separate VR7P decision. Decision
 `a318521` passed Base job `95244335512`, Optional job `95244335508`, and CI
 `31979669507` before implementation began.
 
-Read `docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_IMPLEMENTATION.md` and
-its implementation/proof registries. The new additive wrapper does not import
-the consumed VR4P executor. Generated `MARC2VR7P-R1` passed ten dynamic
-profile/order paths, 20 exact replays, and 85 direct refusals in 5.951104625
-seconds at 54,280,192-byte peak RSS, with 4,291,134 generated input bytes,
-2,681,772 generated sequence output bytes, zero retention, and every real,
-private, neural, target, model, score, network, hardware, and claim counter at
-zero. The exact implementation must now be committed, pushed, and pass both CI
-jobs before the one registered readiness invocation or structural source open.
-Do not touch any real or consumed `.codex_work` path before that proof. FW2,
-neural payload access, training, scoring, and live decoding remain closed.
+Read `docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_IMPLEMENTATION.md`,
+`docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_RESULT.md`, and their
+registries. Exact wrapper `154852c` passed Base job `95252133987`, Optional job
+`95252133958`, and CI `31982672176` before the sole structural invocation. The
+run crossed readiness, wrote its consumed marker, read and verified exactly
+418,755 target-free structural bytes once, strict-parsed once, and called VR6
+once. It consumed at `MARC2VR7P-F07`, preserving only upstream VR6 route
+`MARC2VR6-F02`, which identifies VR6's upstream VR2-validation branch. The
+nested VR2 route, failed private predicate/value, intermediate selection, and
+real cohort were not retained. Do not reopen or alter the new readiness path,
+output root, marker, or source, and do not rerun VR7P. FW2, CIL1, neural
+payload access, training, scoring, and live decoding remain closed.
 
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.

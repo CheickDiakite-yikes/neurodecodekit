@@ -45,7 +45,8 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
-The latest remotely green diagnosis is `MARC2-VR5A`. Read
+The latest consumed evidence lane is `MARC2-VR7P`; its result is summarized
+below. For the predecessor diagnosis, read
 `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`,
 `docs/MARC_2_VR2_REFUSAL_LOCALIZATION_PREREGISTRATION.md`, and
 `docs/MARC_2_VR2_REFUSAL_LOCALIZATION_IMPLEMENTATION.md` with their
@@ -79,24 +80,19 @@ Read `docs/MARC_2_DYNAMIC_LIVE_SELECTION_IMPLEMENTATION.md`,
 and retains zero output. Exact implementation
 `482dad55e91e2abf48b6a59a417ebca191c0cd68` passed Base Python job
 `95234487830`, Optional Neuro Readers job `95234487789`, and CI `31975600088`.
-That request is now specified as `MARC2-VR7P`. Read
-`docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_AUTHORIZATION_PACKET.md` and
-`registries/marc2_dynamic_private_selection_recovery_authorization_request.v0.json`.
-It proposes a generated/mock fixed-path wrapper after a fresh green decision,
-then one 418,755-byte structural pass only after the exact future implementation
-is remotely green. Immutable request
-`9d42bac29b695a97639c4a197812865f0ac4f7d5` passed Base Python job
-`95236917861`, Optional Neuro Readers job `95236917836`, and CI `31976595268`.
-It is the sole active Tier C packet, but every authorization field and current
-counter remains false/zero. The maintainer's next exact message was `continue`.
-Read `docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_AUTHORIZATION_DECISION.md`
-and
-`registries/marc2_dynamic_private_selection_recovery_authorization_decision.v0.json`.
-The decision quotes those eight bytes and binds only the green VR7P packet. It
-is ineffective until its own commit is pushed and both CI jobs pass. Before
-that proof, do not implement the wrapper or perform any private operation. This
-work authorizes no archive member, neural payload, target, model, score, FW2,
-or CIL1 operation.
+Read `docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_IMPLEMENTATION.md`,
+`docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_RESULT.md`, and their
+registries. Exact VR7P implementation
+`154852c58af080904087a2e4cef71991dcb6179d` passed Base Python job
+`95252133987`, Optional Neuro Readers job `95252133958`, and CI `31982672176`
+before the sole invocation. The executor crossed fresh readiness, wrote one
+consumed marker, read and verified exactly 418,755 target-free structural bytes
+once, strict-parsed once, and called VR6 once. It consumed at
+`MARC2VR7P-F07` with upstream VR6 route `MARC2VR6-F02`, the branch for upstream
+VR2 validation refusal. The nested VR2 route, failed private predicate/value,
+candidate selection, and real cohort were not retained and must not be
+inferred. VR7P has no retry, rerun, resume, repair, fallback, or private
+reinspection. FW2 and CIL1 remain ineligible.
 Do not touch ignored MARC2 paths, consumed roots, certificates, markers,
 retained sources, archive members, neural data, targets, models, predictions,
 or scores. Any future private read remains a new Tier C packet and fresh
@@ -3255,13 +3251,13 @@ module, and tests. Local `MARC2VR6-G1` accepts measured maximal contiguous
 12-19-subject prefixes under the unchanged cap, emits live source semantics,
 preserves only the nested route code, and passes 34 direct refusals across all
 eight route classes. Exact implementation `482dad5` passed both jobs in CI
-`31975600088`. Generated VR6 is complete. The all-false `MARC2-VR7P` request
-now specifies new fixed paths, dynamic outcomes, one future open, and one VR6
-call, but grants zero authority. Request `9d42bac` passed both jobs in CI
-`31976595268` and became the sole active Tier C gate. The maintainer then sent
-the fresh word `continue`; the separate VR7P decision binds that word only to
-this packet and remains ineffective until its own commit is remotely green. A
-later private read may occur only after the separately green generated wrapper.
+`31975600088`. VR7P request `9d42bac`, decision `a318521`, and exact wrapper
+`154852c` then passed their separate remote gates. The sole VR7P invocation
+crossed readiness, marker, one exact 418,755-byte structural open, strict JSON,
+and one VR6 call before consuming at wrapper `MARC2VR7P-F07` with upstream VR6
+route `MARC2VR6-F02`. That route identifies the upstream VR2-validation branch
+only; the nested VR2 code, private predicate/value, candidate selection, and
+cohort are unavailable. Do not rerun or reinspect VR7P. FW2/CIL1 remain closed.
 Do not touch ignored MARC2 paths, consumed roots, certificates, markers,
 retained sources, archive members, neural data, targets, models, predictions,
 or scores. Any future private read remains a new Tier C packet and fresh

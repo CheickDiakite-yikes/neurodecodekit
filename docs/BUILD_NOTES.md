@@ -10881,3 +10881,38 @@ Scientific claim not established: this implementation used generated
 structural metadata only and establishes no real cohort, neural effect,
 decoding performance, language decoding, live decoding, or thought-to-text
 capability.
+
+## 2026-08-16 - MARC2-VR7P Consumed Structural Refusal
+
+- Pushed exact implementation `154852c58af080904087a2e4cef71991dcb6179d`.
+  It passed Base Python job `95252133987`, Optional Neuro Readers job
+  `95252133958`, and CI `31982672176` before any private operation.
+- Invoked the registered command exactly once with all numerical-thread
+  variables set to one and no path, source, output, retry, or model override.
+- The executor passed fresh readiness and its pre-marker machine recheck,
+  created the new output root and consumed marker, opened the exact structural
+  source once, read and SHA-256-verified 418,755 bytes, strict-parsed one JSON
+  object, and called VR6 once.
+- The command failed closed at wrapper `MARC2VR7P-F07` and preserved upstream
+  VR6 route `MARC2VR6-F02`, which identifies VR6's upstream VR2-validation
+  branch. The nested VR2 route, failed predicate/value, intermediate selection,
+  and real cohort were not emitted or inferred.
+- Exact wall time, internal runtime, peak RSS, readiness samples, certificate
+  bytes, marker bytes, retained bytes, load, disk, and logical CPU values were
+  not emitted after refusal and remain unavailable. The command was observed
+  for at least 60.00228025 seconds and completed below the 650-second cap.
+- No post-failure `.codex_work` inspection occurred. No private selection
+  manifest or aggregate report was written. Network, archive payload, signal,
+  target, derivative, model, prediction, score, provider, hardware, other-
+  project, release, and claim counters remained zero.
+- Added a target-free result document, machine failure registry, and ten
+  focused result tests. VR7P is consumed with no retry, rerun, resume, repair,
+  fallback, or private reinspection; FW2 and CIL1 remain ineligible.
+
+Engineering capability added: the remotely green wrapper crossed machine
+readiness and one integrity-checked structural open, preserved the allowlisted
+VR6 failure class, and failed closed at upstream validation.
+
+Scientific claim not established: no neural payload, target, prediction, or
+score was accessed, so this establishes no neural effect, decoding accuracy,
+language decoding, live decoding, or thought-to-text capability.

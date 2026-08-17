@@ -1926,18 +1926,17 @@ Read this before interpreting any number in the repository.
   `31975600088`. No private, real-cohort, neural, target, model, score, FW2, or
   CIL1 operation is authorized; a future structural read remains a new Tier C
   packet and decision.
-- **MARC2-VR7P dynamic private-selection wrapper:** immutable request
-  `9d42bac`, proof closeout `ecaa2ab`, and packet-bound decision `a318521` were
-  separately green before implementation. The new dependency-free wrapper
-  does not import consumed VR4P and exposes no generic path or recovery switch.
-  Generated `MARC2VR7P-R1` passed ten 12/14/16/18/19-subject profile/order
-  paths, 20 deterministic replays, and 85 direct refusals in 5.951104625
-  seconds at 54,280,192-byte peak RSS. It processed 4,291,134 generated input
-  bytes, emitted 2,681,772 generated sequence output bytes, retained zero, and
-  kept every real/private/neural/model/score counter at zero. The exact wrapper
-  must now be committed, pushed, and pass both CI jobs before one registered
-  418,755-byte target-free structural pass. Neural payloads, FW2 execution,
-  training, scoring, live decoding, and scientific promotion remain closed.
+- **MARC2-VR7P consumed structural result:** exact wrapper `154852c` passed
+  Base job `95252133987`, Optional job `95252133958`, and CI `31982672176`
+  before the sole invocation. It crossed fresh machine readiness, wrote its
+  consumed marker, read and SHA-256-verified exactly 418,755 target-free
+  structural bytes once, strict-parsed them once, and called VR6 once. It then
+  failed closed at `MARC2VR7P-F07` while preserving upstream VR6 route
+  `MARC2VR6-F02`, the branch for upstream VR2 validation refusal. The nested
+  VR2 route, private predicate/value, candidate selection, and cohort were not
+  retained and must not be inferred. VR7P is consumed with no retry or rerun;
+  no archive member, neural payload, target, model, prediction, score, FW2,
+  live decoding, or scientific claim was reached.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
@@ -2789,6 +2788,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_IMPLEMENTATION.md](docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_IMPLEMENTATION.md) | additive VR7P wrapper, dynamic cohort boundary, 85 refusals, measured resources, exact proof order, and no-neural ceiling |
 | [registries/marc2_dynamic_private_selection_recovery_implementation.v0.json](registries/marc2_dynamic_private_selection_recovery_implementation.v0.json) | machine-readable fixed paths, state machine, generated qualification, resource caps, zero real counters, and remote-green gate |
 | [registries/marc2_dynamic_private_selection_recovery_proof.v0.json](registries/marc2_dynamic_private_selection_recovery_proof.v0.json) | distinct shared-validator proof record binding the exact wrapper, tests, docs, registry, decision, and green dependencies |
+| [docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_RESULT.md](docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_RESULT.md) | consumed VR7P route, proven state-machine boundary, explicit unavailable values, no-rerun disposition, and no-neural ceiling |
+| [registries/marc2_dynamic_private_selection_recovery_failure_result.v0.json](registries/marc2_dynamic_private_selection_recovery_failure_result.v0.json) | machine-readable `MARC2VR7P-F07` plus upstream `MARC2VR6-F02`, one-read counters, zero forbidden operations, and closed FW2 gate |
 | [docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md](docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md) | frozen generated-only 238-bundle repair design, filter-before-count order, aggregate predicates, mutations, resources, and claim boundary |
 | [registries/marc2_source_validity_eligibility_repair_contract.v0.json](registries/marc2_source_validity_eligibility_repair_contract.v0.json) | machine-readable `MARC2-VR1` source-validity and eligibility contract with 43 generated adversary bundles and all authority flags false |
 | [docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md](docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md) | generated-only full-source validator, eligibility-first selection order, refusal coverage, local verification, and exact remote-proof gate |
