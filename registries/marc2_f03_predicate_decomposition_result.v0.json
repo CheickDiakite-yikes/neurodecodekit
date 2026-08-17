@@ -1,0 +1,342 @@
+{
+  "schema_name": "neurodecodekit.marc2_f03_predicate_decomposition_result",
+  "schema_version": "0.1.0",
+  "result_id": "MARC-2-VR10A-F03-predicate-decomposition-result-v0",
+  "lane_id": "MARC2-VR10A",
+  "recorded_at_local": "2026-08-17",
+  "status": "completed_artifact_only_generated_F03_decomposition_remote_proof_pending",
+  "proof_posture": "tracked_code_and_generated_structural_interface_only_no_private_or_scientific_value",
+  "route": "MARC2VR10A-G1",
+  "green_registration_proof": {
+    "commit": "80175a7e6483a6d156b23a24f9503a9ae32e7201",
+    "CI_run_id": 31997129703,
+    "base_python_job_id": 95290665076,
+    "optional_neuro_job_id": 95290665173,
+    "both_required_jobs_green_before_implementation": true,
+    "contract_sha256": "2aa08e08f1f36b499ec0526cc9d7d3b2abf01a20f9e3cf78ef6f62bdfeb1760c"
+  },
+  "artifact_bindings": {
+    "implementation_module_bytes": 57125,
+    "implementation_module_sha256": "4374db7438e3e1e8cdc1e643ad0ce960188d87b4c18eb170a5207c6a66a8d23b",
+    "behavior_test_bytes": 10177,
+    "behavior_test_sha256": "6c474d9994113f927484dde9d4e56fd552b9090f3a3857de3b7d89cbb92624b3",
+    "implementation_document_bytes": 5035,
+    "implementation_document_sha256": "36b900e246cbfd5775df268bf3235ef52a61be9e693b31d1002bffd20c9994a9",
+    "result_document_bytes": 3599,
+    "result_document_sha256": "f7f727e4b9a669c37b179da98d52ec7e0e6a71ab0ab7e7014e6a3405fb630c65"
+  },
+  "predicate_inventory": [
+    {
+      "predicate_id": "F03P01_row_object_and_exact_field_set",
+      "status": "excluded_by_committed_evidence"
+    },
+    {
+      "predicate_id": "F03P02_member_name_string_and_nonempty",
+      "status": "excluded_by_committed_evidence"
+    },
+    {
+      "predicate_id": "F03P03_member_name_UTF8_length_at_most_1024",
+      "status": "unresolved_source_dependent"
+    },
+    {
+      "predicate_id": "F03P04_member_name_NFC",
+      "status": "excluded_by_committed_evidence"
+    },
+    {
+      "predicate_id": "F03P05_safe_relative_prefix_and_separators",
+      "status": "excluded_by_committed_evidence"
+    },
+    {
+      "predicate_id": "F03P06_no_control_characters",
+      "status": "excluded_by_committed_evidence"
+    },
+    {
+      "predicate_id": "F03P07_no_empty_dot_or_parent_components",
+      "status": "excluded_by_committed_evidence"
+    },
+    {
+      "predicate_id": "F03P08_lowercase_eight_hex_CRC",
+      "status": "excluded_by_committed_evidence"
+    },
+    {
+      "predicate_id": "F03P09_nonboolean_integer_fields",
+      "status": "excluded_by_committed_evidence"
+    },
+    {
+      "predicate_id": "F03P10_nonnegative_sizes",
+      "status": "excluded_by_committed_evidence"
+    },
+    {
+      "predicate_id": "F03P11_boolean_ZIP64_declaration",
+      "status": "excluded_by_committed_evidence"
+    },
+    {
+      "predicate_id": "F03P12_unencrypted_method_zero_or_eight",
+      "status": "excluded_by_committed_evidence"
+    },
+    {
+      "predicate_id": "F03P13_exact_directory_shape",
+      "status": "excluded_by_committed_evidence"
+    },
+    {
+      "predicate_id": "F03P14_exact_regular_file_shape",
+      "status": "excluded_by_committed_evidence"
+    },
+    {
+      "predicate_id": "F03P15_suffix_bearing_BIDS_identity",
+      "status": "unresolved_source_dependent"
+    },
+    {
+      "predicate_id": "F03P16_exact_freewill_task_token",
+      "status": "unresolved_source_dependent"
+    },
+    {
+      "predicate_id": "F03P17_unique_full_member_name",
+      "status": "excluded_by_committed_evidence"
+    },
+    {
+      "predicate_id": "F03P18_unique_logical_run_companion",
+      "status": "unresolved_source_dependent"
+    },
+    {
+      "predicate_id": "F03P19_complete_four_companion_set",
+      "status": "unresolved_source_dependent"
+    },
+    {
+      "predicate_id": "F03P20_exact_regular_and_directory_counts",
+      "status": "excluded_by_committed_evidence"
+    }
+  ],
+  "partition_summary": {
+    "leaf_predicates": 20,
+    "excluded_by_committed_evidence": 15,
+    "unresolved_source_dependent": 5,
+    "private_observations": 0,
+    "causal_claims": 0
+  },
+  "witness_matrix": [
+    {
+      "case": "control_success",
+      "predicate_id": null,
+      "predicate_status": "control",
+      "disposition": "VR6_success",
+      "outer_VR6_route": "VR6_success",
+      "nested_VR2_route": null,
+      "outcome_digest_sha256": "3c31f47218da534fe7ee03862b8bbc2f78c5b56c6edf1841ee0a9c781d0f3c88"
+    },
+    {
+      "case": "overlong_member_name",
+      "predicate_id": "F03P03_member_name_UTF8_length_at_most_1024",
+      "predicate_status": "unresolved_source_dependent",
+      "disposition": "aggregate_refusal",
+      "outer_VR6_route": "MARC2VR6-F02",
+      "nested_VR2_route": "MARC2VR2-F03",
+      "outcome_digest_sha256": "8a62c2a756abc7c44dc1e8496499aa1852e812e0a9fe925114f33bb694cd787e"
+    },
+    {
+      "case": "suffix_bearing_BIDS_identity",
+      "predicate_id": "F03P15_suffix_bearing_BIDS_identity",
+      "predicate_status": "unresolved_source_dependent",
+      "disposition": "aggregate_refusal",
+      "outer_VR6_route": "MARC2VR6-F02",
+      "nested_VR2_route": "MARC2VR2-F03",
+      "outcome_digest_sha256": "c2645b3e74eef4cf7952a11316b9ec93dc0347482468f20738eb62037c823684"
+    },
+    {
+      "case": "task_token_case",
+      "predicate_id": "F03P16_exact_freewill_task_token",
+      "predicate_status": "unresolved_source_dependent",
+      "disposition": "aggregate_refusal",
+      "outer_VR6_route": "MARC2VR6-F02",
+      "nested_VR2_route": "MARC2VR2-F03",
+      "outcome_digest_sha256": "5d2fc162d392242e77ba12a26e23398bcaf5dbbbf15779d038e125c82d52f963"
+    },
+    {
+      "case": "logical_companion_alias",
+      "predicate_id": "F03P18_unique_logical_run_companion",
+      "predicate_status": "unresolved_source_dependent",
+      "disposition": "aggregate_refusal",
+      "outer_VR6_route": "MARC2VR6-F02",
+      "nested_VR2_route": "MARC2VR2-F03",
+      "outcome_digest_sha256": "157d2b92fd7707b158741bd8749aefdd93da14d4af87ac7742da6680e203b146"
+    },
+    {
+      "case": "incomplete_companion_set",
+      "predicate_id": "F03P19_complete_four_companion_set",
+      "predicate_status": "unresolved_source_dependent",
+      "disposition": "aggregate_refusal",
+      "outer_VR6_route": "MARC2VR6-F02",
+      "nested_VR2_route": "MARC2VR2-F03",
+      "outcome_digest_sha256": "f8b51cd0562cfe308fdee9746171e932836635d0159ab79cd812c5d244bb7779"
+    }
+  ],
+  "replay_summary": {
+    "exact_replays": 2,
+    "paths_per_replay": 12,
+    "total_paths": 24,
+    "exact_parser_entry_visits": 29448,
+    "exact_VR6_calls": 24,
+    "control_success_paths": 4,
+    "nested_F03_paths": 20,
+    "route_and_mechanics_replay_byte_identical": true
+  },
+  "mechanics": {
+    "entry_count_each": 1227,
+    "regular_file_rows_each": 1025,
+    "directory_rows_each": 202,
+    "materialized_bytes_minimum_per_path": 289944,
+    "materialized_bytes_maximum_per_path": 292316,
+    "central_directory_bytes_minimum": 158605,
+    "central_directory_bytes_maximum": 160977,
+    "ZIP64_entries_minimum": 527,
+    "ZIP64_entries_maximum": 576,
+    "maximum_local_interval_end": 9596854166,
+    "witness_mutations_before_exact_parser": 20,
+    "control_paths_without_witness_mutation": 4,
+    "post_parser_witness_mutations": 0,
+    "synthetic_normalization_fields": [
+      "transport_body_sha256"
+    ],
+    "member_local_header_bytes": 0,
+    "member_payload_bytes": 0
+  },
+  "measurements": {
+    "fixed_artifact_count": 17,
+    "fixed_artifact_bytes": 480963,
+    "generated_input_bytes": 6979708,
+    "aggregate_output_bytes": 10751,
+    "retained_generated_output_bytes": 0,
+    "runtime_seconds": 1.8363693330029491,
+    "peak_RSS_bytes": 45072384,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "producer_is_causal": "not_applicable_structural_metadata_only",
+    "end_to_end_latency_measured": false
+  },
+  "direct_refusals": {
+    "contract_schema_drift": "MARC2VR10A-F01",
+    "contract_status_drift": "MARC2VR10A-F01",
+    "fixed_input_count_drift": "MARC2VR10A-F01",
+    "fixed_input_bytes_drift": "MARC2VR10A-F01",
+    "partition_leaf_count_drift": "MARC2VR10A-F02",
+    "matrix_case_drift": "MARC2VR10A-F01",
+    "matrix_path_count_drift": "MARC2VR10A-F01",
+    "authorization_nonzero": "MARC2VR10A-F01",
+    "registered_counter_nonzero": "MARC2VR10A-F01",
+    "missing_F03P01_row_object_and_exact_field_set": "MARC2VR10A-F02",
+    "missing_F03P02_member_name_string_and_nonempty": "MARC2VR10A-F02",
+    "missing_F03P03_member_name_UTF8_length_at_most_1024": "MARC2VR10A-F02",
+    "missing_F03P04_member_name_NFC": "MARC2VR10A-F02",
+    "missing_F03P05_safe_relative_prefix_and_separators": "MARC2VR10A-F02",
+    "missing_F03P06_no_control_characters": "MARC2VR10A-F02",
+    "missing_F03P07_no_empty_dot_or_parent_components": "MARC2VR10A-F02",
+    "missing_F03P08_lowercase_eight_hex_CRC": "MARC2VR10A-F02",
+    "missing_F03P09_nonboolean_integer_fields": "MARC2VR10A-F02",
+    "missing_F03P10_nonnegative_sizes": "MARC2VR10A-F02",
+    "missing_F03P11_boolean_ZIP64_declaration": "MARC2VR10A-F02",
+    "missing_F03P12_unencrypted_method_zero_or_eight": "MARC2VR10A-F02",
+    "missing_F03P13_exact_directory_shape": "MARC2VR10A-F02",
+    "missing_F03P14_exact_regular_file_shape": "MARC2VR10A-F02",
+    "missing_F03P15_suffix_bearing_BIDS_identity": "MARC2VR10A-F02",
+    "missing_F03P16_exact_freewill_task_token": "MARC2VR10A-F02",
+    "missing_F03P17_unique_full_member_name": "MARC2VR10A-F02",
+    "missing_F03P18_unique_logical_run_companion": "MARC2VR10A-F02",
+    "missing_F03P19_complete_four_companion_set": "MARC2VR10A-F02",
+    "missing_F03P20_exact_regular_and_directory_counts": "MARC2VR10A-F02",
+    "replay_mismatch": "MARC2VR10A-F04",
+    "report_schema_drift": "MARC2VR10A-F05",
+    "report_case_drift": "MARC2VR10A-F05",
+    "report_outer_route_drift": "MARC2VR10A-F05",
+    "report_nested_route_drift": "MARC2VR10A-F05",
+    "reason_key_leak": "MARC2VR10A-F05",
+    "member_name_key_leak": "MARC2VR10A-F05",
+    "private_path_leak": "MARC2VR10A-F05",
+    "acceptance_gate_false": "MARC2VR10A-F04",
+    "public_counter_nonzero": "MARC2VR10A-F05",
+    "replay_path_count_drift": "MARC2VR10A-F04",
+    "thread_environment_drift": "MARC2VR10A-F06",
+    "runtime_cap_drift": "MARC2VR10A-F06",
+    "RSS_cap_drift": "MARC2VR10A-F06",
+    "generated_input_cap_drift": "MARC2VR10A-F06",
+    "aggregate_output_cap_drift": "MARC2VR10A-F06",
+    "retained_output_drift": "MARC2VR10A-F06",
+    "nonfinite_runtime": "MARC2VR10A-F06"
+  },
+  "acceptance_gates": {
+    "all_fixed_inputs_match_size_and_SHA256": true,
+    "AST_inventory_finds_exactly_20_F03_leaf_predicates": true,
+    "exactly_15_leaf_predicates_excluded_by_committed_evidence": true,
+    "exactly_five_frozen_source_dependent_predicates_remain": true,
+    "all_24_exact_parser_producer_paths_replay_identically": true,
+    "four_control_paths_succeed_and_20_witness_paths_relay_outer_F02_nested_F03": true,
+    "all_witness_mutations_precede_exact_parser": true,
+    "refused_VR6_calls_do_not_mutate_source": true,
+    "at_least_40_direct_refusals_pass": true,
+    "retained_generated_output_is_zero": true,
+    "runtime_RSS_input_and_output_caps_pass": true,
+    "all_private_scientific_other_project_retry_and_claim_counters_are_zero": true
+  },
+  "access_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_VR9P_path_or_output_operations": 0,
+    "network_or_public_request_operations": 0,
+    "archive_local_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "derivative_cache_feature_split_or_NeuroToken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "provider_language_model_stream_device_or_hardware_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "retry_rerun_release_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "verification": {
+    "focused_behavior_tests": 12,
+    "focused_contract_tests": 10,
+    "focused_result_tests": 9,
+    "focused_tests_passed": 31,
+    "Ruff_passed": true,
+    "compileall_passed": true,
+    "all_registry_JSON_valid": true,
+    "git_diff_check_passed": true,
+    "complete_local_tests": 4042,
+    "complete_local_skips": 204,
+    "complete_local_runtime_seconds": 178.505,
+    "complete_local_suite_passed": true,
+    "complete_local_suite_pending": false,
+    "remote_CI_pending": true
+  },
+  "warnings": [
+    "Fifteen exclusions are tracked-code or aggregate implications, not private row observations.",
+    "Five unresolved predicates are a frozen possibility set, not private-cause findings.",
+    "Synthetic transport digest normalization is identical across control and witnesses and is not a witness mutation or live evidence.",
+    "Generated F03 witnesses have no scientific or decoding value."
+  ],
+  "unavailable_fields": [
+    "failed private F03 predicate and value",
+    "private row member participant session run and cohort",
+    "archive payload signal event target model prediction and score"
+  ],
+  "next_gate": {
+    "exact_implementation_and_result_commit_push_and_both_jobs_green_required": true,
+    "future_aggregate_safe_five_route_discriminator_design_allowed_after_green": true,
+    "future_private_discriminator_authorized": false,
+    "future_private_read_requires_new_Tier_C_packet_and_fresh_decision": true,
+    "consumed_VR9P_reuse_allowed": false,
+    "F03_rule_relaxation_allowed": false,
+    "MARC2_FW2_or_CIL1_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_ceiling": "artifact_only_F03_leaf_inventory_and_full_scale_generated_witness_coverage",
+    "scientific_ceiling": "none",
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "real_time_portable_home_assistive_or_clinical_result": false
+  }
+}

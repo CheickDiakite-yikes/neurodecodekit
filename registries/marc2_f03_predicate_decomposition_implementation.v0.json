@@ -1,0 +1,162 @@
+{
+  "schema_name": "neurodecodekit.marc2_f03_predicate_decomposition_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "MARC-2-VR10A-F03-predicate-decomposition-implementation-v0",
+  "lane_id": "MARC2-VR10A",
+  "recorded_at_local": "2026-08-17",
+  "status": "exact_generated_implementation_qualified_locally_remote_proof_pending",
+  "proof_posture": "artifact_only_tracked_code_and_generated_structural_interface_no_private_or_scientific_value",
+  "green_registration_proof": {
+    "commit": "80175a7e6483a6d156b23a24f9503a9ae32e7201",
+    "CI_run_id": 31997129703,
+    "base_python_job_id": 95290665076,
+    "optional_neuro_job_id": 95290665173,
+    "both_required_jobs_green_before_implementation": true,
+    "contract_sha256": "2aa08e08f1f36b499ec0526cc9d7d3b2abf01a20f9e3cf78ef6f62bdfeb1760c"
+  },
+  "tracked_implementation_artifacts": [
+    {
+      "role": "implementation_module",
+      "path": "src/neurodecodekit/datasets/marc2_f03_predicate_decomposition.py",
+      "bytes": 57125,
+      "sha256": "4374db7438e3e1e8cdc1e643ad0ce960188d87b4c18eb170a5207c6a66a8d23b"
+    },
+    {
+      "role": "behavior_test",
+      "path": "tests/test_marc2_f03_predicate_decomposition.py",
+      "bytes": 10177,
+      "sha256": "6c474d9994113f927484dde9d4e56fd552b9090f3a3857de3b7d89cbb92624b3"
+    },
+    {
+      "role": "implementation_document",
+      "path": "docs/MARC_2_F03_PREDICATE_DECOMPOSITION_IMPLEMENTATION.md",
+      "bytes": 5035,
+      "sha256": "36b900e246cbfd5775df268bf3235ef52a61be9e693b31d1002bffd20c9994a9"
+    },
+    {
+      "role": "result_document",
+      "path": "docs/MARC_2_F03_PREDICATE_DECOMPOSITION_RESULT.md",
+      "bytes": 3599,
+      "sha256": "f7f727e4b9a669c37b179da98d52ec7e0e6a71ab0ab7e7014e6a3405fb630c65"
+    }
+  ],
+  "implementation_surface": {
+    "base_dependency": "standard_library_only",
+    "imported_green_generated_relay": "marc2_generated_diagnostic_relay",
+    "consumed_VR9P_module_or_path_imported_called_or_modified": false,
+    "CLI_commands": [
+      "plan",
+      "qualify"
+    ],
+    "path_URL_output_execute_retry_resume_cleanup_threshold_or_selection_arguments": false,
+    "private_or_Git_ignored_path_interface": false,
+    "network_client_or_provider_interface": false,
+    "heavy_optional_import": false
+  },
+  "AST_inventory": {
+    "bound_functions": [
+      "_normalize_member_name",
+      "_validate_entry",
+      "_group_source_rows",
+      "validate_live_domain_source"
+    ],
+    "leaf_predicates": 20,
+    "excluded_by_committed_evidence": 15,
+    "unresolved_source_dependent": 5,
+    "private_observations": 0,
+    "causal_claims": 0
+  },
+  "generated_witness_qualification": {
+    "route": "MARC2VR10A-G1",
+    "cases": 6,
+    "orders": 2,
+    "exact_replays": 2,
+    "exact_paths": 24,
+    "exact_parser_entry_visits": 29448,
+    "exact_VR6_calls": 24,
+    "control_success_paths": 4,
+    "outer_F02_nested_F03_witness_paths": 20,
+    "witness_mutations_before_exact_parser": 20,
+    "post_parser_witness_mutations": 0,
+    "synthetic_normalization_fields": [
+      "transport_body_sha256"
+    ],
+    "refused_source_immutability_passed": true,
+    "route_and_mechanics_replay_byte_identical": true,
+    "direct_refusals_passed": 47,
+    "acceptance_gates_passed": 12,
+    "retained_generated_output_bytes": 0
+  },
+  "measured_qualification": {
+    "fixed_artifact_count": 17,
+    "fixed_artifact_bytes": 480963,
+    "generated_input_bytes": 6979708,
+    "aggregate_output_bytes": 10751,
+    "retained_generated_output_bytes": 0,
+    "runtime_seconds": 1.8363693330029491,
+    "peak_RSS_bytes": 45072384,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "producer_is_causal": "not_applicable_structural_metadata_only",
+    "end_to_end_latency_measured": false
+  },
+  "qualification": {
+    "focused_behavior_tests": 12,
+    "focused_contract_tests": 10,
+    "focused_result_tests": 9,
+    "focused_tests_passed": 31,
+    "deterministic_replay_tested": true,
+    "AST_signature_drift_tested": true,
+    "all_five_F03_witness_routes_tested": true,
+    "public_output_firewall_tested": true,
+    "thread_and_resource_refusals_tested": true,
+    "CLI_surface_tested": true,
+    "Ruff_passed": true,
+    "compileall_passed": true,
+    "all_registry_JSON_valid": true,
+    "git_diff_check_passed": true,
+    "complete_local_tests": 4042,
+    "complete_local_skips": 204,
+    "complete_local_runtime_seconds": 178.505,
+    "complete_local_suite_passed": true,
+    "complete_local_suite_pending": false,
+    "remote_CI_pending": true
+  },
+  "remote_implementation_proof": {
+    "commit": null,
+    "CI_run_id": null,
+    "base_python_job_id": null,
+    "optional_neuro_job_id": null,
+    "both_required_jobs_green": false
+  },
+  "access_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_VR9P_path_or_output_operations": 0,
+    "network_or_public_request_operations": 0,
+    "archive_local_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "derivative_cache_feature_split_or_NeuroToken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "provider_language_model_stream_device_or_hardware_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "retry_rerun_release_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "next_gate": {
+    "exact_implementation_and_result_commit_push_and_both_jobs_green_required": true,
+    "future_aggregate_safe_five_route_discriminator_design_allowed_after_green": true,
+    "future_private_discriminator_authorized": false,
+    "future_private_read_requires_new_Tier_C_packet_and_fresh_decision": true,
+    "consumed_VR9P_reuse_allowed": false,
+    "MARC2_FW2_or_CIL1_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "An AST-bound twenty-leaf F03 inventory and exact full-scale generated witness for every still-plausible source-dependent mechanism.",
+    "scientific_claim_not_established": "No private or neural payload target model prediction or score was accessed so this establishes no private cause neural effect decoding accuracy language decoding live decoding or thought-to-text capability."
+  }
+}

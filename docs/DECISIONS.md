@@ -9220,3 +9220,35 @@ private access, consumed-state reuse, archive payload, signal, event, target,
 model, training, prediction, score, FW2/CIL1, network, provider, hardware,
 release, or scientific claim. Any later private discriminator requires a new
 green packet and fresh Tier C decision.
+
+## 0284 - Accept Five Generated F03 Witnesses Without Inferring Private Cause
+
+Eligibility decision: begin only after registration `80175a7` passed Base
+Python job `95290665076`, Optional Neuro Readers job `95290665173`, and CI
+`31997129703`.
+
+Architecture decision: use a new standard-library module that AST-binds the 20
+registered leaves and imports only the green generated relay. Apply each
+witness mutation before ZIP construction, then traverse the exact parser,
+producer, VR2, and VR6 path. Do not import, call, inspect, or modify VR9P.
+
+Evidence decision: accept local `MARC2VR10A-G1`. Four control paths succeed;
+all 20 witness paths return outer `MARC2VR6-F02` and nested `MARC2VR2-F03`
+across two orders and two exact replays. This proves witness coverage for all
+five unresolved classes, not which class occurred privately.
+
+Resource decision: accept 24 calls, 29,448 parser-entry visits, 6,979,708
+generated input bytes, 10,751 aggregate bytes, zero retained bytes,
+1.8363693330029491 seconds, 45,072,384-byte peak RSS, one thread, one worker,
+and one numerical job.
+
+Verification decision: require 47 direct refusals, 31 focused tests, the
+complete 4,042-test local suite with 204 expected skips, Ruff, compilation,
+strict registry JSON, and diff hygiene before commit. Remote proof remains
+pending until both CI jobs pass the exact implementation commit.
+
+Boundary decision: do not infer a failed private value, row, path, identity,
+selection, or cohort from generated behavior. No private, archive, neural,
+target, model, prediction, score, FW2/CIL1, network, hardware, release, or
+scientific authority opens. A future aggregate-safe discriminator may be
+designed only after this exact implementation/result is remotely green.

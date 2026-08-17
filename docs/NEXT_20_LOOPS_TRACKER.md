@@ -2853,3 +2853,29 @@ Next gate: commit, push, and obtain both green CI jobs for this exact
 registration. Only then may Tier B implement and measure the generated witness
 matrix. A new private discriminator remains a separate Tier C packet and fresh
 decision after exact generated implementation and result proof.
+
+### MARC2-VR10A - F03 Predicate Decomposition (Generated Result Passed Locally)
+
+Registration `80175a7` passed both jobs in CI `31997129703` before the
+dependency-free implementation began. The module AST-binds all 20 F03 leaves
+to exact tracked functions and verifies the live aggregate's exact
+1,227-entry, 1,025-file, and 202-directory counts.
+
+One control and five pre-parser witnesses traverse the exact ZIP fixture,
+central-directory parser, live producer, VR2, and VR6 in canonical and reversed
+order across two replays. Four control paths succeed. All 20 witness paths
+preserve outer `MARC2VR6-F02` and nested `MARC2VR2-F03`. The 24 calls account
+for 29,448 parser-entry visits and pass 47 direct refusals.
+
+The measured pass used 6,979,708 generated input bytes, emitted 10,751
+aggregate bytes, retained zero, ran in 1.8363693330029491 seconds, and peaked at
+45,072,384 bytes RSS. Thirty-one focused and 4,042 complete local tests pass
+with 204 expected skips. All private, archive, neural, target, model, score,
+network, provider, hardware, FW2/CIL1, retry, other-project, and claim counters
+are zero.
+
+Next gate: commit, push, and obtain both green CI jobs for the exact
+implementation and result. After green proof, freeze a separately named
+aggregate-safe five-route discriminator. The generated matrix does not identify
+the private cause, and any private invocation remains a new Tier C packet and
+fresh decision.

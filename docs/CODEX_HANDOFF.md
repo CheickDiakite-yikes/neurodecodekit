@@ -5598,3 +5598,29 @@ dependency-free generated witness matrix. Do not touch any VR9P private source,
 certificate, marker, output root, ignored MARC2 path, archive member, signal,
 event, target, model, prediction, score, FW2/CIL1, provider, hardware, or other
 project. Any later private discriminator remains a fresh Tier C packet.
+
+## 2026-08-17 MARC2-VR10A Generated Result Handoff
+
+Registration `80175a7` is remotely green in CI `31997129703`. Read
+`docs/MARC_2_F03_PREDICATE_DECOMPOSITION_IMPLEMENTATION.md`,
+`docs/MARC_2_F03_PREDICATE_DECOMPOSITION_RESULT.md`, their machine registries,
+and the two new implementation/result test modules.
+
+The standard-library implementation verifies 17 tracked artifacts totaling
+480,963 bytes, AST-binds all 20 F03 leaves, and executes six full-scale cases
+in both orders across two replays. Route `MARC2VR10A-G1` contains four control
+successes and 20 witnesses that each preserve outer `MARC2VR6-F02` plus nested
+`MARC2VR2-F03`. The matrix made 24 VR6 calls and 29,448 parser-entry visits,
+passed 47 direct refusals, and retained zero output.
+
+Measured resources were 6,979,708 generated input bytes, 10,751 aggregate
+bytes, 1.8363693330029491 seconds, and 45,072,384-byte peak RSS. Thirty-one
+focused and 4,042 complete local tests pass with 204 expected skips.
+
+Immediate gate: stage only the exact VR10A implementation/result and public
+handoff files, commit, push, and require both remote jobs green. Do not prepare
+or invoke a private discriminator before that proof. The result does not reveal
+which predicate caused private F03, and it authorizes no consumed-state reuse,
+private path, archive payload, neural signal, target, model, prediction, score,
+FW2/CIL1, provider, hardware, release, or claim upgrade. Keep the unrelated
+tracker inspection NDJSON untouched.

@@ -11213,3 +11213,32 @@ archive payload, neural, target, model, or score work is open.
 Next gate: commit, push, and obtain both green CI jobs for this exact
 registration. Only then may the generated-only Tier B implementation begin.
 Any new private read remains a separately frozen Tier C packet and decision.
+
+## 2026-08-17 - MARC2-VR10A Generated F03 Witness Result
+
+- Registration `80175a7` passed Base Python job `95290665076`, Optional Neuro
+  Readers job `95290665173`, and CI `31997129703` before implementation.
+- Added a standard-library module that no-follow verifies the frozen tracked
+  inputs, AST-binds all 20 F03 leaf predicates, and verifies the exact committed
+  1,227/1,025/202 aggregate counts.
+- Built one success control and one pre-parser witness for each of the five
+  unresolved mechanisms. Every case traverses the exact ZIP fixture, central-
+  directory parser, live producer, VR2 validator, and VR6 relay.
+- Canonical and reversed order across two replays made 24 exact VR6 calls and
+  29,448 parser-entry visits. Four controls succeeded; all 20 witnesses
+  returned outer `MARC2VR6-F02` plus nested `MARC2VR2-F03`.
+- Passed 47 direct refusals covering contract identity, every predicate,
+  replay, route shape, privacy, counters, thread binding, and resource caps.
+- Measured `MARC2VR10A-G1` at 1.8363693330029491 seconds and 45,072,384-byte
+  peak RSS over 6,979,708 generated input bytes. Aggregate output was 10,751
+  bytes and retained output was zero.
+- Thirty-one focused tests and the complete 4,042-test local suite pass with
+  204 expected skips and zero failures in 178.505 seconds.
+- Every private, ignored-path, consumed-VR9P, archive, neural, target, model,
+  prediction, score, network, FW2/CIL1, other-project, retry, and claim counter
+  remained zero.
+
+Next gate: commit, push, and obtain both green CI jobs for this exact
+implementation and result. Only after that proof may Tier A/B freeze a new
+aggregate-safe five-route discriminator. Any private invocation remains a new
+Tier C packet and fresh decision.
