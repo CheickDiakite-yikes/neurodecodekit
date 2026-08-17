@@ -4,7 +4,7 @@
   "lane_id": "MARC2-VR8A",
   "implementation_id": "MARC-2-VR8A-VR6-to-VR2-boundary-localization-implementation-v0",
   "recorded_at_local": "2026-08-16",
-  "status": "artifact_only_implementation_and_measured_audit_complete_remote_proof_pending",
+  "status": "artifact_only_implementation_and_measured_audit_complete_remotely_green",
   "proof_posture": "fixed_committed_code_and_aggregate_results_only_no_private_or_scientific_value",
   "green_registration_proof": {
     "commit": "d33eaf397a8f8444db4d7abd777bf2e9b3333e43",
@@ -100,7 +100,7 @@
     "producer_integration_coverage_gap_proven": true
   },
   "qualification": {
-    "focused_contract_behavior_and_result_tests": 26,
+    "focused_contract_behavior_result_and_remote_proof_tests": 27,
     "deterministic_replay_tested": true,
     "artifact_hash_mutation_refused": true,
     "artifact_symlink_refused": true,
@@ -118,10 +118,18 @@
     "known_sandbox_forkserver_errors": 1,
     "exact_outside_sandbox_worker_rerun_passed": true,
     "pre_change_inventory_tests": 3953,
-    "tests_added": 36,
+    "implementation_commit_tests_added": 36,
+    "proof_closeout_tests_added": 1,
     "new_regressions": 0,
     "ruff_compile_JSON_CLI_and_diff_hygiene": "passed",
-    "remote_CI_pending": true
+    "remote_CI_pending": false,
+    "remote_proof": {
+      "commit": "1addd5df9fdccda6e716f71f9e6624f199677713",
+      "CI_run_id": 31986089529,
+      "base_python_job_id": 95261271737,
+      "optional_neuro_job_id": 95261271709,
+      "both_required_jobs_green": true
+    }
   },
   "access_counters": {
     "committed_contract_and_artifact_reads": 18,

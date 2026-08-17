@@ -9,6 +9,8 @@
 > stored the nested safe code; VR7P forwarded only the outer code. Generated
 > VR2 success bypassed the exact producer, exposing the missing full-scale
 > integration fixture. The exact private F03/F04 route remains unavailable.
+> Exact implementation/result `1addd5d` passed Base job `95261271737`,
+> Optional job `95261271709`, and CI `31986089529`.
 > Next freeze a generated-only diagnostic relay; do not touch a consumed or
 > ignored path, retained source, archive member, neural payload, target, model,
 > score, FW2, or CIL1 surface.

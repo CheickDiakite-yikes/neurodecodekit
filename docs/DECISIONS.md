@@ -8973,3 +8973,8 @@ remain closed.
 Claim decision: this is an engineering localization only. It establishes no
 real cohort, neural effect, decoding accuracy, language decoding, live
 decoding, or thought-to-text capability.
+
+Remote proof: exact implementation/result
+`1addd5df9fdccda6e716f71f9e6624f199677713` passed Base Python job
+`95261271737`, Optional Neuro Readers job `95261271709`, and CI
+`31986089529`.

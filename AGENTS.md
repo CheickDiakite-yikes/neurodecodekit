@@ -110,6 +110,8 @@ VR2 code in `upstream_route`; VR7P copied only the outer `route`. The generated
 VR2 success source bypasses the exact producer, leaving no full-scale producer-
 to-validator fixture. The exact private F03/F04 route, predicate, path,
 identity, and value remain unavailable.
+Exact implementation/result `1addd5d` passed Base Python job `95261271737`,
+Optional Neuro Readers job `95261271709`, and CI `31986089529`.
 
 Next safe work is a separately named generated-only diagnostic relay carrying
 the outer VR6 and nested allowlisted VR2 codes while discarding reason text and
@@ -3286,7 +3288,8 @@ VR8A registration `d33eaf3` then passed both jobs in CI `31984475999` before
 the fixed artifact audit. Route `MARC2VR8A-R1` excludes F02 and narrows the
 unknown to F03 versus F04, proves that VR7P dropped VR6's nested route field,
 and identifies the missing full-scale producer-to-VR2 fixture. It accessed no
-private path or neural data. Freeze and remotely qualify a generated-only
+private path or neural data. Exact implementation/result `1addd5d` passed both
+jobs in CI `31986089529`. Freeze and remotely qualify a generated-only
 diagnostic relay next; do not infer the hidden F03/F04 route or reopen VR7P.
 
 ## Style

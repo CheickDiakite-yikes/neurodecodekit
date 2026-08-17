@@ -2713,7 +2713,8 @@ peak RSS; aggregate output was 8,827 bytes and retained output was zero. All
 eleven gates passed and every private, archive, neural, target, model, score,
 network, FW2, CIL1, retry, and claim counter stayed zero.
 
-Current gate: commit, push, and require both jobs green for the exact result.
-Then freeze a separately named generated-only diagnostic relay preserving only
-the outer VR6 and nested allowlisted VR2 codes. Do not relax F03 or F04. A new
-private structural read remains a separate Tier C packet and decision.
+Exact implementation/result `1addd5d` passed Base job `95261271737`, Optional
+job `95261271709`, and CI `31986089529`. VR8A is complete. Next freeze a
+separately named generated-only diagnostic relay preserving only the outer VR6
+and nested allowlisted VR2 codes. Do not relax F03 or F04. A new private
+structural read remains a separate Tier C packet and decision.

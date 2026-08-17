@@ -3,7 +3,7 @@
   "schema_version": "0.1.0",
   "lane_id": "MARC2-VR8A",
   "result_id": "MARC2-VR8A-R1",
-  "status": "completed_artifact_only_VR6_to_VR2_boundary_localization_remote_pending",
+  "status": "completed_artifact_only_VR6_to_VR2_boundary_localization_remotely_green",
   "recorded_at_local": "2026-08-16",
   "route": "MARC2VR8A-R1",
   "proof_posture": "fixed_committed_code_and_aggregate_results_only_no_private_or_scientific_value",
@@ -42,18 +42,18 @@
     },
     {
       "path": "tests/test_marc2_vr6_vr2_boundary_localization_result.py",
-      "bytes": 5038,
-      "sha256": "b16d9a46e49587fa3a5d8bb83e6123c627a3b52749f0c9a9381af502555d4be2"
+      "bytes": 5625,
+      "sha256": "ea7e6fa609791a8aa43fb64724fa559d3c61a916f0d670c2da7860b9bf488269"
     },
     {
       "path": "docs/MARC_2_VR6_VR2_BOUNDARY_LOCALIZATION_IMPLEMENTATION.md",
-      "bytes": 6371,
-      "sha256": "b3ea5e8d4017e5ad9554702d0cf93eeff946c9544a0ccc6564c0236b44b6a5b6"
+      "bytes": 6551,
+      "sha256": "ae2221e2f7dc3bd1c765cee10123be54b43e96ed4ea6df2798fd54415ee71c02"
     },
     {
       "path": "registries/marc2_vr6_vr2_boundary_localization_implementation.v0.json",
-      "bytes": 6739,
-      "sha256": "5c01d712bed01f35f07c46d60d2145a77808996e1dd45ed4369fba6b56d55d00"
+      "bytes": 7051,
+      "sha256": "12f5069101898eef48d1e009794dc491c4ffd8e3a75498d5b089bbdf91cf6fb2"
     }
   ],
   "upstream_consumed_result": {
@@ -162,7 +162,7 @@
     "FW2_CIL1_payload_model_target_or_score_work_authorized": false
   },
   "verification": {
-    "focused_contract_behavior_and_result_tests": 26,
+    "focused_contract_behavior_result_and_remote_proof_tests": 27,
     "deterministic_replay_tested": true,
     "hash_symlink_thread_RSS_and_public_output_refusals_tested": true,
     "dependency_light_suite_tests": 3918,
@@ -174,10 +174,18 @@
     "known_sandbox_forkserver_errors": 1,
     "exact_outside_sandbox_worker_rerun_passed": true,
     "pre_change_inventory_tests": 3953,
-    "tests_added": 36,
+    "implementation_commit_tests_added": 36,
+    "proof_closeout_tests_added": 1,
     "new_regressions": 0,
     "ruff_compile_JSON_CLI_and_diff_hygiene_passed": true,
-    "remote_CI_pending": true
+    "remote_CI_pending": false,
+    "remote_proof": {
+      "commit": "1addd5df9fdccda6e716f71f9e6624f199677713",
+      "CI_run_id": 31986089529,
+      "base_python_job_id": 95261271737,
+      "optional_neuro_job_id": 95261271709,
+      "both_required_jobs_green": true
+    }
   },
   "warnings": [
     "The consumed nested VR2 route remains unavailable; this audit narrows compatible classes only.",

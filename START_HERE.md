@@ -72,6 +72,8 @@ nested allowlisted route in `upstream_route`, while VR7P forwarded only the
 outer `route`. Generated VR2 success starts from a selector-authored 1,227-row
 manifest and does not traverse the exact producer, whose parser fixture has
 only 18 rows. The exact private F03/F04 route remains unavailable.
+Exact implementation/result `1addd5d` passed Base job `95261271737`, Optional
+job `95261271709`, and CI `31986089529`.
 
 The next safe work is a separately named generated-only diagnostic relay that
 preserves the outer VR6 code and nested allowlisted VR2 code, but no reason or

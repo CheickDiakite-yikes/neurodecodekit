@@ -1949,7 +1949,8 @@ Read this before interpreting any number in the repository.
   fixture. The audit read 587,523 committed bytes, used seven AST and eleven
   strict JSON parses, retained zero bytes, and performed no private, neural,
   target, model, score, network, FW2, or CIL1 operation. The exact F03/F04
-  private route remains unavailable and must not be inferred.
+  private route remains unavailable and must not be inferred. Exact
+  implementation/result `1addd5d` passed both jobs in CI `31986089529`.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on

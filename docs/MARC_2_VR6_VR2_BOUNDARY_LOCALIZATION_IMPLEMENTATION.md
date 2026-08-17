@@ -4,8 +4,8 @@ Date: 2026-08-16
 
 Lane: `MARC2-VR8A`
 
-Status: **Artifact-only implementation and measured audit complete; remote
-proof pending**
+Status: **Artifact-only implementation and measured audit complete; remotely
+green**
 
 Registration `d33eaf397a8f8444db4d7abd777bf2e9b3333e43` passed Base
 Python job `95256950555`, Optional Neuro Readers job `95256950656`, and CI
@@ -113,7 +113,7 @@ generated debris.
 
 ## Verification
 
-- Twenty-six focused contract, behavior, and result tests pass.
+- Twenty-seven focused contract, behavior, result, and remote-proof tests pass.
 - Deterministic replay is byte-identical under fixed runtime/RSS readers.
 - Hash mutation, symlink, missing-thread, and RSS-cap cases fail closed.
 - Public-output privacy and the two-command CLI surface are tested.
@@ -122,11 +122,15 @@ generated debris.
 - The neuro-enabled inventory contains 3,989 tests: 3,953 passed, 35 skipped,
   and the one established sandbox forkserver-socket case errored. That exact
   case passes outside the sandbox in 2.823 seconds.
-- The pre-change inventory was 3,953 tests. VR8A adds 36 tests, including the
-  already green registration tests, with zero new regression.
+- The pre-change inventory was 3,953 tests. Exact implementation `1addd5d`
+  added 36 tests with zero new regression; this proof closeout adds one
+  remote-proof invariant.
 - Repository-pinned Ruff 0.15.20, full compilation, strict registry JSON,
   project and module CLI help, final audit, and `git diff --check` pass.
-- Remote CI remains the final implementation gate.
+- Exact implementation/result commit
+  `1addd5df9fdccda6e716f71f9e6624f199677713` passed Base Python job
+  `95261271737`, Optional Neuro Readers job `95261271709`, and CI
+  `31986089529`.
 
 ## Next Repair
 

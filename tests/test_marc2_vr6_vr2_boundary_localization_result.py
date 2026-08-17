@@ -27,8 +27,20 @@ class Marc2Vr6Vr2BoundaryLocalizationResultTests(unittest.TestCase):
         self.assertEqual(self.result["route"], "MARC2VR8A-R1")
         self.assertEqual(
             self.result["status"],
-            "completed_artifact_only_VR6_to_VR2_boundary_localization_remote_pending",
+            "completed_artifact_only_VR6_to_VR2_boundary_localization_remotely_green",
         )
+
+    def test_exact_implementation_is_remotely_green(self):
+        verification = self.result["verification"]
+        self.assertFalse(verification["remote_CI_pending"])
+        proof = verification["remote_proof"]
+        self.assertEqual(
+            proof["commit"], "1addd5df9fdccda6e716f71f9e6624f199677713"
+        )
+        self.assertEqual(proof["CI_run_id"], 31_986_089_529)
+        self.assertEqual(proof["base_python_job_id"], 95_261_271_737)
+        self.assertEqual(proof["optional_neuro_job_id"], 95_261_271_709)
+        self.assertTrue(proof["both_required_jobs_green"])
 
     def test_every_bound_artifact_hash_matches(self):
         seen = set()

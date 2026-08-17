@@ -10977,6 +10977,8 @@ decoding result.
   VR6 and nested allowlisted VR2 codes while dropping reasons and private
   context. F03 and F04 remain frozen; another private read requires a fresh
   Tier C packet and decision.
+- Exact implementation/result `1addd5d` passed Base Python job `95261271737`,
+  Optional Neuro Readers job `95261271709`, and CI `31986089529`.
 
 Engineering capability added: the fixed audit narrows the unresolved upstream
 validation boundary to F03 versus F04 without reopening private data.
