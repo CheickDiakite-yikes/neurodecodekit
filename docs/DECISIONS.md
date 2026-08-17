@@ -9436,3 +9436,27 @@ Boundary decision: recording this decision performs zero implementation,
 readiness, private-path, consumed-state, archive, neural, target, model,
 prediction, score, network, hardware, other-project, retry, release, or claim
 operations. The decision is ineffective until both remote jobs pass.
+
+## 0292 - Keep VR11P Implementation Proof Separate From Private Execution
+
+Eligibility decision: decision `4fa277121f24dde3f6f7c917ef6c2bb7506134d6`
+passed Base Python job `95414004791`, Optional Neuro Readers job `95414004814`,
+and CI `32038683203` before the generated/mock implementation began.
+
+Implementation decision: add one standard-library wrapper that reuses the
+exact green VR6 and VR10B functions for 24 generated paths and separately
+qualifies the fixed readiness/marker/no-follow/report state machine with one
+temporary exact-size generated fixture. Do not import, call, patch, copy, or
+modify consumed VR9P.
+
+Proof decision: keep `remote_implementation_proof` null in the implementation
+milestone. `execute_registered` must refuse before readiness or private-path
+operations until a later proof-only closeout binds the exact pushed commit and
+both green job IDs. The proof closeout performs no second qualification and no
+private operation.
+
+Boundary decision: Stage 1 generated qualification authorizes no fixed private
+source access, archive member, neural payload, target, model, prediction,
+score, FW2/CIL1, network, hardware, release, or scientific claim. Stage 2 may
+proceed only after the separate implementation-proof barrier already required
+by decision 0291.
