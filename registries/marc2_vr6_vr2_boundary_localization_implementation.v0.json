@@ -1,0 +1,153 @@
+{
+  "schema_name": "neurodecodekit.marc2_vr6_vr2_boundary_localization_implementation",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC2-VR8A",
+  "implementation_id": "MARC-2-VR8A-VR6-to-VR2-boundary-localization-implementation-v0",
+  "recorded_at_local": "2026-08-16",
+  "status": "artifact_only_implementation_and_measured_audit_complete_remote_proof_pending",
+  "proof_posture": "fixed_committed_code_and_aggregate_results_only_no_private_or_scientific_value",
+  "green_registration_proof": {
+    "commit": "d33eaf397a8f8444db4d7abd777bf2e9b3333e43",
+    "CI_run_id": 31984475999,
+    "base_python_job_id": 95256950555,
+    "optional_neuro_job_id": 95256950656,
+    "both_required_jobs_green_before_implementation": true,
+    "contract_sha256": "264c93989e8b2b7868c86c70945bc558699b0b132c3f5552661c6b8022efbae7"
+  },
+  "tracked_implementation_artifacts": [
+    {
+      "path": "src/neurodecodekit/datasets/marc2_vr6_vr2_boundary_localization.py",
+      "bytes": 42853,
+      "sha256": "29a2eaa1a97efff5e9dc8e4a853be02f86c294851027d5db355660adb1669956"
+    },
+    {
+      "path": "tests/test_marc2_vr6_vr2_boundary_localization.py",
+      "bytes": 9917,
+      "sha256": "3124a7fa770a48ef796a71404b0211651d7e4263da29e69374b9a6fa6277a071"
+    },
+    {
+      "path": "tests/test_marc2_vr6_vr2_boundary_localization_contract.py",
+      "bytes": 5850,
+      "sha256": "4bc93142087feff96da0ba4dca0747d1aee8142a2a3044cda8f0207c32d711cb"
+    },
+    {
+      "path": "docs/MARC_2_VR6_VR2_BOUNDARY_LOCALIZATION_PREREGISTRATION.md",
+      "bytes": 5537,
+      "sha256": "3603a5a2a64fa38c535b897d272835e1b06e5bcc8640d24487027d3730b98dd4"
+    },
+    {
+      "path": "registries/marc2_vr6_vr2_boundary_localization_contract.v0.json",
+      "bytes": 11941,
+      "sha256": "264c93989e8b2b7868c86c70945bc558699b0b132c3f5552661c6b8022efbae7"
+    }
+  ],
+  "implementation_surface": {
+    "module": "neurodecodekit.datasets.marc2_vr6_vr2_boundary_localization",
+    "commands": [
+      "plan",
+      "audit"
+    ],
+    "standard_library_only": true,
+    "base_dependency_delta": 0,
+    "generic_path_URL_output_threshold_retry_or_execute_argument": false,
+    "private_root_consumed_executor_archive_neural_target_model_or_score_interface": false,
+    "network_client_or_provider_interface": false,
+    "retained_output_writer": false
+  },
+  "artifact_reader": {
+    "fixed_contract_path_only": true,
+    "fixed_committed_input_artifacts": 17,
+    "fixed_committed_input_bytes": 575582,
+    "contract_bytes": 11941,
+    "total_measured_input_bytes": 587523,
+    "per_artifact_size_and_sha256_required": true,
+    "no_follow_regular_file_identity_required": true,
+    "duplicate_JSON_keys_and_nonfinite_constants_refused": true,
+    "Python_AST_parses": 7,
+    "strict_JSON_parses": 11,
+    "private_or_Git_ignored_paths_in_inventory": 0
+  },
+  "measured_audit": {
+    "route": "MARC2VR8A-R1",
+    "runtime_seconds": 0.08371237499522977,
+    "peak_RSS_bytes": 51052544,
+    "aggregate_output_bytes": 8827,
+    "retained_generated_output_bytes": 0,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "producer_is_causal": "not_applicable_artifact_only",
+    "end_to_end_latency_measured": false
+  },
+  "localization_result": {
+    "VR6_stores_allowlisted_nested_VR2_route": true,
+    "VR7P_forwards_only_outer_VR6_route": true,
+    "VR7P_nested_VR2_route_relay_loss_proven": true,
+    "VR2_F02_envelope_route_excluded_by_exact_producer_lineage": true,
+    "remaining_compatible_VR2_routes": [
+      "MARC2VR2-F03",
+      "MARC2VR2-F04"
+    ],
+    "F03_class": "BIDS path run-companion or structural grouping",
+    "F04_class": "bundle participant session or taxonomy arithmetic",
+    "exact_private_F03_or_F04_predicate_available": false,
+    "generated_VR2_success_traverses_exact_parser_or_producer": false,
+    "full_scale_producer_to_VR2_fixture_exists": false,
+    "producer_integration_coverage_gap_proven": true
+  },
+  "qualification": {
+    "focused_contract_behavior_and_result_tests": 26,
+    "deterministic_replay_tested": true,
+    "artifact_hash_mutation_refused": true,
+    "artifact_symlink_refused": true,
+    "missing_thread_binding_refused": true,
+    "RSS_cap_refused": true,
+    "public_output_firewall_tested": true,
+    "CLI_surface_tested": true,
+    "forbidden_import_surface_tested": true,
+    "dependency_light_suite_tests": 3918,
+    "dependency_light_suite_skipped": 204,
+    "dependency_light_suite_passed": true,
+    "neuro_enabled_suite_tests": 3989,
+    "neuro_enabled_suite_passed_in_primary_process": 3953,
+    "neuro_enabled_suite_skipped": 35,
+    "known_sandbox_forkserver_errors": 1,
+    "exact_outside_sandbox_worker_rerun_passed": true,
+    "pre_change_inventory_tests": 3953,
+    "tests_added": 36,
+    "new_regressions": 0,
+    "ruff_compile_JSON_CLI_and_diff_hygiene": "passed",
+    "remote_CI_pending": true
+  },
+  "access_counters": {
+    "committed_contract_and_artifact_reads": 18,
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_marker_certificate_output_or_source_operations": 0,
+    "archive_local_header_or_member_payload_reads": 0,
+    "signal_event_target_label_quality_channel_geometry_or_human_text_reads": 0,
+    "derivative_cache_feature_split_or_neurotoken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "network_download_provider_or_language_model_operations": 0,
+    "stream_device_or_hardware_operations": 0,
+    "consumed_executor_patch_retry_rerun_resume_or_repair_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "next_gate": {
+    "exact_implementation_commit_push_and_both_jobs_green_required": true,
+    "then_separately_named_generated_only_diagnostic_relay_may_be_frozen": true,
+    "diagnostic_relay_must_preserve_outer_VR6_and_nested_allowlisted_VR2_codes_only": true,
+    "F03_or_F04_relaxation_before_observed_route_allowed": false,
+    "private_read_or_real_cohort_requires_new_Tier_C_packet_and_decision": true,
+    "FW2_CIL1_payload_training_target_or_score_work_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "NeuroDecodeKit can now prove that the consumed source passed the complete VR2 envelope and narrow the unresolved validation boundary to F03 path or companion structure versus F04 bundle or taxonomy arithmetic without private reinspection.",
+    "scientific_claim_not_established": "No neural payload target prediction or score was accessed so this audit establishes no neural effect decoding accuracy language decoding live decoding or thought-to-text capability."
+  }
+}

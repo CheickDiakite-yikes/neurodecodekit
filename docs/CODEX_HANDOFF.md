@@ -1,15 +1,17 @@
 # Codex Handoff - NeuroDecodeKit
 
-> Current MARC2-VR8A gate, 2026-08-16: read
-> `docs/MARC_2_VR6_VR2_BOUNDARY_LOCALIZATION_PREREGISTRATION.md` and its
-> contract. The artifact-only lane binds 17 tracked inputs totaling 575,582
-> bytes and asks whether exact producer lineage excludes VR2 F02, leaving F03
-> path/companion structure and F04 bundle/taxonomy arithmetic as the only
-> compatible source-dependent classes. It also traces why VR7P retained VR6
-> `MARC2VR6-F02` but not VR6's allowlisted nested VR2 code. Commit, push, and
-> require both CI jobs green before implementing the audit. Do not touch any
-> consumed or ignored path, retained source, archive member, neural payload,
-> target, model, score, FW2, or CIL1 surface.
+> Current MARC2-VR8A result, 2026-08-16: registration `d33eaf3` passed Base
+> job `95256950555`, Optional job `95256950656`, and CI `31984475999` before
+> the artifact-only implementation. Read the VR8A preregistration,
+> implementation/result document, and registries. Route `MARC2VR8A-R1`
+> excludes VR2 envelope F02 and narrows the unresolved source boundary to F03
+> path/run-companion structure versus F04 bundle/taxonomy arithmetic. VR6
+> stored the nested safe code; VR7P forwarded only the outer code. Generated
+> VR2 success bypassed the exact producer, exposing the missing full-scale
+> integration fixture. The exact private F03/F04 route remains unavailable.
+> Next freeze a generated-only diagnostic relay; do not touch a consumed or
+> ignored path, retained source, archive member, neural payload, target, model,
+> score, FW2, or CIL1 surface.
 
 > Current MARC2-VR6 gate, 2026-08-16: registration `71d7cec` passed Base
 > Python job `95231605521`, Optional Neuro Readers job `95231605469`, and CI

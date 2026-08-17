@@ -99,18 +99,23 @@ retained sources, archive members, neural data, targets, models, predictions,
 or scores. Any future private read remains a new Tier C packet and fresh
 packet-bound decision.
 
-The next safe lane is frozen as `MARC2-VR8A`. Read
-`docs/MARC_2_VR6_VR2_BOUNDARY_LOCALIZATION_PREREGISTRATION.md` and
-`registries/marc2_vr6_vr2_boundary_localization_contract.v0.json`. It binds
-17 tracked inputs totaling 575,582 bytes and permits only standard-library AST
-and strict-JSON artifact analysis. The audit must distinguish VR6's outer
-`MARC2VR6-F02` from its allowlisted nested VR2 route, classify all eight VR2
-routes by call-stage reachability, compare exact producer envelope and parser
-guarantees with VR2, and determine whether generated success bypassed the
-exact producer path. The private route, predicate, path, identity, and value
-remain unavailable. Commit, push, and require both CI jobs green for this
-registration before implementing the auditor. No private, ignored, archive,
-neural, target, model, score, FW2, or CIL1 operation is authorized.
+Read `docs/MARC_2_VR6_VR2_BOUNDARY_LOCALIZATION_PREREGISTRATION.md`,
+`docs/MARC_2_VR6_VR2_BOUNDARY_LOCALIZATION_IMPLEMENTATION.md`, and their
+registries. Registration `d33eaf3` passed Base Python job `95256950555`,
+Optional Neuro Readers job `95256950656`, and CI `31984475999` before the
+artifact-only implementation. Measured route `MARC2VR8A-R1` excludes VR2 F02
+from exact producer lineage and leaves only F03 path/run-companion structure
+versus F04 bundle/taxonomy arithmetic compatible. VR6 stores the nested safe
+VR2 code in `upstream_route`; VR7P copied only the outer `route`. The generated
+VR2 success source bypasses the exact producer, leaving no full-scale producer-
+to-validator fixture. The exact private F03/F04 route, predicate, path,
+identity, and value remain unavailable.
+
+Next safe work is a separately named generated-only diagnostic relay carrying
+the outer VR6 and nested allowlisted VR2 codes while discarding reason text and
+private context. Do not relax F03 or F04. No private, ignored, archive, neural,
+target, model, score, FW2, or CIL1 operation is authorized; another structural
+read remains a fresh Tier C packet and packet-bound decision.
 
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-
@@ -3276,6 +3281,13 @@ Do not touch ignored MARC2 paths, consumed roots, certificates, markers,
 retained sources, archive members, neural data, targets, models, predictions,
 or scores. Any future private read remains a new Tier C packet and fresh
 packet-bound decision.
+
+VR8A registration `d33eaf3` then passed both jobs in CI `31984475999` before
+the fixed artifact audit. Route `MARC2VR8A-R1` excludes F02 and narrows the
+unknown to F03 versus F04, proves that VR7P dropped VR6's nested route field,
+and identifies the missing full-scale producer-to-VR2 fixture. It accessed no
+private path or neural data. Freeze and remotely qualify a generated-only
+diagnostic relay next; do not infer the hidden F03/F04 route or reopen VR7P.
 
 ## Style
 

@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR7P
+## Current Frontier: MARC2-VR8A
 
 Read `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`, then
 `docs/MARC_2_VR2_REFUSAL_LOCALIZATION_PREREGISTRATION.md` and
@@ -61,14 +61,23 @@ payload access, training, scoring, and live decoding remain closed. Initial
 result record `ae75423` passed both jobs in CI `31983281390`; that was test and
 record proof only, not a second private execution.
 
-The next safe lane is `MARC2-VR8A`. Read
-`docs/MARC_2_VR6_VR2_BOUNDARY_LOCALIZATION_PREREGISTRATION.md` and its
-contract. It binds 17 tracked artifacts totaling 575,582 bytes and no private
-path. The audit will classify all eight VR2 routes, test whether committed
-producer evidence excludes envelope route F02, and identify whether generated
-success skipped the exact producer/parser path. The exact private route and
-values remain unavailable. Registration must be committed, pushed, and pass
-both remote jobs before the auditor is implemented.
+Read `docs/MARC_2_VR6_VR2_BOUNDARY_LOCALIZATION_PREREGISTRATION.md`,
+`docs/MARC_2_VR6_VR2_BOUNDARY_LOCALIZATION_IMPLEMENTATION.md`, and their
+registries. Registration `d33eaf3` passed Base job `95256950555`, Optional job
+`95256950656`, and CI `31984475999` before implementation. The artifact-only
+audit reached `MARC2VR8A-R1`: exact producer lineage excludes VR2 envelope
+route F02, leaving only F03 path/run-companion structure and F04 bundle/
+taxonomy arithmetic compatible with the consumed outer branch. VR6 stored the
+nested allowlisted route in `upstream_route`, while VR7P forwarded only the
+outer `route`. Generated VR2 success starts from a selector-authored 1,227-row
+manifest and does not traverse the exact producer, whose parser fixture has
+only 18 rows. The exact private F03/F04 route remains unavailable.
+
+The next safe work is a separately named generated-only diagnostic relay that
+preserves the outer VR6 code and nested allowlisted VR2 code, but no reason or
+private context. Do not relax F03 or F04. Any new private structural read or
+real cohort freeze remains a fresh Tier C packet and decision; FW2, CIL1,
+neural payload access, training, scoring, and live decoding remain closed.
 
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.

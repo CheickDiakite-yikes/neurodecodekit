@@ -10948,3 +10948,39 @@ before another irreversible source read.
 Scientific claim not established: this registration accesses no neural
 payload, target, prediction, or score and establishes no neural effect or
 decoding result.
+
+## 2026-08-16 - MARC2-VR8A Artifact Boundary Result
+
+- Began implementation only after registration `d33eaf3` passed Base Python
+  job `95256950555`, Optional Neuro Readers job `95256950656`, and CI
+  `31984475999`.
+- Added a standard-library fixed-artifact auditor with only `plan` and `audit`
+  commands. It exposes no generic path, URL, output, retry, or execute surface
+  and retains no output.
+- Reconciled all eight VR2 routes by call-stage reachability. Exact producer
+  lineage excludes F02; only F03 path/run-companion structure and F04 bundle/
+  taxonomy arithmetic remain compatible with the consumed outer branch.
+- Proved that VR6 stores the nested allowlisted VR2 route in `upstream_route`
+  but VR7P copies only the outer `route`, explaining the diagnostic loss
+  without private reinspection.
+- Proved the fixture boundary: generated VR2 success starts from a selector-
+  authored 1,227-row manifest and bypasses the exact producer, while the exact
+  producer's parser fixture covers only 18 rows.
+- Measured 587,523 committed input bytes, seven AST parses, eleven strict JSON
+  parses, 0.083712375 seconds, 51,052,544-byte peak RSS, 8,827 aggregate output
+  bytes, and zero retained output under one thread.
+- All eleven acceptance gates passed. Every private, ignored-path, consumed-
+  root, archive, neural, target, derivative, model, prediction, score, network,
+  provider, hardware, FW2, CIL1, retry, other-project, and claim counter stayed
+  zero.
+- The next repair is a generated-only diagnostic relay preserving the outer
+  VR6 and nested allowlisted VR2 codes while dropping reasons and private
+  context. F03 and F04 remain frozen; another private read requires a fresh
+  Tier C packet and decision.
+
+Engineering capability added: the fixed audit narrows the unresolved upstream
+validation boundary to F03 versus F04 without reopening private data.
+
+Scientific claim not established: no neural payload, target, prediction, or
+score was accessed, so the result establishes no neural effect or decoding
+performance.

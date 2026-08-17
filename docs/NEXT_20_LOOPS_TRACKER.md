@@ -2690,22 +2690,30 @@ code, contracts, generated fixtures, and the two allowlisted route codes only.
 Initial result record `ae75423` passed Base job `95253771315`, Optional job
 `95253771324`, and CI `31983281390`; no second execution occurred.
 
-### MARC2-VR8A - VR6-to-VR2 Boundary Localization (Registration Frozen)
+### MARC2-VR8A - VR6-to-VR2 Boundary Localization (Artifact Result Complete)
 
-The next non-private lane is now frozen in
+The non-private lane was frozen in
 `docs/MARC_2_VR6_VR2_BOUNDARY_LOCALIZATION_PREREGISTRATION.md` and its
 contract. It reads only 17 exact tracked artifacts totaling 575,582 bytes and
 uses standard-library AST plus strict JSON. The consumed VR7P paths and source
 remain forbidden.
 
-VR8A asks whether committed producer lineage excludes VR2 envelope route F02,
-which would leave only F03 path/companion structure and F04 bundle/taxonomy
-arithmetic compatible with the observed VR6 branch. It also tests whether the
-generated success path ever traversed the exact central-directory producer.
-The audit must preserve the exact private route and values as unavailable.
+Registration `d33eaf3` passed Base job `95256950555`, Optional job
+`95256950656`, and CI `31984475999` before implementation. The audit reached
+`MARC2VR8A-R1`: exact producer lineage excludes F02, leaving F03 path/run-
+companion structure and F04 bundle/taxonomy arithmetic as the only compatible
+classes. VR6 stores its nested VR2 code in `upstream_route`; VR7P forwards only
+the outer `route`. Generated VR2 success starts from a selector-authored
+1,227-row manifest instead of the exact producer, whose generated parser
+fixture has only 18 rows.
 
-Current gate: test, commit, push, and require Base Python and Optional Neuro
-Readers green for the exact registration before implementing the auditor. The
-registration authorizes no private read, retry, real cohort, archive member,
-neural payload, target, model, prediction, score, FW2, CIL1, or scientific
-claim.
+Measured input was 587,523 committed bytes with seven Python AST parses and
+eleven strict JSON parses. Runtime was 0.083712375 seconds at 51,052,544-byte
+peak RSS; aggregate output was 8,827 bytes and retained output was zero. All
+eleven gates passed and every private, archive, neural, target, model, score,
+network, FW2, CIL1, retry, and claim counter stayed zero.
+
+Current gate: commit, push, and require both jobs green for the exact result.
+Then freeze a separately named generated-only diagnostic relay preserving only
+the outer VR6 and nested allowlisted VR2 codes. Do not relax F03 or F04. A new
+private structural read remains a separate Tier C packet and decision.

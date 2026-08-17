@@ -8943,3 +8943,33 @@ packet and decision; FW2 and CIL1 stay closed.
 Evidence: `docs/MARC_2_VR6_VR2_BOUNDARY_LOCALIZATION_PREREGISTRATION.md`,
 `registries/marc2_vr6_vr2_boundary_localization_contract.v0.json`, and its
 focused invariant test.
+
+## 0276 - Localize The Remaining VR2 Boundary To F03 Versus F04
+
+Eligibility decision: implement VR8A only after registration
+`d33eaf397a8f8444db4d7abd777bf2e9b3333e43` passed Base Python job
+`95256950555`, Optional Neuro Readers job `95256950656`, and CI
+`31984475999`.
+
+Evidence decision: accept artifact-only route `MARC2VR8A-R1`. Exact producer
+lineage, envelope identity, transport digests, row counts, and the prior strict
+source verification exclude VR2 F02 without reopening the 418,755-byte source.
+The only compatible classes are now F03 path/run-companion structure and F04
+bundle/taxonomy arithmetic. The exact private branch remains unavailable and
+must not be inferred.
+
+Architecture decision: record that VR6 stores the nested allowlisted VR2 code
+in `upstream_route`, while VR7P forwarded only the outer `route`. Also record
+that generated VR2 success begins from a selector-authored full-scale manifest
+and bypasses the exact producer; the producer's generated parser fixture has
+only 18 rows.
+
+Repair decision: require a separately named generated-only diagnostic relay
+that preserves both allowlisted route codes but no exception reason or private
+context. Do not relax F03 or F04 before an observed safe route. Another private
+read or cohort freeze remains a fresh Tier C packet and decision; FW2 and CIL1
+remain closed.
+
+Claim decision: this is an engineering localization only. It establishes no
+real cohort, neural effect, decoding accuracy, language decoding, live
+decoding, or thought-to-text capability.

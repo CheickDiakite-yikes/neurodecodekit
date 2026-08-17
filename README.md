@@ -42,7 +42,7 @@ irreversible Tier C events.
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |
 | IACKD source compatibility | H1 found 96 29-row and 32 31-row headers. H2 then parsed all 316 public BIDS metadata bodies and confirmed one 26-channel predictive EEG core, 1024 Hz sampling, average reference, and complete central/occipital geometry in all 30 groups | The exact-36 reader assumption was wrong, but H2 still routed `IACKDR-R1`: HEOG, VEOG, and Trigger are source-typed `MISC`, exposing a frozen control-taxonomy bug before any EEG sample, event, target, model, or score was accessed |
 | MARC-1 source eligibility | The Freewill central-directory inventory passed without payload, but the one source-aware Wrist metadata check later routed `MARC1SAL-R2` with zero selected subjects and zero payload bytes | The Wrist branch is consumed and blocked before acquisition; the private source route remains unavailable and is not inferred or repaired |
-| MARC-2 confound triangulation | Five ordered work orders test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | Generated-only VR6 validates measured 12-19-person prefixes, but the sole VR7P structural pass consumed after one verified 418,755-byte metadata read at upstream VR2 validation. No cohort or payload was opened. VR8A now freezes an artifact-only two-layer localization to distinguish envelope, path/companion, and bundle/taxonomy classes before any new private request |
+| MARC-2 confound triangulation | Five ordered work orders test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | Generated-only VR6 validates measured 12-19-person prefixes, but the sole VR7P structural pass consumed after one verified 418,755-byte metadata read at upstream VR2 validation. Artifact-only VR8A now excludes the envelope class and narrows the unresolved refusal to F03 path/run structure versus F04 cohort arithmetic. No cohort or neural payload was opened |
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
 | Full-path causality gate | Loop 25 v1 passed a dedicated causal anti-alias audit, 65,537 response points, 23 alias probes, 168 schedule checks, 240 resume checks, and 72 future-mutation controls across 24 target-free items | The exact 1000-to-100 Hz path is mechanically causal with zero right context; this is synthetic mechanics evidence, not proof that neural information survives |
 | Consumed S21 validation | The registered 2,908-parameter candidate reached macro CER `0.938177`; the train-only no-signal prior reached `0.751235`, so the candidate was worse by `0.186942` | Loop 26 is parked after one consumed six-target event; this is a clear negative result, not neural advantage |
@@ -1938,6 +1938,18 @@ Read this before interpreting any number in the repository.
   no archive member, neural payload, target, model, prediction, score, FW2,
   live decoding, or scientific claim was reached. Initial result record
   `ae75423` passed both jobs in CI `31983281390` without a second execution.
+- **MARC2-VR8A artifact-only boundary localization:** registration `d33eaf3`
+  passed Base job `95256950555`, Optional job `95256950656`, and CI
+  `31984475999` before implementation. The fixed 18-artifact audit reached
+  `MARC2VR8A-R1`: exact producer lineage excludes VR2 envelope route F02, so
+  only F03 path/run-companion structure and F04 bundle/taxonomy arithmetic
+  remain compatible. VR6 preserved the nested allowlisted VR2 route, but VR7P
+  forwarded only the outer VR6 route. The generated VR2 success path also
+  bypassed the exact full-scale producer, exposing the missing integration
+  fixture. The audit read 587,523 committed bytes, used seven AST and eleven
+  strict JSON parses, retained zero bytes, and performed no private, neural,
+  target, model, score, network, FW2, or CIL1 operation. The exact F03/F04
+  private route remains unavailable and must not be inferred.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
@@ -2791,6 +2803,11 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/marc2_dynamic_private_selection_recovery_proof.v0.json](registries/marc2_dynamic_private_selection_recovery_proof.v0.json) | distinct shared-validator proof record binding the exact wrapper, tests, docs, registry, decision, and green dependencies |
 | [docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_RESULT.md](docs/MARC_2_DYNAMIC_PRIVATE_SELECTION_RECOVERY_RESULT.md) | consumed VR7P route, proven state-machine boundary, explicit unavailable values, no-rerun disposition, and no-neural ceiling |
 | [registries/marc2_dynamic_private_selection_recovery_failure_result.v0.json](registries/marc2_dynamic_private_selection_recovery_failure_result.v0.json) | machine-readable `MARC2VR7P-F07` plus upstream `MARC2VR6-F02`, one-read counters, zero forbidden operations, and closed FW2 gate |
+| [docs/MARC_2_VR6_VR2_BOUNDARY_LOCALIZATION_PREREGISTRATION.md](docs/MARC_2_VR6_VR2_BOUNDARY_LOCALIZATION_PREREGISTRATION.md) | frozen VR8A fixed-artifact questions, eight-route accounting, producer-lineage test, fixture boundary, and zero private authority |
+| [registries/marc2_vr6_vr2_boundary_localization_contract.v0.json](registries/marc2_vr6_vr2_boundary_localization_contract.v0.json) | hash-bound 17-artifact VR8A contract, resource caps, three honest routes, prohibitions, and claim ceiling |
+| [docs/MARC_2_VR6_VR2_BOUNDARY_LOCALIZATION_IMPLEMENTATION.md](docs/MARC_2_VR6_VR2_BOUNDARY_LOCALIZATION_IMPLEMENTATION.md) | measured `MARC2VR8A-R1` audit, F02 exclusion, remaining F03/F04 boundary, relay-loss trace, fixture gap, and next repair |
+| [registries/marc2_vr6_vr2_boundary_localization_implementation.v0.json](registries/marc2_vr6_vr2_boundary_localization_implementation.v0.json) | machine-readable fixed reader surface, measured resources, localization facts, zero counters, and remote-proof gate |
+| [registries/marc2_vr6_vr2_boundary_localization_result.v0.json](registries/marc2_vr6_vr2_boundary_localization_result.v0.json) | machine-readable R1 result, exact artifact bindings, F03/F04 uncertainty, warnings, and no-science ceiling |
 | [docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md](docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md) | frozen generated-only 238-bundle repair design, filter-before-count order, aggregate predicates, mutations, resources, and claim boundary |
 | [registries/marc2_source_validity_eligibility_repair_contract.v0.json](registries/marc2_source_validity_eligibility_repair_contract.v0.json) | machine-readable `MARC2-VR1` source-validity and eligibility contract with 43 generated adversary bundles and all authority flags false |
 | [docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md](docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md) | generated-only full-source validator, eligibility-first selection order, refusal coverage, local verification, and exact remote-proof gate |
