@@ -8913,3 +8913,33 @@ Remote proof: initial result commit `ae75423ce9e60c08599ba31fc40f3a6ea584d70e`
 passed Base Python job `95253771315`, Optional Neuro Readers job
 `95253771324`, and CI `31983281390`. This verified the committed aggregate
 record and full suites; it performed no second execution or private operation.
+
+## 0275 - Freeze VR8A As An Artifact-Only Two-Layer Boundary Audit
+
+Lane decision: do not spend another private read while VR7P has retained only
+the outer VR6 validation class. Freeze `MARC2-VR8A` as a standard-library audit
+of 17 exact committed artifacts totaling 575,582 bytes.
+
+Localization decision: trace the VR7P-to-VR6-to-VR2 exception attributes and
+classify all eight VR2 routes by exact call-stage reachability. Test whether
+the committed producer module and public result are sufficient to exclude the
+VR2 envelope route without opening the 418,755-byte retained source.
+
+Fixture decision: distinguish parser-guaranteed row fields and ZIP safety from
+source-dependent BIDS path, companion, bundle, and taxonomy rules. Verify
+whether the VR2 generated success source traverses the exact central-directory
+producer or begins from a selector-authored synthetic manifest.
+
+Evidence decision: permit only tracked artifact reads, AST and strict JSON
+parses, aggregate output under one MiB, one thread, and zero retention. The
+exact private route, predicate, member path, participant, session, run, and
+value remain unavailable and must not be reconstructed.
+
+Prospective decision: a later generated-only relay may preserve both the outer
+VR6 and nested allowlisted VR2 codes while discarding all reasons and private
+context. It may not relax F03 or F04. Another private read remains a new Tier C
+packet and decision; FW2 and CIL1 stay closed.
+
+Evidence: `docs/MARC_2_VR6_VR2_BOUNDARY_LOCALIZATION_PREREGISTRATION.md`,
+`registries/marc2_vr6_vr2_boundary_localization_contract.v0.json`, and its
+focused invariant test.

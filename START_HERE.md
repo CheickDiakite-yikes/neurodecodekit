@@ -61,6 +61,15 @@ payload access, training, scoring, and live decoding remain closed. Initial
 result record `ae75423` passed both jobs in CI `31983281390`; that was test and
 record proof only, not a second private execution.
 
+The next safe lane is `MARC2-VR8A`. Read
+`docs/MARC_2_VR6_VR2_BOUNDARY_LOCALIZATION_PREREGISTRATION.md` and its
+contract. It binds 17 tracked artifacts totaling 575,582 bytes and no private
+path. The audit will classify all eight VR2 routes, test whether committed
+producer evidence excludes envelope route F02, and identify whether generated
+success skipped the exact producer/parser path. The exact private route and
+values remain unavailable. Registration must be committed, pushed, and pass
+both remote jobs before the auditor is implemented.
+
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.
 3. Read `AGENTS.md` for coding-agent rules.

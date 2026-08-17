@@ -99,6 +99,19 @@ retained sources, archive members, neural data, targets, models, predictions,
 or scores. Any future private read remains a new Tier C packet and fresh
 packet-bound decision.
 
+The next safe lane is frozen as `MARC2-VR8A`. Read
+`docs/MARC_2_VR6_VR2_BOUNDARY_LOCALIZATION_PREREGISTRATION.md` and
+`registries/marc2_vr6_vr2_boundary_localization_contract.v0.json`. It binds
+17 tracked inputs totaling 575,582 bytes and permits only standard-library AST
+and strict-JSON artifact analysis. The audit must distinguish VR6's outer
+`MARC2VR6-F02` from its allowlisted nested VR2 route, classify all eight VR2
+routes by call-stage reachability, compare exact producer envelope and parser
+guarantees with VR2, and determine whether generated success bypassed the
+exact producer path. The private route, predicate, path, identity, and value
+remain unavailable. Commit, push, and require both CI jobs green for this
+registration before implementing the auditor. No private, ignored, archive,
+neural, target, model, score, FW2, or CIL1 operation is authorized.
+
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-
 blind analysis over 72 S004-S015 EDFs. The analysis accepted 1,080 events,
@@ -3228,7 +3241,7 @@ authorization boundary.
 - Resource, privacy, access, timestamp, anomaly, hash, and claim boundaries stay
   explicit and machine-checkable.
 
-## Latest MARC2-VR6 Boundary
+## Latest MARC2-VR8A Boundary
 
 VR4P is consumed at outer `MARC2MSP-F07`; its nested VR2 route was not retained
 and must not be reconstructed from ignored/private artifacts. Artifact-only

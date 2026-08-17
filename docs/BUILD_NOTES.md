@@ -10920,3 +10920,31 @@ VR6 failure class, and failed closed at upstream validation.
 Scientific claim not established: no neural payload, target, prediction, or
 score was accessed, so this establishes no neural effect, decoding accuracy,
 language decoding, live decoding, or thought-to-text capability.
+
+## 2026-08-16 - MARC2-VR8A Boundary Localization Registration
+
+- Bound final VR7P proof `5fc1226`, CI `31983540816`, Base job
+  `95254474934`, and Optional job `95254475001` without touching its consumed
+  root, readiness certificate, marker, or retained source.
+- Froze 17 tracked code, contract, implementation, public-result, and prior-
+  diagnosis inputs totaling 575,582 bytes. Every path is SHA-256 and size
+  bound; no `.codex_work` or Git-ignored path is in the inventory.
+- Separated VR6's outer `MARC2VR6-F02` from its allowlisted nested VR2 route
+  attribute and required an AST trace of where VR7P stopped forwarding the
+  second code.
+- Registered three honest outcomes: an F03/F04 two-class localization, an
+  F02/F03/F04 three-class localization, or an inconclusive artifact result.
+- Required explicit comparison of producer envelope and row guarantees with
+  the VR2 validator, plus a call-graph check of whether generated success ever
+  exercises the exact central-directory producer.
+- Kept private bytes, network, archive members, signal, target, derivative,
+  model, prediction, score, provider, hardware, FW2, CIL1, retry, and claim
+  authority at zero. The audit may retain no generated output.
+
+Engineering capability specified: a fixed artifact audit can narrow the
+upstream validator class and identify missing producer-integration coverage
+before another irreversible source read.
+
+Scientific claim not established: this registration accesses no neural
+payload, target, prediction, or score and establishes no neural effect or
+decoding result.

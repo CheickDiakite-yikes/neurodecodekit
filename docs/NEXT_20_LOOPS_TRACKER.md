@@ -2689,3 +2689,23 @@ a separately named artifact-only VR6-to-VR2 boundary analysis using committed
 code, contracts, generated fixtures, and the two allowlisted route codes only.
 Initial result record `ae75423` passed Base job `95253771315`, Optional job
 `95253771324`, and CI `31983281390`; no second execution occurred.
+
+### MARC2-VR8A - VR6-to-VR2 Boundary Localization (Registration Frozen)
+
+The next non-private lane is now frozen in
+`docs/MARC_2_VR6_VR2_BOUNDARY_LOCALIZATION_PREREGISTRATION.md` and its
+contract. It reads only 17 exact tracked artifacts totaling 575,582 bytes and
+uses standard-library AST plus strict JSON. The consumed VR7P paths and source
+remain forbidden.
+
+VR8A asks whether committed producer lineage excludes VR2 envelope route F02,
+which would leave only F03 path/companion structure and F04 bundle/taxonomy
+arithmetic compatible with the observed VR6 branch. It also tests whether the
+generated success path ever traversed the exact central-directory producer.
+The audit must preserve the exact private route and values as unavailable.
+
+Current gate: test, commit, push, and require Base Python and Optional Neuro
+Readers green for the exact registration before implementing the auditor. The
+registration authorizes no private read, retry, real cohort, archive member,
+neural payload, target, model, prediction, score, FW2, CIL1, or scientific
+claim.

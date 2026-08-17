@@ -1,5 +1,16 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR8A gate, 2026-08-16: read
+> `docs/MARC_2_VR6_VR2_BOUNDARY_LOCALIZATION_PREREGISTRATION.md` and its
+> contract. The artifact-only lane binds 17 tracked inputs totaling 575,582
+> bytes and asks whether exact producer lineage excludes VR2 F02, leaving F03
+> path/companion structure and F04 bundle/taxonomy arithmetic as the only
+> compatible source-dependent classes. It also traces why VR7P retained VR6
+> `MARC2VR6-F02` but not VR6's allowlisted nested VR2 code. Commit, push, and
+> require both CI jobs green before implementing the audit. Do not touch any
+> consumed or ignored path, retained source, archive member, neural payload,
+> target, model, score, FW2, or CIL1 surface.
+
 > Current MARC2-VR6 gate, 2026-08-16: registration `71d7cec` passed Base
 > Python job `95231605521`, Optional Neuro Readers job `95231605469`, and CI
 > `31974405202` before implementation. Local `MARC2VR6-G1` passes ten generated

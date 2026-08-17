@@ -1,0 +1,300 @@
+{
+  "schema_name": "neurodecodekit.marc2_vr6_vr2_boundary_localization_contract",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC2-VR8A",
+  "status": "frozen_artifact_only_contract_implementation_pending",
+  "recorded_at_local": "2026-08-16",
+  "proof_posture": "fixed_committed_code_and_aggregate_results_only_no_private_or_scientific_value",
+  "upstream_closeout_green_proof": {
+    "commit": "5fc1226b3b0a0246b17609d74d741ed20c24ab61",
+    "CI_run_id": 31983540816,
+    "base_python_job_id": 95254474934,
+    "optional_neuro_job_id": 95254475001,
+    "both_required_jobs_green": true,
+    "consumed_wrapper_route": "MARC2VR7P-F07",
+    "preserved_VR6_route": "MARC2VR6-F02",
+    "nested_VR2_route_available": false,
+    "private_source_reinspection_or_rerun_allowed": false
+  },
+  "fixed_inputs": [
+    {
+      "role": "VR7P_wrapper_module",
+      "path": "src/neurodecodekit/datasets/marc2_dynamic_private_selection_recovery.py",
+      "bytes": 82945,
+      "sha256": "a200bdc50c79044dd5636859183432f629038343ee2d1e117cc4cd48c4cdbb42"
+    },
+    {
+      "role": "VR7P_consumed_result",
+      "path": "registries/marc2_dynamic_private_selection_recovery_failure_result.v0.json",
+      "bytes": 9289,
+      "sha256": "e1c08441f5a1485fb0aeac65b3d3b5b8ef0322a45651bc8c6e46620a8bfc259c"
+    },
+    {
+      "role": "VR7P_implementation_record",
+      "path": "registries/marc2_dynamic_private_selection_recovery_implementation.v0.json",
+      "bytes": 8107,
+      "sha256": "a6ba8784ee4112959bc054cb3752468985db5e520ea63298962b8a142bb4da4a"
+    },
+    {
+      "role": "VR6_adapter_module",
+      "path": "src/neurodecodekit/datasets/marc2_dynamic_live_selection.py",
+      "bytes": 55659,
+      "sha256": "c3b0d056891f7708b87e8027d36ebd14830055cdeac8e652a681dd4592b4a104"
+    },
+    {
+      "role": "VR6_contract",
+      "path": "registries/marc2_dynamic_live_selection_contract.v0.json",
+      "bytes": 9414,
+      "sha256": "cadb9b512c0d072ced2bb4219f6c7f2ac962c230ecff7ff56841f00b824c0d58"
+    },
+    {
+      "role": "VR6_implementation_record",
+      "path": "registries/marc2_dynamic_live_selection_implementation.v0.json",
+      "bytes": 6463,
+      "sha256": "0a08caa40d3bb46f6bea1ef8c32b6451d8066dab40935274b7ab1692dee78fdc"
+    },
+    {
+      "role": "VR2_validator_module",
+      "path": "src/neurodecodekit/datasets/marc2_live_domain_eligibility_adapter.py",
+      "bytes": 57528,
+      "sha256": "061b893180e01116dbd962826384b4071d9e952b78b593b4743f8c301e1cbbc3"
+    },
+    {
+      "role": "VR2_contract",
+      "path": "registries/marc2_live_domain_eligibility_adapter_contract.v0.json",
+      "bytes": 15306,
+      "sha256": "c7c94406c7b3f483bb2ecbbb42b131756d178f288eedc31ce48e9383180a0a33"
+    },
+    {
+      "role": "VR1_source_repair_module",
+      "path": "src/neurodecodekit/datasets/marc2_source_validity_eligibility_repair.py",
+      "bytes": 55503,
+      "sha256": "cef7bb738ceee86847067cec788e442aa5022c8f573a814638ef3d48b6ec3587"
+    },
+    {
+      "role": "selector_module",
+      "path": "src/neurodecodekit/datasets/marc2_freewill_prefix_selection.py",
+      "bytes": 72691,
+      "sha256": "86fa30fbd1caed735f0fb2e627144482a2bb8e033567bb3794e3f05508005c97"
+    },
+    {
+      "role": "exact_manifest_producer_module",
+      "path": "src/neurodecodekit/datasets/marc1_central_directory_live.py",
+      "bytes": 74328,
+      "sha256": "f25464be139a0f4dad813f255be6d91eb803f35a50b045baea4aa7b27e5549d5"
+    },
+    {
+      "role": "exact_central_directory_parser_module",
+      "path": "src/neurodecodekit/datasets/marc1_central_directory_audit.py",
+      "bytes": 79296,
+      "sha256": "db8b6975c81d4afe0a5ede0126956f4113159c98b3975cbded4ad322bce23de6"
+    },
+    {
+      "role": "producer_public_result",
+      "path": "registries/marc1_freewill_central_directory_live_result.v0.json",
+      "bytes": 6118,
+      "sha256": "fee969818b4e3e2ef7aee86096ad676c9bd70f80d19f2fd6dbe0e8069175257b"
+    },
+    {
+      "role": "producer_implementation_record",
+      "path": "registries/marc1_freewill_central_directory_live_implementation.v0.json",
+      "bytes": 14970,
+      "sha256": "b0e2c0fe20a20b142fa53c387ffd4fe467aff9898ecd1ab1eadc3a441f8405b0"
+    },
+    {
+      "role": "prior_VR5A_result",
+      "path": "registries/marc2_vr2_refusal_localization_result.v0.json",
+      "bytes": 10103,
+      "sha256": "54cad29271e10c40b5d046bf24fc10b2287b07ce9d8df61db5cc7a68ea99bcf8"
+    },
+    {
+      "role": "prior_validation_coverage_result",
+      "path": "registries/marc2_validation_coverage_localization_result.v0.json",
+      "bytes": 9827,
+      "sha256": "82f68b1e05b3b5718b35bc85d9748017cd17a86970cdaabb0a89b2646dab10ce"
+    },
+    {
+      "role": "prior_schema_lineage_result",
+      "path": "registries/marc2_source_schema_lineage_result.v0.json",
+      "bytes": 8035,
+      "sha256": "f2290fc7a1a3d9afa9fc4b25a2e190350555578440b95d0b3c907de7c2e40476"
+    }
+  ],
+  "registered_facts": {
+    "fixed_input_artifacts": 17,
+    "fixed_input_bytes": 575582,
+    "private_source_bytes": 418755,
+    "private_source_sha256": "2a2e48b88ee59332a199d926554bb6921222fff92046a0fc9b07cf73fd6c3031",
+    "inventory_rows": 1227,
+    "regular_file_rows": 1025,
+    "directory_rows": 202,
+    "published_run_bundles": 238,
+    "eligible_run_bundles": 195,
+    "valid_ineligible_run_bundles": 43,
+    "required_companions_per_run": 4,
+    "producer_transport_keys": [
+      "directory",
+      "metadata",
+      "tail"
+    ],
+    "VR2_transport_keys": [
+      "directory",
+      "metadata",
+      "tail"
+    ],
+    "producer_manifest_top_level_fields": [
+      "entries",
+      "proof_posture",
+      "schema_name",
+      "schema_version",
+      "source_identity",
+      "transport_body_sha256"
+    ],
+    "VR2_source_top_level_fields": [
+      "entries",
+      "proof_posture",
+      "schema_name",
+      "schema_version",
+      "source_identity",
+      "transport_body_sha256"
+    ],
+    "producer_row_fields": [
+      "CRC32",
+      "ZIP64_extra_used",
+      "compressed_size",
+      "compression_method",
+      "entry_kind",
+      "external_attributes",
+      "general_purpose_flags",
+      "local_header_offset",
+      "member_name",
+      "uncompressed_size",
+      "version_made_by"
+    ],
+    "selector_row_fields": [
+      "CRC32",
+      "ZIP64_extra_used",
+      "compressed_size",
+      "compression_method",
+      "entry_kind",
+      "external_attributes",
+      "general_purpose_flags",
+      "local_header_offset",
+      "member_name",
+      "uncompressed_size",
+      "version_made_by"
+    ],
+    "VR2_routes": [
+      "MARC2VR2-F01",
+      "MARC2VR2-F02",
+      "MARC2VR2-F03",
+      "MARC2VR2-F04",
+      "MARC2VR2-F05",
+      "MARC2VR2-F06",
+      "MARC2VR2-F07",
+      "MARC2VR2-F08"
+    ]
+  },
+  "frozen_questions": [
+    "Does VR6 retain the nested VR2 route while VR7P retains only VR6 route MARC2VR6-F02?",
+    "Which VR2 route classes remain reachable after the same VR2 contract has already loaded and before any selection or resource-report stage?",
+    "Do the exact producer and committed public result satisfy the complete VR2 F02 envelope predicate without reading the private source?",
+    "Which parts of VR2 F03 are already guaranteed by the central-directory parser and which path or companion predicates remain source-dependent?",
+    "Does the generated VR2 success source traverse the exact central-directory producer or only a selector-authored synthetic row builder?",
+    "What is the smallest prospective diagnostic relay that preserves route codes without relaxing F03 or F04?"
+  ],
+  "required_findings": {
+    "VR7P_to_VR6_to_VR2_exception_chain_must_be_traced_by_AST": true,
+    "outer_VR6_and_nested_VR2_route_attributes_must_be_distinguished": true,
+    "all_eight_VR2_routes_must_be_classified_as_reachable_excluded_or_ambiguous": true,
+    "contract_only_selection_only_and_resource_only_routes_must_be_separated": true,
+    "producer_envelope_schema_identity_transport_and_row_count_must_be_compared_to_VR2": true,
+    "producer_row_field_and_kind_guarantees_must_be_separated_from_BIDS_path_and_companion_logic": true,
+    "generated_fixture_call_graph_must_identify_whether_exact_producer_parser_is_exercised": true,
+    "exact_private_member_path_participant_run_predicate_and_nested_route_must_remain_unavailable": true,
+    "no_private_value_may_be_reconstructed_from_bytes_hash_runtime_or_failure_class": true
+  },
+  "ordered_routes": [
+    {
+      "route": "MARC2VR8A-R1",
+      "meaning": "route relay loss is proven and committed producer evidence excludes VR2 F02, leaving only F03 structural path or companion validation and F04 bundle or taxonomy arithmetic as compatible source-dependent classes"
+    },
+    {
+      "route": "MARC2VR8A-R2",
+      "meaning": "route relay loss is proven but producer evidence narrows the compatible source-dependent classes only to F02 F03 and F04"
+    },
+    {
+      "route": "MARC2VR8A-R3",
+      "meaning": "route relay loss is proven but committed artifacts are inconsistent or insufficient for a sound route-class narrowing"
+    },
+    {
+      "route": "MARC2VR8A-F01",
+      "meaning": "contract fixed artifact hash parse or upstream green-proof binding differs"
+    },
+    {
+      "route": "MARC2VR8A-F02",
+      "meaning": "AST call graph exception attribute or reachability anchor differs"
+    },
+    {
+      "route": "MARC2VR8A-F03",
+      "meaning": "producer consumer aggregate arithmetic privacy or claim boundary differs"
+    },
+    {
+      "route": "MARC2VR8A-F04",
+      "meaning": "thread runtime RSS input output or retention cap differs"
+    }
+  ],
+  "prospective_repair": {
+    "new_lane_required": true,
+    "patch_retry_reuse_or_reinspect_consumed_VR7P": false,
+    "preserve_outer_VR6_route_code": true,
+    "preserve_nested_VR2_route_code_when_allowlisted": true,
+    "preserve_exception_reason_private_value_member_path_participant_or_run": false,
+    "exercise_F02_F03_and_F04_generated_refusals_through_complete_relay": true,
+    "producer_to_validator_fixture_required": true,
+    "relax_F03_path_or_companion_rules_before_observed_route": false,
+    "relax_F04_bundle_taxonomy_or_arithmetic_rules_before_observed_route": false,
+    "private_read_or_real_cohort_freeze_requires_new_Tier_C_packet_and_decision": true,
+    "FW2_CIL1_payload_model_target_or_score_work_remains_closed": true
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 134217728,
+    "per_artifact_bytes": 1048576,
+    "total_input_bytes": 1048576,
+    "aggregate_output_bytes": 1048576,
+    "retained_generated_output_bytes": 0,
+    "private_or_Git_ignored_bytes": 0,
+    "network_bytes": 0,
+    "incremental_disk_bytes": 1048576
+  },
+  "authorization_state": {
+    "artifact_only_implementation": true,
+    "fixed_committed_artifact_reads": true,
+    "private_or_Git_ignored_path_access": false,
+    "consumed_root_certificate_marker_or_source_access": false,
+    "network_or_download": false,
+    "archive_member_or_payload_access": false,
+    "signal_event_target_label_quality_channel_geometry_or_human_text_access": false,
+    "real_cohort_freeze": false,
+    "derivative_cache_split_feature_or_NeuroToken_creation": false,
+    "training_inference_prediction_freeze_target_delivery_or_scoring": false,
+    "provider_language_model_stream_device_or_hardware_operation": false,
+    "MARC2_FW2_or_CIL1_execution": false,
+    "retry_rerun_resume_patch_repair_or_private_reinspection": false,
+    "release_or_publication": false,
+    "scientific_claim_upgrade": false
+  },
+  "claim_boundary": {
+    "engineering_ceiling": "artifact_only_localization_of_the_VR6_to_VR2_route_and_fixture_boundary",
+    "scientific_ceiling": "none",
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "real_time_portable_home_assistive_or_clinical_result": false
+  }
+}
