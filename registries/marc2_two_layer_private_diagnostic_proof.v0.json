@@ -1,0 +1,255 @@
+{
+  "schema_name": "neurodecodekit.marc2_proof_record_recovery_implementation",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC2-FW1B",
+  "implementation_id": "MARC-2-FW1B-proof-record-recovery-implementation-v0",
+  "recorded_at_local": "2026-08-13",
+  "status": "generated_shared_proof_validator_qualified_no_private_authority",
+  "predecessor_proof": {
+    "green_contract": {
+      "commit": "b86aa940d47a232535ee1e72fb22ad58ea5c2729",
+      "CI_run_id": 31767373647,
+      "base_python_job_id": 94665902722,
+      "optional_neuro_job_id": 94665902761,
+      "both_required_jobs_green": true,
+      "contract_sha256": "0ec54f915289fd66983696bd28c2eb799c59703d1d5ccebece628f83da8b1e4b"
+    },
+    "consumed_result": {
+      "commit": "4f08553eaa27c83e3f9ace9226dce64d933be1d4",
+      "CI_run_id": 31766526262,
+      "base_python_job_id": 94663482811,
+      "optional_neuro_job_id": 94663482786,
+      "both_required_jobs_green": true,
+      "result_registry_sha256": "56ccc534ce682b45a3dcea6f4e301261a060ccf0ebd6f8f34a7dbed9071899c5"
+    }
+  },
+  "tracked_file_hashes": [
+    {
+      "path": "src/neurodecodekit/datasets/marc2_proof_record_recovery.py",
+      "sha256": "c22948ca9047f07908d3768a17caea56b96fa8219ccf0bb9895d766373903a2c"
+    },
+    {
+      "path": "registries/marc2_proof_record_recovery_contract.v0.json",
+      "sha256": "0ec54f915289fd66983696bd28c2eb799c59703d1d5ccebece628f83da8b1e4b"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/marc2_two_layer_private_diagnostic.py",
+      "sha256": "bfcbedc2508599a90d987ecd891a169353f1cfd96ade041a4119b665874ba038"
+    },
+    {
+      "path": "tests/test_marc2_two_layer_private_diagnostic.py",
+      "sha256": "baad30a6d093d3c25aab5fbe0fd3482f499c7927e201370e650a942b7af6fd61"
+    },
+    {
+      "path": "tests/test_marc2_two_layer_private_diagnostic_implementation.py",
+      "sha256": "e0fcd3b9f7f660fca5481bbadef173d1f0b18140c8f47d1bcef50495ef1dd9a1"
+    },
+    {
+      "path": "docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_IMPLEMENTATION.md",
+      "sha256": "4e60fa557d7dcf24d42bdcab83e7ffa2ca10c7c8892ad1a62fb49e73f108ebb2"
+    },
+    {
+      "path": "registries/marc2_two_layer_private_diagnostic_implementation.v0.json",
+      "sha256": "f2d5929823df9bbd022930c76c5bd8ed310c2a4646c72acdd15d9ba36a6fb677"
+    },
+    {
+      "path": "docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_AUTHORIZATION_DECISION.md",
+      "sha256": "def3ac16bbd7686b216f5c890b009fee3e0a41dc09a17f56d624b2cb9a8a638a"
+    },
+    {
+      "path": "registries/marc2_two_layer_private_diagnostic_authorization_decision.v0.json",
+      "sha256": "a62ee8463b384aefbe8b562da47a3c7e53644c2a2b066932bcbaff3e3db12571"
+    },
+    {
+      "path": "tests/test_marc2_two_layer_private_diagnostic_authorization_decision.py",
+      "sha256": "d95c7e9432aafbe82471a470dba5444ca73aa50b38afe9f0651b0f8d81f0ac46"
+    },
+    {
+      "path": "docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_AUTHORIZATION_PACKET.md",
+      "sha256": "e89da84ee3f615ec9e2739220ac2bc2cf68b195be38dac1c605482cd020e9ba4"
+    },
+    {
+      "path": "registries/marc2_two_layer_private_diagnostic_authorization_request.v0.json",
+      "sha256": "c5a576e5340d271dc8efe4f5cb52761136620d89ff1b4c2dc08c5c302f31b964"
+    },
+    {
+      "path": "tests/test_marc2_two_layer_private_diagnostic_authorization_request.py",
+      "sha256": "5f5ff1075c960a3ad3688e18e2b1d56bf87655d20ea13754e74ac58137db57d1"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/marc2_generated_diagnostic_relay.py",
+      "sha256": "162c5b15b0a4583001520fd6d70ade9ec4c64421f8c0f46f28607129ae94cc77"
+    },
+    {
+      "path": "registries/marc2_generated_diagnostic_relay_implementation.v0.json",
+      "sha256": "a466109f7558f879b87eb77abafad1d2c2890d6d06cc24f859b91ab5b4ace12e"
+    },
+    {
+      "path": "registries/marc2_generated_diagnostic_relay_result.v0.json",
+      "sha256": "b0e39cb127c3f96d11e606370f807ab2d96fbef03a74e2fed8637a668f60795c"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/marc2_dynamic_live_selection.py",
+      "sha256": "c3b0d056891f7708b87e8027d36ebd14830055cdeac8e652a681dd4592b4a104"
+    },
+    {
+      "path": "registries/marc2_dynamic_live_selection_contract.v0.json",
+      "sha256": "cadb9b512c0d072ced2bb4219f6c7f2ac962c230ecff7ff56841f00b824c0d58"
+    },
+    {
+      "path": "registries/marc2_dynamic_live_selection_implementation.v0.json",
+      "sha256": "0a08caa40d3bb46f6bea1ef8c32b6451d8066dab40935274b7ab1692dee78fdc"
+    },
+    {
+      "path": "registries/marc2_dynamic_live_selection_result.v0.json",
+      "sha256": "012af5ae838a00cdcefb49c02bcddfb2b454766d164613a87020bfacb1dc5e43"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/marc2_machine_readiness.py",
+      "sha256": "7773b070dc0b819d7a680789fe6d998293ed17c94776af703034576e773dafa0"
+    },
+    {
+      "path": "registries/marc2_machine_stable_structural_recovery_contract.v0.json",
+      "sha256": "93d63b273809f05608aaa18f9a52611d6073110e74b3c62ae5cf08d756b6b191"
+    }
+  ],
+  "implementation_surface": {
+    "module": "neurodecodekit.datasets.marc2_proof_record_recovery",
+    "shared_validator_symbol": "validate_implementation_record",
+    "validator_source_path": "src/neurodecodekit/datasets/marc2_proof_record_recovery.py",
+    "validator_source_sha256": "c22948ca9047f07908d3768a17caea56b96fa8219ccf0bb9895d766373903a2c",
+    "commands": [
+      "plan",
+      "qualify",
+      "inspect"
+    ],
+    "execute_command": false,
+    "standard_library_only": true,
+    "heavy_dependency_imports": 0,
+    "private_path_or_output_root_constant": false,
+    "URL_network_or_download_client": false,
+    "archive_header_member_or_payload_reader": false,
+    "signal_event_target_label_quality_or_channel_reader": false,
+    "derivative_cache_split_feature_model_or_score_interface": false,
+    "old_consumed_executor_import_or_call": false,
+    "generated_closure_symbol": "validate_implementation_record"
+  },
+  "generated_qualification": {
+    "route": "MARC2FWR-G1",
+    "all_gates_passed": true,
+    "predecessor_selector_mutations_passed": 40,
+    "predecessor_wrapper_mutations_passed": 18,
+    "proof_record_mutations_passed": 32,
+    "proof_record_mutation_order": [
+      "schema_name_missing",
+      "schema_name_wrong",
+      "schema_version_wrong",
+      "lane_id_missing",
+      "lane_id_wrong",
+      "implementation_id_wrong",
+      "status_wrong",
+      "predecessor_commit_wrong",
+      "predecessor_CI_or_job_wrong",
+      "predecessor_result_hash_wrong",
+      "tracked_files_empty",
+      "tracked_path_absolute",
+      "tracked_path_traversal",
+      "tracked_path_duplicate",
+      "tracked_hash_malformed",
+      "tracked_hash_mismatch",
+      "registry_self_binding",
+      "qualification_all_gates_false",
+      "qualification_selector_count_wrong",
+      "qualification_wrapper_count_wrong",
+      "qualification_mutation_order_wrong",
+      "execution_already_consumed",
+      "execution_limit_wrong",
+      "retry_limit_nonzero",
+      "access_counter_nonzero",
+      "private_authority_enabled",
+      "payload_or_MARC2_FW2_authority_enabled",
+      "next_gate_wrong",
+      "claim_boundary_missing",
+      "proof_commit_malformed_or_HEAD_mismatch",
+      "proof_CI_job_or_registry_hash_mismatch",
+      "generated_closure_uses_different_validator"
+    ],
+    "shared_validator_module": "neurodecodekit.datasets.marc2_proof_record_recovery",
+    "shared_validator_symbol": "validate_implementation_record",
+    "shared_validator_call_count": 34,
+    "canonical_replays": 2,
+    "canonical_summary_byte_identical": true,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "private_real_network_payload_neural_target_model_score_counters_zero": true,
+    "runtime_seconds": 0.0,
+    "peak_RSS_bytes": 0,
+    "generated_input_bytes": 476287,
+    "combined_output_bytes": 0,
+    "temporary_output_removed": true,
+    "end_to_end_latency_measured": false,
+    "producer_is_causal": "not_applicable_metadata_only"
+  },
+  "execution_state": {
+    "registered_private_execution_consumed": false,
+    "registered_private_execution_limit": 0,
+    "retry_rerun_resume_repair_or_fallback_limit": 0,
+    "private_selection_result_available": false,
+    "MARC2_FW2_eligible": false
+  },
+  "authorization_flags": {
+    "private_path_component_check": false,
+    "private_final_lstat": false,
+    "private_manifest_open_read_hash_or_parse": false,
+    "private_output_root_or_consumed_marker": false,
+    "network_request_or_download": false,
+    "archive_local_header_member_or_payload": false,
+    "signal_event_target_label_quality_onset_or_channel": false,
+    "derivative_cache_split_feature_or_neurotoken": false,
+    "training_parameter_update_or_checkpoint": false,
+    "model_inference_prediction_or_freeze": false,
+    "target_delivery_or_score": false,
+    "provider_or_language_model": false,
+    "RW3_stream_device_or_hardware": false,
+    "MARC2_FW2_CIL1_ORTH1_or_NDK_LANG1": false,
+    "release_publication_or_scientific_claim_upgrade": false,
+    "retry_rerun_resume_repair_substitution_or_fallback": false
+  },
+  "access_counters": {
+    "registered_private_path_component_checks": 0,
+    "registered_private_final_lstats": 0,
+    "private_manifest_content_opens": 0,
+    "private_manifest_bytes": 0,
+    "private_manifest_hashes": 0,
+    "private_manifest_parses": 0,
+    "real_participant_or_member_selections": 0,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "archive_local_header_or_member_payload_reads": 0,
+    "signal_sample_reads": 0,
+    "event_target_label_quality_onset_or_channel_reads": 0,
+    "real_derivative_rows": 0,
+    "training_or_parameter_update_fits": 0,
+    "model_inference_or_prediction_sets": 0,
+    "prediction_freezes_target_deliveries_or_scores": 0,
+    "provider_or_language_model_calls": 0,
+    "hardware_operations": 0,
+    "old_consumed_root_operations": 0,
+    "retries_reruns_or_resumes": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "next_gate": {
+    "implementation_commit_push_and_both_remote_jobs_green_required": true,
+    "private_access_authorized_now": false,
+    "all_false_Tier_C_request_only_after_green_implementation": true,
+    "fresh_packet_bound_decision_required_before_live_wrapper": true,
+    "live_wrapper_remote_green_required_before_private_path": true,
+    "MARC2_FW2_eligible_now": false,
+    "earlier_continue_is_retroactive_authority": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "A shared implementation-record validator now checks generated records through the exact future-live code path.",
+    "scientific_claim_not_established": "This generated record contains no human neural data targets predictions or scores and establishes no neural effect decoding accuracy language decoding or thought-to-text capability."
+  }
+}

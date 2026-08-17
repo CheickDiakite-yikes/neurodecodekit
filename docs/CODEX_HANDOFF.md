@@ -5522,3 +5522,24 @@ No reason, private context, selection, manifest, or cohort may be retained. No
 archive member, neural payload, target, model, prediction, score, FW2, CIL1,
 release, or scientific claim is authorized. Keep the unrelated untracked
 tracker inspection NDJSON untouched.
+
+## 2026-08-17 MARC2-VR9P Generated Implementation Handoff
+
+Decision `4cdd3d3` is remotely green in CI `31993388608`. Read
+`docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_IMPLEMENTATION.md`, its implementation
+registry, shared proof record, and both matching test modules.
+
+The additive standard-library wrapper qualifies generated F03 and F04 in
+canonical and reversed order across two exact replays. It makes eight exact VR6
+calls, passes 70 direct refusals, and retains no generated output. One measured
+run took 1.2402790839987574 seconds at 63,799,296-byte peak RSS over 3,407,792
+generated source bytes. All 25 focused behavior/proof tests pass. No consumed
+executor was imported, called, copied, patched, or modified.
+
+Immediate gate: commit and push the exact implementation and require Base
+Python and Optional Neuro Readers to pass. Do not touch `.codex_work` before
+both jobs are green. After green proof, one fixed command may create the fresh
+VR9P readiness certificate and output root, read exactly 418,755 structural
+bytes once, call VR6 once, and retain only outer F02 plus nested F03 or F04.
+There is no private manifest or cohort output. Keep the unrelated untracked
+tracker inspection NDJSON untouched.

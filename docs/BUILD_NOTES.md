@@ -11127,3 +11127,32 @@ remotely green.
 Next gate: commit, push, and require both remote CI jobs green for this exact
 decision. Do not implement the generated wrapper or touch `.codex_work` before
 that proof.
+
+## 2026-08-17 - MARC2-VR9P Generated Two-Layer Wrapper
+
+- Decision `4cdd3d3` passed Base job `95280728093`, Optional job
+  `95280728134`, and CI `31993388608` before implementation began.
+- Added a standard-library fixed-path module with `plan`, `qualify`, `inspect`,
+  and proof-ID-only `execute` commands. It has no generic path, URL, output,
+  threshold, retry, resume, fallback, cleanup, or substitution argument.
+- Kept the consumed VR7P executor entirely outside the import, call, copy,
+  patch, edit, and proof surfaces. The wrapper composes exact VR8B generated
+  sources and calls green VR6 directly.
+- Replayed F03 and F04 in canonical and reversed order twice. All eight paths
+  made exactly one VR6 call and retained only outer F02 plus the expected
+  nested route.
+- Exercised 70 direct refusals across decision, implementation, JSON, route,
+  privacy, resource, path, and thread boundaries.
+- Measured `MARC2VR9P-G1` at 1.2402790839987574 seconds and 63,799,296-byte
+  peak RSS over 3,407,792 generated source bytes. Transient generated output
+  was 53,528 bytes, the qualification report was 6,541 bytes, and retained
+  output was zero.
+- Added 15 behavior tests, 10 implementation/proof tests, and one regenerated
+  shared proof record over 22 tracked artifacts. All 25 focused tests pass.
+- Every real readiness, private path, source, output, archive, signal, target,
+  model, prediction, score, network, provider, hardware, FW2, CIL1, release,
+  and claim counter stayed zero.
+
+Next gate: commit, push, and obtain both remote CI jobs for the exact generated
+implementation. The one private structural diagnostic remains closed until
+that proof.

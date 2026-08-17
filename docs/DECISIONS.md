@@ -9129,3 +9129,33 @@ Boundary decision: no archive member, neural payload, target, derivative,
 model, training, prediction, freeze, score, provider, hardware, FW2, CIL1,
 release, or scientific claim is authorized. Decision recording performed zero
 private or scientific operations.
+
+## 0281 - Implement VR9P As A New Route-Only Fixed-Path Wrapper
+
+Eligibility decision: begin generated implementation only after decision
+`4cdd3d3` passed Base Python job `95280728093`, Optional Neuro Readers job
+`95280728134`, and CI `31993388608`.
+
+Architecture decision: build a new standard-library module that composes green
+VR8B generated parser/producer sources, invokes green VR6 directly, and reuses
+the shared proof and readiness validators. Do not import, call, copy, patch,
+edit, or proof-bind the consumed VR7P executor.
+
+Qualification decision: require F03 and F04 in canonical and reversed order,
+two exact replays, one VR6 call per path, at least 64 direct refusals, no real
+or ignored path, and zero retained output. The final matrix made eight VR6
+calls and passed 70 direct refusals.
+
+Output decision: permit only a readiness certificate, consumed marker, and
+aggregate outer-F02 plus nested-F03/F04 report after exact implementation green
+proof. Forbid reason, private context, candidate, selection, private manifest,
+and cohort output.
+
+Measured decision: accept generated route `MARC2VR9P-G1` at 1.2402790839987574
+seconds, 63,799,296-byte peak RSS, 3,407,792 generated source bytes, 53,528
+transient generated output bytes, 6,541 report bytes, and zero retained bytes.
+
+Boundary decision: generated qualification is interface evidence only. It
+establishes no real structural route, cohort, neural effect, decoding accuracy,
+language decoding, live decoding, or thought-to-text capability. The exact
+implementation must pass both remote jobs before one private structural read.

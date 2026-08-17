@@ -2755,7 +2755,7 @@ consumed F03/F04 branch remains unavailable, neither route may be relaxed, and
 any private read remains a new Tier C packet plus a fresh decision after green
 packet proof.
 
-### MARC2-VR9P - Two-Layer Private Diagnostic (Decision Recorded, Green Pending)
+### MARC2-VR9P - Two-Layer Private Diagnostic (Generated Implementation Qualified)
 
 VR9P binds 17 remotely green predecessor artifacts totaling 328,581 bytes,
 including the exact VR8B parser/producer relay and the consumed VR7P result. It
@@ -2790,7 +2790,15 @@ generated/mock wrapper work only after the decision itself is committed,
 pushed, and green in both jobs. Twenty-seven focused request/decision tests
 pass; recording performed zero private or scientific operations.
 
-Next gate: green the exact decision, implement and generated-qualify the fixed-
-path wrapper, then green that exact wrapper before the one registered private
-structural diagnosis. FW2, CIL1, archive payload, neural data, targets, models,
-predictions, scores, and scientific claims remain closed.
+Decision `4cdd3d3` passed both jobs in CI `31993388608` before the new additive
+wrapper was implemented. The generated qualification ran F03 and F04 in both
+orders across two exact replays, made eight VR6 calls, passed 70 direct
+refusals, and retained zero output. It processed 3,407,792 generated source
+bytes in 1.2402790839987574 seconds at 63,799,296-byte peak RSS. Twenty-five
+focused behavior/proof tests pass, and every real/private/scientific counter is
+zero.
+
+Next gate: commit, push, and green the exact implementation in both jobs before
+the one registered private structural diagnosis. FW2, CIL1, archive payload,
+neural data, targets, models, predictions, scores, and scientific claims remain
+closed.

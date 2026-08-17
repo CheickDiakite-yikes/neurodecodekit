@@ -152,17 +152,27 @@ as the sole active Tier C gate. The maintainer's next exact message was
 `continue`; the separate decision quotes those eight UTF-8 bytes and binds only
 the unchanged green packet.
 
-The decision is ineffective until its own commit is pushed and both CI jobs are
-green. After that proof, only a generated/mock fixed-path wrapper is eligible.
-That exact wrapper must then become remotely green before one target-free read
-of the registered 418,755-byte structural manifest. The only retainable private
-observation is outer
+Decision `4cdd3d386b6c2c16b5187e0854b2bcb1f673b45a` then passed Base
+Python job `95280728093` and Optional Neuro Readers job `95280728134` in CI
+`31993388608` before generated implementation began. Read
+`docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_IMPLEMENTATION.md`, its implementation
+registry, shared proof record, and two matching test modules. The additive
+standard-library wrapper composes only generated F03/F04 fixtures, calls VR6
+exactly once per path, and exposes fixed `plan`, `qualify`, `inspect`, and
+`execute` surfaces. One measured qualification passed all gates and 70 direct
+refusals across eight paths in 1.2402790839987574 seconds at 63,799,296-byte
+peak RSS, with 3,407,792 generated source bytes and zero retained output or
+real/private operations.
+
+Commit, push, and obtain both green CI jobs for this exact implementation
+before any `.codex_work` operation. Only after that proof may one target-free
+read of the registered 418,755-byte structural manifest occur. The only
+retainable private observation is outer
 `MARC2VR6-F02` plus nested `MARC2VR2-F03` or `MARC2VR2-F04`; reasons, rows,
 paths, identities, values, hashes, candidate selections, and cohort output are
 forbidden. VR6 success, F02, an unknown route, source drift, or leakage consumes
-and parks the lane. Recording the decision performed zero private, archive,
-neural, target, model, prediction, or score operations. Do not implement the
-wrapper or touch `.codex_work` until this exact decision is remotely green.
+and parks the lane. Generated qualification established no real route, cohort,
+neural effect, or decoding result.
 
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-

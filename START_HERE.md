@@ -109,16 +109,18 @@ one future two-stage diagnostic. Request `de8e6dc` passed Base job
 `31992563746`. After Codex identified VR9P as the sole active Tier C packet, the
 maintainer supplied the exact message `continue`. Read
 `docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_AUTHORIZATION_DECISION.md` and its
-registry. That decision is ineffective until its own commit is pushed and both
-CI jobs are green. Only then may the generated/mock fixed-path wrapper be
-implemented; that exact wrapper must then become remotely green before one
-target-free read of the same 418,755-byte structural manifest.
+registry. Decision `4cdd3d3` passed Base job `95280728093`, Optional job
+`95280728134`, and CI `31993388608` before implementation began. Now read
+`docs/MARC_2_TWO_LAYER_PRIVATE_DIAGNOSTIC_IMPLEMENTATION.md`, its registry,
+proof record, and tests. The generated/mock fixed-path wrapper passes F03/F04
+in both orders across two exact replays, eight VR6 calls, and 70 direct
+refusals. It retained zero output and made zero real/private operations. That
+exact implementation must become remotely green before one target-free read of
+the same 418,755-byte structural manifest.
 Only outer `MARC2VR6-F02` plus nested `MARC2VR2-F03` or `MARC2VR2-F04` may be
 retained. No reason, row, path, private identity, failed value, candidate
-selection, private manifest, or cohort may leave the process. Decision
-recording performed zero private, archive, neural, target, model, prediction,
-or score operations. Until the decision itself is remotely green, do not
-implement the wrapper or touch `.codex_work`.
+selection, private manifest, or cohort may leave the process. Until the exact
+implementation is remotely green, do not touch `.codex_work`.
 
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.
