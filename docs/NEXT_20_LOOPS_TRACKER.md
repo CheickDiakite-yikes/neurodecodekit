@@ -2950,3 +2950,25 @@ consumed private F03 cause remains unknown. FW2 and CIL1 remain closed because
 no real cohort identity exists. Any private discriminator remains a separately
 frozen Tier C packet and fresh decision; no private read, neural payload,
 target, model, score, release, or scientific claim is open.
+
+### MARC2-VR11P - Private F03 Five-Route Discriminator (Request Prepared)
+
+VR10B implementation `61bb801` passed both jobs in CI `32007641751`; proof
+closeout `808e8ed` then passed Base Python job `95322252607`, Optional Neuro
+Readers job `95322252650`, and CI `32008293036`. The new all-false request
+binds 16 tracked predecessors totaling 295,028 bytes.
+
+The future sequence is fixed at generated/mock wrapper qualification, then
+only after separate green decision and implementation barriers one exact
+418,755-byte target-free structural read, one VR6 consistency call, one VR10B
+discriminator call, and one aggregate R1-R5 route. Fresh readiness/output
+paths, one-thread and 256 MiB caps, 15 GiB minimum free disk, 1 MiB output,
+zero payload/signal/target/network bytes, and no retry or rerun are frozen.
+
+Every authority flag is false and every operation counter is zero. Twelve
+focused request tests and all 4,086 base tests pass locally with 204 expected
+skips. Next gate: commit, push, and green the exact request in both jobs, then
+add and green a proof-only closeout. Before both barriers pass, no decision,
+wrapper, private path, FW2/CIL1, neural payload, target, model, score, release,
+or scientific claim is open. The current and every earlier `continue` is not
+retroactive authority.

@@ -2037,6 +2037,16 @@ Read this before interpreting any number in the repository.
   is generated route-separation evidence only: there is no private executor,
   private cause, real cohort, neural payload, target, model, score, or decoding
   result.
+- **MARC2-VR11P private discriminator request:** an all-false packet now binds
+  16 committed predecessor artifacts totaling 295,028 bytes and proposes the
+  smallest future private diagnostic: one exact 418,755-byte target-free
+  structural read, one VR6 consistency call, one VR10B classifier call, and
+  one aggregate R1-R5 route. Fresh readiness/output paths, one-thread and 256
+  MiB caps, zero retries, and a recursive privacy ceiling are frozen. The
+  request is pending remote proof; all authority flags remain false, all
+  operation counters remain zero, and the current or any earlier `continue`
+  cannot authorize it. No private source, archive member, neural payload,
+  target, model, prediction, or score was accessed.
 - **Causal Motor Lattice synthetic gate:** contract commit `67709a3` and exact
   implementation `90fa467` were separately green before one seed-5513 run of
   the 4,535-parameter `CML-v0`. The model reached `1.0` hand and key accuracy on
@@ -2922,6 +2932,8 @@ See [docs/POST_20_ROADMAP.md](docs/POST_20_ROADMAP.md) and
 | [registries/marc2_f03_five_route_discriminator_implementation.v0.json](registries/marc2_f03_five_route_discriminator_implementation.v0.json) | machine-readable implementation hashes, green registration and implementation proofs, six-route mechanics, local verification, and zero counters |
 | [docs/MARC_2_F03_FIVE_ROUTE_DISCRIMINATOR_RESULT.md](docs/MARC_2_F03_FIVE_ROUTE_DISCRIMINATOR_RESULT.md) | generated `MARC2VR10B-G1` result, four copies of G1/R1-R5, exact measurements, explicit private unknowns, and no-science ceiling |
 | [registries/marc2_f03_five_route_discriminator_result.v0.json](registries/marc2_f03_five_route_discriminator_result.v0.json) | machine-readable route counts, replay digest, parser mechanics, 60 refusals, resources, zero counters, and next gate |
+| [docs/MARC_2_F03_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md](docs/MARC_2_F03_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md) | all-false VR11P request for one proof-gated five-route structural diagnostic, with exact barriers, paths, caps, privacy ceiling, and no-science boundary |
+| [registries/marc2_f03_private_discriminator_authorization_request.v0.json](registries/marc2_f03_private_discriminator_authorization_request.v0.json) | machine-readable VR11P predecessor hashes, future one-read route contract, all-false authority, zero counters, and fresh-decision protocol |
 | [docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md](docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_PREREGISTRATION.md) | frozen generated-only 238-bundle repair design, filter-before-count order, aggregate predicates, mutations, resources, and claim boundary |
 | [registries/marc2_source_validity_eligibility_repair_contract.v0.json](registries/marc2_source_validity_eligibility_repair_contract.v0.json) | machine-readable `MARC2-VR1` source-validity and eligibility contract with 43 generated adversary bundles and all authority flags false |
 | [docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md](docs/MARC_2_SOURCE_VALIDITY_ELIGIBILITY_REPAIR_IMPLEMENTATION.md) | generated-only full-source validator, eligibility-first selection order, refusal coverage, local verification, and exact remote-proof gate |

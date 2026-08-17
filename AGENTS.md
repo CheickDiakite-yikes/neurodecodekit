@@ -235,6 +235,18 @@ event, target, model, training, prediction, score, FW2/CIL1, network, provider,
 hardware, release, or scientific claim. The five generated routes do not
 identify which predicate caused the consumed private result. A future private
 discriminator remains a new Tier C packet and fresh decision.
+That packet is now prepared as `MARC2-VR11P`. Read
+`docs/MARC_2_F03_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md` and
+`registries/marc2_f03_private_discriminator_authorization_request.v0.json`.
+It binds 16 committed predecessors totaling 295,028 bytes and proposes one
+future two-stage sequence: generated/mock fixed-path wrapper qualification,
+then only after exact green proof one 418,755-byte target-free structural read,
+one VR6 consistency call, one VR10B discriminator call, and one R1-R5 aggregate
+route. Every authorization flag is false and every operation counter is zero.
+The request is local and pending remote proof. The current and every earlier
+`continue` is not retroactive authority. Do not implement, inspect a private or
+ignored path, create readiness/output state, or identify this as an actionable
+Tier C gate before the request and its proof closeout are remotely green.
 
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-

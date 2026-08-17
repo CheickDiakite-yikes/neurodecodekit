@@ -11339,3 +11339,29 @@ that the five remaining structural classes can be separated with one coarse
 aggregate-safe route; it does not identify the consumed private cause or
 establish neural or decoding performance. Any future private discriminator
 requires a separately frozen Tier C packet and fresh decision.
+
+## 2026-08-17 - MARC2-VR11P Private Discriminator Request
+
+- Began only after VR10B implementation `61bb801` passed both jobs in CI
+  `32007641751` and proof closeout `808e8ed` passed Base Python job
+  `95322252607`, Optional Neuro Readers job `95322252650`, and CI
+  `32008293036`.
+- Bound 16 exact committed predecessor artifacts totaling 295,028 bytes. The
+  packet copies only the previously committed structural source identity and
+  performs zero private or ignored-path operations.
+- Froze a future two-stage sequence: generated/mock fixed-path wrapper
+  qualification, then only after separate green proof one exact 418,755-byte
+  structural read, one VR6 consistency call, one VR10B discriminator call, and
+  one aggregate R1-R5 route.
+- Froze fresh VR11P readiness/output paths, one-thread operation, less than 256
+  MiB peak RSS, at least 15 GiB free disk, at most 1 MiB combined output, zero
+  network/payload/signal/target bytes, and zero retries, reruns, or resumes.
+- All 17 authorization flags are false and all 18 operation counters are zero.
+  Twelve focused request tests pass locally. The complete base suite passes
+  4,086 tests with 204 expected skips and zero failures in 64.292 seconds.
+
+Next gate: commit, push, and obtain both green CI jobs for this exact all-false
+request, then add a proof-only closeout and green that exact commit. Before
+both barriers pass, do not identify VR11P as actionable, record a decision,
+implement a wrapper, or touch any private/ignored path. The current and every
+earlier `continue` is not retroactive authority.

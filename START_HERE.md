@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR10B F03 Five-Route Discriminator
+## Current Frontier: MARC2-VR11P Private F03 Discriminator Request
 
 Read `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`, then
 `docs/MARC_2_VR2_REFUSAL_LOCALIZATION_PREREGISTRATION.md` and
@@ -180,6 +180,19 @@ qualification or private operation was repeated for proof closeout.
 No private executor, private read, FW2/CIL1 action, neural payload, target,
 model, prediction, score, or scientific claim is authorized. A future private
 discriminator remains a new Tier C packet and fresh decision.
+
+That all-false packet is now prepared as `MARC2-VR11P`. Read
+`docs/MARC_2_F03_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md`,
+`registries/marc2_f03_private_discriminator_authorization_request.v0.json`,
+and its request test. It binds 16 tracked predecessors totaling 295,028 bytes
+and proposes one future generated/mock wrapper followed, only after separate
+green decision and implementation barriers, by one 418,755-byte target-free
+structural read, one VR6 call, one VR10B call, and one aggregate R1-R5 route.
+Every authority flag is false and every operation counter is zero. The request
+is pending remote proof. The current and every earlier `continue` is not
+retroactive authority; no implementation, private path, readiness state,
+archive member, neural payload, target, model, prediction, score, FW2/CIL1, or
+scientific action is open.
 
 1. Read `README.md` for the mission, results, proof boundaries, and quickstart.
 2. Read `CONTRIBUTING.md` for the EEG data/hardware contribution paths.

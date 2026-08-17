@@ -5707,3 +5707,25 @@ remains unknown and FW2/CIL1 remain closed. Keep every VR9P private/ignored
 surface and the unrelated tracker inspection NDJSON untouched. A private
 discriminator can open only through a separately frozen Tier C packet and
 fresh maintainer decision.
+
+## 2026-08-17 MARC2-VR11P Request Handoff
+
+Read `docs/MARC_2_F03_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md`,
+`registries/marc2_f03_private_discriminator_authorization_request.v0.json`,
+and `tests/test_marc2_f03_private_discriminator_authorization_request.py`.
+
+The all-false request binds 16 tracked predecessors totaling 295,028 bytes. It
+proposes one future generated/mock fixed-path wrapper and, only after separate
+green decision and implementation barriers, one exact 418,755-byte structural
+read, one VR6 consistency call, one VR10B discriminator call, and one aggregate
+R1-R5 route. Fresh VR11P readiness/output paths, one-thread and 256 MiB caps,
+zero retries, and strict nonpublication fields are frozen.
+
+All authorization flags are false and every operation counter is zero. Twelve
+focused request tests and all 4,086 base tests pass with 204 expected skips.
+Immediate gate: commit and push only the packet, registry, test, and public
+handoff files; require both CI jobs green; then add and green a proof-only
+closeout. Until both commits are remotely green, do not identify the packet as
+actionable, record a decision, implement a wrapper, or touch any private/
+ignored path. The current and every earlier `continue` is not retroactive
+authority. Keep the unrelated tracker inspection NDJSON untouched.

@@ -9359,3 +9359,28 @@ Boundary decision: no private invocation, F03 relaxation, VR9P reuse, FW2,
 CIL1, neural payload, target, model, score, release, or scientific claim opens.
 Any future private discriminator requires a new immutable Tier C packet and
 fresh decision.
+
+## 0289 - Freeze One Future Private Read To Distinguish Five F03 Classes
+
+Eligibility decision: begin only after VR10B implementation `61bb801` passed
+Base Python job `95320325187`, Optional Neuro Readers job `95320325136`, and CI
+`32007641751`, and proof closeout `808e8ed` passed Base Python job
+`95322252607`, Optional Neuro Readers job `95322252650`, and CI `32008293036`.
+
+Scope decision: request one future two-stage sequence. Stage 1 may implement
+only a generated/mock fixed-path wrapper after a separate green decision.
+Stage 2 may perform one 418,755-byte target-free structural read only after the
+exact implementation is remotely green. It may call VR6 once, call VR10B once,
+and retain one aggregate R1-R5 route.
+
+Resource decision: freeze one thread, one worker, one numerical job, less than
+256 MiB peak RSS, 15 GiB minimum free disk, 650 seconds, 1 MiB combined output,
+zero network/archive-member/signal/target bytes, and no retry, rerun, resume,
+repair, fallback, or substitution.
+
+Authority decision: this record is an all-false request, not permission. No
+decision, implementation, readiness state, private path, consumed VR9P state,
+archive payload, neural data, target, model, prediction, score, FW2/CIL1,
+release, or claim operation opens. The request and a separate proof closeout
+must both become remotely green before the packet may be identified as the
+sole Tier C gate. The current and every earlier `continue` is not retroactive.
