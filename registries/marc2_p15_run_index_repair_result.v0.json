@@ -1,0 +1,164 @@
+{
+  "schema_name": "neurodecodekit.marc2_p15_run_index_repair_result",
+  "schema_version": "0.1.0",
+  "result_id": "MARC-2-VR12A-P15-run-index-repair-result-v0",
+  "lane_id": "MARC2-VR12A",
+  "recorded_at_local": "2026-08-18",
+  "status": "generated_only_result_remote_implementation_proof_pending",
+  "proof_posture": "tracked_code_and_generated_structural_interface_only_no_private_or_scientific_value",
+  "route": "MARC2VR12A-G1",
+  "contract": {
+    "path": "registries/marc2_p15_run_index_repair_contract.v0.json",
+    "bytes": 9681,
+    "sha256": "a6cd01e79813f79dfd7b54ee6c2d21ffb82e984b6230434127b936c513cf3f1e"
+  },
+  "green_registration_proof": {
+    "commit": "5107eb3d714f7713a216b9ad4e21c06300cd8c21",
+    "CI_run_id": 32168117907,
+    "base_python_job_id": 95812470306,
+    "optional_neuro_job_id": 95812470218,
+    "both_required_jobs_green_before_implementation": true
+  },
+  "artifact_bindings": {
+    "implementation_module": {
+      "path": "src/neurodecodekit/datasets/marc2_p15_run_index_repair.py",
+      "bytes": 39338,
+      "sha256": "e7321d2a2b347ae2a4d0294c59d06d8eeeb3c6f08bf279b2658d1d56a25aa2f6"
+    },
+    "behavior_test": {
+      "path": "tests/test_marc2_p15_run_index_repair.py",
+      "bytes": 10186,
+      "sha256": "2ac68d4f8c688563dd2cd121c0daf56389ac7c2c74b646336b2ab1bdc1c33d37"
+    },
+    "result_test": {
+      "path": "tests/test_marc2_p15_run_index_repair_result.py",
+      "bytes": 5118,
+      "sha256": "ddf0cd15cf30e98c9b7e8ca1a02eca91457d5277927db2e7893ecd3bc5247547"
+    },
+    "implementation_document": {
+      "path": "docs/MARC_2_P15_RUN_INDEX_REPAIR_IMPLEMENTATION.md",
+      "bytes": 4337,
+      "sha256": "ceab0fb0aeb8a981f95de28973757bde2caed81ea4a8ec9cde8b31b46dcf416a"
+    },
+    "result_document": {
+      "path": "docs/MARC_2_P15_RUN_INDEX_REPAIR_RESULT.md",
+      "bytes": 2939,
+      "sha256": "4e7d4cfba4af9e33318bf15a17ba4a12fab989fcd116c70bc9af0c20592ff4f8"
+    },
+    "implementation_registry": {
+      "path": "registries/marc2_p15_run_index_repair_implementation.v0.json",
+      "bytes": 6237,
+      "sha256": "cb8f2a073b9a315f62d63dd685b2e4475f3a4ea80327e4a8dc8bc363bf4fe385"
+    }
+  },
+  "remote_implementation_proof": null,
+  "generated_qualification": {
+    "variants": [
+      "padded_control",
+      "unpadded_single_digit",
+      "bundle_consistent_mixed_width"
+    ],
+    "orders": [
+      "canonical",
+      "reversed"
+    ],
+    "replays": 2,
+    "success_paths": 12,
+    "selected_subjects": 16,
+    "selected_run_bundles": 96,
+    "selected_core_members": 384,
+    "semantic_cohort_sha256": "254bca5e0a39b52ca9791b917df6af554e02dda8f18f8e01b524d0e3ce8d9cba",
+    "distinct_raw_source_hashes": 3,
+    "distinct_source_exact_selected_name_hashes": 3,
+    "source_objects_immutable": true,
+    "source_exact_member_names_preserved": true,
+    "reservation_replayed_from_source_exact_names": true,
+    "direct_refusals": 36,
+    "required_classes_preserved": [
+      "P15",
+      "P16",
+      "P18",
+      "P19"
+    ],
+    "refusal_route_counts": {
+      "MARC2VR12A-F01": 4,
+      "MARC2VR12A-F02": 4,
+      "MARC2VR12A-F03": 20,
+      "MARC2VR12A-F04": 1,
+      "MARC2VR12A-F05": 3,
+      "MARC2VR12A-F08": 2,
+      "MARC2VR12A-F09": 2
+    }
+  },
+  "measurements": {
+    "generated_input_bytes": 5147208,
+    "aggregate_output_bytes": 2498,
+    "retained_generated_output_bytes": 0,
+    "runtime_seconds": 1.092868332983926,
+    "peak_RSS_bytes": 44417024,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "producer_is_causal": "not_applicable_structural_metadata_only",
+    "end_to_end_latency_measured": false
+  },
+  "local_verification": {
+    "pre_change_base_tests": 4126,
+    "pre_change_expected_skips": 204,
+    "focused_contract_behavior_and_result_tests": 34,
+    "complete_base_tests": 4160,
+    "complete_base_expected_skips": 204,
+    "optional_neuro_tests": 4231,
+    "optional_neuro_expected_skips": 35,
+    "optional_neuro_single_process_failures": 2,
+    "optional_neuro_affected_files_fresh_process": "pass_8_tests",
+    "optional_neuro_limitation": "two late resource-sensitive mechanical gates failed only after accumulated single-process suite state; both files passed in fresh one-thread processes; clean remote jobs remain required",
+    "ruff": "pass",
+    "compile": "pass",
+    "registry_JSON": "pass",
+    "CLI_help_plan_and_qualification": "pass",
+    "diff_check": "pass"
+  },
+  "operation_counters": {
+    "private_path_operations": 0,
+    "consumed_result_or_output_reopens": 0,
+    "real_structural_source_opens": 0,
+    "real_structural_bytes": 0,
+    "archive_member_operations": 0,
+    "neural_signal_operations": 0,
+    "event_or_target_operations": 0,
+    "cohort_freezes": 0,
+    "FW2_operations": 0,
+    "CIL1_operations": 0,
+    "model_training_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scoring_runs": 0,
+    "network_requests": 0,
+    "provider_or_language_model_calls": 0,
+    "device_or_hardware_operations": 0,
+    "other_project_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "interpretation": {
+    "proven": "The generated adapter preserves one semantic selection across registered padded and unpadded run-index spellings while preserving source-exact names and neighboring structural refusals.",
+    "not_proven": "The generated result does not show that an unpadded run index caused the consumed private P15 result or that the repaired adapter accepts a real source cohort."
+  },
+  "next_gate": {
+    "exact_implementation_commit_and_both_remote_jobs_green_required": true,
+    "proof_only_closeout_required": true,
+    "generated_qualification_rerun_for_proof_forbidden": true,
+    "Tier_C_confirmation_packet_eligible_now": false,
+    "private_confirmation_authorized": false,
+    "FW2_or_CIL1_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "Generated padded and unpadded BIDS run indices preserve one semantic Freewill selection while retaining source-exact names and structural controls.",
+    "scientific_claim_not_established": "No real source cohort neural payload target model prediction score live decoder or thought-to-text evidence was accessed or established."
+  }
+}
