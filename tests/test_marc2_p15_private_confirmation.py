@@ -189,6 +189,32 @@ for name in ('numpy', 'scipy', 'mne', 'torch', 'sklearn'):
                 with self.assertRaises(wrapper.P15PrivateConfirmationRefusal):
                     wrapper._require_green_implementation({"remote_implementation_proof": proof})
 
+    def test_green_proof_binds_exact_artifact_set(self):
+        record = json.loads(
+            (ROOT / wrapper.IMPLEMENTATION_RELATIVE_PATH).read_text(encoding="utf-8")
+        )
+        proof = {
+            "commit": "a" * 40,
+            "CI_run_id": 1,
+            "base_job_id": 2,
+            "optional_neuro_job_id": 3,
+            "both_required_jobs_green": True,
+            "scope_changed_after_qualification": False,
+            "qualification_route": "MARC2VR12P-G1",
+            "qualification_repeated_for_proof_closeout": False,
+            "private_operations_during_proof_closeout": 0,
+            "implementation_registry_preproof_bytes": 1,
+            "implementation_registry_preproof_sha256": "b" * 64,
+            "implementation_artifact_set_sha256": wrapper._sha256_bytes(
+                wrapper._canonical_json_bytes(record["implementation_artifacts"])
+            ),
+        }
+        record["remote_implementation_proof"] = proof
+        self.assertEqual(wrapper._require_green_implementation(record, ROOT), "a" * 40)
+        proof["implementation_artifact_set_sha256"] = "c" * 64
+        with self.assertRaises(wrapper.P15PrivateConfirmationRefusal):
+            wrapper._require_green_implementation(record, ROOT)
+
     def test_resource_and_output_caps_fail_closed(self):
         for values in (
             (46.0, 1, 1),

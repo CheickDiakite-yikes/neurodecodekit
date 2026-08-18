@@ -48,8 +48,8 @@ Readers job `95894058625`, and CI `32193964660` before Stage 1 began.
 Read `docs/MARC_2_P15_PRIVATE_CONFIRMATION_IMPLEMENTATION.md` and
 `registries/marc2_p15_private_confirmation_implementation.v0.json`. Generated
 route `MARC2VR12P-G1` passed 12/12 fixed-path cases and 61 direct refusals in
-0.693779042 seconds at 37,142,528-byte peak RSS. Peak temporary output was
-217,962 bytes and retained output was zero. The wrapper verifies the exact
+0.675791166 seconds at 32,817,152-byte peak RSS. Peak temporary output was
+217,961 bytes and retained output was zero. The wrapper verifies the exact
 request, decision, and VR12A artifacts, exposes only fixed commands, and emits
 aggregate R1-R6 outcomes without private failure detail.
 

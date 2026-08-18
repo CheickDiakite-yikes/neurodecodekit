@@ -1128,17 +1128,59 @@ def qualify_generated(
     return report
 
 
-def _require_green_implementation(record: Mapping[str, Any]) -> str:
+def _require_green_implementation(record: Mapping[str, Any], root: Path | None = None) -> str:
     proof = record.get("remote_implementation_proof")
+    artifacts = record.get("implementation_artifacts")
     if (
         not isinstance(proof, dict)
         or proof.get("both_required_jobs_green") is not True
         or proof.get("scope_changed_after_qualification") is not False
         or not isinstance(proof.get("commit"), str)
         or len(proof["commit"]) != 40
+        or any(character not in "0123456789abcdef" for character in proof["commit"])
+        or type(proof.get("CI_run_id")) is not int
+        or proof["CI_run_id"] <= 0
+        or type(proof.get("base_job_id")) is not int
+        or proof["base_job_id"] <= 0
+        or type(proof.get("optional_neuro_job_id")) is not int
+        or proof["optional_neuro_job_id"] <= 0
+        or proof.get("qualification_route") != SUCCESS_ROUTE
+        or proof.get("qualification_repeated_for_proof_closeout") is not False
+        or proof.get("private_operations_during_proof_closeout") != 0
+        or type(proof.get("implementation_registry_preproof_bytes")) is not int
+        or proof["implementation_registry_preproof_bytes"] <= 0
+        or not isinstance(proof.get("implementation_registry_preproof_sha256"), str)
+        or len(proof["implementation_registry_preproof_sha256"]) != 64
+        or not isinstance(proof.get("implementation_artifact_set_sha256"), str)
+        or len(proof["implementation_artifact_set_sha256"]) != 64
+        or not isinstance(artifacts, list)
+        or not artifacts
     ):
         raise P15PrivateConfirmationRefusal(
             REFUSAL_ROUTES[0], "implementation is not remotely green"
+        )
+    repo = root or _repo_root()
+    for artifact in artifacts:
+        if (
+            not isinstance(artifact, dict)
+            or not isinstance(artifact.get("path"), str)
+            or type(artifact.get("bytes")) is not int
+            or artifact["bytes"] < 1
+            or not isinstance(artifact.get("sha256"), str)
+            or len(artifact["sha256"]) != 64
+        ):
+            raise P15PrivateConfirmationRefusal(
+                REFUSAL_ROUTES[0], "implementation artifact proof differs"
+            )
+        payload = _read_tracked(repo, Path(artifact["path"]))
+        if len(payload) != artifact["bytes"] or _sha256_bytes(payload) != artifact["sha256"]:
+            raise P15PrivateConfirmationRefusal(
+                REFUSAL_ROUTES[0], "implementation artifact identity differs"
+            )
+    artifact_set_sha256 = _sha256_bytes(_canonical_json_bytes(artifacts))
+    if proof["implementation_artifact_set_sha256"] != artifact_set_sha256:
+        raise P15PrivateConfirmationRefusal(
+            REFUSAL_ROUTES[0], "implementation artifact set differs"
         )
     return proof["commit"]
 
@@ -1198,7 +1240,7 @@ def execute_registered() -> dict[str, Any]:
     _validate_decision(decision)
     _validate_vr12a_artifacts(root)
     implementation = _load_implementation(root)
-    implementation_commit = _require_green_implementation(implementation)
+    implementation_commit = _require_green_implementation(implementation, root)
     _validate_thread_environment()
     samples = _collect_readiness(root)
     return _run_fixed_sequence(
@@ -1228,7 +1270,7 @@ def build_plan() -> dict[str, Any]:
     if implementation_path.exists() and not implementation_path.is_symlink():
         try:
             record = _load_implementation(_repo_root())
-            _require_green_implementation(record)
+            _require_green_implementation(record, _repo_root())
         except P15PrivateConfirmationRefusal:
             pass
         else:

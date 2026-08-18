@@ -5917,10 +5917,18 @@ registry, module, and both matching test modules.
 
 Generated `MARC2VR12P-G1` passed 12/12 fixed-path source/order/replay paths and
 61 direct refusals. The recorded pass used 5,147,208 generated input bytes,
-217,962 peak temporary bytes, zero retention, 0.6937790419906378 seconds, and
-37,142,528-byte peak RSS under one thread. Twenty focused tests and all 4,208
+217,961 peak temporary bytes, zero retention, 0.6757911660242826 seconds, and
+32,817,152-byte peak RSS under one thread. Twenty-one focused tests and all 4,209
 clean dependency-light tests pass with 204 expected skips. No repository-
 private or ignored path was touched.
+
+Initial Stage 1 commit `c76fe20` passed Base job `95899965888`, Optional job
+`95899965742`, and CI `32195978085`. A pre-closeout review then found that the
+proof parser did not require CI/job IDs or verify the exact artifact set. The
+parser is now hardened and 21 focused plus 4,209 complete dependency-light
+tests pass. Do not use `c76fe20` for Stage 2; green the superseding commit and
+then make the proof-only closeout. No private operation occurred during this
+hardening.
 
 Immediate gate: commit, push, and require Base Python and Optional Neuro
 Readers green for this exact implementation. Then update only the proof state,

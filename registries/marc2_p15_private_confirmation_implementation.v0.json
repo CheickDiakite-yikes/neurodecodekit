@@ -35,14 +35,14 @@
     {
       "role": "wrapper_module",
       "path": "src/neurodecodekit/datasets/marc2_p15_private_confirmation.py",
-      "bytes": 48958,
-      "sha256": "ad6cf8f4235ae88ab181e14a6e6b167fd88591f5cca50d01dadbdfaab33393a2"
+      "bytes": 51244,
+      "sha256": "440432cd58ddaa413e539c63a9f204d1e1a9219687f8fe5509b7987b308c2b31"
     },
     {
       "role": "behavior_tests",
       "path": "tests/test_marc2_p15_private_confirmation.py",
-      "bytes": 10913,
-      "sha256": "d2add852a27dea048d35ed6216f9b3a17ae1203e3c48f53cec282c097b37c951"
+      "bytes": 12163,
+      "sha256": "3a3e036238b13f8e13832bb23c9406e11bbac794be975045a678931fde5220c2"
     },
     {
       "role": "implementation_proof_tests",
@@ -53,8 +53,8 @@
     {
       "role": "implementation_document",
       "path": "docs/MARC_2_P15_PRIVATE_CONFIRMATION_IMPLEMENTATION.md",
-      "bytes": 5227,
-      "sha256": "2d4341c3621bc5aacac570bbddb29a48b81d7c987d46395bd061b89bdd154e6e"
+      "bytes": 5711,
+      "sha256": "5bae8f9c9ce72614ab1efa4c455310d929db2fdfe5d2857243b710d464de8fa4"
     }
   ],
   "surface": {
@@ -71,6 +71,16 @@
     "private_failure_report_is_aggregate_only": true,
     "private_manifest_created_only_on_R1": true
   },
+  "superseded_remote_green_implementation": {
+    "commit": "c76fe2067cefa44968eb1235b01b241cd5c518c3",
+    "CI_run_id": 32195978085,
+    "base_job_id": 95899965888,
+    "optional_neuro_job_id": 95899965742,
+    "both_required_jobs_green": true,
+    "used_for_private_execution": false,
+    "superseded_before_proof_closeout": true,
+    "reason_class": "proof_parser_required_remote_ids_and_exact_artifact_set_hardening"
+  },
   "generated_qualification": {
     "route": "MARC2VR12P-G1",
     "generated_cases": 3,
@@ -86,12 +96,12 @@
     "semantic_cohort_sha256": "254bca5e0a39b52ca9791b917df6af554e02dda8f18f8e01b524d0e3ce8d9cba",
     "deterministic_replay": true,
     "generated_input_bytes": 5147208,
-    "generated_output_bytes_written": 2613227,
-    "peak_incremental_output_bytes": 217962,
+    "generated_output_bytes_written": 2613234,
+    "peak_incremental_output_bytes": 217961,
     "retained_generated_output_bytes": 0,
     "aggregate_output_bytes": 2443,
-    "runtime_seconds": 0.6937790419906378,
-    "peak_RSS_bytes": 37142528,
+    "runtime_seconds": 0.6757911660242826,
+    "peak_RSS_bytes": 32817152,
     "CPU_threads": 1,
     "workers": 1,
     "numerical_jobs": 1
@@ -124,11 +134,11 @@
   },
   "verification": {
     "pre_change_dependency_light_tests": 4188,
-    "focused_tests_passed": 20,
-    "complete_dependency_light_tests_passed": 4208,
+    "focused_tests_passed": 21,
+    "complete_dependency_light_tests_passed": 4209,
     "expected_skips": 204,
     "new_failures": 0,
-    "test_delta": 20
+    "test_delta": 21
   },
   "resource_caps": {
     "generated_runtime_seconds_maximum": 45,

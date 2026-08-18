@@ -353,7 +353,7 @@ job `95894058802`, Optional Neuro Readers job `95894058625`, and CI
 `registries/marc2_p15_private_confirmation_implementation.v0.json`, and both
 matching test modules. Generated `MARC2VR12P-G1` passed 12 fixed-path success
 paths and 61 direct refusals over 5,147,208 generated input bytes. It ran in
-0.6937790419906378 seconds at 37,142,528-byte peak RSS, reached 217,962 bytes
+0.6757911660242826 seconds at 32,817,152-byte peak RSS, reached 217,961 bytes
 peak incremental output, and retained zero. Every repository-private, archive,
 neural, target, model, prediction, score, FW2/CIL1, network, hardware,
 other-project, and claim counter stayed zero.

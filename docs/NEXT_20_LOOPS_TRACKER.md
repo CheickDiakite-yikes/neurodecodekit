@@ -3064,10 +3064,10 @@ the unchanged VR12P scope. Decision `b0f251a` then passed Base job
 
 Generated `MARC2VR12P-G1` now passes all 12 fixed-path success paths and 61
 direct refusals. Its recorded run used 5,147,208 generated input bytes,
-217,962 peak incremental output bytes, zero retention, 0.6937790419906378
-seconds, and 37,142,528-byte peak RSS under one thread. The public executor is
+217,961 peak incremental output bytes, zero retention, 0.6757911660242826
+seconds, and 32,817,152-byte peak RSS under one thread. The public executor is
 fixed-path and `remote_implementation_proof` remains null, so it refuses before
-readiness or a private-path operation. Twenty focused and all 4,208 clean
+readiness or a private-path operation. Twenty-one focused and all 4,209 clean
 dependency-light tests pass with 204 expected skips.
 
 Current gate: green this exact implementation, then green one proof-only

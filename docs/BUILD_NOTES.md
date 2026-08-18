@@ -11612,12 +11612,12 @@ remains behind the separately green wrapper and proof-closeout barriers.
 - Generated `MARC2VR12P-G1` passed all 12 source/order/replay paths and 61
   execution-envelope refusals. A mock consumed R3 path creates no private
   manifest and emits only an aggregate report.
-- The recorded pass used 5,147,208 generated input bytes, 2,613,227 cumulative
-  temporary write bytes, 217,962 peak incremental output bytes, zero retained
-  bytes, 0.6937790419906378 seconds, and 37,142,528-byte peak RSS under one
+- The recorded pass used 5,147,208 generated input bytes, 2,613,234 cumulative
+  temporary write bytes, 217,961 peak incremental output bytes, zero retained
+  bytes, 0.6757911660242826 seconds, and 32,817,152-byte peak RSS under one
   thread.
-- Twenty focused tests and all 4,208 clean dependency-light tests pass with 204
-  expected skips, exactly 20 tests above the pre-change baseline. The
+- Twenty-one focused tests and all 4,209 clean dependency-light tests pass with
+  204 expected skips, exactly 21 tests above the pre-change baseline. The
   implementation record leaves `remote_implementation_proof` null, so the real
   executor refuses before readiness and every private-path operation.
 - No repository `.codex_work`, private source, consumed VR9P/VR11P state,
@@ -11628,3 +11628,20 @@ Immediate gate: commit, push, and green this exact implementation in both jobs.
 Then make a proof-only closeout and green it without repeating qualification.
 Only after that second barrier may the one registered target-free structural
 confirmation run once.
+
+### Proof-shape hardening before closeout
+
+- Initial implementation `c76fe20` passed Base job `95899965888`, Optional job
+  `95899965742`, and CI `32195978085`.
+- Before proof closeout, review found that `_require_green_implementation`
+  checked a green boolean and commit shape but did not require CI/job IDs or
+  verify the registry's exact artifact set.
+- Hardened that parser, added a positive exact-artifact-set test, reran the
+  12-path generated qualification, and passed 21 focused plus 4,209 complete
+  dependency-light tests with 204 expected skips.
+- No readiness, repository-private path, cohort, archive, neural, target,
+  model, prediction, score, or claim operation occurred. `c76fe20` is not used
+  as a Stage 2 proof anchor.
+
+Immediate gate: commit, push, and green the superseding proof-strict
+implementation before making the proof-only closeout.

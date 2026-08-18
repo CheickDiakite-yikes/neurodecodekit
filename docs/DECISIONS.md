@@ -9615,3 +9615,10 @@ Boundary decision: Stage 1 performs zero real/private, archive, neural, target,
 model, prediction, score, FW2/CIL1, network, hardware, other-project, release,
 or claim operations. R1 would make a new FW2 preregistration eligible, not
 authorize FW2 execution.
+
+Proof-hardening decision: do not use initial green implementation `c76fe20` as
+a Stage 2 anchor. Require the proof parser to bind positive CI and job IDs,
+the generated G1 route, unchanged scope, no repeated qualification during the
+future closeout, zero closeout private operations, the preproof registry
+identity, and the exact current artifact-set digest. Requalify generated Stage
+1 and re-green the superseding implementation before proof closeout.

@@ -21,6 +21,14 @@ private-path operation while `remote_implementation_proof` is null. Stage 2
 does not become available until this exact implementation and a separate
 proof-only closeout are committed, pushed, and green in both required jobs.
 
+Initial Stage 1 commit `c76fe2067cefa44968eb1235b01b241cd5c518c3`
+passed Base Python job `95899965888`, Optional Neuro Readers job `95899965742`,
+and CI `32195978085`. Before creating its proof closeout, a local audit found
+that the proof parser did not require the remote CI/job IDs or verify the exact
+artifact set. No private operation followed. The implementation was hardened,
+requalified, and must receive a new exact remote proof; `c76fe20` is not a
+Stage 2 proof anchor.
+
 ## Added Interface
 
 `src/neurodecodekit/datasets/marc2_p15_private_confirmation.py` adds a
@@ -58,12 +66,12 @@ selected generated subjects:        16
 selected generated run bundles:     96
 selected generated core members:    384
 generated input bytes:               5,147,208
-generated output bytes written:      2,613,227
-peak incremental output bytes:       217,962
+generated output bytes written:      2,613,234
+peak incremental output bytes:       217,961
 retained generated output bytes:     0
 aggregate output bytes:              2,443
-runtime seconds:                     0.6937790419906378
-peak RSS bytes:                      37,142,528
+runtime seconds:                     0.6757911660242826
+peak RSS bytes:                      32,817,152
 CPU threads / workers / jobs:        1 / 1 / 1
 network / new payload bytes:         0 / 0
 real/private source operations:      0
@@ -74,7 +82,7 @@ FW2 / CIL1 operations:               0 / 0
 
 The cumulative generated write throughput is larger than one temporary
 artifact, but cleanup occurs after every path. Peak incremental output was
-217,962 bytes, below the frozen 2 MiB cap, and retained output was zero.
+217,961 bytes, below the frozen 2 MiB cap, and retained output was zero.
 
 The generated semantic cohort digest was
 `254bca5e0a39b52ca9791b917df6af554e02dda8f18f8e01b524d0e3ce8d9cba`
@@ -90,8 +98,8 @@ field leakage, and a generated mock R3 sequence. The mock R3 sequence writes
 only a mode-`0644` aggregate report after its consumed marker and creates no
 private cohort manifest.
 
-Twenty focused tests pass. The complete clean dependency-light suite passes
-4,208 tests with 204 expected skips and zero failures, exactly 20 tests above
+Twenty-one focused tests pass. The complete clean dependency-light suite passes
+4,209 tests with 204 expected skips and zero failures, exactly 21 tests above
 the 4,188-test pre-change decision baseline.
 
 No generated qualification or unit test stats, resolves, hashes, opens, reads,
