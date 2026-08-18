@@ -7,7 +7,23 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR11P Consumed At Structural Route R2
+## Current Frontier: MARC2-VR12A P15 Repair Registration
+
+VR11P is consumed at aggregate route `MARC2VR11P-R2`, which maps only to P15,
+the suffix-bearing BIDS identity class. It did not reveal a path, failed value,
+row, person, selection, or cohort. Read
+`docs/MARC_2_P15_RUN_INDEX_REPAIR_PREREGISTRATION.md` and
+`registries/marc2_p15_run_index_repair_contract.v0.json`.
+
+VR12A freezes one standards-backed generated repair: accept one- or two-digit
+ASCII `run-<index>` spellings, group them by integer value, preserve the exact
+source member name and reservation bytes, and retain every subject/session,
+task, companion, count, split, rank, and storage gate. This registration has
+no private executor and authorizes no real source, archive, neural, target,
+model, score, FW2, CIL1, or claim operation. Implementation begins only after
+the exact registration commit passes both remote CI jobs.
+
+## Prior Frontier: MARC2-VR11P Consumed At Structural Route R2
 
 Read `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`, then
 `docs/MARC_2_VR2_REFUSAL_LOCALIZATION_PREREGISTRATION.md` and

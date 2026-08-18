@@ -293,6 +293,20 @@ only and generated-only P15 repair design. Do not infer the failed value, row,
 path, person, selection, or cohort. FW2, CIL1, archive payload, neural data,
 targets, models, scores, release, and scientific claims remain closed.
 
+That design is now frozen as `MARC2-VR12A`. Read
+`docs/MARC_2_P15_RUN_INDEX_REPAIR_PREREGISTRATION.md` and
+`registries/marc2_p15_run_index_repair_contract.v0.json`. Static review against
+BIDS 1.11.1 found that the generated selector requires exactly two run digits
+while BIDS defines `run-<index>` numerically. VR12A is narrower than a generic
+BIDS parser: it accepts only one or two ASCII digits, groups by base-10 value,
+preserves source-exact selected names and reservation bytes, and retains exact
+subject/session agreement, lowercase `task-freewill`, four-companion
+completeness, normalized-collision refusal, public counts, deterministic split,
+rank, and 8 GiB cap. Registration is artifact-only and generated-only. Do not
+implement it until the exact registration is committed, pushed, and both CI
+jobs are green. No private path, consumed VR11P state, cohort, archive member,
+neural payload, target, model, score, FW2/CIL1, release, or claim is open.
+
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-
 blind analysis over 72 S004-S015 EDFs. The analysis accepted 1,080 events,

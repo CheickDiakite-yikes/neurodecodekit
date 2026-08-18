@@ -1,0 +1,250 @@
+{
+  "schema_name": "neurodecodekit.marc2_p15_run_index_repair_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "MARC-2-VR12A-P15-run-index-repair-v0",
+  "lane_id": "MARC2-VR12A",
+  "recorded_at_local": "2026-08-18",
+  "status": "preregistered_artifact_only_generated_only_no_private_access",
+  "objective": "Add a narrow source-preserving semantic run-index adapter for generated Freewill BIDS bundle names while retaining every path identity companion split eligibility storage privacy and claim boundary.",
+  "fixed_inputs": [
+    {
+      "role": "VR11P_result_document",
+      "path": "docs/MARC_2_F03_PRIVATE_DISCRIMINATOR_RESULT.md",
+      "bytes": 3196,
+      "sha256": "98d2b1fa9535045877470886020599976c5a880be69ded7d398533941184bdaa"
+    },
+    {
+      "role": "VR11P_result_record",
+      "path": "registries/marc2_f03_private_discriminator_result.v0.json",
+      "bytes": 5980,
+      "sha256": "be6e1489132d5f33f693daa4ba320436dafc8345f8914067817040d00f82eec0"
+    },
+    {
+      "role": "freewill_selector_module",
+      "path": "src/neurodecodekit/datasets/marc2_freewill_prefix_selection.py",
+      "bytes": 72691,
+      "sha256": "86fa30fbd1caed735f0fb2e627144482a2bb8e033567bb3794e3f05508005c97"
+    },
+    {
+      "role": "freewill_selector_contract",
+      "path": "registries/marc2_freewill_prefix_selection_contract.v0.json",
+      "bytes": 15821,
+      "sha256": "dfe614cd7ec27c54c4f03848e3878c714222db043f501b9b07e57c7dc9f5f702"
+    },
+    {
+      "role": "source_validity_module",
+      "path": "src/neurodecodekit/datasets/marc2_source_validity_eligibility_repair.py",
+      "bytes": 55503,
+      "sha256": "cef7bb738ceee86847067cec788e442aa5022c8f573a814638ef3d48b6ec3587"
+    },
+    {
+      "role": "source_validity_contract",
+      "path": "registries/marc2_source_validity_eligibility_repair_contract.v0.json",
+      "bytes": 13285,
+      "sha256": "84f44f8bc43a4ee56e256a1546cbc1fae3252f2f320db7064602fe72b44463e9"
+    },
+    {
+      "role": "VR2_validator_module",
+      "path": "src/neurodecodekit/datasets/marc2_live_domain_eligibility_adapter.py",
+      "bytes": 57528,
+      "sha256": "061b893180e01116dbd962826384b4071d9e952b78b593b4743f8c301e1cbbc3"
+    },
+    {
+      "role": "VR2_contract",
+      "path": "registries/marc2_live_domain_eligibility_adapter_contract.v0.json",
+      "bytes": 15306,
+      "sha256": "c7c94406c7b3f483bb2ecbbb42b131756d178f288eedc31ce48e9383180a0a33"
+    },
+    {
+      "role": "VR6_dynamic_selection_module",
+      "path": "src/neurodecodekit/datasets/marc2_dynamic_live_selection.py",
+      "bytes": 55659,
+      "sha256": "c3b0d056891f7708b87e8027d36ebd14830055cdeac8e652a681dd4592b4a104"
+    },
+    {
+      "role": "VR6_implementation_record",
+      "path": "registries/marc2_dynamic_live_selection_implementation.v0.json",
+      "bytes": 6463,
+      "sha256": "0a08caa40d3bb46f6bea1ef8c32b6451d8066dab40935274b7ab1692dee78fdc"
+    }
+  ],
+  "fixed_input_count": 10,
+  "fixed_input_bytes": 301432,
+  "observed_route_binding": {
+    "VR11P_route": "MARC2VR11P-R2",
+    "frozen_predicate_class": "P15",
+    "public_class_name": "suffix_bearing_BIDS_identity",
+    "failed_private_value_available": false,
+    "private_row_path_identity_person_selection_or_cohort_available": false,
+    "private_result_reinspection_allowed": false,
+    "unpadded_run_index_observed_privately": false
+  },
+  "standards_basis": {
+    "BIDS_version": "1.11.1",
+    "retrieved_at_local": "2026-08-18",
+    "run_entity_format": "run-<index>",
+    "index_semantics": "nonnegative_integer",
+    "EEG_BrainVision_triplet_extensions": [
+      ".eeg",
+      ".vhdr",
+      ".vmrk"
+    ],
+    "references": [
+      "https://bids-specification.readthedocs.io/en/stable/appendices/entity-table.html",
+      "https://bids-specification.readthedocs.io/en/stable/appendices/entities.html",
+      "https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html"
+    ]
+  },
+  "frozen_repair": {
+    "implementation_posture": "additive_adapter_no_consumed_executor_edit",
+    "accepted_source_digit_widths": [
+      1,
+      2
+    ],
+    "accepted_run_token_regex": "[0-9]{1,2}",
+    "semantic_grouping": "base10_integer",
+    "lexical_run_token_consistent_within_companion_set": true,
+    "normalized_duplicate_companions_refuse": true,
+    "selected_member_names_remain_source_exact": true,
+    "reservation_uses_source_exact_UTF8_name_bytes": true,
+    "subject_or_session_label_broadening": false,
+    "task_or_suffix_broadening": false,
+    "entity_order_or_path_prefix_broadening": false,
+    "three_or_more_source_run_digits_allowed": false,
+    "source_rows_mutated": false,
+    "public_238_to_195_plus_43_arithmetic_preserved": true,
+    "published_participant_session_counts_preserved": true,
+    "fit_session": "ses-01",
+    "heldout_session": "ses-02",
+    "selected_runs_per_session": [
+      1,
+      2,
+      3
+    ],
+    "reservation_cap_bytes": 8589934592
+  },
+  "generated_matrix": {
+    "inventory_rows_per_source": 1227,
+    "success_variants": [
+      "padded_control",
+      "unpadded_single_digit",
+      "bundle_consistent_mixed_width"
+    ],
+    "orders": [
+      "canonical",
+      "reversed"
+    ],
+    "replays": 2,
+    "required_success_paths": 12,
+    "required_refusal_classes": [
+      "P15",
+      "P16",
+      "P18",
+      "P19"
+    ],
+    "required_refusal_witnesses": [
+      "subject_path_filename_disagreement",
+      "session_path_filename_disagreement",
+      "nonnumeric_run_token",
+      "three_digit_run_token",
+      "mixed_lexical_run_tokens_within_bundle",
+      "duplicate_normalized_run_companion",
+      "wrong_task_token",
+      "incomplete_companion_set"
+    ],
+    "semantic_identity_fields": [
+      "selected_subject_ids",
+      "selected_subject_count",
+      "fit_session",
+      "heldout_session",
+      "selected_run_bundles",
+      "selected_core_members"
+    ],
+    "raw_source_hashes_must_differ_across_distinct_spellings": true,
+    "normalized_semantic_cohort_digest_must_match": true,
+    "source_exact_private_rows_must_differ_across_distinct_spellings": true
+  },
+  "acceptance_gates": [
+    "all_fixed_inputs_match_size_and_SHA256",
+    "standards_version_references_and_narrow_policy_are_exact",
+    "twelve_success_paths_pass",
+    "semantic_cohort_and_split_identity_matches_across_success_paths",
+    "source_exact_names_and_reservations_replay",
+    "raw_hashes_differ_while_normalized_semantic_digest_matches",
+    "P15_P16_P18_and_P19_witnesses_refuse",
+    "normalized_run_collision_refuses",
+    "mixed_lexical_run_companion_set_refuses",
+    "source_is_immutable_across_success_and_refusal",
+    "at_least_36_direct_refusals_pass",
+    "retained_generated_output_is_zero",
+    "resource_caps_pass",
+    "all_forbidden_operation_counters_remain_zero"
+  ],
+  "direct_refusal_minimum": 36,
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "generated_input_bytes": 16777216,
+    "aggregate_output_bytes": 1048576,
+    "retained_generated_output_bytes": 0,
+    "network_bytes": 0,
+    "new_payload_bytes": 0
+  },
+  "authorization_state": {
+    "private_or_Git_ignored_path_access_authorized": false,
+    "consumed_VR11P_reuse_or_reinspection_authorized": false,
+    "real_structural_confirmation_authorized": false,
+    "archive_member_or_payload_access_authorized": false,
+    "neural_signal_event_or_target_access_authorized": false,
+    "cohort_freeze_authorized": false,
+    "FW2_authorized": false,
+    "CIL1_authorized": false,
+    "training_inference_prediction_or_scoring_authorized": false,
+    "network_provider_or_language_model_authorized": false,
+    "device_hardware_release_or_claim_upgrade_authorized": false,
+    "other_project_access_authorized": false
+  },
+  "operation_counters": {
+    "private_path_operations": 0,
+    "consumed_result_or_output_reopens": 0,
+    "real_structural_source_opens": 0,
+    "real_structural_bytes": 0,
+    "archive_member_operations": 0,
+    "neural_signal_operations": 0,
+    "event_or_target_operations": 0,
+    "cohort_freezes": 0,
+    "FW2_operations": 0,
+    "CIL1_operations": 0,
+    "model_training_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scoring_runs": 0,
+    "network_requests": 0,
+    "provider_or_language_model_calls": 0,
+    "device_or_hardware_operations": 0,
+    "other_project_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "stop_rules": [
+    "park_if_padded_and_unpadded_semantic_selection_differs",
+    "park_if_source_exact_names_or_reservations_are_rewritten",
+    "park_if_any_neighboring_P15_P16_P18_or_P19_refusal_is_weakened",
+    "never_open_private_or_consumed_state_from_this_contract",
+    "do_not_infer_the_private_source_used_an_unpadded_run_index",
+    "do_not_prepare_Tier_C_until_exact_implementation_and_generated_result_are_remotely_green"
+  ],
+  "claim_boundary": {
+    "engineering_capability_sought": "A standards-aligned source-preserving generated run-index adapter with unchanged identity companion split eligibility and storage controls.",
+    "scientific_claim_not_established": "No real cohort neural payload target model prediction score live decoder or thought-to-text capability is established."
+  },
+  "registration_artifacts": {
+    "document_path": "docs/MARC_2_P15_RUN_INDEX_REPAIR_PREREGISTRATION.md",
+    "document_sha256": "4aad560e198a9508824b6001b3aa9c853b3f197d0d02bd4bf9c60666c07b81d9",
+    "test_path": "tests/test_marc2_p15_run_index_repair_contract.py",
+    "test_sha256": "648352aefab2ecea414eb68c3d00b93088b9db57f5874f030d1d476cef1bc782"
+  }
+}

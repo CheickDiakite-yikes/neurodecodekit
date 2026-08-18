@@ -9504,3 +9504,27 @@ member, neural payload, target, model, prediction, score, FW2/CIL1, network,
 hardware, release, or scientific claim. A future P15 repair requires a new
 prospective artifact-only/generated-only contract before any implementation or
 another private read.
+
+## 0295 - Repair Numeric Run Width Without Weakening P15
+
+Standards decision: bind BIDS 1.11.1, whose `run-<index>` entity is numeric and
+does not require two-character zero padding. Treat the existing exact-two-digit
+selector regex as a prospective generated engineering defect, not as evidence
+that the consumed private value used an unpadded run index.
+
+Scope decision: VR12A accepts only one or two ASCII run digits and groups by
+base-10 integer. It preserves source-exact selected names and reservation
+bytes, exact two-digit Freewill subject/session labels, path/filename identity,
+lowercase task, four companions, one lexical run form per companion set,
+normalized collision refusal, public 238/195/43 arithmetic, deterministic
+split/rank, and the 8 GiB cap.
+
+Order decision: commit, push, and green the registration before implementation.
+Then generated-qualify three source spellings in both orders and two replays,
+plus at least 36 direct refusals. Only after the exact implementation and
+generated result are remotely green may an all-false Tier C confirmation
+packet be prepared.
+
+Boundary decision: registration performs zero private, consumed-state, archive,
+neural, target, cohort, model, prediction, score, network, provider, hardware,
+other-project, FW2/CIL1, release, or scientific-claim operations.

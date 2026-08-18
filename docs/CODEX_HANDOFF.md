@@ -5861,3 +5861,27 @@ separately frozen artifact-only and generated-only P15 repair design. Keep the
 unrelated tracker-inspection NDJSON untouched. FW2, CIL1, archive payload,
 neural data, targets, models, scores, release, and scientific claims remain
 closed.
+
+## 2026-08-18 MARC2-VR12A Registration Handoff
+
+Read `docs/MARC_2_P15_RUN_INDEX_REPAIR_PREREGISTRATION.md`,
+`registries/marc2_p15_run_index_repair_contract.v0.json`, and
+`tests/test_marc2_p15_run_index_repair_contract.py`.
+
+The contract binds VR11P R2/P15 without copying a private identity. It freezes
+one additive standards-backed repair: accept one- or two-digit ASCII run
+indices, group by base-10 integer, preserve source-exact names and reservation
+bytes, and keep all neighboring identity, task, companion, count, split, rank,
+privacy, and storage controls. Three generated success spellings run in both
+orders over two replays; eight named witnesses and at least 36 direct refusals
+must fail closed.
+
+The clean pre-change baseline is 4,126 dependency-light tests with 204 expected
+skips. Ten focused contract tests pass. Current authority and every operation
+counter are false or zero. Keep the unrelated tracker-inspection NDJSON
+untouched.
+
+Immediate gate: commit and push this exact registration and require both Base
+Python and Optional Neuro Readers green. Do not implement before that proof,
+and do not open a private path, consumed VR11P state, archive member, neural
+payload, target, model, score, FW2/CIL1 surface, or other project.

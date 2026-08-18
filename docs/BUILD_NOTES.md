@@ -11499,3 +11499,22 @@ Python job `95422480212`, Optional Neuro Readers job `95422480363`, and CI
 
 VR11P is consumed with no retry or rerun. Next safe task: freeze an artifact-
 only and generated-only P15 repair design. FW2 and CIL1 remain closed.
+
+## 2026-08-18 - MARC2-VR12A P15 Run-Index Repair Registration
+
+- Rechecked the exact P15 predicate without opening any private or ignored
+  path. The rigid selector requires `run-[0-9]{2}`.
+- Bound BIDS 1.11.1 primary documentation showing numeric `run-<index>`
+  semantics and BrainVision's EEG triplet.
+- Froze an additive generated-only adapter accepting only one or two ASCII run
+  digits and grouping by integer while preserving source-exact member names
+  and reservation bytes.
+- Retained exact subject/session agreement, lowercase task, four companions,
+  lexical consistency, normalized-collision refusal, public counts, split,
+  rank, and storage cap.
+- The pre-change dependency-light baseline passes 4,126 tests with 204 expected
+  skips. Ten focused registration tests pass. No implementation or private
+  operation has occurred.
+
+Immediate gate: commit, push, and obtain both green CI jobs for this exact
+registration before implementing or measuring the generated repair.

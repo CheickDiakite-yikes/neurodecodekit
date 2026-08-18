@@ -3010,3 +3010,27 @@ VR11P has no rerun or private reinspection. Next gate: specify a separately
 frozen artifact-only and generated-only P15 repair design. No archive payload,
 neural data, target, model, score, FW2/CIL1, release, or scientific claim is
 open.
+
+### MARC2-VR12A - P15 Semantic Run-Index Repair (Registered Locally)
+
+VR11P's aggregate R2 result identifies only P15. Static standards review found
+one prospective mismatch: the current selector requires exactly two run digits
+while BIDS 1.11.1 defines a numeric `run-<index>` entity and uses unpadded
+examples.
+
+VR12A freezes an additive generated-only adapter accepting one or two ASCII run
+digits, grouping by integer, and retaining exact source names and reservation
+bytes. It does not broaden subject/session labels, task, suffixes, entity
+order, or path prefixes. It keeps four-companion completeness, one lexical run
+form per bundle, normalized-collision refusal, `238 -> 195 + 43` arithmetic,
+published counts, deterministic rank and session split, and the 8 GiB cap.
+
+The generated matrix requires three success variants across two orders and two
+replays, eight neighboring refusal witnesses, at least 36 direct refusals, one
+thread, 30 seconds, 256 MiB RSS, 16 MiB generated input, 1 MiB aggregate output,
+and zero retention. Ten focused contract tests pass against the 4,126-test
+pre-change baseline.
+
+Current phase: registration pending commit/push/remote-green proof. No
+implementation, private read, cohort, archive payload, neural data, target,
+model, prediction, score, FW2/CIL1, release, or claim is authorized.
