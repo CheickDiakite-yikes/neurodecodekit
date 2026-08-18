@@ -47,14 +47,14 @@
     {
       "role": "implementation_proof_tests",
       "path": "tests/test_marc2_p15_private_confirmation_implementation.py",
-      "bytes": 2698,
-      "sha256": "7bf711f74a5d64629e6268541ca71fe7426e8017fb8ef5d9f92651737e92b6be"
+      "bytes": 3439,
+      "sha256": "a3964fdeafb95796cf5634b0bae34a74943d408572439d01f597f1719166ad62"
     },
     {
       "role": "implementation_document",
       "path": "docs/MARC_2_P15_PRIVATE_CONFIRMATION_IMPLEMENTATION.md",
-      "bytes": 5711,
-      "sha256": "5bae8f9c9ce72614ab1efa4c455310d929db2fdfe5d2857243b710d464de8fa4"
+      "bytes": 6258,
+      "sha256": "065683ab7966a629e6c9dcffe1c675598c2c7f1253383c505eaf5208d78fef22"
     }
   ],
   "surface": {
@@ -80,6 +80,16 @@
     "used_for_private_execution": false,
     "superseded_before_proof_closeout": true,
     "reason_class": "proof_parser_required_remote_ids_and_exact_artifact_set_hardening"
+  },
+  "intermediate_remote_green_implementation": {
+    "commit": "2f92988ca27a28c2a360954fd4c7e5d2e1425965",
+    "CI_run_id": 32196710101,
+    "base_job_id": 95902115985,
+    "optional_neuro_job_id": 95902115999,
+    "both_required_jobs_green": true,
+    "used_for_private_execution": false,
+    "superseded_before_proof_closeout": true,
+    "reason_class": "proof_state_transition_test_must_accept_null_and_green_states"
   },
   "generated_qualification": {
     "route": "MARC2VR12P-G1",

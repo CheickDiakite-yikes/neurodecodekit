@@ -11645,3 +11645,10 @@ confirmation run once.
 
 Immediate gate: commit, push, and green the superseding proof-strict
 implementation before making the proof-only closeout.
+
+Proof-strict implementation `2f92988` passed Base job `95902115985`, Optional
+job `95902115999`, and CI `32196710101`. The remaining pre-closeout change is
+test-only: make the immutable-artifact test validate both the current null
+proof state and a future exact green-proof state. The wrapper and recorded
+qualification are unchanged. Green that final proof-transition-ready artifact
+set before closeout.

@@ -5930,6 +5930,12 @@ tests pass. Do not use `c76fe20` for Stage 2; green the superseding commit and
 then make the proof-only closeout. No private operation occurred during this
 hardening.
 
+Proof-strict commit `2f92988` passed Base job `95902115985`, Optional job
+`95902115999`, and CI `32196710101`. One test-only transition fix remains so
+the proof test accepts both null and exact green states. The wrapper and
+qualification did not change. Green the final artifact set before closeout;
+do not use `2f92988` for private execution.
+
 Immediate gate: commit, push, and require Base Python and Optional Neuro
 Readers green for this exact implementation. Then update only the proof state,
 commit and push that proof-only closeout, and require both jobs green. Do not

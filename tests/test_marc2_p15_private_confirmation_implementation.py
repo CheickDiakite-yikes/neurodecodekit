@@ -13,14 +13,29 @@ class Marc2P15PrivateConfirmationImplementationTests(unittest.TestCase):
     def setUpClass(cls):
         cls.record = json.loads(REGISTRY.read_text(encoding="utf-8"))
 
-    def test_record_is_stage_1_only_and_proof_gated(self):
+    def test_record_is_stage_1_only_or_exactly_proof_closed(self):
         self.assertEqual(
             self.record["schema_name"],
             "neurodecodekit.marc2_p15_private_confirmation_implementation",
         )
         self.assertEqual(self.record["lane_id"], "MARC2-VR12P")
-        self.assertIsNone(self.record["remote_implementation_proof"])
-        self.assertFalse(self.record["stage_2_status"]["private_execution_available_now"])
+        proof = self.record["remote_implementation_proof"]
+        if proof is None:
+            self.assertFalse(self.record["stage_2_status"]["private_execution_available_now"])
+            self.assertTrue(
+                self.record["stage_2_status"]["proof_closeout_required_before_readiness"]
+            )
+        else:
+            self.assertTrue(proof["both_required_jobs_green"])
+            self.assertFalse(proof["scope_changed_after_qualification"])
+            self.assertEqual(proof["qualification_route"], "MARC2VR12P-G1")
+            self.assertFalse(proof["qualification_repeated_for_proof_closeout"])
+            self.assertEqual(proof["private_operations_during_proof_closeout"], 0)
+            self.assertTrue(
+                self.record["stage_2_status"][
+                    "private_execution_available_after_closeout_is_remotely_green"
+                ]
+            )
 
     def test_every_implementation_artifact_is_exact(self):
         for artifact in self.record["implementation_artifacts"]:

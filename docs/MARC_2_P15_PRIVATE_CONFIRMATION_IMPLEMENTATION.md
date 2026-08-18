@@ -29,6 +29,14 @@ artifact set. No private operation followed. The implementation was hardened,
 requalified, and must receive a new exact remote proof; `c76fe20` is not a
 Stage 2 proof anchor.
 
+Proof-strict commit `2f92988ca27a28c2a360954fd4c7e5d2e1425965` then passed
+Base Python job `95902115985`, Optional Neuro Readers job `95902115999`, and CI
+`32196710101`. Its final pre-closeout review found only a test-state issue: the
+implementation proof test accepted the required null state but not the later
+valid green-proof state. That test now validates both states without changing
+the wrapper or repeating qualification. A final exact CI pass is required for
+this proof-transition-ready artifact set; `2f92988` was not used for Stage 2.
+
 ## Added Interface
 
 `src/neurodecodekit/datasets/marc2_p15_private_confirmation.py` adds a
