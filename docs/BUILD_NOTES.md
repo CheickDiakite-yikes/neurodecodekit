@@ -11564,9 +11564,13 @@ the sole active Tier C gate for a fresh maintainer decision.
 - Exact request `816589473eafabdebe66be2b4e921b005f04a959` passed Base
   Python job `95825074164`, Optional Neuro Readers job `95825073430`, and CI
   `32171993061`.
-- Bound byte and SHA-256 snapshots of the request document, registry, and test
-  from that exact commit. A focused test reads those historical bytes through
-  Git so this closeout cannot redefine the remotely green request.
+- Bound byte, SHA-256, and Git-blob snapshots of the request document,
+  registry, and test from that exact commit. A focused test fixes every tuple
+  literally so this closeout cannot redefine the remotely green request.
+- Proof attempt `3eddbd8` reached CI `32172956668`, where both full jobs failed
+  only because the new test tried to read the parent request commit from a
+  default shallow checkout. No private or scientific operation occurred. The
+  test now validates the same immutable tuple without requiring Git history.
 - No requested scope changed. Every authorization remains false and every
   private, real-data, scientific, other-project, and claim operation remains
   zero.

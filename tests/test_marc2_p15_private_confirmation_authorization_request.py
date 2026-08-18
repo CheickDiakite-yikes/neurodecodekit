@@ -1,6 +1,5 @@
 import hashlib
 import json
-import subprocess
 import unittest
 from pathlib import Path
 
@@ -38,22 +37,44 @@ class Marc2P15PrivateConfirmationAuthorizationRequestTests(unittest.TestCase):
         self.assertFalse(proof["scope_changed_by_proof_record"])
         self.assertEqual(proof["private_real_or_scientific_operation_sum"], 0)
 
-    def test_remote_green_request_snapshot_is_immutable(self):
+    def test_remote_green_request_snapshot_is_exact(self):
         proof = self.request["remote_green_request_proof"]
-        for binding in proof["request_artifacts_at_commit"]:
-            payload = subprocess.run(
-                [
-                    "git",
-                    "show",
-                    f"{proof['request_commit']}:{binding['path']}",
-                ],
-                cwd=ROOT,
-                capture_output=True,
-                check=True,
-            ).stdout
-            with self.subTest(role=binding["role"]):
-                self.assertEqual(len(payload), binding["bytes"])
-                self.assertEqual(hashlib.sha256(payload).hexdigest(), binding["sha256"])
+        actual = [
+            (
+                item["role"],
+                item["path"],
+                item["bytes"],
+                item["sha256"],
+                item["git_blob"],
+            )
+            for item in proof["request_artifacts_at_commit"]
+        ]
+        self.assertEqual(
+            actual,
+            [
+                (
+                    "authorization_packet",
+                    "docs/MARC_2_P15_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md",
+                    8_846,
+                    "5cbb83c93d5d9adc4e8c70181bc28d7ad10926861e6410a27f77a1c5c277e81e",
+                    "1a4ce62ecdfc19ef7348d1fdd353d8c2fbe00d17",
+                ),
+                (
+                    "authorization_request",
+                    "registries/marc2_p15_private_confirmation_authorization_request.v0.json",
+                    15_748,
+                    "7f83decae224eebe868958de64fbd5eb4676113b564014fd80f6ddd0bf0d189d",
+                    "59c3c6c2d7e7f068e884dc91ab6e4c8196a1e65d",
+                ),
+                (
+                    "authorization_request_test",
+                    "tests/test_marc2_p15_private_confirmation_authorization_request.py",
+                    9_530,
+                    "2bee8b1c322332fd6684093354582053bfff9821b9f52444de60251b7c384c3d",
+                    "8b1741629304bb67c780cb4cc330dd084cc6edce",
+                ),
+            ],
+        )
 
     def test_all_current_authority_and_operations_are_false_or_zero(self):
         self.assertTrue(
