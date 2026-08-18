@@ -3039,7 +3039,7 @@ passed Base job `95819297085`, Optional job `95819297010`, and CI
 eligible. No private read, cohort, archive payload, neural data, target, model,
 prediction, score, FW2/CIL1, release, or claim was authorized by VR12A.
 
-### MARC2-VR12P - Target-Free Private Cohort Confirmation (Stage 1 Qualified)
+### MARC2-VR12P - Target-Free Private Cohort Confirmation (Consumed R4)
 
 VR12P is the smallest bridge from generated P15 repair to a real FW2 design.
 Its all-false packet requests one generated/mock fixed-path wrapper, followed
@@ -3066,14 +3066,25 @@ Generated `MARC2VR12P-G1` now passes all 12 fixed-path success paths and 61
 direct refusals. Its recorded run used 5,147,208 generated input bytes,
 217,961 peak incremental output bytes, zero retention, 0.6757911660242826
 seconds, and 32,817,152-byte peak RSS under one thread. The public executor is
-fixed-path and `remote_implementation_proof` remains null, so it refuses before
-readiness or a private-path operation. Twenty-one focused and all 4,209 clean
-dependency-light tests pass with 204 expected skips.
+fixed-path. At the Stage 1 recording, `remote_implementation_proof` was null,
+so it refused before readiness or a private-path operation. Twenty-one focused
+and all 4,209 clean dependency-light tests passed with 204 expected skips.
 
 Final implementation `d98a011` passed Base job `95903371693`, Optional job
-`95903371721`, and CI `32197145780`. Its proof-only closeout now binds the exact
-preproof registry and implementation artifact set without repeating
-qualification or touching a private path. Current gate: green that closeout in
-both jobs. Only then may the one 418,755-byte target-free structural
-confirmation run once. FW2 remains a separate post-R1 packet, and CIL1 remains
-later.
+`95903371721`, and CI `32197145780`. Proof-only closeout `4280aa6` then passed
+Base job `95905146777`, Optional job `95905146692`, and CI `32197772060`
+without repeating qualification or touching a private path before execution.
+
+The sole registered command read and strict-parsed exactly 418,755 target-free
+structural bytes once and called VR12A once. It consumed at
+`MARC2VR12P-R4` in 0.02449654199881479 seconds at 30,162,944-byte peak RSS,
+with 2,669 combined output bytes and no private cohort manifest. R4 means only
+that the repaired source still refused within the frozen identity, task, or
+companion-validation layer. The failed predicate, value, row, path, person,
+task spelling, companion state, selection, and cohort remain unavailable.
+
+VR12P has no retry or private reinspection. FW2 and CIL1 remain ineligible.
+Next gate: separately freeze an artifact-only and generated-only decomposition
+of the residual identity/task/companion predicates. Any new private read,
+archive member, neural payload, target, model, prediction, or score remains a
+new Tier C decision.

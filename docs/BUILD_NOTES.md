@@ -11670,3 +11670,32 @@ set before closeout.
 
 Immediate gate: commit, push, and green this proof-only closeout in both jobs.
 Only then may the one registered Stage 2 structural command run once.
+
+## 2026-08-18 - MARC2-VR12P Consumed Structural Result
+
+- Proof-only closeout `4280aa603da58de4eac220496e09aa97bcce65cb`
+  passed Base Python job `95905146777`, Optional Neuro Readers job
+  `95905146692`, and CI `32197772060` before Stage 2.
+- The sole registered invocation crossed the frozen readiness boundary, read
+  and strict-parsed exactly 418,755 target-free structural bytes once, and
+  called VR12A once.
+- The lane consumed at `MARC2VR12P-R4`. Under the frozen public route table,
+  this means only identity, task, or companion-validation refusal after the
+  run-index repair. The failed predicate and every private value remain
+  unavailable.
+- Runtime was 0.02449654199881479 seconds at 30,162,944-byte peak RSS with
+  2,669 combined output bytes, one thread/worker/job, zero network, and zero
+  new payload bytes.
+- No private cohort manifest was created. Archive-member, neural, signal,
+  event, target, model, training, prediction, score, FW2/CIL1, hardware,
+  other-project, and claim-upgrade counters were all zero.
+- Closeout uses captured aggregate stdout only. No protected source, private
+  manifest, or aggregate output was reopened after the command.
+- Sixty-three focused VR12P tests and all 4,223 dependency-light tests pass
+  with 204 expected skips and zero failures. Ruff 0.15.20, compileall, all 294
+  registry JSON files, module CLI help, and diff hygiene pass.
+
+VR12P is consumed with no retry, rerun, resume, repair, fallback, substitution,
+or private reinspection. Next safe task: freeze an artifact-only and generated-
+only decomposition of the residual identity/task/companion predicates. FW2 and
+CIL1 remain ineligible.

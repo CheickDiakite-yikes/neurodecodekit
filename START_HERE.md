@@ -7,61 +7,36 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR12P Confirmation Packet
+## Current Frontier: MARC2-VR12P Consumed At Structural Route R4
 
-VR11P is consumed at aggregate route `MARC2VR11P-R2`, which maps only to P15,
-the suffix-bearing BIDS identity class. It did not reveal a path, failed value,
-row, person, selection, or cohort. Read
-`docs/MARC_2_P15_RUN_INDEX_REPAIR_PREREGISTRATION.md`,
-`docs/MARC_2_P15_RUN_INDEX_REPAIR_IMPLEMENTATION.md`, and
-`docs/MARC_2_P15_RUN_INDEX_REPAIR_RESULT.md` with their registries.
+Read `docs/MARC_2_P15_RUN_INDEX_REPAIR_RESULT.md`, then
+`docs/MARC_2_P15_PRIVATE_CONFIRMATION_IMPLEMENTATION.md`,
+`docs/MARC_2_P15_PRIVATE_CONFIRMATION_PROOF_CLOSEOUT.md`, and
+`docs/MARC_2_P15_PRIVATE_CONFIRMATION_RESULT.md` with their registries.
 
-VR12A freezes one standards-backed generated repair: accept one- or two-digit
-ASCII `run-<index>` spellings, group them by integer value, preserve the exact
-source member name and reservation bytes, and retain every subject/session,
-task, companion, count, split, rank, and storage gate. This registration has
-no private executor and authorizes no real source, archive, neural, target,
-model, score, FW2, CIL1, or claim operation. Generated route `MARC2VR12A-G1`
-passed 12/12 success paths and 36/36 direct refusals over 5,147,208 generated
-bytes in 1.092868333 seconds at 44,417,024-byte peak RSS. Exact implementation
-`873484a` passed Base job `95819297085`, Optional job `95819297010`, and CI
-`32170217284`. Its proof-only closeout became green as `8f2ad16` in CI
-`32170855368` before the all-false Tier C packet was prepared. Read
-`docs/MARC_2_P15_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md` and
-`registries/marc2_p15_private_confirmation_authorization_request.v0.json`.
-VR12P requests a future generated wrapper and, only after its own green proof,
-one 418,755-byte target-free structural read that may freeze one private cohort
-manifest. Request `8165894` passed Base job `95825074164`, Optional job
-`95825073430`, and CI `32171993061`. Its proof-only request closeout then became
-green before the packet was identified as the sole active Tier C gate and
-received a fresh packet-bound maintainer decision.
+VR12A's generated-only repair accepts one- or two-digit ASCII `run-<index>`
+spellings while preserving source-exact names and all subject/session, task,
+companion, count, split, rank, and storage gates. Generated route
+`MARC2VR12A-G1` passed 12/12 paths and 36 direct refusals. VR12P then qualified
+the fixed one-shot wrapper on 12/12 generated paths and 61 refusals. Final
+implementation `d98a011` passed Base job `95903371693`, Optional job
+`95903371721`, and CI `32197145780`; proof-only closeout `4280aa6` passed Base
+job `95905146777`, Optional job `95905146692`, and CI `32197772060` before the
+sole registered invocation.
 
-That proof is green at final head `5e4354a` under CI `32173596281`. After VR12P
-was identified as the sole active Tier C packet, the maintainer's next exact
-message was `continue`. Read
-`docs/MARC_2_P15_PRIVATE_CONFIRMATION_AUTHORIZATION_DECISION.md` and its
-registry. The decision binds only the unchanged packet and remains ineffective
-until its own commit, push, Base Python job, and Optional Neuro Readers job are
-green. Decision `b0f251a` passed Base Python job `95894058802`, Optional Neuro
-Readers job `95894058625`, and CI `32193964660` before Stage 1 began.
+The command read and strict-parsed exactly 418,755 target-free structural bytes
+once, called VR12A once, and consumed at `MARC2VR12P-R4`. Under the frozen
+route table, R4 means only that the repaired source still refused in the
+identity, task, or companion-validation layer. It does not reveal the failed
+predicate, value, row, path, person, task spelling, companion state, selection,
+or cohort. No private cohort manifest was created.
 
-Read `docs/MARC_2_P15_PRIVATE_CONFIRMATION_IMPLEMENTATION.md` and
-`registries/marc2_p15_private_confirmation_implementation.v0.json`. Generated
-route `MARC2VR12P-G1` passed 12/12 fixed-path cases and 61 direct refusals in
-0.675791166 seconds at 32,817,152-byte peak RSS. Peak temporary output was
-217,961 bytes and retained output was zero. The wrapper verifies the exact
-request, decision, and VR12A artifacts, exposes only fixed commands, and emits
-aggregate R1-R6 outcomes without private failure detail.
-
-Final implementation `d98a011` passed Base job `95903371693`, Optional job
-`95903371721`, and CI `32197145780`. Read
-`docs/MARC_2_P15_PRIVATE_CONFIRMATION_PROOF_CLOSEOUT.md`. The implementation
-registry now binds those exact bytes, but this proof-only closeout has delayed
-effect until its own commit and both jobs are green. No qualification or
-private operation was repeated. Only after that barrier may the one 418,755-
-byte target-free structural command run once. FW2, CIL1, archive payload,
-neural data, targets, models, predictions, scores, release, and scientific
-claims remain closed.
+VR12P has no retry, rerun, resume, repair, fallback, substitution, or private
+reinspection. FW2 and CIL1 remain ineligible. No archive member, neural
+payload, signal sample, target, model, prediction, score, release, or
+scientific claim is open. The next safe work is a separately frozen artifact-
+only and generated-only decomposition of the residual identity/task/companion
+predicates; any new private read remains a fresh Tier C packet and decision.
 
 ## Prior Frontier: MARC2-VR11P Consumed At Structural Route R2
 

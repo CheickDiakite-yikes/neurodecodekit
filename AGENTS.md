@@ -45,7 +45,7 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
-The latest consumed evidence lane is `MARC2-VR9P`; its result is summarized
+The latest consumed evidence lane is `MARC2-VR12P`; its result is summarized
 near the end of this frontier. To reconstruct its predecessors, read
 `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`,
 `docs/MARC_2_VR2_REFUSAL_LOCALIZATION_PREREGISTRATION.md`, and
@@ -366,11 +366,24 @@ matching test. The implementation registry now binds those exact bytes, but
 the closeout has delayed effect until its own commit is pushed and both jobs
 are green. It repeats no qualification and performs zero private operations.
 
-Do not run readiness, stat or open the registered private source, create the
-real output root, or call Stage 2 before that closeout proof. The private
-command still has one invocation and no retry. R1 would make only a separate
-FW2 preregistration eligible; FW2 execution, CIL1, archive payload, neural
-data, targets, models, scores, release, and scientific claims remain closed.
+Proof-only closeout `4280aa603da58de4eac220496e09aa97bcce65cb`
+passed Base Python job `95905146777`, Optional Neuro Readers job `95905146692`,
+and CI `32197772060` before the sole Stage 2 invocation. Read
+`docs/MARC_2_P15_PRIVATE_CONFIRMATION_RESULT.md` and
+`registries/marc2_p15_private_confirmation_result.v0.json`. The command read
+and strict-parsed exactly 418,755 target-free structural bytes once, called
+VR12A once, and consumed at `MARC2VR12P-R4` without freezing a cohort. The
+frozen R4 ceiling means only identity, task, or companion-validation refusal;
+the exact predicate, value, row, path, person, task spelling, companion state,
+selection, and cohort remain unavailable and must not be inferred.
+
+VR12P has no retry, rerun, resume, repair, fallback, substitution, or private
+reinspection. Do not touch its private source, readiness state, consumed
+marker, or output root. The next safe task is a separately frozen artifact-
+only and generated-only residual-predicate decomposition. Another private read
+requires a new Tier C packet and fresh packet-bound decision. FW2 and CIL1
+remain ineligible; archive payload, neural data, targets, models, predictions,
+scores, release, and scientific claims remain closed.
 
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-

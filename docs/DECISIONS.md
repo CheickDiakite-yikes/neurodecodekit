@@ -9641,3 +9641,26 @@ authorized Stage 2 command may run once with no retry.
 Boundary decision: proof closeout performs zero private, archive, neural,
 target, model, prediction, score, FW2/CIL1, network, hardware, other-project,
 release, or claim operations.
+
+## 0301 - Consume VR12P At Aggregate Structural Route R4
+
+Order decision: proof-only closeout `4280aa6` passed Base Python job
+`95905146777`, Optional Neuro Readers job `95905146692`, and CI `32197772060`
+before the sole registered Stage 2 invocation.
+
+Evidence decision: accept aggregate route `MARC2VR12P-R4` after one exact
+418,755-byte target-free structural read, one strict parse, and one VR12A call.
+Apply only the frozen maximum meaning: the repaired source refused within the
+identity, task, or companion-validation layer. Do not retain or infer the
+failed predicate, value, row, path, person, task spelling, companion state,
+selection, or cohort.
+
+Repair decision: accepting one- or two-digit run indices was insufficient for
+this exact source. Do not patch a consumed executor, relax a predicate, reopen
+the source, or rerun the command after seeing R4. A residual-predicate
+decomposition must be separately frozen, artifact-only, and generated-only.
+
+Boundary decision: no private cohort manifest exists, so FW2 and CIL1 remain
+ineligible. Archive payload, neural signal, targets, models, predictions,
+scores, release, and scientific claims remain closed. Another private read is
+a new Tier C packet and fresh packet-bound decision.

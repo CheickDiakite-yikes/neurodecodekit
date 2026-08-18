@@ -1,0 +1,179 @@
+{
+  "schema_name": "neurodecodekit.marc2_p15_private_confirmation_result",
+  "schema_version": "0.1.0",
+  "result_id": "MARC-2-VR12P-target-free-private-confirmation-result-v0",
+  "lane_id": "MARC2-VR12P",
+  "recorded_at_local": "2026-08-18",
+  "status": "consumed_without_cohort_freeze",
+  "proof_posture": "aggregate_target_free_structural_confirmation_only",
+  "route": "MARC2VR12P-R4",
+  "green_execution_proof": {
+    "decision": {
+      "commit": "b0f251a7fb1b69a0ed79f525ab100499e130390a",
+      "CI_run_id": 32193964660,
+      "base_python_job_id": 95894058802,
+      "optional_neuro_job_id": 95894058625,
+      "both_required_jobs_green_before_implementation": true
+    },
+    "implementation": {
+      "commit": "d98a0115d2fd113929d512dfc7fb372a38b8f5c8",
+      "CI_run_id": 32197145780,
+      "base_python_job_id": 95903371693,
+      "optional_neuro_job_id": 95903371721,
+      "both_required_jobs_green": true
+    },
+    "proof_closeout": {
+      "commit": "4280aa603da58de4eac220496e09aa97bcce65cb",
+      "CI_run_id": 32197772060,
+      "base_python_job_id": 95905146777,
+      "optional_neuro_job_id": 95905146692,
+      "both_required_jobs_green_before_execution": true
+    }
+  },
+  "execution_state": {
+    "consumed": true,
+    "registered_invocations": 1,
+    "private_content_opens": 1,
+    "strict_JSON_parses": 1,
+    "VR12A_calls": 1,
+    "aggregate_reports": 1,
+    "private_cohort_manifests": 0,
+    "retry_limit": 0,
+    "rerun_limit": 0,
+    "resume_limit": 0,
+    "repair_fallback_or_substitution_limit": 0
+  },
+  "route_meaning": {
+    "public_class_name": "identity_task_or_companion_validation_refusal",
+    "maximum_engineering_meaning": "The target-free structural source still refused within the frozen identity task or companion-validation layer after the generated run-index repair.",
+    "run_index_repair_sufficient": false,
+    "exact_failed_predicate_known": false,
+    "failed_private_value_retained": false,
+    "source_row_or_identity_retained": false,
+    "candidate_or_cohort_retained": false,
+    "predicate_relaxed": false,
+    "another_private_read_authorized": false
+  },
+  "measurements": {
+    "runtime_seconds": 0.02449654199881479,
+    "peak_RSS_bytes": 30162944,
+    "input_bytes": 418755,
+    "combined_output_bytes": 2669,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "producer_is_causal": "not_applicable_structural_metadata_only",
+    "end_to_end_latency_measured": false
+  },
+  "operation_counters": {
+    "CIL1_operations": 0,
+    "FW2_operations": 0,
+    "VR12A_calls": 1,
+    "archive_local_header_reads": 0,
+    "archive_member_payload_reads": 0,
+    "checkpoint_reads": 0,
+    "event_channel_or_geometry_reads": 0,
+    "model_inference_runs": 0,
+    "model_runs": 0,
+    "network_requests": 0,
+    "new_payload_bytes": 0,
+    "other_project_operations": 0,
+    "prediction_sets": 0,
+    "private_cohort_freezes": 0,
+    "private_structural_source_bytes": 418755,
+    "private_structural_source_reads": 1,
+    "provider_or_language_model_calls": 0,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "scientific_claim_upgrades": 0,
+    "scoring_runs": 0,
+    "signal_sample_reads": 0,
+    "stream_device_or_hardware_operations": 0,
+    "strict_structural_parses": 1,
+    "target_deliveries": 0,
+    "target_or_label_reads": 0,
+    "training_runs": 0
+  },
+  "closeout_operations": {
+    "result_source": "captured_aggregate_command_stdout",
+    "post_result_private_source_reopens": 0,
+    "post_result_private_manifest_reopens": 0,
+    "post_result_aggregate_report_reopens": 0,
+    "ignored_output_files_committed": 0,
+    "raw_private_hashes_published": 0,
+    "per_item_outcomes_published": 0,
+    "private_values_or_identities_published": 0
+  },
+  "result_artifacts": [
+    {
+      "role": "human_result",
+      "path": "docs/MARC_2_P15_PRIVATE_CONFIRMATION_RESULT.md",
+      "bytes": 3399,
+      "sha256": "c82c0dacaa59b46034ad48d272454ea55b9b0650df2bff0ac7618e74f9805370"
+    },
+    {
+      "role": "result_test",
+      "path": "tests/test_marc2_p15_private_confirmation_result.py",
+      "bytes": 5786,
+      "sha256": "b912e7212d2f4f4f5af8a600361931c483f148ff38fb4d49f6fe3775b4bc825d"
+    }
+  ],
+  "local_verification": {
+    "focused_VR12P_tests": 63,
+    "focused_tests_passed": true,
+    "focused_runtime_seconds": 2.887,
+    "complete_base_tests": 4223,
+    "complete_expected_skips": 204,
+    "complete_failures": 0,
+    "complete_runtime_seconds": 71.996,
+    "implementation_baseline_tests": 4214,
+    "new_result_tests": 9,
+    "full_repository_Ruff_version": "0.15.20",
+    "full_repository_Ruff_passed": true,
+    "compileall_passed": true,
+    "all_registry_JSON_passed": true,
+    "registry_JSON_files_validated": 294,
+    "module_CLI_help_passed": true,
+    "diff_check_passed": true,
+    "remote_CI_pending": true
+  },
+  "next_gate": {
+    "artifact_only_generated_decomposition_eligible": true,
+    "decomposition_implemented": false,
+    "another_private_read_authorized": false,
+    "consumed_private_source_reinspection_authorized": false,
+    "archive_member_or_neural_payload_authorized": false,
+    "MARC2_FW2_or_CIL1_authorized": false,
+    "release_or_scientific_claim_upgrade_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_ceiling": "one_aggregate_target_free_structural_refusal_class",
+    "scientific_ceiling": "none",
+    "private_failed_value_identified": false,
+    "real_cohort_identified": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "real_time_portable_home_assistive_or_clinical_result": false
+  },
+  "warnings": [
+    "R4 is one aggregate structural refusal class and not a private failed value.",
+    "Accepting one- or two-digit run indices was insufficient but the remaining failed predicate is unavailable.",
+    "No private cohort manifest was created.",
+    "No archive member or neural payload was opened.",
+    "VR12P is consumed with no retry or rerun.",
+    "FW2 and CIL1 remain closed."
+  ],
+  "unavailable_fields": [
+    "failed predicate and private value",
+    "private row member path person identity task spelling and companion state",
+    "candidate selection and real cohort",
+    "certificate marker and aggregate report component byte sizes",
+    "archive neural target model prediction score and latency"
+  ]
+}

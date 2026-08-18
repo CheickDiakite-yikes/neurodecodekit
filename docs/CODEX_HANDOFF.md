@@ -1,5 +1,22 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR12P result, 2026-08-18: final implementation `d98a011`
+> passed Base job `95903371693`, Optional job `95903371721`, and CI
+> `32197145780`; proof-only closeout `4280aa6` then passed Base job
+> `95905146777`, Optional job `95905146692`, and CI `32197772060` before the
+> sole registered invocation. Read
+> `docs/MARC_2_P15_PRIVATE_CONFIRMATION_RESULT.md` and its registry. The command
+> read and strict-parsed exactly 418,755 target-free structural bytes once,
+> called VR12A once, and consumed at `MARC2VR12P-R4` with no cohort freeze.
+> R4 means only identity, task, or companion-validation refusal after the
+> generated run-index repair. The exact predicate, value, row, path, person,
+> task spelling, companion state, selection, and cohort are unavailable. Never
+> touch the private source, readiness state, consumed marker, output root, or
+> unrelated tracker inspection NDJSON; do not rerun or reinspect VR12P. FW2
+> and CIL1 remain ineligible. Next safe work is a separately frozen artifact-
+> only and generated-only residual-predicate decomposition. Any new private
+> read remains a fresh Tier C packet and decision.
+
 > Current MARC2-VR8B result, 2026-08-16: registration `5607fe8` passed Base
 > job `95263869003`, Optional job `95263869149`, and CI `31987093865` before
 > implementation. Read the VR8B preregistration, implementation/result docs,
