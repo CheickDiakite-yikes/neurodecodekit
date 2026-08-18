@@ -9622,3 +9622,22 @@ the generated G1 route, unchanged scope, no repeated qualification during the
 future closeout, zero closeout private operations, the preproof registry
 identity, and the exact current artifact-set digest. Requalify generated Stage
 1 and re-green the superseding implementation before proof closeout.
+
+## 0300 - Bind Only The Final Proof-Transition-Ready VR12P Bytes
+
+Evidence decision: final implementation `d98a011` passed both required jobs in
+CI `32197145780`. Bind its exact commit, job IDs, preproof registry identity,
+canonical artifact-set digest, and artifact Git blobs in a proof-only closeout.
+
+Transition decision: the closeout may change only proof state and additive
+frontier documentation/tests. It must not change or requalify the wrapper,
+implementation artifacts, route table, fixed paths, source identity, caps, or
+claim boundary.
+
+Order decision: commit, push, and green this closeout in both jobs before one
+readiness invocation or private-path operation. After green, the already
+authorized Stage 2 command may run once with no retry.
+
+Boundary decision: proof closeout performs zero private, archive, neural,
+target, model, prediction, score, FW2/CIL1, network, hardware, other-project,
+release, or claim operations.

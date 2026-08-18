@@ -11652,3 +11652,21 @@ test-only: make the immutable-artifact test validate both the current null
 proof state and a future exact green-proof state. The wrapper and recorded
 qualification are unchanged. Green that final proof-transition-ready artifact
 set before closeout.
+
+### Proof-only closeout
+
+- Final proof-transition-ready implementation `d98a011` passed Base job
+  `95903371693`, Optional job `95903371721`, and CI `32197145780`.
+- Bound the exact implementation commit, CI/job IDs, preproof registry bytes,
+  SHA-256 and Git blob, canonical artifact-set SHA-256, and four artifact Git
+  blobs in `remote_implementation_proof`.
+- Added a proof-closeout document and five tests. The wrapper, qualification,
+  implementation artifacts, fixed paths, caps, and route table did not change.
+- Repeated qualification: zero. Readiness, private source, cohort, archive,
+  neural, target, model, prediction, score, network, hardware, FW2/CIL1,
+  other-project, release, and claim operations: zero.
+- Twenty-six focused and all 4,214 clean dependency-light tests pass with 204
+  expected skips and zero failures.
+
+Immediate gate: commit, push, and green this proof-only closeout in both jobs.
+Only then may the one registered Stage 2 structural command run once.

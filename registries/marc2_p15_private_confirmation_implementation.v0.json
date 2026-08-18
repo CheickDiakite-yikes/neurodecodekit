@@ -160,12 +160,41 @@
     "workers": 1,
     "numerical_jobs": 1
   },
-  "remote_implementation_proof": null,
+  "remote_implementation_proof": {
+    "commit": "d98a0115d2fd113929d512dfc7fb372a38b8f5c8",
+    "CI_run_id": 32197145780,
+    "base_job_id": 95903371693,
+    "optional_neuro_job_id": 95903371721,
+    "both_required_jobs_green": true,
+    "scope_changed_after_qualification": false,
+    "qualification_route": "MARC2VR12P-G1",
+    "qualification_repeated_for_proof_closeout": false,
+    "private_operations_during_proof_closeout": 0,
+    "implementation_registry_preproof_bytes": 6984,
+    "implementation_registry_preproof_sha256": "63f45df1f3ae184e29c296b9b7caf4ba0c02985aaae482080800988c4ffcd8ca",
+    "implementation_registry_preproof_git_blob": "65c3652fe2519abfa965e32b840b4c5d970a9db1",
+    "implementation_artifact_set_sha256": "2e1701d830be08ab15f12df4a6efedd0f5ffdf417ce5beb46bdc4cd30693e68a",
+    "implementation_artifact_git_blobs": {
+      "wrapper_module": "7f085fa5d0f38010a5c5e7f36008314ab2c08c67",
+      "behavior_tests": "b571bf39f36ddf17357b8b8d77908d40ff9c3287",
+      "implementation_proof_tests": "95185948b9f3d0fa6aa904123ad288b931cb2a63",
+      "implementation_document": "4c85128bfb6d0e262d81794128bef661c59761c4"
+    }
+  },
   "stage_2_status": {
     "private_execution_available_now": false,
     "proof_closeout_required_before_readiness": true,
+    "private_execution_available_after_closeout_is_remotely_green": true,
     "registered_private_invocation_limit_after_proof": 1,
     "retry_rerun_resume_fallback_or_substitution_limit": 0
+  },
+  "proof_closeout_verification": {
+    "focused_tests_passed": 26,
+    "complete_dependency_light_tests_passed": 4214,
+    "expected_skips": 204,
+    "new_failures": 0,
+    "qualification_repeated": false,
+    "private_operations": 0
   },
   "warnings": [
     "generated_qualification_only",

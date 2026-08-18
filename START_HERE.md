@@ -53,12 +53,15 @@ route `MARC2VR12P-G1` passed 12/12 fixed-path cases and 61 direct refusals in
 request, decision, and VR12A artifacts, exposes only fixed commands, and emits
 aggregate R1-R6 outcomes without private failure detail.
 
-`remote_implementation_proof` is still null, so `execute` refuses before
-readiness or private-path access. Immediate gate: commit, push, and green this
-exact Stage 1 implementation, then green a proof-only closeout. Only after both
-barriers may the one 418,755-byte target-free structural command run once. FW2,
-CIL1, archive payload, neural data, targets, models, predictions, scores,
-release, and scientific claims remain closed.
+Final implementation `d98a011` passed Base job `95903371693`, Optional job
+`95903371721`, and CI `32197145780`. Read
+`docs/MARC_2_P15_PRIVATE_CONFIRMATION_PROOF_CLOSEOUT.md`. The implementation
+registry now binds those exact bytes, but this proof-only closeout has delayed
+effect until its own commit and both jobs are green. No qualification or
+private operation was repeated. Only after that barrier may the one 418,755-
+byte target-free structural command run once. FW2, CIL1, archive payload,
+neural data, targets, models, predictions, scores, release, and scientific
+claims remain closed.
 
 ## Prior Frontier: MARC2-VR11P Consumed At Structural Route R2
 

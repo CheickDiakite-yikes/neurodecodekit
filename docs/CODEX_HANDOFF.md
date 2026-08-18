@@ -5936,6 +5936,16 @@ the proof test accepts both null and exact green states. The wrapper and
 qualification did not change. Green the final artifact set before closeout;
 do not use `2f92988` for private execution.
 
+Final implementation `d98a011` passed Base job `95903371693`, Optional job
+`95903371721`, and CI `32197145780`. Read
+`docs/MARC_2_P15_PRIVATE_CONFIRMATION_PROOF_CLOSEOUT.md` and its test. The
+registry now binds exact preproof and artifact-set identities without changing
+the wrapper or repeating qualification. This closeout must itself be committed,
+pushed, and green in both jobs before `execute`, readiness, or a private-path
+operation. Twenty-six focused and all 4,214 clean dependency-light tests pass
+with 204 expected skips. Keep the unrelated tracker inspection NDJSON
+untouched.
+
 Immediate gate: commit, push, and require Base Python and Optional Neuro
 Readers green for this exact implementation. Then update only the proof state,
 commit and push that proof-only closeout, and require both jobs green. Do not

@@ -3070,7 +3070,10 @@ fixed-path and `remote_implementation_proof` remains null, so it refuses before
 readiness or a private-path operation. Twenty-one focused and all 4,209 clean
 dependency-light tests pass with 204 expected skips.
 
-Current gate: green this exact implementation, then green one proof-only
-closeout. Only after both barriers may the one 418,755-byte target-free
-structural confirmation run once. FW2 remains a separate post-R1 packet, and
-CIL1 remains later.
+Final implementation `d98a011` passed Base job `95903371693`, Optional job
+`95903371721`, and CI `32197145780`. Its proof-only closeout now binds the exact
+preproof registry and implementation artifact set without repeating
+qualification or touching a private path. Current gate: green that closeout in
+both jobs. Only then may the one 418,755-byte target-free structural
+confirmation run once. FW2 remains a separate post-R1 packet, and CIL1 remains
+later.

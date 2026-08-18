@@ -358,13 +358,19 @@ peak incremental output, and retained zero. Every repository-private, archive,
 neural, target, model, prediction, score, FW2/CIL1, network, hardware,
 other-project, and claim counter stayed zero.
 
-`remote_implementation_proof` remains null. Do not run readiness, stat or open
-the registered private source, create the real output root, or call Stage 2
-until this exact implementation and a proof-only closeout are both committed,
-pushed, and green in both jobs. The private command still has one invocation
-and no retry. R1 would make only a separate FW2 preregistration eligible; FW2
-execution, CIL1, archive payload, neural data, targets, models, scores, release,
-and scientific claims remain closed.
+Final proof-transition-ready implementation
+`d98a0115d2fd113929d512dfc7fb372a38b8f5c8` passed Base Python job
+`95903371693`, Optional Neuro Readers job `95903371721`, and CI `32197145780`.
+Read `docs/MARC_2_P15_PRIVATE_CONFIRMATION_PROOF_CLOSEOUT.md` and the new
+matching test. The implementation registry now binds those exact bytes, but
+the closeout has delayed effect until its own commit is pushed and both jobs
+are green. It repeats no qualification and performs zero private operations.
+
+Do not run readiness, stat or open the registered private source, create the
+real output root, or call Stage 2 before that closeout proof. The private
+command still has one invocation and no retry. R1 would make only a separate
+FW2 preregistration eligible; FW2 execution, CIL1, archive payload, neural
+data, targets, models, scores, release, and scientific claims remain closed.
 
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-
