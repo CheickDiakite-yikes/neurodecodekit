@@ -32,10 +32,12 @@ That closeout is now green as `8f2ad16` in CI `32170855368`. Read
 `registries/marc2_p15_private_confirmation_authorization_request.v0.json`.
 VR12P requests a future generated wrapper and, only after its own green proof,
 one 418,755-byte target-free structural read that may freeze one private cohort
-manifest. Every current authorization remains false. The packet must be
-committed, pushed, remotely green, proof-closed, identified as the sole active
-Tier C gate, and receive a fresh packet-bound maintainer decision before any
-implementation or private path operation.
+manifest. Request `8165894` passed Base job `95825074164`, Optional job
+`95825073430`, and CI `32171993061`. Every current authorization remains false.
+The proof-only request closeout must now be committed, pushed, and remotely
+green before the packet is identified as the sole active Tier C gate and can
+receive a fresh packet-bound maintainer decision. No implementation or private
+path operation is authorized yet.
 
 ## Prior Frontier: MARC2-VR11P Consumed At Structural Route R2
 

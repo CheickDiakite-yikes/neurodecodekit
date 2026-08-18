@@ -4,8 +4,8 @@ Date: 2026-08-18
 
 Lane: `MARC2-VR12P`
 
-Status: **All-false Tier C request pending commit, push, remote green proof,
-and a fresh packet-bound maintainer decision**
+Status: **All-false Tier C request remotely green; proof-only closeout pending
+its own remote green proof before packet identification**
 
 Request:
 `registries/marc2_p15_private_confirmation_authorization_request.v0.json`
@@ -27,6 +27,15 @@ This packet records no decision and grants no authority now. The maintainer's
 current instruction to complete steps 1-6 predates this exact packet and is not
 retroactive Tier C authority for it. A fresh unambiguous packet-bound message
 is required after the packet's own remote proof is green.
+
+The immutable request commit
+`816589473eafabdebe66be2b4e921b005f04a959` passed Base Python job
+`95825074164`, Optional Neuro Readers job `95825073430`, and CI
+`32171993061`. This proof-only closeout records those results and the exact
+request artifact snapshots. It changes no requested scope and performs no
+private, real-data, or scientific operation. The closeout itself must be
+committed, pushed, and green in both required jobs before this packet can be
+identified as the sole active Tier C gate.
 
 ## Why This Is The Smallest Needle-Moving Read
 

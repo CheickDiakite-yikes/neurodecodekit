@@ -4,9 +4,41 @@
   "request_id": "MARC-2-VR12P-P15-private-confirmation-authorization-request-v0",
   "lane_id": "MARC2-VR12P",
   "recorded_at_local": "2026-08-18",
-  "status": "all_false_Tier_C_request_local_pre_green",
+  "status": "all_false_Tier_C_request_remotely_green_proof_closeout_pending",
   "proof_posture": "request_only_no_private_real_or_scientific_operation_authorized",
-  "remote_green_request_proof": null,
+  "remote_green_request_proof": {
+    "request_commit": "816589473eafabdebe66be2b4e921b005f04a959",
+    "CI_run_id": 32171993061,
+    "base_python_job_id": 95825074164,
+    "optional_neuro_job_id": 95825073430,
+    "both_required_jobs_green": true,
+    "request_artifacts_at_commit": [
+      {
+        "role": "authorization_packet",
+        "path": "docs/MARC_2_P15_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md",
+        "bytes": 8846,
+        "sha256": "5cbb83c93d5d9adc4e8c70181bc28d7ad10926861e6410a27f77a1c5c277e81e",
+        "git_blob": "1a4ce62ecdfc19ef7348d1fdd353d8c2fbe00d17"
+      },
+      {
+        "role": "authorization_request",
+        "path": "registries/marc2_p15_private_confirmation_authorization_request.v0.json",
+        "bytes": 15748,
+        "sha256": "7f83decae224eebe868958de64fbd5eb4676113b564014fd80f6ddd0bf0d189d",
+        "git_blob": "59c3c6c2d7e7f068e884dc91ab6e4c8196a1e65d"
+      },
+      {
+        "role": "authorization_request_test",
+        "path": "tests/test_marc2_p15_private_confirmation_authorization_request.py",
+        "bytes": 9530,
+        "sha256": "2bee8b1c322332fd6684093354582053bfff9821b9f52444de60251b7c384c3d",
+        "git_blob": "8b1741629304bb67c780cb4cc330dd084cc6edce"
+      }
+    ],
+    "scope_changed_by_proof_record": false,
+    "private_real_or_scientific_operation_sum": 0,
+    "proof_closeout_remote_green_required_before_packet_identification": true
+  },
   "green_predecessor_proof": {
     "VR12A_registration": {
       "commit": "5107eb3d714f7713a216b9ad4e21c06300cd8c21",
@@ -335,7 +367,7 @@
     "CIL1_authorized_after_R1": false
   },
   "next_gate": {
-    "exact_request_commit_push_and_both_jobs_green_required": true,
+    "exact_request_commit_push_and_both_jobs_green_required": false,
     "proof_closeout_commit_push_and_both_jobs_green_required": true,
     "fresh_packet_bound_decision_required_after_green": true,
     "generated_implementation_allowed_now": false,

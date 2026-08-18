@@ -3051,8 +3051,10 @@ R1 may freeze one private source-exact cohort manifest with 12-19 subjects,
 at or below 8 GiB. Public output is aggregate counts and hashes only. The run is
 one-thread, zero-network, zero-new-payload, under 2 MiB output, and no-rerun.
 
-Current phase: packet pending commit/push/remote-green proof and a later fresh
-packet-bound decision. Every current authorization is false and every current
-operation counter is zero. No private read, cohort freeze, archive payload,
-neural data, target, model, prediction, score, FW2/CIL1, release, or claim is
-authorized.
+Request `8165894` passed Base job `95825074164`, Optional job `95825073430`,
+and CI `32171993061`. Current phase: proof-only request closeout pending its own
+commit, push, and both green remote jobs, followed by identification as the sole
+active Tier C packet and a fresh packet-bound decision. Every current
+authorization is false and every current operation counter is zero. No private
+read, cohort freeze, archive payload, neural data, target, model, prediction,
+score, FW2/CIL1, release, or claim is authorized.

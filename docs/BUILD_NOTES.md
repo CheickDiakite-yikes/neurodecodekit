@@ -11558,3 +11558,19 @@ target-free structural-confirmation packet. FW2 and CIL1 remain closed.
 Immediate gate: commit, push, and green the exact packet, then make one proof-
 only request closeout. Only after that closeout is green may VR12P be named as
 the sole active Tier C gate for a fresh maintainer decision.
+
+### Request remote-proof closeout
+
+- Exact request `816589473eafabdebe66be2b4e921b005f04a959` passed Base
+  Python job `95825074164`, Optional Neuro Readers job `95825073430`, and CI
+  `32171993061`.
+- Bound byte and SHA-256 snapshots of the request document, registry, and test
+  from that exact commit. A focused test reads those historical bytes through
+  Git so this closeout cannot redefine the remotely green request.
+- No requested scope changed. Every authorization remains false and every
+  private, real-data, scientific, other-project, and claim operation remains
+  zero.
+
+Immediate gate: commit, push, and green this proof-only closeout. Only then may
+VR12P be identified as the sole active Tier C packet for a fresh packet-bound
+maintainer decision.

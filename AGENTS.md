@@ -323,11 +323,14 @@ It is an all-false two-stage request: generated/mock fixed-path wrapper first,
 then only after exact green proof one 418,755-byte target-free structural read,
 one VR12A call, and at most one private source-exact cohort manifest plus one
 aggregate report under 2 MiB. R1 would make a separate FW2 preregistration
-eligible, not authorized. No packet implementation, private path access,
-cohort freeze, archive member, neural payload, target, model, score, FW2, or
-CIL1 is authorized now. The current user instruction is not retroactive; the
-packet and its proof closeout must be remotely green and identified as the sole
-Tier C gate before a fresh packet-bound decision.
+eligible, not authorized. Request `816589473eafabdebe66be2b4e921b005f04a959`
+passed Base Python job `95825074164`, Optional Neuro Readers job `95825073430`,
+and CI `32171993061`. Its proof-only closeout must itself be committed, pushed,
+and green in both jobs before VR12P is identified as the sole Tier C gate. No
+packet implementation, private path access, cohort freeze, archive member,
+neural payload, target, model, score, FW2, or CIL1 is authorized now. The
+current and every earlier user instruction is not retroactive; a fresh packet-
+bound decision is required after closeout proof.
 
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-

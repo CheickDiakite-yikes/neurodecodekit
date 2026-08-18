@@ -1,14 +1,12 @@
 import hashlib
 import json
+import subprocess
 import unittest
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REQUEST_PATH = (
-    ROOT
-    / "registries/marc2_p15_private_confirmation_authorization_request.v0.json"
-)
+REQUEST_PATH = ROOT / "registries/marc2_p15_private_confirmation_authorization_request.v0.json"
 DOC_PATH = ROOT / "docs/MARC_2_P15_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md"
 
 
@@ -18,23 +16,48 @@ class Marc2P15PrivateConfirmationAuthorizationRequestTests(unittest.TestCase):
         cls.request_bytes = REQUEST_PATH.read_bytes()
         cls.request = json.loads(cls.request_bytes)
 
-    def test_identity_is_all_false_local_request(self):
+    def test_identity_is_all_false_remotely_green_request(self):
         self.assertEqual(
             self.request["schema_name"],
             "neurodecodekit.marc2_p15_private_confirmation_authorization_request",
         )
         self.assertEqual(self.request["lane_id"], "MARC2-VR12P")
         self.assertEqual(
-            self.request["status"], "all_false_Tier_C_request_local_pre_green"
+            self.request["status"],
+            "all_false_Tier_C_request_remotely_green_proof_closeout_pending",
         )
-        self.assertIsNone(self.request["remote_green_request_proof"])
+        proof = self.request["remote_green_request_proof"]
+        self.assertEqual(
+            proof["request_commit"],
+            "816589473eafabdebe66be2b4e921b005f04a959",
+        )
+        self.assertEqual(proof["CI_run_id"], 32_171_993_061)
+        self.assertEqual(proof["base_python_job_id"], 95_825_074_164)
+        self.assertEqual(proof["optional_neuro_job_id"], 95_825_073_430)
+        self.assertTrue(proof["both_required_jobs_green"])
+        self.assertFalse(proof["scope_changed_by_proof_record"])
+        self.assertEqual(proof["private_real_or_scientific_operation_sum"], 0)
+
+    def test_remote_green_request_snapshot_is_immutable(self):
+        proof = self.request["remote_green_request_proof"]
+        for binding in proof["request_artifacts_at_commit"]:
+            payload = subprocess.run(
+                [
+                    "git",
+                    "show",
+                    f"{proof['request_commit']}:{binding['path']}",
+                ],
+                cwd=ROOT,
+                capture_output=True,
+                check=True,
+            ).stdout
+            with self.subTest(role=binding["role"]):
+                self.assertEqual(len(payload), binding["bytes"])
+                self.assertEqual(hashlib.sha256(payload).hexdigest(), binding["sha256"])
 
     def test_all_current_authority_and_operations_are_false_or_zero(self):
         self.assertTrue(
-            all(
-                value is False
-                for value in self.request["current_authorization_flags"].values()
-            )
+            all(value is False for value in self.request["current_authorization_flags"].values())
         )
         self.assertTrue(
             all(value == 0 for value in self.request["current_operation_counters"].values())
@@ -51,9 +74,7 @@ class Marc2P15PrivateConfirmationAuthorizationRequestTests(unittest.TestCase):
             "873484aaf270bc5b1499e4b0449c9e8ef138c623",
         )
         closeout = proof["VR12A_proof_closeout"]
-        self.assertEqual(
-            closeout["commit"], "8f2ad163f3beacaf3cbcc0287fe305575a34b6cc"
-        )
+        self.assertEqual(closeout["commit"], "8f2ad163f3beacaf3cbcc0287fe305575a34b6cc")
         self.assertEqual(closeout["CI_run_id"], 32_170_855_368)
         self.assertTrue(closeout["both_required_jobs_green"])
         self.assertFalse(closeout["generated_qualification_repeated"])
@@ -92,9 +113,7 @@ class Marc2P15PrivateConfirmationAuthorizationRequestTests(unittest.TestCase):
         paths = self.request["future_fixed_paths"]
         self.assertIn("vr12p", paths["fresh_readiness_certificate"])
         self.assertIn("p15_private_confirmation", paths["new_output_root"])
-        self.assertNotIn(
-            paths["new_output_root"], paths["named_consumed_paths"]
-        )
+        self.assertNotIn(paths["new_output_root"], paths["named_consumed_paths"])
         self.assertTrue(paths["fresh_readiness_parent_must_be_absent"])
         self.assertTrue(paths["new_output_root_must_be_absent"])
         self.assertFalse(paths["operation_on_named_consumed_path_allowed"])
@@ -169,9 +188,19 @@ class Marc2P15PrivateConfirmationAuthorizationRequestTests(unittest.TestCase):
         self.assertTrue(protocol["proof_closeout_commit_push_and_both_remote_jobs_green_required"])
         self.assertTrue(protocol["fresh_unambiguous_packet_bound_maintainer_message_required"])
         self.assertFalse(protocol["current_or_earlier_continue_is_retroactive_authority"])
-        self.assertTrue(protocol["decision_commit_push_and_both_remote_jobs_green_before_implementation"])
-        self.assertTrue(protocol["exact_future_implementation_and_closeout_green_before_private_open"])
+        self.assertTrue(
+            protocol["decision_commit_push_and_both_remote_jobs_green_before_implementation"]
+        )
+        self.assertTrue(
+            protocol["exact_future_implementation_and_closeout_green_before_private_open"]
+        )
         self.assertFalse(protocol["packet_or_decision_alone_authorizes_private_open"])
+        self.assertFalse(
+            self.request["next_gate"]["exact_request_commit_push_and_both_jobs_green_required"]
+        )
+        self.assertTrue(
+            self.request["next_gate"]["proof_closeout_commit_push_and_both_jobs_green_required"]
+        )
 
     def test_public_packet_contains_no_selected_identity_or_scientific_upgrade(self):
         text = self.request_bytes.decode("utf-8")
@@ -186,9 +215,7 @@ class Marc2P15PrivateConfirmationAuthorizationRequestTests(unittest.TestCase):
         ):
             with self.subTest(forbidden=forbidden):
                 self.assertNotIn(forbidden, text)
-        self.assertFalse(
-            self.request["next_gate"]["private_structural_confirmation_allowed_now"]
-        )
+        self.assertFalse(self.request["next_gate"]["private_structural_confirmation_allowed_now"])
         self.assertFalse(
             self.request["next_gate"][
                 "archive_payload_neural_target_model_prediction_or_score_allowed_now"
