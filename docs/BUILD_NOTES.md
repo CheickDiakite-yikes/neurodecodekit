@@ -11578,3 +11578,25 @@ the sole active Tier C gate for a fresh maintainer decision.
 Immediate gate: commit, push, and green this proof-only closeout. Only then may
 VR12P be identified as the sole active Tier C packet for a fresh packet-bound
 maintainer decision.
+
+## 2026-08-18 - MARC2-VR12P Authorization Decision
+
+- Final proof head `5e4354a2928d0b4d99ff686585878751b94b6605`
+  passed Base Python job `95830254383`, Optional Neuro Readers job
+  `95830254539`, and CI `32173596281` after the shallow-checkout-only test
+  failure was corrected without changing packet scope.
+- Codex identified VR12P as the sole active Tier C packet with request
+  `8165894`, proof head `5e4354a`, both CI runs/jobs, the exact two-stage scope,
+  and the separate FW2 boundary. The maintainer's next message was exactly the
+  eight UTF-8 bytes `continue`.
+- Recorded a separate delayed-effect decision that quotes those actual bytes,
+  binds both immutable packet snapshots, and authorizes no implementation or
+  private operation until the decision's own exact commit and both jobs are
+  green.
+- Decision recording performed zero readiness, ignored-path, private-source,
+  archive, neural, target, model, prediction, score, network, hardware,
+  other-project, release, or claim operations.
+
+Immediate gate: commit, push, and green the decision. Only then implement and
+generated-qualify the fixed VR12P wrapper. The one private structural read
+remains behind the separately green wrapper and proof-closeout barriers.

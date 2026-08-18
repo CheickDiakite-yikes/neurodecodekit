@@ -325,12 +325,26 @@ one VR12A call, and at most one private source-exact cohort manifest plus one
 aggregate report under 2 MiB. R1 would make a separate FW2 preregistration
 eligible, not authorized. Request `816589473eafabdebe66be2b4e921b005f04a959`
 passed Base Python job `95825074164`, Optional Neuro Readers job `95825073430`,
-and CI `32171993061`. Its proof-only closeout must itself be committed, pushed,
-and green in both jobs before VR12P is identified as the sole Tier C gate. No
-packet implementation, private path access, cohort freeze, archive member,
-neural payload, target, model, score, FW2, or CIL1 is authorized now. The
-current and every earlier user instruction is not retroactive; a fresh packet-
-bound decision is required after closeout proof.
+and CI `32171993061`. Its final proof head `5e4354a` passed both jobs in CI
+`32173596281` before VR12P was identified as the sole Tier C gate. No packet
+implementation, private path access, cohort freeze, archive member, neural
+payload, target, model, score, FW2, or CIL1 was authorized by those proof
+records. The current and every earlier user instruction was not retroactive; a
+fresh packet-bound decision remained required after closeout proof.
+
+That fresh packet-bound message has now arrived as the exact eight UTF-8 bytes
+`continue`. Read
+`docs/MARC_2_P15_PRIVATE_CONFIRMATION_AUTHORIZATION_DECISION.md` and
+`registries/marc2_p15_private_confirmation_authorization_decision.v0.json`.
+The decision binds request `8165894`, CI `32171993061`, Base Python job
+`95825074164`, Optional Neuro Readers job `95825073430`, and final green proof
+head `5e4354a`, CI `32173596281`, Base Python job `95830254383`, and Optional
+Neuro Readers job `95830254539`. It authorizes only the unchanged two-stage
+VR12P sequence by reference and is ineffective until its own exact commit is
+pushed and both CI jobs are green. Before that proof, do not implement the
+wrapper or touch readiness, `.codex_work`, the private source, or an output
+root. FW2, CIL1, archive payload, neural data, targets, models, predictions,
+scores, release, and claims remain closed.
 
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-

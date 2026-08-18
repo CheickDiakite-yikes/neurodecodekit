@@ -5885,3 +5885,24 @@ Immediate gate: commit and push this exact registration and require both Base
 Python and Optional Neuro Readers green. Do not implement before that proof,
 and do not open a private path, consumed VR11P state, archive member, neural
 payload, target, model, score, FW2/CIL1 surface, or other project.
+
+## 2026-08-18 MARC2-VR12P Decision Handoff
+
+Read `docs/MARC_2_P15_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md`,
+`registries/marc2_p15_private_confirmation_authorization_request.v0.json`,
+`docs/MARC_2_P15_PRIVATE_CONFIRMATION_AUTHORIZATION_DECISION.md`, and the
+decision registry/test.
+
+Request `8165894` passed CI `32171993061`. Final proof head `5e4354a` passed
+Base Python job `95830254383`, Optional Neuro Readers job `95830254539`, and CI
+`32173596281`. After Codex named VR12P as the sole active Tier C packet, the
+maintainer's next exact message was `continue`. The decision quotes those eight
+UTF-8 bytes and binds only the unchanged green packet.
+
+Immediate gate: commit, push, and require both jobs green for this decision.
+Before that proof, do not implement the wrapper or touch readiness, ignored
+paths, the private source, or the new output root. After green, Stage 1 is only
+generated/mock wrapper qualification. Stage 2 remains behind the exact wrapper
+and proof-closeout remote-green barriers. Keep the unrelated tracker inspection
+NDJSON untouched. FW2, CIL1, archive payload, neural data, targets, models,
+scores, release, and scientific claims remain closed.

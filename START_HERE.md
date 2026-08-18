@@ -25,19 +25,24 @@ model, score, FW2, CIL1, or claim operation. Generated route `MARC2VR12A-G1`
 passed 12/12 success paths and 36/36 direct refusals over 5,147,208 generated
 bytes in 1.092868333 seconds at 44,417,024-byte peak RSS. Exact implementation
 `873484a` passed Base job `95819297085`, Optional job `95819297010`, and CI
-`32170217284`. The current proof-only closeout must itself become remotely green
-before one all-false Tier C structural-confirmation packet may be prepared.
-That closeout is now green as `8f2ad16` in CI `32170855368`. Read
+`32170217284`. Its proof-only closeout became green as `8f2ad16` in CI
+`32170855368` before the all-false Tier C packet was prepared. Read
 `docs/MARC_2_P15_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md` and
 `registries/marc2_p15_private_confirmation_authorization_request.v0.json`.
 VR12P requests a future generated wrapper and, only after its own green proof,
 one 418,755-byte target-free structural read that may freeze one private cohort
 manifest. Request `8165894` passed Base job `95825074164`, Optional job
-`95825073430`, and CI `32171993061`. Every current authorization remains false.
-The proof-only request closeout must now be committed, pushed, and remotely
-green before the packet is identified as the sole active Tier C gate and can
-receive a fresh packet-bound maintainer decision. No implementation or private
-path operation is authorized yet.
+`95825073430`, and CI `32171993061`. Its proof-only request closeout then became
+green before the packet was identified as the sole active Tier C gate and
+received a fresh packet-bound maintainer decision.
+
+That proof is green at final head `5e4354a` under CI `32173596281`. After VR12P
+was identified as the sole active Tier C packet, the maintainer's next exact
+message was `continue`. Read
+`docs/MARC_2_P15_PRIVATE_CONFIRMATION_AUTHORIZATION_DECISION.md` and its
+registry. The decision binds only the unchanged packet and remains ineffective
+until its own commit, push, Base Python job, and Optional Neuro Readers job are
+green. No wrapper or private path operation may begin before that proof.
 
 ## Prior Frontier: MARC2-VR11P Consumed At Structural Route R2
 

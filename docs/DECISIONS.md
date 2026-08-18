@@ -9571,3 +9571,26 @@ rerun.
 Boundary decision: packet preparation is all false. R1 would make a separate
 FW2 preregistration eligible but does not authorize FW2, CIL1, archive access,
 neural data, targets, models, scores, release, or scientific claims.
+
+## 0298 - Bind Fresh Short Form Only To Green VR12P
+
+Authority decision: after request `8165894` and final proof head `5e4354a`
+passed both required remote jobs, Codex identified `MARC2-VR12P` as the sole
+active Tier C packet and stated its exact two-stage scope and boundaries. Bind
+the maintainer's next exact message, `continue`, only to that unchanged packet
+by reference. Do not fabricate the packet text as a user utterance or infer
+any broader authority.
+
+Order decision: this decision has delayed effect. Commit, push, and green both
+required CI jobs before Stage 1 implementation. Then commit, push, and green
+the exact generated wrapper and a separate proof-only closeout before one
+readiness invocation or private path operation.
+
+Execution decision: after those barriers, permit one 418,755-byte target-free
+structural read, one VR12A call, one R1-only private structural cohort manifest,
+and one aggregate R1-R6 report under the packet's one-thread, 256 MiB RSS,
+15 GiB free-disk, 2 MiB output, zero-network, and zero-rerun limits.
+
+Boundary decision: R1 may make a new FW2 preregistration eligible but does not
+authorize FW2 execution. No archive member, neural payload, target, training,
+prediction, score, CIL1, release, or scientific claim is authorized.
