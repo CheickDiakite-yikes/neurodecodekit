@@ -7,21 +7,26 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR12A P15 Repair Registration
+## Current Frontier: MARC2-VR12A Generated Repair Green
 
 VR11P is consumed at aggregate route `MARC2VR11P-R2`, which maps only to P15,
 the suffix-bearing BIDS identity class. It did not reveal a path, failed value,
 row, person, selection, or cohort. Read
-`docs/MARC_2_P15_RUN_INDEX_REPAIR_PREREGISTRATION.md` and
-`registries/marc2_p15_run_index_repair_contract.v0.json`.
+`docs/MARC_2_P15_RUN_INDEX_REPAIR_PREREGISTRATION.md`,
+`docs/MARC_2_P15_RUN_INDEX_REPAIR_IMPLEMENTATION.md`, and
+`docs/MARC_2_P15_RUN_INDEX_REPAIR_RESULT.md` with their registries.
 
 VR12A freezes one standards-backed generated repair: accept one- or two-digit
 ASCII `run-<index>` spellings, group them by integer value, preserve the exact
 source member name and reservation bytes, and retain every subject/session,
 task, companion, count, split, rank, and storage gate. This registration has
 no private executor and authorizes no real source, archive, neural, target,
-model, score, FW2, CIL1, or claim operation. Implementation begins only after
-the exact registration commit passes both remote CI jobs.
+model, score, FW2, CIL1, or claim operation. Generated route `MARC2VR12A-G1`
+passed 12/12 success paths and 36/36 direct refusals over 5,147,208 generated
+bytes in 1.092868333 seconds at 44,417,024-byte peak RSS. Exact implementation
+`873484a` passed Base job `95819297085`, Optional job `95819297010`, and CI
+`32170217284`. The current proof-only closeout must itself become remotely green
+before one all-false Tier C structural-confirmation packet may be prepared.
 
 ## Prior Frontier: MARC2-VR11P Consumed At Structural Route R2
 

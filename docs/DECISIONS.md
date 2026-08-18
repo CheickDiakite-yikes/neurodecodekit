@@ -9528,3 +9528,25 @@ packet be prepared.
 Boundary decision: registration performs zero private, consumed-state, archive,
 neural, target, cohort, model, prediction, score, network, provider, hardware,
 other-project, FW2/CIL1, release, or scientific-claim operations.
+
+## 0296 - Bind Generated P15 Repair Before Any Private Confirmation
+
+Evidence decision: generated route `MARC2VR12A-G1` passed all 12 registered
+success paths and 36 direct refusals. Padded, unpadded, and bundle-consistent
+mixed-width sources preserve one semantic selection while retaining distinct
+raw and source-exact-name provenance hashes.
+
+Proof decision: exact implementation
+`873484aaf270bc5b1499e4b0449c9e8ef138c623` passed Base Python job
+`95819297085`, Optional Neuro Readers job `95819297010`, and CI
+`32170217284`. Bind those IDs in a proof-only closeout without rerunning the
+generated qualification.
+
+Order decision: the proof-only closeout must itself be committed, pushed, and
+green in both remote jobs before one all-false Tier C structural-confirmation
+packet is prepared. That future packet needs a fresh packet-bound maintainer
+decision before any private read. FW2/CIL1 remain later, separate gates.
+
+Boundary decision: this proof closeout performs zero private, consumed-state,
+archive, neural, target, cohort, model, prediction, score, network, provider,
+hardware, other-project, FW2/CIL1, release, or scientific-claim operations.

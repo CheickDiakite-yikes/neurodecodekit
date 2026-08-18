@@ -6,8 +6,8 @@ Lane: `MARC2-VR12A`
 
 Route: `MARC2VR12A-G1`
 
-Status: **Generated-only qualification passed; no private confirmation or
-scientific result**
+Status: **Generated-only qualification remotely green; no private confirmation
+or scientific result**
 
 ## Result
 
@@ -55,16 +55,20 @@ This generated result proves the repair behaves as preregistered. It does not
 prove that an unpadded run index caused private P15, that the repaired adapter
 accepts the real source, or that a real cohort exists.
 
-The exact implementation must still be committed, pushed, and remotely green,
-then bound by one proof-only closeout. A later target-free private confirmation
-remains a separate Tier C packet and fresh packet-bound maintainer decision.
-FW2 and CIL1 remain closed.
+Exact implementation `873484aaf270bc5b1499e4b0449c9e8ef138c623`
+passed Base Python job `95819297085` and Optional Neuro Readers job
+`95819297010` in CI `32170217284`. This proof-only closeout binds those IDs
+without rerunning the qualification. The closeout itself must become remotely
+green before an all-false Tier C confirmation packet is eligible. A later
+target-free private confirmation still requires that packet and a fresh
+packet-bound maintainer decision. FW2 and CIL1 remain closed.
 
 Verification passed 34 focused tests and all 4,160 dependency-light tests with
 204 expected skips. A local optional-neuro single-process sweep passed 4,229 of
 4,231 tests with 35 expected skips; its two accumulated-process mechanical-gate
 failures each passed in a fresh one-thread process. Both clean remote CI jobs
-must still pass before the result is proof-bound.
+have now passed for the exact implementation; this proof-only closeout remains
+pending its own remote jobs.
 
 Engineering capability added: generated padded and unpadded BIDS run indices
 now preserve one semantic Freewill selection while retaining source-exact names

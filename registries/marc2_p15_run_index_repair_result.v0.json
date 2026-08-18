@@ -4,7 +4,7 @@
   "result_id": "MARC-2-VR12A-P15-run-index-repair-result-v0",
   "lane_id": "MARC2-VR12A",
   "recorded_at_local": "2026-08-18",
-  "status": "generated_only_result_remote_implementation_proof_pending",
+  "status": "generated_only_result_remote_implementation_green_proof_closeout_pending",
   "proof_posture": "tracked_code_and_generated_structural_interface_only_no_private_or_scientific_value",
   "route": "MARC2VR12A-G1",
   "contract": {
@@ -32,26 +32,34 @@
     },
     "result_test": {
       "path": "tests/test_marc2_p15_run_index_repair_result.py",
-      "bytes": 5118,
-      "sha256": "ddf0cd15cf30e98c9b7e8ca1a02eca91457d5277927db2e7893ecd3bc5247547"
+      "bytes": 5650,
+      "sha256": "399a88fe6e8fbb0881d5c285d962a025aa9956df649ac42ba46f1c83917e548c"
     },
     "implementation_document": {
       "path": "docs/MARC_2_P15_RUN_INDEX_REPAIR_IMPLEMENTATION.md",
-      "bytes": 4337,
-      "sha256": "ceab0fb0aeb8a981f95de28973757bde2caed81ea4a8ec9cde8b31b46dcf416a"
+      "bytes": 4388,
+      "sha256": "7931c29f18723d627508819d3dc2fa353783af2419602decdca72e637bc64598"
     },
     "result_document": {
       "path": "docs/MARC_2_P15_RUN_INDEX_REPAIR_RESULT.md",
-      "bytes": 2939,
-      "sha256": "4e7d4cfba4af9e33318bf15a17ba4a12fab989fcd116c70bc9af0c20592ff4f8"
+      "bytes": 3236,
+      "sha256": "bb2c279d0dce75f7be8f352ef9726e530831d42399343a8e531fa05e37fedf87"
     },
     "implementation_registry": {
       "path": "registries/marc2_p15_run_index_repair_implementation.v0.json",
-      "bytes": 6237,
-      "sha256": "cb8f2a073b9a315f62d63dd685b2e4475f3a4ea80327e4a8dc8bc363bf4fe385"
+      "bytes": 6729,
+      "sha256": "ab9ecf59d466ff63cad572747945f5dd6942a7d69de0d70c37578c41447140f7"
     }
   },
-  "remote_implementation_proof": null,
+  "remote_implementation_proof": {
+    "commit": "873484aaf270bc5b1499e4b0449c9e8ef138c623",
+    "CI_run_id": 32170217284,
+    "base_python_job_id": 95819297085,
+    "optional_neuro_job_id": 95819297010,
+    "both_required_jobs_green": true,
+    "generated_qualification_repeated_for_closeout": false,
+    "private_operation_performed_for_closeout": false
+  },
   "generated_qualification": {
     "variants": [
       "padded_control",
@@ -150,8 +158,9 @@
     "not_proven": "The generated result does not show that an unpadded run index caused the consumed private P15 result or that the repaired adapter accepts a real source cohort."
   },
   "next_gate": {
-    "exact_implementation_commit_and_both_remote_jobs_green_required": true,
+    "exact_implementation_commit_and_both_remote_jobs_green_required": false,
     "proof_only_closeout_required": true,
+    "proof_only_closeout_commit_and_both_remote_jobs_green_required": true,
     "generated_qualification_rerun_for_proof_forbidden": true,
     "Tier_C_confirmation_packet_eligible_now": false,
     "private_confirmation_authorized": false,

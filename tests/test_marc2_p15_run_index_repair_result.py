@@ -22,9 +22,18 @@ class Marc2P15RunIndexRepairResultTests(unittest.TestCase):
         self.assertEqual(self.result["route"], "MARC2VR12A-G1")
         self.assertEqual(
             self.result["status"],
-            "generated_only_result_remote_implementation_proof_pending",
+            "generated_only_result_remote_implementation_green_proof_closeout_pending",
         )
-        self.assertIsNone(self.result["remote_implementation_proof"])
+        proof = self.result["remote_implementation_proof"]
+        self.assertEqual(
+            proof["commit"], "873484aaf270bc5b1499e4b0449c9e8ef138c623"
+        )
+        self.assertEqual(proof["CI_run_id"], 32_170_217_284)
+        self.assertEqual(proof["base_python_job_id"], 95_819_297_085)
+        self.assertEqual(proof["optional_neuro_job_id"], 95_819_297_010)
+        self.assertTrue(proof["both_required_jobs_green"])
+        self.assertFalse(proof["generated_qualification_repeated_for_closeout"])
+        self.assertFalse(proof["private_operation_performed_for_closeout"])
 
     def test_contract_and_registration_proof_are_bound(self):
         contract = self.result["contract"]

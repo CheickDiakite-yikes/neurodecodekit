@@ -4,8 +4,8 @@ Date: 2026-08-18
 
 Lane: `MARC2-VR12A`
 
-Status: **Generated-only implementation and qualification complete; remote
-implementation proof pending**
+Status: **Generated-only implementation remotely green; proof-only closeout
+pending its own remote proof**
 
 Contract:
 `registries/marc2_p15_run_index_repair_contract.v0.json`
@@ -84,15 +84,16 @@ Readers jobs remain the authoritative remote gate.
 
 Ruff, compilation, registry parsing, CLI help and plan, and diff checks pass.
 The implementation registry intentionally keeps `remote_implementation_proof`
-null until this exact commit passes both remote CI jobs. The measured generated
-qualification is not rerun for that proof-only closeout.
+bound to exact implementation `873484aaf270bc5b1499e4b0449c9e8ef138c623`,
+which passed Base Python job `95819297085` and Optional Neuro Readers job
+`95819297010` in CI `32170217284`. The measured generated qualification was not
+rerun and no private operation occurred for this proof-only closeout.
 
 ## Next Gate
 
-After the exact implementation commit and both remote jobs are green, make one
-proof-only closeout that binds the commit and job IDs without rerunning the
-generated qualification. Only after that proof closeout is itself remotely
-green may an all-false Tier C structural-confirmation packet be prepared.
+Commit and push this proof-only closeout, then require both remote jobs to pass.
+Only after that closeout is remotely green may an all-false Tier C structural-
+confirmation packet be prepared.
 
 Engineering capability added: a generated, standards-aligned run-index adapter
 can preserve semantic selection across padded and unpadded names without
