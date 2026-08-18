@@ -346,6 +346,26 @@ wrapper or touch readiness, `.codex_work`, the private source, or an output
 root. FW2, CIL1, archive payload, neural data, targets, models, predictions,
 scores, release, and claims remain closed.
 
+Decision `b0f251a7fb1b69a0ed79f525ab100499e130390a` passed Base Python
+job `95894058802`, Optional Neuro Readers job `95894058625`, and CI
+`32193964660` before Stage 1. Read
+`docs/MARC_2_P15_PRIVATE_CONFIRMATION_IMPLEMENTATION.md`,
+`registries/marc2_p15_private_confirmation_implementation.v0.json`, and both
+matching test modules. Generated `MARC2VR12P-G1` passed 12 fixed-path success
+paths and 61 direct refusals over 5,147,208 generated input bytes. It ran in
+0.6937790419906378 seconds at 37,142,528-byte peak RSS, reached 217,962 bytes
+peak incremental output, and retained zero. Every repository-private, archive,
+neural, target, model, prediction, score, FW2/CIL1, network, hardware,
+other-project, and claim counter stayed zero.
+
+`remote_implementation_proof` remains null. Do not run readiness, stat or open
+the registered private source, create the real output root, or call Stage 2
+until this exact implementation and a proof-only closeout are both committed,
+pushed, and green in both jobs. The private command still has one invocation
+and no retry. R1 would make only a separate FW2 preregistration eligible; FW2
+execution, CIL1, archive payload, neural data, targets, models, scores, release,
+and scientific claims remain closed.
+
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-
 blind analysis over 72 S004-S015 EDFs. The analysis accepted 1,080 events,

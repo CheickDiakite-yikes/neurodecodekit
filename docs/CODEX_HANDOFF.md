@@ -5906,3 +5906,26 @@ generated/mock wrapper qualification. Stage 2 remains behind the exact wrapper
 and proof-closeout remote-green barriers. Keep the unrelated tracker inspection
 NDJSON untouched. FW2, CIL1, archive payload, neural data, targets, models,
 scores, release, and scientific claims remain closed.
+
+## 2026-08-18 MARC2-VR12P Stage 1 Implementation Handoff
+
+Decision `b0f251a7fb1b69a0ed79f525ab100499e130390a` passed Base Python
+job `95894058802`, Optional Neuro Readers job `95894058625`, and CI
+`32193964660` before Stage 1 began. Read
+`docs/MARC_2_P15_PRIVATE_CONFIRMATION_IMPLEMENTATION.md`, the implementation
+registry, module, and both matching test modules.
+
+Generated `MARC2VR12P-G1` passed 12/12 fixed-path source/order/replay paths and
+61 direct refusals. The recorded pass used 5,147,208 generated input bytes,
+217,962 peak temporary bytes, zero retention, 0.6937790419906378 seconds, and
+37,142,528-byte peak RSS under one thread. Twenty focused tests and all 4,208
+clean dependency-light tests pass with 204 expected skips. No repository-
+private or ignored path was touched.
+
+Immediate gate: commit, push, and require Base Python and Optional Neuro
+Readers green for this exact implementation. Then update only the proof state,
+commit and push that proof-only closeout, and require both jobs green. Do not
+run `execute`, readiness, or any private-path operation before both barriers.
+Keep the unrelated tracker inspection NDJSON untouched. FW2, CIL1, archive
+payload, neural data, targets, models, scores, release, and claims remain
+closed.

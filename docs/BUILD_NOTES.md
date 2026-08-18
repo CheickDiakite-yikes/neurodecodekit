@@ -11600,3 +11600,31 @@ maintainer decision.
 Immediate gate: commit, push, and green the decision. Only then implement and
 generated-qualify the fixed VR12P wrapper. The one private structural read
 remains behind the separately green wrapper and proof-closeout barriers.
+
+## 2026-08-18 - MARC2-VR12P Generated Wrapper Stage 1
+
+- Decision `b0f251a7fb1b69a0ed79f525ab100499e130390a` passed Base Python
+  job `95894058802`, Optional Neuro Readers job `95894058625`, and CI
+  `32193964660` before implementation.
+- Added a dependency-free fixed `plan` / `qualify` / `inspect` / `execute`
+  wrapper. It verifies the exact request, decision, and green VR12A artifacts;
+  no path, URL, threshold, retry, fallback, or substitution argument exists.
+- Generated `MARC2VR12P-G1` passed all 12 source/order/replay paths and 61
+  execution-envelope refusals. A mock consumed R3 path creates no private
+  manifest and emits only an aggregate report.
+- The recorded pass used 5,147,208 generated input bytes, 2,613,227 cumulative
+  temporary write bytes, 217,962 peak incremental output bytes, zero retained
+  bytes, 0.6937790419906378 seconds, and 37,142,528-byte peak RSS under one
+  thread.
+- Twenty focused tests and all 4,208 clean dependency-light tests pass with 204
+  expected skips, exactly 20 tests above the pre-change baseline. The
+  implementation record leaves `remote_implementation_proof` null, so the real
+  executor refuses before readiness and every private-path operation.
+- No repository `.codex_work`, private source, consumed VR9P/VR11P state,
+  archive, neural, target, model, prediction, score, FW2/CIL1, network,
+  hardware, other-project, release, or claim operation occurred.
+
+Immediate gate: commit, push, and green this exact implementation in both jobs.
+Then make a proof-only closeout and green it without repeating qualification.
+Only after that second barrier may the one registered target-free structural
+confirmation run once.

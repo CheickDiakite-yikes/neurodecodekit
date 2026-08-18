@@ -9594,3 +9594,24 @@ and one aggregate R1-R6 report under the packet's one-thread, 256 MiB RSS,
 Boundary decision: R1 may make a new FW2 preregistration eligible but does not
 authorize FW2 execution. No archive member, neural payload, target, training,
 prediction, score, CIL1, release, or scientific claim is authorized.
+
+## 0299 - Keep VR12P Stage 1 Generated And Stage 2 Proof-Gated
+
+Implementation decision: build one dependency-free fixed-path wrapper that
+binds the exact green request, decision, and VR12A artifacts. Qualify all three
+generated run-index spellings in two orders and two replays, require at least
+50 direct refusals, and retain zero generated output.
+
+Failure decision: after a future consumed marker, R2-R6 may emit one aggregate
+route and measured counters but no failure detail or private identity. A
+private cohort manifest is created only on R1. The private runtime uses its
+frozen 650-second cap; generated qualification retains the 45-second cap.
+
+Proof decision: leave `remote_implementation_proof` null in the Stage 1 record.
+Commit, push, and green the exact implementation, then separately commit, push,
+and green a proof-only closeout before readiness or any private-path operation.
+
+Boundary decision: Stage 1 performs zero real/private, archive, neural, target,
+model, prediction, score, FW2/CIL1, network, hardware, other-project, release,
+or claim operations. R1 would make a new FW2 preregistration eligible, not
+authorize FW2 execution.

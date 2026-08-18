@@ -3039,7 +3039,7 @@ passed Base job `95819297085`, Optional job `95819297010`, and CI
 eligible. No private read, cohort, archive payload, neural data, target, model,
 prediction, score, FW2/CIL1, release, or claim was authorized by VR12A.
 
-### MARC2-VR12P - Target-Free Private Cohort Confirmation (Decision Pending)
+### MARC2-VR12P - Target-Free Private Cohort Confirmation (Stage 1 Qualified)
 
 VR12P is the smallest bridge from generated P15 repair to a real FW2 design.
 Its all-false packet requests one generated/mock fixed-path wrapper, followed
@@ -3059,7 +3059,18 @@ score, FW2/CIL1, release, or claim operation.
 Final proof head `5e4354a` passed Base job `95830254383`, Optional job
 `95830254539`, and CI `32173596281`. The maintainer's next exact message after
 sole-packet identification was `continue`; its separate decision now binds only
-the unchanged VR12P scope. Current phase: decision pending its own commit, push,
-and two green remote jobs. Stage 1 may begin only after that proof. Stage 2
-remains behind the exact wrapper and proof-closeout green barriers. FW2 remains
-a separate post-R1 packet, and CIL1 remains later.
+the unchanged VR12P scope. Decision `b0f251a` then passed Base job
+`95894058802`, Optional job `95894058625`, and CI `32193964660` before Stage 1.
+
+Generated `MARC2VR12P-G1` now passes all 12 fixed-path success paths and 61
+direct refusals. Its recorded run used 5,147,208 generated input bytes,
+217,962 peak incremental output bytes, zero retention, 0.6937790419906378
+seconds, and 37,142,528-byte peak RSS under one thread. The public executor is
+fixed-path and `remote_implementation_proof` remains null, so it refuses before
+readiness or a private-path operation. Twenty focused and all 4,208 clean
+dependency-light tests pass with 204 expected skips.
+
+Current gate: green this exact implementation, then green one proof-only
+closeout. Only after both barriers may the one 418,755-byte target-free
+structural confirmation run once. FW2 remains a separate post-R1 packet, and
+CIL1 remains later.

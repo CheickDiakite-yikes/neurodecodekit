@@ -42,7 +42,23 @@ message was `continue`. Read
 `docs/MARC_2_P15_PRIVATE_CONFIRMATION_AUTHORIZATION_DECISION.md` and its
 registry. The decision binds only the unchanged packet and remains ineffective
 until its own commit, push, Base Python job, and Optional Neuro Readers job are
-green. No wrapper or private path operation may begin before that proof.
+green. Decision `b0f251a` passed Base Python job `95894058802`, Optional Neuro
+Readers job `95894058625`, and CI `32193964660` before Stage 1 began.
+
+Read `docs/MARC_2_P15_PRIVATE_CONFIRMATION_IMPLEMENTATION.md` and
+`registries/marc2_p15_private_confirmation_implementation.v0.json`. Generated
+route `MARC2VR12P-G1` passed 12/12 fixed-path cases and 61 direct refusals in
+0.693779042 seconds at 37,142,528-byte peak RSS. Peak temporary output was
+217,962 bytes and retained output was zero. The wrapper verifies the exact
+request, decision, and VR12A artifacts, exposes only fixed commands, and emits
+aggregate R1-R6 outcomes without private failure detail.
+
+`remote_implementation_proof` is still null, so `execute` refuses before
+readiness or private-path access. Immediate gate: commit, push, and green this
+exact Stage 1 implementation, then green a proof-only closeout. Only after both
+barriers may the one 418,755-byte target-free structural command run once. FW2,
+CIL1, archive payload, neural data, targets, models, predictions, scores,
+release, and scientific claims remain closed.
 
 ## Prior Frontier: MARC2-VR11P Consumed At Structural Route R2
 
