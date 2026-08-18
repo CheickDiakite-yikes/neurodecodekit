@@ -3038,3 +3038,21 @@ passed Base job `95819297085`, Optional job `95819297010`, and CI
 green remote jobs. After that, prepare one all-false Tier C structural-
 confirmation packet. No private read, cohort, archive payload, neural data,
 target, model, prediction, score, FW2/CIL1, release, or claim is authorized.
+
+### MARC2-VR12P - Target-Free Private Cohort Confirmation (Packet Pending)
+
+VR12P is the smallest bridge from generated P15 repair to a real FW2 design.
+Its all-false packet requests one generated/mock fixed-path wrapper, followed
+only after exact remote proof by one 418,755-byte structural source read and
+one VR12A adapter call.
+
+R1 may freeze one private source-exact cohort manifest with 12-19 subjects,
+72-114 run bundles, 288-456 core members, equal session splits, and reservation
+at or below 8 GiB. Public output is aggregate counts and hashes only. The run is
+one-thread, zero-network, zero-new-payload, under 2 MiB output, and no-rerun.
+
+Current phase: packet pending commit/push/remote-green proof and a later fresh
+packet-bound decision. Every current authorization is false and every current
+operation counter is zero. No private read, cohort freeze, archive payload,
+neural data, target, model, prediction, score, FW2/CIL1, release, or claim is
+authorized.

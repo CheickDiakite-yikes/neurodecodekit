@@ -11538,3 +11538,23 @@ registration before implementing or measuring the generated repair.
 
 Immediate gate: green this proof-only closeout, then prepare exactly one
 target-free structural-confirmation packet. FW2 and CIL1 remain closed.
+
+## 2026-08-18 - MARC2-VR12P Private Confirmation Request
+
+- VR12A proof-only closeout `8f2ad16` passed Base job `95821386966`, Optional
+  job `95821386899`, and CI `32170855368` without another qualification or any
+  private operation.
+- Prepared one all-false two-stage Tier C request. Stage 1 is generated/mock
+  wrapper work only; Stage 2 is gated behind the exact implementation and its
+  own remotely green proof.
+- The proposed private command permits one 418,755-byte target-free structural
+  read and one VR12A adapter call. R1 may write one mode-0600 source-exact
+  cohort manifest and one aggregate-safe report under 2 MiB total.
+- The command is one-thread, zero-network, zero-new-payload, and no-rerun. It
+  opens no archive member, signal, target, model, prediction, or score.
+- Thirteen focused request tests pass. Every current authorization flag is
+  false and every current operation counter is zero.
+
+Immediate gate: commit, push, and green the exact packet, then make one proof-
+only request closeout. Only after that closeout is green may VR12P be named as
+the sole active Tier C gate for a fresh maintainer decision.

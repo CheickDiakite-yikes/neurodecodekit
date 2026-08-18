@@ -9550,3 +9550,24 @@ decision before any private read. FW2/CIL1 remain later, separate gates.
 Boundary decision: this proof closeout performs zero private, consumed-state,
 archive, neural, target, cohort, model, prediction, score, network, provider,
 hardware, other-project, FW2/CIL1, release, or scientific-claim operations.
+
+## 0297 - Ask One Structural Question Before FW2
+
+Sequence decision: request one two-stage `MARC2-VR12P` lane. A generated/mock
+fixed-path wrapper must be implemented and remotely green first. Only then may
+one target-free private structural confirmation call the exact VR12A adapter
+once and consume at one registered route.
+
+Success decision: R1 may freeze one source-exact private structural cohort
+manifest containing 12-19 ranked subjects, 72-114 run bundles, and 288-456 core
+members under the unchanged 8 GiB reservation cap. Public output remains
+aggregate counts and hashes only.
+
+Resource decision: one thread, one worker, one numerical job, less than 256 MiB
+peak RSS, at least 15 GiB free disk, exactly 418,755 private structural bytes,
+zero network and new payload bytes, at most 2 MiB output, and zero retry or
+rerun.
+
+Boundary decision: packet preparation is all false. R1 would make a separate
+FW2 preregistration eligible but does not authorize FW2, CIL1, archive access,
+neural data, targets, models, scores, release, or scientific claims.

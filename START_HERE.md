@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR12A Generated Repair Green
+## Current Frontier: MARC2-VR12P Confirmation Packet
 
 VR11P is consumed at aggregate route `MARC2VR11P-R2`, which maps only to P15,
 the suffix-bearing BIDS identity class. It did not reveal a path, failed value,
@@ -27,6 +27,15 @@ bytes in 1.092868333 seconds at 44,417,024-byte peak RSS. Exact implementation
 `873484a` passed Base job `95819297085`, Optional job `95819297010`, and CI
 `32170217284`. The current proof-only closeout must itself become remotely green
 before one all-false Tier C structural-confirmation packet may be prepared.
+That closeout is now green as `8f2ad16` in CI `32170855368`. Read
+`docs/MARC_2_P15_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md` and
+`registries/marc2_p15_private_confirmation_authorization_request.v0.json`.
+VR12P requests a future generated wrapper and, only after its own green proof,
+one 418,755-byte target-free structural read that may freeze one private cohort
+manifest. Every current authorization remains false. The packet must be
+committed, pushed, remotely green, proof-closed, identified as the sole active
+Tier C gate, and receive a fresh packet-bound maintainer decision before any
+implementation or private path operation.
 
 ## Prior Frontier: MARC2-VR11P Consumed At Structural Route R2
 

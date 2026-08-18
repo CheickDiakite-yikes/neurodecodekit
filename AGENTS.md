@@ -314,6 +314,21 @@ touch any private/ignored source, or infer that an unpadded value caused P15.
 No private path, consumed VR11P state, cohort, archive member, neural payload,
 target, model, score, FW2/CIL1, release, or claim is open.
 
+Proof-only closeout `8f2ad163f3beacaf3cbcc0287fe305575a34b6cc`
+passed Base Python job `95821386966`, Optional Neuro Readers job `95821386899`,
+and CI `32170855368`. The next gate is now prepared as `MARC2-VR12P`. Read
+`docs/MARC_2_P15_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md` and
+`registries/marc2_p15_private_confirmation_authorization_request.v0.json`.
+It is an all-false two-stage request: generated/mock fixed-path wrapper first,
+then only after exact green proof one 418,755-byte target-free structural read,
+one VR12A call, and at most one private source-exact cohort manifest plus one
+aggregate report under 2 MiB. R1 would make a separate FW2 preregistration
+eligible, not authorized. No packet implementation, private path access,
+cohort freeze, archive member, neural payload, target, model, score, FW2, or
+CIL1 is authorized now. The current user instruction is not retroactive; the
+packet and its proof closeout must be remotely green and identified as the sole
+Tier C gate before a fresh packet-bound decision.
+
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-
 blind analysis over 72 S004-S015 EDFs. The analysis accepted 1,080 events,
