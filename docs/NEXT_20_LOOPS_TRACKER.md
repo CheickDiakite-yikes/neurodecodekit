@@ -3128,3 +3128,21 @@ bytes and repeats no qualification or private operation.
 Next gate: commit, push, and green the proof-only closeout. Only after that
 proof may Tier A prepare an all-false private-discriminator packet. A private
 read still requires a fresh Tier C decision, and FW2/CIL1 remain ineligible.
+
+### MARC2-VR13P - Cohort-Or-Residual-Class Private Discriminator (Requested)
+
+VR13P is the smallest proposed bridge from generated structural proof to an
+FW2-eligible cohort. Its all-false packet binds 17 committed inputs totaling
+321,145 bytes and freezes two proof-separated stages: generated/mock wrapper
+qualification, then one future 418,755-byte target-free structural read.
+
+The private result table is fixed before access. R1 may freeze one source-exact
+12-19-subject structural cohort and make a separate FW2 preregistration
+eligible. R2-R8 retain only one residual class and no private failed value or
+cohort. No route opens an archive member, neural sample, target, model, or
+score.
+
+Ten request tests pass. All authorization flags are false, every operation
+counter is zero, and packet preparation did not inspect a private path. Next
+gate: commit, push, green, then make and green a non-scope-changing request
+proof closeout. A fresh packet-bound Tier C decision remains mandatory.

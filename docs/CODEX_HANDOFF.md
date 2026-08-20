@@ -1,5 +1,14 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR13P request, 2026-08-20: VR13A proof closeout `122c69e`
+> passed Base job `96612707218`, Optional job `96612707432`, and CI
+> `32427617438`. Read the VR13P authorization packet and registry. The all-
+> false request binds 17 committed inputs and proposes generated wrapper proof
+> before one future 418,755-byte target-free structural read. R1 may freeze a
+> structural cohort; R2-R8 retain one blocker class. All authority is false.
+> Commit, push, green, then make a request proof closeout. Do not implement or
+> touch any private/ignored path before a fresh packet-bound Tier C decision.
+
 > Current MARC2-VR13A proof closeout, 2026-08-20: exact implementation
 > `63a0b8e` passed Base job `96610793887`, Optional job `96610793714`, and CI
 > `32426975815`. Read the VR13A proof-only closeout. The measured module,
@@ -6063,3 +6072,22 @@ After that, Tier A may prepare one all-false private residual-discriminator
 packet. Do not touch a private/ignored path, consumed VR11P/VR12P state,
 archive, neural payload, target, model, score, FW2/CIL1 surface, or another
 project. A private read still requires a fresh packet-bound Tier C decision.
+
+## 2026-08-20 MARC2-VR13P Request Handoff
+
+Read `docs/MARC_2_R4_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md`,
+`registries/marc2_r4_private_discriminator_authorization_request.v0.json`, and
+its request test. Seventeen fixed inputs total 321,145 bytes. The future
+two-stage sequence requires request/decision green before generated wrapper
+implementation, then exact implementation/proof green before one private read.
+
+R1 can freeze one target-free structural cohort with 12-19 subjects, 72-114
+bundles, and 288-456 core members. R2-R8 expose only one aggregate structural
+class. No route authorizes archive payload, neural samples, targets, models,
+scores, or FW2 execution.
+
+Immediate gate: commit, push, and green the request, then add and green a
+non-scope-changing request proof closeout. Only afterward identify VR13P as
+the sole active Tier C packet for a fresh decision. Current authorization and
+all operation counters are false/zero. Keep the unrelated tracker-inspection
+NDJSON untouched.

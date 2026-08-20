@@ -11773,3 +11773,27 @@ proof remains null until then. A private discriminator is not authorized.
 Immediate gate: commit, push, and green this proof-only closeout. Only after
 that proof may Tier A prepare one all-false private discriminator packet. No
 private read is authorized by this closeout.
+
+## 2026-08-20 - MARC2-VR13P All-False Private Discriminator Request
+
+- VR13A proof closeout `122c69e7fa60e7c193f12759e3b16d98fdb4f363`
+  passed Base job `96612707218`, Optional job `96612707432`, and CI
+  `32427617438` before packet preparation.
+- Bound 17 committed predecessor artifacts totaling 321,145 bytes by exact
+  path, size, and SHA-256.
+- Froze two future proof-separated stages: generated/mock fixed-path wrapper
+  qualification, then one 418,755-byte target-free structural source read and
+  one VR12A call.
+- R1 conditionally permits one private source-exact structural cohort manifest
+  with 12-19 subjects and makes only a separate FW2 preregistration eligible.
+  R2-R8 retain one residual class and no cohort.
+- The request caps one thread/worker/job, 650 private seconds, less than 256
+  MiB peak RSS, at least 15 GiB free disk, 2 MiB output, zero network/new
+  payload bytes, and zero retry/rerun/resume.
+- Ten request tests pass. Every authorization flag is false and every private,
+  consumed-state, archive, neural, target, model, score, FW2/CIL1, other-
+  project, and claim counter is zero.
+
+Immediate gate: commit, push, and green the exact request, then make and green
+one non-scope-changing proof closeout. It is not yet the active Tier C gate and
+authorizes no implementation or private access.

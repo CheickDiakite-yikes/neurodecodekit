@@ -423,6 +423,22 @@ private read is authorized before that packet is green and receives a fresh
 Tier C decision. Do not rerun the consumed source or infer which generated
 class caused its R4 result. FW2 and CIL1 remain ineligible.
 
+Proof-only closeout `122c69e7fa60e7c193f12759e3b16d98fdb4f363`
+passed Base Python job `96612707218`, Optional Neuro Readers job
+`96612707432`, and CI `32427617438`. The next all-false gate is now prepared
+as `MARC2-VR13P`. Read
+`docs/MARC_2_R4_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md` and
+`registries/marc2_r4_private_discriminator_authorization_request.v0.json`.
+It binds 17 committed inputs totaling 321,145 bytes and proposes a two-stage
+sequence: generated/mock fixed-path wrapper qualification, then only after
+exact green implementation and proof one 418,755-byte target-free structural
+read and one VR12A call. R1 may freeze one private structural cohort and make
+a separate FW2 preregistration eligible; R2-R8 retain only one residual class.
+Every authorization flag is false and every operation counter is zero. Commit,
+push, and green the request and a non-scope-changing proof closeout before
+identifying VR13P as the sole Tier C gate. No current or earlier message
+authorizes implementation or private access.
+
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-
 blind analysis over 72 S004-S015 EDFs. The analysis accepted 1,080 events,

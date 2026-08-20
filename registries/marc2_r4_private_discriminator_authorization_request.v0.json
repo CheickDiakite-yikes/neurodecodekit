@@ -1,0 +1,341 @@
+{
+  "schema_name": "neurodecodekit.marc2_r4_private_discriminator_authorization_request",
+  "schema_version": "0.1.0",
+  "request_id": "MARC-2-VR13P-R4-private-discriminator-two-stage-request-v0",
+  "lane_id": "MARC2-VR13P",
+  "recorded_at_local": "2026-08-20",
+  "status": "all_false_Tier_C_request_prepared_no_decision_no_private_access",
+  "objective": "Request one future proof-gated target-free structural read that either freezes the source-exact VR12A cohort or emits one of seven aggregate residual structural classes without retaining a private failed value.",
+  "fixed_inputs": [
+    {
+      "role": "VR13A_discriminator_module",
+      "path": "src/neurodecodekit/datasets/marc2_r4_residual_decomposition.py",
+      "bytes": 41268,
+      "sha256": "a4ebd7890e60e37f181169b7d90ea03edeace6b364b1774b98921788416f0513"
+    },
+    {
+      "role": "VR13A_contract",
+      "path": "registries/marc2_r4_residual_decomposition_contract.v0.json",
+      "bytes": 14189,
+      "sha256": "b51472e609d5355bac9902b3c70f37ea7ba3bd39231910e1507926be953e4b55"
+    },
+    {
+      "role": "VR13A_implementation_record",
+      "path": "registries/marc2_r4_residual_decomposition_implementation.v0.json",
+      "bytes": 7089,
+      "sha256": "e117097047193108042e0aa9203dc7102fadb8f333789bb25fcd2ef49b25c9d7"
+    },
+    {
+      "role": "VR13A_result_record",
+      "path": "registries/marc2_r4_residual_decomposition_result.v0.json",
+      "bytes": 6390,
+      "sha256": "1a23ed7b14166050070fe052193bdb8b05c22ebd055b1d0ba2a0eb65ae39d913"
+    },
+    {
+      "role": "VR13A_proof_closeout",
+      "path": "docs/MARC_2_R4_RESIDUAL_DECOMPOSITION_PROOF_CLOSEOUT.md",
+      "bytes": 2249,
+      "sha256": "769d96bb863d818129c0d6172fde9958f224559a97eebb710ea0a9944cd2ebff"
+    },
+    {
+      "role": "VR12A_repair_module",
+      "path": "src/neurodecodekit/datasets/marc2_p15_run_index_repair.py",
+      "bytes": 39338,
+      "sha256": "e7321d2a2b347ae2a4d0294c59d06d8eeeb3c6f08bf279b2658d1d56a25aa2f6"
+    },
+    {
+      "role": "VR12A_contract",
+      "path": "registries/marc2_p15_run_index_repair_contract.v0.json",
+      "bytes": 9681,
+      "sha256": "a6cd01e79813f79dfd7b54ee6c2d21ffb82e984b6230434127b936c513cf3f1e"
+    },
+    {
+      "role": "VR12A_implementation_record",
+      "path": "registries/marc2_p15_run_index_repair_implementation.v0.json",
+      "bytes": 6729,
+      "sha256": "ab9ecf59d466ff63cad572747945f5dd6942a7d69de0d70c37578c41447140f7"
+    },
+    {
+      "role": "VR12A_result_record",
+      "path": "registries/marc2_p15_run_index_repair_result.v0.json",
+      "bytes": 6742,
+      "sha256": "a439f1242ba469f389dc970fa9062eca1ba159b17ea262a6b22484009e5b9953"
+    },
+    {
+      "role": "VR12P_source_identity_request",
+      "path": "registries/marc2_p15_private_confirmation_authorization_request.v0.json",
+      "bytes": 17155,
+      "sha256": "e239f7adf294109bb40e706ede344b4d4080e0a5d1ac972b7a2d26fd8e8a5011"
+    },
+    {
+      "role": "VR12P_result_record",
+      "path": "registries/marc2_p15_private_confirmation_result.v0.json",
+      "bytes": 6492,
+      "sha256": "b48e8aabe9bc71fd179452aa0bf0b310e5bb1c29ba3f15b0802c11276ffb0fe7"
+    },
+    {
+      "role": "VR12P_result_document",
+      "path": "docs/MARC_2_P15_PRIVATE_CONFIRMATION_RESULT.md",
+      "bytes": 3399,
+      "sha256": "c82c0dacaa59b46034ad48d272454ea55b9b0650df2bff0ac7618e74f9805370"
+    },
+    {
+      "role": "VR11P_same_source_result",
+      "path": "registries/marc2_f03_private_discriminator_result.v0.json",
+      "bytes": 5980,
+      "sha256": "be6e1489132d5f33f693daa4ba320436dafc8345f8914067817040d00f82eec0"
+    },
+    {
+      "role": "machine_readiness_module",
+      "path": "src/neurodecodekit/datasets/marc2_machine_readiness.py",
+      "bytes": 56868,
+      "sha256": "7773b070dc0b819d7a680789fe6d998293ed17c94776af703034576e773dafa0"
+    },
+    {
+      "role": "machine_readiness_contract",
+      "path": "registries/marc2_machine_stable_structural_recovery_contract.v0.json",
+      "bytes": 9064,
+      "sha256": "93d63b273809f05608aaa18f9a52611d6073110e74b3c62ae5cf08d756b6b191"
+    },
+    {
+      "role": "cohort_selector_module",
+      "path": "src/neurodecodekit/datasets/marc2_freewill_prefix_selection.py",
+      "bytes": 72691,
+      "sha256": "86fa30fbd1caed735f0fb2e627144482a2bb8e033567bb3794e3f05508005c97"
+    },
+    {
+      "role": "cohort_selector_contract",
+      "path": "registries/marc2_freewill_prefix_selection_contract.v0.json",
+      "bytes": 15821,
+      "sha256": "dfe614cd7ec27c54c4f03848e3878c714222db043f501b9b07e57c7dc9f5f702"
+    }
+  ],
+  "fixed_input_count": 17,
+  "fixed_input_bytes": 321145,
+  "green_predecessor_proof": {
+    "registration_commit": "1177174c1d466cf357ef3a81a4d96b39321af063",
+    "registration_CI_run_id": 32424688012,
+    "implementation_commit": "63a0b8ea4cc72b942a6b7dbdcd96680859f5f059",
+    "implementation_CI_run_id": 32426975815,
+    "implementation_base_job_id": 96610793887,
+    "implementation_optional_job_id": 96610793714,
+    "proof_closeout_commit": "122c69e7fa60e7c193f12759e3b16d98fdb4f363",
+    "proof_closeout_CI_run_id": 32427617438,
+    "proof_closeout_base_job_id": 96612707218,
+    "proof_closeout_optional_job_id": 96612707432,
+    "all_required_jobs_green": true
+  },
+  "requested_sequence": [
+    {
+      "stage": 1,
+      "name": "generated_fixed_path_wrapper_implementation_and_qualification",
+      "requires_request_and_separate_decision_remotely_green": true,
+      "real_or_private_operations": 0
+    },
+    {
+      "stage": 2,
+      "name": "one_target_free_private_structural_discriminator",
+      "requires_exact_green_stage_1_and_proof_closeout": true,
+      "registered_invocations": 1,
+      "retry_or_rerun": 0
+    }
+  ],
+  "future_interface": {
+    "CLI_commands": [
+      "plan",
+      "qualify",
+      "inspect",
+      "execute"
+    ],
+    "execute_is_fixed_path_only": true,
+    "generic_path_argument_allowed": false,
+    "generic_output_argument_allowed": false,
+    "URL_or_network_argument_allowed": false,
+    "retry_resume_fallback_or_route_override_allowed": false,
+    "consumed_VR11P_or_VR12P_executor_reuse_allowed": false
+  },
+  "future_private_source": {
+    "path": ".codex_work/marc1_central_directory/live_audit_v0/member_inventory.private.v0.json",
+    "mode_octal": "0600",
+    "bytes": 418755,
+    "sha256": "2a2e48b88ee59332a199d926554bb6921222fff92046a0fc9b07cf73fd6c3031",
+    "rows": 1227,
+    "regular_file_rows": 1025,
+    "directory_rows": 202,
+    "complete_run_bundles": 238,
+    "eligible_run_bundles": 195,
+    "valid_ineligible_run_bundles": 43,
+    "identity_copied_from_committed_records_only": true,
+    "path_checked_during_packet_preparation": false,
+    "content_opened_during_packet_preparation": false
+  },
+  "future_fixed_paths": {
+    "private_source": ".codex_work/marc1_central_directory/live_audit_v0/member_inventory.private.v0.json",
+    "readiness_certificate": ".codex_work/marc2_machine_readiness/vr13p/readiness.v0.json",
+    "output_root": ".codex_work/marc2_r4_private_discriminator/v0",
+    "consumed_marker": ".codex_work/marc2_r4_private_discriminator/v0/consumed.marker.v0.json",
+    "private_cohort_manifest": ".codex_work/marc2_r4_private_discriminator/v0/cohort.private.v0.json",
+    "aggregate_report": ".codex_work/marc2_r4_private_discriminator/v0/report.aggregate.v0.json"
+  },
+  "generated_stage_requirements": {
+    "cases": 8,
+    "orders": 2,
+    "replays": 2,
+    "required_paths": 32,
+    "VR12A_calls_per_path": 1,
+    "VR13A_residual_map_calls_on_failure_per_path": 1,
+    "VR13A_residual_map_calls_on_success_per_path": 0,
+    "direct_refusal_minimum": 80,
+    "generated_paths_are_temporary_only": true,
+    "retained_generated_output_bytes": 0,
+    "real_or_private_path_operations": 0
+  },
+  "private_route_contract": [
+    {
+      "route": "MARC2VR13P-R1",
+      "meaning": "VR12A passed and one target-free structural cohort was frozen",
+      "private_cohort_manifest_allowed": true
+    },
+    {
+      "route": "MARC2VR13P-R2",
+      "meaning": "residual suffix-bearing BIDS identity class",
+      "private_cohort_manifest_allowed": false
+    },
+    {
+      "route": "MARC2VR13P-R3",
+      "meaning": "exact Freewill task-token class",
+      "private_cohort_manifest_allowed": false
+    },
+    {
+      "route": "MARC2VR13P-R4",
+      "meaning": "companion run-token inconsistency class",
+      "private_cohort_manifest_allowed": false
+    },
+    {
+      "route": "MARC2VR13P-R5",
+      "meaning": "normalized companion-collision class",
+      "private_cohort_manifest_allowed": false
+    },
+    {
+      "route": "MARC2VR13P-R6",
+      "meaning": "incomplete companion-set class",
+      "private_cohort_manifest_allowed": false
+    },
+    {
+      "route": "MARC2VR13P-R7",
+      "meaning": "repaired bundle-total mismatch class",
+      "private_cohort_manifest_allowed": false
+    },
+    {
+      "route": "MARC2VR13P-R8",
+      "meaning": "taxonomy or eligibility mismatch class",
+      "private_cohort_manifest_allowed": false
+    }
+  ],
+  "conditional_R1_cohort": {
+    "selected_subjects_minimum": 12,
+    "selected_subjects_maximum": 19,
+    "selected_run_bundles_minimum": 72,
+    "selected_run_bundles_maximum": 114,
+    "selected_core_members_minimum": 288,
+    "selected_core_members_maximum": 456,
+    "fit_session": "ses-01",
+    "heldout_session": "ses-02",
+    "fit_heldout_overlap": 0,
+    "row_random_split_used": false,
+    "reservation_cap_bytes": 8589934592,
+    "source_exact_names_preserved": true,
+    "target_quality_and_outcome_free": true,
+    "R1_makes_separate_FW2_preregistration_eligible": true,
+    "FW2_implementation_or_execution_authorized": false
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "generated_runtime_seconds": 60,
+    "private_runtime_seconds": 650,
+    "peak_RSS_bytes": 268435456,
+    "minimum_free_disk_bytes": 16106127360,
+    "readiness_wait_seconds": 600,
+    "private_source_read_bytes": 418755,
+    "private_source_content_opens": 1,
+    "VR12A_calls": 1,
+    "VR13A_residual_map_calls_maximum": 1,
+    "network_bytes": 0,
+    "new_payload_bytes": 0,
+    "archive_member_bytes": 0,
+    "signal_bytes": 0,
+    "target_bytes": 0,
+    "combined_incremental_output_bytes": 2097152,
+    "retry_rerun_resume_count": 0
+  },
+  "aggregate_output_firewall": {
+    "allowed": "schema lane status one R1-R8 route exact proof identity aggregate cohort counts nonreversible hashes resources zero counters warnings unavailable fields and claim boundary",
+    "forbidden": "exception reason predicate failed value row member path offset CRC source hash subject participant session run task companion candidate selection signal event target label model prediction score or participant outcome",
+    "per_item_outcomes_allowed": false,
+    "private_cohort_identity_in_aggregate_report_allowed": false
+  },
+  "failure_semantics": {
+    "failure_before_marker_consumes_invocation": true,
+    "failure_after_marker_consumes_diagnostic": true,
+    "retry_rerun_resume_repair_fallback_substitution_allowed": false,
+    "post_result_private_reinspection_allowed": false,
+    "unknown_or_leaking_route_parks_lane": true
+  },
+  "authorization_state": {
+    "request_decision_recorded_now": false,
+    "implementation_authorized_now": false,
+    "readiness_or_private_path_access_authorized_now": false,
+    "private_source_stat_resolve_hash_open_read_or_parse_authorized_now": false,
+    "private_cohort_freeze_authorized_now": false,
+    "archive_header_member_or_payload_access_authorized_now": false,
+    "signal_event_channel_geometry_target_or_label_access_authorized_now": false,
+    "training_inference_prediction_delivery_or_score_authorized_now": false,
+    "network_download_provider_or_language_model_authorized_now": false,
+    "stream_device_or_hardware_authorized_now": false,
+    "MARC2_FW2_or_CIL1_authorized_now": false,
+    "release_publication_or_claim_upgrade_authorized_now": false
+  },
+  "operation_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_VR11P_or_VR12P_path_or_output_operations": 0,
+    "readiness_certificate_or_output_root_operations": 0,
+    "network_or_public_request_operations": 0,
+    "archive_local_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "private_cohort_manifest_operations": 0,
+    "derivative_cache_feature_split_or_NeuroToken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "provider_language_model_stream_device_or_hardware_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "retry_rerun_release_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "registration_artifacts": {
+    "document_path": "docs/MARC_2_R4_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md",
+    "document_sha256": "cabeb82e2b57dcf7198156cd6db88f44d7712ceac4c505ad98db51d3f4c361c4",
+    "test_path": "tests/test_marc2_r4_private_discriminator_authorization_request.py",
+    "test_sha256": "7449b68cb216939d5956a28b3e5f812f57c2db1dea59f5d1ef61dfbe3c7035cd"
+  },
+  "next_gate": {
+    "request_commit_push_and_both_jobs_green_required": true,
+    "request_proof_closeout_commit_push_and_both_jobs_green_required": true,
+    "sole_active_Tier_C_packet_identification_required": true,
+    "fresh_packet_bound_Tier_C_decision_required": true,
+    "implementation_authorized_now": false,
+    "private_read_authorized_now": false,
+    "MARC2_FW2_or_CIL1_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_request": "one proof-gated target-free structural open can either freeze the cohort needed to preregister FW2 or localize the one residual structural class that blocks it",
+    "scientific_ceiling": "none",
+    "private_cause_identified_now": false,
+    "real_cohort_frozen_now": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "real_time_portable_home_assistive_or_clinical_result": false
+  }
+}

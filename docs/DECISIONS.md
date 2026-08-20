@@ -9733,3 +9733,26 @@ private, consumed-state, archive, neural, target, model, prediction, score,
 provider, hardware, FW2/CIL1, release, or claim operations. After the closeout
 itself is remotely green, Tier A may prepare an all-false private discriminator
 packet; private access still requires a fresh Tier C decision.
+
+## 0305 - Request Cohort-Or-Class Resolution Without Opening Neural Payload
+
+Sequence decision: prepare one all-false `MARC2-VR13P` two-stage request. Stage
+1 is generated/mock fixed-path wrapper qualification only. Stage 2 is one
+future target-free structural read only after exact Stage 1 and proof-closeout
+green barriers.
+
+Outcome decision: freeze eight aggregate routes before access. R1 means VR12A
+passed and may create one private target-free cohort manifest; R2-R8 map the
+seven remotely green VR13A residual classes and create no cohort. An unknown,
+leaking, inconsistent, or over-budget result consumes and parks the lane.
+
+Resource decision: request one thread/worker/job, 650 private seconds, less
+than 256 MiB peak RSS, at least 15 GiB free disk, exactly one 418,755-byte
+source open, one VR12A call, at most one residual-map call, 2 MiB output, zero
+network/new payload, and no retry, rerun, or resume.
+
+Boundary decision: packet preparation is all false and performs zero private
+or ignored-path operations. R1 makes only a separate FW2 preregistration
+eligible. No implementation, private read, archive, neural signal, target,
+model, score, FW2/CIL1 execution, release, or claim is authorized without a
+fresh packet-bound Tier C decision after exact request proof.

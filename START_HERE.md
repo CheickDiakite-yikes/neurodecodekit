@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR13A Generated Qualification Remotely Green
+## Current Frontier: MARC2-VR13P All-False Request Prepared
 
 Read `docs/MARC_2_P15_PRIVATE_CONFIRMATION_RESULT.md`, then the VR13A
 preregistration, implementation, and result documents with their registries.
@@ -54,6 +54,18 @@ qualification and performs no private operation. Tier A may now prepare one
 all-false private residual-discriminator packet. Any later private read still
 requires that exact packet to be remotely green and receive a fresh Tier C
 packet-bound decision. FW2 and CIL1 remain ineligible.
+
+That packet is now prepared as `MARC2-VR13P`. It binds 17 committed artifacts
+totaling 321,145 bytes and requests two proof-separated stages: generated/mock
+fixed-path wrapper qualification, then one future 418,755-byte target-free
+structural read. Success R1 may freeze one 12-19-subject structural cohort;
+R2-R8 retain only one residual blocker class. All authorization fields are
+false, all operation counters are zero, and no private path was inspected.
+
+Immediate gate: commit, push, and green this request, then make and green a
+non-scope-changing request proof closeout. Only after VR13P is identified as
+the sole active Tier C packet can a fresh maintainer message authorize its
+unchanged two-stage sequence. No earlier `continue` is retroactive.
 
 ## Prior Frontier: MARC2-VR11P Consumed At Structural Route R2
 
