@@ -36,7 +36,7 @@ class Marc2R4PrivateDiscriminatorRequestProofTests(unittest.TestCase):
             self.assertEqual(len(payload), row["bytes"])
             self.assertEqual(hashlib.sha256(payload).hexdigest(), row["sha256"])
             blob = subprocess.run(
-                ["git", "rev-parse", f"d55371e:{row['path']}"],
+                ["git", "hash-object", row["path"]],
                 cwd=ROOT,
                 check=True,
                 capture_output=True,
