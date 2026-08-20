@@ -9756,3 +9756,19 @@ or ignored-path operations. R1 makes only a separate FW2 preregistration
 eligible. No implementation, private read, archive, neural signal, target,
 model, score, FW2/CIL1 execution, release, or claim is authorized without a
 fresh packet-bound Tier C decision after exact request proof.
+
+## 0306 - Prove The Exact VR13P Request Without Changing Scope
+
+Proof decision: exact request `d55371e` passed Base Python job `96615486644`,
+Optional Neuro Readers job `96615486542`, and CI `32428583270`. Bind the three
+unchanged request artifacts totaling 30,310 bytes by SHA-256 and Git blob.
+
+Transition decision: add only a proof document, machine proof record, proof
+test, and frontier notes. Do not edit the request or authorize either stage.
+The closeout has delayed effect until its own commit is pushed and both jobs
+are green.
+
+Boundary decision: request proof performs zero implementation, generated
+qualification, private, readiness, consumed-state, archive, neural, target,
+model, score, FW2/CIL1, release, or claim operations. Only after closeout green
+may VR13P be named as the sole active Tier C packet for a fresh decision.

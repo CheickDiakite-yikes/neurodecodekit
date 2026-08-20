@@ -3146,3 +3146,9 @@ Ten request tests pass. All authorization flags are false, every operation
 counter is zero, and packet preparation did not inspect a private path. Next
 gate: commit, push, green, then make and green a non-scope-changing request
 proof closeout. A fresh packet-bound Tier C decision remains mandatory.
+
+Exact request `d55371e` passed Base job `96615486644`, Optional job
+`96615486542`, and CI `32428583270`. Its proof closeout now binds the three
+unchanged request artifacts totaling 30,310 bytes and performs zero
+implementation or private operations. Commit, push, and green that closeout;
+then VR13P may become the sole active Tier C gate for a fresh decision.

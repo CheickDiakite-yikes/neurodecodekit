@@ -11797,3 +11797,18 @@ private read is authorized by this closeout.
 Immediate gate: commit, push, and green the exact request, then make and green
 one non-scope-changing proof closeout. It is not yet the active Tier C gate and
 authorizes no implementation or private access.
+
+### Request proof closeout
+
+- Exact all-false request `d55371e8d95c562dc0e4eff7f3ea27820e2af7d0`
+  passed Base job `96615486644`, Optional job `96615486542`, and CI
+  `32428583270`.
+- Bound the unchanged packet document, machine request, and request test:
+  three artifacts and 30,310 bytes with exact SHA-256 and Git blobs.
+- Request edits, implementation, generated qualification, private/ignored path
+  operations, readiness, cohort, archive, neural, target, model, score,
+  FW2/CIL1, and claim operations during closeout: zero.
+
+Immediate gate: commit, push, and green this proof-only closeout. Only after
+that may VR13P be identified as the sole active Tier C packet for a fresh
+decision.

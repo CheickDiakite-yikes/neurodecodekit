@@ -439,6 +439,19 @@ push, and green the request and a non-scope-changing proof closeout before
 identifying VR13P as the sole Tier C gate. No current or earlier message
 authorizes implementation or private access.
 
+Exact request `d55371e8d95c562dc0e4eff7f3ea27820e2af7d0` passed Base
+Python job `96615486644`, Optional Neuro Readers job `96615486542`, and CI
+`32428583270`. Read
+`docs/MARC_2_R4_PRIVATE_DISCRIMINATOR_REQUEST_PROOF_CLOSEOUT.md` and
+`registries/marc2_r4_private_discriminator_request_proof.v0.json`. The proof
+record binds three unchanged request artifacts totaling 30,310 bytes; every
+authorization field remains false and every closeout operation is zero. The
+proof closeout has delayed effect until its own exact commit is pushed and
+both jobs are green. Only then may VR13P be identified as the sole active Tier
+C packet for a fresh short-form decision. Before that decision and its own
+remote proof, do not implement the wrapper or touch readiness, `.codex_work`,
+the private source, or an output root.
+
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-
 blind analysis over 72 S004-S015 EDFs. The analysis accepted 1,080 events,

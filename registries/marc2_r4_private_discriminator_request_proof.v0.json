@@ -1,0 +1,99 @@
+{
+  "schema_name": "neurodecodekit.marc2_r4_private_discriminator_request_proof",
+  "schema_version": "0.1.0",
+  "proof_id": "MARC-2-VR13P-all-false-request-remote-proof-v0",
+  "lane_id": "MARC2-VR13P",
+  "recorded_at_local": "2026-08-20",
+  "status": "request_remotely_green_closeout_effect_delayed_until_own_remote_green",
+  "request_remote_proof": {
+    "commit": "d55371e8d95c562dc0e4eff7f3ea27820e2af7d0",
+    "CI_run_id": 32428583270,
+    "base_python_job_id": 96615486644,
+    "optional_neuro_job_id": 96615486542,
+    "both_required_jobs_green": true
+  },
+  "exact_request_artifacts": [
+    {
+      "role": "authorization_packet_document",
+      "path": "docs/MARC_2_R4_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md",
+      "bytes": 8986,
+      "sha256": "cabeb82e2b57dcf7198156cd6db88f44d7712ceac4c505ad98db51d3f4c361c4",
+      "Git_blob": "ad6e9822750e1b63d8075154e9938bb037a0dc8b"
+    },
+    {
+      "role": "authorization_request_registry",
+      "path": "registries/marc2_r4_private_discriminator_authorization_request.v0.json",
+      "bytes": 14058,
+      "sha256": "e7684ed66df2689df2ac4eb5b19a9e71f09925313c2d49e3884f19560d8c11cd",
+      "Git_blob": "8f18b5d99e4f6e5c8cca183b99740e4e04910720"
+    },
+    {
+      "role": "authorization_request_test",
+      "path": "tests/test_marc2_r4_private_discriminator_authorization_request.py",
+      "bytes": 7266,
+      "sha256": "7449b68cb216939d5956a28b3e5f812f57c2db1dea59f5d1ef61dfbe3c7035cd",
+      "Git_blob": "93f4aff4229602fab387969d3351f338eddae11e"
+    }
+  ],
+  "exact_request_artifact_count": 3,
+  "exact_request_artifact_bytes": 30310,
+  "scope_unchanged": {
+    "request_id": "MARC-2-VR13P-R4-private-discriminator-two-stage-request-v0",
+    "fixed_input_count": 17,
+    "fixed_input_bytes": 321145,
+    "future_private_source_bytes": 418755,
+    "future_private_source_content_opens": 1,
+    "private_route_count": 8,
+    "conditional_R1_cohort_only": true,
+    "R2_through_R8_no_cohort": true,
+    "retry_rerun_resume_count": 0,
+    "request_authorization_fields_all_false": true,
+    "request_operation_counters_all_zero": true
+  },
+  "closeout_operations": {
+    "request_artifacts_modified": 0,
+    "implementation_or_generated_qualification_operations": 0,
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_VR11P_or_VR12P_path_or_output_operations": 0,
+    "readiness_certificate_or_output_root_operations": 0,
+    "network_or_public_request_operations": 0,
+    "archive_local_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "private_cohort_manifest_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "provider_language_model_stream_device_or_hardware_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "retry_rerun_release_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "authorization_state": {
+    "decision_recorded_now": false,
+    "implementation_authorized_now": false,
+    "readiness_or_private_path_access_authorized_now": false,
+    "private_source_read_authorized_now": false,
+    "private_cohort_freeze_authorized_now": false,
+    "archive_neural_target_model_or_score_authorized_now": false,
+    "MARC2_FW2_or_CIL1_authorized_now": false,
+    "release_publication_or_claim_upgrade_authorized_now": false
+  },
+  "next_gate": {
+    "proof_closeout_commit_push_and_both_jobs_green_required": true,
+    "sole_active_Tier_C_packet_identification_after_green_required": true,
+    "fresh_packet_bound_maintainer_decision_required": true,
+    "decision_commit_push_and_both_jobs_green_before_implementation_required": true,
+    "implementation_authorized_now": false,
+    "private_read_authorized_now": false,
+    "MARC2_FW2_or_CIL1_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_request": "one future proof-gated structural read can either freeze an FW2-eligible target-free cohort or isolate one blocker class",
+    "scientific_ceiling": "none",
+    "private_cause_identified_now": false,
+    "real_cohort_frozen_now": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "real_time_portable_home_assistive_or_clinical_result": false
+  }
+}

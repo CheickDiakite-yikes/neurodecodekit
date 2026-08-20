@@ -67,6 +67,12 @@ non-scope-changing request proof closeout. Only after VR13P is identified as
 the sole active Tier C packet can a fresh maintainer message authorize its
 unchanged two-stage sequence. No earlier `continue` is retroactive.
 
+Request `d55371e` passed Base job `96615486644`, Optional job `96615486542`,
+and CI `32428583270`. Its separate proof closeout binds the three unchanged
+request artifacts and keeps all authority false. That closeout must now be
+committed, pushed, and remotely green. Do not implement or inspect readiness,
+the private source, or an output root before a fresh decision after that proof.
+
 ## Prior Frontier: MARC2-VR11P Consumed At Structural Route R2
 
 Read `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`, then

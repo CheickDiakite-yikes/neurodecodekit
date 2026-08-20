@@ -1,5 +1,12 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR13P request proof, 2026-08-20: exact request `d55371e`
+> passed Base job `96615486644`, Optional job `96615486542`, and CI
+> `32428583270`. The separate proof closeout binds three unchanged request
+> artifacts totaling 30,310 bytes and keeps all authority false. Commit, push,
+> and green this closeout before naming VR13P as the sole active Tier C packet.
+> Do not implement or touch readiness/private paths before a fresh decision.
+
 > Current MARC2-VR13P request, 2026-08-20: VR13A proof closeout `122c69e`
 > passed Base job `96612707218`, Optional job `96612707432`, and CI
 > `32427617438`. Read the VR13P authorization packet and registry. The all-
@@ -6091,3 +6098,15 @@ non-scope-changing request proof closeout. Only afterward identify VR13P as
 the sole active Tier C packet for a fresh decision. Current authorization and
 all operation counters are false/zero. Keep the unrelated tracker-inspection
 NDJSON untouched.
+
+## 2026-08-20 MARC2-VR13P Request Proof Handoff
+
+Request `d55371e8d95c562dc0e4eff7f3ea27820e2af7d0` passed Base job
+`96615486644`, Optional job `96615486542`, and CI `32428583270`. Read the
+request proof-closeout doc, registry, and test. The closeout changes no request
+byte or scope and performs zero private/scientific operations.
+
+Immediate gate: commit, push, and green the proof closeout. After that exact
+head is green, identify VR13P as the sole active Tier C packet and wait for a
+fresh maintainer decision. Do not implement or touch readiness, `.codex_work`,
+the private source, or the output root before the decision is itself green.
