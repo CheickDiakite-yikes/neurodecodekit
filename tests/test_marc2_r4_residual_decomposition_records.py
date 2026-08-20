@@ -19,14 +19,39 @@ class Marc2R4ResidualDecompositionRecordTests(unittest.TestCase):
         )
         cls.result = json.loads(RESULT_PATH.read_text(encoding="utf-8"))
 
-    def test_record_identities_and_pending_remote_proof_are_explicit(self):
+    def test_record_identities_and_remote_proof_are_explicit(self):
         self.assertEqual(self.implementation["lane_id"], "MARC2-VR13A")
         self.assertEqual(self.result["lane_id"], "MARC2-VR13A")
         self.assertEqual(self.result["route"], "MARC2VR13A-G1")
-        self.assertIsNone(self.implementation["remote_implementation_proof"])
-        self.assertIsNone(self.result["remote_implementation_proof"])
-        self.assertIn("pending", self.implementation["status"])
-        self.assertIn("pending", self.result["status"])
+        proof = {
+            "commit": "63a0b8ea4cc72b942a6b7dbdcd96680859f5f059",
+            "CI_run_id": 32_426_975_815,
+            "base_python_job_id": 96_610_793_887,
+            "optional_neuro_job_id": 96_610_793_714,
+            "both_required_jobs_green": True,
+            "implementation_module_Git_blob": (
+                "4c4a929917cbda3409f8476363e192edac668dfe"
+            ),
+            "behavior_test_Git_blob": "eeca2af700b4ad1d89e53c8da7fcbe22c8f2e661",
+            "implementation_document_Git_blob": (
+                "a2f32c50c32ef74bc95f64f061a7deedb66b60e7"
+            ),
+            "result_document_Git_blob": (
+                "07b1c2d225791b4a185793d23b01e880e7eed35f"
+            ),
+            "preproof_implementation_registry_Git_blob": (
+                "50c3ba032d60d66ce45457609d113ed4b2165ec7"
+            ),
+            "preproof_result_registry_Git_blob": (
+                "6aa114f908c796b8ed45ad3b2b7d1ca7170e15df"
+            ),
+            "generated_qualification_repeated_for_proof_closeout": False,
+            "private_operation_repeated_for_proof_closeout": False,
+        }
+        self.assertEqual(self.implementation["remote_implementation_proof"], proof)
+        self.assertEqual(self.result["remote_implementation_proof"], proof)
+        self.assertNotIn("pending", self.implementation["status"])
+        self.assertNotIn("pending", self.result["status"])
 
     def test_registration_proof_matches_both_records(self):
         expected = {

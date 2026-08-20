@@ -413,10 +413,15 @@ and no source is mutated. The measured pass processed 13,741,736 generated
 bytes in 2.401633999950718 seconds at 36,978,688-byte peak RSS and emitted
 5,514 aggregate bytes with zero retention. Every private, archive, neural,
 target, model, score, provider, FW2/CIL1, other-project, and claim counter is
-zero. The implementation/result registries keep remote proof null. Commit,
-push, and green this exact artifact set in both jobs before any all-false Tier
-C packet is prepared. Do not rerun the consumed private source or infer which
-generated class caused its R4 result.
+zero. Exact implementation `63a0b8ea4cc72b942a6b7dbdcd96680859f5f059`
+passed Base job `96610793887`, Optional job `96610793714`, and CI
+`32426975815`. Read
+`docs/MARC_2_R4_RESIDUAL_DECOMPOSITION_PROOF_CLOSEOUT.md`; proof closeout
+repeats no qualification or private operation. Tier A may prepare one
+separately frozen all-false private residual-discriminator packet, but no
+private read is authorized before that packet is green and receives a fresh
+Tier C decision. Do not rerun the consumed source or infer which generated
+class caused its R4 result. FW2 and CIL1 remain ineligible.
 
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-

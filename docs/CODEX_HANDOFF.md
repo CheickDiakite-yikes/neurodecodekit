@@ -1,5 +1,12 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR13A proof closeout, 2026-08-20: exact implementation
+> `63a0b8e` passed Base job `96610793887`, Optional job `96610793714`, and CI
+> `32426975815`. Read the VR13A proof-only closeout. The measured module,
+> behavior test, documents, matrix, and result did not change or rerun. Commit,
+> push, and green this closeout before preparing an all-false private packet.
+> No private read is authorized; FW2 and CIL1 remain ineligible.
+
 > Current MARC2-VR13A result, 2026-08-20: registration `1177174` passed Base
 > job `96604083183`, Optional job `96604083100`, and CI `32424688012` before
 > implementation. Read the VR13A implementation/result docs and registries.
@@ -6042,3 +6049,17 @@ green. The implementation and result registries intentionally keep remote
 proof null. Do not prepare a Tier C packet before that proof, and do not open a
 private path, consumed output, archive, neural payload, target, model, score,
 FW2/CIL1 surface, or another project.
+
+## 2026-08-20 MARC2-VR13A Proof Closeout Handoff
+
+Exact implementation `63a0b8ea4cc72b942a6b7dbdcd96680859f5f059`
+passed Base Python job `96610793887`, Optional Neuro Readers job
+`96610793714`, and CI `32426975815`. The closeout binds six exact Git blobs and
+updates only remote-proof state, its matching test, and additive frontier docs.
+No generated qualification or private operation was repeated.
+
+Immediate gate: commit, push, and green both jobs for this proof-only closeout.
+After that, Tier A may prepare one all-false private residual-discriminator
+packet. Do not touch a private/ignored path, consumed VR11P/VR12P state,
+archive, neural payload, target, model, score, FW2/CIL1 surface, or another
+project. A private read still requires a fresh packet-bound Tier C decision.

@@ -9715,3 +9715,21 @@ Boundary decision: keep remote implementation proof null until this exact
 artifact set is committed, pushed, and both jobs are green. No private packet,
 private read, cohort, archive, neural signal, target, model, score, FW2/CIL1,
 release, or claim is authorized by the generated result.
+
+## 0304 - Bind Exact VR13A Remote Proof Without Repeating Qualification
+
+Proof decision: exact implementation `63a0b8e` passed Base Python job
+`96610793887`, Optional Neuro Readers job `96610793714`, and CI
+`32426975815`. Bind that commit, both jobs, and the six exact implementation
+and preproof-registry Git blobs.
+
+Transition decision: change only remote-proof/status fields, the matching
+proof test, and additive frontier documentation. Do not alter or rerun the
+module, behavior test, witnesses, route map, measured documents, result,
+registration, or resource caps.
+
+Boundary decision: proof closeout performs zero generated qualification,
+private, consumed-state, archive, neural, target, model, prediction, score,
+provider, hardware, FW2/CIL1, release, or claim operations. After the closeout
+itself is remotely green, Tier A may prepare an all-false private discriminator
+packet; private access still requires a fresh Tier C decision.
