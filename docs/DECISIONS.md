@@ -9688,3 +9688,30 @@ Boundary decision: VR13A authorizes no private or ignored path, consumed-state
 reuse, archive, neural signal, target, model, prediction, score, provider,
 hardware, FW2/CIL1, release, or scientific claim. A later private read remains
 a separately frozen Tier C packet and fresh packet-bound decision.
+
+## 0303 - Accept Generated Seven-Route Coverage Without Inferring Private Cause
+
+Order decision: registration `1177174` passed both required jobs in CI
+`32424688012` before implementation. Bind only that exact remotely green
+registration and the unchanged VR12A adapter.
+
+Implementation decision: accept the generated 32-call matrix after correcting
+two witness-order mistakes found by fail-closed qualification. Preserve one
+lexical run token for the duplicate-companion route, choose the first absent
+run for the bundle-total route, and leave every predecessor byte unchanged.
+
+Evidence decision: accept `MARC2VR13A-G1` as generated engineering evidence.
+G1 and R1-R7 each occurred four times across two orders and two replays; all
+54 direct refusals passed and no adapter call changed its source. This proves
+generated reachability and discrimination only. It does not select a class for
+the consumed private R4 result.
+
+Resource decision: accept 13,741,736 generated input bytes, 5,514 aggregate
+output bytes, zero retention, 2.401633999950718 seconds, and 36,978,688-byte
+peak RSS under one thread/worker/job. Every private and scientific counter is
+zero.
+
+Boundary decision: keep remote implementation proof null until this exact
+artifact set is committed, pushed, and both jobs are green. No private packet,
+private read, cohort, archive, neural signal, target, model, score, FW2/CIL1,
+release, or claim is authorized by the generated result.

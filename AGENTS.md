@@ -401,6 +401,23 @@ discriminator remains a new Tier C packet and fresh decision. FW2, CIL1,
 archive payload, neural data, targets, models, predictions, scores, release,
 and scientific claims remain closed.
 
+Registration `1177174c1d466cf357ef3a81a4d96b39321af063` passed Base
+Python job `96604083183`, Optional Neuro Readers job `96604083100`, and CI
+`32424688012` before implementation. Now read
+`docs/MARC_2_R4_RESIDUAL_DECOMPOSITION_IMPLEMENTATION.md`,
+`docs/MARC_2_R4_RESIDUAL_DECOMPOSITION_RESULT.md`, their registries, and the
+two matching implementation test modules. Generated `MARC2VR13A-G1` passes
+all 32 case/order/replay paths through the unchanged VR12A adapter: G1 and
+R1-R7 each appear four times, both replays match, all 54 direct refusals pass,
+and no source is mutated. The measured pass processed 13,741,736 generated
+bytes in 2.401633999950718 seconds at 36,978,688-byte peak RSS and emitted
+5,514 aggregate bytes with zero retention. Every private, archive, neural,
+target, model, score, provider, FW2/CIL1, other-project, and claim counter is
+zero. The implementation/result registries keep remote proof null. Commit,
+push, and green this exact artifact set in both jobs before any all-false Tier
+C packet is prepared. Do not rerun the consumed private source or infer which
+generated class caused its R4 result.
+
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-
 blind analysis over 72 S004-S015 EDFs. The analysis accepted 1,080 events,
