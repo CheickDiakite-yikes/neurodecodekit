@@ -3088,3 +3088,24 @@ Next gate: separately freeze an artifact-only and generated-only decomposition
 of the residual identity/task/companion predicates. Any new private read,
 archive member, neural payload, target, model, prediction, or score remains a
 new Tier C decision.
+
+### MARC2-VR13A - R4 Residual Decomposition (Registered)
+
+VR13A is the artifact-only and generated-only successor to consumed VR12P R4.
+It inventories all 23 exact VR12A F01-F06 route/reason call sites and freezes
+seven ordered residual classes: suffix-bearing BIDS identity, exact Freewill
+task token, mixed companion run tokens, normalized companion collision,
+incomplete companion set, repaired bundle-total mismatch, and source taxonomy
+or eligibility mismatch.
+
+The generated qualification is fixed before implementation: one success
+control plus seven full-scale witnesses, canonical and reversed, over two exact
+replays. It requires 32 unchanged VR12A calls, four outcomes per route, source
+immutability, deterministic replay, at least 50 direct refusals, zero retained
+output, and one-thread 30-second/256-MiB caps.
+
+Ten focused registration tests pass. Registration opens no private path,
+consumed result, archive, neural payload, target, model, prediction, score,
+FW2, CIL1, provider, hardware, release, or claim surface. Implement only after
+the exact registration commit is pushed and both CI jobs are green. A future
+private discriminator remains a separate Tier C packet and fresh decision.

@@ -1,5 +1,15 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR13A registration, 2026-08-20: read
+> `docs/MARC_2_R4_RESIDUAL_DECOMPOSITION_PREREGISTRATION.md` and its contract.
+> The generated-only lane freezes seven residual VR12P R4 structural classes
+> and 32 unchanged VR12A calls across eight cases, two orders, and two replays,
+> with at least 50 direct refusals and zero retention. Ten focused contract
+> tests pass. Commit, push, and require both CI jobs green before implementing.
+> Do not touch private/ignored paths, VR11P/VR12P consumed state, archives,
+> neural payloads, targets, models, scores, FW2, or CIL1. A later private
+> discriminator is a separate Tier C packet and fresh decision.
+
 > Current MARC2-VR12P result, 2026-08-18: final implementation `d98a011`
 > passed Base job `95903371693`, Optional job `95903371721`, and CI
 > `32197145780`; proof-only closeout `4280aa6` then passed Base job
@@ -5970,3 +5980,27 @@ run `execute`, readiness, or any private-path operation before both barriers.
 Keep the unrelated tracker inspection NDJSON untouched. FW2, CIL1, archive
 payload, neural data, targets, models, scores, release, and claims remain
 closed.
+
+## 2026-08-20 MARC2-VR13A Registration Handoff
+
+Read `docs/MARC_2_R4_RESIDUAL_DECOMPOSITION_PREREGISTRATION.md`,
+`registries/marc2_r4_residual_decomposition_contract.v0.json`, and
+`tests/test_marc2_r4_residual_decomposition_contract.py`.
+
+The contract binds 15 committed inputs totaling 314,530 bytes and inventories
+the exact 23 VR12A F01-F06 refusal call sites. It freezes seven ordered
+residual first-failure classes and one generated success route. The future
+matrix runs eight full-scale generated cases in two row orders over two exact
+replays, requiring 32 unchanged VR12A calls, four observations per route, at
+least 50 direct refusals, source immutability, deterministic replay, and zero
+retention.
+
+Ten focused contract tests pass. Current authority and every private,
+scientific, network, hardware, and other-project operation counter are false
+or zero. Keep the unrelated tracker-inspection NDJSON untouched.
+
+Immediate gate: commit and push this exact registration and require both Base
+Python and Optional Neuro Readers green. Do not implement before that proof.
+Do not open a private path, reuse consumed VR11P/VR12P state, modify VR12A, or
+touch an archive member, neural payload, target, model, prediction, score,
+FW2/CIL1 surface, or another project.

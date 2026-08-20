@@ -11699,3 +11699,28 @@ VR12P is consumed with no retry, rerun, resume, repair, fallback, substitution,
 or private reinspection. Next safe task: freeze an artifact-only and generated-
 only decomposition of the residual identity/task/companion predicates. FW2 and
 CIL1 remain ineligible.
+
+## 2026-08-20 - MARC2-VR13A Residual Decomposition Registration
+
+- Froze one artifact-only and generated-only contract over 15 committed inputs
+  totaling 314,530 bytes; no private or ignored path was opened.
+- Static registration inventory binds all 23 exact VR12A F01-F06 route/reason
+  call sites. Committed evidence excludes contract drift, the live envelope,
+  and previously proven generic producer invariants without inferring a
+  private value.
+- Seven ordered residual classes remain: suffix-bearing identity, exact task
+  token, mixed run tokens, normalized companion collision, incomplete
+  companions, repaired bundle-total mismatch, and taxonomy/eligibility
+  mismatch.
+- The future generated matrix contains one success control plus seven witnesses
+  in canonical and reversed order across two replays: 32 unchanged VR12A calls,
+  every route exactly four times, at least 50 direct refusals, zero retention,
+  and strict 30-second, 256 MiB RSS, 24 MiB input, and 1 MiB output caps.
+- Ten focused registration tests pass. Every private, archive, neural, target,
+  model, provider, hardware, FW2/CIL1, retry, release, and claim counter is
+  false or zero.
+
+Immediate gate: commit, push, and require both Base Python and Optional Neuro
+Readers green for this exact registration. Only then may the generated-only
+implementation begin. A future private discriminator remains a new Tier C
+packet and fresh decision.

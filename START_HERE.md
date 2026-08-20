@@ -7,12 +7,11 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR12P Consumed At Structural Route R4
+## Current Frontier: MARC2-VR13A Residual Decomposition Registered
 
-Read `docs/MARC_2_P15_RUN_INDEX_REPAIR_RESULT.md`, then
-`docs/MARC_2_P15_PRIVATE_CONFIRMATION_IMPLEMENTATION.md`,
-`docs/MARC_2_P15_PRIVATE_CONFIRMATION_PROOF_CLOSEOUT.md`, and
-`docs/MARC_2_P15_PRIVATE_CONFIRMATION_RESULT.md` with their registries.
+Read `docs/MARC_2_P15_PRIVATE_CONFIRMATION_RESULT.md`, then
+`docs/MARC_2_R4_RESIDUAL_DECOMPOSITION_PREREGISTRATION.md` and
+`registries/marc2_r4_residual_decomposition_contract.v0.json`.
 
 VR12A's generated-only repair accepts one- or two-digit ASCII `run-<index>`
 spellings while preserving source-exact names and all subject/session, task,
@@ -34,9 +33,18 @@ or cohort. No private cohort manifest was created.
 VR12P has no retry, rerun, resume, repair, fallback, substitution, or private
 reinspection. FW2 and CIL1 remain ineligible. No archive member, neural
 payload, signal sample, target, model, prediction, score, release, or
-scientific claim is open. The next safe work is a separately frozen artifact-
-only and generated-only decomposition of the residual identity/task/companion
-predicates; any new private read remains a fresh Tier C packet and decision.
+scientific claim is open.
+
+VR13A freezes the next safe question without reopening that evidence. It
+partitions the remaining first-failure surface into seven ordered classes:
+suffix-bearing BIDS identity, exact task token, mixed run tokens, normalized
+companion collision, incomplete companions, bundle-total mismatch, and
+taxonomy/eligibility mismatch. Its future generated matrix must exercise one
+success control plus all seven classes in two orders and two replays for 32
+unchanged VR12A calls, with at least 50 direct refusals and zero retained
+output. Implementation may begin only after this exact registration is pushed
+and both CI jobs are green. Any later private read remains a new Tier C packet
+and fresh decision.
 
 ## Prior Frontier: MARC2-VR11P Consumed At Structural Route R2
 

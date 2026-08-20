@@ -9664,3 +9664,27 @@ Boundary decision: no private cohort manifest exists, so FW2 and CIL1 remain
 ineligible. Archive payload, neural signal, targets, models, predictions,
 scores, release, and scientific claims remain closed. Another private read is
 a new Tier C packet and fresh packet-bound decision.
+
+## 0302 - Freeze Seven Residual R4 Classes Before Another Private Question
+
+Evidence decision: use only committed artifacts to partition VR12P R4. Bind
+all 23 exact VR12A F01-F06 refusal call sites, exclude only contract drift, the
+live envelope, and generic producer invariants already excluded by committed
+proof, and retain seven ordered residual first-failure classes. These classes
+are logical possibilities, not observations about the consumed private source.
+
+Qualification decision: after this exact registration is pushed and both CI
+jobs are green, permit one dependency-free generated-only implementation with
+one success control and seven witnesses in two orders across two replays. It
+must make exactly 32 unchanged VR12A calls, observe each route four times,
+pass at least 50 direct refusals, retain zero output, and stay within the
+frozen resource caps.
+
+Order decision: do not implement before registration proof. Do not prepare a
+private discriminator packet before the exact generated implementation and
+result are themselves committed, pushed, and remotely green.
+
+Boundary decision: VR13A authorizes no private or ignored path, consumed-state
+reuse, archive, neural signal, target, model, prediction, score, provider,
+hardware, FW2/CIL1, release, or scientific claim. A later private read remains
+a separately frozen Tier C packet and fresh packet-bound decision.

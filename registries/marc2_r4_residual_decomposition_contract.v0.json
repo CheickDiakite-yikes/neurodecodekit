@@ -1,0 +1,358 @@
+{
+  "schema_name": "neurodecodekit.marc2_r4_residual_decomposition_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "MARC-2-VR13A-R4-residual-decomposition-generated-coverage-v0",
+  "lane_id": "MARC2-VR13A",
+  "recorded_at_local": "2026-08-20",
+  "status": "preregistered_artifact_only_generated_only_no_private_access",
+  "objective": "Decompose consumed aggregate VR12P R4 into exact ordered residual first-failure classes and generated-qualify every remaining class through the unchanged VR12A adapter before proposing another private question.",
+  "fixed_inputs": [
+    {
+      "role": "VR12A_repair_module",
+      "path": "src/neurodecodekit/datasets/marc2_p15_run_index_repair.py",
+      "bytes": 39338,
+      "sha256": "e7321d2a2b347ae2a4d0294c59d06d8eeeb3c6f08bf279b2658d1d56a25aa2f6"
+    },
+    {
+      "role": "VR12A_contract",
+      "path": "registries/marc2_p15_run_index_repair_contract.v0.json",
+      "bytes": 9681,
+      "sha256": "a6cd01e79813f79dfd7b54ee6c2d21ffb82e984b6230434127b936c513cf3f1e"
+    },
+    {
+      "role": "VR12A_implementation_record",
+      "path": "registries/marc2_p15_run_index_repair_implementation.v0.json",
+      "bytes": 6729,
+      "sha256": "ab9ecf59d466ff63cad572747945f5dd6942a7d69de0d70c37578c41447140f7"
+    },
+    {
+      "role": "VR12A_result_record",
+      "path": "registries/marc2_p15_run_index_repair_result.v0.json",
+      "bytes": 6742,
+      "sha256": "a439f1242ba469f389dc970fa9062eca1ba159b17ea262a6b22484009e5b9953"
+    },
+    {
+      "role": "VR12P_confirmation_module",
+      "path": "src/neurodecodekit/datasets/marc2_p15_private_confirmation.py",
+      "bytes": 51244,
+      "sha256": "440432cd58ddaa413e539c63a9f204d1e1a9219687f8fe5509b7987b308c2b31"
+    },
+    {
+      "role": "VR12P_authorization_request",
+      "path": "registries/marc2_p15_private_confirmation_authorization_request.v0.json",
+      "bytes": 17155,
+      "sha256": "e239f7adf294109bb40e706ede344b4d4080e0a5d1ac972b7a2d26fd8e8a5011"
+    },
+    {
+      "role": "VR12P_result_record",
+      "path": "registries/marc2_p15_private_confirmation_result.v0.json",
+      "bytes": 6492,
+      "sha256": "b48e8aabe9bc71fd179452aa0bf0b310e5bb1c29ba3f15b0802c11276ffb0fe7"
+    },
+    {
+      "role": "VR12P_result_document",
+      "path": "docs/MARC_2_P15_PRIVATE_CONFIRMATION_RESULT.md",
+      "bytes": 3399,
+      "sha256": "c82c0dacaa59b46034ad48d272454ea55b9b0650df2bff0ac7618e74f9805370"
+    },
+    {
+      "role": "VR11P_authorization_request",
+      "path": "registries/marc2_f03_private_discriminator_authorization_request.v0.json",
+      "bytes": 20033,
+      "sha256": "851704a5245364edc01ddd4811a73b0936da7097e56a528151568edb710689a3"
+    },
+    {
+      "role": "VR11P_result_record",
+      "path": "registries/marc2_f03_private_discriminator_result.v0.json",
+      "bytes": 5980,
+      "sha256": "be6e1489132d5f33f693daa4ba320436dafc8345f8914067817040d00f82eec0"
+    },
+    {
+      "role": "VR10A_predicate_decomposition_result",
+      "path": "registries/marc2_f03_predicate_decomposition_result.v0.json",
+      "bytes": 14322,
+      "sha256": "6f612be616388fd8b88f676704c162a8c9060dd9c88fe980750adf03327e6c73"
+    },
+    {
+      "role": "VR10B_discriminator_module",
+      "path": "src/neurodecodekit/datasets/marc2_f03_five_route_discriminator.py",
+      "bytes": 51491,
+      "sha256": "f0e5db7e56ef5a6d27cfc84c637aea7da4ed5fe61ae6bb8fd387c0c3236d32d4"
+    },
+    {
+      "role": "VR10B_result_record",
+      "path": "registries/marc2_f03_five_route_discriminator_result.v0.json",
+      "bytes": 9090,
+      "sha256": "8835da10f1671f147ab47f2429121a3f0c3ae579fc1ceba1cda39e4b03cf47e7"
+    },
+    {
+      "role": "VR2_validator_module",
+      "path": "src/neurodecodekit/datasets/marc2_live_domain_eligibility_adapter.py",
+      "bytes": 57528,
+      "sha256": "061b893180e01116dbd962826384b4071d9e952b78b593b4743f8c301e1cbbc3"
+    },
+    {
+      "role": "VR2_contract",
+      "path": "registries/marc2_live_domain_eligibility_adapter_contract.v0.json",
+      "bytes": 15306,
+      "sha256": "c7c94406c7b3f483bb2ecbbb42b131756d178f288eedc31ce48e9383180a0a33"
+    }
+  ],
+  "fixed_input_count": 15,
+  "fixed_input_bytes": 314530,
+  "observed_route_binding": {
+    "VR11P_route": "MARC2VR11P-R2",
+    "VR11P_frozen_class": "P15_suffix_bearing_BIDS_identity",
+    "VR12P_route": "MARC2VR12P-R4",
+    "VR12P_public_class": "identity_task_or_companion_validation_refusal",
+    "same_registered_source_identity": true,
+    "registered_source_bytes": 418755,
+    "private_source_opened_by_registration": false,
+    "private_result_or_consumed_output_reinspected": false,
+    "private_failure_value_available": false,
+    "cohort_available": false
+  },
+  "F01_F06_safe_reason_inventory": {
+    "F01": [
+      "registered contract hash differs",
+      "registered contract is unavailable",
+      "registered contract schema differs",
+      "registered contract mapping differs",
+      "registration proof differs"
+    ],
+    "F02": [
+      "live source envelope differs"
+    ],
+    "F03": [
+      "source row fields differ",
+      "source member path differs",
+      "source CRC declaration differs",
+      "source integer declaration differs",
+      "source size is negative",
+      "source ZIP64 declaration differs",
+      "encrypted or unsupported member",
+      "directory row is malformed",
+      "regular member type differs",
+      "P15 suffix-bearing BIDS identity differs",
+      "source full member name is duplicated"
+    ],
+    "F04": [
+      "P16 Freewill task differs"
+    ],
+    "F05": [
+      "P18 companion run spelling differs",
+      "P18 normalized run companion is duplicated",
+      "P19 run companion set is incomplete"
+    ],
+    "F06": [
+      "source kind or run-bundle total differs",
+      "source taxonomy or eligibility differs"
+    ]
+  },
+  "safe_reason_call_site_count": 23,
+  "excluded_classes": [
+    {
+      "VR12A_route": "F01",
+      "class": "registered_contract_or_proof_drift",
+      "status": "excluded_by_exact_green_artifact_binding",
+      "evidence": "The exact VR12A module contract implementation and result were verified before the sole VR12P call.",
+      "private_observation": false
+    },
+    {
+      "VR12A_route": "F02",
+      "class": "live_source_envelope",
+      "status": "excluded_by_same_source_predecessor",
+      "evidence": "VR11P reached nested P15 on the same registered 418755-byte source identity, which requires the exact VR2 envelope to pass first.",
+      "private_observation": false
+    },
+    {
+      "VR12A_route": "F03_generic_producer_invariants",
+      "class": "row_shape_path_safety_CRC_integer_ZIP_entry_kind_and_full_name_uniqueness",
+      "status": "excluded_by_committed_VR10A_producer_analysis",
+      "evidence": "The committed VR10A partition excludes these generic leaves while keeping suffix-bearing BIDS identity source dependent.",
+      "private_observation": false
+    }
+  ],
+  "residual_first_failure_classes": [
+    {
+      "route": "MARC2VR13A-R1",
+      "VR12A_route": "F03",
+      "predicate": "P15_residual_suffix_bearing_BIDS_identity",
+      "safe_reason": "P15 suffix-bearing BIDS identity differs",
+      "private_observation": false
+    },
+    {
+      "route": "MARC2VR13A-R2",
+      "VR12A_route": "F04",
+      "predicate": "P16_exact_freewill_task_token",
+      "safe_reason": "P16 Freewill task differs",
+      "private_observation": false
+    },
+    {
+      "route": "MARC2VR13A-R3",
+      "VR12A_route": "F05",
+      "predicate": "P18_companion_run_spelling",
+      "safe_reason": "P18 companion run spelling differs",
+      "private_observation": false
+    },
+    {
+      "route": "MARC2VR13A-R4",
+      "VR12A_route": "F05",
+      "predicate": "P18_normalized_run_companion_collision",
+      "safe_reason": "P18 normalized run companion is duplicated",
+      "private_observation": false
+    },
+    {
+      "route": "MARC2VR13A-R5",
+      "VR12A_route": "F05",
+      "predicate": "P19_four_companion_completeness",
+      "safe_reason": "P19 run companion set is incomplete",
+      "private_observation": false
+    },
+    {
+      "route": "MARC2VR13A-R6",
+      "VR12A_route": "F06",
+      "predicate": "repaired_source_kind_or_bundle_total",
+      "safe_reason": "source kind or run-bundle total differs",
+      "private_observation": false
+    },
+    {
+      "route": "MARC2VR13A-R7",
+      "VR12A_route": "F06",
+      "predicate": "source_taxonomy_or_eligibility",
+      "safe_reason": "source taxonomy or eligibility differs",
+      "private_observation": false
+    }
+  ],
+  "generated_witness_matrix": {
+    "cases": [
+      {
+        "case": "control_success",
+        "expected_VR12A_route": "MARC2VR12A-G1",
+        "expected_VR13A_route": "MARC2VR13A-G1"
+      },
+      {
+        "case": "residual_bids_identity",
+        "expected_VR12A_route": "MARC2VR12A-F03",
+        "expected_VR13A_route": "MARC2VR13A-R1"
+      },
+      {
+        "case": "wrong_task_token",
+        "expected_VR12A_route": "MARC2VR12A-F04",
+        "expected_VR13A_route": "MARC2VR13A-R2"
+      },
+      {
+        "case": "mixed_run_tokens",
+        "expected_VR12A_route": "MARC2VR12A-F05",
+        "expected_VR13A_route": "MARC2VR13A-R3"
+      },
+      {
+        "case": "duplicate_normalized_companion",
+        "expected_VR12A_route": "MARC2VR12A-F05",
+        "expected_VR13A_route": "MARC2VR13A-R4"
+      },
+      {
+        "case": "incomplete_companion_set",
+        "expected_VR12A_route": "MARC2VR12A-F05",
+        "expected_VR13A_route": "MARC2VR13A-R5"
+      },
+      {
+        "case": "extra_complete_bundle",
+        "expected_VR12A_route": "MARC2VR12A-F06",
+        "expected_VR13A_route": "MARC2VR13A-R6"
+      },
+      {
+        "case": "unknown_subject_taxonomy",
+        "expected_VR12A_route": "MARC2VR12A-F06",
+        "expected_VR13A_route": "MARC2VR13A-R7"
+      }
+    ],
+    "orders": [
+      "canonical",
+      "reversed"
+    ],
+    "replays": 2,
+    "required_paths": 32,
+    "required_VR12A_calls": 32,
+    "route_count_each": 4,
+    "mutation_before_VR12A_required": true,
+    "VR12A_or_predecessor_modification_allowed": false,
+    "source_immutability_required": true,
+    "deterministic_replay_required": true
+  },
+  "acceptance_gates": [
+    "all_15_fixed_inputs_match_size_and_SHA256",
+    "AST_inventory_finds_exactly_23_F01_F06_safe_reason_call_sites",
+    "only_committed_evidence_excludes_F01_F02_and_generic_F03_invariants",
+    "exactly_seven_ordered_residual_classes_remain",
+    "all_32_generated_paths_call_unchanged_VR12A_once",
+    "G1_and_R1_through_R7_each_appear_exactly_four_times",
+    "canonical_reversed_and_two_replays_match",
+    "generated_sources_remain_immutable",
+    "at_least_50_direct_refusals_pass",
+    "retained_generated_output_is_zero",
+    "runtime_RSS_input_and_output_caps_pass",
+    "all_private_scientific_other_project_retry_and_claim_counters_are_zero"
+  ],
+  "direct_refusal_minimum": 50,
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "generated_input_bytes": 25165824,
+    "aggregate_output_bytes": 1048576,
+    "retained_generated_output_bytes": 0,
+    "network_bytes": 0,
+    "private_or_Git_ignored_bytes": 0
+  },
+  "aggregate_output_firewall": {
+    "case_route_digest_count_resource_warning_and_zero_counter_allowed": true,
+    "safe_reason_exception_failed_value_source_row_member_path_identity_private_hash_candidate_selection_or_cohort_allowed": false,
+    "signal_event_target_label_response_quality_channel_geometry_prediction_or_score_allowed": false
+  },
+  "authorization_state": {
+    "private_manifest_consumed_root_or_ignored_path_access_authorized_now": false,
+    "archive_header_member_or_payload_access_authorized_now": false,
+    "signal_event_target_label_or_human_content_access_authorized_now": false,
+    "training_inference_prediction_freeze_delivery_or_score_authorized_now": false,
+    "network_download_provider_or_language_model_authorized_now": false,
+    "stream_device_or_hardware_authorized_now": false,
+    "VR12A_modification_or_private_value_inference_authorized_now": false,
+    "new_private_discriminator_packet_authorized_now": false,
+    "MARC2_FW2_or_CIL1_authorized_now": false,
+    "release_publication_or_claim_upgrade_authorized_now": false
+  },
+  "operation_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_VR11P_or_VR12P_path_or_output_operations": 0,
+    "network_or_public_request_operations": 0,
+    "archive_local_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "derivative_cache_feature_split_or_NeuroToken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "provider_language_model_stream_device_or_hardware_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "retry_rerun_release_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "registration_artifacts": {
+    "document_path": "docs/MARC_2_R4_RESIDUAL_DECOMPOSITION_PREREGISTRATION.md",
+    "document_sha256": "2a0f0bca976e14a76bb67f9f8a3387cf1a111491d8ede8fa065f480e3941f1e4",
+    "test_path": "tests/test_marc2_r4_residual_decomposition_contract.py",
+    "test_sha256": "d2bca120a9e04b10521cba523eaa379591803a242ad0893cde21822a0a1e2256"
+  },
+  "next_gate": {
+    "generated_implementation_allowed_after_registration_green": true,
+    "implementation_and_result_must_be_remote_green_before_new_Tier_C_request": true,
+    "private_read_or_real_executor_allowed": false,
+    "future_private_read_requires_new_frozen_packet_and_fresh_Tier_C_decision": true,
+    "consumed_VR11P_or_VR12P_reuse_allowed": false,
+    "MARC2_FW2_or_CIL1_allowed": false
+  },
+  "claim_boundary": {
+    "engineering_capability_sought": "Prove that every residual VR12P R4 structural class is independently reachable and distinguishable through the unchanged VR12A adapter using only generated manifests.",
+    "scientific_claim_not_established": "Artifact-only source analysis and generated structural manifests establish no neural effect decoding accuracy language decoding live decoding or thought-to-text capability."
+  }
+}

@@ -385,6 +385,22 @@ requires a new Tier C packet and fresh packet-bound decision. FW2 and CIL1
 remain ineligible; archive payload, neural data, targets, models, predictions,
 scores, release, and scientific claims remain closed.
 
+That next lane is now frozen as `MARC2-VR13A`. Read
+`docs/MARC_2_R4_RESIDUAL_DECOMPOSITION_PREREGISTRATION.md` and
+`registries/marc2_r4_residual_decomposition_contract.v0.json`. The artifact-
+only contract inventories the 23 exact VR12A F01-F06 refusal call sites and
+freezes seven ordered residual classes: suffix-bearing identity, exact task
+token, mixed run tokens, normalized companion collision, incomplete companion
+set, repaired bundle-total mismatch, and taxonomy/eligibility mismatch. After
+this exact registration is committed, pushed, and both CI jobs are green,
+Tier B may implement one dependency-free eight-case generated matrix over 32
+VR12A calls and at least 50 direct refusals. Do not implement before that
+proof, modify VR12A, touch VR11P/VR12P private or consumed state, or infer that
+any one residual class caused the private R4 result. A future private
+discriminator remains a new Tier C packet and fresh decision. FW2, CIL1,
+archive payload, neural data, targets, models, predictions, scores, release,
+and scientific claims remain closed.
+
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-
 blind analysis over 72 S004-S015 EDFs. The analysis accepted 1,080 events,
