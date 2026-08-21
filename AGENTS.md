@@ -69,6 +69,19 @@ payload, target, model, prediction, score, FW2, or CIL1. The generated routes
 do not identify the consumed private class. Any later private discriminator
 requires a new frozen Tier C packet and fresh packet-bound decision.
 
+That next all-false gate is now prepared as `MARC2-VR15P`. Read
+`docs/MARC_2_SUFFIX_IDENTITY_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md`
+and `registries/marc2_suffix_identity_private_discriminator_authorization_request.v0.json`.
+It binds 17 tracked predecessors totaling 308,187 bytes and proposes a
+generated/mock fixed-path wrapper followed, only after exact remote proof, by
+one 418,755-byte target-free structural read and one aggregate R1-R16 result.
+No cohort, archive member, neural payload, target, model, prediction, score,
+FW2, or CIL1 operation is requested. Every authorization field is false and
+every operation counter is zero. Commit, push, and green the request, then
+create and green a non-scope-changing request proof before identifying VR15P
+as the sole Tier C gate. No current or earlier message authorizes either stage
+or private access.
+
 The latest consumed evidence lane is `MARC2-VR12P`; its result is summarized
 near the end of this frontier. To reconstruct its predecessors, read
 `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`,

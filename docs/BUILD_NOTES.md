@@ -12044,3 +12044,18 @@ preparing any new all-false private discriminator packet.
 Immediate gate: Tier A may prepare one all-false private suffix-identity
 discriminator packet. Any actual private read remains Tier C and needs a fresh
 packet-bound decision.
+
+### VR15P all-false private discriminator request
+
+- Bound 17 committed predecessor artifacts totaling 308,187 bytes.
+- Froze a two-stage future sequence: generated/mock fixed-path wrapper proof,
+  then one 418,755-byte target-free structural open and one aggregate R1-R16
+  grammar route.
+- Froze one VR15A call with one nested VR12A call, a 1 MiB output cap, 2 GiB
+  free-disk floor, one thread/worker/job, and zero retry or network bytes.
+- Cohort, ignored/private path, structural source, archive, neural, target,
+  model, prediction, score, FW2/CIL1, provider, hardware, release, and claim
+  authorization fields remain false; all preparation counters are zero.
+
+Immediate gate: commit, push, and green the request, then create and green its
+proof-only closeout before sole-gate identification and a fresh Tier C decision.

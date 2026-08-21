@@ -16,6 +16,16 @@
 > archives, neural payloads, targets, models, scores, FW2, or CIL1. A later
 > private read requires a new Tier C decision.
 
+> Current MARC2-VR15P request, 2026-08-21: read the suffix-identity private
+> discriminator authorization packet and registry. The all-false request binds
+> 17 committed inputs totaling 308,187 bytes and proposes generated wrapper
+> proof before one future 418,755-byte target-free structural read. A future
+> result may retain only one R1-R16 grammar class; no cohort, archive, neural,
+> target, model, prediction, score, FW2, or CIL1 operation is requested. All
+> authority is false. Commit, push, green, then create and green a request proof
+> closeout. Do not implement or touch readiness/private paths before a fresh
+> packet-bound Tier C decision after that proof.
+
 > Current MARC2-VR13P Stage 1, 2026-08-20: decision `fe16400` passed Base job
 > `96648078587`, Optional job `96648078452`, and CI `32439821302`. Generated
 > qualification passed 32 matrix paths, one temporary fixed-path success path,

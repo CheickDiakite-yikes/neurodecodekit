@@ -10004,3 +10004,21 @@ Boundary decision: remote proof makes only an all-false private discriminator
 packet eligible for Tier A preparation. It does not authorize its future
 private read, identify the consumed class, freeze a cohort, or establish any
 scientific result.
+
+## 0320 - Request One Sixteen-Route P15 Private Discriminator
+
+Scope decision: prepare all-false `MARC2-VR15P` for one future two-stage
+sequence. Stage 1 may later implement a generated/mock fixed-path wrapper;
+Stage 2 may later read the exact 418,755-byte target-free structural source once
+and emit only one R1-R16 aggregate grammar class.
+
+Sequence decision: require the request and a non-scope-changing request proof
+to be remotely green before sole-gate identification and a fresh maintainer
+decision. After that decision, require exact Stage 1 and proof-closeout green
+barriers before the one private open. Earlier or standing approvals are not
+retroactive.
+
+Boundary decision: packet preparation performs zero ignored/private path,
+source, archive, neural, target, model, prediction, score, FW2/CIL1, network,
+hardware, retry, release, or claim operations. It requests no cohort creation
+and grants no authority now.

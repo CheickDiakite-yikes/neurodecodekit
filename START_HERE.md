@@ -30,6 +30,19 @@ payload, target, model, prediction, or score. FW2 and CIL1 remain ineligible.
 Tier A may prepare one all-false private-discriminator packet; a later private
 read remains a fresh Tier C decision.
 
+That all-false packet is now prepared as `MARC2-VR15P`. Read
+`docs/MARC_2_SUFFIX_IDENTITY_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md`
+and its registry. It binds 17 committed predecessors totaling 308,187 bytes
+and proposes generated fixed-path wrapper proof before one future 418,755-byte
+target-free structural open. The future command may emit only one aggregate
+R1-R16 grammar class; it cannot freeze a cohort or access neural payloads.
+Every authorization field is false and every operation counter is zero.
+
+Immediate gate: commit, push, and green this request, then create and green a
+non-scope-changing request proof closeout. Only after VR15P is identified as
+the sole Tier C packet can a fresh maintainer message authorize its unchanged
+two-stage sequence. No earlier or standing approval is retroactive.
+
 ## Prior Frontier: MARC2-VR13P Consumed Invalid And Parked
 
 Read `docs/MARC_2_P15_PRIVATE_CONFIRMATION_RESULT.md`, then the VR13A
