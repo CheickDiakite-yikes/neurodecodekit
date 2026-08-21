@@ -12399,3 +12399,25 @@ any generated implementation.
 
 Immediate next task: preregister corrected VR17B with an exact two-control /
 four-repair mapping before any new generated execution.
+
+### VR17B corrected decomposition registration
+
+- Began only after parked-result commit
+  `48775bb35c9ff624293c6914425ca2119b0a131a` passed Base Python job
+  `96729312554`, Optional Neuro Readers job `96729312823`, and CI
+  `32468221097`.
+- Bound 12 exact committed inputs totaling 152,527 bytes and preserved VR17A as
+  parked without amendment or rerun.
+- Froze two VR15A-G1-to-VR16A-G1 controls and four VR15A-R15-to-VR16A-G1
+  extended-width repairs, all requiring one invariant semantic digest.
+- Retained four generated residual task/companion routes, 24 paired
+  equivalence paths, 20 residual paths, 24 VR15A calls, 44 VR16A calls, at
+  least 48 direct refusals, and zero retention.
+- Eight focused and 4,550 complete dependency-light tests pass with 204
+  expected skips in 108.078 seconds. Ruff, 330 registry parses, and diff
+  hygiene pass.
+- Private source, consumed state, archive, neural data, target, model, score,
+  FW2/CIL1, network, provider, hardware, release, and claim operations: zero.
+
+Immediate gate: commit, push, and green this exact registration before
+generated-only implementation.

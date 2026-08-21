@@ -3933,6 +3933,24 @@ rerun or reinterpret VR17A, touch consumed VR15P/VR16P state, or infer a real
 cohort. Private, archive, neural, target, model, score, FW2, and CIL1 work
 remain closed.
 
+The corrected successor is now frozen as `MARC2-VR17B`. Read
+`docs/MARC_2_CORRECTED_VARIABLE_WIDTH_R4_DECOMPOSITION_PREREGISTRATION.md`
+and
+`registries/marc2_corrected_variable_width_r4_decomposition_contract.v0.json`.
+It binds parked predecessor `48775bb35c9ff624293c6914425ca2119b0a131a`,
+Base job `96729312554`, Optional job `96729312823`, and CI `32468221097`.
+The exact generated map is two VR15A-G1-to-VR16A-G1 controls plus four
+VR15A-R15-to-VR16A-G1 repairs. The matrix retains 24 paired equivalence paths,
+20 residual paths, 24 VR15A calls, 44 VR16A calls, at least 48 direct refusals,
+one thread, 40 MiB input, 1 MiB output, and zero retention.
+
+Eight focused and 4,550 complete dependency-light tests pass with 204 expected
+skips. Commit, push, and green the exact VR17B registration before generated
+implementation. VR17B has no private executor. Do not touch VR15P/VR16P
+consumed state, VR17A, `.codex_work`, or the unrelated tracker inspection
+NDJSON. Private, cohort, archive, neural, target, model, score, FW2, CIL1,
+release, and scientific-claim work remain closed.
+
 ## Style
 
 - Small functions, explicit names, low magic.

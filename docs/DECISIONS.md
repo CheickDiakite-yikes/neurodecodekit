@@ -10356,3 +10356,23 @@ Next-lane decision: require a separate VR17B registration to freeze the exact
 two-control/four-repair mapping before another generated run. Infer no real
 cohort, private predicate, neural evidence, FW2/CIL1 eligibility, or scientific
 claim.
+
+## 0340 - Correct VR17A With A New Frozen VR17B Lane
+
+Proof decision: parked-result commit
+`48775bb35c9ff624293c6914425ca2119b0a131a` passed Base Python job
+`96729312554`, Optional Neuro Readers job `96729312823`, and CI
+`32468221097` before the corrected registration.
+
+Protocol decision: leave VR17A parked. Freeze two supported G1-to-G1 controls
+and four extended-width R15-to-G1 repairs under VR17B, with one invariant
+semantic digest, two source orders, and two replays.
+
+Diagnostic decision: retain the four generated task/companion residual routes
+and require all four composition hypotheses to pass or park VR17B. A safe
+reason may discriminate generated fixtures only; no future private wrapper is
+authorized here.
+
+Boundary decision: require exact registration remote green before generated
+implementation. Authorize no private source, consumed state, cohort, archive,
+neural data, target, model, score, FW2/CIL1, release, or scientific claim.

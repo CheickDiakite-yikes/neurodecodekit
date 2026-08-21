@@ -3446,3 +3446,20 @@ Next gate: preregister corrected `MARC2-VR17B` with two G1-to-G1 controls and
 four R15-to-G1 repairs, then green that exact registration before generated
 implementation. Private, cohort, archive, neural, target, model, score,
 FW2/CIL1, release, and claim work remains closed.
+
+### MARC2-VR17B - Corrected R4 Composition Audit Registered
+
+Parked-result commit `48775bb` passed both jobs in CI `32468221097` before the
+new lane was frozen. VR17B preserves VR17A as falsified and preregisters the
+observed partition: two VR15A G1-to-VR16A G1 controls plus four VR15A R15-to-
+VR16A G1 repairs with one invariant semantic digest.
+
+The generated matrix retains 24 paired equivalence paths and 20 residual
+paths, with G1 and four task/companion routes each expected exactly four times.
+It allows 24 VR15A calls, 44 VR16A calls, at least 48 direct refusals, one
+thread, 40 MiB input, 1 MiB output, and zero retention. Eight focused and
+4,550 complete dependency-light tests pass with 204 expected skips.
+
+Next gate: commit, push, and green the exact VR17B registration before its
+generated implementation. No private executor, cohort, neural payload, target,
+model, score, FW2/CIL1, release, or claim is authorized.

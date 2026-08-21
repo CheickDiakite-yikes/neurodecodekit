@@ -1,0 +1,170 @@
+{
+  "schema_name": "neurodecodekit.marc2_corrected_variable_width_r4_decomposition_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "MARC-2-VR17B-corrected-variable-width-R4-decomposition-v0",
+  "lane_id": "MARC2-VR17B",
+  "recorded_at_local": "2026-08-21",
+  "status": "preregistered_artifact_only_generated_only_corrected_no_private_access",
+  "objective": "Test the corrected two-control four-repair cross-adapter map and four generated residual task or companion classes without another private read.",
+  "predecessor_proof": {
+    "parked_lane": "MARC2-VR17A",
+    "parked_route": "MARC2VR17A-P01",
+    "commit": "48775bb35c9ff624293c6914425ca2119b0a131a",
+    "CI_run_id": 32468221097,
+    "base_job_id": 96729312554,
+    "optional_neuro_job_id": 96729312823,
+    "both_required_jobs_green": true,
+    "VR17A_full_matrix_ran": false,
+    "VR17A_amendment_or_rerun_allowed": false
+  },
+  "fixed_inputs": [
+    {"role": "VR16A_module", "path": "src/neurodecodekit/datasets/marc2_variable_width_run_index_repair.py", "bytes": 43861, "sha256": "1a69d42236af61b1e5565dc89903aa20e9416732752aa5b5b1ffe3a95003f3f1"},
+    {"role": "VR15A_module", "path": "src/neurodecodekit/datasets/marc2_suffix_identity_grammar_decomposition.py", "bytes": 41915, "sha256": "d30ae877c67855fd7df58ba54e600361b013e950e6b6bfd36cf966890fc09ee9"},
+    {"role": "VR16A_contract", "path": "registries/marc2_variable_width_run_index_repair_contract.v0.json", "bytes": 9282, "sha256": "308b80864553fd12a7bda7e4691aea35c63eebfbd651c7ed86ebc15e2fd41dec"},
+    {"role": "VR16A_implementation", "path": "registries/marc2_variable_width_run_index_repair_implementation.v0.json", "bytes": 6598, "sha256": "a11714c7860713a2b8ce82ed2d7a4f045d48582a36e1870b3f034719acbef7bd"},
+    {"role": "VR16A_result", "path": "registries/marc2_variable_width_run_index_repair_result.v0.json", "bytes": 5941, "sha256": "5d873da94343c3b4a55c812088c00a5d2c9cc2b0f0e97bea9fd3b8c79854a652"},
+    {"role": "VR15A_contract", "path": "registries/marc2_suffix_identity_grammar_decomposition_contract.v0.json", "bytes": 9287, "sha256": "10644f5487069c3143a55f1910d07f7e7572bcd6ed21fdc2620a8a649b26a058"},
+    {"role": "VR15A_implementation", "path": "registries/marc2_suffix_identity_grammar_decomposition_implementation.v0.json", "bytes": 7033, "sha256": "80ca0dd4ee014856ca3dbdd470d21a91a6effadee15d1a6d82f868e5bde4ea66"},
+    {"role": "VR15A_result", "path": "registries/marc2_suffix_identity_grammar_decomposition_result.v0.json", "bytes": 6433, "sha256": "ecc7bee1c8d1b0263887e0a4cee2db0846fdf0ffbc81fdcdd1abf1208c1e031f"},
+    {"role": "VR16P_result", "path": "registries/marc2_variable_width_private_confirmation_result.v0.json", "bytes": 4922, "sha256": "684943c668408390f32121580a392423b4360439f392f153d6c5c41ebde36153"},
+    {"role": "VR17A_contract", "path": "registries/marc2_variable_width_r4_decomposition_contract.v0.json", "bytes": 10985, "sha256": "273d46f3940dc2099f88d947189298238b37e64ed0758650458e6d0bd8289875"},
+    {"role": "VR17A_result", "path": "registries/marc2_variable_width_r4_decomposition_result.v0.json", "bytes": 3714, "sha256": "115aed2173f4ba176891902fdad7790db3477f98398e8cc6dc911e71805651fb"},
+    {"role": "VR17A_result_document", "path": "docs/MARC_2_VARIABLE_WIDTH_R4_DECOMPOSITION_RESULT.md", "bytes": 2556, "sha256": "3ee41a5d389cd9f0b813e565cfcb9c7a38851517aefb45e5218d2bc8a7263fd4"}
+  ],
+  "fixed_input_count": 12,
+  "fixed_input_bytes": 152527,
+  "corrected_equivalence_map": {
+    "supported_controls": [
+      {"variant": "unpadded", "VR15A_route": "MARC2VR15A-G1", "VR16A_route": "MARC2VR16A-G1"},
+      {"variant": "two_digit_control", "VR15A_route": "MARC2VR15A-G1", "VR16A_route": "MARC2VR16A-G1"}
+    ],
+    "extended_width_repairs": [
+      {"variant": "three_digit", "VR15A_route": "MARC2VR15A-R15", "VR16A_route": "MARC2VR16A-G1"},
+      {"variant": "six_digit", "VR15A_route": "MARC2VR15A-R15", "VR16A_route": "MARC2VR16A-G1"},
+      {"variant": "sixty_four_digit", "VR15A_route": "MARC2VR15A-R15", "VR16A_route": "MARC2VR16A-G1"},
+      {"variant": "bundle_consistent_mixed_width", "VR15A_route": "MARC2VR15A-R15", "VR16A_route": "MARC2VR16A-G1"}
+    ],
+    "semantic_sha256": "254bca5e0a39b52ca9791b917df6af554e02dda8f18f8e01b524d0e3ce8d9cba",
+    "semantic_digest_count": 1
+  },
+  "composition_hypotheses": [
+    {"id": "VR17B-H1", "statement": "The nonnumeric helper guard is unreachable after VARIABLE_CORE_MEMBER_RE matches an ASCII numeric run token.", "must_be_generated_proven": true},
+    {"id": "VR17B-H2", "statement": "The explicit post-normalization task guard is unreachable because unchanged VR12A rejects a wrong task first on F04.", "must_be_generated_proven": true},
+    {"id": "VR17B-H3", "statement": "Two supported controls replay G1-to-G1 and four extended-width repairs replay R15-to-G1 with one invariant semantic digest.", "must_be_generated_proven": true},
+    {"id": "VR17B-H4", "statement": "Committed producer evidence plus H1-H3 exclude F03 from the frozen aggregate candidate set without identifying a private value.", "must_be_generated_proven": true}
+  ],
+  "residual_first_failure_classes": [
+    {"route": "MARC2VR17B-R1", "VR16A_route": "MARC2VR16A-F04", "safe_reason": "Freewill task differs", "predicate": "exact_lowercase_freewill_task_token"},
+    {"route": "MARC2VR17B-R2", "VR16A_route": "MARC2VR16A-F05", "safe_reason": "companion run spelling differs", "predicate": "companion_lexical_run_spelling"},
+    {"route": "MARC2VR17B-R3", "VR16A_route": "MARC2VR16A-F05", "safe_reason": "normalized run companion is duplicated", "predicate": "normalized_companion_collision"},
+    {"route": "MARC2VR17B-R4", "VR16A_route": "MARC2VR16A-F05", "safe_reason": "run companion set is incomplete", "predicate": "four_companion_completeness"}
+  ],
+  "success_route": "MARC2VR17B-G1",
+  "park_route": "MARC2VR17B-P01",
+  "generated_matrix": {
+    "width_variants": ["unpadded", "two_digit_control", "three_digit", "six_digit", "sixty_four_digit", "bundle_consistent_mixed_width"],
+    "equivalence_orders": ["canonical", "reversed"],
+    "equivalence_replays": 2,
+    "equivalence_paths": 24,
+    "equivalence_VR15A_calls": 24,
+    "equivalence_VR16A_calls": 24,
+    "residual_cases": ["control_success", "wrong_task_token", "mixed_lexical_tokens_within_bundle", "duplicate_normalized_run_companion", "incomplete_companion_set"],
+    "residual_orders": ["canonical", "reversed"],
+    "residual_replays": 2,
+    "residual_paths": 20,
+    "residual_VR16A_calls": 20,
+    "total_VR15A_calls": 24,
+    "total_VR16A_calls": 44,
+    "residual_route_count_each": 4,
+    "source_immutability_required": true,
+    "deterministic_replay_required": true,
+    "retained_generated_output_bytes": 0
+  },
+  "acceptance_gates": [
+    "all_12_fixed_inputs_match_size_and_SHA256",
+    "parked_VR17A_remote_proof_is_exact",
+    "two_supported_controls_replay_as_VR15A_G1_then_VR16A_G1",
+    "four_extended_widths_replay_as_VR15A_R15_then_VR16A_G1",
+    "semantic_digest_is_invariant_across_all_six_variants",
+    "all_four_composition_hypotheses_are_generated_proven_or_lane_parks",
+    "all_20_residual_paths_call_unchanged_VR16A_once",
+    "G1_and_R1_through_R4_each_appear_exactly_four_times",
+    "generated_sources_remain_byte_identical",
+    "at_least_48_direct_refusals_pass",
+    "retained_generated_output_is_zero",
+    "runtime_RSS_input_and_output_caps_pass",
+    "all_private_scientific_other_project_retry_and_claim_counters_are_zero"
+  ],
+  "direct_refusal_minimum": 48,
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "generated_input_bytes": 41943040,
+    "aggregate_output_bytes": 1048576,
+    "retained_generated_output_bytes": 0
+  },
+  "operation_counters": {
+    "repository_dot_codex_work_operations": 0,
+    "private_structural_source_stats": 0,
+    "private_structural_source_resolves": 0,
+    "private_structural_source_hashes": 0,
+    "private_structural_source_opens": 0,
+    "private_structural_source_bytes": 0,
+    "consumed_VR15P_VR16P_or_VR17A_operations": 0,
+    "archive_or_neural_payload_reads": 0,
+    "signal_event_channel_geometry_reads": 0,
+    "target_or_label_reads": 0,
+    "model_training_inference_prediction_or_score_runs": 0,
+    "FW2_operations": 0,
+    "CIL1_operations": 0,
+    "network_provider_or_language_model_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "other_project_operations": 0,
+    "release_or_publication_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "authority": {
+    "registration_only": true,
+    "generated_implementation_allowed_after_exact_registration_remote_green": true,
+    "private_source_or_consumed_output_access_authorized": false,
+    "future_private_discriminator_authorized": false,
+    "archive_neural_target_model_score_FW2_or_CIL1_authorized": false,
+    "release_or_claim_upgrade_authorized": false
+  },
+  "verification_baseline": {
+    "dependency_light_tests_passed": 4542,
+    "expected_skips": 204,
+    "new_failures": 0
+  },
+  "registration_verification": {
+    "focused_contract_tests_passed": 8,
+    "complete_dependency_light_tests_passed": 4550,
+    "expected_skips": 204,
+    "runtime_seconds": 108.078,
+    "ruff_version": "0.15.20",
+    "ruff_passed": true,
+    "registry_JSON_files_parsed": 330,
+    "git_diff_check_passed": true,
+    "new_failures": 0,
+    "private_operations": 0
+  },
+  "remote_registration_proof": null,
+  "warnings": [
+    "Artifact-only and generated-only corrected registration.",
+    "VR17A remains parked and must not be amended rerun or reinterpreted.",
+    "The four-class reduction remains a hypothesis until every generated gate passes.",
+    "No private value identity cohort archive neural payload target model or score is available."
+  ],
+  "claim_boundary": {
+    "engineering_capability_sought": "corrected generated proof that consumed R4 can be reduced to four privacy-safe task and companion classes",
+    "scientific_ceiling": "none",
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "live_decoding": false
+  },
+  "next_gate": "Commit push and green this exact registration before any VR17B implementation."
+}

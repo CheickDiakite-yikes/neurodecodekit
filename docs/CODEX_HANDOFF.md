@@ -6642,3 +6642,25 @@ Immediate next task: freeze corrected `MARC2-VR17B` with two G1-to-G1 controls
 and four R15-to-G1 repairs before any new generated execution. Do not rerun or
 reinterpret VR17A, inspect consumed VR15P/VR16P state, or touch the unrelated
 tracker inspection NDJSON. Private, neural, FW2, and CIL1 work remain closed.
+
+## 2026-08-21 MARC2-VR17B Corrected Registration Handoff
+
+Parked-result commit `48775bb35c9ff624293c6914425ca2119b0a131a`
+passed Base Python job `96729312554`, Optional Neuro Readers job
+`96729312823`, and CI `32468221097` before VR17B registration.
+
+Read the corrected preregistration, contract, and contract test. The contract
+binds 12 exact committed inputs totaling 152,527 bytes. Its equivalence map is
+frozen as two VR15A G1-to-VR16A G1 controls and four VR15A R15-to-VR16A G1
+repairs, all with one registered semantic digest. The residual matrix retains
+G1 and four task/companion routes, each expected exactly four times.
+
+The future generated pass requires 24 paired equivalence paths, 20 residual
+paths, 24 VR15A calls, 44 VR16A calls, at least 48 direct refusals, one thread,
+40 MiB input, 1 MiB output, and zero retention. Eight focused and 4,550
+complete dependency-light tests pass with 204 expected skips.
+
+Immediate gate: commit, push, and green this exact registration before VR17B
+implementation. Do not touch consumed VR15P/VR16P state, parked VR17A,
+`.codex_work`, or the unrelated tracker inspection NDJSON. Private, neural,
+FW2, and CIL1 work remains closed.
