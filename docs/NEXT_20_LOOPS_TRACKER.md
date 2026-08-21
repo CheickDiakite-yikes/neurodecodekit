@@ -3350,3 +3350,16 @@ VR16P as the sole active Tier C packet and wait for fresh packet-bound
 maintainer words. No wrapper implementation, private source read, cohort,
 archive, neural, target, model, score, FW2/CIL1, release, or claim operation is
 open before the separate decision is remotely green.
+
+### MARC2-VR16P - Packet-Bound Decision Recorded
+
+The maintainer's fresh message was exactly `continue`. The decision binds only
+the remotely green request `619469a` / CI `32461465238` and proof closeout
+`b12aeab` / CI `32462345461`; it preserves the frozen two-stage order and adds
+no scope.
+
+Next gate: commit, push, and green the decision in both jobs. Then implement
+and generated-qualify the fixed-path wrapper. Private source access remains
+closed until the exact Stage 1 implementation and proof-only closeout are also
+green; FW2, CIL1, archive, neural, target, model, score, release, and claim
+work remains closed.

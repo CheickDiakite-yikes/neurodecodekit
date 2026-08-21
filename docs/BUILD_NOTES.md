@@ -12286,3 +12286,19 @@ proof-only closeout before fresh packet-bound authorization can be sought.
 Immediate gate: commit, push, and green this proof-only closeout. Only then
 may VR16P be identified as the sole Tier C packet for fresh packet-bound
 maintainer words; no stage is authorized by the proof itself.
+
+### VR16P packet-bound authorization decision
+
+- Recorded the maintainer's exact message `continue` as eight UTF-8 bytes and
+  bound it only to request `619469a` / CI `32461465238` and proof closeout
+  `b12aeab` / CI `32462345461`.
+- Preserved all 24 generated paths, 70-refusal minimum, one future 418,755-byte
+  structural read, one VR16A call, R1-only cohort freeze, fixed resources,
+  aggregate firewall, and zero-retry sequence.
+- Decision recording performed zero `.codex_work`, private-source, readiness,
+  output, archive, neural, target, model, score, FW2/CIL1, network, hardware,
+  other-project, release, or claim operation.
+
+Immediate gate: verify, commit, push, and green this decision in both jobs.
+Do not begin Stage 1 before that proof, and do not begin Stage 2 before the
+exact Stage 1 implementation and proof-only closeout are separately green.

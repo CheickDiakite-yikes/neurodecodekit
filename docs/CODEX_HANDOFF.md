@@ -6527,3 +6527,16 @@ both jobs pass may VR16P be named the sole active Tier C packet and the
 maintainer's next fresh `continue`, `approve`, or `proceed` bind it by
 reference. Do not use an earlier continuation retroactively. Keep consumed
 VR15P and the unrelated tracker inspection NDJSON untouched.
+
+## 2026-08-21 MARC2-VR16P Authorization Decision Handoff
+
+After VR16P became the sole active Tier C packet, the maintainer's next exact
+message was `continue`. The decision document and registry quote only those
+eight UTF-8 bytes and bind request `619469a` with CI `32461465238` plus proof
+closeout `b12aeab` with CI `32462345461`.
+
+The decision has delayed effect. Immediate gate: run focused checks, commit,
+push, and require both decision CI jobs green. Do not implement Stage 1 or
+touch readiness, `.codex_work`, the private source, or an output root before
+that proof. Stage 2 remains blocked until exact Stage 1 and its proof closeout
+are separately remotely green. Keep the unrelated NDJSON untouched.

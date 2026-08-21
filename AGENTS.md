@@ -3838,6 +3838,16 @@ the sole active Tier C gate. Only the maintainer's next fresh, unambiguous
 reference. Do not implement the wrapper or touch readiness, `.codex_work`, the
 private source, or an output root before the separate decision itself is green.
 
+The maintainer's next exact message was `continue`. Read
+`docs/MARC_2_VARIABLE_WIDTH_PRIVATE_CONFIRMATION_AUTHORIZATION_DECISION.md`
+and its machine registry. The decision quotes those eight UTF-8 bytes and
+binds only request `619469a`, request CI `32461465238`, proof closeout
+`b12aeab`, and proof CI `32462345461`. It has delayed effect: commit, push, and
+green the exact decision in both jobs before implementing the generated
+wrapper or touching readiness, `.codex_work`, the private source, or an output
+root. Stage 2 remains closed until the exact Stage 1 implementation and its
+separate proof-only closeout are also remotely green.
+
 ## Style
 
 - Small functions, explicit names, low magic.

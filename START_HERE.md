@@ -2401,3 +2401,9 @@ job `96709074413`, Optional Neuro Readers job `96709074203`, and CI
 artifacts totaling 32,234 bytes and performs zero implementation or private
 operations. The closeout must itself be committed, pushed, and remotely green
 before VR16P becomes the sole Tier C gate for a fresh packet-bound decision.
+
+The maintainer's fresh packet-bound message was exactly `continue`. The VR16P
+authorization decision now binds only the unchanged green two-stage packet and
+has no effect until its own exact commit passes both remote jobs. Stage 1 may
+then use generated fixtures only; the private stage remains closed until the
+exact implementation and its proof-only closeout are separately green.
