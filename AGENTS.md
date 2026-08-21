@@ -3842,11 +3842,26 @@ The maintainer's next exact message was `continue`. Read
 `docs/MARC_2_VARIABLE_WIDTH_PRIVATE_CONFIRMATION_AUTHORIZATION_DECISION.md`
 and its machine registry. The decision quotes those eight UTF-8 bytes and
 binds only request `619469a`, request CI `32461465238`, proof closeout
-`b12aeab`, and proof CI `32462345461`. It has delayed effect: commit, push, and
-green the exact decision in both jobs before implementing the generated
-wrapper or touching readiness, `.codex_work`, the private source, or an output
-root. Stage 2 remains closed until the exact Stage 1 implementation and its
-separate proof-only closeout are also remotely green.
+`b12aeab`, and proof CI `32462345461`. Exact decision
+`79d9b49c94063e68663d3774d6e6296961a544a6` passed Base Python job
+`96714374482`, Optional Neuro Readers job `96714374314`, and CI
+`32463248736` before Stage 1.
+
+Read `docs/MARC_2_VARIABLE_WIDTH_PRIVATE_CONFIRMATION_IMPLEMENTATION.md`,
+`registries/marc2_variable_width_private_confirmation_implementation.v0.json`,
+and the two matching tests. Generated `MARC2VR16P-G1` passed 24/24 fixed-path
+width/order/replay paths and 71 direct refusals over 10,606,656 generated input
+bytes in 1.8574632920208387 seconds at 34,783,232-byte peak RSS. Peak
+incremental output was 241,813 bytes and retained output was zero. The complete
+dependency-light suite passed 4,519 tests with 204 expected skips. Every
+private, archive, neural, target, model, prediction, score, FW2/CIL1, network,
+hardware, other-project, and claim counter was zero.
+
+The immediate gate is exact Stage 1 remote proof followed by a separately
+green proof-only closeout. Do not repeat qualification or touch `.codex_work`
+during closeout. Only after both jobs pass may the registered 418,755-byte
+target-free structural confirmation execute once. Keep consumed VR15P and the
+unrelated tracker inspection NDJSON untouched.
 
 ## Style
 

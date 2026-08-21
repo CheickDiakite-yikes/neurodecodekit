@@ -12302,3 +12302,24 @@ maintainer words; no stage is authorized by the proof itself.
 Immediate gate: verify, commit, push, and green this decision in both jobs.
 Do not begin Stage 1 before that proof, and do not begin Stage 2 before the
 exact Stage 1 implementation and proof-only closeout are separately green.
+
+### VR16P generated Stage 1 implementation
+
+- Decision `79d9b49c94063e68663d3774d6e6296961a544a6` passed Base job
+  `96714374482`, Optional job `96714374314`, and CI `32463248736` before work.
+- Added a standard-library fixed-path wrapper with `plan`, `qualify`, `inspect`,
+  and proof-gated `execute` commands and no path or parameter override.
+- Generated `MARC2VR16P-G1` passed 24/24 width/order/replay paths and 71 direct
+  refusals with 24 exact VR16A calls and deterministic semantic selection.
+- The measured pass processed 10,606,656 generated input bytes in
+  1.8574632920208387 seconds at 34,783,232-byte peak RSS. Peak incremental
+  output was 241,813 bytes and retained output was zero.
+- Private, archive, signal, target, model, training, prediction, score,
+  FW2/CIL1, network, hardware, other-project, release, and claim operations
+  remained zero.
+- Focused tests passed 21 cases; the complete dependency-light suite passed
+  4,519 tests with 204 expected skips and zero new failures.
+
+Immediate gate: commit, push, and green the exact Stage 1 implementation. Then
+create and separately green a proof-only closeout without repeating generated
+qualification or touching `.codex_work`. Stage 2 remains closed meanwhile.

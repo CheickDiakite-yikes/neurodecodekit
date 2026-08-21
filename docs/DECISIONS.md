@@ -10257,3 +10257,25 @@ structural confirmation.
 
 Boundary decision: infer no archive, neural, target, model, score, FW2/CIL1,
 release, publication, or scientific-claim authority from the short form.
+
+## 0335 - Qualify The VR16P Wrapper Before Private Activation
+
+Proof decision: authorization decision
+`79d9b49c94063e68663d3774d6e6296961a544a6` passed Base Python job
+`96714374482`, Optional Neuro Readers job `96714374314`, and CI
+`32463248736` before generated implementation.
+
+Implementation decision: add one standard-library fixed-path wrapper with no
+path, source, output, width, threshold, retry, or substitution override. Keep
+`execute` closed while the implementation proof is null and prohibit imports
+or calls into consumed VR15P.
+
+Result decision: record `MARC2VR16P-G1` after 24/24 generated paths, 71 direct
+refusals, 10,606,656 generated input bytes, 1.8574632920208387 seconds,
+34,783,232-byte peak RSS, 241,813-byte peak incremental output, and zero
+retention or forbidden operations.
+
+Sequence decision: require this exact implementation and a separate proof-only
+closeout to pass both remote jobs before the one registered private structural
+read. Repeat no qualification and perform no private operation during proof
+closeout.

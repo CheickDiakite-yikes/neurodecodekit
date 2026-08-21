@@ -6540,3 +6540,24 @@ push, and require both decision CI jobs green. Do not implement Stage 1 or
 touch readiness, `.codex_work`, the private source, or an output root before
 that proof. Stage 2 remains blocked until exact Stage 1 and its proof closeout
 are separately remotely green. Keep the unrelated NDJSON untouched.
+
+## 2026-08-21 MARC2-VR16P Generated Stage 1 Handoff
+
+Decision `79d9b49c94063e68663d3774d6e6296961a544a6` passed Base Python
+job `96714374482`, Optional Neuro Readers job `96714374314`, and CI
+`32463248736` before implementation.
+
+Read the VR16P implementation document, machine record, module, and two test
+modules. Generated `MARC2VR16P-G1` passed 24/24 fixed-path width/order/replay
+paths and 71 direct refusals. It made 24 exact VR16A calls over 10,606,656
+generated input bytes in 1.8574632920208387 seconds at 34,783,232-byte peak
+RSS. Peak incremental output was 241,813 bytes and retained output was zero.
+Every private, archive, signal, target, model, training, prediction, score,
+FW2/CIL1, network, hardware, other-project, and claim counter remained zero.
+The complete dependency-light suite passed 4,519 tests with 204 expected skips.
+
+Immediate gate: commit, push, and green this exact implementation. Then create
+and separately green a proof-only closeout without repeating qualification or
+touching `.codex_work`. Only after both jobs pass may the one registered
+418,755-byte target-free structural confirmation execute once. Keep consumed
+VR15P and the unrelated tracker inspection NDJSON untouched.

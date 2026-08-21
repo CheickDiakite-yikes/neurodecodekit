@@ -2404,6 +2404,17 @@ before VR16P becomes the sole Tier C gate for a fresh packet-bound decision.
 
 The maintainer's fresh packet-bound message was exactly `continue`. The VR16P
 authorization decision now binds only the unchanged green two-stage packet and
-has no effect until its own exact commit passes both remote jobs. Stage 1 may
-then use generated fixtures only; the private stage remains closed until the
-exact implementation and its proof-only closeout are separately green.
+exact decision `79d9b49` passed Base Python job `96714374482`, Optional Neuro
+Readers job `96714374314`, and CI `32463248736` before Stage 1.
+
+The generated-only fixed-path wrapper now passes 24/24 width/order/replay paths
+and 71 direct refusals at route `MARC2VR16P-G1`. It processed 10,606,656
+generated input bytes in 1.8574632920208387 seconds at 34,783,232-byte peak
+RSS, retained zero output, and performed zero private, archive, neural, target,
+model, score, FW2, or CIL1 operation. The complete dependency-light suite
+passes 4,519 tests with 204 expected skips.
+
+Immediate gate: commit, push, and green the exact Stage 1 implementation, then
+commit, push, and green a proof-only closeout without repeating qualification.
+The sole 418,755-byte target-free structural read remains closed until both
+barriers pass.

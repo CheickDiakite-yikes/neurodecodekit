@@ -1,0 +1,158 @@
+{
+  "schema_name": "neurodecodekit.marc2_variable_width_private_confirmation_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "MARC-2-VR16P-variable-width-private-confirmation-implementation-v0",
+  "lane_id": "MARC2-VR16P",
+  "recorded_at_UTC": "2026-08-21T00:00:00Z",
+  "status": "generated_stage_1_qualified_private_stage_2_proof_gated",
+  "authority": {
+    "request_path": "registries/marc2_variable_width_private_confirmation_authorization_request.v0.json",
+    "request_sha256": "7c4a6f17b288eb3635a50b8199e9490c1191d4fa63b10495aeb77265c0c85067",
+    "decision_path": "registries/marc2_variable_width_private_confirmation_authorization_decision.v0.json",
+    "decision_sha256": "da8afdb0b543e39c0fe9402532525489c3cbf27ea742689e59f208e50c6f721f",
+    "decision_commit": "79d9b49c94063e68663d3774d6e6296961a544a6",
+    "decision_CI_run_id": 32463248736,
+    "decision_base_job_id": 96714374482,
+    "decision_optional_neuro_job_id": 96714374314,
+    "both_required_decision_jobs_green": true,
+    "scope_changed_after_decision": false
+  },
+  "exact_VR16A_artifacts": [
+    {
+      "path": "src/neurodecodekit/datasets/marc2_variable_width_run_index_repair.py",
+      "sha256": "1a69d42236af61b1e5565dc89903aa20e9416732752aa5b5b1ffe3a95003f3f1"
+    },
+    {
+      "path": "registries/marc2_variable_width_run_index_repair_implementation.v0.json",
+      "sha256": "a11714c7860713a2b8ce82ed2d7a4f045d48582a36e1870b3f034719acbef7bd"
+    },
+    {
+      "path": "registries/marc2_variable_width_run_index_repair_result.v0.json",
+      "sha256": "5d873da94343c3b4a55c812088c00a5d2c9cc2b0f0e97bea9fd3b8c79854a652"
+    }
+  ],
+  "implementation_artifacts": [
+    {
+      "role": "wrapper_module",
+      "path": "src/neurodecodekit/datasets/marc2_variable_width_private_confirmation.py",
+      "bytes": 52529,
+      "sha256": "e402ab28eb9d271afff5e20b38a920d53dc5342854395e0d2dff228bf9d58338"
+    },
+    {
+      "role": "behavior_tests",
+      "path": "tests/test_marc2_variable_width_private_confirmation.py",
+      "bytes": 12295,
+      "sha256": "ded9a057ab4bc2dd7df91dc690b0c6da1ea66d0931abd6550549f7128fe2bc7a"
+    },
+    {
+      "role": "implementation_proof_tests",
+      "path": "tests/test_marc2_variable_width_private_confirmation_implementation.py",
+      "bytes": 3465,
+      "sha256": "7186d96fe59fafd617e843cc5891dc2fa4805df09b87e0bd793f31f4af690b72"
+    },
+    {
+      "role": "implementation_document",
+      "path": "docs/MARC_2_VARIABLE_WIDTH_PRIVATE_CONFIRMATION_IMPLEMENTATION.md",
+      "bytes": 4857,
+      "sha256": "02ae9f8c63fce14fa70a1813abd1add3bbce7d43897a0a9469f1b767d635c328"
+    }
+  ],
+  "surface": {
+    "commands": ["plan", "qualify", "inspect", "execute"],
+    "generic_path_URL_output_width_threshold_retry_or_substitution_arguments": 0,
+    "base_dependency_additions": 0,
+    "optional_heavy_imports": 0,
+    "public_execute_refuses_before_readiness_without_remote_proof": true,
+    "private_failure_report_is_aggregate_only": true,
+    "private_manifest_created_only_on_R1": true,
+    "consumed_VR15P_executor_referenced": false
+  },
+  "generated_qualification": {
+    "route": "MARC2VR16P-G1",
+    "generated_cases": 6,
+    "orders": 2,
+    "replays": 2,
+    "success_paths": 24,
+    "VR16A_calls": 24,
+    "generated_source_content_opens": 24,
+    "direct_refusals": 71,
+    "selected_subject_count": 16,
+    "selected_run_bundle_count": 96,
+    "selected_core_member_count": 384,
+    "semantic_cohort_sha256": "254bca5e0a39b52ca9791b917df6af554e02dda8f18f8e01b524d0e3ce8d9cba",
+    "deterministic_replay": true,
+    "generated_input_bytes": 10606656,
+    "generated_output_bytes_written": 5353661,
+    "peak_incremental_output_bytes": 241813,
+    "retained_generated_output_bytes": 0,
+    "aggregate_output_bytes": 2456,
+    "runtime_seconds": 1.8574632920208387,
+    "peak_RSS_bytes": 34783232,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1
+  },
+  "operation_counters": {
+    "repository_dot_codex_work_operations": 0,
+    "private_structural_source_stats": 0,
+    "private_structural_source_resolves": 0,
+    "private_structural_source_hashes": 0,
+    "private_structural_source_opens": 0,
+    "private_structural_source_bytes": 0,
+    "consumed_VR15P_operations": 0,
+    "archive_local_header_reads": 0,
+    "archive_member_payload_reads": 0,
+    "signal_sample_reads": 0,
+    "event_channel_or_geometry_reads": 0,
+    "target_or_label_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "scoring_runs": 0,
+    "FW2_operations": 0,
+    "CIL1_operations": 0,
+    "network_requests": 0,
+    "new_payload_bytes": 0,
+    "provider_or_language_model_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "other_project_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "verification": {
+    "pre_change_dependency_light_tests": 4492,
+    "focused_tests_passed": 21,
+    "complete_dependency_light_tests_passed": 4519,
+    "expected_skips": 204,
+    "new_failures": 0,
+    "test_delta": 27
+  },
+  "resource_caps": {
+    "generated_runtime_seconds_maximum": 45,
+    "private_runtime_seconds_maximum": 650,
+    "peak_RSS_bytes_maximum_exclusive": 268435456,
+    "peak_incremental_output_bytes_maximum": 2097152,
+    "minimum_free_disk_bytes_before_private_marker": 16106127360,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1
+  },
+  "remote_implementation_proof": null,
+  "stage_2_status": {
+    "private_execution_available_now": false,
+    "proof_closeout_required_before_readiness": true,
+    "private_execution_available_after_closeout_is_remotely_green": true,
+    "registered_private_invocation_limit_after_proof": 1,
+    "retry_rerun_resume_fallback_or_substitution_limit": 0
+  },
+  "warnings": [
+    "generated_qualification_only",
+    "registered_private_structural_source_not_touched",
+    "remote_implementation_proof_is_null",
+    "FW2_and_CIL1_not_authorized",
+    "no_neural_decoding_or_scientific_claim"
+  ],
+  "claim_boundary": {
+    "engineering_capability": "generated-qualified proof-gated target-free structural confirmation wrapper",
+    "scientific_claim_not_established": "No real cohort archive member neural signal target model prediction or score was accessed and no neural effect decoding performance language decoding live decoding or thought-to-text capability was established."
+  }
+}
