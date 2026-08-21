@@ -10076,3 +10076,19 @@ records, a tracked-clean tree, and explicit one-shot arming before readiness or
 private preflight. Stage 1 performs zero private/ignored-path, structural-source,
 archive, neural, target, model, prediction, score, FW2/CIL1, network, hardware,
 other-project, release, or claim operation.
+
+## 0324 - Make VR15P Resource Replay Runner-Independent
+
+Failure decision: preproof commit `1f7a6a2` did not cross the remote barrier.
+Both CI suites rejected the qualification replay because a live process RSS
+high-water mark is runner-dependent, even when the replay uses a child Python
+process. Treat CI `32453575446` as failed proof and keep Stage 2 closed.
+
+Correction decision: inject the frozen measured 50,135,040-byte RSS value only
+into deterministic test replay. Keep the production CLI's live RSS reader and
+the direct exact-cap refusal mutations unchanged. This changes no generated
+matrix, private contract, route, threshold, source, or scientific boundary.
+
+Sequence decision: rerun focused and complete local verification, commit and
+push the corrected exact artifacts, and require a fresh green Base and Optional
+CI pair. Do not reuse the failed proof or perform any private operation.

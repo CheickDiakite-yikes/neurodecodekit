@@ -2,9 +2,6 @@ import copy
 import contextlib
 import io
 import json
-import os
-import subprocess
-import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -18,22 +15,10 @@ from neurodecodekit.datasets import (
 class Marc2SuffixIdentityPrivateDiscriminatorTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        environment = os.environ.copy()
-        environment.update(vr15p.THREAD_ENVIRONMENT)
-        completed = subprocess.run(
-            [
-                sys.executable,
-                "-m",
-                "neurodecodekit.datasets.marc2_suffix_identity_private_discriminator",
-                "qualify",
-            ],
-            cwd=vr15p._repo_root(),
-            env=environment,
-            check=True,
-            capture_output=True,
-            text=True,
+        cls.report = vr15p.qualify_generated(
+            environment=vr15p.THREAD_ENVIRONMENT,
+            rss_reader=lambda: 50_135_040,
         )
-        cls.report = json.loads(completed.stdout)
 
     def test_plan_is_fixed_and_private_stage_is_proof_gated(self):
         plan = vr15p.build_plan()

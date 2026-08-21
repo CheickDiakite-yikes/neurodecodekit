@@ -56,18 +56,18 @@
     },
     {
       "path": "tests/test_marc2_suffix_identity_private_discriminator.py",
-      "bytes": 8129,
-      "sha256": "80a26d33b4277eed00bef5f8c5d49dee22f2a485129fd72a22d381f1bcb7dd5e"
+      "bytes": 7708,
+      "sha256": "c03e872ddd9c55304ff94478eb6daadb45b780c06c8ae4efd28e73869e000b26"
     },
     {
       "path": "docs/MARC_2_SUFFIX_IDENTITY_PRIVATE_DISCRIMINATOR_IMPLEMENTATION.md",
-      "bytes": 3697,
-      "sha256": "c8cb6b6af71f0703f222a01e2f16804f5374a02ca16a7987a7e27ef3fd1d80dd"
+      "bytes": 3784,
+      "sha256": "b97267ad4b2c2abdbbc9233d02ca32773d3cd1c9999cc1a0fa0e1d7cf5c145bf"
     },
     {
       "path": "docs/MARC_2_SUFFIX_IDENTITY_PRIVATE_DISCRIMINATOR_GENERATED_RESULT.md",
-      "bytes": 2627,
-      "sha256": "01e5c84c612bb69f755f8ecf6fc73188e04c1db21804be4ff15ab9864bf5a7b3"
+      "bytes": 2719,
+      "sha256": "8f5d6c8041d573eefa45b2f96639543fd7cf08b4a3233bea543d2d93d745f34c"
     },
     {
       "path": "tests/test_marc2_suffix_identity_private_discriminator_implementation.py",

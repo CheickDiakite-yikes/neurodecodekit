@@ -12108,9 +12108,14 @@ also remotely green.
   prediction, score, FW2/CIL1, network, hardware, other-project, release, and
   claim operations were zero.
 - Thirty focused tests and all 4,456 complete dependency-free tests pass with
-  80 expected skips. The generated resource test uses a fresh child Python
-  process so the 256 MiB cap measures that qualification rather than the test
-  runner's lifetime high-water mark.
+  80 expected skips locally. Deterministic replay injects the frozen measured
+  RSS value so earlier tests cannot change it; the production CLI still reads
+  live peak RSS, and direct refusals exercise the exact 256 MiB boundary.
+- Preproof commit `1f7a6a2` failed both jobs in CI `32453575446` because the
+  child replay still used a runner-dependent live RSS high-water mark. That run
+  is not accepted as proof. The correction changes only deterministic test
+  replay; generated measurements, production resource enforcement, private
+  authority, and every private/scientific counter remain unchanged.
 
 Immediate gate: commit, push, and green exact Stage 1, then add and green a
 separate proof-only closeout and tracked-clean activation record. Do not touch

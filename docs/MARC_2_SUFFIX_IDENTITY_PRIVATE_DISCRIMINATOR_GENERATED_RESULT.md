@@ -52,9 +52,10 @@ other-project operations, retries, releases, and claim upgrades were all zero.
 - private execution remained proof-gated.
 
 Verification passed 30 focused tests and the complete dependency-free suite:
-4,456 tests passed with 80 expected skips. The generated qualification runs in
-a fresh child Python process so its absolute peak-RSS measurement is isolated
-from the complete runner's earlier tests.
+4,456 tests passed with 80 expected skips locally. Deterministic test replay
+injects the frozen measured RSS value so the full runner's historical peak
+cannot change the result; the production CLI continues to measure live peak
+RSS, and direct refusal cases exercise the exact cap boundary.
 
 The system Python command failed before package import and performed no
 qualification. The measured result above came from the project `.venv`

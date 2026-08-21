@@ -57,11 +57,12 @@ This addresses the earlier VR13P pre-proof test incident: an uncommitted proof
 edit cannot pass the tracked-clean check, and the private stage remains closed
 until the later proof records are committed, pushed, and remotely green.
 
-The generated qualification test runs that one measured path in a fresh child
-Python process. This preserves the absolute peak-RSS cap instead of inheriting
-the historical high-water mark of the complete test runner. Thirty focused
+The deterministic test replay injects the frozen measured 50,135,040-byte RSS
+value so it does not inherit the complete test runner's historical high-water
+mark. Separate direct refusal cases exercise the exact 256 MiB boundary; the
+production CLI still reads and enforces live process peak RSS. Thirty focused
 tests pass, and the dependency-free complete suite passes 4,456 tests with 80
-expected skips.
+expected skips locally.
 
 ## Private Stage Still Closed
 
