@@ -3242,3 +3242,13 @@ totaling 8,959 bytes while touching no ignored path.
 Next gate: commit, push, and green the activation record, then perform the one
 explicitly armed aggregate-only execution. Stop before private-manifest,
 structural-source, neural, FW2/CIL1, or claim work.
+
+Activation `6bfff69` passed both jobs in CI `32446635433`. The sole armed
+execution consumed at `MARC2VR13P-R2`, reading 1,543 aggregate bytes once and
+writing one 1,945-byte receipt under every cap. The recovered ceiling is only
+the suffix-bearing BIDS identity structural class; no private value, row,
+identity, person, selection, cohort, neural payload, target, model, or score is
+known.
+
+Next gate: artifact-only and generated-only suffix-identity decomposition.
+Any private access remains a separately frozen Tier C packet and decision.

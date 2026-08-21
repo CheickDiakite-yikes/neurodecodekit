@@ -11978,3 +11978,20 @@ green the tracked-clean activation proof before one armed execution.
 
 Immediate gate: commit, push, and green the activation record, then run the
 single explicitly armed fixed aggregate command exactly once.
+
+### Consumed aggregate recovery
+
+- Activation `6bfff69048d4c3cffc971882be3b60c9fcaa5eae` passed Base job
+  `96667351062`, Optional job `96667350910`, and CI `32446635433`.
+- One armed execution opened and strict-parsed 1,543 aggregate bytes once,
+  wrote one 1,945-byte receipt, and consumed at `MARC2VR13P-R2`.
+- Runtime: 0.0008393750176765025 seconds. Peak RSS: 25,853,952 bytes.
+  Network/new payload: 0/0 bytes.
+- Recovered ceiling: suffix-bearing BIDS identity structural class only.
+  Failed value, predicate, row, path, identity, person, run, task, selection,
+  and cohort remain unavailable.
+- Structural-source, private-manifest, archive, neural, target, model,
+  prediction, score, FW2/CIL1, retry, and claim operations: zero.
+
+Immediate gate: artifact-only and generated-only suffix-identity decomposition.
+Any private read remains a new Tier C packet and decision.

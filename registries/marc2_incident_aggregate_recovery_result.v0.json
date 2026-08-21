@@ -1,0 +1,106 @@
+{
+  "schema_name": "neurodecodekit.marc2_incident_aggregate_recovery_result_record",
+  "schema_version": "0.1.0",
+  "result_id": "MARC-2-VR14P-incident-aggregate-recovery-result-v0",
+  "lane_id": "MARC2-VR14P",
+  "recorded_at_local": "2026-08-21",
+  "status": "consumed",
+  "route": "MARC2VR13P-R2",
+  "activation_remote_proof": {
+    "commit": "6bfff69048d4c3cffc971882be3b60c9fcaa5eae",
+    "CI_run_id": 32446635433,
+    "base_python_job_id": 96667351062,
+    "optional_neuro_job_id": 96667350910,
+    "both_required_jobs_green": true
+  },
+  "execution_proof_chain": {
+    "decision_commit": "60b97ea6c9715b651c17bb6d797c1f02c10ba9e2",
+    "decision_CI_run_id": 32444425790,
+    "implementation_commit": "046013a4a8089f5a9f3a91fc246420cac21a1d20",
+    "implementation_CI_run_id": 32445483857,
+    "proof_closeout_commit": "f352c1b50d15ab81f641dca21732e1ffffa7a6b8",
+    "proof_closeout_CI_run_id": 32446071998
+  },
+  "aggregate": {
+    "cohort_size": 0,
+    "bundle_count": 0,
+    "core_member_count": 0,
+    "fit_heldout_overlap": 0,
+    "upstream_private_cohort_written": false
+  },
+  "resources": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "input_bytes": 1543,
+    "receipt_bytes": 1945,
+    "runtime_seconds": 0.0008393750176765025,
+    "peak_RSS_bytes": 25853952,
+    "network_bytes": 0,
+    "new_payload_bytes": 0
+  },
+  "operations": {
+    "aggregate_report_lstats": 1,
+    "aggregate_report_content_opens": 1,
+    "aggregate_report_strict_JSON_parses": 1,
+    "aggregate_recovery_receipt_writes": 1,
+    "readiness_certificate_or_consumed_marker_operations": 0,
+    "structural_source_operations": 0,
+    "private_manifest_operations": 0,
+    "archive_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "network_download_provider_language_model_operations": 0,
+    "stream_device_or_hardware_operations": 0,
+    "FW2_or_CIL1_operations": 0,
+    "operations_on_other_projects": 0,
+    "retry_rerun_resume_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "post_execution_handling": {
+    "result_source": "execute_command_returned_aggregate_JSON_only",
+    "ignored_source_or_output_list_operations": 0,
+    "ignored_source_or_output_reopens": 0,
+    "ignored_source_or_output_hash_operations": 0,
+    "private_reinspection_operations": 0,
+    "retry_rerun_resume_allowed": false
+  },
+  "route_interpretation": {
+    "frozen_class": "suffix_bearing_BIDS_identity_structural_class_only",
+    "failed_value_known": false,
+    "failed_predicate_known": false,
+    "failed_row_path_or_identity_known": false,
+    "participant_run_task_candidate_or_selection_known": false,
+    "real_cohort_frozen": false,
+    "FW2_or_CIL1_eligible": false
+  },
+  "warnings": [
+    "This recovers one aggregate structural route, not neural evidence.",
+    "No source, private manifest, archive, signal, target, model, or score was accessed.",
+    "MARC2-VR14P is consumed and has no retry, rerun, resume, repair, fallback, substitution, cleanup, or reinspection."
+  ],
+  "unavailable_fields": [
+    "failed_private_value",
+    "private_row_or_identity",
+    "real_neural_cohort",
+    "neural_effect",
+    "decoding_accuracy",
+    "live_latency"
+  ],
+  "next_gate": {
+    "artifact_only_generated_only_suffix_identity_decomposition_allowed_under_Tier_A_or_B": true,
+    "new_private_read_requires_separate_frozen_Tier_C_packet_and_decision": true,
+    "private_manifest_structural_source_archive_or_neural_access_authorized": false,
+    "target_model_prediction_score_FW2_or_CIL1_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_capability": "aggregate structural route recovered under proof separated one shot controls",
+    "scientific_ceiling": "none",
+    "neural_payload_accessed": false,
+    "target_model_prediction_or_score_accessed": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "live_decoding": false
+  }
+}

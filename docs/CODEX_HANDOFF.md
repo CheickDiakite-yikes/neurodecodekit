@@ -5853,6 +5853,18 @@ surfaces. FW2, CIL1, archive payload, neural data, targets, models, scores,
 release, and claims remain closed. Keep the unrelated tracker inspection
 NDJSON untouched.
 
+## 2026-08-21 MARC2-VR14P Consumed Result Handoff
+
+Activation `6bfff69048d4c3cffc971882be3b60c9fcaa5eae` passed both jobs in
+CI `32446635433` before the only armed execution. The command read the 1,543-
+byte aggregate report once, wrote one 1,945-byte receipt, and consumed at
+`MARC2VR13P-R2` under the suffix-bearing BIDS identity structural ceiling.
+
+Do not rerun, reopen, list, hash, repair, or inspect VR14P ignored state. The
+next safe work is a separately frozen artifact-only/generated-only identity
+decomposition. A private read needs a new Tier C packet and decision. Keep the
+unrelated tracker inspection NDJSON untouched.
+
 Decision `4fa277121f24dde3f6f7c917ef6c2bb7506134d6` passed Base Python
 job `95414004791`, Optional Neuro Readers job `95414004814`, and CI
 `32038683203` before Stage 1 began.

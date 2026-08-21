@@ -157,6 +157,15 @@ performing zero ignored-path operations.
 Immediate gate: commit, push, and green the activation record. Then run the
 single explicitly armed aggregate-only command exactly once.
 
+Activation `6bfff69` passed both jobs in CI `32446635433` before the sole
+execution. VR14P consumed at `MARC2VR13P-R2`: the suffix-bearing BIDS identity
+structural class only. The run read 1,543 aggregate bytes once and wrote a
+1,945-byte receipt; source, private-manifest, neural, target, model, and score
+operations were zero.
+
+Immediate gate: freeze an artifact-only and generated-only suffix-identity
+decomposition. Do not reopen VR14P or access private/neural material.
+
 ## Prior Frontier: MARC2-VR11P Consumed At Structural Route R2
 
 Read `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`, then

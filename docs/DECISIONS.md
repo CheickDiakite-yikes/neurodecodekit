@@ -9938,3 +9938,19 @@ Scope decision: activation performs zero ignored-path operations. The later
 one-shot may open only the registered aggregate report once and write one
 receipt; structural source, private manifest, archive, neural, target, model,
 score, FW2/CIL1, retry, release, and claim work remain closed.
+
+## 0317 - Consume VR14P At Aggregate Route R2
+
+Execution decision: activation `6bfff69` passed Base Python job
+`96667351062`, Optional Neuro Readers job `96667350910`, and CI
+`32446635433`. The sole armed command then opened and strict-parsed exactly
+1,543 aggregate bytes once and wrote one 1,945-byte receipt.
+
+Result decision: `MARC2VR13P-R2` means only the suffix-bearing BIDS identity
+structural class. It does not expose the failed value, predicate, row, path,
+identity, person, run, task, selection, or cohort.
+
+Boundary decision: VR14P is consumed without retry or reinspection. The next
+safe lane is artifact-only and generated-only decomposition; private manifest,
+source, archive, neural, target, model, score, FW2/CIL1, release, and claims
+remain closed.

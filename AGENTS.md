@@ -553,6 +553,21 @@ record and test. The activation performs zero ignored-path operations and is
 ineffective until its own exact commit is pushed and both jobs are green. Only
 then may the one explicitly armed aggregate-only execution run.
 
+Activation `6bfff69048d4c3cffc971882be3b60c9fcaa5eae` passed Base job
+`96667351062`, Optional job `96667350910`, and CI `32446635433` before the
+sole execution. Read `docs/MARC_2_INCIDENT_AGGREGATE_RECOVERY_RESULT.md` and
+its registry. The command opened and strict-parsed the 1,543-byte aggregate
+report once, wrote one 1,945-byte receipt, and consumed at `MARC2VR13P-R2`.
+The frozen ceiling is the suffix-bearing BIDS identity structural class only.
+No failed value, predicate, row, path, identity, person, run, task, selection,
+or cohort is known.
+
+VR14P has no retry, rerun, resume, repair, fallback, substitution, cleanup, or
+reinspection. The next safe task is a separately frozen artifact-only and
+generated-only suffix-identity decomposition. Any private read remains a new
+Tier C packet and decision. Structural source, private manifest, archive,
+neural, target, model, score, FW2/CIL1, release, and claims remain closed.
+
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-
 blind analysis over 72 S004-S015 EDFs. The analysis accepted 1,080 events,
