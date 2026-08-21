@@ -2424,3 +2424,16 @@ Base Python job `96717830579`, Optional Neuro Readers job `96717830410`, and
 CI `32464397821`. The proof-only closeout now binds those exact bytes and adds
 no implementation scope. It must itself be committed, pushed, and green in
 both jobs before the one registered private invocation becomes available.
+
+Proof closeout `865d76aff51842e3b57600a7dab399d2bbe91d2e` passed both jobs
+in CI `32465104587` before the sole invocation. The command read and strict-
+parsed exactly 418,755 target-free structural bytes once, called VR16A once,
+and consumed at `MARC2VR16P-R4` without freezing a cohort. R4 means only
+numeric identity, exact task token, or companion validation refused. The exact
+predicate, value, filename, path, row, participant, selection, and cohort are
+unavailable and must not be inferred.
+
+VR16P has no retry, rerun, repair, fallback, substitution, or private
+reinspection. The next safe lane is artifact-only/generated-only R4 predicate
+decomposition. FW2 and CIL1 remain ineligible; no archive, neural payload,
+target, model, prediction, score, or scientific claim is open.

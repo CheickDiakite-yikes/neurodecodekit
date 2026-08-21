@@ -12339,3 +12339,23 @@ qualification or touching `.codex_work`. Stage 2 remains closed meanwhile.
 
 Immediate gate: commit, push, and green this proof-only closeout. Only then may
 the one registered target-free private structural invocation execute.
+
+### VR16P consumed structural result
+
+- Proof closeout `865d76aff51842e3b57600a7dab399d2bbe91d2e` passed Base
+  Python job `96719949813`, Optional Neuro Readers job `96719949597`, and CI
+  `32465104587` before execution.
+- The sole invocation collected three readiness samples, read and strict-
+  parsed 418,755 target-free structural bytes once, and called VR16A once.
+- It consumed at `MARC2VR16P-R4` in 0.02044062502682209 seconds at
+  30,474,240-byte peak RSS with 2,702 combined output bytes and no cohort
+  freeze.
+- The aggregate report was inspected once. The private source and manifest
+  were not reopened, listed, or hashed; no private manifest was created.
+- Archive, neural, target, model, training, inference, prediction, score,
+  FW2/CIL1, network, hardware, other-project, release, and claim counters were
+  zero.
+
+R4 preserves only numeric-identity, exact-task, or companion-validation
+uncertainty. The lane is consumed with no retry or private reinspection. Next:
+an artifact-only/generated-only R4 predicate-decomposition registration.

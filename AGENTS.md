@@ -3877,6 +3877,26 @@ Until both jobs pass, do not collect readiness or touch `.codex_work`, the
 private source, or the output root. The later structural invocation has no
 retry, rerun, fallback, substitution, or private reinspection.
 
+Proof-only closeout `865d76aff51842e3b57600a7dab399d2bbe91d2e` passed Base
+Python job `96719949813`, Optional Neuro Readers job `96719949597`, and CI
+`32465104587` before the sole Stage 2 invocation. Read
+`docs/MARC_2_VARIABLE_WIDTH_PRIVATE_CONFIRMATION_RESULT.md` and
+`registries/marc2_variable_width_private_confirmation_result.v0.json`. The
+command read and strict-parsed exactly 418,755 target-free structural bytes
+once, called VR16A once, and consumed at `MARC2VR16P-R4` without freezing a
+cohort. Runtime was 0.02044062502682209 seconds at 30,474,240-byte peak RSS;
+combined output was 2,702 bytes.
+
+R4 means only numeric identity, exact task token, or companion validation
+refused. The exact predicate, value, filename, path, row, participant,
+selection, and cohort are unavailable and must not be inferred. VR16P has no
+retry, rerun, resume, repair, fallback, substitution, cleanup, or private
+reinspection. Do not touch its private source, readiness state, consumed
+marker, or output root. The next safe task is a separately frozen artifact-
+only and generated-only R4 predicate decomposition. Any new private read
+requires a new Tier C packet and decision. FW2, CIL1, archive, neural, target,
+model, prediction, score, release, and scientific claims remain closed.
+
 ## Style
 
 - Small functions, explicit names, low magic.

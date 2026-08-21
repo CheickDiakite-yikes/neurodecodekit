@@ -3394,3 +3394,20 @@ skips. Next gate: commit, push, and green this closeout. Only then may the one
 registered 418,755-byte target-free source read and one VR16A call execute.
 FW2, CIL1, archive, neural, target, model, score, release, and claim work
 remain closed.
+
+### MARC2-VR16P - Consumed At R4 Without A Cohort
+
+Proof closeout `865d76a` passed both jobs in CI `32465104587` before the sole
+registered invocation. The command read 418,755 target-free structural bytes
+once, strict-parsed once, called VR16A once, and consumed at
+`MARC2VR16P-R4`. Runtime was 0.02044062502682209 seconds, peak RSS was
+30,474,240 bytes, combined output was 2,702 bytes, and no cohort was frozen.
+
+R4 identifies only numeric identity, exact task token, or companion validation.
+It does not expose the failed predicate or any private value or identity. The
+lane has no retry or reinspection.
+
+Next gate: specify and generated-qualify an artifact-only R4 predicate
+decomposition. Any future private discriminator remains a new Tier C packet.
+FW2/CIL1 and every neural, target, model, score, release, and claim lane remain
+closed.

@@ -6578,3 +6578,23 @@ Immediate gate: commit, push, and green this exact proof-only closeout. Only
 then may `execute` perform the single authorized structural confirmation.
 Do not inspect the private cohort manifest or retry any consumed route. Keep
 consumed VR15P and the unrelated tracker inspection NDJSON untouched.
+
+## 2026-08-21 MARC2-VR16P Consumed Result Handoff
+
+Proof-only closeout `865d76aff51842e3b57600a7dab399d2bbe91d2e`
+passed Base Python job `96719949813`, Optional Neuro Readers job
+`96719949597`, and CI `32465104587` before execution.
+
+The sole command collected three readiness samples, read and strict-parsed
+exactly 418,755 target-free structural bytes once, called VR16A once, and
+consumed at `MARC2VR16P-R4`. Runtime was 0.02044062502682209 seconds, peak
+RSS was 30,474,240 bytes, and combined output was 2,702 bytes. No cohort
+manifest was created. The aggregate report was inspected once; no private
+manifest or source was reopened.
+
+R4 preserves a three-way aggregate class: numeric identity, exact task token,
+or companion validation. Do not infer the predicate, value, filename, path,
+row, participant, selection, or cohort. VR16P has no retry or private
+reinspection. Next: freeze an artifact-only/generated-only R4 predicate
+decomposition. FW2, CIL1, archive, neural, target, model, score, and claim work
+remain closed. Keep the unrelated tracker inspection NDJSON untouched.

@@ -10296,3 +10296,24 @@ network, hardware, release, or claim operations.
 Sequence decision: require this closeout's own exact commit to pass both remote
 jobs. Only then may the packeted one-shot structural confirmation execute; its
 outcome remains consumed with no retry or private reinspection.
+
+## 0337 - Consume VR16P At The R4 Aggregate Class
+
+Proof decision: proof-only closeout
+`865d76aff51842e3b57600a7dab399d2bbe91d2e` passed Base Python job
+`96719949813`, Optional Neuro Readers job `96719949597`, and CI
+`32465104587` before the sole invocation.
+
+Result decision: record `MARC2VR16P-R4` after one 418,755-byte target-free
+structural read, one strict parse, and one VR16A call. No cohort manifest was
+created. The frozen ceiling identifies only numeric identity, exact task token,
+or companion validation refusal.
+
+Boundary decision: infer no exact predicate, value, filename, path, row,
+participant, selection, or cohort. Consume the lane with no retry, repair,
+fallback, substitution, or private reinspection. Archive, neural, target,
+model, score, FW2/CIL1, release, and scientific-claim authority remain absent.
+
+Next-lane decision: permit Tier A/B to freeze an artifact-only/generated-only
+R4 predicate decomposition. Require a new Tier C packet and decision for any
+future private discriminator.
