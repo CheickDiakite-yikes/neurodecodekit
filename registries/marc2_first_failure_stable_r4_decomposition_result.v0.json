@@ -1,0 +1,159 @@
+{
+  "schema_name": "neurodecodekit.marc2_first_failure_stable_r4_decomposition_result",
+  "schema_version": "0.1.0",
+  "result_id": "MARC-2-VR17C-first-failure-stable-R4-decomposition-result-v0",
+  "lane_id": "MARC2-VR17C",
+  "recorded_at_local": "2026-08-21",
+  "status": "generated_qualification_passed_remote_implementation_proof_pending",
+  "route": "MARC2VR17C-G1",
+  "green_registration_proof": {
+    "commit": "a34896d1d0e4ebc548f4b92bcbd80a70355dc8c2",
+    "CI_run_id": 32470828824,
+    "base_python_job_id": 96737040056,
+    "optional_neuro_job_id": 96737040177,
+    "both_required_jobs_green_before_implementation": true,
+    "contract_sha256": "8fdef358e31450be74d8eaf280bb4957d891a19e2364188d5b3d9afc92a26fcc"
+  },
+  "equivalence_matrix": {
+    "paths": 24,
+    "VR15A_calls": 24,
+    "VR16A_calls": 24,
+    "control_paths": 8,
+    "repair_paths": 16,
+    "distinct_source_hashes": 6,
+    "semantic_sha256": "254bca5e0a39b52ca9791b917df6af554e02dda8f18f8e01b524d0e3ce8d9cba",
+    "replay_digests": [
+      "09c43c87e186e98a543b173cadf9b0c1edfe278a8e1b3fcf895791402455caed",
+      "09c43c87e186e98a543b173cadf9b0c1edfe278a8e1b3fcf895791402455caed"
+    ],
+    "source_objects_immutable": true
+  },
+  "residual_matrix": {
+    "paths": 20,
+    "VR16A_calls": 20,
+    "route_counts": {
+      "MARC2VR17C-G1": 4,
+      "MARC2VR17C-R1": 4,
+      "MARC2VR17C-R2": 4,
+      "MARC2VR17C-R3": 4,
+      "MARC2VR17C-R4": 4
+    },
+    "replay_digests": [
+      "72afc47d8c396ea457d99701c2d3eef34a6200e6232824bc3712dd878d1f735f",
+      "72afc47d8c396ea457d99701c2d3eef34a6200e6232824bc3712dd878d1f735f"
+    ],
+    "source_objects_immutable": true
+  },
+  "hypotheses": {
+    "VR17C-H1": true,
+    "VR17C-H2": true,
+    "VR17C-H3": true,
+    "VR17C-H4": true
+  },
+  "refusals": {
+    "direct_refusals": 50,
+    "route_counts": {
+      "MARC2VR17C-F01": 9,
+      "MARC2VR17C-F02": 12,
+      "MARC2VR17C-F04": 16,
+      "MARC2VR17C-F05": 3,
+      "MARC2VR17C-F06": 10
+    },
+    "all_required_witnesses_refused": true
+  },
+  "measurements": {
+    "fixed_input_bytes": 139348,
+    "generated_input_bytes": 19213944,
+    "aggregate_output_bytes": 2719,
+    "retained_generated_output_bytes": 0,
+    "runtime_seconds": 3.7416582500445656,
+    "peak_RSS_bytes": 36569088,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "producer_is_causal": "not_applicable_structural_metadata_only",
+    "end_to_end_latency_measured": false
+  },
+  "acceptance_gates": {
+    "all_10_fixed_inputs_match_size_and_SHA256": true,
+    "exact_green_registration_proof_matches": true,
+    "all_24_equivalence_paths_pass": true,
+    "all_20_residual_paths_pass": true,
+    "both_exact_replays_match": true,
+    "semantic_digest_is_invariant": true,
+    "G1_and_R1_through_R4_each_appear_exactly_four_times": true,
+    "all_four_composition_hypotheses_are_generated_proven": true,
+    "source_objects_are_immutable": true,
+    "at_least_50_direct_refusals_pass": true,
+    "retained_generated_output_is_zero": true,
+    "runtime_RSS_input_and_output_caps_pass": true,
+    "all_forbidden_operation_counters_remain_zero": true
+  },
+  "access_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_VR15P_VR16P_VR17A_or_VR17B_operations": 0,
+    "real_structural_source_operations": 0,
+    "cohort_freezes": 0,
+    "archive_or_neural_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "model_training_inference_prediction_or_score_runs": 0,
+    "FW2_operations": 0,
+    "CIL1_operations": 0,
+    "network_provider_or_language_model_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "other_project_operations": 0,
+    "retry_rerun_resume_operations": 0,
+    "release_publication_or_scientific_claim_upgrades": 0
+  },
+  "warnings": [
+    "Generated fixtures only; no private or real source was opened.",
+    "VR17A and VR17B remain parked and were not amended rerun or reinterpreted.",
+    "The consumed private cause identity path row value and participant remain unavailable.",
+    "A real cohort is not established and FW2 or CIL1 remain ineligible.",
+    "No archive member neural payload target model prediction or score was accessed.",
+    "This result has no scientific or decoding claim value."
+  ],
+  "local_verification": {
+    "focused_tests": 20,
+    "focused_tests_passed": true,
+    "prechange_complete_base_tests": 4564,
+    "complete_base_tests": 4576,
+    "complete_expected_skips": 204,
+    "complete_failures": 0,
+    "complete_runtime_seconds": 116.003,
+    "complete_base_suite_passed": true,
+    "initial_integrated_attempt_exposed_process_lifetime_RSS_attribution": true,
+    "fresh_process_measured_RSS_bytes": 36569088,
+    "focused_Ruff_0_15_20_passed": true,
+    "compile_passed": true,
+    "all_334_registry_JSON_passed": true,
+    "diff_check_passed": true,
+    "CLI_help_and_plan_passed": true,
+    "remote_CI_pending": true
+  },
+  "remote_implementation_proof": null,
+  "next_gate": {
+    "exact_implementation_and_result_commit_push_and_both_jobs_green_required": true,
+    "proof_only_closeout_required_before_future_packet_preparation": true,
+    "future_private_discriminator_authorized": false,
+    "future_private_discriminator_requires_new_Tier_C_packet_and_fresh_decision": true,
+    "consumed_private_state_reuse_allowed": false,
+    "real_cohort_freeze_authorized": false,
+    "MARC2_FW2_or_CIL1_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_ceiling": "artifact_only_generated_first_failure_stable_four_route_classifier",
+    "scientific_ceiling": "none",
+    "private_cause_identified": false,
+    "real_cohort_frozen": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "real_time_portable_home_assistive_or_clinical_result": false
+  }
+}

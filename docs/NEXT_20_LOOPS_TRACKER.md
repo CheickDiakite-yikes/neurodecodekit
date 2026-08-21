@@ -3496,3 +3496,20 @@ Next gate: preregister VR17C with the observed task reason and a distinct
 optional-entity companion that preserves the same run token and reaches the
 normalized-collision branch. No private executor, cohort, neural payload,
 target, model, score, FW2/CIL1, release, or claim is authorized.
+
+### MARC2-VR17C - Generated Four-Route Classifier Qualified
+
+Registration `a34896d` passed both required jobs in CI `32470828824` before
+implementation. The generated-only module then passed 24 paired equivalence
+paths, 20 residual paths, all four hypotheses, exact replay, source
+immutability, and 50 direct refusals.
+
+G1 and R1-R4 each appeared four times. The pass used 19,213,944 generated
+bytes in 3.7416582500445656 seconds at 36,569,088-byte peak RSS, emitted 2,719
+aggregate bytes, and retained zero. All 4,576 dependency-light tests pass with
+204 expected skips.
+
+Next gate: commit, push, and green the exact implementation/result, then green
+a proof-only closeout. A future one-shot private discriminator remains a new
+Tier C packet and decision. No real cohort, neural payload, target, model,
+score, FW2/CIL1, release, or scientific claim is open.

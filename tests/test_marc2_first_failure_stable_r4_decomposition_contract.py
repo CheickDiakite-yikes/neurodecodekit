@@ -3,7 +3,6 @@ import json
 import unittest
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 CONTRACT_PATH = (
     ROOT / "registries/marc2_first_failure_stable_r4_decomposition_contract.v0.json"
