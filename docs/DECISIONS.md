@@ -10523,3 +10523,26 @@ implementation and a separate proof-only closeout are each remotely green.
 Boundary decision: no readiness, `.codex_work`, private, cohort, archive,
 neural, target, model, score, FW2/CIL1, network, hardware, release, or claim
 operation occurs while recording this decision.
+
+## 0348 - Accept The Generated VR18P Fixed-Path Wrapper
+
+Proof decision: authorization decision
+`5113be7fee63d769276a781c0ed3af5ac2bbf567` passed Base Python job
+`96751646673`, Optional Neuro Readers job `96751646346`, and CI
+`32475765286` before implementation.
+
+Result decision: accept `MARC2VR18P-G1` after 20 case/order/replay paths, one
+temporary fixed-path success rehearsal, exact replay, source immutability, and
+82 direct refusals. G1 and R4-R7 each appeared four times. The pass made 21
+generated VR16A calls and 16 failure-map lookups.
+
+Resource decision: record 9,037,650 generated input bytes,
+1.4131330830277875 seconds, 37,879,808-byte peak RSS, 217,041-byte peak
+temporary output, 2,020 aggregate bytes, and zero retained output. All 4,620
+dependency-light tests pass with 204 expected skips.
+
+Boundary decision: keep `remote_implementation_proof` null. Require the exact
+implementation/result commit and both jobs green, then a separately green
+proof-only closeout, before the one private Stage 2 invocation. Repeat no
+qualification during closeout and perform no private, neural, model, score,
+FW2/CIL1, release, or claim operation.

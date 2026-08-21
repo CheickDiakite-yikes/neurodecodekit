@@ -12555,3 +12555,29 @@ Stage 1 implementation and every private operation remain unauthorized.
 Immediate gate: commit, push, and green the exact decision before Stage 1.
 Stage 2 remains blocked behind a separately green Stage 1 implementation and
 proof-only closeout.
+
+### VR18P generated Stage 1 qualification
+
+- Decision `5113be7fee63d769276a781c0ed3af5ac2bbf567` passed Base
+  Python job `96751646673`, Optional Neuro Readers job `96751646346`, and CI
+  `32475765286` before implementation.
+- Added a standard-library fixed-path wrapper that composes one unchanged
+  VR16A call with at most one frozen VR17C evidence-map lookup per source.
+- Twenty matrix paths passed across five cases, two orders, and two replays.
+  G1 and R4-R7 each appeared exactly four times; replay SHA-256 is
+  `5c214a1e9e5b3aa53b30931ff2d4573b675cb9bf18b41753b0da2eaae9c8bd35`.
+- The temporary fixed-path success rehearsal and 82 direct refusal checks
+  passed. Total generated VR16A calls were 21; map lookups were 16.
+- Measured 9,037,650 generated input bytes, 2,020 aggregate bytes,
+  217,041-byte peak temporary output, zero retained bytes,
+  1.4131330830277875 seconds, and 37,879,808-byte peak RSS.
+- All 4,620 dependency-light tests pass with 204 expected skips in 141.868
+  seconds. Ruff, compilation, 339 registry parses, CLI help/plan, and diff
+  hygiene pass.
+- Private, ignored-path, readiness, archive, neural, target, model, score,
+  FW2/CIL1, network, hardware, other-project, retry, release, and claim
+  operations: zero.
+
+Immediate gate: commit, push, and green the exact implementation/result. Then
+add and green a separate proof-only closeout without repeating qualification.
+Private Stage 2 remains mechanically closed by a null implementation proof.

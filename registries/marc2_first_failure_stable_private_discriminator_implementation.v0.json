@@ -1,0 +1,219 @@
+{
+  "schema_name": "neurodecodekit.marc2_first_failure_stable_private_discriminator_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "MARC-2-VR18P-first-failure-stable-private-discriminator-implementation-v0",
+  "lane_id": "MARC2-VR18P",
+  "recorded_at_local": "2026-08-21",
+  "status": "stage_1_generated_qualified_remote_proof_pending_private_stage_closed",
+  "proof_posture": "tracked_generated_interface_only_no_private_real_or_scientific_operation",
+  "green_decision_proof": {
+    "commit": "5113be7fee63d769276a781c0ed3af5ac2bbf567",
+    "CI_run_id": 32475765286,
+    "base_python_job_id": 96751646673,
+    "optional_neuro_job_id": 96751646346,
+    "both_required_jobs_green": true,
+    "decision_sha256": "172faab0a602cd0055f711c32525ba435758881c9c099cb2544eec59dc067188"
+  },
+  "fixed_inputs": [
+    {
+      "path": "registries/marc2_first_failure_stable_private_discriminator_authorization_decision.v0.json",
+      "bytes": 16332,
+      "sha256": "172faab0a602cd0055f711c32525ba435758881c9c099cb2544eec59dc067188"
+    },
+    {
+      "path": "registries/marc2_first_failure_stable_private_discriminator_authorization_request.v0.json",
+      "bytes": 17149,
+      "sha256": "22cd62e64d2c069cf9b9742dc5cfb659d44da1a4ebfa58ce0d151a4f7d6952d9"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/marc2_variable_width_run_index_repair.py",
+      "bytes": 43861,
+      "sha256": "1a69d42236af61b1e5565dc89903aa20e9416732752aa5b5b1ffe3a95003f3f1"
+    },
+    {
+      "path": "registries/marc2_variable_width_run_index_repair_implementation.v0.json",
+      "bytes": 6598,
+      "sha256": "a11714c7860713a2b8ce82ed2d7a4f045d48582a36e1870b3f034719acbef7bd"
+    },
+    {
+      "path": "registries/marc2_variable_width_run_index_repair_result.v0.json",
+      "bytes": 5941,
+      "sha256": "5d873da94343c3b4a55c812088c00a5d2c9cc2b0f0e97bea9fd3b8c79854a652"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/marc2_first_failure_stable_r4_decomposition.py",
+      "bytes": 26841,
+      "sha256": "0f7a37809e716263f5684beceef18dcab661cca72175d61e197f3d02bc71fc63"
+    },
+    {
+      "path": "registries/marc2_first_failure_stable_r4_decomposition_implementation.v0.json",
+      "bytes": 6868,
+      "sha256": "55363e69e7e5b519b3a573341bc6e19bee4bef579e3d50efb30d19179a847522"
+    },
+    {
+      "path": "registries/marc2_first_failure_stable_r4_decomposition_result.v0.json",
+      "bytes": 6859,
+      "sha256": "3582584d81d82d166978d836cf5e376b03f122b8b3fc8b2f06d1f65b7eb180ad"
+    }
+  ],
+  "fixed_input_count": 8,
+  "fixed_input_bytes": 130449,
+  "owned_artifacts": [
+    {
+      "path": "src/neurodecodekit/datasets/marc2_first_failure_stable_private_discriminator.py",
+      "bytes": 46604,
+      "sha256": "dc41e6e9f07a6b7aaae06988b094c87560aaa361dd8e8ef8bfe827c36a8114b6"
+    },
+    {
+      "path": "tests/test_marc2_first_failure_stable_private_discriminator.py",
+      "bytes": 6912,
+      "sha256": "83869e9a60c6b5e935928292d0c18c355ab90f81d09aa54af87b46de98aad6dd"
+    },
+    {
+      "path": "docs/MARC_2_FIRST_FAILURE_STABLE_PRIVATE_DISCRIMINATOR_IMPLEMENTATION.md",
+      "bytes": 4452,
+      "sha256": "620decc5b77c7f1efe8f57e4898be6be04e8e77e4c832e86397bf61e311b4dac"
+    },
+    {
+      "path": "docs/MARC_2_FIRST_FAILURE_STABLE_PRIVATE_DISCRIMINATOR_GENERATED_RESULT.md",
+      "bytes": 2185,
+      "sha256": "a54ee266ec07da2ed405c00c790a1dfbb20ee01842b86e604c4654b639e2fbb6"
+    },
+    {
+      "path": "tests/test_marc2_first_failure_stable_private_discriminator_implementation.py",
+      "bytes": 3438,
+      "sha256": "3056123ca6d008dd8582a00f324119abe60d0e085ff9a66fa96c81406178134f"
+    }
+  ],
+  "owned_artifact_count": 5,
+  "owned_artifact_bytes": 63591,
+  "interface": {
+    "module": "neurodecodekit.datasets.marc2_first_failure_stable_private_discriminator",
+    "commands": ["plan", "qualify", "inspect", "execute"],
+    "fixed_path_execute": true,
+    "generic_path_or_output_override_allowed": false,
+    "URL_threshold_route_retry_resume_fallback_override_allowed": false,
+    "consumed_executor_reuse_allowed": false,
+    "standard_library_only": true
+  },
+  "one_call_contract": {
+    "VR16A_calls_per_source": 1,
+    "VR17C_map_calls_on_success": 0,
+    "VR17C_map_calls_on_refusal": 1,
+    "source_mutation_allowed": false,
+    "generated_success_route": "MARC2VR18P-G1",
+    "private_success_route": "MARC2VR18P-R1",
+    "private_failure_routes": [
+      "MARC2VR18P-R2",
+      "MARC2VR18P-R3",
+      "MARC2VR18P-R4",
+      "MARC2VR18P-R5",
+      "MARC2VR18P-R6",
+      "MARC2VR18P-R7",
+      "MARC2VR18P-R8"
+    ]
+  },
+  "generated_qualification": {
+    "route": "MARC2VR18P-G1",
+    "cases": 5,
+    "orders": 2,
+    "replays": 2,
+    "matrix_paths": 20,
+    "route_count_each": 4,
+    "generated_VR16A_calls": 21,
+    "generated_VR17C_map_calls": 16,
+    "direct_refusals": 82,
+    "generated_input_bytes": 9037650,
+    "temporary_peak_output_bytes": 217041,
+    "retained_output_bytes": 0,
+    "aggregate_output_bytes": 2020,
+    "runtime_seconds": 1.4131330830277875,
+    "peak_RSS_bytes": 37879808,
+    "replay_sha256": "5c214a1e9e5b3aa53b30931ff2d4573b675cb9bf18b41753b0da2eaae9c8bd35",
+    "all_routes_exactly_four": true,
+    "both_replays_equal": true
+  },
+  "fixed_path_state_machine": {
+    "generated_input_bytes": 430362,
+    "generated_peak_output_bytes": 217041,
+    "certificate_mode": "0600",
+    "marker_mode": "0600",
+    "private_manifest_mode": "0600",
+    "aggregate_report_mode": "0644",
+    "temporary_root_only": true,
+    "temporary_root_removed": true,
+    "retained_output_bytes": 0
+  },
+  "resource_boundary": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "generated_runtime_seconds_maximum": 60,
+    "private_runtime_seconds_maximum": 650,
+    "peak_RSS_bytes_maximum": 268435456,
+    "minimum_free_disk_bytes": 16106127360,
+    "private_source_bytes": 418755,
+    "private_source_content_opens": 1,
+    "combined_output_bytes_maximum": 2097152,
+    "network_bytes": 0,
+    "new_payload_bytes": 0,
+    "archive_member_bytes": 0,
+    "signal_bytes": 0,
+    "target_bytes": 0,
+    "retry_rerun_resume": 0
+  },
+  "local_verification": {
+    "focused_behavior_tests": 11,
+    "focused_record_tests": 5,
+    "complete_dependency_light_tests": 4620,
+    "complete_expected_skips": 204,
+    "complete_failures": 0,
+    "complete_runtime_seconds": 141.868,
+    "ruff_passed": true,
+    "compile_passed": true,
+    "registry_JSON_files_parsed": 339,
+    "CLI_help_and_plan_passed": true,
+    "git_diff_check_passed": true
+  },
+  "operation_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "readiness_or_private_source_operations": 0,
+    "real_VR16A_calls": 0,
+    "real_VR17C_map_calls": 0,
+    "private_cohort_freezes": 0,
+    "archive_header_or_member_payload_reads": 0,
+    "signal_event_channel_geometry_target_or_label_reads": 0,
+    "derivative_cache_feature_split_or_NeuroToken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "network_download_provider_language_model_operations": 0,
+    "stream_device_or_hardware_operations": 0,
+    "FW2_or_CIL1_operations": 0,
+    "operations_on_other_projects": 0,
+    "retry_rerun_resume_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "remote_implementation_proof": null,
+  "private_execution_authorized_now": false,
+  "next_gate": {
+    "exact_implementation_and_result_commit_push_and_both_jobs_green_required": true,
+    "proof_only_closeout_commit_push_and_both_jobs_green_required": true,
+    "private_stage_may_execute_before_both_proofs_green": false,
+    "one_private_execution_only_after_both_proofs": true,
+    "FW2_or_CIL1_execution_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_capability": "a fixed one-call generated wrapper separates success from four first-failure-stable classes without source mutation",
+    "scientific_ceiling": "none",
+    "private_route_known": false,
+    "real_cohort_frozen": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "live_decoding": false
+  },
+  "warnings": [
+    "Generated qualification demonstrates interface mechanics only.",
+    "The implementation proof and proof-only closeout are not remotely green yet.",
+    "Private Stage 2, FW2, CIL1, neural work, and scientific claims remain closed."
+  ]
+}
