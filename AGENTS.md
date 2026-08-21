@@ -4009,6 +4009,19 @@ tracker inspection NDJSON during closeout. No private discriminator, cohort,
 FW2, CIL1, archive payload, neural data, target, model, score, release, or
 scientific claim is open.
 
+Exact implementation `fcff5140a9e8f106a42cf8c5a2a944ca1d52f42d`
+passed Base Python job `96742255383`, Optional Neuro Readers job
+`96742255145`, and CI `32472572881`. Read
+`docs/MARC_2_FIRST_FAILURE_STABLE_R4_DECOMPOSITION_PROOF_CLOSEOUT.md` and the
+updated implementation/result registries. The proof-only closeout binds seven
+exact Git blobs, repeats no explicit qualification, and performs zero private
+or scientific operation.
+
+Commit, push, and green the proof-only closeout before preparing an all-false
+private discriminator packet. Do not touch `.codex_work`, consumed/private
+state, archive or neural payload, targets, models, scores, FW2/CIL1, or the
+unrelated tracker inspection NDJSON. No private execution is authorized.
+
 ## Style
 
 - Small functions, explicit names, low magic.

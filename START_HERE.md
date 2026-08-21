@@ -2501,3 +2501,9 @@ retained zero. Twenty focused and all 4,576 dependency-light tests pass with
 204 expected skips. Immediate gate: commit, push, and green this exact
 implementation/result, then add a proof-only closeout. No private source,
 cohort, neural payload, target, model, score, FW2, or CIL1 work is open.
+
+Exact VR17C implementation `fcff514` passed both required jobs in CI
+`32472572881`. Its proof-only closeout now binds the exact committed module,
+tests, measured documents, and preproof registries while repeating no explicit
+qualification and touching no private state. Commit, push, and green this
+closeout before preparing any future private-discriminator packet.

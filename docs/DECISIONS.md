@@ -10441,3 +10441,20 @@ the exact implementation/result commit and both remote jobs green, then a
 proof-only closeout, before preparing a future all-false private packet. No
 private read, cohort, archive, neural payload, target, model, score, FW2/CIL1,
 release, or scientific claim is authorized.
+
+## 0344 - Bind VR17C Without Repeating Its Qualification
+
+Proof decision: exact implementation commit
+`fcff5140a9e8f106a42cf8c5a2a944ca1d52f42d` passed Base Python job
+`96742255383`, Optional Neuro Readers job `96742255145`, and CI
+`32472572881`. Bind its module, behavior test, measured documents, preproof
+registries, and record test by exact Git blob.
+
+Boundary decision: change only proof state and frontier documentation. Repeat
+no explicit qualification and perform zero readiness, `.codex_work`, private,
+cohort, archive, neural, target, model, score, FW2/CIL1, network, hardware,
+release, or claim operations.
+
+Sequence decision: require this proof-only closeout's own commit to pass both
+remote jobs. Only then may Tier A prepare an all-false private-discriminator
+packet. The future private read remains Tier C and separately decision-bound.

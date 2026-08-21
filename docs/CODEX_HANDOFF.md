@@ -6736,3 +6736,20 @@ without repeating qualification or touching private state. Only after that
 closeout is green may Tier A prepare an all-false private-discriminator packet.
 Keep consumed VR15P/VR16P, parked VR17A/VR17B, `.codex_work`, and the unrelated
 tracker inspection NDJSON untouched.
+
+## 2026-08-21 MARC2-VR17C Proof Closeout Handoff
+
+Exact implementation `fcff5140a9e8f106a42cf8c5a2a944ca1d52f42d`
+passed Base Python job `96742255383`, Optional Neuro Readers job
+`96742255145`, and CI `32472572881`. Read the new VR17C proof-closeout
+document and updated implementation/result registries.
+
+The closeout binds seven exact Git blobs and changes no measured
+implementation artifact. It repeats no explicit qualification and performs
+zero private, consumed-state, cohort, archive, neural, target, model, score,
+FW2/CIL1, network, hardware, release, or claim operation.
+
+Immediate gate: commit, push, and green this proof-only closeout. Only after
+both jobs pass may Tier A prepare an all-false private-discriminator packet.
+Do not touch `.codex_work`, any consumed/private state, or the unrelated
+tracker inspection NDJSON.

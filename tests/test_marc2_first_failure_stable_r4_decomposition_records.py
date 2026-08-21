@@ -14,6 +14,24 @@ RESULT_PATH = (
     / "registries"
     / "marc2_first_failure_stable_r4_decomposition_result.v0.json"
 )
+EXPECTED_REMOTE_PROOF = {
+    "commit": "fcff5140a9e8f106a42cf8c5a2a944ca1d52f42d",
+    "CI_run_id": 32_472_572_881,
+    "base_python_job_id": 96_742_255_383,
+    "optional_neuro_job_id": 96_742_255_145,
+    "both_required_jobs_green": True,
+    "implementation_module_Git_blob": "c38967813b231c74625693bb9b121bb29382e136",
+    "behavior_test_Git_blob": "0bee38ec776ad7c1ee37a160fb837501c3ecdde6",
+    "implementation_document_Git_blob": "84fab15bf36f1d8ab0587e6f7b03880816f1d82d",
+    "result_document_Git_blob": "2f0073d64a707bb63c1b856355cc4300b1bf2bc0",
+    "preproof_implementation_registry_Git_blob": (
+        "5e052c3d498a716cc50a6e3f5ff01d051e08c8d1"
+    ),
+    "preproof_result_registry_Git_blob": "6138d24dfa7a6ab628dea5d4851b640f4c8a5e87",
+    "preproof_record_test_Git_blob": "f2188d3e59bc11259c8b8c94d0a916d1dce4df61",
+    "generated_qualification_repeated_for_proof_closeout": False,
+    "private_operation_repeated_for_proof_closeout": False,
+}
 
 
 def _sha256(path: Path) -> str:
@@ -34,8 +52,12 @@ class Marc2FirstFailureStableR4DecompositionRecordTests(unittest.TestCase):
             self.implementation["green_registration_proof"],
             self.result["green_registration_proof"],
         )
-        self.assertIsNone(self.implementation["remote_implementation_proof"])
-        self.assertIsNone(self.result["remote_implementation_proof"])
+        self.assertEqual(
+            self.implementation["remote_implementation_proof"],
+            EXPECTED_REMOTE_PROOF,
+        )
+        self.assertEqual(self.result["remote_implementation_proof"], EXPECTED_REMOTE_PROOF)
+        self.assertFalse(self.implementation["local_verification"]["remote_CI_pending"])
 
     def test_owned_artifact_sizes_and_hashes_are_exact(self):
         for artifact in self.implementation["tracked_implementation_artifacts"]:

@@ -3513,3 +3513,14 @@ Next gate: commit, push, and green the exact implementation/result, then green
 a proof-only closeout. A future one-shot private discriminator remains a new
 Tier C packet and decision. No real cohort, neural payload, target, model,
 score, FW2/CIL1, release, or scientific claim is open.
+
+### MARC2-VR17C - Exact Implementation Remotely Green
+
+Commit `fcff514` passed Base Python job `96742255383`, Optional Neuro Readers
+job `96742255145`, and CI `32472572881`. The proof-only closeout now binds the
+exact implementation and preproof registry blobs without repeating the
+qualification or touching private state.
+
+Next gate: commit, push, and green the proof closeout. Then prepare, but do not
+execute, an all-false Tier C private-discriminator packet. FW2/CIL1 and every
+neural or scientific claim remain closed.

@@ -4,7 +4,7 @@
   "result_id": "MARC-2-VR17C-first-failure-stable-R4-decomposition-result-v0",
   "lane_id": "MARC2-VR17C",
   "recorded_at_local": "2026-08-21",
-  "status": "generated_qualification_passed_remote_implementation_proof_pending",
+  "status": "generated_qualification_passed_remote_implementation_proven",
   "route": "MARC2VR17C-G1",
   "green_registration_proof": {
     "commit": "a34896d1d0e4ebc548f4b92bcbd80a70355dc8c2",
@@ -133,12 +133,27 @@
     "all_334_registry_JSON_passed": true,
     "diff_check_passed": true,
     "CLI_help_and_plan_passed": true,
-    "remote_CI_pending": true
+    "remote_CI_pending": false
   },
-  "remote_implementation_proof": null,
+  "remote_implementation_proof": {
+    "commit": "fcff5140a9e8f106a42cf8c5a2a944ca1d52f42d",
+    "CI_run_id": 32472572881,
+    "base_python_job_id": 96742255383,
+    "optional_neuro_job_id": 96742255145,
+    "both_required_jobs_green": true,
+    "implementation_module_Git_blob": "c38967813b231c74625693bb9b121bb29382e136",
+    "behavior_test_Git_blob": "0bee38ec776ad7c1ee37a160fb837501c3ecdde6",
+    "implementation_document_Git_blob": "84fab15bf36f1d8ab0587e6f7b03880816f1d82d",
+    "result_document_Git_blob": "2f0073d64a707bb63c1b856355cc4300b1bf2bc0",
+    "preproof_implementation_registry_Git_blob": "5e052c3d498a716cc50a6e3f5ff01d051e08c8d1",
+    "preproof_result_registry_Git_blob": "6138d24dfa7a6ab628dea5d4851b640f4c8a5e87",
+    "preproof_record_test_Git_blob": "f2188d3e59bc11259c8b8c94d0a916d1dce4df61",
+    "generated_qualification_repeated_for_proof_closeout": false,
+    "private_operation_repeated_for_proof_closeout": false
+  },
   "next_gate": {
-    "exact_implementation_and_result_commit_push_and_both_jobs_green_required": true,
-    "proof_only_closeout_required_before_future_packet_preparation": true,
+    "exact_implementation_and_result_commit_push_and_both_jobs_green_satisfied": true,
+    "proof_only_closeout_commit_push_and_both_jobs_green_required": true,
     "future_private_discriminator_authorized": false,
     "future_private_discriminator_requires_new_Tier_C_packet_and_fresh_decision": true,
     "consumed_private_state_reuse_allowed": false,
