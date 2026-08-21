@@ -77,10 +77,15 @@ generated/mock fixed-path wrapper followed, only after exact remote proof, by
 one 418,755-byte target-free structural read and one aggregate R1-R16 result.
 No cohort, archive member, neural payload, target, model, prediction, score,
 FW2, or CIL1 operation is requested. Every authorization field is false and
-every operation counter is zero. Commit, push, and green the request, then
-create and green a non-scope-changing request proof before identifying VR15P
-as the sole Tier C gate. No current or earlier message authorizes either stage
-or private access.
+every operation counter is zero. Exact request
+`08cef4bfacb126770c1a3a4be2fab58d1f7a276f` passed Base Python job
+`96677085658`, Optional Neuro Readers job `96677085404`, and CI
+`32450174692`. Read
+`docs/MARC_2_SUFFIX_IDENTITY_PRIVATE_DISCRIMINATOR_REQUEST_PROOF_CLOSEOUT.md`
+and its registry. The proof binds three unchanged request artifacts totaling
+29,112 bytes and performs zero private or scientific operation. Commit, push,
+and green this closeout before identifying VR15P as the sole Tier C gate. No
+current or earlier message authorizes either stage or private access.
 
 The latest consumed evidence lane is `MARC2-VR12P`; its result is summarized
 near the end of this frontier. To reconstruct its predecessors, read

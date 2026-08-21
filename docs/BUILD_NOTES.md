@@ -12059,3 +12059,17 @@ packet-bound decision.
 
 Immediate gate: commit, push, and green the request, then create and green its
 proof-only closeout before sole-gate identification and a fresh Tier C decision.
+
+### VR15P request remote proof closeout
+
+- Exact all-false request `08cef4bfacb126770c1a3a4be2fab58d1f7a276f`
+  passed Base job `96677085658`, Optional job `96677085404`, and CI
+  `32450174692`.
+- Bound the packet document, machine request, and request test by exact size,
+  SHA-256, and Git blob: three artifacts totaling 29,112 bytes.
+- Request edits, wrapper implementation or qualification, private/ignored-path
+  operations, structural-source reads, archive/neural/target/model/score work,
+  FW2/CIL1, retry, release, and claim operations during closeout: zero.
+
+Immediate gate: commit, push, and green this closeout. Only then identify
+VR15P as the sole active Tier C packet for a fresh packet-bound decision.

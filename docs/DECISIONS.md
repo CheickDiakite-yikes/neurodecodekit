@@ -10022,3 +10022,21 @@ Boundary decision: packet preparation performs zero ignored/private path,
 source, archive, neural, target, model, prediction, score, FW2/CIL1, network,
 hardware, retry, release, or claim operations. It requests no cohort creation
 and grants no authority now.
+
+## 0321 - Remote-Prove The Unchanged VR15P Request
+
+Proof decision: exact all-false request `08cef4b` passed Base Python job
+`96677085658`, Optional Neuro Readers job `96677085404`, and CI
+`32450174692`. Bind its three unchanged artifacts totaling 29,112 bytes by
+size, SHA-256, and Git blob.
+
+Zero-operation decision: this closeout does not edit the request, implement or
+qualify a wrapper, inspect readiness, or touch a private/Git-ignored path.
+Every request authorization field remains false and every operation counter
+remains zero.
+
+Sequence decision: the closeout has delayed effect until its own exact commit
+is pushed and both jobs are green. Only then identify VR15P as the sole Tier C
+packet for fresh packet-bound maintainer words; standing approval is not
+retroactive. FW2, CIL1, archive, neural, target, model, score, release, and
+claim work remain closed.

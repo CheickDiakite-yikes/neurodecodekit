@@ -38,10 +38,15 @@ target-free structural open. The future command may emit only one aggregate
 R1-R16 grammar class; it cannot freeze a cohort or access neural payloads.
 Every authorization field is false and every operation counter is zero.
 
-Immediate gate: commit, push, and green this request, then create and green a
-non-scope-changing request proof closeout. Only after VR15P is identified as
-the sole Tier C packet can a fresh maintainer message authorize its unchanged
-two-stage sequence. No earlier or standing approval is retroactive.
+Exact request `08cef4b` passed Base job `96677085658`, Optional Neuro Readers
+job `96677085404`, and CI `32450174692`. Its proof-only closeout binds the
+three unchanged request artifacts totaling 29,112 bytes, changes no scope, and
+performs zero private or scientific operation.
+
+Immediate gate: commit, push, and green the proof closeout. Only after VR15P is
+identified as the sole Tier C packet can a fresh maintainer message authorize
+its unchanged two-stage sequence. No earlier or standing approval is
+retroactive.
 
 ## Prior Frontier: MARC2-VR13P Consumed Invalid And Parked
 

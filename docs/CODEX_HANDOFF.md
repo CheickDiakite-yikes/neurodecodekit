@@ -22,9 +22,12 @@
 > proof before one future 418,755-byte target-free structural read. A future
 > result may retain only one R1-R16 grammar class; no cohort, archive, neural,
 > target, model, prediction, score, FW2, or CIL1 operation is requested. All
-> authority is false. Commit, push, green, then create and green a request proof
-> closeout. Do not implement or touch readiness/private paths before a fresh
-> packet-bound Tier C decision after that proof.
+> authority is false. Exact request `08cef4b` passed Base job `96677085658`,
+> Optional job `96677085404`, and CI `32450174692`. Its proof closeout binds
+> three unchanged artifacts totaling 29,112 bytes with zero private/scientific
+> operations. Commit, push, and green that closeout. Do not implement or touch
+> readiness/private paths before a fresh packet-bound Tier C decision after
+> that proof.
 
 > Current MARC2-VR13P Stage 1, 2026-08-20: decision `fe16400` passed Base job
 > `96648078587`, Optional job `96648078452`, and CI `32439821302`. Generated
@@ -6321,4 +6324,17 @@ proofs without touching an ignored path.
 Commit, push, and green this activation record. Only afterward run the one
 explicitly armed fixed aggregate-only command. Do not inspect or list its
 ignored source or output separately, and keep the unrelated tracker inspection
+NDJSON untouched.
+
+## 2026-08-21 MARC2-VR15P Request Proof Handoff
+
+Exact all-false request `08cef4bfacb126770c1a3a4be2fab58d1f7a276f`
+passed Base job `96677085658`, Optional job `96677085404`, and CI
+`32450174692`. Read the VR15P request proof closeout, machine record, and test.
+They bind the three unchanged request artifacts totaling 29,112 bytes.
+
+The closeout performs zero implementation, qualification, ignored/private,
+structural-source, archive, neural, target, model, score, FW2/CIL1, or claim
+operation. Commit, push, and green it before identifying VR15P as the sole
+Tier C packet for fresh maintainer words. Keep the unrelated tracker inspection
 NDJSON untouched.
