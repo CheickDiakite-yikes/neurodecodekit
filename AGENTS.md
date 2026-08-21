@@ -546,6 +546,13 @@ repeats no qualification, and touches no ignored path. Commit, push, and green
 the closeout, then create and green the separate tracked-clean activation proof
 before one-shot execution.
 
+Proof closeout `f352c1b50d15ab81f641dca21732e1ffffa7a6b8` passed Base job
+`96665759734`, Optional job `96665759548`, and CI `32446071998`. Read
+`docs/MARC_2_INCIDENT_AGGREGATE_RECOVERY_ACTIVATION_PROOF.md` and its machine
+record and test. The activation performs zero ignored-path operations and is
+ineffective until its own exact commit is pushed and both jobs are green. Only
+then may the one explicitly armed aggregate-only execution run.
+
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-
 blind analysis over 72 S004-S015 EDFs. The analysis accepted 1,080 events,

@@ -150,6 +150,13 @@ touching an ignored path.
 Immediate gate: commit, push, and green the proof closeout. Then create and
 green the tracked-clean activation proof before the single armed execution.
 
+Proof closeout `f352c1b` passed both jobs in CI `32446071998`. The separate
+activation record now binds the exact implementation and closeout proofs while
+performing zero ignored-path operations.
+
+Immediate gate: commit, push, and green the activation record. Then run the
+single explicitly armed aggregate-only command exactly once.
+
 ## Prior Frontier: MARC2-VR11P Consumed At Structural Route R2
 
 Read `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`, then

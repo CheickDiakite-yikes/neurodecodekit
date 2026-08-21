@@ -1,0 +1,99 @@
+{
+  "schema_name": "neurodecodekit.marc2_incident_aggregate_recovery_implementation_proof",
+  "schema_version": "0.1.0",
+  "proof_id": "MARC-2-VR14P-aggregate-recovery-activation-proof-v0",
+  "lane_id": "MARC2-VR14P",
+  "recorded_at_local": "2026-08-21",
+  "status": "activation_transition_effective_only_after_own_commit_push_and_both_jobs_green",
+  "implementation_commit": "046013a4a8089f5a9f3a91fc246420cac21a1d20",
+  "implementation_CI_run_id": 32445483857,
+  "implementation_base_python_job_id": 96664169190,
+  "implementation_optional_neuro_job_id": 96664169147,
+  "both_required_jobs_green": true,
+  "proof_closeout_commit": "f352c1b50d15ab81f641dca21732e1ffffa7a6b8",
+  "proof_closeout_CI_run_id": 32446071998,
+  "proof_closeout_base_python_job_id": 96665759734,
+  "proof_closeout_optional_neuro_job_id": 96665759548,
+  "proof_closeout_both_required_jobs_green": true,
+  "exact_bound_closeout_artifacts": [
+    {
+      "role": "proof_closeout_document",
+      "path": "docs/MARC_2_INCIDENT_AGGREGATE_RECOVERY_PROOF_CLOSEOUT.md",
+      "bytes": 1858,
+      "sha256": "22f1d0ed2aace8dcba35fc583b664692ccf0074b5a2d3a932a5b7f2099fb8fa6",
+      "Git_blob": "2ded430a5c347f164d1f8d21a557c31e19253d67"
+    },
+    {
+      "role": "proof_closeout_machine_record",
+      "path": "registries/marc2_incident_aggregate_recovery_implementation_proof_closeout.v0.json",
+      "bytes": 4094,
+      "sha256": "cb3ae1552ad06244449d59537e556e33e85994bb6b2937ae1353dbcef03ba286",
+      "Git_blob": "8314681b6c2da3f3c50a8fde2803a7de735e235b"
+    },
+    {
+      "role": "proof_closeout_test",
+      "path": "tests/test_marc2_incident_aggregate_recovery_implementation_proof_closeout.py",
+      "bytes": 3007,
+      "sha256": "807020baf6005193ba5fefcd859083a7efe90516f0b32c11535af1641b4e1a6b",
+      "Git_blob": "9cbe0ccf224319dad13afe0481f6dfe55b3dfe37"
+    }
+  ],
+  "exact_bound_closeout_artifact_count": 3,
+  "exact_bound_closeout_artifact_bytes": 8959,
+  "aggregate_report_content_opens_authorized": true,
+  "aggregate_report_content_open_count": 1,
+  "aggregate_report_bytes_maximum": 65536,
+  "recovery_receipt_count_maximum": 1,
+  "combined_output_bytes_maximum": 1048576,
+  "runtime_seconds_maximum": 30,
+  "peak_RSS_bytes_maximum": 268435456,
+  "CPU_threads": 1,
+  "workers": 1,
+  "numerical_jobs": 1,
+  "network_bytes": 0,
+  "new_payload_bytes": 0,
+  "structural_source_operations_allowed": 0,
+  "private_manifest_operations_allowed": 0,
+  "retry_rerun_resume_allowed": false,
+  "activation_operations": {
+    "generated_qualification_operations": 0,
+    "private_or_Git_ignored_path_operations": 0,
+    "aggregate_report_operations": 0,
+    "recovery_output_operations": 0,
+    "readiness_certificate_or_consumed_marker_operations": 0,
+    "structural_source_operations": 0,
+    "private_manifest_operations": 0,
+    "archive_neural_target_model_prediction_or_score_operations": 0,
+    "FW2_or_CIL1_operations": 0,
+    "network_provider_stream_device_or_hardware_operations": 0,
+    "retry_rerun_resume_operations": 0,
+    "release_publication_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "execution_gate": {
+    "this_activation_commit_push_and_both_jobs_green_required": true,
+    "tracked_and_clean_activation_record_required": true,
+    "explicit_one_shot_arming_required": true,
+    "fixed_source_and_output_paths_only": true,
+    "aggregate_report_read_authorized_before_this_record_is_remotely_green": false,
+    "generic_path_output_route_or_retry_override_allowed": false,
+    "FW2_or_CIL1_authorized": false
+  },
+  "warnings": [
+    "This record performs zero ignored-path operations.",
+    "One-shot execution remains closed until this exact activation commit is pushed and both required CI jobs are green.",
+    "R1 would make only a separate private-manifest recovery packet eligible.",
+    "No neural or decoding claim is established."
+  ],
+  "claim_boundary": {
+    "engineering_capability": "tracked clean activation proof for one fixed aggregate-only incident recovery",
+    "scientific_ceiling": "none",
+    "ignored_output_accessed_now": false,
+    "private_route_known_now": false,
+    "real_cohort_frozen_now": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "live_decoding": false
+  }
+}

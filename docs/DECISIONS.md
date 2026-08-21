@@ -9923,3 +9923,18 @@ insufficient and keeps CI tests unable to access ignored output.
 Boundary decision: proof closeout performs zero aggregate-report, recovery-
 output, source, private-manifest, archive, neural, target, model, score,
 FW2/CIL1, retry, release, or claim operations.
+
+## 0316 - Activate VR14P Only Through A Tracked Clean Record
+
+Proof decision: closeout `f352c1b` passed Base Python job `96665759734`,
+Optional Neuro Readers job `96665759548`, and CI `32446071998`. Bind those
+exact proofs in the fixed implementation-proof path expected by the reader.
+
+Delayed-effect decision: merely creating or committing the activation record
+does not open the aggregate. Its exact commit must be pushed and both jobs must
+pass before explicit one-shot arming.
+
+Scope decision: activation performs zero ignored-path operations. The later
+one-shot may open only the registered aggregate report once and write one
+receipt; structural source, private manifest, archive, neural, target, model,
+score, FW2/CIL1, retry, release, and claim work remain closed.

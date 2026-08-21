@@ -11964,3 +11964,17 @@ separate proof closeout before the one armed aggregate execution.
 
 Immediate gate: commit, push, and green the proof closeout, then create and
 green the tracked-clean activation proof before one armed execution.
+
+### Aggregate recovery activation proof
+
+- Proof-only closeout `f352c1b50d15ab81f641dca21732e1ffffa7a6b8`
+  passed Base job `96665759734`, Optional job `96665759548`, and CI
+  `32446071998`.
+- Added a tracked-clean activation record binding both green barriers and the
+  three closeout artifacts totaling 8,959 bytes.
+- Activation-record ignored-path, aggregate, output, structural-source,
+  private-manifest, neural, target, model, score, FW2/CIL1, and claim
+  operations: zero.
+
+Immediate gate: commit, push, and green the activation record, then run the
+single explicitly armed fixed aggregate command exactly once.

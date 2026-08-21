@@ -6261,3 +6261,15 @@ The closeout repeats no qualification and performs zero ignored-path or
 scientific operation. Commit, push, and green it, then create and green the
 separate tracked-clean activation proof before the one armed aggregate read.
 Keep the unrelated tracker inspection NDJSON untouched.
+
+## 2026-08-21 MARC2-VR14P Activation Proof Handoff
+
+Proof closeout `f352c1b50d15ab81f641dca21732e1ffffa7a6b8` passed Base job
+`96665759734`, Optional job `96665759548`, and CI `32446071998`. The separate
+activation doc, machine record, and test bind the exact Stage 1 and closeout
+proofs without touching an ignored path.
+
+Commit, push, and green this activation record. Only afterward run the one
+explicitly armed fixed aggregate-only command. Do not inspect or list its
+ignored source or output separately, and keep the unrelated tracker inspection
+NDJSON untouched.

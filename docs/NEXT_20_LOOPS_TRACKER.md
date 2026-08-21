@@ -3234,3 +3234,11 @@ qualification, and touches no ignored path.
 
 Next gate: commit, push, and green the closeout, then create and green the
 tracked-clean activation proof before the single armed aggregate read.
+
+Proof closeout `f352c1b` passed both jobs in CI `32446071998`. The separate
+activation record binds both exact green barriers and three closeout artifacts
+totaling 8,959 bytes while touching no ignored path.
+
+Next gate: commit, push, and green the activation record, then perform the one
+explicitly armed aggregate-only execution. Stop before private-manifest,
+structural-source, neural, FW2/CIL1, or claim work.
