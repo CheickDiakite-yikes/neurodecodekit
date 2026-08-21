@@ -10092,3 +10092,20 @@ matrix, private contract, route, threshold, source, or scientific boundary.
 Sequence decision: rerun focused and complete local verification, commit and
 push the corrected exact artifacts, and require a fresh green Base and Optional
 CI pair. Do not reuse the failed proof or perform any private operation.
+
+## 0325 - Close VR15P Stage 1 With Exact Remote Proof
+
+Proof decision: corrected exact Stage 1 `28a734d` passed Base Python job
+`96688236516`, Optional Neuro Readers job `96688236752`, and CI `32454196219`.
+Bind the proof-state registry and its five owned artifacts by exact path, byte
+count, SHA-256, and Git blob: six artifacts totaling 77,152 bytes.
+
+Zero-repeat decision: transition only the implementation proof metadata, its
+record test, and its tracked inspection-state assertion. Do not rerun generated
+qualification, arm `execute`, inspect readiness, or perform any private/ignored-
+path or scientific operation.
+
+Sequence decision: this closeout has delayed effect until its own exact commit
+passes both remote jobs. Then create and remotely prove one separate tracked-
+clean activation record before the sole armed private command. FW2 and CIL1
+remain closed.

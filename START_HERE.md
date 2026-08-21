@@ -40,9 +40,15 @@ bytes, reached 429,857 temporary bytes, and retained zero.
 This remains generated structural engineering evidence only. Every private,
 ignored-path, archive, neural, target, model, prediction, score, FW2/CIL1,
 network, hardware, other-project, and claim counter is zero. Immediate gate:
-commit, push, and green exact Stage 1, then create and green its separate proof
-closeout and tracked-clean activation record. `execute` must refuse before
-readiness or private preflight until those barriers are exact and green.
+corrected exact Stage 1 `28a734d` passed Base job `96688236516`, Optional job
+`96688236752`, and CI `32454196219`.
+
+Read the VR15P implementation proof closeout and registry. They bind six exact
+proof-state artifacts totaling 77,152 bytes. Generated qualification is not
+repeated, and all private and scientific counters remain zero. Commit, push,
+and green this closeout, then create and green its separate tracked-clean
+activation record. `execute` must refuse before readiness or private preflight
+until both barriers are exact and green.
 
 ## Prior Frontier: MARC2-VR13P Consumed Invalid And Parked
 

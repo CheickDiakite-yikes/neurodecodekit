@@ -81,13 +81,20 @@ bytes, reached 429,857 temporary bytes, and retained zero. Every private,
 ignored-path, archive, neural, target, model, prediction, score, FW2/CIL1,
 network, hardware, other-project, and claim counter is zero.
 
-Immediate gate: commit, push, and green the exact Stage 1 implementation, then
-create and green a separate proof-only closeout and tracked-clean activation
-record. Until both barriers are exact and remotely green, `execute` must refuse
-before readiness or private preflight. Do not touch `.codex_work`, the private
-source, consumed VR13P/VR14P output, an archive member, neural payload, target,
-model, prediction, score, FW2, or CIL1. The generated routes do not identify
-the private class or freeze a cohort.
+Corrected exact Stage 1 `28a734df3fb0cb83c3cddb4994b76d8c9453830b`
+passed Base Python job `96688236516`, Optional Neuro Readers job `96688236752`,
+and CI `32454196219`. Read
+`docs/MARC_2_SUFFIX_IDENTITY_PRIVATE_DISCRIMINATOR_PROOF_CLOSEOUT.md` and its
+registry. The closeout binds six exact proof-state artifacts totaling 77,152
+bytes and repeats no qualification or private operation.
+
+Immediate gate: commit, push, and green the exact proof-only closeout, then
+create and green a separate tracked-clean activation record. Until both
+barriers are exact and remotely green, `execute` must refuse before readiness
+or private preflight. Do not touch `.codex_work`, the private source, consumed
+VR13P/VR14P output, an archive member, neural payload, target, model,
+prediction, score, FW2, or CIL1. The generated routes do not identify the
+private class or freeze a cohort.
 
 The latest consumed evidence lane is `MARC2-VR12P`; its result is summarized
 near the end of this frontier. To reconstruct its predecessors, read

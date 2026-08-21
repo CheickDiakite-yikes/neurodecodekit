@@ -76,13 +76,20 @@ class Marc2SuffixIdentityPrivateDiscriminatorImplementationTests(unittest.TestCa
         self.assertEqual(contract["allowed_routes"], [f"MARC2VR15P-R{i}" for i in range(1, 17)])
         self.assertFalse(contract["cohort_manifest_allowed"])
 
-    def test_remote_proofs_are_null_and_private_stage_is_closed(self):
-        self.assertIsNone(self.record["remote_implementation_proof"])
+    def test_remote_implementation_is_green_and_closeout_is_null(self):
+        proof = self.record["remote_implementation_proof"]
+        self.assertEqual(
+            proof["commit"], "28a734df3fb0cb83c3cddb4994b76d8c9453830b"
+        )
+        self.assertEqual(proof["CI_run_id"], 32_454_196_219)
+        self.assertEqual(proof["base_python_job_id"], 96_688_236_516)
+        self.assertEqual(proof["optional_neuro_job_id"], 96_688_236_752)
+        self.assertTrue(proof["both_required_jobs_green"])
         self.assertIsNone(self.record["remote_proof_closeout"])
         self.assertEqual(self.record["private_stage_operations"], 0)
         self.assertTrue(all(value == 0 for value in self.record["forbidden_counters"].values()))
         gate = self.record["next_gate"]
-        self.assertTrue(gate["implementation_commit_push_and_both_jobs_green_required"])
+        self.assertFalse(gate["implementation_commit_push_and_both_jobs_green_required"])
         self.assertTrue(gate["separate_proof_closeout_green_required"])
         self.assertFalse(gate["private_execution_authorized_now"])
 

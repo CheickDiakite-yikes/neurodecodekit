@@ -1,0 +1,98 @@
+{
+  "schema_name": "neurodecodekit.marc2_suffix_identity_private_discriminator_implementation_proof_closeout",
+  "schema_version": "0.1.0",
+  "proof_id": "MARC-2-VR15P-implementation-remote-proof-closeout-v0",
+  "lane_id": "MARC2-VR15P",
+  "recorded_at_local": "2026-08-21",
+  "status": "implementation_remotely_green_closeout_effect_delayed_until_own_remote_green",
+  "implementation_remote_proof": {
+    "commit": "28a734df3fb0cb83c3cddb4994b76d8c9453830b",
+    "CI_run_id": 32454196219,
+    "base_python_job_id": 96688236516,
+    "optional_neuro_job_id": 96688236752,
+    "both_required_jobs_green": true
+  },
+  "exact_implementation_artifacts": [
+    {
+      "role": "implementation_registry_with_remote_proof",
+      "path": "registries/marc2_suffix_identity_private_discriminator_implementation.v0.json",
+      "bytes": 7357,
+      "sha256": "41b8de7c22546e5e630485b92557c5a63f094b77a0edd93e09e927dbd33d11f9",
+      "Git_blob": "86bbaca247f785bd3e67d928f4386b9a2aeb674e"
+    },
+    {
+      "role": "implementation_module",
+      "path": "src/neurodecodekit/datasets/marc2_suffix_identity_private_discriminator.py",
+      "bytes": 50366,
+      "sha256": "1bc86181b8eea40c77c5bd453dea5c8856dbf0b35427b6ff2f3692ed514a2b6e",
+      "Git_blob": "74d16480f28755ce6782205b12d08dc97972b00f"
+    },
+    {
+      "role": "behavior_test",
+      "path": "tests/test_marc2_suffix_identity_private_discriminator.py",
+      "bytes": 7707,
+      "sha256": "d45787f7eecc1f76a79c25d462581ff910c82bdb2a1569663529616495722c89",
+      "Git_blob": "00dcc942cf1746929905bca24ea52713f94a4fa8"
+    },
+    {
+      "role": "implementation_document",
+      "path": "docs/MARC_2_SUFFIX_IDENTITY_PRIVATE_DISCRIMINATOR_IMPLEMENTATION.md",
+      "bytes": 3784,
+      "sha256": "b97267ad4b2c2abdbbc9233d02ca32773d3cd1c9999cc1a0fa0e1d7cf5c145bf",
+      "Git_blob": "a0eef3ad1779967314cf62b1b9ece4d8deeeeecb"
+    },
+    {
+      "role": "generated_result_document",
+      "path": "docs/MARC_2_SUFFIX_IDENTITY_PRIVATE_DISCRIMINATOR_GENERATED_RESULT.md",
+      "bytes": 2719,
+      "sha256": "8f5d6c8041d573eefa45b2f96639543fd7cf08b4a3233bea543d2d93d745f34c",
+      "Git_blob": "ba508fda8ee4933f3377dccce0c029e147f57500"
+    },
+    {
+      "role": "implementation_record_test_with_remote_proof",
+      "path": "tests/test_marc2_suffix_identity_private_discriminator_implementation.py",
+      "bytes": 5219,
+      "sha256": "951676d27afc58af31dbec622533d0880afb257c3b1ee24e315467c1c4f5adee",
+      "Git_blob": "27afdba54175b0872474ea6d1ffa51279b6bd326"
+    }
+  ],
+  "exact_artifact_count": 6,
+  "exact_artifact_bytes": 77152,
+  "qualification_not_repeated": true,
+  "proof_metadata_artifacts_updated": 3,
+  "activation_proof_created_now": false,
+  "private_execution_authorized_now": false,
+  "closeout_operations": {
+    "generated_qualification_operations": 0,
+    "private_or_Git_ignored_path_operations": 0,
+    "readiness_certificate_or_consumed_marker_operations": 0,
+    "structural_source_operations": 0,
+    "private_cohort_manifest_operations": 0,
+    "consumed_VR13P_or_VR14P_output_operations": 0,
+    "archive_neural_target_model_prediction_or_score_operations": 0,
+    "FW2_or_CIL1_operations": 0,
+    "network_provider_stream_device_or_hardware_operations": 0,
+    "retry_rerun_resume_operations": 0,
+    "release_publication_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "next_gate": {
+    "this_closeout_commit_push_and_both_jobs_green_required": true,
+    "separate_tracked_clean_activation_proof_required": true,
+    "activation_proof_commit_push_and_both_jobs_green_required": true,
+    "explicit_one_shot_arming_required": true,
+    "private_source_or_readiness_access_authorized_now": false,
+    "FW2_or_CIL1_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_capability": "exact deterministic sixteen-route wrapper passes both remote environments with execution proof-gated",
+    "scientific_ceiling": "none",
+    "private_source_accessed_now": false,
+    "private_route_known_now": false,
+    "real_cohort_frozen_now": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "live_decoding": false
+  }
+}

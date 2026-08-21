@@ -149,7 +149,7 @@ class Marc2SuffixIdentityPrivateDiscriminatorTests(unittest.TestCase):
     def test_inspection_reads_only_tracked_proof_state(self):
         inspection = vr15p.inspect_proof_state()
         self.assertEqual(inspection["lane_id"], "MARC2-VR15P")
-        self.assertFalse(inspection["implementation_proof_green"])
+        self.assertTrue(inspection["implementation_proof_green"])
         self.assertFalse(inspection["proof_closeout_green"])
         self.assertFalse(inspection["private_access_performed"])
         self.assertEqual(inspection["scientific_ceiling"], "none")

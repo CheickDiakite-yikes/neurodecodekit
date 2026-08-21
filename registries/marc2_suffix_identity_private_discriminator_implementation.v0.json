@@ -4,7 +4,7 @@
   "implementation_id": "MARC-2-VR15P-suffix-identity-private-discriminator-implementation-v0",
   "lane_id": "MARC2-VR15P",
   "recorded_at_local": "2026-08-21",
-  "status": "stage_1_generated_qualified_private_stage_closed_pending_exact_remote_implementation_and_proof_closeout",
+  "status": "stage_1_remotely_green_private_stage_closed_pending_proof_closeout_and_activation",
   "green_decision_proof": {
     "commit": "fc694a69489913198f0a630bbb0edb04c29310f6",
     "CI_run_id": 32451448725,
@@ -56,8 +56,8 @@
     },
     {
       "path": "tests/test_marc2_suffix_identity_private_discriminator.py",
-      "bytes": 7708,
-      "sha256": "c03e872ddd9c55304ff94478eb6daadb45b780c06c8ae4efd28e73869e000b26"
+      "bytes": 7707,
+      "sha256": "d45787f7eecc1f76a79c25d462581ff910c82bdb2a1569663529616495722c89"
     },
     {
       "path": "docs/MARC_2_SUFFIX_IDENTITY_PRIVATE_DISCRIMINATOR_IMPLEMENTATION.md",
@@ -71,8 +71,8 @@
     },
     {
       "path": "tests/test_marc2_suffix_identity_private_discriminator_implementation.py",
-      "bytes": 4857,
-      "sha256": "1bdb2b3d7b705fd69dc62513c4de50f2bb43d6a76212d708769c84480e308270"
+      "bytes": 5219,
+      "sha256": "951676d27afc58af31dbec622533d0880afb257c3b1ee24e315467c1c4f5adee"
     }
   ],
   "interface": {
@@ -147,7 +147,13 @@
     "uncommitted_proof_edit_can_cross_gate": false,
     "ordinary_test_can_touch_private_path": false
   },
-  "remote_implementation_proof": null,
+  "remote_implementation_proof": {
+    "commit": "28a734df3fb0cb83c3cddb4994b76d8c9453830b",
+    "CI_run_id": 32454196219,
+    "base_python_job_id": 96688236516,
+    "optional_neuro_job_id": 96688236752,
+    "both_required_jobs_green": true
+  },
   "remote_proof_closeout": null,
   "private_stage_operations": 0,
   "failed_system_python_import": {
@@ -172,7 +178,7 @@
     "operations_on_other_projects": 0
   },
   "next_gate": {
-    "implementation_commit_push_and_both_jobs_green_required": true,
+    "implementation_commit_push_and_both_jobs_green_required": false,
     "separate_proof_closeout_green_required": true,
     "proof_activation_record_green_required_before_execute": true,
     "private_execution_authorized_now": false,
