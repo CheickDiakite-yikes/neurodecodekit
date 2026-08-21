@@ -13,6 +13,17 @@
 > generated-qualify a variable-width numeric run-index repair; any private
 > read, cohort, neural, target, model, score, FW2, or CIL1 work remains Tier C.
 
+> Current MARC2-VR16A registration, 2026-08-21: BIDS 1.11.1 permits arbitrary
+> leading zeroes on numeric indices, while VR15P consumed at the run-token
+> width class. The frozen additive generated-only adapter accepts `[0-9]+`
+> under the existing 1,024-byte name cap, canonicalizes before safe integer
+> conversion, and preserves semantic runs 1/2/3 plus all identity, companion,
+> collision, split, storage, and privacy guards. Six width patterns in two
+> orders and two replays give 24 success paths with at least 48 refusals.
+> Commit, push, and green registration before implementation. Private,
+> consumed-state, cohort, archive, neural, target, model, score, FW2, and CIL1
+> work remains closed.
+
 > Prior MARC2-VR15P request, 2026-08-21: read the suffix-identity private
 > discriminator authorization packet and registry. The all-false request binds
 > 17 committed inputs totaling 308,187 bytes and proposes generated wrapper
@@ -6430,3 +6441,22 @@ variable-width run-index repair. Any new private read, cohort freeze, neural
 payload, target, model, score, FW2, or CIL1 operation requires a new Tier C
 packet and fresh decision. Keep the unrelated tracker inspection NDJSON
 untouched.
+
+## 2026-08-21 MARC2-VR16A Registration Handoff
+
+Primary-source review reverified that BIDS 1.11.1 treats `run-<index>` as a
+nonnegative integer and permits arbitrary leading zeroes. The narrow inference
+is that lexical width is not semantic run identity; dataset eligibility remains
+semantic runs 1/2/3.
+
+Read the VR16A research note, preregistration, machine contract, and contract
+test. Eight exact inputs totaling 121,238 bytes bind the consumed VR15P result
+and unchanged VR15A/VR12A artifacts. The generated matrix freezes six width
+patterns over 24 order/replay paths, at least 48 direct refusals, a 32 MiB
+generated-input cap, 2 MiB temporary cap, 1 MiB aggregate cap, one thread, and
+zero retention.
+
+Immediate gate: verify, commit, push, and green this exact registration before
+implementation. Do not touch VR15P ignored/consumed state or any private,
+cohort, archive, neural, target, model, score, FW2, or CIL1 surface. Keep the
+unrelated tracker inspection NDJSON untouched.

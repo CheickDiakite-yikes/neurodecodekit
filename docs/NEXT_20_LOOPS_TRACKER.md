@@ -3283,3 +3283,20 @@ participant, selection, or cohort. Runtime was 10.096427 seconds, peak RSS was
 Next gate: specify and generated-qualify a variable-width numeric run-index
 repair. A new private confirmation, cohort freeze, neural payload, FW2, or CIL1
 operation requires a separate Tier C packet and fresh decision.
+
+### MARC2-VR16A - Variable-Width Run-Index Repair (Registered)
+
+Primary-source review confirms BIDS 1.11.1 permits arbitrary leading zeroes on
+numeric indices. The frozen additive adapter accepts one or more ASCII digits
+under the existing 1,024-byte member-name cap, canonicalizes before integer
+conversion, and preserves semantic runs 1/2/3 plus source-exact names,
+companions, normalized-collision refusal, split, rank, and storage controls.
+
+The generated matrix covers six width patterns, two orders, two replays, 24
+success paths, and at least 48 direct refusals under one CPU thread and 32 MiB
+of generated input. All private, consumed-state, archive, neural, target,
+model, score, FW2/CIL1, network, hardware, release, and claim counters are
+zero.
+
+Next gate: commit, push, and green the registration before generated-only
+implementation. A private confirmation remains a separate Tier C packet.

@@ -12191,3 +12191,24 @@ jobs green before the sole armed private execution.
 Immediate next safe task: freeze an artifact-only/generated-only variable-
 width numeric run-index repair. Any new private read or cohort freeze remains a
 new Tier C gate.
+
+### VR16A variable-width repair registration
+
+- Reverified BIDS 1.11.1 primary sources: `run-<index>` is numeric, and an
+  index may carry arbitrary leading zeroes.
+- Bound eight committed VR15P/VR15A/VR12A inputs totaling 121,238 bytes.
+- Froze an additive `[0-9]+` adapter under the existing 1,024-byte member-name
+  cap, with canonical identity checked before integer conversion.
+- Preserved semantic runs 1/2/3, source-exact names and reservation bytes,
+  exact companion spelling, normalized-collision refusal, subject/session/task
+  identity, taxonomy, count, rank, split, privacy, and the 8 GiB reservation
+  cap.
+- Froze six generated width patterns over 24 order/replay success paths, at
+  least 48 direct refusals, 32 MiB generated input, 2 MiB temporary output,
+  1 MiB aggregate output, one thread, and zero retention.
+- Private/ignored-path, consumed-state, cohort, archive, neural, target, model,
+  prediction, score, FW2/CIL1, network, hardware, other-project, release, and
+  claim operations: zero.
+
+Immediate gate: commit, push, and green this registration before any VR16A
+implementation.

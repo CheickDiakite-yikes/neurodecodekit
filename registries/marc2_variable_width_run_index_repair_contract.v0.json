@@ -1,0 +1,238 @@
+{
+  "schema_name": "neurodecodekit.marc2_variable_width_run_index_repair_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "MARC-2-VR16A-variable-width-run-index-repair-v0",
+  "lane_id": "MARC2-VR16A",
+  "recorded_at_local": "2026-08-21",
+  "status": "preregistered_artifact_only_generated_only_no_private_access",
+  "objective": "Replace only the generated one or two digit run token ceiling with standards aligned variable zero padding while preserving source exact names semantic runs identity companions split storage privacy and claim boundaries.",
+  "fixed_inputs": [
+    {
+      "role": "VR15P_result_document",
+      "path": "docs/MARC_2_SUFFIX_IDENTITY_PRIVATE_DISCRIMINATOR_RESULT.md",
+      "bytes": 3292,
+      "sha256": "fc4dd1d3435b0dd9f711376490ba47703e51c294ad66ebfacf6d1b9a74aa2ffd"
+    },
+    {
+      "role": "VR15P_result_record",
+      "path": "registries/marc2_suffix_identity_private_discriminator_result.v0.json",
+      "bytes": 4550,
+      "sha256": "bfe567932fd11d63ad8affc1462c3978d22cef6eb8ed19f314ea3629f5a91297"
+    },
+    {
+      "role": "VR15A_module",
+      "path": "src/neurodecodekit/datasets/marc2_suffix_identity_grammar_decomposition.py",
+      "bytes": 41915,
+      "sha256": "d30ae877c67855fd7df58ba54e600361b013e950e6b6bfd36cf966890fc09ee9"
+    },
+    {
+      "role": "VR15A_contract",
+      "path": "registries/marc2_suffix_identity_grammar_decomposition_contract.v0.json",
+      "bytes": 9287,
+      "sha256": "10644f5487069c3143a55f1910d07f7e7572bcd6ed21fdc2620a8a649b26a058"
+    },
+    {
+      "role": "VR15A_result_record",
+      "path": "registries/marc2_suffix_identity_grammar_decomposition_result.v0.json",
+      "bytes": 6433,
+      "sha256": "ecc7bee1c8d1b0263887e0a4cee2db0846fdf0ffbc81fdcdd1abf1208c1e031f"
+    },
+    {
+      "role": "VR12A_module",
+      "path": "src/neurodecodekit/datasets/marc2_p15_run_index_repair.py",
+      "bytes": 39338,
+      "sha256": "e7321d2a2b347ae2a4d0294c59d06d8eeeb3c6f08bf279b2658d1d56a25aa2f6"
+    },
+    {
+      "role": "VR12A_contract",
+      "path": "registries/marc2_p15_run_index_repair_contract.v0.json",
+      "bytes": 9681,
+      "sha256": "a6cd01e79813f79dfd7b54ee6c2d21ffb82e984b6230434127b936c513cf3f1e"
+    },
+    {
+      "role": "VR12A_result_record",
+      "path": "registries/marc2_p15_run_index_repair_result.v0.json",
+      "bytes": 6742,
+      "sha256": "a439f1242ba469f389dc970fa9062eca1ba159b17ea262a6b22484009e5b9953"
+    }
+  ],
+  "fixed_input_count": 8,
+  "fixed_input_bytes": 121238,
+  "observed_route_binding": {
+    "VR15P_route": "MARC2VR15P-R15",
+    "frozen_class": "run_token_width_outside_one_or_two_ASCII_digits",
+    "failed_private_value_available": false,
+    "private_filename_path_row_identity_participant_selection_or_cohort_available": false,
+    "private_result_reinspection_allowed": false
+  },
+  "standards_basis": {
+    "BIDS_version": "1.11.1",
+    "retrieved_at_local": "2026-08-21",
+    "run_entity_format": "run-<index>",
+    "index_semantics": "nonnegative_integer_with_arbitrary_leading_zeroes",
+    "references": [
+      "https://bids-standard.github.io/bids-specification-ignore/src/02-common-principles.html",
+      "https://bids-specification.readthedocs.io/en/stable/appendices/entities.html#run",
+      "https://bids-specification.readthedocs.io/en/stable/appendices/entity-table.html"
+    ],
+    "inference": "lexical width is not semantic run identity"
+  },
+  "frozen_repair": {
+    "implementation_posture": "additive_adapter_no_consumed_executor_edit",
+    "accepted_run_token_regex": "[0-9]+",
+    "accepted_digit_alphabet": "ASCII_0_through_9_only",
+    "separate_run_width_ceiling": null,
+    "member_name_UTF8_bytes_maximum": 1024,
+    "canonical_numeric_identity": "strip_leading_zeroes_else_zero",
+    "canonical_identity_checked_before_integer_conversion": true,
+    "allowed_semantic_run_values": [
+      1,
+      2,
+      3
+    ],
+    "semantic_zero_or_other_value_is_domain_refusal_not_BIDS_syntax_refusal": true,
+    "lexical_run_token_consistent_within_companion_set": true,
+    "normalized_duplicate_companions_refuse": true,
+    "selected_member_names_remain_source_exact": true,
+    "reservation_uses_source_exact_UTF8_name_bytes": true,
+    "subject_session_task_suffix_entity_order_or_prefix_broadening": false,
+    "source_rows_mutated": false,
+    "public_bundle_and_taxonomy_arithmetic_preserved": true,
+    "published_participant_session_counts_preserved": true,
+    "fit_session": "ses-01",
+    "heldout_session": "ses-02",
+    "selected_semantic_runs_per_session": [
+      1,
+      2,
+      3
+    ],
+    "reservation_cap_bytes": 8589934592
+  },
+  "generated_matrix": {
+    "inventory_rows_per_source": 1227,
+    "success_variants": [
+      "unpadded",
+      "two_digit_control",
+      "three_digit",
+      "six_digit",
+      "sixty_four_digit",
+      "bundle_consistent_mixed_width"
+    ],
+    "orders": [
+      "canonical",
+      "reversed"
+    ],
+    "replays": 2,
+    "required_success_paths": 24,
+    "required_refusal_witnesses": [
+      "empty_run_token",
+      "signed_run_token",
+      "decimal_run_token",
+      "unicode_digit_run_token",
+      "alphabetic_run_token",
+      "semantic_zero",
+      "semantic_run_four",
+      "mixed_lexical_tokens_within_bundle",
+      "duplicate_normalized_run_companion",
+      "wrong_task_token",
+      "incomplete_companion_set",
+      "overlong_member_name",
+      "mutated_row_schema",
+      "resource_or_output_overage"
+    ],
+    "semantic_identity_fields": [
+      "selected_subject_ids",
+      "selected_subject_count",
+      "fit_session",
+      "heldout_session",
+      "selected_semantic_run_bundles",
+      "selected_core_members"
+    ],
+    "raw_source_hashes_must_differ_across_distinct_spellings": true,
+    "source_name_hashes_must_differ_across_distinct_spellings": true,
+    "normalized_semantic_cohort_digest_must_match": true,
+    "source_objects_must_remain_byte_identical": true
+  },
+  "acceptance_gates": [
+    "all_fixed_inputs_match_size_and_SHA256",
+    "standards_version_references_and_variable_width_inference_are_exact",
+    "twenty_four_success_paths_pass",
+    "both_exact_replays_match",
+    "semantic_cohort_split_and_storage_identity_matches",
+    "source_exact_names_and_reservations_replay",
+    "raw_and_name_hashes_differ_while_semantic_digest_matches",
+    "all_required_refusal_witnesses_refuse",
+    "normalized_run_collision_refuses",
+    "mixed_lexical_run_companion_set_refuses",
+    "source_is_immutable_across_success_and_refusal",
+    "at_least_48_direct_refusals_pass",
+    "retained_generated_output_is_zero",
+    "resource_caps_pass",
+    "all_forbidden_operation_counters_remain_zero"
+  ],
+  "direct_refusal_minimum": 48,
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "generated_input_bytes": 33554432,
+    "temporary_output_bytes": 2097152,
+    "aggregate_output_bytes": 1048576,
+    "retained_generated_output_bytes": 0,
+    "network_bytes": 0,
+    "new_payload_bytes": 0
+  },
+  "authorization_state": {
+    "private_or_Git_ignored_path_access_authorized": false,
+    "consumed_VR15P_reuse_or_reinspection_authorized": false,
+    "real_structural_confirmation_authorized": false,
+    "cohort_freeze_authorized": false,
+    "archive_member_or_neural_payload_access_authorized": false,
+    "target_model_prediction_or_score_authorized": false,
+    "FW2_or_CIL1_authorized": false,
+    "training_inference_or_language_model_authorized": false,
+    "network_download_provider_stream_device_or_hardware_authorized": false,
+    "release_or_scientific_claim_upgrade_authorized": false,
+    "other_project_access_authorized": false
+  },
+  "operation_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_VR15P_path_or_output_operations": 0,
+    "real_structural_source_operations": 0,
+    "cohort_freezes": 0,
+    "archive_header_or_member_payload_operations": 0,
+    "neural_signal_event_channel_geometry_target_or_label_operations": 0,
+    "cache_feature_split_or_NeuroToken_operations": 0,
+    "model_training_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scoring_runs": 0,
+    "FW2_operations": 0,
+    "CIL1_operations": 0,
+    "network_requests": 0,
+    "provider_or_language_model_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "other_project_operations": 0,
+    "retry_rerun_resume_operations": 0,
+    "release_publication_or_scientific_claim_upgrades": 0
+  },
+  "implementation_gate": {
+    "this_registration_commit_push_and_both_jobs_green_required": true,
+    "generated_only_implementation_allowed_after_green": true,
+    "private_confirmation_packet_allowed_before_green_implementation_result": false,
+    "private_or_neural_execution_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_capability_sought": "standards aligned source preserving variable zero padding adapter with unchanged semantic run identity companion split and storage controls",
+    "scientific_ceiling": "none",
+    "real_cohort_established": false,
+    "neural_payload_accessed": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "live_decoding": false
+  }
+}

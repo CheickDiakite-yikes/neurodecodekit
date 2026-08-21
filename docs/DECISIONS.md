@@ -10158,3 +10158,18 @@ Boundary decision: VR15P has no retry or reinspection and creates no cohort.
 The next safe lane is an artifact-only/generated-only variable-width numeric
 run-index repair. Any private, neural, target, model, score, FW2, or CIL1 work
 still requires a separate Tier C packet and decision.
+
+## 0329 - Preregister The Standards-Aligned Variable-Width Repair
+
+Standards decision: bind BIDS 1.11.1's numeric-index semantics and arbitrary
+leading-zero allowance. Treat lexical run width as distinct from semantic run
+identity, while retaining the dataset's semantic runs 1/2/3.
+
+Repair decision: add a new generated-only VR16A adapter rather than modify a
+consumed executor. Accept `[0-9]+` only inside the existing 1,024-byte name
+cap, canonicalize before integer conversion, preserve source-exact names, and
+retain mixed-spelling and normalized-collision refusals.
+
+Sequence decision: require the exact registration commit to pass Base and
+Optional CI before implementation. Do not touch private or consumed state,
+freeze a cohort, or open neural/FW2/CIL1 work.

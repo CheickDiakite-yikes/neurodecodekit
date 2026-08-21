@@ -27,9 +27,16 @@ not retained. No cohort, archive member, neural payload, signal, target, model,
 prediction, or score was accessed.
 
 VR15P is consumed and cannot be retried or reinspected. The next safe work is
-an artifact-only and generated-only standards-compatible variable-width run-
-index repair. Any new private read, cohort freeze, neural access, FW2, or CIL1
-requires a new frozen Tier C packet and decision.
+frozen as `MARC2-VR16A`. Read the variable-width primary-source research,
+preregistration, and machine contract. BIDS allows arbitrary leading zeroes;
+the generated adapter therefore accepts `[0-9]+` under the existing 1,024-byte
+name cap while keeping semantic runs 1/2/3 and every companion, collision,
+identity, split, storage, and privacy guard exact.
+
+The frozen matrix has six width patterns, two source orders, two replays, 24
+success paths, and at least 48 direct refusals. Commit, push, and green the
+registration before implementation. Any private read, cohort freeze, neural
+access, FW2, or CIL1 requires a new Tier C packet and decision.
 
 ## Prior Frontier: MARC2-VR13P Consumed Invalid And Parked
 

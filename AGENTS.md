@@ -66,11 +66,22 @@ zero.
 VR15P is consumed with no retry, rerun, resume, repair, fallback,
 substitution, cleanup, or private reinspection. Do not touch its private
 source, readiness state, consumed marker, or output root. The next safe task is
-a separately frozen artifact-only and generated-only variable-width numeric
-run-index repair. Another private read or any cohort freeze requires a new Tier
-C packet and fresh packet-bound decision. FW2 and CIL1 remain ineligible;
-archive payload, neural data, targets, models, predictions, scores, release,
-and scientific claims remain closed.
+now frozen as `MARC2-VR16A`. Read
+`docs/MARC_2_VARIABLE_WIDTH_RUN_INDEX_PRIMARY_SOURCE_RESEARCH.md`,
+`docs/MARC_2_VARIABLE_WIDTH_RUN_INDEX_REPAIR_PREREGISTRATION.md`, and
+`registries/marc2_variable_width_run_index_repair_contract.v0.json`. The
+generated-only adapter accepts one or more ASCII digits under the existing
+1,024-byte path cap, canonicalizes leading-zero variants before safe integer
+conversion, and keeps semantic runs 1/2/3 plus every identity, companion,
+split, storage, and privacy guard exact. Its 24-path matrix covers six widths
+or width patterns, two orders, two replays, and at least 48 direct refusals.
+
+Immediate gate: commit, push, and green this exact registration before
+implementation. Do not implement early, touch VR15P private/consumed state, or
+infer its hidden token. Another private read or any cohort freeze requires a
+new Tier C packet and fresh packet-bound decision. FW2 and CIL1 remain
+ineligible; archive payload, neural data, targets, models, predictions, scores,
+release, and scientific claims remain closed.
 
 An earlier consumed evidence lane is `MARC2-VR12P`; its result is summarized
 near the end of this frontier. To reconstruct its predecessors, read
