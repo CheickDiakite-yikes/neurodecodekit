@@ -6937,3 +6937,20 @@ claim operation.
 Immediate gate: commit, push, and green this exact proof-only closeout. Keep
 VR18P `.codex_work`, all private/consumed state, and the unrelated tracker
 inspection NDJSON untouched. Any future private read remains Tier C.
+
+## 2026-08-21 MARC2-VR20R Task-Identity Research Handoff
+
+VR19A closeout `801fce3f74ba59beec6244ed80dcc2ff3c6706c0` passed
+Base Python job `96771512284`, Optional Neuro Readers job `96771512434`, and
+CI `32482429485`.
+
+Read the VR20R research document, registry, and test. Official Scientific Data
+and Figshare sources identify the raw BIDS quartet as
+`task-reachingandgrasping_run-zzzz`; the old selector requires
+`task-freewill`. This is the first public-evidence root-cause diagnosis that
+matches both consumed R4 and VR19A's exact code implication.
+
+Immediate gate: commit, push, and green this Tier A research. Then freeze an
+additive generated-only selector repair preserving source-exact task/run
+identities. Keep VR18P `.codex_work`, all private/consumed state, and the
+unrelated tracker inspection NDJSON untouched.

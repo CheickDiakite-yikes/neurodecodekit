@@ -10644,3 +10644,23 @@ Boundary decision: repeat no qualification and perform no private or ignored-
 path operation. Require this closeout's own remote-green proof before VR19A is
 closed. Any later private read remains a new Tier C packet and decision; no
 neural work, score, FW2/CIL1 execution, release, or scientific claim follows.
+
+## 0354 - Correct The MARC2 Dataset Task Identity
+
+Proof decision: VR19A closeout
+`801fce3f74ba59beec6244ed80dcc2ff3c6706c0` passed Base Python job
+`96771512284`, Optional Neuro Readers job `96771512434`, and CI
+`32482429485` before this research.
+
+Source decision: accept the Scientific Data descriptor's exact raw identity
+`task-reachingandgrasping_run-zzzz` and the Figshare record's archive identity.
+Treat `freewill` as the paradigm/archive concept, not the BIDS task entity.
+
+Diagnosis decision: the old exact `task-freewill` requirement is dataset-
+inaccurate and is the strongest evidence-backed explanation for consumed R4.
+Do not claim a private row was observed or reopen the consumed source.
+
+Boundary decision: require a new additive generated-only repair with source-
+exact identities and unchanged caps. Do not edit frozen modules. A future
+private confirmation remains Tier C; no neural work, score, FW2/CIL1
+execution, release, or scientific claim is authorized.

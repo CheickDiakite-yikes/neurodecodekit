@@ -2599,3 +2599,14 @@ Immediate gate: commit, push, and green this exact closeout. After that,
 VR19A is closed as generated structural engineering. Any private task-token
 read remains a new Tier C packet; no cohort, neural evidence, model, score,
 FW2/CIL1 execution, or scientific claim is open.
+
+Closeout `801fce3` passed both jobs in CI `32482429485`. Primary-source review
+then found the blocker: the dataset paper publishes raw BIDS filenames as
+`task-reachingandgrasping_run-zzzz`, but the inherited MARC2 selector requires
+`task-freewill`. That public mismatch explains why the one-shot private source
+reached the non-`freewill` structural class without exposing a private row.
+
+Immediate gate: commit, push, and green the Tier A task-identity research.
+Then preregister an additive generated-only source-exact selector repair. No
+private source, archive member, neural payload, model, score, FW2/CIL1
+execution, or scientific claim is open.

@@ -12681,3 +12681,23 @@ green a proof-only closeout without repeating qualification.
 
 Immediate gate: commit, push, and green this exact closeout. Any private read
 remains a new Tier C packet and fresh packet-bound decision.
+
+### VR20R published task-identity root cause found
+
+- VR19A proof closeout `801fce3f74ba59beec6244ed80dcc2ff3c6706c0`
+  passed Base Python job `96771512284`, Optional Neuro Readers job
+  `96771512434`, and CI `32482429485`.
+- The Scientific Data descriptor publishes every raw EEG quartet with
+  `task-reachingandgrasping` and four-digit `run-zzzz` identities.
+- The Figshare API confirms the exact 13,591,548,048-byte CC BY 4.0 archive,
+  record `28632599`, version 1, and file `57518986`.
+- The inherited selector instead requires `task-freewill`; this public
+  namespace mismatch aligns exactly with consumed R4 and VR19A's proven
+  non-`freewill` implication.
+- Six focused tests, Ruff, compilation, 343 registry parses, and diff hygiene
+  pass.
+- Private/ignored-path, archive, neural, target, model, score, FW2/CIL1,
+  other-project, release, and claim operations: zero.
+
+Immediate gate: commit, push, and green this research before freezing an
+additive generated-only source-exact repair.

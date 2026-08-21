@@ -4186,6 +4186,23 @@ VR18P consumed state, private values, archive or neural payload, targets,
 models, scores, FW2/CIL1, other projects, release, or claims. Any private read
 remains a new Tier C packet and fresh decision.
 
+Proof-only closeout `801fce3f74ba59beec6244ed80dcc2ff3c6706c0`
+passed Base Python job `96771512284`, Optional Neuro Readers job
+`96771512434`, and CI `32482429485`. VR19A is closed as remotely proven
+generated engineering.
+
+Read `docs/MARC_2_PUBLISHED_TASK_IDENTITY_RESEARCH.md` and
+`registries/marc2_published_task_identity_research.v0.json`. Primary-source
+research identifies the published raw quartet as
+`task-reachingandgrasping_run-zzzz`, while the inherited MARC2 selector
+requires `task-freewill`. This public namespace mismatch is the strongest
+evidence-backed explanation for consumed R4; no private row was reopened.
+
+Commit, push, and green this exact Tier A research before preregistering an
+additive generated-only source-exact repair. Do not modify frozen modules or
+touch `.codex_work`, VR18P consumed state, private values, archive or neural
+payload, targets, models, scores, FW2/CIL1, other projects, release, or claims.
+
 ## Style
 
 - Small functions, explicit names, low magic.

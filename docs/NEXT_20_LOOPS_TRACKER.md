@@ -3653,3 +3653,19 @@ Next gate: commit, push, and green this exact closeout. After that, VR19A is
 closed as remotely proven generated engineering. Any private read remains a
 new Tier C packet; no cohort, neural work, score, FW2/CIL1 execution, or
 scientific claim is open.
+
+### MARC2-VR20R - Published Task Identity Corrected
+
+VR19A closeout `801fce3` passed both jobs in CI `32482429485`. Primary-source
+research then found that the public raw BIDS quartet uses
+`task-reachingandgrasping_run-zzzz`, while the inherited selector requires
+`task-freewill`.
+
+This public namespace mismatch matches the consumed R4 class and VR19A's exact
+non-`freewill` implication. No private row or payload was reopened. Six focused
+tests pass, and all private, neural, target, model, score, and FW2/CIL1
+operations remain zero.
+
+Next gate: commit, push, and green this research, then preregister an additive
+generated-only source-exact selector repair. Any private confirmation remains
+a new Tier C packet and decision.
