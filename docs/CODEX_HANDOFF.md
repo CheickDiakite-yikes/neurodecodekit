@@ -23,8 +23,11 @@
 > Optional job `96688236752`, and CI `32454196219`. Read the VR15P
 > implementation proof closeout and registry; they bind six exact proof-state
 > artifacts totaling 77,152 bytes without repeating qualification or touching
-> private state. Commit, push, and green this closeout, then create and green a
-> separate activation record before touching `.codex_work`.
+> private state. Exact closeout `2acfb33` passed Base job `96690180933`,
+> Optional job `96690181096`, and CI `32454892777`. Read the tracked-clean
+> activation proof and registry; they bind three exact closeout artifacts
+> totaling 9,513 bytes with zero private operations. Commit, push, and green
+> that activation record before touching `.codex_work`.
 
 > Current MARC2-VR13P Stage 1, 2026-08-20: decision `fe16400` passed Base job
 > `96648078587`, Optional job `96648078452`, and CI `32439821302`. Generated
@@ -6379,3 +6382,16 @@ path, private-source, archive, neural, target, model, score, FW2/CIL1, network,
 hardware, or claim operation. Commit, push, and green it, then create and green
 the separate tracked-clean activation record. Keep the unrelated tracker
 inspection NDJSON untouched.
+
+## 2026-08-21 MARC2-VR15P Activation Proof Handoff
+
+Proof closeout `2acfb3318beb46ade294fdc3ff0fc21765e3ea17` passed Base job
+`96690180933`, Optional job `96690181096`, and CI `32454892777`. Read the
+VR15P tracked-clean activation document, machine record, and test. They bind
+the three exact closeout artifacts totaling 9,513 bytes.
+
+The activation transition performs zero readiness, ignored-path, private-
+source, archive, neural, target, model, score, FW2/CIL1, network, hardware, or
+claim operation. Commit, push, and green this exact activation. Only afterward
+run the one explicitly armed command. Keep the unrelated tracker inspection
+NDJSON untouched.

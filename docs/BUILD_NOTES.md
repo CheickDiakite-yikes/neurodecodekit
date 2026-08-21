@@ -12136,3 +12136,19 @@ separate proof-only closeout and tracked-clean activation record. Do not touch
 
 Immediate gate: commit, push, and green this closeout, then create and green a
 separate tracked-clean activation record before the one armed private command.
+
+### VR15P tracked-clean activation proof
+
+- Exact proof closeout `2acfb3318beb46ade294fdc3ff0fc21765e3ea17`
+  passed Base job `96690180933`, Optional job `96690181096`, and CI
+  `32454892777`.
+- Bound its three exact artifacts by size, SHA-256, and Git blob: 9,513 bytes.
+- Froze one future explicit command with one 418,755-byte target-free
+  structural open, one strict parse, one VR15A call, one nested unchanged
+  VR12A call, and one aggregate R1-R16 route. Cohort creation is forbidden.
+- Activation readiness, private/ignored-path, structural-source, archive,
+  neural, target, model, score, FW2/CIL1, network, hardware, release, and claim
+  operations: zero.
+
+Immediate gate: commit, push, and green this exact activation record before
+the sole armed private command.

@@ -6,6 +6,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+PROOF_COMMIT = "2acfb3318beb46ade294fdc3ff0fc21765e3ea17"
 PROOF_PATH = (
     ROOT
     / "registries/marc2_suffix_identity_private_discriminator_implementation_proof_closeout.v0.json"
@@ -32,11 +33,16 @@ class Marc2SuffixIdentityPrivateDiscriminatorProofCloseoutTests(unittest.TestCas
         self.assertEqual(len(rows), 6)
         self.assertEqual(sum(row["bytes"] for row in rows), 77_152)
         for row in rows:
-            payload = (ROOT / row["path"]).read_bytes()
+            payload = subprocess.run(
+                ["git", "show", f"{PROOF_COMMIT}:{row['path']}"],
+                cwd=ROOT,
+                check=True,
+                capture_output=True,
+            ).stdout
             self.assertEqual(len(payload), row["bytes"])
             self.assertEqual(hashlib.sha256(payload).hexdigest(), row["sha256"])
             blob = subprocess.run(
-                ["git", "hash-object", row["path"]],
+                ["git", "rev-parse", f"{PROOF_COMMIT}:{row['path']}"],
                 cwd=ROOT,
                 check=True,
                 capture_output=True,

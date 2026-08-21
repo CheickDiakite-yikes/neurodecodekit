@@ -45,10 +45,14 @@ corrected exact Stage 1 `28a734d` passed Base job `96688236516`, Optional job
 
 Read the VR15P implementation proof closeout and registry. They bind six exact
 proof-state artifacts totaling 77,152 bytes. Generated qualification is not
-repeated, and all private and scientific counters remain zero. Commit, push,
-and green this closeout, then create and green its separate tracked-clean
-activation record. `execute` must refuse before readiness or private preflight
-until both barriers are exact and green.
+repeated, and all private and scientific counters remain zero. Exact closeout
+`2acfb33` passed Base job `96690180933`, Optional job `96690181096`, and CI
+`32454892777`.
+
+Read the VR15P tracked-clean activation proof and registry. They bind the three
+exact closeout artifacts totaling 9,513 bytes and perform zero private
+operation. Commit, push, and green this activation record before the sole
+armed command. Until then, do not touch `.codex_work` or the private source.
 
 ## Prior Frontier: MARC2-VR13P Consumed Invalid And Parked
 

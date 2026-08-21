@@ -88,13 +88,20 @@ and CI `32454196219`. Read
 registry. The closeout binds six exact proof-state artifacts totaling 77,152
 bytes and repeats no qualification or private operation.
 
-Immediate gate: commit, push, and green the exact proof-only closeout, then
-create and green a separate tracked-clean activation record. Until both
-barriers are exact and remotely green, `execute` must refuse before readiness
-or private preflight. Do not touch `.codex_work`, the private source, consumed
-VR13P/VR14P output, an archive member, neural payload, target, model,
-prediction, score, FW2, or CIL1. The generated routes do not identify the
-private class or freeze a cohort.
+Exact proof closeout `2acfb3318beb46ade294fdc3ff0fc21765e3ea17` passed
+Base Python job `96690180933`, Optional Neuro Readers job `96690181096`, and CI
+`32454892777`. Read
+`docs/MARC_2_SUFFIX_IDENTITY_PRIVATE_DISCRIMINATOR_ACTIVATION_PROOF.md` and its
+registry. They bind the three exact closeout artifacts totaling 9,513 bytes
+and perform zero private operation.
+
+Immediate gate: commit, push, and green the exact tracked-clean activation
+record. Before that proof, do not run the armed command or touch `.codex_work`,
+the private source, consumed VR13P/VR14P output, an archive member, neural
+payload, target, model, prediction, score, FW2, or CIL1. After the activation
+is remotely green, one fixed armed execution may read the 418,755-byte target-
+free structural source once and retain only one aggregate R1-R16 route. It
+cannot freeze a cohort.
 
 The latest consumed evidence lane is `MARC2-VR12P`; its result is summarized
 near the end of this frontier. To reconstruct its predecessors, read

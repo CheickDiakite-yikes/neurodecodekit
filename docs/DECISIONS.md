@@ -10109,3 +10109,19 @@ Sequence decision: this closeout has delayed effect until its own exact commit
 passes both remote jobs. Then create and remotely prove one separate tracked-
 clean activation record before the sole armed private command. FW2 and CIL1
 remain closed.
+
+## 0326 - Bind The VR15P Tracked-Clean Activation
+
+Proof decision: exact closeout `2acfb33` passed Base Python job `96690180933`,
+Optional Neuro Readers job `96690181096`, and CI `32454892777`. Bind its three
+exact artifacts totaling 9,513 bytes by size, SHA-256, and Git blob.
+
+Activation decision: transition the tracked implementation proof state to both
+green barriers and freeze one later exact one-shot command: one 418,755-byte
+target-free structural read, one strict parse, one VR15A call, one nested VR12A
+call, and one aggregate R1-R16 route. No route may freeze a cohort.
+
+Boundary decision: activation itself performs zero private/ignored-path,
+readiness, structural-source, archive, neural, target, model, prediction,
+score, FW2/CIL1, network, hardware, release, or claim operation. Its effect is
+delayed until this exact activation commit passes both remote jobs.

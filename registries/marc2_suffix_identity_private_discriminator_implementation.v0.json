@@ -4,7 +4,7 @@
   "implementation_id": "MARC-2-VR15P-suffix-identity-private-discriminator-implementation-v0",
   "lane_id": "MARC2-VR15P",
   "recorded_at_local": "2026-08-21",
-  "status": "stage_1_remotely_green_private_stage_closed_pending_proof_closeout_and_activation",
+  "status": "execution_proofs_bound_private_stage_closed_pending_activation_remote_green",
   "green_decision_proof": {
     "commit": "fc694a69489913198f0a630bbb0edb04c29310f6",
     "CI_run_id": 32451448725,
@@ -56,8 +56,8 @@
     },
     {
       "path": "tests/test_marc2_suffix_identity_private_discriminator.py",
-      "bytes": 7707,
-      "sha256": "d45787f7eecc1f76a79c25d462581ff910c82bdb2a1569663529616495722c89"
+      "bytes": 7706,
+      "sha256": "fb7c8ce0a6935bdd41cb4f7367010d5382f1fdaa7a0016880cf0e0b389f817fa"
     },
     {
       "path": "docs/MARC_2_SUFFIX_IDENTITY_PRIVATE_DISCRIMINATOR_IMPLEMENTATION.md",
@@ -71,8 +71,8 @@
     },
     {
       "path": "tests/test_marc2_suffix_identity_private_discriminator_implementation.py",
-      "bytes": 5219,
-      "sha256": "951676d27afc58af31dbec622533d0880afb257c3b1ee24e315467c1c4f5adee"
+      "bytes": 5591,
+      "sha256": "391723306faae3c47995a3c01fa33545590392affc72bc08bd76739c641c94b0"
     }
   ],
   "interface": {
@@ -154,7 +154,13 @@
     "optional_neuro_job_id": 96688236752,
     "both_required_jobs_green": true
   },
-  "remote_proof_closeout": null,
+  "remote_proof_closeout": {
+    "commit": "2acfb3318beb46ade294fdc3ff0fc21765e3ea17",
+    "CI_run_id": 32454892777,
+    "base_python_job_id": 96690180933,
+    "optional_neuro_job_id": 96690181096,
+    "both_required_jobs_green": true
+  },
   "private_stage_operations": 0,
   "failed_system_python_import": {
     "package_imported": false,
@@ -179,7 +185,7 @@
   },
   "next_gate": {
     "implementation_commit_push_and_both_jobs_green_required": false,
-    "separate_proof_closeout_green_required": true,
+    "separate_proof_closeout_green_required": false,
     "proof_activation_record_green_required_before_execute": true,
     "private_execution_authorized_now": false,
     "private_source_or_readiness_path_may_be_touched_now": false,
