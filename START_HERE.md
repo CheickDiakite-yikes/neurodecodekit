@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR13P Proof-State Hardening
+## Current Frontier: MARC2-VR13P Consumed Invalid And Parked
 
 Read `docs/MARC_2_P15_PRIVATE_CONFIRMATION_RESULT.md`, then the VR13A
 preregistration, implementation, and result documents with their registries.
@@ -89,16 +89,23 @@ path, and 81 direct refusals. The measured pass used 14,171,146 generated
 bytes, 3.208020 seconds, 34,324,480-byte peak RSS, 2,087 aggregate bytes, and
 zero retained/private/neural/model/score operations.
 
-Exact Stage 1 implementation `36556e6` passed Base job `96652101274`,
-Optional job `96652101052`, and CI `32441208021`. Pre-closeout audit found
-that the implementation-record test accepted only the null proof state. The
-test is now hardened to accept only null or the exact green-proof shape while
-the registry remains null and `execute` remains closed.
+Initial Stage 1 `36556e6` passed both jobs but was superseded before use when
+pre-closeout audit found its record test accepted only null proof. Final
+proof-state-hardened implementation `4fb2424` passed Base job `96654430846`,
+Optional job `96654430654`, and CI `32442008002`.
 
-Immediate gate: commit, push, and green this proof-state hardening. Then bind
-that exact implementation in a separate proof-only closeout and green it
-before the one registered target-free structural invocation. No qualification
-or private operation is repeated.
+During local proof-closeout preparation, a focused test expected `execute` to
+refuse while readiness and preflight were mocked. The executor trusted the
+uncommitted local proof fields, returned instead of refusing, and therefore
+opened and read the 418,755-byte target-free structural source once before the
+test assertion failed. The separate proof closeout had no commit or remote
+green proof, so this is an invalid invocation, not evidence.
+
+The returned route was not retained, and the ignored output was not inspected.
+VR13P is consumed and parked with proof restored to null and no retry, rerun,
+resume, cleanup, inference, FW2/CIL1 eligibility, or claim. Read the incident
+document and machine record. Any aggregate-output recovery requires a new
+frozen Tier C packet and fresh decision.
 
 ## Prior Frontier: MARC2-VR11P Consumed At Structural Route R2
 

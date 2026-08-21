@@ -6172,3 +6172,22 @@ Immediate gate: commit, push, and green this hardening in both jobs. Then make
 and green the separate proof-only closeout. Only after both barriers may the
 one structural invocation run. Keep the unrelated tracker inspection NDJSON
 untouched.
+
+## 2026-08-20 MARC2-VR13P Incident Handoff
+
+Proof-state-hardened implementation
+`4fb242483a169f95be31e9652b240c2139efaaac` passed Base job
+`96654430846`, Optional job `96654430654`, and CI `32442008002`. Read the
+VR13P incident document, machine record, updated implementation registry, and
+incident test.
+
+During local proof-closeout preparation, an uncommitted proof object let the
+focused F01 test continue with readiness and preflight mocked. It opened and
+read 418,755 target-free structural bytes once and called VR12A once. The test
+did not retain the route; ignored output was not inspected.
+
+VR13P is consumed invalid and parked. Proof is null. Do not rerun, resume,
+clean, inspect ignored output, or infer a route/cohort. Any recovery is a new
+Tier C packet and decision. Keep the unrelated tracker inspection NDJSON
+untouched. Thirty-three focused and 4,302 complete base tests pass with 204
+expected skips after restoring F01.

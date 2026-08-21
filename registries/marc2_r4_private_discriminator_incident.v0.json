@@ -1,0 +1,85 @@
+{
+  "schema_name": "neurodecodekit.marc2_r4_private_discriminator_incident",
+  "schema_version": "0.1.0",
+  "incident_id": "MARC-2-VR13P-invalid-preproof-test-invocation-v0",
+  "lane_id": "MARC2-VR13P",
+  "recorded_at_local": "2026-08-20",
+  "status": "consumed_invalid_parked_no_retry_no_result",
+  "green_implementation_before_incident": {
+    "commit": "4fb242483a169f95be31e9652b240c2139efaaac",
+    "CI_run_id": 32442008002,
+    "base_python_job_id": 96654430846,
+    "optional_neuro_job_id": 96654430654,
+    "both_required_jobs_green": true
+  },
+  "failed_barrier": {
+    "proof_closeout_commit": null,
+    "proof_closeout_remotely_green": false,
+    "local_uncommitted_proof_object_present": true,
+    "executor_verified_current_closeout_commit_and_CI": false,
+    "test_expected_refusal": true,
+    "test_observed_refusal": false,
+    "reason_class": "executor_trusted_registry_proof_fields_without_independent_closeout_commit_verification"
+  },
+  "known_operations": {
+    "focused_test_invocations": 1,
+    "actual_readiness_samples": 0,
+    "private_preflight_operations": 0,
+    "private_source_content_opens": 1,
+    "private_source_bytes_read": 418755,
+    "strict_JSON_parses": 1,
+    "VR12A_calls": 1,
+    "network_operations": 0,
+    "archive_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "FW2_or_CIL1_operations": 0,
+    "operations_on_other_projects": 0,
+    "retry_rerun_resume_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "not_retained_or_inspected": {
+    "private_route": true,
+    "VR13A_residual_map_calls": true,
+    "private_manifest_written": true,
+    "aggregate_report": true,
+    "combined_output_bytes": true,
+    "runtime_seconds": true,
+    "peak_RSS_bytes": true,
+    "real_cohort": true
+  },
+  "disposition": {
+    "VR13P_consumed": true,
+    "result_valid": false,
+    "result_scientifically_usable": false,
+    "retry_rerun_resume_allowed": false,
+    "ignored_output_cleanup_or_inspection_authorized": false,
+    "future_recovery_requires_new_frozen_Tier_C_packet_and_decision": true,
+    "FW2_or_CIL1_eligible": false
+  },
+  "verification": {
+    "focused_tests_passed": 33,
+    "complete_base_tests_passed": 4302,
+    "expected_skips": 204,
+    "new_failures": 0,
+    "remote_proof_is_null": true,
+    "F01_refusal_before_readiness_and_private_access_passed": true,
+    "ruff_passed": true,
+    "registry_JSON_files_parsed": 302,
+    "git_diff_check_passed": true
+  },
+  "claim_boundary": {
+    "engineering_finding": "proof closeout identity must be verified independently before execute can leave F01",
+    "scientific_ceiling": "none",
+    "real_cohort_frozen": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "live_decoding": false
+  },
+  "warnings": [
+    "This is an engineering incident record, not a private structural result.",
+    "The ignored output and route were deliberately not inspected after the failed barrier.",
+    "No retry, rerun, resume, cleanup, or result recovery is authorized by this record."
+  ]
+}

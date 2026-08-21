@@ -4,7 +4,7 @@
   "implementation_id": "MARC-2-VR13P-R4-private-discriminator-implementation-v0",
   "lane_id": "MARC2-VR13P",
   "recorded_at_local": "2026-08-20",
-  "status": "stage_1_generated_qualified_proof_state_transition_hardened_private_execution_closed_until_exact_remote_proof",
+  "status": "consumed_invalid_preproof_test_invocation_parked_no_retry_no_result",
   "green_decision_proof": {
     "commit": "fe16400fd0ccb5fa2ff40fffd413fee34eb620d6",
     "CI_run_id": 32439821302,
@@ -186,13 +186,38 @@
     "superseded_before_proof_closeout": true,
     "reason_class": "proof_state_transition_test_required_exact_null_and_green_states"
   },
+  "final_remote_green_implementation": {
+    "commit": "4fb242483a169f95be31e9652b240c2139efaaac",
+    "CI_run_id": 32442008002,
+    "base_python_job_id": 96654430846,
+    "optional_neuro_job_id": 96654430654,
+    "both_required_jobs_green": true,
+    "used_for_valid_private_execution": false,
+    "proof_closeout_became_remotely_green": false
+  },
   "remote_implementation_proof": null,
   "private_execution_authorized_now": false,
+  "invalid_preproof_invocation": {
+    "trigger": "focused test expected execute to refuse while an uncommitted local proof object was present",
+    "test": "tests.test_marc2_r4_private_discriminator.Marc2R4PrivateDiscriminatorTests.test_execute_refuses_before_readiness_or_private_path_access",
+    "proof_closeout_commit": null,
+    "proof_closeout_remotely_green": false,
+    "actual_readiness_samples": 0,
+    "private_preflight_operations": 0,
+    "private_source_content_opens": 1,
+    "private_source_bytes_read": 418755,
+    "strict_JSON_parses": 1,
+    "VR12A_calls": 1,
+    "route_retained": false,
+    "result_valid": false,
+    "retry_rerun_resume_allowed": false,
+    "ignored_output_inspected_after_incident": false
+  },
   "next_gate": {
-    "exact_implementation_commit_push_and_both_jobs_green_required": true,
-    "separate_proof_closeout_commit_push_and_both_jobs_green_required": true,
-    "private_execution_before_both_green_allowed": false,
-    "one_registered_private_execution_after_both_green": true,
+    "VR13P_private_execution_consumed": true,
+    "VR13P_retry_rerun_resume_allowed": false,
+    "ignored_incident_output_read_allowed": false,
+    "future_incident_recovery_requires_new_Tier_C_packet_and_decision": true,
     "FW2_or_CIL1_execution_authorized": false
   },
   "claim_boundary": {
@@ -207,17 +232,17 @@
   },
   "warnings": [
     "Generated qualification demonstrates interface mechanics only.",
-    "Execute refuses before readiness or private path access while remote_implementation_proof is null.",
-    "The exact implementation and a separate proof closeout must both be remotely green before Stage 2.",
-    "R1 would enable only a separate prospective FW2 preregistration."
+    "A local uncommitted proof object allowed one invalid preproof structural invocation from a focused test.",
+    "The route and any ignored output were not retained or inspected after the incident.",
+    "VR13P is consumed and parked with no retry, rerun, resume, or claim upgrade."
   ],
   "unavailable_fields": [
-    "implementation_commit",
-    "implementation_CI_run_id",
-    "implementation_base_python_job_id",
-    "implementation_optional_neuro_job_id",
-    "proof_closeout_commit",
     "private_route",
+    "VR13A_residual_map_calls",
+    "private_manifest_written",
+    "combined_output_bytes",
+    "runtime_seconds",
+    "peak_RSS_bytes",
     "real_cohort",
     "FW2_contract_or_result",
     "neural_payload_or_decoding_result",

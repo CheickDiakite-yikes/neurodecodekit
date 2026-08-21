@@ -3177,3 +3177,14 @@ and every readiness/private/scientific counter stays zero.
 Next gate: commit, push, and green the hardening, then make and green the
 proof-only closeout before the single structural invocation. No neural or
 decoding claim is open.
+
+Final proof-state-hardened implementation `4fb2424` passed Base job
+`96654430846`, Optional job `96654430654`, and CI `32442008002`. During local
+closeout preparation, an uncommitted proof object let the focused F01 test
+continue with readiness and preflight mocked. It read 418,755 target-free
+structural bytes once and called VR12A once before the assertion failed.
+
+The route was not retained and ignored output was not inspected. VR13P is
+consumed invalid and parked with proof null, no retry/rerun/resume/cleanup, no
+FW2/CIL1 eligibility, and no scientific claim. Any aggregate-output recovery
+requires a new frozen Tier C packet and fresh decision.

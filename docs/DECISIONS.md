@@ -9824,3 +9824,19 @@ route table, caps, or claim boundary.
 Boundary decision: green this hardening before creating the proof closeout.
 Qualification, readiness, private, archive, neural, target, model, score,
 FW2/CIL1, release, and claim operations remain zero.
+
+## 0310 - Park VR13P After An Invalid Preproof Test Invocation
+
+Context decision: proof-state-hardened implementation `4fb2424` passed Base
+Python job `96654430846`, Optional Neuro Readers job `96654430654`, and CI
+`32442008002`. During uncommitted local closeout preparation, the focused F01
+test mocked readiness and preflight but the executor trusted local proof fields
+and returned instead of refusing.
+
+Evidence decision: record only known operations: one 418,755-byte target-free
+structural read, one strict parse, and one VR12A call. Do not inspect ignored
+output, infer the unretained route, or treat the invalid invocation as evidence.
+
+Disposition decision: restore proof to null and mark VR13P consumed invalid.
+No retry, rerun, resume, cleanup, output inspection, FW2/CIL1 eligibility, or
+claim is open. Any recovery requires a new frozen Tier C packet and decision.

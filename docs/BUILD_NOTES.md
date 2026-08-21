@@ -11864,3 +11864,29 @@ make and green a separate proof closeout. Stage 2 remains closed while
 
 Immediate gate: commit, push, and green this proof-state-hardening milestone.
 Then make and green the separate proof-only closeout before Stage 2.
+
+### Invalid preproof invocation incident
+
+- Proof-state-hardened implementation
+  `4fb242483a169f95be31e9652b240c2139efaaac` passed Base job
+  `96654430846`, Optional job `96654430654`, and CI `32442008002`.
+- During local proof-closeout preparation, the registry temporarily contained
+  the green implementation IDs before the closeout had a commit or remote
+  proof. The focused refusal test mocked readiness and preflight, then called
+  `execute`; the executor trusted the local fields and returned.
+- Known operations: zero actual readiness samples, zero preflight operations,
+  one private structural content open, 418,755 target-free bytes read, one
+  strict JSON parse, and one VR12A call.
+- The test did not retain the route. The ignored output, residual-map count,
+  private-manifest status, output bytes, runtime, peak RSS, and cohort were not
+  inspected or inferred.
+- Archive payload, neural, target, model, score, network, FW2/CIL1, other-
+  project, retry, and claim operations remained zero.
+
+Disposition: restore proof to null, mark VR13P consumed invalid, and park with
+no retry/rerun/resume/cleanup. A future aggregate-output recovery requires a
+new frozen Tier C packet and fresh decision.
+
+Verification after restoring proof null: 33 focused and 4,302 complete base
+tests pass with 204 expected skips; F01 again precedes readiness/private
+access. Ruff, 302 registry JSON files, and diff hygiene pass.

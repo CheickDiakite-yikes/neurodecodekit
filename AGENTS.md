@@ -480,15 +480,20 @@ keeps `remote_implementation_proof` null, so execute refuses before readiness
 or private-path access. Commit, push, and green the exact implementation, then
 make and green a separate proof closeout before Stage 2.
 
-Exact Stage 1 implementation `36556e6f8fe1fe8647c1336299c766d6ef7ecf5a`
-passed Base Python job `96652101274`, Optional Neuro Readers job
-`96652101052`, and CI `32441208021`. Pre-closeout audit found that the
-implementation-record test accepted only a null proof. The proof-state
-hardening changes only that test and its registry binding so null and the
-exact green-proof shape can both be checked; the registry proof remains null,
-the generated qualification is not repeated, and every private/scientific
-counter remains zero. Commit, push, and green this exact hardening before
-making the proof-only closeout. Do not run `execute` or touch `.codex_work`.
+Initial Stage 1 `36556e6` passed CI `32441208021` but was superseded before use
+when its record test accepted only null proof. Final proof-state-hardened
+implementation `4fb242483a169f95be31e9652b240c2139efaaac` passed Base job
+`96654430846`, Optional job `96654430654`, and CI `32442008002`.
+
+Read `docs/MARC_2_R4_PRIVATE_DISCRIMINATOR_INCIDENT.md` and
+`registries/marc2_r4_private_discriminator_incident.v0.json`. During local
+proof-closeout preparation, a focused test expected F01 with readiness and
+preflight mocked, but an uncommitted proof object let execute continue. It read
+exactly 418,755 target-free structural bytes once and called VR12A once before
+the assertion failed. No valid route was retained and ignored output was not
+inspected. VR13P is consumed invalid and parked; proof is null, and there is no
+retry, rerun, resume, cleanup, output inspection, FW2/CIL1 eligibility, or
+claim. Any incident-output recovery is a new Tier C packet and decision.
 
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-
