@@ -4054,6 +4054,21 @@ green. Only then may VR18P be identified as the sole active Tier C gate for
 fresh maintainer words. Do not implement Stage 1, inspect readiness, or touch
 any private or ignored path before that decision and its remote proof.
 
+That fresh packet-bound message has now arrived as the exact eight UTF-8 bytes
+`continue`. Read
+`docs/MARC_2_FIRST_FAILURE_STABLE_PRIVATE_DISCRIMINATOR_AUTHORIZATION_DECISION.md`
+and
+`registries/marc2_first_failure_stable_private_discriminator_authorization_decision.v0.json`.
+The decision binds request `521f1de`, CI `32474183647`, Base job
+`96747013517`, Optional job `96747013910`, proof closeout `ea5b4c7`, CI
+`32474864890`, Base job `96749006185`, and Optional job `96749006544`. It
+authorizes only the unchanged two-stage VR18P sequence by reference and is
+ineffective until its own exact commit is pushed and both CI jobs are green.
+Before that proof, do not implement the wrapper or touch readiness,
+`.codex_work`, the private source, or an output root. FW2, CIL1, archive
+payload, neural data, targets, models, predictions, scores, release, and
+claims remain closed.
+
 ## Style
 
 - Small functions, explicit names, low magic.

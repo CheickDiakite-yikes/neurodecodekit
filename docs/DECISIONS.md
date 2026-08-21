@@ -10500,3 +10500,26 @@ Sequence decision: require this closeout's own exact commit to pass both remote
 jobs before identifying VR18P as the sole active Tier C packet. Require fresh
 packet-bound maintainer words and a separately green decision before Stage 1
 implementation or any private access.
+
+## 0347 - Bind Fresh Short-Form Authority To VR18P Only
+
+Proof decision: request `521f1de1f3141f3f970710447d072608253c2cca`
+passed CI `32474183647`, and proof closeout
+`ea5b4c70f2a00db225351d3eabc7821ff3f48678` passed Base Python job
+`96749006185`, Optional Neuro Readers job `96749006544`, and CI
+`32474864890` before sole-gate identification.
+
+Authority decision: record the maintainer's next exact message, `continue`, as
+eight UTF-8 bytes with SHA-256
+`e256ee8e7aff6957a781d8328f0f68e26996564c81fa458da59fbca2305138ad`.
+Bind it only to the unchanged VR18P packet by reference. Do not represent the
+long packet as the maintainer's utterance or infer any scope expansion.
+
+Sequence decision: this decision is ineffective until its own exact commit is
+pushed and both jobs are green. Then permit generated/mock Stage 1 only. Keep
+the single private structural discriminator blocked until the exact Stage 1
+implementation and a separate proof-only closeout are each remotely green.
+
+Boundary decision: no readiness, `.codex_work`, private, cohort, archive,
+neural, target, model, score, FW2/CIL1, network, hardware, release, or claim
+operation occurs while recording this decision.

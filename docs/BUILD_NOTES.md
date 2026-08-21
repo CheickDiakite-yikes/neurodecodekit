@@ -12539,3 +12539,19 @@ is authorized now.
 Immediate gate: commit, push, and green this exact proof closeout. Only then
 may VR18P be identified as the sole Tier C gate for fresh maintainer words.
 Stage 1 implementation and every private operation remain unauthorized.
+
+### VR18P packet-bound authorization decision
+
+- Proof closeout `ea5b4c70f2a00db225351d3eabc7821ff3f48678` passed Base
+  Python job `96749006185`, Optional Neuro Readers job `96749006544`, and CI
+  `32474864890` before sole-gate identification.
+- The maintainer's next exact message was the eight UTF-8 bytes `continue`.
+- The decision binds six immutable packet/proof artifacts totaling 43,769
+  bytes and does not claim the packet's long scope as a maintainer utterance.
+- Decision recording performed zero wrapper, readiness, `.codex_work`,
+  private, archive, neural, target, model, score, FW2/CIL1, network, hardware,
+  other-project, release, or claim operation.
+
+Immediate gate: commit, push, and green the exact decision before Stage 1.
+Stage 2 remains blocked behind a separately green Stage 1 implementation and
+proof-only closeout.

@@ -3551,3 +3551,14 @@ implementation, private, or scientific operations.
 Next gate: commit, push, and green this closeout. Only then identify VR18P as
 the sole Tier C packet and ask for fresh packet-bound maintainer words. Stage 1
 implementation, private access, FW2/CIL1, and scientific claims remain closed.
+
+### MARC2-VR18P - Fresh Packet-Bound Decision Recorded
+
+Proof closeout `ea5b4c7` passed both jobs in CI `32474864890` before VR18P was
+named as the sole gate. The maintainer's next exact message was `continue`.
+The decision binds those eight bytes only to the unchanged two-stage packet
+and records zero implementation or private operations.
+
+Next gate: commit, push, and green the exact decision. Then implement and
+generated-qualify Stage 1. Private execution, FW2/CIL1, and scientific claims
+remain blocked behind the later Stage 1 proof closeout.

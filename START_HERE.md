@@ -2521,3 +2521,9 @@ totaling 32,886 bytes and records zero implementation, private, or scientific
 operations. Commit, push, and green this closeout before naming VR18P as the
 sole Tier C gate. A fresh maintainer decision is still required after that
 proof; no earlier continuation is retroactive.
+
+Proof closeout `ea5b4c7` then passed both jobs in CI `32474864890`. After
+VR18P was named as the sole gate, the maintainer's next exact message was
+`continue`. The packet-bound decision records those eight bytes and binds only
+the unchanged two-stage request. Commit, push, and green the decision before
+Stage 1 generated wrapper work. No readiness or private path is open yet.

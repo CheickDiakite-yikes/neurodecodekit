@@ -6794,3 +6794,22 @@ both jobs pass may VR18P be identified as the sole active Tier C packet. The
 maintainer must then provide fresh unambiguous words that bind this one packet;
 current and earlier continuation messages are not retroactive. Keep the
 unrelated tracker inspection NDJSON untouched.
+
+## 2026-08-21 MARC2-VR18P Authorization Decision Handoff
+
+Proof closeout `ea5b4c70f2a00db225351d3eabc7821ff3f48678` passed Base
+Python job `96749006185`, Optional Neuro Readers job `96749006544`, and CI
+`32474864890`. Codex then identified VR18P as the sole active Tier C gate; the
+maintainer's next exact message was `continue`.
+
+Read the VR18P authorization-decision document, machine decision, and matching
+test. The record preserves those actual eight UTF-8 bytes and binds six
+unchanged packet/proof artifacts totaling 43,769 bytes. It authorizes only the
+registered two-stage sequence and has delayed effect until its own exact
+commit passes both remote jobs.
+
+Immediate gate: commit, push, and green the decision. Then implement and
+generated-qualify Stage 1 only. Keep readiness, `.codex_work`, every private or
+consumed path, and the unrelated tracker inspection NDJSON untouched until the
+exact Stage 1 implementation and its separate proof closeout are both remote
+green.
