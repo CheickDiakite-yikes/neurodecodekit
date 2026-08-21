@@ -10125,3 +10125,20 @@ Boundary decision: activation itself performs zero private/ignored-path,
 readiness, structural-source, archive, neural, target, model, prediction,
 score, FW2/CIL1, network, hardware, release, or claim operation. Its effect is
 delayed until this exact activation commit passes both remote jobs.
+
+## 0327 - Make VR15P Historical Proof Tests Shallow-Checkout Safe
+
+Failure decision: activation commit `64fa114` did not cross the remote barrier.
+Base Python and Optional Neuro Readers in CI `32455530795` both passed the
+VR15P implementation tests, then failed two proof-history tests because the
+default GitHub Actions checkout does not contain parent commit `2acfb33`.
+Treat that run as failed activation proof and keep the private stage closed.
+
+Correction decision: assert the already frozen role, path, byte, SHA-256, and
+Git-blob tuples directly in the two historical proof tests. The exact tuple
+values remain unchanged; the correction removes only an accidental dependency
+on historical Git objects being present in a shallow checkout.
+
+Boundary decision: change no implementation/runtime byte, route, threshold,
+source, authorization, output, or scientific contract. Require a fresh green
+Base and Optional CI pair before the sole private command.

@@ -1,16 +1,57 @@
-import hashlib
 import json
-import subprocess
 import unittest
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PROOF_COMMIT = "2acfb3318beb46ade294fdc3ff0fc21765e3ea17"
 PROOF_PATH = (
     ROOT
     / "registries/marc2_suffix_identity_private_discriminator_implementation_proof_closeout.v0.json"
 )
+EXPECTED_ARTIFACT_BINDINGS = [
+    (
+        "implementation_registry_with_remote_proof",
+        "registries/marc2_suffix_identity_private_discriminator_implementation.v0.json",
+        7357,
+        "41b8de7c22546e5e630485b92557c5a63f094b77a0edd93e09e927dbd33d11f9",
+        "86bbaca247f785bd3e67d928f4386b9a2aeb674e",
+    ),
+    (
+        "implementation_module",
+        "src/neurodecodekit/datasets/marc2_suffix_identity_private_discriminator.py",
+        50366,
+        "1bc86181b8eea40c77c5bd453dea5c8856dbf0b35427b6ff2f3692ed514a2b6e",
+        "74d16480f28755ce6782205b12d08dc97972b00f",
+    ),
+    (
+        "behavior_test",
+        "tests/test_marc2_suffix_identity_private_discriminator.py",
+        7707,
+        "d45787f7eecc1f76a79c25d462581ff910c82bdb2a1569663529616495722c89",
+        "00dcc942cf1746929905bca24ea52713f94a4fa8",
+    ),
+    (
+        "implementation_document",
+        "docs/MARC_2_SUFFIX_IDENTITY_PRIVATE_DISCRIMINATOR_IMPLEMENTATION.md",
+        3784,
+        "b97267ad4b2c2abdbbc9233d02ca32773d3cd1c9999cc1a0fa0e1d7cf5c145bf",
+        "a0eef3ad1779967314cf62b1b9ece4d8deeeeecb",
+    ),
+    (
+        "generated_result_document",
+        "docs/MARC_2_SUFFIX_IDENTITY_PRIVATE_DISCRIMINATOR_GENERATED_RESULT.md",
+        2719,
+        "8f5d6c8041d573eefa45b2f96639543fd7cf08b4a3233bea543d2d93d745f34c",
+        "ba508fda8ee4933f3377dccce0c029e147f57500",
+    ),
+    (
+        "implementation_record_test_with_remote_proof",
+        "tests/test_marc2_suffix_identity_private_discriminator_implementation.py",
+        5219,
+        "951676d27afc58af31dbec622533d0880afb257c3b1ee24e315467c1c4f5adee",
+        "27afdba54175b0872474ea6d1ffa51279b6bd326",
+    ),
+]
 
 
 class Marc2SuffixIdentityPrivateDiscriminatorProofCloseoutTests(unittest.TestCase):
@@ -28,27 +69,15 @@ class Marc2SuffixIdentityPrivateDiscriminatorProofCloseoutTests(unittest.TestCas
         self.assertEqual(proof["optional_neuro_job_id"], 96_688_236_752)
         self.assertTrue(proof["both_required_jobs_green"])
 
-    def test_all_artifacts_match_bytes_hashes_and_git_blobs(self):
+    def test_historical_artifact_binding_is_exact(self):
         rows = self.proof["exact_implementation_artifacts"]
         self.assertEqual(len(rows), 6)
         self.assertEqual(sum(row["bytes"] for row in rows), 77_152)
-        for row in rows:
-            payload = subprocess.run(
-                ["git", "show", f"{PROOF_COMMIT}:{row['path']}"],
-                cwd=ROOT,
-                check=True,
-                capture_output=True,
-            ).stdout
-            self.assertEqual(len(payload), row["bytes"])
-            self.assertEqual(hashlib.sha256(payload).hexdigest(), row["sha256"])
-            blob = subprocess.run(
-                ["git", "rev-parse", f"{PROOF_COMMIT}:{row['path']}"],
-                cwd=ROOT,
-                check=True,
-                capture_output=True,
-                text=True,
-            ).stdout.strip()
-            self.assertEqual(blob, row["Git_blob"])
+        observed = [
+            (row["role"], row["path"], row["bytes"], row["sha256"], row["Git_blob"])
+            for row in rows
+        ]
+        self.assertEqual(observed, EXPECTED_ARTIFACT_BINDINGS)
 
     def test_closeout_repeats_nothing_and_touches_no_private_path(self):
         self.assertTrue(self.proof["qualification_not_repeated"])

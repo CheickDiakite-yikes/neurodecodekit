@@ -12152,3 +12152,21 @@ separate tracked-clean activation record before the one armed private command.
 
 Immediate gate: commit, push, and green this exact activation record before
 the sole armed private command.
+
+### VR15P activation proof portability correction
+
+- Activation commit `64fa1144d9412b983796b3da2bdfd5904a1562a1` failed both
+  jobs in CI `32455530795` after the VR15P implementation gates passed.
+- The two errors were proof-test-only `git show 2acfb33:<path>` calls. GitHub
+  Actions checked out only the activation commit, so the parent closeout object
+  was unavailable even though its frozen tuple remained present and exact.
+- The correction keeps every historical role/path/byte/SHA-256/Git-blob value
+  fixed in independent test constants and compares the committed records to
+  those tuples without requiring parent history.
+- Runtime code, generated qualification, readiness, private/ignored paths,
+  structural sources, archives, neural data, targets, models, scores, FW2/CIL1,
+  network, hardware, release, and scientific claims are unchanged and remain
+  unopened by this correction.
+
+Immediate gate: pass local verification, commit, push, and require both remote
+jobs green before the sole armed private execution.

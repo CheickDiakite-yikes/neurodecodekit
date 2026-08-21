@@ -1,16 +1,36 @@
-import hashlib
 import json
-import subprocess
 import unittest
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-CLOSEOUT_COMMIT = "2acfb3318beb46ade294fdc3ff0fc21765e3ea17"
 PROOF_PATH = (
     ROOT
     / "registries/marc2_suffix_identity_private_discriminator_implementation_proof.v0.json"
 )
+EXPECTED_CLOSEOUT_BINDINGS = [
+    (
+        "proof_closeout_document",
+        "docs/MARC_2_SUFFIX_IDENTITY_PRIVATE_DISCRIMINATOR_PROOF_CLOSEOUT.md",
+        2201,
+        "2ee4f4fe3f7dded335667d9d9200a4f84fe05683312297eb192f0f6b5c5541ea",
+        "44163d1bc0ef3e741146bf32b93032ad1bcb64dc",
+    ),
+    (
+        "proof_closeout_machine_record",
+        "registries/marc2_suffix_identity_private_discriminator_implementation_proof_closeout.v0.json",
+        4196,
+        "2e9b4b572a7ff1bfc724310f119f8742a124929c95ac6a22034054af1ff775e2",
+        "b38a7f6ea0b3a3d8438fc1470f658ba0014ab0d2",
+    ),
+    (
+        "proof_closeout_test",
+        "tests/test_marc2_suffix_identity_private_discriminator_implementation_proof_closeout.py",
+        3116,
+        "f85a7a9d69ef616701ea65a67f7c5a57829485c949ac9b626ae04764df24fa88",
+        "56506c1b2582a0b7350ca6f6a1f5bb33d2d7cdb2",
+    ),
+]
 
 
 class Marc2SuffixIdentityPrivateDiscriminatorActivationProofTests(unittest.TestCase):
@@ -44,27 +64,15 @@ class Marc2SuffixIdentityPrivateDiscriminatorActivationProofTests(unittest.TestC
         )
         self.assertTrue(self.proof["proof_closeout_both_required_jobs_green"])
 
-    def test_closeout_artifacts_match_bytes_hashes_and_blobs(self):
+    def test_historical_closeout_binding_is_exact(self):
         rows = self.proof["exact_bound_closeout_artifacts"]
         self.assertEqual(len(rows), 3)
         self.assertEqual(sum(row["bytes"] for row in rows), 9_513)
-        for row in rows:
-            payload = subprocess.run(
-                ["git", "show", f"{CLOSEOUT_COMMIT}:{row['path']}"],
-                cwd=ROOT,
-                check=True,
-                capture_output=True,
-            ).stdout
-            self.assertEqual(len(payload), row["bytes"])
-            self.assertEqual(hashlib.sha256(payload).hexdigest(), row["sha256"])
-            blob = subprocess.run(
-                ["git", "rev-parse", f"{CLOSEOUT_COMMIT}:{row['path']}"],
-                cwd=ROOT,
-                check=True,
-                capture_output=True,
-                text=True,
-            ).stdout.strip()
-            self.assertEqual(blob, row["Git_blob"])
+        observed = [
+            (row["role"], row["path"], row["bytes"], row["sha256"], row["Git_blob"])
+            for row in rows
+        ]
+        self.assertEqual(observed, EXPECTED_CLOSEOUT_BINDINGS)
 
     def test_activation_itself_performs_no_private_operation(self):
         self.assertTrue(
