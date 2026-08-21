@@ -10336,3 +10336,23 @@ immutability, at least 48 direct refusals, and zero retained output.
 Boundary decision: registration authorizes generated implementation only after
 its own remote green proof. It authorizes no private read, consumed-state use,
 cohort, archive, neural, target, model, score, FW2/CIL1, release, or claim.
+
+## 0339 - Park VR17A Instead Of Reinterpreting A False H3
+
+Proof decision: registration `e1c9366627e26a4a81c6eff152a8779eba5aa109`
+passed Base Python job `96726051438`, Optional Neuro Readers job
+`96726051667`, and CI `32467147580` before one bounded generated preflight.
+
+Result decision: literal H3 is false. `unpadded` and `two_digit_control` are
+VR15A G1-to-VR16A G1 controls; `three_digit`, `six_digit`,
+`sixty_four_digit`, and `bundle_consistent_mixed_width` are VR15A R15-to-
+VR16A G1 repairs. All six preserve one semantic digest.
+
+Integrity decision: park VR17A at `MARC2VR17A-P01` without amendment,
+reinterpretation, or full-matrix execution. Preserve the measured preflight as
+a design falsification, not as successful qualification.
+
+Next-lane decision: require a separate VR17B registration to freeze the exact
+two-control/four-repair mapping before another generated run. Infer no real
+cohort, private predicate, neural evidence, FW2/CIL1 eligibility, or scientific
+claim.

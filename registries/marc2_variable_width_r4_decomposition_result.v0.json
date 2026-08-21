@@ -1,0 +1,94 @@
+{
+  "schema_name": "neurodecodekit.marc2_variable_width_r4_decomposition_result",
+  "schema_version": "0.1.0",
+  "result_id": "MARC-2-VR17A-variable-width-R4-decomposition-result-v0",
+  "lane_id": "MARC2-VR17A",
+  "recorded_at_local": "2026-08-21",
+  "status": "parked_preregistered_H3_expectation_falsified",
+  "disposition_code": "MARC2VR17A-P01",
+  "registration_proof": {
+    "commit": "e1c9366627e26a4a81c6eff152a8779eba5aa109",
+    "CI_run_id": 32467147580,
+    "base_job_id": 96726051438,
+    "optional_neuro_job_id": 96726051667,
+    "both_required_jobs_green": true
+  },
+  "failed_gate": {
+    "hypothesis_id": "VR17A-H3",
+    "registered_expectation": "all_six_width_variants_classify_as_VR15A_R15_then_pass_VR16A",
+    "observed_partition": "two_supported_controls_VR15A_G1_and_four_extended_widths_VR15A_R15_all_pass_VR16A",
+    "full_registered_matrix_run": false,
+    "lane_parked_without_amendment": true
+  },
+  "generated_preflight": {
+    "orders": ["canonical"],
+    "replays": 1,
+    "variants": 6,
+    "VR15A_calls": 6,
+    "VR16A_calls": 6,
+    "VR15A_G1_count": 2,
+    "VR15A_R15_count": 4,
+    "VR16A_G1_count": 6,
+    "supported_control_variants": ["unpadded", "two_digit_control"],
+    "extended_width_variants": ["three_digit", "six_digit", "sixty_four_digit", "bundle_consistent_mixed_width"],
+    "semantic_sha256": "254bca5e0a39b52ca9791b917df6af554e02dda8f18f8e01b524d0e3ce8d9cba",
+    "semantic_digest_count": 1,
+    "generated_input_bytes": 2651670,
+    "runtime_seconds": 0.6208636660012417,
+    "peak_RSS_bytes": 33390592,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "retained_output_bytes": 0
+  },
+  "operation_counters": {
+    "repository_dot_codex_work_operations": 0,
+    "private_structural_source_stats": 0,
+    "private_structural_source_resolves": 0,
+    "private_structural_source_hashes": 0,
+    "private_structural_source_opens": 0,
+    "private_structural_source_bytes": 0,
+    "consumed_VR15P_or_VR16P_operations": 0,
+    "archive_or_neural_payload_reads": 0,
+    "signal_event_channel_geometry_reads": 0,
+    "target_or_label_reads": 0,
+    "model_training_inference_prediction_or_score_runs": 0,
+    "FW2_operations": 0,
+    "CIL1_operations": 0,
+    "network_provider_or_language_model_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "other_project_operations": 0,
+    "release_or_publication_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "warnings": [
+    "VR17A is parked because its literal H3 expectation was false.",
+    "Only one bounded generated canonical-order preflight ran; the registered full matrix did not run.",
+    "The corrected two-control/four-repair map requires a new preregistration.",
+    "No private source, cohort, archive, neural payload, target, model, or score was accessed."
+  ],
+  "verification": {
+    "focused_tests_passed": 6,
+    "complete_dependency_light_tests_passed": 4541,
+    "complete_dependency_light_tests_skipped": 204,
+    "complete_dependency_light_runtime_seconds": 108.271,
+    "ruff_version": "0.15.20",
+    "ruff_passed": true,
+    "registry_JSON_files_parsed": 329,
+    "git_diff_check_passed": true
+  },
+  "next_gate": {
+    "corrected_VR17B_registration_allowed_under_Tier_A": true,
+    "VR17A_amendment_or_rerun_allowed": false,
+    "private_discriminator_authorized": false,
+    "FW2_or_CIL1_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_insight": "cross adapter equivalence is two supported controls plus four extended width repairs with one invariant semantic digest",
+    "scientific_ceiling": "none",
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "live_decoding": false
+  }
+}
