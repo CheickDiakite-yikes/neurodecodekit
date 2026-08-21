@@ -6509,3 +6509,21 @@ Immediate gate: commit, push, and green the exact request, then create and
 green a non-scope-changing request proof closeout. Do not identify it as the
 sole Tier C gate or treat any earlier `continue` as authority before both
 barriers pass. Keep consumed VR15P and the unrelated NDJSON untouched.
+
+## 2026-08-21 MARC2-VR16P Request Proof Handoff
+
+Exact all-false request `619469a795a7044a4bbb77cef8986e0a7744473f`
+passed Base Python job `96709074413`, Optional Neuro Readers job
+`96709074203`, and CI `32461465238`.
+
+Read the VR16P request-proof closeout, machine proof, and proof test. They bind
+the unchanged packet document, request registry, and request test totaling
+32,234 bytes. The closeout edits no request scope, authorizes no stage, and
+performs no implementation, readiness, private-source, archive, neural,
+target, model, score, FW2/CIL1, network, or other-project operation.
+
+Immediate gate: commit, push, and green this exact proof closeout. Only after
+both jobs pass may VR16P be named the sole active Tier C packet and the
+maintainer's next fresh `continue`, `approve`, or `proceed` bind it by
+reference. Do not use an earlier continuation retroactively. Keep consumed
+VR15P and the unrelated tracker inspection NDJSON untouched.

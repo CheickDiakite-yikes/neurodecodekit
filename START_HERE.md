@@ -2394,3 +2394,10 @@ The all-false next request is now drafted as `MARC2-VR16P`. It proposes a
 generated fixed-path wrapper followed, only after separate proof barriers and
 fresh packet-bound authorization, by one target-free 418,755-byte structural
 read. The packet itself performs no private operation and grants no authority.
+
+Request `619469a795a7044a4bbb77cef8986e0a7744473f` passed Base Python
+job `96709074413`, Optional Neuro Readers job `96709074203`, and CI
+`32461465238`. Its proof closeout now binds the three unchanged request
+artifacts totaling 32,234 bytes and performs zero implementation or private
+operations. The closeout must itself be committed, pushed, and remotely green
+before VR16P becomes the sole Tier C gate for a fresh packet-bound decision.

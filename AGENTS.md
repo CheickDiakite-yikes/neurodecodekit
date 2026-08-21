@@ -3824,6 +3824,20 @@ retain only aggregate failure classes. Commit, push, and green the request and
 a non-scope-changing proof closeout before identifying VR16P as the sole Tier C
 gate. No current or earlier message authorizes implementation or private access.
 
+Exact request `619469a795a7044a4bbb77cef8986e0a7744473f` passed Base
+Python job `96709074413`, Optional Neuro Readers job `96709074203`, and CI
+`32461465238`. Read
+`docs/MARC_2_VARIABLE_WIDTH_PRIVATE_CONFIRMATION_REQUEST_PROOF_CLOSEOUT.md`
+and
+`registries/marc2_variable_width_private_confirmation_request_proof.v0.json`.
+The proof closeout binds the three unchanged request artifacts totaling 32,234
+bytes; every authorization remains false and every closeout operation remains
+zero. Commit, push, and green that proof closeout before identifying VR16P as
+the sole active Tier C gate. Only the maintainer's next fresh, unambiguous
+`continue`, `approve`, or `proceed` may then bind the unchanged packet by
+reference. Do not implement the wrapper or touch readiness, `.codex_work`, the
+private source, or an output root before the separate decision itself is green.
+
 ## Style
 
 - Small functions, explicit names, low magic.

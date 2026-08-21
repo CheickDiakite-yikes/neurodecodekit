@@ -1,0 +1,102 @@
+{
+  "schema_name": "neurodecodekit.marc2_variable_width_private_confirmation_request_proof",
+  "schema_version": "0.1.0",
+  "proof_id": "MARC-2-VR16P-all-false-request-remote-proof-v0",
+  "lane_id": "MARC2-VR16P",
+  "recorded_at_local": "2026-08-21",
+  "status": "request_remotely_green_closeout_effect_delayed_until_own_remote_green",
+  "request_remote_proof": {
+    "commit": "619469a795a7044a4bbb77cef8986e0a7744473f",
+    "CI_run_id": 32461465238,
+    "base_python_job_id": 96709074413,
+    "optional_neuro_job_id": 96709074203,
+    "both_required_jobs_green": true
+  },
+  "exact_request_artifacts": [
+    {
+      "role": "authorization_packet_document",
+      "path": "docs/MARC_2_VARIABLE_WIDTH_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md",
+      "bytes": 8964,
+      "sha256": "dc91cd628cb29087cfd7ad96dbb41b42ac263136fedd67c0474608eba51bb6cb",
+      "Git_blob": "ed71b4d8272816fa7ea13ae13d768cac790f88f2"
+    },
+    {
+      "role": "authorization_request_registry",
+      "path": "registries/marc2_variable_width_private_confirmation_authorization_request.v0.json",
+      "bytes": 15786,
+      "sha256": "7c4a6f17b288eb3635a50b8199e9490c1191d4fa63b10495aeb77265c0c85067",
+      "Git_blob": "ab5c1b06a2d3e0e4adadc846fd8e562cbf4a0646"
+    },
+    {
+      "role": "authorization_request_test",
+      "path": "tests/test_marc2_variable_width_private_confirmation_authorization_request.py",
+      "bytes": 7484,
+      "sha256": "706be165c12437afda9447bfc33340dee3ef283ef215e343f364f4ec15dc86c1",
+      "Git_blob": "92ea8d469b7771b1dccb0806cf60639c8e8ab139"
+    }
+  ],
+  "exact_request_artifact_count": 3,
+  "exact_request_artifact_bytes": 32234,
+  "scope_unchanged": {
+    "request_id": "MARC-2-VR16P-variable-width-private-confirmation-two-stage-request-v0",
+    "fixed_input_count": 15,
+    "fixed_input_bytes": 180905,
+    "future_private_source_bytes": 418755,
+    "future_private_source_content_opens": 1,
+    "future_VR16A_calls": 1,
+    "private_route_count": 6,
+    "conditional_R1_cohort_only": true,
+    "R2_through_R6_no_cohort": true,
+    "retry_rerun_resume_count": 0,
+    "request_authorization_fields_all_false": true,
+    "request_operation_counters_all_zero": true
+  },
+  "closeout_operations": {
+    "request_artifacts_modified": 0,
+    "implementation_or_generated_qualification_operations": 0,
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_VR15P_path_or_output_operations": 0,
+    "readiness_certificate_or_output_root_operations": 0,
+    "real_structural_source_operations": 0,
+    "network_or_public_request_operations": 0,
+    "archive_local_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "private_cohort_manifest_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "provider_language_model_stream_device_or_hardware_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "retry_rerun_release_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "authorization_state": {
+    "decision_recorded_now": false,
+    "implementation_authorized_now": false,
+    "generated_qualification_authorized_now": false,
+    "readiness_or_private_path_access_authorized_now": false,
+    "private_source_read_authorized_now": false,
+    "private_cohort_freeze_authorized_now": false,
+    "archive_neural_target_model_or_score_authorized_now": false,
+    "MARC2_FW2_or_CIL1_authorized_now": false,
+    "release_publication_or_claim_upgrade_authorized_now": false
+  },
+  "next_gate": {
+    "proof_closeout_commit_push_and_both_jobs_green_required": true,
+    "sole_active_Tier_C_packet_identification_after_green_required": true,
+    "fresh_packet_bound_maintainer_decision_required": true,
+    "decision_commit_push_and_both_jobs_green_before_implementation_required": true,
+    "implementation_authorized_now": false,
+    "private_read_authorized_now": false,
+    "MARC2_FW2_or_CIL1_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_request": "one future proof-gated structural read can confirm the variable-width adapter and freeze an FW2-eligible target-free cohort or retain one aggregate blocker class",
+    "scientific_ceiling": "none",
+    "private_source_accessed_now": false,
+    "real_cohort_frozen_now": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "real_time_portable_home_assistive_or_clinical_result": false
+  }
+}
