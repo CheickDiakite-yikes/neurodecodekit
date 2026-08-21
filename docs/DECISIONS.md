@@ -9968,3 +9968,22 @@ Boundary decision: VR14P is consumed without retry or reinspection. The next
 safe lane is artifact-only and generated-only decomposition; private manifest,
 source, archive, neural, target, model, score, FW2/CIL1, release, and claims
 remain closed.
+
+## 0318 - Decompose P15 With Generated Grammar Witnesses
+
+Proof decision: registration `185fbc5` passed Base Python job `96670618009`,
+Optional Neuro Readers job `96670617843`, and CI `32447836662` before
+implementation. Bind the exact repaired regex and P15 guard without modifying
+VR12A.
+
+Implementation decision: classify fifteen ordered suffix-identity grammar
+failures plus one multiple-class state using only generated 1,227-row sources.
+Require 68 exact VR12A calls, exact F03/P15 reachability for every single-class
+witness, order/replay agreement, source immutability, and at least 70 direct
+refusals. Local `MARC2VR15A-G1` passes every gate under all resource caps.
+
+Boundary decision: generated route reachability does not identify the consumed
+private class. Keep private and ignored paths, structural source, archives,
+neural payloads, targets, models, predictions, scores, FW2/CIL1, release, and
+claims closed. Remote-proof the exact implementation before preparing any new
+all-false Tier C packet.

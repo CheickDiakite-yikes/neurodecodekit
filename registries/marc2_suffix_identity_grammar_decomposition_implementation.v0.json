@@ -1,0 +1,157 @@
+{
+  "schema_name": "neurodecodekit.marc2_suffix_identity_grammar_decomposition_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "MARC-2-VR15A-suffix-identity-grammar-decomposition-implementation-v0",
+  "lane_id": "MARC2-VR15A",
+  "recorded_at_local": "2026-08-21",
+  "status": "exact_generated_implementation_and_result_local_pass_remote_proof_pending",
+  "proof_posture": "artifact_only_tracked_code_and_generated_structural_interface_no_private_or_scientific_value",
+  "green_registration_proof": {
+    "commit": "185fbc54366fd0eaf0ed4e994511e4485514b53e",
+    "CI_run_id": 32447836662,
+    "base_python_job_id": 96670618009,
+    "optional_neuro_job_id": 96670617843,
+    "both_required_jobs_green_before_implementation": true,
+    "contract_sha256": "10644f5487069c3143a55f1910d07f7e7572bcd6ed21fdc2620a8a649b26a058"
+  },
+  "tracked_implementation_artifacts": [
+    {
+      "role": "implementation_module",
+      "path": "src/neurodecodekit/datasets/marc2_suffix_identity_grammar_decomposition.py",
+      "bytes": 41915,
+      "sha256": "d30ae877c67855fd7df58ba54e600361b013e950e6b6bfd36cf966890fc09ee9"
+    },
+    {
+      "role": "behavior_test",
+      "path": "tests/test_marc2_suffix_identity_grammar_decomposition.py",
+      "bytes": 11101,
+      "sha256": "fca7421ed23e6567d1a886aaa4ce424cddd571443de96361f3665f5c62a34afa"
+    },
+    {
+      "role": "record_test",
+      "path": "tests/test_marc2_suffix_identity_grammar_decomposition_records.py",
+      "bytes": 4116,
+      "sha256": "64e2cf7e584e7b20101c70a6ae2c38bb9df0ad6d6d32cd8079ab2504def247ff"
+    },
+    {
+      "role": "implementation_document",
+      "path": "docs/MARC_2_SUFFIX_IDENTITY_GRAMMAR_DECOMPOSITION_IMPLEMENTATION.md",
+      "bytes": 4857,
+      "sha256": "f0e2216e823a63c5c0c61f7330ec989e380c177d461a8166ec5920fd3df6493d"
+    },
+    {
+      "role": "result_document",
+      "path": "docs/MARC_2_SUFFIX_IDENTITY_GRAMMAR_DECOMPOSITION_RESULT.md",
+      "bytes": 2988,
+      "sha256": "c6353af55d5bca1570e4535f6def2a1424597d9515a1e2d0ecb56c89fc874898"
+    }
+  ],
+  "implementation_surface": {
+    "module": "neurodecodekit.datasets.marc2_suffix_identity_grammar_decomposition",
+    "standard_library_only": true,
+    "generated_fixture_only": true,
+    "unchanged_VR12A_adapter_calls": 68,
+    "decision_fields": ["route"],
+    "generated_control_route": "MARC2VR15A-G1",
+    "ordered_result_routes": [
+      "MARC2VR15A-R1", "MARC2VR15A-R2", "MARC2VR15A-R3",
+      "MARC2VR15A-R4", "MARC2VR15A-R5", "MARC2VR15A-R6",
+      "MARC2VR15A-R7", "MARC2VR15A-R8", "MARC2VR15A-R9",
+      "MARC2VR15A-R10", "MARC2VR15A-R11", "MARC2VR15A-R12",
+      "MARC2VR15A-R13", "MARC2VR15A-R14", "MARC2VR15A-R15",
+      "MARC2VR15A-R16"
+    ],
+    "CLI_commands": ["plan", "inspect", "qualify"],
+    "path_argument_present": false,
+    "output_argument_present": false,
+    "execute_mode_present": false,
+    "private_executor_present": false,
+    "network_client_present": false,
+    "archive_payload_reader_present": false,
+    "model_or_scorer_present": false
+  },
+  "generated_qualification": {
+    "route": "MARC2VR15A-G1",
+    "generated_cases": 17,
+    "source_orders": 2,
+    "exact_replays": 2,
+    "exact_paths": 68,
+    "exact_VR12A_calls": 68,
+    "route_count_each": 4,
+    "single_class_P15_paths": 60,
+    "multiple_class_P15_paths": 4,
+    "internal_matrix_digest_sha256": "a35eb9dd8f5275af6096b4a5bde7bb8e917924d7788d1788ecefacd7bea2accd",
+    "source_mutations_by_VR12A": 0,
+    "failure_details_retained": 0,
+    "per_source_outcomes_retained": 0,
+    "direct_refusals_passed": 70
+  },
+  "measured_qualification": {
+    "fixed_artifact_count": 12,
+    "fixed_artifact_bytes": 224681,
+    "generated_input_bytes": 29199868,
+    "aggregate_output_bytes": 6587,
+    "retained_generated_output_bytes": 0,
+    "runtime_seconds": 3.9292239159694873,
+    "peak_RSS_bytes": 49037312,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "producer_is_causal": "not_applicable_structural_metadata_only",
+    "end_to_end_latency_measured": false
+  },
+  "local_verification": {
+    "focused_tests": 26,
+    "focused_tests_passed": true,
+    "focused_runtime_seconds": 10.484,
+    "prechange_complete_base_tests": 4359,
+    "complete_base_tests": 4380,
+    "complete_expected_skips": 204,
+    "complete_failures": 0,
+    "complete_runtime_seconds": 120.503,
+    "complete_base_suite_passed": true,
+    "focused_Ruff_passed": true,
+    "full_repository_Ruff_0_15_20_passed": true,
+    "compileall_passed": true,
+    "CLI_help_plan_inspect_and_qualify_passed": true,
+    "diff_check_passed": true,
+    "remote_CI_pending": true
+  },
+  "remote_implementation_proof": null,
+  "access_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_VR13P_or_VR14P_path_or_output_operations": 0,
+    "real_structural_source_or_private_manifest_operations": 0,
+    "archive_or_neural_payload_operations": 0,
+    "target_model_prediction_or_score_operations": 0,
+    "FW2_or_CIL1_operations": 0,
+    "network_provider_or_language_model_operations": 0,
+    "device_or_hardware_operations": 0,
+    "operations_on_other_projects": 0,
+    "retry_rerun_resume_operations": 0,
+    "release_or_scientific_claim_upgrades": 0
+  },
+  "next_gate": {
+    "exact_implementation_and_result_commit_push_and_both_jobs_green_satisfied": false,
+    "future_private_discriminator_authorized": false,
+    "future_private_discriminator_requires_new_Tier_C_packet_and_fresh_decision": true,
+    "consumed_VR13P_or_VR14P_reuse_allowed": false,
+    "VR12A_modification_allowed": false,
+    "MARC2_FW2_or_CIL1_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_ceiling": "artifact_only_generated_sixteen_route_suffix_identity_classifier",
+    "scientific_ceiling": "none",
+    "private_cause_identified": false,
+    "real_cohort_frozen": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "real_time_portable_home_assistive_or_clinical_result": false
+  }
+}

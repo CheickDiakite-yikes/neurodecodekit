@@ -1,0 +1,141 @@
+{
+  "schema_name": "neurodecodekit.marc2_suffix_identity_grammar_decomposition_result",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC2-VR15A",
+  "recorded_at_local": "2026-08-21",
+  "status": "completed_artifact_only_generated_qualification_local_pass_remote_proof_pending",
+  "proof_posture": "tracked_code_and_generated_structural_interface_only_no_private_or_scientific_value",
+  "route": "MARC2VR15A-G1",
+  "green_registration_proof": {
+    "commit": "185fbc54366fd0eaf0ed4e994511e4485514b53e",
+    "CI_run_id": 32447836662,
+    "base_python_job_id": 96670618009,
+    "optional_neuro_job_id": 96670617843,
+    "both_required_jobs_green_before_implementation": true,
+    "contract_sha256": "10644f5487069c3143a55f1910d07f7e7572bcd6ed21fdc2620a8a649b26a058"
+  },
+  "remote_implementation_proof": null,
+  "route_summary": {
+    "ordered_routes": [
+      "MARC2VR15A-G1", "MARC2VR15A-R1", "MARC2VR15A-R2",
+      "MARC2VR15A-R3", "MARC2VR15A-R4", "MARC2VR15A-R5",
+      "MARC2VR15A-R6", "MARC2VR15A-R7", "MARC2VR15A-R8",
+      "MARC2VR15A-R9", "MARC2VR15A-R10", "MARC2VR15A-R11",
+      "MARC2VR15A-R12", "MARC2VR15A-R13", "MARC2VR15A-R14",
+      "MARC2VR15A-R15", "MARC2VR15A-R16"
+    ],
+    "route_count_each": 4,
+    "one_route_per_generated_source": true,
+    "failure_details_retained": 0,
+    "per_source_outcomes_retained": 0
+  },
+  "replay_summary": {
+    "generated_cases": 17,
+    "source_orders": 2,
+    "exact_replays": 2,
+    "total_paths": 68,
+    "exact_VR12A_calls": 68,
+    "order_invariant_routes": true,
+    "byte_identical_replay": true,
+    "internal_matrix_digest_sha256": "a35eb9dd8f5275af6096b4a5bde7bb8e917924d7788d1788ecefacd7bea2accd"
+  },
+  "mechanics": {
+    "entry_count_each": 1227,
+    "static_P15_guard_call_sites": 1,
+    "single_class_P15_paths": 60,
+    "multiple_class_P15_paths": 4,
+    "control_paths": 4,
+    "post_VR12A_source_mutations": 0,
+    "source_mutations_by_VR12A": 0,
+    "predecessor_modules_modified": 0,
+    "member_header_bytes": 0,
+    "member_payload_bytes": 0
+  },
+  "measurements": {
+    "fixed_artifact_count": 12,
+    "fixed_artifact_bytes": 224681,
+    "generated_input_bytes": 29199868,
+    "aggregate_output_bytes": 6587,
+    "retained_generated_output_bytes": 0,
+    "runtime_seconds": 3.9292239159694873,
+    "peak_RSS_bytes": 49037312,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "producer_is_causal": "not_applicable_structural_metadata_only",
+    "end_to_end_latency_measured": false
+  },
+  "direct_refusals": {
+    "total_passed": 70,
+    "contract": 5,
+    "registration_proof": 4,
+    "fixed_artifact": 11,
+    "classifier": 3,
+    "matrix": 23,
+    "public_firewall": 15,
+    "resource": 6,
+    "thread": 3
+  },
+  "acceptance_gates": {
+    "all_11_fixed_inputs_match_size_and_SHA256": true,
+    "exact_green_registration_proof_matches": true,
+    "exact_repaired_regex_and_P15_guard_are_static_bound": true,
+    "exactly_16_ordered_result_routes_exist": true,
+    "all_68_generated_paths_call_unchanged_VR12A_once": true,
+    "all_15_single_witnesses_reach_exact_VR12A_F03_P15": true,
+    "G1_and_R1_through_R16_each_appear_exactly_four_times": true,
+    "canonical_reversed_and_two_replays_match": true,
+    "generated_sources_remain_immutable": true,
+    "at_least_70_direct_refusals_pass": true,
+    "retained_generated_output_is_zero": true,
+    "runtime_RSS_input_and_output_caps_pass": true,
+    "all_private_scientific_other_project_retry_and_claim_counters_are_zero": true
+  },
+  "access_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_VR13P_or_VR14P_path_or_output_operations": 0,
+    "real_structural_source_or_private_manifest_operations": 0,
+    "archive_or_neural_payload_operations": 0,
+    "target_model_prediction_or_score_operations": 0,
+    "FW2_or_CIL1_operations": 0,
+    "network_provider_or_language_model_operations": 0,
+    "device_or_hardware_operations": 0,
+    "operations_on_other_projects": 0,
+    "retry_rerun_resume_operations": 0,
+    "release_or_scientific_claim_upgrades": 0
+  },
+  "warnings": [
+    "Routes classify generated structural failure classes, not the consumed private cause.",
+    "G1 is a generated clean-control route and is not private validity evidence.",
+    "No failed value, identity, row position, or per-source outcome is retained.",
+    "Generated structural witnesses have no scientific or decoding value."
+  ],
+  "unavailable_fields": [
+    "consumed private suffix-identity grammar class and failed value",
+    "private member row identity and real cohort",
+    "archive payload neural signal event target model prediction and score"
+  ],
+  "next_gate": {
+    "exact_implementation_and_result_commit_push_and_both_jobs_green_satisfied": false,
+    "future_private_discriminator_authorized": false,
+    "future_private_discriminator_requires_new_Tier_C_packet_and_fresh_decision": true,
+    "consumed_VR13P_or_VR14P_reuse_allowed": false,
+    "VR12A_rule_relaxation_allowed": false,
+    "MARC2_FW2_or_CIL1_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_ceiling": "artifact_only_generated_sixteen_route_suffix_identity_classifier",
+    "scientific_ceiling": "none",
+    "private_cause_identified": false,
+    "real_cohort_frozen": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "real_time_portable_home_assistive_or_clinical_result": false
+  }
+}
