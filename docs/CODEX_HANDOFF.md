@@ -6954,3 +6954,23 @@ Immediate gate: commit, push, and green this Tier A research. Then freeze an
 additive generated-only selector repair preserving source-exact task/run
 identities. Keep VR18P `.codex_work`, all private/consumed state, and the
 unrelated tracker inspection NDJSON untouched.
+
+## 2026-08-21 MARC2-VR20A Registration Handoff
+
+Primary-source research `d5556d6b530f076742a3614c80e96606fc452560`
+passed Base Python job `96774089213`, Optional Neuro Readers job
+`96774089325`, and CI `32483267516` before registration.
+
+Read the VR20A preregistration, machine contract, and matching test. The lane
+binds ten committed artifacts totaling 232,361 bytes. It freezes an additive
+generated-only selector for exact lowercase `task-reachingandgrasping` while
+preserving source-exact member names, lexical run spellings, reservation
+bytes, four-companion identity, deterministic rank/session split, and the
+unchanged 8 GiB cap.
+
+The matrix requires 20 success paths across five lexical run variants, two
+orders, and two replays, plus at least 50 direct refusals. Immediate gate:
+commit, push, and green this exact registration before implementation. Keep
+VR18P `.codex_work`, all private/consumed state, and the unrelated tracker
+inspection NDJSON untouched. No private read, cohort, neural payload, model,
+score, FW2/CIL1 execution, or scientific claim is authorized.

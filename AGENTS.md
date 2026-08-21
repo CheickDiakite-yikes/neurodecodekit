@@ -4203,6 +4203,23 @@ additive generated-only source-exact repair. Do not modify frozen modules or
 touch `.codex_work`, VR18P consumed state, private values, archive or neural
 payload, targets, models, scores, FW2/CIL1, other projects, release, or claims.
 
+Primary-source research `d5556d6b530f076742a3614c80e96606fc452560`
+passed Base Python job `96774089213`, Optional Neuro Readers job
+`96774089325`, and CI `32483267516`. The next generated-only lane is frozen as
+`MARC2-VR20A`. Read
+`docs/MARC_2_PUBLISHED_TASK_SELECTOR_REPAIR_PREREGISTRATION.md` and
+`registries/marc2_published_task_selector_repair_contract.v0.json`. It requires
+exact lowercase `task-reachingandgrasping`, source-exact member names and run
+spellings, 20 generated success paths, at least 50 direct refusals, and zero
+retained output under one CPU thread.
+
+Commit, push, and green this exact registration before implementation. Do not
+edit frozen modules or touch `.codex_work`, VR18P consumed state, private
+values, archive or neural payload, targets, models, scores, FW2/CIL1, other
+projects, release, or claims. A private confirmation packet is not eligible
+until exact generated implementation/result and a proof-only closeout are
+remotely green.
+
 ## Style
 
 - Small functions, explicit names, low magic.

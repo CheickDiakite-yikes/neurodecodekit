@@ -2610,3 +2610,15 @@ Immediate gate: commit, push, and green the Tier A task-identity research.
 Then preregister an additive generated-only source-exact selector repair. No
 private source, archive member, neural payload, model, score, FW2/CIL1
 execution, or scientific claim is open.
+
+Research `d5556d6` passed both jobs in CI `32483267516`. The generated-only
+repair is now frozen as `MARC2-VR20A`: exact lowercase
+`task-reachingandgrasping`, source-exact filenames and run spellings, 20
+success paths, at least 50 direct refusals, one CPU thread, and zero retained
+output.
+
+Immediate gate: commit, push, and green the VR20A registration before
+implementation. A private confirmation packet is not eligible until the exact
+implementation/result and proof-only closeout are remotely green. Keep
+`.codex_work`, VR18P consumed state, and the unrelated tracker inspection
+NDJSON untouched.

@@ -12701,3 +12701,25 @@ remains a new Tier C packet and fresh packet-bound decision.
 
 Immediate gate: commit, push, and green this research before freezing an
 additive generated-only source-exact repair.
+
+### VR20A published-task selector repair registered
+
+- Bound green research commit
+  `d5556d6b530f076742a3614c80e96606fc452560`, CI `32483267516`, Base
+  `96774089213`, and Optional `96774089325`.
+- Bound ten tracked artifacts totaling 232,361 bytes; no ignored or private
+  path was inspected.
+- Froze exact lowercase `task-reachingandgrasping`, source-exact names and run
+  spellings, four companions, deterministic participant/session split, and
+  the unchanged 8 GiB reservation cap.
+- Froze 20 generated success paths over published four-digit and other numeric
+  BIDS spellings, plus at least 50 task, identity, collision, schema, resource,
+  and privacy refusals.
+- Seven focused tests and all 4,666 clean dependency-light tests pass with 204
+  expected skips, exactly seven tests above the 4,659 pre-change baseline.
+  Ruff, compilation, 344 registry parses, and diff hygiene pass.
+- Private, consumed-state, archive, neural, target, model, score, FW2/CIL1,
+  network, hardware, other-project, retry, release, and claim operations: zero.
+
+Immediate gate: verify, commit, push, and green this exact registration before
+any VR20A implementation. A private confirmation packet remains ineligible.

@@ -10664,3 +10664,26 @@ Boundary decision: require a new additive generated-only repair with source-
 exact identities and unchanged caps. Do not edit frozen modules. A future
 private confirmation remains Tier C; no neural work, score, FW2/CIL1
 execution, release, or scientific claim is authorized.
+
+## 0355 - Freeze The Published-Task Selector Repair
+
+Proof decision: primary-source correction
+`d5556d6b530f076742a3614c80e96606fc452560` passed Base Python job
+`96774089213`, Optional Neuro Readers job `96774089325`, and CI
+`32483267516` before this registration.
+
+Identity decision: require exact lowercase `task-reachingandgrasping`, the task
+entity published by the dataset descriptor. Treat `Freewill` only as the
+dataset/paradigm name. Reject aliases, case folding, prefixes, suffixes, and
+alternate task labels.
+
+Preservation decision: keep source-exact member names, lexical run spellings,
+row metadata, reservation bytes, companion identity, participant rank,
+session split, and the 8 GiB cap. Qualify 20 generated success paths and at
+least 50 direct refusals without editing a frozen module.
+
+Boundary decision: require this registration to be committed, pushed, and
+green before implementation. Require the implementation/result and a later
+proof-only closeout to be remotely green before a private packet may be
+prepared. Authorize no private read, cohort, neural payload, target, model,
+score, FW2/CIL1, network, release, or scientific claim.

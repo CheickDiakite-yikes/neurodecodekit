@@ -3669,3 +3669,18 @@ operations remain zero.
 Next gate: commit, push, and green this research, then preregister an additive
 generated-only source-exact selector repair. Any private confirmation remains
 a new Tier C packet and decision.
+
+### MARC2-VR20A - Published-Task Selector Repair Registered
+
+Research `d5556d6` passed both jobs in CI `32483267516`. This registration
+freezes exact lowercase `task-reachingandgrasping`, source-exact filenames and
+run spellings, four companions, deterministic rank/session split, and the
+unchanged 8 GiB cap.
+
+The generated matrix requires 20 success paths, exact replay, source
+immutability, published four-digit runs, and at least 50 direct refusals under
+one thread and zero retained output.
+
+Next gate: commit, push, and green this exact registration before generated
+implementation. No private read, cohort, neural work, score, FW2/CIL1
+execution, or scientific claim is authorized.
