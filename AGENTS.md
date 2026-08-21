@@ -4267,6 +4267,21 @@ implement the wrapper or touch readiness, `.codex_work`, the private source,
 consumed VR18P state, or an output root. FW2/CIL1, archive payload, neural
 data, targets, models, predictions, scores, release, and claims remain closed.
 
+Exact request `bef2391d8edf92c5edf8a3624831e50430636626` passed Base
+Python job `96793861959`, Optional Neuro Readers job `96793861717`, and CI
+`32489589922`. Read
+`docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_REQUEST_PROOF_CLOSEOUT.md`
+and `registries/marc2_published_task_private_confirmation_request_proof.v0.json`.
+The proof-only closeout binds the unchanged 35,823 request bytes and performs
+zero implementation, generated qualification, readiness, private, or
+scientific operation.
+
+Commit, push, and green this exact proof closeout. Only afterward identify
+VR20P as the sole active Tier C packet for fresh maintainer words. Until a
+fresh packet-bound decision and its own remote proof, do not implement the
+wrapper or touch `.codex_work`, the private source, consumed VR18P state, or a
+real output root. FW2/CIL1 and all neural or scientific work remain closed.
+
 ## Style
 
 - Small functions, explicit names, low magic.

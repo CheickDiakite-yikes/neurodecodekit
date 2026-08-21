@@ -2659,3 +2659,16 @@ active Tier C gate. Before a fresh decision, do not implement the wrapper or
 touch readiness, `.codex_work`, the private source, or an output root. FW2,
 CIL1, archive payload, neural data, targets, models, predictions, scores,
 release, and scientific claims remain closed.
+
+Exact request `bef2391d8edf92c5edf8a3624831e50430636626` passed Base
+Python job `96793861959`, Optional Neuro Readers job `96793861717`, and CI
+`32489589922`. Read
+`docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_REQUEST_PROOF_CLOSEOUT.md`
+and its machine proof. The closeout binds the unchanged 35,823 request bytes
+and performs zero implementation, readiness, private, or scientific operation.
+
+Commit, push, and green this exact proof-only closeout. Only afterward may
+VR20P be identified as the sole active Tier C gate. A fresh packet-bound
+maintainer decision and its own remote proof are still required before Stage
+1. Do not touch `.codex_work`, the private source, consumed VR18P state, or a
+real output root.

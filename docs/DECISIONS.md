@@ -10751,3 +10751,21 @@ retroactive Tier C authority. Require request remote proof, a separate proof-
 only closeout, sole-gate identification, and a fresh packet-bound maintainer
 decision before implementation. No private read, neural payload, target,
 model, score, FW2/CIL1 execution, release, or scientific claim is authorized.
+
+## 0359 - Bind The VR20P Request Proof Without Changing Scope
+
+Proof decision: exact all-false request commit
+`bef2391d8edf92c5edf8a3624831e50430636626` passed Base Python job
+`96793861959`, Optional Neuro Readers job `96793861717`, and CI
+`32489589922`.
+
+Integrity decision: bind the 9,230-byte packet, 17,731-byte machine request,
+and 8,862-byte request test by SHA-256 and Git blob for 35,823 combined exact
+bytes. Modify none of those three artifacts and repeat no implementation,
+qualification, readiness, or private operation.
+
+Boundary decision: this proof-only closeout has delayed effect until its own
+commit is pushed and both jobs are green. Only afterward may VR20P be named as
+the sole active Tier C packet for fresh maintainer words. No current decision,
+private read, cohort, neural payload, target, model, score, FW2/CIL1 execution,
+release, or scientific claim exists.

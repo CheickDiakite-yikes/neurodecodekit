@@ -3729,3 +3729,15 @@ neural payload access.
 Next gate: commit, push, and green this request, then green a request proof-
 only closeout. No current decision, private read, cohort, neural work, score,
 FW2/CIL1 execution, or scientific claim exists.
+
+### MARC2-VR20P - Exact Request Remotely Green
+
+Request `bef2391` passed Base Python job `96793861959`, Optional Neuro Readers
+job `96793861717`, and CI `32489589922`. The proof-only closeout binds all
+35,823 request bytes and leaves every permission false and every closeout
+operation at zero.
+
+Next gate: commit, push, and green the proof-only closeout. Only then identify
+VR20P as the sole active Tier C packet and wait for fresh maintainer words. No
+wrapper, private source, cohort, neural payload, score, FW2/CIL1 execution, or
+scientific claim is open.

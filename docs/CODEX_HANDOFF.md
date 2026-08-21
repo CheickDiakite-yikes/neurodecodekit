@@ -7031,3 +7031,20 @@ VR20P as the sole active Tier C gate and wait for fresh maintainer words. Do
 not treat the earlier `continue` as retroactive authority. Do not implement
 the wrapper or touch readiness, `.codex_work`, the private source, consumed
 VR18P state, or any real output root before a green decision.
+
+## 2026-08-21 MARC2-VR20P Request-Proof Handoff
+
+Exact request `bef2391d8edf92c5edf8a3624831e50430636626` passed Base
+Python job `96793861959`, Optional Neuro Readers job `96793861717`, and CI
+`32489589922`.
+
+Read the VR20P request proof closeout, machine proof, and matching test. The
+closeout binds the three unchanged request artifacts totaling 35,823 bytes and
+records zero implementation, generated qualification, readiness, private,
+archive, neural, model, score, FW2/CIL1, network, release, or claim operations.
+
+Commit, push, and green this proof-only closeout. Only after both jobs pass may
+VR20P be identified as the sole active Tier C packet for a fresh short-form
+maintainer decision. Until that decision and its own remote proof, do not
+implement the wrapper or touch `.codex_work`, the private source, consumed
+VR18P state, or a real output root.
