@@ -3540,3 +3540,14 @@ expected skips.
 Next gate: commit, push, and green the request, then green its proof-only
 closeout. Implementation, private access, FW2/CIL1, and scientific claims are
 not authorized.
+
+### MARC2-VR18P - Request Remotely Green
+
+Exact request `521f1de` passed Base Python job `96747013517`, Optional Neuro
+Readers job `96747013910`, and CI `32474183647`. The proof-only closeout binds
+three unchanged request artifacts totaling 32,886 bytes and records zero
+implementation, private, or scientific operations.
+
+Next gate: commit, push, and green this closeout. Only then identify VR18P as
+the sole Tier C packet and ask for fresh packet-bound maintainer words. Stage 1
+implementation, private access, FW2/CIL1, and scientific claims remain closed.

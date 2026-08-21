@@ -10481,3 +10481,22 @@ Authority decision: keep every request authorization false and every operation
 counter zero. Current and earlier `continue` messages are not retroactive.
 Require request remote green, a separately green request proof closeout,
 sole-gate identification, and fresh maintainer words before implementation.
+
+## 0346 - Bind The VR18P Request Without Changing Authority
+
+Proof decision: exact all-false request
+`521f1de1f3141f3f970710447d072608253c2cca` passed Base Python job
+`96747013517`, Optional Neuro Readers job `96747013910`, and CI
+`32474183647`. Bind the unchanged packet document, machine request, and request
+test by exact bytes, SHA-256, and Git blob.
+
+Boundary decision: add only a human proof record, machine proof record, test,
+and frontier notes. Repeat no generated qualification and perform zero
+readiness, `.codex_work`, private, cohort, archive, neural, target, model,
+score, FW2/CIL1, network, hardware, release, or claim operation. Every request
+authorization stays false.
+
+Sequence decision: require this closeout's own exact commit to pass both remote
+jobs before identifying VR18P as the sole active Tier C packet. Require fresh
+packet-bound maintainer words and a separately green decision before Stage 1
+implementation or any private access.

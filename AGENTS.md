@@ -4041,6 +4041,19 @@ closeout before identifying VR18P as the sole Tier C gate. Current and earlier
 readiness, `.codex_work`, private state, archive/neural payload, targets,
 models, scores, FW2/CIL1, or the unrelated tracker inspection NDJSON.
 
+Exact request `521f1de1f3141f3f970710447d072608253c2cca` passed Base
+Python job `96747013517`, Optional Neuro Readers job `96747013910`, and CI
+`32474183647`. Read
+`docs/MARC_2_FIRST_FAILURE_STABLE_PRIVATE_DISCRIMINATOR_REQUEST_PROOF_CLOSEOUT.md`
+and
+`registries/marc2_first_failure_stable_private_discriminator_request_proof.v0.json`.
+The closeout binds three unchanged request artifacts totaling 32,886 bytes;
+every authorization remains false and every closeout operation is zero. It
+has delayed effect until its own exact commit is pushed and both jobs are
+green. Only then may VR18P be identified as the sole active Tier C gate for
+fresh maintainer words. Do not implement Stage 1, inspect readiness, or touch
+any private or ignored path before that decision and its remote proof.
+
 ## Style
 
 - Small functions, explicit names, low magic.

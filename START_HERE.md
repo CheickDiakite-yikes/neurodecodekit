@@ -2514,3 +2514,10 @@ qualification first, then only after separate proof barriers and fresh Tier C
 authority one 418,755-byte target-free structural read. Every request flag is
 false now. Commit, push, and green the request and its later proof closeout
 before any implementation or private access.
+
+Exact VR18P request `521f1de` passed both required jobs in CI `32474183647`.
+Its proof-only closeout now binds the three unchanged request artifacts
+totaling 32,886 bytes and records zero implementation, private, or scientific
+operations. Commit, push, and green this closeout before naming VR18P as the
+sole Tier C gate. A fresh maintainer decision is still required after that
+proof; no earlier continuation is retroactive.

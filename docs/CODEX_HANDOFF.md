@@ -6776,3 +6776,21 @@ Immediate gate: commit, push, and green this request, then add and green a
 proof-only request closeout. Only after that may VR18P be identified as the
 sole Tier C gate for fresh maintainer words. Keep the unrelated tracker
 inspection NDJSON untouched.
+
+## 2026-08-21 MARC2-VR18P Request Proof Handoff
+
+Exact all-false request `521f1de1f3141f3f970710447d072608253c2cca`
+passed Base Python job `96747013517`, Optional Neuro Readers job
+`96747013910`, and CI `32474183647`.
+
+Read the VR18P request-proof closeout document, its machine proof record, and
+matching test. The closeout binds three unchanged request artifacts totaling
+32,886 bytes. It repeats no generated qualification and performs zero
+readiness, `.codex_work`, private, archive, neural, target, model, score,
+FW2/CIL1, network, hardware, release, or claim operation.
+
+Immediate gate: commit, push, and green this proof-only closeout. Only after
+both jobs pass may VR18P be identified as the sole active Tier C packet. The
+maintainer must then provide fresh unambiguous words that bind this one packet;
+current and earlier continuation messages are not retroactive. Keep the
+unrelated tracker inspection NDJSON untouched.
