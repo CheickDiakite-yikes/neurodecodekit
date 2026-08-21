@@ -11933,3 +11933,20 @@ VR14P as the sole Tier C gate and wait for fresh packet-bound maintainer words.
 Immediate gate: commit, push, and green this decision-only milestone. Then
 implement and generated-qualify the fixed reader without touching
 `.codex_work`.
+
+### Stage 1 aggregate recovery reader
+
+- Decision `60b97ea6c9715b651c17bb6d797c1f02c10ba9e2` passed Base job
+  `96661242381`, Optional job `96661242496`, and CI `32444425790`.
+- Added a standard-library fixed `plan/qualify/inspect/execute` reader with
+  strict canonical schema validation, R1-R8 routing, leakage rejection,
+  no-follow I/O, output caps, and explicit one-shot arming before proof/path.
+- Generated `MARC2VR14P-G1` passed 32 paths, 33 report validations, and 89
+  direct refusals over 50,370 input bytes in 0.008616 seconds at 28,901,376-
+  byte peak RSS. Aggregate output was 2,058 bytes and retained output zero.
+- Real aggregate, ignored-path, structural-source, private-manifest, archive,
+  neural, target, model, score, FW2/CIL1, retry, release, and claim operations:
+  zero.
+
+Immediate gate: commit, push, and green Stage 1, then create and green a
+separate proof closeout before the one armed aggregate execution.

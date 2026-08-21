@@ -1,0 +1,168 @@
+{
+  "schema_name": "neurodecodekit.marc2_incident_aggregate_recovery_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "MARC-2-VR14P-incident-aggregate-recovery-implementation-v0",
+  "lane_id": "MARC2-VR14P",
+  "recorded_at_local": "2026-08-20",
+  "status": "stage_1_generated_qualified_aggregate_read_closed_pending_exact_remote_proof",
+  "green_decision_proof": {
+    "commit": "60b97ea6c9715b651c17bb6d797c1f02c10ba9e2",
+    "CI_run_id": 32444425790,
+    "base_python_job_id": 96661242381,
+    "optional_neuro_job_id": 96661242496,
+    "both_required_jobs_green": true
+  },
+  "fixed_inputs": [
+    {
+      "path": "registries/marc2_incident_aggregate_recovery_authorization_decision.v0.json",
+      "bytes": 11996,
+      "sha256": "ecd7ad1bfc78740546c1849d4cdf924f2a89a2125860bec3f841b4da3657ab90"
+    },
+    {
+      "path": "registries/marc2_incident_aggregate_recovery_authorization_request.v0.json",
+      "bytes": 5856,
+      "sha256": "6ea606b35910bdc044b8750ce865845d25794da57488db54a564d31ab9f056c4"
+    },
+    {
+      "path": "registries/marc2_incident_aggregate_recovery_request_proof.v0.json",
+      "bytes": 4517,
+      "sha256": "d98f34a9b556d8eaca39e5018f298b6a0755e8dd50d7940c8f8835c4bf0077fa"
+    }
+  ],
+  "owned_artifacts": [
+    {
+      "path": "src/neurodecodekit/datasets/marc2_incident_aggregate_recovery.py",
+      "bytes": 47116,
+      "sha256": "04c2854da6a4170c928c0f1d18fcc5f3b35aacb0d6d657679ec3e8098956006c"
+    },
+    {
+      "path": "tests/test_marc2_incident_aggregate_recovery.py",
+      "bytes": 6540,
+      "sha256": "ffef3c16cbef48cbb48fa2dd0bf068600a3f04bb19d66904d1394462703c0561"
+    },
+    {
+      "path": "docs/MARC_2_INCIDENT_AGGREGATE_RECOVERY_IMPLEMENTATION.md",
+      "bytes": 3569,
+      "sha256": "e0dfeb8daca8d362ef3b63a154f273807c443bb663c06eb93ff100fd64b0be5a"
+    },
+    {
+      "path": "docs/MARC_2_INCIDENT_AGGREGATE_RECOVERY_GENERATED_RESULT.md",
+      "bytes": 1741,
+      "sha256": "54fd588d9d13b9322ea006625c1530e29f25a59932eaa22ddae1f73e41e4ca07"
+    },
+    {
+      "path": "tests/test_marc2_incident_aggregate_recovery_implementation.py",
+      "bytes": 3324,
+      "sha256": "c70ebf6e9ba2e798ddffe3a0bb3cbe8bd5177265742ad2dd264def7362de5651"
+    }
+  ],
+  "interface": {
+    "commands": ["plan", "qualify", "inspect", "execute"],
+    "fixed_path_execute": true,
+    "explicit_one_shot_arming_required": true,
+    "tracked_clean_proof_required": true,
+    "generic_path_or_output_override_allowed": false,
+    "URL_threshold_route_retry_resume_fallback_override_allowed": false,
+    "standard_library_only": true
+  },
+  "source_schema_firewall": {
+    "source_schema": "neurodecodekit.marc2_r4_private_discriminator_report",
+    "source_lane": "MARC2-VR13P",
+    "source_status": "consumed",
+    "allowed_route_count": 8,
+    "strict_duplicate_key_rejection": true,
+    "non_finite_rejection": true,
+    "canonical_encoding_required": true,
+    "forbidden_public_key_count": 25,
+    "source_report_bytes_maximum": 65536,
+    "source_report_content_opens": 1
+  },
+  "generated_qualification": {
+    "route": "MARC2VR14P-G1",
+    "cases": 8,
+    "orders": 2,
+    "replays": 2,
+    "paths": 32,
+    "route_count_each": 4,
+    "generated_report_validations": 33,
+    "direct_refusals": 89,
+    "generated_input_bytes": 50370,
+    "aggregate_output_bytes": 2058,
+    "temporary_receipt_bytes": 1925,
+    "retained_output_bytes": 0,
+    "runtime_seconds": 0.008616000006441027,
+    "peak_RSS_bytes": 28901376,
+    "replay_sha256": "94d920bfcf235f3950311ea64553e9742a744038e9f6104dbbf8dc8ab357bcc6",
+    "all_routes_exactly_four": true,
+    "both_replays_equal": true,
+    "temporary_root_removed": true
+  },
+  "resource_boundary": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds_maximum": 30,
+    "peak_RSS_bytes_maximum": 268435456,
+    "source_report_bytes_maximum": 65536,
+    "source_report_content_opens": 1,
+    "combined_output_bytes_maximum": 1048576,
+    "network_bytes": 0,
+    "new_payload_bytes": 0,
+    "structural_source_operations": 0,
+    "private_manifest_operations": 0,
+    "retry_rerun_resume": 0
+  },
+  "operation_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "aggregate_report_operations": 0,
+    "recovery_output_operations": 0,
+    "readiness_certificate_or_consumed_marker_operations": 0,
+    "structural_source_operations": 0,
+    "private_manifest_operations": 0,
+    "archive_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "network_download_provider_language_model_operations": 0,
+    "stream_device_or_hardware_operations": 0,
+    "FW2_or_CIL1_operations": 0,
+    "operations_on_other_projects": 0,
+    "retry_rerun_resume_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "remote_implementation_proof": null,
+  "aggregate_execution_authorized_now": false,
+  "next_gate": {
+    "implementation_commit_push_and_both_jobs_green_required": true,
+    "separate_proof_closeout_green_required": true,
+    "tracked_clean_proof_registry_required": true,
+    "explicit_one_shot_arming_required": true,
+    "aggregate_report_read_authorized_now": false,
+    "FW2_or_CIL1_execution_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_capability": "strict fixed path aggregate recovery reader with deterministic generated replay leakage controls and explicit one shot arming",
+    "scientific_ceiling": "none",
+    "ignored_output_accessed": false,
+    "private_route_known": false,
+    "real_cohort_frozen": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "live_decoding": false
+  },
+  "warnings": [
+    "Generated qualification demonstrates interface mechanics only.",
+    "The real aggregate report remains closed until the exact implementation and separate proof closeout are remotely green.",
+    "R1 would make only a separate private manifest recovery packet eligible.",
+    "No neural or decoding claim is established."
+  ],
+  "unavailable_fields": [
+    "implementation_commit",
+    "implementation_CI_run_id",
+    "proof_closeout_commit",
+    "proof_closeout_CI_run_id",
+    "recovered_route",
+    "real_neural_cohort",
+    "decoding_accuracy"
+  ]
+}

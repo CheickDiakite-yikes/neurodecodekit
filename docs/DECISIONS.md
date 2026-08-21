@@ -9890,3 +9890,20 @@ Boundary decision: decision recording performs zero implementation, generated
 qualification, ignored-path, aggregate-report, structural-source, private-
 manifest, archive, neural, target, model, score, FW2/CIL1, release, or claim
 operations. R1 makes only a separate private-manifest packet eligible.
+
+## 0314 - Implement VR14P With A One-Shot Pre-Path Gate
+
+Implementation decision: after decision `60b97ea` passed both jobs in CI
+`32444425790`, add a standard-library fixed `plan`, `qualify`, `inspect`, and
+`execute` module for the exact VR13P aggregate schema and R1-R8 route allowlist.
+
+Safety decision: require explicit one-shot arming before proof loading, then a
+tracked clean proof registry and exact owned-artifact verification before any
+ignored path. This prevents ordinary focused or CI tests from reproducing the
+VR13P preproof incident merely because proof metadata exists locally.
+
+Qualification decision: require 32 deterministic route/order/replay paths,
+strict canonical JSON, all eight routes exactly four times, at least 80 direct
+refusals, one temporary fixed-path roundtrip, zero retained output, and zero
+real/private/scientific operations. Measured `MARC2VR14P-G1` passes 89 direct
+refusals under every cap.

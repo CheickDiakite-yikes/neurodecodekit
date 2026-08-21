@@ -133,6 +133,15 @@ Immediate gate: commit, push, and green the exact decision. Only then may the
 generated/mock fixed-path reader be implemented. The aggregate report remains
 closed until that implementation and a separate proof closeout are green.
 
+Decision `60b97ea6c9715b651c17bb6d797c1f02c10ba9e2` passed both jobs in
+CI `32444425790` before Stage 1. Generated `MARC2VR14P-G1` now passes all 32
+route/order/replay paths and 89 direct refusals in 0.008616 seconds at
+28,901,376-byte peak RSS. It retained zero output and touched no ignored path.
+
+Immediate gate: commit, push, and green the exact implementation. Then create
+and green its separate proof closeout. The one real aggregate open remains
+closed until both barriers pass and explicit one-shot arming is present.
+
 ## Prior Frontier: MARC2-VR11P Consumed At Structural Route R2
 
 Read `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`, then
