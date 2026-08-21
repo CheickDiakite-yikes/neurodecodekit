@@ -12073,3 +12073,20 @@ proof-only closeout before sole-gate identification and a fresh Tier C decision.
 
 Immediate gate: commit, push, and green this closeout. Only then identify
 VR15P as the sole active Tier C packet for a fresh packet-bound decision.
+
+### VR15P packet-bound authorization decision
+
+- Proof head `8873796f772d7c2352d27aa9c0ad2be5278b67fe` passed Base job
+  `96678759155`, Optional job `96678759451`, and CI `32450773951`.
+- Codex identified VR15P as the sole active Tier C packet; the maintainer's
+  next exact message was the eight UTF-8 bytes `continue`.
+- The decision binds those bytes only to request `08cef4b` and proof head
+  `8873796`; detailed authority comes from the unchanged green packet by
+  reference.
+- Wrapper, qualification, readiness, private/ignored-path, structural-source,
+  archive, neural, target, model, score, FW2/CIL1, release, and claim operations
+  while recording the decision: zero.
+
+Immediate gate: commit, push, and green the exact decision before Stage 1.
+Stage 2 remains closed until exact Stage 1 and a separate proof closeout are
+also remotely green.

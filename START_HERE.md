@@ -43,10 +43,16 @@ job `96677085404`, and CI `32450174692`. Its proof-only closeout binds the
 three unchanged request artifacts totaling 29,112 bytes, changes no scope, and
 performs zero private or scientific operation.
 
-Immediate gate: commit, push, and green the proof closeout. Only after VR15P is
-identified as the sole Tier C packet can a fresh maintainer message authorize
-its unchanged two-stage sequence. No earlier or standing approval is
-retroactive.
+Proof closeout `8873796` passed Base job `96678759155`, Optional Neuro Readers
+job `96678759451`, and CI `32450773951`. Codex then identified VR15P as the
+sole Tier C packet, and the maintainer's next exact message was `continue`.
+The packet-bound decision records those eight bytes and binds only the
+unchanged two-stage request.
+
+Immediate gate: commit, push, and green the decision. Do not implement or
+qualify the wrapper, inspect readiness, or touch `.codex_work` before that
+remote proof. Stage 2 remains closed until the later exact Stage 1 and its
+separate proof closeout are also remotely green.
 
 ## Prior Frontier: MARC2-VR13P Consumed Invalid And Parked
 

@@ -83,9 +83,16 @@ every operation counter is zero. Exact request
 `32450174692`. Read
 `docs/MARC_2_SUFFIX_IDENTITY_PRIVATE_DISCRIMINATOR_REQUEST_PROOF_CLOSEOUT.md`
 and its registry. The proof binds three unchanged request artifacts totaling
-29,112 bytes and performs zero private or scientific operation. Commit, push,
-and green this closeout before identifying VR15P as the sole Tier C gate. No
-current or earlier message authorizes either stage or private access.
+29,112 bytes and performs zero private or scientific operation. Exact proof
+head `8873796f772d7c2352d27aa9c0ad2be5278b67fe` passed Base Python job
+`96678759155`, Optional Neuro Readers job `96678759451`, and CI
+`32450773951`. Codex then identified VR15P as the sole active Tier C packet;
+the maintainer's next exact message was the eight UTF-8 bytes `continue`. Read
+`docs/MARC_2_SUFFIX_IDENTITY_PRIVATE_DISCRIMINATOR_AUTHORIZATION_DECISION.md`
+and its registry. The decision binds only the unchanged green two-stage packet
+and has delayed effect until its own exact commit is pushed and both CI jobs
+are green. Before that proof, do not implement the wrapper or touch readiness,
+`.codex_work`, the private source, or an output root.
 
 The latest consumed evidence lane is `MARC2-VR12P`; its result is summarized
 near the end of this frontier. To reconstruct its predecessors, read

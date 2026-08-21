@@ -23,11 +23,12 @@
 > result may retain only one R1-R16 grammar class; no cohort, archive, neural,
 > target, model, prediction, score, FW2, or CIL1 operation is requested. All
 > authority is false. Exact request `08cef4b` passed Base job `96677085658`,
-> Optional job `96677085404`, and CI `32450174692`. Its proof closeout binds
-> three unchanged artifacts totaling 29,112 bytes with zero private/scientific
-> operations. Commit, push, and green that closeout. Do not implement or touch
-> readiness/private paths before a fresh packet-bound Tier C decision after
-> that proof.
+> Optional job `96677085404`, and CI `32450174692`. Proof head `8873796`
+> passed Base job `96678759155`, Optional job `96678759451`, and CI
+> `32450773951`. Codex then named VR15P as the sole Tier C packet; the
+> maintainer's next exact message was `continue`. The decision binds those
+> eight bytes only to the unchanged packet. Commit, push, and green the
+> decision before implementation or any readiness/private path operation.
 
 > Current MARC2-VR13P Stage 1, 2026-08-20: decision `fe16400` passed Base job
 > `96648078587`, Optional job `96648078452`, and CI `32439821302`. Generated
@@ -6338,3 +6339,17 @@ structural-source, archive, neural, target, model, score, FW2/CIL1, or claim
 operation. Commit, push, and green it before identifying VR15P as the sole
 Tier C packet for fresh maintainer words. Keep the unrelated tracker inspection
 NDJSON untouched.
+
+## 2026-08-21 MARC2-VR15P Authorization Decision Handoff
+
+Proof head `8873796f772d7c2352d27aa9c0ad2be5278b67fe` passed Base job
+`96678759155`, Optional job `96678759451`, and CI `32450773951`. Codex then
+identified VR15P as the sole Tier C packet. The maintainer's next exact message
+was `continue`.
+
+Read the VR15P authorization decision document, machine record, and test. The
+decision preserves those eight UTF-8 bytes and binds only the unchanged green
+request. It has delayed effect: commit, push, and green the decision before
+Stage 1 implementation. Do not touch `.codex_work` until exact Stage 1 and its
+separate proof closeout are also remotely green. Keep the unrelated tracker
+inspection NDJSON untouched.

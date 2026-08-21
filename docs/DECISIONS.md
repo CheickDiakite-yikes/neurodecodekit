@@ -10040,3 +10040,21 @@ is pushed and both jobs are green. Only then identify VR15P as the sole Tier C
 packet for fresh packet-bound maintainer words; standing approval is not
 retroactive. FW2, CIL1, archive, neural, target, model, score, release, and
 claim work remain closed.
+
+## 0322 - Bind Fresh Short-Form Authorization To VR15P Only
+
+Authorization decision: after proof head `8873796` passed Base Python job
+`96678759155`, Optional Neuro Readers job `96678759451`, and CI
+`32450773951`, Codex identified VR15P as the sole active Tier C packet. The
+maintainer's next exact message was the eight UTF-8 bytes `continue`.
+
+Scope decision: bind those actual bytes only to the unchanged green two-stage
+packet. Stage 1 may implement and generated-qualify the fixed wrapper after
+this decision is remotely green. Stage 2 may perform its sole target-free
+418,755-byte structural read only after exact Stage 1 and a separate proof
+closeout are each remotely green.
+
+Boundary decision: standing or future authority is not inferred. At decision
+recording, implementation, readiness, private/ignored-path, archive, neural,
+target, model, prediction, score, FW2/CIL1, network, hardware, release, and
+claim operations remain zero.
