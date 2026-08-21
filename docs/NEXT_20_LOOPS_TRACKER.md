@@ -3594,3 +3594,19 @@ Next gate: commit, push, and green the closeout. Only then run the one already
 decision-bound 418,755-byte target-free structural invocation. It has no
 retry. FW2/CIL1, neural payload access, targets, models, scores, and scientific
 claims remain closed.
+
+### MARC2-VR18P - Consumed At R4 Without A Cohort
+
+Proof closeout `535bd9b` passed both required jobs in CI `32478506443` before
+the sole Stage 2 invocation. The run opened and strict-parsed the fixed
+418,755-byte target-free source once, called VR16A once, consulted the VR17C
+map once, and consumed at `MARC2VR18P-R4`.
+
+R4 is the generated-qualified core task-or-identity class. It does not
+distinguish task from identity or expose private values. Runtime was
+10.053867666982114 seconds, peak RSS was 27,443,200 bytes, output was 2,063
+bytes, and no cohort manifest was created.
+
+Next gate: separately freeze an artifact-only and generated-only decomposition
+of the core task/identity class. VR18P has no retry. Any new private read is a
+fresh Tier C packet; FW2/CIL1 and scientific claims remain closed.

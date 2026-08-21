@@ -4,7 +4,7 @@
   "implementation_id": "MARC-2-VR18P-first-failure-stable-private-discriminator-implementation-v0",
   "lane_id": "MARC2-VR18P",
   "recorded_at_local": "2026-08-21",
-  "status": "stage_1_exact_implementation_remotely_green_proof_closeout_pending_own_remote_barrier",
+  "status": "stage_2_consumed_at_R4_without_cohort_freeze_no_retry",
   "proof_posture": "tracked_generated_interface_only_no_private_real_or_scientific_operation",
   "green_decision_proof": {
     "commit": "5113be7fee63d769276a781c0ed3af5ac2bbf567",
@@ -81,12 +81,12 @@
     },
     {
       "path": "tests/test_marc2_first_failure_stable_private_discriminator_implementation.py",
-      "bytes": 4071,
-      "sha256": "3299d88751069eca25caa946a181983e01f977fb2cd8bec26fbba7d8a2111b9b"
+      "bytes": 4064,
+      "sha256": "16a25e451bdc300e036c47b2d477986b3b933025607439e92596e6c122956ee2"
     }
   ],
   "owned_artifact_count": 5,
-  "owned_artifact_bytes": 64583,
+  "owned_artifact_bytes": 64576,
   "interface": {
     "module": "neurodecodekit.datasets.marc2_first_failure_stable_private_discriminator",
     "commands": ["plan", "qualify", "inspect", "execute"],
@@ -210,9 +210,11 @@
   "private_execution_authorized_now": false,
   "next_gate": {
     "exact_implementation_and_result_commit_push_and_both_jobs_green_required": false,
-    "proof_only_closeout_commit_push_and_both_jobs_green_required": true,
-    "private_stage_may_execute_before_both_proofs_green": false,
-    "one_private_execution_only_after_both_proofs": true,
+    "proof_only_closeout_commit_push_and_both_jobs_green_required": false,
+    "private_stage_consumed": true,
+    "retry_rerun_resume_repair_fallback_or_substitution_allowed": false,
+    "artifact_only_generated_core_identity_decomposition_allowed": true,
+    "new_private_read_requires_separate_Tier_C_packet_and_decision": true,
     "FW2_or_CIL1_execution_authorized": false
   },
   "claim_boundary": {
@@ -227,7 +229,8 @@
   },
   "warnings": [
     "Generated qualification demonstrates interface mechanics only.",
-    "The exact implementation is remotely green; the proof-only closeout is not remotely green yet.",
+    "The exact implementation and proof-only closeout were remotely green before the sole private invocation.",
+    "Stage 2 is consumed at MARC2VR18P-R4 without a cohort and has no retry or private reinspection.",
     "Private Stage 2, FW2, CIL1, neural work, and scientific claims remain closed."
   ]
 }

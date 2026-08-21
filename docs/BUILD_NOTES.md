@@ -12600,3 +12600,24 @@ Private Stage 2 remains mechanically closed by a null implementation proof.
 Immediate gate: commit, push, and green this proof-only closeout. Only after
 both jobs pass may the one registered Stage 2 invocation run; there is no
 retry or private reinspection.
+
+### VR18P one-shot private structural result
+
+- Proof closeout `535bd9bf8cb8cc48dd8369be7c2d5c51af1a7d63`
+  passed Base Python job `96759728564`, Optional Neuro Readers job
+  `96759728379`, and CI `32478506443` before execution.
+- The sole invocation collected three fresh readiness samples, opened and
+  strict-parsed 418,755 target-free structural bytes once, called VR16A once,
+  and consulted the frozen VR17C map once.
+- It consumed at `MARC2VR18P-R4`, the generated-qualified core task-or-identity
+  class. No private cohort manifest was created.
+- Runtime was 10.053867666982114 seconds, peak RSS was 27,443,200 bytes,
+  combined output was 2,063 bytes, and network/new payload bytes were zero.
+- The ignored source and output were not listed, reopened, rehashed, or
+  inspected after execution. Five focused result tests pass.
+- Archive, neural, target, model, prediction, scoring, FW2/CIL1, network,
+  hardware, other-project, release, and claim operations: zero.
+
+VR18P is consumed with no retry or private reinspection. Next: separately
+freeze an artifact-only and generated-only core task/identity decomposition.
+No cohort exists, so FW2/CIL1 and scientific claims remain closed.

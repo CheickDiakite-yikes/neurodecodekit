@@ -6857,3 +6857,26 @@ Do not run `execute`, touch `.codex_work`, inspect private or consumed state,
 or stage the unrelated tracker inspection NDJSON before that proof. The future
 invocation has no retry, rerun, resume, repair, fallback, substitution, or
 private reinspection.
+
+## 2026-08-21 MARC2-VR18P Consumed R4 Handoff
+
+Proof closeout `535bd9bf8cb8cc48dd8369be7c2d5c51af1a7d63`
+passed Base Python job `96759728564`, Optional Neuro Readers job
+`96759728379`, and CI `32478506443` before the one registered invocation.
+
+Read the VR18P consumed result document, machine result, updated implementation
+record, and focused result test. The command read and strict-parsed exactly
+418,755 target-free structural bytes once, called VR16A once, consulted the
+VR17C map once, and returned `MARC2VR18P-R4`. Runtime was
+10.053867666982114 seconds at 27,443,200-byte peak RSS; output was 2,063 bytes.
+
+R4 means only the frozen core task-or-identity class. The private predicate,
+value, row, path, identity, participant, candidate, selection, and cohort
+remain unavailable. No cohort manifest was created, and the ignored source or
+output was not reinspected after the command returned.
+
+VR18P is consumed with no retry, rerun, resume, repair, fallback,
+substitution, cleanup, or private reinspection. Keep its `.codex_work` state
+and the unrelated tracker inspection NDJSON untouched. Next: register an
+artifact-only generated decomposition of the core task/identity class. Any
+new private read is a fresh Tier C packet; FW2/CIL1 remain ineligible.

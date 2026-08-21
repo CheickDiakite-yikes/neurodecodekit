@@ -10565,3 +10565,26 @@ own exact commit passes both remote jobs. Then permit exactly the one existing
 packet-bound Stage 2 invocation, with one target-free structural read and no
 retry or reinspection. Do not infer FW2/CIL1 authority or any neural,
 decoding, release, or scientific claim.
+
+## 0350 - Consume VR18P At The Core Task-Or-Identity Class
+
+Proof decision: proof-only closeout
+`535bd9bf8cb8cc48dd8369be7c2d5c51af1a7d63` passed Base Python job
+`96759728564`, Optional Neuro Readers job `96759728379`, and CI
+`32478506443` before the sole registered execution.
+
+Result decision: accept `MARC2VR18P-R4` after three readiness samples, one
+418,755-byte target-free structural content open, one strict parse, one VR16A
+call, and one VR17C map lookup. Record 10.053867666982114 seconds,
+27,443,200-byte peak RSS, 2,063 output bytes, zero network/new payload bytes,
+and no cohort freeze.
+
+Interpretation decision: R4 is only the generated-qualified core task-or-
+identity class. Exclude the four other registered failure classes for this
+execution, but do not infer task versus identity or any private predicate,
+value, row, path, identity, participant, selection, or cohort.
+
+Boundary decision: consume VR18P permanently with no retry or private
+reinspection. Permit a separately frozen artifact-only generated decomposition
+next. Any new private read remains Tier C. No neural payload, target, model,
+prediction, score, FW2/CIL1 eligibility, release, or scientific claim follows.

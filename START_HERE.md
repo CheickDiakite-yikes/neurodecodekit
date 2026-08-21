@@ -2550,3 +2550,16 @@ Next gate: commit, push, and green this closeout. Only then may the one already
 decision-bound target-free structural invocation run. Until that proof,
 readiness, `.codex_work`, the private source, and the real output root remain
 closed. FW2/CIL1 and every neural or scientific claim remain closed.
+
+Proof closeout `535bd9b` passed both required jobs in CI `32478506443` before
+the sole registered execution. That invocation consumed at `MARC2VR18P-R4`
+after one 418,755-byte target-free structural read, one strict parse, one VR16A
+call, and one frozen-map lookup. Runtime was 10.053867666982114 seconds, peak
+RSS 27,443,200 bytes, output 2,063 bytes, and network/new payload bytes zero.
+
+R4 narrows the blocker to the core task-or-identity class but does not say
+which of those failed and does not identify any private value, row, path,
+person, selection, or cohort. No cohort was frozen, so FW2/CIL1 remain
+ineligible. VR18P has no retry or reinspection. Next: freeze an artifact-only,
+generated-only decomposition of that class before considering any new Tier C
+private packet.

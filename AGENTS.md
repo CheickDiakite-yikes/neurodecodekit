@@ -4112,6 +4112,29 @@ packet and decision permit exactly one 418,755-byte target-free structural
 execution with no retry. FW2, CIL1, archive payload, neural data, targets,
 models, predictions, scores, release, and scientific claims remain closed.
 
+Proof-only closeout `535bd9bf8cb8cc48dd8369be7c2d5c51af1a7d63`
+passed Base Python job `96759728564`, Optional Neuro Readers job
+`96759728379`, and CI `32478506443` before the sole Stage 2 invocation. Read
+`docs/MARC_2_FIRST_FAILURE_STABLE_PRIVATE_DISCRIMINATOR_RESULT.md` and the
+consumed result registry. The command collected three readiness samples, read
+and strict-parsed exactly 418,755 target-free structural bytes once, called
+VR16A once, consulted the VR17C map once, and consumed at `MARC2VR18P-R4`.
+
+R4 is only the generated-qualified core task-or-identity class. It excludes
+the registered companion-spelling, normalized-collision, incomplete-set, and
+unknown-map classes for this execution, but does not distinguish task from
+identity or expose a predicate, value, row, path, participant, candidate,
+selection, or cohort. Runtime was 10.053867666982114 seconds at 27,443,200-byte
+peak RSS; total output was 2,063 bytes. No cohort manifest was created.
+
+VR18P is consumed with no retry, rerun, resume, repair, fallback,
+substitution, cleanup, or private reinspection. Do not touch its private
+source, readiness state, consumed marker, or output root. The next safe task
+is a separately frozen artifact-only and generated-only core task/identity
+decomposition. Any new private read remains a fresh Tier C packet and
+decision. FW2/CIL1 remain ineligible; archive payload, neural data, targets,
+models, predictions, scores, release, and scientific claims remain closed.
+
 ## Style
 
 - Small functions, explicit names, low magic.

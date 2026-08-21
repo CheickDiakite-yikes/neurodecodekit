@@ -56,13 +56,11 @@ class Marc2FirstFailureStablePrivateDiscriminatorImplementationTests(
         self.assertLess(result["runtime_seconds"], 60)
         self.assertLess(result["peak_RSS_bytes"], 256 * 1024**2)
 
-    def test_result_record_matches_and_remote_proof_is_exact(self):
+    def test_consumed_result_and_remote_proof_are_exact(self):
         self.assertEqual(self.result["lane_id"], "MARC2-VR18P")
-        self.assertEqual(self.result["route"], "MARC2VR18P-G1")
-        self.assertEqual(
-            self.result["matrix"]["replay_sha256"],
-            "5c214a1e9e5b3aa53b30931ff2d4573b675cb9bf18b41753b0da2eaae9c8bd35",
-        )
+        self.assertEqual(self.result["route"], "MARC2VR18P-R4")
+        self.assertEqual(self.result["status"], "consumed_without_cohort_freeze")
+        self.assertFalse(self.result["route_interpretation"]["real_cohort_frozen"])
         proof = self.record["remote_implementation_proof"]
         self.assertEqual(proof["commit"], "668812367acd8ca3ae9d0603dcde9b4b5aa02d58")
         self.assertEqual(proof["CI_run_id"], 32_477_528_982)
