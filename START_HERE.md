@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR13P Decision Recorded
+## Current Frontier: MARC2-VR13P Proof-State Hardening
 
 Read `docs/MARC_2_P15_PRIVATE_CONFIRMATION_RESULT.md`, then the VR13A
 preregistration, implementation, and result documents with their registries.
@@ -89,10 +89,16 @@ path, and 81 direct refusals. The measured pass used 14,171,146 generated
 bytes, 3.208020 seconds, 34,324,480-byte peak RSS, 2,087 aggregate bytes, and
 zero retained/private/neural/model/score operations.
 
-Immediate gate: commit, push, and green the exact Stage 1 implementation, then
-make and green a separate proof closeout. `execute` currently refuses before
-readiness or private path access because `remote_implementation_proof` is
-null. Do not begin Stage 2 before both barriers pass.
+Exact Stage 1 implementation `36556e6` passed Base job `96652101274`,
+Optional job `96652101052`, and CI `32441208021`. Pre-closeout audit found
+that the implementation-record test accepted only the null proof state. The
+test is now hardened to accept only null or the exact green-proof shape while
+the registry remains null and `execute` remains closed.
+
+Immediate gate: commit, push, and green this proof-state hardening. Then bind
+that exact implementation in a separate proof-only closeout and green it
+before the one registered target-free structural invocation. No qualification
+or private operation is repeated.
 
 ## Prior Frontier: MARC2-VR11P Consumed At Structural Route R2
 

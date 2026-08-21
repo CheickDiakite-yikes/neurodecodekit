@@ -6155,3 +6155,20 @@ Immediate gate: commit, push, and green Stage 1. Then populate the exact
 implementation proof in a separate proof-only closeout and green that head.
 The implementation currently refuses before readiness/private access. Keep
 the unrelated tracker inspection NDJSON untouched.
+
+## 2026-08-20 MARC2-VR13P Proof-State Hardening Handoff
+
+Exact Stage 1 implementation `36556e6f8fe1fe8647c1336299c766d6ef7ecf5a`
+passed Base job `96652101274`, Optional job `96652101052`, and CI
+`32441208021`. Pre-closeout audit found that the implementation-record test
+accepted only a null proof state.
+
+The hardening changes only that test and its exact registry binding so the
+test accepts null or the exact green-proof shape. The registry proof remains
+null. It does not change or rerun the wrapper or generated qualification and
+performs zero readiness/private/scientific operations.
+
+Immediate gate: commit, push, and green this hardening in both jobs. Then make
+and green the separate proof-only closeout. Only after both barriers may the
+one structural invocation run. Keep the unrelated tracker inspection NDJSON
+untouched.

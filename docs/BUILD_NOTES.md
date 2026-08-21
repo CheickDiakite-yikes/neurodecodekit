@@ -11848,3 +11848,19 @@ must not begin before both required jobs pass the exact decision head.
 Immediate gate: commit, push, and green the exact Stage 1 implementation. Then
 make and green a separate proof closeout. Stage 2 remains closed while
 `remote_implementation_proof` is null.
+
+### Stage 1 proof-state hardening
+
+- Exact implementation `36556e6f8fe1fe8647c1336299c766d6ef7ecf5a`
+  passed Base job `96652101274`, Optional job `96652101052`, and CI
+  `32441208021`.
+- Pre-closeout audit found that the implementation-record test accepted only
+  the null proof state, so a valid closeout would fail its own CI and change an
+  artifact after claiming immutability.
+- Hardened only that test to accept null or the exact green-proof shape and
+  rebound its exact bytes in the still-null implementation registry.
+- Generated qualification repetitions, readiness, private/ignored path,
+  archive, neural, target, model, score, FW2/CIL1, and claim operations: zero.
+
+Immediate gate: commit, push, and green this proof-state-hardening milestone.
+Then make and green the separate proof-only closeout before Stage 2.

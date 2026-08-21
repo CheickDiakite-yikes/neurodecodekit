@@ -4,7 +4,7 @@
   "implementation_id": "MARC-2-VR13P-R4-private-discriminator-implementation-v0",
   "lane_id": "MARC2-VR13P",
   "recorded_at_local": "2026-08-20",
-  "status": "stage_1_generated_qualified_private_execution_closed_until_exact_implementation_and_proof_closeout_remote_green",
+  "status": "stage_1_generated_qualified_proof_state_transition_hardened_private_execution_closed_until_exact_remote_proof",
   "green_decision_proof": {
     "commit": "fe16400fd0ccb5fa2ff40fffd413fee34eb620d6",
     "CI_run_id": 32439821302,
@@ -77,8 +77,8 @@
     },
     {
       "path": "tests/test_marc2_r4_private_discriminator_implementation.py",
-      "bytes": 3053,
-      "sha256": "b79b72615d8c5fdf067177bcc1c8467d4cbc3ec9aa1da4dbbaa8637c12c53520"
+      "bytes": 3536,
+      "sha256": "7aa25234df93243a98e5e5f2c7aa2e4e99a57c83754b075ee2db4ba13dd3160b"
     }
   ],
   "interface": {
@@ -175,6 +175,16 @@
     "operations_on_other_projects": 0,
     "retry_rerun_resume_operations": 0,
     "scientific_claim_upgrades": 0
+  },
+  "superseded_remote_green_implementation": {
+    "commit": "36556e6f8fe1fe8647c1336299c766d6ef7ecf5a",
+    "CI_run_id": 32441208021,
+    "base_python_job_id": 96652101274,
+    "optional_neuro_job_id": 96652101052,
+    "both_required_jobs_green": true,
+    "used_for_private_execution": false,
+    "superseded_before_proof_closeout": true,
+    "reason_class": "proof_state_transition_test_required_exact_null_and_green_states"
   },
   "remote_implementation_proof": null,
   "private_execution_authorized_now": false,

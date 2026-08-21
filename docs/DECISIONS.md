@@ -9808,3 +9808,19 @@ Gate decision: keep `remote_implementation_proof` null in the Stage 1 record.
 Commit, push, and green the exact implementation, then bind that proof in a
 separate proof-only closeout and green it before any readiness or private path
 operation.
+
+## 0309 - Harden The VR13P Proof-State Transition Before Closeout
+
+Audit decision: exact implementation `36556e6` passed Base Python job
+`96652101274`, Optional Neuro Readers job `96652101052`, and CI
+`32441208021`, but the implementation-record test accepted only null proof.
+A closeout would therefore fail CI and mutate an allegedly immutable artifact.
+
+Hardening decision: change only that test to accept null or the exact green-
+proof shape and update its registry byte binding. Keep the remote proof null.
+Do not alter or repeat the wrapper, generated qualification, source identity,
+route table, caps, or claim boundary.
+
+Boundary decision: green this hardening before creating the proof closeout.
+Qualification, readiness, private, archive, neural, target, model, score,
+FW2/CIL1, release, and claim operations remain zero.

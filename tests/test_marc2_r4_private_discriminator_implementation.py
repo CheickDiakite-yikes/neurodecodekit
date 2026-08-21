@@ -51,7 +51,15 @@ class Marc2R4PrivateDiscriminatorImplementationTests(unittest.TestCase):
         self.assertEqual(interface["commands"], ["plan", "qualify", "inspect", "execute"])
         self.assertFalse(interface["generic_path_or_output_override_allowed"])
         self.assertFalse(interface["consumed_executor_reuse_allowed"])
-        self.assertIsNone(self.record["remote_implementation_proof"])
+        proof = self.record["remote_implementation_proof"]
+        if proof is None:
+            self.assertFalse(self.record["private_execution_authorized_now"])
+        else:
+            self.assertEqual(proof["qualification_route"], "MARC2VR13P-G1")
+            self.assertTrue(proof["both_required_jobs_green"])
+            self.assertFalse(proof["scope_changed_after_qualification"])
+            self.assertFalse(proof["qualification_repeated_for_proof_closeout"])
+            self.assertEqual(proof["private_operations_during_proof_closeout"], 0)
         self.assertFalse(self.record["private_execution_authorized_now"])
 
     def test_counters_and_claims_remain_zero(self):

@@ -480,6 +480,16 @@ keeps `remote_implementation_proof` null, so execute refuses before readiness
 or private-path access. Commit, push, and green the exact implementation, then
 make and green a separate proof closeout before Stage 2.
 
+Exact Stage 1 implementation `36556e6f8fe1fe8647c1336299c766d6ef7ecf5a`
+passed Base Python job `96652101274`, Optional Neuro Readers job
+`96652101052`, and CI `32441208021`. Pre-closeout audit found that the
+implementation-record test accepted only a null proof. The proof-state
+hardening changes only that test and its registry binding so null and the
+exact green-proof shape can both be checked; the registry proof remains null,
+the generated qualification is not repeated, and every private/scientific
+counter remains zero. Commit, push, and green this exact hardening before
+making the proof-only closeout. Do not run `execute` or touch `.codex_work`.
+
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-
 blind analysis over 72 S004-S015 EDFs. The analysis accepted 1,080 events,
