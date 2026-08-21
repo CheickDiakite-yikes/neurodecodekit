@@ -107,6 +107,16 @@ resume, cleanup, inference, FW2/CIL1 eligibility, or claim. Read the incident
 document and machine record. Any aggregate-output recovery requires a new
 frozen Tier C packet and fresh decision.
 
+That all-false recovery request is now frozen as `MARC2-VR14P`. It binds the
+green incident head and six tracked artifacts, while authorizing nothing now.
+The proposed future sequence may open only the existing aggregate report once,
+at most 65,536 bytes, after a fresh decision plus separate green implementation
+and proof barriers. The structural source, readiness, marker, private manifest,
+archive, neural data, targets, models, scores, FW2/CIL1, and claims stay closed.
+
+Immediate gate: commit, push, and green the exact VR14P packet. Only then may
+it be identified as the sole Tier C gate for new packet-bound maintainer words.
+
 ## Prior Frontier: MARC2-VR11P Consumed At Structural Route R2
 
 Read `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`, then

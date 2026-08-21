@@ -495,6 +495,18 @@ inspected. VR13P is consumed invalid and parked; proof is null, and there is no
 retry, rerun, resume, cleanup, output inspection, FW2/CIL1 eligibility, or
 claim. Any incident-output recovery is a new Tier C packet and decision.
 
+That next all-false request is now prepared as `MARC2-VR14P`. Read
+`docs/MARC_2_INCIDENT_AGGREGATE_RECOVERY_AUTHORIZATION_PACKET.md` and
+`registries/marc2_incident_aggregate_recovery_authorization_request.v0.json`.
+It proposes only a future generated/mock wrapper followed, after exact green
+implementation and proof barriers, by one no-follow open of the existing
+aggregate report capped at 65,536 bytes. It forbids every other ignored path,
+including the structural source, readiness, marker, and private manifest. All
+authorization fields are false and all current operation counters are zero.
+Commit, push, and green the packet before identifying it as the sole Tier C
+gate. No current or earlier `continue` authorizes VR14P implementation or
+ignored-output access.
+
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-
 blind analysis over 72 S004-S015 EDFs. The analysis accepted 1,080 events,

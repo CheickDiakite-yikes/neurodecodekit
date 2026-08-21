@@ -3188,3 +3188,18 @@ The route was not retained and ignored output was not inspected. VR13P is
 consumed invalid and parked with proof null, no retry/rerun/resume/cleanup, no
 FW2/CIL1 eligibility, and no scientific claim. Any aggregate-output recovery
 requires a new frozen Tier C packet and fresh decision.
+
+### MARC2-VR14P - Aggregate-Only Incident Recovery (Requested)
+
+VR14P is an all-false request for the smallest salvageable evidence surface:
+one future read of only the existing aggregate report, capped at 65,536 bytes.
+It binds the remotely green incident head and six tracked artifacts. Packet
+preparation performs zero ignored-path operations.
+
+The structural source, readiness, marker, private manifest, archive, neural
+payload, targets, models, scores, FW2/CIL1, network, retry, and claim surfaces
+remain closed. R1 would make only a separate private-manifest recovery packet
+eligible; R2-R8 would recover one aggregate structural class.
+
+Next gate: commit, push, and green the exact packet, then identify VR14P as the
+sole Tier C gate for fresh packet-bound maintainer words.

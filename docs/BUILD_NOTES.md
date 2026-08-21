@@ -11890,3 +11890,22 @@ new frozen Tier C packet and fresh decision.
 Verification after restoring proof null: 33 focused and 4,302 complete base
 tests pass with 204 expected skips; F01 again precedes readiness/private
 access. Ruff, 302 registry JSON files, and diff hygiene pass.
+
+## 2026-08-20 - MARC2-VR14P All-False Aggregate Recovery Request
+
+- Incident closeout `1563cae48a9424b38f13a42b25e17e8587a18c92`
+  passed Base job `96656682033`, Optional job `96656682232`, and CI
+  `32442807612` before packet preparation.
+- Bound six tracked incident, implementation, and authorization artifacts by
+  exact path, bytes, SHA-256, and Git blob.
+- Froze a future one-open, 65,536-byte aggregate-report recovery surface with
+  one thread/worker/job, 30 seconds, 256 MiB peak RSS, 1 MiB output, and zero
+  network or new payload bytes.
+- Structural source, readiness, marker, private manifest, archive, neural,
+  target, model, score, FW2/CIL1, retry, other-project, release, and claim
+  operations are forbidden.
+- Every current authorization is false and every operation counter is zero;
+  packet preparation did not touch `.codex_work`.
+
+Immediate gate: commit, push, and green this packet. Then identify VR14P as the
+sole Tier C gate and wait for fresh packet-bound maintainer words.

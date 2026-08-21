@@ -9840,3 +9840,19 @@ output, infer the unretained route, or treat the invalid invocation as evidence.
 Disposition decision: restore proof to null and mark VR13P consumed invalid.
 No retry, rerun, resume, cleanup, output inspection, FW2/CIL1 eligibility, or
 claim is open. Any recovery requires a new frozen Tier C packet and decision.
+
+## 0311 - Request Aggregate-Only Recovery Without Reopening The Source
+
+Scope decision: prepare all-false `MARC2-VR14P` for only the existing aggregate
+report. Bind the green incident head and six exact tracked artifacts. Do not
+touch `.codex_work` while preparing the request.
+
+Sequence decision: after a fresh packet-bound decision, require generated/mock
+wrapper qualification, exact implementation remote proof, and a separate green
+proof closeout before one no-follow aggregate-report open capped at 65,536
+bytes. No generic path override or retry exists.
+
+Boundary decision: forbid structural source, readiness, marker, private
+manifest, archive, neural, target, model, score, FW2/CIL1, network, hardware,
+other-project, release, and claim work. R1 would make only a separate private-
+manifest recovery packet eligible; R2-R8 recover one structural class.

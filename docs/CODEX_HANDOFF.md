@@ -6191,3 +6191,18 @@ clean, inspect ignored output, or infer a route/cohort. Any recovery is a new
 Tier C packet and decision. Keep the unrelated tracker inspection NDJSON
 untouched. Thirty-three focused and 4,302 complete base tests pass with 204
 expected skips after restoring F01.
+
+## 2026-08-20 MARC2-VR14P Recovery Request Handoff
+
+Incident commit `1563cae48a9424b38f13a42b25e17e8587a18c92` passed Base job
+`96656682033`, Optional job `96656682232`, and CI `32442807612`. Read the
+VR14P authorization packet, machine request, and request test.
+
+The packet is all false. A future authorized sequence may generated-qualify a
+fixed wrapper and, only after separate green implementation/proof barriers,
+open the existing aggregate report once at no more than 65,536 bytes. Every
+other ignored path is forbidden.
+
+Immediate gate: commit, push, and green the packet. Only then identify VR14P
+as the sole Tier C gate for fresh maintainer words. Keep the unrelated tracker
+inspection NDJSON untouched.
