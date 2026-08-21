@@ -6460,3 +6460,29 @@ Immediate gate: verify, commit, push, and green this exact registration before
 implementation. Do not touch VR15P ignored/consumed state or any private,
 cohort, archive, neural, target, model, score, FW2, or CIL1 surface. Keep the
 unrelated tracker inspection NDJSON untouched.
+
+## 2026-08-21 MARC2-VR16A Generated Implementation Handoff
+
+Registration `7dba59355ca45c8ab5eafb9d8b7757edfc9755c5` passed Base job
+`96699811237`, Optional job `96699811051`, and CI `32458280634` before
+implementation. Read the VR16A implementation/result docs, machine records,
+module, and three test modules.
+
+Generated `MARC2VR16A-G1` passed six width spellings, two orders, two replays,
+24 success paths, and 50 direct refusals. All six raw-source and selected-name
+hashes differ, while semantic digest
+`254bca5e0a39b52ca9791b917df6af554e02dda8f18f8e01b524d0e3ce8d9cba`
+is invariant. Runtime was 2.224372999975458 seconds, peak RSS 34,717,696
+bytes, generated input 17,532,166 bytes, aggregate output 2,843 bytes, and
+retained output zero. All private, neural, model, score, FW2/CIL1, network,
+hardware, other-project, and claim counters are zero.
+
+The full source inventory may contain semantic run values beyond 1/2/3; only
+the selected split remains frozen to runs 1/2/3. Do not reintroduce the rejected
+inventory-wide restriction.
+
+Immediate gate: commit, push, and green the exact implementation/result in
+both CI jobs. Only afterward may Tier A prepare an all-false real structural
+confirmation packet. No real read, cohort freeze, neural payload, FW2, or CIL1
+operation is currently authorized. Keep consumed VR15P and the unrelated
+tracker inspection NDJSON untouched.

@@ -10173,3 +10173,23 @@ retain mixed-spelling and normalized-collision refusals.
 Sequence decision: require the exact registration commit to pass Base and
 Optional CI before implementation. Do not touch private or consumed state,
 freeze a cohort, or open neural/FW2/CIL1 work.
+
+## 0330 - Qualify The Variable-Width Repair On Generated Sources
+
+Proof decision: registration `7dba59355ca45c8ab5eafb9d8b7757edfc9755c5`
+passed Base Python job `96699811237`, Optional Neuro Readers job
+`96699811051`, and CI `32458280634` before implementation.
+
+Domain decision: permit every syntactically valid numeric run in the complete
+source inventory, then enforce semantic runs 1/2/3 only on the frozen selected
+fit/held-out rows. This corrects an implementation-stage conflation without
+changing the registered selected split or BIDS numeric-index rule.
+
+Result decision: record generated `MARC2VR16A-G1` after 24/24 paths, 50 direct
+refusals, deterministic semantic identity, source-exact names and reservations,
+2.224372999975458 seconds, 34,717,696-byte peak RSS, and zero retention.
+
+Boundary decision: this is generated engineering evidence only. Require exact
+remote implementation proof before preparing a separate all-false private
+confirmation packet. Real/private, cohort, archive, neural, target, model,
+score, FW2/CIL1, release, and scientific-claim authority remain absent.

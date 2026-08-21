@@ -2370,3 +2370,21 @@ refuses all 32 mutations. The latest development run used 0.007407 seconds,
   source expectation, retry, or continue to Wrist payload acquisition. Next:
   close this cohort lane and compare independent cue-resistant datasets or
   prospective designs under new gates.
+
+## 2026-08-21 MARC2-VR16A Generated Repair
+
+The consumed private structural diagnostic ended at `MARC2VR15P-R15`, which
+identifies only a run-token width incompatibility. It did not retain the token
+or establish a real cohort.
+
+The new generated-only VR16A adapter follows BIDS numeric-index semantics: it
+accepts ASCII `[0-9]+`, strips leading zeroes for semantic grouping, and keeps
+source-exact names for companion and storage accounting. Generated route
+`MARC2VR16A-G1` passed 24/24 width/order/replay paths and 50 direct refusals in
+2.224372999975458 seconds at 34,717,696-byte peak RSS. Six distinct lexical
+sources produced the same frozen semantic selection digest.
+
+This is engineering evidence, not real-source or neural evidence. First green
+the exact implementation/result commit in both CI jobs. Any later real
+confirmation, cohort freeze, archive member, neural payload, FW2, or CIL1 step
+requires its own frozen Tier C packet and fresh decision.
