@@ -4237,6 +4237,19 @@ values, archive or neural payload, targets, models, scores, FW2/CIL1, other
 projects, release, or claims. A private confirmation packet is not yet
 eligible.
 
+Exact implementation `bf4d2b729ac948d32aa1c7b239d3c65a30f18017` passed Base
+Python job `96784482381`, Optional Neuro Readers job `96784482602`, and CI
+`32486620566`. Read
+`docs/MARC_2_PUBLISHED_TASK_SELECTOR_REPAIR_PROOF_CLOSEOUT.md` and the new
+proof test. The two machine records now bind exact preproof registry hashes
+and seven Git blobs without repeating qualification or changing the selector.
+
+The proof-only closeout must itself be pushed and both jobs green before Tier
+A may prepare one all-false private structural-confirmation packet. Do not
+touch `.codex_work`, VR18P consumed state, a private source, archive or neural
+payload, targets, models, scores, FW2/CIL1, other projects, release, or claims.
+No private execution is authorized by this closeout.
+
 ## Style
 
 - Small functions, explicit names, low magic.

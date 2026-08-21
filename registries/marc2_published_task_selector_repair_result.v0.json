@@ -5,7 +5,7 @@
   "lane_id": "MARC2-VR20A",
   "recorded_at_local": "2026-08-21",
   "route": "MARC2VR20A-G1",
-  "status": "generated_only_qualified_remote_implementation_proof_pending",
+  "status": "generated_only_qualified_exact_implementation_remotely_green_proof_closeout_pending",
   "registration_proof": {
     "commit": "cd71807ac68f449796b6bc97745e9a0b200b2cd3",
     "CI_run_id": 32484725113,
@@ -99,11 +99,34 @@
     "no_real_cohort_or_FW2_CIL1_eligibility",
     "no_neural_decoding_or_scientific_claim"
   ],
-  "remote_implementation_proof": null,
+  "remote_implementation_proof": {
+    "commit": "bf4d2b729ac948d32aa1c7b239d3c65a30f18017",
+    "CI_run_id": 32486620566,
+    "base_python_job_id": 96784482381,
+    "optional_neuro_job_id": 96784482602,
+    "both_required_jobs_green": true,
+    "scope_changed_after_qualification": false,
+    "qualification_route": "MARC2VR20A-G1",
+    "preproof_implementation_registry_bytes": 4804,
+    "preproof_implementation_registry_sha256": "ad1c908d50f0232ed91921857e5d27212bb80b13fa22f9962ae94c2fdab4d0f2",
+    "preproof_result_registry_bytes": 4710,
+    "preproof_result_registry_sha256": "363aaf14bab5b8c964ff88be8d44e3551fdb17ddc2ec354d30358c030210906c",
+    "implementation_module_Git_blob": "33cd5e52d186a768ce8dc706e163c8d5c3a2fc92",
+    "behavior_test_Git_blob": "339d6d32da8cae2be2dd8672996d0bb6973701b6",
+    "implementation_document_Git_blob": "55583492ff4edba48c9c719cd83817d9d6f314c2",
+    "result_document_Git_blob": "da0474cbfefca3d3f93d2d655d56a7ab8afafda6",
+    "preproof_implementation_registry_Git_blob": "dbdc7f039f42cd67f905002fb2a31d07933e367d",
+    "preproof_result_registry_Git_blob": "5de8fd23b827a5a574937224218182af827a88f0",
+    "preproof_record_test_Git_blob": "599857a7f1ce3db3b98626102a49f25c6534fc57",
+    "generated_qualification_repeated_for_proof_closeout": false,
+    "private_operations_during_proof_closeout": 0
+  },
   "next_gate": {
-    "exact_implementation_and_result_commit_push_and_both_jobs_green_required": true,
-    "proof_only_closeout_required": true,
+    "exact_implementation_and_result_commit_push_and_both_jobs_green_required": false,
+    "proof_only_closeout_required": false,
+    "proof_only_closeout_commit_green_pending": true,
     "private_confirmation_packet_eligible_now": false,
+    "private_confirmation_packet_eligible_after_exact_closeout_green": true,
     "private_or_neural_execution_authorized": false
   },
   "claim_boundary": {

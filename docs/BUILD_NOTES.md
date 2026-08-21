@@ -12748,3 +12748,26 @@ any VR20A implementation. A private confirmation packet remains ineligible.
 Immediate gate: run complete verification, commit and push the exact
 implementation/result, and require both CI jobs green before a proof-only
 closeout. A private confirmation packet remains ineligible.
+
+### VR20A exact implementation remotely green
+
+- Exact implementation/result commit
+  `bf4d2b729ac948d32aa1c7b239d3c65a30f18017` passed Base Python job
+  `96784482381`, Optional Neuro Readers job `96784482602`, and CI
+  `32486620566`.
+- Added a proof-only closeout binding both preproof registry byte/hash
+  identities and seven exact Git blobs.
+- The selector, generated source, 20 success paths, 53 refusals, selected
+  16-subject / 96-bundle identity, measurements, and claim boundary are
+  unchanged.
+- Thirty-two focused tests and all 4,691 dependency-light tests pass with 204
+  expected skips in 125.884 seconds, exactly five tests above the exact
+  implementation baseline. Ruff, compilation, 346 registry parses, and diff
+  hygiene pass.
+- Qualification repetitions, private/ignored-path operations, consumed-state
+  operations, archive/neural/target/model/score work, FW2/CIL1, network,
+  hardware, other-project work, release, and claim upgrades: zero.
+
+Immediate gate: commit, push, and green this exact proof-only closeout. A
+private confirmation packet may be prepared only after that proof and remains
+all-false until a separate packet-bound Tier C decision.

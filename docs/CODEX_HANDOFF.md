@@ -6995,3 +6995,20 @@ Immediate gate: commit, push, and green this exact implementation/result, then
 add and green a proof-only closeout without repeating qualification. Keep
 VR18P `.codex_work`, all private/consumed state, and the unrelated tracker
 inspection NDJSON untouched.
+
+## 2026-08-21 MARC2-VR20A Proof-Only Handoff
+
+Exact implementation `bf4d2b729ac948d32aa1c7b239d3c65a30f18017` passed Base
+Python job `96784482381`, Optional Neuro Readers job `96784482602`, and CI
+`32486620566`.
+
+The proof-only closeout binds both preproof registry identities and seven Git
+blobs. The selector, generated source, 20-path qualification, 53 refusals,
+measurements, resource caps, and claim boundary are unchanged. Qualification
+repetitions and every private, neural, model, score, FW2/CIL1, network,
+hardware, other-project, release, and claim operation remain zero.
+
+Immediate gate: commit, push, and green this exact closeout. After that proof,
+Tier A may prepare one separately frozen all-false private structural-
+confirmation packet. Do not access `.codex_work`, VR18P consumed state, the
+private source, an archive member, neural data, targets, models, or scores.

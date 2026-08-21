@@ -3699,3 +3699,15 @@ Every private, neural, target, model, score, and FW2/CIL1 counter stayed zero.
 Next gate: commit, push, and green the exact implementation/result, then green
 a proof-only closeout without repeating qualification. A private confirmation
 packet is not yet eligible.
+
+### MARC2-VR20A - Exact Implementation Remotely Green
+
+Implementation `bf4d2b7` passed Base Python job `96784482381`, Optional Neuro
+Readers job `96784482602`, and CI `32486620566`. The proof-only closeout binds
+the exact preproof registry hashes and seven Git blobs without repeating the
+generated qualification.
+
+Next gate: commit, push, and green the proof-only closeout. Only afterward may
+Tier A prepare one all-false private structural-confirmation packet; no private
+read, cohort, neural payload, score, FW2/CIL1 execution, or scientific claim is
+authorized.

@@ -15,6 +15,39 @@ IMPLEMENTATION_DOC = (
 )
 RESULT_DOC = ROOT / "docs/MARC_2_PUBLISHED_TASK_SELECTOR_REPAIR_RESULT.md"
 
+EXPECTED_REMOTE_PROOF = {
+    "commit": "bf4d2b729ac948d32aa1c7b239d3c65a30f18017",
+    "CI_run_id": 32_486_620_566,
+    "base_python_job_id": 96_784_482_381,
+    "optional_neuro_job_id": 96_784_482_602,
+    "both_required_jobs_green": True,
+    "scope_changed_after_qualification": False,
+    "qualification_route": "MARC2VR20A-G1",
+    "preproof_implementation_registry_bytes": 4_804,
+    "preproof_implementation_registry_sha256": (
+        "ad1c908d50f0232ed91921857e5d27212bb80b13fa22f9962ae94c2fdab4d0f2"
+    ),
+    "preproof_result_registry_bytes": 4_710,
+    "preproof_result_registry_sha256": (
+        "363aaf14bab5b8c964ff88be8d44e3551fdb17ddc2ec354d30358c030210906c"
+    ),
+    "implementation_module_Git_blob": "33cd5e52d186a768ce8dc706e163c8d5c3a2fc92",
+    "behavior_test_Git_blob": "339d6d32da8cae2be2dd8672996d0bb6973701b6",
+    "implementation_document_Git_blob": (
+        "55583492ff4edba48c9c719cd83817d9d6f314c2"
+    ),
+    "result_document_Git_blob": "da0474cbfefca3d3f93d2d655d56a7ab8afafda6",
+    "preproof_implementation_registry_Git_blob": (
+        "dbdc7f039f42cd67f905002fb2a31d07933e367d"
+    ),
+    "preproof_result_registry_Git_blob": (
+        "5de8fd23b827a5a574937224218182af827a88f0"
+    ),
+    "preproof_record_test_Git_blob": "599857a7f1ce3db3b98626102a49f25c6534fc57",
+    "generated_qualification_repeated_for_proof_closeout": False,
+    "private_operations_during_proof_closeout": 0,
+}
+
 
 class Marc2PublishedTaskSelectorRepairRecordTests(unittest.TestCase):
     @classmethod
@@ -68,8 +101,11 @@ class Marc2PublishedTaskSelectorRepairRecordTests(unittest.TestCase):
         self.assertLess(measured["peak_RSS_bytes"], 256 * 1024**2)
 
     def test_authority_proof_and_claim_boundary_remain_closed(self):
-        self.assertIsNone(self.implementation["remote_implementation_proof"])
-        self.assertIsNone(self.result["remote_implementation_proof"])
+        self.assertEqual(
+            self.implementation["remote_implementation_proof"],
+            EXPECTED_REMOTE_PROOF,
+        )
+        self.assertEqual(self.result["remote_implementation_proof"], EXPECTED_REMOTE_PROOF)
         self.assertTrue(
             all(value == 0 for value in self.result["operation_counters"].values())
         )

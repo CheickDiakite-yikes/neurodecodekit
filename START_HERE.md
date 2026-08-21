@@ -2634,3 +2634,13 @@ then add a proof-only closeout without rerunning qualification. Keep
 `.codex_work`, VR18P consumed state, and the unrelated tracker inspection
 NDJSON untouched. No private cohort, neural payload, or scientific claim is
 open.
+
+Exact implementation `bf4d2b7` passed both jobs in CI `32486620566`. The
+proof-only closeout now binds that commit, its preproof registry hashes, and
+seven Git blobs without repeating qualification or touching any private path.
+
+Immediate gate: commit, push, and green the exact proof-only closeout. Only
+after that remote proof may Tier A prepare a separate all-false private
+structural-confirmation packet. That packet would still require a fresh Tier C
+decision before any private read. Keep `.codex_work`, VR18P consumed state,
+and the unrelated tracker inspection NDJSON untouched.

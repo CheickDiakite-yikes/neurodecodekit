@@ -10710,3 +10710,20 @@ Boundary decision: require exact implementation/result remote green and a
 proof-only closeout before a private confirmation packet may be prepared. No
 private read, cohort, neural payload, target, model, score, FW2/CIL1, release,
 or scientific claim is authorized.
+
+## 0357 - Bind VR20A Exact Implementation Proof Without Reexecution
+
+Proof decision: exact implementation
+`bf4d2b729ac948d32aa1c7b239d3c65a30f18017` passed Base Python job
+`96784482381`, Optional Neuro Readers job `96784482602`, and CI
+`32486620566`.
+
+Transition decision: bind both preproof registry identities and seven exact
+Git blobs. Change no selector code, generated source, witness, route, result,
+measurement, resource cap, or claim boundary. Repeat no qualification and
+perform no private operation.
+
+Boundary decision: require this proof-only closeout to be pushed and both jobs
+green before an all-false private structural-confirmation packet may be
+prepared. The closeout authorizes no private read, cohort, archive or neural
+payload, target, model, score, FW2/CIL1, release, or scientific claim.
