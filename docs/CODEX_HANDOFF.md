@@ -1,5 +1,12 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR13P decision, 2026-08-20: final request-proof head `bff3d3f`
+> passed Base job `96618310916`, Optional job `96618311046`, and CI
+> `32429569470`. The maintainer's next exact message after sole-gate
+> identification was `continue`. The decision binds only the unchanged
+> two-stage packet and must itself be committed, pushed, and remotely green
+> before Stage 1 implementation. Do not touch readiness/private paths yet.
+
 > Current MARC2-VR13P request proof, 2026-08-20: exact request `d55371e`
 > passed Base job `96615486644`, Optional job `96615486542`, and CI
 > `32428583270`. The separate proof closeout binds three unchanged request
@@ -6110,3 +6117,16 @@ Immediate gate: commit, push, and green the proof closeout. After that exact
 head is green, identify VR13P as the sole active Tier C packet and wait for a
 fresh maintainer decision. Do not implement or touch readiness, `.codex_work`,
 the private source, or the output root before the decision is itself green.
+
+## 2026-08-20 MARC2-VR13P Authorization Decision Handoff
+
+Final proof head `bff3d3fc344291f57c5ef90c6affb8077e57d7c0` passed Base job
+`96618310916`, Optional job `96618311046`, and CI `32429569470`. After Codex
+identified VR13P as the sole active Tier C packet, the maintainer's next exact
+message was `continue`.
+
+Read the VR13P authorization decision document, registry, and test. This is a
+decision-only milestone: every implementation, readiness, private, archive,
+neural, target, model, score, FW2/CIL1, and claim counter is zero. Commit,
+push, and green the exact decision before Stage 1 generated implementation.
+The unrelated tracker inspection NDJSON remains untouched.

@@ -9772,3 +9772,21 @@ Boundary decision: request proof performs zero implementation, generated
 qualification, private, readiness, consumed-state, archive, neural, target,
 model, score, FW2/CIL1, release, or claim operations. Only after closeout green
 may VR13P be named as the sole active Tier C packet for a fresh decision.
+
+## 0307 - Bind The Fresh Short-Form Decision Only To VR13P
+
+Authorization decision: final proof head `bff3d3f` passed Base Python job
+`96618310916`, Optional Neuro Readers job `96618311046`, and CI
+`32429569470`. After VR13P was identified as the sole active Tier C packet,
+the maintainer's next exact message was `continue`. Preserve those actual eight
+UTF-8 bytes and incorporate only the unchanged packet by reference.
+
+Order decision: this decision has delayed effect until its own commit, push,
+and two-job green proof. Then Stage 1 may implement and generated-qualify the
+fixed wrapper. The exact Stage 1 implementation and a separate proof closeout
+must each become remotely green before the one private structural read.
+
+Boundary decision: no archive payload, signal, target, model, prediction,
+score, FW2/CIL1 execution, retry, rerun, release, or claim is authorized. R1
+makes only a separate FW2 preregistration eligible; R2-R8 retain one aggregate
+structural blocker class.

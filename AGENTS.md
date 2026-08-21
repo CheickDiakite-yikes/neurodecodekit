@@ -452,6 +452,18 @@ C packet for a fresh short-form decision. Before that decision and its own
 remote proof, do not implement the wrapper or touch readiness, `.codex_work`,
 the private source, or an output root.
 
+Final proof head `bff3d3fc344291f57c5ef90c6affb8077e57d7c0` passed Base
+Python job `96618310916`, Optional Neuro Readers job `96618311046`, and CI
+`32429569470`. Codex then identified VR13P as the sole active Tier C packet;
+the maintainer's next exact message was the eight UTF-8 bytes `continue`. Read
+`docs/MARC_2_R4_PRIVATE_DISCRIMINATOR_AUTHORIZATION_DECISION.md` and
+`registries/marc2_r4_private_discriminator_authorization_decision.v0.json`.
+The decision binds only the unchanged green two-stage packet and has delayed
+effect until its own exact commit is pushed and both CI jobs are green. Before
+that proof, do not implement the wrapper or touch readiness, `.codex_work`,
+the private source, or an output root. Archive payload, neural data, targets,
+models, scores, FW2/CIL1 execution, release, and claims remain closed.
+
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-
 blind analysis over 72 S004-S015 EDFs. The analysis accepted 1,080 events,

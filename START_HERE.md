@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR13P All-False Request Prepared
+## Current Frontier: MARC2-VR13P Decision Recorded
 
 Read `docs/MARC_2_P15_PRIVATE_CONFIRMATION_RESULT.md`, then the VR13A
 preregistration, implementation, and result documents with their registries.
@@ -72,6 +72,14 @@ and CI `32428583270`. Its separate proof closeout binds the three unchanged
 request artifacts and keeps all authority false. That closeout must now be
 committed, pushed, and remotely green. Do not implement or inspect readiness,
 the private source, or an output root before a fresh decision after that proof.
+
+Final proof head `bff3d3f` passed Base job `96618310916`, Optional job
+`96618311046`, and CI `32429569470`. After VR13P was identified as the sole
+active Tier C packet, the maintainer's next exact message was `continue`. The
+separate authorization decision quotes those eight bytes and binds only the
+unchanged packet. Commit, push, and green that decision before implementing
+the generated wrapper or touching readiness, `.codex_work`, the private
+source, or an output root.
 
 ## Prior Frontier: MARC2-VR11P Consumed At Structural Route R2
 

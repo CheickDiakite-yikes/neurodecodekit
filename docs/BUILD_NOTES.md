@@ -11812,3 +11812,19 @@ authorizes no implementation or private access.
 Immediate gate: commit, push, and green this proof-only closeout. Only after
 that may VR13P be identified as the sole active Tier C packet for a fresh
 decision.
+
+### Packet-bound authorization decision
+
+- Final proof head `bff3d3fc344291f57c5ef90c6affb8077e57d7c0` passed Base
+  job `96618310916`, Optional job `96618311046`, and CI `32429569470`.
+- After sole-gate identification, the maintainer's next exact message was the
+  eight UTF-8 bytes `continue`.
+- Added one decision document, one machine record, and one focused test that
+  bind the unchanged request, all eight routes, all resource caps, and the
+  two remote-green barriers before the private stage.
+- Implementation, generated qualification, readiness, private/ignored path,
+  archive, neural, target, model, score, FW2/CIL1, other-project, and claim
+  operations while recording the decision: zero.
+
+Immediate gate: commit, push, and green this decision-only milestone. Stage 1
+must not begin before both required jobs pass the exact decision head.
