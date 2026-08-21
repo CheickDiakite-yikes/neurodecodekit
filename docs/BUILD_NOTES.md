@@ -11917,3 +11917,19 @@ remain zero.
 
 Immediate gate: commit, push, and green this proof-only closeout. Then identify
 VR14P as the sole Tier C gate and wait for fresh packet-bound maintainer words.
+
+### Packet-bound VR14P authorization decision
+
+- Proof closeout `3274a728ccf25a2e7bb5a7c208d2e8d53f2db6fb` passed Base job
+  `96659529617`, Optional job `96659529824`, and CI `32443804353`.
+- After sole-gate identification, the maintainer's next exact 96 UTF-8 bytes
+  authorized only the unchanged VR14P packet by reference.
+- The decision rejects blanket or future authority from the message's
+  continuous-approval wording and preserves every later Tier C boundary.
+- Implementation, generated qualification, ignored-path, aggregate-report,
+  structural-source, private-manifest, archive, neural, target, model, score,
+  FW2/CIL1, retry, release, and claim operations while recording: zero.
+
+Immediate gate: commit, push, and green this decision-only milestone. Then
+implement and generated-qualify the fixed reader without touching
+`.codex_work`.

@@ -515,6 +515,18 @@ Only then may VR14P be identified as the sole Tier C gate for a fresh decision.
 No current or earlier `continue` authorizes VR14P implementation or
 ignored-output access.
 
+VR14P proof closeout `3274a728ccf25a2e7bb5a7c208d2e8d53f2db6fb`
+passed Base job `96659529617`, Optional job `96659529824`, and CI
+`32443804353`. Codex then identified VR14P as the sole active Tier C packet.
+The maintainer's next exact 96-byte message is preserved in
+`docs/MARC_2_INCIDENT_AGGREGATE_RECOVERY_AUTHORIZATION_DECISION.md` and
+`registries/marc2_incident_aggregate_recovery_authorization_decision.v0.json`.
+It authorizes only the unchanged two-stage VR14P sequence by reference; its
+continuous-approval wording grants no future or blanket authority. Commit,
+push, and green the decision before Stage 1. Do not touch `.codex_work` before
+the exact generated implementation and its separate proof closeout are also
+remotely green.
+
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-
 blind analysis over 72 S004-S015 EDFs. The analysis accepted 1,080 events,

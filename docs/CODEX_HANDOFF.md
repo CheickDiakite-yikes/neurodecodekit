@@ -6212,3 +6212,22 @@ path or scientific operations.
 Immediate gate: commit, push, and green the proof closeout. Only then identify
 VR14P as the sole Tier C gate for fresh maintainer words. Keep the unrelated
 tracker inspection NDJSON untouched.
+
+## 2026-08-20 MARC2-VR14P Authorization Decision Handoff
+
+Proof closeout `3274a728ccf25a2e7bb5a7c208d2e8d53f2db6fb` passed Base job
+`96659529617`, Optional job `96659529824`, and CI `32443804353`. Codex then
+identified VR14P as the sole active Tier C packet. The maintainer's next exact
+message was `youre approve to keep going, continue, you have my continuous
+approval and pre-approved approval`.
+
+Read the VR14P authorization decision document, machine record, and test. The
+decision binds those actual 96 UTF-8 bytes only to the unchanged packet and
+explicitly rejects future or blanket authority. Every implementation, ignored-
+path, aggregate, source, private-manifest, neural, target, model, score,
+FW2/CIL1, and claim counter is zero.
+
+Immediate gate: commit, push, and green the decision. Then implement and
+generated-qualify the fixed reader. Do not touch `.codex_work` until exact
+implementation and separate proof-closeout heads are both green. Keep the
+unrelated tracker inspection NDJSON untouched.

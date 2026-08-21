@@ -3208,3 +3208,13 @@ scientific operations.
 
 Next gate: commit, push, and green the proof closeout, then identify VR14P as
 the sole Tier C gate for fresh packet-bound maintainer words.
+
+Proof closeout `3274a72` passed Base job `96659529617`, Optional job
+`96659529824`, and CI `32443804353`. After sole-gate identification, the
+maintainer's next exact message authorized only the unchanged VR14P packet by
+reference. Its continuous-approval wording does not grant future or blanket
+authority.
+
+Next gate: commit, push, and green the decision. Then implement and generated-
+qualify the fixed aggregate reader; aggregate access remains closed until a
+separate implementation proof closeout is also remotely green.

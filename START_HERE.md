@@ -123,6 +123,16 @@ Immediate gate: commit, push, and green the proof closeout. Only then may
 VR14P be identified as the sole Tier C gate for new packet-bound maintainer
 words.
 
+Proof closeout `3274a728ccf25a2e7bb5a7c208d2e8d53f2db6fb` passed Base job
+`96659529617`, Optional job `96659529824`, and CI `32443804353`. After VR14P
+was identified as the sole gate, the maintainer's next message authorized only
+that unchanged two-stage packet by reference. The decision explicitly rejects
+blanket or future authority from its continuous-approval wording.
+
+Immediate gate: commit, push, and green the exact decision. Only then may the
+generated/mock fixed-path reader be implemented. The aggregate report remains
+closed until that implementation and a separate proof closeout are green.
+
 ## Prior Frontier: MARC2-VR11P Consumed At Structural Route R2
 
 Read `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`, then

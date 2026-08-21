@@ -9873,3 +9873,20 @@ qualification, ignored-path, aggregate-report, structural-source, private-
 manifest, archive, neural, target, model, score, FW2/CIL1, release, or claim
 operations. Only after closeout green may VR14P be named as the sole active
 Tier C packet for a fresh decision.
+
+## 0313 - Bind Fresh Maintainer Words Only To VR14P
+
+Authorization decision: proof closeout `3274a72` passed Base Python job
+`96659529617`, Optional Neuro Readers job `96659529824`, and CI `32443804353`.
+After sole-gate identification, preserve the maintainer's exact 96 UTF-8 bytes
+and bind only the unchanged VR14P packet by reference.
+
+Scope decision: the message's continuous-approval wording does not authorize a
+future packet, neural payload, target, model, score, release, or claim. First
+green this decision; then generated-qualify and green the fixed aggregate
+reader; then green a separate proof closeout before the one aggregate open.
+
+Boundary decision: decision recording performs zero implementation, generated
+qualification, ignored-path, aggregate-report, structural-source, private-
+manifest, archive, neural, target, model, score, FW2/CIL1, release, or claim
+operations. R1 makes only a separate private-manifest packet eligible.
