@@ -2467,3 +2467,14 @@ light tests pass with 204 expected skips.
 Immediate gate: commit, push, and green this exact registration before any
 VR17B implementation. It has no private executor and opens no cohort, neural,
 target, model, score, FW2, CIL1, release, or scientific claim.
+
+Registration `cde8569` passed both jobs in CI `32469173279` before a five-case
+generated preflight. Two residual expectations were wrong: wrong-task is
+reported as F04 / `core identity differs`, and the old collision witness is
+caught first as F05 / `companion run spelling differs`. VR17B is parked at
+`MARC2VR17B-P01`; its full matrix did not run and no implementation module was
+added.
+
+Next: freeze VR17C with the observed task reason and a true same-token,
+distinct-name normalized-collision witness. This remains generated structural
+work, with no private cohort or neural evidence and no FW2/CIL1 authority.

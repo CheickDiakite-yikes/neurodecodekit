@@ -12421,3 +12421,22 @@ four-repair mapping before any new generated execution.
 
 Immediate gate: commit, push, and green this exact registration before
 generated-only implementation.
+
+### VR17B parked after residual preflight
+
+- Registration `cde85696de8ed998d15c79630265059264ba1f2c` passed Base
+  Python job `96732149989`, Optional Neuro Readers job `96732149634`, and CI
+  `32469173279` before the probe.
+- One canonical five-case preflight made five unchanged VR16A calls. Control,
+  mixed spelling, and incomplete-set behavior matched.
+- Wrong-task returned F04 / `core identity differs`, not the frozen
+  `Freewill task differs`. The existing duplicate witness returned F05 /
+  `companion run spelling differs`, not normalized-collision.
+- Parked at `MARC2VR17B-P01` before the full matrices, direct refusals, report,
+  or implementation module. External command wall was 0.3 seconds; generated
+  bytes and peak RSS were not instrumented and remain unavailable.
+- Retained output and every private, neural, model, score, FW2/CIL1, network,
+  other-project, release, and claim operation were zero.
+
+Immediate next task: preregister VR17C with the observed F04 reason and a
+distinct optional-entity duplicate that preserves the same run token.
