@@ -1,0 +1,113 @@
+{
+  "schema_name": "neurodecodekit.marc2_f04_task_implication_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "MARC-2-VR19A-F04-task-implication-implementation-v0",
+  "lane_id": "MARC2-VR19A",
+  "recorded_at_local": "2026-08-21",
+  "status": "generated_qualified_remote_implementation_proof_pending",
+  "green_registration_proof": {
+    "commit": "9365b0ff7bfd5dbd3b37217a80ab01e6770de212",
+    "CI_run_id": 32480420157,
+    "base_python_job_id": 96765347691,
+    "optional_neuro_job_id": 96765347974,
+    "both_required_jobs_green": true,
+    "contract_bytes": 9199,
+    "contract_sha256": "b4cb5e3420a67ed50ccb7d5c0e14c6f99cfc15b13360057ae693985c601ffe37"
+  },
+  "owned_artifacts": [
+    {"path": "src/neurodecodekit/datasets/marc2_f04_task_implication.py", "bytes": 25548, "sha256": "99f6c35d51e542ab094bdc3337f1df1c70f063ff01e28c13769505d9d9422906"},
+    {"path": "tests/test_marc2_f04_task_implication.py", "bytes": 3575, "sha256": "1e6130886b8619a5782157be02d2106d6f43aebc1eab1b45cac57fb55abbe24f"},
+    {"path": "docs/MARC_2_F04_TASK_IMPLICATION_IMPLEMENTATION.md", "bytes": 2639, "sha256": "2ac2d31776197cc9a4b12f6e09630fa5f1f55a50b98ced9e0849cb76d5eca000"},
+    {"path": "docs/MARC_2_F04_TASK_IMPLICATION_RESULT.md", "bytes": 2115, "sha256": "1d16b6e9b2fcc640fa66f6af8046309ba9231ef884f6e71a0bccf7d7956cee94"},
+    {"path": "registries/marc2_f04_task_implication_result.v0.json", "bytes": 3211, "sha256": "3bd3c61ab6fff76f12ef671ae0a89c3cef4cef1806708147ffad69edaa086d54"},
+    {"path": "tests/test_marc2_f04_task_implication_records.py", "bytes": 3491, "sha256": "dcbf9258ca7609c9bff97038fa4721156641557bda2b4656a78d4b37e5030e6c"}
+  ],
+  "owned_artifact_count": 6,
+  "owned_artifact_bytes": 40579,
+  "surface": {
+    "module": "neurodecodekit.datasets.marc2_f04_task_implication",
+    "commands": ["plan", "qualify"],
+    "execute_surface_available": false,
+    "path_or_output_override_available": false,
+    "standard_library_only": true
+  },
+  "static_audit": {
+    "F04_producer_references": 2,
+    "translated_task_guard": true,
+    "direct_task_guard": true,
+    "exact_R4_pair_unique_to_translated_reference": true,
+    "private_value_inspected": false
+  },
+  "generated_qualification": {
+    "route": "MARC2VR19A-G1",
+    "cases": 8,
+    "orders": 2,
+    "replays": 2,
+    "paths": 32,
+    "VR16A_calls": 32,
+    "route_counts": {
+      "MARC2VR19A-G1": 4,
+      "MARC2VR19A-R1": 16,
+      "MARC2VR19A-R2": 12
+    },
+    "replay_sha256": "6a8af6b89ef2de7577bd968eebe778f7342b26f36327d811b659e8f21c62f20f",
+    "both_replays_equal": true,
+    "source_objects_immutable": true,
+    "direct_refusals": 40,
+    "fixed_input_bytes": 102770,
+    "generated_input_bytes": 13748732,
+    "aggregate_output_bytes": 2326,
+    "retained_generated_output_bytes": 0,
+    "runtime_seconds": 1.759938333008904,
+    "peak_RSS_bytes": 51429376
+  },
+  "hypotheses": {
+    "VR19A-H1": true,
+    "VR19A-H2": true,
+    "VR19A-H3": true,
+    "VR19A-H4": true
+  },
+  "local_verification": {
+    "focused_behavior_tests": 7,
+    "focused_record_tests": 5,
+    "complete_dependency_light_tests": 4649,
+    "complete_expected_skips": 204,
+    "complete_failures": 0,
+    "complete_runtime_seconds": 150.076,
+    "ruff_passed": true,
+    "compile_passed": true,
+    "registry_JSON_files_parsed": 342,
+    "CLI_help_and_plan_passed": true,
+    "git_diff_check_passed": true
+  },
+  "operation_counters": {
+    "repository_dot_codex_work_operations": 0,
+    "private_or_consumed_source_operations": 0,
+    "private_source_stats_hashes_opens_reads_or_parses": 0,
+    "archive_header_or_member_payload_reads": 0,
+    "signal_event_channel_geometry_target_or_label_reads": 0,
+    "cohort_cache_feature_split_or_NeuroToken_operations": 0,
+    "model_training_inference_prediction_or_score_runs": 0,
+    "FW2_or_CIL1_operations": 0,
+    "network_provider_or_language_model_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "other_project_operations": 0,
+    "retry_rerun_release_or_scientific_claim_upgrades": 0
+  },
+  "remote_implementation_proof": null,
+  "claim_boundary": {
+    "engineering_capability": "exact non-freewill task-class implication under bound VR16A semantics",
+    "scientific_ceiling": "none",
+    "private_task_value_known": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "live_decoding": false
+  },
+  "warnings": [
+    "Generated qualification only; exact implementation remote proof is pending.",
+    "The result identifies a class under bound code semantics, not a private token.",
+    "VR18P remains consumed with no retry or private reinspection."
+  ],
+  "next_gate": "Commit push and green exact implementation and result then add a proof-only closeout without repeating qualification."
+}

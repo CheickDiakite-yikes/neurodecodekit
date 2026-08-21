@@ -10608,3 +10608,22 @@ Boundary decision: generated task witnesses are semantic controls, not guesses
 about a private token. Require registration remote green before implementation.
 Authorize no private read, cohort, neural payload, target, model, score,
 FW2/CIL1, release, retry, or scientific claim.
+
+## 0352 - Accept The VR19A Non-Freewill Task-Class Implication
+
+Proof decision: registration `9365b0ff7bfd5dbd3b37217a80ab01e6770de212`
+passed Base Python job `96765347691`, Optional Neuro Readers job
+`96765347974`, and CI `32480420157` before implementation.
+
+Result decision: accept `MARC2VR19A-G1` after two exact AST producer bindings,
+32 generated VR16A calls, exact G1/R1/R2 counts 4/16/12, two identical
+replays, source immutability, all four hypotheses, and 40 direct refusals.
+
+Interpretation decision: tighten consumed R4 from “task or identity” to a
+non-lowercase-`freewill` task class under exact bound VR16A semantics. Do not
+infer the unavailable private token, spelling, row, path, participant,
+selection, cohort, or behavior outside that code version.
+
+Boundary decision: require exact implementation/result remote green and a
+proof-only closeout before any later packet. No private read, neural payload,
+target, model, score, FW2/CIL1, release, or scientific claim is authorized.
