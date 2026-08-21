@@ -4022,6 +4022,25 @@ private discriminator packet. Do not touch `.codex_work`, consumed/private
 state, archive or neural payload, targets, models, scores, FW2/CIL1, or the
 unrelated tracker inspection NDJSON. No private execution is authorized.
 
+Proof-only closeout `820592e7a31de6c802fafa6b709506c3264179d6`
+passed Base Python job `96744045204`, Optional Neuro Readers job
+`96744044972`, and CI `32473172345`. The next all-false gate is prepared as
+`MARC2-VR18P`. Read
+`docs/MARC_2_FIRST_FAILURE_STABLE_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md`
+and
+`registries/marc2_first_failure_stable_private_discriminator_authorization_request.v0.json`.
+It binds 20 committed inputs totaling 315,255 bytes and proposes generated
+fixed-path wrapper qualification followed, only after separate proof barriers
+and fresh Tier C authority, by one 418,755-byte target-free structural read,
+one VR16A call, and at most one VR17C route-map lookup.
+
+Every request authorization is false and every operation counter is zero.
+Commit, push, and green the request, then add and green a proof-only request
+closeout before identifying VR18P as the sole Tier C gate. Current and earlier
+`continue` messages are not retroactive. Do not implement the wrapper or touch
+readiness, `.codex_work`, private state, archive/neural payload, targets,
+models, scores, FW2/CIL1, or the unrelated tracker inspection NDJSON.
+
 ## Style
 
 - Small functions, explicit names, low magic.

@@ -6753,3 +6753,26 @@ Immediate gate: commit, push, and green this proof-only closeout. Only after
 both jobs pass may Tier A prepare an all-false private-discriminator packet.
 Do not touch `.codex_work`, any consumed/private state, or the unrelated
 tracker inspection NDJSON.
+
+## 2026-08-21 MARC2-VR18P Request Handoff
+
+VR17C proof closeout `820592e7a31de6c802fafa6b709506c3264179d6`
+passed Base Python job `96744045204`, Optional Neuro Readers job
+`96744044972`, and CI `32473172345` before this request was prepared.
+
+Read the VR18P authorization packet, all-false machine request, and matching
+test. Twenty fixed inputs total 315,255 bytes. The proposed generated Stage 1
+has 20 case/order/replay paths and at least 80 direct refusals. The future
+Stage 2 ceiling is one 418,755-byte target-free source read, one VR16A call,
+at most one VR17C map lookup, and either one private cohort manifest or one
+aggregate R2-R8 failure class.
+
+Eleven focused and all 4,587 dependency-light tests pass with 204 expected
+skips. Every authorization is false and packet preparation performed zero
+`.codex_work`, private, archive, neural, target, model, score, FW2/CIL1,
+network, hardware, release, or claim operation.
+
+Immediate gate: commit, push, and green this request, then add and green a
+proof-only request closeout. Only after that may VR18P be identified as the
+sole Tier C gate for fresh maintainer words. Keep the unrelated tracker
+inspection NDJSON untouched.

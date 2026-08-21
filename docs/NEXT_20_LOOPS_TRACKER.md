@@ -3524,3 +3524,19 @@ qualification or touching private state.
 Next gate: commit, push, and green the proof closeout. Then prepare, but do not
 execute, an all-false Tier C private-discriminator packet. FW2/CIL1 and every
 neural or scientific claim remain closed.
+
+### MARC2-VR18P - All-False Private Discriminator Request Prepared
+
+Green VR17C proof closeout `820592e` / CI `32473172345` precedes the request.
+It binds 20 committed inputs totaling 315,255 bytes and freezes a generated
+wrapper stage followed, only after later barriers and fresh Tier C authority,
+by one target-free structural read.
+
+The future output is either one bounded cohort or one aggregate R2-R8 class.
+The request itself has every authorization false and all operation counters
+zero. Eleven focused and 4,587 complete dependency-light tests pass with 204
+expected skips.
+
+Next gate: commit, push, and green the request, then green its proof-only
+closeout. Implementation, private access, FW2/CIL1, and scientific claims are
+not authorized.

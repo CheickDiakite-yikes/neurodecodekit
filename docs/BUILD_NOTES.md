@@ -12501,3 +12501,26 @@ private discriminator remains a new Tier C packet and decision.
 
 Immediate gate: commit, push, and green this proof-only closeout. Only then may
 an all-false future private-discriminator packet be prepared.
+
+### VR18P all-false private discriminator request
+
+- Began only after proof closeout
+  `820592e7a31de6c802fafa6b709506c3264179d6` passed Base Python job
+  `96744045204`, Optional Neuro Readers job `96744044972`, and CI
+  `32473172345`.
+- Bound 20 exact committed inputs totaling 315,255 bytes without checking or
+  opening any `.codex_work` path.
+- Froze a two-stage generated-wrapper then one-shot target-free structural
+  sequence. The future private ceiling is one 418,755-byte read, one VR16A
+  call, at most one VR17C map lookup, 2 MiB output, and no retry.
+- R1 alone may freeze a cohort. R4-R7 expose only the four aggregate generated-
+  qualified classes. R8 parks unknown or leaking evidence.
+- Eleven focused and all 4,587 dependency-light tests pass with 204 expected
+  skips in 115.841 seconds. Ruff, 335 registry parses, and diff hygiene pass.
+- Every authorization flag is false and every private, neural, model, score,
+  FW2/CIL1, network, hardware, other-project, release, and claim counter is
+  zero.
+
+Immediate gate: commit, push, and green the exact request, then add and green
+a non-scope-changing request proof closeout. No implementation or private read
+is authorized now.

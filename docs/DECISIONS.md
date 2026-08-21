@@ -10458,3 +10458,26 @@ release, or claim operations.
 Sequence decision: require this proof-only closeout's own commit to pass both
 remote jobs. Only then may Tier A prepare an all-false private-discriminator
 packet. The future private read remains Tier C and separately decision-bound.
+
+## 0345 - Freeze One First-Failure-Stable VR18P Request
+
+Proof decision: VR17C proof closeout
+`820592e7a31de6c802fafa6b709506c3264179d6` passed Base Python job
+`96744045204`, Optional Neuro Readers job `96744044972`, and CI
+`32473172345` before request preparation.
+
+Packet decision: bind 20 committed inputs totaling 315,255 bytes and request a
+two-stage sequence. Stage 1 is generated/mock fixed-path qualification. Stage
+2 is one future 418,755-byte target-free structural read, one VR16A call, and
+at most one VR17C map lookup, only after every separate proof barrier and a
+fresh packet-bound Tier C decision.
+
+Route decision: permit R1 to freeze one bounded structural cohort; R4-R7 retain
+only four aggregate generated-qualified task or companion classes; R2, R3,
+and R8 consume precondition, source-envelope, unknown, privacy, or resource
+failures. R8 parks instead of guessing.
+
+Authority decision: keep every request authorization false and every operation
+counter zero. Current and earlier `continue` messages are not retroactive.
+Require request remote green, a separately green request proof closeout,
+sole-gate identification, and fresh maintainer words before implementation.
