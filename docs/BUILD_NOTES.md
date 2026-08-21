@@ -12771,3 +12771,31 @@ closeout. A private confirmation packet remains ineligible.
 Immediate gate: commit, push, and green this exact proof-only closeout. A
 private confirmation packet may be prepared only after that proof and remains
 all-false until a separate packet-bound Tier C decision.
+
+### VR20P published-task private confirmation request prepared
+
+- VR20A proof closeout `9b5bea4b4aed21234cf3e79ae682ce1606ad2f44`
+  passed Base Python job `96788350279`, Optional Neuro Readers job
+  `96788350655`, and CI `32487854026` before this packet.
+- Bound 20 tracked predecessor artifacts totaling 297,031 bytes. The private
+  source identity is copied only from committed VR18P records; packet work
+  performed zero stats, resolves, hashes, opens, reads, parses, or existence
+  checks against `.codex_work`.
+- Froze a two-stage sequence: generated/mock fixed-path wrapper first; one
+  418,755-byte target-free structural read and one exact VR20A call only after
+  request proof, fresh Tier C decision, Stage 1 proof, and Stage 1 closeout.
+- Frozen coarse routes are R1 cohort success; R2 prerequisite; R3 source
+  envelope; R4 task/identity/path/companion; R5 taxonomy/selection/split/cap;
+  and R6 privacy/determinism/resource/unknown. Private reasons and identities
+  are forbidden from aggregate output.
+- Eleven focused tests and all 4,702 dependency-light tests pass with 204
+  expected skips in 150.926 seconds, exactly 11 tests above the 4,691-test
+  pre-change baseline. Focused Ruff, compilation, 347 registry parses, and
+  diff hygiene pass. Every current authorization flag is false and every
+  request operation counter is zero.
+
+Immediate gate: verify, commit, push, and green this exact all-false request,
+then add and green a non-scope-changing request proof closeout. Only afterward
+may VR20P be identified as the sole active Tier C gate for fresh maintainer
+words. No private read, cohort, neural payload, model, score, FW2/CIL1, or
+scientific claim is open.

@@ -2644,3 +2644,18 @@ after that remote proof may Tier A prepare a separate all-false private
 structural-confirmation packet. That packet would still require a fresh Tier C
 decision before any private read. Keep `.codex_work`, VR18P consumed state,
 and the unrelated tracker inspection NDJSON untouched.
+
+Proof-only closeout `9b5bea4` passed both required jobs in CI `32487854026`.
+The next gate is now prepared as `MARC2-VR20P`. Read
+`docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md` and
+`registries/marc2_published_task_private_confirmation_authorization_request.v0.json`.
+It is an all-false two-stage request: generated fixed-path wrapper
+qualification first, then only after every proof barrier and a fresh Tier C
+decision one 418,755-byte target-free structural read and one exact VR20A call.
+
+Commit, push, and green the exact request, then create and green a non-scope-
+changing request proof closeout. Only afterward identify VR20P as the sole
+active Tier C gate. Before a fresh decision, do not implement the wrapper or
+touch readiness, `.codex_work`, the private source, or an output root. FW2,
+CIL1, archive payload, neural data, targets, models, predictions, scores,
+release, and scientific claims remain closed.

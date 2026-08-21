@@ -3711,3 +3711,21 @@ Next gate: commit, push, and green the proof-only closeout. Only afterward may
 Tier A prepare one all-false private structural-confirmation packet; no private
 read, cohort, neural payload, score, FW2/CIL1 execution, or scientific claim is
 authorized.
+
+### MARC2-VR20P - Published-Task Private Confirmation Requested
+
+VR20A proof closeout `9b5bea4` passed both required jobs in CI `32487854026`.
+VR20P now freezes an all-false two-stage request: generated fixed-path wrapper
+qualification first, then one future 418,755-byte target-free structural read
+through exact VR20A only after every remote proof barrier and a fresh Tier C
+decision.
+
+The future public result is limited to one cohort-success route or five coarse
+refusal classes. It may not disclose a private reason, task value, filename,
+path, row, identity, participant, candidate, or outcome. Only cohort success
+could make a separate FW2 preregistration eligible; it would not authorize
+neural payload access.
+
+Next gate: commit, push, and green this request, then green a request proof-
+only closeout. No current decision, private read, cohort, neural work, score,
+FW2/CIL1 execution, or scientific claim exists.

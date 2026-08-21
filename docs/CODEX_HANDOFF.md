@@ -7012,3 +7012,22 @@ Immediate gate: commit, push, and green this exact closeout. After that proof,
 Tier A may prepare one separately frozen all-false private structural-
 confirmation packet. Do not access `.codex_work`, VR18P consumed state, the
 private source, an archive member, neural data, targets, models, or scores.
+
+## 2026-08-21 MARC2-VR20P Request Handoff
+
+VR20A proof closeout `9b5bea4b4aed21234cf3e79ae682ce1606ad2f44`
+passed Base Python job `96788350279`, Optional Neuro Readers job
+`96788350655`, and CI `32487854026`. Read the VR20P authorization packet,
+machine request, and matching test.
+
+The request binds 20 tracked inputs totaling 297,031 bytes and copies the
+418,755-byte private source identity only from committed records. It performs
+zero `.codex_work`, private, archive, neural, target, model, score, or FW2/CIL1
+operations. Every authority field is false.
+
+Commit, push, and green the exact request, then create a non-scope-changing
+request proof closeout and green that separately. Only afterward identify
+VR20P as the sole active Tier C gate and wait for fresh maintainer words. Do
+not treat the earlier `continue` as retroactive authority. Do not implement
+the wrapper or touch readiness, `.codex_work`, the private source, consumed
+VR18P state, or any real output root before a green decision.

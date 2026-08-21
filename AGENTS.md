@@ -4250,6 +4250,23 @@ touch `.codex_work`, VR18P consumed state, a private source, archive or neural
 payload, targets, models, scores, FW2/CIL1, other projects, release, or claims.
 No private execution is authorized by this closeout.
 
+Proof-only closeout `9b5bea4b4aed21234cf3e79ae682ce1606ad2f44`
+passed Base Python job `96788350279`, Optional Neuro Readers job
+`96788350655`, and CI `32487854026`. The next all-false gate is now prepared
+as `MARC2-VR20P`. Read
+`docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md` and
+`registries/marc2_published_task_private_confirmation_authorization_request.v0.json`.
+It requests generated fixed-path wrapper qualification and, only after all
+proof barriers plus a fresh packet-bound Tier C decision, one exact 418,755-
+byte target-free structural read through VR20A.
+
+Commit, push, and green the request, then create and green a separate request
+proof closeout. Only afterward identify VR20P as the sole active Tier C gate.
+The earlier `continue` is not retroactive. Before a fresh decision, do not
+implement the wrapper or touch readiness, `.codex_work`, the private source,
+consumed VR18P state, or an output root. FW2/CIL1, archive payload, neural
+data, targets, models, predictions, scores, release, and claims remain closed.
+
 ## Style
 
 - Small functions, explicit names, low magic.

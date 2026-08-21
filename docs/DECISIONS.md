@@ -10727,3 +10727,27 @@ Boundary decision: require this proof-only closeout to be pushed and both jobs
 green before an all-false private structural-confirmation packet may be
 prepared. The closeout authorizes no private read, cohort, archive or neural
 payload, target, model, score, FW2/CIL1, release, or scientific claim.
+
+## 0358 - Prepare VR20P As An All-False Published-Task Confirmation Request
+
+Proof decision: VR20A proof-only closeout
+`9b5bea4b4aed21234cf3e79ae682ce1606ad2f44` passed Base Python job
+`96788350279`, Optional Neuro Readers job `96788350655`, and CI
+`32487854026` before this request was prepared.
+
+Sequence decision: freeze `MARC2-VR20P` as a two-stage request. Stage 1 may
+later implement and generated-qualify a fixed-path wrapper over exact VR20A.
+Stage 2 may occur only after that wrapper and its separate proof closeout are
+remotely green, and may read the fixed 418,755-byte target-free structural
+source once before one exact VR20A call.
+
+Privacy decision: retain only R1 cohort success or one of five coarse refusal
+classes. Never retain or publish a private value, reason, exception, member
+name, path, row, identity, participant, candidate, or outcome. Only R1 may
+write a mode-`0600` source-exact cohort manifest.
+
+Boundary decision: this request is all-false and the current `continue` is not
+retroactive Tier C authority. Require request remote proof, a separate proof-
+only closeout, sole-gate identification, and a fresh packet-bound maintainer
+decision before implementation. No private read, neural payload, target,
+model, score, FW2/CIL1 execution, release, or scientific claim is authorized.
