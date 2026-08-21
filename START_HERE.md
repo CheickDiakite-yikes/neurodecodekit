@@ -7,52 +7,29 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR15P Generated Wrapper
+## Current Frontier: MARC2-VR15P Consumed At Run-Token Width
 
-Read
-`docs/MARC_2_SUFFIX_IDENTITY_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md`
-and its registry. It binds 17 committed predecessors totaling 308,187 bytes
-and proposes generated fixed-path wrapper proof before one future 418,755-byte
-target-free structural open. The future command may emit only one aggregate
-R1-R16 grammar class; it cannot freeze a cohort or access neural payloads.
-Every authorization field is false and every operation counter is zero.
+Read `docs/MARC_2_SUFFIX_IDENTITY_PRIVATE_DISCRIMINATOR_RESULT.md` and its
+machine registry. Portable activation `a9ebef4` passed Base job `96694803139`,
+Optional Neuro Readers job `96694803152`, and CI `32456531938` before the sole
+registered invocation.
 
-Exact request `08cef4b` passed Base job `96677085658`, Optional Neuro Readers
-job `96677085404`, and CI `32450174692`. Its proof-only closeout binds the
-three unchanged request artifacts totaling 29,112 bytes, changes no scope, and
-performs zero private or scientific operation.
+The command collected three fresh readiness samples, opened and strict-parsed
+exactly 418,755 target-free structural bytes once, called VR15A once with one
+nested unchanged VR12A call, and consumed at `MARC2VR15P-R15`. Runtime was
+10.096427 seconds at 29,016,064-byte peak RSS, combined output was 2,288 bytes,
+and network/new-payload bytes were zero.
 
-Proof closeout `8873796` passed Base job `96678759155`, Optional Neuro Readers
-job `96678759451`, and CI `32450773951`. Codex then identified VR15P as the
-sole Tier C packet, and the maintainer's next exact message was `continue`.
-The packet-bound decision records those eight bytes and binds only the
-unchanged two-stage request.
+R15 means only the run-token width class. The real structural source violates
+VR12A's frozen one-or-two-ASCII-digit `run-<index>` assumption, but the exact
+token, filename, path, row, identity, participant, selection, and cohort were
+not retained. No cohort, archive member, neural payload, signal, target, model,
+prediction, or score was accessed.
 
-Decision `fc694a6` passed Base job `96680587357`, Optional job `96680587199`,
-and CI `32451448725` before Stage 1. Read the VR15P implementation, generated
-result, implementation registry, module, and tests. Generated
-`MARC2VR15P-G1` passes 68 exact fixed-path calls across 17 generated cases,
-two source orders, and two replays. G1 and R1-R16 each occur four times, and
-all 111 direct refusals pass. The measured pass processed 29,199,868 generated
-bytes in 3.997942 seconds at 50,135,040-byte peak RSS, emitted 2,681 aggregate
-bytes, reached 429,857 temporary bytes, and retained zero.
-
-This remains generated structural engineering evidence only. Every private,
-ignored-path, archive, neural, target, model, prediction, score, FW2/CIL1,
-network, hardware, other-project, and claim counter is zero. Immediate gate:
-corrected exact Stage 1 `28a734d` passed Base job `96688236516`, Optional job
-`96688236752`, and CI `32454196219`.
-
-Read the VR15P implementation proof closeout and registry. They bind six exact
-proof-state artifacts totaling 77,152 bytes. Generated qualification is not
-repeated, and all private and scientific counters remain zero. Exact closeout
-`2acfb33` passed Base job `96690180933`, Optional job `96690181096`, and CI
-`32454892777`.
-
-Read the VR15P tracked-clean activation proof and registry. They bind the three
-exact closeout artifacts totaling 9,513 bytes and perform zero private
-operation. Commit, push, and green this activation record before the sole
-armed command. Until then, do not touch `.codex_work` or the private source.
+VR15P is consumed and cannot be retried or reinspected. The next safe work is
+an artifact-only and generated-only standards-compatible variable-width run-
+index repair. Any new private read, cohort freeze, neural access, FW2, or CIL1
+requires a new frozen Tier C packet and decision.
 
 ## Prior Frontier: MARC2-VR13P Consumed Invalid And Parked
 

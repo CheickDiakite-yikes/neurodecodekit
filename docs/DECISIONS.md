@@ -10142,3 +10142,19 @@ on historical Git objects being present in a shallow checkout.
 Boundary decision: change no implementation/runtime byte, route, threshold,
 source, authorization, output, or scientific contract. Require a fresh green
 Base and Optional CI pair before the sole private command.
+
+## 0328 - Consume VR15P At The Run-Token Width Class
+
+Proof decision: portable activation `a9ebef4` passed Base Python job
+`96694803139`, Optional Neuro Readers job `96694803152`, and CI `32456531938`.
+Only then issue the exact one-shot arm.
+
+Result decision: record consumed route `MARC2VR15P-R15` as the run-token width
+class. This falsifies only VR12A's one-or-two-ASCII-digit width assumption; do
+not infer or retain the private token, filename, path, row, identity,
+participant, selection, or cohort.
+
+Boundary decision: VR15P has no retry or reinspection and creates no cohort.
+The next safe lane is an artifact-only/generated-only variable-width numeric
+run-index repair. Any private, neural, target, model, score, FW2, or CIL1 work
+still requires a separate Tier C packet and decision.

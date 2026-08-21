@@ -3261,3 +3261,25 @@ and two replays for 68 exact unchanged VR12A calls under a 32 MiB input cap.
 
 Next gate: commit, push, and green the exact registration, then implement and
 measure the generated-only classifier. Private and neural work remains closed.
+
+### MARC2-VR15P - Private Suffix-Identity Discriminator (Consumed)
+
+The generated wrapper qualified all 17 grammar cases over 68 exact VR15A calls
+and 111 direct refusals. Corrected Stage 1 `28a734d` passed both jobs in CI
+`32454196219`; proof closeout `2acfb33` passed both in CI `32454892777`.
+
+The first activation attempt failed only because historical proof tests assumed
+a non-shallow checkout. Portable activation `a9ebef4` then passed Base job
+`96694803139`, Optional job `96694803152`, and CI `32456531938` before the sole
+private invocation.
+
+The target-free command consumed at `MARC2VR15P-R15` after one 418,755-byte
+structural open, one strict parse, one VR15A call, and one nested VR12A call.
+R15 is the run-token width class. This falsifies the frozen one/two-digit width
+assumption without retaining the actual token, filename, path, identity,
+participant, selection, or cohort. Runtime was 10.096427 seconds, peak RSS was
+29,016,064 bytes, output was 2,288 bytes, and network/new payload were zero.
+
+Next gate: specify and generated-qualify a variable-width numeric run-index
+repair. A new private confirmation, cohort freeze, neural payload, FW2, or CIL1
+operation requires a separate Tier C packet and fresh decision.

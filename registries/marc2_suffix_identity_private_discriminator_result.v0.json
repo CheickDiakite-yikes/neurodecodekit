@@ -1,0 +1,116 @@
+{
+  "schema_name": "neurodecodekit.marc2_suffix_identity_private_discriminator_result_record",
+  "schema_version": "0.1.0",
+  "result_id": "MARC-2-VR15P-suffix-identity-private-discriminator-result-v0",
+  "lane_id": "MARC2-VR15P",
+  "recorded_at_local": "2026-08-21",
+  "status": "consumed",
+  "route": "MARC2VR15P-R15",
+  "failed_activation_attempt": {
+    "commit": "64fa1144d9412b983796b3da2bdfd5904a1562a1",
+    "CI_run_id": 32455530795,
+    "base_python_job_id": 96691969852,
+    "optional_neuro_job_id": 96691969626,
+    "both_required_jobs_green": false,
+    "private_operations_after_failure": 0
+  },
+  "activation_remote_proof": {
+    "commit": "a9ebef4fb7cafdd281cfa1c4034a63ddcd08f0a1",
+    "CI_run_id": 32456531938,
+    "base_python_job_id": 96694803139,
+    "optional_neuro_job_id": 96694803152,
+    "both_required_jobs_green": true
+  },
+  "execution_proof_chain": {
+    "decision_commit": "fc694a69489913198f0a630bbb0edb04c29310f6",
+    "decision_CI_run_id": 32451448725,
+    "implementation_commit": "28a734df3fb0cb83c3cddb4994b76d8c9453830b",
+    "implementation_CI_run_id": 32454196219,
+    "proof_closeout_commit": "2acfb3318beb46ade294fdc3ff0fc21765e3ea17",
+    "proof_closeout_CI_run_id": 32454892777
+  },
+  "resources": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "input_bytes": 418755,
+    "output_bytes": 2288,
+    "runtime_seconds": 10.096426583011635,
+    "peak_RSS_bytes": 29016064,
+    "network_bytes": 0,
+    "new_payload_bytes": 0
+  },
+  "authorized_operations": {
+    "fresh_readiness_samples": 3,
+    "readiness_certificate_writes": 1,
+    "consumed_marker_writes": 1,
+    "private_structural_content_opens": 1,
+    "strict_JSON_parses": 1,
+    "VR15A_calls": 1,
+    "nested_VR12A_calls": 1,
+    "aggregate_report_writes": 1
+  },
+  "returned_forbidden_counters": {
+    "FW2_or_CIL1_operations": 0,
+    "archive_local_header_or_member_payload_operations": 0,
+    "consumed_VR13P_or_VR14P_path_or_output_operations": 0,
+    "derivative_cache_feature_split_or_NeuroToken_operations": 0,
+    "network_download_provider_language_model_operations": 0,
+    "operations_on_other_projects": 0,
+    "private_cohort_manifest_operations": 0,
+    "release_publication_or_scientific_claim_upgrades": 0,
+    "retry_rerun_resume_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "stream_device_or_hardware_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0
+  },
+  "post_execution_handling": {
+    "result_source": "execute_command_returned_aggregate_JSON_and_committed_route_table_only",
+    "ignored_source_or_output_list_operations": 0,
+    "ignored_source_or_output_reopens": 0,
+    "ignored_source_or_output_hash_operations": 0,
+    "private_reinspection_operations": 0,
+    "retry_rerun_resume_allowed": false
+  },
+  "route_interpretation": {
+    "frozen_class": "run_token_width_outside_one_or_two_ASCII_digits",
+    "narrow_width_assumption_falsified": true,
+    "failed_private_value_known": false,
+    "private_filename_path_row_or_identity_known": false,
+    "participant_candidate_selection_or_cohort_known": false,
+    "real_cohort_frozen": false,
+    "FW2_or_CIL1_eligible": false
+  },
+  "warnings": [
+    "This is a target-free structural result, not neural evidence.",
+    "No private token, identity, path, cohort, archive, signal, target, model, or score was retained.",
+    "MARC2-VR15P is consumed and has no retry, rerun, resume, repair, fallback, substitution, cleanup, or reinspection."
+  ],
+  "unavailable_fields": [
+    "failed_private_value",
+    "private_filename_path_row_or_identity",
+    "real_neural_cohort",
+    "neural_payload",
+    "neural_effect",
+    "decoding_accuracy",
+    "live_latency",
+    "FW2_result",
+    "CIL1_result"
+  ],
+  "next_gate": {
+    "artifact_only_generated_only_variable_width_run_repair_allowed_under_Tier_A_or_B": true,
+    "new_private_read_requires_separate_frozen_Tier_C_packet_and_decision": true,
+    "private_manifest_archive_or_neural_access_authorized": false,
+    "target_model_prediction_score_FW2_or_CIL1_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_capability": "aggregate real structural blocker localized to the run token width class under proof separated one shot controls",
+    "scientific_ceiling": "none",
+    "neural_payload_accessed": false,
+    "target_model_prediction_or_score_accessed": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "live_decoding": false
+  }
+}

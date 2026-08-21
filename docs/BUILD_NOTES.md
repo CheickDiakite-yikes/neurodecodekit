@@ -12170,3 +12170,24 @@ the sole armed private command.
 
 Immediate gate: pass local verification, commit, push, and require both remote
 jobs green before the sole armed private execution.
+
+### VR15P consumed structural result
+
+- Portable activation `a9ebef4fb7cafdd281cfa1c4034a63ddcd08f0a1`
+  passed Base job `96694803139`, Optional job `96694803152`, and CI
+  `32456531938` before execution.
+- The sole command collected three readiness samples, opened and strict-parsed
+  exactly 418,755 target-free structural bytes once, called VR15A once with one
+  nested VR12A call, and consumed at `MARC2VR15P-R15`.
+- R15 is the run-token width class. It falsifies the frozen one/two-digit
+  run-index assumption but retains no actual token, filename, path, identity,
+  participant, selection, or cohort.
+- Runtime was 10.096426583011635 seconds, peak RSS was 29,016,064 bytes,
+  combined output was 2,288 bytes, and network/new payload bytes were zero.
+- Archive, neural, signal, target, label, cache, feature, split, model,
+  training, inference, prediction, score, FW2/CIL1, release, and claim
+  operations were zero.
+
+Immediate next safe task: freeze an artifact-only/generated-only variable-
+width numeric run-index repair. Any new private read or cohort freeze remains a
+new Tier C gate.

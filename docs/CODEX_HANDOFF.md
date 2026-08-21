@@ -1,6 +1,19 @@
 # Codex Handoff - NeuroDecodeKit
 
-> Current MARC2-VR15P request, 2026-08-21: read the suffix-identity private
+> Current MARC2-VR15P result, 2026-08-21: portable activation `a9ebef4` passed
+> Base job `96694803139`, Optional job `96694803152`, and CI `32456531938`
+> before the sole invocation. The executor collected three fresh readiness
+> samples, opened and strict-parsed exactly 418,755 target-free structural
+> bytes once, called VR15A once with one nested VR12A call, and consumed at
+> `MARC2VR15P-R15`. R15 is only the run-token width class: the source violates
+> the frozen one-or-two-ASCII-digit run-index assumption. No exact token, path,
+> row, identity, participant, selection, or cohort was retained. Input was
+> 418,755 bytes, output 2,288 bytes, runtime 10.096427 seconds, and peak RSS
+> 29,016,064 bytes. VR15P has no retry or reinspection. Next: freeze and
+> generated-qualify a variable-width numeric run-index repair; any private
+> read, cohort, neural, target, model, score, FW2, or CIL1 work remains Tier C.
+
+> Prior MARC2-VR15P request, 2026-08-21: read the suffix-identity private
 > discriminator authorization packet and registry. The all-false request binds
 > 17 committed inputs totaling 308,187 bytes and proposes generated wrapper
 > proof before one future 418,755-byte target-free structural read. A future
@@ -6395,3 +6408,25 @@ source, archive, neural, target, model, score, FW2/CIL1, network, hardware, or
 claim operation. Commit, push, and green this exact activation. Only afterward
 run the one explicitly armed command. Keep the unrelated tracker inspection
 NDJSON untouched.
+
+## 2026-08-21 MARC2-VR15P Consumed Result Handoff
+
+Activation attempt `64fa114` failed both jobs in CI `32455530795` only because
+two historical proof tests assumed a non-shallow checkout. No private operation
+followed. Portable correction `a9ebef4fb7cafdd281cfa1c4034a63ddcd08f0a1`
+then passed Base job `96694803139`, Optional job `96694803152`, and CI
+`32456531938`.
+
+The sole armed command consumed at `MARC2VR15P-R15`: one 418,755-byte target-
+free structural open, one strict parse, one VR15A call, one nested VR12A call,
+10.096426583011635 seconds, 29,016,064-byte peak RSS, and 2,288 output bytes.
+R15 localizes only the run-token width class and falsifies the narrow one/two-
+digit repair assumption. It reveals no actual token, filename, path, identity,
+participant, or cohort.
+
+Do not touch the ignored VR15P source, readiness state, consumed marker, or
+output root. The next safe task is a separate artifact-only/generated-only
+variable-width run-index repair. Any new private read, cohort freeze, neural
+payload, target, model, score, FW2, or CIL1 operation requires a new Tier C
+packet and fresh decision. Keep the unrelated tracker inspection NDJSON
+untouched.
