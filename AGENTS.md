@@ -4172,6 +4172,20 @@ VR18P consumed state, archive or neural payload, targets, models, scores,
 FW2/CIL1, other projects, release, or claims. A future private read remains a
 new Tier C packet and decision.
 
+Exact VR19A implementation `fda3a3affc41a23997e19ea7a172e4d05e056a45`
+passed Base Python job `96769521785`, Optional Neuro Readers job
+`96769521608`, and CI `32481785128`. Read
+`docs/MARC_2_F04_TASK_IMPLICATION_PROOF_CLOSEOUT.md` and the matching proof
+test. The proof transition binds seven exact preproof Git blobs and changes no
+qualified module, route, witness, measurement, resource cap, or claim
+boundary. Qualification repetitions and private operations are zero.
+
+Commit, push, and green this exact proof-only closeout. After that, VR19A is
+closed as remotely proven generated engineering. Do not touch `.codex_work`,
+VR18P consumed state, private values, archive or neural payload, targets,
+models, scores, FW2/CIL1, other projects, release, or claims. Any private read
+remains a new Tier C packet and fresh decision.
+
 ## Style
 
 - Small functions, explicit names, low magic.

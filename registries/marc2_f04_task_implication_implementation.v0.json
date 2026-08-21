@@ -4,7 +4,7 @@
   "implementation_id": "MARC-2-VR19A-F04-task-implication-implementation-v0",
   "lane_id": "MARC2-VR19A",
   "recorded_at_local": "2026-08-21",
-  "status": "generated_qualified_remote_implementation_proof_pending",
+  "status": "generated_qualified_remote_implementation_proven_proof_closeout_pending",
   "green_registration_proof": {
     "commit": "9365b0ff7bfd5dbd3b37217a80ab01e6770de212",
     "CI_run_id": 32480420157,
@@ -19,11 +19,11 @@
     {"path": "tests/test_marc2_f04_task_implication.py", "bytes": 3575, "sha256": "1e6130886b8619a5782157be02d2106d6f43aebc1eab1b45cac57fb55abbe24f"},
     {"path": "docs/MARC_2_F04_TASK_IMPLICATION_IMPLEMENTATION.md", "bytes": 2639, "sha256": "2ac2d31776197cc9a4b12f6e09630fa5f1f55a50b98ced9e0849cb76d5eca000"},
     {"path": "docs/MARC_2_F04_TASK_IMPLICATION_RESULT.md", "bytes": 2115, "sha256": "1d16b6e9b2fcc640fa66f6af8046309ba9231ef884f6e71a0bccf7d7956cee94"},
-    {"path": "registries/marc2_f04_task_implication_result.v0.json", "bytes": 3211, "sha256": "3bd3c61ab6fff76f12ef671ae0a89c3cef4cef1806708147ffad69edaa086d54"},
-    {"path": "tests/test_marc2_f04_task_implication_records.py", "bytes": 3491, "sha256": "dcbf9258ca7609c9bff97038fa4721156641557bda2b4656a78d4b37e5030e6c"}
+    {"path": "registries/marc2_f04_task_implication_result.v0.json", "bytes": 4577, "sha256": "b4d17a286a7fef137624fa1fe22fc238da4a4a97ca8dd524811beaced78f9f5e"},
+    {"path": "tests/test_marc2_f04_task_implication_records.py", "bytes": 3897, "sha256": "1ddb3793ef9f44c8da9005603e0a27cacbe3bf8892b00103c2b82c15b2c1ce4a"}
   ],
   "owned_artifact_count": 6,
-  "owned_artifact_bytes": 40579,
+  "owned_artifact_bytes": 42351,
   "surface": {
     "module": "neurodecodekit.datasets.marc2_f04_task_implication",
     "commands": ["plan", "qualify"],
@@ -94,7 +94,28 @@
     "other_project_operations": 0,
     "retry_rerun_release_or_scientific_claim_upgrades": 0
   },
-  "remote_implementation_proof": null,
+  "remote_implementation_proof": {
+    "commit": "fda3a3affc41a23997e19ea7a172e4d05e056a45",
+    "CI_run_id": 32481785128,
+    "base_python_job_id": 96769521785,
+    "optional_neuro_job_id": 96769521608,
+    "both_required_jobs_green": true,
+    "scope_changed_after_qualification": false,
+    "qualification_route": "MARC2VR19A-G1",
+    "preproof_implementation_registry_bytes": 4799,
+    "preproof_implementation_registry_sha256": "243ec5f517a6e9485bab3ad0171e53fb1117bda17ccc6bb4bff9de2fb26ea45f",
+    "preproof_result_registry_bytes": 3211,
+    "preproof_result_registry_sha256": "3bd3c61ab6fff76f12ef671ae0a89c3cef4cef1806708147ffad69edaa086d54",
+    "implementation_module_Git_blob": "f842450143ff4b99caea5452adf0065ec455aafc",
+    "behavior_test_Git_blob": "4c005f58908ff301028903582309772ca49ee956",
+    "implementation_document_Git_blob": "74f837cd7c4d6393d91fb4373a3dea5daad1136b",
+    "result_document_Git_blob": "9d02054358f7031cbf46763a6997547abc69ef5c",
+    "preproof_implementation_registry_Git_blob": "e4d7479a172832d115b128ed0f221eb87bc7da62",
+    "preproof_result_registry_Git_blob": "b0070eab91fd0183db749ff365238840104892d1",
+    "preproof_record_test_Git_blob": "70a22566591377e11b149c2a9f8dbeba1af7ae9f",
+    "generated_qualification_repeated_for_proof_closeout": false,
+    "private_operations_during_proof_closeout": 0
+  },
   "claim_boundary": {
     "engineering_capability": "exact non-freewill task-class implication under bound VR16A semantics",
     "scientific_ceiling": "none",
@@ -105,9 +126,9 @@
     "live_decoding": false
   },
   "warnings": [
-    "Generated qualification only; exact implementation remote proof is pending.",
+    "The exact generated implementation is remotely green; this proof-only closeout still requires its own remote-green barrier.",
     "The result identifies a class under bound code semantics, not a private token.",
     "VR18P remains consumed with no retry or private reinspection."
   ],
-  "next_gate": "Commit push and green exact implementation and result then add a proof-only closeout without repeating qualification."
+  "next_gate": "Commit push and green this proof-only closeout without repeating qualification or performing any private operation."
 }

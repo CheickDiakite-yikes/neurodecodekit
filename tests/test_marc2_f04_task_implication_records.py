@@ -58,7 +58,14 @@ class Marc2F04TaskImplicationRecordTests(unittest.TestCase):
         self.assertTrue(
             all(value == 0 for value in self.result["operation_counters"].values())
         )
-        self.assertIsNone(self.result["remote_implementation_proof"])
+        proof = self.result["remote_implementation_proof"]
+        self.assertEqual(self.implementation["remote_implementation_proof"], proof)
+        self.assertEqual(
+            proof["commit"], "fda3a3affc41a23997e19ea7a172e4d05e056a45"
+        )
+        self.assertTrue(proof["both_required_jobs_green"])
+        self.assertFalse(proof["generated_qualification_repeated_for_proof_closeout"])
+        self.assertEqual(proof["private_operations_during_proof_closeout"], 0)
 
     def test_documents_preserve_private_and_scientific_boundary(self):
         for name in (

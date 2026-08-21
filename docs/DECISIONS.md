@@ -10627,3 +10627,20 @@ selection, cohort, or behavior outside that code version.
 Boundary decision: require exact implementation/result remote green and a
 proof-only closeout before any later packet. No private read, neural payload,
 target, model, score, FW2/CIL1, release, or scientific claim is authorized.
+
+## 0353 - Bind The VR19A Exact Remote Implementation Proof
+
+Proof decision: exact implementation/result commit
+`fda3a3affc41a23997e19ea7a172e4d05e056a45` passed Base Python job
+`96769521785`, Optional Neuro Readers job `96769521608`, and CI
+`32481785128`.
+
+Integrity decision: bind the two exact preproof registry byte/hash identities
+and seven Git blobs from that implementation commit. Permit only record/test
+updates required to assert the proof; change no qualification code, witness,
+route, measurement, resource cap, or claim boundary.
+
+Boundary decision: repeat no qualification and perform no private or ignored-
+path operation. Require this closeout's own remote-green proof before VR19A is
+closed. Any later private read remains a new Tier C packet and decision; no
+neural work, score, FW2/CIL1 execution, release, or scientific claim follows.

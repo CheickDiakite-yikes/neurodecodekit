@@ -2589,3 +2589,13 @@ RSS, 2,326 output bytes, and zero retention.
 Immediate gate: commit, push, and green the exact implementation/result, then
 green a proof-only closeout. No private read, cohort, neural evidence, model,
 score, FW2/CIL1 execution, or scientific claim is open.
+
+Exact implementation `fda3a3a` passed both required jobs in CI `32481785128`.
+The proof-only closeout now binds that commit, both job IDs, the two preproof
+registry hashes, and seven exact Git blobs. It repeats no qualification and
+performs zero private operations.
+
+Immediate gate: commit, push, and green this exact closeout. After that,
+VR19A is closed as generated structural engineering. Any private task-token
+read remains a new Tier C packet; no cohort, neural evidence, model, score,
+FW2/CIL1 execution, or scientific claim is open.

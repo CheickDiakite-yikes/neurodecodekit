@@ -6921,3 +6921,19 @@ Immediate gate: commit, push, and green the implementation/result, then add
 and green a proof-only closeout without rerunning qualification. Keep VR18P
 `.codex_work`, all consumed/private state, and the unrelated tracker inspection
 NDJSON untouched.
+
+## 2026-08-21 MARC2-VR19A Proof Closeout Handoff
+
+Exact implementation `fda3a3affc41a23997e19ea7a172e4d05e056a45` passed
+Base Python job `96769521785`, Optional Neuro Readers job `96769521608`, and
+CI `32481785128`.
+
+Read the VR19A proof closeout and matching proof test. The transition binds
+seven preproof Git blobs plus the exact preproof registry sizes and hashes. It
+does not repeat qualification and performs no private, consumed-state, neural,
+target, model, score, FW2/CIL1, network, hardware, other-project, release, or
+claim operation.
+
+Immediate gate: commit, push, and green this exact proof-only closeout. Keep
+VR18P `.codex_work`, all private/consumed state, and the unrelated tracker
+inspection NDJSON untouched. Any future private read remains Tier C.
