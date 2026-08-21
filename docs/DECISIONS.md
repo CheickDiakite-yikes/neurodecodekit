@@ -10193,3 +10193,19 @@ Boundary decision: this is generated engineering evidence only. Require exact
 remote implementation proof before preparing a separate all-false private
 confirmation packet. Real/private, cohort, archive, neural, target, model,
 score, FW2/CIL1, release, and scientific-claim authority remain absent.
+
+## 0331 - Close VR16A With Exact Remote Proof
+
+Proof decision: exact implementation `6f92b84c7be67848c7d09b567f13b08a14d33f5c`
+passed Base Python job `96704807926`, Optional Neuro Readers job
+`96704808178`, and CI `32459984049`. Bind the six implementation artifacts by
+their exact Git blobs without rerunning qualification.
+
+Boundary decision: change only proof metadata and frontier documentation.
+Perform zero private/ignored-path, consumed-state, structural-source, archive,
+neural, target, model, score, FW2/CIL1, network, hardware, release, or claim
+operation.
+
+Sequence decision: commit, push, and green this proof-only closeout. Only then
+may Tier A prepare an all-false private structural-confirmation packet; the
+future private read itself remains Tier C and separately decision-bound.

@@ -12237,3 +12237,19 @@ implementation.
 Immediate gate: run final integrated verification, commit, push, and require
 both CI jobs green. A real source confirmation remains a new Tier C packet and
 fresh decision.
+
+### VR16A remote proof closeout
+
+- Exact implementation `6f92b84c7be67848c7d09b567f13b08a14d33f5c`
+  passed Base job `96704807926`, Optional job `96704808178`, and CI
+  `32459984049`.
+- Bound the module, behavior test, implementation/result documents, and both
+  preproof registries by exact Git blob.
+- Generated qualification repetitions, readiness checks, consumed-state or
+  private/ignored-path operations, real structural reads, archives, neural
+  data, targets, models, scores, FW2/CIL1, network, hardware, release, and
+  claim operations during closeout: zero.
+
+Immediate gate: commit, push, and green this proof-only transition. Then Tier A
+may prepare one all-false private-confirmation packet; no private access is
+authorized by the closeout.

@@ -2384,7 +2384,8 @@ source-exact names for companion and storage accounting. Generated route
 2.224372999975458 seconds at 34,717,696-byte peak RSS. Six distinct lexical
 sources produced the same frozen semantic selection digest.
 
-This is engineering evidence, not real-source or neural evidence. First green
-the exact implementation/result commit in both CI jobs. Any later real
-confirmation, cohort freeze, archive member, neural payload, FW2, or CIL1 step
-requires its own frozen Tier C packet and fresh decision.
+This is engineering evidence, not real-source or neural evidence. Exact
+implementation `6f92b84` passed both jobs in CI `32459984049`. Tier A may now
+prepare an all-false private-confirmation packet, but any real confirmation,
+cohort freeze, archive member, neural payload, FW2, or CIL1 step requires that
+separate frozen Tier C packet and a fresh decision.

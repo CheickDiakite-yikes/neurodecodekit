@@ -13,6 +13,21 @@ IMPLEMENTATION_PATH = (
 RESULT_PATH = (
     ROOT / "registries" / "marc2_variable_width_run_index_repair_result.v0.json"
 )
+EXPECTED_REMOTE_PROOF = {
+    "commit": "6f92b84c7be67848c7d09b567f13b08a14d33f5c",
+    "CI_run_id": 32_459_984_049,
+    "base_python_job_id": 96_704_807_926,
+    "optional_neuro_job_id": 96_704_808_178,
+    "both_required_jobs_green": True,
+    "implementation_module_Git_blob": "92d9bc4c2de6c34d9f26e64d728e6eb85f465e5b",
+    "behavior_test_Git_blob": "c9e8bf0526e2b79748cd3a9abde324b5c109038b",
+    "implementation_document_Git_blob": "bba1f88ad459f9ec4a88ee7dd08f59e5c807b434",
+    "result_document_Git_blob": "aa1b32659664c655f2dfd091279feaf77a623c57",
+    "preproof_implementation_registry_Git_blob": "84d8babac29ebb5ae7eea4fe1153e643ecc39b77",
+    "preproof_result_registry_Git_blob": "5f001092ee20284423747c6956469a3cd04b15a9",
+    "generated_qualification_repeated_for_proof_closeout": False,
+    "private_operation_repeated_for_proof_closeout": False,
+}
 
 
 def _sha256(path: Path) -> str:
@@ -33,8 +48,14 @@ class Marc2VariableWidthRunIndexRepairRecordTests(unittest.TestCase):
             self.implementation["green_registration_proof"],
             self.result["green_registration_proof"],
         )
-        self.assertIsNone(self.implementation["remote_implementation_proof"])
-        self.assertIsNone(self.result["remote_implementation_proof"])
+        self.assertEqual(
+            self.implementation["remote_implementation_proof"],
+            EXPECTED_REMOTE_PROOF,
+        )
+        self.assertEqual(self.result["remote_implementation_proof"], EXPECTED_REMOTE_PROOF)
+        self.assertFalse(
+            self.implementation["local_verification"]["remote_CI_pending"]
+        )
 
     def test_owned_artifact_sizes_and_hashes_are_exact(self):
         for artifact in self.implementation["tracked_implementation_artifacts"]:

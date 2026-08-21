@@ -6481,8 +6481,12 @@ The full source inventory may contain semantic run values beyond 1/2/3; only
 the selected split remains frozen to runs 1/2/3. Do not reintroduce the rejected
 inventory-wide restriction.
 
-Immediate gate: commit, push, and green the exact implementation/result in
-both CI jobs. Only afterward may Tier A prepare an all-false real structural
-confirmation packet. No real read, cohort freeze, neural payload, FW2, or CIL1
-operation is currently authorized. Keep consumed VR15P and the unrelated
-tracker inspection NDJSON untouched.
+Exact implementation `6f92b84c7be67848c7d09b567f13b08a14d33f5c`
+passed Base job `96704807926`, Optional job `96704808178`, and CI
+`32459984049`. Read the proof-only closeout and updated machine records; no
+qualification or private operation was repeated.
+
+Immediate gate: commit, push, and green this proof-only closeout. Then Tier A
+may prepare an all-false real structural-confirmation packet. No real read,
+cohort freeze, neural payload, FW2, or CIL1 operation is currently authorized.
+Keep consumed VR15P and the unrelated tracker inspection NDJSON untouched.
