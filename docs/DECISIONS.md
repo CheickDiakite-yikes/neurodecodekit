@@ -10546,3 +10546,22 @@ implementation/result commit and both jobs green, then a separately green
 proof-only closeout, before the one private Stage 2 invocation. Repeat no
 qualification during closeout and perform no private, neural, model, score,
 FW2/CIL1, release, or claim operation.
+
+## 0349 - Bind Exact VR18P Stage 1 Before One Private Invocation
+
+Proof decision: exact Stage 1 implementation
+`668812367acd8ca3ae9d0603dcde9b4b5aa02d58` passed Base Python job
+`96756873128`, Optional Neuro Readers job `96756873357`, and CI
+`32477528982`. Bind that proof plus seven exact preproof Git blobs and the
+literal preproof registry byte counts and SHA-256 values.
+
+Test decision: change no production module or measured result. Inject a null
+implementation record into the F01 refusal test so it remains proof-safe after
+the registry advances, and update the record test to require the exact remote
+proof. Repeat no generated qualification.
+
+Sequence decision: keep private execution unavailable until this closeout's
+own exact commit passes both remote jobs. Then permit exactly the one existing
+packet-bound Stage 2 invocation, with one target-free structural read and no
+retry or reinspection. Do not infer FW2/CIL1 authority or any neural,
+decoding, release, or scientific claim.

@@ -56,14 +56,23 @@ class Marc2FirstFailureStablePrivateDiscriminatorImplementationTests(
         self.assertLess(result["runtime_seconds"], 60)
         self.assertLess(result["peak_RSS_bytes"], 256 * 1024**2)
 
-    def test_result_record_matches_and_private_execution_is_closed(self):
+    def test_result_record_matches_and_remote_proof_is_exact(self):
         self.assertEqual(self.result["lane_id"], "MARC2-VR18P")
         self.assertEqual(self.result["route"], "MARC2VR18P-G1")
         self.assertEqual(
             self.result["matrix"]["replay_sha256"],
             "5c214a1e9e5b3aa53b30931ff2d4573b675cb9bf18b41753b0da2eaae9c8bd35",
         )
-        self.assertIsNone(self.record["remote_implementation_proof"])
+        proof = self.record["remote_implementation_proof"]
+        self.assertEqual(proof["commit"], "668812367acd8ca3ae9d0603dcde9b4b5aa02d58")
+        self.assertEqual(proof["CI_run_id"], 32_477_528_982)
+        self.assertEqual(proof["base_python_job_id"], 96_756_873_128)
+        self.assertEqual(proof["optional_neuro_job_id"], 96_756_873_357)
+        self.assertTrue(proof["both_required_jobs_green"])
+        self.assertFalse(proof["scope_changed_after_qualification"])
+        self.assertFalse(proof["qualification_repeated_for_proof_closeout"])
+        self.assertEqual(proof["private_operations_during_proof_closeout"], 0)
+        self.assertEqual(self.result["remote_implementation_proof"], proof)
         self.assertFalse(self.record["private_execution_authorized_now"])
         self.assertFalse(self.result["private_execution_authorized_now"])
 

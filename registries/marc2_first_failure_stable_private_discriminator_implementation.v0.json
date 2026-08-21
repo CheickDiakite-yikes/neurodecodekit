@@ -4,7 +4,7 @@
   "implementation_id": "MARC-2-VR18P-first-failure-stable-private-discriminator-implementation-v0",
   "lane_id": "MARC2-VR18P",
   "recorded_at_local": "2026-08-21",
-  "status": "stage_1_generated_qualified_remote_proof_pending_private_stage_closed",
+  "status": "stage_1_exact_implementation_remotely_green_proof_closeout_pending_own_remote_barrier",
   "proof_posture": "tracked_generated_interface_only_no_private_real_or_scientific_operation",
   "green_decision_proof": {
     "commit": "5113be7fee63d769276a781c0ed3af5ac2bbf567",
@@ -66,8 +66,8 @@
     },
     {
       "path": "tests/test_marc2_first_failure_stable_private_discriminator.py",
-      "bytes": 6912,
-      "sha256": "83869e9a60c6b5e935928292d0c18c355ab90f81d09aa54af87b46de98aad6dd"
+      "bytes": 7271,
+      "sha256": "a5ebdb780ef4881fd7be63f2e70880997f78ad1fe6e7ba4bdd2498428452ee4b"
     },
     {
       "path": "docs/MARC_2_FIRST_FAILURE_STABLE_PRIVATE_DISCRIMINATOR_IMPLEMENTATION.md",
@@ -81,12 +81,12 @@
     },
     {
       "path": "tests/test_marc2_first_failure_stable_private_discriminator_implementation.py",
-      "bytes": 3438,
-      "sha256": "3056123ca6d008dd8582a00f324119abe60d0e085ff9a66fa96c81406178134f"
+      "bytes": 4071,
+      "sha256": "3299d88751069eca25caa946a181983e01f977fb2cd8bec26fbba7d8a2111b9b"
     }
   ],
   "owned_artifact_count": 5,
-  "owned_artifact_bytes": 63591,
+  "owned_artifact_bytes": 64583,
   "interface": {
     "module": "neurodecodekit.datasets.marc2_first_failure_stable_private_discriminator",
     "commands": ["plan", "qualify", "inspect", "execute"],
@@ -192,10 +192,24 @@
     "retry_rerun_resume_operations": 0,
     "scientific_claim_upgrades": 0
   },
-  "remote_implementation_proof": null,
+  "remote_implementation_proof": {
+    "commit": "668812367acd8ca3ae9d0603dcde9b4b5aa02d58",
+    "CI_run_id": 32477528982,
+    "base_python_job_id": 96756873128,
+    "optional_neuro_job_id": 96756873357,
+    "both_required_jobs_green": true,
+    "scope_changed_after_qualification": false,
+    "qualification_route": "MARC2VR18P-G1",
+    "preproof_implementation_registry_bytes": 8361,
+    "preproof_implementation_registry_sha256": "fe57de79cd7891f6d60b975bbe4373d5810b57c540c255335337414b08d5af50",
+    "preproof_result_registry_bytes": 3654,
+    "preproof_result_registry_sha256": "478d23e4f52646bb237e4ef6a38e65401c6315f84febc4c9c20a366f585db403",
+    "qualification_repeated_for_proof_closeout": false,
+    "private_operations_during_proof_closeout": 0
+  },
   "private_execution_authorized_now": false,
   "next_gate": {
-    "exact_implementation_and_result_commit_push_and_both_jobs_green_required": true,
+    "exact_implementation_and_result_commit_push_and_both_jobs_green_required": false,
     "proof_only_closeout_commit_push_and_both_jobs_green_required": true,
     "private_stage_may_execute_before_both_proofs_green": false,
     "one_private_execution_only_after_both_proofs": true,
@@ -213,7 +227,7 @@
   },
   "warnings": [
     "Generated qualification demonstrates interface mechanics only.",
-    "The implementation proof and proof-only closeout are not remotely green yet.",
+    "The exact implementation is remotely green; the proof-only closeout is not remotely green yet.",
     "Private Stage 2, FW2, CIL1, neural work, and scientific claims remain closed."
   ]
 }

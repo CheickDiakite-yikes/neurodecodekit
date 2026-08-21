@@ -6838,3 +6838,22 @@ Then bind the exact blobs in a separate proof-only closeout and green it
 without repeating qualification. The implementation proof is null and
 `execute` refuses before readiness/private preflight. Keep `.codex_work`, all
 private/consumed state, and the unrelated tracker inspection NDJSON untouched.
+
+## 2026-08-21 MARC2-VR18P Stage 1 Proof Closeout Handoff
+
+Exact Stage 1 implementation `668812367acd8ca3ae9d0603dcde9b4b5aa02d58`
+passed Base Python job `96756873128`, Optional Neuro Readers job
+`96756873357`, and CI `32477528982`.
+
+Read the VR18P proof-closeout document, updated implementation/result
+registries, proof-safe behavior test, updated record test, and new closeout
+test. The closeout binds seven exact preproof Git blobs. It changes no
+production module or measured qualification, repeats no qualification, and
+performs zero readiness or private operation.
+
+Immediate gate: commit, push, and green this exact closeout. Only then may the
+existing decision authorize one Stage 2 target-free structural invocation.
+Do not run `execute`, touch `.codex_work`, inspect private or consumed state,
+or stage the unrelated tracker inspection NDJSON before that proof. The future
+invocation has no retry, rerun, resume, repair, fallback, substitution, or
+private reinspection.

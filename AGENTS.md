@@ -4094,6 +4094,24 @@ qualification. Only after both barriers pass may the one registered Stage 2
 invocation run. Do not touch `.codex_work`, any private or consumed path, or
 the unrelated tracker inspection NDJSON before then.
 
+Exact Stage 1 implementation `668812367acd8ca3ae9d0603dcde9b4b5aa02d58`
+passed Base Python job `96756873128`, Optional Neuro Readers job
+`96756873357`, and CI `32477528982`. Read
+`docs/MARC_2_FIRST_FAILURE_STABLE_PRIVATE_DISCRIMINATOR_PROOF_CLOSEOUT.md`
+and the updated implementation/result registries. The closeout binds seven
+exact preproof Git blobs and changes no production module or measured result.
+The two test-only changes keep proof-null refusal explicit and assert the exact
+remote proof; registered qualification repetitions and private operations are
+zero.
+
+Commit, push, and green this proof-only closeout before the sole Stage 2
+invocation. Until then, `private_execution_authorized_now` remains false. Do
+not run `execute`, collect readiness, touch `.codex_work`, inspect the private
+source, or create the real output root. After both jobs are green, the existing
+packet and decision permit exactly one 418,755-byte target-free structural
+execution with no retry. FW2, CIL1, archive payload, neural data, targets,
+models, predictions, scores, release, and scientific claims remain closed.
+
 ## Style
 
 - Small functions, explicit names, low magic.

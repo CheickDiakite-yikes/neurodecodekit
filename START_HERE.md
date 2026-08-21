@@ -2539,3 +2539,14 @@ commit, push, and green the exact implementation/result, then green a separate
 proof-only closeout. The implementation proof is null now, so `execute`
 refuses before readiness or private access. No neural or scientific result was
 created.
+
+Exact VR18P Stage 1 `6688123` passed both required jobs in CI `32477528982`.
+The proof-only closeout now binds that exact implementation and seven preproof
+Git blobs without rerunning qualification or touching private state. The
+production wrapper and measured generated result are unchanged; only the
+proof-null refusal test and proof record test advance with the registry.
+
+Next gate: commit, push, and green this closeout. Only then may the one already
+decision-bound target-free structural invocation run. Until that proof,
+readiness, `.codex_work`, the private source, and the real output root remain
+closed. FW2/CIL1 and every neural or scientific claim remain closed.

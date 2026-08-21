@@ -4,7 +4,7 @@
   "result_id": "MARC-2-VR18P-generated-stage-1-result-v0",
   "lane_id": "MARC2-VR18P",
   "recorded_at_local": "2026-08-21",
-  "status": "generated_qualification_passed_private_stage_proof_gated",
+  "status": "generated_qualification_and_exact_implementation_remote_proof_passed_closeout_remote_proof_pending",
   "route": "MARC2VR18P-G1",
   "green_decision_proof": {
     "commit": "5113be7fee63d769276a781c0ed3af5ac2bbf567",
@@ -73,10 +73,24 @@
     "retry_rerun_resume_operations": 0,
     "scientific_claim_upgrades": 0
   },
-  "remote_implementation_proof": null,
+  "remote_implementation_proof": {
+    "commit": "668812367acd8ca3ae9d0603dcde9b4b5aa02d58",
+    "CI_run_id": 32477528982,
+    "base_python_job_id": 96756873128,
+    "optional_neuro_job_id": 96756873357,
+    "both_required_jobs_green": true,
+    "scope_changed_after_qualification": false,
+    "qualification_route": "MARC2VR18P-G1",
+    "preproof_implementation_registry_bytes": 8361,
+    "preproof_implementation_registry_sha256": "fe57de79cd7891f6d60b975bbe4373d5810b57c540c255335337414b08d5af50",
+    "preproof_result_registry_bytes": 3654,
+    "preproof_result_registry_sha256": "478d23e4f52646bb237e4ef6a38e65401c6315f84febc4c9c20a366f585db403",
+    "qualification_repeated_for_proof_closeout": false,
+    "private_operations_during_proof_closeout": 0
+  },
   "private_execution_authorized_now": false,
   "next_gate": {
-    "implementation_commit_push_and_both_jobs_green_required": true,
+    "implementation_commit_push_and_both_jobs_green_required": false,
     "separate_proof_only_closeout_remote_green_required": true,
     "private_stage_may_execute_now": false,
     "FW2_or_CIL1_authorized": false
@@ -95,7 +109,7 @@
   "warnings": [
     "This is generated structural qualification only.",
     "No private source, neural payload, target, model, prediction, or score was accessed.",
-    "Private Stage 2 remains closed until two separate remote proof barriers pass."
+    "Private Stage 2 remains closed until the proof-only closeout's separate remote barrier passes."
   ],
   "unavailable_fields": [
     "private_route",

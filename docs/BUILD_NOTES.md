@@ -12581,3 +12581,22 @@ proof-only closeout.
 Immediate gate: commit, push, and green the exact implementation/result. Then
 add and green a separate proof-only closeout without repeating qualification.
 Private Stage 2 remains mechanically closed by a null implementation proof.
+
+### VR18P exact Stage 1 remotely green
+
+- Exact implementation `668812367acd8ca3ae9d0603dcde9b4b5aa02d58`
+  passed Base Python job `96756873128`, Optional Neuro Readers job
+  `96756873357`, and CI `32477528982`.
+- Added a proof-only closeout binding seven exact preproof Git blobs plus the
+  preproof implementation/result registry byte counts and SHA-256 values.
+- The production wrapper, generated fixture, route table, fixed paths,
+  measurements, resource caps, and claim boundary are unchanged.
+- Hardened the proof-null refusal test with an injected null implementation
+  record and changed the record test to assert the exact remote proof.
+- Ten proof-focused tests pass. Qualification repetitions and every readiness,
+  private, archive, neural, target, model, score, FW2/CIL1, network, hardware,
+  other-project, retry, release, and claim operation are zero.
+
+Immediate gate: commit, push, and green this proof-only closeout. Only after
+both jobs pass may the one registered Stage 2 invocation run; there is no
+retry or private reinspection.

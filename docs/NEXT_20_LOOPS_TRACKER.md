@@ -3578,3 +3578,19 @@ skips.
 Next gate: commit, push, and green the implementation/result, then green a
 separate proof-only closeout. Private Stage 2, FW2/CIL1, and scientific claims
 remain closed.
+
+### MARC2-VR18P - Exact Stage 1 Remotely Green
+
+Exact implementation `6688123` passed Base Python job `96756873128`, Optional
+Neuro Readers job `96756873357`, and CI `32477528982`. The proof-only closeout
+binds seven exact preproof Git blobs and updates only proof state plus two
+proof-safety tests; the production wrapper and measured generated result are
+unchanged.
+
+Ten proof-focused tests pass. Qualification repetitions and private operations
+remain zero.
+
+Next gate: commit, push, and green the closeout. Only then run the one already
+decision-bound 418,755-byte target-free structural invocation. It has no
+retry. FW2/CIL1, neural payload access, targets, models, scores, and scientific
+claims remain closed.

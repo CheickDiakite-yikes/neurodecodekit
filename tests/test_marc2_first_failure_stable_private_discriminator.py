@@ -67,8 +67,17 @@ class Marc2FirstFailureStablePrivateDiscriminatorTests(unittest.TestCase):
         self.assertEqual(report["claim_boundary"]["scientific_ceiling"], "none")
 
     def test_execute_refuses_before_readiness_or_private_path_access(self):
+        record = {
+            "schema_name": (
+                "neurodecodekit."
+                "marc2_first_failure_stable_private_discriminator_implementation"
+            ),
+            "lane_id": "MARC2-VR18P",
+            "remote_implementation_proof": None,
+        }
         with (
             mock.patch.dict(vr18p.os.environ, vr18p.THREAD_ENVIRONMENT),
+            mock.patch.object(vr18p, "_load_implementation", return_value=record),
             mock.patch.object(vr18p, "_collect_readiness") as readiness,
             mock.patch.object(vr18p, "_preflight_private_source") as preflight,
             self.assertRaises(
