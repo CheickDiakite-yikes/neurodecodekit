@@ -114,8 +114,14 @@ at most 65,536 bytes, after a fresh decision plus separate green implementation
 and proof barriers. The structural source, readiness, marker, private manifest,
 archive, neural data, targets, models, scores, FW2/CIL1, and claims stay closed.
 
-Immediate gate: commit, push, and green the exact VR14P packet. Only then may
-it be identified as the sole Tier C gate for new packet-bound maintainer words.
+Exact VR14P packet `d920e8eeaf7a7e9c980232c5de59f0e390c374be`
+passed Base job `96657974654`, Optional Neuro Readers job `96657974564`, and
+CI `32443248466`. Its request proof closeout binds the three unchanged packet
+artifacts totaling 13,334 bytes and performs zero ignored-path operations.
+
+Immediate gate: commit, push, and green the proof closeout. Only then may
+VR14P be identified as the sole Tier C gate for new packet-bound maintainer
+words.
 
 ## Prior Frontier: MARC2-VR11P Consumed At Structural Route R2
 

@@ -3201,5 +3201,10 @@ payload, targets, models, scores, FW2/CIL1, network, retry, and claim surfaces
 remain closed. R1 would make only a separate private-manifest recovery packet
 eligible; R2-R8 would recover one aggregate structural class.
 
-Next gate: commit, push, and green the exact packet, then identify VR14P as the
-sole Tier C gate for fresh packet-bound maintainer words.
+Exact packet `d920e8e` passed Base job `96657974654`, Optional job
+`96657974564`, and CI `32443248466`. Its proof closeout binds three unchanged
+request artifacts totaling 13,334 bytes and performs zero ignored-path or
+scientific operations.
+
+Next gate: commit, push, and green the proof closeout, then identify VR14P as
+the sole Tier C gate for fresh packet-bound maintainer words.

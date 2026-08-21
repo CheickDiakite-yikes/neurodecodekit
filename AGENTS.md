@@ -503,8 +503,16 @@ implementation and proof barriers, by one no-follow open of the existing
 aggregate report capped at 65,536 bytes. It forbids every other ignored path,
 including the structural source, readiness, marker, and private manifest. All
 authorization fields are false and all current operation counters are zero.
-Commit, push, and green the packet before identifying it as the sole Tier C
-gate. No current or earlier `continue` authorizes VR14P implementation or
+Exact packet `d920e8eeaf7a7e9c980232c5de59f0e390c374be` passed Base job
+`96657974654`, Optional Neuro Readers job `96657974564`, and CI
+`32443248466`. Read
+`docs/MARC_2_INCIDENT_AGGREGATE_RECOVERY_REQUEST_PROOF_CLOSEOUT.md` and
+`registries/marc2_incident_aggregate_recovery_request_proof.v0.json`. This
+proof closeout binds three unchanged request artifacts totaling 13,334 bytes,
+changes no scope, and performs zero ignored-path or scientific operations. It
+has delayed effect until its own commit is pushed and both jobs are green.
+Only then may VR14P be identified as the sole Tier C gate for a fresh decision.
+No current or earlier `continue` authorizes VR14P implementation or
 ignored-output access.
 
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`

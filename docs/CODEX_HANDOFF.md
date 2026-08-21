@@ -6203,6 +6203,12 @@ fixed wrapper and, only after separate green implementation/proof barriers,
 open the existing aggregate report once at no more than 65,536 bytes. Every
 other ignored path is forbidden.
 
-Immediate gate: commit, push, and green the packet. Only then identify VR14P
-as the sole Tier C gate for fresh maintainer words. Keep the unrelated tracker
-inspection NDJSON untouched.
+Exact packet `d920e8eeaf7a7e9c980232c5de59f0e390c374be` passed Base job
+`96657974654`, Optional job `96657974564`, and CI `32443248466`. Read the
+VR14P request proof closeout, machine proof, and test. They bind the three
+unchanged request artifacts totaling 13,334 bytes and perform zero ignored-
+path or scientific operations.
+
+Immediate gate: commit, push, and green the proof closeout. Only then identify
+VR14P as the sole Tier C gate for fresh maintainer words. Keep the unrelated
+tracker inspection NDJSON untouched.

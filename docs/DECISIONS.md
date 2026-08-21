@@ -9856,3 +9856,20 @@ Boundary decision: forbid structural source, readiness, marker, private
 manifest, archive, neural, target, model, score, FW2/CIL1, network, hardware,
 other-project, release, and claim work. R1 would make only a separate private-
 manifest recovery packet eligible; R2-R8 recover one structural class.
+
+## 0312 - Prove The Exact VR14P Request Without Changing Scope
+
+Proof decision: exact request `d920e8e` passed Base Python job `96657974654`,
+Optional Neuro Readers job `96657974564`, and CI `32443248466`. Bind the three
+unchanged request artifacts totaling 13,334 bytes by SHA-256 and Git blob.
+
+Transition decision: add only a proof document, machine proof record, proof
+test, and frontier notes. Do not edit the request, authorize either stage, or
+touch `.codex_work`. The closeout has delayed effect until its own commit is
+pushed and both jobs are green.
+
+Boundary decision: proof closeout performs zero implementation, generated
+qualification, ignored-path, aggregate-report, structural-source, private-
+manifest, archive, neural, target, model, score, FW2/CIL1, release, or claim
+operations. Only after closeout green may VR14P be named as the sole active
+Tier C packet for a fresh decision.

@@ -1,0 +1,102 @@
+{
+  "schema_name": "neurodecodekit.marc2_incident_aggregate_recovery_request_proof",
+  "schema_version": "0.1.0",
+  "proof_id": "MARC-2-VR14P-all-false-request-remote-proof-v0",
+  "lane_id": "MARC2-VR14P",
+  "recorded_at_local": "2026-08-20",
+  "status": "request_remotely_green_closeout_effect_delayed_until_own_remote_green",
+  "request_remote_proof": {
+    "commit": "d920e8eeaf7a7e9c980232c5de59f0e390c374be",
+    "CI_run_id": 32443248466,
+    "base_python_job_id": 96657974654,
+    "optional_neuro_job_id": 96657974564,
+    "both_required_jobs_green": true
+  },
+  "exact_request_artifacts": [
+    {
+      "role": "authorization_packet_document",
+      "path": "docs/MARC_2_INCIDENT_AGGREGATE_RECOVERY_AUTHORIZATION_PACKET.md",
+      "bytes": 3756,
+      "sha256": "b0ef19813677988affe11ebd641d18c9fede2f5ce8ddb07410b38b0d052f158a",
+      "Git_blob": "6e6cf3c1fab391b17906defe50dfdc869c2c1c1f"
+    },
+    {
+      "role": "authorization_request_registry",
+      "path": "registries/marc2_incident_aggregate_recovery_authorization_request.v0.json",
+      "bytes": 5856,
+      "sha256": "6ea606b35910bdc044b8750ce865845d25794da57488db54a564d31ab9f056c4",
+      "Git_blob": "09013c4d4a5be47f4d539e6eefc06bd5108f8dea"
+    },
+    {
+      "role": "authorization_request_test",
+      "path": "tests/test_marc2_incident_aggregate_recovery_authorization_request.py",
+      "bytes": 3722,
+      "sha256": "9b6e54d7f41cd74deeab18946eb01a5b58b71ef8c038a94cdd4145ad546f74b5",
+      "Git_blob": "0501589deb3c24c20f587b14491569a2b1110bc0"
+    }
+  ],
+  "exact_request_artifact_count": 3,
+  "exact_request_artifact_bytes": 13334,
+  "scope_unchanged": {
+    "request_id": "MARC-2-VR14P-incident-aggregate-recovery-request-v0",
+    "fixed_input_count": 6,
+    "future_aggregate_report_bytes_maximum": 65536,
+    "future_aggregate_report_content_opens": 1,
+    "future_route_count": 8,
+    "conditional_R1_private_manifest_packet_only": true,
+    "R2_through_R8_structural_class_only": true,
+    "structural_source_operations": 0,
+    "private_manifest_operations": 0,
+    "retry_rerun_resume_count": 0,
+    "request_authorization_fields_all_false": true,
+    "request_operation_counters_all_zero": true
+  },
+  "closeout_operations": {
+    "request_artifacts_modified": 0,
+    "implementation_or_generated_qualification_operations": 0,
+    "private_or_Git_ignored_path_operations": 0,
+    "aggregate_report_operations": 0,
+    "recovery_output_operations": 0,
+    "readiness_certificate_consumed_marker_or_private_manifest_operations": 0,
+    "structural_source_operations": 0,
+    "archive_local_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "provider_language_model_stream_device_or_hardware_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "retry_rerun_release_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "authorization_state": {
+    "decision_recorded_now": false,
+    "implementation_authorized_now": false,
+    "generated_qualification_authorized_now": false,
+    "ignored_path_or_aggregate_report_access_authorized_now": false,
+    "recovery_output_authorized_now": false,
+    "structural_source_or_private_manifest_access_authorized_now": false,
+    "archive_neural_target_model_or_score_authorized_now": false,
+    "MARC2_FW2_or_CIL1_authorized_now": false,
+    "release_publication_or_claim_upgrade_authorized_now": false
+  },
+  "next_gate": {
+    "proof_closeout_commit_push_and_both_jobs_green_required": true,
+    "sole_active_Tier_C_packet_identification_after_green_required": true,
+    "fresh_packet_bound_maintainer_decision_required": true,
+    "decision_commit_push_and_both_jobs_green_before_implementation_required": true,
+    "implementation_authorized_now": false,
+    "aggregate_report_read_authorized_now": false,
+    "MARC2_FW2_or_CIL1_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_request": "one future proof-separated reader may recover only the existing aggregate structural route without reopening the source or private manifest",
+    "scientific_ceiling": "none",
+    "ignored_output_accessed_now": false,
+    "private_route_known_now": false,
+    "real_cohort_frozen_now": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "real_time_portable_home_assistive_or_clinical_result": false
+  }
+}
