@@ -11950,3 +11950,17 @@ implement and generated-qualify the fixed reader without touching
 
 Immediate gate: commit, push, and green Stage 1, then create and green a
 separate proof closeout before the one armed aggregate execution.
+
+### Stage 1 remote proof closeout
+
+- Exact implementation `046013a4a8089f5a9f3a91fc246420cac21a1d20`
+  passed Base job `96664169190`, Optional job `96664169147`, and CI
+  `32445483857`.
+- Bound the implementation registry and five owned artifacts totaling 68,625
+  bytes by path, byte count, SHA-256, and Git blob.
+- Generated qualification repetitions and all ignored-path, aggregate, source,
+  private-manifest, neural, target, model, score, FW2/CIL1, and claim
+  operations: zero.
+
+Immediate gate: commit, push, and green the proof closeout, then create and
+green the tracked-clean activation proof before one armed execution.

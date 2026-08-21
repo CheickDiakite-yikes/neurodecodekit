@@ -3227,3 +3227,10 @@ retained zero output and touched no ignored path.
 Next gate: commit, push, and green exact Stage 1, then create and green the
 separate proof closeout. Only the one explicitly armed aggregate report open
 may follow; source, private-manifest, neural, and FW2/CIL1 work remain closed.
+
+Exact Stage 1 `046013a` passed both jobs in CI `32445483857`. Its proof
+closeout binds six exact artifacts totaling 68,625 bytes, repeats no
+qualification, and touches no ignored path.
+
+Next gate: commit, push, and green the closeout, then create and green the
+tracked-clean activation proof before the single armed aggregate read.

@@ -142,6 +142,14 @@ Immediate gate: commit, push, and green the exact implementation. Then create
 and green its separate proof closeout. The one real aggregate open remains
 closed until both barriers pass and explicit one-shot arming is present.
 
+Exact Stage 1 `046013a4a8089f5a9f3a91fc246420cac21a1d20` passed both jobs
+in CI `32445483857`. Its proof closeout binds the implementation registry and
+five owned artifacts totaling 68,625 bytes without repeating qualification or
+touching an ignored path.
+
+Immediate gate: commit, push, and green the proof closeout. Then create and
+green the tracked-clean activation proof before the single armed execution.
+
 ## Prior Frontier: MARC2-VR11P Consumed At Structural Route R2
 
 Read `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`, then

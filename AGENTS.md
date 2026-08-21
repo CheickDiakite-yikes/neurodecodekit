@@ -538,6 +538,14 @@ tracked, clean implementation-proof registry, preventing ordinary tests from
 crossing into `.codex_work`. Commit, push, and green Stage 1, then create and
 green the separate proof closeout before the one aggregate report open.
 
+Exact Stage 1 `046013a4a8089f5a9f3a91fc246420cac21a1d20` passed Base job
+`96664169190`, Optional job `96664169147`, and CI `32445483857`. Read
+`docs/MARC_2_INCIDENT_AGGREGATE_RECOVERY_PROOF_CLOSEOUT.md` and its machine
+record and test. The closeout binds six exact artifacts totaling 68,625 bytes,
+repeats no qualification, and touches no ignored path. Commit, push, and green
+the closeout, then create and green the separate tracked-clean activation proof
+before one-shot execution.
+
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-
 blind analysis over 72 S004-S015 EDFs. The analysis accepted 1,080 events,

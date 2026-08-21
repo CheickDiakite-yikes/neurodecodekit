@@ -1,0 +1,99 @@
+{
+  "schema_name": "neurodecodekit.marc2_incident_aggregate_recovery_implementation_proof_closeout",
+  "schema_version": "0.1.0",
+  "proof_id": "MARC-2-VR14P-implementation-remote-proof-closeout-v0",
+  "lane_id": "MARC2-VR14P",
+  "recorded_at_local": "2026-08-21",
+  "status": "implementation_remotely_green_closeout_effect_delayed_until_own_remote_green",
+  "implementation_remote_proof": {
+    "commit": "046013a4a8089f5a9f3a91fc246420cac21a1d20",
+    "CI_run_id": 32445483857,
+    "base_python_job_id": 96664169190,
+    "optional_neuro_job_id": 96664169147,
+    "both_required_jobs_green": true
+  },
+  "exact_implementation_artifacts": [
+    {
+      "role": "implementation_registry",
+      "path": "registries/marc2_incident_aggregate_recovery_implementation.v0.json",
+      "bytes": 6335,
+      "sha256": "4387baa7d91448a387324be0f40d7abf514584a547afcd811f253208c75a6242",
+      "Git_blob": "b737ce92f458710a528443ebe9501dff7a4a3827"
+    },
+    {
+      "role": "implementation_module",
+      "path": "src/neurodecodekit/datasets/marc2_incident_aggregate_recovery.py",
+      "bytes": 47116,
+      "sha256": "04c2854da6a4170c928c0f1d18fcc5f3b35aacb0d6d657679ec3e8098956006c",
+      "Git_blob": "f5d082726366826a329464164f5d9bc22a2fbebe"
+    },
+    {
+      "role": "behavior_test",
+      "path": "tests/test_marc2_incident_aggregate_recovery.py",
+      "bytes": 6540,
+      "sha256": "ffef3c16cbef48cbb48fa2dd0bf068600a3f04bb19d66904d1394462703c0561",
+      "Git_blob": "6c1bb2dd9ea85fcfc6f7c1998f88f9967e2434f5"
+    },
+    {
+      "role": "implementation_document",
+      "path": "docs/MARC_2_INCIDENT_AGGREGATE_RECOVERY_IMPLEMENTATION.md",
+      "bytes": 3569,
+      "sha256": "e0dfeb8daca8d362ef3b63a154f273807c443bb663c06eb93ff100fd64b0be5a",
+      "Git_blob": "d4eaeb4f1435c87d9d387224e51946f0e3fc7013"
+    },
+    {
+      "role": "generated_result_document",
+      "path": "docs/MARC_2_INCIDENT_AGGREGATE_RECOVERY_GENERATED_RESULT.md",
+      "bytes": 1741,
+      "sha256": "54fd588d9d13b9322ea006625c1530e29f25a59932eaa22ddae1f73e41e4ca07",
+      "Git_blob": "a8318f3512fcda8ecf6b215249d6cf66e0f7dbab"
+    },
+    {
+      "role": "implementation_record_test",
+      "path": "tests/test_marc2_incident_aggregate_recovery_implementation.py",
+      "bytes": 3324,
+      "sha256": "c70ebf6e9ba2e798ddffe3a0bb3cbe8bd5177265742ad2dd264def7362de5651",
+      "Git_blob": "8e9b301e4166704ca5c80ddd24fb57b59c5645ce"
+    }
+  ],
+  "exact_artifact_count": 6,
+  "exact_artifact_bytes": 68625,
+  "qualification_not_repeated": true,
+  "activation_proof_created_now": false,
+  "aggregate_execution_authorized_now": false,
+  "closeout_operations": {
+    "generated_qualification_operations": 0,
+    "implementation_artifacts_modified": 0,
+    "private_or_Git_ignored_path_operations": 0,
+    "aggregate_report_operations": 0,
+    "recovery_output_operations": 0,
+    "readiness_certificate_or_consumed_marker_operations": 0,
+    "structural_source_operations": 0,
+    "private_manifest_operations": 0,
+    "archive_neural_target_model_prediction_or_score_operations": 0,
+    "FW2_or_CIL1_operations": 0,
+    "network_provider_stream_device_or_hardware_operations": 0,
+    "retry_rerun_resume_operations": 0,
+    "release_publication_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "next_gate": {
+    "this_closeout_commit_push_and_both_jobs_green_required": true,
+    "separate_tracked_clean_activation_proof_required": true,
+    "activation_proof_commit_push_and_both_jobs_green_required": true,
+    "explicit_one_shot_arming_required": true,
+    "aggregate_report_read_authorized_now": false,
+    "FW2_or_CIL1_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_capability": "exact strict aggregate reader and generated qualification pass both required remote environments",
+    "scientific_ceiling": "none",
+    "ignored_output_accessed_now": false,
+    "private_route_known_now": false,
+    "real_cohort_frozen_now": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "live_decoding": false
+  }
+}

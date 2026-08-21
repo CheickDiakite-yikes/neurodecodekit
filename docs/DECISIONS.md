@@ -9907,3 +9907,19 @@ strict canonical JSON, all eight routes exactly four times, at least 80 direct
 refusals, one temporary fixed-path roundtrip, zero retained output, and zero
 real/private/scientific operations. Measured `MARC2VR14P-G1` passes 89 direct
 refusals under every cap.
+
+## 0315 - Separate VR14P Implementation Proof From Execution Activation
+
+Proof decision: exact implementation `046013a` passed Base Python job
+`96664169190`, Optional Neuro Readers job `96664169147`, and CI `32445483857`.
+Bind its registry and five owned artifacts totaling 68,625 bytes without
+rerunning qualification or touching `.codex_work`.
+
+Activation decision: after this proof closeout itself is remotely green, add a
+separate tracked-clean activation proof that binds both green heads. Green that
+record before one-shot arming. This makes local uncommitted proof edits
+insufficient and keeps CI tests unable to access ignored output.
+
+Boundary decision: proof closeout performs zero aggregate-report, recovery-
+output, source, private-manifest, archive, neural, target, model, score,
+FW2/CIL1, retry, release, or claim operations.
