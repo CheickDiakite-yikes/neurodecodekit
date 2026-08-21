@@ -2622,3 +2622,15 @@ implementation. A private confirmation packet is not eligible until the exact
 implementation/result and proof-only closeout are remotely green. Keep
 `.codex_work`, VR18P consumed state, and the unrelated tracker inspection
 NDJSON untouched.
+
+Registration `cd71807` passed both jobs in CI `32484725113`. Generated route
+`MARC2VR20A-G1` now passes 20 source-exact paths and 53 refusals for exact
+`task-reachingandgrasping`, selecting the same 16 subjects / 96 bundles / 384
+members across every valid run spelling. Runtime was 1.7907995419809595
+seconds at 35,143,680-byte peak RSS with zero retained output.
+
+Immediate gate: commit, push, and green the exact VR20A implementation/result,
+then add a proof-only closeout without rerunning qualification. Keep
+`.codex_work`, VR18P consumed state, and the unrelated tracker inspection
+NDJSON untouched. No private cohort, neural payload, or scientific claim is
+open.

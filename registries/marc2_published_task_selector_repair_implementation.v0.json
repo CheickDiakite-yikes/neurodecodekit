@@ -1,0 +1,110 @@
+{
+  "schema_name": "neurodecodekit.marc2_published_task_selector_repair_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "MARC-2-VR20A-published-task-selector-repair-implementation-v0",
+  "lane_id": "MARC2-VR20A",
+  "recorded_at_local": "2026-08-21",
+  "status": "generated_only_qualified_remote_implementation_proof_pending",
+  "registration_proof": {
+    "commit": "cd71807ac68f449796b6bc97745e9a0b200b2cd3",
+    "CI_run_id": 32484725113,
+    "base_python_job_id": 96778573327,
+    "optional_neuro_job_id": 96778573092,
+    "both_required_jobs_green": true
+  },
+  "registration_artifacts": [
+    {"path": "docs/MARC_2_PUBLISHED_TASK_SELECTOR_REPAIR_PREREGISTRATION.md", "bytes": 5736, "sha256": "765492e739ffa2766e90393764f2b0010a1ca1e47fb2a71159955a0201e2e7e5"},
+    {"path": "registries/marc2_published_task_selector_repair_contract.v0.json", "bytes": 9578, "sha256": "a2719e0e2ab54e28675929e1982a8387406068114c2079dd3864c2c8ec022516"}
+  ],
+  "owned_artifacts": [
+    {"path": "src/neurodecodekit/datasets/marc2_published_task_selector_repair.py", "bytes": 45208, "sha256": "9f6ebe63dbeb1cd778a71ff395d698159acc672b187e5121d5d5e734d9e05fba"},
+    {"path": "tests/test_marc2_published_task_selector_repair.py", "bytes": 9986, "sha256": "4f2cc4a239573979ba10e16fcc336969e6d61e96f945e7a7612373d4785e20d6"},
+    {"path": "docs/MARC_2_PUBLISHED_TASK_SELECTOR_REPAIR_IMPLEMENTATION.md", "bytes": 3188, "sha256": "184c2d2ead58de8db9b0f325cb8c78b260d07e82699954374af2aff13067c56f"},
+    {"path": "docs/MARC_2_PUBLISHED_TASK_SELECTOR_REPAIR_RESULT.md", "bytes": 1884, "sha256": "83864937e08a71bf183cb576e2dd7542c21703ca161e65f08fe01fbdc514a7f3"}
+  ],
+  "implementation": {
+    "posture": "additive_standard_library_generated_only_adapter",
+    "required_task_label": "reachingandgrasping",
+    "accepted_run_token_regex": "[0-9]+",
+    "published_four_digit_run_qualified": true,
+    "source_exact_member_names_preserved": true,
+    "source_exact_run_spellings_preserved": true,
+    "source_or_selected_rows_rewritten": false,
+    "validation_only_deep_copy_projection_used": true,
+    "selection_operates_on_original_source_rows": true,
+    "private_execute_surface_available": false,
+    "heavy_base_dependency_added": false
+  },
+  "qualification": {
+    "route": "MARC2VR20A-G1",
+    "success_paths": 20,
+    "replays": 2,
+    "exact_replays_match": true,
+    "selected_subjects": 16,
+    "selected_run_bundles": 96,
+    "selected_core_members": 384,
+    "semantic_sha256": "254bca5e0a39b52ca9791b917df6af554e02dda8f18f8e01b524d0e3ce8d9cba",
+    "distinct_raw_source_hashes": 5,
+    "distinct_source_exact_selected_name_hashes": 5,
+    "direct_refusals": 53,
+    "source_objects_immutable": true,
+    "retained_generated_output_bytes": 0
+  },
+  "measurements": {
+    "fixed_input_bytes": 232361,
+    "generated_input_bytes": 17273948,
+    "temporary_peak_bytes": 885477,
+    "aggregate_output_bytes": 3050,
+    "retained_generated_output_bytes": 0,
+    "runtime_seconds": 1.7907995419809595,
+    "peak_RSS_bytes": 35143680,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "end_to_end_latency_measured": false
+  },
+  "operation_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_VR18P_path_or_output_operations": 0,
+    "real_structural_source_operations": 0,
+    "cohort_freezes": 0,
+    "archive_header_or_member_payload_operations": 0,
+    "neural_signal_event_channel_geometry_target_or_label_operations": 0,
+    "cache_feature_split_or_NeuroToken_operations": 0,
+    "model_training_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scoring_runs": 0,
+    "FW2_operations": 0,
+    "CIL1_operations": 0,
+    "network_requests": 0,
+    "provider_or_language_model_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "other_project_operations": 0,
+    "retry_rerun_resume_operations": 0,
+    "release_publication_or_scientific_claim_upgrades": 0
+  },
+  "remote_implementation_proof": null,
+  "next_gate": {
+    "commit_push_and_both_jobs_green_required": true,
+    "proof_only_closeout_required_after_green": true,
+    "qualification_may_be_repeated_for_proof_closeout": false,
+    "private_confirmation_packet_eligible_now": false,
+    "private_or_neural_execution_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_capability": "generated-qualified source-preserving selector for the dataset published BIDS task identity",
+    "scientific_ceiling": "none",
+    "real_cohort_established": false,
+    "neural_payload_accessed": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "live_decoding": false
+  }
+}
