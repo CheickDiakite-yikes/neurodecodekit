@@ -3897,6 +3897,21 @@ only and generated-only R4 predicate decomposition. Any new private read
 requires a new Tier C packet and decision. FW2, CIL1, archive, neural, target,
 model, prediction, score, release, and scientific claims remain closed.
 
+That next lane is frozen as `MARC2-VR17A`. Read
+`docs/MARC_2_VARIABLE_WIDTH_R4_DECOMPOSITION_PREREGISTRATION.md` and
+`registries/marc2_variable_width_r4_decomposition_contract.v0.json`. It binds
+13 exact committed inputs totaling 204,240 bytes and ten VR16A F03-F05 call
+sites. Four composition claims remain hypotheses: two unreachable guards,
+six-width VR15A-to-VR16A equivalence, and candidate F03 exclusion. If proven,
+four generated task/companion classes remain.
+
+Commit, push, and green the exact registration before implementation. The
+future generated matrix requires 24 paired equivalence paths, 20 residual
+paths, at least 48 direct refusals, one thread, at most 40 MiB generated input,
+1 MiB aggregate output, and zero retention. VR17A has no private executor and
+authorizes no consumed-state, archive, neural, target, model, score, FW2/CIL1,
+release, or claim operation.
+
 ## Style
 
 - Small functions, explicit names, low magic.

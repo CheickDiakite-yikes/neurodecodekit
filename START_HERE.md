@@ -2437,3 +2437,10 @@ VR16P has no retry, rerun, repair, fallback, substitution, or private
 reinspection. The next safe lane is artifact-only/generated-only R4 predicate
 decomposition. FW2 and CIL1 remain ineligible; no archive, neural payload,
 target, model, prediction, score, or scientific claim is open.
+
+That next lane is now frozen as `MARC2-VR17A`. It binds 13 committed inputs
+totaling 204,240 bytes and tests whether the green VR15P width result, VR16A
+adapter semantics, and prior producer evidence reduce R4 to four generated
+task/companion classes. The reduction remains a hypothesis until all generated
+composition gates pass. Commit, push, and green the exact registration before
+implementation. The lane has no private executor and authorizes no new read.

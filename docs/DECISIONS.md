@@ -10317,3 +10317,22 @@ model, score, FW2/CIL1, release, and scientific-claim authority remain absent.
 Next-lane decision: permit Tier A/B to freeze an artifact-only/generated-only
 R4 predicate decomposition. Require a new Tier C packet and decision for any
 future private discriminator.
+
+## 0338 - Test The R4 Four-Class Reduction Before Believing It
+
+Evidence decision: bind consumed result `a180b46` only after Base Python job
+`96722615572`, Optional Neuro Readers job `96722615854`, and CI
+`32466008062` passed. Use only committed artifacts; do not reopen VR16P.
+
+Hypothesis decision: freeze ten exact VR16A F03-F05 call sites and test four
+composition claims. Require generated proof that two guards are unreachable,
+six width-only sources move from VR15A R15 to VR16A success, and committed
+producer evidence then excludes F03. Park the lane if any claim fails.
+
+Matrix decision: require 24 paired equivalence paths and 20 residual paths,
+with exactly four generated task/companion routes, deterministic replay, source
+immutability, at least 48 direct refusals, and zero retained output.
+
+Boundary decision: registration authorizes generated implementation only after
+its own remote green proof. It authorizes no private read, consumed-state use,
+cohort, archive, neural, target, model, score, FW2/CIL1, release, or claim.

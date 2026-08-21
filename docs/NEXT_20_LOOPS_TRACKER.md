@@ -3411,3 +3411,20 @@ Next gate: specify and generated-qualify an artifact-only R4 predicate
 decomposition. Any future private discriminator remains a new Tier C packet.
 FW2/CIL1 and every neural, target, model, score, release, and claim lane remain
 closed.
+
+### MARC2-VR17A - R4 Composition Audit Registered
+
+The artifact-only contract binds 13 committed inputs totaling 204,240 bytes
+and inventories ten exact VR16A F03-F05 refusal call sites. It freezes four
+generated hypotheses rather than presuming the answer: two unreachable-guard
+proofs, width-only VR15A-to-VR16A equivalence, and candidate exclusion of F03.
+
+If all gates pass, four generated residual classes remain: exact task token,
+companion run spelling, normalized companion collision, and incomplete
+companion set. The matrix requires 24 paired equivalence paths, 20 residual
+paths, 44 VR16A calls, 24 VR15A calls, at least 48 direct refusals, and zero
+retention.
+
+Next gate: commit, push, and green the exact registration before generated
+implementation. No private executor, source read, cohort, neural payload,
+target, model, score, FW2/CIL1, release, or claim is authorized.

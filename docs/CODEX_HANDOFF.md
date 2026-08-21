@@ -6598,3 +6598,25 @@ row, participant, selection, or cohort. VR16P has no retry or private
 reinspection. Next: freeze an artifact-only/generated-only R4 predicate
 decomposition. FW2, CIL1, archive, neural, target, model, score, and claim work
 remain closed. Keep the unrelated tracker inspection NDJSON untouched.
+
+## 2026-08-21 MARC2-VR17A Registration Handoff
+
+Consumed-result commit `a180b4646cfe5b301ce57677c40103842574d18e`
+passed Base Python job `96722615572`, Optional Neuro Readers job
+`96722615854`, and CI `32466008062` before registration.
+
+Read the VR17A preregistration, machine contract, and contract test. Thirteen
+exact committed inputs total 204,240 bytes. Static analysis binds ten VR16A
+F03-F05 call sites and four hypotheses: two compositionally unreachable guards,
+six width-only VR15A-to-VR16A equivalence paths, and the resulting candidate
+four-class task/companion reduction.
+
+The future generated matrix freezes 24 paired VR15A/VR16A equivalence paths,
+20 residual VR16A paths, at least 48 direct refusals, one thread, 40 MiB input,
+1 MiB aggregate output, and zero retention. The four-class reduction is not
+accepted until every generated gate passes.
+
+Immediate gate: commit, push, and green this exact registration before any
+VR17A implementation. Do not touch VR15P/VR16P consumed state, `.codex_work`,
+or another private source. Keep the unrelated tracker inspection NDJSON
+untouched.

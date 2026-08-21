@@ -12359,3 +12359,23 @@ the one registered target-free private structural invocation execute.
 R4 preserves only numeric-identity, exact-task, or companion-validation
 uncertainty. The lane is consumed with no retry or private reinspection. Next:
 an artifact-only/generated-only R4 predicate-decomposition registration.
+
+### VR17A variable-width R4 decomposition registration
+
+- Began only after result `a180b4646cfe5b301ce57677c40103842574d18e`
+  passed Base Python job `96722615572`, Optional Neuro Readers job
+  `96722615854`, and CI `32466008062`.
+- Bound 13 exact committed inputs totaling 204,240 bytes and statically
+  inventoried ten VR16A F03-F05 refusal call sites.
+- Froze four hypotheses, including two compositionally unreachable guards and
+  a six-width VR15A-to-VR16A equivalence proof. The candidate four-class
+  reduction is not accepted at registration.
+- Froze 24 paired equivalence paths, 20 residual paths, 24 VR15A calls, 44
+  VR16A calls, at least 48 direct refusals, 40 MiB generated input, 1 MiB
+  aggregate output, one thread, and zero retention.
+- Private/ignored-path, consumed-state, archive, neural, target, model, score,
+  FW2/CIL1, network, hardware, other-project, release, and claim operations:
+  zero.
+
+Immediate gate: verify, commit, push, and green this exact registration before
+any generated implementation.
