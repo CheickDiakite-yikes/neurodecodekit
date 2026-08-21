@@ -10058,3 +10058,21 @@ Boundary decision: standing or future authority is not inferred. At decision
 recording, implementation, readiness, private/ignored-path, archive, neural,
 target, model, prediction, score, FW2/CIL1, network, hardware, release, and
 claim operations remain zero.
+
+## 0323 - Implement The VR15P Generated Private Discriminator
+
+Proof decision: decision `fc694a6` passed Base Python job `96680587357`,
+Optional Neuro Readers job `96680587199`, and CI `32451448725` before Stage 1.
+Bind only the exact green two-stage packet and keep private execution closed.
+
+Implementation decision: add one standard-library fixed-path wrapper with
+`plan`, `qualify`, `inspect`, and `execute` surfaces. Generated qualification
+must cover 17 cases, two source orders, two replays, 68 exact VR15A calls, all
+G1/R1-R16 routes four times each, and 111 direct refusals without retaining a
+generated source or output.
+
+Boundary decision: `execute` requires exact implementation and proof-closeout
+records, a tracked-clean tree, and explicit one-shot arming before readiness or
+private preflight. Stage 1 performs zero private/ignored-path, structural-source,
+archive, neural, target, model, prediction, score, FW2/CIL1, network, hardware,
+other-project, release, or claim operation.

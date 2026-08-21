@@ -1,0 +1,192 @@
+{
+  "schema_name": "neurodecodekit.marc2_suffix_identity_private_discriminator_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "MARC-2-VR15P-suffix-identity-private-discriminator-implementation-v0",
+  "lane_id": "MARC2-VR15P",
+  "recorded_at_local": "2026-08-21",
+  "status": "stage_1_generated_qualified_private_stage_closed_pending_exact_remote_implementation_and_proof_closeout",
+  "green_decision_proof": {
+    "commit": "fc694a69489913198f0a630bbb0edb04c29310f6",
+    "CI_run_id": 32451448725,
+    "base_python_job_id": 96680587357,
+    "optional_neuro_job_id": 96680587199,
+    "both_required_jobs_green": true
+  },
+  "fixed_inputs": [
+    {
+      "path": "registries/marc2_suffix_identity_private_discriminator_authorization_decision.v0.json",
+      "bytes": 15250,
+      "sha256": "4d87d78f74001eefc0f229551c23d9b631a7ee06e5259b523ed0d3837013fd26"
+    },
+    {
+      "path": "registries/marc2_suffix_identity_private_discriminator_authorization_request.v0.json",
+      "bytes": 13165,
+      "sha256": "675f2ddf62aa89984aa5042b811a482b52dc194ff00f0666b66f05fcb01ccd05"
+    },
+    {
+      "path": "registries/marc2_suffix_identity_private_discriminator_request_proof.v0.json",
+      "bytes": 4378,
+      "sha256": "246b3326193e6fd69aea2d87b3cdbb68fe551009bb0d5af9912e2012fb345fc1"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/marc2_suffix_identity_grammar_decomposition.py",
+      "bytes": 41915,
+      "sha256": "d30ae877c67855fd7df58ba54e600361b013e950e6b6bfd36cf966890fc09ee9"
+    },
+    {
+      "path": "registries/marc2_suffix_identity_grammar_decomposition_implementation.v0.json",
+      "bytes": 7033,
+      "sha256": "80ca0dd4ee014856ca3dbdd470d21a91a6effadee15d1a6d82f868e5bde4ea66"
+    },
+    {
+      "path": "registries/marc2_suffix_identity_grammar_decomposition_result.v0.json",
+      "bytes": 6433,
+      "sha256": "ecc7bee1c8d1b0263887e0a4cee2db0846fdf0ffbc81fdcdd1abf1208c1e031f"
+    }
+  ],
+  "fixed_input_count": 6,
+  "fixed_input_bytes": 88174,
+  "request_fixed_input_count": 17,
+  "request_fixed_input_bytes": 308187,
+  "owned_artifacts": [
+    {
+      "path": "src/neurodecodekit/datasets/marc2_suffix_identity_private_discriminator.py",
+      "bytes": 50366,
+      "sha256": "1bc86181b8eea40c77c5bd453dea5c8856dbf0b35427b6ff2f3692ed514a2b6e"
+    },
+    {
+      "path": "tests/test_marc2_suffix_identity_private_discriminator.py",
+      "bytes": 8129,
+      "sha256": "80a26d33b4277eed00bef5f8c5d49dee22f2a485129fd72a22d381f1bcb7dd5e"
+    },
+    {
+      "path": "docs/MARC_2_SUFFIX_IDENTITY_PRIVATE_DISCRIMINATOR_IMPLEMENTATION.md",
+      "bytes": 3697,
+      "sha256": "c8cb6b6af71f0703f222a01e2f16804f5374a02ca16a7987a7e27ef3fd1d80dd"
+    },
+    {
+      "path": "docs/MARC_2_SUFFIX_IDENTITY_PRIVATE_DISCRIMINATOR_GENERATED_RESULT.md",
+      "bytes": 2627,
+      "sha256": "01e5c84c612bb69f755f8ecf6fc73188e04c1db21804be4ff15ab9864bf5a7b3"
+    },
+    {
+      "path": "tests/test_marc2_suffix_identity_private_discriminator_implementation.py",
+      "bytes": 4857,
+      "sha256": "1bdb2b3d7b705fd69dc62513c4de50f2bb43d6a76212d708769c84480e308270"
+    }
+  ],
+  "interface": {
+    "commands": [
+      "plan",
+      "qualify",
+      "inspect",
+      "execute"
+    ],
+    "fixed_path_execute": true,
+    "generic_path_or_output_override_allowed": false,
+    "URL_threshold_route_retry_resume_fallback_override_allowed": false,
+    "consumed_executor_reuse_allowed": false,
+    "standard_library_only": true
+  },
+  "generated_qualification": {
+    "route": "MARC2VR15P-G1",
+    "cases": 17,
+    "orders": 2,
+    "replays": 2,
+    "matrix_paths": 68,
+    "route_count_each": 4,
+    "generated_VR15A_calls": 68,
+    "generated_nested_VR12A_calls": 68,
+    "direct_refusals": 111,
+    "generated_input_bytes": 29199868,
+    "temporary_peak_bytes": 429857,
+    "aggregate_output_bytes": 2681,
+    "retained_output_bytes": 0,
+    "runtime_seconds": 3.9979423339827918,
+    "peak_RSS_bytes": 50135040,
+    "matrix_digest_sha256": "5e16552822e94724d242758212feead71abd9d66246d71251889c51117ad953c",
+    "direct_refusal_digest_sha256": "692e820c41c5af8f121bfe391e6115099f3f3a8acb2e91a2f0dca44334051c71",
+    "all_routes_exactly_four": true,
+    "both_replays_equal": true,
+    "all_temporary_paths_removed": true
+  },
+  "private_stage_contract": {
+    "private_source_bytes": 418755,
+    "private_content_open_limit": 1,
+    "VR15A_calls": 1,
+    "nested_VR12A_calls": 1,
+    "allowed_routes": [
+      "MARC2VR15P-R1",
+      "MARC2VR15P-R2",
+      "MARC2VR15P-R3",
+      "MARC2VR15P-R4",
+      "MARC2VR15P-R5",
+      "MARC2VR15P-R6",
+      "MARC2VR15P-R7",
+      "MARC2VR15P-R8",
+      "MARC2VR15P-R9",
+      "MARC2VR15P-R10",
+      "MARC2VR15P-R11",
+      "MARC2VR15P-R12",
+      "MARC2VR15P-R13",
+      "MARC2VR15P-R14",
+      "MARC2VR15P-R15",
+      "MARC2VR15P-R16"
+    ],
+    "unexpected_G1_consumes_and_parks": true,
+    "cohort_manifest_allowed": false,
+    "aggregate_output_bytes_maximum": 1048576,
+    "minimum_free_disk_bytes": 2147483648,
+    "retry_rerun_resume_count": 0
+  },
+  "proof_gate": {
+    "execution_checks_remote_implementation_before_readiness": true,
+    "execution_checks_remote_proof_closeout_before_readiness": true,
+    "execution_requires_clean_tracked_tree": true,
+    "execution_requires_exact_one_shot_arm": true,
+    "uncommitted_proof_edit_can_cross_gate": false,
+    "ordinary_test_can_touch_private_path": false
+  },
+  "remote_implementation_proof": null,
+  "remote_proof_closeout": null,
+  "private_stage_operations": 0,
+  "failed_system_python_import": {
+    "package_imported": false,
+    "qualification_started": false,
+    "temporary_or_private_operations": 0
+  },
+  "forbidden_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_VR13P_or_VR14P_path_or_output_operations": 0,
+    "real_structural_source_operations": 0,
+    "archive_local_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "private_cohort_manifest_operations": 0,
+    "derivative_cache_feature_split_or_NeuroToken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "network_download_provider_language_model_operations": 0,
+    "stream_device_or_hardware_operations": 0,
+    "FW2_or_CIL1_operations": 0,
+    "retry_rerun_resume_operations": 0,
+    "release_publication_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "next_gate": {
+    "implementation_commit_push_and_both_jobs_green_required": true,
+    "separate_proof_closeout_green_required": true,
+    "proof_activation_record_green_required_before_execute": true,
+    "private_execution_authorized_now": false,
+    "private_source_or_readiness_path_may_be_touched_now": false,
+    "FW2_or_CIL1_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_ceiling": "fixed proof-gated deterministic wrapper over sixteen generated suffix-identity classes",
+    "scientific_ceiling": "none",
+    "private_cause_identified": false,
+    "real_cohort_frozen": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "live_decoding": false
+  }
+}
