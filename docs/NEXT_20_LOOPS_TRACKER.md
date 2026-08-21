@@ -3610,3 +3610,19 @@ bytes, and no cohort manifest was created.
 Next gate: separately freeze an artifact-only and generated-only decomposition
 of the core task/identity class. VR18P has no retry. Any new private read is a
 fresh Tier C packet; FW2/CIL1 and scientific claims remain closed.
+
+### MARC2-VR19A - F04 Task Implication Registered
+
+Green consumed result `7123bb2` / CI `32479345476` precedes this artifact-only
+registration. The exact VR16A validator has two F04 producer references, both
+guarded by `task != "freewill"`. The consumed R4 pair accepts only the earlier
+`core identity differs` translation.
+
+The frozen generated matrix has 32 paths across one success, four non-
+`freewill` task witnesses, and three task-preserving identity counterexamples.
+Eight focused and 4,637 complete dependency-light tests pass with 204 expected
+skips.
+
+Next gate: commit, push, and green the registration before implementation. No
+private value, cohort, neural work, score, FW2/CIL1 execution, or scientific
+claim is authorized.

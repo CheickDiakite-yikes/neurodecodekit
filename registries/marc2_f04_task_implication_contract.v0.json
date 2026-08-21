@@ -1,0 +1,167 @@
+{
+  "schema_name": "neurodecodekit.marc2_f04_task_implication_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "MARC-2-VR19A-F04-task-implication-v0",
+  "lane_id": "MARC2-VR19A",
+  "recorded_at_local": "2026-08-21",
+  "status": "preregistered_artifact_only_generated_only_no_private_access",
+  "objective": "Prove under exact committed VR16A semantics that F04 core identity differs implies a non-freewill task token without reading or guessing private values.",
+  "predecessor_proof": {
+    "consumed_lane": "MARC2-VR18P",
+    "consumed_route": "MARC2VR18P-R4",
+    "commit": "7123bb2a00706de46e276f07e05ab3a619719226",
+    "CI_run_id": 32479345476,
+    "base_python_job_id": 96762176912,
+    "optional_neuro_job_id": 96762177026,
+    "both_required_jobs_green": true,
+    "private_cohort_frozen": false,
+    "retry_rerun_or_private_reinspection_allowed": false
+  },
+  "fixed_inputs": [
+    {"role": "VR16A_module", "path": "src/neurodecodekit/datasets/marc2_variable_width_run_index_repair.py", "bytes": 43861, "sha256": "1a69d42236af61b1e5565dc89903aa20e9416732752aa5b5b1ffe3a95003f3f1"},
+    {"role": "VR16A_implementation", "path": "registries/marc2_variable_width_run_index_repair_implementation.v0.json", "bytes": 6598, "sha256": "a11714c7860713a2b8ce82ed2d7a4f045d48582a36e1870b3f034719acbef7bd"},
+    {"role": "VR16A_result", "path": "registries/marc2_variable_width_run_index_repair_result.v0.json", "bytes": 5941, "sha256": "5d873da94343c3b4a55c812088c00a5d2c9cc2b0f0e97bea9fd3b8c79854a652"},
+    {"role": "VR17C_module", "path": "src/neurodecodekit/datasets/marc2_first_failure_stable_r4_decomposition.py", "bytes": 26841, "sha256": "0f7a37809e716263f5684beceef18dcab661cca72175d61e197f3d02bc71fc63"},
+    {"role": "VR17C_result", "path": "registries/marc2_first_failure_stable_r4_decomposition_result.v0.json", "bytes": 6859, "sha256": "3582584d81d82d166978d836cf5e376b03f122b8b3fc8b2f06d1f65b7eb180ad"},
+    {"role": "VR18P_result", "path": "registries/marc2_first_failure_stable_private_discriminator_result.v0.json", "bytes": 5983, "sha256": "c0965badefc7dff90872e029e95ccb2101e58e50961f5e18c9350f8eae955eb8"},
+    {"role": "VR18P_result_document", "path": "docs/MARC_2_FIRST_FAILURE_STABLE_PRIVATE_DISCRIMINATOR_RESULT.md", "bytes": 3102, "sha256": "1ab2f7fa437523f9f2bce17d03c08fd37f423e61661a2e45b52b26e3ffc9bdb0"},
+    {"role": "VR18P_result_test", "path": "tests/test_marc2_first_failure_stable_private_discriminator_result.py", "bytes": 3585, "sha256": "9c4ec669c326f43b902d939c84d3ec8806fdd2fb51abc42375a04aa46a1b0e4b"}
+  ],
+  "fixed_input_count": 8,
+  "fixed_input_bytes": 102770,
+  "consumed_evidence": {
+    "private_route": "MARC2VR18P-R4",
+    "upstream_route": "MARC2VR16A-F04",
+    "upstream_safe_reason": "core identity differs",
+    "private_value_available": false,
+    "private_task_token_available": false,
+    "private_row_path_or_identity_available": false
+  },
+  "static_producer_inventory": {
+    "function": "_validate_variable_entry",
+    "F04_producer_reference_count": 2,
+    "translated_reference": {
+      "route_expression": "F04 if match.group('task') != 'freewill' else F03",
+      "safe_reason": "core identity differs",
+      "accepted_by_VR18P_R4_map": true
+    },
+    "direct_reference": {
+      "guard": "match.group('task') != 'freewill'",
+      "safe_reason": "Freewill task differs",
+      "accepted_by_VR18P_R4_map": false
+    },
+    "exact_R4_pair_implies_nonfreewill_task_under_bound_source": true
+  },
+  "generated_cases": [
+    {"case": "freewill_control", "class": "control", "expected_route": "MARC2VR19A-G1", "VR16A_route": "MARC2VR16A-G1", "safe_reason": null},
+    {"case": "task_motor", "class": "nonfreewill_task", "expected_route": "MARC2VR19A-R1", "VR16A_route": "MARC2VR16A-F04", "safe_reason": "core identity differs"},
+    {"case": "task_rest", "class": "nonfreewill_task", "expected_route": "MARC2VR19A-R1", "VR16A_route": "MARC2VR16A-F04", "safe_reason": "core identity differs"},
+    {"case": "task_Freewill", "class": "nonfreewill_task", "expected_route": "MARC2VR19A-R1", "VR16A_route": "MARC2VR16A-F04", "safe_reason": "core identity differs"},
+    {"case": "task_freewill2", "class": "nonfreewill_task", "expected_route": "MARC2VR19A-R1", "VR16A_route": "MARC2VR16A-F04", "safe_reason": "core identity differs"},
+    {"case": "subject_repeat_mismatch", "class": "identity_counterexample", "expected_route": "MARC2VR19A-R2", "VR16A_route": "MARC2VR16A-F03", "safe_reason": "suffix-bearing identity differs"},
+    {"case": "session_repeat_mismatch", "class": "identity_counterexample", "expected_route": "MARC2VR19A-R2", "VR16A_route": "MARC2VR16A-F03", "safe_reason": "suffix-bearing identity differs"},
+    {"case": "subject_width_mismatch", "class": "identity_counterexample", "expected_route": "MARC2VR19A-R2", "VR16A_route": "MARC2VR16A-F03", "safe_reason": "suffix-bearing identity differs"}
+  ],
+  "hypotheses": [
+    {"id": "VR19A-H1", "statement": "Both exact F04 producer references are dominated by task not equal to freewill.", "must_pass": true},
+    {"id": "VR19A-H2", "statement": "The exact F04 core identity differs pair is emitted only by the guarded exception translation.", "must_pass": true},
+    {"id": "VR19A-H3", "statement": "Four generated non-freewill task witnesses reach the exact pair under both orders and both replays.", "must_pass": true},
+    {"id": "VR19A-H4", "statement": "Three generated identity counterexamples with task unchanged route to F03 rather than F04.", "must_pass": true}
+  ],
+  "generated_matrix": {
+    "cases": 8,
+    "orders": ["canonical", "reversed"],
+    "replays": 2,
+    "paths": 32,
+    "VR16A_calls": 32,
+    "expected_route_counts": {
+      "MARC2VR19A-G1": 4,
+      "MARC2VR19A-R1": 16,
+      "MARC2VR19A-R2": 12
+    },
+    "source_immutability_required": true,
+    "deterministic_replay_required": true,
+    "retained_generated_output_bytes": 0
+  },
+  "acceptance_gates": [
+    "all_fixed_inputs_match_size_and_SHA256",
+    "consumed_VR18P_result_remote_proof_is_exact",
+    "exact_AST_inventory_finds_two_F04_producer_references",
+    "both_F04_producers_are_task_inequality_guarded",
+    "exact_R4_pair_maps_only_to_the_translated_reference",
+    "all_32_generated_paths_call_unchanged_VR16A_once",
+    "G1_R1_R2_counts_are_exact",
+    "both_replays_match",
+    "source_objects_remain_immutable",
+    "at_least_40_direct_refusals_pass",
+    "resource_and_output_caps_pass",
+    "all_private_neural_scientific_retry_and_other_project_counters_are_zero"
+  ],
+  "direct_refusal_minimum": 40,
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "generated_input_bytes": 33554432,
+    "aggregate_output_bytes": 1048576,
+    "retained_generated_output_bytes": 0
+  },
+  "operation_counters": {
+    "repository_dot_codex_work_operations": 0,
+    "private_or_consumed_source_operations": 0,
+    "private_source_stats_hashes_opens_reads_or_parses": 0,
+    "archive_header_or_member_payload_reads": 0,
+    "signal_event_channel_geometry_target_or_label_reads": 0,
+    "cohort_cache_feature_split_or_NeuroToken_operations": 0,
+    "model_training_inference_prediction_or_score_runs": 0,
+    "FW2_or_CIL1_operations": 0,
+    "network_provider_or_language_model_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "other_project_operations": 0,
+    "retry_rerun_release_or_scientific_claim_upgrades": 0
+  },
+  "authority": {
+    "registration_only": true,
+    "generated_implementation_allowed_after_exact_registration_remote_green": true,
+    "private_source_or_consumed_output_access_authorized": false,
+    "future_private_discriminator_authorized": false,
+    "archive_neural_target_model_score_FW2_or_CIL1_authorized": false,
+    "release_or_claim_upgrade_authorized": false
+  },
+  "verification_baseline": {
+    "commit": "7123bb2a00706de46e276f07e05ab3a619719226",
+    "CI_run_id": 32479345476,
+    "dependency_light_tests_passed": 4629,
+    "expected_skips": 204,
+    "new_failures": 0
+  },
+  "registration_verification": {
+    "focused_contract_tests_passed": 8,
+    "complete_dependency_light_tests_passed": 4637,
+    "expected_skips": 204,
+    "complete_runtime_seconds": 141.847,
+    "ruff_passed": true,
+    "registry_JSON_files_parsed": 340,
+    "git_diff_check_passed": true,
+    "private_operations": 0
+  },
+  "remote_registration_proof": null,
+  "warnings": [
+    "Artifact-only and generated-only registration.",
+    "Generated task witnesses are not guesses about the unavailable private token.",
+    "VR18P is consumed and must not be retried or reinspected.",
+    "No private identity cohort archive neural payload target model prediction or score is available."
+  ],
+  "claim_boundary": {
+    "engineering_capability_sought": "exact task-guard implication proof for the consumed aggregate route under bound VR16A semantics",
+    "scientific_ceiling": "none",
+    "private_task_value_known": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "live_decoding": false
+  },
+  "next_gate": "Commit push and green this exact registration before any VR19A implementation."
+}

@@ -2563,3 +2563,14 @@ person, selection, or cohort. No cohort was frozen, so FW2/CIL1 remain
 ineligible. VR18P has no retry or reinspection. Next: freeze an artifact-only,
 generated-only decomposition of that class before considering any new Tier C
 private packet.
+
+That decomposition is now frozen as `MARC2-VR19A`. Static source analysis
+finds two F04 producers in the exact validator, both guarded by
+`task != "freewill"`; the consumed R4 pair selects the earlier translated
+reason. Eight generated cases will test that implication across two orders and
+two replays after registration CI is green. All 4,637 dependency-light tests
+pass with 204 expected skips.
+
+Immediate gate: commit, push, and green the exact VR19A registration. It is
+artifact-only and generated-only. No private token, cohort, neural payload,
+model, score, FW2/CIL1 execution, or scientific claim is open.

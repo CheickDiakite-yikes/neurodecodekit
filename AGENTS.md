@@ -4135,6 +4135,22 @@ decomposition. Any new private read remains a fresh Tier C packet and
 decision. FW2/CIL1 remain ineligible; archive payload, neural data, targets,
 models, predictions, scores, release, and scientific claims remain closed.
 
+That next lane is frozen as `MARC2-VR19A`. Read
+`docs/MARC_2_F04_TASK_IMPLICATION_PREREGISTRATION.md` and
+`registries/marc2_f04_task_implication_contract.v0.json`. The exact VR16A
+validator has two F04 producer references; both require
+`task != "freewill"`, and only the translated F04 / `core identity differs`
+pair is accepted by the consumed R4 map. The registration freezes eight
+generated cases over two orders and two replays: one success control, four
+non-`freewill` task witnesses, and three task-preserving identity
+counterexamples expected to route F03 rather than F04.
+
+Eight focused and all 4,637 dependency-light tests pass with 204 expected
+skips. Commit, push, and green this exact registration before implementation.
+The generated witnesses are not guesses about the private task token. Do not
+touch `.codex_work`, VR18P consumed state, private values, archive or neural
+payload, targets, models, scores, FW2/CIL1, other projects, release, or claims.
+
 ## Style
 
 - Small functions, explicit names, low magic.

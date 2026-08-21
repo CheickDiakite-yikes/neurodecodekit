@@ -6880,3 +6880,21 @@ substitution, cleanup, or private reinspection. Keep its `.codex_work` state
 and the unrelated tracker inspection NDJSON untouched. Next: register an
 artifact-only generated decomposition of the core task/identity class. Any
 new private read is a fresh Tier C packet; FW2/CIL1 remain ineligible.
+
+## 2026-08-21 MARC2-VR19A Registration Handoff
+
+Consumed result `7123bb2a00706de46e276f07e05ab3a619719226`
+passed Base Python job `96762176912`, Optional Neuro Readers job
+`96762177026`, and CI `32479345476` before registration.
+
+Read the VR19A preregistration, machine contract, and matching test. The lane
+binds eight tracked inputs totaling 102,770 bytes. It freezes an AST inventory
+of the two exact F04 producers and a 32-path generated matrix covering one
+success control, four non-`freewill` task witnesses, and three identity
+counterexamples in both orders and two replays.
+
+Eight focused and all 4,637 dependency-light tests pass with 204 expected
+skips. Immediate gate: commit, push, and green this exact registration before
+implementation. Keep VR18P `.codex_work`, all private/consumed state, and the
+unrelated tracker inspection NDJSON untouched. No private value, neural
+payload, model, score, FW2/CIL1 execution, or scientific claim is authorized.

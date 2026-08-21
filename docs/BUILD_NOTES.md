@@ -12621,3 +12621,24 @@ retry or private reinspection.
 VR18P is consumed with no retry or private reinspection. Next: separately
 freeze an artifact-only and generated-only core task/identity decomposition.
 No cohort exists, so FW2/CIL1 and scientific claims remain closed.
+
+### VR19A F04 task implication registered
+
+- Bound green consumed-result commit
+  `7123bb2a00706de46e276f07e05ab3a619719226`, CI `32479345476`, Base
+  `96762176912`, and Optional `96762177026`.
+- Bound eight tracked artifacts totaling 102,770 bytes; no ignored or private
+  path was inspected.
+- AST inventory freezes two F04 producer references in the exact VR16A
+  validator. Both require a task token unequal to lowercase `freewill`.
+- Froze 32 generated paths: one success control, four non-`freewill` task
+  witnesses, and three task-preserving identity counterexamples under two
+  orders and two replays.
+- Eight focused and all 4,637 dependency-light tests pass with 204 expected
+  skips in 141.847 seconds. Ruff, 340 registry parses, and diff hygiene pass.
+- Private, consumed-state, archive, neural, target, model, score, FW2/CIL1,
+  network, hardware, other-project, retry, release, and claim operations: zero.
+
+Immediate gate: commit, push, and green this exact registration before any
+VR19A implementation. Generated task witnesses do not identify the private
+task value.

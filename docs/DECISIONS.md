@@ -10588,3 +10588,23 @@ Boundary decision: consume VR18P permanently with no retry or private
 reinspection. Permit a separately frozen artifact-only generated decomposition
 next. Any new private read remains Tier C. No neural payload, target, model,
 prediction, score, FW2/CIL1 eligibility, release, or scientific claim follows.
+
+## 0351 - Freeze The VR19A F04 Task-Implication Audit
+
+Proof decision: consumed-result commit
+`7123bb2a00706de46e276f07e05ab3a619719226` passed Base Python job
+`96762176912`, Optional Neuro Readers job `96762177026`, and CI
+`32479345476` before registration.
+
+Static decision: freeze the exact two F04 producer references inside VR16A
+`_validate_variable_entry`. Both require `task != "freewill"`; only the F04 /
+`core identity differs` translation is accepted by the consumed R4 map.
+
+Generated decision: preregister 32 paths over eight cases, two orders, and two
+replays. Require exact G1/R1/R2 counts, immutable sources, deterministic
+replay, at least 40 direct refusals, and all resource and privacy caps.
+
+Boundary decision: generated task witnesses are semantic controls, not guesses
+about a private token. Require registration remote green before implementation.
+Authorize no private read, cohort, neural payload, target, model, score,
+FW2/CIL1, release, retry, or scientific claim.
