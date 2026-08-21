@@ -1,5 +1,12 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR13P Stage 1, 2026-08-20: decision `fe16400` passed Base job
+> `96648078587`, Optional job `96648078452`, and CI `32439821302`. Generated
+> qualification passed 32 matrix paths, one temporary fixed-path success path,
+> and 81 direct refusals in 3.208020 seconds at 34,324,480-byte peak RSS with
+> zero retained/private output. Commit, push, and green Stage 1, then add and
+> green a proof closeout. Private execution remains closed.
+
 > Current MARC2-VR13P decision, 2026-08-20: final request-proof head `bff3d3f`
 > passed Base job `96618310916`, Optional job `96618311046`, and CI
 > `32429569470`. The maintainer's next exact message after sole-gate
@@ -6130,3 +6137,21 @@ decision-only milestone: every implementation, readiness, private, archive,
 neural, target, model, score, FW2/CIL1, and claim counter is zero. Commit,
 push, and green the exact decision before Stage 1 generated implementation.
 The unrelated tracker inspection NDJSON remains untouched.
+
+## 2026-08-20 MARC2-VR13P Stage 1 Handoff
+
+Decision `fe16400fd0ccb5fa2ff40fffd413fee34eb620d6` passed Base job
+`96648078587`, Optional job `96648078452`, and CI `32439821302`. Read the
+VR13P implementation, generated result, registry, module, and matching tests.
+
+Measured generated route `MARC2VR13P-G1` dispersed G1 and R2-R8 exactly four
+times each across 32 paths, added one temporary fixed-path success path,
+called VR12A 33 times, called the residual mapper 28 times, and passed 81
+direct refusals. Runtime was 3.208020000020042 seconds at 34,324,480-byte peak
+RSS; input was 14,171,146 bytes, aggregate output 2,087 bytes, and retained
+output zero.
+
+Immediate gate: commit, push, and green Stage 1. Then populate the exact
+implementation proof in a separate proof-only closeout and green that head.
+The implementation currently refuses before readiness/private access. Keep
+the unrelated tracker inspection NDJSON untouched.

@@ -9790,3 +9790,21 @@ Boundary decision: no archive payload, signal, target, model, prediction,
 score, FW2/CIL1 execution, retry, rerun, release, or claim is authorized. R1
 makes only a separate FW2 preregistration eligible; R2-R8 retain one aggregate
 structural blocker class.
+
+## 0308 - Implement VR13P As A One-Call Generated-Qualified Wrapper
+
+Implementation decision: after decision `fe16400` passed both jobs in CI
+`32439821302`, add a new standard-library wrapper without importing or calling
+consumed VR11P/VR12P executors. Call VR12A exactly once per source and call the
+exact green VR13A residual mapper only after refusal.
+
+Qualification decision: require eight cases, two orders, two replays, 32
+matrix paths, one temporary fixed-path success path, all route counts equal,
+at least 80 direct refusals, zero retained output, and every real/private or
+scientific counter zero. Measured route `MARC2VR13P-G1` passes with 81 direct
+refusals under all caps.
+
+Gate decision: keep `remote_implementation_proof` null in the Stage 1 record.
+Commit, push, and green the exact implementation, then bind that proof in a
+separate proof-only closeout and green it before any readiness or private path
+operation.

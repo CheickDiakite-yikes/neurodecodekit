@@ -81,6 +81,19 @@ unchanged packet. Commit, push, and green that decision before implementing
 the generated wrapper or touching readiness, `.codex_work`, the private
 source, or an output root.
 
+Decision `fe16400` passed Base job `96648078587`, Optional job `96648078452`,
+and CI `32439821302`. Stage 1 now implements the fixed `plan`, `qualify`,
+`inspect`, and proof-gated `execute` surfaces. Generated route
+`MARC2VR13P-G1` passed all 32 matrix paths, one temporary fixed-path success
+path, and 81 direct refusals. The measured pass used 14,171,146 generated
+bytes, 3.208020 seconds, 34,324,480-byte peak RSS, 2,087 aggregate bytes, and
+zero retained/private/neural/model/score operations.
+
+Immediate gate: commit, push, and green the exact Stage 1 implementation, then
+make and green a separate proof closeout. `execute` currently refuses before
+readiness or private path access because `remote_implementation_proof` is
+null. Do not begin Stage 2 before both barriers pass.
+
 ## Prior Frontier: MARC2-VR11P Consumed At Structural Route R2
 
 Read `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`, then

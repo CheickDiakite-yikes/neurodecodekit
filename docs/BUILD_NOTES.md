@@ -11828,3 +11828,23 @@ decision.
 
 Immediate gate: commit, push, and green this decision-only milestone. Stage 1
 must not begin before both required jobs pass the exact decision head.
+
+### Stage 1 generated implementation
+
+- Decision `fe16400fd0ccb5fa2ff40fffd413fee34eb620d6` passed Base job
+  `96648078587`, Optional job `96648078452`, and CI `32439821302`.
+- Added a standard-library fixed `plan/qualify/inspect/execute` module. Execute
+  requires an exact remotely green implementation proof before readiness or
+  private path access.
+- The generated matrix produced G1 and R2-R8 four times each across 32 paths;
+  one temporary fixed-path success path added one VR12A call.
+- Measured 33 generated VR12A calls, 28 generated residual-map calls, 81
+  direct refusals, 14,171,146 input bytes, 3.208020000020042 seconds,
+  34,324,480-byte peak RSS, 2,087 aggregate bytes, and zero retained output.
+- Private/ignored path, readiness, real adapter, archive, neural, target,
+  model, score, network, FW2/CIL1, other-project, retry, and claim operations:
+  zero.
+
+Immediate gate: commit, push, and green the exact Stage 1 implementation. Then
+make and green a separate proof closeout. Stage 2 remains closed while
+`remote_implementation_proof` is null.
