@@ -16,13 +16,20 @@ class Marc2SuffixIdentityGrammarDecompositionRecordTests(unittest.TestCase):
         cls.implementation = json.loads(IMPLEMENTATION_PATH.read_text(encoding="utf-8"))
         cls.result = json.loads(RESULT_PATH.read_text(encoding="utf-8"))
 
-    def test_records_bind_lane_route_and_pending_proof(self):
+    def test_records_bind_lane_route_and_green_proof(self):
         self.assertEqual(self.implementation["lane_id"], "MARC2-VR15A")
         self.assertEqual(self.result["lane_id"], "MARC2-VR15A")
         self.assertEqual(self.result["route"], "MARC2VR15A-G1")
-        self.assertIsNone(self.implementation["remote_implementation_proof"])
-        self.assertIsNone(self.result["remote_implementation_proof"])
-        self.assertTrue(self.implementation["local_verification"]["remote_CI_pending"])
+        self.assertFalse(self.implementation["local_verification"]["remote_CI_pending"])
+        for record in (self.implementation, self.result):
+            proof = record["remote_implementation_proof"]
+            self.assertEqual(proof["commit"], "bfb0dcb7752433b4af841d57bbfcbf613a341124")
+            self.assertEqual(proof["CI_run_id"], 32_449_260_503)
+            self.assertEqual(proof["base_python_job_id"], 96_674_484_190)
+            self.assertEqual(proof["optional_neuro_job_id"], 96_674_484_279)
+            self.assertTrue(proof["both_required_jobs_green"])
+            self.assertFalse(proof["generated_qualification_repeated_for_proof_closeout"])
+            self.assertFalse(proof["private_operation_repeated_for_proof_closeout"])
 
     def test_owned_artifact_hashes_match(self):
         rows = self.implementation["tracked_implementation_artifacts"]
@@ -73,6 +80,11 @@ class Marc2SuffixIdentityGrammarDecompositionRecordTests(unittest.TestCase):
             self.assertTrue(all(value == 0 for value in record["access_counters"].values()))
             self.assertFalse(record["next_gate"]["future_private_discriminator_authorized"])
             self.assertFalse(record["next_gate"]["MARC2_FW2_or_CIL1_authorized"])
+            self.assertTrue(
+                record["next_gate"][
+                    "exact_implementation_and_result_commit_push_and_both_jobs_green_satisfied"
+                ]
+            )
             claims = record["claim_boundary"]
             self.assertEqual(claims["scientific_ceiling"], "none")
             for key, value in claims.items():

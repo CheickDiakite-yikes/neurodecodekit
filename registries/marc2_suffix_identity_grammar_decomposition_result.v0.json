@@ -3,7 +3,7 @@
   "schema_version": "0.1.0",
   "lane_id": "MARC2-VR15A",
   "recorded_at_local": "2026-08-21",
-  "status": "completed_artifact_only_generated_qualification_local_pass_remote_proof_pending",
+  "status": "completed_artifact_only_generated_qualification_remotely_green",
   "proof_posture": "tracked_code_and_generated_structural_interface_only_no_private_or_scientific_value",
   "route": "MARC2VR15A-G1",
   "green_registration_proof": {
@@ -14,7 +14,22 @@
     "both_required_jobs_green_before_implementation": true,
     "contract_sha256": "10644f5487069c3143a55f1910d07f7e7572bcd6ed21fdc2620a8a649b26a058"
   },
-  "remote_implementation_proof": null,
+  "remote_implementation_proof": {
+    "commit": "bfb0dcb7752433b4af841d57bbfcbf613a341124",
+    "CI_run_id": 32449260503,
+    "base_python_job_id": 96674484190,
+    "optional_neuro_job_id": 96674484279,
+    "both_required_jobs_green": true,
+    "implementation_module_Git_blob": "1709cfb2021859c14990f4eb28f1e50ba7bbb6ba",
+    "behavior_test_Git_blob": "5283802921f09bdac833e818c943aad4117ab341",
+    "record_test_Git_blob": "93e4eef2e4ba6fe39b0152aa8442f51a864d8abf",
+    "implementation_document_Git_blob": "c89c4c24078cec33da81d131b3b456316faad96e",
+    "result_document_Git_blob": "46ca59a470436b3068ad469ac19f4b377b7398da",
+    "preproof_implementation_registry_Git_blob": "c7c15db577ca55c04276c33f0ed7533dadbbca9f",
+    "preproof_result_registry_Git_blob": "6078c74b2b38e693474f3f3a5cfe0967ac6accfb",
+    "generated_qualification_repeated_for_proof_closeout": false,
+    "private_operation_repeated_for_proof_closeout": false
+  },
   "route_summary": {
     "ordered_routes": [
       "MARC2VR15A-G1", "MARC2VR15A-R1", "MARC2VR15A-R2",
@@ -120,7 +135,7 @@
     "archive payload neural signal event target model prediction and score"
   ],
   "next_gate": {
-    "exact_implementation_and_result_commit_push_and_both_jobs_green_satisfied": false,
+    "exact_implementation_and_result_commit_push_and_both_jobs_green_satisfied": true,
     "future_private_discriminator_authorized": false,
     "future_private_discriminator_requires_new_Tier_C_packet_and_fresh_decision": true,
     "consumed_VR13P_or_VR14P_reuse_allowed": false,

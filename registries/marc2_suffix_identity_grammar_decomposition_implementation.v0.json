@@ -4,7 +4,7 @@
   "implementation_id": "MARC-2-VR15A-suffix-identity-grammar-decomposition-implementation-v0",
   "lane_id": "MARC2-VR15A",
   "recorded_at_local": "2026-08-21",
-  "status": "exact_generated_implementation_and_result_local_pass_remote_proof_pending",
+  "status": "exact_generated_implementation_and_result_remotely_green",
   "proof_posture": "artifact_only_tracked_code_and_generated_structural_interface_no_private_or_scientific_value",
   "green_registration_proof": {
     "commit": "185fbc54366fd0eaf0ed4e994511e4485514b53e",
@@ -30,8 +30,8 @@
     {
       "role": "record_test",
       "path": "tests/test_marc2_suffix_identity_grammar_decomposition_records.py",
-      "bytes": 4116,
-      "sha256": "64e2cf7e584e7b20101c70a6ae2c38bb9df0ad6d6d32cd8079ab2504def247ff"
+      "bytes": 4822,
+      "sha256": "42733cee5cc7a9009b4e5fd44019527bb42a4d53fd7284f07fe17e5a34dee639"
     },
     {
       "role": "implementation_document",
@@ -119,9 +119,24 @@
     "compileall_passed": true,
     "CLI_help_plan_inspect_and_qualify_passed": true,
     "diff_check_passed": true,
-    "remote_CI_pending": true
+    "remote_CI_pending": false
   },
-  "remote_implementation_proof": null,
+  "remote_implementation_proof": {
+    "commit": "bfb0dcb7752433b4af841d57bbfcbf613a341124",
+    "CI_run_id": 32449260503,
+    "base_python_job_id": 96674484190,
+    "optional_neuro_job_id": 96674484279,
+    "both_required_jobs_green": true,
+    "implementation_module_Git_blob": "1709cfb2021859c14990f4eb28f1e50ba7bbb6ba",
+    "behavior_test_Git_blob": "5283802921f09bdac833e818c943aad4117ab341",
+    "record_test_Git_blob": "93e4eef2e4ba6fe39b0152aa8442f51a864d8abf",
+    "implementation_document_Git_blob": "c89c4c24078cec33da81d131b3b456316faad96e",
+    "result_document_Git_blob": "46ca59a470436b3068ad469ac19f4b377b7398da",
+    "preproof_implementation_registry_Git_blob": "c7c15db577ca55c04276c33f0ed7533dadbbca9f",
+    "preproof_result_registry_Git_blob": "6078c74b2b38e693474f3f3a5cfe0967ac6accfb",
+    "generated_qualification_repeated_for_proof_closeout": false,
+    "private_operation_repeated_for_proof_closeout": false
+  },
   "access_counters": {
     "private_or_Git_ignored_path_operations": 0,
     "consumed_VR13P_or_VR14P_path_or_output_operations": 0,
@@ -136,7 +151,7 @@
     "release_or_scientific_claim_upgrades": 0
   },
   "next_gate": {
-    "exact_implementation_and_result_commit_push_and_both_jobs_green_satisfied": false,
+    "exact_implementation_and_result_commit_push_and_both_jobs_green_satisfied": true,
     "future_private_discriminator_authorized": false,
     "future_private_discriminator_requires_new_Tier_C_packet_and_fresh_decision": true,
     "consumed_VR13P_or_VR14P_reuse_allowed": false,

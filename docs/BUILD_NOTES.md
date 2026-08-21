@@ -12029,3 +12029,18 @@ implementation.
 
 Immediate gate: commit, push, and green the exact implementation/result before
 preparing any new all-false private discriminator packet.
+
+### VR15A remote proof closeout
+
+- Exact implementation `bfb0dcb7752433b4af841d57bbfcbf613a341124`
+  passed Base job `96674484190`, Optional job `96674484279`, and CI
+  `32449260503`.
+- Bound the implementation module, behavior test, record test, two measured
+  documents, and both preproof registries by exact Git blob.
+- Generated qualification repetitions, ignored/private operations, structural-
+  source reads, archives, neural data, targets, models, predictions, scores,
+  FW2/CIL1, network, retry, release, and claims during closeout: zero.
+
+Immediate gate: Tier A may prepare one all-false private suffix-identity
+discriminator packet. Any actual private read remains Tier C and needs a fresh
+packet-bound decision.

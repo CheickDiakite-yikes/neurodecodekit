@@ -9987,3 +9987,20 @@ private class. Keep private and ignored paths, structural source, archives,
 neural payloads, targets, models, predictions, scores, FW2/CIL1, release, and
 claims closed. Remote-proof the exact implementation before preparing any new
 all-false Tier C packet.
+
+## 0319 - Close VR15A With Exact Remote Proof
+
+Proof decision: exact implementation `bfb0dcb` passed Base Python job
+`96674484190`, Optional Neuro Readers job `96674484279`, and CI
+`32449260503`. Bind the exact commit and seven Git blobs in both machine
+records.
+
+Zero-repeat decision: update only proof metadata, completed status, the proof
+test, and frontier notes. Do not rerun the generated qualification or perform
+any ignored-path, private-source, archive, neural, target, model, prediction,
+score, FW2/CIL1, network, hardware, release, or claim operation.
+
+Boundary decision: remote proof makes only an all-false private discriminator
+packet eligible for Tier A preparation. It does not authorize its future
+private read, identify the consumed class, freeze a cohort, or establish any
+scientific result.
