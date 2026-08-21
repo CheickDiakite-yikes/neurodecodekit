@@ -3813,6 +3813,17 @@ cohort freeze, archive member, neural payload, target, model, score, FW2, or
 CIL1 operation remains a separate Tier C gate and fresh packet-bound decision.
 Do not touch consumed VR15P state or the unrelated tracker inspection NDJSON.
 
+The next gate is prepared as `MARC2-VR16P`. Read
+`docs/MARC_2_VARIABLE_WIDTH_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md` and
+`registries/marc2_variable_width_private_confirmation_authorization_request.v0.json`.
+It is an all-false two-stage request: a generated/mock fixed-path wrapper first,
+then only after exact green implementation and closeout one 418,755-byte
+target-free structural read and one VR16A call. R1 may freeze one private
+structural cohort and make a separate FW2 preregistration eligible; R2-R6
+retain only aggregate failure classes. Commit, push, and green the request and
+a non-scope-changing proof closeout before identifying VR16P as the sole Tier C
+gate. No current or earlier message authorizes implementation or private access.
+
 ## Style
 
 - Small functions, explicit names, low magic.

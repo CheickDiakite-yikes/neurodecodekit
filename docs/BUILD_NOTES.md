@@ -12253,3 +12253,20 @@ fresh decision.
 Immediate gate: commit, push, and green this proof-only transition. Then Tier A
 may prepare one all-false private-confirmation packet; no private access is
 authorized by the closeout.
+
+### VR16P all-false private-confirmation request
+
+- Bound 15 exact tracked inputs totaling 180,905 bytes, including the green
+  VR16A registration, implementation, result, proof records, consumed VR15P
+  aggregate result, readiness module, and selector contract.
+- Proposed 24 generated width/order/replay wrapper paths, at least 70 direct
+  refusals, fixed no-override paths, and one later 418,755-byte target-free
+  source open with one VR16A call.
+- Only R1 may write one private source-exact cohort manifest; R2-R6 expose one
+  aggregate class and consume. Archive, neural, target, model, score, FW2/CIL1,
+  network, hardware, release, and claim work remains forbidden.
+- Packet preparation performed zero `.codex_work`, private-source, readiness,
+  output-root, archive, neural, model, score, or other-project operation.
+
+Immediate gate: commit, push, and green the request, then add and green a
+proof-only closeout before fresh packet-bound authorization can be sought.

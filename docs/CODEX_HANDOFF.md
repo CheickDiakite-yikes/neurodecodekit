@@ -6490,3 +6490,22 @@ Immediate gate: commit, push, and green this proof-only closeout. Then Tier A
 may prepare an all-false real structural-confirmation packet. No real read,
 cohort freeze, neural payload, FW2, or CIL1 operation is currently authorized.
 Keep consumed VR15P and the unrelated tracker inspection NDJSON untouched.
+
+## 2026-08-21 MARC2-VR16P All-False Request Handoff
+
+Proof-only closeout `91dd117ca582f9cc3256f7a4feb0f498be8e3956`
+passed Base job `96706432536`, Optional job `96706432846`, and CI
+`32460539227`. The next request is now drafted in the VR16P authorization
+packet, machine request, and request test.
+
+The request binds 15 tracked inputs totaling 180,905 bytes and proposes two
+future stages: 24 generated wrapper paths with at least 70 direct refusals,
+then only after exact green Stage 1 and closeout one 418,755-byte target-free
+structural read and one VR16A call. Only R1 may freeze a source-exact cohort;
+R2-R6 retain aggregate failure classes. Every current authorization is false
+and every preparation operation counter is zero.
+
+Immediate gate: commit, push, and green the exact request, then create and
+green a non-scope-changing request proof closeout. Do not identify it as the
+sole Tier C gate or treat any earlier `continue` as authority before both
+barriers pass. Keep consumed VR15P and the unrelated NDJSON untouched.

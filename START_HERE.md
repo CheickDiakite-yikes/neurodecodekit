@@ -2389,3 +2389,8 @@ implementation `6f92b84` passed both jobs in CI `32459984049`. Tier A may now
 prepare an all-false private-confirmation packet, but any real confirmation,
 cohort freeze, archive member, neural payload, FW2, or CIL1 step requires that
 separate frozen Tier C packet and a fresh decision.
+
+The all-false next request is now drafted as `MARC2-VR16P`. It proposes a
+generated fixed-path wrapper followed, only after separate proof barriers and
+fresh packet-bound authorization, by one target-free 418,755-byte structural
+read. The packet itself performs no private operation and grants no authority.

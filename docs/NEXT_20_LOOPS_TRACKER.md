@@ -3323,3 +3323,17 @@ Next gate: commit, push, and green the proof-only closeout. Then an all-false
 one-shot private structural-confirmation packet may be prepared.
 No real cohort, archive, neural, target, model, score, FW2, or CIL1 work is
 open, and no scientific claim is upgraded.
+
+### MARC2-VR16P - Private Structural Confirmation Request Prepared
+
+The all-false packet binds the remotely green VR16A proof chain and 15 exact
+tracked inputs totaling 180,905 bytes. It proposes 24 generated fixed-path
+wrapper calls followed, only after separate green barriers and fresh Tier C
+authorization, by one 418,755-byte target-free structural read and one VR16A
+call. R1 alone may freeze a bounded source-exact cohort; R2-R6 consume at an
+aggregate failure class.
+
+Next gate: commit, push, and green the request, then add and green a proof-only
+closeout before sole-gate identification. Current implementation, private,
+cohort, archive, neural, target, model, score, FW2/CIL1, release, and claim
+authority remains false.

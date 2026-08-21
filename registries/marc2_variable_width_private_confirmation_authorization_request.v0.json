@@ -1,0 +1,367 @@
+{
+  "schema_name": "neurodecodekit.marc2_variable_width_private_confirmation_authorization_request",
+  "schema_version": "0.1.0",
+  "request_id": "MARC-2-VR16P-variable-width-private-confirmation-two-stage-request-v0",
+  "lane_id": "MARC2-VR16P",
+  "recorded_at_local": "2026-08-21",
+  "status": "all_false_Tier_C_request_prepared_no_decision_no_private_access",
+  "proof_posture": "request_only_no_private_real_or_scientific_operation_authorized",
+  "green_predecessor_proof": {
+    "registration_commit": "7dba59355ca45c8ab5eafb9d8b7757edfc9755c5",
+    "registration_CI_run_id": 32458280634,
+    "registration_base_job_id": 96699811237,
+    "registration_optional_job_id": 96699811051,
+    "implementation_commit": "6f92b84c7be67848c7d09b567f13b08a14d33f5c",
+    "implementation_CI_run_id": 32459984049,
+    "implementation_base_job_id": 96704807926,
+    "implementation_optional_job_id": 96704808178,
+    "proof_closeout_commit": "91dd117ca582f9cc3256f7a4feb0f498be8e3956",
+    "proof_closeout_CI_run_id": 32460539227,
+    "proof_closeout_base_job_id": 96706432536,
+    "proof_closeout_optional_job_id": 96706432846,
+    "all_required_jobs_green": true,
+    "generated_qualification_repeated_for_proof_closeout": false,
+    "private_operation_performed_for_proof_closeout": false
+  },
+  "fixed_inputs": [
+    {
+      "role": "VR16A_primary_source_research",
+      "path": "docs/MARC_2_VARIABLE_WIDTH_RUN_INDEX_PRIMARY_SOURCE_RESEARCH.md",
+      "bytes": 3114,
+      "sha256": "ab31881e6e5da47002b43e66fea20a2120d35c0fca734b8dc96db5e2f8ecf9cc"
+    },
+    {
+      "role": "VR16A_preregistration",
+      "path": "docs/MARC_2_VARIABLE_WIDTH_RUN_INDEX_REPAIR_PREREGISTRATION.md",
+      "bytes": 5211,
+      "sha256": "84ab86cbb77705e5fd20bcc14fae03b7109ba9311a2e289d0708443074e5383f"
+    },
+    {
+      "role": "VR16A_contract",
+      "path": "registries/marc2_variable_width_run_index_repair_contract.v0.json",
+      "bytes": 9282,
+      "sha256": "308b80864553fd12a7bda7e4691aea35c63eebfbd651c7ed86ebc15e2fd41dec"
+    },
+    {
+      "role": "VR16A_module",
+      "path": "src/neurodecodekit/datasets/marc2_variable_width_run_index_repair.py",
+      "bytes": 43861,
+      "sha256": "1a69d42236af61b1e5565dc89903aa20e9416732752aa5b5b1ffe3a95003f3f1"
+    },
+    {
+      "role": "VR16A_behavior_test",
+      "path": "tests/test_marc2_variable_width_run_index_repair.py",
+      "bytes": 9892,
+      "sha256": "c5c70fc5194b36e9ecc95060351daf534167ead4e43a87824574c7487b13be08"
+    },
+    {
+      "role": "VR16A_contract_test",
+      "path": "tests/test_marc2_variable_width_run_index_repair_contract.py",
+      "bytes": 4936,
+      "sha256": "06f412ac9da3e92f65f50b1db18d4822d02a877d67f957166b813899cc863c87"
+    },
+    {
+      "role": "VR16A_record_test",
+      "path": "tests/test_marc2_variable_width_run_index_repair_records.py",
+      "bytes": 4874,
+      "sha256": "8f31e48d06f22e0893d3f7ecbafd840249fa7d0051c35a6dd479842d0c584952"
+    },
+    {
+      "role": "VR16A_implementation_document",
+      "path": "docs/MARC_2_VARIABLE_WIDTH_RUN_INDEX_REPAIR_IMPLEMENTATION.md",
+      "bytes": 4417,
+      "sha256": "b118100ec97d008519a6a804ecdd4e97a6e86192f39e8d3bce4048a4ae680e0f"
+    },
+    {
+      "role": "VR16A_result_document",
+      "path": "docs/MARC_2_VARIABLE_WIDTH_RUN_INDEX_REPAIR_RESULT.md",
+      "bytes": 3264,
+      "sha256": "57bf3e59905e183ee50a8a79cb43318fc027312fb105a10bc356c494fda91822"
+    },
+    {
+      "role": "VR16A_proof_closeout_document",
+      "path": "docs/MARC_2_VARIABLE_WIDTH_RUN_INDEX_REPAIR_PROOF_CLOSEOUT.md",
+      "bytes": 2276,
+      "sha256": "cb365eafac6103e46cb14fdcb12f1ea4d46612b0739c98005eef5c704dd1fe73"
+    },
+    {
+      "role": "VR16A_implementation_registry",
+      "path": "registries/marc2_variable_width_run_index_repair_implementation.v0.json",
+      "bytes": 6598,
+      "sha256": "a11714c7860713a2b8ce82ed2d7a4f045d48582a36e1870b3f034719acbef7bd"
+    },
+    {
+      "role": "VR16A_result_registry",
+      "path": "registries/marc2_variable_width_run_index_repair_result.v0.json",
+      "bytes": 5941,
+      "sha256": "5d873da94343c3b4a55c812088c00a5d2c9cc2b0f0e97bea9fd3b8c79854a652"
+    },
+    {
+      "role": "consumed_VR15P_result",
+      "path": "registries/marc2_suffix_identity_private_discriminator_result.v0.json",
+      "bytes": 4550,
+      "sha256": "bfe567932fd11d63ad8affc1462c3978d22cef6eb8ed19f314ea3629f5a91297"
+    },
+    {
+      "role": "machine_readiness_module",
+      "path": "src/neurodecodekit/datasets/marc2_machine_readiness.py",
+      "bytes": 56868,
+      "sha256": "7773b070dc0b819d7a680789fe6d998293ed17c94776af703034576e773dafa0"
+    },
+    {
+      "role": "selector_contract",
+      "path": "registries/marc2_freewill_prefix_selection_contract.v0.json",
+      "bytes": 15821,
+      "sha256": "dfe614cd7ec27c54c4f03848e3878c714222db043f501b9b07e57c7dc9f5f702"
+    }
+  ],
+  "fixed_input_count": 15,
+  "fixed_input_bytes": 180905,
+  "registration_artifacts": {
+    "document_path": "docs/MARC_2_VARIABLE_WIDTH_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md",
+    "document_sha256": "dc91cd628cb29087cfd7ad96dbb41b42ac263136fedd67c0474608eba51bb6cb",
+    "test_path": "tests/test_marc2_variable_width_private_confirmation_authorization_request.py",
+    "test_sha256": "706be165c12437afda9447bfc33340dee3ef283ef215e343f364f4ec15dc86c1"
+  },
+  "requested_sequence": [
+    {
+      "stage": 1,
+      "name": "generated_mock_fixed_path_wrapper",
+      "requires_request_proof_and_separate_decision_green": true,
+      "requires_exact_green_stage_1_and_proof_closeout": false,
+      "private_or_Git_ignored_path_operations": 0
+    },
+    {
+      "stage": 2,
+      "name": "one_target_free_private_structural_confirmation",
+      "requires_request_proof_and_separate_decision_green": true,
+      "requires_exact_green_stage_1_and_proof_closeout": true,
+      "private_source_content_open_limit": 1
+    }
+  ],
+  "future_fixed_paths": {
+    "readiness_certificate": ".codex_work/marc2_machine_readiness/vr16p/readiness.v0.json",
+    "output_root": ".codex_work/marc2_variable_width_private_confirmation/v0",
+    "consumed_marker": ".codex_work/marc2_variable_width_private_confirmation/v0/consumed_marker.v0.json",
+    "private_cohort_manifest": ".codex_work/marc2_variable_width_private_confirmation/v0/cohort.private.v0.json",
+    "aggregate_report": ".codex_work/marc2_variable_width_private_confirmation/v0/variable_width_private_confirmation.aggregate.v0.json"
+  },
+  "future_interface": {
+    "module": "neurodecodekit.datasets.marc2_variable_width_private_confirmation",
+    "commands": ["plan", "qualify", "inspect", "execute"],
+    "generic_path_argument_allowed": false,
+    "generic_URL_argument_allowed": false,
+    "generic_output_argument_allowed": false,
+    "threshold_or_cap_override_allowed": false,
+    "retry_resume_fallback_width_or_route_override_allowed": false,
+    "source_or_output_substitution_allowed": false
+  },
+  "future_private_source": {
+    "path": ".codex_work/marc1_central_directory/live_audit_v0/member_inventory.private.v0.json",
+    "mode_octal": "0600",
+    "bytes": 418755,
+    "sha256": "2a2e48b88ee59332a199d926554bb6921222fff92046a0fc9b07cf73fd6c3031",
+    "schema_name": "neurodecodekit.marc1_central_directory_private_manifest",
+    "rows": 1227,
+    "regular_file_rows": 1025,
+    "directory_rows": 202,
+    "source_bundles": 238,
+    "eligible_bundles": 195,
+    "valid_ineligible_bundles": 43,
+    "path_checked_during_packet_preparation": false,
+    "content_opened_during_packet_preparation": false,
+    "bytes_read_during_packet_preparation": 0,
+    "future_content_open_limit": 1,
+    "future_bytes_read_limit": 418755
+  },
+  "future_adapter_contract": {
+    "exact_function": "neurodecodekit.datasets.marc2_variable_width_run_index_repair.adapt_variable_width_source",
+    "exact_real_calls": 1,
+    "accepted_run_token_regex": "[0-9]+",
+    "separate_run_width_ceiling": null,
+    "member_name_UTF8_bytes_maximum": 1024,
+    "canonical_numeric_identity": "strip_leading_zeroes_else_zero",
+    "selected_semantic_runs": [1, 2, 3],
+    "source_mutation_allowed": false,
+    "source_exact_selected_names_required": true,
+    "source_exact_reservation_required": true,
+    "subject_session_task_suffix_or_path_broadening_allowed": false,
+    "cap_rank_split_or_companion_relaxation_allowed": false
+  },
+  "private_route_contract": [
+    {
+      "route": "MARC2VR16P-R1",
+      "meaning": "exact adapter accepted and froze one bounded structural cohort",
+      "private_cohort_manifest_allowed": true
+    },
+    {
+      "route": "MARC2VR16P-R2",
+      "meaning": "readiness fixed-path or output precondition refused",
+      "private_cohort_manifest_allowed": false
+    },
+    {
+      "route": "MARC2VR16P-R3",
+      "meaning": "source identity or strict structural envelope refused",
+      "private_cohort_manifest_allowed": false
+    },
+    {
+      "route": "MARC2VR16P-R4",
+      "meaning": "numeric identity task or companion validation refused",
+      "private_cohort_manifest_allowed": false
+    },
+    {
+      "route": "MARC2VR16P-R5",
+      "meaning": "taxonomy selection split rank or reservation refused",
+      "private_cohort_manifest_allowed": false
+    },
+    {
+      "route": "MARC2VR16P-R6",
+      "meaning": "privacy deterministic-output or resource validation refused",
+      "private_cohort_manifest_allowed": false
+    }
+  ],
+  "future_cohort_freeze_contract": {
+    "minimum_subjects": 12,
+    "maximum_subjects": 19,
+    "fit_session": "ses-01",
+    "heldout_session": "ses-02",
+    "semantic_runs_per_session": [1, 2, 3],
+    "minimum_selected_run_bundles": 72,
+    "maximum_selected_run_bundles": 114,
+    "minimum_selected_core_members": 288,
+    "maximum_selected_core_members": 456,
+    "equal_fit_and_heldout_bundle_counts": true,
+    "maximal_contiguous_rank_prefix_required": true,
+    "payload_reservation_cap_bytes": 8589934592,
+    "private_manifest_mode_octal": "0600",
+    "aggregate_report_mode_octal": "0644",
+    "private_manifest_contains_source_exact_rows": true,
+    "private_manifest_contains_contract_source_semantic_and_name_hashes": true,
+    "public_aggregate_contains_counts_hashes_bytes_warnings_and_unavailable_fields_only": true,
+    "public_per_item_identity_allowed": false,
+    "FW2_authorized_by_R1": false,
+    "FW2_preregistration_eligible_after_R1": true,
+    "CIL1_authorized_by_R1": false
+  },
+  "generated_stage_requirements": {
+    "generated_only": true,
+    "width_variants": 6,
+    "source_orders": 2,
+    "exact_replays": 2,
+    "required_paths": 24,
+    "VR16A_calls_per_path": 1,
+    "direct_refusal_minimum": 70,
+    "fixed_path_state_machine_qualification_required": true,
+    "private_or_Git_ignored_path_operation_limit": 0,
+    "retained_generated_output_bytes": 0
+  },
+  "fresh_machine_readiness_contract": {
+    "consecutive_passing_samples": 3,
+    "certificate_mode_octal": "0600",
+    "certificate_maximum_bytes": 65536,
+    "thread_environment_all_one": true,
+    "normalized_one_minute_load_maximum": 1.0,
+    "process_peak_RSS_bytes_maximum_exclusive": 268435456,
+    "free_disk_bytes_minimum": 16106127360,
+    "wait_seconds_maximum": 600,
+    "readiness_invocation_limit": 1
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "generated_runtime_seconds": 45,
+    "private_runtime_seconds": 650,
+    "peak_RSS_bytes_exclusive": 268435456,
+    "minimum_free_disk_bytes": 16106127360,
+    "generated_input_bytes": 33554432,
+    "generated_temporary_output_bytes": 2097152,
+    "private_source_read_bytes": 418755,
+    "private_source_content_opens": 1,
+    "strict_JSON_parses": 1,
+    "VR16A_adapter_calls": 1,
+    "combined_incremental_output_bytes": 2097152,
+    "network_bytes": 0,
+    "new_payload_bytes": 0,
+    "archive_member_or_payload_bytes": 0,
+    "signal_sample_bytes": 0,
+    "target_or_label_bytes": 0,
+    "retry_rerun_resume_count": 0
+  },
+  "aggregate_output_firewall": {
+    "allowed_content": "counts_hashes_bytes_route_resource_measurements_warnings_unavailable_fields_and_claim_boundaries_only",
+    "member_names_or_source_paths_allowed": false,
+    "subject_participant_session_run_or_companion_identity_allowed": false,
+    "offset_CRC_or_per_item_rows_allowed": false,
+    "reason_exception_text_or_failed_value_allowed": false,
+    "target_label_prediction_or_score_allowed": false
+  },
+  "failure_semantics": {
+    "failure_before_marker_consumes_invocation": true,
+    "failure_after_marker_consumes_diagnostic": true,
+    "one_aggregate_terminal_route_only": true,
+    "retry_rerun_resume_or_reinspection_allowed": false,
+    "repair_fallback_substitution_or_post_result_amendment_allowed": false
+  },
+  "decision_protocol": {
+    "request_commit_push_and_both_remote_jobs_green_required": true,
+    "proof_closeout_commit_push_and_both_remote_jobs_green_required": true,
+    "sole_active_Tier_C_packet_identification_required": true,
+    "fresh_unambiguous_packet_bound_maintainer_message_required": true,
+    "current_or_earlier_continue_is_retroactive_authority": false,
+    "decision_commit_push_and_both_remote_jobs_green_before_implementation": true,
+    "exact_future_implementation_and_closeout_green_before_private_open": true,
+    "packet_or_decision_alone_authorizes_private_open": false
+  },
+  "authorization_state": {
+    "decision_recorded_now": false,
+    "stage_1_implementation_authorized_now": false,
+    "generated_qualification_authorized_now": false,
+    "readiness_or_private_path_access_authorized_now": false,
+    "private_source_read_authorized_now": false,
+    "private_cohort_freeze_authorized_now": false,
+    "archive_neural_target_model_or_score_authorized_now": false,
+    "MARC2_FW2_or_CIL1_authorized_now": false,
+    "release_publication_or_claim_upgrade_authorized_now": false
+  },
+  "operation_counters": {
+    "implementation_or_generated_qualification_operations": 0,
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_VR15P_path_or_output_operations": 0,
+    "readiness_certificate_or_output_root_operations": 0,
+    "real_structural_source_operations": 0,
+    "private_source_stats_resolves_hashes_opens_reads_or_parses": 0,
+    "private_cohort_manifest_operations": 0,
+    "archive_local_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "cache_feature_split_or_NeuroToken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "network_or_public_request_operations": 0,
+    "provider_language_model_stream_device_or_hardware_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "retry_rerun_release_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "claim_boundary": {
+    "engineering_request": "one future proof-gated structural read can confirm the variable-width selector and freeze a source-exact private cohort without opening a neural payload",
+    "scientific_ceiling": "none",
+    "private_source_accessed_now": false,
+    "real_cohort_frozen_now": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "real_time_portable_home_assistive_or_clinical_result": false
+  },
+  "next_gate": {
+    "request_commit_push_and_both_jobs_green_required": true,
+    "request_proof_closeout_commit_push_and_both_jobs_green_required": true,
+    "sole_active_Tier_C_packet_identification_required": true,
+    "fresh_packet_bound_Tier_C_decision_required": true,
+    "implementation_authorized_now": false,
+    "private_read_authorized_now": false,
+    "real_cohort_freeze_authorized_now": false,
+    "archive_payload_neural_target_model_prediction_or_score_authorized_now": false,
+    "MARC2_FW2_or_CIL1_authorized": false
+  }
+}
