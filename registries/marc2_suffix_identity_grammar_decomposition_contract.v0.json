@@ -1,0 +1,217 @@
+{
+  "schema_name": "neurodecodekit.marc2_suffix_identity_grammar_decomposition_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "MARC-2-VR15A-suffix-identity-grammar-decomposition-v0",
+  "lane_id": "MARC2-VR15A",
+  "recorded_at_local": "2026-08-21",
+  "status": "preregistered_artifact_only_generated_only_no_private_access",
+  "objective": "Decompose the consumed aggregate P15 suffix-bearing BIDS identity class into deterministic privacy-safe grammar routes using only committed artifacts and generated manifests.",
+  "fixed_inputs": [
+    {
+      "role": "VR14P_result_document",
+      "path": "docs/MARC_2_INCIDENT_AGGREGATE_RECOVERY_RESULT.md",
+      "bytes": 2637,
+      "sha256": "bc6e868a8070d4c1069d49be5160d0017df55c008d263012046ffec877c3762b"
+    },
+    {
+      "role": "VR14P_result_record",
+      "path": "registries/marc2_incident_aggregate_recovery_result.v0.json",
+      "bytes": 4060,
+      "sha256": "08143d04810d181e429bea89fc837552177696223138eee4ac10b1ed96a357ba"
+    },
+    {
+      "role": "VR14P_result_test",
+      "path": "tests/test_marc2_incident_aggregate_recovery_result.py",
+      "bytes": 3449,
+      "sha256": "94a2e27e97b7df44e0307aa43545a0eba27457e5c23080b64ac428ac5e49bc14"
+    },
+    {
+      "role": "VR12A_repaired_adapter",
+      "path": "src/neurodecodekit/datasets/marc2_p15_run_index_repair.py",
+      "bytes": 39338,
+      "sha256": "e7321d2a2b347ae2a4d0294c59d06d8eeeb3c6f08bf279b2658d1d56a25aa2f6"
+    },
+    {
+      "role": "VR12A_contract",
+      "path": "registries/marc2_p15_run_index_repair_contract.v0.json",
+      "bytes": 9681,
+      "sha256": "a6cd01e79813f79dfd7b54ee6c2d21ffb82e984b6230434127b936c513cf3f1e"
+    },
+    {
+      "role": "VR12A_contract_test",
+      "path": "tests/test_marc2_p15_run_index_repair_contract.py",
+      "bytes": 5870,
+      "sha256": "648352aefab2ecea414eb68c3d00b93088b9db57f5874f030d1d476cef1bc782"
+    },
+    {
+      "role": "VR13A_residual_router",
+      "path": "src/neurodecodekit/datasets/marc2_r4_residual_decomposition.py",
+      "bytes": 41268,
+      "sha256": "a4ebd7890e60e37f181169b7d90ea03edeace6b364b1774b98921788416f0513"
+    },
+    {
+      "role": "VR13A_contract",
+      "path": "registries/marc2_r4_residual_decomposition_contract.v0.json",
+      "bytes": 14189,
+      "sha256": "b51472e609d5355bac9902b3c70f37ea7ba3bd39231910e1507926be953e4b55"
+    },
+    {
+      "role": "VR13A_result",
+      "path": "registries/marc2_r4_residual_decomposition_result.v0.json",
+      "bytes": 6390,
+      "sha256": "1a23ed7b14166050070fe052193bdb8b05c22ebd055b1d0ba2a0eb65ae39d913"
+    },
+    {
+      "role": "frozen_selector",
+      "path": "src/neurodecodekit/datasets/marc2_freewill_prefix_selection.py",
+      "bytes": 72691,
+      "sha256": "86fa30fbd1caed735f0fb2e627144482a2bb8e033567bb3794e3f05508005c97"
+    },
+    {
+      "role": "frozen_selector_contract",
+      "path": "registries/marc2_freewill_prefix_selection_contract.v0.json",
+      "bytes": 15821,
+      "sha256": "dfe614cd7ec27c54c4f03848e3878c714222db043f501b9b07e57c7dc9f5f702"
+    }
+  ],
+  "fixed_input_count": 11,
+  "fixed_input_bytes": 215394,
+  "observed_route_binding": {
+    "VR14P_status": "consumed",
+    "VR14P_route": "MARC2VR13P-R2",
+    "frozen_class": "suffix_bearing_BIDS_identity_structural_class_only",
+    "failed_value_predicate_row_path_identity_or_person_available": false,
+    "real_cohort_available": false,
+    "consumed_or_ignored_state_reinspection_allowed": false
+  },
+  "grammar_basis": {
+    "source_regex_owner": "src/neurodecodekit/datasets/marc2_p15_run_index_repair.py",
+    "source_regex_symbol": "REPAIRED_CORE_MEMBER_RE",
+    "required_suffix_owner": "src/neurodecodekit/datasets/marc2_freewill_prefix_selection.py",
+    "required_suffix_symbol": "REQUIRED_SUFFIXES",
+    "exact_P15_route": "MARC2VR12A-F03",
+    "exact_P15_reason": "P15 suffix-bearing BIDS identity differs",
+    "subject_entity_regex": "sub-[0-9]{2}",
+    "session_entity_regex": "ses-[0-9]{2}",
+    "prefix_segment_regex": "[A-Za-z0-9._-]+",
+    "task_value_regex": "[A-Za-z0-9]+",
+    "optional_entity_regex": "[A-Za-z0-9]+-[A-Za-z0-9]+",
+    "run_value_regex": "[0-9]{1,2}",
+    "modality_directory": "eeg"
+  },
+  "ordered_route_table": [
+    {"route": "MARC2VR15A-R1", "class": "tail_component_count"},
+    {"route": "MARC2VR15A-R2", "class": "prefix_segment_grammar"},
+    {"route": "MARC2VR15A-R3", "class": "subject_directory_shape"},
+    {"route": "MARC2VR15A-R4", "class": "session_directory_shape"},
+    {"route": "MARC2VR15A-R5", "class": "modality_directory"},
+    {"route": "MARC2VR15A-R6", "class": "filename_subject_shape"},
+    {"route": "MARC2VR15A-R7", "class": "filename_subject_disagreement"},
+    {"route": "MARC2VR15A-R8", "class": "filename_session_shape"},
+    {"route": "MARC2VR15A-R9", "class": "filename_session_disagreement"},
+    {"route": "MARC2VR15A-R10", "class": "task_entity_shape"},
+    {"route": "MARC2VR15A-R11", "class": "optional_entity_shape"},
+    {"route": "MARC2VR15A-R12", "class": "run_entity_absent"},
+    {"route": "MARC2VR15A-R13", "class": "run_entity_not_terminal"},
+    {"route": "MARC2VR15A-R14", "class": "run_token_nonnumeric"},
+    {"route": "MARC2VR15A-R15", "class": "run_token_width"},
+    {"route": "MARC2VR15A-R16", "class": "multiple_identity_classes"}
+  ],
+  "success_route": "MARC2VR15A-G1",
+  "generated_matrix": {
+    "cases": [
+      "control_success",
+      "tail_component_count",
+      "prefix_segment_grammar",
+      "subject_directory_shape",
+      "session_directory_shape",
+      "modality_directory",
+      "filename_subject_shape",
+      "filename_subject_disagreement",
+      "filename_session_shape",
+      "filename_session_disagreement",
+      "task_entity_shape",
+      "optional_entity_shape",
+      "run_entity_absent",
+      "run_entity_not_terminal",
+      "run_token_nonnumeric",
+      "run_token_width",
+      "multiple_identity_classes"
+    ],
+    "orders": ["canonical", "reversed"],
+    "replays": 2,
+    "required_paths": 68,
+    "required_VR12A_calls": 68,
+    "route_count_each": 4,
+    "single_failure_witnesses_must_reach_exact_P15": true,
+    "multiple_class_route_must_be_order_invariant": true,
+    "source_immutability_required": true,
+    "retained_generated_output_bytes": 0
+  },
+  "acceptance_gates": [
+    "all_fixed_inputs_match_size_and_SHA256",
+    "exact_repaired_regex_and_P15_guard_are_static_bound",
+    "sixteen_ordered_result_routes_are_unique",
+    "sixty_eight_paths_call_unchanged_VR12A_once_each",
+    "every_single_witness_reaches_exact_VR12A_F03_P15",
+    "G1_and_R1_through_R16_each_appear_four_times",
+    "canonical_reversed_and_both_replays_match",
+    "every_generated_source_remains_byte_identical",
+    "at_least_seventy_direct_refusals_pass",
+    "retained_generated_output_is_zero",
+    "resource_caps_pass",
+    "all_forbidden_operation_counters_remain_zero"
+  ],
+  "direct_refusal_minimum": 70,
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds_maximum": 30,
+    "peak_RSS_bytes_maximum": 268435456,
+    "generated_input_bytes_maximum": 33554432,
+    "aggregate_output_bytes_maximum": 1048576,
+    "retained_generated_output_bytes": 0,
+    "network_bytes": 0,
+    "new_payload_bytes": 0
+  },
+  "authorization_state": {
+    "artifact_only_static_analysis_authorized_under_charter": true,
+    "generated_only_implementation_after_registration_green_authorized_under_charter": true,
+    "private_or_Git_ignored_path_access_authorized": false,
+    "VR13P_or_VR14P_consumed_state_reinspection_authorized": false,
+    "real_structural_source_or_private_manifest_access_authorized": false,
+    "archive_or_neural_payload_access_authorized": false,
+    "target_model_prediction_or_score_authorized": false,
+    "FW2_or_CIL1_authorized": false,
+    "network_provider_or_language_model_authorized": false,
+    "device_hardware_release_or_claim_upgrade_authorized": false,
+    "other_project_access_authorized": false
+  },
+  "operation_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_result_or_output_reopens": 0,
+    "real_structural_source_operations": 0,
+    "private_manifest_operations": 0,
+    "archive_or_neural_payload_operations": 0,
+    "target_model_prediction_or_score_operations": 0,
+    "FW2_or_CIL1_operations": 0,
+    "network_provider_or_language_model_operations": 0,
+    "device_or_hardware_operations": 0,
+    "operations_on_other_projects": 0,
+    "retry_rerun_resume_operations": 0,
+    "release_or_scientific_claim_upgrades": 0
+  },
+  "stop_rules": [
+    "park_if_any_single_witness_does_not_reach_exact_VR12A_F03_P15",
+    "park_if_route_changes_with_order_or_replay",
+    "park_if_source_mutates_or_route_is_unclassified",
+    "do_not_modify_VR12A_or_consumed_executors",
+    "do_not_open_private_ignored_or_consumed_state",
+    "future_private_discriminator_requires_new_frozen_Tier_C_packet_and_decision"
+  ],
+  "claim_boundary": {
+    "engineering_capability_sought": "Deterministic privacy-safe decomposition of the broad P15 suffix-bearing identity class using unchanged VR12A and generated full-scale manifests.",
+    "scientific_claim_not_established": "No real cohort neural payload target model prediction score live decoder or thought-to-text capability is established."
+  }
+}

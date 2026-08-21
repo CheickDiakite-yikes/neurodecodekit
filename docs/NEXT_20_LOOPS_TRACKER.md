@@ -3252,3 +3252,12 @@ known.
 
 Next gate: artifact-only and generated-only suffix-identity decomposition.
 Any private access remains a separately frozen Tier C packet and decision.
+
+### MARC2-VR15A - Suffix-Identity Grammar Decomposition
+
+The registration freezes 15 ordered P15 grammar classes plus one
+multiple-class route. Seventeen generated full-scale cases run in two orders
+and two replays for 68 exact unchanged VR12A calls under a 32 MiB input cap.
+
+Next gate: commit, push, and green the exact registration, then implement and
+measure the generated-only classifier. Private and neural work remains closed.

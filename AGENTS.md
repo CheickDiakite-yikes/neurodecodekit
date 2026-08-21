@@ -568,6 +568,14 @@ generated-only suffix-identity decomposition. Any private read remains a new
 Tier C packet and decision. Structural source, private manifest, archive,
 neural, target, model, score, FW2/CIL1, release, and claims remain closed.
 
+The next artifact-only lane is frozen as `MARC2-VR15A`. Read
+`docs/MARC_2_SUFFIX_IDENTITY_GRAMMAR_DECOMPOSITION_PREREGISTRATION.md` and
+`registries/marc2_suffix_identity_grammar_decomposition_contract.v0.json`.
+It partitions P15 into 15 ordered single grammar classes plus one deterministic
+multiple-class route across 68 generated full-scale paths. Registration must
+be committed, pushed, and both jobs green before implementation. Do not touch
+VR13P/VR14P ignored state or infer a private value.
+
 WO9R is complete and consumed at `WO9R-R3`. Exact implementation `8242674`
 passed CI `31359548779` before one 184,252,032-byte acquisition and one target-
 blind analysis over 72 S004-S015 EDFs. The analysis accepted 1,080 events,

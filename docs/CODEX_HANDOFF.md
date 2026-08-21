@@ -5810,6 +5810,17 @@ maintainer decision, implement a wrapper, or touch any private/ignored path.
 The current and every earlier `continue` is not retroactive authority. Keep the
 unrelated tracker inspection NDJSON untouched.
 
+## 2026-08-21 MARC2-VR15A Registration Handoff
+
+Read the VR15A suffix-identity grammar preregistration, contract, and test.
+They freeze 15 ordered P15 classes, one multiple-class route, and 68 generated
+full-scale paths through unchanged VR12A. All real/private/scientific counters
+are zero.
+
+Commit, push, and green the registration before implementation. Do not inspect
+VR13P/VR14P ignored state, prepare a private packet yet, or touch the unrelated
+tracker inspection NDJSON.
+
 ## 2026-08-17 MARC2-VR11P Request Proof Handoff
 
 The request-time packet, registry, and test byte sizes and SHA-256 values are

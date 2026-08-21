@@ -166,6 +166,14 @@ operations were zero.
 Immediate gate: freeze an artifact-only and generated-only suffix-identity
 decomposition. Do not reopen VR14P or access private/neural material.
 
+`MARC2-VR15A` now freezes that artifact-only/generated-only decomposition:
+15 ordered P15 grammar classes, one multiple-class route, and 68 exact
+generated adapter paths under a 32 MiB cap.
+
+Immediate gate: commit, push, and green the VR15A registration before any
+implementation. Private, ignored, neural, target, model, and score work stays
+closed.
+
 ## Prior Frontier: MARC2-VR11P Consumed At Structural Route R2
 
 Read `docs/MARC_2_MACHINE_STABLE_PRIVATE_RECOVERY_RESULT.md`, then

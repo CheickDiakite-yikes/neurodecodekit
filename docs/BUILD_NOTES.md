@@ -11995,3 +11995,15 @@ single explicitly armed fixed aggregate command exactly once.
 
 Immediate gate: artifact-only and generated-only suffix-identity decomposition.
 Any private read remains a new Tier C packet and decision.
+
+### VR15A suffix-identity grammar registration
+
+- Bound 11 committed inputs totaling 215,394 bytes.
+- Froze 15 ordered P15 grammar failure classes plus one multiple-class route.
+- Froze 17 generated cases, two orders, two replays, and 68 exact unchanged
+  VR12A calls under a 32 MiB generated-input cap.
+- Registration private, ignored-path, source, archive, neural, target, model,
+  score, FW2/CIL1, network, retry, and claim operations: zero.
+
+Immediate gate: commit, push, and green this registration before generated
+implementation.

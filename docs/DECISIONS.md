@@ -8970,6 +8970,20 @@ context. Do not relax F03 or F04 before an observed safe route. Another private
 read or cohort freeze remains a fresh Tier C packet and decision; FW2 and CIL1
 remain closed.
 
+## 0318 - Decompose P15 As A Generated Identity Grammar
+
+Decision: the recovered R2 class is still too broad for another private
+question. Freeze `MARC2-VR15A` as an artifact-only/generated-only ordered
+grammar over path tail, prefix, directory entities, filename subject/session,
+task, optional entities, and run presence, position, numeric form, and width.
+
+Matrix decision: use 15 single-failure witnesses, one multiple-class witness,
+one control, two row orders, and two replays for 68 unchanged VR12A calls.
+
+Boundary decision: registration and future generated qualification access no
+private or ignored state. A private discriminator remains a new Tier C packet
+and fresh decision.
+
 Claim decision: this is an engineering localization only. It establishes no
 real cohort, neural effect, decoding accuracy, language decoding, live
 decoding, or thought-to-text capability.
