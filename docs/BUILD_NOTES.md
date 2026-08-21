@@ -12323,3 +12323,19 @@ exact Stage 1 implementation and proof-only closeout are separately green.
 Immediate gate: commit, push, and green the exact Stage 1 implementation. Then
 create and separately green a proof-only closeout without repeating generated
 qualification or touching `.codex_work`. Stage 2 remains closed meanwhile.
+
+### VR16P Stage 1 remote proof closeout
+
+- Exact implementation `55f23d60621949ea008cca1e3ade80a3127cfc70`
+  passed Base Python job `96717830579`, Optional Neuro Readers job
+  `96717830410`, and CI `32464397821`.
+- Bound the 6,347-byte preproof registry and all four implementation artifacts
+  by exact SHA-256 and Git blob without changing their bytes.
+- Registered qualification repetitions, readiness, `.codex_work`, private
+  source, archive, neural, target, model, score, FW2/CIL1, network, hardware,
+  release, and claim operations during closeout: zero.
+- Twenty-six focused and 4,524 complete dependency-light tests pass with 204
+  expected skips and zero failures.
+
+Immediate gate: commit, push, and green this proof-only closeout. Only then may
+the one registered target-free private structural invocation execute.

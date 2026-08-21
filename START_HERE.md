@@ -2418,3 +2418,9 @@ Immediate gate: commit, push, and green the exact Stage 1 implementation, then
 commit, push, and green a proof-only closeout without repeating qualification.
 The sole 418,755-byte target-free structural read remains closed until both
 barriers pass.
+
+Stage 1 commit `55f23d60621949ea008cca1e3ade80a3127cfc70` then passed
+Base Python job `96717830579`, Optional Neuro Readers job `96717830410`, and
+CI `32464397821`. The proof-only closeout now binds those exact bytes and adds
+no implementation scope. It must itself be committed, pushed, and green in
+both jobs before the one registered private invocation becomes available.

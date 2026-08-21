@@ -3381,3 +3381,16 @@ Next gate: commit, push, and green the exact Stage 1 implementation, then add
 and green a proof-only closeout. Do not repeat qualification or touch the
 private source during closeout. The single structural confirmation remains
 closed until both barriers pass.
+
+### MARC2-VR16P - Stage 1 Remotely Green; Proof Closeout Pending
+
+Exact Stage 1 `55f23d6` passed both required jobs in CI `32464397821`. The
+proof-only closeout binds that commit, the 6,347-byte preproof registry, and
+all four unchanged implementation blobs. It repeats no qualification and
+performs no private operation.
+
+Twenty-six focused and 4,524 dependency-light tests pass with 204 expected
+skips. Next gate: commit, push, and green this closeout. Only then may the one
+registered 418,755-byte target-free source read and one VR16A call execute.
+FW2, CIL1, archive, neural, target, model, score, release, and claim work
+remain closed.

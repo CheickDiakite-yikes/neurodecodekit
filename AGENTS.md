@@ -3863,6 +3863,20 @@ during closeout. Only after both jobs pass may the registered 418,755-byte
 target-free structural confirmation execute once. Keep consumed VR15P and the
 unrelated tracker inspection NDJSON untouched.
 
+Exact Stage 1 `55f23d60621949ea008cca1e3ade80a3127cfc70` passed Base
+Python job `96717830579`, Optional Neuro Readers job `96717830410`, and CI
+`32464397821`. Read
+`docs/MARC_2_VARIABLE_WIDTH_PRIVATE_CONFIRMATION_PROOF_CLOSEOUT.md` and the
+new matching proof test. The updated implementation registry binds the
+6,347-byte preproof registry and four unchanged implementation Git blobs.
+Twenty-six focused and 4,524 complete dependency-light tests pass with 204
+expected skips. No qualification or private operation was repeated.
+
+Commit, push, and green this proof-only closeout before running `execute`.
+Until both jobs pass, do not collect readiness or touch `.codex_work`, the
+private source, or the output root. The later structural invocation has no
+retry, rerun, fallback, substitution, or private reinspection.
+
 ## Style
 
 - Small functions, explicit names, low magic.

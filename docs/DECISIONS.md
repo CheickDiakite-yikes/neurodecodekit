@@ -10279,3 +10279,20 @@ Sequence decision: require this exact implementation and a separate proof-only
 closeout to pass both remote jobs before the one registered private structural
 read. Repeat no qualification and perform no private operation during proof
 closeout.
+
+## 0336 - Close VR16P Stage 1 With Exact Remote Proof
+
+Proof decision: exact Stage 1 commit
+`55f23d60621949ea008cca1e3ade80a3127cfc70` passed Base Python job
+`96717830579`, Optional Neuro Readers job `96717830410`, and CI
+`32464397821`. Bind its preproof registry and four implementation artifacts by
+exact bytes, SHA-256, and Git blob.
+
+Boundary decision: change only proof state and frontier documentation. Repeat
+no registered qualification and perform zero readiness, `.codex_work`,
+private-source, cohort, archive, neural, target, model, score, FW2/CIL1,
+network, hardware, release, or claim operations.
+
+Sequence decision: require this closeout's own exact commit to pass both remote
+jobs. Only then may the packeted one-shot structural confirmation execute; its
+outcome remains consumed with no retry or private reinspection.

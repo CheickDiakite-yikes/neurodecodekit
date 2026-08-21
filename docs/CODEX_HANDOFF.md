@@ -6561,3 +6561,20 @@ and separately green a proof-only closeout without repeating qualification or
 touching `.codex_work`. Only after both jobs pass may the one registered
 418,755-byte target-free structural confirmation execute once. Keep consumed
 VR15P and the unrelated tracker inspection NDJSON untouched.
+
+## 2026-08-21 MARC2-VR16P Proof Closeout Handoff
+
+Exact Stage 1 commit `55f23d60621949ea008cca1e3ade80a3127cfc70`
+passed Base Python job `96717830579`, Optional Neuro Readers job
+`96717830410`, and CI `32464397821`.
+
+Read the proof-closeout document, updated implementation registry, and new
+proof test. They bind the 6,347-byte preproof registry plus the four unchanged
+implementation Git blobs. Twenty-six focused and 4,524 complete dependency-
+light tests pass with 204 expected skips. The registered qualification was not
+repeated and every private/forbidden operation counter remains zero.
+
+Immediate gate: commit, push, and green this exact proof-only closeout. Only
+then may `execute` perform the single authorized structural confirmation.
+Do not inspect the private cohort manifest or retry any consumed route. Keep
+consumed VR15P and the unrelated tracker inspection NDJSON untouched.
