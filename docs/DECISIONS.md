@@ -685,6 +685,26 @@ model, or training runs. This strengthens interface provenance only; it does
 not improve or validate a representation, classifier, decoder, or latency
 claim.
 
+## 0342 - Freeze A First-Failure-Stable VR17C Design
+
+Proof decision: parked VR17B result
+`3d69d65424bba1c8cd48abca50b5337d97b688e0` passed Base Python job
+`96734674321`, Optional Neuro Readers job `96734674110`, and CI
+`32470024380` before registration.
+
+Witness decision: preserve the 1,227-row envelope and exact run token. Replace
+one auxiliary regular-file row with a core-row copy, insert `_acq-copy` before
+`_run-`, and increment its copied local-header offset. Freeze F05 /
+`normalized run companion is duplicated` as the resulting route/reason.
+
+Protocol decision: freeze F04 / `core identity differs` for wrong-task, retain
+the corrected two-control/four-repair equivalence map, and require all four
+residual classes in two orders and two replays or park VR17C.
+
+Boundary decision: require remote-green registration before implementation.
+Authorize no private source, consumed state, cohort, archive, neural data,
+target, model, score, FW2/CIL1, release, or scientific claim.
+
 Evidence: `docs/LOOP_20_NEUROTOKEN_CACHE_V0.md` and
 `tests/test_neurotoken.py`.
 

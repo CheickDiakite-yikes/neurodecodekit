@@ -3429,6 +3429,22 @@ Next gate: commit, push, and green the exact registration before generated
 implementation. No private executor, source read, cohort, neural payload,
 target, model, score, FW2/CIL1, release, or claim is authorized.
 
+### MARC2-VR17C - First-Failure-Stable Audit Registered
+
+Green parked-result commit `3d69d65` / CI `32470024380` precedes the new
+registration. VR17C freezes the observed wrong-task reason and a row-count-
+stable, same-token `_acq-copy` collision witness that reaches the intended
+normalized-collision branch in generated development.
+
+The matrix keeps 24 paired equivalence paths, 20 residual paths, 24 VR15A
+calls, 44 VR16A calls, at least 50 direct refusals, one thread, 40 MiB input,
+1 MiB output, and zero retention. Eight focused and 4,564 complete dependency-
+light tests pass with 204 expected skips.
+
+Next gate: commit, push, and green the exact VR17C registration before
+generated implementation. No private executor, cohort, neural payload, target,
+model, score, FW2/CIL1, release, or claim is authorized.
+
 ### MARC2-VR17A - Parked At A Falsified H3
 
 Registration `e1c9366` passed both jobs in CI `32467147580` before one bounded

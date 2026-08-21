@@ -12440,3 +12440,25 @@ generated-only implementation.
 
 Immediate next task: preregister VR17C with the observed F04 reason and a
 distinct optional-entity duplicate that preserves the same run token.
+
+### VR17C first-failure-stable registration
+
+- Began only after parked VR17B result
+  `3d69d65424bba1c8cd48abca50b5337d97b688e0` passed Base Python job
+  `96734674321`, Optional Neuro Readers job `96734674110`, and CI
+  `32470024380`.
+- Bound ten exact committed inputs totaling 139,348 bytes.
+- Froze the observed F04 / `core identity differs` task class and a replacement
+  collision witness that preserves row count and run-token spelling while
+  inserting `_acq-copy` into a distinct companion name.
+- Generated development confirmed that witness reaches F05 /
+  `normalized run companion is duplicated`.
+- Retained the corrected two-control/four-repair equivalence map, 24 paired
+  paths, 20 residual paths, 24 VR15A calls, 44 VR16A calls, at least 50 direct
+  refusals, one thread, 40 MiB input, 1 MiB output, and zero retention.
+- Eight focused and 4,564 complete dependency-light tests pass with 204
+  expected skips in 108.295 seconds. Ruff, 332 registry parses, and diff
+  hygiene pass.
+
+Immediate gate: commit, push, and green this registration before generated
+implementation. Private and neural work remains closed.

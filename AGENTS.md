@@ -3969,6 +3969,23 @@ VR17C registration with F04 / `core identity differs` and a distinct optional-
 entity collision witness that keeps the same run token. Do not rerun VR17B or
 touch private/consumed state. FW2 and CIL1 remain closed.
 
+The first-failure-stable successor is frozen as `MARC2-VR17C`. Read
+`docs/MARC_2_FIRST_FAILURE_STABLE_R4_DECOMPOSITION_PREREGISTRATION.md` and
+`registries/marc2_first_failure_stable_r4_decomposition_contract.v0.json`.
+It binds green parked result `3d69d65424bba1c8cd48abca50b5337d97b688e0`,
+Base job `96734674321`, Optional job `96734674110`, and CI `32470024380`.
+The collision witness reuses one auxiliary regular-file row, deep-copies one
+core companion, inserts `_acq-copy` before `_run-`, preserves the exact run
+token and 1,227-row envelope, and generated-development-checks as VR16A F05 /
+`normalized run companion is duplicated`.
+
+VR17C freezes 24 paired equivalence paths, 20 residual paths, 24 VR15A calls,
+44 VR16A calls, at least 50 direct refusals, one thread, 40 MiB input, 1 MiB
+output, and zero retention. Eight focused and 4,564 complete dependency-light
+tests pass with 204 expected skips. Commit, push, and green this registration
+before implementation. It has no private executor; FW2/CIL1 and all private,
+archive, neural, target, model, score, release, and claim work remain closed.
+
 ## Style
 
 - Small functions, explicit names, low magic.

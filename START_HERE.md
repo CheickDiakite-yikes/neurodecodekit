@@ -2478,3 +2478,13 @@ added.
 Next: freeze VR17C with the observed task reason and a true same-token,
 distinct-name normalized-collision witness. This remains generated structural
 work, with no private cohort or neural evidence and no FW2/CIL1 authority.
+
+That successor is now frozen as `MARC2-VR17C` against green VR17B result
+`3d69d65` / CI `32470024380`. It preserves the 1,227-row envelope and exact run
+token while creating a distinct `_acq-copy` companion, which reaches the
+intended normalized-collision branch in generated development. The registered
+full matrix remains 24 paired equivalence paths plus 20 residual paths.
+
+Eight focused and 4,564 complete dependency-light tests pass with 204 expected
+skips. Immediate gate: commit, push, and green the registration before
+implementation. No private, neural, model, score, FW2, or CIL1 work is open.

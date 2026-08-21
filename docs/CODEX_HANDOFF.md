@@ -6686,3 +6686,26 @@ Next: separately preregister VR17C with F04 / `core identity differs` and a
 same-token optional-entity duplicate witness. Do not rerun or amend VR17B,
 touch consumed/private state, or touch the unrelated tracker inspection
 NDJSON. FW2 and CIL1 remain closed.
+
+## 2026-08-21 MARC2-VR17C Registration Handoff
+
+Parked-result commit `3d69d65424bba1c8cd48abca50b5337d97b688e0`
+passed Base Python job `96734674321`, Optional Neuro Readers job
+`96734674110`, and CI `32470024380` before registration.
+
+Read the VR17C preregistration, machine contract, and contract test. Ten fixed
+inputs total 139,348 bytes. The new collision witness replaces one auxiliary
+regular-file row with a deep-copied core row, inserts `_acq-copy` before
+`_run-`, increments local-header offset by one, and preserves the exact run
+token and 1,227-row envelope. A generated development check reached F05 /
+`normalized run companion is duplicated`.
+
+The frozen implementation matrix requires 24 paired equivalence paths, 20
+residual paths, 24 VR15A calls, 44 VR16A calls, at least 50 direct refusals,
+one thread, 40 MiB input, 1 MiB output, and zero retention. Eight focused and
+4,564 complete dependency-light tests pass with 204 expected skips.
+
+Immediate gate: commit, push, and green the exact registration before VR17C
+implementation. Keep parked VR17A/VR17B, consumed VR15P/VR16P, `.codex_work`,
+and the unrelated tracker inspection NDJSON untouched. Private, neural, FW2,
+and CIL1 work remains closed.
