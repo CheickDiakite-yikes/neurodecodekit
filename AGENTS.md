@@ -77,9 +77,14 @@ split, rank, or reservation arithmetic. The exact predicate, value, row,
 identity, participant, selection, and cohort were not retained and must not be
 inferred. VR20P has no retry, rerun, resume, repair, fallback, substitution,
 cleanup, amendment, or private reinspection. Do not touch its private source,
-readiness state, consumed marker, or output root. The next safe task is a
-separately frozen artifact-only and generated-only R5 decomposition. Another
-private read requires a new Tier C packet and fresh decision. FW2/CIL1,
+readiness state, consumed marker, or output root. The next lane is frozen as
+`MARC2-VR21A`. Read
+`docs/MARC_2_R5_TWO_ROUTE_DISCRIMINATOR_PREREGISTRATION.md` and
+`registries/marc2_r5_two_route_discriminator_contract.v0.json`. It binds 11
+F06/F07 refusal call sites and a 12-path generated matrix that maps F06 to R1
+and F07 to R2. Commit, push, and green this exact registration before
+implementation. Another private read requires a new Tier C packet and fresh
+decision. FW2/CIL1,
 archive members, neural data, targets, models, scores, streams, devices, and
 claims remain closed. Read
 `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md` for the scientific order.

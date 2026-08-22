@@ -12,6 +12,12 @@
 > an artifact-only and generated-only R5 decomposition. Neural payload,
 > target, model, score, FW2/CIL1, and claims remain closed.
 
+> VR21A registration handoff: read the R5 two-route discriminator
+> preregistration and machine contract. It binds 11 fixed inputs totaling
+> 254,690 bytes, the exact two F06 and nine F07 refusal call sites, and a
+> 12-path generated matrix. Commit, push, and green the registration before
+> implementation. It has no private executor or scientific authority.
+
 > Current MARC2-VR20P decision, 2026-08-22: request `bef2391` passed Base job
 > `96793861959`, Optional job `96793861717`, and CI `32489589922`; proof
 > closeout `88b3b4a` passed Base job `96797011698`, Optional job

@@ -1,0 +1,217 @@
+{
+  "schema_name": "neurodecodekit.marc2_r5_two_route_discriminator_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "MARC-2-VR21A-R5-two-route-generated-discriminator-v0",
+  "lane_id": "MARC2-VR21A",
+  "recorded_at_local": "2026-08-22",
+  "status": "preregistered_artifact_only_generated_only_no_private_access",
+  "objective": "Decompose consumed aggregate VR20P R5 into exact VR20A F06 taxonomy or eligibility arithmetic versus F07 selection split rank or reservation arithmetic using only committed artifacts and generated fixtures.",
+  "result_proof": {
+    "VR20P_result_commit": "a7e2ccee7cd073844da52b7c11a603360aae7b88",
+    "VR20P_result_CI_run_id": 32558830891,
+    "VR20P_result_base_job_id": 96997122402,
+    "VR20P_result_optional_neuro_job_id": 96997122489,
+    "both_required_jobs_green": true,
+    "observed_route": "MARC2VR20P-R5",
+    "private_source_reinspected_by_registration": false
+  },
+  "fixed_inputs": [
+    {
+      "role": "VR20A_adapter_module",
+      "path": "src/neurodecodekit/datasets/marc2_published_task_selector_repair.py",
+      "bytes": 45208,
+      "sha256": "9f6ebe63dbeb1cd778a71ff395d698159acc672b187e5121d5d5e734d9e05fba"
+    },
+    {
+      "role": "VR20A_contract",
+      "path": "registries/marc2_published_task_selector_repair_contract.v0.json",
+      "bytes": 9578,
+      "sha256": "a2719e0e2ab54e28675929e1982a8387406068114c2079dd3864c2c8ec022516"
+    },
+    {
+      "role": "VR20A_implementation_record",
+      "path": "registries/marc2_published_task_selector_repair_implementation.v0.json",
+      "bytes": 6268,
+      "sha256": "90a28059bb4d0ba92aa7dd596cb6050b141900d83415e93461dcb7c16c1fa0d1"
+    },
+    {
+      "role": "VR20A_result_record",
+      "path": "registries/marc2_published_task_selector_repair_result.v0.json",
+      "bytes": 6175,
+      "sha256": "92d10a5c23c1795d4a4094cbe18a23d5239ad59aa9a6421a9a6bafb3a7c56dfd"
+    },
+    {
+      "role": "VR20P_route_contract",
+      "path": "registries/marc2_published_task_private_confirmation_authorization_request.v0.json",
+      "bytes": 17731,
+      "sha256": "e79085dd4d63cf57ca4d73bfc5c05d5c479f266bd0a699153e29d3d34a9b14fa"
+    },
+    {
+      "role": "VR20P_result_record",
+      "path": "registries/marc2_published_task_private_confirmation_result.v0.json",
+      "bytes": 5235,
+      "sha256": "e54f3a3c5050a0d0248094d64c5e070d3081cd2aa55c7f1498528fea6a5b7a84"
+    },
+    {
+      "role": "VR20P_result_document",
+      "path": "docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_RESULT.md",
+      "bytes": 3149,
+      "sha256": "7a62423ae9f35ff4909c736e42f65f9d0e8af1a4a4b0abd15931972a4c68f192"
+    },
+    {
+      "role": "VR2_taxonomy_module",
+      "path": "src/neurodecodekit/datasets/marc2_live_domain_eligibility_adapter.py",
+      "bytes": 57528,
+      "sha256": "061b893180e01116dbd962826384b4071d9e952b78b593b4743f8c301e1cbbc3"
+    },
+    {
+      "role": "VR2_taxonomy_contract",
+      "path": "registries/marc2_live_domain_eligibility_adapter_contract.v0.json",
+      "bytes": 15306,
+      "sha256": "c7c94406c7b3f483bb2ecbbb42b131756d178f288eedc31ce48e9383180a0a33"
+    },
+    {
+      "role": "selector_module",
+      "path": "src/neurodecodekit/datasets/marc2_freewill_prefix_selection.py",
+      "bytes": 72691,
+      "sha256": "86fa30fbd1caed735f0fb2e627144482a2bb8e033567bb3794e3f05508005c97"
+    },
+    {
+      "role": "selector_contract",
+      "path": "registries/marc2_freewill_prefix_selection_contract.v0.json",
+      "bytes": 15821,
+      "sha256": "dfe614cd7ec27c54c4f03848e3878c714222db043f501b9b07e57c7dc9f5f702"
+    }
+  ],
+  "fixed_input_count": 11,
+  "fixed_input_bytes": 254690,
+  "ordered_route_inventory": {
+    "VR20A_F06": {
+      "VR21A_route": "MARC2VR21A-R1",
+      "safe_class": "source_kind_bundle_total_taxonomy_or_eligibility_arithmetic",
+      "exact_call_sites": 2,
+      "safe_reasons": [
+        "source kind or run-bundle total differs",
+        "source taxonomy or eligibility differs"
+      ]
+    },
+    "VR20A_F07": {
+      "VR21A_route": "MARC2VR21A-R2",
+      "safe_class": "selection_rank_split_identity_or_reservation_arithmetic",
+      "exact_call_sites": 9,
+      "safe_reasons": [
+        "selected row identity differs",
+        "selector rank differs",
+        "selected subject prefix differs",
+        "cohort or split arithmetic differs",
+        "selected structural rows differ",
+        "selected source-exact name differs",
+        "selected row identity or reservation differs",
+        "selected companion or storage arithmetic differs",
+        "dynamic selection refused"
+      ]
+    }
+  },
+  "exact_F06_F07_call_site_total": 11,
+  "generated_witness_matrix": {
+    "cases": [
+      {
+        "case": "control_success",
+        "expected_VR20A_route": "MARC2VR20A-G1",
+        "expected_VR21A_route": "MARC2VR21A-G1"
+      },
+      {
+        "case": "unknown_participant_taxonomy",
+        "expected_VR20A_route": "MARC2VR20A-F06",
+        "expected_VR21A_route": "MARC2VR21A-R1"
+      },
+      {
+        "case": "semantic_run_zero",
+        "expected_VR20A_route": "MARC2VR20A-F07",
+        "expected_VR21A_route": "MARC2VR21A-R2"
+      }
+    ],
+    "orders": [
+      "canonical",
+      "reversed"
+    ],
+    "replays": 2,
+    "required_paths": 12,
+    "required_VR20A_calls": 12,
+    "route_count_each": 4,
+    "minimum_direct_refusals": 40,
+    "source_immutability_required": true,
+    "VR20A_or_predecessor_modification_allowed": false,
+    "upstream_safe_reason_retention_allowed": false
+  },
+  "implementation_contract": {
+    "module_path": "src/neurodecodekit/datasets/marc2_r5_two_route_discriminator.py",
+    "commands": [
+      "plan",
+      "qualify"
+    ],
+    "dependency_policy": "standard_library_only",
+    "one_VR20A_call_per_generated_path": true,
+    "exact_route_only_output": true,
+    "retained_generated_source_bytes": 0,
+    "private_executor_allowed": false
+  },
+  "resource_limits": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "generated_input_bytes": 33554432,
+    "aggregate_output_bytes": 1048576,
+    "retained_output_bytes": 0,
+    "network_bytes": 0,
+    "new_payload_bytes": 0
+  },
+  "authorization": {
+    "artifact_only_reads": true,
+    "generated_fixture_creation": true,
+    "generated_parameter_update_runs": 0,
+    "private_or_Git_ignored_path_access": false,
+    "readiness_or_consumed_state_access": false,
+    "archive_header_or_member_access": false,
+    "signal_event_target_or_label_access": false,
+    "model_training_inference_prediction_or_scoring": false,
+    "network_or_provider_calls": false,
+    "FW2_or_CIL1_execution": false,
+    "scientific_claim_upgrade": false
+  },
+  "registration_operation_counters": {
+    "private_source_stats_hashes_opens_reads_or_parses": 0,
+    "private_output_or_consumed_state_operations": 0,
+    "archive_operations": 0,
+    "neural_signal_operations": 0,
+    "target_or_label_operations": 0,
+    "model_training_inference_prediction_or_scoring_runs": 0,
+    "network_or_provider_calls": 0,
+    "FW2_or_CIL1_operations": 0,
+    "other_project_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "acceptance_gates": [
+    "registration is committed pushed and both required CI jobs are green before implementation",
+    "all 11 fixed inputs match exact byte count and SHA-256",
+    "AST inventory binds exactly two F06 and nine F07 call sites",
+    "all 12 generated paths call unchanged VR20A exactly once",
+    "G1 R1 and R2 each appear exactly four times across orders and replays",
+    "at least 40 direct refusals pass",
+    "all sources remain immutable and retained output is zero",
+    "complete dependency-light tests Ruff registry parsing CLI help and diff hygiene pass",
+    "implementation and result are committed pushed and remotely green before any later packet"
+  ],
+  "claim_boundary": {
+    "engineering_capability_if_passed": "generated route discrimination between VR20A taxonomy and selection arithmetic",
+    "scientific_ceiling": "none",
+    "real_cohort_established": false,
+    "neural_payload_accessed": false,
+    "decoding_performance_established": false,
+    "language_or_thought_decoding_established": false,
+    "unseen_person_generalization_established": false,
+    "live_decoding_established": false
+  }
+}

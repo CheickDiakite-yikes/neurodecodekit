@@ -3796,3 +3796,15 @@ prediction, or score was accessed.
 Next gate: green the public aggregate result, then freeze an artifact-only and
 generated-only R5 decomposition. Any new private read or FW2 work requires a
 separate packet and fresh Tier C decision.
+
+### MARC2-VR21A - F06/F07 Generated Discriminator Registered
+
+VR20P result `a7e2cce` passed both required jobs in CI `32558830891`. VR21A
+binds 11 committed inputs totaling 254,690 bytes, all two F06 and nine F07
+refusal call sites, and three generated cases across two orders and two
+replays. The frozen target is 12 unchanged VR20A calls, four copies each of
+G1/R1/R2, at least 40 direct refusals, and zero retained output.
+
+Next gate: commit, push, and green this exact registration before
+implementation. No private path, cohort, archive, neural payload, target,
+model, score, FW2/CIL1 execution, or scientific claim is open.

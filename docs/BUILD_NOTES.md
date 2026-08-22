@@ -12914,3 +12914,21 @@ score, FW2/CIL1 execution, release, or scientific claim is open.
 Immediate gate: verify, commit, push, and green the public aggregate result.
 Then freeze a separate artifact-only and generated-only R5 decomposition.
 VR20P is consumed with no retry, rerun, repair, or private reinspection.
+
+### VR21A R5 two-route discriminator registered
+
+- Bound green VR20P aggregate result `a7e2cce`, CI `32558830891`, Base Python
+  job `96997122402`, and Optional Neuro Readers job `96997122489`.
+- Bound 11 committed inputs totaling 254,690 bytes. Registration touched no
+  private or Git-ignored path and performed zero archive, neural, target,
+  model, score, network, FW2/CIL1, or claim operation.
+- Static AST inventory freezes two exact F06 refusal call sites and nine exact
+  F07 refusal call sites in unchanged VR20A.
+- The generated matrix freezes success, unknown-participant taxonomy, and
+  semantic-run-zero witnesses across two orders and two replays: 12 paths, 12
+  VR20A calls, four copies each of G1/R1/R2, and at least 40 direct refusals.
+- Five focused preregistration tests pass.
+
+Immediate gate: run complete verification, commit, push, and green this exact
+registration before VR21A implementation. No private source or scientific
+work is authorized.

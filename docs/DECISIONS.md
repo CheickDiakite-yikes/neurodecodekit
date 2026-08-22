@@ -10868,3 +10868,20 @@ fallback, substitution, cleanup, amendment, or private reinspection. Permit a
 separately frozen artifact-only and generated-only R5 decomposition under Tier
 A/B. Any private read, cohort freeze, archive or neural payload, target, model,
 score, FW2/CIL1, release, or scientific claim remains closed.
+
+## 0364 - Freeze VR21A As A Generated F06/F07 Discriminator
+
+Proof decision: public aggregate VR20P result
+`a7e2ccee7cd073844da52b7c11a603360aae7b88` passed Base Python job
+`96997122402`, Optional Neuro Readers job `96997122489`, and CI
+`32558830891` before registration.
+
+Design decision: bind all two F06 and nine F07 refusal call sites in unchanged
+VR20A. Freeze three generated witnesses in two orders and two replays for 12
+exact calls, with G1, R1, and R2 each appearing four times and at least 40
+direct refusals.
+
+Boundary decision: registration is artifact-only and generated-only, has no
+private executor, and performs zero ignored-path, archive, neural, target,
+model, score, network, FW2/CIL1, release, or claim operation. Require the
+registration commit and both CI jobs green before implementation.

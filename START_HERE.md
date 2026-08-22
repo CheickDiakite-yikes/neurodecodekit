@@ -59,10 +59,13 @@ R5 narrows the remaining blocker to VR20A F06 taxonomy/eligibility arithmetic
 versus F07 selection/split/rank/reservation arithmetic. It excludes the
 earlier published-task/identity/path/companion class for this exact run, but
 does not reveal the failed predicate or any private value. VR20P is consumed;
-do not retry, reopen, rehash, or inspect its private state. The next safe task
-is a separately frozen artifact-only and generated-only R5 decomposition.
-FW2, archive payload, neural data, targets, models, scoring, and all five
-scientific claims remain closed.
+do not retry, reopen, rehash, or inspect its private state. The next lane is
+frozen as `MARC2-VR21A`. Read the R5 two-route discriminator preregistration
+and machine contract. Its 12 generated paths distinguish F06
+taxonomy/eligibility from F07 selection/split/rank/reservation arithmetic
+through unchanged VR20A. Commit, push, and green the registration before
+implementation. FW2, archive payload, neural data, targets, models, scoring,
+and all five scientific claims remain closed.
 
 The five requested scientific targets and their exact evidence order are in
 `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md`. Preserve its distinction
