@@ -101,11 +101,18 @@ now prepared as `MARC2-VR22P`. Read
 Exact request `c90b5adae161127db8aa8c43d1101db8672b44e0` passed Base job
 `97003859100`, Optional job `97003859284`, and CI `32561578590`. Read
 `docs/MARC_2_R5_PRIVATE_DISCRIMINATOR_REQUEST_PROOF_CLOSEOUT.md` and its
-machine proof. Commit, push, and green that non-scope-changing closeout before
-identifying VR22P as the sole active Tier C gate. The current `conitnue`
-preceded this exact packet and is not retroactive authority. Another private
-read requires fresh packet-bound maintainer words and a separately green
-decision. FW2/CIL1,
+machine proof. Exact proof closeout
+`026ecd2a00265e30a221149397bc11a3ee4d4d64` passed Base job
+`97005357265`, Optional job `97005357323`, and CI `32562175927` before
+VR22P was identified as the sole active Tier C gate. The maintainer's next
+exact message was `continue`. Read
+`docs/MARC_2_R5_PRIVATE_DISCRIMINATOR_AUTHORIZATION_DECISION.md` and its
+machine decision. It binds those eight UTF-8 bytes only to the unchanged
+two-stage packet and is ineffective until its exact commit is pushed and both
+CI jobs are green. Do not implement or touch `.codex_work` before that proof.
+After decision proof, Stage 1 is generated-only; its exact implementation and
+a separate proof closeout must also be remotely green before the sole private
+structural invocation. FW2/CIL1,
 archive members, neural data, targets, models, scores, streams, devices, and
 claims remain closed. Read
 `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md` for the scientific order.

@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR20P Consumed At Taxonomy Or Selection Arithmetic
+## Current Frontier: MARC2-VR22P Decision Awaiting Remote Proof
 
 Read
 `docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md`,
@@ -74,12 +74,15 @@ private operation. The all-false `MARC2-VR22P` packet now freezes one future
 two-stage F06/F07 discriminator with one possible 418,755-byte structural read.
 Exact all-false request `c90b5ad` passed both jobs in CI `32561578590`. Its
 proof-only closeout now binds the unchanged 31,463 request bytes and three Git
-blobs without performing a private operation. Commit, push, and green that
-closeout before identifying VR22P as the sole active Tier C gate. The current
-`conitnue` is not retroactive authority; a fresh packet-bound decision is still
-required before implementation or one private read. FW2, archive payload,
-neural data, targets, models, scoring, and all five scientific claims remain
-closed.
+blobs without performing a private operation. Exact proof closeout `026ecd2`
+passed both jobs in CI `32562175927`. Codex then identified VR22P as the sole
+active Tier C gate, and the maintainer's next exact message was `continue`.
+The packet-bound decision preserves those eight UTF-8 bytes and binds only the
+unchanged two-stage request. It is ineffective until its exact commit is
+pushed and both required CI jobs are green. Stage 1 is generated-only and must
+itself be remotely green, followed by a separately green proof closeout,
+before the one private structural invocation. FW2, archive payload, neural
+data, targets, models, scoring, and all five scientific claims remain closed.
 
 The five requested scientific targets and their exact evidence order are in
 `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md`. Preserve its distinction

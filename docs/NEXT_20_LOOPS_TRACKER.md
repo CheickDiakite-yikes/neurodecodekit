@@ -3860,3 +3860,20 @@ Next gate: commit, push, and green this exact closeout. Only then identify
 VR22P as the sole active Tier C packet and require fresh packet-bound
 maintainer words. No current or prior `continue` authorizes Stage 1 or one
 private read.
+
+### MARC2-VR22P - Packet-Bound Decision Recorded
+
+Exact request proof closeout `026ecd2` passed Base Python job `97005357265`,
+Optional Neuro Readers job `97005357323`, and CI `32562175927`. Codex then
+identified VR22P as the sole active Tier C packet, and the maintainer's next
+exact message was the eight UTF-8 bytes `continue`.
+
+The decision binds only the unchanged two-stage packet. It performs zero
+`.codex_work`, private, readiness, archive, neural, target, model, score,
+network, FW2/CIL1, or claim operation and has delayed effect until its own
+commit and both CI jobs are green.
+
+Next gate: commit, push, and green the exact decision. Then generated-qualify
+the 12-path fixed wrapper. The sole private discriminator remains blocked
+until both the exact Stage 1 implementation and a separate proof-only closeout
+are remotely green.

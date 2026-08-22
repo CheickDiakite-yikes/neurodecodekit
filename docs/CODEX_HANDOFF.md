@@ -1,5 +1,18 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR22P decision, 2026-08-22: exact request proof closeout
+> `026ecd2` passed Base job `97005357265`, Optional job `97005357323`, and CI
+> `32562175927`. Codex then identified VR22P as the sole active Tier C packet;
+> the maintainer's next exact message was `continue`. The decision preserves
+> those eight UTF-8 bytes and binds only the unchanged two-stage packet. It is
+> ineffective until its exact commit is pushed and both jobs are green. After
+> that proof, Stage 1 is generated-only. The exact Stage 1 implementation and
+> a separate proof closeout must also be remotely green before the sole
+> target-free 418,755-byte structural read, one VR20A call, and at most one
+> VR21A map call. Do not touch `.codex_work`, readiness, the private source,
+> consumed VR20P state, or an output root before those barriers. FW2/CIL1,
+> neural payload, targets, models, scoring, release, and claims remain closed.
+
 > Current MARC2-VR20P result, 2026-08-22: exact Stage 1 `81784e7` passed both
 > jobs in CI `32557573872`; proof closeout `7cd0503` passed Base job
 > `96995623811`, Optional job `96995623848`, and CI `32558200426` before the

@@ -10972,3 +10972,24 @@ Boundary decision: this proof closeout has delayed effect until its own exact
 commit and both CI jobs are green. Only afterward identify VR22P as the sole
 active Tier C gate. Fresh packet-bound maintainer words and a separately green
 decision remain required before implementation or private access.
+
+## 0369 - Bind Maintainer Continue To The Unchanged VR22P Packet
+
+Proof decision: exact request proof closeout
+`026ecd2a00265e30a221149397bc11a3ee4d4d64` passed Base Python job
+`97005357265`, Optional Neuro Readers job `97005357323`, and CI
+`32562175927` before sole-gate identification.
+
+Authorization decision: preserve the maintainer's next exact message,
+`continue`, as eight UTF-8 bytes and bind it only to the unchanged remotely
+green VR22P two-stage packet. Do not fabricate the long packet as a user
+utterance or infer FW2, CIL1, neural, score, release, or claim authority.
+
+Sequence decision: the decision has delayed effect until its own exact commit
+and both CI jobs are green. Then Stage 1 may implement and generated-qualify
+the fixed 12-path wrapper. Stage 2 remains blocked until the exact Stage 1
+implementation and a separate proof-only closeout are both remotely green.
+
+Operation decision: recording this decision performs zero `.codex_work`,
+private, readiness, output-root, archive, neural, target, model, score,
+network, other-project, release, or scientific-claim operation.

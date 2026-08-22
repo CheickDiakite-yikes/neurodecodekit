@@ -13008,3 +13008,20 @@ implement or touch private state before those barriers.
 Immediate gate: run complete verification, commit, push, and green this exact
 proof closeout. Only then identify VR22P as the sole active Tier C packet and
 require fresh packet-bound maintainer words before Stage 1.
+
+### VR22P packet-bound decision recorded
+
+- Exact request proof closeout `026ecd2a00265e30a221149397bc11a3ee4d4d64`
+  passed Base Python job `97005357265`, Optional Neuro Readers job
+  `97005357323`, and CI `32562175927`.
+- After Codex identified VR22P as the sole active Tier C gate, the maintainer's
+  next exact message was `continue` (eight UTF-8 bytes).
+- The decision binds only the unchanged two-stage packet and preserves the two
+  remote barriers: decision proof before Stage 1, then exact Stage 1 plus a
+  separate green proof closeout before one private structural invocation.
+- Decision recording performs zero `.codex_work`, private, readiness,
+  output-root, archive, neural, target, model, score, network, FW2/CIL1,
+  release, or claim operation.
+
+Immediate gate: run complete verification, commit, push, and green this exact
+decision. Do not implement Stage 1 or touch private state before both jobs pass.
