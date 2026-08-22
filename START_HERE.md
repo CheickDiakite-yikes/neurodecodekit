@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR22P Decision Awaiting Remote Proof
+## Current Frontier: MARC2-VR22P Generated Stage 1 Qualified
 
 Read
 `docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md`,
@@ -79,10 +79,16 @@ passed both jobs in CI `32562175927`. Codex then identified VR22P as the sole
 active Tier C gate, and the maintainer's next exact message was `continue`.
 The packet-bound decision preserves those eight UTF-8 bytes and binds only the
 unchanged two-stage request. It is ineffective until its exact commit is
-pushed and both required CI jobs are green. Stage 1 is generated-only and must
-itself be remotely green, followed by a separately green proof closeout,
-before the one private structural invocation. FW2, archive payload, neural
-data, targets, models, scoring, and all five scientific claims remain closed.
+pushed and both required CI jobs are green. Exact decision `197f253` passed
+both jobs in CI `32593234295` before Stage 1. Generated `MARC2VR22P-G1` now
+passes 12/12 paths with four copies each of G1/R4/R5, 12 exact VR20A calls,
+eight conditional VR21A map calls, 121 direct refusals, exact replay, and zero
+retained payload. Runtime was 0.867054 seconds at 35,946,496-byte peak RSS.
+Read the implementation document and machine record. The exact implementation
+must be committed, pushed, and remotely green, followed by a separately green
+proof-only closeout, before the one private structural invocation. FW2,
+archive payload, neural data, targets, models, scoring, and all five scientific
+claims remain closed.
 
 The five requested scientific targets and their exact evidence order are in
 `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md`. Preserve its distinction

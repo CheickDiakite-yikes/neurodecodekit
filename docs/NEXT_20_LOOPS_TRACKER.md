@@ -3877,3 +3877,21 @@ Next gate: commit, push, and green the exact decision. Then generated-qualify
 the 12-path fixed wrapper. The sole private discriminator remains blocked
 until both the exact Stage 1 implementation and a separate proof-only closeout
 are remotely green.
+
+### MARC2-VR22P - Generated Stage 1 Qualified
+
+Exact decision `197f253` passed Base Python job `97080176920`, Optional Neuro
+Readers job `97080176717`, and CI `32593234295` before implementation.
+Generated `MARC2VR22P-G1` passed all 12 paths with G1/R4/R5 each appearing
+four times. The wrapper made 12 exact VR20A calls, eight conditional VR21A map
+calls, one source open per path, and passed 121 direct refusals.
+
+The pass used 5,301,432 generated input bytes, 915,445 temporary output bytes,
+223,195 peak temporary bytes, zero retained payload, 0.867054 seconds, and
+35,946,496-byte peak RSS under one thread. Every private, ignored-path,
+archive, neural, target, model, score, network, FW2/CIL1, and claim counter was
+zero.
+
+Next gate: commit, push, and green the exact implementation, then add and
+green a proof-only closeout without repeating qualification. The one private
+structural execution remains closed until both barriers pass.

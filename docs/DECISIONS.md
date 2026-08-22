@@ -10993,3 +10993,27 @@ implementation and a separate proof-only closeout are both remotely green.
 Operation decision: recording this decision performs zero `.codex_work`,
 private, readiness, output-root, archive, neural, target, model, score,
 network, other-project, release, or scientific-claim operation.
+
+## 0370 - Accept Generated VR22P F06/F07 Wrapper Qualification
+
+Proof decision: packet-bound decision
+`197f253e9e0411085f6ecdccf466f9f7059bd479` passed Base Python job
+`97080176920`, Optional Neuro Readers job `97080176717`, and CI
+`32593234295` before Stage 1.
+
+Result decision: accept `MARC2VR22P-G1` after all 12 generated paths passed.
+G1, F06/R4, and F07/R5 each appeared four times across two orders and two
+replays. VR20A was called exactly 12 times, the VR21A map exactly eight times
+only on failures, all six case/order hashes replayed exactly, and 121 direct
+refusals passed.
+
+Resource decision: record 5,301,432 generated input bytes, 915,445 temporary
+output bytes, 223,195 peak temporary bytes, zero retention, 0.8670535000273958
+seconds, and 35,946,496-byte peak RSS under one thread, worker, and numerical
+job.
+
+Boundary decision: this is generated structural qualification only. Require
+the exact implementation and a separate proof-only closeout to be remotely
+green before the one target-free private read. No private source, cohort,
+archive member, neural payload, target, model, score, FW2/CIL1 execution,
+release, or scientific claim is open.
