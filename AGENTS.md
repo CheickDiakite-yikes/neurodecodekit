@@ -145,6 +145,20 @@ participant, or incomplete bundle refuses. Commit, push, and green this exact
 registration before implementation. Do not implement early or touch any
 private/ignored/consumed state.
 
+Registration `ad8be2197e58d4d3e0e1fe4f344de1c608930f73` passed Base
+job `97105227375`, Optional job `97105227440`, and CI `32603540967` before
+implementation. Read the VR25A implementation document and two machine
+records. The one registered generated qualification passed all 40 paths: G1
+four, G2 sixteen, R1 twelve, R2 four, and R3 four. All 20 accepted paths shared
+one exact semantic selection, selected-name, split, and reservation identity;
+eligible-drift, unknown-participant, and incomplete-companion successes were
+zero. All 72 direct refusals passed. The pass processed 24,580,902 generated
+bytes in 3.250688 seconds at 48,185,344-byte peak RSS and retained zero output.
+Remote implementation proof remains null. Commit, push, and green the exact
+implementation and result, then add a proof-only closeout without rerunning
+qualification. No private packet may be prepared before that closeout is
+remotely green.
+
 ## Historical VR20P/VR21A/VR22P path
 
 `MARC2-VR20P` is consumed at aggregate route `MARC2VR20P-R5` without a

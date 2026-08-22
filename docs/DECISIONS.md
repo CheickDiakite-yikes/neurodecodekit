@@ -11292,3 +11292,32 @@ Boundary decision: VR25A has no private executor or authority for consumed
 state, archive members, neural signals, targets, models, predictions, scores,
 FW2/CIL1, release, or scientific claims. A future private confirmation remains
 a separate Tier C packet and decision.
+
+## 0383 - Accept Generated VR25A Selection-Boundary Qualification
+
+Proof decision: exact registration
+`ad8be2197e58d4d3e0e1fe4f344de1c608930f73` passed Base Python job
+`97105227375`, Optional Neuro Readers job `97105227440`, and CI `32603540967`
+before implementation.
+
+Result decision: accept `MARC2VR25A-G1` after all 40 registered paths passed.
+G1 appeared four times, warning-success G2 sixteen times, eligible-drift R1
+twelve times, unknown-taxonomy R2 four times, and companion-integrity R3 four
+times. All 20 accepted paths shared one exact semantic selection, selected-
+name, split, and reservation identity. No eligible, unknown, or incomplete
+case reached success.
+
+Guard decision: accept all 72 direct refusals: 20 contract/proof, 26 privacy/
+output, ten thread/resource, three eligible-inventory, one unknown-taxonomy,
+and 12 row/companion refusals. Source immutability passed 40/40 checks.
+
+Resource decision: record 256,934 fixed tracked bytes, 24,580,902 generated
+input bytes, 883,958 peak temporary bytes, 3,508 aggregate bytes, zero
+retention, 3.2506883749738336 seconds, and 48,185,344-byte peak RSS under one
+thread, worker, and numerical job.
+
+Boundary decision: require the exact implementation/result commit and both CI
+jobs green, then a separate proof-only closeout without rerunning
+qualification. No private packet may be prepared before the closeout is green.
+Real data, cohort freeze, archive members, neural signals, targets, models,
+scores, FW2/CIL1, release, and scientific claims remain closed.

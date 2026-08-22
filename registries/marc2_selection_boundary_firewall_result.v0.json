@@ -1,0 +1,129 @@
+{
+  "schema_name": "neurodecodekit.marc2_selection_boundary_firewall_result",
+  "schema_version": "0.1.0",
+  "result_id": "MARC-2-selection-boundary-firewall-generated-result-v0",
+  "lane_id": "MARC2-VR25A",
+  "recorded_at_local": "2026-08-22",
+  "route": "MARC2VR25A-G1",
+  "status": "generated_only_qualified_no_private_access",
+  "registration_proof": {
+    "commit": "ad8be2197e58d4d3e0e1fe4f344de1c608930f73",
+    "CI_run_id": 32603540967,
+    "base_job_id": 97105227375,
+    "optional_neuro_job_id": 97105227440,
+    "both_required_jobs_green_before_qualification": true
+  },
+  "matrix": {
+    "paths": 40,
+    "cases": 10,
+    "orders": 2,
+    "replays": 2,
+    "route_counts": {
+      "MARC2VR25A-G1": 4,
+      "MARC2VR25A-G2": 16,
+      "MARC2VR25A-R1": 12,
+      "MARC2VR25A-R2": 4,
+      "MARC2VR25A-R3": 4
+    },
+    "accepted_paths": 20,
+    "accepted_semantic_identity_matches": true,
+    "accepted_source_exact_name_identity_matches": true,
+    "accepted_split_reservation_identity_matches": true,
+    "source_immutability_checks": 40,
+    "eligible_drift_successes": 0,
+    "unknown_participant_successes": 0,
+    "incomplete_companion_successes": 0,
+    "exact_replays_match": true
+  },
+  "firewall": {
+    "all_rows_validated_before_filter": true,
+    "all_recognized_bundles_complete_before_filter": true,
+    "exact_eligible_bundle_total": 195,
+    "exact_eligible_distribution_required": true,
+    "known_ineligible_quarantined_before_candidate_construction": true,
+    "public_full_total_exposed_as_boolean_only": true,
+    "observed_full_total_exposed": false,
+    "difference_direction_or_magnitude_exposed": false,
+    "selected_subjects": 16,
+    "selected_run_bundles": 96,
+    "selected_core_members": 384
+  },
+  "refusals": {
+    "direct_refusals": 72,
+    "route_counts": {
+      "MARC2VR25A-F01": 20,
+      "MARC2VR25A-F03": 26,
+      "MARC2VR25A-F04": 10,
+      "MARC2VR25A-R1": 3,
+      "MARC2VR25A-R2": 1,
+      "MARC2VR25A-R3": 12
+    }
+  },
+  "measurements": {
+    "fixed_input_bytes": 256934,
+    "generated_input_bytes": 24580902,
+    "temporary_peak_bytes": 883958,
+    "aggregate_output_bytes": 3508,
+    "retained_generated_output_bytes": 0,
+    "runtime_seconds": 3.2506883749738336,
+    "peak_RSS_bytes": 48185344,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "end_to_end_latency_measured": false
+  },
+  "operation_counters": {
+    "private_source_path_operations": 0,
+    "private_source_content_opens": 0,
+    "private_source_hashes_or_parses": 0,
+    "consumed_state_operations": 0,
+    "archive_local_header_or_member_reads": 0,
+    "signal_sample_or_event_reads": 0,
+    "target_label_or_human_content_reads": 0,
+    "model_checkpoint_or_feature_reads": 0,
+    "training_or_parameter_update_runs": 0,
+    "model_inference_or_prediction_sets": 0,
+    "target_deliveries_or_scoring_runs": 0,
+    "network_or_provider_requests": 0,
+    "stream_device_hardware_or_other_project_operations": 0,
+    "FW2_or_CIL1_operations": 0,
+    "release_or_scientific_claim_upgrades": 0
+  },
+  "warnings": [
+    "Generated fixtures only; no private or real source was accessed.",
+    "Full-source 238 compatibility is a warning only after exact eligible validation.",
+    "The observed private bundle count and difference remain unavailable.",
+    "No real cohort, archive member, neural payload, or scientific result exists."
+  ],
+  "unavailable_fields": [
+    "observed_real_complete_bundle_count",
+    "real_bundle_count_difference_direction_or_magnitude",
+    "real_target_free_cohort",
+    "archive_member_integrity",
+    "neural_signal_event_target_model_prediction_or_score",
+    "end_to_end_neural_decoding_latency"
+  ],
+  "next_gate": {
+    "implementation_remote_green_required": true,
+    "proof_only_closeout_required": true,
+    "qualification_rerun_for_closeout_allowed": false,
+    "future_private_confirmation_requires_new_Tier_C_packet_and_decision": true,
+    "private_access_cohort_freeze_archive_neural_FW2_or_CIL1_authorized_now": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "generated selection-boundary firewall separates public full-total compatibility from exact eligible cohort integrity without admitting known ineligible bundles",
+    "scientific_ceiling": "none",
+    "real_or_private_data_accessed": false,
+    "archive_member_or_neural_payload_accessed": false,
+    "target_model_prediction_or_score_accessed": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "live_decoding": false
+  }
+}

@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR25A Selection-Boundary Firewall
+## Current Frontier: MARC2-VR25A Generated Firewall Passed
 
 VR24P result `a873f1a` passed Base job `97103071419`, Optional Neuro Readers
 job `97103071353`, and CI `32602610854`. The exact one-shot result remains
@@ -31,9 +31,22 @@ redistributed eligible bundles, unknown participants, and incomplete companion
 sets must refuse. A count mismatch may expose only a boolean warning, never
 the observed count or difference.
 
-Immediate gate: commit, push, and green this exact registration before any
-generated implementation. There is no private executor, data access, cohort
-freeze, neural operation, FW2/CIL1 action, or scientific claim in VR25A.
+Registration `ad8be21` passed Base job `97105227375`, Optional Neuro Readers
+job `97105227440`, and CI `32603540967` before implementation. The additive
+standard-library module then passed the one registered generated
+qualification: 40/40 matrix paths, 20 accepted paths with one exact selection
+identity, 20 expected eligible/unknown/incomplete refusals, 72 direct
+refusals, and 40 source-immutability checks.
+
+The pass used 24,580,902 generated input bytes, 3.250688 seconds, 48,185,344-
+byte peak RSS, and zero retained output. It has only `plan`, `qualify`, and
+`inspect`; there is no private executor or path argument.
+
+Immediate gate: commit, push, and green the exact implementation and result,
+then bind that remote proof in a closeout without rerunning qualification. A
+private confirmation packet cannot be prepared before the closeout is green.
+There is still no real cohort, archive-member access, neural operation,
+FW2/CIL1 action, or scientific claim in VR25A.
 
 ## Historical Frontier: MARC2-VR24P Consumed At R2
 

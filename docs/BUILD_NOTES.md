@@ -13118,6 +13118,28 @@ Immediate gate: commit, push, and green the exact VR25A registration before
 implementation. No private path, consumed state, archive member, neural
 payload, target, model, score, FW2/CIL1 action, or scientific claim is open.
 
+### VR25A generated selection-boundary firewall
+
+- Registration `ad8be2197e58d4d3e0e1fe4f344de1c608930f73` passed Base
+  Python job `97105227375`, Optional Neuro Readers job `97105227440`, and CI
+  `32603540967` before implementation.
+- Added one dependency-free module with `plan`, `qualify`, and `inspect`. It
+  validates every row and recognized complete group, exact 1,025/202 entry
+  kinds, frozen taxonomy, exact 195 eligible distribution, and unchanged
+  selector/final identity. It has no `execute` or path/URL/output argument.
+- The one registered qualification passed 40/40 paths with G1=4, G2=16,
+  R1=12, R2=4, and R3=4. All 20 accepted paths shared one exact semantic
+  selection, selected-name, split, and reservation identity.
+- Eligible-drift, unknown-participant, and incomplete-companion successes were
+  zero. All 72 direct refusals and 40 source-immutability checks passed.
+- Measured 24,580,902 generated input bytes, 883,958 peak temporary bytes,
+  3,508 aggregate bytes, zero retention, 3.2506883749738336 seconds, and
+  48,185,344-byte peak RSS under one thread.
+
+Immediate gate: run the complete verification surface, commit, push, and green
+the exact implementation and result, then add a proof-only closeout without
+rerunning qualification. No private packet or scientific operation is open.
+
 ### VR24P one-shot structural discriminator consumed at R2
 
 - Proof-only closeout `589b0f51db9a1bd157d90b0f4260fbb9c6475045`
