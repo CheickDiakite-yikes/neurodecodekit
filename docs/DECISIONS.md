@@ -11107,3 +11107,24 @@ green, followed by a separately green proof-only closeout without reexecution,
 before preparing any private packet. This qualification authorizes no private
 read, cohort, archive member, neural payload, target, model, prediction, score,
 FW2/CIL1 execution, release, or scientific claim.
+
+## 0375 - Bind VR23A Remote Implementation Proof Without Reexecution
+
+Proof decision: exact implementation
+`9e1b12139ad9cd9bcd2245a1eb74b85d7a3cbeeb` passed Base Python job
+`97089462251`, Optional Neuro Readers job `97089462366`, and CI `32596999769`.
+
+Identity decision: bind the 4,819-byte preproof implementation registry, the
+4,441-byte preproof result registry, their SHA-256 digests, and seven exact Git
+blobs for the module, behavior test, two record tests, implementation document,
+and both machine records.
+
+Operation decision: repeat no generated qualification and perform zero
+private, ignored-path, consumed VR22P, archive, neural, target, model,
+prediction, score, network, FW2/CIL1, other-project, release, or claim
+operation.
+
+Boundary decision: the closeout has delayed effect until its own exact commit
+and both CI jobs are green. Only then may Tier A prepare one all-false private
+five-route discriminator packet. No private read, cohort freeze, neural
+payload, FW2/CIL1 execution, or scientific authority is added.

@@ -57,9 +57,19 @@ class Marc2F06FiveRouteDecompositionImplementationTests(unittest.TestCase):
         )
 
     def test_remote_proof_and_private_execution_remain_closed(self):
-        self.assertIsNone(self.registry["remote_implementation_proof"])
+        proof = self.registry["remote_implementation_proof"]
+        self.assertEqual(
+            proof["commit"],
+            "9e1b12139ad9cd9bcd2245a1eb74b85d7a3cbeeb",
+        )
+        self.assertTrue(proof["both_required_jobs_green"])
+        self.assertFalse(
+            proof["generated_qualification_repeated_for_proof_closeout"]
+        )
+        self.assertEqual(proof["private_operations_during_proof_closeout"], 0)
         gate = self.registry["next_gate"]
-        self.assertTrue(gate["proof_only_closeout_required_after_green"])
+        self.assertTrue(gate["proof_only_closeout_commit_green_pending"])
+        self.assertFalse(gate["private_discriminator_packet_eligible_now"])
         self.assertFalse(gate["private_packet_allowed_before_closeout"])
         self.assertFalse(gate["private_or_neural_execution_authorized"])
 

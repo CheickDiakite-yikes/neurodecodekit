@@ -3963,3 +3963,16 @@ FW2/CIL1, and claim counter was zero.
 Next gate: commit, push, and green the exact implementation and result, then
 add and green a proof-only closeout without repeating qualification. A future
 private discriminator still requires a new Tier C packet and fresh decision.
+
+### MARC2-VR23A - Exact Implementation Remotely Green
+
+Exact implementation `9e1b121` passed Base Python job `97089462251`, Optional
+Neuro Readers job `97089462366`, and CI `32596999769`. The proof-only closeout
+binds the 4,819-byte implementation registry, the 4,441-byte result registry,
+their SHA-256 digests, and seven exact Git blobs from that commit.
+
+The closeout repeats no qualification and performs zero private, ignored-path,
+consumed-state, archive, neural, target, model, score, network, FW2/CIL1,
+other-project, or claim operation. Next gate: commit, push, and green this
+exact closeout. Only afterward may Tier A prepare a separately frozen
+all-false private five-route packet; a fresh Tier C decision remains required.

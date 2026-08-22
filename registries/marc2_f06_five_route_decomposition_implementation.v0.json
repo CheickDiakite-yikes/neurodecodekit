@@ -4,7 +4,7 @@
   "implementation_id": "MARC-2-VR23A-F06-five-route-decomposition-implementation-v0",
   "lane_id": "MARC2-VR23A",
   "recorded_at_UTC": "2026-08-22T00:00:00Z",
-  "status": "generated_qualification_passed_remote_implementation_proof_pending",
+  "status": "generated_qualification_remote_implementation_proven_closeout_pending",
   "registration_proof": {
     "commit": "cee91b0473cd97a91feab22d7fd420e0b550b99f",
     "CI_run_id": 32596045581,
@@ -103,11 +103,11 @@
   },
   "verification": {
     "pre_change_dependency_light_tests": 4858,
-    "focused_tests_passed": 20,
-    "complete_dependency_light_tests_passed": 4878,
+    "focused_tests_passed": 25,
+    "complete_dependency_light_tests_passed": 4883,
     "expected_skips": 204,
     "new_failures": 0,
-    "test_delta": 20
+    "test_delta": 25
   },
   "resource_caps": {
     "runtime_seconds": 45,
@@ -119,10 +119,33 @@
     "network_bytes": 0,
     "new_payload_bytes": 0
   },
-  "remote_implementation_proof": null,
+  "remote_implementation_proof": {
+    "commit": "9e1b12139ad9cd9bcd2245a1eb74b85d7a3cbeeb",
+    "CI_run_id": 32596999769,
+    "base_python_job_id": 97089462251,
+    "optional_neuro_job_id": 97089462366,
+    "both_required_jobs_green": true,
+    "scope_changed_after_qualification": false,
+    "qualification_route": "MARC2VR23A-G1",
+    "preproof_implementation_registry_bytes": 4819,
+    "preproof_implementation_registry_sha256": "a3391ea235a2b0019dce0d66299c864befdf825ab620e8fabafc1949d9591e49",
+    "preproof_result_registry_bytes": 4441,
+    "preproof_result_registry_sha256": "4e8906af52f485f3b8aeb2c0351728bedb949986e8827af110390eecf7f079d5",
+    "implementation_module_Git_blob": "05a9d426e5b60009d959f8e436592c437a2b6eaa",
+    "behavior_test_Git_blob": "a51dd78c00489e50cd7a9c9bced6555260e474d0",
+    "implementation_record_test_Git_blob": "326cf8a0a69df863fec6d85a1610dbcba23a4da7",
+    "result_record_test_Git_blob": "d9363b3f094f83babb36f7152e3dd21d16f9aebd",
+    "implementation_document_Git_blob": "54e5d056463d73d09f21f1e4117a5f8055431031",
+    "preproof_implementation_registry_Git_blob": "bbbad7f29ac9b184fa4e5f5ec410cf3c3bdf1762",
+    "preproof_result_registry_Git_blob": "fe19f224b27cf3e08f144bfec237b40a310c868d",
+    "generated_qualification_repeated_for_proof_closeout": false,
+    "private_operations_during_proof_closeout": 0
+  },
   "next_gate": {
-    "exact_implementation_commit_push_and_both_jobs_green_required": true,
-    "proof_only_closeout_required_after_green": true,
+    "exact_implementation_commit_push_and_both_jobs_green_required": false,
+    "proof_only_closeout_commit_green_pending": true,
+    "private_discriminator_packet_eligible_now": false,
+    "private_discriminator_packet_eligible_after_exact_closeout_green": true,
     "private_packet_allowed_before_closeout": false,
     "private_or_neural_execution_authorized": false
   },
