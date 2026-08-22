@@ -1,0 +1,98 @@
+{
+  "schema_name": "neurodecodekit.marc2_r5_two_route_discriminator_result_record",
+  "schema_version": "0.1.0",
+  "result_id": "MARC-2-VR21A-R5-two-route-generated-discriminator-result-v0",
+  "lane_id": "MARC2-VR21A",
+  "recorded_at_local": "2026-08-22",
+  "status": "generated_two_route_discriminator_qualified",
+  "route": "MARC2VR21A-G1",
+  "registration_proof": {
+    "commit": "7ce0e16392fed2576031766bead32a5cab44031a",
+    "CI_run_id": 32559365362,
+    "base_job_id": 96998477692,
+    "optional_neuro_job_id": 96998477649,
+    "both_required_jobs_green_before_implementation": true
+  },
+  "matrix": {
+    "cases": [
+      "control_success",
+      "unknown_participant_taxonomy",
+      "semantic_run_zero"
+    ],
+    "orders": [
+      "canonical",
+      "reversed"
+    ],
+    "replays": 2,
+    "paths": 12,
+    "VR20A_calls": 12,
+    "VR21A_route_counts": {
+      "MARC2VR21A-G1": 4,
+      "MARC2VR21A-R1": 4,
+      "MARC2VR21A-R2": 4
+    },
+    "VR20A_route_counts": {
+      "MARC2VR20A-G1": 4,
+      "MARC2VR20A-F06": 4,
+      "MARC2VR20A-F07": 4
+    },
+    "direct_refusals_passed": 48,
+    "source_mutations_after_call": 0
+  },
+  "resources": {
+    "fixed_input_bytes": 254690,
+    "generated_input_bytes": 5301432,
+    "output_bytes": 2940,
+    "retained_output_bytes": 0,
+    "runtime_seconds": 0.7890150410239585,
+    "peak_RSS_bytes": 32636928,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "network_bytes": 0,
+    "new_payload_bytes": 0,
+    "end_to_end_latency_measured": false
+  },
+  "operation_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "readiness_or_consumed_state_operations": 0,
+    "archive_header_or_member_reads": 0,
+    "signal_event_target_or_label_reads": 0,
+    "model_training_inference_prediction_or_scoring_runs": 0,
+    "network_or_provider_calls": 0,
+    "new_payload_bytes": 0,
+    "FW2_or_CIL1_operations": 0,
+    "other_project_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "result_interpretation": {
+    "generated_F06_maps_to_R1": true,
+    "generated_F07_maps_to_R2": true,
+    "VR20P_private_R5_resolved": false,
+    "private_predicate_or_value_known": false,
+    "real_cohort_frozen": false,
+    "FW2_or_CIL1_eligible": false
+  },
+  "next_gate": {
+    "exact_implementation_and_result_remote_proof_required": true,
+    "artifact_only_proof_closeout_required_before_later_packet": true,
+    "future_private_F06_F07_discriminator_requires_new_Tier_C_packet_and_decision": true,
+    "private_or_neural_access_authorized": false
+  },
+  "warnings": [
+    "This is generated structural discrimination, not a private result.",
+    "The consumed VR20P R5 route remains unresolved between F06 and F07.",
+    "No private path, archive member, neural payload, target, model, prediction, or score was accessed."
+  ],
+  "claim_boundary": {
+    "engineering_capability": "generated discrimination of exact VR20A F06 versus F07 routes",
+    "scientific_ceiling": "none",
+    "neural_payload_accessed": false,
+    "target_model_prediction_or_score_accessed": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "live_decoding": false
+  }
+}

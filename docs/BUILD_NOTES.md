@@ -12932,3 +12932,25 @@ VR20P is consumed with no retry, rerun, repair, or private reinspection.
 Immediate gate: run complete verification, commit, push, and green this exact
 registration before VR21A implementation. No private source or scientific
 work is authorized.
+
+### VR21A generated F06/F07 discriminator passed
+
+- Registration `7ce0e16392fed2576031766bead32a5cab44031a` passed Base Python
+  job `96998477692`, Optional Neuro Readers job `96998477649`, and CI
+  `32559365362` before implementation.
+- Added a dependency-free `plan` and `qualify` module with no private executor
+  or source, route, reason, threshold, retry, or resource override.
+- `MARC2VR21A-G1` passed all 12 generated paths. G1, R1, and R2 each appeared
+  four times; unchanged VR20A was called 12 times; all six case/order hashes
+  replayed exactly; and 48 direct refusals passed.
+- Measured 5,301,432 generated input bytes, 2,940 aggregate bytes, zero
+  retained output, 0.7890150410239585 seconds, and 32,636,928-byte peak RSS
+  under one thread, worker, and numerical job.
+- Private, ignored-path, readiness, consumed-state, archive, neural, target,
+  model, score, network, provider, FW2/CIL1, other-project, and claim
+  operations were zero.
+- Twenty-two focused tests pass.
+
+Immediate gate: run complete verification, commit, push, and green the exact
+implementation and result. Then add a proof-only closeout before any later
+all-false private discriminator packet.

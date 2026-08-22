@@ -10885,3 +10885,24 @@ Boundary decision: registration is artifact-only and generated-only, has no
 private executor, and performs zero ignored-path, archive, neural, target,
 model, score, network, FW2/CIL1, release, or claim operation. Require the
 registration commit and both CI jobs green before implementation.
+
+## 0365 - Accept The Generated VR21A F06/F07 Qualification
+
+Proof decision: registration `7ce0e16392fed2576031766bead32a5cab44031a`
+passed Base Python job `96998477692`, Optional Neuro Readers job
+`96998477649`, and CI `32559365362` before implementation.
+
+Result decision: accept `MARC2VR21A-G1` after all 12 generated paths passed.
+G1, F06/R1, and F07/R2 each appeared four times across two orders and two
+replays. Unchanged VR20A was called exactly 12 times, all six source hashes
+replayed exactly, and 48 direct refusals passed.
+
+Resource decision: record 5,301,432 generated input bytes, 2,940 aggregate
+bytes, zero retained output, 0.7890150410239585 seconds, and 32,636,928-byte
+peak RSS under one thread, worker, and numerical job.
+
+Boundary decision: this is generated structural discrimination only. It does
+not resolve consumed private R5 between F06 and F07. Require exact
+implementation remote proof and a proof-only closeout before any later
+private packet. No private read, neural payload, target, model, score,
+FW2/CIL1, release, or scientific claim is open.

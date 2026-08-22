@@ -63,9 +63,14 @@ do not retry, reopen, rehash, or inspect its private state. The next lane is
 frozen as `MARC2-VR21A`. Read the R5 two-route discriminator preregistration
 and machine contract. Its 12 generated paths distinguish F06
 taxonomy/eligibility from F07 selection/split/rank/reservation arithmetic
-through unchanged VR20A. Commit, push, and green the registration before
-implementation. FW2, archive payload, neural data, targets, models, scoring,
-and all five scientific claims remain closed.
+through unchanged VR20A. Registration `7ce0e16` passed both jobs in CI
+`32559365362` before implementation. Generated `MARC2VR21A-G1` now passes all
+12 paths with G1/R1/R2 each appearing four times, 12 unchanged VR20A calls,
+48 direct refusals, exact replays, and zero retained output. Read the VR21A
+implementation document and machine records. Commit, push, and green the
+exact implementation before a proof-only closeout. FW2, archive payload,
+neural data, targets, models, scoring, and all five scientific claims remain
+closed.
 
 The five requested scientific targets and their exact evidence order are in
 `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md`. Preserve its distinction

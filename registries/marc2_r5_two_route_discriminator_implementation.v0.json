@@ -1,0 +1,113 @@
+{
+  "schema_name": "neurodecodekit.marc2_r5_two_route_discriminator_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "MARC-2-VR21A-R5-two-route-generated-discriminator-implementation-v0",
+  "lane_id": "MARC2-VR21A",
+  "recorded_at_local": "2026-08-22",
+  "status": "generated_qualification_passed_remote_implementation_proof_pending",
+  "registration_proof": {
+    "commit": "7ce0e16392fed2576031766bead32a5cab44031a",
+    "CI_run_id": 32559365362,
+    "base_job_id": 96998477692,
+    "optional_neuro_job_id": 96998477649,
+    "both_required_jobs_green_before_implementation": true,
+    "contract_path": "registries/marc2_r5_two_route_discriminator_contract.v0.json",
+    "contract_bytes": 8304,
+    "contract_sha256": "5ca99e2d64c7dc4c268afb10d6c1a92eac86a5bbcb7ca484ee654217c13e0597"
+  },
+  "implementation_artifacts": [
+    {
+      "role": "discriminator_module",
+      "path": "src/neurodecodekit/datasets/marc2_r5_two_route_discriminator.py",
+      "bytes": 19214,
+      "sha256": "367f219b04c4c6a943435c1c36d2191b167c6b74f16bc8b40afcccd83e73b601"
+    },
+    {
+      "role": "behavior_tests",
+      "path": "tests/test_marc2_r5_two_route_discriminator.py",
+      "bytes": 5332,
+      "sha256": "6d1f706f59d9bd5aeb1ce6b831b104b3c6a4610d32c6e97991aeef070fd51d74"
+    }
+  ],
+  "implementation_artifact_bytes": 24546,
+  "qualification": {
+    "route": "MARC2VR21A-G1",
+    "status": "generated_two_route_discriminator_qualified",
+    "cases": 3,
+    "orders": 2,
+    "replays": 2,
+    "paths": 12,
+    "VR20A_calls": 12,
+    "VR21A_route_counts": {
+      "MARC2VR21A-G1": 4,
+      "MARC2VR21A-R1": 4,
+      "MARC2VR21A-R2": 4
+    },
+    "VR20A_route_counts": {
+      "MARC2VR20A-G1": 4,
+      "MARC2VR20A-F06": 4,
+      "MARC2VR20A-F07": 4
+    },
+    "direct_refusals_passed": 48,
+    "source_mutations_after_call": 0,
+    "retained_output_bytes": 0
+  },
+  "replay_source_hashes": {
+    "control_success_canonical": "da5eaa166014c516d3aebfd0457fa660c2b43db686991150ab3f41d351f2b7af",
+    "control_success_reversed": "da5eaa166014c516d3aebfd0457fa660c2b43db686991150ab3f41d351f2b7af",
+    "unknown_participant_taxonomy_canonical": "34b653daf9cdf6bc5707158dc9922809c267606a37d6518d23346f756e4fa120",
+    "unknown_participant_taxonomy_reversed": "be7d1f1a70d1d3faeb096f5a32705e8a0c58583d04bda86a05928c61651632f6",
+    "semantic_run_zero_canonical": "e007a8345b2e746ec8a878a1e9d050c6cdc677c459352b9e36ce3356321c4cad",
+    "semantic_run_zero_reversed": "785ba92304d2a43be71577be53df20aca09ad3c81db3eb7707c71f633de46b0b"
+  },
+  "measurements": {
+    "fixed_input_bytes": 254690,
+    "generated_input_bytes": 5301432,
+    "aggregate_output_bytes": 2940,
+    "retained_output_bytes": 0,
+    "runtime_seconds": 0.7890150410239585,
+    "peak_RSS_bytes": 32636928,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "network_bytes": 0,
+    "new_payload_bytes": 0,
+    "end_to_end_latency_measured": false
+  },
+  "operation_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "readiness_or_consumed_state_operations": 0,
+    "archive_header_or_member_reads": 0,
+    "signal_event_target_or_label_reads": 0,
+    "model_training_inference_prediction_or_scoring_runs": 0,
+    "network_or_provider_calls": 0,
+    "new_payload_bytes": 0,
+    "FW2_or_CIL1_operations": 0,
+    "other_project_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "verification": {
+    "focused_tests_passed": 22,
+    "complete_dependency_light_tests_passed": 4787,
+    "expected_skips": 204,
+    "new_failures": 0,
+    "ruff_version": "0.15.20",
+    "registry_JSON_valid": true,
+    "CLI_help_and_plan_passed": true,
+    "git_diff_check_passed": true
+  },
+  "remote_implementation_proof": null,
+  "next_gate": {
+    "exact_implementation_and_result_must_be_committed_pushed_and_remotely_green": true,
+    "artifact_only_proof_closeout_required_before_any_later_packet": true,
+    "private_discriminator_or_source_read_authorized": false,
+    "FW2_or_CIL1_authorized": false
+  },
+  "warnings": [
+    "artifact_only_and_generated_only",
+    "no_private_executor",
+    "R1_and_R2_are_generated_structural_classes_not_private_results",
+    "remote_implementation_proof_pending",
+    "no_neural_decoding_or_scientific_claim"
+  ]
+}
