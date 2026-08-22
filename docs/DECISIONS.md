@@ -11219,3 +11219,25 @@ Boundary decision: require the exact implementation to be remotely green and
 then a separately green proof-only closeout without reexecution before any
 readiness or private-path operation. Stage 1 authorizes no cohort, archive or
 neural payload, target, model, score, FW2/CIL1, release, or scientific claim.
+
+## 0380 - Bind VR24P Remote Implementation Proof Without Reexecution
+
+Proof decision: exact Stage 1 implementation
+`a2e19ba59d989ca27cada275ac460085cb07536c` passed Base Python job
+`97099725036`, Optional Neuro Readers job `97099725145`, and CI
+`32601257065`.
+
+Identity decision: bind the 7,138-byte preproof implementation registry, its
+SHA-256 and Git blob, the canonical implementation-artifact set hash, and the
+four exact Git blobs for module, behavior tests, implementation tests, and
+implementation document.
+
+Operation decision: repeat no generated qualification and perform zero
+readiness, `.codex_work`, private source, consumed VR22P, archive, neural,
+target, model, prediction, score, network, FW2/CIL1, other-project, release,
+or claim operation.
+
+Boundary decision: the closeout has delayed effect until its own exact commit
+and both CI jobs are green. Only then may the one registered target-free
+five-route structural discriminator execute. No cohort, retry, neural payload,
+FW2/CIL1, or scientific authority is added.

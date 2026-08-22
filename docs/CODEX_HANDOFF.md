@@ -1,5 +1,16 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR24P proof closeout, 2026-08-22: exact Stage 1 `a2e19ba`
+> passed Base job `97099725036`, Optional job `97099725145`, and CI
+> `32601257065`. The proof-only closeout binds the 7,138-byte preproof
+> registry, its SHA-256 and Git blob, the canonical artifact-set hash, and four
+> exact artifact blobs. It repeats no qualification and performs zero private
+> operation. Commit, push, and green this closeout before `execute`, readiness,
+> or any `.codex_work` access. Only then may the one target-free 418,755-byte
+> structural read, one VR23A call, and one nested VR20A call retain one
+> aggregate R1-R9 report. No cohort or retry is available. Neural payload,
+> targets, models, scores, FW2/CIL1, release, and claims remain closed.
+
 > Current MARC2-VR24P Stage 1, 2026-08-22: packet-bound decision `53bc114`
 > passed Base job `97096723985`, Optional job `97096724073`, and CI
 > `32599996090` before implementation. Generated `MARC2VR24P-G1` passes all 24

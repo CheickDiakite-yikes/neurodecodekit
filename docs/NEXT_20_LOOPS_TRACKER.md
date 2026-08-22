@@ -4044,3 +4044,16 @@ Next gate: commit, push, and green the exact Stage 1 implementation, then add
 and green a proof-only closeout without reexecution. No readiness, private
 source, archive, neural, target, model, score, FW2/CIL1, or claim operation may
 occur before both barriers.
+
+### MARC2-VR24P - Exact Stage 1 Remotely Green; Closeout Pending
+
+Exact implementation `a2e19ba` passed Base Python job `97099725036`, Optional
+Neuro Readers job `97099725145`, and CI `32601257065`. The proof-only closeout
+binds the 7,138-byte preproof implementation registry, its SHA-256 and Git
+blob, the canonical implementation-artifact set hash, and four exact artifact
+Git blobs.
+
+The closeout repeats no qualification and performs zero readiness, private,
+ignored-path, archive, neural, target, model, score, network, FW2/CIL1, or
+claim operation. Next gate: commit, push, and green this exact closeout. Only
+then may the one registered target-free structural discriminator execute.
