@@ -7,7 +7,35 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR24P Consumed At R2
+## Current Frontier: MARC2-VR25A Selection-Boundary Firewall
+
+VR24P result `a873f1a` passed Base job `97103071419`, Optional Neuro Readers
+job `97103071353`, and CI `32602610854`. The exact one-shot result remains
+consumed at `MARC2VR24P-R2`; do not retry, reopen, list, hash, or inspect its
+private state.
+
+Read `docs/MARC_2_COMPLETE_BUNDLE_ARITHMETIC_RESEARCH.md`,
+`docs/MARC_2_SELECTION_BOUNDARY_FIREWALL_PREREGISTRATION.md`, and
+`registries/marc2_selection_boundary_firewall_contract.v0.json`. VR25A
+separates a full-source compatibility count from the stronger invariants that
+actually protect a study cohort. It keeps exact 1,227-row and 1,025/202 entry-
+kind validation, validates every row and complete companion group, requires
+the exact 195 eligible bundles and participant/session distribution, then
+quarantines known ineligible groups before the unchanged target-free prefix
+selection.
+
+The frozen generated matrix has ten cases and 40 paths. Five accepted controls
+must produce one identical 16-subject, 96-bundle, 384-member selection even
+when only known non-selected bundle counts vary. Added, removed, or
+redistributed eligible bundles, unknown participants, and incomplete companion
+sets must refuse. A count mismatch may expose only a boolean warning, never
+the observed count or difference.
+
+Immediate gate: commit, push, and green this exact registration before any
+generated implementation. There is no private executor, data access, cohort
+freeze, neural operation, FW2/CIL1 action, or scientific claim in VR25A.
+
+## Historical Frontier: MARC2-VR24P Consumed At R2
 
 Read `docs/MARC_2_R5_PRIVATE_DISCRIMINATOR_RESULT.md` and its machine
 registry first. Proof-only closeout `ea39319` passed both jobs in CI

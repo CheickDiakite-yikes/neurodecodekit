@@ -3918,6 +3918,32 @@ ignored-path, archive, neural, target, model, score, network, FW2/CIL1, or
 claim operation. Next gate: commit, push, and green this exact closeout. Only
 then may the one registered target-free structural discriminator execute.
 
+### MARC2-VR25A - Selection-Boundary Firewall Registered Locally
+
+VR24P result `a873f1a` passed Base Python job `97103071419`, Optional Neuro
+Readers job `97103071353`, and CI `32602610854`. Public/artifact-only analysis
+shows R2 occurs after strict source, row, identity, companion, and exact
+1,025/202 entry-kind validation. It leaves only the recognized complete-bundle
+total unequal to the frozen public 238 assumption; the observed count remains
+unavailable.
+
+VR25A freezes a layered repair rather than accepting an unknown count. Every
+row and complete bundle is validated, every recognized participant is
+classified, and the exact 195-bundle eligible participant/session map remains
+a hard gate. Only then may complete known non-selected bundle drift become an
+aggregate boolean warning before the unchanged target-free selection.
+
+Ten generated cases across two orders and two replays require 40 paths: G1
+four, G2 sixteen, R1 twelve, R2 four, and R3 four. All five accepted cases must
+share the exact 16-subject, 96-bundle, 384-member selection, split, reservation,
+and selected-name identity. Eligible drift, unknown participants, incomplete
+companions, and ineligible candidate leakage refuse. At least 72 direct
+refusals, zero retention, one thread, and less than 256 MiB RSS are required.
+
+Next gate: verify, commit, push, and green the exact registration before a
+generated-only implementation. No private executor, archive member, neural
+payload, target, model, score, FW2/CIL1 action, or scientific claim is open.
+
 ### MARC2-VR24P - Consumed At Complete-Bundle Arithmetic R2
 
 Proof-only closeout `589b0f5` passed Base Python job `97101585701`, Optional

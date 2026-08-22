@@ -129,6 +129,22 @@ analysis. FW2/CIL1, archive members, neural data, targets, models, predictions,
 scores, streams, devices, and scientific claims remain closed. Read
 `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md` for the scientific order.
 
+VR24P result `a873f1a2ac796d5616339c7827b11af2a02bc63c` passed Base job
+`97103071419`, Optional job `97103071353`, and CI `32602610854`. The next lane
+is frozen locally as `MARC2-VR25A`. Read
+`docs/MARC_2_COMPLETE_BUNDLE_ARITHMETIC_RESEARCH.md`,
+`docs/MARC_2_SELECTION_BOUNDARY_FIREWALL_PREREGISTRATION.md`, and
+`registries/marc2_selection_boundary_firewall_contract.v0.json`. The generated-
+only design validates every row and recognized companion group, requires the
+exact 195-bundle eligible participant/session inventory, quarantines known
+ineligible bundles before selection, and treats the public 238 total only as
+an aggregate compatibility warning. Its ten generated cases and 40 paths must
+prove that accepted ineligible-only count drift leaves the exact 16-subject,
+96-bundle, 384-member selection unchanged while every eligible drift, unknown
+participant, or incomplete bundle refuses. Commit, push, and green this exact
+registration before implementation. Do not implement early or touch any
+private/ignored/consumed state.
+
 ## Historical VR20P/VR21A/VR22P path
 
 `MARC2-VR20P` is consumed at aggregate route `MARC2VR20P-R5` without a

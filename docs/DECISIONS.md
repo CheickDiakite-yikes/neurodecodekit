@@ -11264,3 +11264,31 @@ fallback, substitution, cleanup, amendment, or private reinspection. The next
 safe task is artifact-only/generated-only arithmetic analysis. Archive and
 neural payload, targets, models, scores, FW2/CIL1, release, and scientific
 claims remain closed.
+
+## 0382 - Freeze Selection Integrity Above Full-Source Count Compatibility
+
+Proof decision: VR24P result
+`a873f1a2ac796d5616339c7827b11af2a02bc63c` passed Base Python job
+`97103071419`, Optional Neuro Readers job `97103071353`, and CI `32602610854`.
+Use only its aggregate R2 class; do not reopen consumed private state or infer
+the unavailable observed count.
+
+Architecture decision: validate every source row and recognized complete
+bundle, classify every recognized bundle, and require the exact 195 eligible
+participant/session inventory before selection. Treat the public 238 total as
+an aggregate compatibility warning only after those harder gates pass.
+
+Firewall decision: permit generated G2 only when count drift is confined to
+complete bundles in known non-selected taxonomy classes and the exact
+16-subject, 96-bundle, 384-member selection, split, and reservation identity
+remain unchanged. Added, removed, or redistributed eligible bundles, unknown
+participants, incomplete companions, or ineligible candidate leakage refuse.
+
+Evidence decision: freeze ten generated cases, two orders, two replays, 40
+paths, at least 72 direct refusals, zero retention, one thread, and no heavy
+dependency. Do not implement before the exact registration is remotely green.
+
+Boundary decision: VR25A has no private executor or authority for consumed
+state, archive members, neural signals, targets, models, predictions, scores,
+FW2/CIL1, release, or scientific claims. A future private confirmation remains
+a separate Tier C packet and decision.

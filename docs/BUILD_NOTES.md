@@ -13083,6 +13083,41 @@ private state. Stage 2 remains closed until that barrier passes.
 Immediate gate: commit, push, and green this exact proof-only closeout. Do not
 run `execute`, collect readiness, or touch private state before both jobs pass.
 
+### VR24P result remotely green
+
+- The sole proof-separated invocation consumed at `MARC2VR24P-R2` after one
+  418,755-byte target-free structural read, one VR23A call, and one nested
+  unchanged VR20A call. No cohort was frozen.
+- R2 means only complete-bundle count arithmetic against the public 238-bundle
+  assumption. The observed count, difference, and every private identity or
+  selection detail were not retained.
+- Result commit `a873f1a2ac796d5616339c7827b11af2a02bc63c` passed Base
+  Python job `97103071419`, Optional Neuro Readers job `97103071353`, and CI
+  `32602610854`.
+- VR24P is consumed. It was not retried, reopened, rehashed, listed, or
+  reinspected.
+
+### VR25A selection-boundary firewall registration
+
+- Added public/artifact-only arithmetic research showing that R2 follows exact
+  source-envelope, row, identity, companion, and 1,025/202 entry-kind checks.
+  The unknown recognized total `B` implies `4B` companion rows and
+  `1,025 - 4B` other regular rows, but does not reveal `B`.
+- Froze an additive generated-only architecture that keeps every row and
+  complete companion group validated, requires the exact 195 eligible bundles
+  and participant/session map, quarantines known ineligible bundles before
+  selection, and reports the 238 full-total comparison only as a boolean.
+- Ten cases across two orders and two replays require 40 paths. Five accepted
+  cases must share one exact 16-subject, 96-bundle, 384-member selection,
+  split, reservation, and selected-name identity. Every eligible drift,
+  unknown participant, or incomplete companion must refuse.
+- Seven focused registration tests pass and Ruff is clean. All authority flags
+  and operation counters are zero.
+
+Immediate gate: commit, push, and green the exact VR25A registration before
+implementation. No private path, consumed state, archive member, neural
+payload, target, model, score, FW2/CIL1 action, or scientific claim is open.
+
 ### VR24P one-shot structural discriminator consumed at R2
 
 - Proof-only closeout `589b0f51db9a1bd157d90b0f4260fbb9c6475045`

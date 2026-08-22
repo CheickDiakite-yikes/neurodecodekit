@@ -1,0 +1,351 @@
+{
+  "schema_name": "neurodecodekit.marc2_selection_boundary_firewall_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "MARC-2-selection-boundary-firewall-generated-v0",
+  "lane_id": "MARC2-VR25A",
+  "recorded_at_local": "2026-08-22",
+  "status": "preregistered_artifact_only_generated_only_no_private_access",
+  "objective": "Prove on generated structural manifests that full-source bundle-count compatibility can be separated from exact selection-sufficient eligibility without allowing any unknown, incomplete, or eligible-drift bundle into the frozen target-free cohort.",
+  "result_proof_anchor": {
+    "commit": "a873f1a2ac796d5616339c7827b11af2a02bc63c",
+    "CI_run_id": 32602610854,
+    "base_job_id": 97103071419,
+    "optional_neuro_job_id": 97103071353,
+    "both_required_jobs_green": true,
+    "observed_lane": "MARC2-VR24P",
+    "observed_route": "MARC2VR24P-R2",
+    "aggregate_meaning": "complete_bundle_count_arithmetic_differs_from_public_238_assumption",
+    "observed_bundle_count_retained": false,
+    "difference_direction_or_magnitude_retained": false,
+    "private_source_reopened_by_registration": false,
+    "private_or_scientific_operations_by_registration": 0
+  },
+  "fixed_inputs": [
+    {
+      "role": "consumed_VR24P_machine_result",
+      "path": "registries/marc2_f06_private_five_route_discriminator_result.v0.json",
+      "bytes": 5663,
+      "sha256": "9c1b44037ab83be15af7247e43b3af804de1d972e71ea92b05c5a1582c98a0c8"
+    },
+    {
+      "role": "consumed_VR24P_human_result",
+      "path": "docs/MARC_2_F06_PRIVATE_FIVE_ROUTE_DISCRIMINATOR_RESULT.md",
+      "bytes": 3335,
+      "sha256": "8875cf04b448b2901990806bff78ef85334c2d00476bd822453dacb8e90154d2"
+    },
+    {
+      "role": "frozen_VR20A_adapter",
+      "path": "src/neurodecodekit/datasets/marc2_published_task_selector_repair.py",
+      "bytes": 45208,
+      "sha256": "9f6ebe63dbeb1cd778a71ff395d698159acc672b187e5121d5d5e734d9e05fba"
+    },
+    {
+      "role": "frozen_VR20A_contract",
+      "path": "registries/marc2_published_task_selector_repair_contract.v0.json",
+      "bytes": 9578,
+      "sha256": "a2719e0e2ab54e28675929e1982a8387406068114c2079dd3864c2c8ec022516"
+    },
+    {
+      "role": "frozen_VR2_adapter",
+      "path": "src/neurodecodekit/datasets/marc2_live_domain_eligibility_adapter.py",
+      "bytes": 57528,
+      "sha256": "061b893180e01116dbd962826384b4071d9e952b78b593b4743f8c301e1cbbc3"
+    },
+    {
+      "role": "frozen_VR2_contract",
+      "path": "registries/marc2_live_domain_eligibility_adapter_contract.v0.json",
+      "bytes": 15306,
+      "sha256": "c7c94406c7b3f483bb2ecbbb42b131756d178f288eedc31ce48e9383180a0a33"
+    },
+    {
+      "role": "frozen_selector_module",
+      "path": "src/neurodecodekit/datasets/marc2_freewill_prefix_selection.py",
+      "bytes": 72691,
+      "sha256": "86fa30fbd1caed735f0fb2e627144482a2bb8e033567bb3794e3f05508005c97"
+    },
+    {
+      "role": "frozen_selector_contract",
+      "path": "registries/marc2_freewill_prefix_selection_contract.v0.json",
+      "bytes": 15821,
+      "sha256": "dfe614cd7ec27c54c4f03848e3878c714222db043f501b9b07e57c7dc9f5f702"
+    },
+    {
+      "role": "source_validity_eligibility_contract",
+      "path": "registries/marc2_source_validity_eligibility_repair_contract.v0.json",
+      "bytes": 13285,
+      "sha256": "84f44f8bc43a4ee56e256a1546cbc1fae3252f2f320db7064602fe72b44463e9"
+    },
+    {
+      "role": "published_task_primary_source_research",
+      "path": "docs/MARC_2_PUBLISHED_TASK_IDENTITY_RESEARCH.md",
+      "bytes": 5000,
+      "sha256": "39b470ccd8ce03d7dcb2f70fb8c1cf7a1c72e21692aa0b61b2ac5f2d12743b5a"
+    },
+    {
+      "role": "published_task_primary_source_registry",
+      "path": "registries/marc2_published_task_identity_research.v0.json",
+      "bytes": 7401,
+      "sha256": "f891c27423559da8bd99d29177d2fc99db067af20eea8c7120e9249225603c81"
+    },
+    {
+      "role": "public_central_directory_aggregate_result",
+      "path": "registries/marc1_freewill_central_directory_live_result.v0.json",
+      "bytes": 6118,
+      "sha256": "fee969818b4e3e2ef7aee86096ad676c9bd70f80d19f2fd6dbe0e8069175257b"
+    }
+  ],
+  "fixed_input_bytes": 256934,
+  "registration_artifacts": {
+    "research_document_path": "docs/MARC_2_COMPLETE_BUNDLE_ARITHMETIC_RESEARCH.md",
+    "research_document_sha256": "297a5670858d18b9d87709e514ec2b839c9a2a58a248a43c16a2fd03e7e17115",
+    "preregistration_document_path": "docs/MARC_2_SELECTION_BOUNDARY_FIREWALL_PREREGISTRATION.md",
+    "preregistration_document_sha256": "cc7b2fe74c9aaf3394e65b92399e186be93da5e0064f85cda951c2b81c5e5c25",
+    "invariant_test_path": "tests/test_marc2_selection_boundary_firewall_preregistration.py",
+    "invariant_test_sha256": "9afe25e2a6bef4bef8606430ebfb3b0973e3d2e49ca24484bc7c105d793fff7e"
+  },
+  "evidence_interpretation": {
+    "strict_source_envelope_passed_before_R2": true,
+    "row_path_and_suffix_identity_passed_before_R2": true,
+    "member_name_uniqueness_passed_before_R2": true,
+    "task_and_run_companion_spelling_passed_before_R2": true,
+    "four_companion_completeness_passed_before_R2": true,
+    "entry_kind_1025_202_arithmetic_passed_before_R2": true,
+    "public_238_complete_bundle_arithmetic_passed": false,
+    "observed_complete_bundle_count_known": false,
+    "difference_direction_or_magnitude_known": false,
+    "recognized_companion_rows_formula": "4 * B",
+    "other_regular_file_rows_formula": "1025 - 4 * B",
+    "B_may_be_inferred_or_published": false
+  },
+  "selection_boundary_layers": {
+    "source_inventory_rows": 1227,
+    "regular_file_rows": 1025,
+    "directory_rows": 202,
+    "public_complete_bundle_compatibility_total": 238,
+    "eligible_bundle_total": 195,
+    "eligible_subjects": 19,
+    "eligible_sessions": ["ses-01", "ses-02"],
+    "selected_subjects": 16,
+    "selected_run_bundles": 96,
+    "selected_core_members": 384,
+    "validate_all_rows_before_filter": true,
+    "require_complete_unique_companions_before_filter": true,
+    "classify_every_recognized_bundle_before_filter": true,
+    "exact_eligible_distribution_is_hard_gate": true,
+    "known_ineligible_bundles_quarantined_before_selection": true,
+    "public_238_total_is_warning_after_eligibility": true,
+    "unknown_bundle_count_is_globally_accepted": false,
+    "eligible_count_or_distribution_drift_allowed": false,
+    "unknown_participant_or_incomplete_bundle_allowed": false,
+    "target_quality_or_outcome_used": false
+  },
+  "ordered_validation": [
+    "verify_contract_fixed_inputs_green_proof_and_one_thread_environment",
+    "validate_exact_1227_row_source_envelope_and_1025_202_entry_kinds",
+    "validate_every_row_path_ZIP_declaration_and_published_task_identity",
+    "group_unique_source_exact_complete_four_companion_bundles",
+    "classify_every_recognized_bundle_against_frozen_participant_taxonomy",
+    "require_exact_195_eligible_bundles_and_participant_session_distribution",
+    "record_public_238_compatibility_boolean_without_count_or_difference",
+    "quarantine_all_known_ineligible_bundles_before_candidate_construction",
+    "apply_frozen_rank_split_reservation_and_prefix_selection",
+    "assert_selection_identity_across_accepted_variants_orders_and_replays",
+    "emit_aggregate_generated_report_and_retain_zero_output"
+  ],
+  "generated_witness_matrix": {
+    "proof_posture": "generated_structural_metadata_only_no_scientific_value",
+    "case_count": 10,
+    "orders": ["canonical", "reversed"],
+    "replays": 2,
+    "paths": 40,
+    "source_rows_per_path": 1227,
+    "expected_route_counts": {
+      "MARC2VR25A-G1": 4,
+      "MARC2VR25A-G2": 16,
+      "MARC2VR25A-R1": 12,
+      "MARC2VR25A-R2": 4,
+      "MARC2VR25A-R3": 4
+    },
+    "accepted_selection_identity_must_match": true,
+    "accepted_split_and_reservation_identity_must_match": true,
+    "source_objects_must_remain_byte_identical": true,
+    "cases": [
+      {
+        "case": "exact_public_control",
+        "mutation": "none",
+        "expected_route": "MARC2VR25A-G1",
+        "selection_allowed": true
+      },
+      {
+        "case": "single_session_exclusion_removed",
+        "mutation": "replace one complete known single-session-exclusion bundle with four valid auxiliary rows",
+        "expected_route": "MARC2VR25A-G2",
+        "selection_allowed": true
+      },
+      {
+        "case": "single_session_exclusion_added",
+        "mutation": "transform four auxiliary rows into one collision-free complete known single-session-exclusion bundle",
+        "expected_route": "MARC2VR25A-G2",
+        "selection_allowed": true
+      },
+      {
+        "case": "sampling_exclusion_removed",
+        "mutation": "replace one complete sampling-tier-exclusion bundle with four valid auxiliary rows",
+        "expected_route": "MARC2VR25A-G2",
+        "selection_allowed": true
+      },
+      {
+        "case": "outside_pair_bundle_added",
+        "mutation": "transform four auxiliary rows into one complete third-session bundle for a known eligible participant",
+        "expected_route": "MARC2VR25A-G2",
+        "selection_allowed": true
+      },
+      {
+        "case": "eligible_bundle_removed",
+        "mutation": "replace one eligible bundle with four valid auxiliary rows",
+        "expected_route": "MARC2VR25A-R1",
+        "selection_allowed": false
+      },
+      {
+        "case": "eligible_bundle_added",
+        "mutation": "transform four auxiliary rows into one additional collision-free eligible bundle",
+        "expected_route": "MARC2VR25A-R1",
+        "selection_allowed": false
+      },
+      {
+        "case": "eligible_distribution_shift",
+        "mutation": "move one eligible bundle between eligible participant-session cells while preserving 195 total",
+        "expected_route": "MARC2VR25A-R1",
+        "selection_allowed": false
+      },
+      {
+        "case": "unknown_participant_bundle",
+        "mutation": "move one complete known-ineligible bundle to a syntactically valid unknown subject",
+        "expected_route": "MARC2VR25A-R2",
+        "selection_allowed": false
+      },
+      {
+        "case": "incomplete_companion_set",
+        "mutation": "replace one recognized companion with one valid auxiliary row",
+        "expected_route": "MARC2VR25A-R3",
+        "selection_allowed": false
+      }
+    ]
+  },
+  "ordered_routes": [
+    {"route": "MARC2VR25A-G1", "meaning": "exact public full-source count and exact eligible selection accepted"},
+    {"route": "MARC2VR25A-G2", "meaning": "known non-selected count drift quarantined while exact eligible selection remains unchanged"},
+    {"route": "MARC2VR25A-R1", "meaning": "eligible total or participant-session distribution differs"},
+    {"route": "MARC2VR25A-R2", "meaning": "recognized bundle participant is outside the frozen taxonomy"},
+    {"route": "MARC2VR25A-R3", "meaning": "row path task run uniqueness or companion integrity differs"},
+    {"route": "MARC2VR25A-R4", "meaning": "ineligible firewall rank split reservation selection or replay differs"},
+    {"route": "MARC2VR25A-F01", "meaning": "contract fixed artifact or green proof differs"},
+    {"route": "MARC2VR25A-F02", "meaning": "generated matrix route source immutability or acceptance gate differs"},
+    {"route": "MARC2VR25A-F03", "meaning": "privacy public output retention or forbidden operation differs"},
+    {"route": "MARC2VR25A-F04", "meaning": "runtime RSS thread worker input or output cap differs"}
+  ],
+  "qualification": {
+    "required_path_count": 40,
+    "minimum_direct_refusals": 72,
+    "canonical_reversed_and_exact_replay_required": true,
+    "accepted_variants_share_one_semantic_selection_hash": true,
+    "accepted_variants_share_one_source_exact_selected_names_hash": true,
+    "accepted_variants_share_exact_split_and_reservation": true,
+    "eligible_drift_never_reaches_success": true,
+    "unknown_participant_never_reaches_success": true,
+    "incomplete_companion_never_reaches_success": true,
+    "generated_output_retained": false,
+    "registered_execution_count": 1,
+    "retry_or_rerun_after_closeout_allowed": false
+  },
+  "aggregate_output_firewall": {
+    "aggregate_routes_and_booleans_only": true,
+    "count_compatibility_field": "full_source_bundle_count_matches_public",
+    "observed_bundle_count_allowed": false,
+    "difference_direction_or_magnitude_allowed": false,
+    "count_vector_allowed": false,
+    "member_name_path_row_or_private_value_allowed": false,
+    "participant_or_selection_identity_allowed": false,
+    "signal_event_target_label_prediction_or_score_allowed": false
+  },
+  "future_implementation_surface": {
+    "module": "neurodecodekit.datasets.marc2_selection_boundary_firewall",
+    "commands": ["plan", "qualify", "inspect"],
+    "execute_command_allowed": false,
+    "generic_path_or_URL_argument_allowed": false,
+    "private_root_output_root_or_consumed_state_interface_allowed": false,
+    "frozen_VR20A_VR2_VR12A_or_selector_edits_allowed": false,
+    "standard_library_only": true,
+    "base_dependency_delta": 0
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 60,
+    "peak_RSS_bytes": 268435456,
+    "generated_input_bytes": 41943040,
+    "temporary_output_bytes": 2097152,
+    "aggregate_output_bytes": 1048576,
+    "retained_generated_output_bytes": 0,
+    "network_bytes": 0,
+    "private_or_Git_ignored_bytes": 0
+  },
+  "authorization_state": {
+    "generated_implementation_authorized_now": false,
+    "private_manifest_source_or_consumed_state_access_authorized_now": false,
+    "archive_header_member_or_payload_access_authorized_now": false,
+    "signal_event_channel_geometry_target_or_label_access_authorized_now": false,
+    "training_inference_prediction_freeze_delivery_or_score_authorized_now": false,
+    "network_download_provider_or_language_model_authorized_now": false,
+    "stream_device_or_hardware_authorized_now": false,
+    "FW2_or_CIL1_authorized_now": false,
+    "release_publication_or_scientific_claim_upgrade_authorized_now": false,
+    "retry_rerun_resume_repair_or_reinspection_of_VR24P_authorized_now": false
+  },
+  "operation_counters": {
+    "private_source_path_operations": 0,
+    "private_source_content_opens": 0,
+    "private_source_hashes_or_parses": 0,
+    "consumed_state_operations": 0,
+    "archive_local_header_or_member_reads": 0,
+    "signal_sample_or_event_reads": 0,
+    "target_label_or_human_content_reads": 0,
+    "model_checkpoint_or_feature_reads": 0,
+    "training_or_parameter_update_runs": 0,
+    "model_inference_or_prediction_sets": 0,
+    "target_deliveries_or_scoring_runs": 0,
+    "network_or_provider_requests": 0,
+    "stream_device_hardware_or_other_project_operations": 0,
+    "FW2_or_CIL1_operations": 0,
+    "release_or_scientific_claim_upgrades": 0
+  },
+  "stop_rules": [
+    "park if any accepted known-ineligible-only mutation changes eligible inventory selection split or reservation identity",
+    "park if any eligible count or distribution mutation reaches G1 or G2",
+    "park if any unknown participant or incomplete companion reaches G1 or G2",
+    "park if implementation requires a private count private path or relaxation of row identity or companion validation",
+    "do not edit frozen upstream modules or touch consumed VR24P state",
+    "do not prepare a private packet until exact generated implementation result and proof closeout are remotely green"
+  ],
+  "next_gate": {
+    "generated_implementation_allowed_after_registration_remote_green": true,
+    "private_read_or_real_executor_allowed": false,
+    "future_private_confirmation_requires_separate_frozen_Tier_C_packet_and_decision": true,
+    "future_private_pass_may_freeze_cohort_only_if_all_selection_sufficient_invariants_pass": true,
+    "cohort_freeze_archive_or_neural_access_authorized_now": false,
+    "FW2_or_CIL1_allowed_now": false
+  },
+  "claim_boundary": {
+    "engineering_capability_sought": "Separate full-source bundle-count compatibility from exact selection-sufficient cohort integrity while quarantining only complete known non-selected bundle drift.",
+    "scientific_ceiling": "none",
+    "real_or_private_data_accessed": false,
+    "archive_member_or_neural_payload_accessed": false,
+    "target_model_prediction_or_score_accessed": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "live_decoding": false
+  }
+}

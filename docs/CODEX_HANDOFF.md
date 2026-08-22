@@ -1,5 +1,17 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR25A registration, 2026-08-22: VR24P result `a873f1a`
+> passed Base job `97103071419`, Optional job `97103071353`, and CI
+> `32602610854`. Read the complete-bundle arithmetic research, selection-
+> boundary firewall preregistration, machine contract, and invariant test.
+> VR25A freezes ten generated cases and 40 paths. It requires exact row,
+> entry-kind, companion, taxonomy, 195-bundle eligible-distribution, split,
+> reservation, and selection identity while allowing only complete known non-
+> selected bundle-count drift to become a boolean warning. Commit, push, and
+> green the exact registration before implementation. It has no `execute`,
+> private path, archive member, neural, target, model, score, FW2/CIL1, or
+> scientific authority. Consumed VR24P state remains closed.
+
 > Current MARC2-VR24P result, 2026-08-22: proof-only closeout `589b0f5`
 > passed Base job `97101585701`, Optional job `97101585762`, and CI
 > `32602001717` before the sole invocation. The command read and strict-parsed
