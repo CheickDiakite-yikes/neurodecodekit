@@ -1,6 +1,17 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Current MARC2 frontier (2026-08-16):** consumed VR7P retained outer
+> **Current MARC2 frontier (2026-08-22):** VR20A corrected the inherited
+> `task-freewill` identity to the primary-source-published
+> `task-reachingandgrasping` identity and passed 20 generated paths plus 53
+> direct refusals. The all-false VR20P request `bef2391` passed CI
+> `32489589922`; proof closeout `88b3b4a` passed CI `32490587975`. VR20P is the
+> sole active Tier C packet but has no fresh packet-bound decision. No wrapper,
+> private structural read, cohort, archive member, neural payload, target,
+> model, prediction, score, stream, or claim is open. The five scientific
+> targets and their order are frozen in
+> `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md`.
+
+> **Historical MARC2 frontier (2026-08-16):** consumed VR7P retained outer
 > `MARC2VR6-F02` but lost VR2's nested safe code. Artifact-only VR8A excluded
 > envelope F02 and narrowed the unknown private branch to F03 path/companion
 > structure versus F04 bundle/taxonomy arithmetic. Generated-only VR8B now

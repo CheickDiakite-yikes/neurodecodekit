@@ -7,7 +7,44 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR15P Consumed At Run-Token Width
+## Current Frontier: MARC2-VR20P Awaiting A Fresh Decision
+
+Read
+`docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md`,
+`registries/marc2_published_task_private_confirmation_authorization_request.v0.json`,
+`docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_REQUEST_PROOF_CLOSEOUT.md`,
+and its machine proof before doing anything else.
+
+The generated-only `MARC2-VR20A` adapter corrected the inherited task identity
+from `task-freewill` to the primary-source-published
+`task-reachingandgrasping`. It passed 20 source-exact paths and 53 direct
+refusals, preserving the generated 16-subject / 96-bundle / 384-member
+selection. Exact implementation `bf4d2b7` passed both jobs in CI
+`32486620566`; proof-only closeout `9b5bea4` passed both jobs in CI
+`32487854026`.
+
+The all-false `MARC2-VR20P` request
+`bef2391d8edf92c5edf8a3624831e50430636626` passed Base job
+`96793861959`, Optional Neuro Readers job `96793861717`, and CI
+`32489589922`. Its immutable proof closeout
+`88b3b4aaa4436655ce6f4de65215982e2b8ff9de` passed Base job
+`96797011698`, Optional Neuro Readers job `96797011783`, and CI
+`32490587975`.
+
+`MARC2-VR20P` is the sole active Tier C packet, but it has no fresh
+packet-bound maintainer decision. Do not implement its wrapper, touch
+readiness or `.codex_work`, inspect the 418,755-byte target-free source, or
+create an output root until that decision is separately committed, pushed,
+and remotely green. Success would freeze only a structural cohort and make a
+separate FW2 contract eligible. It would not open EEG, train a model, or prove
+language, motor-cortex attribution, unseen-person generalization, live
+decoding, or EEG advantage beyond peripheral controls.
+
+The five requested scientific targets and their exact evidence order are in
+`docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md`. Preserve its distinction
+between closed-set language information and arbitrary thought-to-text.
+
+## Historical Frontier: MARC2-VR15P Consumed At Run-Token Width
 
 Read `docs/MARC_2_SUFFIX_IDENTITY_PRIVATE_DISCRIMINATOR_RESULT.md` and its
 machine registry. Portable activation `a9ebef4` passed Base job `96694803139`,

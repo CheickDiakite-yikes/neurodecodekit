@@ -28,6 +28,26 @@ routine code, tests, synthetic work, bounded development experiments, commits,
 pushes, and CI proceed autonomously while reserving exact approval for those
 irreversible Tier C events.
 
+## Five Scientific Targets
+
+NeuroDecodeKit is now organized around five claims that must be earned
+separately. The full evidence definitions and experiment order live in
+[`docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md`](docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md).
+
+| Target | Status | Nearest decisive test |
+|---|---|---|
+| EEG language information | Not established | Frozen inner-speech command predictions must beat cue/time, visualized-direction, EOG, oral-EMG, no-signal, and deranged-EEG controls. A pass is closed-set command evidence, not arbitrary thought reading |
+| Motor-cortex-consistent movement information | Not established | Cue-neutral pre-movement Freewill EEG must add information beyond EOG and wrist acceleration while passing central-versus-frontal/occipital, lateralization, shift, reversal, and derangement controls |
+| Completely unseen-person generalization | Not established | A participant-independent model must score a person whose signal, labels, calibration, normalization, and thresholds were never used during fitting or selection |
+| Live end-to-end decoding | Not established | A real stream must be causally decoded without an event-onset oracle, with measured capture-to-output latency, dropouts, buffering, and abstention |
+| EEG beyond eyes and other peripheral signals | Not established | On identical held-out trials, `P+E` must improve participant-macro log loss over `P`, `P+D(E)`, timing-only, and no-signal conditions |
+
+The immediate path is Freewill-23 structural confirmation, bounded member
+qualification, one peripheral-adjusted neural experiment, and then a strict
+unseen-person arm. Language and live work remain separate evidence tracks so a
+good movement score cannot silently become a thought-to-text or real-time
+claim.
+
 ## Results At A Glance
 
 > The standout result is not an inflated decoder score. It is a complete,
@@ -38,11 +58,12 @@ irreversible Tier C events.
 
 | Evidence layer | Strongest result so far | What that means now |
 |---|---|---|
+| Real EEG predictive effect | The frozen WO9R low-frequency model reached balanced accuracy `0.680975` for executed movement and `0.728014` for imagery across 12 held-out-run participants, versus approximately chance no-signal controls | This is a real repeatable condition signal, but the early cue (`0.762865`) and frontal proxy (`0.671821`) beat or matched the central sensorimotor view (`0.647575`), so cue, visual, or ocular activity is the leading explanation rather than proven motor-cortex decoding |
 | Trial identity | All 66 S21 session-1 trials and all 63 performed session-2 trials reconcile to MAT provenance; empty session-2 slots remain explicit | The real MEG evidence has exact trial identity instead of fuzzy sentence matching |
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |
 | IACKD source compatibility | H1 found 96 29-row and 32 31-row headers. H2 then parsed all 316 public BIDS metadata bodies and confirmed one 26-channel predictive EEG core, 1024 Hz sampling, average reference, and complete central/occipital geometry in all 30 groups | The exact-36 reader assumption was wrong, but H2 still routed `IACKDR-R1`: HEOG, VEOG, and Trigger are source-typed `MISC`, exposing a frozen control-taxonomy bug before any EEG sample, event, target, model, or score was accessed |
 | MARC-1 source eligibility | The Freewill central-directory inventory passed without payload, but the one source-aware Wrist metadata check later routed `MARC1SAL-R2` with zero selected subjects and zero payload bytes | The Wrist branch is consumed and blocked before acquisition; the private source route remains unavailable and is not inferred or repaired |
-| MARC-2 confound triangulation | Five ordered work orders test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | The one-shot structural lane reached `VR18P-R4` without a cohort; VR19A proved that route means a non-`freewill` task token. Primary-source review found the naming mismatch: published BIDS files use `task-reachingandgrasping`, while the inherited selector required `task-freewill`. VR20A passes 20 generated source-exact paths and 53 refusals with the published identity, preserving 16-subject / 96-bundle selection mechanics; exact implementation `bf4d2b7` and proof closeout `9b5bea4` are remotely green. VR20P now freezes an all-false request for one future target-free structural confirmation, but no decision or private read exists. No real neural payload is open and FW2 remains closed |
+| MARC-2 confound triangulation | A five-work-order plan is designed to test Freewill target choice, conditional EEG information beyond peripheral controls, one orthogonal cohort, and a Spanish inner-speech control ladder before any LLM can receive neural evidence | The one-shot structural lane reached `VR18P-R4` without a cohort; VR19A proved that route means a non-`freewill` task token. Primary-source review found the naming mismatch: published BIDS files use `task-reachingandgrasping`, while the inherited selector required `task-freewill`. VR20A passes 20 generated source-exact paths and 53 refusals with the published identity. The VR20P all-false request `bef2391` and proof closeout `88b3b4a` are remotely green, but no packet-bound decision or private read exists. No real neural payload is open and FW2 remains closed |
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
 | Full-path causality gate | Loop 25 v1 passed a dedicated causal anti-alias audit, 65,537 response points, 23 alias probes, 168 schedule checks, 240 resume checks, and 72 future-mutation controls across 24 target-free items | The exact 1000-to-100 Hz path is mechanically causal with zero right context; this is synthetic mechanics evidence, not proof that neural information survives |
 | Consumed S21 validation | The registered 2,908-parameter candidate reached macro CER `0.938177`; the train-only no-signal prior reached `0.751235`, so the candidate was worse by `0.186942` | Loop 26 is parked after one consumed six-target event; this is a clear negative result, not neural advantage |

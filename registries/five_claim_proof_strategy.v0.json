@@ -1,0 +1,149 @@
+{
+  "schema_name": "neurodecodekit.five_claim_proof_strategy",
+  "schema_version": "0.1.0",
+  "research_id": "NDK-five-claim-proof-strategy-2026-08-22-v0",
+  "prepared_at": "2026-08-22",
+  "status": "tier_A_research_strategy_complete_zero_dataset_operations",
+  "objective": "Separate language, motor attribution, unseen-person, live, and peripheral-adjusted EEG claims into independently testable evidence targets.",
+  "current_evidence": {
+    "strongest_real_EEG_result": "WO9R-R3",
+    "participants": 12,
+    "execution_balanced_accuracy": 0.680975,
+    "imagery_balanced_accuracy": 0.728014,
+    "early_cue_balanced_accuracy": 0.762865,
+    "frontal_proxy_balanced_accuracy": 0.671821,
+    "central_sensorimotor_balanced_accuracy": 0.647575,
+    "lateralization_participants_in_registered_direction": 5,
+    "lateralization_participants_total": 12,
+    "leading_explanation": "class_correlated_cue_visual_or_ocular_activity",
+    "real_language_neural_advantage_established": false,
+    "latest_MARC2_neural_payload_opens": 0
+  },
+  "claims": [
+    {
+      "claim_id": "C1",
+      "name": "closed_set_language_information_from_EEG",
+      "established": false,
+      "nearest_source": "OpenNeuro_ds003626",
+      "required_comparators": ["cue_and_time", "visualized_direction", "EOG", "oral_EMG", "no_signal", "deranged_EEG"],
+      "maximum_near_term_claim": "closed_set_inner_speech_command_information",
+      "arbitrary_thought_to_text_established_by_pass": false
+    },
+    {
+      "claim_id": "C2",
+      "name": "pre_movement_motor_cortex_consistent_EEG_information",
+      "established": false,
+      "nearest_source": "Freewill_23",
+      "required_comparators": ["timing", "EOG", "acceleration", "frontal_EEG", "occipital_EEG", "onset_shift", "temporal_reversal", "deranged_EEG"],
+      "exclusive_anatomical_origin_established_by_scalp_EEG_pass": false
+    },
+    {
+      "claim_id": "C3",
+      "name": "strict_unseen_person_generalization",
+      "established": false,
+      "nearest_source": "Freewill_23",
+      "held_out_person_signal_fit_rows": 0,
+      "held_out_person_target_fit_rows": 0,
+      "held_out_person_calibration_rows": 0,
+      "held_out_person_threshold_selection_rows": 0
+    },
+    {
+      "claim_id": "C4",
+      "name": "live_end_to_end_neural_decoding",
+      "established": false,
+      "required_stages": ["NDK_STREAM1", "NDK_LIVE1"],
+      "offline_replay_is_live_evidence": false,
+      "known_event_timing_allowed": false,
+      "capture_to_output_latency_required": true
+    },
+    {
+      "claim_id": "C5",
+      "name": "incremental_EEG_beyond_measured_peripheral_signals",
+      "established": false,
+      "primary_endpoint": "participant_macro_log_loss_P_minus_P_plus_E",
+      "required_ordering": ["P_plus_E_beats_P", "P_plus_E_beats_P_plus_deranged_E", "P_plus_E_beats_timing", "P_plus_E_beats_no_signal"]
+    }
+  ],
+  "execution_order": [
+    "MARC2_VR20P",
+    "MARC2_FW2",
+    "MARC2_CIL1",
+    "MARC2_ZP1",
+    "NDK_LANG1",
+    "NDK_STREAM1",
+    "NDK_LIVE1"
+  ],
+  "source_decisions": {
+    "movement_primary": "Freewill_23",
+    "language_primary": "OpenNeuro_ds003626",
+    "language_reserves": ["TESSCCo_2026", "Directional_Word_2026"],
+    "typed_sentence_reference": "Brain2Qwerty_v1",
+    "Brain2Qwerty_v2_data_available_to_project": false,
+    "Directional_Word_2026_first_claim_eligible": false,
+    "Directional_Word_2026_block_order_confound": true,
+    "TESSCCo_exact_payload_and_control_qualification_complete": false
+  },
+  "primary_sources": {
+    "Brain2Qwerty_article": "https://www.nature.com/articles/s41593-026-02303-2",
+    "Brain2Qwerty_code": "https://github.com/facebookresearch/brain2qwerty",
+    "Freewill_23": "https://www.nature.com/articles/s41597-025-06039-9",
+    "OpenNeuro_ds003626_descriptor": "https://www.nature.com/articles/s41597-022-01147-2",
+    "TESSCCo_2026": "https://www.nature.com/articles/s41597-026-07745-8",
+    "Directional_Word_2026": "https://www.nature.com/articles/s41597-026-07809-9",
+    "Directional_Word_2026_data": "https://zenodo.org/records/20374418"
+  },
+  "resource_policy": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "maximum_incremental_payload_bytes": 10737418240,
+    "simultaneous_real_data_tracks": 1,
+    "whole_Freewill_archive_allowed": false,
+    "provider_calls_before_neural_prediction_freeze": 0,
+    "hardware_operations_authorized": false
+  },
+  "current_gate": {
+    "gate_id": "MARC2-VR20P",
+    "request_commit": "bef2391d8edf92c5edf8a3624831e50430636626",
+    "request_CI": 32489589922,
+    "proof_closeout_commit": "88b3b4aaa4436655ce6f4de65215982e2b8ff9de",
+    "proof_closeout_CI": 32490587975,
+    "sole_active_Tier_C_packet": true,
+    "fresh_packet_bound_decision_received": false,
+    "implementation_authorized_now": false,
+    "private_structural_read_authorized_now": false,
+    "FW2_authorized_now": false,
+    "neural_payload_authorized_now": false
+  },
+  "authorization_flags": {
+    "new_download": false,
+    "real_or_private_read": false,
+    "target_or_label_read": false,
+    "training": false,
+    "inference": false,
+    "scoring": false,
+    "stream": false,
+    "device_or_hardware": false,
+    "provider_call": false,
+    "scientific_claim_upgrade": false
+  },
+  "access_counters": {
+    "dataset_metadata_bodies": 0,
+    "private_structural_bytes": 0,
+    "archive_member_bytes": 0,
+    "neural_signal_bytes": 0,
+    "target_bytes": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "scores": 0,
+    "stream_samples": 0,
+    "hardware_operations": 0,
+    "provider_calls": 0
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "Five desired outcomes are separated into executable evidence targets with exact comparators ordering resource limits and failure meanings.",
+    "scientific_claim_not_established": "No real-data read training inference scoring streaming or hardware operation occurred and none of C1 through C5 is established.",
+    "forbidden_current_claims": ["thought_to_text", "motor_cortex_specific_decoding", "unseen_person_generalization", "live_neural_decoding", "EEG_advantage_beyond_peripheral_controls"]
+  }
+}
