@@ -13207,3 +13207,24 @@ implement or touch private state before those barriers.
 
 Immediate gate: verify, commit, push, and green this exact decision before
 implementing the generated wrapper or touching any private or ignored path.
+
+### VR24P generated fixed-path qualification
+
+- Packet-bound decision `53bc114db9a51a256cbf86d470f24397a50f12b2`
+  passed Base Python job `97096723985`, Optional Neuro Readers job
+  `97096724073`, and CI `32599996090` before implementation.
+- Added one dependency-free fixed-path wrapper with `plan`, `qualify`,
+  `inspect`, and proof-gated `execute` surfaces. It exposes no generic source,
+  output, URL, threshold, route, retry, or substitution argument.
+- `MARC2VR24P-G1` passed 24/24 generated paths. G1 and R1-R5 each appeared
+  four times, with 24 exact VR23A calls, 24 nested unchanged VR20A calls,
+  deterministic replay, and 130 direct refusals.
+- Measured 10,603,766 generated input bytes, 72,908 temporary output bytes,
+  3,038 peak incremental bytes, zero retention, 4,582 aggregate bytes,
+  3.135488207975868 seconds, and 48,152,576-byte peak RSS.
+- The full fresh-process base suite passes 4,958 tests with 80 expected skips.
+  All forbidden operation counters are zero.
+
+Immediate gate: commit, push, and green this exact implementation, then add
+and green a proof-only closeout without repeating qualification. Do not
+collect readiness or touch a private or ignored path before both barriers.

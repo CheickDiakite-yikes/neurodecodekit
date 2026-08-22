@@ -11196,3 +11196,26 @@ Boundary decision: decision recording performs zero private or ignored-path
 operations. Cohort creation, archive or neural payload, targets, models,
 training, inference, scoring, FW2/CIL1, release, and claim authority remain
 closed.
+
+## 0379 - Accept Generated VR24P Fixed-Path Qualification
+
+Proof decision: packet-bound decision
+`53bc114db9a51a256cbf86d470f24397a50f12b2` passed Base Python job
+`97096723985`, Optional Neuro Readers job `97096724073`, and CI `32599996090`
+before implementation.
+
+Result decision: accept `MARC2VR24P-G1` after all 24 generated paths passed.
+G1 and R1-R5 each appeared four times; VR23A and nested unchanged VR20A were
+each called exactly 24 times; deterministic replay held; and 130 direct
+refusals passed. The wrapper retains no generated output and has no cohort
+manifest surface.
+
+Resource decision: record 10,603,766 generated input bytes, 72,908 temporary
+output bytes written, 3,038 peak incremental bytes, 4,582 aggregate bytes,
+3.135488207975868 seconds, and 48,152,576-byte peak RSS under one thread,
+worker, and numerical job.
+
+Boundary decision: require the exact implementation to be remotely green and
+then a separately green proof-only closeout without reexecution before any
+readiness or private-path operation. Stage 1 authorizes no cohort, archive or
+neural payload, target, model, score, FW2/CIL1, release, or scientific claim.
