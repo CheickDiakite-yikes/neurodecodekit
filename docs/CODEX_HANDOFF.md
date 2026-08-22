@@ -15,9 +15,12 @@
 > all-false `MARC2-VR24P` request binds 16 tracked inputs totaling 224,299
 > bytes and proposes generated wrapper proof before one possible 418,755-byte
 > target-free structural read retaining only one aggregate R1-R5 class. All
-> authority is false and all operation counters are zero. Commit, push, and
-> green the request and a proof closeout before sole-gate identification. The
-> current `continue` is not retroactive. Do not touch consumed VR22P or any
+> authority is false and all operation counters are zero. Exact request
+> `b7fca40` passed Base job `97092614972`, Optional job `97092615100`, and CI
+> `32598316430`. The proof closeout binds three unchanged request artifacts
+> totaling 29,829 bytes. Commit, push, and green that closeout before sole-gate
+> identification. The current `continue` is not retroactive. Do not touch
+> consumed VR22P or any
 > private/ignored source. Neural payload, targets, models, scores, FW2/CIL1,
 > release, and claims remain closed.
 

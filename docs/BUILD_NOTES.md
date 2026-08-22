@@ -12993,6 +12993,22 @@ request. Then add and green a non-scope-changing request proof closeout before
 sole-gate identification and fresh packet-bound maintainer words. Do not
 implement or touch private state before those barriers.
 
+### VR24P request remotely green; proof closeout prepared
+
+- Exact all-false request `b7fca404a85c9597f61b1016c388b544ee901595`
+  passed Base Python job `97092614972`, Optional Neuro Readers job
+  `97092615100`, and CI `32598316430`.
+- Bound the unchanged packet document, machine request, and request test as
+  29,829 exact bytes with their SHA-256 digests and Git blobs.
+- The closeout changes no request scope, repeats no qualification, implements
+  no wrapper, and performs zero private or `.codex_work` operation.
+- Every closeout operation counter is zero and every authority field remains
+  false.
+
+Immediate gate: run complete verification, commit, push, and green this exact
+proof closeout. Only then identify VR24P as the sole active Tier C packet and
+require fresh packet-bound maintainer words before Stage 1.
+
 ### VR22P request remotely green; proof closeout prepared
 
 - Exact all-false request `c90b5adae161127db8aa8c43d1101db8672b44e0`

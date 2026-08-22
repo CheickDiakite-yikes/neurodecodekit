@@ -11152,3 +11152,22 @@ closeout to be committed, pushed, and green before identifying VR24P as the
 sole Tier C gate. The maintainer's preceding `continue` is not retroactive;
 fresh packet-bound words remain required. FW2/CIL1 and all scientific claims
 remain closed.
+
+## 0377 - Bind VR24P Request Proof Without Changing Scope
+
+Proof decision: exact all-false request
+`b7fca404a85c9597f61b1016c388b544ee901595` passed Base Python job
+`97092614972`, Optional Neuro Readers job `97092615100`, and CI `32598316430`.
+
+Identity decision: bind the unchanged packet document, machine request, and
+request test as three Git blobs totaling 29,829 bytes with exact SHA-256
+digests.
+
+Operation decision: modify no request artifact, authorize no stage, implement
+no wrapper, and perform zero private, readiness, output-root, archive, neural,
+target, model, score, network, FW2/CIL1, release, or claim operation.
+
+Boundary decision: this proof closeout has delayed effect until its own exact
+commit and both CI jobs are green. Only afterward identify VR24P as the sole
+active Tier C gate. Fresh packet-bound maintainer words and a separately green
+decision remain required before implementation or private access.

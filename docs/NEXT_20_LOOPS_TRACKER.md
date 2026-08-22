@@ -3997,3 +3997,16 @@ VR24P as the sole active Tier C packet and require fresh packet-bound
 maintainer words. The current `continue` preceded this packet and is not
 retroactive. No implementation, private read, neural payload, target, model,
 score, FW2/CIL1 execution, or claim is open.
+
+### MARC2-VR24P - Request Remotely Green; Proof Closeout Pending
+
+Exact all-false request `b7fca40` passed Base Python job `97092614972`,
+Optional Neuro Readers job `97092615100`, and CI `32598316430`. The proof-only
+closeout binds three unchanged request artifacts totaling 29,829 bytes with
+their exact SHA-256 digests and Git blobs.
+
+The closeout changes no request scope, repeats no generated qualification,
+implements no wrapper, and performs zero private, readiness, archive, neural,
+target, model, score, network, FW2/CIL1, or claim operation. Next gate: commit,
+push, and green this exact closeout. Only afterward identify VR24P as the sole
+active Tier C packet and require fresh packet-bound maintainer words.

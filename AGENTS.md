@@ -91,10 +91,14 @@ It binds 16 tracked inputs totaling 224,299 bytes and requests only a future
 generated/mock fixed-path wrapper followed, after separate proof barriers, by
 one possible 418,755-byte target-free structural read and one aggregate R1-R5
 class. Every authority flag is false and every operation counter is zero.
-Commit, push, and green this exact request, then add and green a
-non-scope-changing request proof closeout. Only after that may VR24P be
-identified as the sole active Tier C gate. The current `continue` preceded the
-packet and is not retroactive. Another private read requires fresh
+Exact request `b7fca404a85c9597f61b1016c388b544ee901595` passed Base job
+`97092614972`, Optional job `97092615100`, and CI `32598316430`. Read the
+VR24P request proof closeout and its machine record. They bind the unchanged
+three request artifacts totaling 29,829 bytes and perform zero private or
+implementation operations. Commit, push, and green this exact closeout. Only
+after that may VR24P be identified as the sole active Tier C gate. The current
+`continue` preceded the packet and is not retroactive. Another private read
+requires fresh
 packet-bound maintainer words and a separately green decision. FW2/CIL1,
 archive members, neural data, targets, models, predictions, scores, streams,
 devices, and scientific claims remain closed. Read

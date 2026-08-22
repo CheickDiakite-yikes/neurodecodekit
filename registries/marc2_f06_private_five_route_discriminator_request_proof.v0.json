@@ -1,0 +1,99 @@
+{
+  "schema_name": "neurodecodekit.marc2_f06_private_five_route_discriminator_request_proof",
+  "schema_version": "0.1.0",
+  "proof_id": "MARC-2-VR24P-all-false-request-remote-proof-v0",
+  "lane_id": "MARC2-VR24P",
+  "recorded_at_local": "2026-08-22",
+  "status": "request_remotely_green_closeout_effect_delayed_until_own_remote_green",
+  "request_remote_proof": {
+    "commit": "b7fca404a85c9597f61b1016c388b544ee901595",
+    "CI_run_id": 32598316430,
+    "base_python_job_id": 97092614972,
+    "optional_neuro_job_id": 97092615100,
+    "both_required_jobs_green": true
+  },
+  "exact_request_artifacts": [
+    {
+      "role": "authorization_packet_document",
+      "path": "docs/MARC_2_F06_PRIVATE_FIVE_ROUTE_DISCRIMINATOR_AUTHORIZATION_PACKET.md",
+      "bytes": 7670,
+      "sha256": "1f645e1feb4e1c971c7d3068e5177d553407263fa6569718498ed46b94c3da18",
+      "Git_blob": "0849a319b019d53c00bb4ea030494e31363d9b96"
+    },
+    {
+      "role": "authorization_request_registry",
+      "path": "registries/marc2_f06_private_five_route_discriminator_authorization_request.v0.json",
+      "bytes": 15438,
+      "sha256": "5389e2364634e4ae02bdffa69076132478456cb4bd152e9148f374cb3efb95a6",
+      "Git_blob": "c0af1ee32d815d072e8c6d441d4c7b56e0fe7996"
+    },
+    {
+      "role": "authorization_request_test",
+      "path": "tests/test_marc2_f06_private_five_route_discriminator_authorization_request.py",
+      "bytes": 6721,
+      "sha256": "6b2db349eae7753ba58ffb6d45011af6f14adea9681bea3fe19bb3083c35dd85",
+      "Git_blob": "953d8e33a03da797f3d78c7d0a68c3cf7c1479b1"
+    }
+  ],
+  "exact_request_artifact_count": 3,
+  "exact_request_artifact_bytes": 29829,
+  "scope_unchanged": {
+    "request_id": "MARC-2-VR24P-f06-private-five-route-discriminator-two-stage-request-v0",
+    "fixed_input_count": 16,
+    "fixed_input_bytes": 224299,
+    "future_private_source_bytes": 418755,
+    "future_private_source_content_opens": 1,
+    "private_route_count": 9,
+    "aggregate_F06_routes": 5,
+    "private_detail_or_cohort_allowed": false,
+    "retry_rerun_resume_count": 0,
+    "request_authorization_fields_all_false": true,
+    "request_operation_counters_all_zero": true
+  },
+  "closeout_operations": {
+    "request_artifacts_modified": 0,
+    "implementation_or_generated_qualification_operations": 0,
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_VR22P_path_or_output_operations": 0,
+    "readiness_certificate_or_output_root_operations": 0,
+    "network_or_public_request_operations": 0,
+    "archive_local_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "private_cohort_manifest_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "provider_language_model_stream_device_or_hardware_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "retry_rerun_release_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "authorization_state": {
+    "decision_recorded_now": false,
+    "implementation_authorized_now": false,
+    "readiness_or_private_path_access_authorized_now": false,
+    "private_source_read_authorized_now": false,
+    "private_cohort_freeze_authorized_now": false,
+    "archive_neural_target_model_or_score_authorized_now": false,
+    "MARC2_FW2_or_CIL1_authorized_now": false,
+    "release_publication_or_claim_upgrade_authorized_now": false
+  },
+  "next_gate": {
+    "proof_closeout_commit_push_and_both_jobs_green_required": true,
+    "sole_active_Tier_C_packet_identification_after_green_required": true,
+    "fresh_packet_bound_maintainer_decision_required": true,
+    "decision_commit_push_and_both_jobs_green_before_implementation_required": true,
+    "implementation_authorized_now": false,
+    "private_read_authorized_now": false,
+    "MARC2_FW2_or_CIL1_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_request": "one future proof-gated target-free structural read can localize VR20A F06 to one of five public classes without private detail retention",
+    "scientific_ceiling": "none",
+    "private_cause_identified_now": false,
+    "real_cohort_frozen_now": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "real_time_portable_home_assistive_or_clinical_result": false
+  }
+}

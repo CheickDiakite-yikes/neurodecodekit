@@ -43,8 +43,10 @@ The all-false `MARC2-VR24P` request now binds 16 tracked inputs totaling
 after separate green barriers and a fresh decision, one possible 418,755-byte
 target-free structural read that retains one aggregate R1-R5 class. It does
 not request a cohort freeze. Every authority flag is false and every operation
-counter is zero. Commit, push, and green the request, then add and green a
-request proof closeout before sole-gate identification. The current
+counter is zero. Exact request `b7fca40` passed both jobs in CI `32598316430`.
+The request proof closeout binds the three unchanged request artifacts totaling
+29,829 bytes and performs zero private or implementation operations. Commit,
+push, and green this closeout before sole-gate identification. The current
 `continue` is not retroactive authority. No private path, neural payload,
 target, model, prediction, score, FW2/CIL1, or scientific claim is open.
 
