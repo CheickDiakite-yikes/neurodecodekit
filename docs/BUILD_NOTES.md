@@ -12890,3 +12890,27 @@ Immediate gate: complete repository verification, commit, push, and green this
 proof-only closeout. Only afterward may the one registered target-free
 structural invocation run. No archive member, neural payload, target, model,
 score, FW2/CIL1 execution, release, or scientific claim is open.
+
+### VR20P consumed at R5 without a cohort freeze
+
+- Proof-only closeout `7cd0503269c9a3006929c72ac3491710380aeb3a`
+  passed Base Python job `96995623811`, Optional Neuro Readers job
+  `96995623848`, and CI `32558200426` before execution.
+- The sole invocation collected three fresh readiness samples, opened and
+  strict-parsed exactly 418,755 target-free structural bytes once, and called
+  unchanged VR20A once.
+- Aggregate route `MARC2VR20P-R5` was returned. No private cohort manifest was
+  created. The aggregate report was inspected once through the fixed public
+  command; the source was not reopened or rehashed.
+- Runtime was 0.048261791991535574 seconds at 29,573,120-byte peak RSS.
+  Combined output was 2,765 bytes; network and new payload bytes were zero.
+- R5 preserves two-way uncertainty between F06 taxonomy/eligibility arithmetic
+  and F07 selection/split/rank/reservation arithmetic. It excludes earlier
+  proof, source-envelope, and task/identity/path/companion classes for this
+  exact invocation without retaining a private predicate or value.
+- Archive, neural, signal, target, model, prediction, score, FW2/CIL1,
+  provider, stream, device, hardware, release, and claim operations were zero.
+
+Immediate gate: verify, commit, push, and green the public aggregate result.
+Then freeze a separate artifact-only and generated-only R5 decomposition.
+VR20P is consumed with no retry, rerun, repair, or private reinspection.

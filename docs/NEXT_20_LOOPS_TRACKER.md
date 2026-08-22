@@ -11,8 +11,10 @@
 > generated Stage 1. The implementation now passes 24/24 paths with G1 and
 > R2-R6 each appearing four times, 24 VR20A calls, 91 direct refusals, and zero
 > retention. Exact Stage 1 implementation `81784e7` passed both jobs in CI
-> `32557573872`; its proof-only closeout must now become remotely green before
-> the one structural read. No private read or real cohort exists yet;
+> `32557573872`; proof closeout `7cd0503` passed both jobs in CI `32558200426`
+> before the sole structural read. VR20P consumed at `MARC2VR20P-R5` without a
+> cohort freeze, narrowing the blocker to F06 taxonomy/eligibility arithmetic
+> versus F07 selection/split/rank/reservation arithmetic. No real cohort exists;
 > archive member, neural payload, target, model, prediction, score, stream, or
 > claim is open. The five scientific targets and their order are frozen in
 > `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md`.
@@ -3775,3 +3777,22 @@ Next gate: commit, push, and green the closeout itself. Only then run the one
 registered 418,755-byte target-free structural invocation. R1 would freeze a
 structural cohort and make a separate FW2 packet eligible; it would not open a
 neural payload, score a model, or establish a scientific claim.
+
+### MARC2-VR20P - Consumed At R5 Without Cohort Freeze
+
+Proof closeout `7cd0503` passed Base Python job `96995623811`, Optional Neuro
+Readers job `96995623848`, and CI `32558200426` before the sole invocation.
+The command opened and strict-parsed exactly 418,755 target-free structural
+bytes once, called VR20A once, and returned `MARC2VR20P-R5` in 0.048262
+seconds at 29,573,120-byte peak RSS. Output was 2,765 bytes; network and new
+payload bytes were zero.
+
+R5 clears the earlier published-task/identity/path/companion class and leaves
+only F06 taxonomy/eligibility versus F07 selection/split/rank/reservation
+arithmetic. No failed predicate, private value, row, identity, participant,
+selection, or cohort was retained. No neural payload, target, model,
+prediction, or score was accessed.
+
+Next gate: green the public aggregate result, then freeze an artifact-only and
+generated-only R5 decomposition. Any new private read or FW2 work requires a
+separate packet and fresh Tier C decision.

@@ -45,8 +45,8 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
-The packet-bound `MARC2-VR20P` decision and generated Stage 1 implementation
-are remotely green. Read
+`MARC2-VR20P` is consumed at aggregate route `MARC2VR20P-R5` without a
+cohort freeze. Read
 `docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md`,
 `registries/marc2_published_task_private_confirmation_authorization_request.v0.json`,
 `docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_REQUEST_PROOF_CLOSEOUT.md`,
@@ -62,13 +62,26 @@ The pass used 10,602,864 generated input bytes, 1.198090 seconds,
 35,504,128-byte peak RSS, 222,998 peak temporary bytes, and zero retention.
 Exact implementation `81784e716802ad5466531cdf0b3d65df07771cd5` passed Base
 job `96994090562`, Optional job `96994090593`, and CI `32557573872`.
-Read `docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_PROOF_CLOSEOUT.md` and
-the updated implementation registry. Commit, push, and green that proof-only
-closeout before touching readiness, `.codex_work`, the fixed 418,755-byte
-target-free source, consumed VR18P state, or an output root. After that exact
-proof only, run the one registered invocation without retry or reinspection.
-FW2/CIL1, archive members, neural data, targets, models, scores, streams,
-devices, and claims remain closed. Read
+Proof-only closeout `7cd0503269c9a3006929c72ac3491710380aeb3a` passed Base
+job `96995623811`, Optional job `96995623848`, and CI `32558200426` before
+the sole invocation. Read
+`docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_RESULT.md` and
+`registries/marc2_published_task_private_confirmation_result.v0.json`. The
+executor collected three readiness samples, opened and strict-parsed exactly
+418,755 target-free structural bytes once, called VR20A once, and consumed at
+R5. Runtime was 0.048262 seconds at 29,573,120-byte peak RSS; combined output
+was 2,765 bytes, and network/new-payload bytes were zero.
+
+R5 means only VR20A F06 taxonomy/eligibility arithmetic versus F07 selection,
+split, rank, or reservation arithmetic. The exact predicate, value, row,
+identity, participant, selection, and cohort were not retained and must not be
+inferred. VR20P has no retry, rerun, resume, repair, fallback, substitution,
+cleanup, amendment, or private reinspection. Do not touch its private source,
+readiness state, consumed marker, or output root. The next safe task is a
+separately frozen artifact-only and generated-only R5 decomposition. Another
+private read requires a new Tier C packet and fresh decision. FW2/CIL1,
+archive members, neural data, targets, models, scores, streams, devices, and
+claims remain closed. Read
 `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md` for the scientific order.
 
 ### Historical VR15P/VR16A boundary

@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR20P Proof Closeout Awaiting Remote Green
+## Current Frontier: MARC2-VR20P Consumed At Taxonomy Or Selection Arithmetic
 
 Read
 `docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md`,
@@ -43,19 +43,26 @@ VR20A calls, and 91 direct refusals. It selected the expected generated
 was 1.198090 seconds at 35,504,128-byte peak RSS; peak temporary output was
 222,998 bytes and retained output was zero.
 
-Exact Stage 1 implementation
-`81784e716802ad5466531cdf0b3d65df07771cd5` passed Base job
-`96994090562`, Optional Neuro Readers job `96994090593`, and CI
-`32557573872`. Read
-`docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_PROOF_CLOSEOUT.md` and the
-updated implementation registry. Commit, push, and green that proof-only
-closeout before the single registered 418,755-byte target-free structural
-read. Until that final barrier passes, do not touch readiness, `.codex_work`,
-the private source, consumed VR18P state, or an output root. Even future R1
-would freeze only a structural cohort and make a separate FW2 contract
-eligible; it would not open EEG, train a model, or prove language, motor-
-cortex attribution, unseen-person generalization, live decoding, or EEG
-advantage beyond peripheral controls.
+Exact Stage 1 implementation `81784e7` passed both jobs in CI `32557573872`.
+Proof-only closeout `7cd0503` then passed Base job `96995623811`, Optional
+Neuro Readers job `96995623848`, and CI `32558200426` before the sole
+registered invocation.
+
+Read `docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_RESULT.md` and its
+machine result. The command collected three readiness samples, opened and
+strict-parsed exactly 418,755 target-free structural bytes once, called VR20A
+once, and consumed at `MARC2VR20P-R5` without a cohort freeze. Runtime was
+0.048262 seconds at 29,573,120-byte peak RSS, output was 2,765 bytes, and
+network/new-payload bytes were zero.
+
+R5 narrows the remaining blocker to VR20A F06 taxonomy/eligibility arithmetic
+versus F07 selection/split/rank/reservation arithmetic. It excludes the
+earlier published-task/identity/path/companion class for this exact run, but
+does not reveal the failed predicate or any private value. VR20P is consumed;
+do not retry, reopen, rehash, or inspect its private state. The next safe task
+is a separately frozen artifact-only and generated-only R5 decomposition.
+FW2, archive payload, neural data, targets, models, scoring, and all five
+scientific claims remain closed.
 
 The five requested scientific targets and their exact evidence order are in
 `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md`. Preserve its distinction

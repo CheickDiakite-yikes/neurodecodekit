@@ -10839,3 +10839,32 @@ exact commit is pushed and both required jobs are green. Only afterward may
 the one registered structural invocation run. R1 would establish structural
 cohort eligibility only and would require a separate FW2 packet before neural
 work.
+
+## 0363 - Consume VR20P At The Frozen R5 Structural Ceiling
+
+Proof decision: proof-only closeout
+`7cd0503269c9a3006929c72ac3491710380aeb3a` passed Base Python job
+`96995623811`, Optional Neuro Readers job `96995623848`, and CI
+`32558200426` before the sole invocation.
+
+Result decision: accept aggregate route `MARC2VR20P-R5` after one
+418,755-byte target-free structural read, one strict JSON parse, and one exact
+VR20A call. Create no private cohort manifest and retain no failed predicate,
+value, filename, path, row, identity, participant, candidate, selection, or
+cohort.
+
+Interpretation decision: R5 narrows the remaining refusal to VR20A F06
+taxonomy/eligibility arithmetic versus F07 selection/split/rank/reservation
+arithmetic. It excludes the earlier ordered proof/precondition,
+source-envelope, and published-task/identity/path/companion classes for this
+exact execution, but does not identify either remaining predicate.
+
+Resource decision: record 0.048261791991535574 seconds, 29,573,120-byte peak
+RSS, 2,765 output bytes, one CPU thread, one worker, one numerical job, and
+zero network or new payload bytes.
+
+Boundary decision: VR20P is consumed with no retry, rerun, resume, repair,
+fallback, substitution, cleanup, amendment, or private reinspection. Permit a
+separately frozen artifact-only and generated-only R5 decomposition under Tier
+A/B. Any private read, cohort freeze, archive or neural payload, target, model,
+score, FW2/CIL1, release, or scientific claim remains closed.
