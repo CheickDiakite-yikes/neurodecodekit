@@ -3847,3 +3847,16 @@ commit, push, and green the request and a non-scope-changing proof closeout.
 Only then identify VR22P as the sole active Tier C packet and require fresh
 packet-bound maintainer words. No implementation, private read, cohort, neural
 payload, target, model, score, FW2/CIL1 execution, or claim is open.
+
+### MARC2-VR22P - Request Remotely Green; Proof Closeout Pending
+
+Exact all-false request `c90b5ad` passed Base Python job `97003859100`,
+Optional Neuro Readers job `97003859284`, and CI `32561578590`. The proof-only
+closeout binds three unchanged request artifacts totaling 31,463 bytes with
+their exact hashes and Git blobs. It performs zero implementation, private,
+readiness, archive, neural, target, model, score, FW2/CIL1, or claim operation.
+
+Next gate: commit, push, and green this exact closeout. Only then identify
+VR22P as the sole active Tier C packet and require fresh packet-bound
+maintainer words. No current or prior `continue` authorizes Stage 1 or one
+private read.

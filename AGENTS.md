@@ -98,10 +98,14 @@ repeating qualification or touching private state. The next all-false gate is
 now prepared as `MARC2-VR22P`. Read
 `docs/MARC_2_R5_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md` and
 `registries/marc2_r5_private_discriminator_authorization_request.v0.json`.
-Commit, push, and green the request and a non-scope-changing proof closeout
-before identifying it as the sole active Tier C gate. The current `conitnue`
+Exact request `c90b5adae161127db8aa8c43d1101db8672b44e0` passed Base job
+`97003859100`, Optional job `97003859284`, and CI `32561578590`. Read
+`docs/MARC_2_R5_PRIVATE_DISCRIMINATOR_REQUEST_PROOF_CLOSEOUT.md` and its
+machine proof. Commit, push, and green that non-scope-changing closeout before
+identifying VR22P as the sole active Tier C gate. The current `conitnue`
 preceded this exact packet and is not retroactive authority. Another private
-read requires a fresh packet-bound decision. FW2/CIL1,
+read requires fresh packet-bound maintainer words and a separately green
+decision. FW2/CIL1,
 archive members, neural data, targets, models, scores, streams, devices, and
 claims remain closed. Read
 `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md` for the scientific order.

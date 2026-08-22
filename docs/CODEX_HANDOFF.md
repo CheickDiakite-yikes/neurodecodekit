@@ -39,6 +39,15 @@
 > packet-bound maintainer words. Do not implement or touch `.codex_work`
 > before those barriers.
 
+> VR22P request-proof handoff: exact all-false request `c90b5ad` passed Base
+> job `97003859100`, Optional job `97003859284`, and CI `32561578590`. The
+> proof-only closeout binds the packet document, machine request, and request
+> test as 31,463 exact bytes with hashes and Git blobs. It changes no scope,
+> performs no private operation, and has delayed effect until its own commit
+> passes both CI jobs. After that proof only, identify VR22P as the sole Tier C
+> gate and require fresh packet-bound maintainer words. No implementation or
+> `.codex_work` access is open now.
+
 > Current MARC2-VR20P decision, 2026-08-22: request `bef2391` passed Base job
 > `96793861959`, Optional job `96793861717`, and CI `32489589922`; proof
 > closeout `88b3b4a` passed Base job `96797011698`, Optional job

@@ -72,11 +72,14 @@ passed both jobs in CI `32560284291`; proof closeout `3aa166a` then passed both
 jobs in CI `32560933310` without repeating qualification or performing a
 private operation. The all-false `MARC2-VR22P` packet now freezes one future
 two-stage F06/F07 discriminator with one possible 418,755-byte structural read.
-Commit, push, and green the request and its proof closeout before identifying
-it as the sole Tier C gate. The current `conitnue` is not retroactive authority;
-a fresh packet-bound decision is still required before implementation or one
-private read. FW2, archive payload, neural data, targets, models, scoring, and
-all five scientific claims remain closed.
+Exact all-false request `c90b5ad` passed both jobs in CI `32561578590`. Its
+proof-only closeout now binds the unchanged 31,463 request bytes and three Git
+blobs without performing a private operation. Commit, push, and green that
+closeout before identifying VR22P as the sole active Tier C gate. The current
+`conitnue` is not retroactive authority; a fresh packet-bound decision is still
+required before implementation or one private read. FW2, archive payload,
+neural data, targets, models, scoring, and all five scientific claims remain
+closed.
 
 The five requested scientific targets and their exact evidence order are in
 `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md`. Preserve its distinction
