@@ -11128,3 +11128,27 @@ Boundary decision: the closeout has delayed effect until its own exact commit
 and both CI jobs are green. Only then may Tier A prepare one all-false private
 five-route discriminator packet. No private read, cohort freeze, neural
 payload, FW2/CIL1 execution, or scientific authority is added.
+
+## 0376 - Freeze VR24P As An All-False F06 Five-Route Request
+
+Proof decision: VR23A proof-only closeout
+`7d6b6c59709cf069e5b119845565bb91d1f3303b` passed Base Python job
+`97090919812`, Optional Neuro Readers job `97090919708`, and CI `32597604907`
+before request preparation.
+
+Scope decision: bind 16 committed public artifacts totaling 224,299 bytes and
+request only a future two-stage sequence: generated fixed-path wrapper
+qualification, then after its own remote proof one 418,755-byte target-free
+structural read, one VR23A call, and one nested unchanged VR20A call. Retain
+only one aggregate R1-R5 class; permit no cohort freeze or private detail.
+
+Resource decision: cap the future lane at one thread, worker, and numerical
+job, 650 seconds, 256 MiB peak RSS, 1 MiB incremental output, zero network or
+new payload bytes, one source content open, and no retry or rerun.
+
+Boundary decision: every authorization flag is false and every operation
+counter is zero. Require the request and a separate non-scope-changing proof
+closeout to be committed, pushed, and green before identifying VR24P as the
+sole Tier C gate. The maintainer's preceding `continue` is not retroactive;
+fresh packet-bound words remain required. FW2/CIL1 and all scientific claims
+remain closed.
