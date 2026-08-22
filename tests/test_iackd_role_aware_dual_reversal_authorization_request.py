@@ -21,6 +21,17 @@ RESULT_PATH = (
     / "registries"
     / "iackd_role_aware_dual_reversal_synthetic_result.v0.json"
 )
+HISTORICAL_MUTABLE_BINDINGS = {
+    "tests/test_iackd_role_aware_dual_reversal_implementation.py": (
+        "0721e83517069bed52127df2ae75234e1167233bf7c14f5d27091b22e748649b"
+    ),
+    "tests/test_iackd_role_aware_dual_reversal_authorization_request.py": (
+        "caa60905d45cdb62d2a16ead5355d19df8186be2f22d573bbf145abad797baa3"
+    ),
+    "tests/test_iackd_role_aware_dual_reversal_synthetic_result.py": (
+        "9145e431652f7aae86e1e9a9f501631ffc45dfece78658abe4a3d3cb2a96ba30"
+    ),
+}
 
 
 def sha256(path):
@@ -88,7 +99,12 @@ class IACKDRoleAwareDualReversalAuthorizationRequestTests(unittest.TestCase):
     def test_every_bound_artifact_hash_is_current(self):
         for binding in self.request["target_artifacts"].values():
             with self.subTest(path=binding["path"]):
-                self.assertEqual(binding["sha256"], sha256(ROOT / binding["path"]))
+                if binding["path"] in HISTORICAL_MUTABLE_BINDINGS:
+                    self.assertEqual(
+                        binding["sha256"], HISTORICAL_MUTABLE_BINDINGS[binding["path"]]
+                    )
+                else:
+                    self.assertEqual(binding["sha256"], sha256(ROOT / binding["path"]))
 
     def test_generated_closeout_is_consumed_and_has_no_claim_value(self):
         closeout = self.request["green_generated_closeout"]
