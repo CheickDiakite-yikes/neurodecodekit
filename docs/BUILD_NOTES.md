@@ -12954,3 +12954,19 @@ work is authorized.
 Immediate gate: run complete verification, commit, push, and green the exact
 implementation and result. Then add a proof-only closeout before any later
 all-false private discriminator packet.
+
+### VR21A exact implementation remotely green
+
+- Exact implementation `661b18d896eef93cd1135c780b4cdca2e7917d04`
+  passed Base Python job `97000708150`, Optional Neuro Readers job
+  `97000708047`, and CI `32560284291`.
+- The proof-only closeout binds the two preproof registry sizes and SHA-256
+  digests plus six exact Git blobs from that immutable commit.
+- The 12-path qualification was not repeated. Private, ignored-path,
+  readiness, consumed-state, archive, neural, target, model, score, network,
+  FW2/CIL1, other-project, release, and claim operations were zero.
+
+Immediate gate: verify, commit, push, and green the proof-only closeout. Only
+after that delayed barrier may Tier A prepare a separately frozen all-false
+private F06/F07 discriminator packet; a fresh Tier C decision remains required
+before one private read.

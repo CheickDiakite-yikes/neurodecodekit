@@ -3820,3 +3820,15 @@ refusals, and zero retained output. Runtime was 0.789015 seconds at
 Next gate: commit, push, and green the exact implementation and result, then
 add a proof-only closeout. The consumed private R5 branch remains unresolved;
 another private read requires a new Tier C packet and fresh decision.
+
+### MARC2-VR21A - Exact Implementation Remotely Green
+
+Exact implementation `661b18d` passed Base Python job `97000708150`, Optional
+Neuro Readers job `97000708047`, and CI `32560284291`. The proof-only closeout
+binds both preproof registries, their hashes, and six exact Git blobs without
+repeating the 12-path qualification or touching any private state.
+
+Next gate: commit, push, and green the proof-only closeout itself. Only then
+may Tier A prepare one separately frozen all-false private F06/F07
+discriminator packet. No private read, cohort, neural payload, target, model,
+score, FW2/CIL1 execution, or scientific claim is open.

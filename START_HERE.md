@@ -67,10 +67,14 @@ through unchanged VR20A. Registration `7ce0e16` passed both jobs in CI
 `32559365362` before implementation. Generated `MARC2VR21A-G1` now passes all
 12 paths with G1/R1/R2 each appearing four times, 12 unchanged VR20A calls,
 48 direct refusals, exact replays, and zero retained output. Read the VR21A
-implementation document and machine records. Commit, push, and green the
-exact implementation before a proof-only closeout. FW2, archive payload,
-neural data, targets, models, scoring, and all five scientific claims remain
-closed.
+implementation document and machine records. Exact implementation `661b18d`
+passed both jobs in CI `32560284291`. The proof-only closeout now binds that
+commit, its two job IDs, preproof registry hashes, and exact Git blobs without
+repeating qualification or performing a private operation. Commit, push, and
+green the closeout itself before preparing any all-false private F06/F07
+packet. Such a packet would still need a fresh Tier C decision before one
+private read. FW2, archive payload, neural data, targets, models, scoring, and
+all five scientific claims remain closed.
 
 The five requested scientific targets and their exact evidence order are in
 `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md`. Preserve its distinction

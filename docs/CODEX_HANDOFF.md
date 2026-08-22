@@ -18,12 +18,16 @@
 > 12-path generated matrix. Commit, push, and green the registration before
 > implementation. It has no private executor or scientific authority.
 
-> VR21A implementation handoff: registration `7ce0e16` passed both jobs in CI
+> VR21A proof handoff: registration `7ce0e16` passed both jobs in CI
 > `32559365362` before implementation. Generated `MARC2VR21A-G1` passes 12/12
 > paths, four copies each of G1/R1/R2, 12 exact VR20A calls, 48 refusals, and
-> exact replay with zero retention. Commit, push, and green the implementation
-> and result, then add a proof-only closeout. The consumed private R5 branch is
-> still unknown and no private executor exists.
+> exact replay with zero retention. Exact implementation `661b18d` passed Base
+> job `97000708150`, Optional job `97000708047`, and CI `32560284291`. The
+> proof-only closeout binds those exact bytes and repeats no qualification or
+> private operation. Commit, push, and green the closeout before preparing an
+> all-false private F06/F07 discriminator packet. The consumed private R5
+> branch remains unknown, and no private executor or scientific authority is
+> open.
 
 > Current MARC2-VR20P decision, 2026-08-22: request `bef2391` passed Base job
 > `96793861959`, Optional job `96793861717`, and CI `32489589922`; proof

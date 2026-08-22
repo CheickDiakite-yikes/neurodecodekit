@@ -10906,3 +10906,25 @@ not resolve consumed private R5 between F06 and F07. Require exact
 implementation remote proof and a proof-only closeout before any later
 private packet. No private read, neural payload, target, model, score,
 FW2/CIL1, release, or scientific claim is open.
+
+## 0366 - Bind VR21A Remote Proof Without Repeating Qualification
+
+Proof decision: exact implementation and result
+`661b18d896eef93cd1135c780b4cdca2e7917d04` passed Base Python job
+`97000708150`, Optional Neuro Readers job `97000708047`, and CI
+`32560284291`.
+
+Identity decision: bind the 4,247-byte preproof implementation registry, the
+3,229-byte preproof result registry, their SHA-256 digests, and six exact Git
+blobs from the remotely green commit.
+
+Operation decision: repeat no generated qualification and perform zero
+private or Git-ignored path, readiness, consumed-state, archive, neural,
+target, model, prediction, score, network, FW2/CIL1, other-project, release,
+or claim operation during proof closeout.
+
+Boundary decision: the closeout has delayed effect until its own exact commit
+and both CI jobs are green. Only then may Tier A prepare a separately frozen
+all-false private F06/F07 discriminator packet. That packet would require a
+fresh Tier C decision before any private read and would not open FW2/CIL1 or
+scientific claims.

@@ -73,9 +73,31 @@
     "real_cohort_frozen": false,
     "FW2_or_CIL1_eligible": false
   },
+  "remote_implementation_proof": {
+    "commit": "661b18d896eef93cd1135c780b4cdca2e7917d04",
+    "CI_run_id": 32560284291,
+    "base_python_job_id": 97000708150,
+    "optional_neuro_job_id": 97000708047,
+    "both_required_jobs_green": true,
+    "scope_changed_after_qualification": false,
+    "qualification_route": "MARC2VR21A-G1",
+    "preproof_implementation_registry_bytes": 4247,
+    "preproof_implementation_registry_sha256": "44865540ab27aa81a501a51b0ac79a6521723bd76ae3024ffe1ca465fc917399",
+    "preproof_result_registry_bytes": 3229,
+    "preproof_result_registry_sha256": "58a40fee0555f1ebac2e9452e3fd3a03f8e8c22f6a04d04978d8876c48876477",
+    "implementation_module_Git_blob": "cf7d7152dda9f530dc1cb84679e90f1a8de22de0",
+    "behavior_test_Git_blob": "13a5a0c09936d316c64c1b1d7a99140bc764ee1f",
+    "implementation_document_Git_blob": "85bbe0483219e70642d4f2a1cd9b882157cda922",
+    "preproof_implementation_registry_Git_blob": "5f8086ebd55397d8855fe6e1eec2ed22ab600765",
+    "preproof_result_registry_Git_blob": "05c7fee1ac9440ed302948c15d5e3cd7998f00cd",
+    "preproof_record_test_Git_blob": "d0cc72da999dde6318c3ffb86857663d4b7950ca",
+    "generated_qualification_repeated_for_proof_closeout": false,
+    "private_operations_during_proof_closeout": 0
+  },
   "next_gate": {
-    "exact_implementation_and_result_remote_proof_required": true,
-    "artifact_only_proof_closeout_required_before_later_packet": true,
+    "proof_only_closeout_commit_green_pending": true,
+    "private_discriminator_packet_eligible_now": false,
+    "private_discriminator_packet_eligible_after_exact_closeout_green": true,
     "future_private_F06_F07_discriminator_requires_new_Tier_C_packet_and_decision": true,
     "private_or_neural_access_authorized": false
   },
