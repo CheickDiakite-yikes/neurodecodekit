@@ -11060,3 +11060,26 @@ Boundary decision: no cohort was frozen and VR22P is consumed without retry or
 private reinspection. Continue only with artifact-only/generated-only F06
 decomposition. Another private read, FW2/CIL1, neural payload, target, model,
 prediction, score, release, or scientific claim requires its own gate.
+
+## 0373 - Freeze Five Reachable VR20A F06 Classes
+
+Proof decision: VR22P result commit
+`6920576a2bc9ad94cf854112c19712ee42bc0c94` passed Base Python job
+`97085435130`, Optional Neuro Readers job `97085434967`, and CI
+`32595422650` before this registration.
+
+Design decision: partition F06 into entry-kind arithmetic, complete-bundle
+arithmetic, participant taxonomy membership, 238/195/43 class arithmetic, and
+eligible participant-session distribution. Treat the unclassified-taxonomy
+and filtered-total raises as defensive guards whose non-independence must be
+proved from exact AST and contract semantics before accepting qualification.
+
+Experiment decision: freeze six full-scale generated cases in two orders and
+two replays, for 24 unchanged VR20A calls. Require diagnostic/upstream route
+agreement, source immutability, exact replay, at least 60 direct refusals, zero
+retention, and strict resource caps.
+
+Boundary decision: registration and implementation are artifact-only and
+generated-only. No private path, consumed state, cohort, neural payload,
+target, model, prediction, score, FW2/CIL1, release, or scientific claim is
+authorized.

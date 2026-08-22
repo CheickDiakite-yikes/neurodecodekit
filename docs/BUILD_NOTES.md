@@ -13088,3 +13088,22 @@ run `execute`, collect readiness, or touch private state before both jobs pass.
 Immediate gate: verify, commit, push, and green the aggregate result record.
 Then freeze an artifact-only/generated-only decomposition of VR20A's two F06
 call sites. Do not touch consumed private state.
+
+### VR23A generated F06 decomposition frozen
+
+- VR22P aggregate result `6920576a2bc9ad94cf854112c19712ee42bc0c94`
+  passed Base Python job `97085435130`, Optional Neuro Readers job
+  `97085434967`, and CI `32595422650`.
+- Bound 14 tracked inputs totaling 207,381 bytes without touching private or
+  ignored state.
+- Static scope separates five reachable F06 classes and requires proof that
+  two additional defensive raises are non-independent under the frozen
+  taxonomy/arithmetic contract.
+- The generated matrix has six 1,227-row cases, two orders, two replays, 24
+  unchanged VR20A calls, at least 60 direct refusals, zero retention, and one
+  thread/worker/job.
+- Every real, private, archive, neural, target, model, score, network,
+  FW2/CIL1, other-project, and claim counter is zero.
+
+Immediate gate: verify, commit, push, and green the exact registration before
+implementing or running its generated qualification.

@@ -65,9 +65,13 @@ retry, rerun, resume, repair, fallback, substitution, cleanup, amendment, or
 private reinspection. Do not touch its private source, readiness state,
 consumed marker, output root, or ignored artifacts.
 
-The next safe lane is an artifact-only and generated-only decomposition of the
-two exact F06 call sites in VR20A. Freeze and qualify it entirely through
-tracked source and generated fixtures. Another private read or cohort freeze
+The next lane is frozen as `MARC2-VR23A`. Read
+`docs/MARC_2_F06_FIVE_ROUTE_DECOMPOSITION_PREREGISTRATION.md` and
+`registries/marc2_f06_five_route_decomposition_contract.v0.json`. It binds 14
+tracked inputs and a 24-path generated matrix over five independently
+reachable F06 classes. Two additional defensive raises must be AST-proven
+non-independent under the frozen contract. Commit, push, and green this exact
+registration before implementation. Another private read or cohort freeze
 requires a new Tier C packet and fresh decision. FW2/CIL1, archive members,
 neural data, targets, models, predictions, scores, streams, devices, and
 scientific claims remain closed. Read

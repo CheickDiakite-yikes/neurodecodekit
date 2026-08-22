@@ -24,10 +24,12 @@ arithmetic. F07 selection, split, rank, and reservation arithmetic is excluded
 for this execution. The exact private predicate and value were deliberately
 not retained. Do not retry or inspect consumed VR22P private state.
 
-The next safe lane is a generated-only decomposition of those two F06 call
-sites. Another private read or cohort freeze requires a new Tier C packet and
-decision. No neural payload, target, model, prediction, score, FW2/CIL1, or
-scientific claim is open.
+The next lane is frozen as `MARC2-VR23A`. Its contract binds 14 tracked inputs,
+five independently reachable F06 classes, two non-independent defensive
+guards, and 24 generated paths. Commit, push, and green the exact
+preregistration before implementation. Another private read or cohort freeze
+requires a new Tier C packet and decision. No neural payload, target, model,
+prediction, score, FW2/CIL1, or scientific claim is open.
 
 ## Historical Frontier: MARC2-VR22P Generated Stage 1
 

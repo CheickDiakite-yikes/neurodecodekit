@@ -21,7 +21,10 @@
 > consumed at `MARC2VR22P-R4`, excluding F07 and narrowing the blocker to the
 > two public VR20A F06 sites: source-domain totals versus taxonomy/eligibility
 > arithmetic. No cohort was frozen. The next lane is generated-only F06
-> decomposition; another private read remains Tier C. The five scientific
+> decomposition. VR23A now freezes five independently reachable F06 classes,
+> two non-independent defensive guards, and 24 full-scale generated paths;
+> its registration must become remotely green before implementation. Another
+> private read remains Tier C. The five scientific
 > targets and their order are frozen in
 > `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md`.
 

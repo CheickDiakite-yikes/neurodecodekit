@@ -1,5 +1,13 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR23A registration, 2026-08-22: VR22P result commit `6920576`
+> passed Base job `97085435130`, Optional job `97085434967`, and CI
+> `32595422650`. The generated-only contract binds 14 tracked inputs totaling
+> 207,381 bytes, five independently reachable F06 classes, two defensive
+> guards that must be proven non-independent, and 24 paths with 24 unchanged
+> VR20A calls. Commit, push, and green the registration before implementation.
+> It has no private executor or scientific authority.
+
 > Current MARC2-VR22P result, 2026-08-22: proof-only closeout `ea39319`
 > passed Base job `97083802440`, Optional job `97083802313`, and CI
 > `32594732196` before the sole invocation. The command opened and

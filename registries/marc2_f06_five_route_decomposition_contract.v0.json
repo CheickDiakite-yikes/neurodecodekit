@@ -1,0 +1,289 @@
+{
+  "schema_name": "neurodecodekit.marc2_f06_five_route_decomposition_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "MARC-2-VR23A-F06-five-route-decomposition-v0",
+  "lane_id": "MARC2-VR23A",
+  "recorded_at_local": "2026-08-22",
+  "status": "preregistered_artifact_only_generated_only_no_private_access",
+  "objective": "Decompose consumed VR22P R4 into every independently reachable VR20A F06 first-failure class using exact tracked source analysis and generated full-scale manifests only.",
+  "result_proof_anchor": {
+    "commit": "6920576a2bc9ad94cf854112c19712ee42bc0c94",
+    "CI_run_id": 32595422650,
+    "base_job_id": 97085435130,
+    "optional_neuro_job_id": 97085434967,
+    "both_required_jobs_green": true,
+    "observed_route": "MARC2VR22P-R4",
+    "registered_source_bytes": 418755,
+    "private_source_reopened_by_registration": false
+  },
+  "fixed_inputs": [
+    {
+      "role": "VR20A_module",
+      "path": "src/neurodecodekit/datasets/marc2_published_task_selector_repair.py",
+      "bytes": 45208,
+      "sha256": "9f6ebe63dbeb1cd778a71ff395d698159acc672b187e5121d5d5e734d9e05fba"
+    },
+    {
+      "role": "VR20A_contract",
+      "path": "registries/marc2_published_task_selector_repair_contract.v0.json",
+      "bytes": 9578,
+      "sha256": "a2719e0e2ab54e28675929e1982a8387406068114c2079dd3864c2c8ec022516"
+    },
+    {
+      "role": "VR20A_implementation",
+      "path": "registries/marc2_published_task_selector_repair_implementation.v0.json",
+      "bytes": 6268,
+      "sha256": "90a28059bb4d0ba92aa7dd596cb6050b141900d83415e93461dcb7c16c1fa0d1"
+    },
+    {
+      "role": "VR20A_result",
+      "path": "registries/marc2_published_task_selector_repair_result.v0.json",
+      "bytes": 6175,
+      "sha256": "92d10a5c23c1795d4a4094cbe18a23d5239ad59aa9a6421a9a6bafb3a7c56dfd"
+    },
+    {
+      "role": "VR2_module",
+      "path": "src/neurodecodekit/datasets/marc2_live_domain_eligibility_adapter.py",
+      "bytes": 57528,
+      "sha256": "061b893180e01116dbd962826384b4071d9e952b78b593b4743f8c301e1cbbc3"
+    },
+    {
+      "role": "VR2_contract",
+      "path": "registries/marc2_live_domain_eligibility_adapter_contract.v0.json",
+      "bytes": 15306,
+      "sha256": "c7c94406c7b3f483bb2ecbbb42b131756d178f288eedc31ce48e9383180a0a33"
+    },
+    {
+      "role": "VR2_implementation",
+      "path": "registries/marc2_live_domain_eligibility_adapter_implementation.v0.json",
+      "bytes": 9361,
+      "sha256": "9d975652566616b43c255389bc17e027760772bf86307c58cd51858312528096"
+    },
+    {
+      "role": "VR2_result",
+      "path": "registries/marc2_live_domain_eligibility_adapter_result.v0.json",
+      "bytes": 11462,
+      "sha256": "974773921892a65df695c67925fdaec038c29e7e99dfaf1dd488e00678596503"
+    },
+    {
+      "role": "VR21A_module",
+      "path": "src/neurodecodekit/datasets/marc2_r5_two_route_discriminator.py",
+      "bytes": 19214,
+      "sha256": "367f219b04c4c6a943435c1c36d2191b167c6b74f16bc8b40afcccd83e73b601"
+    },
+    {
+      "role": "VR21A_contract",
+      "path": "registries/marc2_r5_two_route_discriminator_contract.v0.json",
+      "bytes": 8304,
+      "sha256": "5ca99e2d64c7dc4c268afb10d6c1a92eac86a5bbcb7ca484ee654217c13e0597"
+    },
+    {
+      "role": "VR21A_implementation",
+      "path": "registries/marc2_r5_two_route_discriminator_implementation.v0.json",
+      "bytes": 5519,
+      "sha256": "1e5728ab9e0e4fecb80b0084089e9d988437faa480f11bdb6f1d527241174057"
+    },
+    {
+      "role": "VR21A_result",
+      "path": "registries/marc2_r5_two_route_discriminator_result.v0.json",
+      "bytes": 4551,
+      "sha256": "a18e0cea28b8acb604d9807bae8ea51f88b511d6ff7db82755a9f322b87222db"
+    },
+    {
+      "role": "VR22P_result_document",
+      "path": "docs/MARC_2_R5_PRIVATE_DISCRIMINATOR_RESULT.md",
+      "bytes": 3384,
+      "sha256": "728411f9155efd51ab8bcb8c42bc823fa9c7352a54dff2b4cc443bddb412f0f8"
+    },
+    {
+      "role": "VR22P_result_record",
+      "path": "registries/marc2_r5_private_discriminator_result.v0.json",
+      "bytes": 5523,
+      "sha256": "137e23d98681466824a03363304d98d4a2712014856eeb0bf802634edbf1eda9"
+    }
+  ],
+  "fixed_input_count": 14,
+  "fixed_input_bytes": 207381,
+  "observed_route_binding": {
+    "VR22P_route": "MARC2VR22P-R4",
+    "compatible_VR20A_route": "MARC2VR20A-F06",
+    "VR20A_F07_excluded_for_exact_execution": true,
+    "failed_private_predicate_or_value_available": false,
+    "real_cohort_frozen": false,
+    "FW2_or_CIL1_eligible": false
+  },
+  "static_inventory": {
+    "VR20A_F06_wrapper_call_sites": [
+      "source kind or run-bundle total differs",
+      "source taxonomy or eligibility differs"
+    ],
+    "VR20A_F06_wrapper_call_site_count": 2,
+    "VR2_bound_safe_reasons": [
+      "entry-kind counts differ",
+      "full source bundle total differs",
+      "bundle participant is unknown",
+      "bundle taxonomy is unclassified",
+      "238/195/43 classification arithmetic differs",
+      "filtered eligible total differs",
+      "eligible participant-session counts differ"
+    ],
+    "VR2_bound_safe_reason_count": 7,
+    "non_independent_defensive_reasons": [
+      "bundle taxonomy is unclassified",
+      "filtered eligible total differs"
+    ],
+    "non_independent_defensive_reason_count": 2,
+    "independently_reachable_F06_classes": 5
+  },
+  "route_table": [
+    {
+      "route": "MARC2VR23A-G1",
+      "class": "accepted_control"
+    },
+    {
+      "route": "MARC2VR23A-R1",
+      "class": "entry_kind_count_arithmetic"
+    },
+    {
+      "route": "MARC2VR23A-R2",
+      "class": "complete_bundle_count_arithmetic"
+    },
+    {
+      "route": "MARC2VR23A-R3",
+      "class": "participant_taxonomy_membership"
+    },
+    {
+      "route": "MARC2VR23A-R4",
+      "class": "taxonomy_class_arithmetic"
+    },
+    {
+      "route": "MARC2VR23A-R5",
+      "class": "eligible_participant_session_distribution"
+    }
+  ],
+  "generated_witness_matrix": {
+    "cases": [
+      {
+        "case": "control_success",
+        "expected_route": "MARC2VR23A-G1",
+        "expected_VR20A_route": "MARC2VR20A-G1"
+      },
+      {
+        "case": "entry_kind_count_drift",
+        "expected_route": "MARC2VR23A-R1",
+        "expected_VR20A_route": "MARC2VR20A-F06"
+      },
+      {
+        "case": "extra_complete_bundle",
+        "expected_route": "MARC2VR23A-R2",
+        "expected_VR20A_route": "MARC2VR20A-F06"
+      },
+      {
+        "case": "unknown_participant_taxonomy",
+        "expected_route": "MARC2VR23A-R3",
+        "expected_VR20A_route": "MARC2VR20A-F06"
+      },
+      {
+        "case": "classification_arithmetic_drift",
+        "expected_route": "MARC2VR23A-R4",
+        "expected_VR20A_route": "MARC2VR20A-F06"
+      },
+      {
+        "case": "eligible_session_distribution_drift",
+        "expected_route": "MARC2VR23A-R5",
+        "expected_VR20A_route": "MARC2VR20A-F06"
+      }
+    ],
+    "case_count": 6,
+    "orders": ["canonical", "reversed"],
+    "replays": 2,
+    "paths": 24,
+    "VR20A_calls": 24,
+    "each_route_count": 4,
+    "source_objects_must_remain_byte_identical": true,
+    "diagnostic_and_VR20A_routes_must_agree": true
+  },
+  "acceptance_gates": [
+    "all_fixed_inputs_match_size_and_SHA256",
+    "exact_result_commit_and_both_CI_jobs_are_green",
+    "two_VR20A_F06_wrapper_sites_are_AST_bound",
+    "seven_VR2_safe_reasons_are_AST_bound",
+    "two_defensive_reasons_are_proven_non_independent",
+    "twenty_four_generated_paths_call_unchanged_VR20A_once",
+    "G1_and_R1_through_R5_each_appear_four_times",
+    "diagnostic_and_VR20A_aggregate_routes_agree",
+    "source_bytes_are_immutable",
+    "at_least_sixty_direct_refusals_pass",
+    "exact_replays_match",
+    "retained_generated_output_is_zero",
+    "resource_caps_pass",
+    "all_forbidden_operation_counters_remain_zero"
+  ],
+  "direct_refusal_minimum": 60,
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 45,
+    "peak_RSS_bytes": 268435456,
+    "generated_input_bytes": 25165824,
+    "temporary_output_bytes": 2097152,
+    "aggregate_output_bytes": 1048576,
+    "retained_generated_output_bytes": 0,
+    "network_bytes": 0,
+    "new_payload_bytes": 0
+  },
+  "authorization_state": {
+    "private_or_Git_ignored_path_access_authorized": false,
+    "consumed_VR22P_reuse_or_reinspection_authorized": false,
+    "real_structural_confirmation_authorized": false,
+    "cohort_freeze_authorized": false,
+    "archive_member_or_neural_payload_access_authorized": false,
+    "target_model_prediction_or_score_authorized": false,
+    "FW2_or_CIL1_authorized": false,
+    "training_inference_or_language_model_authorized": false,
+    "network_download_provider_stream_device_or_hardware_authorized": false,
+    "release_or_scientific_claim_upgrade_authorized": false,
+    "other_project_access_authorized": false
+  },
+  "operation_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_VR22P_path_or_output_operations": 0,
+    "real_structural_source_operations": 0,
+    "cohort_freezes": 0,
+    "archive_header_or_member_payload_operations": 0,
+    "neural_signal_event_channel_geometry_target_or_label_operations": 0,
+    "cache_feature_split_or_NeuroToken_operations": 0,
+    "model_training_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scoring_runs": 0,
+    "FW2_operations": 0,
+    "CIL1_operations": 0,
+    "network_requests": 0,
+    "provider_or_language_model_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "other_project_operations": 0,
+    "retry_rerun_resume_operations": 0,
+    "release_publication_or_scientific_claim_upgrades": 0
+  },
+  "implementation_gate": {
+    "this_registration_commit_push_and_both_jobs_green_required": true,
+    "generated_only_implementation_allowed_after_green": true,
+    "exact_implementation_result_and_proof_closeout_green_required_before_private_packet": true,
+    "private_confirmation_packet_allowed_now": false,
+    "private_or_neural_execution_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_capability_sought": "deterministic generated discrimination of all five independently reachable VR20A F06 structural classes",
+    "scientific_ceiling": "none",
+    "real_cohort_established": false,
+    "neural_payload_accessed": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "live_decoding": false
+  }
+}
