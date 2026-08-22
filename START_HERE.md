@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR24P All-False Request Prepared
+## Current Frontier: MARC2-VR24P Decision Recorded
 
 Read `docs/MARC_2_R5_PRIVATE_DISCRIMINATOR_RESULT.md` and its machine
 registry first. Proof-only closeout `ea39319` passed both jobs in CI
@@ -45,10 +45,18 @@ target-free structural read that retains one aggregate R1-R5 class. It does
 not request a cohort freeze. Every authority flag is false and every operation
 counter is zero. Exact request `b7fca40` passed both jobs in CI `32598316430`.
 The request proof closeout binds the three unchanged request artifacts totaling
-29,829 bytes and performs zero private or implementation operations. Commit,
-push, and green this closeout before sole-gate identification. The current
-`continue` is not retroactive authority. No private path, neural payload,
-target, model, prediction, score, FW2/CIL1, or scientific claim is open.
+29,829 bytes and performs zero private or implementation operations. Exact
+proof closeout `c53d4cf` passed both jobs in CI `32598893728`. Codex then
+identified VR24P as the sole active Tier C gate, and the maintainer's next
+exact message was `continue`.
+
+The packet-bound decision preserves those eight UTF-8 bytes and authorizes
+only the unchanged two-stage sequence by reference. It is ineffective until
+its own exact commit is pushed and both jobs are green. After that, Stage 1 is
+generated-only; the exact Stage 1 implementation and a separate proof-only
+closeout must also be remotely green before the sole target-free structural
+read. No private path, neural payload, target, model, prediction, score,
+FW2/CIL1, or scientific claim is open at decision recording.
 
 ## Historical Frontier: MARC2-VR22P Generated Stage 1
 

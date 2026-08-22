@@ -4010,3 +4010,19 @@ implements no wrapper, and performs zero private, readiness, archive, neural,
 target, model, score, network, FW2/CIL1, or claim operation. Next gate: commit,
 push, and green this exact closeout. Only afterward identify VR24P as the sole
 active Tier C packet and require fresh packet-bound maintainer words.
+
+### MARC2-VR24P - Packet-Bound Decision Recorded
+
+Exact proof closeout `c53d4cf` passed Base Python job `97094035899`, Optional
+Neuro Readers job `97094035982`, and CI `32598893728`. Codex then identified
+VR24P as the sole active Tier C packet with its exact request, proof, scope,
+and fresh-decision boundary. The maintainer's next message was exactly the
+eight UTF-8 bytes `continue`.
+
+The decision binds only the unchanged request by reference. After its own
+remote proof, Stage 1 may implement and qualify one generated/mock fixed-path
+wrapper across 24 paths and at least 80 refusals. Stage 2 remains blocked until
+that exact implementation and a proof-only closeout are also remotely green.
+Only then may the one target-free 418,755-byte structural read retain one
+aggregate R1-R5 class. No cohort, archive member, neural payload, target,
+model, score, FW2/CIL1 execution, or scientific claim is authorized.

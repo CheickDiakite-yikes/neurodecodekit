@@ -13186,3 +13186,24 @@ Immediate gate: run complete verification, commit, push, and green the exact
 request. Then add and green a non-scope-changing request proof closeout before
 sole-gate identification and fresh packet-bound maintainer words. Do not
 implement or touch private state before those barriers.
+
+### VR24P packet-bound decision recorded
+
+- Exact request `b7fca404a85c9597f61b1016c388b544ee901595` passed Base
+  Python job `97092614972`, Optional Neuro Readers job `97092615100`, and CI
+  `32598316430`.
+- Exact proof closeout `c53d4cf18f3ef976e993438470b012cd5115399e`
+  passed Base Python job `97094035899`, Optional Neuro Readers job
+  `97094035982`, and CI `32598893728` without changing request scope.
+- After VR24P was identified as the sole active Tier C gate, the maintainer's
+  next message was exactly `continue`. The decision preserves those eight
+  UTF-8 bytes and binds only the unchanged packet by reference.
+- The decision authorizes generated Stage 1 only after its own remote green
+  proof. The one private structural read remains behind exact Stage 1 and
+  proof-closeout remote barriers.
+- Decision recording performs zero `.codex_work`, private, readiness,
+  archive, neural, target, model, score, network, FW2/CIL1, other-project,
+  release, or claim operation.
+
+Immediate gate: verify, commit, push, and green this exact decision before
+implementing the generated wrapper or touching any private or ignored path.

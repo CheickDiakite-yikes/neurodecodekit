@@ -11171,3 +11171,28 @@ Boundary decision: this proof closeout has delayed effect until its own exact
 commit and both CI jobs are green. Only afterward identify VR24P as the sole
 active Tier C gate. Fresh packet-bound maintainer words and a separately green
 decision remain required before implementation or private access.
+
+## 0378 - Authorize The Unchanged VR24P Two-Stage Sequence By Reference
+
+Proof decision: exact request `b7fca404a85c9597f61b1016c388b544ee901595`
+passed Base Python job `97092614972`, Optional Neuro Readers job
+`97092615100`, and CI `32598316430`. Exact proof closeout
+`c53d4cf18f3ef976e993438470b012cd5115399e` passed Base Python job
+`97094035899`, Optional Neuro Readers job `97094035982`, and CI `32598893728`.
+
+Authorization decision: after VR24P was identified as the sole active Tier C
+packet, preserve the maintainer's next exact message, `continue`, as eight
+UTF-8 bytes. Bind it only to the unchanged remotely green packet under the
+short-form rule. Do not claim that the packet's long scope was the maintainer's
+utterance or infer any expansion.
+
+Sequence decision: after this exact decision is remotely green, permit one
+generated/mock fixed-path wrapper and qualification. Require the exact Stage 1
+implementation and a separate proof-only closeout to be remotely green before
+one target-free 418,755-byte structural read, one VR23A call, one nested VR20A
+call, and one aggregate R1-R9 report. No retry or private reinspection exists.
+
+Boundary decision: decision recording performs zero private or ignored-path
+operations. Cohort creation, archive or neural payload, targets, models,
+training, inference, scoring, FW2/CIL1, release, and claim authority remain
+closed.

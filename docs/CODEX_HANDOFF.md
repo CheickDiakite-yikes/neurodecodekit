@@ -1,5 +1,19 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR24P decision, 2026-08-22: exact all-false request `b7fca40`
+> passed Base job `97092614972`, Optional job `97092615100`, and CI
+> `32598316430`. Proof closeout `c53d4cf` then passed Base job `97094035899`,
+> Optional job `97094035982`, and CI `32598893728` without changing scope.
+> Codex identified VR24P as the sole active Tier C packet; the maintainer's
+> next exact message was `continue`. The new decision quotes those eight UTF-8
+> bytes and binds only the unchanged two-stage request. It is ineffective until
+> its exact commit is pushed and both jobs are green. After that proof, Stage 1
+> may use generated fixtures only. Stage 2 remains blocked until the exact
+> Stage 1 implementation and a separate proof-only closeout are remotely
+> green. Do not touch `.codex_work`, readiness, the private source, or an output
+> root before those barriers. No cohort, neural payload, target, model, score,
+> FW2/CIL1 execution, release, or claim is authorized.
+
 > Current MARC2-VR23A implementation, 2026-08-22: registration `cee91b0`
 > passed Base job `97087038676`, Optional job `97087038522`, and CI
 > `32596045581` before implementation. Generated `MARC2VR23A-G1` passed all 24

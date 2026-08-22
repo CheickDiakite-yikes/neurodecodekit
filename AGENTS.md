@@ -95,13 +95,19 @@ Exact request `b7fca404a85c9597f61b1016c388b544ee901595` passed Base job
 `97092614972`, Optional job `97092615100`, and CI `32598316430`. Read the
 VR24P request proof closeout and its machine record. They bind the unchanged
 three request artifacts totaling 29,829 bytes and perform zero private or
-implementation operations. Commit, push, and green this exact closeout. Only
-after that may VR24P be identified as the sole active Tier C gate. The current
-`continue` preceded the packet and is not retroactive. Another private read
-requires fresh
-packet-bound maintainer words and a separately green decision. FW2/CIL1,
-archive members, neural data, targets, models, predictions, scores, streams,
-devices, and scientific claims remain closed. Read
+implementation operations. Exact proof closeout
+`c53d4cf18f3ef976e993438470b012cd5115399e` passed Base job `97094035899`,
+Optional job `97094035982`, and CI `32598893728` before VR24P was identified
+as the sole active Tier C gate. The maintainer's next exact message was
+`continue`. Read
+`docs/MARC_2_F06_PRIVATE_FIVE_ROUTE_DISCRIMINATOR_AUTHORIZATION_DECISION.md`
+and its machine decision. It quotes those eight UTF-8 bytes and binds only the
+unchanged two-stage packet. Commit, push, and green this exact decision before
+implementing the generated wrapper or touching readiness, `.codex_work`, the
+private source, or an output root. Stage 2 remains blocked until the exact
+Stage 1 implementation and a proof-only closeout are also remotely green.
+FW2/CIL1, archive members, neural data, targets, models, predictions, scores,
+streams, devices, and scientific claims remain closed. Read
 `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md` for the scientific order.
 
 ## Historical VR20P/VR21A/VR22P path
