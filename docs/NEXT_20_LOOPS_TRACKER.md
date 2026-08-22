@@ -3832,3 +3832,18 @@ Next gate: commit, push, and green the proof-only closeout itself. Only then
 may Tier A prepare one separately frozen all-false private F06/F07
 discriminator packet. No private read, cohort, neural payload, target, model,
 score, FW2/CIL1 execution, or scientific claim is open.
+
+### MARC2-VR22P - All-False Private F06/F07 Request Prepared
+
+VR21A proof closeout `3aa166a` passed both required jobs in CI `32560933310`.
+VR22P binds 18 committed inputs totaling 293,411 bytes and freezes one future
+two-stage sequence: generated fixed-path qualification, then only after exact
+remote proof one 418,755-byte target-free structural read and one VR20A call.
+Six aggregate terminal routes cover cohort success, preconditions, source
+identity, F06, F07, and fail-closed unknowns.
+
+Every authority flag is false and every operation counter is zero. Next gate:
+commit, push, and green the request and a non-scope-changing proof closeout.
+Only then identify VR22P as the sole active Tier C packet and require fresh
+packet-bound maintainer words. No implementation, private read, cohort, neural
+payload, target, model, score, FW2/CIL1 execution, or claim is open.

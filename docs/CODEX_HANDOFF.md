@@ -29,6 +29,16 @@
 > branch remains unknown, and no private executor or scientific authority is
 > open.
 
+> VR22P request handoff: VR21A proof closeout `3aa166a` passed Base job
+> `97002244081`, Optional job `97002244114`, and CI `32560933310`. The new
+> all-false packet binds 18 committed inputs totaling 293,411 bytes and asks
+> for a future generated wrapper plus one one-shot 418,755-byte target-free
+> structural discriminator. It performs zero private operations and grants no
+> authority now. Commit, push, and green both the request and its proof
+> closeout, then identify VR22P as the sole Tier C gate and require fresh
+> packet-bound maintainer words. Do not implement or touch `.codex_work`
+> before those barriers.
+
 > Current MARC2-VR20P decision, 2026-08-22: request `bef2391` passed Base job
 > `96793861959`, Optional job `96793861717`, and CI `32489589922`; proof
 > closeout `88b3b4a` passed Base job `96797011698`, Optional job

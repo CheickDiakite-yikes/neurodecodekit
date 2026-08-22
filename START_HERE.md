@@ -68,11 +68,13 @@ through unchanged VR20A. Registration `7ce0e16` passed both jobs in CI
 12 paths with G1/R1/R2 each appearing four times, 12 unchanged VR20A calls,
 48 direct refusals, exact replays, and zero retained output. Read the VR21A
 implementation document and machine records. Exact implementation `661b18d`
-passed both jobs in CI `32560284291`. The proof-only closeout now binds that
-commit, its two job IDs, preproof registry hashes, and exact Git blobs without
-repeating qualification or performing a private operation. Commit, push, and
-green the closeout itself before preparing any all-false private F06/F07
-packet. Such a packet would still need a fresh Tier C decision before one
+passed both jobs in CI `32560284291`; proof closeout `3aa166a` then passed both
+jobs in CI `32560933310` without repeating qualification or performing a
+private operation. The all-false `MARC2-VR22P` packet now freezes one future
+two-stage F06/F07 discriminator with one possible 418,755-byte structural read.
+Commit, push, and green the request and its proof closeout before identifying
+it as the sole Tier C gate. The current `conitnue` is not retroactive authority;
+a fresh packet-bound decision is still required before implementation or one
 private read. FW2, archive payload, neural data, targets, models, scoring, and
 all five scientific claims remain closed.
 

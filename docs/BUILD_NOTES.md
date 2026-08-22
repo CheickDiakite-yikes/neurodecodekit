@@ -12970,3 +12970,25 @@ Immediate gate: verify, commit, push, and green the proof-only closeout. Only
 after that delayed barrier may Tier A prepare a separately frozen all-false
 private F06/F07 discriminator packet; a fresh Tier C decision remains required
 before one private read.
+
+### VR22P all-false private F06/F07 request prepared
+
+- VR21A proof closeout `3aa166a5ce7a68ed60ee70786ab0892194fbd6d4`
+  passed Base Python job `97002244081`, Optional Neuro Readers job
+  `97002244114`, and CI `32560933310`.
+- Bound 18 committed inputs totaling 293,411 bytes. The packet copied the
+  private source identity only from committed records and performed zero
+  `.codex_work`, private, readiness, or output operations.
+- Froze a future generated wrapper plus one one-shot 418,755-byte target-free
+  structural discriminator. The exact real path would call VR20A once and map
+  only F06 versus F07, or freeze one bounded cohort on success.
+- Resource ceilings are one thread, one worker, one numerical job, 650
+  seconds, 256 MiB peak RSS, 2 MiB output, zero network/new payload, and no
+  retry or rerun. Current free storage was 107 GiB; no payload was added.
+- All 11 focused request tests pass. Every authorization flag is false and
+  every operation counter is zero.
+
+Immediate gate: run complete verification, commit, push, and green the exact
+request. Then add and green a non-scope-changing request proof closeout before
+sole-gate identification and fresh packet-bound maintainer words. Do not
+implement or touch private state before those barriers.

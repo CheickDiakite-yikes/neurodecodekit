@@ -10928,3 +10928,27 @@ and both CI jobs are green. Only then may Tier A prepare a separately frozen
 all-false private F06/F07 discriminator packet. That packet would require a
 fresh Tier C decision before any private read and would not open FW2/CIL1 or
 scientific claims.
+
+## 0367 - Freeze VR22P As An All-False F06/F07 Private Request
+
+Proof decision: VR21A proof-only closeout
+`3aa166a5ce7a68ed60ee70786ab0892194fbd6d4` passed Base Python job
+`97002244081`, Optional Neuro Readers job `97002244114`, and CI
+`32560933310` before request preparation.
+
+Scope decision: bind 18 committed public artifacts totaling 293,411 bytes and
+request only a future two-stage sequence: generated fixed-path wrapper
+qualification, then after its own remote proof one 418,755-byte target-free
+structural read and one VR20A call. Freeze success/cohort, F06, F07, and
+fail-closed aggregate routes without retaining a private predicate or value.
+
+Resource decision: cap the future lane at one thread, one worker, one numerical
+job, 650 seconds, 256 MiB peak RSS, 2 MiB incremental output, zero network or
+new payload bytes, one source content open, and no retry or rerun.
+
+Boundary decision: every authorization flag is false and every operation
+counter is zero. Require the request and a separate non-scope-changing proof
+closeout to be committed, pushed, and green before identifying VR22P as the
+sole Tier C gate. The maintainer's preceding `conitnue` is not retroactive;
+fresh packet-bound words remain required before implementation or private
+access. FW2/CIL1 and all scientific claims remain closed.
