@@ -13048,3 +13048,21 @@ decision. Do not implement Stage 1 or touch private state before both jobs pass.
 Immediate gate: commit, push, and green the exact implementation. Then add a
 proof-only closeout and green it without repeating qualification or touching
 private state. Stage 2 remains closed until that barrier passes.
+
+### VR22P exact Stage 1 remotely green; proof closeout prepared
+
+- Exact implementation `bc8ecc38374c57f6be9269874cce8d4497f83551`
+  passed Base Python job `97082352527`, Optional Neuro Readers job
+  `97082352441`, and CI `32594134914`.
+- Bound the 7,292-byte preproof implementation registry, SHA-256, Git blob,
+  canonical implementation-artifact set hash, and four exact artifact Git
+  blobs.
+- The closeout does not change the wrapper or qualification result and repeats
+  no qualification. Readiness, `.codex_work`, private, archive, neural,
+  target, model, score, network, FW2/CIL1, other-project, and claim operations
+  are zero.
+- Thirty-eight focused and all 4,847 dependency-light tests pass with 204
+  expected skips and zero new failures.
+
+Immediate gate: commit, push, and green this exact proof-only closeout. Do not
+run `execute`, collect readiness, or touch private state before both jobs pass.

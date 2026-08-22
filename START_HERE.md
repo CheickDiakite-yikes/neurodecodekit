@@ -85,8 +85,11 @@ passes 12/12 paths with four copies each of G1/R4/R5, 12 exact VR20A calls,
 eight conditional VR21A map calls, 121 direct refusals, exact replay, and zero
 retained payload. Runtime was 0.867054 seconds at 35,946,496-byte peak RSS.
 Read the implementation document and machine record. The exact implementation
-must be committed, pushed, and remotely green, followed by a separately green
-proof-only closeout, before the one private structural invocation. FW2,
+`bc8ecc3` passed both jobs in CI `32594134914`. Read the proof-only closeout;
+it binds the exact implementation registry and four Git blobs without
+repeating qualification or touching private state. The closeout itself must
+now be committed, pushed, and remotely green before the one private structural
+invocation. FW2,
 archive payload, neural data, targets, models, scoring, and all five scientific
 claims remain closed.
 

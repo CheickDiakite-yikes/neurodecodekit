@@ -11017,3 +11017,25 @@ the exact implementation and a separate proof-only closeout to be remotely
 green before the one target-free private read. No private source, cohort,
 archive member, neural payload, target, model, score, FW2/CIL1 execution,
 release, or scientific claim is open.
+
+## 0371 - Bind VR22P Remote Implementation Proof Without Reexecution
+
+Proof decision: exact Stage 1 implementation
+`bc8ecc38374c57f6be9269874cce8d4497f83551` passed Base Python job
+`97082352527`, Optional Neuro Readers job `97082352441`, and CI
+`32594134914`.
+
+Identity decision: bind the 7,292-byte preproof implementation registry, its
+SHA-256 and Git blob, the canonical implementation-artifact set hash, and the
+four exact Git blobs for module, behavior tests, implementation tests, and
+implementation document.
+
+Operation decision: repeat no generated qualification and perform zero
+readiness, `.codex_work`, private source, consumed VR20P, archive, neural,
+target, model, prediction, score, network, FW2/CIL1, other-project, release,
+or claim operation.
+
+Boundary decision: the closeout has delayed effect until its own exact commit
+and both CI jobs are green. Only then may the one registered target-free
+structural discriminator execute. No retry, rerun, neural payload, FW2/CIL1,
+or scientific authority is added.

@@ -3895,3 +3895,16 @@ zero.
 Next gate: commit, push, and green the exact implementation, then add and
 green a proof-only closeout without repeating qualification. The one private
 structural execution remains closed until both barriers pass.
+
+### MARC2-VR22P - Exact Stage 1 Remotely Green; Closeout Pending
+
+Exact implementation `bc8ecc3` passed Base Python job `97082352527`, Optional
+Neuro Readers job `97082352441`, and CI `32594134914`. The proof-only closeout
+binds the 7,292-byte preproof implementation registry, its SHA-256 and Git
+blob, the canonical implementation-artifact set hash, and four exact artifact
+Git blobs.
+
+The closeout repeats no qualification and performs zero readiness, private,
+ignored-path, archive, neural, target, model, score, network, FW2/CIL1, or
+claim operation. Next gate: commit, push, and green this exact closeout. Only
+then may the one registered target-free structural discriminator execute.

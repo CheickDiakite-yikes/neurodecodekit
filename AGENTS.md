@@ -117,8 +117,13 @@ each at G1/R4/R5, 12 exact VR20A calls, eight conditional VR21A map calls, and
 seconds at 35,946,496-byte peak RSS, reached 223,195 peak temporary bytes, and
 retained zero. The exact implementation must now be committed, pushed, and
 green, followed by a separately green proof-only closeout, before the sole
-private structural invocation. Do not touch `.codex_work` before those
-barriers. FW2/CIL1,
+private structural invocation. Exact implementation
+`bc8ecc38374c57f6be9269874cce8d4497f83551` passed Base job
+`97082352527`, Optional job `97082352441`, and CI `32594134914`. Read
+`docs/MARC_2_R5_PRIVATE_DISCRIMINATOR_PROOF_CLOSEOUT.md`; it binds the exact
+preproof registry and four implementation Git blobs without repeating
+qualification or touching private state. Commit, push, and green this closeout
+before any readiness or private operation. FW2/CIL1,
 archive members, neural data, targets, models, scores, streams, devices, and
 claims remain closed. Read
 `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md` for the scientific order.
