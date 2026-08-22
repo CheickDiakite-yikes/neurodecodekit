@@ -10816,3 +10816,26 @@ Boundary decision: `remote_implementation_proof` remains null. Require the
 exact implementation and a separate proof-only closeout to be remotely green
 before readiness or private-path access. No cohort, archive, neural, target,
 model, score, FW2/CIL1, release, or scientific claim is open.
+
+## 0362 - Bind The Exact VR20P Implementation Proof Without Reexecution
+
+Proof decision: exact Stage 1 implementation
+`81784e716802ad5466531cdf0b3d65df07771cd5` passed Base Python job
+`96994090562`, Optional Neuro Readers job `96994090593`, and CI
+`32557573872`.
+
+Integrity decision: bind the 6,659-byte preproof implementation registry, its
+SHA-256 and Git blob, the canonical implementation-artifact-set SHA-256, and
+the exact Git blobs for the wrapper, behavior tests, implementation tests, and
+implementation document. Change no implementation byte, route, result,
+measurement, resource cap, fixed path, or claim boundary.
+
+Operation decision: repeat no generated qualification and perform zero
+readiness, `.codex_work`, private, archive, neural, target, model, prediction,
+score, network, hardware, FW2/CIL1, release, or claim operation.
+
+Boundary decision: this proof-only closeout has delayed effect until its own
+exact commit is pushed and both required jobs are green. Only afterward may
+the one registered structural invocation run. R1 would establish structural
+cohort eligibility only and would require a separate FW2 packet before neural
+work.

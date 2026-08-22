@@ -45,8 +45,8 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
-The packet-bound `MARC2-VR20P` decision is remotely green and generated Stage
-1 is now implemented and qualified. Read
+The packet-bound `MARC2-VR20P` decision and generated Stage 1 implementation
+are remotely green. Read
 `docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md`,
 `registries/marc2_published_task_private_confirmation_authorization_request.v0.json`,
 `docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_REQUEST_PROOF_CLOSEOUT.md`,
@@ -60,9 +60,13 @@ Generated `MARC2VR20P-G1` passed all 24 paths: G1 and R2-R6 each appeared four
 times, unchanged VR20A was called 24 times, and 91 direct refusals passed.
 The pass used 10,602,864 generated input bytes, 1.198090 seconds,
 35,504,128-byte peak RSS, 222,998 peak temporary bytes, and zero retention.
-Commit, push, and green the exact implementation, then add and green a
-proof-only closeout before touching readiness, `.codex_work`, the fixed
-418,755-byte target-free source, consumed VR18P state, or an output root.
+Exact implementation `81784e716802ad5466531cdf0b3d65df07771cd5` passed Base
+job `96994090562`, Optional job `96994090593`, and CI `32557573872`.
+Read `docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_PROOF_CLOSEOUT.md` and
+the updated implementation registry. Commit, push, and green that proof-only
+closeout before touching readiness, `.codex_work`, the fixed 418,755-byte
+target-free source, consumed VR18P state, or an output root. After that exact
+proof only, run the one registered invocation without retry or reinspection.
 FW2/CIL1, archive members, neural data, targets, models, scores, streams,
 devices, and claims remain closed. Read
 `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md` for the scientific order.

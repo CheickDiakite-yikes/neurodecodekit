@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR20P Generated Stage 1 Awaiting Remote Proof
+## Current Frontier: MARC2-VR20P Proof Closeout Awaiting Remote Green
 
 Read
 `docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md`,
@@ -43,14 +43,19 @@ VR20A calls, and 91 direct refusals. It selected the expected generated
 was 1.198090 seconds at 35,504,128-byte peak RSS; peak temporary output was
 222,998 bytes and retained output was zero.
 
-The implementation is not yet remotely proven. Commit, push, and green the
-exact Stage 1 bytes, then add and green a proof-only closeout before the single
-registered 418,755-byte target-free structural read. Until those barriers
-pass, do not touch readiness, `.codex_work`, the private source, consumed
-VR18P state, or an output root. Even future R1 would freeze only a structural
-cohort and make a separate FW2 contract eligible; it would not open EEG, train
-a model, or prove language, motor-cortex attribution, unseen-person
-generalization, live decoding, or EEG advantage beyond peripheral controls.
+Exact Stage 1 implementation
+`81784e716802ad5466531cdf0b3d65df07771cd5` passed Base job
+`96994090562`, Optional Neuro Readers job `96994090593`, and CI
+`32557573872`. Read
+`docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_PROOF_CLOSEOUT.md` and the
+updated implementation registry. Commit, push, and green that proof-only
+closeout before the single registered 418,755-byte target-free structural
+read. Until that final barrier passes, do not touch readiness, `.codex_work`,
+the private source, consumed VR18P state, or an output root. Even future R1
+would freeze only a structural cohort and make a separate FW2 contract
+eligible; it would not open EEG, train a model, or prove language, motor-
+cortex attribution, unseen-person generalization, live decoding, or EEG
+advantage beyond peripheral controls.
 
 The five requested scientific targets and their exact evidence order are in
 `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md`. Preserve its distinction

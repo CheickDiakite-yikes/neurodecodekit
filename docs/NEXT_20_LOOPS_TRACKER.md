@@ -10,8 +10,9 @@
 > unchanged two-stage packet. Decision `49b0f4b` passed CI `32556695686` before
 > generated Stage 1. The implementation now passes 24/24 paths with G1 and
 > R2-R6 each appearing four times, 24 VR20A calls, 91 direct refusals, and zero
-> retention. Stage 1 and its proof-only closeout must each be remotely green
-> before the one structural read. No private read or real cohort exists yet;
+> retention. Exact Stage 1 implementation `81784e7` passed both jobs in CI
+> `32557573872`; its proof-only closeout must now become remotely green before
+> the one structural read. No private read or real cohort exists yet;
 > archive member, neural payload, target, model, prediction, score, stream, or
 > claim is open. The five scientific targets and their order are frozen in
 > `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md`.
@@ -3757,3 +3758,20 @@ Next gate: commit, push, and green the proof-only closeout. Only then identify
 VR20P as the sole active Tier C packet and wait for fresh maintainer words. No
 wrapper, private source, cohort, neural payload, score, FW2/CIL1 execution, or
 scientific claim is open.
+
+### MARC2-VR20P - Stage 1 Remotely Green; Proof Closeout Pending
+
+Decision `49b0f4b` passed both required jobs in CI `32556695686` before
+generated Stage 1. The exact Stage 1 implementation `81784e7` then passed Base
+Python job `96994090562`, Optional Neuro Readers job `96994090593`, and CI
+`32557573872` after the 24-path qualification.
+
+The proof-only closeout binds the preproof implementation registry and four
+exact implementation Git blobs without changing or rerunning the wrapper.
+Fifty-four focused tests pass, qualification repeats are zero, and private
+operations are zero.
+
+Next gate: commit, push, and green the closeout itself. Only then run the one
+registered 418,755-byte target-free structural invocation. R1 would freeze a
+structural cohort and make a separate FW2 packet eligible; it would not open a
+neural payload, score a model, or establish a scientific claim.
