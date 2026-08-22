@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR20P Decision Awaiting Remote Proof
+## Current Frontier: MARC2-VR20P Generated Stage 1 Awaiting Remote Proof
 
 Read
 `docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md`,
@@ -31,18 +31,25 @@ The all-false `MARC2-VR20P` request
 `96797011698`, Optional Neuro Readers job `96797011783`, and CI
 `32490587975`.
 
-After `MARC2-VR20P` was identified as the sole active Tier C packet, the
-maintainer's next exact message was `conitnue`. The authorization decision
-preserves those eight UTF-8 bytes, records the unambiguous transposition typo,
-and binds only the unchanged two-stage packet by reference. It has delayed
-effect: commit, push, and green the decision before Stage 1 implementation.
-Stage 1 remains generated-only and must itself be committed, pushed, and
-green, followed by a separately green proof-only closeout, before the single
+The exact packet-bound authorization decision
+`49b0f4b9b8ec13f885b0010947326fbd3b9641ac` passed Base job
+`96991921763`, Optional Neuro Readers job `96991921631`, and CI
+`32556695686` before Stage 1 began.
+
+Generated `MARC2VR20P-G1` now passes the frozen six-case matrix in two orders
+and two replays: 24/24 paths, four copies each of G1 and R2-R6, 24 unchanged
+VR20A calls, and 91 direct refusals. It selected the expected generated
+16-subject / 96-bundle / 384-member cohort on the four accepted paths. Runtime
+was 1.198090 seconds at 35,504,128-byte peak RSS; peak temporary output was
+222,998 bytes and retained output was zero.
+
+The implementation is not yet remotely proven. Commit, push, and green the
+exact Stage 1 bytes, then add and green a proof-only closeout before the single
 registered 418,755-byte target-free structural read. Until those barriers
 pass, do not touch readiness, `.codex_work`, the private source, consumed
 VR18P state, or an output root. Even future R1 would freeze only a structural
-cohort and make a separate FW2 contract eligible; it would not open EEG,
-train a model, or prove language, motor-cortex attribution, unseen-person
+cohort and make a separate FW2 contract eligible; it would not open EEG, train
+a model, or prove language, motor-cortex attribution, unseen-person
 generalization, live decoding, or EEG advantage beyond peripheral controls.
 
 The five requested scientific targets and their exact evidence order are in

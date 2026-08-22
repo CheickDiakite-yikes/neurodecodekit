@@ -10794,3 +10794,25 @@ Boundary decision: recording the decision performs zero private, ignored-path,
 archive, neural, target, model, score, network, hardware, FW2/CIL1, release, or
 claim operations. Even future R1 establishes structural cohort eligibility
 only and requires a separate packet before neural work.
+
+## 0361 - Accept The Generated VR20P Fixed-Path Qualification
+
+Proof decision: authorization decision
+`49b0f4b9b8ec13f885b0010947326fbd3b9641ac` passed Base Python job
+`96991921763`, Optional Neuro Readers job `96991921631`, and CI
+`32556695686` before implementation.
+
+Result decision: accept generated `MARC2VR20P-G1` after all 24 paths passed.
+The one accepted case and five aggregate refusal groups each appeared four
+times across two orders and two replays. Unchanged VR20A was called exactly 24
+times, each generated source was opened once, and 91 direct refusals passed.
+
+Resource decision: record 10,602,864 generated input bytes, 946,517 cumulative
+temporary output bytes, 222,998 peak incremental bytes, zero retained output,
+1.1980904169613495 seconds, and 35,504,128-byte peak RSS under one thread,
+worker, and numerical job.
+
+Boundary decision: `remote_implementation_proof` remains null. Require the
+exact implementation and a separate proof-only closeout to be remotely green
+before readiness or private-path access. No cohort, archive, neural, target,
+model, score, FW2/CIL1, release, or scientific claim is open.

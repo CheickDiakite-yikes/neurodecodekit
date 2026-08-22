@@ -45,22 +45,24 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
-The packet-bound `MARC2-VR20P` decision is now recorded with delayed effect.
-Read
+The packet-bound `MARC2-VR20P` decision is remotely green and generated Stage
+1 is now implemented and qualified. Read
 `docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md`,
 `registries/marc2_published_task_private_confirmation_authorization_request.v0.json`,
 `docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_REQUEST_PROOF_CLOSEOUT.md`,
-its machine proof, and the new authorization decision artifacts first. Request
+its machine proof, the authorization decision, and the Stage 1 implementation
+artifacts first. Request
 `bef2391d8edf92c5edf8a3624831e50430636626` passed CI `32489589922`; proof
 closeout `88b3b4aaa4436655ce6f4de65215982e2b8ff9de` passed CI `32490587975`.
-After VR20P was identified as the sole active Tier C packet, the maintainer's
-next exact message was `conitnue`; the decision preserves those eight bytes
-and binds only the unchanged two-stage packet. The decision is ineffective
-until its exact commit is pushed and both CI jobs are green. Before that proof,
-do not implement the wrapper or touch readiness, `.codex_work`, the fixed
+Decision `49b0f4b9b8ec13f885b0010947326fbd3b9641ac` passed Base job
+`96991921763`, Optional job `96991921631`, and CI `32556695686` before Stage 1.
+Generated `MARC2VR20P-G1` passed all 24 paths: G1 and R2-R6 each appeared four
+times, unchanged VR20A was called 24 times, and 91 direct refusals passed.
+The pass used 10,602,864 generated input bytes, 1.198090 seconds,
+35,504,128-byte peak RSS, 222,998 peak temporary bytes, and zero retention.
+Commit, push, and green the exact implementation, then add and green a
+proof-only closeout before touching readiness, `.codex_work`, the fixed
 418,755-byte target-free source, consumed VR18P state, or an output root.
-After decision green, Stage 1 is generated-only and must receive its own green
-implementation and proof-only closeout before the one private structural read.
 FW2/CIL1, archive members, neural data, targets, models, scores, streams,
 devices, and claims remain closed. Read
 `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md` for the scientific order.

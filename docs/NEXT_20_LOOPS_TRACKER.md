@@ -7,11 +7,13 @@
 > `32489589922`; proof closeout `88b3b4a` passed CI `32490587975`. VR20P is the
 > sole active Tier C packet. The maintainer's next exact message was
 > `conitnue`; the new decision preserves those eight bytes and binds only the
-> unchanged two-stage packet. It must be committed, pushed, and remotely green
-> before generated Stage 1. Stage 1 and its proof-only closeout must then each
-> be remotely green before the one structural read. No private read, cohort,
+> unchanged two-stage packet. Decision `49b0f4b` passed CI `32556695686` before
+> generated Stage 1. The implementation now passes 24/24 paths with G1 and
+> R2-R6 each appearing four times, 24 VR20A calls, 91 direct refusals, and zero
+> retention. Stage 1 and its proof-only closeout must each be remotely green
+> before the one structural read. No private read or real cohort exists yet;
 > archive member, neural payload, target, model, prediction, score, stream, or
-> claim is open yet. The five scientific targets and their order are frozen in
+> claim is open. The five scientific targets and their order are frozen in
 > `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md`.
 
 > **Historical MARC2 frontier (2026-08-16):** consumed VR7P retained outer

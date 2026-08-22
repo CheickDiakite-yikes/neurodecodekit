@@ -12846,3 +12846,28 @@ authorized now.
 Immediate gate: run local verification, commit and push this exact decision,
 and require both CI jobs green. Do not implement Stage 1 or touch a private
 path before that proof.
+
+### VR20P generated fixed-path Stage 1 passed
+
+- Decision `49b0f4b9b8ec13f885b0010947326fbd3b9641ac` passed Base job
+  `96991921763`, Optional job `96991921631`, and CI `32556695686` before
+  implementation.
+- Added a dependency-free fixed `plan`, `qualify`, `inspect`, and proof-gated
+  `execute` wrapper over unchanged VR20A. No path, URL, task, run, threshold,
+  route, reason, retry, or resource override exists.
+- `MARC2VR20P-G1` passed 24/24 generated paths. G1 and R2-R6 each appeared
+  four times across two orders and two replays; VR20A was called 24 times and
+  all 91 direct refusal mutations passed.
+- The four accepted paths selected 16 subjects, 96 run bundles, and 384 core
+  members with semantic cohort SHA-256
+  `254bca5e0a39b52ca9791b917df6af554e02dda8f18f8e01b524d0e3ce8d9cba`.
+- Measured 10,602,864 generated input bytes, 946,517 cumulative output bytes,
+  222,998 peak incremental bytes, 2,610 aggregate bytes, 1.198090 seconds,
+  35,504,128-byte peak RSS, and zero retention.
+- Repository `.codex_work`, consumed VR18P, private source, archive, neural,
+  target, model, score, network, hardware, FW2/CIL1, release, and claim
+  operations: zero.
+
+Immediate gate: run complete verification, commit and push the exact Stage 1
+implementation, and require both jobs green. Then add and green a proof-only
+closeout before any private operation.
