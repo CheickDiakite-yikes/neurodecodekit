@@ -158,12 +158,24 @@ Exact implementation `891245d73d8e11304d4a98e841ead6f57ad68ff8` passed Base
 job `97108121455`, Optional job `97108121321`, and CI `32604761988`. Read
 `docs/MARC_2_SELECTION_BOUNDARY_FIREWALL_PROOF_CLOSEOUT.md`. The proof-only
 closeout binds both preproof registries and seven exact implementation Git
-blobs without repeating qualification or touching private state. Commit,
-push, and green this exact closeout. Only afterward may Tier A prepare one
-separately frozen all-false private confirmation packet; the packet will still
-require fresh packet-bound Tier C maintainer words before implementation or
-access. No private source, consumed state, cohort, archive member, neural
-payload, target, model, score, FW2/CIL1 action, or scientific claim is open.
+blobs without repeating qualification or touching private state. Exact
+closeout `378e863641418e0e538f3159d073dd4bcd9c8899` passed Base job
+`97109778233`, Optional job `97109778216`, and CI `32605475758`.
+
+The next all-false request is prepared locally as `MARC2-VR26P`. Read
+`docs/MARC_2_SELECTION_BOUNDARY_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md`
+and
+`registries/marc2_selection_boundary_private_confirmation_authorization_request.v0.json`.
+It requests a future two-stage fixed wrapper and then one possible 418,755-byte
+target-free structural read. G1 or G2 would freeze the same exact 16-subject,
+96-bundle, 384-member private cohort; only a public compatibility boolean may
+differ, never the unavailable count or direction. Commit, push, and green the
+exact request, then add and green a non-scope-changing request proof closeout.
+Only afterward identify VR26P as the sole active Tier C gate and require fresh
+packet-bound maintainer words. The current `continue` preceded this packet and
+is not retroactive. No implementation, private source, consumed state, cohort,
+archive member, neural payload, target, model, score, FW2/CIL1 action, or
+scientific claim is open.
 
 ## Historical VR20P/VR21A/VR22P path
 

@@ -11347,3 +11347,35 @@ Boundary decision: the closeout has delayed effect until its own exact commit
 is pushed and both required jobs are green. Only afterward may Tier A prepare
 one separately frozen all-false private confirmation packet. Fresh packet-
 bound Tier C maintainer words remain required before any private access.
+
+## 0385 - Prepare All-False VR26P Private Confirmation Request
+
+Proof decision: VR25A proof-only closeout
+`378e863641418e0e538f3159d073dd4bcd9c8899` passed Base Python job
+`97109778233`, Optional Neuro Readers job `97109778216`, and CI `32605475758`
+without repeating qualification or touching private state.
+
+Scope decision: bind 14 tracked artifacts totaling 175,543 bytes and request
+only one future two-stage sequence. Stage 1 is a generated/mock fixed wrapper;
+Stage 2, only after exact implementation and closeout proof, is one possible
+418,755-byte target-free structural read and one exact VR25A call.
+
+Cohort decision: G1 and G2 are separate safe success classes but must freeze
+the same exact 16-subject, 96-bundle, 384-member selection. The public report
+may expose only the compatibility boolean. It may not expose or support
+inference of the observed complete-bundle count, difference, or direction.
+
+Authority decision: every current authorization flag is false and every
+operation counter is zero. The request and a non-scope-changing proof closeout
+must each be committed, pushed, and remotely green before VR26P is identified
+as the sole active Tier C gate. The current `continue` predates the packet and
+is not retroactive; fresh packet-bound maintainer words remain required.
+
+Verification decision: accept 15 request tests, 45 combined VR25A/VR26P tests,
+and 4,988 complete dependency-light tests with 204 expected skips and zero
+failures, plus green Ruff, compilation, JSON, and diff checks. No generated
+qualification or private operation ran.
+
+Scientific decision: success would establish only target-free structural
+cohort eligibility and make a separate FW2 preregistration eligible. It would
+not authorize neural-payload access or establish a neural or decoding effect.

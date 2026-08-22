@@ -13160,6 +13160,33 @@ Immediate gate: commit, push, and green this exact proof-only closeout. Only
 afterward may Tier A prepare one all-false private confirmation packet; a fresh
 packet-bound Tier C decision remains required before implementation or access.
 
+### VR26P all-false selection-boundary private confirmation request
+
+- VR25A proof-only closeout `378e863641418e0e538f3159d073dd4bcd9c8899`
+  passed Base Python job `97109778233`, Optional Neuro Readers job
+  `97109778216`, and CI `32605475758`.
+- Added an all-false two-stage request binding 14 committed artifacts totaling
+  175,543 bytes. Packet preparation performs zero private, Git-ignored,
+  consumed-state, archive, neural, target, model, score, network, FW2/CIL1,
+  other-project, release, or claim operation.
+- A future Stage 1 would generated-qualify one fixed wrapper across the exact
+  40 VR25A case/order/replay paths and at least 90 direct refusals.
+- A future Stage 2 would require one 418,755-byte target-free source read and
+  one VR25A call. Either success class freezes the same exact 16-subject,
+  96-bundle, 384-member cohort; only the public compatibility boolean differs.
+  The observed complete-bundle count, difference, and direction stay private
+  and unavailable.
+- Fifteen focused request tests, 45 combined VR25A/VR26P tests, and all 4,988
+  dependency-light tests pass with 204 expected skips and zero failures, 15
+  tests above the 4,973-test pre-request baseline. Every current authority flag
+  is false and every current operation counter is zero.
+
+Immediate gate: run the complete verification surface, commit, push, and green
+the exact request, then add and green a non-scope-changing request proof
+closeout. Only afterward identify VR26P as the sole active Tier C gate and
+require fresh packet-bound maintainer words. The current `continue` predates
+this packet and is not retroactive.
+
 ### VR24P one-shot structural discriminator consumed at R2
 
 - Proof-only closeout `589b0f51db9a1bd157d90b0f4260fbb9c6475045`

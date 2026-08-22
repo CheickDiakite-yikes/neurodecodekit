@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR25A Proof Closeout Pending Green
+## Current Frontier: MARC2-VR26P All-False Request Prepared
 
 VR24P result `a873f1a` passed Base job `97103071419`, Optional Neuro Readers
 job `97103071353`, and CI `32602610854`. The exact one-shot result remains
@@ -47,11 +47,23 @@ Readers job `97108121321`, and CI `32604761988`. The proof-only closeout binds
 the two preproof registries and seven exact Git blobs without repeating the
 qualification or touching private state.
 
-Immediate gate: commit, push, and green the exact proof closeout. Only then may
-Tier A prepare one separately frozen all-false private confirmation packet; a
-fresh packet-bound Tier C decision will still be required before any private
-read. There is still no real cohort, archive-member access, neural operation,
-FW2/CIL1 action, or scientific claim in VR25A.
+Exact proof closeout `378e863` passed Base job `97109778233`, Optional Neuro
+Readers job `97109778216`, and CI `32605475758` without repeating
+qualification or touching private state.
+
+Read `docs/MARC_2_SELECTION_BOUNDARY_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md`
+and its machine request. VR26P is an all-false request for a future generated
+fixed wrapper and, only after separate proof barriers and a fresh Tier C
+decision, one 418,755-byte target-free structural read. A successful G1 or G2
+route would freeze the same exact 16-subject, 96-bundle, 384-member cohort;
+only the public compatibility boolean differs. The observed complete-bundle
+count and direction remain unavailable and may not be inferred or published.
+
+Immediate gate: commit, push, and green the exact VR26P request, then add and
+green a non-scope-changing request proof closeout. The current `continue`
+predates this packet and is not retroactive authority. No implementation,
+private read, cohort, archive-member access, neural operation, FW2/CIL1 action,
+or scientific claim is open.
 
 ## Historical Frontier: MARC2-VR24P Consumed At R2
 

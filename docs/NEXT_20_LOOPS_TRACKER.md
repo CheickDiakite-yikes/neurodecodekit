@@ -3983,6 +3983,29 @@ prepare one separately frozen all-false private confirmation packet; a fresh
 packet-bound Tier C decision will still be required before implementation or
 access.
 
+### MARC2-VR26P - All-False Private Cohort Confirmation Request Prepared
+
+VR25A proof-only closeout `378e863` passed Base Python job `97109778233`,
+Optional Neuro Readers job `97109778216`, and CI `32605475758`. VR26P binds 14
+tracked inputs totaling 175,543 bytes and requests one future two-stage
+sequence: a generated fixed wrapper, then only after exact proof one possible
+418,755-byte target-free structural read and one VR25A call.
+
+R1 and R2 both require the same exact 16-subject, 96-bundle, 384-member cohort.
+R1 means only public-total compatibility true; R2 means compatibility false
+after every stronger cohort invariant passed. The observed complete-bundle
+count, difference, direction, and private ineligible inventory remain
+unavailable. R3-R7 are fixed consumed failure classes.
+
+Every current authority flag is false and every operation counter is zero.
+Fifteen request tests and all 4,988 dependency-light tests pass with 204
+expected skips and zero failures. Next gate: commit, push, and green the exact
+request, then add and green a non-scope-changing request proof closeout. Only
+afterward identify VR26P as the sole active Tier C gate and require fresh
+packet-bound maintainer words. The current `continue` preceded this packet and
+is not retroactive. No private read, cohort freeze, archive member, neural
+payload, target, model, score, FW2/CIL1 execution, or scientific claim is open.
+
 ### MARC2-VR24P - Consumed At Complete-Bundle Arithmetic R2
 
 Proof-only closeout `589b0f5` passed Base Python job `97101585701`, Optional

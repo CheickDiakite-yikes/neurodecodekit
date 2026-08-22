@@ -1,5 +1,17 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR26P request, 2026-08-22: VR25A proof closeout `378e863`
+> passed Base job `97109778233`, Optional job `97109778216`, and CI
+> `32605475758`. The all-false packet requests a future generated fixed wrapper
+> followed, only after separate proof barriers and a fresh Tier C decision, by
+> one 418,755-byte target-free structural read and one VR25A call. G1 or G2
+> would freeze the same exact 16-subject, 96-bundle, 384-member private cohort;
+> only a public compatibility boolean may differ. Commit, push, and green the
+> exact request, then add and green its request proof closeout. The current
+> `continue` predates the packet and is not retroactive. No implementation,
+> private read, cohort, archive member, neural payload, target, model, score,
+> FW2/CIL1, or scientific claim is open.
+
 > Current MARC2-VR25A proof closeout, 2026-08-22: exact implementation
 > `891245d` passed Base job `97108121455`, Optional job `97108121321`, and CI
 > `32604761988`. The one generated qualification passed 40/40 paths with route
