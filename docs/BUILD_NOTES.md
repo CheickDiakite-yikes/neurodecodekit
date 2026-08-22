@@ -12823,3 +12823,26 @@ Immediate gate: verify, commit, push, and green this exact proof-only closeout.
 Only after both jobs pass may VR20P be identified as the sole active Tier C
 packet for fresh maintainer words. No implementation or private read is
 authorized now.
+
+### VR20P packet-bound decision recorded with delayed effect
+
+- Request `bef2391d8edf92c5edf8a3624831e50430636626` and proof closeout
+  `88b3b4aaa4436655ce6f4de65215982e2b8ff9de` were both remotely green before
+  the maintainer message.
+- After VR20P was identified as the sole active Tier C packet, the maintainer's
+  next exact message was `conitnue`. The decision preserves those eight UTF-8
+  bytes, records the unambiguous transposition typo, and binds only the
+  unchanged packet by reference.
+- Bound six immutable packet artifacts totaling 46,756 bytes plus the exact
+  human decision and machine-enforced decision test.
+- Froze generated Stage 1 at six cases, two orders, two replays, 24 VR20A
+  calls, and at least 90 direct refusals. Stage 2 remains one source open, one
+  418,755-byte strict read, one VR20A call, six coarse routes, and at most one
+  private cohort manifest on R1.
+- Decision-time `.codex_work`, readiness, private, archive, neural, target,
+  model, score, FW2/CIL1, network, hardware, other-project, release, and claim
+  operations: zero.
+
+Immediate gate: run local verification, commit and push this exact decision,
+and require both CI jobs green. Do not implement Stage 1 or touch a private
+path before that proof.

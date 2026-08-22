@@ -45,20 +45,25 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
-The sole active Tier C gate is now `MARC2-VR20P`, not VR16A. Read
+The packet-bound `MARC2-VR20P` decision is now recorded with delayed effect.
+Read
 `docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md`,
 `registries/marc2_published_task_private_confirmation_authorization_request.v0.json`,
 `docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_REQUEST_PROOF_CLOSEOUT.md`,
-and its machine proof first. Request `bef2391d8edf92c5edf8a3624831e50430636626`
-passed CI `32489589922`; proof closeout
-`88b3b4aaa4436655ce6f4de65215982e2b8ff9de` passed CI `32490587975`.
-No fresh packet-bound maintainer decision exists. Do not implement the VR20P
-wrapper or touch readiness, `.codex_work`, the fixed 418,755-byte target-free
-source, consumed VR18P state, or any output root. FW2/CIL1, archive members,
-neural data, targets, models, scores, streams, devices, and claims remain
-closed. Read `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md` for the current
-scientific order: peripheral-adjusted movement evidence, strict unseen-person
-testing, controlled EEG language evidence, then live operation.
+its machine proof, and the new authorization decision artifacts first. Request
+`bef2391d8edf92c5edf8a3624831e50430636626` passed CI `32489589922`; proof
+closeout `88b3b4aaa4436655ce6f4de65215982e2b8ff9de` passed CI `32490587975`.
+After VR20P was identified as the sole active Tier C packet, the maintainer's
+next exact message was `conitnue`; the decision preserves those eight bytes
+and binds only the unchanged two-stage packet. The decision is ineffective
+until its exact commit is pushed and both CI jobs are green. Before that proof,
+do not implement the wrapper or touch readiness, `.codex_work`, the fixed
+418,755-byte target-free source, consumed VR18P state, or an output root.
+After decision green, Stage 1 is generated-only and must receive its own green
+implementation and proof-only closeout before the one private structural read.
+FW2/CIL1, archive members, neural data, targets, models, scores, streams,
+devices, and claims remain closed. Read
+`docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md` for the scientific order.
 
 ### Historical VR15P/VR16A boundary
 

@@ -5,10 +5,13 @@
 > `task-reachingandgrasping` identity and passed 20 generated paths plus 53
 > direct refusals. The all-false VR20P request `bef2391` passed CI
 > `32489589922`; proof closeout `88b3b4a` passed CI `32490587975`. VR20P is the
-> sole active Tier C packet but has no fresh packet-bound decision. No wrapper,
-> private structural read, cohort, archive member, neural payload, target,
-> model, prediction, score, stream, or claim is open. The five scientific
-> targets and their order are frozen in
+> sole active Tier C packet. The maintainer's next exact message was
+> `conitnue`; the new decision preserves those eight bytes and binds only the
+> unchanged two-stage packet. It must be committed, pushed, and remotely green
+> before generated Stage 1. Stage 1 and its proof-only closeout must then each
+> be remotely green before the one structural read. No private read, cohort,
+> archive member, neural payload, target, model, prediction, score, stream, or
+> claim is open yet. The five scientific targets and their order are frozen in
 > `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md`.
 
 > **Historical MARC2 frontier (2026-08-16):** consumed VR7P retained outer

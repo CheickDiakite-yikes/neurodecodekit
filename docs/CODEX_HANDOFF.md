@@ -1,5 +1,19 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR20P decision, 2026-08-22: request `bef2391` passed Base job
+> `96793861959`, Optional job `96793861717`, and CI `32489589922`; proof
+> closeout `88b3b4a` passed Base job `96797011698`, Optional job
+> `96797011783`, and CI `32490587975`. After Codex named VR20P as the sole
+> active Tier C packet, the maintainer's next exact message was `conitnue`.
+> The decision preserves those eight bytes and binds only the unchanged
+> two-stage packet. It is ineffective until its exact commit is pushed and
+> both jobs are green. Stage 1 is generated-only; its exact implementation and
+> a separate proof closeout must also be remotely green before the single
+> target-free 418,755-byte structural read and one VR20A call. Do not touch
+> `.codex_work`, readiness, the private source, consumed VR18P state, or an
+> output root before those barriers. Neural payload, target, model, training,
+> scoring, FW2/CIL1 execution, release, and scientific claims remain closed.
+
 > Current MARC2-VR15P result, 2026-08-21: portable activation `a9ebef4` passed
 > Base job `96694803139`, Optional job `96694803152`, and CI `32456531938`
 > before the sole invocation. The executor collected three fresh readiness

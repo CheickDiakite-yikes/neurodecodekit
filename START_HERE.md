@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR20P Awaiting A Fresh Decision
+## Current Frontier: MARC2-VR20P Decision Awaiting Remote Proof
 
 Read
 `docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md`,
@@ -31,14 +31,19 @@ The all-false `MARC2-VR20P` request
 `96797011698`, Optional Neuro Readers job `96797011783`, and CI
 `32490587975`.
 
-`MARC2-VR20P` is the sole active Tier C packet, but it has no fresh
-packet-bound maintainer decision. Do not implement its wrapper, touch
-readiness or `.codex_work`, inspect the 418,755-byte target-free source, or
-create an output root until that decision is separately committed, pushed,
-and remotely green. Success would freeze only a structural cohort and make a
-separate FW2 contract eligible. It would not open EEG, train a model, or prove
-language, motor-cortex attribution, unseen-person generalization, live
-decoding, or EEG advantage beyond peripheral controls.
+After `MARC2-VR20P` was identified as the sole active Tier C packet, the
+maintainer's next exact message was `conitnue`. The authorization decision
+preserves those eight UTF-8 bytes, records the unambiguous transposition typo,
+and binds only the unchanged two-stage packet by reference. It has delayed
+effect: commit, push, and green the decision before Stage 1 implementation.
+Stage 1 remains generated-only and must itself be committed, pushed, and
+green, followed by a separately green proof-only closeout, before the single
+registered 418,755-byte target-free structural read. Until those barriers
+pass, do not touch readiness, `.codex_work`, the private source, consumed
+VR18P state, or an output root. Even future R1 would freeze only a structural
+cohort and make a separate FW2 contract eligible; it would not open EEG,
+train a model, or prove language, motor-cortex attribution, unseen-person
+generalization, live decoding, or EEG advantage beyond peripheral controls.
 
 The five requested scientific targets and their exact evidence order are in
 `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md`. Preserve its distinction

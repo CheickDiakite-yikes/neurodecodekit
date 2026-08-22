@@ -10769,3 +10769,28 @@ commit is pushed and both jobs are green. Only afterward may VR20P be named as
 the sole active Tier C packet for fresh maintainer words. No current decision,
 private read, cohort, neural payload, target, model, score, FW2/CIL1 execution,
 release, or scientific claim exists.
+
+## 0360 - Bind The Maintainer's Exact VR20P Short-Form Decision
+
+Proof decision: request `bef2391d8edf92c5edf8a3624831e50430636626`
+passed Base Python job `96793861959`, Optional Neuro Readers job
+`96793861717`, and CI `32489589922`; proof closeout
+`88b3b4aaa4436655ce6f4de65215982e2b8ff9de` passed Base Python job
+`96797011698`, Optional Neuro Readers job `96797011783`, and CI
+`32490587975` before the maintainer message.
+
+Authorization decision: preserve the maintainer's exact eight UTF-8 bytes
+`conitnue` and record the immediately contextualized transposition typo without
+normalizing the quotation. Bind only the unchanged `MARC2-VR20P` two-stage
+packet; infer no wider authority.
+
+Order decision: this record has delayed effect until its exact commit is
+pushed and both jobs are green. Then generated-only Stage 1 may proceed. Its
+exact implementation and a separate proof-only closeout must each be remotely
+green before one registered target-free 418,755-byte structural read and one
+VR20A call.
+
+Boundary decision: recording the decision performs zero private, ignored-path,
+archive, neural, target, model, score, network, hardware, FW2/CIL1, release, or
+claim operations. Even future R1 establishes structural cohort eligibility
+only and requires a separate packet before neural work.
