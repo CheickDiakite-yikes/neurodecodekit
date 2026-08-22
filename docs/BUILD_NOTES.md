@@ -13066,3 +13066,25 @@ private state. Stage 2 remains closed until that barrier passes.
 
 Immediate gate: commit, push, and green this exact proof-only closeout. Do not
 run `execute`, collect readiness, or touch private state before both jobs pass.
+
+### VR22P consumed at F06 without a cohort freeze
+
+- Proof-only closeout `ea39319f4c2660154cf64bcb7e38aa5fce7829c5`
+  passed Base Python job `97083802440`, Optional Neuro Readers job
+  `97083802313`, and CI `32594732196` before execution.
+- The sole invocation collected three readiness samples, opened and
+  strict-parsed 418,755 target-free structural bytes once, called VR20A once,
+  and applied the VR21A map once.
+- Route `MARC2VR22P-R4` excludes F07 selection/split/rank/reservation and
+  leaves exactly two public F06 sites: source-domain totals versus
+  taxonomy/eligibility arithmetic.
+- Runtime was 0.056165415968280286 seconds at 30,900,224-byte peak RSS;
+  combined output was 2,872 bytes; network and new payload bytes were zero.
+- No cohort manifest, archive member, neural payload, target, model,
+  prediction, score, FW2/CIL1 operation, or scientific claim was created.
+- VR22P is consumed with no retry, rerun, resume, repair, fallback,
+  substitution, cleanup, amendment, or private reinspection.
+
+Immediate gate: verify, commit, push, and green the aggregate result record.
+Then freeze an artifact-only/generated-only decomposition of VR20A's two F06
+call sites. Do not touch consumed private state.

@@ -7,7 +7,29 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR22P Generated Stage 1 Qualified
+## Current Frontier: MARC2-VR22P Consumed At F06
+
+Read `docs/MARC_2_R5_PRIVATE_DISCRIMINATOR_RESULT.md` and its machine
+registry first. Proof-only closeout `ea39319` passed both jobs in CI
+`32594732196` before the sole registered invocation. The executor opened and
+strict-parsed exactly 418,755 target-free structural bytes once, called VR20A
+once, applied the VR21A route map once, and consumed at `MARC2VR22P-R4`
+without freezing a cohort. Runtime was 0.056165 seconds at 30,900,224-byte
+peak RSS; combined output was 2,872 bytes; network and new payload bytes were
+zero.
+
+R4 narrows the blocker to VR20A F06. The two public possibilities are
+source-kind/run-bundle-total arithmetic and participant-taxonomy/eligibility
+arithmetic. F07 selection, split, rank, and reservation arithmetic is excluded
+for this execution. The exact private predicate and value were deliberately
+not retained. Do not retry or inspect consumed VR22P private state.
+
+The next safe lane is a generated-only decomposition of those two F06 call
+sites. Another private read or cohort freeze requires a new Tier C packet and
+decision. No neural payload, target, model, prediction, score, FW2/CIL1, or
+scientific claim is open.
+
+## Historical Frontier: MARC2-VR22P Generated Stage 1
 
 Read
 `docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md`,

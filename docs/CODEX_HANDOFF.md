@@ -1,5 +1,17 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR22P result, 2026-08-22: proof-only closeout `ea39319`
+> passed Base job `97083802440`, Optional job `97083802313`, and CI
+> `32594732196` before the sole invocation. The command opened and
+> strict-parsed exactly 418,755 target-free structural bytes once, called
+> VR20A once, applied VR21A once, and consumed at `MARC2VR22P-R4` without a
+> cohort freeze. R4 excludes F07 and leaves only the two public F06 sites:
+> source-kind/run-bundle totals versus taxonomy/eligibility arithmetic. The
+> exact private predicate and value were not retained. Do not retry, reopen,
+> rehash, list, or inspect VR22P private state. The next safe lane is an
+> artifact-only/generated-only F06 decomposition. Neural payload, targets,
+> models, scores, FW2/CIL1, release, and claims remain closed.
+
 > Current MARC2-VR22P proof closeout, 2026-08-22: exact Stage 1 `bc8ecc3`
 > passed Base job `97082352527`, Optional job `97082352441`, and CI
 > `32594134914`. The proof-only closeout binds the 7,292-byte preproof registry,

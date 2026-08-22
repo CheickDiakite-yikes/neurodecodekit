@@ -45,6 +45,36 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
+`MARC2-VR22P` is consumed at aggregate route `MARC2VR22P-R4` without a
+cohort freeze. Read `docs/MARC_2_R5_PRIVATE_DISCRIMINATOR_RESULT.md` and
+`registries/marc2_r5_private_discriminator_result.v0.json` first. Proof-only
+closeout `ea39319f4c2660154cf64bcb7e38aa5fce7829c5` passed Base job
+`97083802440`, Optional job `97083802313`, and CI `32594732196` before the
+sole invocation. The executor collected three readiness samples, opened and
+strict-parsed exactly 418,755 target-free structural bytes once, called VR20A
+once, applied the VR21A map once, and consumed at R4. Runtime was
+0.056165415968280286 seconds at 30,900,224-byte peak RSS; combined output was
+2,872 bytes, and network/new-payload bytes were zero.
+
+R4 means only VR20A F06: source-kind/run-bundle-total arithmetic versus
+participant-taxonomy/eligibility arithmetic. F07 selection, split, rank, and
+reservation arithmetic is excluded for this exact execution. The exact
+predicate, value, row, path, identity, participant, taxonomy detail,
+selection, and cohort were not retained and must not be inferred. VR22P has no
+retry, rerun, resume, repair, fallback, substitution, cleanup, amendment, or
+private reinspection. Do not touch its private source, readiness state,
+consumed marker, output root, or ignored artifacts.
+
+The next safe lane is an artifact-only and generated-only decomposition of the
+two exact F06 call sites in VR20A. Freeze and qualify it entirely through
+tracked source and generated fixtures. Another private read or cohort freeze
+requires a new Tier C packet and fresh decision. FW2/CIL1, archive members,
+neural data, targets, models, predictions, scores, streams, devices, and
+scientific claims remain closed. Read
+`docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md` for the scientific order.
+
+## Historical VR20P/VR21A/VR22P path
+
 `MARC2-VR20P` is consumed at aggregate route `MARC2VR20P-R5` without a
 cohort freeze. Read
 `docs/MARC_2_PUBLISHED_TASK_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md`,

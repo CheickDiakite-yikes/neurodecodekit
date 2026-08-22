@@ -11039,3 +11039,24 @@ Boundary decision: the closeout has delayed effect until its own exact commit
 and both CI jobs are green. Only then may the one registered target-free
 structural discriminator execute. No retry, rerun, neural payload, FW2/CIL1,
 or scientific authority is added.
+
+## 0372 - Consume VR22P At The F06 Aggregate Route
+
+Proof decision: proof-only closeout
+`ea39319f4c2660154cf64bcb7e38aa5fce7829c5` passed Base Python job
+`97083802440`, Optional Neuro Readers job `97083802313`, and CI
+`32594732196` before the sole registered invocation.
+
+Result decision: accept `MARC2VR22P-R4` after one 418,755-byte target-free
+structural open and strict parse, one VR20A call, and one VR21A route-map call.
+R4 excludes F07 and preserves uncertainty between the two public F06 call
+sites: source-kind/run-bundle totals and taxonomy/eligibility arithmetic.
+
+Resource decision: record 0.056165415968280286 seconds, 30,900,224-byte peak
+RSS, 2,872 combined output bytes, one thread/worker/job, and zero network or
+new payload bytes.
+
+Boundary decision: no cohort was frozen and VR22P is consumed without retry or
+private reinspection. Continue only with artifact-only/generated-only F06
+decomposition. Another private read, FW2/CIL1, neural payload, target, model,
+prediction, score, release, or scientific claim requires its own gate.

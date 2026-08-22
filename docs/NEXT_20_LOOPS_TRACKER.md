@@ -16,7 +16,13 @@
 > cohort freeze, narrowing the blocker to F06 taxonomy/eligibility arithmetic
 > versus F07 selection/split/rank/reservation arithmetic. No real cohort exists;
 > archive member, neural payload, target, model, prediction, score, stream, or
-> claim is open. The five scientific targets and their order are frozen in
+> claim is open. VR22P then passed its packet-bound decision, generated Stage
+> 1, and proof-only closeout before one registered structural invocation. It
+> consumed at `MARC2VR22P-R4`, excluding F07 and narrowing the blocker to the
+> two public VR20A F06 sites: source-domain totals versus taxonomy/eligibility
+> arithmetic. No cohort was frozen. The next lane is generated-only F06
+> decomposition; another private read remains Tier C. The five scientific
+> targets and their order are frozen in
 > `docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md`.
 
 > **Historical MARC2 frontier (2026-08-16):** consumed VR7P retained outer
