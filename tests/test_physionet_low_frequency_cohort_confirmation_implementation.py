@@ -86,6 +86,17 @@ class PhysioNetLowFrequencyImplementationTests(unittest.TestCase):
         ):
             self.assertIn(required, paths)
 
+    def test_optional_ci_replays_the_registered_scientific_environment(self):
+        workflow = (ROOT / ".github/workflows/ci.yml").read_text(encoding="utf-8")
+        for requirement in (
+            "numpy==2.5.2",
+            "scipy==1.18.0",
+            "mne==1.12.1",
+            "scikit-learn==1.9.0",
+            "pyriemann==0.12",
+        ):
+            self.assertIn(f"'{requirement}'", workflow)
+
     def test_fixture_qualification_is_exact_measured_and_non_scientific(self):
         qualification = self.registry["fixture_qualification"]
         self.assertTrue(qualification["all_gates_passed"])

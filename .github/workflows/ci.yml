@@ -60,7 +60,14 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install neuro and development tools
-        run: python -m pip install -e '.[neuro,classical,dev]'
+        run: |
+          python -m pip install \
+            -e '.[neuro,classical,dev]' \
+            'numpy==2.5.2' \
+            'scipy==1.18.0' \
+            'mne==1.12.1' \
+            'scikit-learn==1.9.0' \
+            'pyriemann==0.12'
       - name: Focused RW2 suite
         run: PYTHONPATH=src python -m unittest discover -s tests -p 'test_signal_quality.py' -v
       - name: Complete neuro-enabled suite
