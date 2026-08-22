@@ -3918,6 +3918,23 @@ ignored-path, archive, neural, target, model, score, network, FW2/CIL1, or
 claim operation. Next gate: commit, push, and green this exact closeout. Only
 then may the one registered target-free structural discriminator execute.
 
+### MARC2-VR24P - Consumed At Complete-Bundle Arithmetic R2
+
+Proof-only closeout `589b0f5` passed Base Python job `97101585701`, Optional
+Neuro Readers job `97101585762`, and CI `32602001717` before the sole
+invocation. The command read and strict-parsed exactly 418,755 target-free
+bytes once, called VR23A once with one nested VR20A call, and returned
+`MARC2VR24P-R2` without freezing a cohort.
+
+R2 means only the complete-bundle count arithmetic class against the public
+238-bundle assumption. The observed count and every private detail were not
+retained. Runtime was 0.100845 seconds at 27,656,192-byte peak RSS; output was
+3,068 bytes. VR24P is consumed with no retry or private reinspection.
+
+Next gate: record, test, commit, push, and green the result, then continue with
+artifact-only/generated-only complete-bundle arithmetic analysis. Neural
+payload, targets, models, scores, FW2/CIL1, and claims remain closed.
+
 ### MARC2-VR22P - Consumed At F06 Without A Cohort
 
 Proof-only closeout `ea39319` passed Base Python job `97083802440`, Optional

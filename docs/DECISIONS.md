@@ -11241,3 +11241,26 @@ Boundary decision: the closeout has delayed effect until its own exact commit
 and both CI jobs are green. Only then may the one registered target-free
 five-route structural discriminator execute. No cohort, retry, neural payload,
 FW2/CIL1, or scientific authority is added.
+
+## 0381 - Consume VR24P At Complete-Bundle Arithmetic R2
+
+Proof decision: proof-only closeout
+`589b0f51db9a1bd157d90b0f4260fbb9c6475045` passed Base Python job
+`97101585701`, Optional Neuro Readers job `97101585762`, and CI
+`32602001717` before the sole invocation.
+
+Result decision: accept `MARC2VR24P-R2` after exactly one 418,755-byte
+target-free structural content open and parse, one VR23A call, and one nested
+VR20A call. R2 localizes the blocker only to complete-bundle count arithmetic
+against the public 238-bundle assumption.
+
+Privacy decision: retain no observed bundle count, difference, predicate,
+value, row, path, identity, participant, selection, reservation, or cohort.
+Use only the aggregate JSON returned by `execute`; perform no public report
+inspection or private reinspection after execution.
+
+Boundary decision: VR24P is consumed with no retry, rerun, resume, repair,
+fallback, substitution, cleanup, amendment, or private reinspection. The next
+safe task is artifact-only/generated-only arithmetic analysis. Archive and
+neural payload, targets, models, scores, FW2/CIL1, release, and scientific
+claims remain closed.

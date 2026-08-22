@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR24P Proof Closeout Pending
+## Current Frontier: MARC2-VR24P Consumed At R2
 
 Read `docs/MARC_2_R5_PRIVATE_DISCRIMINATOR_RESULT.md` and its machine
 registry first. Proof-only closeout `ea39319` passed both jobs in CI
@@ -63,9 +63,18 @@ job `97099725036`, Optional job `97099725145`, and CI `32601257065`. Read the
 VR24P proof-only closeout; it binds the 7,138-byte preproof registry, its hash
 and Git blob, the artifact-set hash, and four exact artifact blobs without
 repeating qualification or touching private state. Commit, push, and green
-this closeout before any readiness or private operation. Neural payload,
-targets, models, predictions, scores, FW2/CIL1, and scientific claims remain
-closed.
+this closeout before any readiness or private operation. Exact closeout
+`589b0f5` passed Base job `97101585701`, Optional job `97101585762`, and CI
+`32602001717` before the sole invocation.
+
+The command then read and strict-parsed exactly 418,755 target-free structural
+bytes once, called VR23A once with one nested VR20A call, and consumed at
+`MARC2VR24P-R2` without freezing a cohort. R2 identifies only the complete-
+bundle count arithmetic class against the public 238-bundle assumption. The
+observed count, difference, predicate, value, row, identity, participant,
+selection, and cohort were not retained. Do not retry or inspect private
+state. Neural payload, targets, models, predictions, scores, FW2/CIL1, and
+scientific claims remain closed.
 
 ## Historical Frontier: MARC2-VR22P Generated Stage 1
 

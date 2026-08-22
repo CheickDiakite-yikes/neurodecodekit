@@ -13083,6 +13083,27 @@ private state. Stage 2 remains closed until that barrier passes.
 Immediate gate: commit, push, and green this exact proof-only closeout. Do not
 run `execute`, collect readiness, or touch private state before both jobs pass.
 
+### VR24P one-shot structural discriminator consumed at R2
+
+- Proof-only closeout `589b0f51db9a1bd157d90b0f4260fbb9c6475045`
+  passed Base Python job `97101585701`, Optional Neuro Readers job
+  `97101585762`, and CI `32602001717` before execution.
+- The sole command collected three readiness samples, opened and strict-parsed
+  exactly 418,755 target-free structural bytes once, called VR23A once, and
+  made one nested unchanged VR20A call.
+- It consumed at `MARC2VR24P-R2`, the complete-bundle count arithmetic class.
+  The observed count, difference, predicate, value, row, identity, selection,
+  reservation, and cohort were not retained.
+- Executor runtime was 0.1008453750400804 seconds, observed wall time was
+  10.096999959 seconds, peak RSS was 27,656,192 bytes, and combined output was
+  3,068 bytes under one thread, worker, and numerical job.
+- Neural, target, model, training, prediction, scoring, network, cohort,
+  FW2/CIL1, other-project, and claim counters were zero.
+
+Immediate gate: record, test, commit, push, and green this consumed result.
+Then continue only with artifact-only/generated-only analysis of the public
+complete-bundle arithmetic. Do not inspect or rerun VR24P private state.
+
 ### VR22P consumed at F06 without a cohort freeze
 
 - Proof-only closeout `ea39319f4c2660154cf64bcb7e38aa5fce7829c5`

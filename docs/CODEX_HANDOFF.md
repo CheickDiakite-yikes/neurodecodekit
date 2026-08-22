@@ -1,5 +1,17 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR24P result, 2026-08-22: proof-only closeout `589b0f5`
+> passed Base job `97101585701`, Optional job `97101585762`, and CI
+> `32602001717` before the sole invocation. The command read and strict-parsed
+> exactly 418,755 target-free structural bytes once, called VR23A once with one
+> nested VR20A call, and consumed at `MARC2VR24P-R2` without a cohort freeze.
+> R2 means only complete-bundle count arithmetic against the public 238-bundle
+> assumption. The observed count, difference, predicate, value, row, identity,
+> participant, selection, and cohort were not retained. Runtime was 0.100845
+> seconds at 27,656,192-byte peak RSS; output was 3,068 bytes. Do not retry or
+> inspect private state. Neural payload, targets, models, scores, FW2/CIL1,
+> release, and claims remain closed.
+
 > Current MARC2-VR24P proof closeout, 2026-08-22: exact Stage 1 `a2e19ba`
 > passed Base job `97099725036`, Optional job `97099725145`, and CI
 > `32601257065`. The proof-only closeout binds the 7,138-byte preproof
