@@ -154,10 +154,16 @@ one exact semantic selection, selected-name, split, and reservation identity;
 eligible-drift, unknown-participant, and incomplete-companion successes were
 zero. All 72 direct refusals passed. The pass processed 24,580,902 generated
 bytes in 3.250688 seconds at 48,185,344-byte peak RSS and retained zero output.
-Remote implementation proof remains null. Commit, push, and green the exact
-implementation and result, then add a proof-only closeout without rerunning
-qualification. No private packet may be prepared before that closeout is
-remotely green.
+Exact implementation `891245d73d8e11304d4a98e841ead6f57ad68ff8` passed Base
+job `97108121455`, Optional job `97108121321`, and CI `32604761988`. Read
+`docs/MARC_2_SELECTION_BOUNDARY_FIREWALL_PROOF_CLOSEOUT.md`. The proof-only
+closeout binds both preproof registries and seven exact implementation Git
+blobs without repeating qualification or touching private state. Commit,
+push, and green this exact closeout. Only afterward may Tier A prepare one
+separately frozen all-false private confirmation packet; the packet will still
+require fresh packet-bound Tier C maintainer words before implementation or
+access. No private source, consumed state, cohort, archive member, neural
+payload, target, model, score, FW2/CIL1 action, or scientific claim is open.
 
 ## Historical VR20P/VR21A/VR22P path
 

@@ -13136,9 +13136,29 @@ payload, target, model, score, FW2/CIL1 action, or scientific claim is open.
   3,508 aggregate bytes, zero retention, 3.2506883749738336 seconds, and
   48,185,344-byte peak RSS under one thread.
 
-Immediate gate: run the complete verification surface, commit, push, and green
-the exact implementation and result, then add a proof-only closeout without
-rerunning qualification. No private packet or scientific operation is open.
+Exact implementation `891245d73d8e11304d4a98e841ead6f57ad68ff8` passed Base
+Python job `97108121455`, Optional Neuro Readers job `97108121321`, and CI
+`32604761988`.
+
+### VR25A exact implementation remotely green; proof closeout prepared
+
+- Bound the 5,474-byte preproof implementation registry and 4,704-byte
+  preproof result registry with their exact SHA-256 digests and Git blobs.
+- Bound seven exact implementation-commit Git blobs: module, behavior test,
+  implementation test, result test, implementation document, and both
+  preproof registries.
+- The closeout changes no firewall, fixture, route, measurement, cap, warning,
+  or claim boundary. It repeats no qualification and performs zero private,
+  ignored-path, consumed-state, archive, neural, target, model, score, network,
+  FW2/CIL1, other-project, release, or claim operation.
+- Thirty focused tests and all 4,973 dependency-light tests pass with 204
+  expected skips and zero failures, five tests above the 4,968-test
+  precloseout baseline. Ruff, compilation, JSON, CLI `help`/`plan`/`inspect`,
+  and `git diff --check` pass without invoking `qualify`.
+
+Immediate gate: commit, push, and green this exact proof-only closeout. Only
+afterward may Tier A prepare one all-false private confirmation packet; a fresh
+packet-bound Tier C decision remains required before implementation or access.
 
 ### VR24P one-shot structural discriminator consumed at R2
 

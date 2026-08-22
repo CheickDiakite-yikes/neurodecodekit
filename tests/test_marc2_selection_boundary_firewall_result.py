@@ -77,8 +77,11 @@ class Marc2SelectionBoundaryFirewallResultTests(unittest.TestCase):
                 row["sha256"],
                 row["role"],
             )
-        self.assertIsNone(self.implementation["remote_implementation_proof"])
-        self.assertFalse(self.implementation["proof_transition_ready"])
+        self.assertEqual(
+            self.implementation["remote_implementation_proof"],
+            self.result["remote_implementation_proof"],
+        )
+        self.assertTrue(self.implementation["proof_transition_ready"])
 
     def test_scientific_ceiling_remains_none(self):
         claim = self.result["claim_boundary"]

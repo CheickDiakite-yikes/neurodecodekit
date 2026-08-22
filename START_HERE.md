@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR25A Generated Firewall Passed
+## Current Frontier: MARC2-VR25A Proof Closeout Pending Green
 
 VR24P result `a873f1a` passed Base job `97103071419`, Optional Neuro Readers
 job `97103071353`, and CI `32602610854`. The exact one-shot result remains
@@ -42,10 +42,15 @@ The pass used 24,580,902 generated input bytes, 3.250688 seconds, 48,185,344-
 byte peak RSS, and zero retained output. It has only `plan`, `qualify`, and
 `inspect`; there is no private executor or path argument.
 
-Immediate gate: commit, push, and green the exact implementation and result,
-then bind that remote proof in a closeout without rerunning qualification. A
-private confirmation packet cannot be prepared before the closeout is green.
-There is still no real cohort, archive-member access, neural operation,
+Exact implementation `891245d` passed Base job `97108121455`, Optional Neuro
+Readers job `97108121321`, and CI `32604761988`. The proof-only closeout binds
+the two preproof registries and seven exact Git blobs without repeating the
+qualification or touching private state.
+
+Immediate gate: commit, push, and green the exact proof closeout. Only then may
+Tier A prepare one separately frozen all-false private confirmation packet; a
+fresh packet-bound Tier C decision will still be required before any private
+read. There is still no real cohort, archive-member access, neural operation,
 FW2/CIL1 action, or scientific claim in VR25A.
 
 ## Historical Frontier: MARC2-VR24P Consumed At R2

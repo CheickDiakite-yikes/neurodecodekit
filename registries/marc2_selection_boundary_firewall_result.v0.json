@@ -93,6 +93,42 @@
     "FW2_or_CIL1_operations": 0,
     "release_or_scientific_claim_upgrades": 0
   },
+  "remote_implementation_proof": {
+    "commit": "891245d73d8e11304d4a98e841ead6f57ad68ff8",
+    "CI_run_id": 32604761988,
+    "base_python_job_id": 97108121455,
+    "optional_neuro_job_id": 97108121321,
+    "both_required_jobs_green": true,
+    "scope_changed_after_qualification": false,
+    "qualification_route": "MARC2VR25A-G1",
+    "preproof_implementation_registry_bytes": 5474,
+    "preproof_implementation_registry_sha256": "33fef70bed08a229d846fd8da49c1a7e7bc808d554ed9a6c3b4d98ce63bb03d3",
+    "preproof_result_registry_bytes": 4704,
+    "preproof_result_registry_sha256": "71d19f0bc22778ef1e3208821ccadad1c30df0078f54691e43c79e0064922c27",
+    "implementation_module_Git_blob": "d5394abea69547c321eaad2647e9bff0b0691ad5",
+    "behavior_test_Git_blob": "4bb6ecee067ad0827a4a4a84e864cb9736adacc3",
+    "implementation_test_Git_blob": "df31491fcca83ed2175183749f71ab9fe2c8552a",
+    "result_test_Git_blob": "569b8dbd647308db83e317a2f3a3b31c0a463500",
+    "implementation_document_Git_blob": "a7ba43d9fdc6b87dc50ad2b70d21039047a1ed53",
+    "preproof_implementation_registry_Git_blob": "f87786d0e9698bafb68893b4ff7c370be7832190",
+    "preproof_result_registry_Git_blob": "027bd428dee9bdb3606734bfceefc66fc14ce475",
+    "generated_qualification_repeated_for_proof_closeout": false,
+    "private_operations_during_proof_closeout": 0
+  },
+  "proof_closeout_verification": {
+    "focused_tests_passed": 30,
+    "complete_dependency_light_tests_passed": 4973,
+    "expected_skips": 204,
+    "precloseout_tests_passed": 4968,
+    "test_delta": 5,
+    "new_failures": 0,
+    "ruff_passed": true,
+    "compileall_passed": true,
+    "registry_JSON_valid": true,
+    "CLI_help_plan_and_inspect_passed": true,
+    "git_diff_check_passed": true,
+    "qualification_repeated": false
+  },
   "warnings": [
     "Generated fixtures only; no private or real source was accessed.",
     "Full-source 238 compatibility is a warning only after exact eligible validation.",
@@ -108,11 +144,12 @@
     "end_to_end_neural_decoding_latency"
   ],
   "next_gate": {
-    "implementation_remote_green_required": true,
-    "proof_only_closeout_required": true,
-    "qualification_rerun_for_closeout_allowed": false,
-    "future_private_confirmation_requires_new_Tier_C_packet_and_decision": true,
-    "private_access_cohort_freeze_archive_neural_FW2_or_CIL1_authorized_now": false
+    "proof_only_closeout_commit_green_pending": true,
+    "private_confirmation_packet_eligible_now": false,
+    "private_confirmation_packet_eligible_after_exact_closeout_green": true,
+    "private_access_or_real_executor_authorized": false,
+    "FW2_or_CIL1_authorized": false,
+    "future_private_confirmation_requires_new_Tier_C_packet_and_decision": true
   },
   "claim_boundary": {
     "engineering_capability_added": "generated selection-boundary firewall separates public full-total compatibility from exact eligible cohort integrity without admitting known ineligible bundles",

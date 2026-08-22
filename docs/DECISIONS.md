@@ -11321,3 +11321,29 @@ jobs green, then a separate proof-only closeout without rerunning
 qualification. No private packet may be prepared before the closeout is green.
 Real data, cohort freeze, archive members, neural signals, targets, models,
 scores, FW2/CIL1, release, and scientific claims remain closed.
+
+## 0384 - Bind Exact Remote Proof For VR25A
+
+Proof decision: exact implementation and generated result
+`891245d73d8e11304d4a98e841ead6f57ad68ff8` passed Base Python job
+`97108121455`, Optional Neuro Readers job `97108121321`, and CI `32604761988`.
+
+Identity decision: bind the 5,474-byte preproof implementation registry and
+4,704-byte preproof result registry with exact SHA-256 digests, plus seven Git
+blobs from the proven commit. The generated qualification route remains
+`MARC2VR25A-G1`; no implementation or result scope changed.
+
+Execution decision: do not repeat qualification for proof closeout. Record
+zero private, consumed-state, archive, neural, target, model, prediction,
+score, network, hardware, other-project, FW2/CIL1, release, and claim
+operations.
+
+Verification decision: accept 30 focused tests and 4,973 complete dependency-
+light tests with 204 expected skips, zero failures, and a five-test increase
+over the 4,968-test precloseout baseline, plus green Ruff, compilation, JSON,
+CLI inspection, and diff checks.
+
+Boundary decision: the closeout has delayed effect until its own exact commit
+is pushed and both required jobs are green. Only afterward may Tier A prepare
+one separately frozen all-false private confirmation packet. Fresh packet-
+bound Tier C maintainer words remain required before any private access.
