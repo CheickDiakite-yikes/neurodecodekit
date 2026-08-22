@@ -11083,3 +11083,27 @@ Boundary decision: registration and implementation are artifact-only and
 generated-only. No private path, consumed state, cohort, neural payload,
 target, model, prediction, score, FW2/CIL1, release, or scientific claim is
 authorized.
+
+## 0374 - Accept Generated VR23A Five-Route Qualification
+
+Proof decision: exact registration
+`cee91b0473cd97a91feab22d7fd420e0b550b99f` passed Base Python job
+`97087038676`, Optional Neuro Readers job `97087038522`, and CI `32596045581`
+before implementation.
+
+Result decision: accept `MARC2VR23A-G1` after 24/24 generated paths passed.
+G1 and R1-R5 each appeared four times, unchanged VR20A was called exactly 24
+times, diagnostic/upstream disagreements and source mutations were zero, and
+62 direct refusals passed. Accept the static proof of two F06 wrapper sites,
+seven VR2 helper reasons, two non-independent defensive reasons, and five
+independently reachable classes.
+
+Resource decision: record 10,603,766 generated input bytes, zero temporary or
+retained output, 6,458 aggregate bytes, 2.4120343329850584 seconds, and
+39,944,192-byte peak RSS under one thread, worker, and numerical job.
+
+Boundary decision: require the exact implementation and result to be remotely
+green, followed by a separately green proof-only closeout without reexecution,
+before preparing any private packet. This qualification authorizes no private
+read, cohort, archive member, neural payload, target, model, prediction, score,
+FW2/CIL1 execution, release, or scientific claim.

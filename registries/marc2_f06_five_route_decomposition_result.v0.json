@@ -1,0 +1,132 @@
+{
+  "schema_name": "neurodecodekit.marc2_f06_five_route_decomposition_result_record",
+  "schema_version": "0.1.0",
+  "result_id": "MARC-2-VR23A-F06-five-route-decomposition-result-v0",
+  "lane_id": "MARC2-VR23A",
+  "recorded_at_local": "2026-08-22",
+  "status": "generated_qualification_passed",
+  "route": "MARC2VR23A-G1",
+  "registration_proof": {
+    "commit": "cee91b0473cd97a91feab22d7fd420e0b550b99f",
+    "CI_run_id": 32596045581,
+    "base_job_id": 97087038676,
+    "optional_neuro_job_id": 97087038522,
+    "both_required_jobs_green": true
+  },
+  "static_proof": {
+    "VR20A_F06_wrapper_call_sites": 2,
+    "VR2_bound_safe_reasons": 7,
+    "non_independent_defensive_reasons": [
+      "bundle taxonomy is unclassified",
+      "filtered eligible total differs"
+    ],
+    "known_taxonomy_classifications_checked": 69,
+    "eligible_count_implication_checked": true,
+    "independently_reachable_F06_classes": 5
+  },
+  "route_table": {
+    "MARC2VR23A-G1": "accepted_control",
+    "MARC2VR23A-R1": "entry_kind_count_arithmetic",
+    "MARC2VR23A-R2": "complete_bundle_count_arithmetic",
+    "MARC2VR23A-R3": "participant_taxonomy_membership",
+    "MARC2VR23A-R4": "taxonomy_class_arithmetic",
+    "MARC2VR23A-R5": "eligible_participant_session_distribution"
+  },
+  "matrix": {
+    "cases": 6,
+    "orders": 2,
+    "replays": 2,
+    "paths": 24,
+    "VR20A_calls": 24,
+    "VR20A_route_counts": {
+      "MARC2VR20A-F06": 20,
+      "MARC2VR20A-G1": 4
+    },
+    "VR23A_route_counts": {
+      "MARC2VR23A-G1": 4,
+      "MARC2VR23A-R1": 4,
+      "MARC2VR23A-R2": 4,
+      "MARC2VR23A-R3": 4,
+      "MARC2VR23A-R4": 4,
+      "MARC2VR23A-R5": 4
+    },
+    "diagnostic_and_VR20A_route_disagreements": 0,
+    "source_mutations_after_call": 0,
+    "direct_refusals_passed": 62,
+    "exact_replay": true
+  },
+  "resources": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "fixed_input_bytes": 207381,
+    "generated_input_bytes": 10603766,
+    "temporary_output_bytes": 0,
+    "retained_generated_output_bytes": 0,
+    "aggregate_output_bytes": 6458,
+    "runtime_seconds": 2.4120343329850584,
+    "peak_RSS_bytes": 39944192,
+    "network_bytes": 0,
+    "new_payload_bytes": 0,
+    "end_to_end_latency_measured": false
+  },
+  "operation_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_VR22P_path_or_output_operations": 0,
+    "real_structural_source_operations": 0,
+    "cohort_freezes": 0,
+    "archive_header_or_member_payload_operations": 0,
+    "neural_signal_event_channel_geometry_target_or_label_operations": 0,
+    "cache_feature_split_or_NeuroToken_operations": 0,
+    "model_training_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scoring_runs": 0,
+    "FW2_operations": 0,
+    "CIL1_operations": 0,
+    "network_requests": 0,
+    "provider_or_language_model_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "other_project_operations": 0,
+    "retry_rerun_resume_operations": 0,
+    "release_publication_or_scientific_claim_upgrades": 0
+  },
+  "verification": {
+    "focused_tests_passed": 20,
+    "complete_dependency_light_tests_passed": 4878,
+    "expected_skips": 204,
+    "new_failures": 0
+  },
+  "warnings": [
+    "This is generated structural qualification, not a private result or neural evidence.",
+    "The real VR22P R4 class remains unresolved among R1 through R5.",
+    "No private source, cohort, archive, signal, target, model, prediction, or score was accessed."
+  ],
+  "unavailable_fields": [
+    "real_failed_F06_class",
+    "failed_private_value",
+    "real_cohort",
+    "neural_payload",
+    "neural_effect",
+    "decoding_accuracy",
+    "live_latency"
+  ],
+  "next_gate": {
+    "exact_implementation_and_result_remote_green_required": true,
+    "proof_only_closeout_required_before_private_packet": true,
+    "future_private_discriminator_requires_new_Tier_C_packet_and_decision": true,
+    "private_neural_target_model_score_FW2_or_CIL1_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_capability": "generated discrimination of all five independently reachable VR20A F06 structural classes",
+    "scientific_ceiling": "none",
+    "real_cohort_established": false,
+    "neural_payload_accessed": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "live_decoding": false
+  }
+}

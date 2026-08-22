@@ -13107,3 +13107,27 @@ call sites. Do not touch consumed private state.
 
 Immediate gate: verify, commit, push, and green the exact registration before
 implementing or running its generated qualification.
+
+### VR23A generated five-route F06 qualification
+
+- Exact registration `cee91b0473cd97a91feab22d7fd420e0b550b99f` passed
+  Base Python job `97087038676`, Optional Neuro Readers job `97087038522`, and
+  CI `32596045581` before implementation.
+- Added a dependency-free `plan`/`qualify` adapter with no private executor,
+  generic path, route, threshold, retry, or substitution surface.
+- `MARC2VR23A-G1` passed 24/24 generated paths: G1 and R1-R5 each four times,
+  24 unchanged VR20A calls, zero route disagreements, zero source mutations,
+  and 62 direct refusals.
+- Static proof bound two VR20A F06 wrapper sites and seven VR2 helper reasons,
+  checked 69 known taxonomy classifications and the eligible-count
+  implication, and proved two defensive reasons non-independent.
+- Measured 10,603,766 generated input bytes, zero temporary/retained output,
+  6,458 aggregate bytes, 2.4120343329850584 seconds, and 39,944,192-byte peak
+  RSS under one thread, worker, and numerical job.
+- All private, consumed-state, archive, neural, target, model, score, network,
+  FW2/CIL1, other-project, and claim counters were zero.
+
+Immediate gate: run complete verification, commit, push, and green the exact
+implementation and result. Then add and green a proof-only closeout without
+repeating qualification or touching private state. A future private
+discriminator remains a new Tier C packet and fresh decision.
