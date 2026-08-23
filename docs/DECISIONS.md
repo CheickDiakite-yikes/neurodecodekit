@@ -11428,3 +11428,29 @@ readiness, private, archive, neural, target, model, prediction, score, network,
 FW2/CIL1, release, or claim operation. Success would establish only a
 structurally eligible source-bound cohort; it would not establish a neural
 effect or decoding result. No authority is inferred beyond this packet.
+
+## 0388 - Accept Generated VR26P Stage 1 Qualification
+
+Proof decision: packet-bound decision
+`8b9ce248f6cbce1205addf113f97325a98c1992e` passed Base Python job
+`97116976065`, Optional Neuro Readers job `97116976016`, and CI
+`32608318342` before implementation. Accept the additive dependency-free
+fixed wrapper only within the unchanged VR26P two-stage scope.
+
+Result decision: accept `MARC2VR26P-G1` after all 40 generated paths passed.
+Twenty accepted paths and 20 expected refusal paths made exactly 40 VR25A
+calls; 106 direct refusals passed. All accepted paths shared one exact
+16-subject, 96-bundle, 384-member selection. Four compatibility-true and 16
+compatibility-false paths confirmed that warning-only source-total drift does
+not alter cohort identity.
+
+Resource decision: accept 17,672,740 generated input bytes, 2.444166875036899
+seconds, 34,701,312-byte peak RSS, 223,419 peak incremental output bytes, and
+zero retained output under one CPU thread, worker, and numerical job.
+
+Boundary decision: `remote_implementation_proof` remains null. Commit, push,
+and green these exact implementation bytes, then separately green a proof-only
+closeout without rerunning qualification. Until both barriers pass, execute
+must refuse before readiness or private access. No real cohort, archive
+payload, neural signal, target, model, score, FW2/CIL1 action, or scientific
+claim is established.

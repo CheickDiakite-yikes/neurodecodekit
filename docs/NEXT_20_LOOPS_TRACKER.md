@@ -4185,6 +4185,27 @@ proof-only closeout. The private read remains closed until all three proof
 barriers pass; FW2/CIL1 and scientific claims remain closed afterward unless a
 separate exact preregistration and authorization opens them.
 
+### MARC2-VR26P - Generated Stage 1 Qualified; Remote Proof Pending
+
+Packet-bound decision `8b9ce24` passed Base Python job `97116976065`, Optional
+Neuro Readers job `97116976016`, and CI `32608318342` before implementation.
+The additive standard-library fixed wrapper passed all 40 generated paths,
+with 20 accepted paths, 20 expected refusals, 40 exact VR25A calls, and 106
+direct refusals.
+
+All accepted paths shared the same 16-subject, 96-bundle, 384-member cohort
+identity. Compatibility was true on four exact-control paths and false on 16
+warning-only nuisance-count paths; the observed count, difference, and
+direction remained unavailable. Runtime was 2.444167 seconds at 34,701,312-
+byte peak RSS over 17,672,740 generated input bytes. Peak incremental output
+was 223,419 bytes and retained generated output was zero.
+
+Seventy-nine focused and all 5,022 dependency-light tests pass with 204
+expected skips. Next gate: commit, push, and green the exact implementation,
+then add and green a proof-only closeout without repeating qualification.
+Private execution remains disabled while the proof field is null. Neural
+payload, targets, models, scores, FW2/CIL1, and claims remain closed.
+
 ### MARC2-VR24P - Exact Stage 1 Remotely Green; Closeout Pending
 
 Exact implementation `a2e19ba` passed Base Python job `97099725036`, Optional

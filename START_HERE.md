@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR26P Decision Pending Green
+## Current Frontier: MARC2-VR26P Generated Stage 1 Qualified
 
 VR24P result `a873f1a` passed Base job `97103071419`, Optional Neuro Readers
 job `97103071353`, and CI `32602610854`. The exact one-shot result remains
@@ -72,12 +72,24 @@ The maintainer's next exact message was the eight UTF-8 bytes `continue`.
 
 Read `docs/MARC_2_SELECTION_BOUNDARY_PRIVATE_CONFIRMATION_AUTHORIZATION_DECISION.md`
 and its machine decision. They bind only the unchanged green packet and have
-delayed effect. Immediate gate: commit, push, and green the exact decision.
-Only then may Stage 1 implement and generated-qualify the fixed wrapper. The
-one private read remains blocked until that exact implementation and a proof-
-only closeout are also separately remotely green. No private read, cohort,
-archive-member access, neural operation, FW2/CIL1 action, or scientific claim
-is open at decision-recording time.
+delayed effect. Exact decision `8b9ce24` passed Base job `97116976065`,
+Optional Neuro Readers job `97116976016`, and CI `32608318342` before Stage 1.
+
+Read `docs/MARC_2_SELECTION_BOUNDARY_PRIVATE_CONFIRMATION_IMPLEMENTATION.md`
+and its machine record. The additive standard-library wrapper passed 40/40
+generated paths: 20 accepted, 20 expected refusals, 40 exact VR25A calls, 106
+direct refusals, and deterministic replay. All accepted paths produced the
+same 16-subject, 96-bundle, 384-member selection. Four compatibility-true and
+16 compatibility-false accepted paths confirmed that the warning boolean does
+not change cohort identity.
+
+The pass used 17,672,740 generated input bytes, 2.444167 seconds, 34,701,312-
+byte peak RSS, and 223,419 peak incremental output bytes, with zero retained
+output and zero real/private path operations. Immediate gate: commit, push,
+and green this exact implementation, then add and green a proof-only closeout.
+The implementation proof is null, so `execute` refuses before readiness or
+private access. No private read, real cohort, archive-member access, neural
+operation, FW2/CIL1 action, or scientific claim is open yet.
 
 ## Historical Frontier: MARC2-VR24P Consumed At R2
 

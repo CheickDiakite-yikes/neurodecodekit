@@ -184,14 +184,25 @@ exact message was `continue`. Read
 and its machine decision. The decision quotes those eight UTF-8 bytes and
 binds only the unchanged green packet.
 
-Immediate gate: commit, push, and remotely green this exact decision. Do not
-implement the wrapper or touch readiness, `.codex_work`, the private source,
-consumed state, or an output root before that proof. After the decision is
-green, Stage 1 may implement and generated-qualify the fixed wrapper across 40
-paths and at least 90 direct refusals. Stage 2 remains closed until the exact
-Stage 1 implementation and a proof-only closeout are separately remotely
-green. FW2/CIL1, archive members, neural payload, targets, models,
-predictions, scores, streams, devices, and scientific claims remain closed.
+Exact decision `8b9ce248f6cbce1205addf113f97325a98c1992e` passed Base
+job `97116976065`, Optional job `97116976016`, and CI `32608318342` before
+Stage 1. Read the VR26P implementation document, module, machine record, and
+tests. Generated `MARC2VR26P-G1` passed all 40 paths: 20 accepted and 20
+expected refusals, with 40 exact VR25A calls, 106 direct refusals, deterministic
+replay, and one identical 16-subject/96-bundle/384-member selection across all
+accepted variants. Compatibility was true on four paths and false on 16; no
+observed count or direction was exposed. The pass used 17,672,740 generated
+input bytes in 2.444167 seconds at 34,701,312-byte peak RSS, reached 223,419
+peak incremental output bytes, and retained zero.
+
+Immediate gate: commit, push, and remotely green this exact Stage 1
+implementation, then add and remotely green a proof-only closeout without
+repeating qualification. `remote_implementation_proof` remains null, so
+`execute` must refuse before readiness or private-path access. Do not touch
+`.codex_work`, the private source, consumed state, or an output root before
+both proof barriers. FW2/CIL1, archive members, neural payload, targets,
+models, predictions, scores, streams, devices, and scientific claims remain
+closed.
 
 ## Historical VR20P/VR21A/VR22P path
 

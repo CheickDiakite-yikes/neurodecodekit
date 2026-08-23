@@ -13108,6 +13108,34 @@ not collect readiness or touch `.codex_work`, the private source, consumed
 state, or any output root until Stage 1 and its proof-only closeout are also
 separately remotely green.
 
+### VR26P generated Stage 1 qualified
+
+- Packet-bound decision `8b9ce248f6cbce1205addf113f97325a98c1992e`
+  passed Base Python job `97116976065`, Optional Neuro Readers job
+  `97116976016`, and CI `32608318342` before implementation.
+- Added one dependency-free fixed-path wrapper with `plan`, `qualify`,
+  `inspect`, and proof-gated `execute`. It exposes no path, URL, output,
+  threshold, route, retry, fallback, or substitution override.
+- The one recorded generated pass completed all 40 paths: 20 accepted, 20
+  refused, 40 exact VR25A calls, 40 generated source opens, and 106 direct
+  refusals. All accepted paths shared one exact 16-subject, 96-bundle,
+  384-member cohort identity; compatibility was true four times and false 16
+  times.
+- Measured 17,672,740 generated input bytes, 2.444166875036899 seconds,
+  34,701,312-byte peak RSS, 223,419 peak incremental output bytes, 6,303-byte
+  aggregate output, and zero retained generated output.
+- Seventy-nine focused tests and all 5,022 dependency-light tests pass with
+  204 expected skips and zero failures, 21 tests above the 5,001-test decision
+  baseline.
+- Repository `.codex_work`, private source, consumed VR22P/VR24P state,
+  archive, neural, target, model, score, network, FW2/CIL1, other-project, and
+  claim operations were zero.
+
+Immediate gate: commit, push, and green this exact implementation, then add
+and green a proof-only closeout without repeating qualification. The
+implementation proof remains null; do not collect readiness or touch the
+private path before both remote barriers pass.
+
 ### VR24P result remotely green
 
 - The sole proof-separated invocation consumed at `MARC2VR24P-R2` after one
