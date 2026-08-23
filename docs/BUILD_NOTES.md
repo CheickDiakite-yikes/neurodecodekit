@@ -14523,3 +14523,29 @@ frozen Tier C packet and fresh packet-bound decision.
 Immediate gate: commit, push, and green this exact proof-only closeout. Only
 then is VR37A remotely closed. A private discriminator remains a new Tier C
 packet and fresh decision.
+
+### VR37A remotely closed; VR37P all-false request prepared
+
+- Proof-only closeout `4287a860ae11b47a9ccb50090ae62e6e4be2b59a`
+  passed Base Python job `97232723710`, Optional Neuro Readers job
+  `97232723664`, and CI `32655208775`.
+- Prepared an all-false two-stage VR37P request. Stage 1 would qualify an
+  independent fixed-path wrapper across 48 generated/mock paths. Stage 2 would
+  remain blocked behind separate green implementation and closeout proofs.
+- The requested one-shot private operation is limited to exact readiness, one
+  418,755-byte target-free structural open/parse, one VR37A call with one
+  nested VR35A call, and one aggregate R1-R7 report under 1 MiB.
+- No route may expose exact count, difference, affected-cell count, cell or
+  run identity, task distribution, member, participant, row, path, or private
+  hash. No route freezes a cohort or authorizes repair, FW2/CIL1, archive,
+  neural, target, model, prediction, score, device, release, or claim work.
+- Packet preparation touched ten tracked artifacts totaling 100,521 bytes and
+  performed zero private, ignored-path, readiness, output, or scientific
+  operation.
+- Twelve focused request tests and all 5,555 dependency-light tests pass with
+  204 expected skips. Ruff, formatting, compilation, strict registry parsing,
+  and diff hygiene pass.
+
+Immediate gate: verify, commit, push, and green the exact request, then create
+and green a non-scope-changing request proof closeout. Earlier maintainer words
+are not retroactive authority.

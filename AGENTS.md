@@ -132,11 +132,20 @@ Read the proof-only closeout. It binds the preproof registry hashes and exact
 implementation Git blobs without repeating qualification or touching private
 state.
 
-Immediate gate: commit, push, and green the exact proof-only closeout. Only
-then is VR37A remotely closed as generated engineering. Another private
-discriminator requires a new frozen Tier C packet and fresh decision. Archive,
-neural, target, model, score, FW2/CIL1, device, release, and claim surfaces
-remain closed.
+Proof-only closeout `4287a860ae11b47a9ccb50090ae62e6e4be2b59a` passed
+Base job `97232723710`, Optional job `97232723664`, and CI `32655208775`.
+VR37A is remotely closed as generated engineering.
+
+The next all-false request is now prepared as `MARC2-VR37P`. Read
+`docs/MARC_2_EXACT_TASK_SURPLUS_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md`
+and
+`registries/marc2_exact_task_surplus_private_discriminator_authorization_request.v0.json`.
+It requests generated/mock wrapper qualification and, after every later proof
+barrier, one aggregate route-only private topology discrimination. Immediate
+gate: verify, commit, push, and green this exact request, then create and green
+a non-scope-changing request proof closeout. No implementation or private
+access is authorized now. Archive, neural, target, model, score, FW2/CIL1,
+device, release, and claim surfaces remain closed.
 
 ### Consumed VR34P boundary
 

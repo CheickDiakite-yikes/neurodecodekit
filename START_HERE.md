@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: MARC2-VR37A Proof-Only Closeout
+## Current Gate: MARC2-VR37P All-False Request Proof
 
 Read the VR35A preregistration and implementation documents, contract,
 implementation record, generated result, and matching tests. Registration
@@ -88,10 +88,20 @@ The proof-only closeout now binds the preproof registry hashes and every exact
 implementation Git blob. Qualification was not repeated and private operation
 count remains zero.
 
-Immediate gate: commit, push, and green this exact proof-only closeout. A
-future private discriminator requires a newly frozen Tier C packet and fresh
-decision. Archive, neural, target, model, score, FW2/CIL1, and claim work
-remain closed.
+Proof-only closeout `4287a860ae11b47a9ccb50090ae62e6e4be2b59a` passed
+Base job `97232723710`, Optional job `97232723664`, and CI `32655208775`.
+VR37A is remotely closed as generated engineering.
+
+VR37P is now an all-false Tier C request for a future two-stage sequence:
+generated/mock fixed-path qualification first, then only after its own green
+implementation and proof closeout one route-only private topology read. The
+future output may expose only R1-R7, never the exact count, difference, cell,
+identity, run, row, or path. It freezes no cohort.
+
+Immediate gate: verify, commit, push, and green the exact VR37P request, then
+create and green a non-scope-changing request proof closeout. No implementation
+or private access is authorized now. Archive, neural, target, model, score,
+FW2/CIL1, and claim work remain closed.
 
 ## Consumed Boundary: MARC2-VR34P Protocol-Conforming R2
 

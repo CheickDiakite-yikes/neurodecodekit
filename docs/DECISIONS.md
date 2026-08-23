@@ -12542,3 +12542,22 @@ consumed, archive, neural, target, model, score, FW2/CIL1, release, or claim
 state. The closeout has delayed effect until its own exact commit is pushed and
 both CI jobs are green. A future private discriminator requires a new frozen
 Tier C packet and fresh decision.
+
+## 0439 - Prepare All-False VR37P Aggregate Topology Request
+
+Proof decision: VR37A proof-only closeout
+`4287a860ae11b47a9ccb50090ae62e6e4be2b59a` passed CI `32655208775`,
+Base Python job `97232723710`, and Optional Neuro Readers job `97232723664`.
+
+Engineering decision: freeze a future two-stage VR37P wrapper around unchanged
+VR33A and VR37A. Generated/mock Stage 1 requires 48 paths and at least 120
+direct refusals. Future Stage 2 is limited to one readiness sequence, one
+418,755-byte target-free structural open/parse, one VR37A call with one nested
+VR35A call, and one R1-R7 aggregate report.
+
+Boundary decision: every authority flag remains false. The request opens no
+private source and freezes no cohort. Commit, push, and green the request and
+its later proof closeout before identifying VR37P as the sole Tier C packet.
+Only a fresh packet-bound maintainer message after that identification may
+authorize the unchanged request; earlier `continue` messages are not
+retroactive.

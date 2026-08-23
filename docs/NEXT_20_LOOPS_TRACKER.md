@@ -1,11 +1,12 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate gate (2026-08-23):** exact VR37A implementation `f698a10`
-> passed Base job `97230546153`, Optional job `97230546048`, and CI
-> `32654295221`. Commit, push, and green the proof-only closeout that binds the
-> preproof registry hashes and exact Git blobs without repeating qualification
-> or touching private state. Private, archive, neural, target, model, score,
-> FW2/CIL1, and claim surfaces are closed.
+> **Immediate gate (2026-08-23):** VR37A proof-only closeout `4287a86`
+> passed Base job `97232723710`, Optional job `97232723664`, and CI
+> `32655208775`. VR37P is now a local all-false request for one future
+> aggregate topology discriminator. Verify, commit, push, and green the exact
+> request, then create and green its non-scope-changing proof closeout. No
+> implementation or private access is authorized. Archive, neural, target,
+> model, score, FW2/CIL1, and claim surfaces are closed.
 
 > **Immediate update (2026-08-23):** exact VR32P proof closeout `5aec8a1`
 > passed Base job `97177262321`, Optional job `97177262387`, and CI
@@ -4183,6 +4184,26 @@ requalification or private operation.
 
 Immediate gate: commit, push, and green the proof-only closeout. A future
 private discriminator remains a new Tier C packet and decision.
+
+### MARC2-VR37P - Aggregate Private Topology Request Prepared
+
+VR37A proof-only closeout `4287a860ae11b47a9ccb50090ae62e6e4be2b59a`
+passed Base job `97232723710`, Optional job `97232723664`, and CI
+`32655208775`, remotely closing the generated discriminator without another
+qualification or private operation.
+
+The all-false VR37P request freezes a future independent wrapper and one
+one-shot private route-only discriminator. Stage 1 requires 48 generated/mock
+paths, 48 VR33A calls, 144 provider calls, 96 sleeper calls, 24 VR37A calls
+with 24 nested VR35A calls, at least 120 direct refusals, and zero retention.
+Only after every later proof barrier may Stage 2 read the fixed 418,755-byte
+target-free structural source once and return one R1-R7 aggregate route. It
+freezes no cohort and exposes no count, difference, cell, identity, run, row,
+or path.
+
+Immediate gate: verify, commit, push, and green this exact all-false request,
+then create and green its request proof closeout. The current or any earlier
+`continue` is not retroactive authority.
 
 ### MARC2-VR33A - Exact-Count Readiness Repair Remotely Closed
 
