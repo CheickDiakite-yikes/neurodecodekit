@@ -7,43 +7,32 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: MARC2-VR34P Packet-Bound Decision
+## Current Gate: MARC2-VR34P Stage 1 Remote Proof
 
-VR33A proof-only closeout `22dcb05a1da90b153b715a0374eeb3673024f53c`
-passed Base job `97185995887`, Optional job `97185995981`, and CI
-`32636104743`. VR33A is remotely closed generated engineering, and its sole
-qualification must not be repeated.
+Packet-bound decision `5d6a56ecfad01f49d9e7987cc1072c4aab15bd11`
+passed Base Python job `97193199080`, Optional Neuro Readers job
+`97193198951`, and CI `32639054941` before implementation.
 
-Read
-`docs/MARC_2_EXACT_COUNT_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md` and
-`registries/marc2_exact_count_private_confirmation_authorization_request.v0.json`.
-The all-false VR34P request binds 17 tracked inputs totaling 137,581 bytes.
-Its delayed generated Stage 1 composes unchanged VR33A and VR31A over 60 fixed
-paths. Its delayed private Stage 2 permits exactly three readiness samples,
-two fixed sleeps, and at most one target-free 418,755-byte structural open only
-after `PPP`; it may retain only aggregate R1 below 195 or R2 above 195.
+Read `docs/MARC_2_EXACT_COUNT_PRIVATE_CONFIRMATION_IMPLEMENTATION.md` and its
+implementation/result registries. The one generated qualification completed
+60 paths with 60 VR33A calls, 180 provider calls, 120 fixed sleeper calls, and
+32 VR31A calls only after `PPP`. Route counts were G1/G2/R1/R2/R3
+4/4/4/4/44. All seven nonpassing readiness patterns performed zero source
+constructions, source opens, or VR31A calls. Exact replay and 223 direct
+refusals passed.
 
-Exact request `d4215c5aa5b8e43d91ff7ff26b8ea035648f3706` passed Base
-Python job `97189079380`, Optional Neuro Readers job `97189079311`, and CI
-`32637387771`. Read the proof-only closeout and machine record. They bind the
-unchanged three request artifacts totaling 28,726 bytes and perform zero
-implementation, generated qualification, readiness, or private operation.
+The pass used 14,152,684 generated input bytes in 3.024067790945992 seconds at
+37,257,216-byte peak RSS. Peak incremental output was 791 bytes and retained
+generated output was zero. The complete dependency-light suite passes 5,403
+tests with 204 expected skips, exactly 28 more than the pre-change baseline.
+Do not repeat qualification.
 
-Exact request-proof closeout `45cc8f18fe8fc7f5c8b9675648a4cd358617808d`
-passed Base Python job `97190816942`, Optional Neuro Readers job
-`97190817104`, and CI `32638120718`. After VR34P was identified as the sole
-active Tier C packet, the maintainer's next exact message was `continue`.
-
-Read the packet-bound decision document and machine record. They preserve the
-actual eight UTF-8 bytes, bind six unchanged packet/proof artifacts totaling
-41,496 bytes, and infer no scope expansion.
-
-Immediate gate: verify, commit, push, and green the decision. Before that
-barrier, implementation and private access remain unauthorized. After green,
-only generated Stage 1 opens; Stage 2 remains closed until exact Stage 1 and a
-separate proof-only closeout are both remotely green. Do not touch consumed
-VR32P or any private/ignored state. Neural, target, model, score, FW2/CIL1,
-device, release, and claim surfaces remain closed.
+Immediate gate: commit, push, and green the exact Stage 1 implementation, then
+prepare and remotely green a separate proof-only closeout without touching
+private state. Stage 2 remains closed until both barriers pass; `execute`
+currently refuses at `MARC2VR34P-F02` before readiness or private access. Do
+not touch consumed VR32P or any private/ignored state. Neural, target, model,
+score, FW2/CIL1, device, release, and claim surfaces remain closed.
 
 ## Consumed Boundary: MARC2-VR32P R2 With A Protocol Deviation
 

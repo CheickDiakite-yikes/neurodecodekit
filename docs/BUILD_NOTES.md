@@ -14192,3 +14192,34 @@ the current `continue` predates this proof barrier.
 Immediate gate: verify, commit, push, and green the decision. Only afterward
 may generated Stage 1 begin. Stage 2 remains closed until exact Stage 1 and a
 separate proof-only closeout are both remotely green.
+
+### VR34P exact-readiness wrapper qualified once
+
+- Packet-bound decision `5d6a56ecfad01f49d9e7987cc1072c4aab15bd11`
+  passed Base Python job `97193199080`, Optional Neuro Readers job
+  `97193198951`, and CI `32639054941` before implementation.
+- Added a dependency-free fixed-path wrapper composing only unchanged VR33A
+  readiness and unchanged VR31A direction discrimination. It imports no
+  consumed VR32P executor and exposes no generic path or policy override.
+- The one registered qualification passed 60 paths, 60 VR33A calls, 180
+  provider calls, 120 fixed sleeper calls, 32 PPP-only source constructions,
+  source opens, and VR31A calls, plus eight direction comparisons.
+- Exact VR34P G1/G2/R1/R2/R3 counts were 4/4/4/4/44. All seven nonpassing
+  readiness patterns performed zero source constructions, zero source opens,
+  and zero VR31A calls. Exact replay and 223 direct refusals passed.
+- The pass used 14,152,684 generated input bytes in 3.024067790945992 seconds
+  at 37,257,216-byte peak RSS. Generated output writes totaled 46,332 bytes,
+  peak incremental output was 791 bytes, aggregate output was 3,709 bytes,
+  and retained generated output was zero.
+- Focused verification passes 28 tests. The complete dependency-light suite
+  passes 5,403 tests with 204 expected skips, exactly 28 more than the 5,375-
+  test pre-change baseline. Ruff, compilation, 411 registry JSON files, CLI
+  help/plan/proof-gated execute, and diff hygiene pass.
+- An optional local `.venv` run reached 5,474 tests with 35 skips but observed
+  one macOS forkserver sandbox error and two pre-existing RSS-sensitive
+  mechanical-gate failures after loading optional stacks. Remote Base Python
+  and Optional Neuro Readers CI remain the acceptance proof.
+
+Immediate gate: commit, push, and green this exact Stage 1 implementation.
+Then add a separate proof-only closeout without repeating qualification or
+touching private state, and require both remote jobs green before Stage 2.

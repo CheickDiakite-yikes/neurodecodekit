@@ -45,42 +45,31 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
-`MARC2-VR33A` is remotely closed generated engineering. Exact proof-only
-closeout `22dcb05a1da90b153b715a0374eeb3673024f53c` passed Base job
-`97185995887`, Optional job `97185995981`, and CI `32636104743` without
-repeating qualification or touching private state.
+`MARC2-VR34P` generated Stage 1 is locally complete and qualified exactly once.
+Its packet-bound decision `5d6a56ecfad01f49d9e7987cc1072c4aab15bd11`
+passed Base Python job `97193199080`, Optional Neuro Readers job
+`97193198951`, and CI `32639054941` before implementation. Read
+`docs/MARC_2_EXACT_COUNT_PRIVATE_CONFIRMATION_IMPLEMENTATION.md`,
+`registries/marc2_exact_count_private_confirmation_implementation.v0.json`,
+and `registries/marc2_exact_count_private_confirmation_result.v0.json` first.
 
-The sole active Tier C packet is `MARC2-VR34P`. Exact request
-`d4215c5aa5b8e43d91ff7ff26b8ea035648f3706` passed Base Python job
-`97189079380`, Optional Neuro Readers job `97189079311`, and CI
-`32637387771`. Exact request-proof closeout
-`45cc8f18fe8fc7f5c8b9675648a4cd358617808d` passed Base Python job
-`97190816942`, Optional Neuro Readers job `97190817104`, and CI
-`32638120718`. Read
-`docs/MARC_2_EXACT_COUNT_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md` and
-`registries/marc2_exact_count_private_confirmation_authorization_request.v0.json`,
-then read `docs/MARC_2_EXACT_COUNT_PRIVATE_CONFIRMATION_REQUEST_PROOF_CLOSEOUT.md`
-and `registries/marc2_exact_count_private_confirmation_request_proof.v0.json`.
-It binds 17 committed VR33A, VR31A, and aggregate VR32P artifacts totaling
-137,581 bytes. Delayed Stage 1 is a generated/mock fixed-path wrapper that
-calls unchanged VR33A on 60 paths and unchanged VR31A only after `PPP`.
-Delayed Stage 2 is one distinct target-free structural invocation using
-exactly three readiness-provider calls, two fixed sleeps, at most one
-418,755-byte source open after `PPP`, and one aggregate R1/R2 answer.
+The sole generated qualification passed all 60 paths: 60 unchanged VR33A
+calls, 180 provider calls, 120 fixed sleeper calls, 32 source constructions and
+VR31A calls only after `PPP`, exact G1/G2/R1/R2/R3 counts 4/4/4/4/44, 223
+direct refusals, and exact replay. Every nonpassing readiness pattern produced
+zero source constructions, zero source opens, and zero VR31A calls. Runtime was
+3.024067790945992 seconds at 37,257,216-byte peak RSS; peak incremental output
+was 791 bytes and retained generated output was zero. Do not repeat this
+qualification.
 
-After Codex identified this exact packet as the sole gate, the maintainer's
-next message was the exact eight UTF-8 bytes `continue`. Read
-`docs/MARC_2_EXACT_COUNT_PRIVATE_CONFIRMATION_AUTHORIZATION_DECISION.md` and
-`registries/marc2_exact_count_private_confirmation_authorization_decision.v0.json`.
-The decision binds six unchanged packet/proof artifacts totaling 41,496 bytes
-and is ineffective until its own exact commit is pushed and both jobs are
-green. Immediate gate: verify, commit, push, and green the decision. Do not
-implement early or inspect private/ignored state. After decision green, only
-generated Stage 1 opens; Stage 2 remains closed until exact Stage 1 and a
-separate proof-only closeout are both remotely green. Do not import, call,
-repair, or modify consumed VR32P.
-FW2/CIL1, archives, neural data, targets, models, scores, streams, devices,
-release, and claims remain closed.
+Immediate gate: commit, push, and green this exact Stage 1 implementation.
+Then prepare a separate proof-only closeout that binds the exact implementation
+bytes and remote proof without requalification or private access; commit,
+push, and green that closeout. Only after both barriers may the already
+authorized one-shot Stage 2 execute. Until then `execute` must refuse at
+`MARC2VR34P-F02` before readiness or private path access. Do not touch consumed
+VR32P or any private/ignored state. FW2/CIL1, archives, neural data, targets,
+models, scores, streams, devices, release, and claims remain closed.
 
 ### Consumed VR32P boundary
 

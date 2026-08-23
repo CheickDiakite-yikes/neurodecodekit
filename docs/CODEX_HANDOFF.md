@@ -1,19 +1,20 @@
 # Codex Handoff - NeuroDecodeKit
 
-> Current MARC2-VR34P gate, 2026-08-23: exact request-proof closeout `45cc8f1`
-> passed Base job `97190816942`, Optional job `97190817104`, and CI
-> `32638120718`. After Codex identified VR34P as the sole active Tier C packet,
-> the maintainer's next exact message was `continue`. Read the packet-bound
-> decision document and registry. They bind six unchanged packet/proof files
-> totaling 41,496 bytes. Delayed Stage 1
-> composes unchanged VR33A and VR31A over 60 generated/mock paths. Delayed
-> Stage 2 uses exactly three provider calls and two fixed sleeps, opens the
-> 418,755-byte target-free structural source at most once only after `PPP`, and
-> retains only aggregate R1 below 195 or R2 above 195. Immediate gate: verify,
-> commit, push, and green the decision. Before that proof, do not implement or
-> touch private state. After decision green, only generated Stage 1 opens;
-> Stage 2 remains closed until exact Stage 1 and its proof-only closeout are
-> remotely green. Do not touch consumed VR32P/private state.
+> Current MARC2-VR34P gate, 2026-08-23: packet-bound decision `5d6a56e`
+> passed Base job `97193199080`, Optional job `97193198951`, and CI
+> `32639054941` before implementation. Generated Stage 1 is locally complete
+> and qualified exactly once: 60 paths, 60 VR33A calls, 180 provider calls,
+> 120 fixed sleeps, 32 source constructions/opens and VR31A calls only after
+> `PPP`, G1/G2/R1/R2/R3 counts 4/4/4/4/44, 223 direct refusals, and exact
+> replay. Every nonpassing readiness pattern made zero source constructions,
+> opens, and VR31A calls. Runtime was 3.024067790945992 seconds at 37,257,216-
+> byte peak RSS; peak temporary output was 791 bytes and retention was zero.
+> All 5,403 dependency-light tests pass with 204 expected skips. Do not repeat
+> qualification. Immediate gate: commit, push, and green exact Stage 1, then
+> separately bind and green its proof-only closeout without private access.
+> Until both barriers pass, `execute` refuses at `MARC2VR34P-F02`; Stage 2 and
+> all consumed VR32P/private, neural, target, model, score, FW2/CIL1, device,
+> release, and claim surfaces remain closed.
 
 > Current MARC2-VR32P result, 2026-08-23: proof-only closeout
 > `5aec8a15f5ee6fa3c6ca9cefcfb4fbfead9dd72f` passed Base Python job

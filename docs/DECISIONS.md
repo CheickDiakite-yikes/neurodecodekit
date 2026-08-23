@@ -12254,3 +12254,28 @@ VR32P, archive, neural, target, model, score, FW2/CIL1, network, device,
 release, other-project, or claim operation. After remote green, only generated
 Stage 1 may begin; Stage 2 remains closed until exact Stage 1 and a separate
 proof-only closeout are both remotely green.
+
+## 0424 - Accept The Sole Generated VR34P Exact-Readiness Qualification
+
+Proof decision: packet-bound decision
+`5d6a56ecfad01f49d9e7987cc1072c4aab15bd11` passed CI `32639054941`, Base
+Python job `97193199080`, and Optional Neuro Readers job `97193198951` before
+implementation.
+
+Implementation decision: add one standard-library fixed-path wrapper that
+composes unchanged VR33A and unchanged VR31A. Every path performs exactly
+three readiness-provider calls and two sleeper calls. Non-`PPP` readiness
+consumes at R3 with zero source construction, source open, or VR31A call; only
+`PPP` may construct and open a generated source after its consumed marker.
+
+Result decision: accept the sole generated `MARC2VR34P-G1` qualification. All
+60 paths, 60 VR33A calls, 180 provider calls, 120 sleeps, 32 PPP-only VR31A
+calls, G1/G2/R1/R2/R3 counts 4/4/4/4/44, 223 direct refusals, exact replay,
+and source immutability passed in 3.024067790945992 seconds at 37,257,216-byte
+peak RSS. Peak incremental output was 791 bytes and retained output was zero.
+
+Boundary decision: do not repeat qualification or touch consumed VR32P,
+private/ignored state, archives, neural data, targets, models, scores, network,
+FW2/CIL1, devices, release, or claims. Commit, push, and green exact Stage 1,
+then separately bind its proof-only closeout without requalification or private
+access. Stage 2 remains closed until both proof barriers are remotely green.
