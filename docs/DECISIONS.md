@@ -11632,3 +11632,27 @@ archive, neural, target, model, score, network, provider, device, other-
 project, release, or claim operation. This closeout has delayed effect until
 its own exact commit is pushed and both jobs are green. Fresh packet-bound
 maintainer words remain required before any decision or implementation.
+
+## 0396 - Authorize The VR28P Two-Stage Private Discriminator
+
+Proof decision: exact request `4e5895fc0fc8bc3cf2c91f5211406115a8e2e6d5`
+passed CI `32613575234`, and exact proof closeout
+`87d4b30ca846d7481c45631ec7625d500e0f9595` passed CI `32614149622`, with
+both required jobs green for both commits.
+
+Authorization decision: after VR28P was identified as the sole active Tier C
+packet, the maintainer's next message was exactly the eight UTF-8 bytes
+`continue`. Bind that short-form instruction only to the unchanged 42,142-byte
+packet artifact set under the approved charter rule.
+
+Sequence decision: after this decision is remotely green, authorize one
+generated fixed-path implementation and qualification. Only after that exact
+implementation and a separate proof-only closeout are each remotely green,
+authorize one readiness-gated 418,755-byte target-free structural read, one
+VR25A call, one VR27A map call, and one aggregate-only R1-R5 report.
+
+Boundary decision: retain no private predicate, count, direction, row, path,
+identity, participant, selection, or cohort. Authorize no archive member,
+neural payload, target, model, training, inference, score, FW2/CIL1, network,
+device, release, or scientific claim. The decision is ineffective until its
+own exact commit is pushed and both CI jobs are green.

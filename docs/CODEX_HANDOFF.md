@@ -1,5 +1,17 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR28P packet-bound decision, 2026-08-22: proof closeout
+> `87d4b30ca846d7481c45631ec7625d500e0f9595` passed Base Python job
+> `97131943291`, Optional Neuro Readers job `97131943377`, and CI
+> `32614149622`. After VR28P was identified as the sole active Tier C packet,
+> the maintainer's next exact message was `continue`. The decision binds those
+> eight UTF-8 bytes and only the unchanged 42,142-byte packet artifact set.
+> It authorizes Stage 1 only after its own remote green proof; Stage 2 remains
+> behind exact implementation and proof-closeout barriers. Immediate gate:
+> verify, commit, push, and green this decision. No `.codex_work`, readiness,
+> private source, archive/neural payload, target, model, score, FW2/CIL1,
+> device, stream, release, or claim operation is open before that proof.
+
 > Current MARC2-VR28P request proof closeout, 2026-08-22: exact request
 > `4e5895fc0fc8bc3cf2c91f5211406115a8e2e6d5` passed Base Python job
 > `97130420447`, Optional Neuro Readers job `97130420507`, and CI

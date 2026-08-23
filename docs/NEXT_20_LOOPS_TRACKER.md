@@ -3918,6 +3918,22 @@ ignored-path, archive, neural, target, model, score, network, FW2/CIL1, or
 claim operation. Next gate: commit, push, and green this exact closeout. Only
 then may the one registered target-free structural discriminator execute.
 
+### MARC2-VR28P - Packet-Bound Decision Recorded; Remote Green Pending
+
+Exact proof-only closeout `87d4b30ca846d7481c45631ec7625d500e0f9595`
+passed Base Python job `97131943291`, Optional Neuro Readers job
+`97131943377`, and CI `32614149622`. VR28P was then named the sole active
+Tier C packet, and the maintainer's next exact message was `continue`.
+
+The decision preserves those eight UTF-8 bytes and binds only the unchanged
+42,142-byte request/proof artifact set. Stage 1 generated implementation is
+authorized only after the decision's own remote green proof. The single
+private read remains behind exact Stage 1 and proof-closeout green barriers.
+
+Immediate gate: verify, commit, push, and green the decision. No generated
+implementation, readiness, private, neural, target, model, score, FW2/CIL1,
+device, stream, release, or claim operation may begin before that proof.
+
 ### MARC2-VR28P - Request Remotely Green; Proof Closeout Pending
 
 Exact all-false request `4e5895fc0fc8bc3cf2c91f5211406115a8e2e6d5`

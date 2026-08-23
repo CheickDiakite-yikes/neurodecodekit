@@ -13083,6 +13083,25 @@ private state. Stage 2 remains closed until that barrier passes.
 Immediate gate: commit, push, and green this exact proof-only closeout. Do not
 run `execute`, collect readiness, or touch private state before both jobs pass.
 
+### VR28P packet-bound decision recorded
+
+- Exact proof-only closeout `87d4b30ca846d7481c45631ec7625d500e0f9595`
+  passed Base Python job `97131943291`, Optional Neuro Readers job
+  `97131943377`, and CI `32614149622`.
+- After Codex identified VR28P as the sole active Tier C packet, the
+  maintainer's next exact message was `continue`. The decision records those
+  eight UTF-8 bytes and their SHA-256 without fabricating long-form words.
+- Bound six immutable request and proof artifacts totaling 42,142 bytes.
+- Preserved the generated-first, proof-barrier, one-private-read order, five
+  aggregate routes, no private-detail retention, no cohort, and all resource
+  limits without expansion.
+- Decision recording touched no `.codex_work`, readiness, private source,
+  consumed state, archive/neural payload, target, model, score, network,
+  device, other project, release, or scientific claim.
+
+Immediate gate: verify, commit, push, and green this exact decision before
+Stage 1 generated implementation begins.
+
 ### VR28P request remotely green; proof closeout prepared
 
 - Exact all-false request `4e5895fc0fc8bc3cf2c91f5211406115a8e2e6d5`

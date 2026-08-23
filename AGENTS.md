@@ -89,13 +89,24 @@ Python job `97130420447`, Optional Neuro Readers job `97130420507`, and CI
 and its machine proof. The closeout binds the unchanged 30,187-byte request
 artifact set and performs zero implementation or private operation.
 
-Immediate gate: commit, push, and green this exact proof-only closeout. Only
-afterward identify VR28P as the sole active Tier C packet. The current
-`continue` predates the packet and is not retroactive authority. Before a
-fresh packet-bound decision, do not implement the wrapper or touch readiness,
-`.codex_work`, the private source, or an output root. FW2/CIL1, archive
-members, neural data, targets, models, scores, streams, devices, releases, and
-claims remain closed.
+Exact proof-only closeout `87d4b30ca846d7481c45631ec7625d500e0f9595`
+passed Base Python job `97131943291`, Optional Neuro Readers job
+`97131943377`, and CI `32614149622`. Codex then identified VR28P as the sole
+active Tier C packet. The maintainer's next exact message was `continue`.
+
+Read
+`docs/MARC_2_INVENTORY_TAXONOMY_PRIVATE_DISCRIMINATOR_AUTHORIZATION_DECISION.md`
+and
+`registries/marc2_inventory_taxonomy_private_discriminator_authorization_decision.v0.json`.
+The decision binds the exact eight-byte message and unchanged green packet by
+reference. It has delayed effect until its own commit is pushed and both jobs
+are green.
+
+Immediate gate: commit, push, and green the exact decision. Only then may
+Stage 1 generated implementation and qualification begin. Before that proof,
+do not touch readiness, `.codex_work`, the private source, or an output root.
+FW2/CIL1, archive members, neural data, targets, models, scores, streams,
+devices, releases, and claims remain closed.
 
 ### Historical VR22P/VR23A/VR24P boundary
 

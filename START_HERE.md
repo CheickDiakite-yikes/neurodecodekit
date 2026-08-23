@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR28P Request Proof Closeout Pending
+## Current Frontier: MARC2-VR28P Decision Recorded; Remote Proof Pending
 
 VR24P result `a873f1a` passed Base job `97103071419`, Optional Neuro Readers
 job `97103071353`, and CI `32602610854`. The exact one-shot result remains
@@ -166,13 +166,21 @@ and its machine proof. The closeout binds the unchanged 8,318-byte packet,
 14,289-byte request, and 7,580-byte test by hash and Git blob. It changes no
 scope and performs zero implementation or private operation.
 
-Immediate gate: verify, commit, push, and green this proof-only closeout. Only
-afterward may VR28P be identified as the sole active Tier C packet. The current
-`continue` predates the packet and is not retroactive authority. Do not
-implement the wrapper or touch readiness, `.codex_work`, the private source,
-or an output root before a fresh packet-bound decision. FW2/CIL1,
-archive/neural payload, targets, models, scores, devices, streams, releases,
-and scientific claims remain closed.
+Exact proof-only closeout `87d4b30` passed Base Python job `97131943291`,
+Optional Neuro Readers job `97131943377`, and CI `32614149622`. Codex then
+identified VR28P as the sole active Tier C packet. The maintainer's next exact
+message was the eight UTF-8 bytes `continue`.
+
+Read
+`docs/MARC_2_INVENTORY_TAXONOMY_PRIVATE_DISCRIMINATOR_AUTHORIZATION_DECISION.md`
+and its machine decision. They bind only the unchanged green packet by
+reference and have delayed effect.
+
+Immediate gate: verify, commit, push, and green this exact decision before
+implementing the generated wrapper or touching readiness, `.codex_work`, the
+private source, or an output root. FW2/CIL1, archive/neural payload, targets,
+models, scores, devices, streams, releases, and scientific claims remain
+closed.
 
 ## Historical Frontier: MARC2-VR24P Consumed At R2
 
