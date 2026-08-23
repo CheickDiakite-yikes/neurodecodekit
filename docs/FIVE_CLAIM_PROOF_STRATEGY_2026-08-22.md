@@ -69,7 +69,8 @@ The ordered work is:
    establish, under exact finite readiness, that the current task-blind
    eligible total is above 195 without exposing a count or cohort.
 2. `MARC2-VR35A`: generated-only task-aware eligibility and selection repair,
-   explicitly separating mixed-task surplus from genuine target-task drift.
+   now qualified across 20 paths and explicitly separating mixed-task surplus
+   from genuine target-task drift without asserting the private cause.
 3. A separately authorized private confirmation may freeze one target-free
    structural cohort only if the exact-task projection and selector pass.
 4. `MARC2-FW2`: acquire and semantically qualify only selected archive members
@@ -154,12 +155,17 @@ Protocol-conforming `MARC2-VR34P` is consumed at aggregate R2: the current
 task-blind eligible total is above 195, but the count, task distribution,
 identity, participant, selection, and cohort remain unavailable.
 
-The next gate is generated-only `MARC2-VR35A`, which projects exact published
-task identity before eligibility arithmetic and tests mixed-task surplus
-against genuine target-task drift. Its registration must be committed, pushed,
-and green before implementation. It has no private executor and cannot freeze
-a cohort. A later private confirmation and all FW2 work remain separate Tier C
-decisions.
+Generated-only `MARC2-VR35A` now qualifies exact published-task projection
+before eligibility arithmetic. Its 20-path matrix removes mixed-task surplus,
+preserves genuine target-task drift, reproduces the baseline semantic cohort,
+and selects zero non-target rows. This establishes the repair mechanism on
+generated fixtures, not the private cause of VR34P R2.
+
+The immediate gate is exact implementation/result remote proof and a separate
+proof-only closeout without requalification. Only afterward may an all-false
+private cohort-confirmation packet be prepared. VR35A has no private executor
+and cannot freeze a cohort; private confirmation and all FW2 work remain
+separate Tier C decisions.
 
 ## Claim Boundary
 

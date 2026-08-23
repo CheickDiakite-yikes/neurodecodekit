@@ -7,22 +7,25 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: MARC2-VR35A Task-Aware Eligibility Registration
+## Current Gate: MARC2-VR35A Implementation Remote Proof
 
-Read `docs/MARC_2_TASK_AWARE_ELIGIBILITY_REPAIR_PREREGISTRATION.md` and
-`registries/marc2_task_aware_eligibility_repair_contract.v0.json`. Static
-analysis shows the current eligibility classifier counts by participant and
-session without a task dimension, while exact `reachingandgrasping` identity
-is checked only later during selected-row validation.
+Read the VR35A preregistration and implementation documents, contract,
+implementation record, generated result, and matching tests. Registration
+`aa4c39a5ce8ca04627c9252600971ee878f20e3e` passed Base job
+`97203738713`, Optional job `97203738637`, and CI `32643351246` before the
+sole qualification.
 
-VR35A tests baseline, mixed-task surplus, exact-task surplus, exact-task
-deficit, and task/selection-firewall conditions in parallel. The generated
-matrix freezes 20 paths across two orders and two replays. Mixed-task surplus
-must produce the same semantic cohort as baseline; genuine exact-task drift
-must remain an explicit refusal. No real/private source is accessed.
+All 20 generated paths passed with four each of G1/G2/R1/R2/R3. Exact
+`reachingandgrasping` projection removed mixed-task surplus and reproduced the
+baseline semantic cohort, while genuine target-task surplus/deficit remained
+explicit R1/R2 results. Eight selections, eight selection validations, 99
+direct refusals, 20 immutability checks, and exact replay passed with zero
+non-target selected rows and zero retained output.
 
-Immediate gate: verify, commit, push, and green the exact registration before
-generated implementation. A private wrapper, cohort freeze, archive member,
+Immediate gate: commit, push, and green the exact implementation/result, then
+green one proof-only closeout without rerunning qualification. This is
+generated engineering evidence only. It does not establish the private cause
+of VR34P R2 or a real cohort. A private wrapper, cohort freeze, archive member,
 or neural step remains a separate Tier C packet and decision.
 
 ## Consumed Boundary: MARC2-VR34P Protocol-Conforming R2

@@ -1,0 +1,116 @@
+{
+  "schema_name": "neurodecodekit.marc2_task_aware_eligibility_repair_result",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC2-VR35A",
+  "status": "generated_task_aware_repair_qualified_no_private_access",
+  "registration_proof": {
+    "commit": "aa4c39a5ce8ca04627c9252600971ee878f20e3e",
+    "CI_run_id": 32643351246,
+    "base_job_id": 97203738713,
+    "optional_neuro_job_id": 97203738637
+  },
+  "matrix": {
+    "paths": 20,
+    "cases": 5,
+    "orders": 2,
+    "replays": 2,
+    "route_counts": {
+      "MARC2VR35A-G1": 4,
+      "MARC2VR35A-G2": 4,
+      "MARC2VR35A-R1": 4,
+      "MARC2VR35A-R2": 4,
+      "MARC2VR35A-R3": 4
+    },
+    "selection_calls": 8,
+    "selection_validation_calls": 8,
+    "mixed_task_semantic_cohort_matches_baseline": true,
+    "non_target_selected_rows": 0,
+    "exact_replays_match": true,
+    "source_immutability_checks": 20
+  },
+  "repair": {
+    "published_task": "reachingandgrasping",
+    "task_projection_precedes_eligibility_arithmetic": true,
+    "mixed_task_surplus_removed": true,
+    "genuine_target_task_surplus_distinguished": true,
+    "genuine_target_task_deficit_distinguished": true,
+    "unchanged_rank_prefix_split_and_storage_selector": true,
+    "source_exact_selected_names_required": true
+  },
+  "refusals": {
+    "direct_refusals": 99,
+    "route_counts": {
+      "MARC2VR35A-F01": 70,
+      "MARC2VR35A-F05": 19,
+      "MARC2VR35A-F06": 4,
+      "MARC2VR35A-R3": 6
+    }
+  },
+  "measurements": {
+    "fixed_input_bytes": 250900,
+    "generated_input_bytes": 8836768,
+    "aggregate_output_bytes": 2950,
+    "retained_output_bytes": 0,
+    "runtime_seconds": 1.2351410000119358,
+    "peak_RSS_bytes": 36044800,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "end_to_end_latency_measured": false
+  },
+  "operation_counters": {
+    "FW2_or_CIL1_operations": 0,
+    "archive_header_or_member_reads": 0,
+    "cohort_freezes": 0,
+    "model_training_inference_prediction_or_scoring_runs": 0,
+    "network_or_provider_calls": 0,
+    "neural_signal_operations": 0,
+    "new_payload_bytes": 0,
+    "other_project_operations": 0,
+    "private_or_Git_ignored_path_operations": 0,
+    "private_source_stats_resolves_hashes_opens_reads_or_parses": 0,
+    "readiness_or_consumed_state_operations": 0,
+    "scientific_claim_upgrades": 0,
+    "target_or_label_operations": 0
+  },
+  "warnings": [
+    "generated_fixture_only_no_private_or_real_source_access",
+    "mixed_task_surplus_is_compatible_with_VR34P_R2_but_not_proven_as_its_private_cause",
+    "no_real_cohort_archive_member_neural_payload_or_scientific_result"
+  ],
+  "unavailable_fields": [
+    "private_total_or_difference",
+    "private_task_distribution",
+    "real_target_free_cohort",
+    "archive_member_integrity",
+    "neural_signal_event_target_model_prediction_or_score",
+    "end_to_end_neural_decoding_latency"
+  ],
+  "claim_boundary": {
+    "engineering_capability_proposed": "task-aware structural eligibility and deterministic cohort selection on generated fixtures",
+    "scientific_ceiling": "none",
+    "real_cohort_established": false,
+    "neural_payload_accessed": false,
+    "target_or_label_accessed": false,
+    "model_prediction_or_score_accessed": false,
+    "decoding_performance_established": false,
+    "language_or_thought_decoding_established": false,
+    "unseen_person_generalization_established": false,
+    "live_or_realtime_decoding_established": false
+  },
+  "qualification_invocations": 1,
+  "qualification_may_be_repeated": false,
+  "remote_implementation_proof": null,
+  "next_gate": {
+    "exact_implementation_commit_push_and_both_CI_jobs_green_required": true,
+    "proof_only_closeout_required_after_green": true,
+    "qualification_may_be_repeated": false,
+    "private_execution_or_consumed_lane_reinspection_authorized": false,
+    "future_private_cohort_freeze_requires_new_Tier_C_packet_and_decision": true,
+    "FW2_CIL1_archive_neural_target_model_score_or_live_work_authorized": false
+  }
+}

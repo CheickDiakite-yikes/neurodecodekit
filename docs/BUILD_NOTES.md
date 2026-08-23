@@ -14291,3 +14291,28 @@ and a separately frozen Tier C packet for any cohort, archive, or neural step.
 
 Immediate gate: verify, commit, push, and green the registration before
 implementation. A private wrapper or cohort freeze remains a new Tier C gate.
+
+### VR35A generated task-aware repair qualified once
+
+- Registration `aa4c39a5ce8ca04627c9252600971ee878f20e3e` passed Base
+  Python job `97203738713`, Optional Neuro Readers job `97203738637`, and CI
+  `32643351246` before implementation.
+- Added a standard-library task-aware structural grouper that retains task
+  identity, projects exact lowercase `reachingandgrasping`, and only then
+  invokes the unchanged VR2 classifier and existing deterministic selector.
+- The sole qualification passed 20 paths with G1/G2/R1/R2/R3 counts of
+  4/4/4/4/4, eight selector calls, eight validation calls, exact replay, 20
+  source immutability checks, 99 direct refusals, and zero retained output.
+- The mixed-task surplus selected the same semantic cohort as baseline after
+  projection, and all selected rows used the exact target task. Genuine
+  target-task surplus and deficit remained explicit R1/R2 routes.
+- Runtime was 1.2351410000119358 seconds at 36,044,800-byte peak RSS over
+  8,836,768 generated input bytes. The canonical aggregate report was 2,950
+  bytes. Every private, cohort, archive, neural, target, model, score, network,
+  FW2/CIL1, device, release, other-project, and claim counter was zero.
+- Qualification may not be repeated. Mixed-task surplus is a demonstrated
+  generated mechanism compatible with VR34P R2, not its proven private cause.
+
+Immediate gate: run final repository verification, commit, push, and green the
+exact implementation/result, then add and green a proof-only closeout without
+requalification. A private cohort freeze remains a new Tier C gate.

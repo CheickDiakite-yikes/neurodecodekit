@@ -1,0 +1,146 @@
+{
+  "schema_name": "neurodecodekit.marc2_task_aware_eligibility_repair_implementation",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC2-VR35A",
+  "recorded_at_local": "2026-08-23",
+  "status": "generated_qualification_passed_remote_implementation_proof_pending",
+  "registration_proof": {
+    "commit": "aa4c39a5ce8ca04627c9252600971ee878f20e3e",
+    "CI_run_id": 32643351246,
+    "base_job_id": 97203738713,
+    "optional_neuro_job_id": 97203738637,
+    "both_required_jobs_green": true,
+    "contract_bytes": 11579,
+    "contract_sha256": "b801d9f1db51d7b6053f22bebd2d8dcda9e4987cbb242cf4f19b69f72fc46823"
+  },
+  "implementation_artifacts": [
+    {
+      "role": "module",
+      "path": "src/neurodecodekit/datasets/marc2_task_aware_eligibility_repair.py",
+      "bytes": 35615,
+      "sha256": "a2acf29d44cfba6f840a239cdb72e4ac35a057576022c43bff1f37fd64c7fa51"
+    },
+    {
+      "role": "behavior_tests",
+      "path": "tests/test_marc2_task_aware_eligibility_repair.py",
+      "bytes": 7846,
+      "sha256": "dbe1fd43b566ecde7799fa70f0d81d8065ffd6c33ad3c4e12c99d9495ed23c26"
+    },
+    {
+      "role": "result_tests",
+      "path": "tests/test_marc2_task_aware_eligibility_repair_result.py",
+      "bytes": 6217,
+      "sha256": "830a3e05ba6a91bdda45d606e5d39c922466efce2ff11d20f5b5c96c928fac21"
+    },
+    {
+      "role": "implementation_document",
+      "path": "docs/MARC_2_TASK_AWARE_ELIGIBILITY_REPAIR_IMPLEMENTATION.md",
+      "bytes": 4172,
+      "sha256": "95d28d3631a824313f58db9232c62153adc9aa7b80b4aa467d1140a369e699cc"
+    },
+    {
+      "role": "generated_result",
+      "path": "registries/marc2_task_aware_eligibility_repair_result.v0.json",
+      "bytes": 4071,
+      "sha256": "f87d2fe0372d57de4b4b73087c19de3188c4fb09fe793faea594c4adf392db28"
+    }
+  ],
+  "implementation_artifact_count": 5,
+  "implementation_artifact_bytes": 57921,
+  "surface": {
+    "commands": [
+      "plan",
+      "qualify"
+    ],
+    "private_executor_available": false,
+    "generic_path_URL_output_task_count_threshold_rank_cap_route_retry_or_resource_arguments": 0,
+    "standard_library_only": true,
+    "base_dependency_additions": 0,
+    "consumed_private_module_imports_or_calls": 0
+  },
+  "qualification": {
+    "qualification_invocations": 1,
+    "qualification_may_be_repeated": false,
+    "paths": 20,
+    "cases": 5,
+    "orders": 2,
+    "replays": 2,
+    "route_counts": {
+      "MARC2VR35A-G1": 4,
+      "MARC2VR35A-G2": 4,
+      "MARC2VR35A-R1": 4,
+      "MARC2VR35A-R2": 4,
+      "MARC2VR35A-R3": 4
+    },
+    "selection_calls": 8,
+    "selection_validation_calls": 8,
+    "mixed_task_semantic_cohort_matches_baseline": true,
+    "non_target_selected_rows": 0,
+    "source_immutability_checks": 20,
+    "direct_refusals_passed": 99,
+    "exact_replays_match": true,
+    "retained_output_bytes": 0
+  },
+  "resources": {
+    "fixed_input_bytes": 250900,
+    "generated_input_bytes": 8836768,
+    "runtime_seconds": 1.2351410000119358,
+    "peak_RSS_bytes": 36044800,
+    "aggregate_output_bytes": 2950,
+    "retained_output_bytes": 0,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "network_bytes": 0,
+    "new_payload_bytes": 0
+  },
+  "verification": {
+    "pre_change_dependency_light_tests": 5425,
+    "focused_tests_passed": 33,
+    "complete_dependency_light_tests_passed": 5448,
+    "expected_skips": 204,
+    "new_failures": 0,
+    "test_delta": 23,
+    "repository_pinned_ruff_version": "0.15.20",
+    "repository_pinned_ruff_passed": true,
+    "compile_passed": true,
+    "registry_JSON_files_parsed": 415,
+    "git_diff_check_passed": true,
+    "qualification_repeated_during_verification": false,
+    "private_operations_during_verification": 0
+  },
+  "operation_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "readiness_or_consumed_state_operations": 0,
+    "private_source_stats_resolves_hashes_opens_reads_or_parses": 0,
+    "archive_header_or_member_reads": 0,
+    "neural_signal_operations": 0,
+    "target_or_label_operations": 0,
+    "cohort_freezes": 0,
+    "model_training_inference_prediction_or_scoring_runs": 0,
+    "network_or_provider_calls": 0,
+    "new_payload_bytes": 0,
+    "FW2_or_CIL1_operations": 0,
+    "other_project_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "remote_implementation_proof": null,
+  "next_gate": {
+    "exact_implementation_commit_push_and_both_CI_jobs_green_required": true,
+    "proof_only_closeout_required_after_green": true,
+    "qualification_may_be_repeated": false,
+    "private_execution_or_consumed_lane_reinspection_authorized": false,
+    "future_private_cohort_freeze_requires_new_Tier_C_packet_and_decision": true,
+    "FW2_CIL1_archive_neural_target_model_score_or_live_work_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "task-aware structural eligibility and deterministic cohort selection on generated fixtures",
+    "scientific_ceiling": "none",
+    "real_cohort_established": false,
+    "neural_payload_accessed": false,
+    "target_model_prediction_or_score_accessed": false,
+    "decoding_performance_established": false,
+    "unseen_person_generalization_established": false,
+    "live_decoding_established": false
+  }
+}
