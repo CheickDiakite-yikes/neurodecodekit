@@ -1,0 +1,134 @@
+{
+  "schema_name": "neurodecodekit.marc2_selection_sufficiency_repair_result",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC2-VR38A",
+  "status": "generated_selection_sufficiency_repair_qualified",
+  "registration_proof": {
+    "commit": "25205b1d2a1033cf3cefcab022c885025ac76928",
+    "CI_run_id": 32670514251,
+    "base_job_id": 97270563617,
+    "optional_neuro_job_id": 97270563773
+  },
+  "matrix": {
+    "paths": 40,
+    "cases": 10,
+    "orders": 2,
+    "replays": 2,
+    "route_counts": {
+      "MARC2VR38A-G1": 4,
+      "MARC2VR38A-G2": 16,
+      "MARC2VR38A-R1": 8,
+      "MARC2VR38A-R2": 8,
+      "MARC2VR38A-R3": 4
+    },
+    "selector_calls": 40,
+    "source_immutability_checks": 40,
+    "exact_replays_match": true
+  },
+  "selection_proof": {
+    "accepted_paths": 20,
+    "accepted_semantic_identities": 1,
+    "accepted_source_exact_name_identities": 1,
+    "generated_selected_subjects": 16,
+    "generated_selected_run_bundles": 96,
+    "generated_selected_core_members": 384,
+    "required_runs_per_session": [
+      1,
+      2,
+      3
+    ],
+    "selected_optional_runs": 0,
+    "selected_non_target_rows": 0,
+    "selected_ineligible_rows": 0,
+    "global_exact_195_gate_used": false
+  },
+  "refusals": {
+    "direct_refusals": 101,
+    "route_counts": {
+      "MARC2VR38A-F01": 64,
+      "MARC2VR38A-F03": 1,
+      "MARC2VR38A-F05": 24,
+      "MARC2VR38A-F06": 3,
+      "MARC2VR38A-R1": 4,
+      "MARC2VR38A-R2": 4,
+      "MARC2VR38A-R3": 1
+    }
+  },
+  "measurements": {
+    "fixed_input_bytes": 252686,
+    "generated_input_bytes": 17674816,
+    "aggregate_output_bytes": 3606,
+    "retained_output_bytes": 0,
+    "runtime_seconds": 7.651170833967626,
+    "peak_RSS_bytes": 50528256,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "end_to_end_latency_measured": false
+  },
+  "operation_counters": {
+    "repository_dot_codex_work_operations": 0,
+    "private_or_consumed_source_stats_resolves_hashes_opens_reads_or_parses": 0,
+    "VR37P_decision_implementation_or_execution_operations": 0,
+    "archive_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "derivative_cache_feature_split_or_NeuroToken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "network_download_provider_or_language_model_operations": 0,
+    "stream_device_or_hardware_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "retry_rerun_resume_repair_fallback_or_substitution_operations": 0,
+    "release_publication_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "warnings": [
+    "generated_fixture_only_no_private_or_real_source_access",
+    "selection_sufficiency_is_not_a_real_cohort_freeze",
+    "no_archive_member_neural_payload_or_scientific_result"
+  ],
+  "unavailable_fields": [
+    "private_exact_task_total_difference_or_topology",
+    "real_target_free_selected_subjects_or_members",
+    "archive_member_integrity_or_payload",
+    "neural_signal_event_target_model_prediction_or_score",
+    "end_to_end_neural_decoding_latency"
+  ],
+  "terminal_next_gate": {
+    "registration_commit_push_and_both_jobs_green_before_implementation": true,
+    "generated_qualification_allowed_before_remote_green": false,
+    "implementation_and_proof_green_before_private_packet": true,
+    "next_private_structural_request_must_freeze_a_cohort_or_park_Freewill": true,
+    "topology_only_private_successor_allowed": false,
+    "minimum_private_cohort_subjects_if_successful": 12,
+    "private_read_cohort_freeze_archive_neural_target_model_score_or_claim_authorized_now": false
+  },
+  "claim_boundary": {
+    "engineering_capability_if_qualified": "generated proof that deterministic scientific selection is invariant to harmless optional-run drift",
+    "scientific_ceiling": "none",
+    "private_source_accessed": false,
+    "real_cohort_established": false,
+    "neural_payload_accessed": false,
+    "decoding_performance_established": false,
+    "no_signal_or_peripheral_baseline_beaten": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "live_decoding": false
+  },
+  "qualification_invocations": 1,
+  "qualification_may_be_repeated": false,
+  "remote_implementation_proof": {
+    "commit": null,
+    "CI_run_id": null,
+    "base_job_id": null,
+    "optional_neuro_job_id": null,
+    "both_required_jobs_green": false,
+    "proof_only_closeout_pending": true,
+    "scope_changed_after_qualification": false,
+    "generated_qualification_repeated_for_proof_closeout": false,
+    "private_operations_during_proof_closeout": 0
+  }
+}

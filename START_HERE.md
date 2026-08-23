@@ -7,25 +7,30 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: MARC2-VR38A Selection-Sufficiency Registration
+## Current Gate: MARC2-VR38A Implementation Proof
 
-Read the VR35A preregistration and implementation documents, contract,
-implementation record, generated result, and matching tests. Registration
-`aa4c39a5ce8ca04627c9252600971ee878f20e3e` passed Base job
-`97203738713`, Optional job `97203738637`, and CI `32643351246` before the
-sole qualification.
+VR38A registration `25205b1d2a1033cf3cefcab022c885025ac76928`
+passed Base job `97270563617`, Optional job `97270563773`, and CI
+`32670514251` before implementation. Read
+`docs/MARC_2_SELECTION_SUFFICIENCY_REPAIR_PREREGISTRATION.md`,
+`docs/MARC_2_SELECTION_SUFFICIENCY_REPAIR_IMPLEMENTATION.md`, the contract,
+implementation registry, result registry, and matching tests.
 
-All 20 generated paths passed with four each of G1/G2/R1/R2/R3. Exact
-`reachingandgrasping` projection removed mixed-task surplus and reproduced the
-baseline semantic cohort, while genuine target-task surplus/deficit remained
-explicit R1/R2 results. Eight selections, eight selection validations, 99
-direct refusals, 20 immutability checks, and exact replay passed with zero
-non-target selected rows and zero retained output.
+The one generated qualification passed all 40 paths with exact route counts
+4/16/8/8/4 and 101 direct refusals. All 20 accepted paths produced one full
+structural selection: 16 generated subjects, 96 bundles, and 384 core members,
+with zero selected optional, non-target, or ineligible rows. The run used one
+thread, took 7.651170833967626 seconds, peaked at 50,528,256 bytes RSS, emitted
+3,606 aggregate bytes, and retained zero.
 
-VR35A proof closeout `6744568115f1f4871b68f4605d14732bf3af38f8`
-passed Base job `97209528132`, Optional job `97209528186`, and CI
-`32645704669`. Read the VR36P authorization packet, machine request, request
-proof closeout, and machine proof.
+Immediate gate: verify, commit, push, and green the implementation and result,
+then add a proof-only closeout without repeating qualification. Only after that
+closeout is green may one all-false terminal private packet be prepared. It
+must freeze at least 12 participants or park Freewill; no topology-only
+successor is eligible. Private, archive, neural, target, model, score, FW2/CIL1,
+and claim work remain closed.
+
+## Recent Structural History
 
 VR36P requests a generated/mock wrapper followed, after every proof barrier,
 by one fixed target-free structural read and one VR35A call. A successful G1
@@ -109,19 +114,11 @@ therefore remotely proven, but no packet-bound decision was recorded and it
 remains unexecuted. Because every VR37P route freezes zero cohorts, executing
 it would not unlock FW2 or CIL1.
 
-The new generated-only `MARC2-VR38A` registration freezes a selection-
-sufficiency rule instead. It keeps exact source, task, taxonomy, companion,
-rank, split, and storage checks; requires runs 1-3 in both sessions for the
-examined ranked prefix; and ignores only complete optional later runs that
-cannot change the selected semantic cohort. Forty generated paths must prove
-one shared selection across the exact control and four harmless-drift classes,
-while required-run, taxonomy, companion, and minimum-prefix defects refuse.
-
-Immediate gate: commit, push, and green the exact VR38A registration before
-implementation or qualification. Its future terminal private request must
-either freeze at least 12 participants or park Freewill without another
-topology-only discriminator. Private, archive, neural, target, model, score,
-FW2/CIL1, and claim work remain closed.
+The generated-only `MARC2-VR38A` selection-sufficiency repair then passed its
+sole qualification as summarized at the top of this file. It preserved exact
+source, task, taxonomy, companion, rank, split, and storage checks while
+removing only the unnecessary global exact-195 requirement. Its implementation
+proof is the current gate; no real cohort or neural payload has been opened.
 
 ## Consumed Boundary: MARC2-VR34P Protocol-Conforming R2
 

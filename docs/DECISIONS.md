@@ -12595,3 +12595,22 @@ split, member, and storage validation. The future terminal private packet must
 freeze at least 12 participants or park Freewill; no further topology-only
 private discriminator is eligible. VR38A registration performs zero private,
 archive, neural, target, model, score, FW2/CIL1, release, or claim operation.
+
+## 0442 - Qualify Selection Sufficiency Before One Terminal Cohort Attempt
+
+Proof decision: VR38A registration
+`25205b1d2a1033cf3cefcab022c885025ac76928` passed CI `32670514251`, Base
+Python job `97270563617`, and Optional Neuro Readers job `97270563773` before
+implementation.
+
+Engineering decision: implement one standard-library selector that preserves
+the complete selected structural record while removing only the global
+exact-195 precondition. The one 40-path generated qualification passed with 20
+accepted paths sharing one exact 16-subject, 96-bundle, 384-member selection
+and 101 direct refusals.
+
+Boundary decision: qualification is consumed and may not be repeated. Commit,
+push, and green the implementation, then add one proof-only closeout. The next
+private structural packet must be terminal: freeze at least 12 participants or
+park Freewill. No private, archive, neural, target, model, score, FW2/CIL1,
+release, or claim operation is authorized by this generated result.
