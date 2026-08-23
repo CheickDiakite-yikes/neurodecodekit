@@ -1,15 +1,12 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate update (2026-08-23):** exact VR30P proof-only closeout `7ce2c5e`
-> passed Base job `97159363190`, Optional job `97159363046`, and CI
-> `32625197776` before the sole invocation. The run read and strict-parsed
-> exactly 418,755 target-free structural bytes once, called VR29A once, and
-> consumed at `MARC2VR30P-R1` in 10.091467417078093 seconds at 30,752,768-byte
-> peak RSS. R1 means the filtered eligible total differs from 195. No observed
-> count, direction, magnitude, participant, or cohort was retained; no neural
-> payload, target, model, prediction, or score was accessed. VR30P has no retry
-> or private reinspection. Next safe lane: a generated-only below/above-total
-> discriminator.
+> **Immediate update (2026-08-23):** green VR30P result `a6e1ac5` / CI
+> `32626086478` anchors new generated-only lane `MARC2-VR31A`. Its frozen
+> 32-path matrix calls unchanged VR29A once per path and maps only the eight R1
+> paths to below-195 versus above-195 aggregate routes. The actual generated
+> or future private count and difference may never be returned or retained.
+> Registration must become remotely green before implementation; no new
+> private or neural operation is open.
 
 > **Current MARC2 frontier (2026-08-22):** VR20A corrected the inherited
 > `task-freewill` identity to the primary-source-published
@@ -3928,6 +3925,28 @@ The closeout repeats no qualification and performs zero readiness, private,
 ignored-path, archive, neural, target, model, score, network, FW2/CIL1, or
 claim operation. Next gate: commit, push, and green this exact closeout. Only
 then may the one registered target-free structural discriminator execute.
+
+### MARC2-VR31A - Eligible-Total Direction Registration Prepared
+
+Green VR30P result `a6e1ac5c17c2cffd4d07222c1f3eebcd05fb6a22` passed Base
+Python job `97161557067`, Optional Neuro Readers job `97161557277`, and CI
+`32626086478` before registration.
+
+VR31A freezes eight generated 1,227-row cases, canonical/reversed order, two
+replays, 32 unchanged VR29A calls, and eight R1 direction comparisons. Exact
+route counts must be G1/G2/R1/R2/R3 = 4/4/4/4/16. R1 means below 195 and R2
+means above 195; no count, difference, participant, distribution, or source
+detail may escape.
+
+The module may use only the standard library and expose `plan` and `qualify`.
+It has no private executor, threshold override, source path, URL, retry, or
+output override. Resource caps are one thread/worker/job, 30 seconds, 256 MiB
+peak RSS, 32 MiB generated input, 1 MiB aggregate output, and zero retention,
+network, or new payload.
+
+Immediate gate: commit, push, and green this exact registration before
+implementation. Another private read remains a separate Tier C packet and
+decision; no neural or scientific surface is open.
 
 ### MARC2-VR30P - Consumed At R1
 

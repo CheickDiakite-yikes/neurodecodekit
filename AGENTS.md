@@ -45,6 +45,21 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
+The next safe lane is frozen as `MARC2-VR31A`. Read
+`docs/MARC_2_R1_ELIGIBLE_TOTAL_DIRECTION_DISCRIMINATOR_PREREGISTRATION.md`
+and
+`registries/marc2_r1_eligible_total_direction_discriminator_contract.v0.json`.
+It is artifact-only and generated-only: 32 fixed paths must call unchanged
+VR29A once each and map the eight R1 paths to aggregate R1 below 195 or R2
+above 195 without exposing an observed count or difference. It has only
+`plan` and `qualify`; there is no private executor.
+
+Immediate gate: commit, push, and green this exact registration before
+implementation. Do not touch `.codex_work`, consumed/private state, archives,
+neural data, targets, models, predictions, scores, FW2/CIL1, devices, streams,
+releases, or claims. Another private direction read would require a new
+all-false Tier C packet and fresh packet-bound decision.
+
 `MARC2-VR30P` is consumed at aggregate route `MARC2VR30P-R1` without a
 cohort freeze. Read
 `docs/MARC_2_INVENTORY_DISTRIBUTION_PRIVATE_DISCRIMINATOR_RESULT.md` and

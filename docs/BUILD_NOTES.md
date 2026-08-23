@@ -13893,3 +13893,24 @@ substitution, cleanup, amendment, output inspection, or private reinspection.
 The next safe task is a generated-only direction discriminator for below- or
 above-expected eligible totals. Another private read remains a separate Tier C
 packet and fresh decision.
+
+### VR31A eligible-total direction discriminator registered
+
+- Green VR30P result `a6e1ac5c17c2cffd4d07222c1f3eebcd05fb6a22` passed Base
+  Python job `97161557067`, Optional Neuro Readers job `97161557277`, and CI
+  `32626086478` before registration.
+- Froze eight generated cases across two orders and two replays. The 32 paths
+  require 32 unchanged VR29A calls and exactly eight R1 direction comparisons.
+- Exact route counts are G1/G2/R1/R2/R3 = 4/4/4/4/16. R1 retains only below
+  195 and R2 only above 195; the observed total and difference are forbidden.
+- Bound eight committed inputs totaling 122,263 bytes and the immutable VR2
+  `len(filtered) != 195` predicate.
+- The future module is standard-library only with `plan` and `qualify`, no
+  private executor, one thread/worker/job, 30-second runtime, 256 MiB RSS,
+  32 MiB generated input, 1 MiB aggregate output, and zero retention/network.
+- Registration performed zero private, ignored-path, readiness, archive,
+  neural, target, model, score, FW2/CIL1, other-project, or claim operation.
+
+Immediate gate: verify, commit, push, and green this exact registration before
+implementation. Another private read remains a separate Tier C packet and
+fresh decision.

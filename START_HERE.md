@@ -7,7 +7,29 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR30P Consumed At R1
+## Current Frontier: MARC2-VR31A Direction Registration Prepared
+
+Read
+`docs/MARC_2_R1_ELIGIBLE_TOTAL_DIRECTION_DISCRIMINATOR_PREREGISTRATION.md`
+and
+`registries/marc2_r1_eligible_total_direction_discriminator_contract.v0.json`.
+VR31A is artifact-only and generated-only. It freezes 32 paths over eight
+generated cases, two orders, and two replays. Every path must call unchanged
+VR29A once; only the eight VR29A R1 paths may compare the generated filtered
+total against the immutable threshold of 195.
+
+The only direction routes are R1 below expected and R2 above expected. G1/G2
+preserve the two controls and R3 collapses every non-R1 upstream condition.
+No observed total or difference may be returned, logged, hashed, serialized,
+or retained. The implementation may expose only `plan` and `qualify`; it has
+no private executor or override surface.
+
+Immediate gate: run complete verification, commit, push, and green the exact
+registration before implementation. Registration performs zero private,
+ignored-path, readiness, archive, neural, target, model, score, network,
+FW2/CIL1, hardware, or scientific operation.
+
+## Current Evidence Boundary: MARC2-VR30P Consumed At R1
 
 Read
 `docs/MARC_2_INVENTORY_DISTRIBUTION_PRIVATE_DISCRIMINATOR_RESULT.md` and

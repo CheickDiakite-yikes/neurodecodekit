@@ -11931,3 +11931,26 @@ already public proof. No archive, neural, target, model, prediction, score,
 FW2/CIL1, provider, stream, device, release, or scientific claim surface is
 opened. A generated-only direction discriminator may be prepared under Tier
 A/B; any new private read remains a separate Tier C packet and decision.
+
+## 0409 - Freeze VR31A Eligible-Total Direction Discrimination
+
+Proof decision: exact VR30P result
+`a6e1ac5c17c2cffd4d07222c1f3eebcd05fb6a22` passed CI `32626086478`, Base
+Python job `97161557067`, and Optional Neuro Readers job `97161557277` before
+registration. VR30P remains consumed at R1 without private reinspection.
+
+Registration decision: freeze an artifact-only/generated-only eight-case,
+32-path matrix that calls unchanged VR29A exactly once per path. Only the eight
+VR29A R1 paths may compare an internal generated eligible total with the
+immutable threshold of 195. Map below expected to R1 and above expected to R2;
+collapse all non-R1 upstream outcomes to R3 while preserving G1/G2 controls.
+
+Privacy decision: no observed total or difference may be returned, logged,
+hashed, serialized, or retained. The future module has no private executor and
+no path, URL, route, count, threshold, retry, output, or resource override.
+
+Boundary decision: commit, push, and green the exact registration before
+implementation. Registration performs no private, readiness, consumed-state,
+archive, neural, target, model, prediction, score, network, provider, device,
+FW2/CIL1, release, or claim operation. Any private direction check remains a
+new Tier C packet and fresh decision.
