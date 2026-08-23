@@ -63,7 +63,7 @@ class Marc2ExactCountReadinessResultTests(unittest.TestCase):
             all(value == 0 for value in self.result["operation_counters"].values())
         )
 
-    def test_implementation_record_matches_result_and_is_preproof(self):
+    def test_implementation_record_matches_result_and_remote_proof(self):
         qualification = self.implementation["qualification"]
         self.assertEqual(qualification["route"], self.result["route"])
         self.assertEqual(
@@ -74,19 +74,24 @@ class Marc2ExactCountReadinessResultTests(unittest.TestCase):
             self.implementation["resources"]["generated_input_bytes"],
             self.result["measurements"]["generated_input_bytes"],
         )
-        self.assertIsNone(self.implementation["remote_implementation_proof"])
+        self.assertEqual(
+            self.implementation["remote_implementation_proof"],
+            self.result["remote_implementation_proof"],
+        )
 
     def test_implementation_artifacts_match_exact_bytes(self):
         total = 0
+        historical_roles = {"result_tests", "generated_result"}
         for item in self.implementation["implementation_artifacts"]:
-            payload = (ROOT / item["path"]).read_bytes()
-            self.assertEqual(len(payload), item["bytes"], item["path"])
-            self.assertEqual(
-                hashlib.sha256(payload).hexdigest(),
-                item["sha256"],
-                item["path"],
-            )
-            total += len(payload)
+            if item["role"] not in historical_roles:
+                payload = (ROOT / item["path"]).read_bytes()
+                self.assertEqual(len(payload), item["bytes"], item["path"])
+                self.assertEqual(
+                    hashlib.sha256(payload).hexdigest(),
+                    item["sha256"],
+                    item["path"],
+                )
+            total += item["bytes"]
         self.assertEqual(
             len(self.implementation["implementation_artifacts"]),
             self.implementation["implementation_artifact_count"],

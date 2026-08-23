@@ -1,14 +1,14 @@
 # Codex Handoff - NeuroDecodeKit
 
-> Current MARC2-VR33A gate, 2026-08-23: registration `23adf07` passed Base job
-> `97181894886`, Optional job `97181895045`, and CI `32634409230` before
-> implementation. The sole generated qualification returned `MARC2VR33A-G1`
+> Current MARC2-VR33A gate, 2026-08-23: implementation `92baa51` passed Base
+> job `97184143923`, Optional job `97184144015`, and CI `32635352814`. The
+> sole generated qualification returned `MARC2VR33A-G1`
 > with 16 paths, 48 provider calls, 32 sleeper calls, only `PPP` ready, 67
 > refusals, exact replay, and zero source mutation or retention. Commit, push,
-> and green the exact implementation, then add a proof-only closeout without
-> repeating qualification. Do not call or modify consumed VR32P or touch
-> private/ignored state. Future private adoption remains a new Tier C packet
-> and decision.
+> and green the exact proof-only closeout without repeating qualification.
+> After green, VR33A is remotely closed generated engineering. Do not call or
+> modify consumed VR32P or touch private/ignored state. Future private adoption
+> remains a new Tier C packet and decision.
 
 > Current MARC2-VR32P result, 2026-08-23: proof-only closeout
 > `5aec8a15f5ee6fa3c6ca9cefcfb4fbfead9dd72f` passed Base Python job

@@ -9,18 +9,19 @@
 
 ## Current Gate: MARC2-VR33A Exact-Count Readiness Repair
 
-Registration `23adf07a328824d3b671e8fd8edf3c9b8d1f15ba` passed Base job
-`97181894886`, Optional job `97181895045`, and CI `32634409230` before
-implementation. Read the VR33A preregistration, implementation document,
-contract, implementation record, and result.
+Implementation `92baa516b5e0bc16e75a8bc05c57b057b3c3bf73` passed Base job
+`97184143923`, Optional job `97184144015`, and CI `32635352814`. Read the
+VR33A preregistration, implementation and proof-closeout documents, contract,
+implementation record, and result.
 
 The sole generated qualification passed `MARC2VR33A-G1`: 16 paths, 48 provider
 calls, 32 sleeper calls, only `PPP` ready, 67 refusals, exact replay, and zero
 source mutation or retention. Immediate gate: commit, push, and green the exact
-implementation, then add a proof-only closeout without repeating qualification.
-Do not touch VR32P private or consumed state. Any future private use needs a
-separate frozen Tier C packet and decision. Neural, target, model, score,
-FW2/CIL1, device, release, and claim surfaces remain closed.
+proof-only closeout without repeating qualification. After green, VR33A is
+closed as remotely proven generated engineering. Do not touch VR32P private or
+consumed state. Any future private use needs a separate frozen Tier C packet
+and decision. Neural, target, model, score, FW2/CIL1, device, release, and
+claim surfaces remain closed.
 
 ## Consumed Boundary: MARC2-VR32P R2 With A Protocol Deviation
 

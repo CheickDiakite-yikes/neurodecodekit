@@ -85,5 +85,36 @@
   "claim_boundary": {
     "engineering_capability": "exact finite readiness sampling for future proof-gated wrappers",
     "scientific_claim_not_established": "No neural payload target model prediction or score was accessed."
+  },
+  "remote_implementation_proof": {
+    "commit": "92baa516b5e0bc16e75a8bc05c57b057b3c3bf73",
+    "CI_run_id": 32635352814,
+    "base_python_job_id": 97184143923,
+    "optional_neuro_job_id": 97184144015,
+    "both_required_jobs_green": true,
+    "scope_changed_after_qualification": false,
+    "qualification_route": "MARC2VR33A-G1",
+    "preproof_implementation_registry_bytes": 4414,
+    "preproof_implementation_registry_sha256": "fde699a125df38c08f6f4bfee76751a9f77ed5fb257227176283f4a2cf820f90",
+    "preproof_result_registry_bytes": 2865,
+    "preproof_result_registry_sha256": "f490c52e0ac13fb624aa44f969acd86ac61bc62d9da6f552f0efbd4298c395ff",
+    "implementation_module_Git_blob": "b6bf1989f116669e06e3abc47e70136d4aa6bbff",
+    "behavior_test_Git_blob": "c1716d4313ab65ee7a52ec45e917c688ac43863a",
+    "registration_test_Git_blob": "50380975ea7d31bb57303cee036363542e7152ed",
+    "result_record_test_Git_blob": "ce1e128f33c75cded26b96824b1cdaacb8198741",
+    "implementation_document_Git_blob": "ee2034b08ed6ad7a03364c05501857fe60265c05",
+    "contract_Git_blob": "0fa8be94c54bf8fc34533b89843f0843ea1dfd40",
+    "preproof_implementation_registry_Git_blob": "6559ebdd9e264930ae61fac3410cdb165db44e82",
+    "preproof_result_registry_Git_blob": "4b80d0df1bd11ac9120c804342762a3f5546a5ab",
+    "generated_qualification_repeated_for_proof_closeout": false,
+    "private_operations_during_proof_closeout": 0
+  },
+  "next_gate": {
+    "proof_only_closeout_commit_green_pending": true,
+    "generated_lane_remotely_closed_now": false,
+    "generated_lane_remotely_closed_after_exact_closeout_green": true,
+    "qualification_may_be_repeated": false,
+    "private_or_neural_access_authorized": false,
+    "future_private_adoption_requires_new_Tier_C_packet_and_decision": true
   }
 }

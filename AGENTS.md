@@ -45,11 +45,11 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
-`MARC2-VR33A` is locally qualified as an artifact-only and generated-only
-exact-count readiness repair. Read its preregistration, implementation
-document, contract, implementation record, and result. Registration
-`23adf07a328824d3b671e8fd8edf3c9b8d1f15ba` passed Base job `97181894886`,
-Optional job `97181895045`, and CI `32634409230` before implementation.
+`MARC2-VR33A` has exact remote implementation proof and a proof-only closeout
+pending its own green barrier. Read its preregistration, implementation and
+proof-closeout documents, contract, implementation record, and result.
+Implementation `92baa516b5e0bc16e75a8bc05c57b057b3c3bf73` passed Base job
+`97184143923`, Optional job `97184144015`, and CI `32635352814`.
 
 The sole qualification returned `MARC2VR33A-G1`: 16 paths, exactly 48 provider
 calls, 32 sleeper calls, 48 returned samples, only `PPP` ready, 67 direct
@@ -57,12 +57,12 @@ refusals, exact replay, and zero source mutations. It processed 4,136 generated
 bytes in 0.004203916992992163 seconds at 24,215,552-byte peak RSS with zero
 retention and every private, neural, model, network, and claim counter at zero.
 
-Immediate gate: commit, push, and green the exact implementation. Do not repeat
-qualification. After remote green, add a proof-only closeout that performs no
-qualification or private operation. Do not modify or call consumed VR32P or
-inspect private/ignored state. Any future private adoption remains a new Tier C
-packet and decision. FW2/CIL1, archives, neural data, targets, models, scores,
-streams, devices, release, and claims remain closed.
+Immediate gate: commit, push, and green the exact proof-only closeout. Do not
+repeat qualification. After green, VR33A is closed as remotely proven generated
+engineering. Do not modify or call consumed VR32P or inspect private/ignored
+state. Any future private adoption remains a new Tier C packet and decision.
+FW2/CIL1, archives, neural data, targets, models, scores, streams, devices,
+release, and claims remain closed.
 
 ### Consumed VR32P boundary
 

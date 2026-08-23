@@ -12173,3 +12173,21 @@ Boundary decision: do not repeat qualification or touch consumed VR32P,
 private/ignored state, archives, neural data, targets, models, scores, network,
 FW2/CIL1, devices, release, or claims. Commit, push, and green the exact
 implementation, then separately bind it with a proof-only closeout.
+
+## 0420 - Bind Exact Remote Proof For VR33A Without Requalification
+
+Proof decision: exact implementation
+`92baa516b5e0bc16e75a8bc05c57b057b3c3bf73` passed CI `32635352814`, Base
+Python job `97184143923`, and Optional Neuro Readers job `97184144015`.
+
+Identity decision: bind the 4,414-byte preproof implementation registry and
+2,865-byte preproof result registry by byte count, SHA-256, and Git blob. Also
+bind the exact Git blobs for the module, behavior test, registration test,
+result test, implementation document, and contract.
+
+Boundary decision: repeat no qualification and perform no private,
+ignored-path, readiness-state, consumed-state, archive, neural, target, model,
+score, network, FW2/CIL1, device, other-project, release, or claim operation.
+This closeout is ineffective until its own exact commit is pushed and both
+required jobs are green. After green, VR33A is remotely closed generated
+engineering; any private adoption remains a new Tier C packet and decision.
