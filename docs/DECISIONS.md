@@ -11804,3 +11804,23 @@ Only after that proof may Tier A prepare a separately frozen all-false Tier C
 packet. Such a packet authorizes nothing by itself; fresh packet-bound
 maintainer words and a separately green decision remain required before any
 private implementation or read.
+
+## 0403 - Prepare All-False VR30P Inventory/Distribution Request
+
+Proof decision: exact VR29A proof-only closeout
+`80badb9c1410c1661403aae966b1ea31fa0a45f1` passed CI `32620685817`, Base
+Python job `97148293434`, and Optional Neuro Readers job `97148293619`.
+
+Request decision: freeze one future two-stage sequence. Stage 1 would qualify
+a generated fixed-path wrapper over unchanged VR29A. Stage 2, only after every
+proof barrier and a fresh packet-bound decision, would read exactly 418,755
+target-free structural bytes once and call VR29A once. Only aggregate R1
+eligible-total arithmetic or R2 participant-session distribution arithmetic
+may answer the registered question.
+
+Boundary decision: every authorization flag is false and every operation
+counter is zero. The request performs no private path operation and permits no
+private detail, cohort, archive, neural, target, model, score, FW2/CIL1,
+network, device, release, or claim action. The current `continue` predates the
+packet and is not retroactive authority. Commit, push, and green the request
+and a separate proof-only closeout before naming VR30P as the sole Tier C gate.

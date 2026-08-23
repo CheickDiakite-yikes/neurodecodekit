@@ -3918,7 +3918,30 @@ ignored-path, archive, neural, target, model, score, network, FW2/CIL1, or
 claim operation. Next gate: commit, push, and green this exact closeout. Only
 then may the one registered target-free structural discriminator execute.
 
-### MARC2-VR29A - Proof-Only Closeout Pending Remote Green
+### MARC2-VR30P - All-False Inventory/Distribution Request Prepared
+
+VR29A proof-only closeout `80badb9c1410c1661403aae966b1ea31fa0a45f1`
+passed Base Python job `97148293434`, Optional Neuro Readers job
+`97148293619`, and CI `32620685817`.
+
+VR30P binds 13 tracked inputs totaling 161,574 bytes. Its delayed Stage 1 is a
+generated fixed-path wrapper over unchanged VR29A. Its delayed Stage 2 is one
+418,755-byte target-free structural read and one VR29A call, with only
+aggregate R1 eligible-total arithmetic or R2 participant-session distribution
+arithmetic retained. Every authority flag is false and every operation counter
+is zero.
+
+Fourteen focused request checks and all 5,171 dependency-light tests passed
+with 204 expected skips. Focused Ruff passed and all 389 registries parsed.
+
+Immediate gate: commit, push, and green this exact request, then create and
+separately green a proof-only request closeout. The current `continue` predates
+the packet. Fresh packet-bound maintainer words and a separately green decision
+remain required before implementation or private access. No cohort, archive,
+neural, target, model, score, FW2/CIL1, device, release, or scientific claim is
+open.
+
+### MARC2-VR29A - Proof-Only Closeout Remotely Green
 
 Exact implementation `2e73c9176d243b5deccbf8416bb59fdf053ba762`
 passed Base Python job `97146675300`, Optional Neuro Readers job
@@ -3935,11 +3958,12 @@ passed 5,157 tests with 204 expected skips. All 388 registries parsed, focused
 Ruff passed, and the repository-wide Ruff baseline remained 1,125 pre-existing
 findings.
 
-Immediate gate: commit, push, and green this exact closeout. Only afterward
-may Tier A prepare an all-false private R1/R2 discriminator packet. A private
-read still requires fresh packet-bound maintainer words and a separately green
-Tier C decision. No cohort, neural, target, model, score, FW2/CIL1, device,
-release, or scientific claim is open.
+Exact closeout `80badb9c1410c1661403aae966b1ea31fa0a45f1` passed Base Python
+job `97148293434`, Optional Neuro Readers job `97148293619`, and CI
+`32620685817`. A private read still requires a separately frozen packet, fresh
+packet-bound maintainer words, and a separately green Tier C decision. No
+cohort, neural, target, model, score, FW2/CIL1, device, release, or scientific
+claim is open.
 
 ### MARC2-VR29A - Generated Inventory/Distribution Discriminator Qualified
 

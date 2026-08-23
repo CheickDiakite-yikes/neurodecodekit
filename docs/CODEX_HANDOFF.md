@@ -1,5 +1,20 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR30P request, 2026-08-23: exact VR29A proof-only closeout
+> `80badb9c1410c1661403aae966b1ea31fa0a45f1` passed Base Python job
+> `97148293434`, Optional Neuro Readers job `97148293619`, and CI
+> `32620685817`. The new all-false request binds 13 tracked inputs totaling
+> 161,574 bytes and proposes, only after separate green barriers and a fresh
+> packet-bound Tier C decision, one generated fixed-path wrapper and one
+> 418,755-byte target-free structural read. The future result may retain only
+> aggregate R1 eligible-total arithmetic or R2 participant-session distribution
+> arithmetic. Every authority flag is false and every operation counter is
+> zero. Immediate gate: commit, push, and green the request, then create and
+> separately green a proof-only request closeout. The current `continue`
+> predates this packet. Do not implement or touch `.codex_work`, consumed state,
+> archive/neural payload, targets, models, scores, FW2/CIL1, devices, streams,
+> release, or claims.
+
 > Current MARC2-VR29A proof-only closeout, 2026-08-23: registration
 > `fcd088cc2eef6556f36ed596c6d9bb6c7ee9d7c3` passed Base Python job
 > `97143828645`, Optional Neuro Readers job `97143828576`, and CI
@@ -14,10 +29,12 @@
 > `97146675300`, Optional Neuro Readers job `97146675166`, and CI
 > `32620018855`. The proof-only closeout binds both preproof registry hashes
 > and eight exact Git blobs without repeating qualification or touching
-> private state. Immediate gate: commit, push, and green this closeout. VR29A
-> has no private executor and does not identify the consumed private R1
-> subclass; consumed VR28P state and every archive, neural, target, model,
-> score, FW2/CIL1, device, release, and claim surface remain closed.
+> private state. Exact closeout `80badb9c1410c1661403aae966b1ea31fa0a45f1`
+> passed Base Python job `97148293434`, Optional Neuro Readers job
+> `97148293619`, and CI `32620685817`. VR29A has no private executor and does
+> not identify the consumed private R1 subclass; consumed VR28P state and every
+> archive, neural, target, model, score, FW2/CIL1, device, release, and claim
+> surface remain closed.
 
 > Current MARC2-VR28P result, 2026-08-23: proof-only closeout
 > `96bff687013dcbfb507455b5f8c045977bc84fe8` passed Base Python job
