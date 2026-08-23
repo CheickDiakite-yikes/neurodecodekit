@@ -1,0 +1,189 @@
+{
+  "schema_name": "neurodecodekit.marc2_exact_task_surplus_decomposition_contract",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC2-VR37A",
+  "recorded_at_local": "2026-08-23",
+  "status": "preregistered_generated_only_implementation_blocked_until_remote_green",
+  "research_question": "Can generated exact-task surplus witnesses distinguish the aggregate topology classes hidden behind consumed VR36P R3 without another private read?",
+  "green_predecessor_proof": {
+    "commit": "d55142ac52b862fba94958ad38638d47975c9969",
+    "CI_run_id": 32651904520,
+    "base_job_id": 97224724277,
+    "optional_neuro_job_id": 97224724199,
+    "both_required_jobs_green": true
+  },
+  "fixed_inputs": [
+    {
+      "path": "src/neurodecodekit/datasets/marc2_task_aware_eligibility_repair.py",
+      "bytes": 35615,
+      "sha256": "a2acf29d44cfba6f840a239cdb72e4ac35a057576022c43bff1f37fd64c7fa51"
+    },
+    {
+      "path": "registries/marc2_task_aware_eligibility_repair_contract.v0.json",
+      "bytes": 11579,
+      "sha256": "b801d9f1db51d7b6053f22bebd2d8dcda9e4987cbb242cf4f19b69f72fc46823"
+    },
+    {
+      "path": "registries/marc2_task_aware_eligibility_repair_implementation.v0.json",
+      "bytes": 6599,
+      "sha256": "9aedffd6082f424f5831a7084e8ac60b641ebc4eb7e6081c514186cd040d1e99"
+    },
+    {
+      "path": "registries/marc2_task_aware_eligibility_repair_result.v0.json",
+      "bytes": 5483,
+      "sha256": "f3b41578db1faa4f23a9ad1d89246ba4e70b5183deb135b1adc8a809d8f27f03"
+    },
+    {
+      "path": "registries/marc2_task_aware_private_cohort_confirmation_private_result.v0.json",
+      "bytes": 9982,
+      "sha256": "2d886179f20b7c7b4df5e3ea73b48f81e81a79d83ce0852db57323570fdae547"
+    },
+    {
+      "path": "docs/MARC_2_TASK_AWARE_PRIVATE_COHORT_CONFIRMATION_RESULT.md",
+      "bytes": 3006,
+      "sha256": "9e7c0a65e658ff4481d636ccf1498d5d641bd6f3ab056f2f7626b6bd43f4186b"
+    },
+    {
+      "path": "registries/marc2_live_domain_eligibility_adapter_contract.v0.json",
+      "bytes": 15306,
+      "sha256": "c7c94406c7b3f483bb2ecbbb42b131756d178f288eedc31ce48e9383180a0a33"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/marc2_selection_boundary_firewall.py",
+      "bytes": 35250,
+      "sha256": "20516d466de74256a6e1640a96a757719d7c48c664483e7cc429481d70839868"
+    }
+  ],
+  "fixed_input_count": 8,
+  "fixed_input_bytes": 122820,
+  "artifact_only_findings": {
+    "consumed_VR36P_route": "MARC2VR36P-R3",
+    "compatible_VR35A_route": "MARC2VR35A-R1",
+    "compatible_meaning": "exact-task projected eligible total above 195",
+    "published_eligible_subjects": 19,
+    "published_eligible_sessions_per_subject": 2,
+    "published_subject_session_cells": 38,
+    "published_cell_total": 195,
+    "VR35A_checks_global_total_before_public_cell_distribution": true,
+    "global_surplus_requires_at_least_one_positive_cell_delta": true,
+    "consumed_route_distinguishes_delta_topology": false,
+    "mixed_task_surplus_as_sole_explanation_excluded": true,
+    "private_count_difference_distribution_identity_or_row_known": false
+  },
+  "ordered_routes": [
+    {
+      "route": "MARC2VR37A-G1",
+      "class": "public_map_exact_control",
+      "meaning": "all 38 generated subject-session cells and run prefixes match the public map"
+    },
+    {
+      "route": "MARC2VR37A-R1",
+      "class": "single_cell_contiguous_extension",
+      "meaning": "one cell has one extra bundle at the next contiguous run index and no cell is below the public map"
+    },
+    {
+      "route": "MARC2VR37A-R2",
+      "class": "single_cell_noncontiguous_extension",
+      "meaning": "one cell has one extra bundle at a noncontiguous run index and no cell is below the public map"
+    },
+    {
+      "route": "MARC2VR37A-R3",
+      "class": "multi_cell_pure_surplus",
+      "meaning": "multiple cells are above the public map and no cell is below it"
+    },
+    {
+      "route": "MARC2VR37A-R4",
+      "class": "mixed_surplus_and_deficit_net_positive",
+      "meaning": "at least one cell is above and at least one is below the public map while the total remains above 195"
+    },
+    {
+      "route": "MARC2VR37A-R5",
+      "class": "structural_or_task_firewall_refusal",
+      "meaning": "exact-task grouping companion identity taxonomy or topology validation refused before a surplus class was assigned"
+    }
+  ],
+  "generated_matrix": {
+    "cases": [
+      "public_map_exact_control",
+      "single_cell_contiguous_extension",
+      "single_cell_noncontiguous_extension",
+      "multi_cell_pure_surplus",
+      "mixed_surplus_and_deficit_net_positive",
+      "structural_or_task_firewall_refusal"
+    ],
+    "orders": [
+      "canonical",
+      "reversed"
+    ],
+    "replays": 2,
+    "required_paths": 24,
+    "VR35A_calls": 24,
+    "expected_route_counts": {
+      "MARC2VR37A-G1": 4,
+      "MARC2VR37A-R1": 4,
+      "MARC2VR37A-R2": 4,
+      "MARC2VR37A-R3": 4,
+      "MARC2VR37A-R4": 4,
+      "MARC2VR37A-R5": 4
+    },
+    "minimum_direct_refusals": 60,
+    "deterministic_replay_required": true,
+    "source_mutations_allowed": 0,
+    "retained_output_bytes": 0
+  },
+  "implementation_contract": {
+    "future_module": "neurodecodekit.datasets.marc2_exact_task_surplus_decomposition",
+    "commands": [
+      "plan",
+      "qualify"
+    ],
+    "dependency_policy": "standard_library_only",
+    "base_dependency_additions": 0,
+    "private_executor_allowed": false,
+    "private_or_Git_ignored_path_constants_allowed": false,
+    "generic_path_URL_output_count_threshold_task_rank_cap_route_retry_or_resource_arguments": 0,
+    "consumed_private_executor_import_or_call_allowed": false,
+    "future_private_discriminator_requires_new_packet": true
+  },
+  "resource_limits": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds_maximum": 30,
+    "peak_RSS_bytes_maximum_exclusive": 268435456,
+    "generated_output_bytes_maximum": 1048576,
+    "network_bytes": 0,
+    "new_payload_bytes": 0
+  },
+  "forbidden_operations": {
+    "repository_dot_codex_work_operations": 0,
+    "private_or_consumed_source_stats_resolves_hashes_opens_reads_or_parses": 0,
+    "archive_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "derivative_cache_feature_split_or_NeuroToken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "network_download_provider_or_language_model_operations": 0,
+    "stream_device_or_hardware_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "retry_rerun_resume_repair_fallback_or_substitution_operations": 0,
+    "release_publication_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "claim_boundary": {
+    "engineering_capability_if_qualified": "generated aggregate topology discriminator for exact-task eligible-total surplus",
+    "scientific_ceiling": "none",
+    "private_source_accessed": false,
+    "real_cohort_established": false,
+    "neural_payload_accessed": false,
+    "decoding_performance_established": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "live_decoding": false
+  },
+  "next_gate": {
+    "commit_push_and_both_jobs_green_before_implementation": true,
+    "generated_qualification_allowed_before_remote_green": false,
+    "private_read_or_discriminator_authorized": false,
+    "archive_neural_target_model_score_FW2_CIL1_or_claim_action_authorized": false
+  }
+}

@@ -111,11 +111,17 @@ explanation for this aggregate surplus class.
 
 VR36P has no retry, rerun, resume, repair, fallback, substitution, cleanup,
 amendment, or private reinspection. Do not touch its private source,
-readiness, marker, output root, or consumed state. The next safe task is an
-artifact-only and generated-only exact-task-surplus decomposition. Another
-private read requires a new Tier C packet and decision. Archive, neural,
-target, model, score, FW2/CIL1, device, release, and claim surfaces remain
-closed.
+readiness, marker, output root, or consumed state.
+
+The next generated-only lane is frozen as `MARC2-VR37A`. Read the exact-task
+surplus decomposition preregistration and contract. It separates baseline,
+single-cell contiguous extension, single-cell noncontiguous extension,
+multi-cell pure surplus, mixed surplus/deficit with positive net, and
+structural-firewall classes across 24 paths. Immediate gate: verify, commit,
+push, and green the exact registration before implementation or qualification.
+Another private read requires a new Tier C packet and decision. Archive,
+neural, target, model, score, FW2/CIL1, device, release, and claim surfaces
+remain closed.
 
 ### Consumed VR34P boundary
 

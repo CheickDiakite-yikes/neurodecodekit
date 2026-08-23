@@ -21,10 +21,12 @@
 > VR33A call, and one VR35A call. No cohort was frozen. R3 means only that the
 > exact-task projected eligible total remains above 195; exact values and
 > private detail remain unavailable. VR36P is consumed. Do not touch its
-> `.codex_work`, source, readiness, marker, output, or consumed state. Next:
-> artifact-only/generated-only exact-task-surplus decomposition. Archive,
-> neural, target, model, score, FW2/CIL1, device, release, and claim surfaces
-> remain closed.
+> `.codex_work`, source, readiness, marker, output, or consumed state. VR37A
+> now freezes a 24-path generated-only matrix for baseline, two single-cell,
+> multi-cell, mixed-delta, and firewall classes. Immediate gate: commit, push,
+> and green the exact registration before implementation. Archive, neural,
+> target, model, score, FW2/CIL1, device, release, and claim surfaces remain
+> closed.
 
 > Current MARC2-VR35A gate, 2026-08-23: registration `aa4c39a` passed Base
 > job `97203738713`, Optional job `97203738637`, and CI `32643351246` before

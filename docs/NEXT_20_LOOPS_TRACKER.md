@@ -1,11 +1,12 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate boundary (2026-08-23):** VR36P closeout `d407408` passed both
+> **Immediate gate (2026-08-23):** VR36P closeout `d407408` passed both
 > jobs in CI `32651006809` before the sole invocation returned R3. Exact-task
 > projection still leaves the eligible total above 195, and no cohort was
-> frozen. VR36P is consumed; next is artifact-only/generated-only surplus
-> decomposition. Private, archive, neural, target, model, score, FW2/CIL1, and
-> claim surfaces are closed.
+> frozen. VR36P is consumed. Commit, push, and green the exact VR37A
+> artifact-only/generated-only surplus-decomposition registration before
+> implementation. Private, archive, neural, target, model, score, FW2/CIL1,
+> and claim surfaces are closed.
 
 > **Immediate update (2026-08-23):** exact VR32P proof closeout `5aec8a1`
 > passed Base job `97177262321`, Optional job `97177262387`, and CI
@@ -4155,6 +4156,20 @@ exact-task projected eligible total above 195 and excludes mixed-task surplus
 only as the sole explanation. Exact values and private detail remain
 unavailable. VR36P is consumed; the next safe lane is artifact-only and
 generated-only exact-task-surplus decomposition.
+
+### MARC2-VR37A - Exact-Task Surplus Decomposition Registered
+
+Artifact-only analysis finds that VR35A checks the global exact-task total
+before comparing the 38 public subject/session cells. VR36P R3 therefore
+cannot distinguish a single contiguous extra run, a single noncontiguous extra
+run, pure surplus across several cells, or mixed positive/negative cell deltas
+with a positive net.
+
+VR37A freezes those four classes plus baseline and structural-firewall controls
+across 24 generated paths, exactly 24 VR35A calls, two orders, two replays, and
+at least 60 direct refusals. It is standard-library only and has no private
+executor or private path. Immediate gate: commit, push, and green the exact
+registration before implementation or qualification.
 
 ### MARC2-VR33A - Exact-Count Readiness Repair Remotely Closed
 

@@ -12492,3 +12492,18 @@ explanation for the surplus; it does not expose the exact count, difference,
 distribution, identity, row, participant, selection, or cause. Consume VR36P
 with no rerun or private reinspection. FW2/CIL1 and every neural or scientific
 claim surface remain closed.
+
+## 0436 - Freeze VR37A Exact-Task Surplus Topology Classes
+
+Evidence decision: use only committed artifact structure to explain what
+VR36P R3 does not distinguish. VR35A checks global exact-task surplus before
+the public 38-cell subject/session distribution.
+
+Engineering decision: freeze six generated routes for baseline, single-cell
+contiguous extension, single-cell noncontiguous extension, multi-cell pure
+surplus, mixed surplus/deficit with positive net, and structural-firewall
+refusal across 24 paths and at least 60 direct refusals.
+
+Boundary decision: VR37A has no private executor and authorizes no private,
+archive, neural, target, model, score, FW2/CIL1, release, or claim operation.
+Its exact registration must be remotely green before implementation.

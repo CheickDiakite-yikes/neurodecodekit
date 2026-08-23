@@ -14464,3 +14464,20 @@ Only then may the one registered target-free private confirmation run.
 VR36P is consumed with no retry, rerun, repair, or private reinspection. Next:
 artifact-only/generated-only exact-task-surplus decomposition. FW2/CIL1 and
 all neural, target, model, score, device, release, and claim work remain closed.
+
+### VR37A exact-task-surplus decomposition registered
+
+- Bound eight committed artifacts totaling 122,820 bytes, including the green
+  VR36P R3 result and unchanged VR35A/VR2/VR25A logic.
+- Static analysis confirms VR35A checks the global exact-task total before the
+  public 38-cell subject/session distribution, so R3 hides surplus topology.
+- Frozen routes distinguish baseline, single-cell contiguous extension,
+  single-cell noncontiguous extension, multi-cell pure surplus, mixed
+  surplus/deficit with positive net, and structural-firewall refusal.
+- The generated matrix requires 24 paths, 24 VR35A calls, exact replay, zero
+  mutation and retention, and at least 60 direct refusals under one thread and
+  a 30-second/256-MiB/1-MiB resource envelope.
+
+Immediate gate: verify, commit, push, and green the exact registration before
+generated implementation or qualification. No private or scientific surface
+is opened.

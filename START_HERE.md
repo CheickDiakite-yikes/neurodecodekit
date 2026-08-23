@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Boundary: MARC2-VR36P Consumed At R3
+## Current Gate: MARC2-VR37A Surplus Decomposition Registration
 
 Read the VR35A preregistration and implementation documents, contract,
 implementation record, generated result, and matching tests. Registration
@@ -63,13 +63,18 @@ two sleeps, one 418,755-byte target-free structural open/parse, one VR33A call,
 and one VR35A call. Runtime was 10.088516000076197 seconds at 30,670,848-byte
 peak RSS. No cohort was frozen.
 
-R3 means only that exact-task projection still leaves the eligible total above
+VR36P R3 means only that exact-task projection still leaves the eligible total above
 195. Mixed-task contamination is therefore not the sole explanation for the
 aggregate surplus, but the exact count, difference, distribution, identity,
 participant, and cause remain unavailable. VR36P is consumed with no rerun or
-private reinspection. The next safe task is artifact-only/generated-only
-decomposition; archive, neural, target, model, score, FW2/CIL1, and claim work
-remain closed.
+private reinspection.
+
+VR37A now freezes an artifact-only/generated-only six-class topology matrix:
+baseline; single-cell contiguous and noncontiguous extensions; multi-cell pure
+surplus; mixed surplus/deficit with positive net; and structural firewall.
+Immediate gate: verify, commit, push, and green the exact registration before
+implementation or qualification. Archive, neural, target, model, score,
+FW2/CIL1, and claim work remain closed.
 
 ## Consumed Boundary: MARC2-VR34P Protocol-Conforming R2
 

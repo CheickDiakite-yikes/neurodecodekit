@@ -176,6 +176,12 @@ The sole invocation returned R3: exact-task projected eligible total above
 sole explanation for the surplus. VR36P is consumed; FW2 work remains
 ineligible and unauthorized.
 
+Generated-only VR37A now freezes the missing topology discriminator. Its
+24-path matrix separates one contiguous extra run, one noncontiguous extra
+run, pure multi-cell surplus, and mixed cell deltas with a positive net, plus
+baseline and firewall controls. This is architecture preparation for a future
+private discriminator, not another private read or neural experiment.
+
 ## Claim Boundary
 
 Engineering capability added: the five desired outcomes are now separated
