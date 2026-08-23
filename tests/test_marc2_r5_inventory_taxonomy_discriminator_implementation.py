@@ -106,9 +106,18 @@ class Marc2R5InventoryTaxonomyDiscriminatorImplementationTests(unittest.TestCase
 
     def test_remote_proof_and_scientific_claims_remain_closed(self):
         barrier = self.implementation["proof_barrier"]
-        self.assertIsNone(barrier["remote_implementation_proof"])
+        self.assertEqual(
+            barrier["remote_implementation_proof"]["commit"],
+            "3f74be383a672748b0781d6571d28181056865b7",
+        )
+        self.assertTrue(
+            barrier["remote_implementation_proof"]["both_required_jobs_green"]
+        )
         self.assertFalse(barrier["private_executor_available"])
-        self.assertIsNone(self.result["remote_implementation_proof"])
+        self.assertEqual(
+            self.result["remote_implementation_proof"],
+            barrier["remote_implementation_proof"],
+        )
         for record in (self.implementation, self.result):
             boundary = record["claim_boundary"]
             self.assertFalse(boundary["consumed_private_branch_identified"])

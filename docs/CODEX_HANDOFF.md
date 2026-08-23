@@ -1,5 +1,16 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR27A proof-only closeout, 2026-08-22: exact implementation
+> `3f74be383a672748b0781d6571d28181056865b7` passed Base Python job
+> `97126099642`, Optional Neuro Readers job `97126099573`, and CI
+> `32611864949`. The closeout binds the 3,886-byte preproof implementation
+> registry, 3,379-byte preproof result registry, and seven exact Git blobs.
+> It repeats no qualification and performs zero private, consumed-state,
+> archive, neural, target, model, score, network, FW2/CIL1, other-project, or
+> claim operation. Immediate gate: verify, commit, push, and green this exact
+> closeout. Only then may Tier A prepare one all-false private R1/R2 packet;
+> fresh packet-bound Tier C permission remains required before any read.
+
 > Current MARC2-VR27A generated implementation, 2026-08-22: registration
 > `47ceba3` passed Base Python job `97124216923`, Optional Neuro Readers job
 > `97124216871`, and CI `32611101033` before implementation. All 20 generated

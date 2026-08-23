@@ -3,7 +3,7 @@
   "schema_version": "0.1.0",
   "lane_id": "MARC2-VR27A",
   "recorded_at_local": "2026-08-22",
-  "status": "generated_inventory_taxonomy_discriminator_qualified_remote_proof_pending",
+  "status": "generated_inventory_taxonomy_discriminator_remote_proven_closeout_pending",
   "route": "MARC2VR27A-G1",
   "registration_proof": {
     "commit": "47ceba3ed89df9610540fe3ed2ee8071ac1b84df",
@@ -88,7 +88,35 @@
     "archive_member_neural_signal_target_model_prediction_or_score",
     "end_to_end_neural_decoding_latency"
   ],
-  "remote_implementation_proof": null,
+  "remote_implementation_proof": {
+    "commit": "3f74be383a672748b0781d6571d28181056865b7",
+    "CI_run_id": 32611864949,
+    "base_python_job_id": 97126099642,
+    "optional_neuro_job_id": 97126099573,
+    "both_required_jobs_green": true,
+    "scope_changed_after_qualification": false,
+    "qualification_route": "MARC2VR27A-G1",
+    "preproof_implementation_registry_bytes": 3886,
+    "preproof_implementation_registry_sha256": "d780256f8d29246155b940a6023bdc84e80b5b24361214c8def11b60e9790a0e",
+    "preproof_result_registry_bytes": 3379,
+    "preproof_result_registry_sha256": "833108079a430fdd2e58c45ba31e64c3a1f2d91b00fdc4786eb5f4611c900dd2",
+    "implementation_module_Git_blob": "92ab6bd62138d1a2064552edffad86b4580881c6",
+    "behavior_test_Git_blob": "4d7558b1c8c95f14c67dd2f67f9a6b364fd855fa",
+    "registration_test_Git_blob": "c73077d5b6b3e2d95bd7aa2bb0d8f6edaedc11db",
+    "preproof_record_test_Git_blob": "e3401a15812005c0e78ecf0ad85eaa4210e46047",
+    "implementation_document_Git_blob": "e339a7271eb4c35569a6c30a9128394e25fc82f5",
+    "preproof_implementation_registry_Git_blob": "09fc1524f9ec4b59475f87856daa3aee221e927f",
+    "preproof_result_registry_Git_blob": "43a4fbcacad7b60286976769565febd3aeabaa30",
+    "generated_qualification_repeated_for_proof_closeout": false,
+    "private_operations_during_proof_closeout": 0
+  },
+  "next_gate": {
+    "proof_only_closeout_commit_green_pending": true,
+    "private_discriminator_packet_eligible_now": false,
+    "private_discriminator_packet_eligible_after_exact_closeout_green": true,
+    "private_or_neural_access_authorized": false,
+    "FW2_or_CIL1_authorized": false
+  },
   "claim_boundary": {
     "engineering_capability": "generated discrimination of VR25A eligible-inventory drift versus unknown-participant taxonomy",
     "consumed_private_branch_identified": false,

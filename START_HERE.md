@@ -138,6 +138,17 @@ then add and separately green a proof-only closeout. Do not prepare a private
 packet before both barriers. VR27A has no private executor, resolves no real
 branch, and establishes no neural or decoding result.
 
+Exact implementation `3f74be3` passed Base Python job `97126099642`, Optional
+Neuro Readers job `97126099573`, and CI `32611864949`. Read
+`docs/MARC_2_R5_INVENTORY_TAXONOMY_DISCRIMINATOR_PROOF_CLOSEOUT.md`. It binds
+the two preproof registries and seven exact implementation-commit Git blobs
+without repeating qualification or touching private state.
+
+Immediate gate: commit, push, and green the proof-only closeout. Only afterward
+may Tier A prepare an all-false private R1/R2 discriminator packet; the packet
+itself would not authorize access, and fresh packet-bound Tier C permission
+would still be required.
+
 ## Historical Frontier: MARC2-VR24P Consumed At R2
 
 Read `docs/MARC_2_R5_PRIVATE_DISCRIMINATOR_RESULT.md` and its machine

@@ -11559,3 +11559,28 @@ not the consumed real branch. Its remote proof remains null. Commit, push, and
 green these exact bytes, then add and separately green a proof-only closeout.
 No private source, cohort, archive member, neural signal, target, model,
 prediction, score, FW2/CIL1 action, or scientific claim is established.
+
+## 0393 - Bind Exact Remote Proof For VR27A
+
+Proof decision: exact implementation
+`3f74be383a672748b0781d6571d28181056865b7` passed Base Python job
+`97126099642`, Optional Neuro Readers job `97126099573`, and CI
+`32611864949`. Bind that proof only to the unchanged generated-qualified
+adapter and result.
+
+Identity decision: bind the 3,886-byte preproof implementation registry, its
+SHA-256 and Git blob; the 3,379-byte preproof result registry, its SHA-256 and
+Git blob; and five additional implementation-commit Git blobs covering the
+module, behavior test, registration test, record test, and implementation
+document.
+
+Scope decision: change no implementation, witness, route, measurement,
+resource cap, warning, or claim boundary. Do not repeat qualification. Every
+private, ignored-path, consumed-state, archive, neural, target, model, score,
+network, FW2/CIL1, other-project, release, and claim operation remains zero.
+
+Boundary decision: this closeout has delayed effect until its exact commit is
+pushed and both jobs are green. Only then may Tier A prepare a separately
+frozen all-false private R1/R2 discriminator packet. The packet itself cannot
+authorize a private read; fresh packet-bound Tier C permission remains
+required. No cohort or scientific result exists.

@@ -3918,6 +3918,21 @@ ignored-path, archive, neural, target, model, score, network, FW2/CIL1, or
 claim operation. Next gate: commit, push, and green this exact closeout. Only
 then may the one registered target-free structural discriminator execute.
 
+### MARC2-VR27A - Exact Implementation Remotely Green; Closeout Pending
+
+Exact implementation `3f74be383a672748b0781d6571d28181056865b7`
+passed Base Python job `97126099642`, Optional Neuro Readers job
+`97126099573`, and CI `32611864949`. The proof-only closeout binds the
+3,886-byte preproof implementation registry, 3,379-byte preproof result
+registry, their exact hashes and Git blobs, plus five additional exact
+implementation-commit Git blobs.
+
+The closeout repeats no qualification and performs zero private, ignored-path,
+consumed-state, archive, neural, target, model, score, network, FW2/CIL1,
+other-project, or claim operation. Next gate: commit, push, and green this
+exact closeout. Only afterward may Tier A prepare a separately frozen
+all-false private R1/R2 packet; fresh Tier C permission remains required.
+
 ### MARC2-VR27A - R5 Inventory/Taxonomy Decomposition Frozen
 
 VR26P result `878148a7adaede8d871f181ad535a2c730a86f93` passed Base

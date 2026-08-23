@@ -64,10 +64,15 @@ refusals, exact replay, and zero source mutations. Runtime was 1.120282624964602
 seconds at 33,439,744-byte peak RSS over 8,836,136 generated input bytes; 2,561
 aggregate bytes were emitted and zero retained. Commit, push, and green the
 exact implementation and result, then add and separately green a proof-only
-closeout. The lane has no private executor and cannot resolve the consumed
-private branch. Another private read requires a new Tier C packet and fresh
-packet-bound decision. FW2/CIL1, archive members, neural data, targets,
-models, scores, streams, devices, and claims remain closed.
+closeout. Exact implementation
+`3f74be383a672748b0781d6571d28181056865b7` passed Base Python job
+`97126099642`, Optional Neuro Readers job `97126099573`, and CI
+`32611864949`. Read the proof-only closeout; it binds two preproof registries
+and seven exact Git blobs without repeating qualification. Commit, push, and
+green that exact closeout. Only afterward may Tier A prepare an all-false
+private R1/R2 packet; a fresh packet-bound Tier C decision still remains
+required before any private read. FW2/CIL1, archive members, neural data,
+targets, models, scores, streams, devices, and claims remain closed.
 
 ### Historical VR22P/VR23A/VR24P boundary
 
