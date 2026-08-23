@@ -65,13 +65,18 @@ indices across 23 participants.
 
 The ordered work is:
 
-1. `MARC2-VR20P`: confirm the corrected public task identity and freeze one
-   target-free structural cohort.
-2. `MARC2-FW2`: acquire and semantically qualify only selected archive members
+1. `MARC2-VR20P` through `MARC2-VR34P`: localize structural blockers and
+   establish, under exact finite readiness, that the current task-blind
+   eligible total is above 195 without exposing a count or cohort.
+2. `MARC2-VR35A`: generated-only task-aware eligibility and selection repair,
+   explicitly separating mixed-task surplus from genuine target-task drift.
+3. A separately authorized private confirmation may freeze one target-free
+   structural cohort only if the exact-task projection and selector pass.
+4. `MARC2-FW2`: acquire and semantically qualify only selected archive members
    under the existing storage ceiling.
-3. `MARC2-CIL1`: test within-person held-out-session conditional EEG gain
+5. `MARC2-CIL1`: test within-person held-out-session conditional EEG gain
    beyond timing, EOG, and acceleration.
-4. `MARC2-ZP1`: freeze a participant-independent model and run strict
+6. `MARC2-ZP1`: freeze a participant-independent model and run strict
    leave-one-person-out prediction with zero held-out-person adaptation.
 
 `CIL1` can address `C2` and `C5`. It cannot establish `C3` because its models
@@ -145,13 +150,16 @@ eye-driven classifier would be a live confound, not live neural decoding.
 
 ## Immediate Gate
 
-The exact all-false `MARC2-VR20P` request and proof closeout are remotely
-green. It is the sole active Tier C packet. A fresh packet-bound maintainer
-decision is still required before its generated wrapper is implemented or the
-one 418,755-byte target-free structural source is read.
+Protocol-conforming `MARC2-VR34P` is consumed at aggregate R2: the current
+task-blind eligible total is above 195, but the count, task distribution,
+identity, participant, selection, and cohort remain unavailable.
 
-VR20P success would freeze a cohort and make a separate FW2 contract eligible.
-It would not open EEG, train a model, or establish any of `C1`-`C5`.
+The next gate is generated-only `MARC2-VR35A`, which projects exact published
+task identity before eligibility arithmetic and tests mixed-task surplus
+against genuine target-task drift. Its registration must be committed, pushed,
+and green before implementation. It has no private executor and cannot freeze
+a cohort. A later private confirmation and all FW2 work remain separate Tier C
+decisions.
 
 ## Claim Boundary
 

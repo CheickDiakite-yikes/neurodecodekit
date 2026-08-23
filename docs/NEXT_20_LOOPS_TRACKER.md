@@ -1,11 +1,10 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate boundary (2026-08-23):** exact VR34P proof closeout `c863fd4`
-> passed both jobs in CI `32641201220` before the sole invocation. VR34P then
-> consumed at protocol-conforming aggregate R2: filtered eligible total above
-> 195, with no exact count or cohort exposure. The run used exactly three
-> readiness samples, two sleeps, one 418,755-byte source open, and zero neural,
-> target, model, score, or network operations. No retry or reinspection.
+> **Immediate gate (2026-08-23):** VR35A is locally preregistered as a
+> generated-only task-aware eligibility repair. It tests mixed-task surplus
+> against genuine exact-task surplus/deficit over 20 frozen paths. Commit,
+> push, and green registration before implementation; no private cohort,
+> archive, neural, target, model, score, FW2/CIL1, or claim step is open.
 
 > **Immediate update (2026-08-23):** exact VR32P proof closeout `5aec8a1`
 > passed Base job `97177262321`, Optional job `97177262387`, and CI
@@ -4066,6 +4065,34 @@ VR34P has no retry, rerun, repair, output inspection, or private reinspection.
 The next safe task is artifact-only review and a separately frozen packet for
 any cohort, archive, or neural step. FW2/CIL1 and every neural, target, model,
 score, device, release, and claim surface remain closed.
+
+### MARC2-VR35A - Task-Aware Eligibility Repair Preregistered
+
+Artifact-only static review proves that VR2 `_classify_key` receives only
+subject, session, and run, and that VR20A checks exact published task identity
+only after the task-blind eligible-total gate. This mechanism is compatible
+with VR34P R2 but is not claimed as its private cause.
+
+VR35A freezes baseline, mixed-task surplus, exact-task surplus, exact-task
+deficit, and task/selection-firewall generated cases. The five cases run in
+two row orders across two exact replays for 20 paths and equal route counts.
+Mixed-task surplus must project back to the baseline 195 exact-task bundles
+and identical semantic cohort. Genuine exact-task surplus or deficit must stay
+bounded at R1/R2; non-target selected rows must remain zero.
+
+The future implementation is standard-library-only, limited to one thread,
+45 seconds, under 256 MiB peak RSS, 16 MiB generated input, 1 MiB aggregate
+output, at least 80 direct refusals, exact replay, and zero retention. It has
+only `plan` and `qualify`; there is no private executor.
+
+Registration verification passes 10 focused tests and all 5,425 dependency-
+light tests with 204 expected skips, a +10 delta from the VR34P closeout
+baseline. Pinned Ruff 0.15.20, compilation, all 413 registry JSON files, and
+diff hygiene pass.
+
+Immediate gate: commit, push, and green this exact registration before
+implementation. Any private wrapper or cohort freeze remains a separately
+frozen Tier C packet and packet-bound decision.
 
 ### MARC2-VR33A - Exact-Count Readiness Repair Remotely Closed
 

@@ -12322,3 +12322,27 @@ Consumption decision: VR34P has no retry, rerun, resume, repair, fallback,
 substitution, cleanup, amendment, output inspection, or private reinspection.
 Any cohort, archive, neural, target, model, score, FW2, or CIL1 step requires a
 separately frozen Tier C packet and decision.
+
+## 0427 - Freeze Task Identity Before MARC2 Eligibility Arithmetic
+
+Evidence decision: protocol-conforming VR34P R2 proves only that the current
+filtered eligible total is above 195. It does not expose the count, task
+distribution, identity, participant, selection, or cohort.
+
+Static decision: exact committed VR2 `_classify_key` destructures only
+subject, session, and run. VR20A groups on the same dimensions and validates
+exact `reachingandgrasping` task identity only after eligibility count and
+selection. Mixed-task surplus is therefore a compatible mechanism, not a
+claim about the private source; genuine exact-task count drift remains open.
+
+Design decision: preregister VR35A as generated-only task-aware projection.
+Test baseline, mixed-task surplus, exact-task surplus, exact-task deficit, and
+firewall refusal in parallel. Require mixed-task and baseline semantic cohorts
+to match, keep exact-task drift explicit, permit no non-target selected row,
+and retain all rank, split, storage, source-identity, and privacy invariants.
+
+Boundary decision: commit, push, and green the registration before
+implementation. Registration performs zero private, ignored-path, readiness,
+consumed-state, cohort, archive, neural, target, model, score, FW2/CIL1,
+network, device, release, or claim operation. Any private adoption remains a
+new Tier C packet and decision.

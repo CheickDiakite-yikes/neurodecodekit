@@ -14267,3 +14267,27 @@ remote jobs pass.
 
 VR34P cannot be rerun or repaired. The next safe task is artifact-only review
 and a separately frozen Tier C packet for any cohort, archive, or neural step.
+
+### VR35A task-aware eligibility repair preregistered
+
+- Static artifact review shows VR2 eligibility classification uses only
+  participant, session, and run. Exact task identity is absent from that count
+  and checked later by VR20A selected-row validation.
+- Froze baseline, mixed-task surplus, exact-task surplus, exact-task deficit,
+  and task/selection-firewall cases across two orders and two replays.
+- Mixed-task surplus must project to the exact-task baseline and identical
+  semantic cohort. Genuine exact-task surplus/deficit remains bounded; no
+  non-target task row may be selected.
+- The generated-only surface uses the standard library, one thread, at most 45
+  seconds, less than 256 MiB peak RSS, at most 16 MiB generated input, 1 MiB
+  aggregate output, at least 80 direct refusals, and zero retention.
+- The contract binds 11 public artifacts totaling 250,900 bytes, including the
+  remotely green VR34P result. Registration performs zero private, cohort,
+  archive, neural, target, model, score, network, FW2/CIL1, device, release,
+  other-project, or claim operation.
+- Ten focused registration tests and all 5,425 dependency-light tests pass
+  with 204 expected skips, a +10 delta. Pinned Ruff 0.15.20, compilation, all
+  413 registry JSON files, and diff hygiene pass.
+
+Immediate gate: verify, commit, push, and green the registration before
+implementation. A private wrapper or cohort freeze remains a new Tier C gate.

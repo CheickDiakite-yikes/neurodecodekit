@@ -1,5 +1,17 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR35A gate, 2026-08-23: artifact-only static review proves
+> that VR2 `_classify_key` omits task identity from eligibility counting,
+> while VR20A checks exact `reachingandgrasping` only after count validation.
+> The generated-only registration freezes baseline, mixed-task surplus,
+> exact-task surplus, exact-task deficit, and task/selection-firewall cases
+> across 20 paths, two orders, and two replays. G1/G2 semantic cohorts must
+> match; exact-task drift remains bounded R1/R2; at least 80 direct refusals,
+> zero non-target selected rows, under 256 MiB, and zero retention are
+> required. Immediate gate: verify, commit, push, and green the registration
+> before implementation. No private wrapper, cohort, archive, neural, target,
+> model, score, FW2/CIL1, device, release, or claim surface is open.
+
 > Current MARC2-VR34P result, 2026-08-23: proof-only closeout `c863fd4`
 > passed Base job `97198447774`, Optional job `97198447418`, and CI
 > `32641201220` before the sole invocation. The executor collected exactly
@@ -12,9 +24,8 @@
 > protocol conformed, repairing VR32P's sampling deviation, but no cohort was
 > frozen and no scientific claim changed. VR34P is consumed with no retry,
 > rerun, repair, output inspection, or private reinspection. Next safe task:
-> artifact-only review and a separately frozen packet for any cohort, archive,
-> or neural step. Neural, target, model, score, FW2/CIL1, device, release, and
-> claim surfaces remain closed.
+> task-aware eligibility repair, now frozen as VR35A. Neural, target, model,
+> score, FW2/CIL1, device, release, and claim surfaces remain closed.
 
 > Current MARC2-VR32P result, 2026-08-23: proof-only closeout
 > `5aec8a15f5ee6fa3c6ca9cefcfb4fbfead9dd72f` passed Base Python job

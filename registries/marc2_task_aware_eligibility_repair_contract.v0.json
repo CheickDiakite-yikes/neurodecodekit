@@ -1,0 +1,284 @@
+{
+  "schema_name": "neurodecodekit.marc2_task_aware_eligibility_repair_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "MARC-2-VR35A-task-aware-eligibility-repair-v0",
+  "lane_id": "MARC2-VR35A",
+  "recorded_at_local": "2026-08-23",
+  "status": "preregistered_artifact_only_generated_only_no_private_access",
+  "objective": "Project the exact published reachingandgrasping task before participant-session eligibility arithmetic and selection, distinguishing mixed-task surplus from genuine target-task count drift without inspecting a private source.",
+  "result_proof": {
+    "VR34P_result_commit": "22c428b4129244e3cc034d338d805a429316a646",
+    "VR34P_result_CI_run_id": 32642196932,
+    "VR34P_result_base_job_id": 97200900698,
+    "VR34P_result_optional_neuro_job_id": 97200900622,
+    "both_required_jobs_green": true,
+    "observed_route": "MARC2VR34P-R2",
+    "protocol_conforming": true,
+    "aggregate_ceiling": "filtered eligible total above 195 without count or cohort exposure",
+    "private_source_or_consumed_output_reinspected_by_registration": false
+  },
+  "fixed_inputs": [
+    {
+      "role": "VR20A_module",
+      "path": "src/neurodecodekit/datasets/marc2_published_task_selector_repair.py",
+      "bytes": 45208,
+      "sha256": "9f6ebe63dbeb1cd778a71ff395d698159acc672b187e5121d5d5e734d9e05fba"
+    },
+    {
+      "role": "VR20A_contract",
+      "path": "registries/marc2_published_task_selector_repair_contract.v0.json",
+      "bytes": 9578,
+      "sha256": "a2719e0e2ab54e28675929e1982a8387406068114c2079dd3864c2c8ec022516"
+    },
+    {
+      "role": "VR20A_implementation",
+      "path": "registries/marc2_published_task_selector_repair_implementation.v0.json",
+      "bytes": 6268,
+      "sha256": "90a28059bb4d0ba92aa7dd596cb6050b141900d83415e93461dcb7c16c1fa0d1"
+    },
+    {
+      "role": "VR20A_generated_result",
+      "path": "registries/marc2_published_task_selector_repair_result.v0.json",
+      "bytes": 6175,
+      "sha256": "92d10a5c23c1795d4a4094cbe18a23d5239ad59aa9a6421a9a6bafb3a7c56dfd"
+    },
+    {
+      "role": "VR2_module",
+      "path": "src/neurodecodekit/datasets/marc2_live_domain_eligibility_adapter.py",
+      "bytes": 57528,
+      "sha256": "061b893180e01116dbd962826384b4071d9e952b78b593b4743f8c301e1cbbc3"
+    },
+    {
+      "role": "VR2_contract",
+      "path": "registries/marc2_live_domain_eligibility_adapter_contract.v0.json",
+      "bytes": 15306,
+      "sha256": "c7c94406c7b3f483bb2ecbbb42b131756d178f288eedc31ce48e9383180a0a33"
+    },
+    {
+      "role": "FW1_selector_module",
+      "path": "src/neurodecodekit/datasets/marc2_freewill_prefix_selection.py",
+      "bytes": 72691,
+      "sha256": "86fa30fbd1caed735f0fb2e627144482a2bb8e033567bb3794e3f05508005c97"
+    },
+    {
+      "role": "FW1_selector_contract",
+      "path": "registries/marc2_freewill_prefix_selection_contract.v0.json",
+      "bytes": 15821,
+      "sha256": "dfe614cd7ec27c54c4f03848e3878c714222db043f501b9b07e57c7dc9f5f702"
+    },
+    {
+      "role": "published_task_primary_source_record",
+      "path": "registries/marc2_published_task_identity_research.v0.json",
+      "bytes": 7401,
+      "sha256": "f891c27423559da8bd99d29177d2fc99db067af20eea8c7120e9249225603c81"
+    },
+    {
+      "role": "VR20P_consumed_result",
+      "path": "registries/marc2_published_task_private_confirmation_result.v0.json",
+      "bytes": 5235,
+      "sha256": "e54f3a3c5050a0d0248094d64c5e070d3081cd2aa55c7f1498528fea6a5b7a84"
+    },
+    {
+      "role": "VR34P_consumed_result",
+      "path": "registries/marc2_exact_count_private_confirmation_private_result.v0.json",
+      "bytes": 9689,
+      "sha256": "9162972eec77ce01249cbbb80ae5001bd5993d7cd1f427cfcfae57cc16d1dc72"
+    }
+  ],
+  "fixed_input_count": 11,
+  "fixed_input_bytes": 250900,
+  "registration_artifacts": {
+    "document_path": "docs/MARC_2_TASK_AWARE_ELIGIBILITY_REPAIR_PREREGISTRATION.md",
+    "document_sha256": "e8bb214639c0e3e98c3dda313cc5ecf2212961863b2db082f90a1a071c6a3fef",
+    "test_path": "tests/test_marc2_task_aware_eligibility_repair_registration.py",
+    "test_sha256": "176754710e6cabf58f5ed5c2e3e76a69b871c251fd5c6e628dfd2a7ad99c48f1"
+  },
+  "static_localization": {
+    "VR20A_function": "_validate_and_filter",
+    "VR2_classifier_function": "_classify_key",
+    "classifier_key_destructure": "subject, session, _run = key",
+    "classifier_task_dimension_present": false,
+    "VR20A_group_key": [
+      "subject",
+      "session",
+      "semantic_run"
+    ],
+    "VR20A_group_task_token_retained_in_key": false,
+    "exact_task_checked_before_eligibility_count": false,
+    "exact_task_checked_during_selected_row_validation": true,
+    "compatible_with_R2_but_not_proven_private_cause": true,
+    "private_count_value_or_task_distribution_inferred": false,
+    "unresolved_alternatives": [
+      "mixed_task_surplus_removed_by_exact_task_projection",
+      "genuine_reachingandgrasping_surplus",
+      "genuine_reachingandgrasping_deficit_or_public_count_drift"
+    ]
+  },
+  "repair_contract": {
+    "published_task_label": "reachingandgrasping",
+    "accepted_task_match": "exact_lowercase_ASCII_only",
+    "projection_order": [
+      "validate_unchanged_live_source_envelope",
+      "group_source_exactly_with_normalized_run_identity_and_complete_companions",
+      "retain_one_exact_task_token_per_logical_bundle",
+      "project_exact_published_task_bundles",
+      "classify_projected_bundles_by_frozen_participant_and_session_taxonomy",
+      "validate_exact_projected_total_and published participant-session counts",
+      "run_unchanged_rank_prefix_split_and_storage_selector",
+      "validate_source_exact_selected_rows_and semantic cohort identity"
+    ],
+    "exact_projected_eligible_run_bundles": 195,
+    "eligible_subjects": 19,
+    "selected_subjects": 16,
+    "fit_session": "ses-01",
+    "heldout_session": "ses-02",
+    "fit_runs_per_selected_subject": 3,
+    "heldout_runs_per_selected_subject": 3,
+    "selected_core_members_per_subject": 24,
+    "reservation_cap_bytes": 8589934592,
+    "non_target_task_bundle_may_enter_selection": false,
+    "target_quality_outcome_size_or_CRC_may_change_rank": false,
+    "source_exact_selected_names_required": true,
+    "source_mutation_allowed": false,
+    "count_threshold_task_or_rank_override_allowed": false,
+    "observed_private_total_difference_task_distribution_or_identity_output_allowed": false
+  },
+  "generated_matrix": {
+    "cases": [
+      {
+        "case": "baseline_exact_task_exact_total",
+        "route": "MARC2VR35A-G1",
+        "meaning": "task-aware projection and selection reproduce the frozen baseline"
+      },
+      {
+        "case": "mixed_task_surplus",
+        "route": "MARC2VR35A-G2",
+        "meaning": "task-blind eligible total is above 195 while exact-task projection remains 195 and reproduces the baseline cohort"
+      },
+      {
+        "case": "target_task_surplus",
+        "route": "MARC2VR35A-R1",
+        "meaning": "exact-task projected eligible total remains above 195"
+      },
+      {
+        "case": "target_task_deficit",
+        "route": "MARC2VR35A-R2",
+        "meaning": "exact-task projected eligible total is below 195"
+      },
+      {
+        "case": "selection_or_task_firewall_refusal",
+        "route": "MARC2VR35A-R3",
+        "meaning": "task identity companion selection split rank storage or privacy validation refused"
+      }
+    ],
+    "orders": [
+      "canonical",
+      "reversed"
+    ],
+    "replays": 2,
+    "required_paths": 20,
+    "expected_route_counts": {
+      "MARC2VR35A-G1": 4,
+      "MARC2VR35A-G2": 4,
+      "MARC2VR35A-R1": 4,
+      "MARC2VR35A-R2": 4,
+      "MARC2VR35A-R3": 4
+    },
+    "successful_selection_calls": 8,
+    "successful_selection_validation_calls": 8,
+    "mixed_task_semantic_cohort_must_equal_baseline": true,
+    "non_target_selected_rows": 0,
+    "minimum_direct_refusals": 80,
+    "deterministic_replay_required": true,
+    "retained_output_bytes": 0
+  },
+  "implementation_contract": {
+    "future_module": "neurodecodekit.datasets.marc2_task_aware_eligibility_repair",
+    "commands": [
+      "plan",
+      "qualify"
+    ],
+    "dependency_policy": "standard_library_only",
+    "base_dependency_additions": 0,
+    "private_executor_allowed": false,
+    "generic_path_URL_output_count_threshold_task_rank_cap_route_retry_or_resource_arguments": 0,
+    "consumed_VR20P_VR34P_module_import_or_call_allowed": false,
+    "private_or_Git_ignored_source_access_allowed": false,
+    "future_private_wrapper_requires_new_packet": true
+  },
+  "resource_limits": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 45,
+    "peak_RSS_bytes_exclusive": 268435456,
+    "generated_input_bytes": 16777216,
+    "aggregate_output_bytes": 1048576,
+    "retained_output_bytes": 0,
+    "network_bytes": 0,
+    "new_payload_bytes": 0
+  },
+  "registration_verification": {
+    "pre_change_dependency_light_tests": 5415,
+    "focused_registration_tests_passed": 10,
+    "complete_dependency_light_tests_passed": 5425,
+    "expected_skips": 204,
+    "new_failures": 0,
+    "test_delta": 10,
+    "repository_pinned_ruff_version": "0.15.20",
+    "repository_pinned_ruff_passed": true,
+    "compile_passed": true,
+    "registry_JSON_files_parsed": 413,
+    "git_diff_check_passed": true,
+    "private_operations_during_verification": 0
+  },
+  "authorization": {
+    "artifact_only_reads": true,
+    "generated_in_memory_fixture_creation": true,
+    "generated_implementation_after_registration_is_remotely_green": true,
+    "private_or_Git_ignored_path_access": false,
+    "readiness_file_or_consumed_state_access": false,
+    "archive_header_or_member_access": false,
+    "signal_event_channel_geometry_target_or_label_access": false,
+    "cohort_freeze": false,
+    "model_training_inference_prediction_or_scoring": false,
+    "network_or_provider_calls": false,
+    "FW2_or_CIL1_execution": false,
+    "device_stream_hardware_or_release": false,
+    "scientific_claim_upgrade": false
+  },
+  "registration_operation_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "readiness_or_consumed_state_operations": 0,
+    "private_source_stats_resolves_hashes_opens_reads_or_parses": 0,
+    "archive_header_or_member_reads": 0,
+    "neural_signal_operations": 0,
+    "target_or_label_operations": 0,
+    "cohort_freezes": 0,
+    "model_training_inference_prediction_or_scoring_runs": 0,
+    "network_or_provider_calls": 0,
+    "new_payload_bytes": 0,
+    "FW2_or_CIL1_operations": 0,
+    "other_project_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "next_gate": {
+    "registration_must_be_committed_pushed_and_both_CI_jobs_green_before_implementation": true,
+    "generated_implementation_and_one_qualification_allowed_after_green": true,
+    "private_execution_or_consumed_lane_reinspection_authorized": false,
+    "new_private_cohort_freeze_requires_separate_frozen_Tier_C_packet_and_decision": true,
+    "FW2_CIL1_archive_neural_target_model_score_or_live_work_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_capability_proposed": "task-aware structural eligibility and deterministic cohort selection on generated fixtures",
+    "scientific_ceiling": "none",
+    "real_cohort_established": false,
+    "neural_payload_accessed": false,
+    "target_or_label_accessed": false,
+    "model_prediction_or_score_accessed": false,
+    "decoding_performance_established": false,
+    "language_or_thought_decoding_established": false,
+    "unseen_person_generalization_established": false,
+    "live_or_realtime_decoding_established": false
+  }
+}

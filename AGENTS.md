@@ -45,6 +45,31 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
+`MARC2-VR35A` is locally preregistered as an artifact-only and generated-only
+task-aware eligibility repair. Read
+`docs/MARC_2_TASK_AWARE_ELIGIBILITY_REPAIR_PREREGISTRATION.md` and
+`registries/marc2_task_aware_eligibility_repair_contract.v0.json` first.
+Static review proves that VR2 `_classify_key` uses only subject, session, and
+run; exact task identity is absent from eligibility counting and checked only
+afterward during selected-row validation.
+
+VR35A freezes five parallel generated cases across two orders and two replays:
+baseline exact task/total, mixed-task surplus, target-task surplus, target-task
+deficit, and selection/task-firewall refusal. G1 and G2 must produce the same
+semantic cohort; R1 and R2 preserve genuine target-task count drift; R3 keeps
+all structural, selection, storage, and privacy refusals closed. Non-target
+task rows may never enter selection. Twenty paths, eight successful selector
+calls, at least 80 direct refusals, exact replay, one thread, under 256 MiB,
+and zero retention are required.
+
+Immediate gate: verify, commit, push, and green this exact registration before
+implementation. Do not implement early or touch any private/ignored source,
+readiness state, consumed lane, archive, neural payload, target, model, score,
+FW2/CIL1, device, release, or claim surface. A future private wrapper or cohort
+freeze remains a separately frozen Tier C packet and decision.
+
+### Consumed VR34P boundary
+
 `MARC2-VR34P` is consumed at aggregate route `MARC2VR34P-R2` without a
 cohort freeze. Read
 `docs/MARC_2_EXACT_COUNT_PRIVATE_CONFIRMATION_RESULT.md` and

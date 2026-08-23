@@ -7,7 +7,25 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Boundary: MARC2-VR34P Consumed At Protocol-Conforming R2
+## Current Gate: MARC2-VR35A Task-Aware Eligibility Registration
+
+Read `docs/MARC_2_TASK_AWARE_ELIGIBILITY_REPAIR_PREREGISTRATION.md` and
+`registries/marc2_task_aware_eligibility_repair_contract.v0.json`. Static
+analysis shows the current eligibility classifier counts by participant and
+session without a task dimension, while exact `reachingandgrasping` identity
+is checked only later during selected-row validation.
+
+VR35A tests baseline, mixed-task surplus, exact-task surplus, exact-task
+deficit, and task/selection-firewall conditions in parallel. The generated
+matrix freezes 20 paths across two orders and two replays. Mixed-task surplus
+must produce the same semantic cohort as baseline; genuine exact-task drift
+must remain an explicit refusal. No real/private source is accessed.
+
+Immediate gate: verify, commit, push, and green the exact registration before
+generated implementation. A private wrapper, cohort freeze, archive member,
+or neural step remains a separate Tier C packet and decision.
+
+## Consumed Boundary: MARC2-VR34P Protocol-Conforming R2
 
 Read `docs/MARC_2_EXACT_COUNT_PRIVATE_CONFIRMATION_RESULT.md` and
 `registries/marc2_exact_count_private_confirmation_private_result.v0.json`.
@@ -27,9 +45,9 @@ unavailable. No cohort was frozen. Unlike consumed VR32P, this invocation
 matched the registered three-sample, two-sleep readiness protocol exactly.
 
 VR34P cannot be retried, repaired, or reinspected. The next safe task is an
-artifact-only review and a separately frozen packet for any cohort, archive,
-or neural step. Archive, neural, target, model, score, FW2/CIL1, device,
-release, and scientific-claim surfaces remain closed.
+artifact-only task-aware eligibility repair, now frozen as VR35A. Archive,
+neural, target, model, score, FW2/CIL1, device, release, and scientific-claim
+surfaces remain closed.
 
 ## Consumed Boundary: MARC2-VR32P R2 With A Protocol Deviation
 
