@@ -45,22 +45,26 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
-`MARC2-VR33A` has exact remote implementation proof and a proof-only closeout
-pending its own green barrier. Read its preregistration, implementation and
-proof-closeout documents, contract, implementation record, and result.
-Implementation `92baa516b5e0bc16e75a8bc05c57b057b3c3bf73` passed Base job
-`97184143923`, Optional job `97184144015`, and CI `32635352814`.
+`MARC2-VR33A` is remotely closed generated engineering. Exact proof-only
+closeout `22dcb05a1da90b153b715a0374eeb3673024f53c` passed Base job
+`97185995887`, Optional job `97185995981`, and CI `32636104743` without
+repeating qualification or touching private state.
 
-The sole qualification returned `MARC2VR33A-G1`: 16 paths, exactly 48 provider
-calls, 32 sleeper calls, 48 returned samples, only `PPP` ready, 67 direct
-refusals, exact replay, and zero source mutations. It processed 4,136 generated
-bytes in 0.004203916992992163 seconds at 24,215,552-byte peak RSS with zero
-retention and every private, neural, model, network, and claim counter at zero.
+The next all-false Tier C request is prepared as `MARC2-VR34P`. Read
+`docs/MARC_2_EXACT_COUNT_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md` and
+`registries/marc2_exact_count_private_confirmation_authorization_request.v0.json`.
+It binds 17 committed VR33A, VR31A, and aggregate VR32P artifacts totaling
+137,581 bytes. Delayed Stage 1 is a generated/mock fixed-path wrapper that
+calls unchanged VR33A on 60 paths and unchanged VR31A only after `PPP`.
+Delayed Stage 2 is one distinct target-free structural invocation using
+exactly three readiness-provider calls, two fixed sleeps, at most one
+418,755-byte source open after `PPP`, and one aggregate R1/R2 answer.
 
-Immediate gate: commit, push, and green the exact proof-only closeout. Do not
-repeat qualification. After green, VR33A is closed as remotely proven generated
-engineering. Do not modify or call consumed VR32P or inspect private/ignored
-state. Any future private adoption remains a new Tier C packet and decision.
+Immediate gate: verify, commit, push, and green the exact all-false request,
+then prepare a proof-only request closeout. Every authority flag is false and
+every operation counter is zero. The maintainer's current `continue` predates
+the packet and is not retroactive authority. Do not implement VR34P, inspect
+private/ignored state, or import, call, repair, or modify consumed VR32P.
 FW2/CIL1, archives, neural data, targets, models, scores, streams, devices,
 release, and claims remain closed.
 

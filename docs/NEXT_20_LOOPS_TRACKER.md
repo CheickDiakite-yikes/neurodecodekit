@@ -1,10 +1,10 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate gate (2026-08-23):** exact VR33A implementation `92baa51`
-> passed Base job `97184143923`, Optional job `97184144015`, and CI
-> `32635352814`. Commit, push, and green the proof-only closeout without
-> repeating qualification. No private executor, consumed-state access, neural
-> work, or claim action is open.
+> **Immediate gate (2026-08-23):** VR33A proof closeout `22dcb05` passed Base
+> job `97185995887`, Optional job `97185995981`, and CI `32636104743`. Verify,
+> commit, push, and green the all-false VR34P exact-count private-confirmation
+> request, then bind it in a proof-only closeout. No implementation, private
+> access, neural work, or claim action is open.
 
 > **Immediate update (2026-08-23):** exact VR32P proof closeout `5aec8a1`
 > passed Base job `97177262321`, Optional job `97177262387`, and CI
@@ -3931,7 +3931,37 @@ ignored-path, archive, neural, target, model, score, network, FW2/CIL1, or
 claim operation. Next gate: commit, push, and green this exact closeout. Only
 then may the one registered target-free structural discriminator execute.
 
-### MARC2-VR33A - Exact-Count Readiness Repair Qualified Locally
+### MARC2-VR34P - All-False Exact-Count Private Confirmation Request Prepared
+
+VR33A proof-only closeout `22dcb05a1da90b153b715a0374eeb3673024f53c`
+passed Base job `97185995887`, Optional job `97185995981`, and CI
+`32636104743` without repeating qualification or touching private state.
+
+VR34P binds 17 committed VR33A, VR31A, and aggregate VR32P artifacts totaling
+137,581 bytes. Delayed Stage 1 is a generated/mock fixed-path wrapper over
+unchanged VR33A and VR31A: 15 cases across two orders and two replays, 60
+VR33A calls, 180 provider calls, 120 sleeper calls, 32 VR31A calls, and frozen
+G1/G2/R1/R2/R3 counts 4/4/4/4/44. Non-`PPP` paths may not construct or call a
+source discriminator.
+
+Delayed Stage 2 is one distinct target-free structural confirmation. It uses
+exactly three readiness-provider calls and two fixed five-second sleeps. A
+non-`PPP` result consumes at aggregate R3 with zero source opens. Only `PPP`
+may create a marker, open and strict-parse the registered 418,755-byte source
+once, call VR31A once, and retain aggregate R1 below 195 or R2 above 195.
+
+Every authority flag is false and every operation counter is zero. Immediate
+gate: verify, commit, push, and green the request, then add a separately green
+proof-only request closeout. The current `continue` predates the packet and is
+not retroactive authority. VR32P remains consumed and must not be imported,
+called, repaired, modified, or reinspected.
+
+Local registration verification passes 13 focused tests and all 5,361 base-
+install tests with 204 expected skips, a +13 test delta from the 5,348-test
+VR33A closeout baseline. Ruff, compilation, all 407 registry JSON files, and
+diff hygiene pass.
+
+### MARC2-VR33A - Exact-Count Readiness Repair Remotely Closed
 
 The consumed VR32P invocation returned five readiness samples against a frozen
 three-sample requirement. Static review identifies its open-ended consecutive-
@@ -3959,10 +3989,12 @@ job `97184143923`, Optional job `97184144015`, and CI `32635352814`. The
 proof-only closeout binds its Git blobs and preproof registry hashes without
 repeating qualification or touching private state.
 
-Immediate gate: verify, commit, push, and green this exact closeout. After
-green, VR33A is closed as remotely proven generated engineering. VR32P remains
-consumed and byte-identical. Any future private adoption requires a separately
-frozen Tier C packet and decision.
+Exact proof-only closeout `22dcb05a1da90b153b715a0374eeb3673024f53c`
+passed Base job `97185995887`, Optional job `97185995981`, and CI
+`32636104743` without requalification or private access. VR33A is closed as
+remotely proven generated engineering. VR32P remains consumed and byte-
+identical. Any private adoption requires a separately frozen Tier C packet and
+decision.
 
 ### MARC2-VR32P - Consumed At R2 With Readiness Deviation
 

@@ -7,21 +7,28 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: MARC2-VR33A Exact-Count Readiness Repair
+## Current Gate: MARC2-VR34P Exact-Count Private Confirmation Request
 
-Implementation `92baa516b5e0bc16e75a8bc05c57b057b3c3bf73` passed Base job
-`97184143923`, Optional job `97184144015`, and CI `32635352814`. Read the
-VR33A preregistration, implementation and proof-closeout documents, contract,
-implementation record, and result.
+VR33A proof-only closeout `22dcb05a1da90b153b715a0374eeb3673024f53c`
+passed Base job `97185995887`, Optional job `97185995981`, and CI
+`32636104743`. VR33A is remotely closed generated engineering, and its sole
+qualification must not be repeated.
 
-The sole generated qualification passed `MARC2VR33A-G1`: 16 paths, 48 provider
-calls, 32 sleeper calls, only `PPP` ready, 67 refusals, exact replay, and zero
-source mutation or retention. Immediate gate: commit, push, and green the exact
-proof-only closeout without repeating qualification. After green, VR33A is
-closed as remotely proven generated engineering. Do not touch VR32P private or
-consumed state. Any future private use needs a separate frozen Tier C packet
-and decision. Neural, target, model, score, FW2/CIL1, device, release, and
-claim surfaces remain closed.
+Read
+`docs/MARC_2_EXACT_COUNT_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md` and
+`registries/marc2_exact_count_private_confirmation_authorization_request.v0.json`.
+The all-false VR34P request binds 17 tracked inputs totaling 137,581 bytes.
+Its delayed generated Stage 1 composes unchanged VR33A and VR31A over 60 fixed
+paths. Its delayed private Stage 2 permits exactly three readiness samples,
+two fixed sleeps, and at most one target-free 418,755-byte structural open only
+after `PPP`; it may retain only aggregate R1 below 195 or R2 above 195.
+
+Immediate gate: verify, commit, push, and green the request, then bind it in a
+separate proof-only closeout. Every authority flag is false. The current
+`continue` predates the packet, so implementation and private access remain
+unauthorized. Do not touch consumed VR32P or any private/ignored state. Neural,
+target, model, score, FW2/CIL1, device, release, and claim surfaces remain
+closed.
 
 ## Consumed Boundary: MARC2-VR32P R2 With A Protocol Deviation
 
@@ -47,10 +54,11 @@ registered three. The invocation is therefore consumed with a readiness-
 sampling protocol deviation and is not a fully protocol-conforming registered
 result. It cannot be retried or repaired.
 
-Immediate safe task: perform an artifact-only and generated-only exact-count
-readiness repair and failure review. Do not inspect VR32P private or consumed
-state. Archive, neural, target, model, score, FW2/CIL1, device, release, and
-scientific-claim surfaces remain closed.
+The exact-count readiness repair is remotely closed as VR33A. The next
+all-false request is VR34P; it performs no private operation during packet
+preparation. Do not inspect VR32P private or consumed state. Archive, neural,
+target, model, score, FW2/CIL1, device, release, and scientific-claim surfaces
+remain closed.
 
 ## Generated Evidence: MARC2-VR31A Remotely Closed
 

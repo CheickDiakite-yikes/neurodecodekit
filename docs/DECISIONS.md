@@ -12191,3 +12191,27 @@ score, network, FW2/CIL1, device, other-project, release, or claim operation.
 This closeout is ineffective until its own exact commit is pushed and both
 required jobs are green. After green, VR33A is remotely closed generated
 engineering; any private adoption remains a new Tier C packet and decision.
+
+## 0421 - Freeze VR34P As A Distinct Exact-Count Private Confirmation Request
+
+Proof decision: exact VR33A proof-only closeout
+`22dcb05a1da90b153b715a0374eeb3673024f53c` passed CI `32636104743`, Base
+Python job `97185995887`, and Optional Neuro Readers job `97185995981`
+without repeating qualification or performing a private operation.
+
+Design decision: prepare VR34P as a new all-false two-stage request. Delayed
+Stage 1 composes unchanged VR33A and VR31A over 60 generated/mock paths.
+Delayed Stage 2 collects exactly three samples with two fixed sleeps and may
+open the registered 418,755-byte target-free structural source once only after
+`PPP`. It may retain only aggregate R1 below 195 or R2 above 195.
+
+Consumption decision: a non-`PPP` result consumes the sole invocation at R3
+with zero source opens. No retry, rerun, dynamic sample count, early break,
+fallback, repair, or substitution exists. VR32P code and consumed/private
+state are not reusable by VR34P.
+
+Boundary decision: every authority flag is false and every operation counter
+is zero. The current maintainer `continue` predates the packet. Commit, push,
+and green the request, then separately green a proof-only request closeout
+before identifying a sole Tier C gate. No implementation, private access,
+neural/model work, release, or claim upgrade is authorized now.

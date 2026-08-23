@@ -14125,3 +14125,29 @@ without touching any private or consumed state.
 Immediate gate: verify, commit, push, and green this exact proof-only closeout.
 After green, VR33A is remotely closed generated engineering. Any future private
 adoption still requires a new Tier C packet and decision.
+
+### VR34P all-false exact-count private-confirmation request prepared
+
+- Exact VR33A proof-only closeout
+  `22dcb05a1da90b153b715a0374eeb3673024f53c` passed Base Python job
+  `97185995887`, Optional Neuro Readers job `97185995981`, and CI
+  `32636104743` without requalification or private access.
+- Added an all-false two-stage VR34P request binding 17 committed VR33A,
+  VR31A, and aggregate VR32P artifacts totaling 137,581 bytes.
+- Delayed generated Stage 1 freezes 60 paths, 60 VR33A calls, 180 provider
+  calls, 120 sleeper calls, 32 VR31A calls, and G1/G2/R1/R2/R3 counts
+  4/4/4/4/44. Non-`PPP` cases cannot construct or call a source discriminator.
+- Delayed private Stage 2 freezes exactly three readiness samples, two fixed
+  sleeps, zero source opens for non-`PPP`, and at most one 418,755-byte target-
+  free structural open for `PPP` before one aggregate R1/R2 answer.
+- Every authorization flag is false and every operation counter is zero. The
+  packet does not import, call, inspect, repair, or modify consumed VR32P or
+  touch private/ignored state.
+- Local verification passes 13 focused tests and all 5,361 base-install tests
+  with 204 expected skips, exactly 13 more tests than the 5,348-test VR33A
+  closeout baseline. Ruff, compilation, all 407 registry JSON files, and diff
+  hygiene pass.
+
+Immediate gate: verify, commit, push, and green the request, then bind its
+exact remote bytes in a separate proof-only closeout. The current `continue`
+predates the packet and authorizes neither implementation nor private access.
