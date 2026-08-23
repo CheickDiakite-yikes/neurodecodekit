@@ -1,0 +1,137 @@
+{
+  "schema_name": "neurodecodekit.marc2_r1_eligible_total_direction_discriminator_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "MARC-2-VR31A-R1-eligible-total-direction-generated-implementation-v0",
+  "lane_id": "MARC2-VR31A",
+  "recorded_at_local": "2026-08-23",
+  "status": "generated_qualification_passed_remote_implementation_proof_pending",
+  "registration_proof": {
+    "commit": "eeab6785b8eadc6d65199fa1ac519173f9c160c7",
+    "CI_run_id": 32626878097,
+    "base_job_id": 97163443088,
+    "optional_neuro_job_id": 97163443152,
+    "both_required_jobs_green_before_implementation": true,
+    "contract_sha256": "d02b95029e3c3b2b61388d0d838d81108ca11675b752a1530c6135c17f1cdf00",
+    "fixed_input_bytes": 122263
+  },
+  "implementation_artifacts": [
+    {
+      "path": "src/neurodecodekit/datasets/marc2_r1_eligible_total_direction_discriminator.py",
+      "bytes": 27357,
+      "sha256": "36faa3f2ae92518c245399cbae70554f1142227b655d16a5da4601918211e73f"
+    },
+    {
+      "path": "tests/test_marc2_r1_eligible_total_direction_discriminator.py",
+      "bytes": 5116,
+      "sha256": "005461850d0bd85d78216b16d824e2814059ba6c4bb862d3f48ad88174680484"
+    },
+    {
+      "path": "tests/test_marc2_r1_eligible_total_direction_discriminator_implementation.py",
+      "bytes": 3924,
+      "sha256": "0514c80e92a81ba1c911b92b37f953b131f3bb482e02c7db66974e1a96cb763a"
+    }
+  ],
+  "implementation_artifact_count": 3,
+  "implementation_artifact_bytes": 36397,
+  "surface": {
+    "commands": [
+      "plan",
+      "qualify"
+    ],
+    "dependency_policy": "standard_library_only",
+    "private_executor_available": false,
+    "source_path_URL_route_count_threshold_output_retry_or_resource_override_available": false,
+    "retained_generated_output_bytes": 0
+  },
+  "qualification": {
+    "route": "MARC2VR31A-G1",
+    "cases": 8,
+    "orders": 2,
+    "replays": 2,
+    "paths": 32,
+    "VR29A_calls": 32,
+    "R1_direction_comparisons": 8,
+    "immutable_threshold_predicates": 1,
+    "VR31A_route_counts": {
+      "MARC2VR31A-G1": 4,
+      "MARC2VR31A-G2": 4,
+      "MARC2VR31A-R1": 4,
+      "MARC2VR31A-R2": 4,
+      "MARC2VR31A-R3": 16
+    },
+    "VR29A_route_counts": {
+      "MARC2VR29A-G1": 4,
+      "MARC2VR29A-G2": 4,
+      "MARC2VR29A-R1": 8,
+      "MARC2VR29A-R2": 8,
+      "MARC2VR29A-R3": 8
+    },
+    "direct_refusals_passed": 78,
+    "exact_replays_match": true,
+    "order_invariant_route_distribution": true,
+    "replay_digest": "68028962626d3f2cbcd6fc494631170a1e42ac2761f1c93948b79c1832c3bbe8",
+    "source_mutations_after_call": 0,
+    "observed_total_or_difference_retained": false
+  },
+  "resources": {
+    "fixed_input_bytes": 122263,
+    "generated_input_bytes": 14137216,
+    "aggregate_output_bytes": 2957,
+    "retained_output_bytes": 0,
+    "runtime_seconds": 2.8035786249674857,
+    "peak_RSS_bytes": 39174144,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "network_bytes": 0,
+    "new_payload_bytes": 0,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "end_to_end_latency_measured": false
+  },
+  "operation_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "readiness_or_consumed_state_operations": 0,
+    "archive_header_or_member_reads": 0,
+    "neural_signal_operations": 0,
+    "target_or_label_operations": 0,
+    "model_training_inference_prediction_or_scoring_runs": 0,
+    "network_or_provider_calls": 0,
+    "new_payload_bytes": 0,
+    "FW2_or_CIL1_operations": 0,
+    "other_project_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "verification": {
+    "pre_change_dependency_light_tests": 5231,
+    "focused_tests_passed": 28,
+    "complete_dependency_light_tests_passed": 5250,
+    "expected_skips": 204,
+    "new_failures": 0,
+    "repository_pinned_ruff_passed": true,
+    "registry_JSON_files_parsed": 397,
+    "CLI_help_and_plan_passed": true,
+    "git_diff_check_passed": true,
+    "qualification_repeated_during_verification": false,
+    "private_operations_during_verification": 0
+  },
+  "remote_implementation_proof": null,
+  "warnings": [
+    "generated_only_qualification",
+    "no_private_executor_or_count_output",
+    "generated_direction_does_not_identify_consumed_private_direction",
+    "no_real_cohort_neural_decoding_or_scientific_claim"
+  ],
+  "claim_boundary": {
+    "engineering_capability": "generated route discrimination between below-expected and above-expected filtered eligible totals without count exposure",
+    "scientific_ceiling": "none",
+    "real_cohort_established": false,
+    "neural_payload_accessed": false,
+    "decoding_performance_established": false,
+    "language_or_thought_decoding_established": false,
+    "unseen_person_generalization_established": false,
+    "live_decoding_established": false
+  }
+}

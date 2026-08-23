@@ -1,0 +1,105 @@
+{
+  "claim_boundary": {
+    "engineering_capability": "generated discrimination of below-expected versus above-expected filtered eligible totals without count exposure",
+    "scientific_claim_not_established": "No neural payload target model prediction or score was accessed."
+  },
+  "lane_id": "MARC2-VR31A",
+  "matrix": {
+    "R1_direction_comparisons": 8,
+    "VR29A_calls": 32,
+    "VR29A_route_counts": {
+      "MARC2VR29A-G1": 4,
+      "MARC2VR29A-G2": 4,
+      "MARC2VR29A-R1": 8,
+      "MARC2VR29A-R2": 8,
+      "MARC2VR29A-R3": 8
+    },
+    "VR31A_route_counts": {
+      "MARC2VR31A-G1": 4,
+      "MARC2VR31A-G2": 4,
+      "MARC2VR31A-R1": 4,
+      "MARC2VR31A-R2": 4,
+      "MARC2VR31A-R3": 16
+    },
+    "cases": [
+      "exact_public_control",
+      "single_session_exclusion_removed",
+      "eligible_bundle_removed",
+      "eligible_bundle_added",
+      "eligible_distribution_shift",
+      "eligible_distribution_shift_second",
+      "unknown_participant_bundle",
+      "incomplete_companion_set"
+    ],
+    "direct_refusals_passed": 78,
+    "exact_replays_match": true,
+    "immutable_threshold_predicates": 1,
+    "observed_total_or_difference_retained": false,
+    "order_invariant_route_distribution": true,
+    "orders": [
+      "canonical",
+      "reversed"
+    ],
+    "paths": 32,
+    "replay_digest": "68028962626d3f2cbcd6fc494631170a1e42ac2761f1c93948b79c1832c3bbe8",
+    "replays": 2,
+    "source_mutations_after_call": 0
+  },
+  "measurements": {
+    "CPU_threads": 1,
+    "aggregate_output_bytes": 2957,
+    "end_to_end_latency_measured": false,
+    "fixed_input_bytes": 122263,
+    "generated_input_bytes": 14137216,
+    "model_runs": 0,
+    "network_bytes": 0,
+    "new_payload_bytes": 0,
+    "numerical_jobs": 1,
+    "peak_RSS_bytes": 39174144,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "retained_output_bytes": 0,
+    "runtime_seconds": 2.8035786249674857,
+    "training_runs": 0,
+    "workers": 1
+  },
+  "operation_counters": {
+    "FW2_or_CIL1_operations": 0,
+    "archive_header_or_member_reads": 0,
+    "model_training_inference_prediction_or_scoring_runs": 0,
+    "network_or_provider_calls": 0,
+    "neural_signal_operations": 0,
+    "new_payload_bytes": 0,
+    "other_project_operations": 0,
+    "private_or_Git_ignored_path_operations": 0,
+    "readiness_or_consumed_state_operations": 0,
+    "scientific_claim_upgrades": 0,
+    "target_or_label_operations": 0
+  },
+  "proof": {
+    "contract_sha256": "d02b95029e3c3b2b61388d0d838d81108ca11675b752a1530c6135c17f1cdf00",
+    "registration_CI_run_id": 32626878097,
+    "registration_base_job_id": 97163443088,
+    "registration_commit": "eeab6785b8eadc6d65199fa1ac519173f9c160c7",
+    "registration_optional_neuro_job_id": 97163443152
+  },
+  "route": "MARC2VR31A-G1",
+  "schema_name": "neurodecodekit.marc2_r1_eligible_total_direction_discriminator_result",
+  "schema_version": "0.1.0",
+  "status": "generated_eligible_total_direction_discriminator_qualified",
+  "unavailable_fields": [
+    "consumed_private_R1_direction",
+    "private_observed_total_or_difference",
+    "private_distribution_participant_or_source_detail",
+    "real_target_free_cohort",
+    "archive_member_neural_signal_target_model_prediction_or_score",
+    "end_to_end_neural_decoding_latency"
+  ],
+  "warnings": [
+    "artifact_only_and_generated_only",
+    "no_private_executor",
+    "generated_direction_routes_do_not_identify_the_consumed_private_direction",
+    "no_observed_total_or_difference_retained",
+    "no_real_cohort_neural_decoding_or_scientific_claim"
+  ]
+}

@@ -1,15 +1,17 @@
 # Codex Handoff - NeuroDecodeKit
 
-> Current MARC2-VR31A registration, 2026-08-23: green VR30P result
-> `a6e1ac5c17c2cffd4d07222c1f3eebcd05fb6a22` and CI `32626086478` anchor
-> an artifact-only/generated-only below-versus-above eligible-total
-> discriminator. The frozen matrix has eight 1,227-row cases, two orders, two
-> replays, 32 unchanged VR29A calls, eight R1 direction comparisons, and exact
-> G1/G2/R1/R2/R3 counts 4/4/4/4/16. The immutable threshold is 195. No
-> observed count or difference may be returned or retained, and the module
-> may expose only `plan` and `qualify`. Immediate gate: verify, commit, push,
-> and green this registration before implementation. It authorizes no private
-> read or neural/scientific work.
+> Current MARC2-VR31A generated result, 2026-08-23: exact registration
+> `eeab6785b8eadc6d65199fa1ac519173f9c160c7` passed Base Python job
+> `97163443088`, Optional Neuro Readers job `97163443152`, and CI
+> `32626878097` before implementation. One measured `MARC2VR31A-G1` pass
+> completed all 32 paths with 32 unchanged VR29A calls, eight R1 direction
+> comparisons, one immutable threshold predicate, G1/G2/R1/R2/R3 counts
+> 4/4/4/4/16, 78 direct refusals, exact replay, source immutability, zero count
+> retention, and zero output retention. It processed 14,137,216 generated
+> bytes in 2.8035786249674857 seconds at 39,174,144-byte peak RSS and emitted
+> 2,957 aggregate bytes. Immediate gate: verify, commit, push, and green the
+> implementation/result, then separately green a proof-only closeout without
+> rerunning qualification. No private or neural/scientific surface is open.
 
 > Current MARC2-VR30P result, 2026-08-23: proof-only closeout
 > `7ce2c5e7f7dde15dfe1dfafa35058613ae09b016` passed Base Python job

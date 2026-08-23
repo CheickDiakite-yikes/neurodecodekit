@@ -11954,3 +11954,31 @@ implementation. Registration performs no private, readiness, consumed-state,
 archive, neural, target, model, prediction, score, network, provider, device,
 FW2/CIL1, release, or claim operation. Any private direction check remains a
 new Tier C packet and fresh decision.
+
+## 0410 - Accept Generated VR31A Eligible-Total Direction Qualification
+
+Proof decision: exact registration
+`eeab6785b8eadc6d65199fa1ac519173f9c160c7` passed CI `32626878097`, Base
+Python job `97163443088`, and Optional Neuro Readers job `97163443152` before
+implementation.
+
+Implementation decision: accept generated route `MARC2VR31A-G1` after all 32
+fixed paths passed. The wrapper called unchanged VR29A 32 times and performed
+exactly eight R1 direction comparisons against the immutable threshold of 195.
+Exact VR31A route counts were G1/G2/R1/R2/R3 = 4/4/4/4/16. Exact replay,
+order-invariant route distribution, source immutability, 78 direct refusals,
+zero count retention, and zero output retention passed.
+
+Measurement decision: record 14,137,216 generated input bytes,
+2.8035786249674857 seconds runtime, 39,174,144-byte peak RSS, 2,957 aggregate
+output bytes, and zero retained output under one CPU thread, one worker, and
+one numerical job. Record zero raw-data reads, real-cache reads, model runs,
+training runs, network bytes, new-payload bytes, and forbidden operations.
+
+Boundary decision: this is generated engineering evidence only. It does not
+identify whether the consumed private total is below or above 195 and exposes
+no observed count, difference, participant, or cohort. Commit, push, and green
+the exact implementation, then separately green a proof-only closeout without
+rerunning qualification. Any private direction check remains a new Tier C
+packet and fresh decision; no archive, neural, target, model, score, FW2/CIL1,
+device, release, or scientific claim surface is open.
