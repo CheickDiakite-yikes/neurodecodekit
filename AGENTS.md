@@ -50,10 +50,13 @@ closeout `22dcb05a1da90b153b715a0374eeb3673024f53c` passed Base job
 `97185995887`, Optional job `97185995981`, and CI `32636104743` without
 repeating qualification or touching private state.
 
-The next all-false Tier C request is `MARC2-VR34P`. Exact request
+The sole active Tier C packet is `MARC2-VR34P`. Exact request
 `d4215c5aa5b8e43d91ff7ff26b8ea035648f3706` passed Base Python job
 `97189079380`, Optional Neuro Readers job `97189079311`, and CI
-`32637387771`. Read
+`32637387771`. Exact request-proof closeout
+`45cc8f18fe8fc7f5c8b9675648a4cd358617808d` passed Base Python job
+`97190816942`, Optional Neuro Readers job `97190817104`, and CI
+`32638120718`. Read
 `docs/MARC_2_EXACT_COUNT_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md` and
 `registries/marc2_exact_count_private_confirmation_authorization_request.v0.json`,
 then read `docs/MARC_2_EXACT_COUNT_PRIVATE_CONFIRMATION_REQUEST_PROOF_CLOSEOUT.md`
@@ -65,13 +68,17 @@ Delayed Stage 2 is one distinct target-free structural invocation using
 exactly three readiness-provider calls, two fixed sleeps, at most one
 418,755-byte source open after `PPP`, and one aggregate R1/R2 answer.
 
-Immediate gate: verify, commit, push, and green the exact proof-only request
-closeout. It binds the unchanged three-file, 28,726-byte request artifact set
-and performs zero implementation or private operation. Only after that exact
-closeout is remotely green may VR34P be identified as the sole active Tier C
-packet. The maintainer's current `continue` predates the proof barrier and is
-not retroactive authority. Do not implement VR34P, inspect private/ignored
-state, or import, call, repair, or modify consumed VR32P.
+After Codex identified this exact packet as the sole gate, the maintainer's
+next message was the exact eight UTF-8 bytes `continue`. Read
+`docs/MARC_2_EXACT_COUNT_PRIVATE_CONFIRMATION_AUTHORIZATION_DECISION.md` and
+`registries/marc2_exact_count_private_confirmation_authorization_decision.v0.json`.
+The decision binds six unchanged packet/proof artifacts totaling 41,496 bytes
+and is ineffective until its own exact commit is pushed and both jobs are
+green. Immediate gate: verify, commit, push, and green the decision. Do not
+implement early or inspect private/ignored state. After decision green, only
+generated Stage 1 opens; Stage 2 remains closed until exact Stage 1 and a
+separate proof-only closeout are both remotely green. Do not import, call,
+repair, or modify consumed VR32P.
 FW2/CIL1, archives, neural data, targets, models, scores, streams, devices,
 release, and claims remain closed.
 

@@ -1,17 +1,19 @@
 # Codex Handoff - NeuroDecodeKit
 
-> Current MARC2-VR34P gate, 2026-08-23: exact all-false request `d4215c5`
-> passed Base job `97189079380`, Optional job `97189079311`, and CI
-> `32637387771`. Its three unchanged request artifacts total 28,726 bytes.
-> Read the new proof-only closeout and machine proof. Delayed Stage 1
+> Current MARC2-VR34P gate, 2026-08-23: exact request-proof closeout `45cc8f1`
+> passed Base job `97190816942`, Optional job `97190817104`, and CI
+> `32638120718`. After Codex identified VR34P as the sole active Tier C packet,
+> the maintainer's next exact message was `continue`. Read the packet-bound
+> decision document and registry. They bind six unchanged packet/proof files
+> totaling 41,496 bytes. Delayed Stage 1
 > composes unchanged VR33A and VR31A over 60 generated/mock paths. Delayed
 > Stage 2 uses exactly three provider calls and two fixed sleeps, opens the
 > 418,755-byte target-free structural source at most once only after `PPP`, and
 > retains only aggregate R1 below 195 or R2 above 195. Immediate gate: verify,
-> commit, push, and green the proof-only closeout. It adds no authority and
-> performs zero private operation. Only after its own remote green may VR34P
-> become the sole Tier C gate. The current `continue` predates that barrier.
-> Do not implement VR34P or touch consumed VR32P/private state.
+> commit, push, and green the decision. Before that proof, do not implement or
+> touch private state. After decision green, only generated Stage 1 opens;
+> Stage 2 remains closed until exact Stage 1 and its proof-only closeout are
+> remotely green. Do not touch consumed VR32P/private state.
 
 > Current MARC2-VR32P result, 2026-08-23: proof-only closeout
 > `5aec8a15f5ee6fa3c6ca9cefcfb4fbfead9dd72f` passed Base Python job

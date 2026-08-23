@@ -1,10 +1,10 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate gate (2026-08-23):** exact VR34P request `d4215c5` passed Base
-> job `97189079380`, Optional job `97189079311`, and CI `32637387771`. Verify,
-> commit, push, and green the new proof-only request closeout. It binds 28,726
-> immutable request bytes and adds no authority. No implementation, private
-> access, neural work, or claim action is open.
+> **Immediate gate (2026-08-23):** exact VR34P proof closeout `45cc8f1`
+> passed Base job `97190816942`, Optional job `97190817104`, and CI
+> `32638120718`. The maintainer's next exact message was `continue`; verify,
+> commit, push, and green its packet-bound decision before generated Stage 1.
+> No implementation, private access, neural work, or claim action is open yet.
 
 > **Immediate update (2026-08-23):** exact VR32P proof closeout `5aec8a1`
 > passed Base job `97177262321`, Optional job `97177262387`, and CI
@@ -3978,6 +3978,25 @@ Immediate gate: verify, commit, push, and green this exact proof-only
 closeout. Only afterward may VR34P be identified as the sole active Tier C
 packet for fresh maintainer words. The current `continue` predates this proof
 barrier and is not retroactive authority.
+
+### MARC2-VR34P - Packet-Bound Decision Recorded
+
+Exact request-proof closeout
+`45cc8f18fe8fc7f5c8b9675648a4cd358617808d` passed Base Python job
+`97190816942`, Optional Neuro Readers job `97190817104`, and CI
+`32638120718`. Codex then identified VR34P as the sole active Tier C packet;
+the maintainer's next exact message was the eight UTF-8 bytes `continue`.
+
+The decision binds those actual bytes and six unchanged packet/proof artifacts
+totaling 41,496 bytes. It authorizes no operation at recording and becomes
+effective only after its own exact commit is pushed and both required jobs are
+green. After that barrier, generated Stage 1 may implement and qualify the
+60-path exact-count wrapper. Stage 2 remains closed until exact Stage 1 and a
+separate proof-only closeout are both remotely green.
+
+Immediate gate: verify, commit, push, and green the decision. Do not implement
+early, touch consumed VR32P/private state, or access archive, neural, target,
+model, score, FW2/CIL1, device, release, or claim surfaces.
 
 ### MARC2-VR33A - Exact-Count Readiness Repair Remotely Closed
 

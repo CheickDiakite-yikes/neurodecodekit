@@ -14170,3 +14170,25 @@ predates the packet and authorizes neither implementation nor private access.
 Immediate gate: verify, commit, push, and green this exact proof-only
 closeout. Only then may VR34P be identified as the sole active Tier C packet;
 the current `continue` predates this proof barrier.
+
+### VR34P packet-bound authorization recorded
+
+- Exact request-proof closeout
+  `45cc8f18fe8fc7f5c8b9675648a4cd358617808d` passed Base Python job
+  `97190816942`, Optional Neuro Readers job `97190817104`, and CI
+  `32638120718`.
+- After VR34P was identified as the sole active Tier C packet, the
+  maintainer's next exact message was `continue`: eight UTF-8 bytes with
+  SHA-256 `e256ee8e7aff6957a781d8328f0f68e26996564c81fa458da59fbca2305138ad`.
+- The decision binds six unchanged packet/proof artifacts totaling 41,496
+  bytes and infers no scope expansion.
+- Recording performs zero implementation, generated qualification, readiness,
+  private, consumed-state, archive, neural, target, model, score, network,
+  device, FW2/CIL1, other-project, release, or claim operation.
+- Local verification passes 27 focused request/proof/decision tests and all
+  5,375 dependency-light tests with 204 expected skips. Ruff, compilation,
+  all 409 registry JSON files, artifact identities, and diff hygiene pass.
+
+Immediate gate: verify, commit, push, and green the decision. Only afterward
+may generated Stage 1 begin. Stage 2 remains closed until exact Stage 1 and a
+separate proof-only closeout are both remotely green.

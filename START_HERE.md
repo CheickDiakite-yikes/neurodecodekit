@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: MARC2-VR34P Request Proof Closeout
+## Current Gate: MARC2-VR34P Packet-Bound Decision
 
 VR33A proof-only closeout `22dcb05a1da90b153b715a0374eeb3673024f53c`
 passed Base job `97185995887`, Optional job `97185995981`, and CI
@@ -29,12 +29,21 @@ Python job `97189079380`, Optional Neuro Readers job `97189079311`, and CI
 unchanged three request artifacts totaling 28,726 bytes and perform zero
 implementation, generated qualification, readiness, or private operation.
 
-Immediate gate: verify, commit, push, and green the proof-only closeout. Only
-after that barrier may VR34P be identified as the sole active Tier C packet.
-The current `continue` predates the proof barrier, so implementation and
-private access remain unauthorized. Do not touch consumed VR32P or any
-private/ignored state. Neural, target, model, score, FW2/CIL1, device, release,
-and claim surfaces remain closed.
+Exact request-proof closeout `45cc8f18fe8fc7f5c8b9675648a4cd358617808d`
+passed Base Python job `97190816942`, Optional Neuro Readers job
+`97190817104`, and CI `32638120718`. After VR34P was identified as the sole
+active Tier C packet, the maintainer's next exact message was `continue`.
+
+Read the packet-bound decision document and machine record. They preserve the
+actual eight UTF-8 bytes, bind six unchanged packet/proof artifacts totaling
+41,496 bytes, and infer no scope expansion.
+
+Immediate gate: verify, commit, push, and green the decision. Before that
+barrier, implementation and private access remain unauthorized. After green,
+only generated Stage 1 opens; Stage 2 remains closed until exact Stage 1 and a
+separate proof-only closeout are both remotely green. Do not touch consumed
+VR32P or any private/ignored state. Neural, target, model, score, FW2/CIL1,
+device, release, and claim surfaces remain closed.
 
 ## Consumed Boundary: MARC2-VR32P R2 With A Protocol Deviation
 
