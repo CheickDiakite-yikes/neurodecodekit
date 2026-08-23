@@ -54,16 +54,20 @@ unknown-participant taxonomy. No private predicate, value, count, identity,
 selection, or cohort was retained. Never touch VR26P private source,
 readiness, consumed marker, or output state.
 
-The current safe lane is `MARC2-VR27A`. Read
-`docs/MARC_2_R5_INVENTORY_TAXONOMY_DISCRIMINATOR_PREREGISTRATION.md` and
-`registries/marc2_r5_inventory_taxonomy_discriminator_contract.v0.json`.
-It freezes five generated cases, two orders, two replays, twenty exact VR25A
-calls, G1=4/R1=12/R2=4, at least fifty direct refusals, and zero retention.
-Commit, push, and green this exact registration before implementation. The
-lane has no private executor and cannot resolve the consumed private branch.
-Another private read requires a new Tier C packet and fresh packet-bound
-decision. FW2/CIL1, archive members, neural data, targets, models, scores,
-streams, devices, and claims remain closed.
+The current safe lane is `MARC2-VR27A`. Registration
+`47ceba3ed89df9610540fe3ed2ee8071ac1b84df` passed Base Python job
+`97124216923`, Optional Neuro Readers job `97124216871`, and CI
+`32611101033` before implementation. Read its preregistration, implementation
+document, module, and machine records. Generated qualification passed all 20
+paths with 20 exact VR25A calls, route counts G1=4/R1=12/R2=4, 57 direct
+refusals, exact replay, and zero source mutations. Runtime was 1.1202826249646023
+seconds at 33,439,744-byte peak RSS over 8,836,136 generated input bytes; 2,561
+aggregate bytes were emitted and zero retained. Commit, push, and green the
+exact implementation and result, then add and separately green a proof-only
+closeout. The lane has no private executor and cannot resolve the consumed
+private branch. Another private read requires a new Tier C packet and fresh
+packet-bound decision. FW2/CIL1, archive members, neural data, targets,
+models, scores, streams, devices, and claims remain closed.
 
 ### Historical VR22P/VR23A/VR24P boundary
 

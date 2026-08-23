@@ -124,6 +124,20 @@ VR27A registration before implementation. The lane has no private executor
 and cannot identify the consumed private branch. Any later private read
 requires a separate all-false Tier C packet and fresh packet-bound decision.
 
+Registration `47ceba3` passed Base Python job `97124216923`, Optional Neuro
+Readers job `97124216871`, and CI `32611101033` before implementation. Read
+`docs/MARC_2_R5_INVENTORY_TAXONOMY_DISCRIMINATOR_IMPLEMENTATION.md`. The
+generated adapter passed all 20 paths with exact route counts G1=4, R1=12,
+and R2=4, 20 exact VR25A calls, 57 direct refusals, exact replay, and zero
+source mutations. Runtime was 1.120283 seconds at 33,439,744-byte peak RSS
+over 8,836,136 generated input bytes, with 2,561 aggregate bytes and zero
+retention.
+
+Immediate gate: commit, push, and green the exact implementation and result,
+then add and separately green a proof-only closeout. Do not prepare a private
+packet before both barriers. VR27A has no private executor, resolves no real
+branch, and establishes no neural or decoding result.
+
 ## Historical Frontier: MARC2-VR24P Consumed At R2
 
 Read `docs/MARC_2_R5_PRIVATE_DISCRIMINATOR_RESULT.md` and its machine

@@ -3938,6 +3938,25 @@ registration before implementation. VR27A has no private executor and cannot
 identify the consumed real branch. FW2/CIL1, archive/neural payload, targets,
 models, scores, and claims remain closed.
 
+### MARC2-VR27A - Generated Route Discriminator Qualified
+
+Registration `47ceba3ed89df9610540fe3ed2ee8071ac1b84df` passed Base
+Python job `97124216923`, Optional Neuro Readers job `97124216871`, and CI
+`32611101033` before implementation. The standard-library adapter exposes
+only `plan` and `qualify`.
+
+All 20 generated paths passed with exactly 20 unchanged VR25A calls. Route
+counts were G1=4, R1=12, and R2=4; 57 direct refusals passed; both replays
+matched exactly; and all source-immutability checks passed. Runtime was
+1.1202826249646023 seconds at 33,439,744-byte peak RSS over 8,836,136
+generated input bytes. Aggregate output was 2,561 bytes and retention was
+zero.
+
+Next gate: commit, push, and green the exact implementation and result, then
+add and separately green a proof-only closeout. No consumed real branch,
+cohort, archive member, neural payload, target, model, score, FW2/CIL1 action,
+or scientific claim has been established.
+
 ### MARC2-VR25A - Selection-Boundary Firewall Registered Locally
 
 VR24P result `a873f1a` passed Base Python job `97103071419`, Optional Neuro

@@ -13102,6 +13102,27 @@ Immediate gate: verify, commit, push, and green this exact registration before
 implementation. A generated pass cannot identify the consumed private branch;
 another private read requires a separate Tier C packet and fresh decision.
 
+### VR27A generated inventory/taxonomy qualification
+
+- Registration `47ceba3ed89df9610540fe3ed2ee8071ac1b84df` passed Base
+  Python job `97124216923`, Optional Neuro Readers job `97124216871`, and CI
+  `32611101033` before implementation.
+- Added one dependency-free adapter with only `plan` and `qualify`. It has no
+  execute, path, URL, output, retry, or resource-override surface.
+- `MARC2VR27A-G1` passed 20/20 generated paths, 20 exact unchanged VR25A
+  calls, route counts G1=4/R1=12/R2=4, 57 direct refusals, exact replay, and
+  zero source mutations.
+- The pass used 8,836,136 generated input bytes in 1.1202826249646023 seconds
+  at 33,439,744-byte peak RSS. Aggregate output was 2,561 bytes and retained
+  output was zero.
+- Raw-data reads, real-cache reads, model runs, training runs, private-state
+  operations, network, FW2/CIL1, other-project operations, and claim upgrades
+  were zero.
+
+Immediate gate: commit, push, and green the exact implementation and result,
+then add and green a proof-only closeout. A future private discriminator still
+requires a separate all-false Tier C packet and fresh decision.
+
 ### VR26P packet-bound authorization decision recorded
 
 - Exact request proof closeout `efd779a2d8bafbd4efbf5618fadf2355f4f89ee4`

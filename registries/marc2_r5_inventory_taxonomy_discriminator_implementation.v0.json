@@ -1,0 +1,110 @@
+{
+  "schema_name": "neurodecodekit.marc2_r5_inventory_taxonomy_discriminator_implementation",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC2-VR27A",
+  "recorded_at_local": "2026-08-22",
+  "status": "generated_qualified_remote_implementation_proof_pending",
+  "registration_proof": {
+    "commit": "47ceba3ed89df9610540fe3ed2ee8071ac1b84df",
+    "CI_run_id": 32611101033,
+    "base_job_id": 97124216923,
+    "optional_neuro_job_id": 97124216871,
+    "both_required_jobs_green": true,
+    "contract_sha256": "495f83d6428ebc474fd232c9da65808c434a7439e812066ccd9033b9f468ded6"
+  },
+  "implementation_artifacts": [
+    {
+      "role": "implementation_module",
+      "path": "src/neurodecodekit/datasets/marc2_r5_inventory_taxonomy_discriminator.py",
+      "bytes": 21902,
+      "sha256": "735b010af4510543a67f550be3cf95a1007f0f0ea0ad8c6690b58f48d3567b15"
+    },
+    {
+      "role": "behavior_tests",
+      "path": "tests/test_marc2_r5_inventory_taxonomy_discriminator.py",
+      "bytes": 5472,
+      "sha256": "a3fb6cb5a6e8d0a542f217470d6d14bccb1de2c6699fd44681f86c4c87164c0f"
+    },
+    {
+      "role": "registration_tests",
+      "path": "tests/test_marc2_r5_inventory_taxonomy_discriminator_preregistration.py",
+      "bytes": 4669,
+      "sha256": "ca1d6d352ac98f390e2a5617305eb952d75e827d10cf2e567d8416de18d3f9b0"
+    },
+    {
+      "role": "implementation_document",
+      "path": "docs/MARC_2_R5_INVENTORY_TAXONOMY_DISCRIMINATOR_IMPLEMENTATION.md",
+      "bytes": 3098,
+      "sha256": "a47c60351cb1c8f9fb6b3b8dd2618e8494c51492f45482c4f373e8a0968c6090"
+    }
+  ],
+  "implementation_artifact_count": 4,
+  "implementation_artifact_bytes": 35141,
+  "generated_qualification": {
+    "route": "MARC2VR27A-G1",
+    "paths": 20,
+    "VR25A_calls": 20,
+    "VR27A_route_counts": {
+      "MARC2VR27A-G1": 4,
+      "MARC2VR27A-R1": 12,
+      "MARC2VR27A-R2": 4
+    },
+    "VR25A_route_counts": {
+      "MARC2VR25A-G1": 4,
+      "MARC2VR25A-R1": 12,
+      "MARC2VR25A-R2": 4
+    },
+    "direct_refusals_passed": 57,
+    "exact_replays_match": true,
+    "order_invariant_route_distribution": true,
+    "replay_digest": "128e03b565ec290e17c5e20aa516ef8f0c4020763c6d07d650db4702548dd68d",
+    "source_mutations_after_call": 0
+  },
+  "measurements": {
+    "fixed_input_bytes": 161342,
+    "generated_input_bytes": 8836136,
+    "runtime_seconds": 1.1202826249646023,
+    "peak_RSS_bytes": 33439744,
+    "aggregate_output_bytes": 2561,
+    "retained_output_bytes": 0,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "network_bytes": 0,
+    "new_payload_bytes": 0,
+    "end_to_end_latency_measured": false
+  },
+  "operation_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "readiness_or_consumed_state_operations": 0,
+    "archive_header_or_member_reads": 0,
+    "neural_signal_operations": 0,
+    "target_or_label_operations": 0,
+    "model_training_inference_prediction_or_scoring_runs": 0,
+    "network_or_provider_calls": 0,
+    "new_payload_bytes": 0,
+    "FW2_or_CIL1_operations": 0,
+    "other_project_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "proof_barrier": {
+    "remote_implementation_proof": null,
+    "proof_closeout_required_before_private_packet": true,
+    "qualification_may_be_repeated_for_closeout": false,
+    "private_executor_available": false
+  },
+  "claim_boundary": {
+    "engineering_capability": "generated discrimination of VR25A eligible-inventory drift versus unknown-participant taxonomy",
+    "consumed_private_branch_identified": false,
+    "real_cohort_established": false,
+    "neural_payload_accessed": false,
+    "decoding_performance_established": false,
+    "language_or_thought_decoding_established": false,
+    "unseen_person_generalization_established": false,
+    "live_decoding_established": false
+  }
+}

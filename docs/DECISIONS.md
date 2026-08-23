@@ -11537,3 +11537,25 @@ executor, and cannot identify the consumed private R5 branch. Registration
 must be committed, pushed, and both CI jobs green before implementation. No
 private state, archive member, neural signal, target, model, score, FW2/CIL1,
 other project, release, or scientific claim is authorized.
+
+## 0392 - Accept Generated VR27A Route Qualification
+
+Proof decision: exact registration
+`47ceba3ed89df9610540fe3ed2ee8071ac1b84df` passed Base Python job
+`97124216923`, Optional Neuro Readers job `97124216871`, and CI
+`32611101033` before implementation.
+
+Result decision: accept `MARC2VR27A-G1` after all twenty generated paths
+passed. Unchanged VR25A was called exactly twenty times; G1 appeared four
+times, eligible-inventory R1 twelve times, and unknown-taxonomy R2 four times.
+Fifty-seven direct refusals passed, replay was exact, and no source changed.
+
+Resource decision: accept 8,836,136 generated input bytes, 1.1202826249646023
+seconds runtime, 33,439,744-byte peak RSS, 2,561 aggregate output bytes, and
+zero retained output under one CPU thread, worker, and numerical job.
+
+Boundary decision: the implementation proves generated route discrimination,
+not the consumed real branch. Its remote proof remains null. Commit, push, and
+green these exact bytes, then add and separately green a proof-only closeout.
+No private source, cohort, archive member, neural signal, target, model,
+prediction, score, FW2/CIL1 action, or scientific claim is established.

@@ -1,0 +1,102 @@
+{
+  "schema_name": "neurodecodekit.marc2_r5_inventory_taxonomy_discriminator_result",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC2-VR27A",
+  "recorded_at_local": "2026-08-22",
+  "status": "generated_inventory_taxonomy_discriminator_qualified_remote_proof_pending",
+  "route": "MARC2VR27A-G1",
+  "registration_proof": {
+    "commit": "47ceba3ed89df9610540fe3ed2ee8071ac1b84df",
+    "CI_run_id": 32611101033,
+    "base_job_id": 97124216923,
+    "optional_neuro_job_id": 97124216871,
+    "both_required_jobs_green": true,
+    "contract_sha256": "495f83d6428ebc474fd232c9da65808c434a7439e812066ccd9033b9f468ded6"
+  },
+  "matrix": {
+    "cases": [
+      "exact_public_control",
+      "eligible_bundle_removed",
+      "eligible_bundle_added",
+      "eligible_distribution_shift",
+      "unknown_participant_bundle"
+    ],
+    "orders": [
+      "canonical",
+      "reversed"
+    ],
+    "replays": 2,
+    "paths": 20,
+    "VR25A_calls": 20,
+    "VR27A_route_counts": {
+      "MARC2VR27A-G1": 4,
+      "MARC2VR27A-R1": 12,
+      "MARC2VR27A-R2": 4
+    },
+    "VR25A_route_counts": {
+      "MARC2VR25A-G1": 4,
+      "MARC2VR25A-R1": 12,
+      "MARC2VR25A-R2": 4
+    },
+    "direct_refusals_passed": 57,
+    "exact_replays_match": true,
+    "order_invariant_route_distribution": true,
+    "replay_digest": "128e03b565ec290e17c5e20aa516ef8f0c4020763c6d07d650db4702548dd68d",
+    "source_mutations_after_call": 0
+  },
+  "measurements": {
+    "fixed_input_bytes": 161342,
+    "generated_input_bytes": 8836136,
+    "runtime_seconds": 1.1202826249646023,
+    "peak_RSS_bytes": 33439744,
+    "aggregate_output_bytes": 2561,
+    "retained_output_bytes": 0,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "network_bytes": 0,
+    "new_payload_bytes": 0,
+    "end_to_end_latency_measured": false
+  },
+  "operation_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "readiness_or_consumed_state_operations": 0,
+    "archive_header_or_member_reads": 0,
+    "neural_signal_operations": 0,
+    "target_or_label_operations": 0,
+    "model_training_inference_prediction_or_scoring_runs": 0,
+    "network_or_provider_calls": 0,
+    "new_payload_bytes": 0,
+    "FW2_or_CIL1_operations": 0,
+    "other_project_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "warnings": [
+    "artifact_only_and_generated_only",
+    "no_private_executor",
+    "generated_R1_and_R2_do_not_identify_the_consumed_private_branch",
+    "no_real_cohort_neural_decoding_or_scientific_claim"
+  ],
+  "unavailable_fields": [
+    "consumed_private_R1_or_R2_route",
+    "private_predicate_value_count_direction_or_participant",
+    "real_target_free_cohort",
+    "archive_member_neural_signal_target_model_prediction_or_score",
+    "end_to_end_neural_decoding_latency"
+  ],
+  "remote_implementation_proof": null,
+  "claim_boundary": {
+    "engineering_capability": "generated discrimination of VR25A eligible-inventory drift versus unknown-participant taxonomy",
+    "consumed_private_branch_identified": false,
+    "real_cohort_established": false,
+    "neural_payload_accessed": false,
+    "decoding_performance_established": false,
+    "language_or_thought_decoding_established": false,
+    "unseen_person_generalization_established": false,
+    "live_decoding_established": false
+  }
+}
