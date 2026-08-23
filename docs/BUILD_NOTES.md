@@ -13083,6 +13083,28 @@ private state. Stage 2 remains closed until that barrier passes.
 Immediate gate: commit, push, and green this exact proof-only closeout. Do not
 run `execute`, collect readiness, or touch private state before both jobs pass.
 
+### VR29A proof-only closeout prepared
+
+- Exact implementation `2e73c9176d243b5deccbf8416bb59fdf053ba762`
+  passed Base Python job `97146675300`, Optional Neuro Readers job
+  `97146675166`, and CI `32620018855`.
+- Bound the 4,663-byte preproof implementation registry and 4,007-byte
+  preproof result registry by SHA-256, plus eight exact implementation-commit
+  Git blobs.
+- Updated only machine proof fields, proof-transition assertions, and tracked
+  frontier documentation. The generated qualification was not repeated and
+  no private or Git-ignored path was accessed.
+- Focused verification passed 34 tests; the complete dependency-light suite
+  passed 5,157 tests with 204 expected skips and zero failures. All 388
+  registries parsed, focused Ruff passed, and the repository-wide Ruff
+  baseline remained 1,125 pre-existing findings.
+
+Immediate gate: commit, push, and green this exact proof-only closeout. Only
+after that proof may Tier A prepare an all-false private R1/R2 discriminator
+packet. That packet authorizes nothing by itself; fresh packet-bound Tier C
+maintainer words and a separately green decision remain required before any
+implementation or private read.
+
 ### VR29A generated R1 inventory/distribution qualification
 
 - Registration `fcd088cc2eef6556f36ed596c6d9bb6c7ee9d7c3` passed Base

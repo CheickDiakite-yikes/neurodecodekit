@@ -3918,6 +3918,29 @@ ignored-path, archive, neural, target, model, score, network, FW2/CIL1, or
 claim operation. Next gate: commit, push, and green this exact closeout. Only
 then may the one registered target-free structural discriminator execute.
 
+### MARC2-VR29A - Proof-Only Closeout Pending Remote Green
+
+Exact implementation `2e73c9176d243b5deccbf8416bb59fdf053ba762`
+passed Base Python job `97146675300`, Optional Neuro Readers job
+`97146675166`, and CI `32620018855`.
+
+The proof-only closeout binds the 4,663-byte preproof implementation registry,
+the 4,007-byte preproof result registry, and eight exact Git blobs. It changes
+no implementation, generated witness, route, measurement, resource cap,
+warning, or claim boundary. Qualification was not repeated; private and
+Git-ignored operations remained zero.
+
+Focused verification passed 34 tests and the complete dependency-light suite
+passed 5,157 tests with 204 expected skips. All 388 registries parsed, focused
+Ruff passed, and the repository-wide Ruff baseline remained 1,125 pre-existing
+findings.
+
+Immediate gate: commit, push, and green this exact closeout. Only afterward
+may Tier A prepare an all-false private R1/R2 discriminator packet. A private
+read still requires fresh packet-bound maintainer words and a separately green
+Tier C decision. No cohort, neural, target, model, score, FW2/CIL1, device,
+release, or scientific claim is open.
+
 ### MARC2-VR29A - Generated Inventory/Distribution Discriminator Qualified
 
 Registration `fcd088cc2eef6556f36ed596c6d9bb6c7ee9d7c3` passed Base

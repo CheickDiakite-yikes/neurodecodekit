@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR29A Generated Qualification
+## Current Frontier: MARC2-VR29A Proof-Only Closeout
 
 Registration `fcd088cc2eef6556f36ed596c6d9bb6c7ee9d7c3` passed Base
 Python job `97143828645`, Optional Neuro Readers job `97143828576`, and CI
@@ -27,14 +27,20 @@ job. It emitted 2,880 aggregate bytes and retained zero. Raw-data reads,
 real-cache reads, model runs, training runs, network bytes, new payload bytes,
 and every forbidden operation counter were zero.
 
+Exact implementation `2e73c9176d243b5deccbf8416bb59fdf053ba762`
+passed Base Python job `97146675300`, Optional Neuro Readers job
+`97146675166`, and CI `32620018855`. The proof-only closeout binds both
+preproof registry hashes and eight exact Git blobs without rerunning the
+qualification or touching private state.
+
 This proves the generated wrapper can distinguish filtered eligible-total
 arithmetic from participant-session distribution arithmetic. It does not
 identify the consumed private R1 subclass, establish a real cohort, access
 neural data, or establish decoding performance. Immediate gate: commit, push,
-and green the exact implementation, then separately green a proof-only
-closeout without rerunning qualification. VR29A has no private executor. Any
-later private read requires a new all-false Tier C packet, fresh packet-bound
-maintainer words, and a separately green decision.
+and green the exact proof-only closeout. VR29A has no private executor. Only
+after that green proof may Tier A prepare a new all-false Tier C packet; any
+private read still requires fresh packet-bound maintainer words and a
+separately green decision.
 
 ## Current Evidence Boundary: MARC2-VR28P Consumed At R1
 

@@ -18,7 +18,7 @@ class Marc2R1InventoryDistributionDiscriminatorResultTests(unittest.TestCase):
         self.assertEqual(self.result["route"], "MARC2VR29A-G1")
         self.assertEqual(
             self.result["status"],
-            "generated_inventory_distribution_discriminator_qualified_remote_proof_pending",
+            "generated_inventory_distribution_discriminator_qualified_remote_proven_closeout_pending",
         )
 
     def test_matrix_routes_and_replay_are_exact(self):

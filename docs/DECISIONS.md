@@ -11784,3 +11784,23 @@ Commit, push, and green the exact implementation, then separately green a
 proof-only closeout without rerunning qualification. Another private read
 requires a new all-false Tier C packet, fresh packet-bound maintainer words,
 and a separately green decision.
+
+## 0402 - Bind Exact Remote Proof For VR29A
+
+Proof decision: exact implementation
+`2e73c9176d243b5deccbf8416bb59fdf053ba762` passed CI `32620018855`, Base
+Python job `97146675300`, and Optional Neuro Readers job `97146675166`.
+
+Closeout decision: bind the 4,663-byte preproof implementation registry and
+4,007-byte preproof result registry by SHA-256, plus the eight exact Git blobs
+for the implementation module, behavior test, registration test, two record
+tests, implementation document, and two preproof registries. Repeat no
+qualification and perform no private operation.
+
+Boundary decision: this proof transition changes no implementation, generated
+witness, route, measurement, resource cap, warning, or claim boundary. It is
+ineffective until its own exact commit is pushed and both CI jobs are green.
+Only after that proof may Tier A prepare a separately frozen all-false Tier C
+packet. Such a packet authorizes nothing by itself; fresh packet-bound
+maintainer words and a separately green decision remain required before any
+private implementation or read.
