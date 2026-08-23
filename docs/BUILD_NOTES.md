@@ -14241,3 +14241,29 @@ touching private state, and require both remote jobs green before Stage 2.
 Immediate gate: verify, commit, push, and green this exact closeout. It has
 delayed effect; do not begin Stage 2 readiness or private access before both
 remote jobs pass.
+
+### VR34P protocol-conforming exact-count confirmation consumed at R2
+
+- Proof-only closeout `c863fd4b5bb9c866d6bc5683cb74c9fbeab6d8d8`
+  passed Base Python job `97198447774`, Optional Neuro Readers job
+  `97198447418`, and CI `32641201220` before execution.
+- The sole invocation collected exactly three readiness samples with two
+  fixed sleeps, opened and strict-parsed 418,755 target-free structural bytes
+  once, called VR33A and VR31A once each, and consumed at `MARC2VR34P-R2`.
+- Runtime was 10.147974541061558 seconds at 26,935,296-byte peak RSS under one
+  thread, worker, and numerical job. Network and new-payload bytes were zero;
+  110,084,317,184 filesystem bytes remained available afterward.
+- R2 means only that the filtered eligible total is above 195. The exact
+  count, difference, private detail, participant, selection, and cohort remain
+  unavailable, and no cohort was frozen.
+- The three-sample and two-sleep result exactly matches the repaired readiness
+  contract. The consumed private output and source were not reinspected; exact
+  combined private output bytes remain unavailable.
+- Seven focused result tests and all 5,415 dependency-light tests pass with 204
+  expected skips, a +7 delta from the proof-closeout baseline. Pinned Ruff,
+  compilation, 412 registry JSON files, and diff hygiene pass.
+- No archive member, neural signal, target, model, prediction, score, FW2,
+  CIL1, network, device, release, other-project, or claim operation occurred.
+
+VR34P cannot be rerun or repaired. The next safe task is artifact-only review
+and a separately frozen Tier C packet for any cohort, archive, or neural step.

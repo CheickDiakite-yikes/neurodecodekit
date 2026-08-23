@@ -1,22 +1,20 @@
 # Codex Handoff - NeuroDecodeKit
 
-> Current MARC2-VR34P gate, 2026-08-23: packet-bound decision `5d6a56e`
-> passed Base job `97193199080`, Optional job `97193198951`, and CI
-> `32639054941` before implementation. Generated Stage 1 is locally complete
-> and qualified exactly once: 60 paths, 60 VR33A calls, 180 provider calls,
-> 120 fixed sleeps, 32 source constructions/opens and VR31A calls only after
-> `PPP`, G1/G2/R1/R2/R3 counts 4/4/4/4/44, 223 direct refusals, and exact
-> replay. Every nonpassing readiness pattern made zero source constructions,
-> opens, and VR31A calls. Runtime was 3.024067790945992 seconds at 37,257,216-
-> byte peak RSS; peak temporary output was 791 bytes and retention was zero.
-> All 5,403 dependency-light tests pass with 204 expected skips. Do not repeat
-> qualification. Exact Stage 1 `a0e36af` passed Base job `97196742388`,
-> Optional job `97196742556`, and CI `32640499738`. Its proof-only closeout now
-> binds both preproof registries and all five implementation Git blobs without
-> requalification or private access. Immediate gate: verify, commit, push, and
-> green that closeout. It is ineffective before remote green; until then do
-> not run readiness or touch any consumed VR32P/private, neural, target, model,
-> score, FW2/CIL1, device, release, or claim surface.
+> Current MARC2-VR34P result, 2026-08-23: proof-only closeout `c863fd4`
+> passed Base job `97198447774`, Optional job `97198447418`, and CI
+> `32641201220` before the sole invocation. The executor collected exactly
+> three readiness samples with two fixed sleeps, opened and strict-parsed
+> 418,755 target-free structural bytes once, called VR33A and VR31A once each,
+> and returned `MARC2VR34P-R2`. R2 means only that the filtered eligible total
+> is above 195; no exact count, difference magnitude, participant, or cohort is
+> available. Runtime was 10.147974541061558 seconds at 26,935,296-byte peak
+> RSS with zero network and new-payload bytes. The exact finite readiness
+> protocol conformed, repairing VR32P's sampling deviation, but no cohort was
+> frozen and no scientific claim changed. VR34P is consumed with no retry,
+> rerun, repair, output inspection, or private reinspection. Next safe task:
+> artifact-only review and a separately frozen packet for any cohort, archive,
+> or neural step. Neural, target, model, score, FW2/CIL1, device, release, and
+> claim surfaces remain closed.
 
 > Current MARC2-VR32P result, 2026-08-23: proof-only closeout
 > `5aec8a15f5ee6fa3c6ca9cefcfb4fbfead9dd72f` passed Base Python job

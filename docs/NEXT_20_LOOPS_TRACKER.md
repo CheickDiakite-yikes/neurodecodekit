@@ -1,12 +1,11 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate gate (2026-08-23):** packet-bound VR34P decision `5d6a56e`
-> passed both jobs in CI `32639054941` before generated Stage 1. The sole
-> qualification passed all 60 paths with exact finite readiness, 32 PPP-only
-> source/VR31A calls, zero nonpassing source constructions, 223 refusals, and
-> exact replay. Do not repeat it. Exact Stage 1 `a0e36af` passed both jobs in
-> CI `32640499738`; verify, commit, push, and green its proof-only closeout
-> before the one-shot private Stage 2.
+> **Immediate boundary (2026-08-23):** exact VR34P proof closeout `c863fd4`
+> passed both jobs in CI `32641201220` before the sole invocation. VR34P then
+> consumed at protocol-conforming aggregate R2: filtered eligible total above
+> 195, with no exact count or cohort exposure. The run used exactly three
+> readiness samples, two sleeps, one 418,755-byte source open, and zero neural,
+> target, model, score, or network operations. No retry or reinspection.
 
 > **Immediate update (2026-08-23):** exact VR32P proof closeout `5aec8a1`
 > passed Base job `97177262321`, Optional job `97177262387`, and CI
@@ -4044,6 +4043,29 @@ operation.
 Immediate gate: verify, commit, push, and green this exact proof-only closeout.
 It has delayed effect; do not run readiness or touch a private path before
 both jobs pass. Only then may the registered one-shot Stage 2 execute.
+
+### MARC2-VR34P - Protocol-Conforming Exact-Count Confirmation Consumed At R2
+
+Proof-only closeout `c863fd4b5bb9c866d6bc5683cb74c9fbeab6d8d8`
+passed Base Python job `97198447774`, Optional Neuro Readers job
+`97198447418`, and CI `32641201220` before the sole invocation.
+
+The executor collected exactly three readiness samples with two fixed sleeps,
+opened and strict-parsed 418,755 target-free structural bytes once, called
+VR33A once, called VR31A once, and consumed at `MARC2VR34P-R2`. Runtime was
+10.147974541061558 seconds at 26,935,296-byte peak RSS. Network and new-
+payload bytes were zero.
+
+R2 establishes only that the filtered eligible total is above 195. The exact
+count, difference, source detail, participant, selection, reservation, and
+cohort remain unavailable; no cohort was frozen. Exact three-sample readiness
+repairs the bounded VR32P protocol deviation but upgrades no scientific
+evidence.
+
+VR34P has no retry, rerun, repair, output inspection, or private reinspection.
+The next safe task is artifact-only review and a separately frozen packet for
+any cohort, archive, or neural step. FW2/CIL1 and every neural, target, model,
+score, device, release, and claim surface remain closed.
 
 ### MARC2-VR33A - Exact-Count Readiness Repair Remotely Closed
 

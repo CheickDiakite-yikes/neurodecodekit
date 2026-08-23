@@ -7,36 +7,29 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: MARC2-VR34P Stage 1 Remote Proof
+## Current Boundary: MARC2-VR34P Consumed At Protocol-Conforming R2
 
-Packet-bound decision `5d6a56ecfad01f49d9e7987cc1072c4aab15bd11`
-passed Base Python job `97193199080`, Optional Neuro Readers job
-`97193198951`, and CI `32639054941` before implementation.
+Read `docs/MARC_2_EXACT_COUNT_PRIVATE_CONFIRMATION_RESULT.md` and
+`registries/marc2_exact_count_private_confirmation_private_result.v0.json`.
+Proof-only closeout `c863fd4b5bb9c866d6bc5683cb74c9fbeab6d8d8`
+passed Base Python job `97198447774`, Optional Neuro Readers job
+`97198447418`, and CI `32641201220` before the sole invocation.
 
-Read `docs/MARC_2_EXACT_COUNT_PRIVATE_CONFIRMATION_IMPLEMENTATION.md` and its
-implementation/result registries. The one generated qualification completed
-60 paths with 60 VR33A calls, 180 provider calls, 120 fixed sleeper calls, and
-32 VR31A calls only after `PPP`. Route counts were G1/G2/R1/R2/R3
-4/4/4/4/44. All seven nonpassing readiness patterns performed zero source
-constructions, source opens, or VR31A calls. Exact replay and 223 direct
-refusals passed.
+The executor collected exactly three readiness samples with two fixed sleeps,
+opened and strict-parsed exactly 418,755 target-free structural bytes once,
+called VR33A once, called VR31A once, and returned `MARC2VR34P-R2`. Runtime
+was 10.147974541061558 seconds at 26,935,296-byte peak RSS under one thread,
+worker, and numerical job. Network and new-payload bytes were zero.
 
-The pass used 14,152,684 generated input bytes in 3.024067790945992 seconds at
-37,257,216-byte peak RSS. Peak incremental output was 791 bytes and retained
-generated output was zero. The complete dependency-light suite passes 5,403
-tests with 204 expected skips, exactly 28 more than the pre-change baseline.
-Do not repeat qualification.
+R2 means only that the filtered eligible total is above 195. The exact count,
+difference magnitude, private value, participant, selection, and cohort remain
+unavailable. No cohort was frozen. Unlike consumed VR32P, this invocation
+matched the registered three-sample, two-sleep readiness protocol exactly.
 
-Exact Stage 1 `a0e36afd08bc9d6ae9429e9471d4650f6093e406` passed Base
-Python job `97196742388`, Optional Neuro Readers job `97196742556`, and CI
-`32640499738`. The proof-only closeout now binds the immutable preproof
-registries and exact implementation Git blobs without requalification or
-private access.
-
-Immediate gate: verify, commit, push, and green the proof-only closeout. It is
-ineffective before both jobs pass, so do not run readiness or touch a private
-path yet. Consumed VR32P and all neural, target, model, score, FW2/CIL1,
-device, release, and claim surfaces remain closed.
+VR34P cannot be retried, repaired, or reinspected. The next safe task is an
+artifact-only review and a separately frozen packet for any cohort, archive,
+or neural step. Archive, neural, target, model, score, FW2/CIL1, device,
+release, and scientific-claim surfaces remain closed.
 
 ## Consumed Boundary: MARC2-VR32P R2 With A Protocol Deviation
 

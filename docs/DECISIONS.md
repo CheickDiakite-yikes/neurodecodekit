@@ -12297,3 +12297,28 @@ ignored-path, consumed-state, archive, neural, target, model, score, network,
 FW2/CIL1, device, other-project, release, or claim operation. This closeout is
 ineffective until its own exact commit is pushed and both required jobs are
 green. Only afterward may the one registered Stage 2 invocation begin.
+
+## 0426 - Accept The Sole Protocol-Conforming VR34P R2 Confirmation
+
+Proof decision: proof-only closeout
+`c863fd4b5bb9c866d6bc5683cb74c9fbeab6d8d8` passed CI `32641201220`, Base
+Python job `97198447774`, and Optional Neuro Readers job `97198447418` before
+the sole invocation.
+
+Execution decision: accept the returned aggregate `MARC2VR34P-R2`. The
+executor reported exactly three readiness samples, two sleeps, one 418,755-
+byte source open and strict parse, one VR33A call, one VR31A call, one nested
+VR29A call, one nested VR25A call, and one direction comparison. Runtime was
+10.147974541061558 seconds at 26,935,296-byte peak RSS; network and new-
+payload bytes were zero.
+
+Interpretation decision: R2 means only that the filtered eligible total is
+above 195. Retain no exact count, difference, private predicate or value, row,
+path, identity, participant, selection, reservation, or cohort. The exact
+finite readiness protocol conforms and repairs VR32P's sampling deviation,
+but no cohort or scientific claim is established.
+
+Consumption decision: VR34P has no retry, rerun, resume, repair, fallback,
+substitution, cleanup, amendment, output inspection, or private reinspection.
+Any cohort, archive, neural, target, model, score, FW2, or CIL1 step requires a
+separately frozen Tier C packet and decision.
