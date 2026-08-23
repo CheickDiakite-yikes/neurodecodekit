@@ -7,7 +7,33 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR31A Proof Closeout Pending Green
+## Current Frontier: MARC2-VR32P All-False Request Prepared
+
+Read
+`docs/MARC_2_ELIGIBLE_TOTAL_DIRECTION_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md`
+and
+`registries/marc2_eligible_total_direction_private_discriminator_authorization_request.v0.json`.
+VR31A proof-only closeout `18d8fb9c9d376b680c3f0a31e513a2f37122283c`
+passed Base Python job `97167465027`, Optional Neuro Readers job
+`97167465228`, and CI `32628483371` before this request.
+
+VR32P proposes two delayed stages: generated fixed-path wrapper qualification,
+then only after separate exact proof barriers one 418,755-byte target-free
+structural read and one VR31A call. Only aggregate R1 below 195 or R2 above 195
+may answer the question. The observed total, difference, participant, and
+cohort remain forbidden.
+
+Every authorization flag is false and every operation counter is zero. The
+packet performs no private, ignored-path, readiness, archive, neural, target,
+model, score, network, device, release, or claim action.
+
+Immediate gate: verify, commit, push, and green this exact request, then add
+and separately green a proof-only request closeout. The current `continue`
+predates the packet and is not retroactive authority. Fresh packet-bound
+maintainer words are required only after those proof barriers and sole-gate
+identification.
+
+## Generated Evidence: MARC2-VR31A Remotely Closed
 
 Read
 `docs/MARC_2_R1_ELIGIBLE_TOTAL_DIRECTION_DISCRIMINATOR_IMPLEMENTATION.md`
@@ -34,10 +60,9 @@ passed Base Python job `97165896566`, Optional Neuro Readers job
 preproof registries and eight exact implementation Git blobs. It repeats no
 qualification and performs zero private operation.
 
-Immediate gate: commit, push, and green this exact closeout. Only after that
-proof may Tier A prepare a separately frozen all-false private direction
-packet. Such a packet authorizes nothing by itself; a fresh packet-bound Tier
-C decision remains required before any private read.
+The exact proof-only closeout above is remotely green. VR31A is closed as
+generated engineering. It has no private executor and establishes no real
+direction, cohort, neural effect, or decoding result.
 
 ## Current Evidence Boundary: MARC2-VR30P Consumed At R1
 

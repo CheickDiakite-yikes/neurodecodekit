@@ -1,5 +1,16 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR32P request, 2026-08-23: exact VR31A proof-only closeout
+> `18d8fb9c9d376b680c3f0a31e513a2f37122283c` passed Base Python job
+> `97167465027`, Optional Neuro Readers job `97167465228`, and CI
+> `32628483371`. VR32P is an all-false two-stage request for a generated
+> fixed-path wrapper and, only after every proof barrier plus fresh packet-
+> bound authority, one 418,755-byte target-free structural read and one VR31A
+> call. Only aggregate R1 below 195 or R2 above 195 may be retained. Every
+> authorization flag is false and every operation counter is zero. Immediate
+> gate: verify, commit, push, and green the request, then separately green a
+> proof-only request closeout. The current `continue` is not retroactive.
+
 > Current MARC2-VR31A proof-only closeout, 2026-08-23: exact registration
 > `eeab6785b8eadc6d65199fa1ac519173f9c160c7` passed Base Python job
 > `97163443088`, Optional Neuro Readers job `97163443152`, and CI

@@ -13954,3 +13954,23 @@ fresh decision.
 Immediate gate: verify, commit, push, and green this exact proof-only closeout.
 Only afterward may Tier A prepare an all-false private direction packet; a
 fresh Tier C decision remains required before any private read.
+
+### VR32P all-false private direction request prepared
+
+- Exact VR31A proof-only closeout
+  `18d8fb9c9d376b680c3f0a31e513a2f37122283c` passed Base Python job
+  `97167465027`, Optional Neuro Readers job `97167465228`, and CI
+  `32628483371` before request preparation.
+- Bound 13 tracked inputs totaling 92,949 bytes.
+- Froze a future generated fixed-path wrapper plus one possible target-free
+  418,755-byte structural read and one VR31A call.
+- R1 may retain only below 195 and R2 only above 195. Observed total,
+  difference, participant, row, path, distribution, selection, and cohort are
+  forbidden.
+- Resource ceilings are one thread/worker/job, 650 seconds, 256 MiB RSS,
+  1 MiB output, zero network/new payload, and no retry or rerun.
+- Every authorization flag is false and every operation counter is zero.
+
+Immediate gate: verify, commit, push, and green this exact request, then add
+and green a proof-only request closeout. The current `continue` predates the
+packet and is not retroactive authority.

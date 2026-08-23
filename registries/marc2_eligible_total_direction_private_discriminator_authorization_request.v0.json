@@ -1,0 +1,340 @@
+{
+  "schema_name": "neurodecodekit.marc2_eligible_total_direction_private_discriminator_authorization_request",
+  "schema_version": "0.1.0",
+  "request_id": "MARC-2-VR32P-eligible-total-direction-private-discriminator-two-stage-request-v0",
+  "lane_id": "MARC2-VR32P",
+  "recorded_at_local": "2026-08-23",
+  "status": "all_false_Tier_C_request_prepared_no_decision_no_private_access",
+  "proof_posture": "request_only_no_private_real_or_scientific_operation_authorized",
+  "green_predecessor_proof": {
+    "registration_commit": "eeab6785b8eadc6d65199fa1ac519173f9c160c7",
+    "registration_CI_run_id": 32626878097,
+    "registration_base_job_id": 97163443088,
+    "registration_optional_job_id": 97163443152,
+    "implementation_commit": "3553fa4f7d3d7e4b5e3813ac3f6219cf6ba759ab",
+    "implementation_CI_run_id": 32627856478,
+    "implementation_base_job_id": 97165896566,
+    "implementation_optional_job_id": 97165896610,
+    "proof_closeout_commit": "18d8fb9c9d376b680c3f0a31e513a2f37122283c",
+    "proof_closeout_CI_run_id": 32628483371,
+    "proof_closeout_base_job_id": 97167465027,
+    "proof_closeout_optional_job_id": 97167465228,
+    "all_required_jobs_green": true,
+    "qualification_repeated_for_proof_closeout": false,
+    "private_operation_performed_for_proof_closeout": false
+  },
+  "fixed_inputs": [
+    {
+      "role": "VR31A_module",
+      "path": "src/neurodecodekit/datasets/marc2_r1_eligible_total_direction_discriminator.py",
+      "bytes": 27357,
+      "sha256": "36faa3f2ae92518c245399cbae70554f1142227b655d16a5da4601918211e73f"
+    },
+    {
+      "role": "VR31A_contract",
+      "path": "registries/marc2_r1_eligible_total_direction_discriminator_contract.v0.json",
+      "bytes": 9006,
+      "sha256": "d02b95029e3c3b2b61388d0d838d81108ca11675b752a1530c6135c17f1cdf00"
+    },
+    {
+      "role": "VR31A_implementation_registry",
+      "path": "registries/marc2_r1_eligible_total_direction_discriminator_implementation.v0.json",
+      "bytes": 6509,
+      "sha256": "eb9a1071530469bed3453cf7199151a98bad2b93d1a1f747ba2e4088192a07b2"
+    },
+    {
+      "role": "VR31A_result_registry",
+      "path": "registries/marc2_r1_eligible_total_direction_discriminator_result.v0.json",
+      "bytes": 5269,
+      "sha256": "c2caa16b5af35e536150bcf98029f4e24bf32394a0e8f42725775e33e4b087fc"
+    },
+    {
+      "role": "VR31A_preregistration",
+      "path": "docs/MARC_2_R1_ELIGIBLE_TOTAL_DIRECTION_DISCRIMINATOR_PREREGISTRATION.md",
+      "bytes": 5146,
+      "sha256": "16292aa83f56a522985fb8395de70b3bdd8484e23e14faa3b81e66c5e3f2298c"
+    },
+    {
+      "role": "VR31A_implementation_document",
+      "path": "docs/MARC_2_R1_ELIGIBLE_TOTAL_DIRECTION_DISCRIMINATOR_IMPLEMENTATION.md",
+      "bytes": 3539,
+      "sha256": "b2accfff520a6c03cb161b2cc66c42844a656d21df5e79ccf889b6df3d3d105d"
+    },
+    {
+      "role": "VR31A_proof_closeout",
+      "path": "docs/MARC_2_R1_ELIGIBLE_TOTAL_DIRECTION_DISCRIMINATOR_PROOF_CLOSEOUT.md",
+      "bytes": 3038,
+      "sha256": "c0a3edfc684a3c8a1b5acdd09e7a4d9f4dfe5a8dbee253bf707c17dcc366e0d8"
+    },
+    {
+      "role": "VR31A_behavior_test",
+      "path": "tests/test_marc2_r1_eligible_total_direction_discriminator.py",
+      "bytes": 5116,
+      "sha256": "005461850d0bd85d78216b16d824e2814059ba6c4bb862d3f48ad88174680484"
+    },
+    {
+      "role": "VR31A_registration_test",
+      "path": "tests/test_marc2_r1_eligible_total_direction_discriminator_registration.py",
+      "bytes": 6986,
+      "sha256": "1279446f0eca908393f128f028a022aa7c6471f0e30b769eba1a391b8b83f05b"
+    },
+    {
+      "role": "VR31A_implementation_test",
+      "path": "tests/test_marc2_r1_eligible_total_direction_discriminator_implementation.py",
+      "bytes": 3924,
+      "sha256": "0514c80e92a81ba1c911b92b37f953b131f3bb482e02c7db66974e1a96cb763a"
+    },
+    {
+      "role": "VR31A_result_test",
+      "path": "tests/test_marc2_r1_eligible_total_direction_discriminator_result.py",
+      "bytes": 3911,
+      "sha256": "1ef0121ea4108a351f11d4e57dd6ece67f811f913c6ef46c7998c766ffc72af8"
+    },
+    {
+      "role": "VR31A_proof_closeout_test",
+      "path": "tests/test_marc2_r1_eligible_total_direction_discriminator_proof_closeout.py",
+      "bytes": 4399,
+      "sha256": "c292d111c83f22a8b69e00e1383c6cc2632c666747fe3955e66a28913320ed9b"
+    },
+    {
+      "role": "VR30P_consumed_result",
+      "path": "registries/marc2_inventory_distribution_private_discriminator_private_result.v0.json",
+      "bytes": 8749,
+      "sha256": "e0b27d82c0a176b572eb3f08d9a1ec326b8fcfe48cb16c19a51693a966c56334"
+    }
+  ],
+  "fixed_input_count": 13,
+  "fixed_input_bytes": 92949,
+  "registration_artifacts": {
+    "document_path": "docs/MARC_2_ELIGIBLE_TOTAL_DIRECTION_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md",
+    "document_sha256": "db14a1bc4384bb4c1470fb9e8432510decae00b187a6136082f456fb8a064486",
+    "test_path": "tests/test_marc2_eligible_total_direction_private_discriminator_authorization_request.py",
+    "test_sha256": "c3f695614de93d23ccf797698ce7798168e97500f1d5596044cb48b6cf7b5479"
+  },
+  "requested_sequence": [
+    {
+      "stage": 1,
+      "name": "generated_fixed_path_wrapper_implementation_and_qualification",
+      "requires_request_proof_and_decision_green": true,
+      "real_or_private_operations": 0
+    },
+    {
+      "stage": 2,
+      "name": "one_target_free_private_eligible_total_direction_discriminator",
+      "requires_request_proof_and_decision_green": true,
+      "requires_exact_green_stage_1_and_closeout": true,
+      "registered_invocations": 1,
+      "retry_or_rerun": 0
+    }
+  ],
+  "future_interface": {
+    "module": "neurodecodekit.datasets.marc2_eligible_total_direction_private_discriminator",
+    "CLI_commands": [
+      "plan",
+      "qualify",
+      "inspect",
+      "execute"
+    ],
+    "execute_is_fixed_path_only": true,
+    "generic_path_argument_allowed": false,
+    "generic_URL_argument_allowed": false,
+    "generic_output_argument_allowed": false,
+    "count_threshold_difference_or_route_override_allowed": false,
+    "retry_resume_fallback_or_substitution_allowed": false,
+    "consumed_executor_import_or_reuse_allowed": false
+  },
+  "future_private_source": {
+    "path": ".codex_work/marc1_central_directory/live_audit_v0/member_inventory.private.v0.json",
+    "mode_octal": "0600",
+    "bytes": 418755,
+    "sha256": "2a2e48b88ee59332a199d926554bb6921222fff92046a0fc9b07cf73fd6c3031",
+    "schema_name": "neurodecodekit.marc1_central_directory_private_manifest",
+    "rows": 1227,
+    "regular_file_rows": 1025,
+    "directory_rows": 202,
+    "observed_total_difference_participant_and_cohort_available": false,
+    "identity_copied_from_committed_records_only": true,
+    "path_checked_during_packet_preparation": false,
+    "content_opened_during_packet_preparation": false,
+    "bytes_read_during_packet_preparation": 0,
+    "future_content_open_limit": 1,
+    "future_bytes_read_limit": 418755
+  },
+  "future_fixed_paths": {
+    "private_source": ".codex_work/marc1_central_directory/live_audit_v0/member_inventory.private.v0.json",
+    "readiness_certificate": ".codex_work/marc2_machine_readiness/vr32p/readiness.v0.json",
+    "output_root": ".codex_work/marc2_eligible_total_direction_private_discriminator/v0",
+    "consumed_marker": ".codex_work/marc2_eligible_total_direction_private_discriminator/v0/consumed.marker.v0.json",
+    "aggregate_report": ".codex_work/marc2_eligible_total_direction_private_discriminator/v0/report.aggregate.v0.json",
+    "fresh_readiness_parent_must_be_absent": true,
+    "operation_on_named_consumed_path_allowed": false,
+    "named_consumed_paths": [
+      "MARC2-VR20P",
+      "MARC2-VR22P",
+      "MARC2-VR24P",
+      "MARC2-VR26P",
+      "MARC2-VR28P",
+      "MARC2-VR30P"
+    ]
+  },
+  "future_discriminator_contract": {
+    "exact_VR31A_function": "neurodecodekit.datasets.marc2_r1_eligible_total_direction_discriminator.discriminate_generated_source",
+    "exact_real_VR31A_calls": 1,
+    "exact_nested_VR29A_calls": 1,
+    "exact_nested_VR25A_calls": 1,
+    "exact_nested_direction_comparisons": 1,
+    "frozen_map": [
+      {
+        "VR31A_route": "MARC2VR31A-R1",
+        "VR32P_route": "MARC2VR32P-R1"
+      },
+      {
+        "VR31A_route": "MARC2VR31A-R2",
+        "VR32P_route": "MARC2VR32P-R2"
+      }
+    ],
+    "source_mutation_allowed": false,
+    "observed_total_or_difference_allowed": false,
+    "private_detail_retention_allowed": false,
+    "cohort_freeze_allowed": false,
+    "threshold_or_direction_relaxation_allowed": false,
+    "unknown_or_unmapped_upstream_evidence_route": "MARC2VR32P-R5"
+  },
+  "generated_stage_requirements": {
+    "generated_only": true,
+    "cases": 8,
+    "orders": 2,
+    "replays": 2,
+    "required_paths": 32,
+    "VR31A_calls_per_path": 1,
+    "expected_route_counts": {
+      "MARC2VR32P-G1": 4,
+      "MARC2VR32P-G2": 4,
+      "MARC2VR32P-R1": 4,
+      "MARC2VR32P-R2": 4,
+      "MARC2VR32P-R3": 16
+    },
+    "direct_refusal_minimum": 90,
+    "fixed_path_state_machine_qualification_required": true,
+    "private_or_Git_ignored_path_operation_limit": 0,
+    "retained_generated_output_bytes": 0
+  },
+  "private_route_contract": [
+    {
+      "route": "MARC2VR32P-R1",
+      "meaning": "filtered eligible total is below 195",
+      "private_detail_allowed": false
+    },
+    {
+      "route": "MARC2VR32P-R2",
+      "meaning": "filtered eligible total is above 195",
+      "private_detail_allowed": false
+    },
+    {
+      "route": "MARC2VR32P-R3",
+      "meaning": "readiness fixed-path or output precondition refused",
+      "private_detail_allowed": false
+    },
+    {
+      "route": "MARC2VR32P-R4",
+      "meaning": "source identity or strict structural envelope refused",
+      "private_detail_allowed": false
+    },
+    {
+      "route": "MARC2VR32P-R5",
+      "meaning": "unexpected upstream privacy deterministic-output or resource refusal",
+      "private_detail_allowed": false
+    }
+  ],
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "generated_runtime_seconds": 60,
+    "private_runtime_seconds": 650,
+    "peak_RSS_bytes": 268435456,
+    "minimum_free_disk_bytes": 16106127360,
+    "fresh_readiness_wait_seconds": 600,
+    "private_source_read_bytes": 418755,
+    "private_source_content_opens": 1,
+    "VR31A_real_discriminator_calls": 1,
+    "network_bytes": 0,
+    "new_payload_bytes": 0,
+    "archive_member_bytes": 0,
+    "neural_signal_bytes": 0,
+    "target_bytes": 0,
+    "combined_incremental_output_bytes": 1048576,
+    "retry_rerun_resume_count": 0
+  },
+  "aggregate_output_firewall": {
+    "allowed_answer_routes": [
+      "MARC2VR32P-R1",
+      "MARC2VR32P-R2"
+    ],
+    "safe_consumed_failure_routes": [
+      "MARC2VR32P-R3",
+      "MARC2VR32P-R4",
+      "MARC2VR32P-R5"
+    ],
+    "per_item_outcomes_allowed": false,
+    "observed_total_difference_or_distribution_allowed": false,
+    "row_path_identity_participant_selection_or_cohort_allowed": false,
+    "raw_source_or_traceback_allowed": false
+  },
+  "authorization_state": {
+    "packet_bound_decision_received": false,
+    "stage_1_implementation_authorized": false,
+    "generated_qualification_authorized": false,
+    "readiness_sampling_authorized": false,
+    "private_or_Git_ignored_path_access_authorized": false,
+    "private_source_open_authorized": false,
+    "private_source_parse_authorized": false,
+    "private_discriminator_authorized": false,
+    "private_report_write_authorized": false,
+    "archive_member_or_neural_access_authorized": false,
+    "target_model_prediction_or_score_authorized": false,
+    "FW2_or_CIL1_authorized": false,
+    "network_download_provider_or_language_model_authorized": false,
+    "device_stream_hardware_or_release_authorized": false,
+    "scientific_claim_upgrade_authorized": false
+  },
+  "operation_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "readiness_or_consumed_state_operations": 0,
+    "private_source_stats_resolves_hashes_opens_reads_or_parses": 0,
+    "archive_header_or_member_reads": 0,
+    "neural_signal_operations": 0,
+    "target_or_label_operations": 0,
+    "model_training_inference_prediction_or_scoring_runs": 0,
+    "network_or_provider_calls": 0,
+    "new_payload_bytes": 0,
+    "FW2_or_CIL1_operations": 0,
+    "other_project_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "next_gate": {
+    "request_commit_push_and_both_jobs_green_required": true,
+    "request_proof_closeout_green_required": true,
+    "sole_active_Tier_C_packet_identification_required": true,
+    "fresh_packet_bound_Tier_C_decision_required": true,
+    "decision_commit_push_and_both_jobs_green_required_before_stage_1": true,
+    "exact_stage_1_commit_push_and_both_jobs_green_required_before_stage_2": true,
+    "stage_1_proof_closeout_green_required_before_stage_2": true,
+    "implementation_authorized_now": false,
+    "private_read_authorized_now": false
+  },
+  "claim_boundary": {
+    "engineering_request": "one proof-gated target-free structural read to distinguish below-expected from above-expected eligible totals without count exposure",
+    "scientific_ceiling": "none",
+    "private_read_performed": false,
+    "real_cohort_established": false,
+    "archive_member_accessed": false,
+    "neural_payload_accessed": false,
+    "target_or_label_accessed": false,
+    "model_prediction_or_score_accessed": false,
+    "decoding_performance_established": false,
+    "language_or_thought_decoding_established": false,
+    "unseen_person_generalization_established": false,
+    "live_or_realtime_decoding_established": false
+  }
+}

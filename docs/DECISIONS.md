@@ -12001,3 +12001,24 @@ This closeout is ineffective until its own exact commit is pushed and both CI
 jobs are green. Only afterward may Tier A prepare a separately frozen all-
 false private direction packet; such a packet still requires fresh packet-
 bound Tier C permission before any implementation or private read.
+
+## 0412 - Prepare All-False VR32P Private Direction Request
+
+Proof decision: exact VR31A proof-only closeout
+`18d8fb9c9d376b680c3f0a31e513a2f37122283c` passed CI `32628483371`, Base
+Python job `97167465027`, and Optional Neuro Readers job `97167465228` before
+request preparation.
+
+Request decision: freeze one future two-stage sequence. Stage 1 would qualify
+a generated fixed-path wrapper over unchanged VR31A. Stage 2, only after every
+proof barrier and a fresh packet-bound decision, would read exactly 418,755
+target-free structural bytes once and call VR31A once. Only aggregate R1 below
+195 or R2 above 195 may answer the registered question.
+
+Boundary decision: every authorization flag is false and every operation
+counter is zero. The request performs no private path operation and permits no
+observed count, difference, participant, cohort, archive, neural, target,
+model, score, FW2/CIL1, network, device, release, or claim action. The current
+`continue` predates the packet and is not retroactive authority. Commit, push,
+and green the request and a separate proof-only closeout before naming VR32P
+as the sole Tier C gate.
