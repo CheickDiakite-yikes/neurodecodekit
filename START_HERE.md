@@ -7,13 +7,15 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR30P All-False Request
+## Current Frontier: MARC2-VR30P Decision Pending Green
 
 VR30P all-false request `8e49ac080ca31fe9788ebfdfe9fc355a9a58218c`
 passed Base Python job `97150361897`, Optional Neuro Readers job
 `97150361782`, and CI `32621561090`. The separate request proof closeout binds
-the three unchanged request artifacts totaling 29,866 bytes and is pending its
-own remote-green barrier.
+the three unchanged request artifacts totaling 29,866 bytes. Exact proof
+closeout `44dc8ac5d2090c072332fe000e7c506da9b18e28` passed Base Python job
+`97152694695`, Optional Neuro Readers job `97152694553`, and CI
+`32622494818`.
 
 Read
 `docs/MARC_2_INVENTORY_DISTRIBUTION_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md`
@@ -23,14 +25,12 @@ decision, one generated fixed-path wrapper and one 418,755-byte target-free
 private structural read. A future result may retain only aggregate R1 filtered
 eligible-total arithmetic or R2 participant-session distribution arithmetic.
 
-Every authorization flag is false and every operation counter is zero. Packet
-preparation did not stat, resolve, hash, open, read, parse, or write any
-`.codex_work` path. Immediate gate: commit, push, and green the proof-only
-closeout. Only after both request barriers are green may VR30P be named the
-sole Tier C gate. The current `continue` predates this packet and is not
-retroactive authority. Do not
-implement or access private state before fresh packet-bound maintainer words
-and a separately green decision.
+After VR30P was identified as the sole active Tier C gate, the maintainer's
+next exact message was `continue`. The pending decision binds those eight
+UTF-8 bytes to the unchanged packet. Immediate gate: commit, push, and green
+the decision. Do not implement or access private state before that proof.
+Stage 1 may then proceed generated-only; Stage 2 stays behind the exact Stage 1
+implementation and proof-closeout barriers.
 
 ## Generated Evidence: MARC2-VR29A Remotely Closed
 

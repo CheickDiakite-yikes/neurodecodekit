@@ -3918,7 +3918,24 @@ ignored-path, archive, neural, target, model, score, network, FW2/CIL1, or
 claim operation. Next gate: commit, push, and green this exact closeout. Only
 then may the one registered target-free structural discriminator execute.
 
-### MARC2-VR30P - Request Proof-Only Closeout Pending
+### MARC2-VR30P - Packet-Bound Decision Pending Green
+
+Exact request proof closeout
+`44dc8ac5d2090c072332fe000e7c506da9b18e28` passed Base Python job
+`97152694695`, Optional Neuro Readers job `97152694553`, and CI
+`32622494818`.
+
+After VR30P was named the sole active Tier C packet, the maintainer's next
+exact message was `continue`. The pending decision binds those eight UTF-8
+bytes only to the unchanged six-file, 41,981-byte packet. Decision recording
+performs zero implementation, private, archive, neural, model, score, device,
+or scientific operation.
+
+Next gate: commit, push, and green the decision. Stage 1 may then implement and
+generated-qualify the fixed-path wrapper. Stage 2 remains closed until the
+exact implementation and its proof-only closeout are separately green.
+
+### MARC2-VR30P - Request Proof-Only Closeout Remotely Green
 
 Exact all-false request `8e49ac080ca31fe9788ebfdfe9fc355a9a58218c`
 passed Base Python job `97150361897`, Optional Neuro Readers job

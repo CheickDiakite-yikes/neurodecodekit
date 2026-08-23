@@ -45,14 +45,20 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
-The next all-false Tier C request is prepared as `MARC2-VR30P`. Exact request
+The next Tier C sequence is authorized by a pending-green decision as
+`MARC2-VR30P`. Exact request
 `8e49ac080ca31fe9788ebfdfe9fc355a9a58218c` passed Base Python job
 `97150361897`, Optional Neuro Readers job `97150361782`, and CI
 `32621561090`. Read
 `docs/MARC_2_INVENTORY_DISTRIBUTION_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md`
 and
 `registries/marc2_inventory_distribution_private_discriminator_authorization_request.v0.json`,
-then the request proof closeout and its machine proof.
+then the request proof closeout, its machine proof, and the authorization
+decision. Proof closeout `44dc8ac5d2090c072332fe000e7c506da9b18e28`
+passed Base Python job `97152694695`, Optional Neuro Readers job
+`97152694553`, and CI `32622494818`. After VR30P was named the sole Tier C
+gate, the maintainer's next exact message was `continue`; the decision binds
+those eight UTF-8 bytes and only the unchanged packet.
 It binds 13 tracked inputs totaling 161,574 bytes and proposes one future two-
 stage sequence: generated fixed-path wrapper qualification, then only after
 every proof barrier and a fresh packet-bound decision one 418,755-byte target-
@@ -60,15 +66,13 @@ free structural read and one unchanged VR29A call. The only answering routes
 are R1 filtered eligible-total arithmetic or R2 participant-session
 distribution arithmetic. It cannot retain a private predicate, value, count,
 direction, distribution, row, path, identity, participant, selection, or
-cohort. Every current authorization flag is false and every operation counter
-is zero.
+cohort. Decision-time operation counters are zero.
 
-Immediate gate: commit, push, and green the proof-only request closeout. The
-current `continue` predates this packet and is not retroactive. Do not
-implement, access `.codex_work`, or touch any private state. After both request
-barriers are green, identify
-VR30P as the sole active Tier C gate and require fresh packet-bound maintainer
-words before a decision.
+Immediate gate: commit, push, and green this exact authorization decision. Do
+not implement, access `.codex_work`, or touch any private state before both
+jobs pass. Afterward Stage 1 may implement and generated-qualify the fixed-path
+wrapper; Stage 2 remains closed behind the exact Stage 1 and proof-closeout
+barriers.
 
 `MARC2-VR29A` is remotely closed as generated engineering. Registration
 `fcd088cc2eef6556f36ed596c6d9bb6c7ee9d7c3` passed CI `32618866986` before

@@ -11842,3 +11842,25 @@ release, or claim operation. This closeout is ineffective until its own exact
 commit is pushed and both required jobs are green. Only afterward may VR30P be
 identified as the sole active Tier C gate and fresh packet-bound maintainer
 words accepted; the current `continue` is not retroactive authority.
+
+## 0405 - Record Packet-Bound VR30P Authorization
+
+Proof decision: exact request proof closeout
+`44dc8ac5d2090c072332fe000e7c506da9b18e28` passed CI `32622494818`, Base
+Python job `97152694695`, and Optional Neuro Readers job `97152694553`.
+
+Authorization decision: after VR30P was identified as the sole active Tier C
+packet, the maintainer's next exact message was `continue`. Bind those actual
+eight UTF-8 bytes and their SHA-256 only to the unchanged six-file,
+41,981-byte packet. Do not fabricate the long-form packet as user speech or
+infer any scope expansion.
+
+Sequence decision: after this exact decision is remotely green, permit one
+generated-only Stage 1 fixed-path wrapper and qualification. Require the exact
+Stage 1 implementation and a separate proof-only closeout to pass both CI jobs
+before the registered one-shot target-free structural Stage 2 may run.
+
+Boundary decision: decision recording performs no `.codex_work`, readiness,
+private, consumed-state, archive, neural, target, model, prediction, score,
+network, device, FW2/CIL1, release, or claim operation. No implementation or
+private access is effective before this decision's own remote-green proof.

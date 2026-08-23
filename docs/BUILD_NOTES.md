@@ -13083,6 +13083,23 @@ private state. Stage 2 remains closed until that barrier passes.
 Immediate gate: commit, push, and green this exact proof-only closeout. Do not
 run `execute`, collect readiness, or touch private state before both jobs pass.
 
+### VR30P packet-bound authorization decision recorded
+
+- Exact request proof closeout
+  `44dc8ac5d2090c072332fe000e7c506da9b18e28` passed Base Python job
+  `97152694695`, Optional Neuro Readers job `97152694553`, and CI
+  `32622494818`.
+- After VR30P was named the sole active Tier C packet, the maintainer's next
+  exact message was `continue`. The decision preserves those eight UTF-8 bytes
+  and their SHA-256 and binds only the unchanged six-file, 41,981-byte packet.
+- Decision recording performs zero implementation, qualification, readiness,
+  private, ignored-path, consumed-state, archive, neural, target, model, score,
+  network, FW2/CIL1, device, other-project, release, or claim operation.
+
+Immediate gate: commit, push, and green this exact decision before Stage 1.
+Stage 2 remains closed behind the exact Stage 1 implementation and proof-only
+closeout barriers.
+
 ### VR30P request proof-only closeout prepared
 
 - Exact all-false request `8e49ac080ca31fe9788ebfdfe9fc355a9a58218c`

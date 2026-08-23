@@ -1,6 +1,6 @@
 # Codex Handoff - NeuroDecodeKit
 
-> Current MARC2-VR30P request proof closeout, 2026-08-23: exact all-false
+> Current MARC2-VR30P authorization decision, 2026-08-23: exact all-false
 > request `8e49ac080ca31fe9788ebfdfe9fc355a9a58218c` passed Base Python job
 > `97150361897`, Optional Neuro Readers job `97150361782`, and CI
 > `32621561090`. The request binds 13 tracked inputs totaling
@@ -9,10 +9,13 @@
 > 418,755-byte target-free structural read. The future result may retain only
 > aggregate R1 eligible-total arithmetic or R2 participant-session distribution
 > arithmetic. Every authority flag is false and every operation counter is
-> zero. The proof-only closeout binds three unchanged request artifacts totaling
-> 29,866 bytes and performs zero implementation or private operation. Immediate
-> gate: commit, push, and green this closeout. The current `continue` predates
-> this packet. Do not implement or touch `.codex_work`, consumed state,
+> zero. Proof closeout `44dc8ac5d2090c072332fe000e7c506da9b18e28`
+> passed Base Python job `97152694695`, Optional Neuro Readers job
+> `97152694553`, and CI `32622494818`. After VR30P was identified as the sole
+> Tier C packet, the maintainer's next exact message was `continue`. The
+> pending decision binds those eight UTF-8 bytes to the unchanged packet.
+> Immediate gate: commit, push, and green the decision. Do not implement or
+> touch `.codex_work`, consumed state,
 > archive/neural payload, targets, models, scores, FW2/CIL1, devices, streams,
 > release, or claims.
 
