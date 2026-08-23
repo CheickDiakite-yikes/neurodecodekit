@@ -1,11 +1,11 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate update (2026-08-23):** exact all-false VR32P request `9dc13cb`
-> passed Base job `97169278061`, Optional job `97169278037`, and CI
-> `32629224038`. Its proof-only closeout binds the unchanged 24,397-byte
-> three-file request set. It performs zero implementation or private operation
-> and must itself become remotely green before sole-gate identification and
-> fresh packet-bound maintainer words.
+> **Immediate update (2026-08-23):** exact VR32P request-proof closeout
+> `41d7ef7` passed Base job `97171587597`, Optional job `97171587706`, and CI
+> `32630153639`. After sole-gate identification, the maintainer's next exact
+> message was `continuecontinue`. The new decision preserves those 16 bytes
+> and binds only the unchanged two-stage packet. It must become remotely green
+> before generated Stage 1.
 
 > **Current MARC2 frontier (2026-08-22):** VR20A corrected the inherited
 > `task-freewill` identity to the primary-source-published
@@ -3925,7 +3925,7 @@ ignored-path, archive, neural, target, model, score, network, FW2/CIL1, or
 claim operation. Next gate: commit, push, and green this exact closeout. Only
 then may the one registered target-free structural discriminator execute.
 
-### MARC2-VR32P - Request Proof-Only Closeout Pending Green
+### MARC2-VR32P - Authorization Decision Pending Green
 
 Exact VR31A proof-only closeout `18d8fb9c9d376b680c3f0a31e513a2f37122283c`
 passed Base Python job `97167465027`, Optional Neuro Readers job
@@ -3943,9 +3943,15 @@ Python job `97169278061`, Optional Neuro Readers job `97169278037`, and CI
 registry, and request test totaling 24,397 bytes by byte count, SHA-256, and
 Git blob. Every authority flag remains false and every operation counter zero.
 
-Immediate gate: commit, push, and green this closeout. Only then identify
-VR32P as the sole Tier C packet. Fresh packet-bound maintainer words and a
-separately green decision remain required before implementation or access.
+Exact proof-only closeout
+`41d7ef7f5ae7f2288ce3af870ae786652d0aade3` passed Base Python job
+`97171587597`, Optional Neuro Readers job `97171587706`, and CI
+`32630153639`. VR32P was identified as the sole Tier C packet, after which the
+maintainer's next exact message was `continuecontinue`.
+
+The new decision binds those actual 16 UTF-8 bytes and the unchanged six-file,
+36,522-byte packet/proof artifact set. Immediate gate: commit, push, and green
+the exact decision before generated implementation or private access.
 
 ### MARC2-VR31A - Remotely Closed Generated Direction Engineering
 

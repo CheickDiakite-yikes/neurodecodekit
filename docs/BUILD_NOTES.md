@@ -13989,3 +13989,21 @@ packet and is not retroactive authority.
 Immediate gate: verify, commit, push, and green this exact closeout. Only then
 identify VR32P as the sole active Tier C packet. Fresh packet-bound maintainer
 words and a separately green decision remain required before Stage 1.
+
+### VR32P packet-bound decision recorded
+
+- Exact request-proof closeout
+  `41d7ef7f5ae7f2288ce3af870ae786652d0aade3` passed Base Python job
+  `97171587597`, Optional Neuro Readers job `97171587706`, and CI
+  `32630153639`.
+- After VR32P was identified as the sole active Tier C gate, the maintainer's
+  next exact message was `continuecontinue`.
+- The decision records those actual 16 UTF-8 bytes with SHA-256
+  `2965eb147f8f3c914314b30190eba8105f58f176b0dfc0c6ed71e40c024b6d5f`
+  and binds six unchanged packet/proof artifacts totaling 36,522 bytes.
+- Recording performs zero implementation, qualification, readiness, private,
+  ignored-path, archive, neural, target, model, score, network, FW2/CIL1,
+  device, release, other-project, or claim operation.
+
+Immediate gate: verify, commit, push, and green this exact decision. Only then
+may generated Stage 1 implementation begin.

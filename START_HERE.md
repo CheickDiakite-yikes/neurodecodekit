@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR32P Request Proof Closeout Pending Green
+## Current Frontier: MARC2-VR32P Authorization Decision Pending Green
 
 Read
 `docs/MARC_2_ELIGIBLE_TOTAL_DIRECTION_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md`
@@ -33,10 +33,16 @@ Python job `97169278061`, Optional Neuro Readers job `97169278037`, and CI
 packet, 13,544-byte machine request, and 6,525-byte request test by SHA-256 and
 Git blob. It changes no scope and performs zero operation.
 
-Immediate gate: verify, commit, push, and green this exact closeout. Only then
-identify VR32P as the sole active Tier C packet. The current `continue`
-predates the packet and is not retroactive authority; fresh packet-bound
-maintainer words remain required before any implementation or private read.
+Exact proof-only closeout
+`41d7ef7f5ae7f2288ce3af870ae786652d0aade3` passed Base Python job
+`97171587597`, Optional Neuro Readers job `97171587706`, and CI
+`32630153639`. VR32P was then identified as the sole active Tier C packet, and
+the maintainer's next exact message was `continuecontinue`.
+
+The authorization decision preserves those actual 16 UTF-8 bytes and binds
+only the unchanged remotely green packet. Immediate gate: verify, commit,
+push, and green that exact decision. No generated implementation, readiness,
+private path, or source operation is authorized before its own remote proof.
 
 ## Generated Evidence: MARC2-VR31A Remotely Closed
 

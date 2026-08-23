@@ -1,6 +1,6 @@
 # Codex Handoff - NeuroDecodeKit
 
-> Current MARC2-VR32P request proof closeout, 2026-08-23: exact VR31A proof-only closeout
+> Current MARC2-VR32P authorization decision, 2026-08-23: exact VR31A proof-only closeout
 > `18d8fb9c9d376b680c3f0a31e513a2f37122283c` passed Base Python job
 > `97167465027`, Optional Neuro Readers job `97167465228`, and CI
 > `32628483371`. VR32P is an all-false two-stage request for a generated
@@ -11,9 +11,12 @@
 > request `9dc13cb29804a7adfeaa45aa821e36e160a0f6ee` passed Base Python job
 > `97169278061`, Optional Neuro Readers job `97169278037`, and CI
 > `32629224038`. The proof-only closeout binds the unchanged 24,397-byte
-> request set. Immediate gate: verify, commit, push, and green this closeout.
-> Only afterward identify VR32P as the sole Tier C gate; the current
-> `continue` is not retroactive.
+> request set. Exact closeout `41d7ef7f5ae7f2288ce3af870ae786652d0aade3`
+> passed Base Python job `97171587597`, Optional Neuro Readers job
+> `97171587706`, and CI `32630153639`. After VR32P was identified as the sole
+> Tier C gate, the maintainer's next exact message was `continuecontinue`.
+> The decision preserves those 16 bytes and binds only the unchanged packet.
+> Immediate gate: verify, commit, push, and green the decision before Stage 1.
 
 > Current MARC2-VR31A proof-only closeout, 2026-08-23: exact registration
 > `eeab6785b8eadc6d65199fa1ac519173f9c160c7` passed Base Python job

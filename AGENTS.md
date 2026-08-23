@@ -65,11 +65,18 @@ Python job `97169278061`, Optional Neuro Readers job `97169278037`, and CI
 bind the unchanged three-file, 24,397-byte request artifact set and perform
 zero implementation or private operation.
 
-Immediate gate: commit, push, and green this exact proof-only closeout. Do not
-identify VR32P as the sole Tier C gate before that proof. The current
-`continue` predates this packet and is not retroactive authority. Do not touch
-`.codex_work`, consumed or private state, archives, neural data, targets,
-models, scores, FW2/CIL1, devices, streams, releases, or claims.
+Exact proof-only closeout
+`41d7ef7f5ae7f2288ce3af870ae786652d0aade3` passed Base Python job
+`97171587597`, Optional Neuro Readers job `97171587706`, and CI
+`32630153639` before VR32P was identified as the sole active Tier C gate. The
+maintainer's next exact message was `continuecontinue`. Read the VR32P
+authorization decision and machine record; they preserve those 16 UTF-8 bytes
+and bind only the unchanged packet.
+
+Immediate gate: commit, push, and green this exact decision. Before that
+proof, do not implement the wrapper or touch `.codex_work`, consumed or
+private state, archives, neural data, targets, models, scores, FW2/CIL1,
+devices, streams, releases, or claims.
 
 `MARC2-VR30P` is consumed at aggregate route `MARC2VR30P-R1` without a
 cohort freeze. Read
