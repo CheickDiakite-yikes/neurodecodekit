@@ -1,9 +1,9 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate gate (2026-08-23):** VR33A proof closeout `22dcb05` passed Base
-> job `97185995887`, Optional job `97185995981`, and CI `32636104743`. Verify,
-> commit, push, and green the all-false VR34P exact-count private-confirmation
-> request, then bind it in a proof-only closeout. No implementation, private
+> **Immediate gate (2026-08-23):** exact VR34P request `d4215c5` passed Base
+> job `97189079380`, Optional job `97189079311`, and CI `32637387771`. Verify,
+> commit, push, and green the new proof-only request closeout. It binds 28,726
+> immutable request bytes and adds no authority. No implementation, private
 > access, neural work, or claim action is open.
 
 > **Immediate update (2026-08-23):** exact VR32P proof closeout `5aec8a1`
@@ -3960,6 +3960,24 @@ Local registration verification passes 13 focused tests and all 5,361 base-
 install tests with 204 expected skips, a +13 test delta from the 5,348-test
 VR33A closeout baseline. Ruff, compilation, all 407 registry JSON files, and
 diff hygiene pass.
+
+### MARC2-VR34P - Request Remotely Green; Proof Closeout Prepared
+
+Exact all-false request `d4215c5aa5b8e43d91ff7ff26b8ea035648f3706`
+passed Base Python job `97189079380`, Optional Neuro Readers job
+`97189079311`, and CI `32637387771`.
+
+The proof-only closeout binds the unchanged 5,050-byte authorization packet,
+15,453-byte machine request, and 8,223-byte request test by byte count,
+SHA-256, and Git blob. Combined request bytes are 28,726. It performs zero
+implementation, qualification, readiness, private, consumed-state, archive,
+neural, target, model, score, network, device, FW2/CIL1, release, or claim
+operation.
+
+Immediate gate: verify, commit, push, and green this exact proof-only
+closeout. Only afterward may VR34P be identified as the sole active Tier C
+packet for fresh maintainer words. The current `continue` predates this proof
+barrier and is not retroactive authority.
 
 ### MARC2-VR33A - Exact-Count Readiness Repair Remotely Closed
 

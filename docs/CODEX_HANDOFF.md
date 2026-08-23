@@ -1,15 +1,16 @@
 # Codex Handoff - NeuroDecodeKit
 
-> Current MARC2-VR34P gate, 2026-08-23: VR33A proof-only closeout `22dcb05`
-> passed Base job `97185995887`, Optional job `97185995981`, and CI
-> `32636104743` without requalification or private access. The new all-false
-> VR34P request binds 17 tracked inputs totaling 137,581 bytes. Delayed Stage 1
+> Current MARC2-VR34P gate, 2026-08-23: exact all-false request `d4215c5`
+> passed Base job `97189079380`, Optional job `97189079311`, and CI
+> `32637387771`. Its three unchanged request artifacts total 28,726 bytes.
+> Read the new proof-only closeout and machine proof. Delayed Stage 1
 > composes unchanged VR33A and VR31A over 60 generated/mock paths. Delayed
 > Stage 2 uses exactly three provider calls and two fixed sleeps, opens the
 > 418,755-byte target-free structural source at most once only after `PPP`, and
 > retains only aggregate R1 below 195 or R2 above 195. Immediate gate: verify,
-> commit, push, and green the request, then add a proof-only request closeout.
-> Every authority flag is false; the current `continue` predates the packet.
+> commit, push, and green the proof-only closeout. It adds no authority and
+> performs zero private operation. Only after its own remote green may VR34P
+> become the sole Tier C gate. The current `continue` predates that barrier.
 > Do not implement VR34P or touch consumed VR32P/private state.
 
 > Current MARC2-VR32P result, 2026-08-23: proof-only closeout

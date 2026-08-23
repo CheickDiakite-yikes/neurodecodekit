@@ -12215,3 +12215,20 @@ is zero. The current maintainer `continue` predates the packet. Commit, push,
 and green the request, then separately green a proof-only request closeout
 before identifying a sole Tier C gate. No implementation, private access,
 neural/model work, release, or claim upgrade is authorized now.
+
+## 0422 - Bind Exact Remote Proof For The VR34P Request
+
+Proof decision: exact all-false request
+`d4215c5aa5b8e43d91ff7ff26b8ea035648f3706` passed CI `32637387771`, Base
+Python job `97189079380`, and Optional Neuro Readers job `97189079311`.
+
+Identity decision: bind the unchanged 5,050-byte authorization packet,
+15,453-byte machine request, and 8,223-byte request test by byte count,
+SHA-256, and Git blob. The exact request artifact set totals 28,726 bytes.
+
+Boundary decision: repeat no qualification and perform no implementation,
+readiness, private, ignored-path, consumed-VR32P, archive, neural, target,
+model, score, network, device, FW2/CIL1, other-project, release, or claim
+operation. This closeout is ineffective until its own exact commit is pushed
+and both required jobs are green. Only afterward may VR34P be identified as
+the sole active Tier C packet; the current `continue` is not retroactive.

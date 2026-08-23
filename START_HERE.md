@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: MARC2-VR34P Exact-Count Private Confirmation Request
+## Current Gate: MARC2-VR34P Request Proof Closeout
 
 VR33A proof-only closeout `22dcb05a1da90b153b715a0374eeb3673024f53c`
 passed Base job `97185995887`, Optional job `97185995981`, and CI
@@ -23,12 +23,18 @@ paths. Its delayed private Stage 2 permits exactly three readiness samples,
 two fixed sleeps, and at most one target-free 418,755-byte structural open only
 after `PPP`; it may retain only aggregate R1 below 195 or R2 above 195.
 
-Immediate gate: verify, commit, push, and green the request, then bind it in a
-separate proof-only closeout. Every authority flag is false. The current
-`continue` predates the packet, so implementation and private access remain
-unauthorized. Do not touch consumed VR32P or any private/ignored state. Neural,
-target, model, score, FW2/CIL1, device, release, and claim surfaces remain
-closed.
+Exact request `d4215c5aa5b8e43d91ff7ff26b8ea035648f3706` passed Base
+Python job `97189079380`, Optional Neuro Readers job `97189079311`, and CI
+`32637387771`. Read the proof-only closeout and machine record. They bind the
+unchanged three request artifacts totaling 28,726 bytes and perform zero
+implementation, generated qualification, readiness, or private operation.
+
+Immediate gate: verify, commit, push, and green the proof-only closeout. Only
+after that barrier may VR34P be identified as the sole active Tier C packet.
+The current `continue` predates the proof barrier, so implementation and
+private access remain unauthorized. Do not touch consumed VR32P or any
+private/ignored state. Neural, target, model, score, FW2/CIL1, device, release,
+and claim surfaces remain closed.
 
 ## Consumed Boundary: MARC2-VR32P R2 With A Protocol Deviation
 

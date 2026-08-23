@@ -50,9 +50,14 @@ closeout `22dcb05a1da90b153b715a0374eeb3673024f53c` passed Base job
 `97185995887`, Optional job `97185995981`, and CI `32636104743` without
 repeating qualification or touching private state.
 
-The next all-false Tier C request is prepared as `MARC2-VR34P`. Read
+The next all-false Tier C request is `MARC2-VR34P`. Exact request
+`d4215c5aa5b8e43d91ff7ff26b8ea035648f3706` passed Base Python job
+`97189079380`, Optional Neuro Readers job `97189079311`, and CI
+`32637387771`. Read
 `docs/MARC_2_EXACT_COUNT_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md` and
-`registries/marc2_exact_count_private_confirmation_authorization_request.v0.json`.
+`registries/marc2_exact_count_private_confirmation_authorization_request.v0.json`,
+then read `docs/MARC_2_EXACT_COUNT_PRIVATE_CONFIRMATION_REQUEST_PROOF_CLOSEOUT.md`
+and `registries/marc2_exact_count_private_confirmation_request_proof.v0.json`.
 It binds 17 committed VR33A, VR31A, and aggregate VR32P artifacts totaling
 137,581 bytes. Delayed Stage 1 is a generated/mock fixed-path wrapper that
 calls unchanged VR33A on 60 paths and unchanged VR31A only after `PPP`.
@@ -60,11 +65,13 @@ Delayed Stage 2 is one distinct target-free structural invocation using
 exactly three readiness-provider calls, two fixed sleeps, at most one
 418,755-byte source open after `PPP`, and one aggregate R1/R2 answer.
 
-Immediate gate: verify, commit, push, and green the exact all-false request,
-then prepare a proof-only request closeout. Every authority flag is false and
-every operation counter is zero. The maintainer's current `continue` predates
-the packet and is not retroactive authority. Do not implement VR34P, inspect
-private/ignored state, or import, call, repair, or modify consumed VR32P.
+Immediate gate: verify, commit, push, and green the exact proof-only request
+closeout. It binds the unchanged three-file, 28,726-byte request artifact set
+and performs zero implementation or private operation. Only after that exact
+closeout is remotely green may VR34P be identified as the sole active Tier C
+packet. The maintainer's current `continue` predates the proof barrier and is
+not retroactive authority. Do not implement VR34P, inspect private/ignored
+state, or import, call, repair, or modify consumed VR32P.
 FW2/CIL1, archives, neural data, targets, models, scores, streams, devices,
 release, and claims remain closed.
 
