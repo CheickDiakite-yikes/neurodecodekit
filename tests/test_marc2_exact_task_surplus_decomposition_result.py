@@ -64,9 +64,16 @@ class ExactTaskSurplusDecompositionResultTests(unittest.TestCase):
         self.assertFalse(boundary["real_cohort_established"])
         self.assertFalse(boundary["neural_payload_accessed"])
         self.assertFalse(boundary["decoding_performance_established"])
-        self.assertIsNone(self.result["remote_implementation_proof"])
+        proof = self.result["remote_implementation_proof"]
+        self.assertEqual(proof["commit"], "f698a10d2649bd65f7b819531cbf3d89cd3f0c0a")
+        self.assertEqual(proof["CI_run_id"], 32_654_295_221)
+        self.assertTrue(proof["both_required_jobs_green"])
+        self.assertFalse(proof["scope_changed_after_qualification"])
+        self.assertFalse(proof["generated_qualification_repeated_for_proof_closeout"])
         gate = self.result["next_gate"]
-        self.assertTrue(gate["implementation_commit_push_and_both_jobs_green_required"])
+        self.assertTrue(gate["proof_only_closeout_commit_green_pending"])
+        self.assertFalse(gate["generated_lane_remotely_closed_now"])
+        self.assertTrue(gate["generated_lane_remotely_closed_after_exact_closeout_green"])
         self.assertFalse(gate["private_discriminator_or_read_authorized"])
 
 

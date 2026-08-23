@@ -12525,3 +12525,20 @@ consumed private topology and opens no private, archive, neural, target, model,
 score, FW2/CIL1, release, or claim operation. Commit, push, and green the exact
 implementation/result before a proof-only closeout. A private discriminator
 requires a new frozen Tier C packet and fresh decision.
+
+## 0438 - Bind VR37A To Exact Remote Implementation Proof
+
+Proof decision: exact implementation
+`f698a10d2649bd65f7b819531cbf3d89cd3f0c0a` passed CI `32654295221`,
+Base Python job `97230546153`, and Optional Neuro Readers job `97230546048`.
+
+Engineering decision: bind the 5,521-byte preproof implementation registry,
+3,996-byte preproof result registry, and every exact implementation Git blob
+in a separate proof-only closeout. Harden the static result assertion for the
+delayed null-to-populated proof transition without changing behavior.
+
+Boundary decision: do not repeat qualification or touch private, ignored,
+consumed, archive, neural, target, model, score, FW2/CIL1, release, or claim
+state. The closeout has delayed effect until its own exact commit is pushed and
+both CI jobs are green. A future private discriminator requires a new frozen
+Tier C packet and fresh decision.
