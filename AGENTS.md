@@ -162,7 +162,8 @@ blobs without repeating qualification or touching private state. Exact
 closeout `378e863641418e0e538f3159d073dd4bcd9c8899` passed Base job
 `97109778233`, Optional job `97109778216`, and CI `32605475758`.
 
-The next all-false request is prepared locally as `MARC2-VR26P`. Read
+The next two-stage gate is authorized by fresh short form as `MARC2-VR26P`.
+Read
 `docs/MARC_2_SELECTION_BOUNDARY_PRIVATE_CONFIRMATION_AUTHORIZATION_PACKET.md`
 and
 `registries/marc2_selection_boundary_private_confirmation_authorization_request.v0.json`.
@@ -174,12 +175,23 @@ differ, never the unavailable count or direction. Exact request
 Optional job `97112059152`, and CI `32606451461`. Read
 `docs/MARC_2_SELECTION_BOUNDARY_PRIVATE_CONFIRMATION_REQUEST_PROOF_CLOSEOUT.md`
 and its machine proof. They bind three unchanged request artifacts totaling
-40,176 bytes and perform zero implementation or private operation. Commit,
-push, and green this exact proof closeout. Only afterward identify VR26P as the
-sole active Tier C gate and require fresh packet-bound maintainer words. The
-current `continue` preceded this packet and is not retroactive. No
-implementation, private source, consumed state, cohort, archive member, neural
-payload, target, model, score, FW2/CIL1 action, or scientific claim is open.
+40,176 bytes and perform zero implementation or private operation. Exact
+proof-only closeout `efd779a2d8bafbd4efbf5618fadf2355f4f89ee4` passed Base
+job `97114173204`, Optional job `97114173360`, and CI `32607272954` before
+VR26P was identified as the sole active Tier C packet. The maintainer's next
+exact message was `continue`. Read
+`docs/MARC_2_SELECTION_BOUNDARY_PRIVATE_CONFIRMATION_AUTHORIZATION_DECISION.md`
+and its machine decision. The decision quotes those eight UTF-8 bytes and
+binds only the unchanged green packet.
+
+Immediate gate: commit, push, and remotely green this exact decision. Do not
+implement the wrapper or touch readiness, `.codex_work`, the private source,
+consumed state, or an output root before that proof. After the decision is
+green, Stage 1 may implement and generated-qualify the fixed wrapper across 40
+paths and at least 90 direct refusals. Stage 2 remains closed until the exact
+Stage 1 implementation and a proof-only closeout are separately remotely
+green. FW2/CIL1, archive members, neural payload, targets, models,
+predictions, scores, streams, devices, and scientific claims remain closed.
 
 ## Historical VR20P/VR21A/VR22P path
 

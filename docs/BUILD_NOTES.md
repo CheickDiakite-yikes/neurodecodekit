@@ -13083,6 +13083,31 @@ private state. Stage 2 remains closed until that barrier passes.
 Immediate gate: commit, push, and green this exact proof-only closeout. Do not
 run `execute`, collect readiness, or touch private state before both jobs pass.
 
+### VR26P packet-bound authorization decision recorded
+
+- Exact request proof closeout `efd779a2d8bafbd4efbf5618fadf2355f4f89ee4`
+  passed Base Python job `97114173204`, Optional Neuro Readers job
+  `97114173360`, and CI `32607272954` before the packet was named as the sole
+  active Tier C gate.
+- The maintainer's next message was exactly `continue` (8 UTF-8 bytes; SHA-256
+  `e256ee8e7aff6957a781d8328f0f68e26996564c81fa458da59fbca2305138ad`).
+- The decision binds six unchanged packet/proof artifacts totaling 51,785
+  bytes, the fixed paths, seven private routes, exact cohort identity,
+  resources, failure semantics, and closed scientific ceiling.
+- Decision-time wrapper, readiness, private-source, archive, neural, target,
+  model, prediction, score, network, FW2/CIL1, other-project, release, and
+  claim operations are zero.
+- Fifty-eight focused VR25A/VR26P tests and all 5,001 dependency-light tests
+  pass with 204 expected skips and zero failures, exactly seven tests above
+  the 4,994-test pre-decision baseline. Ruff, compilation, strict decision-
+  registry JSON, and diff checks pass.
+
+Immediate gate: commit, push, and require both remote CI jobs green for this
+exact decision. Only afterward implement and generated-qualify Stage 1. Do
+not collect readiness or touch `.codex_work`, the private source, consumed
+state, or any output root until Stage 1 and its proof-only closeout are also
+separately remotely green.
+
 ### VR24P result remotely green
 
 - The sole proof-separated invocation consumed at `MARC2VR24P-R2` after one

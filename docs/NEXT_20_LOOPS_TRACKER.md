@@ -4164,6 +4164,27 @@ and green a proof-only closeout without reexecution. No readiness, private
 source, archive, neural, target, model, score, FW2/CIL1, or claim operation may
 occur before both barriers.
 
+### MARC2-VR26P - Packet-Bound Decision Recorded; Remote Green Pending
+
+Exact request proof closeout `efd779a` passed Base Python job `97114173204`,
+Optional Neuro Readers job `97114173360`, and CI `32607272954` before VR26P
+was identified as the sole active Tier C packet. The maintainer's next exact
+message was the eight UTF-8 bytes `continue`.
+
+The decision binds only the unchanged packet, six request/proof artifacts
+totaling 51,785 bytes, the 40-path generated Stage 1, at least 90 direct
+refusals, and the later one-read Stage 2 barrier. R1 and R2 may freeze the same
+exact 16-subject, 96-bundle, 384-member cohort; neither may expose the observed
+complete-bundle count or direction. The decision itself performs zero
+implementation, readiness, private, archive, neural, target, model, score,
+network, FW2/CIL1, or claim operation.
+
+Next gate: commit, push, and green this exact decision. Then implement and
+generated-qualify Stage 1, commit and green it, and add a separately green
+proof-only closeout. The private read remains closed until all three proof
+barriers pass; FW2/CIL1 and scientific claims remain closed afterward unless a
+separate exact preregistration and authorization opens them.
+
 ### MARC2-VR24P - Exact Stage 1 Remotely Green; Closeout Pending
 
 Exact implementation `a2e19ba` passed Base Python job `97099725036`, Optional

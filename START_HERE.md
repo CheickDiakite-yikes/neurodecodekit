@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR26P Request Proof Closeout Pending Green
+## Current Frontier: MARC2-VR26P Decision Pending Green
 
 VR24P result `a873f1a` passed Base job `97103071419`, Optional Neuro Readers
 job `97103071353`, and CI `32602610854`. The exact one-shot result remains
@@ -65,12 +65,19 @@ the unchanged 10,278-byte packet, 17,193-byte request, and 12,705-byte request
 test with exact hashes and Git blobs. It performs zero implementation or
 private operation.
 
-Immediate gate: commit, push, and green the exact request proof closeout. Only
-afterward may VR26P be identified as the sole active Tier C gate. The current
-`continue` predates this packet and is not retroactive authority; fresh packet-
-bound maintainer words will still be required. No implementation, private
-read, cohort, archive-member access, neural operation, FW2/CIL1 action, or
-scientific claim is open.
+Exact request proof closeout `efd779a` passed Base job `97114173204`, Optional
+Neuro Readers job `97114173360`, and CI `32607272954`. Codex then named VR26P
+as the sole active Tier C packet and restated its immutable two-stage scope.
+The maintainer's next exact message was the eight UTF-8 bytes `continue`.
+
+Read `docs/MARC_2_SELECTION_BOUNDARY_PRIVATE_CONFIRMATION_AUTHORIZATION_DECISION.md`
+and its machine decision. They bind only the unchanged green packet and have
+delayed effect. Immediate gate: commit, push, and green the exact decision.
+Only then may Stage 1 implement and generated-qualify the fixed wrapper. The
+one private read remains blocked until that exact implementation and a proof-
+only closeout are also separately remotely green. No private read, cohort,
+archive-member access, neural operation, FW2/CIL1 action, or scientific claim
+is open at decision-recording time.
 
 ## Historical Frontier: MARC2-VR24P Consumed At R2
 

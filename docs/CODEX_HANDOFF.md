@@ -1,5 +1,20 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR26P packet-bound decision, 2026-08-22: exact request proof
+> closeout `efd779a` passed Base Python job `97114173204`, Optional Neuro
+> Readers job `97114173360`, and CI `32607272954` before VR26P was identified
+> as the sole active Tier C gate. The maintainer's next exact message was the
+> eight UTF-8 bytes `continue`. The new decision quotes those bytes and binds
+> only the unchanged request `00db825`, proof closeout `efd779a`, six packet
+> artifacts totaling 51,785 bytes, fixed paths, routes, resources, and closed
+> science boundary. It performs zero wrapper, readiness, private, archive,
+> neural, target, model, score, network, FW2/CIL1, or claim operation.
+> Immediate gate: commit, push, and obtain both green CI jobs for this exact
+> decision. Only then may Stage 1 implement and generated-qualify 40 fixed
+> paths with at least 90 direct refusals. The one private structural read
+> remains blocked until the exact Stage 1 implementation and a proof-only
+> closeout are separately remotely green.
+
 > Current MARC2-VR26P request proof closeout, 2026-08-22: exact request
 > `00db825` passed Base job `97112059257`, Optional job `97112059152`, and CI
 > `32606451461`. The proof closeout binds three unchanged request artifacts

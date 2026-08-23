@@ -11405,3 +11405,26 @@ Boundary decision: the proof closeout has delayed effect until its own exact
 commit is pushed and both jobs are green. Only afterward may VR26P be
 identified as the sole active Tier C gate. Fresh packet-bound maintainer words
 and a separately green decision remain required before implementation.
+
+## 0387 - Authorize The VR26P Two-Stage Cohort Confirmation
+
+Authorization decision: exact request proof closeout
+`efd779a2d8bafbd4efbf5618fadf2355f4f89ee4` passed Base Python job
+`97114173204`, Optional Neuro Readers job `97114173360`, and CI
+`32607272954` before Codex identified `MARC2-VR26P` as the sole active Tier C
+packet. The maintainer's next exact message was `continue`; bind those eight
+UTF-8 bytes and their SHA-256 digest to only the unchanged green packet.
+
+Sequence decision: after this decision is itself committed, pushed, and both
+CI jobs are green, Stage 1 may implement and generated-qualify one fixed-path
+wrapper across 40 paths and at least 90 direct refusals. Stage 2 remains
+blocked until that exact implementation and a proof-only closeout are also
+committed, pushed, and remotely green. Only then may one registered 418,755-
+byte target-free structural read call VR25A once and freeze the exact private
+cohort on R1 or R2.
+
+Boundary decision: the decision record performs zero implementation,
+readiness, private, archive, neural, target, model, prediction, score, network,
+FW2/CIL1, release, or claim operation. Success would establish only a
+structurally eligible source-bound cohort; it would not establish a neural
+effect or decoding result. No authority is inferred beyond this packet.
