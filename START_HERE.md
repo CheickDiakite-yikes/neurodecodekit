@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR28P Generated Stage 1 Qualified
+## Current Frontier: MARC2-VR28P Proof-Only Closeout Pending Remote Green
 
 VR24P result `a873f1a` passed Base job `97103071419`, Optional Neuro Readers
 job `97103071353`, and CI `32602610854`. The exact one-shot result remains
@@ -189,12 +189,24 @@ byte peak RSS, 785 peak incremental output bytes, and zero retained output.
 Every private, consumed-state, archive, neural, target, model, score, network,
 device, FW2/CIL1, other-project, and claim counter remained zero.
 
-Immediate gate: commit, push, and green the exact Stage 1 implementation and
-result, then add and separately green a proof-only closeout. Do not repeat the
-qualification. The registered private source, readiness, output root, and all
-consumed lanes remain untouched until both green barriers pass. FW2/CIL1,
-archive/neural payload, targets, models, scores, devices, streams, releases,
-and scientific claims remain closed.
+Initial implementation `06174e1` passed Base Python job `97137205238`,
+Optional Neuro Readers job `97137205346`, and CI `32616187929`. A generated-
+only proof-transition test was then hardened without changing the module or
+measured result. Exact hardened implementation `6d3b770` passed Base Python
+job `97138335047`, Optional Neuro Readers job `97138335116`, and CI
+`32616632414`.
+
+Read
+`docs/MARC_2_INVENTORY_TAXONOMY_PRIVATE_DISCRIMINATOR_PROOF_CLOSEOUT.md`.
+It binds the exact preproof implementation and result registries plus five
+implementation Git blobs and repeats no qualification or private operation.
+
+Immediate gate: commit, push, and green the proof-only closeout. The registered
+private source, readiness, output root, and consumed lanes remain untouched
+until both jobs pass. After green, the already authorized one-shot Stage 2
+invocation may run with no retry. FW2/CIL1, archive/neural payload, targets,
+models, scores, devices, streams, releases, and scientific claims remain
+closed.
 
 ## Historical Frontier: MARC2-VR24P Consumed At R2
 

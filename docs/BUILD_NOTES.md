@@ -13083,6 +13083,27 @@ private state. Stage 2 remains closed until that barrier passes.
 Immediate gate: commit, push, and green this exact proof-only closeout. Do not
 run `execute`, collect readiness, or touch private state before both jobs pass.
 
+### VR28P proof-only closeout prepared
+
+- Initial implementation `06174e1456c57c050c48f5b1bce9b276629e2f25`
+  passed Base Python job `97137205238`, Optional Neuro Readers job
+  `97137205346`, and CI `32616187929`.
+- A proof-transition-only test hardening changed no module or measured result.
+  Exact hardened implementation `6d3b770d0e67c8b394c6a1a7581c21ae7b202909`
+  passed Base Python job `97138335047`, Optional Neuro Readers job
+  `97138335116`, and CI `32616632414`.
+- Bound the 7,743-byte preproof implementation registry, 3,580-byte result
+  registry, their exact hashes and Git blobs, the canonical artifact-set hash,
+  and five exact implementation Git blobs.
+- The closeout repeats no qualification and performs zero readiness,
+  `.codex_work`, private, consumed-state, archive, neural, target, model,
+  score, network, FW2/CIL1, other-project, or claim operation.
+- Thirty-one focused and all 5,117 dependency-light tests pass with 204
+  expected skips and zero failures.
+
+Immediate gate: commit, push, and green this exact proof-only closeout. Only
+then may the one registered private structural invocation run.
+
 ### VR28P generated Stage 1 qualification
 
 - Exact packet-bound decision `718c3de6ddb0030b1ba39fa0e42250e97db01072`

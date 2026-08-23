@@ -3918,6 +3918,24 @@ ignored-path, archive, neural, target, model, score, network, FW2/CIL1, or
 claim operation. Next gate: commit, push, and green this exact closeout. Only
 then may the one registered target-free structural discriminator execute.
 
+### MARC2-VR28P - Proof-Only Closeout Pending Remote Green
+
+Initial implementation `06174e1456c57c050c48f5b1bce9b276629e2f25`
+passed Base Python job `97137205238`, Optional Neuro Readers job
+`97137205346`, and CI `32616187929`. A proof-transition-only test hardening
+changed no module or measured result. Exact hardened implementation
+`6d3b770d0e67c8b394c6a1a7581c21ae7b202909` passed Base Python job
+`97138335047`, Optional Neuro Readers job `97138335116`, and CI `32616632414`.
+
+The proof-only closeout binds exact preproof implementation and result
+registries totaling 11,323 bytes, their SHA-256 and Git blobs, the canonical
+artifact-set hash, and five implementation Git blobs. It repeats no
+qualification and performs zero readiness, private, consumed-state, archive,
+neural, target, model, score, network, device, FW2/CIL1, or claim operation.
+
+Immediate gate: commit, push, and green the exact proof-only closeout. Only
+then may the one already authorized Stage 2 invocation run. There is no retry.
+
 ### MARC2-VR28P - Generated Stage 1 Qualified; Remote Proof Pending
 
 Exact packet-bound decision `718c3de6ddb0030b1ba39fa0e42250e97db01072`

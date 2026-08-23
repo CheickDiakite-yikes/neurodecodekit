@@ -11677,3 +11677,22 @@ score, network, provider, device, FW2/CIL1, other project, release, or claim
 operation occurred. The exact implementation must become remotely green and
 then receive a separately green proof-only closeout before the one authorized
 private structural invocation becomes eligible.
+
+## 0398 - Bind Exact Remote Proof For VR28P
+
+Proof decision: initial implementation
+`06174e1456c57c050c48f5b1bce9b276629e2f25` passed CI `32616187929`.
+A proof-transition-only test hardening changed no module or measured result.
+Exact hardened implementation `6d3b770d0e67c8b394c6a1a7581c21ae7b202909`
+passed CI `32616632414`, Base Python job `97138335047`, and Optional Neuro
+Readers job `97138335116`.
+
+Identity decision: bind the 7,743-byte preproof implementation registry,
+3,580-byte result registry, their exact SHA-256 and Git blobs, canonical
+artifact-set hash, and five exact implementation Git blobs.
+
+Boundary decision: repeat no qualification and perform no readiness,
+`.codex_work`, private, consumed-state, archive, neural, target, model,
+prediction, score, network, provider, device, FW2/CIL1, other-project,
+release, or claim operation. This closeout is ineffective until its own exact
+commit is pushed and both required jobs are green.
