@@ -9,19 +9,18 @@
 
 ## Current Gate: MARC2-VR33A Exact-Count Readiness Repair
 
-Read `docs/MARC_2_EXACT_COUNT_READINESS_REPAIR_PREREGISTRATION.md` and
-`registries/marc2_exact_count_readiness_repair_contract.v0.json`. This frozen
-artifact-only and generated-only lane repairs the future readiness mechanism,
-not the consumed VR32P result. It requires exactly three provider calls and two
-sleeps per collection, with readiness only when all three generated samples
-pass. Its implementation surface is limited to `plan` and `qualify` and has no
-private executor.
+Registration `23adf07a328824d3b671e8fd8edf3c9b8d1f15ba` passed Base job
+`97181894886`, Optional job `97181895045`, and CI `32634409230` before
+implementation. Read the VR33A preregistration, implementation document,
+contract, implementation record, and result.
 
-Immediate gate: commit, push, and green the exact registration before
-implementation. Do not touch VR32P private or consumed state. Any future
-private use needs a separate frozen Tier C packet and decision. Neural,
-target, model, score, FW2/CIL1, device, release, and claim surfaces remain
-closed.
+The sole generated qualification passed `MARC2VR33A-G1`: 16 paths, 48 provider
+calls, 32 sleeper calls, only `PPP` ready, 67 refusals, exact replay, and zero
+source mutation or retention. Immediate gate: commit, push, and green the exact
+implementation, then add a proof-only closeout without repeating qualification.
+Do not touch VR32P private or consumed state. Any future private use needs a
+separate frozen Tier C packet and decision. Neural, target, model, score,
+FW2/CIL1, device, release, and claim surfaces remain closed.
 
 ## Consumed Boundary: MARC2-VR32P R2 With A Protocol Deviation
 

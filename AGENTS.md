@@ -45,25 +45,24 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
-`MARC2-VR33A` is frozen as an artifact-only and generated-only exact-count
-readiness repair. Read
-`docs/MARC_2_EXACT_COUNT_READINESS_REPAIR_PREREGISTRATION.md` and
-`registries/marc2_exact_count_readiness_repair_contract.v0.json`. It binds five
-committed VR32P artifacts totaling 75,965 bytes and freezes a reusable
-standard-library sampler that attempts exactly three generated samples, sleeps
-exactly twice, and returns ready only when all three samples pass. The frozen
-qualification matrix has eight pass/fail patterns across two replays: 16 paths,
-48 provider calls, 32 sleeper calls, exactly one ready pattern, and at least 40
-direct refusals. It exposes only `plan` and `qualify`; no private executor or
-filesystem path exists.
+`MARC2-VR33A` is locally qualified as an artifact-only and generated-only
+exact-count readiness repair. Read its preregistration, implementation
+document, contract, implementation record, and result. Registration
+`23adf07a328824d3b671e8fd8edf3c9b8d1f15ba` passed Base job `97181894886`,
+Optional job `97181895045`, and CI `32634409230` before implementation.
 
-Immediate gate: commit, push, and green this exact registration before
-implementation. Do not modify or call the consumed VR32P wrapper, repeat its
-qualification, or inspect private/ignored state. After green registration,
-Tier B may implement and qualify only the frozen generated matrix. Any future
-private adoption remains a new Tier C packet and decision. FW2/CIL1, archives,
-neural data, targets, models, scores, streams, devices, release, and claims
-remain closed.
+The sole qualification returned `MARC2VR33A-G1`: 16 paths, exactly 48 provider
+calls, 32 sleeper calls, 48 returned samples, only `PPP` ready, 67 direct
+refusals, exact replay, and zero source mutations. It processed 4,136 generated
+bytes in 0.004203916992992163 seconds at 24,215,552-byte peak RSS with zero
+retention and every private, neural, model, network, and claim counter at zero.
+
+Immediate gate: commit, push, and green the exact implementation. Do not repeat
+qualification. After remote green, add a proof-only closeout that performs no
+qualification or private operation. Do not modify or call consumed VR32P or
+inspect private/ignored state. Any future private adoption remains a new Tier C
+packet and decision. FW2/CIL1, archives, neural data, targets, models, scores,
+streams, devices, release, and claims remain closed.
 
 ### Consumed VR32P boundary
 

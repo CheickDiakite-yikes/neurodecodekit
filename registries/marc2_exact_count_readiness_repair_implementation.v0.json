@@ -1,0 +1,126 @@
+{
+  "schema_name": "neurodecodekit.marc2_exact_count_readiness_repair_implementation",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC2-VR33A",
+  "recorded_at_local": "2026-08-23",
+  "status": "generated_qualification_passed_remote_implementation_proof_pending",
+  "registration_proof": {
+    "commit": "23adf07a328824d3b671e8fd8edf3c9b8d1f15ba",
+    "CI_run_id": 32634409230,
+    "base_job_id": 97181894886,
+    "optional_neuro_job_id": 97181895045,
+    "both_required_jobs_green": true,
+    "contract_bytes": 6882,
+    "contract_sha256": "db8e43a81d7f14b5c438bbd39c8dd7e87d8fbe12e9934f9df8598699d1b590b7"
+  },
+  "implementation_artifacts": [
+    {
+      "role": "module",
+      "path": "src/neurodecodekit/datasets/marc2_exact_count_readiness.py",
+      "bytes": 25109,
+      "sha256": "77363545733b01a1012823558d91a1624d049495664ee59e4024219570f5d596"
+    },
+    {
+      "role": "behavior_tests",
+      "path": "tests/test_marc2_exact_count_readiness.py",
+      "bytes": 5250,
+      "sha256": "4a4d59d2ba700914793287867cf4fc067af0ca43e4dda1a4bbf68f4ce152ce3f"
+    },
+    {
+      "role": "result_tests",
+      "path": "tests/test_marc2_exact_count_readiness_result.py",
+      "bytes": 4492,
+      "sha256": "3909cb460a0cb2e14cac2eb4f74880d07d0d9e5ff60674e90f500588ab4865ba"
+    },
+    {
+      "role": "implementation_document",
+      "path": "docs/MARC_2_EXACT_COUNT_READINESS_REPAIR_IMPLEMENTATION.md",
+      "bytes": 3402,
+      "sha256": "5f09453c64a6e9f963b358278d503ad064b2ced4f79a76697a3accf543219098"
+    },
+    {
+      "role": "generated_result",
+      "path": "registries/marc2_exact_count_readiness_repair_result.v0.json",
+      "bytes": 2865,
+      "sha256": "f490c52e0ac13fb624aa44f969acd86ac61bc62d9da6f552f0efbd4298c395ff"
+    }
+  ],
+  "implementation_artifact_count": 5,
+  "implementation_artifact_bytes": 41118,
+  "surface": {
+    "commands": [
+      "plan",
+      "qualify"
+    ],
+    "private_executor_available": false,
+    "filesystem_operations_in_collection": 0,
+    "while_loops_in_collection": 0,
+    "sample_count": 3,
+    "interval_seconds": 5.0,
+    "sample_count_interval_timeout_retry_path_output_or_resource_overrides": 0,
+    "base_dependency_additions": 0
+  },
+  "qualification": {
+    "route": "MARC2VR33A-G1",
+    "qualification_invocations": 1,
+    "patterns": 8,
+    "replays": 2,
+    "paths": 16,
+    "provider_calls": 48,
+    "sleeper_calls": 32,
+    "returned_samples": 48,
+    "ready_paths": 2,
+    "not_ready_paths": 14,
+    "ready_patterns": [
+      "PPP"
+    ],
+    "direct_refusals_passed": 67,
+    "exact_replays_match": true,
+    "source_mutations_after_call": 0,
+    "retained_output_bytes": 0,
+    "replay_digest": "67298e33712fcfc3046b356ab3d6416968325b5b9311bfc4f968ad0ff4d39195"
+  },
+  "resources": {
+    "fixed_input_bytes": 75965,
+    "generated_input_bytes": 4136,
+    "runtime_seconds": 0.004203916992992163,
+    "peak_RSS_bytes": 24215552,
+    "aggregate_output_bytes": 2390,
+    "retained_output_bytes": 0,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "network_bytes": 0,
+    "new_payload_bytes": 0
+  },
+  "operation_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "readiness_or_consumed_state_operations": 0,
+    "archive_header_or_member_operations": 0,
+    "signal_event_target_or_label_operations": 0,
+    "model_training_inference_prediction_or_score_operations": 0,
+    "network_download_provider_or_language_model_operations": 0,
+    "stream_device_or_hardware_operations": 0,
+    "FW2_or_CIL1_operations": 0,
+    "other_project_operations": 0,
+    "release_or_publication_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "remote_implementation_proof": null,
+  "next_gate": {
+    "implementation_must_be_committed_pushed_and_both_CI_jobs_green": true,
+    "qualification_may_be_repeated": false,
+    "proof_only_closeout_required_after_remote_green": true,
+    "private_execution_or_VR32P_repair_authorized": false,
+    "future_private_adoption_requires_new_Tier_C_packet_and_decision": true
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "exact finite readiness sampling for future proof-gated wrappers",
+    "scientific_ceiling": "none",
+    "neural_payload_accessed": false,
+    "target_model_prediction_or_score_accessed": false,
+    "decoding_performance_established": false,
+    "unseen_person_generalization_established": false,
+    "live_decoding_established": false
+  }
+}

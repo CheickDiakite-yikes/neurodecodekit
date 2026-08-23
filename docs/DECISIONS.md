@@ -12150,3 +12150,26 @@ neural, target, model, score, network, FW2/CIL1, device, release, or claim
 operation. Commit, push, and green the exact registration before generated
 implementation. Any future private adoption requires a new Tier C packet and
 decision.
+
+## 0419 - Accept The Sole Generated VR33A Exact-Count Qualification
+
+Proof decision: exact registration
+`23adf07a328824d3b671e8fd8edf3c9b8d1f15ba` passed CI `32634409230`, Base
+Python job `97181894886`, and Optional Neuro Readers job `97181895045` before
+implementation.
+
+Implementation decision: add one standard-library exact-count collector using
+a bounded three-step `for` loop, exactly two fixed sleeps, strict sample
+validation, and frozen dataclass copies. Expose only `plan` and `qualify`; add
+no private executor or dynamic path, count, interval, timeout, retry, output,
+or resource surface.
+
+Result decision: accept the sole generated route `MARC2VR33A-G1`. All 16
+paths, 48 provider calls, 32 sleeper calls, 48 returned samples, 67 direct
+refusals, exact replay, immutable copying, and zero source mutations passed in
+0.004203916992992163 seconds at 24,215,552-byte peak RSS.
+
+Boundary decision: do not repeat qualification or touch consumed VR32P,
+private/ignored state, archives, neural data, targets, models, scores, network,
+FW2/CIL1, devices, release, or claims. Commit, push, and green the exact
+implementation, then separately bind it with a proof-only closeout.
