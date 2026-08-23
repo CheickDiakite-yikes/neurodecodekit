@@ -12022,3 +12022,21 @@ model, score, FW2/CIL1, network, device, release, or claim action. The current
 `continue` predates the packet and is not retroactive authority. Commit, push,
 and green the request and a separate proof-only closeout before naming VR32P
 as the sole Tier C gate.
+
+## 0413 - Bind Exact Remote Proof For The VR32P Request
+
+Proof decision: exact all-false request
+`9dc13cb29804a7adfeaa45aa821e36e160a0f6ee` passed CI `32629224038`, Base
+Python job `97169278061`, and Optional Neuro Readers job `97169278037`.
+
+Identity decision: bind the unchanged 4,328-byte authorization packet,
+13,544-byte machine request, and 6,525-byte request test by SHA-256 and Git
+blob. The exact request artifact set totals 24,397 bytes.
+
+Boundary decision: repeat no qualification and perform no readiness, private,
+ignored-path, consumed-state, archive, neural, target, model, prediction,
+score, network, provider, device, FW2/CIL1, other-project, release, or claim
+operation. This closeout is ineffective until its own exact commit is pushed
+and both required jobs are green. Only afterward may VR32P be identified as
+the sole active Tier C gate and fresh packet-bound maintainer words accepted;
+the current `continue` is not retroactive authority.

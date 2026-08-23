@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR32P All-False Request Prepared
+## Current Frontier: MARC2-VR32P Request Proof Closeout Pending Green
 
 Read
 `docs/MARC_2_ELIGIBLE_TOTAL_DIRECTION_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md`
@@ -27,11 +27,16 @@ Every authorization flag is false and every operation counter is zero. The
 packet performs no private, ignored-path, readiness, archive, neural, target,
 model, score, network, device, release, or claim action.
 
-Immediate gate: verify, commit, push, and green this exact request, then add
-and separately green a proof-only request closeout. The current `continue`
-predates the packet and is not retroactive authority. Fresh packet-bound
-maintainer words are required only after those proof barriers and sole-gate
-identification.
+Exact request `9dc13cb29804a7adfeaa45aa821e36e160a0f6ee` passed Base
+Python job `97169278061`, Optional Neuro Readers job `97169278037`, and CI
+`32629224038`. The proof-only request closeout binds the unchanged 4,328-byte
+packet, 13,544-byte machine request, and 6,525-byte request test by SHA-256 and
+Git blob. It changes no scope and performs zero operation.
+
+Immediate gate: verify, commit, push, and green this exact closeout. Only then
+identify VR32P as the sole active Tier C packet. The current `continue`
+predates the packet and is not retroactive authority; fresh packet-bound
+maintainer words remain required before any implementation or private read.
 
 ## Generated Evidence: MARC2-VR31A Remotely Closed
 

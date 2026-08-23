@@ -59,12 +59,17 @@ then only after exact proof barriers one 418,755-byte target-free structural
 read and one VR31A call. It may retain only aggregate R1 below 195 or R2 above
 195, never an observed total, difference, participant, or cohort.
 
-Immediate gate: commit, push, and green this exact request, then add and green
-a non-scope-changing request proof closeout. Do not identify VR32P as the sole
-Tier C gate until both barriers pass. The current `continue` predates this
-packet and is not retroactive authority. Do not touch `.codex_work`, consumed
-or private state, archives, neural data, targets, models, scores, FW2/CIL1,
-devices, streams, releases, or claims.
+Exact request `9dc13cb29804a7adfeaa45aa821e36e160a0f6ee` passed Base
+Python job `97169278061`, Optional Neuro Readers job `97169278037`, and CI
+`32629224038`. Read the VR32P request proof closeout and machine proof. They
+bind the unchanged three-file, 24,397-byte request artifact set and perform
+zero implementation or private operation.
+
+Immediate gate: commit, push, and green this exact proof-only closeout. Do not
+identify VR32P as the sole Tier C gate before that proof. The current
+`continue` predates this packet and is not retroactive authority. Do not touch
+`.codex_work`, consumed or private state, archives, neural data, targets,
+models, scores, FW2/CIL1, devices, streams, releases, or claims.
 
 `MARC2-VR30P` is consumed at aggregate route `MARC2VR30P-R1` without a
 cohort freeze. Read

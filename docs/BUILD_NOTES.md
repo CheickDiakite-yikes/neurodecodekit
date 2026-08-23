@@ -13974,3 +13974,18 @@ fresh Tier C decision remains required before any private read.
 Immediate gate: verify, commit, push, and green this exact request, then add
 and green a proof-only request closeout. The current `continue` predates the
 packet and is not retroactive authority.
+
+### VR32P request remotely green; proof closeout prepared
+
+- Exact all-false request `9dc13cb29804a7adfeaa45aa821e36e160a0f6ee`
+  passed Base Python job `97169278061`, Optional Neuro Readers job
+  `97169278037`, and CI `32629224038`.
+- Bound the unchanged 4,328-byte authorization packet, 13,544-byte machine
+  request, and 6,525-byte request test by byte count, SHA-256, and Git blob.
+- The closeout changes no scope and performs zero implementation, generated
+  qualification, readiness, private, ignored-path, archive, neural, target,
+  model, score, FW2/CIL1, network, device, release, or claim operation.
+
+Immediate gate: verify, commit, push, and green this exact closeout. Only then
+identify VR32P as the sole active Tier C packet. Fresh packet-bound maintainer
+words and a separately green decision remain required before Stage 1.
