@@ -13083,6 +13083,32 @@ private state. Stage 2 remains closed until that barrier passes.
 Immediate gate: commit, push, and green this exact proof-only closeout. Do not
 run `execute`, collect readiness, or touch private state before both jobs pass.
 
+### VR28P all-false inventory/taxonomy private request prepared
+
+- VR27A proof-only closeout `f6b5dbf697d113c330f3fbf542fd97ad1c65d46d`
+  passed Base Python job `97127512656`, Optional Neuro Readers job
+  `97127512634`, and CI `32612454458` without repeating qualification or
+  touching private state.
+- Added one all-false request binding 13 tracked inputs totaling 149,233 bytes.
+  It authorizes zero current operations.
+- Froze a future generated fixed-path wrapper and, only after every green proof
+  barrier plus a fresh packet-bound Tier C decision, one 418,755-byte target-
+  free structural read, one VR25A call, and one VR27A map call.
+- R1 means only eligible-inventory or participant-session distribution drift;
+  R2 means only unknown-participant taxonomy. Private predicates, counts,
+  directions, rows, paths, identities, selections, and cohorts are forbidden.
+- Future limits are one thread/worker/job, 650 seconds, 256 MiB peak RSS,
+  1 MiB output, zero network/new payload, and no retry or rerun.
+- Fourteen focused tests and all 5,073 dependency-light tests pass with 204
+  expected skips and zero failures. The valid full pass used `PYTHONPATH=src`;
+  an earlier bare-interpreter attempt was invalid because the package was not
+  importable and is not part of the verification baseline.
+
+Immediate gate: finish hygiene, commit, push, and green this exact request.
+Then add and separately green a proof-only request closeout. The current
+`continue` predates the packet, so no generated implementation or private read
+is authorized yet.
+
 ### VR27A exact implementation remotely green; proof closeout prepared
 
 - Exact implementation `3f74be383a672748b0781d6571d28181056865b7`

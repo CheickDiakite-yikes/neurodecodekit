@@ -3918,6 +3918,26 @@ ignored-path, archive, neural, target, model, score, network, FW2/CIL1, or
 claim operation. Next gate: commit, push, and green this exact closeout. Only
 then may the one registered target-free structural discriminator execute.
 
+### MARC2-VR28P - All-False Inventory/Taxonomy Request Prepared
+
+VR27A proof-only closeout `f6b5dbf697d113c330f3fbf542fd97ad1c65d46d`
+passed Base Python job `97127512656`, Optional Neuro Readers job
+`97127512634`, and CI `32612454458`. Generated engineering is closed with
+exact R1 eligible-inventory/distribution and R2 unknown-taxonomy separation.
+
+VR28P binds 13 tracked inputs totaling 149,233 bytes. Its two delayed stages
+are one generated fixed-path wrapper and, only after every green barrier plus
+a fresh packet-bound Tier C decision, one 418,755-byte target-free structural
+read, one VR25A call, and one VR27A map call. The only answering routes are
+aggregate R1 inventory/distribution or R2 unknown taxonomy. No private detail
+or cohort may be retained. Every current authority flag is false and every
+operation counter is zero.
+
+Immediate gate: verify, commit, push, and green this exact request, then add
+and separately green a proof-only closeout. The current `continue` predates the
+packet and is not retroactive authority. No private, neural, target, model,
+score, FW2/CIL1, device, stream, release, or scientific operation is open.
+
 ### MARC2-VR27A - Exact Implementation Remotely Green; Closeout Pending
 
 Exact implementation `3f74be383a672748b0781d6571d28181056865b7`

@@ -54,7 +54,7 @@ unknown-participant taxonomy. No private predicate, value, count, identity,
 selection, or cohort was retained. Never touch VR26P private source,
 readiness, consumed marker, or output state.
 
-The current safe lane is `MARC2-VR27A`. Registration
+The generated safe lane `MARC2-VR27A` is now closed. Registration
 `47ceba3ed89df9610540fe3ed2ee8071ac1b84df` passed Base Python job
 `97124216923`, Optional Neuro Readers job `97124216871`, and CI
 `32611101033` before implementation. Read its preregistration, implementation
@@ -62,17 +62,33 @@ document, module, and machine records. Generated qualification passed all 20
 paths with 20 exact VR25A calls, route counts G1=4/R1=12/R2=4, 57 direct
 refusals, exact replay, and zero source mutations. Runtime was 1.1202826249646023
 seconds at 33,439,744-byte peak RSS over 8,836,136 generated input bytes; 2,561
-aggregate bytes were emitted and zero retained. Commit, push, and green the
-exact implementation and result, then add and separately green a proof-only
-closeout. Exact implementation
+aggregate bytes were emitted and zero retained. Exact implementation
 `3f74be383a672748b0781d6571d28181056865b7` passed Base Python job
 `97126099642`, Optional Neuro Readers job `97126099573`, and CI
 `32611864949`. Read the proof-only closeout; it binds two preproof registries
-and seven exact Git blobs without repeating qualification. Commit, push, and
-green that exact closeout. Only afterward may Tier A prepare an all-false
-private R1/R2 packet; a fresh packet-bound Tier C decision still remains
-required before any private read. FW2/CIL1, archive members, neural data,
-targets, models, scores, streams, devices, and claims remain closed.
+and seven exact Git blobs without repeating qualification. Proof-only closeout
+`f6b5dbf697d113c330f3fbf542fd97ad1c65d46d` passed Base Python job
+`97127512656`, Optional Neuro Readers job `97127512634`, and CI `32612454458`.
+
+The next lane is prepared as `MARC2-VR28P`. Read
+`docs/MARC_2_INVENTORY_TAXONOMY_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md`
+and
+`registries/marc2_inventory_taxonomy_private_discriminator_authorization_request.v0.json`.
+It is an all-false two-stage request: a future generated fixed-path wrapper,
+then only after separate proof barriers and a fresh packet-bound Tier C
+decision one 418,755-byte target-free structural read, one unchanged VR25A
+call, and one frozen VR27A map call. It may retain only aggregate R1 eligible-
+inventory/distribution drift or R2 unknown-participant taxonomy. It cannot
+retain a predicate, value, count, direction, row, path, identity, participant,
+selection, or cohort.
+
+Immediate gate: commit, push, and green the exact request, then create and
+green a non-scope-changing request proof closeout. Only afterward identify
+VR28P as the sole active Tier C packet. The current `continue` predates the
+packet and is not retroactive authority. Before a fresh packet-bound decision,
+do not implement the wrapper or touch readiness, `.codex_work`, the private
+source, or an output root. FW2/CIL1, archive members, neural data, targets,
+models, scores, streams, devices, releases, and claims remain closed.
 
 ### Historical VR22P/VR23A/VR24P boundary
 

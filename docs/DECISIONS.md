@@ -11584,3 +11584,30 @@ pushed and both jobs are green. Only then may Tier A prepare a separately
 frozen all-false private R1/R2 discriminator packet. The packet itself cannot
 authorize a private read; fresh packet-bound Tier C permission remains
 required. No cohort or scientific result exists.
+
+## 0394 - Prepare All-False VR28P Inventory/Taxonomy Discriminator Request
+
+Proof decision: exact VR27A proof-only closeout
+`f6b5dbf697d113c330f3fbf542fd97ad1c65d46d` passed Base Python job
+`97127512656`, Optional Neuro Readers job `97127512634`, and CI
+`32612454458`. VR27A is therefore closed as generated route-discrimination
+engineering without a private operation.
+
+Scope decision: freeze one two-stage request. Stage 1 may later implement and
+generated-qualify a fixed wrapper around unchanged VR25A and the VR27A route
+map. Stage 2 may later perform one 418,755-byte target-free structural read,
+one VR25A call, and one VR27A map call, but only after every specified proof
+barrier and a fresh packet-bound Tier C decision.
+
+Privacy decision: permit only aggregate R1 eligible-inventory or participant-
+session distribution drift and R2 unknown-participant taxonomy. Forbid every
+private predicate, value, count, direction, row, path, identity, participant,
+selection, or cohort in retained output. Consume every route without retry,
+rerun, reinspection, fallback, or amendment.
+
+Authority decision: this packet is all-false. It performs zero private,
+ignored-path, readiness, archive, neural, target, model, score, network,
+device, other-project, release, or claim operation. The current `continue`
+predates the packet and is not retroactive authority. Commit, push, and green
+the request and a separate proof-only closeout before identifying VR28P as the
+sole active Tier C gate.

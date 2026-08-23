@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR27A R5 Decomposition Frozen
+## Current Frontier: MARC2-VR28P All-False Request Prepared
 
 VR24P result `a873f1a` passed Base job `97103071419`, Optional Neuro Readers
 job `97103071353`, and CI `32602610854`. The exact one-shot result remains
@@ -144,10 +144,29 @@ Neuro Readers job `97126099573`, and CI `32611864949`. Read
 the two preproof registries and seven exact implementation-commit Git blobs
 without repeating qualification or touching private state.
 
-Immediate gate: commit, push, and green the proof-only closeout. Only afterward
-may Tier A prepare an all-false private R1/R2 discriminator packet; the packet
-itself would not authorize access, and fresh packet-bound Tier C permission
-would still be required.
+Exact proof-only closeout `f6b5dbf` passed Base Python job `97127512656`,
+Optional Neuro Readers job `97127512634`, and CI `32612454458`. VR27A is
+closed as remotely proven generated engineering. It distinguishes
+eligible-inventory or participant-session distribution drift from unknown-
+participant taxonomy on generated witnesses only.
+
+Read
+`docs/MARC_2_INVENTORY_TAXONOMY_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md`
+and its machine request. VR28P is an all-false two-stage request: a future
+generated fixed-path wrapper, then only after every proof barrier and a fresh
+Tier C decision one 418,755-byte target-free structural read, one VR25A call,
+and one VR27A map call. It may retain only aggregate R1 inventory/distribution
+or R2 unknown-taxonomy evidence. It cannot retain private counts, directions,
+rows, paths, identities, participants, selections, or a cohort.
+
+Immediate gate: verify, commit, push, and green the exact VR28P request, then
+create and separately green a proof-only request closeout. Only afterward may
+VR28P be identified as the sole active Tier C packet. The current `continue`
+predates this packet and is not retroactive authority. Do not implement the
+wrapper or touch readiness, `.codex_work`, the private source, or an output
+root before a fresh packet-bound decision. FW2/CIL1, archive/neural payload,
+targets, models, scores, devices, streams, releases, and scientific claims
+remain closed.
 
 ## Historical Frontier: MARC2-VR24P Consumed At R2
 
