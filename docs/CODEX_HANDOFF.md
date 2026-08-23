@@ -1,5 +1,17 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR27A registration, 2026-08-22: VR26P result
+> `878148a7adaede8d871f181ad535a2c730a86f93` passed Base Python job
+> `97122530294`, Optional Neuro Readers job `97122530346`, and CI
+> `32610456792`. The frozen generated-only lane separates VR25A R1 eligible-
+> inventory/distribution drift from R2 unknown-participant taxonomy using five
+> cases, two orders, two replays, twenty exact VR25A calls, route counts
+> G1=4/R1=12/R2=4, and at least fifty direct refusals. It has no private
+> executor and cannot identify the consumed real branch. Immediate gate:
+> verify, commit, push, and green the exact registration before implementation.
+> Never touch consumed VR26P private state. FW2/CIL1, archive/neural payload,
+> targets, models, scores, and claims remain closed.
+
 > Current MARC2-VR26P result, 2026-08-22: proof-only closeout `bb6c52b`
 > passed Base Python job `97120986292`, Optional Neuro Readers job
 > `97120986207`, and CI `32609855945` before the sole invocation. The executor

@@ -13083,6 +13083,25 @@ private state. Stage 2 remains closed until that barrier passes.
 Immediate gate: commit, push, and green this exact proof-only closeout. Do not
 run `execute`, collect readiness, or touch private state before both jobs pass.
 
+### VR27A inventory/taxonomy discriminator registered
+
+- VR26P result `878148a7adaede8d871f181ad535a2c730a86f93` passed Base
+  Python job `97122530294`, Optional Neuro Readers job `97122530346`, and CI
+  `32610456792` before this registration.
+- Bound nine tracked inputs totaling 161,342 bytes without reopening,
+  rehashing, listing, or inspecting any consumed private state.
+- Froze five generated cases across two orders and two replays. The twenty
+  paths must make twenty unchanged VR25A calls and emit G1 four times, R1
+  twelve times, and R2 four times.
+- Static proof binds one independent VR25A eligible-inventory/distribution
+  refusal site and one unknown-participant-taxonomy site.
+- The proposed module is standard-library only, has no private executor, and
+  must pass at least fifty direct refusals with zero retained output.
+
+Immediate gate: verify, commit, push, and green this exact registration before
+implementation. A generated pass cannot identify the consumed private branch;
+another private read requires a separate Tier C packet and fresh decision.
+
 ### VR26P packet-bound authorization decision recorded
 
 - Exact request proof closeout `efd779a2d8bafbd4efbf5618fadf2355f4f89ee4`

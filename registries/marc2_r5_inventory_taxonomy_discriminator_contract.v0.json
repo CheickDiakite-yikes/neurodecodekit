@@ -1,0 +1,206 @@
+{
+  "schema_name": "neurodecodekit.marc2_r5_inventory_taxonomy_discriminator_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "MARC-2-VR27A-R5-inventory-taxonomy-generated-discriminator-v0",
+  "lane_id": "MARC2-VR27A",
+  "recorded_at_local": "2026-08-22",
+  "status": "preregistered_artifact_only_generated_only_no_private_access",
+  "objective": "Decompose consumed aggregate VR26P R5 into exact VR25A R1 eligible-inventory or distribution drift versus R2 unknown-participant taxonomy using only committed artifacts and generated fixtures.",
+  "result_proof": {
+    "VR26P_result_commit": "878148a7adaede8d871f181ad535a2c730a86f93",
+    "VR26P_result_CI_run_id": 32610456792,
+    "VR26P_result_base_job_id": 97122530294,
+    "VR26P_result_optional_neuro_job_id": 97122530346,
+    "both_required_jobs_green": true,
+    "observed_route": "MARC2VR26P-R5",
+    "private_source_reinspected_by_registration": false
+  },
+  "fixed_inputs": [
+    {
+      "role": "VR25A_adapter_module",
+      "path": "src/neurodecodekit/datasets/marc2_selection_boundary_firewall.py",
+      "bytes": 35250,
+      "sha256": "20516d466de74256a6e1640a96a757719d7c48c664483e7cc429481d70839868"
+    },
+    {
+      "role": "VR25A_contract",
+      "path": "registries/marc2_selection_boundary_firewall_contract.v0.json",
+      "bytes": 16426,
+      "sha256": "c0af130d51e68151757e85d14674e327673cb2586dab866bc4437320952d6ea1"
+    },
+    {
+      "role": "VR25A_implementation_record",
+      "path": "registries/marc2_selection_boundary_firewall_implementation.v0.json",
+      "bytes": 7181,
+      "sha256": "e186853a79a3abe9143de32ee1f83ec0dd6c1ee4bba8e65069d5c255d3cd2aaf"
+    },
+    {
+      "role": "VR25A_result_record",
+      "path": "registries/marc2_selection_boundary_firewall_result.v0.json",
+      "bytes": 6534,
+      "sha256": "a860511578617ac1d75dec2df07b045e50df6dabc9c0756b4bbc0d1fb936cabd"
+    },
+    {
+      "role": "VR26P_wrapper_module",
+      "path": "src/neurodecodekit/datasets/marc2_selection_boundary_private_confirmation.py",
+      "bytes": 60825,
+      "sha256": "8ce2bee91f9f6ad34a68a072c410985525ab96cb8b4cbb1ec4ee80f688fba0c7"
+    },
+    {
+      "role": "VR26P_authorization_request",
+      "path": "registries/marc2_selection_boundary_private_confirmation_authorization_request.v0.json",
+      "bytes": 17193,
+      "sha256": "27a21a90e96f6b0fca6fe7a997ca814e043356a30c5ada4e5fb850f3ff83ff49"
+    },
+    {
+      "role": "VR26P_implementation_record",
+      "path": "registries/marc2_selection_boundary_private_confirmation_implementation.v0.json",
+      "bytes": 8742,
+      "sha256": "80efbcaf4fdd25571be5fd687103c5a21072f8143d6be3037cf6edbf3f72e404"
+    },
+    {
+      "role": "VR26P_result_record",
+      "path": "registries/marc2_selection_boundary_private_confirmation_result.v0.json",
+      "bytes": 5782,
+      "sha256": "79099e3f751718069f0722aa1d0fa65054bfc5e1a700192e2bf191f90ffe8318"
+    },
+    {
+      "role": "VR26P_result_document",
+      "path": "docs/MARC_2_SELECTION_BOUNDARY_PRIVATE_CONFIRMATION_RESULT.md",
+      "bytes": 3409,
+      "sha256": "7ae9fe8095b30e10ab07d1acfacafad1eccf710e24d5a3e6fe33a8869850dfa1"
+    }
+  ],
+  "fixed_input_count": 9,
+  "fixed_input_bytes": 161342,
+  "ordered_route_inventory": {
+    "VR25A_R1": {
+      "VR27A_route": "MARC2VR27A-R1",
+      "safe_class": "eligible_inventory_or_participant_session_distribution_drift",
+      "exact_call_sites": 1,
+      "safe_reason": "eligible inventory or distribution differs"
+    },
+    "VR25A_R2": {
+      "VR27A_route": "MARC2VR27A-R2",
+      "safe_class": "recognized_bundle_unknown_participant_taxonomy",
+      "exact_call_sites": 1,
+      "safe_reason": "recognized participant taxonomy differs"
+    }
+  },
+  "exact_R1_R2_call_site_total": 2,
+  "generated_witness_matrix": {
+    "cases": [
+      {
+        "case": "exact_public_control",
+        "expected_VR25A_route": "MARC2VR25A-G1",
+        "expected_VR27A_route": "MARC2VR27A-G1"
+      },
+      {
+        "case": "eligible_bundle_removed",
+        "expected_VR25A_route": "MARC2VR25A-R1",
+        "expected_VR27A_route": "MARC2VR27A-R1"
+      },
+      {
+        "case": "eligible_bundle_added",
+        "expected_VR25A_route": "MARC2VR25A-R1",
+        "expected_VR27A_route": "MARC2VR27A-R1"
+      },
+      {
+        "case": "eligible_distribution_shift",
+        "expected_VR25A_route": "MARC2VR25A-R1",
+        "expected_VR27A_route": "MARC2VR27A-R1"
+      },
+      {
+        "case": "unknown_participant_bundle",
+        "expected_VR25A_route": "MARC2VR25A-R2",
+        "expected_VR27A_route": "MARC2VR27A-R2"
+      }
+    ],
+    "orders": [
+      "canonical",
+      "reversed"
+    ],
+    "replays": 2,
+    "required_paths": 20,
+    "required_VR25A_calls": 20,
+    "expected_VR27A_route_counts": {
+      "MARC2VR27A-G1": 4,
+      "MARC2VR27A-R1": 12,
+      "MARC2VR27A-R2": 4
+    },
+    "minimum_direct_refusals": 50,
+    "source_immutability_required": true,
+    "VR25A_or_predecessor_modification_allowed": false,
+    "upstream_safe_reason_retention_allowed": false
+  },
+  "implementation_contract": {
+    "module_path": "src/neurodecodekit/datasets/marc2_r5_inventory_taxonomy_discriminator.py",
+    "commands": [
+      "plan",
+      "qualify"
+    ],
+    "dependency_policy": "standard_library_only",
+    "one_VR25A_call_per_generated_path": true,
+    "exact_route_only_output": true,
+    "retained_generated_source_bytes": 0,
+    "private_executor_allowed": false
+  },
+  "resource_limits": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "generated_input_bytes": 33554432,
+    "aggregate_output_bytes": 1048576,
+    "retained_output_bytes": 0,
+    "network_bytes": 0,
+    "new_payload_bytes": 0
+  },
+  "authorization": {
+    "artifact_only_reads": true,
+    "generated_fixture_creation": true,
+    "generated_parameter_update_runs": 0,
+    "private_or_Git_ignored_path_access": false,
+    "readiness_or_consumed_state_access": false,
+    "archive_header_or_member_access": false,
+    "signal_event_target_or_label_access": false,
+    "model_training_inference_prediction_or_scoring": false,
+    "network_or_provider_calls": false,
+    "FW2_or_CIL1_execution": false,
+    "scientific_claim_upgrade": false
+  },
+  "registration_operation_counters": {
+    "private_source_stats_hashes_opens_reads_or_parses": 0,
+    "private_output_or_consumed_state_operations": 0,
+    "archive_operations": 0,
+    "neural_signal_operations": 0,
+    "target_or_label_operations": 0,
+    "model_training_inference_prediction_or_scoring_runs": 0,
+    "network_or_provider_calls": 0,
+    "FW2_or_CIL1_operations": 0,
+    "other_project_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "acceptance_gates": [
+    "registration is committed pushed and both required CI jobs are green before implementation",
+    "all nine fixed inputs match exact byte count and SHA-256",
+    "AST inventory binds exactly one VR25A R1 and one R2 refusal call site",
+    "all 20 generated paths call unchanged VR25A exactly once",
+    "VR27A route counts are G1 four R1 twelve and R2 four",
+    "at least 50 direct refusals pass",
+    "all generated sources remain immutable and retained output is zero",
+    "complete dependency-light tests Ruff registry parsing CLI help and diff hygiene pass",
+    "implementation and result are committed pushed and remotely green before any later packet"
+  ],
+  "claim_boundary": {
+    "engineering_capability_if_passed": "generated route discrimination between VR25A eligible-inventory drift and unknown-participant taxonomy",
+    "scientific_ceiling": "none",
+    "real_cohort_established": false,
+    "neural_payload_accessed": false,
+    "decoding_performance_established": false,
+    "language_or_thought_decoding_established": false,
+    "unseen_person_generalization_established": false,
+    "live_decoding_established": false
+  }
+}

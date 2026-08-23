@@ -45,6 +45,28 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
+`MARC2-VR26P` is consumed at aggregate route `MARC2VR26P-R5` without a
+cohort freeze. Read its result document and machine registry first. Exact
+result `878148a7adaede8d871f181ad535a2c730a86f93` passed Base Python job
+`97122530294`, Optional Neuro Readers job `97122530346`, and CI `32610456792`.
+R5 preserves only VR25A R1 eligible-inventory/distribution drift versus R2
+unknown-participant taxonomy. No private predicate, value, count, identity,
+selection, or cohort was retained. Never touch VR26P private source,
+readiness, consumed marker, or output state.
+
+The current safe lane is `MARC2-VR27A`. Read
+`docs/MARC_2_R5_INVENTORY_TAXONOMY_DISCRIMINATOR_PREREGISTRATION.md` and
+`registries/marc2_r5_inventory_taxonomy_discriminator_contract.v0.json`.
+It freezes five generated cases, two orders, two replays, twenty exact VR25A
+calls, G1=4/R1=12/R2=4, at least fifty direct refusals, and zero retention.
+Commit, push, and green this exact registration before implementation. The
+lane has no private executor and cannot resolve the consumed private branch.
+Another private read requires a new Tier C packet and fresh packet-bound
+decision. FW2/CIL1, archive members, neural data, targets, models, scores,
+streams, devices, and claims remain closed.
+
+### Historical VR22P/VR23A/VR24P boundary
+
 `MARC2-VR22P` is consumed at aggregate route `MARC2VR22P-R4` without a
 cohort freeze. Read `docs/MARC_2_R5_PRIVATE_DISCRIMINATOR_RESULT.md` and
 `registries/marc2_r5_private_discriminator_result.v0.json` first. Proof-only

@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR26P Consumed At R5
+## Current Frontier: MARC2-VR27A R5 Decomposition Frozen
 
 VR24P result `a873f1a` passed Base job `97103071419`, Optional Neuro Readers
 job `97103071353`, and CI `32602610854`. The exact one-shot result remains
@@ -110,6 +110,19 @@ recognized participant, and no private predicate, value, count, identity,
 selection, or cohort was retained. Do not retry or inspect VR26P private
 state. The next safe task is an artifact-only and generated-only R5
 decomposition. FW2/CIL1 and all neural or scientific work remain closed.
+
+VR26P result `878148a` passed Base Python job `97122530294`, Optional Neuro
+Readers job `97122530346`, and CI `32610456792`. Read
+`docs/MARC_2_R5_INVENTORY_TAXONOMY_DISCRIMINATOR_PREREGISTRATION.md` and its
+machine contract. VR27A freezes five generated cases across two orders and two
+replays: one exact control, three independent eligible-inventory mutations,
+and one unknown-participant mutation. The twenty paths must call unchanged
+VR25A exactly once each and return G1=4, R1=12, and R2=4.
+
+Immediate gate: commit, push, and obtain both green CI jobs for the exact
+VR27A registration before implementation. The lane has no private executor
+and cannot identify the consumed private branch. Any later private read
+requires a separate all-false Tier C packet and fresh packet-bound decision.
 
 ## Historical Frontier: MARC2-VR24P Consumed At R2
 

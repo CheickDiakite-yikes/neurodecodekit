@@ -11513,3 +11513,27 @@ predictions, scores, FW2/CIL1, providers, hardware, other projects, release,
 and claims remained untouched. The next safe lane is an artifact-only and
 generated-only R5 decomposition. Another private read or any neural work is a
 new Tier C packet and decision.
+
+## 0391 - Freeze VR27A Inventory/Taxonomy Route Discrimination
+
+Proof decision: VR26P aggregate result
+`878148a7adaede8d871f181ad535a2c730a86f93` passed Base Python job
+`97122530294`, Optional Neuro Readers job `97122530346`, and CI
+`32610456792`. Accept its R5 ceiling without reopening or reinterpreting any
+private state.
+
+Design decision: freeze five generated 1,227-row cases across canonical and
+reversed order and two exact replays. Twenty paths must call unchanged VR25A
+exactly once and preserve only G1 control, R1 eligible-inventory/distribution
+drift, or R2 unknown-participant taxonomy. Expected route counts are G1=4,
+R1=12, and R2=4, with at least fifty direct refusals and exact replay.
+
+Resource decision: permit only one CPU thread, worker, and numerical job; 30
+seconds; less than 256 MiB peak RSS; at most 32 MiB generated input and 1 MiB
+aggregate output; zero retention, network, and new payload bytes.
+
+Boundary decision: VR27A is artifact-only and generated-only, has no private
+executor, and cannot identify the consumed private R5 branch. Registration
+must be committed, pushed, and both CI jobs green before implementation. No
+private state, archive member, neural signal, target, model, score, FW2/CIL1,
+other project, release, or scientific claim is authorized.

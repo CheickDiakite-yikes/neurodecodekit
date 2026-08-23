@@ -3918,6 +3918,26 @@ ignored-path, archive, neural, target, model, score, network, FW2/CIL1, or
 claim operation. Next gate: commit, push, and green this exact closeout. Only
 then may the one registered target-free structural discriminator execute.
 
+### MARC2-VR27A - R5 Inventory/Taxonomy Decomposition Frozen
+
+VR26P result `878148a7adaede8d871f181ad535a2c730a86f93` passed Base
+Python job `97122530294`, Optional Neuro Readers job `97122530346`, and CI
+`32610456792`. Its one consumed private route remains R5 without a cohort:
+eligible inventory/distribution drift versus unknown-participant taxonomy.
+
+VR27A freezes five generated cases, two orders, and two exact replays. The
+twenty paths must make exactly twenty unchanged VR25A calls and yield G1=4,
+R1=12, and R2=4. The registration binds nine tracked inputs totaling 161,342
+bytes, the two exact independent VR25A refusal call sites, at least fifty
+direct refusals, deterministic replay, one thread/worker/job, 30 seconds,
+256 MiB peak RSS, 32 MiB generated input, 1 MiB aggregate output, and zero
+retention.
+
+Next gate: commit, push, and green this exact artifact-only/generated-only
+registration before implementation. VR27A has no private executor and cannot
+identify the consumed real branch. FW2/CIL1, archive/neural payload, targets,
+models, scores, and claims remain closed.
+
 ### MARC2-VR25A - Selection-Boundary Firewall Registered Locally
 
 VR24P result `a873f1a` passed Base Python job `97103071419`, Optional Neuro
