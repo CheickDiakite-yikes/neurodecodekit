@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR26P Generated Stage 1 Qualified
+## Current Frontier: MARC2-VR26P Proof-Only Closeout Pending
 
 VR24P result `a873f1a` passed Base job `97103071419`, Optional Neuro Readers
 job `97103071353`, and CI `32602610854`. The exact one-shot result remains
@@ -85,11 +85,17 @@ not change cohort identity.
 
 The pass used 17,672,740 generated input bytes, 2.444167 seconds, 34,701,312-
 byte peak RSS, and 223,419 peak incremental output bytes, with zero retained
-output and zero real/private path operations. Immediate gate: commit, push,
-and green this exact implementation, then add and green a proof-only closeout.
-The implementation proof is null, so `execute` refuses before readiness or
-private access. No private read, real cohort, archive-member access, neural
-operation, FW2/CIL1 action, or scientific claim is open yet.
+output and zero real/private path operations. Exact implementation `d5c5abd`
+passed Base job `97119373912`, Optional Neuro Readers job `97119373779`, and
+CI `32609236180`.
+
+Read `docs/MARC_2_SELECTION_BOUNDARY_PRIVATE_CONFIRMATION_PROOF_CLOSEOUT.md`.
+It binds the exact remote-green implementation, 7,417-byte preproof registry,
+canonical artifact-set hash, and four implementation Git blobs without
+repeating qualification or touching readiness or private state. Immediate
+gate: commit, push, and green this proof-only closeout. Before both jobs pass,
+`execute` remains closed. No private read, real cohort, archive-member access,
+neural operation, FW2/CIL1 action, or scientific claim is open yet.
 
 ## Historical Frontier: MARC2-VR24P Consumed At R2
 

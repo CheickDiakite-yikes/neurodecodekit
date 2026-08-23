@@ -13136,6 +13136,28 @@ and green a proof-only closeout without repeating qualification. The
 implementation proof remains null; do not collect readiness or touch the
 private path before both remote barriers pass.
 
+### VR26P exact implementation remotely green; proof-only closeout prepared
+
+- Exact implementation `d5c5abd8fde15f0557101fa2aa1135382819ea4e`
+  passed Base Python job `97119373912`, Optional Neuro Readers job
+  `97119373779`, and CI `32609236180`.
+- Bound the 7,417-byte preproof implementation registry, SHA-256
+  `7fd661aad6a809b1a5bb8f814d4045533475303984be9ea72531e0c537868284`,
+  Git blob `ceafc760b3d8fbfd770a895a798d253ff0272462`, canonical artifact-set
+  SHA-256, and four exact implementation Git blobs.
+- The closeout changes no wrapper byte, generated source, 40-path result,
+  refusal, route, measurement, resource cap, or claim boundary. It repeats no
+  qualification.
+- Eighty-four focused and all 5,027 dependency-light tests pass with 204
+  expected skips and zero failures. Readiness, `.codex_work`, private,
+  consumed-state, archive, neural, target, model, score, network, FW2/CIL1,
+  other-project, and claim operations are zero.
+
+Immediate gate: commit, push, and green this exact proof-only closeout. Do not
+run `execute`, collect readiness, or touch private state before both jobs pass.
+Afterward, the existing decision permits one registered target-free structural
+invocation only, without retry or rerun.
+
 ### VR24P result remotely green
 
 - The sole proof-separated invocation consumed at `MARC2VR24P-R2` after one

@@ -4206,6 +4206,21 @@ then add and green a proof-only closeout without repeating qualification.
 Private execution remains disabled while the proof field is null. Neural
 payload, targets, models, scores, FW2/CIL1, and claims remain closed.
 
+### MARC2-VR26P - Exact Stage 1 Remotely Green; Closeout Pending
+
+Exact implementation `d5c5abd8fde15f0557101fa2aa1135382819ea4e` passed Base
+Python job `97119373912`, Optional Neuro Readers job `97119373779`, and CI
+`32609236180`. The proof-only closeout binds the 7,417-byte preproof registry,
+its SHA-256 and Git blob, the canonical implementation-artifact set hash, and
+four exact artifact Git blobs.
+
+The closeout repeats no qualification and performs zero readiness, private,
+ignored-path, consumed-state, archive, neural, target, model, score, network,
+FW2/CIL1, or claim operation. Eighty-four focused and all 5,027 dependency-
+light tests pass with 204 expected skips. Next gate: commit, push, and green
+this exact closeout. Only then may the one registered target-free structural
+cohort confirmation execute, with no retry or rerun.
+
 ### MARC2-VR24P - Exact Stage 1 Remotely Green; Closeout Pending
 
 Exact implementation `a2e19ba` passed Base Python job `97099725036`, Optional

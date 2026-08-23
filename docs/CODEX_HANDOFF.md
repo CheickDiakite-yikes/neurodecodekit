@@ -1,5 +1,18 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR26P proof-only closeout, 2026-08-22: exact implementation
+> `d5c5abd` passed Base Python job `97119373912`, Optional Neuro Readers job
+> `97119373779`, and CI `32609236180`. The closeout binds the 7,417-byte
+> preproof implementation registry, its SHA-256 and Git blob, the canonical
+> implementation-artifact set hash, and four exact artifact Git blobs. It
+> repeats no qualification and performs zero readiness, `.codex_work`,
+> private, consumed-state, archive, neural, target, model, score, network,
+> FW2/CIL1, other-project, or claim operation. Eighty-four focused and all
+> 5,027 dependency-light tests pass with 204 expected skips. Immediate gate:
+> commit, push, and green this exact closeout. Only then may the one registered
+> target-free structural invocation run. No retry or rerun is available, and
+> FW2/CIL1 plus every neural or scientific operation remain closed.
+
 > Current MARC2-VR26P generated Stage 1, 2026-08-22: packet-bound decision
 > `8b9ce24` passed Base Python job `97116976065`, Optional Neuro Readers job
 > `97116976016`, and CI `32608318342` before implementation. The dependency-

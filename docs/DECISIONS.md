@@ -11454,3 +11454,33 @@ closeout without rerunning qualification. Until both barriers pass, execute
 must refuse before readiness or private access. No real cohort, archive
 payload, neural signal, target, model, score, FW2/CIL1 action, or scientific
 claim is established.
+
+## 0389 - Bind Exact Remote Proof For VR26P Stage 1
+
+Proof decision: exact implementation
+`d5c5abd8fde15f0557101fa2aa1135382819ea4e` passed Base Python job
+`97119373912`, Optional Neuro Readers job `97119373779`, and CI
+`32609236180`. Bind that proof only to the unchanged generated-qualified
+wrapper and its four exact implementation artifacts.
+
+Identity decision: bind the 7,417-byte preproof implementation registry,
+SHA-256 `7fd661aad6a809b1a5bb8f814d4045533475303984be9ea72531e0c537868284`,
+Git blob `ceafc760b3d8fbfd770a895a798d253ff0272462`, canonical artifact-set
+SHA-256, and four artifact Git blobs. Do not modify the qualified module,
+tests, implementation document, routes, measurements, or resource caps.
+
+Scope decision: add only proof state, one proof test, one human closeout, and
+tracked frontier documentation. Do not repeat qualification, inspect
+readiness, touch `.codex_work`, access the private source, or create an output
+root. Every private, consumed-state, archive, neural, target, model, score,
+network, FW2/CIL1, other-project, release, and claim operation remains zero.
+
+Verification decision: accept 84 focused tests and 5,027 dependency-light
+tests with 204 expected skips and zero failures, plus green Ruff, compilation,
+strict registry JSON, and diff checks.
+
+Boundary decision: this closeout is ineffective until its own exact commit is
+pushed and both jobs are green. Only afterward may the single registered
+target-free structural invocation run. It has no retry or rerun, and it does
+not authorize archive members, neural data, targets, models, scores, FW2/CIL1,
+release, or a scientific claim.

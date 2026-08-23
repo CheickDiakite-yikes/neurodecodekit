@@ -195,14 +195,23 @@ observed count or direction was exposed. The pass used 17,672,740 generated
 input bytes in 2.444167 seconds at 34,701,312-byte peak RSS, reached 223,419
 peak incremental output bytes, and retained zero.
 
-Immediate gate: commit, push, and remotely green this exact Stage 1
-implementation, then add and remotely green a proof-only closeout without
-repeating qualification. `remote_implementation_proof` remains null, so
-`execute` must refuse before readiness or private-path access. Do not touch
-`.codex_work`, the private source, consumed state, or an output root before
-both proof barriers. FW2/CIL1, archive members, neural payload, targets,
-models, predictions, scores, streams, devices, and scientific claims remain
-closed.
+Exact implementation `d5c5abd8fde15f0557101fa2aa1135382819ea4e` passed Base
+job `97119373912`, Optional job `97119373779`, and CI `32609236180`. Read
+`docs/MARC_2_SELECTION_BOUNDARY_PRIVATE_CONFIRMATION_PROOF_CLOSEOUT.md` and
+the matching proof test. The proof transition binds the 7,417-byte preproof
+implementation registry, its SHA-256 and Git blob, the canonical artifact-set
+hash, and four exact implementation Git blobs. It repeats no qualification
+and performs zero readiness, `.codex_work`, private, consumed-state, archive,
+neural, target, model, score, FW2/CIL1, network, hardware, other-project, or
+claim operation.
+
+Immediate gate: commit, push, and remotely green this exact proof-only
+closeout. Before both jobs pass, do not run `execute`, collect readiness, or
+touch `.codex_work`, the private source, consumed state, or an output root.
+Afterward, the existing decision permits one registered target-free structural
+invocation only, with no retry or rerun. FW2/CIL1, archive members, neural
+payload, targets, models, predictions, scores, streams, devices, and
+scientific claims remain closed.
 
 ## Historical VR20P/VR21A/VR22P path
 

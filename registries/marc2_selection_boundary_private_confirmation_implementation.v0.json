@@ -4,7 +4,7 @@
   "implementation_id": "MARC-2-VR26P-selection-boundary-private-confirmation-implementation-v0",
   "lane_id": "MARC2-VR26P",
   "recorded_at_UTC": "2026-08-23T00:00:00Z",
-  "status": "generated_stage_1_qualified_remote_proof_pending_private_stage_2_closed",
+  "status": "generated_stage_1_remotely_green_private_stage_2_closeout_pending",
   "authority": {
     "request_path": "registries/marc2_selection_boundary_private_confirmation_authorization_request.v0.json",
     "request_sha256": "27a21a90e96f6b0fca6fe7a997ca814e043356a30c5ada4e5fb850f3ff83ff49",
@@ -159,7 +159,27 @@
     "workers": 1,
     "numerical_jobs": 1
   },
-  "remote_implementation_proof": null,
+  "remote_implementation_proof": {
+    "commit": "d5c5abd8fde15f0557101fa2aa1135382819ea4e",
+    "CI_run_id": 32609236180,
+    "base_job_id": 97119373912,
+    "optional_neuro_job_id": 97119373779,
+    "both_required_jobs_green": true,
+    "scope_changed_after_qualification": false,
+    "qualification_route": "MARC2VR26P-G1",
+    "qualification_repeated_for_proof_closeout": false,
+    "private_operations_during_proof_closeout": 0,
+    "implementation_registry_preproof_bytes": 7417,
+    "implementation_registry_preproof_sha256": "7fd661aad6a809b1a5bb8f814d4045533475303984be9ea72531e0c537868284",
+    "implementation_registry_preproof_git_blob": "ceafc760b3d8fbfd770a895a798d253ff0272462",
+    "implementation_artifact_set_sha256": "ce7e67e99e69dcdd2992f46a774b7a3536c42cc338321132a40d1b6f819b5a6a",
+    "implementation_artifact_git_blobs": {
+      "wrapper_module": "17eb14b036fa6b8e1cc77c9f64065d0a90da7daf",
+      "behavior_tests": "03a4d2fcbdf21700ce3eced8ac19a569d2728517",
+      "implementation_proof_tests": "217559a3301888fb55ebdaacda9bdcb37a020a6c",
+      "implementation_document": "c8ac3bcc14a7fc7f6f35b68246feb5cb3ee852f9"
+    }
+  },
   "stage_2_status": {
     "private_execution_available_now": false,
     "proof_closeout_required_before_readiness": true,
@@ -167,11 +187,19 @@
     "registered_private_invocation_limit_after_proof": 1,
     "retry_rerun_resume_fallback_or_substitution_limit": 0
   },
+  "proof_closeout_verification": {
+    "focused_tests_passed": 84,
+    "complete_dependency_light_tests_passed": 5027,
+    "expected_skips": 204,
+    "new_failures": 0,
+    "qualification_repeated": false,
+    "private_operations": 0
+  },
   "warnings": [
     "generated_qualification_only",
     "registered_private_structural_source_not_touched",
     "observed_complete_bundle_count_difference_and_direction_not_exposed",
-    "implementation_remote_proof_and_proof_closeout_pending",
+    "proof_closeout_pending_remote_green",
     "FW2_and_CIL1_not_authorized",
     "no_neural_decoding_or_scientific_claim"
   ],
