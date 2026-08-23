@@ -3999,12 +3999,26 @@ unavailable. R3-R7 are fixed consumed failure classes.
 
 Every current authority flag is false and every operation counter is zero.
 Fifteen request tests and all 4,988 dependency-light tests pass with 204
-expected skips and zero failures. Next gate: commit, push, and green the exact
-request, then add and green a non-scope-changing request proof closeout. Only
-afterward identify VR26P as the sole active Tier C gate and require fresh
-packet-bound maintainer words. The current `continue` preceded this packet and
-is not retroactive. No private read, cohort freeze, archive member, neural
-payload, target, model, score, FW2/CIL1 execution, or scientific claim is open.
+expected skips and zero failures. Exact request `00db825` passed Base Python
+job `97112059257`, Optional Neuro Readers job `97112059152`, and CI
+`32606451461`.
+
+### MARC2-VR26P - Request Remotely Green; Proof Closeout Pending
+
+The proof-only closeout binds the unchanged packet, request registry, and
+request test totaling 40,176 bytes with exact SHA-256 digests and Git blobs.
+It changes no request scope, implements no wrapper, repeats no generated
+qualification, and performs zero private, readiness, ignored-path, consumed-
+state, archive, neural, target, model, score, network, FW2/CIL1, other-project,
+release, or claim operation. Fifty-one focused and all 4,994 dependency-light
+tests pass with 204 expected skips and zero failures.
+
+Next gate: run complete verification, commit, push, and green this exact
+closeout. Only afterward identify VR26P as the sole active Tier C packet and
+require fresh packet-bound maintainer words. The current `continue` preceded
+this packet and is not retroactive. No implementation, private read, cohort
+freeze, archive member, neural payload, target, model, score, FW2/CIL1
+execution, or scientific claim is open.
 
 ### MARC2-VR24P - Consumed At Complete-Bundle Arithmetic R2
 

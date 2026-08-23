@@ -1,5 +1,15 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR26P request proof closeout, 2026-08-22: exact request
+> `00db825` passed Base job `97112059257`, Optional job `97112059152`, and CI
+> `32606451461`. The proof closeout binds three unchanged request artifacts
+> totaling 40,176 bytes and performs zero implementation, private, consumed-
+> state, archive, neural, target, model, score, network, FW2/CIL1, or claim
+> operation. Commit, push, and green this exact closeout. Only afterward may
+> VR26P be identified as the sole active Tier C gate and fresh packet-bound
+> maintainer words requested. The current `continue` predates the packet and
+> is not retroactive.
+
 > Current MARC2-VR26P request, 2026-08-22: VR25A proof closeout `378e863`
 > passed Base job `97109778233`, Optional job `97109778216`, and CI
 > `32605475758`. The all-false packet requests a future generated fixed wrapper

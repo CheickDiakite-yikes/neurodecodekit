@@ -13187,6 +13187,27 @@ closeout. Only afterward identify VR26P as the sole active Tier C gate and
 require fresh packet-bound maintainer words. The current `continue` predates
 this packet and is not retroactive.
 
+### VR26P request remotely green; proof closeout prepared
+
+- Exact all-false request `00db8254f67dd349bddb8a906b57d7e28c2f7101`
+  passed Base Python job `97112059257`, Optional Neuro Readers job
+  `97112059152`, and CI `32606451461`.
+- Bound the unchanged 10,278-byte packet, 17,193-byte request registry, and
+  12,705-byte request test with exact SHA-256 digests and Git blobs. Combined
+  request bytes are 40,176.
+- The proof closeout changes no request scope, implements no wrapper, performs
+  no generated qualification, and touches no readiness, private, ignored,
+  consumed-state, archive, neural, target, model, score, network, FW2/CIL1,
+  other-project, release, or claim surface.
+- Fifty-one focused VR25A/VR26P tests and all 4,994 dependency-light tests pass
+  with 204 expected skips and zero failures, six tests above the 4,988-test
+  request baseline. Every current authority field is false and every closeout
+  operation counter is zero.
+
+Immediate gate: run the complete verification surface, commit, push, and green
+this exact request proof closeout. Only afterward identify VR26P as the sole
+active Tier C gate and require fresh packet-bound maintainer words.
+
 ### VR24P one-shot structural discriminator consumed at R2
 
 - Proof-only closeout `589b0f51db9a1bd157d90b0f4260fbb9c6475045`

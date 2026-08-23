@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR26P All-False Request Prepared
+## Current Frontier: MARC2-VR26P Request Proof Closeout Pending Green
 
 VR24P result `a873f1a` passed Base job `97103071419`, Optional Neuro Readers
 job `97103071353`, and CI `32602610854`. The exact one-shot result remains
@@ -59,11 +59,18 @@ route would freeze the same exact 16-subject, 96-bundle, 384-member cohort;
 only the public compatibility boolean differs. The observed complete-bundle
 count and direction remain unavailable and may not be inferred or published.
 
-Immediate gate: commit, push, and green the exact VR26P request, then add and
-green a non-scope-changing request proof closeout. The current `continue`
-predates this packet and is not retroactive authority. No implementation,
-private read, cohort, archive-member access, neural operation, FW2/CIL1 action,
-or scientific claim is open.
+Exact request `00db825` passed Base job `97112059257`, Optional Neuro Readers
+job `97112059152`, and CI `32606451461`. The proof-only request closeout binds
+the unchanged 10,278-byte packet, 17,193-byte request, and 12,705-byte request
+test with exact hashes and Git blobs. It performs zero implementation or
+private operation.
+
+Immediate gate: commit, push, and green the exact request proof closeout. Only
+afterward may VR26P be identified as the sole active Tier C gate. The current
+`continue` predates this packet and is not retroactive authority; fresh packet-
+bound maintainer words will still be required. No implementation, private
+read, cohort, archive-member access, neural operation, FW2/CIL1 action, or
+scientific claim is open.
 
 ## Historical Frontier: MARC2-VR24P Consumed At R2
 

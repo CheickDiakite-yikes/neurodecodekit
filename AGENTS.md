@@ -169,13 +169,17 @@ and
 It requests a future two-stage fixed wrapper and then one possible 418,755-byte
 target-free structural read. G1 or G2 would freeze the same exact 16-subject,
 96-bundle, 384-member private cohort; only a public compatibility boolean may
-differ, never the unavailable count or direction. Commit, push, and green the
-exact request, then add and green a non-scope-changing request proof closeout.
-Only afterward identify VR26P as the sole active Tier C gate and require fresh
-packet-bound maintainer words. The current `continue` preceded this packet and
-is not retroactive. No implementation, private source, consumed state, cohort,
-archive member, neural payload, target, model, score, FW2/CIL1 action, or
-scientific claim is open.
+differ, never the unavailable count or direction. Exact request
+`00db8254f67dd349bddb8a906b57d7e28c2f7101` passed Base job `97112059257`,
+Optional job `97112059152`, and CI `32606451461`. Read
+`docs/MARC_2_SELECTION_BOUNDARY_PRIVATE_CONFIRMATION_REQUEST_PROOF_CLOSEOUT.md`
+and its machine proof. They bind three unchanged request artifacts totaling
+40,176 bytes and perform zero implementation or private operation. Commit,
+push, and green this exact proof closeout. Only afterward identify VR26P as the
+sole active Tier C gate and require fresh packet-bound maintainer words. The
+current `continue` preceded this packet and is not retroactive. No
+implementation, private source, consumed state, cohort, archive member, neural
+payload, target, model, score, FW2/CIL1 action, or scientific claim is open.
 
 ## Historical VR20P/VR21A/VR22P path
 

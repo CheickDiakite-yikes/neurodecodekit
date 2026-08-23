@@ -11379,3 +11379,29 @@ qualification or private operation ran.
 Scientific decision: success would establish only target-free structural
 cohort eligibility and make a separate FW2 preregistration eligible. It would
 not authorize neural-payload access or establish a neural or decoding effect.
+
+## 0386 - Bind Exact Remote Proof For The VR26P Request
+
+Proof decision: exact all-false request
+`00db8254f67dd349bddb8a906b57d7e28c2f7101` passed Base Python job
+`97112059257`, Optional Neuro Readers job `97112059152`, and CI `32606451461`.
+
+Identity decision: bind three unchanged request artifacts totaling 40,176
+bytes with exact SHA-256 digests and Git blobs. The request remains 14 fixed
+inputs totaling 175,543 bytes, one future source open, seven aggregate routes,
+two exact-cohort success routes, and zero retries or reruns.
+
+Scope decision: add only a human proof closeout, machine proof, test, and
+frontier documentation. Do not modify the request, implement a wrapper, run a
+generated qualification, inspect readiness, or touch any private or ignored
+path. Every authority remains false and every closeout operation remains zero.
+
+Verification decision: accept 51 focused tests and 4,994 complete dependency-
+light tests with 204 expected skips, zero failures, and a six-test increase
+over the 4,988-test request baseline, plus green Ruff, compilation, JSON, and
+diff checks.
+
+Boundary decision: the proof closeout has delayed effect until its own exact
+commit is pushed and both jobs are green. Only afterward may VR26P be
+identified as the sole active Tier C gate. Fresh packet-bound maintainer words
+and a separately green decision remain required before implementation.
