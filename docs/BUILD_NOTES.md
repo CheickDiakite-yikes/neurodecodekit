@@ -14549,3 +14549,21 @@ packet and fresh decision.
 Immediate gate: verify, commit, push, and green the exact request, then create
 and green a non-scope-changing request proof closeout. Earlier maintainer words
 are not retroactive authority.
+
+### VR37P request remotely green; proof closeout prepared
+
+- Exact all-false request `e89908adf508ca3c858b4ee0509c45fd8d29f866`
+  passed Base Python job `97234876608`, Optional Neuro Readers job
+  `97234876537`, and CI `32656051436`.
+- The request proof binds the 5,743-byte packet, 15,681-byte machine request,
+  and 7,715-byte request test by SHA-256 and exact Git blob. The set totals
+  29,139 bytes.
+- The two-stage sequence, R1-R7 mapping, fixed paths, resource caps, output
+  firewall, decision protocol, and claim boundary are unchanged.
+- Seventeen focused request/proof tests and all 5,560 dependency-light tests
+  pass with 204 expected skips. Every authority flag remains false and every
+  operation counter remains zero.
+
+Immediate gate: commit, push, and green this exact request proof closeout.
+Only afterward may VR37P be identified as the sole active Tier C packet for a
+fresh packet-bound maintainer decision.

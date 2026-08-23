@@ -1,11 +1,10 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate gate (2026-08-23):** VR37A proof-only closeout `4287a86`
-> passed Base job `97232723710`, Optional job `97232723664`, and CI
-> `32655208775`. VR37P is now a local all-false request for one future
-> aggregate topology discriminator. Verify, commit, push, and green the exact
-> request, then create and green its non-scope-changing proof closeout. No
-> implementation or private access is authorized. Archive, neural, target,
+> **Immediate gate (2026-08-23):** exact all-false VR37P request `e89908a`
+> passed Base job `97234876608`, Optional job `97234876537`, and CI
+> `32656051436`. Commit, push, and green its non-scope-changing request proof
+> closeout. Only then may VR37P be identified as the sole active Tier C packet.
+> No implementation or private access is authorized. Archive, neural, target,
 > model, score, FW2/CIL1, and claim surfaces are closed.
 
 > **Immediate update (2026-08-23):** exact VR32P proof closeout `5aec8a1`
@@ -4201,9 +4200,13 @@ target-free structural source once and return one R1-R7 aggregate route. It
 freezes no cohort and exposes no count, difference, cell, identity, run, row,
 or path.
 
-Immediate gate: verify, commit, push, and green this exact all-false request,
-then create and green its request proof closeout. The current or any earlier
-`continue` is not retroactive authority.
+Exact request `e89908adf508ca3c858b4ee0509c45fd8d29f866` passed Base
+job `97234876608`, Optional job `97234876537`, and CI `32656051436`. Its
+proof closeout binds all three request artifacts totaling 29,139 bytes without
+changing scope or performing any requested operation.
+
+Immediate gate: commit, push, and green the request proof closeout. The current
+or any earlier `continue` is not retroactive authority.
 
 ### MARC2-VR33A - Exact-Count Readiness Repair Remotely Closed
 

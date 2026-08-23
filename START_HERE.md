@@ -98,8 +98,13 @@ implementation and proof closeout one route-only private topology read. The
 future output may expose only R1-R7, never the exact count, difference, cell,
 identity, run, row, or path. It freezes no cohort.
 
-Immediate gate: verify, commit, push, and green the exact VR37P request, then
-create and green a non-scope-changing request proof closeout. No implementation
+Exact request `e89908adf508ca3c858b4ee0509c45fd8d29f866` passed Base
+job `97234876608`, Optional job `97234876537`, and CI `32656051436`. Its
+proof closeout binds the 5,743-byte packet, 15,681-byte machine request, and
+7,715-byte request test by SHA-256 and Git blob without changing scope.
+
+Immediate gate: commit, push, and green the exact request proof closeout. Only
+then may VR37P be identified as the sole active Tier C packet. No implementation
 or private access is authorized now. Archive, neural, target, model, score,
 FW2/CIL1, and claim work remain closed.
 

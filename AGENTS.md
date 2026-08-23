@@ -141,11 +141,16 @@ The next all-false request is now prepared as `MARC2-VR37P`. Read
 and
 `registries/marc2_exact_task_surplus_private_discriminator_authorization_request.v0.json`.
 It requests generated/mock wrapper qualification and, after every later proof
-barrier, one aggregate route-only private topology discrimination. Immediate
-gate: verify, commit, push, and green this exact request, then create and green
-a non-scope-changing request proof closeout. No implementation or private
-access is authorized now. Archive, neural, target, model, score, FW2/CIL1,
-device, release, and claim surfaces remain closed.
+barrier, one aggregate route-only private topology discrimination. Exact
+request `e89908adf508ca3c858b4ee0509c45fd8d29f866` passed Base job
+`97234876608`, Optional job `97234876537`, and CI `32656051436`. Read the
+request proof closeout and machine proof.
+
+Immediate gate: commit, push, and green the exact non-scope-changing request
+proof closeout. Only then may VR37P be identified as the sole active Tier C
+packet. No implementation or private access is authorized now. Archive,
+neural, target, model, score, FW2/CIL1, device, release, and claim surfaces
+remain closed.
 
 ### Consumed VR34P boundary
 

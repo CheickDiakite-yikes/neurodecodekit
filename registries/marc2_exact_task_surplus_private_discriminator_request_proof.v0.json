@@ -1,0 +1,93 @@
+{
+  "schema_name": "neurodecodekit.marc2_exact_task_surplus_private_discriminator_request_proof",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC2-VR37P",
+  "recorded_at_local": "2026-08-23",
+  "status": "request_proof_closeout_green_pending",
+  "request_proof": {
+    "commit": "e89908adf508ca3c858b4ee0509c45fd8d29f866",
+    "CI_run_id": 32656051436,
+    "base_python_job_id": 97234876608,
+    "optional_neuro_job_id": 97234876537,
+    "both_required_jobs_green": true
+  },
+  "request_artifacts": [
+    {
+      "role": "authorization_packet",
+      "path": "docs/MARC_2_EXACT_TASK_SURPLUS_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md",
+      "bytes": 5743,
+      "sha256": "e393917802733bda6dd999c1d2403f61590eb2b933afca2b2078dafeb12a149e",
+      "Git_blob": "3198b9e3b5952d79acb93bc2571f66a37f6cb941"
+    },
+    {
+      "role": "machine_request",
+      "path": "registries/marc2_exact_task_surplus_private_discriminator_authorization_request.v0.json",
+      "bytes": 15681,
+      "sha256": "501fdc790cd44fc9dff33fef4f48b95d432f22bafc70f8b86538fab51c696fb4",
+      "Git_blob": "9e14016504e2a6fbc056caf12d229bf398a8ba37"
+    },
+    {
+      "role": "request_test",
+      "path": "tests/test_marc2_exact_task_surplus_private_discriminator_authorization_request.py",
+      "bytes": 7715,
+      "sha256": "18f2ef30f8154ab1b0c435ad4d55ff029b015ebcf746e2aebc96773bbdb5c2da",
+      "Git_blob": "f298e2755a4a10d08cccce5332bc975449706f5a"
+    }
+  ],
+  "request_artifact_count": 3,
+  "request_artifact_bytes": 29139,
+  "scope_changed_after_request_proof": false,
+  "authorization_snapshot": {
+    "all_request_authority_flags_false": true,
+    "all_request_operation_counters_zero": true,
+    "packet_bound_decision_received": false,
+    "wrapper_implementation_authorized": false,
+    "generated_qualification_authorized": false,
+    "private_read_or_discriminator_authorized": false,
+    "cohort_freeze_authorized": false,
+    "FW2_or_CIL1_authorized": false
+  },
+  "closeout_operation_counters": {
+    "decision_records": 0,
+    "generated_or_mock_wrapper_implementations": 0,
+    "generated_qualification_runs": 0,
+    "real_readiness_or_certificate_operations": 0,
+    "private_or_Git_ignored_path_operations": 0,
+    "private_source_stats_resolves_hashes_opens_reads_or_parses": 0,
+    "VR37A_real_calls": 0,
+    "nested_VR35A_real_calls": 0,
+    "new_output_roots_or_consumed_markers": 0,
+    "aggregate_report_writes": 0,
+    "cohort_or_identity_bearing_derivative_writes": 0,
+    "consumed_lane_operations": 0,
+    "archive_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_label_or_quality_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "network_download_provider_or_language_model_operations": 0,
+    "RW3_stream_device_or_hardware_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "retry_rerun_resume_repair_fallback_substitution_operations": 0,
+    "release_publication_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "delayed_effect": {
+    "proof_closeout_commit_push_and_both_jobs_green_required": true,
+    "packet_may_be_identified_as_sole_active_Tier_C_gate_now": false,
+    "packet_may_be_identified_after_exact_closeout_green": true,
+    "fresh_packet_bound_maintainer_message_required_after_identification": true,
+    "current_or_earlier_continue_is_retroactive_authority": false,
+    "packet_or_decision_alone_authorizes_private_open": false
+  },
+  "claim_boundary": {
+    "engineering_capability_requested": "one proof-gated aggregate private topology discriminator behind unchanged VR37A and VR35A validation",
+    "scientific_ceiling": "none",
+    "real_or_private_data_accessed_by_closeout": false,
+    "real_cohort_established": false,
+    "neural_payload_accessed": false,
+    "target_model_prediction_or_score_accessed": false,
+    "decoding_performance_established": false,
+    "language_or_thought_decoding_established": false,
+    "unseen_person_generalization_established": false,
+    "live_or_realtime_decoding_established": false
+  }
+}

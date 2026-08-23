@@ -12561,3 +12561,19 @@ its later proof closeout before identifying VR37P as the sole Tier C packet.
 Only a fresh packet-bound maintainer message after that identification may
 authorize the unchanged request; earlier `continue` messages are not
 retroactive.
+
+## 0440 - Bind VR37P Request To Exact Remote Proof
+
+Proof decision: exact all-false request
+`e89908adf508ca3c858b4ee0509c45fd8d29f866` passed CI `32656051436`,
+Base Python job `97234876608`, and Optional Neuro Readers job `97234876537`.
+
+Engineering decision: bind the authorization packet, machine request, and
+request test as a 29,139-byte set using exact SHA-256 and Git blobs in a
+separate non-scope-changing proof closeout.
+
+Boundary decision: every authority flag remains false and every operation
+counter remains zero. The proof has delayed effect until its own commit is
+pushed and both CI jobs are green. Only then may VR37P be identified as the
+sole active Tier C packet for a fresh maintainer decision; no wrapper or private
+access is authorized by the request or this proof.
