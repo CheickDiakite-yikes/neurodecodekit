@@ -11756,3 +11756,31 @@ the registration before implementation. Any private read remains a separate
 Tier C packet and fresh decision. No archive, neural, target, model, score,
 FW2/CIL1, network, provider, device, release, or scientific claim operation is
 authorized or established.
+
+## 0401 - Accept Generated VR29A Inventory/Distribution Qualification
+
+Proof decision: exact registration
+`fcd088cc2eef6556f36ed596c6d9bb6c7ee9d7c3` passed CI `32618866986`, Base
+Python job `97143828645`, and Optional Neuro Readers job `97143828576` before
+implementation.
+
+Implementation decision: accept generated route `MARC2VR29A-G1` after all 32
+paths passed with 32 unchanged VR25A calls, 16 additional unchanged VR2
+eligible-filter calls, exact G1/G2/R1/R2/R3 counts 4/4/8/8/8, two independent
+distribution witnesses, 77 direct refusals, exact replay, order-invariant
+route distribution, source immutability, and zero retention.
+
+Measurement decision: record 14,137,216 generated input bytes,
+2.2789369999663904 seconds runtime, 37,371,904-byte peak RSS, 2,880 aggregate
+output bytes, and zero retained output under one CPU thread, one worker, and
+one numerical job. Record zero raw-data reads, real-cache reads, model runs,
+training runs, network bytes, new payload bytes, and forbidden operations.
+
+Boundary decision: this generated engineering result separates eligible-total
+arithmetic from participant-session distribution arithmetic only for the
+frozen synthetic matrix. It does not identify the consumed private R1
+subclass, establish a real cohort, access neural data, or establish decoding.
+Commit, push, and green the exact implementation, then separately green a
+proof-only closeout without rerunning qualification. Another private read
+requires a new all-false Tier C packet, fresh packet-bound maintainer words,
+and a separately green decision.

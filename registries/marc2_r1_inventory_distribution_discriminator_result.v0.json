@@ -1,0 +1,118 @@
+{
+  "schema_name": "neurodecodekit.marc2_r1_inventory_distribution_discriminator_result",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC2-VR29A",
+  "recorded_at_local": "2026-08-23",
+  "status": "generated_inventory_distribution_discriminator_qualified_remote_proof_pending",
+  "route": "MARC2VR29A-G1",
+  "registration_proof": {
+    "commit": "fcd088cc2eef6556f36ed596c6d9bb6c7ee9d7c3",
+    "CI_run_id": 32618866986,
+    "base_job_id": 97143828645,
+    "optional_neuro_job_id": 97143828576,
+    "both_required_jobs_green": true,
+    "contract_sha256": "09fc1baa9e84d65bf8d9e8780d77a2d6707c27a8c30b6b49387c027ac020c607"
+  },
+  "matrix": {
+    "cases": [
+      "exact_public_control",
+      "single_session_exclusion_removed",
+      "eligible_bundle_removed",
+      "eligible_bundle_added",
+      "eligible_distribution_shift",
+      "eligible_distribution_shift_second",
+      "unknown_participant_bundle",
+      "incomplete_companion_set"
+    ],
+    "orders": [
+      "canonical",
+      "reversed"
+    ],
+    "replays": 2,
+    "paths": 32,
+    "VR25A_calls": 32,
+    "R1_filter_discriminator_calls": 16,
+    "VR2_filter_refusal_sites": 2,
+    "VR29A_route_counts": {
+      "MARC2VR29A-G1": 4,
+      "MARC2VR29A-G2": 4,
+      "MARC2VR29A-R1": 8,
+      "MARC2VR29A-R2": 8,
+      "MARC2VR29A-R3": 8
+    },
+    "VR25A_route_counts": {
+      "MARC2VR25A-G1": 4,
+      "MARC2VR25A-G2": 4,
+      "MARC2VR25A-R1": 16,
+      "MARC2VR25A-R2": 4,
+      "MARC2VR25A-R3": 4
+    },
+    "direct_refusals_passed": 77,
+    "exact_replays_match": true,
+    "order_invariant_route_distribution": true,
+    "replay_digest": "c47ef4a3d67b2793155228be9ffa56c8ee3dfb56fb7506f9295d11e14f6f2ca5",
+    "source_mutations_after_call": 0,
+    "private_reason_or_value_retained": false
+  },
+  "measurements": {
+    "fixed_input_bytes": 166935,
+    "generated_input_bytes": 14137216,
+    "runtime_seconds": 2.2789369999663904,
+    "peak_RSS_bytes": 37371904,
+    "aggregate_output_bytes": 2880,
+    "retained_output_bytes": 0,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "network_bytes": 0,
+    "new_payload_bytes": 0,
+    "end_to_end_latency_measured": false
+  },
+  "operation_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "readiness_or_consumed_state_operations": 0,
+    "archive_header_or_member_reads": 0,
+    "neural_signal_operations": 0,
+    "target_or_label_operations": 0,
+    "model_training_inference_prediction_or_scoring_runs": 0,
+    "network_or_provider_calls": 0,
+    "new_payload_bytes": 0,
+    "FW2_or_CIL1_operations": 0,
+    "other_project_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "warnings": [
+    "artifact_only_and_generated_only",
+    "no_private_executor",
+    "generated_R1_subclasses_do_not_identify_the_consumed_private_subclass",
+    "no_real_cohort_neural_decoding_or_scientific_claim"
+  ],
+  "unavailable_fields": [
+    "consumed_private_R1_subclass",
+    "private_predicate_value_count_direction_distribution_or_participant",
+    "real_target_free_cohort",
+    "archive_member_neural_signal_target_model_prediction_or_score",
+    "end_to_end_neural_decoding_latency"
+  ],
+  "remote_implementation_proof": null,
+  "next_gate": {
+    "implementation_commit_and_both_CI_jobs_green_required": true,
+    "proof_only_closeout_required_after_remote_green": true,
+    "private_or_neural_access_authorized": false,
+    "FW2_or_CIL1_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_capability": "generated discrimination of filtered eligible-total arithmetic versus participant-session distribution arithmetic",
+    "consumed_private_subclass_identified": false,
+    "real_cohort_established": false,
+    "neural_payload_accessed": false,
+    "decoding_performance_established": false,
+    "language_or_thought_decoding_established": false,
+    "unseen_person_generalization_established": false,
+    "live_decoding_established": false
+  }
+}
