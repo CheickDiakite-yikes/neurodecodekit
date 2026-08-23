@@ -4,7 +4,7 @@
   "implementation_id": "MARC-2-VR28P-inventory-taxonomy-private-discriminator-implementation-v0",
   "lane_id": "MARC2-VR28P",
   "recorded_at_UTC": "2026-08-23T00:00:00Z",
-  "status": "generated_stage_1_qualified_private_stage_2_proof_closeout_pending",
+  "status": "generated_stage_1_proof_transition_hardened_remote_green_pending",
   "authority": {
     "request_path": "registries/marc2_inventory_taxonomy_private_discriminator_authorization_request.v0.json",
     "request_sha256": "0fc194af25972ea58e003c1f042ab73e12a0908ac988e67722263a56095034ba",
@@ -53,8 +53,8 @@
     {
       "role": "behavior_tests",
       "path": "tests/test_marc2_inventory_taxonomy_private_discriminator.py",
-      "bytes": 9331,
-      "sha256": "8b56335871cfcd59c161db57210a2f13fb7f711fc2876dad845083816c399830"
+      "bytes": 9691,
+      "sha256": "4f33d02644bf5889ea9cdb16d3299ae55208bc7f534a7070e334d52ff662514a"
     },
     {
       "role": "implementation_proof_tests",

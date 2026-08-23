@@ -49,11 +49,20 @@ class Marc2InventoryTaxonomyPrivateDiscriminatorTests(unittest.TestCase):
         source_read.assert_not_called()
 
     def test_public_execute_is_proof_gated_in_current_stage(self):
-        with self.assertRaises(
-            wrapper.InventoryTaxonomyPrivateDiscriminatorRefusal
-        ) as caught:
-            wrapper._require_green_implementation(ROOT)
-        self.assertEqual(caught.exception.route, "MARC2VR28P-F02")
+        record = json.loads(
+            (ROOT / wrapper.IMPLEMENTATION_RELATIVE_PATH).read_text(encoding="utf-8")
+        )
+        proof = record["remote_implementation_proof"]
+        if proof is None:
+            with self.assertRaises(
+                wrapper.InventoryTaxonomyPrivateDiscriminatorRefusal
+            ) as caught:
+                wrapper._require_green_implementation(ROOT)
+            self.assertEqual(caught.exception.route, "MARC2VR28P-F02")
+        else:
+            self.assertEqual(
+                wrapper._require_green_implementation(ROOT), proof["commit"]
+            )
 
     def test_generated_control_runs_through_fixed_path_state_machine(self):
         with tempfile.TemporaryDirectory() as temp:
