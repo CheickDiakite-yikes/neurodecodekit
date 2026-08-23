@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR26P Proof-Only Closeout Pending
+## Current Frontier: MARC2-VR26P Consumed At R5
 
 VR24P result `a873f1a` passed Base job `97103071419`, Optional Neuro Readers
 job `97103071353`, and CI `32602610854`. The exact one-shot result remains
@@ -92,10 +92,24 @@ CI `32609236180`.
 Read `docs/MARC_2_SELECTION_BOUNDARY_PRIVATE_CONFIRMATION_PROOF_CLOSEOUT.md`.
 It binds the exact remote-green implementation, 7,417-byte preproof registry,
 canonical artifact-set hash, and four implementation Git blobs without
-repeating qualification or touching readiness or private state. Immediate
-gate: commit, push, and green this proof-only closeout. Before both jobs pass,
-`execute` remains closed. No private read, real cohort, archive-member access,
-neural operation, FW2/CIL1 action, or scientific claim is open yet.
+repeating qualification or touching readiness or private state. Exact closeout
+`bb6c52b` passed Base job `97120986292`, Optional Neuro Readers job
+`97120986207`, and CI `32609855945` before the sole invocation.
+
+Read `docs/MARC_2_SELECTION_BOUNDARY_PRIVATE_CONFIRMATION_RESULT.md` and its
+machine result. The executor collected three fresh readiness samples, opened
+and strict-parsed exactly 418,755 target-free structural bytes once, called
+VR25A once, and consumed at `MARC2VR26P-R5` with no cohort freeze. Runtime was
+0.0482423750218004 seconds at 29,622,272-byte peak RSS; combined output was
+2,923 bytes, and all neural, target, model, score, network, and claim counters
+were zero.
+
+R5 means only participant taxonomy or exact eligible inventory refused. It
+does not distinguish eligible count/distribution drift from an unknown
+recognized participant, and no private predicate, value, count, identity,
+selection, or cohort was retained. Do not retry or inspect VR26P private
+state. The next safe task is an artifact-only and generated-only R5
+decomposition. FW2/CIL1 and all neural or scientific work remain closed.
 
 ## Historical Frontier: MARC2-VR24P Consumed At R2
 

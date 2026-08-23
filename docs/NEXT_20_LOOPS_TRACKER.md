@@ -4221,6 +4221,26 @@ light tests pass with 204 expected skips. Next gate: commit, push, and green
 this exact closeout. Only then may the one registered target-free structural
 cohort confirmation execute, with no retry or rerun.
 
+### MARC2-VR26P - Consumed At R5 Without Cohort Freeze
+
+Proof-only closeout `bb6c52bb7217edb79eec5c3f09c14ba50776c2c6` passed Base
+Python job `97120986292`, Optional Neuro Readers job `97120986207`, and CI
+`32609855945` before the sole invocation. The executor collected three fresh
+readiness samples, opened and strict-parsed exactly 418,755 target-free
+structural bytes once, and called VR25A once.
+
+The result consumed at `MARC2VR26P-R5` without freezing a cohort. R5 means
+participant taxonomy or exact eligible inventory refused; it does not reveal
+whether the source reached VR25A R1 eligible count/distribution drift or R2
+unknown-participant taxonomy. No count, direction, predicate, private value,
+identity, selection, or cohort was retained.
+
+Runtime was 0.0482423750218004 seconds at 29,622,272-byte peak RSS; combined
+output was 2,923 bytes. Every archive, neural, target, model, score, network,
+FW2/CIL1, other-project, and claim counter was zero. Next gate: commit, push,
+and green the aggregate result, then freeze an artifact-only/generated-only R5
+decomposition. VR26P has no retry, rerun, or private reinspection.
+
 ### MARC2-VR24P - Exact Stage 1 Remotely Green; Closeout Pending
 
 Exact implementation `a2e19ba` passed Base Python job `97099725036`, Optional

@@ -11484,3 +11484,32 @@ pushed and both jobs are green. Only afterward may the single registered
 target-free structural invocation run. It has no retry or rerun, and it does
 not authorize archive members, neural data, targets, models, scores, FW2/CIL1,
 release, or a scientific claim.
+
+## 0390 - Consume VR26P At Aggregate R5
+
+Proof decision: proof-only closeout
+`bb6c52bb7217edb79eec5c3f09c14ba50776c2c6` passed Base Python job
+`97120986292`, Optional Neuro Readers job `97120986207`, and CI
+`32609855945` before the sole invocation.
+
+Execution decision: accept one exact 418,755-byte target-free structural read,
+one strict parse, one VR25A call, three fresh readiness samples, and aggregate
+route `MARC2VR26P-R5`. The invocation froze no private cohort and is consumed
+without retry, rerun, resume, repair, fallback, substitution, amendment, or
+private reinspection.
+
+Interpretation decision: R5 means only participant taxonomy or exact eligible
+inventory refused. It is compatible with VR25A R1 eligible total/session
+distribution drift and VR25A R2 unknown-participant taxonomy. Do not infer
+which branch, a private count, direction, predicate, value, identity,
+participant, selection, reservation, or cohort.
+
+Resource decision: accept 0.0482423750218004 seconds executor runtime,
+29,622,272-byte peak RSS, 2,923 combined output bytes, one CPU thread, one
+worker, one numerical job, zero network bytes, and zero new payload bytes.
+
+Boundary decision: archive members, neural signals, targets, models, training,
+predictions, scores, FW2/CIL1, providers, hardware, other projects, release,
+and claims remained untouched. The next safe lane is an artifact-only and
+generated-only R5 decomposition. Another private read or any neural work is a
+new Tier C packet and decision.

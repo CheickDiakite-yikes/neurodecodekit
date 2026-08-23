@@ -205,13 +205,27 @@ and performs zero readiness, `.codex_work`, private, consumed-state, archive,
 neural, target, model, score, FW2/CIL1, network, hardware, other-project, or
 claim operation.
 
-Immediate gate: commit, push, and remotely green this exact proof-only
-closeout. Before both jobs pass, do not run `execute`, collect readiness, or
-touch `.codex_work`, the private source, consumed state, or an output root.
-Afterward, the existing decision permits one registered target-free structural
-invocation only, with no retry or rerun. FW2/CIL1, archive members, neural
-payload, targets, models, predictions, scores, streams, devices, and
-scientific claims remain closed.
+Exact proof-only closeout `bb6c52bb7217edb79eec5c3f09c14ba50776c2c6`
+passed Base job `97120986292`, Optional job `97120986207`, and CI
+`32609855945` before the sole invocation. Read
+`docs/MARC_2_SELECTION_BOUNDARY_PRIVATE_CONFIRMATION_RESULT.md` and
+`registries/marc2_selection_boundary_private_confirmation_result.v0.json`.
+The executor collected three fresh readiness samples, opened and strict-parsed
+exactly 418,755 target-free structural bytes once, called VR25A once, and
+consumed at `MARC2VR26P-R5` without freezing a cohort. Runtime was
+0.0482423750218004 seconds at 29,622,272-byte peak RSS; combined output was
+2,923 bytes, and network/new-payload bytes were zero.
+
+R5 means only participant taxonomy or exact eligible inventory validation
+refused. It does not distinguish VR25A R1 eligible count/distribution drift
+from R2 unknown-participant taxonomy, and no failed predicate, value, count,
+direction, row, identity, participant, selection, or cohort was retained.
+VR26P is consumed with no retry, rerun, resume, repair, fallback,
+substitution, cleanup, amendment, or private reinspection. Do not touch its
+private source, readiness state, consumed marker, or output root. The next safe
+task is a separately frozen artifact-only and generated-only R5 decomposition.
+FW2/CIL1, archive members, neural payload, targets, models, predictions,
+scores, streams, devices, and scientific claims remain closed.
 
 ## Historical VR20P/VR21A/VR22P path
 

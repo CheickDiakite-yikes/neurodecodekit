@@ -1,5 +1,19 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR26P result, 2026-08-22: proof-only closeout `bb6c52b`
+> passed Base Python job `97120986292`, Optional Neuro Readers job
+> `97120986207`, and CI `32609855945` before the sole invocation. The executor
+> collected three readiness samples, read and strict-parsed exactly 418,755
+> target-free structural bytes once, called VR25A once, and consumed at
+> `MARC2VR26P-R5` without freezing a cohort. Runtime was 0.0482423750218004
+> seconds at 29,622,272-byte peak RSS; combined output was 2,923 bytes. R5
+> means only participant taxonomy or exact eligible inventory refused; it does
+> not distinguish VR25A R1 from R2 or retain any private value, count, identity,
+> selection, or cohort. Immediate gate: commit, push, and green the aggregate
+> result record, then freeze an artifact-only/generated-only R5 decomposition.
+> Never touch consumed VR26P private state. FW2/CIL1, archive/neural payload,
+> targets, models, scores, and claims remain closed.
+
 > Current MARC2-VR26P proof-only closeout, 2026-08-22: exact implementation
 > `d5c5abd` passed Base Python job `97119373912`, Optional Neuro Readers job
 > `97119373779`, and CI `32609236180`. The closeout binds the 7,417-byte

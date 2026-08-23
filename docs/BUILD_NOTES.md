@@ -13158,6 +13158,29 @@ run `execute`, collect readiness, or touch private state before both jobs pass.
 Afterward, the existing decision permits one registered target-free structural
 invocation only, without retry or rerun.
 
+### VR26P consumed at participant-taxonomy or eligible-inventory boundary
+
+- Proof-only closeout `bb6c52bb7217edb79eec5c3f09c14ba50776c2c6`
+  passed Base Python job `97120986292`, Optional Neuro Readers job
+  `97120986207`, and CI `32609855945` before execution.
+- The sole invocation collected three readiness samples, read and strict-
+  parsed exactly 418,755 target-free structural bytes once, and called VR25A
+  once.
+- It consumed at `MARC2VR26P-R5` with no private cohort manifest. R5 means
+  participant taxonomy or exact eligible inventory refused; it does not
+  distinguish VR25A R1 eligible count/distribution drift from R2 unknown-
+  participant taxonomy.
+- Measured 0.0482423750218004 seconds executor runtime, 29,622,272-byte peak
+  RSS, and 2,923 combined output bytes under one CPU thread, one worker, and
+  one numerical job.
+- Archive, neural, target, model, training, inference, prediction, score,
+  network, FW2/CIL1, other-project, and scientific-claim operations were zero.
+  No post-execution aggregate or private reinspection ran.
+
+Immediate gate: commit, push, and green the aggregate result record. VR26P is
+consumed and must not be retried or reinspected. Then freeze a generated-only
+R5 decomposition before considering any separately authorized private gate.
+
 ### VR24P result remotely green
 
 - The sole proof-separated invocation consumed at `MARC2VR24P-R2` after one
