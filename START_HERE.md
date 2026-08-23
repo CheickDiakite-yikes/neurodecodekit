@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR32P Generated Stage 1 Pending Remote Proof
+## Current Frontier: MARC2-VR32P Proof Closeout Pending Remote Green
 
 Read
 `docs/MARC_2_ELIGIBLE_TOTAL_DIRECTION_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md`
@@ -51,9 +51,16 @@ refusals, deterministic replay, marker-before-open ordering, source
 immutability, and zero retained output passed. Runtime was
 3.007118667010218 seconds at 35,897,344-byte peak RSS.
 
-Immediate gate: verify, commit, push, and green the exact Stage 1
-implementation, then separately green a proof-only closeout without repeating
-qualification. Private execution remains unavailable before both barriers.
+Exact Stage 1 `bae648e269e56dde45eb15295224fbafcc3c8706` passed Base
+Python job `97175866956`, Optional Neuro Readers job `97175866782`, and CI
+`32631907880`. The proof-only closeout binds both preproof registries, the
+canonical implementation-artifact set, and seven exact Git blobs. It repeats
+no qualification and performs zero private operation.
+
+Immediate gate: verify, commit, push, and green this exact proof-only
+closeout. Private execution remains unavailable until that barrier is green;
+afterward, exactly one registered aggregate structural check may execute with
+no retry or rerun.
 
 ## Generated Evidence: MARC2-VR31A Remotely Closed
 

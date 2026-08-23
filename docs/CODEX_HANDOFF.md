@@ -1,6 +1,6 @@
 # Codex Handoff - NeuroDecodeKit
 
-> Current MARC2-VR32P generated Stage 1, 2026-08-23: exact VR31A proof-only closeout
+> Current MARC2-VR32P proof closeout, 2026-08-23: exact VR31A proof-only closeout
 > `18d8fb9c9d376b680c3f0a31e513a2f37122283c` passed Base Python job
 > `97167465027`, Optional Neuro Readers job `97167465228`, and CI
 > `32628483371`. VR32P is an all-false two-stage request for a generated
@@ -22,9 +22,13 @@
 > VR31A calls, eight direction comparisons, route counts 4/4/4/4/16, 152
 > direct refusals, deterministic replay, marker-before-open ordering, and zero
 > retained output in 3.007118667010218 seconds at 35,897,344-byte peak RSS.
-> Immediate gate: commit, push, and green Stage 1, then separately green its
-> proof-only closeout without repeating qualification. Private execution is
-> still blocked.
+> Exact Stage 1 `bae648e269e56dde45eb15295224fbafcc3c8706` passed Base
+> Python job `97175866956`, Optional Neuro Readers job `97175866782`, and CI
+> `32631907880`. The proof-only closeout binds both preproof registries, the
+> canonical artifact-set hash, and seven exact Git blobs without repeating
+> qualification or touching private state. Immediate gate: commit, push, and
+> green this exact closeout. Only then may the one registered structural
+> direction check execute exactly once; no retry or rerun exists.
 
 > Current MARC2-VR31A proof-only closeout, 2026-08-23: exact registration
 > `eeab6785b8eadc6d65199fa1ac519173f9c160c7` passed Base Python job

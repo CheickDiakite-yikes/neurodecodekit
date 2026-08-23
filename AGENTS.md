@@ -81,11 +81,17 @@ paths, 32 VR31A calls, eight direction comparisons, exact route counts
 4/4/4/4/16, 152 direct refusals, and zero retention in 3.007118667010218
 seconds at 35,897,344-byte peak RSS.
 
-Immediate gate: commit, push, and green this exact Stage 1 implementation,
-then create and separately green a proof-only closeout without repeating
-qualification. Before those barriers, do not touch `.codex_work`, consumed or
-private state, archives, neural data, targets, models, scores, FW2/CIL1,
-devices, streams, releases, or claims.
+Exact Stage 1 `bae648e269e56dde45eb15295224fbafcc3c8706` passed Base
+Python job `97175866956`, Optional Neuro Readers job `97175866782`, and CI
+`32631907880`. Read the VR32P proof-only closeout. It binds both preproof
+registries, the canonical implementation-artifact set, and seven exact Git
+blobs without repeating qualification or touching private state.
+
+Immediate gate: commit, push, and green this exact proof-only closeout. Only
+after that barrier may the one authorized private structural discriminator
+execute exactly once. Before remote green, do not touch `.codex_work`,
+consumed or private state, archives, neural data, targets, models, scores,
+FW2/CIL1, devices, streams, releases, or claims.
 
 `MARC2-VR30P` is consumed at aggregate route `MARC2VR30P-R1` without a
 cohort freeze. Read

@@ -12085,3 +12085,23 @@ Boundary decision: do not repeat qualification or touch readiness, private,
 ignored-path, consumed-state, archive, neural, target, model, score, network,
 device, FW2/CIL1, other-project, release, or claim state. Commit, push, and
 green Stage 1, then separately green a proof-only closeout before Stage 2.
+
+## 0416 - Bind Exact Remote Proof For VR32P Stage 1
+
+Proof decision: exact Stage 1 implementation
+`bae648e269e56dde45eb15295224fbafcc3c8706` passed CI `32631907880`, Base
+Python job `97175866956`, and Optional Neuro Readers job `97175866782`.
+
+Identity decision: bind the 9,214-byte preproof implementation registry and
+4,071-byte result registry by byte count, SHA-256, and Git blob. Also bind the
+canonical implementation-artifact set hash and exact Git blobs for the
+wrapper, behavior tests, implementation tests, result tests, and
+implementation document.
+
+Boundary decision: repeat no qualification and perform no readiness, private,
+ignored-path, consumed-state, archive, neural, target, model, prediction,
+score, network, provider, device, FW2/CIL1, other-project, release, or claim
+operation. This closeout is ineffective until its own exact commit is pushed
+and both required jobs are green. Only afterward may the one registered
+aggregate structural direction check execute exactly once; no retry or rerun
+exists.
