@@ -12130,3 +12130,23 @@ fallback, substitution, cleanup, amendment, output inspection, or private
 reinspection. The tracked result uses only the returned aggregate JSON and
 public proof records. Archive, neural, target, model, score, FW2/CIL1, device,
 release, and scientific-claim surfaces remain closed.
+
+## 0418 - Freeze Exact-Count Readiness Before Any Future Private Wrapper
+
+Failure decision: the VR32P wrapper's open-ended consecutive-pass loop can
+produce more than the registered three total readiness samples. Preserve the
+returned R2 only as a bounded engineering observation; do not retry, repair,
+reinterpret, or reinspect consumed VR32P state.
+
+Design decision: freeze MARC2-VR33A as a standard-library generated-only
+primitive with exactly three provider calls, two sleeper calls, and readiness
+only when all three samples pass. Qualify all eight pass/fail patterns across
+two exact replays and reject dynamic count, interval, timeout, retry, path,
+output, and execute surfaces.
+
+Boundary decision: registration reads only five committed artifacts totaling
+75,965 bytes and performs no private, ignored-path, readiness-state, archive,
+neural, target, model, score, network, FW2/CIL1, device, release, or claim
+operation. Commit, push, and green the exact registration before generated
+implementation. Any future private adoption requires a new Tier C packet and
+decision.

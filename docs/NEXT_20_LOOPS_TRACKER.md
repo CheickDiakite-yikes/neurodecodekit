@@ -1,5 +1,10 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
+> **Immediate gate (2026-08-23):** MARC2-VR33A freezes an artifact-only and
+> generated-only exact-count readiness repair. Commit, push, and green the
+> registration before implementing its 16-path generated matrix. No private
+> executor, consumed-state access, neural work, or claim action is open.
+
 > **Immediate update (2026-08-23):** exact VR32P proof closeout `5aec8a1`
 > passed Base job `97177262321`, Optional job `97177262387`, and CI
 > `32632497701`. The sole invocation returned aggregate R2: eligible total
@@ -3924,6 +3929,25 @@ The closeout repeats no qualification and performs zero readiness, private,
 ignored-path, archive, neural, target, model, score, network, FW2/CIL1, or
 claim operation. Next gate: commit, push, and green this exact closeout. Only
 then may the one registered target-free structural discriminator execute.
+
+### MARC2-VR33A - Exact-Count Readiness Repair Registered
+
+The consumed VR32P invocation returned five readiness samples against a frozen
+three-sample requirement. Static review identifies its open-ended consecutive-
+pass loop as the mechanism: reaching three consecutive passes can require more
+than three total observations.
+
+VR33A freezes a generated-only replacement for future wrappers. Every
+collection makes exactly three provider calls, exactly two sleeper calls, and
+returns ready only when all three samples pass. Eight fixed pass/fail patterns
+run across two replays for 16 paths, 48 provider calls, 32 sleeper calls, and
+at least 40 direct refusals. The additive standard-library module may expose
+only `plan` and `qualify`; it has no private executor, filesystem path, retry,
+timeout, or dynamic sample-count escape hatch.
+
+Immediate gate: verify, commit, push, and green this exact registration before
+implementation. VR32P remains consumed and byte-identical. Any future private
+adoption requires a separately frozen Tier C packet and decision.
 
 ### MARC2-VR32P - Consumed At R2 With Readiness Deviation
 

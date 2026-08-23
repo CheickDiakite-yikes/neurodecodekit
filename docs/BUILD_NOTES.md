@@ -14068,3 +14068,21 @@ once; no retry or rerun exists.
 
 VR32P is consumed with no retry or repair. Next safe task: artifact-only and
 generated-only exact-count readiness repair and failure review.
+
+### VR33A exact-count readiness repair registered
+
+- Added a frozen artifact-only and generated-only registration binding five
+  committed VR32P artifacts totaling 75,965 bytes.
+- Localized the five-versus-three deviation to the open-ended consecutive-pass
+  loop without touching any private, ignored, readiness, consumed, or output
+  state.
+- Froze a future standard-library sampler with exactly three provider calls,
+  two sleeper calls, and readiness only when all three generated samples pass.
+- Froze eight pass/fail patterns across two replays: 16 paths, 48 provider
+  calls, 32 sleeper calls, one ready pattern, and at least 40 direct refusals.
+- The surface is `plan` and `qualify` only. There is no private executor,
+  filesystem path, dynamic count, retry, timeout, network, or payload action.
+
+Immediate gate: verify, commit, push, and green this exact registration before
+implementation. VR32P remains consumed and byte-identical; any future private
+adoption requires a new Tier C packet and decision.

@@ -1,5 +1,15 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR33A gate, 2026-08-23: the artifact-only and generated-only
+> exact-count readiness repair is frozen in
+> `docs/MARC_2_EXACT_COUNT_READINESS_REPAIR_PREREGISTRATION.md` and
+> `registries/marc2_exact_count_readiness_repair_contract.v0.json`. It binds
+> five committed VR32P artifacts totaling 75,965 bytes, requires exactly three
+> provider calls and two sleeper calls, and exposes only `plan` and `qualify`.
+> Commit, push, and green this exact registration before implementation. Do not
+> call or modify the consumed VR32P wrapper or touch private/ignored state. A
+> future private adoption remains a new Tier C packet and decision.
+
 > Current MARC2-VR32P result, 2026-08-23: proof-only closeout
 > `5aec8a15f5ee6fa3c6ca9cefcfb4fbfead9dd72f` passed Base Python job
 > `97177262321`, Optional Neuro Readers job `97177262387`, and CI

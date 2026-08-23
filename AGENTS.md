@@ -45,6 +45,28 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
+`MARC2-VR33A` is frozen as an artifact-only and generated-only exact-count
+readiness repair. Read
+`docs/MARC_2_EXACT_COUNT_READINESS_REPAIR_PREREGISTRATION.md` and
+`registries/marc2_exact_count_readiness_repair_contract.v0.json`. It binds five
+committed VR32P artifacts totaling 75,965 bytes and freezes a reusable
+standard-library sampler that attempts exactly three generated samples, sleeps
+exactly twice, and returns ready only when all three samples pass. The frozen
+qualification matrix has eight pass/fail patterns across two replays: 16 paths,
+48 provider calls, 32 sleeper calls, exactly one ready pattern, and at least 40
+direct refusals. It exposes only `plan` and `qualify`; no private executor or
+filesystem path exists.
+
+Immediate gate: commit, push, and green this exact registration before
+implementation. Do not modify or call the consumed VR32P wrapper, repeat its
+qualification, or inspect private/ignored state. After green registration,
+Tier B may implement and qualify only the frozen generated matrix. Any future
+private adoption remains a new Tier C packet and decision. FW2/CIL1, archives,
+neural data, targets, models, scores, streams, devices, release, and claims
+remain closed.
+
+### Consumed VR32P boundary
+
 `MARC2-VR32P` is consumed at aggregate route `MARC2VR32P-R2` with a
 readiness-sampling protocol deviation. Read
 `docs/MARC_2_ELIGIBLE_TOTAL_DIRECTION_PRIVATE_DISCRIMINATOR_RESULT.md` and

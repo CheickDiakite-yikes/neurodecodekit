@@ -1,0 +1,186 @@
+{
+  "schema_name": "neurodecodekit.marc2_exact_count_readiness_repair_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "MARC-2-VR33A-exact-count-readiness-repair-v0",
+  "lane_id": "MARC2-VR33A",
+  "recorded_at_local": "2026-08-23",
+  "status": "preregistered_artifact_only_generated_only_no_private_access",
+  "objective": "Replace open-ended consecutive-pass readiness sampling in future lanes with an exact three-sample generated-qualified primitive.",
+  "result_proof": {
+    "VR32P_result_commit": "2c3b901b5536191d181c12d54106e45d9574b309",
+    "VR32P_result_CI_run_id": 32633522416,
+    "VR32P_result_base_job_id": 97179761472,
+    "VR32P_result_optional_neuro_job_id": 97179761551,
+    "both_required_jobs_green": true,
+    "observed_route": "MARC2VR32P-R2",
+    "registered_readiness_samples": 3,
+    "returned_readiness_samples": 5,
+    "readiness_sample_count_excess": 2,
+    "fully_protocol_conforming": false,
+    "private_source_or_consumed_output_reinspected_by_registration": false
+  },
+  "fixed_inputs": [
+    {
+      "role": "VR32P_authorization_packet",
+      "path": "docs/MARC_2_ELIGIBLE_TOTAL_DIRECTION_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md",
+      "bytes": 4328,
+      "sha256": "db14a1bc4384bb4c1470fb9e8432510decae00b187a6136082f456fb8a064486"
+    },
+    {
+      "role": "VR32P_authorization_request",
+      "path": "registries/marc2_eligible_total_direction_private_discriminator_authorization_request.v0.json",
+      "bytes": 13544,
+      "sha256": "24a81f4ee39844bf3a88a1ecd99043dc1514efbf58e8c23a5a7bd247f16de365"
+    },
+    {
+      "role": "VR32P_consumed_wrapper_source",
+      "path": "src/neurodecodekit/datasets/marc2_eligible_total_direction_private_discriminator.py",
+      "bytes": 43728,
+      "sha256": "d379a83d2c20f871f36ee8358f6a316c4e437a3c2556463693b49635109c98c5"
+    },
+    {
+      "role": "VR32P_result_document",
+      "path": "docs/MARC_2_ELIGIBLE_TOTAL_DIRECTION_PRIVATE_DISCRIMINATOR_RESULT.md",
+      "bytes": 4842,
+      "sha256": "7921c9dde7b49ddbaba3767b57005494da00910760a1f68766412e4200c958da"
+    },
+    {
+      "role": "VR32P_private_result_record",
+      "path": "registries/marc2_eligible_total_direction_private_discriminator_private_result.v0.json",
+      "bytes": 9523,
+      "sha256": "57a2d71ed24e253bf16ff788b8b89afcdb4846d224ff74a74a04ac1bedb712d8"
+    }
+  ],
+  "fixed_input_count": 5,
+  "fixed_input_bytes": 75965,
+  "failure_localization": {
+    "module_path": "src/neurodecodekit/datasets/marc2_eligible_total_direction_private_discriminator.py",
+    "function_name": "_collect_private_readiness",
+    "open_ended_loop_expression": "while time.monotonic() - started <= 600.0",
+    "break_expression": "passing_tail == 3",
+    "reported_sample_count_expression": "len(readiness[\"samples\"])",
+    "mechanism": "three consecutive passing samples can require more than three total samples",
+    "VR32P_repair_or_rerun_allowed": false
+  },
+  "exact_count_contract": {
+    "sample_count": 3,
+    "interval_seconds": 5.0,
+    "provider_calls_per_collection": 3,
+    "sleeper_calls_per_collection": 2,
+    "ready_predicate": "all three passing values are true",
+    "sequence_values": [
+      1,
+      2,
+      3
+    ],
+    "while_loop_allowed": false,
+    "sample_count_override_allowed": false,
+    "interval_override_allowed": false,
+    "timeout_or_retry_allowed": false,
+    "filesystem_or_private_path_access_allowed": false
+  },
+  "generated_matrix": {
+    "patterns": [
+      "PPP",
+      "PPF",
+      "PFP",
+      "FPP",
+      "PFF",
+      "FPF",
+      "FFP",
+      "FFF"
+    ],
+    "ready_patterns": [
+      "PPP"
+    ],
+    "not_ready_patterns": [
+      "PPF",
+      "PFP",
+      "FPP",
+      "PFF",
+      "FPF",
+      "FFP",
+      "FFF"
+    ],
+    "replays": 2,
+    "required_paths": 16,
+    "required_provider_calls": 48,
+    "required_sleeper_calls": 32,
+    "required_returned_samples": 48,
+    "minimum_direct_refusals": 40,
+    "deterministic_replay_required": true,
+    "source_immutability_required": true,
+    "retained_output_bytes": 0
+  },
+  "implementation_contract": {
+    "module_path": "src/neurodecodekit/datasets/marc2_exact_count_readiness.py",
+    "commands": [
+      "plan",
+      "qualify"
+    ],
+    "dependency_policy": "standard_library_only",
+    "base_dependency_additions": 0,
+    "private_executor_allowed": false,
+    "generic_path_URL_timeout_count_interval_route_output_retry_or_resource_arguments": 0,
+    "VR32P_sampler_import_or_call_allowed": false,
+    "consumed_wrapper_modification_allowed": false,
+    "generated_samples_only": true,
+    "retained_generated_source_bytes": 0,
+    "retained_generated_report_bytes": 0
+  },
+  "resource_limits": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 15,
+    "peak_RSS_bytes_exclusive": 134217728,
+    "generated_input_bytes": 1048576,
+    "aggregate_output_bytes": 1048576,
+    "retained_output_bytes": 0,
+    "network_bytes": 0,
+    "new_payload_bytes": 0
+  },
+  "authorization": {
+    "artifact_only_reads": true,
+    "generated_in_memory_fixture_creation": true,
+    "private_or_Git_ignored_path_access": false,
+    "readiness_file_or_consumed_state_access": false,
+    "archive_header_or_member_access": false,
+    "signal_event_target_or_label_access": false,
+    "model_training_inference_prediction_or_scoring": false,
+    "network_or_provider_calls": false,
+    "stream_device_or_hardware_operations": false,
+    "FW2_or_CIL1_execution": false,
+    "release_or_publication": false,
+    "scientific_claim_upgrade": false
+  },
+  "registration_operation_counters": {
+    "private_or_Git_ignored_path_operations": 0,
+    "readiness_or_consumed_state_operations": 0,
+    "archive_header_or_member_operations": 0,
+    "signal_event_target_or_label_operations": 0,
+    "model_training_inference_prediction_or_score_operations": 0,
+    "network_download_provider_or_language_model_operations": 0,
+    "stream_device_or_hardware_operations": 0,
+    "FW2_or_CIL1_operations": 0,
+    "other_project_operations": 0,
+    "release_or_publication_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "next_gate": {
+    "registration_must_be_committed_pushed_and_both_CI_jobs_green_before_implementation": true,
+    "generated_implementation_allowed_after_green_registration": true,
+    "private_execution_or_VR32P_repair_authorized": false,
+    "future_private_adoption_requires_new_Tier_C_packet_and_decision": true
+  },
+  "claim_boundary": {
+    "engineering_capability_proposed": "exact finite readiness sample budgeting for future proof-gated wrappers",
+    "scientific_ceiling": "none",
+    "real_cohort_established": false,
+    "neural_payload_accessed": false,
+    "target_model_prediction_or_score_accessed": false,
+    "decoding_performance_established": false,
+    "unseen_person_generalization_established": false,
+    "live_decoding_established": false
+  }
+}

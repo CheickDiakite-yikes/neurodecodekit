@@ -7,7 +7,23 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Boundary: MARC2-VR32P Consumed At R2 With A Protocol Deviation
+## Current Gate: MARC2-VR33A Exact-Count Readiness Repair
+
+Read `docs/MARC_2_EXACT_COUNT_READINESS_REPAIR_PREREGISTRATION.md` and
+`registries/marc2_exact_count_readiness_repair_contract.v0.json`. This frozen
+artifact-only and generated-only lane repairs the future readiness mechanism,
+not the consumed VR32P result. It requires exactly three provider calls and two
+sleeps per collection, with readiness only when all three generated samples
+pass. Its implementation surface is limited to `plan` and `qualify` and has no
+private executor.
+
+Immediate gate: commit, push, and green the exact registration before
+implementation. Do not touch VR32P private or consumed state. Any future
+private use needs a separate frozen Tier C packet and decision. Neural,
+target, model, score, FW2/CIL1, device, release, and claim surfaces remain
+closed.
+
+## Consumed Boundary: MARC2-VR32P R2 With A Protocol Deviation
 
 Read
 `docs/MARC_2_ELIGIBLE_TOTAL_DIRECTION_PRIVATE_DISCRIMINATOR_RESULT.md` and
