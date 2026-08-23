@@ -7,12 +7,13 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR30P Stage 1 Qualified
+## Current Frontier: MARC2-VR30P Proof Closeout Pending Green
 
 The packet-bound decision `2bd811e30991997b8b7616e4c9451899f579dc94`
-passed Base Python job `97154390311`, Optional Neuro Readers job
-`97154390379`, and CI `32623171395` before implementation. The one registered
-generated-only qualification then returned `MARC2VR30P-G1`.
+passed CI `32623171395` before implementation. Exact Stage 1
+`b20d632c184382716509197c2fe1617058a8e230` passed Base Python job
+`97157732938`, Optional Neuro Readers job `97157733105`, and CI `32624543064`.
+The one registered generated-only qualification returned `MARC2VR30P-G1`.
 
 All 32 paths passed: 32 source opens, 32 unchanged VR29A calls, 32 nested
 unchanged VR25A calls, 16 nested unchanged VR2 eligible-filter calls, and exact
@@ -27,12 +28,14 @@ consumed state, archive member, neural signal, target, model, prediction,
 score, network, device, or other project was touched. `execute` currently
 refuses at `MARC2VR30P-F02` before readiness or private path construction.
 
-Immediate gate: commit, push, and green the exact Stage 1 implementation, then
-create and separately green a proof-only closeout without repeating
-qualification. Only after that proof may the already authorized one-shot
-418,755-byte target-free structural Stage 2 run. It may retain only aggregate
-R1 filtered eligible-total arithmetic or R2 participant-session distribution
-arithmetic, never a private value, count, distribution, identity, or cohort.
+The proof-only closeout now binds the exact 8,930-byte preproof implementation
+registry, 4,038-byte result registry, five immutable artifact Git blobs, and
+canonical artifact-set hash. It repeats no qualification and performs zero
+private operation. Immediate gate: commit, push, and green this closeout. Only
+after that proof may the already authorized one-shot 418,755-byte target-free
+structural Stage 2 run. It may retain only aggregate R1 filtered eligible-total
+arithmetic or R2 participant-session distribution arithmetic, never a private
+value, count, distribution, identity, or cohort.
 
 ## Generated Evidence: MARC2-VR29A Remotely Closed
 

@@ -5,9 +5,11 @@
 > VR25A calls, 16 nested VR2 eligible-filter calls, G1/G2/R1/R2/R3 counts
 > 4/4/8/8/8, 151 direct refusals, exact replay, source immutability, and zero
 > retention. Runtime was 2.467852458008565 seconds at 34,127,872-byte peak RSS.
-> No private or neural surface was touched. The exact implementation must now
-> become remotely green, followed by a separately green proof-only closeout,
-> before the authorized one-shot target-free structural Stage 2 may run.
+> No private or neural surface was touched. Exact implementation `b20d632`
+> passed Base job `97157732938`, Optional job `97157733105`, and CI
+> `32624543064`. Its proof-only closeout now binds the exact preproof registries
+> and five immutable Git blobs. The closeout must become remotely green before
+> the authorized one-shot target-free structural Stage 2 may run.
 
 > **Current MARC2 frontier (2026-08-22):** VR20A corrected the inherited
 > `task-freewill` identity to the primary-source-published

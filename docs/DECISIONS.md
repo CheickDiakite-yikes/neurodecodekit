@@ -11885,3 +11885,21 @@ prediction, score, network, FW2/CIL1, hardware, or other project, and upgrades
 no scientific claim. Stage 2 remains proof-gated until the exact implementation
 and a separate proof-only closeout are each pushed and remotely green. Do not
 repeat the qualification for proof closeout.
+
+## 0407 - Bind Exact Remote Proof For VR30P Stage 1
+
+Proof decision: exact implementation
+`b20d632c184382716509197c2fe1617058a8e230` passed CI `32624543064`, Base
+Python job `97157732938`, and Optional Neuro Readers job `97157733105`.
+
+Identity decision: bind the immutable 8,930-byte preproof implementation
+registry and 4,038-byte result registry by SHA-256 and Git blob. Also bind the
+canonical five-artifact set hash and exact Git blobs for the module, behavior
+tests, implementation tests, result tests, and implementation document.
+
+Boundary decision: repeat no qualification and perform no readiness, private,
+`.codex_work`, consumed-state, archive, neural, target, model, prediction,
+score, network, FW2/CIL1, hardware, other-project, release, or claim operation.
+This closeout is ineffective until its own exact commit is pushed and both CI
+jobs are green. Only afterward may the already authorized one-shot target-free
+structural Stage 2 execute.

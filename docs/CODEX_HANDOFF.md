@@ -1,9 +1,12 @@
 # Codex Handoff - NeuroDecodeKit
 
-> Current MARC2-VR30P generated Stage 1, 2026-08-23: packet-bound decision
+> Current MARC2-VR30P proof-only closeout, 2026-08-23: packet-bound decision
 > `2bd811e30991997b8b7616e4c9451899f579dc94` passed Base Python job
 > `97154390311`, Optional Neuro Readers job `97154390379`, and CI
-> `32623171395` before implementation. One measured generated-only pass
+> `32623171395` before implementation. Exact Stage 1
+> `b20d632c184382716509197c2fe1617058a8e230` passed Base Python job
+> `97157732938`, Optional Neuro Readers job `97157733105`, and CI
+> `32624543064`. One measured generated-only pass
 > returned `MARC2VR30P-G1`: all 32 paths passed with 32 unchanged VR29A calls,
 > 32 nested unchanged VR25A calls, 16 nested unchanged VR2 eligible-filter
 > calls, G1/G2/R1/R2/R3 counts 4/4/8/8/8, 151 direct refusals, exact replay,
@@ -13,13 +16,12 @@
 > bytes. Twenty-seven focused and all 5,211 dependency-light tests pass with
 > 204 expected skips. Repository-pinned Ruff 0.15.20, compilation, all 393
 > registries, CLI help/plan, and diff hygiene pass. Unpinned Ruff 0.16.2 reports
-> 1,125 pre-existing findings and is not the repository toolchain. `execute`
-> remains proof-gated at `MARC2VR30P-F02` before readiness or private path
-> construction. Immediate gate: commit, push, and green this exact Stage 1,
-> then separately commit, push, and green a proof-only closeout without
-> repeating qualification or touching private state. No private, consumed,
-> archive, neural, target, model, score, FW2/CIL1, device, release, or claim
-> surface is open before that proof.
+> 1,125 pre-existing findings and is not the repository toolchain. The
+> proof-only closeout binds the exact preproof registries and five immutable
+> implementation Git blobs without repeating qualification or touching private
+> state. Immediate gate: commit, push, and green this exact closeout. No
+> private, consumed, archive, neural, target, model, score, FW2/CIL1, device,
+> release, or claim surface is open before that proof.
 
 > Current MARC2-VR29A proof-only closeout, 2026-08-23: registration
 > `fcd088cc2eef6556f36ed596c6d9bb6c7ee9d7c3` passed Base Python job
