@@ -73,8 +73,17 @@ maintainer's next exact message was `continuecontinue`. Read the VR32P
 authorization decision and machine record; they preserve those 16 UTF-8 bytes
 and bind only the unchanged packet.
 
-Immediate gate: commit, push, and green this exact decision. Before that
-proof, do not implement the wrapper or touch `.codex_work`, consumed or
+Exact decision `cb80d07b0e83c3d02d0bb3f7afae08b4ee6ba528` passed Base
+Python job `97173642868`, Optional Neuro Readers job `97173642874`, and CI
+`32630976806` before Stage 1. Read the VR32P implementation document and both
+machine records. One generated `MARC2VR32P-G1` qualification passed all 32
+paths, 32 VR31A calls, eight direction comparisons, exact route counts
+4/4/4/4/16, 152 direct refusals, and zero retention in 3.007118667010218
+seconds at 35,897,344-byte peak RSS.
+
+Immediate gate: commit, push, and green this exact Stage 1 implementation,
+then create and separately green a proof-only closeout without repeating
+qualification. Before those barriers, do not touch `.codex_work`, consumed or
 private state, archives, neural data, targets, models, scores, FW2/CIL1,
 devices, streams, releases, or claims.
 

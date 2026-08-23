@@ -12062,3 +12062,26 @@ archive, neural, target, model, score, FW2/CIL1, network, device, release,
 other-project, or claim operation. After remote green, only generated Stage 1
 may begin; Stage 2 remains closed until exact Stage 1 and a separate proof-only
 closeout are both remotely green.
+
+## 0415 - Qualify Generated VR32P Fixed-Path Wrapper
+
+Proof decision: exact packet-bound decision
+`cb80d07b0e83c3d02d0bb3f7afae08b4ee6ba528` passed CI `32630976806`, Base
+Python job `97173642868`, and Optional Neuro Readers job `97173642874` before
+implementation.
+
+Implementation decision: specialize the proven fixed-path state machine around
+unchanged VR31A. Preserve fixed plan/qualify/inspect/execute surfaces,
+marker-before-open ordering, no-follow source validation, exclusive canonical
+outputs, one-thread limits, aggregate firewalls, and proof-gated private
+execution.
+
+Result decision: accept the one measured generated route `MARC2VR32P-G1`.
+All 32 paths, 32 VR31A calls, eight direction comparisons, route counts
+4/4/4/4/16, 152 refusals, deterministic replay, source immutability, and zero
+retention passed in 3.007118667010218 seconds at 35,897,344-byte peak RSS.
+
+Boundary decision: do not repeat qualification or touch readiness, private,
+ignored-path, consumed-state, archive, neural, target, model, score, network,
+device, FW2/CIL1, other-project, release, or claim state. Commit, push, and
+green Stage 1, then separately green a proof-only closeout before Stage 2.

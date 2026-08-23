@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR32P Authorization Decision Pending Green
+## Current Frontier: MARC2-VR32P Generated Stage 1 Pending Remote Proof
 
 Read
 `docs/MARC_2_ELIGIBLE_TOTAL_DIRECTION_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md`
@@ -40,9 +40,20 @@ Exact proof-only closeout
 the maintainer's next exact message was `continuecontinue`.
 
 The authorization decision preserves those actual 16 UTF-8 bytes and binds
-only the unchanged remotely green packet. Immediate gate: verify, commit,
-push, and green that exact decision. No generated implementation, readiness,
-private path, or source operation is authorized before its own remote proof.
+only the unchanged remotely green packet. Exact decision
+`cb80d07b0e83c3d02d0bb3f7afae08b4ee6ba528` passed Base Python job
+`97173642868`, Optional Neuro Readers job `97173642874`, and CI
+`32630976806` before Stage 1.
+
+One generated qualification returned `MARC2VR32P-G1`: all 32 paths, 32 VR31A
+calls, eight direction comparisons, route counts 4/4/4/4/16, 152 direct
+refusals, deterministic replay, marker-before-open ordering, source
+immutability, and zero retained output passed. Runtime was
+3.007118667010218 seconds at 35,897,344-byte peak RSS.
+
+Immediate gate: verify, commit, push, and green the exact Stage 1
+implementation, then separately green a proof-only closeout without repeating
+qualification. Private execution remains unavailable before both barriers.
 
 ## Generated Evidence: MARC2-VR31A Remotely Closed
 
