@@ -12279,3 +12279,21 @@ private/ignored state, archives, neural data, targets, models, scores, network,
 FW2/CIL1, devices, release, or claims. Commit, push, and green exact Stage 1,
 then separately bind its proof-only closeout without requalification or private
 access. Stage 2 remains closed until both proof barriers are remotely green.
+
+## 0425 - Bind Exact Remote Proof For VR34P Without Requalification
+
+Proof decision: exact Stage 1 implementation
+`a0e36afd08bc9d6ae9429e9471d4650f6093e406` passed CI `32640499738`, Base
+Python job `97196742388`, and Optional Neuro Readers job `97196742556`.
+
+Identity decision: bind the 9,689-byte preproof implementation registry and
+4,479-byte result registry by byte count, SHA-256, and Git blob. Also bind the
+canonical implementation-artifact set hash and exact implementation-commit
+Git blobs for the wrapper, behavior tests, implementation tests, result tests,
+and implementation document.
+
+Boundary decision: repeat no qualification and perform no readiness, private,
+ignored-path, consumed-state, archive, neural, target, model, score, network,
+FW2/CIL1, device, other-project, release, or claim operation. This closeout is
+ineffective until its own exact commit is pushed and both required jobs are
+green. Only afterward may the one registered Stage 2 invocation begin.

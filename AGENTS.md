@@ -62,14 +62,21 @@ zero source constructions, zero source opens, and zero VR31A calls. Runtime was
 was 791 bytes and retained generated output was zero. Do not repeat this
 qualification.
 
-Immediate gate: commit, push, and green this exact Stage 1 implementation.
-Then prepare a separate proof-only closeout that binds the exact implementation
-bytes and remote proof without requalification or private access; commit,
-push, and green that closeout. Only after both barriers may the already
-authorized one-shot Stage 2 execute. Until then `execute` must refuse at
-`MARC2VR34P-F02` before readiness or private path access. Do not touch consumed
-VR32P or any private/ignored state. FW2/CIL1, archives, neural data, targets,
-models, scores, streams, devices, release, and claims remain closed.
+Exact Stage 1 `a0e36afd08bc9d6ae9429e9471d4650f6093e406` passed Base
+Python job `97196742388`, Optional Neuro Readers job `97196742556`, and CI
+`32640499738`. Read
+`docs/MARC_2_EXACT_COUNT_PRIVATE_CONFIRMATION_PROOF_CLOSEOUT.md` and its new
+matching test. The closeout binds the 9,689-byte preproof implementation
+registry, 4,479-byte result registry, canonical artifact-set hash, and exact
+implementation Git blobs. It repeats no qualification and performs zero
+private operation.
+
+Immediate gate: verify, commit, push, and green this exact proof-only closeout.
+It has delayed effect; do not run readiness or touch a private path before both
+jobs are green. Only then may the already authorized one-shot Stage 2 execute.
+Do not touch consumed VR32P or any private/ignored state. FW2/CIL1, archives,
+neural data, targets, models, scores, streams, devices, release, and claims
+remain closed.
 
 ### Consumed VR32P boundary
 

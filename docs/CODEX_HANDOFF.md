@@ -10,11 +10,13 @@
 > opens, and VR31A calls. Runtime was 3.024067790945992 seconds at 37,257,216-
 > byte peak RSS; peak temporary output was 791 bytes and retention was zero.
 > All 5,403 dependency-light tests pass with 204 expected skips. Do not repeat
-> qualification. Immediate gate: commit, push, and green exact Stage 1, then
-> separately bind and green its proof-only closeout without private access.
-> Until both barriers pass, `execute` refuses at `MARC2VR34P-F02`; Stage 2 and
-> all consumed VR32P/private, neural, target, model, score, FW2/CIL1, device,
-> release, and claim surfaces remain closed.
+> qualification. Exact Stage 1 `a0e36af` passed Base job `97196742388`,
+> Optional job `97196742556`, and CI `32640499738`. Its proof-only closeout now
+> binds both preproof registries and all five implementation Git blobs without
+> requalification or private access. Immediate gate: verify, commit, push, and
+> green that closeout. It is ineffective before remote green; until then do
+> not run readiness or touch any consumed VR32P/private, neural, target, model,
+> score, FW2/CIL1, device, release, or claim surface.
 
 > Current MARC2-VR32P result, 2026-08-23: proof-only closeout
 > `5aec8a15f5ee6fa3c6ca9cefcfb4fbfead9dd72f` passed Base Python job

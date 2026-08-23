@@ -27,12 +27,16 @@ generated output was zero. The complete dependency-light suite passes 5,403
 tests with 204 expected skips, exactly 28 more than the pre-change baseline.
 Do not repeat qualification.
 
-Immediate gate: commit, push, and green the exact Stage 1 implementation, then
-prepare and remotely green a separate proof-only closeout without touching
-private state. Stage 2 remains closed until both barriers pass; `execute`
-currently refuses at `MARC2VR34P-F02` before readiness or private access. Do
-not touch consumed VR32P or any private/ignored state. Neural, target, model,
-score, FW2/CIL1, device, release, and claim surfaces remain closed.
+Exact Stage 1 `a0e36afd08bc9d6ae9429e9471d4650f6093e406` passed Base
+Python job `97196742388`, Optional Neuro Readers job `97196742556`, and CI
+`32640499738`. The proof-only closeout now binds the immutable preproof
+registries and exact implementation Git blobs without requalification or
+private access.
+
+Immediate gate: verify, commit, push, and green the proof-only closeout. It is
+ineffective before both jobs pass, so do not run readiness or touch a private
+path yet. Consumed VR32P and all neural, target, model, score, FW2/CIL1,
+device, release, and claim surfaces remain closed.
 
 ## Consumed Boundary: MARC2-VR32P R2 With A Protocol Deviation
 

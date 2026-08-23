@@ -4,8 +4,9 @@
 > passed both jobs in CI `32639054941` before generated Stage 1. The sole
 > qualification passed all 60 paths with exact finite readiness, 32 PPP-only
 > source/VR31A calls, zero nonpassing source constructions, 223 refusals, and
-> exact replay. Do not repeat it. Commit, push, and green exact Stage 1, then
-> separately green its proof-only closeout before the one-shot private Stage 2.
+> exact replay. Do not repeat it. Exact Stage 1 `a0e36af` passed both jobs in
+> CI `32640499738`; verify, commit, push, and green its proof-only closeout
+> before the one-shot private Stage 2.
 
 > **Immediate update (2026-08-23):** exact VR32P proof closeout `5aec8a1`
 > passed Base job `97177262321`, Optional job `97177262387`, and CI
@@ -4024,6 +4025,25 @@ then separately bind and remotely green a proof-only closeout without
 requalification or private access. Only after both barriers may the already
 authorized one-shot Stage 2 execute. Do not repeat qualification or touch
 consumed VR32P/private state.
+
+### MARC2-VR34P - Exact Stage 1 Remotely Green; Proof Closeout Prepared
+
+Exact Stage 1 `a0e36afd08bc9d6ae9429e9471d4650f6093e406` passed Base
+Python job `97196742388`, Optional Neuro Readers job `97196742556`, and CI
+`32640499738`.
+
+The proof-only closeout binds the 9,689-byte preproof implementation registry,
+the 4,479-byte result registry, their SHA-256 values and Git blobs, the
+canonical implementation-artifact set hash, and exact implementation-commit
+Git blobs for the module, behavior tests, implementation tests, result tests,
+and implementation document. It repeats no qualification and performs zero
+readiness, private, ignored-path, consumed-state, archive, neural, target,
+model, score, network, device, FW2/CIL1, other-project, release, or claim
+operation.
+
+Immediate gate: verify, commit, push, and green this exact proof-only closeout.
+It has delayed effect; do not run readiness or touch a private path before
+both jobs pass. Only then may the registered one-shot Stage 2 execute.
 
 ### MARC2-VR33A - Exact-Count Readiness Repair Remotely Closed
 
