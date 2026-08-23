@@ -14046,3 +14046,25 @@ touching private state.
 Immediate gate: verify, commit, push, and green this exact closeout. Only then
 may the one registered aggregate structural direction check execute exactly
 once; no retry or rerun exists.
+
+### VR32P consumed at R2 with readiness-sampling deviation
+
+- Exact proof-only closeout `5aec8a15f5ee6fa3c6ca9cefcfb4fbfead9dd72f`
+  passed Base Python job `97177262321`, Optional Neuro Readers job
+  `97177262387`, and CI `32632497701` before execution.
+- The sole invocation opened and strict-parsed exactly 418,755 target-free
+  structural bytes once, called VR31A/VR29A/VR25A once each, made one direction
+  comparison, and returned `MARC2VR32P-R2`.
+- R2 means only that the filtered eligible total is above 195. The exact count,
+  difference magnitude, participant, selection, and cohort remain unavailable.
+- Runtime was 20.141367041040212 seconds at 30,130,176-byte peak RSS under one
+  thread/worker/job; network and new-payload bytes were zero.
+- The executor returned five readiness samples against the packet's registered
+  three. This is a protocol deviation, so R2 is retained only as a bounded
+  engineering observation and upgrades no evidence or claim.
+- The result was recorded from returned aggregate JSON without inspecting the
+  private source, readiness certificate, consumed marker, report, or output
+  root after execution.
+
+VR32P is consumed with no retry or repair. Next safe task: artifact-only and
+generated-only exact-count readiness repair and failure review.

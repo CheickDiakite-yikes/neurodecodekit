@@ -12105,3 +12105,28 @@ operation. This closeout is ineffective until its own exact commit is pushed
 and both required jobs are green. Only afterward may the one registered
 aggregate structural direction check execute exactly once; no retry or rerun
 exists.
+
+## 0417 - Consume VR32P At R2 With A Readiness-Sampling Deviation
+
+Proof decision: exact proof-only closeout
+`5aec8a15f5ee6fa3c6ca9cefcfb4fbfead9dd72f` passed CI `32632497701`, Base
+Python job `97177262321`, and Optional Neuro Readers job `97177262387` before
+the sole invocation.
+
+Result decision: record the returned aggregate route `MARC2VR32P-R2` after one
+418,755-byte target-free structural open and strict parse, one VR31A call, one
+nested VR29A call, one nested VR25A call, and one direction comparison. R2
+means only that the filtered eligible total is above 195; no count, difference
+magnitude, participant, or cohort is available.
+
+Protocol decision: the returned report records five readiness samples against
+the packet's registered three. Treat this as a readiness-sampling protocol
+deviation. Preserve R2 only as a bounded engineering observation and do not
+describe the invocation as a fully protocol-conforming registered result or
+upgrade any evidence or claim.
+
+Boundary decision: VR32P is consumed with no retry, rerun, resume, repair,
+fallback, substitution, cleanup, amendment, output inspection, or private
+reinspection. The tracked result uses only the returned aggregate JSON and
+public proof records. Archive, neural, target, model, score, FW2/CIL1, device,
+release, and scientific-claim surfaces remain closed.

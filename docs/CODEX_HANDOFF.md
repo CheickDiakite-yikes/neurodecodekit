@@ -1,34 +1,21 @@
 # Codex Handoff - NeuroDecodeKit
 
-> Current MARC2-VR32P proof closeout, 2026-08-23: exact VR31A proof-only closeout
-> `18d8fb9c9d376b680c3f0a31e513a2f37122283c` passed Base Python job
-> `97167465027`, Optional Neuro Readers job `97167465228`, and CI
-> `32628483371`. VR32P is an all-false two-stage request for a generated
-> fixed-path wrapper and, only after every proof barrier plus fresh packet-
-> bound authority, one 418,755-byte target-free structural read and one VR31A
-> call. Only aggregate R1 below 195 or R2 above 195 may be retained. Every
-> authorization flag is false and every operation counter is zero. Exact
-> request `9dc13cb29804a7adfeaa45aa821e36e160a0f6ee` passed Base Python job
-> `97169278061`, Optional Neuro Readers job `97169278037`, and CI
-> `32629224038`. The proof-only closeout binds the unchanged 24,397-byte
-> request set. Exact closeout `41d7ef7f5ae7f2288ce3af870ae786652d0aade3`
-> passed Base Python job `97171587597`, Optional Neuro Readers job
-> `97171587706`, and CI `32630153639`. After VR32P was identified as the sole
-> Tier C gate, the maintainer's next exact message was `continuecontinue`.
-> The decision preserves those 16 bytes and binds only the unchanged packet.
-> Exact decision `cb80d07b0e83c3d02d0bb3f7afae08b4ee6ba528` passed Base
-> Python job `97173642868`, Optional Neuro Readers job `97173642874`, and CI
-> `32630976806`. One generated `MARC2VR32P-G1` pass completed 32 paths, 32
-> VR31A calls, eight direction comparisons, route counts 4/4/4/4/16, 152
-> direct refusals, deterministic replay, marker-before-open ordering, and zero
-> retained output in 3.007118667010218 seconds at 35,897,344-byte peak RSS.
-> Exact Stage 1 `bae648e269e56dde45eb15295224fbafcc3c8706` passed Base
-> Python job `97175866956`, Optional Neuro Readers job `97175866782`, and CI
-> `32631907880`. The proof-only closeout binds both preproof registries, the
-> canonical artifact-set hash, and seven exact Git blobs without repeating
-> qualification or touching private state. Immediate gate: commit, push, and
-> green this exact closeout. Only then may the one registered structural
-> direction check execute exactly once; no retry or rerun exists.
+> Current MARC2-VR32P result, 2026-08-23: proof-only closeout
+> `5aec8a15f5ee6fa3c6ca9cefcfb4fbfead9dd72f` passed Base Python job
+> `97177262321`, Optional Neuro Readers job `97177262387`, and CI
+> `32632497701` before the sole invocation. The executor opened and strict-
+> parsed exactly 418,755 target-free structural bytes once, called VR31A once,
+> and returned `MARC2VR32P-R2`. R2 means only that the filtered eligible total
+> is above 195; no count, difference magnitude, participant, or cohort is
+> available. Runtime was 20.141367041040212 seconds at 30,130,176-byte peak
+> RSS with zero network and new-payload bytes. The report recorded five
+> readiness samples against the packet's registered three, so this is a
+> bounded engineering observation with a protocol deviation, not a fully
+> protocol-conforming registered result. VR32P is consumed with no retry,
+> rerun, repair, output inspection, or private reinspection. Next safe task:
+> artifact-only and generated-only exact-count readiness repair. Neural,
+> target, model, score, FW2/CIL1, device, release, and claim surfaces remain
+> closed.
 
 > Current MARC2-VR31A proof-only closeout, 2026-08-23: exact registration
 > `eeab6785b8eadc6d65199fa1ac519173f9c160c7` passed Base Python job

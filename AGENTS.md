@@ -45,53 +45,35 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
-The next gate is prepared as `MARC2-VR32P`. Read
-`docs/MARC_2_ELIGIBLE_TOTAL_DIRECTION_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md`
-and
-`registries/marc2_eligible_total_direction_private_discriminator_authorization_request.v0.json`.
-Exact VR31A proof-only closeout
-`18d8fb9c9d376b680c3f0a31e513a2f37122283c` passed Base Python job
-`97167465027`, Optional Neuro Readers job `97167465228`, and CI
-`32628483371` before this request.
-
-VR32P is an all-false two-stage request: a future generated fixed-path wrapper,
-then only after exact proof barriers one 418,755-byte target-free structural
-read and one VR31A call. It may retain only aggregate R1 below 195 or R2 above
-195, never an observed total, difference, participant, or cohort.
-
-Exact request `9dc13cb29804a7adfeaa45aa821e36e160a0f6ee` passed Base
-Python job `97169278061`, Optional Neuro Readers job `97169278037`, and CI
-`32629224038`. Read the VR32P request proof closeout and machine proof. They
-bind the unchanged three-file, 24,397-byte request artifact set and perform
-zero implementation or private operation.
-
+`MARC2-VR32P` is consumed at aggregate route `MARC2VR32P-R2` with a
+readiness-sampling protocol deviation. Read
+`docs/MARC_2_ELIGIBLE_TOTAL_DIRECTION_PRIVATE_DISCRIMINATOR_RESULT.md` and
+`registries/marc2_eligible_total_direction_private_discriminator_private_result.v0.json`.
 Exact proof-only closeout
-`41d7ef7f5ae7f2288ce3af870ae786652d0aade3` passed Base Python job
-`97171587597`, Optional Neuro Readers job `97171587706`, and CI
-`32630153639` before VR32P was identified as the sole active Tier C gate. The
-maintainer's next exact message was `continuecontinue`. Read the VR32P
-authorization decision and machine record; they preserve those 16 UTF-8 bytes
-and bind only the unchanged packet.
+`5aec8a15f5ee6fa3c6ca9cefcfb4fbfead9dd72f` passed Base Python job
+`97177262321`, Optional Neuro Readers job `97177262387`, and CI
+`32632497701` before the sole invocation.
 
-Exact decision `cb80d07b0e83c3d02d0bb3f7afae08b4ee6ba528` passed Base
-Python job `97173642868`, Optional Neuro Readers job `97173642874`, and CI
-`32630976806` before Stage 1. Read the VR32P implementation document and both
-machine records. One generated `MARC2VR32P-G1` qualification passed all 32
-paths, 32 VR31A calls, eight direction comparisons, exact route counts
-4/4/4/4/16, 152 direct refusals, and zero retention in 3.007118667010218
-seconds at 35,897,344-byte peak RSS.
+The executor opened and strict-parsed exactly 418,755 target-free structural
+bytes once, called VR31A once, and made one nested VR29A call, one nested
+VR25A call, and one direction comparison. It returned `MARC2VR32P-R2` in
+20.141367041040212 seconds at 30,130,176-byte peak RSS with zero network and
+new-payload bytes. R2 means only that the filtered eligible total is above
+195; the count, difference magnitude, participant, and cohort remain
+unavailable.
 
-Exact Stage 1 `bae648e269e56dde45eb15295224fbafcc3c8706` passed Base
-Python job `97175866956`, Optional Neuro Readers job `97175866782`, and CI
-`32631907880`. Read the VR32P proof-only closeout. It binds both preproof
-registries, the canonical implementation-artifact set, and seven exact Git
-blobs without repeating qualification or touching private state.
+The returned aggregate report recorded five readiness samples, while the
+frozen packet specified three. Treat R2 only as a bounded engineering
+observation, not a fully protocol-conforming registered result. VR32P has no
+retry, rerun, resume, repair, fallback, substitution, cleanup, amendment,
+output inspection, or private reinspection. Do not touch its private source,
+readiness state, consumed marker, or output root.
 
-Immediate gate: commit, push, and green this exact proof-only closeout. Only
-after that barrier may the one authorized private structural discriminator
-execute exactly once. Before remote green, do not touch `.codex_work`,
-consumed or private state, archives, neural data, targets, models, scores,
-FW2/CIL1, devices, streams, releases, or claims.
+The next safe task is an artifact-only and generated-only exact-count
+readiness repair and failure review. Another private read, cohort freeze,
+archive or neural payload access, target/model/score work, FW2, or CIL1
+requires a new frozen Tier C packet and decision. No scientific claim was
+upgraded.
 
 `MARC2-VR30P` is consumed at aggregate route `MARC2VR30P-R1` without a
 cohort freeze. Read

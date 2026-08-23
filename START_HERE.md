@@ -7,60 +7,34 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR32P Proof Closeout Pending Remote Green
+## Current Boundary: MARC2-VR32P Consumed At R2 With A Protocol Deviation
 
 Read
-`docs/MARC_2_ELIGIBLE_TOTAL_DIRECTION_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md`
-and
-`registries/marc2_eligible_total_direction_private_discriminator_authorization_request.v0.json`.
-VR31A proof-only closeout `18d8fb9c9d376b680c3f0a31e513a2f37122283c`
-passed Base Python job `97167465027`, Optional Neuro Readers job
-`97167465228`, and CI `32628483371` before this request.
-
-VR32P proposes two delayed stages: generated fixed-path wrapper qualification,
-then only after separate exact proof barriers one 418,755-byte target-free
-structural read and one VR31A call. Only aggregate R1 below 195 or R2 above 195
-may answer the question. The observed total, difference, participant, and
-cohort remain forbidden.
-
-Every authorization flag is false and every operation counter is zero. The
-packet performs no private, ignored-path, readiness, archive, neural, target,
-model, score, network, device, release, or claim action.
-
-Exact request `9dc13cb29804a7adfeaa45aa821e36e160a0f6ee` passed Base
-Python job `97169278061`, Optional Neuro Readers job `97169278037`, and CI
-`32629224038`. The proof-only request closeout binds the unchanged 4,328-byte
-packet, 13,544-byte machine request, and 6,525-byte request test by SHA-256 and
-Git blob. It changes no scope and performs zero operation.
-
+`docs/MARC_2_ELIGIBLE_TOTAL_DIRECTION_PRIVATE_DISCRIMINATOR_RESULT.md` and
+`registries/marc2_eligible_total_direction_private_discriminator_private_result.v0.json`.
 Exact proof-only closeout
-`41d7ef7f5ae7f2288ce3af870ae786652d0aade3` passed Base Python job
-`97171587597`, Optional Neuro Readers job `97171587706`, and CI
-`32630153639`. VR32P was then identified as the sole active Tier C packet, and
-the maintainer's next exact message was `continuecontinue`.
+`5aec8a15f5ee6fa3c6ca9cefcfb4fbfead9dd72f` passed Base Python job
+`97177262321`, Optional Neuro Readers job `97177262387`, and CI
+`32632497701` before the sole invocation.
 
-The authorization decision preserves those actual 16 UTF-8 bytes and binds
-only the unchanged remotely green packet. Exact decision
-`cb80d07b0e83c3d02d0bb3f7afae08b4ee6ba528` passed Base Python job
-`97173642868`, Optional Neuro Readers job `97173642874`, and CI
-`32630976806` before Stage 1.
+The executor opened and strict-parsed exactly 418,755 target-free structural
+bytes once, called VR31A once, and returned `MARC2VR32P-R2`. Runtime was
+20.141367041040212 seconds at 30,130,176-byte peak RSS under one thread,
+worker, and numerical job. Network and new-payload bytes were zero.
 
-One generated qualification returned `MARC2VR32P-G1`: all 32 paths, 32 VR31A
-calls, eight direction comparisons, route counts 4/4/4/4/16, 152 direct
-refusals, deterministic replay, marker-before-open ordering, source
-immutability, and zero retained output passed. Runtime was
-3.007118667010218 seconds at 35,897,344-byte peak RSS.
+R2 means only that the filtered eligible total is above 195. The exact total,
+difference magnitude, participant, selection, and cohort remain unavailable,
+and no cohort was frozen.
 
-Exact Stage 1 `bae648e269e56dde45eb15295224fbafcc3c8706` passed Base
-Python job `97175866956`, Optional Neuro Readers job `97175866782`, and CI
-`32631907880`. The proof-only closeout binds both preproof registries, the
-canonical implementation-artifact set, and seven exact Git blobs. It repeats
-no qualification and performs zero private operation.
+The returned report also records five readiness samples against the packet's
+registered three. The invocation is therefore consumed with a readiness-
+sampling protocol deviation and is not a fully protocol-conforming registered
+result. It cannot be retried or repaired.
 
-Immediate gate: verify, commit, push, and green this exact proof-only
-closeout. Private execution remains unavailable until that barrier is green;
-afterward, exactly one registered aggregate structural check may execute with
-no retry or rerun.
+Immediate safe task: perform an artifact-only and generated-only exact-count
+readiness repair and failure review. Do not inspect VR32P private or consumed
+state. Archive, neural, target, model, score, FW2/CIL1, device, release, and
+scientific-claim surfaces remain closed.
 
 ## Generated Evidence: MARC2-VR31A Remotely Closed
 
