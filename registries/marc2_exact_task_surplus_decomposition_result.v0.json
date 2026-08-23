@@ -1,0 +1,111 @@
+{
+  "schema_name": "neurodecodekit.marc2_exact_task_surplus_decomposition_result",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC2-VR37A",
+  "status": "generated_exact_task_surplus_decomposition_qualified",
+  "registration_proof": {
+    "commit": "a677e7abd2b89e92bb7bcc3f823a3493c6a32ad0",
+    "CI_run_id": 32652807264,
+    "base_job_id": 97226913287,
+    "optional_neuro_job_id": 97226913421
+  },
+  "matrix": {
+    "paths": 24,
+    "cases": 6,
+    "orders": 2,
+    "replays": 2,
+    "route_counts": {
+      "MARC2VR37A-G1": 4,
+      "MARC2VR37A-R1": 4,
+      "MARC2VR37A-R2": 4,
+      "MARC2VR37A-R3": 4,
+      "MARC2VR37A-R4": 4,
+      "MARC2VR37A-R5": 4
+    },
+    "VR35A_calls": 24,
+    "source_immutability_checks": 24,
+    "exact_replays_match": true
+  },
+  "decomposition": {
+    "published_subject_session_cells": 38,
+    "published_cell_total": 195,
+    "public_map_exact_control_distinguished": true,
+    "single_cell_contiguous_extension_distinguished": true,
+    "single_cell_noncontiguous_extension_distinguished": true,
+    "multi_cell_pure_surplus_distinguished": true,
+    "mixed_surplus_and_deficit_distinguished": true,
+    "structural_or_task_firewall_refusal_distinguished": true
+  },
+  "refusals": {
+    "direct_refusals": 87,
+    "route_counts": {
+      "MARC2VR37A-F01": 64,
+      "MARC2VR37A-F05": 20,
+      "MARC2VR37A-F06": 3
+    }
+  },
+  "measurements": {
+    "fixed_input_bytes": 122820,
+    "generated_input_bytes": 10606968,
+    "aggregate_output_bytes": 2980,
+    "retained_output_bytes": 0,
+    "runtime_seconds": 2.4954585829982534,
+    "peak_RSS_bytes": 49266688,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "end_to_end_latency_measured": false
+  },
+  "operation_counters": {
+    "repository_dot_codex_work_operations": 0,
+    "private_or_consumed_source_stats_resolves_hashes_opens_reads_or_parses": 0,
+    "archive_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "derivative_cache_feature_split_or_NeuroToken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "network_download_provider_or_language_model_operations": 0,
+    "stream_device_or_hardware_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "retry_rerun_resume_repair_fallback_or_substitution_operations": 0,
+    "release_publication_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "warnings": [
+    "generated_fixture_only_no_private_or_real_source_access",
+    "topology_classes_do_not_identify_the_consumed_private_topology",
+    "no_real_cohort_archive_member_neural_payload_or_scientific_result"
+  ],
+  "unavailable_fields": [
+    "private_exact_task_total_or_difference",
+    "private_cell_topology_identity_or_run_set",
+    "real_target_free_cohort",
+    "archive_member_integrity",
+    "neural_signal_event_target_model_prediction_or_score",
+    "end_to_end_neural_decoding_latency"
+  ],
+  "claim_boundary": {
+    "engineering_capability_if_qualified": "generated aggregate topology discriminator for exact-task eligible-total surplus",
+    "scientific_ceiling": "none",
+    "private_source_accessed": false,
+    "real_cohort_established": false,
+    "neural_payload_accessed": false,
+    "decoding_performance_established": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "live_decoding": false
+  },
+  "qualification_invocations": 1,
+  "qualification_may_be_repeated": false,
+  "remote_implementation_proof": null,
+  "next_gate": {
+    "implementation_commit_push_and_both_jobs_green_required": true,
+    "qualification_may_be_repeated": false,
+    "private_discriminator_or_read_authorized": false,
+    "future_private_discriminator_requires_new_Tier_C_packet_and_decision": true,
+    "FW2_CIL1_archive_neural_target_model_score_or_live_work_authorized": false
+  }
+}

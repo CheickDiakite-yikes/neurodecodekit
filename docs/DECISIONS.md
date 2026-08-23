@@ -12507,3 +12507,21 @@ refusal across 24 paths and at least 60 direct refusals.
 Boundary decision: VR37A has no private executor and authorizes no private,
 archive, neural, target, model, score, FW2/CIL1, release, or claim operation.
 Its exact registration must be remotely green before implementation.
+
+## 0437 - Accept VR37A Generated Surplus Decomposition
+
+Proof decision: registration
+`a677e7abd2b89e92bb7bcc3f823a3493c6a32ad0` passed CI `32652807264`,
+Base Python job `97226913287`, and Optional Neuro Readers job `97226913421`
+before implementation.
+
+Engineering decision: accept the standard-library six-route discriminator and
+its sole generated qualification. All 24 paths passed with G1/R1-R5 x4,
+exactly 24 unchanged VR35A calls, 87 direct refusals, exact replay, 24 source
+immutability checks, and zero retention.
+
+Boundary decision: qualification may not be repeated. VR37A identifies no
+consumed private topology and opens no private, archive, neural, target, model,
+score, FW2/CIL1, release, or claim operation. Commit, push, and green the exact
+implementation/result before a proof-only closeout. A private discriminator
+requires a new frozen Tier C packet and fresh decision.

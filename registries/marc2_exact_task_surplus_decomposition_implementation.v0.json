@@ -1,0 +1,148 @@
+{
+  "schema_name": "neurodecodekit.marc2_exact_task_surplus_decomposition_implementation",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC2-VR37A",
+  "recorded_at_local": "2026-08-23",
+  "status": "generated_qualification_passed_remote_implementation_proof_pending",
+  "registration_proof": {
+    "commit": "a677e7abd2b89e92bb7bcc3f823a3493c6a32ad0",
+    "CI_run_id": 32652807264,
+    "base_job_id": 97226913287,
+    "optional_neuro_job_id": 97226913421,
+    "both_required_jobs_green": true,
+    "contract_bytes": 7450,
+    "contract_sha256": "4dd92ec97bcd63837174bc9cd1e7562cc395affae3a618677e22fd44fb3a8c2e"
+  },
+  "implementation_artifacts": [
+    {
+      "role": "module",
+      "path": "src/neurodecodekit/datasets/marc2_exact_task_surplus_decomposition.py",
+      "bytes": 27034,
+      "sha256": "9702b1e2351d3f48054400d2a0b1ab940a0fff8876a44ac820ff9116772226cc"
+    },
+    {
+      "role": "behavior_tests",
+      "path": "tests/test_marc2_exact_task_surplus_decomposition.py",
+      "bytes": 5470,
+      "sha256": "ee1ef65a1db248514aff5002e4e0a42d99f6195cfa0f770403c432d6abb534d6"
+    },
+    {
+      "role": "result_tests",
+      "path": "tests/test_marc2_exact_task_surplus_decomposition_result.py",
+      "bytes": 3316,
+      "sha256": "55bddf03d352a515fd5cb838b31417ee0df47e735b5d8375e26dfd0661f1f153"
+    },
+    {
+      "role": "implementation_document",
+      "path": "docs/MARC_2_EXACT_TASK_SURPLUS_DECOMPOSITION_IMPLEMENTATION.md",
+      "bytes": 4010,
+      "sha256": "31fd6f99ef3beec9fda737742b54a298e5546ca97c13b393aa6f321be9057c25"
+    },
+    {
+      "role": "generated_result",
+      "path": "registries/marc2_exact_task_surplus_decomposition_result.v0.json",
+      "bytes": 3996,
+      "sha256": "23c575f3662e5a51cd4f549f4bdbcbf482b8929a7c31c090dfddc3ee512632f5"
+    }
+  ],
+  "implementation_artifact_count": 5,
+  "implementation_artifact_bytes": 43826,
+  "surface": {
+    "commands": [
+      "plan",
+      "qualify"
+    ],
+    "private_executor_available": false,
+    "private_or_Git_ignored_path_constants": 0,
+    "generic_path_URL_output_count_threshold_task_rank_cap_route_retry_or_resource_arguments": 0,
+    "standard_library_only": true,
+    "base_dependency_additions": 0,
+    "consumed_private_module_imports_or_calls": 0
+  },
+  "qualification": {
+    "qualification_invocations": 1,
+    "qualification_may_be_repeated": false,
+    "paths": 24,
+    "cases": 6,
+    "orders": 2,
+    "replays": 2,
+    "route_counts": {
+      "MARC2VR37A-G1": 4,
+      "MARC2VR37A-R1": 4,
+      "MARC2VR37A-R2": 4,
+      "MARC2VR37A-R3": 4,
+      "MARC2VR37A-R4": 4,
+      "MARC2VR37A-R5": 4
+    },
+    "VR35A_calls": 24,
+    "source_immutability_checks": 24,
+    "direct_refusals_passed": 87,
+    "exact_replays_match": true,
+    "retained_output_bytes": 0
+  },
+  "resources": {
+    "fixed_input_bytes": 122820,
+    "generated_input_bytes": 10606968,
+    "runtime_seconds": 2.4954585829982534,
+    "peak_RSS_bytes": 49266688,
+    "aggregate_output_bytes": 2980,
+    "retained_output_bytes": 0,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "network_bytes": 0,
+    "new_payload_bytes": 0
+  },
+  "verification": {
+    "pre_change_dependency_light_tests": 5522,
+    "focused_tests_passed": 22,
+    "complete_dependency_light_tests_passed": 5538,
+    "expected_dependency_light_skips": 204,
+    "new_failures": 0,
+    "test_delta": 16,
+    "optional_neuro_tests_observed": 5604,
+    "optional_neuro_expected_skips": 35,
+    "optional_neuro_sandbox_socket_errors": 1,
+    "isolated_unsandboxed_socket_test_reruns_passed": 1,
+    "repository_pinned_ruff_version": "0.15.20",
+    "repository_pinned_ruff_passed": true,
+    "format_check_passed": true,
+    "compile_passed": true,
+    "git_diff_check_passed": true,
+    "qualification_repeated_during_verification": false,
+    "private_operations_during_verification": 0
+  },
+  "operation_counters": {
+    "repository_dot_codex_work_operations": 0,
+    "private_or_consumed_source_stats_resolves_hashes_opens_reads_or_parses": 0,
+    "archive_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "derivative_cache_feature_split_or_NeuroToken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "network_download_provider_or_language_model_operations": 0,
+    "stream_device_or_hardware_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "retry_rerun_resume_repair_fallback_or_substitution_operations": 0,
+    "release_publication_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "remote_implementation_proof": null,
+  "next_gate": {
+    "implementation_commit_push_and_both_jobs_green_required": true,
+    "proof_only_closeout_required_after_remote_green": true,
+    "qualification_may_be_repeated": false,
+    "private_execution_or_consumed_lane_reinspection_authorized": false,
+    "future_private_discriminator_requires_new_Tier_C_packet_and_decision": true,
+    "FW2_CIL1_archive_neural_target_model_score_or_live_work_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "generated aggregate topology discriminator for exact-task eligible-total surplus",
+    "scientific_ceiling": "none",
+    "real_cohort_established": false,
+    "neural_payload_accessed": false,
+    "target_model_prediction_or_score_accessed": false,
+    "decoding_performance_established": false,
+    "unseen_person_generalization_established": false,
+    "live_decoding_established": false
+  }
+}
