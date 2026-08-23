@@ -1,11 +1,13 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate gate (2026-08-23):** exact all-false VR37P request `e89908a`
-> passed Base job `97234876608`, Optional job `97234876537`, and CI
-> `32656051436`. Commit, push, and green its non-scope-changing request proof
-> closeout. Only then may VR37P be identified as the sole active Tier C packet.
-> No implementation or private access is authorized. Archive, neural, target,
-> model, score, FW2/CIL1, and claim surfaces are closed.
+> **Immediate gate (2026-08-23):** VR37P proof closeout `7de1280` passed Base
+> job `97236607433`, Optional job `97236607490`, and CI `32656773778`, but every
+> VR37P route freezes zero cohorts. Leave it unexecuted. Commit, push, and green
+> the generated-only VR38A selection-sufficiency registration, then prove that
+> harmless optional-run drift cannot alter the selected first-three-run cohort.
+> The next private structural packet must freeze at least 12 participants or
+> park Freewill; archive, neural, target, model, score, FW2/CIL1, and claim
+> surfaces remain closed.
 
 > **Immediate update (2026-08-23):** exact VR32P proof closeout `5aec8a1`
 > passed Base job `97177262321`, Optional job `97177262387`, and CI
@@ -4207,6 +4209,29 @@ changing scope or performing any requested operation.
 
 Immediate gate: commit, push, and green the request proof closeout. The current
 or any earlier `continue` is not retroactive authority.
+
+### MARC2-VR38A - Selection-Sufficiency Repair Registered
+
+VR37P proof closeout `7de128053620514d067dbc1c99318a2b3bdb69e1` passed Base
+job `97236607433`, Optional job `97236607490`, and CI `32656773778`. The packet
+is technically eligible for a fresh decision, but it is intentionally left
+unexecuted because no R1-R7 route can freeze a cohort or unlock FW2/CIL1.
+
+VR38A instead freezes a generated-only selection-sufficiency test. It requires
+the exact source envelope, published task, known taxonomy, complete companions,
+DOI-derived participant rank, runs 1-3 in both sessions, unchanged split, and
+the 8 GiB reservation cap. Additional complete later runs may be ignored only
+when all accepted generated variants preserve one exact semantic selection.
+
+The matrix contains ten cases, two source orders, and two replays for 40 paths:
+20 accepted paths across exact and harmless-drift sources, eight required-run
+refusals, eight structural/taxonomy refusals, and four storage-prefix refusals.
+At least 80 direct refusals and zero retained output are required.
+
+Immediate gate: commit, push, and green the exact VR38A registration before
+implementation. After a successful generated qualification and proof closeout,
+the next Tier C structural packet must either freeze at least 12 participants or
+park Freewill without another private topology-only diagnostic.
 
 ### MARC2-VR33A - Exact-Count Readiness Repair Remotely Closed
 

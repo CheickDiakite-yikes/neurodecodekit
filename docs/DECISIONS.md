@@ -12577,3 +12577,21 @@ counter remains zero. The proof has delayed effect until its own commit is
 pushed and both CI jobs are green. Only then may VR37P be identified as the
 sole active Tier C packet for a fresh maintainer decision; no wrapper or private
 access is authorized by the request or this proof.
+
+## 0441 - Replace Topology Diagnosis With Selection Sufficiency
+
+Proof decision: VR37P request proof closeout
+`7de128053620514d067dbc1c99318a2b3bdb69e1` passed CI `32656773778`, Base
+Python job `97236607433`, and Optional Neuro Readers job `97236607490`.
+
+Research decision: leave VR37P unexecuted. Every registered private route would
+classify surplus topology but freeze no cohort, so it cannot unlock FW2 or
+CIL1. Preregister generated-only VR38A to test the decision-relevant invariant
+directly: whether exact first-three-run selection remains unchanged under
+harmless optional-run drift.
+
+Boundary decision: preserve exact source, task, taxonomy, companion, rank,
+split, member, and storage validation. The future terminal private packet must
+freeze at least 12 participants or park Freewill; no further topology-only
+private discriminator is eligible. VR38A registration performs zero private,
+archive, neural, target, model, score, FW2/CIL1, release, or claim operation.

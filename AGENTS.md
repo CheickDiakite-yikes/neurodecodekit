@@ -136,21 +136,34 @@ Proof-only closeout `4287a860ae11b47a9ccb50090ae62e6e4be2b59a` passed
 Base job `97232723710`, Optional job `97232723664`, and CI `32655208775`.
 VR37A is remotely closed as generated engineering.
 
-The next all-false request is now prepared as `MARC2-VR37P`. Read
+The all-false request prepared as `MARC2-VR37P` is remotely proven but will be
+left unexecuted. Read
 `docs/MARC_2_EXACT_TASK_SURPLUS_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md`
 and
 `registries/marc2_exact_task_surplus_private_discriminator_authorization_request.v0.json`.
 It requests generated/mock wrapper qualification and, after every later proof
 barrier, one aggregate route-only private topology discrimination. Exact
-request `e89908adf508ca3c858b4ee0509c45fd8d29f866` passed Base job
+Request `e89908adf508ca3c858b4ee0509c45fd8d29f866` passed Base job
 `97234876608`, Optional job `97234876537`, and CI `32656051436`. Read the
 request proof closeout and machine proof.
 
-Immediate gate: commit, push, and green the exact non-scope-changing request
-proof closeout. Only then may VR37P be identified as the sole active Tier C
-packet. No implementation or private access is authorized now. Archive,
-neural, target, model, score, FW2/CIL1, device, release, and claim surfaces
-remain closed.
+Proof closeout `7de128053620514d067dbc1c99318a2b3bdb69e1` passed Base
+job `97236607433`, Optional job `97236607490`, and CI `32656773778`. Independent
+review found that every VR37P route freezes zero cohorts, so another private
+topology label would not unlock FW2 or CIL1. No packet-bound decision was
+recorded and VR37P remains unexecuted, unauthorized, and unconsumed.
+
+Immediate gate: read
+`docs/MARC_2_SELECTION_SUFFICIENCY_REPAIR_PREREGISTRATION.md`,
+`registries/marc2_selection_sufficiency_repair_contract.v0.json`, and its
+registration test. `MARC2-VR38A` freezes a generated-only selector that accepts
+harmless optional runs only when the selected first-three fit/held-out core,
+rank, split, source-exact members, and reservation are unchanged. Its next
+private packet must either freeze at least 12 participants or park Freewill;
+another topology-only private discriminator is prohibited. Commit, push, and
+green this exact registration before implementation or qualification. No
+private, archive, neural, target, model, score, FW2/CIL1, device, release, or
+claim action is authorized now.
 
 ### Consumed VR34P boundary
 

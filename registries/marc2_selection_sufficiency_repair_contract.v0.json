@@ -1,0 +1,232 @@
+{
+  "schema_name": "neurodecodekit.marc2_selection_sufficiency_repair_contract",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC2-VR38A",
+  "recorded_at_local": "2026-08-23",
+  "status": "preregistered_generated_only_implementation_blocked_until_remote_green",
+  "research_question": "Can generated target-task sources with harmless optional-run drift preserve one exact scientific selection while every selected-core structural taxonomy split and storage defect refuses?",
+  "green_predecessor_proof": {
+    "commit": "7de128053620514d067dbc1c99318a2b3bdb69e1",
+    "CI_run_id": 32656773778,
+    "base_python_job_id": 97236607433,
+    "optional_neuro_job_id": 97236607490,
+    "both_required_jobs_green": true
+  },
+  "fixed_inputs": [
+    {
+      "path": "src/neurodecodekit/datasets/marc2_exact_task_surplus_decomposition.py",
+      "bytes": 27034,
+      "sha256": "9702b1e2351d3f48054400d2a0b1ab940a0fff8876a44ac820ff9116772226cc"
+    },
+    {
+      "path": "registries/marc2_exact_task_surplus_decomposition_contract.v0.json",
+      "bytes": 7450,
+      "sha256": "4dd92ec97bcd63837174bc9cd1e7562cc395affae3a618677e22fd44fb3a8c2e"
+    },
+    {
+      "path": "registries/marc2_exact_task_surplus_decomposition_implementation.v0.json",
+      "bytes": 6976,
+      "sha256": "bb8e0710e1a61af3fcde7f3f7c1db71c45ebfa97a0b7597fb588b079c0e3a2b6"
+    },
+    {
+      "path": "registries/marc2_exact_task_surplus_decomposition_result.v0.json",
+      "bytes": 5522,
+      "sha256": "28c8f457cffd1b13f2c9cc92ab6c40d2960ac864ddbd8c2719c074bb78b025bf"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/marc2_task_aware_eligibility_repair.py",
+      "bytes": 35615,
+      "sha256": "a2acf29d44cfba6f840a239cdb72e4ac35a057576022c43bff1f37fd64c7fa51"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/marc2_source_validity_eligibility_repair.py",
+      "bytes": 55503,
+      "sha256": "cef7bb738ceee86847067cec788e442aa5022c8f573a814638ef3d48b6ec3587"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/marc2_freewill_prefix_selection.py",
+      "bytes": 72691,
+      "sha256": "86fa30fbd1caed735f0fb2e627144482a2bb8e033567bb3794e3f05508005c97"
+    },
+    {
+      "path": "registries/marc2_freewill_prefix_selection_contract.v0.json",
+      "bytes": 15821,
+      "sha256": "dfe614cd7ec27c54c4f03848e3878c714222db043f501b9b07e57c7dc9f5f702"
+    },
+    {
+      "path": "docs/MARC_2_EXACT_TASK_SURPLUS_PRIVATE_DISCRIMINATOR_REQUEST_PROOF_CLOSEOUT.md",
+      "bytes": 3123,
+      "sha256": "a80375081729bf8d22b9392b73bb0c064172259bbb47fddfca7904c0ba371be6"
+    },
+    {
+      "path": "docs/MARC_2_MACHINE_STABLE_COHORT_AND_NEURAL_CONTROL_RESEARCH.md",
+      "bytes": 12045,
+      "sha256": "b9536f86f5bd1bc7a8b471d95619e2b330e54eb1ba6a4949c6e037af221f6ef3"
+    },
+    {
+      "path": "docs/FIVE_CLAIM_PROOF_STRATEGY_2026-08-22.md",
+      "bytes": 10906,
+      "sha256": "eb05c6eba6170cb866f7af6b7e794af99d16ae6424e6928d071284fe08847cd3"
+    }
+  ],
+  "fixed_input_count": 11,
+  "fixed_input_bytes": 252686,
+  "artifact_only_findings": {
+    "consumed_VR36P_route": "MARC2VR36P-R3",
+    "exact_task_projected_eligible_total_above_195": true,
+    "private_surplus_topology_known": false,
+    "VR37P_request_commit": "e89908adf508ca3c858b4ee0509c45fd8d29f866",
+    "VR37P_proof_commit": "7de128053620514d067dbc1c99318a2b3bdb69e1",
+    "VR37P_packet_remotely_proven": true,
+    "VR37P_packet_bound_decision_received": false,
+    "VR37P_private_execution_performed": false,
+    "VR37P_any_route_can_freeze_cohort": false,
+    "existing_selector_uses_first_three_sorted_runs": true,
+    "existing_selector_requires_runs_1_2_3": true,
+    "existing_exact_195_gate_precedes_selection": true,
+    "selection_sufficiency_can_be_qualified_generated_only": true
+  },
+  "selection_contract": {
+    "published_task": "reachingandgrasping",
+    "eligible_subjects_in_rank": 19,
+    "minimum_selected_subjects": 12,
+    "maximum_selected_subjects": 19,
+    "fit_session": "ses-01",
+    "heldout_session": "ses-02",
+    "required_runs_per_session": [
+      1,
+      2,
+      3
+    ],
+    "selected_bundles_per_subject": 6,
+    "required_companions_per_bundle": 4,
+    "selected_core_members_per_subject": 24,
+    "reservation_cap_bytes": 8589934592,
+    "participant_rank_may_change": false,
+    "split_may_change": false,
+    "selected_run_above_3_allowed": false,
+    "non_target_or_ineligible_selected_row_allowed": false,
+    "optional_complete_run_above_3_may_be_ignored": true,
+    "global_eligible_total_equality_required_for_selection": false,
+    "source_envelope_row_path_name_companion_and_taxonomy_validation_required": true
+  },
+  "ordered_routes": [
+    {
+      "route": "MARC2VR38A-G1",
+      "meaning": "public-map generated control selects the frozen semantic cohort"
+    },
+    {
+      "route": "MARC2VR38A-G2",
+      "meaning": "optional-run drift is accepted and selects the same semantic cohort"
+    },
+    {
+      "route": "MARC2VR38A-R1",
+      "meaning": "a required selected fit or held-out run is unavailable or selection identity differs"
+    },
+    {
+      "route": "MARC2VR38A-R2",
+      "meaning": "source task taxonomy path normalized-run or companion validation refuses"
+    },
+    {
+      "route": "MARC2VR38A-R3",
+      "meaning": "fewer than twelve ranked participants fit the unchanged reservation cap"
+    }
+  ],
+  "generated_matrix": {
+    "cases": [
+      "public_map_exact_control",
+      "single_cell_contiguous_optional_surplus",
+      "single_cell_noncontiguous_optional_surplus",
+      "multi_cell_optional_surplus",
+      "mixed_optional_surplus_and_deficit",
+      "required_fit_run_missing",
+      "required_heldout_run_missing",
+      "unknown_participant",
+      "incomplete_companion_set",
+      "minimum_prefix_exceeds_cap"
+    ],
+    "orders": [
+      "canonical",
+      "reversed"
+    ],
+    "replays": 2,
+    "required_paths": 40,
+    "accepted_paths": 20,
+    "expected_route_counts": {
+      "MARC2VR38A-G1": 4,
+      "MARC2VR38A-G2": 16,
+      "MARC2VR38A-R1": 8,
+      "MARC2VR38A-R2": 8,
+      "MARC2VR38A-R3": 4
+    },
+    "accepted_semantic_selection_identities": 1,
+    "minimum_direct_refusals": 80,
+    "deterministic_replay_required": true,
+    "order_invariance_required": true,
+    "source_mutations_allowed": 0,
+    "selected_optional_runs_allowed": 0,
+    "selected_non_target_rows_allowed": 0,
+    "retained_generated_output_bytes": 0
+  },
+  "implementation_contract": {
+    "future_module": "neurodecodekit.datasets.marc2_selection_sufficiency_repair",
+    "commands": [
+      "plan",
+      "qualify"
+    ],
+    "dependency_policy": "standard_library_only",
+    "base_dependency_additions": 0,
+    "generated_qualification_invocation_limit": 1,
+    "private_executor_allowed": false,
+    "private_or_Git_ignored_path_constants_allowed": false,
+    "generic_path_URL_output_count_threshold_task_rank_cap_route_retry_or_resource_arguments": 0,
+    "consumed_private_executor_import_or_call_allowed": false,
+    "VR37P_wrapper_or_private_discriminator_call_allowed": false
+  },
+  "resource_limits": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds_maximum": 30,
+    "peak_RSS_bytes_maximum_exclusive": 268435456,
+    "generated_output_bytes_maximum": 1048576,
+    "network_bytes": 0,
+    "new_payload_bytes": 0
+  },
+  "forbidden_operations": {
+    "repository_dot_codex_work_operations": 0,
+    "private_or_consumed_source_stats_resolves_hashes_opens_reads_or_parses": 0,
+    "VR37P_decision_implementation_or_execution_operations": 0,
+    "archive_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "derivative_cache_feature_split_or_NeuroToken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "network_download_provider_or_language_model_operations": 0,
+    "stream_device_or_hardware_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "retry_rerun_resume_repair_fallback_or_substitution_operations": 0,
+    "release_publication_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "terminal_next_gate": {
+    "registration_commit_push_and_both_jobs_green_before_implementation": true,
+    "generated_qualification_allowed_before_remote_green": false,
+    "implementation_and_proof_green_before_private_packet": true,
+    "next_private_structural_request_must_freeze_a_cohort_or_park_Freewill": true,
+    "topology_only_private_successor_allowed": false,
+    "minimum_private_cohort_subjects_if_successful": 12,
+    "private_read_cohort_freeze_archive_neural_target_model_score_or_claim_authorized_now": false
+  },
+  "claim_boundary": {
+    "engineering_capability_if_qualified": "generated proof that deterministic scientific selection is invariant to harmless optional-run drift",
+    "scientific_ceiling": "none",
+    "private_source_accessed": false,
+    "real_cohort_established": false,
+    "neural_payload_accessed": false,
+    "decoding_performance_established": false,
+    "no_signal_or_peripheral_baseline_beaten": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "live_decoding": false
+  }
+}

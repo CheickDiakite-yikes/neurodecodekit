@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: MARC2-VR37P All-False Request Proof
+## Current Gate: MARC2-VR38A Selection-Sufficiency Registration
 
 Read the VR35A preregistration and implementation documents, contract,
 implementation record, generated result, and matching tests. Registration
@@ -103,9 +103,24 @@ job `97234876608`, Optional job `97234876537`, and CI `32656051436`. Its
 proof closeout binds the 5,743-byte packet, 15,681-byte machine request, and
 7,715-byte request test by SHA-256 and Git blob without changing scope.
 
-Immediate gate: commit, push, and green the exact request proof closeout. Only
-then may VR37P be identified as the sole active Tier C packet. No implementation
-or private access is authorized now. Archive, neural, target, model, score,
+Proof closeout `7de128053620514d067dbc1c99318a2b3bdb69e1` passed Base job
+`97236607433`, Optional job `97236607490`, and CI `32656773778`. VR37P is
+therefore remotely proven, but no packet-bound decision was recorded and it
+remains unexecuted. Because every VR37P route freezes zero cohorts, executing
+it would not unlock FW2 or CIL1.
+
+The new generated-only `MARC2-VR38A` registration freezes a selection-
+sufficiency rule instead. It keeps exact source, task, taxonomy, companion,
+rank, split, and storage checks; requires runs 1-3 in both sessions for the
+examined ranked prefix; and ignores only complete optional later runs that
+cannot change the selected semantic cohort. Forty generated paths must prove
+one shared selection across the exact control and four harmless-drift classes,
+while required-run, taxonomy, companion, and minimum-prefix defects refuse.
+
+Immediate gate: commit, push, and green the exact VR38A registration before
+implementation or qualification. Its future terminal private request must
+either freeze at least 12 participants or park Freewill without another
+topology-only discriminator. Private, archive, neural, target, model, score,
 FW2/CIL1, and claim work remain closed.
 
 ## Consumed Boundary: MARC2-VR34P Protocol-Conforming R2

@@ -14567,3 +14567,26 @@ are not retroactive authority.
 Immediate gate: commit, push, and green this exact request proof closeout.
 Only afterward may VR37P be identified as the sole active Tier C packet for a
 fresh packet-bound maintainer decision.
+
+### VR37P left unexecuted; VR38A selection-sufficiency repair registered
+
+- Proof closeout `7de128053620514d067dbc1c99318a2b3bdb69e1` passed Base
+  Python job `97236607433`, Optional Neuro Readers job `97236607490`, and CI
+  `32656773778`.
+- Independent statistical, gate, and research-operations reviews agreed that a
+  route-only VR37P pass cannot unlock science because every outcome freezes zero
+  cohorts. No packet-bound decision, wrapper, or private execution occurred.
+- VR38A binds eleven committed inputs totaling 252,686 bytes and freezes the
+  exact decision-relevant selector: known source/task/taxonomy, complete
+  companions, DOI rank, sessions 1/2, runs 1-3, exact split/member facts, 8 GiB
+  reservation, and a 12-person minimum.
+- Ten cases, two orders, and two replays require 40 generated paths, one semantic
+  selection across 20 accepted paths, at least 80 direct refusals, zero selected
+  optional or non-target runs, and zero retained output.
+- The next private structural request is terminal by design: freeze at least 12
+  participants or park Freewill. Another topology-only private discriminator is
+  excluded.
+
+Immediate gate: verify, commit, push, and green this exact registration before
+implementation or qualification. Private, archive, neural, target, model,
+prediction, score, FW2/CIL1, release, and claim operations remain closed.
