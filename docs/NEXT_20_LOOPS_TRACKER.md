@@ -1,15 +1,15 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate update (2026-08-23):** `MARC2-VR30P` generated Stage 1 returned
-> `MARC2VR30P-G1`. All 32 paths passed with 32 unchanged VR29A calls, 32 nested
-> VR25A calls, 16 nested VR2 eligible-filter calls, G1/G2/R1/R2/R3 counts
-> 4/4/8/8/8, 151 direct refusals, exact replay, source immutability, and zero
-> retention. Runtime was 2.467852458008565 seconds at 34,127,872-byte peak RSS.
-> No private or neural surface was touched. Exact implementation `b20d632`
-> passed Base job `97157732938`, Optional job `97157733105`, and CI
-> `32624543064`. Its proof-only closeout now binds the exact preproof registries
-> and five immutable Git blobs. The closeout must become remotely green before
-> the authorized one-shot target-free structural Stage 2 may run.
+> **Immediate update (2026-08-23):** exact VR30P proof-only closeout `7ce2c5e`
+> passed Base job `97159363190`, Optional job `97159363046`, and CI
+> `32625197776` before the sole invocation. The run read and strict-parsed
+> exactly 418,755 target-free structural bytes once, called VR29A once, and
+> consumed at `MARC2VR30P-R1` in 10.091467417078093 seconds at 30,752,768-byte
+> peak RSS. R1 means the filtered eligible total differs from 195. No observed
+> count, direction, magnitude, participant, or cohort was retained; no neural
+> payload, target, model, prediction, or score was accessed. VR30P has no retry
+> or private reinspection. Next safe lane: a generated-only below/above-total
+> discriminator.
 
 > **Current MARC2 frontier (2026-08-22):** VR20A corrected the inherited
 > `task-freewill` identity to the primary-source-published
@@ -3929,7 +3929,29 @@ ignored-path, archive, neural, target, model, score, network, FW2/CIL1, or
 claim operation. Next gate: commit, push, and green this exact closeout. Only
 then may the one registered target-free structural discriminator execute.
 
-### MARC2-VR30P - Packet-Bound Decision Pending Green
+### MARC2-VR30P - Consumed At R1
+
+Exact proof-only closeout `7ce2c5e7f7dde15dfe1dfafa35058613ae09b016`
+passed Base Python job `97159363190`, Optional Neuro Readers job
+`97159363046`, and CI `32625197776` before the sole invocation.
+
+The executor collected three readiness samples, opened and strict-parsed
+exactly 418,755 target-free structural bytes once, called VR29A once, called
+unchanged VR25A once, called the unchanged VR2 eligible filter once, and
+returned `MARC2VR30P-R1`. Runtime was 10.091467417078093 seconds at
+30,752,768-byte peak RSS; network and new-payload bytes were zero.
+
+R1 localizes the blocker to filtered eligible-total arithmetic: the total
+differs from 195. The observed total, direction, magnitude, participant,
+selection, and cohort remain unavailable, and the later participant-session
+distribution check was not reached. No cohort was frozen and no archive,
+neural, target, model, prediction, or score was accessed.
+
+VR30P is consumed with no retry or reinspection. The next safe task is an
+artifact-only and generated-only below/above-total direction discriminator.
+Any new private read remains a separate Tier C packet and decision.
+
+### MARC2-VR30P - Packet-Bound Decision Remotely Green
 
 Exact request proof closeout
 `44dc8ac5d2090c072332fe000e7c506da9b18e28` passed Base Python job

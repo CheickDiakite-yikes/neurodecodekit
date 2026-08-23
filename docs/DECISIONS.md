@@ -11903,3 +11903,31 @@ score, network, FW2/CIL1, hardware, other-project, release, or claim operation.
 This closeout is ineffective until its own exact commit is pushed and both CI
 jobs are green. Only afterward may the already authorized one-shot target-free
 structural Stage 2 execute.
+
+## 0408 - Accept The One-Shot VR30P R1 Structural Result
+
+Proof decision: exact proof-only closeout
+`7ce2c5e7f7dde15dfe1dfafa35058613ae09b016` passed CI `32625197776`, Base
+Python job `97159363190`, and Optional Neuro Readers job `97159363046` before
+the sole invocation.
+
+Result decision: accept aggregate route `MARC2VR30P-R1` after three fresh
+readiness samples, one 418,755-byte target-free structural content open, one
+strict JSON parse, one VR29A call, one nested unchanged VR25A call, and one
+nested unchanged VR2 eligible-filter call. Record 10.091467417078093 seconds
+runtime, 30,752,768-byte peak RSS, zero network bytes, and zero new-payload
+bytes under one CPU thread, one worker, and one numerical job.
+
+Interpretation decision: R1 means the filtered eligible total differs from the
+registered public total of 195. Do not infer or recover the observed total,
+direction, magnitude, failed private value, row, path, identity, participant,
+selection, reservation, or cohort. Because the ordered discriminator stopped
+at R1, the participant-session distribution outcome remains unknown.
+
+Boundary decision: VR30P is consumed with no retry, rerun, resume, repair,
+fallback, substitution, cleanup, amendment, output inspection, or private
+reinspection. The result record may reproduce only the aggregate return and
+already public proof. No archive, neural, target, model, prediction, score,
+FW2/CIL1, provider, stream, device, release, or scientific claim surface is
+opened. A generated-only direction discriminator may be prepared under Tier
+A/B; any new private read remains a separate Tier C packet and decision.

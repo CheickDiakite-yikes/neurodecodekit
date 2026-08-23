@@ -13864,3 +13864,32 @@ the one registered target-free structural Stage 2 invocation run.
 Immediate gate: commit, push, and green this exact Stage 1. Then prepare and
 separately green a proof-only closeout without repeating qualification or
 touching private state. Stage 2 remains closed until that proof.
+
+### VR30P consumed at R1
+
+- Exact proof-only closeout `7ce2c5e7f7dde15dfe1dfafa35058613ae09b016`
+  passed Base Python job `97159363190`, Optional Neuro Readers job
+  `97159363046`, and CI `32625197776` before the sole invocation.
+- The executor collected three fresh readiness samples, opened and
+  strict-parsed exactly 418,755 target-free structural bytes once, called
+  VR29A once, called unchanged VR25A once, and called the unchanged VR2
+  eligible filter once.
+- The invocation consumed at `MARC2VR30P-R1` in 10.091467417078093 seconds at
+  30,752,768-byte peak RSS under one thread, worker, and numerical job.
+  Network and new-payload bytes were zero.
+- R1 establishes only that the filtered eligible total differs from the
+  registered public total of 195. The observed total, direction, magnitude,
+  participant, and cohort remain unavailable. The later participant-session
+  distribution check was not reached.
+- Exact combined output bytes were not returned and were not recovered by
+  inspecting private output. The canonical aggregate return is 1,246 bytes.
+  Post-execution free disk was 113,453,273,088 bytes.
+- No archive member, neural signal, event, target, model, prediction, score,
+  FW2/CIL1, network, device, hardware, other project, release, or scientific
+  claim operation occurred.
+
+VR30P is consumed with no retry, rerun, resume, repair, fallback,
+substitution, cleanup, amendment, output inspection, or private reinspection.
+The next safe task is a generated-only direction discriminator for below- or
+above-expected eligible totals. Another private read remains a separate Tier C
+packet and fresh decision.
