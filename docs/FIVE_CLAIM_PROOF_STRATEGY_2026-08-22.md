@@ -161,12 +161,12 @@ preserves genuine target-task drift, reproduces the baseline semantic cohort,
 and selects zero non-target rows. This establishes the repair mechanism on
 generated fixtures, not the private cause of VR34P R2.
 
-Exact implementation `599e22d` passed both required jobs in CI `32644887730`.
-The immediate gate is the separate proof-only closeout without
-requalification. Only after that closeout is remotely green may an all-false
-private cohort-confirmation packet be prepared. VR35A has no private executor
-and cannot freeze a cohort; private confirmation and all FW2 work remain
-separate Tier C decisions.
+VR35A proof closeout `6744568` passed both required jobs in CI `32645704669`.
+All-false VR36P now requests one future target-free task-aware cohort
+confirmation. The immediate gate is request commit/push/green followed by a
+separately green request proof closeout. Only then may VR36P be identified as
+the sole Tier C packet for fresh maintainer words. No private confirmation or
+FW2 work is currently authorized.
 
 ## Claim Boundary
 

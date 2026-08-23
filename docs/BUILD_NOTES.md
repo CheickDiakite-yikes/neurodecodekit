@@ -14337,3 +14337,27 @@ requalification. A private cohort freeze remains a new Tier C gate.
 Immediate gate: verify, commit, push, and green this exact proof-only closeout.
 Only then may Tier A prepare an all-false private cohort-confirmation packet;
 private access remains a fresh Tier C decision.
+
+### VR36P all-false task-aware cohort request prepared
+
+- VR35A closeout `6744568115f1f4871b68f4605d14732bf3af38f8` passed Base
+  Python job `97209528132`, Optional Neuro Readers job `97209528186`, and CI
+  `32645704669`.
+- Added an all-false two-stage request binding 15 tracked artifacts totaling
+  151,605 bytes. The private source identity is copied only from committed
+  records; packet preparation performs zero private-path operation.
+- Stage 1 proposes 40 generated ready/not-ready paths, 40 VR33A calls, 20
+  VR35A calls, at least 100 direct refusals, and zero retention.
+- Stage 2 proposes one exact three-sample/two-sleep readiness pass, one
+  418,755-byte structural open/parse, one VR35A call, and at most one
+  16-subject/96-bundle/384-row private cohort freeze.
+- Public routes distinguish direct exact-task success, mixed-task repair,
+  genuine target-task surplus/deficit, and bounded refusal without exposing a
+  count, difference, task distribution, identity, or row.
+- Fourteen request tests and the combined 52-test VR35A/VR36P surface pass.
+  Every current authority flag and operation counter remains zero.
+
+Immediate gate: run complete verification, commit, push, and green the exact
+request. Then create and green a non-scope-changing proof closeout before
+identifying VR36P as the sole Tier C packet. Earlier `continue` messages are
+not retroactive authority.

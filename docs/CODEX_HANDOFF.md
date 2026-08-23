@@ -1,5 +1,17 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR36P gate, 2026-08-23: VR35A closeout `6744568` passed Base
+> job `97209528132`, Optional job `97209528186`, and CI `32645704669`. The
+> all-false task-aware private cohort-confirmation request is now prepared. It
+> proposes generated/mock wrapper qualification, then only after all proof
+> barriers one exact-readiness 418,755-byte target-free structural read and
+> one VR35A call. G1/G2 may freeze one 16-subject/96-bundle/384-row private
+> cohort; all other routes freeze none. Every authority and operation is zero.
+> Immediate gate: commit, push, and green the request, then add and green its
+> proof-only closeout. Do not treat the current `continue` as retroactive or
+> touch `.codex_work`, private/consumed state, archive, neural, target, model,
+> score, FW2/CIL1, device, release, or claim surfaces.
+
 > Current MARC2-VR35A gate, 2026-08-23: registration `aa4c39a` passed Base
 > job `97203738713`, Optional job `97203738637`, and CI `32643351246` before
 > the sole generated qualification. All 20 paths passed with G1/G2/R1/R2/R3

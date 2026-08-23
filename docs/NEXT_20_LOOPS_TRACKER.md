@@ -1,11 +1,11 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate gate (2026-08-23):** VR35A passed its sole 20-path generated
-> task-aware qualification. Exact implementation `599e22d` passed both jobs
-> in CI `32644887730`; commit, push, and green the proof-only closeout without
-> rerunning qualification. A real cohort confirmation remains a separate Tier
-> C packet; archive, neural, target, model, score, FW2/CIL1, and claim work
-> remains closed.
+> **Immediate gate (2026-08-23):** VR35A closeout `6744568` passed both jobs
+> in CI `32645704669`. All-false VR36P now requests one future target-free
+> task-aware cohort confirmation. Commit, push, and green the request, then
+> green its proof closeout before fresh packet-bound maintainer words. Every
+> private, archive, neural, target, model, score, FW2/CIL1, and claim surface
+> is currently closed.
 
 > **Immediate update (2026-08-23):** exact VR32P proof closeout `5aec8a1`
 > passed Base job `97177262321`, Optional job `97177262387`, and CI
@@ -4099,6 +4099,27 @@ Immediate gate: commit, push, and green the proof-only closeout without
 repeating qualification. The generated mechanism does not identify the
 private cause of VR34P R2. Any private wrapper or cohort freeze remains a
 separately frozen Tier C packet and packet-bound decision.
+
+### MARC2-VR36P - Task-Aware Private Cohort Request Prepared
+
+VR35A proof closeout `6744568115f1f4871b68f4605d14732bf3af38f8`
+passed Base job `97209528132`, Optional job `97209528186`, and CI
+`32645704669`. The new all-false request binds 15 tracked artifacts totaling
+151,605 bytes and copies the fixed private source identity only from committed
+records.
+
+The proposed two-stage wrapper first qualifies 40 generated ready/not-ready
+paths with at least 100 direct refusals. Only after exact implementation and
+proof barriers may one future invocation collect three readiness samples,
+open and parse 418,755 target-free structural bytes once, and call VR35A once.
+G1/G2 may freeze one 16-subject, 96-bundle, 384-row private cohort; every
+other route freezes none. No count, difference, task distribution, identity,
+or private row may enter public output.
+
+Every authority flag and operation counter is zero. Immediate gate: commit,
+push, and green the request, then create and green a non-scope-changing proof
+closeout. Only afterward identify VR36P as the sole Tier C packet and wait for
+fresh maintainer words. Earlier `continue` messages are not retroactive.
 
 ### MARC2-VR33A - Exact-Count Readiness Repair Remotely Closed
 

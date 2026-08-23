@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: MARC2-VR35A Implementation Remote Proof
+## Current Gate: MARC2-VR36P All-False Cohort Request
 
 Read the VR35A preregistration and implementation documents, contract,
 implementation record, generated result, and matching tests. Registration
@@ -22,13 +22,19 @@ explicit R1/R2 results. Eight selections, eight selection validations, 99
 direct refusals, 20 immutability checks, and exact replay passed with zero
 non-target selected rows and zero retained output.
 
-Exact implementation `599e22de356df29873eb154f320b89aca125777a` passed Base
-job `97207526045`, Optional job `97207525966`, and CI `32644887730`.
-Immediate gate: commit, push, and green the exact proof-only closeout without
-rerunning qualification. This is generated engineering evidence only. It does
-not establish the private cause of VR34P R2 or a real cohort. After closeout,
-an all-false private cohort-confirmation packet may be prepared, but private,
-archive, or neural access remains a separate Tier C decision.
+VR35A proof closeout `6744568115f1f4871b68f4605d14732bf3af38f8`
+passed Base job `97209528132`, Optional job `97209528186`, and CI
+`32645704669`. Read the new VR36P authorization packet and machine request.
+
+VR36P requests a generated/mock wrapper followed, after every proof barrier,
+by one fixed target-free structural read and one VR35A call. A successful G1
+or G2 route may freeze one 16-subject, 96-bundle, 384-row private cohort. It
+does not open archive members, neural data, targets, models, or scores.
+
+Every authority flag is currently false. Immediate gate: commit, push, and
+green the request, then green a request proof closeout. Only afterward may
+VR36P be identified as the sole Tier C packet for fresh maintainer words. The
+current or any earlier `continue` is not retroactive authorization.
 
 ## Consumed Boundary: MARC2-VR34P Protocol-Conforming R2
 

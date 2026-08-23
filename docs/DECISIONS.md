@@ -12389,3 +12389,25 @@ commit is pushed and both jobs are green. It repeats no qualification and
 performs zero private operation. Only after closeout may Tier A prepare an
 all-false private cohort-confirmation packet; private access still requires a
 fresh Tier C decision.
+
+## 0430 - Freeze VR36P As A Task-Aware Private Cohort Request
+
+Proof decision: VR35A closeout
+`6744568115f1f4871b68f4605d14732bf3af38f8` passed CI `32645704669`, Base
+Python job `97209528132`, and Optional Neuro Readers job `97209528186`.
+
+Design decision: prepare VR36P as an all-false two-stage Tier C request. Stage
+1 is generated/mock fixed-path wrapper qualification. Stage 2, only after all
+proof barriers, is one exact-readiness, one-open target-free structural read,
+one VR35A call, and at most one source-bound private cohort freeze.
+
+Evidence decision: distinguish direct exact-task success, mixed-task repair,
+target-task surplus, target-task deficit, and structural/selection refusal as
+bounded aggregate routes. Never expose the private count, difference, task
+distribution, identity, or row. A cohort freeze makes FW2 preregistration
+eligible but does not authorize archive or neural access.
+
+Boundary decision: every authority flag is false. Commit, push, and green the
+request, then green a request proof closeout before identifying VR36P as the
+sole Tier C packet. Current and earlier `continue` messages are not retroactive
+authority.
