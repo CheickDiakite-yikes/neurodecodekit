@@ -12372,3 +12372,20 @@ defect mechanism and repair, not that mixed-task surplus caused private VR34P
 R2. Commit, push, and green the exact implementation/result, then add one
 proof-only closeout. Any private cohort freeze, archive, neural, target, model,
 score, FW2/CIL1, device, release, or claim action remains separately gated.
+
+## 0429 - Bind Exact Remote VR35A Implementation Proof
+
+Proof decision: exact implementation and generated result commit
+`599e22de356df29873eb154f320b89aca125777a` passed CI `32644887730`, Base
+Python job `97207526045`, and Optional Neuro Readers job `97207525966`.
+
+Transition decision: bind the 5,197-byte preproof implementation registry,
+4,071-byte preproof result registry, their SHA-256 values, and eight exact Git
+blobs. Preserve the implementation, 20-path matrix, measurements, one
+qualification invocation, warnings, resources, and claim boundary unchanged.
+
+Boundary decision: this proof-only closeout has delayed effect until its own
+commit is pushed and both jobs are green. It repeats no qualification and
+performs zero private operation. Only after closeout may Tier A prepare an
+all-false private cohort-confirmation packet; private access still requires a
+fresh Tier C decision.

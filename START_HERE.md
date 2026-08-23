@@ -22,11 +22,13 @@ explicit R1/R2 results. Eight selections, eight selection validations, 99
 direct refusals, 20 immutability checks, and exact replay passed with zero
 non-target selected rows and zero retained output.
 
-Immediate gate: commit, push, and green the exact implementation/result, then
-green one proof-only closeout without rerunning qualification. This is
-generated engineering evidence only. It does not establish the private cause
-of VR34P R2 or a real cohort. A private wrapper, cohort freeze, archive member,
-or neural step remains a separate Tier C packet and decision.
+Exact implementation `599e22de356df29873eb154f320b89aca125777a` passed Base
+job `97207526045`, Optional job `97207525966`, and CI `32644887730`.
+Immediate gate: commit, push, and green the exact proof-only closeout without
+rerunning qualification. This is generated engineering evidence only. It does
+not establish the private cause of VR34P R2 or a real cohort. After closeout,
+an all-false private cohort-confirmation packet may be prepared, but private,
+archive, or neural access remains a separate Tier C decision.
 
 ## Consumed Boundary: MARC2-VR34P Protocol-Conforming R2
 

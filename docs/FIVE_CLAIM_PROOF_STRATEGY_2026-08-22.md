@@ -161,8 +161,9 @@ preserves genuine target-task drift, reproduces the baseline semantic cohort,
 and selects zero non-target rows. This establishes the repair mechanism on
 generated fixtures, not the private cause of VR34P R2.
 
-The immediate gate is exact implementation/result remote proof and a separate
-proof-only closeout without requalification. Only afterward may an all-false
+Exact implementation `599e22d` passed both required jobs in CI `32644887730`.
+The immediate gate is the separate proof-only closeout without
+requalification. Only after that closeout is remotely green may an all-false
 private cohort-confirmation packet be prepared. VR35A has no private executor
 and cannot freeze a cohort; private confirmation and all FW2 work remain
 separate Tier C decisions.

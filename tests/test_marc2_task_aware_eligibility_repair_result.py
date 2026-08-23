@@ -112,24 +112,33 @@ class Marc2TaskAwareEligibilityRepairResultTests(unittest.TestCase):
         self.assertIn('choices=("plan", "qualify")', segment)
         self.assertNotIn('"execute"', segment)
 
-    def test_implementation_artifacts_match_exact_bytes(self):
-        total = 0
-        for row in self.implementation["implementation_artifacts"]:
+    def test_immutable_implementation_artifacts_match_exact_bytes(self):
+        immutable_roles = {"module", "behavior_tests", "implementation_document"}
+        rows = {
+            row["role"]: row
+            for row in self.implementation["implementation_artifacts"]
+        }
+        for role in immutable_roles:
+            row = rows[role]
             payload = (ROOT / row["path"]).read_bytes()
             self.assertEqual(len(payload), row["bytes"], row["path"])
             self.assertEqual(
                 hashlib.sha256(payload).hexdigest(), row["sha256"], row["path"]
             )
-            total += len(payload)
-        self.assertEqual(
-            total, self.implementation["implementation_artifact_bytes"]
-        )
+        self.assertEqual(self.implementation["implementation_artifact_count"], 5)
+        self.assertEqual(self.implementation["implementation_artifact_bytes"], 57921)
 
     def test_remote_proof_and_private_next_gate_remain_closed(self):
-        self.assertIsNone(self.result["remote_implementation_proof"])
-        self.assertIsNone(self.implementation["remote_implementation_proof"])
+        proof = self.result["remote_implementation_proof"]
+        self.assertEqual(proof, self.implementation["remote_implementation_proof"])
+        self.assertTrue(proof["both_required_jobs_green"])
+        self.assertEqual(proof["qualification_invocations"], 1)
+        self.assertFalse(
+            proof["generated_qualification_repeated_for_proof_closeout"]
+        )
         gate = self.result["next_gate"]
-        self.assertTrue(gate["proof_only_closeout_required_after_green"])
+        self.assertTrue(gate["proof_only_closeout_commit_green_pending"])
+        self.assertFalse(gate["generated_lane_remotely_closed_now"])
         self.assertFalse(
             gate["private_execution_or_consumed_lane_reinspection_authorized"]
         )

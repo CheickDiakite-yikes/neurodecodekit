@@ -14316,3 +14316,24 @@ implementation. A private wrapper or cohort freeze remains a new Tier C gate.
 Immediate gate: run final repository verification, commit, push, and green the
 exact implementation/result, then add and green a proof-only closeout without
 requalification. A private cohort freeze remains a new Tier C gate.
+
+### VR35A exact implementation remotely green; proof closeout prepared
+
+- Exact implementation `599e22de356df29873eb154f320b89aca125777a` passed
+  Base Python job `97207526045`, Optional Neuro Readers job `97207525966`, and
+  CI `32644887730`.
+- The proof-only closeout binds the 5,197-byte preproof implementation
+  registry, 4,071-byte preproof result registry, their exact SHA-256 values,
+  and eight Git blobs from that commit.
+- Qualification remains exactly one invocation. No implementation, generated
+  case, route, measurement, resource, warning, or claim boundary changed.
+- No private, ignored-path, readiness, consumed-state, archive, neural,
+  target, model, score, network, provider, FW2/CIL1, device, other-project,
+  release, or claim operation ran.
+- Thirty-eight focused VR35A tests and all 5,453 dependency-light tests pass
+  with 204 expected skips, a +5 closeout delta. Pinned Ruff 0.15.20 passes;
+  qualification was not repeated.
+
+Immediate gate: verify, commit, push, and green this exact proof-only closeout.
+Only then may Tier A prepare an all-false private cohort-confirmation packet;
+private access remains a fresh Tier C decision.
