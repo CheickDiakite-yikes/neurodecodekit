@@ -3918,6 +3918,25 @@ ignored-path, archive, neural, target, model, score, network, FW2/CIL1, or
 claim operation. Next gate: commit, push, and green this exact closeout. Only
 then may the one registered target-free structural discriminator execute.
 
+### MARC2-VR28P - Generated Stage 1 Qualified; Remote Proof Pending
+
+Exact packet-bound decision `718c3de6ddb0030b1ba39fa0e42250e97db01072`
+passed Base Python job `97133595196`, Optional Neuro Readers job
+`97133595235`, and CI `32614796767` before implementation.
+
+The additive dependency-free wrapper passed one registered 20-path generated
+qualification: five cases, two orders, two exact replays, 20 source opens, 20
+unchanged VR25A calls, 20 VR27A map calls, G1/R1/R2 counts 4/12/4, 110 direct
+refusals, deterministic replay, and marker-before-open ordering. It used
+8,836,136 generated input bytes in 1.097564124967903 seconds at 34,177,024-
+byte peak RSS, reached 785 peak incremental output bytes, and retained zero.
+All private, consumed-state, archive, neural, target, model, score, network,
+device, FW2/CIL1, other-project, and claim counters were zero.
+
+Immediate gate: commit, push, and green the exact implementation and result,
+then separately green a proof-only closeout without repeating qualification.
+No private path is open before both barriers.
+
 ### MARC2-VR28P - Packet-Bound Decision Recorded; Remote Green Pending
 
 Exact proof-only closeout `87d4b30ca846d7481c45631ec7625d500e0f9595`

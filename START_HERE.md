@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR28P Decision Recorded; Remote Proof Pending
+## Current Frontier: MARC2-VR28P Generated Stage 1 Qualified
 
 VR24P result `a873f1a` passed Base job `97103071419`, Optional Neuro Readers
 job `97103071353`, and CI `32602610854`. The exact one-shot result remains
@@ -176,11 +176,25 @@ Read
 and its machine decision. They bind only the unchanged green packet by
 reference and have delayed effect.
 
-Immediate gate: verify, commit, push, and green this exact decision before
-implementing the generated wrapper or touching readiness, `.codex_work`, the
-private source, or an output root. FW2/CIL1, archive/neural payload, targets,
-models, scores, devices, streams, releases, and scientific claims remain
-closed.
+Exact decision `718c3de` passed Base Python job `97133595196`, Optional Neuro
+Readers job `97133595235`, and CI `32614796767` before Stage 1. Read
+`docs/MARC_2_INVENTORY_TAXONOMY_PRIVATE_DISCRIMINATOR_IMPLEMENTATION.md` and
+the matching implementation and result registries. The generated fixed-path
+wrapper passed all 20 cases with 20 source opens, 20 exact VR25A calls, 20
+VR27A map calls, expected G1/R1/R2 counts 4/12/4, deterministic replay,
+marker-before-open ordering, and 110 direct refusals.
+
+The pass used 8,836,136 generated input bytes, 1.097564 seconds, 34,177,024-
+byte peak RSS, 785 peak incremental output bytes, and zero retained output.
+Every private, consumed-state, archive, neural, target, model, score, network,
+device, FW2/CIL1, other-project, and claim counter remained zero.
+
+Immediate gate: commit, push, and green the exact Stage 1 implementation and
+result, then add and separately green a proof-only closeout. Do not repeat the
+qualification. The registered private source, readiness, output root, and all
+consumed lanes remain untouched until both green barriers pass. FW2/CIL1,
+archive/neural payload, targets, models, scores, devices, streams, releases,
+and scientific claims remain closed.
 
 ## Historical Frontier: MARC2-VR24P Consumed At R2
 

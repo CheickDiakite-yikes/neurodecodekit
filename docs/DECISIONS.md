@@ -11656,3 +11656,24 @@ identity, participant, selection, or cohort. Authorize no archive member,
 neural payload, target, model, training, inference, score, FW2/CIL1, network,
 device, release, or scientific claim. The decision is ineffective until its
 own exact commit is pushed and both CI jobs are green.
+
+## 0397 - Accept Generated VR28P Fixed-Path Qualification
+
+Proof decision: exact authorization decision
+`718c3de6ddb0030b1ba39fa0e42250e97db01072` passed CI `32614796767`, Base
+Python job `97133595196`, and Optional Neuro Readers job `97133595235` before
+implementation.
+
+Implementation decision: accept `MARC2VR28P-G1` after all twenty generated
+fixed-path cases passed with twenty source opens, twenty unchanged VR25A calls,
+twenty VR27A map calls, frozen G1/R1/R2 counts 4/12/4, exact replay,
+marker-before-open ordering, and 110 direct refusals. The pass used 8,836,136
+generated input bytes in 1.097564124967903 seconds at 34,177,024-byte peak RSS,
+reached 785 peak incremental output bytes, and retained zero.
+
+Boundary decision: this is generated engineering only. No repository-private
+or consumed path, archive member, neural signal, target, model, prediction,
+score, network, provider, device, FW2/CIL1, other project, release, or claim
+operation occurred. The exact implementation must become remotely green and
+then receive a separately green proof-only closeout before the one authorized
+private structural invocation becomes eligible.
