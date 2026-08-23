@@ -1,0 +1,142 @@
+{
+  "schema_name": "neurodecodekit.marc2_task_aware_private_cohort_confirmation_implementation",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC2-VR36P",
+  "recorded_at_local": "2026-08-23",
+  "status": "generated_stage_qualified_remote_implementation_proof_pending",
+  "green_decision_proof": {
+    "commit": "fd08dd6ee40b16d3b4f4312601fed3370b7e2ca5",
+    "CI_run_id": 32648347577,
+    "base_python_job_id": 97215989173,
+    "optional_neuro_job_id": 97215989332,
+    "both_required_jobs_green": true
+  },
+  "registered_authority": {
+    "request_path": "registries/marc2_task_aware_private_cohort_confirmation_authorization_request.v0.json",
+    "request_sha256": "b226d58b8eb1f707619d251bd633ebf0053f62e23f7adce31dec943067db74ca",
+    "decision_path": "registries/marc2_task_aware_private_cohort_confirmation_authorization_decision.v0.json",
+    "decision_sha256": "2837aee3155cfac4558054a6ba90c0cfb128aac18627ce6781a4dab818a76018"
+  },
+  "implementation_artifacts": [
+    {
+      "role": "module",
+      "path": "src/neurodecodekit/datasets/marc2_task_aware_private_cohort_confirmation.py",
+      "bytes": 51997,
+      "sha256": "de9dc300283c8bac18cf01da25fab07a4eed7e73b44d3079df14fcca38687289"
+    },
+    {
+      "role": "behavior_test",
+      "path": "tests/test_marc2_task_aware_private_cohort_confirmation.py",
+      "bytes": 10792,
+      "sha256": "ce0ad2c093ce7efda837cda316c5a2d8259522d186632daa9b2fadb7a89f8beb"
+    },
+    {
+      "role": "result_registry",
+      "path": "registries/marc2_task_aware_private_cohort_confirmation_result.v0.json",
+      "bytes": 4647,
+      "sha256": "286059c3b82c89875d5200d4a58d16b67bb59364d11a99536e06083b5c8b5b2e"
+    },
+    {
+      "role": "result_test",
+      "path": "tests/test_marc2_task_aware_private_cohort_confirmation_result.py",
+      "bytes": 5370,
+      "sha256": "bb04bd6ffee96fcb17cf6e20dce824de8235005e0a0778d97f3f7c2a6e56fea3"
+    },
+    {
+      "role": "implementation_document",
+      "path": "docs/MARC_2_TASK_AWARE_PRIVATE_COHORT_CONFIRMATION_IMPLEMENTATION.md",
+      "bytes": 4098,
+      "sha256": "cad25912be23b9a654b90abed7cdf01361e3fcd4fde0514594ede7a51238b417"
+    },
+    {
+      "role": "authorization_decision",
+      "path": "registries/marc2_task_aware_private_cohort_confirmation_authorization_decision.v0.json",
+      "bytes": 17218,
+      "sha256": "2837aee3155cfac4558054a6ba90c0cfb128aac18627ce6781a4dab818a76018"
+    }
+  ],
+  "implementation_artifact_count": 6,
+  "implementation_artifact_bytes": 94122,
+  "interface": {
+    "module": "neurodecodekit.datasets.marc2_task_aware_private_cohort_confirmation",
+    "commands": [
+      "plan",
+      "qualify",
+      "inspect",
+      "execute"
+    ],
+    "execute_is_fixed_path_only": true,
+    "generic_override_arguments": 0,
+    "consumed_private_executor_imports_or_calls": 0,
+    "heavy_base_dependencies_added": 0
+  },
+  "qualification_invocations": 1,
+  "qualification_may_be_repeated": false,
+  "qualification_result": {
+    "path": "registries/marc2_task_aware_private_cohort_confirmation_result.v0.json",
+    "sha256": "286059c3b82c89875d5200d4a58d16b67bb59364d11a99536e06083b5c8b5b2e",
+    "route": "MARC2VR36P-G1",
+    "paths": 40,
+    "VR33A_calls": 40,
+    "VR35A_calls": 20,
+    "direct_refusals": 111,
+    "retained_generated_output_bytes": 0,
+    "runtime_seconds": 1.785233375034295,
+    "peak_RSS_bytes": 35340288
+  },
+  "proof_gate": {
+    "execute_and_inspect_check_remote_implementation_proof_first": true,
+    "proof_checked_before_fixed_readiness_or_private_path": true,
+    "remote_implementation_proof_required": true,
+    "proof_only_closeout_required": true,
+    "qualification_repeat_for_proof_closeout_allowed": false,
+    "private_operation_during_proof_closeout_allowed": false
+  },
+  "remote_implementation_proof": null,
+  "private_execution_authorized_now": false,
+  "operation_counters": {
+    "repository_dot_codex_work_operations": 0,
+    "private_structural_source_stats_resolves_hashes_opens_reads_or_parses": 0,
+    "consumed_private_lane_path_or_output_operations": 0,
+    "archive_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "derivative_cache_feature_split_or_NeuroToken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "network_download_provider_or_language_model_operations": 0,
+    "stream_device_or_hardware_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "retry_rerun_resume_repair_fallback_or_substitution_operations": 0,
+    "release_publication_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "verification": {
+    "focused_implementation_and_result_tests_passed": 22,
+    "complete_dependency_light_tests_expected": 5504,
+    "expected_skips": 204,
+    "pre_implementation_tests_passed": 5482,
+    "expected_test_delta": 22,
+    "repository_pinned_ruff_version": "0.15.20",
+    "qualification_repeated_during_verification": false,
+    "private_operation_run_during_verification": false
+  },
+  "next_gate": {
+    "exact_implementation_commit_push_and_both_jobs_green_required": true,
+    "proof_only_closeout_commit_push_and_both_jobs_green_required": true,
+    "one_registered_private_invocation_allowed_before_both_gates": false,
+    "qualification_may_be_repeated": false,
+    "archive_neural_target_model_score_FW2_CIL1_or_claim_action_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_capability": "generated exact-readiness and task-aware fixed-path cohort-freeze state machine",
+    "scientific_ceiling": "none",
+    "real_or_private_data_accessed": false,
+    "real_cohort_established": false,
+    "archive_member_accessed": false,
+    "neural_payload_accessed": false,
+    "target_model_prediction_or_score_accessed": false,
+    "decoding_performance_established": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "live_decoding": false
+  }
+}

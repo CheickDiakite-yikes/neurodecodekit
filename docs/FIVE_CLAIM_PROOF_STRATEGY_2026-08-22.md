@@ -166,9 +166,13 @@ All-false VR36P now requests one future target-free task-aware cohort
 confirmation. Exact request `8ec87ce` passed both required jobs in CI
 `32646648532`; request proof closeout `2813d60` passed both jobs in CI
 `32647453505`. After sole-packet identification, the maintainer's exact
-`coninue` authorized only that unchanged two-stage packet by reference. The
-decision must itself become remotely green before generated Stage 1. No
-private confirmation or FW2 work is currently authorized.
+`coninue` authorized only that unchanged two-stage packet by reference.
+Decision `fd08dd6` passed both jobs in CI `32648347577`; the sole generated
+Stage 1 qualification then passed all 40 routes and 111 direct refusals with
+zero private operation. The immediate gate is exact implementation remote
+proof followed by a separately green proof-only closeout. The sole private
+confirmation is authorized but not eligible before those barriers; FW2 work
+is not authorized.
 
 ## Claim Boundary
 

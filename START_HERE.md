@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: MARC2-VR36P Authorization Decision
+## Current Gate: MARC2-VR36P Stage 1 Implementation Proof
 
 Read the VR35A preregistration and implementation documents, contract,
 implementation record, generated result, and matching tests. Registration
@@ -40,10 +40,22 @@ passed Base job `97211815865`, Optional job `97211815879`, and CI
 
 After VR36P was identified as the sole active Tier C packet, the maintainer's
 next exact message was `coninue`. The authorization decision preserves those
-seven UTF-8 bytes and binds only the unchanged packet. Immediate gate: verify,
-commit, push, and green that decision. No implementation, readiness, private
-path, cohort, archive, neural, target, model, score, FW2/CIL1, or claim action
-is authorized before the decision itself is remotely green.
+seven UTF-8 bytes and binds only the unchanged packet. Exact decision
+`fd08dd6ee40b16d3b4f4312601fed3370b7e2ca5` passed Base job
+`97215989173`, Optional job `97215989332`, and CI `32648347577` before Stage
+1.
+
+The independent fixed-path wrapper then passed its sole 40-path generated
+qualification. VR36P R1-R5 each appeared four times and R6 twenty times; 40
+VR33A calls, 120 provider calls, 80 sleeper calls, 20 VR35A calls, eight
+temporary cohort writes, 111 direct refusals, exact replay, and zero source
+mutation passed. Runtime was 1.785233375034295 seconds at 35,340,288-byte
+peak RSS, with zero retained output and zero private operation.
+
+Immediate gate: verify, commit, push, and green the exact implementation and
+result, then green a proof-only closeout without requalification. No readiness,
+private path, real cohort, archive, neural, target, model, score, FW2/CIL1, or
+claim action is open before both proof barriers.
 
 ## Consumed Boundary: MARC2-VR34P Protocol-Conforming R2
 

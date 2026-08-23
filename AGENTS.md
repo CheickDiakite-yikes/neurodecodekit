@@ -81,10 +81,26 @@ proof closeout `2813d60707f9fd97acbfa35cd57504d6b3db86c5` passed Base job
 `97213774526`, Optional job `97213774452`, and CI `32647453505`. Codex then
 identified VR36P as the sole active Tier C packet, and the maintainer's next
 exact message was `coninue`. Read the authorization decision document and
-machine decision. Immediate gate: verify, commit, push, and green that exact
-decision. Only then may Stage 1 generated/mock implementation begin.
-Do not implement, inspect `.codex_work`, or access private, consumed, archive,
-neural, target, model, score, FW2/CIL1, device, release, or claim surfaces.
+machine decision. Decision `fd08dd6ee40b16d3b4f4312601fed3370b7e2ca5`
+passed Base job `97215989173`, Optional job `97215989332`, and CI
+`32648347577` before Stage 1. Read the implementation document, implementation
+registry, generated result, and matching tests.
+
+The sole `MARC2VR36P-G1` qualification passed 40 paths: R1-R5 each appeared
+four times and R6 appeared twenty times; VR33A/provider/sleeper/VR35A calls
+were exactly 40/120/80/20. Eight generated cohort files passed 16-subject,
+96-bundle, 384-row checks. There were 111 direct refusals, exact replay, zero
+source mutation, 8,847,228 generated input bytes, 1.785233375034295 seconds,
+35,340,288-byte peak RSS, 221,058 peak incremental output bytes, and zero
+retention or private operation. Qualification may not be repeated.
+
+Immediate gate: verify, commit, push, and green the exact Stage 1
+implementation/result, then add and green a proof-only closeout without
+requalification. Only afterward may the one registered target-free private
+confirmation run.
+Do not inspect `.codex_work` or access private, consumed, archive, neural,
+target, model, score, FW2/CIL1, device, release, or claim surfaces before the
+required proof barriers pass.
 
 ### Consumed VR34P boundary
 

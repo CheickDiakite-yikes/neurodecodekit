@@ -12442,3 +12442,22 @@ pushed and both jobs are green. It records zero implementation, readiness,
 private, cohort, archive, neural, target, model, score, FW2/CIL1, release, or
 claim operation. After green, generated/mock Stage 1 may begin; Stage 2 remains
 blocked on exact Stage 1 implementation and proof-closeout barriers.
+
+## 0433 - Accept The Sole Generated VR36P Stage 1 Qualification
+
+Proof decision: authorization decision
+`fd08dd6ee40b16d3b4f4312601fed3370b7e2ca5` passed CI `32648347577`, Base
+Python job `97215989173`, and Optional Neuro Readers job `97215989332` before
+Stage 1.
+
+Engineering decision: accept the independent fixed-path wrapper and its sole
+40-path generated qualification. R1-R5 each appeared four times and R6 twenty
+times; exact VR33A/provider/sleeper/VR35A counts were 40/120/80/20. Eight
+temporary cohort writes passed 16-subject, 96-bundle, 384-row checks; 111
+direct refusals, exact replay, and zero source mutation passed.
+
+Boundary decision: qualification may not be repeated. It used 8,847,228
+generated input bytes in 1.785233375034295 seconds at 35,340,288-byte peak
+RSS, retained zero, and performed no private operation. Commit, push, and
+green the exact implementation/result, then green a proof-only closeout before
+the one private invocation.

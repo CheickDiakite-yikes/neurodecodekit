@@ -1,0 +1,135 @@
+{
+  "schema_name": "neurodecodekit.marc2_task_aware_private_cohort_confirmation_result",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC2-VR36P",
+  "recorded_at_local": "2026-08-23",
+  "route": "MARC2VR36P-G1",
+  "status": "generated_task_aware_fixed_path_wrapper_qualified_once",
+  "proof": {
+    "decision_commit": "fd08dd6ee40b16d3b4f4312601fed3370b7e2ca5",
+    "decision_CI_run_id": 32648347577,
+    "decision_base_job_id": 97215989173,
+    "decision_optional_neuro_job_id": 97215989332,
+    "request_sha256": "b226d58b8eb1f707619d251bd633ebf0053f62e23f7adce31dec943067db74ca",
+    "decision_sha256": "2837aee3155cfac4558054a6ba90c0cfb128aac18627ce6781a4dab818a76018"
+  },
+  "qualification_invocations": 1,
+  "qualification_may_be_repeated": false,
+  "matrix": {
+    "fixture_cases": [
+      "baseline_exact_task_exact_total",
+      "mixed_task_surplus",
+      "target_task_surplus",
+      "target_task_deficit",
+      "selection_or_task_firewall_refusal"
+    ],
+    "readiness_patterns": [
+      "PPP",
+      "FFF"
+    ],
+    "orders": [
+      "canonical",
+      "reversed"
+    ],
+    "replays": 2,
+    "paths": 40,
+    "VR33A_calls": 40,
+    "readiness_provider_calls": 120,
+    "readiness_sleeper_calls": 80,
+    "source_constructions": 20,
+    "source_content_opens": 20,
+    "VR35A_calls": 20,
+    "cohort_file_writes": 8,
+    "VR36P_route_counts": {
+      "MARC2VR36P-R1": 4,
+      "MARC2VR36P-R2": 4,
+      "MARC2VR36P-R3": 4,
+      "MARC2VR36P-R4": 4,
+      "MARC2VR36P-R5": 4,
+      "MARC2VR36P-R6": 20
+    },
+    "VR35A_route_counts": {
+      "MARC2VR35A-G1": 4,
+      "MARC2VR35A-G2": 4,
+      "MARC2VR35A-R1": 4,
+      "MARC2VR35A-R2": 4,
+      "MARC2VR35A-R3": 4
+    },
+    "nonpassing_readiness_source_constructions": 0,
+    "nonpassing_readiness_VR35A_calls": 0,
+    "exact_replays_match": true,
+    "source_mutations_after_call": 0,
+    "fixed_path_state_machine_qualified": true,
+    "marker_preceded_every_source_construction_and_open": true,
+    "direct_refusals_passed": 111,
+    "direct_refusal_route_counts": {
+      "MARC2VR36P-F01": 6,
+      "MARC2VR36P-F03": 36,
+      "MARC2VR36P-F04": 25,
+      "MARC2VR36P-F07": 3,
+      "MARC2VR36P-F08": 31,
+      "MARC2VR36P-F10": 10
+    }
+  },
+  "measurements": {
+    "fixed_input_bytes": 211512,
+    "generated_input_bytes": 8847228,
+    "generated_output_bytes_written": 1801084,
+    "peak_incremental_output_bytes": 221058,
+    "retained_generated_output_bytes": 0,
+    "runtime_seconds": 1.785233375034295,
+    "peak_RSS_bytes": 35340288,
+    "aggregate_output_bytes": 3521,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "network_bytes": 0,
+    "new_payload_bytes": 0,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "end_to_end_latency_measured": false
+  },
+  "operation_counters": {
+    "repository_dot_codex_work_operations": 0,
+    "private_structural_source_stats_resolves_hashes_opens_reads_or_parses": 0,
+    "consumed_private_lane_path_or_output_operations": 0,
+    "archive_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "derivative_cache_feature_split_or_NeuroToken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "network_download_provider_or_language_model_operations": 0,
+    "stream_device_or_hardware_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "retry_rerun_resume_repair_fallback_or_substitution_operations": 0,
+    "release_publication_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "warnings": [
+    "generated_only_qualification",
+    "no_repository_private_or_consumed_path_was_touched",
+    "private_execution_remains_proof_gated",
+    "no_real_cohort_neural_decoding_or_scientific_claim"
+  ],
+  "unavailable_fields": [
+    "real_task_aware_route_or_cohort",
+    "private_count_difference_task_distribution_identity_or_row",
+    "archive_member_neural_signal_target_model_prediction_or_score",
+    "end_to_end_neural_decoding_latency"
+  ],
+  "claim_boundary": {
+    "engineering_capability": "generated exact-readiness and task-aware fixed-path cohort-freeze state machine",
+    "scientific_ceiling": "none",
+    "real_or_private_data_accessed": false,
+    "real_cohort_established": false,
+    "archive_member_accessed": false,
+    "neural_payload_accessed": false,
+    "target_model_prediction_or_score_accessed": false,
+    "neural_effect": false,
+    "decoding_performance_established": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "live_decoding": false
+  }
+}
