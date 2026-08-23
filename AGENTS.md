@@ -94,10 +94,12 @@ source mutation, 8,847,228 generated input bytes, 1.785233375034295 seconds,
 35,340,288-byte peak RSS, 221,058 peak incremental output bytes, and zero
 retention or private operation. Qualification may not be repeated.
 
-Immediate gate: verify, commit, push, and green the exact Stage 1
-implementation/result, then add and green a proof-only closeout without
-requalification. Only afterward may the one registered target-free private
-confirmation run.
+Exact Stage 1 `8179f6fd4acb721ef25b023e02ac9160789f9d49` passed Base job
+`97220389999`, Optional job `97220389862`, and CI `32650171033`. The
+proof-only closeout binds that commit, both preproof registries, and all six
+implementation artifact Git blobs without requalification or private access.
+Immediate gate: verify, commit, push, and green that exact closeout. Only
+afterward may the one registered target-free private confirmation run.
 Do not inspect `.codex_work` or access private, consumed, archive, neural,
 target, model, score, FW2/CIL1, device, release, or claim surfaces before the
 required proof barriers pass.

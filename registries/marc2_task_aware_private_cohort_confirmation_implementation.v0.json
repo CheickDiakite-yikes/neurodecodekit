@@ -3,7 +3,7 @@
   "schema_version": "0.1.0",
   "lane_id": "MARC2-VR36P",
   "recorded_at_local": "2026-08-23",
-  "status": "generated_stage_qualified_remote_implementation_proof_pending",
+  "status": "generated_stage_remotely_green_proof_closeout_pending",
   "green_decision_proof": {
     "commit": "fd08dd6ee40b16d3b4f4312601fed3370b7e2ca5",
     "CI_run_id": 32648347577,
@@ -92,8 +92,40 @@
     "qualification_repeat_for_proof_closeout_allowed": false,
     "private_operation_during_proof_closeout_allowed": false
   },
-  "remote_implementation_proof": null,
+  "remote_implementation_proof": {
+    "commit": "8179f6fd4acb721ef25b023e02ac9160789f9d49",
+    "CI_run_id": 32650171033,
+    "base_job_id": 97220389999,
+    "optional_neuro_job_id": 97220389862,
+    "both_required_jobs_green": true,
+    "scope_changed_after_qualification": false,
+    "qualification_route": "MARC2VR36P-G1",
+    "qualification_repeated_for_proof_closeout": false,
+    "private_operations_during_proof_closeout": 0,
+    "implementation_registry_preproof_bytes": 5950,
+    "implementation_registry_preproof_sha256": "3b32c341372a8221731d399be1f93758607facb8a34821b7765df0449aa470ab",
+    "implementation_registry_preproof_git_blob": "ad6d8e411593651544af32882ad11e82d740febc",
+    "result_registry_preproof_bytes": 4647,
+    "result_registry_preproof_sha256": "286059c3b82c89875d5200d4a58d16b67bb59364d11a99536e06083b5c8b5b2e",
+    "result_registry_preproof_git_blob": "4d55f03559b93e4cd5d1d014e65b3ddc97f38f71",
+    "implementation_artifact_set_sha256": "cdcfc4bf5d6cbe29116585612b68e593daeaaf425fbf6c19ffdbf77b06d635e8",
+    "implementation_artifact_git_blobs": {
+      "module": "0feadaebb45397f1b314f0cebe28635c1afd3b58",
+      "behavior_test": "d1d95371ed43cfe56e32e1da5ee2e287dfe49718",
+      "result_registry": "4d55f03559b93e4cd5d1d014e65b3ddc97f38f71",
+      "result_test": "4bd551ffb18b4df7d03ab65b96c25f8502e5463d",
+      "implementation_document": "d1104b68d04acb1bef2e2a6e3b903b7ab3e126e3",
+      "authorization_decision": "608df12900dd624ead8131ee55c89e5d0b52ebdb"
+    }
+  },
   "private_execution_authorized_now": false,
+  "proof_closeout_verification": {
+    "focused_tests_expected": 27,
+    "complete_dependency_light_tests_expected": 5509,
+    "expected_skips": 204,
+    "qualification_repeated": false,
+    "private_operations": 0
+  },
   "operation_counters": {
     "repository_dot_codex_work_operations": 0,
     "private_structural_source_stats_resolves_hashes_opens_reads_or_parses": 0,

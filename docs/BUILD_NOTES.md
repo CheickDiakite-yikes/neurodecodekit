@@ -14426,3 +14426,20 @@ qualification begin.
 Immediate gate: run complete verification, commit, push, and green the exact
 implementation/result. Then create and green a proof-only closeout without
 requalification or private access before the sole registered invocation.
+
+### VR36P exact Stage 1 remotely green; proof closeout prepared
+
+- Exact Stage 1 `8179f6fd4acb721ef25b023e02ac9160789f9d49` passed Base
+  Python job `97220389999`, Optional Neuro Readers job `97220389862`, and CI
+  `32650171033`.
+- The closeout binds the 5,950-byte preproof implementation registry and
+  4,647-byte result registry by SHA-256 and Git blob, plus the canonical
+  six-artifact set hash and every exact artifact Git blob.
+- The qualified module, behavior test, measured result, result test,
+  implementation document, and authorization decision remain byte-exact.
+- Qualification was not repeated. Readiness, `.codex_work`, private source,
+  real cohort, archive, neural, target, model, score, FW2/CIL1, network,
+  hardware, and claim operations remain zero.
+
+Immediate gate: verify, commit, push, and green this exact proof-only closeout.
+Only then may the one registered target-free private confirmation run.

@@ -12461,3 +12461,18 @@ generated input bytes in 1.785233375034295 seconds at 35,340,288-byte peak
 RSS, retained zero, and performed no private operation. Commit, push, and
 green the exact implementation/result, then green a proof-only closeout before
 the one private invocation.
+
+## 0434 - Bind VR36P Stage 1 To Exact Remote Proof
+
+Proof decision: exact Stage 1
+`8179f6fd4acb721ef25b023e02ac9160789f9d49` passed CI `32650171033`, Base
+Python job `97220389999`, and Optional Neuro Readers job `97220389862`.
+
+Engineering decision: bind the 5,950-byte preproof implementation registry,
+4,647-byte result registry, canonical six-artifact set hash, and every exact
+artifact Git blob in a separate proof-only closeout.
+
+Boundary decision: do not repeat qualification or touch readiness, private,
+cohort, archive, neural, target, model, score, FW2/CIL1, release, or claim
+state. The closeout has delayed effect until its own exact commit is pushed
+and both CI jobs are green.

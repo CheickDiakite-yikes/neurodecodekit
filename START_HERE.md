@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: MARC2-VR36P Stage 1 Implementation Proof
+## Current Gate: MARC2-VR36P Proof-Only Closeout
 
 Read the VR35A preregistration and implementation documents, contract,
 implementation record, generated result, and matching tests. Registration
@@ -52,10 +52,15 @@ temporary cohort writes, 111 direct refusals, exact replay, and zero source
 mutation passed. Runtime was 1.785233375034295 seconds at 35,340,288-byte
 peak RSS, with zero retained output and zero private operation.
 
-Immediate gate: verify, commit, push, and green the exact implementation and
-result, then green a proof-only closeout without requalification. No readiness,
-private path, real cohort, archive, neural, target, model, score, FW2/CIL1, or
-claim action is open before both proof barriers.
+Exact implementation `8179f6fd4acb721ef25b023e02ac9160789f9d49`
+passed Base job `97220389999`, Optional job `97220389862`, and CI
+`32650171033`. The proof-only closeout now binds that remote proof, both
+preproof registry snapshots, and all six implementation-artifact Git blobs
+without requalification or private access.
+
+Immediate gate: verify, commit, push, and green the exact closeout. No
+readiness, private path, real cohort, archive, neural, target, model, score,
+FW2/CIL1, or claim action is open before that final proof barrier.
 
 ## Consumed Boundary: MARC2-VR34P Protocol-Conforming R2
 

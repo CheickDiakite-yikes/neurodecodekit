@@ -169,10 +169,10 @@ confirmation. Exact request `8ec87ce` passed both required jobs in CI
 `coninue` authorized only that unchanged two-stage packet by reference.
 Decision `fd08dd6` passed both jobs in CI `32648347577`; the sole generated
 Stage 1 qualification then passed all 40 routes and 111 direct refusals with
-zero private operation. The immediate gate is exact implementation remote
-proof followed by a separately green proof-only closeout. The sole private
-confirmation is authorized but not eligible before those barriers; FW2 work
-is not authorized.
+zero private operation. Exact Stage 1 `8179f6f` passed both jobs in CI
+`32650171033`; its proof-only closeout is now prepared without requalification
+or private access. The sole private confirmation is authorized but not
+eligible until that closeout is remotely green; FW2 work is not authorized.
 
 ## Claim Boundary
 
