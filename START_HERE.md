@@ -9,10 +9,11 @@
 
 ## Current Frontier: MARC2-VR30P All-False Request
 
-VR29A proof-only closeout `80badb9c1410c1661403aae966b1ea31fa0a45f1`
-passed Base Python job `97148293434`, Optional Neuro Readers job
-`97148293619`, and CI `32620685817`. Generated engineering is now remotely
-proven for the final two VR28P R1 classes.
+VR30P all-false request `8e49ac080ca31fe9788ebfdfe9fc355a9a58218c`
+passed Base Python job `97150361897`, Optional Neuro Readers job
+`97150361782`, and CI `32621561090`. The separate request proof closeout binds
+the three unchanged request artifacts totaling 29,866 bytes and is pending its
+own remote-green barrier.
 
 Read
 `docs/MARC_2_INVENTORY_DISTRIBUTION_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md`
@@ -24,9 +25,10 @@ eligible-total arithmetic or R2 participant-session distribution arithmetic.
 
 Every authorization flag is false and every operation counter is zero. Packet
 preparation did not stat, resolve, hash, open, read, parse, or write any
-`.codex_work` path. Immediate gate: commit, push, and green the request, then
-create and separately green a proof-only request closeout. The current
-`continue` predates this packet and is not retroactive authority. Do not
+`.codex_work` path. Immediate gate: commit, push, and green the proof-only
+closeout. Only after both request barriers are green may VR30P be named the
+sole Tier C gate. The current `continue` predates this packet and is not
+retroactive authority. Do not
 implement or access private state before fresh packet-bound maintainer words
 and a separately green decision.
 

@@ -45,10 +45,14 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
-The next all-false Tier C request is prepared as `MARC2-VR30P`. Read
+The next all-false Tier C request is prepared as `MARC2-VR30P`. Exact request
+`8e49ac080ca31fe9788ebfdfe9fc355a9a58218c` passed Base Python job
+`97150361897`, Optional Neuro Readers job `97150361782`, and CI
+`32621561090`. Read
 `docs/MARC_2_INVENTORY_DISTRIBUTION_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md`
 and
-`registries/marc2_inventory_distribution_private_discriminator_authorization_request.v0.json`.
+`registries/marc2_inventory_distribution_private_discriminator_authorization_request.v0.json`,
+then the request proof closeout and its machine proof.
 It binds 13 tracked inputs totaling 161,574 bytes and proposes one future two-
 stage sequence: generated fixed-path wrapper qualification, then only after
 every proof barrier and a fresh packet-bound decision one 418,755-byte target-
@@ -59,10 +63,10 @@ direction, distribution, row, path, identity, participant, selection, or
 cohort. Every current authorization flag is false and every operation counter
 is zero.
 
-Immediate gate: commit, push, and green this exact request, then create and
-separately green a proof-only request closeout. The current `continue` predates
-this packet and is not retroactive. Do not implement, access `.codex_work`, or
-touch any private state. After both request barriers are green, identify
+Immediate gate: commit, push, and green the proof-only request closeout. The
+current `continue` predates this packet and is not retroactive. Do not
+implement, access `.codex_work`, or touch any private state. After both request
+barriers are green, identify
 VR30P as the sole active Tier C gate and require fresh packet-bound maintainer
 words before a decision.
 
