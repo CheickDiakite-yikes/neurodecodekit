@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: MARC2-VR36P Proof-Only Closeout
+## Current Boundary: MARC2-VR36P Consumed At R3
 
 Read the VR35A preregistration and implementation documents, contract,
 implementation record, generated result, and matching tests. Registration
@@ -52,15 +52,24 @@ temporary cohort writes, 111 direct refusals, exact replay, and zero source
 mutation passed. Runtime was 1.785233375034295 seconds at 35,340,288-byte
 peak RSS, with zero retained output and zero private operation.
 
-Exact implementation `8179f6fd4acb721ef25b023e02ac9160789f9d49`
-passed Base job `97220389999`, Optional job `97220389862`, and CI
-`32650171033`. The proof-only closeout now binds that remote proof, both
-preproof registry snapshots, and all six implementation-artifact Git blobs
-without requalification or private access.
+Exact implementation `8179f6fd4acb721ef25b023e02ac9160789f9d49` passed Base
+job `97220389999`, Optional job `97220389862`, and CI `32650171033`.
+Proof-only closeout `d4074081b86e6b6247f91150daa1e3253f6e2bd9` passed Base
+job `97222491265`, Optional job `97222491354`, and CI `32651006809` before
+the sole invocation.
 
-Immediate gate: verify, commit, push, and green the exact closeout. No
-readiness, private path, real cohort, archive, neural, target, model, score,
-FW2/CIL1, or claim action is open before that final proof barrier.
+The executor returned `MARC2VR36P-R3` after exactly three readiness samples,
+two sleeps, one 418,755-byte target-free structural open/parse, one VR33A call,
+and one VR35A call. Runtime was 10.088516000076197 seconds at 30,670,848-byte
+peak RSS. No cohort was frozen.
+
+R3 means only that exact-task projection still leaves the eligible total above
+195. Mixed-task contamination is therefore not the sole explanation for the
+aggregate surplus, but the exact count, difference, distribution, identity,
+participant, and cause remain unavailable. VR36P is consumed with no rerun or
+private reinspection. The next safe task is artifact-only/generated-only
+decomposition; archive, neural, target, model, score, FW2/CIL1, and claim work
+remain closed.
 
 ## Consumed Boundary: MARC2-VR34P Protocol-Conforming R2
 

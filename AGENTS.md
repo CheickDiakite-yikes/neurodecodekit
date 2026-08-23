@@ -95,14 +95,27 @@ source mutation, 8,847,228 generated input bytes, 1.785233375034295 seconds,
 retention or private operation. Qualification may not be repeated.
 
 Exact Stage 1 `8179f6fd4acb721ef25b023e02ac9160789f9d49` passed Base job
-`97220389999`, Optional job `97220389862`, and CI `32650171033`. The
-proof-only closeout binds that commit, both preproof registries, and all six
-implementation artifact Git blobs without requalification or private access.
-Immediate gate: verify, commit, push, and green that exact closeout. Only
-afterward may the one registered target-free private confirmation run.
-Do not inspect `.codex_work` or access private, consumed, archive, neural,
-target, model, score, FW2/CIL1, device, release, or claim surfaces before the
-required proof barriers pass.
+`97220389999`, Optional job `97220389862`, and CI `32650171033`. Proof-only
+closeout `d4074081b86e6b6247f91150daa1e3253f6e2bd9` passed Base job
+`97222491265`, Optional job `97222491354`, and CI `32651006809` before the
+sole invocation.
+
+Read the VR36P result document and machine result. The executor collected
+three readiness samples and two sleeps, opened and strict-parsed exactly
+418,755 target-free structural bytes once, called VR33A once and VR35A once,
+and consumed at `MARC2VR36P-R3` without a cohort freeze. R3 means only that
+the exact-task projected eligible total remains above 195. The exact count,
+difference, task distribution, identity, participant, selection, and cohort
+remain unavailable. Mixed-task contamination is excluded only as the sole
+explanation for this aggregate surplus class.
+
+VR36P has no retry, rerun, resume, repair, fallback, substitution, cleanup,
+amendment, or private reinspection. Do not touch its private source,
+readiness, marker, output root, or consumed state. The next safe task is an
+artifact-only and generated-only exact-task-surplus decomposition. Another
+private read requires a new Tier C packet and decision. Archive, neural,
+target, model, score, FW2/CIL1, device, release, and claim surfaces remain
+closed.
 
 ### Consumed VR34P boundary
 

@@ -14443,3 +14443,24 @@ requalification or private access before the sole registered invocation.
 
 Immediate gate: verify, commit, push, and green this exact proof-only closeout.
 Only then may the one registered target-free private confirmation run.
+
+### VR36P consumed at protocol-conforming R3
+
+- Proof-only closeout `d4074081b86e6b6247f91150daa1e3253f6e2bd9`
+  passed Base Python job `97222491265`, Optional Neuro Readers job
+  `97222491354`, and CI `32651006809` before execution.
+- The sole invocation returned `MARC2VR36P-R3` after exactly three readiness
+  samples, two sleeps, one 418,755-byte target-free structural open/parse, one
+  VR33A call, and one VR35A call.
+- Runtime was 10.088516000076197 seconds at 30,670,848-byte peak RSS under one
+  CPU thread, worker, and numerical job. Network, new-payload, signal, target,
+  model, and training bytes/runs were zero.
+- No cohort was written. R3 maps only to VR35A R1: exact-task projected
+  eligible total above 195 without count, difference, task distribution,
+  identity, row, participant, or selection exposure.
+- One aggregate-report inspection confirmed the returned report. Readiness,
+  marker, private source, and private outputs were not inspected or reopened.
+
+VR36P is consumed with no retry, rerun, repair, or private reinspection. Next:
+artifact-only/generated-only exact-task-surplus decomposition. FW2/CIL1 and
+all neural, target, model, score, device, release, and claim work remain closed.

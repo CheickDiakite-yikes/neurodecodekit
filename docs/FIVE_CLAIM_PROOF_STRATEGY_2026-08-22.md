@@ -170,9 +170,11 @@ confirmation. Exact request `8ec87ce` passed both required jobs in CI
 Decision `fd08dd6` passed both jobs in CI `32648347577`; the sole generated
 Stage 1 qualification then passed all 40 routes and 111 direct refusals with
 zero private operation. Exact Stage 1 `8179f6f` passed both jobs in CI
-`32650171033`; its proof-only closeout is now prepared without requalification
-or private access. The sole private confirmation is authorized but not
-eligible until that closeout is remotely green; FW2 work is not authorized.
+`32650171033`; proof closeout `d407408` passed both jobs in CI `32651006809`.
+The sole invocation returned R3: exact-task projected eligible total above
+195, with no cohort freeze. This excludes mixed-task contamination only as the
+sole explanation for the surplus. VR36P is consumed; FW2 work remains
+ineligible and unauthorized.
 
 ## Claim Boundary
 

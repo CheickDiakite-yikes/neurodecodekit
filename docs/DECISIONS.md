@@ -12476,3 +12476,19 @@ Boundary decision: do not repeat qualification or touch readiness, private,
 cohort, archive, neural, target, model, score, FW2/CIL1, release, or claim
 state. The closeout has delayed effect until its own exact commit is pushed
 and both CI jobs are green.
+
+## 0435 - Consume VR36P At Exact-Task Surplus R3
+
+Proof decision: closeout `d4074081b86e6b6247f91150daa1e3253f6e2bd9`
+passed CI `32651006809`, Base Python job `97222491265`, and Optional Neuro
+Readers job `97222491354` before the sole invocation.
+
+Evidence decision: accept `MARC2VR36P-R3` as a protocol-conforming aggregate
+target-free structural result. It maps only to VR35A R1: exact-task projected
+eligible total above 195. No cohort was frozen.
+
+Boundary decision: this excludes mixed-task contamination only as the sole
+explanation for the surplus; it does not expose the exact count, difference,
+distribution, identity, row, participant, selection, or cause. Consume VR36P
+with no rerun or private reinspection. FW2/CIL1 and every neural or scientific
+claim surface remain closed.
