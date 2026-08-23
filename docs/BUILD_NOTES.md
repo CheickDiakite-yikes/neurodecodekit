@@ -14615,3 +14615,31 @@ implementation/result, then add and separately green a proof-only closeout.
 Only afterward may one all-false terminal private packet be prepared; it must
 freeze at least 12 participants or park Freewill without another topology-only
 private discriminator.
+
+### VR38A exact implementation remotely green; proof closeout prepared
+
+- Exact implementation `7ef4a8dface0c2a00e27b38f1f91b4043c12535f`
+  passed Base Python job `97275279259`, Optional Neuro Readers job
+  `97275279380`, and CI `32672478625`.
+- The proof-only closeout binds the 7,182-byte preproof implementation
+  registry and 4,742-byte preproof result registry by SHA-256 and Git blob,
+  plus the exact module, behavior, registration, surface, result,
+  implementation-record, implementation-document, contract, and three
+  transitive helper blobs.
+- The transition changes no selector, fixture, route, measurement, resource
+  cap, warning, or claim boundary. Qualification remains consumed at exactly
+  one invocation and private-operation count remains zero.
+- Thirty-seven focused tests and all 5,597 dependency-light tests pass with
+  204 expected skips. Ruff 0.15.20, targeted formatting, compilation, 429
+  registry parses, exact module immutability, and diff hygiene pass.
+- The local optional-neuro run was not green as one sandboxed forkserver bind
+  and two load-sensitive mechanics checks failed; all three passed in isolated
+  qualification, with the forkserver check outside the sandbox. The remote
+  Optional Neuro job remains the authoritative closeout gate.
+- The closeout has delayed effect until its own exact commit is pushed and both
+  required jobs are green.
+
+Immediate gate: run complete proof-closeout verification, commit, push, and
+green this exact closeout. Only then may Tier A prepare one all-false terminal
+private cohort-freeze packet. That packet must freeze at least 12 participants
+or park Freewill/CIL1; another topology-only private successor is prohibited.

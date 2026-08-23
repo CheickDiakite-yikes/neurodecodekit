@@ -12614,3 +12614,23 @@ push, and green the implementation, then add one proof-only closeout. The next
 private structural packet must be terminal: freeze at least 12 participants or
 park Freewill. No private, archive, neural, target, model, score, FW2/CIL1,
 release, or claim operation is authorized by this generated result.
+
+## 0443 - Bind VR38A To Exact Remote Implementation Proof
+
+Proof decision: exact implementation
+`7ef4a8dface0c2a00e27b38f1f91b4043c12535f` passed CI `32672478625`, Base
+Python job `97275279259`, and Optional Neuro Readers job `97275279380`.
+
+Engineering decision: bind the 7,182-byte preproof implementation registry,
+4,742-byte preproof result registry, every exact implementation artifact Git
+blob, and all three transitive helper blobs in a separate proof-only closeout.
+Add only a separate proof-transition test; preserve every preproof code, test,
+and human implementation artifact byte-for-byte, record the machine-registry
+transition explicitly, and do not repeat qualification.
+
+Boundary decision: the closeout has delayed effect until its own exact commit
+is pushed and both required jobs are green. It performs zero private,
+ignored-path, consumed-state, archive, neural, target, model, score, FW2/CIL1,
+release, or claim operation. After it is green, the only eligible structural
+successor is an all-false terminal packet that freezes at least 12 participants
+or parks Freewill; no topology-only private successor is allowed.

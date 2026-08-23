@@ -3,7 +3,7 @@
   "schema_version": "0.1.0",
   "lane_id": "MARC2-VR38A",
   "recorded_at_local": "2026-08-23",
-  "status": "remote_implementation_proof_pending",
+  "status": "remote_implementation_proof_bound_closeout_green_pending",
   "registration_proof": {
     "commit": "25205b1d2a1033cf3cefcab022c885025ac76928",
     "CI_run_id": 32670514251,
@@ -53,12 +53,12 @@
     {
       "role": "generated_result",
       "path": "registries/marc2_selection_sufficiency_repair_result.v0.json",
-      "bytes": 4742,
-      "sha256": "298676b47daa0ea62144cb98f46924bf3552b8847e4c76041d75a6f468fd385e"
+      "bytes": 6209,
+      "sha256": "4cd52df5862b5ac98de75b71e3c3b5decb53683b183a1c3621290843d9db35b5"
     }
   ],
   "implementation_artifact_count": 7,
-  "implementation_artifact_bytes": 74746,
+  "implementation_artifact_bytes": 76213,
   "transitive_helper_bindings": [
     {
       "path": "src/neurodecodekit/datasets/marc2_live_domain_eligibility_adapter.py",
@@ -159,14 +159,31 @@
     "operations_on_other_projects": 0
   },
   "remote_implementation_proof": {
-    "commit": null,
-    "CI_run_id": null,
-    "base_job_id": null,
-    "optional_neuro_job_id": null,
-    "both_required_jobs_green": false,
-    "proof_only_closeout_pending": true,
+    "commit": "7ef4a8dface0c2a00e27b38f1f91b4043c12535f",
+    "CI_run_id": 32672478625,
+    "base_python_job_id": 97275279259,
+    "optional_neuro_job_id": 97275279380,
+    "both_required_jobs_green": true,
     "scope_changed_after_qualification": false,
     "qualification_invocations": 1,
+    "preproof_implementation_registry_bytes": 7182,
+    "preproof_implementation_registry_sha256": "81192cb39c126cf5e464d530b2a1724df0232421e9f6f8fede6777c1a5029645",
+    "preproof_result_registry_bytes": 4742,
+    "preproof_result_registry_sha256": "298676b47daa0ea62144cb98f46924bf3552b8847e4c76041d75a6f468fd385e",
+    "implementation_module_Git_blob": "984e303a63255d909ae9eb4dd09c5f89f573570d",
+    "behavior_test_Git_blob": "f0f9f4eeab2abf019f0370026ebea0b4d01bcd27",
+    "registration_test_Git_blob": "7b2ea2c95ce8c3bf346041dff0d421164041f238",
+    "surface_test_Git_blob": "ce34baac1af41964c1a5ca41cd0864962ce0ec2a",
+    "result_record_test_Git_blob": "c76338bec65e33faa658b204b446b25c3d790b05",
+    "implementation_record_test_Git_blob": "fd74d9141c8ac19bb0d25839b77aa6e6457cb3ce",
+    "implementation_document_Git_blob": "f6b9b24b5a273583a20f23c5b2c807dde3601c01",
+    "contract_Git_blob": "7490d781d4d640a82663bbd8c3cbbe5940e61aba",
+    "preproof_implementation_registry_Git_blob": "109ad2ff80c5037e394e88c198c2ce40863bf657",
+    "preproof_result_registry_Git_blob": "cec776feca9c22ffcb08e564e415e89ffffae68b",
+    "live_domain_helper_Git_blob": "52f49b58345b1c6fad344306c9978eca70dc9d03",
+    "published_task_helper_Git_blob": "33cd5e52d186a768ce8dc706e163c8d5c3a2fc92",
+    "selection_firewall_helper_Git_blob": "d5394abea69547c321eaad2647e9bff0b0691ad5",
+    "proof_test_additive_only": true,
     "generated_qualification_repeated_for_proof_closeout": false,
     "private_operations_during_proof_closeout": 0
   },

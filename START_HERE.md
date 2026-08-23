@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: MARC2-VR38A Implementation Proof
+## Current Gate: MARC2-VR38A Proof-Only Closeout
 
 VR38A registration `25205b1d2a1033cf3cefcab022c885025ac76928`
 passed Base job `97270563617`, Optional job `97270563773`, and CI
@@ -23,12 +23,17 @@ with zero selected optional, non-target, or ineligible rows. The run used one
 thread, took 7.651170833967626 seconds, peaked at 50,528,256 bytes RSS, emitted
 3,606 aggregate bytes, and retained zero.
 
-Immediate gate: verify, commit, push, and green the implementation and result,
-then add a proof-only closeout without repeating qualification. Only after that
-closeout is green may one all-false terminal private packet be prepared. It
-must freeze at least 12 participants or park Freewill; no topology-only
-successor is eligible. Private, archive, neural, target, model, score, FW2/CIL1,
-and claim work remain closed.
+Exact implementation `7ef4a8dface0c2a00e27b38f1f91b4043c12535f` passed Base
+job `97275279259`, Optional job `97275279380`, and CI `32672478625`. The
+proof-only closeout now binds that exact commit, both preproof registry hashes,
+all implementation artifacts, and all transitive helper blobs without
+repeating qualification or touching private state.
+
+Immediate gate: verify, commit, push, and green the proof-only closeout. Only
+after that closeout is green may one all-false terminal private packet be
+prepared. It must freeze at least 12 participants or park Freewill; no
+topology-only successor is eligible. Private, archive, neural, target, model,
+score, FW2/CIL1, and claim work remain closed.
 
 ## Recent Structural History
 
@@ -118,7 +123,8 @@ The generated-only `MARC2-VR38A` selection-sufficiency repair then passed its
 sole qualification as summarized at the top of this file. It preserved exact
 source, task, taxonomy, companion, rank, split, and storage checks while
 removing only the unnecessary global exact-195 requirement. Its implementation
-proof is the current gate; no real cohort or neural payload has been opened.
+is remotely green; its proof-only closeout is the current gate. No real cohort
+or neural payload has been opened.
 
 ## Consumed Boundary: MARC2-VR34P Protocol-Conforming R2
 
