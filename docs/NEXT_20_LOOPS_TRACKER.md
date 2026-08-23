@@ -3918,6 +3918,24 @@ ignored-path, archive, neural, target, model, score, network, FW2/CIL1, or
 claim operation. Next gate: commit, push, and green this exact closeout. Only
 then may the one registered target-free structural discriminator execute.
 
+### MARC2-VR29A - R1 Inventory/Distribution Decomposition Frozen
+
+VR28P result `f2b396ed99196d2a5632251390097c6990a7d8d4` passed Base
+Python job `97142255660`, Optional Neuro Readers job `97142255770`, and CI
+`32618219730` before registration.
+
+VR29A freezes the two exact public checks collapsed into VR28P R1: filtered
+eligible total arithmetic versus participant-session distribution arithmetic.
+Its eight generated cases run in two orders and two replays, requiring 32
+unchanged VR25A calls, 16 additional unchanged VR2 eligible-filter calls,
+G1/G2/R1/R2/R3 counts 4/4/8/8/8, at least 70 direct refusals, exact replay,
+source immutability, bounded resources, and zero retention.
+
+Immediate gate: commit, push, and green the exact registration before
+implementation. The lane has no private executor and cannot identify the
+consumed R1 subclass. Any later private read remains a new Tier C packet and
+decision; FW2/CIL1 and all neural or scientific work remain closed.
+
 ### MARC2-VR28P - Consumed At R1
 
 Proof-only closeout `96bff687013dcbfb507455b5f8c045977bc84fe8`

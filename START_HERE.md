@@ -7,7 +7,34 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR28P Consumed At R1
+## Current Frontier: MARC2-VR29A R1 Decomposition Registration
+
+VR28P aggregate result `f2b396ed99196d2a5632251390097c6990a7d8d4`
+passed Base Python job `97142255660`, Optional Neuro Readers job
+`97142255770`, and CI `32618219730`. The one-shot execution remains consumed
+at `MARC2VR28P-R1`; do not retry or inspect its private state.
+
+Read
+`docs/MARC_2_R1_INVENTORY_DISTRIBUTION_DISCRIMINATOR_PREREGISTRATION.md`
+and
+`registries/marc2_r1_inventory_distribution_discriminator_contract.v0.json`.
+VR29A freezes the two exact public checks collapsed into R1: a filtered
+eligible total different from 195 versus an exact total with a different
+participant/session count map.
+
+The generated-only matrix has eight cases, two row orders, and two exact
+replays. Its 32 paths must call unchanged VR25A exactly once each; the 16 R1
+paths must call unchanged VR2 eligible filtering exactly once more. Expected
+VR29A route counts are G1=4, G2=4, R1=8, R2=8, and R3=8, with at least 70
+direct refusals and zero retention.
+
+Immediate gate: commit, push, and obtain both green CI jobs for this exact
+registration before implementation. VR29A has no private executor and cannot
+identify the consumed private R1 subclass. Any later private read requires a
+new Tier C packet and decision. FW2/CIL1 and all archive, neural, target,
+model, score, device, release, and scientific work remain closed.
+
+## Current Evidence Boundary: MARC2-VR28P Consumed At R1
 
 Read
 `docs/MARC_2_INVENTORY_TAXONOMY_PRIVATE_DISCRIMINATOR_RESULT.md` and

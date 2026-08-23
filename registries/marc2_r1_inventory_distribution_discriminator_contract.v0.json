@@ -1,0 +1,222 @@
+{
+  "schema_name": "neurodecodekit.marc2_r1_inventory_distribution_discriminator_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "MARC-2-VR29A-R1-inventory-distribution-generated-discriminator-v0",
+  "lane_id": "MARC2-VR29A",
+  "recorded_at_local": "2026-08-23",
+  "status": "preregistered_artifact_only_generated_only_no_private_access",
+  "objective": "Decompose consumed aggregate VR28P R1 into filtered eligible-total arithmetic versus participant-session distribution arithmetic using only committed artifacts and generated fixtures.",
+  "result_proof": {
+    "VR28P_result_commit": "f2b396ed99196d2a5632251390097c6990a7d8d4",
+    "VR28P_result_CI_run_id": 32618219730,
+    "VR28P_result_base_job_id": 97142255660,
+    "VR28P_result_optional_neuro_job_id": 97142255770,
+    "both_required_jobs_green": true,
+    "observed_route": "MARC2VR28P-R1",
+    "private_source_or_consumed_output_reinspected_by_registration": false
+  },
+  "fixed_inputs": [
+    {
+      "role": "VR25A_adapter_module",
+      "path": "src/neurodecodekit/datasets/marc2_selection_boundary_firewall.py",
+      "bytes": 35250,
+      "sha256": "20516d466de74256a6e1640a96a757719d7c48c664483e7cc429481d70839868"
+    },
+    {
+      "role": "VR25A_contract",
+      "path": "registries/marc2_selection_boundary_firewall_contract.v0.json",
+      "bytes": 16426,
+      "sha256": "c0af130d51e68151757e85d14674e327673cb2586dab866bc4437320952d6ea1"
+    },
+    {
+      "role": "VR25A_implementation_record",
+      "path": "registries/marc2_selection_boundary_firewall_implementation.v0.json",
+      "bytes": 7181,
+      "sha256": "e186853a79a3abe9143de32ee1f83ec0dd6c1ee4bba8e65069d5c255d3cd2aaf"
+    },
+    {
+      "role": "VR2_adapter_module",
+      "path": "src/neurodecodekit/datasets/marc2_live_domain_eligibility_adapter.py",
+      "bytes": 57528,
+      "sha256": "061b893180e01116dbd962826384b4071d9e952b78b593b4743f8c301e1cbbc3"
+    },
+    {
+      "role": "VR2_contract",
+      "path": "registries/marc2_live_domain_eligibility_adapter_contract.v0.json",
+      "bytes": 15306,
+      "sha256": "c7c94406c7b3f483bb2ecbbb42b131756d178f288eedc31ce48e9383180a0a33"
+    },
+    {
+      "role": "VR28P_private_result_record",
+      "path": "registries/marc2_inventory_taxonomy_private_discriminator_private_result.v0.json",
+      "bytes": 9055,
+      "sha256": "1f488bbac30ddd1c420067918ad3251cf73e15c7b3d8409f8b9e2016f81df46f"
+    },
+    {
+      "role": "VR28P_result_document",
+      "path": "docs/MARC_2_INVENTORY_TAXONOMY_PRIVATE_DISCRIMINATOR_RESULT.md",
+      "bytes": 4287,
+      "sha256": "f8ceac4b83f7cb1afe0ff7de17856588a349a75d6b8efb86f4268104e6f031cc"
+    },
+    {
+      "role": "VR27A_route_module",
+      "path": "src/neurodecodekit/datasets/marc2_r5_inventory_taxonomy_discriminator.py",
+      "bytes": 21902,
+      "sha256": "735b010af4510543a67f550be3cf95a1007f0f0ea0ad8c6690b58f48d3567b15"
+    }
+  ],
+  "fixed_input_count": 8,
+  "fixed_input_bytes": 166935,
+  "ordered_R1_route_inventory": {
+    "filtered_eligible_total": {
+      "VR29A_route": "MARC2VR29A-R1",
+      "safe_class": "filtered_eligible_total_arithmetic_differs",
+      "exact_VR2_call_sites": 1,
+      "frozen_internal_safe_reason": "filtered eligible total differs",
+      "observed_total_or_difference_allowed": false
+    },
+    "participant_session_distribution": {
+      "VR29A_route": "MARC2VR29A-R2",
+      "safe_class": "participant_session_distribution_arithmetic_differs",
+      "exact_VR2_call_sites": 1,
+      "frozen_internal_safe_reason": "eligible participant-session counts differ",
+      "observed_distribution_or_participant_allowed": false
+    }
+  },
+  "exact_R1_call_site_total": 2,
+  "generated_witness_matrix": {
+    "cases": [
+      {
+        "case": "exact_public_control",
+        "expected_VR25A_route": "MARC2VR25A-G1",
+        "expected_VR29A_route": "MARC2VR29A-G1"
+      },
+      {
+        "case": "single_session_exclusion_removed",
+        "expected_VR25A_route": "MARC2VR25A-G2",
+        "expected_VR29A_route": "MARC2VR29A-G2"
+      },
+      {
+        "case": "eligible_bundle_removed",
+        "expected_VR25A_route": "MARC2VR25A-R1",
+        "expected_VR29A_route": "MARC2VR29A-R1"
+      },
+      {
+        "case": "eligible_bundle_added",
+        "expected_VR25A_route": "MARC2VR25A-R1",
+        "expected_VR29A_route": "MARC2VR29A-R1"
+      },
+      {
+        "case": "eligible_distribution_shift",
+        "expected_VR25A_route": "MARC2VR25A-R1",
+        "expected_VR29A_route": "MARC2VR29A-R2"
+      },
+      {
+        "case": "eligible_distribution_shift_second",
+        "expected_VR25A_route": "MARC2VR25A-R1",
+        "expected_VR29A_route": "MARC2VR29A-R2"
+      },
+      {
+        "case": "unknown_participant_bundle",
+        "expected_VR25A_route": "MARC2VR25A-R2",
+        "expected_VR29A_route": "MARC2VR29A-R3"
+      },
+      {
+        "case": "incomplete_companion_set",
+        "expected_VR25A_route": "MARC2VR25A-R3",
+        "expected_VR29A_route": "MARC2VR29A-R3"
+      }
+    ],
+    "orders": [
+      "canonical",
+      "reversed"
+    ],
+    "replays": 2,
+    "required_paths": 32,
+    "required_VR25A_calls": 32,
+    "required_R1_filter_discriminator_calls": 16,
+    "expected_VR29A_route_counts": {
+      "MARC2VR29A-G1": 4,
+      "MARC2VR29A-G2": 4,
+      "MARC2VR29A-R1": 8,
+      "MARC2VR29A-R2": 8,
+      "MARC2VR29A-R3": 8
+    },
+    "minimum_direct_refusals": 70,
+    "source_immutability_required": true,
+    "VR25A_VR2_or_predecessor_modification_allowed": false,
+    "upstream_reason_count_distribution_participant_or_source_detail_retention_allowed": false
+  },
+  "implementation_contract": {
+    "module_path": "src/neurodecodekit/datasets/marc2_r1_inventory_distribution_discriminator.py",
+    "commands": [
+      "plan",
+      "qualify"
+    ],
+    "dependency_policy": "standard_library_only",
+    "one_VR25A_call_per_generated_path": true,
+    "one_additional_VR2_filter_call_per_R1_path": true,
+    "exact_route_only_output": true,
+    "retained_generated_source_bytes": 0,
+    "private_executor_allowed": false
+  },
+  "resource_limits": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "generated_input_bytes": 33554432,
+    "aggregate_output_bytes": 1048576,
+    "retained_output_bytes": 0,
+    "network_bytes": 0,
+    "new_payload_bytes": 0
+  },
+  "authorization": {
+    "artifact_only_reads": true,
+    "generated_fixture_creation": true,
+    "generated_parameter_update_runs": 0,
+    "private_or_Git_ignored_path_access": false,
+    "readiness_or_consumed_state_access": false,
+    "archive_header_or_member_access": false,
+    "signal_event_target_or_label_access": false,
+    "model_training_inference_prediction_or_scoring": false,
+    "network_or_provider_calls": false,
+    "FW2_or_CIL1_execution": false,
+    "scientific_claim_upgrade": false
+  },
+  "registration_operation_counters": {
+    "private_source_stats_hashes_opens_reads_or_parses": 0,
+    "private_output_or_consumed_state_operations": 0,
+    "archive_operations": 0,
+    "neural_signal_operations": 0,
+    "target_or_label_operations": 0,
+    "model_training_inference_prediction_or_scoring_runs": 0,
+    "network_or_provider_calls": 0,
+    "FW2_or_CIL1_operations": 0,
+    "other_project_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "acceptance_gates": [
+    "registration is committed pushed and both required CI jobs are green before implementation",
+    "all eight fixed inputs match exact byte count and SHA-256",
+    "AST inventory binds exactly two VR2 eligible-filter refusal call sites",
+    "all 32 generated paths call unchanged VR25A exactly once",
+    "all 16 R1 paths call unchanged VR2 eligible filtering exactly once more",
+    "VR29A route counts are G1 four G2 four R1 eight R2 eight and R3 eight",
+    "at least 70 direct refusals pass",
+    "all generated sources remain immutable and retained output is zero",
+    "complete dependency-light tests focused Ruff registry parsing CLI help and diff hygiene pass",
+    "implementation and result are committed pushed and remotely green before any later packet"
+  ],
+  "claim_boundary": {
+    "engineering_capability_if_passed": "generated route discrimination between filtered eligible-total arithmetic and participant-session distribution arithmetic",
+    "scientific_ceiling": "none",
+    "real_cohort_established": false,
+    "neural_payload_accessed": false,
+    "decoding_performance_established": false,
+    "language_or_thought_decoding_established": false,
+    "unseen_person_generalization_established": false,
+    "live_decoding_established": false
+  }
+}

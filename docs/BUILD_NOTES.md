@@ -13083,6 +13083,29 @@ private state. Stage 2 remains closed until that barrier passes.
 Immediate gate: commit, push, and green this exact proof-only closeout. Do not
 run `execute`, collect readiness, or touch private state before both jobs pass.
 
+### VR29A R1 inventory/distribution decomposition registered
+
+- VR28P result `f2b396ed99196d2a5632251390097c6990a7d8d4` passed
+  Base Python job `97142255660`, Optional Neuro Readers job `97142255770`,
+  and CI `32618219730` before registration.
+- Static review freezes the two exact VR2 eligible-filter refusal sites:
+  filtered eligible total differs from 195 versus participant-session counts
+  differing while the total remains 195.
+- The eight-case generated matrix runs in two orders and two replays. Its 32
+  paths require 32 unchanged VR25A calls, 16 additional unchanged VR2 filter
+  calls on R1 paths, and route counts G1/G2/R1/R2/R3 = 4/4/8/8/8.
+- Two independent distribution shifts and two out-of-scope controls prevent a
+  one-witness or route-assumption shortcut. At least 70 direct refusals, exact
+  replay, source immutability, zero retention, and bounded resources are
+  mandatory.
+- The lane is artifact-only and generated-only, has no private executor, and
+  performed zero private, consumed-state, archive, neural, target, model,
+  score, network, FW2/CIL1, device, other-project, release, or claim operation.
+
+Immediate gate: commit, push, and green this exact registration before any
+VR29A implementation. Another private read remains a new Tier C packet and
+fresh packet-bound decision.
+
 ### VR28P consumed at R1
 
 - Proof-only closeout `96bff687013dcbfb507455b5f8c045977bc84fe8`

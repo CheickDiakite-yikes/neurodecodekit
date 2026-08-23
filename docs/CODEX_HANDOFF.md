@@ -1,5 +1,18 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR29A registration, 2026-08-23: VR28P result
+> `f2b396ed99196d2a5632251390097c6990a7d8d4` passed Base Python job
+> `97142255660`, Optional Neuro Readers job `97142255770`, and CI
+> `32618219730`. The generated-only contract freezes the two exact public R1
+> subclasses: filtered eligible total arithmetic versus participant-session
+> distribution arithmetic. Eight cases across two orders and two replays
+> require 32 unchanged VR25A calls, 16 additional unchanged VR2 eligible-
+> filter calls, G1/G2/R1/R2/R3 counts 4/4/8/8/8, at least 70 direct
+> refusals, and zero retention. Immediate gate: commit, push, and green this
+> exact registration before implementation. VR29A has no private executor;
+> consumed VR28P state and every archive, neural, target, model, score,
+> FW2/CIL1, device, release, and claim surface remain closed.
+
 > Current MARC2-VR28P result, 2026-08-23: proof-only closeout
 > `96bff687013dcbfb507455b5f8c045977bc84fe8` passed Base Python job
 > `97139815087`, Optional Neuro Readers job `97139815147`, and CI

@@ -45,6 +45,27 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
+The next safe lane is now frozen as `MARC2-VR29A`. Read
+`docs/MARC_2_R1_INVENTORY_DISTRIBUTION_DISCRIMINATOR_PREREGISTRATION.md`
+and
+`registries/marc2_r1_inventory_distribution_discriminator_contract.v0.json`.
+Exact VR28P result `f2b396ed99196d2a5632251390097c6990a7d8d4`
+passed Base Python job `97142255660`, Optional Neuro Readers job
+`97142255770`, and CI `32618219730` before this registration.
+
+VR29A is artifact-only and generated-only. It freezes eight 1,227-row cases,
+two orders, two replays, 32 unchanged VR25A calls, and 16 additional unchanged
+VR2 eligible-filter calls on the R1 paths. Expected route counts are G1=4,
+G2=4, R1=8 filtered-total arithmetic, R2=8 participant-session distribution
+arithmetic, and R3=8 out-of-scope controls, plus at least 70 direct refusals.
+
+Immediate gate: commit, push, and green this exact registration before any
+VR29A implementation. Do not touch VR28P private source, readiness, consumed
+marker, or output. VR29A has no private executor and authorizes no private,
+archive, neural, target, model, score, FW2/CIL1, network, device, release, or
+claim operation. A future private read remains a new Tier C packet and fresh
+packet-bound decision.
+
 `MARC2-VR28P` is consumed at aggregate route `MARC2VR28P-R1` without a
 cohort freeze. Read
 `docs/MARC_2_INVENTORY_TAXONOMY_PRIVATE_DISCRIMINATOR_RESULT.md` and

@@ -11729,3 +11729,30 @@ decomposition. Any new private read requires a separately frozen Tier C packet
 and decision. No archive member, neural payload, target, model, prediction,
 score, FW2/CIL1, network, provider, device, release, or scientific claim is
 authorized or established.
+
+## 0400 - Freeze VR29A Inventory/Distribution Route Discrimination
+
+Proof decision: exact VR28P aggregate result
+`f2b396ed99196d2a5632251390097c6990a7d8d4` passed CI `32618219730`, Base
+Python job `97142255660`, and Optional Neuro Readers job `97142255770` before
+registration. VR28P remains consumed at R1 without private reinspection.
+
+Research decision: decompose only the two exact public checks collapsed into
+VR28P R1. Map filtered eligible-total arithmetic to R1 and participant-session
+distribution arithmetic to R2. Preserve exact-success G1, compatibility-only
+G2, and out-of-scope R3 controls.
+
+Design decision: freeze eight generated cases across two orders and two exact
+replays. Require 32 unchanged VR25A calls, 16 additional unchanged VR2
+eligible-filter calls on R1 paths, route counts G1/G2/R1/R2/R3 =
+4/4/8/8/8, two independent distribution shifts, two out-of-scope controls,
+at least 70 direct refusals, source immutability, bounded resources, and zero
+retention.
+
+Boundary decision: VR29A is artifact-only and generated-only, has no private
+executor, and may not expose an observed total, difference, distribution,
+participant, reason, row, path, selection, or cohort. Commit, push, and green
+the registration before implementation. Any private read remains a separate
+Tier C packet and fresh decision. No archive, neural, target, model, score,
+FW2/CIL1, network, provider, device, release, or scientific claim operation is
+authorized or established.
