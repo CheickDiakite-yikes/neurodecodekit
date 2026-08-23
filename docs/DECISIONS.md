@@ -11696,3 +11696,36 @@ Boundary decision: repeat no qualification and perform no readiness,
 prediction, score, network, provider, device, FW2/CIL1, other-project,
 release, or claim operation. This closeout is ineffective until its own exact
 commit is pushed and both required jobs are green.
+
+## 0399 - Accept The One-Shot VR28P R1 Structural Result
+
+Proof decision: proof-only closeout
+`96bff687013dcbfb507455b5f8c045977bc84fe8` passed CI `32617240661`, Base
+Python job `97139815087`, and Optional Neuro Readers job `97139815147` before
+the sole Stage 2 invocation.
+
+Result decision: accept aggregate route `MARC2VR28P-R1` after three fresh
+readiness samples, one 418,755-byte target-free structural open and strict
+parse, one unchanged VR25A call, and one frozen VR27A map call. The executor
+ran in 10.065900957910344 seconds at 30,654,464-byte peak RSS under one CPU
+thread, one worker, and one numerical job, with zero network and new-payload
+bytes.
+
+Interpretation decision: exclude unknown-participant taxonomy for this exact
+execution and localize the remaining blocker only to eligible-inventory or
+participant-session distribution validation. Do not infer a predicate, count,
+direction, row, path, identity, participant, selection, or cohort.
+
+Measurement decision: preserve the 1,183-byte canonical aggregate return.
+Mark exact combined readiness, marker, and report output bytes unavailable
+because the executor did not return them and the consumed output may not be
+listed, statted, opened, or inspected to recover them. Do not upgrade a
+per-write cap into a measured combined-output result.
+
+Boundary decision: VR28P is consumed with no retry, rerun, resume, repair,
+fallback, substitution, cleanup, amendment, output inspection, or private
+reinspection. The next safe task is artifact-only/generated-only R1
+decomposition. Any new private read requires a separately frozen Tier C packet
+and decision. No archive member, neural payload, target, model, prediction,
+score, FW2/CIL1, network, provider, device, release, or scientific claim is
+authorized or established.

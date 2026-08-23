@@ -1,0 +1,223 @@
+{
+  "schema_name": "neurodecodekit.marc2_inventory_taxonomy_private_discriminator_private_result_record",
+  "schema_version": "0.1.0",
+  "result_id": "MARC-2-VR28P-inventory-taxonomy-private-discriminator-private-result-v0",
+  "lane_id": "MARC2-VR28P",
+  "recorded_at_local": "2026-08-23",
+  "status": "consumed_without_cohort_freeze",
+  "route": "MARC2VR28P-R1",
+  "execution_proof_chain": {
+    "decision_commit": "718c3de6ddb0030b1ba39fa0e42250e97db01072",
+    "decision_CI_run_id": 32614796767,
+    "decision_base_job_id": 97133595196,
+    "decision_optional_neuro_job_id": 97133595235,
+    "initial_implementation_commit": "06174e1456c57c050c48f5b1bce9b276629e2f25",
+    "initial_implementation_CI_run_id": 32616187929,
+    "initial_implementation_base_job_id": 97137205238,
+    "initial_implementation_optional_neuro_job_id": 97137205346,
+    "exact_implementation_commit": "6d3b770d0e67c8b394c6a1a7581c21ae7b202909",
+    "exact_implementation_CI_run_id": 32616632414,
+    "exact_implementation_base_job_id": 97138335047,
+    "exact_implementation_optional_neuro_job_id": 97138335116,
+    "proof_closeout_commit": "96bff687013dcbfb507455b5f8c045977bc84fe8",
+    "proof_closeout_CI_run_id": 32617240661,
+    "proof_closeout_base_job_id": 97139815087,
+    "proof_closeout_optional_neuro_job_id": 97139815147,
+    "both_required_jobs_green_before_execution": true
+  },
+  "returned_aggregate_report": {
+    "claim_boundary": {
+      "engineering_capability": "one aggregate inventory-versus-taxonomy structural class",
+      "scientific_claim_not_established": "No archive payload neural signal target model prediction or score was accessed."
+    },
+    "lane_id": "MARC2-VR28P",
+    "measurements": {
+      "CPU_threads": 1,
+      "VR25A_calls": 1,
+      "VR27A_map_calls": 1,
+      "input_bytes": 418755,
+      "network_bytes": 0,
+      "new_payload_bytes": 0,
+      "numerical_jobs": 1,
+      "peak_RSS_bytes": 30654464,
+      "readiness_samples": 3,
+      "runtime_seconds": 10.065900957910344,
+      "source_content_opens": 1,
+      "strict_JSON_parses": 1,
+      "workers": 1
+    },
+    "proof": {
+      "decision_commit": "718c3de6ddb0030b1ba39fa0e42250e97db01072",
+      "implementation_commit": "6d3b770d0e67c8b394c6a1a7581c21ae7b202909"
+    },
+    "route": "MARC2VR28P-R1",
+    "schema_name": "neurodecodekit.marc2_inventory_taxonomy_private_discriminator_result",
+    "schema_version": "0.1.0",
+    "status": "consumed_aggregate_target_free_structural_discriminator",
+    "unavailable_fields": [
+      "structural_predicate_or_value",
+      "participant_or_cohort",
+      "archive_member_neural_signal_target_model_prediction_or_score"
+    ],
+    "warnings": [
+      "target_free_structural_route_only",
+      "no_detail_or_cohort_retained",
+      "invocation_consumed_no_retry_or_rerun",
+      "no_neural_decoding_or_scientific_claim"
+    ]
+  },
+  "resources": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "input_bytes": 418755,
+    "executor_runtime_seconds": 10.065900957910344,
+    "peak_RSS_bytes": 30654464,
+    "network_bytes": 0,
+    "new_payload_bytes": 0,
+    "external_preflight_available_disk_KiB": 110756540,
+    "external_preflight_available_disk_bytes": 113414696960,
+    "minimum_free_disk_bytes": 16106127360,
+    "end_to_end_latency_measured": false
+  },
+  "output_measurement": {
+    "aggregate_return_JSON_canonical_bytes": 1183,
+    "readiness_certificate_bytes": null,
+    "consumed_marker_bytes": null,
+    "combined_incremental_output_bytes": null,
+    "combined_incremental_output_cap_bytes": 1048576,
+    "exact_combined_output_measured": false,
+    "aggregate_report_reconstructible_without_private_reinspection": true,
+    "readiness_and_marker_exact_bytes_returned_by_executor": false,
+    "private_output_reinspection_used_to_recover_bytes": false,
+    "per_write_cap_enforced_by_implementation": true,
+    "combined_cap_claim_upgraded_from_inference": false
+  },
+  "authorized_operations": {
+    "registered_invocations": 1,
+    "fresh_readiness_samples": 3,
+    "readiness_certificate_writes": 1,
+    "consumed_marker_writes": 1,
+    "private_structural_content_opens": 1,
+    "private_structural_source_bytes": 418755,
+    "strict_JSON_parses": 1,
+    "VR25A_calls": 1,
+    "VR27A_map_calls": 1,
+    "aggregate_report_writes": 1,
+    "aggregate_report_inspections_after_execution": 0,
+    "private_cohort_freezes": 0
+  },
+  "returned_forbidden_counters": {
+    "FW2_operations": 0,
+    "CIL1_operations": 0,
+    "archive_local_header_reads": 0,
+    "archive_member_payload_reads": 0,
+    "signal_sample_reads": 0,
+    "event_channel_or_geometry_reads": 0,
+    "target_or_label_reads": 0,
+    "checkpoint_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scoring_runs": 0,
+    "network_requests": 0,
+    "new_payload_bytes": 0,
+    "provider_or_language_model_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "other_project_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "post_execution_handling": {
+    "result_source": "execute_returned_aggregate_JSON_only",
+    "aggregate_report_inspections_after_execution": 0,
+    "readiness_certificate_inspections_after_execution": 0,
+    "consumed_marker_inspections_after_execution": 0,
+    "private_manifest_created": false,
+    "private_manifest_inspections": 0,
+    "private_source_reopens": 0,
+    "private_source_rehashes": 0,
+    "private_output_listing_or_stat_operations": 0,
+    "private_reinspection_operations": 0,
+    "retry_rerun_resume_allowed": false
+  },
+  "verification": {
+    "pre_change_dependency_light_tests": 5117,
+    "focused_result_tests_passed": 6,
+    "complete_dependency_light_tests_passed": 5123,
+    "expected_skips": 204,
+    "new_failures": 0,
+    "focused_ruff_passed": true,
+    "repository_wide_ruff_passed": false,
+    "repository_wide_preexisting_findings": 1125,
+    "registry_JSON_files_parsed": 385,
+    "git_diff_check_passed": true,
+    "private_operations_during_verification": 0
+  },
+  "route_interpretation": {
+    "frozen_class": "eligible_inventory_or_participant_session_distribution_refused",
+    "compatible_VR25A_routes": [
+      "MARC2VR25A-R1"
+    ],
+    "excluded_VR25A_routes": [
+      "MARC2VR25A-R2"
+    ],
+    "unknown_recognized_participant_taxonomy_excluded": true,
+    "eligible_inventory_or_distribution_drift_known": true,
+    "eligible_inventory_arithmetic_known": false,
+    "participant_session_distribution_arithmetic_known": false,
+    "observed_complete_bundle_count_known": false,
+    "difference_direction_or_magnitude_known": false,
+    "VR25A_called_once": true,
+    "VR27A_map_called_once": true,
+    "failed_predicate_known": false,
+    "failed_private_value_known": false,
+    "private_filename_path_row_or_identity_known": false,
+    "participant_selection_reservation_or_cohort_known": false,
+    "real_cohort_frozen": false,
+    "FW2_or_CIL1_eligible": false
+  },
+  "warnings": [
+    "This is a target-free structural result, not neural evidence.",
+    "R1 excludes unknown-participant taxonomy but does not distinguish eligible-inventory arithmetic from participant-session distribution arithmetic.",
+    "No private count, direction, value, identity, path, participant, selection, cohort, archive, signal, target, model, or score was retained.",
+    "Exact combined readiness, marker, and report output bytes were not returned and were not recovered through forbidden post-result inspection.",
+    "MARC2-VR28P is consumed and has no retry, rerun, resume, repair, fallback, substitution, cleanup, amendment, output inspection, or private reinspection."
+  ],
+  "unavailable_fields": [
+    "eligible_inventory_arithmetic_failure",
+    "participant_session_distribution_failure",
+    "observed_complete_bundle_count",
+    "bundle_count_difference_direction_or_magnitude",
+    "failed_predicate",
+    "failed_private_value",
+    "private_filename_path_row_or_identity",
+    "participant_selection_or_cohort",
+    "combined_incremental_output_bytes",
+    "real_neural_cohort",
+    "neural_payload",
+    "neural_effect",
+    "decoding_accuracy",
+    "live_latency",
+    "FW2_result",
+    "CIL1_result"
+  ],
+  "next_gate": {
+    "artifact_only_generated_only_R1_decomposition_allowed_under_Tier_A_or_B": true,
+    "new_private_read_requires_separate_frozen_Tier_C_packet_and_decision": true,
+    "private_manifest_archive_or_neural_access_authorized": false,
+    "target_model_prediction_score_FW2_or_CIL1_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_capability": "aggregate real structural refusal localized to eligible-inventory or participant-session distribution validation under proof-separated one-shot controls",
+    "scientific_ceiling": "none",
+    "neural_payload_accessed": false,
+    "target_model_prediction_or_score_accessed": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "live_decoding": false
+  }
+}

@@ -45,6 +45,35 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
+`MARC2-VR28P` is consumed at aggregate route `MARC2VR28P-R1` without a
+cohort freeze. Read
+`docs/MARC_2_INVENTORY_TAXONOMY_PRIVATE_DISCRIMINATOR_RESULT.md` and
+`registries/marc2_inventory_taxonomy_private_discriminator_private_result.v0.json`
+first. Proof-only closeout `96bff687013dcbfb507455b5f8c045977bc84fe8`
+passed Base Python job `97139815087`, Optional Neuro Readers job
+`97139815147`, and CI `32617240661` before the sole invocation.
+
+The executor collected three fresh readiness samples, opened and strict-parsed
+exactly 418,755 target-free structural bytes once, called VR25A once, called
+VR27A once, and consumed at R1. Runtime was 10.065900957910344 seconds at
+30,654,464-byte peak RSS under one CPU thread, one worker, and one numerical
+job. Network and new-payload bytes were zero.
+
+R1 excludes unknown-participant taxonomy and leaves only eligible-inventory
+arithmetic versus participant-session distribution arithmetic. The exact
+predicate, count, direction, row, path, identity, participant, selection, and
+cohort were not retained and must not be inferred. Exact combined output bytes
+were not returned and were not recovered through private reinspection; only
+the 1,183-byte canonical aggregate return is reconstructible.
+
+VR28P has no retry, rerun, resume, repair, fallback, substitution, cleanup,
+amendment, output inspection, or private reinspection. Do not touch its
+private source, readiness state, consumed marker, or output root. The next
+safe task is a separately frozen artifact-only and generated-only R1
+decomposition. Any new private read requires a new Tier C packet and fresh
+packet-bound decision. FW2/CIL1, archive members, neural data, targets,
+models, scores, streams, devices, releases, and claims remain closed.
+
 `MARC2-VR26P` is consumed at aggregate route `MARC2VR26P-R5` without a
 cohort freeze. Read its result document and machine registry first. Exact
 result `878148a7adaede8d871f181ad535a2c730a86f93` passed Base Python job
@@ -128,11 +157,11 @@ The proof-only closeout binds the 7,743-byte preproof implementation registry,
 artifact-set hash, and five exact implementation Git blobs. It repeats no
 qualification and performs zero private operation.
 
-Immediate gate: commit, push, and green this exact proof-only closeout. Until
-both jobs are green, do not touch `.codex_work`, the registered private source,
-or any consumed lane. After green, the already authorized one-shot Stage 2
-invocation may proceed with no retry. FW2/CIL1, archive members, neural data,
-targets, models, scores, streams, devices, releases, and claims remain closed.
+Exact proof-only closeout `96bff687013dcbfb507455b5f8c045977bc84fe8`
+passed Base Python job `97139815087`, Optional Neuro Readers job
+`97139815147`, and CI `32617240661` before the sole Stage 2 invocation. The
+invocation is now consumed at R1 as recorded above. Do not retry or reinspect
+it.
 
 ### Historical VR22P/VR23A/VR24P boundary
 

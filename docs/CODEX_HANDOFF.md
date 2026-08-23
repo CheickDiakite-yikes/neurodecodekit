@@ -1,5 +1,23 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR28P result, 2026-08-23: proof-only closeout
+> `96bff687013dcbfb507455b5f8c045977bc84fe8` passed Base Python job
+> `97139815087`, Optional Neuro Readers job `97139815147`, and CI
+> `32617240661` before the sole invocation. The executor collected three fresh
+> readiness samples, opened and strict-parsed exactly 418,755 target-free
+> structural bytes once, called VR25A once, called VR27A once, and consumed at
+> `MARC2VR28P-R1`. Runtime was 10.065900957910344 seconds at 30,654,464-byte
+> peak RSS; network and new-payload bytes were zero. R1 excludes unknown-
+> participant taxonomy and leaves eligible-inventory arithmetic versus
+> participant-session distribution arithmetic. No predicate, count,
+> direction, identity, participant, selection, or cohort was retained. Exact
+> combined output bytes were not returned and were not recovered through
+> private inspection; the canonical aggregate return is 1,183 bytes. VR28P
+> is consumed with no retry or reinspection. Immediate next task: freeze an
+> artifact-only/generated-only R1 decomposition. FW2/CIL1 and all archive,
+> neural, target, model, score, device, release, and scientific work remain
+> closed.
+
 > Current MARC2-VR28P proof-only closeout, 2026-08-23: initial implementation
 > `06174e1` passed Base Python job `97137205238`, Optional Neuro Readers job
 > `97137205346`, and CI `32616187929`. A proof-transition-only test hardening

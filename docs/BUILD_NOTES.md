@@ -13083,6 +13083,34 @@ private state. Stage 2 remains closed until that barrier passes.
 Immediate gate: commit, push, and green this exact proof-only closeout. Do not
 run `execute`, collect readiness, or touch private state before both jobs pass.
 
+### VR28P consumed at R1
+
+- Proof-only closeout `96bff687013dcbfb507455b5f8c045977bc84fe8`
+  passed Base Python job `97139815087`, Optional Neuro Readers job
+  `97139815147`, and CI `32617240661` before the sole Stage 2 invocation.
+- The executor collected three fresh readiness samples, opened and strict-
+  parsed exactly 418,755 target-free structural bytes once, called VR25A once,
+  called the frozen VR27A map once, and returned `MARC2VR28P-R1`.
+- Runtime was 10.065900957910344 seconds at 30,654,464-byte peak RSS under one
+  CPU thread, one worker, and one numerical job. Network and new-payload bytes
+  were zero.
+- R1 excludes unknown-participant taxonomy and leaves eligible-inventory
+  arithmetic versus participant-session distribution arithmetic. No private
+  predicate, value, count, direction, row, path, identity, participant,
+  selection, or cohort was retained.
+- The 1,183-byte canonical aggregate return is reconstructible. Exact combined
+  readiness, marker, and report bytes were not returned and were not recovered
+  through private output inspection, so combined-output telemetry is recorded
+  as unavailable.
+- VR28P is consumed with no retry, rerun, resume, repair, fallback,
+  substitution, cleanup, amendment, output inspection, or private
+  reinspection. Every archive, neural, target, model, score, network,
+  FW2/CIL1, device, other-project, release, and claim counter was zero.
+
+Immediate next safe task: freeze an artifact-only and generated-only R1
+decomposition. Any later private read requires a new Tier C packet and fresh
+packet-bound decision.
+
 ### VR28P proof-only closeout prepared
 
 - Initial implementation `06174e1456c57c050c48f5b1bce9b276629e2f25`

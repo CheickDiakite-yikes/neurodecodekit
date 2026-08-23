@@ -7,7 +7,37 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR28P Proof-Only Closeout Pending Remote Green
+## Current Frontier: MARC2-VR28P Consumed At R1
+
+Read
+`docs/MARC_2_INVENTORY_TAXONOMY_PRIVATE_DISCRIMINATOR_RESULT.md` and
+`registries/marc2_inventory_taxonomy_private_discriminator_private_result.v0.json`
+first. Proof-only closeout `96bff687013dcbfb507455b5f8c045977bc84fe8`
+passed Base Python job `97139815087`, Optional Neuro Readers job
+`97139815147`, and CI `32617240661` before the sole invocation.
+
+The executor collected three fresh readiness samples, opened and strict-parsed
+exactly 418,755 target-free structural bytes once, called VR25A once, called
+the frozen VR27A map once, and consumed at `MARC2VR28P-R1`. Runtime was
+10.065900957910344 seconds at 30,654,464-byte peak RSS under one CPU thread,
+one worker, and one numerical job. Network and new-payload bytes were zero.
+
+R1 excludes unknown-participant taxonomy and localizes the remaining blocker
+to eligible-inventory or participant-session distribution validation. It does
+not identify the failed predicate, count, direction, row, path, identity,
+participant, selection, or cohort. Exact combined readiness, marker, and
+report bytes were not returned and were not recovered through forbidden
+post-result inspection; the 1,183-byte canonical aggregate return is the only
+reconstructed output measurement.
+
+VR28P is consumed with no retry, rerun, resume, repair, fallback,
+substitution, cleanup, amendment, output inspection, or private reinspection.
+Do not touch its private source, readiness state, consumed marker, or output
+root. The next safe task is an artifact-only and generated-only R1
+decomposition of eligible-inventory arithmetic versus participant-session
+distribution arithmetic. Any later private read remains a new Tier C packet
+and decision. FW2/CIL1, archive/neural payload, targets, models, scores,
+devices, streams, releases, and scientific claims remain closed.
 
 VR24P result `a873f1a` passed Base job `97103071419`, Optional Neuro Readers
 job `97103071353`, and CI `32602610854`. The exact one-shot result remains
@@ -201,12 +231,11 @@ Read
 It binds the exact preproof implementation and result registries plus five
 implementation Git blobs and repeats no qualification or private operation.
 
-Immediate gate: commit, push, and green the proof-only closeout. The registered
-private source, readiness, output root, and consumed lanes remain untouched
-until both jobs pass. After green, the already authorized one-shot Stage 2
-invocation may run with no retry. FW2/CIL1, archive/neural payload, targets,
-models, scores, devices, streams, releases, and scientific claims remain
-closed.
+Exact proof-only closeout `96bff687013dcbfb507455b5f8c045977bc84fe8`
+passed Base Python job `97139815087`, Optional Neuro Readers job
+`97139815147`, and CI `32617240661` before the sole Stage 2 invocation. That
+invocation is now consumed at R1 as recorded at the top of this file. Do not
+retry or reinspect it.
 
 ## Historical Frontier: MARC2-VR24P Consumed At R2
 
