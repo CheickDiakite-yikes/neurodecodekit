@@ -11611,3 +11611,24 @@ device, other-project, release, or claim operation. The current `continue`
 predates the packet and is not retroactive authority. Commit, push, and green
 the request and a separate proof-only closeout before identifying VR28P as the
 sole active Tier C gate.
+
+## 0395 - Bind Exact Remote Proof For The VR28P Request
+
+Proof decision: exact all-false request
+`4e5895fc0fc8bc3cf2c91f5211406115a8e2e6d5` passed Base Python job
+`97130420447`, Optional Neuro Readers job `97130420507`, and CI
+`32613575234`. Bind that proof only to the unchanged request.
+
+Identity decision: bind the 8,318-byte authorization packet, 14,289-byte
+machine request, and 7,580-byte request test by exact byte count, SHA-256, and
+Git blob. The three request artifacts total 30,187 bytes.
+
+Scope decision: preserve 13 fixed inputs totaling 149,233 bytes, one future
+418,755-byte private source open, five aggregate routes, two answering routes,
+zero private-detail retention, zero cohort freeze, and no retry or rerun.
+
+Authority decision: perform no generated implementation, readiness, private,
+archive, neural, target, model, score, network, provider, device, other-
+project, release, or claim operation. This closeout has delayed effect until
+its own exact commit is pushed and both jobs are green. Fresh packet-bound
+maintainer words remain required before any decision or implementation.

@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Frontier: MARC2-VR28P All-False Request Prepared
+## Current Frontier: MARC2-VR28P Request Proof Closeout Pending
 
 VR24P result `a873f1a` passed Base job `97103071419`, Optional Neuro Readers
 job `97103071353`, and CI `32602610854`. The exact one-shot result remains
@@ -159,14 +159,20 @@ and one VR27A map call. It may retain only aggregate R1 inventory/distribution
 or R2 unknown-taxonomy evidence. It cannot retain private counts, directions,
 rows, paths, identities, participants, selections, or a cohort.
 
-Immediate gate: verify, commit, push, and green the exact VR28P request, then
-create and separately green a proof-only request closeout. Only afterward may
-VR28P be identified as the sole active Tier C packet. The current `continue`
-predates this packet and is not retroactive authority. Do not implement the
-wrapper or touch readiness, `.codex_work`, the private source, or an output
-root before a fresh packet-bound decision. FW2/CIL1, archive/neural payload,
-targets, models, scores, devices, streams, releases, and scientific claims
-remain closed.
+Exact request `4e5895f` passed Base Python job `97130420447`, Optional Neuro
+Readers job `97130420507`, and CI `32613575234`. Read
+`docs/MARC_2_INVENTORY_TAXONOMY_PRIVATE_DISCRIMINATOR_REQUEST_PROOF_CLOSEOUT.md`
+and its machine proof. The closeout binds the unchanged 8,318-byte packet,
+14,289-byte request, and 7,580-byte test by hash and Git blob. It changes no
+scope and performs zero implementation or private operation.
+
+Immediate gate: verify, commit, push, and green this proof-only closeout. Only
+afterward may VR28P be identified as the sole active Tier C packet. The current
+`continue` predates the packet and is not retroactive authority. Do not
+implement the wrapper or touch readiness, `.codex_work`, the private source,
+or an output root before a fresh packet-bound decision. FW2/CIL1,
+archive/neural payload, targets, models, scores, devices, streams, releases,
+and scientific claims remain closed.
 
 ## Historical Frontier: MARC2-VR24P Consumed At R2
 

@@ -1,5 +1,18 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current MARC2-VR28P request proof closeout, 2026-08-22: exact request
+> `4e5895fc0fc8bc3cf2c91f5211406115a8e2e6d5` passed Base Python job
+> `97130420447`, Optional Neuro Readers job `97130420507`, and CI
+> `32613575234`. The proof-only closeout binds three unchanged request
+> artifacts totaling 30,187 bytes by SHA-256 and Git blob. It changes no scope,
+> performs no implementation or private operation, and remains ineffective
+> until its own commit is pushed and both jobs are green. Immediate gate:
+> verify, commit, push, and green this closeout; only then identify VR28P as the
+> sole active Tier C packet and request fresh packet-bound words. The current
+> `continue` predates the packet. Do not touch `.codex_work`, readiness,
+> consumed state, the private source, archive/neural payload, targets, models,
+> scores, FW2/CIL1, devices, streams, release, or scientific claims.
+
 > Current MARC2-VR28P request, 2026-08-22: VR27A proof-only closeout
 > `f6b5dbf697d113c330f3fbf542fd97ad1c65d46d` passed Base Python job
 > `97127512656`, Optional Neuro Readers job `97127512634`, and CI

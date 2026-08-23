@@ -1,0 +1,117 @@
+{
+  "schema_name": "neurodecodekit.marc2_inventory_taxonomy_private_discriminator_request_proof",
+  "schema_version": "0.1.0",
+  "proof_id": "MARC-2-VR28P-all-false-request-remote-proof-v0",
+  "lane_id": "MARC2-VR28P",
+  "recorded_at_local": "2026-08-22",
+  "status": "request_remotely_green_closeout_effect_delayed_until_own_remote_green",
+  "request_remote_proof": {
+    "commit": "4e5895fc0fc8bc3cf2c91f5211406115a8e2e6d5",
+    "CI_run_id": 32613575234,
+    "base_python_job_id": 97130420447,
+    "optional_neuro_job_id": 97130420507,
+    "both_required_jobs_green": true
+  },
+  "exact_request_artifacts": [
+    {
+      "role": "authorization_packet_document",
+      "path": "docs/MARC_2_INVENTORY_TAXONOMY_PRIVATE_DISCRIMINATOR_AUTHORIZATION_PACKET.md",
+      "bytes": 8318,
+      "sha256": "cc070d0a9d7310c9f5cd681a2489fc8065020f1ca51d4738f97a1b9862607e52",
+      "Git_blob": "0f33d1c5eccde6354cc396f6026d4c6bf3ed5b76"
+    },
+    {
+      "role": "authorization_request_registry",
+      "path": "registries/marc2_inventory_taxonomy_private_discriminator_authorization_request.v0.json",
+      "bytes": 14289,
+      "sha256": "0fc194af25972ea58e003c1f042ab73e12a0908ac988e67722263a56095034ba",
+      "Git_blob": "e256ca3ef1f96edadd11a4ec171d90bc036cdfac"
+    },
+    {
+      "role": "authorization_request_test",
+      "path": "tests/test_marc2_inventory_taxonomy_private_discriminator_authorization_request.py",
+      "bytes": 7580,
+      "sha256": "4dd12d7639c6a61cd83faf8182dbb257480d7dc230c8efe8ea4b897a6111dd75",
+      "Git_blob": "b2df7af6c7cd4408a1f718bdc195759dd3157e6a"
+    }
+  ],
+  "exact_request_artifact_count": 3,
+  "exact_request_artifact_bytes": 30187,
+  "scope_unchanged": {
+    "request_id": "MARC-2-VR28P-inventory-taxonomy-private-discriminator-two-stage-request-v0",
+    "fixed_input_count": 13,
+    "fixed_input_bytes": 149233,
+    "future_private_source_bytes": 418755,
+    "future_private_source_content_opens": 1,
+    "private_route_count": 5,
+    "private_answer_route_count": 2,
+    "private_detail_retention_allowed": false,
+    "cohort_freeze_allowed": false,
+    "retry_rerun_resume_count": 0,
+    "request_authorization_fields_all_false": true,
+    "request_operation_counters_all_zero": true
+  },
+  "closeout_operations": {
+    "request_artifacts_modified": 0,
+    "implementation_or_generated_qualification_operations": 0,
+    "private_or_Git_ignored_path_operations": 0,
+    "consumed_private_lane_path_or_output_operations": 0,
+    "readiness_certificate_or_output_root_operations": 0,
+    "network_or_public_request_operations": 0,
+    "archive_local_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "private_detail_or_cohort_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "provider_language_model_stream_device_or_hardware_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "retry_rerun_release_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "authorization_state": {
+    "decision_recorded_now": false,
+    "implementation_authorized_now": false,
+    "readiness_or_private_path_access_authorized_now": false,
+    "private_source_read_authorized_now": false,
+    "private_detail_or_cohort_retention_authorized_now": false,
+    "archive_neural_target_model_or_score_authorized_now": false,
+    "MARC2_FW2_or_CIL1_authorized_now": false,
+    "release_publication_or_claim_upgrade_authorized_now": false
+  },
+  "closeout_verification": {
+    "focused_VR28P_request_and_proof_tests_passed": 20,
+    "complete_dependency_light_tests_passed": 5079,
+    "expected_skips": 204,
+    "pre_closeout_tests_passed": 5073,
+    "test_delta": 6,
+    "new_failures": 0,
+    "focused_ruff_passed": true,
+    "repository_wide_ruff_passed": false,
+    "repository_wide_preexisting_findings": 1125,
+    "compile_passed": true,
+    "registry_JSON_files_parsed": 381,
+    "proof_JSON_valid": true,
+    "git_diff_check_passed": true,
+    "generated_qualification_or_private_operation_run": false
+  },
+  "next_gate": {
+    "proof_closeout_commit_push_and_both_jobs_green_required": true,
+    "sole_active_Tier_C_packet_identification_after_green_required": true,
+    "fresh_packet_bound_maintainer_decision_required": true,
+    "decision_commit_push_and_both_jobs_green_before_implementation_required": true,
+    "implementation_authorized_now": false,
+    "private_read_authorized_now": false,
+    "MARC2_FW2_or_CIL1_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_request": "one future proof-gated target-free structural read can distinguish the final two generated-qualified VR26P R5 classes without retaining private details",
+    "scientific_ceiling": "none",
+    "private_cause_identified_now": false,
+    "real_cohort_frozen_now": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "live_decoding": false,
+    "real_time_portable_home_assistive_or_clinical_result": false
+  }
+}

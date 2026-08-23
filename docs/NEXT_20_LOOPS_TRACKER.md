@@ -3918,6 +3918,23 @@ ignored-path, archive, neural, target, model, score, network, FW2/CIL1, or
 claim operation. Next gate: commit, push, and green this exact closeout. Only
 then may the one registered target-free structural discriminator execute.
 
+### MARC2-VR28P - Request Remotely Green; Proof Closeout Pending
+
+Exact all-false request `4e5895fc0fc8bc3cf2c91f5211406115a8e2e6d5`
+passed Base Python job `97130420447`, Optional Neuro Readers job
+`97130420507`, and CI `32613575234`.
+
+The proof-only closeout binds three unchanged request artifacts totaling
+30,187 bytes by exact byte count, SHA-256, and Git blob. It changes no request
+scope and performs zero generated implementation, readiness, private,
+archive, neural, target, model, score, network, device, FW2/CIL1, release, or
+claim operation.
+
+Immediate gate: verify, commit, push, and green the proof-only closeout. Only
+afterward identify VR28P as the sole active Tier C packet. Fresh packet-bound
+maintainer words and a separately green decision are still required before
+Stage 1. The current `continue` is not retroactive authority.
+
 ### MARC2-VR28P - All-False Inventory/Taxonomy Request Prepared
 
 VR27A proof-only closeout `f6b5dbf697d113c330f3fbf542fd97ad1c65d46d`

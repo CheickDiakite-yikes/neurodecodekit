@@ -82,13 +82,20 @@ inventory/distribution drift or R2 unknown-participant taxonomy. It cannot
 retain a predicate, value, count, direction, row, path, identity, participant,
 selection, or cohort.
 
-Immediate gate: commit, push, and green the exact request, then create and
-green a non-scope-changing request proof closeout. Only afterward identify
-VR28P as the sole active Tier C packet. The current `continue` predates the
-packet and is not retroactive authority. Before a fresh packet-bound decision,
-do not implement the wrapper or touch readiness, `.codex_work`, the private
-source, or an output root. FW2/CIL1, archive members, neural data, targets,
-models, scores, streams, devices, releases, and claims remain closed.
+Exact request `4e5895fc0fc8bc3cf2c91f5211406115a8e2e6d5` passed Base
+Python job `97130420447`, Optional Neuro Readers job `97130420507`, and CI
+`32613575234`. Read
+`docs/MARC_2_INVENTORY_TAXONOMY_PRIVATE_DISCRIMINATOR_REQUEST_PROOF_CLOSEOUT.md`
+and its machine proof. The closeout binds the unchanged 30,187-byte request
+artifact set and performs zero implementation or private operation.
+
+Immediate gate: commit, push, and green this exact proof-only closeout. Only
+afterward identify VR28P as the sole active Tier C packet. The current
+`continue` predates the packet and is not retroactive authority. Before a
+fresh packet-bound decision, do not implement the wrapper or touch readiness,
+`.codex_work`, the private source, or an output root. FW2/CIL1, archive
+members, neural data, targets, models, scores, streams, devices, releases, and
+claims remain closed.
 
 ### Historical VR22P/VR23A/VR24P boundary
 

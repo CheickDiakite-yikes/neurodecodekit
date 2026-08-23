@@ -13083,6 +13083,24 @@ private state. Stage 2 remains closed until that barrier passes.
 Immediate gate: commit, push, and green this exact proof-only closeout. Do not
 run `execute`, collect readiness, or touch private state before both jobs pass.
 
+### VR28P request remotely green; proof closeout prepared
+
+- Exact all-false request `4e5895fc0fc8bc3cf2c91f5211406115a8e2e6d5`
+  passed Base Python job `97130420447`, Optional Neuro Readers job
+  `97130420507`, and CI `32613575234`.
+- Bound the unchanged 8,318-byte authorization packet, 14,289-byte machine
+  request, and 7,580-byte test by SHA-256 and implementation-commit Git blob.
+- The 30,187-byte artifact set preserves 13 fixed inputs, one future private
+  content open, five aggregate routes, two answering routes, no cohort, and no
+  private-detail retention.
+- This is proof-only bookkeeping. Generated qualification, `.codex_work`,
+  readiness, consumed state, private data, archive/neural payload, targets,
+  models, scores, network, devices, other projects, and claims were untouched.
+
+Immediate gate: verify, commit, push, and green the exact proof-only closeout.
+Only then may VR28P be identified as the sole active Tier C packet. A fresh
+packet-bound maintainer message is still required before Stage 1.
+
 ### VR28P all-false inventory/taxonomy private request prepared
 
 - VR27A proof-only closeout `f6b5dbf697d113c330f3fbf542fd97ad1c65d46d`
