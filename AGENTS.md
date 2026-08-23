@@ -76,11 +76,13 @@ readiness/output failures freeze none. Public output may expose only bounded
 routes, never the count, difference, task distribution, identity, or row.
 
 Exact request `8ec87ced3c0072fec62328a9635eb9774e13e605` passed Base
-job `97211815865`, Optional job `97211815879`, and CI `32646648532`.
-Every current authority flag remains false. Immediate gate: verify, commit,
-push, and green the non-scope-changing request proof closeout. Only afterward
-identify VR36P as the sole active Tier C packet and wait for fresh maintainer
-words. The current `continue` preceded that exact proof and is not retroactive.
+job `97211815865`, Optional job `97211815879`, and CI `32646648532`. Request
+proof closeout `2813d60707f9fd97acbfa35cd57504d6b3db86c5` passed Base job
+`97213774526`, Optional job `97213774452`, and CI `32647453505`. Codex then
+identified VR36P as the sole active Tier C packet, and the maintainer's next
+exact message was `coninue`. Read the authorization decision document and
+machine decision. Immediate gate: verify, commit, push, and green that exact
+decision. Only then may Stage 1 generated/mock implementation begin.
 Do not implement, inspect `.codex_work`, or access private, consumed, archive,
 neural, target, model, score, FW2/CIL1, device, release, or claim surfaces.
 

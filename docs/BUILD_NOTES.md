@@ -14380,3 +14380,21 @@ Immediate gate: verify, commit, push, and green this exact proof-only closeout.
 Only then identify VR36P as the sole active Tier C packet and wait for fresh
 maintainer words; the current and earlier `continue` messages are not
 retroactive authority.
+
+### VR36P packet-bound authorization recorded
+
+- Request proof closeout `2813d60707f9fd97acbfa35cd57504d6b3db86c5`
+  passed Base Python job `97213774526`, Optional Neuro Readers job
+  `97213774452`, and CI `32647453505`.
+- After Codex identified VR36P as the sole active Tier C packet, the
+  maintainer's next exact message was `coninue`.
+- The decision preserves those seven UTF-8 bytes, their SHA-256, both green
+  packet commits, six packet artifacts totaling 45,152 bytes, and the
+  unchanged two-stage scope.
+- Eight focused decision tests pass. Recording the decision performs zero
+  implementation, generated qualification, readiness, private-path, cohort,
+  archive, neural, target, model, score, FW2/CIL1, or claim operation.
+
+Immediate gate: run complete verification, commit, push, and green the exact
+decision. Only then may generated/mock Stage 1 implementation and its sole
+qualification begin.

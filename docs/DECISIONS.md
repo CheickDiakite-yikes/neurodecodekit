@@ -12426,3 +12426,19 @@ Boundary decision: the proof closeout has delayed effect until its own commit
 is pushed and both required jobs are green. Only then may VR36P be identified
 as the sole active Tier C packet for fresh maintainer words. The current and
 earlier `continue` messages are not retroactive authority.
+
+## 0432 - Record Packet-Bound VR36P Authorization
+
+Proof decision: request proof closeout
+`2813d60707f9fd97acbfa35cd57504d6b3db86c5` passed CI `32647453505`, Base
+Python job `97213774526`, and Optional Neuro Readers job `97213774452`.
+
+Authorization decision: after Codex identified VR36P as the sole active Tier
+C packet, the maintainer's next exact message was `coninue`. Preserve those
+seven UTF-8 bytes and bind only the unchanged green packet by reference.
+
+Boundary decision: this decision is ineffective until its own exact commit is
+pushed and both jobs are green. It records zero implementation, readiness,
+private, cohort, archive, neural, target, model, score, FW2/CIL1, release, or
+claim operation. After green, generated/mock Stage 1 may begin; Stage 2 remains
+blocked on exact Stage 1 implementation and proof-closeout barriers.

@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: MARC2-VR36P Request Proof Closeout
+## Current Gate: MARC2-VR36P Authorization Decision
 
 Read the VR35A preregistration and implementation documents, contract,
 implementation record, generated result, and matching tests. Registration
@@ -34,10 +34,16 @@ does not open archive members, neural data, targets, models, or scores.
 
 Exact all-false request `8ec87ced3c0072fec62328a9635eb9774e13e605`
 passed Base job `97211815865`, Optional job `97211815879`, and CI
-`32646648532`. Every authority flag remains false. Immediate gate: verify,
-commit, push, and green the request proof closeout. Only afterward may VR36P
-be identified as the sole Tier C packet for fresh maintainer words. The
-current or any earlier `continue` is not retroactive authorization.
+`32646648532`. Request proof closeout
+`2813d60707f9fd97acbfa35cd57504d6b3db86c5` passed Base job
+`97213774526`, Optional job `97213774452`, and CI `32647453505`.
+
+After VR36P was identified as the sole active Tier C packet, the maintainer's
+next exact message was `coninue`. The authorization decision preserves those
+seven UTF-8 bytes and binds only the unchanged packet. Immediate gate: verify,
+commit, push, and green that decision. No implementation, readiness, private
+path, cohort, archive, neural, target, model, score, FW2/CIL1, or claim action
+is authorized before the decision itself is remotely green.
 
 ## Consumed Boundary: MARC2-VR34P Protocol-Conforming R2
 
