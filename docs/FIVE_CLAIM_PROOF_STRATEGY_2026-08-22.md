@@ -163,10 +163,11 @@ generated fixtures, not the private cause of VR34P R2.
 
 VR35A proof closeout `6744568` passed both required jobs in CI `32645704669`.
 All-false VR36P now requests one future target-free task-aware cohort
-confirmation. The immediate gate is request commit/push/green followed by a
-separately green request proof closeout. Only then may VR36P be identified as
-the sole Tier C packet for fresh maintainer words. No private confirmation or
-FW2 work is currently authorized.
+confirmation. Exact request `8ec87ce` passed both required jobs in CI
+`32646648532`. The immediate gate is a separately green request proof
+closeout. Only then may VR36P be identified as the sole Tier C packet for
+fresh maintainer words. No private confirmation or FW2 work is currently
+authorized.
 
 ## Claim Boundary
 

@@ -1,9 +1,9 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate gate (2026-08-23):** VR35A closeout `6744568` passed both jobs
-> in CI `32645704669`. All-false VR36P now requests one future target-free
-> task-aware cohort confirmation. Commit, push, and green the request, then
-> green its proof closeout before fresh packet-bound maintainer words. Every
+> **Immediate gate (2026-08-23):** all-false VR36P request `8ec87ce` passed
+> both jobs in CI `32646648532`. Verify, commit, push, and green its
+> non-scope-changing request proof closeout before identifying the sole Tier C
+> packet and accepting fresh packet-bound maintainer words. Every
 > private, archive, neural, target, model, score, FW2/CIL1, and claim surface
 > is currently closed.
 
@@ -4120,6 +4120,14 @@ Every authority flag and operation counter is zero. Immediate gate: commit,
 push, and green the request, then create and green a non-scope-changing proof
 closeout. Only afterward identify VR36P as the sole Tier C packet and wait for
 fresh maintainer words. Earlier `continue` messages are not retroactive.
+
+Exact request `8ec87ced3c0072fec62328a9635eb9774e13e605` passed Base
+job `97211815865`, Optional job `97211815879`, and CI `32646648532`.
+The request proof closeout binds its three exact artifacts totaling 33,158
+bytes and performs zero implementation, qualification, readiness, private,
+cohort, archive, neural, target, model, score, or claim operation. Immediate
+gate: verify, commit, push, and green that closeout; only then identify VR36P
+as the sole active Tier C packet for fresh maintainer words.
 
 ### MARC2-VR33A - Exact-Count Readiness Repair Remotely Closed
 

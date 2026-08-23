@@ -14361,3 +14361,22 @@ Immediate gate: run complete verification, commit, push, and green the exact
 request. Then create and green a non-scope-changing proof closeout before
 identifying VR36P as the sole Tier C packet. Earlier `continue` messages are
 not retroactive authority.
+
+### VR36P request remotely green; proof closeout prepared
+
+- Exact all-false request `8ec87ced3c0072fec62328a9635eb9774e13e605`
+  passed Base Python job `97211815865`, Optional Neuro Readers job
+  `97211815879`, and CI `32646648532`.
+- The request proof closeout binds the authorization packet, machine request,
+  and request test: three artifacts totaling 33,158 bytes with exact SHA-256
+  and Git-blob identities.
+- Scope, route mapping, fixed paths, resources, output firewall, decision
+  protocol, and claim boundary are unchanged.
+- Every authority flag remains false and every operation counter remains zero.
+  No wrapper implementation, qualification, readiness, private-path access,
+  cohort freeze, archive or neural access, model operation, or score ran.
+
+Immediate gate: verify, commit, push, and green this exact proof-only closeout.
+Only then identify VR36P as the sole active Tier C packet and wait for fresh
+maintainer words; the current and earlier `continue` messages are not
+retroactive authority.

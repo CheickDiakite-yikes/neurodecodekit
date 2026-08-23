@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: MARC2-VR36P All-False Cohort Request
+## Current Gate: MARC2-VR36P Request Proof Closeout
 
 Read the VR35A preregistration and implementation documents, contract,
 implementation record, generated result, and matching tests. Registration
@@ -24,16 +24,19 @@ non-target selected rows and zero retained output.
 
 VR35A proof closeout `6744568115f1f4871b68f4605d14732bf3af38f8`
 passed Base job `97209528132`, Optional job `97209528186`, and CI
-`32645704669`. Read the new VR36P authorization packet and machine request.
+`32645704669`. Read the VR36P authorization packet, machine request, request
+proof closeout, and machine proof.
 
 VR36P requests a generated/mock wrapper followed, after every proof barrier,
 by one fixed target-free structural read and one VR35A call. A successful G1
 or G2 route may freeze one 16-subject, 96-bundle, 384-row private cohort. It
 does not open archive members, neural data, targets, models, or scores.
 
-Every authority flag is currently false. Immediate gate: commit, push, and
-green the request, then green a request proof closeout. Only afterward may
-VR36P be identified as the sole Tier C packet for fresh maintainer words. The
+Exact all-false request `8ec87ced3c0072fec62328a9635eb9774e13e605`
+passed Base job `97211815865`, Optional job `97211815879`, and CI
+`32646648532`. Every authority flag remains false. Immediate gate: verify,
+commit, push, and green the request proof closeout. Only afterward may VR36P
+be identified as the sole Tier C packet for fresh maintainer words. The
 current or any earlier `continue` is not retroactive authorization.
 
 ## Consumed Boundary: MARC2-VR34P Protocol-Conforming R2

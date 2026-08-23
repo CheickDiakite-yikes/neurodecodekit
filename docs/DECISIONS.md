@@ -12411,3 +12411,18 @@ Boundary decision: every authority flag is false. Commit, push, and green the
 request, then green a request proof closeout before identifying VR36P as the
 sole Tier C packet. Current and earlier `continue` messages are not retroactive
 authority.
+
+## 0431 - Bind Exact Remote VR36P Request Proof
+
+Proof decision: exact all-false request
+`8ec87ced3c0072fec62328a9635eb9774e13e605` passed CI `32646648532`, Base
+Python job `97211815865`, and Optional Neuro Readers job `97211815879`.
+
+Transition decision: bind the three exact request artifacts totaling 33,158
+bytes without changing scope, implementing the wrapper, running qualification,
+collecting readiness, touching private state, or freezing a cohort.
+
+Boundary decision: the proof closeout has delayed effect until its own commit
+is pushed and both required jobs are green. Only then may VR36P be identified
+as the sole active Tier C packet for fresh maintainer words. The current and
+earlier `continue` messages are not retroactive authority.
