@@ -13938,3 +13938,19 @@ Immediate gate: verify, commit, push, and green the exact implementation and
 result. Then add and separately green a proof-only closeout without repeating
 qualification. Any private direction check remains a new Tier C packet and
 fresh decision.
+
+### VR31A exact implementation remotely green; proof closeout prepared
+
+- Exact implementation `3553fa4f7d3d7e4b5e3813ac3f6219cf6ba759ab`
+  passed Base Python job `97165896566`, Optional Neuro Readers job
+  `97165896610`, and CI `32627856478`.
+- Bound the 4,817-byte preproof implementation registry and 3,546-byte
+  preproof result registry by SHA-256 and Git blob, plus six implementation
+  artifact blobs for the module, three tests, result test, and document.
+- The closeout repeats no qualification and performs zero readiness, private,
+  ignored-path, archive, neural, target, model, score, network, FW2/CIL1,
+  hardware, other-project, or claim operation.
+
+Immediate gate: verify, commit, push, and green this exact proof-only closeout.
+Only afterward may Tier A prepare an all-false private direction packet; a
+fresh Tier C decision remains required before any private read.

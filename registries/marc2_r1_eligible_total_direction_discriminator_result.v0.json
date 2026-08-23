@@ -101,5 +101,35 @@
     "generated_direction_routes_do_not_identify_the_consumed_private_direction",
     "no_observed_total_or_difference_retained",
     "no_real_cohort_neural_decoding_or_scientific_claim"
-  ]
+  ],
+  "remote_implementation_proof": {
+    "commit": "3553fa4f7d3d7e4b5e3813ac3f6219cf6ba759ab",
+    "CI_run_id": 32627856478,
+    "base_python_job_id": 97165896566,
+    "optional_neuro_job_id": 97165896610,
+    "both_required_jobs_green": true,
+    "scope_changed_after_qualification": false,
+    "qualification_route": "MARC2VR31A-G1",
+    "preproof_implementation_registry_bytes": 4817,
+    "preproof_implementation_registry_sha256": "b613b3374462b0aad7eaea248f7f35f619a7cd3f726b26e786b1d64fdc928c3f",
+    "preproof_result_registry_bytes": 3546,
+    "preproof_result_registry_sha256": "6c65e6cd76b7da53f448b5169046bc292198c861349728538d81df7bdab6cf2d",
+    "implementation_module_Git_blob": "8b9df9724872ab9925cee58995939f40892bfc4b",
+    "behavior_test_Git_blob": "ace0be65ea0dfa088b137019588b521427f8d105",
+    "registration_test_Git_blob": "e3426e948162d7c8b50d6a851f90c56d0ff570cf",
+    "implementation_record_test_Git_blob": "b8acca186c187a785e7e8e7fed509aab53c2709a",
+    "result_record_test_Git_blob": "ab60423aaf7e66735a1c2216bf31502231a90917",
+    "implementation_document_Git_blob": "594adc60fd41c1846736b7e3c5d9053be309cd3a",
+    "preproof_implementation_registry_Git_blob": "7324dbc2138afccdaf90d4f1eeed8d6e9ea0beb3",
+    "preproof_result_registry_Git_blob": "2abfaaa6f327531be3945b08e1b23936aa5ea2ee",
+    "generated_qualification_repeated_for_proof_closeout": false,
+    "private_operations_during_proof_closeout": 0
+  },
+  "next_gate": {
+    "proof_only_closeout_commit_green_pending": true,
+    "private_direction_packet_eligible_now": false,
+    "private_direction_packet_eligible_after_exact_closeout_green": true,
+    "private_or_neural_access_authorized": false,
+    "FW2_or_CIL1_authorized": false
+  }
 }

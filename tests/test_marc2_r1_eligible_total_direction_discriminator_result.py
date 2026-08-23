@@ -83,7 +83,10 @@ class Marc2R1EligibleTotalDirectionDiscriminatorResultTests(unittest.TestCase):
             self.implementation["resources"]["generated_input_bytes"],
             self.result["measurements"]["generated_input_bytes"],
         )
-        self.assertIsNone(self.implementation["remote_implementation_proof"])
+        self.assertEqual(
+            self.implementation["remote_implementation_proof"]["commit"],
+            "3553fa4f7d3d7e4b5e3813ac3f6219cf6ba759ab",
+        )
 
     def test_human_result_states_both_boundaries(self):
         text = DOC.read_text(encoding="utf-8")

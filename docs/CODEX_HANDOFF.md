@@ -1,6 +1,6 @@
 # Codex Handoff - NeuroDecodeKit
 
-> Current MARC2-VR31A generated result, 2026-08-23: exact registration
+> Current MARC2-VR31A proof-only closeout, 2026-08-23: exact registration
 > `eeab6785b8eadc6d65199fa1ac519173f9c160c7` passed Base Python job
 > `97163443088`, Optional Neuro Readers job `97163443152`, and CI
 > `32626878097` before implementation. One measured `MARC2VR31A-G1` pass
@@ -9,9 +9,13 @@
 > 4/4/4/4/16, 78 direct refusals, exact replay, source immutability, zero count
 > retention, and zero output retention. It processed 14,137,216 generated
 > bytes in 2.8035786249674857 seconds at 39,174,144-byte peak RSS and emitted
-> 2,957 aggregate bytes. Immediate gate: verify, commit, push, and green the
-> implementation/result, then separately green a proof-only closeout without
-> rerunning qualification. No private or neural/scientific surface is open.
+> 2,957 aggregate bytes. Exact implementation
+> `3553fa4f7d3d7e4b5e3813ac3f6219cf6ba759ab` passed Base Python job
+> `97165896566`, Optional Neuro Readers job `97165896610`, and CI
+> `32627856478`. The closeout binds both preproof registries and eight exact
+> Git blobs without repeating qualification. Immediate gate: verify, commit,
+> push, and green this closeout. No private or neural/scientific surface is
+> open.
 
 > Current MARC2-VR30P result, 2026-08-23: proof-only closeout
 > `7ce2c5e7f7dde15dfe1dfafa35058613ae09b016` passed Base Python job

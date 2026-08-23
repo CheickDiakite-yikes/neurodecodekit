@@ -11982,3 +11982,22 @@ the exact implementation, then separately green a proof-only closeout without
 rerunning qualification. Any private direction check remains a new Tier C
 packet and fresh decision; no archive, neural, target, model, score, FW2/CIL1,
 device, release, or scientific claim surface is open.
+
+## 0411 - Bind Exact Remote Proof For VR31A
+
+Proof decision: exact implementation
+`3553fa4f7d3d7e4b5e3813ac3f6219cf6ba759ab` passed CI `32627856478`, Base
+Python job `97165896566`, and Optional Neuro Readers job `97165896610`.
+
+Identity decision: bind the immutable 4,817-byte preproof implementation
+registry and 3,546-byte preproof result registry by SHA-256 and Git blob. Also
+bind the exact Git blobs for the module, behavior test, registration test,
+implementation test, result test, and implementation document.
+
+Boundary decision: repeat no qualification and perform no readiness, private,
+ignored-path, consumed-state, archive, neural, target, model, prediction,
+score, network, FW2/CIL1, hardware, other-project, release, or claim operation.
+This closeout is ineffective until its own exact commit is pushed and both CI
+jobs are green. Only afterward may Tier A prepare a separately frozen all-
+false private direction packet; such a packet still requires fresh packet-
+bound Tier C permission before any implementation or private read.
