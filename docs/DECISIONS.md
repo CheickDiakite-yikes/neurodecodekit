@@ -11864,3 +11864,24 @@ Boundary decision: decision recording performs no `.codex_work`, readiness,
 private, consumed-state, archive, neural, target, model, prediction, score,
 network, device, FW2/CIL1, release, or claim operation. No implementation or
 private access is effective before this decision's own remote-green proof.
+
+## 0406 - Accept Generated VR30P Inventory/Distribution Qualification
+
+Proof decision: packet-bound decision
+`2bd811e30991997b8b7616e4c9451899f579dc94` passed CI `32623171395`, Base
+Python job `97154390311`, and Optional Neuro Readers job `97154390379` before
+implementation.
+
+Implementation decision: accept generated route `MARC2VR30P-G1` after all 32
+fixed paths passed. The wrapper called unchanged VR29A 32 times, with 32 nested
+unchanged VR25A calls and 16 nested unchanged VR2 eligible-filter calls. Exact
+VR30P route counts were G1/G2/R1/R2/R3 = 4/4/8/8/8. Exact replay,
+marker-before-open ordering, source immutability, 151 direct refusals, and zero
+retention passed within the frozen resource envelope.
+
+Boundary decision: this is generated engineering evidence only. It accessed no
+private path, consumed state, archive member, neural signal, target, model,
+prediction, score, network, FW2/CIL1, hardware, or other project, and upgrades
+no scientific claim. Stage 2 remains proof-gated until the exact implementation
+and a separate proof-only closeout are each pushed and remotely green. Do not
+repeat the qualification for proof closeout.

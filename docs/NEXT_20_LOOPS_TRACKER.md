@@ -1,5 +1,14 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
+> **Immediate update (2026-08-23):** `MARC2-VR30P` generated Stage 1 returned
+> `MARC2VR30P-G1`. All 32 paths passed with 32 unchanged VR29A calls, 32 nested
+> VR25A calls, 16 nested VR2 eligible-filter calls, G1/G2/R1/R2/R3 counts
+> 4/4/8/8/8, 151 direct refusals, exact replay, source immutability, and zero
+> retention. Runtime was 2.467852458008565 seconds at 34,127,872-byte peak RSS.
+> No private or neural surface was touched. The exact implementation must now
+> become remotely green, followed by a separately green proof-only closeout,
+> before the authorized one-shot target-free structural Stage 2 may run.
+
 > **Current MARC2 frontier (2026-08-22):** VR20A corrected the inherited
 > `task-freewill` identity to the primary-source-published
 > `task-reachingandgrasping` identity and passed 20 generated paths plus 53
