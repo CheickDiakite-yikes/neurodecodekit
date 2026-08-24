@@ -107,6 +107,16 @@ quotes that word and conditionally permits exactly one generated/mock pass
 only after the decision itself is remotely green. It still permits no real
 data, network, Stage A, scientific score, retry, or claim upgrade.
 
+Decision `c5dd49b` then passed both jobs in CI `32763519623`. The sole
+replacement [G1 qualification](docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_STAGE_G1_RESULT.md)
+passed all 11 generated engineering case classes across nine isolated folds:
+468 synthetic fits, 495 synthetic prediction sets, one generated target
+delivery, and one synthetic score in 17.790 seconds. It used zero network and
+zero real-data operations and retained zero generated payload bytes. This is a
+complete generated pipeline proof, not a neural result; its synthetic route
+has no scientific value. The exact result must become remotely green before
+Stage A.
+
 Current result: [EEGMMIDB-UG1 Stage S-A2](docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md)
 failed closed during verified TLS certificate-chain validation before an HTTP
 response or EDF request. The one-shot invocation is consumed: it retained only

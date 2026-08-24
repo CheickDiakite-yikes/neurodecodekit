@@ -13593,3 +13593,27 @@ proven. Stop before Stage A in either case.
 Claim decision: decision recording is not neural evidence. Real MAT access,
 scientific scoring, retry, release, and every decoding, unseen-person, or EEG-
 beyond-EOG claim remain closed.
+
+## 0480 - Accept The Sole Replacement BNCI G1 Generated Result
+
+Execution proof: recovery decision
+`c5dd49b3d29fcb348fc836812f5a48a6c5526f04` passed Base Python job
+`97547643345`, Optional Neuro Readers job `97547643658`, and CI
+`32763519623` before the replacement invocation.
+
+Result decision: accept the sole generated/mock G1 pass. All 11 registered
+case classes passed across nine sequential isolated folds with exactly 468
+synthetic fits, 495 synthetic prediction sets, one generated target delivery,
+and one synthetic score. Runtime was 17.790334874996915 seconds, peak
+process-tree RSS was 566,231,040 bytes, generated input was 56,033,424 bytes,
+aggregate output was 3,296 bytes, and retained generated payload was zero.
+
+Boundary decision: the synthetic `BNCIC3C5-R2` route has no claim value.
+Network and every real payload, model, target, and score counter were zero.
+The replacement invocation is consumed and cannot be retried or rerun.
+
+Transition decision: commit, push, and green the exact result before Stage A,
+then stop at that boundary. This generated result establishes no neural
+decoding, unseen-person generalization, EEG-beyond-EOG advantage, movement-
+intention or motor-cortex origin, language or thought decoding, live use, or
+portable-hardware result.

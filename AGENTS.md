@@ -45,26 +45,23 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
-Exact G1 recovery proof closeout
-`e1ad1eae373e0175eb05b2bb42f2f4a567a0fd49` passed Base Python job
-`97541580862`, Optional Neuro Readers job `97541580606`, and CI
-`32761632135`. `BNCI-C3C5-1-G1-recovery` was then identified as the sole
-active Tier C packet. The maintainer's next exact message was `continue`.
+Recovery decision `c5dd49b3d29fcb348fc836812f5a48a6c5526f04` passed Base
+Python job `97547643345`, Optional Neuro Readers job `97547643658`, and CI
+`32763519623` before the sole replacement G1 invocation.
 
-Read the new Stage G1 recovery authorization decision document, machine
-decision, and matching test. They preserve those exact eight UTF-8 bytes and
-bind six unchanged packet/proof artifacts totaling 25,369 bytes under
-canonical SHA-256
-`970d1ca5a10f51c4d73367ba5e9c7ebe9af8bf0811c43ae8c6cb500de5a99923`.
-The decision conditionally authorizes only one replacement generated/mock G1
-qualification: nine sequential folds, exactly 468 synthetic fits, 495
-synthetic prediction sets, one generated target delivery, and one synthetic
-score under zero network and real-data operations.
+Read the new Stage G1 result document, machine result, and matching test. The
+generated/mock qualification passed all 11 case classes across nine isolated
+folds with exactly 468 synthetic fits, 495 synthetic prediction sets, one
+generated target delivery, and one synthetic score. It completed in
+17.790334874996915 seconds at 566,231,040-byte peak process-tree RSS, emitted
+3,296 aggregate bytes, and retained zero generated payload bytes. Network,
+real MAT/signal/target reads, real fits, real inference, and real scores were
+all zero. The synthetic `BNCIC3C5-R2` route has no claim value.
 
-Immediate gate: test, commit, push, and green this exact decision in both
-jobs. Only then run the one replacement generated qualification and stop
-before Stage A. Do not open real MAT data, acquire payload, run a real model or
-scientific score, retry, release, or upgrade a claim.
+Immediate gate: test, commit, push, and green this exact G1 result in both
+jobs, then stop before Stage A. The one recovery invocation is consumed and
+may not be retried or rerun. Do not acquire or open real BNCI data, run a real
+model or scientific score, release, or upgrade a claim in this milestone.
 
 ## Prior Lane Context
 

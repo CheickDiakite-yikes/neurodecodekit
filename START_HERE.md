@@ -7,25 +7,25 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: BNCI-C3C5-1 G1 Recovery Decision
+## Current Gate: BNCI-C3C5-1 G1 Result Proof
 
-Recovery proof closeout `e1ad1ea` passed Base job `97541580862`, Optional job
-`97541580606`, and CI `32761632135`. Codex identified
-`BNCI-C3C5-1-G1-recovery` as the sole active Tier C packet, and the
-maintainer's next exact message was `continue`.
+Recovery decision `c5dd49b` passed Base job `97547643345`, Optional job
+`97547643658`, and CI `32763519623`. The sole replacement generated/mock
+qualification then passed all 11 registered case classes across nine isolated
+folds with 468 synthetic fits, 495 synthetic prediction sets, one generated
+target delivery, and one synthetic score.
 
-Read the recovery packet/request/proof, then the new authorization decision,
-machine decision, and matching test. The decision quotes those exact eight
-bytes and binds six unchanged artifacts totaling 25,369 bytes under canonical
-SHA-256
-`970d1ca5a10f51c4d73367ba5e9c7ebe9af8bf0811c43ae8c6cb500de5a99923`.
-It has delayed effect.
+Read the new G1 result document, machine result, and matching test. Runtime was
+17.790334874996915 seconds, peak process-tree RSS was 566,231,040 bytes,
+aggregate output was 3,296 bytes, and retained generated payload was zero.
+Network, real payload reads, real fits, real inference, real target delivery,
+and real scoring were all zero. `BNCIC3C5-R2` is synthetic and has no claim
+value.
 
-Commit, push, and green this decision in both jobs. Only afterward run the one
-replacement generated/mock G1 qualification with exactly 468 synthetic fits,
-495 synthetic prediction sets, one generated target delivery, and one
-synthetic score. Stop before Stage A. Real BNCI data, network, scientific
-scoring, retries, releases, and claims remain closed.
+Test, commit, push, and green this exact result in both jobs, then stop before
+Stage A. The replacement invocation is consumed and cannot be retried or
+rerun. Real BNCI data, scientific scoring, releases, and claims remain closed
+in this milestone.
 
 ## Historical BNCI Decision Gate
 

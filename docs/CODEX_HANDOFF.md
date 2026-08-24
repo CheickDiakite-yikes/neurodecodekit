@@ -1,14 +1,15 @@
 # Codex Handoff - NeuroDecodeKit
 
-> **Current gate, 2026-08-24:** G1 recovery proof `e1ad1ea` passed Base job
-> `97541580862`, Optional job `97541580606`, and CI `32761632135`. After
-> `BNCI-C3C5-1-G1-recovery` was named as the sole active Tier C packet, the
-> maintainer's next exact message was `continue`. Read the new recovery
-> decision, machine record, and test. They bind those eight UTF-8 bytes and six
-> exact packet/proof artifacts totaling 25,369 bytes. Immediate gate: commit,
-> push, and green the decision. Only then run the single generated/mock
-> recovery and stop before Stage A. Real data, network, scientific scoring,
-> retry, release, and claim surfaces remain closed.
+> **Current gate, 2026-08-24:** recovery decision `c5dd49b` passed Base job
+> `97547643345`, Optional job `97547643658`, and CI `32763519623` before the
+> sole replacement G1 invocation. The generated/mock pass completed all 11
+> case classes across nine isolated folds with exactly 468 fits, 495 prediction
+> sets, one generated target delivery, and one synthetic score. Runtime was
+> 17.790 seconds at 566,231,040-byte peak process-tree RSS; network, real-data
+> operations, and retained generated payload bytes were zero. Read the G1
+> result document, machine result, and test. Immediate gate: test, commit,
+> push, and green the result, then stop before Stage A. No retry, real data,
+> scientific score, release, or claim work is open in this milestone.
 
 > Current independent scientific lane, 2026-08-24: exact EEGMMIDB-UG1 Stage
 > S-A2 proof closeout `d9eae69d0361bc1ddfcbeaf7d3a105ad83502206`
