@@ -1,0 +1,142 @@
+{
+  "schema_name": "neurodecodekit.marc2_selection_sufficiency_private_cohort_freeze_implementation",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC2-VR39P",
+  "recorded_at_local": "2026-08-23",
+  "status": "generated_stage_qualified_once_remote_proof_pending",
+  "green_decision_proof": {
+    "commit": "dbde5f84b3fac0ac0b23208afd56e00d678aff00",
+    "CI_run_id": 32681510484,
+    "base_python_job_id": 97298894039,
+    "optional_neuro_job_id": 97298894171,
+    "both_required_jobs_green": true
+  },
+  "registered_authority": {
+    "request_path": "registries/marc2_selection_sufficiency_private_cohort_freeze_authorization_request.v0.json",
+    "request_sha256": "313a1fe1a3cfb9002b636f1e992ce3981804c274fb6d486e84e3f143f7eb9a46",
+    "decision_path": "registries/marc2_selection_sufficiency_private_cohort_freeze_authorization_decision.v0.json",
+    "decision_sha256": "3373365138be20ebf96c960d78b6e769dc3b22505c163a40eb2ac4a30d56e68e"
+  },
+  "implementation_artifacts": [
+    {
+      "role": "module",
+      "path": "src/neurodecodekit/datasets/marc2_selection_sufficiency_private_cohort_freeze.py",
+      "bytes": 96409,
+      "sha256": "68b0a659c7c098c45fd6fb57f7985cf509b97ad8459f73cd072c24506b00b018"
+    },
+    {
+      "role": "behavior_test",
+      "path": "tests/test_marc2_selection_sufficiency_private_cohort_freeze.py",
+      "bytes": 25671,
+      "sha256": "9182ed31218de4e9890b9b883debd1d9207520c0a6809555a7991b0b5cbab8dd"
+    },
+    {
+      "role": "surface_test",
+      "path": "tests/test_marc2_selection_sufficiency_private_cohort_freeze_surface.py",
+      "bytes": 2908,
+      "sha256": "713336346ca4327ac22eb28e73d3c9ab6a00fc23b1d78ce1ec16670709c0bc2a"
+    },
+    {
+      "role": "implementation_test",
+      "path": "tests/test_marc2_selection_sufficiency_private_cohort_freeze_implementation.py",
+      "bytes": 3416,
+      "sha256": "0ee030511d6b38ae58a6efff8220857bb8c92b27d8af20f257386eb952f2289e"
+    },
+    {
+      "role": "implementation_document",
+      "path": "docs/MARC_2_SELECTION_SUFFICIENCY_PRIVATE_COHORT_FREEZE_IMPLEMENTATION.md",
+      "bytes": 6220,
+      "sha256": "602509613cb928b45d7668c7f806707046ef8ec46d9546790b1e97c5db91fb30"
+    },
+    {
+      "role": "result_registry",
+      "path": "registries/marc2_selection_sufficiency_private_cohort_freeze_result.v0.json",
+      "bytes": 6000,
+      "sha256": "de57b975f7f3c676a0d035841ab2137225df1db3f69730553648f7fa33a6c69f"
+    },
+    {
+      "role": "result_test",
+      "path": "tests/test_marc2_selection_sufficiency_private_cohort_freeze_result.py",
+      "bytes": 4358,
+      "sha256": "de23e72d1e46fa71d109ad1d00f5df587adc56d4d7946bef6e7f3cc10fd66bc5"
+    },
+    {
+      "role": "authorization_decision",
+      "path": "registries/marc2_selection_sufficiency_private_cohort_freeze_authorization_decision.v0.json",
+      "bytes": 20454,
+      "sha256": "3373365138be20ebf96c960d78b6e769dc3b22505c163a40eb2ac4a30d56e68e"
+    }
+  ],
+  "implementation_artifact_count": 8,
+  "implementation_artifact_bytes": 165436,
+  "interface": {
+    "module": "neurodecodekit.datasets.marc2_selection_sufficiency_private_cohort_freeze",
+    "commands": [
+      "plan",
+      "qualify",
+      "inspect",
+      "execute"
+    ],
+    "execute_is_fixed_path_only": true,
+    "generic_override_arguments": 0,
+    "consumed_private_executor_imports_or_calls": 0,
+    "heavy_base_dependencies_added": 0
+  },
+  "qualification_invocations": 1,
+  "qualification_may_be_repeated": false,
+  "qualification_capture": {
+    "canonical_return_captured_outside_repository": true,
+    "result_registry_written_only_after_single_success": true,
+    "tests_may_rerun_qualification": false,
+    "expected_paths": 168,
+    "expected_R1": 64,
+    "expected_R2": 104,
+    "minimum_direct_refusals": 200,
+    "named_critical_refusal_classes": 12
+  },
+  "qualification_result": {
+    "path": "registries/marc2_selection_sufficiency_private_cohort_freeze_result.v0.json",
+    "sha256": "de57b975f7f3c676a0d035841ab2137225df1db3f69730553648f7fa33a6c69f",
+    "route": "MARC2VR39P-G1",
+    "paths": 168,
+    "VR33A_calls": 168,
+    "VR38A_calls": 84,
+    "cohort_file_writes": 64,
+    "R1_routes": 64,
+    "R2_routes": 104,
+    "direct_refusals": 268,
+    "retained_generated_output_bytes": 0,
+    "runtime_seconds": 12.816678500035778,
+    "peak_RSS_bytes": 67158016
+  },
+  "proof_gate": {
+    "execute_and_inspect_check_remote_implementation_proof_first": true,
+    "separate_proof_closeout_registry_required": true,
+    "proof_checked_before_fixed_readiness_or_private_path": true,
+    "remote_implementation_proof_required": true,
+    "proof_only_closeout_required": true,
+    "qualification_repeat_for_proof_closeout_allowed": false,
+    "private_operation_during_proof_closeout_allowed": false
+  },
+  "remote_implementation_proof": null,
+  "private_execution_authorized_now": false,
+  "operation_counters": {
+    "repository_dot_codex_work_operations": 0,
+    "private_structural_source_stats_resolves_hashes_opens_reads_or_parses": 0,
+    "consumed_private_lane_path_or_output_operations": 0,
+    "archive_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "derivative_cache_feature_split_or_NeuroToken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "network_download_provider_or_language_model_operations": 0,
+    "stream_device_or_hardware_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "retry_rerun_resume_repair_fallback_or_substitution_operations": 0,
+    "release_publication_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "claim_boundary": {
+    "engineering": "generated terminal cohort-freeze wrapper implemented",
+    "scientific": "none"
+  }
+}

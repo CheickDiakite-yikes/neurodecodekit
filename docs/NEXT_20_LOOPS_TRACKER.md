@@ -1,11 +1,11 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate gate (2026-08-23):** exact VR39P request proof `e581fe9` passed
-> Base job `97288870035`, Optional job `97288870180`, and CI `32677755105`.
-> The fresh eight-byte maintainer message `continue` is now bound by the local
-> packet-specific decision. Commit, push, and green that exact decision before
-> generated Stage 1. Private, archive, neural, target, model, score, FW2/CIL1,
-> and claim surfaces remain closed.
+> **Immediate gate (2026-08-23):** decision `dbde5f8` passed CI `32681510484`.
+> VR39P Stage 1 then passed its sole 168-path generated qualification with
+> exact R1/R2 `64/104`, 268 refusals, 12 named critical classes, zero mutation,
+> and zero retention. Commit, push, and green this implementation/result, then
+> separately green its proof-only closeout. Private, archive, neural, target,
+> model, score, FW2/CIL1, and claim surfaces remain closed.
 
 > **Immediate update (2026-08-23):** exact VR32P proof closeout `5aec8a1`
 > passed Base job `97177262321`, Optional job `97177262387`, and CI
@@ -4243,7 +4243,7 @@ Immediate gate: commit, push, and green this exact closeout. The next Tier C
 structural packet must either freeze at least 12 participants or park Freewill
 without another private topology-only diagnostic.
 
-### MARC2-VR39P - Terminal Private Cohort Request Remotely Green
+### MARC2-VR39P - Generated Terminal Cohort Wrapper Qualified Once
 
 VR38A proof-only closeout `a599adf3e0320ad420e1c2f5647a0432e645c246`
 passed Base Python job `97278761357`, Optional Neuro Readers job
@@ -4262,7 +4262,7 @@ value is retained and descendant/content/private-source operations remain
 zero. The deviation neither authorizes nor consumes a stage.
 
 The all-false VR39P request binds 20 tracked VR38A/VR33A artifacts totaling
-294,409 bytes. Its future Stage 1 freezes 21 generated cases: both VR38A
+294,409 bytes. Stage 1 froze 21 generated cases: both VR38A
 success routes at every valid 12-19 participant cardinality plus five failure
 classes, in ready/not-ready states, two orders, and two replays. That requires
 168 paths, 168 VR33A calls, 504 provider calls, 336 sleeper calls, 84 VR38A
@@ -4284,11 +4284,21 @@ maintainer's next exact message was `continue`, eight UTF-8 bytes. The local
 decision binds the unchanged six request/proof artifacts totaling 61,722 bytes
 and preserves the inherited metadata-only deviation without repeating it.
 
-Immediate gate: verify, commit, push, and green the exact decision. Only then
-may generated Stage 1 begin. Private Stage 2 remains blocked until Stage 1 and
-its separate proof closeout are remotely green. No private source, cohort,
-archive member, neural payload, target, model, score, FW2/CIL1, release, or
-scientific claim is open.
+Decision `dbde5f84b3fac0ac0b23208afd56e00d678aff00` passed Base job
+`97298894039`, Optional job `97298894171`, and CI `32681510484` before Stage
+1. The sole generated qualification passed 168 paths, 168 VR33A calls, 504
+provider calls, 336 sleeper calls, 84 source constructions/opens, 84 VR38A
+calls, 64 temporary cohort writes, exact R1/R2 `64/104`, 268 direct refusals,
+12 named critical witness classes, exact replay, and zero source mutation.
+Runtime was 12.816678500035778 seconds at 67,158,016-byte peak RSS. Generated
+input was 37,159,376 bytes, peak live output was 313,627 bytes, and retained
+output was zero.
+
+Immediate gate: commit, push, and green the exact implementation/result, then
+create and separately green its proof-only closeout without repeating the
+qualification. Private Stage 2 remains blocked until both barriers are green.
+No private source, cohort, archive member, neural payload, target, model,
+score, FW2/CIL1, release, or scientific claim is open.
 
 ### MARC2-VR33A - Exact-Count Readiness Repair Remotely Closed
 

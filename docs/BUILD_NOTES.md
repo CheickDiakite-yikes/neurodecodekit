@@ -14725,3 +14725,32 @@ continuation messages are not retroactive authority.
 
 Immediate gate: verify, commit, push, and green the exact decision. No private
 or scientific operation is open now.
+
+### VR39P generated terminal cohort wrapper qualified once
+
+- Decision `dbde5f84b3fac0ac0b23208afd56e00d678aff00` passed Base Python job
+  `97298894039`, Optional Neuro Readers job `97298894171`, and CI
+  `32681510484` before implementation.
+- Two independent static audits blocked the first draft before qualification.
+  The final wrapper now requires a separate green proof-closeout registry,
+  verifies bound implementation artifacts, pins output-root device/inode,
+  binds completion to every state artifact, enforces an exact eleven-field
+  public report, validates the complete HMAC envelope, and converts generated
+  row provenance into private-source bindings with recursive residue refusal.
+- The sole generated qualification passed 168 paths, 168 VR33A calls, 504
+  provider calls, 336 sleeper calls, 84 source constructions/opens, 84 VR38A
+  calls, 64 temporary cohort writes, exact R1/R2 `64/104`, 268 direct
+  refusals, 12 named critical witness classes, exact replay, zero source
+  mutation, and zero retained output.
+- Runtime was 12.816678500035778 seconds at 67,158,016-byte peak RSS. Fixed
+  tracked input was 374,043 bytes, generated input was 37,159,376 bytes,
+  peak live output was 313,627 bytes, peak materialized case size was 755,606
+  bytes, and aggregate result size was 4,841 bytes.
+- The exact pre-qualification repository passed 5,663 dependency-light tests
+  with 204 skips. Focused post-result tests pass without rerunning the consumed
+  qualification. Every private, archive, neural, target, model, score,
+  network, FW2/CIL1, release, other-project, and claim counter is zero.
+
+Immediate gate: commit, push, and green the exact implementation and recorded
+result. Then create and separately green a proof-only closeout binding that
+exact remote commit without repeating qualification or touching private state.

@@ -87,12 +87,25 @@ next exact message was `continue`, eight UTF-8 bytes with SHA-256
 `e256ee8e7aff6957a781d8328f0f68e26996564c81fa458da59fbca2305138ad`.
 Read the authorization decision document, machine decision, and matching test.
 The decision binds the unchanged six request/proof artifacts totaling 61,722
-bytes and has no effect until its exact commit is pushed and both CI jobs pass.
+bytes and had no effect until its exact commit was pushed and both CI jobs passed.
 
-Immediate gate: verify, commit, push, and green the exact decision. Only then
-may generated Stage 1 implementation and its one qualification begin. Stage 2
-private work remains closed until the exact Stage 1 implementation and a
-separate proof-only closeout are also remotely green. Do not touch
+Decision `dbde5f84b3fac0ac0b23208afd56e00d678aff00` passed Base Python job
+`97298894039`, Optional Neuro Readers job `97298894171`, and CI
+`32681510484` before Stage 1. Read the implementation document, implementation
+registry, result registry, module, and four matching test modules.
+
+The sole generated qualification passed exactly 168 paths, 168 VR33A calls,
+504 provider calls, 336 sleeper calls, 84 source constructions and opens, 84
+VR38A calls, 64 temporary cohort writes, R1/R2 counts 64/104, 268 direct
+refusals, 12 named critical witness classes, exact replay, zero source
+mutation, and zero retained output. Runtime was 12.816678500035778 seconds at
+67,158,016-byte peak RSS. Qualification may not be repeated.
+
+Immediate gate: commit, push, and green this exact Stage 1 implementation and
+result. Then add a separate proof-only closeout binding the exact green commit,
+push it, and require both remote jobs green without repeating qualification or
+touching private state. Stage 2 private work remains closed until both barriers
+are green. Do not touch
 `.codex_work`, any private/consumed source,
 archive member, neural payload, target, model, score, FW2/CIL1, device,
 release, or claim surface.

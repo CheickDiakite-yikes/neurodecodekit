@@ -12717,3 +12717,34 @@ exact implementation and a separate proof-only closeout are also remotely
 green. R1 only makes a separate FW2 preregistration eligible; R2 permanently
 parks Freewill/CIL1. No neural payload, target, training, inference, scoring,
 FW2 execution, CIL1, device, release, or scientific claim is authorized now.
+
+## 0447 - Qualify VR39P Generated Terminal Cohort Wrapper Once
+
+Proof decision: packet-bound decision
+`dbde5f84b3fac0ac0b23208afd56e00d678aff00` passed CI `32681510484`, Base
+Python job `97298894039`, and Optional Neuro Readers job `97298894171` before
+Stage 1.
+
+Engineering decision: replace the provisional wrapper with an independent,
+descriptor-pinned terminal state machine. Require no-follow source and output
+traversal, exact mode and inode checks, marker-before-readiness ordering,
+source construction only on PPP readiness, source mutation refusal, canonical
+precomputed outputs, completion binding across marker/readiness/manifest/report,
+strict eleven-field public inspection, and one exact secret-key HMAC envelope.
+Independently revalidate 12-19 participant arithmetic, sessions 1/2, runs 1-3,
+companions, split separation, row provenance, selection identity, and storage.
+
+Qualification decision: run the registered generated qualification exactly
+once. It passed 168 paths, 168 VR33A calls, 504 provider calls, 336 sleeper
+calls, 84 source constructions/opens, 84 VR38A calls, 64 temporary cohort
+writes, exact R1/R2 counts 64/104, 268 direct refusals, 12 named critical
+classes, exact replay, zero source mutation, and zero retained output. Runtime
+was 12.816678500035778 seconds at 67,158,016-byte peak RSS; generated input was
+37,159,376 bytes and peak live output was 313,627 bytes.
+
+Boundary decision: qualification is consumed and may not be repeated. Every
+private, `.codex_work`, archive, neural, target, model, prediction, score,
+network, FW2/CIL1, release, other-project, and scientific-claim counter is
+zero. Commit, push, and green this implementation/result, then separately
+green a proof-only closeout before any one-shot private execution. No real
+cohort or scientific claim exists yet.
