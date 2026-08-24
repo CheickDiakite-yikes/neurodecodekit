@@ -12814,3 +12814,31 @@ Boundary decision: no cohort was frozen. Freewill/CIL1 is permanently parked,
 and VR39P has no retry, rerun, resume, repair, cleanup, fallback, substitution,
 amendment, or private reinspection. This is a target-free structural result
 with no neural payload, target, model, prediction, score, or scientific claim.
+
+## 0451 - Select EEGMMIDB-UG1 as the Unseen-Person Test
+
+Scientific decision: test participant-independent protocol-condition
+prediction before adding another architecture. Fit one pooled model on
+S001-S015 and reserve S016-S030 as completely fresh final participants with
+zero calibration, normalization fitting, threshold selection, or adaptation.
+
+Model decision: preserve the compact family that produced the strongest prior
+EEG result: causal 0.5-4 Hz whole-head features and fixed shrinkage LDA. Freeze
+one candidate, separate execution/imagery models, source-only standardization,
+and participant-level inference. Do not use a larger, deep, pretrained, or
+foundation model.
+
+Evidence decision: require source LOSO to beat no-signal/timing before fresh
+acquisition. Require the final execution result to beat no-signal, timing, and
+all derangements under exact participant tests. Treat imagery as an upgrade
+only and preserve early-cue/frontal/occipital results as confound evidence.
+
+Resource decision: cap new acquisition at 36 EDFs/256 MiB, incremental disk at
+512 MiB, RSS at 1 GiB, one thread/worker/job, 300 fits, 640 prediction sets,
+one target delivery, one score, and zero rerun. Existing source payloads are
+named but remain unopened under the all-false request.
+
+Boundary decision: preparation authorizes nothing. The maximum future claim is
+zero-calibration left/right EEGMMIDB protocol-condition prediction in 15 unseen
+participants, not movement intention, motor-cortex origin, eye-independent
+neural information, thought/language decoding, live operation, or hardware.

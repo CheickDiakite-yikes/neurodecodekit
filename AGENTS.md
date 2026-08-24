@@ -45,6 +45,37 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
+`MARC2-VR39P` is consumed at aggregate R2. Exact result closeout
+`474d49f53e1a46633b99b0ef2ff62b9abebe7a9c` passed Base Python job
+`97317987437`, Optional Neuro Readers job `97317987655`, and CI
+`32688563490`. No cohort was frozen, Freewill/CIL1 is permanently parked, and
+VR39P has no retry, successor, private reinspection, cleanup, or amendment.
+
+The independent next lane is all-false `EEGMMIDB-UG1`. Read its research
+document and registry, preregistration and contract, authorization packet and
+machine request, and matching tests. It freezes S001-S015 as source and
+S016-S030 as completely fresh final participants, with execution 03/07 -> 11,
+imagery 04/08 -> 12, zero held-out-person calibration, one 320-feature
+low-frequency shrinkage-LDA family, and participant-level no-signal, timing,
+derangement, early/pre-cue, central, frontal, and occipital controls.
+
+The source LOSO execution gate runs before fresh acquisition. The future
+staged envelope is at most 36 metadata requests, 36 new EDFs, 256 MiB payload
+network, 512 MiB incremental disk, 1 GiB RSS, 300 fits, 640 prediction sets,
+one target delivery, one score, and zero rerun under one thread/worker/job.
+Even R4 can claim only zero-calibration EEGMMIDB protocol-condition prediction
+in 15 unseen participants, not movement intention, motor-cortex origin,
+eye-independent neural signal, language, live decoding, hardware, or clinical
+use.
+
+Immediate gate: commit, push, and green the exact all-false UG1 request, then
+create and separately green a non-scope-changing request proof closeout. Only
+after both barriers may UG1 be named the sole active Tier C packet for the
+maintainer's next fresh unambiguous decision. No earlier continuation message
+is retroactive.
+
+### Historical VR39P path
+
 VR38A proof-only closeout `a599adf3e0320ad420e1c2f5647a0432e645c246`
 passed Base Python job `97278761357`, Optional Neuro Readers job
 `97278761303`, and CI `32673882729`. VR38A is remotely closed generated

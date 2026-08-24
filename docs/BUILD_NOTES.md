@@ -14810,3 +14810,27 @@ sole registered Stage 2 invocation.
 
 Immediate gate: commit, push, and green the aggregate-only result closeout,
 then choose an independent preregistered scientific lane.
+
+### EEGMMIDB-UG1 unseen-participant lane frozen locally
+
+- Closed VR39P result commit `474d49f53e1a46633b99b0ef2ff62b9abebe7a9c`
+  against Base job `97317987437`, Optional job `97317987655`, and CI
+  `32688563490`; no cohort exists and Freewill/CIL1 remains parked.
+- Selected the smallest direct new scientific test: one source-pooled model on
+  S001-S015, then one zero-calibration final evaluation on fresh S016-S030.
+- Froze execution 03/07 -> 11 and imagery 04/08 -> 12, 64-channel causal
+  0.5-4 Hz preprocessing, 320 features, one shrinkage-LDA family, source-only
+  standardization, and no test-person adaptation or model selection.
+- Added a source-only 15-fold LOSO stop gate before fresh acquisition and a
+  final conjunction against no-signal, timing, derangement, temporal, and
+  spatial controls. Imagery cannot rescue failed execution.
+- Bound 54 existing source-fit EDFs totaling 138,333,504 bytes without opening
+  them. Future new payload is capped at 36 EDFs/256 MiB, 512 MiB incremental
+  disk, 1 GiB RSS, one thread, 300 fits, 640 prediction sets, one target
+  delivery, one score, and zero rerun.
+- Added research, preregistration, machine contracts, one all-false Tier C
+  request, and 20 focused tests. Current network, real-path, signal, target,
+  fit, inference, prediction, scoring, and claim counters remain zero.
+
+Immediate gate: commit, push, and green the all-false request, then create and
+separately green its proof-only closeout. No real operation is authorized.

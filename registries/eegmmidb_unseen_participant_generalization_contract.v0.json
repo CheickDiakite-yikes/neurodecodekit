@@ -1,0 +1,185 @@
+{
+  "schema_name": "neurodecodekit.eegmmidb_unseen_participant_generalization_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "EEGMMIDB-UG1",
+  "recorded_at_local": "2026-08-24",
+  "status": "preregistered_all_authority_false",
+  "dataset": {
+    "name": "EEG Motor Movement/Imagery Dataset",
+    "version": "1.0.0",
+    "DOI": "10.13026/C28G6P",
+    "sampling_rate_hz": 160,
+    "EEG_channels": 64,
+    "source": "https://physionet.org/content/eegmmidb/1.0.0/",
+    "license": "Open Data Commons Attribution License v1.0"
+  },
+  "source_partition": {
+    "participants": [
+      "S001", "S002", "S003", "S004", "S005", "S006", "S007", "S008",
+      "S009", "S010", "S011", "S012", "S013", "S014", "S015"
+    ],
+    "execution_runs": [3, 7],
+    "imagery_runs": [4, 8],
+    "allowed_targets": ["T1", "T2"],
+    "forbidden_runs": [11, 12],
+    "maximum_execution_rows": 450,
+    "maximum_imagery_rows": 450
+  },
+  "fresh_partition": {
+    "participants": [
+      "S016", "S017", "S018", "S019", "S020", "S021", "S022", "S023",
+      "S024", "S025", "S026", "S027", "S028", "S029", "S030"
+    ],
+    "execution_run": 11,
+    "imagery_run": 12,
+    "allowed_targets": ["T1", "T2"],
+    "maximum_execution_rows": 225,
+    "maximum_imagery_rows": 225,
+    "calibration_rows": 0,
+    "normalization_fit_rows": 0,
+    "threshold_or_selection_rows": 0
+  },
+  "new_file_inventory": {
+    "source_rule": "S001-S003 runs 04 and 08 EDF only",
+    "source_files": 6,
+    "fresh_rule": "S016-S030 runs 11 and 12 EDF only",
+    "fresh_files": 30,
+    "total_files": 36,
+    "event_sidecars_allowed": false,
+    "exact_sizes_known_now": false,
+    "metadata_inventory_must_be_remotely_green_before_payload": true,
+    "combined_payload_bytes_maximum": 268435456
+  },
+  "ordered_stages": [
+    "G_generated_and_mocked_implementation_qualification",
+    "M_metadata_only_exact_inventory_freeze",
+    "S_six_source_file_acquisition_source_LOSO_and_checkpoint_freeze",
+    "F_thirty_fresh_file_acquisition_target_blind_prediction_freeze",
+    "T_one_combined_target_delivery_and_score"
+  ],
+  "model": {
+    "channel_order": "exact_64_channel_EEGMMIDB_order",
+    "reference": "instantaneous_common_average",
+    "filter": "fourth_order_causal_Butterworth_0.5_4_Hz_SOS_continuous_run",
+    "window_start_seconds": 1.0,
+    "window_stop_seconds": 3.0,
+    "features": "four_500_ms_means_plus_one_slope_per_channel",
+    "feature_dimension": 320,
+    "standardization": "source_partition_only",
+    "classifier": "shrinkage_LDA_lsqr_0.1_equal_priors",
+    "separate_execution_imagery_models": true,
+    "model_candidates": 1,
+    "hyperparameter_searches": 0,
+    "test_time_adaptation": false
+  },
+  "conditions": [
+    "primary_whole_head",
+    "equal_prior_no_signal",
+    "timing_only",
+    "exact_zero",
+    "fixed_channel_permutation",
+    "nonwrapping_event_displacement",
+    "fixed_source_label_derangement",
+    "pre_cue",
+    "early_cue",
+    "central_view",
+    "frontal_view",
+    "occipital_view"
+  ],
+  "source_stop_gate": {
+    "folds": 15,
+    "execution_macro_balanced_accuracy_minimum": 0.57,
+    "macro_margin_over_max_no_signal_timing_minimum": 0.07,
+    "participants_above_chance_minimum": 10,
+    "participant_sign_flip_p_maximum": 0.05,
+    "fresh_payload_requests_if_failed": 0
+  },
+  "fresh_execution_gate": {
+    "participants": 15,
+    "events": 225,
+    "pooled_balanced_accuracy_minimum": 0.60,
+    "macro_balanced_accuracy_minimum": 0.60,
+    "macro_margin_over_max_no_signal_timing_minimum": 0.10,
+    "participants_above_chance_minimum": 11,
+    "participant_sign_flip_p_maximum": 0.01,
+    "macro_margin_over_fixed_derangements_minimum": 0.02,
+    "paired_derangement_sign_flip_p_maximum": 0.05
+  },
+  "fresh_imagery_gate": {
+    "cannot_rescue_failed_execution": true,
+    "same_accuracy_and_margin_floors": true,
+    "participant_sign_flip_p_maximum": 0.05
+  },
+  "router": [
+    {
+      "route": "EEGMMIDBUG1-R0",
+      "meaning": "integrity identity payload firewall freeze or resource refusal"
+    },
+    {
+      "route": "EEGMMIDBUG1-R1",
+      "meaning": "source cross-person gate failed before fresh payload acquisition"
+    },
+    {
+      "route": "EEGMMIDBUG1-R2",
+      "meaning": "fresh execution failed primary or control gates"
+    },
+    {
+      "route": "EEGMMIDBUG1-R3",
+      "meaning": "execution generalized with zero calibration to 15 unseen participants"
+    },
+    {
+      "route": "EEGMMIDBUG1-R4",
+      "meaning": "execution and imagery both passed strict unseen-participant gates"
+    }
+  ],
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "metadata_requests_maximum": 36,
+    "metadata_network_bytes_maximum": 2097152,
+    "payload_requests_maximum": 36,
+    "payload_network_bytes_maximum": 268435456,
+    "incremental_disk_bytes_maximum": 536870912,
+    "private_derivative_bytes_maximum": 134217728,
+    "public_artifact_bytes_maximum": 2097152,
+    "peak_RSS_bytes_maximum": 1073741824,
+    "parameter_update_fits_maximum": 300,
+    "prediction_sets_maximum": 640,
+    "analysis_network_bytes": 0,
+    "final_target_deliveries": 1,
+    "final_scoring_events": 1,
+    "retries": 0,
+    "reruns": 0,
+    "post_target_updates": 0
+  },
+  "freeze_barriers": {
+    "implementation_remote_green_before_metadata": true,
+    "metadata_inventory_remote_green_before_payload": true,
+    "source_checkpoint_remote_green_before_fresh_payload": true,
+    "prediction_freeze_remote_green_before_target_delivery": true
+  },
+  "authority_now": {
+    "generated_implementation": false,
+    "remote_metadata": false,
+    "payload_acquisition": false,
+    "retained_source_access": false,
+    "signal_event_target_or_label_access": false,
+    "training": false,
+    "inference": false,
+    "prediction_freeze": false,
+    "target_delivery": false,
+    "scoring": false,
+    "scientific_claim_upgrade": false
+  },
+  "claim_boundary": {
+    "maximum_route": "EEGMMIDBUG1-R4",
+    "maximum_claim": "zero-calibration participant-independent left-right EEGMMIDB protocol-condition prediction across 15 unseen participants",
+    "motor_cortex_or_movement_intention": false,
+    "EEG_beyond_eyes_or_peripheral_signals": false,
+    "independent_dataset_replication": false,
+    "language_or_thought_decoding": false,
+    "live_decoding": false,
+    "portable_hardware": false
+  }
+}

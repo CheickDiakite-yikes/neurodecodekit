@@ -1,0 +1,133 @@
+{
+  "schema_name": "neurodecodekit.eegmmidb_unseen_participant_generalization_research",
+  "schema_version": "0.1.0",
+  "research_id": "EEGMMIDB-UG1",
+  "recorded_at_local": "2026-08-24",
+  "status": "tier_A_research_complete_no_real_operation",
+  "scientific_question": "Can one source-pooled low-frequency model predict left versus right EEGMMIDB task direction in 15 completely unseen participants with zero calibration?",
+  "prior_evidence": {
+    "WO9R_route": "WO9R-R3",
+    "execution_balanced_accuracy": 0.680975,
+    "imagery_balanced_accuracy": 0.728014,
+    "early_cue_balanced_accuracy": 0.762865,
+    "frontal_proxy_balanced_accuracy": 0.671821,
+    "central_balanced_accuracy": 0.647575,
+    "prior_models_participant_specific": true,
+    "unseen_participant_generalization_previously_tested": false
+  },
+  "cohorts": {
+    "source_participants": [
+      "S001", "S002", "S003", "S004", "S005", "S006", "S007", "S008",
+      "S009", "S010", "S011", "S012", "S013", "S014", "S015"
+    ],
+    "fresh_participants": [
+      "S016", "S017", "S018", "S019", "S020", "S021", "S022", "S023",
+      "S024", "S025", "S026", "S027", "S028", "S029", "S030"
+    ],
+    "source_execution_runs": [3, 7],
+    "source_imagery_runs": [4, 8],
+    "fresh_execution_run": 11,
+    "fresh_imagery_run": 12,
+    "source_rows_maximum": 900,
+    "fresh_rows_maximum": 450,
+    "inference_unit": "participant"
+  },
+  "freshness_firewall": {
+    "source_final_runs_11_12_allowed_for_fit": false,
+    "fresh_signal_before_checkpoint_freeze_allowed": false,
+    "fresh_target_before_prediction_freeze_allowed": false,
+    "fresh_participant_calibration_rows": 0,
+    "fresh_participant_normalization_fit_rows": 0,
+    "fresh_participant_threshold_or_selection_rows": 0,
+    "post_target_updates": 0
+  },
+  "model": {
+    "reference": "instantaneous_common_average_exact_64_channel_order",
+    "filter": "fourth_order_causal_Butterworth_0.5_4_Hz_SOS_continuous_run",
+    "decision_window_seconds": [1.0, 3.0],
+    "features_per_channel": 5,
+    "feature_dimension": 320,
+    "classifier": "source_pooled_shrinkage_LDA_lsqr_0.1_equal_priors",
+    "separate_execution_and_imagery_models": true,
+    "model_candidates": 1,
+    "hyperparameter_searches": 0
+  },
+  "source_stop_gate": {
+    "folds": 15,
+    "execution_macro_balanced_accuracy_minimum": 0.57,
+    "macro_margin_over_max_no_signal_timing_minimum": 0.07,
+    "participants_above_chance_minimum": 10,
+    "participant_sign_flip_p_maximum": 0.05,
+    "failure_prevents_fresh_payload_acquisition": true
+  },
+  "fresh_execution_gate": {
+    "fresh_participants": 15,
+    "events": 225,
+    "pooled_balanced_accuracy_minimum": 0.60,
+    "macro_balanced_accuracy_minimum": 0.60,
+    "macro_margin_over_max_no_signal_timing_minimum": 0.10,
+    "participants_above_chance_minimum": 11,
+    "participant_sign_flip_p_maximum": 0.01,
+    "macro_margin_over_fixed_derangements_minimum": 0.02,
+    "paired_derangement_sign_flip_p_maximum": 0.05
+  },
+  "fresh_imagery_gate": {
+    "prespecified_upgrade_only": true,
+    "cannot_rescue_failed_execution": true,
+    "same_accuracy_and_margin_floors": true,
+    "participant_sign_flip_p_maximum": 0.05
+  },
+  "controls": [
+    "equal_prior_no_signal",
+    "timing_only",
+    "exact_zero",
+    "fixed_channel_permutation",
+    "nonwrapping_event_displacement",
+    "fixed_source_label_derangement",
+    "pre_cue",
+    "early_cue",
+    "central_view",
+    "frontal_view",
+    "occipital_view"
+  ],
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "new_payload_files_maximum": 36,
+    "new_payload_bytes_maximum": 268435456,
+    "incremental_disk_bytes_maximum": 536870912,
+    "private_derivative_bytes_maximum": 134217728,
+    "public_artifact_bytes_maximum": 2097152,
+    "peak_RSS_bytes_maximum": 1073741824,
+    "parameter_update_fits_maximum": 300,
+    "prediction_sets_maximum": 640,
+    "final_target_deliveries": 1,
+    "final_scoring_events": 1,
+    "reruns": 0
+  },
+  "operation_counters": {
+    "new_remote_metadata_requests": 0,
+    "new_payload_requests": 0,
+    "retained_source_payload_reads": 0,
+    "signal_event_target_or_label_reads": 0,
+    "model_fits": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scoring_events": 0,
+    "private_or_consumed_path_operations": 0,
+    "operations_on_other_projects": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "claim_boundary": {
+    "maximum_future_route": "EEGMMIDBUG1-R4",
+    "maximum_future_claim": "zero-calibration participant-independent left-right EEGMMIDB protocol-condition prediction across 15 unseen participants",
+    "motor_cortex_origin": false,
+    "movement_intention": false,
+    "EEG_beyond_eyes_or_peripheral_signals": false,
+    "independent_dataset_replication": false,
+    "language_or_thought_decoding": false,
+    "live_decoding": false,
+    "portable_hardware": false
+  }
+}

@@ -49,22 +49,19 @@ VR39P state. Language, motor, unseen-person, peripheral-control, and live work
 remain separate evidence tracks so success on one cannot silently upgrade the
 others.
 
-Current gate: the
-[VR39P terminal cohort packet](docs/MARC_2_SELECTION_SUFFICIENCY_PRIVATE_COHORT_FREEZE_AUTHORIZATION_PACKET.md)
-and its
-[machine request](registries/marc2_selection_sufficiency_private_cohort_freeze_authorization_request.v0.json)
-are the frozen scope. Exact request `6c805a8` passed both jobs in
-CI `32675925646`; its
-[request proof closeout](docs/MARC_2_SELECTION_SUFFICIENCY_PRIVATE_COHORT_FREEZE_REQUEST_PROOF_CLOSEOUT.md)
-and [machine proof](registries/marc2_selection_sufficiency_private_cohort_freeze_request_proof.v0.json)
-passed both jobs in CI `32677755105`. The packet-specific decision `dbde5f8`
-then passed both jobs in CI `32681510484`. Stage 1 passed its sole 168-path
-generated qualification with exact R1/R2 counts `64/104`, 268 refusals, zero
-retention, and zero private operation. Exact implementation `4d48cb3` then
-passed both jobs in CI `32685719113`. Proof-only closeout `cec5fe8` then passed
-both jobs in CI `32686765350`, and activation `c742555` passed both jobs in CI
-`32687368688`. The sole Stage 2 invocation returned R2 with no commitment: no
-cohort was frozen and the lane is now consumed without private reinspection.
+Current gate: [EEGMMIDB-UG1](docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_RESEARCH.md)
+is the direct unseen-person experiment. Its
+[preregistration](docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_PREREGISTRATION.md),
+[machine contract](registries/eegmmidb_unseen_participant_generalization_contract.v0.json),
+and [all-false Tier C packet](docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_AUTHORIZATION_PACKET.md)
+freeze one source-pooled model on S001-S015 and one final evaluation on
+S016-S030 with zero held-out-person calibration. Source LOSO must first beat
+the stronger no-signal/timing control or the lane stops before fresh
+acquisition. Even a maximum R4 result would establish only
+participant-independent EEGMMIDB protocol-condition prediction; cue/ocular
+compatibility, motor-cortex origin, movement intention, language, and live
+decoding would remain unproven. Every real-operation authority flag is
+currently false.
 
 ## Results At A Glance
 
@@ -76,6 +73,7 @@ cohort was frozen and the lane is now consumed without private reinspection.
 
 | Evidence layer | Strongest result so far | What that means now |
 |---|---|---|
+| Unseen-person test | EEGMMIDB-UG1 now freezes a single 320-feature source-pooled model, S001-S015 source rows, S016-S030 fresh final rows, zero calibration, a 15-participant LOSO stop gate, 12 primary/control conditions, and one sealed 450-target score | This is preregistered design, not a result. The real sequence remains all-false until its packet is remotely proven and separately authorized; the maximum future claim is protocol-condition prediction in unseen people, not neural or cortical origin |
 | Real EEG predictive effect | The frozen WO9R low-frequency model reached balanced accuracy `0.680975` for executed movement and `0.728014` for imagery across 12 held-out-run participants, versus approximately chance no-signal controls | This is a real repeatable condition signal, but the early cue (`0.762865`) and frontal proxy (`0.671821`) beat or matched the central sensorimotor view (`0.647575`), so cue, visual, or ocular activity is the leading explanation rather than proven motor-cortex decoding |
 | Trial identity | All 66 S21 session-1 trials and all 63 performed session-2 trials reconcile to MAT provenance; empty session-2 slots remain explicit | The real MEG evidence has exact trial identity instead of fuzzy sentence matching |
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |

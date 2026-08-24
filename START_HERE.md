@@ -7,7 +7,40 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: MARC2-VR39P Aggregate R2 Closeout
+## Current Gate: EEGMMIDB-UG1 Unseen-Participant Test
+
+VR39P result closeout `474d49f53e1a46633b99b0ef2ff62b9abebe7a9c`
+passed Base job `97317987437`, Optional job `97317987655`, and CI
+`32688563490`. VR39P is consumed at aggregate R2: no cohort was frozen and
+Freewill/CIL1 is permanently parked. Do not touch its private or ignored state.
+
+The independent next lane is `EEGMMIDB-UG1`. Read, in order:
+
+1. `docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_RESEARCH.md`;
+2. `registries/eegmmidb_unseen_participant_generalization_research.v0.json`;
+3. `docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_PREREGISTRATION.md`;
+4. `registries/eegmmidb_unseen_participant_generalization_contract.v0.json`;
+5. `docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_AUTHORIZATION_PACKET.md`;
+6. `registries/eegmmidb_unseen_participant_generalization_authorization_request.v0.json`; and
+7. the three matching test modules.
+
+UG1 freezes one source-pooled low-frequency model on S001-S015 and one final
+zero-calibration evaluation on completely fresh S016-S030 participants. The
+source execution LOSO gate must pass before any fresh payload request. The
+final execution gate must beat the stronger no-signal/timing control and every
+fixed derangement at the participant level. Imagery is an upgrade only.
+
+The staged future envelope is 36 metadata requests, at most 36 new EDFs and
+256 MiB payload transfer, 512 MiB incremental disk, 1 GiB peak RSS, one CPU
+thread, at most 300 fits and 640 prediction sets, one target delivery, one
+score, and zero retry or rerun. Every authority flag is false now.
+
+Immediate gate: verify, commit, push, and remotely green the exact all-false
+UG1 request, then add a non-scope-changing proof closeout. Only after both are
+green may UG1 be identified as the sole active Tier C packet for a fresh
+maintainer decision. No earlier `continue` is retroactive authority.
+
+## Previous Gate: MARC2-VR39P Aggregate R2 Closeout
 
 VR38A proof-only closeout `a599adf3e0320ad420e1c2f5647a0432e645c246`
 passed Base job `97278761357`, Optional job `97278761303`, and CI

@@ -3935,6 +3935,31 @@ ignored-path, archive, neural, target, model, score, network, FW2/CIL1, or
 claim operation. Next gate: commit, push, and green this exact closeout. Only
 then may the one registered target-free structural discriminator execute.
 
+### EEGMMIDB-UG1 - Unseen-Participant Generalization
+
+Status: **All-false research/preregistration/request prepared locally**
+
+This lane replaces the consumed VR39P structural branch with a direct
+scientific question. One model will be fitted on S001-S015 and, only after a
+source-only LOSO pass and green checkpoint freeze, evaluated once on
+S016-S030. The fresh participants contribute zero calibration, normalization
+fit, thresholds, exclusions, selection, or adaptation.
+
+Needle-moving gate: final execution must reach pooled and participant-macro
+balanced accuracy at least `0.60`, exceed the stronger no-signal/timing control
+by at least `0.10`, place at least 11/15 participants above chance, pass exact
+participant sign-flip `p <= 0.01`, and beat every frozen derangement. Imagery
+may upgrade a passing execution result but cannot rescue failure.
+
+Bounded path: generated/mock implementation -> 36-file metadata freeze -> six
+missing source EDFs -> 15-fold source LOSO/checkpoint freeze -> 30 fresh EDFs
+-> target-blind prediction freeze -> one 450-target score. New payload is at
+most 256 MiB and incremental disk at most 512 MiB under one CPU thread.
+
+Current gate: commit, push, and remotely green the exact all-false request,
+then separately green its proof closeout. No network, payload, signal, target,
+model, prediction, score, release, or claim operation is authorized now.
+
 ### MARC2-VR34P - All-False Exact-Count Private Confirmation Request Prepared
 
 VR33A proof-only closeout `22dcb05a1da90b153b715a0374eeb3673024f53c`
