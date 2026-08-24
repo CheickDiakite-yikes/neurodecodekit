@@ -102,8 +102,13 @@ real metadata pass. All 36 direct `HEAD` checks succeeded, freezing a complete
 for every file. No response body or EDF content was read and nothing was
 downloaded. This removes remote availability and storage uncertainty; it is
 not EEG or decoding evidence. M2 result `818ef1f` passed both jobs in CI
-`32718796222`; its eight-artifact proof-only closeout is now the final metadata
-gate before a separately authorized six-file source-first acquisition.
+`32718796222`; its eight-artifact proof-only closeout `00f795f` passed both
+jobs in CI `32720013549`, permanently closing Stage M. The next
+[Stage S-A packet](docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_AUTHORIZATION_PACKET.md)
+is all-false: it proposes only a generated-qualified, checksum-bound acquisition
+of the six missing S001-S003 run-04/run-08 source files totaling 15,498,816
+bytes. It does not authorize a download, touch the 54 retained source files or
+30 fresh-final files, parse EEG, train a model, or upgrade a scientific claim.
 
 ## Results At A Glance
 

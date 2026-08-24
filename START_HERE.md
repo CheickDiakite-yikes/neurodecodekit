@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: EEGMMIDB-UG1 Stage M2 Proof-Only Closeout
+## Current Gate: EEGMMIDB-UG1 Stage S-A All-False Request
 
 VR39P result closeout `474d49f53e1a46633b99b0ef2ff62b9abebe7a9c`
 passed Base job `97317987437`, Optional job `97317987655`, and CI
@@ -162,10 +162,24 @@ canonical artifact-set SHA-256
 `051651c6e31ecb9451d445b8ae5549e2e775da994b8c7913b9b9077cf3924388`
 without another network request or real operation.
 
-Immediate gate: commit, push, and green this exact proof-only closeout. Then
-Stage M is fully closed. The next safe task is an all-false source-first
-acquisition request limited to the six frozen S001-S003 run-04/run-08 files
-and 15,498,816 declared bytes. No payload or EDF access is authorized now.
+Stage M2 proof-only closeout
+`00f795f860762a6e828b210cee52808e69571d53` passed Base job
+`97409224259`, Optional Neuro Readers job `97409224710`, and CI
+`32720013549`. Stage M is fully closed and consumed.
+
+Read
+`docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_AUTHORIZATION_PACKET.md`,
+its machine request, and matching test. `EEGMMIDB-UG1-SA` is an all-false
+acquisition-only packet, distinct from the later Stage S source-LOSO and
+training gate. It binds eleven exact upstream artifacts totaling 116,444 bytes
+and freezes only one future checksum-manifest request plus six source EDF
+requests totaling 15,498,816 successful payload bytes.
+
+Immediate gate: verify, commit, push, and green this exact request, then create
+and separately green its proof-only closeout. No implementation, qualification,
+network request, local data access, payload acquisition, EDF parse, target,
+model, training, score, release, or claim action is authorized now. The 54
+retained source EDFs and all 30 fresh-final EDFs remain untouched.
 
 ## Previous Gate: MARC2-VR39P Aggregate R2 Closeout
 

@@ -203,12 +203,26 @@ canonical artifact-set SHA-256
 `051651c6e31ecb9451d445b8ae5549e2e775da994b8c7913b9b9077cf3924388`.
 It repeats no metadata request and performs no real operation.
 
-Immediate gate: commit, push, and remotely green this exact proof-only
-closeout. Then Stage M is closed and the next safe task is an all-false,
-source-first acquisition request limited to the six missing S001-S003 run-04/
-run-08 files and their frozen 15,498,816 declared bytes. Do not acquire payload
-or open EDF content now. The 30 fresh-final files, targets, models, scores,
-release, devices, and claim surfaces remain closed.
+Exact Stage M2 proof closeout
+`00f795f860762a6e828b210cee52808e69571d53` passed Base job
+`97409224259`, Optional Neuro Readers job `97409224710`, and CI
+`32720013549`. Stage M is closed and consumed.
+
+Read the new Stage S-A source acquisition authorization packet, machine
+request, and matching test. This all-false request binds eleven exact Stage M,
+UG1 contract, and generated-acquisition artifacts totaling 116,444 bytes under
+canonical artifact-set SHA-256
+`9e4c5ed1c4910f642fa6e91e1b0010e3eb6646e9c3661bb5be5c58917b4e3600`.
+It proposes an additive generated/mock downloader qualification and, only after
+all later proof barriers, one checksum-manifest request plus six sequential
+opaque EDF requests totaling exactly 15,498,816 successful payload bytes.
+
+Immediate gate: verify, commit, push, and remotely green the all-false Stage
+S-A request, then add and separately green a non-scope-changing proof-only
+closeout. Do not implement or qualify the downloader, make a network request,
+inspect an existing local payload, or open EDF content now. The 54 retained
+source files, 30 fresh-final files, targets, models, scores, release, devices,
+and claim surfaces remain closed.
 
 ### Historical VR39P path
 

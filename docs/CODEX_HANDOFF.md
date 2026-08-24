@@ -1,5 +1,19 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current EEGMMIDB-UG1 Stage S-A request gate, 2026-08-24: Stage M2 proof
+> closeout `00f795f860762a6e828b210cee52808e69571d53` passed Base job
+> `97409224259`, Optional job `97409224710`, and CI `32720013549`, closing
+> Stage M. Read the new Stage S-A authorization packet, all-false machine
+> request, and matching test. They bind eleven exact upstream artifacts
+> totaling 116,444 bytes under canonical set SHA-256
+> `9e4c5ed1c4910f642fa6e91e1b0010e3eb6646e9c3661bb5be5c58917b4e3600`.
+> The proposal is acquisition only: one future generated qualification, then
+> after all proof barriers one official checksum-manifest request and six
+> opaque source-file requests totaling exactly 15,498,816 bytes. Immediate
+> gate: commit, push, and green the request, then separately green a proof-only
+> closeout. No implementation, network, retained-source, fresh-final, EDF,
+> target, model, score, release, or claim operation is open.
+
 > Current EEGMMIDB-UG1 Stage M2 proof gate, 2026-08-24: M2 result
 > `818ef1f6384a03c3681d9d4ec01d6f88db4d2749` passed Base job
 > `97405609600`, Optional job `97405609428`, and CI `32718796222`. The new

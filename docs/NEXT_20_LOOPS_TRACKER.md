@@ -1,21 +1,15 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate gate (2026-08-24):** corrected EEGMMIDB-UG1 Stage M1
-> implementation `1c68a77` passed Base job `97395810059`, Optional job
-> `97395810337`, and CI `32715529168` before the sole generated qualification.
-> All 20 cases passed with 297 mock `HEAD` requests, exact replay, 8,354 input
-> fixture bytes, 1,416 aggregate output bytes, 0.0178 seconds runtime, and 33.3
-> MB peak RSS. Real URL, body, EDF, payload, target, model, training, scoring,
-> and network counts were zero. The run is consumed. Commit and green the
-> result, then separately green its proof-only closeout before Stage M2.
-> Result `3b343d7` passed both jobs in CI `32716836238`; the nine-artifact
-> proof-only closeout is now the immediate gate and performs no real operation.
-> Proof closeout `fd88d9d` passed both jobs in CI `32717768039`; the sole real
-> metadata pass then froze all 36 files at 92,414,976 declared bytes with full
-> validators and zero body/EDF/payload bytes. The immediate gate is the exact
-> Stage M2 result and proof closeout before the six-file source-first payload.
-> Result `818ef1f` passed both jobs in CI `32718796222`; the no-operation M2
-> proof closeout is now pending remote green.
+> **Immediate gate (2026-08-24):** EEGMMIDB-UG1 Stage M2 result `818ef1f`
+> passed both jobs in CI `32718796222`; proof-only closeout `00f795f` then
+> passed Base job `97409224259`, Optional job `97409224710`, and CI
+> `32720013549`, permanently closing Stage M. The new all-false Stage S-A
+> request binds eleven exact artifacts totaling 116,444 bytes and proposes
+> only one future official-checksum request plus six opaque S001-S003 run-04/
+> run-08 EDF requests totaling 15,498,816 successful bytes. Commit, push, and
+> green the request, then separately green its proof-only closeout. No payload,
+> retained-source, fresh-final, EDF, target, model, score, or claim operation is
+> authorized now.
 
 > **Immediate gate (2026-08-23):** exact VR39P Stage 1 `4d48cb3` passed Base
 > job `97310285688`, Optional job `97310285728`, and CI `32685719113` after its
@@ -3954,7 +3948,7 @@ then may the one registered target-free structural discriminator execute.
 
 ### EEGMMIDB-UG1 - Unseen-Participant Generalization
 
-Status: **Stage G remotely closed; Stage M1 implementation pending remote green**
+Status: **Stage M remotely closed; Stage S-A all-false request pending remote green**
 
 This lane replaces the consumed VR39P structural branch with a direct
 scientific question. One model will be fitted on S001-S015 and, only after a
@@ -4042,12 +4036,15 @@ free inventory and receipt output, atomic no-clobber publication, and a frozen
 generated qualification commands only; there is no live execute command, and
 the proof-bound Stage G sidecar remains byte-identical.
 
-Current gate: commit, push, and remotely green the exact Stage M1
-implementation. Then run its one registered generated/mock qualification and
-record the measured result. Stage M2 remains blocked until the result and a
-separate proof-only closeout are remotely green. No real metadata request, EDF
-body, local real path, acquisition, target, model, score, release, or claim
-operation has run.
+Stage M2 result `818ef1f` and proof closeout `00f795f` passed both required
+jobs in CI `32718796222` and `32720013549`, respectively. The body-blind pass
+froze 92,414,976 declared bytes; Stage M is consumed and closed.
+
+Current gate: commit, push, and remotely green the exact all-false Stage S-A
+source-acquisition request, then separately green its proof-only closeout. It
+proposes one future checksum-manifest request and only six source payloads /
+15,498,816 bytes. It does not authorize implementation or access now, and it
+keeps the 54 retained source files plus all 30 fresh-final files sealed.
 
 ### MARC2-VR34P - All-False Exact-Count Private Confirmation Request Prepared
 

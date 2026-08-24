@@ -13160,3 +13160,31 @@ Transition decision: after this exact closeout is pushed and both remote jobs
 pass, close Stage M permanently. The next safe step is a separately frozen
 all-false source-first acquisition request for only six files / 15,498,816
 bytes. Do not infer payload authority from metadata proof.
+
+## 0464 - Freeze An All-False Source Acquisition Substage
+
+Proof decision: Stage M2 proof-only closeout
+`00f795f860762a6e828b210cee52808e69571d53` passed CI `32720013549`, Base
+Python job `97409224259`, and Optional Neuro Readers job `97409224710`.
+Stage M is consumed and closed.
+
+Scope decision: name the acquisition-only substage `EEGMMIDB-UG1-SA` so it
+cannot be confused with the later source-LOSO, training, and checkpoint-freeze
+gate. Limit it to S001-S003 runs 04/08: six files and exactly 15,498,816
+successful payload bytes.
+
+Integrity decision: before any future EDF request, require one exact versioned
+official `SHA256SUMS.txt` request and freeze exactly six allowlisted checksums.
+Then require direct response identity, frozen M2 size/ETag/Last-Modified/
+Accept-Ranges values, official and observed SHA-256 equality, one post-write
+opaque local hash pass, and atomic no-replace complete-bundle promotion.
+
+Firewall decision: preserve zero operations over the 54 retained source EDFs
+and all 30 fresh-final EDFs. Treat the six future EDF bodies as sealed target-
+bearing bytes; acquisition may store and hash them but may not parse headers,
+annotations, events, channels, samples, labels, or targets.
+
+Authority decision: every request authority remains false. Commit and remotely
+green the request, then separately close its proof before identifying it as the
+sole Tier C packet. No implementation, generated qualification, network, local
+payload, model, score, release, or claim operation is authorized now.

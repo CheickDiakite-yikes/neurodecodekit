@@ -15121,3 +15121,31 @@ authorized by the result itself.
 Immediate gate: commit, push, and remotely green the final metadata proof.
 Then prepare a separate all-false source acquisition request; this closeout
 does not authorize payload access.
+
+### EEGMMIDB-UG1 Stage S-A all-false source acquisition request prepared
+
+- Stage M2 proof-only closeout
+  `00f795f860762a6e828b210cee52808e69571d53` passed Base Python job
+  `97409224259`, Optional Neuro Readers job `97409224710`, and CI
+  `32720013549`, permanently closing the metadata stage.
+- Bound eleven exact Stage M, UG1 contract/amendment, and generated-acquisition
+  artifacts totaling 116,444 bytes under canonical artifact-set SHA-256
+  `9e4c5ed1c4910f642fa6e91e1b0010e3eb6646e9c3661bb5be5c58917b4e3600`.
+- Froze an additive six-file downloader design rather than modifying the
+  proof-bound 36-file generated module. A future generated qualification must
+  be remotely green before any real request.
+- Limited the possible real stage to one official `SHA256SUMS.txt` request and
+  six direct source EDF requests totaling exactly 15,498,816 successful body
+  bytes, with frozen M2 headers, official and observed SHA-256 equality,
+  no-replace promotion, a durable pre-request consumed marker, one thread, 256
+  MiB RSS, 16 MiB payload-network, 64 MiB disk, and zero retry or rerun.
+- Explicitly sealed the 54 retained source files and all 30 fresh-final files.
+  The six future payloads are target-bearing sealed bytes: acquisition may
+  store and hash them but may not parse an EDF header or annotation.
+- Performed only the eleven tracked-artifact and eleven Git-proof reads needed
+  to prepare this request. Network, local real-data path, payload, EDF, target,
+  model, training, score, release, and claim counters remained zero.
+
+Immediate gate: verify, commit, push, and remotely green this all-false
+request, then create and separately green a proof-only closeout. Do not
+implement, qualify, request, download, parse, or inspect real data now.

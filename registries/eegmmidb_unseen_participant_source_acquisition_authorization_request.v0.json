@@ -1,0 +1,361 @@
+{
+  "schema_name": "neurodecodekit.eegmmidb_unseen_participant_source_acquisition_authorization_request",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-24",
+  "request_id": "EEGMMIDB-UG1-SA",
+  "status": "all_authority_false_request_only",
+  "green_stage_M_closeout": {
+    "commit": "00f795f860762a6e828b210cee52808e69571d53",
+    "CI_run_id": 32720013549,
+    "base_python_job_id": 97409224259,
+    "optional_neuro_readers_job_id": 97409224710,
+    "both_required_jobs_green": true,
+    "stage_M_consumed": true,
+    "stage_M_rerun_allowed": false
+  },
+  "bound_pre_request_artifacts": [
+    {
+      "path": "docs/EEGMMIDB_UNSEEN_PARTICIPANT_METADATA_STAGE_M2_PROOF_CLOSEOUT.md",
+      "bytes": 2478,
+      "sha256": "ba3ff125b18e3152cbd6bc8a7e762e46f0f9a0350235705914445343071e8f9d",
+      "git_blob": "7963bac75674d73068d1e96e3ec5ed0ae403cfab"
+    },
+    {
+      "path": "registries/eegmmidb_unseen_participant_metadata_stage_m2_proof_closeout.v0.json",
+      "bytes": 4875,
+      "sha256": "e2adb3de4ee14a8a2f7865ba836a97ea1fc7cdd09d9c70698795665a84171db1",
+      "git_blob": "d4c97ae25d982b2fde8b2eae81f6ffafa74f186f"
+    },
+    {
+      "path": "tests/test_eegmmidb_unseen_participant_metadata_stage_m2_proof_closeout.py",
+      "bytes": 3910,
+      "sha256": "16293421d53dcd11073e9d59afd4be09681a23cc4db3b877a17c1c1f104f2e47",
+      "git_blob": "8b304c0431f730d9066e94cd7ac3e84f914b8433"
+    },
+    {
+      "path": "docs/EEGMMIDB_UNSEEN_PARTICIPANT_METADATA_STAGE_M2_RESULT.md",
+      "bytes": 3563,
+      "sha256": "15f26c7873434618da77d6dd5c000a492915b9b43e72ba25aa5741d0cdae8a6d",
+      "git_blob": "1f2f2275777ca3812b17ecc9974fa9be211cd587"
+    },
+    {
+      "path": "registries/eegmmidb_unseen_participant_metadata_stage_m2_result.v0.json",
+      "bytes": 4688,
+      "sha256": "d25253c1c73beec7475bcc3e482a3bb24e1ca1adb84bf81c93a7c1646c176516",
+      "git_blob": "bc1bb4dbb60f31d6235e40204b03bf45a8eadeaf"
+    },
+    {
+      "path": "registries/eegmmidb_unseen_participant_metadata_inventory.v0.json",
+      "bytes": 11698,
+      "sha256": "1b8f16f846a1bb3e0dccdbf71ea39f375872ad732bdffeecd100dbfc161a7dac",
+      "git_blob": "8b14100f57c32be43e90656b740011a3c9236db8"
+    },
+    {
+      "path": "docs/EEGMMIDB_UNSEEN_PARTICIPANT_METADATA_RECEIPT.md",
+      "bytes": 281,
+      "sha256": "a3ddfce0950fcb32d8ff2a540b42903ac4c20f24572324182108bfe34cf49837",
+      "git_blob": "d7d141eb85a7a4f1a93469b2556f921d79611250"
+    },
+    {
+      "path": "registries/eegmmidb_unseen_participant_generalization_contract.v0.json",
+      "bytes": 6350,
+      "sha256": "1df7f4f139809d94a6135d979e8cd37e1ece9b87d001b12bcefd037c63b8ac37",
+      "git_blob": "8d309854a4cb7ad2663f1b05efad2c9d21c40b84"
+    },
+    {
+      "path": "registries/eegmmidb_unseen_participant_generalization_amendment_1.v0.json",
+      "bytes": 22758,
+      "sha256": "2d6576e2f31383efdcc1ea9f309e70c4beabdf440149567f7eabcbf1a2b177dd",
+      "git_blob": "0bc97e9be3876bff755ed4f567da65bee7e414f5"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/eegmmidb_unseen_participant_acquisition.py",
+      "bytes": 41092,
+      "sha256": "cfc9d9e515877f7c09309c249fafe15b835da2794c2b188f6fd58cbdd6579b4b",
+      "git_blob": "85d767496f2a84aa7e6a43c2b1ba0f8d778536e6"
+    },
+    {
+      "path": "tests/test_eegmmidb_unseen_participant_acquisition.py",
+      "bytes": 14751,
+      "sha256": "0ba7fbb62ef3e1bf2eb16ce9e9d945096e6b5e300184f5b590f137dc62a9d6f7",
+      "git_blob": "a3b9f7982fc6288364981a8a47e8ad06aa2e9ea0"
+    }
+  ],
+  "bound_pre_request_artifact_summary": {
+    "count": 11,
+    "bytes": 116444,
+    "canonical_artifact_set_sha256": "9e4c5ed1c4910f642fa6e91e1b0010e3eb6646e9c3661bb5be5c58917b4e3600"
+  },
+  "dataset_identity": {
+    "provider": "PhysioNet",
+    "dataset_id": "eegmmidb",
+    "name": "EEG Motor Movement/Imagery Dataset",
+    "version": "1.0.0",
+    "DOI": "10.13026/C28G6P",
+    "scheme": "https",
+    "host": "physionet.org",
+    "path_prefix": "/files/eegmmidb/1.0.0/",
+    "modality": "EEG"
+  },
+  "controlling_scope": {
+    "amendment_1_controls_conflicts_with_older_packet_language": true,
+    "participant_or_file_identity_allowed_in_acquisition_provenance": true,
+    "participant_or_file_identity_allowed_in_predictive_features_normalization_models_controls_or_thresholds": false
+  },
+  "source_boundary": {
+    "partition": "source_fit_missing",
+    "participants": [
+      "S001",
+      "S002",
+      "S003"
+    ],
+    "runs": [
+      "04",
+      "08"
+    ],
+    "file_count": 6,
+    "declared_payload_bytes_exact": 15498816,
+    "exact_files_in_request_order": [
+      {
+        "repository_path": "S001/S001R04.edf",
+        "url": "https://physionet.org/files/eegmmidb/1.0.0/S001/S001R04.edf",
+        "participant": "S001",
+        "run": "04",
+        "partition": "source_fit_missing",
+        "size_bytes": 2596896,
+        "etag": "\"4a82c43f-27a020\"",
+        "last_modified": "Wed, 12 Aug 2009 13:31:43 GMT",
+        "accept_ranges": "bytes"
+      },
+      {
+        "repository_path": "S001/S001R08.edf",
+        "url": "https://physionet.org/files/eegmmidb/1.0.0/S001/S001R08.edf",
+        "participant": "S001",
+        "run": "08",
+        "partition": "source_fit_missing",
+        "size_bytes": 2596896,
+        "etag": "\"4a82c444-27a020\"",
+        "last_modified": "Wed, 12 Aug 2009 13:31:48 GMT",
+        "accept_ranges": "bytes"
+      },
+      {
+        "repository_path": "S002/S002R04.edf",
+        "url": "https://physionet.org/files/eegmmidb/1.0.0/S002/S002R04.edf",
+        "participant": "S002",
+        "run": "04",
+        "partition": "source_fit_missing",
+        "size_bytes": 2555616,
+        "etag": "\"4a82c452-26fee0\"",
+        "last_modified": "Wed, 12 Aug 2009 13:32:02 GMT",
+        "accept_ranges": "bytes"
+      },
+      {
+        "repository_path": "S002/S002R08.edf",
+        "url": "https://physionet.org/files/eegmmidb/1.0.0/S002/S002R08.edf",
+        "participant": "S002",
+        "run": "08",
+        "partition": "source_fit_missing",
+        "size_bytes": 2555616,
+        "etag": "\"4a82c458-26fee0\"",
+        "last_modified": "Wed, 12 Aug 2009 13:32:08 GMT",
+        "accept_ranges": "bytes"
+      },
+      {
+        "repository_path": "S003/S003R04.edf",
+        "url": "https://physionet.org/files/eegmmidb/1.0.0/S003/S003R04.edf",
+        "participant": "S003",
+        "run": "04",
+        "partition": "source_fit_missing",
+        "size_bytes": 2596896,
+        "etag": "\"4a82c465-27a020\"",
+        "last_modified": "Wed, 12 Aug 2009 13:32:21 GMT",
+        "accept_ranges": "bytes"
+      },
+      {
+        "repository_path": "S003/S003R08.edf",
+        "url": "https://physionet.org/files/eegmmidb/1.0.0/S003/S003R08.edf",
+        "participant": "S003",
+        "run": "08",
+        "partition": "source_fit_missing",
+        "size_bytes": 2596896,
+        "etag": "\"4a82c46c-27a020\"",
+        "last_modified": "Wed, 12 Aug 2009 13:32:28 GMT",
+        "accept_ranges": "bytes"
+      }
+    ]
+  },
+  "fresh_final_firewall": {
+    "participants": "S016-S030",
+    "runs": [
+      "11",
+      "12"
+    ],
+    "file_count": 30,
+    "declared_payload_bytes": 76916160,
+    "network_requests_allowed": 0,
+    "local_path_operations_allowed": 0,
+    "payload_or_content_access_allowed": false,
+    "acquisition_allowed": false
+  },
+  "retained_source_firewall": {
+    "description": "54 already-retained S001-S015 source-fit EDFs",
+    "network_requests_allowed": 0,
+    "local_path_operations_allowed": 0,
+    "payload_or_content_access_allowed": false,
+    "acquisition_copy_or_rehash_allowed": false
+  },
+  "requested_ordered_stages": [
+    {
+      "stage": "SA1_generated_source_acquisition_implementation_and_qualification",
+      "available_only_after_packet_bound_decision_remote_green": true,
+      "new_additive_module_required": true,
+      "proof_bound_existing_module_modification_allowed": false,
+      "network_requests": 0,
+      "real_URL_or_path_access": 0,
+      "generated_qualification_invocations": 1,
+      "must_be_recorded_committed_pushed_and_both_jobs_green": true,
+      "proof_closeout_must_then_be_committed_pushed_and_both_jobs_green": true
+    },
+    {
+      "stage": "SA2_one_real_source_payload_acquisition",
+      "available_only_after_exact_SA1_result_and_proof_remote_green": true,
+      "checksum_manifest_requests_exact": 1,
+      "checksum_manifest_URL": "https://physionet.org/files/eegmmidb/1.0.0/SHA256SUMS.txt",
+      "HTTP_method": "GET",
+      "EDF_payload_requests_exact": 6,
+      "total_requests_exact": 7,
+      "redirects": 0,
+      "retries": 0,
+      "reruns": 0,
+      "successful_response_body_bytes_exact": 15498816,
+      "opaque_local_size_and_sha256_passes_exact": 6,
+      "real_invocations": 1,
+      "consumed_on_pass_or_failure": true
+    }
+  ],
+  "transport_contract": {
+    "TLS_certificate_verification_required": true,
+    "direct_status_exact": 200,
+    "URL_policy": {
+      "default_HTTPS_port_only": true,
+      "userinfo_allowed": false,
+      "query_allowed": false,
+      "fragment_allowed": false,
+      "redirect_mirror_CDN_or_host_substitution_allowed": false
+    },
+    "checksum_manifest": {
+      "URL": "https://physionet.org/files/eegmmidb/1.0.0/SHA256SUMS.txt",
+      "requests_exact": 1,
+      "maximum_body_bytes": 1048576,
+      "ASCII_only": true,
+      "allowlisted_entries_required_exact": 6,
+      "missing_duplicate_malformed_or_conflicting_entry_allowed": false,
+      "unrelated_entries_retained": false,
+      "must_freeze_before_first_EDF_request": true
+    },
+    "request_headers": {
+      "Accept-Encoding": "identity",
+      "If-Match": "exact_frozen_file_etag",
+      "If-Unmodified-Since": "exact_frozen_file_last_modified"
+    },
+    "response_final_URL_must_equal_requested_URL": true,
+    "content_length_must_equal_frozen_size_before_body_read": true,
+    "etag_must_equal_frozen_value_before_body_read": true,
+    "last_modified_must_equal_frozen_value_before_body_read": true,
+    "accept_ranges_must_equal_frozen_value_before_body_read": true,
+    "content_encoding_allowed": false,
+    "content_range_allowed": false,
+    "body_reads": "opaque_sequential_chunks_only",
+    "maximum_chunk_bytes": 1048576,
+    "fallback_HEAD_GET_or_Range_allowed": false,
+    "partial_bundle_is_success": false
+  },
+  "integrity_and_output_contract": {
+    "payload_root": ".codex_work/eegmmidb_ug1/source_fit_s001_s003_runs_04_08_v0",
+    "temporary_root": ".codex_work/eegmmidb_ug1/.source_fit_s001_s003_runs_04_08_v0.tmp",
+    "consumed_marker": ".codex_work/eegmmidb_ug1/source_fit_s001_s003_runs_04_08_v0.consumed.json",
+    "payload_root_must_be_absent_before_execution": true,
+    "temporary_root_must_be_absent_before_execution": true,
+    "consumed_marker_must_be_absent_before_execution": true,
+    "consumed_marker_persisted_and_fsynced_before_first_network_request": true,
+    "existing_components_must_be_non_symlink_directories": true,
+    "destination_files_must_be_single_link_regular_files": true,
+    "hash_during_transfer": "SHA-256",
+    "opaque_post_write_size_and_SHA256_passes_per_file": 1,
+    "bundle_promotion": "atomic_no_replace_after_all_six_files_and_manifest_verify",
+    "partial_bundle_publication_allowed": false,
+    "cleanup_scope": "individually_tracked_invocation_created_temporary_files_and_empty_directories_only_after_inode_and_membership_recheck",
+    "preexisting_path_overwrite_delete_rename_or_cleanup_allowed": false,
+    "private_machine_manifest_required": true,
+    "aggregate_public_receipt_required": true,
+    "payload_or_private_manifest_commit_upload_or_publication_allowed": false,
+    "live_execution_CLI_command_allowed": false
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "stage_wall_time_seconds": 300,
+    "peak_process_tree_RSS_bytes": 268435456,
+    "payload_requests": 6,
+    "checksum_manifest_requests": 1,
+    "checksum_manifest_body_bytes_maximum": 1048576,
+    "successful_payload_body_bytes_exact": 15498816,
+    "payload_network_body_bytes_maximum": 16777216,
+    "application_visible_response_header_bytes_maximum": 262144,
+    "incremental_disk_bytes_maximum": 67108864,
+    "generated_private_and_public_metadata_bytes_maximum": 1048576,
+    "stream_chunk_bytes_maximum": 1048576,
+    "minimum_free_disk_bytes": 2147483648,
+    "retries": 0,
+    "reruns": 0
+  },
+  "authority_now": {
+    "stage_SA1_implementation": false,
+    "stage_SA1_generated_qualification": false,
+    "network_or_remote_request": false,
+    "real_URL_or_local_data_path_access": false,
+    "stage_SA2_real_acquisition": false,
+    "source_payload_download_or_acquisition": false,
+    "fresh_final_request_path_or_payload_access": false,
+    "retained_source_request_path_or_payload_access": false,
+    "EDF_body_header_annotation_event_or_signal_access": false,
+    "cache_split_feature_or_derivative_creation": false,
+    "model_checkpoint_inference_training_prediction_or_scoring": false,
+    "target_or_label_delivery": false,
+    "additional_file_participant_run_sidecar_or_dataset": false,
+    "provider_language_model_RW3_stream_device_or_hardware": false,
+    "payload_or_private_manifest_commit_upload_publication_or_release": false,
+    "scientific_or_product_claim_upgrade": false,
+    "retry_rerun_resume_repair_fallback_or_substitution": false
+  },
+  "request_operation_counters": {
+    "tracked_artifact_reads": 11,
+    "Git_proof_reads": 11,
+    "network_requests": 0,
+    "remote_response_headers": 0,
+    "response_body_reads": 0,
+    "response_body_bytes": 0,
+    "real_URL_or_local_data_path_operations": 0,
+    "EDF_body_header_annotation_event_or_signal_reads": 0,
+    "source_payload_download_bytes": 0,
+    "fresh_final_operations": 0,
+    "retained_source_operations": 0,
+    "generated_qualification_invocations": 0,
+    "real_acquisition_invocations": 0,
+    "parameter_update_fits": 0,
+    "model_inference_runs": 0,
+    "target_deliveries": 0,
+    "scoring_events": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "claim_boundary": {
+    "engineering_capability_proposed": "A six-file source-only opaque acquisition gate that preserves the fresh-participant firewall and produces immutable integrity evidence without parsing EEG.",
+    "scientific_claim_established_by_request": false,
+    "real_EEG_accessed_by_request": false,
+    "neural_or_decoding_advantage_established": false,
+    "unseen_participant_generalization_established": false,
+    "movement_intention_or_motor_cortex_origin_established": false,
+    "eye_independence_language_or_live_decoding_established": false
+  }
+}
