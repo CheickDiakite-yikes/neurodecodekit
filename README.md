@@ -101,7 +101,9 @@ real metadata pass. All 36 direct `HEAD` checks succeeded, freezing a complete
 92,414,976-byte remote inventory with ETag, Last-Modified, and Accept-Ranges
 for every file. No response body or EDF content was read and nothing was
 downloaded. This removes remote availability and storage uncertainty; it is
-not EEG or decoding evidence.
+not EEG or decoding evidence. M2 result `818ef1f` passed both jobs in CI
+`32718796222`; its eight-artifact proof-only closeout is now the final metadata
+gate before a separately authorized six-file source-first acquisition.
 
 ## Results At A Glance
 

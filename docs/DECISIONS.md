@@ -13139,3 +13139,24 @@ release, and claim operations. Metadata identity is not neural evidence.
 Transition decision: commit and green the exact result, then separately bind
 it in a proof-only metadata closeout before any payload operation. Preserve the
 source-first six-file sequence and keep all 30 fresh-final payloads closed.
+
+## 0463 - Bind the Remotely Green Stage M2 Metadata Result
+
+Proof decision: exact M2 result commit
+`818ef1f6384a03c3681d9d4ec01d6f88db4d2749` passed CI `32718796222`, Base
+Python job `97405609600`, and Optional Neuro Readers job `97405609428`.
+
+Binding decision: freeze eight unchanged M1-proof and M2
+inventory/receipt/result artifacts totaling 37,723 bytes by exact size,
+SHA-256, and Git blob. Preserve canonical artifact-set SHA-256
+`051651c6e31ecb9451d445b8ae5549e2e775da994b8c7913b9b9077cf3924388`.
+
+Operation decision: perform only eight tracked-artifact reads and eight Git
+proof reads. Repeat no metadata invocation and perform no network, response-
+body, real path, EDF, payload, target, fit, inference, training, score, release,
+or claim operation.
+
+Transition decision: after this exact closeout is pushed and both remote jobs
+pass, close Stage M permanently. The next safe step is a separately frozen
+all-false source-first acquisition request for only six files / 15,498,816
+bytes. Do not infer payload authority from metadata proof.

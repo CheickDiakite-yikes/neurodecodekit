@@ -1,0 +1,118 @@
+{
+  "schema_name": "neurodecodekit.eegmmidb_unseen_participant_metadata_stage_m2_proof_closeout",
+  "schema_version": "0.1.0",
+  "lane_id": "EEGMMIDB-UG1-M2-PROOF",
+  "recorded_at_local": "2026-08-24",
+  "status": "proof_only_closeout_pending_exact_commit_remote_green",
+  "green_result_commit": {
+    "commit": "818ef1f6384a03c3681d9d4ec01d6f88db4d2749",
+    "CI_run_id": 32718796222,
+    "base_python_job_id": 97405609600,
+    "optional_neuro_readers_job_id": 97405609428,
+    "both_required_jobs_green": true
+  },
+  "bound_artifacts": [
+    {
+      "path": "docs/EEGMMIDB_UNSEEN_PARTICIPANT_METADATA_RECEIPT.md",
+      "bytes": 281,
+      "sha256": "a3ddfce0950fcb32d8ff2a540b42903ac4c20f24572324182108bfe34cf49837",
+      "git_blob": "d7d141eb85a7a4f1a93469b2556f921d79611250"
+    },
+    {
+      "path": "docs/EEGMMIDB_UNSEEN_PARTICIPANT_METADATA_STAGE_M1_PROOF_CLOSEOUT.md",
+      "bytes": 2636,
+      "sha256": "b728198a340fc8804940b78fe2af7d338d43a7635cc2141fea109d6bd42be02e",
+      "git_blob": "b21513c1c046ae79d37df5f2ae6c654ddaf89f7d"
+    },
+    {
+      "path": "docs/EEGMMIDB_UNSEEN_PARTICIPANT_METADATA_STAGE_M2_RESULT.md",
+      "bytes": 3563,
+      "sha256": "15f26c7873434618da77d6dd5c000a492915b9b43e72ba25aa5741d0cdae8a6d",
+      "git_blob": "1f2f2275777ca3812b17ecc9974fa9be211cd587"
+    },
+    {
+      "path": "registries/eegmmidb_unseen_participant_metadata_inventory.v0.json",
+      "bytes": 11698,
+      "sha256": "1b8f16f846a1bb3e0dccdbf71ea39f375872ad732bdffeecd100dbfc161a7dac",
+      "git_blob": "8b14100f57c32be43e90656b740011a3c9236db8"
+    },
+    {
+      "path": "registries/eegmmidb_unseen_participant_metadata_stage_m1_proof_closeout.v0.json",
+      "bytes": 5066,
+      "sha256": "3e307e74bb77bce6e392832fb123e072d8c75841a6e83082bf09f8b332aa6085",
+      "git_blob": "e0a4f587a59753d95a817a886b0b2bdc0b589b87"
+    },
+    {
+      "path": "registries/eegmmidb_unseen_participant_metadata_stage_m2_result.v0.json",
+      "bytes": 4688,
+      "sha256": "d25253c1c73beec7475bcc3e482a3bb24e1ca1adb84bf81c93a7c1646c176516",
+      "git_blob": "bc1bb4dbb60f31d6235e40204b03bf45a8eadeaf"
+    },
+    {
+      "path": "tests/test_eegmmidb_unseen_participant_metadata_stage_m1_proof_closeout.py",
+      "bytes": 3840,
+      "sha256": "50ac2b607073ae970dab3e36326dc061c02e35df728e5b30b3576c2e66aa9697",
+      "git_blob": "202af9ac1b1845a6eaa71d7d1effacb455cc988e"
+    },
+    {
+      "path": "tests/test_eegmmidb_unseen_participant_metadata_stage_m2_result.py",
+      "bytes": 5951,
+      "sha256": "c2d0e5b9a1799db6bbdd45c382a365adf53e5756b6db3e1192705030150c4cc7",
+      "git_blob": "75e5be7e1e7d1019550f0125ab0a12b3fbe26891"
+    }
+  ],
+  "artifact_summary": {
+    "count": 8,
+    "bytes": 37723,
+    "canonical_artifact_set_sha256": "051651c6e31ecb9451d445b8ae5549e2e775da994b8c7913b9b9077cf3924388"
+  },
+  "scope_preservation": {
+    "M1_proof_artifacts_unchanged": true,
+    "M2_inventory_receipt_and_result_unchanged": true,
+    "real_metadata_invocation_repeated": false,
+    "inventory_reconstructed_amended_or_replaced": false,
+    "source_first_six_file_boundary_unchanged": true,
+    "fresh_final_seal_unchanged": true,
+    "authority_expanded": false,
+    "claim_boundary_changed": false
+  },
+  "operation_counters": {
+    "tracked_artifact_reads": 8,
+    "Git_proof_reads": 8,
+    "metadata_requests": 0,
+    "network_requests": 0,
+    "response_body_reads": 0,
+    "response_body_bytes": 0,
+    "local_real_data_path_operations": 0,
+    "EDF_body_header_annotation_event_or_signal_reads": 0,
+    "payload_download_bytes": 0,
+    "target_or_label_reads": 0,
+    "parameter_update_fits": 0,
+    "model_inference_runs": 0,
+    "training_runs": 0,
+    "scoring_events": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "transition": {
+    "effective_before_this_closeout_commit_remote_green": false,
+    "stage_M_fully_closed_after_exact_closeout_remote_green": true,
+    "next_safe_task": "prepare_all_false_source_first_six_file_acquisition_request",
+    "source_fit_missing_file_count": 6,
+    "source_fit_missing_declared_bytes": 15498816,
+    "payload_acquisition_authorized_by_closeout": false,
+    "fresh_final_acquisition_authorized_by_closeout": false,
+    "EDF_content_access_authorized_by_closeout": false,
+    "target_model_score_or_release_authorized_by_closeout": false
+  },
+  "claim_boundary": {
+    "engineering_proof_added": "The complete real metadata inventory is bound to its green one-shot execution without another network request.",
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "unseen_participant_generalization_established": false,
+    "neural_or_decoding_advantage_established": false,
+    "movement_intention_or_motor_cortex_origin_established": false,
+    "language_or_thought_decoding_established": false,
+    "live_or_hardware_result_established": false
+  }
+}

@@ -15102,3 +15102,22 @@ or EEG-content access.
 Immediate gate: commit, push, and remotely green the exact result, then add a
 proof-only metadata closeout. No payload acquisition or EDF content access is
 authorized by the result itself.
+
+### EEGMMIDB-UG1 Stage M2 result remotely green; final metadata proof recorded
+
+- M2 result `818ef1f6384a03c3681d9d4ec01d6f88db4d2749` passed Base
+  Python job `97405609600`, Optional Neuro Readers job `97405609428`, and CI
+  `32718796222`.
+- Bound eight exact upstream M1-proof and M2 inventory/receipt/result artifacts
+  totaling 37,723 bytes by size, SHA-256, and Git blob. Canonical artifact-set
+  SHA-256 is
+  `051651c6e31ecb9451d445b8ae5549e2e775da994b8c7913b9b9077cf3924388`.
+- Performed eight tracked-artifact and eight Git proof reads. Issued no remote
+  request and performed no body, EDF, payload, target, model, training, score,
+  release, or claim operation.
+- Preserved the six-file, 15,498,816-byte source-first boundary and the seal on
+  all 30 fresh-final files.
+
+Immediate gate: commit, push, and remotely green the final metadata proof.
+Then prepare a separate all-false source acquisition request; this closeout
+does not authorize payload access.

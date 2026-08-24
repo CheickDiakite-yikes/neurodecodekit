@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: EEGMMIDB-UG1 Stage M2 Result Closeout
+## Current Gate: EEGMMIDB-UG1 Stage M2 Proof-Only Closeout
 
 VR39P result closeout `474d49f53e1a46633b99b0ef2ff62b9abebe7a9c`
 passed Base job `97317987437`, Optional job `97317987655`, and CI
@@ -152,10 +152,20 @@ totaling 76,916,160 bytes. ETag, Last-Modified, and Accept-Ranges were present
 for all 36 files. Redirect, retry, body, EDF, payload, target, model, training,
 and scoring counts were zero. The real metadata invocation is consumed.
 
-Immediate gate: commit, push, and green the exact Stage M2 result, then add a
-separate proof-only metadata closeout before payload acquisition. The source-
-first six-file lane remains next; fresh-final acquisition, EDF content,
-targets, models, scores, release, and claims remain closed.
+Stage M2 result `818ef1f6384a03c3681d9d4ec01d6f88db4d2749` passed Base
+job `97405609600`, Optional Neuro Readers job `97405609428`, and CI
+`32718796222`.
+
+Read the Stage M2 proof-only closeout, machine proof, and matching test. It
+binds eight exact M1-proof/M2-result artifacts totaling 37,723 bytes under
+canonical artifact-set SHA-256
+`051651c6e31ecb9451d445b8ae5549e2e775da994b8c7913b9b9077cf3924388`
+without another network request or real operation.
+
+Immediate gate: commit, push, and green this exact proof-only closeout. Then
+Stage M is fully closed. The next safe task is an all-false source-first
+acquisition request limited to the six frozen S001-S003 run-04/run-08 files
+and 15,498,816 declared bytes. No payload or EDF access is authorized now.
 
 ## Previous Gate: MARC2-VR39P Aggregate R2 Closeout
 

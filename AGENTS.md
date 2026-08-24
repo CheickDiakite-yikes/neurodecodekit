@@ -193,12 +193,22 @@ response-body, local real-path, EDF, payload, target, model, training, scoring,
 and new-payload counts were zero. The Stage M2 invocation is consumed and must
 not be repeated.
 
-Immediate gate: commit, push, and remotely green the exact Stage M2 result,
-then add and separately green a proof-only metadata closeout. Do not acquire
-payload or open EDF content before that proof. The next scientific sequence is
-source-first and may consider only the six missing source-fit imagery files;
-fresh-final, target, model, score, release, device, and claim surfaces remain
-closed.
+Exact Stage M2 result `818ef1f6384a03c3681d9d4ec01d6f88db4d2749`
+passed Base job `97405609600`, Optional Neuro Readers job `97405609428`, and
+CI `32718796222`.
+
+Read the Stage M2 proof-only closeout, machine proof, and matching test. It
+binds eight exact M1-proof and M2-result artifacts totaling 37,723 bytes under
+canonical artifact-set SHA-256
+`051651c6e31ecb9451d445b8ae5549e2e775da994b8c7913b9b9077cf3924388`.
+It repeats no metadata request and performs no real operation.
+
+Immediate gate: commit, push, and remotely green this exact proof-only
+closeout. Then Stage M is closed and the next safe task is an all-false,
+source-first acquisition request limited to the six missing S001-S003 run-04/
+run-08 files and their frozen 15,498,816 declared bytes. Do not acquire payload
+or open EDF content now. The 30 fresh-final files, targets, models, scores,
+release, devices, and claim surfaces remain closed.
 
 ### Historical VR39P path
 

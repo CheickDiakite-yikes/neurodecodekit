@@ -14,6 +14,8 @@
 > metadata pass then froze all 36 files at 92,414,976 declared bytes with full
 > validators and zero body/EDF/payload bytes. The immediate gate is the exact
 > Stage M2 result and proof closeout before the six-file source-first payload.
+> Result `818ef1f` passed both jobs in CI `32718796222`; the no-operation M2
+> proof closeout is now pending remote green.
 
 > **Immediate gate (2026-08-23):** exact VR39P Stage 1 `4d48cb3` passed Base
 > job `97310285688`, Optional job `97310285728`, and CI `32685719113` after its

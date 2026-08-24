@@ -1,5 +1,15 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current EEGMMIDB-UG1 Stage M2 proof gate, 2026-08-24: M2 result
+> `818ef1f6384a03c3681d9d4ec01d6f88db4d2749` passed Base job
+> `97405609600`, Optional job `97405609428`, and CI `32718796222`. The new
+> proof-only closeout binds eight exact M1-proof/M2-result artifacts totaling
+> 37,723 bytes under artifact-set SHA-256
+> `051651c6e31ecb9451d445b8ae5549e2e775da994b8c7913b9b9077cf3924388`.
+> It repeats no metadata request and performs no real operation. Immediate
+> gate: commit, push, and green this proof. Then prepare an all-false source-
+> first request for only six files / 15,498,816 bytes; payload remains closed.
+
 > Current EEGMMIDB-UG1 Stage M2 result gate, 2026-08-24: Stage M1 proof
 > `fd88d9d7ca9ffd3951eda295daa74a05ee4201a9` passed Base job
 > `97402552811`, Optional job `97402552736`, and CI `32717768039` before the
