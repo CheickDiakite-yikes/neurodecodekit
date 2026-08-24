@@ -8,6 +8,8 @@
 > MB peak RSS. Real URL, body, EDF, payload, target, model, training, scoring,
 > and network counts were zero. The run is consumed. Commit and green the
 > result, then separately green its proof-only closeout before Stage M2.
+> Result `3b343d7` passed both jobs in CI `32716836238`; the nine-artifact
+> proof-only closeout is now the immediate gate and performs no real operation.
 
 > **Immediate gate (2026-08-23):** exact VR39P Stage 1 `4d48cb3` passed Base
 > job `97310285688`, Optional job `97310285728`, and CI `32685719113` after its

@@ -92,7 +92,10 @@ requests, deterministic replay, 8,354 generated fixture bytes, 1,416 aggregate
 output bytes, 0.0178 seconds runtime, and 33.3 MB peak RSS. Every real request,
 body, EDF, payload, target, model, training, score, and network counter remained
 zero. The run is consumed; Stage M2 is blocked until the result and a separate
-proof-only closeout are remotely green.
+proof-only closeout are remotely green. Result `3b343d7` passed both jobs in
+CI `32716836238`; the proof-only closeout now binds nine exact artifacts
+totaling 82,278 bytes without repeating qualification or accessing real data.
+Stage M2 remains blocked until that closeout is itself remotely green.
 
 ## Results At A Glance
 

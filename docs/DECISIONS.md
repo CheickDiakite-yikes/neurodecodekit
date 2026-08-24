@@ -13088,3 +13088,24 @@ to metadata identity and end-to-end latency was not measured.
 Transition decision: commit and green the measured result, then separately
 commit and green a proof-only closeout. Stage M2 remains blocked until that
 proof barrier passes.
+
+## 0461 - Bind the Remotely Green Stage M1 Result
+
+Proof decision: exact result commit
+`3b343d74604b0b0d0e0732f14cf593c8e057ebbf` passed CI `32716836238`, Base
+Python job `97399780409`, and Optional Neuro Readers job `97399780188`.
+
+Binding decision: freeze nine unchanged Stage M1 implementation and result
+artifacts totaling 82,278 bytes by exact size, SHA-256, and Git blob. Preserve
+canonical artifact-set SHA-256
+`8c586bb311c1afb09bfacaf611da150398c40121802dd9b2c4683036f9bbb3c1`.
+
+Operation decision: perform only nine tracked-artifact reads and nine Git proof
+reads. Repeat no qualification and perform no network, URL/path, metadata
+response, body, EDF, payload, target, fit, inference, training, score, release,
+or claim operation.
+
+Transition decision: this closeout has no effect until its exact commit is
+pushed and both required CI jobs pass. Then, and only then, the existing Stage
+M decision permits one body-blind metadata invocation. Payload acquisition,
+EDF content, targets, models, scores, release, and claims remain closed.

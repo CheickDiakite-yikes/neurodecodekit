@@ -15055,3 +15055,23 @@ closed pending the measured result and a separate green proof-only closeout.
 Immediate gate: commit, push, and remotely green the result, then add and
 separately green a proof-only closeout. Stage M2 remains blocked until that
 proof barrier passes.
+
+### EEGMMIDB-UG1 Stage M1 result remotely green; proof closeout recorded
+
+- Result commit `3b343d74604b0b0d0e0732f14cf593c8e057ebbf`
+  passed Base Python job `97399780409`, Optional Neuro Readers job
+  `97399780188`, and CI `32716836238`.
+- Bound nine exact implementation and result artifacts totaling 82,278 bytes
+  by size, SHA-256, and Git blob. Canonical artifact-set SHA-256 is
+  `8c586bb311c1afb09bfacaf611da150398c40121802dd9b2c4683036f9bbb3c1`.
+- Performed nine tracked-artifact reads and nine Git proof reads. Repeated no
+  qualification and performed no network, real URL/path, metadata response,
+  body, EDF, payload, target, fit, inference, training, scoring, release, or
+  claim operation.
+- Preserved the exact Stage M2 delayed-effect boundary: one real metadata
+  invocation becomes eligible under the existing decision only after this
+  closeout is pushed and both required jobs are green.
+
+Immediate gate: commit, push, and remotely green the proof-only closeout.
+Stage M2 remains closed until that barrier passes, and it authorizes no payload
+or EEG-content access.

@@ -168,12 +168,21 @@ bytes emitted across successful cases, 1,416 aggregate output bytes, runtime
 body, EDF, payload, target, model, training, score, network, and new-payload
 counter was zero. The run is consumed and must not be repeated.
 
-Immediate gate: commit, push, and remotely green the exact Stage M1 result.
-Then add and separately green a proof-only closeout binding the implementation
-and result without rerunning qualification. Stage M2 remains blocked until that
-proof barrier passes. Do not access any real URL, local real-data path, EDF
-content, source/fresh payload, target, model, score, release, device, or claim
-surface yet.
+Exact Stage M1 result `3b343d74604b0b0d0e0732f14cf593c8e057ebbf`
+passed Base job `97399780409`, Optional Neuro Readers job `97399780188`, and
+CI `32716836238`.
+
+Read the Stage M1 proof-only closeout, machine proof, and matching test. It
+binds nine exact public implementation/result artifacts totaling 82,278 bytes
+under canonical artifact-set SHA-256
+`8c586bb311c1afb09bfacaf611da150398c40121802dd9b2c4683036f9bbb3c1`.
+It repeats no qualification and performs no real operation.
+
+Immediate gate: commit, push, and remotely green the exact proof-only
+closeout. Only then may the one already-authorized Stage M2 body-blind metadata
+invocation run. Do not access a real URL before that proof, and do not access
+any local real-data path, EDF content, source/fresh payload, target, model,
+score, release, device, or claim surface under Stage M2.
 
 ### Historical VR39P path
 

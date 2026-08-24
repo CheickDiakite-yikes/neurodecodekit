@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: EEGMMIDB-UG1 Stage M1 Result Closeout
+## Current Gate: EEGMMIDB-UG1 Stage M1 Proof-Only Closeout
 
 VR39P result closeout `474d49f53e1a46633b99b0ef2ff62b9abebe7a9c`
 passed Base job `97317987437`, Optional job `97317987655`, and CI
@@ -129,11 +129,20 @@ RSS and emitted a 1,416-byte aggregate with SHA-256
 `9f91843e6a20f8794cf19105116b3bcf13a2a3deff496a3c44ff30ecbcfeafe3`.
 The run is consumed and may not be repeated.
 
-Read the Stage M1 result document, machine result, and matching test.
-Immediate gate: commit, push, and green this exact result, then add and
-separately green a proof-only closeout. Stage M2 remains blocked until that
-proof barrier passes; no real URL, EDF content, payload, target, model, score,
-release, or scientific claim surface is open now.
+Stage M1 result `3b343d74604b0b0d0e0732f14cf593c8e057ebbf`
+passed Base job `97399780409`, Optional Neuro Readers job `97399780188`, and
+CI `32716836238`.
+
+Read the Stage M1 proof-only closeout, machine proof, and matching test. It
+binds nine exact implementation/result artifacts totaling 82,278 bytes under
+canonical artifact-set SHA-256
+`8c586bb311c1afb09bfacaf611da150398c40121802dd9b2c4683036f9bbb3c1`
+without repeating qualification or performing a real operation.
+
+Immediate gate: commit, push, and green this exact proof-only closeout. Only
+after both required jobs pass may the already-authorized one-shot Stage M2
+body-blind metadata invocation begin. Payload, EDF content, target, model,
+score, release, and scientific claim surfaces remain closed.
 
 ## Previous Gate: MARC2-VR39P Aggregate R2 Closeout
 

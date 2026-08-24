@@ -1,5 +1,16 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current EEGMMIDB-UG1 Stage M1 proof gate, 2026-08-24: result
+> `3b343d74604b0b0d0e0732f14cf593c8e057ebbf` passed Base job
+> `97399780409`, Optional Neuro Readers job `97399780188`, and CI
+> `32716836238`. The new proof-only closeout binds nine exact
+> implementation/result artifacts totaling 82,278 bytes under artifact-set
+> SHA-256 `8c586bb311c1afb09bfacaf611da150398c40121802dd9b2c4683036f9bbb3c1`.
+> It repeats no qualification and performs no real operation. Immediate gate:
+> commit, push, and green the closeout. Only then may the one already-authorized
+> Stage M2 body-blind metadata invocation run; payload and EEG content remain
+> closed.
+
 > Current EEGMMIDB-UG1 Stage M1 result gate, 2026-08-24: corrected
 > implementation `1c68a775294e08013f6ef0780eb8901917699db0` passed Base job
 > `97395810059`, Optional Neuro Readers job `97395810337`, and CI
