@@ -1,0 +1,158 @@
+{
+  "schema_name": "neurodecodekit.bnci_2014_001_stage_a_redirect_recovery_authorization_request",
+  "schema_version": "0.1.0",
+  "request_id": "BNCI-C3C5-1-A-R-recovery-request-2026-08-24",
+  "recorded_at_local": "2026-08-24",
+  "lane_id": "BNCI-C3C5-1",
+  "status": "request_only_all_authority_false",
+  "reason": "first_Stage_A_invocation_consumed_on_expected_NEMAR_302_before_payload_body",
+  "green_failure_closeout": {
+    "commit": "162fddcfa2f399f4e5919a2daa0de4d7d33bf1f4",
+    "CI_run_id": 32782670936,
+    "base_python_job_id": 97607889466,
+    "optional_neuro_readers_job_id": 97607889659,
+    "both_required_jobs_green": true
+  },
+  "bound_artifacts": [
+    {
+      "path": "registries/bnci_2014_001_cross_participant_eeg_gain_contract.v0.json",
+      "bytes": 12156,
+      "sha256": "e11dad351f5a4736dc6ac3ffdad28a65e37b18b40c5bfa9e861f5b0754ad2b74",
+      "Git_blob": "0c875eec36247128c17617600acd2037dedd76fe"
+    },
+    {
+      "path": "registries/bnci_2014_001_cross_participant_eeg_gain_authorization_decision.v0.json",
+      "bytes": 9511,
+      "sha256": "687ed0d5afa64ba7c34ab86bf3e0c4f79d08d21041dd1e9e6aa3642629d0f559",
+      "Git_blob": "4ab70392862510ca0a10736d45dbe8ab49153759"
+    },
+    {
+      "path": "registries/bnci_2014_001_cross_participant_eeg_gain_stage_g1_result_proof.v0.json",
+      "bytes": 4434,
+      "sha256": "aad6cca7e3c14dbad2f4934f9d16d417effc7ef5db01a45c2918ee8ff253f434",
+      "Git_blob": "b1c48cb9910df7f774a1792b14cb1e7c2322ea95"
+    },
+    {
+      "path": "registries/bnci_2014_001_stage_a_implementation.v0.json",
+      "bytes": 3433,
+      "sha256": "3ab5805a3b6aee4a4159a09876b7827ea94605db8eb758a3788042ab335f4a35",
+      "Git_blob": "f70dadab599eab6b6bd4e300baac423ba6ef2bc3"
+    },
+    {
+      "path": "docs/BNCI_2014_001_STAGE_A_IMPLEMENTATION.md",
+      "bytes": 2717,
+      "sha256": "1a722027a1fca939e5aa6bd614420d241de0357b684d02ca2543837a1084c7fc",
+      "Git_blob": "8e872172f5f8e05bcf1857638e22af1657d39398"
+    },
+    {
+      "path": "registries/bnci_2014_001_stage_a_failure.v0.json",
+      "bytes": 2810,
+      "sha256": "44d8046dcf2e3dfe756ac1100515a7cb1e3aa7009e14f4c98264cf7ae1308978",
+      "Git_blob": "63ecd565654f836452e0d637347dc94dfa5313be"
+    },
+    {
+      "path": "docs/BNCI_2014_001_STAGE_A_FAILURE.md",
+      "bytes": 2235,
+      "sha256": "83d5d9b12c0d6c89db49ae590bff37e16fc22e47ea9c3a6c71674820566e3413",
+      "Git_blob": "7df66e0d28f7130b5c943ac5d6371b81341f9a2a"
+    },
+    {
+      "path": "tests/test_bnci_2014_001_stage_a_failure.py",
+      "bytes": 2952,
+      "sha256": "ea8a62f443473c2723645921af35041af2ba822bbaae1bca145e327d13bb25a7",
+      "Git_blob": "b211257d9b7e83d52047c294a588f5bc43964dd6"
+    }
+  ],
+  "metadata_research": {
+    "manifest_url": "https://data.nemar.org/nm000139/v1.0.2/manifest.json",
+    "manifest_body_bytes_observed": 401826,
+    "selected_record_path": "sourcedata/A01E.mat",
+    "selected_bytes_url_host": "data.nemar.org",
+    "selected_signed_object_host": "nemar.s3.us-east-2.amazonaws.com",
+    "signed_object_key_template": "/nm000139/objects/SHA256E-s{bytes}--{sha256}.mat",
+    "neural_payload_body_bytes_read": 0
+  },
+  "proposed_generated_implementation": {
+    "generated_manifest_and_signed_URL_fixtures_only": true,
+    "exact_selected_record_validation": true,
+    "signed_URL_scheme": "https",
+    "signed_URL_host_allowlist": ["nemar.s3.us-east-2.amazonaws.com"],
+    "arbitrary_redirect_following": false,
+    "payload_response_redirects": 0,
+    "original_G1_or_Stage_A_artifact_modification": false,
+    "generated_qualification_runs_maximum": 1,
+    "real_operations": 0
+  },
+  "proposed_recovery_invocation": {
+    "invocations_maximum": 1,
+    "manifest_GETs_exact": 1,
+    "manifest_body_bytes_maximum": 1048576,
+    "payload_files_exact": 18,
+    "accepted_payload_bytes_exact": 779873919,
+    "payload_requests_maximum": 54,
+    "payload_attempts_per_file_maximum": 3,
+    "payload_host_allowlist": ["nemar.s3.us-east-2.amazonaws.com"],
+    "payload_object_key_bound_to_registered_size_and_sha256": true,
+    "payload_redirects": 0,
+    "old_consumed_marker_must_remain_byte_identical": true,
+    "distinct_recovery_marker_and_output_root": true,
+    "MAT_semantic_content_opens": 0,
+    "MAT_semantic_parses": 0,
+    "signal_event_target_or_label_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "network_bytes_maximum": 2685403136,
+    "incremental_disk_bytes_maximum": 2147483648,
+    "free_disk_bytes_minimum": 5368709120,
+    "runtime_seconds_maximum": 1800,
+    "peak_RSS_bytes_maximum": 1073741824,
+    "private_derivative_bytes_maximum": 536870912,
+    "public_output_bytes_maximum": 4194304
+  },
+  "proof_sequence": [
+    "authorization_decision_commit_push_remote_green",
+    "generated_recovery_implementation_commit_push_remote_green",
+    "one_replacement_Stage_A_recovery_invocation",
+    "aggregate_recovery_result_commit_push_remote_green",
+    "Stage_Q_may_then_open"
+  ],
+  "authority_now": {
+    "authorization_decision_recorded": false,
+    "generated_recovery_implementation": false,
+    "generated_recovery_qualification": false,
+    "manifest_network_request": false,
+    "payload_network_request": false,
+    "payload_acquisition": false,
+    "MAT_semantic_content_open": false,
+    "Stage_Q": false,
+    "training_or_inference": false,
+    "target_delivery_or_scoring": false,
+    "release_or_claim_upgrade": false
+  },
+  "forbidden": [
+    "retry_resume_or_modify_the_consumed_original_invocation",
+    "delete_overwrite_or_replace_the_original_consumed_marker",
+    "arbitrary_redirect_host_path_file_participant_or_dataset",
+    "additional_NEMAR_file_or_full_mirror",
+    "BDF_HTML_or_duplicate_representation",
+    "MAT_semantic_parse_signal_event_target_or_label_read_during_recovery",
+    "model_fit_inference_prediction_target_delivery_or_score",
+    "operations_on_another_project",
+    "release_or_scientific_claim_upgrade"
+  ],
+  "claim_boundary": {
+    "engineering_ceiling": "one_verified_recovery_payload_bundle_after_expected_NEMAR_signed_URL_indirection",
+    "scientific_claim_established": false,
+    "unseen_person_generalization": false,
+    "EEG_beyond_EOG": false,
+    "decoding_performance": false
+  }
+}
