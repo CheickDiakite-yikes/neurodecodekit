@@ -85,7 +85,11 @@ request `e2647d6` passed both jobs in CI `32709110804`; proof-only closeout
 `e9c11da` passed both jobs in CI `32710175884`. After Stage M was named as the
 sole active Tier C packet, the maintainer's exact `continue` was recorded in a
 packet-bound decision with delayed effect. Until that decision is remotely
-green, no implementation, network, URL, path, or data access is open.
+green, no implementation, network, URL, path, or data access is open. Decision
+`021bf8a` passed both jobs in CI `32712235191`; the isolated Stage M1 client is
+now implemented with strict mock-qualified `HEAD` semantics and no live
+execution command, pending its own remote-green implementation barrier before
+the one registered generated qualification.
 
 ## Results At A Glance
 

@@ -1,0 +1,177 @@
+{
+  "schema_name": "neurodecodekit.eegmmidb_unseen_participant_metadata_implementation",
+  "schema_version": "0.1.0",
+  "lane_id": "EEGMMIDB-UG1-M1",
+  "recorded_at_local": "2026-08-24",
+  "status": "implementation_ready_qualification_not_run",
+  "green_authorization_decision": {
+    "commit": "021bf8a1f2f12a8e7388a561535328cd0dc0dba2",
+    "CI_run_id": 32712235191,
+    "base_python_job_id": 97385926125,
+    "optional_neuro_job_id": 97385926444,
+    "both_required_jobs_green": true,
+    "decision_registry_bytes": 9636,
+    "decision_registry_sha256": "9c1c9d214cc9b08845354f48c7e46002899815f773d9ed2a881f676efb1ebc65",
+    "decision_registry_Git_blob": "e1fc205feeddb2644e53f73c20a3358c98555464"
+  },
+  "implementation_artifacts": [
+    {
+      "path": "docs/EEGMMIDB_UNSEEN_PARTICIPANT_METADATA_IMPLEMENTATION.md",
+      "bytes": 4265,
+      "sha256": "8f99c5d06595bc267b8717eb6190887a520bbda370b38e46ba86176cee9d047f",
+      "Git_blob": "7cdf6a57ce0a8cf31b5e8159772142419335d43c"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/eegmmidb_unseen_participant_metadata.py",
+      "bytes": 37026,
+      "sha256": "f9801db5f159ea4a04d0a4ea1c294ae8c0d6fd956aa8b8098970245aa65d577c",
+      "Git_blob": "89aa6409df0b6278d23227a2343923a1b247b6da"
+    },
+    {
+      "path": "src/neurodecodekit/eegmmidb_ug1_metadata_cli.py",
+      "bytes": 2803,
+      "sha256": "fe467a012f54829140ed5da6248e9026f76642d6df779b891c5913f8df45348a",
+      "Git_blob": "a0299bbe3b63b579201dee47030beac0d6bf99ba"
+    },
+    {
+      "path": "tests/test_eegmmidb_unseen_participant_metadata.py",
+      "bytes": 13875,
+      "sha256": "bdd4733c5dce4eb0c17c76160aef9c9d997dcb840bfa5f25af9779ada5597822",
+      "Git_blob": "dd3b2d641a38c70507a5583f245cf58366c54adc"
+    },
+    {
+      "path": "tests/test_eegmmidb_unseen_participant_metadata_implementation.py",
+      "bytes": 4038,
+      "sha256": "4ca8da24334913511568c0b2155d7bc87ed6d516f91e59e37699d6970cad09b6",
+      "Git_blob": "e1de137d5fa3ebf6fc013fbf632e8c1b6c8693ef"
+    }
+  ],
+  "implementation_artifact_count": 5,
+  "implementation_artifact_bytes": 62007,
+  "isolation": {
+    "new_metadata_module": "neurodecodekit.datasets.eegmmidb_unseen_participant_metadata",
+    "proof_bound_stage_G_module_modified": false,
+    "central_neurodecode_CLI_modified": false,
+    "proof_bound_stage_G_sidecar_CLI_modified": false,
+    "new_isolated_metadata_sidecar_CLI_added": true,
+    "heavy_base_dependency_added": false,
+    "MNE_NumPy_SciPy_sklearn_or_Torch_imported": false,
+    "subprocess_or_shell_used": false
+  },
+  "transport_contract": {
+    "scheme": "https",
+    "host": "physionet.org",
+    "path_prefix": "/files/eegmmidb/1.0.0/",
+    "method": "HEAD",
+    "requests_exact": 36,
+    "direct_status_exact": 200,
+    "redirects": 0,
+    "retries": 0,
+    "fallback_GET_or_Range": false,
+    "response_body_reads": 0,
+    "response_body_bytes": 0,
+    "TLS_certificate_verification": "ssl.create_default_context",
+    "automatic_redirects_disabled": true,
+    "content_length_required": true,
+    "optional_validators": ["ETag", "Last-Modified", "Accept-Ranges"],
+    "missing_optional_validators_preserved_as_unavailable": true,
+    "unknown_response_headers_recorded": false
+  },
+  "output_contract": {
+    "machine_inventory": "inventory.v0.json",
+    "human_receipt": "receipt.md",
+    "canonical_JSON": true,
+    "target_like_public_key_firewall": true,
+    "atomic_no_replace_publication": true,
+    "output_collision_refuses": true,
+    "partial_inventory_is_success": false,
+    "inventory_and_receipt_bytes_maximum": 1048576
+  },
+  "CLI": {
+    "module": "neurodecodekit.eegmmidb_ug1_metadata_cli",
+    "commands": ["plan", "qualify"],
+    "execute_command_present": false,
+    "live_network_command_present": false,
+    "generic_URL_or_local_data_path_argument_present": false
+  },
+  "generated_qualification": {
+    "case_count": 20,
+    "cases": [
+      "complete_validators",
+      "optional_validators_unavailable",
+      "deterministic_replay",
+      "redirect",
+      "status",
+      "missing_content_length",
+      "duplicate_content_length",
+      "malformed_content_length",
+      "malformed_etag",
+      "malformed_last_modified",
+      "malformed_accept_ranges",
+      "observed_body_byte",
+      "request_order",
+      "missing_response",
+      "declared_byte_cap",
+      "output_collision",
+      "thread_environment",
+      "free_disk",
+      "peak_rss",
+      "wall_time"
+    ],
+    "generated_or_mock_only": true,
+    "network_allowed": false,
+    "real_URL_or_local_data_path_allowed": false,
+    "retained_generated_fixture_bytes": 0,
+    "registered_execution_count_now": 0,
+    "available_only_after_exact_implementation_remote_green": true
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "wall_time_seconds": 300,
+    "peak_process_tree_RSS_bytes": 268435456,
+    "metadata_requests": 36,
+    "application_visible_metadata_bytes": 2097152,
+    "combined_declared_payload_bytes": 268435456,
+    "generated_output_bytes": 1048576,
+    "network_payload_body_bytes": 0,
+    "incremental_disk_bytes": 1048576,
+    "minimum_free_disk_bytes": 2147483648,
+    "retries": 0,
+    "reruns": 0
+  },
+  "operation_counters": {
+    "registered_qualifications": 0,
+    "network_requests": 0,
+    "real_URL_or_local_data_path_operations": 0,
+    "metadata_responses": 0,
+    "response_body_reads": 0,
+    "response_body_bytes": 0,
+    "EDF_body_header_annotation_event_or_signal_reads": 0,
+    "payload_download_bytes": 0,
+    "target_or_label_reads": 0,
+    "parameter_update_fits": 0,
+    "model_inference_runs": 0,
+    "scoring_events": 0,
+    "release_or_publication_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "stage_M2_boundary": {
+    "authorized_by_implementation_presence": false,
+    "available_before_exact_implementation_remote_green": false,
+    "available_before_generated_result_remote_green": false,
+    "available_before_separate_proof_closeout_remote_green": false,
+    "real_invocation_count_now": 0
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "strict dependency-light body-blind metadata client ready for one generated qualification",
+    "scientific_ceiling": "none",
+    "real_EEG_accessed": false,
+    "unseen_participant_generalization_established": false,
+    "neural_or_decoding_advantage_established": false,
+    "movement_intention_or_motor_cortex_origin_established": false,
+    "language_or_thought_decoding_established": false,
+    "live_or_hardware_result_established": false
+  }
+}

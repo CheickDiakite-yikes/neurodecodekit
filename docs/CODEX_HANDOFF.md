@@ -1,5 +1,17 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current EEGMMIDB-UG1 Stage M1 implementation gate, 2026-08-24: exact
+> authorization decision `021bf8a1f2f12a8e7388a561535328cd0dc0dba2`
+> passed Base job `97385926125`, Optional job `97385926444`, and CI
+> `32712235191`. Read the new Stage M1 implementation document, registry,
+> isolated metadata module, sidecar CLI, and tests. The client freezes 36
+> exact `HEAD` requests, strict sizes/validators, zero redirects/retries/body
+> reads, canonical target-free outputs, atomic no-clobber publication, and 20
+> generated cases. No live execute command exists. Immediate gate: verify,
+> commit, push, and green this exact implementation. Then run the one
+> registered generated/mock qualification. Stage M2 and every real URL/path,
+> EDF, payload, target, model, score, release, and claim surface remain closed.
+
 > Current EEGMMIDB-UG1 Stage M decision gate, 2026-08-24: proof closeout
 > `e9c11da94730e790aace3acc818e029abcbdc165` passed Base job
 > `97379680508`, Optional job `97379680751`, and CI `32710175884`.

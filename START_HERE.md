@@ -107,10 +107,22 @@ registered two-stage maximum after its own remote-green proof: generated/mock
 Stage M1 first, then one body-blind Stage M2 metadata invocation only after the
 exact M1 implementation and proof closeout are also remotely green.
 
-Immediate gate: commit, push, and remotely green the exact authorization
-decision. Until both jobs pass, no Stage M implementation, generated
-qualification, network request, real URL/path access, or data operation is
-authorized.
+Exact authorization decision `021bf8a1f2f12a8e7388a561535328cd0dc0dba2`
+passed Base job `97385926125`, Optional job `97385926444`, and CI
+`32712235191` before Stage M1 implementation.
+
+Read `docs/EEGMMIDB_UNSEEN_PARTICIPANT_METADATA_IMPLEMENTATION.md`, its
+machine implementation record, the new isolated metadata module, sidecar CLI,
+and matching tests. The implementation freezes the exact `HEAD`-only client,
+canonical inventory and receipt, 20 generated cases, and resource/refusal
+boundaries. A new isolated metadata sidecar exposes `plan` and `qualify` but
+no live `execute` command; the proof-bound Stage G sidecar remains
+byte-identical. No registered qualification or network request has run.
+
+Immediate gate: commit, push, and remotely green this exact Stage M1
+implementation. Only then run the one registered generated/mock qualification.
+Stage M2 remains closed until that result and a separate proof-only closeout
+are remotely green.
 
 ## Previous Gate: MARC2-VR39P Aggregate R2 Closeout
 

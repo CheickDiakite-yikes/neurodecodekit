@@ -50,6 +50,7 @@ jobs:
           neurodecode iackd-cue-action --help
           neurodecode score-iackd-cue-action --help
           python -m neurodecodekit.eegmmidb_ug1_cli --help
+          python -m neurodecodekit.eegmmidb_ug1_metadata_cli --help
 
   neuro:
     name: Optional Neuro Readers
@@ -93,3 +94,4 @@ jobs:
           neurodecode iackd-cue-action --help
           neurodecode score-iackd-cue-action --help
           python -m neurodecodekit.eegmmidb_ug1_cli --help
+          python -m neurodecodekit.eegmmidb_ug1_metadata_cli --help

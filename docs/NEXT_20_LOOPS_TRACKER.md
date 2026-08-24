@@ -3937,7 +3937,7 @@ then may the one registered target-free structural discriminator execute.
 
 ### EEGMMIDB-UG1 - Unseen-Participant Generalization
 
-Status: **Stage G remotely closed; Stage M decision pending remote green**
+Status: **Stage G remotely closed; Stage M1 implementation pending remote green**
 
 This lane replaces the consumed VR39P structural branch with a direct
 scientific question. One model will be fitted on S001-S015 and, only after a
@@ -4015,12 +4015,22 @@ maintainer's next exact message was `continue`. The packet-bound decision
 quotes those eight bytes and binds six unchanged request/proof artifacts
 totaling 29,320 bytes.
 
-Current gate: commit, push, and remotely green the exact authorization
-decision. Only afterward may generated/mock Stage M1 implementation and its
-one qualification begin. Stage M2 network metadata remains blocked until the
-exact Stage M1 implementation and a separate proof-only closeout are remotely
-green. No EDF body, local real path, acquisition, target, model, score,
-release, or claim operation is authorized.
+Authorization decision `021bf8a1f2f12a8e7388a561535328cd0dc0dba2`
+passed Base job `97385926125`, Optional job `97385926444`, and CI
+`32712235191`. Stage M1 now has an isolated dependency-light client with the
+exact 36-URL allowlist, strict `HEAD` request/response semantics, TLS-verified
+no-redirect live transport held behind the proof barrier, canonical target-
+free inventory and receipt output, atomic no-clobber publication, and a frozen
+20-case generated matrix. A new isolated metadata sidecar has plan and
+generated qualification commands only; there is no live execute command, and
+the proof-bound Stage G sidecar remains byte-identical.
+
+Current gate: commit, push, and remotely green the exact Stage M1
+implementation. Then run its one registered generated/mock qualification and
+record the measured result. Stage M2 remains blocked until the result and a
+separate proof-only closeout are remotely green. No real metadata request, EDF
+body, local real path, acquisition, target, model, score, release, or claim
+operation has run.
 
 ### MARC2-VR34P - All-False Exact-Count Private Confirmation Request Prepared
 

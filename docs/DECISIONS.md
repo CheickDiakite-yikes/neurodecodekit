@@ -13031,3 +13031,31 @@ Boundary decision: decision recording performs no implementation,
 qualification, network, URL/path, metadata, response-body, EDF, payload,
 target, fit, inference, score, release, or claim operation. Authorization is
 not EEG evidence or unseen-person generalization.
+
+## 0459 - Implement Stage M1 Behind a Separate Green Barrier
+
+Proof decision: authorization commit
+`021bf8a1f2f12a8e7388a561535328cd0dc0dba2` passed CI `32712235191`, Base
+Python job `97385926125`, and Optional Neuro Readers job `97385926444` before
+implementation.
+
+Isolation decision: add a new dependency-light metadata module and a new
+metadata-specific sidecar CLI. Keep the proof-bound Stage G acquisition
+module, its sidecar CLI, and the central `neurodecode` CLI unchanged. Expose no
+live execute command.
+
+Transport decision: freeze the 36 exact HTTPS URLs, `HEAD` only, identity
+encoding, direct status `200`, unchanged final URL, zero redirects, retries,
+fallback, or response-body reads, required canonical `Content-Length`, and
+strict optional validators. Preserve absent optional fields as unavailable.
+
+Qualification decision: freeze 20 generated/mock cases covering two success
+forms, exact replay, transport and header mutations, body-byte refusal,
+ordering/completeness, declared-size cap, output collision, and thread/disk/
+RSS/wall limits. Commit and green the exact implementation before consuming
+the one registered aggregate qualification.
+
+Boundary decision: the code includes a TLS-verified standard-library opener
+for later proof-gated use, but no network call or real path access occurs now.
+Stage M2, EDF content, acquisition, targets, models, scoring, release, and all
+scientific claims remain closed.

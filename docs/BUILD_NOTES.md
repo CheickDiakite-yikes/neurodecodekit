@@ -15000,3 +15000,28 @@ fresh packet-bound maintainer words.
 
 Immediate gate: commit, push, and remotely green this exact decision. Stage M1
 and every real operation remain closed until that barrier passes.
+
+### EEGMMIDB-UG1 Stage M1 metadata client implemented
+
+- Authorization decision `021bf8a1f2f12a8e7388a561535328cd0dc0dba2`
+  passed Base job `97385926125`, Optional job `97385926444`, and CI
+  `32712235191` before implementation.
+- Added one isolated standard-library metadata module without modifying the
+  proof-bound Stage G module or dependency-free base requirements.
+- Frozen exact HTTPS host/path allowlisting, `HEAD` requests, direct status
+  `200`, zero redirects/retries/body reads, canonical `Content-Length`, strict
+  optional validators, and a 256 MiB combined declared-size cap.
+- Added target-free canonical inventory and human receipt serializers, atomic
+  no-replace publication, collision refusal, one-thread and resource checks,
+  deterministic response fixtures, and 20 adversarial qualification cases.
+- Added a new isolated metadata sidecar CLI with `plan` and `qualify`; the
+  proof-bound Stage G sidecar remains byte-identical and no live metadata
+  command exists.
+- Twenty-nine focused implementation, component, and decision tests pass.
+  Ruff and dry metadata-plan CLI checks pass.
+- Registered qualification, network, real URL/path, body, EDF, payload,
+  target, model, training, score, release, and claim counters remain zero.
+
+Immediate gate: commit, push, and remotely green the exact implementation.
+Then run one registered generated/mock Stage M1 qualification. Stage M2 remains
+closed pending the measured result and a separate green proof-only closeout.

@@ -140,12 +140,25 @@ matching test. They quote the exact eight UTF-8 bytes and bind six unchanged
 packet/proof artifacts totaling 29,320 bytes. The decision has delayed effect
 until its exact commit is pushed and both required CI jobs pass.
 
-Immediate gate: verify, commit, push, and remotely green the authorization
-decision. Only afterward implement and run the one generated/mock Stage M1
-qualification. Stage M2 network metadata remains blocked until the exact M1
-implementation/result and a separate proof-only closeout are remotely green.
-Do not access any real URL, local real-data path, EDF content, source/fresh
-payload, target, model, score, release, device, or claim surface.
+Exact authorization decision `021bf8a1f2f12a8e7388a561535328cd0dc0dba2`
+passed Base job `97385926125`, Optional Neuro Readers job `97385926444`, and
+CI `32712235191` before implementation.
+
+Read the Stage M1 implementation document, machine implementation record, new
+isolated metadata module, sidecar CLI, and matching tests. The implementation
+freezes exact 36-URL `HEAD` semantics, TLS verification, zero redirects,
+retries, or body reads, strict size/validator parsing, canonical target-free
+inventory and receipt output, atomic no-clobber publication, resource caps,
+and 20 generated cases. A new isolated metadata CLI exposes only `plan` and
+`qualify`; no live execute command exists, and the proof-bound Stage G sidecar
+remains byte-identical.
+
+Immediate gate: verify, commit, push, and remotely green the exact Stage M1
+implementation. Only then run the one registered generated/mock qualification.
+Stage M2 remains blocked until that result and a separate proof-only closeout
+are remotely green. Do not access any real URL, local real-data path, EDF
+content, source/fresh payload, target, model, score, release, device, or claim
+surface.
 
 ### Historical VR39P path
 
