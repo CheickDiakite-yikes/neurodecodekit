@@ -101,11 +101,15 @@ refusals, 12 named critical witness classes, exact replay, zero source
 mutation, and zero retained output. Runtime was 12.816678500035778 seconds at
 67,158,016-byte peak RSS. Qualification may not be repeated.
 
-Immediate gate: commit, push, and green this exact Stage 1 implementation and
-result. Then add a separate proof-only closeout binding the exact green commit,
-push it, and require both remote jobs green without repeating qualification or
-touching private state. Stage 2 private work remains closed until both barriers
-are green. Do not touch
+Exact Stage 1 `4d48cb38822e3e5a819ce1fef0188069ca6bd9ac` passed Base
+Python job `97310285688`, Optional Neuro Readers job `97310285728`, and CI
+`32685719113`. A separate proof-only closeout now binds that exact green
+implementation, its immutable preproof registries, and all eight implementation
+Git blobs. It repeats no qualification and performs zero private operation.
+
+Immediate gate: commit, push, and green the exact proof-only closeout. Then add
+and separately green its activation record. Stage 2 private work remains closed
+until both proof transitions are remotely green. Do not touch
 `.codex_work`, any private/consumed source,
 archive member, neural payload, target, model, score, FW2/CIL1, device,
 release, or claim surface.

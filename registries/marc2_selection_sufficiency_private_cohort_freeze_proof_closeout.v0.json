@@ -1,0 +1,67 @@
+{
+  "schema_name": "neurodecodekit.marc2_selection_sufficiency_private_cohort_freeze_proof_closeout",
+  "schema_version": "0.1.0",
+  "lane_id": "MARC2-VR39P",
+  "recorded_at_local": "2026-08-23",
+  "status": "proof_only_closeout_remote_proof_pending",
+  "implementation_commit": "4d48cb38822e3e5a819ce1fef0188069ca6bd9ac",
+  "implementation_green_proof": {
+    "CI_run_id": 32685719113,
+    "base_job_id": 97310285688,
+    "optional_neuro_job_id": 97310285728,
+    "both_required_jobs_green": true
+  },
+  "qualification_route": "MARC2VR39P-G1",
+  "qualification_repeated": false,
+  "private_operations": 0,
+  "green_proof": null,
+  "preproof_snapshots": {
+    "implementation_registry": {
+      "bytes": 5769,
+      "sha256": "87c95602cdcb6b2a2ae7be9f41566c5c2909385d7d85b9375ccc6788be4b2e10",
+      "git_blob": "a64e5d993765a475c3bae7a6a8b92f9faadc258c"
+    },
+    "result_registry": {
+      "bytes": 6000,
+      "sha256": "de57b975f7f3c676a0d035841ab2137225df1db3f69730553648f7fa33a6c69f",
+      "git_blob": "0f4a98ca6a3cd7a08eec6ffc603fd66466c2260e"
+    }
+  },
+  "implementation_artifact_set_sha256": "d0d56d0ceac463768606064efde34e7a06d960eb2a07f0e615c8088adb957e70",
+  "implementation_artifact_git_blobs": {
+    "module": "08f51f776859ec30bf8b55017cf112d4314cdc77",
+    "behavior_test": "95b661d3e266a95e40ca95047d5ded34193d793c",
+    "surface_test": "89a8375cc60015e2b606c4799f521a6980898a4f",
+    "implementation_test": "fb728126dc82719d75b07ea1e7a851fd240a8efe",
+    "implementation_document": "5fda357f26d87bf2f42cfb1fb0040824d7ab442f",
+    "result_registry": "0f4a98ca6a3cd7a08eec6ffc603fd66466c2260e",
+    "result_test": "28325f7c984df6823354c679d3768b354044bc12",
+    "authorization_decision": "a3ce4149eaabd2bc867815bd2527a2deee62a4fb"
+  },
+  "delayed_effect": {
+    "proof_closeout_commit_push_and_both_jobs_green_required": true,
+    "separate_activation_record_required": true,
+    "private_stage_eligible_now": false,
+    "private_path_may_be_touched_now": false
+  },
+  "operation_counters": {
+    "qualification_invocations": 0,
+    "repository_dot_codex_work_operations": 0,
+    "private_structural_source_stats_resolves_hashes_opens_reads_or_parses": 0,
+    "consumed_private_lane_path_or_output_operations": 0,
+    "archive_header_or_member_payload_operations": 0,
+    "signal_event_channel_geometry_target_or_label_operations": 0,
+    "derivative_cache_feature_split_or_NeuroToken_operations": 0,
+    "training_inference_prediction_freeze_delivery_or_score_operations": 0,
+    "network_download_provider_or_language_model_operations": 0,
+    "stream_device_or_hardware_operations": 0,
+    "MARC2_FW2_or_CIL1_operations": 0,
+    "retry_rerun_resume_repair_fallback_or_substitution_operations": 0,
+    "release_publication_or_scientific_claim_upgrades": 0,
+    "operations_on_other_projects": 0
+  },
+  "claim_boundary": {
+    "engineering": "exact generated-qualified terminal cohort-freeze wrapper is bound to remotely green implementation proof",
+    "scientific": "none"
+  }
+}

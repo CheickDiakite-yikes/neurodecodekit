@@ -1,11 +1,11 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate gate (2026-08-23):** decision `dbde5f8` passed CI `32681510484`.
-> VR39P Stage 1 then passed its sole 168-path generated qualification with
-> exact R1/R2 `64/104`, 268 refusals, 12 named critical classes, zero mutation,
-> and zero retention. Commit, push, and green this implementation/result, then
-> separately green its proof-only closeout. Private, archive, neural, target,
-> model, score, FW2/CIL1, and claim surfaces remain closed.
+> **Immediate gate (2026-08-23):** exact VR39P Stage 1 `4d48cb3` passed Base
+> job `97310285688`, Optional job `97310285728`, and CI `32685719113` after its
+> sole 168-path generated qualification. Commit, push, and green the separate
+> proof-only closeout, then record and separately green its activation. Private,
+> archive, neural, target, model, score, FW2/CIL1, and claim surfaces remain
+> closed.
 
 > **Immediate update (2026-08-23):** exact VR32P proof closeout `5aec8a1`
 > passed Base job `97177262321`, Optional job `97177262387`, and CI

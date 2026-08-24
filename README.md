@@ -42,8 +42,8 @@ separately. The full evidence definitions and experiment order live in
 | Live end-to-end decoding | Not established | A real stream must be causally decoded without an event-onset oracle, with measured capture-to-output latency, dropouts, buffering, and abstention |
 | EEG beyond eyes and other peripheral signals | Not established | On identical held-out trials, `P+E` must improve participant-macro log loss over `P`, `P+D(E)`, timing-only, and no-signal conditions |
 
-The immediate path is the remotely green VR39P Stage 1 implementation, its
-separate proof-only closeout, one target-free cohort attempt, bounded FW2
+The immediate path is the remotely green VR39P Stage 1 implementation, the
+pending separate proof-only closeout and activation, one target-free cohort attempt, bounded FW2
 member qualification, one
 peripheral-adjusted CIL1 neural experiment, and then a strict unseen-person
 arm. Language and live work remain separate evidence tracks so a good movement
@@ -60,10 +60,10 @@ and [machine proof](registries/marc2_selection_sufficiency_private_cohort_freeze
 passed both jobs in CI `32677755105`. The packet-specific decision `dbde5f8`
 then passed both jobs in CI `32681510484`. Stage 1 passed its sole 168-path
 generated qualification with exact R1/R2 counts `64/104`, 268 refusals, zero
-retention, and zero private operation. Commit and green this exact
-implementation, then green a separate proof-only closeout before the one-shot
-private result may freeze a privacy-preserving target-free cohort or stop this
-lane.
+retention, and zero private operation. Exact implementation `4d48cb3` then
+passed both jobs in CI `32685719113`. The separate proof-only closeout must now
+be committed, remotely green, and activated before the one-shot private result
+may freeze a privacy-preserving target-free cohort or stop this lane.
 
 ## Results At A Glance
 
@@ -80,7 +80,7 @@ lane.
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |
 | IACKD source compatibility | H1 found 96 29-row and 32 31-row headers. H2 then parsed all 316 public BIDS metadata bodies and confirmed one 26-channel predictive EEG core, 1024 Hz sampling, average reference, and complete central/occipital geometry in all 30 groups | The exact-36 reader assumption was wrong, but H2 still routed `IACKDR-R1`: HEOG, VEOG, and Trigger are source-typed `MISC`, exposing a frozen control-taxonomy bug before any EEG sample, event, target, model, or score was accessed |
 | MARC-1 source eligibility | The Freewill central-directory inventory passed without payload, but the one source-aware Wrist metadata check later routed `MARC1SAL-R2` with zero selected subjects and zero payload bytes | The Wrist branch is consumed and blocked before acquisition; the private source route remains unavailable and is not inferred or repaired |
-| MARC-2 confound triangulation | VR39P Stage 1 passed one 168-path generated qualification: 168 VR33A calls, 84 VR38A calls, exact R1/R2 `64/104`, 64 temporary cohort writes, 268 refusals across 12 named critical classes, 12.82 s runtime, 67.2 MB peak RSS, and zero retained output | The terminal target-free state machine is qualified, but no private cohort exists yet. Stage 2 remains closed until the implementation and a separate proof-only closeout are remotely green; no neural payload, target, model, prediction, score, or neural advantage has been established |
+| MARC-2 confound triangulation | VR39P Stage 1 passed one 168-path generated qualification: 168 VR33A calls, 84 VR38A calls, exact R1/R2 `64/104`, 64 temporary cohort writes, 268 refusals across 12 named critical classes, 12.82 s runtime, 67.2 MB peak RSS, and zero retained output; exact implementation `4d48cb3` passed CI `32685719113` | The terminal target-free state machine is qualified and remotely green, but no private cohort exists yet. Stage 2 remains closed until its separate proof-only closeout and activation are remotely green; no neural payload, target, model, prediction, score, or neural advantage has been established |
 | Continuous interfaces | NeuroTokenCache preserves 553 valid synthetic frames; causal replay is exact across 5/5 schedules with zero right context | Cache and streaming contracts exist, but they do not establish useful neural representations or text decoding |
 | Full-path causality gate | Loop 25 v1 passed a dedicated causal anti-alias audit, 65,537 response points, 23 alias probes, 168 schedule checks, 240 resume checks, and 72 future-mutation controls across 24 target-free items | The exact 1000-to-100 Hz path is mechanically causal with zero right context; this is synthetic mechanics evidence, not proof that neural information survives |
 | Consumed S21 validation | The registered 2,908-parameter candidate reached macro CER `0.938177`; the train-only no-signal prior reached `0.751235`, so the candidate was worse by `0.186942` | Loop 26 is parked after one consumed six-target event; this is a clear negative result, not neural advantage |

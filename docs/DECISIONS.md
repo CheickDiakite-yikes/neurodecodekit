@@ -12748,3 +12748,26 @@ network, FW2/CIL1, release, other-project, and scientific-claim counter is
 zero. Commit, push, and green this implementation/result, then separately
 green a proof-only closeout before any one-shot private execution. No real
 cohort or scientific claim exists yet.
+
+## 0448 - Bind VR39P Green Implementation in a Delayed Closeout
+
+Proof decision: exact Stage 1
+`4d48cb38822e3e5a819ce1fef0188069ca6bd9ac` passed CI `32685719113`, Base
+Python job `97310285688`, and Optional Neuro Readers job `97310285728`.
+
+Binding decision: freeze the 5,769-byte preproof implementation registry, the
+6,000-byte result registry, their hashes and Git blobs, the canonical
+eight-artifact implementation-set hash, and the eight exact implementation
+Git blobs. Do not change or requalify the consumed Stage 1 implementation.
+
+Transition decision: record the closeout as remote-proof pending with no green
+proof and keep the private executor closed. After this closeout's exact commit
+is pushed and both CI jobs pass, a separate activation record may bind that
+proof. The activation must itself be committed, pushed, and remotely green
+before any readiness or private-path access.
+
+Boundary decision: this proof transition repeats no qualification and performs
+zero `.codex_work`, private-source, archive, neural, target, model, prediction,
+score, network, FW2/CIL1, device, release, other-project, or claim operation.
+It adds engineering proof only and establishes no real cohort or scientific
+result.

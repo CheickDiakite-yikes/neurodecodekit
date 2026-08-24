@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: MARC2-VR39P Stage 1 Remote Proof
+## Current Gate: MARC2-VR39P Proof-Only Closeout
 
 VR38A proof-only closeout `a599adf3e0320ad420e1c2f5647a0432e645c246`
 passed Base job `97278761357`, Optional job `97278761303`, and CI
@@ -55,11 +55,16 @@ cohort preserves sessions 1/2, runs 1-3, exact split roles, source rows,
 distinct raw/canonical source hashes, and compressed/uncompressed storage
 feasibility under the 10 GiB project ceiling.
 
-Immediate gate: commit, push, and green the exact Stage 1 implementation and
-recorded result. Then create, commit, push, and green a separate proof-only
-closeout without repeating qualification or touching private state. Private
-Stage 2 remains blocked until both barriers are green. Private, archive,
-neural, target, model, score, FW2/CIL1, and claim work remain closed.
+Exact Stage 1 `4d48cb38822e3e5a819ce1fef0188069ca6bd9ac` passed Base job
+`97310285688`, Optional job `97310285728`, and CI `32685719113`. The separate
+proof-only closeout now binds that immutable implementation and all eight exact
+implementation Git blobs. It repeats no qualification, touches no private
+state, and remains ineffective before its own remote green proof.
+
+Immediate gate: commit, push, and green the exact proof-only closeout, then
+record and separately green its activation. Private Stage 2 remains blocked
+until both proof transitions are green. Private, archive, neural, target,
+model, score, FW2/CIL1, and claim work remain closed.
 
 ## Recent Structural History
 
