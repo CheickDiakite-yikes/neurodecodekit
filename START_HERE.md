@@ -61,10 +61,15 @@ proof-only closeout now binds that immutable implementation and all eight exact
 implementation Git blobs. It repeats no qualification, touches no private
 state, and remains ineffective before its own remote green proof.
 
-Immediate gate: commit, push, and green the exact proof-only closeout, then
-record and separately green its activation. Private Stage 2 remains blocked
-until both proof transitions are green. Private, archive, neural, target,
-model, score, FW2/CIL1, and claim work remain closed.
+Exact proof-only closeout `cec5fe87a6ddc122366e0db32e2c5147bae47c81`
+passed Base job `97313196679`, Optional job `97313196627`, and CI
+`32686765350`. Its activation transition now binds that exact green proof but
+is ineffective until its own commit is pushed and both jobs pass.
+
+Immediate gate: commit, push, and green the exact activation transition.
+Private Stage 2 remains blocked until that final proof barrier is green.
+Private, archive, neural, target, model, score, FW2/CIL1, and claim work remain
+closed meanwhile.
 
 ## Recent Structural History
 

@@ -107,9 +107,13 @@ Python job `97310285688`, Optional Neuro Readers job `97310285728`, and CI
 implementation, its immutable preproof registries, and all eight implementation
 Git blobs. It repeats no qualification and performs zero private operation.
 
-Immediate gate: commit, push, and green the exact proof-only closeout. Then add
-and separately green its activation record. Stage 2 private work remains closed
-until both proof transitions are remotely green. Do not touch
+Exact proof-only closeout `cec5fe87a6ddc122366e0db32e2c5147bae47c81`
+passed Base Python job `97313196679`, Optional Neuro Readers job `97313196627`,
+and CI `32686765350`. Its activation transition now binds that green proof but
+has delayed effect until its own commit is pushed and both required jobs pass.
+
+Immediate gate: commit, push, and green the exact activation transition. Stage
+2 private work remains closed until that final proof barrier is green. Do not touch
 `.codex_work`, any private/consumed source,
 archive member, neural payload, target, model, score, FW2/CIL1, device,
 release, or claim surface.

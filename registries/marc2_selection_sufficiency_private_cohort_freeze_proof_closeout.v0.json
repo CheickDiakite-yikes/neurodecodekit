@@ -3,7 +3,7 @@
   "schema_version": "0.1.0",
   "lane_id": "MARC2-VR39P",
   "recorded_at_local": "2026-08-23",
-  "status": "proof_only_closeout_remote_proof_pending",
+  "status": "remotely_green_proof_only_closeout_private_stage_eligible",
   "implementation_commit": "4d48cb38822e3e5a819ce1fef0188069ca6bd9ac",
   "implementation_green_proof": {
     "CI_run_id": 32685719113,
@@ -14,7 +14,13 @@
   "qualification_route": "MARC2VR39P-G1",
   "qualification_repeated": false,
   "private_operations": 0,
-  "green_proof": null,
+  "green_proof": {
+    "commit": "cec5fe87a6ddc122366e0db32e2c5147bae47c81",
+    "CI_run_id": 32686765350,
+    "base_job_id": 97313196679,
+    "optional_neuro_job_id": 97313196627,
+    "both_required_jobs_green": true
+  },
   "preproof_snapshots": {
     "implementation_registry": {
       "bytes": 5769,
@@ -40,9 +46,11 @@
   },
   "delayed_effect": {
     "proof_closeout_commit_push_and_both_jobs_green_required": true,
-    "separate_activation_record_required": true,
-    "private_stage_eligible_now": false,
-    "private_path_may_be_touched_now": false
+    "proof_closeout_is_remotely_green": true,
+    "activation_record_is_this_transition": true,
+    "activation_transition_commit_push_and_both_jobs_green_required": true,
+    "private_stage_eligible_after_activation_transition_is_remotely_green": true,
+    "private_path_may_be_touched_before_activation_transition_is_remotely_green": false
   },
   "operation_counters": {
     "qualification_invocations": 0,

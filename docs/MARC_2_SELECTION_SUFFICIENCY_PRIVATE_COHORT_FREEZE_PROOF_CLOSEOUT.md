@@ -4,9 +4,9 @@ Date: 2026-08-23
 
 Lane: `MARC2-VR39P`
 
-Status: **Proof-only closeout recorded; ineffective until this exact closeout
-commit is pushed, both required CI jobs are green, and that green proof is
-recorded in a separate activation commit**
+Status: **Proof-only closeout remotely green; activation recorded but
+ineffective until the activation transition's exact commit is pushed and both
+required CI jobs are green**
 
 ## Remote Implementation Proof
 
@@ -37,18 +37,20 @@ create a real cohort, or access an archive member, neural signal, event,
 channel, geometry, target, model, prediction, or score. Every such operation
 counter remains zero.
 
+## Remote Closeout Proof
+
+Exact proof-only closeout
+`cec5fe87a6ddc122366e0db32e2c5147bae47c81` passed CI `32686765350`, Base
+Python job `97313196679`, and Optional Neuro Readers job `97313196627`.
+Both required jobs are green.
+
 ## Delayed Effect
 
-The closeout is deliberately fail-closed. Its machine record remains in
-`proof_only_closeout_remote_proof_pending` with no green proof. The private
-executor therefore refuses before readiness or private-path access.
-
-After this exact closeout commit is pushed and both CI jobs are green, a
-separate proof-only activation record may bind that remote result. Only after
-the activation record is itself committed, pushed, and remotely green may the
-existing packet-bound decision permit one registered Stage 2 invocation. No
-qualification retry, private preinspection, fallback, or substitution is
-allowed during either proof transition.
+This activation transition binds that exact green closeout but is itself
+ineffective until its exact commit is pushed and both CI jobs are green. Only
+after that final remote barrier may the existing packet-bound decision permit
+one registered Stage 2 invocation. No qualification retry, private
+preinspection, fallback, or substitution is allowed during the transition.
 
 Engineering capability added: the generated-qualified terminal cohort-freeze
 wrapper is now bound to its exact remotely green Stage 1 implementation and

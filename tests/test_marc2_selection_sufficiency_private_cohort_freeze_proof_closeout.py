@@ -78,18 +78,30 @@ class SelectionSufficiencyPrivateCohortFreezeProofCloseoutTests(unittest.TestCas
                     git_blob,
                 )
 
-    def test_closeout_is_delayed_and_executor_remains_closed(self):
+    def test_closeout_green_proof_and_activation_are_exact(self):
         self.assertEqual(
-            self.closeout["status"], "proof_only_closeout_remote_proof_pending"
+            self.closeout["status"],
+            "remotely_green_proof_only_closeout_private_stage_eligible",
         )
-        self.assertIsNone(self.closeout["green_proof"])
+        green = self.closeout["green_proof"]
+        self.assertEqual(
+            green["commit"], "cec5fe87a6ddc122366e0db32e2c5147bae47c81"
+        )
+        self.assertEqual(green["CI_run_id"], 32_686_765_350)
+        self.assertEqual(green["base_job_id"], 97_313_196_679)
+        self.assertEqual(green["optional_neuro_job_id"], 97_313_196_627)
+        self.assertTrue(green["both_required_jobs_green"])
         self.assertFalse(self.closeout["qualification_repeated"])
         self.assertEqual(self.closeout["private_operations"], 0)
-        self.assertFalse(self.closeout["delayed_effect"]["private_stage_eligible_now"])
-        with self.assertRaises(
-            wrapper.SelectionSufficiencyPrivateCohortFreezeRefusal
-        ):
-            wrapper._require_green_implementation(ROOT)
+        self.assertFalse(
+            self.closeout["delayed_effect"][
+                "private_path_may_be_touched_before_activation_transition_is_remotely_green"
+            ]
+        )
+        self.assertEqual(
+            wrapper._require_green_implementation(ROOT),
+            "4d48cb38822e3e5a819ce1fef0188069ca6bd9ac",
+        )
 
     def test_closeout_did_not_repeat_or_touch_private_state(self):
         self.assertEqual(self.closeout["qualification_route"], "MARC2VR39P-G1")
@@ -99,9 +111,9 @@ class SelectionSufficiencyPrivateCohortFreezeProofCloseoutTests(unittest.TestCas
 
     def test_human_closeout_preserves_claim_boundary(self):
         text = DOC.read_text(encoding="utf-8")
-        self.assertIn("ineffective until this exact closeout", text)
+        self.assertIn("ineffective until the activation transition", text)
         self.assertIn("does not repeat the registered generated qualification", text)
-        self.assertIn("separate proof-only activation record", text)
+        self.assertIn("Exact proof-only closeout", text)
         self.assertIn("Engineering capability added", text)
         self.assertIn("Scientific claim not established", text)
 

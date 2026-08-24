@@ -2,10 +2,11 @@
 
 > **Immediate gate (2026-08-23):** exact VR39P Stage 1 `4d48cb3` passed Base
 > job `97310285688`, Optional job `97310285728`, and CI `32685719113` after its
-> sole 168-path generated qualification. Commit, push, and green the separate
-> proof-only closeout, then record and separately green its activation. Private,
-> archive, neural, target, model, score, FW2/CIL1, and claim surfaces remain
-> closed.
+> sole 168-path generated qualification. Proof-only closeout `cec5fe8` then
+> passed Base `97313196679`, Optional `97313196627`, and CI `32686765350`.
+> Commit, push, and green its exact activation transition before the one-shot
+> Stage 2 invocation. Private, archive, neural, target, model, score, FW2/CIL1,
+> and claim surfaces remain closed meanwhile.
 
 > **Immediate update (2026-08-23):** exact VR32P proof closeout `5aec8a1`
 > passed Base job `97177262321`, Optional job `97177262387`, and CI
