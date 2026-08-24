@@ -3937,7 +3937,7 @@ then may the one registered target-free structural discriminator execute.
 
 ### EEGMMIDB-UG1 - Unseen-Participant Generalization
 
-Status: **Stage G remotely closed; Stage M request green; proof closeout pending**
+Status: **Stage G remotely closed; Stage M decision pending remote green**
 
 This lane replaces the consumed VR39P structural branch with a direct
 scientific question. One model will be fitted on S001-S015 and, only after a
@@ -4008,10 +4008,19 @@ passed Base job `97376524550`, Optional job `97376524804`, and CI
 `32709110804`. The proof-only closeout binds its three exact request artifacts
 totaling 20,189 bytes without changing scope or performing an operation.
 
-Current gate: commit, push, and remotely green the proof-only closeout. Only
-then identify `EEGMMIDB-UG1-M` as the sole active Tier C packet. No
-implementation, network, URL/path, data, release, or claim operation is
-authorized now.
+Proof closeout `e9c11da94730e790aace3acc818e029abcbdc165` passed Base
+job `97379680508`, Optional job `97379680751`, and CI `32710175884`.
+`EEGMMIDB-UG1-M` was then named as the sole active Tier C packet and the
+maintainer's next exact message was `continue`. The packet-bound decision
+quotes those eight bytes and binds six unchanged request/proof artifacts
+totaling 29,320 bytes.
+
+Current gate: commit, push, and remotely green the exact authorization
+decision. Only afterward may generated/mock Stage M1 implementation and its
+one qualification begin. Stage M2 network metadata remains blocked until the
+exact Stage M1 implementation and a separate proof-only closeout are remotely
+green. No EDF body, local real path, acquisition, target, model, score,
+release, or claim operation is authorized.
 
 ### MARC2-VR34P - All-False Exact-Count Private Confirmation Request Prepared
 

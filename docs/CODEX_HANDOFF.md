@@ -1,5 +1,18 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current EEGMMIDB-UG1 Stage M decision gate, 2026-08-24: proof closeout
+> `e9c11da94730e790aace3acc818e029abcbdc165` passed Base job
+> `97379680508`, Optional job `97379680751`, and CI `32710175884`.
+> `EEGMMIDB-UG1-M` was then identified as the sole active Tier C packet and
+> the maintainer's next exact message was `continue`. Read the new human and
+> machine authorization decision and matching test. They bind those exact
+> eight UTF-8 bytes plus six unchanged request/proof artifacts totaling
+> 29,320 bytes. Immediate gate: verify, commit, push, and green this decision.
+> Only afterward may generated/mock Stage M1 begin. Stage M2 network metadata
+> remains blocked until M1 and its proof-only closeout are separately green.
+> No real URL/path, EDF content, acquisition, target, model, score, release,
+> or claim surface is open now.
+
 > Current EEGMMIDB-UG1 Stage M proof gate, 2026-08-24: exact all-false request
 > `e2647d609a99997ac417dac5d8efb2dad61863a0` passed Base job
 > `97376524550`, Optional job `97376524804`, and CI `32709110804`. The

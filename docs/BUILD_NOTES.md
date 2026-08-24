@@ -14977,3 +14977,26 @@ add and separately green its proof-only closeout. It authorizes no operation.
 Immediate gate: commit, push, and remotely green this proof-only closeout.
 Only then identify `EEGMMIDB-UG1-M` as the sole active Tier C packet and seek
 fresh packet-bound maintainer words.
+
+### EEGMMIDB-UG1 Stage M packet-bound decision recorded
+
+- Proof-only closeout `e9c11da94730e790aace3acc818e029abcbdc165`
+  passed Base Python job `97379680508`, Optional Neuro Readers job
+  `97379680751`, and CI `32710175884`.
+- After `EEGMMIDB-UG1-M` was named as the sole active Tier C packet, the
+  maintainer's next exact message was `continue`.
+- Added a human and machine decision that preserve the actual eight UTF-8
+  bytes and SHA-256
+  `e256ee8e7aff6957a781d8328f0f68e26996564c81fa458da59fbca2305138ad`.
+- Bound six unchanged packet and proof artifacts totaling 29,320 bytes by
+  byte size, SHA-256, and Git blob.
+- Preserved the exact two-stage order: generated/mock Stage M1 only after this
+  decision is remotely green; one body-blind Stage M2 invocation only after
+  the exact M1 implementation/result and proof-only closeout are remotely
+  green.
+- Decision recording performed zero implementation, qualification, network,
+  URL/path, metadata, body, EDF, payload, target, model, score, release, or
+  claim operation.
+
+Immediate gate: commit, push, and remotely green this exact decision. Stage M1
+and every real operation remain closed until that barrier passes.

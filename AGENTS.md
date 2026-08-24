@@ -130,12 +130,22 @@ canonical artifact-set SHA-256
 `9b1c7e1e3baeece32cc26a238130af746d737d908c2dfe286da581fb37be729c`
 and perform only tracked-artifact and Git-proof reads.
 
-Immediate gate: verify, commit, push, and remotely green the proof-only
-closeout. Only then identify `EEGMMIDB-UG1-M` as the sole active Tier C packet
-and require fresh packet-bound maintainer words. No Stage M implementation,
-generated qualification, network request, URL/path access, EDF, source/fresh
-acquisition, target, model, score, release, device, or claim operation is
-authorized now.
+Exact proof closeout `e9c11da94730e790aace3acc818e029abcbdc165` passed
+Base job `97379680508`, Optional Neuro Readers job `97379680751`, and CI
+`32710175884`. `EEGMMIDB-UG1-M` was then identified as the sole active Tier C
+packet. The maintainer's next exact message was `continue`.
+
+Read the Stage M authorization decision document, machine decision, and
+matching test. They quote the exact eight UTF-8 bytes and bind six unchanged
+packet/proof artifacts totaling 29,320 bytes. The decision has delayed effect
+until its exact commit is pushed and both required CI jobs pass.
+
+Immediate gate: verify, commit, push, and remotely green the authorization
+decision. Only afterward implement and run the one generated/mock Stage M1
+qualification. Stage M2 network metadata remains blocked until the exact M1
+implementation/result and a separate proof-only closeout are remotely green.
+Do not access any real URL, local real-data path, EDF content, source/fresh
+payload, target, model, score, release, device, or claim surface.
 
 ### Historical VR39P path
 

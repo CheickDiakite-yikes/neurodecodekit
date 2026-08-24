@@ -13003,3 +13003,31 @@ Transition decision: this closeout has no effect until its exact commit is
 pushed and both required CI jobs pass. Only then may `EEGMMIDB-UG1-M` be named
 as the sole active Tier C packet and fresh packet-bound maintainer words be
 accepted. No earlier `continue` authorizes it.
+
+## 0458 - Record the Packet-Bound UG1 Stage M Authorization
+
+Proof decision: exact request-proof closeout
+`e9c11da94730e790aace3acc818e029abcbdc165` passed CI `32710175884`, Base
+Python job `97379680508`, and Optional Neuro Readers job `97379680751` before
+the decision. `EEGMMIDB-UG1-M` was then named as the sole active Tier C packet.
+
+Authorization decision: preserve the maintainer's next exact message,
+`continue`, as eight UTF-8 bytes with SHA-256
+`e256ee8e7aff6957a781d8328f0f68e26996564c81fa458da59fbca2305138ad`.
+Bind only the unchanged green packet by reference; do not fabricate its long
+sentence or infer additional authority.
+
+Binding decision: freeze six packet/proof artifacts totaling 29,320 bytes by
+exact size, SHA-256, and Git blob. Preserve the exact 36 paths, direct
+`HEAD`-only zero-body transport, resource caps, zero retry/rerun policy, and
+scientific claim boundary.
+
+Ordering decision: this decision has no effect until its own commit is pushed
+and both CI jobs pass. Then Stage M1 may implement and run one generated/mock
+qualification. Stage M2 remains blocked until the exact M1 implementation and
+a separate proof-only closeout are remotely green.
+
+Boundary decision: decision recording performs no implementation,
+qualification, network, URL/path, metadata, response-body, EDF, payload,
+target, fit, inference, score, release, or claim operation. Authorization is
+not EEG evidence or unseen-person generalization.

@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: EEGMMIDB-UG1 Stage M Metadata Request
+## Current Gate: EEGMMIDB-UG1 Stage M Authorization Decision
 
 VR39P result closeout `474d49f53e1a46633b99b0ef2ff62b9abebe7a9c`
 passed Base job `97317987437`, Optional job `97317987655`, and CI
@@ -95,10 +95,22 @@ machine proof, and matching test. The proof binds the three unchanged request
 artifacts totaling 20,189 bytes and performs only tracked-artifact and Git
 proof reads.
 
-Immediate gate: commit, push, and remotely green this proof-only closeout.
-Only then identify `EEGMMIDB-UG1-M` as the sole active Tier C packet and ask
-for fresh packet-bound maintainer words. No implementation, network request,
-real URL/path access, or data operation is authorized now.
+Exact proof closeout `e9c11da94730e790aace3acc818e029abcbdc165`
+passed Base job `97379680508`, Optional job `97379680751`, and CI
+`32710175884`. `EEGMMIDB-UG1-M` was then identified as the sole active Tier C
+packet, and the maintainer's next exact message was `continue`.
+
+Read the Stage M authorization decision document, machine decision, and
+matching test. The decision quotes those eight UTF-8 bytes and binds six
+unchanged packet/proof artifacts totaling 29,320 bytes. It authorizes only the
+registered two-stage maximum after its own remote-green proof: generated/mock
+Stage M1 first, then one body-blind Stage M2 metadata invocation only after the
+exact M1 implementation and proof closeout are also remotely green.
+
+Immediate gate: commit, push, and remotely green the exact authorization
+decision. Until both jobs pass, no Stage M implementation, generated
+qualification, network request, real URL/path access, or data operation is
+authorized.
 
 ## Previous Gate: MARC2-VR39P Aggregate R2 Closeout
 
