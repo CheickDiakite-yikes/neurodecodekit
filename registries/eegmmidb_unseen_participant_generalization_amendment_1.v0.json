@@ -1,0 +1,478 @@
+{
+  "schema_name": "neurodecodekit.eegmmidb_unseen_participant_generalization_amendment",
+  "schema_version": "0.1.0",
+  "amendment_id": "EEGMMIDB-UG1-A1",
+  "lane_id": "EEGMMIDB-UG1",
+  "recorded_at_local": "2026-08-24",
+  "status": "frozen_pre_execution_narrowing_effective_only_after_remote_green",
+  "green_authorization_decision": {
+    "commit": "3e173f6dc61b1f6b32dcc9839aa74a67759b9b3f",
+    "CI_run_id": 32694496933,
+    "base_python_job_id": 97333988408,
+    "optional_neuro_job_id": 97333988474,
+    "both_required_jobs_green": true
+  },
+  "audit_basis": {
+    "independent_target_free_reviews": 2,
+    "completed_before_any_stage_G_implementation": true,
+    "real_retained_ignored_or_consumed_data_accessed": false,
+    "EDF_signal_annotation_event_target_or_label_accessed": false,
+    "model_fit_inference_prediction_or_score_observed": false,
+    "result_motivated_change": false,
+    "original_green_artifact_modified": false
+  },
+  "bound_pre_amendment_artifacts": [
+    {
+      "path": "docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_RESEARCH.md",
+      "bytes": 8749,
+      "sha256": "59c297d6006a8e0a41500888fc6916667b9be4c94b9bee4e4d17eed7b9c65238",
+      "git_blob": "06e248a524cd7bdc11d7eef0a63926c8a7b33bad"
+    },
+    {
+      "path": "registries/eegmmidb_unseen_participant_generalization_research.v0.json",
+      "bytes": 4890,
+      "sha256": "67d0d1ee100d795e678c5592ac793d1906d07dfd6b8ee55246612816c3f8b2cc",
+      "git_blob": "eaecd779471902e3938737cc0e34225d8a223ea7"
+    },
+    {
+      "path": "docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_PREREGISTRATION.md",
+      "bytes": 6056,
+      "sha256": "1b278e7a77db46f5fdc935e019a09c20be6b2fbf9bb957682d227ab30b1bce02",
+      "git_blob": "7dfd599786eca3a4210f796a26f2c615f1750faf"
+    },
+    {
+      "path": "registries/eegmmidb_unseen_participant_generalization_contract.v0.json",
+      "bytes": 6350,
+      "sha256": "1df7f4f139809d94a6135d979e8cd37e1ece9b87d001b12bcefd037c63b8ac37",
+      "git_blob": "8d309854a4cb7ad2663f1b05efad2c9d21c40b84"
+    },
+    {
+      "path": "docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_AUTHORIZATION_PACKET.md",
+      "bytes": 8070,
+      "sha256": "ddad6419fb8c00b3653b415c9a644bbd5b27278ce5c10d0de85131604df0dd6b",
+      "git_blob": "c14a23b178add0ad150af866d06851c8d9be97f0"
+    },
+    {
+      "path": "registries/eegmmidb_unseen_participant_generalization_authorization_request.v0.json",
+      "bytes": 10090,
+      "sha256": "6675cdab212197e61b3464612e4283a6e499cdb0cb86439d28acbc4c85e1df22",
+      "git_blob": "ab3824c2164ebd4287677e013b0e48d3aa0addd9"
+    },
+    {
+      "path": "tests/test_eegmmidb_unseen_participant_generalization_research.py",
+      "bytes": 3090,
+      "sha256": "cacdcbf3c2925672a6679b0053536cc9e468bf8194a6638fcb384e3951ba674f",
+      "git_blob": "e490d3aa0934d9cd7d41526b9a4fc8161d676283"
+    },
+    {
+      "path": "tests/test_eegmmidb_unseen_participant_generalization_contract.py",
+      "bytes": 3957,
+      "sha256": "ebf45df0501dc28ad9fb9cc036cffd1b65cb498d58b37457846b9bc762bbedc8",
+      "git_blob": "a994e1725220cd1db92c5367544e5e176e3af0b3"
+    },
+    {
+      "path": "tests/test_eegmmidb_unseen_participant_generalization_authorization_request.py",
+      "bytes": 5264,
+      "sha256": "807da3b10fade9e07997f15b9b2563a16da334527d409c9bc23b12b1763dfcc6",
+      "git_blob": "a41c36529ccd05d68c5b7e62821c5226304a4c2c"
+    },
+    {
+      "path": "docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_REQUEST_PROOF_CLOSEOUT.md",
+      "bytes": 2599,
+      "sha256": "a8906739f551fc47c5af7b50029f1850d34844783ae13cae6ba6a972ced155f7",
+      "git_blob": "ed90f78dc5ac32e91f6d71d71303c170e5468ec7"
+    },
+    {
+      "path": "registries/eegmmidb_unseen_participant_generalization_request_proof.v0.json",
+      "bytes": 5343,
+      "sha256": "a86fa721291560f9e19d3a993de70763b74cd907f39d077513f76b5b0711d8a2",
+      "git_blob": "68242a43cb3164ea0d16c2676903874524117629"
+    },
+    {
+      "path": "tests/test_eegmmidb_unseen_participant_generalization_request_proof.py",
+      "bytes": 3465,
+      "sha256": "74fe5e377dd1205367768f612a96bb5e1de5be94f6ba3295885c34a8d2ef10ca",
+      "git_blob": "98183258edca13a27da6c61da5e627781949f0bb"
+    },
+    {
+      "path": "docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_AUTHORIZATION_DECISION.md",
+      "bytes": 9250,
+      "sha256": "ba5c8ae710b5b202267c3c8c5202635b72a7a9d09670864996c1f73638156478",
+      "git_blob": "14b9a12107f9f3356cfd2cf4eaa5b79114d9312f"
+    },
+    {
+      "path": "registries/eegmmidb_unseen_participant_generalization_authorization_decision.v0.json",
+      "bytes": 9968,
+      "sha256": "9ff594953549740aac66bcd6428a10be078869cb8550b9fabd4d4985f085dc18",
+      "git_blob": "058e4ac15527ebb9ecbfc910900760384695d14a"
+    },
+    {
+      "path": "tests/test_eegmmidb_unseen_participant_generalization_authorization_decision.py",
+      "bytes": 7589,
+      "sha256": "c663a672872f005ebfb05f999e41e3e7794ea74d769dffcc5dd065edaae1fadf",
+      "git_blob": "0b37fcb74ff6b59b9e52c8cf4b8cf809192256c9"
+    }
+  ],
+  "bound_pre_amendment_artifact_summary": {
+    "count": 15,
+    "bytes": 94730,
+    "canonical_artifact_set_sha256": "83d531c988886cb793106c0051ec62633b9ba03eeb08dbcdeea90fa3eb5cb529"
+  },
+  "scope_relation": {
+    "participants_runs_files_dataset_and_split_unchanged": true,
+    "model_family_feature_family_and_candidate_count_unchanged": true,
+    "original_resource_caps_remain_maxima": true,
+    "original_routes_and_claim_ceiling_unchanged": true,
+    "success_router_only_tightened": true,
+    "deterministic_implementation_details_only_added": true,
+    "operation_authority_expanded": false,
+    "network_or_payload_authority_expanded": false,
+    "model_fit_or_prediction_caps_expanded": false,
+    "retry_rerun_release_or_claim_authority_expanded": false,
+    "original_green_artifacts_edited": false
+  },
+  "ordered_gate_effect": {
+    "stage_G_available_before_amendment_remote_green": false,
+    "stage_G_available_after_amendment_remote_green_under_green_decision": true,
+    "stage_M_available_before_stage_G_result_remote_green": false,
+    "stage_S_F_T_barriers_unchanged": true,
+    "qualification_invocations_allowed_after_green": 1
+  },
+  "implementation_layout": {
+    "acquisition_module": "src/neurodecodekit/datasets/eegmmidb_unseen_participant_acquisition.py",
+    "experiment_module": "src/neurodecodekit/experiments/eegmmidb_unseen_participant_generalization.py",
+    "scorer_module": "src/neurodecodekit/evaluation/eegmmidb_unseen_participant_score.py",
+    "private_helper_dependency_on_WO9_or_WO9R_allowed": false,
+    "pattern_level_reuse_allowed": true,
+    "base_dependency_change": false,
+    "optional_extra": "classical"
+  },
+  "reader_contract": {
+    "reader_family": "mne.io.read_raw_edf",
+    "regular_no_follow_files_only": true,
+    "sampling_rate_hz_exact": 160,
+    "channel_count_exact": 64,
+    "geometry_available_required": true,
+    "montage_identity": "standard_1005",
+    "allowed_annotation_vocabulary": ["T0", "T1", "T2"],
+    "usable_targets": ["T1", "T2"],
+    "event_sidecar_allowed": false,
+    "resampling_channel_deletion_interpolation_ICA_or_epoch_rejection": false
+  },
+  "channel_contract": {
+    "exact_order": [
+      "FC5", "FC3", "FC1", "FCz", "FC2", "FC4", "FC6", "C5",
+      "C3", "C1", "Cz", "C2", "C4", "C6", "CP5", "CP3",
+      "CP1", "CPz", "CP2", "CP4", "CP6", "Fp1", "Fpz", "Fp2",
+      "AF7", "AF3", "AFz", "AF4", "AF8", "F7", "F5", "F3",
+      "F1", "Fz", "F2", "F4", "F6", "F8", "FT7", "FT8",
+      "T7", "T8", "T9", "T10", "TP7", "TP8", "P7", "P5",
+      "P3", "P1", "Pz", "P2", "P4", "P6", "P8", "PO7",
+      "PO3", "POz", "PO4", "PO8", "O1", "Oz", "O2", "Iz"
+    ],
+    "central_view": [
+      "FC5", "FC3", "FC1", "FC2", "FC4", "FC6", "C5", "C3", "C1",
+      "C2", "C4", "C6", "CP5", "CP3", "CP1", "CP2", "CP4", "CP6"
+    ],
+    "frontal_view": ["Fp1", "Fpz", "Fp2", "AF7", "AF3", "AFz", "AF4", "AF8"],
+    "occipital_view": ["PO7", "PO3", "POz", "PO4", "PO8", "O1", "Oz", "O2"],
+    "common_average_over_all_64_before_subset": true,
+    "whole_head_feature_dimension": 320,
+    "central_feature_dimension": 90,
+    "frontal_feature_dimension": 40,
+    "occipital_feature_dimension": 40
+  },
+  "causal_preprocessing": {
+    "dtype": "float64",
+    "reference": "instantaneous_common_average_all_64_channels",
+    "filter_designer": "scipy.signal.butter",
+    "filter_order_argument": 4,
+    "filter_passband_hz": [0.5, 4.0],
+    "filter_sampling_rate_hz": 160.0,
+    "filter_btype": "bandpass",
+    "filter_output": "sos",
+    "literal_SOS": [
+      [0.00001875282921780679, 0.00003750565843561358, 0.00001875282921780679, 1.0, -1.7945339596255885, 0.8085945084922573],
+      [1.0, 2.0, 1.0, 1.0, -1.8889708277504327, 0.9114114169479023],
+      [1.0, -2.0, 1.0, 1.0, -1.9582001149064585, 0.9587993910467841],
+      [1.0, -2.0, 1.0, 1.0, -1.987472088685655, 0.9878740312226595]
+    ],
+    "application": "scipy.signal.sosfilt_continuous_run_time_order",
+    "initial_state": "exact_zero_per_run",
+    "chunk_state": "carry_zf_only_within_same_run",
+    "run_boundary_reset": true,
+    "full_vs_chunk_absolute_tolerance": 1e-12,
+    "future_impulse_may_change_past_output": false,
+    "sosfiltfilt_reverse_eventwise_or_padded_filtering_allowed": false,
+    "baseline_correction_allowed": false
+  },
+  "feature_contract": {
+    "sample_index_rule": "round_half_to_even_via_python_round_of_onset_plus_offset_times_160",
+    "out_of_bounds_policy": "refuse_without_padding_or_exclusion",
+    "windows": {
+      "primary_and_spatial": {"seconds": [1.0, 3.0], "samples": 320, "bins": 4, "samples_per_bin": 80},
+      "pre_cue": {"seconds": [-2.0, 0.0], "samples": 320, "bins": 4, "samples_per_bin": 80},
+      "early_cue": {"seconds": [0.0, 1.0], "samples": 160, "bins": 4, "samples_per_bin": 40}
+    },
+    "features_per_channel": "four_contiguous_means_plus_one_normalized_linear_slope",
+    "slope_axis": "numpy.linspace_minus_1_plus_1_inclusive_over_window_samples_float64",
+    "slope_formula": "epoch_dot_axis_divided_by_axis_dot_axis",
+    "padding": false
+  },
+  "identity_and_target_firewall": {
+    "participant_identity_available_to": [
+      "split_validator", "completeness_validator", "private_row_attachment", "participant_level_scorer"
+    ],
+    "participant_identity_available_to_predictor_feature_normalizer_model_threshold_or_condition_transform": false,
+    "predictor_inputs": ["ordered_feature_matrix", "frozen_model_or_fixed_control_rule"],
+    "predictor_outputs": "exactly_one_hard_T1_or_T2_prediction_per_input_row",
+    "fresh_target_available_to_predictive_code": false,
+    "fresh_class_count_available_to_predictive_code": false,
+    "target_derived_order_exclusion_normalization_threshold_selection_or_exception": false,
+    "target_swap_must_leave_all_predictive_outputs_logs_shapes_and_exceptions_byte_identical": true,
+    "participant_relabel_must_leave_prediction_values_and_model_parameters_identical": true,
+    "source_fresh_overlap_alias_duplicate_symlink_hardlink_or_forbidden_run_policy": "refuse_before_fit_or_prediction",
+    "canonical_event_order": "cue_sample_then_original_annotation_ordinal",
+    "cue_sample_formula": "python_round_onset_seconds_times_160",
+    "discard_T0_before_usable_event_ordinal": true,
+    "usable_event_ordinals": "zero_through_14",
+    "duplicate_cue_sample_policy": "refuse",
+    "input_annotation_reorder_must_produce_identical_canonical_rows": true,
+    "previous_interval_uses_only_prior_canonical_usable_cue_samples": true
+  },
+  "model_contract": {
+    "source_standardization_ddof": 0,
+    "exact_zero_standard_deviation_scale": 1.0,
+    "classifier": "sklearn.discriminant_analysis.LinearDiscriminantAnalysis",
+    "solver": "lsqr",
+    "shrinkage": 0.1,
+    "priors": [0.5, 0.5],
+    "classes": ["T1", "T2"],
+    "hard_tie_prediction": "T1",
+    "model_candidates": 1,
+    "hyperparameter_or_seed_searches": 0,
+    "required_versions": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.0",
+      "mne": "1.12.1",
+      "scikit_learn": "1.9.0"
+    },
+    "version_mismatch_policy": "refuse_without_install_fallback_or_substitution_during_real_stages"
+  },
+  "control_contract": {
+    "conditions_in_canonical_order": [
+      "primary_whole_head", "equal_prior_no_signal", "timing_only", "exact_zero",
+      "fixed_channel_permutation", "nonwrapping_event_displacement",
+      "fixed_source_label_derangement", "pre_cue", "early_cue", "central_view",
+      "frontal_view", "occipital_view"
+    ],
+    "equal_prior_no_signal": "constant_T1_no_fit_no_feature_read",
+    "timing_only_features": [
+      "event_ordinal_divided_by_14", "seconds_since_run_start",
+      "previous_inter_event_interval_seconds_with_first_exact_zero"
+    ],
+    "timing_only_model": "source_standardized_same_shrinkage_LDA",
+    "exact_zero": "replace_whole_head_features_with_exact_float64_zero_and_reuse_primary_model",
+    "channel_permutation_indices": [
+      50, 54, 25, 44, 20, 21, 37, 41, 23, 24, 33, 11, 10, 36, 17, 18,
+      3, 26, 22, 6, 61, 14, 4, 13, 2, 39, 46, 1, 19, 53, 42, 8,
+      52, 59, 5, 47, 40, 63, 15, 43, 27, 38, 60, 55, 34, 12, 45, 7,
+      49, 32, 35, 62, 28, 0, 30, 57, 48, 51, 56, 9, 31, 16, 29, 58
+    ],
+    "channel_permutation_application": "literal_permutation_of_filtered_channel_axis_before_primary_features",
+    "event_displacement": "within_participant_task_run_row_j_uses_primary_features_row_j_minus_1_and_row_0_is_exact_zero",
+    "event_displacement_wrap": false,
+    "source_label_derangement_indices": [8, 9, 1, 13, 10, 4, 5, 7, 11, 14, 6, 0, 3, 2, 12],
+    "source_label_derangement_application": "literal_permutation_independently_within_each_source_participant_and_source_run",
+    "pre_early_central_frontal_occipital_use_separately_fitted_source_models": true,
+    "literal_provenance_seed_label_not_executed": 5909,
+    "fresh_target_used_to_construct_any_control": false
+  },
+  "fit_and_prediction_budget": {
+    "source_execution_LOSO_folds": 15,
+    "source_execution_participants_fitted_per_fold": 14,
+    "source_execution_models_fitted_per_fold": ["primary", "timing"],
+    "source_execution_prediction_sets_per_fold": ["primary", "timing", "no_signal"],
+    "source_imagery_LOSO_descriptive_models_per_fold": ["primary"],
+    "full_source_fitted_models_per_task": [
+      "primary", "timing", "source_label_derangement", "pre_cue", "early_cue",
+      "central", "frontal", "occipital"
+    ],
+    "zero_channel_permutation_and_displacement_reuse_primary": true,
+    "no_signal_parameter_update_fits": 0,
+    "parameter_update_fits_maximum_exact_schedule": 61,
+    "participant_condition_prediction_sets_maximum_exact_schedule": 420,
+    "original_parameter_update_fit_cap": 300,
+    "original_prediction_set_cap": 640,
+    "additional_fit_or_prediction_set_policy": "refuse"
+  },
+  "source_completeness": {
+    "participants_exact": 15,
+    "runs_per_task_per_participant_exact": 2,
+    "usable_rows_per_participant_run_exact": 15,
+    "execution_rows_exact": 450,
+    "imagery_rows_exact": 450,
+    "both_classes_required_per_participant_run": true,
+    "mismatch_policy": "R0_before_any_source_fit_or_fresh_acquisition"
+  },
+  "fresh_completeness": {
+    "participants_per_task_exact": 15,
+    "execution_rows_exact": 225,
+    "imagery_rows_exact": 225,
+    "sealed_target_rows_exact": 450,
+    "rows_per_participant_per_task_exact": 15,
+    "both_classes_required_per_participant_task": true,
+    "row_identity_unique": true,
+    "missing_duplicate_extra_alias_mismatch_or_partial_score_policy": "R0_without_exclusion_replacement_or_rerun"
+  },
+  "statistics": {
+    "primary_metric": "participant_macro_balanced_accuracy",
+    "pooled_balanced_accuracy": "mandatory_gate",
+    "ordinary_pooled_accuracy": "descriptive_only",
+    "participant_inference_units": 15,
+    "exact_sign_assignments": 32768,
+    "one_sided_tail": "signed_mean_at_least_observed",
+    "observed_assignment_included": true,
+    "zero_difference_handling": "retained_under_both_signs",
+    "comparison_tolerance": 1e-12,
+    "B_i": "max_equal_prior_no_signal_timing_only",
+    "C_i": "max_exact_zero_channel_permutation_event_displacement_source_label_derangement",
+    "A_i": "max_pre_cue_early_cue_central_frontal_occipital"
+  },
+  "tightened_fresh_execution_gate": {
+    "all_original_gates_required": true,
+    "participants_exact": 15,
+    "events_exact": 225,
+    "pooled_balanced_accuracy_minimum": 0.6,
+    "macro_balanced_accuracy_minimum": 0.6,
+    "macro_margin_over_B_i_minimum": 0.1,
+    "paired_sign_flip_p_against_B_i_maximum": 0.05,
+    "participants_strictly_above_chance_minimum": 11,
+    "sign_flip_p_against_chance_maximum": 0.01,
+    "macro_margin_over_C_i_minimum": 0.02,
+    "paired_sign_flip_p_against_C_i_maximum": 0.05,
+    "macro_margin_over_A_i_minimum": 0.02,
+    "paired_sign_flip_p_against_A_i_maximum": 0.05,
+    "integrity_firewall_freeze_resource_or_protocol_violations": 0
+  },
+  "tightened_fresh_imagery_gate": {
+    "cannot_rescue_execution": true,
+    "participants_exact": 15,
+    "events_exact": 225,
+    "pooled_and_macro_balanced_accuracy_minimum": 0.6,
+    "macro_margin_over_B_i_minimum": 0.1,
+    "paired_sign_flip_p_against_B_i_maximum": 0.05,
+    "participants_strictly_above_chance_minimum": 11,
+    "sign_flip_p_against_chance_maximum": 0.05,
+    "macro_margin_over_C_i_minimum": 0.02,
+    "paired_sign_flip_p_against_C_i_maximum": 0.05,
+    "macro_margin_over_A_i_minimum": 0.02,
+    "paired_sign_flip_p_against_A_i_maximum": 0.05
+  },
+  "checkpoint_contract": {
+    "pickle_or_joblib_allowed": false,
+    "format": "canonical_JSON_manifest_plus_individual_NPY_members_allow_pickle_false",
+    "required_bindings": [
+      "task", "condition", "source_split", "package_versions", "channel_order_and_subset",
+      "SOS", "window", "scaler_mean", "scaler_scale", "LDA_classes", "LDA_coef",
+      "LDA_intercept", "code_hash", "configuration_hash", "contract_hash",
+      "amendment_hash", "source_payload_hashes", "member_hashes", "manifest_hash"
+    ],
+    "load_revalidates_every_field_shape_dtype_member_and_aggregate_hash": true
+  },
+  "prediction_freeze_contract": {
+    "private_format": "canonical_UTF8_JSONL_one_object_per_line",
+    "canonical_sort": ["task", "participant", "run", "event_ordinal", "condition"],
+    "row_fields_exact": [
+      "schema_version", "opaque_row_id", "task", "participant", "run",
+      "event_ordinal", "cue_sample", "condition", "prediction"
+    ],
+    "prediction_values": ["T1", "T2"],
+    "targets_probabilities_or_free_form_fields_allowed": false,
+    "public_fields": [
+      "task_condition_counts", "task_condition_sha256", "checkpoint_hashes",
+      "configuration_hash", "code_hash", "prediction_set_hash", "canonical_row_order_hash"
+    ],
+    "public_individual_prediction_probability_target_or_participant_outcome": false,
+    "scorer_rehashes_private_file_and_verifies_order_counts_commitments_before_target_values": true,
+    "row_order_prediction_checkpoint_configuration_or_target_file_mutation_policy": "refuse_before_score"
+  },
+  "resource_enforcement": {
+    "CPU_threads_workers_numerical_jobs": [1, 1, 1],
+    "stage_wall_time_seconds_maximum": {"G": 900, "M": 300, "S": 1800, "F": 1800, "T": 300},
+    "process_tree_peak_RSS_bytes_maximum": 1073741824,
+    "metadata_network_bytes_maximum": 2097152,
+    "payload_network_bytes_maximum": 268435456,
+    "incremental_disk_bytes_maximum": 536870912,
+    "private_derivative_bytes_maximum": 134217728,
+    "public_artifact_bytes_maximum": 2097152,
+    "free_disk_bytes_minimum_before_payload": 2147483648,
+    "stage_G_network_bytes": 0,
+    "analysis_network_bytes": 0,
+    "count_temporary_and_final_bytes_cumulatively": true,
+    "atomic_output": "same_directory_exclusive_temp_flush_fsync_validate_then_single_rename",
+    "preexisting_destination_symlink_hardlink_path_traversal_redirect_partial_short_write_or_second_invocation_policy": "refuse",
+    "cleanup": "only_invocation_created_temporary_files",
+    "retries_reruns_post_target_updates": [0, 0, 0]
+  },
+  "stage_G_qualification": {
+    "invocations": 1,
+    "real_or_retained_path_operations": 0,
+    "network_bytes": 0,
+    "fixture_types": ["generated_arrays", "generated_reader_surface", "mocked_transport"],
+    "required_case_classes": [
+      "valid_replay_source_immutability", "target_swap_and_canary_invariance",
+      "participant_relabel_invariance", "split_overlap_alias_symlink_hardlink_duplicate_forbidden_run_refusal",
+      "future_impulse_causality", "chunk_replay", "run_reset", "acausal_filter_refusal",
+      "literal_channel_permutation", "literal_event_displacement", "literal_label_derangement",
+      "exact_windows_views_and_CAR_order", "annotation_missing_duplicate_extra_reorder_handling",
+      "execution_and_imagery_exact_counts", "checkpoint_configuration_prediction_row_order_and_freeze_mutation_refusal",
+      "sign_flip_ties_and_router_thresholds", "atomic_crash_destination_traversal_redirect_output_RSS_wall_and_second_invocation_refusal"
+    ],
+    "required_measurements": [
+      "input_bytes", "output_bytes", "runtime_seconds", "peak_process_tree_RSS_bytes",
+      "parameter_update_fits", "prediction_sets", "real_path_reads", "network_bytes",
+      "model_runs", "target_deliveries", "scoring_events", "warnings"
+    ],
+    "repeat_allowed": false
+  },
+  "authority_now": {
+    "generated_implementation": false,
+    "generated_qualification": false,
+    "remote_metadata": false,
+    "payload_acquisition": false,
+    "retained_source_access": false,
+    "signal_annotation_event_target_or_label_access": false,
+    "training": false,
+    "inference": false,
+    "prediction_freeze": false,
+    "target_delivery": false,
+    "scoring": false,
+    "scientific_claim_upgrade": false
+  },
+  "amendment_operation_counters": {
+    "tracked_artifact_reads": 15,
+    "Git_proof_reads": 15,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "real_retained_ignored_or_consumed_path_operations": 0,
+    "EDF_signal_annotation_event_target_or_label_reads": 0,
+    "parameter_update_fits": 0,
+    "model_inferences": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scoring_events": 0,
+    "generated_qualification_invocations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "claim_boundary": {
+    "maximum_route_unchanged": "EEGMMIDBUG1-R4",
+    "maximum_claim_unchanged": "zero-calibration participant-independent left-right EEGMMIDB protocol-condition prediction across 15 unseen participants",
+    "movement_intention_or_motor_cortex_origin": false,
+    "EEG_beyond_eye_visual_or_peripheral_signals": false,
+    "language_or_thought_decoding": false,
+    "live_decoding": false,
+    "portable_hardware_or_clinical_use": false,
+    "scientific_claim_established_by_amendment": false
+  }
+}

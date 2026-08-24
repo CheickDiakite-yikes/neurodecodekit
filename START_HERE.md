@@ -53,9 +53,17 @@ amendment. The amendment is required because two target-free reviews found
 underspecified control gates, participant-ID isolation, prediction-freeze
 binding, exact completeness, causal state, and resource semantics.
 
-Immediate gate: commit, push, and remotely green the exact UG1 authorization
-decision. Then freeze and remotely green the non-scope-expanding amendment. Do
-not implement Stage G or access any real path before both barriers.
+Exact authorization decision `3e173f6dc61b1f6b32dcc9839aa74a67759b9b3f`
+passed Base job `97333988408`, Optional Neuro job `97333988474`, and CI
+`32694496933`.
+
+Read `docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_AMENDMENT_1.md`, its
+machine amendment, and matching test. They freeze exact channel/control math,
+causal state, participant isolation, completeness, canonical predictions, and
+resource enforcement without widening scope.
+
+Immediate gate: commit, push, and remotely green exact Amendment 1. Do not
+implement Stage G or access any real path before that remaining barrier.
 
 ## Previous Gate: MARC2-VR39P Aggregate R2 Closeout
 

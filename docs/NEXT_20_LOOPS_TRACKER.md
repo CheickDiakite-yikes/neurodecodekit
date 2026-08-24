@@ -3937,7 +3937,7 @@ then may the one registered target-free structural discriminator execute.
 
 ### EEGMMIDB-UG1 - Unseen-Participant Generalization
 
-Status: **Packet authorized by short form; decision and narrowing amendment barriers pending**
+Status: **Authorization remotely green; pre-execution Amendment 1 frozen locally**
 
 This lane replaces the consumed VR39P structural branch with a direct
 scientific question. One model will be fitted on S001-S015 and, only after a
@@ -3971,11 +3971,16 @@ exact completeness, deterministic controls, causal state, and resource
 enforcement. The decision fails closed and requires a green narrowing
 amendment before Stage G.
 
-Current gate: commit, push, and remotely green the authorization decision,
-then freeze and remotely green the additive non-scope-expanding amendment, then
-implement generated/mock Stage G. No network, payload, signal, target, model,
-prediction, score, release, or claim operation is authorized before those
-barriers.
+Authorization decision `3e173f6dc61b1f6b32dcc9839aa74a67759b9b3f` passed both
+jobs in CI `32694496933`. Amendment 1 now binds fifteen unchanged artifacts
+totaling 94,730 bytes and freezes exact channels, causal math, controls, fit
+counts, participant firewall, 225+225 final rows, statistics, canonical
+checkpoint/prediction commitments, and resource semantics. It only narrows or
+clarifies the authorized maximum and records zero operations.
+
+Current gate: commit, push, and remotely green exact Amendment 1, then
+implement generated/mock Stage G. No metadata, payload, signal, target, score,
+release, or claim operation is authorized before the later barriers.
 
 ### MARC2-VR34P - All-False Exact-Count Private Confirmation Request Prepared
 

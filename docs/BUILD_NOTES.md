@@ -14881,3 +14881,24 @@ authorized until that barrier passes and a fresh packet-bound decision follows.
 Immediate gate: commit, push, and green the decision, then freeze and remotely
 green the narrowing amendment. Only then implement and run one generated/mock
 Stage G qualification. Stage M remains closed meanwhile.
+
+### EEGMMIDB-UG1 Amendment 1 frozen locally
+
+- Exact authorization decision `3e173f6dc61b1f6b32dcc9839aa74a67759b9b3f`
+  passed Base Python job `97333988408`, Optional Neuro Readers job
+  `97333988474`, and CI `32694496933`.
+- Added one pre-execution narrowing amendment after two independent target-free
+  audits. The original fifteen research/request/proof/decision artifacts remain
+  unchanged and are rebound at 94,730 bytes.
+- Froze the exact 64-channel order; central, frontal, and occipital sets; the
+  literal SOS matrix and causal state; primary/pre/early windows; every control
+  transform; a 61-fit/420-prediction-set maximum schedule; exact 225+225 final
+  rows; participant-ID isolation; stricter temporal/spatial gates; canonical
+  non-pickle checkpoints; canonical JSONL prediction commitments; and atomic,
+  bounded resource semantics.
+- Amendment recording used zero network, real path, EDF, signal, annotation,
+  target, fit, inference, prediction, score, or claim operation. Twelve focused
+  amendment tests pass.
+
+Immediate gate: commit, push, and remotely green exact Amendment 1. Stage G
+and every real operation remain closed until that barrier passes.

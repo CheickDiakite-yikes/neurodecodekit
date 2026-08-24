@@ -12892,3 +12892,29 @@ frozen and green.
 Boundary decision: decision recording performs no network, data, EDF, signal,
 annotation, target, fit, inference, prediction, score, release, or claim
 operation. It is authorization, not evidence of unseen-person generalization.
+
+## 0454 - Freeze UG1 Amendment 1 Before Implementation
+
+Proof decision: authorization commit
+`3e173f6dc61b1f6b32dcc9839aa74a67759b9b3f` passed CI `32694496933`, Base
+Python job `97333988408`, and Optional Neuro Readers job `97333988474` before
+any Stage G work.
+
+Scientific-integrity decision: accept both independent target-free audits.
+The original packet names temporal and spatial controls but does not make them
+fully conjunctive, and it underspecifies participant-ID isolation, prediction
+commitments, exact imagery completeness, deterministic controls, causal state,
+and resource semantics. Freeze those details before implementation so no
+result can choose them later.
+
+Scope decision: Amendment 1 is additive and hash-changing but may only narrow
+or clarify. It adds no participant, run, file, request, byte, model, fit,
+prediction set, retry, route, release, or claim. It preserves the original
+G -> M -> S -> F -> T barriers and leaves every current operation counter at
+zero.
+
+Implementation decision: use UG1-owned acquisition, experiment, and scorer
+modules. Freeze literal channels, SOS, controls, fit counts, participant
+firewall, exact 225+225 rows, canonical non-pickle checkpoints and prediction
+JSONL, stricter temporal/spatial gates, and process-tree resource enforcement.
+Stage G remains closed until the exact amendment commit passes both CI jobs.

@@ -83,15 +83,23 @@ Read the UG1 authorization decision document, machine decision, and matching
 test. The decision quotes those eight UTF-8 bytes, binds twelve unchanged
 packet artifacts totaling 67,923 bytes, and has delayed effect.
 
-Immediate gate: commit, push, and green the exact authorization decision.
-Two independent target-free reviews found underspecified temporal/spatial
+Exact authorization decision `3e173f6dc61b1f6b32dcc9839aa74a67759b9b3f`
+passed Base job `97333988408`, Optional Neuro job `97333988474`, and CI
+`32694496933`. Two independent target-free reviews found underspecified temporal/spatial
 gates, participant-ID isolation, prediction serialization, completeness,
 control transforms, causal state, and resource semantics. The decision fails
-closed on those findings. After the decision is green, freeze and remotely
-green a hash-changing, additive, non-scope-expanding amendment before any
-generated Stage G implementation. Stage M and every real-path operation remain
-closed until the amended Stage G is itself committed, pushed, and remotely
-green.
+closed on those findings.
+
+Read the new Amendment 1 document, machine amendment, and matching test. The
+amendment binds fifteen pre-amendment artifacts totaling 94,730 bytes and
+freezes exact channels, SOS/filter state, windows, controls, fit schedule,
+participant firewall, completeness, statistics, checkpoint/prediction
+serialization, and resource semantics. It only narrows or clarifies scope.
+
+Immediate gate: commit, push, and remotely green exact Amendment 1. Do not
+implement generated Stage G before that barrier. Stage M and every real-path
+operation remain closed until the amended Stage G is itself committed, pushed,
+and remotely green.
 
 ### Historical VR39P path
 
